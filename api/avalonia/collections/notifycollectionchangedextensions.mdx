@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Collections/NotifyCollectionChangedExtensions.cs">NotifyCollectionChangedExtensions.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__signature">
@@ -62,7 +65,7 @@ public class NotifyCollectionChangedExtensions
 Gets a weak observable for the CollectionChanged event.
 
 ```csharp
-public System.IObservable<System.Collections.Specialized.NotifyCollectionChangedEventArgs> GetWeakCollectionChangedObservable(System.Collections.Specialized.INotifyCollectionChanged collection)
+public IObservable<System.Collections.Specialized.NotifyCollectionChangedEventArgs> GetWeakCollectionChangedObservable(System.Collections.Specialized.INotifyCollectionChanged collection)
 ```
 
 | Parameter | Description |
@@ -80,7 +83,7 @@ Returns: An observable.
 #### WeakSubscribe
 
 ```csharp
-public System.IDisposable WeakSubscribe(System.Collections.Specialized.INotifyCollectionChanged collection, System.Action<System.Collections.Specialized.NotifyCollectionChangedEventArgs> handler)
+public IDisposable WeakSubscribe(System.Collections.Specialized.INotifyCollectionChanged collection, Action<System.Collections.Specialized.NotifyCollectionChangedEventArgs> handler)
 ```
 
 <span id="uid-ce11c63ce0"></span>
@@ -90,7 +93,7 @@ public System.IDisposable WeakSubscribe(System.Collections.Specialized.INotifyCo
 Subscribes to the CollectionChanged event using a weak subscription.
 
 ```csharp
-public System.IDisposable WeakSubscribe(System.Collections.Specialized.INotifyCollectionChanged collection, System.Collections.Specialized.NotifyCollectionChangedEventHandler handler)
+public IDisposable WeakSubscribe(System.Collections.Specialized.INotifyCollectionChanged collection, System.Collections.Specialized.NotifyCollectionChangedEventHandler handler)
 ```
 
 | Parameter | Description |

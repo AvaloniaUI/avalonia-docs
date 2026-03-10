@@ -63,7 +63,7 @@ Tells the application that it should attempt to enter its background state.
 For example on OSX this would be [NSApp hide]
 
 ```csharp
-public System.Boolean TryEnterBackground()
+public Boolean TryEnterBackground()
 ```
 
 Returns: true if it was possible and the platform supports this. false otherwise
@@ -76,7 +76,7 @@ Tells the application that it should attempt to leave its background state.
 For example on OSX this would be [NSApp unhide]
 
 ```csharp
-public System.Boolean TryLeaveBackground()
+public Boolean TryLeaveBackground()
 ```
 
 Returns: true if it was possible and the platform supports this. false otherwise
@@ -96,7 +96,7 @@ An event that is raised when the application is Activated for various reasons
 as described by the [Avalonia.Controls.ApplicationLifetimes.ActivationKind](xref:Avalonia.Controls.ApplicationLifetimes.ActivationKind) enumeration.
 
 ```csharp
-public event System.EventHandler<Avalonia.Controls.ApplicationLifetimes.ActivatedEventArgs> Activated
+public event EventHandler<Avalonia.Controls.ApplicationLifetimes.ActivatedEventArgs> Activated
 ```
 
 <span id="uid-c0e1aca534"></span>
@@ -107,7 +107,7 @@ An event that is raised when the application is Deactivated for various reasons
 as described by the [Avalonia.Controls.ApplicationLifetimes.ActivationKind](xref:Avalonia.Controls.ApplicationLifetimes.ActivationKind) enumeration.
 
 ```csharp
-public event System.EventHandler<Avalonia.Controls.ApplicationLifetimes.ActivatedEventArgs> Deactivated
+public event EventHandler<Avalonia.Controls.ApplicationLifetimes.ActivatedEventArgs> Deactivated
 ```
 
 </ApiRefPage>

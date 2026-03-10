@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Controls/Templates/FuncTreeDataTemplate.cs">FuncTreeDataTemplate.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -53,6 +56,9 @@ public class FuncTreeDataTemplate
 <span className="apiref-page__meta-label">Inheritance:</span> FuncTemplate&lt;Object,Control&gt; <span className="apiref-page__relation-separator">-&gt;</span> <a href="funcdatatemplate">FuncDataTemplate</a> <span className="apiref-page__relation-separator">-&gt;</span> FuncTreeDataTemplate
 </div>
 <div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Derived types:</span> <a href="functreedatatemplate-1">FuncTreeDataTemplate&lt;T&gt;</a>
+</div>
+<div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Implements:</span> <a href="idatatemplate">IDataTemplate</a>, ITemplate&lt;Object,Control&gt;, <a href="itreedatatemplate">ITreeDataTemplate</a>
 </div>
 </div>
@@ -72,7 +78,7 @@ public class FuncTreeDataTemplate
 #### FuncTreeDataTemplate
 
 ```csharp
-public FuncTreeDataTemplate(System.Func<System.Object, System.Boolean> match, System.Func<System.Object, Avalonia.Controls.INameScope, Avalonia.Controls.Control> build, System.Func<System.Object, System.Collections.IEnumerable> itemsSelector)
+public FuncTreeDataTemplate(Func<Object, Boolean> match, Func<Object, Avalonia.Controls.INameScope, Avalonia.Controls.Control> build, Func<Object, System.Collections.IEnumerable> itemsSelector)
 ```
 
 <span id="uid-50415a66c1"></span>
@@ -80,7 +86,7 @@ public FuncTreeDataTemplate(System.Func<System.Object, System.Boolean> match, Sy
 #### FuncTreeDataTemplate
 
 ```csharp
-public FuncTreeDataTemplate(System.Type type, System.Func<System.Object, Avalonia.Controls.INameScope, Avalonia.Controls.Control> build, System.Func<System.Object, System.Collections.IEnumerable> itemsSelector)
+public FuncTreeDataTemplate(Type type, Func<Object, Avalonia.Controls.INameScope, Avalonia.Controls.Control> build, Func<Object, System.Collections.IEnumerable> itemsSelector)
 ```
 
 ## Methods
@@ -88,14 +94,23 @@ public FuncTreeDataTemplate(System.Type type, System.Func<System.Object, Avaloni
 | Name | Description |
 | --- | --- |
 | [BindChildren](#uid-466057c57b) | No summary available. |
+| [Build (Inherited from FuncDataTemplate)](funcdatatemplate.mdx#uid-910f460c06) | Creates or recycles a control to display the specified data. |
+| [Match (Inherited from FuncDataTemplate)](funcdatatemplate.mdx#uid-50eee6cfed) | Checks to see if this data template matches the specified data. |
 
 <span id="uid-466057c57b"></span>
 
 ### BindChildren
 
 ```csharp
-public System.IDisposable BindChildren(Avalonia.AvaloniaObject target, Avalonia.AvaloniaProperty targetProperty, System.Object item)
+public IDisposable BindChildren(Avalonia.AvaloniaObject target, Avalonia.AvaloniaProperty targetProperty, Object item)
 ```
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [Access (Inherited from FuncDataTemplate)](funcdatatemplate.mdx#uid-c964539ce7) | The default data template used in the case where no matching data template is found but Avalonia.Controls.Primitives.AccessText should be used. |
+| [Default (Inherited from FuncDataTemplate)](funcdatatemplate.mdx#uid-70c1c9b32b) | The default data template used in the case where no matching data template is found. |
 
 </ApiRefPage>
 

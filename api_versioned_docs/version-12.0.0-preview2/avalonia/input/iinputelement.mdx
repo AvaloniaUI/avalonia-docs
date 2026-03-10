@@ -64,7 +64,7 @@ public interface IInputElement
 Adds a handler for the specified routed event.
 
 ```csharp
-public System.Void AddHandler(Avalonia.Interactivity.RoutedEvent routedEvent, System.Delegate handler, Avalonia.Interactivity.RoutingStrategies routes, System.Boolean handledEventsToo)
+public Void AddHandler(Avalonia.Interactivity.RoutedEvent routedEvent, Delegate handler, Avalonia.Interactivity.RoutingStrategies routes, Boolean handledEventsToo)
 ```
 
 | Parameter | Description |
@@ -83,7 +83,7 @@ Returns: A disposable that terminates the event subscription.
 Focuses the control.
 
 ```csharp
-public System.Boolean Focus(Avalonia.Input.NavigationMethod method, Avalonia.Input.KeyModifiers keyModifiers)
+public Boolean Focus(Avalonia.Input.NavigationMethod method, Avalonia.Input.KeyModifiers keyModifiers)
 ```
 
 | Parameter | Description |
@@ -98,7 +98,7 @@ public System.Boolean Focus(Avalonia.Input.NavigationMethod method, Avalonia.Inp
 Raises a routed event.
 
 ```csharp
-public System.Void RaiseEvent(Avalonia.Interactivity.RoutedEventArgs e)
+public Void RaiseEvent(Avalonia.Interactivity.RoutedEventArgs e)
 ```
 
 | Parameter | Description |
@@ -112,7 +112,7 @@ public System.Void RaiseEvent(Avalonia.Interactivity.RoutedEventArgs e)
 Removes a handler for the specified routed event.
 
 ```csharp
-public System.Void RemoveHandler(Avalonia.Interactivity.RoutedEvent routedEvent, System.Delegate handler)
+public Void RemoveHandler(Avalonia.Interactivity.RoutedEvent routedEvent, Delegate handler)
 ```
 
 | Parameter | Description |
@@ -152,7 +152,7 @@ public Avalonia.Input.Cursor Cursor { get; set; }
 Gets or sets a value indicating whether the control can receive keyboard focus.
 
 ```csharp
-public System.Boolean Focusable { get; set; }
+public Boolean Focusable { get; set; }
 ```
 
 <span id="uid-9f6953e853"></span>
@@ -162,7 +162,7 @@ public System.Boolean Focusable { get; set; }
 Gets a value indicating whether this control and all its parents are enabled.
 
 ```csharp
-public System.Boolean IsEffectivelyEnabled { get; set; }
+public Boolean IsEffectivelyEnabled { get; set; }
 ```
 
 <span id="uid-035cf31db2"></span>
@@ -172,7 +172,7 @@ public System.Boolean IsEffectivelyEnabled { get; set; }
 Gets a value indicating whether this control and all its parents are visible.
 
 ```csharp
-public System.Boolean IsEffectivelyVisible { get; set; }
+public Boolean IsEffectivelyVisible { get; set; }
 ```
 
 <span id="uid-7937346c85"></span>
@@ -182,7 +182,7 @@ public System.Boolean IsEffectivelyVisible { get; set; }
 Gets or sets a value indicating whether the control is enabled for user interaction.
 
 ```csharp
-public System.Boolean IsEnabled { get; set; }
+public Boolean IsEnabled { get; set; }
 ```
 
 <span id="uid-29f406974f"></span>
@@ -192,7 +192,7 @@ public System.Boolean IsEnabled { get; set; }
 Gets a value indicating whether the control is focused.
 
 ```csharp
-public System.Boolean IsFocused { get; set; }
+public Boolean IsFocused { get; set; }
 ```
 
 <span id="uid-15e527fdd2"></span>
@@ -202,7 +202,7 @@ public System.Boolean IsFocused { get; set; }
 Gets a value indicating whether the control is considered for hit testing.
 
 ```csharp
-public System.Boolean IsHitTestVisible { get; set; }
+public Boolean IsHitTestVisible { get; set; }
 ```
 
 <span id="uid-2e257ffd75"></span>
@@ -212,7 +212,7 @@ public System.Boolean IsHitTestVisible { get; set; }
 Gets a value indicating whether keyboard focus is anywhere within the element or its visual tree child elements.
 
 ```csharp
-public System.Boolean IsKeyboardFocusWithin { get; set; }
+public Boolean IsKeyboardFocusWithin { get; set; }
 ```
 
 <span id="uid-95cf373dfb"></span>
@@ -222,7 +222,7 @@ public System.Boolean IsKeyboardFocusWithin { get; set; }
 Gets a value indicating whether the pointer is currently over the control.
 
 ```csharp
-public System.Boolean IsPointerOver { get; set; }
+public Boolean IsPointerOver { get; set; }
 ```
 
 <span id="uid-01dfeeba85"></span>
@@ -258,7 +258,7 @@ public System.Collections.Generic.List<Avalonia.Input.KeyBinding> KeyBindings { 
 Occurs when the control receives focus.
 
 ```csharp
-public event System.EventHandler<Avalonia.Input.GotFocusEventArgs> GotFocus
+public event EventHandler<Avalonia.Input.GotFocusEventArgs> GotFocus
 ```
 
 <span id="uid-307fe4873f"></span>
@@ -268,7 +268,7 @@ public event System.EventHandler<Avalonia.Input.GotFocusEventArgs> GotFocus
 Occurs when a key is pressed while the control has focus.
 
 ```csharp
-public event System.EventHandler<Avalonia.Input.KeyEventArgs> KeyDown
+public event EventHandler<Avalonia.Input.KeyEventArgs> KeyDown
 ```
 
 <span id="uid-c9264d8d2f"></span>
@@ -278,7 +278,7 @@ public event System.EventHandler<Avalonia.Input.KeyEventArgs> KeyDown
 Occurs when a key is released while the control has focus.
 
 ```csharp
-public event System.EventHandler<Avalonia.Input.KeyEventArgs> KeyUp
+public event EventHandler<Avalonia.Input.KeyEventArgs> KeyUp
 ```
 
 <span id="uid-96c57250cf"></span>
@@ -288,7 +288,7 @@ public event System.EventHandler<Avalonia.Input.KeyEventArgs> KeyUp
 Occurs when the control loses focus.
 
 ```csharp
-public event System.EventHandler<Avalonia.Interactivity.RoutedEventArgs> LostFocus
+public event EventHandler<Avalonia.Interactivity.RoutedEventArgs> LostFocus
 ```
 
 <span id="uid-4b5da6d7d2"></span>
@@ -298,7 +298,7 @@ public event System.EventHandler<Avalonia.Interactivity.RoutedEventArgs> LostFoc
 Occurs when the pointer enters the control.
 
 ```csharp
-public event System.EventHandler<Avalonia.Input.PointerEventArgs> PointerEntered
+public event EventHandler<Avalonia.Input.PointerEventArgs> PointerEntered
 ```
 
 <span id="uid-e2f2721256"></span>
@@ -308,7 +308,7 @@ public event System.EventHandler<Avalonia.Input.PointerEventArgs> PointerEntered
 Occurs when the pointer leaves the control.
 
 ```csharp
-public event System.EventHandler<Avalonia.Input.PointerEventArgs> PointerExited
+public event EventHandler<Avalonia.Input.PointerEventArgs> PointerExited
 ```
 
 <span id="uid-449a25b8d3"></span>
@@ -318,7 +318,7 @@ public event System.EventHandler<Avalonia.Input.PointerEventArgs> PointerExited
 Occurs when the pointer moves over the control.
 
 ```csharp
-public event System.EventHandler<Avalonia.Input.PointerEventArgs> PointerMoved
+public event EventHandler<Avalonia.Input.PointerEventArgs> PointerMoved
 ```
 
 <span id="uid-bcc921191c"></span>
@@ -328,7 +328,7 @@ public event System.EventHandler<Avalonia.Input.PointerEventArgs> PointerMoved
 Occurs when the pointer is pressed over the control.
 
 ```csharp
-public event System.EventHandler<Avalonia.Input.PointerPressedEventArgs> PointerPressed
+public event EventHandler<Avalonia.Input.PointerPressedEventArgs> PointerPressed
 ```
 
 <span id="uid-d968fd4cc3"></span>
@@ -338,7 +338,7 @@ public event System.EventHandler<Avalonia.Input.PointerPressedEventArgs> Pointer
 Occurs when the pointer is released over the control.
 
 ```csharp
-public event System.EventHandler<Avalonia.Input.PointerReleasedEventArgs> PointerReleased
+public event EventHandler<Avalonia.Input.PointerReleasedEventArgs> PointerReleased
 ```
 
 <span id="uid-4e4b9681df"></span>
@@ -348,7 +348,7 @@ public event System.EventHandler<Avalonia.Input.PointerReleasedEventArgs> Pointe
 Occurs when the mouse wheel is scrolled over the control.
 
 ```csharp
-public event System.EventHandler<Avalonia.Input.PointerWheelEventArgs> PointerWheelChanged
+public event EventHandler<Avalonia.Input.PointerWheelEventArgs> PointerWheelChanged
 ```
 
 <span id="uid-096256fc6d"></span>
@@ -358,7 +358,7 @@ public event System.EventHandler<Avalonia.Input.PointerWheelEventArgs> PointerWh
 Occurs when a user typed some text while the control has focus.
 
 ```csharp
-public event System.EventHandler<Avalonia.Input.TextInputEventArgs> TextInput
+public event EventHandler<Avalonia.Input.TextInputEventArgs> TextInput
 ```
 
 </ApiRefPage>

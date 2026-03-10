@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Controls/Embedding/Offscreen/OffscreenTopLevelImpl.cs">OffscreenTopLevelImpl.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__signature">
@@ -92,7 +95,7 @@ public Avalonia.Platform.IPopupImpl CreatePopup()
 ### Dispose
 
 ```csharp
-public System.Void Dispose()
+public Void Dispose()
 ```
 
 <span id="uid-287d7a6ef0"></span>
@@ -116,7 +119,7 @@ public Avalonia.PixelPoint PointToScreen(Avalonia.Point point)
 ### SetCursor
 
 ```csharp
-public System.Void SetCursor(Avalonia.Platform.ICursorImpl cursor)
+public Void SetCursor(Avalonia.Platform.ICursorImpl cursor)
 ```
 
 <span id="uid-d88c90ea3f"></span>
@@ -124,7 +127,7 @@ public System.Void SetCursor(Avalonia.Platform.ICursorImpl cursor)
 ### SetFrameThemeVariant
 
 ```csharp
-public System.Void SetFrameThemeVariant(Avalonia.Platform.PlatformThemeVariant themeVariant)
+public Void SetFrameThemeVariant(Avalonia.Platform.PlatformThemeVariant themeVariant)
 ```
 
 <span id="uid-7915ddd2fe"></span>
@@ -132,7 +135,7 @@ public System.Void SetFrameThemeVariant(Avalonia.Platform.PlatformThemeVariant t
 ### SetInputRoot
 
 ```csharp
-public System.Void SetInputRoot(Avalonia.Input.IInputRoot inputRoot)
+public Void SetInputRoot(Avalonia.Input.IInputRoot inputRoot)
 ```
 
 <span id="uid-868bd1cbf5"></span>
@@ -140,7 +143,7 @@ public System.Void SetInputRoot(Avalonia.Input.IInputRoot inputRoot)
 ### SetTransparencyLevelHint
 
 ```csharp
-public System.Void SetTransparencyLevelHint(System.Collections.Generic.IReadOnlyList<Avalonia.Controls.WindowTransparencyLevel> transparencyLevel)
+public Void SetTransparencyLevelHint(System.Collections.Generic.IReadOnlyList<Avalonia.Controls.WindowTransparencyLevel> transparencyLevel)
 ```
 
 <span id="uid-7f90fad888"></span>
@@ -148,7 +151,7 @@ public System.Void SetTransparencyLevelHint(System.Collections.Generic.IReadOnly
 ### TryGetFeature
 
 ```csharp
-public System.Object TryGetFeature(System.Type featureType)
+public Object TryGetFeature(Type featureType)
 ```
 
 ## Properties
@@ -196,7 +199,7 @@ public Avalonia.Size ClientSize { get; set; }
 ### Closed
 
 ```csharp
-public System.Action Closed { get; set; }
+public Action Closed { get; set; }
 ```
 
 <span id="uid-28d3e76ec7"></span>
@@ -212,7 +215,7 @@ public Avalonia.Rendering.Composition.Compositor Compositor { get; set; }
 ### DesktopScaling
 
 ```csharp
-public System.Double DesktopScaling { get; set; }
+public Double DesktopScaling { get; set; }
 ```
 
 <span id="uid-0b9cb64daa"></span>
@@ -220,7 +223,7 @@ public System.Double DesktopScaling { get; set; }
 ### FrameSize
 
 ```csharp
-public System.Nullable<Avalonia.Size> FrameSize { get; set; }
+public Nullable<Avalonia.Size> FrameSize { get; set; }
 ```
 
 <span id="uid-5c41267251"></span>
@@ -236,7 +239,7 @@ public Avalonia.Platform.IPlatformHandle Handle { get; set; }
 ### Input
 
 ```csharp
-public System.Action<Avalonia.Input.Raw.RawInputEventArgs> Input { get; set; }
+public Action<Avalonia.Input.Raw.RawInputEventArgs> Input { get; set; }
 ```
 
 <span id="uid-1b7a78f39b"></span>
@@ -252,7 +255,7 @@ public Avalonia.Input.IInputRoot InputRoot { get; set; }
 ### IsDisposed
 
 ```csharp
-public System.Boolean IsDisposed { get; set; }
+public Boolean IsDisposed { get; set; }
 ```
 
 <span id="uid-711b75464b"></span>
@@ -260,7 +263,7 @@ public System.Boolean IsDisposed { get; set; }
 ### LostFocus
 
 ```csharp
-public System.Action LostFocus { get; set; }
+public Action LostFocus { get; set; }
 ```
 
 <span id="uid-dd0183d4ed"></span>
@@ -276,7 +279,7 @@ public Avalonia.Input.IMouseDevice MouseDevice { get; set; }
 ### Paint
 
 ```csharp
-public System.Action<Avalonia.Rect> Paint { get; set; }
+public Action<Avalonia.Rect> Paint { get; set; }
 ```
 
 <span id="uid-572ce08207"></span>
@@ -284,7 +287,7 @@ public System.Action<Avalonia.Rect> Paint { get; set; }
 ### RenderScaling
 
 ```csharp
-public System.Double RenderScaling { get; set; }
+public Double RenderScaling { get; set; }
 ```
 
 <span id="uid-1f25df88b2"></span>
@@ -292,7 +295,7 @@ public System.Double RenderScaling { get; set; }
 ### Resized
 
 ```csharp
-public System.Action<Avalonia.Size, Avalonia.Controls.WindowResizeReason> Resized { get; set; }
+public Action<Avalonia.Size, Avalonia.Controls.WindowResizeReason> Resized { get; set; }
 ```
 
 <span id="uid-348d2d2493"></span>
@@ -300,7 +303,7 @@ public System.Action<Avalonia.Size, Avalonia.Controls.WindowResizeReason> Resize
 ### ScalingChanged
 
 ```csharp
-public System.Action<System.Double> ScalingChanged { get; set; }
+public Action<Double> ScalingChanged { get; set; }
 ```
 
 <span id="uid-79b1549855"></span>
@@ -324,7 +327,7 @@ public Avalonia.Controls.WindowTransparencyLevel TransparencyLevel { get; set; }
 ### TransparencyLevelChanged
 
 ```csharp
-public System.Action<Avalonia.Controls.WindowTransparencyLevel> TransparencyLevelChanged { get; set; }
+public Action<Avalonia.Controls.WindowTransparencyLevel> TransparencyLevelChanged { get; set; }
 ```
 
 </ApiRefPage>

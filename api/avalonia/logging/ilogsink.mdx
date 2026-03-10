@@ -62,7 +62,7 @@ public interface ILogSink
 Checks if given log level and area is enabled.
 
 ```csharp
-public System.Boolean IsEnabled(Avalonia.Logging.LogEventLevel level, System.String area)
+public Boolean IsEnabled(Avalonia.Logging.LogEventLevel level, String area)
 ```
 
 | Parameter | Description |
@@ -83,7 +83,7 @@ Returns: if given log level is enabled.
 Logs an event.
 
 ```csharp
-public System.Void Log(Avalonia.Logging.LogEventLevel level, System.String area, System.Object source, System.String messageTemplate)
+public Void Log(Avalonia.Logging.LogEventLevel level, String area, Object source, String messageTemplate)
 ```
 
 | Parameter | Description |
@@ -100,7 +100,7 @@ public System.Void Log(Avalonia.Logging.LogEventLevel level, System.String area,
 Logs a new event.
 
 ```csharp
-public System.Void Log(Avalonia.Logging.LogEventLevel level, System.String area, System.Object source, System.String messageTemplate, System.Object[] propertyValues)
+public Void Log(Avalonia.Logging.LogEventLevel level, String area, Object source, String messageTemplate, Object[] propertyValues)
 ```
 
 | Parameter | Description |

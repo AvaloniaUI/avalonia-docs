@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Input/DataTransferItem.cs">DataTransferItem.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -99,7 +102,7 @@ public DataTransferItem()
 #### Create
 
 ```csharp
-public Avalonia.Input.DataTransferItem Create<T>(Avalonia.Input.DataFormat<T><T> format, System.Func<T> getValue)
+public Avalonia.Input.DataTransferItem Create<T>(Avalonia.Input.DataFormat<T><T> format, Func<T> getValue)
 ```
 
 <span id="uid-62a49660b7"></span>
@@ -134,7 +137,7 @@ Returns: A [Avalonia.Input.DataTransferItem](xref:Avalonia.Input.DataTransferIte
 Creates a new [Avalonia.Input.DataTransferItem](xref:Avalonia.Input.DataTransferItem) with [Avalonia.Input.DataFormat.Text](xref:Avalonia.Input.DataFormat.Text) as a single format.
 
 ```csharp
-public Avalonia.Input.DataTransferItem CreateText(System.String value)
+public Avalonia.Input.DataTransferItem CreateText(String value)
 ```
 
 | Parameter | Description |
@@ -153,7 +156,7 @@ Returns: A [Avalonia.Input.DataTransferItem](xref:Avalonia.Input.DataTransferIte
 #### Set
 
 ```csharp
-public System.Void Set<T>(Avalonia.Input.DataFormat<T><T> format, System.Func<T> getValue)
+public Void Set<T>(Avalonia.Input.DataFormat<T><T> format, Func<T> getValue)
 ```
 
 <span id="uid-8e25077ea1"></span>
@@ -161,7 +164,7 @@ public System.Void Set<T>(Avalonia.Input.DataFormat<T><T> format, System.Func<T>
 #### Set
 
 ```csharp
-public System.Void Set<T>(Avalonia.Input.DataFormat<T><T> format, T value)
+public Void Set<T>(Avalonia.Input.DataFormat<T><T> format, T value)
 ```
 
 <span id="uid-91535d5cb2"></span>
@@ -171,7 +174,7 @@ public System.Void Set<T>(Avalonia.Input.DataFormat<T><T> format, T value)
 Sets the value for the [Avalonia.Input.DataFormat.Bitmap](xref:Avalonia.Input.DataFormat.Bitmap) format.
 
 ```csharp
-public System.Void SetBitmap(Avalonia.Media.Imaging.Bitmap value)
+public Void SetBitmap(Avalonia.Media.Imaging.Bitmap value)
 ```
 
 | Parameter | Description |
@@ -186,7 +189,7 @@ If null, the format won't be part of the [Avalonia.Input.DataTransferItem](xref:
 Sets the value for the [Avalonia.Input.DataFormat.File](xref:Avalonia.Input.DataFormat.File) format.
 
 ```csharp
-public System.Void SetFile(Avalonia.Platform.Storage.IStorageItem value)
+public Void SetFile(Avalonia.Platform.Storage.IStorageItem value)
 ```
 
 | Parameter | Description |
@@ -201,7 +204,7 @@ If null, the format won't be part of the [Avalonia.Input.DataTransferItem](xref:
 Sets the value for the [Avalonia.Input.DataFormat.Text](xref:Avalonia.Input.DataFormat.Text) format.
 
 ```csharp
-public System.Void SetText(System.String value)
+public Void SetText(String value)
 ```
 
 | Parameter | Description |
@@ -216,7 +219,7 @@ If null, the format won't be part of the [Avalonia.Input.DataTransferItem](xref:
 Tries to get a value for a given format.
 
 ```csharp
-public System.Object TryGetRaw(Avalonia.Input.DataFormat format)
+public Object TryGetRaw(Avalonia.Input.DataFormat format)
 ```
 
 | Parameter | Description |

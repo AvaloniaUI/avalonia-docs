@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Controls/SizeChangedEventArgs.cs">SizeChangedEventArgs.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -85,7 +88,7 @@ public SizeChangedEventArgs(Avalonia.Interactivity.RoutedEvent routedEvent)
 Initializes a new instance of the [Avalonia.Controls.SizeChangedEventArgs](xref:Avalonia.Controls.SizeChangedEventArgs) class.
 
 ```csharp
-public SizeChangedEventArgs(Avalonia.Interactivity.RoutedEvent routedEvent, System.Object source)
+public SizeChangedEventArgs(Avalonia.Interactivity.RoutedEvent routedEvent, Object source)
 ```
 
 | Parameter | Description |
@@ -100,7 +103,7 @@ public SizeChangedEventArgs(Avalonia.Interactivity.RoutedEvent routedEvent, Syst
 Initializes a new instance of the [Avalonia.Controls.SizeChangedEventArgs](xref:Avalonia.Controls.SizeChangedEventArgs) class.
 
 ```csharp
-public SizeChangedEventArgs(Avalonia.Interactivity.RoutedEvent routedEvent, System.Object source, Avalonia.Size previousSize, Avalonia.Size newSize)
+public SizeChangedEventArgs(Avalonia.Interactivity.RoutedEvent routedEvent, Object source, Avalonia.Size previousSize, Avalonia.Size newSize)
 ```
 
 | Parameter | Description |
@@ -118,6 +121,10 @@ public SizeChangedEventArgs(Avalonia.Interactivity.RoutedEvent routedEvent, Syst
 | [NewSize](#uid-5d2e8078e8) | Gets the new size (or bounds) of the object. |
 | [PreviousSize](#uid-dafb62870a) | Gets the previous size (or bounds) of the object. |
 | [WidthChanged](#uid-54b34b0269) | Gets a value indicating whether the width of the new size is considered different than the previous size width. |
+| [Handled (Inherited from RoutedEventArgs)](../interactivity/routedeventargs.mdx#uid-204d2af354) | Gets or sets a value indicating whether the routed event has already been handled. |
+| [Route (Inherited from RoutedEventArgs)](../interactivity/routedeventargs.mdx#uid-751be73db9) | Gets or sets the routing strategy (direct, bubbling, or tunneling) of the routed event. |
+| [RoutedEvent (Inherited from RoutedEventArgs)](../interactivity/routedeventargs.mdx#uid-4e102999d9) | Gets or sets the routed event associated with these event args. |
+| [Source (Inherited from RoutedEventArgs)](../interactivity/routedeventargs.mdx#uid-4385b523d5) | Gets or sets the source object that raised the routed event. |
 
 <span id="uid-5470a07b0b"></span>
 
@@ -127,7 +134,7 @@ Gets a value indicating whether the height of the new size is considered
 different than the previous size height.
 
 ```csharp
-public System.Boolean HeightChanged { get; set; }
+public Boolean HeightChanged { get; set; }
 ```
 
 <span id="uid-5d2e8078e8"></span>
@@ -158,7 +165,7 @@ Gets a value indicating whether the width of the new size is considered
 different than the previous size width.
 
 ```csharp
-public System.Boolean WidthChanged { get; set; }
+public Boolean WidthChanged { get; set; }
 ```
 
 </ApiRefPage>

@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Layout/LayoutHelper.cs">LayoutHelper.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -116,7 +119,7 @@ public Avalonia.Size ArrangeChild(Avalonia.Layout.Layoutable child, Avalonia.Siz
 Obtains layout scale of the given control.
 
 ```csharp
-public System.Double GetLayoutScale(Avalonia.Layout.Layoutable control)
+public Double GetLayoutScale(Avalonia.Layout.Layoutable control)
 ```
 
 | Parameter | Description |
@@ -134,7 +137,7 @@ public System.Double GetLayoutScale(Avalonia.Layout.Layoutable control)
 Invalidates measure for given control and all visual children recursively.
 
 ```csharp
-public System.Void InvalidateSelfAndChildrenMeasure(Avalonia.Layout.Layoutable control)
+public Void InvalidateSelfAndChildrenMeasure(Avalonia.Layout.Layoutable control)
 ```
 
 <span id="uid-b5a20f13d6"></span>
@@ -162,7 +165,7 @@ public Avalonia.Size MeasureChild(Avalonia.Layout.Layoutable control, Avalonia.S
 ### RoundLayoutPoint
 
 ```csharp
-public Avalonia.Point RoundLayoutPoint(Avalonia.Point point, System.Double dpiScale)
+public Avalonia.Point RoundLayoutPoint(Avalonia.Point point, Double dpiScale)
 ```
 
 <span id="uid-87bf309333"></span>
@@ -173,7 +176,7 @@ Rounds a size to integer values for layout purposes, compensating for high DPI s
 coordinates by rounding the size up to the nearest pixel.
 
 ```csharp
-public Avalonia.Size RoundLayoutSizeUp(Avalonia.Size size, System.Double dpiScale)
+public Avalonia.Size RoundLayoutSizeUp(Avalonia.Size size, Double dpiScale)
 ```
 
 | Parameter | Description |
@@ -191,7 +194,7 @@ Rounds a thickness to integer values for layout purposes, compensating for high 
 coordinates.
 
 ```csharp
-public Avalonia.Thickness RoundLayoutThickness(Avalonia.Thickness thickness, System.Double dpiScale)
+public Avalonia.Thickness RoundLayoutThickness(Avalonia.Thickness thickness, Double dpiScale)
 ```
 
 | Parameter | Description |
@@ -209,7 +212,7 @@ Calculates the value to be used for layout rounding at high DPI by rounding the 
 up or down to the nearest pixel.
 
 ```csharp
-public System.Double RoundLayoutValue(System.Double value, System.Double dpiScale)
+public Double RoundLayoutValue(Double value, Double dpiScale)
 ```
 
 | Parameter | Description |
@@ -227,7 +230,7 @@ Calculates the value to be used for layout rounding at high DPI by rounding the 
 to the nearest pixel.
 
 ```csharp
-public System.Double RoundLayoutValueUp(System.Double value, System.Double dpiScale)
+public Double RoundLayoutValueUp(Double value, Double dpiScale)
 ```
 
 | Parameter | Description |
@@ -251,7 +254,7 @@ Epsilon value used for certain layout calculations.
 Based on the value in WPF LayoutDoubleUtil.
 
 ```csharp
-public System.Double LayoutEpsilon { get; set; }
+public Double LayoutEpsilon { get; set; }
 ```
 
 </ApiRefPage>

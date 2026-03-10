@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Media/Imaging/WriteableBitmap.cs">WriteableBitmap.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -69,7 +72,7 @@ public class WriteableBitmap
 #### WriteableBitmap
 
 ```csharp
-public WriteableBitmap(Avalonia.PixelSize size, Avalonia.Vector dpi, System.Nullable<Avalonia.Platform.PixelFormat> format, System.Nullable<Avalonia.Platform.AlphaFormat> alphaFormat)
+public WriteableBitmap(Avalonia.PixelSize size, Avalonia.Vector dpi, Nullable<Avalonia.Platform.PixelFormat> format, Nullable<Avalonia.Platform.AlphaFormat> alphaFormat)
 ```
 
 <span id="uid-092fa891e4"></span>
@@ -80,7 +83,7 @@ Initializes a new instance of the [Avalonia.Media.Imaging.WriteableBitmap](xref:
 The data is copied to the bitmap
 
 ```csharp
-public WriteableBitmap(Avalonia.Platform.PixelFormat format, Avalonia.Platform.AlphaFormat alphaFormat, System.IntPtr data, Avalonia.PixelSize size, Avalonia.Vector dpi, System.Int32 stride)
+public WriteableBitmap(Avalonia.Platform.PixelFormat format, Avalonia.Platform.AlphaFormat alphaFormat, IntPtr data, Avalonia.PixelSize size, Avalonia.Vector dpi, Int32 stride)
 ```
 
 | Parameter | Description |
@@ -101,13 +104,17 @@ public WriteableBitmap(Avalonia.Platform.PixelFormat format, Avalonia.Platform.A
 | [DecodeToHeight](#uid-99543906ff) | Loads a Bitmap from a stream and decodes at the desired height. Aspect ratio is maintained. This is more efficient than loading and then resizing. |
 | [DecodeToWidth](#uid-48e5ce4aae) | Loads a WriteableBitmap from a stream and decodes at the desired width. Aspect ratio is maintained. This is more efficient than loading and then resizing. |
 | [Lock](#uid-a4f1529309) | No summary available. |
+| [CopyPixels (Inherited from Bitmap)](bitmap.mdx#uid-9832292efe) | Copies pixels to the target buffer and transcodes the pixel and alpha format if needed. |
+| [CreateScaledBitmap (Inherited from Bitmap)](bitmap.mdx#uid-6635fbb23b) | Creates a Bitmap scaled to a specified size from the current bitmap. |
+| [Dispose (Inherited from Bitmap)](bitmap.mdx#uid-104e904648) | No summary available. |
+| [Save (2 overloads) (Inherited from Bitmap)](bitmap.mdx#uid-2db10525bf) | No summary available. |
 
 <span id="uid-6720be6cb4"></span>
 
 ### CopyPixels
 
 ```csharp
-public System.Void CopyPixels(Avalonia.PixelRect sourceRect, System.IntPtr buffer, System.Int32 bufferSize, System.Int32 stride)
+public Void CopyPixels(Avalonia.PixelRect sourceRect, IntPtr buffer, Int32 bufferSize, Int32 stride)
 ```
 
 <span id="uid-338a5c9dca"></span>
@@ -126,7 +133,7 @@ Loads a Bitmap from a stream and decodes at the desired height. Aspect ratio is 
 This is more efficient than loading and then resizing.
 
 ```csharp
-public Avalonia.Media.Imaging.WriteableBitmap DecodeToHeight(System.IO.Stream stream, System.Int32 height, Avalonia.Media.Imaging.BitmapInterpolationMode interpolationMode)
+public Avalonia.Media.Imaging.WriteableBitmap DecodeToHeight(System.IO.Stream stream, Int32 height, Avalonia.Media.Imaging.BitmapInterpolationMode interpolationMode)
 ```
 
 | Parameter | Description |
@@ -145,7 +152,7 @@ Loads a WriteableBitmap from a stream and decodes at the desired width. Aspect r
 This is more efficient than loading and then resizing.
 
 ```csharp
-public Avalonia.Media.Imaging.WriteableBitmap DecodeToWidth(System.IO.Stream stream, System.Int32 width, Avalonia.Media.Imaging.BitmapInterpolationMode interpolationMode)
+public Avalonia.Media.Imaging.WriteableBitmap DecodeToWidth(System.IO.Stream stream, Int32 width, Avalonia.Media.Imaging.BitmapInterpolationMode interpolationMode)
 ```
 
 | Parameter | Description |
@@ -169,13 +176,17 @@ public Avalonia.Platform.ILockedFramebuffer Lock()
 | Name | Description |
 | --- | --- |
 | [Format](#uid-d1631d07c3) | No summary available. |
+| [AlphaFormat (Inherited from Bitmap)](bitmap.mdx#uid-13f16f356b) | No summary available. |
+| [Dpi (Inherited from Bitmap)](bitmap.mdx#uid-636caa890c) | No summary available. |
+| [PixelSize (Inherited from Bitmap)](bitmap.mdx#uid-81acc3099d) | No summary available. |
+| [Size (Inherited from Bitmap)](bitmap.mdx#uid-c8d851e15e) | Gets the size of the image, in device independent pixels. |
 
 <span id="uid-d1631d07c3"></span>
 
 ### Format
 
 ```csharp
-public System.Nullable<Avalonia.Platform.PixelFormat> Format { get; set; }
+public Nullable<Avalonia.Platform.PixelFormat> Format { get; set; }
 ```
 
 </ApiRefPage>

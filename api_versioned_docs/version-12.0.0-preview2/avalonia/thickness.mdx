@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Thickness.cs">Thickness.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -74,7 +77,7 @@ public struct Thickness
 Initializes a new instance of the [Avalonia.Thickness](xref:Avalonia.Thickness) structure.
 
 ```csharp
-public Thickness(System.Double uniformLength)
+public Thickness(Double uniformLength)
 ```
 
 | Parameter | Description |
@@ -88,7 +91,7 @@ public Thickness(System.Double uniformLength)
 Initializes a new instance of the [Avalonia.Thickness](xref:Avalonia.Thickness) structure.
 
 ```csharp
-public Thickness(System.Double horizontal, System.Double vertical)
+public Thickness(Double horizontal, Double vertical)
 ```
 
 | Parameter | Description |
@@ -103,7 +106,7 @@ public Thickness(System.Double horizontal, System.Double vertical)
 Initializes a new instance of the [Avalonia.Thickness](xref:Avalonia.Thickness) structure.
 
 ```csharp
-public Thickness(System.Double left, System.Double top, System.Double right, System.Double bottom)
+public Thickness(Double left, Double top, Double right, Double bottom)
 ```
 
 | Parameter | Description |
@@ -128,7 +131,7 @@ public Thickness(System.Double left, System.Double top, System.Double right, Sys
 ### Deconstruct
 
 ```csharp
-public System.Void Deconstruct(System.Double& left, System.Double& top, System.Double& right, System.Double& bottom)
+public Void Deconstruct(Double& left, Double& top, Double& right, Double& bottom)
 ```
 
 <span id="uid-cf2a0a36a3"></span>
@@ -142,7 +145,7 @@ public System.Void Deconstruct(System.Double& left, System.Double& top, System.D
 Returns a boolean indicating whether the thickness is equal to the other given point.
 
 ```csharp
-public System.Boolean Equals(Avalonia.Thickness other)
+public Boolean Equals(Avalonia.Thickness other)
 ```
 
 | Parameter | Description |
@@ -158,7 +161,7 @@ Returns: True if this thickness is equal to other; False otherwise.
 Checks for equality between a thickness and an object.
 
 ```csharp
-public System.Boolean Equals(System.Object obj)
+public Boolean Equals(Object obj)
 ```
 
 | Parameter | Description |
@@ -174,7 +177,7 @@ Returns: True if `obj` is a size that equals the current size.
 Returns a hash code for a [Avalonia.Thickness](xref:Avalonia.Thickness).
 
 ```csharp
-public System.Int32 GetHashCode()
+public Int32 GetHashCode()
 ```
 
 Returns: The hash code.
@@ -186,7 +189,7 @@ Returns: The hash code.
 Parses a [Avalonia.Thickness](xref:Avalonia.Thickness) string.
 
 ```csharp
-public Avalonia.Thickness Parse(System.String s)
+public Avalonia.Thickness Parse(String s)
 ```
 
 | Parameter | Description |
@@ -202,7 +205,7 @@ Returns: The [Avalonia.Thickness](xref:Avalonia.Thickness).
 Returns the string representation of the thickness.
 
 ```csharp
-public System.String ToString()
+public String ToString()
 ```
 
 Returns: The string representation of the thickness.
@@ -224,7 +227,7 @@ Returns: The string representation of the thickness.
 Gets the thickness on the bottom.
 
 ```csharp
-public System.Double Bottom { get; set; }
+public Double Bottom { get; set; }
 ```
 
 <span id="uid-9fde083e1c"></span>
@@ -234,7 +237,7 @@ public System.Double Bottom { get; set; }
 Gets a value indicating whether all sides are equal.
 
 ```csharp
-public System.Boolean IsUniform { get; set; }
+public Boolean IsUniform { get; set; }
 ```
 
 <span id="uid-a06dc39d97"></span>
@@ -244,7 +247,7 @@ public System.Boolean IsUniform { get; set; }
 Gets the thickness on the left.
 
 ```csharp
-public System.Double Left { get; set; }
+public Double Left { get; set; }
 ```
 
 <span id="uid-81b7fd7491"></span>
@@ -254,7 +257,7 @@ public System.Double Left { get; set; }
 Gets the thickness on the right.
 
 ```csharp
-public System.Double Right { get; set; }
+public Double Right { get; set; }
 ```
 
 <span id="uid-7588d575b0"></span>
@@ -264,7 +267,7 @@ public System.Double Right { get; set; }
 Gets the thickness on the top.
 
 ```csharp
-public System.Double Top { get; set; }
+public Double Top { get; set; }
 ```
 
 </ApiRefPage>

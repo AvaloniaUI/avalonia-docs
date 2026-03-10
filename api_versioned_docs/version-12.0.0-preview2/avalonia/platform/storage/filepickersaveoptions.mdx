@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Platform/Storage/FilePickerSaveOptions.cs">FilePickerSaveOptions.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -76,6 +79,9 @@ public FilePickerSaveOptions()
 | [FileTypeChoices](#uid-34ebeed348) | Gets or sets the collection of valid file types that the user can choose to assign to a file. |
 | [ShowOverwritePrompt](#uid-a80f1bf533) | Gets or sets a value indicating whether file open picker displays a warning if the user specifies the name of a file that already exists. |
 | [SuggestedFileType](#uid-00b8dc37d9) | Gets or sets the file type that should be preselected when the dialog is opened. |
+| [SuggestedFileName (Inherited from PickerOptions)](pickeroptions.mdx#uid-87696bd66c) | Gets or sets the file name that the file picker suggests to the user. |
+| [SuggestedStartLocation (Inherited from PickerOptions)](pickeroptions.mdx#uid-792044079c) | Gets or sets the initial location where the file open picker looks for files to present to the user. Can be obtained from previously picked folder or using Avalonia.Platform.Storage.IStorageProvider.TryGetFolderFromPathAsync(Uri) or Avalonia.Platform.Storage.IStorageProvider.TryGetWellKnownFolderAsync(Avalonia.Platform.Storage.WellKnownFolder). |
+| [Title (Inherited from PickerOptions)](pickeroptions.mdx#uid-825079a1b0) | Gets or sets the text that appears in the title bar of a picker. |
 
 <span id="uid-2da5de5240"></span>
 
@@ -84,7 +90,7 @@ public FilePickerSaveOptions()
 Gets or sets the default extension to be used to save the file.
 
 ```csharp
-public System.String DefaultExtension { get; set; }
+public String DefaultExtension { get; set; }
 ```
 
 <span id="uid-34ebeed348"></span>
@@ -104,7 +110,7 @@ public System.Collections.Generic.IReadOnlyList<Avalonia.Platform.Storage.FilePi
 Gets or sets a value indicating whether file open picker displays a warning if the user specifies the name of a file that already exists.
 
 ```csharp
-public System.Nullable<System.Boolean> ShowOverwritePrompt { get; set; }
+public Nullable<Boolean> ShowOverwritePrompt { get; set; }
 ```
 
 <span id="uid-00b8dc37d9"></span>

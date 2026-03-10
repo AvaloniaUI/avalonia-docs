@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/PixelVector.cs">PixelVector.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -67,7 +70,7 @@ public struct PixelVector
 Initializes a new instance of the [Avalonia.PixelVector](xref:Avalonia.PixelVector) structure.
 
 ```csharp
-public PixelVector(System.Int32 x, System.Int32 y)
+public PixelVector(Int32 x, Int32 y)
 ```
 
 | Parameter | Description |
@@ -97,7 +100,7 @@ public PixelVector(System.Int32 x, System.Int32 y)
 Check if two vectors are equal (bitwise).
 
 ```csharp
-public System.Boolean Equals(Avalonia.PixelVector other)
+public Boolean Equals(Avalonia.PixelVector other)
 ```
 
 | Parameter | Description |
@@ -109,7 +112,7 @@ public System.Boolean Equals(Avalonia.PixelVector other)
 #### Equals
 
 ```csharp
-public System.Boolean Equals(System.Object obj)
+public Boolean Equals(Object obj)
 ```
 
 <span id="uid-68ca1c05f6"></span>
@@ -117,7 +120,7 @@ public System.Boolean Equals(System.Object obj)
 ### GetHashCode
 
 ```csharp
-public System.Int32 GetHashCode()
+public Int32 GetHashCode()
 ```
 
 <span id="uid-e34f35193c"></span>
@@ -127,7 +130,7 @@ public System.Int32 GetHashCode()
 Check if two vectors are nearly equal (numerically).
 
 ```csharp
-public System.Boolean NearlyEquals(Avalonia.PixelVector other)
+public Boolean NearlyEquals(Avalonia.PixelVector other)
 ```
 
 | Parameter | Description |
@@ -143,7 +146,7 @@ Returns: True if vectors are nearly equal.
 Returns the string representation of the point.
 
 ```csharp
-public System.String ToString()
+public String ToString()
 ```
 
 Returns: The string representation of the point.
@@ -155,7 +158,7 @@ Returns: The string representation of the point.
 Returns a new vector with the specified X coordinate.
 
 ```csharp
-public Avalonia.PixelVector WithX(System.Int32 x)
+public Avalonia.PixelVector WithX(Int32 x)
 ```
 
 | Parameter | Description |
@@ -171,7 +174,7 @@ Returns: The new vector.
 Returns a new vector with the specified Y coordinate.
 
 ```csharp
-public Avalonia.PixelVector WithY(System.Int32 y)
+public Avalonia.PixelVector WithY(Int32 y)
 ```
 
 | Parameter | Description |
@@ -195,7 +198,7 @@ Returns: The new vector.
 Length of the vector
 
 ```csharp
-public System.Double Length { get; set; }
+public Double Length { get; set; }
 ```
 
 <span id="uid-38a48f6dda"></span>
@@ -205,7 +208,7 @@ public System.Double Length { get; set; }
 Gets the X vector.
 
 ```csharp
-public System.Int32 X { get; set; }
+public Int32 X { get; set; }
 ```
 
 <span id="uid-fd0c6a2a0a"></span>
@@ -215,7 +218,7 @@ public System.Int32 X { get; set; }
 Gets the Y vector.
 
 ```csharp
-public System.Int32 Y { get; set; }
+public Int32 Y { get; set; }
 ```
 
 </ApiRefPage>

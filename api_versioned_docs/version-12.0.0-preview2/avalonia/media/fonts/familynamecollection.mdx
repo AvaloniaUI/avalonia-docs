@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Media/Fonts/FamilyNameCollection.cs">FamilyNameCollection.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__signature">
@@ -64,7 +67,7 @@ public class FamilyNameCollection
 Initializes a new instance of the [Avalonia.Media.Fonts.FamilyNameCollection](xref:Avalonia.Media.Fonts.FamilyNameCollection) class.
 
 ```csharp
-public FamilyNameCollection(System.String familyNames)
+public FamilyNameCollection(String familyNames)
 ```
 
 | Parameter | Description |
@@ -79,26 +82,26 @@ public FamilyNameCollection(System.String familyNames)
 
 | Name | Description |
 | --- | --- |
-| [Equals](#uid-49520ec39f) | Determines whether the specified System.Object, is equal to this instance. |
+| [Equals](#uid-49520ec39f) | Determines whether the specified Object, is equal to this instance. |
 | [GetEnumerator](#uid-2c38028f85) | Returns an enumerator for the name collection. |
 | [GetHashCode](#uid-c2caf6e54c) | Returns a hash code for this instance. |
-| [ToString](#uid-e35683a07a) | Returns a System.String that represents this instance. |
+| [ToString](#uid-e35683a07a) | Returns a String that represents this instance. |
 
 <span id="uid-49520ec39f"></span>
 
 ### Equals
 
-Determines whether the specified [System.Object](xref:System.Object), is equal to this instance.
+Determines whether the specified [Object](xref:System.Object), is equal to this instance.
 
 ```csharp
-public System.Boolean Equals(System.Object obj)
+public Boolean Equals(Object obj)
 ```
 
 | Parameter | Description |
 | --- | --- |
-| `obj` | The [System.Object](xref:System.Object) to compare with this instance. |
+| `obj` | The [Object](xref:System.Object) to compare with this instance. |
 
-Returns: `true` if the specified [System.Object](xref:System.Object) is equal to this instance; otherwise, `false`.
+Returns: `true` if the specified [Object](xref:System.Object) is equal to this instance; otherwise, `false`.
 
 <span id="uid-2c38028f85"></span>
 
@@ -107,7 +110,7 @@ Returns: `true` if the specified [System.Object](xref:System.Object) is equal to
 Returns an enumerator for the name collection.
 
 ```csharp
-public Avalonia.Utilities.ImmutableReadOnlyListStructEnumerator<T><System.String> GetEnumerator()
+public Avalonia.Utilities.ImmutableReadOnlyListStructEnumerator<T><String> GetEnumerator()
 ```
 
 <span id="uid-c2caf6e54c"></span>
@@ -117,7 +120,7 @@ public Avalonia.Utilities.ImmutableReadOnlyListStructEnumerator<T><System.String
 Returns a hash code for this instance.
 
 ```csharp
-public System.Int32 GetHashCode()
+public Int32 GetHashCode()
 ```
 
 Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
@@ -126,13 +129,13 @@ Returns: A hash code for this instance, suitable for use in hashing algorithms a
 
 ### ToString
 
-Returns a [System.String](xref:System.String) that represents this instance.
+Returns a [String](xref:System.String) that represents this instance.
 
 ```csharp
-public System.String ToString()
+public String ToString()
 ```
 
-Returns: A [System.String](xref:System.String) that represents this instance.
+Returns: A [String](xref:System.String) that represents this instance.
 
 ## Properties
 
@@ -148,7 +151,7 @@ Returns: A [System.String](xref:System.String) that represents this instance.
 ### Count
 
 ```csharp
-public System.Int32 Count { get; set; }
+public Int32 Count { get; set; }
 ```
 
 <span id="uid-f0a95a1758"></span>
@@ -158,7 +161,7 @@ public System.Int32 Count { get; set; }
 Gets a value indicating whether fallbacks are defined.
 
 ```csharp
-public System.Boolean HasFallbacks { get; set; }
+public Boolean HasFallbacks { get; set; }
 ```
 
 Value: `true` if fallbacks are defined; otherwise, `false`.
@@ -168,7 +171,7 @@ Value: `true` if fallbacks are defined; otherwise, `false`.
 ### Item
 
 ```csharp
-public System.String Item { get; set; }
+public String Item { get; set; }
 ```
 
 <span id="uid-8d971e411e"></span>
@@ -178,7 +181,7 @@ public System.String Item { get; set; }
 Gets the primary family name.
 
 ```csharp
-public System.String PrimaryFamilyName { get; set; }
+public String PrimaryFamilyName { get; set; }
 ```
 
 Value: The primary family name.

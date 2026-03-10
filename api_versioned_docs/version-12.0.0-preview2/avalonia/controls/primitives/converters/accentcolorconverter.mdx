@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.ColorPicker</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Controls.ColorPicker/Converters/AccentColorConverter.cs">AccentColorConverter.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -90,7 +93,7 @@ public AccentColorConverter()
 Converts a value.
 
 ```csharp
-public System.Object Convert(System.Object value, System.Type targetType, System.Object parameter, System.Globalization.CultureInfo culture)
+public Object Convert(Object value, Type targetType, Object parameter, System.Globalization.CultureInfo culture)
 ```
 
 | Parameter | Description |
@@ -109,7 +112,7 @@ Returns: The converted value.
 Converts a value.
 
 ```csharp
-public System.Object ConvertBack(System.Object value, System.Type targetType, System.Object parameter, System.Globalization.CultureInfo culture)
+public Object ConvertBack(Object value, Type targetType, Object parameter, System.Globalization.CultureInfo culture)
 ```
 
 | Parameter | Description |
@@ -129,7 +132,7 @@ This does not account for perceptual differences and also does not match with
 system accent color calculation.
 
 ```csharp
-public Avalonia.Media.HsvColor GetAccent(Avalonia.Media.HsvColor hsvColor, System.Int32 accentStep)
+public Avalonia.Media.HsvColor GetAccent(Avalonia.Media.HsvColor hsvColor, Int32 accentStep)
 ```
 
 | Parameter | Description |
@@ -152,7 +155,7 @@ Returns: The new accent color.
 The amount to change the Value component for each accent color step.
 
 ```csharp
-public System.Double ValueDelta
+public Double ValueDelta
 ```
 
 </ApiRefPage>

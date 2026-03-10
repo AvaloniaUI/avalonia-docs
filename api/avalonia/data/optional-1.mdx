@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Data/Optional.cs">Optional.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -59,7 +62,7 @@ public struct Optional<T>
 
 ## Remarks
 
-This struct is similar to [System.Nullable&lt;T&gt;](xref:System.Nullable%601) except it also accepts reference types:
+This struct is similar to [Nullable&lt;T&gt;](xref:System.Nullable%601) except it also accepts reference types:
 note that null is a valid value for reference types. It is also similar to
 [Avalonia.Data.BindingValue&lt;T&gt;](xref:Avalonia.Data.BindingValue%601) but has only two states: "value present" and "value missing".
 
@@ -96,7 +99,7 @@ public Optional<T>(T value)
 | [Equals (2 overloads)](#uid-daec08aaea) | No summary available. |
 | [GetHashCode](#uid-d44c766616) | No summary available. |
 | [GetValueOrDefault (3 overloads)](#uid-318fde8c7e) | Gets the value if present, otherwise the default value. |
-| [ToObject](#uid-425d9af8f7) | Casts the value (if any) to an System.Object. |
+| [ToObject](#uid-425d9af8f7) | Casts the value (if any) to an Object. |
 | [ToString](#uid-b1080f8c8b) | No summary available. |
 
 <span id="uid-daec08aaea"></span>
@@ -108,7 +111,7 @@ public Optional<T>(T value)
 #### Equals
 
 ```csharp
-public System.Boolean Equals(Avalonia.Data.Optional<T><T> other)
+public Boolean Equals(Avalonia.Data.Optional<T><T> other)
 ```
 
 <span id="uid-5de262a61b"></span>
@@ -116,7 +119,7 @@ public System.Boolean Equals(Avalonia.Data.Optional<T><T> other)
 #### Equals
 
 ```csharp
-public System.Boolean Equals(System.Object obj)
+public Boolean Equals(Object obj)
 ```
 
 <span id="uid-d44c766616"></span>
@@ -124,7 +127,7 @@ public System.Boolean Equals(System.Object obj)
 ### GetHashCode
 
 ```csharp
-public System.Int32 GetHashCode()
+public Int32 GetHashCode()
 ```
 
 <span id="uid-318fde8c7e"></span>
@@ -171,10 +174,10 @@ public TResult GetValueOrDefault<TResult>(TResult defaultValue)
 
 ### ToObject
 
-Casts the value (if any) to an [System.Object](xref:System.Object).
+Casts the value (if any) to an [Object](xref:System.Object).
 
 ```csharp
-public Avalonia.Data.Optional<T><System.Object> ToObject()
+public Avalonia.Data.Optional<T><Object> ToObject()
 ```
 
 Returns: The cast optional value.
@@ -184,7 +187,7 @@ Returns: The cast optional value.
 ### ToString
 
 ```csharp
-public System.String ToString()
+public String ToString()
 ```
 
 ## Properties
@@ -212,7 +215,7 @@ public Avalonia.Data.Optional<T><T> Empty { get; set; }
 Gets a value indicating whether a value is present.
 
 ```csharp
-public System.Boolean HasValue { get; set; }
+public Boolean HasValue { get; set; }
 ```
 
 <span id="uid-a37ba8c329"></span>

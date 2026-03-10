@@ -72,7 +72,7 @@ public interface ILayoutManager
 Executes the initial layout pass on a layout root.
 
 ```csharp
-public System.Void ExecuteInitialLayoutPass()
+public Void ExecuteInitialLayoutPass()
 ```
 
 <span id="uid-3abd2b22b3"></span>
@@ -82,7 +82,7 @@ public System.Void ExecuteInitialLayoutPass()
 Executes a layout pass.
 
 ```csharp
-public System.Void ExecuteLayoutPass()
+public Void ExecuteLayoutPass()
 ```
 
 <span id="uid-b1c288b84d"></span>
@@ -92,7 +92,7 @@ public System.Void ExecuteLayoutPass()
 Notifies the layout manager that a control requires an arrange.
 
 ```csharp
-public System.Void InvalidateArrange(Avalonia.Layout.Layoutable control)
+public Void InvalidateArrange(Avalonia.Layout.Layoutable control)
 ```
 
 | Parameter | Description |
@@ -106,7 +106,7 @@ public System.Void InvalidateArrange(Avalonia.Layout.Layoutable control)
 Notifies the layout manager that a control requires a measure.
 
 ```csharp
-public System.Void InvalidateMeasure(Avalonia.Layout.Layoutable control)
+public Void InvalidateMeasure(Avalonia.Layout.Layoutable control)
 ```
 
 | Parameter | Description |
@@ -120,7 +120,7 @@ public System.Void InvalidateMeasure(Avalonia.Layout.Layoutable control)
 Registers a control as wanting to receive effective viewport notifications.
 
 ```csharp
-public System.Void RegisterEffectiveViewportListener(Avalonia.Layout.Layoutable control)
+public Void RegisterEffectiveViewportListener(Avalonia.Layout.Layoutable control)
 ```
 
 | Parameter | Description |
@@ -134,7 +134,7 @@ public System.Void RegisterEffectiveViewportListener(Avalonia.Layout.Layoutable 
 Registers a control as no longer wanting to receive effective viewport notifications.
 
 ```csharp
-public System.Void UnregisterEffectiveViewportListener(Avalonia.Layout.Layoutable control)
+public Void UnregisterEffectiveViewportListener(Avalonia.Layout.Layoutable control)
 ```
 
 | Parameter | Description |
@@ -154,7 +154,7 @@ public System.Void UnregisterEffectiveViewportListener(Avalonia.Layout.Layoutabl
 Raised when the layout manager completes a layout pass.
 
 ```csharp
-public event System.EventHandler LayoutUpdated
+public event EventHandler LayoutUpdated
 ```
 
 </ApiRefPage>

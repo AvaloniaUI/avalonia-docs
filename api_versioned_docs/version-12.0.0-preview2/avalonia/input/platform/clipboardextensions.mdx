@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Input/Platform/ClipboardExtensions.cs">ClipboardExtensions.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -137,7 +140,7 @@ public System.Threading.Tasks.Task SetFilesAsync(Avalonia.Input.Platform.IClipbo
 Places a text on the clipboard.
 
 ```csharp
-public System.Threading.Tasks.Task SetTextAsync(Avalonia.Input.Platform.IClipboard clipboard, System.String text)
+public System.Threading.Tasks.Task SetTextAsync(Avalonia.Input.Platform.IClipboard clipboard, String text)
 ```
 
 | Parameter | Description |
@@ -232,7 +235,7 @@ Returns: An array of [Avalonia.Platform.Storage.IStorageItem](xref:Avalonia.Plat
 Returns a text, if available, from the clipboard.
 
 ```csharp
-public System.Threading.Tasks.Task<System.String> TryGetTextAsync(Avalonia.Input.Platform.IClipboard clipboard)
+public System.Threading.Tasks.Task<String> TryGetTextAsync(Avalonia.Input.Platform.IClipboard clipboard)
 ```
 
 | Parameter | Description |

@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Collections/AvaloniaListExtensions.cs">AvaloniaListExtensions.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -70,7 +73,7 @@ public class AvaloniaListExtensions
 #### ForEachItem
 
 ```csharp
-public System.IDisposable ForEachItem<T>(Avalonia.Collections.IAvaloniaReadOnlyList<T><T> collection, System.Action<T> added, System.Action<T> removed, System.Action reset, System.Boolean weakSubscription)
+public IDisposable ForEachItem<T>(Avalonia.Collections.IAvaloniaReadOnlyList<T><T> collection, Action<T> added, Action<T> removed, Action reset, Boolean weakSubscription)
 ```
 
 <span id="uid-dffc1a0e9c"></span>
@@ -78,7 +81,7 @@ public System.IDisposable ForEachItem<T>(Avalonia.Collections.IAvaloniaReadOnlyL
 #### ForEachItem
 
 ```csharp
-public System.IDisposable ForEachItem<T>(Avalonia.Collections.IAvaloniaReadOnlyList<T><T> collection, System.Action<System.Int32, T> added, System.Action<System.Int32, T> removed, System.Action reset, System.Boolean weakSubscription)
+public IDisposable ForEachItem<T>(Avalonia.Collections.IAvaloniaReadOnlyList<T><T> collection, Action<Int32, T> added, Action<Int32, T> removed, Action reset, Boolean weakSubscription)
 ```
 
 <span id="uid-b6b7f5dd26"></span>
@@ -86,7 +89,7 @@ public System.IDisposable ForEachItem<T>(Avalonia.Collections.IAvaloniaReadOnlyL
 ### TrackItemPropertyChanged
 
 ```csharp
-public System.IDisposable TrackItemPropertyChanged<T>(Avalonia.Collections.IAvaloniaReadOnlyList<T><T> collection, System.Action<System.Tuple<System.Object,System.ComponentModel.PropertyChangedEventArgs>> callback)
+public IDisposable TrackItemPropertyChanged<T>(Avalonia.Collections.IAvaloniaReadOnlyList<T><T> collection, Action<Tuple<Object,System.ComponentModel.PropertyChangedEventArgs>> callback)
 ```
 
 </ApiRefPage>

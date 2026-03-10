@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Media/Imaging/Bitmap.cs">Bitmap.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -51,6 +54,9 @@ public class Bitmap
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> Bitmap
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Derived types:</span> <a href="rendertargetbitmap">RenderTargetBitmap</a>, <a href="writeablebitmap">WriteableBitmap</a>
 </div>
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Implements:</span> <a href="../iimage">IImage</a>, <a href="../iimagebrushsource">IImageBrushSource</a>, IBitmap, IDisposable
@@ -74,7 +80,7 @@ public class Bitmap
 Initializes a new instance of the [Avalonia.Media.Imaging.Bitmap](xref:Avalonia.Media.Imaging.Bitmap) class.
 
 ```csharp
-public Bitmap(Avalonia.Platform.PixelFormat format, Avalonia.Platform.AlphaFormat alphaFormat, System.IntPtr data, Avalonia.PixelSize size, Avalonia.Vector dpi, System.Int32 stride)
+public Bitmap(Avalonia.Platform.PixelFormat format, Avalonia.Platform.AlphaFormat alphaFormat, IntPtr data, Avalonia.PixelSize size, Avalonia.Vector dpi, Int32 stride)
 ```
 
 | Parameter | Description |
@@ -107,7 +113,7 @@ public Bitmap(System.IO.Stream stream)
 Initializes a new instance of the [Avalonia.Media.Imaging.Bitmap](xref:Avalonia.Media.Imaging.Bitmap) class.
 
 ```csharp
-public Bitmap(System.String fileName)
+public Bitmap(String fileName)
 ```
 
 | Parameter | Description |
@@ -134,7 +140,7 @@ public Bitmap(System.String fileName)
 #### CopyPixels
 
 ```csharp
-public System.Void CopyPixels(Avalonia.PixelRect sourceRect, System.IntPtr buffer, System.Int32 bufferSize, System.Int32 stride)
+public Void CopyPixels(Avalonia.PixelRect sourceRect, IntPtr buffer, Int32 bufferSize, Int32 stride)
 ```
 
 <span id="uid-9832292efe"></span>
@@ -144,7 +150,7 @@ public System.Void CopyPixels(Avalonia.PixelRect sourceRect, System.IntPtr buffe
 Copies pixels to the target buffer and transcodes the pixel and alpha format if needed.
 
 ```csharp
-public System.Void CopyPixels(Avalonia.Platform.ILockedFramebuffer buffer)
+public Void CopyPixels(Avalonia.Platform.ILockedFramebuffer buffer)
 ```
 
 | Parameter | Description |
@@ -153,7 +159,7 @@ public System.Void CopyPixels(Avalonia.Platform.ILockedFramebuffer buffer)
 
 ##### Exceptions
 
-- [System.NotSupportedException](xref:System.NotSupportedException)
+- [NotSupportedException](xref:System.NotSupportedException)
 
 <span id="uid-6635fbb23b"></span>
 
@@ -180,7 +186,7 @@ Loads a Bitmap from a stream and decodes at the desired height. Aspect ratio is 
 This is more efficient than loading and then resizing.
 
 ```csharp
-public Avalonia.Media.Imaging.Bitmap DecodeToHeight(System.IO.Stream stream, System.Int32 height, Avalonia.Media.Imaging.BitmapInterpolationMode interpolationMode)
+public Avalonia.Media.Imaging.Bitmap DecodeToHeight(System.IO.Stream stream, Int32 height, Avalonia.Media.Imaging.BitmapInterpolationMode interpolationMode)
 ```
 
 | Parameter | Description |
@@ -199,7 +205,7 @@ Loads a Bitmap from a stream and decodes at the desired width. Aspect ratio is m
 This is more efficient than loading and then resizing.
 
 ```csharp
-public Avalonia.Media.Imaging.Bitmap DecodeToWidth(System.IO.Stream stream, System.Int32 width, Avalonia.Media.Imaging.BitmapInterpolationMode interpolationMode)
+public Avalonia.Media.Imaging.Bitmap DecodeToWidth(System.IO.Stream stream, Int32 width, Avalonia.Media.Imaging.BitmapInterpolationMode interpolationMode)
 ```
 
 | Parameter | Description |
@@ -215,7 +221,7 @@ Returns: An instance of the [Avalonia.Media.Imaging.Bitmap](xref:Avalonia.Media.
 ### Dispose
 
 ```csharp
-public System.Void Dispose()
+public Void Dispose()
 ```
 
 <span id="uid-2db10525bf"></span>
@@ -227,7 +233,7 @@ public System.Void Dispose()
 #### Save
 
 ```csharp
-public System.Void Save(System.IO.Stream stream, System.Nullable<System.Int32> quality)
+public Void Save(System.IO.Stream stream, Nullable<Int32> quality)
 ```
 
 <span id="uid-dade950b8f"></span>
@@ -235,7 +241,7 @@ public System.Void Save(System.IO.Stream stream, System.Nullable<System.Int32> q
 #### Save
 
 ```csharp
-public System.Void Save(System.String fileName, System.Nullable<System.Int32> quality)
+public Void Save(String fileName, Nullable<Int32> quality)
 ```
 
 ## Properties
@@ -253,7 +259,7 @@ public System.Void Save(System.String fileName, System.Nullable<System.Int32> qu
 ### AlphaFormat
 
 ```csharp
-public System.Nullable<Avalonia.Platform.AlphaFormat> AlphaFormat { get; set; }
+public Nullable<Avalonia.Platform.AlphaFormat> AlphaFormat { get; set; }
 ```
 
 <span id="uid-636caa890c"></span>
@@ -269,7 +275,7 @@ public Avalonia.Vector Dpi { get; set; }
 ### Format
 
 ```csharp
-public System.Nullable<Avalonia.Platform.PixelFormat> Format { get; set; }
+public Nullable<Avalonia.Platform.PixelFormat> Format { get; set; }
 ```
 
 <span id="uid-81acc3099d"></span>

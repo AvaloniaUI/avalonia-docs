@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Android</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Android/Avalonia.Android/AvaloniaActivity.cs">AvaloniaActivity.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -52,6 +55,9 @@ public class AvaloniaActivity
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Inheritance:</span> AppCompatActivity <span className="apiref-page__relation-separator">-&gt;</span> AvaloniaActivity
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Derived types:</span> <a href="avaloniamainactivity">AvaloniaMainActivity</a>
 </div>
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Implements:</span> <a href="iactivitynavigationservice">IActivityNavigationService</a>, <a href="iactivityresulthandler">IActivityResultHandler</a>, <a href="iavaloniaactivity">IAvaloniaActivity</a>
@@ -85,7 +91,7 @@ public AvaloniaActivity()
 ### OnBackInvoked
 
 ```csharp
-public System.Void OnBackInvoked()
+public Void OnBackInvoked()
 ```
 
 <span id="uid-d0ca4342e1"></span>
@@ -93,7 +99,7 @@ public System.Void OnBackInvoked()
 ### OnBackPressed
 
 ```csharp
-public System.Void OnBackPressed()
+public Void OnBackPressed()
 ```
 
 <span id="uid-62bc448b46"></span>
@@ -101,7 +107,7 @@ public System.Void OnBackPressed()
 ### OnRequestPermissionsResult
 
 ```csharp
-public System.Void OnRequestPermissionsResult(System.Int32 requestCode, System.String[] permissions, Android.Content.PM.Permission[] grantResults)
+public Void OnRequestPermissionsResult(Int32 requestCode, String[] permissions, Android.Content.PM.Permission[] grantResults)
 ```
 
 ## Properties
@@ -117,7 +123,7 @@ public System.Void OnRequestPermissionsResult(System.Int32 requestCode, System.S
 ### ActivityResult
 
 ```csharp
-public System.Action<System.Int32, Android.App.Result, Android.Content.Intent> ActivityResult { get; set; }
+public Action<Int32, Android.App.Result, Android.Content.Intent> ActivityResult { get; set; }
 ```
 
 <span id="uid-76a727f8cb"></span>
@@ -125,7 +131,7 @@ public System.Action<System.Int32, Android.App.Result, Android.Content.Intent> A
 ### Content
 
 ```csharp
-public System.Object Content { get; set; }
+public Object Content { get; set; }
 ```
 
 <span id="uid-a18d9b0980"></span>
@@ -133,7 +139,7 @@ public System.Object Content { get; set; }
 ### RequestPermissionsResult
 
 ```csharp
-public System.Action<System.Int32, System.String[], Android.Content.PM.Permission[]> RequestPermissionsResult { get; set; }
+public Action<Int32, String[], Android.Content.PM.Permission[]> RequestPermissionsResult { get; set; }
 ```
 
 ## Events
@@ -147,7 +153,7 @@ public System.Action<System.Int32, System.String[], Android.Content.PM.Permissio
 ### BackRequested
 
 ```csharp
-public event System.EventHandler<Avalonia.Android.AndroidBackRequestedEventArgs> BackRequested
+public event EventHandler<Avalonia.Android.AndroidBackRequestedEventArgs> BackRequested
 ```
 
 </ApiRefPage>

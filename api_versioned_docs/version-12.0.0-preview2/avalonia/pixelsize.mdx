@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/PixelSize.cs">PixelSize.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -70,7 +73,7 @@ public struct PixelSize
 Initializes a new instance of the [Avalonia.PixelSize](xref:Avalonia.PixelSize) structure.
 
 ```csharp
-public PixelSize(System.Int32 width, System.Int32 height)
+public PixelSize(Int32 width, Int32 height)
 ```
 
 | Parameter | Description |
@@ -105,7 +108,7 @@ public PixelSize(System.Int32 width, System.Int32 height)
 Returns a boolean indicating whether the size is equal to the other given size.
 
 ```csharp
-public System.Boolean Equals(Avalonia.PixelSize other)
+public Boolean Equals(Avalonia.PixelSize other)
 ```
 
 | Parameter | Description |
@@ -121,7 +124,7 @@ Returns: True if this size is equal to other; False otherwise.
 Checks for equality between a size and an object.
 
 ```csharp
-public System.Boolean Equals(System.Object obj)
+public Boolean Equals(Object obj)
 ```
 
 | Parameter | Description |
@@ -158,7 +161,7 @@ Returns: The device-independent size.
 Converts a [Avalonia.Size](xref:Avalonia.Size) to device pixels using the specified scaling factor.
 
 ```csharp
-public Avalonia.PixelSize FromSize(Avalonia.Size size, System.Double scale)
+public Avalonia.PixelSize FromSize(Avalonia.Size size, Double scale)
 ```
 
 | Parameter | Description |
@@ -196,7 +199,7 @@ Returns: The device-independent size.
 Converts a [Avalonia.Size](xref:Avalonia.Size) to device pixels using the specified dots per inch (DPI).
 
 ```csharp
-public Avalonia.PixelSize FromSizeWithDpi(Avalonia.Size size, System.Double dpi)
+public Avalonia.PixelSize FromSizeWithDpi(Avalonia.Size size, Double dpi)
 ```
 
 | Parameter | Description |
@@ -213,7 +216,7 @@ Returns: The device-independent size.
 Returns a hash code for a [Avalonia.PixelSize](xref:Avalonia.PixelSize).
 
 ```csharp
-public System.Int32 GetHashCode()
+public Int32 GetHashCode()
 ```
 
 Returns: The hash code.
@@ -225,7 +228,7 @@ Returns: The hash code.
 Parses a [Avalonia.PixelSize](xref:Avalonia.PixelSize) string.
 
 ```csharp
-public Avalonia.PixelSize Parse(System.String s)
+public Avalonia.PixelSize Parse(String s)
 ```
 
 | Parameter | Description |
@@ -236,7 +239,7 @@ Returns: The [Avalonia.PixelSize](xref:Avalonia.PixelSize).
 
 #### Exceptions
 
-- [System.FormatException](xref:System.FormatException)
+- [FormatException](xref:System.FormatException)
 
 <span id="uid-818d1acecc"></span>
 
@@ -267,7 +270,7 @@ Converts the [Avalonia.PixelSize](xref:Avalonia.PixelSize) to a device-independe
 specified scaling factor.
 
 ```csharp
-public Avalonia.Size ToSize(System.Double scale)
+public Avalonia.Size ToSize(Double scale)
 ```
 
 | Parameter | Description |
@@ -305,7 +308,7 @@ Converts the [Avalonia.PixelSize](xref:Avalonia.PixelSize) to a device-independe
 specified dots per inch (DPI).
 
 ```csharp
-public Avalonia.Size ToSizeWithDpi(System.Double dpi)
+public Avalonia.Size ToSizeWithDpi(Double dpi)
 ```
 
 | Parameter | Description |
@@ -321,7 +324,7 @@ Returns: The device-independent size.
 Returns the string representation of the size.
 
 ```csharp
-public System.String ToString()
+public String ToString()
 ```
 
 Returns: The string representation of the size.
@@ -331,7 +334,7 @@ Returns: The string representation of the size.
 ### TryParse
 
 ```csharp
-public System.Boolean TryParse(System.String source, Avalonia.PixelSize& result)
+public Boolean TryParse(String source, Avalonia.PixelSize& result)
 ```
 
 <span id="uid-c0cedf7124"></span>
@@ -341,7 +344,7 @@ public System.Boolean TryParse(System.String source, Avalonia.PixelSize& result)
 Returns a new [Avalonia.PixelSize](xref:Avalonia.PixelSize) with the same width and the specified height.
 
 ```csharp
-public Avalonia.PixelSize WithHeight(System.Int32 height)
+public Avalonia.PixelSize WithHeight(Int32 height)
 ```
 
 | Parameter | Description |
@@ -357,7 +360,7 @@ Returns: The new [Avalonia.PixelSize](xref:Avalonia.PixelSize).
 Returns a new [Avalonia.PixelSize](xref:Avalonia.PixelSize) with the same height and the specified width.
 
 ```csharp
-public Avalonia.PixelSize WithWidth(System.Int32 width)
+public Avalonia.PixelSize WithWidth(Int32 width)
 ```
 
 | Parameter | Description |
@@ -381,7 +384,7 @@ Returns: The new [Avalonia.PixelSize](xref:Avalonia.PixelSize).
 Gets the aspect ratio of the size.
 
 ```csharp
-public System.Double AspectRatio { get; set; }
+public Double AspectRatio { get; set; }
 ```
 
 <span id="uid-2ebe21dcf6"></span>
@@ -391,7 +394,7 @@ public System.Double AspectRatio { get; set; }
 Gets the height.
 
 ```csharp
-public System.Int32 Height { get; set; }
+public Int32 Height { get; set; }
 ```
 
 <span id="uid-3ff8c5cee0"></span>
@@ -401,7 +404,7 @@ public System.Int32 Height { get; set; }
 Gets the width.
 
 ```csharp
-public System.Int32 Width { get; set; }
+public Int32 Width { get; set; }
 ```
 
 ## Fields

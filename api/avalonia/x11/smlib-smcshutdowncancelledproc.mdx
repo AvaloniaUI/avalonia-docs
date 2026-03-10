@@ -59,7 +59,7 @@ public delegate SMLib.SmcShutdownCancelledProc
 ### SMLib.SmcShutdownCancelledProc
 
 ```csharp
-public SMLib.SmcShutdownCancelledProc(System.Object object, System.IntPtr method)
+public SMLib.SmcShutdownCancelledProc(Object object, IntPtr method)
 ```
 
 ## Methods
@@ -75,7 +75,7 @@ public SMLib.SmcShutdownCancelledProc(System.Object object, System.IntPtr method
 ### BeginInvoke
 
 ```csharp
-public System.IAsyncResult BeginInvoke(System.IntPtr smcConn, System.IntPtr clientData, System.AsyncCallback callback, System.Object object)
+public IAsyncResult BeginInvoke(IntPtr smcConn, IntPtr clientData, AsyncCallback callback, Object object)
 ```
 
 <span id="uid-df573ecb56"></span>
@@ -83,7 +83,7 @@ public System.IAsyncResult BeginInvoke(System.IntPtr smcConn, System.IntPtr clie
 ### EndInvoke
 
 ```csharp
-public System.Void EndInvoke(System.IAsyncResult result)
+public Void EndInvoke(IAsyncResult result)
 ```
 
 <span id="uid-3a75622a15"></span>
@@ -91,7 +91,7 @@ public System.Void EndInvoke(System.IAsyncResult result)
 ### Invoke
 
 ```csharp
-public System.Void Invoke(System.IntPtr smcConn, System.IntPtr clientData)
+public Void Invoke(IntPtr smcConn, IntPtr clientData)
 ```
 
 </ApiRefPage>

@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Media/Fonts/FontFamilyKey.cs">FontFamilyKey.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -67,7 +70,7 @@ public class FontFamilyKey
 Creates a new instance of [Avalonia.Media.Fonts.FontFamilyKey](xref:Avalonia.Media.Fonts.FontFamilyKey)
 
 ```csharp
-public FontFamilyKey(System.Uri source, System.Uri baseUri)
+public FontFamilyKey(Uri source, Uri baseUri)
 ```
 
 | Parameter | Description |
@@ -79,25 +82,25 @@ public FontFamilyKey(System.Uri source, System.Uri baseUri)
 
 | Name | Description |
 | --- | --- |
-| [Equals](#uid-fdb0fef25e) | Determines whether the specified System.Object, is equal to this instance. |
+| [Equals](#uid-fdb0fef25e) | Determines whether the specified Object, is equal to this instance. |
 | [GetHashCode](#uid-e20ce1b9eb) | Returns a hash code for this instance. |
-| [ToString](#uid-6646924e42) | Returns a System.String that represents this instance. |
+| [ToString](#uid-6646924e42) | Returns a String that represents this instance. |
 
 <span id="uid-fdb0fef25e"></span>
 
 ### Equals
 
-Determines whether the specified [System.Object](xref:System.Object), is equal to this instance.
+Determines whether the specified [Object](xref:System.Object), is equal to this instance.
 
 ```csharp
-public System.Boolean Equals(System.Object obj)
+public Boolean Equals(Object obj)
 ```
 
 | Parameter | Description |
 | --- | --- |
-| `obj` | The [System.Object](xref:System.Object) to compare with this instance. |
+| `obj` | The [Object](xref:System.Object) to compare with this instance. |
 
-Returns: `true` if the specified [System.Object](xref:System.Object) is equal to this instance; otherwise, `false`.
+Returns: `true` if the specified [Object](xref:System.Object) is equal to this instance; otherwise, `false`.
 
 <span id="uid-e20ce1b9eb"></span>
 
@@ -106,7 +109,7 @@ Returns: `true` if the specified [System.Object](xref:System.Object) is equal to
 Returns a hash code for this instance.
 
 ```csharp
-public System.Int32 GetHashCode()
+public Int32 GetHashCode()
 ```
 
 Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
@@ -115,13 +118,13 @@ Returns: A hash code for this instance, suitable for use in hashing algorithms a
 
 ### ToString
 
-Returns a [System.String](xref:System.String) that represents this instance.
+Returns a [String](xref:System.String) that represents this instance.
 
 ```csharp
-public System.String ToString()
+public String ToString()
 ```
 
-Returns: A [System.String](xref:System.String) that represents this instance.
+Returns: A [String](xref:System.String) that represents this instance.
 
 ## Properties
 
@@ -137,7 +140,7 @@ Returns: A [System.String](xref:System.String) that represents this instance.
 A base URI to use if [Avalonia.Media.Fonts.FontFamilyKey.Source](xref:Avalonia.Media.Fonts.FontFamilyKey.Source) is relative
 
 ```csharp
-public System.Uri BaseUri { get; set; }
+public Uri BaseUri { get; set; }
 ```
 
 <span id="uid-ed486f8990"></span>
@@ -147,7 +150,7 @@ public System.Uri BaseUri { get; set; }
 Source of stored font asset that belongs to a [Avalonia.Media.FontFamily](xref:Avalonia.Media.FontFamily)
 
 ```csharp
-public System.Uri Source { get; set; }
+public Uri Source { get; set; }
 ```
 
 </ApiRefPage>

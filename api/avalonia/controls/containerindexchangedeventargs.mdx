@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Controls/ContainerIndexChangedEventArgs.cs">ContainerIndexChangedEventArgs.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -65,7 +68,7 @@ public class ContainerIndexChangedEventArgs
 ### ContainerIndexChangedEventArgs
 
 ```csharp
-public ContainerIndexChangedEventArgs(Avalonia.Controls.Control container, System.Int32 oldIndex, System.Int32 newIndex)
+public ContainerIndexChangedEventArgs(Avalonia.Controls.Control container, Int32 oldIndex, Int32 newIndex)
 ```
 
 ## Properties
@@ -93,7 +96,7 @@ public Avalonia.Controls.Control Container { get; set; }
 Gets the index of the container after the change.
 
 ```csharp
-public System.Int32 NewIndex { get; set; }
+public Int32 NewIndex { get; set; }
 ```
 
 <span id="uid-c4079d671e"></span>
@@ -103,7 +106,7 @@ public System.Int32 NewIndex { get; set; }
 Gets the index of the container before the change.
 
 ```csharp
-public System.Int32 OldIndex { get; set; }
+public Int32 OldIndex { get; set; }
 ```
 
 </ApiRefPage>

@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Controls/ProgressBar.cs">ProgressBar.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -72,6 +75,24 @@ This class is NOT intended for general use outside of control templates.
 public ProgressBar.ProgressBarTemplateSettings()
 ```
 
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Bind (8 overloads) (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-1c60c7bda3) | Binds a Avalonia.AvaloniaProperty to an Avalonia.Data.BindingBase. |
+| [CheckAccess (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-260ff7a68d) | Returns a value indicating whether the current thread is the UI thread. |
+| [ClearValue (4 overloads) (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-41de208fbe) | Clears a Avalonia.AvaloniaProperty's local value. |
+| [CoerceValue (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-3bec32f39e) | Coerces the specified Avalonia.AvaloniaProperty. |
+| [Equals (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-a8a8e94305) | Compares two objects using reference equality. |
+| [GetBaseValue (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-9c615efbba) | No summary available. |
+| [GetHashCode (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-7f7db1e7a2) | Gets the hash code for the object. |
+| [GetValue (3 overloads) (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-5142cd4792) | Gets a Avalonia.AvaloniaProperty value. |
+| [IsAnimating (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-8cbfc7521a) | Checks whether a Avalonia.AvaloniaProperty is animating. |
+| [IsSet (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-f8bf0bbdcc) | Checks whether a Avalonia.AvaloniaProperty is set on this object. |
+| [SetCurrentValue (2 overloads) (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-38759fd088) | Sets the value of a dependency property without changing its value source. |
+| [SetValue (3 overloads) (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-47d14e19d7) | Sets a Avalonia.AvaloniaProperty value. |
+| [VerifyAccess (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-3b9d3c9793) | Checks that the current thread is the UI thread and throws if not. |
+
 ## Properties
 
 | Name | Description |
@@ -84,6 +105,8 @@ public ProgressBar.ProgressBarTemplateSettings()
 | [ContainerWidth](#uid-b7619a70e2) | Used by Avalonia.Themes.Fluent to define the first indeterminate indicator's width. |
 | [IndeterminateEndingOffset](#uid-f595fb3f20) | Used by Avalonia.Themes.Simple to define the ending point of its indeterminate animation. |
 | [IndeterminateStartingOffset](#uid-cc8ad1d549) | Used by Avalonia.Themes.Simple to define the starting point of its indeterminate animation. |
+| [Dispatcher (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-b25fa51632) | Returns the Avalonia.AvaloniaObject.Dispatcher that this Avalonia.AvaloniaObject is associated with. |
+| [Item (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-c1d1f1bc0f) | No summary available. |
 
 <span id="uid-909ec74b23"></span>
 
@@ -92,7 +115,7 @@ public ProgressBar.ProgressBarTemplateSettings()
 Used by Avalonia.Themes.Fluent to define the second indeterminate indicator's end position when animated.
 
 ```csharp
-public System.Double Container2AnimationEndPosition { get; set; }
+public Double Container2AnimationEndPosition { get; set; }
 ```
 
 <span id="uid-8544acc5c3"></span>
@@ -102,7 +125,7 @@ public System.Double Container2AnimationEndPosition { get; set; }
 Used by Avalonia.Themes.Fluent to define the second indeterminate indicator's start position when animated.
 
 ```csharp
-public System.Double Container2AnimationStartPosition { get; set; }
+public Double Container2AnimationStartPosition { get; set; }
 ```
 
 <span id="uid-be4bdbbd42"></span>
@@ -112,7 +135,7 @@ public System.Double Container2AnimationStartPosition { get; set; }
 Used by Avalonia.Themes.Fluent to define the second indeterminate indicator's width.
 
 ```csharp
-public System.Double Container2Width { get; set; }
+public Double Container2Width { get; set; }
 ```
 
 <span id="uid-fb4ec637ed"></span>
@@ -122,7 +145,7 @@ public System.Double Container2Width { get; set; }
 Used by Avalonia.Themes.Fluent to define the first indeterminate indicator's end position when animated.
 
 ```csharp
-public System.Double ContainerAnimationEndPosition { get; set; }
+public Double ContainerAnimationEndPosition { get; set; }
 ```
 
 <span id="uid-656be5e641"></span>
@@ -132,7 +155,7 @@ public System.Double ContainerAnimationEndPosition { get; set; }
 Used by Avalonia.Themes.Fluent to define the first indeterminate indicator's start position when animated.
 
 ```csharp
-public System.Double ContainerAnimationStartPosition { get; set; }
+public Double ContainerAnimationStartPosition { get; set; }
 ```
 
 <span id="uid-b7619a70e2"></span>
@@ -142,7 +165,7 @@ public System.Double ContainerAnimationStartPosition { get; set; }
 Used by Avalonia.Themes.Fluent to define the first indeterminate indicator's width.
 
 ```csharp
-public System.Double ContainerWidth { get; set; }
+public Double ContainerWidth { get; set; }
 ```
 
 <span id="uid-f595fb3f20"></span>
@@ -152,7 +175,7 @@ public System.Double ContainerWidth { get; set; }
 Used by Avalonia.Themes.Simple to define the ending point of its indeterminate animation.
 
 ```csharp
-public System.Double IndeterminateEndingOffset { get; set; }
+public Double IndeterminateEndingOffset { get; set; }
 ```
 
 <span id="uid-cc8ad1d549"></span>
@@ -162,7 +185,7 @@ public System.Double IndeterminateEndingOffset { get; set; }
 Used by Avalonia.Themes.Simple to define the starting point of its indeterminate animation.
 
 ```csharp
-public System.Double IndeterminateStartingOffset { get; set; }
+public Double IndeterminateStartingOffset { get; set; }
 ```
 
 ## Fields
@@ -185,7 +208,7 @@ public System.Double IndeterminateStartingOffset { get; set; }
 Defines the [Avalonia.Controls.ProgressBar.ProgressBarTemplateSettings.Container2AnimationEndPosition](xref:Avalonia.Controls.ProgressBar.ProgressBarTemplateSettings.Container2AnimationEndPosition) property.
 
 ```csharp
-public Avalonia.DirectProperty<Avalonia.Controls.ProgressBar.ProgressBarTemplateSettings, System.Double> Container2AnimationEndPositionProperty
+public Avalonia.DirectProperty<Avalonia.Controls.ProgressBar.ProgressBarTemplateSettings, Double> Container2AnimationEndPositionProperty
 ```
 
 <span id="uid-74aefd3951"></span>
@@ -195,7 +218,7 @@ public Avalonia.DirectProperty<Avalonia.Controls.ProgressBar.ProgressBarTemplate
 Defines the [Avalonia.Controls.ProgressBar.ProgressBarTemplateSettings.Container2AnimationStartPosition](xref:Avalonia.Controls.ProgressBar.ProgressBarTemplateSettings.Container2AnimationStartPosition) property.
 
 ```csharp
-public Avalonia.DirectProperty<Avalonia.Controls.ProgressBar.ProgressBarTemplateSettings, System.Double> Container2AnimationStartPositionProperty
+public Avalonia.DirectProperty<Avalonia.Controls.ProgressBar.ProgressBarTemplateSettings, Double> Container2AnimationStartPositionProperty
 ```
 
 <span id="uid-b1ceee6c2f"></span>
@@ -205,7 +228,7 @@ public Avalonia.DirectProperty<Avalonia.Controls.ProgressBar.ProgressBarTemplate
 Defines the [Avalonia.Controls.ProgressBar.ProgressBarTemplateSettings.Container2Width](xref:Avalonia.Controls.ProgressBar.ProgressBarTemplateSettings.Container2Width) property.
 
 ```csharp
-public Avalonia.DirectProperty<Avalonia.Controls.ProgressBar.ProgressBarTemplateSettings, System.Double> Container2WidthProperty
+public Avalonia.DirectProperty<Avalonia.Controls.ProgressBar.ProgressBarTemplateSettings, Double> Container2WidthProperty
 ```
 
 <span id="uid-37c8eb4685"></span>
@@ -215,7 +238,7 @@ public Avalonia.DirectProperty<Avalonia.Controls.ProgressBar.ProgressBarTemplate
 Defines the [Avalonia.Controls.ProgressBar.ProgressBarTemplateSettings.ContainerAnimationEndPosition](xref:Avalonia.Controls.ProgressBar.ProgressBarTemplateSettings.ContainerAnimationEndPosition) property.
 
 ```csharp
-public Avalonia.DirectProperty<Avalonia.Controls.ProgressBar.ProgressBarTemplateSettings, System.Double> ContainerAnimationEndPositionProperty
+public Avalonia.DirectProperty<Avalonia.Controls.ProgressBar.ProgressBarTemplateSettings, Double> ContainerAnimationEndPositionProperty
 ```
 
 <span id="uid-6181660164"></span>
@@ -225,7 +248,7 @@ public Avalonia.DirectProperty<Avalonia.Controls.ProgressBar.ProgressBarTemplate
 Defines the [Avalonia.Controls.ProgressBar.ProgressBarTemplateSettings.ContainerAnimationStartPosition](xref:Avalonia.Controls.ProgressBar.ProgressBarTemplateSettings.ContainerAnimationStartPosition) property.
 
 ```csharp
-public Avalonia.DirectProperty<Avalonia.Controls.ProgressBar.ProgressBarTemplateSettings, System.Double> ContainerAnimationStartPositionProperty
+public Avalonia.DirectProperty<Avalonia.Controls.ProgressBar.ProgressBarTemplateSettings, Double> ContainerAnimationStartPositionProperty
 ```
 
 <span id="uid-6d71760bc3"></span>
@@ -235,7 +258,7 @@ public Avalonia.DirectProperty<Avalonia.Controls.ProgressBar.ProgressBarTemplate
 Defines the [Avalonia.Controls.ProgressBar.ProgressBarTemplateSettings.ContainerWidth](xref:Avalonia.Controls.ProgressBar.ProgressBarTemplateSettings.ContainerWidth) property.
 
 ```csharp
-public Avalonia.DirectProperty<Avalonia.Controls.ProgressBar.ProgressBarTemplateSettings, System.Double> ContainerWidthProperty
+public Avalonia.DirectProperty<Avalonia.Controls.ProgressBar.ProgressBarTemplateSettings, Double> ContainerWidthProperty
 ```
 
 <span id="uid-f62b1f8268"></span>
@@ -245,7 +268,7 @@ public Avalonia.DirectProperty<Avalonia.Controls.ProgressBar.ProgressBarTemplate
 Defines the [Avalonia.Controls.ProgressBar.ProgressBarTemplateSettings.IndeterminateEndingOffset](xref:Avalonia.Controls.ProgressBar.ProgressBarTemplateSettings.IndeterminateEndingOffset) property.
 
 ```csharp
-public Avalonia.DirectProperty<Avalonia.Controls.ProgressBar.ProgressBarTemplateSettings, System.Double> IndeterminateEndingOffsetProperty
+public Avalonia.DirectProperty<Avalonia.Controls.ProgressBar.ProgressBarTemplateSettings, Double> IndeterminateEndingOffsetProperty
 ```
 
 <span id="uid-b1ae0850a8"></span>
@@ -255,8 +278,14 @@ public Avalonia.DirectProperty<Avalonia.Controls.ProgressBar.ProgressBarTemplate
 Defines the [Avalonia.Controls.ProgressBar.ProgressBarTemplateSettings.IndeterminateStartingOffset](xref:Avalonia.Controls.ProgressBar.ProgressBarTemplateSettings.IndeterminateStartingOffset) property.
 
 ```csharp
-public Avalonia.DirectProperty<Avalonia.Controls.ProgressBar.ProgressBarTemplateSettings, System.Double> IndeterminateStartingOffsetProperty
+public Avalonia.DirectProperty<Avalonia.Controls.ProgressBar.ProgressBarTemplateSettings, Double> IndeterminateStartingOffsetProperty
 ```
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [PropertyChanged (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-d758e26fae) | Raised when a Avalonia.AvaloniaProperty value changes on this object. |
 
 </ApiRefPage>
 

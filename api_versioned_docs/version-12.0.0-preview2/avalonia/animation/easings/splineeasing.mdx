@@ -32,11 +32,14 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Animation/Easings/SplineEasing.cs">SplineEasing.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
 
-Eases a [System.Double](xref:System.Double) value
+Eases a [Double](xref:System.Double) value
 using a user-defined cubic bezier curve.
 Good for custom easing functions that doesn't quite
 fit with the built-in ones.
@@ -88,7 +91,7 @@ public SplineEasing(Avalonia.Animation.KeySpline keySpline)
 #### SplineEasing
 
 ```csharp
-public SplineEasing(System.Double x1, System.Double y1, System.Double x2, System.Double y2)
+public SplineEasing(Double x1, Double y1, Double x2, Double y2)
 ```
 
 ## Methods
@@ -96,13 +99,14 @@ public SplineEasing(System.Double x1, System.Double y1, System.Double x2, System
 | Name | Description |
 | --- | --- |
 | [Ease](#uid-8a9da45a9e) | No summary available. |
+| [Parse (Inherited from Easing)](easing.mdx#uid-c851a9a9b7) | Parses a Easing type string. |
 
 <span id="uid-8a9da45a9e"></span>
 
 ### Ease
 
 ```csharp
-public System.Double Ease(System.Double progress)
+public Double Ease(Double progress)
 ```
 
 ## Properties
@@ -121,7 +125,7 @@ public System.Double Ease(System.Double progress)
 X coordinate of the first control point
 
 ```csharp
-public System.Double X1 { get; set; }
+public Double X1 { get; set; }
 ```
 
 <span id="uid-dbe4bed5ae"></span>
@@ -131,7 +135,7 @@ public System.Double X1 { get; set; }
 X coordinate of the second control point
 
 ```csharp
-public System.Double X2 { get; set; }
+public Double X2 { get; set; }
 ```
 
 <span id="uid-5d80ac868e"></span>
@@ -141,7 +145,7 @@ public System.Double X2 { get; set; }
 Y coordinate of the first control point
 
 ```csharp
-public System.Double Y1 { get; set; }
+public Double Y1 { get; set; }
 ```
 
 <span id="uid-bb6b872ad0"></span>
@@ -151,7 +155,7 @@ public System.Double Y1 { get; set; }
 Y coordinate of the second control point
 
 ```csharp
-public System.Double Y2 { get; set; }
+public Double Y2 { get; set; }
 ```
 
 </ApiRefPage>

@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia.LinuxFramebuffer</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Linux/Avalonia.LinuxFramebuffer/LinuxFramebufferPlatformOptions.cs">LinuxFramebufferPlatformOptions.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -83,7 +86,7 @@ Gets or sets the number of frames per second at which the renderer should run.
 Default 60.
 
 ```csharp
-public System.Int32 Fps { get; set; }
+public Int32 Fps { get; set; }
 ```
 
 <span id="uid-18441bb8b2"></span>
@@ -95,7 +98,7 @@ This can be usable if your device don't have multiple cores to begin with.
 This setting is false by default.
 
 ```csharp
-public System.Boolean ShouldRenderOnUIThread { get; set; }
+public Boolean ShouldRenderOnUIThread { get; set; }
 ```
 
 </ApiRefPage>

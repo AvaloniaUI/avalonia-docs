@@ -63,7 +63,7 @@ public interface IDispatcher
 Determines whether the calling thread is the thread associated with this [Avalonia.Threading.IDispatcher](xref:Avalonia.Threading.IDispatcher).
 
 ```csharp
-public System.Boolean CheckAccess()
+public Boolean CheckAccess()
 ```
 
 Returns: True if he calling thread is the thread associated with the dispatched, otherwise false.
@@ -75,7 +75,7 @@ Returns: True if he calling thread is the thread associated with the dispatched,
 Posts an action that will be invoked on the dispatcher thread.
 
 ```csharp
-public System.Void Post(System.Action action, Avalonia.Threading.DispatcherPriority priority)
+public Void Post(Action action, Avalonia.Threading.DispatcherPriority priority)
 ```
 
 | Parameter | Description |
@@ -90,7 +90,7 @@ public System.Void Post(System.Action action, Avalonia.Threading.DispatcherPrior
 Throws an exception if the calling thread is not the thread associated with this [Avalonia.Threading.IDispatcher](xref:Avalonia.Threading.IDispatcher).
 
 ```csharp
-public System.Void VerifyAccess()
+public Void VerifyAccess()
 ```
 
 </ApiRefPage>

@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Media/TextFormatting/Unicode/LineBreak.cs">LineBreak.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -70,7 +73,7 @@ public struct LineBreak
 Constructor
 
 ```csharp
-public LineBreak(System.Int32 positionMeasure, System.Int32 positionWrap, System.Boolean required)
+public LineBreak(Int32 positionMeasure, Int32 positionWrap, Boolean required)
 ```
 
 | Parameter | Description |
@@ -96,7 +99,7 @@ public LineBreak(System.Int32 positionMeasure, System.Int32 positionWrap, System
 #### Equals
 
 ```csharp
-public System.Boolean Equals(Avalonia.Media.TextFormatting.Unicode.LineBreak other)
+public Boolean Equals(Avalonia.Media.TextFormatting.Unicode.LineBreak other)
 ```
 
 <span id="uid-5b51df776b"></span>
@@ -104,7 +107,7 @@ public System.Boolean Equals(Avalonia.Media.TextFormatting.Unicode.LineBreak oth
 #### Equals
 
 ```csharp
-public System.Boolean Equals(System.Object obj)
+public Boolean Equals(Object obj)
 ```
 
 <span id="uid-e115e081a1"></span>
@@ -112,7 +115,7 @@ public System.Boolean Equals(System.Object obj)
 ### GetHashCode
 
 ```csharp
-public System.Int32 GetHashCode()
+public Int32 GetHashCode()
 ```
 
 <span id="uid-513e8a2098"></span>
@@ -120,7 +123,7 @@ public System.Int32 GetHashCode()
 ### ToString
 
 ```csharp
-public System.String ToString()
+public String ToString()
 ```
 
 ## Properties
@@ -138,7 +141,7 @@ public System.String ToString()
 The break position, before any trailing whitespace
 
 ```csharp
-public System.Int32 PositionMeasure { get; set; }
+public Int32 PositionMeasure { get; set; }
 ```
 
 <span id="uid-f93d951922"></span>
@@ -148,7 +151,7 @@ public System.Int32 PositionMeasure { get; set; }
 The break position, after any trailing whitespace
 
 ```csharp
-public System.Int32 PositionWrap { get; set; }
+public Int32 PositionWrap { get; set; }
 ```
 
 <span id="uid-06b06a97e8"></span>
@@ -158,7 +161,7 @@ public System.Int32 PositionWrap { get; set; }
 True if there should be a forced line break here
 
 ```csharp
-public System.Boolean Required { get; set; }
+public Boolean Required { get; set; }
 ```
 
 </ApiRefPage>

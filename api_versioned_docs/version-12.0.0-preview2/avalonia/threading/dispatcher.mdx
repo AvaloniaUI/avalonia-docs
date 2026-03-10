@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Threading/Dispatcher.Exceptions.cs">Dispatcher.Exceptions.cs</a>, <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Threading/Dispatcher.Invoke.cs">Dispatcher.Invoke.cs</a>, <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Threading/Dispatcher.MainLoop.cs">Dispatcher.MainLoop.cs</a>, <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Threading/Dispatcher.Queue.cs">Dispatcher.Queue.cs</a>, <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Threading/Dispatcher.ThreadStorage.cs">Dispatcher.ThreadStorage.cs</a>, <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Threading/Dispatcher.Timers.cs">Dispatcher.Timers.cs</a>, <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Threading/Dispatcher.cs">Dispatcher.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -113,7 +116,7 @@ public Avalonia.Threading.DispatcherPriorityAwaitable<T><T> AwaitWithPriority<T>
 Begins the process of shutting down the dispatcher.
 
 ```csharp
-public System.Void BeginInvokeShutdown(Avalonia.Threading.DispatcherPriority priority)
+public Void BeginInvokeShutdown(Avalonia.Threading.DispatcherPriority priority)
 ```
 
 <span id="uid-fa78847cc4"></span>
@@ -123,7 +126,7 @@ public System.Void BeginInvokeShutdown(Avalonia.Threading.DispatcherPriority pri
 Checks that the current thread is the UI thread.
 
 ```csharp
-public System.Boolean CheckAccess()
+public Boolean CheckAccess()
 ```
 
 <span id="uid-ad12393bf3"></span>
@@ -143,7 +146,7 @@ public Avalonia.Threading.Dispatcher.DispatcherProcessingDisabled DisableProcess
 Requests that all nested frames exit.
 
 ```csharp
-public System.Void ExitAllFrames()
+public Void ExitAllFrames()
 ```
 
 <span id="uid-74ab1e87f3"></span>
@@ -159,7 +162,7 @@ public Avalonia.Threading.Dispatcher FromThread(System.Threading.Thread thread)
 ### HasJobsWithPriority
 
 ```csharp
-public System.Boolean HasJobsWithPriority(Avalonia.Threading.DispatcherPriority priority)
+public Boolean HasJobsWithPriority(Avalonia.Threading.DispatcherPriority priority)
 ```
 
 <span id="uid-33a1b2993f"></span>
@@ -174,7 +177,7 @@ Executes the specified Action synchronously on the thread that
 the Dispatcher was created on.
 
 ```csharp
-public System.Void Invoke(System.Action callback)
+public Void Invoke(Action callback)
 ```
 
 | Parameter | Description |
@@ -189,7 +192,7 @@ Executes the specified Action synchronously on the thread that
 the Dispatcher was created on.
 
 ```csharp
-public System.Void Invoke(System.Action callback, Avalonia.Threading.DispatcherPriority priority)
+public Void Invoke(Action callback, Avalonia.Threading.DispatcherPriority priority)
 ```
 
 | Parameter | Description |
@@ -207,7 +210,7 @@ Executes the specified Action synchronously on the thread that
 the Dispatcher was created on.
 
 ```csharp
-public System.Void Invoke(System.Action callback, Avalonia.Threading.DispatcherPriority priority, System.Threading.CancellationToken cancellationToken)
+public Void Invoke(Action callback, Avalonia.Threading.DispatcherPriority priority, System.Threading.CancellationToken cancellationToken)
 ```
 
 | Parameter | Description |
@@ -229,7 +232,7 @@ Executes the specified Action synchronously on the thread that
 the Dispatcher was created on.
 
 ```csharp
-public System.Void Invoke(System.Action callback, Avalonia.Threading.DispatcherPriority priority, System.Threading.CancellationToken cancellationToken, System.TimeSpan timeout)
+public Void Invoke(Action callback, Avalonia.Threading.DispatcherPriority priority, System.Threading.CancellationToken cancellationToken, TimeSpan timeout)
 ```
 
 | Parameter | Description |
@@ -251,7 +254,7 @@ returns. |
 #### Invoke
 
 ```csharp
-public TResult Invoke<TResult>(System.Func<TResult> callback)
+public TResult Invoke<TResult>(Func<TResult> callback)
 ```
 
 <span id="uid-0ce958bb93"></span>
@@ -259,7 +262,7 @@ public TResult Invoke<TResult>(System.Func<TResult> callback)
 #### Invoke
 
 ```csharp
-public TResult Invoke<TResult>(System.Func<TResult> callback, Avalonia.Threading.DispatcherPriority priority)
+public TResult Invoke<TResult>(Func<TResult> callback, Avalonia.Threading.DispatcherPriority priority)
 ```
 
 <span id="uid-f6a0ea3ba8"></span>
@@ -267,7 +270,7 @@ public TResult Invoke<TResult>(System.Func<TResult> callback, Avalonia.Threading
 #### Invoke
 
 ```csharp
-public TResult Invoke<TResult>(System.Func<TResult> callback, Avalonia.Threading.DispatcherPriority priority, System.Threading.CancellationToken cancellationToken)
+public TResult Invoke<TResult>(Func<TResult> callback, Avalonia.Threading.DispatcherPriority priority, System.Threading.CancellationToken cancellationToken)
 ```
 
 <span id="uid-63a6cdb7c6"></span>
@@ -275,7 +278,7 @@ public TResult Invoke<TResult>(System.Func<TResult> callback, Avalonia.Threading
 #### Invoke
 
 ```csharp
-public TResult Invoke<TResult>(System.Func<TResult> callback, Avalonia.Threading.DispatcherPriority priority, System.Threading.CancellationToken cancellationToken, System.TimeSpan timeout)
+public TResult Invoke<TResult>(Func<TResult> callback, Avalonia.Threading.DispatcherPriority priority, System.Threading.CancellationToken cancellationToken, TimeSpan timeout)
 ```
 
 <span id="uid-9073eca221"></span>
@@ -290,7 +293,7 @@ Executes the specified Action asynchronously on the thread
 that the Dispatcher was created on.
 
 ```csharp
-public Avalonia.Threading.DispatcherOperation InvokeAsync(System.Action callback)
+public Avalonia.Threading.DispatcherOperation InvokeAsync(Action callback)
 ```
 
 | Parameter | Description |
@@ -307,7 +310,7 @@ Executes the specified Action asynchronously on the thread
 that the Dispatcher was created on.
 
 ```csharp
-public Avalonia.Threading.DispatcherOperation InvokeAsync(System.Action callback, Avalonia.Threading.DispatcherPriority priority)
+public Avalonia.Threading.DispatcherOperation InvokeAsync(Action callback, Avalonia.Threading.DispatcherPriority priority)
 ```
 
 | Parameter | Description |
@@ -327,7 +330,7 @@ Executes the specified Action asynchronously on the thread
 that the Dispatcher was created on.
 
 ```csharp
-public Avalonia.Threading.DispatcherOperation InvokeAsync(System.Action callback, Avalonia.Threading.DispatcherPriority priority, System.Threading.CancellationToken cancellationToken)
+public Avalonia.Threading.DispatcherOperation InvokeAsync(Action callback, Avalonia.Threading.DispatcherPriority priority, System.Threading.CancellationToken cancellationToken)
 ```
 
 | Parameter | Description |
@@ -348,7 +351,7 @@ Returns: An operation representing the queued delegate to be invoked.
 #### InvokeAsync
 
 ```csharp
-public System.Threading.Tasks.Task InvokeAsync(System.Func<System.Threading.Tasks.Task> callback)
+public System.Threading.Tasks.Task InvokeAsync(Func<System.Threading.Tasks.Task> callback)
 ```
 
 <span id="uid-7df215cdc4"></span>
@@ -356,7 +359,7 @@ public System.Threading.Tasks.Task InvokeAsync(System.Func<System.Threading.Task
 #### InvokeAsync
 
 ```csharp
-public System.Threading.Tasks.Task InvokeAsync(System.Func<System.Threading.Tasks.Task> callback, Avalonia.Threading.DispatcherPriority priority)
+public System.Threading.Tasks.Task InvokeAsync(Func<System.Threading.Tasks.Task> callback, Avalonia.Threading.DispatcherPriority priority)
 ```
 
 <span id="uid-46fd4829de"></span>
@@ -364,7 +367,7 @@ public System.Threading.Tasks.Task InvokeAsync(System.Func<System.Threading.Task
 #### InvokeAsync
 
 ```csharp
-public System.Threading.Tasks.Task<TResult> InvokeAsync<TResult>(System.Func<System.Threading.Tasks.Task<TResult>> action)
+public System.Threading.Tasks.Task<TResult> InvokeAsync<TResult>(Func<System.Threading.Tasks.Task<TResult>> action)
 ```
 
 <span id="uid-a4587a2123"></span>
@@ -372,7 +375,7 @@ public System.Threading.Tasks.Task<TResult> InvokeAsync<TResult>(System.Func<Sys
 #### InvokeAsync
 
 ```csharp
-public System.Threading.Tasks.Task<TResult> InvokeAsync<TResult>(System.Func<System.Threading.Tasks.Task<TResult>> action, Avalonia.Threading.DispatcherPriority priority)
+public System.Threading.Tasks.Task<TResult> InvokeAsync<TResult>(Func<System.Threading.Tasks.Task<TResult>> action, Avalonia.Threading.DispatcherPriority priority)
 ```
 
 <span id="uid-8bce2991d9"></span>
@@ -380,7 +383,7 @@ public System.Threading.Tasks.Task<TResult> InvokeAsync<TResult>(System.Func<Sys
 #### InvokeAsync
 
 ```csharp
-public Avalonia.Threading.DispatcherOperation<T><TResult> InvokeAsync<TResult>(System.Func<TResult> callback)
+public Avalonia.Threading.DispatcherOperation<T><TResult> InvokeAsync<TResult>(Func<TResult> callback)
 ```
 
 <span id="uid-898e7ba0ef"></span>
@@ -388,7 +391,7 @@ public Avalonia.Threading.DispatcherOperation<T><TResult> InvokeAsync<TResult>(S
 #### InvokeAsync
 
 ```csharp
-public Avalonia.Threading.DispatcherOperation<T><TResult> InvokeAsync<TResult>(System.Func<TResult> callback, Avalonia.Threading.DispatcherPriority priority)
+public Avalonia.Threading.DispatcherOperation<T><TResult> InvokeAsync<TResult>(Func<TResult> callback, Avalonia.Threading.DispatcherPriority priority)
 ```
 
 <span id="uid-684ef4acd0"></span>
@@ -396,7 +399,7 @@ public Avalonia.Threading.DispatcherOperation<T><TResult> InvokeAsync<TResult>(S
 #### InvokeAsync
 
 ```csharp
-public Avalonia.Threading.DispatcherOperation<T><TResult> InvokeAsync<TResult>(System.Func<TResult> callback, Avalonia.Threading.DispatcherPriority priority, System.Threading.CancellationToken cancellationToken)
+public Avalonia.Threading.DispatcherOperation<T><TResult> InvokeAsync<TResult>(Func<TResult> callback, Avalonia.Threading.DispatcherPriority priority, System.Threading.CancellationToken cancellationToken)
 ```
 
 <span id="uid-c0fd05eaaa"></span>
@@ -406,7 +409,7 @@ public Avalonia.Threading.DispatcherOperation<T><TResult> InvokeAsync<TResult>(S
 Initiates the shutdown process of the Dispatcher synchronously.
 
 ```csharp
-public System.Void InvokeShutdown()
+public Void InvokeShutdown()
 ```
 
 <span id="uid-d9a8bdca2b"></span>
@@ -416,7 +419,7 @@ public System.Void InvokeShutdown()
 Runs the dispatcher's main loop.
 
 ```csharp
-public System.Void MainLoop(System.Threading.CancellationToken cancellationToken)
+public Void MainLoop(System.Threading.CancellationToken cancellationToken)
 ```
 
 | Parameter | Description |
@@ -434,7 +437,7 @@ public System.Void MainLoop(System.Threading.CancellationToken cancellationToken
 Posts an action that will be invoked on the dispatcher thread.
 
 ```csharp
-public System.Void Post(System.Action action, Avalonia.Threading.DispatcherPriority priority)
+public Void Post(Action action, Avalonia.Threading.DispatcherPriority priority)
 ```
 
 | Parameter | Description |
@@ -449,7 +452,7 @@ public System.Void Post(System.Action action, Avalonia.Threading.DispatcherPrior
 Posts an action that will be invoked on the dispatcher thread.
 
 ```csharp
-public System.Void Post(System.Threading.SendOrPostCallback action, System.Object arg, Avalonia.Threading.DispatcherPriority priority)
+public Void Post(System.Threading.SendOrPostCallback action, Object arg, Avalonia.Threading.DispatcherPriority priority)
 ```
 
 | Parameter | Description |
@@ -465,7 +468,7 @@ public System.Void Post(System.Threading.SendOrPostCallback action, System.Objec
 Push an execution frame.
 
 ```csharp
-public System.Void PushFrame(Avalonia.Threading.DispatcherFrame frame)
+public Void PushFrame(Avalonia.Threading.DispatcherFrame frame)
 ```
 
 | Parameter | Description |
@@ -511,7 +514,7 @@ Returns: An awaitable object that asynchronously resumes execution on the dispat
 ### RunJobs
 
 ```csharp
-public System.Void RunJobs(System.Nullable<Avalonia.Threading.DispatcherPriority> priority)
+public Void RunJobs(Nullable<Avalonia.Threading.DispatcherPriority> priority)
 ```
 
 <span id="uid-57fef0e640"></span>
@@ -521,7 +524,7 @@ public System.Void RunJobs(System.Nullable<Avalonia.Threading.DispatcherPriority
 Checks that the current thread is the UI thread and throws if not.
 
 ```csharp
-public System.Void VerifyAccess()
+public Void VerifyAccess()
 ```
 
 #### Exceptions
@@ -595,7 +598,7 @@ public Avalonia.Threading.Dispatcher CurrentDispatcher { get; set; }
 ### SupportsRunLoops
 
 ```csharp
-public System.Boolean SupportsRunLoops { get; set; }
+public Boolean SupportsRunLoops { get; set; }
 ```
 
 <span id="uid-1692f279b0"></span>
@@ -620,8 +623,8 @@ public Avalonia.Threading.Dispatcher UIThread { get; set; }
 | --- | --- |
 | [ShutdownFinished](#uid-4b5c93e398) | Raised when the dispatcher is shut down. |
 | [ShutdownStarted](#uid-8100dd9a72) | Raised when the dispatcher is shutting down. |
-| [UnhandledException](#uid-d01305e223) | Occurs when a thread exception is thrown and uncaught during execution of a delegate by way of Avalonia.Threading.Dispatcher.Invoke(System.Action) or Avalonia.Threading.Dispatcher.InvokeAsync(System.Action). |
-| [UnhandledExceptionFilter](#uid-8559ef4cc2) | Occurs when a thread exception is thrown and uncaught during execution of a delegate by way of Avalonia.Threading.Dispatcher.Invoke(System.Action) or Avalonia.Threading.Dispatcher.InvokeAsync(System.Action) when in the filter stage. |
+| [UnhandledException](#uid-d01305e223) | Occurs when a thread exception is thrown and uncaught during execution of a delegate by way of Avalonia.Threading.Dispatcher.Invoke(Action) or Avalonia.Threading.Dispatcher.InvokeAsync(Action). |
+| [UnhandledExceptionFilter](#uid-8559ef4cc2) | Occurs when a thread exception is thrown and uncaught during execution of a delegate by way of Avalonia.Threading.Dispatcher.Invoke(Action) or Avalonia.Threading.Dispatcher.InvokeAsync(Action) when in the filter stage. |
 
 <span id="uid-4b5c93e398"></span>
 
@@ -630,7 +633,7 @@ public Avalonia.Threading.Dispatcher UIThread { get; set; }
 Raised when the dispatcher is shut down.
 
 ```csharp
-public event System.EventHandler ShutdownFinished
+public event EventHandler ShutdownFinished
 ```
 
 <span id="uid-8100dd9a72"></span>
@@ -640,14 +643,14 @@ public event System.EventHandler ShutdownFinished
 Raised when the dispatcher is shutting down.
 
 ```csharp
-public event System.EventHandler ShutdownStarted
+public event EventHandler ShutdownStarted
 ```
 
 <span id="uid-d01305e223"></span>
 
 ### UnhandledException
 
-Occurs when a thread exception is thrown and uncaught during execution of a delegate by way of [Avalonia.Threading.Dispatcher.Invoke(System.Action)](xref:Avalonia.Threading.Dispatcher.Invoke%28System.Action%29) or [Avalonia.Threading.Dispatcher.InvokeAsync(System.Action)](xref:Avalonia.Threading.Dispatcher.InvokeAsync%28System.Action%29).
+Occurs when a thread exception is thrown and uncaught during execution of a delegate by way of [Avalonia.Threading.Dispatcher.Invoke(Action)](xref:Avalonia.Threading.Dispatcher.Invoke%28System.Action%29) or [Avalonia.Threading.Dispatcher.InvokeAsync(Action)](xref:Avalonia.Threading.Dispatcher.InvokeAsync%28System.Action%29).
 
 ```csharp
 public event Avalonia.Threading.DispatcherUnhandledExceptionEventHandler UnhandledException
@@ -657,7 +660,7 @@ public event Avalonia.Threading.DispatcherUnhandledExceptionEventHandler Unhandl
 
 ### UnhandledExceptionFilter
 
-Occurs when a thread exception is thrown and uncaught during execution of a delegate by way of [Avalonia.Threading.Dispatcher.Invoke(System.Action)](xref:Avalonia.Threading.Dispatcher.Invoke%28System.Action%29) or [Avalonia.Threading.Dispatcher.InvokeAsync(System.Action)](xref:Avalonia.Threading.Dispatcher.InvokeAsync%28System.Action%29) when in the filter stage.
+Occurs when a thread exception is thrown and uncaught during execution of a delegate by way of [Avalonia.Threading.Dispatcher.Invoke(Action)](xref:Avalonia.Threading.Dispatcher.Invoke%28System.Action%29) or [Avalonia.Threading.Dispatcher.InvokeAsync(Action)](xref:Avalonia.Threading.Dispatcher.InvokeAsync%28System.Action%29) when in the filter stage.
 
 ```csharp
 public event Avalonia.Threading.DispatcherUnhandledExceptionFilterEventHandler UnhandledExceptionFilter

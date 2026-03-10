@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Interactivity/RoutedEventArgs.cs">RoutedEventArgs.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -51,6 +54,9 @@ public class RoutedEventArgs
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Inheritance:</span> EventArgs <span className="apiref-page__relation-separator">-&gt;</span> RoutedEventArgs
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Derived types:</span> <a href="../controls/calendardatechangedeventargs">CalendarDateChangedEventArgs</a>, <a href="../controls/calendarmodechangedeventargs">CalendarModeChangedEventArgs</a>, <a href="../controls/drawerclosingeventargs">DrawerClosingEventArgs</a>, <a href="../controls/numericupdownvaluechangedeventargs">NumericUpDownValueChangedEventArgs</a>, <a href="../controls/primitives/rangebasevaluechangedeventargs">RangeBaseValueChangedEventArgs</a>, <a href="../controls/primitives/templateappliedeventargs">TemplateAppliedEventArgs</a>, <a href="../controls/refreshrequestedeventargs">RefreshRequestedEventArgs</a>, <a href="../controls/requestbringintovieweventargs">RequestBringIntoViewEventArgs</a>, <a href="../controls/scrollchangedeventargs">ScrollChangedEventArgs</a>, <a href="../controls/selectionchangedeventargs">SelectionChangedEventArgs</a>, <a href="../controls/sizechangedeventargs">SizeChangedEventArgs</a>, <a href="../controls/spineventargs">SpinEventArgs</a>, <a href="../controls/textchangedeventargs">TextChangedEventArgs</a>, <a href="../controls/textchangingeventargs">TextChangingEventArgs</a>, <a href="../controls/transitioncompletedeventargs">TransitionCompletedEventArgs</a>, <a href="../input/contextrequestedeventargs">ContextRequestedEventArgs</a>, <a href="../input/drageventargs">DragEventArgs</a>, <a href="../input/focuschangingeventargs">FocusChangingEventArgs</a>, <a href="../input/gotfocuseventargs">GotFocusEventArgs</a>, <a href="../input/holdingroutedeventargs">HoldingRoutedEventArgs</a>, <a href="../input/keyeventargs">KeyEventArgs</a>, <a href="../input/pinchendedeventargs">PinchEndedEventArgs</a>, <a href="../input/pincheventargs">PinchEventArgs</a>, <a href="../input/pointercapturelosteventargs">PointerCaptureLostEventArgs</a>, <a href="../input/pointereventargs">PointerEventArgs</a>, <a href="../input/pullgestureendedeventargs">PullGestureEndedEventArgs</a>, <a href="../input/pullgestureeventargs">PullGestureEventArgs</a>, <a href="../input/scrollgestureendedeventargs">ScrollGestureEndedEventArgs</a>, <a href="../input/scrollgestureeventargs">ScrollGestureEventArgs</a>, <a href="../input/scrollgestureinertiastartingeventargs">ScrollGestureInertiaStartingEventArgs</a>, <a href="../input/swipegestureeventargs">SwipeGestureEventArgs</a>, <a href="../input/tappedeventargs">TappedEventArgs</a>, <a href="../input/textinput/textinputmethodclientrequeryrequestedeventargs">TextInputMethodClientRequeryRequestedEventArgs</a>, <a href="../input/textinput/textinputmethodclientrequestedeventargs">TextInputMethodClientRequestedEventArgs</a>, <a href="../input/textinputeventargs">TextInputEventArgs</a>, <a href="../input/vectoreventargs">VectorEventArgs</a>, <a href="cancelroutedeventargs">CancelRoutedEventArgs</a>
 </div>
 </div>
 
@@ -95,7 +101,7 @@ public RoutedEventArgs(Avalonia.Interactivity.RoutedEvent routedEvent)
 Initializes a new instance of the [Avalonia.Interactivity.RoutedEventArgs](xref:Avalonia.Interactivity.RoutedEventArgs) class.
 
 ```csharp
-public RoutedEventArgs(Avalonia.Interactivity.RoutedEvent routedEvent, System.Object source)
+public RoutedEventArgs(Avalonia.Interactivity.RoutedEvent routedEvent, Object source)
 ```
 
 | Parameter | Description |
@@ -119,7 +125,7 @@ public RoutedEventArgs(Avalonia.Interactivity.RoutedEvent routedEvent, System.Ob
 Gets or sets a value indicating whether the routed event has already been handled.
 
 ```csharp
-public System.Boolean Handled { get; set; }
+public Boolean Handled { get; set; }
 ```
 
 <span id="uid-751be73db9"></span>
@@ -149,7 +155,7 @@ public Avalonia.Interactivity.RoutedEvent RoutedEvent { get; set; }
 Gets or sets the source object that raised the routed event.
 
 ```csharp
-public System.Object Source { get; set; }
+public Object Source { get; set; }
 ```
 
 </ApiRefPage>

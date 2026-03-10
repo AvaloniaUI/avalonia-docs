@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Data/CompiledBinding.cs">CompiledBinding.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -51,6 +54,9 @@ public class CompiledBinding
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="bindingbase">BindingBase</a> <span className="apiref-page__relation-separator">-&gt;</span> CompiledBinding
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Derived types:</span> <a href="../markup/xaml/markupextensions/compiledbindingextension">CompiledBindingExtension</a>
 </div>
 </div>
 
@@ -99,7 +105,7 @@ public CompiledBinding(Avalonia.Data.CompiledBindingPath path)
 ### Create
 
 ```csharp
-public Avalonia.Data.CompiledBinding Create<TIn, TOut>(System.Linq.Expressions.Expression<System.Func<TIn,TOut>> expression, System.Object source, Avalonia.Data.Converters.IValueConverter converter, Avalonia.Data.BindingMode mode, Avalonia.Data.BindingPriority priority, System.Globalization.CultureInfo converterCulture, System.Object converterParameter, System.Object fallbackValue, System.String stringFormat, System.Object targetNullValue, Avalonia.Data.UpdateSourceTrigger updateSourceTrigger, System.Int32 delay)
+public Avalonia.Data.CompiledBinding Create<TIn, TOut>(System.Linq.Expressions.Expression<Func<TIn,TOut>> expression, Object source, Avalonia.Data.Converters.IValueConverter converter, Avalonia.Data.BindingMode mode, Avalonia.Data.BindingPriority priority, System.Globalization.CultureInfo converterCulture, Object converterParameter, Object fallbackValue, String stringFormat, Object targetNullValue, Avalonia.Data.UpdateSourceTrigger updateSourceTrigger, Int32 delay)
 ```
 
 ## Properties
@@ -148,7 +154,7 @@ Value: The default value is null.
 Gets or sets a parameter to pass to [Avalonia.Data.CompiledBinding.Converter](xref:Avalonia.Data.CompiledBinding.Converter).
 
 ```csharp
-public System.Object ConverterParameter { get; set; }
+public Object ConverterParameter { get; set; }
 ```
 
 <span id="uid-0bf0d20318"></span>
@@ -159,7 +165,7 @@ Gets or sets the amount of time, in milliseconds, to wait before updating the bi
 source after the value on the target changes.
 
 ```csharp
-public System.Int32 Delay { get; set; }
+public Int32 Delay { get; set; }
 ```
 
 <span id="uid-95e9c1e2f6"></span>
@@ -169,7 +175,7 @@ public System.Int32 Delay { get; set; }
 Gets or sets the value to use when the binding is unable to produce a value.
 
 ```csharp
-public System.Object FallbackValue { get; set; }
+public Object FallbackValue { get; set; }
 ```
 
 <span id="uid-06c843929f"></span>
@@ -209,7 +215,7 @@ public Avalonia.Data.BindingPriority Priority { get; set; }
 Gets or sets the source for the binding.
 
 ```csharp
-public System.Object Source { get; set; }
+public Object Source { get; set; }
 ```
 
 <span id="uid-33c4f73df3"></span>
@@ -219,7 +225,7 @@ public System.Object Source { get; set; }
 Gets or sets the string format.
 
 ```csharp
-public System.String StringFormat { get; set; }
+public String StringFormat { get; set; }
 ```
 
 <span id="uid-6ebfe776f4"></span>
@@ -229,7 +235,7 @@ public System.String StringFormat { get; set; }
 Gets or sets the value to use when the binding result is null.
 
 ```csharp
-public System.Object TargetNullValue { get; set; }
+public Object TargetNullValue { get; set; }
 ```
 
 <span id="uid-56a3da996f"></span>

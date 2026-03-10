@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Styling/Selectors.cs">Selectors.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -95,7 +98,7 @@ Returns: The selector.
 Returns a selector which matches a control's style class.
 
 ```csharp
-public Avalonia.Styling.Selector Class(Avalonia.Styling.Selector previous, System.String name)
+public Avalonia.Styling.Selector Class(Avalonia.Styling.Selector previous, String name)
 ```
 
 | Parameter | Description |
@@ -140,7 +143,7 @@ public Avalonia.Styling.Selector Is<T>(Avalonia.Styling.Selector previous)
 Returns a selector which matches a type or a derived type.
 
 ```csharp
-public Avalonia.Styling.Selector Is(Avalonia.Styling.Selector previous, System.Type type)
+public Avalonia.Styling.Selector Is(Avalonia.Styling.Selector previous, Type type)
 ```
 
 | Parameter | Description |
@@ -157,7 +160,7 @@ Returns: The selector.
 Returns a selector which matches a control's Name.
 
 ```csharp
-public Avalonia.Styling.Selector Name(Avalonia.Styling.Selector previous, System.String name)
+public Avalonia.Styling.Selector Name(Avalonia.Styling.Selector previous, String name)
 ```
 
 | Parameter | Description |
@@ -201,7 +204,7 @@ Returns: The selector.
 #### Not
 
 ```csharp
-public Avalonia.Styling.Selector Not(Avalonia.Styling.Selector previous, System.Func<Avalonia.Styling.Selector, Avalonia.Styling.Selector> argument)
+public Avalonia.Styling.Selector Not(Avalonia.Styling.Selector previous, Func<Avalonia.Styling.Selector, Avalonia.Styling.Selector> argument)
 ```
 
 <span id="uid-96765779fa"></span>
@@ -209,7 +212,7 @@ public Avalonia.Styling.Selector Not(Avalonia.Styling.Selector previous, System.
 ### NthChild
 
 ```csharp
-public Avalonia.Styling.Selector NthChild(Avalonia.Styling.Selector previous, System.Int32 step, System.Int32 offset)
+public Avalonia.Styling.Selector NthChild(Avalonia.Styling.Selector previous, Int32 step, Int32 offset)
 ```
 
 Returns: The selector.
@@ -219,7 +222,7 @@ Returns: The selector.
 ### NthLastChild
 
 ```csharp
-public Avalonia.Styling.Selector NthLastChild(Avalonia.Styling.Selector previous, System.Int32 step, System.Int32 offset)
+public Avalonia.Styling.Selector NthLastChild(Avalonia.Styling.Selector previous, Int32 step, Int32 offset)
 ```
 
 Returns: The selector.
@@ -243,7 +246,7 @@ public Avalonia.Styling.Selector OfType<T>(Avalonia.Styling.Selector previous)
 Returns a selector which matches a type.
 
 ```csharp
-public Avalonia.Styling.Selector OfType(Avalonia.Styling.Selector previous, System.Type type)
+public Avalonia.Styling.Selector OfType(Avalonia.Styling.Selector previous, Type type)
 ```
 
 | Parameter | Description |
@@ -292,7 +295,7 @@ public Avalonia.Styling.Selector Or(System.Collections.Generic.IReadOnlyList<Ava
 Returns a selector which matches a control with the specified property value.
 
 ```csharp
-public Avalonia.Styling.Selector PropertyEquals(Avalonia.Styling.Selector previous, Avalonia.AvaloniaProperty property, System.Object value)
+public Avalonia.Styling.Selector PropertyEquals(Avalonia.Styling.Selector previous, Avalonia.AvaloniaProperty property, Object value)
 ```
 
 | Parameter | Description |
@@ -308,7 +311,7 @@ Returns: The selector.
 #### PropertyEquals
 
 ```csharp
-public Avalonia.Styling.Selector PropertyEquals<T>(Avalonia.Styling.Selector previous, Avalonia.AvaloniaProperty<TValue><T> property, System.Object value)
+public Avalonia.Styling.Selector PropertyEquals<T>(Avalonia.Styling.Selector previous, Avalonia.AvaloniaProperty<TValue><T> property, Object value)
 ```
 
 <span id="uid-6d6fb7392d"></span>

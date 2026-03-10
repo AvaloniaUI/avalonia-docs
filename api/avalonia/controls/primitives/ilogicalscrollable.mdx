@@ -78,7 +78,7 @@ and it can choose to do handle the scroll information as it sees fit.
 Attempts to bring a portion of the target visual into view by scrolling the content.
 
 ```csharp
-public System.Boolean BringIntoView(Avalonia.Controls.Control target, Avalonia.Rect targetRect)
+public Boolean BringIntoView(Avalonia.Controls.Control target, Avalonia.Rect targetRect)
 ```
 
 | Parameter | Description |
@@ -112,7 +112,7 @@ Returns: The control.
 Raises the [Avalonia.Controls.Primitives.ILogicalScrollable.ScrollInvalidated](xref:Avalonia.Controls.Primitives.ILogicalScrollable.ScrollInvalidated) event.
 
 ```csharp
-public System.Void RaiseScrollInvalidated(System.EventArgs e)
+public Void RaiseScrollInvalidated(EventArgs e)
 ```
 
 | Parameter | Description |
@@ -136,7 +136,7 @@ public System.Void RaiseScrollInvalidated(System.EventArgs e)
 Gets or sets a value indicating whether the content can be scrolled horizontally.
 
 ```csharp
-public System.Boolean CanHorizontallyScroll { get; set; }
+public Boolean CanHorizontallyScroll { get; set; }
 ```
 
 <span id="uid-348bc972ea"></span>
@@ -146,7 +146,7 @@ public System.Boolean CanHorizontallyScroll { get; set; }
 Gets or sets a value indicating whether the content can be scrolled horizontally.
 
 ```csharp
-public System.Boolean CanVerticallyScroll { get; set; }
+public Boolean CanVerticallyScroll { get; set; }
 ```
 
 <span id="uid-81c0a89445"></span>
@@ -156,7 +156,7 @@ public System.Boolean CanVerticallyScroll { get; set; }
 Gets a value indicating whether logical scrolling is enabled on the control.
 
 ```csharp
-public System.Boolean IsLogicalScrollEnabled { get; set; }
+public Boolean IsLogicalScrollEnabled { get; set; }
 ```
 
 <span id="uid-bfd7fa1a78"></span>
@@ -192,7 +192,7 @@ public Avalonia.Size ScrollSize { get; set; }
 Raised when the scroll is invalidated.
 
 ```csharp
-public event System.EventHandler ScrollInvalidated
+public event EventHandler ScrollInvalidated
 ```
 
 </ApiRefPage>

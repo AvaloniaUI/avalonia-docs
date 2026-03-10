@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Media/PathGeometry.cs">PathGeometry.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__signature">
@@ -70,6 +73,29 @@ public PathGeometry()
 | --- | --- |
 | [Parse](#uid-67b8076712) | Parses the specified path data to a Avalonia.Media.PathGeometry. |
 | [ToString](#uid-76b796d825) | No summary available. |
+| [Clone (Inherited from StreamGeometry)](streamgeometry.mdx#uid-e301304ee2) | Clones the geometry. |
+| [Open (Inherited from StreamGeometry)](streamgeometry.mdx#uid-64a6d9b186) | Opens the geometry to start defining it. |
+| [Combine (Inherited from Geometry)](geometry.mdx#uid-03ba6ba14f) | Combines the two geometries using the specified Avalonia.Media.GeometryCombineMode and applies the specified transform to the resulting geometry. |
+| [FillContains (Inherited from Geometry)](geometry.mdx#uid-1ecc042e3b) | Indicates whether the geometry's fill contains the specified point. |
+| [GetRenderBounds (Inherited from Geometry)](geometry.mdx#uid-4f903c64e7) | Gets the geometry's bounding rectangle with the specified pen. |
+| [GetWidenedGeometry (Inherited from Geometry)](geometry.mdx#uid-9265c7d05d) | Gets a Avalonia.Media.Geometry that is the shape defined by the stroke on the Geometry produced by the specified Pen. |
+| [StrokeContains (Inherited from Geometry)](geometry.mdx#uid-9137804922) | Indicates whether the geometry's stroke contains the specified point. |
+| [TryGetPointAndTangentAtDistance (Inherited from Geometry)](geometry.mdx#uid-0cb785d427) | No summary available. |
+| [TryGetPointAtDistance (Inherited from Geometry)](geometry.mdx#uid-8e9f7dcc61) | No summary available. |
+| [TryGetSegment (Inherited from Geometry)](geometry.mdx#uid-50b46fd171) | No summary available. |
+| [Bind (8 overloads) (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-1c60c7bda3) | Binds a Avalonia.AvaloniaProperty to an Avalonia.Data.BindingBase. |
+| [CheckAccess (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-260ff7a68d) | Returns a value indicating whether the current thread is the UI thread. |
+| [ClearValue (4 overloads) (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-41de208fbe) | Clears a Avalonia.AvaloniaProperty's local value. |
+| [CoerceValue (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-3bec32f39e) | Coerces the specified Avalonia.AvaloniaProperty. |
+| [Equals (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-a8a8e94305) | Compares two objects using reference equality. |
+| [GetBaseValue (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-9c615efbba) | No summary available. |
+| [GetHashCode (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-7f7db1e7a2) | Gets the hash code for the object. |
+| [GetValue (3 overloads) (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-5142cd4792) | Gets a Avalonia.AvaloniaProperty value. |
+| [IsAnimating (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-8cbfc7521a) | Checks whether a Avalonia.AvaloniaProperty is animating. |
+| [IsSet (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-f8bf0bbdcc) | Checks whether a Avalonia.AvaloniaProperty is set on this object. |
+| [SetCurrentValue (2 overloads) (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-38759fd088) | Sets the value of a dependency property without changing its value source. |
+| [SetValue (3 overloads) (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-47d14e19d7) | Sets a Avalonia.AvaloniaProperty value. |
+| [VerifyAccess (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-3b9d3c9793) | Checks that the current thread is the UI thread and throws if not. |
 
 <span id="uid-67b8076712"></span>
 
@@ -78,7 +104,7 @@ public PathGeometry()
 Parses the specified path data to a [Avalonia.Media.PathGeometry](xref:Avalonia.Media.PathGeometry).
 
 ```csharp
-public Avalonia.Media.PathGeometry Parse(System.String pathData)
+public Avalonia.Media.PathGeometry Parse(String pathData)
 ```
 
 | Parameter | Description |
@@ -90,7 +116,7 @@ public Avalonia.Media.PathGeometry Parse(System.String pathData)
 ### ToString
 
 ```csharp
-public System.String ToString()
+public String ToString()
 ```
 
 ## Properties
@@ -99,6 +125,11 @@ public System.String ToString()
 | --- | --- |
 | [Figures](#uid-304ed203d9) | Gets or sets the figures. |
 | [FillRule](#uid-aa0d332bae) | Gets or sets the fill rule. |
+| [Bounds (Inherited from Geometry)](geometry.mdx#uid-404ee0d0a8) | Gets the geometry's bounding rectangle. |
+| [ContourLength (Inherited from Geometry)](geometry.mdx#uid-5dc65c547e) | Gets the geometry's total length as if all its contours are placed in a straight line. |
+| [Transform (Inherited from Geometry)](geometry.mdx#uid-ca73562bb3) | Gets or sets a transform to apply to the geometry. |
+| [Dispatcher (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-b25fa51632) | Returns the Avalonia.AvaloniaObject.Dispatcher that this Avalonia.AvaloniaObject is associated with. |
+| [Item (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-c1d1f1bc0f) | No summary available. |
 
 <span id="uid-304ed203d9"></span>
 
@@ -130,6 +161,7 @@ Value: The fill rule.
 | --- | --- |
 | [FiguresProperty](#uid-162a43f1be) | Defines the Avalonia.Media.PathGeometry.Figures property. |
 | [FillRuleProperty](#uid-91093c3f3e) | Defines the Avalonia.Media.PathGeometry.FillRule property. |
+| [TransformProperty (Inherited from Geometry)](geometry.mdx#uid-deccb386d8) | Defines the Avalonia.Media.Geometry.Transform property. |
 
 <span id="uid-162a43f1be"></span>
 
@@ -150,6 +182,13 @@ Defines the [Avalonia.Media.PathGeometry.FillRule](xref:Avalonia.Media.PathGeome
 ```csharp
 public Avalonia.StyledProperty<TValue><Avalonia.Media.FillRule> FillRuleProperty
 ```
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [Changed (Inherited from Geometry)](geometry.mdx#uid-9001f59bae) | Raised when the geometry changes. |
+| [PropertyChanged (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-d758e26fae) | Raised when a Avalonia.AvaloniaProperty value changes on this object. |
 
 </ApiRefPage>
 

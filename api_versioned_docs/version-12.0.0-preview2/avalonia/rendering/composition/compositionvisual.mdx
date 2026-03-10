@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/obj/GeneratedFiles/DevGenerators/Avalonia.SourceGenerator.CompositionGenerator.CompositionRoslynGenerator/CompositionVisual.generated.cs">CompositionVisual.generated.cs</a>, <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Rendering/Composition/Visual.cs">Visual.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -52,7 +55,19 @@ public class CompositionVisual
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="compositionobject">CompositionObject</a> <span className="apiref-page__relation-separator">-&gt;</span> CompositionVisual
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Derived types:</span> <a href="compositioncontainervisual">CompositionContainerVisual</a>
 </div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [StartAnimation (Inherited from CompositionObject)](compositionobject.mdx#uid-4d2f25fec7) | Connects an animation with the specified property of the object and starts the animation. |
+| [StartAnimationGroup (Inherited from CompositionObject)](compositionobject.mdx#uid-4846f860a0) | Starts an animation group. The StartAnimationGroup method on CompositionObject lets you start CompositionAnimationGroup. All the animations in the group will be started at the same time on the object. |
+| [StopAnimation (Inherited from CompositionObject)](compositionobject.mdx#uid-01077c2b21) | Disconnects an animation from the specified property and stops the animation. |
+| [StopAnimationGroup (Inherited from CompositionObject)](compositionobject.mdx#uid-81dbd02845) | Stops an animation group. |
 
 ## Properties
 
@@ -72,6 +87,9 @@ public class CompositionVisual
 | [Size](#uid-3e1b8610a7) | No summary available. |
 | [TextOptions](#uid-6aa565e6b3) | No summary available. |
 | [Visible](#uid-6ab568a397) | No summary available. |
+| [Compositor (Inherited from CompositionObject)](compositionobject.mdx#uid-bd6bbc1391) | The associated Compositor |
+| [ImplicitAnimations (Inherited from CompositionObject)](compositionobject.mdx#uid-3929e9ea34) | The collection of implicit animations attached to this object. |
+| [IsDisposed (Inherited from CompositionObject)](compositionobject.mdx#uid-e01437c946) | No summary available. |
 
 <span id="uid-4cc80a8fb9"></span>
 
@@ -94,7 +112,7 @@ public Avalonia.Vector3D CenterPoint { get; set; }
 ### ClipToBounds
 
 ```csharp
-public System.Boolean ClipToBounds { get; set; }
+public Boolean ClipToBounds { get; set; }
 ```
 
 <span id="uid-c13afafdbb"></span>
@@ -102,7 +120,7 @@ public System.Boolean ClipToBounds { get; set; }
 ### DisableSubTreeBoundsHitTestOptimization
 
 ```csharp
-public System.Boolean DisableSubTreeBoundsHitTestOptimization { get; set; }
+public Boolean DisableSubTreeBoundsHitTestOptimization { get; set; }
 ```
 
 <span id="uid-1895d8b855"></span>
@@ -118,7 +136,7 @@ public Avalonia.Vector3D Offset { get; set; }
 ### Opacity
 
 ```csharp
-public System.Single Opacity { get; set; }
+public Single Opacity { get; set; }
 ```
 
 <span id="uid-b89f4f068c"></span>
@@ -150,7 +168,7 @@ public Avalonia.Media.RenderOptions RenderOptions { get; set; }
 ### RotationAngle
 
 ```csharp
-public System.Single RotationAngle { get; set; }
+public Single RotationAngle { get; set; }
 ```
 
 <span id="uid-2e6f54f90e"></span>
@@ -182,7 +200,7 @@ public Avalonia.Media.TextOptions TextOptions { get; set; }
 ### Visible
 
 ```csharp
-public System.Boolean Visible { get; set; }
+public Boolean Visible { get; set; }
 ```
 
 </ApiRefPage>

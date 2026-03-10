@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Media/StreamGeometryContext.cs">StreamGeometryContext.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -91,7 +94,7 @@ public StreamGeometryContext(Avalonia.Platform.IStreamGeometryContextImpl impl)
 | [BeginFigure](#uid-11ae2a0392) | Begins a new figure. |
 | [CubicBezierTo](#uid-4f50e8a6a8) | Draws a Bezier curve to the specified point. |
 | [Dispose](#uid-944781a4ee) | Finishes the drawing session. |
-| [EndFigure](#uid-f3cfbc992f) | Ends the figure started by Avalonia.Platform.IGeometryContext.BeginFigure(Avalonia.Point,System.Boolean). |
+| [EndFigure](#uid-f3cfbc992f) | Ends the figure started by Avalonia.Platform.IGeometryContext.BeginFigure(Avalonia.Point,Boolean). |
 | [LineTo](#uid-10f817d4ee) | Draws a line to the specified point. |
 | [PreciseArcTo](#uid-06926b62a0) | Draws an arc to the specified point using polylines, quadratic or cubic Bezier curves Significantly more precise when drawing elliptic arcs with extreme width:height ratios. |
 | [QuadraticBezierTo](#uid-d6614fafeb) | Draws a quadratic Bezier curve to the specified point |
@@ -104,7 +107,7 @@ public StreamGeometryContext(Avalonia.Platform.IStreamGeometryContextImpl impl)
 Draws an arc to the specified point.
 
 ```csharp
-public System.Void ArcTo(Avalonia.Point point, Avalonia.Size size, System.Double rotationAngle, System.Boolean isLargeArc, Avalonia.Media.SweepDirection sweepDirection, System.Boolean isStroked)
+public Void ArcTo(Avalonia.Point point, Avalonia.Size size, Double rotationAngle, Boolean isLargeArc, Avalonia.Media.SweepDirection sweepDirection, Boolean isStroked)
 ```
 
 | Parameter | Description |
@@ -123,7 +126,7 @@ public System.Void ArcTo(Avalonia.Point point, Avalonia.Size size, System.Double
 Begins a new figure.
 
 ```csharp
-public System.Void BeginFigure(Avalonia.Point startPoint, System.Boolean isFilled)
+public Void BeginFigure(Avalonia.Point startPoint, Boolean isFilled)
 ```
 
 | Parameter | Description |
@@ -138,7 +141,7 @@ public System.Void BeginFigure(Avalonia.Point startPoint, System.Boolean isFille
 Draws a Bezier curve to the specified point.
 
 ```csharp
-public System.Void CubicBezierTo(Avalonia.Point controlPoint1, Avalonia.Point controlPoint2, Avalonia.Point endPoint, System.Boolean isStroked)
+public Void CubicBezierTo(Avalonia.Point controlPoint1, Avalonia.Point controlPoint2, Avalonia.Point endPoint, Boolean isStroked)
 ```
 
 | Parameter | Description |
@@ -155,17 +158,17 @@ public System.Void CubicBezierTo(Avalonia.Point controlPoint1, Avalonia.Point co
 Finishes the drawing session.
 
 ```csharp
-public System.Void Dispose()
+public Void Dispose()
 ```
 
 <span id="uid-f3cfbc992f"></span>
 
 ### EndFigure
 
-Ends the figure started by [Avalonia.Platform.IGeometryContext.BeginFigure(Avalonia.Point,System.Boolean)](xref:Avalonia.Platform.IGeometryContext.BeginFigure%28Avalonia.Point%2CSystem.Boolean%29).
+Ends the figure started by [Avalonia.Platform.IGeometryContext.BeginFigure(Avalonia.Point,Boolean)](xref:Avalonia.Platform.IGeometryContext.BeginFigure%28Avalonia.Point%2CSystem.Boolean%29).
 
 ```csharp
-public System.Void EndFigure(System.Boolean isClosed)
+public Void EndFigure(Boolean isClosed)
 ```
 
 | Parameter | Description |
@@ -179,7 +182,7 @@ public System.Void EndFigure(System.Boolean isClosed)
 Draws a line to the specified point.
 
 ```csharp
-public System.Void LineTo(Avalonia.Point point, System.Boolean isStroked)
+public Void LineTo(Avalonia.Point point, Boolean isStroked)
 ```
 
 | Parameter | Description |
@@ -195,7 +198,7 @@ Draws an arc to the specified point using polylines, quadratic or cubic Bezier c
 Significantly more precise when drawing elliptic arcs with extreme width:height ratios.
 
 ```csharp
-public System.Void PreciseArcTo(Avalonia.Point point, Avalonia.Size size, System.Double rotationAngle, System.Boolean isLargeArc, Avalonia.Media.SweepDirection sweepDirection)
+public Void PreciseArcTo(Avalonia.Point point, Avalonia.Size size, Double rotationAngle, Boolean isLargeArc, Avalonia.Media.SweepDirection sweepDirection)
 ```
 
 | Parameter | Description |
@@ -213,7 +216,7 @@ public System.Void PreciseArcTo(Avalonia.Point point, Avalonia.Size size, System
 Draws a quadratic Bezier curve to the specified point
 
 ```csharp
-public System.Void QuadraticBezierTo(Avalonia.Point controlPoint, Avalonia.Point endPoint, System.Boolean isStroked)
+public Void QuadraticBezierTo(Avalonia.Point controlPoint, Avalonia.Point endPoint, Boolean isStroked)
 ```
 
 | Parameter | Description |
@@ -229,7 +232,7 @@ public System.Void QuadraticBezierTo(Avalonia.Point controlPoint, Avalonia.Point
 Sets path's winding rule (default is EvenOdd). You should call this method before any calls to BeginFigure. If you wonder why, ask Direct2D guys about their design decisions.
 
 ```csharp
-public System.Void SetFillRule(Avalonia.Media.FillRule fillRule)
+public Void SetFillRule(Avalonia.Media.FillRule fillRule)
 ```
 
 | Parameter | Description |

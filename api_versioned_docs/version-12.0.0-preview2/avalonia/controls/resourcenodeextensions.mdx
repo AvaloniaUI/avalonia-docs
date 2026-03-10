@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Controls/ResourceNodeExtensions.cs">ResourceNodeExtensions.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__signature">
@@ -68,7 +71,7 @@ public class ResourceNodeExtensions
 Finds the specified resource by searching up the logical tree and then global styles.
 
 ```csharp
-public System.Object FindResource(Avalonia.Controls.IResourceHost control, Avalonia.Styling.ThemeVariant theme, System.Object key)
+public Object FindResource(Avalonia.Controls.IResourceHost control, Avalonia.Styling.ThemeVariant theme, Object key)
 ```
 
 | Parameter | Description |
@@ -86,7 +89,7 @@ Returns: The resource, or [Avalonia.AvaloniaProperty.UnsetValue](xref:Avalonia.A
 Finds the specified resource by searching up the logical tree and then global styles.
 
 ```csharp
-public System.Object FindResource(Avalonia.Controls.IResourceHost control, System.Object key)
+public Object FindResource(Avalonia.Controls.IResourceHost control, Object key)
 ```
 
 | Parameter | Description |
@@ -105,7 +108,7 @@ Returns: The resource, or [Avalonia.AvaloniaProperty.UnsetValue](xref:Avalonia.A
 #### GetResourceObservable
 
 ```csharp
-public System.IObservable<System.Object> GetResourceObservable(Avalonia.Controls.IResourceHost control, System.Object key, System.Func<System.Object, System.Object> converter)
+public IObservable<Object> GetResourceObservable(Avalonia.Controls.IResourceHost control, Object key, Func<Object, Object> converter)
 ```
 
 <span id="uid-e1898da5af"></span>
@@ -113,7 +116,7 @@ public System.IObservable<System.Object> GetResourceObservable(Avalonia.Controls
 #### GetResourceObservable
 
 ```csharp
-public System.IObservable<System.Object> GetResourceObservable(Avalonia.Controls.IResourceProvider resourceProvider, System.Object key, Avalonia.Styling.ThemeVariant defaultThemeVariant, System.Func<System.Object, System.Object> converter)
+public IObservable<Object> GetResourceObservable(Avalonia.Controls.IResourceProvider resourceProvider, Object key, Avalonia.Styling.ThemeVariant defaultThemeVariant, Func<Object, Object> converter)
 ```
 
 <span id="uid-bd8335806f"></span>
@@ -121,7 +124,7 @@ public System.IObservable<System.Object> GetResourceObservable(Avalonia.Controls
 #### GetResourceObservable
 
 ```csharp
-public System.IObservable<System.Object> GetResourceObservable(Avalonia.Controls.IResourceProvider resourceProvider, System.Object key, System.Func<System.Object, System.Object> converter)
+public IObservable<Object> GetResourceObservable(Avalonia.Controls.IResourceProvider resourceProvider, Object key, Func<Object, Object> converter)
 ```
 
 <span id="uid-9444696616"></span>
@@ -133,7 +136,7 @@ public System.IObservable<System.Object> GetResourceObservable(Avalonia.Controls
 #### TryFindResource
 
 ```csharp
-public System.Boolean TryFindResource(Avalonia.Controls.IResourceHost control, System.Object key, Avalonia.Styling.ThemeVariant theme, System.Object& value)
+public Boolean TryFindResource(Avalonia.Controls.IResourceHost control, Object key, Avalonia.Styling.ThemeVariant theme, Object& value)
 ```
 
 <span id="uid-9b16787778"></span>
@@ -141,7 +144,7 @@ public System.Boolean TryFindResource(Avalonia.Controls.IResourceHost control, S
 #### TryFindResource
 
 ```csharp
-public System.Boolean TryFindResource(Avalonia.Controls.IResourceHost control, System.Object key, System.Object& value)
+public Boolean TryFindResource(Avalonia.Controls.IResourceHost control, Object key, Object& value)
 ```
 
 <span id="uid-c358b1cce0"></span>
@@ -149,7 +152,7 @@ public System.Boolean TryFindResource(Avalonia.Controls.IResourceHost control, S
 ### TryGetResource
 
 ```csharp
-public System.Boolean TryGetResource(Avalonia.Controls.IResourceHost control, System.Object key, System.Object& value)
+public Boolean TryGetResource(Avalonia.Controls.IResourceHost control, Object key, Object& value)
 ```
 
 </ApiRefPage>

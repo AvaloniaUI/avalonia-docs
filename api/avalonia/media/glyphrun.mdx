@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Media/GlyphRun.cs">GlyphRun.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -72,7 +75,7 @@ public class GlyphRun
 #### GlyphRun
 
 ```csharp
-public GlyphRun(Avalonia.Media.GlyphTypeface glyphTypeface, System.Double fontRenderingEmSize, System.ReadOnlyMemory<System.Char> characters, System.Collections.Generic.IReadOnlyList<Avalonia.Media.TextFormatting.GlyphInfo> glyphInfos, System.Nullable<Avalonia.Point> baselineOrigin, System.Int32 biDiLevel)
+public GlyphRun(Avalonia.Media.GlyphTypeface glyphTypeface, Double fontRenderingEmSize, ReadOnlyMemory<Char> characters, System.Collections.Generic.IReadOnlyList<Avalonia.Media.TextFormatting.GlyphInfo> glyphInfos, Nullable<Avalonia.Point> baselineOrigin, Int32 biDiLevel)
 ```
 
 <span id="uid-42a5244e24"></span>
@@ -80,7 +83,7 @@ public GlyphRun(Avalonia.Media.GlyphTypeface glyphTypeface, System.Double fontRe
 #### GlyphRun
 
 ```csharp
-public GlyphRun(Avalonia.Media.GlyphTypeface glyphTypeface, System.Double fontRenderingEmSize, System.ReadOnlyMemory<System.Char> characters, System.Collections.Generic.IReadOnlyList<System.UInt16> glyphIndices, System.Nullable<Avalonia.Point> baselineOrigin, System.Int32 biDiLevel)
+public GlyphRun(Avalonia.Media.GlyphTypeface glyphTypeface, Double fontRenderingEmSize, ReadOnlyMemory<Char> characters, System.Collections.Generic.IReadOnlyList<UInt16> glyphIndices, Nullable<Avalonia.Point> baselineOrigin, Int32 biDiLevel)
 ```
 
 ## Methods
@@ -115,7 +118,7 @@ Returns: The geometry returned contains the combined geometry of all glyphs in t
 ### Dispose
 
 ```csharp
-public System.Void Dispose()
+public Void Dispose()
 ```
 
 <span id="uid-10244c375b"></span>
@@ -125,7 +128,7 @@ public System.Void Dispose()
 Finds a glyph index for given character index.
 
 ```csharp
-public System.Int32 FindGlyphIndex(System.Int32 characterIndex)
+public Int32 FindGlyphIndex(Int32 characterIndex)
 ```
 
 | Parameter | Description |
@@ -139,7 +142,7 @@ Returns: The glyph index.
 ### FindNearestCharacterHit
 
 ```csharp
-public Avalonia.Media.CharacterHit FindNearestCharacterHit(System.Int32 index, System.Double& width)
+public Avalonia.Media.CharacterHit FindNearestCharacterHit(Int32 index, Double& width)
 ```
 
 <span id="uid-067259b333"></span>
@@ -147,7 +150,7 @@ public Avalonia.Media.CharacterHit FindNearestCharacterHit(System.Int32 index, S
 ### GetCharacterHitFromDistance
 
 ```csharp
-public Avalonia.Media.CharacterHit GetCharacterHitFromDistance(System.Double distance, System.Boolean& isInside)
+public Avalonia.Media.CharacterHit GetCharacterHitFromDistance(Double distance, Boolean& isInside)
 ```
 
 <span id="uid-d5b6f8b32d"></span>
@@ -158,14 +161,14 @@ Retrieves the offset from the leading edge of the [Avalonia.Media.GlyphRun](xref
 to the leading or trailing edge of a caret stop containing the specified character hit.
 
 ```csharp
-public System.Double GetDistanceFromCharacterHit(Avalonia.Media.CharacterHit characterHit)
+public Double GetDistanceFromCharacterHit(Avalonia.Media.CharacterHit characterHit)
 ```
 
 | Parameter | Description |
 | --- | --- |
 | `characterHit` | The [Avalonia.Media.CharacterHit](xref:Avalonia.Media.CharacterHit) to use for computing the offset. |
 
-Returns: A [System.Double](xref:System.Double) that represents the offset from the leading edge of the [Avalonia.Media.GlyphRun](xref:Avalonia.Media.GlyphRun)
+Returns: A [Double](xref:System.Double) that represents the offset from the leading edge of the [Avalonia.Media.GlyphRun](xref:Avalonia.Media.GlyphRun)
 to the leading or trailing edge of a caret stop containing the character hit.
 
 <span id="uid-2087dc8294"></span>
@@ -175,7 +178,7 @@ to the leading or trailing edge of a caret stop containing the character hit.
 Gets the intersections of specified upper and lower limit.
 
 ```csharp
-public System.Collections.Generic.IReadOnlyList<System.Single> GetIntersections(System.Single lowerLimit, System.Single upperLimit)
+public System.Collections.Generic.IReadOnlyList<Single> GetIntersections(Single lowerLimit, Single upperLimit)
 ```
 
 | Parameter | Description |
@@ -257,7 +260,7 @@ public Avalonia.Point BaselineOrigin { get; set; }
 Gets or sets the bidirectional nesting level of the [Avalonia.Media.GlyphRun](xref:Avalonia.Media.GlyphRun).
 
 ```csharp
-public System.Int32 BiDiLevel { get; set; }
+public Int32 BiDiLevel { get; set; }
 ```
 
 <span id="uid-ba6b22dd20"></span>
@@ -277,7 +280,7 @@ public Avalonia.Rect Bounds { get; set; }
 Gets or sets the list of UTF16 code points that represent the Unicode content of the [Avalonia.Media.GlyphRun](xref:Avalonia.Media.GlyphRun).
 
 ```csharp
-public System.ReadOnlyMemory<System.Char> Characters { get; set; }
+public ReadOnlyMemory<Char> Characters { get; set; }
 ```
 
 <span id="uid-ac261e95fc"></span>
@@ -287,7 +290,7 @@ public System.ReadOnlyMemory<System.Char> Characters { get; set; }
 Gets or sets the em size used for rendering the [Avalonia.Media.GlyphRun](xref:Avalonia.Media.GlyphRun).
 
 ```csharp
-public System.Double FontRenderingEmSize { get; set; }
+public Double FontRenderingEmSize { get; set; }
 ```
 
 <span id="uid-a5fe313c08"></span>
@@ -325,7 +328,7 @@ public Avalonia.Rect InkBounds { get; set; }
 Returns `true` if the text direction is left-to-right. Otherwise, returns `false`.
 
 ```csharp
-public System.Boolean IsLeftToRight { get; set; }
+public Boolean IsLeftToRight { get; set; }
 ```
 
 <span id="uid-e9df7b4b7a"></span>

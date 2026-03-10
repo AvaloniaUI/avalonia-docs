@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Media/TextFormatting/ShapedBuffer.cs">ShapedBuffer.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__signature">
@@ -62,7 +65,7 @@ public class ShapedBuffer
 ### ShapedBuffer
 
 ```csharp
-public ShapedBuffer(System.ReadOnlyMemory<System.Char> text, System.Int32 bufferLength, Avalonia.Media.GlyphTypeface glyphTypeface, System.Double fontRenderingEmSize, System.SByte bidiLevel)
+public ShapedBuffer(ReadOnlyMemory<Char> text, Int32 bufferLength, Avalonia.Media.GlyphTypeface glyphTypeface, Double fontRenderingEmSize, SByte bidiLevel)
 ```
 
 ## Methods
@@ -79,7 +82,7 @@ public ShapedBuffer(System.ReadOnlyMemory<System.Char> text, System.Int32 buffer
 ### Dispose
 
 ```csharp
-public System.Void Dispose()
+public Void Dispose()
 ```
 
 <span id="uid-21e93d6c02"></span>
@@ -97,7 +100,7 @@ public System.Collections.Generic.IEnumerator<Avalonia.Media.TextFormatting.Glyp
 Reverses the buffer.
 
 ```csharp
-public System.Void Reverse()
+public Void Reverse()
 ```
 
 <span id="uid-6413e6994f"></span>
@@ -107,7 +110,7 @@ public System.Void Reverse()
 Splits the [Avalonia.Media.TextFormatting.TextRun](xref:Avalonia.Media.TextFormatting.TextRun) at specified length.
 
 ```csharp
-public Avalonia.Media.TextFormatting.SplitResult<T><Avalonia.Media.TextFormatting.ShapedBuffer> Split(System.Int32 textLength)
+public Avalonia.Media.TextFormatting.SplitResult<T><Avalonia.Media.TextFormatting.ShapedBuffer> Split(Int32 textLength)
 ```
 
 | Parameter | Description |
@@ -135,7 +138,7 @@ Returns: The split result.
 The buffer's bidi level.
 
 ```csharp
-public System.SByte BidiLevel { get; set; }
+public SByte BidiLevel { get; set; }
 ```
 
 <span id="uid-5c7c9ef6ae"></span>
@@ -145,7 +148,7 @@ public System.SByte BidiLevel { get; set; }
 The buffers font rendering em size.
 
 ```csharp
-public System.Double FontRenderingEmSize { get; set; }
+public Double FontRenderingEmSize { get; set; }
 ```
 
 <span id="uid-9c4431840f"></span>
@@ -165,7 +168,7 @@ public Avalonia.Media.GlyphTypeface GlyphTypeface { get; set; }
 The buffer's reading direction.
 
 ```csharp
-public System.Boolean IsLeftToRight { get; set; }
+public Boolean IsLeftToRight { get; set; }
 ```
 
 <span id="uid-f74462311e"></span>
@@ -183,7 +186,7 @@ public Avalonia.Media.TextFormatting.GlyphInfo Item { get; set; }
 The buffer's length.
 
 ```csharp
-public System.Int32 Length { get; set; }
+public Int32 Length { get; set; }
 ```
 
 <span id="uid-197f3ad165"></span>
@@ -193,7 +196,7 @@ public System.Int32 Length { get; set; }
 The text that is represended by this buffer.
 
 ```csharp
-public System.ReadOnlyMemory<System.Char> Text { get; set; }
+public ReadOnlyMemory<Char> Text { get; set; }
 ```
 
 </ApiRefPage>

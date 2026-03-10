@@ -59,7 +59,7 @@ public delegate LibDrm.DrmEventPageFlipHandler2Delegate
 ### LibDrm.DrmEventPageFlipHandler2Delegate
 
 ```csharp
-public LibDrm.DrmEventPageFlipHandler2Delegate(System.Object object, System.IntPtr method)
+public LibDrm.DrmEventPageFlipHandler2Delegate(Object object, IntPtr method)
 ```
 
 ## Methods
@@ -75,7 +75,7 @@ public LibDrm.DrmEventPageFlipHandler2Delegate(System.Object object, System.IntP
 ### BeginInvoke
 
 ```csharp
-public System.IAsyncResult BeginInvoke(System.Int32 fd, System.UInt32 sequence, System.UInt32 tv_sec, System.UInt32 tv_usec, System.UInt32 crtc_id, System.Void* user_data, System.AsyncCallback callback, System.Object object)
+public IAsyncResult BeginInvoke(Int32 fd, UInt32 sequence, UInt32 tv_sec, UInt32 tv_usec, UInt32 crtc_id, Void* user_data, AsyncCallback callback, Object object)
 ```
 
 <span id="uid-7905068cf2"></span>
@@ -83,7 +83,7 @@ public System.IAsyncResult BeginInvoke(System.Int32 fd, System.UInt32 sequence, 
 ### EndInvoke
 
 ```csharp
-public System.IntPtr EndInvoke(System.IAsyncResult result)
+public IntPtr EndInvoke(IAsyncResult result)
 ```
 
 <span id="uid-fae5e763d0"></span>
@@ -91,7 +91,7 @@ public System.IntPtr EndInvoke(System.IAsyncResult result)
 ### Invoke
 
 ```csharp
-public System.IntPtr Invoke(System.Int32 fd, System.UInt32 sequence, System.UInt32 tv_sec, System.UInt32 tv_usec, System.UInt32 crtc_id, System.Void* user_data)
+public IntPtr Invoke(Int32 fd, UInt32 sequence, UInt32 tv_sec, UInt32 tv_usec, UInt32 crtc_id, Void* user_data)
 ```
 
 </ApiRefPage>

@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Media/CharacterHit.cs">CharacterHit.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -75,7 +78,7 @@ character that got hit as well as information about leading or trailing edge.
 Initializes a new instance of the [Avalonia.Media.CharacterHit](xref:Avalonia.Media.CharacterHit) structure.
 
 ```csharp
-public CharacterHit(System.Int32 firstCharacterIndex, System.Int32 trailingLength)
+public CharacterHit(Int32 firstCharacterIndex, Int32 trailingLength)
 ```
 
 | Parameter | Description |
@@ -100,7 +103,7 @@ this value is the number of code points until the next valid caret position. |
 #### Equals
 
 ```csharp
-public System.Boolean Equals(Avalonia.Media.CharacterHit other)
+public Boolean Equals(Avalonia.Media.CharacterHit other)
 ```
 
 <span id="uid-22799906da"></span>
@@ -108,7 +111,7 @@ public System.Boolean Equals(Avalonia.Media.CharacterHit other)
 #### Equals
 
 ```csharp
-public System.Boolean Equals(System.Object obj)
+public Boolean Equals(Object obj)
 ```
 
 <span id="uid-9792b1e13c"></span>
@@ -116,7 +119,7 @@ public System.Boolean Equals(System.Object obj)
 ### GetHashCode
 
 ```csharp
-public System.Int32 GetHashCode()
+public Int32 GetHashCode()
 ```
 
 ## Properties
@@ -133,7 +136,7 @@ public System.Int32 GetHashCode()
 Gets the index of the first character that got hit.
 
 ```csharp
-public System.Int32 FirstCharacterIndex { get; set; }
+public Int32 FirstCharacterIndex { get; set; }
 ```
 
 <span id="uid-afe539c36c"></span>
@@ -143,7 +146,7 @@ public System.Int32 FirstCharacterIndex { get; set; }
 Gets the trailing length value for the character that got hit.
 
 ```csharp
-public System.Int32 TrailingLength { get; set; }
+public Int32 TrailingLength { get; set; }
 ```
 
 </ApiRefPage>

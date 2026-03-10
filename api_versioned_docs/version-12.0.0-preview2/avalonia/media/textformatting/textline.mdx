@@ -94,7 +94,7 @@ Returns: A [Avalonia.Media.TextFormatting.TextLine](xref:Avalonia.Media.TextForm
 ### Dispose
 
 ```csharp
-public System.Void Dispose()
+public Void Dispose()
 ```
 
 <span id="uid-8e27abbe79"></span>
@@ -104,7 +104,7 @@ public System.Void Dispose()
 Draws the [Avalonia.Media.TextFormatting.TextLine](xref:Avalonia.Media.TextFormatting.TextLine) at the given origin.
 
 ```csharp
-public System.Void Draw(Avalonia.Media.DrawingContext drawingContext, Avalonia.Point lineOrigin)
+public Void Draw(Avalonia.Media.DrawingContext drawingContext, Avalonia.Point lineOrigin)
 ```
 
 | Parameter | Description |
@@ -135,12 +135,12 @@ Returns: The [Avalonia.Media.CharacterHit](xref:Avalonia.Media.CharacterHit) aft
 Gets the character hit corresponding to the specified distance from the beginning of the line.
 
 ```csharp
-public Avalonia.Media.CharacterHit GetCharacterHitFromDistance(System.Double distance)
+public Avalonia.Media.CharacterHit GetCharacterHitFromDistance(Double distance)
 ```
 
 | Parameter | Description |
 | --- | --- |
-| `distance` | A [System.Double](xref:System.Double) value that represents the distance from the beginning of the line. |
+| `distance` | A [Double](xref:System.Double) value that represents the distance from the beginning of the line. |
 
 Returns: The [Avalonia.Media.CharacterHit](xref:Avalonia.Media.CharacterHit) object at the specified distance from the beginning of the line.
 
@@ -152,14 +152,14 @@ Gets the distance from the beginning of the line to the specified character hit.
 [Avalonia.Media.CharacterHit](xref:Avalonia.Media.CharacterHit).
 
 ```csharp
-public System.Double GetDistanceFromCharacterHit(Avalonia.Media.CharacterHit characterHit)
+public Double GetDistanceFromCharacterHit(Avalonia.Media.CharacterHit characterHit)
 ```
 
 | Parameter | Description |
 | --- | --- |
 | `characterHit` | The [Avalonia.Media.CharacterHit](xref:Avalonia.Media.CharacterHit) object whose distance you want to query. |
 
-Returns: A [System.Double](xref:System.Double) that represents the distance from the beginning of the line.
+Returns: A [Double](xref:System.Double) that represents the distance from the beginning of the line.
 
 <span id="uid-d4197efb87"></span>
 
@@ -200,7 +200,7 @@ Returns: The previous [Avalonia.Media.CharacterHit](xref:Avalonia.Media.Characte
 Get an array of bounding rectangles of a range of characters within a text line.
 
 ```csharp
-public System.Collections.Generic.IReadOnlyList<Avalonia.Media.TextFormatting.TextBounds> GetTextBounds(System.Int32 firstTextSourceCharacterIndex, System.Int32 textLength)
+public System.Collections.Generic.IReadOnlyList<Avalonia.Media.TextFormatting.TextBounds> GetTextBounds(Int32 firstTextSourceCharacterIndex, Int32 textLength)
 ```
 
 | Parameter | Description |
@@ -217,7 +217,7 @@ Returns: an array of bounding rectangles.
 Create a justified line based on justification text properties.
 
 ```csharp
-public System.Void Justify(Avalonia.Media.TextFormatting.JustificationProperties justificationProperties)
+public Void Justify(Avalonia.Media.TextFormatting.JustificationProperties justificationProperties)
 ```
 
 | Parameter | Description |
@@ -255,10 +255,10 @@ Returns: A [Avalonia.Media.TextFormatting.TextLine](xref:Avalonia.Media.TextForm
 Gets the distance from the top to the baseline of the current TextLine object.
 
 ```csharp
-public System.Double Baseline { get; set; }
+public Double Baseline { get; set; }
 ```
 
-Returns: A [System.Double](xref:System.Double) that represents the baseline distance.
+Returns: A [Double](xref:System.Double) that represents the baseline distance.
 
 <span id="uid-2e81cac616"></span>
 
@@ -267,7 +267,7 @@ Returns: A [System.Double](xref:System.Double) that represents the baseline dist
 Gets the distance from the top-most to bottom-most black pixel in a line.
 
 ```csharp
-public System.Double Extent { get; set; }
+public Double Extent { get; set; }
 ```
 
 Returns: A value that represents the extent distance.
@@ -279,7 +279,7 @@ Returns: A value that represents the extent distance.
 Gets the first TextSource position of the current line.
 
 ```csharp
-public System.Int32 FirstTextSourceIndex { get; set; }
+public Int32 FirstTextSourceIndex { get; set; }
 ```
 
 <span id="uid-946498f189"></span>
@@ -289,7 +289,7 @@ public System.Int32 FirstTextSourceIndex { get; set; }
 Gets a value that indicates whether the line is collapsed.
 
 ```csharp
-public System.Boolean HasCollapsed { get; set; }
+public Boolean HasCollapsed { get; set; }
 ```
 
 Returns: `true`, if the line is collapsed; otherwise, `false`.
@@ -301,7 +301,7 @@ Returns: `true`, if the line is collapsed; otherwise, `false`.
 Gets a value that indicates whether content of the line overflows the specified paragraph width.
 
 ```csharp
-public System.Boolean HasOverflowed { get; set; }
+public Boolean HasOverflowed { get; set; }
 ```
 
 Returns: `true`, the line overflows the specified paragraph width; otherwise, `false`.
@@ -313,7 +313,7 @@ Returns: `true`, the line overflows the specified paragraph width; otherwise, `f
 Gets the height of a line of text.
 
 ```csharp
-public System.Double Height { get; set; }
+public Double Height { get; set; }
 ```
 
 Returns: The text line height.
@@ -325,7 +325,7 @@ Returns: The text line height.
 Gets the total number of TextSource positions of the current line.
 
 ```csharp
-public System.Int32 Length { get; set; }
+public Int32 Length { get; set; }
 ```
 
 <span id="uid-1153d44e15"></span>
@@ -335,7 +335,7 @@ public System.Int32 Length { get; set; }
 Gets the number of newline characters at the end of a line.
 
 ```csharp
-public System.Int32 NewLineLength { get; set; }
+public Int32 NewLineLength { get; set; }
 ```
 
 Returns: The number of newline characters.
@@ -347,7 +347,7 @@ Returns: The number of newline characters.
 Gets the distance that black pixels extend beyond the bottom alignment edge of a line.
 
 ```csharp
-public System.Double OverhangAfter { get; set; }
+public Double OverhangAfter { get; set; }
 ```
 
 Returns: The overhang after distance.
@@ -359,7 +359,7 @@ Returns: The overhang after distance.
 Gets the distance that black pixels extend prior to the left leading alignment edge of the line.
 
 ```csharp
-public System.Double OverhangLeading { get; set; }
+public Double OverhangLeading { get; set; }
 ```
 
 Returns: The overhang leading distance.
@@ -371,7 +371,7 @@ Returns: The overhang leading distance.
 Gets the distance that black pixels extend following the right trailing alignment edge of the line.
 
 ```csharp
-public System.Double OverhangTrailing { get; set; }
+public Double OverhangTrailing { get; set; }
 ```
 
 Returns: The overhang trailing distance.
@@ -383,7 +383,7 @@ Returns: The overhang trailing distance.
 Gets the distance from the start of a paragraph to the starting point of a line.
 
 ```csharp
-public System.Double Start { get; set; }
+public Double Start { get; set; }
 ```
 
 Returns: The distance from the start of a paragraph to the starting point of a line.
@@ -419,7 +419,7 @@ Value: The contained text runs.
 Gets the number of whitespace code points beyond the last non-blank character in a line.
 
 ```csharp
-public System.Int32 TrailingWhitespaceLength { get; set; }
+public Int32 TrailingWhitespaceLength { get; set; }
 ```
 
 Returns: The number of whitespace code points beyond the last non-blank character in a line.
@@ -431,7 +431,7 @@ Returns: The number of whitespace code points beyond the last non-blank characte
 Gets the width of a line of text, excluding trailing whitespace characters.
 
 ```csharp
-public System.Double Width { get; set; }
+public Double Width { get; set; }
 ```
 
 Returns: The text line width, excluding trailing whitespace characters.
@@ -443,7 +443,7 @@ Returns: The text line width, excluding trailing whitespace characters.
 Gets the width of a line of text, including trailing whitespace characters.
 
 ```csharp
-public System.Double WidthIncludingTrailingWhitespace { get; set; }
+public Double WidthIncludingTrailingWhitespace { get; set; }
 ```
 
 Returns: The text line width, including trailing whitespace characters.

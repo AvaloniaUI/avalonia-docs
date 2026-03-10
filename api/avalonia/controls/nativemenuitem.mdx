@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Controls/NativeMenuItem.cs">NativeMenuItem.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__signature">
@@ -45,6 +48,9 @@ public class NativeMenuItem
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="nativemenuitembase">NativeMenuItemBase</a> <span className="apiref-page__relation-separator">-&gt;</span> NativeMenuItem
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Derived types:</span> <a href="nativemenuitemseparator">NativeMenuItemSeparator</a>
 </div>
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Implements:</span> <a href="inativemenuitemexportereventsimplbridge">INativeMenuItemExporterEventsImplBridge</a>
@@ -74,8 +80,26 @@ public NativeMenuItem()
 #### NativeMenuItem
 
 ```csharp
-public NativeMenuItem(System.String header)
+public NativeMenuItem(String header)
 ```
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Bind (8 overloads) (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-1c60c7bda3) | Binds a Avalonia.AvaloniaProperty to an Avalonia.Data.BindingBase. |
+| [CheckAccess (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-260ff7a68d) | Returns a value indicating whether the current thread is the UI thread. |
+| [ClearValue (4 overloads) (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-41de208fbe) | Clears a Avalonia.AvaloniaProperty's local value. |
+| [CoerceValue (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-3bec32f39e) | Coerces the specified Avalonia.AvaloniaProperty. |
+| [Equals (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-a8a8e94305) | Compares two objects using reference equality. |
+| [GetBaseValue (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-9c615efbba) | No summary available. |
+| [GetHashCode (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-7f7db1e7a2) | Gets the hash code for the object. |
+| [GetValue (3 overloads) (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-5142cd4792) | Gets a Avalonia.AvaloniaProperty value. |
+| [IsAnimating (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-8cbfc7521a) | Checks whether a Avalonia.AvaloniaProperty is animating. |
+| [IsSet (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-f8bf0bbdcc) | Checks whether a Avalonia.AvaloniaProperty is set on this object. |
+| [SetCurrentValue (2 overloads) (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-38759fd088) | Sets the value of a dependency property without changing its value source. |
+| [SetValue (3 overloads) (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-47d14e19d7) | Sets a Avalonia.AvaloniaProperty value. |
+| [VerifyAccess (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-3b9d3c9793) | Checks that the current thread is the UI thread and throws if not. |
 
 ## Properties
 
@@ -93,6 +117,9 @@ public NativeMenuItem(System.String header)
 | [Menu](#uid-4712a248f9) | No summary available. |
 | [ToggleType](#uid-3695da872d) | Gets toggle type of the menu item. |
 | [ToolTip](#uid-78abee77af) | Gets or sets the tooltip associated with the menu item. This may not be supported by the native menu provider, but will be passed on to the non-native fallback menu item if used. |
+| [Parent (Inherited from NativeMenuItemBase)](nativemenuitembase.mdx#uid-6bfad1e360) | No summary available. |
+| [Dispatcher (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-b25fa51632) | Returns the Avalonia.AvaloniaObject.Dispatcher that this Avalonia.AvaloniaObject is associated with. |
+| [Item (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-c1d1f1bc0f) | No summary available. |
 
 <span id="uid-d5febd9351"></span>
 
@@ -112,7 +139,7 @@ Gets or sets the parameter to pass to the [Avalonia.Controls.MenuItem.Command](x
 [Avalonia.Controls.MenuItem](xref:Avalonia.Controls.MenuItem).
 
 ```csharp
-public System.Object CommandParameter { get; set; }
+public Object CommandParameter { get; set; }
 ```
 
 <span id="uid-66e4389381"></span>
@@ -130,7 +157,7 @@ public Avalonia.Input.KeyGesture Gesture { get; set; }
 ### HasClickHandlers
 
 ```csharp
-public System.Boolean HasClickHandlers { get; set; }
+public Boolean HasClickHandlers { get; set; }
 ```
 
 <span id="uid-b8d59f5357"></span>
@@ -140,7 +167,7 @@ public System.Boolean HasClickHandlers { get; set; }
 Gets or sets the content of the control's header.
 
 ```csharp
-public System.String Header { get; set; }
+public String Header { get; set; }
 ```
 
 <span id="uid-1af2ab89b0"></span>
@@ -161,7 +188,7 @@ Gets or sets if menu item is checked when [Avalonia.Controls.MenuItem.ToggleType
 [Avalonia.Controls.MenuItemToggleType.CheckBox](xref:Avalonia.Controls.MenuItemToggleType.CheckBox) or [Avalonia.Controls.MenuItemToggleType.Radio](xref:Avalonia.Controls.MenuItemToggleType.Radio).
 
 ```csharp
-public System.Boolean IsChecked { get; set; }
+public Boolean IsChecked { get; set; }
 ```
 
 <span id="uid-fd1fe51b79"></span>
@@ -171,7 +198,7 @@ public System.Boolean IsChecked { get; set; }
 Gets or sets a value indicating whether the control is enabled for user interaction.
 
 ```csharp
-public System.Boolean IsEnabled { get; set; }
+public Boolean IsEnabled { get; set; }
 ```
 
 <span id="uid-ea1cceaa8e"></span>
@@ -181,7 +208,7 @@ public System.Boolean IsEnabled { get; set; }
 Gets or sets a value indicating whether this menu item is visible.
 
 ```csharp
-public System.Boolean IsVisible { get; set; }
+public Boolean IsVisible { get; set; }
 ```
 
 <span id="uid-4712a248f9"></span>
@@ -211,7 +238,7 @@ This may not be supported by the native menu provider, but
 will be passed on to the non-native fallback menu item if used.
 
 ```csharp
-public System.String ToolTip { get; set; }
+public String ToolTip { get; set; }
 ```
 
 ## Fields
@@ -229,6 +256,7 @@ public System.String ToolTip { get; set; }
 | [MenuProperty](#uid-6ba8062800) | No summary available. |
 | [ToggleTypeProperty](#uid-6c30bcf1b1) | Defines the Avalonia.Controls.MenuItem.ToggleType property. |
 | [ToolTipProperty](#uid-ba25e8a8f4) | Defines the Avalonia.Controls.NativeMenuItem.ToolTip property. |
+| [ParentProperty (Inherited from NativeMenuItemBase)](nativemenuitembase.mdx#uid-a29cef160a) | No summary available. |
 
 <span id="uid-0de36dee29"></span>
 
@@ -237,7 +265,7 @@ public System.String ToolTip { get; set; }
 Defines the [Avalonia.Controls.MenuItem.CommandParameter](xref:Avalonia.Controls.MenuItem.CommandParameter) property.
 
 ```csharp
-public Avalonia.StyledProperty<System.Object> CommandParameterProperty
+public Avalonia.StyledProperty<Object> CommandParameterProperty
 ```
 
 <span id="uid-0d269e574f"></span>
@@ -267,7 +295,7 @@ public Avalonia.StyledProperty<Avalonia.Input.KeyGesture> GestureProperty
 Defines the [Avalonia.Controls.Primitives.HeaderedSelectingItemsControl.Header](xref:Avalonia.Controls.Primitives.HeaderedSelectingItemsControl.Header) property.
 
 ```csharp
-public Avalonia.StyledProperty<System.String> HeaderProperty
+public Avalonia.StyledProperty<String> HeaderProperty
 ```
 
 <span id="uid-8c453aabbb"></span>
@@ -287,7 +315,7 @@ public Avalonia.StyledProperty<Avalonia.Media.Imaging.Bitmap> IconProperty
 Defines the [Avalonia.Controls.MenuItem.IsChecked](xref:Avalonia.Controls.MenuItem.IsChecked) property.
 
 ```csharp
-public Avalonia.StyledProperty<System.Boolean> IsCheckedProperty
+public Avalonia.StyledProperty<Boolean> IsCheckedProperty
 ```
 
 <span id="uid-fab16ec133"></span>
@@ -297,7 +325,7 @@ public Avalonia.StyledProperty<System.Boolean> IsCheckedProperty
 Defines the [Avalonia.Input.InputElement.IsEnabled](xref:Avalonia.Input.InputElement.IsEnabled) property.
 
 ```csharp
-public Avalonia.StyledProperty<System.Boolean> IsEnabledProperty
+public Avalonia.StyledProperty<Boolean> IsEnabledProperty
 ```
 
 <span id="uid-2ad3210c7f"></span>
@@ -307,7 +335,7 @@ public Avalonia.StyledProperty<System.Boolean> IsEnabledProperty
 Defines the [Avalonia.Controls.NativeMenuItem.IsVisible](xref:Avalonia.Controls.NativeMenuItem.IsVisible) property.
 
 ```csharp
-public Avalonia.StyledProperty<System.Boolean> IsVisibleProperty
+public Avalonia.StyledProperty<Boolean> IsVisibleProperty
 ```
 
 <span id="uid-6ba8062800"></span>
@@ -335,7 +363,7 @@ public Avalonia.StyledProperty<Avalonia.Controls.MenuItemToggleType> ToggleTypeP
 Defines the [Avalonia.Controls.NativeMenuItem.ToolTip](xref:Avalonia.Controls.NativeMenuItem.ToolTip) property.
 
 ```csharp
-public Avalonia.StyledProperty<System.String> ToolTipProperty
+public Avalonia.StyledProperty<String> ToolTipProperty
 ```
 
 ## Events
@@ -343,6 +371,7 @@ public Avalonia.StyledProperty<System.String> ToolTipProperty
 | Name | Description |
 | --- | --- |
 | [Click](#uid-2872843590) | Occurs when a Avalonia.Controls.NativeMenuItem is clicked. |
+| [PropertyChanged (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-d758e26fae) | Raised when a Avalonia.AvaloniaProperty value changes on this object. |
 
 <span id="uid-2872843590"></span>
 
@@ -351,7 +380,7 @@ public Avalonia.StyledProperty<System.String> ToolTipProperty
 Occurs when a [Avalonia.Controls.NativeMenuItem](xref:Avalonia.Controls.NativeMenuItem) is clicked.
 
 ```csharp
-public event System.EventHandler Click
+public event EventHandler Click
 ```
 
 </ApiRefPage>

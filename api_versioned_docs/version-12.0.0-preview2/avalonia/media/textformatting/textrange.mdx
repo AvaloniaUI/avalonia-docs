@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Media/TextFormatting/TextRange.cs">TextRange.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -68,7 +71,7 @@ public struct TextRange
 ### TextRange
 
 ```csharp
-public TextRange(System.Int32 start, System.Int32 length)
+public TextRange(Int32 start, Int32 length)
 ```
 
 ## Methods
@@ -90,7 +93,7 @@ public TextRange(System.Int32 start, System.Int32 length)
 #### Equals
 
 ```csharp
-public System.Boolean Equals(Avalonia.Media.TextFormatting.TextRange other)
+public Boolean Equals(Avalonia.Media.TextFormatting.TextRange other)
 ```
 
 <span id="uid-b2d071f942"></span>
@@ -98,7 +101,7 @@ public System.Boolean Equals(Avalonia.Media.TextFormatting.TextRange other)
 #### Equals
 
 ```csharp
-public System.Boolean Equals(System.Object obj)
+public Boolean Equals(Object obj)
 ```
 
 <span id="uid-83a24eb7fa"></span>
@@ -106,7 +109,7 @@ public System.Boolean Equals(System.Object obj)
 ### GetHashCode
 
 ```csharp
-public System.Int32 GetHashCode()
+public Int32 GetHashCode()
 ```
 
 <span id="uid-c987973492"></span>
@@ -116,7 +119,7 @@ public System.Int32 GetHashCode()
 Bypasses a specified number of elements in the slice and then returns the remaining elements.
 
 ```csharp
-public Avalonia.Media.TextFormatting.TextRange Skip(System.Int32 length)
+public Avalonia.Media.TextFormatting.TextRange Skip(Int32 length)
 ```
 
 | Parameter | Description |
@@ -132,7 +135,7 @@ Returns: A [Avalonia.Media.TextFormatting.TextRange](xref:Avalonia.Media.TextFor
 Returns a specified number of contiguous elements from the start of the slice.
 
 ```csharp
-public Avalonia.Media.TextFormatting.TextRange Take(System.Int32 length)
+public Avalonia.Media.TextFormatting.TextRange Take(Int32 length)
 ```
 
 | Parameter | Description |
@@ -146,7 +149,7 @@ Returns: A [Avalonia.Media.TextFormatting.TextRange](xref:Avalonia.Media.TextFor
 ### ToString
 
 ```csharp
-public System.String ToString()
+public String ToString()
 ```
 
 ## Properties
@@ -164,7 +167,7 @@ public System.String ToString()
 Gets the end.
 
 ```csharp
-public System.Int32 End { get; set; }
+public Int32 End { get; set; }
 ```
 
 Value: The end.
@@ -176,7 +179,7 @@ Value: The end.
 Gets the length.
 
 ```csharp
-public System.Int32 Length { get; set; }
+public Int32 Length { get; set; }
 ```
 
 Value: The length.
@@ -188,7 +191,7 @@ Value: The length.
 Gets the start.
 
 ```csharp
-public System.Int32 Start { get; set; }
+public Int32 Start { get; set; }
 ```
 
 Value: The start.

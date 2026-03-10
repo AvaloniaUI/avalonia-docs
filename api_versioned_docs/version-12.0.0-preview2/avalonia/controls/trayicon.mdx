@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Controls/TrayIcon.cs">TrayIcon.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__signature">
@@ -72,6 +75,19 @@ public TrayIcon()
 | [Dispose](#uid-2c315aaa4a) | Disposes the tray icon (removing it from the tray area). |
 | [GetIcons](#uid-8e2efeffa2) | No summary available. |
 | [SetIcons](#uid-ec83647b02) | No summary available. |
+| [Bind (8 overloads) (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-1c60c7bda3) | Binds a Avalonia.AvaloniaProperty to an Avalonia.Data.BindingBase. |
+| [CheckAccess (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-260ff7a68d) | Returns a value indicating whether the current thread is the UI thread. |
+| [ClearValue (4 overloads) (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-41de208fbe) | Clears a Avalonia.AvaloniaProperty's local value. |
+| [CoerceValue (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-3bec32f39e) | Coerces the specified Avalonia.AvaloniaProperty. |
+| [Equals (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-a8a8e94305) | Compares two objects using reference equality. |
+| [GetBaseValue (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-9c615efbba) | No summary available. |
+| [GetHashCode (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-7f7db1e7a2) | Gets the hash code for the object. |
+| [GetValue (3 overloads) (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-5142cd4792) | Gets a Avalonia.AvaloniaProperty value. |
+| [IsAnimating (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-8cbfc7521a) | Checks whether a Avalonia.AvaloniaProperty is animating. |
+| [IsSet (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-f8bf0bbdcc) | Checks whether a Avalonia.AvaloniaProperty is set on this object. |
+| [SetCurrentValue (2 overloads) (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-38759fd088) | Sets the value of a dependency property without changing its value source. |
+| [SetValue (3 overloads) (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-47d14e19d7) | Sets a Avalonia.AvaloniaProperty value. |
+| [VerifyAccess (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-3b9d3c9793) | Checks that the current thread is the UI thread and throws if not. |
 
 <span id="uid-2c315aaa4a"></span>
 
@@ -80,7 +96,7 @@ public TrayIcon()
 Disposes the tray icon (removing it from the tray area).
 
 ```csharp
-public System.Void Dispose()
+public Void Dispose()
 ```
 
 <span id="uid-8e2efeffa2"></span>
@@ -96,7 +112,7 @@ public Avalonia.Controls.TrayIcons GetIcons(Avalonia.Application o)
 ### SetIcons
 
 ```csharp
-public System.Void SetIcons(Avalonia.Application o, Avalonia.Controls.TrayIcons trayIcons)
+public Void SetIcons(Avalonia.Application o, Avalonia.Controls.TrayIcons trayIcons)
 ```
 
 ## Properties
@@ -110,6 +126,8 @@ public System.Void SetIcons(Avalonia.Application o, Avalonia.Controls.TrayIcons 
 | [Menu](#uid-3dae453589) | Gets or sets the Menu of the TrayIcon. |
 | [NativeMenuExporter](#uid-8508013d80) | No summary available. |
 | [ToolTipText](#uid-7db5f444b1) | Gets or sets the tooltip text of the TrayIcon. |
+| [Dispatcher (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-b25fa51632) | Returns the Avalonia.AvaloniaObject.Dispatcher that this Avalonia.AvaloniaObject is associated with. |
+| [Item (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-c1d1f1bc0f) | No summary available. |
 
 <span id="uid-dede75dc69"></span>
 
@@ -129,7 +147,7 @@ Gets or sets the parameter to pass to the [Avalonia.Controls.TrayIcon.Command](x
 [Avalonia.Controls.TrayIcon](xref:Avalonia.Controls.TrayIcon).
 
 ```csharp
-public System.Object CommandParameter { get; set; }
+public Object CommandParameter { get; set; }
 ```
 
 <span id="uid-73835dbb5e"></span>
@@ -149,7 +167,7 @@ public Avalonia.Controls.WindowIcon Icon { get; set; }
 Gets or sets the visibility of the TrayIcon.
 
 ```csharp
-public System.Boolean IsVisible { get; set; }
+public Boolean IsVisible { get; set; }
 ```
 
 <span id="uid-3dae453589"></span>
@@ -177,7 +195,7 @@ public Avalonia.Controls.Platform.INativeMenuExporter NativeMenuExporter { get; 
 Gets or sets the tooltip text of the TrayIcon.
 
 ```csharp
-public System.String ToolTipText { get; set; }
+public String ToolTipText { get; set; }
 ```
 
 ## Fields
@@ -199,7 +217,7 @@ public System.String ToolTipText { get; set; }
 Defines the [Avalonia.Controls.TrayIcon.CommandParameter](xref:Avalonia.Controls.TrayIcon.CommandParameter) property.
 
 ```csharp
-public Avalonia.StyledProperty<System.Object> CommandParameterProperty
+public Avalonia.StyledProperty<Object> CommandParameterProperty
 ```
 
 <span id="uid-5134cbd179"></span>
@@ -239,7 +257,7 @@ public Avalonia.AttachedProperty<Avalonia.Controls.TrayIcons> IconsProperty
 Defines the [Avalonia.Controls.TrayIcon.IsVisible](xref:Avalonia.Controls.TrayIcon.IsVisible) property.
 
 ```csharp
-public Avalonia.StyledProperty<System.Boolean> IsVisibleProperty
+public Avalonia.StyledProperty<Boolean> IsVisibleProperty
 ```
 
 <span id="uid-8635d543ba"></span>
@@ -259,7 +277,7 @@ public Avalonia.StyledProperty<Avalonia.Controls.NativeMenu> MenuProperty
 Defines the [Avalonia.Controls.TrayIcon.ToolTipText](xref:Avalonia.Controls.TrayIcon.ToolTipText) property.
 
 ```csharp
-public Avalonia.StyledProperty<System.String> ToolTipTextProperty
+public Avalonia.StyledProperty<String> ToolTipTextProperty
 ```
 
 ## Events
@@ -267,6 +285,7 @@ public Avalonia.StyledProperty<System.String> ToolTipTextProperty
 | Name | Description |
 | --- | --- |
 | [Clicked](#uid-32e27586a8) | Raised when the TrayIcon is clicked. Note, this is only supported on Win32 and some Linux DEs, on OSX this event is not raised. |
+| [PropertyChanged (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-d758e26fae) | Raised when a Avalonia.AvaloniaProperty value changes on this object. |
 
 <span id="uid-32e27586a8"></span>
 
@@ -277,7 +296,7 @@ Note, this is only supported on Win32 and some Linux DEs,
 on OSX this event is not raised.
 
 ```csharp
-public event System.EventHandler Clicked
+public event EventHandler Clicked
 ```
 
 </ApiRefPage>

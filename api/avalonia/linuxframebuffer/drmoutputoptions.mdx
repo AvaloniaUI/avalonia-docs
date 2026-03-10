@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia.LinuxFramebuffer</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Linux/Avalonia.LinuxFramebuffer/DrmOutputOptions.cs">DrmOutputOptions.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -88,7 +91,7 @@ Specifies whether our connector is HDMI-A, DVI, DisplayPort, etc.
 If null, the preferred connector will be used.
 
 ```csharp
-public System.Nullable<Avalonia.LinuxFramebuffer.DrmConnectorType> ConnectorType { get; set; }
+public Nullable<Avalonia.LinuxFramebuffer.DrmConnectorType> ConnectorType { get; set; }
 ```
 
 <span id="uid-5cd52b9e7d"></span>
@@ -99,7 +102,7 @@ Specifies the connector type ID used with [Avalonia.LinuxFramebuffer.DrmOutputOp
 If null, the preferred connector type ID will be used.
 
 ```csharp
-public System.Nullable<System.UInt32> ConnectorTypeId { get; set; }
+public Nullable<UInt32> ConnectorTypeId { get; set; }
 ```
 
 <span id="uid-ffff67032e"></span>
@@ -110,7 +113,7 @@ If true an two cycle buffer swapping is processed at init.
 Default: True
 
 ```csharp
-public System.Boolean EnableInitialBufferSwapping { get; set; }
+public Boolean EnableInitialBufferSwapping { get; set; }
 ```
 
 <span id="uid-8886ce87c2"></span>
@@ -143,7 +146,7 @@ Scaling factor.
 Default: 1.0
 
 ```csharp
-public System.Double Scaling { get; set; }
+public Double Scaling { get; set; }
 ```
 
 <span id="uid-febefd2873"></span>
@@ -154,7 +157,7 @@ Specifies the video mode with which the DrmOutput should be created, if it is no
 If null, the preferred mode will be used.
 
 ```csharp
-public System.Nullable<Avalonia.PixelSize> VideoMode { get; set; }
+public Nullable<Avalonia.PixelSize> VideoMode { get; set; }
 ```
 
 </ApiRefPage>

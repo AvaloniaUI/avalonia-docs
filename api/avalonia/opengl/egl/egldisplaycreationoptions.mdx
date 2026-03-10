@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.OpenGL/Egl/EglDisplayOptions.cs">EglDisplayOptions.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__signature">
@@ -69,13 +72,20 @@ public EglDisplayCreationOptions()
 | [PlatformDisplay](#uid-a6245af01f) | No summary available. |
 | [PlatformDisplayAttrs](#uid-d54e3a6371) | No summary available. |
 | [PlatformType](#uid-6dc774fa6b) | No summary available. |
+| [ContextLossIsDisplayLoss (Inherited from EglDisplayOptions)](egldisplayoptions.mdx#uid-6fe1cfa33c) | No summary available. |
+| [DeviceLostCheckCallback (Inherited from EglDisplayOptions)](egldisplayoptions.mdx#uid-13db2d204a) | No summary available. |
+| [DisposeCallback (Inherited from EglDisplayOptions)](egldisplayoptions.mdx#uid-a55513d58d) | No summary available. |
+| [Egl (Inherited from EglDisplayOptions)](egldisplayoptions.mdx#uid-177c884946) | No summary available. |
+| [GlVersions (Inherited from EglDisplayOptions)](egldisplayoptions.mdx#uid-d5c4458858) | No summary available. |
+| [SupportsContextSharing (Inherited from EglDisplayOptions)](egldisplayoptions.mdx#uid-a4e874f31c) | No summary available. |
+| [SupportsMultipleContexts (Inherited from EglDisplayOptions)](egldisplayoptions.mdx#uid-33ff37ed98) | No summary available. |
 
 <span id="uid-a6245af01f"></span>
 
 ### PlatformDisplay
 
 ```csharp
-public System.IntPtr PlatformDisplay { get; set; }
+public IntPtr PlatformDisplay { get; set; }
 ```
 
 <span id="uid-d54e3a6371"></span>
@@ -83,7 +93,7 @@ public System.IntPtr PlatformDisplay { get; set; }
 ### PlatformDisplayAttrs
 
 ```csharp
-public System.Int32[] PlatformDisplayAttrs { get; set; }
+public Int32[] PlatformDisplayAttrs { get; set; }
 ```
 
 <span id="uid-6dc774fa6b"></span>
@@ -91,7 +101,7 @@ public System.Int32[] PlatformDisplayAttrs { get; set; }
 ### PlatformType
 
 ```csharp
-public System.Nullable<System.Int32> PlatformType { get; set; }
+public Nullable<Int32> PlatformType { get; set; }
 ```
 
 </ApiRefPage>

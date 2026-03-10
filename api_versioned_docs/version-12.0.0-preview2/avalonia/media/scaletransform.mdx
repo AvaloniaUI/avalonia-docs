@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Media/ScaleTransform.cs">ScaleTransform.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -81,13 +84,34 @@ public ScaleTransform()
 Initializes a new instance of the [Avalonia.Media.ScaleTransform](xref:Avalonia.Media.ScaleTransform) class.
 
 ```csharp
-public ScaleTransform(System.Double scaleX, System.Double scaleY)
+public ScaleTransform(Double scaleX, Double scaleY)
 ```
 
 | Parameter | Description |
 | --- | --- |
 | `scaleX` | ScaleX |
 | `scaleY` | ScaleY |
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Parse (Inherited from Transform)](transform.mdx#uid-1be8bdbe67) | Parses a Avalonia.Media.Transform string. |
+| [ToImmutable (Inherited from Transform)](transform.mdx#uid-1ae7a66239) | Converts a transform to an immutable transform. |
+| [ToString (Inherited from Transform)](transform.mdx#uid-582ae45701) | Returns a String representing this transform matrix instance. |
+| [Bind (8 overloads) (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-1c60c7bda3) | Binds a Avalonia.AvaloniaProperty to an Avalonia.Data.BindingBase. |
+| [CheckAccess (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-260ff7a68d) | Returns a value indicating whether the current thread is the UI thread. |
+| [ClearValue (4 overloads) (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-41de208fbe) | Clears a Avalonia.AvaloniaProperty's local value. |
+| [CoerceValue (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-3bec32f39e) | Coerces the specified Avalonia.AvaloniaProperty. |
+| [Equals (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-a8a8e94305) | Compares two objects using reference equality. |
+| [GetBaseValue (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-9c615efbba) | No summary available. |
+| [GetHashCode (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-7f7db1e7a2) | Gets the hash code for the object. |
+| [GetValue (3 overloads) (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-5142cd4792) | Gets a Avalonia.AvaloniaProperty value. |
+| [IsAnimating (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-8cbfc7521a) | Checks whether a Avalonia.AvaloniaProperty is animating. |
+| [IsSet (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-f8bf0bbdcc) | Checks whether a Avalonia.AvaloniaProperty is set on this object. |
+| [SetCurrentValue (2 overloads) (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-38759fd088) | Sets the value of a dependency property without changing its value source. |
+| [SetValue (3 overloads) (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-47d14e19d7) | Sets a Avalonia.AvaloniaProperty value. |
+| [VerifyAccess (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-3b9d3c9793) | Checks that the current thread is the UI thread and throws if not. |
 
 ## Properties
 
@@ -96,6 +120,9 @@ public ScaleTransform(System.Double scaleX, System.Double scaleY)
 | [ScaleX](#uid-446103050f) | Gets or sets the ScaleX property. |
 | [ScaleY](#uid-0cceeee6fd) | Gets or sets the ScaleY property. |
 | [Value](#uid-082820f7ad) | Gets the transform's Avalonia.Matrix. |
+| [Transitions (Inherited from Animatable)](../animation/animatable.mdx#uid-1b3138f517) | Gets or sets the property transitions for the control. |
+| [Dispatcher (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-b25fa51632) | Returns the Avalonia.AvaloniaObject.Dispatcher that this Avalonia.AvaloniaObject is associated with. |
+| [Item (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-c1d1f1bc0f) | No summary available. |
 
 <span id="uid-446103050f"></span>
 
@@ -104,7 +131,7 @@ public ScaleTransform(System.Double scaleX, System.Double scaleY)
 Gets or sets the ScaleX property.
 
 ```csharp
-public System.Double ScaleX { get; set; }
+public Double ScaleX { get; set; }
 ```
 
 <span id="uid-0cceeee6fd"></span>
@@ -114,7 +141,7 @@ public System.Double ScaleX { get; set; }
 Gets or sets the ScaleY property.
 
 ```csharp
-public System.Double ScaleY { get; set; }
+public Double ScaleY { get; set; }
 ```
 
 <span id="uid-082820f7ad"></span>
@@ -133,6 +160,7 @@ public Avalonia.Matrix Value { get; set; }
 | --- | --- |
 | [ScaleXProperty](#uid-229e8cbc59) | Defines the Avalonia.Media.ScaleTransform.ScaleX property. |
 | [ScaleYProperty](#uid-0ced76ec3b) | Defines the Avalonia.Media.ScaleTransform.ScaleY property. |
+| [TransitionsProperty (Inherited from Animatable)](../animation/animatable.mdx#uid-c79f18fac2) | Defines the Avalonia.Animation.Animatable.Transitions property. |
 
 <span id="uid-229e8cbc59"></span>
 
@@ -141,7 +169,7 @@ public Avalonia.Matrix Value { get; set; }
 Defines the [Avalonia.Media.ScaleTransform.ScaleX](xref:Avalonia.Media.ScaleTransform.ScaleX) property.
 
 ```csharp
-public Avalonia.StyledProperty<TValue><System.Double> ScaleXProperty
+public Avalonia.StyledProperty<TValue><Double> ScaleXProperty
 ```
 
 <span id="uid-0ced76ec3b"></span>
@@ -151,8 +179,15 @@ public Avalonia.StyledProperty<TValue><System.Double> ScaleXProperty
 Defines the [Avalonia.Media.ScaleTransform.ScaleY](xref:Avalonia.Media.ScaleTransform.ScaleY) property.
 
 ```csharp
-public Avalonia.StyledProperty<TValue><System.Double> ScaleYProperty
+public Avalonia.StyledProperty<TValue><Double> ScaleYProperty
 ```
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [Changed (Inherited from Transform)](transform.mdx#uid-59de490f29) | Raised when the transform changes. |
+| [PropertyChanged (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-d758e26fae) | Raised when a Avalonia.AvaloniaProperty value changes on this object. |
 
 </ApiRefPage>
 

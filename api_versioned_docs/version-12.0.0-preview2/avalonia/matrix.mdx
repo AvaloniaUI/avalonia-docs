@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Matrix.cs">Matrix.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -84,7 +87,7 @@ Note: Skia.SkMatrix uses a transposed layout (where for example skewX/skewY and 
 Initializes a new instance of the [Avalonia.Matrix](xref:Avalonia.Matrix) struct (equivalent to a 2x3 Matrix without perspective).
 
 ```csharp
-public Matrix(System.Double scaleX, System.Double skewY, System.Double skewX, System.Double scaleY, System.Double offsetX, System.Double offsetY)
+public Matrix(Double scaleX, Double skewY, Double skewX, Double scaleY, Double offsetX, Double offsetY)
 ```
 
 | Parameter | Description |
@@ -103,7 +106,7 @@ public Matrix(System.Double scaleX, System.Double skewY, System.Double skewX, Sy
 Initializes a new instance of the [Avalonia.Matrix](xref:Avalonia.Matrix) struct.
 
 ```csharp
-public Matrix(System.Double scaleX, System.Double skewY, System.Double perspX, System.Double skewX, System.Double scaleY, System.Double perspY, System.Double offsetX, System.Double offsetY, System.Double perspZ)
+public Matrix(Double scaleX, Double skewY, Double perspX, Double skewX, Double scaleY, Double perspY, Double offsetX, Double offsetY, Double perspZ)
 ```
 
 | Parameter | Description |
@@ -164,7 +167,7 @@ Returns: Post-multiplied matrix.
 Determines if the current matrix contains perspective (non-affine) transforms (true) or only (affine) transforms that could be mapped into an 2x3 matrix (false).
 
 ```csharp
-public System.Boolean ContainsPerspective()
+public Boolean ContainsPerspective()
 ```
 
 <span id="uid-2a754b6147"></span>
@@ -178,7 +181,7 @@ public System.Boolean ContainsPerspective()
 Creates a rotation matrix using the given rotation in radians.
 
 ```csharp
-public Avalonia.Matrix CreateRotation(System.Double radians)
+public Avalonia.Matrix CreateRotation(Double radians)
 ```
 
 | Parameter | Description |
@@ -194,7 +197,7 @@ Returns: A rotation matrix.
 Creates a rotation matrix using the given rotation in radians around center point.
 
 ```csharp
-public Avalonia.Matrix CreateRotation(System.Double radians, Avalonia.Point center)
+public Avalonia.Matrix CreateRotation(Double radians, Avalonia.Point center)
 ```
 
 | Parameter | Description |
@@ -229,7 +232,7 @@ Returns: A scaling matrix.
 Creates a scale matrix from the given X and Y components.
 
 ```csharp
-public Avalonia.Matrix CreateScale(System.Double xScale, System.Double yScale)
+public Avalonia.Matrix CreateScale(Double xScale, Double yScale)
 ```
 
 | Parameter | Description |
@@ -246,7 +249,7 @@ Returns: A scaling matrix.
 Creates a skew matrix from the given axis skew angles in radians.
 
 ```csharp
-public Avalonia.Matrix CreateSkew(System.Double xAngle, System.Double yAngle)
+public Avalonia.Matrix CreateSkew(Double xAngle, Double yAngle)
 ```
 
 | Parameter | Description |
@@ -283,7 +286,7 @@ Returns: A translation matrix.
 Creates a translation matrix from the given X and Y components.
 
 ```csharp
-public Avalonia.Matrix CreateTranslation(System.Double xPosition, System.Double yPosition)
+public Avalonia.Matrix CreateTranslation(Double xPosition, Double yPosition)
 ```
 
 | Parameter | Description |
@@ -304,7 +307,7 @@ Returns: A translation matrix.
 Returns a boolean indicating whether the matrix is equal to the other given matrix.
 
 ```csharp
-public System.Boolean Equals(Avalonia.Matrix other)
+public Boolean Equals(Avalonia.Matrix other)
 ```
 
 | Parameter | Description |
@@ -320,7 +323,7 @@ Returns: True if this matrix is equal to other; False otherwise.
 Returns a boolean indicating whether the given Object is equal to this matrix instance.
 
 ```csharp
-public System.Boolean Equals(System.Object obj)
+public Boolean Equals(Object obj)
 ```
 
 | Parameter | Description |
@@ -336,7 +339,7 @@ Returns: True if the Object is equal to this matrix; False otherwise.
 Calculates the determinant for this matrix.
 
 ```csharp
-public System.Double GetDeterminant()
+public Double GetDeterminant()
 ```
 
 Returns: The determinant.
@@ -348,7 +351,7 @@ Returns: The determinant.
 Returns the hash code for this instance.
 
 ```csharp
-public System.Int32 GetHashCode()
+public Int32 GetHashCode()
 ```
 
 Returns: The hash code.
@@ -376,7 +379,7 @@ Returns: The inverted matrix.
 Parses a [Avalonia.Matrix](xref:Avalonia.Matrix) string.
 
 ```csharp
-public Avalonia.Matrix Parse(System.String s)
+public Avalonia.Matrix Parse(String s)
 ```
 
 | Parameter | Description |
@@ -409,7 +412,7 @@ Returns: Pre-multiplied matrix.
 Converts an angle in degrees to radians.
 
 ```csharp
-public System.Double ToRadians(System.Double angle)
+public Double ToRadians(Double angle)
 ```
 
 | Parameter | Description |
@@ -425,7 +428,7 @@ Returns: The angle in radians.
 Returns a String representing this matrix instance.
 
 ```csharp
-public System.String ToString()
+public String ToString()
 ```
 
 Returns: The string representation.
@@ -451,7 +454,7 @@ Returns: The transformed point
 ### TryDecomposeTransform
 
 ```csharp
-public System.Boolean TryDecomposeTransform(Avalonia.Matrix matrix, Avalonia.Matrix.Decomposed& decomposed)
+public Boolean TryDecomposeTransform(Avalonia.Matrix matrix, Avalonia.Matrix.Decomposed& decomposed)
 ```
 
 <span id="uid-2cb77ea177"></span>
@@ -459,7 +462,7 @@ public System.Boolean TryDecomposeTransform(Avalonia.Matrix matrix, Avalonia.Mat
 ### TryInvert
 
 ```csharp
-public System.Boolean TryInvert(Avalonia.Matrix& inverted)
+public Boolean TryInvert(Avalonia.Matrix& inverted)
 ```
 
 ## Properties
@@ -486,7 +489,7 @@ public System.Boolean TryInvert(Avalonia.Matrix& inverted)
 HasInverse Property - returns true if this matrix is invertible, false otherwise.
 
 ```csharp
-public System.Boolean HasInverse { get; set; }
+public Boolean HasInverse { get; set; }
 ```
 
 <span id="uid-6752e668f2"></span>
@@ -506,7 +509,7 @@ public Avalonia.Matrix Identity { get; set; }
 Returns whether the matrix is the identity matrix.
 
 ```csharp
-public System.Boolean IsIdentity { get; set; }
+public Boolean IsIdentity { get; set; }
 ```
 
 <span id="uid-80e188c495"></span>
@@ -516,7 +519,7 @@ public System.Boolean IsIdentity { get; set; }
 The first element of the first row (scaleX).
 
 ```csharp
-public System.Double M11 { get; set; }
+public Double M11 { get; set; }
 ```
 
 <span id="uid-b244954c6f"></span>
@@ -526,7 +529,7 @@ public System.Double M11 { get; set; }
 The second element of the first row (skewY).
 
 ```csharp
-public System.Double M12 { get; set; }
+public Double M12 { get; set; }
 ```
 
 <span id="uid-8aa929667d"></span>
@@ -536,7 +539,7 @@ public System.Double M12 { get; set; }
 The third element of the first row (perspX: input x-axis perspective factor).
 
 ```csharp
-public System.Double M13 { get; set; }
+public Double M13 { get; set; }
 ```
 
 <span id="uid-c6ed7b250d"></span>
@@ -546,7 +549,7 @@ public System.Double M13 { get; set; }
 The first element of the second row (skewX).
 
 ```csharp
-public System.Double M21 { get; set; }
+public Double M21 { get; set; }
 ```
 
 <span id="uid-69c8d4a46e"></span>
@@ -556,7 +559,7 @@ public System.Double M21 { get; set; }
 The second element of the second row (scaleY).
 
 ```csharp
-public System.Double M22 { get; set; }
+public Double M22 { get; set; }
 ```
 
 <span id="uid-781bce7982"></span>
@@ -566,7 +569,7 @@ public System.Double M22 { get; set; }
 The third element of the second row (perspY: input y-axis perspective factor).
 
 ```csharp
-public System.Double M23 { get; set; }
+public Double M23 { get; set; }
 ```
 
 <span id="uid-9a6bc33fcb"></span>
@@ -576,7 +579,7 @@ public System.Double M23 { get; set; }
 The first element of the third row (offsetX/translateX).
 
 ```csharp
-public System.Double M31 { get; set; }
+public Double M31 { get; set; }
 ```
 
 <span id="uid-70a33609c3"></span>
@@ -586,7 +589,7 @@ public System.Double M31 { get; set; }
 The second element of the third row (offsetY/translateY).
 
 ```csharp
-public System.Double M32 { get; set; }
+public Double M32 { get; set; }
 ```
 
 <span id="uid-6d68c03e90"></span>
@@ -596,7 +599,7 @@ public System.Double M32 { get; set; }
 The third element of the third row (perspZ: perspective scale factor).
 
 ```csharp
-public System.Double M33 { get; set; }
+public Double M33 { get; set; }
 ```
 
 </ApiRefPage>

@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Controls/Templates/FuncControlTemplate.cs">FuncControlTemplate.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -53,6 +56,9 @@ public class FuncControlTemplate
 <span className="apiref-page__meta-label">Inheritance:</span> FuncTemplate&lt;TemplatedControl,Control&gt; <span className="apiref-page__relation-separator">-&gt;</span> FuncControlTemplate
 </div>
 <div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Derived types:</span> <a href="funccontroltemplate-1">FuncControlTemplate&lt;T&gt;</a>
+</div>
+<div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Implements:</span> <a href="icontroltemplate">IControlTemplate</a>, ITemplate&lt;TemplatedControl,TemplateResult&lt;Control&gt;&gt;
 </div>
 </div>
@@ -68,7 +74,7 @@ public class FuncControlTemplate
 ### FuncControlTemplate
 
 ```csharp
-public FuncControlTemplate(System.Func<Avalonia.Controls.Primitives.TemplatedControl, Avalonia.Controls.INameScope, Avalonia.Controls.Control> build)
+public FuncControlTemplate(Func<Avalonia.Controls.Primitives.TemplatedControl, Avalonia.Controls.INameScope, Avalonia.Controls.Control> build)
 ```
 
 ## Methods

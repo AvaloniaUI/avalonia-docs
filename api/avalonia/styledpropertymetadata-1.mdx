@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/StyledPropertyMetadata%601.cs">StyledPropertyMetadata`1.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -68,7 +71,7 @@ public class StyledPropertyMetadata<TValue>
 ### StyledPropertyMetadata&lt;TValue&gt;
 
 ```csharp
-public StyledPropertyMetadata<TValue>(Avalonia.Data.Optional<T><TValue> defaultValue, Avalonia.Data.BindingMode defaultBindingMode, System.Func<Avalonia.AvaloniaObject, TValue, TValue> coerce, System.Boolean enableDataValidation)
+public StyledPropertyMetadata<TValue>(Avalonia.Data.Optional<T><TValue> defaultValue, Avalonia.Data.BindingMode defaultBindingMode, Func<Avalonia.AvaloniaObject, TValue, TValue> coerce, Boolean enableDataValidation)
 ```
 
 ## Methods
@@ -77,6 +80,7 @@ public StyledPropertyMetadata<TValue>(Avalonia.Data.Optional<T><TValue> defaultV
 | --- | --- |
 | [GenerateTypeSafeMetadata](#uid-eebbc90d76) | Gets a copy of this object configured for use with any owner type. |
 | [Merge](#uid-c3f1feadb7) | Merges the metadata with the base metadata. |
+| [Freeze (Inherited from AvaloniaPropertyMetadata)](avaloniapropertymetadata.mdx#uid-db1cdb0cff) | Makes this instance read-only. No further modifications are allowed after this call. |
 
 <span id="uid-eebbc90d76"></span>
 
@@ -95,7 +99,7 @@ public Avalonia.AvaloniaPropertyMetadata GenerateTypeSafeMetadata()
 Merges the metadata with the base metadata.
 
 ```csharp
-public System.Void Merge(Avalonia.AvaloniaPropertyMetadata baseMetadata, Avalonia.AvaloniaProperty property)
+public Void Merge(Avalonia.AvaloniaPropertyMetadata baseMetadata, Avalonia.AvaloniaProperty property)
 ```
 
 | Parameter | Description |
@@ -109,6 +113,9 @@ public System.Void Merge(Avalonia.AvaloniaPropertyMetadata baseMetadata, Avaloni
 | --- | --- |
 | [CoerceValue](#uid-a439fc7f25) | Gets the value coercion callback, if any. |
 | [DefaultValue](#uid-2232ffa60f) | Gets the default value for the property. |
+| [DefaultBindingMode (Inherited from AvaloniaPropertyMetadata)](avaloniapropertymetadata.mdx#uid-b6d03b8752) | Gets the default binding mode for the property. |
+| [EnableDataValidation (Inherited from AvaloniaPropertyMetadata)](avaloniapropertymetadata.mdx#uid-aa782b0da1) | Gets a value indicating whether the property is interested in data validation. |
+| [IsReadOnly (Inherited from AvaloniaPropertyMetadata)](avaloniapropertymetadata.mdx#uid-8222a9d293) | Gets whether this instance is read-only and can't be modified. |
 
 <span id="uid-a439fc7f25"></span>
 
@@ -117,7 +124,7 @@ public System.Void Merge(Avalonia.AvaloniaPropertyMetadata baseMetadata, Avaloni
 Gets the value coercion callback, if any.
 
 ```csharp
-public System.Func<Avalonia.AvaloniaObject, TValue, TValue> CoerceValue { get; set; }
+public Func<Avalonia.AvaloniaObject, TValue, TValue> CoerceValue { get; set; }
 ```
 
 <span id="uid-2232ffa60f"></span>

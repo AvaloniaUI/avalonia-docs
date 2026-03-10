@@ -59,7 +59,7 @@ public delegate SMLib.SmcDieProc
 ### SMLib.SmcDieProc
 
 ```csharp
-public SMLib.SmcDieProc(System.Object object, System.IntPtr method)
+public SMLib.SmcDieProc(Object object, IntPtr method)
 ```
 
 ## Methods
@@ -75,7 +75,7 @@ public SMLib.SmcDieProc(System.Object object, System.IntPtr method)
 ### BeginInvoke
 
 ```csharp
-public System.IAsyncResult BeginInvoke(System.IntPtr smcConn, System.IntPtr clientData, System.AsyncCallback callback, System.Object object)
+public IAsyncResult BeginInvoke(IntPtr smcConn, IntPtr clientData, AsyncCallback callback, Object object)
 ```
 
 <span id="uid-fc88d64b1e"></span>
@@ -83,7 +83,7 @@ public System.IAsyncResult BeginInvoke(System.IntPtr smcConn, System.IntPtr clie
 ### EndInvoke
 
 ```csharp
-public System.Void EndInvoke(System.IAsyncResult result)
+public Void EndInvoke(IAsyncResult result)
 ```
 
 <span id="uid-e7ca5951da"></span>
@@ -91,7 +91,7 @@ public System.Void EndInvoke(System.IAsyncResult result)
 ### Invoke
 
 ```csharp
-public System.Void Invoke(System.IntPtr smcConn, System.IntPtr clientData)
+public Void Invoke(IntPtr smcConn, IntPtr clientData)
 ```
 
 </ApiRefPage>

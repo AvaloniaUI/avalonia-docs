@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Utilities/SpanHelpers.cs">SpanHelpers.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__signature">
@@ -64,7 +67,7 @@ public class SpanHelpers
 ### ParseDouble
 
 ```csharp
-public System.Double ParseDouble(System.ReadOnlySpan<System.Char> span, System.IFormatProvider provider)
+public Double ParseDouble(ReadOnlySpan<Char> span, IFormatProvider provider)
 ```
 
 <span id="uid-0cc415b2b1"></span>
@@ -72,7 +75,7 @@ public System.Double ParseDouble(System.ReadOnlySpan<System.Char> span, System.I
 ### TryParseByte
 
 ```csharp
-public System.Boolean TryParseByte(System.ReadOnlySpan<System.Char> span, System.Globalization.NumberStyles style, System.IFormatProvider provider, System.Byte& value)
+public Boolean TryParseByte(ReadOnlySpan<Char> span, System.Globalization.NumberStyles style, IFormatProvider provider, Byte& value)
 ```
 
 <span id="uid-6e25064a29"></span>
@@ -80,7 +83,7 @@ public System.Boolean TryParseByte(System.ReadOnlySpan<System.Char> span, System
 ### TryParseDouble
 
 ```csharp
-public System.Boolean TryParseDouble(System.ReadOnlySpan<System.Char> span, System.Globalization.NumberStyles style, System.IFormatProvider provider, System.Double& value)
+public Boolean TryParseDouble(ReadOnlySpan<Char> span, System.Globalization.NumberStyles style, IFormatProvider provider, Double& value)
 ```
 
 <span id="uid-02b7a15ff4"></span>
@@ -88,7 +91,7 @@ public System.Boolean TryParseDouble(System.ReadOnlySpan<System.Char> span, Syst
 ### TryParseEnum
 
 ```csharp
-public System.Boolean TryParseEnum<TEnum>(System.ReadOnlySpan<System.Char> span, System.Boolean ignoreCase, TEnum& value)
+public Boolean TryParseEnum<TEnum>(ReadOnlySpan<Char> span, Boolean ignoreCase, TEnum& value)
 ```
 
 <span id="uid-43fd4f5cfe"></span>
@@ -100,7 +103,7 @@ public System.Boolean TryParseEnum<TEnum>(System.ReadOnlySpan<System.Char> span,
 #### TryParseInt
 
 ```csharp
-public System.Boolean TryParseInt(System.ReadOnlySpan<System.Char> span, System.Globalization.NumberStyles style, System.IFormatProvider provider, System.Int32& value)
+public Boolean TryParseInt(ReadOnlySpan<Char> span, System.Globalization.NumberStyles style, IFormatProvider provider, Int32& value)
 ```
 
 <span id="uid-55af653b83"></span>
@@ -108,7 +111,7 @@ public System.Boolean TryParseInt(System.ReadOnlySpan<System.Char> span, System.
 #### TryParseInt
 
 ```csharp
-public System.Boolean TryParseInt(System.ReadOnlySpan<System.Char> span, System.Int32& value)
+public Boolean TryParseInt(ReadOnlySpan<Char> span, Int32& value)
 ```
 
 <span id="uid-f264c34aa6"></span>
@@ -116,7 +119,7 @@ public System.Boolean TryParseInt(System.ReadOnlySpan<System.Char> span, System.
 ### TryParseUInt
 
 ```csharp
-public System.Boolean TryParseUInt(System.ReadOnlySpan<System.Char> span, System.Globalization.NumberStyles style, System.IFormatProvider provider, System.UInt32& value)
+public Boolean TryParseUInt(ReadOnlySpan<Char> span, System.Globalization.NumberStyles style, IFormatProvider provider, UInt32& value)
 ```
 
 </ApiRefPage>

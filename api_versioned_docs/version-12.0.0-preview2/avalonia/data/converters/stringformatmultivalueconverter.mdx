@@ -32,11 +32,14 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Data/Converters/StringFormatMultiValueConverter.cs">StringFormatMultiValueConverter.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
 
-A multi-value converter which calls [System.String.Format(System.String,System.Object)](xref:System.String.Format%28System.String%2CSystem.Object%29)
+A multi-value converter which calls [String.Format(String,Object)](xref:System.String.Format%28System.String%2CSystem.Object%29)
 
 </div>
 
@@ -70,7 +73,7 @@ public class StringFormatMultiValueConverter
 Initializes a new instance of the [Avalonia.Data.Converters.StringFormatMultiValueConverter](xref:Avalonia.Data.Converters.StringFormatMultiValueConverter) class.
 
 ```csharp
-public StringFormatMultiValueConverter(System.String format, Avalonia.Data.Converters.IMultiValueConverter inner)
+public StringFormatMultiValueConverter(String format, Avalonia.Data.Converters.IMultiValueConverter inner)
 ```
 
 | Parameter | Description |
@@ -89,7 +92,7 @@ public StringFormatMultiValueConverter(System.String format, Avalonia.Data.Conve
 ### Convert
 
 ```csharp
-public System.Object Convert(System.Collections.Generic.IList<System.Object> values, System.Type targetType, System.Object parameter, System.Globalization.CultureInfo culture)
+public Object Convert(System.Collections.Generic.IList<Object> values, Type targetType, Object parameter, System.Globalization.CultureInfo culture)
 ```
 
 ## Properties
@@ -106,7 +109,7 @@ public System.Object Convert(System.Collections.Generic.IList<System.Object> val
 Gets the format string.
 
 ```csharp
-public System.String Format { get; set; }
+public String Format { get; set; }
 ```
 
 <span id="uid-3d5704f24f"></span>

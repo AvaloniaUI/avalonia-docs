@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.DesignerSupport/Remote/HtmlTransport/SimpleWebSocketHttpServer.cs">SimpleWebSocketHttpServer.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__signature">
@@ -62,7 +65,7 @@ public class SimpleWebSocketHttpRequest
 ### SimpleWebSocketHttpRequest
 
 ```csharp
-public SimpleWebSocketHttpRequest(System.Net.Sockets.NetworkStream stream, System.String path, System.Collections.Generic.Dictionary<System.String, System.String> headers)
+public SimpleWebSocketHttpRequest(System.Net.Sockets.NetworkStream stream, String path, System.Collections.Generic.Dictionary<String, String> headers)
 ```
 
 ## Methods
@@ -78,7 +81,7 @@ public SimpleWebSocketHttpRequest(System.Net.Sockets.NetworkStream stream, Syste
 ### AcceptWebSocket
 
 ```csharp
-public System.Threading.Tasks.Task<Avalonia.DesignerSupport.Remote.HtmlTransport.SimpleWebSocket> AcceptWebSocket(System.String protocol)
+public System.Threading.Tasks.Task<Avalonia.DesignerSupport.Remote.HtmlTransport.SimpleWebSocket> AcceptWebSocket(String protocol)
 ```
 
 <span id="uid-46328b4baa"></span>
@@ -86,7 +89,7 @@ public System.Threading.Tasks.Task<Avalonia.DesignerSupport.Remote.HtmlTransport
 ### Dispose
 
 ```csharp
-public System.Void Dispose()
+public Void Dispose()
 ```
 
 <span id="uid-f87e52b871"></span>
@@ -94,7 +97,7 @@ public System.Void Dispose()
 ### RespondAsync
 
 ```csharp
-public System.Threading.Tasks.Task RespondAsync(System.Int32 code, System.Byte[] data, System.String contentType)
+public System.Threading.Tasks.Task RespondAsync(Int32 code, Byte[] data, String contentType)
 ```
 
 ## Properties
@@ -111,7 +114,7 @@ public System.Threading.Tasks.Task RespondAsync(System.Int32 code, System.Byte[]
 ### Headers
 
 ```csharp
-public System.Collections.Generic.Dictionary<System.String, System.String> Headers { get; set; }
+public System.Collections.Generic.Dictionary<String, String> Headers { get; set; }
 ```
 
 <span id="uid-44ea20ded6"></span>
@@ -119,7 +122,7 @@ public System.Collections.Generic.Dictionary<System.String, System.String> Heade
 ### IsWebsocketRequest
 
 ```csharp
-public System.Boolean IsWebsocketRequest { get; set; }
+public Boolean IsWebsocketRequest { get; set; }
 ```
 
 <span id="uid-213344bc8d"></span>
@@ -127,7 +130,7 @@ public System.Boolean IsWebsocketRequest { get; set; }
 ### Path
 
 ```csharp
-public System.String Path { get; set; }
+public String Path { get; set; }
 ```
 
 <span id="uid-be91900750"></span>
@@ -135,7 +138,7 @@ public System.String Path { get; set; }
 ### WebSocketProtocols
 
 ```csharp
-public System.Collections.Generic.IReadOnlyList<System.String> WebSocketProtocols { get; set; }
+public System.Collections.Generic.IReadOnlyList<String> WebSocketProtocols { get; set; }
 ```
 
 </ApiRefPage>

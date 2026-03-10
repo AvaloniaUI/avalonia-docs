@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Data/MultiBinding.cs">MultiBinding.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -122,7 +125,7 @@ Value: The default value is null.
 Gets or sets a parameter to pass to [Avalonia.Data.MultiBinding.Converter](xref:Avalonia.Data.MultiBinding.Converter).
 
 ```csharp
-public System.Object ConverterParameter { get; set; }
+public Object ConverterParameter { get; set; }
 ```
 
 <span id="uid-4b6d87b7c3"></span>
@@ -132,7 +135,7 @@ public System.Object ConverterParameter { get; set; }
 Gets or sets the value to use when the binding is unable to produce a value.
 
 ```csharp
-public System.Object FallbackValue { get; set; }
+public Object FallbackValue { get; set; }
 ```
 
 <span id="uid-a392fad099"></span>
@@ -172,7 +175,7 @@ public Avalonia.Data.RelativeSource RelativeSource { get; set; }
 Gets or sets the string format.
 
 ```csharp
-public System.String StringFormat { get; set; }
+public String StringFormat { get; set; }
 ```
 
 <span id="uid-05378b9819"></span>
@@ -182,7 +185,7 @@ public System.String StringFormat { get; set; }
 Gets or sets the value to use when the binding result is null.
 
 ```csharp
-public System.Object TargetNullValue { get; set; }
+public Object TargetNullValue { get; set; }
 ```
 
 </ApiRefPage>

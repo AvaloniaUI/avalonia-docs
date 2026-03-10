@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Vulkan/VulkanOptions.cs">VulkanOptions.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__signature">
@@ -80,7 +83,7 @@ public VulkanInstanceCreationOptions()
 Sets the application name of the vulkan instance
 
 ```csharp
-public System.String ApplicationName { get; set; }
+public String ApplicationName { get; set; }
 ```
 
 <span id="uid-ec6a86b40c"></span>
@@ -98,7 +101,7 @@ public Avalonia.Vulkan.VkGetInstanceProcAddressDelegate CustomGetProcAddressDele
 Specifies layers to enable if available on the instance
 
 ```csharp
-public System.Collections.Generic.IList<System.String> EnabledLayers { get; set; }
+public System.Collections.Generic.IList<String> EnabledLayers { get; set; }
 ```
 
 <span id="uid-c6aa9ee2b2"></span>
@@ -108,7 +111,7 @@ public System.Collections.Generic.IList<System.String> EnabledLayers { get; set;
 Specifies additional extensions to enable if available on the instance
 
 ```csharp
-public System.Collections.Generic.IList<System.String> InstanceExtensions { get; set; }
+public System.Collections.Generic.IList<String> InstanceExtensions { get; set; }
 ```
 
 <span id="uid-9831ff634e"></span>
@@ -118,7 +121,7 @@ public System.Collections.Generic.IList<System.String> InstanceExtensions { get;
 Enables the debug layer
 
 ```csharp
-public System.Boolean UseDebug { get; set; }
+public Boolean UseDebug { get; set; }
 ```
 
 <span id="uid-7d301663b2"></span>
@@ -128,7 +131,7 @@ public System.Boolean UseDebug { get; set; }
 Specifies the vulkan api version to use
 
 ```csharp
-public System.Version VulkanVersion { get; set; }
+public Version VulkanVersion { get; set; }
 ```
 
 </ApiRefPage>

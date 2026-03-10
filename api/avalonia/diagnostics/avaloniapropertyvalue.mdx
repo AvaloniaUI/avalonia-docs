@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Diagnostics/AvaloniaPropertyValue.cs">AvaloniaPropertyValue.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -72,7 +75,7 @@ public class AvaloniaPropertyValue
 Gets a diagnostic string.
 
 ```csharp
-public System.String Diagnostic { get; set; }
+public String Diagnostic { get; set; }
 ```
 
 <span id="uid-31715b53b6"></span>
@@ -83,7 +86,7 @@ Gets a value indicating whether the [Avalonia.Diagnostics.AvaloniaPropertyValue.
 [Avalonia.AvaloniaObject.SetCurrentValue&lt;T&gt;(Avalonia.StyledProperty&#123;&lt;&gt;&#125;,&lt;&gt;)](xref:Avalonia.AvaloniaObject.SetCurrentValue%60%601%28Avalonia.StyledProperty%7B%60%600%7D%2C%60%600%29).
 
 ```csharp
-public System.Boolean IsOverriddenCurrentValue { get; set; }
+public Boolean IsOverriddenCurrentValue { get; set; }
 ```
 
 <span id="uid-78e156d463"></span>
@@ -113,7 +116,7 @@ public Avalonia.AvaloniaProperty Property { get; set; }
 Gets the current property value.
 
 ```csharp
-public System.Object Value { get; set; }
+public Object Value { get; set; }
 ```
 
 </ApiRefPage>

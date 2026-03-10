@@ -55,7 +55,7 @@ public interface IVulkanContextExternalObjectsFeature
 ### GetSynchronizationCapabilities
 
 ```csharp
-public Avalonia.Rendering.Composition.CompositionGpuImportedImageSynchronizationCapabilities GetSynchronizationCapabilities(System.String imageHandleType)
+public Avalonia.Rendering.Composition.CompositionGpuImportedImageSynchronizationCapabilities GetSynchronizationCapabilities(String imageHandleType)
 ```
 
 <span id="uid-4d4912f975"></span>
@@ -88,7 +88,7 @@ public Avalonia.Vulkan.IVulkanExternalSemaphore ImportSemaphore(Avalonia.Platfor
 ### DeviceLuid
 
 ```csharp
-public System.Byte[] DeviceLuid { get; set; }
+public Byte[] DeviceLuid { get; set; }
 ```
 
 <span id="uid-5c8742de9d"></span>
@@ -96,7 +96,7 @@ public System.Byte[] DeviceLuid { get; set; }
 ### DeviceUuid
 
 ```csharp
-public System.Byte[] DeviceUuid { get; set; }
+public Byte[] DeviceUuid { get; set; }
 ```
 
 <span id="uid-f0a41bce61"></span>
@@ -104,7 +104,7 @@ public System.Byte[] DeviceUuid { get; set; }
 ### SupportedImageHandleTypes
 
 ```csharp
-public System.Collections.Generic.IReadOnlyList<System.String> SupportedImageHandleTypes { get; set; }
+public System.Collections.Generic.IReadOnlyList<String> SupportedImageHandleTypes { get; set; }
 ```
 
 <span id="uid-3fb979e3f5"></span>
@@ -112,7 +112,7 @@ public System.Collections.Generic.IReadOnlyList<System.String> SupportedImageHan
 ### SupportedSemaphoreTypes
 
 ```csharp
-public System.Collections.Generic.IReadOnlyList<System.String> SupportedSemaphoreTypes { get; set; }
+public System.Collections.Generic.IReadOnlyList<String> SupportedSemaphoreTypes { get; set; }
 ```
 
 </ApiRefPage>

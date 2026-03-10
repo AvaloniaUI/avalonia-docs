@@ -59,7 +59,7 @@ public delegate SMLib.SmcInteractProc
 ### SMLib.SmcInteractProc
 
 ```csharp
-public SMLib.SmcInteractProc(System.Object object, System.IntPtr method)
+public SMLib.SmcInteractProc(Object object, IntPtr method)
 ```
 
 ## Methods
@@ -75,7 +75,7 @@ public SMLib.SmcInteractProc(System.Object object, System.IntPtr method)
 ### BeginInvoke
 
 ```csharp
-public System.IAsyncResult BeginInvoke(System.IntPtr smcConn, System.IntPtr clientData, System.AsyncCallback callback, System.Object object)
+public IAsyncResult BeginInvoke(IntPtr smcConn, IntPtr clientData, AsyncCallback callback, Object object)
 ```
 
 <span id="uid-abf4612ed4"></span>
@@ -83,7 +83,7 @@ public System.IAsyncResult BeginInvoke(System.IntPtr smcConn, System.IntPtr clie
 ### EndInvoke
 
 ```csharp
-public System.Void EndInvoke(System.IAsyncResult result)
+public Void EndInvoke(IAsyncResult result)
 ```
 
 <span id="uid-fce8ff63ee"></span>
@@ -91,7 +91,7 @@ public System.Void EndInvoke(System.IAsyncResult result)
 ### Invoke
 
 ```csharp
-public System.Void Invoke(System.IntPtr smcConn, System.IntPtr clientData)
+public Void Invoke(IntPtr smcConn, IntPtr clientData)
 ```
 
 </ApiRefPage>

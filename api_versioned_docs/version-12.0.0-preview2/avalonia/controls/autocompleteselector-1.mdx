@@ -67,7 +67,7 @@ public delegate AutoCompleteSelector<T>
 ### AutoCompleteSelector&lt;T&gt;
 
 ```csharp
-public AutoCompleteSelector<T>(System.Object object, System.IntPtr method)
+public AutoCompleteSelector<T>(Object object, IntPtr method)
 ```
 
 ## Methods
@@ -83,7 +83,7 @@ public AutoCompleteSelector<T>(System.Object object, System.IntPtr method)
 ### BeginInvoke
 
 ```csharp
-public System.IAsyncResult BeginInvoke(System.String search, T item, System.AsyncCallback callback, System.Object object)
+public IAsyncResult BeginInvoke(String search, T item, AsyncCallback callback, Object object)
 ```
 
 <span id="uid-c30f4ffc30"></span>
@@ -91,7 +91,7 @@ public System.IAsyncResult BeginInvoke(System.String search, T item, System.Asyn
 ### EndInvoke
 
 ```csharp
-public System.String EndInvoke(System.IAsyncResult result)
+public String EndInvoke(IAsyncResult result)
 ```
 
 <span id="uid-ff76cdad75"></span>
@@ -99,7 +99,7 @@ public System.String EndInvoke(System.IAsyncResult result)
 ### Invoke
 
 ```csharp
-public System.String Invoke(System.String search, T item)
+public String Invoke(String search, T item)
 ```
 
 </ApiRefPage>

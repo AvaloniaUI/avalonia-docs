@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Metadata/UnstableAttribute.cs">UnstableAttribute.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -82,7 +85,7 @@ public UnstableAttribute()
 Initializes a new instance of the [Avalonia.Metadata.UnstableAttribute](xref:Avalonia.Metadata.UnstableAttribute) class.
 
 ```csharp
-public UnstableAttribute(System.String message)
+public UnstableAttribute(String message)
 ```
 
 | Parameter | Description |
@@ -102,7 +105,7 @@ public UnstableAttribute(System.String message)
 Gets a value that indicates whether the compiler will treat usage of the obsolete program element as an error.
 
 ```csharp
-public System.String Message { get; set; }
+public String Message { get; set; }
 ```
 
 </ApiRefPage>

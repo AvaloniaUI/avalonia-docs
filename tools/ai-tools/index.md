@@ -35,7 +35,7 @@ Both MCP servers work with any assistant that supports the STDIO transport:
 - [VS Code with GitHub Copilot](https://code.visualstudio.com/docs/copilot/customization/mcp-servers)
 - [Visual Studio with Copilot](https://learn.microsoft.com/en-us/visualstudio/ide/mcp-servers?view=vs-2022)
 - [Rider AI Assistant](https://www.jetbrains.com/help/ai-assistant/mcp.html)
-- [Claude Code](https://claudelog.com/faqs/how-to-setup-claude-code-mcp-servers/)
+- [Claude Code](https://docs.anthropic.com/en/docs/claude-code/tutorials#set-up-model-context-protocol-mcp-servers)
 - [Cursor](https://docs.cursor.com/en/context/mcp)
 
 ## See also

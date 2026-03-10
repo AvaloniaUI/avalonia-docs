@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Threading/DispatcherTimer.cs">DispatcherTimer.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -99,7 +102,7 @@ Creates a timer that uses the UI thread's Dispatcher2 to
 process the timer event at the specified priority after the specified timeout.
 
 ```csharp
-public DispatcherTimer(System.TimeSpan interval, Avalonia.Threading.DispatcherPriority priority, System.EventHandler callback)
+public DispatcherTimer(TimeSpan interval, Avalonia.Threading.DispatcherPriority priority, EventHandler callback)
 ```
 
 | Parameter | Description |
@@ -122,7 +125,7 @@ public DispatcherTimer(System.TimeSpan interval, Avalonia.Threading.DispatcherPr
 ### Run
 
 ```csharp
-public System.IDisposable Run(System.Func<System.Boolean> action, System.TimeSpan interval, Avalonia.Threading.DispatcherPriority priority)
+public IDisposable Run(Func<Boolean> action, TimeSpan interval, Avalonia.Threading.DispatcherPriority priority)
 ```
 
 <span id="uid-67b1f4f56d"></span>
@@ -132,7 +135,7 @@ public System.IDisposable Run(System.Func<System.Boolean> action, System.TimeSpa
 Runs a method once, after the specified interval.
 
 ```csharp
-public System.IDisposable RunOnce(System.Action action, System.TimeSpan interval, Avalonia.Threading.DispatcherPriority priority)
+public IDisposable RunOnce(Action action, TimeSpan interval, Avalonia.Threading.DispatcherPriority priority)
 ```
 
 | Parameter | Description |
@@ -141,7 +144,7 @@ public System.IDisposable RunOnce(System.Action action, System.TimeSpan interval
 | `interval` | The interval after which to call the method. |
 | `priority` | The priority to use. |
 
-Returns: An [System.IDisposable](xref:System.IDisposable) used to cancel the timer.
+Returns: An [IDisposable](xref:System.IDisposable) used to cancel the timer.
 
 <span id="uid-54f94d09c4"></span>
 
@@ -150,7 +153,7 @@ Returns: An [System.IDisposable](xref:System.IDisposable) used to cancel the tim
 Starts the timer.
 
 ```csharp
-public System.Void Start()
+public Void Start()
 ```
 
 <span id="uid-a33fed7146"></span>
@@ -160,7 +163,7 @@ public System.Void Start()
 Stops the timer.
 
 ```csharp
-public System.Void Stop()
+public Void Stop()
 ```
 
 ## Properties
@@ -189,7 +192,7 @@ public Avalonia.Threading.Dispatcher Dispatcher { get; set; }
 Gets or sets the time between timer ticks.
 
 ```csharp
-public System.TimeSpan Interval { get; set; }
+public TimeSpan Interval { get; set; }
 ```
 
 <span id="uid-b8bf5f8e8d"></span>
@@ -199,7 +202,7 @@ public System.TimeSpan Interval { get; set; }
 Gets or sets whether the timer is running.
 
 ```csharp
-public System.Boolean IsEnabled { get; set; }
+public Boolean IsEnabled { get; set; }
 ```
 
 <span id="uid-dbb68dcdf3"></span>
@@ -209,7 +212,7 @@ public System.Boolean IsEnabled { get; set; }
 Any data that the caller wants to pass along with the timer.
 
 ```csharp
-public System.Object Tag { get; set; }
+public Object Tag { get; set; }
 ```
 
 ## Events
@@ -226,7 +229,7 @@ Occurs when the specified timer interval has elapsed and the
 timer is enabled.
 
 ```csharp
-public event System.EventHandler Tick
+public event EventHandler Tick
 ```
 
 </ApiRefPage>

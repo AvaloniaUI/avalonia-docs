@@ -56,7 +56,7 @@ public interface IStorageItem
 
 ## Remarks
 
-This interface inherits [System.IDisposable](xref:System.IDisposable) . It's recommended to dispose [Avalonia.Platform.Storage.IStorageItem](xref:Avalonia.Platform.Storage.IStorageItem) when it's not used anymore.
+This interface inherits [IDisposable](xref:System.IDisposable) . It's recommended to dispose [Avalonia.Platform.Storage.IStorageItem](xref:Avalonia.Platform.Storage.IStorageItem) when it's not used anymore.
 
 ## Methods
 
@@ -119,7 +119,7 @@ public System.Threading.Tasks.Task<Avalonia.Platform.Storage.IStorageItem> MoveA
 Saves items to a bookmark.
 
 ```csharp
-public System.Threading.Tasks.Task<System.String> SaveBookmarkAsync()
+public System.Threading.Tasks.Task<String> SaveBookmarkAsync()
 ```
 
 Returns: Returns identifier of a bookmark. Can be null if OS denied request.
@@ -139,7 +139,7 @@ Returns: Returns identifier of a bookmark. Can be null if OS denied request.
 Returns true is item can be bookmarked and reused later.
 
 ```csharp
-public System.Boolean CanBookmark { get; set; }
+public Boolean CanBookmark { get; set; }
 ```
 
 <span id="uid-aaac65aef5"></span>
@@ -149,7 +149,7 @@ public System.Boolean CanBookmark { get; set; }
 Gets the name of the item including the file name extension if there is one.
 
 ```csharp
-public System.String Name { get; set; }
+public String Name { get; set; }
 ```
 
 <span id="uid-74ea660276"></span>
@@ -159,7 +159,7 @@ public System.String Name { get; set; }
 Gets the file-system path of the item.
 
 ```csharp
-public System.Uri Path { get; set; }
+public Uri Path { get; set; }
 ```
 
 </ApiRefPage>

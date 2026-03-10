@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Native</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Native/AvaloniaNativePlatformExtensions.cs">AvaloniaNativePlatformExtensions.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -86,7 +89,7 @@ Gets or sets a value indicating whether Avalonia can install its own AppDelegate
 Disabling this can be useful in some scenarios like when running as a plugin inside an existing macOS application.
 
 ```csharp
-public System.Boolean DisableAvaloniaAppDelegate { get; set; }
+public Boolean DisableAvaloniaAppDelegate { get; set; }
 ```
 
 <span id="uid-120c301a65"></span>
@@ -97,7 +100,7 @@ By default, Avalonia adds items like Quit, Hide to the OSX Application Menu.
 You can prevent Avalonia from adding those items to the OSX Application Menu with this property. The default value is false.
 
 ```csharp
-public System.Boolean DisableDefaultApplicationMenuItems { get; set; }
+public Boolean DisableDefaultApplicationMenuItems { get; set; }
 ```
 
 <span id="uid-28745c9046"></span>
@@ -107,7 +110,7 @@ public System.Boolean DisableDefaultApplicationMenuItems { get; set; }
 Gets or sets a value indicating whether the native macOS menu bar will be enabled for the application.
 
 ```csharp
-public System.Boolean DisableNativeMenus { get; set; }
+public Boolean DisableNativeMenus { get; set; }
 ```
 
 <span id="uid-f25e807435"></span>
@@ -117,7 +120,7 @@ public System.Boolean DisableNativeMenus { get; set; }
 Gets or sets a value indicating whether the native macOS should set [NSProcessInfo setProcessName] in runtime.
 
 ```csharp
-public System.Boolean DisableSetProcessName { get; set; }
+public Boolean DisableSetProcessName { get; set; }
 ```
 
 <span id="uid-1843848742"></span>
@@ -127,7 +130,7 @@ public System.Boolean DisableSetProcessName { get; set; }
 Determines whether to show your application in the dock when it runs. The default value is true.
 
 ```csharp
-public System.Boolean ShowInDock { get; set; }
+public Boolean ShowInDock { get; set; }
 ```
 
 </ApiRefPage>

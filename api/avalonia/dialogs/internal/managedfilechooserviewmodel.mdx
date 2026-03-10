@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Dialogs/Internal/ManagedFileChooserViewModel.cs">ManagedFileChooserViewModel.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__signature">
@@ -108,7 +111,7 @@ public ManagedFileChooserViewModel(Avalonia.Platform.Storage.FolderPickerOpenOpt
 ### CanOk
 
 ```csharp
-public System.Boolean CanOk(System.Object _)
+public Boolean CanOk(Object _)
 ```
 
 <span id="uid-75d879649e"></span>
@@ -116,7 +119,7 @@ public System.Boolean CanOk(System.Object _)
 ### Cancel
 
 ```csharp
-public System.Void Cancel()
+public Void Cancel()
 ```
 
 <span id="uid-d77f91c88f"></span>
@@ -124,7 +127,7 @@ public System.Void Cancel()
 ### EnterPressed
 
 ```csharp
-public System.Void EnterPressed()
+public Void EnterPressed()
 ```
 
 <span id="uid-78945e5ee6"></span>
@@ -132,7 +135,7 @@ public System.Void EnterPressed()
 ### GoUp
 
 ```csharp
-public System.Void GoUp()
+public Void GoUp()
 ```
 
 <span id="uid-7f559a3b63"></span>
@@ -144,7 +147,7 @@ public System.Void GoUp()
 #### Navigate
 
 ```csharp
-public System.Void Navigate(Avalonia.Platform.Storage.IStorageFolder path, System.String initialSelectionName)
+public Void Navigate(Avalonia.Platform.Storage.IStorageFolder path, String initialSelectionName)
 ```
 
 <span id="uid-f0ccb5573d"></span>
@@ -152,7 +155,7 @@ public System.Void Navigate(Avalonia.Platform.Storage.IStorageFolder path, Syste
 #### Navigate
 
 ```csharp
-public System.Void Navigate(System.String path, System.String initialSelectionName)
+public Void Navigate(String path, String initialSelectionName)
 ```
 
 <span id="uid-3c2a9ac561"></span>
@@ -160,7 +163,7 @@ public System.Void Navigate(System.String path, System.String initialSelectionNa
 ### Ok
 
 ```csharp
-public System.Void Ok()
+public Void Ok()
 ```
 
 <span id="uid-504a6cad37"></span>
@@ -168,7 +171,7 @@ public System.Void Ok()
 ### Refresh
 
 ```csharp
-public System.Void Refresh()
+public Void Refresh()
 ```
 
 <span id="uid-fe5c782411"></span>
@@ -176,7 +179,7 @@ public System.Void Refresh()
 ### SelectSingleFile
 
 ```csharp
-public System.Void SelectSingleFile(Avalonia.Dialogs.Internal.ManagedFileChooserItemViewModel item)
+public Void SelectSingleFile(Avalonia.Dialogs.Internal.ManagedFileChooserItemViewModel item)
 ```
 
 ## Properties
@@ -202,7 +205,7 @@ public System.Void SelectSingleFile(Avalonia.Dialogs.Internal.ManagedFileChooser
 ### FileName
 
 ```csharp
-public System.String FileName { get; set; }
+public String FileName { get; set; }
 ```
 
 <span id="uid-84b9030585"></span>
@@ -226,7 +229,7 @@ public Avalonia.Collections.AvaloniaList<Avalonia.Dialogs.Internal.ManagedFileCh
 ### Location
 
 ```csharp
-public System.String Location { get; set; }
+public String Location { get; set; }
 ```
 
 <span id="uid-1c5a5d25b7"></span>
@@ -242,7 +245,7 @@ public Avalonia.Collections.AvaloniaList<Avalonia.Dialogs.Internal.ManagedFileCh
 ### QuickLinksSelectedIndex
 
 ```csharp
-public System.Int32 QuickLinksSelectedIndex { get; set; }
+public Int32 QuickLinksSelectedIndex { get; set; }
 ```
 
 <span id="uid-fe3e281304"></span>
@@ -266,7 +269,7 @@ public Avalonia.Collections.AvaloniaList<Avalonia.Dialogs.Internal.ManagedFileCh
 ### SelectingFolder
 
 ```csharp
-public System.Boolean SelectingFolder { get; set; }
+public Boolean SelectingFolder { get; set; }
 ```
 
 <span id="uid-41fba74648"></span>
@@ -282,7 +285,7 @@ public Avalonia.Controls.SelectionMode SelectionMode { get; set; }
 ### ShowFilters
 
 ```csharp
-public System.Boolean ShowFilters { get; set; }
+public Boolean ShowFilters { get; set; }
 ```
 
 <span id="uid-cffd2513fa"></span>
@@ -290,7 +293,7 @@ public System.Boolean ShowFilters { get; set; }
 ### ShowHiddenFiles
 
 ```csharp
-public System.Boolean ShowHiddenFiles { get; set; }
+public Boolean ShowHiddenFiles { get; set; }
 ```
 
 <span id="uid-6f2666fc05"></span>
@@ -298,7 +301,7 @@ public System.Boolean ShowHiddenFiles { get; set; }
 ### Title
 
 ```csharp
-public System.String Title { get; set; }
+public String Title { get; set; }
 ```
 
 ## Events
@@ -308,13 +311,14 @@ public System.String Title { get; set; }
 | [CancelRequested](#uid-b5b4df062a) | No summary available. |
 | [CompleteRequested](#uid-327b1e3ce0) | No summary available. |
 | [OverwritePrompt](#uid-0d7a404765) | No summary available. |
+| [PropertyChanged (Inherited from AvaloniaDialogsInternalViewModelBase)](avaloniadialogsinternalviewmodelbase.mdx#uid-302249abe0) | No summary available. |
 
 <span id="uid-b5b4df062a"></span>
 
 ### CancelRequested
 
 ```csharp
-public event System.Action CancelRequested
+public event Action CancelRequested
 ```
 
 <span id="uid-327b1e3ce0"></span>
@@ -322,7 +326,7 @@ public event System.Action CancelRequested
 ### CompleteRequested
 
 ```csharp
-public event System.Action<System.String[]> CompleteRequested
+public event Action<String[]> CompleteRequested
 ```
 
 <span id="uid-0d7a404765"></span>
@@ -330,7 +334,7 @@ public event System.Action<System.String[]> CompleteRequested
 ### OverwritePrompt
 
 ```csharp
-public event System.Action<System.String> OverwritePrompt
+public event Action<String> OverwritePrompt
 ```
 
 </ApiRefPage>

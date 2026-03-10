@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.OpenGL/Egl/EglInterface.cs">EglInterface.cs</a>, <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.OpenGL/obj/Release/net10.0/DevGenerators/Generator.GetProcAddressInitializationGenerator/globalAvalonia.OpenGL.Egl.EglInterface.cs">globalAvalonia.OpenGL.Egl.EglInterface.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__signature">
@@ -71,7 +74,7 @@ public EglInterface()
 #### EglInterface
 
 ```csharp
-public EglInterface(System.Func<System.String, System.IntPtr> getProcAddress)
+public EglInterface(Func<String, IntPtr> getProcAddress)
 ```
 
 <span id="uid-f7ef09c096"></span>
@@ -79,7 +82,7 @@ public EglInterface(System.Func<System.String, System.IntPtr> getProcAddress)
 #### EglInterface
 
 ```csharp
-public EglInterface(System.String library)
+public EglInterface(String library)
 ```
 
 ## Methods
@@ -121,7 +124,7 @@ public EglInterface(System.String library)
 ### BindApi
 
 ```csharp
-public System.Boolean BindApi(System.Int32 api)
+public Boolean BindApi(Int32 api)
 ```
 
 <span id="uid-789bee844a"></span>
@@ -129,7 +132,7 @@ public System.Boolean BindApi(System.Int32 api)
 ### BindTexImage
 
 ```csharp
-public System.Int32 BindTexImage(System.IntPtr display, System.IntPtr surface, System.Int32 buffer)
+public Int32 BindTexImage(IntPtr display, IntPtr surface, Int32 buffer)
 ```
 
 <span id="uid-54e6877cc1"></span>
@@ -137,7 +140,7 @@ public System.Int32 BindTexImage(System.IntPtr display, System.IntPtr surface, S
 ### ChooseConfig
 
 ```csharp
-public System.Boolean ChooseConfig(System.IntPtr display, System.Int32[] attribs, System.IntPtr& surfaceConfig, System.Int32 numConfigs, System.Int32& choosenConfig)
+public Boolean ChooseConfig(IntPtr display, Int32[] attribs, IntPtr& surfaceConfig, Int32 numConfigs, Int32& choosenConfig)
 ```
 
 <span id="uid-19f85aec8e"></span>
@@ -145,7 +148,7 @@ public System.Boolean ChooseConfig(System.IntPtr display, System.Int32[] attribs
 ### CreateContext
 
 ```csharp
-public System.IntPtr CreateContext(System.IntPtr display, System.IntPtr config, System.IntPtr share, System.Int32[] attrs)
+public IntPtr CreateContext(IntPtr display, IntPtr config, IntPtr share, Int32[] attrs)
 ```
 
 <span id="uid-adb9f241be"></span>
@@ -153,7 +156,7 @@ public System.IntPtr CreateContext(System.IntPtr display, System.IntPtr config, 
 ### CreatePBufferSurface
 
 ```csharp
-public System.IntPtr CreatePBufferSurface(System.IntPtr display, System.IntPtr config, System.Int32[] attrs)
+public IntPtr CreatePBufferSurface(IntPtr display, IntPtr config, Int32[] attrs)
 ```
 
 <span id="uid-63f941ac31"></span>
@@ -161,7 +164,7 @@ public System.IntPtr CreatePBufferSurface(System.IntPtr display, System.IntPtr c
 ### CreatePbufferFromClientBuffer
 
 ```csharp
-public System.IntPtr CreatePbufferFromClientBuffer(System.IntPtr display, System.Int32 buftype, System.IntPtr buffer, System.IntPtr config, System.Int32[] attrib_list)
+public IntPtr CreatePbufferFromClientBuffer(IntPtr display, Int32 buftype, IntPtr buffer, IntPtr config, Int32[] attrib_list)
 ```
 
 <span id="uid-12de878bed"></span>
@@ -169,7 +172,7 @@ public System.IntPtr CreatePbufferFromClientBuffer(System.IntPtr display, System
 ### CreatePbufferFromClientBufferPtr
 
 ```csharp
-public System.IntPtr CreatePbufferFromClientBufferPtr(System.IntPtr display, System.Int32 buftype, System.IntPtr buffer, System.IntPtr config, System.Int32* attrib_list)
+public IntPtr CreatePbufferFromClientBufferPtr(IntPtr display, Int32 buftype, IntPtr buffer, IntPtr config, Int32* attrib_list)
 ```
 
 <span id="uid-3a05611877"></span>
@@ -177,7 +180,7 @@ public System.IntPtr CreatePbufferFromClientBufferPtr(System.IntPtr display, Sys
 ### CreateWindowSurface
 
 ```csharp
-public System.IntPtr CreateWindowSurface(System.IntPtr display, System.IntPtr config, System.IntPtr window, System.Int32[] attrs)
+public IntPtr CreateWindowSurface(IntPtr display, IntPtr config, IntPtr window, Int32[] attrs)
 ```
 
 <span id="uid-898aaba5f2"></span>
@@ -185,7 +188,7 @@ public System.IntPtr CreateWindowSurface(System.IntPtr display, System.IntPtr co
 ### DestroyContext
 
 ```csharp
-public System.Boolean DestroyContext(System.IntPtr display, System.IntPtr context)
+public Boolean DestroyContext(IntPtr display, IntPtr context)
 ```
 
 <span id="uid-2741d3836d"></span>
@@ -193,7 +196,7 @@ public System.Boolean DestroyContext(System.IntPtr display, System.IntPtr contex
 ### DestroySurface
 
 ```csharp
-public System.Void DestroySurface(System.IntPtr display, System.IntPtr surface)
+public Void DestroySurface(IntPtr display, IntPtr surface)
 ```
 
 <span id="uid-77b209828a"></span>
@@ -201,7 +204,7 @@ public System.Void DestroySurface(System.IntPtr display, System.IntPtr surface)
 ### GetConfigAttrib
 
 ```csharp
-public System.Boolean GetConfigAttrib(System.IntPtr display, System.IntPtr config, System.Int32 attr, System.Int32& rv)
+public Boolean GetConfigAttrib(IntPtr display, IntPtr config, Int32 attr, Int32& rv)
 ```
 
 <span id="uid-b3b4666407"></span>
@@ -209,7 +212,7 @@ public System.Boolean GetConfigAttrib(System.IntPtr display, System.IntPtr confi
 ### GetCurrentContext
 
 ```csharp
-public System.IntPtr GetCurrentContext()
+public IntPtr GetCurrentContext()
 ```
 
 <span id="uid-fadf00b154"></span>
@@ -217,7 +220,7 @@ public System.IntPtr GetCurrentContext()
 ### GetCurrentDisplay
 
 ```csharp
-public System.IntPtr GetCurrentDisplay()
+public IntPtr GetCurrentDisplay()
 ```
 
 <span id="uid-e640bcd072"></span>
@@ -225,7 +228,7 @@ public System.IntPtr GetCurrentDisplay()
 ### GetCurrentSurface
 
 ```csharp
-public System.IntPtr GetCurrentSurface(System.Int32 readDraw)
+public IntPtr GetCurrentSurface(Int32 readDraw)
 ```
 
 <span id="uid-329adf345c"></span>
@@ -233,7 +236,7 @@ public System.IntPtr GetCurrentSurface(System.Int32 readDraw)
 ### GetDisplay
 
 ```csharp
-public System.IntPtr GetDisplay(System.IntPtr nativeDisplay)
+public IntPtr GetDisplay(IntPtr nativeDisplay)
 ```
 
 <span id="uid-c0e76ca207"></span>
@@ -241,7 +244,7 @@ public System.IntPtr GetDisplay(System.IntPtr nativeDisplay)
 ### GetError
 
 ```csharp
-public System.Int32 GetError()
+public Int32 GetError()
 ```
 
 <span id="uid-a988a3980e"></span>
@@ -249,7 +252,7 @@ public System.Int32 GetError()
 ### GetPlatformDisplayExt
 
 ```csharp
-public System.IntPtr GetPlatformDisplayExt(System.Int32 platform, System.IntPtr nativeDisplay, System.Int32[] attrs)
+public IntPtr GetPlatformDisplayExt(Int32 platform, IntPtr nativeDisplay, Int32[] attrs)
 ```
 
 <span id="uid-3fa890b826"></span>
@@ -257,7 +260,7 @@ public System.IntPtr GetPlatformDisplayExt(System.Int32 platform, System.IntPtr 
 ### GetProcAddress
 
 ```csharp
-public System.IntPtr GetProcAddress(System.IntPtr proc)
+public IntPtr GetProcAddress(IntPtr proc)
 ```
 
 <span id="uid-4345d1d2e4"></span>
@@ -265,7 +268,7 @@ public System.IntPtr GetProcAddress(System.IntPtr proc)
 ### Initialize
 
 ```csharp
-public System.Boolean Initialize(System.IntPtr display, System.Int32& major, System.Int32& minor)
+public Boolean Initialize(IntPtr display, Int32& major, Int32& minor)
 ```
 
 <span id="uid-d252dc33e3"></span>
@@ -273,7 +276,7 @@ public System.Boolean Initialize(System.IntPtr display, System.Int32& major, Sys
 ### MakeCurrent
 
 ```csharp
-public System.Boolean MakeCurrent(System.IntPtr display, System.IntPtr draw, System.IntPtr read, System.IntPtr context)
+public Boolean MakeCurrent(IntPtr display, IntPtr draw, IntPtr read, IntPtr context)
 ```
 
 <span id="uid-9911ebf310"></span>
@@ -281,7 +284,7 @@ public System.Boolean MakeCurrent(System.IntPtr display, System.IntPtr draw, Sys
 ### QueryDeviceAttribExt
 
 ```csharp
-public System.Boolean QueryDeviceAttribExt(System.IntPtr display, System.Int32 attr, System.IntPtr& res)
+public Boolean QueryDeviceAttribExt(IntPtr display, Int32 attr, IntPtr& res)
 ```
 
 <span id="uid-a90a4cd3e7"></span>
@@ -289,7 +292,7 @@ public System.Boolean QueryDeviceAttribExt(System.IntPtr display, System.Int32 a
 ### QueryDisplayAttribExt
 
 ```csharp
-public System.Boolean QueryDisplayAttribExt(System.IntPtr display, System.Int32 attr, System.IntPtr& res)
+public Boolean QueryDisplayAttribExt(IntPtr display, Int32 attr, IntPtr& res)
 ```
 
 <span id="uid-a12928cbb0"></span>
@@ -297,7 +300,7 @@ public System.Boolean QueryDisplayAttribExt(System.IntPtr display, System.Int32 
 ### QueryString
 
 ```csharp
-public System.String QueryString(System.IntPtr display, System.Int32 i)
+public String QueryString(IntPtr display, Int32 i)
 ```
 
 <span id="uid-534df08fa9"></span>
@@ -305,7 +308,7 @@ public System.String QueryString(System.IntPtr display, System.Int32 i)
 ### QueryStringNative
 
 ```csharp
-public System.IntPtr QueryStringNative(System.IntPtr display, System.Int32 i)
+public IntPtr QueryStringNative(IntPtr display, Int32 i)
 ```
 
 <span id="uid-d6d3bd7210"></span>
@@ -313,7 +316,7 @@ public System.IntPtr QueryStringNative(System.IntPtr display, System.Int32 i)
 ### SwapBuffers
 
 ```csharp
-public System.Void SwapBuffers(System.IntPtr display, System.IntPtr surface)
+public Void SwapBuffers(IntPtr display, IntPtr surface)
 ```
 
 <span id="uid-ca4e4435c3"></span>
@@ -321,7 +324,7 @@ public System.Void SwapBuffers(System.IntPtr display, System.IntPtr surface)
 ### Terminate
 
 ```csharp
-public System.Void Terminate(System.IntPtr display)
+public Void Terminate(IntPtr display)
 ```
 
 <span id="uid-f34c449522"></span>
@@ -329,7 +332,7 @@ public System.Void Terminate(System.IntPtr display)
 ### WaitClient
 
 ```csharp
-public System.Boolean WaitClient()
+public Boolean WaitClient()
 ```
 
 <span id="uid-071917b6ea"></span>
@@ -337,7 +340,7 @@ public System.Boolean WaitClient()
 ### WaitGL
 
 ```csharp
-public System.Boolean WaitGL()
+public Boolean WaitGL()
 ```
 
 <span id="uid-9189e829e5"></span>
@@ -345,7 +348,7 @@ public System.Boolean WaitGL()
 ### WaitNative
 
 ```csharp
-public System.Boolean WaitNative(System.Int32 engine)
+public Boolean WaitNative(Int32 engine)
 ```
 
 ## Properties
@@ -361,7 +364,7 @@ public System.Boolean WaitNative(System.Int32 engine)
 ### IsGetPlatformDisplayExtAvailable
 
 ```csharp
-public System.Boolean IsGetPlatformDisplayExtAvailable { get; set; }
+public Boolean IsGetPlatformDisplayExtAvailable { get; set; }
 ```
 
 <span id="uid-5f95b932cb"></span>
@@ -369,7 +372,7 @@ public System.Boolean IsGetPlatformDisplayExtAvailable { get; set; }
 ### IsQueryDeviceAttribExtAvailable
 
 ```csharp
-public System.Boolean IsQueryDeviceAttribExtAvailable { get; set; }
+public Boolean IsQueryDeviceAttribExtAvailable { get; set; }
 ```
 
 <span id="uid-bfabc405c6"></span>
@@ -377,7 +380,7 @@ public System.Boolean IsQueryDeviceAttribExtAvailable { get; set; }
 ### IsQueryDisplayAttribExtAvailable
 
 ```csharp
-public System.Boolean IsQueryDisplayAttribExtAvailable { get; set; }
+public Boolean IsQueryDisplayAttribExtAvailable { get; set; }
 ```
 
 </ApiRefPage>

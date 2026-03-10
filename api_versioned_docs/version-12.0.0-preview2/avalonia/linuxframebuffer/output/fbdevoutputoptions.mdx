@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia.LinuxFramebuffer</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Linux/Avalonia.LinuxFramebuffer/Output/FbDevOutputOptions.cs">FbDevOutputOptions.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__signature">
@@ -80,7 +83,7 @@ The frame buffer device name.
 Defaults to the value in environment variable FRAMEBUFFER or /dev/fb0 when FRAMEBUFFER is not set
 
 ```csharp
-public System.String FileName { get; set; }
+public String FileName { get; set; }
 ```
 
 <span id="uid-72686a3c01"></span>
@@ -92,7 +95,7 @@ A null value will leave the frame buffer in the current pixel format.
 Otherwise sets the frame buffer to the required format
 
 ```csharp
-public System.Nullable<Avalonia.Platform.PixelFormat> PixelFormat { get; set; }
+public Nullable<Avalonia.Platform.PixelFormat> PixelFormat { get; set; }
 ```
 
 <span id="uid-57bbe53816"></span>
@@ -103,7 +106,7 @@ If set to true, double-buffering will be disabled and scene will be composed dir
 While this mode saves a blit, you need to check if it won't cause rendering artifacts your particular device.
 
 ```csharp
-public System.Boolean RenderDirectlyToMappedMemory { get; set; }
+public Boolean RenderDirectlyToMappedMemory { get; set; }
 ```
 
 <span id="uid-164d54cd8c"></span>
@@ -113,7 +116,7 @@ public System.Boolean RenderDirectlyToMappedMemory { get; set; }
 The initial scale factor to use
 
 ```csharp
-public System.Double Scaling { get; set; }
+public Double Scaling { get; set; }
 ```
 
 <span id="uid-ed5d0e22ed"></span>
@@ -124,7 +127,7 @@ If set to true, FBIO_WAITFORVSYNC ioctl and following memcpy call will run on a 
 saving current one from doing nothing in a blocking call
 
 ```csharp
-public System.Nullable<System.Boolean> UseAsyncFrontBufferBlit { get; set; }
+public Nullable<Boolean> UseAsyncFrontBufferBlit { get; set; }
 ```
 
 </ApiRefPage>

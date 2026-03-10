@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Media/TextFormatting/TextCollapsingProperties.cs">TextCollapsingProperties.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -51,6 +54,9 @@ public class TextCollapsingProperties
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> TextCollapsingProperties
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Derived types:</span> <a href="textleadingprefixcharacterellipsis">TextLeadingPrefixCharacterEllipsis</a>, <a href="texttrailingcharacterellipsis">TextTrailingCharacterEllipsis</a>, <a href="texttrailingwordellipsis">TextTrailingWordEllipsis</a>, <a href="../textpathsegmentellipsis">TextPathSegmentEllipsis</a>
 </div>
 </div>
 
@@ -82,7 +88,7 @@ public Avalonia.Media.TextFormatting.TextRun[] Collapse(Avalonia.Media.TextForma
 Creates a list of runs for given collapsed length which includes specified symbol at the end.
 
 ```csharp
-public Avalonia.Media.TextFormatting.TextRun[] CreateCollapsedRuns(Avalonia.Media.TextFormatting.TextLine textLine, System.Int32 collapsedLength, Avalonia.Media.TextFormatting.TextRun shapedSymbol)
+public Avalonia.Media.TextFormatting.TextRun[] CreateCollapsedRuns(Avalonia.Media.TextFormatting.TextLine textLine, Int32 collapsedLength, Avalonia.Media.TextFormatting.TextRun shapedSymbol)
 ```
 
 | Parameter | Description |
@@ -128,7 +134,7 @@ public Avalonia.Media.TextFormatting.TextRun Symbol { get; set; }
 Gets the width in which the collapsible range is constrained to.
 
 ```csharp
-public System.Double Width { get; set; }
+public Double Width { get; set; }
 ```
 
 </ApiRefPage>

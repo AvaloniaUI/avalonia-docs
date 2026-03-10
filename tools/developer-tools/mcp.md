@@ -30,7 +30,7 @@ DevTools MCP server works with various AI coding assistants.
 - **[Visual Studio with Copilot](https://learn.microsoft.com/en-us/visualstudio/ide/mcp-servers?view=vs-2022)**
 - **[Rider Copilot](https://plugins.jetbrains.com/plugin/17718-github-copilot--your-ai-pair-programmer)**
 - **[Rider AI Assistant](https://www.jetbrains.com/help/ai-assistant/mcp.html)**
-- **[Claude Code](https://claudelog.com/faqs/how-to-setup-claude-code-mcp-servers/)**
+- **[Claude Code](https://docs.anthropic.com/en/docs/claude-code/tutorials#set-up-model-context-protocol-mcp-servers)**
 - **[Cursor](https://docs.cursor.com/en/context/mcp)**
 
 ## Setting up the MCP server

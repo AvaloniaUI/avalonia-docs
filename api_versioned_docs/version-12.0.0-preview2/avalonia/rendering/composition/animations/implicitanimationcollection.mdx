@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Rendering/Composition/Animations/ImplicitAnimationCollection.cs">ImplicitAnimationCollection.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -80,13 +83,17 @@ the final value of the animated property that was changed
 | [Lookup](#uid-358bf51542) | No summary available. |
 | [Remove](#uid-3edc5a6caf) | No summary available. |
 | [TryGetValue](#uid-361118d602) | No summary available. |
+| [StartAnimation (Inherited from CompositionObject)](../compositionobject.mdx#uid-4d2f25fec7) | Connects an animation with the specified property of the object and starts the animation. |
+| [StartAnimationGroup (Inherited from CompositionObject)](../compositionobject.mdx#uid-4846f860a0) | Starts an animation group. The StartAnimationGroup method on CompositionObject lets you start CompositionAnimationGroup. All the animations in the group will be started at the same time on the object. |
+| [StopAnimation (Inherited from CompositionObject)](../compositionobject.mdx#uid-01077c2b21) | Disconnects an animation from the specified property and stops the animation. |
+| [StopAnimationGroup (Inherited from CompositionObject)](../compositionobject.mdx#uid-81dbd02845) | Stops an animation group. |
 
 <span id="uid-bb73cb4873"></span>
 
 ### Add
 
 ```csharp
-public System.Void Add(System.String key, Avalonia.Rendering.Composition.Animations.ICompositionAnimationBase value)
+public Void Add(String key, Avalonia.Rendering.Composition.Animations.ICompositionAnimationBase value)
 ```
 
 <span id="uid-6c1e62ef81"></span>
@@ -94,7 +101,7 @@ public System.Void Add(System.String key, Avalonia.Rendering.Composition.Animati
 ### Clear
 
 ```csharp
-public System.Void Clear()
+public Void Clear()
 ```
 
 <span id="uid-8c37a90a5a"></span>
@@ -102,7 +109,7 @@ public System.Void Clear()
 ### ContainsKey
 
 ```csharp
-public System.Boolean ContainsKey(System.String key)
+public Boolean ContainsKey(String key)
 ```
 
 <span id="uid-fa934bfab0"></span>
@@ -110,7 +117,7 @@ public System.Boolean ContainsKey(System.String key)
 ### GetEnumerator
 
 ```csharp
-public System.Collections.Generic.IEnumerator<System.Collections.Generic.KeyValuePair<System.String,Avalonia.Rendering.Composition.Animations.ICompositionAnimationBase>> GetEnumerator()
+public System.Collections.Generic.IEnumerator<System.Collections.Generic.KeyValuePair<String,Avalonia.Rendering.Composition.Animations.ICompositionAnimationBase>> GetEnumerator()
 ```
 
 <span id="uid-90cbaafd17"></span>
@@ -118,7 +125,7 @@ public System.Collections.Generic.IEnumerator<System.Collections.Generic.KeyValu
 ### GetView
 
 ```csharp
-public System.Collections.Generic.IReadOnlyDictionary<System.String, Avalonia.Rendering.Composition.Animations.ICompositionAnimationBase> GetView()
+public System.Collections.Generic.IReadOnlyDictionary<String, Avalonia.Rendering.Composition.Animations.ICompositionAnimationBase> GetView()
 ```
 
 <span id="uid-9ea1f1e80f"></span>
@@ -126,7 +133,7 @@ public System.Collections.Generic.IReadOnlyDictionary<System.String, Avalonia.Re
 ### HasKey
 
 ```csharp
-public System.Boolean HasKey(System.String key)
+public Boolean HasKey(String key)
 ```
 
 <span id="uid-e0d483e8e3"></span>
@@ -134,7 +141,7 @@ public System.Boolean HasKey(System.String key)
 ### Insert
 
 ```csharp
-public System.Void Insert(System.String key, Avalonia.Rendering.Composition.Animations.ICompositionAnimationBase animation)
+public Void Insert(String key, Avalonia.Rendering.Composition.Animations.ICompositionAnimationBase animation)
 ```
 
 <span id="uid-358bf51542"></span>
@@ -142,7 +149,7 @@ public System.Void Insert(System.String key, Avalonia.Rendering.Composition.Anim
 ### Lookup
 
 ```csharp
-public Avalonia.Rendering.Composition.Animations.ICompositionAnimationBase Lookup(System.String key)
+public Avalonia.Rendering.Composition.Animations.ICompositionAnimationBase Lookup(String key)
 ```
 
 <span id="uid-3edc5a6caf"></span>
@@ -150,7 +157,7 @@ public Avalonia.Rendering.Composition.Animations.ICompositionAnimationBase Looku
 ### Remove
 
 ```csharp
-public System.Boolean Remove(System.String key)
+public Boolean Remove(String key)
 ```
 
 <span id="uid-361118d602"></span>
@@ -158,7 +165,7 @@ public System.Boolean Remove(System.String key)
 ### TryGetValue
 
 ```csharp
-public System.Boolean TryGetValue(System.String key, Avalonia.Rendering.Composition.Animations.ICompositionAnimationBase& value)
+public Boolean TryGetValue(String key, Avalonia.Rendering.Composition.Animations.ICompositionAnimationBase& value)
 ```
 
 ## Properties
@@ -168,13 +175,16 @@ public System.Boolean TryGetValue(System.String key, Avalonia.Rendering.Composit
 | [Count](#uid-972ab9b4c2) | No summary available. |
 | [Item](#uid-c66ce36dae) | No summary available. |
 | [Size](#uid-c606188463) | No summary available. |
+| [Compositor (Inherited from CompositionObject)](../compositionobject.mdx#uid-bd6bbc1391) | The associated Compositor |
+| [ImplicitAnimations (Inherited from CompositionObject)](../compositionobject.mdx#uid-3929e9ea34) | The collection of implicit animations attached to this object. |
+| [IsDisposed (Inherited from CompositionObject)](../compositionobject.mdx#uid-e01437c946) | No summary available. |
 
 <span id="uid-972ab9b4c2"></span>
 
 ### Count
 
 ```csharp
-public System.Int32 Count { get; set; }
+public Int32 Count { get; set; }
 ```
 
 <span id="uid-c66ce36dae"></span>
@@ -190,7 +200,7 @@ public Avalonia.Rendering.Composition.Animations.ICompositionAnimationBase Item 
 ### Size
 
 ```csharp
-public System.UInt32 Size { get; set; }
+public UInt32 Size { get; set; }
 ```
 
 </ApiRefPage>

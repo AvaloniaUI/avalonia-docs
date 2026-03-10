@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Logging/Logger.cs">Logger.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -68,7 +71,7 @@ public class Logger
 Checks if given log level is enabled.
 
 ```csharp
-public System.Boolean IsEnabled(Avalonia.Logging.LogEventLevel level, System.String area)
+public Boolean IsEnabled(Avalonia.Logging.LogEventLevel level, String area)
 ```
 
 | Parameter | Description |
@@ -89,7 +92,7 @@ Returns: if given log level is enabled.
 Returns parametrized logging sink if given log level is enabled.
 
 ```csharp
-public System.Nullable<Avalonia.Logging.ParametrizedLogger> TryGet(Avalonia.Logging.LogEventLevel level, System.String area)
+public Nullable<Avalonia.Logging.ParametrizedLogger> TryGet(Avalonia.Logging.LogEventLevel level, String area)
 ```
 
 | Parameter | Description |
@@ -104,7 +107,7 @@ Returns: Log sink or if log level is not enabled.
 #### TryGet
 
 ```csharp
-public System.Boolean TryGet(Avalonia.Logging.LogEventLevel level, System.String area, Avalonia.Logging.ParametrizedLogger& outLogger)
+public Boolean TryGet(Avalonia.Logging.LogEventLevel level, String area, Avalonia.Logging.ParametrizedLogger& outLogger)
 ```
 
 ## Properties

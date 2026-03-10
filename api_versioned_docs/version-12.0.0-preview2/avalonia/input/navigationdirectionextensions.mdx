@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Input/NavigationDirection.cs">NavigationDirection.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__signature">
@@ -63,7 +66,7 @@ public class NavigationDirectionExtensions
 Checks whether a [Avalonia.Input.NavigationDirection](xref:Avalonia.Input.NavigationDirection) represents a directional movement.
 
 ```csharp
-public System.Boolean IsDirectional(Avalonia.Input.NavigationDirection direction)
+public Boolean IsDirectional(Avalonia.Input.NavigationDirection direction)
 ```
 
 | Parameter | Description |
@@ -81,7 +84,7 @@ otherwise false.
 Checks whether a [Avalonia.Input.NavigationDirection](xref:Avalonia.Input.NavigationDirection) represents a tab movement.
 
 ```csharp
-public System.Boolean IsTab(Avalonia.Input.NavigationDirection direction)
+public Boolean IsTab(Avalonia.Input.NavigationDirection direction)
 ```
 
 | Parameter | Description |
@@ -98,7 +101,7 @@ or [Avalonia.Input.NavigationDirection.Previous](xref:Avalonia.Input.NavigationD
 Converts a keypress into a [Avalonia.Input.NavigationDirection](xref:Avalonia.Input.NavigationDirection).
 
 ```csharp
-public System.Nullable<Avalonia.Input.NavigationDirection> ToNavigationDirection(Avalonia.Input.Key key, Avalonia.Input.KeyModifiers modifiers)
+public Nullable<Avalonia.Input.NavigationDirection> ToNavigationDirection(Avalonia.Input.Key key, Avalonia.Input.KeyModifiers modifiers)
 ```
 
 | Parameter | Description |

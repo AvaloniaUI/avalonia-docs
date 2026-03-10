@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Animation/CrossFade.cs">CrossFade.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -84,7 +87,7 @@ public CrossFade()
 Initializes a new instance of the [Avalonia.Animation.CrossFade](xref:Avalonia.Animation.CrossFade) class.
 
 ```csharp
-public CrossFade(System.TimeSpan duration)
+public CrossFade(TimeSpan duration)
 ```
 
 | Parameter | Description |
@@ -121,7 +124,7 @@ public System.Threading.Tasks.Task Start(Avalonia.Visual from, Avalonia.Visual t
 Gets the duration of the animation.
 
 ```csharp
-public System.TimeSpan Duration { get; set; }
+public TimeSpan Duration { get; set; }
 ```
 
 <span id="uid-c8a448bdad"></span>

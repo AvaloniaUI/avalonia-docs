@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/obj/GeneratedFiles/DevGenerators/Avalonia.SourceGenerator.CompositionGenerator.CompositionRoslynGenerator/CompositionVisualCollection.generated.cs">CompositionVisualCollection.generated.cs</a>, <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Rendering/Composition/VisualCollection.cs">VisualCollection.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -75,13 +78,17 @@ public class CompositionVisualCollection
 | [Remove](#uid-31ef7bb445) | No summary available. |
 | [RemoveAll](#uid-3136285f1d) | No summary available. |
 | [RemoveAt](#uid-c74d8ceefe) | No summary available. |
+| [StartAnimation (Inherited from CompositionObject)](compositionobject.mdx#uid-4d2f25fec7) | Connects an animation with the specified property of the object and starts the animation. |
+| [StartAnimationGroup (Inherited from CompositionObject)](compositionobject.mdx#uid-4846f860a0) | Starts an animation group. The StartAnimationGroup method on CompositionObject lets you start CompositionAnimationGroup. All the animations in the group will be started at the same time on the object. |
+| [StopAnimation (Inherited from CompositionObject)](compositionobject.mdx#uid-01077c2b21) | Disconnects an animation from the specified property and stops the animation. |
+| [StopAnimationGroup (Inherited from CompositionObject)](compositionobject.mdx#uid-81dbd02845) | Stops an animation group. |
 
 <span id="uid-5c0b47ff06"></span>
 
 ### Add
 
 ```csharp
-public System.Void Add(Avalonia.Rendering.Composition.CompositionVisual item)
+public Void Add(Avalonia.Rendering.Composition.CompositionVisual item)
 ```
 
 <span id="uid-1c4b30623b"></span>
@@ -89,7 +96,7 @@ public System.Void Add(Avalonia.Rendering.Composition.CompositionVisual item)
 ### Clear
 
 ```csharp
-public System.Void Clear()
+public Void Clear()
 ```
 
 <span id="uid-db14b76a1b"></span>
@@ -97,7 +104,7 @@ public System.Void Clear()
 ### Contains
 
 ```csharp
-public System.Boolean Contains(Avalonia.Rendering.Composition.CompositionVisual item)
+public Boolean Contains(Avalonia.Rendering.Composition.CompositionVisual item)
 ```
 
 <span id="uid-269a9a0a29"></span>
@@ -105,7 +112,7 @@ public System.Boolean Contains(Avalonia.Rendering.Composition.CompositionVisual 
 ### CopyTo
 
 ```csharp
-public System.Void CopyTo(Avalonia.Rendering.Composition.CompositionVisual[] array, System.Int32 arrayIndex)
+public Void CopyTo(Avalonia.Rendering.Composition.CompositionVisual[] array, Int32 arrayIndex)
 ```
 
 <span id="uid-1d937de249"></span>
@@ -121,7 +128,7 @@ public Enumerator<Avalonia.Rendering.Composition.CompositionVisual> GetEnumerato
 ### IndexOf
 
 ```csharp
-public System.Int32 IndexOf(Avalonia.Rendering.Composition.CompositionVisual item)
+public Int32 IndexOf(Avalonia.Rendering.Composition.CompositionVisual item)
 ```
 
 <span id="uid-1855f6c3ac"></span>
@@ -129,7 +136,7 @@ public System.Int32 IndexOf(Avalonia.Rendering.Composition.CompositionVisual ite
 ### Insert
 
 ```csharp
-public System.Void Insert(System.Int32 index, Avalonia.Rendering.Composition.CompositionVisual item)
+public Void Insert(Int32 index, Avalonia.Rendering.Composition.CompositionVisual item)
 ```
 
 <span id="uid-f14c53ccce"></span>
@@ -137,7 +144,7 @@ public System.Void Insert(System.Int32 index, Avalonia.Rendering.Composition.Com
 ### InsertAbove
 
 ```csharp
-public System.Void InsertAbove(Avalonia.Rendering.Composition.CompositionVisual newChild, Avalonia.Rendering.Composition.CompositionVisual sibling)
+public Void InsertAbove(Avalonia.Rendering.Composition.CompositionVisual newChild, Avalonia.Rendering.Composition.CompositionVisual sibling)
 ```
 
 <span id="uid-e2a9f5209d"></span>
@@ -145,7 +152,7 @@ public System.Void InsertAbove(Avalonia.Rendering.Composition.CompositionVisual 
 ### InsertAtBottom
 
 ```csharp
-public System.Void InsertAtBottom(Avalonia.Rendering.Composition.CompositionVisual newChild)
+public Void InsertAtBottom(Avalonia.Rendering.Composition.CompositionVisual newChild)
 ```
 
 <span id="uid-4cf433353e"></span>
@@ -153,7 +160,7 @@ public System.Void InsertAtBottom(Avalonia.Rendering.Composition.CompositionVisu
 ### InsertAtTop
 
 ```csharp
-public System.Void InsertAtTop(Avalonia.Rendering.Composition.CompositionVisual newChild)
+public Void InsertAtTop(Avalonia.Rendering.Composition.CompositionVisual newChild)
 ```
 
 <span id="uid-541af38763"></span>
@@ -161,7 +168,7 @@ public System.Void InsertAtTop(Avalonia.Rendering.Composition.CompositionVisual 
 ### InsertBelow
 
 ```csharp
-public System.Void InsertBelow(Avalonia.Rendering.Composition.CompositionVisual newChild, Avalonia.Rendering.Composition.CompositionVisual sibling)
+public Void InsertBelow(Avalonia.Rendering.Composition.CompositionVisual newChild, Avalonia.Rendering.Composition.CompositionVisual sibling)
 ```
 
 <span id="uid-31ef7bb445"></span>
@@ -169,7 +176,7 @@ public System.Void InsertBelow(Avalonia.Rendering.Composition.CompositionVisual 
 ### Remove
 
 ```csharp
-public System.Boolean Remove(Avalonia.Rendering.Composition.CompositionVisual item)
+public Boolean Remove(Avalonia.Rendering.Composition.CompositionVisual item)
 ```
 
 <span id="uid-3136285f1d"></span>
@@ -177,7 +184,7 @@ public System.Boolean Remove(Avalonia.Rendering.Composition.CompositionVisual it
 ### RemoveAll
 
 ```csharp
-public System.Void RemoveAll()
+public Void RemoveAll()
 ```
 
 <span id="uid-c74d8ceefe"></span>
@@ -185,7 +192,7 @@ public System.Void RemoveAll()
 ### RemoveAt
 
 ```csharp
-public System.Void RemoveAt(System.Int32 index)
+public Void RemoveAt(Int32 index)
 ```
 
 ## Properties
@@ -195,13 +202,16 @@ public System.Void RemoveAt(System.Int32 index)
 | [Count](#uid-e6cfa780c2) | No summary available. |
 | [IsReadOnly](#uid-7f72d63a2c) | No summary available. |
 | [Item](#uid-af29b7394c) | No summary available. |
+| [Compositor (Inherited from CompositionObject)](compositionobject.mdx#uid-bd6bbc1391) | The associated Compositor |
+| [ImplicitAnimations (Inherited from CompositionObject)](compositionobject.mdx#uid-3929e9ea34) | The collection of implicit animations attached to this object. |
+| [IsDisposed (Inherited from CompositionObject)](compositionobject.mdx#uid-e01437c946) | No summary available. |
 
 <span id="uid-e6cfa780c2"></span>
 
 ### Count
 
 ```csharp
-public System.Int32 Count { get; set; }
+public Int32 Count { get; set; }
 ```
 
 <span id="uid-7f72d63a2c"></span>
@@ -209,7 +219,7 @@ public System.Int32 Count { get; set; }
 ### IsReadOnly
 
 ```csharp
-public System.Boolean IsReadOnly { get; set; }
+public Boolean IsReadOnly { get; set; }
 ```
 
 <span id="uid-af29b7394c"></span>

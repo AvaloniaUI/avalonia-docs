@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Platform/PathGeometryContext.cs">PathGeometryContext.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__signature">
@@ -73,7 +76,7 @@ public PathGeometryContext(Avalonia.Media.PathGeometry pathGeometry)
 | [BeginFigure](#uid-9672d35ec0) | Begins a new figure. |
 | [CubicBezierTo](#uid-3085da665b) | Draws a Bezier curve to the specified point. |
 | [Dispose](#uid-55995dd1bb) | No summary available. |
-| [EndFigure](#uid-3985090f0f) | Ends the figure started by Avalonia.Platform.IGeometryContext.BeginFigure(Avalonia.Point,System.Boolean). |
+| [EndFigure](#uid-3985090f0f) | Ends the figure started by Avalonia.Platform.IGeometryContext.BeginFigure(Avalonia.Point,Boolean). |
 | [LineTo](#uid-fa3e8f3e23) | Draws a line to the specified point. |
 | [QuadraticBezierTo](#uid-28beab71d3) | Draws a quadratic Bezier curve to the specified point |
 | [SetFillRule](#uid-b6b80d3a91) | Sets path's winding rule (default is EvenOdd). You should call this method before any calls to BeginFigure. |
@@ -85,7 +88,7 @@ public PathGeometryContext(Avalonia.Media.PathGeometry pathGeometry)
 Draws an arc to the specified point.
 
 ```csharp
-public System.Void ArcTo(Avalonia.Point point, Avalonia.Size size, System.Double rotationAngle, System.Boolean isLargeArc, Avalonia.Media.SweepDirection sweepDirection, System.Boolean isStroked)
+public Void ArcTo(Avalonia.Point point, Avalonia.Size size, Double rotationAngle, Boolean isLargeArc, Avalonia.Media.SweepDirection sweepDirection, Boolean isStroked)
 ```
 
 | Parameter | Description |
@@ -104,7 +107,7 @@ public System.Void ArcTo(Avalonia.Point point, Avalonia.Size size, System.Double
 Begins a new figure.
 
 ```csharp
-public System.Void BeginFigure(Avalonia.Point startPoint, System.Boolean isFilled)
+public Void BeginFigure(Avalonia.Point startPoint, Boolean isFilled)
 ```
 
 | Parameter | Description |
@@ -119,7 +122,7 @@ public System.Void BeginFigure(Avalonia.Point startPoint, System.Boolean isFille
 Draws a Bezier curve to the specified point.
 
 ```csharp
-public System.Void CubicBezierTo(Avalonia.Point controlPoint1, Avalonia.Point controlPoint2, Avalonia.Point endPoint, System.Boolean isStroked)
+public Void CubicBezierTo(Avalonia.Point controlPoint1, Avalonia.Point controlPoint2, Avalonia.Point endPoint, Boolean isStroked)
 ```
 
 | Parameter | Description |
@@ -134,17 +137,17 @@ public System.Void CubicBezierTo(Avalonia.Point controlPoint1, Avalonia.Point co
 ### Dispose
 
 ```csharp
-public System.Void Dispose()
+public Void Dispose()
 ```
 
 <span id="uid-3985090f0f"></span>
 
 ### EndFigure
 
-Ends the figure started by [Avalonia.Platform.IGeometryContext.BeginFigure(Avalonia.Point,System.Boolean)](xref:Avalonia.Platform.IGeometryContext.BeginFigure%28Avalonia.Point%2CSystem.Boolean%29).
+Ends the figure started by [Avalonia.Platform.IGeometryContext.BeginFigure(Avalonia.Point,Boolean)](xref:Avalonia.Platform.IGeometryContext.BeginFigure%28Avalonia.Point%2CSystem.Boolean%29).
 
 ```csharp
-public System.Void EndFigure(System.Boolean isClosed)
+public Void EndFigure(Boolean isClosed)
 ```
 
 | Parameter | Description |
@@ -158,7 +161,7 @@ public System.Void EndFigure(System.Boolean isClosed)
 Draws a line to the specified point.
 
 ```csharp
-public System.Void LineTo(Avalonia.Point point, System.Boolean isStroked)
+public Void LineTo(Avalonia.Point point, Boolean isStroked)
 ```
 
 | Parameter | Description |
@@ -173,7 +176,7 @@ public System.Void LineTo(Avalonia.Point point, System.Boolean isStroked)
 Draws a quadratic Bezier curve to the specified point
 
 ```csharp
-public System.Void QuadraticBezierTo(Avalonia.Point controlPoint, Avalonia.Point endPoint, System.Boolean isStroked)
+public Void QuadraticBezierTo(Avalonia.Point controlPoint, Avalonia.Point endPoint, Boolean isStroked)
 ```
 
 | Parameter | Description |
@@ -189,7 +192,7 @@ public System.Void QuadraticBezierTo(Avalonia.Point controlPoint, Avalonia.Point
 Sets path's winding rule (default is EvenOdd). You should call this method before any calls to BeginFigure.
 
 ```csharp
-public System.Void SetFillRule(Avalonia.Media.FillRule fillRule)
+public Void SetFillRule(Avalonia.Media.FillRule fillRule)
 ```
 
 | Parameter | Description |

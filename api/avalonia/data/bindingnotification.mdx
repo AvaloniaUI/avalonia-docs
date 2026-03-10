@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Data/BindingNotification.cs">BindingNotification.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -79,7 +82,7 @@ this class.
 Initializes a new instance of the [Avalonia.Data.BindingNotification](xref:Avalonia.Data.BindingNotification) class.
 
 ```csharp
-public BindingNotification(System.Exception error, Avalonia.Data.BindingErrorType errorType)
+public BindingNotification(Exception error, Avalonia.Data.BindingErrorType errorType)
 ```
 
 | Parameter | Description |
@@ -94,7 +97,7 @@ public BindingNotification(System.Exception error, Avalonia.Data.BindingErrorTyp
 Initializes a new instance of the [Avalonia.Data.BindingNotification](xref:Avalonia.Data.BindingNotification) class.
 
 ```csharp
-public BindingNotification(System.Exception error, Avalonia.Data.BindingErrorType errorType, System.Object fallbackValue)
+public BindingNotification(Exception error, Avalonia.Data.BindingErrorType errorType, Object fallbackValue)
 ```
 
 | Parameter | Description |
@@ -110,7 +113,7 @@ public BindingNotification(System.Exception error, Avalonia.Data.BindingErrorTyp
 Initializes a new instance of the [Avalonia.Data.BindingNotification](xref:Avalonia.Data.BindingNotification) class.
 
 ```csharp
-public BindingNotification(System.Object value)
+public BindingNotification(Object value)
 ```
 
 | Parameter | Description |
@@ -138,7 +141,7 @@ public BindingNotification(System.Object value)
 Adds an error to the [Avalonia.Data.BindingNotification](xref:Avalonia.Data.BindingNotification).
 
 ```csharp
-public System.Void AddError(System.Exception e, Avalonia.Data.BindingErrorType type)
+public Void AddError(Exception e, Avalonia.Data.BindingErrorType type)
 ```
 
 | Parameter | Description |
@@ -153,7 +156,7 @@ public System.Void AddError(System.Exception e, Avalonia.Data.BindingErrorType t
 Removes the [Avalonia.Data.BindingNotification.Value](xref:Avalonia.Data.BindingNotification.Value) and makes [Avalonia.Data.BindingNotification.HasValue](xref:Avalonia.Data.BindingNotification.HasValue) return null.
 
 ```csharp
-public System.Void ClearValue()
+public Void ClearValue()
 ```
 
 <span id="uid-440cbded4f"></span>
@@ -167,7 +170,7 @@ public System.Void ClearValue()
 Compares a value to an instance of [Avalonia.Data.BindingNotification](xref:Avalonia.Data.BindingNotification) for equality.
 
 ```csharp
-public System.Boolean Equals(Avalonia.Data.BindingNotification other)
+public Boolean Equals(Avalonia.Data.BindingNotification other)
 ```
 
 | Parameter | Description |
@@ -183,7 +186,7 @@ Returns: true if the two instances are equal; otherwise false.
 Compares an object to an instance of [Avalonia.Data.BindingNotification](xref:Avalonia.Data.BindingNotification) for equality.
 
 ```csharp
-public System.Boolean Equals(System.Object obj)
+public Boolean Equals(Object obj)
 ```
 
 | Parameter | Description |
@@ -199,7 +202,7 @@ Returns: true if the two instances are equal; otherwise false.
 Gets an exception from an object that may be a [Avalonia.Data.BindingNotification](xref:Avalonia.Data.BindingNotification).
 
 ```csharp
-public System.Object ExtractError(System.Object o)
+public Object ExtractError(Object o)
 ```
 
 | Parameter | Description |
@@ -215,7 +218,7 @@ Returns: The value.
 Gets a value from an object that may be a [Avalonia.Data.BindingNotification](xref:Avalonia.Data.BindingNotification).
 
 ```csharp
-public System.Object ExtractValue(System.Object o)
+public Object ExtractValue(Object o)
 ```
 
 | Parameter | Description |
@@ -231,7 +234,7 @@ Returns: The value.
 Gets the hash code for this instance of [Avalonia.Data.BindingNotification](xref:Avalonia.Data.BindingNotification).
 
 ```csharp
-public System.Int32 GetHashCode()
+public Int32 GetHashCode()
 ```
 
 Returns: A hash code.
@@ -243,7 +246,7 @@ Returns: A hash code.
 Sets the [Avalonia.Data.BindingNotification.Value](xref:Avalonia.Data.BindingNotification.Value).
 
 ```csharp
-public System.Void SetValue(System.Object value)
+public Void SetValue(Object value)
 ```
 
 <span id="uid-1c7fb2a6a9"></span>
@@ -251,7 +254,7 @@ public System.Void SetValue(System.Object value)
 ### ToString
 
 ```csharp
-public System.String ToString()
+public String ToString()
 ```
 
 <span id="uid-6fc39f5e3b"></span>
@@ -261,7 +264,7 @@ public System.String ToString()
 Updates the value of an object that may be a [Avalonia.Data.BindingNotification](xref:Avalonia.Data.BindingNotification).
 
 ```csharp
-public System.Object UpdateValue(System.Object o, System.Object value)
+public Object UpdateValue(Object o, Object value)
 ```
 
 | Parameter | Description |
@@ -288,7 +291,7 @@ otherwise `value`.
 Gets the error that occurred on the source, if any.
 
 ```csharp
-public System.Exception Error { get; set; }
+public Exception Error { get; set; }
 ```
 
 <span id="uid-2739077871"></span>
@@ -308,7 +311,7 @@ public Avalonia.Data.BindingErrorType ErrorType { get; set; }
 Gets a value indicating whether [Avalonia.Data.BindingNotification.Value](xref:Avalonia.Data.BindingNotification.Value) should be pushed to the target.
 
 ```csharp
-public System.Boolean HasValue { get; set; }
+public Boolean HasValue { get; set; }
 ```
 
 <span id="uid-d6e17b8825"></span>
@@ -319,7 +322,7 @@ Gets the value that should be passed to the target when [Avalonia.Data.BindingNo
 is true.
 
 ```csharp
-public System.Object Value { get; set; }
+public Object Value { get; set; }
 ```
 
 ## Fields

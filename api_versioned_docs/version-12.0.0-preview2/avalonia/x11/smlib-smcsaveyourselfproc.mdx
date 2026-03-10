@@ -59,7 +59,7 @@ public delegate SMLib.SmcSaveYourselfProc
 ### SMLib.SmcSaveYourselfProc
 
 ```csharp
-public SMLib.SmcSaveYourselfProc(System.Object object, System.IntPtr method)
+public SMLib.SmcSaveYourselfProc(Object object, IntPtr method)
 ```
 
 ## Methods
@@ -75,7 +75,7 @@ public SMLib.SmcSaveYourselfProc(System.Object object, System.IntPtr method)
 ### BeginInvoke
 
 ```csharp
-public System.IAsyncResult BeginInvoke(System.IntPtr smcConn, System.IntPtr clientData, System.Int32 saveType, System.Boolean shutdown, System.Int32 interactStyle, System.Boolean fast, System.AsyncCallback callback, System.Object object)
+public IAsyncResult BeginInvoke(IntPtr smcConn, IntPtr clientData, Int32 saveType, Boolean shutdown, Int32 interactStyle, Boolean fast, AsyncCallback callback, Object object)
 ```
 
 <span id="uid-2179aacff2"></span>
@@ -83,7 +83,7 @@ public System.IAsyncResult BeginInvoke(System.IntPtr smcConn, System.IntPtr clie
 ### EndInvoke
 
 ```csharp
-public System.Void EndInvoke(System.IAsyncResult result)
+public Void EndInvoke(IAsyncResult result)
 ```
 
 <span id="uid-1ed42945da"></span>
@@ -91,7 +91,7 @@ public System.Void EndInvoke(System.IAsyncResult result)
 ### Invoke
 
 ```csharp
-public System.Void Invoke(System.IntPtr smcConn, System.IntPtr clientData, System.Int32 saveType, System.Boolean shutdown, System.Int32 interactStyle, System.Boolean fast)
+public Void Invoke(IntPtr smcConn, IntPtr clientData, Int32 saveType, Boolean shutdown, Int32 interactStyle, Boolean fast)
 ```
 
 </ApiRefPage>

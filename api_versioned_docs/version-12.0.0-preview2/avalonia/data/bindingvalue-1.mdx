@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Data/BindingValue.cs">BindingValue.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -128,7 +131,7 @@ public BindingValue<T>(T value)
 Returns a binding value with a type of [Avalonia.Data.BindingValueType.BindingError](xref:Avalonia.Data.BindingValueType.BindingError).
 
 ```csharp
-public Avalonia.Data.BindingValue<T><T> BindingError(System.Exception e)
+public Avalonia.Data.BindingValue<T><T> BindingError(Exception e)
 ```
 
 | Parameter | Description |
@@ -140,7 +143,7 @@ public Avalonia.Data.BindingValue<T><T> BindingError(System.Exception e)
 #### BindingError
 
 ```csharp
-public Avalonia.Data.BindingValue<T><T> BindingError(System.Exception e, Avalonia.Data.Optional<T><T> fallbackValue)
+public Avalonia.Data.BindingValue<T><T> BindingError(Exception e, Avalonia.Data.Optional<T><T> fallbackValue)
 ```
 
 <span id="uid-31debe3e1a"></span>
@@ -150,7 +153,7 @@ public Avalonia.Data.BindingValue<T><T> BindingError(System.Exception e, Avaloni
 Returns a binding value with a type of [Avalonia.Data.BindingValueType.BindingErrorWithFallback](xref:Avalonia.Data.BindingValueType.BindingErrorWithFallback).
 
 ```csharp
-public Avalonia.Data.BindingValue<T><T> BindingError(System.Exception e, T fallbackValue)
+public Avalonia.Data.BindingValue<T><T> BindingError(Exception e, T fallbackValue)
 ```
 
 | Parameter | Description |
@@ -169,7 +172,7 @@ public Avalonia.Data.BindingValue<T><T> BindingError(System.Exception e, T fallb
 Returns a binding value with a type of [Avalonia.Data.BindingValueType.DataValidationError](xref:Avalonia.Data.BindingValueType.DataValidationError).
 
 ```csharp
-public Avalonia.Data.BindingValue<T><T> DataValidationError(System.Exception e)
+public Avalonia.Data.BindingValue<T><T> DataValidationError(Exception e)
 ```
 
 | Parameter | Description |
@@ -181,7 +184,7 @@ public Avalonia.Data.BindingValue<T><T> DataValidationError(System.Exception e)
 #### DataValidationError
 
 ```csharp
-public Avalonia.Data.BindingValue<T><T> DataValidationError(System.Exception e, Avalonia.Data.Optional<T><T> fallbackValue)
+public Avalonia.Data.BindingValue<T><T> DataValidationError(Exception e, Avalonia.Data.Optional<T><T> fallbackValue)
 ```
 
 <span id="uid-e0037c1656"></span>
@@ -191,7 +194,7 @@ public Avalonia.Data.BindingValue<T><T> DataValidationError(System.Exception e, 
 Returns a binding value with a type of [Avalonia.Data.BindingValueType.DataValidationErrorWithFallback](xref:Avalonia.Data.BindingValueType.DataValidationErrorWithFallback).
 
 ```csharp
-public Avalonia.Data.BindingValue<T><T> DataValidationError(System.Exception e, T fallbackValue)
+public Avalonia.Data.BindingValue<T><T> DataValidationError(Exception e, T fallbackValue)
 ```
 
 | Parameter | Description |
@@ -208,7 +211,7 @@ public Avalonia.Data.BindingValue<T><T> DataValidationError(System.Exception e, 
 #### Equals
 
 ```csharp
-public System.Boolean Equals(Avalonia.Data.BindingValue<T><T> other)
+public Boolean Equals(Avalonia.Data.BindingValue<T><T> other)
 ```
 
 <span id="uid-87764a851c"></span>
@@ -216,7 +219,7 @@ public System.Boolean Equals(Avalonia.Data.BindingValue<T><T> other)
 #### Equals
 
 ```csharp
-public System.Boolean Equals(System.Object obj)
+public Boolean Equals(Object obj)
 ```
 
 <span id="uid-e471c0663b"></span>
@@ -232,7 +235,7 @@ Creates a [Avalonia.Data.BindingValue&lt;T&gt;](xref:Avalonia.Data.BindingValue%
 [Avalonia.Data.BindingNotification](xref:Avalonia.Data.BindingNotification).
 
 ```csharp
-public Avalonia.Data.BindingValue<T><T> FromUntyped(System.Object value)
+public Avalonia.Data.BindingValue<T><T> FromUntyped(Object value)
 ```
 
 | Parameter | Description |
@@ -250,7 +253,7 @@ Creates a [Avalonia.Data.BindingValue&lt;T&gt;](xref:Avalonia.Data.BindingValue%
 [Avalonia.Data.BindingNotification](xref:Avalonia.Data.BindingNotification).
 
 ```csharp
-public Avalonia.Data.BindingValue<T><T> FromUntyped(System.Object value, System.Type targetType)
+public Avalonia.Data.BindingValue<T><T> FromUntyped(Object value, Type targetType)
 ```
 
 | Parameter | Description |
@@ -265,7 +268,7 @@ Returns: The typed binding value.
 ### GetHashCode
 
 ```csharp
-public System.Int32 GetHashCode()
+public Int32 GetHashCode()
 ```
 
 <span id="uid-419c82c88c"></span>
@@ -323,7 +326,7 @@ public Avalonia.Data.Optional<T><T> ToOptional()
 ### ToString
 
 ```csharp
-public System.String ToString()
+public String ToString()
 ```
 
 <span id="uid-9eb66563d8"></span>
@@ -335,7 +338,7 @@ Converts the value to untyped representation, using [Avalonia.AvaloniaProperty.U
 appropriate.
 
 ```csharp
-public System.Object ToUntyped()
+public Object ToUntyped()
 ```
 
 Returns: The untyped representation of the binding value.
@@ -390,7 +393,7 @@ public Avalonia.Data.BindingValue<T><T> DoNothing { get; set; }
 Gets the binding or data validation error.
 
 ```csharp
-public System.Exception Error { get; set; }
+public Exception Error { get; set; }
 ```
 
 <span id="uid-0c59876f79"></span>
@@ -401,7 +404,7 @@ Gets a value indicating whether the binding value represents either a binding or
 validation error.
 
 ```csharp
-public System.Boolean HasError { get; set; }
+public Boolean HasError { get; set; }
 ```
 
 <span id="uid-f5132d92ed"></span>
@@ -411,7 +414,7 @@ public System.Boolean HasError { get; set; }
 Gets a value indicating whether the binding value has a value.
 
 ```csharp
-public System.Boolean HasValue { get; set; }
+public Boolean HasValue { get; set; }
 ```
 
 <span id="uid-2aebe2533d"></span>

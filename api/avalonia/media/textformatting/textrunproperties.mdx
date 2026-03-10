@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Media/TextFormatting/TextRunProperties.cs">TextRunProperties.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -51,6 +54,9 @@ public class TextRunProperties
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> TextRunProperties
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Derived types:</span> <a href="generictextrunproperties">GenericTextRunProperties</a>
 </div>
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;TextRunProperties&gt;
@@ -78,7 +84,7 @@ This enables the client to implement text run properties in a way that correspon
 #### Equals
 
 ```csharp
-public System.Boolean Equals(Avalonia.Media.TextFormatting.TextRunProperties other)
+public Boolean Equals(Avalonia.Media.TextFormatting.TextRunProperties other)
 ```
 
 <span id="uid-bdf1d6e136"></span>
@@ -86,7 +92,7 @@ public System.Boolean Equals(Avalonia.Media.TextFormatting.TextRunProperties oth
 #### Equals
 
 ```csharp
-public System.Boolean Equals(System.Object obj)
+public Boolean Equals(Object obj)
 ```
 
 <span id="uid-d8f145a993"></span>
@@ -94,7 +100,7 @@ public System.Boolean Equals(System.Object obj)
 ### GetHashCode
 
 ```csharp
-public System.Int32 GetHashCode()
+public Int32 GetHashCode()
 ```
 
 ## Properties
@@ -157,7 +163,7 @@ public Avalonia.Media.FontFeatureCollection FontFeatures { get; set; }
 Em size of font used to format and display text
 
 ```csharp
-public System.Double FontRenderingEmSize { get; set; }
+public Double FontRenderingEmSize { get; set; }
 ```
 
 <span id="uid-8d9e648c28"></span>

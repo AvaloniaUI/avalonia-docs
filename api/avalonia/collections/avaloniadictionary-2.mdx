@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Collections/AvaloniaDictionary.cs">AvaloniaDictionary.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -92,7 +95,7 @@ public AvaloniaDictionary<TKey, TValue>(System.Collections.Generic.IDictionary<T
 Initializes a new instance of the [Avalonia.Collections.AvaloniaDictionary&lt;T1, T2&gt;](xref:Avalonia.Collections.AvaloniaDictionary%602) class.
 
 ```csharp
-public AvaloniaDictionary<TKey, TValue>(System.Int32 capacity)
+public AvaloniaDictionary<TKey, TValue>(Int32 capacity)
 ```
 
 ## Methods
@@ -112,7 +115,7 @@ public AvaloniaDictionary<TKey, TValue>(System.Int32 capacity)
 ### Add
 
 ```csharp
-public System.Void Add(TKey key, TValue value)
+public Void Add(TKey key, TValue value)
 ```
 
 <span id="uid-0dd8c4fd5d"></span>
@@ -120,7 +123,7 @@ public System.Void Add(TKey key, TValue value)
 ### Clear
 
 ```csharp
-public System.Void Clear()
+public Void Clear()
 ```
 
 <span id="uid-16ed1ff6e4"></span>
@@ -128,7 +131,7 @@ public System.Void Clear()
 ### ContainsKey
 
 ```csharp
-public System.Boolean ContainsKey(TKey key)
+public Boolean ContainsKey(TKey key)
 ```
 
 <span id="uid-d6c8a242ea"></span>
@@ -136,7 +139,7 @@ public System.Boolean ContainsKey(TKey key)
 ### CopyTo
 
 ```csharp
-public System.Void CopyTo(System.Collections.Generic.KeyValuePair<TKey, TValue>[] array, System.Int32 arrayIndex)
+public Void CopyTo(System.Collections.Generic.KeyValuePair<TKey, TValue>[] array, Int32 arrayIndex)
 ```
 
 <span id="uid-2e7b7dae3f"></span>
@@ -152,7 +155,7 @@ public System.Collections.Generic.IEnumerator<System.Collections.Generic.KeyValu
 ### Remove
 
 ```csharp
-public System.Boolean Remove(TKey key)
+public Boolean Remove(TKey key)
 ```
 
 <span id="uid-c92bdca6aa"></span>
@@ -160,7 +163,7 @@ public System.Boolean Remove(TKey key)
 ### TryGetValue
 
 ```csharp
-public System.Boolean TryGetValue(TKey key, TValue& value)
+public Boolean TryGetValue(TKey key, TValue& value)
 ```
 
 ## Properties
@@ -178,7 +181,7 @@ public System.Boolean TryGetValue(TKey key, TValue& value)
 ### Count
 
 ```csharp
-public System.Int32 Count { get; set; }
+public Int32 Count { get; set; }
 ```
 
 <span id="uid-847995fe8f"></span>
@@ -186,7 +189,7 @@ public System.Int32 Count { get; set; }
 ### IsReadOnly
 
 ```csharp
-public System.Boolean IsReadOnly { get; set; }
+public Boolean IsReadOnly { get; set; }
 ```
 
 <span id="uid-a05920a999"></span>

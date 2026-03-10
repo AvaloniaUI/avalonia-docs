@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Input/SwipeGestureEventArgs.cs">SwipeGestureEventArgs.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -67,7 +70,7 @@ public class SwipeGestureEventArgs
 Initializes a new instance of [Avalonia.Input.SwipeGestureEventArgs](xref:Avalonia.Input.SwipeGestureEventArgs).
 
 ```csharp
-public SwipeGestureEventArgs(System.Int32 id, Avalonia.Input.SwipeDirection direction, Avalonia.Vector delta, Avalonia.Point startPoint)
+public SwipeGestureEventArgs(Int32 id, Avalonia.Input.SwipeDirection direction, Avalonia.Vector delta, Avalonia.Point startPoint)
 ```
 
 ## Properties
@@ -78,6 +81,10 @@ public SwipeGestureEventArgs(System.Int32 id, Avalonia.Input.SwipeDirection dire
 | [Id](#uid-3e007b97cc) | Gets the unique identifier for this swipe gesture instance. |
 | [StartPoint](#uid-dc842e5582) | Gets the position, relative to the target element, where the swipe started. |
 | [SwipeDirection](#uid-0d9d86b61b) | Gets the direction of the swipe gesture. |
+| [Handled (Inherited from RoutedEventArgs)](../interactivity/routedeventargs.mdx#uid-204d2af354) | Gets or sets a value indicating whether the routed event has already been handled. |
+| [Route (Inherited from RoutedEventArgs)](../interactivity/routedeventargs.mdx#uid-751be73db9) | Gets or sets the routing strategy (direct, bubbling, or tunneling) of the routed event. |
+| [RoutedEvent (Inherited from RoutedEventArgs)](../interactivity/routedeventargs.mdx#uid-4e102999d9) | Gets or sets the routed event associated with these event args. |
+| [Source (Inherited from RoutedEventArgs)](../interactivity/routedeventargs.mdx#uid-4385b523d5) | Gets or sets the source object that raised the routed event. |
 
 <span id="uid-54e791184b"></span>
 
@@ -96,7 +103,7 @@ public Avalonia.Vector Delta { get; set; }
 Gets the unique identifier for this swipe gesture instance.
 
 ```csharp
-public System.Int32 Id { get; set; }
+public Int32 Id { get; set; }
 ```
 
 <span id="uid-dc842e5582"></span>

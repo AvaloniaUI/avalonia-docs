@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/RelativeScalar.cs">RelativeScalar.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -70,7 +73,7 @@ public struct RelativeScalar
 Initializes a new instance of the [Avalonia.RelativeScalar](xref:Avalonia.RelativeScalar) struct.
 
 ```csharp
-public RelativeScalar(System.Double scalar, Avalonia.RelativeUnit unit)
+public RelativeScalar(Double scalar, Avalonia.RelativeUnit unit)
 ```
 
 | Parameter | Description |
@@ -97,7 +100,7 @@ public RelativeScalar(System.Double scalar, Avalonia.RelativeUnit unit)
 #### Equals
 
 ```csharp
-public System.Boolean Equals(Avalonia.RelativeScalar other)
+public Boolean Equals(Avalonia.RelativeScalar other)
 ```
 
 <span id="uid-72efb86c5f"></span>
@@ -105,7 +108,7 @@ public System.Boolean Equals(Avalonia.RelativeScalar other)
 #### Equals
 
 ```csharp
-public System.Boolean Equals(System.Object obj)
+public Boolean Equals(Object obj)
 ```
 
 <span id="uid-7817bde15a"></span>
@@ -113,7 +116,7 @@ public System.Boolean Equals(System.Object obj)
 ### GetHashCode
 
 ```csharp
-public System.Int32 GetHashCode()
+public Int32 GetHashCode()
 ```
 
 <span id="uid-f9f45eb622"></span>
@@ -123,7 +126,7 @@ public System.Int32 GetHashCode()
 Parses a [Avalonia.RelativeScalar](xref:Avalonia.RelativeScalar) string.
 
 ```csharp
-public Avalonia.RelativeScalar Parse(System.String s)
+public Avalonia.RelativeScalar Parse(String s)
 ```
 
 | Parameter | Description |
@@ -139,7 +142,7 @@ Returns: The parsed [Avalonia.RelativeScalar](xref:Avalonia.RelativeScalar).
 Returns a String representing this RelativeScalar instance.
 
 ```csharp
-public System.String ToString()
+public String ToString()
 ```
 
 Returns: The string representation.
@@ -151,7 +154,7 @@ Returns: The string representation.
 Converts a [Avalonia.RelativeScalar](xref:Avalonia.RelativeScalar) into a final value.
 
 ```csharp
-public System.Double ToValue(System.Double size)
+public Double ToValue(Double size)
 ```
 
 Returns: The origin point in pixels.
@@ -203,7 +206,7 @@ public Avalonia.RelativeScalar Middle { get; set; }
 Gets the scalar.
 
 ```csharp
-public System.Double Scalar { get; set; }
+public Double Scalar { get; set; }
 ```
 
 <span id="uid-7ba2c77cd6"></span>

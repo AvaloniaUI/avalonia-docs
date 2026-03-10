@@ -73,7 +73,7 @@ This interface is implemented by [Avalonia.Controls.ResourceDictionary](xref:Ava
 Adds an owner to the resource provider.
 
 ```csharp
-public System.Void AddOwner(Avalonia.Controls.IResourceHost owner)
+public Void AddOwner(Avalonia.Controls.IResourceHost owner)
 ```
 
 | Parameter | Description |
@@ -87,7 +87,7 @@ public System.Void AddOwner(Avalonia.Controls.IResourceHost owner)
 Removes a resource provider owner.
 
 ```csharp
-public System.Void RemoveOwner(Avalonia.Controls.IResourceHost owner)
+public Void RemoveOwner(Avalonia.Controls.IResourceHost owner)
 ```
 
 | Parameter | Description |
@@ -123,7 +123,7 @@ public Avalonia.Controls.IResourceHost Owner { get; set; }
 Raised when the [Avalonia.Controls.IResourceProvider.Owner](xref:Avalonia.Controls.IResourceProvider.Owner) of the resource provider changes.
 
 ```csharp
-public event System.EventHandler OwnerChanged
+public event EventHandler OwnerChanged
 ```
 
 </ApiRefPage>

@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Input/PinchEventArgs.cs">PinchEventArgs.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__signature">
@@ -63,7 +66,7 @@ public class PinchEventArgs
 #### PinchEventArgs
 
 ```csharp
-public PinchEventArgs(System.Double scale, Avalonia.Point scaleOrigin)
+public PinchEventArgs(Double scale, Avalonia.Point scaleOrigin)
 ```
 
 <span id="uid-7e380c914f"></span>
@@ -71,7 +74,7 @@ public PinchEventArgs(System.Double scale, Avalonia.Point scaleOrigin)
 #### PinchEventArgs
 
 ```csharp
-public PinchEventArgs(System.Double scale, Avalonia.Point scaleOrigin, System.Double angle, System.Double angleDelta)
+public PinchEventArgs(Double scale, Avalonia.Point scaleOrigin, Double angle, Double angleDelta)
 ```
 
 ## Properties
@@ -82,6 +85,10 @@ public PinchEventArgs(System.Double scale, Avalonia.Point scaleOrigin, System.Do
 | [AngleDelta](#uid-a3ce085430) | Gets the difference from the previous and current pinch angle. |
 | [Scale](#uid-ef5f4fa05d) | No summary available. |
 | [ScaleOrigin](#uid-368fecfb88) | No summary available. |
+| [Handled (Inherited from RoutedEventArgs)](../interactivity/routedeventargs.mdx#uid-204d2af354) | Gets or sets a value indicating whether the routed event has already been handled. |
+| [Route (Inherited from RoutedEventArgs)](../interactivity/routedeventargs.mdx#uid-751be73db9) | Gets or sets the routing strategy (direct, bubbling, or tunneling) of the routed event. |
+| [RoutedEvent (Inherited from RoutedEventArgs)](../interactivity/routedeventargs.mdx#uid-4e102999d9) | Gets or sets the routed event associated with these event args. |
+| [Source (Inherited from RoutedEventArgs)](../interactivity/routedeventargs.mdx#uid-4385b523d5) | Gets or sets the source object that raised the routed event. |
 
 <span id="uid-022fc25557"></span>
 
@@ -90,7 +97,7 @@ public PinchEventArgs(System.Double scale, Avalonia.Point scaleOrigin, System.Do
 Gets the angle of the pinch gesture, in degrees.
 
 ```csharp
-public System.Double Angle { get; set; }
+public Double Angle { get; set; }
 ```
 
 <span id="uid-a3ce085430"></span>
@@ -100,7 +107,7 @@ public System.Double Angle { get; set; }
 Gets the difference from the previous and current pinch angle.
 
 ```csharp
-public System.Double AngleDelta { get; set; }
+public Double AngleDelta { get; set; }
 ```
 
 <span id="uid-ef5f4fa05d"></span>
@@ -108,7 +115,7 @@ public System.Double AngleDelta { get; set; }
 ### Scale
 
 ```csharp
-public System.Double Scale { get; set; }
+public Double Scale { get; set; }
 ```
 
 <span id="uid-368fecfb88"></span>

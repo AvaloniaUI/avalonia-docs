@@ -32,11 +32,14 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Data/Converters/FuncValueConverter.cs">FuncValueConverter.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
 
-A general purpose [Avalonia.Data.Converters.IValueConverter](xref:Avalonia.Data.Converters.IValueConverter) that uses a [System.Func&lt;T1, T2, T3&gt;](xref:System.Func%603)
+A general purpose [Avalonia.Data.Converters.IValueConverter](xref:Avalonia.Data.Converters.IValueConverter) that uses a [Func&lt;T1, T2, T3&gt;](xref:System.Func%603)
 to provide the converter logic.
 
 </div>
@@ -73,7 +76,7 @@ public class FuncValueConverter<TIn, TParam, TOut>
 #### FuncValueConverter&lt;TIn, TParam, TOut&gt;
 
 ```csharp
-public FuncValueConverter<TIn, TParam, TOut>(System.Func<TIn, TParam, TOut> convert)
+public FuncValueConverter<TIn, TParam, TOut>(Func<TIn, TParam, TOut> convert)
 ```
 
 <span id="uid-9acbf58660"></span>
@@ -81,7 +84,7 @@ public FuncValueConverter<TIn, TParam, TOut>(System.Func<TIn, TParam, TOut> conv
 #### FuncValueConverter&lt;TIn, TParam, TOut&gt;
 
 ```csharp
-public FuncValueConverter<TIn, TParam, TOut>(System.Func<TIn, TParam, TOut> convert, System.Func<TOut, TParam, TIn> convertBack)
+public FuncValueConverter<TIn, TParam, TOut>(Func<TIn, TParam, TOut> convert, Func<TOut, TParam, TIn> convertBack)
 ```
 
 ## Methods
@@ -98,7 +101,7 @@ public FuncValueConverter<TIn, TParam, TOut>(System.Func<TIn, TParam, TOut> conv
 Converts a value.
 
 ```csharp
-public System.Object Convert(System.Object value, System.Type targetType, System.Object parameter, System.Globalization.CultureInfo culture)
+public Object Convert(Object value, Type targetType, Object parameter, System.Globalization.CultureInfo culture)
 ```
 
 | Parameter | Description |
@@ -117,7 +120,7 @@ Returns: The converted value.
 Converts a value.
 
 ```csharp
-public System.Object ConvertBack(System.Object value, System.Type targetType, System.Object parameter, System.Globalization.CultureInfo culture)
+public Object ConvertBack(Object value, Type targetType, Object parameter, System.Globalization.CultureInfo culture)
 ```
 
 | Parameter | Description |

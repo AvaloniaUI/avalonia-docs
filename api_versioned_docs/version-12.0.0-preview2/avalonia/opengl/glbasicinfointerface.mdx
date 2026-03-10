@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.OpenGL/GlBasicInfoInterface.cs">GlBasicInfoInterface.cs</a>, <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.OpenGL/obj/Release/net10.0/DevGenerators/Generator.GetProcAddressInitializationGenerator/globalAvalonia.OpenGL.GlBasicInfoInterface.cs">globalAvalonia.OpenGL.GlBasicInfoInterface.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__signature">
@@ -46,6 +49,9 @@ public class GlBasicInfoInterface
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> GlBasicInfoInterface
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Derived types:</span> <a href="glinterface">GlInterface</a>
+</div>
 </div>
 
 ## Constructors
@@ -59,7 +65,7 @@ public class GlBasicInfoInterface
 ### GlBasicInfoInterface
 
 ```csharp
-public GlBasicInfoInterface(System.Func<System.String, System.IntPtr> getProcAddress)
+public GlBasicInfoInterface(Func<String, IntPtr> getProcAddress)
 ```
 
 ## Methods
@@ -79,7 +85,7 @@ public GlBasicInfoInterface(System.Func<System.String, System.IntPtr> getProcAdd
 ### GetError
 
 ```csharp
-public System.Int32 GetError()
+public Int32 GetError()
 ```
 
 <span id="uid-3dc9cf6f1d"></span>
@@ -87,7 +93,7 @@ public System.Int32 GetError()
 ### GetExtensions
 
 ```csharp
-public System.Collections.Generic.List<System.String> GetExtensions()
+public System.Collections.Generic.List<String> GetExtensions()
 ```
 
 <span id="uid-37f2cd2bf2"></span>
@@ -95,7 +101,7 @@ public System.Collections.Generic.List<System.String> GetExtensions()
 ### GetFloatv
 
 ```csharp
-public System.Void GetFloatv(System.Int32 name, System.Single& rv)
+public Void GetFloatv(Int32 name, Single& rv)
 ```
 
 <span id="uid-961400b97d"></span>
@@ -103,7 +109,7 @@ public System.Void GetFloatv(System.Int32 name, System.Single& rv)
 ### GetIntegerv
 
 ```csharp
-public System.Void GetIntegerv(System.Int32 name, System.Int32& rv)
+public Void GetIntegerv(Int32 name, Int32& rv)
 ```
 
 <span id="uid-6438cbf0f4"></span>
@@ -115,7 +121,7 @@ public System.Void GetIntegerv(System.Int32 name, System.Int32& rv)
 #### GetString
 
 ```csharp
-public System.String GetString(System.Int32 v)
+public String GetString(Int32 v)
 ```
 
 <span id="uid-af86dd6b9e"></span>
@@ -123,7 +129,7 @@ public System.String GetString(System.Int32 v)
 #### GetString
 
 ```csharp
-public System.String GetString(System.Int32 v, System.Int32 index)
+public String GetString(Int32 v, Int32 index)
 ```
 
 <span id="uid-f5216e7f4a"></span>
@@ -131,7 +137,7 @@ public System.String GetString(System.Int32 v, System.Int32 index)
 ### GetStringNative
 
 ```csharp
-public System.IntPtr GetStringNative(System.Int32 v)
+public IntPtr GetStringNative(Int32 v)
 ```
 
 <span id="uid-3f7c8607ab"></span>
@@ -139,7 +145,7 @@ public System.IntPtr GetStringNative(System.Int32 v)
 ### GetStringiNative
 
 ```csharp
-public System.IntPtr GetStringiNative(System.Int32 v, System.Int32 v1)
+public IntPtr GetStringiNative(Int32 v, Int32 v1)
 ```
 
 </ApiRefPage>

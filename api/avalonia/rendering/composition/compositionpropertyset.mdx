@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Rendering/Composition/CompositionPropertySet.cs">CompositionPropertySet.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -82,13 +85,17 @@ public class CompositionPropertySet
 | [TryGetVector2](#uid-c3f177b5d5) | No summary available. |
 | [TryGetVector3](#uid-aede08e71a) | No summary available. |
 | [TryGetVector4](#uid-c5319b1407) | No summary available. |
+| [StartAnimation (Inherited from CompositionObject)](compositionobject.mdx#uid-4d2f25fec7) | Connects an animation with the specified property of the object and starts the animation. |
+| [StartAnimationGroup (Inherited from CompositionObject)](compositionobject.mdx#uid-4846f860a0) | Starts an animation group. The StartAnimationGroup method on CompositionObject lets you start CompositionAnimationGroup. All the animations in the group will be started at the same time on the object. |
+| [StopAnimation (Inherited from CompositionObject)](compositionobject.mdx#uid-01077c2b21) | Disconnects an animation from the specified property and stops the animation. |
+| [StopAnimationGroup (Inherited from CompositionObject)](compositionobject.mdx#uid-81dbd02845) | Stops an animation group. |
 
 <span id="uid-b49484b88b"></span>
 
 ### InsertBoolean
 
 ```csharp
-public System.Void InsertBoolean(System.String propertyName, System.Boolean value)
+public Void InsertBoolean(String propertyName, Boolean value)
 ```
 
 <span id="uid-b81a565f2e"></span>
@@ -96,7 +103,7 @@ public System.Void InsertBoolean(System.String propertyName, System.Boolean valu
 ### InsertColor
 
 ```csharp
-public System.Void InsertColor(System.String propertyName, Avalonia.Media.Color value)
+public Void InsertColor(String propertyName, Avalonia.Media.Color value)
 ```
 
 <span id="uid-9f10c005ee"></span>
@@ -104,7 +111,7 @@ public System.Void InsertColor(System.String propertyName, Avalonia.Media.Color 
 ### InsertMatrix3x2
 
 ```csharp
-public System.Void InsertMatrix3x2(System.String propertyName, System.Numerics.Matrix3x2 value)
+public Void InsertMatrix3x2(String propertyName, System.Numerics.Matrix3x2 value)
 ```
 
 <span id="uid-e81610c741"></span>
@@ -112,7 +119,7 @@ public System.Void InsertMatrix3x2(System.String propertyName, System.Numerics.M
 ### InsertMatrix4x4
 
 ```csharp
-public System.Void InsertMatrix4x4(System.String propertyName, System.Numerics.Matrix4x4 value)
+public Void InsertMatrix4x4(String propertyName, System.Numerics.Matrix4x4 value)
 ```
 
 <span id="uid-68f3a3b336"></span>
@@ -120,7 +127,7 @@ public System.Void InsertMatrix4x4(System.String propertyName, System.Numerics.M
 ### InsertQuaternion
 
 ```csharp
-public System.Void InsertQuaternion(System.String propertyName, System.Numerics.Quaternion value)
+public Void InsertQuaternion(String propertyName, System.Numerics.Quaternion value)
 ```
 
 <span id="uid-73172dde86"></span>
@@ -128,7 +135,7 @@ public System.Void InsertQuaternion(System.String propertyName, System.Numerics.
 ### InsertScalar
 
 ```csharp
-public System.Void InsertScalar(System.String propertyName, System.Single value)
+public Void InsertScalar(String propertyName, Single value)
 ```
 
 <span id="uid-2a399bd65d"></span>
@@ -136,7 +143,7 @@ public System.Void InsertScalar(System.String propertyName, System.Single value)
 ### InsertVector2
 
 ```csharp
-public System.Void InsertVector2(System.String propertyName, System.Numerics.Vector2 value)
+public Void InsertVector2(String propertyName, System.Numerics.Vector2 value)
 ```
 
 <span id="uid-c79eb83025"></span>
@@ -144,7 +151,7 @@ public System.Void InsertVector2(System.String propertyName, System.Numerics.Vec
 ### InsertVector3
 
 ```csharp
-public System.Void InsertVector3(System.String propertyName, System.Numerics.Vector3 value)
+public Void InsertVector3(String propertyName, System.Numerics.Vector3 value)
 ```
 
 <span id="uid-dbbfff0d8c"></span>
@@ -152,7 +159,7 @@ public System.Void InsertVector3(System.String propertyName, System.Numerics.Vec
 ### InsertVector4
 
 ```csharp
-public System.Void InsertVector4(System.String propertyName, System.Numerics.Vector4 value)
+public Void InsertVector4(String propertyName, System.Numerics.Vector4 value)
 ```
 
 <span id="uid-35a5bf41c6"></span>
@@ -160,7 +167,7 @@ public System.Void InsertVector4(System.String propertyName, System.Numerics.Vec
 ### TryGetBoolean
 
 ```csharp
-public Avalonia.Rendering.Composition.CompositionGetValueStatus TryGetBoolean(System.String propertyName, System.Boolean& value)
+public Avalonia.Rendering.Composition.CompositionGetValueStatus TryGetBoolean(String propertyName, Boolean& value)
 ```
 
 <span id="uid-dfe711f1e8"></span>
@@ -168,7 +175,7 @@ public Avalonia.Rendering.Composition.CompositionGetValueStatus TryGetBoolean(Sy
 ### TryGetColor
 
 ```csharp
-public Avalonia.Rendering.Composition.CompositionGetValueStatus TryGetColor(System.String propertyName, Avalonia.Media.Color& value)
+public Avalonia.Rendering.Composition.CompositionGetValueStatus TryGetColor(String propertyName, Avalonia.Media.Color& value)
 ```
 
 <span id="uid-7862025530"></span>
@@ -176,7 +183,7 @@ public Avalonia.Rendering.Composition.CompositionGetValueStatus TryGetColor(Syst
 ### TryGetMatrix3x2
 
 ```csharp
-public Avalonia.Rendering.Composition.CompositionGetValueStatus TryGetMatrix3x2(System.String propertyName, System.Numerics.Matrix3x2& value)
+public Avalonia.Rendering.Composition.CompositionGetValueStatus TryGetMatrix3x2(String propertyName, System.Numerics.Matrix3x2& value)
 ```
 
 <span id="uid-498c352b46"></span>
@@ -184,7 +191,7 @@ public Avalonia.Rendering.Composition.CompositionGetValueStatus TryGetMatrix3x2(
 ### TryGetMatrix4x4
 
 ```csharp
-public Avalonia.Rendering.Composition.CompositionGetValueStatus TryGetMatrix4x4(System.String propertyName, System.Numerics.Matrix4x4& value)
+public Avalonia.Rendering.Composition.CompositionGetValueStatus TryGetMatrix4x4(String propertyName, System.Numerics.Matrix4x4& value)
 ```
 
 <span id="uid-5ca5dc503f"></span>
@@ -192,7 +199,7 @@ public Avalonia.Rendering.Composition.CompositionGetValueStatus TryGetMatrix4x4(
 ### TryGetQuaternion
 
 ```csharp
-public Avalonia.Rendering.Composition.CompositionGetValueStatus TryGetQuaternion(System.String propertyName, System.Numerics.Quaternion& value)
+public Avalonia.Rendering.Composition.CompositionGetValueStatus TryGetQuaternion(String propertyName, System.Numerics.Quaternion& value)
 ```
 
 <span id="uid-fff8ed75dc"></span>
@@ -200,7 +207,7 @@ public Avalonia.Rendering.Composition.CompositionGetValueStatus TryGetQuaternion
 ### TryGetScalar
 
 ```csharp
-public Avalonia.Rendering.Composition.CompositionGetValueStatus TryGetScalar(System.String propertyName, System.Single& value)
+public Avalonia.Rendering.Composition.CompositionGetValueStatus TryGetScalar(String propertyName, Single& value)
 ```
 
 <span id="uid-c3f177b5d5"></span>
@@ -208,7 +215,7 @@ public Avalonia.Rendering.Composition.CompositionGetValueStatus TryGetScalar(Sys
 ### TryGetVector2
 
 ```csharp
-public Avalonia.Rendering.Composition.CompositionGetValueStatus TryGetVector2(System.String propertyName, System.Numerics.Vector2& value)
+public Avalonia.Rendering.Composition.CompositionGetValueStatus TryGetVector2(String propertyName, System.Numerics.Vector2& value)
 ```
 
 <span id="uid-aede08e71a"></span>
@@ -216,7 +223,7 @@ public Avalonia.Rendering.Composition.CompositionGetValueStatus TryGetVector2(Sy
 ### TryGetVector3
 
 ```csharp
-public Avalonia.Rendering.Composition.CompositionGetValueStatus TryGetVector3(System.String propertyName, System.Numerics.Vector3& value)
+public Avalonia.Rendering.Composition.CompositionGetValueStatus TryGetVector3(String propertyName, System.Numerics.Vector3& value)
 ```
 
 <span id="uid-c5319b1407"></span>
@@ -224,8 +231,16 @@ public Avalonia.Rendering.Composition.CompositionGetValueStatus TryGetVector3(Sy
 ### TryGetVector4
 
 ```csharp
-public Avalonia.Rendering.Composition.CompositionGetValueStatus TryGetVector4(System.String propertyName, System.Numerics.Vector4& value)
+public Avalonia.Rendering.Composition.CompositionGetValueStatus TryGetVector4(String propertyName, System.Numerics.Vector4& value)
 ```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Compositor (Inherited from CompositionObject)](compositionobject.mdx#uid-bd6bbc1391) | The associated Compositor |
+| [ImplicitAnimations (Inherited from CompositionObject)](compositionobject.mdx#uid-3929e9ea34) | The collection of implicit animations attached to this object. |
+| [IsDisposed (Inherited from CompositionObject)](compositionobject.mdx#uid-e01437c946) | No summary available. |
 
 </ApiRefPage>
 

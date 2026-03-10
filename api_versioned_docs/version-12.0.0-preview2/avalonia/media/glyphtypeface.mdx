@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Media/GlyphTypeface.cs">GlyphTypeface.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -103,7 +106,7 @@ cannot be `null`. |
 ### Dispose
 
 ```csharp
-public System.Void Dispose()
+public Void Dispose()
 ```
 
 <span id="uid-224187e3e5"></span>
@@ -115,7 +118,7 @@ public System.Void Dispose()
 #### TryGetGlyphMetrics
 
 ```csharp
-public System.Boolean TryGetGlyphMetrics(System.ReadOnlySpan<System.UInt16> glyphIds, System.Span<Avalonia.Media.GlyphMetrics> metrics)
+public Boolean TryGetGlyphMetrics(ReadOnlySpan<UInt16> glyphIds, Span<Avalonia.Media.GlyphMetrics> metrics)
 ```
 
 <span id="uid-18152dfbd1"></span>
@@ -123,7 +126,7 @@ public System.Boolean TryGetGlyphMetrics(System.ReadOnlySpan<System.UInt16> glyp
 #### TryGetGlyphMetrics
 
 ```csharp
-public System.Boolean TryGetGlyphMetrics(System.UInt16 glyph, Avalonia.Media.GlyphMetrics& metrics)
+public Boolean TryGetGlyphMetrics(UInt16 glyph, Avalonia.Media.GlyphMetrics& metrics)
 ```
 
 <span id="uid-327caa7a57"></span>
@@ -131,7 +134,7 @@ public System.Boolean TryGetGlyphMetrics(System.UInt16 glyph, Avalonia.Media.Gly
 ### TryGetHorizontalGlyphAdvance
 
 ```csharp
-public System.Boolean TryGetHorizontalGlyphAdvance(System.UInt16 glyphId, System.UInt16& advance)
+public Boolean TryGetHorizontalGlyphAdvance(UInt16 glyphId, UInt16& advance)
 ```
 
 <span id="uid-fff209abba"></span>
@@ -139,7 +142,7 @@ public System.Boolean TryGetHorizontalGlyphAdvance(System.UInt16 glyphId, System
 ### TryGetHorizontalGlyphAdvances
 
 ```csharp
-public System.Boolean TryGetHorizontalGlyphAdvances(System.ReadOnlySpan<System.UInt16> glyphIds, System.Span<System.UInt16> advances)
+public Boolean TryGetHorizontalGlyphAdvances(ReadOnlySpan<UInt16> glyphIds, Span<UInt16> advances)
 ```
 
 ## Properties
@@ -178,7 +181,7 @@ public Avalonia.Media.Fonts.Tables.Cmap.CharacterToGlyphMap CharacterToGlyphMap 
 Gets a read-only mapping of culture-specific face names.
 
 ```csharp
-public System.Collections.Generic.IReadOnlyDictionary<System.Globalization.CultureInfo, System.String> FaceNames { get; set; }
+public System.Collections.Generic.IReadOnlyDictionary<System.Globalization.CultureInfo, String> FaceNames { get; set; }
 ```
 
 <span id="uid-7117edd23d"></span>
@@ -188,7 +191,7 @@ public System.Collections.Generic.IReadOnlyDictionary<System.Globalization.Cultu
 Gets the family name of the font.
 
 ```csharp
-public System.String FamilyName { get; set; }
+public String FamilyName { get; set; }
 ```
 
 <span id="uid-c2fc7a9ce5"></span>
@@ -198,7 +201,7 @@ public System.String FamilyName { get; set; }
 Gets a read-only mapping of localized culture-specific family names.
 
 ```csharp
-public System.Collections.Generic.IReadOnlyDictionary<System.Globalization.CultureInfo, System.String> FamilyNames { get; set; }
+public System.Collections.Generic.IReadOnlyDictionary<System.Globalization.CultureInfo, String> FamilyNames { get; set; }
 ```
 
 <span id="uid-d4b3d5b8f6"></span>
@@ -218,7 +221,7 @@ public Avalonia.Media.FontSimulations FontSimulations { get; set; }
 Gets the number of glyphs held by this font.
 
 ```csharp
-public System.Int32 GlyphCount { get; set; }
+public Int32 GlyphCount { get; set; }
 ```
 
 <span id="uid-49ad964e00"></span>
@@ -288,7 +291,7 @@ public Avalonia.Media.ITextShaperTypeface TextShaperTypeface { get; set; }
 Gets the typographic family name of the font.
 
 ```csharp
-public System.String TypographicFamilyName { get; set; }
+public String TypographicFamilyName { get; set; }
 ```
 
 <span id="uid-076de7204b"></span>

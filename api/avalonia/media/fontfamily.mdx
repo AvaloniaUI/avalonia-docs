@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Media/FontFamily.cs">FontFamily.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__signature">
@@ -65,7 +68,7 @@ public class FontFamily
 Initializes a new instance of the [Avalonia.Media.FontFamily](xref:Avalonia.Media.FontFamily) class.
 
 ```csharp
-public FontFamily(System.String name)
+public FontFamily(String name)
 ```
 
 | Parameter | Description |
@@ -79,7 +82,7 @@ public FontFamily(System.String name)
 Initializes a new instance of the [Avalonia.Media.FontFamily](xref:Avalonia.Media.FontFamily) class.
 
 ```csharp
-public FontFamily(System.Uri baseUri, System.String name)
+public FontFamily(Uri baseUri, String name)
 ```
 
 | Parameter | Description |
@@ -98,14 +101,14 @@ public FontFamily(System.Uri baseUri, System.String name)
 | [Equals](#uid-cd319f701c) | No summary available. |
 | [GetHashCode](#uid-74ebb27863) | Returns a hash code for this instance. |
 | [Parse (2 overloads)](#uid-4a007a1a18) | Parses a Avalonia.Media.FontFamily string. |
-| [ToString](#uid-95520d9eee) | Returns a System.String that represents this instance. |
+| [ToString](#uid-95520d9eee) | Returns a String that represents this instance. |
 
 <span id="uid-cd319f701c"></span>
 
 ### Equals
 
 ```csharp
-public System.Boolean Equals(System.Object obj)
+public Boolean Equals(Object obj)
 ```
 
 <span id="uid-74ebb27863"></span>
@@ -115,7 +118,7 @@ public System.Boolean Equals(System.Object obj)
 Returns a hash code for this instance.
 
 ```csharp
-public System.Int32 GetHashCode()
+public Int32 GetHashCode()
 ```
 
 Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
@@ -131,7 +134,7 @@ Returns: A hash code for this instance, suitable for use in hashing algorithms a
 Parses a [Avalonia.Media.FontFamily](xref:Avalonia.Media.FontFamily) string.
 
 ```csharp
-public Avalonia.Media.FontFamily Parse(System.String s)
+public Avalonia.Media.FontFamily Parse(String s)
 ```
 
 | Parameter | Description |
@@ -149,7 +152,7 @@ public Avalonia.Media.FontFamily Parse(System.String s)
 Parses a [Avalonia.Media.FontFamily](xref:Avalonia.Media.FontFamily) string.
 
 ```csharp
-public Avalonia.Media.FontFamily Parse(System.String s, System.Uri baseUri)
+public Avalonia.Media.FontFamily Parse(String s, Uri baseUri)
 ```
 
 | Parameter | Description |
@@ -165,13 +168,13 @@ public Avalonia.Media.FontFamily Parse(System.String s, System.Uri baseUri)
 
 ### ToString
 
-Returns a [System.String](xref:System.String) that represents this instance.
+Returns a [String](xref:System.String) that represents this instance.
 
 ```csharp
-public System.String ToString()
+public String ToString()
 ```
 
-Returns: A [System.String](xref:System.String) that represents this instance.
+Returns: A [String](xref:System.String) that represents this instance.
 
 ## Properties
 
@@ -234,7 +237,7 @@ Value: The family key.
 Gets the primary family name of the font family.
 
 ```csharp
-public System.String Name { get; set; }
+public String Name { get; set; }
 ```
 
 Value: The primary name of the font family.
@@ -250,7 +253,7 @@ Value: The primary name of the font family.
 ### DefaultFontFamilyName
 
 ```csharp
-public System.String DefaultFontFamilyName
+public String DefaultFontFamilyName
 ```
 
 </ApiRefPage>

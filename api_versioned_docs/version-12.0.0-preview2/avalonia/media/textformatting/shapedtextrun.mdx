@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Media/TextFormatting/ShapedTextRun.cs">ShapedTextRun.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -84,7 +87,7 @@ public ShapedTextRun(Avalonia.Media.TextFormatting.ShapedBuffer shapedBuffer, Av
 ### Dispose
 
 ```csharp
-public System.Void Dispose()
+public Void Dispose()
 ```
 
 <span id="uid-69b2f1feed"></span>
@@ -94,7 +97,7 @@ public System.Void Dispose()
 Draws the [Avalonia.Media.TextFormatting.DrawableTextRun](xref:Avalonia.Media.TextFormatting.DrawableTextRun) at the given origin.
 
 ```csharp
-public System.Void Draw(Avalonia.Media.DrawingContext drawingContext, Avalonia.Point origin)
+public Void Draw(Avalonia.Media.DrawingContext drawingContext, Avalonia.Point origin)
 ```
 
 | Parameter | Description |
@@ -107,7 +110,7 @@ public System.Void Draw(Avalonia.Media.DrawingContext drawingContext, Avalonia.P
 ### TryMeasureCharacters
 
 ```csharp
-public System.Boolean TryMeasureCharacters(System.Double availableWidth, System.Int32& length)
+public Boolean TryMeasureCharacters(Double availableWidth, Int32& length)
 ```
 
 ## Properties
@@ -130,7 +133,7 @@ public System.Boolean TryMeasureCharacters(System.Double availableWidth, System.
 ### Baseline
 
 ```csharp
-public System.Double Baseline { get; set; }
+public Double Baseline { get; set; }
 ```
 
 <span id="uid-a55212ac10"></span>
@@ -138,7 +141,7 @@ public System.Double Baseline { get; set; }
 ### BidiLevel
 
 ```csharp
-public System.SByte BidiLevel { get; set; }
+public SByte BidiLevel { get; set; }
 ```
 
 <span id="uid-b7d69aea23"></span>
@@ -154,7 +157,7 @@ public Avalonia.Media.GlyphRun GlyphRun { get; set; }
 ### IsReversed
 
 ```csharp
-public System.Boolean IsReversed { get; set; }
+public Boolean IsReversed { get; set; }
 ```
 
 <span id="uid-f94822b621"></span>
@@ -164,7 +167,7 @@ public System.Boolean IsReversed { get; set; }
 Gets the text source length.
 
 ```csharp
-public System.Int32 Length { get; set; }
+public Int32 Length { get; set; }
 ```
 
 <span id="uid-7b21cc5c6b"></span>
@@ -200,7 +203,7 @@ public Avalonia.Size Size { get; set; }
 Gets the text run's text.
 
 ```csharp
-public System.ReadOnlyMemory<System.Char> Text { get; set; }
+public ReadOnlyMemory<Char> Text { get; set; }
 ```
 
 <span id="uid-30138f42fd"></span>
@@ -210,6 +213,12 @@ public System.ReadOnlyMemory<System.Char> Text { get; set; }
 ```csharp
 public Avalonia.Media.TextFormatting.TextMetrics TextMetrics { get; set; }
 ```
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [DefaultTextSourceLength (Inherited from TextRun)](textrun.mdx#uid-f86dc003de) | No summary available. |
 
 </ApiRefPage>
 

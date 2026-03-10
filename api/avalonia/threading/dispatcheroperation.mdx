@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Threading/DispatcherOperation.cs">DispatcherOperation.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__signature">
@@ -45,6 +48,9 @@ public class DispatcherOperation
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> DispatcherOperation
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Derived types:</span> <a href="dispatcheroperation-1">DispatcherOperation&lt;T&gt;</a>
 </div>
 </div>
 
@@ -62,7 +68,7 @@ public class DispatcherOperation
 ### Abort
 
 ```csharp
-public System.Boolean Abort()
+public Boolean Abort()
 ```
 
 <span id="uid-312c00ca75"></span>
@@ -94,7 +100,7 @@ public System.Threading.Tasks.Task GetTask()
 Waits for this operation to complete.
 
 ```csharp
-public System.Void Wait()
+public Void Wait()
 ```
 
 Returns: The status of the operation. To obtain the return value
@@ -107,7 +113,7 @@ of the invoked delegate, use the Result property.
 Waits for this operation to complete.
 
 ```csharp
-public System.Void Wait(System.TimeSpan timeout)
+public Void Wait(TimeSpan timeout)
 ```
 
 | Parameter | Description |
@@ -160,7 +166,7 @@ public Avalonia.Threading.DispatcherOperationStatus Status { get; set; }
 An event that is raised when the operation is aborted or canceled.
 
 ```csharp
-public event System.EventHandler Aborted
+public event EventHandler Aborted
 ```
 
 <span id="uid-b9f2587a42"></span>
@@ -170,7 +176,7 @@ public event System.EventHandler Aborted
 An event that is raised when the operation completes.
 
 ```csharp
-public event System.EventHandler Completed
+public event EventHandler Completed
 ```
 
 </ApiRefPage>

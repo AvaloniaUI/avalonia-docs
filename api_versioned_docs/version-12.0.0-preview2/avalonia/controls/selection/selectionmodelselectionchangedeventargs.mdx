@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Controls/Selection/SelectionModelSelectionChangedEventArgs.cs">SelectionModelSelectionChangedEventArgs.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__signature">
@@ -45,6 +48,9 @@ public class SelectionModelSelectionChangedEventArgs
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Inheritance:</span> EventArgs <span className="apiref-page__relation-separator">-&gt;</span> SelectionModelSelectionChangedEventArgs
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Derived types:</span> <a href="selectionmodelselectionchangedeventargs-1">SelectionModelSelectionChangedEventArgs&lt;T&gt;</a>
 </div>
 </div>
 
@@ -64,7 +70,7 @@ public class SelectionModelSelectionChangedEventArgs
 Gets the indexes of the items that were removed from the selection.
 
 ```csharp
-public System.Collections.Generic.IReadOnlyList<System.Int32> DeselectedIndexes { get; set; }
+public System.Collections.Generic.IReadOnlyList<Int32> DeselectedIndexes { get; set; }
 ```
 
 <span id="uid-c4a60d0016"></span>
@@ -74,7 +80,7 @@ public System.Collections.Generic.IReadOnlyList<System.Int32> DeselectedIndexes 
 Gets the items that were removed from the selection.
 
 ```csharp
-public System.Collections.Generic.IReadOnlyList<System.Object> DeselectedItems { get; set; }
+public System.Collections.Generic.IReadOnlyList<Object> DeselectedItems { get; set; }
 ```
 
 <span id="uid-adb8a37055"></span>
@@ -84,7 +90,7 @@ public System.Collections.Generic.IReadOnlyList<System.Object> DeselectedItems {
 Gets the indexes of the items that were added to the selection.
 
 ```csharp
-public System.Collections.Generic.IReadOnlyList<System.Int32> SelectedIndexes { get; set; }
+public System.Collections.Generic.IReadOnlyList<Int32> SelectedIndexes { get; set; }
 ```
 
 <span id="uid-7b12f5b7ee"></span>
@@ -94,7 +100,7 @@ public System.Collections.Generic.IReadOnlyList<System.Int32> SelectedIndexes { 
 Gets the items that were added to the selection.
 
 ```csharp
-public System.Collections.Generic.IReadOnlyList<System.Object> SelectedItems { get; set; }
+public System.Collections.Generic.IReadOnlyList<Object> SelectedItems { get; set; }
 ```
 
 </ApiRefPage>

@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Media/UnicodeRange.cs">UnicodeRange.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__signature">
@@ -62,7 +65,7 @@ public struct UnicodeRangeSegment
 ### UnicodeRangeSegment
 
 ```csharp
-public UnicodeRangeSegment(System.Int32 start, System.Int32 end)
+public UnicodeRangeSegment(Int32 start, Int32 end)
 ```
 
 ## Methods
@@ -84,7 +87,7 @@ public UnicodeRangeSegment(System.Int32 start, System.Int32 end)
 #### Equals
 
 ```csharp
-public System.Boolean Equals(Avalonia.Media.UnicodeRangeSegment other)
+public Boolean Equals(Avalonia.Media.UnicodeRangeSegment other)
 ```
 
 <span id="uid-67cc188d7d"></span>
@@ -92,7 +95,7 @@ public System.Boolean Equals(Avalonia.Media.UnicodeRangeSegment other)
 #### Equals
 
 ```csharp
-public System.Boolean Equals(System.Object obj)
+public Boolean Equals(Object obj)
 ```
 
 <span id="uid-47fa57755e"></span>
@@ -100,7 +103,7 @@ public System.Boolean Equals(System.Object obj)
 ### GetHashCode
 
 ```csharp
-public System.Int32 GetHashCode()
+public Int32 GetHashCode()
 ```
 
 <span id="uid-7df3189b09"></span>
@@ -110,7 +113,7 @@ public System.Int32 GetHashCode()
 Determines if given value is inside the range segment.
 
 ```csharp
-public System.Boolean IsInRange(System.Int32 value)
+public Boolean IsInRange(Int32 value)
 ```
 
 | Parameter | Description |
@@ -126,7 +129,7 @@ Returns: `true` If given value is inside the range segment, `false` otherwise.
 Parses a [Avalonia.Media.UnicodeRangeSegment](xref:Avalonia.Media.UnicodeRangeSegment).
 
 ```csharp
-public Avalonia.Media.UnicodeRangeSegment Parse(System.String s)
+public Avalonia.Media.UnicodeRangeSegment Parse(String s)
 ```
 
 | Parameter | Description |
@@ -137,14 +140,14 @@ Returns: The parsed [Avalonia.Media.UnicodeRangeSegment](xref:Avalonia.Media.Uni
 
 #### Exceptions
 
-- [System.FormatException](xref:System.FormatException)
+- [FormatException](xref:System.FormatException)
 
 <span id="uid-55a4667104"></span>
 
 ### ToString
 
 ```csharp
-public System.String ToString()
+public String ToString()
 ```
 
 ## Properties
@@ -161,7 +164,7 @@ public System.String ToString()
 Get the end of the segment.
 
 ```csharp
-public System.Int32 End { get; set; }
+public Int32 End { get; set; }
 ```
 
 <span id="uid-a14df5f3dc"></span>
@@ -171,7 +174,7 @@ public System.Int32 End { get; set; }
 Get the start of the segment.
 
 ```csharp
-public System.Int32 Start { get; set; }
+public Int32 Start { get; set; }
 ```
 
 </ApiRefPage>

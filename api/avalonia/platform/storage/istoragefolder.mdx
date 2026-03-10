@@ -71,7 +71,7 @@ public interface IStorageFolder
 Creates a file with specified name as a child of the current storage folder
 
 ```csharp
-public System.Threading.Tasks.Task<Avalonia.Platform.Storage.IStorageFile> CreateFileAsync(System.String name)
+public System.Threading.Tasks.Task<Avalonia.Platform.Storage.IStorageFile> CreateFileAsync(String name)
 ```
 
 | Parameter | Description |
@@ -87,7 +87,7 @@ Returns: A new [Avalonia.Platform.Storage.IStorageFile](xref:Avalonia.Platform.S
 Creates a folder with specified name as a child of the current storage folder
 
 ```csharp
-public System.Threading.Tasks.Task<Avalonia.Platform.Storage.IStorageFolder> CreateFolderAsync(System.String name)
+public System.Threading.Tasks.Task<Avalonia.Platform.Storage.IStorageFolder> CreateFolderAsync(String name)
 ```
 
 | Parameter | Description |
@@ -103,7 +103,7 @@ Returns: A new [Avalonia.Platform.Storage.IStorageFolder](xref:Avalonia.Platform
 Gets the file with the specified name from the current folder.
 
 ```csharp
-public System.Threading.Tasks.Task<Avalonia.Platform.Storage.IStorageFile> GetFileAsync(System.String name)
+public System.Threading.Tasks.Task<Avalonia.Platform.Storage.IStorageFile> GetFileAsync(String name)
 ```
 
 | Parameter | Description |
@@ -119,7 +119,7 @@ Returns: When this method completes successfully, it returns the file with the s
 Gets the folder with the specified name from the current folder.
 
 ```csharp
-public System.Threading.Tasks.Task<Avalonia.Platform.Storage.IStorageFolder> GetFolderAsync(System.String name)
+public System.Threading.Tasks.Task<Avalonia.Platform.Storage.IStorageFolder> GetFolderAsync(String name)
 ```
 
 | Parameter | Description |

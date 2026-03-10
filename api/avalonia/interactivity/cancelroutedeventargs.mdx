@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Interactivity/CancelRoutedEventArgs.cs">CancelRoutedEventArgs.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -95,7 +98,7 @@ public CancelRoutedEventArgs(Avalonia.Interactivity.RoutedEvent routedEvent)
 Initializes a new instance of the [Avalonia.Interactivity.CancelRoutedEventArgs](xref:Avalonia.Interactivity.CancelRoutedEventArgs) class.
 
 ```csharp
-public CancelRoutedEventArgs(Avalonia.Interactivity.RoutedEvent routedEvent, System.Object source)
+public CancelRoutedEventArgs(Avalonia.Interactivity.RoutedEvent routedEvent, Object source)
 ```
 
 | Parameter | Description |
@@ -108,6 +111,10 @@ public CancelRoutedEventArgs(Avalonia.Interactivity.RoutedEvent routedEvent, Sys
 | Name | Description |
 | --- | --- |
 | [Cancel](#uid-bfc03d80c6) | Gets or sets a value indicating whether the routed event should be canceled. |
+| [Handled (Inherited from RoutedEventArgs)](routedeventargs.mdx#uid-204d2af354) | Gets or sets a value indicating whether the routed event has already been handled. |
+| [Route (Inherited from RoutedEventArgs)](routedeventargs.mdx#uid-751be73db9) | Gets or sets the routing strategy (direct, bubbling, or tunneling) of the routed event. |
+| [RoutedEvent (Inherited from RoutedEventArgs)](routedeventargs.mdx#uid-4e102999d9) | Gets or sets the routed event associated with these event args. |
+| [Source (Inherited from RoutedEventArgs)](routedeventargs.mdx#uid-4385b523d5) | Gets or sets the source object that raised the routed event. |
 
 <span id="uid-bfc03d80c6"></span>
 
@@ -116,7 +123,7 @@ public CancelRoutedEventArgs(Avalonia.Interactivity.RoutedEvent routedEvent, Sys
 Gets or sets a value indicating whether the routed event should be canceled.
 
 ```csharp
-public System.Boolean Cancel { get; set; }
+public Boolean Cancel { get; set; }
 ```
 
 </ApiRefPage>

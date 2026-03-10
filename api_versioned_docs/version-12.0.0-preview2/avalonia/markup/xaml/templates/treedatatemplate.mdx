@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Markup/Avalonia.Markup.Xaml/Templates/TreeDataTemplate.cs">TreeDataTemplate.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__signature">
@@ -78,7 +81,7 @@ public TreeDataTemplate()
 ### BindChildren
 
 ```csharp
-public System.IDisposable BindChildren(Avalonia.AvaloniaObject target, Avalonia.AvaloniaProperty targetProperty, System.Object item)
+public IDisposable BindChildren(Avalonia.AvaloniaObject target, Avalonia.AvaloniaProperty targetProperty, Object item)
 ```
 
 <span id="uid-b87afa8c44"></span>
@@ -86,7 +89,7 @@ public System.IDisposable BindChildren(Avalonia.AvaloniaObject target, Avalonia.
 ### Build
 
 ```csharp
-public Avalonia.Controls.Control Build(System.Object data)
+public Avalonia.Controls.Control Build(Object data)
 ```
 
 <span id="uid-30a3e71557"></span>
@@ -94,7 +97,7 @@ public Avalonia.Controls.Control Build(System.Object data)
 ### Match
 
 ```csharp
-public System.Boolean Match(System.Object data)
+public Boolean Match(Object data)
 ```
 
 ## Properties
@@ -110,7 +113,7 @@ public System.Boolean Match(System.Object data)
 ### Content
 
 ```csharp
-public System.Object Content { get; set; }
+public Object Content { get; set; }
 ```
 
 <span id="uid-979ff1955f"></span>
@@ -118,7 +121,7 @@ public System.Object Content { get; set; }
 ### DataType
 
 ```csharp
-public System.Type DataType { get; set; }
+public Type DataType { get; set; }
 ```
 
 <span id="uid-592a162b6f"></span>

@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Input/Platform/KeyGestureFormatInfo.cs">KeyGestureFormatInfo.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -68,7 +71,7 @@ public class KeyGestureFormatInfo
 ### KeyGestureFormatInfo
 
 ```csharp
-public KeyGestureFormatInfo(System.Collections.Generic.IReadOnlyDictionary<Avalonia.Input.Key, System.String> platformKeyOverrides, System.String meta, System.String ctrl, System.String alt, System.String shift)
+public KeyGestureFormatInfo(System.Collections.Generic.IReadOnlyDictionary<Avalonia.Input.Key, String> platformKeyOverrides, String meta, String ctrl, String alt, String shift)
 ```
 
 ## Methods
@@ -89,7 +92,7 @@ NOTE: If platformKeyOverrides is null, this is assumed to be the Invariant and t
 The plain Enum string is returned instead.
 
 ```csharp
-public System.String FormatKey(Avalonia.Input.Key key)
+public String FormatKey(Avalonia.Input.Key key)
 ```
 
 | Parameter | Description |
@@ -103,7 +106,7 @@ Returns: The appropriate platform specific or common override if present, key.To
 ### GetFormat
 
 ```csharp
-public System.Object GetFormat(System.Type formatType)
+public Object GetFormat(Type formatType)
 ```
 
 <span id="uid-c918e9fb28"></span>
@@ -116,7 +119,7 @@ Gets the most appropriate KeyGestureFormatInfo for the IFormatProvider requested
 3. The Invariant otherwise.
 
 ```csharp
-public Avalonia.Input.Platform.KeyGestureFormatInfo GetInstance(System.IFormatProvider formatProvider)
+public Avalonia.Input.Platform.KeyGestureFormatInfo GetInstance(IFormatProvider formatProvider)
 ```
 
 | Parameter | Description |
@@ -140,7 +143,7 @@ public Avalonia.Input.Platform.KeyGestureFormatInfo GetInstance(System.IFormatPr
 The string used to represent Alt on the appropriate platform. Defaults to "Alt".
 
 ```csharp
-public System.String Alt { get; set; }
+public String Alt { get; set; }
 ```
 
 <span id="uid-7adb04c43b"></span>
@@ -150,7 +153,7 @@ public System.String Alt { get; set; }
 The string used to represent Ctrl on the appropriate platform. Defaults to "Ctrl".
 
 ```csharp
-public System.String Ctrl { get; set; }
+public String Ctrl { get; set; }
 ```
 
 <span id="uid-9acb50d4dd"></span>
@@ -170,7 +173,7 @@ public Avalonia.Input.Platform.KeyGestureFormatInfo Invariant { get; set; }
 The string used to represent Meta on the appropriate platform. Defaults to "Cmd".
 
 ```csharp
-public System.String Meta { get; set; }
+public String Meta { get; set; }
 ```
 
 <span id="uid-1970ae80f7"></span>
@@ -180,7 +183,7 @@ public System.String Meta { get; set; }
 The string used to represent Shift on the appropriate platform. Defaults to "Shift".
 
 ```csharp
-public System.String Shift { get; set; }
+public String Shift { get; set; }
 ```
 
 </ApiRefPage>

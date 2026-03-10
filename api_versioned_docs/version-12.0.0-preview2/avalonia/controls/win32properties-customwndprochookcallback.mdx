@@ -59,7 +59,7 @@ public delegate Win32Properties.CustomWndProcHookCallback
 ### Win32Properties.CustomWndProcHookCallback
 
 ```csharp
-public Win32Properties.CustomWndProcHookCallback(System.Object object, System.IntPtr method)
+public Win32Properties.CustomWndProcHookCallback(Object object, IntPtr method)
 ```
 
 ## Methods
@@ -75,7 +75,7 @@ public Win32Properties.CustomWndProcHookCallback(System.Object object, System.In
 ### BeginInvoke
 
 ```csharp
-public System.IAsyncResult BeginInvoke(System.IntPtr hWnd, System.UInt32 msg, System.IntPtr wParam, System.IntPtr lParam, System.Boolean& handled, System.AsyncCallback callback, System.Object object)
+public IAsyncResult BeginInvoke(IntPtr hWnd, UInt32 msg, IntPtr wParam, IntPtr lParam, Boolean& handled, AsyncCallback callback, Object object)
 ```
 
 <span id="uid-15ef5e85f7"></span>
@@ -83,7 +83,7 @@ public System.IAsyncResult BeginInvoke(System.IntPtr hWnd, System.UInt32 msg, Sy
 ### EndInvoke
 
 ```csharp
-public System.IntPtr EndInvoke(System.Boolean& handled, System.IAsyncResult result)
+public IntPtr EndInvoke(Boolean& handled, IAsyncResult result)
 ```
 
 <span id="uid-aa55c79cf3"></span>
@@ -91,7 +91,7 @@ public System.IntPtr EndInvoke(System.Boolean& handled, System.IAsyncResult resu
 ### Invoke
 
 ```csharp
-public System.IntPtr Invoke(System.IntPtr hWnd, System.UInt32 msg, System.IntPtr wParam, System.IntPtr lParam, System.Boolean& handled)
+public IntPtr Invoke(IntPtr hWnd, UInt32 msg, IntPtr wParam, IntPtr lParam, Boolean& handled)
 ```
 
 </ApiRefPage>

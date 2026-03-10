@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Utilities/TypeUtilities.cs">TypeUtilities.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -77,7 +80,7 @@ public class TypeUtilities
 #### AcceptsNull
 
 ```csharp
-public System.Boolean AcceptsNull<T>()
+public Boolean AcceptsNull<T>()
 ```
 
 <span id="uid-870e76f538"></span>
@@ -87,7 +90,7 @@ public System.Boolean AcceptsNull<T>()
 Returns a value indicating whether null can be assigned to the specified type.
 
 ```csharp
-public System.Boolean AcceptsNull(System.Type type)
+public Boolean AcceptsNull(Type type)
 ```
 
 | Parameter | Description |
@@ -101,7 +104,7 @@ Returns: True if the type accepts null values; otherwise false.
 ### CanCast
 
 ```csharp
-public System.Boolean CanCast<T>(System.Object value)
+public Boolean CanCast<T>(Object value)
 ```
 
 <span id="uid-a5ec827ebc"></span>
@@ -109,7 +112,7 @@ public System.Boolean CanCast<T>(System.Object value)
 ### ConvertImplicit
 
 ```csharp
-public T ConvertImplicit<T>(System.Object value)
+public T ConvertImplicit<T>(Object value)
 ```
 
 <span id="uid-e02ea85d39"></span>
@@ -120,7 +123,7 @@ Convert a value to a type using the implicit conversions allowed by the C# langu
 return the default for the type if the value could not be converted.
 
 ```csharp
-public System.Object ConvertImplicitOrDefault(System.Object value, System.Type type)
+public Object ConvertImplicitOrDefault(Object value, Type type)
 ```
 
 | Parameter | Description |
@@ -138,7 +141,7 @@ Convert a value to a type by any means possible, returning the default for that 
 if the value could not be converted.
 
 ```csharp
-public System.Object ConvertOrDefault(System.Object value, System.Type type, System.Globalization.CultureInfo culture)
+public Object ConvertOrDefault(Object value, Type type, System.Globalization.CultureInfo culture)
 ```
 
 | Parameter | Description |
@@ -156,7 +159,7 @@ Returns: A value of `type`.
 Gets the default value for the specified type.
 
 ```csharp
-public System.Object Default(System.Type type)
+public Object Default(Type type)
 ```
 
 | Parameter | Description |
@@ -172,7 +175,7 @@ Returns: The default value.
 Determines if a type is numeric. Nullable numeric types are considered numeric.
 
 ```csharp
-public System.Boolean IsNumeric(System.Type type)
+public Boolean IsNumeric(Type type)
 ```
 
 Returns: True if the type is numeric; otherwise false.
@@ -182,7 +185,7 @@ Returns: True if the type is numeric; otherwise false.
 ### TryConvert
 
 ```csharp
-public System.Boolean TryConvert(System.Type to, System.Object value, System.Globalization.CultureInfo culture, System.Object& result)
+public Boolean TryConvert(Type to, Object value, System.Globalization.CultureInfo culture, Object& result)
 ```
 
 <span id="uid-d9e79f4461"></span>
@@ -190,7 +193,7 @@ public System.Boolean TryConvert(System.Type to, System.Object value, System.Glo
 ### TryConvertImplicit
 
 ```csharp
-public System.Boolean TryConvertImplicit(System.Type to, System.Object value, System.Object& result)
+public Boolean TryConvertImplicit(Type to, Object value, Object& result)
 ```
 
 </ApiRefPage>

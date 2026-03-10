@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Controls/Spinner.cs">Spinner.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -83,7 +86,7 @@ public SpinEventArgs(Avalonia.Controls.SpinDirection direction)
 #### SpinEventArgs
 
 ```csharp
-public SpinEventArgs(Avalonia.Controls.SpinDirection direction, System.Boolean usingMouseWheel)
+public SpinEventArgs(Avalonia.Controls.SpinDirection direction, Boolean usingMouseWheel)
 ```
 
 <span id="uid-bc5cd8344d"></span>
@@ -99,7 +102,7 @@ public SpinEventArgs(Avalonia.Interactivity.RoutedEvent routedEvent, Avalonia.Co
 #### SpinEventArgs
 
 ```csharp
-public SpinEventArgs(Avalonia.Interactivity.RoutedEvent routedEvent, Avalonia.Controls.SpinDirection direction, System.Boolean usingMouseWheel)
+public SpinEventArgs(Avalonia.Interactivity.RoutedEvent routedEvent, Avalonia.Controls.SpinDirection direction, Boolean usingMouseWheel)
 ```
 
 ## Properties
@@ -108,6 +111,10 @@ public SpinEventArgs(Avalonia.Interactivity.RoutedEvent routedEvent, Avalonia.Co
 | --- | --- |
 | [Direction](#uid-4a11a860a2) | Gets the SpinDirection for the spin that has been initiated by the end-user. |
 | [UsingMouseWheel](#uid-d36bd47eec) | Get or set whether the spin event originated from a mouse wheel event. |
+| [Handled (Inherited from RoutedEventArgs)](../interactivity/routedeventargs.mdx#uid-204d2af354) | Gets or sets a value indicating whether the routed event has already been handled. |
+| [Route (Inherited from RoutedEventArgs)](../interactivity/routedeventargs.mdx#uid-751be73db9) | Gets or sets the routing strategy (direct, bubbling, or tunneling) of the routed event. |
+| [RoutedEvent (Inherited from RoutedEventArgs)](../interactivity/routedeventargs.mdx#uid-4e102999d9) | Gets or sets the routed event associated with these event args. |
+| [Source (Inherited from RoutedEventArgs)](../interactivity/routedeventargs.mdx#uid-4385b523d5) | Gets or sets the source object that raised the routed event. |
 
 <span id="uid-4a11a860a2"></span>
 
@@ -126,7 +133,7 @@ public Avalonia.Controls.SpinDirection Direction { get; set; }
 Get or set whether the spin event originated from a mouse wheel event.
 
 ```csharp
-public System.Boolean UsingMouseWheel { get; set; }
+public Boolean UsingMouseWheel { get; set; }
 ```
 
 </ApiRefPage>

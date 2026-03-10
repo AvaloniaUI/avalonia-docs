@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Media/DashStyle.cs">DashStyle.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -82,7 +85,7 @@ public DashStyle()
 #### DashStyle
 
 ```csharp
-public DashStyle(System.Collections.Generic.IEnumerable<System.Double> dashes, System.Double offset)
+public DashStyle(System.Collections.Generic.IEnumerable<Double> dashes, Double offset)
 ```
 
 ## Methods
@@ -90,6 +93,19 @@ public DashStyle(System.Collections.Generic.IEnumerable<System.Double> dashes, S
 | Name | Description |
 | --- | --- |
 | [ToImmutable](#uid-812e18fc89) | Returns an immutable clone of the Avalonia.Media.DashStyle. |
+| [Bind (8 overloads) (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-1c60c7bda3) | Binds a Avalonia.AvaloniaProperty to an Avalonia.Data.BindingBase. |
+| [CheckAccess (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-260ff7a68d) | Returns a value indicating whether the current thread is the UI thread. |
+| [ClearValue (4 overloads) (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-41de208fbe) | Clears a Avalonia.AvaloniaProperty's local value. |
+| [CoerceValue (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-3bec32f39e) | Coerces the specified Avalonia.AvaloniaProperty. |
+| [Equals (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-a8a8e94305) | Compares two objects using reference equality. |
+| [GetBaseValue (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-9c615efbba) | No summary available. |
+| [GetHashCode (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-7f7db1e7a2) | Gets the hash code for the object. |
+| [GetValue (3 overloads) (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-5142cd4792) | Gets a Avalonia.AvaloniaProperty value. |
+| [IsAnimating (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-8cbfc7521a) | Checks whether a Avalonia.AvaloniaProperty is animating. |
+| [IsSet (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-f8bf0bbdcc) | Checks whether a Avalonia.AvaloniaProperty is set on this object. |
+| [SetCurrentValue (2 overloads) (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-38759fd088) | Sets the value of a dependency property without changing its value source. |
+| [SetValue (3 overloads) (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-47d14e19d7) | Sets a Avalonia.AvaloniaProperty value. |
+| [VerifyAccess (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-3b9d3c9793) | Checks that the current thread is the UI thread and throws if not. |
 
 <span id="uid-812e18fc89"></span>
 
@@ -111,6 +127,9 @@ public Avalonia.Media.Immutable.ImmutableDashStyle ToImmutable()
 | [Dashes](#uid-6ffd83c6a6) | Gets or sets the length of alternating dashes and gaps. |
 | [Dot](#uid-0a0121ef16) | Represents a dotted Avalonia.Media.DashStyle. |
 | [Offset](#uid-6afe4350f5) | Gets or sets how far in the dash sequence the stroke will start. |
+| [Transitions (Inherited from Animatable)](../animation/animatable.mdx#uid-1b3138f517) | Gets or sets the property transitions for the control. |
+| [Dispatcher (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-b25fa51632) | Returns the Avalonia.AvaloniaObject.Dispatcher that this Avalonia.AvaloniaObject is associated with. |
+| [Item (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-c1d1f1bc0f) | No summary available. |
 
 <span id="uid-b0be054d77"></span>
 
@@ -149,7 +168,7 @@ public Avalonia.Media.IDashStyle DashDotDot { get; set; }
 Gets or sets the length of alternating dashes and gaps.
 
 ```csharp
-public Avalonia.Collections.AvaloniaList<T><System.Double> Dashes { get; set; }
+public Avalonia.Collections.AvaloniaList<T><Double> Dashes { get; set; }
 ```
 
 <span id="uid-0a0121ef16"></span>
@@ -169,7 +188,7 @@ public Avalonia.Media.IDashStyle Dot { get; set; }
 Gets or sets how far in the dash sequence the stroke will start.
 
 ```csharp
-public System.Double Offset { get; set; }
+public Double Offset { get; set; }
 ```
 
 ## Fields
@@ -178,6 +197,7 @@ public System.Double Offset { get; set; }
 | --- | --- |
 | [DashesProperty](#uid-35105aa9b3) | Defines the Avalonia.Media.DashStyle.Dashes property. |
 | [OffsetProperty](#uid-db1ef342c0) | Defines the Avalonia.Media.DashStyle.Offset property. |
+| [TransitionsProperty (Inherited from Animatable)](../animation/animatable.mdx#uid-c79f18fac2) | Defines the Avalonia.Animation.Animatable.Transitions property. |
 
 <span id="uid-35105aa9b3"></span>
 
@@ -186,7 +206,7 @@ public System.Double Offset { get; set; }
 Defines the [Avalonia.Media.DashStyle.Dashes](xref:Avalonia.Media.DashStyle.Dashes) property.
 
 ```csharp
-public Avalonia.StyledProperty<TValue><Avalonia.Collections.AvaloniaList<T><System.Double>> DashesProperty
+public Avalonia.StyledProperty<TValue><Avalonia.Collections.AvaloniaList<T><Double>> DashesProperty
 ```
 
 <span id="uid-db1ef342c0"></span>
@@ -196,8 +216,14 @@ public Avalonia.StyledProperty<TValue><Avalonia.Collections.AvaloniaList<T><Syst
 Defines the [Avalonia.Media.DashStyle.Offset](xref:Avalonia.Media.DashStyle.Offset) property.
 
 ```csharp
-public Avalonia.StyledProperty<TValue><System.Double> OffsetProperty
+public Avalonia.StyledProperty<TValue><Double> OffsetProperty
 ```
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [PropertyChanged (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-d758e26fae) | Raised when a Avalonia.AvaloniaProperty value changes on this object. |
 
 </ApiRefPage>
 

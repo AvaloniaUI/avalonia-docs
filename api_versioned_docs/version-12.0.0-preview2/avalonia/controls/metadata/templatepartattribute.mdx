@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Controls/Metadata/TemplatePartAttribute.cs">TemplatePartAttribute.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -87,7 +90,7 @@ public TemplatePartAttribute()
 Initializes a new instance of the [Avalonia.Controls.Metadata.TemplatePartAttribute](xref:Avalonia.Controls.Metadata.TemplatePartAttribute) class.
 
 ```csharp
-public TemplatePartAttribute(System.String name, System.Type type)
+public TemplatePartAttribute(String name, Type type)
 ```
 
 | Parameter | Description |
@@ -110,7 +113,7 @@ public TemplatePartAttribute(System.String name, System.Type type)
 Gets or sets a value indicating whether the template part is mandatory to be present in the template.
 
 ```csharp
-public System.Boolean IsRequired { get; set; }
+public Boolean IsRequired { get; set; }
 ```
 
 <span id="uid-272c4e6c12"></span>
@@ -121,7 +124,7 @@ Gets or sets the part name used by the class to identify a required element in t
 Template part names should begin with the "PART_" prefix.
 
 ```csharp
-public System.String Name { get; set; }
+public String Name { get; set; }
 ```
 
 <span id="uid-d04dc1a8d1"></span>
@@ -132,7 +135,7 @@ Gets or sets the type of the element that should be used as a part with name spe
 in [Avalonia.Controls.Metadata.TemplatePartAttribute.Name](xref:Avalonia.Controls.Metadata.TemplatePartAttribute.Name).
 
 ```csharp
-public System.Type Type { get; set; }
+public Type Type { get; set; }
 ```
 
 </ApiRefPage>

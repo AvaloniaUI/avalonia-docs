@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Vector3D.cs">Vector3D.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__signature">
@@ -62,7 +65,7 @@ public struct Vector3D
 ### Vector3D
 
 ```csharp
-public Vector3D(System.Double X, System.Double Y, System.Double Z)
+public Vector3D(Double X, Double Y, Double Z)
 ```
 
 ## Methods
@@ -122,7 +125,7 @@ public Avalonia.Vector3D Clamp(Avalonia.Vector3D value, Avalonia.Vector3D min, A
 ### Deconstruct
 
 ```csharp
-public System.Void Deconstruct(System.Double& X, System.Double& Y, System.Double& Z)
+public Void Deconstruct(Double& X, Double& Y, Double& Z)
 ```
 
 <span id="uid-ccc54c032e"></span>
@@ -132,7 +135,7 @@ public System.Void Deconstruct(System.Double& X, System.Double& Y, System.Double
 Computes the Euclidean distance between the two given points.
 
 ```csharp
-public System.Double Distance(Avalonia.Vector3D value1, Avalonia.Vector3D value2)
+public Double Distance(Avalonia.Vector3D value1, Avalonia.Vector3D value2)
 ```
 
 <span id="uid-4c80d659ae"></span>
@@ -142,7 +145,7 @@ public System.Double Distance(Avalonia.Vector3D value1, Avalonia.Vector3D value2
 Computes the squared Euclidean distance between the two given points.
 
 ```csharp
-public System.Double DistanceSquared(Avalonia.Vector3D value1, Avalonia.Vector3D value2)
+public Double DistanceSquared(Avalonia.Vector3D value1, Avalonia.Vector3D value2)
 ```
 
 <span id="uid-a2d8f86330"></span>
@@ -166,7 +169,7 @@ public Avalonia.Vector3D Divide(Avalonia.Vector3D left, Avalonia.Vector3D right)
 Divides the vector by the given scalar.
 
 ```csharp
-public Avalonia.Vector3D Divide(Avalonia.Vector3D left, System.Double right)
+public Avalonia.Vector3D Divide(Avalonia.Vector3D left, Double right)
 ```
 
 <span id="uid-7cbc06f210"></span>
@@ -176,7 +179,7 @@ public Avalonia.Vector3D Divide(Avalonia.Vector3D left, System.Double right)
 Calculates the dot product of two vectors.
 
 ```csharp
-public System.Double Dot(Avalonia.Vector3D vector1, Avalonia.Vector3D vector2)
+public Double Dot(Avalonia.Vector3D vector1, Avalonia.Vector3D vector2)
 ```
 
 <span id="uid-be9039705b"></span>
@@ -188,7 +191,7 @@ public System.Double Dot(Avalonia.Vector3D vector1, Avalonia.Vector3D vector2)
 #### Equals
 
 ```csharp
-public System.Boolean Equals(Avalonia.Vector3D other)
+public Boolean Equals(Avalonia.Vector3D other)
 ```
 
 <span id="uid-673731acb2"></span>
@@ -196,7 +199,7 @@ public System.Boolean Equals(Avalonia.Vector3D other)
 #### Equals
 
 ```csharp
-public System.Boolean Equals(System.Object obj)
+public Boolean Equals(Object obj)
 ```
 
 <span id="uid-05d10e9f04"></span>
@@ -204,7 +207,7 @@ public System.Boolean Equals(System.Object obj)
 ### GetHashCode
 
 ```csharp
-public System.Int32 GetHashCode()
+public Int32 GetHashCode()
 ```
 
 <span id="uid-9f08821f68"></span>
@@ -248,7 +251,7 @@ public Avalonia.Vector3D Multiply(Avalonia.Vector3D left, Avalonia.Vector3D righ
 Multiplies the vector by the given scalar.
 
 ```csharp
-public Avalonia.Vector3D Multiply(Avalonia.Vector3D left, System.Double right)
+public Avalonia.Vector3D Multiply(Avalonia.Vector3D left, Double right)
 ```
 
 <span id="uid-561aeb3cee"></span>
@@ -268,7 +271,7 @@ public Avalonia.Vector3D Normalize(Avalonia.Vector3D value)
 Parses a [Avalonia.Vector](xref:Avalonia.Vector) string.
 
 ```csharp
-public Avalonia.Vector3D Parse(System.String s)
+public Avalonia.Vector3D Parse(String s)
 ```
 
 | Parameter | Description |
@@ -292,7 +295,7 @@ public Avalonia.Vector3D Substract(Avalonia.Vector3D left, Avalonia.Vector3D rig
 ### ToString
 
 ```csharp
-public System.String ToString()
+public String ToString()
 ```
 
 ## Properties
@@ -311,7 +314,7 @@ public System.String ToString()
 Length of the vector.
 
 ```csharp
-public System.Double Length { get; set; }
+public Double Length { get; set; }
 ```
 
 <span id="uid-2bd9bad449"></span>
@@ -319,7 +322,7 @@ public System.Double Length { get; set; }
 ### X
 
 ```csharp
-public System.Double X { get; set; }
+public Double X { get; set; }
 ```
 
 <span id="uid-f879f25929"></span>
@@ -327,7 +330,7 @@ public System.Double X { get; set; }
 ### Y
 
 ```csharp
-public System.Double Y { get; set; }
+public Double Y { get; set; }
 ```
 
 <span id="uid-903f83f3d9"></span>
@@ -335,7 +338,7 @@ public System.Double Y { get; set; }
 ### Z
 
 ```csharp
-public System.Double Z { get; set; }
+public Double Z { get; set; }
 ```
 
 </ApiRefPage>

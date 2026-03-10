@@ -57,7 +57,7 @@ public interface ICompositionGpuInterop
 Returns the supported ways to synchronize access to the imported GPU image
 
 ```csharp
-public Avalonia.Rendering.Composition.CompositionGpuImportedImageSynchronizationCapabilities GetSynchronizationCapabilities(System.String imageHandleType)
+public Avalonia.Rendering.Composition.CompositionGpuImportedImageSynchronizationCapabilities GetSynchronizationCapabilities(String imageHandleType)
 ```
 
 <span id="uid-b77d6038f0"></span>
@@ -135,7 +135,7 @@ public Avalonia.Rendering.Composition.ICompositionImportedGpuImage ImportSemapho
 The LUID of the graphics adapter used by the compositor
 
 ```csharp
-public System.Byte[] DeviceLuid { get; set; }
+public Byte[] DeviceLuid { get; set; }
 ```
 
 <span id="uid-204c32b69b"></span>
@@ -145,7 +145,7 @@ public System.Byte[] DeviceLuid { get; set; }
 The UUID of the graphics adapter used by the compositor
 
 ```csharp
-public System.Byte[] DeviceUuid { get; set; }
+public Byte[] DeviceUuid { get; set; }
 ```
 
 <span id="uid-f2b8219cb6"></span>
@@ -155,7 +155,7 @@ public System.Byte[] DeviceUuid { get; set; }
 Indicates if the device context this instance is associated with is no longer available
 
 ```csharp
-public System.Boolean IsLost { get; set; }
+public Boolean IsLost { get; set; }
 ```
 
 <span id="uid-7233179774"></span>
@@ -165,7 +165,7 @@ public System.Boolean IsLost { get; set; }
 Returns the list of image handle types supported by the current GPU backend, see [Avalonia.Platform.KnownPlatformGraphicsExternalImageHandleTypes](xref:Avalonia.Platform.KnownPlatformGraphicsExternalImageHandleTypes)
 
 ```csharp
-public System.Collections.Generic.IReadOnlyList<System.String> SupportedImageHandleTypes { get; set; }
+public System.Collections.Generic.IReadOnlyList<String> SupportedImageHandleTypes { get; set; }
 ```
 
 <span id="uid-44a8fa91dd"></span>
@@ -175,7 +175,7 @@ public System.Collections.Generic.IReadOnlyList<System.String> SupportedImageHan
 Returns the list of semaphore types supported by the current GPU backend, see [Avalonia.Platform.KnownPlatformGraphicsExternalSemaphoreHandleTypes](xref:Avalonia.Platform.KnownPlatformGraphicsExternalSemaphoreHandleTypes)
 
 ```csharp
-public System.Collections.Generic.IReadOnlyList<System.String> SupportedSemaphoreTypes { get; set; }
+public System.Collections.Generic.IReadOnlyList<String> SupportedSemaphoreTypes { get; set; }
 ```
 
 </ApiRefPage>

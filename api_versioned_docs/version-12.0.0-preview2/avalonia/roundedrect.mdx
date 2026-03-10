@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/RoundedRect.cs">RoundedRect.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__signature">
@@ -95,7 +98,7 @@ public RoundedRect(Avalonia.Rect rect, Avalonia.Vector radiiTopLeft, Avalonia.Ve
 #### RoundedRect
 
 ```csharp
-public RoundedRect(Avalonia.Rect rect, System.Double radius)
+public RoundedRect(Avalonia.Rect rect, Double radius)
 ```
 
 <span id="uid-54c2cffcf6"></span>
@@ -103,7 +106,7 @@ public RoundedRect(Avalonia.Rect rect, System.Double radius)
 #### RoundedRect
 
 ```csharp
-public RoundedRect(Avalonia.Rect rect, System.Double radiusX, System.Double radiusY)
+public RoundedRect(Avalonia.Rect rect, Double radiusX, Double radiusY)
 ```
 
 <span id="uid-b129489c0c"></span>
@@ -111,7 +114,7 @@ public RoundedRect(Avalonia.Rect rect, System.Double radiusX, System.Double radi
 #### RoundedRect
 
 ```csharp
-public RoundedRect(Avalonia.Rect rect, System.Double radiusTopLeft, System.Double radiusTopRight, System.Double radiusBottomRight, System.Double radiusBottomLeft)
+public RoundedRect(Avalonia.Rect rect, Double radiusTopLeft, Double radiusTopRight, Double radiusBottomRight, Double radiusBottomLeft)
 ```
 
 ## Methods
@@ -132,7 +135,7 @@ Determines whether a point is in the bounds of the rounded rectangle, exclusive 
 rounded rectangle's bottom/right edge.
 
 ```csharp
-public System.Boolean ContainsExclusive(Avalonia.Point p)
+public Boolean ContainsExclusive(Avalonia.Point p)
 ```
 
 | Parameter | Description |
@@ -146,7 +149,7 @@ Returns: true if the point is in the bounds of the rounded rectangle; otherwise 
 ### Deflate
 
 ```csharp
-public Avalonia.RoundedRect Deflate(System.Double dx, System.Double dy)
+public Avalonia.RoundedRect Deflate(Double dx, Double dy)
 ```
 
 <span id="uid-24e549146b"></span>
@@ -158,7 +161,7 @@ public Avalonia.RoundedRect Deflate(System.Double dx, System.Double dy)
 #### Equals
 
 ```csharp
-public System.Boolean Equals(Avalonia.RoundedRect other)
+public Boolean Equals(Avalonia.RoundedRect other)
 ```
 
 <span id="uid-8de260de7b"></span>
@@ -166,7 +169,7 @@ public System.Boolean Equals(Avalonia.RoundedRect other)
 #### Equals
 
 ```csharp
-public System.Boolean Equals(System.Object obj)
+public Boolean Equals(Object obj)
 ```
 
 <span id="uid-bbeea59cd4"></span>
@@ -174,7 +177,7 @@ public System.Boolean Equals(System.Object obj)
 ### GetHashCode
 
 ```csharp
-public System.Int32 GetHashCode()
+public Int32 GetHashCode()
 ```
 
 <span id="uid-157ed9d970"></span>
@@ -182,7 +185,7 @@ public System.Int32 GetHashCode()
 ### Inflate
 
 ```csharp
-public Avalonia.RoundedRect Inflate(System.Double dx, System.Double dy)
+public Avalonia.RoundedRect Inflate(Double dx, Double dy)
 ```
 
 ## Properties
@@ -202,7 +205,7 @@ public Avalonia.RoundedRect Inflate(System.Double dx, System.Double dy)
 ### IsRounded
 
 ```csharp
-public System.Boolean IsRounded { get; set; }
+public Boolean IsRounded { get; set; }
 ```
 
 <span id="uid-793c7da263"></span>
@@ -210,7 +213,7 @@ public System.Boolean IsRounded { get; set; }
 ### IsUniform
 
 ```csharp
-public System.Boolean IsUniform { get; set; }
+public Boolean IsUniform { get; set; }
 ```
 
 <span id="uid-31941a12fe"></span>

@@ -59,7 +59,7 @@ public interface IInsetsManager
 Gets or sets whether the window draws edge to edge. behind any visible system bars.
 
 ```csharp
-public System.Boolean DisplayEdgeToEdgePreference { get; set; }
+public Boolean DisplayEdgeToEdgePreference { get; set; }
 ```
 
 <span id="uid-814b86cb58"></span>
@@ -69,7 +69,7 @@ public System.Boolean DisplayEdgeToEdgePreference { get; set; }
 Gets whether the window is currently displaying edge to edge.
 
 ```csharp
-public System.Boolean DisplaysEdgeToEdge { get; set; }
+public Boolean DisplaysEdgeToEdge { get; set; }
 ```
 
 <span id="uid-22c6a0cba3"></span>
@@ -79,7 +79,7 @@ public System.Boolean DisplaysEdgeToEdge { get; set; }
 Gets or sets whether the system bars are visible.
 
 ```csharp
-public System.Nullable<System.Boolean> IsSystemBarVisible { get; set; }
+public Nullable<Boolean> IsSystemBarVisible { get; set; }
 ```
 
 <span id="uid-52365cf938"></span>
@@ -99,7 +99,7 @@ public Avalonia.Thickness SafeAreaPadding { get; set; }
 Gets or sets the color of the platform's system bars
 
 ```csharp
-public System.Nullable<Avalonia.Media.Color> SystemBarColor { get; set; }
+public Nullable<Avalonia.Media.Color> SystemBarColor { get; set; }
 ```
 
 ## Events
@@ -115,7 +115,7 @@ public System.Nullable<Avalonia.Media.Color> SystemBarColor { get; set; }
 Occurs when safe area for the current window changes.
 
 ```csharp
-public event System.EventHandler<Avalonia.Controls.Platform.SafeAreaChangedArgs> SafeAreaChanged
+public event EventHandler<Avalonia.Controls.Platform.SafeAreaChangedArgs> SafeAreaChanged
 ```
 
 </ApiRefPage>

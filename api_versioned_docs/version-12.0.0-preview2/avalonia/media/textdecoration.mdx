@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Media/TextDecoration.cs">TextDecoration.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -68,19 +71,39 @@ public class TextDecoration
 public TextDecoration()
 ```
 
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Bind (8 overloads) (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-1c60c7bda3) | Binds a Avalonia.AvaloniaProperty to an Avalonia.Data.BindingBase. |
+| [CheckAccess (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-260ff7a68d) | Returns a value indicating whether the current thread is the UI thread. |
+| [ClearValue (4 overloads) (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-41de208fbe) | Clears a Avalonia.AvaloniaProperty's local value. |
+| [CoerceValue (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-3bec32f39e) | Coerces the specified Avalonia.AvaloniaProperty. |
+| [Equals (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-a8a8e94305) | Compares two objects using reference equality. |
+| [GetBaseValue (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-9c615efbba) | No summary available. |
+| [GetHashCode (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-7f7db1e7a2) | Gets the hash code for the object. |
+| [GetValue (3 overloads) (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-5142cd4792) | Gets a Avalonia.AvaloniaProperty value. |
+| [IsAnimating (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-8cbfc7521a) | Checks whether a Avalonia.AvaloniaProperty is animating. |
+| [IsSet (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-f8bf0bbdcc) | Checks whether a Avalonia.AvaloniaProperty is set on this object. |
+| [SetCurrentValue (2 overloads) (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-38759fd088) | Sets the value of a dependency property without changing its value source. |
+| [SetValue (3 overloads) (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-47d14e19d7) | Sets a Avalonia.AvaloniaProperty value. |
+| [VerifyAccess (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-3b9d3c9793) | Checks that the current thread is the UI thread and throws if not. |
+
 ## Properties
 
 | Name | Description |
 | --- | --- |
 | [Location](#uid-7d1ebc8ca0) | Gets or sets the location. |
 | [Stroke](#uid-b9a97de60c) | Gets or sets the Avalonia.Media.IBrush that specifies how the Avalonia.Media.TextDecoration is painted. |
-| [StrokeDashArray](#uid-68bd7841bc) | Gets or sets a collection of System.Double values that indicate the pattern of dashes and gaps that is used to draw the Avalonia.Media.TextDecoration. |
+| [StrokeDashArray](#uid-68bd7841bc) | Gets or sets a collection of Double values that indicate the pattern of dashes and gaps that is used to draw the Avalonia.Media.TextDecoration. |
 | [StrokeDashOffset](#uid-d5f75e942e) | Gets or sets a value that specifies the distance within the dash pattern where a dash begins. |
 | [StrokeLineCap](#uid-fbec720cd5) | Gets or sets a Avalonia.Media.PenLineCap enumeration value that describes the shape at the ends of a line. |
 | [StrokeOffset](#uid-ae7261adb8) | The stroke's offset. |
 | [StrokeOffsetUnit](#uid-efc68a4130) | Gets the units in which the Avalonia.Media.TextDecoration.StrokeOffset value is expressed. |
 | [StrokeThickness](#uid-1fe8b97c64) | Gets or sets the thickness of the Avalonia.Media.TextDecoration. |
 | [StrokeThicknessUnit](#uid-08a870bed4) | Gets the units in which the thickness of the Avalonia.Media.TextDecoration is expressed. |
+| [Dispatcher (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-b25fa51632) | Returns the Avalonia.AvaloniaObject.Dispatcher that this Avalonia.AvaloniaObject is associated with. |
+| [Item (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-c1d1f1bc0f) | No summary available. |
 
 <span id="uid-7d1ebc8ca0"></span>
 
@@ -108,11 +131,11 @@ public Avalonia.Media.IBrush Stroke { get; set; }
 
 ### StrokeDashArray
 
-Gets or sets a collection of [System.Double](xref:System.Double) values that indicate the pattern of dashes and gaps
+Gets or sets a collection of [Double](xref:System.Double) values that indicate the pattern of dashes and gaps
 that is used to draw the [Avalonia.Media.TextDecoration](xref:Avalonia.Media.TextDecoration).
 
 ```csharp
-public Avalonia.Collections.AvaloniaList<T><System.Double> StrokeDashArray { get; set; }
+public Avalonia.Collections.AvaloniaList<T><Double> StrokeDashArray { get; set; }
 ```
 
 <span id="uid-d5f75e942e"></span>
@@ -122,7 +145,7 @@ public Avalonia.Collections.AvaloniaList<T><System.Double> StrokeDashArray { get
 Gets or sets a value that specifies the distance within the dash pattern where a dash begins.
 
 ```csharp
-public System.Double StrokeDashOffset { get; set; }
+public Double StrokeDashOffset { get; set; }
 ```
 
 <span id="uid-fbec720cd5"></span>
@@ -142,7 +165,7 @@ public Avalonia.Media.PenLineCap StrokeLineCap { get; set; }
 The stroke's offset.
 
 ```csharp
-public System.Double StrokeOffset { get; set; }
+public Double StrokeOffset { get; set; }
 ```
 
 Value: The pen offset.
@@ -164,7 +187,7 @@ public Avalonia.Media.TextDecorationUnit StrokeOffsetUnit { get; set; }
 Gets or sets the thickness of the [Avalonia.Media.TextDecoration](xref:Avalonia.Media.TextDecoration).
 
 ```csharp
-public System.Double StrokeThickness { get; set; }
+public Double StrokeThickness { get; set; }
 ```
 
 <span id="uid-08a870bed4"></span>
@@ -208,7 +231,7 @@ public Avalonia.StyledProperty<TValue><Avalonia.Media.TextDecorationLocation> Lo
 Defines the [Avalonia.Media.TextDecoration.StrokeDashArray](xref:Avalonia.Media.TextDecoration.StrokeDashArray) property.
 
 ```csharp
-public Avalonia.StyledProperty<TValue><Avalonia.Collections.AvaloniaList<T><System.Double>> StrokeDashArrayProperty
+public Avalonia.StyledProperty<TValue><Avalonia.Collections.AvaloniaList<T><Double>> StrokeDashArrayProperty
 ```
 
 <span id="uid-117b8cbc34"></span>
@@ -218,7 +241,7 @@ public Avalonia.StyledProperty<TValue><Avalonia.Collections.AvaloniaList<T><Syst
 Defines the [Avalonia.Media.TextDecoration.StrokeDashOffset](xref:Avalonia.Media.TextDecoration.StrokeDashOffset) property.
 
 ```csharp
-public Avalonia.StyledProperty<TValue><System.Double> StrokeDashOffsetProperty
+public Avalonia.StyledProperty<TValue><Double> StrokeDashOffsetProperty
 ```
 
 <span id="uid-f61bca2e54"></span>
@@ -238,7 +261,7 @@ public Avalonia.StyledProperty<TValue><Avalonia.Media.PenLineCap> StrokeLineCapP
 Defines the [Avalonia.Media.TextDecoration.StrokeOffset](xref:Avalonia.Media.TextDecoration.StrokeOffset) property.
 
 ```csharp
-public Avalonia.StyledProperty<TValue><System.Double> StrokeOffsetProperty
+public Avalonia.StyledProperty<TValue><Double> StrokeOffsetProperty
 ```
 
 <span id="uid-725c14c3bc"></span>
@@ -268,7 +291,7 @@ public Avalonia.StyledProperty<TValue><Avalonia.Media.IBrush> StrokeProperty
 Defines the [Avalonia.Media.TextDecoration.StrokeThickness](xref:Avalonia.Media.TextDecoration.StrokeThickness) property.
 
 ```csharp
-public Avalonia.StyledProperty<TValue><System.Double> StrokeThicknessProperty
+public Avalonia.StyledProperty<TValue><Double> StrokeThicknessProperty
 ```
 
 <span id="uid-6a360e4c23"></span>
@@ -280,6 +303,12 @@ Defines the [Avalonia.Media.TextDecoration.StrokeThicknessUnit](xref:Avalonia.Me
 ```csharp
 public Avalonia.StyledProperty<TValue><Avalonia.Media.TextDecorationUnit> StrokeThicknessUnitProperty
 ```
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [PropertyChanged (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-d758e26fae) | Raised when a Avalonia.AvaloniaProperty value changes on this object. |
 
 </ApiRefPage>
 

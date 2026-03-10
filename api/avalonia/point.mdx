@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Point.cs">Point.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -70,7 +73,7 @@ public struct Point
 Initializes a new instance of the [Avalonia.Point](xref:Avalonia.Point) structure.
 
 ```csharp
-public Point(System.Double x, System.Double y)
+public Point(Double x, Double y)
 ```
 
 | Parameter | Description |
@@ -98,7 +101,7 @@ public Point(System.Double x, System.Double y)
 ### Deconstruct
 
 ```csharp
-public System.Void Deconstruct(System.Double& x, System.Double& y)
+public Void Deconstruct(Double& x, Double& y)
 ```
 
 <span id="uid-47d4ccdee2"></span>
@@ -108,7 +111,7 @@ public System.Void Deconstruct(System.Double& x, System.Double& y)
 Computes the Euclidean distance between the two given points.
 
 ```csharp
-public System.Double Distance(Avalonia.Point value1, Avalonia.Point value2)
+public Double Distance(Avalonia.Point value1, Avalonia.Point value2)
 ```
 
 | Parameter | Description |
@@ -129,7 +132,7 @@ Returns: The Euclidean distance.
 Returns a boolean indicating whether the point is equal to the other given point (bitwise).
 
 ```csharp
-public System.Boolean Equals(Avalonia.Point other)
+public Boolean Equals(Avalonia.Point other)
 ```
 
 | Parameter | Description |
@@ -145,7 +148,7 @@ Returns: True if this point is equal to other; False otherwise.
 Checks for equality between a point and an object.
 
 ```csharp
-public System.Boolean Equals(System.Object obj)
+public Boolean Equals(Object obj)
 ```
 
 | Parameter | Description |
@@ -161,7 +164,7 @@ Returns: True if `obj` is a point that equals the current point.
 Returns a hash code for a [Avalonia.Point](xref:Avalonia.Point).
 
 ```csharp
-public System.Int32 GetHashCode()
+public Int32 GetHashCode()
 ```
 
 Returns: The hash code.
@@ -174,7 +177,7 @@ Returns a boolean indicating whether the point is equal to the other given point
 (numerically).
 
 ```csharp
-public System.Boolean NearlyEquals(Avalonia.Point other)
+public Boolean NearlyEquals(Avalonia.Point other)
 ```
 
 | Parameter | Description |
@@ -190,7 +193,7 @@ Returns: True if this point is equal to other; False otherwise.
 Parses a [Avalonia.Point](xref:Avalonia.Point) string.
 
 ```csharp
-public Avalonia.Point Parse(System.String s)
+public Avalonia.Point Parse(String s)
 ```
 
 | Parameter | Description |
@@ -206,7 +209,7 @@ Returns: The [Avalonia.Point](xref:Avalonia.Point).
 Returns the string representation of the point.
 
 ```csharp
-public System.String ToString()
+public String ToString()
 ```
 
 Returns: The string representation of the point.
@@ -234,7 +237,7 @@ Returns: The transformed point.
 Returns a new point with the specified X coordinate.
 
 ```csharp
-public Avalonia.Point WithX(System.Double x)
+public Avalonia.Point WithX(Double x)
 ```
 
 | Parameter | Description |
@@ -250,7 +253,7 @@ Returns: The new point.
 Returns a new point with the specified Y coordinate.
 
 ```csharp
-public Avalonia.Point WithY(System.Double y)
+public Avalonia.Point WithY(Double y)
 ```
 
 | Parameter | Description |
@@ -273,7 +276,7 @@ Returns: The new point.
 Gets the X position.
 
 ```csharp
-public System.Double X { get; set; }
+public Double X { get; set; }
 ```
 
 <span id="uid-f7ccabda4f"></span>
@@ -283,7 +286,7 @@ public System.Double X { get; set; }
 Gets the Y position.
 
 ```csharp
-public System.Double Y { get; set; }
+public Double Y { get; set; }
 ```
 
 </ApiRefPage>

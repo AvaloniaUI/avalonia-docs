@@ -72,7 +72,7 @@ Inserts `page` immediately before `before` in the stack.
 Does not change the currently visible page.
 
 ```csharp
-public System.Void InsertPage(Avalonia.Controls.Page page, Avalonia.Controls.Page before)
+public Void InsertPage(Avalonia.Controls.Page page, Avalonia.Controls.Page before)
 ```
 
 <span id="uid-0a85e6ed09"></span>
@@ -250,7 +250,7 @@ public System.Threading.Tasks.Task PushModalAsync(Avalonia.Controls.Page page, A
 Removes `page` from the navigation stack without animation.
 
 ```csharp
-public System.Void RemovePage(Avalonia.Controls.Page page)
+public Void RemovePage(Avalonia.Controls.Page page)
 ```
 
 <span id="uid-eb81155046"></span>
@@ -293,7 +293,7 @@ public System.Threading.Tasks.Task ReplaceAsync(Avalonia.Controls.Page page, Ava
 Gets whether a pop operation is possible (stack has more than one entry).
 
 ```csharp
-public System.Boolean CanGoBack { get; set; }
+public Boolean CanGoBack { get; set; }
 ```
 
 <span id="uid-b1e7fc8f43"></span>
@@ -324,7 +324,7 @@ public System.Collections.Generic.IReadOnlyList<Avalonia.Controls.Page> Navigati
 Gets the number of pages in the navigation stack.
 
 ```csharp
-public System.Int32 StackDepth { get; set; }
+public Int32 StackDepth { get; set; }
 ```
 
 </ApiRefPage>

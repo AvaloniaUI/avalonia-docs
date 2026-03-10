@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Controls/Calendar/CalendarDateRange.cs">CalendarDateRange.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__signature">
@@ -67,7 +70,7 @@ Initializes a new instance of the
 with a single date.
 
 ```csharp
-public CalendarDateRange(System.DateTime day)
+public CalendarDateRange(DateTime day)
 ```
 
 | Parameter | Description |
@@ -83,7 +86,7 @@ Initializes a new instance of the
 with a range of dates.
 
 ```csharp
-public CalendarDateRange(System.DateTime start, System.DateTime end)
+public CalendarDateRange(DateTime start, DateTime end)
 ```
 
 | Parameter | Description |
@@ -105,7 +108,7 @@ public CalendarDateRange(System.DateTime start, System.DateTime end)
 Gets the last date in the represented range.
 
 ```csharp
-public System.DateTime End { get; set; }
+public DateTime End { get; set; }
 ```
 
 Value: The last date in the represented range.
@@ -117,7 +120,7 @@ Value: The last date in the represented range.
 Gets the first date in the represented range.
 
 ```csharp
-public System.DateTime Start { get; set; }
+public DateTime Start { get; set; }
 ```
 
 Value: The first date in the represented range.

@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Size.cs">Size.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -74,7 +77,7 @@ public struct Size
 Initializes a new instance of the [Avalonia.Size](xref:Avalonia.Size) structure.
 
 ```csharp
-public Size(System.Double width, System.Double height)
+public Size(Double width, Double height)
 ```
 
 | Parameter | Description |
@@ -133,7 +136,7 @@ Returns: The constrained size.
 ### Deconstruct
 
 ```csharp
-public System.Void Deconstruct(System.Double& width, System.Double& height)
+public Void Deconstruct(Double& width, Double& height)
 ```
 
 <span id="uid-eeadea36f8"></span>
@@ -163,7 +166,7 @@ Returns: The deflated size.
 Returns a boolean indicating whether the size is equal to the other given size (bitwise).
 
 ```csharp
-public System.Boolean Equals(Avalonia.Size other)
+public Boolean Equals(Avalonia.Size other)
 ```
 
 | Parameter | Description |
@@ -179,7 +182,7 @@ Returns: True if this size is equal to other; False otherwise.
 Checks for equality between a size and an object.
 
 ```csharp
-public System.Boolean Equals(System.Object obj)
+public Boolean Equals(Object obj)
 ```
 
 | Parameter | Description |
@@ -195,7 +198,7 @@ Returns: True if `obj` is a size that equals the current size.
 Returns a hash code for a [Avalonia.Size](xref:Avalonia.Size).
 
 ```csharp
-public System.Int32 GetHashCode()
+public Int32 GetHashCode()
 ```
 
 Returns: The hash code.
@@ -223,7 +226,7 @@ Returns: The inflated size.
 Returns a boolean indicating whether the size is equal to the other given size (numerically).
 
 ```csharp
-public System.Boolean NearlyEquals(Avalonia.Size other)
+public Boolean NearlyEquals(Avalonia.Size other)
 ```
 
 | Parameter | Description |
@@ -239,7 +242,7 @@ Returns: True if this size is equal to other; False otherwise.
 Parses a [Avalonia.Size](xref:Avalonia.Size) string.
 
 ```csharp
-public Avalonia.Size Parse(System.String s)
+public Avalonia.Size Parse(String s)
 ```
 
 | Parameter | Description |
@@ -255,7 +258,7 @@ Returns: The [Avalonia.Size](xref:Avalonia.Size).
 Returns the string representation of the size.
 
 ```csharp
-public System.String ToString()
+public String ToString()
 ```
 
 Returns: The string representation of the size.
@@ -267,7 +270,7 @@ Returns: The string representation of the size.
 Returns a new [Avalonia.Size](xref:Avalonia.Size) with the same width and the specified height.
 
 ```csharp
-public Avalonia.Size WithHeight(System.Double height)
+public Avalonia.Size WithHeight(Double height)
 ```
 
 | Parameter | Description |
@@ -283,7 +286,7 @@ Returns: The new [Avalonia.Size](xref:Avalonia.Size).
 Returns a new [Avalonia.Size](xref:Avalonia.Size) with the same height and the specified width.
 
 ```csharp
-public Avalonia.Size WithWidth(System.Double width)
+public Avalonia.Size WithWidth(Double width)
 ```
 
 | Parameter | Description |
@@ -307,7 +310,7 @@ Returns: The new [Avalonia.Size](xref:Avalonia.Size).
 Gets the aspect ratio of the size.
 
 ```csharp
-public System.Double AspectRatio { get; set; }
+public Double AspectRatio { get; set; }
 ```
 
 <span id="uid-38d775d8b5"></span>
@@ -317,7 +320,7 @@ public System.Double AspectRatio { get; set; }
 Gets the height.
 
 ```csharp
-public System.Double Height { get; set; }
+public Double Height { get; set; }
 ```
 
 <span id="uid-646cb67085"></span>
@@ -327,7 +330,7 @@ public System.Double Height { get; set; }
 Gets the width.
 
 ```csharp
-public System.Double Width { get; set; }
+public Double Width { get; set; }
 ```
 
 ## Fields

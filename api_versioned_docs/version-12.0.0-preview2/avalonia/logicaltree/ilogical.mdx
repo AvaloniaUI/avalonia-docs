@@ -63,7 +63,7 @@ public interface ILogical
 Notifies the control that it is being attached to a rooted logical tree.
 
 ```csharp
-public System.Void NotifyAttachedToLogicalTree(Avalonia.LogicalTree.LogicalTreeAttachmentEventArgs e)
+public Void NotifyAttachedToLogicalTree(Avalonia.LogicalTree.LogicalTreeAttachmentEventArgs e)
 ```
 
 | Parameter | Description |
@@ -77,7 +77,7 @@ public System.Void NotifyAttachedToLogicalTree(Avalonia.LogicalTree.LogicalTreeA
 Notifies the control that it is being detached from a rooted logical tree.
 
 ```csharp
-public System.Void NotifyDetachedFromLogicalTree(Avalonia.LogicalTree.LogicalTreeAttachmentEventArgs e)
+public Void NotifyDetachedFromLogicalTree(Avalonia.LogicalTree.LogicalTreeAttachmentEventArgs e)
 ```
 
 | Parameter | Description |
@@ -91,7 +91,7 @@ public System.Void NotifyDetachedFromLogicalTree(Avalonia.LogicalTree.LogicalTre
 Notifies the control that a change has been made to resources that apply to it.
 
 ```csharp
-public System.Void NotifyResourcesChanged(Avalonia.Controls.ResourcesChangedEventArgs e)
+public Void NotifyResourcesChanged(Avalonia.Controls.ResourcesChangedEventArgs e)
 ```
 
 | Parameter | Description |
@@ -113,7 +113,7 @@ public System.Void NotifyResourcesChanged(Avalonia.Controls.ResourcesChangedEven
 Gets a value indicating whether the element is attached to a rooted logical tree.
 
 ```csharp
-public System.Boolean IsAttachedToLogicalTree { get; set; }
+public Boolean IsAttachedToLogicalTree { get; set; }
 ```
 
 <span id="uid-2b5e6f88d7"></span>
@@ -150,7 +150,7 @@ public Avalonia.LogicalTree.ILogical LogicalParent { get; set; }
 Raised when the control is attached to a rooted logical tree.
 
 ```csharp
-public event System.EventHandler<Avalonia.LogicalTree.LogicalTreeAttachmentEventArgs> AttachedToLogicalTree
+public event EventHandler<Avalonia.LogicalTree.LogicalTreeAttachmentEventArgs> AttachedToLogicalTree
 ```
 
 <span id="uid-8368318817"></span>
@@ -160,7 +160,7 @@ public event System.EventHandler<Avalonia.LogicalTree.LogicalTreeAttachmentEvent
 Raised when the control is detached from a rooted logical tree.
 
 ```csharp
-public event System.EventHandler<Avalonia.LogicalTree.LogicalTreeAttachmentEventArgs> DetachedFromLogicalTree
+public event EventHandler<Avalonia.LogicalTree.LogicalTreeAttachmentEventArgs> DetachedFromLogicalTree
 ```
 
 </ApiRefPage>

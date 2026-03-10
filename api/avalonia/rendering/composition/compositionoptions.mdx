@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Rendering/Composition/CompositionOptions.cs">CompositionOptions.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__signature">
@@ -79,7 +82,7 @@ Controls the eagerness of merging dirty rects. WPF uses 50000, Avalonia currentl
 that's a subject to change. You can play with this property to find the best value for your application.
 
 ```csharp
-public System.Nullable<System.Double> DirtyRectMergeEagerness { get; set; }
+public Nullable<Double> DirtyRectMergeEagerness { get; set; }
 ```
 
 <span id="uid-210bada917"></span>
@@ -91,7 +94,7 @@ value will remove the smarter algorithm and will use underlying drawing context 
 Default value is 8.
 
 ```csharp
-public System.Nullable<System.Int32> MaxDirtyRects { get; set; }
+public Nullable<Int32> MaxDirtyRects { get; set; }
 ```
 
 <span id="uid-f64a343f80"></span>
@@ -102,7 +105,7 @@ Enables more accurate tracking of dirty rects by utilizing regions if supported 
 drawing context
 
 ```csharp
-public System.Nullable<System.Boolean> UseRegionDirtyRectClipping { get; set; }
+public Nullable<Boolean> UseRegionDirtyRectClipping { get; set; }
 ```
 
 <span id="uid-464a94f787"></span>
@@ -114,7 +117,7 @@ saved frame.
 Required as a workaround for Skia bug https://issues.skia.org/issues/327877721
 
 ```csharp
-public System.Nullable<System.Boolean> UseSaveLayerRootClip { get; set; }
+public Nullable<Boolean> UseSaveLayerRootClip { get; set; }
 ```
 
 </ApiRefPage>

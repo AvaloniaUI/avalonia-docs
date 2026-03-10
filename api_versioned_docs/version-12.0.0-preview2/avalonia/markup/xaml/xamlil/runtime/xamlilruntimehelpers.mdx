@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Markup/Avalonia.Markup.Xaml/XamlIl/Runtime/XamlIlRuntimeHelpers.cs">XamlIlRuntimeHelpers.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__signature">
@@ -66,7 +69,7 @@ public class XamlIlRuntimeHelpers
 ### ApplyNonMatchingMarkupExtensionV1
 
 ```csharp
-public System.Void ApplyNonMatchingMarkupExtensionV1(System.Object target, System.Object property, System.IServiceProvider prov, System.Object value)
+public Void ApplyNonMatchingMarkupExtensionV1(Object target, Object property, IServiceProvider prov, Object value)
 ```
 
 <span id="uid-c543aa31f9"></span>
@@ -85,7 +88,7 @@ public Avalonia.Markup.Xaml.XamlIl.Runtime.IAvaloniaXamlIlEagerParentStackProvid
 ### CreateInnerServiceProviderV1
 
 ```csharp
-public System.IServiceProvider CreateInnerServiceProviderV1(System.IServiceProvider compiled)
+public IServiceProvider CreateInnerServiceProviderV1(IServiceProvider compiled)
 ```
 
 <span id="uid-fd4ec5b6cd"></span>
@@ -93,7 +96,7 @@ public System.IServiceProvider CreateInnerServiceProviderV1(System.IServiceProvi
 ### CreateRootServiceProviderV2
 
 ```csharp
-public System.IServiceProvider CreateRootServiceProviderV2()
+public IServiceProvider CreateRootServiceProviderV2()
 ```
 
 <span id="uid-778a9653ce"></span>
@@ -101,7 +104,7 @@ public System.IServiceProvider CreateRootServiceProviderV2()
 ### CreateRootServiceProviderV3
 
 ```csharp
-public System.IServiceProvider CreateRootServiceProviderV3(System.IServiceProvider parentServiceProvider)
+public IServiceProvider CreateRootServiceProviderV3(IServiceProvider parentServiceProvider)
 ```
 
 <span id="uid-37f819a2e0"></span>
@@ -109,7 +112,7 @@ public System.IServiceProvider CreateRootServiceProviderV3(System.IServiceProvid
 ### DeferredTransformationFactoryV1
 
 ```csharp
-public System.Func<System.IServiceProvider, System.Object> DeferredTransformationFactoryV1(System.Func<System.IServiceProvider, System.Object> builder, System.IServiceProvider provider)
+public Func<IServiceProvider, Object> DeferredTransformationFactoryV1(Func<IServiceProvider, Object> builder, IServiceProvider provider)
 ```
 
 <span id="uid-3a715139d1"></span>
@@ -117,7 +120,7 @@ public System.Func<System.IServiceProvider, System.Object> DeferredTransformatio
 ### DeferredTransformationFactoryV2
 
 ```csharp
-public System.Func<System.IServiceProvider, System.Object> DeferredTransformationFactoryV2<T>(System.Func<System.IServiceProvider, System.Object> builder, System.IServiceProvider provider)
+public Func<IServiceProvider, Object> DeferredTransformationFactoryV2<T>(Func<IServiceProvider, Object> builder, IServiceProvider provider)
 ```
 
 <span id="uid-220107fbfa"></span>
@@ -125,7 +128,7 @@ public System.Func<System.IServiceProvider, System.Object> DeferredTransformatio
 ### DeferredTransformationFactoryV3
 
 ```csharp
-public Avalonia.Controls.IDeferredContent DeferredTransformationFactoryV3<T>(System.IntPtr builder, System.IServiceProvider provider)
+public Avalonia.Controls.IDeferredContent DeferredTransformationFactoryV3<T>(IntPtr builder, IServiceProvider provider)
 ```
 
 </ApiRefPage>

@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Media/TextHitTestResult.cs">TextHitTestResult.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -68,7 +71,7 @@ public struct TextHitTestResult
 ### TextHitTestResult
 
 ```csharp
-public TextHitTestResult(Avalonia.Media.CharacterHit characterHit, System.Int32 textPosition, System.Boolean isInside, System.Boolean isTrailing)
+public TextHitTestResult(Avalonia.Media.CharacterHit characterHit, Int32 textPosition, Boolean isInside, Boolean isTrailing)
 ```
 
 ## Methods
@@ -88,7 +91,7 @@ public TextHitTestResult(Avalonia.Media.CharacterHit characterHit, System.Int32 
 #### Equals
 
 ```csharp
-public System.Boolean Equals(Avalonia.Media.TextHitTestResult other)
+public Boolean Equals(Avalonia.Media.TextHitTestResult other)
 ```
 
 <span id="uid-0b2bbbfb9b"></span>
@@ -96,7 +99,7 @@ public System.Boolean Equals(Avalonia.Media.TextHitTestResult other)
 #### Equals
 
 ```csharp
-public System.Boolean Equals(System.Object obj)
+public Boolean Equals(Object obj)
 ```
 
 <span id="uid-259594b82d"></span>
@@ -104,7 +107,7 @@ public System.Boolean Equals(System.Object obj)
 ### GetHashCode
 
 ```csharp
-public System.Int32 GetHashCode()
+public Int32 GetHashCode()
 ```
 
 <span id="uid-31dfc2216f"></span>
@@ -112,7 +115,7 @@ public System.Int32 GetHashCode()
 ### ToString
 
 ```csharp
-public System.String ToString()
+public String ToString()
 ```
 
 ## Properties
@@ -141,7 +144,7 @@ public Avalonia.Media.CharacterHit CharacterHit { get; set; }
 Gets a value indicating whether the point is inside the bounds of the text.
 
 ```csharp
-public System.Boolean IsInside { get; set; }
+public Boolean IsInside { get; set; }
 ```
 
 <span id="uid-59df025f1a"></span>
@@ -151,7 +154,7 @@ public System.Boolean IsInside { get; set; }
 Gets a value indicating whether the hit is on the trailing edge of the character.
 
 ```csharp
-public System.Boolean IsTrailing { get; set; }
+public Boolean IsTrailing { get; set; }
 ```
 
 <span id="uid-bc9e154fcc"></span>
@@ -161,7 +164,7 @@ public System.Boolean IsTrailing { get; set; }
 Gets the index of the hit character in the text.
 
 ```csharp
-public System.Int32 TextPosition { get; set; }
+public Int32 TextPosition { get; set; }
 ```
 
 </ApiRefPage>

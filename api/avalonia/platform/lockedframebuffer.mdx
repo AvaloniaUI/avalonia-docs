@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Platform/LockedFramebuffer.cs">LockedFramebuffer.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__signature">
@@ -62,7 +65,7 @@ public class LockedFramebuffer
 ### LockedFramebuffer
 
 ```csharp
-public LockedFramebuffer(System.IntPtr address, Avalonia.PixelSize size, System.Int32 rowBytes, Avalonia.Vector dpi, Avalonia.Platform.PixelFormat format, Avalonia.Platform.AlphaFormat alphaFormat, System.Action onDispose)
+public LockedFramebuffer(IntPtr address, Avalonia.PixelSize size, Int32 rowBytes, Avalonia.Vector dpi, Avalonia.Platform.PixelFormat format, Avalonia.Platform.AlphaFormat alphaFormat, Action onDispose)
 ```
 
 ## Methods
@@ -76,7 +79,7 @@ public LockedFramebuffer(System.IntPtr address, Avalonia.PixelSize size, System.
 ### Dispose
 
 ```csharp
-public System.Void Dispose()
+public Void Dispose()
 ```
 
 ## Properties
@@ -95,7 +98,7 @@ public System.Void Dispose()
 ### Address
 
 ```csharp
-public System.IntPtr Address { get; set; }
+public IntPtr Address { get; set; }
 ```
 
 <span id="uid-7a2192d1e4"></span>
@@ -127,7 +130,7 @@ public Avalonia.Platform.PixelFormat Format { get; set; }
 ### RowBytes
 
 ```csharp
-public System.Int32 RowBytes { get; set; }
+public Int32 RowBytes { get; set; }
 ```
 
 <span id="uid-05c8934baf"></span>

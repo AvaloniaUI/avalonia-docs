@@ -63,7 +63,7 @@ public interface IStorageProvider
 Open [Avalonia.Platform.Storage.IStorageBookmarkFile](xref:Avalonia.Platform.Storage.IStorageBookmarkFile) from the bookmark ID.
 
 ```csharp
-public System.Threading.Tasks.Task<Avalonia.Platform.Storage.IStorageBookmarkFile> OpenFileBookmarkAsync(System.String bookmark)
+public System.Threading.Tasks.Task<Avalonia.Platform.Storage.IStorageBookmarkFile> OpenFileBookmarkAsync(String bookmark)
 ```
 
 | Parameter | Description |
@@ -91,7 +91,7 @@ Returns: Array of selected [Avalonia.Platform.Storage.IStorageFile](xref:Avaloni
 Open [Avalonia.Platform.Storage.IStorageBookmarkFolder](xref:Avalonia.Platform.Storage.IStorageBookmarkFolder) from the bookmark ID.
 
 ```csharp
-public System.Threading.Tasks.Task<Avalonia.Platform.Storage.IStorageBookmarkFolder> OpenFolderBookmarkAsync(System.String bookmark)
+public System.Threading.Tasks.Task<Avalonia.Platform.Storage.IStorageBookmarkFolder> OpenFolderBookmarkAsync(String bookmark)
 ```
 
 | Parameter | Description |
@@ -143,7 +143,7 @@ Returns: [Avalonia.Platform.Storage.SaveFilePickerResult](xref:Avalonia.Platform
 Attempts to read file from the file-system by its path.
 
 ```csharp
-public System.Threading.Tasks.Task<Avalonia.Platform.Storage.IStorageFile> TryGetFileFromPathAsync(System.Uri filePath)
+public System.Threading.Tasks.Task<Avalonia.Platform.Storage.IStorageFile> TryGetFileFromPathAsync(Uri filePath)
 ```
 
 | Parameter | Description |
@@ -159,7 +159,7 @@ Returns: File or null if it doesn't exist.
 Attempts to read folder from the file-system by its path.
 
 ```csharp
-public System.Threading.Tasks.Task<Avalonia.Platform.Storage.IStorageFolder> TryGetFolderFromPathAsync(System.Uri folderPath)
+public System.Threading.Tasks.Task<Avalonia.Platform.Storage.IStorageFolder> TryGetFolderFromPathAsync(Uri folderPath)
 ```
 
 | Parameter | Description |
@@ -199,7 +199,7 @@ Returns: Folder or null if it doesn't exist.
 Returns true if it's possible to open file picker on the current platform.
 
 ```csharp
-public System.Boolean CanOpen { get; set; }
+public Boolean CanOpen { get; set; }
 ```
 
 <span id="uid-c5a5582867"></span>
@@ -209,7 +209,7 @@ public System.Boolean CanOpen { get; set; }
 Returns true if it's possible to open folder picker on the current platform.
 
 ```csharp
-public System.Boolean CanPickFolder { get; set; }
+public Boolean CanPickFolder { get; set; }
 ```
 
 <span id="uid-15d3347cf3"></span>
@@ -219,7 +219,7 @@ public System.Boolean CanPickFolder { get; set; }
 Returns true if it's possible to open save file picker on the current platform.
 
 ```csharp
-public System.Boolean CanSave { get; set; }
+public Boolean CanSave { get; set; }
 ```
 
 </ApiRefPage>

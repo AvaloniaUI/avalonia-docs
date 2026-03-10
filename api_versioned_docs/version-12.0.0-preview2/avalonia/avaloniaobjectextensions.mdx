@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/AvaloniaObjectExtensions.cs">AvaloniaObjectExtensions.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -76,7 +79,7 @@ public class AvaloniaObjectExtensions
 #### AddClassHandler
 
 ```csharp
-public System.IDisposable AddClassHandler<TTarget>(System.IObservable<Avalonia.AvaloniaPropertyChangedEventArgs> observable, System.Action<TTarget, Avalonia.AvaloniaPropertyChangedEventArgs> action)
+public IDisposable AddClassHandler<TTarget>(IObservable<Avalonia.AvaloniaPropertyChangedEventArgs> observable, Action<TTarget, Avalonia.AvaloniaPropertyChangedEventArgs> action)
 ```
 
 <span id="uid-2787e01711"></span>
@@ -84,7 +87,7 @@ public System.IDisposable AddClassHandler<TTarget>(System.IObservable<Avalonia.A
 #### AddClassHandler
 
 ```csharp
-public System.IDisposable AddClassHandler<TTarget, TValue>(System.IObservable<Avalonia.AvaloniaPropertyChangedEventArgs<T><TValue>> observable, System.Action<TTarget, Avalonia.AvaloniaPropertyChangedEventArgs<T><TValue>> action)
+public IDisposable AddClassHandler<TTarget, TValue>(IObservable<Avalonia.AvaloniaPropertyChangedEventArgs<T><TValue>> observable, Action<TTarget, Avalonia.AvaloniaPropertyChangedEventArgs<T><TValue>> action)
 ```
 
 <span id="uid-d8548d79f1"></span>
@@ -96,7 +99,7 @@ public System.IDisposable AddClassHandler<TTarget, TValue>(System.IObservable<Av
 #### Bind
 
 ```csharp
-public System.IDisposable Bind<T>(Avalonia.AvaloniaObject target, Avalonia.AvaloniaProperty<TValue><T> property, System.IObservable<Avalonia.Data.BindingValue<T><T>> source, Avalonia.Data.BindingPriority priority)
+public IDisposable Bind<T>(Avalonia.AvaloniaObject target, Avalonia.AvaloniaProperty<TValue><T> property, IObservable<Avalonia.Data.BindingValue<T><T>> source, Avalonia.Data.BindingPriority priority)
 ```
 
 <span id="uid-7c6693d3d9"></span>
@@ -104,7 +107,7 @@ public System.IDisposable Bind<T>(Avalonia.AvaloniaObject target, Avalonia.Avalo
 #### Bind
 
 ```csharp
-public System.IDisposable Bind<T>(Avalonia.AvaloniaObject target, Avalonia.AvaloniaProperty<TValue><T> property, System.IObservable<T> source, Avalonia.Data.BindingPriority priority)
+public IDisposable Bind<T>(Avalonia.AvaloniaObject target, Avalonia.AvaloniaProperty<TValue><T> property, IObservable<T> source, Avalonia.Data.BindingPriority priority)
 ```
 
 <span id="uid-a44baab4f1"></span>
@@ -118,7 +121,7 @@ public System.IDisposable Bind<T>(Avalonia.AvaloniaObject target, Avalonia.Avalo
 Gets an [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) base value.
 
 ```csharp
-public System.Object GetBaseValue(Avalonia.AvaloniaObject target, Avalonia.AvaloniaProperty property)
+public Object GetBaseValue(Avalonia.AvaloniaObject target, Avalonia.AvaloniaProperty property)
 ```
 
 | Parameter | Description |
@@ -145,7 +148,7 @@ public Avalonia.Data.Optional<T><T> GetBaseValue<T>(Avalonia.AvaloniaObject targ
 Gets an observable for an [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty).
 
 ```csharp
-public System.IObservable<Avalonia.Data.BindingValue<T><System.Object>> GetBindingObservable(Avalonia.AvaloniaObject o, Avalonia.AvaloniaProperty property)
+public IObservable<Avalonia.Data.BindingValue<T><Object>> GetBindingObservable(Avalonia.AvaloniaObject o, Avalonia.AvaloniaProperty property)
 ```
 
 | Parameter | Description |
@@ -161,7 +164,7 @@ object and subsequently each time the property value changes.
 #### GetBindingObservable
 
 ```csharp
-public System.IObservable<Avalonia.Data.BindingValue<T><TResult>> GetBindingObservable<TResult>(Avalonia.AvaloniaObject o, Avalonia.AvaloniaProperty property, System.Func<System.Object, TResult> converter)
+public IObservable<Avalonia.Data.BindingValue<T><TResult>> GetBindingObservable<TResult>(Avalonia.AvaloniaObject o, Avalonia.AvaloniaProperty property, Func<Object, TResult> converter)
 ```
 
 <span id="uid-ef38bab6bc"></span>
@@ -169,7 +172,7 @@ public System.IObservable<Avalonia.Data.BindingValue<T><TResult>> GetBindingObse
 #### GetBindingObservable
 
 ```csharp
-public System.IObservable<Avalonia.Data.BindingValue<T><T>> GetBindingObservable<T>(Avalonia.AvaloniaObject o, Avalonia.AvaloniaProperty<TValue><T> property)
+public IObservable<Avalonia.Data.BindingValue<T><T>> GetBindingObservable<T>(Avalonia.AvaloniaObject o, Avalonia.AvaloniaProperty<TValue><T> property)
 ```
 
 <span id="uid-1e158c64cf"></span>
@@ -177,7 +180,7 @@ public System.IObservable<Avalonia.Data.BindingValue<T><T>> GetBindingObservable
 #### GetBindingObservable
 
 ```csharp
-public System.IObservable<Avalonia.Data.BindingValue<T><TResult>> GetBindingObservable<TSource, TResult>(Avalonia.AvaloniaObject o, Avalonia.AvaloniaProperty<TValue><TSource> property, System.Func<TSource, TResult> converter)
+public IObservable<Avalonia.Data.BindingValue<T><TResult>> GetBindingObservable<TSource, TResult>(Avalonia.AvaloniaObject o, Avalonia.AvaloniaProperty<TValue><TSource> property, Func<TSource, TResult> converter)
 ```
 
 <span id="uid-0707411a55"></span>
@@ -191,7 +194,7 @@ public System.IObservable<Avalonia.Data.BindingValue<T><TResult>> GetBindingObse
 Gets an observable for an [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty).
 
 ```csharp
-public System.IObservable<System.Object> GetObservable(Avalonia.AvaloniaObject o, Avalonia.AvaloniaProperty property)
+public IObservable<Object> GetObservable(Avalonia.AvaloniaObject o, Avalonia.AvaloniaProperty property)
 ```
 
 | Parameter | Description |
@@ -207,7 +210,7 @@ object and subsequently each time the property value changes.
 #### GetObservable
 
 ```csharp
-public System.IObservable<TResult> GetObservable<TResult>(Avalonia.AvaloniaObject o, Avalonia.AvaloniaProperty property, System.Func<System.Object, TResult> converter)
+public IObservable<TResult> GetObservable<TResult>(Avalonia.AvaloniaObject o, Avalonia.AvaloniaProperty property, Func<Object, TResult> converter)
 ```
 
 <span id="uid-a2f315dbd4"></span>
@@ -215,7 +218,7 @@ public System.IObservable<TResult> GetObservable<TResult>(Avalonia.AvaloniaObjec
 #### GetObservable
 
 ```csharp
-public System.IObservable<T> GetObservable<T>(Avalonia.AvaloniaObject o, Avalonia.AvaloniaProperty<TValue><T> property)
+public IObservable<T> GetObservable<T>(Avalonia.AvaloniaObject o, Avalonia.AvaloniaProperty<TValue><T> property)
 ```
 
 <span id="uid-163790c8aa"></span>
@@ -223,7 +226,7 @@ public System.IObservable<T> GetObservable<T>(Avalonia.AvaloniaObject o, Avaloni
 #### GetObservable
 
 ```csharp
-public System.IObservable<TResult> GetObservable<TSource, TResult>(Avalonia.AvaloniaObject o, Avalonia.AvaloniaProperty<TValue><TSource> property, System.Func<TSource, TResult> converter)
+public IObservable<TResult> GetObservable<TSource, TResult>(Avalonia.AvaloniaObject o, Avalonia.AvaloniaProperty<TValue><TSource> property, Func<TSource, TResult> converter)
 ```
 
 <span id="uid-ef3b80a9cc"></span>
@@ -234,7 +237,7 @@ Gets an observable that listens for property changed events for an
 [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty).
 
 ```csharp
-public System.IObservable<Avalonia.AvaloniaPropertyChangedEventArgs> GetPropertyChangedObservable(Avalonia.AvaloniaObject o, Avalonia.AvaloniaProperty property)
+public IObservable<Avalonia.AvaloniaPropertyChangedEventArgs> GetPropertyChangedObservable(Avalonia.AvaloniaObject o, Avalonia.AvaloniaProperty property)
 ```
 
 | Parameter | Description |
@@ -259,7 +262,7 @@ public T GetValue<T>(Avalonia.AvaloniaObject target, Avalonia.AvaloniaProperty<T
 ### ToBinding
 
 ```csharp
-public Avalonia.Data.BindingBase ToBinding<T>(System.IObservable<T> source)
+public Avalonia.Data.BindingBase ToBinding<T>(IObservable<T> source)
 ```
 
 </ApiRefPage>

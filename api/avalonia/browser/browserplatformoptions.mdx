@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Browser</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Browser/Avalonia.Browser/BrowserAppBuilder.cs">BrowserAppBuilder.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__signature">
@@ -91,7 +94,7 @@ public Avalonia.Browser.BrowserPlatformOptions <Clone>$()
 #### Equals
 
 ```csharp
-public System.Boolean Equals(Avalonia.Browser.BrowserPlatformOptions other)
+public Boolean Equals(Avalonia.Browser.BrowserPlatformOptions other)
 ```
 
 <span id="uid-cb0adaddc9"></span>
@@ -99,7 +102,7 @@ public System.Boolean Equals(Avalonia.Browser.BrowserPlatformOptions other)
 #### Equals
 
 ```csharp
-public System.Boolean Equals(System.Object obj)
+public Boolean Equals(Object obj)
 ```
 
 <span id="uid-eedcb29ee9"></span>
@@ -107,7 +110,7 @@ public System.Boolean Equals(System.Object obj)
 ### GetHashCode
 
 ```csharp
-public System.Int32 GetHashCode()
+public Int32 GetHashCode()
 ```
 
 <span id="uid-68fd32bd5c"></span>
@@ -115,7 +118,7 @@ public System.Int32 GetHashCode()
 ### ToString
 
 ```csharp
-public System.String ToString()
+public String ToString()
 ```
 
 ## Properties
@@ -137,7 +140,7 @@ If [Avalonia.Browser.BrowserPlatformOptions.RegisterAvaloniaServiceWorker](xref:
 By default, current domain root is used as a scope.
 
 ```csharp
-public System.String AvaloniaServiceWorkerScope { get; set; }
+public String AvaloniaServiceWorkerScope { get; set; }
 ```
 
 <span id="uid-980d1644e0"></span>
@@ -148,7 +151,7 @@ Defines paths where avalonia modules and service locator should be resolved.
 If null, default path resolved depending on the backend (browser or blazor) is used.
 
 ```csharp
-public System.Func<System.String, System.String> FrameworkAssetPathResolver { get; set; }
+public Func<String, String> FrameworkAssetPathResolver { get; set; }
 ```
 
 <span id="uid-c664813675"></span>
@@ -161,7 +164,7 @@ This property forces polyfill to be always used.
 For more details, see https://github.com/jimmywarting/native-file-system-adapter#a-note-when-downloading-with-the-polyfilled-version.
 
 ```csharp
-public System.Boolean PreferFileDialogPolyfill { get; set; }
+public Boolean PreferFileDialogPolyfill { get; set; }
 ```
 
 <span id="uid-33ce7962eb"></span>
@@ -172,7 +175,7 @@ Defines if Avalonia should create a controlled dispatcher loop on the web worker
 If used only when WasmEnableThreads is set to true. Default value is true.
 
 ```csharp
-public System.Nullable<System.Boolean> PreferManagedThreadDispatcher { get; set; }
+public Nullable<Boolean> PreferManagedThreadDispatcher { get; set; }
 ```
 
 <span id="uid-16d8fcda5f"></span>
@@ -184,7 +187,7 @@ If registered, service worker can work as a save file picker fallback on the bro
 For more details, see https://github.com/jimmywarting/native-file-system-adapter#a-note-when-downloading-with-the-polyfilled-version.
 
 ```csharp
-public System.Boolean RegisterAvaloniaServiceWorker { get; set; }
+public Boolean RegisterAvaloniaServiceWorker { get; set; }
 ```
 
 <span id="uid-59c97f7de1"></span>

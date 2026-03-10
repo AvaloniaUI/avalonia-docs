@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Rendering/Composition/CompositionDrawingSurface.cs">CompositionDrawingSurface.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__signature">
@@ -60,13 +63,17 @@ public class CompositionDrawingSurface
 | [UpdateWithKeyedMutexAsync](#uid-8c0468851c) | Updates the surface contents using an imported memory image using a keyed mutex as the means of synchronization |
 | [UpdateWithSemaphoresAsync](#uid-1f3f69b88a) | Updates the surface contents using an imported memory image using a semaphore pair as the means of synchronization |
 | [UpdateWithTimelineSemaphoresAsync](#uid-6b68142bde) | Updates the surface contents using an imported memory image using a semaphore pair as the means of synchronization |
+| [StartAnimation (Inherited from CompositionObject)](compositionobject.mdx#uid-4d2f25fec7) | Connects an animation with the specified property of the object and starts the animation. |
+| [StartAnimationGroup (Inherited from CompositionObject)](compositionobject.mdx#uid-4846f860a0) | Starts an animation group. The StartAnimationGroup method on CompositionObject lets you start CompositionAnimationGroup. All the animations in the group will be started at the same time on the object. |
+| [StopAnimation (Inherited from CompositionObject)](compositionobject.mdx#uid-01077c2b21) | Disconnects an animation from the specified property and stops the animation. |
+| [StopAnimationGroup (Inherited from CompositionObject)](compositionobject.mdx#uid-81dbd02845) | Stops an animation group. |
 
 <span id="uid-ff4f87a0e1"></span>
 
 ### Dispose
 
 ```csharp
-public System.Void Dispose()
+public Void Dispose()
 ```
 
 <span id="uid-d9381b09c8"></span>
@@ -93,7 +100,7 @@ Returns: A task that completes when update operation is completed and user code 
 Updates the surface contents using an imported memory image using a keyed mutex as the means of synchronization
 
 ```csharp
-public System.Threading.Tasks.Task UpdateWithKeyedMutexAsync(Avalonia.Rendering.Composition.ICompositionImportedGpuImage image, System.UInt32 acquireIndex, System.UInt32 releaseIndex)
+public System.Threading.Tasks.Task UpdateWithKeyedMutexAsync(Avalonia.Rendering.Composition.ICompositionImportedGpuImage image, UInt32 acquireIndex, UInt32 releaseIndex)
 ```
 
 | Parameter | Description |
@@ -129,7 +136,7 @@ Returns: A task that completes when update operation is completed and user code 
 Updates the surface contents using an imported memory image using a semaphore pair as the means of synchronization
 
 ```csharp
-public System.Threading.Tasks.Task UpdateWithTimelineSemaphoresAsync(Avalonia.Rendering.Composition.ICompositionImportedGpuImage image, Avalonia.Rendering.Composition.ICompositionImportedGpuSemaphore waitForSemaphore, System.UInt64 waitForValue, Avalonia.Rendering.Composition.ICompositionImportedGpuSemaphore signalSemaphore, System.UInt64 signalValue)
+public System.Threading.Tasks.Task UpdateWithTimelineSemaphoresAsync(Avalonia.Rendering.Composition.ICompositionImportedGpuImage image, Avalonia.Rendering.Composition.ICompositionImportedGpuSemaphore waitForSemaphore, UInt64 waitForValue, Avalonia.Rendering.Composition.ICompositionImportedGpuSemaphore signalSemaphore, UInt64 signalValue)
 ```
 
 | Parameter | Description |
@@ -141,6 +148,14 @@ public System.Threading.Tasks.Task UpdateWithTimelineSemaphoresAsync(Avalonia.Re
 | `waitForValue` | The value to wait for before accessing the image |
 
 Returns: A task that completes when update operation is completed and user code is free to destroy or dispose the image
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Compositor (Inherited from CompositionObject)](compositionobject.mdx#uid-bd6bbc1391) | The associated Compositor |
+| [ImplicitAnimations (Inherited from CompositionObject)](compositionobject.mdx#uid-3929e9ea34) | The collection of implicit animations attached to this object. |
+| [IsDisposed (Inherited from CompositionObject)](compositionobject.mdx#uid-e01437c946) | No summary available. |
 
 </ApiRefPage>
 

@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.ColorPicker</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Controls.ColorPicker/Converters/ColorToHexConverter.cs">ColorToHexConverter.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -87,7 +90,7 @@ public ColorToHexConverter()
 Converts a value.
 
 ```csharp
-public System.Object Convert(System.Object value, System.Type targetType, System.Object parameter, System.Globalization.CultureInfo culture)
+public Object Convert(Object value, Type targetType, Object parameter, System.Globalization.CultureInfo culture)
 ```
 
 | Parameter | Description |
@@ -106,7 +109,7 @@ Returns: The converted value.
 Converts a value.
 
 ```csharp
-public System.Object ConvertBack(System.Object value, System.Type targetType, System.Object parameter, System.Globalization.CultureInfo culture)
+public Object ConvertBack(Object value, Type targetType, Object parameter, System.Globalization.CultureInfo culture)
 ```
 
 | Parameter | Description |
@@ -125,7 +128,7 @@ Returns: The converted value.
 Parses a hex color value string into a new [Avalonia.Media.Color](xref:Avalonia.Media.Color).
 
 ```csharp
-public System.Nullable<Avalonia.Media.Color> ParseHexString(System.String hexColor, Avalonia.Controls.AlphaComponentPosition alphaPosition)
+public Nullable<Avalonia.Media.Color> ParseHexString(String hexColor, Avalonia.Controls.AlphaComponentPosition alphaPosition)
 ```
 
 | Parameter | Description |
@@ -142,7 +145,7 @@ Returns: The parsed [Avalonia.Media.Color](xref:Avalonia.Media.Color); otherwise
 Converts the given color to its hex color value string representation.
 
 ```csharp
-public System.String ToHexString(Avalonia.Media.Color color, Avalonia.Controls.AlphaComponentPosition alphaPosition, System.Boolean includeAlpha, System.Boolean includeSymbol)
+public String ToHexString(Avalonia.Media.Color color, Avalonia.Controls.AlphaComponentPosition alphaPosition, Boolean includeAlpha, Boolean includeSymbol)
 ```
 
 | Parameter | Description |
@@ -178,7 +181,7 @@ public Avalonia.Controls.AlphaComponentPosition AlphaPosition { get; set; }
 Gets or sets a value indicating whether the alpha component is visible in the Hex formatted text.
 
 ```csharp
-public System.Boolean IsAlphaVisible { get; set; }
+public Boolean IsAlphaVisible { get; set; }
 ```
 
 </ApiRefPage>

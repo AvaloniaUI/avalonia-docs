@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Input/InputMethod.cs">InputMethod.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__signature">
@@ -62,7 +65,7 @@ public class InputMethod
 ### AddTextInputMethodClientRequeryRequestedHandler
 
 ```csharp
-public System.Void AddTextInputMethodClientRequeryRequestedHandler(Avalonia.Interactivity.Interactive element, System.EventHandler<Avalonia.Interactivity.RoutedEventArgs> handler)
+public Void AddTextInputMethodClientRequeryRequestedHandler(Avalonia.Interactivity.Interactive element, EventHandler<Avalonia.Interactivity.RoutedEventArgs> handler)
 ```
 
 <span id="uid-a73c3126bf"></span>
@@ -72,7 +75,7 @@ public System.Void AddTextInputMethodClientRequeryRequestedHandler(Avalonia.Inte
 Getter for IsInputMethodEnabled AvaloniaProperty
 
 ```csharp
-public System.Boolean GetIsInputMethodEnabled(Avalonia.Input.InputElement target)
+public Boolean GetIsInputMethodEnabled(Avalonia.Input.InputElement target)
 ```
 
 <span id="uid-c312335564"></span>
@@ -80,7 +83,7 @@ public System.Boolean GetIsInputMethodEnabled(Avalonia.Input.InputElement target
 ### RemoveTextInputMethodClientRequeryRequestedHandler
 
 ```csharp
-public System.Void RemoveTextInputMethodClientRequeryRequestedHandler(Avalonia.Interactivity.Interactive element, System.EventHandler<Avalonia.Interactivity.RoutedEventArgs> handler)
+public Void RemoveTextInputMethodClientRequeryRequestedHandler(Avalonia.Interactivity.Interactive element, EventHandler<Avalonia.Interactivity.RoutedEventArgs> handler)
 ```
 
 <span id="uid-436bfb2a01"></span>
@@ -90,7 +93,7 @@ public System.Void RemoveTextInputMethodClientRequeryRequestedHandler(Avalonia.I
 Setter for IsInputMethodEnabled AvaloniaProperty
 
 ```csharp
-public System.Void SetIsInputMethodEnabled(Avalonia.Input.InputElement target, System.Boolean value)
+public Void SetIsInputMethodEnabled(Avalonia.Input.InputElement target, Boolean value)
 ```
 
 ## Fields
@@ -107,7 +110,7 @@ public System.Void SetIsInputMethodEnabled(Avalonia.Input.InputElement target, S
 A dependency property that enables alternative text inputs.
 
 ```csharp
-public Avalonia.AvaloniaProperty<TValue><System.Boolean> IsInputMethodEnabledProperty
+public Avalonia.AvaloniaProperty<TValue><Boolean> IsInputMethodEnabledProperty
 ```
 
 <span id="uid-959d8e692b"></span>

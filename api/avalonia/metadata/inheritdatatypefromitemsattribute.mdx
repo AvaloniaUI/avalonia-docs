@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Metadata/InheritDataTypeFromItemsAttribute.cs">InheritDataTypeFromItemsAttribute.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -72,7 +75,7 @@ allowing the template to inherit the data type from the Items collection binding
 Initializes a new instance of the [Avalonia.Metadata.InheritDataTypeFromItemsAttribute](xref:Avalonia.Metadata.InheritDataTypeFromItemsAttribute) class.
 
 ```csharp
-public InheritDataTypeFromItemsAttribute(System.String ancestorItemsProperty)
+public InheritDataTypeFromItemsAttribute(String ancestorItemsProperty)
 ```
 
 | Parameter | Description |
@@ -93,7 +96,7 @@ public InheritDataTypeFromItemsAttribute(System.String ancestorItemsProperty)
 The name of the property whose item type should be used on the target property.
 
 ```csharp
-public System.String AncestorItemsProperty { get; set; }
+public String AncestorItemsProperty { get; set; }
 ```
 
 <span id="uid-ccda529168"></span>
@@ -104,7 +107,7 @@ The ancestor type to be used in a lookup for the [Avalonia.Metadata.InheritDataT
 If null, the declaring type of the target property is used.
 
 ```csharp
-public System.Type AncestorType { get; set; }
+public Type AncestorType { get; set; }
 ```
 
 </ApiRefPage>

@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Controls/Application.cs">Application.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -94,6 +97,19 @@ public Application()
 | [RegisterServices](#uid-141237462b) | Register's the services needed by Avalonia. |
 | [TryGetFeature](#uid-167f3f3976) | Queries for an optional feature. |
 | [TryGetResource](#uid-0edcd40f5c) | No summary available. |
+| [Bind (8 overloads) (Inherited from AvaloniaObject)](avaloniaobject.mdx#uid-1c60c7bda3) | Binds a Avalonia.AvaloniaProperty to an Avalonia.Data.BindingBase. |
+| [CheckAccess (Inherited from AvaloniaObject)](avaloniaobject.mdx#uid-260ff7a68d) | Returns a value indicating whether the current thread is the UI thread. |
+| [ClearValue (4 overloads) (Inherited from AvaloniaObject)](avaloniaobject.mdx#uid-41de208fbe) | Clears a Avalonia.AvaloniaProperty's local value. |
+| [CoerceValue (Inherited from AvaloniaObject)](avaloniaobject.mdx#uid-3bec32f39e) | Coerces the specified Avalonia.AvaloniaProperty. |
+| [Equals (Inherited from AvaloniaObject)](avaloniaobject.mdx#uid-a8a8e94305) | Compares two objects using reference equality. |
+| [GetBaseValue (Inherited from AvaloniaObject)](avaloniaobject.mdx#uid-9c615efbba) | No summary available. |
+| [GetHashCode (Inherited from AvaloniaObject)](avaloniaobject.mdx#uid-7f7db1e7a2) | Gets the hash code for the object. |
+| [GetValue (3 overloads) (Inherited from AvaloniaObject)](avaloniaobject.mdx#uid-5142cd4792) | Gets a Avalonia.AvaloniaProperty value. |
+| [IsAnimating (Inherited from AvaloniaObject)](avaloniaobject.mdx#uid-8cbfc7521a) | Checks whether a Avalonia.AvaloniaProperty is animating. |
+| [IsSet (Inherited from AvaloniaObject)](avaloniaobject.mdx#uid-f8bf0bbdcc) | Checks whether a Avalonia.AvaloniaProperty is set on this object. |
+| [SetCurrentValue (2 overloads) (Inherited from AvaloniaObject)](avaloniaobject.mdx#uid-38759fd088) | Sets the value of a dependency property without changing its value source. |
+| [SetValue (3 overloads) (Inherited from AvaloniaObject)](avaloniaobject.mdx#uid-47d14e19d7) | Sets a Avalonia.AvaloniaProperty value. |
+| [VerifyAccess (Inherited from AvaloniaObject)](avaloniaobject.mdx#uid-3b9d3c9793) | Checks that the current thread is the UI thread and throws if not. |
 
 <span id="uid-52be68244b"></span>
 
@@ -102,7 +118,7 @@ public Application()
 Initializes the application by loading XAML etc.
 
 ```csharp
-public System.Void Initialize()
+public Void Initialize()
 ```
 
 <span id="uid-89a60ec540"></span>
@@ -110,7 +126,7 @@ public System.Void Initialize()
 ### OnFrameworkInitializationCompleted
 
 ```csharp
-public System.Void OnFrameworkInitializationCompleted()
+public Void OnFrameworkInitializationCompleted()
 ```
 
 <span id="uid-141237462b"></span>
@@ -120,7 +136,7 @@ public System.Void OnFrameworkInitializationCompleted()
 Register's the services needed by Avalonia.
 
 ```csharp
-public System.Void RegisterServices()
+public Void RegisterServices()
 ```
 
 <span id="uid-167f3f3976"></span>
@@ -130,7 +146,7 @@ public System.Void RegisterServices()
 Queries for an optional feature.
 
 ```csharp
-public System.Object TryGetFeature(System.Type featureType)
+public Object TryGetFeature(Type featureType)
 ```
 
 | Parameter | Description |
@@ -142,7 +158,7 @@ public System.Object TryGetFeature(System.Type featureType)
 ### TryGetResource
 
 ```csharp
-public System.Boolean TryGetResource(System.Object key, Avalonia.Styling.ThemeVariant theme, System.Object& value)
+public Boolean TryGetResource(Object key, Avalonia.Styling.ThemeVariant theme, Object& value)
 ```
 
 ## Properties
@@ -159,6 +175,8 @@ public System.Boolean TryGetResource(System.Object key, Avalonia.Styling.ThemeVa
 | [RequestedThemeVariant](#uid-5c366c1387) | Gets or sets the UI theme variant that is used by the control (and its child elements) for resource determination. The UI theme you specify with ThemeVariant can override the app-level ThemeVariant. |
 | [Resources](#uid-ad05e868f8) | Gets the application's global resource dictionary. |
 | [Styles](#uid-56724faecc) | Gets the application's global styles. |
+| [Dispatcher (Inherited from AvaloniaObject)](avaloniaobject.mdx#uid-b25fa51632) | Returns the Avalonia.AvaloniaObject.Dispatcher that this Avalonia.AvaloniaObject is associated with. |
+| [Item (Inherited from AvaloniaObject)](avaloniaobject.mdx#uid-c1d1f1bc0f) | No summary available. |
 
 <span id="uid-64e2c748c4"></span>
 
@@ -207,7 +225,7 @@ Value: The current instance of the [Avalonia.Application](xref:Avalonia.Applicat
 Gets or sets the Applications's data context.
 
 ```csharp
-public System.Object DataContext { get; set; }
+public Object DataContext { get; set; }
 ```
 
 <span id="uid-6a03e04fc3"></span>
@@ -229,7 +247,7 @@ Value: The application's global data templates.
 Application name to be used for various platform-specific purposes
 
 ```csharp
-public System.String Name { get; set; }
+public String Name { get; set; }
 ```
 
 <span id="uid-37be27508e"></span>
@@ -299,7 +317,7 @@ public Avalonia.StyledProperty<Avalonia.Styling.ThemeVariant> ActualThemeVariant
 Defines the [Avalonia.Application.DataContext](xref:Avalonia.Application.DataContext) property.
 
 ```csharp
-public Avalonia.StyledProperty<System.Object> DataContextProperty
+public Avalonia.StyledProperty<Object> DataContextProperty
 ```
 
 <span id="uid-de67b6e8cc"></span>
@@ -309,7 +327,7 @@ public Avalonia.StyledProperty<System.Object> DataContextProperty
 Defines Name property
 
 ```csharp
-public Avalonia.DirectProperty<Avalonia.Application, System.String> NameProperty
+public Avalonia.DirectProperty<Avalonia.Application, String> NameProperty
 ```
 
 <span id="uid-021bb71b9e"></span>
@@ -326,6 +344,7 @@ public Avalonia.StyledProperty<Avalonia.Styling.ThemeVariant> RequestedThemeVari
 | --- | --- |
 | [ActualThemeVariantChanged](#uid-cfaf9aa916) | Raised when the theme variant is changed on the element or an ancestor of the element. |
 | [ResourcesChanged](#uid-deb388f7cf) | Raised when the resources change on the element or an ancestor of the element. |
+| [PropertyChanged (Inherited from AvaloniaObject)](avaloniaobject.mdx#uid-d758e26fae) | Raised when a Avalonia.AvaloniaProperty value changes on this object. |
 
 <span id="uid-cfaf9aa916"></span>
 
@@ -334,7 +353,7 @@ public Avalonia.StyledProperty<Avalonia.Styling.ThemeVariant> RequestedThemeVari
 Raised when the theme variant is changed on the element or an ancestor of the element.
 
 ```csharp
-public event System.EventHandler ActualThemeVariantChanged
+public event EventHandler ActualThemeVariantChanged
 ```
 
 <span id="uid-deb388f7cf"></span>
@@ -344,7 +363,7 @@ public event System.EventHandler ActualThemeVariantChanged
 Raised when the resources change on the element or an ancestor of the element.
 
 ```csharp
-public event System.EventHandler<Avalonia.Controls.ResourcesChangedEventArgs> ResourcesChanged
+public event EventHandler<Avalonia.Controls.ResourcesChangedEventArgs> ResourcesChanged
 ```
 
 </ApiRefPage>

@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Rendering/Composition/Animations/CompositionAnimation.cs">CompositionAnimation.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -53,16 +56,19 @@ public class CompositionAnimation
 <span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../compositionobject">CompositionObject</a> <span className="apiref-page__relation-separator">-&gt;</span> CompositionAnimation
 </div>
 <div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Derived types:</span> <a href="expressionanimation">ExpressionAnimation</a>, <a href="keyframeanimation">KeyFrameAnimation</a>
+</div>
+<div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Implements:</span> <a href="icompositionanimationbase">ICompositionAnimationBase</a>
 </div>
 </div>
 
 ## Remarks
 
-Use the [Avalonia.Rendering.Composition.CompositionObject.StartAnimation(System.String,Avalonia.Rendering.Composition.Animations.CompositionAnimation)](xref:Avalonia.Rendering.Composition.CompositionObject.StartAnimation%28System.String%2CAvalonia.Rendering.Composition.Animations.CompositionAnimation%29) method to start the animation.
-Value parameters (as opposed to reference parameters which are set using [Avalonia.Rendering.Composition.Animations.CompositionAnimation.SetReferenceParameter(System.String,Avalonia.Rendering.Composition.CompositionObject)](xref:Avalonia.Rendering.Composition.Animations.CompositionAnimation.SetReferenceParameter%28System.String%2CAvalonia.Rendering.Composition.CompositionObject%29))
+Use the [Avalonia.Rendering.Composition.CompositionObject.StartAnimation(String,Avalonia.Rendering.Composition.Animations.CompositionAnimation)](xref:Avalonia.Rendering.Composition.CompositionObject.StartAnimation%28System.String%2CAvalonia.Rendering.Composition.Animations.CompositionAnimation%29) method to start the animation.
+Value parameters (as opposed to reference parameters which are set using [Avalonia.Rendering.Composition.Animations.CompositionAnimation.SetReferenceParameter(String,Avalonia.Rendering.Composition.CompositionObject)](xref:Avalonia.Rendering.Composition.Animations.CompositionAnimation.SetReferenceParameter%28System.String%2CAvalonia.Rendering.Composition.CompositionObject%29))
 are copied and "embedded" into an expression at the time CompositionObject.StartAnimation is called.
-Changing the value of the variable after [Avalonia.Rendering.Composition.CompositionObject.StartAnimation(System.String,Avalonia.Rendering.Composition.Animations.CompositionAnimation)](xref:Avalonia.Rendering.Composition.CompositionObject.StartAnimation%28System.String%2CAvalonia.Rendering.Composition.Animations.CompositionAnimation%29) is called will not affect
+Changing the value of the variable after [Avalonia.Rendering.Composition.CompositionObject.StartAnimation(String,Avalonia.Rendering.Composition.Animations.CompositionAnimation)](xref:Avalonia.Rendering.Composition.CompositionObject.StartAnimation%28System.String%2CAvalonia.Rendering.Composition.Animations.CompositionAnimation%29) is called will not affect
 the value of the ExpressionAnimation.
 See the remarks section of ExpressionAnimation for additional information.
 
@@ -81,6 +87,10 @@ See the remarks section of ExpressionAnimation for additional information.
 | [SetVector2Parameter](#uid-23a56bbf8b) | No summary available. |
 | [SetVector3Parameter](#uid-36e4f14775) | No summary available. |
 | [SetVector4Parameter](#uid-18adc85c82) | No summary available. |
+| [StartAnimation (Inherited from CompositionObject)](../compositionobject.mdx#uid-4d2f25fec7) | Connects an animation with the specified property of the object and starts the animation. |
+| [StartAnimationGroup (Inherited from CompositionObject)](../compositionobject.mdx#uid-4846f860a0) | Starts an animation group. The StartAnimationGroup method on CompositionObject lets you start CompositionAnimationGroup. All the animations in the group will be started at the same time on the object. |
+| [StopAnimation (Inherited from CompositionObject)](../compositionobject.mdx#uid-01077c2b21) | Disconnects an animation from the specified property and stops the animation. |
+| [StopAnimationGroup (Inherited from CompositionObject)](../compositionobject.mdx#uid-81dbd02845) | Stops an animation group. |
 
 <span id="uid-fabe099f1e"></span>
 
@@ -89,7 +99,7 @@ See the remarks section of ExpressionAnimation for additional information.
 Clears all of the parameters of the animation.
 
 ```csharp
-public System.Void ClearAllParameters()
+public Void ClearAllParameters()
 ```
 
 <span id="uid-a8d50b919b"></span>
@@ -99,7 +109,7 @@ public System.Void ClearAllParameters()
 Clears a parameter from the animation.
 
 ```csharp
-public System.Void ClearParameter(System.String key)
+public Void ClearParameter(String key)
 ```
 
 <span id="uid-08114cabfc"></span>
@@ -107,7 +117,7 @@ public System.Void ClearParameter(System.String key)
 ### SetColorParameter
 
 ```csharp
-public System.Void SetColorParameter(System.String key, Avalonia.Media.Color value)
+public Void SetColorParameter(String key, Avalonia.Media.Color value)
 ```
 
 <span id="uid-54d5e6b170"></span>
@@ -115,7 +125,7 @@ public System.Void SetColorParameter(System.String key, Avalonia.Media.Color val
 ### SetMatrix3x2Parameter
 
 ```csharp
-public System.Void SetMatrix3x2Parameter(System.String key, System.Numerics.Matrix3x2 value)
+public Void SetMatrix3x2Parameter(String key, System.Numerics.Matrix3x2 value)
 ```
 
 <span id="uid-eca8ffd8b7"></span>
@@ -123,7 +133,7 @@ public System.Void SetMatrix3x2Parameter(System.String key, System.Numerics.Matr
 ### SetMatrix4x4Parameter
 
 ```csharp
-public System.Void SetMatrix4x4Parameter(System.String key, System.Numerics.Matrix4x4 value)
+public Void SetMatrix4x4Parameter(String key, System.Numerics.Matrix4x4 value)
 ```
 
 <span id="uid-12d8ac27fb"></span>
@@ -131,7 +141,7 @@ public System.Void SetMatrix4x4Parameter(System.String key, System.Numerics.Matr
 ### SetQuaternionParameter
 
 ```csharp
-public System.Void SetQuaternionParameter(System.String key, System.Numerics.Quaternion value)
+public Void SetQuaternionParameter(String key, System.Numerics.Quaternion value)
 ```
 
 <span id="uid-e9b8944c6b"></span>
@@ -139,7 +149,7 @@ public System.Void SetQuaternionParameter(System.String key, System.Numerics.Qua
 ### SetReferenceParameter
 
 ```csharp
-public System.Void SetReferenceParameter(System.String key, Avalonia.Rendering.Composition.CompositionObject compositionObject)
+public Void SetReferenceParameter(String key, Avalonia.Rendering.Composition.CompositionObject compositionObject)
 ```
 
 <span id="uid-9ca4077133"></span>
@@ -147,7 +157,7 @@ public System.Void SetReferenceParameter(System.String key, Avalonia.Rendering.C
 ### SetScalarParameter
 
 ```csharp
-public System.Void SetScalarParameter(System.String key, System.Single value)
+public Void SetScalarParameter(String key, Single value)
 ```
 
 <span id="uid-23a56bbf8b"></span>
@@ -155,7 +165,7 @@ public System.Void SetScalarParameter(System.String key, System.Single value)
 ### SetVector2Parameter
 
 ```csharp
-public System.Void SetVector2Parameter(System.String key, System.Numerics.Vector2 value)
+public Void SetVector2Parameter(String key, System.Numerics.Vector2 value)
 ```
 
 <span id="uid-36e4f14775"></span>
@@ -163,7 +173,7 @@ public System.Void SetVector2Parameter(System.String key, System.Numerics.Vector
 ### SetVector3Parameter
 
 ```csharp
-public System.Void SetVector3Parameter(System.String key, System.Numerics.Vector3 value)
+public Void SetVector3Parameter(String key, System.Numerics.Vector3 value)
 ```
 
 <span id="uid-18adc85c82"></span>
@@ -171,7 +181,7 @@ public System.Void SetVector3Parameter(System.String key, System.Numerics.Vector
 ### SetVector4Parameter
 
 ```csharp
-public System.Void SetVector4Parameter(System.String key, System.Numerics.Vector4 value)
+public Void SetVector4Parameter(String key, System.Numerics.Vector4 value)
 ```
 
 ## Properties
@@ -179,13 +189,16 @@ public System.Void SetVector4Parameter(System.String key, System.Numerics.Vector
 | Name | Description |
 | --- | --- |
 | [Target](#uid-c4cb7997f1) | No summary available. |
+| [Compositor (Inherited from CompositionObject)](../compositionobject.mdx#uid-bd6bbc1391) | The associated Compositor |
+| [ImplicitAnimations (Inherited from CompositionObject)](../compositionobject.mdx#uid-3929e9ea34) | The collection of implicit animations attached to this object. |
+| [IsDisposed (Inherited from CompositionObject)](../compositionobject.mdx#uid-e01437c946) | No summary available. |
 
 <span id="uid-c4cb7997f1"></span>
 
 ### Target
 
 ```csharp
-public System.String Target { get; set; }
+public String Target { get; set; }
 ```
 
 </ApiRefPage>

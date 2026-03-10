@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Data/ReflectionBinding.cs">ReflectionBinding.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -51,6 +54,9 @@ public class ReflectionBinding
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="bindingbase">BindingBase</a> <span className="apiref-page__relation-separator">-&gt;</span> ReflectionBinding
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Derived types:</span> <a href="binding">Binding</a>, <a href="../markup/xaml/markupextensions/reflectionbindingextension">ReflectionBindingExtension</a>
 </div>
 </div>
 
@@ -81,7 +87,7 @@ public ReflectionBinding()
 Initializes a new instance of the [Avalonia.Data.ReflectionBinding](xref:Avalonia.Data.ReflectionBinding) class.
 
 ```csharp
-public ReflectionBinding(System.String path)
+public ReflectionBinding(String path)
 ```
 
 | Parameter | Description |
@@ -137,7 +143,7 @@ Value: The default value is null.
 Gets or sets a parameter to pass to [Avalonia.Data.ReflectionBinding.Converter](xref:Avalonia.Data.ReflectionBinding.Converter).
 
 ```csharp
-public System.Object ConverterParameter { get; set; }
+public Object ConverterParameter { get; set; }
 ```
 
 <span id="uid-5f725d75b9"></span>
@@ -148,7 +154,7 @@ Gets or sets the amount of time, in milliseconds, to wait before updating the bi
 source after the value on the target changes.
 
 ```csharp
-public System.Int32 Delay { get; set; }
+public Int32 Delay { get; set; }
 ```
 
 <span id="uid-c5576e6ba1"></span>
@@ -158,7 +164,7 @@ public System.Int32 Delay { get; set; }
 Gets or sets the name of the element to use as the binding source.
 
 ```csharp
-public System.String ElementName { get; set; }
+public String ElementName { get; set; }
 ```
 
 <span id="uid-4167f89070"></span>
@@ -168,7 +174,7 @@ public System.String ElementName { get; set; }
 Gets or sets the value to use when the binding is unable to produce a value.
 
 ```csharp
-public System.Object FallbackValue { get; set; }
+public Object FallbackValue { get; set; }
 ```
 
 <span id="uid-094aff5586"></span>
@@ -188,7 +194,7 @@ public Avalonia.Data.BindingMode Mode { get; set; }
 Gets or sets the binding path.
 
 ```csharp
-public System.String Path { get; set; }
+public String Path { get; set; }
 ```
 
 <span id="uid-d52ca0f81c"></span>
@@ -218,7 +224,7 @@ public Avalonia.Data.RelativeSource RelativeSource { get; set; }
 Gets or sets the source for the binding.
 
 ```csharp
-public System.Object Source { get; set; }
+public Object Source { get; set; }
 ```
 
 <span id="uid-4dae1cc603"></span>
@@ -228,7 +234,7 @@ public System.Object Source { get; set; }
 Gets or sets the string format.
 
 ```csharp
-public System.String StringFormat { get; set; }
+public String StringFormat { get; set; }
 ```
 
 <span id="uid-ba726385ba"></span>
@@ -238,7 +244,7 @@ public System.String StringFormat { get; set; }
 Gets or sets the value to use when the binding result is null.
 
 ```csharp
-public System.Object TargetNullValue { get; set; }
+public Object TargetNullValue { get; set; }
 ```
 
 <span id="uid-878d6742bf"></span>
@@ -248,7 +254,7 @@ public System.Object TargetNullValue { get; set; }
 Gets or sets a function used to resolve types from names in the binding path.
 
 ```csharp
-public System.Func<System.String, System.String, System.Type> TypeResolver { get; set; }
+public Func<String, String, Type> TypeResolver { get; set; }
 ```
 
 <span id="uid-4b2dab820f"></span>

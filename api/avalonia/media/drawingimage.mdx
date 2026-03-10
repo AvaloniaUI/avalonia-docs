@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Media/DrawingImage.cs">DrawingImage.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -83,6 +86,24 @@ public DrawingImage()
 public DrawingImage(Avalonia.Media.Drawing drawing)
 ```
 
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Bind (8 overloads) (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-1c60c7bda3) | Binds a Avalonia.AvaloniaProperty to an Avalonia.Data.BindingBase. |
+| [CheckAccess (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-260ff7a68d) | Returns a value indicating whether the current thread is the UI thread. |
+| [ClearValue (4 overloads) (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-41de208fbe) | Clears a Avalonia.AvaloniaProperty's local value. |
+| [CoerceValue (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-3bec32f39e) | Coerces the specified Avalonia.AvaloniaProperty. |
+| [Equals (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-a8a8e94305) | Compares two objects using reference equality. |
+| [GetBaseValue (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-9c615efbba) | No summary available. |
+| [GetHashCode (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-7f7db1e7a2) | Gets the hash code for the object. |
+| [GetValue (3 overloads) (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-5142cd4792) | Gets a Avalonia.AvaloniaProperty value. |
+| [IsAnimating (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-8cbfc7521a) | Checks whether a Avalonia.AvaloniaProperty is animating. |
+| [IsSet (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-f8bf0bbdcc) | Checks whether a Avalonia.AvaloniaProperty is set on this object. |
+| [SetCurrentValue (2 overloads) (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-38759fd088) | Sets the value of a dependency property without changing its value source. |
+| [SetValue (3 overloads) (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-47d14e19d7) | Sets a Avalonia.AvaloniaProperty value. |
+| [VerifyAccess (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-3b9d3c9793) | Checks that the current thread is the UI thread and throws if not. |
+
 ## Properties
 
 | Name | Description |
@@ -90,6 +111,8 @@ public DrawingImage(Avalonia.Media.Drawing drawing)
 | [Drawing](#uid-092c850983) | Gets or sets the drawing content. |
 | [Size](#uid-8e0009d7d6) | Gets the size of the image, in device independent pixels. |
 | [Viewbox](#uid-df89f74a05) | Gets or sets a rectangular region of Avalonia.Media.DrawingImage.Drawing, in device independent pixels, to display when rendering this image. |
+| [Dispatcher (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-b25fa51632) | Returns the Avalonia.AvaloniaObject.Dispatcher that this Avalonia.AvaloniaObject is associated with. |
+| [Item (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-c1d1f1bc0f) | No summary available. |
 
 <span id="uid-092c850983"></span>
 
@@ -119,7 +142,7 @@ Gets or sets a rectangular region of [Avalonia.Media.DrawingImage.Drawing](xref:
 when rendering this image.
 
 ```csharp
-public System.Nullable<Avalonia.Rect> Viewbox { get; set; }
+public Nullable<Avalonia.Rect> Viewbox { get; set; }
 ```
 
 #### See also
@@ -150,7 +173,7 @@ public Avalonia.StyledProperty<TValue><Avalonia.Media.Drawing> DrawingProperty
 Defines the [Avalonia.Media.DrawingImage.Viewbox](xref:Avalonia.Media.DrawingImage.Viewbox) property.
 
 ```csharp
-public Avalonia.StyledProperty<TValue><System.Nullable<Avalonia.Rect>> ViewboxProperty
+public Avalonia.StyledProperty<TValue><Nullable<Avalonia.Rect>> ViewboxProperty
 ```
 
 ## Events
@@ -158,13 +181,14 @@ public Avalonia.StyledProperty<TValue><System.Nullable<Avalonia.Rect>> ViewboxPr
 | Name | Description |
 | --- | --- |
 | [Invalidated](#uid-38755d6ee7) | No summary available. |
+| [PropertyChanged (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-d758e26fae) | Raised when a Avalonia.AvaloniaProperty value changes on this object. |
 
 <span id="uid-38755d6ee7"></span>
 
 ### Invalidated
 
 ```csharp
-public event System.EventHandler Invalidated
+public event EventHandler Invalidated
 ```
 
 </ApiRefPage>

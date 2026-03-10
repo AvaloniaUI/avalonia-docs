@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Controls/Design.cs">Design.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -80,7 +83,7 @@ public class Design
 Gets the design-time data context for a control.
 
 ```csharp
-public System.Object GetDataContext(Avalonia.Controls.Control control)
+public Object GetDataContext(Avalonia.Controls.Control control)
 ```
 
 | Parameter | Description |
@@ -96,7 +99,7 @@ Returns: The data context value.
 Gets the design-time data context for a control.
 
 ```csharp
-public System.Object GetDataContext(Avalonia.Controls.Templates.IDataTemplate control)
+public Object GetDataContext(Avalonia.Controls.Templates.IDataTemplate control)
 ```
 
 | Parameter | Description |
@@ -128,7 +131,7 @@ Returns: The style value.
 Gets the design-time height for a control.
 
 ```csharp
-public System.Double GetHeight(Avalonia.Controls.Control control)
+public Double GetHeight(Avalonia.Controls.Control control)
 ```
 
 | Parameter | Description |
@@ -212,7 +215,7 @@ Returns: The preview control, or null.
 Gets the design-time width for a control.
 
 ```csharp
-public System.Double GetWidth(Avalonia.Controls.Control control)
+public Double GetWidth(Avalonia.Controls.Control control)
 ```
 
 | Parameter | Description |
@@ -232,7 +235,7 @@ Returns: The width value.
 Sets the design-time data context for a control.
 
 ```csharp
-public System.Void SetDataContext(Avalonia.Controls.Control control, System.Object value)
+public Void SetDataContext(Avalonia.Controls.Control control, Object value)
 ```
 
 | Parameter | Description |
@@ -247,7 +250,7 @@ public System.Void SetDataContext(Avalonia.Controls.Control control, System.Obje
 Sets the design-time data context for a control.
 
 ```csharp
-public System.Void SetDataContext(Avalonia.Controls.Templates.IDataTemplate control, System.Object value)
+public Void SetDataContext(Avalonia.Controls.Templates.IDataTemplate control, Object value)
 ```
 
 | Parameter | Description |
@@ -262,7 +265,7 @@ public System.Void SetDataContext(Avalonia.Controls.Templates.IDataTemplate cont
 Sets the design-time style for a control.
 
 ```csharp
-public System.Void SetDesignStyle(Avalonia.Controls.Control control, Avalonia.Styling.IStyle value)
+public Void SetDesignStyle(Avalonia.Controls.Control control, Avalonia.Styling.IStyle value)
 ```
 
 | Parameter | Description |
@@ -277,7 +280,7 @@ public System.Void SetDesignStyle(Avalonia.Controls.Control control, Avalonia.St
 Sets the design-time height for a control.
 
 ```csharp
-public System.Void SetHeight(Avalonia.Controls.Control control, System.Double value)
+public Void SetHeight(Avalonia.Controls.Control control, Double value)
 ```
 
 | Parameter | Description |
@@ -294,7 +297,7 @@ public System.Void SetHeight(Avalonia.Controls.Control control, System.Double va
 #### SetPreviewWith
 
 ```csharp
-public System.Void SetPreviewWith(Avalonia.AvaloniaObject target, Avalonia.Controls.ITemplate<TControl><Avalonia.Controls.Control> template)
+public Void SetPreviewWith(Avalonia.AvaloniaObject target, Avalonia.Controls.ITemplate<TControl><Avalonia.Controls.Control> template)
 ```
 
 <span id="uid-ba0ae1afe0"></span>
@@ -304,7 +307,7 @@ public System.Void SetPreviewWith(Avalonia.AvaloniaObject target, Avalonia.Contr
 Sets a preview template for the specified [Avalonia.Controls.ResourceDictionary](xref:Avalonia.Controls.ResourceDictionary) at design-time.
 
 ```csharp
-public System.Void SetPreviewWith(Avalonia.Controls.ResourceDictionary target, Avalonia.Controls.Control control)
+public Void SetPreviewWith(Avalonia.Controls.ResourceDictionary target, Avalonia.Controls.Control control)
 ```
 
 | Parameter | Description |
@@ -317,7 +320,7 @@ public System.Void SetPreviewWith(Avalonia.Controls.ResourceDictionary target, A
 #### SetPreviewWith
 
 ```csharp
-public System.Void SetPreviewWith(Avalonia.Controls.ResourceDictionary target, Avalonia.Controls.ITemplate<TControl><Avalonia.Controls.Control> template)
+public Void SetPreviewWith(Avalonia.Controls.ResourceDictionary target, Avalonia.Controls.ITemplate<TControl><Avalonia.Controls.Control> template)
 ```
 
 <span id="uid-08c9783ea1"></span>
@@ -327,7 +330,7 @@ public System.Void SetPreviewWith(Avalonia.Controls.ResourceDictionary target, A
 Sets a preview template for the specified [Avalonia.Controls.Templates.IDataTemplate](xref:Avalonia.Controls.Templates.IDataTemplate) at design-time.
 
 ```csharp
-public System.Void SetPreviewWith(Avalonia.Controls.Templates.IDataTemplate target, Avalonia.Controls.Control control)
+public Void SetPreviewWith(Avalonia.Controls.Templates.IDataTemplate target, Avalonia.Controls.Control control)
 ```
 
 | Parameter | Description |
@@ -340,7 +343,7 @@ public System.Void SetPreviewWith(Avalonia.Controls.Templates.IDataTemplate targ
 #### SetPreviewWith
 
 ```csharp
-public System.Void SetPreviewWith(Avalonia.Controls.Templates.IDataTemplate target, Avalonia.Controls.ITemplate<TControl><Avalonia.Controls.Control> template)
+public Void SetPreviewWith(Avalonia.Controls.Templates.IDataTemplate target, Avalonia.Controls.ITemplate<TControl><Avalonia.Controls.Control> template)
 ```
 
 <span id="uid-8cca5b8ccd"></span>
@@ -350,7 +353,7 @@ public System.Void SetPreviewWith(Avalonia.Controls.Templates.IDataTemplate targ
 Sets a preview template for the specified [Avalonia.Controls.Templates.IDataTemplate](xref:Avalonia.Controls.Templates.IDataTemplate) at design-time.
 
 ```csharp
-public System.Void SetPreviewWith(Avalonia.Styling.IStyle target, Avalonia.Controls.Control control)
+public Void SetPreviewWith(Avalonia.Styling.IStyle target, Avalonia.Controls.Control control)
 ```
 
 | Parameter | Description |
@@ -363,7 +366,7 @@ public System.Void SetPreviewWith(Avalonia.Styling.IStyle target, Avalonia.Contr
 #### SetPreviewWith
 
 ```csharp
-public System.Void SetPreviewWith(Avalonia.Styling.IStyle target, Avalonia.Controls.ITemplate<TControl><Avalonia.Controls.Control> template)
+public Void SetPreviewWith(Avalonia.Styling.IStyle target, Avalonia.Controls.ITemplate<TControl><Avalonia.Controls.Control> template)
 ```
 
 <span id="uid-90374ec669"></span>
@@ -373,7 +376,7 @@ public System.Void SetPreviewWith(Avalonia.Styling.IStyle target, Avalonia.Contr
 Sets the design-time width for a control.
 
 ```csharp
-public System.Void SetWidth(Avalonia.Controls.Control control, System.Double value)
+public Void SetWidth(Avalonia.Controls.Control control, Double value)
 ```
 
 | Parameter | Description |
@@ -394,7 +397,7 @@ public System.Void SetWidth(Avalonia.Controls.Control control, System.Double val
 Gets a value indicating whether the application is running in design mode.
 
 ```csharp
-public System.Boolean IsDesignMode { get; set; }
+public Boolean IsDesignMode { get; set; }
 ```
 
 ## Fields
@@ -414,7 +417,7 @@ public System.Boolean IsDesignMode { get; set; }
 Defines the DataContext attached property.
 
 ```csharp
-public Avalonia.AttachedProperty<System.Object> DataContextProperty
+public Avalonia.AttachedProperty<Object> DataContextProperty
 ```
 
 <span id="uid-d5ba4a1fb8"></span>
@@ -434,7 +437,7 @@ public Avalonia.AttachedProperty<Avalonia.Styling.IStyle> DesignStyleProperty
 Defines the Height attached property.
 
 ```csharp
-public Avalonia.AttachedProperty<System.Double> HeightProperty
+public Avalonia.AttachedProperty<Double> HeightProperty
 ```
 
 <span id="uid-5a7c962a11"></span>
@@ -454,7 +457,7 @@ public Avalonia.AttachedProperty<Avalonia.Controls.Control> PreviewWithProperty
 Defines the Width attached property.
 
 ```csharp
-public Avalonia.AttachedProperty<System.Double> WidthProperty
+public Avalonia.AttachedProperty<Double> WidthProperty
 ```
 
 </ApiRefPage>

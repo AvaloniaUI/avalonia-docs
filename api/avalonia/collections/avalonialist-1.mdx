@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Collections/AvaloniaList.cs">AvaloniaList.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -100,7 +103,7 @@ public AvaloniaList<T>(System.Collections.Generic.IEnumerable<T> items)
 Initializes a new instance of the [Avalonia.Collections.AvaloniaList&lt;T&gt;](xref:Avalonia.Collections.AvaloniaList%601).
 
 ```csharp
-public AvaloniaList<T>(System.Int32 capacity)
+public AvaloniaList<T>(Int32 capacity)
 ```
 
 | Parameter | Description |
@@ -150,7 +153,7 @@ public AvaloniaList<T>(T[] items)
 Adds an item to the collection.
 
 ```csharp
-public System.Void Add(T item)
+public Void Add(T item)
 ```
 
 | Parameter | Description |
@@ -162,7 +165,7 @@ public System.Void Add(T item)
 ### AddRange
 
 ```csharp
-public System.Void AddRange(System.Collections.Generic.IEnumerable<T> items)
+public Void AddRange(System.Collections.Generic.IEnumerable<T> items)
 ```
 
 <span id="uid-374fe42b60"></span>
@@ -172,7 +175,7 @@ public System.Void AddRange(System.Collections.Generic.IEnumerable<T> items)
 Removes all items from the collection.
 
 ```csharp
-public System.Void Clear()
+public Void Clear()
 ```
 
 <span id="uid-b753fee143"></span>
@@ -182,7 +185,7 @@ public System.Void Clear()
 Tests if the collection contains the specified item.
 
 ```csharp
-public System.Boolean Contains(T item)
+public Boolean Contains(T item)
 ```
 
 | Parameter | Description |
@@ -198,7 +201,7 @@ Returns: True if the collection contains the item; otherwise false.
 Copies the collection's contents to an array.
 
 ```csharp
-public System.Void CopyTo(T[] array, System.Int32 arrayIndex)
+public Void CopyTo(T[] array, Int32 arrayIndex)
 ```
 
 | Parameter | Description |
@@ -213,7 +216,7 @@ public System.Void CopyTo(T[] array, System.Int32 arrayIndex)
 Ensures that the capacity of the list is at least [Avalonia.Collections.AvaloniaList&lt;T&gt;.Capacity](xref:Avalonia.Collections.AvaloniaList%601.Capacity).
 
 ```csharp
-public System.Void EnsureCapacity(System.Int32 capacity)
+public Void EnsureCapacity(Int32 capacity)
 ```
 
 | Parameter | Description |
@@ -235,7 +238,7 @@ public Avalonia.Collections.AvaloniaList<T>.Enumerator<T><T> GetEnumerator()
 Gets a range of items from the collection.
 
 ```csharp
-public System.Collections.Generic.IEnumerable<T> GetRange(System.Int32 index, System.Int32 count)
+public System.Collections.Generic.IEnumerable<T> GetRange(Int32 index, Int32 count)
 ```
 
 | Parameter | Description |
@@ -250,7 +253,7 @@ public System.Collections.Generic.IEnumerable<T> GetRange(System.Int32 index, Sy
 Gets the index of the specified item in the collection.
 
 ```csharp
-public System.Int32 IndexOf(T item)
+public Int32 IndexOf(T item)
 ```
 
 | Parameter | Description |
@@ -266,7 +269,7 @@ Returns: The index of the item or -1 if the item is not contained in the collect
 Inserts an item at the specified index.
 
 ```csharp
-public System.Void Insert(System.Int32 index, T item)
+public Void Insert(Int32 index, T item)
 ```
 
 | Parameter | Description |
@@ -279,7 +282,7 @@ public System.Void Insert(System.Int32 index, T item)
 ### InsertRange
 
 ```csharp
-public System.Void InsertRange(System.Int32 index, System.Collections.Generic.IEnumerable<T> items)
+public Void InsertRange(Int32 index, System.Collections.Generic.IEnumerable<T> items)
 ```
 
 <span id="uid-e45f94fdd0"></span>
@@ -289,7 +292,7 @@ public System.Void InsertRange(System.Int32 index, System.Collections.Generic.IE
 Moves an item to a new index.
 
 ```csharp
-public System.Void Move(System.Int32 oldIndex, System.Int32 newIndex)
+public Void Move(Int32 oldIndex, Int32 newIndex)
 ```
 
 | Parameter | Description |
@@ -304,7 +307,7 @@ public System.Void Move(System.Int32 oldIndex, System.Int32 newIndex)
 Moves multiple items to a new index.
 
 ```csharp
-public System.Void MoveRange(System.Int32 oldIndex, System.Int32 count, System.Int32 newIndex)
+public Void MoveRange(Int32 oldIndex, Int32 count, Int32 newIndex)
 ```
 
 | Parameter | Description |
@@ -320,7 +323,7 @@ public System.Void MoveRange(System.Int32 oldIndex, System.Int32 count, System.I
 Removes an item from the collection.
 
 ```csharp
-public System.Boolean Remove(T item)
+public Boolean Remove(T item)
 ```
 
 | Parameter | Description |
@@ -334,7 +337,7 @@ Returns: True if the item was found and removed, otherwise false.
 ### RemoveAll
 
 ```csharp
-public System.Void RemoveAll(System.Collections.Generic.IEnumerable<T> items)
+public Void RemoveAll(System.Collections.Generic.IEnumerable<T> items)
 ```
 
 <span id="uid-a51b185a94"></span>
@@ -344,7 +347,7 @@ public System.Void RemoveAll(System.Collections.Generic.IEnumerable<T> items)
 Removes the item at the specified index.
 
 ```csharp
-public System.Void RemoveAt(System.Int32 index)
+public Void RemoveAt(Int32 index)
 ```
 
 | Parameter | Description |
@@ -358,7 +361,7 @@ public System.Void RemoveAt(System.Int32 index)
 Removes a range of elements from the collection.
 
 ```csharp
-public System.Void RemoveRange(System.Int32 index, System.Int32 count)
+public Void RemoveRange(Int32 index, Int32 count)
 ```
 
 | Parameter | Description |
@@ -383,7 +386,7 @@ public System.Void RemoveRange(System.Int32 index, System.Int32 count)
 Gets or sets the total number of elements the internal data structure can hold without resizing.
 
 ```csharp
-public System.Int32 Capacity { get; set; }
+public Int32 Capacity { get; set; }
 ```
 
 <span id="uid-b41fd65fb1"></span>
@@ -393,7 +396,7 @@ public System.Int32 Capacity { get; set; }
 Gets the number of items in the collection.
 
 ```csharp
-public System.Int32 Count { get; set; }
+public Int32 Count { get; set; }
 ```
 
 <span id="uid-1d41620245"></span>
@@ -422,7 +425,7 @@ Gets or sets a validation routine that can be used to validate items before they
 added.
 
 ```csharp
-public System.Action<T> Validate { get; set; }
+public Action<T> Validate { get; set; }
 ```
 
 ## Events

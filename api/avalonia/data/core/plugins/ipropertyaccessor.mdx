@@ -69,7 +69,7 @@ public interface IPropertyAccessor
 Sets the property value.
 
 ```csharp
-public System.Boolean SetValue(System.Object value, Avalonia.Data.BindingPriority priority)
+public Boolean SetValue(Object value, Avalonia.Data.BindingPriority priority)
 ```
 
 | Parameter | Description |
@@ -84,7 +84,7 @@ Returns: True if the property was set; false if the property could not be set.
 ### Subscribe
 
 ```csharp
-public System.Void Subscribe(System.Action<System.Object> listener)
+public Void Subscribe(Action<Object> listener)
 ```
 
 <span id="uid-b3e34178af"></span>
@@ -94,7 +94,7 @@ public System.Void Subscribe(System.Action<System.Object> listener)
 Unsubscribes to the value of the member.
 
 ```csharp
-public System.Void Unsubscribe()
+public Void Unsubscribe()
 ```
 
 ## Properties
@@ -111,7 +111,7 @@ public System.Void Unsubscribe()
 Gets the type of the property.
 
 ```csharp
-public System.Type PropertyType { get; set; }
+public Type PropertyType { get; set; }
 ```
 
 #### Exceptions
@@ -125,7 +125,7 @@ public System.Type PropertyType { get; set; }
 Gets the current value of the property.
 
 ```csharp
-public System.Object Value { get; set; }
+public Object Value { get; set; }
 ```
 
 </ApiRefPage>

@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Media/TextTrimming.cs">TextTrimming.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -51,6 +54,9 @@ public class TextTrimming
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> TextTrimming
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Derived types:</span> <a href="textleadingprefixtrimming">TextLeadingPrefixTrimming</a>, <a href="textpathsegmenttrimming">TextPathSegmentTrimming</a>, <a href="texttrailingtrimming">TextTrailingTrimming</a>
 </div>
 </div>
 
@@ -82,7 +88,7 @@ public Avalonia.Media.TextFormatting.TextCollapsingProperties CreateCollapsingPr
 Parses a text trimming string. Names must match static properties defined in this class.
 
 ```csharp
-public Avalonia.Media.TextTrimming Parse(System.String s)
+public Avalonia.Media.TextTrimming Parse(String s)
 ```
 
 | Parameter | Description |

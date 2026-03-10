@@ -71,7 +71,7 @@ This interface is implemented by [Avalonia.StyledElement](xref:Avalonia.StyledEl
 Notifies the resource host that one or more of its hosted resources has changed.
 
 ```csharp
-public System.Void NotifyHostedResourcesChanged(Avalonia.Controls.ResourcesChangedEventArgs e)
+public Void NotifyHostedResourcesChanged(Avalonia.Controls.ResourcesChangedEventArgs e)
 ```
 
 | Parameter | Description |
@@ -91,7 +91,7 @@ public System.Void NotifyHostedResourcesChanged(Avalonia.Controls.ResourcesChang
 Raised when the resources change on the element or an ancestor of the element.
 
 ```csharp
-public event System.EventHandler<Avalonia.Controls.ResourcesChangedEventArgs> ResourcesChanged
+public event EventHandler<Avalonia.Controls.ResourcesChangedEventArgs> ResourcesChanged
 ```
 
 </ApiRefPage>

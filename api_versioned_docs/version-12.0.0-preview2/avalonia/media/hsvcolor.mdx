@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Media/HsvColor.cs">HsvColor.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -89,7 +92,7 @@ public HsvColor(Avalonia.Media.Color color)
 Initializes a new instance of the [Avalonia.Media.HsvColor](xref:Avalonia.Media.HsvColor) struct.
 
 ```csharp
-public HsvColor(System.Double alpha, System.Double hue, System.Double saturation, System.Double value)
+public HsvColor(Double alpha, Double hue, Double saturation, Double value)
 ```
 
 | Parameter | Description |
@@ -123,7 +126,7 @@ Note that 360 is equivalent to 0 and will be adjusted automatically. |
 #### Equals
 
 ```csharp
-public System.Boolean Equals(Avalonia.Media.HsvColor other)
+public Boolean Equals(Avalonia.Media.HsvColor other)
 ```
 
 <span id="uid-f8614e56de"></span>
@@ -131,7 +134,7 @@ public System.Boolean Equals(Avalonia.Media.HsvColor other)
 #### Equals
 
 ```csharp
-public System.Boolean Equals(System.Object obj)
+public Boolean Equals(Object obj)
 ```
 
 <span id="uid-3bc7a51d56"></span>
@@ -141,7 +144,7 @@ public System.Boolean Equals(System.Object obj)
 Creates a new [Avalonia.Media.HsvColor](xref:Avalonia.Media.HsvColor) from individual color component values.
 
 ```csharp
-public Avalonia.Media.HsvColor FromAhsv(System.Double a, System.Double h, System.Double s, System.Double v)
+public Avalonia.Media.HsvColor FromAhsv(Double a, Double h, Double s, Double v)
 ```
 
 | Parameter | Description |
@@ -160,7 +163,7 @@ Returns: A new [Avalonia.Media.HsvColor](xref:Avalonia.Media.HsvColor) built fro
 Creates a new [Avalonia.Media.HsvColor](xref:Avalonia.Media.HsvColor) from individual color component values.
 
 ```csharp
-public Avalonia.Media.HsvColor FromHsv(System.Double h, System.Double s, System.Double v)
+public Avalonia.Media.HsvColor FromHsv(Double h, Double s, Double v)
 ```
 
 | Parameter | Description |
@@ -179,7 +182,7 @@ Gets a hashcode for this object.
 Hashcode is not guaranteed to be unique.
 
 ```csharp
-public System.Int32 GetHashCode()
+public Int32 GetHashCode()
 ```
 
 Returns: The hashcode for this object.
@@ -191,7 +194,7 @@ Returns: The hashcode for this object.
 Parses an HSV color string.
 
 ```csharp
-public Avalonia.Media.HsvColor Parse(System.String s)
+public Avalonia.Media.HsvColor Parse(String s)
 ```
 
 | Parameter | Description |
@@ -223,7 +226,7 @@ Returns: The HSL equivalent color.
 Converts the given HSVA color component values to their HSL color equivalent.
 
 ```csharp
-public Avalonia.Media.HslColor ToHsl(System.Double hue, System.Double saturation, System.Double value, System.Double alpha)
+public Avalonia.Media.HslColor ToHsl(Double hue, Double saturation, Double value, Double alpha)
 ```
 
 | Parameter | Description |
@@ -258,7 +261,7 @@ Returns: The RGB equivalent color.
 Converts the given HSVA color component values to their RGB color equivalent.
 
 ```csharp
-public Avalonia.Media.Color ToRgb(System.Double hue, System.Double saturation, System.Double value, System.Double alpha)
+public Avalonia.Media.Color ToRgb(Double hue, Double saturation, Double value, Double alpha)
 ```
 
 | Parameter | Description |
@@ -275,7 +278,7 @@ Returns: A new RGB [Avalonia.Media.Color](xref:Avalonia.Media.Color) equivalent 
 ### ToString
 
 ```csharp
-public System.String ToString()
+public String ToString()
 ```
 
 <span id="uid-6c68960069"></span>
@@ -283,7 +286,7 @@ public System.String ToString()
 ### TryParse
 
 ```csharp
-public System.Boolean TryParse(System.String s, Avalonia.Media.HsvColor& hsvColor)
+public Boolean TryParse(String s, Avalonia.Media.HsvColor& hsvColor)
 ```
 
 ## Properties
@@ -302,7 +305,7 @@ public System.Boolean TryParse(System.String s, Avalonia.Media.HsvColor& hsvColo
 Gets the Alpha (transparency) component in the range from 0..1 (percentage).
 
 ```csharp
-public System.Double A { get; set; }
+public Double A { get; set; }
 ```
 
 <span id="uid-7c9100c021"></span>
@@ -314,7 +317,7 @@ This is the color's location, in degrees, on a color wheel/circle from 0 to 360.
 Note that 360 is equivalent to 0 and will be adjusted automatically.
 
 ```csharp
-public System.Double H { get; set; }
+public Double H { get; set; }
 ```
 
 <span id="uid-574c9b14bf"></span>
@@ -324,7 +327,7 @@ public System.Double H { get; set; }
 Gets the Saturation component in the range from 0..1 (percentage).
 
 ```csharp
-public System.Double S { get; set; }
+public Double S { get; set; }
 ```
 
 <span id="uid-af43ec1d69"></span>
@@ -334,7 +337,7 @@ public System.Double S { get; set; }
 Gets the Value (or Brightness/Intensity) component in the range from 0..1 (percentage).
 
 ```csharp
-public System.Double V { get; set; }
+public Double V { get; set; }
 ```
 
 </ApiRefPage>

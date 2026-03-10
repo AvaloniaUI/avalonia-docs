@@ -67,7 +67,7 @@ public interface IAssetLoader
 Checks if an asset with the specified URI exists.
 
 ```csharp
-public System.Boolean Exists(System.Uri uri, System.Uri baseUri)
+public Boolean Exists(Uri uri, Uri baseUri)
 ```
 
 | Parameter | Description |
@@ -84,7 +84,7 @@ Returns: True if the asset could be found; otherwise false.
 Extracts assembly information from URI
 
 ```csharp
-public System.Reflection.Assembly GetAssembly(System.Uri uri, System.Uri baseUri)
+public System.Reflection.Assembly GetAssembly(Uri uri, Uri baseUri)
 ```
 
 | Parameter | Description |
@@ -101,7 +101,7 @@ Returns: Assembly associated with the Uri
 Gets all assets of a folder and subfolders that match specified uri.
 
 ```csharp
-public System.Collections.Generic.IEnumerable<System.Uri> GetAssets(System.Uri uri, System.Uri baseUri)
+public System.Collections.Generic.IEnumerable<Uri> GetAssets(Uri uri, Uri baseUri)
 ```
 
 | Parameter | Description |
@@ -122,7 +122,7 @@ Returns: All matching assets as a tuple of the absolute path to the asset and th
 Removes all assemblies from the cache.
 
 ```csharp
-public System.Void InvalidateAssemblyCache()
+public Void InvalidateAssemblyCache()
 ```
 
 <span id="uid-63bf55b302"></span>
@@ -132,7 +132,7 @@ public System.Void InvalidateAssemblyCache()
 Removes the assembly from the cache.
 
 ```csharp
-public System.Void InvalidateAssemblyCache(System.String name)
+public Void InvalidateAssemblyCache(String name)
 ```
 
 | Parameter | Description |
@@ -146,7 +146,7 @@ public System.Void InvalidateAssemblyCache(System.String name)
 Opens the asset with the requested URI.
 
 ```csharp
-public System.IO.Stream Open(System.Uri uri, System.Uri baseUri)
+public System.IO.Stream Open(Uri uri, Uri baseUri)
 ```
 
 | Parameter | Description |
@@ -168,7 +168,7 @@ Opens the asset with the requested URI and returns the asset stream and the
 assembly containing the asset.
 
 ```csharp
-public System.ValueTuple<System.IO.Stream, System.Reflection.Assembly> OpenAndGetAssembly(System.Uri uri, System.Uri baseUri)
+public ValueTuple<System.IO.Stream, System.Reflection.Assembly> OpenAndGetAssembly(Uri uri, Uri baseUri)
 ```
 
 | Parameter | Description |
@@ -192,7 +192,7 @@ AssetLoader needs a refactor cause right now it lives in 3+ platforms which
 can all be loaded on Windows.
 
 ```csharp
-public System.Void SetDefaultAssembly(System.Reflection.Assembly assembly)
+public Void SetDefaultAssembly(System.Reflection.Assembly assembly)
 ```
 
 | Parameter | Description |

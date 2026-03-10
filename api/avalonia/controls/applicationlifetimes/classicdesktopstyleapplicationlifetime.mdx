@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Controls/ApplicationLifetimes/ClassicDesktopStyleApplicationLifetime.cs">ClassicDesktopStyleApplicationLifetime.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__signature">
@@ -79,7 +82,7 @@ public ClassicDesktopStyleApplicationLifetime()
 ### Dispose
 
 ```csharp
-public System.Void Dispose()
+public Void Dispose()
 ```
 
 <span id="uid-c9c69c42d0"></span>
@@ -87,7 +90,7 @@ public System.Void Dispose()
 ### Shutdown
 
 ```csharp
-public System.Void Shutdown(System.Int32 exitCode)
+public Void Shutdown(Int32 exitCode)
 ```
 
 <span id="uid-81bc091a88"></span>
@@ -101,7 +104,7 @@ public System.Void Shutdown(System.Int32 exitCode)
 Since the lifetime must be set up/prepared with 'args' before executing Start(), an overload with no parameters seems more suitable for integrating with some lifetime manager providers, such as MS HostApplicationBuilder.
 
 ```csharp
-public System.Int32 Start()
+public Int32 Start()
 ```
 
 Returns: exit code
@@ -111,7 +114,7 @@ Returns: exit code
 #### Start
 
 ```csharp
-public System.Int32 Start(System.String[] args)
+public Int32 Start(String[] args)
 ```
 
 <span id="uid-8637c9a187"></span>
@@ -119,7 +122,7 @@ public System.Int32 Start(System.String[] args)
 ### TryShutdown
 
 ```csharp
-public System.Boolean TryShutdown(System.Int32 exitCode)
+public Boolean TryShutdown(Int32 exitCode)
 ```
 
 ## Properties
@@ -138,7 +141,7 @@ public System.Boolean TryShutdown(System.Int32 exitCode)
 Gets the arguments passed to the AppBuilder Start method.
 
 ```csharp
-public System.String[] Args { get; set; }
+public String[] Args { get; set; }
 ```
 
 <span id="uid-8cea79d178"></span>
@@ -192,7 +195,7 @@ public System.Collections.Generic.IReadOnlyList<Avalonia.Controls.Window> Window
 Sent when the application is exiting.
 
 ```csharp
-public event System.EventHandler<Avalonia.Controls.ApplicationLifetimes.ControlledApplicationLifetimeExitEventArgs> Exit
+public event EventHandler<Avalonia.Controls.ApplicationLifetimes.ControlledApplicationLifetimeExitEventArgs> Exit
 ```
 
 <span id="uid-f33cbb7442"></span>
@@ -202,7 +205,7 @@ public event System.EventHandler<Avalonia.Controls.ApplicationLifetimes.Controll
 Raised by the platform when an application shutdown is requested.
 
 ```csharp
-public event System.EventHandler<Avalonia.Controls.ApplicationLifetimes.ShutdownRequestedEventArgs> ShutdownRequested
+public event EventHandler<Avalonia.Controls.ApplicationLifetimes.ShutdownRequestedEventArgs> ShutdownRequested
 ```
 
 <span id="uid-7bbb774223"></span>
@@ -212,7 +215,7 @@ public event System.EventHandler<Avalonia.Controls.ApplicationLifetimes.Shutdown
 Sent when the application is starting up.
 
 ```csharp
-public event System.EventHandler<Avalonia.Controls.ApplicationLifetimes.ControlledApplicationLifetimeStartupEventArgs> Startup
+public event EventHandler<Avalonia.Controls.ApplicationLifetimes.ControlledApplicationLifetimeStartupEventArgs> Startup
 ```
 
 </ApiRefPage>

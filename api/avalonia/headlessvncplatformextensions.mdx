@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Headless.Vnc</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Headless/Avalonia.Headless.Vnc/HeadlessVncPlatformExtensions.cs">HeadlessVncPlatformExtensions.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__signature">
@@ -65,7 +68,7 @@ public class HeadlessVncPlatformExtensions
 Start Avalonia application with Headless VNC platform with password.
 
 ```csharp
-public System.Int32 StartWithHeadlessVncPlatform(Avalonia.AppBuilder builder, System.String host, System.Int32 port, System.String password, System.String[] args, Avalonia.Controls.ShutdownMode shutdownMode)
+public Int32 StartWithHeadlessVncPlatform(Avalonia.AppBuilder builder, String host, Int32 port, String password, String[] args, Avalonia.Controls.ShutdownMode shutdownMode)
 ```
 
 | Parameter | Description |
@@ -79,7 +82,7 @@ public System.Int32 StartWithHeadlessVncPlatform(Avalonia.AppBuilder builder, Sy
 
 ##### Exceptions
 
-- [System.InvalidOperationException](xref:System.InvalidOperationException)
+- [InvalidOperationException](xref:System.InvalidOperationException)
 
 <span id="uid-d1d8da1ef5"></span>
 
@@ -88,7 +91,7 @@ public System.Int32 StartWithHeadlessVncPlatform(Avalonia.AppBuilder builder, Sy
 Start Avalonia application with Headless VNC platform without password.
 
 ```csharp
-public System.Int32 StartWithHeadlessVncPlatform(Avalonia.AppBuilder builder, System.String host, System.Int32 port, System.String[] args, Avalonia.Controls.ShutdownMode shutdownMode)
+public Int32 StartWithHeadlessVncPlatform(Avalonia.AppBuilder builder, String host, Int32 port, String[] args, Avalonia.Controls.ShutdownMode shutdownMode)
 ```
 
 | Parameter | Description |

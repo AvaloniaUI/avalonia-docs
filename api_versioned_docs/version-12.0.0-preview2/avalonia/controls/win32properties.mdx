@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Controls/Platform/Win32Properties.cs">Win32Properties.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -72,7 +75,7 @@ public class Win32Properties
 Adds a callback to set the window's style.
 
 ```csharp
-public System.Void AddWindowStylesCallback(Avalonia.Controls.TopLevel topLevel, Avalonia.Controls.Win32Properties.CustomWindowStylesCallback callback)
+public Void AddWindowStylesCallback(Avalonia.Controls.TopLevel topLevel, Avalonia.Controls.Win32Properties.CustomWindowStylesCallback callback)
 ```
 
 | Parameter | Description |
@@ -87,7 +90,7 @@ public System.Void AddWindowStylesCallback(Avalonia.Controls.TopLevel topLevel, 
 Adds a custom callback for the window's WndProc
 
 ```csharp
-public System.Void AddWndProcHookCallback(Avalonia.Controls.TopLevel topLevel, Avalonia.Controls.Win32Properties.CustomWndProcHookCallback callback)
+public Void AddWndProcHookCallback(Avalonia.Controls.TopLevel topLevel, Avalonia.Controls.Win32Properties.CustomWndProcHookCallback callback)
 ```
 
 | Parameter | Description |
@@ -110,7 +113,7 @@ public Avalonia.Controls.Win32Properties.Win32HitTestValue GetNonClientHitTestRe
 Removes a callback to set the window's style.
 
 ```csharp
-public System.Void RemoveWindowStylesCallback(Avalonia.Controls.TopLevel topLevel, Avalonia.Controls.Win32Properties.CustomWindowStylesCallback callback)
+public Void RemoveWindowStylesCallback(Avalonia.Controls.TopLevel topLevel, Avalonia.Controls.Win32Properties.CustomWindowStylesCallback callback)
 ```
 
 | Parameter | Description |
@@ -125,7 +128,7 @@ public System.Void RemoveWindowStylesCallback(Avalonia.Controls.TopLevel topLeve
 Removes a custom callback for the window's WndProc
 
 ```csharp
-public System.Void RemoveWndProcHookCallback(Avalonia.Controls.TopLevel topLevel, Avalonia.Controls.Win32Properties.CustomWndProcHookCallback callback)
+public Void RemoveWndProcHookCallback(Avalonia.Controls.TopLevel topLevel, Avalonia.Controls.Win32Properties.CustomWndProcHookCallback callback)
 ```
 
 | Parameter | Description |
@@ -138,7 +141,7 @@ public System.Void RemoveWndProcHookCallback(Avalonia.Controls.TopLevel topLevel
 ### SetNonClientHitTestResult
 
 ```csharp
-public System.Void SetNonClientHitTestResult(Avalonia.Visual obj, Avalonia.Controls.Win32Properties.Win32HitTestValue value)
+public Void SetNonClientHitTestResult(Avalonia.Visual obj, Avalonia.Controls.Win32Properties.Win32HitTestValue value)
 ```
 
 ## Fields

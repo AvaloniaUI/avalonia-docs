@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Dialogs/Internal/ManagedFileChooserFilterViewModel.cs">ManagedFileChooserFilterViewModel.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__signature">
@@ -71,7 +74,7 @@ public ManagedFileChooserFilterViewModel(Avalonia.Platform.Storage.FilePickerFil
 #### ManagedFileChooserFilterViewModel
 
 ```csharp
-public ManagedFileChooserFilterViewModel(Avalonia.Platform.Storage.FilePickerFileType filter, System.Int32 index)
+public ManagedFileChooserFilterViewModel(Avalonia.Platform.Storage.FilePickerFileType filter, Int32 index)
 ```
 
 ## Methods
@@ -86,7 +89,7 @@ public ManagedFileChooserFilterViewModel(Avalonia.Platform.Storage.FilePickerFil
 ### Match
 
 ```csharp
-public System.Boolean Match(System.String filename)
+public Boolean Match(String filename)
 ```
 
 <span id="uid-fe50ced234"></span>
@@ -94,7 +97,7 @@ public System.Boolean Match(System.String filename)
 ### ToString
 
 ```csharp
-public System.String ToString()
+public String ToString()
 ```
 
 ## Properties
@@ -108,8 +111,14 @@ public System.String ToString()
 ### Name
 
 ```csharp
-public System.String Name { get; set; }
+public String Name { get; set; }
 ```
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [PropertyChanged (Inherited from AvaloniaDialogsInternalViewModelBase)](avaloniadialogsinternalviewmodelbase.mdx#uid-302249abe0) | No summary available. |
 
 </ApiRefPage>
 

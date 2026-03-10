@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Data/CompiledBindingPath.cs">CompiledBindingPath.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__signature">
@@ -86,7 +89,7 @@ public CompiledBindingPathBuilder()
 ### Ancestor
 
 ```csharp
-public Avalonia.Data.CompiledBindingPathBuilder Ancestor(System.Type ancestorType, System.Int32 level)
+public Avalonia.Data.CompiledBindingPathBuilder Ancestor(Type ancestorType, Int32 level)
 ```
 
 <span id="uid-86e5b96f9e"></span>
@@ -94,7 +97,7 @@ public Avalonia.Data.CompiledBindingPathBuilder Ancestor(System.Type ancestorTyp
 ### ArrayElement
 
 ```csharp
-public Avalonia.Data.CompiledBindingPathBuilder ArrayElement(System.Int32[] indices, System.Type elementType)
+public Avalonia.Data.CompiledBindingPathBuilder ArrayElement(Int32[] indices, Type elementType)
 ```
 
 <span id="uid-a234b6b78f"></span>
@@ -110,7 +113,7 @@ public Avalonia.Data.CompiledBindingPath Build()
 ### Command
 
 ```csharp
-public Avalonia.Data.CompiledBindingPathBuilder Command(System.String methodName, System.Action<System.Object, System.Object> executeHelper, System.Func<System.Object, System.Object, System.Boolean> canExecuteHelper, System.String[] dependsOnProperties)
+public Avalonia.Data.CompiledBindingPathBuilder Command(String methodName, Action<Object, Object> executeHelper, Func<Object, Object, Boolean> canExecuteHelper, String[] dependsOnProperties)
 ```
 
 <span id="uid-6c1a4a3d18"></span>
@@ -118,7 +121,7 @@ public Avalonia.Data.CompiledBindingPathBuilder Command(System.String methodName
 ### ElementName
 
 ```csharp
-public Avalonia.Data.CompiledBindingPathBuilder ElementName(Avalonia.Controls.INameScope nameScope, System.String name)
+public Avalonia.Data.CompiledBindingPathBuilder ElementName(Avalonia.Controls.INameScope nameScope, String name)
 ```
 
 <span id="uid-47fc2ea1d9"></span>
@@ -130,7 +133,7 @@ public Avalonia.Data.CompiledBindingPathBuilder ElementName(Avalonia.Controls.IN
 #### Method
 
 ```csharp
-public Avalonia.Data.CompiledBindingPathBuilder Method(System.RuntimeMethodHandle handle, System.RuntimeTypeHandle delegateType)
+public Avalonia.Data.CompiledBindingPathBuilder Method(RuntimeMethodHandle handle, RuntimeTypeHandle delegateType)
 ```
 
 <span id="uid-d41527824e"></span>
@@ -138,7 +141,7 @@ public Avalonia.Data.CompiledBindingPathBuilder Method(System.RuntimeMethodHandl
 #### Method
 
 ```csharp
-public Avalonia.Data.CompiledBindingPathBuilder Method(System.RuntimeMethodHandle handle, System.RuntimeTypeHandle delegateType, System.Boolean acceptsNull)
+public Avalonia.Data.CompiledBindingPathBuilder Method(RuntimeMethodHandle handle, RuntimeTypeHandle delegateType, Boolean acceptsNull)
 ```
 
 <span id="uid-f7d6c7a72c"></span>
@@ -158,7 +161,7 @@ public Avalonia.Data.CompiledBindingPathBuilder Not()
 #### Property
 
 ```csharp
-public Avalonia.Data.CompiledBindingPathBuilder Property(Avalonia.Data.Core.IPropertyInfo info, System.Func<System.WeakReference<System.Object>, Avalonia.Data.Core.IPropertyInfo, Avalonia.Data.Core.Plugins.IPropertyAccessor> accessorFactory)
+public Avalonia.Data.CompiledBindingPathBuilder Property(Avalonia.Data.Core.IPropertyInfo info, Func<WeakReference<Object>, Avalonia.Data.Core.IPropertyInfo, Avalonia.Data.Core.Plugins.IPropertyAccessor> accessorFactory)
 ```
 
 <span id="uid-88866f09d2"></span>
@@ -166,7 +169,7 @@ public Avalonia.Data.CompiledBindingPathBuilder Property(Avalonia.Data.Core.IPro
 #### Property
 
 ```csharp
-public Avalonia.Data.CompiledBindingPathBuilder Property(Avalonia.Data.Core.IPropertyInfo info, System.Func<System.WeakReference<System.Object>, Avalonia.Data.Core.IPropertyInfo, Avalonia.Data.Core.Plugins.IPropertyAccessor> accessorFactory, System.Boolean acceptsNull)
+public Avalonia.Data.CompiledBindingPathBuilder Property(Avalonia.Data.Core.IPropertyInfo info, Func<WeakReference<Object>, Avalonia.Data.Core.IPropertyInfo, Avalonia.Data.Core.Plugins.IPropertyAccessor> accessorFactory, Boolean acceptsNull)
 ```
 
 <span id="uid-27bd01ca27"></span>
@@ -218,7 +221,7 @@ public Avalonia.Data.CompiledBindingPathBuilder TypeCast<T>()
 #### TypeCast
 
 ```csharp
-public Avalonia.Data.CompiledBindingPathBuilder TypeCast(System.Type targetType)
+public Avalonia.Data.CompiledBindingPathBuilder TypeCast(Type targetType)
 ```
 
 <span id="uid-7e1f29e74f"></span>
@@ -226,7 +229,7 @@ public Avalonia.Data.CompiledBindingPathBuilder TypeCast(System.Type targetType)
 ### VisualAncestor
 
 ```csharp
-public Avalonia.Data.CompiledBindingPathBuilder VisualAncestor(System.Type ancestorType, System.Int32 level)
+public Avalonia.Data.CompiledBindingPathBuilder VisualAncestor(Type ancestorType, Int32 level)
 ```
 
 </ApiRefPage>

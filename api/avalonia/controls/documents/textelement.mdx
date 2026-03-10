@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Controls/Documents/TextElement.cs">TextElement.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -52,6 +55,9 @@ public class TextElement
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../animation/animatable">Animatable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../styledelement">StyledElement</a> <span className="apiref-page__relation-separator">-&gt;</span> TextElement
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Derived types:</span> <a href="inline">Inline</a>
 </div>
 </div>
 
@@ -75,6 +81,23 @@ public class TextElement
 | [SetFontWeight](#uid-9c88d2bfb1) | Sets the value of the attached Avalonia.Controls.Documents.TextElement.FontWeightProperty on a control. |
 | [SetForeground](#uid-af4d1d4aed) | Sets the value of the attached Avalonia.Controls.Documents.TextElement.ForegroundProperty on a control. |
 | [SetLetterSpacing](#uid-4e0846dc4b) | Sets the value of the attached Avalonia.Controls.Documents.TextElement.LetterSpacingProperty on a control. |
+| [ApplyStyling (Inherited from StyledElement)](../../styledelement.mdx#uid-b0f81a6f8f) | Applies styling to the control if the control is initialized and styling is not already applied. |
+| [BeginInit (Inherited from StyledElement)](../../styledelement.mdx#uid-91c6ccadce) | No summary available. |
+| [EndInit (Inherited from StyledElement)](../../styledelement.mdx#uid-17b450469d) | No summary available. |
+| [TryGetResource (Inherited from StyledElement)](../../styledelement.mdx#uid-2046a6b284) | No summary available. |
+| [Bind (8 overloads) (Inherited from AvaloniaObject)](../../avaloniaobject.mdx#uid-1c60c7bda3) | Binds a Avalonia.AvaloniaProperty to an Avalonia.Data.BindingBase. |
+| [CheckAccess (Inherited from AvaloniaObject)](../../avaloniaobject.mdx#uid-260ff7a68d) | Returns a value indicating whether the current thread is the UI thread. |
+| [ClearValue (4 overloads) (Inherited from AvaloniaObject)](../../avaloniaobject.mdx#uid-41de208fbe) | Clears a Avalonia.AvaloniaProperty's local value. |
+| [CoerceValue (Inherited from AvaloniaObject)](../../avaloniaobject.mdx#uid-3bec32f39e) | Coerces the specified Avalonia.AvaloniaProperty. |
+| [Equals (Inherited from AvaloniaObject)](../../avaloniaobject.mdx#uid-a8a8e94305) | Compares two objects using reference equality. |
+| [GetBaseValue (Inherited from AvaloniaObject)](../../avaloniaobject.mdx#uid-9c615efbba) | No summary available. |
+| [GetHashCode (Inherited from AvaloniaObject)](../../avaloniaobject.mdx#uid-7f7db1e7a2) | Gets the hash code for the object. |
+| [GetValue (3 overloads) (Inherited from AvaloniaObject)](../../avaloniaobject.mdx#uid-5142cd4792) | Gets a Avalonia.AvaloniaProperty value. |
+| [IsAnimating (Inherited from AvaloniaObject)](../../avaloniaobject.mdx#uid-8cbfc7521a) | Checks whether a Avalonia.AvaloniaProperty is animating. |
+| [IsSet (Inherited from AvaloniaObject)](../../avaloniaobject.mdx#uid-f8bf0bbdcc) | Checks whether a Avalonia.AvaloniaProperty is set on this object. |
+| [SetCurrentValue (2 overloads) (Inherited from AvaloniaObject)](../../avaloniaobject.mdx#uid-38759fd088) | Sets the value of a dependency property without changing its value source. |
+| [SetValue (3 overloads) (Inherited from AvaloniaObject)](../../avaloniaobject.mdx#uid-47d14e19d7) | Sets a Avalonia.AvaloniaProperty value. |
+| [VerifyAccess (Inherited from AvaloniaObject)](../../avaloniaobject.mdx#uid-3b9d3c9793) | Checks that the current thread is the UI thread and throws if not. |
 
 <span id="uid-c5ceb73f28"></span>
 
@@ -115,7 +138,7 @@ Returns: The font family.
 Gets the value of the attached [Avalonia.Controls.Documents.TextElement.FontSizeProperty](xref:Avalonia.Controls.Documents.TextElement.FontSizeProperty) on a control.
 
 ```csharp
-public System.Double GetFontSize(Avalonia.Controls.Control control)
+public Double GetFontSize(Avalonia.Controls.Control control)
 ```
 
 | Parameter | Description |
@@ -195,7 +218,7 @@ Returns: The foreground.
 Gets the value of the attached [Avalonia.Controls.Documents.TextElement.LetterSpacingProperty](xref:Avalonia.Controls.Documents.TextElement.LetterSpacingProperty) on a control.
 
 ```csharp
-public System.Double GetLetterSpacing(Avalonia.Controls.Control control)
+public Double GetLetterSpacing(Avalonia.Controls.Control control)
 ```
 
 | Parameter | Description |
@@ -211,7 +234,7 @@ Returns: The letter spacing applied to the control.
 Sets the value of the attached [Avalonia.Controls.Documents.TextElement.FontFamilyProperty](xref:Avalonia.Controls.Documents.TextElement.FontFamilyProperty) on a control.
 
 ```csharp
-public System.Void SetFontFamily(Avalonia.Controls.Control control, Avalonia.Media.FontFamily value)
+public Void SetFontFamily(Avalonia.Controls.Control control, Avalonia.Media.FontFamily value)
 ```
 
 | Parameter | Description |
@@ -226,7 +249,7 @@ public System.Void SetFontFamily(Avalonia.Controls.Control control, Avalonia.Med
 Sets the value of the attached [Avalonia.Controls.Documents.TextElement.FontFeaturesProperty](xref:Avalonia.Controls.Documents.TextElement.FontFeaturesProperty) on a control.
 
 ```csharp
-public System.Void SetFontFeatures(Avalonia.Controls.Control control, Avalonia.Media.FontFeatureCollection value)
+public Void SetFontFeatures(Avalonia.Controls.Control control, Avalonia.Media.FontFeatureCollection value)
 ```
 
 | Parameter | Description |
@@ -241,7 +264,7 @@ public System.Void SetFontFeatures(Avalonia.Controls.Control control, Avalonia.M
 Sets the value of the attached [Avalonia.Controls.Documents.TextElement.FontSizeProperty](xref:Avalonia.Controls.Documents.TextElement.FontSizeProperty) on a control.
 
 ```csharp
-public System.Void SetFontSize(Avalonia.Controls.Control control, System.Double value)
+public Void SetFontSize(Avalonia.Controls.Control control, Double value)
 ```
 
 | Parameter | Description |
@@ -256,7 +279,7 @@ public System.Void SetFontSize(Avalonia.Controls.Control control, System.Double 
 Sets the value of the attached [Avalonia.Controls.Documents.TextElement.FontStretchProperty](xref:Avalonia.Controls.Documents.TextElement.FontStretchProperty) on a control.
 
 ```csharp
-public System.Void SetFontStretch(Avalonia.Controls.Control control, Avalonia.Media.FontStretch value)
+public Void SetFontStretch(Avalonia.Controls.Control control, Avalonia.Media.FontStretch value)
 ```
 
 | Parameter | Description |
@@ -271,7 +294,7 @@ public System.Void SetFontStretch(Avalonia.Controls.Control control, Avalonia.Me
 Sets the value of the attached [Avalonia.Controls.Documents.TextElement.FontStyleProperty](xref:Avalonia.Controls.Documents.TextElement.FontStyleProperty) on a control.
 
 ```csharp
-public System.Void SetFontStyle(Avalonia.Controls.Control control, Avalonia.Media.FontStyle value)
+public Void SetFontStyle(Avalonia.Controls.Control control, Avalonia.Media.FontStyle value)
 ```
 
 | Parameter | Description |
@@ -286,7 +309,7 @@ public System.Void SetFontStyle(Avalonia.Controls.Control control, Avalonia.Medi
 Sets the value of the attached [Avalonia.Controls.Documents.TextElement.FontWeightProperty](xref:Avalonia.Controls.Documents.TextElement.FontWeightProperty) on a control.
 
 ```csharp
-public System.Void SetFontWeight(Avalonia.Controls.Control control, Avalonia.Media.FontWeight value)
+public Void SetFontWeight(Avalonia.Controls.Control control, Avalonia.Media.FontWeight value)
 ```
 
 | Parameter | Description |
@@ -301,7 +324,7 @@ public System.Void SetFontWeight(Avalonia.Controls.Control control, Avalonia.Med
 Sets the value of the attached [Avalonia.Controls.Documents.TextElement.ForegroundProperty](xref:Avalonia.Controls.Documents.TextElement.ForegroundProperty) on a control.
 
 ```csharp
-public System.Void SetForeground(Avalonia.Controls.Control control, Avalonia.Media.IBrush value)
+public Void SetForeground(Avalonia.Controls.Control control, Avalonia.Media.IBrush value)
 ```
 
 | Parameter | Description |
@@ -316,7 +339,7 @@ public System.Void SetForeground(Avalonia.Controls.Control control, Avalonia.Med
 Sets the value of the attached [Avalonia.Controls.Documents.TextElement.LetterSpacingProperty](xref:Avalonia.Controls.Documents.TextElement.LetterSpacingProperty) on a control.
 
 ```csharp
-public System.Void SetLetterSpacing(Avalonia.Controls.Control control, System.Double value)
+public Void SetLetterSpacing(Avalonia.Controls.Control control, Double value)
 ```
 
 | Parameter | Description |
@@ -337,6 +360,20 @@ public System.Void SetLetterSpacing(Avalonia.Controls.Control control, System.Do
 | [FontWeight](#uid-860a9d701a) | Gets or sets the font weight. |
 | [Foreground](#uid-1e9279a865) | Gets or sets a brush used to paint the text. |
 | [LetterSpacing](#uid-5cd152ce8b) | Gets or sets the letter spacing. |
+| [ActualThemeVariant (Inherited from StyledElement)](../../styledelement.mdx#uid-776bcbe4bf) | Gets the UI theme that is currently used by the element, which might be different than the RequestedThemeVariantProperty. |
+| [Classes (Inherited from StyledElement)](../../styledelement.mdx#uid-b7b7edea05) | Gets or sets the styled element's classes. |
+| [DataContext (Inherited from StyledElement)](../../styledelement.mdx#uid-647f924a56) | Gets or sets the control's data context. |
+| [IsInitialized (Inherited from StyledElement)](../../styledelement.mdx#uid-59a7cddacb) | Gets a value that indicates whether the element has finished initialization. |
+| [Name (Inherited from StyledElement)](../../styledelement.mdx#uid-245f4ccff5) | Gets or sets the name of the styled element. |
+| [Parent (Inherited from StyledElement)](../../styledelement.mdx#uid-aad2c5c78d) | Gets the styled element's logical parent. |
+| [Resources (Inherited from StyledElement)](../../styledelement.mdx#uid-f6488ca4b7) | Gets or sets the styled element's resource dictionary. |
+| [StyleKey (Inherited from StyledElement)](../../styledelement.mdx#uid-081584075e) | Gets the type by which the element is styled. |
+| [Styles (Inherited from StyledElement)](../../styledelement.mdx#uid-ae663139cc) | Gets the styles for the styled element. |
+| [TemplatedParent (Inherited from StyledElement)](../../styledelement.mdx#uid-dbf6ddacc3) | Gets the styled element whose lookless template this styled element is part of. |
+| [Theme (Inherited from StyledElement)](../../styledelement.mdx#uid-1aebed283d) | Gets or sets the theme to be applied to the element. |
+| [Transitions (Inherited from Animatable)](../../animation/animatable.mdx#uid-1b3138f517) | Gets or sets the property transitions for the control. |
+| [Dispatcher (Inherited from AvaloniaObject)](../../avaloniaobject.mdx#uid-b25fa51632) | Returns the Avalonia.AvaloniaObject.Dispatcher that this Avalonia.AvaloniaObject is associated with. |
+| [Item (Inherited from AvaloniaObject)](../../avaloniaobject.mdx#uid-c1d1f1bc0f) | No summary available. |
 
 <span id="uid-277cd2ec21"></span>
 
@@ -375,7 +412,7 @@ public Avalonia.Media.FontFeatureCollection FontFeatures { get; set; }
 Gets or sets the font size.
 
 ```csharp
-public System.Double FontSize { get; set; }
+public Double FontSize { get; set; }
 ```
 
 <span id="uid-2d7762947c"></span>
@@ -425,7 +462,7 @@ public Avalonia.Media.IBrush Foreground { get; set; }
 Gets or sets the letter spacing.
 
 ```csharp
-public System.Double LetterSpacing { get; set; }
+public Double LetterSpacing { get; set; }
 ```
 
 ## Fields
@@ -441,6 +478,12 @@ public System.Double LetterSpacing { get; set; }
 | [FontWeightProperty](#uid-de168eb28f) | Defines the Avalonia.Controls.Documents.TextElement.FontWeight property. |
 | [ForegroundProperty](#uid-ed0572d506) | Defines the Avalonia.Controls.Documents.TextElement.Foreground property. |
 | [LetterSpacingProperty](#uid-17f1013907) | Defines the Avalonia.Controls.Documents.TextElement.LetterSpacing property. |
+| [DataContextProperty (Inherited from StyledElement)](../../styledelement.mdx#uid-7eefabb929) | Defines the Avalonia.StyledElement.DataContext property. |
+| [NameProperty (Inherited from StyledElement)](../../styledelement.mdx#uid-bcdbb9de56) | Defines the Avalonia.StyledElement.Name property. |
+| [ParentProperty (Inherited from StyledElement)](../../styledelement.mdx#uid-dc6481a488) | Defines the Avalonia.StyledElement.Parent property. |
+| [TemplatedParentProperty (Inherited from StyledElement)](../../styledelement.mdx#uid-a2c7149a6b) | Defines the Avalonia.StyledElement.TemplatedParent property. |
+| [ThemeProperty (Inherited from StyledElement)](../../styledelement.mdx#uid-05852d7b9a) | Defines the Avalonia.StyledElement.Theme property. |
+| [TransitionsProperty (Inherited from Animatable)](../../animation/animatable.mdx#uid-c79f18fac2) | Defines the Avalonia.Animation.Animatable.Transitions property. |
 
 <span id="uid-b965769f00"></span>
 
@@ -479,7 +522,7 @@ public Avalonia.AttachedProperty<Avalonia.Media.FontFeatureCollection> FontFeatu
 Defines the [Avalonia.Controls.Documents.TextElement.FontSize](xref:Avalonia.Controls.Documents.TextElement.FontSize) property.
 
 ```csharp
-public Avalonia.AttachedProperty<System.Double> FontSizeProperty
+public Avalonia.AttachedProperty<Double> FontSizeProperty
 ```
 
 <span id="uid-a945a04355"></span>
@@ -529,8 +572,20 @@ public Avalonia.AttachedProperty<Avalonia.Media.IBrush> ForegroundProperty
 Defines the [Avalonia.Controls.Documents.TextElement.LetterSpacing](xref:Avalonia.Controls.Documents.TextElement.LetterSpacing) property.
 
 ```csharp
-public Avalonia.AttachedProperty<System.Double> LetterSpacingProperty
+public Avalonia.AttachedProperty<Double> LetterSpacingProperty
 ```
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [ActualThemeVariantChanged (Inherited from StyledElement)](../../styledelement.mdx#uid-e69ef27e71) | Raised when the theme variant is changed on the element or an ancestor of the element. |
+| [AttachedToLogicalTree (Inherited from StyledElement)](../../styledelement.mdx#uid-717aa68e85) | Raised when the styled element is attached to a rooted logical tree. |
+| [DataContextChanged (Inherited from StyledElement)](../../styledelement.mdx#uid-4b1cc873f8) | Occurs when the Avalonia.StyledElement.DataContext property changes. |
+| [DetachedFromLogicalTree (Inherited from StyledElement)](../../styledelement.mdx#uid-d9f5afa535) | Raised when the styled element is detached from a rooted logical tree. |
+| [Initialized (Inherited from StyledElement)](../../styledelement.mdx#uid-bd6a5e5c0e) | Occurs when the styled element has finished initialization. |
+| [ResourcesChanged (Inherited from StyledElement)](../../styledelement.mdx#uid-99a7f47c56) | Occurs when a resource in this styled element or a parent styled element has changed. |
+| [PropertyChanged (Inherited from AvaloniaObject)](../../avaloniaobject.mdx#uid-d758e26fae) | Raised when a Avalonia.AvaloniaProperty value changes on this object. |
 
 </ApiRefPage>
 

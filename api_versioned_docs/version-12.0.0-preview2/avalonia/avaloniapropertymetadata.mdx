@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/AvaloniaPropertyMetadata.cs">AvaloniaPropertyMetadata.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -52,6 +55,9 @@ public class AvaloniaPropertyMetadata
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> AvaloniaPropertyMetadata
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Derived types:</span> <a href="directpropertymetadata-1">DirectPropertyMetadata&lt;TValue&gt;</a>, <a href="styledpropertymetadata-1">StyledPropertyMetadata&lt;TValue&gt;</a>
+</div>
 </div>
 
 ## Constructors
@@ -65,7 +71,7 @@ public class AvaloniaPropertyMetadata
 ### AvaloniaPropertyMetadata
 
 ```csharp
-public AvaloniaPropertyMetadata(Avalonia.Data.BindingMode defaultBindingMode, System.Nullable<System.Boolean> enableDataValidation)
+public AvaloniaPropertyMetadata(Avalonia.Data.BindingMode defaultBindingMode, Nullable<Boolean> enableDataValidation)
 ```
 
 ## Methods
@@ -84,7 +90,7 @@ Makes this instance read-only.
 No further modifications are allowed after this call.
 
 ```csharp
-public System.Void Freeze()
+public Void Freeze()
 ```
 
 <span id="uid-2221ececec"></span>
@@ -104,7 +110,7 @@ public Avalonia.AvaloniaPropertyMetadata GenerateTypeSafeMetadata()
 Merges the metadata with the base metadata.
 
 ```csharp
-public System.Void Merge(Avalonia.AvaloniaPropertyMetadata baseMetadata, Avalonia.AvaloniaProperty property)
+public Void Merge(Avalonia.AvaloniaPropertyMetadata baseMetadata, Avalonia.AvaloniaProperty property)
 ```
 
 | Parameter | Description |
@@ -137,7 +143,7 @@ public Avalonia.Data.BindingMode DefaultBindingMode { get; set; }
 Gets a value indicating whether the property is interested in data validation.
 
 ```csharp
-public System.Nullable<System.Boolean> EnableDataValidation { get; set; }
+public Nullable<Boolean> EnableDataValidation { get; set; }
 ```
 
 <span id="uid-8222a9d293"></span>
@@ -147,7 +153,7 @@ public System.Nullable<System.Boolean> EnableDataValidation { get; set; }
 Gets whether this instance is read-only and can't be modified.
 
 ```csharp
-public System.Boolean IsReadOnly { get; set; }
+public Boolean IsReadOnly { get; set; }
 ```
 
 </ApiRefPage>

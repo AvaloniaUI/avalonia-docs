@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Controls/Platform/DefaultMenuInteractionHandler.cs">DefaultMenuInteractionHandler.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -72,7 +75,7 @@ public class DefaultMenuInteractionHandler
 #### DefaultMenuInteractionHandler
 
 ```csharp
-public DefaultMenuInteractionHandler(System.Boolean isContextMenu)
+public DefaultMenuInteractionHandler(Boolean isContextMenu)
 ```
 
 <span id="uid-cdeea65b22"></span>
@@ -80,7 +83,7 @@ public DefaultMenuInteractionHandler(System.Boolean isContextMenu)
 #### DefaultMenuInteractionHandler
 
 ```csharp
-public DefaultMenuInteractionHandler(System.Boolean isContextMenu, Avalonia.Input.IInputManager inputManager, System.Action<System.Action, System.TimeSpan> delayRun)
+public DefaultMenuInteractionHandler(Boolean isContextMenu, Avalonia.Input.IInputManager inputManager, Action<Action, TimeSpan> delayRun)
 ```
 
 ## Methods
@@ -95,7 +98,7 @@ public DefaultMenuInteractionHandler(System.Boolean isContextMenu, Avalonia.Inpu
 ### Attach
 
 ```csharp
-public System.Void Attach(Avalonia.Controls.MenuBase menu)
+public Void Attach(Avalonia.Controls.MenuBase menu)
 ```
 
 <span id="uid-78d4c8f416"></span>
@@ -103,7 +106,7 @@ public System.Void Attach(Avalonia.Controls.MenuBase menu)
 ### Detach
 
 ```csharp
-public System.Void Detach(Avalonia.Controls.MenuBase menu)
+public Void Detach(Avalonia.Controls.MenuBase menu)
 ```
 
 ## Properties
@@ -117,7 +120,7 @@ public System.Void Detach(Avalonia.Controls.MenuBase menu)
 ### MenuShowDelay
 
 ```csharp
-public System.TimeSpan MenuShowDelay { get; set; }
+public TimeSpan MenuShowDelay { get; set; }
 ```
 
 </ApiRefPage>

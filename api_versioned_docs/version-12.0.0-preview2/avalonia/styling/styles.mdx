@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Styling/Styles.cs">Styles.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -51,6 +54,9 @@ public class Styles
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> Styles
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Derived types:</span> <a href="../themes/fluent/fluenttheme">FluentTheme</a>
 </div>
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Implements:</span> IAvaloniaListItemValidator&lt;IStyle&gt;, IAvaloniaList&lt;IStyle&gt;, IAvaloniaReadOnlyList&lt;IStyle&gt;, <a href="../controls/iresourcenode">IResourceNode</a>, <a href="../controls/iresourceprovider">IResourceProvider</a>, <a href="istyle">IStyle</a>, ICollection&lt;IStyle&gt;, IEnumerable&lt;IStyle&gt;, IList&lt;IStyle&gt;, IReadOnlyCollection&lt;IStyle&gt;, IReadOnlyList&lt;IStyle&gt;, IEnumerable, INotifyCollectionChanged, INotifyPropertyChanged
@@ -103,13 +109,26 @@ public Styles(Avalonia.Controls.IResourceHost owner)
 | [RemoveAt](#uid-021d6217f4) | No summary available. |
 | [RemoveRange](#uid-fa92283544) | No summary available. |
 | [TryGetResource](#uid-29d4f19277) | No summary available. |
+| [Bind (8 overloads) (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-1c60c7bda3) | Binds a Avalonia.AvaloniaProperty to an Avalonia.Data.BindingBase. |
+| [CheckAccess (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-260ff7a68d) | Returns a value indicating whether the current thread is the UI thread. |
+| [ClearValue (4 overloads) (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-41de208fbe) | Clears a Avalonia.AvaloniaProperty's local value. |
+| [CoerceValue (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-3bec32f39e) | Coerces the specified Avalonia.AvaloniaProperty. |
+| [Equals (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-a8a8e94305) | Compares two objects using reference equality. |
+| [GetBaseValue (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-9c615efbba) | No summary available. |
+| [GetHashCode (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-7f7db1e7a2) | Gets the hash code for the object. |
+| [GetValue (3 overloads) (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-5142cd4792) | Gets a Avalonia.AvaloniaProperty value. |
+| [IsAnimating (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-8cbfc7521a) | Checks whether a Avalonia.AvaloniaProperty is animating. |
+| [IsSet (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-f8bf0bbdcc) | Checks whether a Avalonia.AvaloniaProperty is set on this object. |
+| [SetCurrentValue (2 overloads) (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-38759fd088) | Sets the value of a dependency property without changing its value source. |
+| [SetValue (3 overloads) (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-47d14e19d7) | Sets a Avalonia.AvaloniaProperty value. |
+| [VerifyAccess (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-3b9d3c9793) | Checks that the current thread is the UI thread and throws if not. |
 
 <span id="uid-0859005cd9"></span>
 
 ### Add
 
 ```csharp
-public System.Void Add(Avalonia.Styling.IStyle item)
+public Void Add(Avalonia.Styling.IStyle item)
 ```
 
 <span id="uid-e6052fa3f4"></span>
@@ -117,7 +136,7 @@ public System.Void Add(Avalonia.Styling.IStyle item)
 ### AddRange
 
 ```csharp
-public System.Void AddRange(System.Collections.Generic.IEnumerable<Avalonia.Styling.IStyle> items)
+public Void AddRange(System.Collections.Generic.IEnumerable<Avalonia.Styling.IStyle> items)
 ```
 
 <span id="uid-d2eabe3da2"></span>
@@ -125,7 +144,7 @@ public System.Void AddRange(System.Collections.Generic.IEnumerable<Avalonia.Styl
 ### Clear
 
 ```csharp
-public System.Void Clear()
+public Void Clear()
 ```
 
 <span id="uid-5e98affa6b"></span>
@@ -133,7 +152,7 @@ public System.Void Clear()
 ### Contains
 
 ```csharp
-public System.Boolean Contains(Avalonia.Styling.IStyle item)
+public Boolean Contains(Avalonia.Styling.IStyle item)
 ```
 
 <span id="uid-5adfd1b720"></span>
@@ -141,7 +160,7 @@ public System.Boolean Contains(Avalonia.Styling.IStyle item)
 ### CopyTo
 
 ```csharp
-public System.Void CopyTo(Avalonia.Styling.IStyle[] array, System.Int32 arrayIndex)
+public Void CopyTo(Avalonia.Styling.IStyle[] array, Int32 arrayIndex)
 ```
 
 <span id="uid-1f71cd8365"></span>
@@ -157,7 +176,7 @@ public Avalonia.Collections.AvaloniaList<T>.Enumerator<T><Avalonia.Styling.IStyl
 ### IndexOf
 
 ```csharp
-public System.Int32 IndexOf(Avalonia.Styling.IStyle item)
+public Int32 IndexOf(Avalonia.Styling.IStyle item)
 ```
 
 <span id="uid-4bbd3e2c92"></span>
@@ -165,7 +184,7 @@ public System.Int32 IndexOf(Avalonia.Styling.IStyle item)
 ### Insert
 
 ```csharp
-public System.Void Insert(System.Int32 index, Avalonia.Styling.IStyle item)
+public Void Insert(Int32 index, Avalonia.Styling.IStyle item)
 ```
 
 <span id="uid-317076bdfa"></span>
@@ -173,7 +192,7 @@ public System.Void Insert(System.Int32 index, Avalonia.Styling.IStyle item)
 ### InsertRange
 
 ```csharp
-public System.Void InsertRange(System.Int32 index, System.Collections.Generic.IEnumerable<Avalonia.Styling.IStyle> items)
+public Void InsertRange(Int32 index, System.Collections.Generic.IEnumerable<Avalonia.Styling.IStyle> items)
 ```
 
 <span id="uid-8e8b95ca57"></span>
@@ -181,7 +200,7 @@ public System.Void InsertRange(System.Int32 index, System.Collections.Generic.IE
 ### Move
 
 ```csharp
-public System.Void Move(System.Int32 oldIndex, System.Int32 newIndex)
+public Void Move(Int32 oldIndex, Int32 newIndex)
 ```
 
 <span id="uid-284493341e"></span>
@@ -189,7 +208,7 @@ public System.Void Move(System.Int32 oldIndex, System.Int32 newIndex)
 ### MoveRange
 
 ```csharp
-public System.Void MoveRange(System.Int32 oldIndex, System.Int32 count, System.Int32 newIndex)
+public Void MoveRange(Int32 oldIndex, Int32 count, Int32 newIndex)
 ```
 
 <span id="uid-9f181a594c"></span>
@@ -197,7 +216,7 @@ public System.Void MoveRange(System.Int32 oldIndex, System.Int32 count, System.I
 ### Remove
 
 ```csharp
-public System.Boolean Remove(Avalonia.Styling.IStyle item)
+public Boolean Remove(Avalonia.Styling.IStyle item)
 ```
 
 <span id="uid-36faefddc3"></span>
@@ -205,7 +224,7 @@ public System.Boolean Remove(Avalonia.Styling.IStyle item)
 ### RemoveAll
 
 ```csharp
-public System.Void RemoveAll(System.Collections.Generic.IEnumerable<Avalonia.Styling.IStyle> items)
+public Void RemoveAll(System.Collections.Generic.IEnumerable<Avalonia.Styling.IStyle> items)
 ```
 
 <span id="uid-021d6217f4"></span>
@@ -213,7 +232,7 @@ public System.Void RemoveAll(System.Collections.Generic.IEnumerable<Avalonia.Sty
 ### RemoveAt
 
 ```csharp
-public System.Void RemoveAt(System.Int32 index)
+public Void RemoveAt(Int32 index)
 ```
 
 <span id="uid-fa92283544"></span>
@@ -221,7 +240,7 @@ public System.Void RemoveAt(System.Int32 index)
 ### RemoveRange
 
 ```csharp
-public System.Void RemoveRange(System.Int32 index, System.Int32 count)
+public Void RemoveRange(Int32 index, Int32 count)
 ```
 
 <span id="uid-29d4f19277"></span>
@@ -229,7 +248,7 @@ public System.Void RemoveRange(System.Int32 index, System.Int32 count)
 ### TryGetResource
 
 ```csharp
-public System.Boolean TryGetResource(System.Object key, Avalonia.Styling.ThemeVariant theme, System.Object& value)
+public Boolean TryGetResource(Object key, Avalonia.Styling.ThemeVariant theme, Object& value)
 ```
 
 ## Properties
@@ -240,13 +259,14 @@ public System.Boolean TryGetResource(System.Object key, Avalonia.Styling.ThemeVa
 | [Item](#uid-8edd591b85) | No summary available. |
 | [Owner](#uid-4f3fa8dd14) | No summary available. |
 | [Resources](#uid-513ca8c3f7) | Gets or sets a dictionary of style resources. |
+| [Dispatcher (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-b25fa51632) | Returns the Avalonia.AvaloniaObject.Dispatcher that this Avalonia.AvaloniaObject is associated with. |
 
 <span id="uid-024ebd16d5"></span>
 
 ### Count
 
 ```csharp
-public System.Int32 Count { get; set; }
+public Int32 Count { get; set; }
 ```
 
 <span id="uid-8edd591b85"></span>
@@ -281,6 +301,7 @@ public Avalonia.Controls.IResourceDictionary Resources { get; set; }
 | --- | --- |
 | [CollectionChanged](#uid-2e586c01ff) | No summary available. |
 | [OwnerChanged](#uid-5f0226bd70) | No summary available. |
+| [PropertyChanged (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-d758e26fae) | Raised when a Avalonia.AvaloniaProperty value changes on this object. |
 
 <span id="uid-2e586c01ff"></span>
 
@@ -295,7 +316,7 @@ public event System.Collections.Specialized.NotifyCollectionChangedEventHandler 
 ### OwnerChanged
 
 ```csharp
-public event System.EventHandler OwnerChanged
+public event EventHandler OwnerChanged
 ```
 
 </ApiRefPage>

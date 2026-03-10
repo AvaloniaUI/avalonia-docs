@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Native</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Native/AvaloniaNativePlatformExtensions.cs">AvaloniaNativePlatformExtensions.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -86,7 +89,7 @@ This parameter enables [Avalonia.Platform.Storage.IStorageItem.SaveBookmarkAsync
 as well as wrapping all storage related calls in secure context. The default value is true.
 
 ```csharp
-public System.Boolean AppSandboxEnabled { get; set; }
+public Boolean AppSandboxEnabled { get; set; }
 ```
 
 <span id="uid-b803078be8"></span>
@@ -97,7 +100,7 @@ This property should be used in case you want to build Avalonia OSX native part 
 and make your Avalonia app run with it. The default value is null.
 
 ```csharp
-public System.String AvaloniaNativeLibraryPath { get; set; }
+public String AvaloniaNativeLibraryPath { get; set; }
 ```
 
 <span id="uid-8d93333eba"></span>
@@ -107,7 +110,7 @@ public System.String AvaloniaNativeLibraryPath { get; set; }
 Embeds popups to the window when set to true. The default value is false.
 
 ```csharp
-public System.Boolean OverlayPopups { get; set; }
+public Boolean OverlayPopups { get; set; }
 ```
 
 <span id="uid-f081327cee"></span>

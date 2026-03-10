@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Controls/Primitives/PopupRoot.cs">PopupRoot.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -100,13 +103,61 @@ public PopupRoot(Avalonia.Controls.TopLevel parent, Avalonia.Platform.IPopupImpl
 | [Dispose](#uid-065e2cb0b8) | No summary available. |
 | [SetChild](#uid-b971636ae1) | No summary available. |
 | [TakeFocus](#uid-da79476ed4) | No summary available. |
+| [Activate (Inherited from WindowBase)](../windowbase.mdx#uid-25b4243aec) | Activates the window. |
+| [Hide (Inherited from WindowBase)](../windowbase.mdx#uid-8bc1ec46d4) | Hides the popup. |
+| [Show (Inherited from WindowBase)](../windowbase.mdx#uid-b82835c647) | Shows the window. |
+| [GetAutoSafeAreaPadding (Inherited from TopLevel)](../toplevel.mdx#uid-0956557a63) | Gets if auto safe area padding is enabled. |
+| [GetSystemBarColor (Inherited from TopLevel)](../toplevel.mdx#uid-14ab05782d) | Helper for getting the color of the platform's system bars. |
+| [GetTopLevel (Inherited from TopLevel)](../toplevel.mdx#uid-0cc8f3b51f) | Gets the Avalonia.Controls.TopLevel for which the given Avalonia.Visual is hosted in. |
+| [RequestAnimationFrame (Inherited from TopLevel)](../toplevel.mdx#uid-a57963b43d) | No summary available. |
+| [RequestPlatformInhibition (Inherited from TopLevel)](../toplevel.mdx#uid-34bc9e0df3) | Requests a Avalonia.Controls.PlatformInhibitionType to be inhibited. The behavior remains inhibited until the return value is disposed. The available set of Avalonia.Controls.PlatformInhibitionTypes depends on the platform. If a behavior is inhibited on a platform where this type is not supported the request will have no effect. |
+| [SetAutoSafeAreaPadding (Inherited from TopLevel)](../toplevel.mdx#uid-2691a51e01) | Enabled or disables whenever TopLevel should automatically adjust paddings depending on the safe area. |
+| [SetSystemBarColor (Inherited from TopLevel)](../toplevel.mdx#uid-1359f0a6ef) | Gets or sets the keyboard navigation handler for the window. |
+| [TryGetPlatformHandle (Inherited from TopLevel)](../toplevel.mdx#uid-f886eb2cf2) | Trys to get the platform handle for the TopLevel-derived control. |
+| [ApplyTemplate (Inherited from TemplatedControl)](templatedcontrol.mdx#uid-cc70dd4d2f) | Creates the visual children of the control, if necessary |
+| [GetIsTemplateFocusTarget (Inherited from TemplatedControl)](templatedcontrol.mdx#uid-75a788f38f) | Gets the value of the IsTemplateFocusTargetProperty attached property on a control. |
+| [SetIsTemplateFocusTarget (Inherited from TemplatedControl)](templatedcontrol.mdx#uid-281801c25f) | Sets the value of the IsTemplateFocusTargetProperty attached property on a control. |
+| [Focus (Inherited from InputElement)](../../input/inputelement.mdx#uid-6b657af583) | Focuses the control. |
+| [GetIsHoldWithMouseEnabled (Inherited from InputElement)](../../input/inputelement.mdx#uid-0420943ecd) | No summary available. |
+| [GetIsHoldingEnabled (Inherited from InputElement)](../../input/inputelement.mdx#uid-2af9987676) | No summary available. |
+| [SetIsHoldWithMouseEnabled (Inherited from InputElement)](../../input/inputelement.mdx#uid-a494efd7c7) | No summary available. |
+| [SetIsHoldingEnabled (Inherited from InputElement)](../../input/inputelement.mdx#uid-90a47948ad) | No summary available. |
+| [AddHandler (2 overloads) (Inherited from Interactive)](../../interactivity/interactive.mdx#uid-02518f5b3a) | Adds a handler for the specified routed event. |
+| [RaiseEvent (Inherited from Interactive)](../../interactivity/interactive.mdx#uid-d6aba452e6) | Raises a routed event. |
+| [RemoveHandler (2 overloads) (Inherited from Interactive)](../../interactivity/interactive.mdx#uid-456e485be9) | Removes a handler for the specified routed event. |
+| [Arrange (Inherited from Layoutable)](../../layout/layoutable.mdx#uid-d7a19ca8f7) | Arranges the control and its children. |
+| [InvalidateArrange (Inherited from Layoutable)](../../layout/layoutable.mdx#uid-3e9d4ebe35) | Invalidates the arrangement of the control and queues a new layout pass. |
+| [InvalidateMeasure (Inherited from Layoutable)](../../layout/layoutable.mdx#uid-31c6107bb9) | Invalidates the measurement of the control and queues a new layout pass. |
+| [Measure (Inherited from Layoutable)](../../layout/layoutable.mdx#uid-1da410eb81) | Carries out a measure of the control. |
+| [UpdateLayout (Inherited from Layoutable)](../../layout/layoutable.mdx#uid-529d4a08ea) | Executes a layout pass. |
+| [GetFlowDirection (Inherited from Visual)](../../visual.mdx#uid-12716acd38) | Gets the value of the attached Avalonia.Visual.FlowDirectionProperty on a control. |
+| [InvalidateVisual (Inherited from Visual)](../../visual.mdx#uid-1cd22a7496) | Invalidates the visual and queues a repaint. |
+| [Render (Inherited from Visual)](../../visual.mdx#uid-615917604b) | Renders the visual to a Avalonia.Media.DrawingContext. |
+| [SetFlowDirection (Inherited from Visual)](../../visual.mdx#uid-a670b680eb) | Sets the value of the attached Avalonia.Visual.FlowDirectionProperty on a control. |
+| [ApplyStyling (Inherited from StyledElement)](../../styledelement.mdx#uid-b0f81a6f8f) | Applies styling to the control if the control is initialized and styling is not already applied. |
+| [BeginInit (Inherited from StyledElement)](../../styledelement.mdx#uid-91c6ccadce) | No summary available. |
+| [EndInit (Inherited from StyledElement)](../../styledelement.mdx#uid-17b450469d) | No summary available. |
+| [TryGetResource (Inherited from StyledElement)](../../styledelement.mdx#uid-2046a6b284) | No summary available. |
+| [Bind (8 overloads) (Inherited from AvaloniaObject)](../../avaloniaobject.mdx#uid-1c60c7bda3) | Binds a Avalonia.AvaloniaProperty to an Avalonia.Data.BindingBase. |
+| [CheckAccess (Inherited from AvaloniaObject)](../../avaloniaobject.mdx#uid-260ff7a68d) | Returns a value indicating whether the current thread is the UI thread. |
+| [ClearValue (4 overloads) (Inherited from AvaloniaObject)](../../avaloniaobject.mdx#uid-41de208fbe) | Clears a Avalonia.AvaloniaProperty's local value. |
+| [CoerceValue (Inherited from AvaloniaObject)](../../avaloniaobject.mdx#uid-3bec32f39e) | Coerces the specified Avalonia.AvaloniaProperty. |
+| [Equals (Inherited from AvaloniaObject)](../../avaloniaobject.mdx#uid-a8a8e94305) | Compares two objects using reference equality. |
+| [GetBaseValue (Inherited from AvaloniaObject)](../../avaloniaobject.mdx#uid-9c615efbba) | No summary available. |
+| [GetHashCode (Inherited from AvaloniaObject)](../../avaloniaobject.mdx#uid-7f7db1e7a2) | Gets the hash code for the object. |
+| [GetValue (3 overloads) (Inherited from AvaloniaObject)](../../avaloniaobject.mdx#uid-5142cd4792) | Gets a Avalonia.AvaloniaProperty value. |
+| [IsAnimating (Inherited from AvaloniaObject)](../../avaloniaobject.mdx#uid-8cbfc7521a) | Checks whether a Avalonia.AvaloniaProperty is animating. |
+| [IsSet (Inherited from AvaloniaObject)](../../avaloniaobject.mdx#uid-f8bf0bbdcc) | Checks whether a Avalonia.AvaloniaProperty is set on this object. |
+| [SetCurrentValue (2 overloads) (Inherited from AvaloniaObject)](../../avaloniaobject.mdx#uid-38759fd088) | Sets the value of a dependency property without changing its value source. |
+| [SetValue (3 overloads) (Inherited from AvaloniaObject)](../../avaloniaobject.mdx#uid-47d14e19d7) | Sets a Avalonia.AvaloniaProperty value. |
+| [VerifyAccess (Inherited from AvaloniaObject)](../../avaloniaobject.mdx#uid-3b9d3c9793) | Checks that the current thread is the UI thread and throws if not. |
 
 <span id="uid-065e2cb0b8"></span>
 
 ### Dispose
 
 ```csharp
-public System.Void Dispose()
+public Void Dispose()
 ```
 
 <span id="uid-b971636ae1"></span>
@@ -114,7 +165,7 @@ public System.Void Dispose()
 ### SetChild
 
 ```csharp
-public System.Void SetChild(Avalonia.Controls.Control control)
+public Void SetChild(Avalonia.Controls.Control control)
 ```
 
 <span id="uid-da79476ed4"></span>
@@ -122,7 +173,7 @@ public System.Void SetChild(Avalonia.Controls.Control control)
 ### TakeFocus
 
 ```csharp
-public System.Void TakeFocus()
+public Void TakeFocus()
 ```
 
 ## Properties
@@ -133,6 +184,104 @@ public System.Void TakeFocus()
 | [PlatformImpl](#uid-ca9a0e1ca2) | Gets the platform-specific window implementation. |
 | [Transform](#uid-a621e5afbb) | Gets or sets a transform that will be applied to the popup. |
 | [WindowManagerAddShadowHint](#uid-ddc6165334) | Gets or sets a hint to the window manager that a shadow should be added to the popup. |
+| [DesktopScaling (Inherited from WindowBase)](../windowbase.mdx#uid-435aa2d387) | Gets the scaling factor for Window positioning and sizing. |
+| [IsActive (Inherited from WindowBase)](../windowbase.mdx#uid-8d625b6fef) | Gets a value that indicates whether the window is active. |
+| [Owner (Inherited from WindowBase)](../windowbase.mdx#uid-90855d7b88) | Gets or sets the owner of the window. |
+| [Screens (Inherited from WindowBase)](../windowbase.mdx#uid-a958441fa2) | Gets platform screens implementation. |
+| [Topmost (Inherited from WindowBase)](../windowbase.mdx#uid-34194331b7) | Gets or sets whether this window appears on top of all other windows |
+| [ActualTransparencyLevel (Inherited from TopLevel)](../toplevel.mdx#uid-b06b4e75d1) | Gets the achieved Avalonia.Controls.WindowTransparencyLevel that the platform was able to provide. |
+| [ClientSize (Inherited from TopLevel)](../toplevel.mdx#uid-8f098564dd) | Gets or sets the client size of the window. |
+| [Clipboard (Inherited from TopLevel)](../toplevel.mdx#uid-483d6e6028) | Gets the platform's clipboard implementation |
+| [FocusManager (Inherited from TopLevel)](../toplevel.mdx#uid-f485cb461f) | Gets focus manager of the root. |
+| [FrameSize (Inherited from TopLevel)](../toplevel.mdx#uid-f8415332cb) | Gets or sets the total size of the window. |
+| [InputPane (Inherited from TopLevel)](../toplevel.mdx#uid-a71bd123e4) | No summary available. |
+| [InsetsManager (Inherited from TopLevel)](../toplevel.mdx#uid-a83543123e) | No summary available. |
+| [Launcher (Inherited from TopLevel)](../toplevel.mdx#uid-6209ecb628) | No summary available. |
+| [RenderScaling (Inherited from TopLevel)](../toplevel.mdx#uid-713cad322e) | No summary available. |
+| [RendererDiagnostics (Inherited from TopLevel)](../toplevel.mdx#uid-562a1b9c83) | Gets a value indicating whether the renderer should draw specific diagnostics. |
+| [RequestedThemeVariant (Inherited from TopLevel)](../toplevel.mdx#uid-8116f29014) | Gets or sets the UI theme variant that is used by the control (and its child elements) for resource determination. The UI theme you specify with ThemeVariant can override the app-level ThemeVariant. |
+| [StorageProvider (Inherited from TopLevel)](../toplevel.mdx#uid-e2ce35d5c2) | File System storage service used for file pickers and bookmarks. |
+| [TransparencyBackgroundFallback (Inherited from TopLevel)](../toplevel.mdx#uid-2e4e3f8e4e) | Gets or sets the Avalonia.Media.IBrush that transparency will blend with when transparency is not supported. By default this is a solid white brush. |
+| [TransparencyLevelHint (Inherited from TopLevel)](../toplevel.mdx#uid-0593983597) | Gets or sets the Avalonia.Controls.WindowTransparencyLevel that the TopLevel should use when possible. Accepts multiple values which are applied in a fallback order. For instance, with "Mica, Blur" Mica will be applied only on platforms where it is possible, and Blur will be used on the rest of them. Default value is an empty array or "None". |
+| [Content (Inherited from ContentControl)](../contentcontrol.mdx#uid-eab6df2df3) | Gets or sets the content to display. |
+| [ContentTemplate (Inherited from ContentControl)](../contentcontrol.mdx#uid-d3b1dd21f9) | Gets or sets the data template used to display the content of the control. |
+| [HorizontalContentAlignment (Inherited from ContentControl)](../contentcontrol.mdx#uid-91c4dbcd1a) | Gets or sets the horizontal alignment of the content within the control. |
+| [Presenter (Inherited from ContentControl)](../contentcontrol.mdx#uid-9eb95d7b29) | Gets the presenter from the control's template. |
+| [VerticalContentAlignment (Inherited from ContentControl)](../contentcontrol.mdx#uid-7225e4abe8) | Gets or sets the vertical alignment of the content within the control. |
+| [Background (Inherited from TemplatedControl)](templatedcontrol.mdx#uid-50dbd38ef5) | Gets or sets the brush used to draw the control's background. |
+| [BackgroundSizing (Inherited from TemplatedControl)](templatedcontrol.mdx#uid-07ef33f604) | Gets or sets how the control's background is drawn relative to the control's border. |
+| [BorderBrush (Inherited from TemplatedControl)](templatedcontrol.mdx#uid-cf666d3678) | Gets or sets the brush used to draw the control's border. |
+| [BorderThickness (Inherited from TemplatedControl)](templatedcontrol.mdx#uid-4e2cc431b4) | Gets or sets the thickness of the control's border. |
+| [CornerRadius (Inherited from TemplatedControl)](templatedcontrol.mdx#uid-91a447dd4a) | Gets or sets the radius of the border rounded corners. |
+| [FontFamily (Inherited from TemplatedControl)](templatedcontrol.mdx#uid-fc37661323) | Gets or sets the font family used to draw the control's text. |
+| [FontFeatures (Inherited from TemplatedControl)](templatedcontrol.mdx#uid-1a7abb9411) | Gets or sets the font features turned on/off. |
+| [FontSize (Inherited from TemplatedControl)](templatedcontrol.mdx#uid-0a8445793b) | Gets or sets the size of the control's text in points. |
+| [FontStretch (Inherited from TemplatedControl)](templatedcontrol.mdx#uid-f23e3b5938) | Gets or sets the font stretch used to draw the control's text. |
+| [FontStyle (Inherited from TemplatedControl)](templatedcontrol.mdx#uid-0d0ccbde51) | Gets or sets the font style used to draw the control's text. |
+| [FontWeight (Inherited from TemplatedControl)](templatedcontrol.mdx#uid-967cc71125) | Gets or sets the font weight used to draw the control's text. |
+| [Foreground (Inherited from TemplatedControl)](templatedcontrol.mdx#uid-dff6480679) | Gets or sets the brush used to draw the control's text and other foreground elements. |
+| [LetterSpacing (Inherited from TemplatedControl)](templatedcontrol.mdx#uid-2d96a527e6) | Gets or sets the letter spacing for the control's text content. |
+| [Padding (Inherited from TemplatedControl)](templatedcontrol.mdx#uid-f5271cd58d) | Gets or sets the padding placed between the border of the control and its content. |
+| [Template (Inherited from TemplatedControl)](templatedcontrol.mdx#uid-7a289f7bd4) | Gets or sets the template that defines the control's appearance. |
+| [ContextFlyout (Inherited from Control)](../control.mdx#uid-3821ce41c2) | Gets or sets a context flyout to the control |
+| [ContextMenu (Inherited from Control)](../control.mdx#uid-95e5e3ccc3) | Gets or sets a context menu to the control. |
+| [DataTemplates (Inherited from Control)](../control.mdx#uid-78ff251b26) | Gets or sets the data templates for the control. |
+| [FocusAdorner (Inherited from Control)](../control.mdx#uid-96de66ccc5) | Gets or sets the control's focus adorner. |
+| [IsLoaded (Inherited from Control)](../control.mdx#uid-7b8aa52b02) | Gets a value indicating whether the control is fully constructed in the visual tree and both layout and render are complete. |
+| [Tag (Inherited from Control)](../control.mdx#uid-2790b0c958) | Gets or sets a user-defined object attached to the control. |
+| [Cursor (Inherited from InputElement)](../../input/inputelement.mdx#uid-4222de38cf) | Gets or sets associated mouse cursor. |
+| [Focusable (Inherited from InputElement)](../../input/inputelement.mdx#uid-20168c45b2) | Gets or sets a value indicating whether the control can receive focus. |
+| [GestureRecognizers (Inherited from InputElement)](../../input/inputelement.mdx#uid-ddee464eee) | No summary available. |
+| [IsEffectivelyEnabled (Inherited from InputElement)](../../input/inputelement.mdx#uid-48ba4c0379) | Gets a value indicating whether this control and all its parents are enabled. |
+| [IsEnabled (Inherited from InputElement)](../../input/inputelement.mdx#uid-31817dbbc9) | Gets or sets a value indicating whether the control is enabled for user interaction. |
+| [IsFocused (Inherited from InputElement)](../../input/inputelement.mdx#uid-e4cd1a3717) | Gets a value indicating whether the control is focused. |
+| [IsHitTestVisible (Inherited from InputElement)](../../input/inputelement.mdx#uid-11cb006f8b) | Gets or sets a value indicating whether the control is considered for hit testing. |
+| [IsKeyboardFocusWithin (Inherited from InputElement)](../../input/inputelement.mdx#uid-6e5855b185) | Gets a value indicating whether keyboard focus is anywhere within the element or its visual tree child elements. |
+| [IsPointerOver (Inherited from InputElement)](../../input/inputelement.mdx#uid-09e1553c00) | Gets a value indicating whether the pointer is currently over the control. |
+| [IsTabStop (Inherited from InputElement)](../../input/inputelement.mdx#uid-455d73fca4) | Gets or sets a value that indicates whether the control is included in tab navigation. |
+| [KeyBindings (Inherited from InputElement)](../../input/inputelement.mdx#uid-827a5420b2) | No summary available. |
+| [TabIndex (Inherited from InputElement)](../../input/inputelement.mdx#uid-82ec6bf9ac) | Gets or sets a value that determines the order in which elements receive focus when the user navigates through controls by pressing the Tab key. |
+| [DesiredSize (Inherited from Layoutable)](../../layout/layoutable.mdx#uid-5eb61af32f) | Gets the size that this element computed during the measure pass of the layout process. |
+| [Height (Inherited from Layoutable)](../../layout/layoutable.mdx#uid-4334ab83b4) | Gets or sets the height of the element. |
+| [HorizontalAlignment (Inherited from Layoutable)](../../layout/layoutable.mdx#uid-c621d98d6c) | Gets or sets the element's preferred horizontal alignment in its parent. |
+| [IsArrangeValid (Inherited from Layoutable)](../../layout/layoutable.mdx#uid-97d1d86c71) | Gets a value indicating whether the control's layouts arrange is valid. |
+| [IsMeasureValid (Inherited from Layoutable)](../../layout/layoutable.mdx#uid-2b3ce6ad30) | Gets a value indicating whether the control's layout measure is valid. |
+| [Margin (Inherited from Layoutable)](../../layout/layoutable.mdx#uid-3785e24bed) | Gets or sets the margin around the element. |
+| [MaxHeight (Inherited from Layoutable)](../../layout/layoutable.mdx#uid-6ffe996277) | Gets or sets the maximum height of the element. |
+| [MaxWidth (Inherited from Layoutable)](../../layout/layoutable.mdx#uid-ea6041bc57) | Gets or sets the maximum width of the element. |
+| [MinHeight (Inherited from Layoutable)](../../layout/layoutable.mdx#uid-822cd64c83) | Gets or sets the minimum height of the element. |
+| [MinWidth (Inherited from Layoutable)](../../layout/layoutable.mdx#uid-5bd3b5bb2c) | Gets or sets the minimum width of the element. |
+| [UseLayoutRounding (Inherited from Layoutable)](../../layout/layoutable.mdx#uid-5998a3d47c) | Gets or sets a value that determines whether the element should be snapped to pixel boundaries at layout time. |
+| [VerticalAlignment (Inherited from Layoutable)](../../layout/layoutable.mdx#uid-9652a1b295) | Gets or sets the element's preferred vertical alignment in its parent. |
+| [Width (Inherited from Layoutable)](../../layout/layoutable.mdx#uid-491c41475f) | Gets or sets the width of the element. |
+| [Bounds (Inherited from Visual)](../../visual.mdx#uid-a01c3022f7) | Gets the bounds of the control relative to its parent. |
+| [CacheMode (Inherited from Visual)](../../visual.mdx#uid-c565afad32) | Gets or sets the cache mode of the visual. |
+| [Clip (Inherited from Visual)](../../visual.mdx#uid-7623faaeaf) | Gets or sets the geometry clip for this visual. |
+| [ClipToBounds (Inherited from Visual)](../../visual.mdx#uid-63c348aebd) | Gets or sets a value indicating whether the control should be clipped to its bounds. |
+| [Effect (Inherited from Visual)](../../visual.mdx#uid-65e2be6b7c) | Gets or sets the effect of the control. |
+| [FlowDirection (Inherited from Visual)](../../visual.mdx#uid-c7929bde53) | Gets or sets the text flow direction. |
+| [HasMirrorTransform (Inherited from Visual)](../../visual.mdx#uid-70dc13a730) | Gets or sets a value indicating whether to apply mirror transform on this control. |
+| [IsEffectivelyVisible (Inherited from Visual)](../../visual.mdx#uid-03d6c15a63) | Gets a value indicating whether this control and all its parents are visible. |
+| [IsVisible (Inherited from Visual)](../../visual.mdx#uid-da2b0ca167) | Gets or sets a value indicating whether this control is visible. |
+| [Opacity (Inherited from Visual)](../../visual.mdx#uid-9eaf1e3d57) | Gets or sets the opacity of the control. |
+| [OpacityMask (Inherited from Visual)](../../visual.mdx#uid-b6579b9244) | Gets or sets the opacity mask of the control. |
+| [RenderTransform (Inherited from Visual)](../../visual.mdx#uid-7ee76ff32a) | Gets or sets the render transform of the control. |
+| [RenderTransformOrigin (Inherited from Visual)](../../visual.mdx#uid-3501120c25) | Gets or sets the transform origin of the control. |
+| [ZIndex (Inherited from Visual)](../../visual.mdx#uid-a3275ade9d) | Gets or sets the Z index of the control. |
+| [ActualThemeVariant (Inherited from StyledElement)](../../styledelement.mdx#uid-776bcbe4bf) | Gets the UI theme that is currently used by the element, which might be different than the RequestedThemeVariantProperty. |
+| [Classes (Inherited from StyledElement)](../../styledelement.mdx#uid-b7b7edea05) | Gets or sets the styled element's classes. |
+| [DataContext (Inherited from StyledElement)](../../styledelement.mdx#uid-647f924a56) | Gets or sets the control's data context. |
+| [IsInitialized (Inherited from StyledElement)](../../styledelement.mdx#uid-59a7cddacb) | Gets a value that indicates whether the element has finished initialization. |
+| [Name (Inherited from StyledElement)](../../styledelement.mdx#uid-245f4ccff5) | Gets or sets the name of the styled element. |
+| [Parent (Inherited from StyledElement)](../../styledelement.mdx#uid-aad2c5c78d) | Gets the styled element's logical parent. |
+| [Resources (Inherited from StyledElement)](../../styledelement.mdx#uid-f6488ca4b7) | Gets or sets the styled element's resource dictionary. |
+| [StyleKey (Inherited from StyledElement)](../../styledelement.mdx#uid-081584075e) | Gets the type by which the element is styled. |
+| [Styles (Inherited from StyledElement)](../../styledelement.mdx#uid-ae663139cc) | Gets the styles for the styled element. |
+| [TemplatedParent (Inherited from StyledElement)](../../styledelement.mdx#uid-dbf6ddacc3) | Gets the styled element whose lookless template this styled element is part of. |
+| [Theme (Inherited from StyledElement)](../../styledelement.mdx#uid-1aebed283d) | Gets or sets the theme to be applied to the element. |
+| [Transitions (Inherited from Animatable)](../../animation/animatable.mdx#uid-1b3138f517) | Gets or sets the property transitions for the control. |
+| [Dispatcher (Inherited from AvaloniaObject)](../../avaloniaobject.mdx#uid-b25fa51632) | Returns the Avalonia.AvaloniaObject.Dispatcher that this Avalonia.AvaloniaObject is associated with. |
+| [Item (Inherited from AvaloniaObject)](../../avaloniaobject.mdx#uid-c1d1f1bc0f) | No summary available. |
 
 <span id="uid-4a451c86af"></span>
 
@@ -169,7 +318,7 @@ public Avalonia.Media.Transform Transform { get; set; }
 Gets or sets a hint to the window manager that a shadow should be added to the popup.
 
 ```csharp
-public System.Boolean WindowManagerAddShadowHint { get; set; }
+public Boolean WindowManagerAddShadowHint { get; set; }
 ```
 
 ## Fields
@@ -178,6 +327,123 @@ public System.Boolean WindowManagerAddShadowHint { get; set; }
 | --- | --- |
 | [TransformProperty](#uid-cab945602c) | Defines the Avalonia.Controls.Primitives.PopupRoot.Transform property. |
 | [WindowManagerAddShadowHintProperty](#uid-2e64f963dd) | Defines the Avalonia.Controls.Primitives.PopupRoot.WindowManagerAddShadowHint property. |
+| [IsActiveProperty (Inherited from WindowBase)](../windowbase.mdx#uid-c09d312241) | Defines the Avalonia.Controls.WindowBase.IsActive property. |
+| [OwnerProperty (Inherited from WindowBase)](../windowbase.mdx#uid-6b795228f9) | Defines the Avalonia.Controls.WindowBase.Owner property. |
+| [TopmostProperty (Inherited from WindowBase)](../windowbase.mdx#uid-8d65fc0331) | No summary available. |
+| [ActualThemeVariantProperty (Inherited from TopLevel)](../toplevel.mdx#uid-3449282ab9) | No summary available. |
+| [ActualTransparencyLevelProperty (Inherited from TopLevel)](../toplevel.mdx#uid-bc59cb5fcd) | Defines the Avalonia.Controls.TopLevel.ActualTransparencyLevel property. |
+| [AutoSafeAreaPaddingProperty (Inherited from TopLevel)](../toplevel.mdx#uid-89a01534af) | Defines the AutoSafeAreaPadding attached property. |
+| [BackRequestedEvent (Inherited from TopLevel)](../toplevel.mdx#uid-781fe51795) | Defines the Avalonia.Controls.TopLevel.BackRequested event. |
+| [ClientSizeProperty (Inherited from TopLevel)](../toplevel.mdx#uid-bf9c603fe2) | Defines the Avalonia.Controls.TopLevel.ClientSize property. |
+| [FrameSizeProperty (Inherited from TopLevel)](../toplevel.mdx#uid-eea3e5caa1) | Defines the Avalonia.Controls.TopLevel.FrameSize property. |
+| [RequestedThemeVariantProperty (Inherited from TopLevel)](../toplevel.mdx#uid-28f95db217) | No summary available. |
+| [SystemBarColorProperty (Inherited from TopLevel)](../toplevel.mdx#uid-03d364afae) | Defines the SystemBarColor attached property. |
+| [TransparencyBackgroundFallbackProperty (Inherited from TopLevel)](../toplevel.mdx#uid-ac3a27d16b) | Defines the Avalonia.Controls.TopLevel.TransparencyBackgroundFallback property. |
+| [TransparencyLevelHintProperty (Inherited from TopLevel)](../toplevel.mdx#uid-d088bd6f58) | Defines the Avalonia.Controls.TopLevel.TransparencyLevelHint property. |
+| [ContentProperty (Inherited from ContentControl)](../contentcontrol.mdx#uid-0e2122d666) | Defines the Avalonia.Controls.ContentControl.Content property. |
+| [ContentTemplateProperty (Inherited from ContentControl)](../contentcontrol.mdx#uid-8ca28f1907) | Defines the Avalonia.Controls.ContentControl.ContentTemplate property. |
+| [HorizontalContentAlignmentProperty (Inherited from ContentControl)](../contentcontrol.mdx#uid-a0ed10f05c) | Defines the Avalonia.Controls.ContentControl.HorizontalContentAlignment property. |
+| [VerticalContentAlignmentProperty (Inherited from ContentControl)](../contentcontrol.mdx#uid-5ed917028d) | Defines the Avalonia.Controls.ContentControl.VerticalContentAlignment property. |
+| [BackgroundProperty (Inherited from TemplatedControl)](templatedcontrol.mdx#uid-dbbd1ffb9b) | Defines the Avalonia.Controls.Primitives.TemplatedControl.Background property. |
+| [BackgroundSizingProperty (Inherited from TemplatedControl)](templatedcontrol.mdx#uid-316d7708c4) | Defines the Avalonia.Controls.Primitives.TemplatedControl.BackgroundSizing property. |
+| [BorderBrushProperty (Inherited from TemplatedControl)](templatedcontrol.mdx#uid-a4e6335f37) | Defines the Avalonia.Controls.Primitives.TemplatedControl.BorderBrush property. |
+| [BorderThicknessProperty (Inherited from TemplatedControl)](templatedcontrol.mdx#uid-c41e10c675) | Defines the Avalonia.Controls.Primitives.TemplatedControl.BorderThickness property. |
+| [CornerRadiusProperty (Inherited from TemplatedControl)](templatedcontrol.mdx#uid-c7cdbfc75d) | Defines the Avalonia.Controls.Primitives.TemplatedControl.CornerRadius property. |
+| [FontFamilyProperty (Inherited from TemplatedControl)](templatedcontrol.mdx#uid-fefa977c48) | Defines the Avalonia.Controls.Primitives.TemplatedControl.FontFamily property. |
+| [FontFeaturesProperty (Inherited from TemplatedControl)](templatedcontrol.mdx#uid-54c52748f8) | Defines the Avalonia.Controls.Primitives.TemplatedControl.FontFeaturesProperty property. |
+| [FontSizeProperty (Inherited from TemplatedControl)](templatedcontrol.mdx#uid-c06c71299f) | Defines the Avalonia.Controls.Primitives.TemplatedControl.FontSize property. |
+| [FontStretchProperty (Inherited from TemplatedControl)](templatedcontrol.mdx#uid-d4a988cc8c) | Defines the Avalonia.Controls.Primitives.TemplatedControl.FontWeight property. |
+| [FontStyleProperty (Inherited from TemplatedControl)](templatedcontrol.mdx#uid-14162a470d) | Defines the Avalonia.Controls.Primitives.TemplatedControl.FontStyle property. |
+| [FontWeightProperty (Inherited from TemplatedControl)](templatedcontrol.mdx#uid-b911f20b9f) | Defines the Avalonia.Controls.Primitives.TemplatedControl.FontWeight property. |
+| [ForegroundProperty (Inherited from TemplatedControl)](templatedcontrol.mdx#uid-65cd93050b) | Defines the Avalonia.Controls.Primitives.TemplatedControl.Foreground property. |
+| [IsTemplateFocusTargetProperty (Inherited from TemplatedControl)](templatedcontrol.mdx#uid-e50dcff99d) | Defines the IsTemplateFocusTarget attached property. |
+| [LetterSpacingProperty (Inherited from TemplatedControl)](templatedcontrol.mdx#uid-cd0904df0e) | Defines the Avalonia.Controls.Primitives.TemplatedControl.LetterSpacing property. |
+| [PaddingProperty (Inherited from TemplatedControl)](templatedcontrol.mdx#uid-8836c61358) | Defines the Avalonia.Controls.Primitives.TemplatedControl.Padding property. |
+| [TemplateAppliedEvent (Inherited from TemplatedControl)](templatedcontrol.mdx#uid-8ed6368102) | Defines the Avalonia.Controls.Primitives.TemplatedControl.TemplateApplied routed event. |
+| [TemplateProperty (Inherited from TemplatedControl)](templatedcontrol.mdx#uid-888470a301) | Defines the Avalonia.Controls.Primitives.TemplatedControl.Template property. |
+| [ContextFlyoutProperty (Inherited from Control)](../control.mdx#uid-7adf3cc0e6) | Defines the Avalonia.Controls.Control.ContextFlyout property |
+| [ContextMenuProperty (Inherited from Control)](../control.mdx#uid-0fd2af59c9) | Defines the Avalonia.Controls.Control.ContextMenu property. |
+| [FocusAdornerProperty (Inherited from Control)](../control.mdx#uid-701a7e7e23) | Defines the Avalonia.Controls.Control.FocusAdorner property. |
+| [LoadedEvent (Inherited from Control)](../control.mdx#uid-f76afcf3e6) | Defines the Avalonia.Controls.Control.Loaded event. |
+| [RequestBringIntoViewEvent (Inherited from Control)](../control.mdx#uid-e52a870608) | Event raised when an element wishes to be scrolled into view. |
+| [SizeChangedEvent (Inherited from Control)](../control.mdx#uid-7d071894f4) | Defines the Avalonia.Controls.Control.SizeChanged event. |
+| [TagProperty (Inherited from Control)](../control.mdx#uid-291b4a3b79) | Defines the Avalonia.Controls.Control.Tag property. |
+| [UnloadedEvent (Inherited from Control)](../control.mdx#uid-382a8f6733) | Defines the Avalonia.Controls.Control.Unloaded event. |
+| [ContextCanceledEvent (Inherited from InputElement)](../../input/inputelement.mdx#uid-c58107fdb9) | Provides event data for the Avalonia.Input.InputElement.ContextCanceled event. |
+| [ContextRequestedEvent (Inherited from InputElement)](../../input/inputelement.mdx#uid-11362fc1dd) | Provides event data for the Avalonia.Input.InputElement.ContextRequested event. |
+| [CursorProperty (Inherited from InputElement)](../../input/inputelement.mdx#uid-37a51ae89c) | Gets or sets associated mouse cursor. |
+| [DoubleTappedEvent (Inherited from InputElement)](../../input/inputelement.mdx#uid-932047336f) | Defines the Avalonia.Input.InputElement.DoubleTapped event. |
+| [FocusableProperty (Inherited from InputElement)](../../input/inputelement.mdx#uid-402835abd7) | Defines the Avalonia.Input.InputElement.Focusable property. |
+| [GettingFocusEvent (Inherited from InputElement)](../../input/inputelement.mdx#uid-23a6940484) | Defines the Avalonia.Input.InputElement.GettingFocus event. |
+| [GotFocusEvent (Inherited from InputElement)](../../input/inputelement.mdx#uid-750ce32b53) | Defines the Avalonia.Input.InputElement.GotFocus event. |
+| [HoldingEvent (Inherited from InputElement)](../../input/inputelement.mdx#uid-b1eab1bcd8) | Defines the Avalonia.Input.InputElement.Holding event. |
+| [IsEffectivelyEnabledProperty (Inherited from InputElement)](../../input/inputelement.mdx#uid-df18a2cff1) | Defines the Avalonia.Input.InputElement.IsEffectivelyEnabled property. |
+| [IsEnabledProperty (Inherited from InputElement)](../../input/inputelement.mdx#uid-2f2893a804) | Defines the Avalonia.Input.InputElement.IsEnabled property. |
+| [IsFocusedProperty (Inherited from InputElement)](../../input/inputelement.mdx#uid-ec811cc35b) | Defines the Avalonia.Input.InputElement.IsFocused property. |
+| [IsHitTestVisibleProperty (Inherited from InputElement)](../../input/inputelement.mdx#uid-e774aa17ad) | Defines the Avalonia.Input.InputElement.IsHitTestVisible property. |
+| [IsHoldWithMouseEnabledProperty (Inherited from InputElement)](../../input/inputelement.mdx#uid-3f460ccdfe) | Defines the IsHoldWithMouseEnabled attached property. |
+| [IsHoldingEnabledProperty (Inherited from InputElement)](../../input/inputelement.mdx#uid-a893be5e44) | Defines the IsHoldingEnabled attached property. |
+| [IsKeyboardFocusWithinProperty (Inherited from InputElement)](../../input/inputelement.mdx#uid-2dc1dd0d3d) | Defines the Avalonia.Input.InputElement.IsKeyboardFocusWithin property. |
+| [IsPointerOverProperty (Inherited from InputElement)](../../input/inputelement.mdx#uid-be6c8adde2) | Defines the Avalonia.Input.InputElement.IsPointerOver property. |
+| [IsTabStopProperty (Inherited from InputElement)](../../input/inputelement.mdx#uid-ed162e7441) | Defines the Avalonia.Input.InputElement.IsTabStop property. |
+| [KeyDownEvent (Inherited from InputElement)](../../input/inputelement.mdx#uid-71dfb758e3) | Defines the Avalonia.Input.InputElement.KeyDown event. |
+| [KeyUpEvent (Inherited from InputElement)](../../input/inputelement.mdx#uid-e694f9abc6) | Defines the Avalonia.Input.InputElement.KeyUp event. |
+| [LosingFocusEvent (Inherited from InputElement)](../../input/inputelement.mdx#uid-6ed71d3568) | Defines the Avalonia.Input.InputElement.LosingFocus event. |
+| [LostFocusEvent (Inherited from InputElement)](../../input/inputelement.mdx#uid-267344bb96) | Defines the Avalonia.Input.InputElement.LostFocus event. |
+| [PinchEndedEvent (Inherited from InputElement)](../../input/inputelement.mdx#uid-3f6a3485dd) | Defines the Avalonia.Input.InputElement.PinchEnded event. |
+| [PinchEvent (Inherited from InputElement)](../../input/inputelement.mdx#uid-d109d8c674) | Defines the Avalonia.Input.InputElement.Pinch event. |
+| [PointerCaptureLostEvent (Inherited from InputElement)](../../input/inputelement.mdx#uid-e76450a6b8) | Defines the Avalonia.Input.InputElement.PointerCaptureLost routed event. |
+| [PointerEnteredEvent (Inherited from InputElement)](../../input/inputelement.mdx#uid-ff4d54fcc4) | Defines the Avalonia.Input.InputElement.PointerEntered event. |
+| [PointerExitedEvent (Inherited from InputElement)](../../input/inputelement.mdx#uid-fc90c076e6) | Defines the Avalonia.Input.InputElement.PointerExited event. |
+| [PointerMovedEvent (Inherited from InputElement)](../../input/inputelement.mdx#uid-559b3b80ee) | Defines the Avalonia.Input.InputElement.PointerMoved event. |
+| [PointerPressedEvent (Inherited from InputElement)](../../input/inputelement.mdx#uid-3b7a47d5fd) | Defines the Avalonia.Input.InputElement.PointerPressed event. |
+| [PointerReleasedEvent (Inherited from InputElement)](../../input/inputelement.mdx#uid-f5b0e74f53) | Defines the Avalonia.Input.InputElement.PointerReleased event. |
+| [PointerTouchPadGestureMagnifyEvent (Inherited from InputElement)](../../input/inputelement.mdx#uid-72785e777d) | Defines the Avalonia.Input.InputElement.PointerTouchPadGestureMagnify event. |
+| [PointerTouchPadGestureRotateEvent (Inherited from InputElement)](../../input/inputelement.mdx#uid-409dcc6358) | Defines the Avalonia.Input.InputElement.PointerTouchPadGestureRotate event. |
+| [PointerTouchPadGestureSwipeEvent (Inherited from InputElement)](../../input/inputelement.mdx#uid-959da18351) | Defines the Avalonia.Input.InputElement.PointerTouchPadGestureSwipe event. |
+| [PointerWheelChangedEvent (Inherited from InputElement)](../../input/inputelement.mdx#uid-dcb45add6a) | Defines the Avalonia.Input.InputElement.PointerWheelChanged event. |
+| [PullGestureEndedEvent (Inherited from InputElement)](../../input/inputelement.mdx#uid-274f53878f) | Defines the Avalonia.Input.InputElement.PullGestureEnded event. |
+| [PullGestureEvent (Inherited from InputElement)](../../input/inputelement.mdx#uid-b9a60d43c7) | Defines the Avalonia.Input.InputElement.PullGesture event. |
+| [RightTappedEvent (Inherited from InputElement)](../../input/inputelement.mdx#uid-a67d4b1367) | Defines the Avalonia.Input.InputElement.RightTapped event. |
+| [ScrollGestureEndedEvent (Inherited from InputElement)](../../input/inputelement.mdx#uid-5f3e85c372) | Defines the Avalonia.Input.InputElement.ScrollGestureEnded event. |
+| [ScrollGestureEvent (Inherited from InputElement)](../../input/inputelement.mdx#uid-d098469113) | Defines the Avalonia.Input.InputElement.ScrollGesture event. |
+| [ScrollGestureInertiaStartingEvent (Inherited from InputElement)](../../input/inputelement.mdx#uid-02f504d2ea) | Defines the Avalonia.Input.InputElement.ScrollGestureInertiaStarting event. |
+| [SwipeGestureEvent (Inherited from InputElement)](../../input/inputelement.mdx#uid-e431c01e95) | Defines the Avalonia.Input.InputElement.SwipeGesture event. |
+| [TabIndexProperty (Inherited from InputElement)](../../input/inputelement.mdx#uid-3708b5bfca) | Defines the Avalonia.Input.InputElement.TabIndex property. |
+| [TappedEvent (Inherited from InputElement)](../../input/inputelement.mdx#uid-15efc26145) | Defines the Avalonia.Input.InputElement.Tapped event. |
+| [TextInputEvent (Inherited from InputElement)](../../input/inputelement.mdx#uid-b82dd03ac9) | Defines the Avalonia.Input.InputElement.TextInput event. |
+| [TextInputMethodClientRequestedEvent (Inherited from InputElement)](../../input/inputelement.mdx#uid-679852bb37) | Defines the Avalonia.Input.InputElement.TextInputMethodClientRequested event. |
+| [DesiredSizeProperty (Inherited from Layoutable)](../../layout/layoutable.mdx#uid-b46bed86fe) | Defines the Avalonia.Layout.Layoutable.DesiredSize property. |
+| [HeightProperty (Inherited from Layoutable)](../../layout/layoutable.mdx#uid-78fa90222f) | Defines the Avalonia.Layout.Layoutable.Height property. |
+| [HorizontalAlignmentProperty (Inherited from Layoutable)](../../layout/layoutable.mdx#uid-43606c2354) | Defines the Avalonia.Layout.Layoutable.HorizontalAlignment property. |
+| [MarginProperty (Inherited from Layoutable)](../../layout/layoutable.mdx#uid-e730ad0d44) | Defines the Avalonia.Layout.Layoutable.Margin property. |
+| [MaxHeightProperty (Inherited from Layoutable)](../../layout/layoutable.mdx#uid-0a0a1f20cb) | Defines the Avalonia.Layout.Layoutable.MaxHeight property. |
+| [MaxWidthProperty (Inherited from Layoutable)](../../layout/layoutable.mdx#uid-febdea8f4d) | Defines the Avalonia.Layout.Layoutable.MaxWidth property. |
+| [MinHeightProperty (Inherited from Layoutable)](../../layout/layoutable.mdx#uid-f78bf9b812) | Defines the Avalonia.Layout.Layoutable.MinHeight property. |
+| [MinWidthProperty (Inherited from Layoutable)](../../layout/layoutable.mdx#uid-ec0935c392) | Defines the Avalonia.Layout.Layoutable.MinWidth property. |
+| [UseLayoutRoundingProperty (Inherited from Layoutable)](../../layout/layoutable.mdx#uid-e6d86b68b5) | Defines the Avalonia.Layout.Layoutable.UseLayoutRounding property. |
+| [VerticalAlignmentProperty (Inherited from Layoutable)](../../layout/layoutable.mdx#uid-b50722555e) | Defines the Avalonia.Layout.Layoutable.VerticalAlignment property. |
+| [WidthProperty (Inherited from Layoutable)](../../layout/layoutable.mdx#uid-6f3212affd) | Defines the Avalonia.Layout.Layoutable.Width property. |
+| [BoundsProperty (Inherited from Visual)](../../visual.mdx#uid-f22a27348f) | Defines the Avalonia.Visual.Bounds property. |
+| [CacheModeProperty (Inherited from Visual)](../../visual.mdx#uid-5c89b0f2fc) | Defines the Avalonia.Visual.CacheMode property. |
+| [ClipProperty (Inherited from Visual)](../../visual.mdx#uid-06ffce3308) | Defines the Avalonia.Visual.Clip property. |
+| [ClipToBoundsProperty (Inherited from Visual)](../../visual.mdx#uid-4bc41df166) | Defines the Avalonia.Visual.ClipToBounds property. |
+| [EffectProperty (Inherited from Visual)](../../visual.mdx#uid-9374086bff) | Defines the Avalonia.Visual.Effect property. |
+| [FlowDirectionProperty (Inherited from Visual)](../../visual.mdx#uid-79d00f257f) | Defines the Avalonia.Visual.FlowDirection property. |
+| [HasMirrorTransformProperty (Inherited from Visual)](../../visual.mdx#uid-1f37ec4745) | Defines the Avalonia.Visual.HasMirrorTransform property. |
+| [IsVisibleProperty (Inherited from Visual)](../../visual.mdx#uid-8e0edf21ac) | Defines the Avalonia.Visual.IsVisible property. |
+| [OpacityMaskProperty (Inherited from Visual)](../../visual.mdx#uid-aad2c3f7c2) | Defines the Avalonia.Visual.OpacityMask property. |
+| [OpacityProperty (Inherited from Visual)](../../visual.mdx#uid-2a53e27b1f) | Defines the Avalonia.Visual.Opacity property. |
+| [RenderTransformOriginProperty (Inherited from Visual)](../../visual.mdx#uid-963d266cdd) | Defines the Avalonia.Visual.RenderTransformOrigin property. |
+| [RenderTransformProperty (Inherited from Visual)](../../visual.mdx#uid-31d20942c2) | Defines the Avalonia.Visual.RenderTransform property. |
+| [VisualParentProperty (Inherited from Visual)](../../visual.mdx#uid-12214f81b9) | Defines the Avalonia.Visual.VisualParent property. |
+| [ZIndexProperty (Inherited from Visual)](../../visual.mdx#uid-1dc9376c1e) | Defines the Avalonia.Visual.ZIndex property. |
+| [DataContextProperty (Inherited from StyledElement)](../../styledelement.mdx#uid-7eefabb929) | Defines the Avalonia.StyledElement.DataContext property. |
+| [NameProperty (Inherited from StyledElement)](../../styledelement.mdx#uid-bcdbb9de56) | Defines the Avalonia.StyledElement.Name property. |
+| [ParentProperty (Inherited from StyledElement)](../../styledelement.mdx#uid-dc6481a488) | Defines the Avalonia.StyledElement.Parent property. |
+| [TemplatedParentProperty (Inherited from StyledElement)](../../styledelement.mdx#uid-a2c7149a6b) | Defines the Avalonia.StyledElement.TemplatedParent property. |
+| [ThemeProperty (Inherited from StyledElement)](../../styledelement.mdx#uid-05852d7b9a) | Defines the Avalonia.StyledElement.Theme property. |
+| [TransitionsProperty (Inherited from Animatable)](../../animation/animatable.mdx#uid-c79f18fac2) | Defines the Avalonia.Animation.Animatable.Transitions property. |
 
 <span id="uid-cab945602c"></span>
 
@@ -196,8 +462,68 @@ public Avalonia.StyledProperty<Avalonia.Media.Transform> TransformProperty
 Defines the [Avalonia.Controls.Primitives.PopupRoot.WindowManagerAddShadowHint](xref:Avalonia.Controls.Primitives.PopupRoot.WindowManagerAddShadowHint) property.
 
 ```csharp
-public Avalonia.StyledProperty<System.Boolean> WindowManagerAddShadowHintProperty
+public Avalonia.StyledProperty<Boolean> WindowManagerAddShadowHintProperty
 ```
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [Activated (Inherited from WindowBase)](../windowbase.mdx#uid-b61aa01b09) | Fired when the window is activated. |
+| [Deactivated (Inherited from WindowBase)](../windowbase.mdx#uid-6f5718d6fe) | Fired when the window is deactivated. |
+| [PositionChanged (Inherited from WindowBase)](../windowbase.mdx#uid-035504a290) | Fired when the window position is changed. |
+| [Resized (Inherited from WindowBase)](../windowbase.mdx#uid-25bc80543b) | Occurs when the window is resized. |
+| [BackRequested (Inherited from TopLevel)](../toplevel.mdx#uid-3ef3790149) | Occurs when physical Back Button is pressed or a back navigation has been requested. |
+| [Closed (Inherited from TopLevel)](../toplevel.mdx#uid-feb963478f) | Fired when the window is closed. |
+| [Opened (Inherited from TopLevel)](../toplevel.mdx#uid-eec89b4de0) | Fired when the window is opened. |
+| [ScalingChanged (Inherited from TopLevel)](../toplevel.mdx#uid-de8f4f22e5) | Gets or sets a method called when the TopLevel's scaling changes. |
+| [TemplateApplied (Inherited from TemplatedControl)](templatedcontrol.mdx#uid-d353f79b7c) | Raised when the control's template is applied. |
+| [Loaded (Inherited from Control)](../control.mdx#uid-c0a1ac2bc3) | Occurs when the control has been fully constructed in the visual tree and both layout and render are complete. |
+| [SizeChanged (Inherited from Control)](../control.mdx#uid-6cfea6b6c5) | Occurs when the bounds (actual size) of the control have changed. |
+| [Unloaded (Inherited from Control)](../control.mdx#uid-fdfd878e56) | Occurs when the control is removed from the visual tree. |
+| [ContextCanceled (Inherited from InputElement)](../../input/inputelement.mdx#uid-0132e74ca9) | Occurs when the context input gesture continues into another gesture, to notify the element that the context flyout should not be opened. |
+| [ContextRequested (Inherited from InputElement)](../../input/inputelement.mdx#uid-9067484d6e) | Occurs when the user has completed a context input gesture, such as a right-click. |
+| [DoubleTapped (Inherited from InputElement)](../../input/inputelement.mdx#uid-ad13083e0c) | Occurs when a double-tap gesture occurs on the control. |
+| [GettingFocus (Inherited from InputElement)](../../input/inputelement.mdx#uid-4d054164ee) | Occurs before the control receives focus. |
+| [GotFocus (Inherited from InputElement)](../../input/inputelement.mdx#uid-d41d7ad59c) | Occurs when the control receives focus. |
+| [Holding (Inherited from InputElement)](../../input/inputelement.mdx#uid-8cda030fe2) | Occurs when a hold gesture occurs on the control. |
+| [KeyDown (Inherited from InputElement)](../../input/inputelement.mdx#uid-ee9d987ed5) | Occurs when a key is pressed while the control has focus. |
+| [KeyUp (Inherited from InputElement)](../../input/inputelement.mdx#uid-1131e95f55) | Occurs when a key is released while the control has focus. |
+| [LosingFocus (Inherited from InputElement)](../../input/inputelement.mdx#uid-425fe24716) | Occurs before the control loses focus. |
+| [LostFocus (Inherited from InputElement)](../../input/inputelement.mdx#uid-2061fc85a1) | Occurs when the control loses focus. |
+| [Pinch (Inherited from InputElement)](../../input/inputelement.mdx#uid-96b68421dc) | Occurs when a pinch gesture occurs on the control. |
+| [PinchEnded (Inherited from InputElement)](../../input/inputelement.mdx#uid-50614bd917) | Occurs when a pinch gesture ends on the control. |
+| [PointerCaptureLost (Inherited from InputElement)](../../input/inputelement.mdx#uid-2121c500a4) | Occurs when the control or its child control loses the pointer capture for any reason, event will not be triggered for a parent control if capture was transferred to another child of that parent control. |
+| [PointerEntered (Inherited from InputElement)](../../input/inputelement.mdx#uid-a81f2c5c9a) | Occurs when the pointer enters the control. |
+| [PointerExited (Inherited from InputElement)](../../input/inputelement.mdx#uid-522e8d0a47) | Occurs when the pointer leaves the control. |
+| [PointerMoved (Inherited from InputElement)](../../input/inputelement.mdx#uid-0990295ea3) | Occurs when the pointer moves over the control. |
+| [PointerPressed (Inherited from InputElement)](../../input/inputelement.mdx#uid-913cdc0df1) | Occurs when the pointer is pressed over the control. |
+| [PointerReleased (Inherited from InputElement)](../../input/inputelement.mdx#uid-5b59b21d5e) | Occurs when the pointer is released over the control. |
+| [PointerTouchPadGestureMagnify (Inherited from InputElement)](../../input/inputelement.mdx#uid-8f1fe6dc4a) | Occurs when a touchpad magnify gesture occurs on the control. |
+| [PointerTouchPadGestureRotate (Inherited from InputElement)](../../input/inputelement.mdx#uid-d966c43661) | Occurs when a touchpad rotate gesture occurs on the control. |
+| [PointerTouchPadGestureSwipe (Inherited from InputElement)](../../input/inputelement.mdx#uid-9011c6de89) | Occurs when a touchpad swipe gesture occurs on the control. |
+| [PointerWheelChanged (Inherited from InputElement)](../../input/inputelement.mdx#uid-6687ab6f2e) | Occurs when the mouse is scrolled over the control. |
+| [PullGesture (Inherited from InputElement)](../../input/inputelement.mdx#uid-d85f52cac5) | Occurs when a pull gesture occurs on the control. |
+| [PullGestureEnded (Inherited from InputElement)](../../input/inputelement.mdx#uid-a37f51b846) | Occurs when a pull gesture ends on the control. |
+| [RightTapped (Inherited from InputElement)](../../input/inputelement.mdx#uid-11a576692d) | Occurs when a right tap gesture occurs on the control. |
+| [ScrollGesture (Inherited from InputElement)](../../input/inputelement.mdx#uid-b571ab3acc) | Occurs when a scroll gesture occurs on the control. |
+| [ScrollGestureEnded (Inherited from InputElement)](../../input/inputelement.mdx#uid-eb3914c3a8) | Occurs when a scroll gesture ends on the control. |
+| [ScrollGestureInertiaStarting (Inherited from InputElement)](../../input/inputelement.mdx#uid-c8cd2731a5) | Occurs when a scroll gesture inertia starts on the control. |
+| [SwipeGesture (Inherited from InputElement)](../../input/inputelement.mdx#uid-0f4fc613ec) | Occurs when a swipe gesture occurs on the control. |
+| [Tapped (Inherited from InputElement)](../../input/inputelement.mdx#uid-6df36c079d) | Occurs when a tap gesture occurs on the control. |
+| [TextInput (Inherited from InputElement)](../../input/inputelement.mdx#uid-6dcb8fae07) | Occurs when a user typed some text while the control has focus. |
+| [TextInputMethodClientRequested (Inherited from InputElement)](../../input/inputelement.mdx#uid-5d96b89080) | Occurs when an input element gains input focus and input method is looking for the corresponding client |
+| [EffectiveViewportChanged (Inherited from Layoutable)](../../layout/layoutable.mdx#uid-1922b89fa5) | Occurs when the element's effective viewport changes. |
+| [LayoutUpdated (Inherited from Layoutable)](../../layout/layoutable.mdx#uid-05ea32f689) | Occurs when a layout pass completes for the control. |
+| [AttachedToVisualTree (Inherited from Visual)](../../visual.mdx#uid-df40bddf6b) | Raised when the control is attached to a rooted visual tree. |
+| [DetachedFromVisualTree (Inherited from Visual)](../../visual.mdx#uid-3f64dafb1c) | Raised when the control is detached from a rooted visual tree. |
+| [ActualThemeVariantChanged (Inherited from StyledElement)](../../styledelement.mdx#uid-e69ef27e71) | Raised when the theme variant is changed on the element or an ancestor of the element. |
+| [AttachedToLogicalTree (Inherited from StyledElement)](../../styledelement.mdx#uid-717aa68e85) | Raised when the styled element is attached to a rooted logical tree. |
+| [DataContextChanged (Inherited from StyledElement)](../../styledelement.mdx#uid-4b1cc873f8) | Occurs when the Avalonia.StyledElement.DataContext property changes. |
+| [DetachedFromLogicalTree (Inherited from StyledElement)](../../styledelement.mdx#uid-d9f5afa535) | Raised when the styled element is detached from a rooted logical tree. |
+| [Initialized (Inherited from StyledElement)](../../styledelement.mdx#uid-bd6a5e5c0e) | Occurs when the styled element has finished initialization. |
+| [ResourcesChanged (Inherited from StyledElement)](../../styledelement.mdx#uid-99a7f47c56) | Occurs when a resource in this styled element or a parent styled element has changed. |
+| [PropertyChanged (Inherited from AvaloniaObject)](../../avaloniaobject.mdx#uid-d758e26fae) | Raised when a Avalonia.AvaloniaProperty value changes on this object. |
 
 </ApiRefPage>
 

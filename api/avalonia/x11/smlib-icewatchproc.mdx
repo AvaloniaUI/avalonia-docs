@@ -59,7 +59,7 @@ public delegate SMLib.IceWatchProc
 ### SMLib.IceWatchProc
 
 ```csharp
-public SMLib.IceWatchProc(System.Object object, System.IntPtr method)
+public SMLib.IceWatchProc(Object object, IntPtr method)
 ```
 
 ## Methods
@@ -75,7 +75,7 @@ public SMLib.IceWatchProc(System.Object object, System.IntPtr method)
 ### BeginInvoke
 
 ```csharp
-public System.IAsyncResult BeginInvoke(System.IntPtr iceConn, System.IntPtr clientData, System.Boolean opening, System.IntPtr* watchData, System.AsyncCallback callback, System.Object object)
+public IAsyncResult BeginInvoke(IntPtr iceConn, IntPtr clientData, Boolean opening, IntPtr* watchData, AsyncCallback callback, Object object)
 ```
 
 <span id="uid-1130a1409a"></span>
@@ -83,7 +83,7 @@ public System.IAsyncResult BeginInvoke(System.IntPtr iceConn, System.IntPtr clie
 ### EndInvoke
 
 ```csharp
-public System.Void EndInvoke(System.IAsyncResult result)
+public Void EndInvoke(IAsyncResult result)
 ```
 
 <span id="uid-da502594da"></span>
@@ -91,7 +91,7 @@ public System.Void EndInvoke(System.IAsyncResult result)
 ### Invoke
 
 ```csharp
-public System.Void Invoke(System.IntPtr iceConn, System.IntPtr clientData, System.Boolean opening, System.IntPtr* watchData)
+public Void Invoke(IntPtr iceConn, IntPtr clientData, Boolean opening, IntPtr* watchData)
 ```
 
 </ApiRefPage>

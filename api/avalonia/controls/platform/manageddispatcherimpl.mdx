@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Platform/ManagedDispatcherImpl.cs">ManagedDispatcherImpl.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__signature">
@@ -78,7 +81,7 @@ public ManagedDispatcherImpl(Avalonia.Controls.Platform.ManagedDispatcherImpl.IM
 ### RunLoop
 
 ```csharp
-public System.Void RunLoop(System.Threading.CancellationToken token)
+public Void RunLoop(System.Threading.CancellationToken token)
 ```
 
 <span id="uid-d8dc46671a"></span>
@@ -86,7 +89,7 @@ public System.Void RunLoop(System.Threading.CancellationToken token)
 ### Signal
 
 ```csharp
-public System.Void Signal()
+public Void Signal()
 ```
 
 <span id="uid-1d763fa82e"></span>
@@ -94,7 +97,7 @@ public System.Void Signal()
 ### UpdateTimer
 
 ```csharp
-public System.Void UpdateTimer(System.Nullable<System.Int64> dueTimeInMs)
+public Void UpdateTimer(Nullable<Int64> dueTimeInMs)
 ```
 
 ## Properties
@@ -111,7 +114,7 @@ public System.Void UpdateTimer(System.Nullable<System.Int64> dueTimeInMs)
 ### CanQueryPendingInput
 
 ```csharp
-public System.Boolean CanQueryPendingInput { get; set; }
+public Boolean CanQueryPendingInput { get; set; }
 ```
 
 <span id="uid-0d306eb2f5"></span>
@@ -119,7 +122,7 @@ public System.Boolean CanQueryPendingInput { get; set; }
 ### CurrentThreadIsLoopThread
 
 ```csharp
-public System.Boolean CurrentThreadIsLoopThread { get; set; }
+public Boolean CurrentThreadIsLoopThread { get; set; }
 ```
 
 <span id="uid-56407130c3"></span>
@@ -127,7 +130,7 @@ public System.Boolean CurrentThreadIsLoopThread { get; set; }
 ### HasPendingInput
 
 ```csharp
-public System.Boolean HasPendingInput { get; set; }
+public Boolean HasPendingInput { get; set; }
 ```
 
 <span id="uid-dfd6ad815b"></span>
@@ -135,7 +138,7 @@ public System.Boolean HasPendingInput { get; set; }
 ### Now
 
 ```csharp
-public System.Int64 Now { get; set; }
+public Int64 Now { get; set; }
 ```
 
 ## Events
@@ -150,7 +153,7 @@ public System.Int64 Now { get; set; }
 ### Signaled
 
 ```csharp
-public event System.Action Signaled
+public event Action Signaled
 ```
 
 <span id="uid-812e18a620"></span>
@@ -158,7 +161,7 @@ public event System.Action Signaled
 ### Timer
 
 ```csharp
-public event System.Action Timer
+public event Action Timer
 ```
 
 </ApiRefPage>

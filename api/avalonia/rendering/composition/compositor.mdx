@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/obj/GeneratedFiles/DevGenerators/Avalonia.SourceGenerator.CompositionGenerator.CompositionRoslynGenerator/CompositionAnimations.cs">CompositionAnimations.cs</a>, <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Rendering/Composition/Compositor.Factories.cs">Compositor.Factories.cs</a>, <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Rendering/Composition/Compositor.cs">Compositor.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -114,7 +117,7 @@ public Avalonia.Rendering.Composition.ColorKeyFrameAnimation CreateColorKeyFrame
 ### CreateCompositionVisualSnapshot
 
 ```csharp
-public System.Threading.Tasks.Task<Avalonia.Media.Imaging.Bitmap> CreateCompositionVisualSnapshot(Avalonia.Rendering.Composition.CompositionVisual visual, System.Double scaling)
+public System.Threading.Tasks.Task<Avalonia.Media.Imaging.Bitmap> CreateCompositionVisualSnapshot(Avalonia.Rendering.Composition.CompositionVisual visual, Double scaling)
 ```
 
 <span id="uid-b184a8da59"></span>
@@ -166,7 +169,7 @@ public Avalonia.Rendering.Composition.Animations.ExpressionAnimation CreateExpre
 #### CreateExpressionAnimation
 
 ```csharp
-public Avalonia.Rendering.Composition.Animations.ExpressionAnimation CreateExpressionAnimation(System.String expression)
+public Avalonia.Rendering.Composition.Animations.ExpressionAnimation CreateExpressionAnimation(String expression)
 ```
 
 <span id="uid-8583a670e4"></span>
@@ -283,7 +286,7 @@ This is useful for updating your composition tree objects after binding
 and layout passes have completed
 
 ```csharp
-public System.Void RequestCompositionUpdate(System.Action action)
+public Void RequestCompositionUpdate(Action action)
 ```
 
 <span id="uid-2ef6811b7e"></span>
@@ -322,7 +325,7 @@ public Avalonia.Rendering.Composition.Compositor TryGetDefaultCompositor()
 Attempts to query for a feature from the platform render interface
 
 ```csharp
-public System.Threading.Tasks.ValueTask<System.Object> TryGetRenderInterfaceFeature(System.Type featureType)
+public System.Threading.Tasks.ValueTask<Object> TryGetRenderInterfaceFeature(Type featureType)
 ```
 
 </ApiRefPage>

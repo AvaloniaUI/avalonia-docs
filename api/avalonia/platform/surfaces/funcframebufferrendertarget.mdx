@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Platform/Surfaces/IFramebufferPlatformSurface.cs">IFramebufferPlatformSurface.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -72,7 +75,7 @@ public class FuncFramebufferRenderTarget
 #### FuncFramebufferRenderTarget
 
 ```csharp
-public FuncFramebufferRenderTarget(Avalonia.Platform.Surfaces.FuncFramebufferRenderTarget.LockFramebufferDelegate lockFramebuffer, System.Boolean retainsFrameContents)
+public FuncFramebufferRenderTarget(Avalonia.Platform.Surfaces.FuncFramebufferRenderTarget.LockFramebufferDelegate lockFramebuffer, Boolean retainsFrameContents)
 ```
 
 <span id="uid-f44f251528"></span>
@@ -80,7 +83,7 @@ public FuncFramebufferRenderTarget(Avalonia.Platform.Surfaces.FuncFramebufferRen
 #### FuncFramebufferRenderTarget
 
 ```csharp
-public FuncFramebufferRenderTarget(System.Func<Avalonia.Platform.ILockedFramebuffer> lockFramebuffer)
+public FuncFramebufferRenderTarget(Func<Avalonia.Platform.ILockedFramebuffer> lockFramebuffer)
 ```
 
 ## Methods
@@ -95,7 +98,7 @@ public FuncFramebufferRenderTarget(System.Func<Avalonia.Platform.ILockedFramebuf
 ### Dispose
 
 ```csharp
-public System.Void Dispose()
+public Void Dispose()
 ```
 
 <span id="uid-3003e62d0b"></span>
@@ -117,7 +120,7 @@ public Avalonia.Platform.ILockedFramebuffer Lock(Avalonia.Platform.IRenderTarget
 ### RetainsFrameContents
 
 ```csharp
-public System.Boolean RetainsFrameContents { get; set; }
+public Boolean RetainsFrameContents { get; set; }
 ```
 
 </ApiRefPage>

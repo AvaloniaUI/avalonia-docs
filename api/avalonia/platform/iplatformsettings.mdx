@@ -92,7 +92,7 @@ Gets the maximum time that may occur between the first and second click of a dou
 tap gesture.
 
 ```csharp
-public System.TimeSpan GetDoubleTapTime(Avalonia.Input.PointerType type)
+public TimeSpan GetDoubleTapTime(Avalonia.Input.PointerType type)
 ```
 
 <span id="uid-34908b33f3"></span>
@@ -124,7 +124,7 @@ public Avalonia.Size GetTapSize(Avalonia.Input.PointerType type)
 Holding duration between pointer press and when event is fired.
 
 ```csharp
-public System.TimeSpan HoldWaitDuration { get; set; }
+public TimeSpan HoldWaitDuration { get; set; }
 ```
 
 <span id="uid-167fcac31c"></span>
@@ -150,7 +150,7 @@ public Avalonia.Input.Platform.PlatformHotkeyConfiguration HotkeyConfiguration {
 Raises when current system color values are changed. Including changing of a dark mode and accent colors.
 
 ```csharp
-public event System.EventHandler<Avalonia.Platform.PlatformColorValues> ColorValuesChanged
+public event EventHandler<Avalonia.Platform.PlatformColorValues> ColorValuesChanged
 ```
 
 </ApiRefPage>

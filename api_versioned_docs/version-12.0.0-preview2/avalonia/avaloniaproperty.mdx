@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/AvaloniaProperty.cs">AvaloniaProperty.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -51,6 +54,9 @@ public class AvaloniaProperty
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> AvaloniaProperty
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Derived types:</span> <a href="avaloniaproperty-1">AvaloniaProperty&lt;TValue&gt;</a>
 </div>
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Implements:</span> <a href="data/core/ipropertyinfo">IPropertyInfo</a>, IEquatable&lt;AvaloniaProperty&gt;
@@ -94,7 +100,7 @@ Returns: A [Avalonia.Data.IndexerDescriptor](xref:Avalonia.Data.IndexerDescripto
 #### Equals
 
 ```csharp
-public System.Boolean Equals(Avalonia.AvaloniaProperty other)
+public Boolean Equals(Avalonia.AvaloniaProperty other)
 ```
 
 <span id="uid-bb0e528aa8"></span>
@@ -102,7 +108,7 @@ public System.Boolean Equals(Avalonia.AvaloniaProperty other)
 #### Equals
 
 ```csharp
-public System.Boolean Equals(System.Object obj)
+public Boolean Equals(Object obj)
 ```
 
 <span id="uid-7d1eae41db"></span>
@@ -110,7 +116,7 @@ public System.Boolean Equals(System.Object obj)
 ### GetHashCode
 
 ```csharp
-public System.Int32 GetHashCode()
+public Int32 GetHashCode()
 ```
 
 <span id="uid-5f3ddcc8fd"></span>
@@ -144,7 +150,7 @@ public Avalonia.AvaloniaPropertyMetadata GetMetadata(Avalonia.AvaloniaObject own
 #### GetMetadata
 
 ```csharp
-public Avalonia.AvaloniaPropertyMetadata GetMetadata(System.Type type)
+public Avalonia.AvaloniaPropertyMetadata GetMetadata(Type type)
 ```
 
 | Parameter | Description |
@@ -158,7 +164,7 @@ public Avalonia.AvaloniaPropertyMetadata GetMetadata(System.Type type)
 Checks whether the `value` is valid for the property.
 
 ```csharp
-public System.Boolean IsValidValue(System.Object value)
+public Boolean IsValidValue(Object value)
 ```
 
 | Parameter | Description |
@@ -172,7 +178,7 @@ Returns: True if the value is valid, otherwise false.
 ### Register
 
 ```csharp
-public Avalonia.StyledProperty<TValue><TValue> Register<TOwner, TValue>(System.String name, TValue defaultValue, System.Boolean inherits, Avalonia.Data.BindingMode defaultBindingMode, System.Func<TValue, System.Boolean> validate, System.Func<Avalonia.AvaloniaObject, TValue, TValue> coerce, System.Boolean enableDataValidation)
+public Avalonia.StyledProperty<TValue><TValue> Register<TOwner, TValue>(String name, TValue defaultValue, Boolean inherits, Avalonia.Data.BindingMode defaultBindingMode, Func<TValue, Boolean> validate, Func<Avalonia.AvaloniaObject, TValue, TValue> coerce, Boolean enableDataValidation)
 ```
 
 <span id="uid-769b8defa4"></span>
@@ -184,7 +190,7 @@ public Avalonia.StyledProperty<TValue><TValue> Register<TOwner, TValue>(System.S
 #### RegisterAttached
 
 ```csharp
-public Avalonia.AttachedProperty<TValue><TValue> RegisterAttached<THost, TValue>(System.String name, System.Type ownerType, TValue defaultValue, System.Boolean inherits, Avalonia.Data.BindingMode defaultBindingMode, System.Func<TValue, System.Boolean> validate, System.Func<Avalonia.AvaloniaObject, TValue, TValue> coerce)
+public Avalonia.AttachedProperty<TValue><TValue> RegisterAttached<THost, TValue>(String name, Type ownerType, TValue defaultValue, Boolean inherits, Avalonia.Data.BindingMode defaultBindingMode, Func<TValue, Boolean> validate, Func<Avalonia.AvaloniaObject, TValue, TValue> coerce)
 ```
 
 <span id="uid-420e6c58d9"></span>
@@ -192,7 +198,7 @@ public Avalonia.AttachedProperty<TValue><TValue> RegisterAttached<THost, TValue>
 #### RegisterAttached
 
 ```csharp
-public Avalonia.AttachedProperty<TValue><TValue> RegisterAttached<TOwner, THost, TValue>(System.String name, TValue defaultValue, System.Boolean inherits, Avalonia.Data.BindingMode defaultBindingMode, System.Func<TValue, System.Boolean> validate, System.Func<Avalonia.AvaloniaObject, TValue, TValue> coerce)
+public Avalonia.AttachedProperty<TValue><TValue> RegisterAttached<TOwner, THost, TValue>(String name, TValue defaultValue, Boolean inherits, Avalonia.Data.BindingMode defaultBindingMode, Func<TValue, Boolean> validate, Func<Avalonia.AvaloniaObject, TValue, TValue> coerce)
 ```
 
 <span id="uid-2e19e6c29e"></span>
@@ -200,7 +206,7 @@ public Avalonia.AttachedProperty<TValue><TValue> RegisterAttached<TOwner, THost,
 ### RegisterDirect
 
 ```csharp
-public Avalonia.DirectProperty<TOwner,TValue><TOwner, TValue> RegisterDirect<TOwner, TValue>(System.String name, System.Func<TOwner, TValue> getter, System.Action<TOwner, TValue> setter, TValue unsetValue, Avalonia.Data.BindingMode defaultBindingMode, System.Boolean enableDataValidation)
+public Avalonia.DirectProperty<TOwner,TValue><TOwner, TValue> RegisterDirect<TOwner, TValue>(String name, Func<TOwner, TValue> getter, Action<TOwner, TValue> setter, TValue unsetValue, Avalonia.Data.BindingMode defaultBindingMode, Boolean enableDataValidation)
 ```
 
 <span id="uid-4c7006dd35"></span>
@@ -210,7 +216,7 @@ public Avalonia.DirectProperty<TOwner,TValue><TOwner, TValue> RegisterDirect<TOw
 Gets the string representation of the property.
 
 ```csharp
-public System.String ToString()
+public String ToString()
 ```
 
 Returns: The property's string representation.
@@ -220,7 +226,7 @@ Returns: The property's string representation.
 ### Unregister
 
 ```csharp
-public System.Void Unregister(System.Type type)
+public Void Unregister(Type type)
 ```
 
 ## Properties
@@ -244,7 +250,7 @@ Gets an observable that is fired when this property changes on any
 [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject) instance.
 
 ```csharp
-public System.IObservable<Avalonia.AvaloniaPropertyChangedEventArgs> Changed { get; set; }
+public IObservable<Avalonia.AvaloniaPropertyChangedEventArgs> Changed { get; set; }
 ```
 
 Value: An observable that is fired when this property changes on any
@@ -257,7 +263,7 @@ Value: An observable that is fired when this property changes on any
 Gets a value indicating whether the property inherits its value.
 
 ```csharp
-public System.Boolean Inherits { get; set; }
+public Boolean Inherits { get; set; }
 ```
 
 <span id="uid-33c0761938"></span>
@@ -267,7 +273,7 @@ public System.Boolean Inherits { get; set; }
 Gets a value indicating whether this is an attached property.
 
 ```csharp
-public System.Boolean IsAttached { get; set; }
+public Boolean IsAttached { get; set; }
 ```
 
 <span id="uid-af873b4d3c"></span>
@@ -277,7 +283,7 @@ public System.Boolean IsAttached { get; set; }
 Gets a value indicating whether this is a direct property.
 
 ```csharp
-public System.Boolean IsDirect { get; set; }
+public Boolean IsDirect { get; set; }
 ```
 
 <span id="uid-2b867c83ad"></span>
@@ -287,7 +293,7 @@ public System.Boolean IsDirect { get; set; }
 Gets a value indicating whether this is a readonly property.
 
 ```csharp
-public System.Boolean IsReadOnly { get; set; }
+public Boolean IsReadOnly { get; set; }
 ```
 
 <span id="uid-228b4a9a70"></span>
@@ -297,7 +303,7 @@ public System.Boolean IsReadOnly { get; set; }
 Gets the name of the property.
 
 ```csharp
-public System.String Name { get; set; }
+public String Name { get; set; }
 ```
 
 <span id="uid-efffba9cb8"></span>
@@ -307,7 +313,7 @@ public System.String Name { get; set; }
 Gets the type of the class that registered the property.
 
 ```csharp
-public System.Type OwnerType { get; set; }
+public Type OwnerType { get; set; }
 ```
 
 <span id="uid-c1e5099c6c"></span>
@@ -317,7 +323,7 @@ public System.Type OwnerType { get; set; }
 Gets the type of the property's value.
 
 ```csharp
-public System.Type PropertyType { get; set; }
+public Type PropertyType { get; set; }
 ```
 
 ## Fields
@@ -333,7 +339,7 @@ public System.Type PropertyType { get; set; }
 Represents an unset property value.
 
 ```csharp
-public System.Object UnsetValue
+public Object UnsetValue
 ```
 
 </ApiRefPage>

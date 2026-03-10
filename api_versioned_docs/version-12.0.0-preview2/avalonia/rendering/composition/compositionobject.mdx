@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Rendering/Composition/CompositionObject.cs">CompositionObject.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -55,6 +58,9 @@ public class CompositionObject
 <span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> CompositionObject
 </div>
 <div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Derived types:</span> <a href="animations/compositionanimation">CompositionAnimation</a>, <a href="animations/compositionanimationgroup">CompositionAnimationGroup</a>, <a href="animations/implicitanimationcollection">ImplicitAnimationCollection</a>, <a href="compositionpropertyset">CompositionPropertySet</a>, <a href="compositionsurface">CompositionSurface</a>, <a href="compositionvisual">CompositionVisual</a>, <a href="compositionvisualcollection">CompositionVisualCollection</a>
+</div>
+<div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Implements:</span> ICompositorSerializable
 </div>
 </div>
@@ -75,7 +81,7 @@ public class CompositionObject
 Connects an animation with the specified property of the object and starts the animation.
 
 ```csharp
-public System.Void StartAnimation(System.String propertyName, Avalonia.Rendering.Composition.Animations.CompositionAnimation animation)
+public Void StartAnimation(String propertyName, Avalonia.Rendering.Composition.Animations.CompositionAnimation animation)
 ```
 
 <span id="uid-4846f860a0"></span>
@@ -87,7 +93,7 @@ The StartAnimationGroup method on CompositionObject lets you start CompositionAn
 All the animations in the group will be started at the same time on the object.
 
 ```csharp
-public System.Void StartAnimationGroup(Avalonia.Rendering.Composition.Animations.ICompositionAnimationBase grp)
+public Void StartAnimationGroup(Avalonia.Rendering.Composition.Animations.ICompositionAnimationBase grp)
 ```
 
 <span id="uid-01077c2b21"></span>
@@ -97,7 +103,7 @@ public System.Void StartAnimationGroup(Avalonia.Rendering.Composition.Animations
 Disconnects an animation from the specified property and stops the animation.
 
 ```csharp
-public System.Void StopAnimation(System.String propertyName)
+public Void StopAnimation(String propertyName)
 ```
 
 | Parameter | Description |
@@ -111,7 +117,7 @@ public System.Void StopAnimation(System.String propertyName)
 Stops an animation group.
 
 ```csharp
-public System.Void StopAnimationGroup(Avalonia.Rendering.Composition.Animations.ICompositionAnimationBase grp)
+public Void StopAnimationGroup(Avalonia.Rendering.Composition.Animations.ICompositionAnimationBase grp)
 ```
 
 | Parameter | Description |
@@ -151,7 +157,7 @@ public Avalonia.Rendering.Composition.Animations.ImplicitAnimationCollection Imp
 ### IsDisposed
 
 ```csharp
-public System.Boolean IsDisposed { get; set; }
+public Boolean IsDisposed { get; set; }
 ```
 
 </ApiRefPage>

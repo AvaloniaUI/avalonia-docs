@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Controls/ApplicationLifetimes/ClassicDesktopStyleApplicationLifetime.cs">ClassicDesktopStyleApplicationLifetime.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -66,7 +69,7 @@ public class ClassicDesktopStyleApplicationLifetimeExtensions
 ### SetupWithClassicDesktopLifetime
 
 ```csharp
-public Avalonia.AppBuilder SetupWithClassicDesktopLifetime(Avalonia.AppBuilder builder, System.String[] args, System.Action<Avalonia.Controls.ApplicationLifetimes.IClassicDesktopStyleApplicationLifetime> lifetimeBuilder)
+public Avalonia.AppBuilder SetupWithClassicDesktopLifetime(Avalonia.AppBuilder builder, String[] args, Action<Avalonia.Controls.ApplicationLifetimes.IClassicDesktopStyleApplicationLifetime> lifetimeBuilder)
 ```
 
 <span id="uid-f38952fe2b"></span>
@@ -80,7 +83,7 @@ public Avalonia.AppBuilder SetupWithClassicDesktopLifetime(Avalonia.AppBuilder b
 Starts the Application with a IClassicDesktopStyleApplicationLifetime, shows main window and runs application main loop.
 
 ```csharp
-public System.Int32 StartWithClassicDesktopLifetime(Avalonia.AppBuilder builder, System.String[] args, Avalonia.Controls.ShutdownMode shutdownMode)
+public Int32 StartWithClassicDesktopLifetime(Avalonia.AppBuilder builder, String[] args, Avalonia.Controls.ShutdownMode shutdownMode)
 ```
 
 | Parameter | Description |
@@ -96,7 +99,7 @@ Returns: Exit code.
 #### StartWithClassicDesktopLifetime
 
 ```csharp
-public System.Int32 StartWithClassicDesktopLifetime(Avalonia.AppBuilder builder, System.String[] args, System.Action<Avalonia.Controls.ApplicationLifetimes.IClassicDesktopStyleApplicationLifetime> lifetimeBuilder)
+public Int32 StartWithClassicDesktopLifetime(Avalonia.AppBuilder builder, String[] args, Action<Avalonia.Controls.ApplicationLifetimes.IClassicDesktopStyleApplicationLifetime> lifetimeBuilder)
 ```
 
 </ApiRefPage>

@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/PixelPoint.cs">PixelPoint.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -70,7 +73,7 @@ public struct PixelPoint
 Initializes a new instance of the [Avalonia.PixelPoint](xref:Avalonia.PixelPoint) structure.
 
 ```csharp
-public PixelPoint(System.Int32 x, System.Int32 y)
+public PixelPoint(Int32 x, Int32 y)
 ```
 
 | Parameter | Description |
@@ -104,7 +107,7 @@ public PixelPoint(System.Int32 x, System.Int32 y)
 Returns a boolean indicating whether the point is equal to the other given point.
 
 ```csharp
-public System.Boolean Equals(Avalonia.PixelPoint other)
+public Boolean Equals(Avalonia.PixelPoint other)
 ```
 
 | Parameter | Description |
@@ -120,7 +123,7 @@ Returns: True if this point is equal to other; False otherwise.
 Checks for equality between a point and an object.
 
 ```csharp
-public System.Boolean Equals(System.Object obj)
+public Boolean Equals(Object obj)
 ```
 
 | Parameter | Description |
@@ -157,7 +160,7 @@ Returns: The device-independent point.
 Converts a [Avalonia.Point](xref:Avalonia.Point) to device pixels using the specified scaling factor.
 
 ```csharp
-public Avalonia.PixelPoint FromPoint(Avalonia.Point point, System.Double scale)
+public Avalonia.PixelPoint FromPoint(Avalonia.Point point, Double scale)
 ```
 
 | Parameter | Description |
@@ -195,7 +198,7 @@ Returns: The device-independent point.
 Converts a [Avalonia.Point](xref:Avalonia.Point) to device pixels using the specified dots per inch (DPI).
 
 ```csharp
-public Avalonia.PixelPoint FromPointWithDpi(Avalonia.Point point, System.Double dpi)
+public Avalonia.PixelPoint FromPointWithDpi(Avalonia.Point point, Double dpi)
 ```
 
 | Parameter | Description |
@@ -212,7 +215,7 @@ Returns: The device-independent point.
 Returns a hash code for a [Avalonia.PixelPoint](xref:Avalonia.PixelPoint).
 
 ```csharp
-public System.Int32 GetHashCode()
+public Int32 GetHashCode()
 ```
 
 Returns: The hash code.
@@ -224,7 +227,7 @@ Returns: The hash code.
 Parses a [Avalonia.PixelPoint](xref:Avalonia.PixelPoint) string.
 
 ```csharp
-public Avalonia.PixelPoint Parse(System.String s)
+public Avalonia.PixelPoint Parse(String s)
 ```
 
 | Parameter | Description |
@@ -262,7 +265,7 @@ Converts the [Avalonia.PixelPoint](xref:Avalonia.PixelPoint) to a device-indepen
 specified scaling factor.
 
 ```csharp
-public Avalonia.Point ToPoint(System.Double scale)
+public Avalonia.Point ToPoint(Double scale)
 ```
 
 | Parameter | Description |
@@ -300,7 +303,7 @@ Converts the [Avalonia.PixelPoint](xref:Avalonia.PixelPoint) to a device-indepen
 specified dots per inch (DPI).
 
 ```csharp
-public Avalonia.Point ToPointWithDpi(System.Double dpi)
+public Avalonia.Point ToPointWithDpi(Double dpi)
 ```
 
 | Parameter | Description |
@@ -316,7 +319,7 @@ Returns: The device-independent point.
 Returns the string representation of the point.
 
 ```csharp
-public System.String ToString()
+public String ToString()
 ```
 
 Returns: The string representation of the point.
@@ -328,7 +331,7 @@ Returns: The string representation of the point.
 Returns a new [Avalonia.PixelPoint](xref:Avalonia.PixelPoint) with the same Y co-ordinate and the specified X co-ordinate.
 
 ```csharp
-public Avalonia.PixelPoint WithX(System.Int32 x)
+public Avalonia.PixelPoint WithX(Int32 x)
 ```
 
 | Parameter | Description |
@@ -344,7 +347,7 @@ Returns: The new [Avalonia.PixelPoint](xref:Avalonia.PixelPoint).
 Returns a new [Avalonia.PixelPoint](xref:Avalonia.PixelPoint) with the same X co-ordinate and the specified Y co-ordinate.
 
 ```csharp
-public Avalonia.PixelPoint WithY(System.Int32 y)
+public Avalonia.PixelPoint WithY(Int32 y)
 ```
 
 | Parameter | Description |
@@ -367,7 +370,7 @@ Returns: The new [Avalonia.PixelPoint](xref:Avalonia.PixelPoint).
 Gets the X co-ordinate.
 
 ```csharp
-public System.Int32 X { get; set; }
+public Int32 X { get; set; }
 ```
 
 <span id="uid-3c9dffebf8"></span>
@@ -377,7 +380,7 @@ public System.Int32 X { get; set; }
 Gets the Y co-ordinate.
 
 ```csharp
-public System.Int32 Y { get; set; }
+public Int32 Y { get; set; }
 ```
 
 ## Fields

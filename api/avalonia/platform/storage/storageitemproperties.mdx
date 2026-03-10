@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Platform/Storage/StorageItemProperties.cs">StorageItemProperties.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -65,7 +68,7 @@ public class StorageItemProperties
 ### StorageItemProperties
 
 ```csharp
-public StorageItemProperties(System.Nullable<System.UInt64> size, System.Nullable<System.DateTimeOffset> dateCreated, System.Nullable<System.DateTimeOffset> dateModified)
+public StorageItemProperties(Nullable<UInt64> size, Nullable<DateTimeOffset> dateCreated, Nullable<DateTimeOffset> dateModified)
 ```
 
 ## Properties
@@ -83,7 +86,7 @@ public StorageItemProperties(System.Nullable<System.UInt64> size, System.Nullabl
 Gets the date and time that the current folder was created.
 
 ```csharp
-public System.Nullable<System.DateTimeOffset> DateCreated { get; set; }
+public Nullable<DateTimeOffset> DateCreated { get; set; }
 ```
 
 <span id="uid-86a309844c"></span>
@@ -93,7 +96,7 @@ public System.Nullable<System.DateTimeOffset> DateCreated { get; set; }
 Gets the date and time of the last time the file was modified.
 
 ```csharp
-public System.Nullable<System.DateTimeOffset> DateModified { get; set; }
+public Nullable<DateTimeOffset> DateModified { get; set; }
 ```
 
 <span id="uid-8c7e685308"></span>
@@ -103,7 +106,7 @@ public System.Nullable<System.DateTimeOffset> DateModified { get; set; }
 Gets the size of the file in bytes.
 
 ```csharp
-public System.Nullable<System.UInt64> Size { get; set; }
+public Nullable<UInt64> Size { get; set; }
 ```
 
 </ApiRefPage>

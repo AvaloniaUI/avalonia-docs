@@ -59,7 +59,7 @@ public delegate FuncFramebufferRenderTarget.LockFramebufferDelegate
 ### FuncFramebufferRenderTarget.LockFramebufferDelegate
 
 ```csharp
-public FuncFramebufferRenderTarget.LockFramebufferDelegate(System.Object object, System.IntPtr method)
+public FuncFramebufferRenderTarget.LockFramebufferDelegate(Object object, IntPtr method)
 ```
 
 ## Methods
@@ -75,7 +75,7 @@ public FuncFramebufferRenderTarget.LockFramebufferDelegate(System.Object object,
 ### BeginInvoke
 
 ```csharp
-public System.IAsyncResult BeginInvoke(Avalonia.Platform.IRenderTarget.RenderTargetSceneInfo sceneInfo, Avalonia.Platform.Surfaces.FramebufferLockProperties& properties, System.AsyncCallback callback, System.Object object)
+public IAsyncResult BeginInvoke(Avalonia.Platform.IRenderTarget.RenderTargetSceneInfo sceneInfo, Avalonia.Platform.Surfaces.FramebufferLockProperties& properties, AsyncCallback callback, Object object)
 ```
 
 <span id="uid-7e96cee0bf"></span>
@@ -83,7 +83,7 @@ public System.IAsyncResult BeginInvoke(Avalonia.Platform.IRenderTarget.RenderTar
 ### EndInvoke
 
 ```csharp
-public Avalonia.Platform.ILockedFramebuffer EndInvoke(Avalonia.Platform.Surfaces.FramebufferLockProperties& properties, System.IAsyncResult result)
+public Avalonia.Platform.ILockedFramebuffer EndInvoke(Avalonia.Platform.Surfaces.FramebufferLockProperties& properties, IAsyncResult result)
 ```
 
 <span id="uid-61de190f42"></span>

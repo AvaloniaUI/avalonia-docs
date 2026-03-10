@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Rect.cs">Rect.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -118,7 +121,7 @@ public Rect(Avalonia.Size size)
 Initializes a new instance of the [Avalonia.Rect](xref:Avalonia.Rect) structure.
 
 ```csharp
-public Rect(System.Double x, System.Double y, System.Double width, System.Double height)
+public Rect(Double x, Double y, Double width, Double height)
 ```
 
 | Parameter | Description |
@@ -179,7 +182,7 @@ Returns: The centered rectangle.
 Determines whether a point is in the bounds of the rectangle.
 
 ```csharp
-public System.Boolean Contains(Avalonia.Point p)
+public Boolean Contains(Avalonia.Point p)
 ```
 
 | Parameter | Description |
@@ -195,7 +198,7 @@ Returns: true if the point is in the bounds of the rectangle; otherwise false.
 Determines whether the rectangle fully contains another rectangle.
 
 ```csharp
-public System.Boolean Contains(Avalonia.Rect r)
+public Boolean Contains(Avalonia.Rect r)
 ```
 
 | Parameter | Description |
@@ -212,7 +215,7 @@ Determines whether a point is in the bounds of the rectangle, exclusive of the
 rectangle's bottom/right edge.
 
 ```csharp
-public System.Boolean ContainsExclusive(Avalonia.Point p)
+public Boolean ContainsExclusive(Avalonia.Point p)
 ```
 
 | Parameter | Description |
@@ -248,7 +251,7 @@ Returns: The deflated rectangle.
 Deflates the rectangle.
 
 ```csharp
-public Avalonia.Rect Deflate(System.Double thickness)
+public Avalonia.Rect Deflate(Double thickness)
 ```
 
 | Parameter | Description |
@@ -268,7 +271,7 @@ Returns: The deflated rectangle.
 Returns a boolean indicating whether the rect is equal to the other given rect.
 
 ```csharp
-public System.Boolean Equals(Avalonia.Rect other)
+public Boolean Equals(Avalonia.Rect other)
 ```
 
 | Parameter | Description |
@@ -284,7 +287,7 @@ Returns: True if this rect is equal to other; False otherwise.
 Returns a boolean indicating whether the given object is equal to this rectangle.
 
 ```csharp
-public System.Boolean Equals(System.Object obj)
+public Boolean Equals(Object obj)
 ```
 
 | Parameter | Description |
@@ -300,7 +303,7 @@ Returns: True if the object is equal to this rectangle; false otherwise.
 Returns the hash code for this instance.
 
 ```csharp
-public System.Int32 GetHashCode()
+public Int32 GetHashCode()
 ```
 
 Returns: The hash code.
@@ -332,7 +335,7 @@ Returns: The inflated rectangle.
 Inflates the rectangle.
 
 ```csharp
-public Avalonia.Rect Inflate(System.Double thickness)
+public Avalonia.Rect Inflate(Double thickness)
 ```
 
 | Parameter | Description |
@@ -364,7 +367,7 @@ Returns: The intersection.
 Determines whether a rectangle intersects with this rectangle.
 
 ```csharp
-public System.Boolean Intersects(Avalonia.Rect rect)
+public Boolean Intersects(Avalonia.Rect rect)
 ```
 
 | Parameter | Description |
@@ -392,7 +395,7 @@ Returns: Normalized Rect
 Parses a [Avalonia.Rect](xref:Avalonia.Rect) string.
 
 ```csharp
-public Avalonia.Rect Parse(System.String s)
+public Avalonia.Rect Parse(String s)
 ```
 
 | Parameter | Description |
@@ -408,7 +411,7 @@ Returns: The parsed [Avalonia.Rect](xref:Avalonia.Rect).
 Returns the string representation of the rectangle.
 
 ```csharp
-public System.String ToString()
+public String ToString()
 ```
 
 Returns: The string representation of the rectangle.
@@ -468,7 +471,7 @@ Returns: The union.
 Returns a new [Avalonia.Rect](xref:Avalonia.Rect) with the specified height.
 
 ```csharp
-public Avalonia.Rect WithHeight(System.Double height)
+public Avalonia.Rect WithHeight(Double height)
 ```
 
 | Parameter | Description |
@@ -484,7 +487,7 @@ Returns: The new [Avalonia.Rect](xref:Avalonia.Rect).
 Returns a new [Avalonia.Rect](xref:Avalonia.Rect) with the specified width.
 
 ```csharp
-public Avalonia.Rect WithWidth(System.Double width)
+public Avalonia.Rect WithWidth(Double width)
 ```
 
 | Parameter | Description |
@@ -500,7 +503,7 @@ Returns: The new [Avalonia.Rect](xref:Avalonia.Rect).
 Returns a new [Avalonia.Rect](xref:Avalonia.Rect) with the specified X position.
 
 ```csharp
-public Avalonia.Rect WithX(System.Double x)
+public Avalonia.Rect WithX(Double x)
 ```
 
 | Parameter | Description |
@@ -516,7 +519,7 @@ Returns: The new [Avalonia.Rect](xref:Avalonia.Rect).
 Returns a new [Avalonia.Rect](xref:Avalonia.Rect) with the specified Y position.
 
 ```csharp
-public Avalonia.Rect WithY(System.Double y)
+public Avalonia.Rect WithY(Double y)
 ```
 
 | Parameter | Description |
@@ -552,7 +555,7 @@ Returns: The new [Avalonia.Rect](xref:Avalonia.Rect).
 Gets the bottom position of the rectangle.
 
 ```csharp
-public System.Double Bottom { get; set; }
+public Double Bottom { get; set; }
 ```
 
 <span id="uid-b1ae4617a3"></span>
@@ -592,7 +595,7 @@ public Avalonia.Point Center { get; set; }
 Gets the height.
 
 ```csharp
-public System.Double Height { get; set; }
+public Double Height { get; set; }
 ```
 
 <span id="uid-78a4b0ba67"></span>
@@ -602,7 +605,7 @@ public System.Double Height { get; set; }
 Gets the left position.
 
 ```csharp
-public System.Double Left { get; set; }
+public Double Left { get; set; }
 ```
 
 <span id="uid-79620f185d"></span>
@@ -622,7 +625,7 @@ public Avalonia.Point Position { get; set; }
 Gets the right position of the rectangle.
 
 ```csharp
-public System.Double Right { get; set; }
+public Double Right { get; set; }
 ```
 
 <span id="uid-4f385f158f"></span>
@@ -642,7 +645,7 @@ public Avalonia.Size Size { get; set; }
 Gets the top position.
 
 ```csharp
-public System.Double Top { get; set; }
+public Double Top { get; set; }
 ```
 
 <span id="uid-4d37e32e39"></span>
@@ -672,7 +675,7 @@ public Avalonia.Point TopRight { get; set; }
 Gets the width.
 
 ```csharp
-public System.Double Width { get; set; }
+public Double Width { get; set; }
 ```
 
 <span id="uid-758a8e6e3a"></span>
@@ -682,7 +685,7 @@ public System.Double Width { get; set; }
 Gets the X position.
 
 ```csharp
-public System.Double X { get; set; }
+public Double X { get; set; }
 ```
 
 <span id="uid-9b180e6629"></span>
@@ -692,7 +695,7 @@ public System.Double X { get; set; }
 Gets the Y position.
 
 ```csharp
-public System.Double Y { get; set; }
+public Double Y { get; set; }
 ```
 
 </ApiRefPage>

@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/StyledElement.cs">StyledElement.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -55,6 +58,9 @@ public class StyledElement
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="animation/animatable">Animatable</a> <span className="apiref-page__relation-separator">-&gt;</span> StyledElement
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Derived types:</span> <a href="controls/chrome/windowdrawndecorations">WindowDrawnDecorations</a>, <a href="controls/chrome/windowdrawndecorationscontent">WindowDrawnDecorationsContent</a>, <a href="controls/documents/textelement">TextElement</a>, <a href="input/gesturerecognizers/gesturerecognizer">GestureRecognizer</a>, <a href="media/cachemode">CacheMode</a>, <a href="visual">Visual</a>
 </div>
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Implements:</span> IAvaloniaListItemValidator&lt;ILogical&gt;, <a href="controls/iresourcehost">IResourceHost</a>, <a href="controls/iresourcenode">IResourceNode</a>, <a href="controls/isetinheritanceparent">ISetInheritanceParent</a>, <a href="controls/isetlogicalparent">ISetLogicalParent</a>, <a href="idatacontextprovider">IDataContextProvider</a>, <a href="inamed">INamed</a>, <a href="logicaltree/ilogical">ILogical</a>, <a href="styling/istylehost">IStyleHost</a>, <a href="styling/ithemevarianthost">IThemeVariantHost</a>, ISupportInitialize
@@ -85,6 +91,19 @@ public StyledElement()
 | [BeginInit](#uid-91c6ccadce) | No summary available. |
 | [EndInit](#uid-17b450469d) | No summary available. |
 | [TryGetResource](#uid-2046a6b284) | No summary available. |
+| [Bind (8 overloads) (Inherited from AvaloniaObject)](avaloniaobject.mdx#uid-1c60c7bda3) | Binds a Avalonia.AvaloniaProperty to an Avalonia.Data.BindingBase. |
+| [CheckAccess (Inherited from AvaloniaObject)](avaloniaobject.mdx#uid-260ff7a68d) | Returns a value indicating whether the current thread is the UI thread. |
+| [ClearValue (4 overloads) (Inherited from AvaloniaObject)](avaloniaobject.mdx#uid-41de208fbe) | Clears a Avalonia.AvaloniaProperty's local value. |
+| [CoerceValue (Inherited from AvaloniaObject)](avaloniaobject.mdx#uid-3bec32f39e) | Coerces the specified Avalonia.AvaloniaProperty. |
+| [Equals (Inherited from AvaloniaObject)](avaloniaobject.mdx#uid-a8a8e94305) | Compares two objects using reference equality. |
+| [GetBaseValue (Inherited from AvaloniaObject)](avaloniaobject.mdx#uid-9c615efbba) | No summary available. |
+| [GetHashCode (Inherited from AvaloniaObject)](avaloniaobject.mdx#uid-7f7db1e7a2) | Gets the hash code for the object. |
+| [GetValue (3 overloads) (Inherited from AvaloniaObject)](avaloniaobject.mdx#uid-5142cd4792) | Gets a Avalonia.AvaloniaProperty value. |
+| [IsAnimating (Inherited from AvaloniaObject)](avaloniaobject.mdx#uid-8cbfc7521a) | Checks whether a Avalonia.AvaloniaProperty is animating. |
+| [IsSet (Inherited from AvaloniaObject)](avaloniaobject.mdx#uid-f8bf0bbdcc) | Checks whether a Avalonia.AvaloniaProperty is set on this object. |
+| [SetCurrentValue (2 overloads) (Inherited from AvaloniaObject)](avaloniaobject.mdx#uid-38759fd088) | Sets the value of a dependency property without changing its value source. |
+| [SetValue (3 overloads) (Inherited from AvaloniaObject)](avaloniaobject.mdx#uid-47d14e19d7) | Sets a Avalonia.AvaloniaProperty value. |
+| [VerifyAccess (Inherited from AvaloniaObject)](avaloniaobject.mdx#uid-3b9d3c9793) | Checks that the current thread is the UI thread and throws if not. |
 
 <span id="uid-b0f81a6f8f"></span>
 
@@ -94,7 +113,7 @@ Applies styling to the control if the control is initialized and styling is not
 already applied.
 
 ```csharp
-public System.Boolean ApplyStyling()
+public Boolean ApplyStyling()
 ```
 
 Returns: A value indicating whether styling is now applied to the control.
@@ -104,7 +123,7 @@ Returns: A value indicating whether styling is now applied to the control.
 ### BeginInit
 
 ```csharp
-public System.Void BeginInit()
+public Void BeginInit()
 ```
 
 <span id="uid-17b450469d"></span>
@@ -112,7 +131,7 @@ public System.Void BeginInit()
 ### EndInit
 
 ```csharp
-public System.Void EndInit()
+public Void EndInit()
 ```
 
 <span id="uid-2046a6b284"></span>
@@ -120,7 +139,7 @@ public System.Void EndInit()
 ### TryGetResource
 
 ```csharp
-public System.Boolean TryGetResource(System.Object key, Avalonia.Styling.ThemeVariant theme, System.Object& value)
+public Boolean TryGetResource(Object key, Avalonia.Styling.ThemeVariant theme, Object& value)
 ```
 
 ## Properties
@@ -138,6 +157,9 @@ public System.Boolean TryGetResource(System.Object key, Avalonia.Styling.ThemeVa
 | [Styles](#uid-ae663139cc) | Gets the styles for the styled element. |
 | [TemplatedParent](#uid-dbf6ddacc3) | Gets the styled element whose lookless template this styled element is part of. |
 | [Theme](#uid-1aebed283d) | Gets or sets the theme to be applied to the element. |
+| [Transitions (Inherited from Animatable)](animation/animatable.mdx#uid-1b3138f517) | Gets or sets the property transitions for the control. |
+| [Dispatcher (Inherited from AvaloniaObject)](avaloniaobject.mdx#uid-b25fa51632) | Returns the Avalonia.AvaloniaObject.Dispatcher that this Avalonia.AvaloniaObject is associated with. |
+| [Item (Inherited from AvaloniaObject)](avaloniaobject.mdx#uid-c1d1f1bc0f) | No summary available. |
 
 <span id="uid-776bcbe4bf"></span>
 
@@ -169,7 +191,7 @@ public Avalonia.Controls.Classes Classes { get; set; }
 Gets or sets the control's data context.
 
 ```csharp
-public System.Object DataContext { get; set; }
+public Object DataContext { get; set; }
 ```
 
 <span id="uid-59a7cddacb"></span>
@@ -179,7 +201,7 @@ public System.Object DataContext { get; set; }
 Gets a value that indicates whether the element has finished initialization.
 
 ```csharp
-public System.Boolean IsInitialized { get; set; }
+public Boolean IsInitialized { get; set; }
 ```
 
 <span id="uid-245f4ccff5"></span>
@@ -189,7 +211,7 @@ public System.Boolean IsInitialized { get; set; }
 Gets or sets the name of the styled element.
 
 ```csharp
-public System.String Name { get; set; }
+public String Name { get; set; }
 ```
 
 <span id="uid-aad2c5c78d"></span>
@@ -219,7 +241,7 @@ public Avalonia.Controls.IResourceDictionary Resources { get; set; }
 Gets the type by which the element is styled.
 
 ```csharp
-public System.Type StyleKey { get; set; }
+public Type StyleKey { get; set; }
 ```
 
 <span id="uid-ae663139cc"></span>
@@ -261,6 +283,7 @@ public Avalonia.Styling.ControlTheme Theme { get; set; }
 | [ParentProperty](#uid-dc6481a488) | Defines the Avalonia.StyledElement.Parent property. |
 | [TemplatedParentProperty](#uid-a2c7149a6b) | Defines the Avalonia.StyledElement.TemplatedParent property. |
 | [ThemeProperty](#uid-05852d7b9a) | Defines the Avalonia.StyledElement.Theme property. |
+| [TransitionsProperty (Inherited from Animatable)](animation/animatable.mdx#uid-c79f18fac2) | Defines the Avalonia.Animation.Animatable.Transitions property. |
 
 <span id="uid-7eefabb929"></span>
 
@@ -269,7 +292,7 @@ public Avalonia.Styling.ControlTheme Theme { get; set; }
 Defines the [Avalonia.StyledElement.DataContext](xref:Avalonia.StyledElement.DataContext) property.
 
 ```csharp
-public Avalonia.StyledProperty<TValue><System.Object> DataContextProperty
+public Avalonia.StyledProperty<TValue><Object> DataContextProperty
 ```
 
 <span id="uid-bcdbb9de56"></span>
@@ -279,7 +302,7 @@ public Avalonia.StyledProperty<TValue><System.Object> DataContextProperty
 Defines the [Avalonia.StyledElement.Name](xref:Avalonia.StyledElement.Name) property.
 
 ```csharp
-public Avalonia.DirectProperty<TOwner,TValue><Avalonia.StyledElement, System.String> NameProperty
+public Avalonia.DirectProperty<TOwner,TValue><Avalonia.StyledElement, String> NameProperty
 ```
 
 <span id="uid-dc6481a488"></span>
@@ -322,6 +345,7 @@ public Avalonia.StyledProperty<TValue><Avalonia.Styling.ControlTheme> ThemePrope
 | [DetachedFromLogicalTree](#uid-d9f5afa535) | Raised when the styled element is detached from a rooted logical tree. |
 | [Initialized](#uid-bd6a5e5c0e) | Occurs when the styled element has finished initialization. |
 | [ResourcesChanged](#uid-99a7f47c56) | Occurs when a resource in this styled element or a parent styled element has changed. |
+| [PropertyChanged (Inherited from AvaloniaObject)](avaloniaobject.mdx#uid-d758e26fae) | Raised when a Avalonia.AvaloniaProperty value changes on this object. |
 
 <span id="uid-e69ef27e71"></span>
 
@@ -330,7 +354,7 @@ public Avalonia.StyledProperty<TValue><Avalonia.Styling.ControlTheme> ThemePrope
 Raised when the theme variant is changed on the element or an ancestor of the element.
 
 ```csharp
-public event System.EventHandler ActualThemeVariantChanged
+public event EventHandler ActualThemeVariantChanged
 ```
 
 <span id="uid-717aa68e85"></span>
@@ -340,7 +364,7 @@ public event System.EventHandler ActualThemeVariantChanged
 Raised when the styled element is attached to a rooted logical tree.
 
 ```csharp
-public event System.EventHandler<Avalonia.LogicalTree.LogicalTreeAttachmentEventArgs> AttachedToLogicalTree
+public event EventHandler<Avalonia.LogicalTree.LogicalTreeAttachmentEventArgs> AttachedToLogicalTree
 ```
 
 <span id="uid-4b1cc873f8"></span>
@@ -350,7 +374,7 @@ public event System.EventHandler<Avalonia.LogicalTree.LogicalTreeAttachmentEvent
 Occurs when the [Avalonia.StyledElement.DataContext](xref:Avalonia.StyledElement.DataContext) property changes.
 
 ```csharp
-public event System.EventHandler DataContextChanged
+public event EventHandler DataContextChanged
 ```
 
 <span id="uid-d9f5afa535"></span>
@@ -360,7 +384,7 @@ public event System.EventHandler DataContextChanged
 Raised when the styled element is detached from a rooted logical tree.
 
 ```csharp
-public event System.EventHandler<Avalonia.LogicalTree.LogicalTreeAttachmentEventArgs> DetachedFromLogicalTree
+public event EventHandler<Avalonia.LogicalTree.LogicalTreeAttachmentEventArgs> DetachedFromLogicalTree
 ```
 
 <span id="uid-bd6a5e5c0e"></span>
@@ -370,7 +394,7 @@ public event System.EventHandler<Avalonia.LogicalTree.LogicalTreeAttachmentEvent
 Occurs when the styled element has finished initialization.
 
 ```csharp
-public event System.EventHandler Initialized
+public event EventHandler Initialized
 ```
 
 <span id="uid-99a7f47c56"></span>
@@ -380,7 +404,7 @@ public event System.EventHandler Initialized
 Occurs when a resource in this styled element or a parent styled element has changed.
 
 ```csharp
-public event System.EventHandler<Avalonia.Controls.ResourcesChangedEventArgs> ResourcesChanged
+public event EventHandler<Avalonia.Controls.ResourcesChangedEventArgs> ResourcesChanged
 ```
 
 </ApiRefPage>

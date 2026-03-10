@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Platform/Storage/FilePickerFileType.cs">FilePickerFileType.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -67,7 +70,7 @@ public class FilePickerFileType
 Represents a name mapped to the associated file types (extensions).
 
 ```csharp
-public FilePickerFileType(System.String name)
+public FilePickerFileType(String name)
 ```
 
 ## Methods
@@ -81,7 +84,7 @@ public FilePickerFileType(System.String name)
 ### ToString
 
 ```csharp
-public System.String ToString()
+public String ToString()
 ```
 
 ## Properties
@@ -100,7 +103,7 @@ public System.String ToString()
 List of extensions in Apple uniform format.
 
 ```csharp
-public System.Collections.Generic.IReadOnlyList<System.String> AppleUniformTypeIdentifiers { get; set; }
+public System.Collections.Generic.IReadOnlyList<String> AppleUniformTypeIdentifiers { get; set; }
 ```
 
 <span id="uid-a6dc321d73"></span>
@@ -110,7 +113,7 @@ public System.Collections.Generic.IReadOnlyList<System.String> AppleUniformTypeI
 List of extensions in MIME format.
 
 ```csharp
-public System.Collections.Generic.IReadOnlyList<System.String> MimeTypes { get; set; }
+public System.Collections.Generic.IReadOnlyList<String> MimeTypes { get; set; }
 ```
 
 <span id="uid-1f66aca370"></span>
@@ -120,7 +123,7 @@ public System.Collections.Generic.IReadOnlyList<System.String> MimeTypes { get; 
 File type name.
 
 ```csharp
-public System.String Name { get; set; }
+public String Name { get; set; }
 ```
 
 <span id="uid-42b7c026bf"></span>
@@ -130,7 +133,7 @@ public System.String Name { get; set; }
 List of extensions in GLOB format. I.e. "*.png" or "*.*".
 
 ```csharp
-public System.Collections.Generic.IReadOnlyList<System.String> Patterns { get; set; }
+public System.Collections.Generic.IReadOnlyList<String> Patterns { get; set; }
 ```
 
 </ApiRefPage>

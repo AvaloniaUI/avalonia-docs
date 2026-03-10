@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Media/Transform.cs">Transform.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -53,6 +56,9 @@ public class Transform
 <span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../animation/animatable">Animatable</a> <span className="apiref-page__relation-separator">-&gt;</span> Transform
 </div>
 <div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Derived types:</span> <a href="matrixtransform">MatrixTransform</a>, <a href="rotate3dtransform">Rotate3DTransform</a>, <a href="rotatetransform">RotateTransform</a>, <a href="scaletransform">ScaleTransform</a>, <a href="skewtransform">SkewTransform</a>, <a href="transformgroup">TransformGroup</a>, <a href="translatetransform">TranslateTransform</a>
+</div>
+<div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Implements:</span> <a href="imutabletransform">IMutableTransform</a>, <a href="itransform">ITransform</a>, ICompositionRenderResource, ICompositionRenderResource&lt;ITransform&gt;, ICompositorSerializable
 </div>
 </div>
@@ -64,6 +70,19 @@ public class Transform
 | [Parse](#uid-1be8bdbe67) | Parses a Avalonia.Media.Transform string. |
 | [ToImmutable](#uid-1ae7a66239) | Converts a transform to an immutable transform. |
 | [ToString](#uid-582ae45701) | Returns a String representing this transform matrix instance. |
+| [Bind (8 overloads) (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-1c60c7bda3) | Binds a Avalonia.AvaloniaProperty to an Avalonia.Data.BindingBase. |
+| [CheckAccess (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-260ff7a68d) | Returns a value indicating whether the current thread is the UI thread. |
+| [ClearValue (4 overloads) (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-41de208fbe) | Clears a Avalonia.AvaloniaProperty's local value. |
+| [CoerceValue (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-3bec32f39e) | Coerces the specified Avalonia.AvaloniaProperty. |
+| [Equals (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-a8a8e94305) | Compares two objects using reference equality. |
+| [GetBaseValue (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-9c615efbba) | No summary available. |
+| [GetHashCode (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-7f7db1e7a2) | Gets the hash code for the object. |
+| [GetValue (3 overloads) (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-5142cd4792) | Gets a Avalonia.AvaloniaProperty value. |
+| [IsAnimating (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-8cbfc7521a) | Checks whether a Avalonia.AvaloniaProperty is animating. |
+| [IsSet (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-f8bf0bbdcc) | Checks whether a Avalonia.AvaloniaProperty is set on this object. |
+| [SetCurrentValue (2 overloads) (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-38759fd088) | Sets the value of a dependency property without changing its value source. |
+| [SetValue (3 overloads) (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-47d14e19d7) | Sets a Avalonia.AvaloniaProperty value. |
+| [VerifyAccess (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-3b9d3c9793) | Checks that the current thread is the UI thread and throws if not. |
 
 <span id="uid-1be8bdbe67"></span>
 
@@ -72,12 +91,12 @@ public class Transform
 Parses a [Avalonia.Media.Transform](xref:Avalonia.Media.Transform) string.
 
 ```csharp
-public Avalonia.Media.Transform Parse(System.String s)
+public Avalonia.Media.Transform Parse(String s)
 ```
 
 | Parameter | Description |
 | --- | --- |
-| `s` | Six comma-delimited double values that describe the new [Avalonia.Media.Transform](xref:Avalonia.Media.Transform). For details check [Avalonia.Matrix.Parse(System.String)](xref:Avalonia.Matrix.Parse%28System.String%29) |
+| `s` | Six comma-delimited double values that describe the new [Avalonia.Media.Transform](xref:Avalonia.Media.Transform). For details check [Avalonia.Matrix.Parse(String)](xref:Avalonia.Matrix.Parse%28System.String%29) |
 
 Returns: The [Avalonia.Media.Transform](xref:Avalonia.Media.Transform).
 
@@ -100,7 +119,7 @@ Returns: The immutable transform
 Returns a String representing this transform matrix instance.
 
 ```csharp
-public System.String ToString()
+public String ToString()
 ```
 
 Returns: The string representation.
@@ -110,6 +129,9 @@ Returns: The string representation.
 | Name | Description |
 | --- | --- |
 | [Value](#uid-aacebcd90b) | Gets the transform's Avalonia.Matrix. |
+| [Transitions (Inherited from Animatable)](../animation/animatable.mdx#uid-1b3138f517) | Gets or sets the property transitions for the control. |
+| [Dispatcher (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-b25fa51632) | Returns the Avalonia.AvaloniaObject.Dispatcher that this Avalonia.AvaloniaObject is associated with. |
+| [Item (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-c1d1f1bc0f) | No summary available. |
 
 <span id="uid-aacebcd90b"></span>
 
@@ -121,11 +143,18 @@ Gets the transform's [Avalonia.Matrix](xref:Avalonia.Matrix).
 public Avalonia.Matrix Value { get; set; }
 ```
 
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [TransitionsProperty (Inherited from Animatable)](../animation/animatable.mdx#uid-c79f18fac2) | Defines the Avalonia.Animation.Animatable.Transitions property. |
+
 ## Events
 
 | Name | Description |
 | --- | --- |
 | [Changed](#uid-59de490f29) | Raised when the transform changes. |
+| [PropertyChanged (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-d758e26fae) | Raised when a Avalonia.AvaloniaProperty value changes on this object. |
 
 <span id="uid-59de490f29"></span>
 
@@ -134,7 +163,7 @@ public Avalonia.Matrix Value { get; set; }
 Raised when the transform changes.
 
 ```csharp
-public event System.EventHandler Changed
+public event EventHandler Changed
 ```
 
 </ApiRefPage>

@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Input/InputExtensions.cs">InputExtensions.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -90,7 +93,7 @@ Returns: The active input elements found at the point, ordered topmost first.
 Returns the active input elements at a point on an [Avalonia.Input.IInputElement](xref:Avalonia.Input.IInputElement).
 
 ```csharp
-public System.Collections.Generic.IEnumerable<Avalonia.Input.IInputElement> GetInputElementsAt(Avalonia.Input.IInputElement element, Avalonia.Point p, System.Boolean enabledElementsOnly)
+public System.Collections.Generic.IEnumerable<Avalonia.Input.IInputElement> GetInputElementsAt(Avalonia.Input.IInputElement element, Avalonia.Point p, Boolean enabledElementsOnly)
 ```
 
 | Parameter | Description |
@@ -130,7 +133,7 @@ Returns: The topmost [Avalonia.Input.IInputElement](xref:Avalonia.Input.IInputEl
 Returns the topmost active input element at a point on an [Avalonia.Input.IInputElement](xref:Avalonia.Input.IInputElement).
 
 ```csharp
-public Avalonia.Input.IInputElement InputHitTest(Avalonia.Input.IInputElement element, Avalonia.Point p, System.Boolean enabledElementsOnly)
+public Avalonia.Input.IInputElement InputHitTest(Avalonia.Input.IInputElement element, Avalonia.Point p, Boolean enabledElementsOnly)
 ```
 
 | Parameter | Description |
@@ -146,7 +149,7 @@ Returns: The topmost [Avalonia.Input.IInputElement](xref:Avalonia.Input.IInputEl
 #### InputHitTest
 
 ```csharp
-public Avalonia.Input.IInputElement InputHitTest(Avalonia.Input.IInputElement element, Avalonia.Point p, System.Func<Avalonia.Visual, System.Boolean> filter)
+public Avalonia.Input.IInputElement InputHitTest(Avalonia.Input.IInputElement element, Avalonia.Point p, Func<Avalonia.Visual, Boolean> filter)
 ```
 
 <span id="uid-0e44ec4be3"></span>
@@ -154,7 +157,7 @@ public Avalonia.Input.IInputElement InputHitTest(Avalonia.Input.IInputElement el
 #### InputHitTest
 
 ```csharp
-public Avalonia.Input.IInputElement InputHitTest(Avalonia.Input.IInputElement element, Avalonia.Point p, System.Func<Avalonia.Visual, System.Boolean> filter, System.Boolean enabledElementsOnly)
+public Avalonia.Input.IInputElement InputHitTest(Avalonia.Input.IInputElement element, Avalonia.Point p, Func<Avalonia.Visual, Boolean> filter, Boolean enabledElementsOnly)
 ```
 
 </ApiRefPage>

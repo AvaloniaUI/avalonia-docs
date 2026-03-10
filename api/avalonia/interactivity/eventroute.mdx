@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Interactivity/EventRoute.cs">EventRoute.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -91,7 +94,7 @@ public EventRoute(Avalonia.Interactivity.RoutedEvent e)
 ### Add
 
 ```csharp
-public System.Void Add(Avalonia.Interactivity.Interactive target, System.Delegate handler, Avalonia.Interactivity.RoutingStrategies routes, System.Boolean handledEventsToo, System.Action<System.Delegate, System.Object, Avalonia.Interactivity.RoutedEventArgs> adapter)
+public Void Add(Avalonia.Interactivity.Interactive target, Delegate handler, Avalonia.Interactivity.RoutingStrategies routes, Boolean handledEventsToo, Action<Delegate, Object, Avalonia.Interactivity.RoutedEventArgs> adapter)
 ```
 
 <span id="uid-b69b3099ee"></span>
@@ -101,7 +104,7 @@ public System.Void Add(Avalonia.Interactivity.Interactive target, System.Delegat
 Adds a class handler to the route.
 
 ```csharp
-public System.Void AddClassHandler(Avalonia.Interactivity.Interactive target)
+public Void AddClassHandler(Avalonia.Interactivity.Interactive target)
 ```
 
 | Parameter | Description |
@@ -115,7 +118,7 @@ public System.Void AddClassHandler(Avalonia.Interactivity.Interactive target)
 Disposes of the event route.
 
 ```csharp
-public System.Void Dispose()
+public Void Dispose()
 ```
 
 <span id="uid-904a4d5620"></span>
@@ -125,7 +128,7 @@ public System.Void Dispose()
 Raises an event along the route.
 
 ```csharp
-public System.Void RaiseEvent(Avalonia.Interactivity.Interactive source, Avalonia.Interactivity.RoutedEventArgs e)
+public Void RaiseEvent(Avalonia.Interactivity.Interactive source, Avalonia.Interactivity.RoutedEventArgs e)
 ```
 
 | Parameter | Description |
@@ -146,7 +149,7 @@ public System.Void RaiseEvent(Avalonia.Interactivity.Interactive source, Avaloni
 Gets a value indicating whether the route has any handlers.
 
 ```csharp
-public System.Boolean HasHandlers { get; set; }
+public Boolean HasHandlers { get; set; }
 ```
 
 </ApiRefPage>

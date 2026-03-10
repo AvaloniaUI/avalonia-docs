@@ -52,6 +52,9 @@ public class DrawableTextRun
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="textrun">TextRun</a> <span className="apiref-page__relation-separator">-&gt;</span> DrawableTextRun
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Derived types:</span> <a href="shapedtextrun">ShapedTextRun</a>
+</div>
 </div>
 
 ## Methods
@@ -67,7 +70,7 @@ public class DrawableTextRun
 Draws the [Avalonia.Media.TextFormatting.DrawableTextRun](xref:Avalonia.Media.TextFormatting.DrawableTextRun) at the given origin.
 
 ```csharp
-public System.Void Draw(Avalonia.Media.DrawingContext drawingContext, Avalonia.Point origin)
+public Void Draw(Avalonia.Media.DrawingContext drawingContext, Avalonia.Point origin)
 ```
 
 | Parameter | Description |
@@ -81,6 +84,9 @@ public System.Void Draw(Avalonia.Media.DrawingContext drawingContext, Avalonia.P
 | --- | --- |
 | [Baseline](#uid-80eddb0afa) | Run baseline in ratio relative to run height |
 | [Size](#uid-913842b854) | Gets the size. |
+| [Length (Inherited from TextRun)](textrun.mdx#uid-d32ddedc42) | Gets the text source length. |
+| [Properties (Inherited from TextRun)](textrun.mdx#uid-f4da24c6cf) | A set of properties shared by every characters in the run |
+| [Text (Inherited from TextRun)](textrun.mdx#uid-d2d945f661) | Gets the text run's text. |
 
 <span id="uid-80eddb0afa"></span>
 
@@ -89,7 +95,7 @@ public System.Void Draw(Avalonia.Media.DrawingContext drawingContext, Avalonia.P
 Run baseline in ratio relative to run height
 
 ```csharp
-public System.Double Baseline { get; set; }
+public Double Baseline { get; set; }
 ```
 
 <span id="uid-913842b854"></span>
@@ -101,6 +107,12 @@ Gets the size.
 ```csharp
 public Avalonia.Size Size { get; set; }
 ```
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [DefaultTextSourceLength (Inherited from TextRun)](textrun.mdx#uid-f86dc003de) | No summary available. |
 
 </ApiRefPage>
 

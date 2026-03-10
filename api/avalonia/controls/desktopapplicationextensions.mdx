@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Controls/DesktopApplicationExtensions.cs">DesktopApplicationExtensions.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__signature">
@@ -66,7 +69,7 @@ public class DesktopApplicationExtensions
 On desktop-style platforms runs the application's main loop until main window is closed
 
 ```csharp
-public System.Void Run(Avalonia.Application app, Avalonia.Controls.Window mainWindow)
+public Void Run(Avalonia.Application app, Avalonia.Controls.Window mainWindow)
 ```
 
 <span id="uid-0fe9ee9782"></span>
@@ -76,7 +79,7 @@ public System.Void Run(Avalonia.Application app, Avalonia.Controls.Window mainWi
 On desktop-style platforms runs the application's main loop until closable is closed
 
 ```csharp
-public System.Void Run(Avalonia.Application app, Avalonia.Input.ICloseable closable)
+public Void Run(Avalonia.Application app, Avalonia.Input.ICloseable closable)
 ```
 
 <span id="uid-3698ed72b2"></span>
@@ -87,7 +90,7 @@ On desktop-style platforms runs the application's main loop with custom Cancella
 without setting a lifetime.
 
 ```csharp
-public System.Void Run(Avalonia.Application app, System.Threading.CancellationToken token)
+public Void Run(Avalonia.Application app, System.Threading.CancellationToken token)
 ```
 
 | Parameter | Description |
@@ -100,7 +103,7 @@ public System.Void Run(Avalonia.Application app, System.Threading.CancellationTo
 ### RunWithMainWindow
 
 ```csharp
-public System.Void RunWithMainWindow<TWindow>(Avalonia.Application app)
+public Void RunWithMainWindow<TWindow>(Avalonia.Application app)
 ```
 
 </ApiRefPage>

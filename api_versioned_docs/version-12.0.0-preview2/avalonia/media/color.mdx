@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Media/Color.cs">Color.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -70,7 +73,7 @@ public struct Color
 Initializes a new instance of the [Avalonia.Media.Color](xref:Avalonia.Media.Color) struct.
 
 ```csharp
-public Color(System.Byte a, System.Byte r, System.Byte g, System.Byte b)
+public Color(Byte a, Byte r, Byte g, Byte b)
 ```
 
 | Parameter | Description |
@@ -105,7 +108,7 @@ public Color(System.Byte a, System.Byte r, System.Byte g, System.Byte b)
 #### Equals
 
 ```csharp
-public System.Boolean Equals(Avalonia.Media.Color other)
+public Boolean Equals(Avalonia.Media.Color other)
 ```
 
 <span id="uid-ef7cecc8d8"></span>
@@ -113,7 +116,7 @@ public System.Boolean Equals(Avalonia.Media.Color other)
 #### Equals
 
 ```csharp
-public System.Boolean Equals(System.Object obj)
+public Boolean Equals(Object obj)
 ```
 
 <span id="uid-011961335d"></span>
@@ -123,7 +126,7 @@ public System.Boolean Equals(System.Object obj)
 Creates a [Avalonia.Media.Color](xref:Avalonia.Media.Color) from alpha, red, green and blue components.
 
 ```csharp
-public Avalonia.Media.Color FromArgb(System.Byte a, System.Byte r, System.Byte g, System.Byte b)
+public Avalonia.Media.Color FromArgb(Byte a, Byte r, Byte g, Byte b)
 ```
 
 | Parameter | Description |
@@ -142,7 +145,7 @@ Returns: The color.
 Creates a [Avalonia.Media.Color](xref:Avalonia.Media.Color) from red, green and blue components.
 
 ```csharp
-public Avalonia.Media.Color FromRgb(System.Byte r, System.Byte g, System.Byte b)
+public Avalonia.Media.Color FromRgb(Byte r, Byte g, Byte b)
 ```
 
 | Parameter | Description |
@@ -160,7 +163,7 @@ Returns: The color.
 Creates a [Avalonia.Media.Color](xref:Avalonia.Media.Color) from an integer.
 
 ```csharp
-public Avalonia.Media.Color FromUInt32(System.UInt32 value)
+public Avalonia.Media.Color FromUInt32(UInt32 value)
 ```
 
 | Parameter | Description |
@@ -174,7 +177,7 @@ Returns: The color.
 ### GetHashCode
 
 ```csharp
-public System.Int32 GetHashCode()
+public Int32 GetHashCode()
 ```
 
 <span id="uid-5ca4765242"></span>
@@ -186,7 +189,7 @@ public System.Int32 GetHashCode()
 #### Parse
 
 ```csharp
-public Avalonia.Media.Color Parse(System.ReadOnlySpan<System.Char> s)
+public Avalonia.Media.Color Parse(ReadOnlySpan<Char> s)
 ```
 
 <span id="uid-cea9944afe"></span>
@@ -196,7 +199,7 @@ public Avalonia.Media.Color Parse(System.ReadOnlySpan<System.Char> s)
 Parses a color string.
 
 ```csharp
-public Avalonia.Media.Color Parse(System.String s)
+public Avalonia.Media.Color Parse(String s)
 ```
 
 | Parameter | Description |
@@ -228,7 +231,7 @@ Returns: The HSL equivalent color.
 Converts the given RGBA color component values to their HSL color equivalent.
 
 ```csharp
-public Avalonia.Media.HslColor ToHsl(System.Byte red, System.Byte green, System.Byte blue, System.Byte alpha)
+public Avalonia.Media.HslColor ToHsl(Byte red, Byte green, Byte blue, Byte alpha)
 ```
 
 | Parameter | Description |
@@ -263,7 +266,7 @@ Returns: The HSV equivalent color.
 Converts the given RGBA color component values to their HSV color equivalent.
 
 ```csharp
-public Avalonia.Media.HsvColor ToHsv(System.Byte red, System.Byte green, System.Byte blue, System.Byte alpha)
+public Avalonia.Media.HsvColor ToHsv(Byte red, Byte green, Byte blue, Byte alpha)
 ```
 
 | Parameter | Description |
@@ -282,7 +285,7 @@ Returns: A new [Avalonia.Media.HsvColor](xref:Avalonia.Media.HsvColor) equivalen
 Returns the string representation of the color.
 
 ```csharp
-public System.String ToString()
+public String ToString()
 ```
 
 Returns: The string representation of the color.
@@ -294,7 +297,7 @@ Returns: The string representation of the color.
 Returns the integer representation of the color.
 
 ```csharp
-public System.UInt32 ToUInt32()
+public UInt32 ToUInt32()
 ```
 
 Returns: The integer representation of the color.
@@ -308,7 +311,7 @@ Returns: The integer representation of the color.
 #### TryParse
 
 ```csharp
-public System.Boolean TryParse(System.ReadOnlySpan<System.Char> s, Avalonia.Media.Color& color)
+public Boolean TryParse(ReadOnlySpan<Char> s, Avalonia.Media.Color& color)
 ```
 
 <span id="uid-22bdeeaa59"></span>
@@ -316,7 +319,7 @@ public System.Boolean TryParse(System.ReadOnlySpan<System.Char> s, Avalonia.Medi
 #### TryParse
 
 ```csharp
-public System.Boolean TryParse(System.String s, Avalonia.Media.Color& color)
+public Boolean TryParse(String s, Avalonia.Media.Color& color)
 ```
 
 ## Properties
@@ -335,7 +338,7 @@ public System.Boolean TryParse(System.String s, Avalonia.Media.Color& color)
 Gets the Alpha component of the color.
 
 ```csharp
-public System.Byte A { get; set; }
+public Byte A { get; set; }
 ```
 
 <span id="uid-b8aea3d327"></span>
@@ -345,7 +348,7 @@ public System.Byte A { get; set; }
 Gets the Blue component of the color.
 
 ```csharp
-public System.Byte B { get; set; }
+public Byte B { get; set; }
 ```
 
 <span id="uid-3c4c0a5d6c"></span>
@@ -355,7 +358,7 @@ public System.Byte B { get; set; }
 Gets the Green component of the color.
 
 ```csharp
-public System.Byte G { get; set; }
+public Byte G { get; set; }
 ```
 
 <span id="uid-06a553c114"></span>
@@ -365,7 +368,7 @@ public System.Byte G { get; set; }
 Gets the Red component of the color.
 
 ```csharp
-public System.Byte R { get; set; }
+public Byte R { get; set; }
 ```
 
 </ApiRefPage>

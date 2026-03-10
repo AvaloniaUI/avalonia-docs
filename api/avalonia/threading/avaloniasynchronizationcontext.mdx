@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Threading/AvaloniaSynchronizationContext.cs">AvaloniaSynchronizationContext.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -125,7 +128,7 @@ public Avalonia.Threading.AvaloniaSynchronizationContext.RestoreContext Ensure(A
 Installs synchronization context in current thread
 
 ```csharp
-public System.Void InstallIfNeeded()
+public Void InstallIfNeeded()
 ```
 
 <span id="uid-f456ade104"></span>
@@ -133,7 +136,7 @@ public System.Void InstallIfNeeded()
 ### Post
 
 ```csharp
-public System.Void Post(System.Threading.SendOrPostCallback d, System.Object state)
+public Void Post(System.Threading.SendOrPostCallback d, Object state)
 ```
 
 <span id="uid-955eff3bfe"></span>
@@ -141,7 +144,7 @@ public System.Void Post(System.Threading.SendOrPostCallback d, System.Object sta
 ### Send
 
 ```csharp
-public System.Void Send(System.Threading.SendOrPostCallback d, System.Object state)
+public Void Send(System.Threading.SendOrPostCallback d, Object state)
 ```
 
 <span id="uid-cb4f22cead"></span>
@@ -149,7 +152,7 @@ public System.Void Send(System.Threading.SendOrPostCallback d, System.Object sta
 ### Wait
 
 ```csharp
-public System.Int32 Wait(System.IntPtr[] waitHandles, System.Boolean waitAll, System.Int32 millisecondsTimeout)
+public Int32 Wait(IntPtr[] waitHandles, Boolean waitAll, Int32 millisecondsTimeout)
 ```
 
 ## Properties
@@ -165,7 +168,7 @@ public System.Int32 Wait(System.IntPtr[] waitHandles, System.Boolean waitAll, Sy
 Controls if SynchronizationContext should be installed in InstallIfNeeded. Used by Designer.
 
 ```csharp
-public System.Boolean AutoInstall { get; set; }
+public Boolean AutoInstall { get; set; }
 ```
 
 </ApiRefPage>

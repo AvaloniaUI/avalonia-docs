@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Interactivity/InteractiveExtensions.cs">InteractiveExtensions.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -67,7 +70,7 @@ public class InteractiveExtensions
 ### AddDisposableHandler
 
 ```csharp
-public System.IDisposable AddDisposableHandler<TEventArgs>(Avalonia.Interactivity.Interactive o, Avalonia.Interactivity.RoutedEvent<TEventArgs><TEventArgs> routedEvent, System.EventHandler<TEventArgs> handler, Avalonia.Interactivity.RoutingStrategies routes, System.Boolean handledEventsToo)
+public IDisposable AddDisposableHandler<TEventArgs>(Avalonia.Interactivity.Interactive o, Avalonia.Interactivity.RoutedEvent<TEventArgs><TEventArgs> routedEvent, EventHandler<TEventArgs> handler, Avalonia.Interactivity.RoutingStrategies routes, Boolean handledEventsToo)
 ```
 
 <span id="uid-a47cd845b8"></span>
@@ -83,7 +86,7 @@ public Avalonia.Interactivity.Interactive GetInteractiveParent(Avalonia.Interact
 ### GetObservable
 
 ```csharp
-public System.IObservable<TEventArgs> GetObservable<TEventArgs>(Avalonia.Interactivity.Interactive o, Avalonia.Interactivity.RoutedEvent<TEventArgs><TEventArgs> routedEvent, Avalonia.Interactivity.RoutingStrategies routes, System.Boolean handledEventsToo)
+public IObservable<TEventArgs> GetObservable<TEventArgs>(Avalonia.Interactivity.Interactive o, Avalonia.Interactivity.RoutedEvent<TEventArgs><TEventArgs> routedEvent, Avalonia.Interactivity.RoutingStrategies routes, Boolean handledEventsToo)
 ```
 
 </ApiRefPage>

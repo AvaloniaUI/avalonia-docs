@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia.LinuxFramebuffer</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Linux/Avalonia.LinuxFramebuffer/Input/LibInput/LibInputBackend.Pointer.cs">LibInputBackend.Pointer.cs</a>, <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Linux/Avalonia.LinuxFramebuffer/Input/LibInput/LibInputBackend.Touch.cs">LibInputBackend.Touch.cs</a>, <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Linux/Avalonia.LinuxFramebuffer/Input/LibInput/LibInputBackend.cs">LibInputBackend.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__signature">
@@ -89,7 +92,7 @@ public LibInputBackend(Avalonia.LinuxFramebuffer.Input.LibInput.LibInputBackendO
 ### Initialize
 
 ```csharp
-public System.Void Initialize(Avalonia.LinuxFramebuffer.Input.IScreenInfoProvider screen, System.Action<Avalonia.Input.Raw.RawInputEventArgs> onInput)
+public Void Initialize(Avalonia.LinuxFramebuffer.Input.IScreenInfoProvider screen, Action<Avalonia.Input.Raw.RawInputEventArgs> onInput)
 ```
 
 <span id="uid-e692c049b2"></span>
@@ -97,7 +100,7 @@ public System.Void Initialize(Avalonia.LinuxFramebuffer.Input.IScreenInfoProvide
 ### SetInputRoot
 
 ```csharp
-public System.Void SetInputRoot(Avalonia.Input.IInputRoot root)
+public Void SetInputRoot(Avalonia.Input.IInputRoot root)
 ```
 
 </ApiRefPage>

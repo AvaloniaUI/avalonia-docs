@@ -59,7 +59,7 @@ public delegate LibDrm.DrmEventVBlankHandlerDelegate
 ### LibDrm.DrmEventVBlankHandlerDelegate
 
 ```csharp
-public LibDrm.DrmEventVBlankHandlerDelegate(System.Object object, System.IntPtr method)
+public LibDrm.DrmEventVBlankHandlerDelegate(Object object, IntPtr method)
 ```
 
 ## Methods
@@ -75,7 +75,7 @@ public LibDrm.DrmEventVBlankHandlerDelegate(System.Object object, System.IntPtr 
 ### BeginInvoke
 
 ```csharp
-public System.IAsyncResult BeginInvoke(System.Int32 fd, System.UInt32 sequence, System.UInt32 tv_sec, System.UInt32 tv_usec, System.Void* user_data, System.AsyncCallback callback, System.Object object)
+public IAsyncResult BeginInvoke(Int32 fd, UInt32 sequence, UInt32 tv_sec, UInt32 tv_usec, Void* user_data, AsyncCallback callback, Object object)
 ```
 
 <span id="uid-6cf3a9574a"></span>
@@ -83,7 +83,7 @@ public System.IAsyncResult BeginInvoke(System.Int32 fd, System.UInt32 sequence, 
 ### EndInvoke
 
 ```csharp
-public System.Void EndInvoke(System.IAsyncResult result)
+public Void EndInvoke(IAsyncResult result)
 ```
 
 <span id="uid-8850608f76"></span>
@@ -91,7 +91,7 @@ public System.Void EndInvoke(System.IAsyncResult result)
 ### Invoke
 
 ```csharp
-public System.Void Invoke(System.Int32 fd, System.UInt32 sequence, System.UInt32 tv_sec, System.UInt32 tv_usec, System.Void* user_data)
+public Void Invoke(Int32 fd, UInt32 sequence, UInt32 tv_sec, UInt32 tv_usec, Void* user_data)
 ```
 
 </ApiRefPage>

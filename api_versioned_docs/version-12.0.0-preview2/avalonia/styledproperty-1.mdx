@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/StyledProperty.cs">StyledProperty.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -112,7 +115,7 @@ Returns: The default value.
 Gets the default value for the property on the specified type.
 
 ```csharp
-public TValue GetDefaultValue(System.Type type)
+public TValue GetDefaultValue(Type type)
 ```
 
 | Parameter | Description |
@@ -144,7 +147,7 @@ public Avalonia.StyledPropertyMetadata<TValue><TValue> GetMetadata(Avalonia.Aval
 #### GetMetadata
 
 ```csharp
-public Avalonia.StyledPropertyMetadata<TValue><TValue> GetMetadata(System.Type type)
+public Avalonia.StyledPropertyMetadata<TValue><TValue> GetMetadata(Type type)
 ```
 
 | Parameter | Description |
@@ -162,7 +165,7 @@ public Avalonia.StyledPropertyMetadata<TValue><TValue> GetMetadata(System.Type t
 Overrides the default value for the property on the specified type.
 
 ```csharp
-public System.Void OverrideDefaultValue(System.Type type, TValue defaultValue)
+public Void OverrideDefaultValue(Type type, TValue defaultValue)
 ```
 
 | Parameter | Description |
@@ -175,7 +178,7 @@ public System.Void OverrideDefaultValue(System.Type type, TValue defaultValue)
 #### OverrideDefaultValue
 
 ```csharp
-public System.Void OverrideDefaultValue<T>(TValue defaultValue)
+public Void OverrideDefaultValue<T>(TValue defaultValue)
 ```
 
 <span id="uid-2a40013894"></span>
@@ -187,7 +190,7 @@ public System.Void OverrideDefaultValue<T>(TValue defaultValue)
 #### OverrideMetadata
 
 ```csharp
-public System.Void OverrideMetadata<T>(Avalonia.StyledPropertyMetadata<TValue><TValue> metadata)
+public Void OverrideMetadata<T>(Avalonia.StyledPropertyMetadata<TValue><TValue> metadata)
 ```
 
 <span id="uid-cfc9ee19c1"></span>
@@ -195,7 +198,7 @@ public System.Void OverrideMetadata<T>(Avalonia.StyledPropertyMetadata<TValue><T
 #### OverrideMetadata
 
 ```csharp
-public System.Void OverrideMetadata(System.Type type, Avalonia.StyledPropertyMetadata<TValue><TValue> metadata)
+public Void OverrideMetadata(Type type, Avalonia.StyledPropertyMetadata<TValue><TValue> metadata)
 ```
 
 <span id="uid-c313ea99bf"></span>
@@ -205,7 +208,7 @@ public System.Void OverrideMetadata(System.Type type, Avalonia.StyledPropertyMet
 Gets the string representation of the property.
 
 ```csharp
-public System.String ToString()
+public String ToString()
 ```
 
 Returns: The property's string representation.
@@ -223,7 +226,7 @@ Returns: The property's string representation.
 A method which returns "false" for values that are never valid for this property.
 
 ```csharp
-public System.Func<TValue, System.Boolean> ValidateValue { get; set; }
+public Func<TValue, Boolean> ValidateValue { get; set; }
 ```
 
 </ApiRefPage>

@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Platform/Storage/FilePickerOpenOptions.cs">FilePickerOpenOptions.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -75,6 +78,9 @@ public FilePickerOpenOptions()
 | [AllowMultiple](#uid-2a28bff5e1) | Gets or sets an option indicating whether open picker allows users to select multiple files. |
 | [FileTypeFilter](#uid-c21c750c4e) | Gets or sets the collection of file types that the file open picker displays. |
 | [SuggestedFileType](#uid-c00a06479e) | Gets or sets the file type that should be preselected when the dialog is opened. |
+| [SuggestedFileName (Inherited from PickerOptions)](pickeroptions.mdx#uid-87696bd66c) | Gets or sets the file name that the file picker suggests to the user. |
+| [SuggestedStartLocation (Inherited from PickerOptions)](pickeroptions.mdx#uid-792044079c) | Gets or sets the initial location where the file open picker looks for files to present to the user. Can be obtained from previously picked folder or using Avalonia.Platform.Storage.IStorageProvider.TryGetFolderFromPathAsync(Uri) or Avalonia.Platform.Storage.IStorageProvider.TryGetWellKnownFolderAsync(Avalonia.Platform.Storage.WellKnownFolder). |
+| [Title (Inherited from PickerOptions)](pickeroptions.mdx#uid-825079a1b0) | Gets or sets the text that appears in the title bar of a picker. |
 
 <span id="uid-2a28bff5e1"></span>
 
@@ -83,7 +89,7 @@ public FilePickerOpenOptions()
 Gets or sets an option indicating whether open picker allows users to select multiple files.
 
 ```csharp
-public System.Boolean AllowMultiple { get; set; }
+public Boolean AllowMultiple { get; set; }
 ```
 
 <span id="uid-c21c750c4e"></span>

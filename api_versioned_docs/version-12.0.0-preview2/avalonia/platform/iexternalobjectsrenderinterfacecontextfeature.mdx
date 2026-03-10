@@ -55,7 +55,7 @@ public interface IExternalObjectsRenderInterfaceContextFeature
 ### GetSynchronizationCapabilities
 
 ```csharp
-public Avalonia.Rendering.Composition.CompositionGpuImportedImageSynchronizationCapabilities GetSynchronizationCapabilities(System.String imageHandleType)
+public Avalonia.Rendering.Composition.CompositionGpuImportedImageSynchronizationCapabilities GetSynchronizationCapabilities(String imageHandleType)
 ```
 
 <span id="uid-976cc7a123"></span>
@@ -100,7 +100,7 @@ public Avalonia.Platform.IPlatformRenderInterfaceImportedSemaphore ImportSemapho
 ### DeviceLuid
 
 ```csharp
-public System.Byte[] DeviceLuid { get; set; }
+public Byte[] DeviceLuid { get; set; }
 ```
 
 <span id="uid-eaceb219d1"></span>
@@ -108,7 +108,7 @@ public System.Byte[] DeviceLuid { get; set; }
 ### DeviceUuid
 
 ```csharp
-public System.Byte[] DeviceUuid { get; set; }
+public Byte[] DeviceUuid { get; set; }
 ```
 
 <span id="uid-7d19d9997b"></span>
@@ -118,7 +118,7 @@ public System.Byte[] DeviceUuid { get; set; }
 Returns the list of image handle types supported by the current GPU backend, see [Avalonia.Platform.KnownPlatformGraphicsExternalImageHandleTypes](xref:Avalonia.Platform.KnownPlatformGraphicsExternalImageHandleTypes)
 
 ```csharp
-public System.Collections.Generic.IReadOnlyList<System.String> SupportedImageHandleTypes { get; set; }
+public System.Collections.Generic.IReadOnlyList<String> SupportedImageHandleTypes { get; set; }
 ```
 
 <span id="uid-cd6e7bd9dc"></span>
@@ -128,7 +128,7 @@ public System.Collections.Generic.IReadOnlyList<System.String> SupportedImageHan
 Returns the list of semaphore types supported by the current GPU backend, see [Avalonia.Platform.KnownPlatformGraphicsExternalSemaphoreHandleTypes](xref:Avalonia.Platform.KnownPlatformGraphicsExternalSemaphoreHandleTypes)
 
 ```csharp
-public System.Collections.Generic.IReadOnlyList<System.String> SupportedSemaphoreTypes { get; set; }
+public System.Collections.Generic.IReadOnlyList<String> SupportedSemaphoreTypes { get; set; }
 ```
 
 </ApiRefPage>

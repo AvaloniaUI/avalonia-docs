@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Dialogs/Internal/ResourceSelectorConverter.cs">ResourceSelectorConverter.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__signature">
@@ -71,13 +74,37 @@ public ResourceSelectorConverter()
 | --- | --- |
 | [Convert](#uid-da680e4e71) | No summary available. |
 | [ConvertBack](#uid-e24df9ff77) | No summary available. |
+| [Add (Inherited from ResourceDictionary)](../../controls/resourcedictionary.mdx#uid-9eaadf6661) | No summary available. |
+| [AddDeferred (2 overloads) (Inherited from ResourceDictionary)](../../controls/resourcedictionary.mdx#uid-a6747a18a4) | No summary available. |
+| [AddNotSharedDeferred (Inherited from ResourceDictionary)](../../controls/resourcedictionary.mdx#uid-84bd5cae1e) | No summary available. |
+| [Clear (Inherited from ResourceDictionary)](../../controls/resourcedictionary.mdx#uid-db09b69ee4) | No summary available. |
+| [ContainsKey (Inherited from ResourceDictionary)](../../controls/resourcedictionary.mdx#uid-38072f4aed) | No summary available. |
+| [EnsureCapacity (Inherited from ResourceDictionary)](../../controls/resourcedictionary.mdx#uid-faf10681ad) | Ensures that the resource dictionary can hold up to capacity entries without any further expansion of its backing storage. |
+| [GetEnumerator (Inherited from ResourceDictionary)](../../controls/resourcedictionary.mdx#uid-fafef28202) | No summary available. |
+| [Remove (Inherited from ResourceDictionary)](../../controls/resourcedictionary.mdx#uid-c815dc8c76) | No summary available. |
+| [SetItems (Inherited from ResourceDictionary)](../../controls/resourcedictionary.mdx#uid-c90ab4d76f) | No summary available. |
+| [TryGetResource (Inherited from ResourceDictionary)](../../controls/resourcedictionary.mdx#uid-86a108c945) | No summary available. |
+| [TryGetValue (Inherited from ResourceDictionary)](../../controls/resourcedictionary.mdx#uid-5e7bc153e9) | No summary available. |
+| [Bind (8 overloads) (Inherited from AvaloniaObject)](../../avaloniaobject.mdx#uid-1c60c7bda3) | Binds a Avalonia.AvaloniaProperty to an Avalonia.Data.BindingBase. |
+| [CheckAccess (Inherited from AvaloniaObject)](../../avaloniaobject.mdx#uid-260ff7a68d) | Returns a value indicating whether the current thread is the UI thread. |
+| [ClearValue (4 overloads) (Inherited from AvaloniaObject)](../../avaloniaobject.mdx#uid-41de208fbe) | Clears a Avalonia.AvaloniaProperty's local value. |
+| [CoerceValue (Inherited from AvaloniaObject)](../../avaloniaobject.mdx#uid-3bec32f39e) | Coerces the specified Avalonia.AvaloniaProperty. |
+| [Equals (Inherited from AvaloniaObject)](../../avaloniaobject.mdx#uid-a8a8e94305) | Compares two objects using reference equality. |
+| [GetBaseValue (Inherited from AvaloniaObject)](../../avaloniaobject.mdx#uid-9c615efbba) | No summary available. |
+| [GetHashCode (Inherited from AvaloniaObject)](../../avaloniaobject.mdx#uid-7f7db1e7a2) | Gets the hash code for the object. |
+| [GetValue (3 overloads) (Inherited from AvaloniaObject)](../../avaloniaobject.mdx#uid-5142cd4792) | Gets a Avalonia.AvaloniaProperty value. |
+| [IsAnimating (Inherited from AvaloniaObject)](../../avaloniaobject.mdx#uid-8cbfc7521a) | Checks whether a Avalonia.AvaloniaProperty is animating. |
+| [IsSet (Inherited from AvaloniaObject)](../../avaloniaobject.mdx#uid-f8bf0bbdcc) | Checks whether a Avalonia.AvaloniaProperty is set on this object. |
+| [SetCurrentValue (2 overloads) (Inherited from AvaloniaObject)](../../avaloniaobject.mdx#uid-38759fd088) | Sets the value of a dependency property without changing its value source. |
+| [SetValue (3 overloads) (Inherited from AvaloniaObject)](../../avaloniaobject.mdx#uid-47d14e19d7) | Sets a Avalonia.AvaloniaProperty value. |
+| [VerifyAccess (Inherited from AvaloniaObject)](../../avaloniaobject.mdx#uid-3b9d3c9793) | Checks that the current thread is the UI thread and throws if not. |
 
 <span id="uid-da680e4e71"></span>
 
 ### Convert
 
 ```csharp
-public System.Object Convert(System.Object key, System.Type targetType, System.Object parameter, System.Globalization.CultureInfo culture)
+public Object Convert(Object key, Type targetType, Object parameter, System.Globalization.CultureInfo culture)
 ```
 
 <span id="uid-e24df9ff77"></span>
@@ -85,8 +112,29 @@ public System.Object Convert(System.Object key, System.Type targetType, System.O
 ### ConvertBack
 
 ```csharp
-public System.Object ConvertBack(System.Object value, System.Type targetType, System.Object parameter, System.Globalization.CultureInfo culture)
+public Object ConvertBack(Object value, Type targetType, Object parameter, System.Globalization.CultureInfo culture)
 ```
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Count (Inherited from ResourceDictionary)](../../controls/resourcedictionary.mdx#uid-b85700e6bf) | No summary available. |
+| [HasResources (Inherited from ResourceDictionary)](../../controls/resourcedictionary.mdx#uid-869f0539cf) | No summary available. |
+| [Item (Inherited from ResourceDictionary)](../../controls/resourcedictionary.mdx#uid-9b56d6db8a) | No summary available. |
+| [Keys (Inherited from ResourceDictionary)](../../controls/resourcedictionary.mdx#uid-a171f87ee5) | No summary available. |
+| [MergedDictionaries (Inherited from ResourceDictionary)](../../controls/resourcedictionary.mdx#uid-c6bbe5bebd) | No summary available. |
+| [ThemeDictionaries (Inherited from ResourceDictionary)](../../controls/resourcedictionary.mdx#uid-c40ccfafaa) | No summary available. |
+| [Values (Inherited from ResourceDictionary)](../../controls/resourcedictionary.mdx#uid-a1e3598d3a) | No summary available. |
+| [Owner (Inherited from ResourceProvider)](../../controls/resourceprovider.mdx#uid-ce90abd25b) | Gets the owner of the resource provider. |
+| [Dispatcher (Inherited from AvaloniaObject)](../../avaloniaobject.mdx#uid-b25fa51632) | Returns the Avalonia.AvaloniaObject.Dispatcher that this Avalonia.AvaloniaObject is associated with. |
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [OwnerChanged (Inherited from ResourceProvider)](../../controls/resourceprovider.mdx#uid-efe79b23bb) | Raised when the Avalonia.Controls.IResourceProvider.Owner of the resource provider changes. |
+| [PropertyChanged (Inherited from AvaloniaObject)](../../avaloniaobject.mdx#uid-d758e26fae) | Raised when a Avalonia.AvaloniaProperty value changes on this object. |
 
 </ApiRefPage>
 

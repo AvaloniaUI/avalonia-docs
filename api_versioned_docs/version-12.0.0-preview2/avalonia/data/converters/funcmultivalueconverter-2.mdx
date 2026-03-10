@@ -32,11 +32,14 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Data/Converters/FuncMultiValueConverter.cs">FuncMultiValueConverter.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
 
-A general purpose [Avalonia.Data.Converters.IValueConverter](xref:Avalonia.Data.Converters.IValueConverter) that uses a [System.Func&lt;T1, T2&gt;](xref:System.Func%602)
+A general purpose [Avalonia.Data.Converters.IValueConverter](xref:Avalonia.Data.Converters.IValueConverter) that uses a [Func&lt;T1, T2&gt;](xref:System.Func%602)
 to provide the converter logic.
 
 </div>
@@ -73,7 +76,7 @@ public class FuncMultiValueConverter<TIn, TOut>
 #### FuncMultiValueConverter&lt;TIn, TOut&gt;
 
 ```csharp
-public FuncMultiValueConverter<TIn, TOut>(System.Func<System.Collections.Generic.IEnumerable<TIn>, TOut> convert)
+public FuncMultiValueConverter<TIn, TOut>(Func<System.Collections.Generic.IEnumerable<TIn>, TOut> convert)
 ```
 
 <span id="uid-b81597975c"></span>
@@ -81,7 +84,7 @@ public FuncMultiValueConverter<TIn, TOut>(System.Func<System.Collections.Generic
 #### FuncMultiValueConverter&lt;TIn, TOut&gt;
 
 ```csharp
-public FuncMultiValueConverter<TIn, TOut>(System.Func<System.Collections.Generic.IReadOnlyList<TIn>, TOut> convert)
+public FuncMultiValueConverter<TIn, TOut>(Func<System.Collections.Generic.IReadOnlyList<TIn>, TOut> convert)
 ```
 
 ## Methods
@@ -95,7 +98,7 @@ public FuncMultiValueConverter<TIn, TOut>(System.Func<System.Collections.Generic
 ### Convert
 
 ```csharp
-public System.Object Convert(System.Collections.Generic.IList<System.Object> values, System.Type targetType, System.Object parameter, System.Globalization.CultureInfo culture)
+public Object Convert(System.Collections.Generic.IList<Object> values, Type targetType, Object parameter, System.Globalization.CultureInfo culture)
 ```
 
 </ApiRefPage>

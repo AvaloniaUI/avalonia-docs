@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Rendering/Composition/Animations/ExpressionAnimation.cs">ExpressionAnimation.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -61,13 +64,37 @@ of a targeted animating property each frame.
 This contrasts [Avalonia.Rendering.Composition.Animations.KeyFrameAnimation](xref:Avalonia.Rendering.Composition.Animations.KeyFrameAnimation)s, which use an interpolator to define how the animating
 property changes over time. The mathematical equation can be defined using references to properties
 of Composition objects, mathematical functions and operators and Input.
-Use the [Avalonia.Rendering.Composition.CompositionObject.StartAnimation(System.String,Avalonia.Rendering.Composition.Animations.CompositionAnimation)](xref:Avalonia.Rendering.Composition.CompositionObject.StartAnimation%28System.String%2CAvalonia.Rendering.Composition.Animations.CompositionAnimation%29) method to start the animation.
+Use the [Avalonia.Rendering.Composition.CompositionObject.StartAnimation(String,Avalonia.Rendering.Composition.Animations.CompositionAnimation)](xref:Avalonia.Rendering.Composition.CompositionObject.StartAnimation%28System.String%2CAvalonia.Rendering.Composition.Animations.CompositionAnimation%29) method to start the animation.
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [ClearAllParameters (Inherited from CompositionAnimation)](compositionanimation.mdx#uid-fabe099f1e) | Clears all of the parameters of the animation. |
+| [ClearParameter (Inherited from CompositionAnimation)](compositionanimation.mdx#uid-a8d50b919b) | Clears a parameter from the animation. |
+| [SetColorParameter (Inherited from CompositionAnimation)](compositionanimation.mdx#uid-08114cabfc) | No summary available. |
+| [SetMatrix3x2Parameter (Inherited from CompositionAnimation)](compositionanimation.mdx#uid-54d5e6b170) | No summary available. |
+| [SetMatrix4x4Parameter (Inherited from CompositionAnimation)](compositionanimation.mdx#uid-eca8ffd8b7) | No summary available. |
+| [SetQuaternionParameter (Inherited from CompositionAnimation)](compositionanimation.mdx#uid-12d8ac27fb) | No summary available. |
+| [SetReferenceParameter (Inherited from CompositionAnimation)](compositionanimation.mdx#uid-e9b8944c6b) | No summary available. |
+| [SetScalarParameter (Inherited from CompositionAnimation)](compositionanimation.mdx#uid-9ca4077133) | No summary available. |
+| [SetVector2Parameter (Inherited from CompositionAnimation)](compositionanimation.mdx#uid-23a56bbf8b) | No summary available. |
+| [SetVector3Parameter (Inherited from CompositionAnimation)](compositionanimation.mdx#uid-36e4f14775) | No summary available. |
+| [SetVector4Parameter (Inherited from CompositionAnimation)](compositionanimation.mdx#uid-18adc85c82) | No summary available. |
+| [StartAnimation (Inherited from CompositionObject)](../compositionobject.mdx#uid-4d2f25fec7) | Connects an animation with the specified property of the object and starts the animation. |
+| [StartAnimationGroup (Inherited from CompositionObject)](../compositionobject.mdx#uid-4846f860a0) | Starts an animation group. The StartAnimationGroup method on CompositionObject lets you start CompositionAnimationGroup. All the animations in the group will be started at the same time on the object. |
+| [StopAnimation (Inherited from CompositionObject)](../compositionobject.mdx#uid-01077c2b21) | Disconnects an animation from the specified property and stops the animation. |
+| [StopAnimationGroup (Inherited from CompositionObject)](../compositionobject.mdx#uid-81dbd02845) | Stops an animation group. |
 
 ## Properties
 
 | Name | Description |
 | --- | --- |
 | [Expression](#uid-8e78c16bde) | The mathematical equation specifying how the animated value is calculated each frame. The Expression is the core of an Avalonia.Rendering.Composition.Animations.ExpressionAnimation and represents the equation the system will use to calculate the value of the animation property each frame. The equation is set on this property in the form of a string. Although expressions can be defined by simple mathematical equations such as "2+2", the real power lies in creating mathematical relationships where the input values can change frame over frame. |
+| [Target (Inherited from CompositionAnimation)](compositionanimation.mdx#uid-c4cb7997f1) | No summary available. |
+| [Compositor (Inherited from CompositionObject)](../compositionobject.mdx#uid-bd6bbc1391) | The associated Compositor |
+| [ImplicitAnimations (Inherited from CompositionObject)](../compositionobject.mdx#uid-3929e9ea34) | The collection of implicit animations attached to this object. |
+| [IsDisposed (Inherited from CompositionObject)](../compositionobject.mdx#uid-e01437c946) | No summary available. |
 
 <span id="uid-8e78c16bde"></span>
 
@@ -81,7 +108,7 @@ Although expressions can be defined by simple mathematical equations such as "2+
 the real power lies in creating mathematical relationships where the input values can change frame over frame.
 
 ```csharp
-public System.String Expression { get; set; }
+public String Expression { get; set; }
 ```
 
 </ApiRefPage>

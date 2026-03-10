@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Animation/KeySpline.cs">KeySpline.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -83,7 +86,7 @@ public KeySpline()
 Create a [Avalonia.Animation.KeySpline](xref:Avalonia.Animation.KeySpline) with the given parameters
 
 ```csharp
-public KeySpline(System.Double x1, System.Double y1, System.Double x2, System.Double y2)
+public KeySpline(Double x1, Double y1, Double x2, Double y2)
 ```
 
 | Parameter | Description |
@@ -100,6 +103,19 @@ public KeySpline(System.Double x1, System.Double y1, System.Double x2, System.Do
 | [GetSplineProgress](#uid-1bc6c00385) | Calculates spline progress from a linear progress. |
 | [IsValid](#uid-075ef5a1e1) | Check to see whether the Avalonia.Animation.KeySpline is valid by looking at its X values. |
 | [Parse](#uid-5e6c4cf52d) | Parse a Avalonia.Animation.KeySpline from a string. The string needs to contain 4 values in it for the 2 control points. |
+| [Bind (8 overloads) (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-1c60c7bda3) | Binds a Avalonia.AvaloniaProperty to an Avalonia.Data.BindingBase. |
+| [CheckAccess (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-260ff7a68d) | Returns a value indicating whether the current thread is the UI thread. |
+| [ClearValue (4 overloads) (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-41de208fbe) | Clears a Avalonia.AvaloniaProperty's local value. |
+| [CoerceValue (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-3bec32f39e) | Coerces the specified Avalonia.AvaloniaProperty. |
+| [Equals (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-a8a8e94305) | Compares two objects using reference equality. |
+| [GetBaseValue (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-9c615efbba) | No summary available. |
+| [GetHashCode (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-7f7db1e7a2) | Gets the hash code for the object. |
+| [GetValue (3 overloads) (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-5142cd4792) | Gets a Avalonia.AvaloniaProperty value. |
+| [IsAnimating (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-8cbfc7521a) | Checks whether a Avalonia.AvaloniaProperty is animating. |
+| [IsSet (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-f8bf0bbdcc) | Checks whether a Avalonia.AvaloniaProperty is set on this object. |
+| [SetCurrentValue (2 overloads) (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-38759fd088) | Sets the value of a dependency property without changing its value source. |
+| [SetValue (3 overloads) (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-47d14e19d7) | Sets a Avalonia.AvaloniaProperty value. |
+| [VerifyAccess (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-3b9d3c9793) | Checks that the current thread is the UI thread and throws if not. |
 
 <span id="uid-1bc6c00385"></span>
 
@@ -108,7 +124,7 @@ public KeySpline(System.Double x1, System.Double y1, System.Double x2, System.Do
 Calculates spline progress from a linear progress.
 
 ```csharp
-public System.Double GetSplineProgress(System.Double linearProgress)
+public Double GetSplineProgress(Double linearProgress)
 ```
 
 | Parameter | Description |
@@ -125,7 +141,7 @@ Check to see whether the [Avalonia.Animation.KeySpline](xref:Avalonia.Animation.
 at its X values.
 
 ```csharp
-public System.Boolean IsValid()
+public Boolean IsValid()
 ```
 
 Returns: true if the X values for this [Avalonia.Animation.KeySpline](xref:Avalonia.Animation.KeySpline) fall in
@@ -139,7 +155,7 @@ Parse a [Avalonia.Animation.KeySpline](xref:Avalonia.Animation.KeySpline) from a
 needs to contain 4 values in it for the 2 control points.
 
 ```csharp
-public Avalonia.Animation.KeySpline Parse(System.String value, System.Globalization.CultureInfo culture)
+public Avalonia.Animation.KeySpline Parse(String value, System.Globalization.CultureInfo culture)
 ```
 
 | Parameter | Description |
@@ -161,6 +177,8 @@ Returns: A [Avalonia.Animation.KeySpline](xref:Avalonia.Animation.KeySpline) wit
 | [ControlPointX2](#uid-ca4e58f0a1) | X coordinate of the second control point |
 | [ControlPointY1](#uid-63b81fb22c) | Y coordinate of the first control point |
 | [ControlPointY2](#uid-81f7e622bd) | Y coordinate of the second control point |
+| [Dispatcher (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-b25fa51632) | Returns the Avalonia.AvaloniaObject.Dispatcher that this Avalonia.AvaloniaObject is associated with. |
+| [Item (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-c1d1f1bc0f) | No summary available. |
 
 <span id="uid-8fd837038b"></span>
 
@@ -169,7 +187,7 @@ Returns: A [Avalonia.Animation.KeySpline](xref:Avalonia.Animation.KeySpline) wit
 X coordinate of the first control point
 
 ```csharp
-public System.Double ControlPointX1 { get; set; }
+public Double ControlPointX1 { get; set; }
 ```
 
 <span id="uid-ca4e58f0a1"></span>
@@ -179,7 +197,7 @@ public System.Double ControlPointX1 { get; set; }
 X coordinate of the second control point
 
 ```csharp
-public System.Double ControlPointX2 { get; set; }
+public Double ControlPointX2 { get; set; }
 ```
 
 <span id="uid-63b81fb22c"></span>
@@ -189,7 +207,7 @@ public System.Double ControlPointX2 { get; set; }
 Y coordinate of the first control point
 
 ```csharp
-public System.Double ControlPointY1 { get; set; }
+public Double ControlPointY1 { get; set; }
 ```
 
 <span id="uid-81f7e622bd"></span>
@@ -199,8 +217,14 @@ public System.Double ControlPointY1 { get; set; }
 Y coordinate of the second control point
 
 ```csharp
-public System.Double ControlPointY2 { get; set; }
+public Double ControlPointY2 { get; set; }
 ```
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [PropertyChanged (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-d758e26fae) | Raised when a Avalonia.AvaloniaProperty value changes on this object. |
 
 </ApiRefPage>
 

@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Rendering/Composition/Animations/KeyFrameAnimation.cs">KeyFrameAnimation.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -54,6 +57,9 @@ public class KeyFrameAnimation
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../compositionobject">CompositionObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="compositionanimation">CompositionAnimation</a> <span className="apiref-page__relation-separator">-&gt;</span> KeyFrameAnimation
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Derived types:</span> <a href="../booleankeyframeanimation">BooleanKeyFrameAnimation</a>, <a href="../colorkeyframeanimation">ColorKeyFrameAnimation</a>, <a href="../doublekeyframeanimation">DoubleKeyFrameAnimation</a>, <a href="../quaternionkeyframeanimation">QuaternionKeyFrameAnimation</a>, <a href="../scalarkeyframeanimation">ScalarKeyFrameAnimation</a>, <a href="../vector2keyframeanimation">Vector2KeyFrameAnimation</a>, <a href="../vector3dkeyframeanimation">Vector3DKeyFrameAnimation</a>, <a href="../vector3keyframeanimation">Vector3KeyFrameAnimation</a>, <a href="../vector4keyframeanimation">Vector4KeyFrameAnimation</a>, <a href="../vectorkeyframeanimation">VectorKeyFrameAnimation</a>
+</div>
 </div>
 
 ## Methods
@@ -61,6 +67,21 @@ public class KeyFrameAnimation
 | Name | Description |
 | --- | --- |
 | [InsertExpressionKeyFrame](#uid-ad305db951) | Inserts an expression keyframe. |
+| [ClearAllParameters (Inherited from CompositionAnimation)](compositionanimation.mdx#uid-fabe099f1e) | Clears all of the parameters of the animation. |
+| [ClearParameter (Inherited from CompositionAnimation)](compositionanimation.mdx#uid-a8d50b919b) | Clears a parameter from the animation. |
+| [SetColorParameter (Inherited from CompositionAnimation)](compositionanimation.mdx#uid-08114cabfc) | No summary available. |
+| [SetMatrix3x2Parameter (Inherited from CompositionAnimation)](compositionanimation.mdx#uid-54d5e6b170) | No summary available. |
+| [SetMatrix4x4Parameter (Inherited from CompositionAnimation)](compositionanimation.mdx#uid-eca8ffd8b7) | No summary available. |
+| [SetQuaternionParameter (Inherited from CompositionAnimation)](compositionanimation.mdx#uid-12d8ac27fb) | No summary available. |
+| [SetReferenceParameter (Inherited from CompositionAnimation)](compositionanimation.mdx#uid-e9b8944c6b) | No summary available. |
+| [SetScalarParameter (Inherited from CompositionAnimation)](compositionanimation.mdx#uid-9ca4077133) | No summary available. |
+| [SetVector2Parameter (Inherited from CompositionAnimation)](compositionanimation.mdx#uid-23a56bbf8b) | No summary available. |
+| [SetVector3Parameter (Inherited from CompositionAnimation)](compositionanimation.mdx#uid-36e4f14775) | No summary available. |
+| [SetVector4Parameter (Inherited from CompositionAnimation)](compositionanimation.mdx#uid-18adc85c82) | No summary available. |
+| [StartAnimation (Inherited from CompositionObject)](../compositionobject.mdx#uid-4d2f25fec7) | Connects an animation with the specified property of the object and starts the animation. |
+| [StartAnimationGroup (Inherited from CompositionObject)](../compositionobject.mdx#uid-4846f860a0) | Starts an animation group. The StartAnimationGroup method on CompositionObject lets you start CompositionAnimationGroup. All the animations in the group will be started at the same time on the object. |
+| [StopAnimation (Inherited from CompositionObject)](../compositionobject.mdx#uid-01077c2b21) | Disconnects an animation from the specified property and stops the animation. |
+| [StopAnimationGroup (Inherited from CompositionObject)](../compositionobject.mdx#uid-81dbd02845) | Stops an animation group. |
 
 <span id="uid-ad305db951"></span>
 
@@ -69,7 +90,7 @@ public class KeyFrameAnimation
 Inserts an expression keyframe.
 
 ```csharp
-public System.Void InsertExpressionKeyFrame(System.Single normalizedProgressKey, System.String value, Avalonia.Animation.Easings.Easing easingFunction)
+public Void InsertExpressionKeyFrame(Single normalizedProgressKey, String value, Avalonia.Animation.Easings.Easing easingFunction)
 ```
 
 | Parameter | Description |
@@ -83,12 +104,16 @@ public System.Void InsertExpressionKeyFrame(System.Single normalizedProgressKey,
 | Name | Description |
 | --- | --- |
 | [DelayBehavior](#uid-379600a794) | The delay behavior of the key frame animation. |
-| [DelayTime](#uid-2b5f6b7711) | Delay before the animation starts after Avalonia.Rendering.Composition.CompositionObject.StartAnimation(System.String,Avalonia.Rendering.Composition.Animations.CompositionAnimation) is called. |
+| [DelayTime](#uid-2b5f6b7711) | Delay before the animation starts after Avalonia.Rendering.Composition.CompositionObject.StartAnimation(String,Avalonia.Rendering.Composition.Animations.CompositionAnimation) is called. |
 | [Direction](#uid-085a974350) | The direction the animation is playing. The Direction property allows you to drive your animation from start to end or end to start or alternate between start and end or end to start if animation has an Avalonia.Rendering.Composition.Animations.KeyFrameAnimation.IterationCount greater than one. This gives an easy way for customizing animation definitions. |
 | [Duration](#uid-62e421a5a6) | The duration of the animation. Minimum allowed value is 1ms and maximum allowed value is 24 days. |
 | [IterationBehavior](#uid-6be33530cc) | The iteration behavior for the key frame animation. |
 | [IterationCount](#uid-ae1d61be0c) | The number of times to repeat the key frame animation. |
 | [StopBehavior](#uid-5d119b1d8e) | Specifies how to set the property value when animation is stopped |
+| [Target (Inherited from CompositionAnimation)](compositionanimation.mdx#uid-c4cb7997f1) | No summary available. |
+| [Compositor (Inherited from CompositionObject)](../compositionobject.mdx#uid-bd6bbc1391) | The associated Compositor |
+| [ImplicitAnimations (Inherited from CompositionObject)](../compositionobject.mdx#uid-3929e9ea34) | The collection of implicit animations attached to this object. |
+| [IsDisposed (Inherited from CompositionObject)](../compositionobject.mdx#uid-e01437c946) | No summary available. |
 
 <span id="uid-379600a794"></span>
 
@@ -104,10 +129,10 @@ public Avalonia.Rendering.Composition.Animations.AnimationDelayBehavior DelayBeh
 
 ### DelayTime
 
-Delay before the animation starts after [Avalonia.Rendering.Composition.CompositionObject.StartAnimation(System.String,Avalonia.Rendering.Composition.Animations.CompositionAnimation)](xref:Avalonia.Rendering.Composition.CompositionObject.StartAnimation%28System.String%2CAvalonia.Rendering.Composition.Animations.CompositionAnimation%29) is called.
+Delay before the animation starts after [Avalonia.Rendering.Composition.CompositionObject.StartAnimation(String,Avalonia.Rendering.Composition.Animations.CompositionAnimation)](xref:Avalonia.Rendering.Composition.CompositionObject.StartAnimation%28System.String%2CAvalonia.Rendering.Composition.Animations.CompositionAnimation%29) is called.
 
 ```csharp
-public System.TimeSpan DelayTime { get; set; }
+public TimeSpan DelayTime { get; set; }
 ```
 
 <span id="uid-085a974350"></span>
@@ -131,7 +156,7 @@ The duration of the animation.
 Minimum allowed value is 1ms and maximum allowed value is 24 days.
 
 ```csharp
-public System.TimeSpan Duration { get; set; }
+public TimeSpan Duration { get; set; }
 ```
 
 <span id="uid-6be33530cc"></span>
@@ -151,7 +176,7 @@ public Avalonia.Rendering.Composition.Animations.AnimationIterationBehavior Iter
 The number of times to repeat the key frame animation.
 
 ```csharp
-public System.Int32 IterationCount { get; set; }
+public Int32 IterationCount { get; set; }
 ```
 
 <span id="uid-5d119b1d8e"></span>

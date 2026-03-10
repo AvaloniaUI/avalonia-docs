@@ -59,7 +59,7 @@ public delegate SMLib.SmcErrorHandler
 ### SMLib.SmcErrorHandler
 
 ```csharp
-public SMLib.SmcErrorHandler(System.Object object, System.IntPtr method)
+public SMLib.SmcErrorHandler(Object object, IntPtr method)
 ```
 
 ## Methods
@@ -75,7 +75,7 @@ public SMLib.SmcErrorHandler(System.Object object, System.IntPtr method)
 ### BeginInvoke
 
 ```csharp
-public System.IAsyncResult BeginInvoke(System.IntPtr smcConn, System.Boolean swap, System.Int32 offendingMinorOpcode, System.UIntPtr offendingSequence, System.Int32 errorClass, System.Int32 severity, System.IntPtr values, System.AsyncCallback callback, System.Object object)
+public IAsyncResult BeginInvoke(IntPtr smcConn, Boolean swap, Int32 offendingMinorOpcode, UIntPtr offendingSequence, Int32 errorClass, Int32 severity, IntPtr values, AsyncCallback callback, Object object)
 ```
 
 <span id="uid-b950bfa4de"></span>
@@ -83,7 +83,7 @@ public System.IAsyncResult BeginInvoke(System.IntPtr smcConn, System.Boolean swa
 ### EndInvoke
 
 ```csharp
-public System.Void EndInvoke(System.IAsyncResult result)
+public Void EndInvoke(IAsyncResult result)
 ```
 
 <span id="uid-83dba8cffc"></span>
@@ -91,7 +91,7 @@ public System.Void EndInvoke(System.IAsyncResult result)
 ### Invoke
 
 ```csharp
-public System.Void Invoke(System.IntPtr smcConn, System.Boolean swap, System.Int32 offendingMinorOpcode, System.UIntPtr offendingSequence, System.Int32 errorClass, System.Int32 severity, System.IntPtr values)
+public Void Invoke(IntPtr smcConn, Boolean swap, Int32 offendingMinorOpcode, UIntPtr offendingSequence, Int32 errorClass, Int32 severity, IntPtr values)
 ```
 
 </ApiRefPage>

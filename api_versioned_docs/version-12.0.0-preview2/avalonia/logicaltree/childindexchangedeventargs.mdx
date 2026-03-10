@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/LogicalTree/ChildIndexChangedEventArgs.cs">ChildIndexChangedEventArgs.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -68,7 +71,7 @@ Initializes a new instance of the [Avalonia.LogicalTree.ChildIndexChangedEventAr
 an action of [Avalonia.LogicalTree.ChildIndexChangedAction.ChildIndexChanged](xref:Avalonia.LogicalTree.ChildIndexChangedAction.ChildIndexChanged).
 
 ```csharp
-public ChildIndexChangedEventArgs(Avalonia.LogicalTree.ILogical child, System.Int32 index)
+public ChildIndexChangedEventArgs(Avalonia.LogicalTree.ILogical child, Int32 index)
 ```
 
 | Parameter | Description |
@@ -124,7 +127,7 @@ public Avalonia.LogicalTree.ChildIndexChangedEventArgs ChildIndexesReset { get; 
 Gets the new index of [Avalonia.LogicalTree.ChildIndexChangedEventArgs.Child](xref:Avalonia.LogicalTree.ChildIndexChangedEventArgs.Child) or -1 if all children should be re-evaluated.
 
 ```csharp
-public System.Int32 Index { get; set; }
+public Int32 Index { get; set; }
 ```
 
 <span id="uid-ddd04506cd"></span>

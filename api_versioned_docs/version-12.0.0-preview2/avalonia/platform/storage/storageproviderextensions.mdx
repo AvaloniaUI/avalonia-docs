@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Platform/Storage/StorageProviderExtensions.cs">StorageProviderExtensions.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -69,7 +72,7 @@ public class StorageProviderExtensions
 Attempts to read file from the file-system by its path.
 
 ```csharp
-public System.Threading.Tasks.Task<Avalonia.Platform.Storage.IStorageFile> TryGetFileFromPathAsync(Avalonia.Platform.Storage.IStorageProvider provider, System.String filePath)
+public System.Threading.Tasks.Task<Avalonia.Platform.Storage.IStorageFile> TryGetFileFromPathAsync(Avalonia.Platform.Storage.IStorageProvider provider, String filePath)
 ```
 
 | Parameter | Description |
@@ -85,7 +88,7 @@ Returns: File or null if it doesn't exist.
 Attempts to read folder from the file-system by its path.
 
 ```csharp
-public System.Threading.Tasks.Task<Avalonia.Platform.Storage.IStorageFolder> TryGetFolderFromPathAsync(Avalonia.Platform.Storage.IStorageProvider provider, System.String folderPath)
+public System.Threading.Tasks.Task<Avalonia.Platform.Storage.IStorageFolder> TryGetFolderFromPathAsync(Avalonia.Platform.Storage.IStorageProvider provider, String folderPath)
 ```
 
 | Parameter | Description |
@@ -101,7 +104,7 @@ Returns: Folder or null if it doesn't exist.
 Gets the local file system path of the item as a string.
 
 ```csharp
-public System.String TryGetLocalPath(Avalonia.Platform.Storage.IStorageItem item)
+public String TryGetLocalPath(Avalonia.Platform.Storage.IStorageItem item)
 ```
 
 | Parameter | Description |

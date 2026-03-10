@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Markup/Avalonia.Markup.Xaml/RuntimeXamlLoaderConfiguration.cs">RuntimeXamlLoaderConfiguration.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__signature">
@@ -80,7 +83,7 @@ When enabled, the XAML compiler embeds SourceInfo metadata (file path, line, and
 Default is 'false'.
 
 ```csharp
-public System.Boolean CreateSourceInfo { get; set; }
+public Boolean CreateSourceInfo { get; set; }
 ```
 
 <span id="uid-e3929fafda"></span>
@@ -91,7 +94,7 @@ Indicates whether the XAML is being loaded in design mode.
 Default is 'false'.
 
 ```csharp
-public System.Boolean DesignMode { get; set; }
+public Boolean DesignMode { get; set; }
 ```
 
 <span id="uid-5bfabbf87e"></span>
@@ -125,7 +128,7 @@ Defines is CompiledBinding should be used by default.
 Default is 'false'.
 
 ```csharp
-public System.Boolean UseCompiledBindingsByDefault { get; set; }
+public Boolean UseCompiledBindingsByDefault { get; set; }
 ```
 
 </ApiRefPage>

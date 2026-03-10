@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.OpenGL/Egl/EglDisplay.cs">EglDisplay.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__signature">
@@ -82,7 +85,7 @@ public EglDisplay(Avalonia.OpenGL.Egl.EglDisplayCreationOptions options)
 #### EglDisplay
 
 ```csharp
-public EglDisplay(System.IntPtr display, Avalonia.OpenGL.Egl.EglDisplayOptions options)
+public EglDisplay(IntPtr display, Avalonia.OpenGL.Egl.EglDisplayOptions options)
 ```
 
 ## Methods
@@ -112,7 +115,7 @@ public Avalonia.OpenGL.Egl.EglContext CreateContext(Avalonia.OpenGL.Egl.EglConte
 #### CreatePBufferFromClientBuffer
 
 ```csharp
-public Avalonia.OpenGL.Egl.EglSurface CreatePBufferFromClientBuffer(System.Int32 bufferType, System.IntPtr handle, System.Int32* attribs)
+public Avalonia.OpenGL.Egl.EglSurface CreatePBufferFromClientBuffer(Int32 bufferType, IntPtr handle, Int32* attribs)
 ```
 
 <span id="uid-a3a7f045fa"></span>
@@ -120,7 +123,7 @@ public Avalonia.OpenGL.Egl.EglSurface CreatePBufferFromClientBuffer(System.Int32
 #### CreatePBufferFromClientBuffer
 
 ```csharp
-public Avalonia.OpenGL.Egl.EglSurface CreatePBufferFromClientBuffer(System.Int32 bufferType, System.IntPtr handle, System.Int32[] attribs)
+public Avalonia.OpenGL.Egl.EglSurface CreatePBufferFromClientBuffer(Int32 bufferType, IntPtr handle, Int32[] attribs)
 ```
 
 <span id="uid-d17e49b64c"></span>
@@ -128,7 +131,7 @@ public Avalonia.OpenGL.Egl.EglSurface CreatePBufferFromClientBuffer(System.Int32
 ### CreateWindowSurface
 
 ```csharp
-public Avalonia.OpenGL.Egl.EglSurface CreateWindowSurface(System.IntPtr window)
+public Avalonia.OpenGL.Egl.EglSurface CreateWindowSurface(IntPtr window)
 ```
 
 <span id="uid-ffd72285f0"></span>
@@ -136,7 +139,7 @@ public Avalonia.OpenGL.Egl.EglSurface CreateWindowSurface(System.IntPtr window)
 ### Dispose
 
 ```csharp
-public System.Void Dispose()
+public Void Dispose()
 ```
 
 <span id="uid-0290538407"></span>
@@ -144,7 +147,7 @@ public System.Void Dispose()
 ### Lock
 
 ```csharp
-public System.IDisposable Lock()
+public IDisposable Lock()
 ```
 
 ## Properties
@@ -162,7 +165,7 @@ public System.IDisposable Lock()
 ### Config
 
 ```csharp
-public System.IntPtr Config { get; set; }
+public IntPtr Config { get; set; }
 ```
 
 <span id="uid-7aadc326b5"></span>
@@ -178,7 +181,7 @@ public Avalonia.OpenGL.Egl.EglInterface EglInterface { get; set; }
 ### Handle
 
 ```csharp
-public System.IntPtr Handle { get; set; }
+public IntPtr Handle { get; set; }
 ```
 
 <span id="uid-5427b41b1c"></span>
@@ -186,7 +189,7 @@ public System.IntPtr Handle { get; set; }
 ### IsLost
 
 ```csharp
-public System.Boolean IsLost { get; set; }
+public Boolean IsLost { get; set; }
 ```
 
 <span id="uid-b6941d47e3"></span>
@@ -194,7 +197,7 @@ public System.Boolean IsLost { get; set; }
 ### SupportsSharing
 
 ```csharp
-public System.Boolean SupportsSharing { get; set; }
+public Boolean SupportsSharing { get; set; }
 ```
 
 </ApiRefPage>

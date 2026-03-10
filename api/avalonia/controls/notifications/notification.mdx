@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Controls/Notifications/Notification.cs">Notification.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -87,14 +90,14 @@ public Notification()
 #### Notification
 
 ```csharp
-public Notification(System.String title, System.String message, Avalonia.Controls.Notifications.NotificationType type, System.Nullable<System.TimeSpan> expiration, System.Action onClick, System.Action onClose)
+public Notification(String title, String message, Avalonia.Controls.Notifications.NotificationType type, Nullable<TimeSpan> expiration, Action onClick, Action onClose)
 ```
 
 ## Properties
 
 | Name | Description |
 | --- | --- |
-| [Expiration](#uid-6fa56101ad) | Gets the expiration time of the notification after which it will automatically close. If the value is System.TimeSpan.Zero then the notification will remain open until the user closes it. |
+| [Expiration](#uid-6fa56101ad) | Gets the expiration time of the notification after which it will automatically close. If the value is TimeSpan.Zero then the notification will remain open until the user closes it. |
 | [Message](#uid-e0a025cb3b) | Gets the notification message. |
 | [OnClick](#uid-e4001bd734) | Gets an Action to be run when the notification is clicked. |
 | [OnClose](#uid-2e72068dd2) | Gets an Action to be run when the notification is closed. |
@@ -106,10 +109,10 @@ public Notification(System.String title, System.String message, Avalonia.Control
 ### Expiration
 
 Gets the expiration time of the notification after which it will automatically close.
-If the value is [System.TimeSpan.Zero](xref:System.TimeSpan.Zero) then the notification will remain open until the user closes it.
+If the value is [TimeSpan.Zero](xref:System.TimeSpan.Zero) then the notification will remain open until the user closes it.
 
 ```csharp
-public System.TimeSpan Expiration { get; set; }
+public TimeSpan Expiration { get; set; }
 ```
 
 <span id="uid-e0a025cb3b"></span>
@@ -119,7 +122,7 @@ public System.TimeSpan Expiration { get; set; }
 Gets the notification message.
 
 ```csharp
-public System.String Message { get; set; }
+public String Message { get; set; }
 ```
 
 <span id="uid-e4001bd734"></span>
@@ -129,7 +132,7 @@ public System.String Message { get; set; }
 Gets an Action to be run when the notification is clicked.
 
 ```csharp
-public System.Action OnClick { get; set; }
+public Action OnClick { get; set; }
 ```
 
 <span id="uid-2e72068dd2"></span>
@@ -139,7 +142,7 @@ public System.Action OnClick { get; set; }
 Gets an Action to be run when the notification is closed.
 
 ```csharp
-public System.Action OnClose { get; set; }
+public Action OnClose { get; set; }
 ```
 
 <span id="uid-de74ea6caf"></span>
@@ -149,7 +152,7 @@ public System.Action OnClose { get; set; }
 Gets the Title of the notification.
 
 ```csharp
-public System.String Title { get; set; }
+public String Title { get; set; }
 ```
 
 <span id="uid-406e41cb27"></span>

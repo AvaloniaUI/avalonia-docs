@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/CornerRadius.cs">CornerRadius.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -72,7 +75,7 @@ public struct CornerRadius
 #### CornerRadius
 
 ```csharp
-public CornerRadius(System.Double uniformRadius)
+public CornerRadius(Double uniformRadius)
 ```
 
 <span id="uid-31d04eb040"></span>
@@ -80,7 +83,7 @@ public CornerRadius(System.Double uniformRadius)
 #### CornerRadius
 
 ```csharp
-public CornerRadius(System.Double top, System.Double bottom)
+public CornerRadius(Double top, Double bottom)
 ```
 
 <span id="uid-997e67bcb4"></span>
@@ -88,7 +91,7 @@ public CornerRadius(System.Double top, System.Double bottom)
 #### CornerRadius
 
 ```csharp
-public CornerRadius(System.Double topLeft, System.Double topRight, System.Double bottomRight, System.Double bottomLeft)
+public CornerRadius(Double topLeft, Double topRight, Double bottomRight, Double bottomLeft)
 ```
 
 ## Methods
@@ -111,7 +114,7 @@ public CornerRadius(System.Double topLeft, System.Double topRight, System.Double
 Returns a boolean indicating whether the corner radius is equal to the other given corner radius.
 
 ```csharp
-public System.Boolean Equals(Avalonia.CornerRadius other)
+public Boolean Equals(Avalonia.CornerRadius other)
 ```
 
 | Parameter | Description |
@@ -127,7 +130,7 @@ Returns: True if this corner radius is equal to other; False otherwise.
 Returns a boolean indicating whether the given Object is equal to this corner radius instance.
 
 ```csharp
-public System.Boolean Equals(System.Object obj)
+public Boolean Equals(Object obj)
 ```
 
 | Parameter | Description |
@@ -141,7 +144,7 @@ Returns: True if the Object is equal to this corner radius; False otherwise.
 ### GetHashCode
 
 ```csharp
-public System.Int32 GetHashCode()
+public Int32 GetHashCode()
 ```
 
 <span id="uid-e61b1420ea"></span>
@@ -149,7 +152,7 @@ public System.Int32 GetHashCode()
 ### Parse
 
 ```csharp
-public Avalonia.CornerRadius Parse(System.String s)
+public Avalonia.CornerRadius Parse(String s)
 ```
 
 <span id="uid-01c1fa2067"></span>
@@ -157,7 +160,7 @@ public Avalonia.CornerRadius Parse(System.String s)
 ### ToString
 
 ```csharp
-public System.String ToString()
+public String ToString()
 ```
 
 ## Properties
@@ -177,7 +180,7 @@ public System.String ToString()
 Radius of the bottom left corner.
 
 ```csharp
-public System.Double BottomLeft { get; set; }
+public Double BottomLeft { get; set; }
 ```
 
 <span id="uid-074e49b1fe"></span>
@@ -187,7 +190,7 @@ public System.Double BottomLeft { get; set; }
 Radius of the bottom right corner.
 
 ```csharp
-public System.Double BottomRight { get; set; }
+public Double BottomRight { get; set; }
 ```
 
 <span id="uid-7c583e5924"></span>
@@ -197,7 +200,7 @@ public System.Double BottomRight { get; set; }
 Gets a value indicating whether all corner radii are equal.
 
 ```csharp
-public System.Boolean IsUniform { get; set; }
+public Boolean IsUniform { get; set; }
 ```
 
 <span id="uid-954a54b18e"></span>
@@ -207,7 +210,7 @@ public System.Boolean IsUniform { get; set; }
 Radius of the top left corner.
 
 ```csharp
-public System.Double TopLeft { get; set; }
+public Double TopLeft { get; set; }
 ```
 
 <span id="uid-97197de5f9"></span>
@@ -217,7 +220,7 @@ public System.Double TopLeft { get; set; }
 Radius of the top right corner.
 
 ```csharp
-public System.Double TopRight { get; set; }
+public Double TopRight { get; set; }
 ```
 
 </ApiRefPage>

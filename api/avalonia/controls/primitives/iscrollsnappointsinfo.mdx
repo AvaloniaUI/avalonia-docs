@@ -62,7 +62,7 @@ public interface IScrollSnapPointsInfo
 Returns the set of distances between irregular snap points for a specified orientation and alignment.
 
 ```csharp
-public System.Collections.Generic.IReadOnlyList<System.Double> GetIrregularSnapPoints(Avalonia.Layout.Orientation orientation, Avalonia.Controls.Primitives.SnapPointsAlignment snapPointsAlignment)
+public System.Collections.Generic.IReadOnlyList<Double> GetIrregularSnapPoints(Avalonia.Layout.Orientation orientation, Avalonia.Controls.Primitives.SnapPointsAlignment snapPointsAlignment)
 ```
 
 | Parameter | Description |
@@ -77,7 +77,7 @@ Returns: The read-only collection of snap point distances. Returns an empty coll
 ### GetRegularSnapPoints
 
 ```csharp
-public System.Double GetRegularSnapPoints(Avalonia.Layout.Orientation orientation, Avalonia.Controls.Primitives.SnapPointsAlignment snapPointsAlignment, System.Double& offset)
+public Double GetRegularSnapPoints(Avalonia.Layout.Orientation orientation, Avalonia.Controls.Primitives.SnapPointsAlignment snapPointsAlignment, Double& offset)
 ```
 
 ## Properties
@@ -94,7 +94,7 @@ public System.Double GetRegularSnapPoints(Avalonia.Layout.Orientation orientatio
 Gets or sets a value that indicates whether the horizontal snap points for the container are equidistant from each other.
 
 ```csharp
-public System.Boolean AreHorizontalSnapPointsRegular { get; set; }
+public Boolean AreHorizontalSnapPointsRegular { get; set; }
 ```
 
 <span id="uid-ec49211826"></span>
@@ -104,7 +104,7 @@ public System.Boolean AreHorizontalSnapPointsRegular { get; set; }
 Gets or sets a value that indicates whether the vertical snap points for the container are equidistant from each other.
 
 ```csharp
-public System.Boolean AreVerticalSnapPointsRegular { get; set; }
+public Boolean AreVerticalSnapPointsRegular { get; set; }
 ```
 
 ## Events
@@ -121,7 +121,7 @@ public System.Boolean AreVerticalSnapPointsRegular { get; set; }
 Occurs when the measurements for horizontal snap points change.
 
 ```csharp
-public event System.EventHandler<Avalonia.Interactivity.RoutedEventArgs> HorizontalSnapPointsChanged
+public event EventHandler<Avalonia.Interactivity.RoutedEventArgs> HorizontalSnapPointsChanged
 ```
 
 <span id="uid-c925cfc981"></span>
@@ -131,7 +131,7 @@ public event System.EventHandler<Avalonia.Interactivity.RoutedEventArgs> Horizon
 Occurs when the measurements for vertical snap points change.
 
 ```csharp
-public event System.EventHandler<Avalonia.Interactivity.RoutedEventArgs> VerticalSnapPointsChanged
+public event EventHandler<Avalonia.Interactivity.RoutedEventArgs> VerticalSnapPointsChanged
 ```
 
 </ApiRefPage>

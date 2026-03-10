@@ -61,7 +61,7 @@ public interface ICommandSource
 Called for the CanExecuteChanged event when changes are detected.
 
 ```csharp
-public System.Void CanExecuteChanged(System.Object sender, System.EventArgs e)
+public Void CanExecuteChanged(Object sender, EventArgs e)
 ```
 
 | Parameter | Description |
@@ -97,7 +97,7 @@ The parameter that will be passed to the command when executing the command.
 The property may be implemented as read-write if desired.
 
 ```csharp
-public System.Object CommandParameter { get; set; }
+public Object CommandParameter { get; set; }
 ```
 
 <span id="uid-09a2634b4d"></span>
@@ -107,7 +107,7 @@ public System.Object CommandParameter { get; set; }
 Gets a value indicating whether this control and all its parents are enabled.
 
 ```csharp
-public System.Boolean IsEffectivelyEnabled { get; set; }
+public Boolean IsEffectivelyEnabled { get; set; }
 ```
 
 </ApiRefPage>

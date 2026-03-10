@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Interactivity/RoutedEventRegistry.cs">RoutedEventRegistry.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -108,7 +111,7 @@ Returns all routed events registered with the provided type.
 If the type is not found or does not provide any routed events, an empty list is returned.
 
 ```csharp
-public System.Collections.Generic.IReadOnlyList<Avalonia.Interactivity.RoutedEvent> GetRegistered(System.Type type)
+public System.Collections.Generic.IReadOnlyList<Avalonia.Interactivity.RoutedEvent> GetRegistered(Type type)
 ```
 
 | Parameter | Description |
@@ -124,7 +127,7 @@ Returns: All routed events registered with the provided type.
 Registers a [Avalonia.Interactivity.RoutedEvent](xref:Avalonia.Interactivity.RoutedEvent) on a type.
 
 ```csharp
-public System.Void Register(System.Type type, Avalonia.Interactivity.RoutedEvent event)
+public Void Register(Type type, Avalonia.Interactivity.RoutedEvent event)
 ```
 
 | Parameter | Description |

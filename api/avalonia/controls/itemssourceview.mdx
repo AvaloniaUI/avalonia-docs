@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Controls/ItemsSourceView.cs">ItemsSourceView.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -54,6 +57,9 @@ public class ItemsSourceView
 <span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> ItemsSourceView
 </div>
 <div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Derived types:</span> <a href="itemcollection">ItemCollection</a>, <a href="itemssourceview-1">ItemsSourceView&lt;T&gt;</a>
+</div>
+<div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Implements:</span> ICollectionChangedListener, IEnumerable&lt;Object&gt;, IReadOnlyCollection&lt;Object&gt;, IReadOnlyList&lt;Object&gt;, ICollection, IEnumerable, IList, INotifyCollectionChanged
 </div>
 </div>
@@ -73,7 +79,7 @@ public class ItemsSourceView
 ### Contains
 
 ```csharp
-public System.Boolean Contains(System.Object item)
+public Boolean Contains(Object item)
 ```
 
 <span id="uid-6695c23d5f"></span>
@@ -83,7 +89,7 @@ public System.Boolean Contains(System.Object item)
 Retrieves the item at the specified index.
 
 ```csharp
-public System.Object GetAt(System.Int32 index)
+public Object GetAt(Int32 index)
 ```
 
 | Parameter | Description |
@@ -97,7 +103,7 @@ Returns: The item.
 ### GetEnumerator
 
 ```csharp
-public System.Collections.Generic.IEnumerator<System.Object> GetEnumerator()
+public System.Collections.Generic.IEnumerator<Object> GetEnumerator()
 ```
 
 <span id="uid-690d93f5ab"></span>
@@ -131,7 +137,7 @@ public Avalonia.Controls.ItemsSourceView<T><T> GetOrCreate<T>(System.Collections
 ### IndexOf
 
 ```csharp
-public System.Int32 IndexOf(System.Object item)
+public Int32 IndexOf(Object item)
 ```
 
 ## Properties
@@ -150,7 +156,7 @@ public System.Int32 IndexOf(System.Object item)
 Gets the number of items in the collection.
 
 ```csharp
-public System.Int32 Count { get; set; }
+public Int32 Count { get; set; }
 ```
 
 <span id="uid-4ca040a88a"></span>
@@ -168,7 +174,7 @@ public Avalonia.Controls.ItemsSourceView Empty { get; set; }
 ### Item
 
 ```csharp
-public System.Object Item { get; set; }
+public Object Item { get; set; }
 ```
 
 <span id="uid-d81337be41"></span>

@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Media/Fonts/FontCollectionBase.cs">FontCollectionBase.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__signature">
@@ -45,6 +48,9 @@ public class FontCollectionBase
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> FontCollectionBase
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Derived types:</span> <a href="embeddedfontcollection">EmbeddedFontCollection</a>
 </div>
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Implements:</span> <a href="ifontcollection">IFontCollection</a>, IEnumerable&lt;FontFamily&gt;, IReadOnlyCollection&lt;FontFamily&gt;, IReadOnlyList&lt;FontFamily&gt;, IEnumerable, IDisposable
@@ -79,7 +85,7 @@ public System.Collections.Generic.IEnumerator<Avalonia.Media.FontFamily> GetEnum
 Attempts to add a font source to the font collection.
 
 ```csharp
-public System.Boolean TryAddFontSource(System.Uri source)
+public Boolean TryAddFontSource(Uri source)
 ```
 
 | Parameter | Description |
@@ -101,7 +107,7 @@ collection; otherwise, .
 Attempts to add the specified [Avalonia.Media.GlyphTypeface](xref:Avalonia.Media.GlyphTypeface) to the font collection.
 
 ```csharp
-public System.Boolean TryAddGlyphTypeface(Avalonia.Media.GlyphTypeface glyphTypeface)
+public Boolean TryAddGlyphTypeface(Avalonia.Media.GlyphTypeface glyphTypeface)
 ```
 
 | Parameter | Description |
@@ -117,7 +123,7 @@ Returns: if the glyph typeface was successfully added to the collection; otherwi
 Attempts to add the specified glyph typeface to the collection using the provided key.
 
 ```csharp
-public System.Boolean TryAddGlyphTypeface(Avalonia.Media.GlyphTypeface glyphTypeface, Avalonia.Media.Fonts.FontCollectionKey key)
+public Boolean TryAddGlyphTypeface(Avalonia.Media.GlyphTypeface glyphTypeface, Avalonia.Media.Fonts.FontCollectionKey key)
 ```
 
 | Parameter | Description |
@@ -132,7 +138,7 @@ Returns: true if the glyph typeface was successfully added to the collection; ot
 #### TryAddGlyphTypeface
 
 ```csharp
-public System.Boolean TryAddGlyphTypeface(System.IO.Stream stream, Avalonia.Media.GlyphTypeface& glyphTypeface)
+public Boolean TryAddGlyphTypeface(System.IO.Stream stream, Avalonia.Media.GlyphTypeface& glyphTypeface)
 ```
 
 <span id="uid-b5d7083d39"></span>
@@ -140,7 +146,7 @@ public System.Boolean TryAddGlyphTypeface(System.IO.Stream stream, Avalonia.Medi
 ### TryCreateSyntheticGlyphTypeface
 
 ```csharp
-public System.Boolean TryCreateSyntheticGlyphTypeface(Avalonia.Media.GlyphTypeface glyphTypeface, Avalonia.Media.FontStyle style, Avalonia.Media.FontWeight weight, Avalonia.Media.FontStretch stretch, Avalonia.Media.GlyphTypeface& syntheticGlyphTypeface)
+public Boolean TryCreateSyntheticGlyphTypeface(Avalonia.Media.GlyphTypeface glyphTypeface, Avalonia.Media.FontStyle style, Avalonia.Media.FontWeight weight, Avalonia.Media.FontStretch stretch, Avalonia.Media.GlyphTypeface& syntheticGlyphTypeface)
 ```
 
 <span id="uid-914d5895fd"></span>
@@ -148,7 +154,7 @@ public System.Boolean TryCreateSyntheticGlyphTypeface(Avalonia.Media.GlyphTypefa
 ### TryGetFamilyTypefaces
 
 ```csharp
-public System.Boolean TryGetFamilyTypefaces(System.String familyName, System.Collections.Generic.IReadOnlyList<Avalonia.Media.Typeface>& familyTypefaces)
+public Boolean TryGetFamilyTypefaces(String familyName, System.Collections.Generic.IReadOnlyList<Avalonia.Media.Typeface>& familyTypefaces)
 ```
 
 <span id="uid-4b6a0baff2"></span>
@@ -156,7 +162,7 @@ public System.Boolean TryGetFamilyTypefaces(System.String familyName, System.Col
 ### TryGetGlyphTypeface
 
 ```csharp
-public System.Boolean TryGetGlyphTypeface(System.String familyName, Avalonia.Media.FontStyle style, Avalonia.Media.FontWeight weight, Avalonia.Media.FontStretch stretch, Avalonia.Media.GlyphTypeface& glyphTypeface)
+public Boolean TryGetGlyphTypeface(String familyName, Avalonia.Media.FontStyle style, Avalonia.Media.FontWeight weight, Avalonia.Media.FontStretch stretch, Avalonia.Media.GlyphTypeface& glyphTypeface)
 ```
 
 <span id="uid-94e13da064"></span>
@@ -164,7 +170,7 @@ public System.Boolean TryGetGlyphTypeface(System.String familyName, Avalonia.Med
 ### TryGetNearestMatch
 
 ```csharp
-public System.Boolean TryGetNearestMatch(System.String familyName, Avalonia.Media.FontStyle style, Avalonia.Media.FontWeight weight, Avalonia.Media.FontStretch stretch, Avalonia.Media.GlyphTypeface& glyphTypeface)
+public Boolean TryGetNearestMatch(String familyName, Avalonia.Media.FontStyle style, Avalonia.Media.FontWeight weight, Avalonia.Media.FontStretch stretch, Avalonia.Media.GlyphTypeface& glyphTypeface)
 ```
 
 <span id="uid-d6ab1b26c8"></span>
@@ -172,7 +178,7 @@ public System.Boolean TryGetNearestMatch(System.String familyName, Avalonia.Medi
 ### TryMatchCharacter
 
 ```csharp
-public System.Boolean TryMatchCharacter(System.Int32 codepoint, Avalonia.Media.FontStyle style, Avalonia.Media.FontWeight weight, Avalonia.Media.FontStretch stretch, System.String familyName, System.Globalization.CultureInfo culture, Avalonia.Media.Typeface& match)
+public Boolean TryMatchCharacter(Int32 codepoint, Avalonia.Media.FontStyle style, Avalonia.Media.FontWeight weight, Avalonia.Media.FontStretch stretch, String familyName, System.Globalization.CultureInfo culture, Avalonia.Media.Typeface& match)
 ```
 
 ## Properties
@@ -188,7 +194,7 @@ public System.Boolean TryMatchCharacter(System.Int32 codepoint, Avalonia.Media.F
 ### Count
 
 ```csharp
-public System.Int32 Count { get; set; }
+public Int32 Count { get; set; }
 ```
 
 <span id="uid-4ccbe060c2"></span>
@@ -204,7 +210,7 @@ public Avalonia.Media.FontFamily Item { get; set; }
 ### Key
 
 ```csharp
-public System.Uri Key { get; set; }
+public Uri Key { get; set; }
 ```
 
 </ApiRefPage>

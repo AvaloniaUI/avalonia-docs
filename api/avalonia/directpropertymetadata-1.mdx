@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/DirectPropertyMetadata%601.cs">DirectPropertyMetadata`1.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -68,7 +71,7 @@ public class DirectPropertyMetadata<TValue>
 ### DirectPropertyMetadata&lt;TValue&gt;
 
 ```csharp
-public DirectPropertyMetadata<TValue>(TValue unsetValue, Avalonia.Data.BindingMode defaultBindingMode, System.Nullable<System.Boolean> enableDataValidation)
+public DirectPropertyMetadata<TValue>(TValue unsetValue, Avalonia.Data.BindingMode defaultBindingMode, Nullable<Boolean> enableDataValidation)
 ```
 
 ## Methods
@@ -77,6 +80,7 @@ public DirectPropertyMetadata<TValue>(TValue unsetValue, Avalonia.Data.BindingMo
 | --- | --- |
 | [GenerateTypeSafeMetadata](#uid-8348d150cb) | Gets a copy of this object configured for use with any owner type. |
 | [Merge](#uid-0fbbcffba7) | Merges the metadata with the base metadata. |
+| [Freeze (Inherited from AvaloniaPropertyMetadata)](avaloniapropertymetadata.mdx#uid-db1cdb0cff) | Makes this instance read-only. No further modifications are allowed after this call. |
 
 <span id="uid-8348d150cb"></span>
 
@@ -95,7 +99,7 @@ public Avalonia.AvaloniaPropertyMetadata GenerateTypeSafeMetadata()
 Merges the metadata with the base metadata.
 
 ```csharp
-public System.Void Merge(Avalonia.AvaloniaPropertyMetadata baseMetadata, Avalonia.AvaloniaProperty property)
+public Void Merge(Avalonia.AvaloniaPropertyMetadata baseMetadata, Avalonia.AvaloniaProperty property)
 ```
 
 | Parameter | Description |
@@ -108,6 +112,9 @@ public System.Void Merge(Avalonia.AvaloniaPropertyMetadata baseMetadata, Avaloni
 | Name | Description |
 | --- | --- |
 | [UnsetValue](#uid-76f34367f7) | Gets the value to use when the property is set to Avalonia.AvaloniaProperty.UnsetValue. |
+| [DefaultBindingMode (Inherited from AvaloniaPropertyMetadata)](avaloniapropertymetadata.mdx#uid-b6d03b8752) | Gets the default binding mode for the property. |
+| [EnableDataValidation (Inherited from AvaloniaPropertyMetadata)](avaloniapropertymetadata.mdx#uid-aa782b0da1) | Gets a value indicating whether the property is interested in data validation. |
+| [IsReadOnly (Inherited from AvaloniaPropertyMetadata)](avaloniapropertymetadata.mdx#uid-8222a9d293) | Gets whether this instance is read-only and can't be modified. |
 
 <span id="uid-76f34367f7"></span>
 

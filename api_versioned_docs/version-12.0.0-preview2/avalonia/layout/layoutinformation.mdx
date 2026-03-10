@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Layout/LayoutInformation.cs">LayoutInformation.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -68,7 +71,7 @@ public class LayoutInformation
 Gets the control bounds used in the previous layout arrange pass.
 
 ```csharp
-public System.Nullable<Avalonia.Rect> GetPreviousArrangeBounds(Avalonia.Layout.Layoutable control)
+public Nullable<Avalonia.Rect> GetPreviousArrangeBounds(Avalonia.Layout.Layoutable control)
 ```
 
 | Parameter | Description |
@@ -84,7 +87,7 @@ Returns: Previous control arrange bounds, if any.
 Gets the available size constraint passed in the previous layout pass.
 
 ```csharp
-public System.Nullable<Avalonia.Size> GetPreviousMeasureConstraint(Avalonia.Layout.Layoutable control)
+public Nullable<Avalonia.Size> GetPreviousMeasureConstraint(Avalonia.Layout.Layoutable control)
 ```
 
 | Parameter | Description |

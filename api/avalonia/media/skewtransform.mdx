@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Media/SkewTransform.cs">SkewTransform.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -81,13 +84,34 @@ public SkewTransform()
 Initializes a new instance of the [Avalonia.Media.SkewTransform](xref:Avalonia.Media.SkewTransform) class.
 
 ```csharp
-public SkewTransform(System.Double angleX, System.Double angleY)
+public SkewTransform(Double angleX, Double angleY)
 ```
 
 | Parameter | Description |
 | --- | --- |
 | `angleX` | The skew angle of X-axis, in degrees. |
 | `angleY` | The skew angle of Y-axis, in degrees. |
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Parse (Inherited from Transform)](transform.mdx#uid-1be8bdbe67) | Parses a Avalonia.Media.Transform string. |
+| [ToImmutable (Inherited from Transform)](transform.mdx#uid-1ae7a66239) | Converts a transform to an immutable transform. |
+| [ToString (Inherited from Transform)](transform.mdx#uid-582ae45701) | Returns a String representing this transform matrix instance. |
+| [Bind (8 overloads) (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-1c60c7bda3) | Binds a Avalonia.AvaloniaProperty to an Avalonia.Data.BindingBase. |
+| [CheckAccess (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-260ff7a68d) | Returns a value indicating whether the current thread is the UI thread. |
+| [ClearValue (4 overloads) (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-41de208fbe) | Clears a Avalonia.AvaloniaProperty's local value. |
+| [CoerceValue (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-3bec32f39e) | Coerces the specified Avalonia.AvaloniaProperty. |
+| [Equals (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-a8a8e94305) | Compares two objects using reference equality. |
+| [GetBaseValue (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-9c615efbba) | No summary available. |
+| [GetHashCode (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-7f7db1e7a2) | Gets the hash code for the object. |
+| [GetValue (3 overloads) (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-5142cd4792) | Gets a Avalonia.AvaloniaProperty value. |
+| [IsAnimating (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-8cbfc7521a) | Checks whether a Avalonia.AvaloniaProperty is animating. |
+| [IsSet (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-f8bf0bbdcc) | Checks whether a Avalonia.AvaloniaProperty is set on this object. |
+| [SetCurrentValue (2 overloads) (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-38759fd088) | Sets the value of a dependency property without changing its value source. |
+| [SetValue (3 overloads) (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-47d14e19d7) | Sets a Avalonia.AvaloniaProperty value. |
+| [VerifyAccess (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-3b9d3c9793) | Checks that the current thread is the UI thread and throws if not. |
 
 ## Properties
 
@@ -96,6 +120,9 @@ public SkewTransform(System.Double angleX, System.Double angleY)
 | [AngleX](#uid-09f58aa7fe) | Gets or sets the AngleX property. |
 | [AngleY](#uid-88c8225886) | Gets or sets the AngleY property. |
 | [Value](#uid-ed22f7d4d7) | Gets the transform's Avalonia.Matrix. |
+| [Transitions (Inherited from Animatable)](../animation/animatable.mdx#uid-1b3138f517) | Gets or sets the property transitions for the control. |
+| [Dispatcher (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-b25fa51632) | Returns the Avalonia.AvaloniaObject.Dispatcher that this Avalonia.AvaloniaObject is associated with. |
+| [Item (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-c1d1f1bc0f) | No summary available. |
 
 <span id="uid-09f58aa7fe"></span>
 
@@ -104,7 +131,7 @@ public SkewTransform(System.Double angleX, System.Double angleY)
 Gets or sets the AngleX property.
 
 ```csharp
-public System.Double AngleX { get; set; }
+public Double AngleX { get; set; }
 ```
 
 <span id="uid-88c8225886"></span>
@@ -114,7 +141,7 @@ public System.Double AngleX { get; set; }
 Gets or sets the AngleY property.
 
 ```csharp
-public System.Double AngleY { get; set; }
+public Double AngleY { get; set; }
 ```
 
 <span id="uid-ed22f7d4d7"></span>
@@ -133,6 +160,7 @@ public Avalonia.Matrix Value { get; set; }
 | --- | --- |
 | [AngleXProperty](#uid-69ff3ba48c) | Defines the Avalonia.Media.SkewTransform.AngleX property. |
 | [AngleYProperty](#uid-1bb21150f4) | Defines the Avalonia.Media.SkewTransform.AngleY property. |
+| [TransitionsProperty (Inherited from Animatable)](../animation/animatable.mdx#uid-c79f18fac2) | Defines the Avalonia.Animation.Animatable.Transitions property. |
 
 <span id="uid-69ff3ba48c"></span>
 
@@ -141,7 +169,7 @@ public Avalonia.Matrix Value { get; set; }
 Defines the [Avalonia.Media.SkewTransform.AngleX](xref:Avalonia.Media.SkewTransform.AngleX) property.
 
 ```csharp
-public Avalonia.StyledProperty<TValue><System.Double> AngleXProperty
+public Avalonia.StyledProperty<TValue><Double> AngleXProperty
 ```
 
 <span id="uid-1bb21150f4"></span>
@@ -151,8 +179,15 @@ public Avalonia.StyledProperty<TValue><System.Double> AngleXProperty
 Defines the [Avalonia.Media.SkewTransform.AngleY](xref:Avalonia.Media.SkewTransform.AngleY) property.
 
 ```csharp
-public Avalonia.StyledProperty<TValue><System.Double> AngleYProperty
+public Avalonia.StyledProperty<TValue><Double> AngleYProperty
 ```
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [Changed (Inherited from Transform)](transform.mdx#uid-59de490f29) | Raised when the transform changes. |
+| [PropertyChanged (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-d758e26fae) | Raised when a Avalonia.AvaloniaProperty value changes on this object. |
 
 </ApiRefPage>
 

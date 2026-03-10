@@ -75,7 +75,7 @@ characters to typefaces, and obtain glyph typefaces based on specific font prope
 ### TryCreateSyntheticGlyphTypeface
 
 ```csharp
-public System.Boolean TryCreateSyntheticGlyphTypeface(Avalonia.Media.GlyphTypeface glyphTypeface, Avalonia.Media.FontStyle style, Avalonia.Media.FontWeight weight, Avalonia.Media.FontStretch stretch, Avalonia.Media.GlyphTypeface& syntheticGlyphTypeface)
+public Boolean TryCreateSyntheticGlyphTypeface(Avalonia.Media.GlyphTypeface glyphTypeface, Avalonia.Media.FontStyle style, Avalonia.Media.FontWeight weight, Avalonia.Media.FontStretch stretch, Avalonia.Media.GlyphTypeface& syntheticGlyphTypeface)
 ```
 
 <span id="uid-535a1f6c5a"></span>
@@ -83,7 +83,7 @@ public System.Boolean TryCreateSyntheticGlyphTypeface(Avalonia.Media.GlyphTypefa
 ### TryGetFamilyTypefaces
 
 ```csharp
-public System.Boolean TryGetFamilyTypefaces(System.String familyName, System.Collections.Generic.IReadOnlyList<Avalonia.Media.Typeface>& familyTypefaces)
+public Boolean TryGetFamilyTypefaces(String familyName, System.Collections.Generic.IReadOnlyList<Avalonia.Media.Typeface>& familyTypefaces)
 ```
 
 <span id="uid-ebfb3e8f85"></span>
@@ -91,7 +91,7 @@ public System.Boolean TryGetFamilyTypefaces(System.String familyName, System.Col
 ### TryGetGlyphTypeface
 
 ```csharp
-public System.Boolean TryGetGlyphTypeface(System.String familyName, Avalonia.Media.FontStyle style, Avalonia.Media.FontWeight weight, Avalonia.Media.FontStretch stretch, Avalonia.Media.GlyphTypeface& glyphTypeface)
+public Boolean TryGetGlyphTypeface(String familyName, Avalonia.Media.FontStyle style, Avalonia.Media.FontWeight weight, Avalonia.Media.FontStretch stretch, Avalonia.Media.GlyphTypeface& glyphTypeface)
 ```
 
 <span id="uid-0fec697313"></span>
@@ -99,7 +99,7 @@ public System.Boolean TryGetGlyphTypeface(System.String familyName, Avalonia.Med
 ### TryGetNearestMatch
 
 ```csharp
-public System.Boolean TryGetNearestMatch(System.String familyName, Avalonia.Media.FontStyle style, Avalonia.Media.FontWeight weight, Avalonia.Media.FontStretch stretch, Avalonia.Media.GlyphTypeface& glyphTypeface)
+public Boolean TryGetNearestMatch(String familyName, Avalonia.Media.FontStyle style, Avalonia.Media.FontWeight weight, Avalonia.Media.FontStretch stretch, Avalonia.Media.GlyphTypeface& glyphTypeface)
 ```
 
 <span id="uid-8c928c04ca"></span>
@@ -107,7 +107,7 @@ public System.Boolean TryGetNearestMatch(System.String familyName, Avalonia.Medi
 ### TryMatchCharacter
 
 ```csharp
-public System.Boolean TryMatchCharacter(System.Int32 codepoint, Avalonia.Media.FontStyle fontStyle, Avalonia.Media.FontWeight fontWeight, Avalonia.Media.FontStretch fontStretch, System.String familyName, System.Globalization.CultureInfo culture, Avalonia.Media.Typeface& typeface)
+public Boolean TryMatchCharacter(Int32 codepoint, Avalonia.Media.FontStyle fontStyle, Avalonia.Media.FontWeight fontWeight, Avalonia.Media.FontStretch fontStretch, String familyName, System.Globalization.CultureInfo culture, Avalonia.Media.Typeface& typeface)
 ```
 
 ## Properties
@@ -123,7 +123,7 @@ public System.Boolean TryMatchCharacter(System.Int32 codepoint, Avalonia.Media.F
 Get the font collection's key.
 
 ```csharp
-public System.Uri Key { get; set; }
+public Uri Key { get; set; }
 ```
 
 </ApiRefPage>

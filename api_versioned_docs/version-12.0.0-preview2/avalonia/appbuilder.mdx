@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Controls/AppBuilder.cs">AppBuilder.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -78,7 +81,7 @@ public class AppBuilder
 ### AfterPlatformServicesSetup
 
 ```csharp
-public Avalonia.AppBuilder AfterPlatformServicesSetup(System.Action<Avalonia.AppBuilder> callback)
+public Avalonia.AppBuilder AfterPlatformServicesSetup(Action<Avalonia.AppBuilder> callback)
 ```
 
 <span id="uid-948b082425"></span>
@@ -86,7 +89,7 @@ public Avalonia.AppBuilder AfterPlatformServicesSetup(System.Action<Avalonia.App
 ### AfterSetup
 
 ```csharp
-public Avalonia.AppBuilder AfterSetup(System.Action<Avalonia.AppBuilder> callback)
+public Avalonia.AppBuilder AfterSetup(Action<Avalonia.AppBuilder> callback)
 ```
 
 <span id="uid-ba4b51c1d4"></span>
@@ -106,7 +109,7 @@ public Avalonia.AppBuilder Configure<TApp>()
 #### Configure
 
 ```csharp
-public Avalonia.AppBuilder Configure<TApp>(System.Func<TApp> appFactory)
+public Avalonia.AppBuilder Configure<TApp>(Func<TApp> appFactory)
 ```
 
 <span id="uid-06e9575c0d"></span>
@@ -114,7 +117,7 @@ public Avalonia.AppBuilder Configure<TApp>(System.Func<TApp> appFactory)
 ### ConfigureFonts
 
 ```csharp
-public Avalonia.AppBuilder ConfigureFonts(System.Action<Avalonia.Media.FontManager> action)
+public Avalonia.AppBuilder ConfigureFonts(Action<Avalonia.Media.FontManager> action)
 ```
 
 <span id="uid-ee63b9b324"></span>
@@ -146,7 +149,7 @@ public Avalonia.AppBuilder SetupWithoutStarting()
 ### Start
 
 ```csharp
-public System.Void Start(Avalonia.AppBuilder.AppMainDelegate main, System.String[] args)
+public Void Start(Avalonia.AppBuilder.AppMainDelegate main, String[] args)
 ```
 
 <span id="uid-49ad9d2a31"></span>
@@ -156,7 +159,7 @@ public System.Void Start(Avalonia.AppBuilder.AppMainDelegate main, System.String
 Specifies a rendering subsystem to use.
 
 ```csharp
-public Avalonia.AppBuilder UseRenderingSubsystem(System.Action initializer, System.String name)
+public Avalonia.AppBuilder UseRenderingSubsystem(Action initializer, String name)
 ```
 
 | Parameter | Description |
@@ -173,7 +176,7 @@ Returns: An [Avalonia.AppBuilder](xref:Avalonia.AppBuilder) instance.
 Specifies a runtime platform subsystem to use.
 
 ```csharp
-public Avalonia.AppBuilder UseRuntimePlatformSubsystem(System.Action initializer, System.String name)
+public Avalonia.AppBuilder UseRuntimePlatformSubsystem(Action initializer, String name)
 ```
 
 | Parameter | Description |
@@ -202,7 +205,7 @@ Returns: An [Avalonia.AppBuilder](xref:Avalonia.AppBuilder) instance.
 Specifies a text shaping subsystem to use.
 
 ```csharp
-public Avalonia.AppBuilder UseTextShapingSubsystem(System.Action initializer, System.String name)
+public Avalonia.AppBuilder UseTextShapingSubsystem(Action initializer, String name)
 ```
 
 | Parameter | Description |
@@ -219,7 +222,7 @@ Returns: An [Avalonia.AppBuilder](xref:Avalonia.AppBuilder) instance.
 Specifies a windowing subsystem to use.
 
 ```csharp
-public Avalonia.AppBuilder UseWindowingSubsystem(System.Action initializer, System.String name)
+public Avalonia.AppBuilder UseWindowingSubsystem(Action initializer, String name)
 ```
 
 | Parameter | Description |
@@ -238,7 +241,7 @@ Returns: An [Avalonia.AppBuilder](xref:Avalonia.AppBuilder) instance.
 #### With
 
 ```csharp
-public Avalonia.AppBuilder With<T>(System.Func<T> options)
+public Avalonia.AppBuilder With<T>(Func<T> options)
 ```
 
 <span id="uid-76292f668e"></span>
@@ -281,7 +284,7 @@ public Avalonia.AppBuilder WithDataAnnotationsValidation()
 ### AfterPlatformServicesSetupCallback
 
 ```csharp
-public System.Action<Avalonia.AppBuilder> AfterPlatformServicesSetupCallback { get; set; }
+public Action<Avalonia.AppBuilder> AfterPlatformServicesSetupCallback { get; set; }
 ```
 
 <span id="uid-62825021bb"></span>
@@ -291,7 +294,7 @@ public System.Action<Avalonia.AppBuilder> AfterPlatformServicesSetupCallback { g
 Gets a method to call after the [Avalonia.Application](xref:Avalonia.Application) is setup.
 
 ```csharp
-public System.Action<Avalonia.AppBuilder> AfterSetupCallback { get; set; }
+public Action<Avalonia.AppBuilder> AfterSetupCallback { get; set; }
 ```
 
 <span id="uid-16dc62a0ac"></span>
@@ -301,7 +304,7 @@ public System.Action<Avalonia.AppBuilder> AfterSetupCallback { get; set; }
 Gets the type of the Instance (even if it's not created yet)
 
 ```csharp
-public System.Type ApplicationType { get; set; }
+public Type ApplicationType { get; set; }
 ```
 
 <span id="uid-ea3a6ab475"></span>
@@ -321,7 +324,7 @@ public Avalonia.Application Instance { get; set; }
 Gets or sets a method to call the initialize the windowing subsystem.
 
 ```csharp
-public System.Action RenderingSubsystemInitializer { get; set; }
+public Action RenderingSubsystemInitializer { get; set; }
 ```
 
 <span id="uid-eb1c42e656"></span>
@@ -331,7 +334,7 @@ public System.Action RenderingSubsystemInitializer { get; set; }
 Gets the name of the currently selected rendering subsystem.
 
 ```csharp
-public System.String RenderingSubsystemName { get; set; }
+public String RenderingSubsystemName { get; set; }
 ```
 
 <span id="uid-ea87d2ecfb"></span>
@@ -341,7 +344,7 @@ public System.String RenderingSubsystemName { get; set; }
 Gets or sets a method to call the initialize the runtime platform services (e. g. AssetLoader)
 
 ```csharp
-public System.Action RuntimePlatformServicesInitializer { get; set; }
+public Action RuntimePlatformServicesInitializer { get; set; }
 ```
 
 <span id="uid-41be63bf0d"></span>
@@ -351,7 +354,7 @@ public System.Action RuntimePlatformServicesInitializer { get; set; }
 Gets the name of the currently selected windowing subsystem.
 
 ```csharp
-public System.String RuntimePlatformServicesName { get; set; }
+public String RuntimePlatformServicesName { get; set; }
 ```
 
 <span id="uid-c1b81b7390"></span>
@@ -361,7 +364,7 @@ public System.String RuntimePlatformServicesName { get; set; }
 Gets or sets a method to call the initialize the text shaping subsystem.
 
 ```csharp
-public System.Action TextShapingSubsystemInitializer { get; set; }
+public Action TextShapingSubsystemInitializer { get; set; }
 ```
 
 <span id="uid-a3cc06ef06"></span>
@@ -371,7 +374,7 @@ public System.Action TextShapingSubsystemInitializer { get; set; }
 Gets the name of the currently selected text shaping subsystem.
 
 ```csharp
-public System.String TextShapingSubsystemName { get; set; }
+public String TextShapingSubsystemName { get; set; }
 ```
 
 <span id="uid-78f8ad74a9"></span>
@@ -381,7 +384,7 @@ public System.String TextShapingSubsystemName { get; set; }
 Gets or sets a method to call the initialize the windowing subsystem.
 
 ```csharp
-public System.Action WindowingSubsystemInitializer { get; set; }
+public Action WindowingSubsystemInitializer { get; set; }
 ```
 
 <span id="uid-7d0f73060a"></span>
@@ -391,7 +394,7 @@ public System.Action WindowingSubsystemInitializer { get; set; }
 Gets the name of the currently selected windowing subsystem.
 
 ```csharp
-public System.String WindowingSubsystemName { get; set; }
+public String WindowingSubsystemName { get; set; }
 ```
 
 </ApiRefPage>

@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Data/Core/ClrPropertyInfo.cs">ClrPropertyInfo.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__signature">
@@ -45,6 +48,9 @@ public class ClrPropertyInfo
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> ClrPropertyInfo
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Derived types:</span> <a href="reflectionclrpropertyinfo">ReflectionClrPropertyInfo</a>
 </div>
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Implements:</span> <a href="ipropertyinfo">IPropertyInfo</a>
@@ -62,7 +68,7 @@ public class ClrPropertyInfo
 ### ClrPropertyInfo
 
 ```csharp
-public ClrPropertyInfo(System.String name, System.Func<System.Object, System.Object> getter, System.Action<System.Object, System.Object> setter, System.Type propertyType)
+public ClrPropertyInfo(String name, Func<Object, Object> getter, Action<Object, Object> setter, Type propertyType)
 ```
 
 ## Methods
@@ -77,7 +83,7 @@ public ClrPropertyInfo(System.String name, System.Func<System.Object, System.Obj
 ### Get
 
 ```csharp
-public System.Object Get(System.Object target)
+public Object Get(Object target)
 ```
 
 <span id="uid-5d54e72884"></span>
@@ -85,7 +91,7 @@ public System.Object Get(System.Object target)
 ### Set
 
 ```csharp
-public System.Void Set(System.Object target, System.Object value)
+public Void Set(Object target, Object value)
 ```
 
 ## Properties
@@ -102,7 +108,7 @@ public System.Void Set(System.Object target, System.Object value)
 ### CanGet
 
 ```csharp
-public System.Boolean CanGet { get; set; }
+public Boolean CanGet { get; set; }
 ```
 
 <span id="uid-56969184ec"></span>
@@ -110,7 +116,7 @@ public System.Boolean CanGet { get; set; }
 ### CanSet
 
 ```csharp
-public System.Boolean CanSet { get; set; }
+public Boolean CanSet { get; set; }
 ```
 
 <span id="uid-4ee36b72a5"></span>
@@ -118,7 +124,7 @@ public System.Boolean CanSet { get; set; }
 ### Name
 
 ```csharp
-public System.String Name { get; set; }
+public String Name { get; set; }
 ```
 
 <span id="uid-1fda7227bd"></span>
@@ -126,7 +132,7 @@ public System.String Name { get; set; }
 ### PropertyType
 
 ```csharp
-public System.Type PropertyType { get; set; }
+public Type PropertyType { get; set; }
 ```
 
 </ApiRefPage>

@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Controls/Generators/ItemContainerGenerator.cs">ItemContainerGenerator.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -59,48 +62,48 @@ public class ItemContainerGenerator
 When creating a container for an item from a [Avalonia.Controls.VirtualizingPanel](xref:Avalonia.Controls.VirtualizingPanel), the following
 process should be followed:
 
-- [Avalonia.Controls.Generators.ItemContainerGenerator.NeedsContainer(System.Object,System.Int32,System.Object@)](xref:Avalonia.Controls.Generators.ItemContainerGenerator.NeedsContainer%28System.Object%2CSystem.Int32%2CSystem.Object%40%29) should first be called to
+- [Avalonia.Controls.Generators.ItemContainerGenerator.NeedsContainer(Object,Int32,Object@)](xref:Avalonia.Controls.Generators.ItemContainerGenerator.NeedsContainer%28System.Object%2CSystem.Int32%2CSystem.Object%40%29) should first be called to
 determine whether the item needs a container. This method will return true if the item
 should be wrapped in a container control, or false if the item itself can be used as a
 container.
-- If [Avalonia.Controls.Generators.ItemContainerGenerator.NeedsContainer(System.Object,System.Int32,System.Object@)](xref:Avalonia.Controls.Generators.ItemContainerGenerator.NeedsContainer%28System.Object%2CSystem.Int32%2CSystem.Object%40%29) returns true then the
-[Avalonia.Controls.Generators.ItemContainerGenerator.CreateContainer(System.Object,System.Int32,System.Object)](xref:Avalonia.Controls.Generators.ItemContainerGenerator.CreateContainer%28System.Object%2CSystem.Int32%2CSystem.Object%29) method should be called to create a new container, passing
-the recycle key returned from [Avalonia.Controls.Generators.ItemContainerGenerator.NeedsContainer(System.Object,System.Int32,System.Object@)](xref:Avalonia.Controls.Generators.ItemContainerGenerator.NeedsContainer%28System.Object%2CSystem.Int32%2CSystem.Object%40%29).
+- If [Avalonia.Controls.Generators.ItemContainerGenerator.NeedsContainer(Object,Int32,Object@)](xref:Avalonia.Controls.Generators.ItemContainerGenerator.NeedsContainer%28System.Object%2CSystem.Int32%2CSystem.Object%40%29) returns true then the
+[Avalonia.Controls.Generators.ItemContainerGenerator.CreateContainer(Object,Int32,Object)](xref:Avalonia.Controls.Generators.ItemContainerGenerator.CreateContainer%28System.Object%2CSystem.Int32%2CSystem.Object%29) method should be called to create a new container, passing
+the recycle key returned from [Avalonia.Controls.Generators.ItemContainerGenerator.NeedsContainer(Object,Int32,Object@)](xref:Avalonia.Controls.Generators.ItemContainerGenerator.NeedsContainer%28System.Object%2CSystem.Int32%2CSystem.Object%40%29).
 - If the panel supports recycling and the recycle key is non-null then the recycle key
 should be recorded for the container (e.g. in an attached property or the realized
 container list).
-- [Avalonia.Controls.Generators.ItemContainerGenerator.PrepareItemContainer(Avalonia.Controls.Control,System.Object,System.Int32)](xref:Avalonia.Controls.Generators.ItemContainerGenerator.PrepareItemContainer%28Avalonia.Controls.Control%2CSystem.Object%2CSystem.Int32%29) method should be called for the
+- [Avalonia.Controls.Generators.ItemContainerGenerator.PrepareItemContainer(Avalonia.Controls.Control,Object,Int32)](xref:Avalonia.Controls.Generators.ItemContainerGenerator.PrepareItemContainer%28Avalonia.Controls.Control%2CSystem.Object%2CSystem.Int32%29) method should be called for the
 container.
 - The container should then be added to the panel using
 [Avalonia.Controls.VirtualizingPanel.AddInternalChild(Avalonia.Controls.Control)](xref:Avalonia.Controls.VirtualizingPanel.AddInternalChild%28Avalonia.Controls.Control%29)
-- Finally, [Avalonia.Controls.Generators.ItemContainerGenerator.ItemContainerPrepared(Avalonia.Controls.Control,System.Object,System.Int32)](xref:Avalonia.Controls.Generators.ItemContainerGenerator.ItemContainerPrepared%28Avalonia.Controls.Control%2CSystem.Object%2CSystem.Int32%29) should be called.
+- Finally, [Avalonia.Controls.Generators.ItemContainerGenerator.ItemContainerPrepared(Avalonia.Controls.Control,Object,Int32)](xref:Avalonia.Controls.Generators.ItemContainerGenerator.ItemContainerPrepared%28Avalonia.Controls.Control%2CSystem.Object%2CSystem.Int32%29) should be called.
 
-NOTE: If [Avalonia.Controls.Generators.ItemContainerGenerator.NeedsContainer(System.Object,System.Int32,System.Object@)](xref:Avalonia.Controls.Generators.ItemContainerGenerator.NeedsContainer%28System.Object%2CSystem.Int32%2CSystem.Object%40%29) in the first step above
+NOTE: If [Avalonia.Controls.Generators.ItemContainerGenerator.NeedsContainer(Object,Int32,Object@)](xref:Avalonia.Controls.Generators.ItemContainerGenerator.NeedsContainer%28System.Object%2CSystem.Int32%2CSystem.Object%40%29) in the first step above
 returns false then the above steps should be carried out a single time: the first time the
 item is displayed. Otherwise the steps should be carried out each time a new container is
 realized for an item.
 
 When unrealizing a container, the following process should be followed:
 
-- If [Avalonia.Controls.Generators.ItemContainerGenerator.NeedsContainer(System.Object,System.Int32,System.Object@)](xref:Avalonia.Controls.Generators.ItemContainerGenerator.NeedsContainer%28System.Object%2CSystem.Int32%2CSystem.Object%40%29) for the item returned false
+- If [Avalonia.Controls.Generators.ItemContainerGenerator.NeedsContainer(Object,Int32,Object@)](xref:Avalonia.Controls.Generators.ItemContainerGenerator.NeedsContainer%28System.Object%2CSystem.Int32%2CSystem.Object%40%29) for the item returned false
 then the item cannot be unrealized or recycled.
 - Otherwise, [Avalonia.Controls.Generators.ItemContainerGenerator.ClearItemContainer(Avalonia.Controls.Control)](xref:Avalonia.Controls.Generators.ItemContainerGenerator.ClearItemContainer%28Avalonia.Controls.Control%29) should be called for the container
 - If recycling is supported by the panel and the container then the container should be
 added to a recycle pool keyed on the recycle key returned from
-[Avalonia.Controls.Generators.ItemContainerGenerator.NeedsContainer(System.Object,System.Int32,System.Object@)](xref:Avalonia.Controls.Generators.ItemContainerGenerator.NeedsContainer%28System.Object%2CSystem.Int32%2CSystem.Object%40%29). It is assumed that recycled
+[Avalonia.Controls.Generators.ItemContainerGenerator.NeedsContainer(Object,Int32,Object@)](xref:Avalonia.Controls.Generators.ItemContainerGenerator.NeedsContainer%28System.Object%2CSystem.Int32%2CSystem.Object%40%29). It is assumed that recycled
 containers will not be removed from the panel but instead hidden from view using
 e.g. `container.IsVisible = false`.
 - If recycling is not supported then the container should be removed from the panel.
 
 When recycling an unrealized container, the following process should be followed:
 
-- [Avalonia.Controls.Generators.ItemContainerGenerator.NeedsContainer(System.Object,System.Int32,System.Object@)](xref:Avalonia.Controls.Generators.ItemContainerGenerator.NeedsContainer%28System.Object%2CSystem.Int32%2CSystem.Object%40%29) should be called to determine
+- [Avalonia.Controls.Generators.ItemContainerGenerator.NeedsContainer(Object,Int32,Object@)](xref:Avalonia.Controls.Generators.ItemContainerGenerator.NeedsContainer%28System.Object%2CSystem.Int32%2CSystem.Object%40%29) should be called to determine
 whether the item needs a container, and if so, the recycle key.
 - A container should be taken from the recycle pool keyed on the returned recycle key.
 - The container should be made visible.
-- [Avalonia.Controls.Generators.ItemContainerGenerator.PrepareItemContainer(Avalonia.Controls.Control,System.Object,System.Int32)](xref:Avalonia.Controls.Generators.ItemContainerGenerator.PrepareItemContainer%28Avalonia.Controls.Control%2CSystem.Object%2CSystem.Int32%29) method should be called for the
+- [Avalonia.Controls.Generators.ItemContainerGenerator.PrepareItemContainer(Avalonia.Controls.Control,Object,Int32)](xref:Avalonia.Controls.Generators.ItemContainerGenerator.PrepareItemContainer%28Avalonia.Controls.Control%2CSystem.Object%2CSystem.Int32%29) method should be called for the
 container.
-- [Avalonia.Controls.Generators.ItemContainerGenerator.ItemContainerPrepared(Avalonia.Controls.Control,System.Object,System.Int32)](xref:Avalonia.Controls.Generators.ItemContainerGenerator.ItemContainerPrepared%28Avalonia.Controls.Control%2CSystem.Object%2CSystem.Int32%29) should be called.
+- [Avalonia.Controls.Generators.ItemContainerGenerator.ItemContainerPrepared(Avalonia.Controls.Control,Object,Int32)](xref:Avalonia.Controls.Generators.ItemContainerGenerator.ItemContainerPrepared%28Avalonia.Controls.Control%2CSystem.Object%2CSystem.Int32%29) should be called.
 
 NOTE: Although this class is similar to that found in WPF/UWP, in Avalonia this class only
 concerns itself with generating and clearing item containers; it does not maintain a
@@ -111,7 +114,7 @@ items panel.
 
 | Name | Description |
 | --- | --- |
-| [ClearItemContainer](#uid-fd03ee4b7c) | Undoes the effects of the Avalonia.Controls.Generators.ItemContainerGenerator.PrepareItemContainer(Avalonia.Controls.Control,System.Object,System.Int32) method. |
+| [ClearItemContainer](#uid-fd03ee4b7c) | Undoes the effects of the Avalonia.Controls.Generators.ItemContainerGenerator.PrepareItemContainer(Avalonia.Controls.Control,Object,Int32) method. |
 | [CreateContainer](#uid-56394de8a4) | Creates a new container control. |
 | [ItemContainerIndexChanged](#uid-09d4964da8) | Called when the index for a container changes due to an insertion or removal in the items collection. |
 | [ItemContainerPrepared](#uid-a309293372) | Notifies the Avalonia.Controls.ItemsControl that a container has been fully prepared to display an item. |
@@ -122,10 +125,10 @@ items panel.
 
 ### ClearItemContainer
 
-Undoes the effects of the [Avalonia.Controls.Generators.ItemContainerGenerator.PrepareItemContainer(Avalonia.Controls.Control,System.Object,System.Int32)](xref:Avalonia.Controls.Generators.ItemContainerGenerator.PrepareItemContainer%28Avalonia.Controls.Control%2CSystem.Object%2CSystem.Int32%29) method.
+Undoes the effects of the [Avalonia.Controls.Generators.ItemContainerGenerator.PrepareItemContainer(Avalonia.Controls.Control,Object,Int32)](xref:Avalonia.Controls.Generators.ItemContainerGenerator.PrepareItemContainer%28Avalonia.Controls.Control%2CSystem.Object%2CSystem.Int32%29) method.
 
 ```csharp
-public System.Void ClearItemContainer(Avalonia.Controls.Control container)
+public Void ClearItemContainer(Avalonia.Controls.Control container)
 ```
 
 | Parameter | Description |
@@ -139,14 +142,14 @@ public System.Void ClearItemContainer(Avalonia.Controls.Control container)
 Creates a new container control.
 
 ```csharp
-public Avalonia.Controls.Control CreateContainer(System.Object item, System.Int32 index, System.Object recycleKey)
+public Avalonia.Controls.Control CreateContainer(Object item, Int32 index, Object recycleKey)
 ```
 
 | Parameter | Description |
 | --- | --- |
 | `index` | The index of the item. |
 | `item` | The item to display. |
-| `recycleKey` | The recycle key returned from [Avalonia.Controls.Generators.ItemContainerGenerator.NeedsContainer(System.Object,System.Int32,System.Object@)](xref:Avalonia.Controls.Generators.ItemContainerGenerator.NeedsContainer%28System.Object%2CSystem.Int32%2CSystem.Object%40%29) |
+| `recycleKey` | The recycle key returned from [Avalonia.Controls.Generators.ItemContainerGenerator.NeedsContainer(Object,Int32,Object@)](xref:Avalonia.Controls.Generators.ItemContainerGenerator.NeedsContainer%28System.Object%2CSystem.Int32%2CSystem.Object%40%29) |
 
 Returns: The newly created container control.
 
@@ -158,7 +161,7 @@ Called when the index for a container changes due to an insertion or removal in 
 items collection.
 
 ```csharp
-public System.Void ItemContainerIndexChanged(Avalonia.Controls.Control container, System.Int32 oldIndex, System.Int32 newIndex)
+public Void ItemContainerIndexChanged(Avalonia.Controls.Control container, Int32 oldIndex, Int32 newIndex)
 ```
 
 | Parameter | Description |
@@ -175,7 +178,7 @@ Notifies the [Avalonia.Controls.ItemsControl](xref:Avalonia.Controls.ItemsContro
 display an item.
 
 ```csharp
-public System.Void ItemContainerPrepared(Avalonia.Controls.Control container, System.Object item, System.Int32 index)
+public Void ItemContainerPrepared(Avalonia.Controls.Control container, Object item, Int32 index)
 ```
 
 | Parameter | Description |
@@ -189,7 +192,7 @@ public System.Void ItemContainerPrepared(Avalonia.Controls.Control container, Sy
 ### NeedsContainer
 
 ```csharp
-public System.Boolean NeedsContainer(System.Object item, System.Int32 index, System.Object& recycleKey)
+public Boolean NeedsContainer(Object item, Int32 index, Object& recycleKey)
 ```
 
 <span id="uid-40cbcc3a1b"></span>
@@ -199,7 +202,7 @@ public System.Boolean NeedsContainer(System.Object item, System.Int32 index, Sys
 Prepares the specified element as the container for the corresponding item.
 
 ```csharp
-public System.Void PrepareItemContainer(Avalonia.Controls.Control container, System.Object item, System.Int32 index)
+public Void PrepareItemContainer(Avalonia.Controls.Control container, Object item, Int32 index)
 ```
 
 | Parameter | Description |

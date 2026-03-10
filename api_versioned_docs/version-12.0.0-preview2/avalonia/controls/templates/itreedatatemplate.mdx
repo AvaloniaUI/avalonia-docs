@@ -67,7 +67,7 @@ public interface ITreeDataTemplate
 Binds the children of the specified item to a property on a target object.
 
 ```csharp
-public System.IDisposable BindChildren(Avalonia.AvaloniaObject target, Avalonia.AvaloniaProperty targetProperty, System.Object item)
+public IDisposable BindChildren(Avalonia.AvaloniaObject target, Avalonia.AvaloniaProperty targetProperty, Object item)
 ```
 
 | Parameter | Description |
@@ -76,7 +76,7 @@ public System.IDisposable BindChildren(Avalonia.AvaloniaObject target, Avalonia.
 | `target` | The target object. |
 | `targetProperty` | The target property. |
 
-Returns: An [System.IDisposable](xref:System.IDisposable) that can be used to remove the binding.
+Returns: An [IDisposable](xref:System.IDisposable) that can be used to remove the binding.
 
 </ApiRefPage>
 

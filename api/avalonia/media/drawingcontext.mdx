@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Media/DrawingContext.cs">DrawingContext.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__signature">
@@ -80,7 +83,7 @@ public class DrawingContext
 Draws a custom drawing operation
 
 ```csharp
-public System.Void Custom(Avalonia.Rendering.SceneGraph.ICustomDrawOperation custom)
+public Void Custom(Avalonia.Rendering.SceneGraph.ICustomDrawOperation custom)
 ```
 
 | Parameter | Description |
@@ -92,7 +95,7 @@ public System.Void Custom(Avalonia.Rendering.SceneGraph.ICustomDrawOperation cus
 ### Dispose
 
 ```csharp
-public System.Void Dispose()
+public Void Dispose()
 ```
 
 <span id="uid-20f7294bf2"></span>
@@ -106,7 +109,7 @@ public System.Void Dispose()
 Draws an ellipse with the specified Brush and Pen.
 
 ```csharp
-public System.Void DrawEllipse(Avalonia.Media.IBrush brush, Avalonia.Media.IPen pen, Avalonia.Point center, System.Double radiusX, System.Double radiusY)
+public Void DrawEllipse(Avalonia.Media.IBrush brush, Avalonia.Media.IPen pen, Avalonia.Point center, Double radiusX, Double radiusY)
 ```
 
 | Parameter | Description |
@@ -124,7 +127,7 @@ public System.Void DrawEllipse(Avalonia.Media.IBrush brush, Avalonia.Media.IPen 
 Draws an ellipse with the specified Brush and Pen.
 
 ```csharp
-public System.Void DrawEllipse(Avalonia.Media.IBrush brush, Avalonia.Media.IPen pen, Avalonia.Rect rect)
+public Void DrawEllipse(Avalonia.Media.IBrush brush, Avalonia.Media.IPen pen, Avalonia.Rect rect)
 ```
 
 | Parameter | Description |
@@ -144,7 +147,7 @@ public System.Void DrawEllipse(Avalonia.Media.IBrush brush, Avalonia.Media.IPen 
 Draws a geometry.
 
 ```csharp
-public System.Void DrawGeometry(Avalonia.Media.IBrush brush, Avalonia.Media.IPen pen, Avalonia.Media.Geometry geometry)
+public Void DrawGeometry(Avalonia.Media.IBrush brush, Avalonia.Media.IPen pen, Avalonia.Media.Geometry geometry)
 ```
 
 | Parameter | Description |
@@ -160,7 +163,7 @@ public System.Void DrawGeometry(Avalonia.Media.IBrush brush, Avalonia.Media.IPen
 Draws a geometry.
 
 ```csharp
-public System.Void DrawGeometry(Avalonia.Media.IBrush brush, Avalonia.Media.IPen pen, Avalonia.Platform.IGeometryImpl geometry)
+public Void DrawGeometry(Avalonia.Media.IBrush brush, Avalonia.Media.IPen pen, Avalonia.Platform.IGeometryImpl geometry)
 ```
 
 | Parameter | Description |
@@ -176,7 +179,7 @@ public System.Void DrawGeometry(Avalonia.Media.IBrush brush, Avalonia.Media.IPen
 Draws a glyph run.
 
 ```csharp
-public System.Void DrawGlyphRun(Avalonia.Media.IBrush foreground, Avalonia.Media.GlyphRun glyphRun)
+public Void DrawGlyphRun(Avalonia.Media.IBrush foreground, Avalonia.Media.GlyphRun glyphRun)
 ```
 
 | Parameter | Description |
@@ -195,7 +198,7 @@ public System.Void DrawGlyphRun(Avalonia.Media.IBrush foreground, Avalonia.Media
 Draws an image.
 
 ```csharp
-public System.Void DrawImage(Avalonia.Media.IImage source, Avalonia.Rect rect)
+public Void DrawImage(Avalonia.Media.IImage source, Avalonia.Rect rect)
 ```
 
 | Parameter | Description |
@@ -210,7 +213,7 @@ public System.Void DrawImage(Avalonia.Media.IImage source, Avalonia.Rect rect)
 Draws an image.
 
 ```csharp
-public System.Void DrawImage(Avalonia.Media.IImage source, Avalonia.Rect sourceRect, Avalonia.Rect destRect)
+public Void DrawImage(Avalonia.Media.IImage source, Avalonia.Rect sourceRect, Avalonia.Rect destRect)
 ```
 
 | Parameter | Description |
@@ -226,7 +229,7 @@ public System.Void DrawImage(Avalonia.Media.IImage source, Avalonia.Rect sourceR
 Draws a line.
 
 ```csharp
-public System.Void DrawLine(Avalonia.Media.IPen pen, Avalonia.Point p1, Avalonia.Point p2)
+public Void DrawLine(Avalonia.Media.IPen pen, Avalonia.Point p1, Avalonia.Point p2)
 ```
 
 | Parameter | Description |
@@ -246,7 +249,7 @@ public System.Void DrawLine(Avalonia.Media.IPen pen, Avalonia.Point p1, Avalonia
 Draws a rectangle with the specified Brush and Pen.
 
 ```csharp
-public System.Void DrawRectangle(Avalonia.Media.IBrush brush, Avalonia.Media.IPen pen, Avalonia.Rect rect, System.Double radiusX, System.Double radiusY, Avalonia.Media.BoxShadows boxShadows)
+public Void DrawRectangle(Avalonia.Media.IBrush brush, Avalonia.Media.IPen pen, Avalonia.Rect rect, Double radiusX, Double radiusY, Avalonia.Media.BoxShadows boxShadows)
 ```
 
 | Parameter | Description |
@@ -267,7 +270,7 @@ This value will be clamped to the range of 0 to Height/2 |
 Draws a rectangle with the specified Brush and Pen.
 
 ```csharp
-public System.Void DrawRectangle(Avalonia.Media.IBrush brush, Avalonia.Media.IPen pen, Avalonia.RoundedRect rrect, Avalonia.Media.BoxShadows boxShadows)
+public Void DrawRectangle(Avalonia.Media.IBrush brush, Avalonia.Media.IPen pen, Avalonia.RoundedRect rrect, Avalonia.Media.BoxShadows boxShadows)
 ```
 
 | Parameter | Description |
@@ -284,7 +287,7 @@ public System.Void DrawRectangle(Avalonia.Media.IBrush brush, Avalonia.Media.IPe
 Draws the outline of a rectangle.
 
 ```csharp
-public System.Void DrawRectangle(Avalonia.Media.IPen pen, Avalonia.Rect rect, System.Single cornerRadius)
+public Void DrawRectangle(Avalonia.Media.IPen pen, Avalonia.Rect rect, Single cornerRadius)
 ```
 
 | Parameter | Description |
@@ -300,7 +303,7 @@ public System.Void DrawRectangle(Avalonia.Media.IPen pen, Avalonia.Rect rect, Sy
 Draws text.
 
 ```csharp
-public System.Void DrawText(Avalonia.Media.FormattedText text, Avalonia.Point origin)
+public Void DrawText(Avalonia.Media.FormattedText text, Avalonia.Point origin)
 ```
 
 | Parameter | Description |
@@ -315,7 +318,7 @@ public System.Void DrawText(Avalonia.Media.FormattedText text, Avalonia.Point or
 Draws a filled rectangle.
 
 ```csharp
-public System.Void FillRectangle(Avalonia.Media.IBrush brush, Avalonia.Rect rect, System.Single cornerRadius)
+public Void FillRectangle(Avalonia.Media.IBrush brush, Avalonia.Rect rect, Single cornerRadius)
 ```
 
 | Parameter | Description |
@@ -383,7 +386,7 @@ Returns: A disposable used to undo the clip geometry.
 Pushes an opacity value.
 
 ```csharp
-public Avalonia.Media.DrawingContext.PushedState PushOpacity(System.Double opacity)
+public Avalonia.Media.DrawingContext.PushedState PushOpacity(Double opacity)
 ```
 
 | Parameter | Description |

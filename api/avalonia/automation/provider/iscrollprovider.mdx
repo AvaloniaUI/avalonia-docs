@@ -63,7 +63,7 @@ public interface IScrollProvider
 Scrolls the visible region of the content area horizontally and vertically.
 
 ```csharp
-public System.Void Scroll(Avalonia.Automation.Provider.ScrollAmount horizontalAmount, Avalonia.Automation.Provider.ScrollAmount verticalAmount)
+public Void Scroll(Avalonia.Automation.Provider.ScrollAmount horizontalAmount, Avalonia.Automation.Provider.ScrollAmount verticalAmount)
 ```
 
 | Parameter | Description |
@@ -79,7 +79,7 @@ Sets the horizontal and vertical scroll position as a percentage of the total co
 area within the control.
 
 ```csharp
-public System.Void SetScrollPercent(System.Double horizontalPercent, System.Double verticalPercent)
+public Void SetScrollPercent(Double horizontalPercent, Double verticalPercent)
 ```
 
 | Parameter | Description |
@@ -109,7 +109,7 @@ cannot be scrolled in this direction. |
 Gets the current horizontal scroll position.
 
 ```csharp
-public System.Double HorizontalScrollPercent { get; set; }
+public Double HorizontalScrollPercent { get; set; }
 ```
 
 <span id="uid-e0b06e8d92"></span>
@@ -119,7 +119,7 @@ public System.Double HorizontalScrollPercent { get; set; }
 Gets the current horizontal view size.
 
 ```csharp
-public System.Double HorizontalViewSize { get; set; }
+public Double HorizontalViewSize { get; set; }
 ```
 
 <span id="uid-b71163329b"></span>
@@ -129,7 +129,7 @@ public System.Double HorizontalViewSize { get; set; }
 Gets a value that indicates whether the control can scroll horizontally.
 
 ```csharp
-public System.Boolean HorizontallyScrollable { get; set; }
+public Boolean HorizontallyScrollable { get; set; }
 ```
 
 <span id="uid-29deba5aa9"></span>
@@ -139,7 +139,7 @@ public System.Boolean HorizontallyScrollable { get; set; }
 Gets the current vertical scroll position.
 
 ```csharp
-public System.Double VerticalScrollPercent { get; set; }
+public Double VerticalScrollPercent { get; set; }
 ```
 
 <span id="uid-d04ac6b142"></span>
@@ -149,7 +149,7 @@ public System.Double VerticalScrollPercent { get; set; }
 Gets the vertical view size.
 
 ```csharp
-public System.Double VerticalViewSize { get; set; }
+public Double VerticalViewSize { get; set; }
 ```
 
 <span id="uid-f6a3279088"></span>
@@ -159,7 +159,7 @@ public System.Double VerticalViewSize { get; set; }
 Gets a value that indicates whether the control can scroll vertically.
 
 ```csharp
-public System.Boolean VerticallyScrollable { get; set; }
+public Boolean VerticallyScrollable { get; set; }
 ```
 
 </ApiRefPage>

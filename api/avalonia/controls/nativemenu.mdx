@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Controls/NativeMenu.Export.cs">NativeMenu.Export.cs</a>, <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Controls/NativeMenu.cs">NativeMenu.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__signature">
@@ -74,13 +77,26 @@ public NativeMenu()
 | [GetIsNativeMenuExported](#uid-fe46450e15) | No summary available. |
 | [GetMenu](#uid-69d5879685) | No summary available. |
 | [SetMenu](#uid-2c34d388db) | No summary available. |
+| [Bind (8 overloads) (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-1c60c7bda3) | Binds a Avalonia.AvaloniaProperty to an Avalonia.Data.BindingBase. |
+| [CheckAccess (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-260ff7a68d) | Returns a value indicating whether the current thread is the UI thread. |
+| [ClearValue (4 overloads) (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-41de208fbe) | Clears a Avalonia.AvaloniaProperty's local value. |
+| [CoerceValue (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-3bec32f39e) | Coerces the specified Avalonia.AvaloniaProperty. |
+| [Equals (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-a8a8e94305) | Compares two objects using reference equality. |
+| [GetBaseValue (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-9c615efbba) | No summary available. |
+| [GetHashCode (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-7f7db1e7a2) | Gets the hash code for the object. |
+| [GetValue (3 overloads) (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-5142cd4792) | Gets a Avalonia.AvaloniaProperty value. |
+| [IsAnimating (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-8cbfc7521a) | Checks whether a Avalonia.AvaloniaProperty is animating. |
+| [IsSet (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-f8bf0bbdcc) | Checks whether a Avalonia.AvaloniaProperty is set on this object. |
+| [SetCurrentValue (2 overloads) (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-38759fd088) | Sets the value of a dependency property without changing its value source. |
+| [SetValue (3 overloads) (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-47d14e19d7) | Sets a Avalonia.AvaloniaProperty value. |
+| [VerifyAccess (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-3b9d3c9793) | Checks that the current thread is the UI thread and throws if not. |
 
 <span id="uid-04268917cd"></span>
 
 ### Add
 
 ```csharp
-public System.Void Add(Avalonia.Controls.NativeMenuItemBase item)
+public Void Add(Avalonia.Controls.NativeMenuItemBase item)
 ```
 
 <span id="uid-d8f591aa51"></span>
@@ -96,7 +112,7 @@ public System.Collections.Generic.IEnumerator<Avalonia.Controls.NativeMenuItemBa
 ### GetIsNativeMenuExported
 
 ```csharp
-public System.Boolean GetIsNativeMenuExported(Avalonia.Controls.TopLevel tl)
+public Boolean GetIsNativeMenuExported(Avalonia.Controls.TopLevel tl)
 ```
 
 <span id="uid-69d5879685"></span>
@@ -112,7 +128,7 @@ public Avalonia.Controls.NativeMenu GetMenu(Avalonia.AvaloniaObject o)
 ### SetMenu
 
 ```csharp
-public System.Void SetMenu(Avalonia.AvaloniaObject o, Avalonia.Controls.NativeMenu menu)
+public Void SetMenu(Avalonia.AvaloniaObject o, Avalonia.Controls.NativeMenu menu)
 ```
 
 ## Properties
@@ -121,6 +137,8 @@ public System.Void SetMenu(Avalonia.AvaloniaObject o, Avalonia.Controls.NativeMe
 | --- | --- |
 | [Items](#uid-6fae790def) | No summary available. |
 | [Parent](#uid-51ee08898c) | No summary available. |
+| [Dispatcher (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-b25fa51632) | Returns the Avalonia.AvaloniaObject.Dispatcher that this Avalonia.AvaloniaObject is associated with. |
+| [Item (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-c1d1f1bc0f) | No summary available. |
 
 <span id="uid-6fae790def"></span>
 
@@ -151,7 +169,7 @@ public Avalonia.Controls.NativeMenuItem Parent { get; set; }
 ### IsNativeMenuExportedProperty
 
 ```csharp
-public Avalonia.AttachedProperty<System.Boolean> IsNativeMenuExportedProperty
+public Avalonia.AttachedProperty<Boolean> IsNativeMenuExportedProperty
 ```
 
 <span id="uid-635777f777"></span>
@@ -177,6 +195,7 @@ public Avalonia.DirectProperty<Avalonia.Controls.NativeMenu, Avalonia.Controls.N
 | [Closed](#uid-c08d3fc77e) | Raised after the menu is closed. |
 | [NeedsUpdate](#uid-6ecb304a88) | Raised when the menu requests an update. |
 | [Opening](#uid-28cdaa6b9b) | Raised before the menu is opened. |
+| [PropertyChanged (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-d758e26fae) | Raised when a Avalonia.AvaloniaProperty value changes on this object. |
 
 <span id="uid-c08d3fc77e"></span>
 
@@ -185,7 +204,7 @@ public Avalonia.DirectProperty<Avalonia.Controls.NativeMenu, Avalonia.Controls.N
 Raised after the menu is closed.
 
 ```csharp
-public event System.EventHandler<System.EventArgs> Closed
+public event EventHandler<EventArgs> Closed
 ```
 
 <span id="uid-6ecb304a88"></span>
@@ -195,7 +214,7 @@ public event System.EventHandler<System.EventArgs> Closed
 Raised when the menu requests an update.
 
 ```csharp
-public event System.EventHandler<System.EventArgs> NeedsUpdate
+public event EventHandler<EventArgs> NeedsUpdate
 ```
 
 <span id="uid-28cdaa6b9b"></span>
@@ -205,7 +224,7 @@ public event System.EventHandler<System.EventArgs> NeedsUpdate
 Raised before the menu is opened.
 
 ```csharp
-public event System.EventHandler<System.EventArgs> Opening
+public event EventHandler<EventArgs> Opening
 ```
 
 </ApiRefPage>

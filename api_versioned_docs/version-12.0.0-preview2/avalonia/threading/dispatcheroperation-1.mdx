@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Threading/DispatcherOperation.cs">DispatcherOperation.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__signature">
@@ -59,7 +62,7 @@ public class DispatcherOperation<T>
 ### DispatcherOperation&lt;T&gt;
 
 ```csharp
-public DispatcherOperation<T>(Avalonia.Threading.Dispatcher dispatcher, Avalonia.Threading.DispatcherPriority priority, System.Func<T> callback)
+public DispatcherOperation<T>(Avalonia.Threading.Dispatcher dispatcher, Avalonia.Threading.DispatcherPriority priority, Func<T> callback)
 ```
 
 ## Methods
@@ -68,6 +71,8 @@ public DispatcherOperation<T>(Avalonia.Threading.Dispatcher dispatcher, Avalonia
 | --- | --- |
 | [GetAwaiter](#uid-2a70bf99dd) | No summary available. |
 | [GetTask](#uid-3a602b7d5b) | No summary available. |
+| [Abort (Inherited from DispatcherOperation)](dispatcheroperation.mdx#uid-cb67a1e87d) | No summary available. |
+| [Wait (2 overloads) (Inherited from DispatcherOperation)](dispatcheroperation.mdx#uid-178e059bd4) | Waits for this operation to complete. |
 
 <span id="uid-2a70bf99dd"></span>
 
@@ -90,6 +95,9 @@ public System.Threading.Tasks.Task<T> GetTask()
 | Name | Description |
 | --- | --- |
 | [Result](#uid-826538278e) | No summary available. |
+| [Dispatcher (Inherited from DispatcherOperation)](dispatcheroperation.mdx#uid-1b2bdaa79a) | No summary available. |
+| [Priority (Inherited from DispatcherOperation)](dispatcheroperation.mdx#uid-e98b1e57bd) | No summary available. |
+| [Status (Inherited from DispatcherOperation)](dispatcheroperation.mdx#uid-8bbc21bb30) | No summary available. |
 
 <span id="uid-826538278e"></span>
 
@@ -98,6 +106,13 @@ public System.Threading.Tasks.Task<T> GetTask()
 ```csharp
 public T Result { get; set; }
 ```
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [Aborted (Inherited from DispatcherOperation)](dispatcheroperation.mdx#uid-2a2288d0ad) | An event that is raised when the operation is aborted or canceled. |
+| [Completed (Inherited from DispatcherOperation)](dispatcheroperation.mdx#uid-b9f2587a42) | An event that is raised when the operation completes. |
 
 </ApiRefPage>
 

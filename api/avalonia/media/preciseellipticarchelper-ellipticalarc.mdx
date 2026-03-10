@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Media/PreciseEllipticArcHelper.cs">PreciseEllipticArcHelper.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -100,7 +103,7 @@ public PreciseEllipticArcHelper.EllipticalArc()
 Build a full ellipse from its canonical geometrical elements
 
 ```csharp
-public PreciseEllipticArcHelper.EllipticalArc(Avalonia.Point center, System.Double a, System.Double b, System.Double theta)
+public PreciseEllipticArcHelper.EllipticalArc(Avalonia.Point center, Double a, Double b, Double theta)
 ```
 
 | Parameter | Description |
@@ -117,7 +120,7 @@ public PreciseEllipticArcHelper.EllipticalArc(Avalonia.Point center, System.Doub
 Builds an elliptical arc from its canonical geometrical elements
 
 ```csharp
-public PreciseEllipticArcHelper.EllipticalArc(Avalonia.Point center, System.Double a, System.Double b, System.Double theta, System.Double lambda1, System.Double lambda2, System.Boolean isPieSlice)
+public PreciseEllipticArcHelper.EllipticalArc(Avalonia.Point center, Double a, Double b, Double theta, Double lambda1, Double lambda2, Boolean isPieSlice)
 ```
 
 | Parameter | Description |
@@ -138,7 +141,7 @@ and the endpoints are part of the shape (it is pie slice like) |
 Build a full ellipse from its canonical geometrical elements
 
 ```csharp
-public PreciseEllipticArcHelper.EllipticalArc(System.Double cx, System.Double cy, System.Double a, System.Double b, System.Double theta)
+public PreciseEllipticArcHelper.EllipticalArc(Double cx, Double cy, Double a, Double b, Double theta)
 ```
 
 | Parameter | Description |
@@ -156,7 +159,7 @@ public PreciseEllipticArcHelper.EllipticalArc(System.Double cx, System.Double cy
 Builds an elliptical arc from its canonical geometrical elements
 
 ```csharp
-public PreciseEllipticArcHelper.EllipticalArc(System.Double cx, System.Double cy, System.Double a, System.Double b, System.Double theta, System.Double lambda1, System.Double lambda2, System.Boolean isPieSlice)
+public PreciseEllipticArcHelper.EllipticalArc(Double cx, Double cy, Double a, Double b, Double theta, Double lambda1, Double lambda2, Boolean isPieSlice)
 ```
 
 | Parameter | Description |
@@ -195,7 +198,7 @@ and the endpoints are part of the shape (it is pie slice like) |
 Builds the arc outline using given StreamGeometryContext and default (max) Bezier curve degree and acceptable error of half a pixel (0.5)
 
 ```csharp
-public System.Void BuildArc(Avalonia.Media.StreamGeometryContext path)
+public Void BuildArc(Avalonia.Media.StreamGeometryContext path)
 ```
 
 | Parameter | Description |
@@ -209,7 +212,7 @@ public System.Void BuildArc(Avalonia.Media.StreamGeometryContext path)
 ArcTo Helper for StreamGeometryContext
 
 ```csharp
-public System.Void BuildArc(Avalonia.Media.StreamGeometryContext path, Avalonia.Point p1, Avalonia.Point p2, Avalonia.Size size, System.Double theta, System.Boolean isLargeArc, System.Boolean clockwise)
+public Void BuildArc(Avalonia.Media.StreamGeometryContext path, Avalonia.Point p1, Avalonia.Point p2, Avalonia.Size size, Double theta, Boolean isLargeArc, Boolean clockwise)
 ```
 
 | Parameter | Description |
@@ -229,7 +232,7 @@ public System.Void BuildArc(Avalonia.Media.StreamGeometryContext path, Avalonia.
 Builds the arc outline using given StreamGeometryContext
 
 ```csharp
-public System.Void BuildArc(Avalonia.Media.StreamGeometryContext path, System.Int32 degree, System.Double threshold, System.Boolean openNewFigure)
+public Void BuildArc(Avalonia.Media.StreamGeometryContext path, Int32 degree, Double threshold, Boolean openNewFigure)
 ```
 
 | Parameter | Description |
@@ -251,7 +254,7 @@ Tests if a specified Point2D is inside the boundary of a closed path derived fro
 The closed path is derived with respect to the IsPieSlice value.
 
 ```csharp
-public System.Boolean Contains(Avalonia.Point p)
+public Boolean Contains(Avalonia.Point p)
 ```
 
 | Parameter | Description |
@@ -268,7 +271,7 @@ Tests if the interior of a closed path derived from this arc entirely contains t
 The closed path is derived with respect to the IsPieSlice value.
 
 ```csharp
-public System.Boolean Contains(Avalonia.Rect r)
+public Boolean Contains(Avalonia.Rect r)
 ```
 
 | Parameter | Description |
@@ -285,7 +288,7 @@ Tests if the specified coordinates are inside the closed shape formed by this ar
 If this is not a pie, then a shape derived by adding a closing chord is considered.
 
 ```csharp
-public System.Boolean Contains(System.Double x, System.Double y)
+public Boolean Contains(Double x, Double y)
 ```
 
 | Parameter | Description |
@@ -303,7 +306,7 @@ Tests if the interior of a closed path derived from this arc entirely contains t
 The closed path is derived with respect to the IsPieSlice value.
 
 ```csharp
-public System.Boolean Contains(System.Double x, System.Double y, System.Double w, System.Double h)
+public Boolean Contains(Double x, Double y, Double w, Double h)
 ```
 
 | Parameter | Description |
@@ -322,7 +325,7 @@ Returns: true if the interior of a closed path derived from this arc entirely co
 Estimate the approximation error for a sub-arc of the instance
 
 ```csharp
-public System.Double EstimateError(System.Int32 degree, System.Double etaA, System.Double etaB)
+public Double EstimateError(Int32 degree, Double etaA, Double etaB)
 ```
 
 | Parameter | Description |
@@ -356,7 +359,7 @@ Tests if the interior of the closed path derived from this arc intersects the in
 The closed path is derived with respect to the IsPieSlice value.
 
 ```csharp
-public System.Boolean Intersects(Avalonia.Rect r)
+public Boolean Intersects(Avalonia.Rect r)
 ```
 
 <span id="uid-d59780bfcd"></span>
@@ -367,7 +370,7 @@ Tests if the interior of the closed path derived from this arc intersects the in
 The closed path is derived with respect to the IsPieSlice value.
 
 ```csharp
-public System.Boolean Intersects(System.Double x, System.Double y, System.Double w, System.Double h)
+public Boolean Intersects(Double x, Double y, Double w, Double h)
 ```
 
 <span id="uid-25762eed73"></span>
@@ -377,7 +380,7 @@ public System.Boolean Intersects(System.Double x, System.Double y, System.Double
 Get the elliptical arc point for a given angular parameter
 
 ```csharp
-public Avalonia.Point PointAt(System.Double lambda)
+public Avalonia.Point PointAt(Double lambda)
 ```
 
 | Parameter | Description |
@@ -393,7 +396,7 @@ Returns: The desired elliptical arc point location
 Sets the default flatness for Bezier curve approximation
 
 ```csharp
-public System.Void SetDefaultFlatness(System.Double defaultFlatness)
+public Void SetDefaultFlatness(Double defaultFlatness)
 ```
 
 | Parameter | Description |
@@ -411,7 +414,7 @@ public System.Void SetDefaultFlatness(System.Double defaultFlatness)
 Sets the maximal degree allowed for Bezier curve approximation.
 
 ```csharp
-public System.Void SetMaxDegree(System.Int32 maxDegree)
+public Void SetMaxDegree(Int32 maxDegree)
 ```
 
 | Parameter | Description |
@@ -433,7 +436,7 @@ public System.Void SetMaxDegree(System.Int32 maxDegree)
 ### DrawInOppositeDirection
 
 ```csharp
-public System.Boolean DrawInOppositeDirection { get; set; }
+public Boolean DrawInOppositeDirection { get; set; }
 ```
 
 </ApiRefPage>

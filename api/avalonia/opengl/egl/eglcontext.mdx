@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.OpenGL/Egl/EglContext.cs">EglContext.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__signature">
@@ -77,7 +80,7 @@ public Avalonia.OpenGL.IGlContext CreateSharedContext(System.Collections.Generic
 ### Dispose
 
 ```csharp
-public System.Void Dispose()
+public Void Dispose()
 ```
 
 <span id="uid-075dc13876"></span>
@@ -85,7 +88,7 @@ public System.Void Dispose()
 ### EnsureCurrent
 
 ```csharp
-public System.IDisposable EnsureCurrent()
+public IDisposable EnsureCurrent()
 ```
 
 <span id="uid-64200f5857"></span>
@@ -93,7 +96,7 @@ public System.IDisposable EnsureCurrent()
 ### EnsureLocked
 
 ```csharp
-public System.IDisposable EnsureLocked()
+public IDisposable EnsureLocked()
 ```
 
 <span id="uid-3c1f0760a6"></span>
@@ -101,7 +104,7 @@ public System.IDisposable EnsureLocked()
 ### IsSharedWith
 
 ```csharp
-public System.Boolean IsSharedWith(Avalonia.OpenGL.IGlContext context)
+public Boolean IsSharedWith(Avalonia.OpenGL.IGlContext context)
 ```
 
 <span id="uid-55e38d3faf"></span>
@@ -113,7 +116,7 @@ public System.Boolean IsSharedWith(Avalonia.OpenGL.IGlContext context)
 #### MakeCurrent
 
 ```csharp
-public System.IDisposable MakeCurrent()
+public IDisposable MakeCurrent()
 ```
 
 <span id="uid-170563eec0"></span>
@@ -121,7 +124,7 @@ public System.IDisposable MakeCurrent()
 #### MakeCurrent
 
 ```csharp
-public System.IDisposable MakeCurrent(Avalonia.OpenGL.Egl.EglSurface surface)
+public IDisposable MakeCurrent(Avalonia.OpenGL.Egl.EglSurface surface)
 ```
 
 <span id="uid-ba613861c5"></span>
@@ -129,7 +132,7 @@ public System.IDisposable MakeCurrent(Avalonia.OpenGL.Egl.EglSurface surface)
 ### NotifyContextLost
 
 ```csharp
-public System.Void NotifyContextLost()
+public Void NotifyContextLost()
 ```
 
 <span id="uid-24b6a55332"></span>
@@ -137,7 +140,7 @@ public System.Void NotifyContextLost()
 ### TryGetFeature
 
 ```csharp
-public System.Object TryGetFeature(System.Type featureType)
+public Object TryGetFeature(Type featureType)
 ```
 
 ## Properties
@@ -161,7 +164,7 @@ public System.Object TryGetFeature(System.Type featureType)
 ### CanCreateSharedContext
 
 ```csharp
-public System.Boolean CanCreateSharedContext { get; set; }
+public Boolean CanCreateSharedContext { get; set; }
 ```
 
 <span id="uid-7c3293dffe"></span>
@@ -169,7 +172,7 @@ public System.Boolean CanCreateSharedContext { get; set; }
 ### Context
 
 ```csharp
-public System.IntPtr Context { get; set; }
+public IntPtr Context { get; set; }
 ```
 
 <span id="uid-ff39096414"></span>
@@ -201,7 +204,7 @@ public Avalonia.OpenGL.GlInterface GlInterface { get; set; }
 ### IsCurrent
 
 ```csharp
-public System.Boolean IsCurrent { get; set; }
+public Boolean IsCurrent { get; set; }
 ```
 
 <span id="uid-91022ae078"></span>
@@ -209,7 +212,7 @@ public System.Boolean IsCurrent { get; set; }
 ### IsLost
 
 ```csharp
-public System.Boolean IsLost { get; set; }
+public Boolean IsLost { get; set; }
 ```
 
 <span id="uid-f0f550bd4e"></span>
@@ -225,7 +228,7 @@ public Avalonia.OpenGL.Egl.EglSurface OffscreenSurface { get; set; }
 ### SampleCount
 
 ```csharp
-public System.Int32 SampleCount { get; set; }
+public Int32 SampleCount { get; set; }
 ```
 
 <span id="uid-2313731b0c"></span>
@@ -233,7 +236,7 @@ public System.Int32 SampleCount { get; set; }
 ### StencilSize
 
 ```csharp
-public System.Int32 StencilSize { get; set; }
+public Int32 StencilSize { get; set; }
 ```
 
 <span id="uid-690a56c9af"></span>

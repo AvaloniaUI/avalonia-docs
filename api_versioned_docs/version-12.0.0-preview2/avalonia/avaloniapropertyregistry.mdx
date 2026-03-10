@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/AvaloniaPropertyRegistry.cs">AvaloniaPropertyRegistry.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -94,7 +97,7 @@ public AvaloniaPropertyRegistry()
 Finds a registered property on an object by name.
 
 ```csharp
-public Avalonia.AvaloniaProperty FindRegistered(Avalonia.AvaloniaObject o, System.String name)
+public Avalonia.AvaloniaProperty FindRegistered(Avalonia.AvaloniaObject o, String name)
 ```
 
 | Parameter | Description |
@@ -115,7 +118,7 @@ Returns: The registered property or null if no matching property found.
 Finds a registered property on a type by name.
 
 ```csharp
-public Avalonia.AvaloniaProperty FindRegistered(System.Type type, System.String name)
+public Avalonia.AvaloniaProperty FindRegistered(Type type, String name)
 ```
 
 | Parameter | Description |
@@ -164,7 +167,7 @@ Returns: A collection of [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaPrope
 Gets all non-attached [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty)s registered on a type.
 
 ```csharp
-public System.Collections.Generic.IReadOnlyList<Avalonia.AvaloniaProperty> GetRegistered(System.Type type)
+public System.Collections.Generic.IReadOnlyList<Avalonia.AvaloniaProperty> GetRegistered(Type type)
 ```
 
 | Parameter | Description |
@@ -180,7 +183,7 @@ Returns: A collection of [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaPrope
 Gets all attached [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty)s registered on a type.
 
 ```csharp
-public System.Collections.Generic.IReadOnlyList<Avalonia.AvaloniaProperty> GetRegisteredAttached(System.Type type)
+public System.Collections.Generic.IReadOnlyList<Avalonia.AvaloniaProperty> GetRegisteredAttached(Type type)
 ```
 
 | Parameter | Description |
@@ -208,7 +211,7 @@ public Avalonia.DirectPropertyBase<TValue><T> GetRegisteredDirect<T>(Avalonia.Av
 Gets all direct [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty)s registered on a type.
 
 ```csharp
-public System.Collections.Generic.IReadOnlyList<Avalonia.AvaloniaProperty> GetRegisteredDirect(System.Type type)
+public System.Collections.Generic.IReadOnlyList<Avalonia.AvaloniaProperty> GetRegisteredDirect(Type type)
 ```
 
 | Parameter | Description |
@@ -224,7 +227,7 @@ Returns: A collection of [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaPrope
 Gets all inherited [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty)s registered on a type.
 
 ```csharp
-public System.Collections.Generic.IReadOnlyList<Avalonia.AvaloniaProperty> GetRegisteredInherited(System.Type type)
+public System.Collections.Generic.IReadOnlyList<Avalonia.AvaloniaProperty> GetRegisteredInherited(Type type)
 ```
 
 | Parameter | Description |
@@ -244,7 +247,7 @@ Returns: A collection of [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaPrope
 Checks whether a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) is registered on a object.
 
 ```csharp
-public System.Boolean IsRegistered(System.Object o, Avalonia.AvaloniaProperty property)
+public Boolean IsRegistered(Object o, Avalonia.AvaloniaProperty property)
 ```
 
 | Parameter | Description |
@@ -261,7 +264,7 @@ Returns: True if the property is registered, otherwise false.
 Checks whether a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) is registered on a type.
 
 ```csharp
-public System.Boolean IsRegistered(System.Type type, Avalonia.AvaloniaProperty property)
+public Boolean IsRegistered(Type type, Avalonia.AvaloniaProperty property)
 ```
 
 | Parameter | Description |
@@ -278,7 +281,7 @@ Returns: True if the property is registered, otherwise false.
 Registers a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) on a type.
 
 ```csharp
-public System.Void Register(System.Type type, Avalonia.AvaloniaProperty property)
+public Void Register(Type type, Avalonia.AvaloniaProperty property)
 ```
 
 | Parameter | Description |
@@ -293,7 +296,7 @@ public System.Void Register(System.Type type, Avalonia.AvaloniaProperty property
 Registers an attached [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) on a type.
 
 ```csharp
-public System.Void RegisterAttached(System.Type type, Avalonia.AvaloniaProperty property)
+public Void RegisterAttached(Type type, Avalonia.AvaloniaProperty property)
 ```
 
 | Parameter | Description |
@@ -306,7 +309,7 @@ public System.Void RegisterAttached(System.Type type, Avalonia.AvaloniaProperty 
 ### UnregisterByModule
 
 ```csharp
-public System.Boolean UnregisterByModule(System.Collections.Generic.IEnumerable<System.Type> types)
+public Boolean UnregisterByModule(System.Collections.Generic.IEnumerable<Type> types)
 ```
 
 ## Properties

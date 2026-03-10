@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Data/BindingChainException.cs">BindingChainException.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -83,7 +86,7 @@ public BindingChainException()
 Initializes a new instance of the [Avalonia.Data.BindingChainException](xref:Avalonia.Data.BindingChainException) class.
 
 ```csharp
-public BindingChainException(System.String message)
+public BindingChainException(String message)
 ```
 
 | Parameter | Description |
@@ -97,7 +100,7 @@ public BindingChainException(System.String message)
 Initializes a new instance of the [Avalonia.Data.BindingChainException](xref:Avalonia.Data.BindingChainException) class.
 
 ```csharp
-public BindingChainException(System.String message, System.String expression, System.String errorPoint)
+public BindingChainException(String message, String expression, String errorPoint)
 ```
 
 | Parameter | Description |
@@ -121,7 +124,7 @@ public BindingChainException(System.String message, System.String expression, Sy
 Gets the expression that could not be evaluated.
 
 ```csharp
-public System.String Expression { get; set; }
+public String Expression { get; set; }
 ```
 
 <span id="uid-d29964fc36"></span>
@@ -131,7 +134,7 @@ public System.String Expression { get; set; }
 Gets the point in the expression at which the error occurred.
 
 ```csharp
-public System.String ExpressionErrorPoint { get; set; }
+public String ExpressionErrorPoint { get; set; }
 ```
 
 <span id="uid-d0466cb300"></span>
@@ -139,7 +142,7 @@ public System.String ExpressionErrorPoint { get; set; }
 ### Message
 
 ```csharp
-public System.String Message { get; set; }
+public String Message { get; set; }
 ```
 
 </ApiRefPage>

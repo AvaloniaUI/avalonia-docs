@@ -66,7 +66,7 @@ Used by nth-child and nth-last-child selectors.
 Gets child's actual index in order of the original source.
 
 ```csharp
-public System.Int32 GetChildIndex(Avalonia.LogicalTree.ILogical child)
+public Int32 GetChildIndex(Avalonia.LogicalTree.ILogical child)
 ```
 
 | Parameter | Description |
@@ -80,7 +80,7 @@ Returns: Index or -1 if child was not found.
 ### TryGetTotalCount
 
 ```csharp
-public System.Boolean TryGetTotalCount(System.Int32& count)
+public Boolean TryGetTotalCount(Int32& count)
 ```
 
 ## Events
@@ -96,7 +96,7 @@ public System.Boolean TryGetTotalCount(System.Int32& count)
 Notifies subscriber when a child's index was changed.
 
 ```csharp
-public event System.EventHandler<Avalonia.LogicalTree.ChildIndexChangedEventArgs> ChildIndexChanged
+public event EventHandler<Avalonia.LogicalTree.ChildIndexChangedEventArgs> ChildIndexChanged
 ```
 
 </ApiRefPage>

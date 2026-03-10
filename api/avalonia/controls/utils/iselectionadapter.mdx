@@ -66,7 +66,7 @@ when a key is pressed while the drop-down portion of the
 [Avalonia.Controls.AutoCompleteBox](xref:Avalonia.Controls.AutoCompleteBox) has focus.
 
 ```csharp
-public System.Void HandleKeyDown(Avalonia.Input.KeyEventArgs e)
+public Void HandleKeyDown(Avalonia.Input.KeyEventArgs e)
 ```
 
 | Parameter | Description |
@@ -103,7 +103,7 @@ selection adapter.
 Gets or sets the selected item.
 
 ```csharp
-public System.Object SelectedItem { get; set; }
+public Object SelectedItem { get; set; }
 ```
 
 Value: The currently selected item.
@@ -123,7 +123,7 @@ Value: The currently selected item.
 Occurs when a selection has been canceled.
 
 ```csharp
-public event System.EventHandler<Avalonia.Interactivity.RoutedEventArgs> Cancel
+public event EventHandler<Avalonia.Interactivity.RoutedEventArgs> Cancel
 ```
 
 <span id="uid-53f54e48fb"></span>
@@ -134,7 +134,7 @@ Occurs when a selected item is not cancelled and is committed as the
 selected item.
 
 ```csharp
-public event System.EventHandler<Avalonia.Interactivity.RoutedEventArgs> Commit
+public event EventHandler<Avalonia.Interactivity.RoutedEventArgs> Commit
 ```
 
 <span id="uid-24ca457fc8"></span>
@@ -146,7 +146,7 @@ Occurs when the
 property value changes.
 
 ```csharp
-public event System.EventHandler<Avalonia.Controls.SelectionChangedEventArgs> SelectionChanged
+public event EventHandler<Avalonia.Controls.SelectionChangedEventArgs> SelectionChanged
 ```
 
 </ApiRefPage>

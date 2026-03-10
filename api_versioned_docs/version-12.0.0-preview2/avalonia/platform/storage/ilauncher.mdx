@@ -62,7 +62,7 @@ public interface ILauncher
 Starts the default app associated with the specified storage file or folder.
 
 ```csharp
-public System.Threading.Tasks.Task<System.Boolean> LaunchFileAsync(Avalonia.Platform.Storage.IStorageItem storageItem)
+public System.Threading.Tasks.Task<Boolean> LaunchFileAsync(Avalonia.Platform.Storage.IStorageItem storageItem)
 ```
 
 | Parameter | Description |
@@ -78,7 +78,7 @@ Returns: True, if launch operation was successful. False, if unsupported or fail
 Starts the default app associated with the URI scheme name for the specified URI.
 
 ```csharp
-public System.Threading.Tasks.Task<System.Boolean> LaunchUriAsync(System.Uri uri)
+public System.Threading.Tasks.Task<Boolean> LaunchUriAsync(Uri uri)
 ```
 
 | Parameter | Description |

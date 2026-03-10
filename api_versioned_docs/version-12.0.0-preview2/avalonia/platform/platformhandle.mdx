@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Platform/PlatformHandle.cs">PlatformHandle.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -53,6 +56,9 @@ public class PlatformHandle
 <span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> PlatformHandle
 </div>
 <div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Derived types:</span> <a href="../android/androidviewcontrolhandle">AndroidViewControlHandle</a>, <a href="../browser/jsobjectplatformhandle">JSObjectPlatformHandle</a>
+</div>
+<div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Implements:</span> <a href="iplatformhandle">IPlatformHandle</a>, IEquatable&lt;PlatformHandle&gt;
 </div>
 </div>
@@ -70,7 +76,7 @@ public class PlatformHandle
 Initializes a new instance of the [Avalonia.Platform.PlatformHandle](xref:Avalonia.Platform.PlatformHandle) class.
 
 ```csharp
-public PlatformHandle(System.IntPtr handle, System.String descriptor)
+public PlatformHandle(IntPtr handle, String descriptor)
 ```
 
 | Parameter | Description |
@@ -95,7 +101,7 @@ public PlatformHandle(System.IntPtr handle, System.String descriptor)
 #### Equals
 
 ```csharp
-public System.Boolean Equals(Avalonia.Platform.PlatformHandle other)
+public Boolean Equals(Avalonia.Platform.PlatformHandle other)
 ```
 
 <span id="uid-a405083ca8"></span>
@@ -103,7 +109,7 @@ public System.Boolean Equals(Avalonia.Platform.PlatformHandle other)
 #### Equals
 
 ```csharp
-public System.Boolean Equals(System.Object obj)
+public Boolean Equals(Object obj)
 ```
 
 <span id="uid-db119cd1b5"></span>
@@ -111,7 +117,7 @@ public System.Boolean Equals(System.Object obj)
 ### GetHashCode
 
 ```csharp
-public System.Int32 GetHashCode()
+public Int32 GetHashCode()
 ```
 
 <span id="uid-aa72c5ec9e"></span>
@@ -119,7 +125,7 @@ public System.Int32 GetHashCode()
 ### ToString
 
 ```csharp
-public System.String ToString()
+public String ToString()
 ```
 
 ## Properties
@@ -136,7 +142,7 @@ public System.String ToString()
 Gets the handle.
 
 ```csharp
-public System.IntPtr Handle { get; set; }
+public IntPtr Handle { get; set; }
 ```
 
 <span id="uid-84b40c5229"></span>
@@ -146,7 +152,7 @@ public System.IntPtr Handle { get; set; }
 Gets an optional string that describes what [Avalonia.Platform.PlatformHandle.Handle](xref:Avalonia.Platform.PlatformHandle.Handle) represents.
 
 ```csharp
-public System.String HandleDescriptor { get; set; }
+public String HandleDescriptor { get; set; }
 ```
 
 </ApiRefPage>

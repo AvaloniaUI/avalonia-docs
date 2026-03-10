@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Media/FontManager.cs">FontManager.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -88,7 +91,7 @@ public FontManager(Avalonia.Platform.IFontManagerImpl platformImpl)
 Add a font collection to the manager.
 
 ```csharp
-public System.Void AddFontCollection(Avalonia.Media.Fonts.IFontCollection fontCollection)
+public Void AddFontCollection(Avalonia.Media.Fonts.IFontCollection fontCollection)
 ```
 
 | Parameter | Description |
@@ -97,7 +100,7 @@ public System.Void AddFontCollection(Avalonia.Media.Fonts.IFontCollection fontCo
 
 #### Exceptions
 
-- [System.ArgumentException](xref:System.ArgumentException)
+- [ArgumentException](xref:System.ArgumentException)
 
 <span id="uid-306932b411"></span>
 
@@ -106,7 +109,7 @@ public System.Void AddFontCollection(Avalonia.Media.Fonts.IFontCollection fontCo
 Removes the font collection that corresponds to specified key.
 
 ```csharp
-public System.Void RemoveFontCollection(System.Uri key)
+public Void RemoveFontCollection(Uri key)
 ```
 
 | Parameter | Description |
@@ -118,7 +121,7 @@ public System.Void RemoveFontCollection(System.Uri key)
 ### TryGetGlyphTypeface
 
 ```csharp
-public System.Boolean TryGetGlyphTypeface(Avalonia.Media.Typeface typeface, Avalonia.Media.GlyphTypeface& glyphTypeface)
+public Boolean TryGetGlyphTypeface(Avalonia.Media.Typeface typeface, Avalonia.Media.GlyphTypeface& glyphTypeface)
 ```
 
 <span id="uid-f9bc67a2d1"></span>
@@ -126,7 +129,7 @@ public System.Boolean TryGetGlyphTypeface(Avalonia.Media.Typeface typeface, Aval
 ### TryMatchCharacter
 
 ```csharp
-public System.Boolean TryMatchCharacter(System.Int32 codepoint, Avalonia.Media.FontStyle fontStyle, Avalonia.Media.FontWeight fontWeight, Avalonia.Media.FontStretch fontStretch, Avalonia.Media.FontFamily fontFamily, System.Globalization.CultureInfo culture, Avalonia.Media.Typeface& typeface)
+public Boolean TryMatchCharacter(Int32 codepoint, Avalonia.Media.FontStyle fontStyle, Avalonia.Media.FontWeight fontWeight, Avalonia.Media.FontStretch fontStretch, Avalonia.Media.FontFamily fontFamily, System.Globalization.CultureInfo culture, Avalonia.Media.Typeface& typeface)
 ```
 
 ## Properties
@@ -180,7 +183,7 @@ public Avalonia.Media.Fonts.IFontCollection SystemFonts { get; set; }
 ### CompositeFontScheme
 
 ```csharp
-public System.String CompositeFontScheme
+public String CompositeFontScheme
 ```
 
 <span id="uid-59fec01f97"></span>
@@ -188,7 +191,7 @@ public System.String CompositeFontScheme
 ### FontCollectionScheme
 
 ```csharp
-public System.String FontCollectionScheme
+public String FontCollectionScheme
 ```
 
 <span id="uid-290667f4a6"></span>
@@ -196,7 +199,7 @@ public System.String FontCollectionScheme
 ### SystemFontScheme
 
 ```csharp
-public System.String SystemFontScheme
+public String SystemFontScheme
 ```
 
 </ApiRefPage>

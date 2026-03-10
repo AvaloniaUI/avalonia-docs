@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Media/TextFormatting/Unicode/GraphemeEnumerator.cs">GraphemeEnumerator.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__signature">
@@ -59,7 +62,7 @@ public struct GraphemeEnumerator
 ### GraphemeEnumerator
 
 ```csharp
-public GraphemeEnumerator(System.ReadOnlySpan<System.Char> text)
+public GraphemeEnumerator(ReadOnlySpan<Char> text)
 ```
 
 ## Methods
@@ -73,7 +76,7 @@ public GraphemeEnumerator(System.ReadOnlySpan<System.Char> text)
 ### MoveNext
 
 ```csharp
-public System.Boolean MoveNext(Avalonia.Media.TextFormatting.Unicode.Grapheme& grapheme)
+public Boolean MoveNext(Avalonia.Media.TextFormatting.Unicode.Grapheme& grapheme)
 ```
 
 </ApiRefPage>

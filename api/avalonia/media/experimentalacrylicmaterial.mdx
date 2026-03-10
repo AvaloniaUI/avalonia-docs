@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Media/ExperimentalAcrylicMaterial.cs">ExperimentalAcrylicMaterial.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__signature">
@@ -70,6 +73,19 @@ public ExperimentalAcrylicMaterial()
 | Name | Description |
 | --- | --- |
 | [ToImmutable](#uid-b94224ae5d) | No summary available. |
+| [Bind (8 overloads) (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-1c60c7bda3) | Binds a Avalonia.AvaloniaProperty to an Avalonia.Data.BindingBase. |
+| [CheckAccess (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-260ff7a68d) | Returns a value indicating whether the current thread is the UI thread. |
+| [ClearValue (4 overloads) (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-41de208fbe) | Clears a Avalonia.AvaloniaProperty's local value. |
+| [CoerceValue (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-3bec32f39e) | Coerces the specified Avalonia.AvaloniaProperty. |
+| [Equals (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-a8a8e94305) | Compares two objects using reference equality. |
+| [GetBaseValue (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-9c615efbba) | No summary available. |
+| [GetHashCode (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-7f7db1e7a2) | Gets the hash code for the object. |
+| [GetValue (3 overloads) (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-5142cd4792) | Gets a Avalonia.AvaloniaProperty value. |
+| [IsAnimating (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-8cbfc7521a) | Checks whether a Avalonia.AvaloniaProperty is animating. |
+| [IsSet (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-f8bf0bbdcc) | Checks whether a Avalonia.AvaloniaProperty is set on this object. |
+| [SetCurrentValue (2 overloads) (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-38759fd088) | Sets the value of a dependency property without changing its value source. |
+| [SetValue (3 overloads) (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-47d14e19d7) | Sets a Avalonia.AvaloniaProperty value. |
+| [VerifyAccess (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-3b9d3c9793) | Checks that the current thread is the UI thread and throws if not. |
 
 <span id="uid-b94224ae5d"></span>
 
@@ -89,6 +105,8 @@ public Avalonia.Media.IExperimentalAcrylicMaterial ToImmutable()
 | [PlatformTransparencyCompensationLevel](#uid-1e59b4c6cd) | Gets or Sets the PlatformTransparencyCompensationLevel. This value defines the minimum Avalonia.Media.ExperimentalAcrylicMaterial.MaterialOpacity that can be used. It means material opacity is re-scaled from this value to 1. |
 | [TintColor](#uid-96f591eea6) | Gets or Sets the TintColor. |
 | [TintOpacity](#uid-b0b0750dba) | Gets or Sets the Tint Opacity. |
+| [Dispatcher (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-b25fa51632) | Returns the Avalonia.AvaloniaObject.Dispatcher that this Avalonia.AvaloniaObject is associated with. |
+| [Item (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-c1d1f1bc0f) | No summary available. |
 
 <span id="uid-22a276ee77"></span>
 
@@ -119,7 +137,7 @@ Gets or Sets the MaterialOpacity.
 This makes the material more or less opaque.
 
 ```csharp
-public System.Double MaterialOpacity { get; set; }
+public Double MaterialOpacity { get; set; }
 ```
 
 <span id="uid-1e59b4c6cd"></span>
@@ -131,7 +149,7 @@ This value defines the minimum [Avalonia.Media.ExperimentalAcrylicMaterial.Mater
 It means material opacity is re-scaled from this value to 1.
 
 ```csharp
-public System.Double PlatformTransparencyCompensationLevel { get; set; }
+public Double PlatformTransparencyCompensationLevel { get; set; }
 ```
 
 <span id="uid-96f591eea6"></span>
@@ -151,7 +169,7 @@ public Avalonia.Media.Color TintColor { get; set; }
 Gets or Sets the Tint Opacity.
 
 ```csharp
-public System.Double TintOpacity { get; set; }
+public Double TintOpacity { get; set; }
 ```
 
 ## Fields
@@ -192,7 +210,7 @@ public Avalonia.StyledProperty<TValue><Avalonia.Media.Color> FallbackColorProper
 Defines the [Avalonia.Media.ExperimentalAcrylicMaterial.MaterialOpacity](xref:Avalonia.Media.ExperimentalAcrylicMaterial.MaterialOpacity) property.
 
 ```csharp
-public Avalonia.StyledProperty<TValue><System.Double> MaterialOpacityProperty
+public Avalonia.StyledProperty<TValue><Double> MaterialOpacityProperty
 ```
 
 <span id="uid-c07b44e628"></span>
@@ -202,7 +220,7 @@ public Avalonia.StyledProperty<TValue><System.Double> MaterialOpacityProperty
 Defines the [Avalonia.Media.ExperimentalAcrylicMaterial.PlatformTransparencyCompensationLevel](xref:Avalonia.Media.ExperimentalAcrylicMaterial.PlatformTransparencyCompensationLevel) property.
 
 ```csharp
-public Avalonia.StyledProperty<TValue><System.Double> PlatformTransparencyCompensationLevelProperty
+public Avalonia.StyledProperty<TValue><Double> PlatformTransparencyCompensationLevelProperty
 ```
 
 <span id="uid-0a4e15e6ae"></span>
@@ -222,7 +240,7 @@ public Avalonia.StyledProperty<TValue><Avalonia.Media.Color> TintColorProperty
 Defines the [Avalonia.Media.ExperimentalAcrylicMaterial.TintOpacity](xref:Avalonia.Media.ExperimentalAcrylicMaterial.TintOpacity) property.
 
 ```csharp
-public Avalonia.StyledProperty<TValue><System.Double> TintOpacityProperty
+public Avalonia.StyledProperty<TValue><Double> TintOpacityProperty
 ```
 
 ## Events
@@ -230,6 +248,7 @@ public Avalonia.StyledProperty<TValue><System.Double> TintOpacityProperty
 | Name | Description |
 | --- | --- |
 | [Invalidated](#uid-d4317ea3fe) | Raised when any of the material's visual properties change. |
+| [PropertyChanged (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-d758e26fae) | Raised when a Avalonia.AvaloniaProperty value changes on this object. |
 
 <span id="uid-d4317ea3fe"></span>
 
@@ -238,7 +257,7 @@ public Avalonia.StyledProperty<TValue><System.Double> TintOpacityProperty
 Raised when any of the material's visual properties change.
 
 ```csharp
-public event System.EventHandler Invalidated
+public event EventHandler Invalidated
 ```
 
 </ApiRefPage>

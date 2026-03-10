@@ -61,7 +61,7 @@ public interface IControlledApplicationLifetime
 Shuts down the application and sets the exit code that is returned to the operating system when the application exits.
 
 ```csharp
-public System.Void Shutdown(System.Int32 exitCode)
+public Void Shutdown(Int32 exitCode)
 ```
 
 | Parameter | Description |
@@ -82,7 +82,7 @@ public System.Void Shutdown(System.Int32 exitCode)
 Sent when the application is exiting.
 
 ```csharp
-public event System.EventHandler<Avalonia.Controls.ApplicationLifetimes.ControlledApplicationLifetimeExitEventArgs> Exit
+public event EventHandler<Avalonia.Controls.ApplicationLifetimes.ControlledApplicationLifetimeExitEventArgs> Exit
 ```
 
 <span id="uid-2481c92d33"></span>
@@ -92,7 +92,7 @@ public event System.EventHandler<Avalonia.Controls.ApplicationLifetimes.Controll
 Sent when the application is starting up.
 
 ```csharp
-public event System.EventHandler<Avalonia.Controls.ApplicationLifetimes.ControlledApplicationLifetimeStartupEventArgs> Startup
+public event EventHandler<Avalonia.Controls.ApplicationLifetimes.ControlledApplicationLifetimeStartupEventArgs> Startup
 ```
 
 </ApiRefPage>

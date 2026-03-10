@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/RelativePoint.cs">RelativePoint.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -89,7 +92,7 @@ public RelativePoint(Avalonia.Point point, Avalonia.RelativeUnit unit)
 Initializes a new instance of the [Avalonia.RelativePoint](xref:Avalonia.RelativePoint) struct.
 
 ```csharp
-public RelativePoint(System.Double x, System.Double y, Avalonia.RelativeUnit unit)
+public RelativePoint(Double x, Double y, Avalonia.RelativeUnit unit)
 ```
 
 | Parameter | Description |
@@ -119,7 +122,7 @@ public RelativePoint(System.Double x, System.Double y, Avalonia.RelativeUnit uni
 Checks if the [Avalonia.RelativePoint](xref:Avalonia.RelativePoint) equals another point.
 
 ```csharp
-public System.Boolean Equals(Avalonia.RelativePoint p)
+public Boolean Equals(Avalonia.RelativePoint p)
 ```
 
 | Parameter | Description |
@@ -135,7 +138,7 @@ Returns: True if the objects are equal, otherwise false.
 Checks if the [Avalonia.RelativePoint](xref:Avalonia.RelativePoint) equals another object.
 
 ```csharp
-public System.Boolean Equals(System.Object obj)
+public Boolean Equals(Object obj)
 ```
 
 | Parameter | Description |
@@ -151,7 +154,7 @@ Returns: True if the objects are equal, otherwise false.
 Gets a hashcode for a [Avalonia.RelativePoint](xref:Avalonia.RelativePoint).
 
 ```csharp
-public System.Int32 GetHashCode()
+public Int32 GetHashCode()
 ```
 
 Returns: A hash code.
@@ -163,7 +166,7 @@ Returns: A hash code.
 Parses a [Avalonia.RelativePoint](xref:Avalonia.RelativePoint) string.
 
 ```csharp
-public Avalonia.RelativePoint Parse(System.String s)
+public Avalonia.RelativePoint Parse(String s)
 ```
 
 | Parameter | Description |
@@ -215,7 +218,7 @@ Returns: The origin point in pixels.
 Returns a String representing this RelativePoint instance.
 
 ```csharp
-public System.String ToString()
+public String ToString()
 ```
 
 Returns: The string representation.

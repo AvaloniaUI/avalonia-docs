@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Input/DataFormat.cs">DataFormat.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -53,6 +56,9 @@ public class DataFormat
 <span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> DataFormat
 </div>
 <div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Derived types:</span> <a href="dataformat-1">DataFormat&lt;T&gt;</a>
+</div>
+<div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;DataFormat&gt;
 </div>
 </div>
@@ -61,10 +67,10 @@ public class DataFormat
 
 | Name | Description |
 | --- | --- |
-| [CreateBytesApplicationFormat](#uid-3fbe38b6ba) | Creates a new format specific to the application that returns an array of System.Byte. |
-| [CreateBytesPlatformFormat](#uid-1efc4cf482) | Creates a new format for the current platform that returns an array of System.Byte. |
-| [CreateStringApplicationFormat](#uid-7587d5d188) | Creates a new format specific to the application that returns a System.String. |
-| [CreateStringPlatformFormat](#uid-5b39021fd9) | Creates a new format for the current platform that returns a System.String. |
+| [CreateBytesApplicationFormat](#uid-3fbe38b6ba) | Creates a new format specific to the application that returns an array of Byte. |
+| [CreateBytesPlatformFormat](#uid-1efc4cf482) | Creates a new format for the current platform that returns an array of Byte. |
+| [CreateStringApplicationFormat](#uid-7587d5d188) | Creates a new format specific to the application that returns a String. |
+| [CreateStringPlatformFormat](#uid-5b39021fd9) | Creates a new format for the current platform that returns a String. |
 | [Equals (2 overloads)](#uid-78ddc432ce) | No summary available. |
 | [GetHashCode](#uid-f95a08c254) | No summary available. |
 | [ToString](#uid-fd15320886) | No summary available. |
@@ -74,17 +80,17 @@ public class DataFormat
 
 ### CreateBytesApplicationFormat
 
-Creates a new format specific to the application that returns an array of [System.Byte](xref:System.Byte).
+Creates a new format specific to the application that returns an array of [Byte](xref:System.Byte).
 
 ```csharp
-public Avalonia.Input.DataFormat<T><System.Byte[]> CreateBytesApplicationFormat(System.String identifier)
+public Avalonia.Input.DataFormat<T><Byte[]> CreateBytesApplicationFormat(String identifier)
 ```
 
 | Parameter | Description |
 | --- | --- |
 | `identifier` | The format identifier. To avoid conflicts with system identifiers, this value isn't passed to the underlying
 platform directly. However, two different applications using the same identifier
-with [Avalonia.Input.DataFormat.CreateBytesApplicationFormat(System.String)](xref:Avalonia.Input.DataFormat.CreateBytesApplicationFormat%28System.String%29) or [Avalonia.Input.DataFormat.CreateStringApplicationFormat(System.String)](xref:Avalonia.Input.DataFormat.CreateStringApplicationFormat%28System.String%29)
+with [Avalonia.Input.DataFormat.CreateBytesApplicationFormat(String)](xref:Avalonia.Input.DataFormat.CreateBytesApplicationFormat%28System.String%29) or [Avalonia.Input.DataFormat.CreateStringApplicationFormat(String)](xref:Avalonia.Input.DataFormat.CreateStringApplicationFormat%28System.String%29)
 are able to share data using this format.
 
 Only ASCII letters (A-Z, a-z), digits (0-9), the dot (.) and the hyphen (-) are accepted. |
@@ -95,10 +101,10 @@ Returns: A new [Avalonia.Input.DataFormat](xref:Avalonia.Input.DataFormat).
 
 ### CreateBytesPlatformFormat
 
-Creates a new format for the current platform that returns an array of [System.Byte](xref:System.Byte).
+Creates a new format for the current platform that returns an array of [Byte](xref:System.Byte).
 
 ```csharp
-public Avalonia.Input.DataFormat<T><System.Byte[]> CreateBytesPlatformFormat(System.String identifier)
+public Avalonia.Input.DataFormat<T><Byte[]> CreateBytesPlatformFormat(String identifier)
 ```
 
 | Parameter | Description |
@@ -112,17 +118,17 @@ Returns: A new [Avalonia.Input.DataFormat](xref:Avalonia.Input.DataFormat).
 
 ### CreateStringApplicationFormat
 
-Creates a new format specific to the application that returns a [System.String](xref:System.String).
+Creates a new format specific to the application that returns a [String](xref:System.String).
 
 ```csharp
-public Avalonia.Input.DataFormat<T><System.String> CreateStringApplicationFormat(System.String identifier)
+public Avalonia.Input.DataFormat<T><String> CreateStringApplicationFormat(String identifier)
 ```
 
 | Parameter | Description |
 | --- | --- |
 | `identifier` | The format identifier. To avoid conflicts with system identifiers, this value isn't passed to the underlying
 platform directly. However, two different applications using the same identifier
-with [Avalonia.Input.DataFormat.CreateBytesApplicationFormat(System.String)](xref:Avalonia.Input.DataFormat.CreateBytesApplicationFormat%28System.String%29) or [Avalonia.Input.DataFormat.CreateStringApplicationFormat(System.String)](xref:Avalonia.Input.DataFormat.CreateStringApplicationFormat%28System.String%29)
+with [Avalonia.Input.DataFormat.CreateBytesApplicationFormat(String)](xref:Avalonia.Input.DataFormat.CreateBytesApplicationFormat%28System.String%29) or [Avalonia.Input.DataFormat.CreateStringApplicationFormat(String)](xref:Avalonia.Input.DataFormat.CreateStringApplicationFormat%28System.String%29)
 are able to share data using this format.
 
 Only ASCII letters (A-Z, a-z), digits (0-9), the dot (.) and the hyphen (-) are accepted. |
@@ -133,10 +139,10 @@ Returns: A new [Avalonia.Input.DataFormat](xref:Avalonia.Input.DataFormat).
 
 ### CreateStringPlatformFormat
 
-Creates a new format for the current platform that returns a [System.String](xref:System.String).
+Creates a new format for the current platform that returns a [String](xref:System.String).
 
 ```csharp
-public Avalonia.Input.DataFormat<T><System.String> CreateStringPlatformFormat(System.String identifier)
+public Avalonia.Input.DataFormat<T><String> CreateStringPlatformFormat(String identifier)
 ```
 
 | Parameter | Description |
@@ -155,7 +161,7 @@ Returns: A new [Avalonia.Input.DataFormat](xref:Avalonia.Input.DataFormat).
 #### Equals
 
 ```csharp
-public System.Boolean Equals(Avalonia.Input.DataFormat other)
+public Boolean Equals(Avalonia.Input.DataFormat other)
 ```
 
 <span id="uid-87ed36a5e0"></span>
@@ -163,7 +169,7 @@ public System.Boolean Equals(Avalonia.Input.DataFormat other)
 #### Equals
 
 ```csharp
-public System.Boolean Equals(System.Object obj)
+public Boolean Equals(Object obj)
 ```
 
 <span id="uid-f95a08c254"></span>
@@ -171,7 +177,7 @@ public System.Boolean Equals(System.Object obj)
 ### GetHashCode
 
 ```csharp
-public System.Int32 GetHashCode()
+public Int32 GetHashCode()
 ```
 
 <span id="uid-fd15320886"></span>
@@ -179,7 +185,7 @@ public System.Int32 GetHashCode()
 ### ToString
 
 ```csharp
-public System.String ToString()
+public String ToString()
 ```
 
 <span id="uid-02047ff4d5"></span>
@@ -189,7 +195,7 @@ public System.String ToString()
 Creates a name for this format, usable by the underlying platform.
 
 ```csharp
-public System.String ToSystemName(System.String applicationPrefix)
+public String ToSystemName(String applicationPrefix)
 ```
 
 | Parameter | Description |
@@ -206,7 +212,7 @@ Returns: A system name for the format.
 | [File](#uid-4c6a2805bf) | Gets a data format representing a single file. Its data type is Avalonia.Platform.Storage.IStorageItem. |
 | [Identifier](#uid-397db05437) | Gets the identifier of the data format. |
 | [Kind](#uid-65f1b1de50) | Gets the kind of the data format. |
-| [Text](#uid-a2e19e2523) | Gets a data format representing plain text. Its data type is System.String. |
+| [Text](#uid-a2e19e2523) | Gets a data format representing plain text. Its data type is String. |
 
 <span id="uid-11b203b3e5"></span>
 
@@ -237,7 +243,7 @@ public Avalonia.Input.DataFormat<T><Avalonia.Platform.Storage.IStorageItem> File
 Gets the identifier of the data format.
 
 ```csharp
-public System.String Identifier { get; set; }
+public String Identifier { get; set; }
 ```
 
 <span id="uid-65f1b1de50"></span>
@@ -255,10 +261,10 @@ public Avalonia.Input.DataFormatKind Kind { get; set; }
 ### Text
 
 Gets a data format representing plain text.
-Its data type is [System.String](xref:System.String).
+Its data type is [String](xref:System.String).
 
 ```csharp
-public Avalonia.Input.DataFormat<T><System.String> Text { get; set; }
+public Avalonia.Input.DataFormat<T><String> Text { get; set; }
 ```
 
 </ApiRefPage>

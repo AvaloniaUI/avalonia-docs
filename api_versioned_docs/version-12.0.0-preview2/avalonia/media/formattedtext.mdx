@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Media/FormattedText.cs">FormattedText.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -67,7 +70,7 @@ public class FormattedText
 Construct a FormattedText object.
 
 ```csharp
-public FormattedText(System.String textToFormat, System.Globalization.CultureInfo culture, Avalonia.Media.FlowDirection flowDirection, Avalonia.Media.Typeface typeface, System.Double emSize, Avalonia.Media.IBrush foreground)
+public FormattedText(String textToFormat, System.Globalization.CultureInfo culture, Avalonia.Media.FlowDirection flowDirection, Avalonia.Media.Typeface typeface, Double emSize, Avalonia.Media.IBrush foreground)
 ```
 
 | Parameter | Description |
@@ -142,7 +145,7 @@ Returns: Geometry that surrounds the text.
 Builds a highlight geometry object for a given character range.
 
 ```csharp
-public Avalonia.Media.Geometry BuildHighlightGeometry(Avalonia.Point origin, System.Int32 startIndex, System.Int32 count)
+public Avalonia.Media.Geometry BuildHighlightGeometry(Avalonia.Point origin, Int32 startIndex, Int32 count)
 ```
 
 | Parameter | Description |
@@ -164,7 +167,7 @@ the last entry is reused as many times as required.
 The maxTextWidths array overrides the MaxTextWidth property.
 
 ```csharp
-public System.Double[] GetMaxTextWidths()
+public Double[] GetMaxTextWidths()
 ```
 
 Returns: The copy of max text width array
@@ -180,7 +183,7 @@ Returns: The copy of max text width array
 Sets or changes the culture for the text object.
 
 ```csharp
-public System.Void SetCulture(System.Globalization.CultureInfo culture)
+public Void SetCulture(System.Globalization.CultureInfo culture)
 ```
 
 | Parameter | Description |
@@ -194,7 +197,7 @@ public System.Void SetCulture(System.Globalization.CultureInfo culture)
 Sets or changes the culture for the text object.
 
 ```csharp
-public System.Void SetCulture(System.Globalization.CultureInfo culture, System.Int32 startIndex, System.Int32 count)
+public Void SetCulture(System.Globalization.CultureInfo culture, Int32 startIndex, Int32 count)
 ```
 
 | Parameter | Description |
@@ -214,7 +217,7 @@ public System.Void SetCulture(System.Globalization.CultureInfo culture, System.I
 Sets or changes the font family for the text object
 
 ```csharp
-public System.Void SetFontFamily(Avalonia.Media.FontFamily fontFamily)
+public Void SetFontFamily(Avalonia.Media.FontFamily fontFamily)
 ```
 
 | Parameter | Description |
@@ -228,7 +231,7 @@ public System.Void SetFontFamily(Avalonia.Media.FontFamily fontFamily)
 Sets or changes the font family for the text object
 
 ```csharp
-public System.Void SetFontFamily(Avalonia.Media.FontFamily fontFamily, System.Int32 startIndex, System.Int32 count)
+public Void SetFontFamily(Avalonia.Media.FontFamily fontFamily, Int32 startIndex, Int32 count)
 ```
 
 | Parameter | Description |
@@ -244,7 +247,7 @@ public System.Void SetFontFamily(Avalonia.Media.FontFamily fontFamily, System.In
 Sets or changes the font family for the text object
 
 ```csharp
-public System.Void SetFontFamily(System.String fontFamily)
+public Void SetFontFamily(String fontFamily)
 ```
 
 | Parameter | Description |
@@ -258,7 +261,7 @@ public System.Void SetFontFamily(System.String fontFamily)
 Sets or changes the font family for the text object
 
 ```csharp
-public System.Void SetFontFamily(System.String fontFamily, System.Int32 startIndex, System.Int32 count)
+public Void SetFontFamily(String fontFamily, Int32 startIndex, Int32 count)
 ```
 
 | Parameter | Description |
@@ -278,7 +281,7 @@ public System.Void SetFontFamily(System.String fontFamily, System.Int32 startInd
 Sets or changes the font features for the text object
 
 ```csharp
-public System.Void SetFontFeatures(Avalonia.Media.FontFeatureCollection fontFeatures)
+public Void SetFontFeatures(Avalonia.Media.FontFeatureCollection fontFeatures)
 ```
 
 | Parameter | Description |
@@ -292,7 +295,7 @@ public System.Void SetFontFeatures(Avalonia.Media.FontFeatureCollection fontFeat
 Sets or changes the font features for the text object
 
 ```csharp
-public System.Void SetFontFeatures(Avalonia.Media.FontFeatureCollection fontFeatures, System.Int32 startIndex, System.Int32 count)
+public Void SetFontFeatures(Avalonia.Media.FontFeatureCollection fontFeatures, Int32 startIndex, Int32 count)
 ```
 
 | Parameter | Description |
@@ -312,7 +315,7 @@ public System.Void SetFontFeatures(Avalonia.Media.FontFeatureCollection fontFeat
 Sets or changes the font em size measured in MIL units
 
 ```csharp
-public System.Void SetFontSize(System.Double emSize)
+public Void SetFontSize(Double emSize)
 ```
 
 | Parameter | Description |
@@ -326,7 +329,7 @@ public System.Void SetFontSize(System.Double emSize)
 Sets or changes the font em size measured in MIL units
 
 ```csharp
-public System.Void SetFontSize(System.Double emSize, System.Int32 startIndex, System.Int32 count)
+public Void SetFontSize(Double emSize, Int32 startIndex, Int32 count)
 ```
 
 | Parameter | Description |
@@ -346,7 +349,7 @@ public System.Void SetFontSize(System.Double emSize, System.Int32 startIndex, Sy
 Sets or changes the font style
 
 ```csharp
-public System.Void SetFontStyle(Avalonia.Media.FontStyle style)
+public Void SetFontStyle(Avalonia.Media.FontStyle style)
 ```
 
 | Parameter | Description |
@@ -360,7 +363,7 @@ public System.Void SetFontStyle(Avalonia.Media.FontStyle style)
 Sets or changes the font style
 
 ```csharp
-public System.Void SetFontStyle(Avalonia.Media.FontStyle style, System.Int32 startIndex, System.Int32 count)
+public Void SetFontStyle(Avalonia.Media.FontStyle style, Int32 startIndex, Int32 count)
 ```
 
 | Parameter | Description |
@@ -380,7 +383,7 @@ public System.Void SetFontStyle(Avalonia.Media.FontStyle style, System.Int32 sta
 Sets or changes the type face
 
 ```csharp
-public System.Void SetFontTypeface(Avalonia.Media.Typeface typeface)
+public Void SetFontTypeface(Avalonia.Media.Typeface typeface)
 ```
 
 | Parameter | Description |
@@ -394,7 +397,7 @@ public System.Void SetFontTypeface(Avalonia.Media.Typeface typeface)
 Sets or changes the type face
 
 ```csharp
-public System.Void SetFontTypeface(Avalonia.Media.Typeface typeface, System.Int32 startIndex, System.Int32 count)
+public Void SetFontTypeface(Avalonia.Media.Typeface typeface, Int32 startIndex, Int32 count)
 ```
 
 | Parameter | Description |
@@ -414,7 +417,7 @@ public System.Void SetFontTypeface(Avalonia.Media.Typeface typeface, System.Int3
 Sets or changes the font weight
 
 ```csharp
-public System.Void SetFontWeight(Avalonia.Media.FontWeight weight)
+public Void SetFontWeight(Avalonia.Media.FontWeight weight)
 ```
 
 | Parameter | Description |
@@ -428,7 +431,7 @@ public System.Void SetFontWeight(Avalonia.Media.FontWeight weight)
 Sets or changes the font weight
 
 ```csharp
-public System.Void SetFontWeight(Avalonia.Media.FontWeight weight, System.Int32 startIndex, System.Int32 count)
+public Void SetFontWeight(Avalonia.Media.FontWeight weight, Int32 startIndex, Int32 count)
 ```
 
 | Parameter | Description |
@@ -448,7 +451,7 @@ public System.Void SetFontWeight(Avalonia.Media.FontWeight weight, System.Int32 
 Sets foreground brush used for drawing text
 
 ```csharp
-public System.Void SetForegroundBrush(Avalonia.Media.IBrush foregroundBrush)
+public Void SetForegroundBrush(Avalonia.Media.IBrush foregroundBrush)
 ```
 
 | Parameter | Description |
@@ -462,7 +465,7 @@ public System.Void SetForegroundBrush(Avalonia.Media.IBrush foregroundBrush)
 Sets foreground brush used for drawing text
 
 ```csharp
-public System.Void SetForegroundBrush(Avalonia.Media.IBrush foregroundBrush, System.Int32 startIndex, System.Int32 count)
+public Void SetForegroundBrush(Avalonia.Media.IBrush foregroundBrush, Int32 startIndex, Int32 count)
 ```
 
 | Parameter | Description |
@@ -482,7 +485,7 @@ the last entry is reused as many times as required.
 The maxTextWidths array overrides the MaxTextWidth property.
 
 ```csharp
-public System.Void SetMaxTextWidths(System.Double[] maxTextWidths)
+public Void SetMaxTextWidths(Double[] maxTextWidths)
 ```
 
 | Parameter | Description |
@@ -500,7 +503,7 @@ public System.Void SetMaxTextWidths(System.Double[] maxTextWidths)
 Sets or changes the text decorations
 
 ```csharp
-public System.Void SetTextDecorations(Avalonia.Media.TextDecorationCollection textDecorations)
+public Void SetTextDecorations(Avalonia.Media.TextDecorationCollection textDecorations)
 ```
 
 | Parameter | Description |
@@ -514,7 +517,7 @@ public System.Void SetTextDecorations(Avalonia.Media.TextDecorationCollection te
 Sets or changes the text decorations
 
 ```csharp
-public System.Void SetTextDecorations(Avalonia.Media.TextDecorationCollection textDecorations, System.Int32 startIndex, System.Int32 count)
+public Void SetTextDecorations(Avalonia.Media.TextDecorationCollection textDecorations, Int32 startIndex, Int32 count)
 ```
 
 | Parameter | Description |
@@ -550,7 +553,7 @@ public System.Void SetTextDecorations(Avalonia.Media.TextDecorationCollection te
 The distance from the top of the first line to the baseline of the first line.
 
 ```csharp
-public System.Double Baseline { get; set; }
+public Double Baseline { get; set; }
 ```
 
 <span id="uid-5bcfa580b8"></span>
@@ -561,7 +564,7 @@ The distance from the topmost black pixel of the first line
 to the bottommost black pixel of the last line.
 
 ```csharp
-public System.Double Extent { get; set; }
+public Double Extent { get; set; }
 ```
 
 <span id="uid-33c99f7ffa"></span>
@@ -581,7 +584,7 @@ public Avalonia.Media.FlowDirection FlowDirection { get; set; }
 The distance from the top of the first line to the bottom of the last line.
 
 ```csharp
-public System.Double Height { get; set; }
+public Double Height { get; set; }
 ```
 
 <span id="uid-aef1a803a4"></span>
@@ -592,7 +595,7 @@ Gets or sets the height of, or the spacing between, each line where
 zero represents the default line height.
 
 ```csharp
-public System.Double LineHeight { get; set; }
+public Double LineHeight { get; set; }
 ```
 
 <span id="uid-01e3d26228"></span>
@@ -606,7 +609,7 @@ whichever occurs first.
 Use the Trimming property to control how the omission of text is indicated
 
 ```csharp
-public System.Int32 MaxLineCount { get; set; }
+public Int32 MaxLineCount { get; set; }
 ```
 
 <span id="uid-f9eb5e6882"></span>
@@ -619,7 +622,7 @@ or the nth line as specified by MaxLineCount, whichever occurs first.
 Use the Trimming property to control how the omission of text is indicated.
 
 ```csharp
-public System.Double MaxTextHeight { get; set; }
+public Double MaxTextHeight { get; set; }
 ```
 
 <span id="uid-57f90e10fb"></span>
@@ -634,7 +637,7 @@ For this reason, it is recommended that clients draw text with at least 1/6 em (
 Zero value of MaxTextWidth is equivalent to the maximum possible paragraph width.
 
 ```csharp
-public System.Double MaxTextWidth { get; set; }
+public Double MaxTextWidth { get; set; }
 ```
 
 <span id="uid-c1044dfc68"></span>
@@ -644,7 +647,7 @@ public System.Double MaxTextWidth { get; set; }
 The distance from the bottom of the last line to the extent bottom.
 
 ```csharp
-public System.Double OverhangAfter { get; set; }
+public Double OverhangAfter { get; set; }
 ```
 
 <span id="uid-1b2c990646"></span>
@@ -654,7 +657,7 @@ public System.Double OverhangAfter { get; set; }
 The maximum distance from the leading black pixel to the leading alignment point of a line.
 
 ```csharp
-public System.Double OverhangLeading { get; set; }
+public Double OverhangLeading { get; set; }
 ```
 
 <span id="uid-b1e41e0899"></span>
@@ -664,7 +667,7 @@ public System.Double OverhangLeading { get; set; }
 The maximum distance from the trailing black pixel to the trailing alignment point of a line.
 
 ```csharp
-public System.Double OverhangTrailing { get; set; }
+public Double OverhangTrailing { get; set; }
 ```
 
 <span id="uid-28594ca2eb"></span>
@@ -699,7 +702,7 @@ The maximum advance width between the leading and trailing alignment points of a
 excluding the width of whitespace characters at the end of the line.
 
 ```csharp
-public System.Double Width { get; set; }
+public Double Width { get; set; }
 ```
 
 <span id="uid-44f437e115"></span>
@@ -710,7 +713,7 @@ The maximum advance width between the leading and trailing alignment points of a
 including the width of whitespace characters at the end of the line.
 
 ```csharp
-public System.Double WidthIncludingTrailingWhitespace { get; set; }
+public Double WidthIncludingTrailingWhitespace { get; set; }
 ```
 
 ## Fields
@@ -728,7 +731,7 @@ public System.Double WidthIncludingTrailingWhitespace { get; set; }
 ### DefaultIdealToReal
 
 ```csharp
-public System.Double DefaultIdealToReal
+public Double DefaultIdealToReal
 ```
 
 <span id="uid-64dd2d2fbb"></span>
@@ -736,7 +739,7 @@ public System.Double DefaultIdealToReal
 ### DefaultRealToIdeal
 
 ```csharp
-public System.Double DefaultRealToIdeal
+public Double DefaultRealToIdeal
 ```
 
 <span id="uid-8bc99b53f6"></span>
@@ -744,7 +747,7 @@ public System.Double DefaultRealToIdeal
 ### GreatestMultiplierOfEm
 
 ```csharp
-public System.Double GreatestMultiplierOfEm
+public Double GreatestMultiplierOfEm
 ```
 
 <span id="uid-19a24b8963"></span>
@@ -752,7 +755,7 @@ public System.Double GreatestMultiplierOfEm
 ### IdealInfiniteWidth
 
 ```csharp
-public System.Int32 IdealInfiniteWidth
+public Int32 IdealInfiniteWidth
 ```
 
 <span id="uid-69ecab5cd3"></span>
@@ -760,7 +763,7 @@ public System.Int32 IdealInfiniteWidth
 ### RealInfiniteWidth
 
 ```csharp
-public System.Double RealInfiniteWidth
+public Double RealInfiniteWidth
 ```
 
 </ApiRefPage>

@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Media/TextFormatting/TextRun.cs">TextRun.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
@@ -52,6 +55,9 @@ public class TextRun
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> TextRun
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Derived types:</span> <a href="drawabletextrun">DrawableTextRun</a>, <a href="textcharacters">TextCharacters</a>, <a href="textendofline">TextEndOfLine</a>, <a href="unshapedtextrun">UnshapedTextRun</a>
+</div>
 </div>
 
 ## Properties
@@ -69,7 +75,7 @@ public class TextRun
 Gets the text source length.
 
 ```csharp
-public System.Int32 Length { get; set; }
+public Int32 Length { get; set; }
 ```
 
 <span id="uid-f4da24c6cf"></span>
@@ -89,7 +95,7 @@ public Avalonia.Media.TextFormatting.TextRunProperties Properties { get; set; }
 Gets the text run's text.
 
 ```csharp
-public System.ReadOnlyMemory<System.Char> Text { get; set; }
+public ReadOnlyMemory<Char> Text { get; set; }
 ```
 
 ## Fields
@@ -103,7 +109,7 @@ public System.ReadOnlyMemory<System.Char> Text { get; set; }
 ### DefaultTextSourceLength
 
 ```csharp
-public System.Int32 DefaultTextSourceLength
+public Int32 DefaultTextSourceLength
 ```
 
 </ApiRefPage>

@@ -32,11 +32,14 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Controls/Templates/FuncTemplate%602.cs">FuncTemplate`2.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__lead">
 
-Creates a control from a [System.Func&lt;T1, T2&gt;](xref:System.Func%602).
+Creates a control from a [Func&lt;T1, T2&gt;](xref:System.Func%602).
 
 </div>
 
@@ -68,7 +71,7 @@ public class FuncTemplate<TParam, TControl>
 ### FuncTemplate&lt;TParam, TControl&gt;
 
 ```csharp
-public FuncTemplate<TParam, TControl>(System.Func<TParam, Avalonia.Controls.INameScope, TControl> func)
+public FuncTemplate<TParam, TControl>(Func<TParam, Avalonia.Controls.INameScope, TControl> func)
 ```
 
 ## Methods

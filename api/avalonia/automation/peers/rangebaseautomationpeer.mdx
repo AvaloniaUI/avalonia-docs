@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Controls/Automation/Peers/RangeBaseAutomationPeer.cs">RangeBaseAutomationPeer.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__signature">
@@ -45,6 +48,9 @@ public class RangeBaseAutomationPeer
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="automationpeer">AutomationPeer</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="controlautomationpeer">ControlAutomationPeer</a> <span className="apiref-page__relation-separator">-&gt;</span> RangeBaseAutomationPeer
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Derived types:</span> <a href="scrollbarautomationpeer">ScrollBarAutomationPeer</a>, <a href="../../controls/automation/peers/progressbarautomationpeer">ProgressBarAutomationPeer</a>, <a href="../../controls/automation/peers/sliderautomationpeer">SliderAutomationPeer</a>
 </div>
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Implements:</span> <a href="../provider/irangevalueprovider">IRangeValueProvider</a>
@@ -70,13 +76,45 @@ public RangeBaseAutomationPeer(Avalonia.Controls.Primitives.RangeBase owner)
 | Name | Description |
 | --- | --- |
 | [SetValue](#uid-fcd6246636) | No summary available. |
+| [CreatePeerForElement (Inherited from ControlAutomationPeer)](controlautomationpeer.mdx#uid-01e76040e7) | Gets the Avalonia.Automation.Peers.AutomationPeer for a Avalonia.Controls.Control, creating it if necessary. |
+| [FromElement (Inherited from ControlAutomationPeer)](controlautomationpeer.mdx#uid-f0c358c33d) | Gets an existing Avalonia.Automation.Peers.AutomationPeer for a Avalonia.Controls.Control. |
+| [GetOrCreate (Inherited from ControlAutomationPeer)](controlautomationpeer.mdx#uid-d5fc666c05) | No summary available. |
+| [BringIntoView (Inherited from AutomationPeer)](automationpeer.mdx#uid-0ce0c26ad7) | Attempts to bring the element associated with the automation peer into view. |
+| [GetAcceleratorKey (Inherited from AutomationPeer)](automationpeer.mdx#uid-b27b870e23) | Gets the accelerator key combinations for the element that is associated with the UI Automation peer. |
+| [GetAccessKey (Inherited from AutomationPeer)](automationpeer.mdx#uid-0c0606dfaf) | Gets the access key for the element that is associated with the automation peer. |
+| [GetAutomationControlType (Inherited from AutomationPeer)](automationpeer.mdx#uid-f7daf3a583) | Gets the control type for the element that is associated with the UI Automation peer. |
+| [GetAutomationId (Inherited from AutomationPeer)](automationpeer.mdx#uid-ec722c2168) | Gets the automation ID of the element that is associated with the UI Automation peer. |
+| [GetBoundingRectangle (Inherited from AutomationPeer)](automationpeer.mdx#uid-f04c4b54df) | Gets the bounding rectangle of the element that is associated with the automation peer in top-level coordinates. |
+| [GetChildren (Inherited from AutomationPeer)](automationpeer.mdx#uid-1974fa1efa) | Gets the child automation peers. |
+| [GetClassName (Inherited from AutomationPeer)](automationpeer.mdx#uid-ee7505094d) | Gets a string that describes the class of the element. |
+| [GetHeadingLevel (Inherited from AutomationPeer)](automationpeer.mdx#uid-52680c5dea) | Gets the heading level that is associated with this automation peer. |
+| [GetHelpText (Inherited from AutomationPeer)](automationpeer.mdx#uid-3613ae2a30) | Gets text that provides help for the element that is associated with this automation peer. |
+| [GetItemStatus (Inherited from AutomationPeer)](automationpeer.mdx#uid-798f219773) | Gets the item status that is associated with this automation peer. |
+| [GetItemType (Inherited from AutomationPeer)](automationpeer.mdx#uid-d858421abf) | Gets the item type that is associated with this automation peer. |
+| [GetLabeledBy (Inherited from AutomationPeer)](automationpeer.mdx#uid-98bd49471d) | Gets the automation peer for the label that is targeted to the element. |
+| [GetLandmarkType (Inherited from AutomationPeer)](automationpeer.mdx#uid-57bba04eba) | Gets the control type for the element that is associated with the UI Automation peer. |
+| [GetLiveSetting (Inherited from AutomationPeer)](automationpeer.mdx#uid-75007f578a) | Gets the current live setting that is associated with this this automation peer. |
+| [GetLocalizedControlType (Inherited from AutomationPeer)](automationpeer.mdx#uid-262763e857) | Gets a human-readable localized string that represents the type of the control that is associated with this automation peer. |
+| [GetName (Inherited from AutomationPeer)](automationpeer.mdx#uid-ac6dd5a547) | Gets text that describes the element that is associated with this automation peer. |
+| [GetParent (Inherited from AutomationPeer)](automationpeer.mdx#uid-947969c77f) | Gets the Avalonia.Automation.Peers.AutomationPeer that is the parent of this Avalonia.Automation.Peers.AutomationPeer. |
+| [GetPlaceholderText (Inherited from AutomationPeer)](automationpeer.mdx#uid-1ced74e763) | Gets text that provides a placeholder for the element that is associated with this automation peer. |
+| [GetProvider (Inherited from AutomationPeer)](automationpeer.mdx#uid-ee05fc8d1e) | No summary available. |
+| [HasKeyboardFocus (Inherited from AutomationPeer)](automationpeer.mdx#uid-5f0d3a3d10) | Gets a value that indicates whether the element that is associated with this automation peer currently has keyboard focus. |
+| [IsContentElement (Inherited from AutomationPeer)](automationpeer.mdx#uid-5202d69eb1) | Gets a value that indicates whether the element that is associated with this automation peer contains data that is presented to the user. |
+| [IsControlElement (Inherited from AutomationPeer)](automationpeer.mdx#uid-665cdd1957) | Gets a value that indicates whether the element is understood by the user as interactive or as contributing to the logical structure of the control in the GUI. |
+| [IsEnabled (Inherited from AutomationPeer)](automationpeer.mdx#uid-cc55d0a61a) | Gets a value indicating whether the control is enabled for user interaction. |
+| [IsKeyboardFocusable (Inherited from AutomationPeer)](automationpeer.mdx#uid-c9dfcdf842) | Gets a value that indicates whether the element can accept keyboard focus. |
+| [IsOffscreen (Inherited from AutomationPeer)](automationpeer.mdx#uid-72084dcbfb) | Gets a value that indicates whether an element is off the screen. |
+| [RaisePropertyChangedEvent (Inherited from AutomationPeer)](automationpeer.mdx#uid-ffcc0e3d63) | Raises an event to notify the automation client of a changed property value. |
+| [SetFocus (Inherited from AutomationPeer)](automationpeer.mdx#uid-6a8d233e48) | Sets the keyboard focus on the element that is associated with this automation peer. |
+| [ShowContextMenu (Inherited from AutomationPeer)](automationpeer.mdx#uid-8bfe04d25b) | Shows the context menu for the element that is associated with this automation peer. |
 
 <span id="uid-fcd6246636"></span>
 
 ### SetValue
 
 ```csharp
-public System.Void SetValue(System.Double value)
+public Void SetValue(Double value)
 ```
 
 ## Properties
@@ -96,7 +134,7 @@ public System.Void SetValue(System.Double value)
 ### IsReadOnly
 
 ```csharp
-public System.Boolean IsReadOnly { get; set; }
+public Boolean IsReadOnly { get; set; }
 ```
 
 <span id="uid-b17ad7533a"></span>
@@ -104,7 +142,7 @@ public System.Boolean IsReadOnly { get; set; }
 ### LargeChange
 
 ```csharp
-public System.Double LargeChange { get; set; }
+public Double LargeChange { get; set; }
 ```
 
 <span id="uid-4479abeb28"></span>
@@ -112,7 +150,7 @@ public System.Double LargeChange { get; set; }
 ### Maximum
 
 ```csharp
-public System.Double Maximum { get; set; }
+public Double Maximum { get; set; }
 ```
 
 <span id="uid-df671a2b05"></span>
@@ -120,7 +158,7 @@ public System.Double Maximum { get; set; }
 ### Minimum
 
 ```csharp
-public System.Double Minimum { get; set; }
+public Double Minimum { get; set; }
 ```
 
 <span id="uid-e25c50366b"></span>
@@ -136,7 +174,7 @@ public Avalonia.Controls.Primitives.RangeBase Owner { get; set; }
 ### SmallChange
 
 ```csharp
-public System.Double SmallChange { get; set; }
+public Double SmallChange { get; set; }
 ```
 
 <span id="uid-9e060386af"></span>
@@ -144,8 +182,15 @@ public System.Double SmallChange { get; set; }
 ### Value
 
 ```csharp
-public System.Double Value { get; set; }
+public Double Value { get; set; }
 ```
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [ChildrenChanged (Inherited from AutomationPeer)](automationpeer.mdx#uid-d7771086b7) | Occurs when the children of the automation peer have changed. |
+| [PropertyChanged (Inherited from AutomationPeer)](automationpeer.mdx#uid-7b87077a9e) | Occurs when a property value of the automation peer has changed. |
 
 </ApiRefPage>
 

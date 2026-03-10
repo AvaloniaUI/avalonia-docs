@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Media/TextFormatting/Unicode/Codepoint.cs">Codepoint.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__signature">
@@ -64,7 +67,7 @@ public struct Codepoint
 Creates a new instance of [Avalonia.Media.TextFormatting.Unicode.Codepoint](xref:Avalonia.Media.TextFormatting.Unicode.Codepoint) with the specified value.
 
 ```csharp
-public Codepoint(System.UInt32 value)
+public Codepoint(UInt32 value)
 ```
 
 | Parameter | Description |
@@ -91,7 +94,7 @@ public Codepoint(System.UInt32 value)
 #### Equals
 
 ```csharp
-public System.Boolean Equals(Avalonia.Media.TextFormatting.Unicode.Codepoint other)
+public Boolean Equals(Avalonia.Media.TextFormatting.Unicode.Codepoint other)
 ```
 
 <span id="uid-18ece104d9"></span>
@@ -99,7 +102,7 @@ public System.Boolean Equals(Avalonia.Media.TextFormatting.Unicode.Codepoint oth
 #### Equals
 
 ```csharp
-public System.Boolean Equals(System.Object obj)
+public Boolean Equals(Object obj)
 ```
 
 <span id="uid-15974339b1"></span>
@@ -107,7 +110,7 @@ public System.Boolean Equals(System.Object obj)
 ### GetHashCode
 
 ```csharp
-public System.Int32 GetHashCode()
+public Int32 GetHashCode()
 ```
 
 <span id="uid-674e3f72f7"></span>
@@ -118,7 +121,7 @@ Returns if `cp` is between
 `lowerBound` and `upperBound`, inclusive.
 
 ```csharp
-public System.Boolean IsInRangeInclusive(Avalonia.Media.TextFormatting.Unicode.Codepoint cp, System.UInt32 lowerBound, System.UInt32 upperBound)
+public Boolean IsInRangeInclusive(Avalonia.Media.TextFormatting.Unicode.Codepoint cp, UInt32 lowerBound, UInt32 upperBound)
 ```
 
 <span id="uid-660ce1483b"></span>
@@ -126,7 +129,7 @@ public System.Boolean IsInRangeInclusive(Avalonia.Media.TextFormatting.Unicode.C
 ### ReadAt
 
 ```csharp
-public Avalonia.Media.TextFormatting.Unicode.Codepoint ReadAt(System.ReadOnlySpan<System.Char> text, System.Int32 index, System.Int32& count)
+public Avalonia.Media.TextFormatting.Unicode.Codepoint ReadAt(ReadOnlySpan<Char> text, Int32 index, Int32& count)
 ```
 
 <span id="uid-36b555528f"></span>
@@ -134,7 +137,7 @@ public Avalonia.Media.TextFormatting.Unicode.Codepoint ReadAt(System.ReadOnlySpa
 ### ToString
 
 ```csharp
-public System.String ToString()
+public String ToString()
 ```
 
 <span id="uid-e925e4cb0b"></span>
@@ -142,7 +145,7 @@ public System.String ToString()
 ### TryGetPairedBracket
 
 ```csharp
-public System.Boolean TryGetPairedBracket(Avalonia.Media.TextFormatting.Unicode.Codepoint& codepoint)
+public Boolean TryGetPairedBracket(Avalonia.Media.TextFormatting.Unicode.Codepoint& codepoint)
 ```
 
 ## Properties
@@ -209,7 +212,7 @@ public Avalonia.Media.TextFormatting.Unicode.GraphemeBreakClass GraphemeBreakCla
 Determines whether this [Avalonia.Media.TextFormatting.Unicode.Codepoint](xref:Avalonia.Media.TextFormatting.Unicode.Codepoint) is a break char.
 
 ```csharp
-public System.Boolean IsBreakChar { get; set; }
+public Boolean IsBreakChar { get; set; }
 ```
 
 Returns: `true` if [is break character]; otherwise, `false`.
@@ -221,7 +224,7 @@ Returns: `true` if [is break character]; otherwise, `false`.
 Determines whether this [Avalonia.Media.TextFormatting.Unicode.Codepoint](xref:Avalonia.Media.TextFormatting.Unicode.Codepoint) is an east asian char.
 
 ```csharp
-public System.Boolean IsEastAsian { get; set; }
+public Boolean IsEastAsian { get; set; }
 ```
 
 Returns: `true` if [is an east asian character]; otherwise, `false`.
@@ -233,7 +236,7 @@ Returns: `true` if [is an east asian character]; otherwise, `false`.
 Determines whether this [Avalonia.Media.TextFormatting.Unicode.Codepoint](xref:Avalonia.Media.TextFormatting.Unicode.Codepoint) is white space.
 
 ```csharp
-public System.Boolean IsWhiteSpace { get; set; }
+public Boolean IsWhiteSpace { get; set; }
 ```
 
 Returns: `true` if [is whitespace]; otherwise, `false`.
@@ -285,7 +288,7 @@ public Avalonia.Media.TextFormatting.Unicode.Script Script { get; set; }
 Get the codepoint's value.
 
 ```csharp
-public System.UInt32 Value { get; set; }
+public UInt32 Value { get; set; }
 ```
 
 </ApiRefPage>

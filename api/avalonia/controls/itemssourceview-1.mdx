@@ -32,6 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Controls/ItemsSourceView.cs">ItemsSourceView.cs</a>
+</div>
 </div>
 
 <div className="apiref-page__signature">
@@ -57,6 +60,9 @@ public class ItemsSourceView<T>
 | --- | --- |
 | [GetAt](#uid-193f0c424c) | Retrieves the item at the specified index. |
 | [GetEnumerator](#uid-4e513377fb) | No summary available. |
+| [Contains (Inherited from ItemsSourceView)](itemssourceview.mdx#uid-384f51208a) | No summary available. |
+| [GetOrCreate (2 overloads) (Inherited from ItemsSourceView)](itemssourceview.mdx#uid-690d93f5ab) | No summary available. |
+| [IndexOf (Inherited from ItemsSourceView)](itemssourceview.mdx#uid-42b8595b39) | No summary available. |
 
 <span id="uid-193f0c424c"></span>
 
@@ -65,7 +71,7 @@ public class ItemsSourceView<T>
 Retrieves the item at the specified index.
 
 ```csharp
-public T GetAt(System.Int32 index)
+public T GetAt(Int32 index)
 ```
 
 | Parameter | Description |
@@ -88,6 +94,8 @@ public System.Collections.Generic.IEnumerator<T> GetEnumerator()
 | --- | --- |
 | [Empty](#uid-3a721b94df) | Gets an empty Avalonia.Controls.ItemsSourceView |
 | [Item](#uid-bc2872e19a) | No summary available. |
+| [Count (Inherited from ItemsSourceView)](itemssourceview.mdx#uid-c7dd90d709) | Gets the number of items in the collection. |
+| [Source (Inherited from ItemsSourceView)](itemssourceview.mdx#uid-d81337be41) | Gets the source collection. |
 
 <span id="uid-3a721b94df"></span>
 
@@ -106,6 +114,12 @@ public Avalonia.Controls.ItemsSourceView<T><T> Empty { get; set; }
 ```csharp
 public T Item { get; set; }
 ```
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [CollectionChanged (Inherited from ItemsSourceView)](itemssourceview.mdx#uid-13328a2fb4) | Occurs when the collection has changed to indicate the reason for the change and which items changed. |
 
 </ApiRefPage>
 
