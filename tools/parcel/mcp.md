@@ -28,7 +28,7 @@ Parcel's MCP server works with various AI coding assistants:
 
 - **[VSCode with GitHub Copilot](https://code.visualstudio.com/docs/copilot/customization/mcp-servers)** (used in examples below)
 - **[Visual Studio with Copilot](https://learn.microsoft.com/en-us/visualstudio/ide/mcp-servers?view=vs-2022)** - Supports similar `mcp.json` file formats
-- **[Claude Code](https://claudelog.com/faqs/how-to-setup-claude-code-mcp-servers/)**
+- **[Claude Code](https://docs.anthropic.com/en/docs/claude-code/tutorials#set-up-model-context-protocol-mcp-servers)**
 - **[Cursor](https://docs.cursor.com/en/context/mcp)**
 
 ## Setting up the MCP server
@@ -63,6 +63,14 @@ VSCode will generate a `.vscode/mcp.json` file:
     },
     "inputs": []
 }
+```
+
+### Adding MCP server in Claude Code
+
+Run this command:
+
+```bash
+claude mcp add --scope user parcel -- parcel mcp
 ```
 
 ### Adding MCP server in Claude Desktop
