@@ -53,7 +53,7 @@ public class DrawingBrush
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../animation/animatable">Animatable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="brush">Brush</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="tilebrush">TileBrush</a> <span className="apiref-page__relation-separator">-&gt;</span> DrawingBrush
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../animation/animatable">Animatable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="brush">Brush</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="tilebrush">TileBrush</a> <span className="apiref-page__relation-separator">-&gt;</span> DrawingBrush
 </div>
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Implements:</span> <a href="ibrush">IBrush</a>, <a href="iscenebrush">ISceneBrush</a>, <a href="itilebrush">ITileBrush</a>
@@ -64,15 +64,17 @@ public class DrawingBrush
 
 | Name | Description |
 | --- | --- |
-| [DrawingBrush (2 overloads)](#uid-97dcd5188d) | Initializes a new instance of the Avalonia.Media.DrawingBrush class. |
+| [DrawingBrush (2 overloads)](#uid-97dcd5188d) | Initializes a new instance of the [Avalonia.Media.DrawingBrush](xref:Avalonia.Media.DrawingBrush) class. |
 
 <span id="uid-97dcd5188d"></span>
 
 ### DrawingBrush overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-660c38dce7"></span>
 
-#### DrawingBrush
+#### DrawingBrush Constructor
 
 Initializes a new instance of the [Avalonia.Media.DrawingBrush](xref:Avalonia.Media.DrawingBrush) class.
 
@@ -80,9 +82,13 @@ Initializes a new instance of the [Avalonia.Media.DrawingBrush](xref:Avalonia.Me
 public DrawingBrush()
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-971a82b29d"></span>
 
-#### DrawingBrush
+#### DrawingBrush Constructor
 
 Initializes a new instance of the [Avalonia.Media.DrawingBrush](xref:Avalonia.Media.DrawingBrush) class.
 
@@ -90,50 +96,57 @@ Initializes a new instance of the [Avalonia.Media.DrawingBrush](xref:Avalonia.Me
 public DrawingBrush(Avalonia.Media.Drawing visual)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `visual` | The visual to draw. |
+##### Parameters
+
+`visual` [Avalonia.Media.Drawing](xref:Avalonia.Media.Drawing)
+
+The visual to draw.
+
+
+</section>
 
 ## Methods
 
 | Name | Description |
 | --- | --- |
-| [Parse (Inherited from Brush)](brush.mdx#uid-c74b0204df) | Parses a brush string. |
-| [Bind (8 overloads) (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-1c60c7bda3) | Binds a Avalonia.AvaloniaProperty to an Avalonia.Data.BindingBase. |
-| [CheckAccess (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-260ff7a68d) | Returns a value indicating whether the current thread is the UI thread. |
-| [ClearValue (4 overloads) (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-41de208fbe) | Clears a Avalonia.AvaloniaProperty's local value. |
-| [CoerceValue (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-3bec32f39e) | Coerces the specified Avalonia.AvaloniaProperty. |
-| [Equals (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-a8a8e94305) | Compares two objects using reference equality. |
-| [GetBaseValue (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-9c615efbba) | No summary available. |
-| [GetHashCode (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-7f7db1e7a2) | Gets the hash code for the object. |
-| [GetValue (3 overloads) (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-5142cd4792) | Gets a Avalonia.AvaloniaProperty value. |
-| [IsAnimating (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-8cbfc7521a) | Checks whether a Avalonia.AvaloniaProperty is animating. |
-| [IsSet (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-f8bf0bbdcc) | Checks whether a Avalonia.AvaloniaProperty is set on this object. |
-| [SetCurrentValue (2 overloads) (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-38759fd088) | Sets the value of a dependency property without changing its value source. |
-| [SetValue (3 overloads) (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-47d14e19d7) | Sets a Avalonia.AvaloniaProperty value. |
-| [VerifyAccess (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-3b9d3c9793) | Checks that the current thread is the UI thread and throws if not. |
+| [Parse](brush.mdx#uid-c74b0204df) | Parses a brush string. Inherited from [Brush](brush.mdx). |
+| [Bind (8 overloads)](../avaloniaobject.mdx#uid-1c60c7bda3) | Binds a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) to an [Avalonia.Data.BindingBase](xref:Avalonia.Data.BindingBase). Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [CheckAccess](../avaloniaobject.mdx#uid-260ff7a68d) | Returns a value indicating whether the current thread is the UI thread. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [ClearValue (4 overloads)](../avaloniaobject.mdx#uid-41de208fbe) | Clears a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty)'s local value. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [CoerceValue](../avaloniaobject.mdx#uid-3bec32f39e) | Coerces the specified [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty). Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [Equals](../avaloniaobject.mdx#uid-a8a8e94305) | Compares two objects using reference equality. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [GetBaseValue](../avaloniaobject.mdx#uid-9c615efbba) | Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [GetHashCode](../avaloniaobject.mdx#uid-7f7db1e7a2) | Gets the hash code for the object. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [GetValue (3 overloads)](../avaloniaobject.mdx#uid-5142cd4792) | Gets a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [IsAnimating](../avaloniaobject.mdx#uid-8cbfc7521a) | Checks whether a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) is animating. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [IsSet](../avaloniaobject.mdx#uid-f8bf0bbdcc) | Checks whether a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) is set on this object. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [SetCurrentValue (2 overloads)](../avaloniaobject.mdx#uid-38759fd088) | Sets the value of a dependency property without changing its value source. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [SetValue (3 overloads)](../avaloniaobject.mdx#uid-47d14e19d7) | Sets a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [VerifyAccess](../avaloniaobject.mdx#uid-3b9d3c9793) | Checks that the current thread is the UI thread and throws if not. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
 
 ## Properties
 
 | Name | Description |
 | --- | --- |
 | [Drawing](#uid-c77cc1f0ed) | Gets or sets the visual to draw. |
-| [AlignmentX (Inherited from TileBrush)](tilebrush.mdx#uid-39bc73e3ff) | Gets or sets the horizontal alignment of a tile in the destination. |
-| [AlignmentY (Inherited from TileBrush)](tilebrush.mdx#uid-0dd621fd73) | Gets or sets the horizontal alignment of a tile in the destination. |
-| [DestinationRect (Inherited from TileBrush)](tilebrush.mdx#uid-62d11cfc8f) | Gets or sets the rectangle on the destination in which to paint a tile. |
-| [SourceRect (Inherited from TileBrush)](tilebrush.mdx#uid-7ec3a0bf52) | Gets or sets the rectangle of the source image that will be displayed. |
-| [Stretch (Inherited from TileBrush)](tilebrush.mdx#uid-0f3e8a1b10) | Gets or sets a value controlling how the source rectangle will be stretched to fill the destination rect. |
-| [TileMode (Inherited from TileBrush)](tilebrush.mdx#uid-dc5dc1a38f) | Gets or sets the brush's tile mode. |
-| [Opacity (Inherited from Brush)](brush.mdx#uid-56a58be17e) | Gets or sets the opacity of the brush. |
-| [Transform (Inherited from Brush)](brush.mdx#uid-8d25869723) | Gets or sets the transform of the brush. |
-| [TransformOrigin (Inherited from Brush)](brush.mdx#uid-406d6c9e88) | Gets or sets the origin of the brush Avalonia.Media.Brush.Transform |
-| [Transitions (Inherited from Animatable)](../animation/animatable.mdx#uid-1b3138f517) | Gets or sets the property transitions for the control. |
-| [Dispatcher (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-b25fa51632) | Returns the Avalonia.AvaloniaObject.Dispatcher that this Avalonia.AvaloniaObject is associated with. |
-| [Item (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-c1d1f1bc0f) | No summary available. |
+| [AlignmentX](tilebrush.mdx#uid-39bc73e3ff) | Gets or sets the horizontal alignment of a tile in the destination. Inherited from [TileBrush](tilebrush.mdx). |
+| [AlignmentY](tilebrush.mdx#uid-0dd621fd73) | Gets or sets the horizontal alignment of a tile in the destination. Inherited from [TileBrush](tilebrush.mdx). |
+| [DestinationRect](tilebrush.mdx#uid-62d11cfc8f) | Gets or sets the rectangle on the destination in which to paint a tile. Inherited from [TileBrush](tilebrush.mdx). |
+| [SourceRect](tilebrush.mdx#uid-7ec3a0bf52) | Gets or sets the rectangle of the source image that will be displayed. Inherited from [TileBrush](tilebrush.mdx). |
+| [Stretch](tilebrush.mdx#uid-0f3e8a1b10) | Gets or sets a value controlling how the source rectangle will be stretched to fill the destination rect. Inherited from [TileBrush](tilebrush.mdx). |
+| [TileMode](tilebrush.mdx#uid-dc5dc1a38f) | Gets or sets the brush's tile mode. Inherited from [TileBrush](tilebrush.mdx). |
+| [Opacity](brush.mdx#uid-56a58be17e) | Gets or sets the opacity of the brush. Inherited from [Brush](brush.mdx). |
+| [Transform](brush.mdx#uid-8d25869723) | Gets or sets the transform of the brush. Inherited from [Brush](brush.mdx). |
+| [TransformOrigin](brush.mdx#uid-406d6c9e88) | Gets or sets the origin of the brush [Avalonia.Media.Brush.Transform](xref:Avalonia.Media.Brush.Transform) Inherited from [Brush](brush.mdx). |
+| [Transitions](../animation/animatable.mdx#uid-1b3138f517) | Gets or sets the property transitions for the control. Inherited from [Animatable](../animation/animatable.mdx). |
+| [Dispatcher](../avaloniaobject.mdx#uid-b25fa51632) | Returns the [Avalonia.AvaloniaObject.Dispatcher](xref:Avalonia.AvaloniaObject.Dispatcher) that this [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject) is associated with. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [Item](../avaloniaobject.mdx#uid-c1d1f1bc0f) | Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-c77cc1f0ed"></span>
 
-### Drawing
+### Drawing Property
 
 Gets or sets the visual to draw.
 
@@ -141,25 +154,29 @@ Gets or sets the visual to draw.
 public Avalonia.Media.Drawing Drawing { get; set; }
 ```
 
+</section>
+
 ## Fields
 
 | Name | Description |
 | --- | --- |
-| [DrawingProperty](#uid-66402c8678) | Defines the Avalonia.Media.DrawingBrush.Drawing property. |
-| [AlignmentXProperty (Inherited from TileBrush)](tilebrush.mdx#uid-b5ca58adcd) | Defines the Avalonia.Media.TileBrush.AlignmentX property. |
-| [AlignmentYProperty (Inherited from TileBrush)](tilebrush.mdx#uid-f8b166babe) | Defines the Avalonia.Media.TileBrush.AlignmentY property. |
-| [DestinationRectProperty (Inherited from TileBrush)](tilebrush.mdx#uid-6fecc189d1) | Defines the Avalonia.Media.TileBrush.DestinationRect property. |
-| [SourceRectProperty (Inherited from TileBrush)](tilebrush.mdx#uid-94d60976da) | Defines the Avalonia.Media.TileBrush.SourceRect property. |
-| [StretchProperty (Inherited from TileBrush)](tilebrush.mdx#uid-52077d5dbb) | Defines the Avalonia.Media.TileBrush.Stretch property. |
-| [TileModeProperty (Inherited from TileBrush)](tilebrush.mdx#uid-03d37e0b80) | Defines the Avalonia.Media.TileBrush.TileMode property. |
-| [OpacityProperty (Inherited from Brush)](brush.mdx#uid-d84302c650) | Defines the Avalonia.Media.Brush.Opacity property. |
-| [TransformOriginProperty (Inherited from Brush)](brush.mdx#uid-3a3c0bc732) | Defines the Avalonia.Media.Brush.TransformOrigin property |
-| [TransformProperty (Inherited from Brush)](brush.mdx#uid-933d2c0564) | Defines the Avalonia.Media.Brush.Transform property. |
-| [TransitionsProperty (Inherited from Animatable)](../animation/animatable.mdx#uid-c79f18fac2) | Defines the Avalonia.Animation.Animatable.Transitions property. |
+| [DrawingProperty](#uid-66402c8678) | Defines the [Avalonia.Media.DrawingBrush.Drawing](xref:Avalonia.Media.DrawingBrush.Drawing) property. |
+| [AlignmentXProperty](tilebrush.mdx#uid-b5ca58adcd) | Defines the [Avalonia.Media.TileBrush.AlignmentX](xref:Avalonia.Media.TileBrush.AlignmentX) property. Inherited from [TileBrush](tilebrush.mdx). |
+| [AlignmentYProperty](tilebrush.mdx#uid-f8b166babe) | Defines the [Avalonia.Media.TileBrush.AlignmentY](xref:Avalonia.Media.TileBrush.AlignmentY) property. Inherited from [TileBrush](tilebrush.mdx). |
+| [DestinationRectProperty](tilebrush.mdx#uid-6fecc189d1) | Defines the [Avalonia.Media.TileBrush.DestinationRect](xref:Avalonia.Media.TileBrush.DestinationRect) property. Inherited from [TileBrush](tilebrush.mdx). |
+| [SourceRectProperty](tilebrush.mdx#uid-94d60976da) | Defines the [Avalonia.Media.TileBrush.SourceRect](xref:Avalonia.Media.TileBrush.SourceRect) property. Inherited from [TileBrush](tilebrush.mdx). |
+| [StretchProperty](tilebrush.mdx#uid-52077d5dbb) | Defines the [Avalonia.Media.TileBrush.Stretch](xref:Avalonia.Media.TileBrush.Stretch) property. Inherited from [TileBrush](tilebrush.mdx). |
+| [TileModeProperty](tilebrush.mdx#uid-03d37e0b80) | Defines the [Avalonia.Media.TileBrush.TileMode](xref:Avalonia.Media.TileBrush.TileMode) property. Inherited from [TileBrush](tilebrush.mdx). |
+| [OpacityProperty](brush.mdx#uid-d84302c650) | Defines the [Avalonia.Media.Brush.Opacity](xref:Avalonia.Media.Brush.Opacity) property. Inherited from [Brush](brush.mdx). |
+| [TransformOriginProperty](brush.mdx#uid-3a3c0bc732) | Defines the [Avalonia.Media.Brush.TransformOrigin](xref:Avalonia.Media.Brush.TransformOrigin) property Inherited from [Brush](brush.mdx). |
+| [TransformProperty](brush.mdx#uid-933d2c0564) | Defines the [Avalonia.Media.Brush.Transform](xref:Avalonia.Media.Brush.Transform) property. Inherited from [Brush](brush.mdx). |
+| [TransitionsProperty](../animation/animatable.mdx#uid-c79f18fac2) | Defines the [Avalonia.Animation.Animatable.Transitions](xref:Avalonia.Animation.Animatable.Transitions) property. Inherited from [Animatable](../animation/animatable.mdx). |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-66402c8678"></span>
 
-### DrawingProperty
+### DrawingProperty Field
 
 Defines the [Avalonia.Media.DrawingBrush.Drawing](xref:Avalonia.Media.DrawingBrush.Drawing) property.
 
@@ -167,11 +184,13 @@ Defines the [Avalonia.Media.DrawingBrush.Drawing](xref:Avalonia.Media.DrawingBru
 public Avalonia.StyledProperty<TValue><Avalonia.Media.Drawing> DrawingProperty
 ```
 
+</section>
+
 ## Events
 
 | Name | Description |
 | --- | --- |
-| [PropertyChanged (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-d758e26fae) | Raised when a Avalonia.AvaloniaProperty value changes on this object. |
+| [PropertyChanged](../avaloniaobject.mdx#uid-d758e26fae) | Raised when a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value changes on this object. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
 
 </ApiRefPage>
 

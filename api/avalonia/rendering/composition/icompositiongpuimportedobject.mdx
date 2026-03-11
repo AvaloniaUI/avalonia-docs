@@ -61,9 +61,11 @@ public interface ICompositionGpuImportedObject
 | [ImportCompleted](#uid-93f26986bf) | Tracks the import status of the object. Once the task is completed, the user code is allowed to free the resource owner in case when a non-owning sharing handle was used. |
 | [IsLost](#uid-455f141d6f) | Indicates if the device context this instance is associated with is no longer available |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-93f26986bf"></span>
 
-### ImportCompleted
+### ImportCompleted Property
 
 Tracks the import status of the object. Once the task is completed,
 the user code is allowed to free the resource owner in case when a non-owning
@@ -73,15 +75,21 @@ sharing handle was used.
 public System.Threading.Tasks.Task ImportCompleted { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-455f141d6f"></span>
 
-### IsLost
+### IsLost Property
 
 Indicates if the device context this instance is associated with is no longer available
 
 ```csharp
-public Boolean IsLost { get; set; }
+public bool IsLost { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

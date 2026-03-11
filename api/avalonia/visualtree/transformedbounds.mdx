@@ -64,11 +64,13 @@ public struct TransformedBounds
 
 | Name | Description |
 | --- | --- |
-| [TransformedBounds](#uid-0664aefdf0) | Initializes a new instance of the Avalonia.VisualTree.TransformedBounds struct. |
+| [TransformedBounds](#uid-0664aefdf0) | Initializes a new instance of the [Avalonia.VisualTree.TransformedBounds](xref:Avalonia.VisualTree.TransformedBounds) struct. |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-0664aefdf0"></span>
 
-### TransformedBounds
+### TransformedBounds Constructor
 
 Initializes a new instance of the [Avalonia.VisualTree.TransformedBounds](xref:Avalonia.VisualTree.TransformedBounds) struct.
 
@@ -76,11 +78,24 @@ Initializes a new instance of the [Avalonia.VisualTree.TransformedBounds](xref:A
 public TransformedBounds(Avalonia.Rect bounds, Avalonia.Rect clip, Avalonia.Matrix transform)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `bounds` | The control's bounds. |
-| `clip` | The control's clip rectangle. |
-| `transform` | The control's transform. |
+#### Parameters
+
+`bounds` [Avalonia.Rect](xref:Avalonia.Rect)
+
+The control's bounds.
+
+
+`clip` [Avalonia.Rect](xref:Avalonia.Rect)
+
+The control's clip rectangle.
+
+
+`transform` [Avalonia.Matrix](xref:Avalonia.Matrix)
+
+The control's transform.
+
+
+</section>
 
 ## Methods
 
@@ -91,49 +106,109 @@ public TransformedBounds(Avalonia.Rect bounds, Avalonia.Rect clip, Avalonia.Matr
 | [GetHashCode](#uid-a285329880) | No summary available. |
 | [ToString](#uid-5ba6e447d4) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-eae00ef883"></span>
 
-### Contains
+### Contains Method
 
 ```csharp
-public Boolean Contains(Avalonia.Point point)
+public bool Contains(Avalonia.Point point)
 ```
+
+#### Parameters
+
+`point` [Avalonia.Point](xref:Avalonia.Point)
+
+
+#### Returns
+
+bool
+
+
+</section>
 
 <span id="uid-f407462ac4"></span>
 
 ### Equals overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-21ca133daf"></span>
 
-#### Equals
+#### Equals Method
 
 ```csharp
-public Boolean Equals(Avalonia.VisualTree.TransformedBounds other)
+public bool Equals(Avalonia.VisualTree.TransformedBounds other)
 ```
+
+##### Parameters
+
+`other` [Avalonia.VisualTree.TransformedBounds](xref:Avalonia.VisualTree.TransformedBounds)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-bc7802cd4e"></span>
 
-#### Equals
+#### Equals Method
 
 ```csharp
-public Boolean Equals(Object obj)
+public bool Equals(object obj)
 ```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-a285329880"></span>
 
-### GetHashCode
+### GetHashCode Method
 
 ```csharp
-public Int32 GetHashCode()
+public int GetHashCode()
 ```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-5ba6e447d4"></span>
 
-### ToString
+### ToString Method
 
 ```csharp
-public String ToString()
+public string ToString()
 ```
+
+#### Returns
+
+string
+
+
+</section>
 
 ## Properties
 
@@ -143,9 +218,11 @@ public String ToString()
 | [Clip](#uid-1e725d2e86) | Gets the control's clip rectangle in global coordinate space. |
 | [Transform](#uid-6b36965c2f) | Gets the transform from local to global coordinate space. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-1c11ad2494"></span>
 
-### Bounds
+### Bounds Property
 
 Gets the control's bounds in its local coordinate space.
 
@@ -153,9 +230,13 @@ Gets the control's bounds in its local coordinate space.
 public Avalonia.Rect Bounds { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-1e725d2e86"></span>
 
-### Clip
+### Clip Property
 
 Gets the control's clip rectangle in global coordinate space.
 
@@ -163,15 +244,21 @@ Gets the control's clip rectangle in global coordinate space.
 public Avalonia.Rect Clip { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-6b36965c2f"></span>
 
-### Transform
+### Transform Property
 
 Gets the transform from local to global coordinate space.
 
 ```csharp
 public Avalonia.Matrix Transform { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

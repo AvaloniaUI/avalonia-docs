@@ -50,41 +50,100 @@ public interface IExternalObjectsRenderInterfaceContextFeature
 | [ImportImage (2 overloads)](#uid-976cc7a123) | No summary available. |
 | [ImportSemaphore](#uid-5a4b21ac29) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-5908ee5edf"></span>
 
-### GetSynchronizationCapabilities
+### GetSynchronizationCapabilities Method
 
 ```csharp
-public Avalonia.Rendering.Composition.CompositionGpuImportedImageSynchronizationCapabilities GetSynchronizationCapabilities(String imageHandleType)
+public Avalonia.Rendering.Composition.CompositionGpuImportedImageSynchronizationCapabilities GetSynchronizationCapabilities(string imageHandleType)
 ```
+
+#### Parameters
+
+`imageHandleType` string
+
+
+#### Returns
+
+[Avalonia.Rendering.Composition.CompositionGpuImportedImageSynchronizationCapabilities](xref:Avalonia.Rendering.Composition.CompositionGpuImportedImageSynchronizationCapabilities)
+
+
+</section>
 
 <span id="uid-976cc7a123"></span>
 
 ### ImportImage overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-4f2214ea39"></span>
 
-#### ImportImage
+#### ImportImage Method
 
 ```csharp
 public Avalonia.Platform.IPlatformRenderInterfaceImportedImage ImportImage(Avalonia.Platform.IPlatformHandle handle, Avalonia.Platform.PlatformGraphicsExternalImageProperties properties)
 ```
 
+##### Parameters
+
+`handle` [Avalonia.Platform.IPlatformHandle](xref:Avalonia.Platform.IPlatformHandle)
+
+
+`properties` [Avalonia.Platform.PlatformGraphicsExternalImageProperties](xref:Avalonia.Platform.PlatformGraphicsExternalImageProperties)
+
+
+##### Returns
+
+[Avalonia.Platform.IPlatformRenderInterfaceImportedImage](xref:Avalonia.Platform.IPlatformRenderInterfaceImportedImage)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-b4826e0815"></span>
 
-#### ImportImage
+#### ImportImage Method
 
 ```csharp
 public Avalonia.Platform.IPlatformRenderInterfaceImportedImage ImportImage(Avalonia.Rendering.Composition.ICompositionImportableSharedGpuContextImage image)
 ```
 
+##### Parameters
+
+`image` [Avalonia.Rendering.Composition.ICompositionImportableSharedGpuContextImage](xref:Avalonia.Rendering.Composition.ICompositionImportableSharedGpuContextImage)
+
+
+##### Returns
+
+[Avalonia.Platform.IPlatformRenderInterfaceImportedImage](xref:Avalonia.Platform.IPlatformRenderInterfaceImportedImage)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-5a4b21ac29"></span>
 
-### ImportSemaphore
+### ImportSemaphore Method
 
 ```csharp
 public Avalonia.Platform.IPlatformRenderInterfaceImportedSemaphore ImportSemaphore(Avalonia.Platform.IPlatformHandle handle)
 ```
+
+#### Parameters
+
+`handle` [Avalonia.Platform.IPlatformHandle](xref:Avalonia.Platform.IPlatformHandle)
+
+
+#### Returns
+
+[Avalonia.Platform.IPlatformRenderInterfaceImportedSemaphore](xref:Avalonia.Platform.IPlatformRenderInterfaceImportedSemaphore)
+
+
+</section>
 
 ## Properties
 
@@ -92,44 +151,60 @@ public Avalonia.Platform.IPlatformRenderInterfaceImportedSemaphore ImportSemapho
 | --- | --- |
 | [DeviceLuid](#uid-50b8b6c55d) | No summary available. |
 | [DeviceUuid](#uid-eaceb219d1) | No summary available. |
-| [SupportedImageHandleTypes](#uid-7d19d9997b) | Returns the list of image handle types supported by the current GPU backend, see Avalonia.Platform.KnownPlatformGraphicsExternalImageHandleTypes |
-| [SupportedSemaphoreTypes](#uid-cd6e7bd9dc) | Returns the list of semaphore types supported by the current GPU backend, see Avalonia.Platform.KnownPlatformGraphicsExternalSemaphoreHandleTypes |
+| [SupportedImageHandleTypes](#uid-7d19d9997b) | Returns the list of image handle types supported by the current GPU backend, see [Avalonia.Platform.KnownPlatformGraphicsExternalImageHandleTypes](xref:Avalonia.Platform.KnownPlatformGraphicsExternalImageHandleTypes) |
+| [SupportedSemaphoreTypes](#uid-cd6e7bd9dc) | Returns the list of semaphore types supported by the current GPU backend, see [Avalonia.Platform.KnownPlatformGraphicsExternalSemaphoreHandleTypes](xref:Avalonia.Platform.KnownPlatformGraphicsExternalSemaphoreHandleTypes) |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-50b8b6c55d"></span>
 
-### DeviceLuid
+### DeviceLuid Property
 
 ```csharp
-public Byte[] DeviceLuid { get; set; }
+public byte[] DeviceLuid { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-eaceb219d1"></span>
 
-### DeviceUuid
+### DeviceUuid Property
 
 ```csharp
-public Byte[] DeviceUuid { get; set; }
+public byte[] DeviceUuid { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-7d19d9997b"></span>
 
-### SupportedImageHandleTypes
+### SupportedImageHandleTypes Property
 
 Returns the list of image handle types supported by the current GPU backend, see [Avalonia.Platform.KnownPlatformGraphicsExternalImageHandleTypes](xref:Avalonia.Platform.KnownPlatformGraphicsExternalImageHandleTypes)
 
 ```csharp
-public System.Collections.Generic.IReadOnlyList<String> SupportedImageHandleTypes { get; set; }
+public System.Collections.Generic.IReadOnlyList<string> SupportedImageHandleTypes { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-cd6e7bd9dc"></span>
 
-### SupportedSemaphoreTypes
+### SupportedSemaphoreTypes Property
 
 Returns the list of semaphore types supported by the current GPU backend, see [Avalonia.Platform.KnownPlatformGraphicsExternalSemaphoreHandleTypes](xref:Avalonia.Platform.KnownPlatformGraphicsExternalSemaphoreHandleTypes)
 
 ```csharp
-public System.Collections.Generic.IReadOnlyList<String> SupportedSemaphoreTypes { get; set; }
+public System.Collections.Generic.IReadOnlyList<string> SupportedSemaphoreTypes { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

@@ -54,24 +54,48 @@ public interface IPageTransition
 | --- | --- |
 | [Start](#uid-eeae41f0d0) | Starts the animation. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-eeae41f0d0"></span>
 
-### Start
+### Start Method
 
 Starts the animation.
 
 ```csharp
-public System.Threading.Tasks.Task Start(Avalonia.Visual from, Avalonia.Visual to, Boolean forward, System.Threading.CancellationToken cancellationToken)
+public System.Threading.Tasks.Task Start(Avalonia.Visual from, Avalonia.Visual to, bool forward, System.Threading.CancellationToken cancellationToken)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `cancellationToken` | Animation cancellation. |
-| `forward` | If the animation is bidirectional, controls the direction of the animation. |
-| `from` | The control that is being transitioned away from. May be null. |
-| `to` | The control that is being transitioned to. May be null. |
+#### Parameters
 
-Returns: A [System.Threading.Tasks.Task](xref:System.Threading.Tasks.Task) that tracks the progress of the animation.
+`from` [Avalonia.Visual](xref:Avalonia.Visual)
+
+The control that is being transitioned away from. May be null.
+
+
+`to` [Avalonia.Visual](xref:Avalonia.Visual)
+
+The control that is being transitioned to. May be null.
+
+
+`forward` bool
+
+If the animation is bidirectional, controls the direction of the animation.
+
+
+`cancellationToken` System.Threading.CancellationToken
+
+Animation cancellation.
+
+
+#### Returns
+
+System.Threading.Tasks.Task
+
+A [System.Threading.Tasks.Task](xref:System.Threading.Tasks.Task) that tracks the progress of the animation.
+
+
+</section>
 
 </ApiRefPage>
 

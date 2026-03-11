@@ -53,7 +53,7 @@ public class FontFeature
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> FontFeature
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> FontFeature
 </div>
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;FontFeature&gt;
@@ -64,17 +64,21 @@ public class FontFeature
 
 | Name | Description |
 | --- | --- |
-| [FontFeature](#uid-ef593895f9) | Creates an instance of FontFeature. |
+| [FontFeature](#uid-ef593895f9) | Creates an instance of [FontFeature](xref:Avalonia.Media.FontFeature). |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-ef593895f9"></span>
 
-### FontFeature
+### FontFeature Constructor
 
-Creates an instance of FontFeature.
+Creates an instance of [FontFeature](xref:Avalonia.Media.FontFeature).
 
 ```csharp
 public FontFeature()
 ```
+
+</section>
 
 ## Methods
 
@@ -83,48 +87,96 @@ public FontFeature()
 | [&lt;Clone&gt;$](#uid-7195bdeffb) | No summary available. |
 | [Equals (2 overloads)](#uid-1b564226cf) | No summary available. |
 | [GetHashCode](#uid-c2a1c1ae7a) | No summary available. |
-| [Parse](#uid-cc463edcd1) | Parses a string to return a Avalonia.Media.FontFeature. Syntax is the following: |
-| [ToString](#uid-1e88070b05) | Gets a string representation of the Avalonia.Media.FontFeature. |
+| [Parse](#uid-cc463edcd1) | Parses a string to return a [Avalonia.Media.FontFeature](xref:Avalonia.Media.FontFeature). Syntax is the following: |
+| [ToString](#uid-1e88070b05) | Gets a string representation of the [Avalonia.Media.FontFeature](xref:Avalonia.Media.FontFeature). |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-7195bdeffb"></span>
 
-### &lt;Clone&gt;$
+### &lt;Clone&gt;$ Method
 
 ```csharp
 public Avalonia.Media.FontFeature <Clone>$()
 ```
 
+#### Returns
+
+[Avalonia.Media.FontFeature](xref:Avalonia.Media.FontFeature)
+
+
+</section>
+
 <span id="uid-1b564226cf"></span>
 
 ### Equals overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-7c5bc7f370"></span>
 
-#### Equals
+#### Equals Method
 
 ```csharp
-public Boolean Equals(Avalonia.Media.FontFeature other)
+public bool Equals(Avalonia.Media.FontFeature other)
 ```
+
+##### Parameters
+
+`other` [Avalonia.Media.FontFeature](xref:Avalonia.Media.FontFeature)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-968e20e5f2"></span>
 
-#### Equals
+#### Equals Method
 
 ```csharp
-public Boolean Equals(Object obj)
+public bool Equals(object obj)
 ```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-c2a1c1ae7a"></span>
 
-### GetHashCode
+### GetHashCode Method
 
 ```csharp
-public Int32 GetHashCode()
+public int GetHashCode()
 ```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-cc463edcd1"></span>
 
-### Parse
+### Parse Method
 
 Parses a string to return a [Avalonia.Media.FontFeature](xref:Avalonia.Media.FontFeature).
 Syntax is the following:
@@ -148,26 +200,45 @@ Mixing it all:
 aalt[3:5]=2 2 3 5 Turn 2nd alternate on for range
 
 ```csharp
-public Avalonia.Media.FontFeature Parse(String s)
+public Avalonia.Media.FontFeature Parse(string s)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `s` | The string. |
+#### Parameters
 
-Returns: The [Avalonia.Media.FontFeature](xref:Avalonia.Media.FontFeature).
+`s` string
+
+The string.
+
+
+#### Returns
+
+[Avalonia.Media.FontFeature](xref:Avalonia.Media.FontFeature)
+
+The [Avalonia.Media.FontFeature](xref:Avalonia.Media.FontFeature).
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-1e88070b05"></span>
 
-### ToString
+### ToString Method
 
 Gets a string representation of the [Avalonia.Media.FontFeature](xref:Avalonia.Media.FontFeature).
 
 ```csharp
-public String ToString()
+public string ToString()
 ```
 
-Returns: The string representation.
+#### Returns
+
+string
+
+The string representation.
+
+
+</section>
 
 ## Properties
 
@@ -178,45 +249,61 @@ Returns: The string representation.
 | [Tag](#uid-8475d824a2) | Gets or sets the tag. |
 | [Value](#uid-4cbb102372) | Gets or sets the value. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-df01d285f5"></span>
 
-### End
+### End Property
 
 Gets or sets the end.
 
 ```csharp
-public Int32 End { get; set; }
+public int End { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-2d7a2c535f"></span>
 
-### Start
+### Start Property
 
 Gets or sets the start.
 
 ```csharp
-public Int32 Start { get; set; }
+public int Start { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-8475d824a2"></span>
 
-### Tag
+### Tag Property
 
 Gets or sets the tag.
 
 ```csharp
-public String Tag { get; set; }
+public string Tag { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-4cbb102372"></span>
 
-### Value
+### Value Property
 
 Gets or sets the value.
 
 ```csharp
-public Int32 Value { get; set; }
+public int Value { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

@@ -49,21 +49,49 @@ public interface VulkanPlatformGraphics.IVulkanDeviceFactory
 | [CreateDevice](#uid-a5c9b0276e) | No summary available. |
 | [GetSharedDevice](#uid-2b6e898660) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-a5c9b0276e"></span>
 
-### CreateDevice
+### CreateDevice Method
 
 ```csharp
 public Avalonia.Vulkan.IVulkanDevice CreateDevice(Avalonia.Vulkan.VulkanPlatformSpecificOptions platformOptions)
 ```
 
+#### Parameters
+
+`platformOptions` [Avalonia.Vulkan.VulkanPlatformSpecificOptions](xref:Avalonia.Vulkan.VulkanPlatformSpecificOptions)
+
+
+#### Returns
+
+[Avalonia.Vulkan.IVulkanDevice](xref:Avalonia.Vulkan.IVulkanDevice)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-2b6e898660"></span>
 
-### GetSharedDevice
+### GetSharedDevice Method
 
 ```csharp
 public Avalonia.Vulkan.IVulkanDevice GetSharedDevice(Avalonia.Vulkan.VulkanPlatformSpecificOptions platformOptions)
 ```
+
+#### Parameters
+
+`platformOptions` [Avalonia.Vulkan.VulkanPlatformSpecificOptions](xref:Avalonia.Vulkan.VulkanPlatformSpecificOptions)
+
+
+#### Returns
+
+[Avalonia.Vulkan.IVulkanDevice](xref:Avalonia.Vulkan.IVulkanDevice)
+
+
+</section>
 
 ## Properties
 
@@ -71,13 +99,17 @@ public Avalonia.Vulkan.IVulkanDevice GetSharedDevice(Avalonia.Vulkan.VulkanPlatf
 | --- | --- |
 | [UsesShadedDevice](#uid-f8471b64a5) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-f8471b64a5"></span>
 
-### UsesShadedDevice
+### UsesShadedDevice Property
 
 ```csharp
-public Boolean UsesShadedDevice { get; set; }
+public bool UsesShadedDevice { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

@@ -54,7 +54,7 @@ public class TextPathSegmentEllipsis
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="textformatting/textcollapsingproperties">TextCollapsingProperties</a> <span className="apiref-page__relation-separator">-&gt;</span> TextPathSegmentEllipsis
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="textformatting/textcollapsingproperties">TextCollapsingProperties</a> <span className="apiref-page__relation-separator">-&gt;</span> TextPathSegmentEllipsis
 </div>
 </div>
 
@@ -67,41 +67,74 @@ near the center and inserting an ellipsis, ensuring that the most significant pa
 
 | Name | Description |
 | --- | --- |
-| [TextPathSegmentEllipsis](#uid-4306a931ad) | Initializes a new instance of the TextPathSegmentEllipsis class that represents an ellipsis segment in a text path with the specified symbol, width, text formatting properties, and flow direction. |
+| [TextPathSegmentEllipsis](#uid-4306a931ad) | Initializes a new instance of the [TextPathSegmentEllipsis](xref:Avalonia.Media.TextPathSegmentEllipsis) class that represents an ellipsis segment in a text path with the specified symbol, width, text formatting properties, and flow direction. |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-4306a931ad"></span>
 
-### TextPathSegmentEllipsis
+### TextPathSegmentEllipsis Constructor
 
-Initializes a new instance of the TextPathSegmentEllipsis class that represents an ellipsis segment in a
+Initializes a new instance of the [TextPathSegmentEllipsis](xref:Avalonia.Media.TextPathSegmentEllipsis) class that represents an ellipsis segment in a
 text path with the specified symbol, width, text formatting properties, and flow direction.
 
 ```csharp
-public TextPathSegmentEllipsis(String ellipsis, Double width, Avalonia.Media.TextFormatting.TextRunProperties textRunProperties, Avalonia.Media.FlowDirection flowDirection)
+public TextPathSegmentEllipsis(string ellipsis, double width, Avalonia.Media.TextFormatting.TextRunProperties textRunProperties, Avalonia.Media.FlowDirection flowDirection)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `ellipsis` | The string to use as the ellipsis symbol in the text path segment. Cannot be null. |
-| `flowDirection` | The flow direction for rendering the ellipsis segment. Specifies whether text flows left-to-right or
-right-to-left. |
-| `textRunProperties` | The text formatting properties to apply to the ellipsis symbol. Cannot be null. |
-| `width` | The width. |
+#### Parameters
+
+`ellipsis` string
+
+The string to use as the ellipsis symbol in the text path segment. Cannot be null.
+
+
+`width` double
+
+The width.
+
+
+`textRunProperties` [Avalonia.Media.TextFormatting.TextRunProperties](xref:Avalonia.Media.TextFormatting.TextRunProperties)
+
+The text formatting properties to apply to the ellipsis symbol. Cannot be null.
+
+
+`flowDirection` [Avalonia.Media.FlowDirection](xref:Avalonia.Media.FlowDirection)
+
+The flow direction for rendering the ellipsis segment. Specifies whether text flows left-to-right or
+right-to-left.
+
+
+</section>
 
 ## Methods
 
 | Name | Description |
 | --- | --- |
 | [Collapse](#uid-fd97f03203) | No summary available. |
-| [CreateCollapsedRuns (Inherited from TextCollapsingProperties)](textformatting/textcollapsingproperties.mdx#uid-3f1ae847f7) | Creates a list of runs for given collapsed length which includes specified symbol at the end. |
+| [CreateCollapsedRuns](textformatting/textcollapsingproperties.mdx#uid-3f1ae847f7) | Creates a list of runs for given collapsed length which includes specified symbol at the end. Inherited from [TextCollapsingProperties](textformatting/textcollapsingproperties.mdx). |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-fd97f03203"></span>
 
-### Collapse
+### Collapse Method
 
 ```csharp
 public Avalonia.Media.TextFormatting.TextRun[] Collapse(Avalonia.Media.TextFormatting.TextLine textLine)
 ```
+
+#### Parameters
+
+`textLine` [Avalonia.Media.TextFormatting.TextLine](xref:Avalonia.Media.TextFormatting.TextLine)
+
+
+#### Returns
+
+[Avalonia.Media.TextFormatting.TextRun](xref:Avalonia.Media.TextFormatting.TextRun)[]
+
+
+</section>
 
 ## Properties
 
@@ -111,29 +144,41 @@ public Avalonia.Media.TextFormatting.TextRun[] Collapse(Avalonia.Media.TextForma
 | [Symbol](#uid-9f7d040b91) | No summary available. |
 | [Width](#uid-e6ca536da3) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-b7593e407d"></span>
 
-### FlowDirection
+### FlowDirection Property
 
 ```csharp
 public Avalonia.Media.FlowDirection FlowDirection { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-9f7d040b91"></span>
 
-### Symbol
+### Symbol Property
 
 ```csharp
 public Avalonia.Media.TextFormatting.TextRun Symbol { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-e6ca536da3"></span>
 
-### Width
+### Width Property
 
 ```csharp
-public Double Width { get; set; }
+public double Width { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

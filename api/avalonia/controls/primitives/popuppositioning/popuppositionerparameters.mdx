@@ -62,7 +62,7 @@ public struct PopupPositionerParameters
 
 ## Remarks
 
-The IPopupPositioner provides a collection of rules for the placement of a popup relative
+The [IPopupPositioner](xref:Avalonia.Controls.Primitives.PopupPositioning.IPopupPositioner) provides a collection of rules for the placement of a popup relative
 to its parent. Rules can be defined to ensure the popup remains within the visible area's
 borders, and to specify how the popup changes its position, such as sliding along an axis,
 or flipping around a rectangle. These positioner-created rules are constrained by the
@@ -81,37 +81,83 @@ surface.
 
 ### Equals overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-9ee2e0e9ff"></span>
 
-#### Equals
+#### Equals Method
 
 ```csharp
-public Boolean Equals(Avalonia.Controls.Primitives.PopupPositioning.PopupPositionerParameters other)
+public bool Equals(Avalonia.Controls.Primitives.PopupPositioning.PopupPositionerParameters other)
 ```
+
+##### Parameters
+
+`other` [Avalonia.Controls.Primitives.PopupPositioning.PopupPositionerParameters](xref:Avalonia.Controls.Primitives.PopupPositioning.PopupPositionerParameters)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-2efd519066"></span>
 
-#### Equals
+#### Equals Method
 
 ```csharp
-public Boolean Equals(Object obj)
+public bool Equals(object obj)
 ```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-605a9c8657"></span>
 
-### GetHashCode
+### GetHashCode Method
 
 ```csharp
-public Int32 GetHashCode()
+public int GetHashCode()
 ```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-2e4d3eab10"></span>
 
-### ToString
+### ToString Method
 
 ```csharp
-public String ToString()
+public string ToString()
 ```
+
+#### Returns
+
+string
+
+
+</section>
 
 ## Properties
 
@@ -124,9 +170,11 @@ public String ToString()
 | [Offset](#uid-6356c08a5a) | Specify the popup position offset relative to the position of the anchor on the anchor rectangle and the anchor on the popup. |
 | [Size](#uid-927fa173bd) | Set the size of the popup that is to be positioned with the positioner object, in device- independent pixels. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-f3f85cfbba"></span>
 
-### Anchor
+### Anchor Property
 
 Defines the anchor point for the anchor rectangle.
 
@@ -134,9 +182,21 @@ Defines the anchor point for the anchor rectangle.
 public Avalonia.Controls.Primitives.PopupPositioning.PopupAnchor Anchor { get; set; }
 ```
 
+#### Remarks
+
+The specified anchor is used derive an anchor point that the popup will be positioned
+relative to. If a corner anchor is set (e.g. 'TopLeft' or 'BottomRight'), the anchor
+point will be at the specified corner; otherwise, the derived anchor point will be
+centered on the specified edge, or in the center of the anchor rectangle if no edge is
+specified.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-313d35b97e"></span>
 
-### AnchorRectangle
+### AnchorRectangle Property
 
 Specifies the anchor rectangle within the parent that the popup will be placed relative
 to, in device-independent pixels.
@@ -145,9 +205,18 @@ to, in device-independent pixels.
 public Avalonia.Rect AnchorRectangle { get; set; }
 ```
 
+#### Remarks
+
+The rectangle is relative to the parent geometry and may not extend outside the window
+geometry of the popup's parent.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-c6482b426c"></span>
 
-### ConstraintAdjustment
+### ConstraintAdjustment Property
 
 Specify how the popup should be positioned if the originally intended position caused
 the popup to be constrained.
@@ -156,9 +225,28 @@ the popup to be constrained.
 public Avalonia.Controls.Primitives.PopupPositioning.PopupPositionerConstraintAdjustment ConstraintAdjustment { get; set; }
 ```
 
+#### Remarks
+
+Adjusts the popup position if the intended position caused the popup to be constrained;
+meaning at least partially outside positioning boundaries set by the positioner. The
+adjustment is set by constructing a bitmask describing the adjustment to be made when
+the popup is constrained on that axis.
+
+If no bit for one axis is set, the positioner will assume that the child surface should
+not change its position on that axis when constrained.
+
+If more than one bit for one axis is set, the order of how adjustments are applied is
+specified in the corresponding adjustment descriptions.
+
+The default adjustment is none.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-da52449e6b"></span>
 
-### Gravity
+### Gravity Property
 
 Defines in what direction a popup should be positioned, relative to the anchor point of
 the parent.
@@ -167,9 +255,19 @@ the parent.
 public Avalonia.Controls.Primitives.PopupPositioning.PopupGravity Gravity { get; set; }
 ```
 
+#### Remarks
+
+If a corner gravity is specified (e.g. 'BottomRight' or 'TopLeft'), then the popup will
+be placed towards the specified gravity; otherwise, the popup will be centered over the
+anchor point on any axis that had no gravity specified.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-6356c08a5a"></span>
 
-### Offset
+### Offset Property
 
 Specify the popup position offset relative to the position of the
 anchor on the anchor rectangle and the anchor on the popup.
@@ -178,9 +276,24 @@ anchor on the anchor rectangle and the anchor on the popup.
 public Avalonia.Point Offset { get; set; }
 ```
 
+#### Remarks
+
+For example if the anchor of the anchor rectangle is at (x, y), the popup has the
+gravity bottom|right, and the offset is (ox, oy), the calculated surface position will
+be (x + ox, y + oy). The offset position of the surface is the one used for constraint
+testing. See set_constraint_adjustment.
+
+An example use case is placing a popup menu on top of a user interface element, while
+aligning the user interface element of the parent surface with some user interface
+element placed somewhere in the popup.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-927fa173bd"></span>
 
-### Size
+### Size Property
 
 Set the size of the popup that is to be positioned with the positioner object, in device-
 independent pixels.
@@ -188,6 +301,8 @@ independent pixels.
 ```csharp
 public Avalonia.Size Size { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

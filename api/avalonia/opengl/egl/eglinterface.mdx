@@ -47,7 +47,7 @@ public class EglInterface
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> EglInterface
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> EglInterface
 </div>
 </div>
 
@@ -61,29 +61,51 @@ public class EglInterface
 
 ### EglInterface overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-52453e51cf"></span>
 
-#### EglInterface
+#### EglInterface Constructor
 
 ```csharp
 public EglInterface()
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-60ac5be1fe"></span>
 
-#### EglInterface
+#### EglInterface Constructor
 
 ```csharp
-public EglInterface(Func<String, IntPtr> getProcAddress)
+public EglInterface(Func<string, IntPtr> getProcAddress)
 ```
+
+##### Parameters
+
+`getProcAddress` Func&lt;string, IntPtr&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-f7ef09c096"></span>
 
-#### EglInterface
+#### EglInterface Constructor
 
 ```csharp
-public EglInterface(String library)
+public EglInterface(string library)
 ```
+
+##### Parameters
+
+`library` string
+
+
+</section>
 
 ## Methods
 
@@ -119,237 +141,726 @@ public EglInterface(String library)
 | [WaitGL](#uid-071917b6ea) | No summary available. |
 | [WaitNative](#uid-9189e829e5) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-805d0cb9e5"></span>
 
-### BindApi
+### BindApi Method
 
 ```csharp
-public Boolean BindApi(Int32 api)
+public bool BindApi(int api)
 ```
+
+#### Parameters
+
+`api` int
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-789bee844a"></span>
 
-### BindTexImage
+### BindTexImage Method
 
 ```csharp
-public Int32 BindTexImage(IntPtr display, IntPtr surface, Int32 buffer)
+public int BindTexImage(IntPtr display, IntPtr surface, int buffer)
 ```
+
+#### Parameters
+
+`display` IntPtr
+
+
+`surface` IntPtr
+
+
+`buffer` int
+
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-54e6877cc1"></span>
 
-### ChooseConfig
+### ChooseConfig Method
 
 ```csharp
-public Boolean ChooseConfig(IntPtr display, Int32[] attribs, IntPtr& surfaceConfig, Int32 numConfigs, Int32& choosenConfig)
+public bool ChooseConfig(IntPtr display, int[] attribs, IntPtr& surfaceConfig, int numConfigs, int& choosenConfig)
 ```
+
+#### Parameters
+
+`display` IntPtr
+
+
+`attribs` int[]
+
+
+`surfaceConfig` IntPtr&amp;
+
+
+`numConfigs` int
+
+
+`choosenConfig` int&amp;
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-19f85aec8e"></span>
 
-### CreateContext
+### CreateContext Method
 
 ```csharp
-public IntPtr CreateContext(IntPtr display, IntPtr config, IntPtr share, Int32[] attrs)
+public IntPtr CreateContext(IntPtr display, IntPtr config, IntPtr share, int[] attrs)
 ```
+
+#### Parameters
+
+`display` IntPtr
+
+
+`config` IntPtr
+
+
+`share` IntPtr
+
+
+`attrs` int[]
+
+
+#### Returns
+
+IntPtr
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-adb9f241be"></span>
 
-### CreatePBufferSurface
+### CreatePBufferSurface Method
 
 ```csharp
-public IntPtr CreatePBufferSurface(IntPtr display, IntPtr config, Int32[] attrs)
+public IntPtr CreatePBufferSurface(IntPtr display, IntPtr config, int[] attrs)
 ```
+
+#### Parameters
+
+`display` IntPtr
+
+
+`config` IntPtr
+
+
+`attrs` int[]
+
+
+#### Returns
+
+IntPtr
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-63f941ac31"></span>
 
-### CreatePbufferFromClientBuffer
+### CreatePbufferFromClientBuffer Method
 
 ```csharp
-public IntPtr CreatePbufferFromClientBuffer(IntPtr display, Int32 buftype, IntPtr buffer, IntPtr config, Int32[] attrib_list)
+public IntPtr CreatePbufferFromClientBuffer(IntPtr display, int buftype, IntPtr buffer, IntPtr config, int[] attrib_list)
 ```
+
+#### Parameters
+
+`display` IntPtr
+
+
+`buftype` int
+
+
+`buffer` IntPtr
+
+
+`config` IntPtr
+
+
+`attrib_list` int[]
+
+
+#### Returns
+
+IntPtr
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-12de878bed"></span>
 
-### CreatePbufferFromClientBufferPtr
+### CreatePbufferFromClientBufferPtr Method
 
 ```csharp
-public IntPtr CreatePbufferFromClientBufferPtr(IntPtr display, Int32 buftype, IntPtr buffer, IntPtr config, Int32* attrib_list)
+public IntPtr CreatePbufferFromClientBufferPtr(IntPtr display, int buftype, IntPtr buffer, IntPtr config, int* attrib_list)
 ```
+
+#### Parameters
+
+`display` IntPtr
+
+
+`buftype` int
+
+
+`buffer` IntPtr
+
+
+`config` IntPtr
+
+
+`attrib_list` int*
+
+
+#### Returns
+
+IntPtr
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-3a05611877"></span>
 
-### CreateWindowSurface
+### CreateWindowSurface Method
 
 ```csharp
-public IntPtr CreateWindowSurface(IntPtr display, IntPtr config, IntPtr window, Int32[] attrs)
+public IntPtr CreateWindowSurface(IntPtr display, IntPtr config, IntPtr window, int[] attrs)
 ```
+
+#### Parameters
+
+`display` IntPtr
+
+
+`config` IntPtr
+
+
+`window` IntPtr
+
+
+`attrs` int[]
+
+
+#### Returns
+
+IntPtr
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-898aaba5f2"></span>
 
-### DestroyContext
+### DestroyContext Method
 
 ```csharp
-public Boolean DestroyContext(IntPtr display, IntPtr context)
+public bool DestroyContext(IntPtr display, IntPtr context)
 ```
+
+#### Parameters
+
+`display` IntPtr
+
+
+`context` IntPtr
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-2741d3836d"></span>
 
-### DestroySurface
+### DestroySurface Method
 
 ```csharp
-public Void DestroySurface(IntPtr display, IntPtr surface)
+public void DestroySurface(IntPtr display, IntPtr surface)
 ```
+
+#### Parameters
+
+`display` IntPtr
+
+
+`surface` IntPtr
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-77b209828a"></span>
 
-### GetConfigAttrib
+### GetConfigAttrib Method
 
 ```csharp
-public Boolean GetConfigAttrib(IntPtr display, IntPtr config, Int32 attr, Int32& rv)
+public bool GetConfigAttrib(IntPtr display, IntPtr config, int attr, int& rv)
 ```
+
+#### Parameters
+
+`display` IntPtr
+
+
+`config` IntPtr
+
+
+`attr` int
+
+
+`rv` int&amp;
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-b3b4666407"></span>
 
-### GetCurrentContext
+### GetCurrentContext Method
 
 ```csharp
 public IntPtr GetCurrentContext()
 ```
 
+#### Returns
+
+IntPtr
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-fadf00b154"></span>
 
-### GetCurrentDisplay
+### GetCurrentDisplay Method
 
 ```csharp
 public IntPtr GetCurrentDisplay()
 ```
 
+#### Returns
+
+IntPtr
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-e640bcd072"></span>
 
-### GetCurrentSurface
+### GetCurrentSurface Method
 
 ```csharp
-public IntPtr GetCurrentSurface(Int32 readDraw)
+public IntPtr GetCurrentSurface(int readDraw)
 ```
+
+#### Parameters
+
+`readDraw` int
+
+
+#### Returns
+
+IntPtr
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-329adf345c"></span>
 
-### GetDisplay
+### GetDisplay Method
 
 ```csharp
 public IntPtr GetDisplay(IntPtr nativeDisplay)
 ```
 
+#### Parameters
+
+`nativeDisplay` IntPtr
+
+
+#### Returns
+
+IntPtr
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-c0e76ca207"></span>
 
-### GetError
+### GetError Method
 
 ```csharp
-public Int32 GetError()
+public int GetError()
 ```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-a988a3980e"></span>
 
-### GetPlatformDisplayExt
+### GetPlatformDisplayExt Method
 
 ```csharp
-public IntPtr GetPlatformDisplayExt(Int32 platform, IntPtr nativeDisplay, Int32[] attrs)
+public IntPtr GetPlatformDisplayExt(int platform, IntPtr nativeDisplay, int[] attrs)
 ```
+
+#### Parameters
+
+`platform` int
+
+
+`nativeDisplay` IntPtr
+
+
+`attrs` int[]
+
+
+#### Returns
+
+IntPtr
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-3fa890b826"></span>
 
-### GetProcAddress
+### GetProcAddress Method
 
 ```csharp
 public IntPtr GetProcAddress(IntPtr proc)
 ```
 
+#### Parameters
+
+`proc` IntPtr
+
+
+#### Returns
+
+IntPtr
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-4345d1d2e4"></span>
 
-### Initialize
+### Initialize Method
 
 ```csharp
-public Boolean Initialize(IntPtr display, Int32& major, Int32& minor)
+public bool Initialize(IntPtr display, int& major, int& minor)
 ```
+
+#### Parameters
+
+`display` IntPtr
+
+
+`major` int&amp;
+
+
+`minor` int&amp;
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-d252dc33e3"></span>
 
-### MakeCurrent
+### MakeCurrent Method
 
 ```csharp
-public Boolean MakeCurrent(IntPtr display, IntPtr draw, IntPtr read, IntPtr context)
+public bool MakeCurrent(IntPtr display, IntPtr draw, IntPtr read, IntPtr context)
 ```
+
+#### Parameters
+
+`display` IntPtr
+
+
+`draw` IntPtr
+
+
+`read` IntPtr
+
+
+`context` IntPtr
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-9911ebf310"></span>
 
-### QueryDeviceAttribExt
+### QueryDeviceAttribExt Method
 
 ```csharp
-public Boolean QueryDeviceAttribExt(IntPtr display, Int32 attr, IntPtr& res)
+public bool QueryDeviceAttribExt(IntPtr display, int attr, IntPtr& res)
 ```
+
+#### Parameters
+
+`display` IntPtr
+
+
+`attr` int
+
+
+`res` IntPtr&amp;
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-a90a4cd3e7"></span>
 
-### QueryDisplayAttribExt
+### QueryDisplayAttribExt Method
 
 ```csharp
-public Boolean QueryDisplayAttribExt(IntPtr display, Int32 attr, IntPtr& res)
+public bool QueryDisplayAttribExt(IntPtr display, int attr, IntPtr& res)
 ```
+
+#### Parameters
+
+`display` IntPtr
+
+
+`attr` int
+
+
+`res` IntPtr&amp;
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-a12928cbb0"></span>
 
-### QueryString
+### QueryString Method
 
 ```csharp
-public String QueryString(IntPtr display, Int32 i)
+public string QueryString(IntPtr display, int i)
 ```
+
+#### Parameters
+
+`display` IntPtr
+
+
+`i` int
+
+
+#### Returns
+
+string
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-534df08fa9"></span>
 
-### QueryStringNative
+### QueryStringNative Method
 
 ```csharp
-public IntPtr QueryStringNative(IntPtr display, Int32 i)
+public IntPtr QueryStringNative(IntPtr display, int i)
 ```
+
+#### Parameters
+
+`display` IntPtr
+
+
+`i` int
+
+
+#### Returns
+
+IntPtr
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-d6d3bd7210"></span>
 
-### SwapBuffers
+### SwapBuffers Method
 
 ```csharp
-public Void SwapBuffers(IntPtr display, IntPtr surface)
+public void SwapBuffers(IntPtr display, IntPtr surface)
 ```
+
+#### Parameters
+
+`display` IntPtr
+
+
+`surface` IntPtr
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-ca4e4435c3"></span>
 
-### Terminate
+### Terminate Method
 
 ```csharp
-public Void Terminate(IntPtr display)
+public void Terminate(IntPtr display)
 ```
+
+#### Parameters
+
+`display` IntPtr
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-f34c449522"></span>
 
-### WaitClient
+### WaitClient Method
 
 ```csharp
-public Boolean WaitClient()
+public bool WaitClient()
 ```
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-071917b6ea"></span>
 
-### WaitGL
+### WaitGL Method
 
 ```csharp
-public Boolean WaitGL()
+public bool WaitGL()
 ```
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-9189e829e5"></span>
 
-### WaitNative
+### WaitNative Method
 
 ```csharp
-public Boolean WaitNative(Int32 engine)
+public bool WaitNative(int engine)
 ```
+
+#### Parameters
+
+`engine` int
+
+
+#### Returns
+
+bool
+
+
+</section>
 
 ## Properties
 
@@ -359,29 +870,41 @@ public Boolean WaitNative(Int32 engine)
 | [IsQueryDeviceAttribExtAvailable](#uid-5f95b932cb) | No summary available. |
 | [IsQueryDisplayAttribExtAvailable](#uid-bfabc405c6) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-fb9d19de69"></span>
 
-### IsGetPlatformDisplayExtAvailable
+### IsGetPlatformDisplayExtAvailable Property
 
 ```csharp
-public Boolean IsGetPlatformDisplayExtAvailable { get; set; }
+public bool IsGetPlatformDisplayExtAvailable { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-5f95b932cb"></span>
 
-### IsQueryDeviceAttribExtAvailable
+### IsQueryDeviceAttribExtAvailable Property
 
 ```csharp
-public Boolean IsQueryDeviceAttribExtAvailable { get; set; }
+public bool IsQueryDeviceAttribExtAvailable { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-bfabc405c6"></span>
 
-### IsQueryDisplayAttribExtAvailable
+### IsQueryDisplayAttribExtAvailable Property
 
 ```csharp
-public Boolean IsQueryDisplayAttribExtAvailable { get; set; }
+public bool IsQueryDisplayAttribExtAvailable { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

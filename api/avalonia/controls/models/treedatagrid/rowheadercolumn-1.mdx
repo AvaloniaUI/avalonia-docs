@@ -1,0 +1,187 @@
+---
+title: 'RowHeaderColumn<TModel>'
+hide_title: true
+slug: '/avalonia/controls/models/treedatagrid/rowheadercolumn-1'
+uid: 'Avalonia.Controls.Models.TreeDataGrid.RowHeaderColumn`1'
+commentId: 'T:Avalonia.Controls.Models.TreeDataGrid.RowHeaderColumn`1'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.TreeDataGrid'
+assembly: 'Avalonia.Controls.TreeDataGrid'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Models.TreeDataGrid'
+tfms:
+  - 'net8.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">RowHeaderColumn&lt;TModel&gt; Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Models.TreeDataGrid</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A column that displays visual row numbers (0, 1, 2...).
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class RowHeaderColumn<TModel>
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ColumnBase&lt;&gt; <span className="apiref-page__relation-separator">-&gt;</span> RowHeaderColumn&lt;TModel&gt;
+</div>
+</div>
+
+## Remarks
+
+The [Avalonia.Controls.Models.TreeDataGrid.RowHeaderColumn&lt;T&gt;](xref:Avalonia.Controls.Models.TreeDataGrid.RowHeaderColumn%601) class provides a column type that displays
+visual row numbers. The numbers always represent the visual position of each row,
+remaining sequential regardless of sorting or whether the data source is flat or
+hierarchical.
+
+This column type is designed to be explicitly added by users to their columns collection:
+
+```csharp
+var source = new FlatTreeDataGridSource<Person>(people);
+source.Columns.Add(new RowHeaderColumn<Person>());
+source.Columns.Add(new TextColumn<Person, string>("Name", x => x.Name));
+
+// Freeze the row header column if desired
+treeDataGrid.FrozenColumnCount = 1;
+```
+
+Row header columns are read-only, do not support sorting, and are not user-resizable.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [RowHeaderColumn&lt;TModel&gt; (2 overloads)](#uid-313363eb6c) | Initializes a new instance of the [Avalonia.Controls.Models.TreeDataGrid.RowHeaderColumn&lt;T&gt;](xref:Avalonia.Controls.Models.TreeDataGrid.RowHeaderColumn%601) class with default settings. |
+
+<span id="uid-313363eb6c"></span>
+
+### RowHeaderColumn&lt;TModel&gt; overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5e3b62560c"></span>
+
+#### RowHeaderColumn&lt;TModel&gt; Constructor
+
+Initializes a new instance of the [Avalonia.Controls.Models.TreeDataGrid.RowHeaderColumn&lt;T&gt;](xref:Avalonia.Controls.Models.TreeDataGrid.RowHeaderColumn%601) class with
+default settings.
+
+```csharp
+public RowHeaderColumn<TModel>()
+```
+
+##### Remarks
+
+Creates a row header column with no header text and a default width of 50 pixels.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8755ac56b3"></span>
+
+#### RowHeaderColumn&lt;TModel&gt; Constructor
+
+```csharp
+public RowHeaderColumn<TModel>(object header, Nullable<Avalonia.Controls.GridLength> width, Avalonia.Controls.Models.TreeDataGrid.ColumnOptions<TModel><TModel> options)
+```
+
+##### Parameters
+
+`header` object
+
+
+`width` Nullable&lt;[Avalonia.Controls.GridLength](xref:Avalonia.Controls.GridLength)&gt;
+
+
+`options` Avalonia.Controls.Models.TreeDataGrid.ColumnOptions&lt;TModel&gt;&lt;TModel&gt;
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [CreateCell](#uid-33b479d587) | No summary available. |
+| [GetComparison](#uid-fa73a27bc1) | Gets the comparison function for sorting by this column. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-33b479d587"></span>
+
+### CreateCell Method
+
+```csharp
+public Avalonia.Controls.Models.TreeDataGrid.ICell CreateCell(Avalonia.Controls.Models.TreeDataGrid.IRow<TModel><TModel> row)
+```
+
+#### Parameters
+
+`row` [Avalonia.Controls.Models.TreeDataGrid.IRow](xref:Avalonia.Controls.Models.TreeDataGrid.IRow)&lt;TModel&gt;&lt;TModel&gt;
+
+
+#### Returns
+
+[Avalonia.Controls.Models.TreeDataGrid.ICell](xref:Avalonia.Controls.Models.TreeDataGrid.ICell)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-fa73a27bc1"></span>
+
+### GetComparison Method
+
+Gets the comparison function for sorting by this column.
+
+```csharp
+public Comparison<TModel> GetComparison(System.ComponentModel.ListSortDirection direction)
+```
+
+#### Parameters
+
+`direction` System.ComponentModel.ListSortDirection
+
+The sort direction.
+
+
+#### Returns
+
+Comparison&lt;TModel&gt;
+
+Always returns null as row header columns do not support sorting.
+
+
+</section>
+
+</ApiRefPage>
+

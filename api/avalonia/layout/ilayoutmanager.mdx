@@ -65,81 +65,127 @@ public interface ILayoutManager
 | [RegisterEffectiveViewportListener](#uid-175297968a) | Registers a control as wanting to receive effective viewport notifications. |
 | [UnregisterEffectiveViewportListener](#uid-0020d34f5d) | Registers a control as no longer wanting to receive effective viewport notifications. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-f980d703b2"></span>
 
-### ExecuteInitialLayoutPass
+### ExecuteInitialLayoutPass Method
 
 Executes the initial layout pass on a layout root.
 
 ```csharp
-public Void ExecuteInitialLayoutPass()
+public void ExecuteInitialLayoutPass()
 ```
+
+#### Remarks
+
+You should not usually need to call this method explictly, the layout root will call
+it to carry out the initial layout of the control.
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-3abd2b22b3"></span>
 
-### ExecuteLayoutPass
+### ExecuteLayoutPass Method
 
 Executes a layout pass.
 
 ```csharp
-public Void ExecuteLayoutPass()
+public void ExecuteLayoutPass()
 ```
+
+#### Remarks
+
+You should not usually need to call this method explictly, the layout manager will
+schedule layout passes itself.
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-b1c288b84d"></span>
 
-### InvalidateArrange
+### InvalidateArrange Method
 
 Notifies the layout manager that a control requires an arrange.
 
 ```csharp
-public Void InvalidateArrange(Avalonia.Layout.Layoutable control)
+public void InvalidateArrange(Avalonia.Layout.Layoutable control)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `control` | The control. |
+#### Parameters
+
+`control` [Avalonia.Layout.Layoutable](xref:Avalonia.Layout.Layoutable)
+
+The control.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-b22d2da0fa"></span>
 
-### InvalidateMeasure
+### InvalidateMeasure Method
 
 Notifies the layout manager that a control requires a measure.
 
 ```csharp
-public Void InvalidateMeasure(Avalonia.Layout.Layoutable control)
+public void InvalidateMeasure(Avalonia.Layout.Layoutable control)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `control` | The control. |
+#### Parameters
+
+`control` [Avalonia.Layout.Layoutable](xref:Avalonia.Layout.Layoutable)
+
+The control.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-175297968a"></span>
 
-### RegisterEffectiveViewportListener
+### RegisterEffectiveViewportListener Method
 
 Registers a control as wanting to receive effective viewport notifications.
 
 ```csharp
-public Void RegisterEffectiveViewportListener(Avalonia.Layout.Layoutable control)
+public void RegisterEffectiveViewportListener(Avalonia.Layout.Layoutable control)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `control` | The control. |
+#### Parameters
+
+`control` [Avalonia.Layout.Layoutable](xref:Avalonia.Layout.Layoutable)
+
+The control.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-0020d34f5d"></span>
 
-### UnregisterEffectiveViewportListener
+### UnregisterEffectiveViewportListener Method
 
 Registers a control as no longer wanting to receive effective viewport notifications.
 
 ```csharp
-public Void UnregisterEffectiveViewportListener(Avalonia.Layout.Layoutable control)
+public void UnregisterEffectiveViewportListener(Avalonia.Layout.Layoutable control)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `control` | The control. |
+#### Parameters
+
+`control` [Avalonia.Layout.Layoutable](xref:Avalonia.Layout.Layoutable)
+
+The control.
+
+
+</section>
 
 ## Events
 
@@ -147,15 +193,19 @@ public Void UnregisterEffectiveViewportListener(Avalonia.Layout.Layoutable contr
 | --- | --- |
 | [LayoutUpdated](#uid-2457a3dca4) | Raised when the layout manager completes a layout pass. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-2457a3dca4"></span>
 
-### LayoutUpdated
+### LayoutUpdated Event
 
 Raised when the layout manager completes a layout pass.
 
 ```csharp
 public event EventHandler LayoutUpdated
 ```
+
+</section>
 
 </ApiRefPage>
 

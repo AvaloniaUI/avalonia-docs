@@ -60,9 +60,11 @@ public interface IThemeVariantHost
 | --- | --- |
 | [ActualThemeVariant](#uid-bdc494ff64) | Gets the UI theme that is currently used by the element, which might be different than the RequestedThemeVariantProperty. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-bdc494ff64"></span>
 
-### ActualThemeVariant
+### ActualThemeVariant Property
 
 Gets the UI theme that is currently used by the element, which might be different than the RequestedThemeVariantProperty.
 
@@ -70,8 +72,13 @@ Gets the UI theme that is currently used by the element, which might be differen
 public Avalonia.Styling.ThemeVariant ActualThemeVariant { get; set; }
 ```
 
-Returns: If current control is contained in the ThemeVariantScope, TopLevel or Application with non-default RequestedThemeVariant, that value will be returned.
+#### Returns
+
+If current control is contained in the [ThemeVariantScope](xref:Avalonia.Controls.ThemeVariantScope), [TopLevel](xref:Avalonia.Controls.TopLevel) or Application with non-default RequestedThemeVariant, that value will be returned.
 Otherwise, current OS theme variant is returned.
+
+
+</section>
 
 ## Events
 
@@ -79,15 +86,19 @@ Otherwise, current OS theme variant is returned.
 | --- | --- |
 | [ActualThemeVariantChanged](#uid-9594a95b3e) | Raised when the theme variant is changed on the element or an ancestor of the element. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-9594a95b3e"></span>
 
-### ActualThemeVariantChanged
+### ActualThemeVariantChanged Event
 
 Raised when the theme variant is changed on the element or an ancestor of the element.
 
 ```csharp
 public event EventHandler ActualThemeVariantChanged
 ```
+
+</section>
 
 </ApiRefPage>
 

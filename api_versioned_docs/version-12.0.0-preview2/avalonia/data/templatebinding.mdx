@@ -53,7 +53,7 @@ public class TemplateBinding
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="bindingbase">BindingBase</a> <span className="apiref-page__relation-separator">-&gt;</span> TemplateBinding
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="bindingbase">BindingBase</a> <span className="apiref-page__relation-separator">-&gt;</span> TemplateBinding
 </div>
 </div>
 
@@ -67,21 +67,34 @@ public class TemplateBinding
 
 ### TemplateBinding overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-36958b43e2"></span>
 
-#### TemplateBinding
+#### TemplateBinding Constructor
 
 ```csharp
 public TemplateBinding()
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-f39e0516ab"></span>
 
-#### TemplateBinding
+#### TemplateBinding Constructor
 
 ```csharp
 public TemplateBinding(Avalonia.AvaloniaProperty property)
 ```
+
+##### Parameters
+
+`property` [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty)
+
+
+</section>
 
 ## Methods
 
@@ -89,27 +102,38 @@ public TemplateBinding(Avalonia.AvaloniaProperty property)
 | --- | --- |
 | [ProvideValue](#uid-565c2c3b3d) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-565c2c3b3d"></span>
 
-### ProvideValue
+### ProvideValue Method
 
 ```csharp
 public Avalonia.Data.BindingBase ProvideValue()
 ```
 
+#### Returns
+
+[Avalonia.Data.BindingBase](xref:Avalonia.Data.BindingBase)
+
+
+</section>
+
 ## Properties
 
 | Name | Description |
 | --- | --- |
-| [Converter](#uid-3698a35887) | Gets or sets the Avalonia.Data.Converters.IValueConverter to use. |
+| [Converter](#uid-3698a35887) | Gets or sets the [Avalonia.Data.Converters.IValueConverter](xref:Avalonia.Data.Converters.IValueConverter) to use. |
 | [ConverterCulture](#uid-c39b658660) | Gets or sets the culture in which to evaluate the converter. |
-| [ConverterParameter](#uid-0a1b15e9be) | Gets or sets a parameter to pass to Avalonia.Data.TemplateBinding.Converter. |
+| [ConverterParameter](#uid-0a1b15e9be) | Gets or sets a parameter to pass to [Avalonia.Data.TemplateBinding.Converter](xref:Avalonia.Data.TemplateBinding.Converter). |
 | [Mode](#uid-9d2c6e787c) | Gets or sets the binding mode. |
 | [Property](#uid-aca464fce4) | Gets or sets the name of the source property on the templated parent. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-3698a35887"></span>
 
-### Converter
+### Converter Property
 
 Gets or sets the [Avalonia.Data.Converters.IValueConverter](xref:Avalonia.Data.Converters.IValueConverter) to use.
 
@@ -117,9 +141,13 @@ Gets or sets the [Avalonia.Data.Converters.IValueConverter](xref:Avalonia.Data.C
 public Avalonia.Data.Converters.IValueConverter Converter { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-c39b658660"></span>
 
-### ConverterCulture
+### ConverterCulture Property
 
 Gets or sets the culture in which to evaluate the converter.
 
@@ -127,21 +155,36 @@ Gets or sets the culture in which to evaluate the converter.
 public System.Globalization.CultureInfo ConverterCulture { get; set; }
 ```
 
-Value: The default value is null.
+#### Value
+
+The default value is null.
+
+
+#### Remarks
+
+If this property is not set then [System.Globalization.CultureInfo.CurrentCulture](xref:System.Globalization.CultureInfo.CurrentCulture) will be used.
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-0a1b15e9be"></span>
 
-### ConverterParameter
+### ConverterParameter Property
 
 Gets or sets a parameter to pass to [Avalonia.Data.TemplateBinding.Converter](xref:Avalonia.Data.TemplateBinding.Converter).
 
 ```csharp
-public Object ConverterParameter { get; set; }
+public object ConverterParameter { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-9d2c6e787c"></span>
 
-### Mode
+### Mode Property
 
 Gets or sets the binding mode.
 
@@ -149,15 +192,21 @@ Gets or sets the binding mode.
 public Avalonia.Data.BindingMode Mode { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-aca464fce4"></span>
 
-### Property
+### Property Property
 
 Gets or sets the name of the source property on the templated parent.
 
 ```csharp
 public Avalonia.AvaloniaProperty Property { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

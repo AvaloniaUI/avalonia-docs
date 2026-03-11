@@ -55,9 +55,11 @@ public interface IInputPane
 | [OccludedRect](#uid-5a82a21e69) | The current input pane bounds. |
 | [State](#uid-8876d081cc) | The current input pane state. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-5a82a21e69"></span>
 
-### OccludedRect
+### OccludedRect Property
 
 The current input pane bounds.
 
@@ -65,9 +67,13 @@ The current input pane bounds.
 public Avalonia.Rect OccludedRect { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-8876d081cc"></span>
 
-### State
+### State Property
 
 The current input pane state.
 
@@ -75,21 +81,27 @@ The current input pane state.
 public Avalonia.Controls.Platform.InputPaneState State { get; set; }
 ```
 
+</section>
+
 ## Events
 
 | Name | Description |
 | --- | --- |
 | [StateChanged](#uid-747fa9d58f) | Occurs when the input pane's state has changed. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-747fa9d58f"></span>
 
-### StateChanged
+### StateChanged Event
 
 Occurs when the input pane's state has changed.
 
 ```csharp
 public event EventHandler<Avalonia.Controls.Platform.InputPaneStateEventArgs> StateChanged
 ```
+
+</section>
 
 </ApiRefPage>
 

@@ -61,11 +61,13 @@ public class InlineCollection
 
 | Name | Description |
 | --- | --- |
-| [InlineCollection](#uid-28f7263117) | Initializes a new instance of the Avalonia.Controls.Documents.InlineCollection class. |
+| [InlineCollection](#uid-28f7263117) | Initializes a new instance of the [Avalonia.Controls.Documents.InlineCollection](xref:Avalonia.Controls.Documents.InlineCollection) class. |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-28f7263117"></span>
 
-### InlineCollection
+### InlineCollection Constructor
 
 Initializes a new instance of the [Avalonia.Controls.Documents.InlineCollection](xref:Avalonia.Controls.Documents.InlineCollection) class.
 
@@ -73,41 +75,61 @@ Initializes a new instance of the [Avalonia.Controls.Documents.InlineCollection]
 public InlineCollection()
 ```
 
+</section>
+
 ## Methods
 
 | Name | Description |
 | --- | --- |
-| [Add (3 overloads)](#uid-5555047b5c) | Adds a control wrapped inside a Avalonia.Controls.Documents.InlineUIContainer to the collection. |
+| [Add (3 overloads)](#uid-5555047b5c) | Adds a control wrapped inside a [Avalonia.Controls.Documents.InlineUIContainer](xref:Avalonia.Controls.Documents.InlineUIContainer) to the collection. |
 
 <span id="uid-5555047b5c"></span>
 
 ### Add overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-2d7f1c193e"></span>
 
-#### Add
+#### Add Method
 
 Adds a control wrapped inside a [Avalonia.Controls.Documents.InlineUIContainer](xref:Avalonia.Controls.Documents.InlineUIContainer) to the collection.
 
 ```csharp
-public Void Add(Avalonia.Controls.Control control)
+public void Add(Avalonia.Controls.Control control)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `control` | The to be added control. |
+##### Parameters
+
+`control` [Avalonia.Controls.Control](xref:Avalonia.Controls.Control)
+
+The to be added control.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-9ddd1e6c26"></span>
 
-#### Add
+#### Add Method
 
 ```csharp
-public Void Add(Avalonia.Controls.Documents.Inline inline)
+public void Add(Avalonia.Controls.Documents.Inline inline)
 ```
+
+##### Parameters
+
+`inline` [Avalonia.Controls.Documents.Inline](xref:Avalonia.Controls.Documents.Inline)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-a0ede4b50a"></span>
 
-#### Add
+#### Add Method
 
 Adds a text segment to the collection.
 
@@ -115,12 +137,17 @@ For non-complex content this appends the text to the end of currently held text.
 For complex content this adds a [Avalonia.Controls.Documents.Run](xref:Avalonia.Controls.Documents.Run) to the collection.
 
 ```csharp
-public Void Add(String text)
+public void Add(string text)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `text` | The to be added text. |
+##### Parameters
+
+`text` string
+
+The to be added text.
+
+
+</section>
 
 ## Properties
 
@@ -128,17 +155,21 @@ public Void Add(String text)
 | --- | --- |
 | [Text](#uid-eda1793e30) | Gets or adds the text held by the inlines collection. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-eda1793e30"></span>
 
-### Text
+### Text Property
 
 Gets or adds the text held by the inlines collection.
 
 Can be null for complex content.
 
 ```csharp
-public String Text { get; set; }
+public string Text { get; set; }
 ```
+
+</section>
 
 ## Events
 
@@ -146,15 +177,19 @@ public String Text { get; set; }
 | --- | --- |
 | [Invalidated](#uid-36e29e452c) | Raised when an inline in the collection changes. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-36e29e452c"></span>
 
-### Invalidated
+### Invalidated Event
 
 Raised when an inline in the collection changes.
 
 ```csharp
 public event EventHandler Invalidated
 ```
+
+</section>
 
 </ApiRefPage>
 

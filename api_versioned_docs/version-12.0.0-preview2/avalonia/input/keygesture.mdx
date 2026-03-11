@@ -53,7 +53,7 @@ public class KeyGesture
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> KeyGesture
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> KeyGesture
 </div>
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;KeyGesture&gt;, IFormattable
@@ -66,13 +66,25 @@ public class KeyGesture
 | --- | --- |
 | [KeyGesture](#uid-21dffcf52d) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-21dffcf52d"></span>
 
-### KeyGesture
+### KeyGesture Constructor
 
 ```csharp
 public KeyGesture(Avalonia.Input.Key key, Avalonia.Input.KeyModifiers modifiers)
 ```
+
+#### Parameters
+
+`key` [Avalonia.Input.Key](xref:Avalonia.Input.Key)
+
+
+`modifiers` [Avalonia.Input.KeyModifiers](xref:Avalonia.Input.KeyModifiers)
+
+
+</section>
 
 ## Methods
 
@@ -88,81 +100,171 @@ public KeyGesture(Avalonia.Input.Key key, Avalonia.Input.KeyModifiers modifiers)
 
 ### Equals overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-27dcf71580"></span>
 
-#### Equals
+#### Equals Method
 
 ```csharp
-public Boolean Equals(Avalonia.Input.KeyGesture other)
+public bool Equals(Avalonia.Input.KeyGesture other)
 ```
+
+##### Parameters
+
+`other` [Avalonia.Input.KeyGesture](xref:Avalonia.Input.KeyGesture)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-c31721cfad"></span>
 
-#### Equals
+#### Equals Method
 
 ```csharp
-public Boolean Equals(Object obj)
+public bool Equals(object obj)
 ```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-542b866eeb"></span>
 
-### GetHashCode
+### GetHashCode Method
 
 ```csharp
-public Int32 GetHashCode()
+public int GetHashCode()
 ```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-10a604ecd0"></span>
 
-### Matches
+### Matches Method
 
 ```csharp
-public Boolean Matches(Avalonia.Input.KeyEventArgs keyEvent)
+public bool Matches(Avalonia.Input.KeyEventArgs keyEvent)
 ```
+
+#### Parameters
+
+`keyEvent` [Avalonia.Input.KeyEventArgs](xref:Avalonia.Input.KeyEventArgs)
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-97916525ff"></span>
 
-### Parse
+### Parse Method
 
 ```csharp
-public Avalonia.Input.KeyGesture Parse(String gesture)
+public Avalonia.Input.KeyGesture Parse(string gesture)
 ```
+
+#### Parameters
+
+`gesture` string
+
+
+#### Returns
+
+[Avalonia.Input.KeyGesture](xref:Avalonia.Input.KeyGesture)
+
+
+</section>
 
 <span id="uid-d37373586e"></span>
 
 ### ToString overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-c3cdb91901"></span>
 
-#### ToString
+#### ToString Method
 
 ```csharp
-public String ToString()
+public string ToString()
 ```
+
+##### Returns
+
+string
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-f2fb1d2c00"></span>
 
-#### ToString
+#### ToString Method
 
-Returns the current KeyGesture as a string formatted according to the format string and appropriate IFormatProvider
+Returns the current [KeyGesture](xref:Avalonia.Input.KeyGesture) as a string formatted according to the format string and appropriate IFormatProvider
 
 ```csharp
-public String ToString(String format, IFormatProvider formatProvider)
+public string ToString(string format, IFormatProvider formatProvider)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `format` | The format to use.
+##### Parameters
+
+`format` string
+
+The format to use.
 
 - null or "" or "g"The Invariant format, uses Enum.ToString() to format Keys.
-- "p"Use platform specific formatting as registerd. |
-| `formatProvider` | The IFormatProvider to use. If null, uses the appropriate provider registered in the Avalonia Locator, or Invariant. |
+- "p"Use platform specific formatting as registerd.
 
-Returns: The formatted string.
+
+`formatProvider` IFormatProvider
+
+The IFormatProvider to use. If null, uses the appropriate provider registered in the Avalonia Locator, or Invariant.
+
+
+##### Returns
+
+string
+
+The formatted string.
+
 
 ##### Exceptions
 
 - [Thrown if the format string is not null, "", "g", or "p"](xref:System.FormatException)
+
+</section>
 
 ## Properties
 
@@ -171,21 +273,29 @@ Returns: The formatted string.
 | [Key](#uid-e90c04c155) | No summary available. |
 | [KeyModifiers](#uid-275a790ba4) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-e90c04c155"></span>
 
-### Key
+### Key Property
 
 ```csharp
 public Avalonia.Input.Key Key { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-275a790ba4"></span>
 
-### KeyModifiers
+### KeyModifiers Property
 
 ```csharp
 public Avalonia.Input.KeyModifiers KeyModifiers { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

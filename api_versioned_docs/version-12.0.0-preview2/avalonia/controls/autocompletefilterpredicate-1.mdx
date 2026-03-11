@@ -62,13 +62,25 @@ public delegate AutoCompleteFilterPredicate<T>
 | --- | --- |
 | [AutoCompleteFilterPredicate&lt;T&gt;](#uid-be086b96a6) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-be086b96a6"></span>
 
-### AutoCompleteFilterPredicate&lt;T&gt;
+### AutoCompleteFilterPredicate&lt;T&gt; Constructor
 
 ```csharp
-public AutoCompleteFilterPredicate<T>(Object object, IntPtr method)
+public AutoCompleteFilterPredicate<T>(object object, IntPtr method)
 ```
+
+#### Parameters
+
+`object` object
+
+
+`method` IntPtr
+
+
+</section>
 
 ## Methods
 
@@ -78,29 +90,83 @@ public AutoCompleteFilterPredicate<T>(Object object, IntPtr method)
 | [EndInvoke](#uid-a09e76fa89) | No summary available. |
 | [Invoke](#uid-f942fc608a) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-a90cb946a8"></span>
 
-### BeginInvoke
+### BeginInvoke Method
 
 ```csharp
-public IAsyncResult BeginInvoke(String search, T item, AsyncCallback callback, Object object)
+public IAsyncResult BeginInvoke(string search, T item, AsyncCallback callback, object object)
 ```
+
+#### Parameters
+
+`search` string
+
+
+`item` T
+
+
+`callback` AsyncCallback
+
+
+`object` object
+
+
+#### Returns
+
+IAsyncResult
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-a09e76fa89"></span>
 
-### EndInvoke
+### EndInvoke Method
 
 ```csharp
-public Boolean EndInvoke(IAsyncResult result)
+public bool EndInvoke(IAsyncResult result)
 ```
+
+#### Parameters
+
+`result` IAsyncResult
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-f942fc608a"></span>
 
-### Invoke
+### Invoke Method
 
 ```csharp
-public Boolean Invoke(String search, T item)
+public bool Invoke(string search, T item)
 ```
+
+#### Parameters
+
+`search` string
+
+
+`item` T
+
+
+#### Returns
+
+bool
+
+
+</section>
 
 </ApiRefPage>
 

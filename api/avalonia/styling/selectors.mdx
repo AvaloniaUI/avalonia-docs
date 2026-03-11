@@ -53,7 +53,7 @@ public class Selectors
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> Selectors
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> Selectors
 </div>
 </div>
 
@@ -75,9 +75,11 @@ public class Selectors
 | [PropertyEquals (2 overloads)](#uid-0631b3fd45) | Returns a selector which matches a control with the specified property value. |
 | [Template](#uid-6d6fb7392d) | Returns a selector which enters a lookless control's template. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-7d65ee1278"></span>
 
-### Child
+### Child Method
 
 Returns a selector which matches a previous selector's child.
 
@@ -85,32 +87,60 @@ Returns a selector which matches a previous selector's child.
 public Avalonia.Styling.Selector Child(Avalonia.Styling.Selector previous)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `previous` | The previous selector. |
+#### Parameters
 
-Returns: The selector.
+`previous` [Avalonia.Styling.Selector](xref:Avalonia.Styling.Selector)
+
+The previous selector.
+
+
+#### Returns
+
+[Avalonia.Styling.Selector](xref:Avalonia.Styling.Selector)
+
+The selector.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-8b8f95a723"></span>
 
-### Class
+### Class Method
 
 Returns a selector which matches a control's style class.
 
 ```csharp
-public Avalonia.Styling.Selector Class(Avalonia.Styling.Selector previous, String name)
+public Avalonia.Styling.Selector Class(Avalonia.Styling.Selector previous, string name)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `name` | The name of the style class. |
-| `previous` | The previous selector. |
+#### Parameters
 
-Returns: The selector.
+`previous` [Avalonia.Styling.Selector](xref:Avalonia.Styling.Selector)
+
+The previous selector.
+
+
+`name` string
+
+The name of the style class.
+
+
+#### Returns
+
+[Avalonia.Styling.Selector](xref:Avalonia.Styling.Selector)
+
+The selector.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-40f6b234ab"></span>
 
-### Descendant
+### Descendant Method
 
 Returns a selector which matches a descendant of a previous selector.
 
@@ -118,27 +148,58 @@ Returns a selector which matches a descendant of a previous selector.
 public Avalonia.Styling.Selector Descendant(Avalonia.Styling.Selector previous)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `previous` | The previous selector. |
+#### Parameters
 
-Returns: The selector.
+`previous` [Avalonia.Styling.Selector](xref:Avalonia.Styling.Selector)
+
+The previous selector.
+
+
+#### Returns
+
+[Avalonia.Styling.Selector](xref:Avalonia.Styling.Selector)
+
+The selector.
+
+
+</section>
 
 <span id="uid-943070bad5"></span>
 
 ### Is overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-5e9fed44c8"></span>
 
-#### Is
+#### Is Method
 
 ```csharp
 public Avalonia.Styling.Selector Is<T>(Avalonia.Styling.Selector previous)
 ```
 
+##### Parameters
+
+`previous` [Avalonia.Styling.Selector](xref:Avalonia.Styling.Selector)
+
+
+##### Type Parameters
+
+`T`
+
+
+##### Returns
+
+[Avalonia.Styling.Selector](xref:Avalonia.Styling.Selector)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-0f4a9e3750"></span>
 
-#### Is
+#### Is Method
 
 Returns a selector which matches a type or a derived type.
 
@@ -146,45 +207,91 @@ Returns a selector which matches a type or a derived type.
 public Avalonia.Styling.Selector Is(Avalonia.Styling.Selector previous, Type type)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `previous` | The previous selector. |
-| `type` | The type. |
+##### Parameters
 
-Returns: The selector.
+`previous` [Avalonia.Styling.Selector](xref:Avalonia.Styling.Selector)
+
+The previous selector.
+
+
+`type` Type
+
+The type.
+
+
+##### Returns
+
+[Avalonia.Styling.Selector](xref:Avalonia.Styling.Selector)
+
+The selector.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-3a46ab87f6"></span>
 
-### Name
+### Name Method
 
 Returns a selector which matches a control's Name.
 
 ```csharp
-public Avalonia.Styling.Selector Name(Avalonia.Styling.Selector previous, String name)
+public Avalonia.Styling.Selector Name(Avalonia.Styling.Selector previous, string name)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `name` | The name. |
-| `previous` | The previous selector. |
+#### Parameters
 
-Returns: The selector.
+`previous` [Avalonia.Styling.Selector](xref:Avalonia.Styling.Selector)
+
+The previous selector.
+
+
+`name` string
+
+The name.
+
+
+#### Returns
+
+[Avalonia.Styling.Selector](xref:Avalonia.Styling.Selector)
+
+The selector.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-69cdb5d416"></span>
 
-### Nesting
+### Nesting Method
 
 ```csharp
 public Avalonia.Styling.Selector Nesting(Avalonia.Styling.Selector previous)
 ```
 
+#### Parameters
+
+`previous` [Avalonia.Styling.Selector](xref:Avalonia.Styling.Selector)
+
+
+#### Returns
+
+[Avalonia.Styling.Selector](xref:Avalonia.Styling.Selector)
+
+
+</section>
+
 <span id="uid-13eaaea405"></span>
 
 ### Not overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-e58ce39e8e"></span>
 
-#### Not
+#### Not Method
 
 Returns a selector which inverts the results of selector argument.
 
@@ -192,56 +299,148 @@ Returns a selector which inverts the results of selector argument.
 public Avalonia.Styling.Selector Not(Avalonia.Styling.Selector previous, Avalonia.Styling.Selector argument)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `argument` | The selector to be not-ed. |
-| `previous` | The previous selector. |
+##### Parameters
 
-Returns: The selector.
+`previous` [Avalonia.Styling.Selector](xref:Avalonia.Styling.Selector)
+
+The previous selector.
+
+
+`argument` [Avalonia.Styling.Selector](xref:Avalonia.Styling.Selector)
+
+The selector to be not-ed.
+
+
+##### Returns
+
+[Avalonia.Styling.Selector](xref:Avalonia.Styling.Selector)
+
+The selector.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-72c7b2472b"></span>
 
-#### Not
+#### Not Method
 
 ```csharp
 public Avalonia.Styling.Selector Not(Avalonia.Styling.Selector previous, Func<Avalonia.Styling.Selector, Avalonia.Styling.Selector> argument)
 ```
 
+##### Parameters
+
+`previous` [Avalonia.Styling.Selector](xref:Avalonia.Styling.Selector)
+
+
+`argument` Func&lt;[Avalonia.Styling.Selector](xref:Avalonia.Styling.Selector), [Avalonia.Styling.Selector](xref:Avalonia.Styling.Selector)&gt;
+
+
+##### Returns
+
+[Avalonia.Styling.Selector](xref:Avalonia.Styling.Selector)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-96765779fa"></span>
 
-### NthChild
+### NthChild Method
 
 ```csharp
-public Avalonia.Styling.Selector NthChild(Avalonia.Styling.Selector previous, Int32 step, Int32 offset)
+public Avalonia.Styling.Selector NthChild(Avalonia.Styling.Selector previous, int step, int offset)
 ```
 
-Returns: The selector.
+#### Parameters
+
+`previous` [Avalonia.Styling.Selector](xref:Avalonia.Styling.Selector)
+
+
+`step` int
+
+
+`offset` int
+
+
+#### Returns
+
+[Avalonia.Styling.Selector](xref:Avalonia.Styling.Selector)
+
+The selector.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-3a26efd644"></span>
 
-### NthLastChild
+### NthLastChild Method
 
 ```csharp
-public Avalonia.Styling.Selector NthLastChild(Avalonia.Styling.Selector previous, Int32 step, Int32 offset)
+public Avalonia.Styling.Selector NthLastChild(Avalonia.Styling.Selector previous, int step, int offset)
 ```
 
-Returns: The selector.
+#### Parameters
+
+`previous` [Avalonia.Styling.Selector](xref:Avalonia.Styling.Selector)
+
+
+`step` int
+
+
+`offset` int
+
+
+#### Returns
+
+[Avalonia.Styling.Selector](xref:Avalonia.Styling.Selector)
+
+The selector.
+
+
+</section>
 
 <span id="uid-c972f6ecd6"></span>
 
 ### OfType overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-0703ec81eb"></span>
 
-#### OfType
+#### OfType Method
 
 ```csharp
 public Avalonia.Styling.Selector OfType<T>(Avalonia.Styling.Selector previous)
 ```
 
+##### Parameters
+
+`previous` [Avalonia.Styling.Selector](xref:Avalonia.Styling.Selector)
+
+
+##### Type Parameters
+
+`T`
+
+
+##### Returns
+
+[Avalonia.Styling.Selector](xref:Avalonia.Styling.Selector)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-50fc0b0592"></span>
 
-#### OfType
+#### OfType Method
 
 Returns a selector which matches a type.
 
@@ -249,20 +448,36 @@ Returns a selector which matches a type.
 public Avalonia.Styling.Selector OfType(Avalonia.Styling.Selector previous, Type type)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `previous` | The previous selector. |
-| `type` | The type. |
+##### Parameters
 
-Returns: The selector.
+`previous` [Avalonia.Styling.Selector](xref:Avalonia.Styling.Selector)
+
+The previous selector.
+
+
+`type` Type
+
+The type.
+
+
+##### Returns
+
+[Avalonia.Styling.Selector](xref:Avalonia.Styling.Selector)
+
+The selector.
+
+
+</section>
 
 <span id="uid-a1c438c394"></span>
 
 ### Or overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-4793492b30"></span>
 
-#### Or
+#### Or Method
 
 Returns a selector which ORs selectors.
 
@@ -270,53 +485,124 @@ Returns a selector which ORs selectors.
 public Avalonia.Styling.Selector Or(Avalonia.Styling.Selector[] selectors)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `selectors` | The selectors to be OR'd. |
+##### Parameters
 
-Returns: The selector.
+`selectors` [Avalonia.Styling.Selector](xref:Avalonia.Styling.Selector)[]
+
+The selectors to be OR'd.
+
+
+##### Returns
+
+[Avalonia.Styling.Selector](xref:Avalonia.Styling.Selector)
+
+The selector.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-3bc0df7f01"></span>
 
-#### Or
+#### Or Method
 
 ```csharp
 public Avalonia.Styling.Selector Or(System.Collections.Generic.IReadOnlyList<Avalonia.Styling.Selector> selectors)
 ```
 
+##### Parameters
+
+`selectors` System.Collections.Generic.IReadOnlyList&lt;[Avalonia.Styling.Selector](xref:Avalonia.Styling.Selector)&gt;
+
+
+##### Returns
+
+[Avalonia.Styling.Selector](xref:Avalonia.Styling.Selector)
+
+
+</section>
+
 <span id="uid-0631b3fd45"></span>
 
 ### PropertyEquals overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-e1db62437b"></span>
 
-#### PropertyEquals
+#### PropertyEquals Method
 
 Returns a selector which matches a control with the specified property value.
 
 ```csharp
-public Avalonia.Styling.Selector PropertyEquals(Avalonia.Styling.Selector previous, Avalonia.AvaloniaProperty property, Object value)
+public Avalonia.Styling.Selector PropertyEquals(Avalonia.Styling.Selector previous, Avalonia.AvaloniaProperty property, object value)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `previous` | The previous selector. |
-| `property` | The property. |
-| `value` | The property value. |
+##### Parameters
 
-Returns: The selector.
+`previous` [Avalonia.Styling.Selector](xref:Avalonia.Styling.Selector)
+
+The previous selector.
+
+
+`property` [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty)
+
+The property.
+
+
+`value` object
+
+The property value.
+
+
+##### Returns
+
+[Avalonia.Styling.Selector](xref:Avalonia.Styling.Selector)
+
+The selector.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-87b8c8c9b5"></span>
 
-#### PropertyEquals
+#### PropertyEquals Method
 
 ```csharp
-public Avalonia.Styling.Selector PropertyEquals<T>(Avalonia.Styling.Selector previous, Avalonia.AvaloniaProperty<TValue><T> property, Object value)
+public Avalonia.Styling.Selector PropertyEquals<T>(Avalonia.Styling.Selector previous, Avalonia.AvaloniaProperty<TValue><T> property, object value)
 ```
+
+##### Parameters
+
+`previous` [Avalonia.Styling.Selector](xref:Avalonia.Styling.Selector)
+
+
+`property` [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty)&lt;TValue&gt;&lt;T&gt;
+
+
+`value` object
+
+
+##### Type Parameters
+
+`T`
+
+
+##### Returns
+
+[Avalonia.Styling.Selector](xref:Avalonia.Styling.Selector)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-6d6fb7392d"></span>
 
-### Template
+### Template Method
 
 Returns a selector which enters a lookless control's template.
 
@@ -324,11 +610,21 @@ Returns a selector which enters a lookless control's template.
 public Avalonia.Styling.Selector Template(Avalonia.Styling.Selector previous)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `previous` | The previous selector. |
+#### Parameters
 
-Returns: The selector.
+`previous` [Avalonia.Styling.Selector](xref:Avalonia.Styling.Selector)
+
+The previous selector.
+
+
+#### Returns
+
+[Avalonia.Styling.Selector](xref:Avalonia.Styling.Selector)
+
+The selector.
+
+
+</section>
 
 </ApiRefPage>
 

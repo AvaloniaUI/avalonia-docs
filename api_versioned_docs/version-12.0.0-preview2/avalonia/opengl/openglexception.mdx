@@ -57,13 +57,22 @@ public class OpenGlException
 | --- | --- |
 | [OpenGlException](#uid-06058cc1c6) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-06058cc1c6"></span>
 
-### OpenGlException
+### OpenGlException Constructor
 
 ```csharp
-public OpenGlException(String message)
+public OpenGlException(string message)
 ```
+
+#### Parameters
+
+`message` string
+
+
+</section>
 
 ## Methods
 
@@ -72,41 +81,109 @@ public OpenGlException(String message)
 | [GetFormattedEglException](#uid-c39bc43fea) | No summary available. |
 | [GetFormattedException (3 overloads)](#uid-9164e2d715) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-c39bc43fea"></span>
 
-### GetFormattedEglException
+### GetFormattedEglException Method
 
 ```csharp
-public Avalonia.OpenGL.OpenGlException GetFormattedEglException(String funcName, Int32 errorCode)
+public Avalonia.OpenGL.OpenGlException GetFormattedEglException(string funcName, int errorCode)
 ```
+
+#### Parameters
+
+`funcName` string
+
+
+`errorCode` int
+
+
+#### Returns
+
+[Avalonia.OpenGL.OpenGlException](xref:Avalonia.OpenGL.OpenGlException)
+
+
+</section>
 
 <span id="uid-9164e2d715"></span>
 
 ### GetFormattedException overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-e13dbf3029"></span>
 
-#### GetFormattedException
+#### GetFormattedException Method
 
 ```csharp
-public Avalonia.OpenGL.OpenGlException GetFormattedException(String funcName, Avalonia.OpenGL.Egl.EglInterface egl)
+public Avalonia.OpenGL.OpenGlException GetFormattedException(string funcName, Avalonia.OpenGL.Egl.EglInterface egl)
 ```
+
+##### Parameters
+
+`funcName` string
+
+
+`egl` [Avalonia.OpenGL.Egl.EglInterface](xref:Avalonia.OpenGL.Egl.EglInterface)
+
+
+##### Returns
+
+[Avalonia.OpenGL.OpenGlException](xref:Avalonia.OpenGL.OpenGlException)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-6266f1ae53"></span>
 
-#### GetFormattedException
+#### GetFormattedException Method
 
 ```csharp
-public Avalonia.OpenGL.OpenGlException GetFormattedException(String funcName, Avalonia.OpenGL.GlInterface gl)
+public Avalonia.OpenGL.OpenGlException GetFormattedException(string funcName, Avalonia.OpenGL.GlInterface gl)
 ```
+
+##### Parameters
+
+`funcName` string
+
+
+`gl` [Avalonia.OpenGL.GlInterface](xref:Avalonia.OpenGL.GlInterface)
+
+
+##### Returns
+
+[Avalonia.OpenGL.OpenGlException](xref:Avalonia.OpenGL.OpenGlException)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-c40cbc2f1b"></span>
 
-#### GetFormattedException
+#### GetFormattedException Method
 
 ```csharp
-public Avalonia.OpenGL.OpenGlException GetFormattedException(String funcName, Int32 errorCode)
+public Avalonia.OpenGL.OpenGlException GetFormattedException(string funcName, int errorCode)
 ```
+
+##### Parameters
+
+`funcName` string
+
+
+`errorCode` int
+
+
+##### Returns
+
+[Avalonia.OpenGL.OpenGlException](xref:Avalonia.OpenGL.OpenGlException)
+
+
+</section>
 
 ## Properties
 
@@ -114,13 +191,17 @@ public Avalonia.OpenGL.OpenGlException GetFormattedException(String funcName, In
 | --- | --- |
 | [ErrorCode](#uid-a5ff08b80d) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-a5ff08b80d"></span>
 
-### ErrorCode
+### ErrorCode Property
 
 ```csharp
-public Nullable<Int32> ErrorCode { get; set; }
+public Nullable<int> ErrorCode { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

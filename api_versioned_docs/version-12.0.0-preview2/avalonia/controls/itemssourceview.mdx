@@ -54,13 +54,13 @@ public class ItemsSourceView
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> ItemsSourceView
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> ItemsSourceView
 </div>
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Derived types:</span> <a href="itemcollection">ItemCollection</a>, <a href="itemssourceview-1">ItemsSourceView&lt;T&gt;</a>
 </div>
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Implements:</span> ICollectionChangedListener, IEnumerable&lt;Object&gt;, IReadOnlyCollection&lt;Object&gt;, IReadOnlyList&lt;Object&gt;, ICollection, IEnumerable, IList, INotifyCollectionChanged
+<span className="apiref-page__meta-label">Implements:</span> ICollectionChangedListener, IEnumerable&lt;object&gt;, IReadOnlyCollection&lt;object&gt;, IReadOnlyList&lt;object&gt;, ICollection, IEnumerable, IList, INotifyCollectionChanged
 </div>
 </div>
 
@@ -74,53 +74,109 @@ public class ItemsSourceView
 | [GetOrCreate (2 overloads)](#uid-690d93f5ab) | No summary available. |
 | [IndexOf](#uid-42b8595b39) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-384f51208a"></span>
 
-### Contains
+### Contains Method
 
 ```csharp
-public Boolean Contains(Object item)
+public bool Contains(object item)
 ```
+
+#### Parameters
+
+`item` object
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-6695c23d5f"></span>
 
-### GetAt
+### GetAt Method
 
 Retrieves the item at the specified index.
 
 ```csharp
-public Object GetAt(Int32 index)
+public object GetAt(int index)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `index` | The index. |
+#### Parameters
 
-Returns: The item.
+`index` int
+
+The index.
+
+
+#### Returns
+
+object
+
+The item.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-5163e5545c"></span>
 
-### GetEnumerator
+### GetEnumerator Method
 
 ```csharp
-public System.Collections.Generic.IEnumerator<Object> GetEnumerator()
+public System.Collections.Generic.IEnumerator<object> GetEnumerator()
 ```
+
+#### Returns
+
+System.Collections.Generic.IEnumerator&lt;object&gt;
+
+
+</section>
 
 <span id="uid-690d93f5ab"></span>
 
 ### GetOrCreate overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-7273578632"></span>
 
-#### GetOrCreate
+#### GetOrCreate Method
 
 ```csharp
 public Avalonia.Controls.ItemsSourceView<T><T> GetOrCreate<T>(System.Collections.Generic.IEnumerable<T> items)
 ```
 
+##### Parameters
+
+`items` System.Collections.Generic.IEnumerable&lt;T&gt;
+
+
+##### Type Parameters
+
+`T`
+
+
+##### Returns
+
+[Avalonia.Controls.ItemsSourceView](xref:Avalonia.Controls.ItemsSourceView)&lt;T&gt;&lt;T&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-342cfe9787"></span>
 
-#### GetOrCreate
+#### GetOrCreate Method
 
 Gets or creates an [Avalonia.Controls.ItemsSourceView](xref:Avalonia.Controls.ItemsSourceView) for the specified enumerable.
 
@@ -128,40 +184,78 @@ Gets or creates an [Avalonia.Controls.ItemsSourceView](xref:Avalonia.Controls.It
 public Avalonia.Controls.ItemsSourceView<T><T> GetOrCreate<T>(System.Collections.IEnumerable items)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `items` | The enumerable. |
+##### Parameters
+
+`items` System.Collections.IEnumerable
+
+The enumerable.
+
+
+##### Returns
+
+[Avalonia.Controls.ItemsSourceView](xref:Avalonia.Controls.ItemsSourceView)
+
+
+##### Remarks
+
+This method handles the following three cases:
+- If `items` is null, returns [Avalonia.Controls.ItemsSourceView.Empty](xref:Avalonia.Controls.ItemsSourceView.Empty)
+- If `items` is an [Avalonia.Controls.ItemsSourceView](xref:Avalonia.Controls.ItemsSourceView) returns the existing
+[Avalonia.Controls.ItemsSourceView](xref:Avalonia.Controls.ItemsSourceView)
+- Otherwise creates a new [Avalonia.Controls.ItemsSourceView](xref:Avalonia.Controls.ItemsSourceView)
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-42b8595b39"></span>
 
-### IndexOf
+### IndexOf Method
 
 ```csharp
-public Int32 IndexOf(Object item)
+public int IndexOf(object item)
 ```
+
+#### Parameters
+
+`item` object
+
+
+#### Returns
+
+int
+
+
+</section>
 
 ## Properties
 
 | Name | Description |
 | --- | --- |
 | [Count](#uid-c7dd90d709) | Gets the number of items in the collection. |
-| [Empty](#uid-4ca040a88a) | Gets an empty Avalonia.Controls.ItemsSourceView |
+| [Empty](#uid-4ca040a88a) | Gets an empty [Avalonia.Controls.ItemsSourceView](xref:Avalonia.Controls.ItemsSourceView) |
 | [Item](#uid-e787f7367e) | No summary available. |
 | [Source](#uid-d81337be41) | Gets the source collection. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-c7dd90d709"></span>
 
-### Count
+### Count Property
 
 Gets the number of items in the collection.
 
 ```csharp
-public Int32 Count { get; set; }
+public int Count { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-4ca040a88a"></span>
 
-### Empty
+### Empty Property
 
 Gets an empty [Avalonia.Controls.ItemsSourceView](xref:Avalonia.Controls.ItemsSourceView)
 
@@ -169,17 +263,25 @@ Gets an empty [Avalonia.Controls.ItemsSourceView](xref:Avalonia.Controls.ItemsSo
 public Avalonia.Controls.ItemsSourceView Empty { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-e787f7367e"></span>
 
-### Item
+### Item Property
 
 ```csharp
-public Object Item { get; set; }
+public object Item { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-d81337be41"></span>
 
-### Source
+### Source Property
 
 Gets the source collection.
 
@@ -187,21 +289,27 @@ Gets the source collection.
 public System.Collections.IList Source { get; set; }
 ```
 
+</section>
+
 ## Events
 
 | Name | Description |
 | --- | --- |
 | [CollectionChanged](#uid-13328a2fb4) | Occurs when the collection has changed to indicate the reason for the change and which items changed. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-13328a2fb4"></span>
 
-### CollectionChanged
+### CollectionChanged Event
 
 Occurs when the collection has changed to indicate the reason for the change and which items changed.
 
 ```csharp
 public event System.Collections.Specialized.NotifyCollectionChangedEventHandler CollectionChanged
 ```
+
+</section>
 
 </ApiRefPage>
 

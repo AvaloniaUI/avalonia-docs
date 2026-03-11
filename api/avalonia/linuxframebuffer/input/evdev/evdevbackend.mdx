@@ -47,7 +47,7 @@ public class EvDevBackend
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> EvDevBackend
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> EvDevBackend
 </div>
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Implements:</span> <a href="../iinputbackend">IInputBackend</a>
@@ -60,13 +60,22 @@ public class EvDevBackend
 | --- | --- |
 | [EvDevBackend](#uid-9f6e220271) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-9f6e220271"></span>
 
-### EvDevBackend
+### EvDevBackend Constructor
 
 ```csharp
 public EvDevBackend(Avalonia.LinuxFramebuffer.Input.EvDev.EvDevDeviceDescription[] devices)
 ```
+
+#### Parameters
+
+`devices` [Avalonia.LinuxFramebuffer.Input.EvDev.EvDevDeviceDescription](xref:Avalonia.LinuxFramebuffer.Input.EvDev.EvDevDeviceDescription)[]
+
+
+</section>
 
 ## Methods
 
@@ -76,29 +85,59 @@ public EvDevBackend(Avalonia.LinuxFramebuffer.Input.EvDev.EvDevDeviceDescription
 | [Initialize](#uid-2c1afe6240) | No summary available. |
 | [SetInputRoot](#uid-79f6e0717a) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-e1a04211f4"></span>
 
-### CreateFromEnvironment
+### CreateFromEnvironment Method
 
 ```csharp
 public Avalonia.LinuxFramebuffer.Input.EvDev.EvDevBackend CreateFromEnvironment()
 ```
 
+#### Returns
+
+[Avalonia.LinuxFramebuffer.Input.EvDev.EvDevBackend](xref:Avalonia.LinuxFramebuffer.Input.EvDev.EvDevBackend)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-2c1afe6240"></span>
 
-### Initialize
+### Initialize Method
 
 ```csharp
-public Void Initialize(Avalonia.LinuxFramebuffer.Input.IScreenInfoProvider info, Action<Avalonia.Input.Raw.RawInputEventArgs> onInput)
+public void Initialize(Avalonia.LinuxFramebuffer.Input.IScreenInfoProvider info, Action<Avalonia.Input.Raw.RawInputEventArgs> onInput)
 ```
+
+#### Parameters
+
+`info` [Avalonia.LinuxFramebuffer.Input.IScreenInfoProvider](xref:Avalonia.LinuxFramebuffer.Input.IScreenInfoProvider)
+
+
+`onInput` Action&lt;[Avalonia.Input.Raw.RawInputEventArgs](xref:Avalonia.Input.Raw.RawInputEventArgs)&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-79f6e0717a"></span>
 
-### SetInputRoot
+### SetInputRoot Method
 
 ```csharp
-public Void SetInputRoot(Avalonia.Input.IInputRoot root)
+public void SetInputRoot(Avalonia.Input.IInputRoot root)
 ```
+
+#### Parameters
+
+`root` [Avalonia.Input.IInputRoot](xref:Avalonia.Input.IInputRoot)
+
+
+</section>
 
 </ApiRefPage>
 

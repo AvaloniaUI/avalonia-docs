@@ -68,12 +68,14 @@ public interface IAsyncDataTransfer
 
 | Name | Description |
 | --- | --- |
-| [Formats](#uid-5c56c14138) | Gets the formats supported by a Avalonia.Input.IAsyncDataTransfer. |
-| [Items](#uid-dfc40c36b1) | Gets a list of Avalonia.Input.IAsyncDataTransferItem contained in this object. |
+| [Formats](#uid-5c56c14138) | Gets the formats supported by a [Avalonia.Input.IAsyncDataTransfer](xref:Avalonia.Input.IAsyncDataTransfer). |
+| [Items](#uid-dfc40c36b1) | Gets a list of [Avalonia.Input.IAsyncDataTransferItem](xref:Avalonia.Input.IAsyncDataTransferItem) contained in this object. |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-5c56c14138"></span>
 
-### Formats
+### Formats Property
 
 Gets the formats supported by a [Avalonia.Input.IAsyncDataTransfer](xref:Avalonia.Input.IAsyncDataTransfer).
 
@@ -81,15 +83,28 @@ Gets the formats supported by a [Avalonia.Input.IAsyncDataTransfer](xref:Avaloni
 public System.Collections.Generic.IReadOnlyList<Avalonia.Input.DataFormat> Formats { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-dfc40c36b1"></span>
 
-### Items
+### Items Property
 
 Gets a list of [Avalonia.Input.IAsyncDataTransferItem](xref:Avalonia.Input.IAsyncDataTransferItem) contained in this object.
 
 ```csharp
 public System.Collections.Generic.IReadOnlyList<Avalonia.Input.IAsyncDataTransferItem> Items { get; set; }
 ```
+
+#### Remarks
+
+Some platforms (such as Windows and X11) may only support a single data item for all formats
+except [Avalonia.Input.DataFormat.File](xref:Avalonia.Input.DataFormat.File).
+
+Items returned by this property must stay valid until the [Avalonia.Input.IAsyncDataTransfer](xref:Avalonia.Input.IAsyncDataTransfer) is disposed.
+
+</section>
 
 </ApiRefPage>
 

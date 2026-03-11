@@ -72,48 +72,96 @@ public struct SaveFilePickerResult
 
 ### Equals overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-d636837015"></span>
 
-#### Equals
+#### Equals Method
 
 ```csharp
-public Boolean Equals(Avalonia.Platform.Storage.SaveFilePickerResult other)
+public bool Equals(Avalonia.Platform.Storage.SaveFilePickerResult other)
 ```
+
+##### Parameters
+
+`other` [Avalonia.Platform.Storage.SaveFilePickerResult](xref:Avalonia.Platform.Storage.SaveFilePickerResult)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-a77cbd7190"></span>
 
-#### Equals
+#### Equals Method
 
 ```csharp
-public Boolean Equals(Object obj)
+public bool Equals(object obj)
 ```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-0accbb5256"></span>
 
-### GetHashCode
+### GetHashCode Method
 
 ```csharp
-public Int32 GetHashCode()
+public int GetHashCode()
 ```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-9840e10d24"></span>
 
-### ToString
+### ToString Method
 
 ```csharp
-public String ToString()
+public string ToString()
 ```
+
+#### Returns
+
+string
+
+
+</section>
 
 ## Properties
 
 | Name | Description |
 | --- | --- |
-| [File](#uid-01a24bff25) | Saved Avalonia.Platform.Storage.IStorageFile or null if user canceled the dialog. |
+| [File](#uid-01a24bff25) | Saved [Avalonia.Platform.Storage.IStorageFile](xref:Avalonia.Platform.Storage.IStorageFile) or null if user canceled the dialog. |
 | [SelectedFileType](#uid-711f47a123) | Selected file type or null if not supported. |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-01a24bff25"></span>
 
-### File
+### File Property
 
 Saved [Avalonia.Platform.Storage.IStorageFile](xref:Avalonia.Platform.Storage.IStorageFile) or null if user canceled the dialog.
 
@@ -121,15 +169,21 @@ Saved [Avalonia.Platform.Storage.IStorageFile](xref:Avalonia.Platform.Storage.IS
 public Avalonia.Platform.Storage.IStorageFile File { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-711f47a123"></span>
 
-### SelectedFileType
+### SelectedFileType Property
 
 Selected file type or null if not supported.
 
 ```csharp
 public Avalonia.Platform.Storage.FilePickerFileType SelectedFileType { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

@@ -47,7 +47,7 @@ public class GlInterface.GlContextInfo
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> GlInterface.GlContextInfo
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> GlInterface.GlContextInfo
 </div>
 </div>
 
@@ -57,13 +57,25 @@ public class GlInterface.GlContextInfo
 | --- | --- |
 | [GlInterface.GlContextInfo](#uid-d7a0e5963a) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-d7a0e5963a"></span>
 
-### GlInterface.GlContextInfo
+### GlInterface.GlContextInfo Constructor
 
 ```csharp
-public GlInterface.GlContextInfo(Avalonia.OpenGL.GlVersion version, System.Collections.Generic.HashSet<String> extensions)
+public GlInterface.GlContextInfo(Avalonia.OpenGL.GlVersion version, System.Collections.Generic.HashSet<string> extensions)
 ```
+
+#### Parameters
+
+`version` [Avalonia.OpenGL.GlVersion](xref:Avalonia.OpenGL.GlVersion)
+
+
+`extensions` System.Collections.Generic.HashSet&lt;string&gt;
+
+
+</section>
 
 ## Methods
 
@@ -71,13 +83,30 @@ public GlInterface.GlContextInfo(Avalonia.OpenGL.GlVersion version, System.Colle
 | --- | --- |
 | [Create](#uid-6b1ac7860c) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-6b1ac7860c"></span>
 
-### Create
+### Create Method
 
 ```csharp
-public Avalonia.OpenGL.GlInterface.GlContextInfo Create(Avalonia.OpenGL.GlVersion version, Func<String, IntPtr> getProcAddress)
+public Avalonia.OpenGL.GlInterface.GlContextInfo Create(Avalonia.OpenGL.GlVersion version, Func<string, IntPtr> getProcAddress)
 ```
+
+#### Parameters
+
+`version` [Avalonia.OpenGL.GlVersion](xref:Avalonia.OpenGL.GlVersion)
+
+
+`getProcAddress` Func&lt;string, IntPtr&gt;
+
+
+#### Returns
+
+[Avalonia.OpenGL.GlInterface.GlContextInfo](xref:Avalonia.OpenGL.GlInterface.GlContextInfo)
+
+
+</section>
 
 ## Properties
 
@@ -86,21 +115,29 @@ public Avalonia.OpenGL.GlInterface.GlContextInfo Create(Avalonia.OpenGL.GlVersio
 | [Extensions](#uid-af75755934) | No summary available. |
 | [Version](#uid-d7fdfd7f4e) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-af75755934"></span>
 
-### Extensions
+### Extensions Property
 
 ```csharp
-public System.Collections.Generic.HashSet<String> Extensions { get; set; }
+public System.Collections.Generic.HashSet<string> Extensions { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-d7fdfd7f4e"></span>
 
-### Version
+### Version Property
 
 ```csharp
 public Avalonia.OpenGL.GlVersion Version { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

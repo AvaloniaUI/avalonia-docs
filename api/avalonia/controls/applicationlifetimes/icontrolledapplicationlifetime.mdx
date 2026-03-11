@@ -54,19 +54,26 @@ public interface IControlledApplicationLifetime
 | --- | --- |
 | [Shutdown](#uid-4097cb3b0a) | Shuts down the application and sets the exit code that is returned to the operating system when the application exits. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-4097cb3b0a"></span>
 
-### Shutdown
+### Shutdown Method
 
 Shuts down the application and sets the exit code that is returned to the operating system when the application exits.
 
 ```csharp
-public Void Shutdown(Int32 exitCode)
+public void Shutdown(int exitCode)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `exitCode` | An integer exit code for an application. The default exit code is 0. |
+#### Parameters
+
+`exitCode` int
+
+An integer exit code for an application. The default exit code is 0.
+
+
+</section>
 
 ## Events
 
@@ -75,9 +82,11 @@ public Void Shutdown(Int32 exitCode)
 | [Exit](#uid-24be6dcaff) | Sent when the application is exiting. |
 | [Startup](#uid-2481c92d33) | Sent when the application is starting up. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-24be6dcaff"></span>
 
-### Exit
+### Exit Event
 
 Sent when the application is exiting.
 
@@ -85,15 +94,21 @@ Sent when the application is exiting.
 public event EventHandler<Avalonia.Controls.ApplicationLifetimes.ControlledApplicationLifetimeExitEventArgs> Exit
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-2481c92d33"></span>
 
-### Startup
+### Startup Event
 
 Sent when the application is starting up.
 
 ```csharp
 public event EventHandler<Avalonia.Controls.ApplicationLifetimes.ControlledApplicationLifetimeStartupEventArgs> Startup
 ```
+
+</section>
 
 </ApiRefPage>
 

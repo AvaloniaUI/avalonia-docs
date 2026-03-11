@@ -47,7 +47,7 @@ public class HeadlessVncFramebufferSource
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> HeadlessVncFramebufferSource
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> HeadlessVncFramebufferSource
 </div>
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Implements:</span> IVncFramebufferSource
@@ -60,13 +60,25 @@ public class HeadlessVncFramebufferSource
 | --- | --- |
 | [HeadlessVncFramebufferSource](#uid-3c6af02a32) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-3c6af02a32"></span>
 
-### HeadlessVncFramebufferSource
+### HeadlessVncFramebufferSource Constructor
 
 ```csharp
 public HeadlessVncFramebufferSource(RemoteViewing.Vnc.Server.VncServerSession session, Avalonia.Controls.Window window)
 ```
+
+#### Parameters
+
+`session` RemoteViewing.Vnc.Server.VncServerSession
+
+
+`window` [Avalonia.Controls.Window](xref:Avalonia.Controls.Window)
+
+
+</section>
 
 ## Methods
 
@@ -75,21 +87,47 @@ public HeadlessVncFramebufferSource(RemoteViewing.Vnc.Server.VncServerSession se
 | [Capture](#uid-44bbc74edc) | No summary available. |
 | [SetDesktopSize](#uid-60ad90f5e6) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-44bbc74edc"></span>
 
-### Capture
+### Capture Method
 
 ```csharp
 public RemoteViewing.Vnc.VncFramebuffer Capture()
 ```
 
+#### Returns
+
+RemoteViewing.Vnc.VncFramebuffer
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-60ad90f5e6"></span>
 
-### SetDesktopSize
+### SetDesktopSize Method
 
 ```csharp
-public RemoteViewing.Vnc.ExtendedDesktopSizeStatus SetDesktopSize(Int32 width, Int32 height)
+public RemoteViewing.Vnc.ExtendedDesktopSizeStatus SetDesktopSize(int width, int height)
 ```
+
+#### Parameters
+
+`width` int
+
+
+`height` int
+
+
+#### Returns
+
+RemoteViewing.Vnc.ExtendedDesktopSizeStatus
+
+
+</section>
 
 ## Properties
 
@@ -98,21 +136,29 @@ public RemoteViewing.Vnc.ExtendedDesktopSizeStatus SetDesktopSize(Int32 width, I
 | [SupportsResizing](#uid-2bae941cf6) | No summary available. |
 | [Window](#uid-ecc03f142b) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-2bae941cf6"></span>
 
-### SupportsResizing
+### SupportsResizing Property
 
 ```csharp
-public Boolean SupportsResizing { get; set; }
+public bool SupportsResizing { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-ecc03f142b"></span>
 
-### Window
+### Window Property
 
 ```csharp
 public Avalonia.Controls.Window Window { get; set; }
 ```
+
+</section>
 
 ## Fields
 
@@ -120,13 +166,17 @@ public Avalonia.Controls.Window Window { get; set; }
 | --- | --- |
 | [_framebuffer](#uid-de0e73d26c) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-de0e73d26c"></span>
 
-### _framebuffer
+### _framebuffer Field
 
 ```csharp
 public RemoteViewing.Vnc.VncFramebuffer _framebuffer
 ```
+
+</section>
 
 </ApiRefPage>
 

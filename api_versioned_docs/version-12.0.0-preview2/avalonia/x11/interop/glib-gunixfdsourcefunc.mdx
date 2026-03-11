@@ -54,13 +54,25 @@ public delegate Glib.GUnixFDSourceFunc
 | --- | --- |
 | [Glib.GUnixFDSourceFunc](#uid-5e4367335d) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-5e4367335d"></span>
 
-### Glib.GUnixFDSourceFunc
+### Glib.GUnixFDSourceFunc Constructor
 
 ```csharp
-public Glib.GUnixFDSourceFunc(Object object, IntPtr method)
+public Glib.GUnixFDSourceFunc(object object, IntPtr method)
 ```
+
+#### Parameters
+
+`object` object
+
+
+`method` IntPtr
+
+
+</section>
 
 ## Methods
 
@@ -70,29 +82,89 @@ public Glib.GUnixFDSourceFunc(Object object, IntPtr method)
 | [EndInvoke](#uid-12e6cc3cc8) | No summary available. |
 | [Invoke](#uid-82c6c6f1c6) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-1e0a367964"></span>
 
-### BeginInvoke
+### BeginInvoke Method
 
 ```csharp
-public IAsyncResult BeginInvoke(Int32 fd, Avalonia.X11.Interop.Glib.GIOCondition condition, IntPtr user_data, AsyncCallback callback, Object object)
+public IAsyncResult BeginInvoke(int fd, Avalonia.X11.Interop.Glib.GIOCondition condition, IntPtr user_data, AsyncCallback callback, object object)
 ```
+
+#### Parameters
+
+`fd` int
+
+
+`condition` [Avalonia.X11.Interop.Glib.GIOCondition](xref:Avalonia.X11.Interop.Glib.GIOCondition)
+
+
+`user_data` IntPtr
+
+
+`callback` AsyncCallback
+
+
+`object` object
+
+
+#### Returns
+
+IAsyncResult
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-12e6cc3cc8"></span>
 
-### EndInvoke
+### EndInvoke Method
 
 ```csharp
-public Int32 EndInvoke(IAsyncResult result)
+public int EndInvoke(IAsyncResult result)
 ```
+
+#### Parameters
+
+`result` IAsyncResult
+
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-82c6c6f1c6"></span>
 
-### Invoke
+### Invoke Method
 
 ```csharp
-public Int32 Invoke(Int32 fd, Avalonia.X11.Interop.Glib.GIOCondition condition, IntPtr user_data)
+public int Invoke(int fd, Avalonia.X11.Interop.Glib.GIOCondition condition, IntPtr user_data)
 ```
+
+#### Parameters
+
+`fd` int
+
+
+`condition` [Avalonia.X11.Interop.Glib.GIOCondition](xref:Avalonia.X11.Interop.Glib.GIOCondition)
+
+
+`user_data` IntPtr
+
+
+#### Returns
+
+int
+
+
+</section>
 
 </ApiRefPage>
 

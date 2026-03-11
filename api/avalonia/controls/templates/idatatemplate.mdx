@@ -50,7 +50,7 @@ public interface IDataTemplate
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Implements:</span> ITemplate&lt;Object,Control&gt;
+<span className="apiref-page__meta-label">Implements:</span> ITemplate&lt;object,Control&gt;
 </div>
 </div>
 
@@ -60,21 +60,33 @@ public interface IDataTemplate
 | --- | --- |
 | [Match](#uid-a6a598ab4b) | Checks to see if this data template matches the specified data. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-a6a598ab4b"></span>
 
-### Match
+### Match Method
 
 Checks to see if this data template matches the specified data.
 
 ```csharp
-public Boolean Match(Object data)
+public bool Match(object data)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `data` | The data. |
+#### Parameters
 
-Returns: True if the data template can build a control for the data, otherwise false.
+`data` object
+
+The data.
+
+
+#### Returns
+
+bool
+
+True if the data template can build a control for the data, otherwise false.
+
+
+</section>
 
 </ApiRefPage>
 

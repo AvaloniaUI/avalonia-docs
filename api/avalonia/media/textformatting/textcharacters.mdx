@@ -53,7 +53,7 @@ public class TextCharacters
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="textrun">TextRun</a> <span className="apiref-page__relation-separator">-&gt;</span> TextCharacters
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="textrun">TextRun</a> <span className="apiref-page__relation-separator">-&gt;</span> TextCharacters
 </div>
 </div>
 
@@ -67,23 +67,47 @@ public class TextCharacters
 
 ### TextCharacters overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-31b198d2f7"></span>
 
-#### TextCharacters
+#### TextCharacters Constructor
 
 ```csharp
-public TextCharacters(ReadOnlyMemory<Char> text, Avalonia.Media.TextFormatting.TextRunProperties textRunProperties)
+public TextCharacters(ReadOnlyMemory<char> text, Avalonia.Media.TextFormatting.TextRunProperties textRunProperties)
 ```
+
+##### Parameters
+
+`text` ReadOnlyMemory&lt;char&gt;
+
+
+`textRunProperties` [Avalonia.Media.TextFormatting.TextRunProperties](xref:Avalonia.Media.TextFormatting.TextRunProperties)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-5d446e4585"></span>
 
-#### TextCharacters
+#### TextCharacters Constructor
 
 Constructs a run for text content from a string.
 
 ```csharp
-public TextCharacters(String text, Avalonia.Media.TextFormatting.TextRunProperties textRunProperties)
+public TextCharacters(string text, Avalonia.Media.TextFormatting.TextRunProperties textRunProperties)
 ```
+
+##### Parameters
+
+`text` string
+
+
+`textRunProperties` [Avalonia.Media.TextFormatting.TextRunProperties](xref:Avalonia.Media.TextFormatting.TextRunProperties)
+
+
+</section>
 
 ## Properties
 
@@ -93,19 +117,25 @@ public TextCharacters(String text, Avalonia.Media.TextFormatting.TextRunProperti
 | [Properties](#uid-0aff051fd3) | A set of properties shared by every characters in the run |
 | [Text](#uid-c4755919b7) | Gets the text run's text. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-9215b250fe"></span>
 
-### Length
+### Length Property
 
 Gets the text source length.
 
 ```csharp
-public Int32 Length { get; set; }
+public int Length { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-0aff051fd3"></span>
 
-### Properties
+### Properties Property
 
 A set of properties shared by every characters in the run
 
@@ -113,21 +143,27 @@ A set of properties shared by every characters in the run
 public Avalonia.Media.TextFormatting.TextRunProperties Properties { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-c4755919b7"></span>
 
-### Text
+### Text Property
 
 Gets the text run's text.
 
 ```csharp
-public ReadOnlyMemory<Char> Text { get; set; }
+public ReadOnlyMemory<char> Text { get; set; }
 ```
+
+</section>
 
 ## Fields
 
 | Name | Description |
 | --- | --- |
-| [DefaultTextSourceLength (Inherited from TextRun)](textrun.mdx#uid-f86dc003de) | No summary available. |
+| [DefaultTextSourceLength](textrun.mdx#uid-f86dc003de) | Inherited from [TextRun](textrun.mdx). |
 
 </ApiRefPage>
 

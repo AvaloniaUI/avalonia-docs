@@ -47,7 +47,7 @@ public class BindingExpressionBase
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> BindingExpressionBase
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> BindingExpressionBase
 </div>
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Derived types:</span> <a href="core/untypedbindingexpressionbase">UntypedBindingExpressionBase</a>
@@ -62,37 +62,59 @@ public class BindingExpressionBase
 | Name | Description |
 | --- | --- |
 | [Dispose](#uid-2ebfa59e03) | No summary available. |
-| [UpdateSource](#uid-fd0c9ff1d3) | Sends the current binding target value to the binding source property in Avalonia.Data.BindingMode.TwoWay or Avalonia.Data.BindingMode.OneWayToSource bindings. |
+| [UpdateSource](#uid-fd0c9ff1d3) | Sends the current binding target value to the binding source property in [Avalonia.Data.BindingMode.TwoWay](xref:Avalonia.Data.BindingMode.TwoWay) or [Avalonia.Data.BindingMode.OneWayToSource](xref:Avalonia.Data.BindingMode.OneWayToSource) bindings. |
 | [UpdateTarget](#uid-2633f25166) | Forces a data transfer from the binding source to the binding target. |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-2ebfa59e03"></span>
 
-### Dispose
+### Dispose Method
 
 ```csharp
-public Void Dispose()
+public void Dispose()
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-fd0c9ff1d3"></span>
 
-### UpdateSource
+### UpdateSource Method
 
 Sends the current binding target value to the binding source property in
 [Avalonia.Data.BindingMode.TwoWay](xref:Avalonia.Data.BindingMode.TwoWay) or [Avalonia.Data.BindingMode.OneWayToSource](xref:Avalonia.Data.BindingMode.OneWayToSource) bindings.
 
 ```csharp
-public Void UpdateSource()
+public void UpdateSource()
 ```
+
+#### Remarks
+
+This method does nothing when the Mode of the binding is not
+[Avalonia.Data.BindingMode.TwoWay](xref:Avalonia.Data.BindingMode.TwoWay) or [Avalonia.Data.BindingMode.OneWayToSource](xref:Avalonia.Data.BindingMode.OneWayToSource).
+
+If the [UpdateSourceTrigger](xref:Avalonia.Data.UpdateSourceTrigger) value of your binding is set to
+[Avalonia.Data.UpdateSourceTrigger.Explicit](xref:Avalonia.Data.UpdateSourceTrigger.Explicit), you must call the
+[Avalonia.Data.BindingExpressionBase.UpdateSource](xref:Avalonia.Data.BindingExpressionBase.UpdateSource) method or the changes will not propagate back to the
+source.
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-2633f25166"></span>
 
-### UpdateTarget
+### UpdateTarget Method
 
 Forces a data transfer from the binding source to the binding target.
 
 ```csharp
-public Void UpdateTarget()
+public void UpdateTarget()
 ```
+
+</section>
 
 </ApiRefPage>
 

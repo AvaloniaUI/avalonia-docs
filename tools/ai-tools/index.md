@@ -10,7 +10,16 @@ Avalonia Accelerate includes MCP (Model Context Protocol) servers for both DevTo
 
 Model Context Protocol (MCP) is an open standard that allows AI models to use external tools and services through a unified interface. Instead of manually running commands and pasting output into a chat, MCP lets your AI assistant call tools directly, passing structured data back and forth. The result is a tighter feedback loop where the assistant can see your application, make changes, and verify the outcome without you acting as the intermediary.
 
-MCP is supported by a growing number of AI coding assistants, including GitHub Copilot, Claude Code, Cursor, and JetBrains AI Assistant.
+## Supported AI assistants
+
+Both MCP servers work with any assistant that supports the STDIO transport. Each MCP setup page includes step-by-step configuration instructions for the following editors:
+
+- VS Code with GitHub Copilot
+- Visual Studio with Copilot
+- JetBrains Rider (AI Assistant and Copilot plugins)
+- Cursor
+- Claude Code
+- Claude Desktop
 
 ## DevTools MCP
 
@@ -27,16 +36,6 @@ The Parcel MCP server lets your AI assistant handle application packaging. It ca
 With the Parcel MCP server, you describe what you want in plain English and the AI assistant handles the configuration and execution, including macOS signing and notarisation.
 
 [Set up Parcel MCP](/tools/parcel/mcp)
-
-## Supported AI assistants
-
-Both MCP servers work with any assistant that supports the STDIO transport:
-
-- [VS Code with GitHub Copilot](https://code.visualstudio.com/docs/copilot/customization/mcp-servers)
-- [Visual Studio with Copilot](https://learn.microsoft.com/en-us/visualstudio/ide/mcp-servers?view=vs-2022)
-- [Rider AI Assistant](https://www.jetbrains.com/help/ai-assistant/mcp.html)
-- [Claude Code](https://docs.anthropic.com/en/docs/claude-code/tutorials#set-up-model-context-protocol-mcp-servers)
-- [Cursor](https://docs.cursor.com/en/context/mcp)
 
 ## See also
 

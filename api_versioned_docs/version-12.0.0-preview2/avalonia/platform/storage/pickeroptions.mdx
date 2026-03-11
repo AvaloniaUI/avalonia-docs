@@ -53,7 +53,7 @@ public class PickerOptions
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> PickerOptions
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> PickerOptions
 </div>
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Derived types:</span> <a href="filepickeropenoptions">FilePickerOpenOptions</a>, <a href="filepickersaveoptions">FilePickerSaveOptions</a>, <a href="folderpickeropenoptions">FolderPickerOpenOptions</a>
@@ -66,35 +66,45 @@ public class PickerOptions
 | --- | --- |
 | [PickerOptions](#uid-eba8a9bae6) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-eba8a9bae6"></span>
 
-### PickerOptions
+### PickerOptions Constructor
 
 ```csharp
 public PickerOptions()
 ```
+
+</section>
 
 ## Properties
 
 | Name | Description |
 | --- | --- |
 | [SuggestedFileName](#uid-87696bd66c) | Gets or sets the file name that the file picker suggests to the user. |
-| [SuggestedStartLocation](#uid-792044079c) | Gets or sets the initial location where the file open picker looks for files to present to the user. Can be obtained from previously picked folder or using Avalonia.Platform.Storage.IStorageProvider.TryGetFolderFromPathAsync(Uri) or Avalonia.Platform.Storage.IStorageProvider.TryGetWellKnownFolderAsync(Avalonia.Platform.Storage.WellKnownFolder). |
+| [SuggestedStartLocation](#uid-792044079c) | Gets or sets the initial location where the file open picker looks for files to present to the user. Can be obtained from previously picked folder or using [Avalonia.Platform.Storage.IStorageProvider.TryGetFolderFromPathAsync(Uri)](xref:Avalonia.Platform.Storage.IStorageProvider.TryGetFolderFromPathAsync%28System.Uri%29) or [Avalonia.Platform.Storage.IStorageProvider.TryGetWellKnownFolderAsync(Avalonia.Platform.Storage.WellKnownFolder)](xref:Avalonia.Platform.Storage.IStorageProvider.TryGetWellKnownFolderAsync%28Avalonia.Platform.Storage.WellKnownFolder%29). |
 | [Title](#uid-825079a1b0) | Gets or sets the text that appears in the title bar of a picker. |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-87696bd66c"></span>
 
-### SuggestedFileName
+### SuggestedFileName Property
 
 Gets or sets the file name that the file picker suggests to the user.
 
 ```csharp
-public String SuggestedFileName { get; set; }
+public string SuggestedFileName { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-792044079c"></span>
 
-### SuggestedStartLocation
+### SuggestedStartLocation Property
 
 Gets or sets the initial location where the file open picker looks for files to present to the user.
 Can be obtained from previously picked folder or using [Avalonia.Platform.Storage.IStorageProvider.TryGetFolderFromPathAsync(Uri)](xref:Avalonia.Platform.Storage.IStorageProvider.TryGetFolderFromPathAsync%28System.Uri%29)
@@ -104,15 +114,21 @@ or [Avalonia.Platform.Storage.IStorageProvider.TryGetWellKnownFolderAsync(Avalon
 public Avalonia.Platform.Storage.IStorageFolder SuggestedStartLocation { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-825079a1b0"></span>
 
-### Title
+### Title Property
 
 Gets or sets the text that appears in the title bar of a picker.
 
 ```csharp
-public String Title { get; set; }
+public string Title { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

@@ -1,0 +1,241 @@
+---
+title: 'IUpdateColumnLayout'
+hide_title: true
+slug: '/avalonia/controls/models/treedatagrid/iupdatecolumnlayout'
+uid: 'Avalonia.Controls.Models.TreeDataGrid.IUpdateColumnLayout'
+commentId: 'T:Avalonia.Controls.Models.TreeDataGrid.IUpdateColumnLayout'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.TreeDataGrid'
+assembly: 'Avalonia.Controls.TreeDataGrid'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Models.TreeDataGrid'
+tfms:
+  - 'net8.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IUpdateColumnLayout Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Models.TreeDataGrid</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Internal low-level interface for layout interactions between [Avalonia.Controls.Models.TreeDataGrid.IColumns](xref:Avalonia.Controls.Models.TreeDataGrid.IColumns) and
+[Avalonia.Controls.Models.TreeDataGrid.IColumn](xref:Avalonia.Controls.Models.TreeDataGrid.IColumn).
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface IUpdateColumnLayout
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="icolumn">IColumn</a>, INotifyPropertyChanged
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [CalculateStarWidth](#uid-4a5df2d93b) | Requests a star-width column to calculate its [Avalonia.Controls.Models.TreeDataGrid.IColumn.ActualWidth](xref:Avalonia.Controls.Models.TreeDataGrid.IColumn.ActualWidth). |
+| [CellMeasured](#uid-2e9b689644) | Notifies the column that a cell has been measured. |
+| [CommitActualWidth](#uid-9d11a31104) | Requests a column to set its final [Avalonia.Controls.Models.TreeDataGrid.IColumn.ActualWidth](xref:Avalonia.Controls.Models.TreeDataGrid.IColumn.ActualWidth) based on the size calculated via [Avalonia.Controls.Models.TreeDataGrid.IUpdateColumnLayout.CellMeasured(double,int)](xref:Avalonia.Controls.Models.TreeDataGrid.IUpdateColumnLayout.CellMeasured%28System.Double%2CSystem.Int32%29) and [Avalonia.Controls.Models.TreeDataGrid.IUpdateColumnLayout.CalculateStarWidth(double,double)](xref:Avalonia.Controls.Models.TreeDataGrid.IUpdateColumnLayout.CalculateStarWidth%28System.Double%2CSystem.Double%29). |
+| [SetWidth](#uid-cd2c584fdc) | Notifies the column of a change to its preferred width. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4a5df2d93b"></span>
+
+### CalculateStarWidth Method
+
+Requests a star-width column to calculate its [Avalonia.Controls.Models.TreeDataGrid.IColumn.ActualWidth](xref:Avalonia.Controls.Models.TreeDataGrid.IColumn.ActualWidth).
+
+```csharp
+public void CalculateStarWidth(double availableWidth, double totalStars)
+```
+
+#### Parameters
+
+`availableWidth` double
+
+The available width to be shared by star-width columns.
+
+
+`totalStars` double
+
+The sum of the star units of all columns.
+
+
+#### Remarks
+
+This method may be called multiple times during a layout pass; the width calculated by
+this method should not be comitted to [Avalonia.Controls.Models.TreeDataGrid.IColumn.ActualWidth](xref:Avalonia.Controls.Models.TreeDataGrid.IColumn.ActualWidth) until
+[Avalonia.Controls.Models.TreeDataGrid.IUpdateColumnLayout.CommitActualWidth](xref:Avalonia.Controls.Models.TreeDataGrid.IUpdateColumnLayout.CommitActualWidth) is called. This method should update the value of the
+[Avalonia.Controls.Models.TreeDataGrid.IUpdateColumnLayout.StarWidthWasConstrained](xref:Avalonia.Controls.Models.TreeDataGrid.IUpdateColumnLayout.StarWidthWasConstrained) property.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2e9b689644"></span>
+
+### CellMeasured Method
+
+Notifies the column that a cell has been measured.
+
+```csharp
+public double CellMeasured(double width, int rowIndex)
+```
+
+#### Parameters
+
+`width` double
+
+The measured width, in pixels; as returned by the cell DesiredSize.
+
+
+`rowIndex` int
+
+The cell row index or -1 for a column header.
+
+
+#### Returns
+
+double
+
+The width of the cell updated with the column width.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9d11a31104"></span>
+
+### CommitActualWidth Method
+
+Requests a column to set its final [Avalonia.Controls.Models.TreeDataGrid.IColumn.ActualWidth](xref:Avalonia.Controls.Models.TreeDataGrid.IColumn.ActualWidth) based on the
+size calculated via [Avalonia.Controls.Models.TreeDataGrid.IUpdateColumnLayout.CellMeasured(double,int)](xref:Avalonia.Controls.Models.TreeDataGrid.IUpdateColumnLayout.CellMeasured%28System.Double%2CSystem.Int32%29) and
+[Avalonia.Controls.Models.TreeDataGrid.IUpdateColumnLayout.CalculateStarWidth(double,double)](xref:Avalonia.Controls.Models.TreeDataGrid.IUpdateColumnLayout.CalculateStarWidth%28System.Double%2CSystem.Double%29).
+
+```csharp
+public bool CommitActualWidth()
+```
+
+#### Returns
+
+bool
+
+True if the column's actual width has changed; otherwise false.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-cd2c584fdc"></span>
+
+### SetWidth Method
+
+Notifies the column of a change to its preferred width.
+
+```csharp
+public void SetWidth(Avalonia.Controls.GridLength width)
+```
+
+#### Parameters
+
+`width` [Avalonia.Controls.GridLength](xref:Avalonia.Controls.GridLength)
+
+The width.
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [MaxActualWidth](#uid-ccfb2c3ca5) | Gets the maximum actual width of the column. |
+| [MinActualWidth](#uid-4089cb487b) | Gets the minimum actual width of the column. |
+| [StarWidthWasConstrained](#uid-f2033fbb7f) | Gets a value indicating whether the column is a star-width column and its width was constrained by its min/max width in the last call to [Avalonia.Controls.Models.TreeDataGrid.IUpdateColumnLayout.CalculateStarWidth(double,double)](xref:Avalonia.Controls.Models.TreeDataGrid.IUpdateColumnLayout.CalculateStarWidth%28System.Double%2CSystem.Double%29). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ccfb2c3ca5"></span>
+
+### MaxActualWidth Property
+
+Gets the maximum actual width of the column.
+
+```csharp
+public double MaxActualWidth { get; set; }
+```
+
+#### Returns
+
+The maximum width of the column in pixels, or [double.PositiveInfinity](xref:System.Double.PositiveInfinity) if the
+column has no maximum width.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4089cb487b"></span>
+
+### MinActualWidth Property
+
+Gets the minimum actual width of the column.
+
+```csharp
+public double MinActualWidth { get; set; }
+```
+
+#### Returns
+
+The minimum width of the column in pixels.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f2033fbb7f"></span>
+
+### StarWidthWasConstrained Property
+
+Gets a value indicating whether the column is a star-width column and its width
+was constrained by its min/max width in the last call to
+[Avalonia.Controls.Models.TreeDataGrid.IUpdateColumnLayout.CalculateStarWidth(double,double)](xref:Avalonia.Controls.Models.TreeDataGrid.IUpdateColumnLayout.CalculateStarWidth%28System.Double%2CSystem.Double%29).
+
+```csharp
+public bool StarWidthWasConstrained { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

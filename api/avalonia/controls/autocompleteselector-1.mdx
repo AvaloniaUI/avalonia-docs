@@ -62,13 +62,25 @@ public delegate AutoCompleteSelector<T>
 | --- | --- |
 | [AutoCompleteSelector&lt;T&gt;](#uid-be4dfc18e2) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-be4dfc18e2"></span>
 
-### AutoCompleteSelector&lt;T&gt;
+### AutoCompleteSelector&lt;T&gt; Constructor
 
 ```csharp
-public AutoCompleteSelector<T>(Object object, IntPtr method)
+public AutoCompleteSelector<T>(object object, IntPtr method)
 ```
+
+#### Parameters
+
+`object` object
+
+
+`method` IntPtr
+
+
+</section>
 
 ## Methods
 
@@ -78,29 +90,83 @@ public AutoCompleteSelector<T>(Object object, IntPtr method)
 | [EndInvoke](#uid-c30f4ffc30) | No summary available. |
 | [Invoke](#uid-ff76cdad75) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-a17d5a5cff"></span>
 
-### BeginInvoke
+### BeginInvoke Method
 
 ```csharp
-public IAsyncResult BeginInvoke(String search, T item, AsyncCallback callback, Object object)
+public IAsyncResult BeginInvoke(string search, T item, AsyncCallback callback, object object)
 ```
+
+#### Parameters
+
+`search` string
+
+
+`item` T
+
+
+`callback` AsyncCallback
+
+
+`object` object
+
+
+#### Returns
+
+IAsyncResult
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-c30f4ffc30"></span>
 
-### EndInvoke
+### EndInvoke Method
 
 ```csharp
-public String EndInvoke(IAsyncResult result)
+public string EndInvoke(IAsyncResult result)
 ```
+
+#### Parameters
+
+`result` IAsyncResult
+
+
+#### Returns
+
+string
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-ff76cdad75"></span>
 
-### Invoke
+### Invoke Method
 
 ```csharp
-public String Invoke(String search, T item)
+public string Invoke(string search, T item)
 ```
+
+#### Parameters
+
+`search` string
+
+
+`item` T
+
+
+#### Returns
+
+string
+
+
+</section>
 
 </ApiRefPage>
 

@@ -53,7 +53,7 @@ public class FuncTreeDataTemplate<T>
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> FuncTemplate&lt;Object,Control&gt; <span className="apiref-page__relation-separator">-&gt;</span> <a href="funcdatatemplate">FuncDataTemplate</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="functreedatatemplate">FuncTreeDataTemplate</a> <span className="apiref-page__relation-separator">-&gt;</span> FuncTreeDataTemplate&lt;T&gt;
+<span className="apiref-page__meta-label">Inheritance:</span> FuncTemplate&lt;object,Control&gt; <span className="apiref-page__relation-separator">-&gt;</span> <a href="funcdatatemplate">FuncDataTemplate</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="functreedatatemplate">FuncTreeDataTemplate</a> <span className="apiref-page__relation-separator">-&gt;</span> FuncTreeDataTemplate&lt;T&gt;
 </div>
 </div>
 
@@ -67,36 +67,63 @@ public class FuncTreeDataTemplate<T>
 
 ### FuncTreeDataTemplate&lt;T&gt; overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-d2fc273bee"></span>
 
-#### FuncTreeDataTemplate&lt;T&gt;
+#### FuncTreeDataTemplate&lt;T&gt; Constructor
 
 ```csharp
-public FuncTreeDataTemplate<T>(Func<T, Boolean> match, Func<T, Avalonia.Controls.INameScope, Avalonia.Controls.Control> build, Func<T, System.Collections.IEnumerable> itemsSelector)
+public FuncTreeDataTemplate<T>(Func<T, bool> match, Func<T, Avalonia.Controls.INameScope, Avalonia.Controls.Control> build, Func<T, System.Collections.IEnumerable> itemsSelector)
 ```
+
+##### Parameters
+
+`match` Func&lt;T, bool&gt;
+
+
+`build` Func&lt;T, [Avalonia.Controls.INameScope](xref:Avalonia.Controls.INameScope), [Avalonia.Controls.Control](xref:Avalonia.Controls.Control)&gt;
+
+
+`itemsSelector` Func&lt;T, System.Collections.IEnumerable&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-77d8fce0cd"></span>
 
-#### FuncTreeDataTemplate&lt;T&gt;
+#### FuncTreeDataTemplate&lt;T&gt; Constructor
 
 ```csharp
 public FuncTreeDataTemplate<T>(Func<T, Avalonia.Controls.INameScope, Avalonia.Controls.Control> build, Func<T, System.Collections.IEnumerable> itemsSelector)
 ```
 
+##### Parameters
+
+`build` Func&lt;T, [Avalonia.Controls.INameScope](xref:Avalonia.Controls.INameScope), [Avalonia.Controls.Control](xref:Avalonia.Controls.Control)&gt;
+
+
+`itemsSelector` Func&lt;T, System.Collections.IEnumerable&gt;
+
+
+</section>
+
 ## Methods
 
 | Name | Description |
 | --- | --- |
-| [BindChildren (Inherited from FuncTreeDataTemplate)](functreedatatemplate.mdx#uid-466057c57b) | No summary available. |
-| [Build (Inherited from FuncDataTemplate)](funcdatatemplate.mdx#uid-910f460c06) | Creates or recycles a control to display the specified data. |
-| [Match (Inherited from FuncDataTemplate)](funcdatatemplate.mdx#uid-50eee6cfed) | Checks to see if this data template matches the specified data. |
+| [BindChildren](functreedatatemplate.mdx#uid-466057c57b) | Inherited from [FuncTreeDataTemplate](functreedatatemplate.mdx). |
+| [Build](funcdatatemplate.mdx#uid-910f460c06) | Creates or recycles a control to display the specified data. Inherited from [FuncDataTemplate](funcdatatemplate.mdx). |
+| [Match](funcdatatemplate.mdx#uid-50eee6cfed) | Checks to see if this data template matches the specified data. Inherited from [FuncDataTemplate](funcdatatemplate.mdx). |
 
 ## Fields
 
 | Name | Description |
 | --- | --- |
-| [Access (Inherited from FuncDataTemplate)](funcdatatemplate.mdx#uid-c964539ce7) | The default data template used in the case where no matching data template is found but Avalonia.Controls.Primitives.AccessText should be used. |
-| [Default (Inherited from FuncDataTemplate)](funcdatatemplate.mdx#uid-70c1c9b32b) | The default data template used in the case where no matching data template is found. |
+| [Access](funcdatatemplate.mdx#uid-c964539ce7) | The default data template used in the case where no matching data template is found but [Avalonia.Controls.Primitives.AccessText](xref:Avalonia.Controls.Primitives.AccessText) should be used. Inherited from [FuncDataTemplate](funcdatatemplate.mdx). |
+| [Default](funcdatatemplate.mdx#uid-70c1c9b32b) | The default data template used in the case where no matching data template is found. Inherited from [FuncDataTemplate](funcdatatemplate.mdx). |
 
 </ApiRefPage>
 

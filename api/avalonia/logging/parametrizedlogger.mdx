@@ -66,13 +66,28 @@ public struct ParametrizedLogger
 | --- | --- |
 | [ParametrizedLogger](#uid-a26a202933) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-a26a202933"></span>
 
-### ParametrizedLogger
+### ParametrizedLogger Constructor
 
 ```csharp
-public ParametrizedLogger(Avalonia.Logging.ILogSink sink, Avalonia.Logging.LogEventLevel level, String area)
+public ParametrizedLogger(Avalonia.Logging.ILogSink sink, Avalonia.Logging.LogEventLevel level, string area)
 ```
+
+#### Parameters
+
+`sink` [Avalonia.Logging.ILogSink](xref:Avalonia.Logging.ILogSink)
+
+
+`level` [Avalonia.Logging.LogEventLevel](xref:Avalonia.Logging.LogEventLevel)
+
+
+`area` string
+
+
+</section>
 
 ## Methods
 
@@ -87,104 +102,371 @@ public ParametrizedLogger(Avalonia.Logging.ILogSink sink, Avalonia.Logging.LogEv
 
 ### Equals overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-803d4ff408"></span>
 
-#### Equals
+#### Equals Method
 
 ```csharp
-public Boolean Equals(Avalonia.Logging.ParametrizedLogger other)
+public bool Equals(Avalonia.Logging.ParametrizedLogger other)
 ```
+
+##### Parameters
+
+`other` [Avalonia.Logging.ParametrizedLogger](xref:Avalonia.Logging.ParametrizedLogger)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-f0a4b65169"></span>
 
-#### Equals
+#### Equals Method
 
 ```csharp
-public Boolean Equals(Object obj)
+public bool Equals(object obj)
 ```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-153db5a06f"></span>
 
-### GetHashCode
+### GetHashCode Method
 
 ```csharp
-public Int32 GetHashCode()
+public int GetHashCode()
 ```
+
+#### Returns
+
+int
+
+
+</section>
 
 <span id="uid-5a75e52709"></span>
 
 ### Log overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-140da5cbd3"></span>
 
-#### Log
+#### Log Method
 
 Logs an event.
 
 ```csharp
-public Void Log(Object source, String messageTemplate)
+public void Log(object source, string messageTemplate)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `messageTemplate` | The message template. |
-| `source` | The object from which the event originates. |
+##### Parameters
+
+`source` object
+
+The object from which the event originates.
+
+
+`messageTemplate` string
+
+The message template.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-7bf1a0e635"></span>
 
-#### Log
+#### Log Method
 
 ```csharp
-public Void Log<T0>(Object source, String messageTemplate, T0 propertyValue0)
+public void Log<T0>(object source, string messageTemplate, T0 propertyValue0)
 ```
+
+##### Parameters
+
+`source` object
+
+
+`messageTemplate` string
+
+
+`propertyValue0` T0
+
+
+##### Type Parameters
+
+`T0`
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-63b50afd42"></span>
 
-#### Log
+#### Log Method
 
 ```csharp
-public Void Log<T0, T1>(Object source, String messageTemplate, T0 propertyValue0, T1 propertyValue1)
+public void Log<T0, T1>(object source, string messageTemplate, T0 propertyValue0, T1 propertyValue1)
 ```
+
+##### Parameters
+
+`source` object
+
+
+`messageTemplate` string
+
+
+`propertyValue0` T0
+
+
+`propertyValue1` T1
+
+
+##### Type Parameters
+
+`T0`
+
+
+`T1`
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-85df853b51"></span>
 
-#### Log
+#### Log Method
 
 ```csharp
-public Void Log<T0, T1, T2>(Object source, String messageTemplate, T0 propertyValue0, T1 propertyValue1, T2 propertyValue2)
+public void Log<T0, T1, T2>(object source, string messageTemplate, T0 propertyValue0, T1 propertyValue1, T2 propertyValue2)
 ```
+
+##### Parameters
+
+`source` object
+
+
+`messageTemplate` string
+
+
+`propertyValue0` T0
+
+
+`propertyValue1` T1
+
+
+`propertyValue2` T2
+
+
+##### Type Parameters
+
+`T0`
+
+
+`T1`
+
+
+`T2`
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-39ee9e3091"></span>
 
-#### Log
+#### Log Method
 
 ```csharp
-public Void Log<T0, T1, T2, T3>(Object source, String messageTemplate, T0 propertyValue0, T1 propertyValue1, T2 propertyValue2, T3 propertyValue3)
+public void Log<T0, T1, T2, T3>(object source, string messageTemplate, T0 propertyValue0, T1 propertyValue1, T2 propertyValue2, T3 propertyValue3)
 ```
+
+##### Parameters
+
+`source` object
+
+
+`messageTemplate` string
+
+
+`propertyValue0` T0
+
+
+`propertyValue1` T1
+
+
+`propertyValue2` T2
+
+
+`propertyValue3` T3
+
+
+##### Type Parameters
+
+`T0`
+
+
+`T1`
+
+
+`T2`
+
+
+`T3`
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-d9b2a9730e"></span>
 
-#### Log
+#### Log Method
 
 ```csharp
-public Void Log<T0, T1, T2, T3, T4>(Object source, String messageTemplate, T0 propertyValue0, T1 propertyValue1, T2 propertyValue2, T3 propertyValue3, T4 propertyValue4)
+public void Log<T0, T1, T2, T3, T4>(object source, string messageTemplate, T0 propertyValue0, T1 propertyValue1, T2 propertyValue2, T3 propertyValue3, T4 propertyValue4)
 ```
+
+##### Parameters
+
+`source` object
+
+
+`messageTemplate` string
+
+
+`propertyValue0` T0
+
+
+`propertyValue1` T1
+
+
+`propertyValue2` T2
+
+
+`propertyValue3` T3
+
+
+`propertyValue4` T4
+
+
+##### Type Parameters
+
+`T0`
+
+
+`T1`
+
+
+`T2`
+
+
+`T3`
+
+
+`T4`
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-fd0f8b719f"></span>
 
-#### Log
+#### Log Method
 
 ```csharp
-public Void Log<T0, T1, T2, T3, T4, T5>(Object source, String messageTemplate, T0 propertyValue0, T1 propertyValue1, T2 propertyValue2, T3 propertyValue3, T4 propertyValue4, T5 propertyValue5)
+public void Log<T0, T1, T2, T3, T4, T5>(object source, string messageTemplate, T0 propertyValue0, T1 propertyValue1, T2 propertyValue2, T3 propertyValue3, T4 propertyValue4, T5 propertyValue5)
 ```
+
+##### Parameters
+
+`source` object
+
+
+`messageTemplate` string
+
+
+`propertyValue0` T0
+
+
+`propertyValue1` T1
+
+
+`propertyValue2` T2
+
+
+`propertyValue3` T3
+
+
+`propertyValue4` T4
+
+
+`propertyValue5` T5
+
+
+##### Type Parameters
+
+`T0`
+
+
+`T1`
+
+
+`T2`
+
+
+`T3`
+
+
+`T4`
+
+
+`T5`
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-bd3cbae93e"></span>
 
-### ToString
+### ToString Method
 
 ```csharp
-public String ToString()
+public string ToString()
 ```
+
+#### Returns
+
+string
+
+
+</section>
 
 ## Properties
 
@@ -192,15 +474,19 @@ public String ToString()
 | --- | --- |
 | [IsValid](#uid-f8e695a035) | Checks if this logger can be used. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-f8e695a035"></span>
 
-### IsValid
+### IsValid Property
 
 Checks if this logger can be used.
 
 ```csharp
-public Boolean IsValid { get; set; }
+public bool IsValid { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

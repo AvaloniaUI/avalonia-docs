@@ -64,19 +64,33 @@ This interface is implemented by [Avalonia.StyledElement](xref:Avalonia.StyledEl
 | --- | --- |
 | [NotifyHostedResourcesChanged](#uid-e60a587c09) | Notifies the resource host that one or more of its hosted resources has changed. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-e60a587c09"></span>
 
-### NotifyHostedResourcesChanged
+### NotifyHostedResourcesChanged Method
 
 Notifies the resource host that one or more of its hosted resources has changed.
 
 ```csharp
-public Void NotifyHostedResourcesChanged(Avalonia.Controls.ResourcesChangedEventArgs e)
+public void NotifyHostedResourcesChanged(Avalonia.Controls.ResourcesChangedEventArgs e)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `e` | The event args. |
+#### Parameters
+
+`e` [Avalonia.Controls.ResourcesChangedEventArgs](xref:Avalonia.Controls.ResourcesChangedEventArgs)
+
+The event args.
+
+
+#### Remarks
+
+This method will be called automatically by the framework, you should not need to call
+this method yourself. It is called when the resources hosted by this element have
+changed, and is usually called by a resource dictionary or style hosted by the element
+in response to a resource being added or removed.
+
+</section>
 
 ## Events
 
@@ -84,15 +98,19 @@ public Void NotifyHostedResourcesChanged(Avalonia.Controls.ResourcesChangedEvent
 | --- | --- |
 | [ResourcesChanged](#uid-b07a533b55) | Raised when the resources change on the element or an ancestor of the element. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-b07a533b55"></span>
 
-### ResourcesChanged
+### ResourcesChanged Event
 
 Raised when the resources change on the element or an ancestor of the element.
 
 ```csharp
 public event EventHandler<Avalonia.Controls.ResourcesChangedEventArgs> ResourcesChanged
 ```
+
+</section>
 
 </ApiRefPage>
 

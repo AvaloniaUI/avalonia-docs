@@ -54,13 +54,25 @@ public delegate X11EventDispatcher.EventHandler
 | --- | --- |
 | [X11EventDispatcher.EventHandler](#uid-8fadff03fa) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-8fadff03fa"></span>
 
-### X11EventDispatcher.EventHandler
+### X11EventDispatcher.EventHandler Constructor
 
 ```csharp
-public X11EventDispatcher.EventHandler(Object object, IntPtr method)
+public X11EventDispatcher.EventHandler(object object, IntPtr method)
 ```
+
+#### Parameters
+
+`object` object
+
+
+`method` IntPtr
+
+
+</section>
 
 ## Methods
 
@@ -70,29 +82,70 @@ public X11EventDispatcher.EventHandler(Object object, IntPtr method)
 | [EndInvoke](#uid-38708d5495) | No summary available. |
 | [Invoke](#uid-f7888da33c) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-26cea4cba4"></span>
 
-### BeginInvoke
+### BeginInvoke Method
 
 ```csharp
-public IAsyncResult BeginInvoke(Avalonia.X11.XEvent& xev, AsyncCallback callback, Object object)
+public IAsyncResult BeginInvoke(Avalonia.X11.XEvent& xev, AsyncCallback callback, object object)
 ```
+
+#### Parameters
+
+`xev` Avalonia.X11.XEvent&amp;
+
+
+`callback` AsyncCallback
+
+
+`object` object
+
+
+#### Returns
+
+IAsyncResult
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-38708d5495"></span>
 
-### EndInvoke
+### EndInvoke Method
 
 ```csharp
-public Void EndInvoke(Avalonia.X11.XEvent& xev, IAsyncResult result)
+public void EndInvoke(Avalonia.X11.XEvent& xev, IAsyncResult result)
 ```
+
+#### Parameters
+
+`xev` Avalonia.X11.XEvent&amp;
+
+
+`result` IAsyncResult
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-f7888da33c"></span>
 
-### Invoke
+### Invoke Method
 
 ```csharp
-public Void Invoke(Avalonia.X11.XEvent& xev)
+public void Invoke(Avalonia.X11.XEvent& xev)
 ```
+
+#### Parameters
+
+`xev` Avalonia.X11.XEvent&amp;
+
+
+</section>
 
 </ApiRefPage>
 

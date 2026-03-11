@@ -55,7 +55,7 @@ public class CompositionObject
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> CompositionObject
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> CompositionObject
 </div>
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Derived types:</span> <a href="animations/compositionanimation">CompositionAnimation</a>, <a href="animations/compositionanimationgroup">CompositionAnimationGroup</a>, <a href="animations/implicitanimationcollection">ImplicitAnimationCollection</a>, <a href="compositionpropertyset">CompositionPropertySet</a>, <a href="compositionsurface">CompositionSurface</a>, <a href="compositionvisual">CompositionVisual</a>, <a href="compositionvisualcollection">CompositionVisualCollection</a>
@@ -70,59 +70,94 @@ public class CompositionObject
 | Name | Description |
 | --- | --- |
 | [StartAnimation](#uid-4d2f25fec7) | Connects an animation with the specified property of the object and starts the animation. |
-| [StartAnimationGroup](#uid-4846f860a0) | Starts an animation group. The StartAnimationGroup method on CompositionObject lets you start CompositionAnimationGroup. All the animations in the group will be started at the same time on the object. |
+| [StartAnimationGroup](#uid-4846f860a0) | Starts an animation group. The StartAnimationGroup method on [CompositionObject](xref:Avalonia.Rendering.Composition.CompositionObject) lets you start [CompositionAnimationGroup](xref:Avalonia.Rendering.Composition.Animations.CompositionAnimationGroup). All the animations in the group will be started at the same time on the object. |
 | [StopAnimation](#uid-01077c2b21) | Disconnects an animation from the specified property and stops the animation. |
 | [StopAnimationGroup](#uid-81dbd02845) | Stops an animation group. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-4d2f25fec7"></span>
 
-### StartAnimation
+### StartAnimation Method
 
 Connects an animation with the specified property of the object and starts the animation.
 
 ```csharp
-public Void StartAnimation(String propertyName, Avalonia.Rendering.Composition.Animations.CompositionAnimation animation)
+public void StartAnimation(string propertyName, Avalonia.Rendering.Composition.Animations.CompositionAnimation animation)
 ```
+
+#### Parameters
+
+`propertyName` string
+
+
+`animation` [Avalonia.Rendering.Composition.Animations.CompositionAnimation](xref:Avalonia.Rendering.Composition.Animations.CompositionAnimation)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-4846f860a0"></span>
 
-### StartAnimationGroup
+### StartAnimationGroup Method
 
 Starts an animation group.
-The StartAnimationGroup method on CompositionObject lets you start CompositionAnimationGroup.
+The StartAnimationGroup method on [CompositionObject](xref:Avalonia.Rendering.Composition.CompositionObject) lets you start [CompositionAnimationGroup](xref:Avalonia.Rendering.Composition.Animations.CompositionAnimationGroup).
 All the animations in the group will be started at the same time on the object.
 
 ```csharp
-public Void StartAnimationGroup(Avalonia.Rendering.Composition.Animations.ICompositionAnimationBase grp)
+public void StartAnimationGroup(Avalonia.Rendering.Composition.Animations.ICompositionAnimationBase grp)
 ```
+
+#### Parameters
+
+`grp` [Avalonia.Rendering.Composition.Animations.ICompositionAnimationBase](xref:Avalonia.Rendering.Composition.Animations.ICompositionAnimationBase)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-01077c2b21"></span>
 
-### StopAnimation
+### StopAnimation Method
 
 Disconnects an animation from the specified property and stops the animation.
 
 ```csharp
-public Void StopAnimation(String propertyName)
+public void StopAnimation(string propertyName)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `propertyName` | The name of the property to disconnect the animation from. |
+#### Parameters
+
+`propertyName` string
+
+The name of the property to disconnect the animation from.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-81dbd02845"></span>
 
-### StopAnimationGroup
+### StopAnimationGroup Method
 
 Stops an animation group.
 
 ```csharp
-public Void StopAnimationGroup(Avalonia.Rendering.Composition.Animations.ICompositionAnimationBase grp)
+public void StopAnimationGroup(Avalonia.Rendering.Composition.Animations.ICompositionAnimationBase grp)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `grp` | The animation group to stop. |
+#### Parameters
+
+`grp` [Avalonia.Rendering.Composition.Animations.ICompositionAnimationBase](xref:Avalonia.Rendering.Composition.Animations.ICompositionAnimationBase)
+
+The animation group to stop.
+
+
+</section>
 
 ## Properties
 
@@ -132,9 +167,11 @@ public Void StopAnimationGroup(Avalonia.Rendering.Composition.Animations.ICompos
 | [ImplicitAnimations](#uid-3929e9ea34) | The collection of implicit animations attached to this object. |
 | [IsDisposed](#uid-e01437c946) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-bd6bbc1391"></span>
 
-### Compositor
+### Compositor Property
 
 The associated Compositor
 
@@ -142,9 +179,13 @@ The associated Compositor
 public Avalonia.Rendering.Composition.Compositor Compositor { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-3929e9ea34"></span>
 
-### ImplicitAnimations
+### ImplicitAnimations Property
 
 The collection of implicit animations attached to this object.
 
@@ -152,13 +193,19 @@ The collection of implicit animations attached to this object.
 public Avalonia.Rendering.Composition.Animations.ImplicitAnimationCollection ImplicitAnimations { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-e01437c946"></span>
 
-### IsDisposed
+### IsDisposed Property
 
 ```csharp
-public Boolean IsDisposed { get; set; }
+public bool IsDisposed { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

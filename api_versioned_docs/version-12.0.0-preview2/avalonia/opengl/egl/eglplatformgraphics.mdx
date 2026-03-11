@@ -47,7 +47,7 @@ public class EglPlatformGraphics
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> EglPlatformGraphics
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> EglPlatformGraphics
 </div>
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Implements:</span> <a href="../../platform/iplatformgraphics">IPlatformGraphics</a>
@@ -60,13 +60,22 @@ public class EglPlatformGraphics
 | --- | --- |
 | [EglPlatformGraphics](#uid-35961b55a1) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-35961b55a1"></span>
 
-### EglPlatformGraphics
+### EglPlatformGraphics Constructor
 
 ```csharp
 public EglPlatformGraphics(Avalonia.OpenGL.Egl.EglDisplay display)
 ```
+
+#### Parameters
+
+`display` [Avalonia.OpenGL.Egl.EglDisplay](xref:Avalonia.OpenGL.Egl.EglDisplay)
+
+
+</section>
 
 ## Methods
 
@@ -76,41 +85,82 @@ public EglPlatformGraphics(Avalonia.OpenGL.Egl.EglDisplay display)
 | [GetSharedContext](#uid-840026b33f) | No summary available. |
 | [TryCreate (2 overloads)](#uid-aea1f7c342) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-e3a4d7e231"></span>
 
-### CreateContext
+### CreateContext Method
 
 ```csharp
 public Avalonia.Platform.IPlatformGraphicsContext CreateContext()
 ```
 
+#### Returns
+
+[Avalonia.Platform.IPlatformGraphicsContext](xref:Avalonia.Platform.IPlatformGraphicsContext)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-840026b33f"></span>
 
-### GetSharedContext
+### GetSharedContext Method
 
 ```csharp
 public Avalonia.Platform.IPlatformGraphicsContext GetSharedContext()
 ```
 
+#### Returns
+
+[Avalonia.Platform.IPlatformGraphicsContext](xref:Avalonia.Platform.IPlatformGraphicsContext)
+
+
+</section>
+
 <span id="uid-aea1f7c342"></span>
 
 ### TryCreate overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-28cde72245"></span>
 
-#### TryCreate
+#### TryCreate Method
 
 ```csharp
 public Avalonia.OpenGL.Egl.EglPlatformGraphics TryCreate()
 ```
 
+##### Returns
+
+[Avalonia.OpenGL.Egl.EglPlatformGraphics](xref:Avalonia.OpenGL.Egl.EglPlatformGraphics)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-4c3664dc55"></span>
 
-#### TryCreate
+#### TryCreate Method
 
 ```csharp
 public Avalonia.OpenGL.Egl.EglPlatformGraphics TryCreate(Func<Avalonia.OpenGL.Egl.EglDisplay> displayFactory)
 ```
+
+##### Parameters
+
+`displayFactory` Func&lt;[Avalonia.OpenGL.Egl.EglDisplay](xref:Avalonia.OpenGL.Egl.EglDisplay)&gt;
+
+
+##### Returns
+
+[Avalonia.OpenGL.Egl.EglPlatformGraphics](xref:Avalonia.OpenGL.Egl.EglPlatformGraphics)
+
+
+</section>
 
 ## Properties
 
@@ -118,13 +168,17 @@ public Avalonia.OpenGL.Egl.EglPlatformGraphics TryCreate(Func<Avalonia.OpenGL.Eg
 | --- | --- |
 | [UsesSharedContext](#uid-eb90df1f57) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-eb90df1f57"></span>
 
-### UsesSharedContext
+### UsesSharedContext Property
 
 ```csharp
-public Boolean UsesSharedContext { get; set; }
+public bool UsesSharedContext { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

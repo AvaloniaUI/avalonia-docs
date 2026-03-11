@@ -47,7 +47,7 @@ public class DrmCard
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> DrmCard
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> DrmCard
 </div>
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Implements:</span> IDisposable
@@ -64,21 +64,39 @@ public class DrmCard
 
 ### DrmCard overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-b3029be44b"></span>
 
-#### DrmCard
+#### DrmCard Constructor
 
 ```csharp
-public DrmCard(Int32 fd)
+public DrmCard(int fd)
 ```
+
+##### Parameters
+
+`fd` int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-09e4a6d620"></span>
 
-#### DrmCard
+#### DrmCard Constructor
 
 ```csharp
-public DrmCard(String path)
+public DrmCard(string path)
 ```
+
+##### Parameters
+
+`path` string
+
+
+</section>
 
 ## Methods
 
@@ -87,21 +105,39 @@ public DrmCard(String path)
 | [Dispose](#uid-c7738d9f93) | No summary available. |
 | [GetResources](#uid-40666e8fa0) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-c7738d9f93"></span>
 
-### Dispose
+### Dispose Method
 
 ```csharp
-public Void Dispose()
+public void Dispose()
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-40666e8fa0"></span>
 
-### GetResources
+### GetResources Method
 
 ```csharp
-public Avalonia.LinuxFramebuffer.Output.DrmResources GetResources(Boolean connectorsForceProbe)
+public Avalonia.LinuxFramebuffer.Output.DrmResources GetResources(bool connectorsForceProbe)
 ```
+
+#### Parameters
+
+`connectorsForceProbe` bool
+
+
+#### Returns
+
+[Avalonia.LinuxFramebuffer.Output.DrmResources](xref:Avalonia.LinuxFramebuffer.Output.DrmResources)
+
+
+</section>
 
 ## Properties
 
@@ -109,13 +145,17 @@ public Avalonia.LinuxFramebuffer.Output.DrmResources GetResources(Boolean connec
 | --- | --- |
 | [Fd](#uid-e76d80ae76) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-e76d80ae76"></span>
 
-### Fd
+### Fd Property
 
 ```csharp
-public Int32 Fd { get; set; }
+public int Fd { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

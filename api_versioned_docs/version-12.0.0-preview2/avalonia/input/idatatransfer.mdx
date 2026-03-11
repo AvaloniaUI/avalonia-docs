@@ -67,12 +67,14 @@ it must NOT be disposed by the caller. The system will dispose of it automatical
 
 | Name | Description |
 | --- | --- |
-| [Formats](#uid-da959dd67b) | Gets the formats supported by a Avalonia.Input.IDataTransfer. |
-| [Items](#uid-bd01544761) | Gets a list of Avalonia.Input.IDataTransferItem contained in this object. |
+| [Formats](#uid-da959dd67b) | Gets the formats supported by a [Avalonia.Input.IDataTransfer](xref:Avalonia.Input.IDataTransfer). |
+| [Items](#uid-bd01544761) | Gets a list of [Avalonia.Input.IDataTransferItem](xref:Avalonia.Input.IDataTransferItem) contained in this object. |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-da959dd67b"></span>
 
-### Formats
+### Formats Property
 
 Gets the formats supported by a [Avalonia.Input.IDataTransfer](xref:Avalonia.Input.IDataTransfer).
 
@@ -80,15 +82,28 @@ Gets the formats supported by a [Avalonia.Input.IDataTransfer](xref:Avalonia.Inp
 public System.Collections.Generic.IReadOnlyList<Avalonia.Input.DataFormat> Formats { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-bd01544761"></span>
 
-### Items
+### Items Property
 
 Gets a list of [Avalonia.Input.IDataTransferItem](xref:Avalonia.Input.IDataTransferItem) contained in this object.
 
 ```csharp
 public System.Collections.Generic.IReadOnlyList<Avalonia.Input.IDataTransferItem> Items { get; set; }
 ```
+
+#### Remarks
+
+Some platforms (such as Windows and X11) may only support a single data item for all formats
+except [Avalonia.Input.DataFormat.File](xref:Avalonia.Input.DataFormat.File).
+
+Items returned by this property must stay valid until the [Avalonia.Input.IDataTransfer](xref:Avalonia.Input.IDataTransfer) is disposed.
+
+</section>
 
 </ApiRefPage>
 

@@ -53,11 +53,13 @@ public interface IDataTemplateHost
 | Name | Description |
 | --- | --- |
 | [DataTemplates](#uid-93b7681604) | Gets the data templates for the element. |
-| [IsDataTemplatesInitialized](#uid-5fc909e5e9) | Gets a value indicating whether Avalonia.Controls.Templates.IDataTemplateHost.DataTemplates is initialized. |
+| [IsDataTemplatesInitialized](#uid-5fc909e5e9) | Gets a value indicating whether [Avalonia.Controls.Templates.IDataTemplateHost.DataTemplates](xref:Avalonia.Controls.Templates.IDataTemplateHost.DataTemplates) is initialized. |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-93b7681604"></span>
 
-### DataTemplates
+### DataTemplates Property
 
 Gets the data templates for the element.
 
@@ -65,15 +67,26 @@ Gets the data templates for the element.
 public Avalonia.Controls.Templates.DataTemplates DataTemplates { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-5fc909e5e9"></span>
 
-### IsDataTemplatesInitialized
+### IsDataTemplatesInitialized Property
 
 Gets a value indicating whether [Avalonia.Controls.Templates.IDataTemplateHost.DataTemplates](xref:Avalonia.Controls.Templates.IDataTemplateHost.DataTemplates) is initialized.
 
 ```csharp
-public Boolean IsDataTemplatesInitialized { get; set; }
+public bool IsDataTemplatesInitialized { get; set; }
 ```
+
+#### Remarks
+
+The [Avalonia.Controls.Templates.IDataTemplateHost.DataTemplates](xref:Avalonia.Controls.Templates.IDataTemplateHost.DataTemplates) property may be lazily initialized, if so this property
+indicates whether it has been initialized.
+
+</section>
 
 </ApiRefPage>
 

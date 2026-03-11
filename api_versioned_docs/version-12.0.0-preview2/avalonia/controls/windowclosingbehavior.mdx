@@ -58,12 +58,14 @@ public enum WindowClosingBehavior
 
 | Name | Description |
 | --- | --- |
-| [OwnerAndChildWindows](#uid-69b597ec96) | When the owner window is closed, the child windows' Avalonia.Controls.Window.Closing event will be raised, followed by the owner window's Avalonia.Controls.Window.Closing events. A child canceling the close will result in the owner Window's close being cancelled. |
-| [OwnerWindowOnly](#uid-e2e51e56e0) | When the owner window is closed, only the owner window's Avalonia.Controls.Window.Closing event will be raised. This behavior is the same as WPF's. |
+| [OwnerAndChildWindows](#uid-69b597ec96) | When the owner window is closed, the child windows' [Avalonia.Controls.Window.Closing](xref:Avalonia.Controls.Window.Closing) event will be raised, followed by the owner window's [Avalonia.Controls.Window.Closing](xref:Avalonia.Controls.Window.Closing) events. A child canceling the close will result in the owner Window's close being cancelled. |
+| [OwnerWindowOnly](#uid-e2e51e56e0) | When the owner window is closed, only the owner window's [Avalonia.Controls.Window.Closing](xref:Avalonia.Controls.Window.Closing) event will be raised. This behavior is the same as WPF's. |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-69b597ec96"></span>
 
-### OwnerAndChildWindows
+### OwnerAndChildWindows Field
 
 When the owner window is closed, the child windows' [Avalonia.Controls.Window.Closing](xref:Avalonia.Controls.Window.Closing) event
 will be raised, followed by the owner window's [Avalonia.Controls.Window.Closing](xref:Avalonia.Controls.Window.Closing) events. A child
@@ -73,9 +75,13 @@ canceling the close will result in the owner Window's close being cancelled.
 public Avalonia.Controls.WindowClosingBehavior OwnerAndChildWindows
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-e2e51e56e0"></span>
 
-### OwnerWindowOnly
+### OwnerWindowOnly Field
 
 When the owner window is closed, only the owner window's [Avalonia.Controls.Window.Closing](xref:Avalonia.Controls.Window.Closing) event
 will be raised. This behavior is the same as WPF's.
@@ -83,6 +89,8 @@ will be raised. This behavior is the same as WPF's.
 ```csharp
 public Avalonia.Controls.WindowClosingBehavior OwnerWindowOnly
 ```
+
+</section>
 
 </ApiRefPage>
 

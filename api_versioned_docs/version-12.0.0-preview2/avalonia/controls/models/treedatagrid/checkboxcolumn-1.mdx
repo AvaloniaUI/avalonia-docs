@@ -1,0 +1,193 @@
+---
+title: 'CheckBoxColumn<TModel>'
+hide_title: true
+slug: '/avalonia/controls/models/treedatagrid/checkboxcolumn-1'
+uid: 'Avalonia.Controls.Models.TreeDataGrid.CheckBoxColumn`1'
+commentId: 'T:Avalonia.Controls.Models.TreeDataGrid.CheckBoxColumn`1'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.TreeDataGrid'
+assembly: 'Avalonia.Controls.TreeDataGrid'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Models.TreeDataGrid'
+tfms:
+  - 'net8.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">CheckBoxColumn&lt;TModel&gt; Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Models.TreeDataGrid</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A column in an [Avalonia.Controls.ITreeDataGridSource](xref:Avalonia.Controls.ITreeDataGridSource) which displays a check box.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class CheckBoxColumn<TModel>
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ColumnBase&lt;,Nullable&lt;bool&gt;&gt; <span className="apiref-page__relation-separator">-&gt;</span> CheckBoxColumn&lt;TModel&gt;
+</div>
+</div>
+
+## Remarks
+
+The [Avalonia.Controls.Models.TreeDataGrid.CheckBoxColumn&lt;T&gt;](xref:Avalonia.Controls.Models.TreeDataGrid.CheckBoxColumn%601) class provides a column that displays boolean
+values as checkboxes in a [TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid). It supports both two-state (checked/unchecked)
+and three-state (checked/unchecked/indeterminate) checkbox behavior.
+
+This column creates [Avalonia.Controls.Models.TreeDataGrid.CheckBoxCell](xref:Avalonia.Controls.Models.TreeDataGrid.CheckBoxCell) instances for each row, which are backed by
+[Avalonia.Controls.Primitives.TreeDataGridCheckBoxCell](xref:Avalonia.Controls.Primitives.TreeDataGridCheckBoxCell) primitive controls that
+handle the UI rendering and user interactions.
+
+The column can be configured to be read-only by not providing a setter function, and
+additional options can be specified through [Avalonia.Controls.Models.TreeDataGrid.CheckBoxColumnOptions&lt;T&gt;](xref:Avalonia.Controls.Models.TreeDataGrid.CheckBoxColumnOptions%601).
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [CheckBoxColumn&lt;TModel&gt; (2 overloads)](#uid-c424143295) | No summary available. |
+
+<span id="uid-c424143295"></span>
+
+### CheckBoxColumn&lt;TModel&gt; overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-17cb836027"></span>
+
+#### CheckBoxColumn&lt;TModel&gt; Constructor
+
+```csharp
+public CheckBoxColumn<TModel>(object header, System.Linq.Expressions.Expression<Func<TModel,bool>> getter, Action<TModel, bool> setter, Nullable<Avalonia.Controls.GridLength> width, Avalonia.Controls.Models.TreeDataGrid.CheckBoxColumnOptions<TModel><TModel> options)
+```
+
+##### Parameters
+
+`header` object
+
+
+`getter` System.Linq.Expressions.Expression&lt;Func&lt;TModel,bool&gt;&gt;
+
+
+`setter` Action&lt;TModel, bool&gt;
+
+
+`width` Nullable&lt;[Avalonia.Controls.GridLength](xref:Avalonia.Controls.GridLength)&gt;
+
+
+`options` Avalonia.Controls.Models.TreeDataGrid.CheckBoxColumnOptions&lt;TModel&gt;&lt;TModel&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a4c1a01da0"></span>
+
+#### CheckBoxColumn&lt;TModel&gt; Constructor
+
+```csharp
+public CheckBoxColumn<TModel>(object header, System.Linq.Expressions.Expression<Func<TModel,Nullable<bool>>> getter, Action<TModel, Nullable<bool>> setter, Nullable<Avalonia.Controls.GridLength> width, Avalonia.Controls.Models.TreeDataGrid.CheckBoxColumnOptions<TModel><TModel> options)
+```
+
+##### Parameters
+
+`header` object
+
+
+`getter` System.Linq.Expressions.Expression&lt;Func&lt;TModel,Nullable&lt;bool&gt;&gt;&gt;
+
+
+`setter` Action&lt;TModel, Nullable&lt;bool&gt;&gt;
+
+
+`width` Nullable&lt;[Avalonia.Controls.GridLength](xref:Avalonia.Controls.GridLength)&gt;
+
+
+`options` Avalonia.Controls.Models.TreeDataGrid.CheckBoxColumnOptions&lt;TModel&gt;&lt;TModel&gt;
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [CreateCell](#uid-743da5c60d) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-743da5c60d"></span>
+
+### CreateCell Method
+
+```csharp
+public Avalonia.Controls.Models.TreeDataGrid.ICell CreateCell(Avalonia.Controls.Models.TreeDataGrid.IRow<TModel><TModel> row)
+```
+
+#### Parameters
+
+`row` [Avalonia.Controls.Models.TreeDataGrid.IRow](xref:Avalonia.Controls.Models.TreeDataGrid.IRow)&lt;TModel&gt;&lt;TModel&gt;
+
+
+#### Returns
+
+[Avalonia.Controls.Models.TreeDataGrid.ICell](xref:Avalonia.Controls.Models.TreeDataGrid.ICell)
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [IsThreeState](#uid-ee0476808b) | Gets a value indicating whether the column displays a three-state checkbox. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ee0476808b"></span>
+
+### IsThreeState Property
+
+Gets a value indicating whether the column displays a three-state checkbox.
+
+```csharp
+public bool IsThreeState { get; set; }
+```
+
+#### Remarks
+
+When true, the checkboxes in this column can be in three states: checked (true),
+unchecked (false), or indeterminate (null). When false, only checked and unchecked
+states are supported.
+
+</section>
+
+</ApiRefPage>
+

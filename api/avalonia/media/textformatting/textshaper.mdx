@@ -53,7 +53,7 @@ public class TextShaper
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> TextShaper
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> TextShaper
 </div>
 </div>
 
@@ -63,13 +63,22 @@ public class TextShaper
 | --- | --- |
 | [TextShaper](#uid-4b874df2e1) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-4b874df2e1"></span>
 
-### TextShaper
+### TextShaper Constructor
 
 ```csharp
 public TextShaper(Avalonia.Platform.ITextShaperImpl platformImpl)
 ```
+
+#### Parameters
+
+`platformImpl` [Avalonia.Platform.ITextShaperImpl](xref:Avalonia.Platform.ITextShaperImpl)
+
+
+</section>
 
 ## Methods
 
@@ -81,21 +90,55 @@ public TextShaper(Avalonia.Platform.ITextShaperImpl platformImpl)
 
 ### ShapeText overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-aacc72bca6"></span>
 
-#### ShapeText
+#### ShapeText Method
 
 ```csharp
-public Avalonia.Media.TextFormatting.ShapedBuffer ShapeText(ReadOnlyMemory<Char> text, Avalonia.Media.TextFormatting.TextShaperOptions options)
+public Avalonia.Media.TextFormatting.ShapedBuffer ShapeText(ReadOnlyMemory<char> text, Avalonia.Media.TextFormatting.TextShaperOptions options)
 ```
+
+##### Parameters
+
+`text` ReadOnlyMemory&lt;char&gt;
+
+
+`options` [Avalonia.Media.TextFormatting.TextShaperOptions](xref:Avalonia.Media.TextFormatting.TextShaperOptions)
+
+
+##### Returns
+
+[Avalonia.Media.TextFormatting.ShapedBuffer](xref:Avalonia.Media.TextFormatting.ShapedBuffer)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-108428e7e1"></span>
 
-#### ShapeText
+#### ShapeText Method
 
 ```csharp
-public Avalonia.Media.TextFormatting.ShapedBuffer ShapeText(String text, Avalonia.Media.TextFormatting.TextShaperOptions options)
+public Avalonia.Media.TextFormatting.ShapedBuffer ShapeText(string text, Avalonia.Media.TextFormatting.TextShaperOptions options)
 ```
+
+##### Parameters
+
+`text` string
+
+
+`options` [Avalonia.Media.TextFormatting.TextShaperOptions](xref:Avalonia.Media.TextFormatting.TextShaperOptions)
+
+
+##### Returns
+
+[Avalonia.Media.TextFormatting.ShapedBuffer](xref:Avalonia.Media.TextFormatting.ShapedBuffer)
+
+
+</section>
 
 ## Properties
 
@@ -103,15 +146,19 @@ public Avalonia.Media.TextFormatting.ShapedBuffer ShapeText(String text, Avaloni
 | --- | --- |
 | [Current](#uid-57cafd8262) | Gets the current text shaper. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-57cafd8262"></span>
 
-### Current
+### Current Property
 
 Gets the current text shaper.
 
 ```csharp
 public Avalonia.Media.TextFormatting.TextShaper Current { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

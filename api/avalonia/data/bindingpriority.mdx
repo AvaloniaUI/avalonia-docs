@@ -66,9 +66,11 @@ public enum BindingPriority
 | [Template](#uid-4cb3b6b2c4) | A value from the control's template. |
 | [Unset](#uid-7c271ba36c) | The value is uninitialized. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-899584fd5e"></span>
 
-### Animation
+### Animation Field
 
 A value that comes from an animation.
 
@@ -76,9 +78,13 @@ A value that comes from an animation.
 public Avalonia.Data.BindingPriority Animation
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-2e3b7ddcdc"></span>
 
-### Inherited
+### Inherited Field
 
 The value is inherited from an ancestor element.
 
@@ -86,9 +92,13 @@ The value is inherited from an ancestor element.
 public Avalonia.Data.BindingPriority Inherited
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-b73b1cd4bb"></span>
 
-### LocalValue
+### LocalValue Field
 
 A local value.
 
@@ -96,9 +106,13 @@ A local value.
 public Avalonia.Data.BindingPriority LocalValue
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-e21a54f1fc"></span>
 
-### Style
+### Style Field
 
 A style value.
 
@@ -106,9 +120,13 @@ A style value.
 public Avalonia.Data.BindingPriority Style
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-917e8446b5"></span>
 
-### StyleTrigger
+### StyleTrigger Field
 
 A triggered style value.
 
@@ -116,9 +134,19 @@ A triggered style value.
 public Avalonia.Data.BindingPriority StyleTrigger
 ```
 
+#### Remarks
+
+A style trigger is a selector such as .class which overrides a
+[Avalonia.Data.BindingPriority.Template](xref:Avalonia.Data.BindingPriority.Template) value. In this way, a control can have, e.g. a Background from
+the template which changes when the control has the :pointerover class.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-4cb3b6b2c4"></span>
 
-### Template
+### Template Field
 
 A value from the control's template.
 
@@ -126,15 +154,21 @@ A value from the control's template.
 public Avalonia.Data.BindingPriority Template
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-7c271ba36c"></span>
 
-### Unset
+### Unset Field
 
 The value is uninitialized.
 
 ```csharp
 public Avalonia.Data.BindingPriority Unset
 ```
+
+</section>
 
 </ApiRefPage>
 

@@ -53,7 +53,7 @@ public class FuncTemplate<TParam, TControl>
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> FuncTemplate&lt;TParam, TControl&gt;
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> FuncTemplate&lt;TParam, TControl&gt;
 </div>
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Implements:</span> ITemplate&lt;,&lt;T&gt;&gt;
@@ -66,13 +66,22 @@ public class FuncTemplate<TParam, TControl>
 | --- | --- |
 | [FuncTemplate&lt;TParam, TControl&gt;](#uid-f1f5010440) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-f1f5010440"></span>
 
-### FuncTemplate&lt;TParam, TControl&gt;
+### FuncTemplate&lt;TParam, TControl&gt; Constructor
 
 ```csharp
 public FuncTemplate<TParam, TControl>(Func<TParam, Avalonia.Controls.INameScope, TControl> func)
 ```
+
+#### Parameters
+
+`func` Func&lt;TParam, [Avalonia.Controls.INameScope](xref:Avalonia.Controls.INameScope), TControl&gt;
+
+
+</section>
 
 ## Methods
 
@@ -80,9 +89,11 @@ public FuncTemplate<TParam, TControl>(Func<TParam, Avalonia.Controls.INameScope,
 | --- | --- |
 | [Build](#uid-e91fcd9832) | Creates the control. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-e91fcd9832"></span>
 
-### Build
+### Build Method
 
 Creates the control.
 
@@ -90,11 +101,21 @@ Creates the control.
 public TControl Build(TParam param)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `param` | The parameter. |
+#### Parameters
 
-Returns: The created control.
+`param` TParam
+
+The parameter.
+
+
+#### Returns
+
+TControl
+
+The created control.
+
+
+</section>
 
 </ApiRefPage>
 

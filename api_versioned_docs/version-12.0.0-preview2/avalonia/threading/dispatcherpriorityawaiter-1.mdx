@@ -62,7 +62,7 @@ public struct DispatcherPriorityAwaiter<T>
 
 ## Remarks
 
-This is returned from DispatcherPriorityAwaitable&lt;T&gt;.GetAwaiter()
+This is returned from [DispatcherPriorityAwaitable](xref:Avalonia.Threading.DispatcherPriorityAwaitable)&lt;T&gt;.GetAwaiter()
 
 ## Methods
 
@@ -71,21 +71,34 @@ This is returned from DispatcherPriorityAwaitable&lt;T&gt;.GetAwaiter()
 | [GetResult](#uid-e718fb5510) | No summary available. |
 | [OnCompleted](#uid-8a5ad20b93) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-e718fb5510"></span>
 
-### GetResult
+### GetResult Method
 
 ```csharp
-public Void GetResult()
+public void GetResult()
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-8a5ad20b93"></span>
 
-### OnCompleted
+### OnCompleted Method
 
 ```csharp
-public Void OnCompleted(Action continuation)
+public void OnCompleted(Action continuation)
 ```
+
+#### Parameters
+
+`continuation` Action
+
+
+</section>
 
 ## Properties
 
@@ -93,15 +106,19 @@ public Void OnCompleted(Action continuation)
 | --- | --- |
 | [IsCompleted](#uid-2ba549744c) | This always returns false since continuation is requested to be queued to a dispatcher queue |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-2ba549744c"></span>
 
-### IsCompleted
+### IsCompleted Property
 
 This always returns false since continuation is requested to be queued to a dispatcher queue
 
 ```csharp
-public Boolean IsCompleted { get; set; }
+public bool IsCompleted { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

@@ -61,9 +61,11 @@ public enum AlphaComponentPosition
 | [Leading](#uid-09c1cc7532) | The alpha component occurs before all other components. |
 | [Trailing](#uid-d9adc85edf) | The alpha component occurs after all other components. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-09c1cc7532"></span>
 
-### Leading
+### Leading Field
 
 The alpha component occurs before all other components.
 
@@ -71,15 +73,31 @@ The alpha component occurs before all other components.
 public Avalonia.Controls.AlphaComponentPosition Leading
 ```
 
+#### Remarks
+
+For example, this may indicate the #AARRGGBB or ARGB format which
+is the default format for XAML itself and the Color struct.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-d9adc85edf"></span>
 
-### Trailing
+### Trailing Field
 
 The alpha component occurs after all other components.
 
 ```csharp
 public Avalonia.Controls.AlphaComponentPosition Trailing
 ```
+
+#### Remarks
+
+For example, this may indicate the #RRGGBBAA or RGBA format which
+is the default format for CSS.
+
+</section>
 
 </ApiRefPage>
 

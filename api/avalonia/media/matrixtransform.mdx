@@ -53,7 +53,7 @@ public class MatrixTransform
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../animation/animatable">Animatable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="transform">Transform</a> <span className="apiref-page__relation-separator">-&gt;</span> MatrixTransform
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../animation/animatable">Animatable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="transform">Transform</a> <span className="apiref-page__relation-separator">-&gt;</span> MatrixTransform
 </div>
 </div>
 
@@ -61,15 +61,17 @@ public class MatrixTransform
 
 | Name | Description |
 | --- | --- |
-| [MatrixTransform (2 overloads)](#uid-9cbe0f6bac) | Initializes a new instance of the Avalonia.Media.MatrixTransform class. |
+| [MatrixTransform (2 overloads)](#uid-9cbe0f6bac) | Initializes a new instance of the [Avalonia.Media.MatrixTransform](xref:Avalonia.Media.MatrixTransform) class. |
 
 <span id="uid-9cbe0f6bac"></span>
 
 ### MatrixTransform overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-91d2764638"></span>
 
-#### MatrixTransform
+#### MatrixTransform Constructor
 
 Initializes a new instance of the [Avalonia.Media.MatrixTransform](xref:Avalonia.Media.MatrixTransform) class.
 
@@ -77,9 +79,13 @@ Initializes a new instance of the [Avalonia.Media.MatrixTransform](xref:Avalonia
 public MatrixTransform()
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-cdd85e2e99"></span>
 
-#### MatrixTransform
+#### MatrixTransform Constructor
 
 Initializes a new instance of the [Avalonia.Media.MatrixTransform](xref:Avalonia.Media.MatrixTransform) class.
 
@@ -87,30 +93,35 @@ Initializes a new instance of the [Avalonia.Media.MatrixTransform](xref:Avalonia
 public MatrixTransform(Avalonia.Matrix matrix)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `matrix` | The matrix. |
+##### Parameters
+
+`matrix` [Avalonia.Matrix](xref:Avalonia.Matrix)
+
+The matrix.
+
+
+</section>
 
 ## Methods
 
 | Name | Description |
 | --- | --- |
-| [Parse (Inherited from Transform)](transform.mdx#uid-1be8bdbe67) | Parses a Avalonia.Media.Transform string. |
-| [ToImmutable (Inherited from Transform)](transform.mdx#uid-1ae7a66239) | Converts a transform to an immutable transform. |
-| [ToString (Inherited from Transform)](transform.mdx#uid-582ae45701) | Returns a String representing this transform matrix instance. |
-| [Bind (8 overloads) (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-1c60c7bda3) | Binds a Avalonia.AvaloniaProperty to an Avalonia.Data.BindingBase. |
-| [CheckAccess (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-260ff7a68d) | Returns a value indicating whether the current thread is the UI thread. |
-| [ClearValue (4 overloads) (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-41de208fbe) | Clears a Avalonia.AvaloniaProperty's local value. |
-| [CoerceValue (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-3bec32f39e) | Coerces the specified Avalonia.AvaloniaProperty. |
-| [Equals (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-a8a8e94305) | Compares two objects using reference equality. |
-| [GetBaseValue (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-9c615efbba) | No summary available. |
-| [GetHashCode (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-7f7db1e7a2) | Gets the hash code for the object. |
-| [GetValue (3 overloads) (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-5142cd4792) | Gets a Avalonia.AvaloniaProperty value. |
-| [IsAnimating (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-8cbfc7521a) | Checks whether a Avalonia.AvaloniaProperty is animating. |
-| [IsSet (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-f8bf0bbdcc) | Checks whether a Avalonia.AvaloniaProperty is set on this object. |
-| [SetCurrentValue (2 overloads) (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-38759fd088) | Sets the value of a dependency property without changing its value source. |
-| [SetValue (3 overloads) (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-47d14e19d7) | Sets a Avalonia.AvaloniaProperty value. |
-| [VerifyAccess (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-3b9d3c9793) | Checks that the current thread is the UI thread and throws if not. |
+| [Parse](transform.mdx#uid-1be8bdbe67) | Parses a [Avalonia.Media.Transform](xref:Avalonia.Media.Transform) string. Inherited from [Transform](transform.mdx). |
+| [ToImmutable](transform.mdx#uid-1ae7a66239) | Converts a transform to an immutable transform. Inherited from [Transform](transform.mdx). |
+| [ToString](transform.mdx#uid-582ae45701) | Returns a String representing this transform matrix instance. Inherited from [Transform](transform.mdx). |
+| [Bind (8 overloads)](../avaloniaobject.mdx#uid-1c60c7bda3) | Binds a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) to an [Avalonia.Data.BindingBase](xref:Avalonia.Data.BindingBase). Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [CheckAccess](../avaloniaobject.mdx#uid-260ff7a68d) | Returns a value indicating whether the current thread is the UI thread. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [ClearValue (4 overloads)](../avaloniaobject.mdx#uid-41de208fbe) | Clears a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty)'s local value. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [CoerceValue](../avaloniaobject.mdx#uid-3bec32f39e) | Coerces the specified [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty). Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [Equals](../avaloniaobject.mdx#uid-a8a8e94305) | Compares two objects using reference equality. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [GetBaseValue](../avaloniaobject.mdx#uid-9c615efbba) | Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [GetHashCode](../avaloniaobject.mdx#uid-7f7db1e7a2) | Gets the hash code for the object. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [GetValue (3 overloads)](../avaloniaobject.mdx#uid-5142cd4792) | Gets a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [IsAnimating](../avaloniaobject.mdx#uid-8cbfc7521a) | Checks whether a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) is animating. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [IsSet](../avaloniaobject.mdx#uid-f8bf0bbdcc) | Checks whether a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) is set on this object. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [SetCurrentValue (2 overloads)](../avaloniaobject.mdx#uid-38759fd088) | Sets the value of a dependency property without changing its value source. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [SetValue (3 overloads)](../avaloniaobject.mdx#uid-47d14e19d7) | Sets a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [VerifyAccess](../avaloniaobject.mdx#uid-3b9d3c9793) | Checks that the current thread is the UI thread and throws if not. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
 
 ## Properties
 
@@ -118,13 +129,15 @@ public MatrixTransform(Avalonia.Matrix matrix)
 | --- | --- |
 | [Matrix](#uid-993e2c3c19) | Gets or sets the matrix. |
 | [Value](#uid-208cd2bc11) | Gets the matrix. |
-| [Transitions (Inherited from Animatable)](../animation/animatable.mdx#uid-1b3138f517) | Gets or sets the property transitions for the control. |
-| [Dispatcher (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-b25fa51632) | Returns the Avalonia.AvaloniaObject.Dispatcher that this Avalonia.AvaloniaObject is associated with. |
-| [Item (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-c1d1f1bc0f) | No summary available. |
+| [Transitions](../animation/animatable.mdx#uid-1b3138f517) | Gets or sets the property transitions for the control. Inherited from [Animatable](../animation/animatable.mdx). |
+| [Dispatcher](../avaloniaobject.mdx#uid-b25fa51632) | Returns the [Avalonia.AvaloniaObject.Dispatcher](xref:Avalonia.AvaloniaObject.Dispatcher) that this [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject) is associated with. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [Item](../avaloniaobject.mdx#uid-c1d1f1bc0f) | Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-993e2c3c19"></span>
 
-### Matrix
+### Matrix Property
 
 Gets or sets the matrix.
 
@@ -132,9 +145,13 @@ Gets or sets the matrix.
 public Avalonia.Matrix Matrix { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-208cd2bc11"></span>
 
-### Value
+### Value Property
 
 Gets the matrix.
 
@@ -142,16 +159,20 @@ Gets the matrix.
 public Avalonia.Matrix Value { get; set; }
 ```
 
+</section>
+
 ## Fields
 
 | Name | Description |
 | --- | --- |
-| [MatrixProperty](#uid-f14fc714f0) | Defines the Avalonia.Media.MatrixTransform.Matrix property. |
-| [TransitionsProperty (Inherited from Animatable)](../animation/animatable.mdx#uid-c79f18fac2) | Defines the Avalonia.Animation.Animatable.Transitions property. |
+| [MatrixProperty](#uid-f14fc714f0) | Defines the [Avalonia.Media.MatrixTransform.Matrix](xref:Avalonia.Media.MatrixTransform.Matrix) property. |
+| [TransitionsProperty](../animation/animatable.mdx#uid-c79f18fac2) | Defines the [Avalonia.Animation.Animatable.Transitions](xref:Avalonia.Animation.Animatable.Transitions) property. Inherited from [Animatable](../animation/animatable.mdx). |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-f14fc714f0"></span>
 
-### MatrixProperty
+### MatrixProperty Field
 
 Defines the [Avalonia.Media.MatrixTransform.Matrix](xref:Avalonia.Media.MatrixTransform.Matrix) property.
 
@@ -159,12 +180,14 @@ Defines the [Avalonia.Media.MatrixTransform.Matrix](xref:Avalonia.Media.MatrixTr
 public Avalonia.StyledProperty<TValue><Avalonia.Matrix> MatrixProperty
 ```
 
+</section>
+
 ## Events
 
 | Name | Description |
 | --- | --- |
-| [Changed (Inherited from Transform)](transform.mdx#uid-59de490f29) | Raised when the transform changes. |
-| [PropertyChanged (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-d758e26fae) | Raised when a Avalonia.AvaloniaProperty value changes on this object. |
+| [Changed](transform.mdx#uid-59de490f29) | Raised when the transform changes. Inherited from [Transform](transform.mdx). |
+| [PropertyChanged](../avaloniaobject.mdx#uid-d758e26fae) | Raised when a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value changes on this object. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
 
 </ApiRefPage>
 

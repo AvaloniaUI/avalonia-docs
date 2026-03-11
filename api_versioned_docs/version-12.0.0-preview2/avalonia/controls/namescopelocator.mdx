@@ -47,7 +47,7 @@ public class NameScopeLocator
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> NameScopeLocator
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> NameScopeLocator
 </div>
 </div>
 
@@ -57,13 +57,17 @@ public class NameScopeLocator
 | --- | --- |
 | [NameScopeLocator](#uid-47b9afb2cc) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-47b9afb2cc"></span>
 
-### NameScopeLocator
+### NameScopeLocator Constructor
 
 ```csharp
 public NameScopeLocator()
 ```
+
+</section>
 
 ## Methods
 
@@ -71,20 +75,36 @@ public NameScopeLocator()
 | --- | --- |
 | [Track](#uid-baf22a7ca5) | Tracks a named control relative to another control. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-baf22a7ca5"></span>
 
-### Track
+### Track Method
 
 Tracks a named control relative to another control.
 
 ```csharp
-public IObservable<Object> Track(Avalonia.Controls.INameScope scope, String name)
+public IObservable<object> Track(Avalonia.Controls.INameScope scope, string name)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `name` | The name of the object to find. |
-| `scope` | The scope relative from which the object should be resolved. |
+#### Parameters
+
+`scope` [Avalonia.Controls.INameScope](xref:Avalonia.Controls.INameScope)
+
+The scope relative from which the object should be resolved.
+
+
+`name` string
+
+The name of the object to find.
+
+
+#### Returns
+
+IObservable&lt;object&gt;
+
+
+</section>
 
 </ApiRefPage>
 

@@ -60,13 +60,25 @@ public class TappedEventArgs
 | --- | --- |
 | [TappedEventArgs](#uid-cd4fb0c474) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-cd4fb0c474"></span>
 
-### TappedEventArgs
+### TappedEventArgs Constructor
 
 ```csharp
 public TappedEventArgs(Avalonia.Interactivity.RoutedEvent routedEvent, Avalonia.Input.PointerEventArgs lastPointerEventArgs)
 ```
+
+#### Parameters
+
+`routedEvent` [Avalonia.Interactivity.RoutedEvent](xref:Avalonia.Interactivity.RoutedEvent)
+
+
+`lastPointerEventArgs` [Avalonia.Input.PointerEventArgs](xref:Avalonia.Input.PointerEventArgs)
+
+
+</section>
 
 ## Methods
 
@@ -74,13 +86,27 @@ public TappedEventArgs(Avalonia.Interactivity.RoutedEvent routedEvent, Avalonia.
 | --- | --- |
 | [GetPosition](#uid-b808686a19) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-b808686a19"></span>
 
-### GetPosition
+### GetPosition Method
 
 ```csharp
 public Avalonia.Point GetPosition(Avalonia.Visual relativeTo)
 ```
+
+#### Parameters
+
+`relativeTo` [Avalonia.Visual](xref:Avalonia.Visual)
+
+
+#### Returns
+
+[Avalonia.Point](xref:Avalonia.Point)
+
+
+</section>
 
 ## Properties
 
@@ -89,34 +115,46 @@ public Avalonia.Point GetPosition(Avalonia.Visual relativeTo)
 | [KeyModifiers](#uid-10e276f2ba) | No summary available. |
 | [Pointer](#uid-59ba47e153) | No summary available. |
 | [Timestamp](#uid-d178fb1873) | No summary available. |
-| [Handled (Inherited from RoutedEventArgs)](../interactivity/routedeventargs.mdx#uid-204d2af354) | Gets or sets a value indicating whether the routed event has already been handled. |
-| [Route (Inherited from RoutedEventArgs)](../interactivity/routedeventargs.mdx#uid-751be73db9) | Gets or sets the routing strategy (direct, bubbling, or tunneling) of the routed event. |
-| [RoutedEvent (Inherited from RoutedEventArgs)](../interactivity/routedeventargs.mdx#uid-4e102999d9) | Gets or sets the routed event associated with these event args. |
-| [Source (Inherited from RoutedEventArgs)](../interactivity/routedeventargs.mdx#uid-4385b523d5) | Gets or sets the source object that raised the routed event. |
+| [Handled](../interactivity/routedeventargs.mdx#uid-204d2af354) | Gets or sets a value indicating whether the routed event has already been handled. Inherited from [RoutedEventArgs](../interactivity/routedeventargs.mdx). |
+| [Route](../interactivity/routedeventargs.mdx#uid-751be73db9) | Gets or sets the routing strategy (direct, bubbling, or tunneling) of the routed event. Inherited from [RoutedEventArgs](../interactivity/routedeventargs.mdx). |
+| [RoutedEvent](../interactivity/routedeventargs.mdx#uid-4e102999d9) | Gets or sets the routed event associated with these event args. Inherited from [RoutedEventArgs](../interactivity/routedeventargs.mdx). |
+| [Source](../interactivity/routedeventargs.mdx#uid-4385b523d5) | Gets or sets the source object that raised the routed event. Inherited from [RoutedEventArgs](../interactivity/routedeventargs.mdx). |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-10e276f2ba"></span>
 
-### KeyModifiers
+### KeyModifiers Property
 
 ```csharp
 public Avalonia.Input.KeyModifiers KeyModifiers { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-59ba47e153"></span>
 
-### Pointer
+### Pointer Property
 
 ```csharp
 public Avalonia.Input.IPointer Pointer { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-d178fb1873"></span>
 
-### Timestamp
+### Timestamp Property
 
 ```csharp
-public UInt64 Timestamp { get; set; }
+public ulong Timestamp { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

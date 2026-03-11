@@ -305,7 +305,7 @@ const config: Config = {
         },
         {
           label: 'API',
-          to: '/api',
+          to: '/api/avalonia',
           activeBasePath: '/api'
         },
         {
@@ -320,12 +320,6 @@ const config: Config = {
             {
               label: 'Professional Services',
               href: 'https://avaloniaui.net/services',
-              target: '_blank',
-              rel: null
-            },
-            {
-              href: 'https://api-docs.avaloniaui.net/docs/category/avalonia',
-              label: 'API Reference',
               target: '_blank',
               rel: null
             },

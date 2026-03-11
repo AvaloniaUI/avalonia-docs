@@ -53,7 +53,7 @@ public class MacOSPlatformOptions
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> MacOSPlatformOptions
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> MacOSPlatformOptions
 </div>
 </div>
 
@@ -63,13 +63,17 @@ public class MacOSPlatformOptions
 | --- | --- |
 | [MacOSPlatformOptions](#uid-2e628e958b) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-2e628e958b"></span>
 
-### MacOSPlatformOptions
+### MacOSPlatformOptions Constructor
 
 ```csharp
 public MacOSPlatformOptions()
 ```
+
+</section>
 
 ## Properties
 
@@ -81,57 +85,77 @@ public MacOSPlatformOptions()
 | [DisableSetProcessName](#uid-f25e807435) | Gets or sets a value indicating whether the native macOS should set [NSProcessInfo setProcessName] in runtime. |
 | [ShowInDock](#uid-1843848742) | Determines whether to show your application in the dock when it runs. The default value is true. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-f0aa492df0"></span>
 
-### DisableAvaloniaAppDelegate
+### DisableAvaloniaAppDelegate Property
 
 Gets or sets a value indicating whether Avalonia can install its own AppDelegate.
 Disabling this can be useful in some scenarios like when running as a plugin inside an existing macOS application.
 
 ```csharp
-public Boolean DisableAvaloniaAppDelegate { get; set; }
+public bool DisableAvaloniaAppDelegate { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-120c301a65"></span>
 
-### DisableDefaultApplicationMenuItems
+### DisableDefaultApplicationMenuItems Property
 
 By default, Avalonia adds items like Quit, Hide to the OSX Application Menu.
 You can prevent Avalonia from adding those items to the OSX Application Menu with this property. The default value is false.
 
 ```csharp
-public Boolean DisableDefaultApplicationMenuItems { get; set; }
+public bool DisableDefaultApplicationMenuItems { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-28745c9046"></span>
 
-### DisableNativeMenus
+### DisableNativeMenus Property
 
 Gets or sets a value indicating whether the native macOS menu bar will be enabled for the application.
 
 ```csharp
-public Boolean DisableNativeMenus { get; set; }
+public bool DisableNativeMenus { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-f25e807435"></span>
 
-### DisableSetProcessName
+### DisableSetProcessName Property
 
 Gets or sets a value indicating whether the native macOS should set [NSProcessInfo setProcessName] in runtime.
 
 ```csharp
-public Boolean DisableSetProcessName { get; set; }
+public bool DisableSetProcessName { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-1843848742"></span>
 
-### ShowInDock
+### ShowInDock Property
 
 Determines whether to show your application in the dock when it runs. The default value is true.
 
 ```csharp
-public Boolean ShowInDock { get; set; }
+public bool ShowInDock { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

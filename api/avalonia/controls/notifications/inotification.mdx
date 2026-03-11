@@ -52,16 +52,18 @@ public interface INotification
 
 | Name | Description |
 | --- | --- |
-| [Expiration](#uid-0d99d5ab69) | Gets the expiration time of the notification after which it will automatically close. If the value is TimeSpan.Zero then the notification will remain open until the user closes it. |
+| [Expiration](#uid-0d99d5ab69) | Gets the expiration time of the notification after which it will automatically close. If the value is [TimeSpan.Zero](xref:System.TimeSpan.Zero) then the notification will remain open until the user closes it. |
 | [Message](#uid-4cc56a4040) | Gets the notification message. |
 | [OnClick](#uid-79c34b575c) | Gets an Action to be run when the notification is clicked. |
 | [OnClose](#uid-a9aca8b2a7) | Gets an Action to be run when the notification is closed. |
 | [Title](#uid-ffb70a14d4) | Gets the Title of the notification. |
-| [Type](#uid-608336dff2) | Gets the Avalonia.Controls.Notifications.NotificationType of the notification. |
+| [Type](#uid-608336dff2) | Gets the [Avalonia.Controls.Notifications.NotificationType](xref:Avalonia.Controls.Notifications.NotificationType) of the notification. |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-0d99d5ab69"></span>
 
-### Expiration
+### Expiration Property
 
 Gets the expiration time of the notification after which it will automatically close.
 If the value is [TimeSpan.Zero](xref:System.TimeSpan.Zero) then the notification will remain open until the user closes it.
@@ -70,19 +72,27 @@ If the value is [TimeSpan.Zero](xref:System.TimeSpan.Zero) then the notification
 public TimeSpan Expiration { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-4cc56a4040"></span>
 
-### Message
+### Message Property
 
 Gets the notification message.
 
 ```csharp
-public String Message { get; set; }
+public string Message { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-79c34b575c"></span>
 
-### OnClick
+### OnClick Property
 
 Gets an Action to be run when the notification is clicked.
 
@@ -90,9 +100,13 @@ Gets an Action to be run when the notification is clicked.
 public Action OnClick { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-a9aca8b2a7"></span>
 
-### OnClose
+### OnClose Property
 
 Gets an Action to be run when the notification is closed.
 
@@ -100,25 +114,35 @@ Gets an Action to be run when the notification is closed.
 public Action OnClose { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-ffb70a14d4"></span>
 
-### Title
+### Title Property
 
 Gets the Title of the notification.
 
 ```csharp
-public String Title { get; set; }
+public string Title { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-608336dff2"></span>
 
-### Type
+### Type Property
 
 Gets the [Avalonia.Controls.Notifications.NotificationType](xref:Avalonia.Controls.Notifications.NotificationType) of the notification.
 
 ```csharp
 public Avalonia.Controls.Notifications.NotificationType Type { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

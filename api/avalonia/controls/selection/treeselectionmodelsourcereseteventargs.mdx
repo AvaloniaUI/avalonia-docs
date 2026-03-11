@@ -1,0 +1,136 @@
+---
+title: 'TreeSelectionModelSourceResetEventArgs'
+hide_title: true
+slug: '/avalonia/controls/selection/treeselectionmodelsourcereseteventargs'
+uid: 'Avalonia.Controls.Selection.TreeSelectionModelSourceResetEventArgs'
+commentId: 'T:Avalonia.Controls.Selection.TreeSelectionModelSourceResetEventArgs'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.TreeDataGrid'
+assembly: 'Avalonia.Controls.TreeDataGrid'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Selection'
+tfms:
+  - 'net8.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">TreeSelectionModelSourceResetEventArgs Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Selection</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Provides data for the [Avalonia.Controls.Selection.TreeSelectionModelBase&lt;T&gt;.SourceReset](xref:Avalonia.Controls.Selection.TreeSelectionModelBase%601.SourceReset) event.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class TreeSelectionModelSourceResetEventArgs
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> EventArgs <span className="apiref-page__relation-separator">-&gt;</span> TreeSelectionModelSourceResetEventArgs
+</div>
+</div>
+
+## Remarks
+
+This event is raised when a collection in the hierarchical data structure is reset,
+such as when the collection is cleared or replaced with a new collection.
+
+The event provides information about which part of the hierarchical structure was
+reset through the [Avalonia.Controls.Selection.TreeSelectionModelSourceResetEventArgs.ParentIndex](xref:Avalonia.Controls.Selection.TreeSelectionModelSourceResetEventArgs.ParentIndex) property, allowing handlers to determine
+whether the entire source was reset or just a subtree within the hierarchy.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [TreeSelectionModelSourceResetEventArgs](#uid-e531a67cce) | Initializes a new instance of the [Avalonia.Controls.Selection.TreeSelectionModelSourceResetEventArgs](xref:Avalonia.Controls.Selection.TreeSelectionModelSourceResetEventArgs) class. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e531a67cce"></span>
+
+### TreeSelectionModelSourceResetEventArgs Constructor
+
+Initializes a new instance of the [Avalonia.Controls.Selection.TreeSelectionModelSourceResetEventArgs](xref:Avalonia.Controls.Selection.TreeSelectionModelSourceResetEventArgs) class.
+
+```csharp
+public TreeSelectionModelSourceResetEventArgs(Avalonia.Controls.IndexPath parentIndex)
+```
+
+#### Parameters
+
+`parentIndex` [Avalonia.Controls.IndexPath](xref:Avalonia.Controls.IndexPath)
+
+The index path to the parent item whose children collection was reset.
+
+
+#### Remarks
+
+When the root collection is reset, `parentIndex` will be empty.
+
+When a child collection is reset, `parentIndex` will contain
+the path to the parent item containing that child collection.
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [ParentIndex](#uid-3ff1395156) | Gets the index path to the parent item whose children collection was reset. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3ff1395156"></span>
+
+### ParentIndex Property
+
+Gets the index path to the parent item whose children collection was reset.
+
+```csharp
+public Avalonia.Controls.IndexPath ParentIndex { get; set; }
+```
+
+#### Value
+
+An [Avalonia.Controls.IndexPath](xref:Avalonia.Controls.IndexPath) identifying the parent item in the hierarchy.
+
+
+#### Remarks
+
+When the root collection is reset, this property will be an empty path.
+
+When a child collection is reset, this property will contain the path to
+the parent item containing that child collection.
+
+This information is useful for determining which part of the selection may
+have been affected by the reset and may need to be updated or restored.
+
+</section>
+
+</ApiRefPage>
+

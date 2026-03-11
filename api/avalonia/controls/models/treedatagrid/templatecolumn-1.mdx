@@ -1,0 +1,253 @@
+---
+title: 'TemplateColumn<TModel>'
+hide_title: true
+slug: '/avalonia/controls/models/treedatagrid/templatecolumn-1'
+uid: 'Avalonia.Controls.Models.TreeDataGrid.TemplateColumn`1'
+commentId: 'T:Avalonia.Controls.Models.TreeDataGrid.TemplateColumn`1'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.TreeDataGrid'
+assembly: 'Avalonia.Controls.TreeDataGrid'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Models.TreeDataGrid'
+tfms:
+  - 'net8.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">TemplateColumn&lt;TModel&gt; Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Models.TreeDataGrid</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A column in an [Avalonia.Controls.ITreeDataGridSource](xref:Avalonia.Controls.ITreeDataGridSource) which displays its values using a data
+template.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class TemplateColumn<TModel>
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ColumnBase&lt;&gt; <span className="apiref-page__relation-separator">-&gt;</span> TemplateColumn&lt;TModel&gt;
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> ITextSearchableColumn&lt;&gt;
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [TemplateColumn&lt;TModel&gt; (2 overloads)](#uid-4d139bc7f5) | No summary available. |
+
+<span id="uid-4d139bc7f5"></span>
+
+### TemplateColumn&lt;TModel&gt; overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d0dcacfc64"></span>
+
+#### TemplateColumn&lt;TModel&gt; Constructor
+
+```csharp
+public TemplateColumn<TModel>(object header, Avalonia.Controls.Templates.IDataTemplate cellTemplate, Avalonia.Controls.Templates.IDataTemplate cellEditingTemplate, Nullable<Avalonia.Controls.GridLength> width, Avalonia.Controls.Models.TreeDataGrid.TemplateColumnOptions<TModel><TModel> options)
+```
+
+##### Parameters
+
+`header` object
+
+
+`cellTemplate` [Avalonia.Controls.Templates.IDataTemplate](xref:Avalonia.Controls.Templates.IDataTemplate)
+
+
+`cellEditingTemplate` [Avalonia.Controls.Templates.IDataTemplate](xref:Avalonia.Controls.Templates.IDataTemplate)
+
+
+`width` Nullable&lt;[Avalonia.Controls.GridLength](xref:Avalonia.Controls.GridLength)&gt;
+
+
+`options` Avalonia.Controls.Models.TreeDataGrid.TemplateColumnOptions&lt;TModel&gt;&lt;TModel&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-bfc858dbe5"></span>
+
+#### TemplateColumn&lt;TModel&gt; Constructor
+
+```csharp
+public TemplateColumn<TModel>(object header, object cellTemplateResourceKey, object cellEditingTemplateResourceKey, Nullable<Avalonia.Controls.GridLength> width, Avalonia.Controls.Models.TreeDataGrid.TemplateColumnOptions<TModel><TModel> options)
+```
+
+##### Parameters
+
+`header` object
+
+
+`cellTemplateResourceKey` object
+
+
+`cellEditingTemplateResourceKey` object
+
+
+`width` Nullable&lt;[Avalonia.Controls.GridLength](xref:Avalonia.Controls.GridLength)&gt;
+
+
+`options` Avalonia.Controls.Models.TreeDataGrid.TemplateColumnOptions&lt;TModel&gt;&lt;TModel&gt;
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [CreateCell](#uid-547aa273bc) | No summary available. |
+| [GetCellEditingTemplate](#uid-f260d95a29) | Gets the template to use to display the contents of a cell that is in editing mode. |
+| [GetCellTemplate](#uid-a4707298ec) | Gets the template to use to display the contents of a cell that is not in editing mode. |
+| [GetComparison](#uid-ac8728c82d) | Gets a comparison function for the specified sort direction. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-547aa273bc"></span>
+
+### CreateCell Method
+
+```csharp
+public Avalonia.Controls.Models.TreeDataGrid.ICell CreateCell(Avalonia.Controls.Models.TreeDataGrid.IRow<TModel><TModel> row)
+```
+
+#### Parameters
+
+`row` [Avalonia.Controls.Models.TreeDataGrid.IRow](xref:Avalonia.Controls.Models.TreeDataGrid.IRow)&lt;TModel&gt;&lt;TModel&gt;
+
+
+#### Returns
+
+[Avalonia.Controls.Models.TreeDataGrid.ICell](xref:Avalonia.Controls.Models.TreeDataGrid.ICell)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f260d95a29"></span>
+
+### GetCellEditingTemplate Method
+
+Gets the template to use to display the contents of a cell that is in editing mode.
+
+```csharp
+public Avalonia.Controls.Templates.IDataTemplate GetCellEditingTemplate(Avalonia.Controls.Control anchor)
+```
+
+#### Parameters
+
+`anchor` [Avalonia.Controls.Control](xref:Avalonia.Controls.Control)
+
+
+#### Returns
+
+[Avalonia.Controls.Templates.IDataTemplate](xref:Avalonia.Controls.Templates.IDataTemplate)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a4707298ec"></span>
+
+### GetCellTemplate Method
+
+Gets the template to use to display the contents of a cell that is not in editing mode.
+
+```csharp
+public Avalonia.Controls.Templates.IDataTemplate GetCellTemplate(Avalonia.Controls.Control anchor)
+```
+
+#### Parameters
+
+`anchor` [Avalonia.Controls.Control](xref:Avalonia.Controls.Control)
+
+
+#### Returns
+
+[Avalonia.Controls.Templates.IDataTemplate](xref:Avalonia.Controls.Templates.IDataTemplate)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ac8728c82d"></span>
+
+### GetComparison Method
+
+Gets a comparison function for the specified sort direction.
+
+```csharp
+public Comparison<TModel> GetComparison(System.ComponentModel.ListSortDirection direction)
+```
+
+#### Parameters
+
+`direction` System.ComponentModel.ListSortDirection
+
+
+#### Returns
+
+Comparison&lt;TModel&gt;
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Options](#uid-2bbe7f724e) | Gets the column options. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2bbe7f724e"></span>
+
+### Options Property
+
+Gets the column options.
+
+```csharp
+public Avalonia.Controls.Models.TreeDataGrid.TemplateColumnOptions<TModel><TModel> Options { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

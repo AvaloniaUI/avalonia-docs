@@ -67,29 +67,54 @@ public class AvaloniaSynchronizationContext
 
 ### AvaloniaSynchronizationContext overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-da8ac8ab0c"></span>
 
-#### AvaloniaSynchronizationContext
+#### AvaloniaSynchronizationContext Constructor
 
 ```csharp
 public AvaloniaSynchronizationContext()
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-6054aafd69"></span>
 
-#### AvaloniaSynchronizationContext
+#### AvaloniaSynchronizationContext Constructor
 
 ```csharp
 public AvaloniaSynchronizationContext(Avalonia.Threading.Dispatcher dispatcher, Avalonia.Threading.DispatcherPriority priority)
 ```
 
+##### Parameters
+
+`dispatcher` [Avalonia.Threading.Dispatcher](xref:Avalonia.Threading.Dispatcher)
+
+
+`priority` [Avalonia.Threading.DispatcherPriority](xref:Avalonia.Threading.DispatcherPriority)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-93a854fe46"></span>
 
-#### AvaloniaSynchronizationContext
+#### AvaloniaSynchronizationContext Constructor
 
 ```csharp
 public AvaloniaSynchronizationContext(Avalonia.Threading.DispatcherPriority priority)
 ```
+
+##### Parameters
+
+`priority` [Avalonia.Threading.DispatcherPriority](xref:Avalonia.Threading.DispatcherPriority)
+
+
+</section>
 
 ## Methods
 
@@ -105,55 +130,134 @@ public AvaloniaSynchronizationContext(Avalonia.Threading.DispatcherPriority prio
 
 ### Ensure overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-eb1fb66038"></span>
 
-#### Ensure
+#### Ensure Method
 
 ```csharp
 public Avalonia.Threading.AvaloniaSynchronizationContext.RestoreContext Ensure(Avalonia.Threading.Dispatcher dispatcher, Avalonia.Threading.DispatcherPriority priority)
 ```
 
+##### Parameters
+
+`dispatcher` [Avalonia.Threading.Dispatcher](xref:Avalonia.Threading.Dispatcher)
+
+
+`priority` [Avalonia.Threading.DispatcherPriority](xref:Avalonia.Threading.DispatcherPriority)
+
+
+##### Returns
+
+[Avalonia.Threading.AvaloniaSynchronizationContext.RestoreContext](xref:Avalonia.Threading.AvaloniaSynchronizationContext.RestoreContext)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-3e9e9f65f8"></span>
 
-#### Ensure
+#### Ensure Method
 
 ```csharp
 public Avalonia.Threading.AvaloniaSynchronizationContext.RestoreContext Ensure(Avalonia.Threading.DispatcherPriority priority)
 ```
 
+##### Parameters
+
+`priority` [Avalonia.Threading.DispatcherPriority](xref:Avalonia.Threading.DispatcherPriority)
+
+
+##### Returns
+
+[Avalonia.Threading.AvaloniaSynchronizationContext.RestoreContext](xref:Avalonia.Threading.AvaloniaSynchronizationContext.RestoreContext)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-43d33fdad2"></span>
 
-### InstallIfNeeded
+### InstallIfNeeded Method
 
 Installs synchronization context in current thread
 
 ```csharp
-public Void InstallIfNeeded()
+public void InstallIfNeeded()
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-f456ade104"></span>
 
-### Post
+### Post Method
 
 ```csharp
-public Void Post(System.Threading.SendOrPostCallback d, Object state)
+public void Post(System.Threading.SendOrPostCallback d, object state)
 ```
+
+#### Parameters
+
+`d` System.Threading.SendOrPostCallback
+
+
+`state` object
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-955eff3bfe"></span>
 
-### Send
+### Send Method
 
 ```csharp
-public Void Send(System.Threading.SendOrPostCallback d, Object state)
+public void Send(System.Threading.SendOrPostCallback d, object state)
 ```
+
+#### Parameters
+
+`d` System.Threading.SendOrPostCallback
+
+
+`state` object
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-cb4f22cead"></span>
 
-### Wait
+### Wait Method
 
 ```csharp
-public Int32 Wait(IntPtr[] waitHandles, Boolean waitAll, Int32 millisecondsTimeout)
+public int Wait(IntPtr[] waitHandles, bool waitAll, int millisecondsTimeout)
 ```
+
+#### Parameters
+
+`waitHandles` IntPtr[]
+
+
+`waitAll` bool
+
+
+`millisecondsTimeout` int
+
+
+#### Returns
+
+int
+
+
+</section>
 
 ## Properties
 
@@ -161,15 +265,19 @@ public Int32 Wait(IntPtr[] waitHandles, Boolean waitAll, Int32 millisecondsTimeo
 | --- | --- |
 | [AutoInstall](#uid-8a51cd6630) | Controls if SynchronizationContext should be installed in InstallIfNeeded. Used by Designer. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-8a51cd6630"></span>
 
-### AutoInstall
+### AutoInstall Property
 
 Controls if SynchronizationContext should be installed in InstallIfNeeded. Used by Designer.
 
 ```csharp
-public Boolean AutoInstall { get; set; }
+public bool AutoInstall { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

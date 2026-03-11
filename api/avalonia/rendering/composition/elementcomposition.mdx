@@ -53,7 +53,7 @@ public class ElementComposition
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> ElementComposition
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> ElementComposition
 </div>
 </div>
 
@@ -61,13 +61,15 @@ public class ElementComposition
 
 | Name | Description |
 | --- | --- |
-| [GetElementChildVisual](#uid-76e1993149) | Retrieves a Avalonia.Rendering.Composition.CompositionVisual object previously set by a call to Avalonia.Rendering.Composition.ElementComposition.SetElementChildVisual(Avalonia.Visual,Avalonia.Rendering.Composition.CompositionVisual). |
-| [GetElementVisual](#uid-903d9d5795) | Gets CompositionVisual that backs a Visual |
-| [SetElementChildVisual](#uid-221695a637) | Sets a custom Avalonia.Rendering.Composition.CompositionVisual as the last child of the element’s visual tree. |
+| [GetElementChildVisual](#uid-76e1993149) | Retrieves a [Avalonia.Rendering.Composition.CompositionVisual](xref:Avalonia.Rendering.Composition.CompositionVisual) object previously set by a call to [Avalonia.Rendering.Composition.ElementComposition.SetElementChildVisual(Avalonia.Visual,Avalonia.Rendering.Composition.CompositionVisual)](xref:Avalonia.Rendering.Composition.ElementComposition.SetElementChildVisual%28Avalonia.Visual%2CAvalonia.Rendering.Composition.CompositionVisual%29). |
+| [GetElementVisual](#uid-903d9d5795) | Gets [CompositionVisual](xref:Avalonia.Rendering.Composition.CompositionVisual) that backs a Visual |
+| [SetElementChildVisual](#uid-221695a637) | Sets a custom [Avalonia.Rendering.Composition.CompositionVisual](xref:Avalonia.Rendering.Composition.CompositionVisual) as the last child of the element’s visual tree. |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-76e1993149"></span>
 
-### GetElementChildVisual
+### GetElementChildVisual Method
 
 Retrieves a [Avalonia.Rendering.Composition.CompositionVisual](xref:Avalonia.Rendering.Composition.CompositionVisual) object previously set by a call to [Avalonia.Rendering.Composition.ElementComposition.SetElementChildVisual(Avalonia.Visual,Avalonia.Rendering.Composition.CompositionVisual)](xref:Avalonia.Rendering.Composition.ElementComposition.SetElementChildVisual%28Avalonia.Visual%2CAvalonia.Rendering.Composition.CompositionVisual%29).
 
@@ -75,29 +77,63 @@ Retrieves a [Avalonia.Rendering.Composition.CompositionVisual](xref:Avalonia.Ren
 public Avalonia.Rendering.Composition.CompositionVisual GetElementChildVisual(Avalonia.Visual visual)
 ```
 
+#### Parameters
+
+`visual` [Avalonia.Visual](xref:Avalonia.Visual)
+
+
+#### Returns
+
+[Avalonia.Rendering.Composition.CompositionVisual](xref:Avalonia.Rendering.Composition.CompositionVisual)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-903d9d5795"></span>
 
-### GetElementVisual
+### GetElementVisual Method
 
-Gets CompositionVisual that backs a Visual
+Gets [CompositionVisual](xref:Avalonia.Rendering.Composition.CompositionVisual) that backs a Visual
 
 ```csharp
 public Avalonia.Rendering.Composition.CompositionVisual GetElementVisual(Avalonia.Visual visual)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `visual` |  |
+#### Parameters
+
+`visual` [Avalonia.Visual](xref:Avalonia.Visual)
+
+
+#### Returns
+
+[Avalonia.Rendering.Composition.CompositionVisual](xref:Avalonia.Rendering.Composition.CompositionVisual)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-221695a637"></span>
 
-### SetElementChildVisual
+### SetElementChildVisual Method
 
 Sets a custom [Avalonia.Rendering.Composition.CompositionVisual](xref:Avalonia.Rendering.Composition.CompositionVisual) as the last child of the element’s visual tree.
 
 ```csharp
-public Void SetElementChildVisual(Avalonia.Visual visual, Avalonia.Rendering.Composition.CompositionVisual compositionVisual)
+public void SetElementChildVisual(Avalonia.Visual visual, Avalonia.Rendering.Composition.CompositionVisual compositionVisual)
 ```
+
+#### Parameters
+
+`visual` [Avalonia.Visual](xref:Avalonia.Visual)
+
+
+`compositionVisual` [Avalonia.Rendering.Composition.CompositionVisual](xref:Avalonia.Rendering.Composition.CompositionVisual)
+
+
+</section>
 
 </ApiRefPage>
 

@@ -53,7 +53,7 @@ public class SkiaOptions
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> SkiaOptions
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> SkiaOptions
 </div>
 </div>
 
@@ -63,13 +63,17 @@ public class SkiaOptions
 | --- | --- |
 | [SkiaOptions](#uid-a5845e4027) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-a5845e4027"></span>
 
-### SkiaOptions
+### SkiaOptions Constructor
 
 ```csharp
 public SkiaOptions()
 ```
+
+</section>
 
 ## Properties
 
@@ -78,25 +82,42 @@ public SkiaOptions()
 | [MaxGpuResourceSizeBytes](#uid-4018646757) | The maximum number of bytes for video memory to store textures and resources. |
 | [UseOpacitySaveLayer](#uid-44688647b8) | Use Skia's SaveLayer API to handling opacity. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-4018646757"></span>
 
-### MaxGpuResourceSizeBytes
+### MaxGpuResourceSizeBytes Property
 
 The maximum number of bytes for video memory to store textures and resources.
 
 ```csharp
-public Nullable<Int64> MaxGpuResourceSizeBytes { get; set; }
+public Nullable<long> MaxGpuResourceSizeBytes { get; set; }
 ```
+
+#### Remarks
+
+This is set by default to the recommended value for Avalonia.
+Setting this to null will give you the default Skia value.
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-44688647b8"></span>
 
-### UseOpacitySaveLayer
+### UseOpacitySaveLayer Property
 
 Use Skia's SaveLayer API to handling opacity.
 
 ```csharp
-public Boolean UseOpacitySaveLayer { get; set; }
+public bool UseOpacitySaveLayer { get; set; }
 ```
+
+#### Remarks
+
+Enabling this might have performance implications.
+
+</section>
 
 </ApiRefPage>
 

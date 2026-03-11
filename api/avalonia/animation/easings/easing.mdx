@@ -53,7 +53,7 @@ public class Easing
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> Easing
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> Easing
 </div>
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Derived types:</span> <a href="backeasein">BackEaseIn</a>, <a href="backeaseinout">BackEaseInOut</a>, <a href="backeaseout">BackEaseOut</a>, <a href="bounceeasein">BounceEaseIn</a>, <a href="bounceeaseinout">BounceEaseInOut</a>, <a href="bounceeaseout">BounceEaseOut</a>, <a href="circulareasein">CircularEaseIn</a>, <a href="circulareaseinout">CircularEaseInOut</a>, <a href="circulareaseout">CircularEaseOut</a>, <a href="cubiceasein">CubicEaseIn</a>, <a href="cubiceaseinout">CubicEaseInOut</a>, <a href="cubiceaseout">CubicEaseOut</a>, <a href="elasticeasein">ElasticEaseIn</a>, <a href="elasticeaseinout">ElasticEaseInOut</a>, <a href="elasticeaseout">ElasticEaseOut</a>, <a href="exponentialeasein">ExponentialEaseIn</a>, <a href="exponentialeaseinout">ExponentialEaseInOut</a>, <a href="exponentialeaseout">ExponentialEaseOut</a>, <a href="lineareasing">LinearEasing</a>, <a href="quadraticeasein">QuadraticEaseIn</a>, <a href="quadraticeaseinout">QuadraticEaseInOut</a>, <a href="quadraticeaseout">QuadraticEaseOut</a>, <a href="quarticeasein">QuarticEaseIn</a>, <a href="quarticeaseinout">QuarticEaseInOut</a>, <a href="quarticeaseout">QuarticEaseOut</a>, <a href="quinticeasein">QuinticEaseIn</a>, <a href="quinticeaseinout">QuinticEaseInOut</a>, <a href="quinticeaseout">QuinticEaseOut</a>, <a href="sineeasein">SineEaseIn</a>, <a href="sineeaseinout">SineEaseInOut</a>, <a href="sineeaseout">SineEaseOut</a>, <a href="splineeasing">SplineEasing</a>, <a href="springeasing">SpringEasing</a>
@@ -70,31 +70,57 @@ public class Easing
 | [Ease](#uid-9726b60d1c) | Returns the value of the transition for the specified progress. |
 | [Parse](#uid-c851a9a9b7) | Parses a Easing type string. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-9726b60d1c"></span>
 
-### Ease
+### Ease Method
 
 Returns the value of the transition for the specified progress.
 
 ```csharp
-public Double Ease(Double progress)
+public double Ease(double progress)
 ```
+
+#### Parameters
+
+`progress` double
+
+
+#### Returns
+
+double
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-c851a9a9b7"></span>
 
-### Parse
+### Parse Method
 
 Parses a Easing type string.
 
 ```csharp
-public Avalonia.Animation.Easings.Easing Parse(String e)
+public Avalonia.Animation.Easings.Easing Parse(string e)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `e` | The Easing type string. |
+#### Parameters
 
-Returns: Returns the instance of the parsed type.
+`e` string
+
+The Easing type string.
+
+
+#### Returns
+
+[Avalonia.Animation.Easings.Easing](xref:Avalonia.Animation.Easings.Easing)
+
+Returns the instance of the parsed type.
+
+
+</section>
 
 </ApiRefPage>
 

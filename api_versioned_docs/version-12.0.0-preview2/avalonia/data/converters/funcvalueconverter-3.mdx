@@ -54,7 +54,7 @@ public class FuncValueConverter<TIn, TParam, TOut>
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> FuncValueConverter&lt;TIn, TParam, TOut&gt;
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> FuncValueConverter&lt;TIn, TParam, TOut&gt;
 </div>
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Implements:</span> <a href="ivalueconverter">IValueConverter</a>
@@ -71,21 +71,42 @@ public class FuncValueConverter<TIn, TParam, TOut>
 
 ### FuncValueConverter&lt;TIn, TParam, TOut&gt; overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-c5fae2d756"></span>
 
-#### FuncValueConverter&lt;TIn, TParam, TOut&gt;
+#### FuncValueConverter&lt;TIn, TParam, TOut&gt; Constructor
 
 ```csharp
 public FuncValueConverter<TIn, TParam, TOut>(Func<TIn, TParam, TOut> convert)
 ```
 
+##### Parameters
+
+`convert` Func&lt;TIn, TParam, TOut&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-9acbf58660"></span>
 
-#### FuncValueConverter&lt;TIn, TParam, TOut&gt;
+#### FuncValueConverter&lt;TIn, TParam, TOut&gt; Constructor
 
 ```csharp
 public FuncValueConverter<TIn, TParam, TOut>(Func<TIn, TParam, TOut> convert, Func<TOut, TParam, TIn> convertBack)
 ```
+
+##### Parameters
+
+`convert` Func&lt;TIn, TParam, TOut&gt;
+
+
+`convertBack` Func&lt;TOut, TParam, TIn&gt;
+
+
+</section>
 
 ## Methods
 
@@ -94,43 +115,103 @@ public FuncValueConverter<TIn, TParam, TOut>(Func<TIn, TParam, TOut> convert, Fu
 | [Convert](#uid-c5e8290294) | Converts a value. |
 | [ConvertBack](#uid-7ea13fc332) | Converts a value. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-c5e8290294"></span>
 
-### Convert
+### Convert Method
 
 Converts a value.
 
 ```csharp
-public Object Convert(Object value, Type targetType, Object parameter, System.Globalization.CultureInfo culture)
+public object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `culture` | The culture to use. |
-| `parameter` | A user-defined parameter. |
-| `targetType` | The type of the target. |
-| `value` | The value to convert. |
+#### Parameters
 
-Returns: The converted value.
+`value` object
+
+The value to convert.
+
+
+`targetType` Type
+
+The type of the target.
+
+
+`parameter` object
+
+A user-defined parameter.
+
+
+`culture` System.Globalization.CultureInfo
+
+The culture to use.
+
+
+#### Returns
+
+object
+
+The converted value.
+
+
+#### Remarks
+
+This method should not throw exceptions. If the value is not convertible, return
+a [Avalonia.Data.BindingNotification](xref:Avalonia.Data.BindingNotification) in an error state. Any exceptions thrown will be
+treated as an application exception.
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-7ea13fc332"></span>
 
-### ConvertBack
+### ConvertBack Method
 
 Converts a value.
 
 ```csharp
-public Object ConvertBack(Object value, Type targetType, Object parameter, System.Globalization.CultureInfo culture)
+public object ConvertBack(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `culture` | The culture to use. |
-| `parameter` | A user-defined parameter. |
-| `targetType` | The type of the target. |
-| `value` | The value to convert. |
+#### Parameters
 
-Returns: The converted value.
+`value` object
+
+The value to convert.
+
+
+`targetType` Type
+
+The type of the target.
+
+
+`parameter` object
+
+A user-defined parameter.
+
+
+`culture` System.Globalization.CultureInfo
+
+The culture to use.
+
+
+#### Returns
+
+object
+
+The converted value.
+
+
+#### Remarks
+
+This method should not throw exceptions. If the value is not convertible, return
+a [Avalonia.Data.BindingNotification](xref:Avalonia.Data.BindingNotification) in an error state. Any exceptions thrown will be
+treated as an application exception.
+
+</section>
 
 </ApiRefPage>
 

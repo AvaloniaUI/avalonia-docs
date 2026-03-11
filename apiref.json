@@ -72,6 +72,30 @@
      {
       "id": "Avalonia.Headless.Vnc",
       "version": "12.0.0-preview2"
+    },
+    {
+      "id": "AvaloniaUI.DiagnosticsSupport",
+      "version": "2.2.0-beta3"
+    },
+    {
+      "id": "Avalonia.Controls.WebView",
+      "version": "12.0.0-preview1"
+    },
+    {
+      "id": "Avalonia.Controls.MediaPlayer",
+      "version": "11.3.9"
+    },
+    {
+      "id": "Avalonia.Controls.MediaPlayer.Abstractions",
+      "version": "11.3.9"
+    },
+    {
+      "id": "Avalonia.Controls.Markdown",
+      "version": "11.3.5"
+    },
+     {
+      "id": "Avalonia.Controls.TreeDataGrid",
+      "version": "11.3.1"
     }
   ],
   "resolveSourceLinks": true,

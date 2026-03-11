@@ -53,7 +53,7 @@ public class TextCollapsingProperties
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> TextCollapsingProperties
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> TextCollapsingProperties
 </div>
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Derived types:</span> <a href="textleadingprefixcharacterellipsis">TextLeadingPrefixCharacterEllipsis</a>, <a href="texttrailingcharacterellipsis">TextTrailingCharacterEllipsis</a>, <a href="texttrailingwordellipsis">TextTrailingWordEllipsis</a>, <a href="../textpathsegmentellipsis">TextPathSegmentEllipsis</a>
@@ -67,9 +67,11 @@ public class TextCollapsingProperties
 | [Collapse](#uid-c0e1200b8b) | Collapses given text line. |
 | [CreateCollapsedRuns](#uid-3f1ae847f7) | Creates a list of runs for given collapsed length which includes specified symbol at the end. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-c0e1200b8b"></span>
 
-### Collapse
+### Collapse Method
 
 Collapses given text line.
 
@@ -77,27 +79,57 @@ Collapses given text line.
 public Avalonia.Media.TextFormatting.TextRun[] Collapse(Avalonia.Media.TextFormatting.TextLine textLine)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `textLine` | Text line to collapse. |
+#### Parameters
+
+`textLine` [Avalonia.Media.TextFormatting.TextLine](xref:Avalonia.Media.TextFormatting.TextLine)
+
+Text line to collapse.
+
+
+#### Returns
+
+[Avalonia.Media.TextFormatting.TextRun](xref:Avalonia.Media.TextFormatting.TextRun)[]
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-3f1ae847f7"></span>
 
-### CreateCollapsedRuns
+### CreateCollapsedRuns Method
 
 Creates a list of runs for given collapsed length which includes specified symbol at the end.
 
 ```csharp
-public Avalonia.Media.TextFormatting.TextRun[] CreateCollapsedRuns(Avalonia.Media.TextFormatting.TextLine textLine, Int32 collapsedLength, Avalonia.Media.TextFormatting.TextRun shapedSymbol)
+public Avalonia.Media.TextFormatting.TextRun[] CreateCollapsedRuns(Avalonia.Media.TextFormatting.TextLine textLine, int collapsedLength, Avalonia.Media.TextFormatting.TextRun shapedSymbol)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `collapsedLength` | The collapsed length. |
-| `shapedSymbol` | The symbol. |
-| `textLine` | The text line. |
+#### Parameters
 
-Returns: List of remaining runs.
+`textLine` [Avalonia.Media.TextFormatting.TextLine](xref:Avalonia.Media.TextFormatting.TextLine)
+
+The text line.
+
+
+`collapsedLength` int
+
+The collapsed length.
+
+
+`shapedSymbol` [Avalonia.Media.TextFormatting.TextRun](xref:Avalonia.Media.TextFormatting.TextRun)
+
+The symbol.
+
+
+#### Returns
+
+[Avalonia.Media.TextFormatting.TextRun](xref:Avalonia.Media.TextFormatting.TextRun)[]
+
+List of remaining runs.
+
+
+</section>
 
 ## Properties
 
@@ -107,9 +139,11 @@ Returns: List of remaining runs.
 | [Symbol](#uid-0840453083) | Gets the text run that is used as collapsing symbol. |
 | [Width](#uid-abfb22c286) | Gets the width in which the collapsible range is constrained to. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-d9e94298aa"></span>
 
-### FlowDirection
+### FlowDirection Property
 
 Gets the flow direction that is used for collapsing.
 
@@ -117,9 +151,13 @@ Gets the flow direction that is used for collapsing.
 public Avalonia.Media.FlowDirection FlowDirection { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-0840453083"></span>
 
-### Symbol
+### Symbol Property
 
 Gets the text run that is used as collapsing symbol.
 
@@ -127,15 +165,21 @@ Gets the text run that is used as collapsing symbol.
 public Avalonia.Media.TextFormatting.TextRun Symbol { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-abfb22c286"></span>
 
-### Width
+### Width Property
 
 Gets the width in which the collapsible range is constrained to.
 
 ```csharp
-public Double Width { get; set; }
+public double Width { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

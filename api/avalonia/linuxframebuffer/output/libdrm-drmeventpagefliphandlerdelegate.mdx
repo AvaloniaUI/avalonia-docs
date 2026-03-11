@@ -54,13 +54,25 @@ public delegate LibDrm.DrmEventPageFlipHandlerDelegate
 | --- | --- |
 | [LibDrm.DrmEventPageFlipHandlerDelegate](#uid-a599a0f55b) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-a599a0f55b"></span>
 
-### LibDrm.DrmEventPageFlipHandlerDelegate
+### LibDrm.DrmEventPageFlipHandlerDelegate Constructor
 
 ```csharp
-public LibDrm.DrmEventPageFlipHandlerDelegate(Object object, IntPtr method)
+public LibDrm.DrmEventPageFlipHandlerDelegate(object object, IntPtr method)
 ```
+
+#### Parameters
+
+`object` object
+
+
+`method` IntPtr
+
+
+</section>
 
 ## Methods
 
@@ -70,29 +82,91 @@ public LibDrm.DrmEventPageFlipHandlerDelegate(Object object, IntPtr method)
 | [EndInvoke](#uid-7b4cbd177a) | No summary available. |
 | [Invoke](#uid-0d0f388e91) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-f0af51f423"></span>
 
-### BeginInvoke
+### BeginInvoke Method
 
 ```csharp
-public IAsyncResult BeginInvoke(Int32 fd, UInt32 sequence, UInt32 tv_sec, UInt32 tv_usec, Void* user_data, AsyncCallback callback, Object object)
+public IAsyncResult BeginInvoke(int fd, uint sequence, uint tv_sec, uint tv_usec, void* user_data, AsyncCallback callback, object object)
 ```
+
+#### Parameters
+
+`fd` int
+
+
+`sequence` uint
+
+
+`tv_sec` uint
+
+
+`tv_usec` uint
+
+
+`user_data` void*
+
+
+`callback` AsyncCallback
+
+
+`object` object
+
+
+#### Returns
+
+IAsyncResult
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-7b4cbd177a"></span>
 
-### EndInvoke
+### EndInvoke Method
 
 ```csharp
-public Void EndInvoke(IAsyncResult result)
+public void EndInvoke(IAsyncResult result)
 ```
+
+#### Parameters
+
+`result` IAsyncResult
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-0d0f388e91"></span>
 
-### Invoke
+### Invoke Method
 
 ```csharp
-public Void Invoke(Int32 fd, UInt32 sequence, UInt32 tv_sec, UInt32 tv_usec, Void* user_data)
+public void Invoke(int fd, uint sequence, uint tv_sec, uint tv_usec, void* user_data)
 ```
+
+#### Parameters
+
+`fd` int
+
+
+`sequence` uint
+
+
+`tv_sec` uint
+
+
+`tv_usec` uint
+
+
+`user_data` void*
+
+
+</section>
 
 </ApiRefPage>
 

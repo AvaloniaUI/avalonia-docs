@@ -55,61 +55,119 @@ public interface ILogSink
 | [IsEnabled](#uid-fa8540479d) | Checks if given log level and area is enabled. |
 | [Log (2 overloads)](#uid-ae3dda8e0f) | Logs an event. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-fa8540479d"></span>
 
-### IsEnabled
+### IsEnabled Method
 
 Checks if given log level and area is enabled.
 
 ```csharp
-public Boolean IsEnabled(Avalonia.Logging.LogEventLevel level, String area)
+public bool IsEnabled(Avalonia.Logging.LogEventLevel level, string area)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `area` | The log area. |
-| `level` | The log event level. |
+#### Parameters
 
-Returns: if given log level is enabled.
+`level` [Avalonia.Logging.LogEventLevel](xref:Avalonia.Logging.LogEventLevel)
+
+The log event level.
+
+
+`area` string
+
+The log area.
+
+
+#### Returns
+
+bool
+
+if given log level is enabled.
+
+
+</section>
 
 <span id="uid-ae3dda8e0f"></span>
 
 ### Log overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-5f1779b2ed"></span>
 
-#### Log
+#### Log Method
 
 Logs an event.
 
 ```csharp
-public Void Log(Avalonia.Logging.LogEventLevel level, String area, Object source, String messageTemplate)
+public void Log(Avalonia.Logging.LogEventLevel level, string area, object source, string messageTemplate)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `area` | The area that the event originates. |
-| `level` | The log event level. |
-| `messageTemplate` | The message template. |
-| `source` | The object from which the event originates. |
+##### Parameters
+
+`level` [Avalonia.Logging.LogEventLevel](xref:Avalonia.Logging.LogEventLevel)
+
+The log event level.
+
+
+`area` string
+
+The area that the event originates.
+
+
+`source` object
+
+The object from which the event originates.
+
+
+`messageTemplate` string
+
+The message template.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-7cb89d08eb"></span>
 
-#### Log
+#### Log Method
 
 Logs a new event.
 
 ```csharp
-public Void Log(Avalonia.Logging.LogEventLevel level, String area, Object source, String messageTemplate, Object[] propertyValues)
+public void Log(Avalonia.Logging.LogEventLevel level, string area, object source, string messageTemplate, object[] propertyValues)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `area` | The area that the event originates. |
-| `level` | The log event level. |
-| `messageTemplate` | The message template. |
-| `propertyValues` | The message property values. |
-| `source` | The object from which the event originates. |
+##### Parameters
+
+`level` [Avalonia.Logging.LogEventLevel](xref:Avalonia.Logging.LogEventLevel)
+
+The log event level.
+
+
+`area` string
+
+The area that the event originates.
+
+
+`source` object
+
+The object from which the event originates.
+
+
+`messageTemplate` string
+
+The message template.
+
+
+`propertyValues` object[]
+
+The message property values.
+
+
+</section>
 
 </ApiRefPage>
 

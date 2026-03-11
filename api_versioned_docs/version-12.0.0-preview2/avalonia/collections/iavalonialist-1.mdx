@@ -65,75 +65,142 @@ public interface IAvaloniaList<T>
 | [RemoveAll](#uid-a3473fc21f) | No summary available. |
 | [RemoveRange](#uid-639f028025) | Removes a range of elements from the collection. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-5f42616823"></span>
 
-### AddRange
+### AddRange Method
 
 ```csharp
-public Void AddRange(System.Collections.Generic.IEnumerable<T> items)
+public void AddRange(System.Collections.Generic.IEnumerable<T> items)
 ```
+
+#### Parameters
+
+`items` System.Collections.Generic.IEnumerable&lt;T&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-465519fba2"></span>
 
-### InsertRange
+### InsertRange Method
 
 ```csharp
-public Void InsertRange(Int32 index, System.Collections.Generic.IEnumerable<T> items)
+public void InsertRange(int index, System.Collections.Generic.IEnumerable<T> items)
 ```
+
+#### Parameters
+
+`index` int
+
+
+`items` System.Collections.Generic.IEnumerable&lt;T&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-62a0acd40c"></span>
 
-### Move
+### Move Method
 
 Moves an item to a new index.
 
 ```csharp
-public Void Move(Int32 oldIndex, Int32 newIndex)
+public void Move(int oldIndex, int newIndex)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `newIndex` | The index to move the item to. |
-| `oldIndex` | The index of the item to move. |
+#### Parameters
+
+`oldIndex` int
+
+The index of the item to move.
+
+
+`newIndex` int
+
+The index to move the item to.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-0304d42c8f"></span>
 
-### MoveRange
+### MoveRange Method
 
 Moves multiple items to a new index.
 
 ```csharp
-public Void MoveRange(Int32 oldIndex, Int32 count, Int32 newIndex)
+public void MoveRange(int oldIndex, int count, int newIndex)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `count` | The number of items to move. |
-| `newIndex` | The index to move the items to. |
-| `oldIndex` | The first index of the items to move. |
+#### Parameters
+
+`oldIndex` int
+
+The first index of the items to move.
+
+
+`count` int
+
+The number of items to move.
+
+
+`newIndex` int
+
+The index to move the items to.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-a3473fc21f"></span>
 
-### RemoveAll
+### RemoveAll Method
 
 ```csharp
-public Void RemoveAll(System.Collections.Generic.IEnumerable<T> items)
+public void RemoveAll(System.Collections.Generic.IEnumerable<T> items)
 ```
+
+#### Parameters
+
+`items` System.Collections.Generic.IEnumerable&lt;T&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-639f028025"></span>
 
-### RemoveRange
+### RemoveRange Method
 
 Removes a range of elements from the collection.
 
 ```csharp
-public Void RemoveRange(Int32 index, Int32 count)
+public void RemoveRange(int index, int count)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `count` | The number of items to remove. |
-| `index` | The first index to remove. |
+#### Parameters
+
+`index` int
+
+The first index to remove.
+
+
+`count` int
+
+The number of items to remove.
+
+
+</section>
 
 ## Properties
 
@@ -142,23 +209,31 @@ public Void RemoveRange(Int32 index, Int32 count)
 | [Count](#uid-6c7153fe3d) | Gets the number of items in the list. |
 | [Item](#uid-3043493a92) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-6c7153fe3d"></span>
 
-### Count
+### Count Property
 
 Gets the number of items in the list.
 
 ```csharp
-public Int32 Count { get; set; }
+public int Count { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-3043493a92"></span>
 
-### Item
+### Item Property
 
 ```csharp
 public T Item { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

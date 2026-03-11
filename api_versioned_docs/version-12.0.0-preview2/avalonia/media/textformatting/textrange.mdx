@@ -66,13 +66,25 @@ public struct TextRange
 | --- | --- |
 | [TextRange](#uid-6b03ae3c2c) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-6b03ae3c2c"></span>
 
-### TextRange
+### TextRange Constructor
 
 ```csharp
-public TextRange(Int32 start, Int32 length)
+public TextRange(int start, int length)
 ```
+
+#### Parameters
+
+`start` int
+
+
+`length` int
+
+
+</section>
 
 ## Methods
 
@@ -88,69 +100,139 @@ public TextRange(Int32 start, Int32 length)
 
 ### Equals overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-5fc27dc976"></span>
 
-#### Equals
+#### Equals Method
 
 ```csharp
-public Boolean Equals(Avalonia.Media.TextFormatting.TextRange other)
+public bool Equals(Avalonia.Media.TextFormatting.TextRange other)
 ```
+
+##### Parameters
+
+`other` [Avalonia.Media.TextFormatting.TextRange](xref:Avalonia.Media.TextFormatting.TextRange)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-b2d071f942"></span>
 
-#### Equals
+#### Equals Method
 
 ```csharp
-public Boolean Equals(Object obj)
+public bool Equals(object obj)
 ```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-83a24eb7fa"></span>
 
-### GetHashCode
+### GetHashCode Method
 
 ```csharp
-public Int32 GetHashCode()
+public int GetHashCode()
 ```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-c987973492"></span>
 
-### Skip
+### Skip Method
 
 Bypasses a specified number of elements in the slice and then returns the remaining elements.
 
 ```csharp
-public Avalonia.Media.TextFormatting.TextRange Skip(Int32 length)
+public Avalonia.Media.TextFormatting.TextRange Skip(int length)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `length` | The number of elements to skip before returning the remaining elements. |
+#### Parameters
 
-Returns: A [Avalonia.Media.TextFormatting.TextRange](xref:Avalonia.Media.TextFormatting.TextRange) that contains the elements that occur after the specified index in this slice.
+`length` int
+
+The number of elements to skip before returning the remaining elements.
+
+
+#### Returns
+
+[Avalonia.Media.TextFormatting.TextRange](xref:Avalonia.Media.TextFormatting.TextRange)
+
+A [Avalonia.Media.TextFormatting.TextRange](xref:Avalonia.Media.TextFormatting.TextRange) that contains the elements that occur after the specified index in this slice.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-e0433f94d5"></span>
 
-### Take
+### Take Method
 
 Returns a specified number of contiguous elements from the start of the slice.
 
 ```csharp
-public Avalonia.Media.TextFormatting.TextRange Take(Int32 length)
+public Avalonia.Media.TextFormatting.TextRange Take(int length)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `length` | The number of elements to return. |
+#### Parameters
 
-Returns: A [Avalonia.Media.TextFormatting.TextRange](xref:Avalonia.Media.TextFormatting.TextRange) that contains the specified number of elements from the start of this slice.
+`length` int
+
+The number of elements to return.
+
+
+#### Returns
+
+[Avalonia.Media.TextFormatting.TextRange](xref:Avalonia.Media.TextFormatting.TextRange)
+
+A [Avalonia.Media.TextFormatting.TextRange](xref:Avalonia.Media.TextFormatting.TextRange) that contains the specified number of elements from the start of this slice.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-f20380ed17"></span>
 
-### ToString
+### ToString Method
 
 ```csharp
-public String ToString()
+public string ToString()
 ```
+
+#### Returns
+
+string
+
+
+</section>
 
 ## Properties
 
@@ -160,41 +242,62 @@ public String ToString()
 | [Length](#uid-1ff8a92388) | Gets the length. |
 | [Start](#uid-e1c705e7a6) | Gets the start. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-8da493c8bc"></span>
 
-### End
+### End Property
 
 Gets the end.
 
 ```csharp
-public Int32 End { get; set; }
+public int End { get; set; }
 ```
 
-Value: The end.
+#### Value
+
+The end.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-1ff8a92388"></span>
 
-### Length
+### Length Property
 
 Gets the length.
 
 ```csharp
-public Int32 Length { get; set; }
+public int Length { get; set; }
 ```
 
-Value: The length.
+#### Value
+
+The length.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-e1c705e7a6"></span>
 
-### Start
+### Start Property
 
 Gets the start.
 
 ```csharp
-public Int32 Start { get; set; }
+public int Start { get; set; }
 ```
 
-Value: The start.
+#### Value
+
+The start.
+
+
+</section>
 
 </ApiRefPage>
 

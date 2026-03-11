@@ -61,22 +61,33 @@ public struct PixelVector
 
 | Name | Description |
 | --- | --- |
-| [PixelVector](#uid-7d806d3845) | Initializes a new instance of the Avalonia.PixelVector structure. |
+| [PixelVector](#uid-7d806d3845) | Initializes a new instance of the [Avalonia.PixelVector](xref:Avalonia.PixelVector) structure. |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-7d806d3845"></span>
 
-### PixelVector
+### PixelVector Constructor
 
 Initializes a new instance of the [Avalonia.PixelVector](xref:Avalonia.PixelVector) structure.
 
 ```csharp
-public PixelVector(Int32 x, Int32 y)
+public PixelVector(int x, int y)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `x` | The X vector. |
-| `y` | The Y vector. |
+#### Parameters
+
+`x` int
+
+The X vector.
+
+
+`y` int
+
+The Y vector.
+
+
+</section>
 
 ## Methods
 
@@ -93,95 +104,173 @@ public PixelVector(Int32 x, Int32 y)
 
 ### Equals overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-51010e0a1e"></span>
 
-#### Equals
+#### Equals Method
 
 Check if two vectors are equal (bitwise).
 
 ```csharp
-public Boolean Equals(Avalonia.PixelVector other)
+public bool Equals(Avalonia.PixelVector other)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `other` |  |
+##### Parameters
+
+`other` [Avalonia.PixelVector](xref:Avalonia.PixelVector)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-7f441e8438"></span>
 
-#### Equals
+#### Equals Method
 
 ```csharp
-public Boolean Equals(Object obj)
+public bool Equals(object obj)
 ```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-68ca1c05f6"></span>
 
-### GetHashCode
+### GetHashCode Method
 
 ```csharp
-public Int32 GetHashCode()
+public int GetHashCode()
 ```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-e34f35193c"></span>
 
-### NearlyEquals
+### NearlyEquals Method
 
 Check if two vectors are nearly equal (numerically).
 
 ```csharp
-public Boolean NearlyEquals(Avalonia.PixelVector other)
+public bool NearlyEquals(Avalonia.PixelVector other)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `other` | The other vector. |
+#### Parameters
 
-Returns: True if vectors are nearly equal.
+`other` [Avalonia.PixelVector](xref:Avalonia.PixelVector)
+
+The other vector.
+
+
+#### Returns
+
+bool
+
+True if vectors are nearly equal.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-69224b05ba"></span>
 
-### ToString
+### ToString Method
 
 Returns the string representation of the point.
 
 ```csharp
-public String ToString()
+public string ToString()
 ```
 
-Returns: The string representation of the point.
+#### Returns
+
+string
+
+The string representation of the point.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-90f8cc3018"></span>
 
-### WithX
+### WithX Method
 
 Returns a new vector with the specified X coordinate.
 
 ```csharp
-public Avalonia.PixelVector WithX(Int32 x)
+public Avalonia.PixelVector WithX(int x)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `x` | The X coordinate. |
+#### Parameters
 
-Returns: The new vector.
+`x` int
+
+The X coordinate.
+
+
+#### Returns
+
+[Avalonia.PixelVector](xref:Avalonia.PixelVector)
+
+The new vector.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-6e89ab708f"></span>
 
-### WithY
+### WithY Method
 
 Returns a new vector with the specified Y coordinate.
 
 ```csharp
-public Avalonia.PixelVector WithY(Int32 y)
+public Avalonia.PixelVector WithY(int y)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `y` | The Y coordinate. |
+#### Parameters
 
-Returns: The new vector.
+`y` int
+
+The Y coordinate.
+
+
+#### Returns
+
+[Avalonia.PixelVector](xref:Avalonia.PixelVector)
+
+The new vector.
+
+
+</section>
 
 ## Properties
 
@@ -191,35 +280,47 @@ Returns: The new vector.
 | [X](#uid-38a48f6dda) | Gets the X vector. |
 | [Y](#uid-fd0c6a2a0a) | Gets the Y vector. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-5fcf70c3eb"></span>
 
-### Length
+### Length Property
 
 Length of the vector
 
 ```csharp
-public Double Length { get; set; }
+public double Length { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-38a48f6dda"></span>
 
-### X
+### X Property
 
 Gets the X vector.
 
 ```csharp
-public Int32 X { get; set; }
+public int X { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-fd0c6a2a0a"></span>
 
-### Y
+### Y Property
 
 Gets the Y vector.
 
 ```csharp
-public Int32 Y { get; set; }
+public int Y { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

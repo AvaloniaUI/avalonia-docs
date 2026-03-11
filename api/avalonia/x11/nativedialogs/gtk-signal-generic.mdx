@@ -54,13 +54,25 @@ public delegate Gtk.signal_generic
 | --- | --- |
 | [Gtk.signal_generic](#uid-327ae54c00) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-327ae54c00"></span>
 
-### Gtk.signal_generic
+### Gtk.signal_generic Constructor
 
 ```csharp
-public Gtk.signal_generic(Object object, IntPtr method)
+public Gtk.signal_generic(object object, IntPtr method)
 ```
+
+#### Parameters
+
+`object` object
+
+
+`method` IntPtr
+
+
+</section>
 
 ## Methods
 
@@ -70,29 +82,83 @@ public Gtk.signal_generic(Object object, IntPtr method)
 | [EndInvoke](#uid-1996419ab3) | No summary available. |
 | [Invoke](#uid-d416795bbe) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-596dadb1e7"></span>
 
-### BeginInvoke
+### BeginInvoke Method
 
 ```csharp
-public IAsyncResult BeginInvoke(IntPtr gtkWidget, IntPtr userData, AsyncCallback callback, Object object)
+public IAsyncResult BeginInvoke(IntPtr gtkWidget, IntPtr userData, AsyncCallback callback, object object)
 ```
+
+#### Parameters
+
+`gtkWidget` IntPtr
+
+
+`userData` IntPtr
+
+
+`callback` AsyncCallback
+
+
+`object` object
+
+
+#### Returns
+
+IAsyncResult
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-1996419ab3"></span>
 
-### EndInvoke
+### EndInvoke Method
 
 ```csharp
-public Boolean EndInvoke(IAsyncResult result)
+public bool EndInvoke(IAsyncResult result)
 ```
+
+#### Parameters
+
+`result` IAsyncResult
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-d416795bbe"></span>
 
-### Invoke
+### Invoke Method
 
 ```csharp
-public Boolean Invoke(IntPtr gtkWidget, IntPtr userData)
+public bool Invoke(IntPtr gtkWidget, IntPtr userData)
 ```
+
+#### Parameters
+
+`gtkWidget` IntPtr
+
+
+`userData` IntPtr
+
+
+#### Returns
+
+bool
+
+
+</section>
 
 </ApiRefPage>
 

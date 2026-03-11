@@ -61,11 +61,13 @@ public class NavigatingFromEventArgs
 
 | Name | Description |
 | --- | --- |
-| [NavigatingFromEventArgs](#uid-4220efaf72) | Initializes a new instance of the Avalonia.Controls.NavigatingFromEventArgs class. |
+| [NavigatingFromEventArgs](#uid-4220efaf72) | Initializes a new instance of the [Avalonia.Controls.NavigatingFromEventArgs](xref:Avalonia.Controls.NavigatingFromEventArgs) class. |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-4220efaf72"></span>
 
-### NavigatingFromEventArgs
+### NavigatingFromEventArgs Constructor
 
 Initializes a new instance of the [Avalonia.Controls.NavigatingFromEventArgs](xref:Avalonia.Controls.NavigatingFromEventArgs) class.
 
@@ -73,10 +75,19 @@ Initializes a new instance of the [Avalonia.Controls.NavigatingFromEventArgs](xr
 public NavigatingFromEventArgs(Avalonia.Controls.Page destinationPage, Avalonia.Controls.NavigationType navigationType)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `destinationPage` | The page that will become active after this navigation, or when popping to root. |
-| `navigationType` | The type of navigation that triggered this event. |
+#### Parameters
+
+`destinationPage` [Avalonia.Controls.Page](xref:Avalonia.Controls.Page)
+
+The page that will become active after this navigation, or when popping to root.
+
+
+`navigationType` [Avalonia.Controls.NavigationType](xref:Avalonia.Controls.NavigationType)
+
+The type of navigation that triggered this event.
+
+
+</section>
 
 ## Properties
 
@@ -86,19 +97,25 @@ public NavigatingFromEventArgs(Avalonia.Controls.Page destinationPage, Avalonia.
 | [DestinationPage](#uid-6376e3090c) | Gets the page that will become active after this navigation. |
 | [NavigationType](#uid-a12d4711e3) | Gets the type of navigation that triggered this event. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-5c0e510eed"></span>
 
-### Cancel
+### Cancel Property
 
 Gets or sets a value indicating whether the navigation should be cancelled.
 
 ```csharp
-public Boolean Cancel { get; set; }
+public bool Cancel { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-6376e3090c"></span>
 
-### DestinationPage
+### DestinationPage Property
 
 Gets the page that will become active after this navigation.
 
@@ -106,15 +123,21 @@ Gets the page that will become active after this navigation.
 public Avalonia.Controls.Page DestinationPage { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-a12d4711e3"></span>
 
-### NavigationType
+### NavigationType Property
 
 Gets the type of navigation that triggered this event.
 
 ```csharp
 public Avalonia.Controls.NavigationType NavigationType { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

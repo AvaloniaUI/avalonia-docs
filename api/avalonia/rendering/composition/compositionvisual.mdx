@@ -53,7 +53,7 @@ public class CompositionVisual
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="compositionobject">CompositionObject</a> <span className="apiref-page__relation-separator">-&gt;</span> CompositionVisual
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="compositionobject">CompositionObject</a> <span className="apiref-page__relation-separator">-&gt;</span> CompositionVisual
 </div>
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Derived types:</span> <a href="compositioncontainervisual">CompositionContainerVisual</a>
@@ -64,10 +64,10 @@ public class CompositionVisual
 
 | Name | Description |
 | --- | --- |
-| [StartAnimation (Inherited from CompositionObject)](compositionobject.mdx#uid-4d2f25fec7) | Connects an animation with the specified property of the object and starts the animation. |
-| [StartAnimationGroup (Inherited from CompositionObject)](compositionobject.mdx#uid-4846f860a0) | Starts an animation group. The StartAnimationGroup method on CompositionObject lets you start CompositionAnimationGroup. All the animations in the group will be started at the same time on the object. |
-| [StopAnimation (Inherited from CompositionObject)](compositionobject.mdx#uid-01077c2b21) | Disconnects an animation from the specified property and stops the animation. |
-| [StopAnimationGroup (Inherited from CompositionObject)](compositionobject.mdx#uid-81dbd02845) | Stops an animation group. |
+| [StartAnimation](compositionobject.mdx#uid-4d2f25fec7) | Connects an animation with the specified property of the object and starts the animation. Inherited from [CompositionObject](compositionobject.mdx). |
+| [StartAnimationGroup](compositionobject.mdx#uid-4846f860a0) | Starts an animation group. The StartAnimationGroup method on [CompositionObject](xref:Avalonia.Rendering.Composition.CompositionObject) lets you start [CompositionAnimationGroup](xref:Avalonia.Rendering.Composition.Animations.CompositionAnimationGroup). All the animations in the group will be started at the same time on the object. Inherited from [CompositionObject](compositionobject.mdx). |
+| [StopAnimation](compositionobject.mdx#uid-01077c2b21) | Disconnects an animation from the specified property and stops the animation. Inherited from [CompositionObject](compositionobject.mdx). |
+| [StopAnimationGroup](compositionobject.mdx#uid-81dbd02845) | Stops an animation group. Inherited from [CompositionObject](compositionobject.mdx). |
 
 ## Properties
 
@@ -87,121 +87,177 @@ public class CompositionVisual
 | [Size](#uid-3e1b8610a7) | No summary available. |
 | [TextOptions](#uid-6aa565e6b3) | No summary available. |
 | [Visible](#uid-6ab568a397) | No summary available. |
-| [Compositor (Inherited from CompositionObject)](compositionobject.mdx#uid-bd6bbc1391) | The associated Compositor |
-| [ImplicitAnimations (Inherited from CompositionObject)](compositionobject.mdx#uid-3929e9ea34) | The collection of implicit animations attached to this object. |
-| [IsDisposed (Inherited from CompositionObject)](compositionobject.mdx#uid-e01437c946) | No summary available. |
+| [Compositor](compositionobject.mdx#uid-bd6bbc1391) | The associated Compositor Inherited from [CompositionObject](compositionobject.mdx). |
+| [ImplicitAnimations](compositionobject.mdx#uid-3929e9ea34) | The collection of implicit animations attached to this object. Inherited from [CompositionObject](compositionobject.mdx). |
+| [IsDisposed](compositionobject.mdx#uid-e01437c946) | Inherited from [CompositionObject](compositionobject.mdx). |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-4cc80a8fb9"></span>
 
-### AnchorPoint
+### AnchorPoint Property
 
 ```csharp
 public Avalonia.Vector AnchorPoint { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-c3aef5c7ce"></span>
 
-### CenterPoint
+### CenterPoint Property
 
 ```csharp
 public Avalonia.Vector3D CenterPoint { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-a4f17fa7b1"></span>
 
-### ClipToBounds
+### ClipToBounds Property
 
 ```csharp
-public Boolean ClipToBounds { get; set; }
+public bool ClipToBounds { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-c13afafdbb"></span>
 
-### DisableSubTreeBoundsHitTestOptimization
+### DisableSubTreeBoundsHitTestOptimization Property
 
 ```csharp
-public Boolean DisableSubTreeBoundsHitTestOptimization { get; set; }
+public bool DisableSubTreeBoundsHitTestOptimization { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-1895d8b855"></span>
 
-### Offset
+### Offset Property
 
 ```csharp
 public Avalonia.Vector3D Offset { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-2d3dcf119a"></span>
 
-### Opacity
+### Opacity Property
 
 ```csharp
-public Single Opacity { get; set; }
+public float Opacity { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-b89f4f068c"></span>
 
-### OpacityMask
+### OpacityMask Property
 
 ```csharp
 public Avalonia.Media.IBrush OpacityMask { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-20b212e722"></span>
 
-### Orientation
+### Orientation Property
 
 ```csharp
 public System.Numerics.Quaternion Orientation { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-6fb42a8a44"></span>
 
-### RenderOptions
+### RenderOptions Property
 
 ```csharp
 public Avalonia.Media.RenderOptions RenderOptions { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-1fcb17a24a"></span>
 
-### RotationAngle
+### RotationAngle Property
 
 ```csharp
-public Single RotationAngle { get; set; }
+public float RotationAngle { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-2e6f54f90e"></span>
 
-### Scale
+### Scale Property
 
 ```csharp
 public Avalonia.Vector3D Scale { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-3e1b8610a7"></span>
 
-### Size
+### Size Property
 
 ```csharp
 public Avalonia.Vector Size { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-6aa565e6b3"></span>
 
-### TextOptions
+### TextOptions Property
 
 ```csharp
 public Avalonia.Media.TextOptions TextOptions { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-6ab568a397"></span>
 
-### Visible
+### Visible Property
 
 ```csharp
-public Boolean Visible { get; set; }
+public bool Visible { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

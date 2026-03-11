@@ -47,7 +47,7 @@ public class LauncherExtensions
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> LauncherExtensions
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> LauncherExtensions
 </div>
 </div>
 
@@ -58,35 +58,67 @@ public class LauncherExtensions
 | [LaunchDirectoryInfoAsync](#uid-b87cbdc1d6) | Starts the default app associated with the specified storage directory (folder). |
 | [LaunchFileInfoAsync](#uid-28cf8eab98) | Starts the default app associated with the specified storage file. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-b87cbdc1d6"></span>
 
-### LaunchDirectoryInfoAsync
+### LaunchDirectoryInfoAsync Method
 
 Starts the default app associated with the specified storage directory (folder).
 
 ```csharp
-public System.Threading.Tasks.Task<Boolean> LaunchDirectoryInfoAsync(Avalonia.Platform.Storage.ILauncher launcher, System.IO.DirectoryInfo directoryInfo)
+public System.Threading.Tasks.Task<bool> LaunchDirectoryInfoAsync(Avalonia.Platform.Storage.ILauncher launcher, System.IO.DirectoryInfo directoryInfo)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `directoryInfo` | The directory. |
-| `launcher` | ILauncher instance. |
+#### Parameters
+
+`launcher` [Avalonia.Platform.Storage.ILauncher](xref:Avalonia.Platform.Storage.ILauncher)
+
+[ILauncher](xref:Avalonia.Platform.Storage.ILauncher) instance.
+
+
+`directoryInfo` System.IO.DirectoryInfo
+
+The directory.
+
+
+#### Returns
+
+System.Threading.Tasks.Task&lt;bool&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-28cf8eab98"></span>
 
-### LaunchFileInfoAsync
+### LaunchFileInfoAsync Method
 
 Starts the default app associated with the specified storage file.
 
 ```csharp
-public System.Threading.Tasks.Task<Boolean> LaunchFileInfoAsync(Avalonia.Platform.Storage.ILauncher launcher, System.IO.FileInfo fileInfo)
+public System.Threading.Tasks.Task<bool> LaunchFileInfoAsync(Avalonia.Platform.Storage.ILauncher launcher, System.IO.FileInfo fileInfo)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `fileInfo` | The file. |
-| `launcher` | ILauncher instance. |
+#### Parameters
+
+`launcher` [Avalonia.Platform.Storage.ILauncher](xref:Avalonia.Platform.Storage.ILauncher)
+
+[ILauncher](xref:Avalonia.Platform.Storage.ILauncher) instance.
+
+
+`fileInfo` System.IO.FileInfo
+
+The file.
+
+
+#### Returns
+
+System.Threading.Tasks.Task&lt;bool&gt;
+
+
+</section>
 
 </ApiRefPage>
 

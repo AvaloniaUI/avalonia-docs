@@ -47,7 +47,7 @@ public class BindingOperations
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> BindingOperations
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> BindingOperations
 </div>
 </div>
 
@@ -55,11 +55,13 @@ public class BindingOperations
 
 | Name | Description |
 | --- | --- |
-| [GetBindingExpressionBase](#uid-508788999b) | Retrieves the Avalonia.Data.BindingExpressionBase that is currently active on the specified property. |
+| [GetBindingExpressionBase](#uid-508788999b) | Retrieves the [Avalonia.Data.BindingExpressionBase](xref:Avalonia.Data.BindingExpressionBase) that is currently active on the specified property. |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-508788999b"></span>
 
-### GetBindingExpressionBase
+### GetBindingExpressionBase Method
 
 Retrieves the [Avalonia.Data.BindingExpressionBase](xref:Avalonia.Data.BindingExpressionBase) that is currently active on the
 specified property.
@@ -68,13 +70,27 @@ specified property.
 public Avalonia.Data.BindingExpressionBase GetBindingExpressionBase(Avalonia.AvaloniaObject target, Avalonia.AvaloniaProperty property)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `property` | The binding target property from which to retrieve the binding expression. |
-| `target` | The [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject) from which to retrieve the binding expression. |
+#### Parameters
 
-Returns: The [Avalonia.Data.BindingExpressionBase](xref:Avalonia.Data.BindingExpressionBase) object that is active on the given property or
+`target` [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject)
+
+The [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject) from which to retrieve the binding expression.
+
+
+`property` [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty)
+
+The binding target property from which to retrieve the binding expression.
+
+
+#### Returns
+
+[Avalonia.Data.BindingExpressionBase](xref:Avalonia.Data.BindingExpressionBase)
+
+The [Avalonia.Data.BindingExpressionBase](xref:Avalonia.Data.BindingExpressionBase) object that is active on the given property or
 null if no binding expression is active on the given property.
+
+
+</section>
 
 ## Fields
 
@@ -82,13 +98,17 @@ null if no binding expression is active on the given property.
 | --- | --- |
 | [DoNothing](#uid-b09e2624c3) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-b09e2624c3"></span>
 
-### DoNothing
+### DoNothing Field
 
 ```csharp
-public Object DoNothing
+public object DoNothing
 ```
+
+</section>
 
 </ApiRefPage>
 

@@ -47,7 +47,7 @@ public class FbdevOutput
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> FbdevOutput
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> FbdevOutput
 </div>
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Implements:</span> <a href="output/ioutputbackend">IOutputBackend</a>, <a href="../platform/surfaces/iframebufferplatformsurface">IFramebufferPlatformSurface</a>, <a href="../platform/surfaces/iplatformrendersurface">IPlatformRenderSurface</a>, IDisposable
@@ -64,9 +64,11 @@ public class FbdevOutput
 
 ### FbdevOutput overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-45dd3957aa"></span>
 
-#### FbdevOutput
+#### FbdevOutput Constructor
 
 Create a Linux frame buffer device output
 
@@ -74,32 +76,56 @@ Create a Linux frame buffer device output
 public FbdevOutput(Avalonia.LinuxFramebuffer.Output.FbDevOutputOptions options)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `options` | Options |
+##### Parameters
+
+`options` [Avalonia.LinuxFramebuffer.Output.FbDevOutputOptions](xref:Avalonia.LinuxFramebuffer.Output.FbDevOutputOptions)
+
+Options
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-b28f6697ae"></span>
 
-#### FbdevOutput
+#### FbdevOutput Constructor
 
 Create a Linux frame buffer device output
 
 ```csharp
-public FbdevOutput(String fileName)
+public FbdevOutput(string fileName)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `fileName` | The frame buffer device name.
-Defaults to the value in environment variable FRAMEBUFFER or /dev/fb0 when FRAMEBUFFER is not set |
+##### Parameters
+
+`fileName` string
+
+The frame buffer device name.
+Defaults to the value in environment variable FRAMEBUFFER or /dev/fb0 when FRAMEBUFFER is not set
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-a3f462a019"></span>
 
-#### FbdevOutput
+#### FbdevOutput Constructor
 
 ```csharp
-public FbdevOutput(String fileName, Nullable<Avalonia.Platform.PixelFormat> format)
+public FbdevOutput(string fileName, Nullable<Avalonia.Platform.PixelFormat> format)
 ```
+
+##### Parameters
+
+`fileName` string
+
+
+`format` Nullable&lt;[Avalonia.Platform.PixelFormat](xref:Avalonia.Platform.PixelFormat)&gt;
+
+
+</section>
 
 ## Methods
 
@@ -109,29 +135,59 @@ public FbdevOutput(String fileName, Nullable<Avalonia.Platform.PixelFormat> form
 | [Dispose](#uid-ae3043c7e0) | No summary available. |
 | [Lock](#uid-e8ddbb44af) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-1d19b27d76"></span>
 
-### CreateFramebufferRenderTarget
+### CreateFramebufferRenderTarget Method
 
 ```csharp
 public Avalonia.Platform.Surfaces.IFramebufferRenderTarget CreateFramebufferRenderTarget()
 ```
 
+#### Returns
+
+[Avalonia.Platform.Surfaces.IFramebufferRenderTarget](xref:Avalonia.Platform.Surfaces.IFramebufferRenderTarget)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-ae3043c7e0"></span>
 
-### Dispose
+### Dispose Method
 
 ```csharp
-public Void Dispose()
+public void Dispose()
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-e8ddbb44af"></span>
 
-### Lock
+### Lock Method
 
 ```csharp
 public Avalonia.Platform.ILockedFramebuffer Lock(RenderTargetSceneInfo _, Avalonia.Platform.Surfaces.FramebufferLockProperties& properties)
 ```
+
+#### Parameters
+
+`_` RenderTargetSceneInfo
+
+
+`properties` [Avalonia.Platform.Surfaces.FramebufferLockProperties](xref:Avalonia.Platform.Surfaces.FramebufferLockProperties)&amp;
+
+
+#### Returns
+
+[Avalonia.Platform.ILockedFramebuffer](xref:Avalonia.Platform.ILockedFramebuffer)
+
+
+</section>
 
 ## Properties
 
@@ -141,29 +197,41 @@ public Avalonia.Platform.ILockedFramebuffer Lock(RenderTargetSceneInfo _, Avalon
 | [PixelSize](#uid-15e00ce680) | No summary available. |
 | [Scaling](#uid-bf3310dec9) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-6326ebf4db"></span>
 
-### Id
+### Id Property
 
 ```csharp
-public String Id { get; set; }
+public string Id { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-15e00ce680"></span>
 
-### PixelSize
+### PixelSize Property
 
 ```csharp
 public Avalonia.PixelSize PixelSize { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-bf3310dec9"></span>
 
-### Scaling
+### Scaling Property
 
 ```csharp
-public Double Scaling { get; set; }
+public double Scaling { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

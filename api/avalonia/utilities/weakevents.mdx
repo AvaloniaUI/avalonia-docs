@@ -47,7 +47,7 @@ public class WeakEvents
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> WeakEvents
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> WeakEvents
 </div>
 </div>
 
@@ -57,26 +57,32 @@ public class WeakEvents
 | --- | --- |
 | [WeakEvents](#uid-663ba98565) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-663ba98565"></span>
 
-### WeakEvents
+### WeakEvents Constructor
 
 ```csharp
 public WeakEvents()
 ```
 
+</section>
+
 ## Fields
 
 | Name | Description |
 | --- | --- |
-| [AvaloniaPropertyChanged](#uid-6a6d501159) | Represents PropertyChanged event from Avalonia.AvaloniaObject |
-| [CollectionChanged](#uid-bde14cac3c) | Represents CollectionChanged event from System.Collections.Specialized.INotifyCollectionChanged |
-| [CommandCanExecuteChanged](#uid-69e6eb8413) | Represents CanExecuteChanged event from System.Windows.Input.ICommand |
-| [ThreadSafePropertyChanged](#uid-58cce5e149) | Represents PropertyChanged event from System.ComponentModel.INotifyPropertyChanged with auto-dispatching to the UI thread |
+| [AvaloniaPropertyChanged](#uid-6a6d501159) | Represents PropertyChanged event from [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject) |
+| [CollectionChanged](#uid-bde14cac3c) | Represents CollectionChanged event from [System.Collections.Specialized.INotifyCollectionChanged](xref:System.Collections.Specialized.INotifyCollectionChanged) |
+| [CommandCanExecuteChanged](#uid-69e6eb8413) | Represents CanExecuteChanged event from [System.Windows.Input.ICommand](xref:System.Windows.Input.ICommand) |
+| [ThreadSafePropertyChanged](#uid-58cce5e149) | Represents PropertyChanged event from [System.ComponentModel.INotifyPropertyChanged](xref:System.ComponentModel.INotifyPropertyChanged) with auto-dispatching to the UI thread |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-6a6d501159"></span>
 
-### AvaloniaPropertyChanged
+### AvaloniaPropertyChanged Field
 
 Represents PropertyChanged event from [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject)
 
@@ -84,9 +90,13 @@ Represents PropertyChanged event from [Avalonia.AvaloniaObject](xref:Avalonia.Av
 public Avalonia.Utilities.WeakEvent<TSender,TEventArgs><Avalonia.AvaloniaObject, Avalonia.AvaloniaPropertyChangedEventArgs> AvaloniaPropertyChanged
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-bde14cac3c"></span>
 
-### CollectionChanged
+### CollectionChanged Field
 
 Represents CollectionChanged event from [System.Collections.Specialized.INotifyCollectionChanged](xref:System.Collections.Specialized.INotifyCollectionChanged)
 
@@ -94,9 +104,13 @@ Represents CollectionChanged event from [System.Collections.Specialized.INotifyC
 public Avalonia.Utilities.WeakEvent<TSender,TEventArgs><System.Collections.Specialized.INotifyCollectionChanged, System.Collections.Specialized.NotifyCollectionChangedEventArgs> CollectionChanged
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-69e6eb8413"></span>
 
-### CommandCanExecuteChanged
+### CommandCanExecuteChanged Field
 
 Represents CanExecuteChanged event from [System.Windows.Input.ICommand](xref:System.Windows.Input.ICommand)
 
@@ -104,15 +118,21 @@ Represents CanExecuteChanged event from [System.Windows.Input.ICommand](xref:Sys
 public Avalonia.Utilities.WeakEvent<TSender,TEventArgs><System.Windows.Input.ICommand, EventArgs> CommandCanExecuteChanged
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-58cce5e149"></span>
 
-### ThreadSafePropertyChanged
+### ThreadSafePropertyChanged Field
 
 Represents PropertyChanged event from [System.ComponentModel.INotifyPropertyChanged](xref:System.ComponentModel.INotifyPropertyChanged) with auto-dispatching to the UI thread
 
 ```csharp
 public Avalonia.Utilities.WeakEvent<TSender,TEventArgs><System.ComponentModel.INotifyPropertyChanged, System.ComponentModel.PropertyChangedEventArgs> ThreadSafePropertyChanged
 ```
+
+</section>
 
 </ApiRefPage>
 

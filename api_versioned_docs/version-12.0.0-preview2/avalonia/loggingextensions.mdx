@@ -47,7 +47,7 @@ public class LoggingExtensions
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> LoggingExtensions
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> LoggingExtensions
 </div>
 </div>
 
@@ -57,52 +57,119 @@ public class LoggingExtensions
 | --- | --- |
 | [LogToDelegate](#uid-52dbc3a8d1) | No summary available. |
 | [LogToTextWriter](#uid-71d387a690) | Logs Avalonia events to a TextWriter |
-| [LogToTrace](#uid-72a79dec94) | Logs Avalonia events to the System.Diagnostics.Trace sink. |
+| [LogToTrace](#uid-72a79dec94) | Logs Avalonia events to the [System.Diagnostics.Trace](xref:System.Diagnostics.Trace) sink. |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-52dbc3a8d1"></span>
 
-### LogToDelegate
+### LogToDelegate Method
 
 ```csharp
-public Avalonia.AppBuilder LogToDelegate(Avalonia.AppBuilder builder, Action<String> logCallback, Avalonia.Logging.LogEventLevel level, String[] areas)
+public Avalonia.AppBuilder LogToDelegate(Avalonia.AppBuilder builder, Action<string> logCallback, Avalonia.Logging.LogEventLevel level, string[] areas)
 ```
+
+#### Parameters
+
+`builder` [Avalonia.AppBuilder](xref:Avalonia.AppBuilder)
+
+
+`logCallback` Action&lt;string&gt;
+
+
+`level` [Avalonia.Logging.LogEventLevel](xref:Avalonia.Logging.LogEventLevel)
+
+
+`areas` string[]
+
+
+#### Returns
+
+[Avalonia.AppBuilder](xref:Avalonia.AppBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-71d387a690"></span>
 
-### LogToTextWriter
+### LogToTextWriter Method
 
 Logs Avalonia events to a TextWriter
 
 ```csharp
-public Avalonia.AppBuilder LogToTextWriter(Avalonia.AppBuilder builder, System.IO.TextWriter writer, Avalonia.Logging.LogEventLevel level, String[] areas)
+public Avalonia.AppBuilder LogToTextWriter(Avalonia.AppBuilder builder, System.IO.TextWriter writer, Avalonia.Logging.LogEventLevel level, string[] areas)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `areas` | The areas to log. Valid values are listed in [Avalonia.Logging.LogArea](xref:Avalonia.Logging.LogArea). |
-| `builder` | The app builder instance. |
-| `level` | The minimum level to log. |
-| `writer` | The TextWriter that's used for log events. |
+#### Parameters
 
-Returns: The app builder instance.
+`builder` [Avalonia.AppBuilder](xref:Avalonia.AppBuilder)
+
+The app builder instance.
+
+
+`writer` System.IO.TextWriter
+
+The TextWriter that's used for log events.
+
+
+`level` [Avalonia.Logging.LogEventLevel](xref:Avalonia.Logging.LogEventLevel)
+
+The minimum level to log.
+
+
+`areas` string[]
+
+The areas to log. Valid values are listed in [Avalonia.Logging.LogArea](xref:Avalonia.Logging.LogArea).
+
+
+#### Returns
+
+[Avalonia.AppBuilder](xref:Avalonia.AppBuilder)
+
+The app builder instance.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-72a79dec94"></span>
 
-### LogToTrace
+### LogToTrace Method
 
 Logs Avalonia events to the [System.Diagnostics.Trace](xref:System.Diagnostics.Trace) sink.
 
 ```csharp
-public Avalonia.AppBuilder LogToTrace(Avalonia.AppBuilder builder, Avalonia.Logging.LogEventLevel level, String[] areas)
+public Avalonia.AppBuilder LogToTrace(Avalonia.AppBuilder builder, Avalonia.Logging.LogEventLevel level, string[] areas)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `areas` | The areas to log. Valid values are listed in [Avalonia.Logging.LogArea](xref:Avalonia.Logging.LogArea). |
-| `builder` | The app builder instance. |
-| `level` | The minimum level to log. |
+#### Parameters
 
-Returns: The app builder instance.
+`builder` [Avalonia.AppBuilder](xref:Avalonia.AppBuilder)
+
+The app builder instance.
+
+
+`level` [Avalonia.Logging.LogEventLevel](xref:Avalonia.Logging.LogEventLevel)
+
+The minimum level to log.
+
+
+`areas` string[]
+
+The areas to log. Valid values are listed in [Avalonia.Logging.LogArea](xref:Avalonia.Logging.LogArea).
+
+
+#### Returns
+
+[Avalonia.AppBuilder](xref:Avalonia.AppBuilder)
+
+The app builder instance.
+
+
+</section>
 
 </ApiRefPage>
 

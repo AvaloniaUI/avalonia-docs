@@ -53,7 +53,7 @@ public class ItemSelectionEventTriggers
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> ItemSelectionEventTriggers
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> ItemSelectionEventTriggers
 </div>
 </div>
 
@@ -65,77 +65,141 @@ public class ItemSelectionEventTriggers
 | [HasToggleSelectionModifier](#uid-c8fad760c9) | Analyses an input event received by a selectable element, and determines whether the action should trigger toggle selection. |
 | [ShouldTriggerSelection (2 overloads)](#uid-b4c5552f97) | Analyses an input event received by a selectable element, and determines whether the action should trigger selection on press, on release, or not at all. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-f31980b869"></span>
 
-### HasRangeSelectionModifier
+### HasRangeSelectionModifier Method
 
 Analyses an input event received by a selectable element, and determines whether the action should trigger range selection.
 
 ```csharp
-public Boolean HasRangeSelectionModifier(Avalonia.Visual selectable, Avalonia.Interactivity.RoutedEventArgs eventArgs)
+public bool HasRangeSelectionModifier(Avalonia.Visual selectable, Avalonia.Interactivity.RoutedEventArgs eventArgs)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `eventArgs` | The event to analyse. |
-| `selectable` | The selectable element which is processing the event. |
+#### Parameters
+
+`selectable` [Avalonia.Visual](xref:Avalonia.Visual)
+
+The selectable element which is processing the event.
+
+
+`eventArgs` [Avalonia.Interactivity.RoutedEventArgs](xref:Avalonia.Interactivity.RoutedEventArgs)
+
+The event to analyse.
+
+
+#### Returns
+
+bool
+
 
 #### See also
 
 - [Avalonia.Input.Platform.PlatformHotkeyConfiguration.SelectionModifiers](xref:Avalonia.Input.Platform.PlatformHotkeyConfiguration.SelectionModifiers)
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-c8fad760c9"></span>
 
-### HasToggleSelectionModifier
+### HasToggleSelectionModifier Method
 
 Analyses an input event received by a selectable element, and determines whether the action should trigger toggle selection.
 
 ```csharp
-public Boolean HasToggleSelectionModifier(Avalonia.Visual selectable, Avalonia.Interactivity.RoutedEventArgs eventArgs)
+public bool HasToggleSelectionModifier(Avalonia.Visual selectable, Avalonia.Interactivity.RoutedEventArgs eventArgs)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `eventArgs` | The event to analyse. |
-| `selectable` | The selectable element which is processing the event. |
+#### Parameters
+
+`selectable` [Avalonia.Visual](xref:Avalonia.Visual)
+
+The selectable element which is processing the event.
+
+
+`eventArgs` [Avalonia.Interactivity.RoutedEventArgs](xref:Avalonia.Interactivity.RoutedEventArgs)
+
+The event to analyse.
+
+
+#### Returns
+
+bool
+
 
 #### See also
 
 - [Avalonia.Input.Platform.PlatformHotkeyConfiguration.CommandModifiers](xref:Avalonia.Input.Platform.PlatformHotkeyConfiguration.CommandModifiers)
 
+</section>
+
 <span id="uid-b4c5552f97"></span>
 
 ### ShouldTriggerSelection overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-a4beef0df5"></span>
 
-#### ShouldTriggerSelection
+#### ShouldTriggerSelection Method
 
 Analyses an input event received by a selectable element, and determines whether the action should trigger selection on press, on release, or not at all.
 
 ```csharp
-public Boolean ShouldTriggerSelection(Avalonia.Visual selectable, Avalonia.Input.KeyEventArgs eventArgs)
+public bool ShouldTriggerSelection(Avalonia.Visual selectable, Avalonia.Input.KeyEventArgs eventArgs)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `eventArgs` | The event to analyse. |
-| `selectable` | The selectable element which is processing the event. |
+##### Parameters
+
+`selectable` [Avalonia.Visual](xref:Avalonia.Visual)
+
+The selectable element which is processing the event.
+
+
+`eventArgs` [Avalonia.Input.KeyEventArgs](xref:Avalonia.Input.KeyEventArgs)
+
+The event to analyse.
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-408a4f85ff"></span>
 
-#### ShouldTriggerSelection
+#### ShouldTriggerSelection Method
 
 Analyses an input event received by a selectable element, and determines whether the action should trigger selection on press, on release, or not at all.
 
 ```csharp
-public Boolean ShouldTriggerSelection(Avalonia.Visual selectable, Avalonia.Input.PointerEventArgs eventArgs)
+public bool ShouldTriggerSelection(Avalonia.Visual selectable, Avalonia.Input.PointerEventArgs eventArgs)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `eventArgs` | The event to analyse. |
-| `selectable` | The selectable element which is processing the event. |
+##### Parameters
+
+`selectable` [Avalonia.Visual](xref:Avalonia.Visual)
+
+The selectable element which is processing the event.
+
+
+`eventArgs` [Avalonia.Input.PointerEventArgs](xref:Avalonia.Input.PointerEventArgs)
+
+The event to analyse.
+
+
+##### Returns
+
+bool
+
+
+</section>
 
 </ApiRefPage>
 

@@ -50,7 +50,7 @@ public interface IResourceDictionary
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Implements:</span> <a href="iresourcenode">IResourceNode</a>, <a href="iresourceprovider">IResourceProvider</a>, ICollection&lt;KeyValuePair&lt;Object,Object&gt;&gt;, IDictionary&lt;Object,Object&gt;, IEnumerable&lt;KeyValuePair&lt;Object,Object&gt;&gt;, IEnumerable
+<span className="apiref-page__meta-label">Implements:</span> <a href="iresourcenode">IResourceNode</a>, <a href="iresourceprovider">IResourceProvider</a>, ICollection&lt;KeyValuePair&lt;object,object&gt;&gt;, IDictionary&lt;object,object&gt;, IEnumerable&lt;KeyValuePair&lt;object,object&gt;&gt;, IEnumerable
 </div>
 </div>
 
@@ -61,9 +61,11 @@ public interface IResourceDictionary
 | [MergedDictionaries](#uid-c93dfb2260) | Gets a collection of child resource dictionaries. |
 | [ThemeDictionaries](#uid-1861259eac) | Gets a collection of merged resource dictionaries that are specifically keyed and composed to address theme scenarios. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-c93dfb2260"></span>
 
-### MergedDictionaries
+### MergedDictionaries Property
 
 Gets a collection of child resource dictionaries.
 
@@ -71,15 +73,21 @@ Gets a collection of child resource dictionaries.
 public System.Collections.Generic.IList<Avalonia.Controls.IResourceProvider> MergedDictionaries { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-1861259eac"></span>
 
-### ThemeDictionaries
+### ThemeDictionaries Property
 
 Gets a collection of merged resource dictionaries that are specifically keyed and composed to address theme scenarios.
 
 ```csharp
 public System.Collections.Generic.IDictionary<Avalonia.Styling.ThemeVariant, Avalonia.Controls.IThemeVariantProvider> ThemeDictionaries { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

@@ -1,0 +1,300 @@
+---
+title: 'TypedBinding<TIn, TOut>'
+hide_title: true
+slug: '/avalonia/experimental/data/typedbinding-2'
+uid: 'Avalonia.Experimental.Data.TypedBinding`2'
+commentId: 'T:Avalonia.Experimental.Data.TypedBinding`2'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.TreeDataGrid'
+assembly: 'Avalonia.Controls.TreeDataGrid'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Experimental.Data'
+tfms:
+  - 'net8.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">TypedBinding&lt;TIn, TOut&gt; Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Experimental.Data</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A binding whose input and output are strongly-typed.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class TypedBinding<TIn, TOut>
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> TypedBinding&lt;TIn, TOut&gt;
+</div>
+</div>
+
+## Remarks
+
+[Avalonia.Experimental.Data.TypedBinding&lt;T1, T2&gt;](xref:Avalonia.Experimental.Data.TypedBinding%602) represents a strongly-typed binding as opposed to
+[Avalonia.Data.Binding](xref:Avalonia.Data.Binding) which boxes value types. It is represented as a set of delegates:
+
+- [Avalonia.Experimental.Data.TypedBinding&lt;T1, T2&gt;.Read](xref:Avalonia.Experimental.Data.TypedBinding%602.Read) reads the value given a binding input
+- [Avalonia.Experimental.Data.TypedBinding&lt;T1, T2&gt;.Write](xref:Avalonia.Experimental.Data.TypedBinding%602.Write) writes a value given a binding input
+- [Avalonia.Experimental.Data.TypedBinding&lt;T1, T2&gt;.Links](xref:Avalonia.Experimental.Data.TypedBinding%602.Links) holds a collection of delegates which when passed a binding input
+return each object traversed by [Avalonia.Experimental.Data.TypedBinding&lt;T1, T2&gt;.Read](xref:Avalonia.Experimental.Data.TypedBinding%602.Read). For example if Read is implemented
+as `x =&gt; x.Foo.Bar.Baz` then there would be three links: `x =&gt; x.Foo`, `x =&gt; x.Foo.Bar`
+and `x =&gt; x.Foo.Bar.Baz`. These links are used to subscribe to change notifications.
+
+This class represents a binding which has not been instantiated on an object. When the
+[Avalonia.Experimental.Data.TypedBinding&lt;T1, T2&gt;.Bind(Avalonia.AvaloniaObject,Avalonia.DirectPropertyBase&#123;\`1&#125;)](xref:Avalonia.Experimental.Data.TypedBinding%602.Bind%28Avalonia.AvaloniaObject%2CAvalonia.DirectPropertyBase%7B%601%7D%29) or
+[Avalonia.Experimental.Data.TypedBinding&lt;T1, T2&gt;.Bind(Avalonia.AvaloniaObject,Avalonia.StyledProperty&#123;\`1&#125;)](xref:Avalonia.Experimental.Data.TypedBinding%602.Bind%28Avalonia.AvaloniaObject%2CAvalonia.StyledProperty%7B%601%7D%29) methods are called, then
+an instance of [Avalonia.Experimental.Data.Core.TypedBindingExpression&lt;T1, T2&gt;](xref:Avalonia.Experimental.Data.Core.TypedBindingExpression%602) is created which represents
+the binding instantiated on that object.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [TypedBinding&lt;TIn, TOut&gt;](#uid-a23e510b93) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a23e510b93"></span>
+
+### TypedBinding&lt;TIn, TOut&gt; Constructor
+
+```csharp
+public TypedBinding<TIn, TOut>()
+```
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Bind (2 overloads)](#uid-e0798bbb7d) | No summary available. |
+| [Instance](#uid-1bc71e6328) | Instances the binding on a data source. |
+
+<span id="uid-e0798bbb7d"></span>
+
+### Bind overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2db9f87f84"></span>
+
+#### Bind Method
+
+```csharp
+public IDisposable Bind(Avalonia.AvaloniaObject target, Avalonia.DirectPropertyBase<TOut> property)
+```
+
+##### Parameters
+
+`target` [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject)
+
+
+`property` Avalonia.DirectPropertyBase&lt;TOut&gt;
+
+
+##### Returns
+
+IDisposable
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e4e194140c"></span>
+
+#### Bind Method
+
+```csharp
+public IDisposable Bind(Avalonia.AvaloniaObject target, Avalonia.StyledProperty<TOut> property)
+```
+
+##### Parameters
+
+`target` [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject)
+
+
+`property` Avalonia.StyledProperty&lt;TOut&gt;
+
+
+##### Returns
+
+IDisposable
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1bc71e6328"></span>
+
+### Instance Method
+
+Instances the binding on a data source.
+
+```csharp
+public Avalonia.Experimental.Data.Core.TypedBindingExpression<TIn,TOut><TIn, TOut> Instance(TIn source, Avalonia.Data.BindingMode mode)
+```
+
+#### Parameters
+
+`source` TIn
+
+The data source.
+
+
+`mode` [Avalonia.Data.BindingMode](xref:Avalonia.Data.BindingMode)
+
+The binding mode.
+
+
+#### Returns
+
+Avalonia.Experimental.Data.Core.TypedBindingExpression&lt;TIn,TOut&gt;&lt;TIn, TOut&gt;
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [FallbackValue](#uid-0280f056d4) | Gets or sets the value to use when the binding is unable to produce a value. |
+| [Links](#uid-da8d3f9b28) | Gets or sets the links in the binding chain. |
+| [Mode](#uid-36be1b3b36) | Gets or sets the binding mode. |
+| [Priority](#uid-632658dd84) | Gets or sets the binding priority. |
+| [Read](#uid-642fd26a5e) | Gets or sets the read function. |
+| [Source](#uid-eb5ced8b60) | Gets or sets the source for the binding. |
+| [Write](#uid-2a2cb2ad75) | Gets or sets the write function. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0280f056d4"></span>
+
+### FallbackValue Property
+
+Gets or sets the value to use when the binding is unable to produce a value.
+
+```csharp
+public Avalonia.Data.Optional<TOut> FallbackValue { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-da8d3f9b28"></span>
+
+### Links Property
+
+Gets or sets the links in the binding chain.
+
+```csharp
+public Func<TIn, object>[] Links { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-36be1b3b36"></span>
+
+### Mode Property
+
+Gets or sets the binding mode.
+
+```csharp
+public Avalonia.Data.BindingMode Mode { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-632658dd84"></span>
+
+### Priority Property
+
+Gets or sets the binding priority.
+
+```csharp
+public Avalonia.Data.BindingPriority Priority { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-642fd26a5e"></span>
+
+### Read Property
+
+Gets or sets the read function.
+
+```csharp
+public Func<TIn, TOut> Read { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-eb5ced8b60"></span>
+
+### Source Property
+
+Gets or sets the source for the binding.
+
+```csharp
+public Avalonia.Data.Optional<TIn> Source { get; set; }
+```
+
+#### Remarks
+
+If unset the source is the target control's [Avalonia.StyledElement.DataContext](xref:Avalonia.StyledElement.DataContext) property.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2a2cb2ad75"></span>
+
+### Write Property
+
+Gets or sets the write function.
+
+```csharp
+public Action<TIn, TOut> Write { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

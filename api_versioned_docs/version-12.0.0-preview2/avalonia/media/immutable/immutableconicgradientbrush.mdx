@@ -53,7 +53,7 @@ public class ImmutableConicGradientBrush
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="immutablegradientbrush">ImmutableGradientBrush</a> <span className="apiref-page__relation-separator">-&gt;</span> ImmutableConicGradientBrush
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="immutablegradientbrush">ImmutableGradientBrush</a> <span className="apiref-page__relation-separator">-&gt;</span> ImmutableConicGradientBrush
 </div>
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Implements:</span> <a href="../ibrush">IBrush</a>, <a href="../iconicgradientbrush">IConicGradientBrush</a>, <a href="../igradientbrush">IGradientBrush</a>
@@ -64,15 +64,17 @@ public class ImmutableConicGradientBrush
 
 | Name | Description |
 | --- | --- |
-| [ImmutableConicGradientBrush (2 overloads)](#uid-bfaaea92d6) | Initializes a new instance of the Avalonia.Media.Immutable.ImmutableConicGradientBrush class. |
+| [ImmutableConicGradientBrush (2 overloads)](#uid-bfaaea92d6) | Initializes a new instance of the [Avalonia.Media.Immutable.ImmutableConicGradientBrush](xref:Avalonia.Media.Immutable.ImmutableConicGradientBrush) class. |
 
 <span id="uid-bfaaea92d6"></span>
 
 ### ImmutableConicGradientBrush overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-ccae0037e7"></span>
 
-#### ImmutableConicGradientBrush
+#### ImmutableConicGradientBrush Constructor
 
 Initializes a new instance of the [Avalonia.Media.Immutable.ImmutableConicGradientBrush](xref:Avalonia.Media.Immutable.ImmutableConicGradientBrush) class.
 
@@ -80,17 +82,49 @@ Initializes a new instance of the [Avalonia.Media.Immutable.ImmutableConicGradie
 public ImmutableConicGradientBrush(Avalonia.Media.ConicGradientBrush source)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `source` | The brush from which this brush's properties should be copied. |
+##### Parameters
+
+`source` [Avalonia.Media.ConicGradientBrush](xref:Avalonia.Media.ConicGradientBrush)
+
+The brush from which this brush's properties should be copied.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-080391aa71"></span>
 
-#### ImmutableConicGradientBrush
+#### ImmutableConicGradientBrush Constructor
 
 ```csharp
-public ImmutableConicGradientBrush(System.Collections.Generic.IReadOnlyList<Avalonia.Media.Immutable.ImmutableGradientStop> gradientStops, Double opacity, Avalonia.Media.Immutable.ImmutableTransform transform, Nullable<Avalonia.RelativePoint> transformOrigin, Avalonia.Media.GradientSpreadMethod spreadMethod, Nullable<Avalonia.RelativePoint> center, Double angle)
+public ImmutableConicGradientBrush(System.Collections.Generic.IReadOnlyList<Avalonia.Media.Immutable.ImmutableGradientStop> gradientStops, double opacity, Avalonia.Media.Immutable.ImmutableTransform transform, Nullable<Avalonia.RelativePoint> transformOrigin, Avalonia.Media.GradientSpreadMethod spreadMethod, Nullable<Avalonia.RelativePoint> center, double angle)
 ```
+
+##### Parameters
+
+`gradientStops` System.Collections.Generic.IReadOnlyList&lt;[Avalonia.Media.Immutable.ImmutableGradientStop](xref:Avalonia.Media.Immutable.ImmutableGradientStop)&gt;
+
+
+`opacity` double
+
+
+`transform` [Avalonia.Media.Immutable.ImmutableTransform](xref:Avalonia.Media.Immutable.ImmutableTransform)
+
+
+`transformOrigin` Nullable&lt;[Avalonia.RelativePoint](xref:Avalonia.RelativePoint)&gt;
+
+
+`spreadMethod` [Avalonia.Media.GradientSpreadMethod](xref:Avalonia.Media.GradientSpreadMethod)
+
+
+`center` Nullable&lt;[Avalonia.RelativePoint](xref:Avalonia.RelativePoint)&gt;
+
+
+`angle` double
+
+
+</section>
 
 ## Properties
 
@@ -98,32 +132,40 @@ public ImmutableConicGradientBrush(System.Collections.Generic.IReadOnlyList<Aval
 | --- | --- |
 | [Angle](#uid-a6b7e07417) | Gets the starting angle for the gradient in degrees, measured from the point above the center point. |
 | [Center](#uid-ce94873060) | Gets the center point for the gradient. |
-| [GradientStops (Inherited from ImmutableGradientBrush)](immutablegradientbrush.mdx#uid-9d195fdf3e) | Gets the brush's gradient stops. |
-| [Opacity (Inherited from ImmutableGradientBrush)](immutablegradientbrush.mdx#uid-5f6e07ee47) | Gets the opacity of the brush. |
-| [SpreadMethod (Inherited from ImmutableGradientBrush)](immutablegradientbrush.mdx#uid-9b5fcc3168) | Gets the brush's spread method that defines how to draw a gradient that doesn't fill the bounds of the destination control. |
-| [Transform (Inherited from ImmutableGradientBrush)](immutablegradientbrush.mdx#uid-2c0dd3ffd3) | Gets the transform of the brush. |
-| [TransformOrigin (Inherited from ImmutableGradientBrush)](immutablegradientbrush.mdx#uid-56b8b5945b) | Gets the transform origin of the brush |
+| [GradientStops](immutablegradientbrush.mdx#uid-9d195fdf3e) | Gets the brush's gradient stops. Inherited from [ImmutableGradientBrush](immutablegradientbrush.mdx). |
+| [Opacity](immutablegradientbrush.mdx#uid-5f6e07ee47) | Gets the opacity of the brush. Inherited from [ImmutableGradientBrush](immutablegradientbrush.mdx). |
+| [SpreadMethod](immutablegradientbrush.mdx#uid-9b5fcc3168) | Gets the brush's spread method that defines how to draw a gradient that doesn't fill the bounds of the destination control. Inherited from [ImmutableGradientBrush](immutablegradientbrush.mdx). |
+| [Transform](immutablegradientbrush.mdx#uid-2c0dd3ffd3) | Gets the transform of the brush. Inherited from [ImmutableGradientBrush](immutablegradientbrush.mdx). |
+| [TransformOrigin](immutablegradientbrush.mdx#uid-56b8b5945b) | Gets the transform origin of the brush Inherited from [ImmutableGradientBrush](immutablegradientbrush.mdx). |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-a6b7e07417"></span>
 
-### Angle
+### Angle Property
 
 Gets the starting angle for the gradient in degrees, measured from
 the point above the center point.
 
 ```csharp
-public Double Angle { get; set; }
+public double Angle { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-ce94873060"></span>
 
-### Center
+### Center Property
 
 Gets the center point for the gradient.
 
 ```csharp
 public Avalonia.RelativePoint Center { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

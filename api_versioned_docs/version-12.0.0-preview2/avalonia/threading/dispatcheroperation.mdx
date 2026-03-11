@@ -47,7 +47,7 @@ public class DispatcherOperation
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> DispatcherOperation
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> DispatcherOperation
 </div>
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Derived types:</span> <a href="dispatcheroperation-1">DispatcherOperation&lt;T&gt;</a>
@@ -63,17 +63,28 @@ public class DispatcherOperation
 | [GetTask](#uid-b1d207633b) | No summary available. |
 | [Wait (2 overloads)](#uid-178e059bd4) | Waits for this operation to complete. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-cb67a1e87d"></span>
 
-### Abort
+### Abort Method
 
 ```csharp
-public Boolean Abort()
+public bool Abort()
 ```
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-312c00ca75"></span>
 
-### GetAwaiter
+### GetAwaiter Method
 
 Returns an awaiter for awaiting the completion of the operation.
 
@@ -81,44 +92,78 @@ Returns an awaiter for awaiting the completion of the operation.
 public System.Runtime.CompilerServices.TaskAwaiter GetAwaiter()
 ```
 
+#### Returns
+
+System.Runtime.CompilerServices.TaskAwaiter
+
+
+#### Remarks
+
+This method is intended to be used by compilers.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-b1d207633b"></span>
 
-### GetTask
+### GetTask Method
 
 ```csharp
 public System.Threading.Tasks.Task GetTask()
 ```
 
+#### Returns
+
+System.Threading.Tasks.Task
+
+
+</section>
+
 <span id="uid-178e059bd4"></span>
 
 ### Wait overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-6f3a3a4b4e"></span>
 
-#### Wait
+#### Wait Method
 
 Waits for this operation to complete.
 
 ```csharp
-public Void Wait()
+public void Wait()
 ```
 
-Returns: The status of the operation. To obtain the return value
+##### Returns
+
+The status of the operation. To obtain the return value
 of the invoked delegate, use the Result property.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-33eec8bde0"></span>
 
-#### Wait
+#### Wait Method
 
 Waits for this operation to complete.
 
 ```csharp
-public Void Wait(TimeSpan timeout)
+public void Wait(TimeSpan timeout)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `timeout` | The maximum amount of time to wait. |
+##### Parameters
+
+`timeout` TimeSpan
+
+The maximum amount of time to wait.
+
+
+</section>
 
 ## Properties
 
@@ -128,29 +173,41 @@ public Void Wait(TimeSpan timeout)
 | [Priority](#uid-e98b1e57bd) | No summary available. |
 | [Status](#uid-8bbc21bb30) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-1b2bdaa79a"></span>
 
-### Dispatcher
+### Dispatcher Property
 
 ```csharp
 public Avalonia.Threading.Dispatcher Dispatcher { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-e98b1e57bd"></span>
 
-### Priority
+### Priority Property
 
 ```csharp
 public Avalonia.Threading.DispatcherPriority Priority { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-8bbc21bb30"></span>
 
-### Status
+### Status Property
 
 ```csharp
 public Avalonia.Threading.DispatcherOperationStatus Status { get; set; }
 ```
+
+</section>
 
 ## Events
 
@@ -159,9 +216,11 @@ public Avalonia.Threading.DispatcherOperationStatus Status { get; set; }
 | [Aborted](#uid-2a2288d0ad) | An event that is raised when the operation is aborted or canceled. |
 | [Completed](#uid-b9f2587a42) | An event that is raised when the operation completes. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-2a2288d0ad"></span>
 
-### Aborted
+### Aborted Event
 
 An event that is raised when the operation is aborted or canceled.
 
@@ -169,15 +228,27 @@ An event that is raised when the operation is aborted or canceled.
 public event EventHandler Aborted
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-b9f2587a42"></span>
 
-### Completed
+### Completed Event
 
 An event that is raised when the operation completes.
 
 ```csharp
 public event EventHandler Completed
 ```
+
+#### Remarks
+
+Completed indicates that the operation was invoked and has
+either completed successfully or faulted. Note that a canceled
+or aborted operation is never is never considered completed.
+
+</section>
 
 </ApiRefPage>
 

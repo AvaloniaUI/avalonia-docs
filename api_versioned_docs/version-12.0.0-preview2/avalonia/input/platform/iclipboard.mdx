@@ -56,11 +56,13 @@ public interface IClipboard
 | [FlushAsync](#uid-1a1264d68c) | Permanently adds the data that is on the Clipboard so that it is available after the data's original application closes. |
 | [SetDataAsync](#uid-b5e371f49c) | Places a data object on the clipboard. The data object is responsible for providing supported formats and data upon request. |
 | [TryGetDataAsync](#uid-ee8535d426) | Retrieves data from the clipboard. |
-| [TryGetInProcessDataAsync](#uid-fcfaed595d) | Retrieves the exact instance of a Avalonia.Input.IAsyncDataTransfer previously placed on the clipboard by Avalonia.Input.Platform.IClipboard.SetDataAsync(Avalonia.Input.IAsyncDataTransfer), if any. |
+| [TryGetInProcessDataAsync](#uid-fcfaed595d) | Retrieves the exact instance of a [Avalonia.Input.IAsyncDataTransfer](xref:Avalonia.Input.IAsyncDataTransfer) previously placed on the clipboard by [Avalonia.Input.Platform.IClipboard.SetDataAsync(Avalonia.Input.IAsyncDataTransfer)](xref:Avalonia.Input.Platform.IClipboard.SetDataAsync%28Avalonia.Input.IAsyncDataTransfer%29), if any. |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-47f6c46264"></span>
 
-### ClearAsync
+### ClearAsync Method
 
 Clears any data from the system clipboard.
 
@@ -68,9 +70,18 @@ Clears any data from the system clipboard.
 public System.Threading.Tasks.Task ClearAsync()
 ```
 
+#### Returns
+
+System.Threading.Tasks.Task
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-1a1264d68c"></span>
 
-### FlushAsync
+### FlushAsync Method
 
 Permanently adds the data that is on the Clipboard so that it is available after the data's original application closes.
 
@@ -78,9 +89,22 @@ Permanently adds the data that is on the Clipboard so that it is available after
 public System.Threading.Tasks.Task FlushAsync()
 ```
 
+#### Returns
+
+System.Threading.Tasks.Task
+
+
+#### Remarks
+
+This method is only supported on the Windows platform. This method will do nothing on other platforms.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-b5e371f49c"></span>
 
-### SetDataAsync
+### SetDataAsync Method
 
 Places a data object on the clipboard.
 The data object is responsible for providing supported formats and data upon request.
@@ -89,13 +113,33 @@ The data object is responsible for providing supported formats and data upon req
 public System.Threading.Tasks.Task SetDataAsync(Avalonia.Input.IAsyncDataTransfer dataTransfer)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `dataTransfer` | The data object to set on the clipboard. |
+#### Parameters
+
+`dataTransfer` [Avalonia.Input.IAsyncDataTransfer](xref:Avalonia.Input.IAsyncDataTransfer)
+
+The data object to set on the clipboard.
+
+
+#### Returns
+
+System.Threading.Tasks.Task
+
+
+#### Remarks
+
+If `dataTransfer` is null, nothing will get placed on the clipboard and this method
+will be equivalent to [Avalonia.Input.Platform.IClipboard.ClearAsync](xref:Avalonia.Input.Platform.IClipboard.ClearAsync).
+
+The [Avalonia.Input.IAsyncDataTransfer](xref:Avalonia.Input.IAsyncDataTransfer) must NOT be disposed by the caller after this call.
+The clipboard will dispose of it automatically when it becomes unused.
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-ee8535d426"></span>
 
-### TryGetDataAsync
+### TryGetDataAsync Method
 
 Retrieves data from the clipboard.
 
@@ -103,9 +147,25 @@ Retrieves data from the clipboard.
 public System.Threading.Tasks.Task<Avalonia.Input.IAsyncDataTransfer> TryGetDataAsync()
 ```
 
+#### Returns
+
+System.Threading.Tasks.Task&lt;[Avalonia.Input.IAsyncDataTransfer](xref:Avalonia.Input.IAsyncDataTransfer)&gt;
+
+
+#### Remarks
+
+The returned [Avalonia.Input.IAsyncDataTransfer](xref:Avalonia.Input.IAsyncDataTransfer) MUST be disposed by the caller.
+
+Avoid storing the returned [Avalonia.Input.IAsyncDataTransfer](xref:Avalonia.Input.IAsyncDataTransfer) instance for a long time:
+use it, then dispose it as soon as possible.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-fcfaed595d"></span>
 
-### TryGetInProcessDataAsync
+### TryGetInProcessDataAsync Method
 
 Retrieves the exact instance of a [Avalonia.Input.IAsyncDataTransfer](xref:Avalonia.Input.IAsyncDataTransfer) previously placed on the clipboard
 by [Avalonia.Input.Platform.IClipboard.SetDataAsync(Avalonia.Input.IAsyncDataTransfer)](xref:Avalonia.Input.Platform.IClipboard.SetDataAsync%28Avalonia.Input.IAsyncDataTransfer%29), if any.
@@ -114,7 +174,23 @@ by [Avalonia.Input.Platform.IClipboard.SetDataAsync(Avalonia.Input.IAsyncDataTra
 public System.Threading.Tasks.Task<Avalonia.Input.IAsyncDataTransfer> TryGetInProcessDataAsync()
 ```
 
-Returns: The data transfer object if present, null otherwise.
+#### Returns
+
+System.Threading.Tasks.Task&lt;[Avalonia.Input.IAsyncDataTransfer](xref:Avalonia.Input.IAsyncDataTransfer)&gt;
+
+The data transfer object if present, null otherwise.
+
+
+#### Remarks
+
+This method cannot be used to retrieve a [Avalonia.Input.IAsyncDataTransfer](xref:Avalonia.Input.IAsyncDataTransfer) set by another process.
+
+This method is only supported on Windows, macOS and X11 platforms. Other platforms will always return null.
+
+Contrary to [Avalonia.Input.Platform.IClipboard.TryGetDataAsync](xref:Avalonia.Input.Platform.IClipboard.TryGetDataAsync), the returned [Avalonia.Input.IAsyncDataTransfer](xref:Avalonia.Input.IAsyncDataTransfer) must NOT be disposed
+by the caller since it's still owned by the clipboard.
+
+</section>
 
 </ApiRefPage>
 

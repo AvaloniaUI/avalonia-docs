@@ -53,7 +53,7 @@ public class AvaloniaDictionary<TKey, TValue>
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> AvaloniaDictionary&lt;TKey, TValue&gt;
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> AvaloniaDictionary&lt;TKey, TValue&gt;
 </div>
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Implements:</span> IAvaloniaDictionary&lt;,&lt;T&gt;&gt;, IAvaloniaReadOnlyDictionary&lt;,&lt;T&gt;&gt;, ICollection&lt;KeyValuePair&lt;,&lt;T&gt;&gt;&gt;, IDictionary&lt;,&lt;T&gt;&gt;, IEnumerable&lt;KeyValuePair&lt;,&lt;T&gt;&gt;&gt;, IReadOnlyCollection&lt;KeyValuePair&lt;,&lt;T&gt;&gt;&gt;, IReadOnlyDictionary&lt;,&lt;T&gt;&gt;, ICollection, IDictionary, IEnumerable, INotifyCollectionChanged, INotifyPropertyChanged
@@ -64,15 +64,17 @@ public class AvaloniaDictionary<TKey, TValue>
 
 | Name | Description |
 | --- | --- |
-| [AvaloniaDictionary&lt;TKey, TValue&gt; (3 overloads)](#uid-51b75506c1) | Initializes a new instance of the Avalonia.Collections.AvaloniaDictionary&amp;lt;T1, T2&amp;gt; class. |
+| [AvaloniaDictionary&lt;TKey, TValue&gt; (3 overloads)](#uid-51b75506c1) | Initializes a new instance of the [Avalonia.Collections.AvaloniaDictionary&lt;T1, T2&gt;](xref:Avalonia.Collections.AvaloniaDictionary%602) class. |
 
 <span id="uid-51b75506c1"></span>
 
 ### AvaloniaDictionary&lt;TKey, TValue&gt; overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-1cc319448d"></span>
 
-#### AvaloniaDictionary&lt;TKey, TValue&gt;
+#### AvaloniaDictionary&lt;TKey, TValue&gt; Constructor
 
 Initializes a new instance of the [Avalonia.Collections.AvaloniaDictionary&lt;T1, T2&gt;](xref:Avalonia.Collections.AvaloniaDictionary%602) class.
 
@@ -80,23 +82,46 @@ Initializes a new instance of the [Avalonia.Collections.AvaloniaDictionary&lt;T1
 public AvaloniaDictionary<TKey, TValue>()
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-367f97051d"></span>
 
-#### AvaloniaDictionary&lt;TKey, TValue&gt;
+#### AvaloniaDictionary&lt;TKey, TValue&gt; Constructor
 
 ```csharp
 public AvaloniaDictionary<TKey, TValue>(System.Collections.Generic.IDictionary<TKey, TValue> dictionary, System.Collections.Generic.IEqualityComparer<TKey> comparer)
 ```
 
+##### Parameters
+
+`dictionary` System.Collections.Generic.IDictionary&lt;TKey, TValue&gt;
+
+
+`comparer` System.Collections.Generic.IEqualityComparer&lt;TKey&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-cd9463fc7c"></span>
 
-#### AvaloniaDictionary&lt;TKey, TValue&gt;
+#### AvaloniaDictionary&lt;TKey, TValue&gt; Constructor
 
 Initializes a new instance of the [Avalonia.Collections.AvaloniaDictionary&lt;T1, T2&gt;](xref:Avalonia.Collections.AvaloniaDictionary%602) class.
 
 ```csharp
-public AvaloniaDictionary<TKey, TValue>(Int32 capacity)
+public AvaloniaDictionary<TKey, TValue>(int capacity)
 ```
+
+##### Parameters
+
+`capacity` int
+
+
+</section>
 
 ## Methods
 
@@ -110,61 +135,143 @@ public AvaloniaDictionary<TKey, TValue>(Int32 capacity)
 | [Remove](#uid-c71324d6a6) | No summary available. |
 | [TryGetValue](#uid-c92bdca6aa) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-44bd517dbb"></span>
 
-### Add
+### Add Method
 
 ```csharp
-public Void Add(TKey key, TValue value)
+public void Add(TKey key, TValue value)
 ```
+
+#### Parameters
+
+`key` TKey
+
+
+`value` TValue
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-0dd8c4fd5d"></span>
 
-### Clear
+### Clear Method
 
 ```csharp
-public Void Clear()
+public void Clear()
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-16ed1ff6e4"></span>
 
-### ContainsKey
+### ContainsKey Method
 
 ```csharp
-public Boolean ContainsKey(TKey key)
+public bool ContainsKey(TKey key)
 ```
+
+#### Parameters
+
+`key` TKey
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-d6c8a242ea"></span>
 
-### CopyTo
+### CopyTo Method
 
 ```csharp
-public Void CopyTo(System.Collections.Generic.KeyValuePair<TKey, TValue>[] array, Int32 arrayIndex)
+public void CopyTo(System.Collections.Generic.KeyValuePair<TKey, TValue>[] array, int arrayIndex)
 ```
+
+#### Parameters
+
+`array` System.Collections.Generic.KeyValuePair&lt;TKey, TValue&gt;[]
+
+
+`arrayIndex` int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-2e7b7dae3f"></span>
 
-### GetEnumerator
+### GetEnumerator Method
 
 ```csharp
 public System.Collections.Generic.IEnumerator<System.Collections.Generic.KeyValuePair<TKey,TValue>> GetEnumerator()
 ```
 
+#### Returns
+
+System.Collections.Generic.IEnumerator&lt;System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-c71324d6a6"></span>
 
-### Remove
+### Remove Method
 
 ```csharp
-public Boolean Remove(TKey key)
+public bool Remove(TKey key)
 ```
+
+#### Parameters
+
+`key` TKey
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-c92bdca6aa"></span>
 
-### TryGetValue
+### TryGetValue Method
 
 ```csharp
-public Boolean TryGetValue(TKey key, TValue& value)
+public bool TryGetValue(TKey key, TValue& value)
 ```
+
+#### Parameters
+
+`key` TKey
+
+
+`value` TValue&amp;
+
+
+#### Returns
+
+bool
+
+
+</section>
 
 ## Properties
 
@@ -176,45 +283,65 @@ public Boolean TryGetValue(TKey key, TValue& value)
 | [Keys](#uid-00ab8285da) | No summary available. |
 | [Values](#uid-8511f15050) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-7e63c20e1f"></span>
 
-### Count
+### Count Property
 
 ```csharp
-public Int32 Count { get; set; }
+public int Count { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-847995fe8f"></span>
 
-### IsReadOnly
+### IsReadOnly Property
 
 ```csharp
-public Boolean IsReadOnly { get; set; }
+public bool IsReadOnly { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-a05920a999"></span>
 
-### Item
+### Item Property
 
 ```csharp
 public TValue Item { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-00ab8285da"></span>
 
-### Keys
+### Keys Property
 
 ```csharp
 public System.Collections.Generic.ICollection<TKey> Keys { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-8511f15050"></span>
 
-### Values
+### Values Property
 
 ```csharp
 public System.Collections.Generic.ICollection<TValue> Values { get; set; }
 ```
+
+</section>
 
 ## Events
 
@@ -223,9 +350,11 @@ public System.Collections.Generic.ICollection<TValue> Values { get; set; }
 | [CollectionChanged](#uid-f3b443a858) | Occurs when the collection changes. |
 | [PropertyChanged](#uid-c1b3acf80c) | Raised when a property on the collection changes. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-f3b443a858"></span>
 
-### CollectionChanged
+### CollectionChanged Event
 
 Occurs when the collection changes.
 
@@ -233,15 +362,21 @@ Occurs when the collection changes.
 public event System.Collections.Specialized.NotifyCollectionChangedEventHandler CollectionChanged
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-c1b3acf80c"></span>
 
-### PropertyChanged
+### PropertyChanged Event
 
 Raised when a property on the collection changes.
 
 ```csharp
 public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged
 ```
+
+</section>
 
 </ApiRefPage>
 

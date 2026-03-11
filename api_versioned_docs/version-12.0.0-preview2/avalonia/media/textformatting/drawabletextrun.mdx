@@ -50,7 +50,7 @@ public class DrawableTextRun
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="textrun">TextRun</a> <span className="apiref-page__relation-separator">-&gt;</span> DrawableTextRun
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="textrun">TextRun</a> <span className="apiref-page__relation-separator">-&gt;</span> DrawableTextRun
 </div>
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Derived types:</span> <a href="shapedtextrun">ShapedTextRun</a>
@@ -61,22 +61,33 @@ public class DrawableTextRun
 
 | Name | Description |
 | --- | --- |
-| [Draw](#uid-c853b04f35) | Draws the Avalonia.Media.TextFormatting.DrawableTextRun at the given origin. |
+| [Draw](#uid-c853b04f35) | Draws the [Avalonia.Media.TextFormatting.DrawableTextRun](xref:Avalonia.Media.TextFormatting.DrawableTextRun) at the given origin. |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-c853b04f35"></span>
 
-### Draw
+### Draw Method
 
 Draws the [Avalonia.Media.TextFormatting.DrawableTextRun](xref:Avalonia.Media.TextFormatting.DrawableTextRun) at the given origin.
 
 ```csharp
-public Void Draw(Avalonia.Media.DrawingContext drawingContext, Avalonia.Point origin)
+public void Draw(Avalonia.Media.DrawingContext drawingContext, Avalonia.Point origin)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `drawingContext` | The drawing context. |
-| `origin` | The origin. |
+#### Parameters
+
+`drawingContext` [Avalonia.Media.DrawingContext](xref:Avalonia.Media.DrawingContext)
+
+The drawing context.
+
+
+`origin` [Avalonia.Point](xref:Avalonia.Point)
+
+The origin.
+
+
+</section>
 
 ## Properties
 
@@ -84,23 +95,29 @@ public Void Draw(Avalonia.Media.DrawingContext drawingContext, Avalonia.Point or
 | --- | --- |
 | [Baseline](#uid-80eddb0afa) | Run baseline in ratio relative to run height |
 | [Size](#uid-913842b854) | Gets the size. |
-| [Length (Inherited from TextRun)](textrun.mdx#uid-d32ddedc42) | Gets the text source length. |
-| [Properties (Inherited from TextRun)](textrun.mdx#uid-f4da24c6cf) | A set of properties shared by every characters in the run |
-| [Text (Inherited from TextRun)](textrun.mdx#uid-d2d945f661) | Gets the text run's text. |
+| [Length](textrun.mdx#uid-d32ddedc42) | Gets the text source length. Inherited from [TextRun](textrun.mdx). |
+| [Properties](textrun.mdx#uid-f4da24c6cf) | A set of properties shared by every characters in the run Inherited from [TextRun](textrun.mdx). |
+| [Text](textrun.mdx#uid-d2d945f661) | Gets the text run's text. Inherited from [TextRun](textrun.mdx). |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-80eddb0afa"></span>
 
-### Baseline
+### Baseline Property
 
 Run baseline in ratio relative to run height
 
 ```csharp
-public Double Baseline { get; set; }
+public double Baseline { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-913842b854"></span>
 
-### Size
+### Size Property
 
 Gets the size.
 
@@ -108,11 +125,13 @@ Gets the size.
 public Avalonia.Size Size { get; set; }
 ```
 
+</section>
+
 ## Fields
 
 | Name | Description |
 | --- | --- |
-| [DefaultTextSourceLength (Inherited from TextRun)](textrun.mdx#uid-f86dc003de) | No summary available. |
+| [DefaultTextSourceLength](textrun.mdx#uid-f86dc003de) | Inherited from [TextRun](textrun.mdx). |
 
 </ApiRefPage>
 

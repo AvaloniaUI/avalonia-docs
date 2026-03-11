@@ -65,15 +65,17 @@ public struct HslColor
 
 | Name | Description |
 | --- | --- |
-| [HslColor (2 overloads)](#uid-dfb90de48d) | Initializes a new instance of the Avalonia.Media.HslColor struct. |
+| [HslColor (2 overloads)](#uid-dfb90de48d) | Initializes a new instance of the [Avalonia.Media.HslColor](xref:Avalonia.Media.HslColor) struct. |
 
 <span id="uid-dfb90de48d"></span>
 
 ### HslColor overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-570ea6bf8c"></span>
 
-#### HslColor
+#### HslColor Constructor
 
 Initializes a new instance of the [Avalonia.Media.HslColor](xref:Avalonia.Media.HslColor) struct.
 
@@ -81,35 +83,59 @@ Initializes a new instance of the [Avalonia.Media.HslColor](xref:Avalonia.Media.
 public HslColor(Avalonia.Media.Color color)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `color` | The RGB color to convert to HSL. |
+##### Parameters
+
+`color` [Avalonia.Media.Color](xref:Avalonia.Media.Color)
+
+The RGB color to convert to HSL.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-d220ba5491"></span>
 
-#### HslColor
+#### HslColor Constructor
 
 Initializes a new instance of the [Avalonia.Media.HslColor](xref:Avalonia.Media.HslColor) struct.
 
 ```csharp
-public HslColor(Double alpha, Double hue, Double saturation, Double lightness)
+public HslColor(double alpha, double hue, double saturation, double lightness)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `alpha` | The Alpha (transparency) component in the range from 0..1. |
-| `hue` | The Hue component in the range from 0..360.
-Note that 360 is equivalent to 0 and will be adjusted automatically. |
-| `lightness` | The Lightness component in the range from 0..1. |
-| `saturation` | The Saturation component in the range from 0..1. |
+##### Parameters
+
+`alpha` double
+
+The Alpha (transparency) component in the range from 0..1.
+
+
+`hue` double
+
+The Hue component in the range from 0..360.
+Note that 360 is equivalent to 0 and will be adjusted automatically.
+
+
+`saturation` double
+
+The Saturation component in the range from 0..1.
+
+
+`lightness` double
+
+The Lightness component in the range from 0..1.
+
+
+</section>
 
 ## Methods
 
 | Name | Description |
 | --- | --- |
 | [Equals (2 overloads)](#uid-a5eaa48948) | No summary available. |
-| [FromAhsl](#uid-242e5e6bf0) | Creates a new Avalonia.Media.HslColor from individual color component values. |
-| [FromHsl](#uid-9ccc16eb97) | Creates a new Avalonia.Media.HslColor from individual color component values. |
+| [FromAhsl](#uid-242e5e6bf0) | Creates a new [Avalonia.Media.HslColor](xref:Avalonia.Media.HslColor) from individual color component values. |
+| [FromHsl](#uid-9ccc16eb97) | Creates a new [Avalonia.Media.HslColor](xref:Avalonia.Media.HslColor) from individual color component values. |
 | [GetHashCode](#uid-48e48e48e2) | Gets a hashcode for this object. Hashcode is not guaranteed to be unique. |
 | [Parse](#uid-15827e9261) | Parses an HSL color string. |
 | [ToHsv (2 overloads)](#uid-3593b92da3) | Returns the HSV color model equivalent of this HSL color. |
@@ -121,95 +147,200 @@ Note that 360 is equivalent to 0 and will be adjusted automatically. |
 
 ### Equals overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-ff0c9eeed9"></span>
 
-#### Equals
+#### Equals Method
 
 ```csharp
-public Boolean Equals(Avalonia.Media.HslColor other)
+public bool Equals(Avalonia.Media.HslColor other)
 ```
+
+##### Parameters
+
+`other` [Avalonia.Media.HslColor](xref:Avalonia.Media.HslColor)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-b0afaf43ed"></span>
 
-#### Equals
+#### Equals Method
 
 ```csharp
-public Boolean Equals(Object obj)
+public bool Equals(object obj)
 ```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-242e5e6bf0"></span>
 
-### FromAhsl
+### FromAhsl Method
 
 Creates a new [Avalonia.Media.HslColor](xref:Avalonia.Media.HslColor) from individual color component values.
 
 ```csharp
-public Avalonia.Media.HslColor FromAhsl(Double a, Double h, Double s, Double l)
+public Avalonia.Media.HslColor FromAhsl(double a, double h, double s, double l)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `a` | The Alpha (transparency) component in the range from 0..1. |
-| `h` | The Hue component in the range from 0..360. |
-| `l` | The Lightness component in the range from 0..1. |
-| `s` | The Saturation component in the range from 0..1. |
+#### Parameters
 
-Returns: A new [Avalonia.Media.HslColor](xref:Avalonia.Media.HslColor) built from the individual color component values.
+`a` double
+
+The Alpha (transparency) component in the range from 0..1.
+
+
+`h` double
+
+The Hue component in the range from 0..360.
+
+
+`s` double
+
+The Saturation component in the range from 0..1.
+
+
+`l` double
+
+The Lightness component in the range from 0..1.
+
+
+#### Returns
+
+[Avalonia.Media.HslColor](xref:Avalonia.Media.HslColor)
+
+A new [Avalonia.Media.HslColor](xref:Avalonia.Media.HslColor) built from the individual color component values.
+
+
+#### Remarks
+
+This exists for symmetry with the [Avalonia.Media.Color](xref:Avalonia.Media.Color) struct; however, the
+appropriate constructor should commonly be used instead.
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-9ccc16eb97"></span>
 
-### FromHsl
+### FromHsl Method
 
 Creates a new [Avalonia.Media.HslColor](xref:Avalonia.Media.HslColor) from individual color component values.
 
 ```csharp
-public Avalonia.Media.HslColor FromHsl(Double h, Double s, Double l)
+public Avalonia.Media.HslColor FromHsl(double h, double s, double l)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `h` | The Hue component in the range from 0..360. |
-| `l` | The Lightness component in the range from 0..1. |
-| `s` | The Saturation component in the range from 0..1. |
+#### Parameters
 
-Returns: A new [Avalonia.Media.HslColor](xref:Avalonia.Media.HslColor) built from the individual color component values.
+`h` double
+
+The Hue component in the range from 0..360.
+
+
+`s` double
+
+The Saturation component in the range from 0..1.
+
+
+`l` double
+
+The Lightness component in the range from 0..1.
+
+
+#### Returns
+
+[Avalonia.Media.HslColor](xref:Avalonia.Media.HslColor)
+
+A new [Avalonia.Media.HslColor](xref:Avalonia.Media.HslColor) built from the individual color component values.
+
+
+#### Remarks
+
+This exists for symmetry with the [Avalonia.Media.Color](xref:Avalonia.Media.Color) struct; however, the
+appropriate constructor should commonly be used instead.
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-48e48e48e2"></span>
 
-### GetHashCode
+### GetHashCode Method
 
 Gets a hashcode for this object.
 Hashcode is not guaranteed to be unique.
 
 ```csharp
-public Int32 GetHashCode()
+public int GetHashCode()
 ```
 
-Returns: The hashcode for this object.
+#### Returns
+
+int
+
+The hashcode for this object.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-15827e9261"></span>
 
-### Parse
+### Parse Method
 
 Parses an HSL color string.
 
 ```csharp
-public Avalonia.Media.HslColor Parse(String s)
+public Avalonia.Media.HslColor Parse(string s)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `s` | The HSL color string to parse. |
+#### Parameters
 
-Returns: The parsed [Avalonia.Media.HslColor](xref:Avalonia.Media.HslColor).
+`s` string
+
+The HSL color string to parse.
+
+
+#### Returns
+
+[Avalonia.Media.HslColor](xref:Avalonia.Media.HslColor)
+
+The parsed [Avalonia.Media.HslColor](xref:Avalonia.Media.HslColor).
+
+
+</section>
 
 <span id="uid-3593b92da3"></span>
 
 ### ToHsv overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-3661ce715a"></span>
 
-#### ToHsv
+#### ToHsv Method
 
 Returns the HSV color model equivalent of this HSL color.
 
@@ -217,34 +348,67 @@ Returns the HSV color model equivalent of this HSL color.
 public Avalonia.Media.HsvColor ToHsv()
 ```
 
-Returns: The HSV equivalent color.
+##### Returns
+
+[Avalonia.Media.HsvColor](xref:Avalonia.Media.HsvColor)
+
+The HSV equivalent color.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-327ef5255a"></span>
 
-#### ToHsv
+#### ToHsv Method
 
 Converts the given HSLA color component values to their HSV color equivalent.
 
 ```csharp
-public Avalonia.Media.HsvColor ToHsv(Double hue, Double saturation, Double lightness, Double alpha)
+public Avalonia.Media.HsvColor ToHsv(double hue, double saturation, double lightness, double alpha)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `alpha` | The Alpha component in the range from 0..1. |
-| `hue` | The Hue component in the HSL color model in the range from 0..360. |
-| `lightness` | The Lightness component in the HSL color model in the range from 0..1. |
-| `saturation` | The Saturation component in the HSL color model in the range from 0..1. |
+##### Parameters
 
-Returns: A new [Avalonia.Media.HsvColor](xref:Avalonia.Media.HsvColor) equivalent to the given HSLA values.
+`hue` double
+
+The Hue component in the HSL color model in the range from 0..360.
+
+
+`saturation` double
+
+The Saturation component in the HSL color model in the range from 0..1.
+
+
+`lightness` double
+
+The Lightness component in the HSL color model in the range from 0..1.
+
+
+`alpha` double
+
+The Alpha component in the range from 0..1.
+
+
+##### Returns
+
+[Avalonia.Media.HsvColor](xref:Avalonia.Media.HsvColor)
+
+A new [Avalonia.Media.HsvColor](xref:Avalonia.Media.HsvColor) equivalent to the given HSLA values.
+
+
+</section>
 
 <span id="uid-ceaa63583d"></span>
 
 ### ToRgb overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-2c8294f74b"></span>
 
-#### ToRgb
+#### ToRgb Method
 
 Returns the RGB color model equivalent of this HSL color.
 
@@ -252,42 +416,99 @@ Returns the RGB color model equivalent of this HSL color.
 public Avalonia.Media.Color ToRgb()
 ```
 
-Returns: The RGB equivalent color.
+##### Returns
+
+[Avalonia.Media.Color](xref:Avalonia.Media.Color)
+
+The RGB equivalent color.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-dd1308e232"></span>
 
-#### ToRgb
+#### ToRgb Method
 
 Converts the given HSLA color component values to their RGB color equivalent.
 
 ```csharp
-public Avalonia.Media.Color ToRgb(Double hue, Double saturation, Double lightness, Double alpha)
+public Avalonia.Media.Color ToRgb(double hue, double saturation, double lightness, double alpha)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `alpha` | The Alpha component in the range from 0..1. |
-| `hue` | The Hue component in the HSL color model in the range from 0..360. |
-| `lightness` | The Lightness component in the HSL color model in the range from 0..1. |
-| `saturation` | The Saturation component in the HSL color model in the range from 0..1. |
+##### Parameters
 
-Returns: A new RGB [Avalonia.Media.Color](xref:Avalonia.Media.Color) equivalent to the given HSLA values.
+`hue` double
+
+The Hue component in the HSL color model in the range from 0..360.
+
+
+`saturation` double
+
+The Saturation component in the HSL color model in the range from 0..1.
+
+
+`lightness` double
+
+The Lightness component in the HSL color model in the range from 0..1.
+
+
+`alpha` double
+
+The Alpha component in the range from 0..1.
+
+
+##### Returns
+
+[Avalonia.Media.Color](xref:Avalonia.Media.Color)
+
+A new RGB [Avalonia.Media.Color](xref:Avalonia.Media.Color) equivalent to the given HSLA values.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-b0e056e00f"></span>
 
-### ToString
+### ToString Method
 
 ```csharp
-public String ToString()
+public string ToString()
 ```
+
+#### Returns
+
+string
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-ae06564c0e"></span>
 
-### TryParse
+### TryParse Method
 
 ```csharp
-public Boolean TryParse(String s, Avalonia.Media.HslColor& hslColor)
+public bool TryParse(string s, Avalonia.Media.HslColor& hslColor)
 ```
+
+#### Parameters
+
+`s` string
+
+
+`hslColor` [Avalonia.Media.HslColor](xref:Avalonia.Media.HslColor)&amp;
+
+
+#### Returns
+
+bool
+
+
+</section>
 
 ## Properties
 
@@ -298,47 +519,87 @@ public Boolean TryParse(String s, Avalonia.Media.HslColor& hslColor)
 | [L](#uid-b5e248362b) | Gets the Lightness component in the range from 0..1 (percentage). |
 | [S](#uid-b0aa49b918) | Gets the Saturation component in the range from 0..1 (percentage). |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-16580976f3"></span>
 
-### A
+### A Property
 
 Gets the Alpha (transparency) component in the range from 0..1 (percentage).
 
 ```csharp
-public Double A { get; set; }
+public double A { get; set; }
 ```
+
+#### Remarks
+
+- 0 is fully transparent.
+- 1 is fully opaque.
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-c671648629"></span>
 
-### H
+### H Property
 
 Gets the Hue component in the range from 0..360 (degrees).
 This is the color's location, in degrees, on a color wheel/circle from 0 to 360.
 Note that 360 is equivalent to 0 and will be adjusted automatically.
 
 ```csharp
-public Double H { get; set; }
+public double H { get; set; }
 ```
+
+#### Remarks
+
+- 0/360 degrees is Red.
+- 60 degrees is Yellow.
+- 120 degrees is Green.
+- 180 degrees is Cyan.
+- 240 degrees is Blue.
+- 300 degrees is Magenta.
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-b5e248362b"></span>
 
-### L
+### L Property
 
 Gets the Lightness component in the range from 0..1 (percentage).
 
 ```csharp
-public Double L { get; set; }
+public double L { get; set; }
 ```
+
+#### Remarks
+
+- 0 is fully black.
+- 1 is fully white.
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-b0aa49b918"></span>
 
-### S
+### S Property
 
 Gets the Saturation component in the range from 0..1 (percentage).
 
 ```csharp
-public Double S { get; set; }
+public double S { get; set; }
 ```
+
+#### Remarks
+
+- 0 is fully white (or a shade of gray) and shows no color.
+- 1 is the full color.
+
+</section>
 
 </ApiRefPage>
 

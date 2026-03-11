@@ -47,7 +47,7 @@ public class DrawingContextHelper
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> DrawingContextHelper
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> DrawingContextHelper
 </div>
 </div>
 
@@ -62,9 +62,11 @@ public class DrawingContextHelper
 
 ### RenderAsync overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-e8c4c5d2bb"></span>
 
-#### RenderAsync
+#### RenderAsync Method
 
 Renders Avalonia visual into a SKCanvas instance.
 This is useful in scenarios where canvas is not controlled by application, but received from another non avalonia api
@@ -74,16 +76,40 @@ like: SKCanvas canvas = SKDocument.BeginPage(...);
 public System.Threading.Tasks.Task RenderAsync(SkiaSharp.SKCanvas canvas, Avalonia.Visual visual)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `canvas` | Skia canvas to render into. |
-| `clipRect` | Clipping rectangle. |
-| `dpi` | Dpi of drawings. |
-| `visual` | Avalonia visual. |
+##### Parameters
+
+`canvas` SkiaSharp.SKCanvas
+
+Skia canvas to render into.
+
+
+`visual` [Avalonia.Visual](xref:Avalonia.Visual)
+
+Avalonia visual.
+
+
+`clipRect`
+
+Clipping rectangle.
+
+
+`dpi`
+
+Dpi of drawings.
+
+
+##### Returns
+
+System.Threading.Tasks.Task
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-25faa69cb9"></span>
 
-#### RenderAsync
+#### RenderAsync Method
 
 Renders Avalonia visual into a SKCanvas instance.
 This is useful in scenarios where canvas is not controlled by application, but received from another non avalonia api
@@ -93,20 +119,59 @@ like: SKCanvas canvas = SKDocument.BeginPage(...);
 public System.Threading.Tasks.Task RenderAsync(SkiaSharp.SKCanvas canvas, Avalonia.Visual visual, Avalonia.Rect clipRect, Avalonia.Vector dpi)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `canvas` | Skia canvas to render into. |
-| `clipRect` | Clipping rectangle. |
-| `dpi` | Dpi of drawings. |
-| `visual` | Avalonia visual. |
+##### Parameters
+
+`canvas` SkiaSharp.SKCanvas
+
+Skia canvas to render into.
+
+
+`visual` [Avalonia.Visual](xref:Avalonia.Visual)
+
+Avalonia visual.
+
+
+`clipRect` [Avalonia.Rect](xref:Avalonia.Rect)
+
+Clipping rectangle.
+
+
+`dpi` [Avalonia.Vector](xref:Avalonia.Vector)
+
+Dpi of drawings.
+
+
+##### Returns
+
+System.Threading.Tasks.Task
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-f6558ea199"></span>
 
-### TryCreateDashEffect
+### TryCreateDashEffect Method
 
 ```csharp
-public Boolean TryCreateDashEffect(Avalonia.Media.IPen pen, SkiaSharp.SKPathEffect& effect)
+public bool TryCreateDashEffect(Avalonia.Media.IPen pen, SkiaSharp.SKPathEffect& effect)
 ```
+
+#### Parameters
+
+`pen` [Avalonia.Media.IPen](xref:Avalonia.Media.IPen)
+
+
+`effect` SkiaSharp.SKPathEffect&amp;
+
+
+#### Returns
+
+bool
+
+
+</section>
 
 </ApiRefPage>
 

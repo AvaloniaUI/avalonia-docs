@@ -47,7 +47,7 @@ public class EglContext
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> EglContext
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> EglContext
 </div>
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Implements:</span> <a href="../../ioptionalfeatureprovider">IOptionalFeatureProvider</a>, <a href="../iglcontext">IGlContext</a>, <a href="../../platform/iplatformgraphicscontext">IPlatformGraphicsContext</a>, IDisposable
@@ -67,81 +67,172 @@ public class EglContext
 | [NotifyContextLost](#uid-ba613861c5) | No summary available. |
 | [TryGetFeature](#uid-24b6a55332) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-b84700637f"></span>
 
-### CreateSharedContext
+### CreateSharedContext Method
 
 ```csharp
 public Avalonia.OpenGL.IGlContext CreateSharedContext(System.Collections.Generic.IEnumerable<Avalonia.OpenGL.GlVersion> preferredVersions)
 ```
 
+#### Parameters
+
+`preferredVersions` System.Collections.Generic.IEnumerable&lt;[Avalonia.OpenGL.GlVersion](xref:Avalonia.OpenGL.GlVersion)&gt;
+
+
+#### Returns
+
+[Avalonia.OpenGL.IGlContext](xref:Avalonia.OpenGL.IGlContext)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-d128b06ef9"></span>
 
-### Dispose
+### Dispose Method
 
 ```csharp
-public Void Dispose()
+public void Dispose()
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-075dc13876"></span>
 
-### EnsureCurrent
+### EnsureCurrent Method
 
 ```csharp
 public IDisposable EnsureCurrent()
 ```
 
+#### Returns
+
+IDisposable
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-64200f5857"></span>
 
-### EnsureLocked
+### EnsureLocked Method
 
 ```csharp
 public IDisposable EnsureLocked()
 ```
 
+#### Returns
+
+IDisposable
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-3c1f0760a6"></span>
 
-### IsSharedWith
+### IsSharedWith Method
 
 ```csharp
-public Boolean IsSharedWith(Avalonia.OpenGL.IGlContext context)
+public bool IsSharedWith(Avalonia.OpenGL.IGlContext context)
 ```
+
+#### Parameters
+
+`context` [Avalonia.OpenGL.IGlContext](xref:Avalonia.OpenGL.IGlContext)
+
+
+#### Returns
+
+bool
+
+
+</section>
 
 <span id="uid-55e38d3faf"></span>
 
 ### MakeCurrent overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-41e17bb438"></span>
 
-#### MakeCurrent
+#### MakeCurrent Method
 
 ```csharp
 public IDisposable MakeCurrent()
 ```
 
+##### Returns
+
+IDisposable
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-170563eec0"></span>
 
-#### MakeCurrent
+#### MakeCurrent Method
 
 ```csharp
 public IDisposable MakeCurrent(Avalonia.OpenGL.Egl.EglSurface surface)
 ```
 
+##### Parameters
+
+`surface` [Avalonia.OpenGL.Egl.EglSurface](xref:Avalonia.OpenGL.Egl.EglSurface)
+
+
+##### Returns
+
+IDisposable
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-ba613861c5"></span>
 
-### NotifyContextLost
+### NotifyContextLost Method
 
 ```csharp
-public Void NotifyContextLost()
+public void NotifyContextLost()
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-24b6a55332"></span>
 
-### TryGetFeature
+### TryGetFeature Method
 
 ```csharp
-public Object TryGetFeature(Type featureType)
+public object TryGetFeature(Type featureType)
 ```
+
+#### Parameters
+
+`featureType` Type
+
+
+#### Returns
+
+object
+
+
+</section>
 
 ## Properties
 
@@ -159,93 +250,137 @@ public Object TryGetFeature(Type featureType)
 | [StencilSize](#uid-2313731b0c) | No summary available. |
 | [Version](#uid-690a56c9af) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-7a3c045abd"></span>
 
-### CanCreateSharedContext
+### CanCreateSharedContext Property
 
 ```csharp
-public Boolean CanCreateSharedContext { get; set; }
+public bool CanCreateSharedContext { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-7c3293dffe"></span>
 
-### Context
+### Context Property
 
 ```csharp
 public IntPtr Context { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-ff39096414"></span>
 
-### Display
+### Display Property
 
 ```csharp
 public Avalonia.OpenGL.Egl.EglDisplay Display { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-15ea76babb"></span>
 
-### EglInterface
+### EglInterface Property
 
 ```csharp
 public Avalonia.OpenGL.Egl.EglInterface EglInterface { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-6c20077e10"></span>
 
-### GlInterface
+### GlInterface Property
 
 ```csharp
 public Avalonia.OpenGL.GlInterface GlInterface { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-e2a0fd2c9d"></span>
 
-### IsCurrent
+### IsCurrent Property
 
 ```csharp
-public Boolean IsCurrent { get; set; }
+public bool IsCurrent { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-91022ae078"></span>
 
-### IsLost
+### IsLost Property
 
 ```csharp
-public Boolean IsLost { get; set; }
+public bool IsLost { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-f0f550bd4e"></span>
 
-### OffscreenSurface
+### OffscreenSurface Property
 
 ```csharp
 public Avalonia.OpenGL.Egl.EglSurface OffscreenSurface { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-7912f57684"></span>
 
-### SampleCount
+### SampleCount Property
 
 ```csharp
-public Int32 SampleCount { get; set; }
+public int SampleCount { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-2313731b0c"></span>
 
-### StencilSize
+### StencilSize Property
 
 ```csharp
-public Int32 StencilSize { get; set; }
+public int StencilSize { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-690a56c9af"></span>
 
-### Version
+### Version Property
 
 ```csharp
 public Avalonia.OpenGL.GlVersion Version { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

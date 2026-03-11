@@ -57,63 +57,102 @@ public interface INameScope
 | [FindAsync](#uid-0b5bb4d230) | Finds a named element in the name scope, waits for the scope to be completely populated before returning null Returned task is configured to run any continuations synchronously. |
 | [Register](#uid-0a39fc228f) | Registers an element in the name scope. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-dbae865813"></span>
 
-### Complete
+### Complete Method
 
 Marks the name scope as completed, no further registrations will be allowed
 
 ```csharp
-public Void Complete()
+public void Complete()
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-6d3e11c791"></span>
 
-### Find
+### Find Method
 
 Finds a named element in the name scope, returns immediately, doesn't traverse the name scope stack
 
 ```csharp
-public Object Find(String name)
+public object Find(string name)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `name` | The name. |
+#### Parameters
 
-Returns: The element, or null if the name was not found.
+`name` string
+
+The name.
+
+
+#### Returns
+
+object
+
+The element, or null if the name was not found.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-0b5bb4d230"></span>
 
-### FindAsync
+### FindAsync Method
 
 Finds a named element in the name scope, waits for the scope to be completely populated before returning null
 Returned task is configured to run any continuations synchronously.
 
 ```csharp
-public Avalonia.Utilities.SynchronousCompletionAsyncResult<T><Object> FindAsync(String name)
+public Avalonia.Utilities.SynchronousCompletionAsyncResult<T><object> FindAsync(string name)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `name` | The name. |
+#### Parameters
 
-Returns: The element, or null if the name was not found.
+`name` string
+
+The name.
+
+
+#### Returns
+
+Avalonia.Utilities.SynchronousCompletionAsyncResult&lt;T&gt;&lt;object&gt;
+
+The element, or null if the name was not found.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-0a39fc228f"></span>
 
-### Register
+### Register Method
 
 Registers an element in the name scope.
 
 ```csharp
-public Void Register(String name, Object element)
+public void Register(string name, object element)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `element` | The element. |
-| `name` | The element name. |
+#### Parameters
+
+`name` string
+
+The element name.
+
+
+`element` object
+
+The element.
+
+
+</section>
 
 ## Properties
 
@@ -121,15 +160,19 @@ public Void Register(String name, Object element)
 | --- | --- |
 | [IsCompleted](#uid-daaf8e4df0) | Returns whether further registrations are allowed on the scope |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-daaf8e4df0"></span>
 
-### IsCompleted
+### IsCompleted Property
 
 Returns whether further registrations are allowed on the scope
 
 ```csharp
-public Boolean IsCompleted { get; set; }
+public bool IsCompleted { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

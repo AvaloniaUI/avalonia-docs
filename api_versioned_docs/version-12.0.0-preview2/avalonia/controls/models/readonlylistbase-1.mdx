@@ -1,0 +1,129 @@
+---
+title: 'ReadOnlyListBase<T>'
+hide_title: true
+slug: '/avalonia/controls/models/readonlylistbase-1'
+uid: 'Avalonia.Controls.Models.ReadOnlyListBase`1'
+commentId: 'T:Avalonia.Controls.Models.ReadOnlyListBase`1'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.TreeDataGrid'
+assembly: 'Avalonia.Controls.TreeDataGrid'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Models'
+tfms:
+  - 'net8.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ReadOnlyListBase&lt;T&gt; Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Models</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Base class implementing a read-only list collection.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class ReadOnlyListBase<T>
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> ReadOnlyListBase&lt;T&gt;
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEnumerable&lt;&gt;, IReadOnlyCollection&lt;&gt;, IReadOnlyList&lt;&gt;, ICollection, IEnumerable, IList
+</div>
+</div>
+
+## Remarks
+
+This class should be considered internal to the [TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid) package and is not intended
+for use outside of this package.
+
+Provides a base implementation for read-only list collections, implementing both
+[System.Collections.Generic.IReadOnlyList&lt;T&gt;](xref:System.Collections.Generic.IReadOnlyList%601) and [System.Collections.IList](xref:System.Collections.IList) interfaces.
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [GetEnumerator](#uid-f3d90567ee) | Returns an enumerator that iterates through the collection. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f3d90567ee"></span>
+
+### GetEnumerator Method
+
+Returns an enumerator that iterates through the collection.
+
+```csharp
+public System.Collections.Generic.IEnumerator<T> GetEnumerator()
+```
+
+#### Returns
+
+System.Collections.Generic.IEnumerator&lt;T&gt;
+
+An enumerator that can be used to iterate through the collection.
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Count](#uid-15c658f89b) | Gets the number of elements in the collection. |
+| [Item](#uid-aa70b5e034) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-15c658f89b"></span>
+
+### Count Property
+
+Gets the number of elements in the collection.
+
+```csharp
+public int Count { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-aa70b5e034"></span>
+
+### Item Property
+
+```csharp
+public T Item { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

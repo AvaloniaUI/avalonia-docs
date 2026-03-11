@@ -60,13 +60,25 @@ public delegate RuntimeXamlLoaderConfiguration.XamlDiagnosticFunc
 | --- | --- |
 | [RuntimeXamlLoaderConfiguration.XamlDiagnosticFunc](#uid-767fc8415f) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-767fc8415f"></span>
 
-### RuntimeXamlLoaderConfiguration.XamlDiagnosticFunc
+### RuntimeXamlLoaderConfiguration.XamlDiagnosticFunc Constructor
 
 ```csharp
-public RuntimeXamlLoaderConfiguration.XamlDiagnosticFunc(Object object, IntPtr method)
+public RuntimeXamlLoaderConfiguration.XamlDiagnosticFunc(object object, IntPtr method)
 ```
+
+#### Parameters
+
+`object` object
+
+
+`method` IntPtr
+
+
+</section>
 
 ## Methods
 
@@ -76,29 +88,77 @@ public RuntimeXamlLoaderConfiguration.XamlDiagnosticFunc(Object object, IntPtr m
 | [EndInvoke](#uid-19e0a91e04) | No summary available. |
 | [Invoke](#uid-6d911ecd7f) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-0a3ab97006"></span>
 
-### BeginInvoke
+### BeginInvoke Method
 
 ```csharp
-public IAsyncResult BeginInvoke(Avalonia.Markup.Xaml.RuntimeXamlDiagnostic diagnostic, AsyncCallback callback, Object object)
+public IAsyncResult BeginInvoke(Avalonia.Markup.Xaml.RuntimeXamlDiagnostic diagnostic, AsyncCallback callback, object object)
 ```
+
+#### Parameters
+
+`diagnostic` [Avalonia.Markup.Xaml.RuntimeXamlDiagnostic](xref:Avalonia.Markup.Xaml.RuntimeXamlDiagnostic)
+
+
+`callback` AsyncCallback
+
+
+`object` object
+
+
+#### Returns
+
+IAsyncResult
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-19e0a91e04"></span>
 
-### EndInvoke
+### EndInvoke Method
 
 ```csharp
 public Avalonia.Markup.Xaml.RuntimeXamlDiagnosticSeverity EndInvoke(IAsyncResult result)
 ```
 
+#### Parameters
+
+`result` IAsyncResult
+
+
+#### Returns
+
+[Avalonia.Markup.Xaml.RuntimeXamlDiagnosticSeverity](xref:Avalonia.Markup.Xaml.RuntimeXamlDiagnosticSeverity)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-6d911ecd7f"></span>
 
-### Invoke
+### Invoke Method
 
 ```csharp
 public Avalonia.Markup.Xaml.RuntimeXamlDiagnosticSeverity Invoke(Avalonia.Markup.Xaml.RuntimeXamlDiagnostic diagnostic)
 ```
+
+#### Parameters
+
+`diagnostic` [Avalonia.Markup.Xaml.RuntimeXamlDiagnostic](xref:Avalonia.Markup.Xaml.RuntimeXamlDiagnostic)
+
+
+#### Returns
+
+[Avalonia.Markup.Xaml.RuntimeXamlDiagnosticSeverity](xref:Avalonia.Markup.Xaml.RuntimeXamlDiagnosticSeverity)
+
+
+</section>
 
 </ApiRefPage>
 

@@ -55,19 +55,31 @@ public interface IRangeValueProvider
 | --- | --- |
 | [SetValue](#uid-b4713f591e) | Sets the value of the control. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-b4713f591e"></span>
 
-### SetValue
+### SetValue Method
 
 Sets the value of the control.
 
 ```csharp
-public Void SetValue(Double value)
+public void SetValue(double value)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `value` | The value to set. |
+#### Parameters
+
+`value` double
+
+The value to set.
+
+
+#### Remarks
+
+- Windows`IRangeValueProvider.SetValue`
+- macOS`NSAccessibilityProtocol.setAccessibilityValue`
+
+</section>
 
 ## Properties
 
@@ -80,67 +92,121 @@ public Void SetValue(Double value)
 | [SmallChange](#uid-e4301bd111) | Gets the value that is added to or subtracted from the Value property when a small change is made, such as with an arrow key. |
 | [Value](#uid-c41a4f43a9) | Gets the value of the control. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-eab25c5c53"></span>
 
-### IsReadOnly
+### IsReadOnly Property
 
 Gets a value that indicates whether the value of a control is read-only.
 
 ```csharp
-public Boolean IsReadOnly { get; set; }
+public bool IsReadOnly { get; set; }
 ```
+
+#### Remarks
+
+- Windows`IRangeValueProvider.get_IsReadOnly`
+- macOSNo mapping.
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-229e6fb800"></span>
 
-### LargeChange
+### LargeChange Property
 
 Gets the value that is added to or subtracted from the Value property when a large
 change is made, such as with the PAGE DOWN key.
 
 ```csharp
-public Double LargeChange { get; set; }
+public double LargeChange { get; set; }
 ```
+
+#### Remarks
+
+- Windows`IRangeValueProvider.get_LargeChange`
+- macOSNo mapping.
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-e5320159d9"></span>
 
-### Maximum
+### Maximum Property
 
 Gets the maximum range value that is supported by the control.
 
 ```csharp
-public Double Maximum { get; set; }
+public double Maximum { get; set; }
 ```
+
+#### Remarks
+
+- Windows`IRangeValueProvider.get_Maximum`
+- macOS`NSAccessibilityProtocol.accessibilityMaxValue`
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-8be4d47bef"></span>
 
-### Minimum
+### Minimum Property
 
 Gets the minimum range value that is supported by the control.
 
 ```csharp
-public Double Minimum { get; set; }
+public double Minimum { get; set; }
 ```
+
+#### Remarks
+
+- Windows`IRangeValueProvider.get_Minimum`
+- macOS`NSAccessibilityProtocol.accessibilityMinValue`
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-e4301bd111"></span>
 
-### SmallChange
+### SmallChange Property
 
 Gets the value that is added to or subtracted from the Value property when a small
 change is made, such as with an arrow key.
 
 ```csharp
-public Double SmallChange { get; set; }
+public double SmallChange { get; set; }
 ```
+
+#### Remarks
+
+- Windows`IRangeValueProvider.get_SmallChange`
+- macOS Used by `NSAccessibilityProtocol.accessibilityPerformIncrement` and `NSAccessibilityProtocol.accessibilityPerformDecrement` to determine the changed value.
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-c41a4f43a9"></span>
 
-### Value
+### Value Property
 
 Gets the value of the control.
 
 ```csharp
-public Double Value { get; set; }
+public double Value { get; set; }
 ```
+
+#### Remarks
+
+- Windows`IRangeValueProvider.get_Value`
+- macOS`NSAccessibilityProtocol.accessibilityValue`
+
+</section>
 
 </ApiRefPage>
 

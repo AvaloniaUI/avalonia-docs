@@ -47,7 +47,7 @@ public class SimpleWebSocket
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> SimpleWebSocket
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> SimpleWebSocket
 </div>
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Implements:</span> IDisposable
@@ -62,49 +62,116 @@ public class SimpleWebSocket
 | [ReceiveMessage](#uid-852919390a) | No summary available. |
 | [SendMessage (3 overloads)](#uid-9ca267e90c) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-d812bb5f5e"></span>
 
-### Dispose
+### Dispose Method
 
 ```csharp
-public Void Dispose()
+public void Dispose()
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-852919390a"></span>
 
-### ReceiveMessage
+### ReceiveMessage Method
 
 ```csharp
 public System.Threading.Tasks.Task<Avalonia.DesignerSupport.Remote.HtmlTransport.SimpleWebSocketMessage> ReceiveMessage()
 ```
 
+#### Returns
+
+System.Threading.Tasks.Task&lt;[Avalonia.DesignerSupport.Remote.HtmlTransport.SimpleWebSocketMessage](xref:Avalonia.DesignerSupport.Remote.HtmlTransport.SimpleWebSocketMessage)&gt;
+
+
+</section>
+
 <span id="uid-9ca267e90c"></span>
 
 ### SendMessage overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-aa72447dea"></span>
 
-#### SendMessage
+#### SendMessage Method
 
 ```csharp
-public System.Threading.Tasks.Task SendMessage(Boolean isText, Byte[] data)
+public System.Threading.Tasks.Task SendMessage(bool isText, byte[] data)
 ```
+
+##### Parameters
+
+`isText` bool
+
+
+`data` byte[]
+
+
+##### Returns
+
+System.Threading.Tasks.Task
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-75e4e4a6a6"></span>
 
-#### SendMessage
+#### SendMessage Method
 
 ```csharp
-public System.Threading.Tasks.Task SendMessage(Boolean isText, Byte[] data, Int32 offset, Int32 length)
+public System.Threading.Tasks.Task SendMessage(bool isText, byte[] data, int offset, int length)
 ```
+
+##### Parameters
+
+`isText` bool
+
+
+`data` byte[]
+
+
+`offset` int
+
+
+`length` int
+
+
+##### Returns
+
+System.Threading.Tasks.Task
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-b9d7e2c563"></span>
 
-#### SendMessage
+#### SendMessage Method
 
 ```csharp
-public System.Threading.Tasks.Task SendMessage(String text)
+public System.Threading.Tasks.Task SendMessage(string text)
 ```
+
+##### Parameters
+
+`text` string
+
+
+##### Returns
+
+System.Threading.Tasks.Task
+
+
+</section>
 
 </ApiRefPage>
 

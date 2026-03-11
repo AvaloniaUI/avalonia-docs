@@ -54,13 +54,25 @@ public delegate SMLib.SmcSaveYourselfProc
 | --- | --- |
 | [SMLib.SmcSaveYourselfProc](#uid-cdb05b43ab) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-cdb05b43ab"></span>
 
-### SMLib.SmcSaveYourselfProc
+### SMLib.SmcSaveYourselfProc Constructor
 
 ```csharp
-public SMLib.SmcSaveYourselfProc(Object object, IntPtr method)
+public SMLib.SmcSaveYourselfProc(object object, IntPtr method)
 ```
+
+#### Parameters
+
+`object` object
+
+
+`method` IntPtr
+
+
+</section>
 
 ## Methods
 
@@ -70,29 +82,97 @@ public SMLib.SmcSaveYourselfProc(Object object, IntPtr method)
 | [EndInvoke](#uid-2179aacff2) | No summary available. |
 | [Invoke](#uid-1ed42945da) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-15756d2da8"></span>
 
-### BeginInvoke
+### BeginInvoke Method
 
 ```csharp
-public IAsyncResult BeginInvoke(IntPtr smcConn, IntPtr clientData, Int32 saveType, Boolean shutdown, Int32 interactStyle, Boolean fast, AsyncCallback callback, Object object)
+public IAsyncResult BeginInvoke(IntPtr smcConn, IntPtr clientData, int saveType, bool shutdown, int interactStyle, bool fast, AsyncCallback callback, object object)
 ```
+
+#### Parameters
+
+`smcConn` IntPtr
+
+
+`clientData` IntPtr
+
+
+`saveType` int
+
+
+`shutdown` bool
+
+
+`interactStyle` int
+
+
+`fast` bool
+
+
+`callback` AsyncCallback
+
+
+`object` object
+
+
+#### Returns
+
+IAsyncResult
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-2179aacff2"></span>
 
-### EndInvoke
+### EndInvoke Method
 
 ```csharp
-public Void EndInvoke(IAsyncResult result)
+public void EndInvoke(IAsyncResult result)
 ```
+
+#### Parameters
+
+`result` IAsyncResult
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-1ed42945da"></span>
 
-### Invoke
+### Invoke Method
 
 ```csharp
-public Void Invoke(IntPtr smcConn, IntPtr clientData, Int32 saveType, Boolean shutdown, Int32 interactStyle, Boolean fast)
+public void Invoke(IntPtr smcConn, IntPtr clientData, int saveType, bool shutdown, int interactStyle, bool fast)
 ```
+
+#### Parameters
+
+`smcConn` IntPtr
+
+
+`clientData` IntPtr
+
+
+`saveType` int
+
+
+`shutdown` bool
+
+
+`interactStyle` int
+
+
+`fast` bool
+
+
+</section>
 
 </ApiRefPage>
 

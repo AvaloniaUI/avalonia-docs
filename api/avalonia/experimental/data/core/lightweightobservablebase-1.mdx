@@ -1,0 +1,117 @@
+---
+title: 'LightweightObservableBase<T>'
+hide_title: true
+slug: '/avalonia/experimental/data/core/lightweightobservablebase-1'
+uid: 'Avalonia.Experimental.Data.Core.LightweightObservableBase`1'
+commentId: 'T:Avalonia.Experimental.Data.Core.LightweightObservableBase`1'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.TreeDataGrid'
+assembly: 'Avalonia.Controls.TreeDataGrid'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Experimental.Data.Core'
+tfms:
+  - 'net8.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">LightweightObservableBase&lt;T&gt; Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Experimental.Data.Core</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Lightweight base class for observable implementations.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class LightweightObservableBase<T>
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> LightweightObservableBase&lt;T&gt;
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IObservable&lt;&gt;
+</div>
+</div>
+
+## Remarks
+
+This is an experimental API that is subject to change or removal without notice.
+
+ObservableBase&#123;T&#125; is rather heavyweight in terms of allocations and memory
+usage. This class provides a more lightweight base for some internal observable types
+in the Avalonia framework.
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Subscribe](#uid-f6a671caa3) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f6a671caa3"></span>
+
+### Subscribe Method
+
+```csharp
+public IDisposable Subscribe(IObserver<T> observer)
+```
+
+#### Parameters
+
+`observer` IObserver&lt;T&gt;
+
+
+#### Returns
+
+IDisposable
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [HasObservers](#uid-d78099270a) | Gets a value indicating whether this observable has any observers. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d78099270a"></span>
+
+### HasObservers Property
+
+Gets a value indicating whether this observable has any observers.
+
+```csharp
+public bool HasObservers { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

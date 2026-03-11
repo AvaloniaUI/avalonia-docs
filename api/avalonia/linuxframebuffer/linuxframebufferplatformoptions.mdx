@@ -53,7 +53,7 @@ public class LinuxFramebufferPlatformOptions
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> LinuxFramebufferPlatformOptions
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> LinuxFramebufferPlatformOptions
 </div>
 </div>
 
@@ -63,13 +63,17 @@ public class LinuxFramebufferPlatformOptions
 | --- | --- |
 | [LinuxFramebufferPlatformOptions](#uid-7fb7d64be7) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-7fb7d64be7"></span>
 
-### LinuxFramebufferPlatformOptions
+### LinuxFramebufferPlatformOptions Constructor
 
 ```csharp
 public LinuxFramebufferPlatformOptions()
 ```
+
+</section>
 
 ## Properties
 
@@ -78,28 +82,36 @@ public LinuxFramebufferPlatformOptions()
 | [Fps](#uid-27f0a08e38) | Gets or sets the number of frames per second at which the renderer should run. Default 60. |
 | [ShouldRenderOnUIThread](#uid-18441bb8b2) | Render directly on the UI thread instead of using a dedicated render thread. This can be usable if your device don't have multiple cores to begin with. This setting is false by default. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-27f0a08e38"></span>
 
-### Fps
+### Fps Property
 
 Gets or sets the number of frames per second at which the renderer should run.
 Default 60.
 
 ```csharp
-public Int32 Fps { get; set; }
+public int Fps { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-18441bb8b2"></span>
 
-### ShouldRenderOnUIThread
+### ShouldRenderOnUIThread Property
 
 Render directly on the UI thread instead of using a dedicated render thread.
 This can be usable if your device don't have multiple cores to begin with.
 This setting is false by default.
 
 ```csharp
-public Boolean ShouldRenderOnUIThread { get; set; }
+public bool ShouldRenderOnUIThread { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

@@ -53,7 +53,7 @@ public class ResourceInclude
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> ResourceInclude
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> ResourceInclude
 </div>
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Derived types:</span> <a href="mergeresourceinclude">MergeResourceInclude</a>
@@ -72,15 +72,17 @@ When used in runtime, this type might be unsafe with trimming and AOT.
 
 | Name | Description |
 | --- | --- |
-| [ResourceInclude (2 overloads)](#uid-417f6b06cc) | Initializes a new instance of the Avalonia.Markup.Xaml.Styling.ResourceInclude class. |
+| [ResourceInclude (2 overloads)](#uid-417f6b06cc) | Initializes a new instance of the [Avalonia.Markup.Xaml.Styling.ResourceInclude](xref:Avalonia.Markup.Xaml.Styling.ResourceInclude) class. |
 
 <span id="uid-417f6b06cc"></span>
 
 ### ResourceInclude overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-3dd66f5307"></span>
 
-#### ResourceInclude
+#### ResourceInclude Constructor
 
 Initializes a new instance of the [Avalonia.Markup.Xaml.Styling.ResourceInclude](xref:Avalonia.Markup.Xaml.Styling.ResourceInclude) class.
 
@@ -88,13 +90,20 @@ Initializes a new instance of the [Avalonia.Markup.Xaml.Styling.ResourceInclude]
 public ResourceInclude(IServiceProvider serviceProvider)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `serviceProvider` | The XAML service provider. |
+##### Parameters
+
+`serviceProvider` IServiceProvider
+
+The XAML service provider.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-57e0723059"></span>
 
-#### ResourceInclude
+#### ResourceInclude Constructor
 
 Initializes a new instance of the [Avalonia.Markup.Xaml.Styling.ResourceInclude](xref:Avalonia.Markup.Xaml.Styling.ResourceInclude) class.
 
@@ -102,9 +111,14 @@ Initializes a new instance of the [Avalonia.Markup.Xaml.Styling.ResourceInclude]
 public ResourceInclude(Uri baseUri)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `baseUri` | The base URL for the XAML context. |
+##### Parameters
+
+`baseUri` Uri
+
+The base URL for the XAML context.
+
+
+</section>
 
 ## Methods
 
@@ -112,13 +126,33 @@ public ResourceInclude(Uri baseUri)
 | --- | --- |
 | [TryGetResource](#uid-f4b44da17a) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-f4b44da17a"></span>
 
-### TryGetResource
+### TryGetResource Method
 
 ```csharp
-public Boolean TryGetResource(Object key, Avalonia.Styling.ThemeVariant theme, Object& value)
+public bool TryGetResource(object key, Avalonia.Styling.ThemeVariant theme, object& value)
 ```
+
+#### Parameters
+
+`key` object
+
+
+`theme` [Avalonia.Styling.ThemeVariant](xref:Avalonia.Styling.ThemeVariant)
+
+
+`value` object&amp;
+
+
+#### Returns
+
+bool
+
+
+</section>
 
 ## Properties
 
@@ -128,9 +162,11 @@ public Boolean TryGetResource(Object key, Avalonia.Styling.ThemeVariant theme, O
 | [Owner](#uid-b55252134b) | No summary available. |
 | [Source](#uid-a4fa9114c1) | Gets or sets the source URL. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-71a0e79d4a"></span>
 
-### Loaded
+### Loaded Property
 
 Gets the loaded resource dictionary.
 
@@ -138,17 +174,25 @@ Gets the loaded resource dictionary.
 public Avalonia.Controls.IResourceDictionary Loaded { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-b55252134b"></span>
 
-### Owner
+### Owner Property
 
 ```csharp
 public Avalonia.Controls.IResourceHost Owner { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-a4fa9114c1"></span>
 
-### Source
+### Source Property
 
 Gets or sets the source URL.
 
@@ -156,19 +200,25 @@ Gets or sets the source URL.
 public Uri Source { get; set; }
 ```
 
+</section>
+
 ## Events
 
 | Name | Description |
 | --- | --- |
 | [OwnerChanged](#uid-61ff0cac80) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-61ff0cac80"></span>
 
-### OwnerChanged
+### OwnerChanged Event
 
 ```csharp
 public event EventHandler OwnerChanged
 ```
+
+</section>
 
 </ApiRefPage>
 

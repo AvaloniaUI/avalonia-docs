@@ -47,7 +47,7 @@ public class HtmlWebSocketTransport
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> HtmlWebSocketTransport
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> HtmlWebSocketTransport
 </div>
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Implements:</span> IAvaloniaRemoteTransportConnection, IDisposable
@@ -60,13 +60,25 @@ public class HtmlWebSocketTransport
 | --- | --- |
 | [HtmlWebSocketTransport](#uid-80d44de251) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-80d44de251"></span>
 
-### HtmlWebSocketTransport
+### HtmlWebSocketTransport Constructor
 
 ```csharp
 public HtmlWebSocketTransport(Avalonia.Remote.Protocol.IAvaloniaRemoteTransportConnection signalTransport, Uri listenUri)
 ```
+
+#### Parameters
+
+`signalTransport` Avalonia.Remote.Protocol.IAvaloniaRemoteTransportConnection
+
+
+`listenUri` Uri
+
+
+</section>
 
 ## Methods
 
@@ -76,29 +88,51 @@ public HtmlWebSocketTransport(Avalonia.Remote.Protocol.IAvaloniaRemoteTransportC
 | [Send](#uid-8b5ac90655) | No summary available. |
 | [Start](#uid-d8cef7222b) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-b229be76ac"></span>
 
-### Dispose
+### Dispose Method
 
 ```csharp
-public Void Dispose()
+public void Dispose()
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-8b5ac90655"></span>
 
-### Send
+### Send Method
 
 ```csharp
-public System.Threading.Tasks.Task Send(Object data)
+public System.Threading.Tasks.Task Send(object data)
 ```
+
+#### Parameters
+
+`data` object
+
+
+#### Returns
+
+System.Threading.Tasks.Task
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-d8cef7222b"></span>
 
-### Start
+### Start Method
 
 ```csharp
-public Void Start()
+public void Start()
 ```
+
+</section>
 
 ## Events
 
@@ -107,21 +141,29 @@ public Void Start()
 | [OnException](#uid-4224a3aa7f) | No summary available. |
 | [OnMessage](#uid-cb552896d5) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-4224a3aa7f"></span>
 
-### OnException
+### OnException Event
 
 ```csharp
 public event Action<Avalonia.Remote.Protocol.IAvaloniaRemoteTransportConnection, Exception> OnException
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-cb552896d5"></span>
 
-### OnMessage
+### OnMessage Event
 
 ```csharp
-public event Action<Avalonia.Remote.Protocol.IAvaloniaRemoteTransportConnection, Object> OnMessage
+public event Action<Avalonia.Remote.Protocol.IAvaloniaRemoteTransportConnection, object> OnMessage
 ```
+
+</section>
 
 </ApiRefPage>
 

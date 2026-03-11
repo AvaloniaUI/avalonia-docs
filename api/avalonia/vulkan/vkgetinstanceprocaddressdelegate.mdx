@@ -54,13 +54,25 @@ public delegate VkGetInstanceProcAddressDelegate
 | --- | --- |
 | [VkGetInstanceProcAddressDelegate](#uid-18f308be01) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-18f308be01"></span>
 
-### VkGetInstanceProcAddressDelegate
+### VkGetInstanceProcAddressDelegate Constructor
 
 ```csharp
-public VkGetInstanceProcAddressDelegate(Object object, IntPtr method)
+public VkGetInstanceProcAddressDelegate(object object, IntPtr method)
 ```
+
+#### Parameters
+
+`object` object
+
+
+`method` IntPtr
+
+
+</section>
 
 ## Methods
 
@@ -70,29 +82,83 @@ public VkGetInstanceProcAddressDelegate(Object object, IntPtr method)
 | [EndInvoke](#uid-4b2e59a61a) | No summary available. |
 | [Invoke](#uid-15b86b66d6) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-ff695108c8"></span>
 
-### BeginInvoke
+### BeginInvoke Method
 
 ```csharp
-public IAsyncResult BeginInvoke(IntPtr instance, String name, AsyncCallback callback, Object object)
+public IAsyncResult BeginInvoke(IntPtr instance, string name, AsyncCallback callback, object object)
 ```
+
+#### Parameters
+
+`instance` IntPtr
+
+
+`name` string
+
+
+`callback` AsyncCallback
+
+
+`object` object
+
+
+#### Returns
+
+IAsyncResult
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-4b2e59a61a"></span>
 
-### EndInvoke
+### EndInvoke Method
 
 ```csharp
 public IntPtr EndInvoke(IAsyncResult result)
 ```
 
+#### Parameters
+
+`result` IAsyncResult
+
+
+#### Returns
+
+IntPtr
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-15b86b66d6"></span>
 
-### Invoke
+### Invoke Method
 
 ```csharp
-public IntPtr Invoke(IntPtr instance, String name)
+public IntPtr Invoke(IntPtr instance, string name)
 ```
+
+#### Parameters
+
+`instance` IntPtr
+
+
+`name` string
+
+
+#### Returns
+
+IntPtr
+
+
+</section>
 
 </ApiRefPage>
 

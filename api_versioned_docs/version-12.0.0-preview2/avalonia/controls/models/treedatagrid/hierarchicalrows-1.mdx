@@ -1,0 +1,574 @@
+---
+title: 'HierarchicalRows<TModel>'
+hide_title: true
+slug: '/avalonia/controls/models/treedatagrid/hierarchicalrows-1'
+uid: 'Avalonia.Controls.Models.TreeDataGrid.HierarchicalRows`1'
+commentId: 'T:Avalonia.Controls.Models.TreeDataGrid.HierarchicalRows`1'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.TreeDataGrid'
+assembly: 'Avalonia.Controls.TreeDataGrid'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Models.TreeDataGrid'
+tfms:
+  - 'net8.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">HierarchicalRows&lt;TModel&gt; Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Models.TreeDataGrid</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Manages a collection of hierarchical rows in a
+[Avalonia.Controls.HierarchicalTreeDataGridSource&lt;T&gt;](xref:Avalonia.Controls.HierarchicalTreeDataGridSource%601).
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class HierarchicalRows<TModel>
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ReadOnlyListBase&lt;HierarchicalRow&lt;&gt;&gt; <span className="apiref-page__relation-separator">-&gt;</span> HierarchicalRows&lt;TModel&gt;
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IExpanderRowController&lt;&gt;, <a href="irows">IRows</a>, IEnumerable&lt;IRow&gt;, IReadOnlyCollection&lt;IRow&gt;, IReadOnlyList&lt;IRow&gt;, IEnumerable, INotifyCollectionChanged, IDisposable
+</div>
+</div>
+
+## Remarks
+
+The [Avalonia.Controls.Models.TreeDataGrid.HierarchicalRows&lt;T&gt;](xref:Avalonia.Controls.Models.TreeDataGrid.HierarchicalRows%601) class is responsible for maintaining a flattened
+view of hierarchical data for display in a [TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid). It manages the relationships
+between rows, handles expansion and collapse operations, and synchronizes the view with the
+underlying data source.
+
+This class serves as both a collection of rows and a controller for row operations. It
+maintains a flattened list of rows that represents the current visual state of the tree,
+taking into account which nodes are expanded or collapsed.
+
+When rows are expanded or collapsed, this class manages the insertion and removal of child
+rows from the flattened list and raises the appropriate collection changed events.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [HierarchicalRows&lt;TModel&gt;](#uid-2761404c41) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2761404c41"></span>
+
+### HierarchicalRows&lt;TModel&gt; Constructor
+
+```csharp
+public HierarchicalRows<TModel>(Avalonia.Controls.Models.TreeDataGrid.IExpanderRowController<TModel><TModel> controller, Avalonia.Controls.TreeDataGridItemsSourceView<T><TModel> items, Avalonia.Controls.Models.TreeDataGrid.IExpanderColumn<TModel><TModel> expanderColumn, Comparison<TModel> comparison)
+```
+
+#### Parameters
+
+`controller` Avalonia.Controls.Models.TreeDataGrid.IExpanderRowController&lt;TModel&gt;&lt;TModel&gt;
+
+
+`items` [Avalonia.Controls.TreeDataGridItemsSourceView](xref:Avalonia.Controls.TreeDataGridItemsSourceView)&lt;T&gt;&lt;TModel&gt;
+
+
+`expanderColumn` Avalonia.Controls.Models.TreeDataGrid.IExpanderColumn&lt;TModel&gt;&lt;TModel&gt;
+
+
+`comparison` Comparison&lt;TModel&gt;
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Collapse](#uid-49dc3dc1ca) | Collapses a row identified by its index path. |
+| [Dispose](#uid-0a62aa303b) | Releases resources used by the [Avalonia.Controls.Models.TreeDataGrid.HierarchicalRows&lt;T&gt;](xref:Avalonia.Controls.Models.TreeDataGrid.HierarchicalRows%601). |
+| [Expand](#uid-6ad53d6721) | Expands a row identified by its index path. |
+| [Filter](#uid-ef8f6ec6bf) | No summary available. |
+| [GetEnumerator](#uid-5ccf977caa) | No summary available. |
+| [GetParentRowIndex](#uid-be19a22a4f) | Gets the row index of a parent row given a child's model index. |
+| [GetRowAt](#uid-064f1097ec) | Gets the row index and vertical position for a given vertical offset. |
+| [ModelIndexToRowIndex](#uid-c680b0d8d5) | Converts a model index path to a flattened row index. |
+| [RealizeCell](#uid-b8eb2b9860) | Creates a cell for the specified column at the specified row index. |
+| [RefreshFilter](#uid-65111a92fe) | Refreshes the current filter applied to the collection. |
+| [RowIndexToModelIndex](#uid-023bdc2188) | Converts a flattened row index to a model index path. |
+| [SetItems](#uid-19011824e2) | No summary available. |
+| [Sort](#uid-0c5ef19b6b) | No summary available. |
+| [UnrealizeCell](#uid-fcbae224f5) | Releases resources used by a cell when it is no longer visible. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-49dc3dc1ca"></span>
+
+### Collapse Method
+
+Collapses a row identified by its index path.
+
+```csharp
+public void Collapse(Avalonia.Controls.IndexPath index)
+```
+
+#### Parameters
+
+`index` [Avalonia.Controls.IndexPath](xref:Avalonia.Controls.IndexPath)
+
+The index path identifying the row to collapse.
+
+
+#### Remarks
+
+This method navigates through the tree structure using the index path to find the
+target row, then collapses it to hide its children.
+
+If any part of the path cannot be found, the operation silently fails.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0a62aa303b"></span>
+
+### Dispose Method
+
+Releases resources used by the [Avalonia.Controls.Models.TreeDataGrid.HierarchicalRows&lt;T&gt;](xref:Avalonia.Controls.Models.TreeDataGrid.HierarchicalRows%601).
+
+```csharp
+public void Dispose()
+```
+
+#### Remarks
+
+Disposes the root rows collection and clears all event subscriptions.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6ad53d6721"></span>
+
+### Expand Method
+
+Expands a row identified by its index path.
+
+```csharp
+public void Expand(Avalonia.Controls.IndexPath index)
+```
+
+#### Parameters
+
+`index` [Avalonia.Controls.IndexPath](xref:Avalonia.Controls.IndexPath)
+
+The index path identifying the row to expand.
+
+
+#### Remarks
+
+This method navigates through the tree structure using the index path to find
+the target row, then expands it to show its children.
+
+If any part of the path cannot be found, the operation silently fails.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ef8f6ec6bf"></span>
+
+### Filter Method
+
+```csharp
+public void Filter(Func<TModel, bool> filter)
+```
+
+#### Parameters
+
+`filter` Func&lt;TModel, bool&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5ccf977caa"></span>
+
+### GetEnumerator Method
+
+```csharp
+public System.Collections.Generic.IEnumerator<Avalonia.Controls.Models.TreeDataGrid.HierarchicalRow<TModel><TModel>> GetEnumerator()
+```
+
+#### Returns
+
+System.Collections.Generic.IEnumerator&lt;Avalonia.Controls.Models.TreeDataGrid.HierarchicalRow&lt;TModel&gt;&lt;TModel&gt;&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-be19a22a4f"></span>
+
+### GetParentRowIndex Method
+
+Gets the row index of a parent row given a child's model index.
+
+```csharp
+public int GetParentRowIndex(Avalonia.Controls.IndexPath modelIndex)
+```
+
+#### Parameters
+
+`modelIndex` [Avalonia.Controls.IndexPath](xref:Avalonia.Controls.IndexPath)
+
+The model index of a child row.
+
+
+#### Returns
+
+int
+
+The row index of the parent row, or -1 if not found.
+
+
+#### Remarks
+
+This method is useful for operations that need to work with a child row's parent,
+such as expanding to reveal a specific item.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-064f1097ec"></span>
+
+### GetRowAt Method
+
+Gets the row index and vertical position for a given vertical offset.
+
+```csharp
+public ValueTuple<int, double> GetRowAt(double y)
+```
+
+#### Parameters
+
+`y` double
+
+The vertical offset in pixels.
+
+
+#### Returns
+
+ValueTuple&lt;int, double&gt;
+
+A tuple containing the row index and the vertical position of the row.
+
+
+#### Remarks
+
+This method is used for virtualization to determine which row should be displayed at a
+particular scroll position.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c680b0d8d5"></span>
+
+### ModelIndexToRowIndex Method
+
+Converts a model index path to a flattened row index.
+
+```csharp
+public int ModelIndexToRowIndex(Avalonia.Controls.IndexPath modelIndex)
+```
+
+#### Parameters
+
+`modelIndex` [Avalonia.Controls.IndexPath](xref:Avalonia.Controls.IndexPath)
+
+The model index path.
+
+
+#### Returns
+
+int
+
+The corresponding row index in the flattened collection, or -1 if not found.
+
+
+#### Remarks
+
+This method is used to locate a row in the flattened collection when only its
+hierarchical position (model index path) is known.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b8eb2b9860"></span>
+
+### RealizeCell Method
+
+Creates a cell for the specified column at the specified row index.
+
+```csharp
+public Avalonia.Controls.Models.TreeDataGrid.ICell RealizeCell(Avalonia.Controls.Models.TreeDataGrid.IColumn column, int columnIndex, int rowIndex)
+```
+
+#### Parameters
+
+`column` [Avalonia.Controls.Models.TreeDataGrid.IColumn](xref:Avalonia.Controls.Models.TreeDataGrid.IColumn)
+
+The column for which to create a cell.
+
+
+`columnIndex` int
+
+The index of the column.
+
+
+`rowIndex` int
+
+The index of the row.
+
+
+#### Returns
+
+[Avalonia.Controls.Models.TreeDataGrid.ICell](xref:Avalonia.Controls.Models.TreeDataGrid.ICell)
+
+A new cell instance.
+
+
+#### Remarks
+
+This method is used during UI virtualization to create cell instances as they become
+visible. The created cells are bound to the appropriate row model.
+
+#### Exceptions
+
+- [Thrown when the column is not compatible with the model type.](xref:System.InvalidOperationException)
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-65111a92fe"></span>
+
+### RefreshFilter Method
+
+Refreshes the current filter applied to the collection.
+
+```csharp
+public void RefreshFilter()
+```
+
+#### Remarks
+
+Call this method if the filter predicate depends on external state which has changed,
+to re-apply the filter to the collection.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-023bdc2188"></span>
+
+### RowIndexToModelIndex Method
+
+Converts a flattened row index to a model index path.
+
+```csharp
+public Avalonia.Controls.IndexPath RowIndexToModelIndex(int rowIndex)
+```
+
+#### Parameters
+
+`rowIndex` int
+
+The row index in the flattened collection.
+
+
+#### Returns
+
+[Avalonia.Controls.IndexPath](xref:Avalonia.Controls.IndexPath)
+
+The corresponding model index path, or an empty path if not found.
+
+
+#### Remarks
+
+This method is used to determine the hierarchical position of a row when only its
+position in the flattened collection is known.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-19011824e2"></span>
+
+### SetItems Method
+
+```csharp
+public void SetItems(Avalonia.Controls.TreeDataGridItemsSourceView<T><TModel> items)
+```
+
+#### Parameters
+
+`items` [Avalonia.Controls.TreeDataGridItemsSourceView](xref:Avalonia.Controls.TreeDataGridItemsSourceView)&lt;T&gt;&lt;TModel&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0c5ef19b6b"></span>
+
+### Sort Method
+
+```csharp
+public void Sort(Comparison<TModel> comparison)
+```
+
+#### Parameters
+
+`comparison` Comparison&lt;TModel&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-fcbae224f5"></span>
+
+### UnrealizeCell Method
+
+Releases resources used by a cell when it is no longer visible.
+
+```csharp
+public void UnrealizeCell(Avalonia.Controls.Models.TreeDataGrid.ICell cell, int rowIndex, int columnIndex)
+```
+
+#### Parameters
+
+`cell` [Avalonia.Controls.Models.TreeDataGrid.ICell](xref:Avalonia.Controls.Models.TreeDataGrid.ICell)
+
+The cell to unrealize.
+
+
+`rowIndex` int
+
+The index of the row that the cell belongs to.
+
+
+`columnIndex` int
+
+The index of the column that the cell belongs to.
+
+
+#### Remarks
+
+This method is called during UI virtualization when a cell scrolls out of view.
+If the cell implements [IDisposable](xref:System.IDisposable), it is disposed.
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Count](#uid-8d3fd9f87c) | Gets the number of rows in the flattened collection. |
+| [IsFiltered](#uid-3350ddabb7) | No summary available. |
+| [Item](#uid-2c8e28a3cc) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8d3fd9f87c"></span>
+
+### Count Property
+
+Gets the number of rows in the flattened collection.
+
+```csharp
+public int Count { get; set; }
+```
+
+#### Remarks
+
+This count represents the total number of visible rows in the tree, including
+both root rows and the expanded children of those rows.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3350ddabb7"></span>
+
+### IsFiltered Property
+
+```csharp
+public bool IsFiltered { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2c8e28a3cc"></span>
+
+### Item Property
+
+```csharp
+public Avalonia.Controls.Models.TreeDataGrid.HierarchicalRow<TModel><TModel> Item { get; set; }
+```
+
+</section>
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [CollectionChanged](#uid-93863ef43e) | Occurs when the contents of the flattened collection change. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-93863ef43e"></span>
+
+### CollectionChanged Event
+
+Occurs when the contents of the flattened collection change.
+
+```csharp
+public event System.Collections.Specialized.NotifyCollectionChangedEventHandler CollectionChanged
+```
+
+</section>
+
+</ApiRefPage>
+

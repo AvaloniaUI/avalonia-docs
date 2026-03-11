@@ -54,13 +54,25 @@ public delegate Win32Properties.CustomWindowStylesCallback
 | --- | --- |
 | [Win32Properties.CustomWindowStylesCallback](#uid-eb0355620e) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-eb0355620e"></span>
 
-### Win32Properties.CustomWindowStylesCallback
+### Win32Properties.CustomWindowStylesCallback Constructor
 
 ```csharp
-public Win32Properties.CustomWindowStylesCallback(Object object, IntPtr method)
+public Win32Properties.CustomWindowStylesCallback(object object, IntPtr method)
 ```
+
+#### Parameters
+
+`object` object
+
+
+`method` IntPtr
+
+
+</section>
 
 ## Methods
 
@@ -70,29 +82,83 @@ public Win32Properties.CustomWindowStylesCallback(Object object, IntPtr method)
 | [EndInvoke](#uid-cb89fcceb1) | No summary available. |
 | [Invoke](#uid-40fac74d04) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-5b2bc5106f"></span>
 
-### BeginInvoke
+### BeginInvoke Method
 
 ```csharp
-public IAsyncResult BeginInvoke(UInt32 style, UInt32 exStyle, AsyncCallback callback, Object object)
+public IAsyncResult BeginInvoke(uint style, uint exStyle, AsyncCallback callback, object object)
 ```
+
+#### Parameters
+
+`style` uint
+
+
+`exStyle` uint
+
+
+`callback` AsyncCallback
+
+
+`object` object
+
+
+#### Returns
+
+IAsyncResult
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-cb89fcceb1"></span>
 
-### EndInvoke
+### EndInvoke Method
 
 ```csharp
-public ValueTuple<UInt32, UInt32> EndInvoke(IAsyncResult result)
+public ValueTuple<uint, uint> EndInvoke(IAsyncResult result)
 ```
+
+#### Parameters
+
+`result` IAsyncResult
+
+
+#### Returns
+
+ValueTuple&lt;uint, uint&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-40fac74d04"></span>
 
-### Invoke
+### Invoke Method
 
 ```csharp
-public ValueTuple<UInt32, UInt32> Invoke(UInt32 style, UInt32 exStyle)
+public ValueTuple<uint, uint> Invoke(uint style, uint exStyle)
 ```
+
+#### Parameters
+
+`style` uint
+
+
+`exStyle` uint
+
+
+#### Returns
+
+ValueTuple&lt;uint, uint&gt;
+
+
+</section>
 
 </ApiRefPage>
 

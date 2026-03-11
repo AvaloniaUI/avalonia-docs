@@ -53,7 +53,7 @@ public class AvaloniaObjectExtensions
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> AvaloniaObjectExtensions
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> AvaloniaObjectExtensions
 </div>
 </div>
 
@@ -61,12 +61,14 @@ public class AvaloniaObjectExtensions
 
 | Name | Description |
 | --- | --- |
-| [GetDiagnostic](#uid-48807f446c) | Gets a diagnostic for a Avalonia.AvaloniaProperty on a Avalonia.AvaloniaObject. |
-| [GetValueStoreDiagnostic](#uid-06f18e3c25) | Gets a value store diagnostics for a Avalonia.AvaloniaObject. |
+| [GetDiagnostic](#uid-48807f446c) | Gets a diagnostic for a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) on a [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject). |
+| [GetValueStoreDiagnostic](#uid-06f18e3c25) | Gets a value store diagnostics for a [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject). |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-48807f446c"></span>
 
-### GetDiagnostic
+### GetDiagnostic Method
 
 Gets a diagnostic for a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) on a [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject).
 
@@ -74,17 +76,33 @@ Gets a diagnostic for a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProper
 public Avalonia.Diagnostics.AvaloniaPropertyValue GetDiagnostic(Avalonia.AvaloniaObject o, Avalonia.AvaloniaProperty property)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `o` | The object. |
-| `property` | The property. |
+#### Parameters
 
-Returns: A [Avalonia.Diagnostics.AvaloniaPropertyValue](xref:Avalonia.Diagnostics.AvaloniaPropertyValue) that can be used to diagnose the state of the
+`o` [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject)
+
+The object.
+
+
+`property` [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty)
+
+The property.
+
+
+#### Returns
+
+[Avalonia.Diagnostics.AvaloniaPropertyValue](xref:Avalonia.Diagnostics.AvaloniaPropertyValue)
+
+A [Avalonia.Diagnostics.AvaloniaPropertyValue](xref:Avalonia.Diagnostics.AvaloniaPropertyValue) that can be used to diagnose the state of the
 property on the object.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-06f18e3c25"></span>
 
-### GetValueStoreDiagnostic
+### GetValueStoreDiagnostic Method
 
 Gets a value store diagnostics for a [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject).
 
@@ -92,9 +110,19 @@ Gets a value store diagnostics for a [Avalonia.AvaloniaObject](xref:Avalonia.Ava
 public Avalonia.Diagnostics.ValueStoreDiagnostic GetValueStoreDiagnostic(Avalonia.AvaloniaObject avaloniaObject)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `avaloniaObject` | The avalonia object. |
+#### Parameters
+
+`avaloniaObject` [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject)
+
+The avalonia object.
+
+
+#### Returns
+
+[Avalonia.Diagnostics.ValueStoreDiagnostic](xref:Avalonia.Diagnostics.ValueStoreDiagnostic)
+
+
+</section>
 
 </ApiRefPage>
 

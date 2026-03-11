@@ -53,7 +53,7 @@ public class AvaloniaDictionaryExtensions
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> AvaloniaDictionaryExtensions
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> AvaloniaDictionaryExtensions
 </div>
 </div>
 
@@ -63,13 +63,47 @@ public class AvaloniaDictionaryExtensions
 | --- | --- |
 | [ForEachItem](#uid-7762bf5150) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-7762bf5150"></span>
 
-### ForEachItem
+### ForEachItem Method
 
 ```csharp
-public IDisposable ForEachItem<TKey, TValue>(Avalonia.Collections.IAvaloniaReadOnlyDictionary<TKey,TValue><TKey, TValue> collection, Action<TKey, TValue> added, Action<TKey, TValue> removed, Action reset, Boolean weakSubscription)
+public IDisposable ForEachItem<TKey, TValue>(Avalonia.Collections.IAvaloniaReadOnlyDictionary<TKey,TValue><TKey, TValue> collection, Action<TKey, TValue> added, Action<TKey, TValue> removed, Action reset, bool weakSubscription)
 ```
+
+#### Parameters
+
+`collection` Avalonia.Collections.IAvaloniaReadOnlyDictionary&lt;TKey,TValue&gt;&lt;TKey, TValue&gt;
+
+
+`added` Action&lt;TKey, TValue&gt;
+
+
+`removed` Action&lt;TKey, TValue&gt;
+
+
+`reset` Action
+
+
+`weakSubscription` bool
+
+
+#### Type Parameters
+
+`TKey`
+
+
+`TValue`
+
+
+#### Returns
+
+IDisposable
+
+
+</section>
 
 </ApiRefPage>
 

@@ -54,7 +54,7 @@ public class ContrastBrushConverter
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> ContrastBrushConverter
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> ContrastBrushConverter
 </div>
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Implements:</span> <a href="../../../data/converters/ivalueconverter">IValueConverter</a>
@@ -71,13 +71,17 @@ This is a highly-specialized converter for the color picker.
 | --- | --- |
 | [ContrastBrushConverter](#uid-c73a92138c) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-c73a92138c"></span>
 
-### ContrastBrushConverter
+### ContrastBrushConverter Constructor
 
 ```csharp
 public ContrastBrushConverter()
 ```
+
+</section>
 
 ## Methods
 
@@ -86,43 +90,103 @@ public ContrastBrushConverter()
 | [Convert](#uid-efb129de57) | Converts a value. |
 | [ConvertBack](#uid-ee30a3b8ee) | Converts a value. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-efb129de57"></span>
 
-### Convert
+### Convert Method
 
 Converts a value.
 
 ```csharp
-public Object Convert(Object value, Type targetType, Object parameter, System.Globalization.CultureInfo culture)
+public object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `culture` | The culture to use. |
-| `parameter` | A user-defined parameter. |
-| `targetType` | The type of the target. |
-| `value` | The value to convert. |
+#### Parameters
 
-Returns: The converted value.
+`value` object
+
+The value to convert.
+
+
+`targetType` Type
+
+The type of the target.
+
+
+`parameter` object
+
+A user-defined parameter.
+
+
+`culture` System.Globalization.CultureInfo
+
+The culture to use.
+
+
+#### Returns
+
+object
+
+The converted value.
+
+
+#### Remarks
+
+This method should not throw exceptions. If the value is not convertible, return
+a [Avalonia.Data.BindingNotification](xref:Avalonia.Data.BindingNotification) in an error state. Any exceptions thrown will be
+treated as an application exception.
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-ee30a3b8ee"></span>
 
-### ConvertBack
+### ConvertBack Method
 
 Converts a value.
 
 ```csharp
-public Object ConvertBack(Object value, Type targetType, Object parameter, System.Globalization.CultureInfo culture)
+public object ConvertBack(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `culture` | The culture to use. |
-| `parameter` | A user-defined parameter. |
-| `targetType` | The type of the target. |
-| `value` | The value to convert. |
+#### Parameters
 
-Returns: The converted value.
+`value` object
+
+The value to convert.
+
+
+`targetType` Type
+
+The type of the target.
+
+
+`parameter` object
+
+A user-defined parameter.
+
+
+`culture` System.Globalization.CultureInfo
+
+The culture to use.
+
+
+#### Returns
+
+object
+
+The converted value.
+
+
+#### Remarks
+
+This method should not throw exceptions. If the value is not convertible, return
+a [Avalonia.Data.BindingNotification](xref:Avalonia.Data.BindingNotification) in an error state. Any exceptions thrown will be
+treated as an application exception.
+
+</section>
 
 ## Properties
 
@@ -130,15 +194,19 @@ Returns: The converted value.
 | --- | --- |
 | [AlphaThreshold](#uid-d0c8484ac1) | Gets or sets the alpha channel threshold below which a default color is used instead of black/white. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-d0c8484ac1"></span>
 
-### AlphaThreshold
+### AlphaThreshold Property
 
 Gets or sets the alpha channel threshold below which a default color is used instead of black/white.
 
 ```csharp
-public Byte AlphaThreshold { get; set; }
+public byte AlphaThreshold { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

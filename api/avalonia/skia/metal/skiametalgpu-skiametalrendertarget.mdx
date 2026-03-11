@@ -47,7 +47,7 @@ public class SkiaMetalGpu.SkiaMetalRenderTarget
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> SkiaMetalGpu.SkiaMetalRenderTarget
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> SkiaMetalGpu.SkiaMetalRenderTarget
 </div>
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Implements:</span> <a href="../iskiagpurendertarget">ISkiaGpuRenderTarget</a>, IDisposable
@@ -60,13 +60,25 @@ public class SkiaMetalGpu.SkiaMetalRenderTarget
 | --- | --- |
 | [SkiaMetalGpu.SkiaMetalRenderTarget](#uid-4ef3ff5692) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-4ef3ff5692"></span>
 
-### SkiaMetalGpu.SkiaMetalRenderTarget
+### SkiaMetalGpu.SkiaMetalRenderTarget Constructor
 
 ```csharp
 public SkiaMetalGpu.SkiaMetalRenderTarget(Avalonia.Skia.Metal.SkiaMetalGpu gpu, Avalonia.Metal.IMetalPlatformSurfaceRenderTarget target)
 ```
+
+#### Parameters
+
+`gpu` Avalonia.Skia.Metal.SkiaMetalGpu
+
+
+`target` [Avalonia.Metal.IMetalPlatformSurfaceRenderTarget](xref:Avalonia.Metal.IMetalPlatformSurfaceRenderTarget)
+
+
+</section>
 
 ## Methods
 
@@ -75,21 +87,39 @@ public SkiaMetalGpu.SkiaMetalRenderTarget(Avalonia.Skia.Metal.SkiaMetalGpu gpu, 
 | [BeginRenderingSession](#uid-c8b592b175) | No summary available. |
 | [Dispose](#uid-42e588ff94) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-c8b592b175"></span>
 
-### BeginRenderingSession
+### BeginRenderingSession Method
 
 ```csharp
 public Avalonia.Skia.ISkiaGpuRenderSession BeginRenderingSession(RenderTargetSceneInfo sceneInfo)
 ```
 
+#### Parameters
+
+`sceneInfo` RenderTargetSceneInfo
+
+
+#### Returns
+
+[Avalonia.Skia.ISkiaGpuRenderSession](xref:Avalonia.Skia.ISkiaGpuRenderSession)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-42e588ff94"></span>
 
-### Dispose
+### Dispose Method
 
 ```csharp
-public Void Dispose()
+public void Dispose()
 ```
+
+</section>
 
 ## Properties
 
@@ -98,21 +128,29 @@ public Void Dispose()
 | [IsCorrupted](#uid-5fe24149e2) | No summary available. |
 | [IsReady](#uid-7e6137e157) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-5fe24149e2"></span>
 
-### IsCorrupted
+### IsCorrupted Property
 
 ```csharp
-public Boolean IsCorrupted { get; set; }
+public bool IsCorrupted { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-7e6137e157"></span>
 
-### IsReady
+### IsReady Property
 
 ```csharp
-public Boolean IsReady { get; set; }
+public bool IsReady { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

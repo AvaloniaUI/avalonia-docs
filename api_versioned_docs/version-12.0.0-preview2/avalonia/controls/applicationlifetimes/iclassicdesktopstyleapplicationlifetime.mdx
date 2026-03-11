@@ -58,46 +58,64 @@ public interface IClassicDesktopStyleApplicationLifetime
 
 | Name | Description |
 | --- | --- |
-| [TryShutdown](#uid-9be46576e6) | Tries to Shutdown the application. Avalonia.Controls.ApplicationLifetimes.IClassicDesktopStyleApplicationLifetime.ShutdownRequested event can be used to cancel the shutdown. |
+| [TryShutdown](#uid-9be46576e6) | Tries to Shutdown the application. [Avalonia.Controls.ApplicationLifetimes.IClassicDesktopStyleApplicationLifetime.ShutdownRequested](xref:Avalonia.Controls.ApplicationLifetimes.IClassicDesktopStyleApplicationLifetime.ShutdownRequested) event can be used to cancel the shutdown. |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-9be46576e6"></span>
 
-### TryShutdown
+### TryShutdown Method
 
 Tries to Shutdown the application. [Avalonia.Controls.ApplicationLifetimes.IClassicDesktopStyleApplicationLifetime.ShutdownRequested](xref:Avalonia.Controls.ApplicationLifetimes.IClassicDesktopStyleApplicationLifetime.ShutdownRequested) event can be used to cancel the shutdown.
 
 ```csharp
-public Boolean TryShutdown(Int32 exitCode)
+public bool TryShutdown(int exitCode)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `exitCode` | An integer exit code for an application. The default exit code is 0. |
+#### Parameters
+
+`exitCode` int
+
+An integer exit code for an application. The default exit code is 0.
+
+
+#### Returns
+
+bool
+
+
+</section>
 
 ## Properties
 
 | Name | Description |
 | --- | --- |
-| [Args](#uid-f7541f62f3) | Gets the arguments passed to the Avalonia.ClassicDesktopStyleApplicationLifetimeExtensions.StartWithClassicDesktopLifetime(Avalonia.AppBuilder,String\[\],Avalonia.Controls.ShutdownMode) method. |
+| [Args](#uid-f7541f62f3) | Gets the arguments passed to the [Avalonia.ClassicDesktopStyleApplicationLifetimeExtensions.StartWithClassicDesktopLifetime(Avalonia.AppBuilder,string\[\],Avalonia.Controls.ShutdownMode)](xref:Avalonia.ClassicDesktopStyleApplicationLifetimeExtensions.StartWithClassicDesktopLifetime%28Avalonia.AppBuilder%2CSystem.String%5B%5D%2CAvalonia.Controls.ShutdownMode%29) method. |
 | [MainWindow](#uid-f42ca673ff) | Gets or sets the main window of the application. |
-| [ShutdownMode](#uid-eb16069b5f) | Gets or sets the Avalonia.Controls.ApplicationLifetimes.IClassicDesktopStyleApplicationLifetime.ShutdownMode. This property indicates whether the application is shutdown explicitly or implicitly. If Avalonia.Controls.ApplicationLifetimes.IClassicDesktopStyleApplicationLifetime.ShutdownMode is set to OnExplicitShutdown the application is only closes if Shutdown is called. The default is OnLastWindowClose |
+| [ShutdownMode](#uid-eb16069b5f) | Gets or sets the [Avalonia.Controls.ApplicationLifetimes.IClassicDesktopStyleApplicationLifetime.ShutdownMode](xref:Avalonia.Controls.ApplicationLifetimes.IClassicDesktopStyleApplicationLifetime.ShutdownMode). This property indicates whether the application is shutdown explicitly or implicitly. If [Avalonia.Controls.ApplicationLifetimes.IClassicDesktopStyleApplicationLifetime.ShutdownMode](xref:Avalonia.Controls.ApplicationLifetimes.IClassicDesktopStyleApplicationLifetime.ShutdownMode) is set to OnExplicitShutdown the application is only closes if Shutdown is called. The default is OnLastWindowClose |
 | [Windows](#uid-e103f97d1e) | Gets the list of all open windows in the application. |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-f7541f62f3"></span>
 
-### Args
+### Args Property
 
 Gets the arguments passed to the
-[Avalonia.ClassicDesktopStyleApplicationLifetimeExtensions.StartWithClassicDesktopLifetime(Avalonia.AppBuilder,String\[\],Avalonia.Controls.ShutdownMode)](xref:Avalonia.ClassicDesktopStyleApplicationLifetimeExtensions.StartWithClassicDesktopLifetime%28Avalonia.AppBuilder%2CSystem.String%5B%5D%2CAvalonia.Controls.ShutdownMode%29)
+[Avalonia.ClassicDesktopStyleApplicationLifetimeExtensions.StartWithClassicDesktopLifetime(Avalonia.AppBuilder,string\[\],Avalonia.Controls.ShutdownMode)](xref:Avalonia.ClassicDesktopStyleApplicationLifetimeExtensions.StartWithClassicDesktopLifetime%28Avalonia.AppBuilder%2CSystem.String%5B%5D%2CAvalonia.Controls.ShutdownMode%29)
 method.
 
 ```csharp
-public String[] Args { get; set; }
+public string[] Args { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-f42ca673ff"></span>
 
-### MainWindow
+### MainWindow Property
 
 Gets or sets the main window of the application.
 
@@ -105,11 +123,18 @@ Gets or sets the main window of the application.
 public Avalonia.Controls.Window MainWindow { get; set; }
 ```
 
-Value: The main window.
+#### Value
+
+The main window.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-eb16069b5f"></span>
 
-### ShutdownMode
+### ShutdownMode Property
 
 Gets or sets the [Avalonia.Controls.ApplicationLifetimes.IClassicDesktopStyleApplicationLifetime.ShutdownMode](xref:Avalonia.Controls.ApplicationLifetimes.IClassicDesktopStyleApplicationLifetime.ShutdownMode). This property indicates whether the application is shutdown explicitly or implicitly.
 If [Avalonia.Controls.ApplicationLifetimes.IClassicDesktopStyleApplicationLifetime.ShutdownMode](xref:Avalonia.Controls.ApplicationLifetimes.IClassicDesktopStyleApplicationLifetime.ShutdownMode) is set to OnExplicitShutdown the application is only closes if Shutdown is called.
@@ -119,11 +144,18 @@ The default is OnLastWindowClose
 public Avalonia.Controls.ShutdownMode ShutdownMode { get; set; }
 ```
 
-Value: The shutdown mode.
+#### Value
+
+The shutdown mode.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-e103f97d1e"></span>
 
-### Windows
+### Windows Property
 
 Gets the list of all open windows in the application.
 
@@ -131,21 +163,41 @@ Gets the list of all open windows in the application.
 public System.Collections.Generic.IReadOnlyList<Avalonia.Controls.Window> Windows { get; set; }
 ```
 
+</section>
+
 ## Events
 
 | Name | Description |
 | --- | --- |
 | [ShutdownRequested](#uid-9d6f0ce09c) | Raised by the platform when an application shutdown is requested. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-9d6f0ce09c"></span>
 
-### ShutdownRequested
+### ShutdownRequested Event
 
 Raised by the platform when an application shutdown is requested.
 
 ```csharp
 public event EventHandler<Avalonia.Controls.ApplicationLifetimes.ShutdownRequestedEventArgs> ShutdownRequested
 ```
+
+#### Remarks
+
+Application Shutdown can be requested for various reasons like OS shutdown.
+
+On Windows this will be called when an OS Session (logout or shutdown) terminates. Cancelling the eventargs will
+block OS shutdown.
+
+On OSX this has the same behavior as on Windows and in addition:
+This event is raised via the Quit menu or right-clicking on the application icon and selecting Quit.
+
+This event provides a first-chance to cancel application shutdown; if shutdown is not canceled at this point the application
+will try to close each non-owned open window, invoking the [Avalonia.Controls.Window.Closing](xref:Avalonia.Controls.Window.Closing) event on each and allowing
+each window to cancel the shutdown of the application. Windows cannot however prevent OS shutdown.
+
+</section>
 
 </ApiRefPage>
 

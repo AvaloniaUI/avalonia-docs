@@ -55,11 +55,13 @@ public class CalendarBlackoutDatesCollection
 
 | Name | Description |
 | --- | --- |
-| [CalendarBlackoutDatesCollection](#uid-25bcabacac) | Initializes a new instance of the Avalonia.Controls.Primitives.CalendarBlackoutDatesCollection class. |
+| [CalendarBlackoutDatesCollection](#uid-25bcabacac) | Initializes a new instance of the [Avalonia.Controls.Primitives.CalendarBlackoutDatesCollection](xref:Avalonia.Controls.Primitives.CalendarBlackoutDatesCollection) class. |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-25bcabacac"></span>
 
-### CalendarBlackoutDatesCollection
+### CalendarBlackoutDatesCollection Constructor
 
 Initializes a new instance of the
 [Avalonia.Controls.Primitives.CalendarBlackoutDatesCollection](xref:Avalonia.Controls.Primitives.CalendarBlackoutDatesCollection)
@@ -69,88 +71,137 @@ class.
 public CalendarBlackoutDatesCollection(Avalonia.Controls.Calendar owner)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `owner` | The [Avalonia.Controls.Calendar](xref:Avalonia.Controls.Calendar) whose dates
-this object represents. |
+#### Parameters
+
+`owner` [Avalonia.Controls.Calendar](xref:Avalonia.Controls.Calendar)
+
+The [Avalonia.Controls.Calendar](xref:Avalonia.Controls.Calendar) whose dates
+this object represents.
+
+
+</section>
 
 ## Methods
 
 | Name | Description |
 | --- | --- |
-| [AddDatesInPast](#uid-a58eae0d59) | Adds all dates before DateTime.Today to the collection. |
+| [AddDatesInPast](#uid-a58eae0d59) | Adds all dates before [DateTime.Today](xref:System.DateTime.Today) to the collection. |
 | [Contains (2 overloads)](#uid-f878b60e2a) | Returns a value that represents whether this collection contains the specified date. |
 | [ContainsAny](#uid-2a83d70b6e) | Returns a value that represents whether this collection contains any date in the specified range. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-a58eae0d59"></span>
 
-### AddDatesInPast
+### AddDatesInPast Method
 
 Adds all dates before [DateTime.Today](xref:System.DateTime.Today) to the
 collection.
 
 ```csharp
-public Void AddDatesInPast()
+public void AddDatesInPast()
 ```
+
+</section>
 
 <span id="uid-f878b60e2a"></span>
 
 ### Contains overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-875f31b2bf"></span>
 
-#### Contains
+#### Contains Method
 
 Returns a value that represents whether this collection contains the
 specified date.
 
 ```csharp
-public Boolean Contains(DateTime date)
+public bool Contains(DateTime date)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `date` | The date to search for. |
+##### Parameters
 
-Returns: True if the collection contains the specified date; otherwise,
+`date` DateTime
+
+The date to search for.
+
+
+##### Returns
+
+bool
+
+True if the collection contains the specified date; otherwise,
 false.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-668eeb6661"></span>
 
-#### Contains
+#### Contains Method
 
 Returns a value that represents whether this collection contains the
 specified range of dates.
 
 ```csharp
-public Boolean Contains(DateTime start, DateTime end)
+public bool Contains(DateTime start, DateTime end)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `end` | The end of the date range. |
-| `start` | The start of the date range. |
+##### Parameters
 
-Returns: True if all dates in the range are contained in the collection;
+`start` DateTime
+
+The start of the date range.
+
+
+`end` DateTime
+
+The end of the date range.
+
+
+##### Returns
+
+bool
+
+True if all dates in the range are contained in the collection;
 otherwise, false.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-2a83d70b6e"></span>
 
-### ContainsAny
+### ContainsAny Method
 
 Returns a value that represents whether this collection contains any
 date in the specified range.
 
 ```csharp
-public Boolean ContainsAny(Avalonia.Controls.CalendarDateRange range)
+public bool ContainsAny(Avalonia.Controls.CalendarDateRange range)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `range` | The range of dates to search for. |
+#### Parameters
 
-Returns: True if any date in the range is contained in the collection;
+`range` [Avalonia.Controls.CalendarDateRange](xref:Avalonia.Controls.CalendarDateRange)
+
+The range of dates to search for.
+
+
+#### Returns
+
+bool
+
+True if any date in the range is contained in the collection;
 otherwise, false.
+
+
+</section>
 
 </ApiRefPage>
 

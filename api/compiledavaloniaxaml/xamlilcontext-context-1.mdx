@@ -12,6 +12,8 @@ generatedBy: 'dotnet-apiref'
 namespace: 'CompiledAvaloniaXaml'
 tfms:
   - 'net10.0'
+  - 'net8.0'
+  - 'net8.0-ios18.0'
 ---
 
 import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
@@ -44,12 +46,34 @@ public class XamlIlContext.Context<TTarget>
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> XamlIlContext.Context&lt;TTarget&gt;
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> XamlIlContext.Context&lt;TTarget&gt;
 </div>
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Implements:</span> <a href="../avalonia/markup/xaml/iprovidevaluetarget">IProvideValueTarget</a>, <a href="../avalonia/markup/xaml/irootobjectprovider">IRootObjectProvider</a>, <a href="../avalonia/markup/xaml/iuricontext">IUriContext</a>, <a href="../avalonia/markup/xaml/xamlil/runtime/iavaloniaxamlileagerparentstackprovider">IAvaloniaXamlIlEagerParentStackProvider</a>, <a href="../avalonia/markup/xaml/xamlil/runtime/iavaloniaxamlilparentstackprovider">IAvaloniaXamlIlParentStackProvider</a>, ITypeDescriptorContext, IServiceProvider
 </div>
 </div>
+
+Available in: net10.0, net8.0, net8.0-ios18.0
+
+Differences by target framework:
+
+- `net10.0`
+
+```csharp
+public class XamlIlContext.Context<TTarget>
+```
+
+- `net8.0`
+
+```csharp
+public class XamlIlContext.Context<TTarget>
+```
+
+- `net8.0-ios18.0`
+
+```csharp
+public class XamlIlContext.Context<TTarget>
+```
 
 ## Constructors
 
@@ -57,13 +81,50 @@ public class XamlIlContext.Context<TTarget>
 | --- | --- |
 | [XamlIlContext.Context&lt;TTarget&gt;](#uid-1dbaf03938) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-1dbaf03938"></span>
 
-### XamlIlContext.Context&lt;TTarget&gt;
+### XamlIlContext.Context&lt;TTarget&gt; Constructor
 
 ```csharp
-public XamlIlContext.Context<TTarget>(IServiceProvider arg0, Object[] arg1, String arg2)
+public XamlIlContext.Context<TTarget>(IServiceProvider arg0, object[] arg1, string arg2)
 ```
+
+Available in: net10.0, net8.0, net8.0-ios18.0
+
+Differences by target framework:
+
+- `net10.0`
+
+```csharp
+public XamlIlContext.Context<TTarget>(IServiceProvider arg0, object[] arg1, string arg2)
+```
+
+- `net8.0`
+
+```csharp
+public XamlIlContext.Context<TTarget>(IServiceProvider arg0, object[] arg1, string arg2)
+```
+
+- `net8.0-ios18.0`
+
+```csharp
+public XamlIlContext.Context<TTarget>(IServiceProvider arg0, object[] arg1, string arg2)
+```
+
+#### Parameters
+
+`arg0` IServiceProvider
+
+
+`arg1` object[]
+
+
+`arg2` string
+
+
+</section>
 
 ## Methods
 
@@ -73,29 +134,122 @@ public XamlIlContext.Context<TTarget>(IServiceProvider arg0, Object[] arg1, Stri
 | [PopParent](#uid-a59543b78f) | No summary available. |
 | [PushParent](#uid-9555e16d0c) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-f4408ed67d"></span>
 
-### GetService
+### GetService Method
 
 ```csharp
-public Object GetService(Type arg0)
+public object GetService(Type arg0)
 ```
+
+Available in: net10.0, net8.0, net8.0-ios18.0
+
+Differences by target framework:
+
+- `net10.0`
+
+```csharp
+public object GetService(Type arg0)
+```
+
+- `net8.0`
+
+```csharp
+public object GetService(Type arg0)
+```
+
+- `net8.0-ios18.0`
+
+```csharp
+public object GetService(Type arg0)
+```
+
+#### Parameters
+
+`arg0` Type
+
+
+#### Returns
+
+object
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-a59543b78f"></span>
 
-### PopParent
+### PopParent Method
 
 ```csharp
-public Void PopParent()
+public void PopParent()
 ```
+
+Available in: net10.0, net8.0, net8.0-ios18.0
+
+Differences by target framework:
+
+- `net10.0`
+
+```csharp
+public void PopParent()
+```
+
+- `net8.0`
+
+```csharp
+public void PopParent()
+```
+
+- `net8.0-ios18.0`
+
+```csharp
+public void PopParent()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-9555e16d0c"></span>
 
-### PushParent
+### PushParent Method
 
 ```csharp
-public Void PushParent(Object arg0)
+public void PushParent(object arg0)
 ```
+
+Available in: net10.0, net8.0, net8.0-ios18.0
+
+Differences by target framework:
+
+- `net10.0`
+
+```csharp
+public void PushParent(object arg0)
+```
+
+- `net8.0`
+
+```csharp
+public void PushParent(object arg0)
+```
+
+- `net8.0-ios18.0`
+
+```csharp
+public void PushParent(object arg0)
+```
+
+#### Parameters
+
+`arg0` object
+
+
+</section>
 
 ## Properties
 
@@ -103,13 +257,39 @@ public Void PushParent(Object arg0)
 | --- | --- |
 | [BaseUri](#uid-45aa191325) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-45aa191325"></span>
 
-### BaseUri
+### BaseUri Property
 
 ```csharp
 public Uri BaseUri { get; set; }
 ```
+
+Available in: net10.0, net8.0, net8.0-ios18.0
+
+Differences by target framework:
+
+- `net10.0`
+
+```csharp
+public Uri BaseUri { get; set; }
+```
+
+- `net8.0`
+
+```csharp
+public Uri BaseUri { get; set; }
+```
+
+- `net8.0-ios18.0`
+
+```csharp
+public Uri BaseUri { get; set; }
+```
+
+</section>
 
 ## Fields
 
@@ -122,53 +302,209 @@ public Uri BaseUri { get; set; }
 | [ProvideTargetProperty](#uid-42f3d162c6) | No summary available. |
 | [RootObject](#uid-21e7383671) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-bff2ec11a2"></span>
 
-### AvaloniaNameScope
+### AvaloniaNameScope Field
 
 ```csharp
 public Avalonia.Controls.INameScope AvaloniaNameScope
 ```
 
-<span id="uid-19387cbd20"></span>
+Available in: net10.0, net8.0, net8.0-ios18.0
 
-### IntermediateRoot
+Differences by target framework:
+
+- `net10.0`
 
 ```csharp
-public Object IntermediateRoot
+public Avalonia.Controls.INameScope AvaloniaNameScope
 ```
+
+- `net8.0`
+
+```csharp
+public Avalonia.Controls.INameScope AvaloniaNameScope
+```
+
+- `net8.0-ios18.0`
+
+```csharp
+public Avalonia.Controls.INameScope AvaloniaNameScope
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-19387cbd20"></span>
+
+### IntermediateRoot Field
+
+```csharp
+public object IntermediateRoot
+```
+
+Available in: net10.0, net8.0, net8.0-ios18.0
+
+Differences by target framework:
+
+- `net10.0`
+
+```csharp
+public object IntermediateRoot
+```
+
+- `net8.0`
+
+```csharp
+public object IntermediateRoot
+```
+
+- `net8.0-ios18.0`
+
+```csharp
+public object IntermediateRoot
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-74ea01b0c6"></span>
 
-### ParentsStack
+### ParentsStack Field
 
 ```csharp
-public System.Collections.Generic.List<Object> ParentsStack
+public System.Collections.Generic.List<object> ParentsStack
 ```
+
+Available in: net10.0, net8.0, net8.0-ios18.0
+
+Differences by target framework:
+
+- `net10.0`
+
+```csharp
+public System.Collections.Generic.List<object> ParentsStack
+```
+
+- `net8.0`
+
+```csharp
+public System.Collections.Generic.List<object> ParentsStack
+```
+
+- `net8.0-ios18.0`
+
+```csharp
+public System.Collections.Generic.List<object> ParentsStack
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-9a32e24bcc"></span>
 
-### ProvideTargetObject
+### ProvideTargetObject Field
 
 ```csharp
-public Object ProvideTargetObject
+public object ProvideTargetObject
 ```
+
+Available in: net10.0, net8.0, net8.0-ios18.0
+
+Differences by target framework:
+
+- `net10.0`
+
+```csharp
+public object ProvideTargetObject
+```
+
+- `net8.0`
+
+```csharp
+public object ProvideTargetObject
+```
+
+- `net8.0-ios18.0`
+
+```csharp
+public object ProvideTargetObject
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-42f3d162c6"></span>
 
-### ProvideTargetProperty
+### ProvideTargetProperty Field
 
 ```csharp
-public Object ProvideTargetProperty
+public object ProvideTargetProperty
 ```
+
+Available in: net10.0, net8.0, net8.0-ios18.0
+
+Differences by target framework:
+
+- `net10.0`
+
+```csharp
+public object ProvideTargetProperty
+```
+
+- `net8.0`
+
+```csharp
+public object ProvideTargetProperty
+```
+
+- `net8.0-ios18.0`
+
+```csharp
+public object ProvideTargetProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-21e7383671"></span>
 
-### RootObject
+### RootObject Field
 
 ```csharp
 public TTarget RootObject
 ```
+
+Available in: net10.0, net8.0, net8.0-ios18.0
+
+Differences by target framework:
+
+- `net10.0`
+
+```csharp
+public TTarget RootObject
+```
+
+- `net8.0`
+
+```csharp
+public TTarget RootObject
+```
+
+- `net8.0-ios18.0`
+
+```csharp
+public TTarget RootObject
+```
+
+</section>
 
 </ApiRefPage>
 

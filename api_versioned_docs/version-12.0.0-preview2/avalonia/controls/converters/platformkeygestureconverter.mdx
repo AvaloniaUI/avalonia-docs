@@ -54,7 +54,7 @@ public class PlatformKeyGestureConverter
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> PlatformKeyGestureConverter
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> PlatformKeyGestureConverter
 </div>
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Implements:</span> <a href="../../data/converters/ivalueconverter">IValueConverter</a>
@@ -67,13 +67,17 @@ public class PlatformKeyGestureConverter
 | --- | --- |
 | [PlatformKeyGestureConverter](#uid-03bf92997b) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-03bf92997b"></span>
 
-### PlatformKeyGestureConverter
+### PlatformKeyGestureConverter Constructor
 
 ```csharp
 public PlatformKeyGestureConverter()
 ```
+
+</section>
 
 ## Methods
 
@@ -81,40 +85,98 @@ public PlatformKeyGestureConverter()
 | --- | --- |
 | [Convert](#uid-7b4ed78af9) | No summary available. |
 | [ConvertBack](#uid-599fb79b31) | No summary available. |
-| [ToPlatformString](#uid-6d4b48af50) | Converts a Avalonia.Input.KeyGesture to a string, formatting it according to the current platform's style guidelines. |
+| [ToPlatformString](#uid-6d4b48af50) | Converts a [Avalonia.Input.KeyGesture](xref:Avalonia.Input.KeyGesture) to a string, formatting it according to the current platform's style guidelines. |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-7b4ed78af9"></span>
 
-### Convert
+### Convert Method
 
 ```csharp
-public Object Convert(Object value, Type targetType, Object parameter, System.Globalization.CultureInfo culture)
+public object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
 ```
+
+#### Parameters
+
+`value` object
+
+
+`targetType` Type
+
+
+`parameter` object
+
+
+`culture` System.Globalization.CultureInfo
+
+
+#### Returns
+
+object
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-599fb79b31"></span>
 
-### ConvertBack
+### ConvertBack Method
 
 ```csharp
-public Object ConvertBack(Object value, Type targetType, Object parameter, System.Globalization.CultureInfo culture)
+public object ConvertBack(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
 ```
+
+#### Parameters
+
+`value` object
+
+
+`targetType` Type
+
+
+`parameter` object
+
+
+`culture` System.Globalization.CultureInfo
+
+
+#### Returns
+
+object
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-6d4b48af50"></span>
 
-### ToPlatformString
+### ToPlatformString Method
 
 Converts a [Avalonia.Input.KeyGesture](xref:Avalonia.Input.KeyGesture) to a string, formatting it according to the current
 platform's style guidelines.
 
 ```csharp
-public String ToPlatformString(Avalonia.Input.KeyGesture gesture)
+public string ToPlatformString(Avalonia.Input.KeyGesture gesture)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `gesture` | The gesture. |
+#### Parameters
 
-Returns: The gesture formatted according to the current platform.
+`gesture` [Avalonia.Input.KeyGesture](xref:Avalonia.Input.KeyGesture)
+
+The gesture.
+
+
+#### Returns
+
+string
+
+The gesture formatted according to the current platform.
+
+
+</section>
 
 </ApiRefPage>
 

@@ -53,28 +53,36 @@ public interface ICommandBarElement
 | Name | Description |
 | --- | --- |
 | [IsCompact](#uid-e478bcd494) | Gets or sets whether the element is in compact mode (icon only, no label). |
-| [IsInOverflow](#uid-cb05ca6404) | Gets or sets whether the element is currently displayed inside the overflow popup. Set automatically by Avalonia.Controls.CommandBar when moving items between primary and overflow. |
+| [IsInOverflow](#uid-cb05ca6404) | Gets or sets whether the element is currently displayed inside the overflow popup. Set automatically by [Avalonia.Controls.CommandBar](xref:Avalonia.Controls.CommandBar) when moving items between primary and overflow. |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-e478bcd494"></span>
 
-### IsCompact
+### IsCompact Property
 
 Gets or sets whether the element is in compact mode (icon only, no label).
 
 ```csharp
-public Boolean IsCompact { get; set; }
+public bool IsCompact { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-cb05ca6404"></span>
 
-### IsInOverflow
+### IsInOverflow Property
 
 Gets or sets whether the element is currently displayed inside the overflow popup.
 Set automatically by [Avalonia.Controls.CommandBar](xref:Avalonia.Controls.CommandBar) when moving items between primary and overflow.
 
 ```csharp
-public Boolean IsInOverflow { get; set; }
+public bool IsInOverflow { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

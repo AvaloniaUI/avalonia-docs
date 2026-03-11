@@ -39,7 +39,7 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 
 <div className="apiref-page__lead">
 
-GlInterface only includes essential members and members necessary for Avalonia itself.
+[GlInterface](xref:Avalonia.OpenGL.GlInterface) only includes essential members and members necessary for Avalonia itself.
 It is not a general-purpose interface for OpenGL API.
 
 </div>
@@ -54,13 +54,13 @@ public class GlInterface
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="glbasicinfointerface">GlBasicInfoInterface</a> <span className="apiref-page__relation-separator">-&gt;</span> GlInterface
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="glbasicinfointerface">GlBasicInfoInterface</a> <span className="apiref-page__relation-separator">-&gt;</span> GlInterface
 </div>
 </div>
 
 ## Remarks
 
-Use [Avalonia.OpenGL.GlInterface.GetProcAddress(String)](xref:Avalonia.OpenGL.GlInterface.GetProcAddress%28System.String%29) to get GL procedures you need, or integrate it with third-party GL wrappers.
+Use [Avalonia.OpenGL.GlInterface.GetProcAddress(string)](xref:Avalonia.OpenGL.GlInterface.GetProcAddress%28System.String%29) to get GL procedures you need, or integrate it with third-party GL wrappers.
 
 ## Constructors
 
@@ -68,13 +68,25 @@ Use [Avalonia.OpenGL.GlInterface.GetProcAddress(String)](xref:Avalonia.OpenGL.Gl
 | --- | --- |
 | [GlInterface](#uid-4ad6089ffd) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-4ad6089ffd"></span>
 
-### GlInterface
+### GlInterface Constructor
 
 ```csharp
-public GlInterface(Avalonia.OpenGL.GlVersion version, Func<String, IntPtr> getProcAddress)
+public GlInterface(Avalonia.OpenGL.GlVersion version, Func<string, IntPtr> getProcAddress)
 ```
+
+#### Parameters
+
+`version` [Avalonia.OpenGL.GlVersion](xref:Avalonia.OpenGL.GlVersion)
+
+
+`getProcAddress` Func&lt;string, IntPtr&gt;
+
+
+</section>
 
 ## Methods
 
@@ -158,645 +170,1688 @@ public GlInterface(Avalonia.OpenGL.GlVersion version, Func<String, IntPtr> getPr
 | [UseProgram](#uid-c8518c48ae) | No summary available. |
 | [VertexAttribPointer](#uid-0674e7c6d3) | No summary available. |
 | [Viewport](#uid-ca1437e6df) | No summary available. |
-| [GetError (Inherited from GlBasicInfoInterface)](glbasicinfointerface.mdx#uid-335a3ecb4a) | No summary available. |
-| [GetExtensions (Inherited from GlBasicInfoInterface)](glbasicinfointerface.mdx#uid-3dc9cf6f1d) | No summary available. |
-| [GetFloatv (Inherited from GlBasicInfoInterface)](glbasicinfointerface.mdx#uid-37f2cd2bf2) | No summary available. |
-| [GetIntegerv (Inherited from GlBasicInfoInterface)](glbasicinfointerface.mdx#uid-961400b97d) | No summary available. |
-| [GetString (2 overloads) (Inherited from GlBasicInfoInterface)](glbasicinfointerface.mdx#uid-6438cbf0f4) | No summary available. |
-| [GetStringNative (Inherited from GlBasicInfoInterface)](glbasicinfointerface.mdx#uid-f5216e7f4a) | No summary available. |
-| [GetStringiNative (Inherited from GlBasicInfoInterface)](glbasicinfointerface.mdx#uid-3f7c8607ab) | No summary available. |
+| [GetError](glbasicinfointerface.mdx#uid-335a3ecb4a) | Inherited from [GlBasicInfoInterface](glbasicinfointerface.mdx). |
+| [GetExtensions](glbasicinfointerface.mdx#uid-3dc9cf6f1d) | Inherited from [GlBasicInfoInterface](glbasicinfointerface.mdx). |
+| [GetFloatv](glbasicinfointerface.mdx#uid-37f2cd2bf2) | Inherited from [GlBasicInfoInterface](glbasicinfointerface.mdx). |
+| [GetIntegerv](glbasicinfointerface.mdx#uid-961400b97d) | Inherited from [GlBasicInfoInterface](glbasicinfointerface.mdx). |
+| [GetString (2 overloads)](glbasicinfointerface.mdx#uid-6438cbf0f4) | Inherited from [GlBasicInfoInterface](glbasicinfointerface.mdx). |
+| [GetStringNative](glbasicinfointerface.mdx#uid-f5216e7f4a) | Inherited from [GlBasicInfoInterface](glbasicinfointerface.mdx). |
+| [GetStringiNative](glbasicinfointerface.mdx#uid-3f7c8607ab) | Inherited from [GlBasicInfoInterface](glbasicinfointerface.mdx). |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-5bf3b91701"></span>
 
-### ActiveTexture
+### ActiveTexture Method
 
 ```csharp
-public Void ActiveTexture(Int32 texture)
+public void ActiveTexture(int texture)
 ```
+
+#### Parameters
+
+`texture` int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-418a32f834"></span>
 
-### AttachShader
+### AttachShader Method
 
 ```csharp
-public Void AttachShader(Int32 program, Int32 shader)
+public void AttachShader(int program, int shader)
 ```
+
+#### Parameters
+
+`program` int
+
+
+`shader` int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-3e0fecf1f5"></span>
 
-### BindAttribLocation
+### BindAttribLocation Method
 
 ```csharp
-public Void BindAttribLocation(Int32 program, Int32 index, IntPtr name)
+public void BindAttribLocation(int program, int index, IntPtr name)
 ```
+
+#### Parameters
+
+`program` int
+
+
+`index` int
+
+
+`name` IntPtr
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-8e562023fa"></span>
 
-### BindAttribLocationString
+### BindAttribLocationString Method
 
 ```csharp
-public Void BindAttribLocationString(Int32 program, Int32 index, String name)
+public void BindAttribLocationString(int program, int index, string name)
 ```
+
+#### Parameters
+
+`program` int
+
+
+`index` int
+
+
+`name` string
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-ab35a3b66d"></span>
 
-### BindBuffer
+### BindBuffer Method
 
 ```csharp
-public Void BindBuffer(Int32 target, Int32 buffer)
+public void BindBuffer(int target, int buffer)
 ```
+
+#### Parameters
+
+`target` int
+
+
+`buffer` int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-839838940c"></span>
 
-### BindFramebuffer
+### BindFramebuffer Method
 
 ```csharp
-public Void BindFramebuffer(Int32 target, Int32 fb)
+public void BindFramebuffer(int target, int fb)
 ```
+
+#### Parameters
+
+`target` int
+
+
+`fb` int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-d08ffd18fa"></span>
 
-### BindRenderbuffer
+### BindRenderbuffer Method
 
 ```csharp
-public Void BindRenderbuffer(Int32 target, Int32 fb)
+public void BindRenderbuffer(int target, int fb)
 ```
+
+#### Parameters
+
+`target` int
+
+
+`fb` int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-8aa86a2cf7"></span>
 
-### BindTexture
+### BindTexture Method
 
 ```csharp
-public Void BindTexture(Int32 target, Int32 fb)
+public void BindTexture(int target, int fb)
 ```
+
+#### Parameters
+
+`target` int
+
+
+`fb` int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-e4270e9f8e"></span>
 
-### BindVertexArray
+### BindVertexArray Method
 
 ```csharp
-public Void BindVertexArray(Int32 array)
+public void BindVertexArray(int array)
 ```
+
+#### Parameters
+
+`array` int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-763ffad6f1"></span>
 
-### BlitFramebuffer
+### BlitFramebuffer Method
 
 ```csharp
-public Void BlitFramebuffer(Int32 srcX0, Int32 srcY0, Int32 srcX1, Int32 srcY1, Int32 dstX0, Int32 dstY0, Int32 dstX1, Int32 dstY1, Int32 mask, Int32 filter)
+public void BlitFramebuffer(int srcX0, int srcY0, int srcX1, int srcY1, int dstX0, int dstY0, int dstX1, int dstY1, int mask, int filter)
 ```
+
+#### Parameters
+
+`srcX0` int
+
+
+`srcY0` int
+
+
+`srcX1` int
+
+
+`srcY1` int
+
+
+`dstX0` int
+
+
+`dstY0` int
+
+
+`dstX1` int
+
+
+`dstY1` int
+
+
+`mask` int
+
+
+`filter` int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-aaa36e6681"></span>
 
-### BufferData
+### BufferData Method
 
 ```csharp
-public Void BufferData(Int32 target, IntPtr size, IntPtr data, Int32 usage)
+public void BufferData(int target, IntPtr size, IntPtr data, int usage)
 ```
+
+#### Parameters
+
+`target` int
+
+
+`size` IntPtr
+
+
+`data` IntPtr
+
+
+`usage` int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-a8c4b494a0"></span>
 
-### CheckFramebufferStatus
+### CheckFramebufferStatus Method
 
 ```csharp
-public Int32 CheckFramebufferStatus(Int32 target)
+public int CheckFramebufferStatus(int target)
 ```
+
+#### Parameters
+
+`target` int
+
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-56b61bd229"></span>
 
-### Clear
+### Clear Method
 
 ```csharp
-public Void Clear(Int32 bits)
+public void Clear(int bits)
 ```
+
+#### Parameters
+
+`bits` int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-9ba4562ba8"></span>
 
-### ClearColor
+### ClearColor Method
 
 ```csharp
-public Void ClearColor(Single r, Single g, Single b, Single a)
+public void ClearColor(float r, float g, float b, float a)
 ```
+
+#### Parameters
+
+`r` float
+
+
+`g` float
+
+
+`b` float
+
+
+`a` float
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-08c809bba8"></span>
 
-### ClearDepth
+### ClearDepth Method
 
 ```csharp
-public Void ClearDepth(Single value)
+public void ClearDepth(float value)
 ```
+
+#### Parameters
+
+`value` float
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-ce6adec6f9"></span>
 
-### ClearStencil
+### ClearStencil Method
 
 ```csharp
-public Void ClearStencil(Int32 s)
+public void ClearStencil(int s)
 ```
+
+#### Parameters
+
+`s` int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-5a7bf70632"></span>
 
-### CompileShader
+### CompileShader Method
 
 ```csharp
-public Void CompileShader(Int32 shader)
+public void CompileShader(int shader)
 ```
+
+#### Parameters
+
+`shader` int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-61d47c2296"></span>
 
-### CompileShaderAndGetError
+### CompileShaderAndGetError Method
 
 ```csharp
-public String CompileShaderAndGetError(Int32 shader, String source)
+public string CompileShaderAndGetError(int shader, string source)
 ```
+
+#### Parameters
+
+`shader` int
+
+
+`source` string
+
+
+#### Returns
+
+string
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-34571c355d"></span>
 
-### CopyTexSubImage2D
+### CopyTexSubImage2D Method
 
 ```csharp
-public Void CopyTexSubImage2D(Int32 target, Int32 level, Int32 xoffset, Int32 yoffset, Int32 x, Int32 y, Int32 width, Int32 height)
+public void CopyTexSubImage2D(int target, int level, int xoffset, int yoffset, int x, int y, int width, int height)
 ```
+
+#### Parameters
+
+`target` int
+
+
+`level` int
+
+
+`xoffset` int
+
+
+`yoffset` int
+
+
+`x` int
+
+
+`y` int
+
+
+`width` int
+
+
+`height` int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-b0d0d32c1e"></span>
 
-### CreateProgram
+### CreateProgram Method
 
 ```csharp
-public Int32 CreateProgram()
+public int CreateProgram()
 ```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-ac04ccd26c"></span>
 
-### CreateShader
+### CreateShader Method
 
 ```csharp
-public Int32 CreateShader(Int32 shaderType)
+public int CreateShader(int shaderType)
 ```
+
+#### Parameters
+
+`shaderType` int
+
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-547febd8f0"></span>
 
-### DeleteBuffer
+### DeleteBuffer Method
 
 ```csharp
-public Void DeleteBuffer(Int32 buffer)
+public void DeleteBuffer(int buffer)
 ```
+
+#### Parameters
+
+`buffer` int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-65d7c79ff5"></span>
 
-### DeleteBuffers
+### DeleteBuffers Method
 
 ```csharp
-public Void DeleteBuffers(Int32 count, Int32* buffers)
+public void DeleteBuffers(int count, int* buffers)
 ```
+
+#### Parameters
+
+`count` int
+
+
+`buffers` int*
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-a298001b6b"></span>
 
-### DeleteFramebuffer
+### DeleteFramebuffer Method
 
 ```csharp
-public Void DeleteFramebuffer(Int32 fb)
+public void DeleteFramebuffer(int fb)
 ```
+
+#### Parameters
+
+`fb` int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-4d5f78a054"></span>
 
-### DeleteFramebuffers
+### DeleteFramebuffers Method
 
 ```csharp
-public Void DeleteFramebuffers(Int32 count, Int32* framebuffers)
+public void DeleteFramebuffers(int count, int* framebuffers)
 ```
+
+#### Parameters
+
+`count` int
+
+
+`framebuffers` int*
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-c2e8aef2ae"></span>
 
-### DeleteProgram
+### DeleteProgram Method
 
 ```csharp
-public Void DeleteProgram(Int32 program)
+public void DeleteProgram(int program)
 ```
+
+#### Parameters
+
+`program` int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-c353f22da5"></span>
 
-### DeleteRenderbuffer
+### DeleteRenderbuffer Method
 
 ```csharp
-public Void DeleteRenderbuffer(Int32 renderbuffer)
+public void DeleteRenderbuffer(int renderbuffer)
 ```
+
+#### Parameters
+
+`renderbuffer` int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-fe0ed42dd4"></span>
 
-### DeleteRenderbuffers
+### DeleteRenderbuffers Method
 
 ```csharp
-public Void DeleteRenderbuffers(Int32 count, Int32* renderbuffers)
+public void DeleteRenderbuffers(int count, int* renderbuffers)
 ```
+
+#### Parameters
+
+`count` int
+
+
+`renderbuffers` int*
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-9060aced7b"></span>
 
-### DeleteShader
+### DeleteShader Method
 
 ```csharp
-public Void DeleteShader(Int32 shader)
+public void DeleteShader(int shader)
 ```
+
+#### Parameters
+
+`shader` int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-357b3f7750"></span>
 
-### DeleteTexture
+### DeleteTexture Method
 
 ```csharp
-public Void DeleteTexture(Int32 texture)
+public void DeleteTexture(int texture)
 ```
+
+#### Parameters
+
+`texture` int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-63ea48a851"></span>
 
-### DeleteTextures
+### DeleteTextures Method
 
 ```csharp
-public Void DeleteTextures(Int32 count, Int32* textures)
+public void DeleteTextures(int count, int* textures)
 ```
+
+#### Parameters
+
+`count` int
+
+
+`textures` int*
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-9e48b9cfd0"></span>
 
-### DeleteVertexArray
+### DeleteVertexArray Method
 
 ```csharp
-public Void DeleteVertexArray(Int32 array)
+public void DeleteVertexArray(int array)
 ```
+
+#### Parameters
+
+`array` int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-6ea5cc9959"></span>
 
-### DeleteVertexArrays
+### DeleteVertexArrays Method
 
 ```csharp
-public Void DeleteVertexArrays(Int32 count, Int32* arrays)
+public void DeleteVertexArrays(int count, int* arrays)
 ```
+
+#### Parameters
+
+`count` int
+
+
+`arrays` int*
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-2c34c2bced"></span>
 
-### DepthFunc
+### DepthFunc Method
 
 ```csharp
-public Void DepthFunc(Int32 value)
+public void DepthFunc(int value)
 ```
+
+#### Parameters
+
+`value` int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-41d40e4c0b"></span>
 
-### DepthMask
+### DepthMask Method
 
 ```csharp
-public Void DepthMask(Int32 value)
+public void DepthMask(int value)
 ```
+
+#### Parameters
+
+`value` int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-6b2cc85dd0"></span>
 
-### Disable
+### Disable Method
 
 ```csharp
-public Void Disable(Int32 what)
+public void Disable(int what)
 ```
+
+#### Parameters
+
+`what` int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-d3a884f043"></span>
 
-### DrawArrays
+### DrawArrays Method
 
 ```csharp
-public Void DrawArrays(Int32 mode, Int32 first, IntPtr count)
+public void DrawArrays(int mode, int first, IntPtr count)
 ```
+
+#### Parameters
+
+`mode` int
+
+
+`first` int
+
+
+`count` IntPtr
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-ea6a2579e2"></span>
 
-### DrawElements
+### DrawElements Method
 
 ```csharp
-public Void DrawElements(Int32 mode, Int32 count, Int32 type, IntPtr indices)
+public void DrawElements(int mode, int count, int type, IntPtr indices)
 ```
+
+#### Parameters
+
+`mode` int
+
+
+`count` int
+
+
+`type` int
+
+
+`indices` IntPtr
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-f10cec6e90"></span>
 
-### Enable
+### Enable Method
 
 ```csharp
-public Void Enable(Int32 what)
+public void Enable(int what)
 ```
+
+#### Parameters
+
+`what` int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-0eb6735fad"></span>
 
-### EnableVertexAttribArray
+### EnableVertexAttribArray Method
 
 ```csharp
-public Void EnableVertexAttribArray(Int32 index)
+public void EnableVertexAttribArray(int index)
 ```
+
+#### Parameters
+
+`index` int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-1838ef846d"></span>
 
-### Finish
+### Finish Method
 
 ```csharp
-public Void Finish()
+public void Finish()
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-3a05fe0ae1"></span>
 
-### Flush
+### Flush Method
 
 ```csharp
-public Void Flush()
+public void Flush()
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-bb8978d295"></span>
 
-### FramebufferRenderbuffer
+### FramebufferRenderbuffer Method
 
 ```csharp
-public Void FramebufferRenderbuffer(Int32 target, Int32 attachment, Int32 renderbufferTarget, Int32 renderbuffer)
+public void FramebufferRenderbuffer(int target, int attachment, int renderbufferTarget, int renderbuffer)
 ```
+
+#### Parameters
+
+`target` int
+
+
+`attachment` int
+
+
+`renderbufferTarget` int
+
+
+`renderbuffer` int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-49a3cadc24"></span>
 
-### FramebufferTexture2D
+### FramebufferTexture2D Method
 
 ```csharp
-public Void FramebufferTexture2D(Int32 target, Int32 attachment, Int32 texTarget, Int32 texture, Int32 level)
+public void FramebufferTexture2D(int target, int attachment, int texTarget, int texture, int level)
 ```
+
+#### Parameters
+
+`target` int
+
+
+`attachment` int
+
+
+`texTarget` int
+
+
+`texture` int
+
+
+`level` int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-27803329bb"></span>
 
-### FromNativeUtf8GetProcAddress
+### FromNativeUtf8GetProcAddress Method
 
 ```csharp
 public Avalonia.OpenGL.GlInterface FromNativeUtf8GetProcAddress(Avalonia.OpenGL.GlVersion version, Func<IntPtr, IntPtr> getProcAddress)
 ```
 
+#### Parameters
+
+`version` [Avalonia.OpenGL.GlVersion](xref:Avalonia.OpenGL.GlVersion)
+
+
+`getProcAddress` Func&lt;IntPtr, IntPtr&gt;
+
+
+#### Returns
+
+[Avalonia.OpenGL.GlInterface](xref:Avalonia.OpenGL.GlInterface)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-319b006ae4"></span>
 
-### GenBuffer
+### GenBuffer Method
 
 ```csharp
-public Int32 GenBuffer()
+public int GenBuffer()
 ```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-6b22ed580e"></span>
 
-### GenBuffers
+### GenBuffers Method
 
 ```csharp
-public Void GenBuffers(Int32 len, Int32* rv)
+public void GenBuffers(int len, int* rv)
 ```
+
+#### Parameters
+
+`len` int
+
+
+`rv` int*
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-3881e99fc6"></span>
 
-### GenFramebuffer
+### GenFramebuffer Method
 
 ```csharp
-public Int32 GenFramebuffer()
+public int GenFramebuffer()
 ```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-cd33a433e4"></span>
 
-### GenFramebuffers
+### GenFramebuffers Method
 
 ```csharp
-public Void GenFramebuffers(Int32 count, Int32* res)
+public void GenFramebuffers(int count, int* res)
 ```
+
+#### Parameters
+
+`count` int
+
+
+`res` int*
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-f2f0d9a6d9"></span>
 
-### GenRenderbuffer
+### GenRenderbuffer Method
 
 ```csharp
-public Int32 GenRenderbuffer()
+public int GenRenderbuffer()
 ```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-cca04c199d"></span>
 
-### GenRenderbuffers
+### GenRenderbuffers Method
 
 ```csharp
-public Void GenRenderbuffers(Int32 count, Int32* res)
+public void GenRenderbuffers(int count, int* res)
 ```
+
+#### Parameters
+
+`count` int
+
+
+`res` int*
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-320d2ad493"></span>
 
-### GenTexture
+### GenTexture Method
 
 ```csharp
-public Int32 GenTexture()
+public int GenTexture()
 ```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-4a81918c26"></span>
 
-### GenTextures
+### GenTextures Method
 
 ```csharp
-public Void GenTextures(Int32 count, Int32* res)
+public void GenTextures(int count, int* res)
 ```
+
+#### Parameters
+
+`count` int
+
+
+`res` int*
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-d447ca3613"></span>
 
-### GenVertexArray
+### GenVertexArray Method
 
 ```csharp
-public Int32 GenVertexArray()
+public int GenVertexArray()
 ```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-463e1d8909"></span>
 
-### GenVertexArrays
+### GenVertexArrays Method
 
 ```csharp
-public Void GenVertexArrays(Int32 n, Int32* rv)
+public void GenVertexArrays(int n, int* rv)
 ```
+
+#### Parameters
+
+`n` int
+
+
+`rv` int*
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-d3dcf31f83"></span>
 
-### GetAttribLocation
+### GetAttribLocation Method
 
 ```csharp
-public Int32 GetAttribLocation(Int32 program, IntPtr name)
+public int GetAttribLocation(int program, IntPtr name)
 ```
+
+#### Parameters
+
+`program` int
+
+
+`name` IntPtr
+
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-113562fe1e"></span>
 
-### GetAttribLocationString
+### GetAttribLocationString Method
 
 ```csharp
-public Int32 GetAttribLocationString(Int32 program, String name)
+public int GetAttribLocationString(int program, string name)
 ```
+
+#### Parameters
+
+`program` int
+
+
+`name` string
+
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-235411e7d9"></span>
 
-### GetProcAddress
+### GetProcAddress Method
 
 Returns an OpenGL function by name.
 
 ```csharp
-public IntPtr GetProcAddress(String proc)
+public IntPtr GetProcAddress(string proc)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `proc` | Function name. |
+#### Parameters
 
-Returns: Handle of function, which can be casted to unmanaged function pointer.
+`proc` string
+
+Function name.
+
+
+#### Returns
+
+IntPtr
+
+Handle of function, which can be casted to unmanaged function pointer.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-a2222cb704"></span>
 
-### GetProgramInfoLog
+### GetProgramInfoLog Method
 
 ```csharp
-public Void GetProgramInfoLog(Int32 program, Int32 maxLength, Int32& len, Void* infoLog)
+public void GetProgramInfoLog(int program, int maxLength, int& len, void* infoLog)
 ```
+
+#### Parameters
+
+`program` int
+
+
+`maxLength` int
+
+
+`len` int&amp;
+
+
+`infoLog` void*
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-6694e2ab22"></span>
 
-### GetProgramiv
+### GetProgramiv Method
 
 ```csharp
-public Void GetProgramiv(Int32 program, Int32 name, Int32* parameters)
+public void GetProgramiv(int program, int name, int* parameters)
 ```
+
+#### Parameters
+
+`program` int
+
+
+`name` int
+
+
+`parameters` int*
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-0d0bc985b6"></span>
 
-### GetRenderbufferParameteriv
+### GetRenderbufferParameteriv Method
 
 ```csharp
-public Void GetRenderbufferParameteriv(Int32 target, Int32 name, Int32& value)
+public void GetRenderbufferParameteriv(int target, int name, int& value)
 ```
+
+#### Parameters
+
+`target` int
+
+
+`name` int
+
+
+`value` int&amp;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-c02f6a1f7f"></span>
 
-### GetShaderInfoLog
+### GetShaderInfoLog Method
 
 ```csharp
-public Void GetShaderInfoLog(Int32 shader, Int32 maxLength, Int32& length, Void* infoLog)
+public void GetShaderInfoLog(int shader, int maxLength, int& length, void* infoLog)
 ```
+
+#### Parameters
+
+`shader` int
+
+
+`maxLength` int
+
+
+`length` int&amp;
+
+
+`infoLog` void*
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-c62e662122"></span>
 
-### GetShaderiv
+### GetShaderiv Method
 
 ```csharp
-public Void GetShaderiv(Int32 shader, Int32 name, Int32* parameters)
+public void GetShaderiv(int shader, int name, int* parameters)
 ```
+
+#### Parameters
+
+`shader` int
+
+
+`name` int
+
+
+`parameters` int*
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-013f2ae8ae"></span>
 
-### GetUniformLocation
+### GetUniformLocation Method
 
 ```csharp
-public Int32 GetUniformLocation(Int32 program, IntPtr name)
+public int GetUniformLocation(int program, IntPtr name)
 ```
+
+#### Parameters
+
+`program` int
+
+
+`name` IntPtr
+
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-269c0cbc80"></span>
 
-### GetUniformLocationString
+### GetUniformLocationString Method
 
 ```csharp
-public Int32 GetUniformLocationString(Int32 program, String name)
+public int GetUniformLocationString(int program, string name)
 ```
+
+#### Parameters
+
+`program` int
+
+
+`name` string
+
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-a8294a5f2b"></span>
 
-### LinkProgram
+### LinkProgram Method
 
 ```csharp
-public Void LinkProgram(Int32 program)
+public void LinkProgram(int program)
 ```
+
+#### Parameters
+
+`program` int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-5ac3785672"></span>
 
-### LinkProgramAndGetError
+### LinkProgramAndGetError Method
 
 ```csharp
-public String LinkProgramAndGetError(Int32 program)
+public string LinkProgramAndGetError(int program)
 ```
+
+#### Parameters
+
+`program` int
+
+
+#### Returns
+
+string
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-a543469bca"></span>
 
-### RenderbufferStorage
+### RenderbufferStorage Method
 
 ```csharp
-public Void RenderbufferStorage(Int32 target, Int32 internalFormat, Int32 width, Int32 height)
+public void RenderbufferStorage(int target, int internalFormat, int width, int height)
 ```
+
+#### Parameters
+
+`target` int
+
+
+`internalFormat` int
+
+
+`width` int
+
+
+`height` int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-357d1c6697"></span>
 
-### ShaderSource
+### ShaderSource Method
 
 ```csharp
-public Void ShaderSource(Int32 shader, Int32 count, IntPtr strings, IntPtr lengths)
+public void ShaderSource(int shader, int count, IntPtr strings, IntPtr lengths)
 ```
+
+#### Parameters
+
+`shader` int
+
+
+`count` int
+
+
+`strings` IntPtr
+
+
+`lengths` IntPtr
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-2e04d5997d"></span>
 
-### ShaderSourceString
+### ShaderSourceString Method
 
 ```csharp
-public Void ShaderSourceString(Int32 shader, String source)
+public void ShaderSourceString(int shader, string source)
 ```
+
+#### Parameters
+
+`shader` int
+
+
+`source` string
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-ad49471c4b"></span>
 
-### TexImage2D
+### TexImage2D Method
 
 ```csharp
-public Void TexImage2D(Int32 target, Int32 level, Int32 internalFormat, Int32 width, Int32 height, Int32 border, Int32 format, Int32 type, IntPtr data)
+public void TexImage2D(int target, int level, int internalFormat, int width, int height, int border, int format, int type, IntPtr data)
 ```
+
+#### Parameters
+
+`target` int
+
+
+`level` int
+
+
+`internalFormat` int
+
+
+`width` int
+
+
+`height` int
+
+
+`border` int
+
+
+`format` int
+
+
+`type` int
+
+
+`data` IntPtr
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-9bc8a961f8"></span>
 
-### TexParameteri
+### TexParameteri Method
 
 ```csharp
-public Void TexParameteri(Int32 target, Int32 name, Int32 value)
+public void TexParameteri(int target, int name, int value)
 ```
+
+#### Parameters
+
+`target` int
+
+
+`name` int
+
+
+`value` int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-43d103169e"></span>
 
-### Uniform1f
+### Uniform1f Method
 
 ```csharp
-public Void Uniform1f(Int32 location, Single falue)
+public void Uniform1f(int location, float falue)
 ```
+
+#### Parameters
+
+`location` int
+
+
+`falue` float
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-78e1540108"></span>
 
-### Uniform1i
+### Uniform1i Method
 
 ```csharp
-public Void Uniform1i(Int32 location, Int32 value)
+public void Uniform1i(int location, int value)
 ```
+
+#### Parameters
+
+`location` int
+
+
+`value` int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-6e94672d0b"></span>
 
-### UniformMatrix4fv
+### UniformMatrix4fv Method
 
 ```csharp
-public Void UniformMatrix4fv(Int32 location, Int32 count, Boolean transpose, Void* value)
+public void UniformMatrix4fv(int location, int count, bool transpose, void* value)
 ```
+
+#### Parameters
+
+`location` int
+
+
+`count` int
+
+
+`transpose` bool
+
+
+`value` void*
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-c8518c48ae"></span>
 
-### UseProgram
+### UseProgram Method
 
 ```csharp
-public Void UseProgram(Int32 program)
+public void UseProgram(int program)
 ```
+
+#### Parameters
+
+`program` int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-0674e7c6d3"></span>
 
-### VertexAttribPointer
+### VertexAttribPointer Method
 
 ```csharp
-public Void VertexAttribPointer(Int32 index, Int32 size, Int32 type, Int32 normalized, Int32 stride, IntPtr pointer)
+public void VertexAttribPointer(int index, int size, int type, int normalized, int stride, IntPtr pointer)
 ```
+
+#### Parameters
+
+`index` int
+
+
+`size` int
+
+
+`type` int
+
+
+`normalized` int
+
+
+`stride` int
+
+
+`pointer` IntPtr
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-ca1437e6df"></span>
 
-### Viewport
+### Viewport Method
 
 ```csharp
-public Void Viewport(Int32 x, Int32 y, Int32 width, Int32 height)
+public void Viewport(int x, int y, int width, int height)
 ```
+
+#### Parameters
+
+`x` int
+
+
+`y` int
+
+
+`width` int
+
+
+`height` int
+
+
+</section>
 
 ## Properties
 
@@ -811,69 +1866,101 @@ public Void Viewport(Int32 x, Int32 y, Int32 width, Int32 height)
 | [Vendor](#uid-a0d1f59df7) | No summary available. |
 | [Version](#uid-499f67454c) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-e5d711ad1c"></span>
 
-### ContextInfo
+### ContextInfo Property
 
 ```csharp
 public Avalonia.OpenGL.GlInterface.GlContextInfo ContextInfo { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-35d5d10cba"></span>
 
-### IsBindVertexArrayAvailable
+### IsBindVertexArrayAvailable Property
 
 ```csharp
-public Boolean IsBindVertexArrayAvailable { get; set; }
+public bool IsBindVertexArrayAvailable { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-819722db71"></span>
 
-### IsBlitFramebufferAvailable
+### IsBlitFramebufferAvailable Property
 
 ```csharp
-public Boolean IsBlitFramebufferAvailable { get; set; }
+public bool IsBlitFramebufferAvailable { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-26a96e8953"></span>
 
-### IsDeleteVertexArraysAvailable
+### IsDeleteVertexArraysAvailable Property
 
 ```csharp
-public Boolean IsDeleteVertexArraysAvailable { get; set; }
+public bool IsDeleteVertexArraysAvailable { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-31ec4cb68b"></span>
 
-### IsGenVertexArraysAvailable
+### IsGenVertexArraysAvailable Property
 
 ```csharp
-public Boolean IsGenVertexArraysAvailable { get; set; }
+public bool IsGenVertexArraysAvailable { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-a4cbddaeb4"></span>
 
-### Renderer
+### Renderer Property
 
 ```csharp
-public String Renderer { get; set; }
+public string Renderer { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-a0d1f59df7"></span>
 
-### Vendor
+### Vendor Property
 
 ```csharp
-public String Vendor { get; set; }
+public string Vendor { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-499f67454c"></span>
 
-### Version
+### Version Property
 
 ```csharp
-public String Version { get; set; }
+public string Version { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

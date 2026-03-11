@@ -53,7 +53,7 @@ public class AccentColorConverter
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> AccentColorConverter
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> AccentColorConverter
 </div>
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Implements:</span> <a href="../../../data/converters/ivalueconverter">IValueConverter</a>
@@ -70,13 +70,17 @@ This is a highly-specialized converter for the color picker.
 | --- | --- |
 | [AccentColorConverter](#uid-1dbc1ed79e) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-1dbc1ed79e"></span>
 
-### AccentColorConverter
+### AccentColorConverter Constructor
 
 ```csharp
 public AccentColorConverter()
 ```
+
+</section>
 
 ## Methods
 
@@ -86,61 +90,142 @@ public AccentColorConverter()
 | [ConvertBack](#uid-ea9a04cc8e) | Converts a value. |
 | [GetAccent](#uid-a8ab38b141) | This does not account for perceptual differences and also does not match with system accent color calculation. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-ac1dd8c018"></span>
 
-### Convert
+### Convert Method
 
 Converts a value.
 
 ```csharp
-public Object Convert(Object value, Type targetType, Object parameter, System.Globalization.CultureInfo culture)
+public object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `culture` | The culture to use. |
-| `parameter` | A user-defined parameter. |
-| `targetType` | The type of the target. |
-| `value` | The value to convert. |
+#### Parameters
 
-Returns: The converted value.
+`value` object
+
+The value to convert.
+
+
+`targetType` Type
+
+The type of the target.
+
+
+`parameter` object
+
+A user-defined parameter.
+
+
+`culture` System.Globalization.CultureInfo
+
+The culture to use.
+
+
+#### Returns
+
+object
+
+The converted value.
+
+
+#### Remarks
+
+This method should not throw exceptions. If the value is not convertible, return
+a [Avalonia.Data.BindingNotification](xref:Avalonia.Data.BindingNotification) in an error state. Any exceptions thrown will be
+treated as an application exception.
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-ea9a04cc8e"></span>
 
-### ConvertBack
+### ConvertBack Method
 
 Converts a value.
 
 ```csharp
-public Object ConvertBack(Object value, Type targetType, Object parameter, System.Globalization.CultureInfo culture)
+public object ConvertBack(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `culture` | The culture to use. |
-| `parameter` | A user-defined parameter. |
-| `targetType` | The type of the target. |
-| `value` | The value to convert. |
+#### Parameters
 
-Returns: The converted value.
+`value` object
+
+The value to convert.
+
+
+`targetType` Type
+
+The type of the target.
+
+
+`parameter` object
+
+A user-defined parameter.
+
+
+`culture` System.Globalization.CultureInfo
+
+The culture to use.
+
+
+#### Returns
+
+object
+
+The converted value.
+
+
+#### Remarks
+
+This method should not throw exceptions. If the value is not convertible, return
+a [Avalonia.Data.BindingNotification](xref:Avalonia.Data.BindingNotification) in an error state. Any exceptions thrown will be
+treated as an application exception.
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-a8ab38b141"></span>
 
-### GetAccent
+### GetAccent Method
 
 This does not account for perceptual differences and also does not match with
 system accent color calculation.
 
 ```csharp
-public Avalonia.Media.HsvColor GetAccent(Avalonia.Media.HsvColor hsvColor, Int32 accentStep)
+public Avalonia.Media.HsvColor GetAccent(Avalonia.Media.HsvColor hsvColor, int accentStep)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `accentStep` | The number of accent color steps to move. |
-| `hsvColor` | The base color to calculate the accent from. |
+#### Parameters
 
-Returns: The new accent color.
+`hsvColor` [Avalonia.Media.HsvColor](xref:Avalonia.Media.HsvColor)
+
+The base color to calculate the accent from.
+
+
+`accentStep` int
+
+The number of accent color steps to move.
+
+
+#### Returns
+
+[Avalonia.Media.HsvColor](xref:Avalonia.Media.HsvColor)
+
+The new accent color.
+
+
+#### Remarks
+
+Use the HSV representation as it's more perceptual.
+In most cases only the value is changed by a fixed percentage so the algorithm is reproducible.
+
+</section>
 
 ## Fields
 
@@ -148,15 +233,19 @@ Returns: The new accent color.
 | --- | --- |
 | [ValueDelta](#uid-15cfd736fa) | The amount to change the Value component for each accent color step. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-15cfd736fa"></span>
 
-### ValueDelta
+### ValueDelta Field
 
 The amount to change the Value component for each accent color step.
 
 ```csharp
-public Double ValueDelta
+public double ValueDelta
 ```
+
+</section>
 
 </ApiRefPage>
 

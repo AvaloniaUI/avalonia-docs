@@ -47,7 +47,7 @@ public class SpanHelpers
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> SpanHelpers
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> SpanHelpers
 </div>
 </div>
 
@@ -62,65 +62,216 @@ public class SpanHelpers
 | [TryParseInt (2 overloads)](#uid-43fd4f5cfe) | No summary available. |
 | [TryParseUInt](#uid-f264c34aa6) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-b64df72a11"></span>
 
-### ParseDouble
+### ParseDouble Method
 
 ```csharp
-public Double ParseDouble(ReadOnlySpan<Char> span, IFormatProvider provider)
+public double ParseDouble(ReadOnlySpan<char> span, IFormatProvider provider)
 ```
+
+#### Parameters
+
+`span` ReadOnlySpan&lt;char&gt;
+
+
+`provider` IFormatProvider
+
+
+#### Returns
+
+double
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-0cc415b2b1"></span>
 
-### TryParseByte
+### TryParseByte Method
 
 ```csharp
-public Boolean TryParseByte(ReadOnlySpan<Char> span, System.Globalization.NumberStyles style, IFormatProvider provider, Byte& value)
+public bool TryParseByte(ReadOnlySpan<char> span, System.Globalization.NumberStyles style, IFormatProvider provider, byte& value)
 ```
+
+#### Parameters
+
+`span` ReadOnlySpan&lt;char&gt;
+
+
+`style` System.Globalization.NumberStyles
+
+
+`provider` IFormatProvider
+
+
+`value` byte&amp;
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-6e25064a29"></span>
 
-### TryParseDouble
+### TryParseDouble Method
 
 ```csharp
-public Boolean TryParseDouble(ReadOnlySpan<Char> span, System.Globalization.NumberStyles style, IFormatProvider provider, Double& value)
+public bool TryParseDouble(ReadOnlySpan<char> span, System.Globalization.NumberStyles style, IFormatProvider provider, double& value)
 ```
+
+#### Parameters
+
+`span` ReadOnlySpan&lt;char&gt;
+
+
+`style` System.Globalization.NumberStyles
+
+
+`provider` IFormatProvider
+
+
+`value` double&amp;
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-02b7a15ff4"></span>
 
-### TryParseEnum
+### TryParseEnum Method
 
 ```csharp
-public Boolean TryParseEnum<TEnum>(ReadOnlySpan<Char> span, Boolean ignoreCase, TEnum& value)
+public bool TryParseEnum<TEnum>(ReadOnlySpan<char> span, bool ignoreCase, TEnum& value)
 ```
+
+#### Parameters
+
+`span` ReadOnlySpan&lt;char&gt;
+
+
+`ignoreCase` bool
+
+
+`value` TEnum&amp;
+
+
+#### Type Parameters
+
+`TEnum`
+
+
+#### Returns
+
+bool
+
+
+</section>
 
 <span id="uid-43fd4f5cfe"></span>
 
 ### TryParseInt overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-f3ea7c9fc7"></span>
 
-#### TryParseInt
+#### TryParseInt Method
 
 ```csharp
-public Boolean TryParseInt(ReadOnlySpan<Char> span, System.Globalization.NumberStyles style, IFormatProvider provider, Int32& value)
+public bool TryParseInt(ReadOnlySpan<char> span, System.Globalization.NumberStyles style, IFormatProvider provider, int& value)
 ```
+
+##### Parameters
+
+`span` ReadOnlySpan&lt;char&gt;
+
+
+`style` System.Globalization.NumberStyles
+
+
+`provider` IFormatProvider
+
+
+`value` int&amp;
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-55af653b83"></span>
 
-#### TryParseInt
+#### TryParseInt Method
 
 ```csharp
-public Boolean TryParseInt(ReadOnlySpan<Char> span, Int32& value)
+public bool TryParseInt(ReadOnlySpan<char> span, int& value)
 ```
+
+##### Parameters
+
+`span` ReadOnlySpan&lt;char&gt;
+
+
+`value` int&amp;
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-f264c34aa6"></span>
 
-### TryParseUInt
+### TryParseUInt Method
 
 ```csharp
-public Boolean TryParseUInt(ReadOnlySpan<Char> span, System.Globalization.NumberStyles style, IFormatProvider provider, UInt32& value)
+public bool TryParseUInt(ReadOnlySpan<char> span, System.Globalization.NumberStyles style, IFormatProvider provider, uint& value)
 ```
+
+#### Parameters
+
+`span` ReadOnlySpan&lt;char&gt;
+
+
+`style` System.Globalization.NumberStyles
+
+
+`provider` IFormatProvider
+
+
+`value` uint&amp;
+
+
+#### Returns
+
+bool
+
+
+</section>
 
 </ApiRefPage>
 

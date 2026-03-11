@@ -54,7 +54,7 @@ public class GlyphTypeface
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> GlyphTypeface
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> GlyphTypeface
 </div>
 </div>
 
@@ -69,11 +69,13 @@ shaping scenarios.
 
 | Name | Description |
 | --- | --- |
-| [GlyphTypeface](#uid-0ace250ea7) | Initializes a new instance of the Avalonia.Media.GlyphTypeface class with the specified platform typeface and font simulations. |
+| [GlyphTypeface](#uid-0ace250ea7) | Initializes a new instance of the [Avalonia.Media.GlyphTypeface](xref:Avalonia.Media.GlyphTypeface) class with the specified platform typeface and font simulations. |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-0ace250ea7"></span>
 
-### GlyphTypeface
+### GlyphTypeface Constructor
 
 Initializes a new instance of the [Avalonia.Media.GlyphTypeface](xref:Avalonia.Media.GlyphTypeface) class with the specified platform typeface and
 font simulations.
@@ -82,15 +84,31 @@ font simulations.
 public GlyphTypeface(Avalonia.Media.IPlatformTypeface typeface, Avalonia.Media.FontSimulations fontSimulations)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `fontSimulations` | The font simulations to apply, such as bold or oblique. The default is [Avalonia.Media.FontSimulations.None](xref:Avalonia.Media.FontSimulations.None). |
-| `typeface` | The platform-specific typeface to be used for this [Avalonia.Media.GlyphTypeface](xref:Avalonia.Media.GlyphTypeface) instance. This parameter
-cannot be `null`. |
+#### Parameters
+
+`typeface` [Avalonia.Media.IPlatformTypeface](xref:Avalonia.Media.IPlatformTypeface)
+
+The platform-specific typeface to be used for this [Avalonia.Media.GlyphTypeface](xref:Avalonia.Media.GlyphTypeface) instance. This parameter
+cannot be `null`.
+
+
+`fontSimulations` [Avalonia.Media.FontSimulations](xref:Avalonia.Media.FontSimulations)
+
+The font simulations to apply, such as bold or oblique. The default is [Avalonia.Media.FontSimulations.None](xref:Avalonia.Media.FontSimulations.None).
+
+
+#### Remarks
+
+This constructor initializes the glyph typeface by loading various font tables,
+including OS/2, CMAP, and metrics tables, to calculate font metrics and other properties. It also determines
+font characteristics such as weight, style, stretch, and family names based on the provided typeface and
+font simulations.
 
 #### Exceptions
 
 - [Thrown if required font tables (e.g., 'maxp') cannot be loaded.](xref:System.InvalidOperationException)
+
+</section>
 
 ## Methods
 
@@ -101,49 +119,121 @@ cannot be `null`. |
 | [TryGetHorizontalGlyphAdvance](#uid-327caa7a57) | No summary available. |
 | [TryGetHorizontalGlyphAdvances](#uid-fff209abba) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-611d5d5c3c"></span>
 
-### Dispose
+### Dispose Method
 
 ```csharp
-public Void Dispose()
+public void Dispose()
 ```
+
+</section>
 
 <span id="uid-224187e3e5"></span>
 
 ### TryGetGlyphMetrics overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-2a0770d4e8"></span>
 
-#### TryGetGlyphMetrics
+#### TryGetGlyphMetrics Method
 
 ```csharp
-public Boolean TryGetGlyphMetrics(ReadOnlySpan<UInt16> glyphIds, Span<Avalonia.Media.GlyphMetrics> metrics)
+public bool TryGetGlyphMetrics(ReadOnlySpan<ushort> glyphIds, Span<Avalonia.Media.GlyphMetrics> metrics)
 ```
+
+##### Parameters
+
+`glyphIds` ReadOnlySpan&lt;ushort&gt;
+
+
+`metrics` Span&lt;[Avalonia.Media.GlyphMetrics](xref:Avalonia.Media.GlyphMetrics)&gt;
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-18152dfbd1"></span>
 
-#### TryGetGlyphMetrics
+#### TryGetGlyphMetrics Method
 
 ```csharp
-public Boolean TryGetGlyphMetrics(UInt16 glyph, Avalonia.Media.GlyphMetrics& metrics)
+public bool TryGetGlyphMetrics(ushort glyph, Avalonia.Media.GlyphMetrics& metrics)
 ```
+
+##### Parameters
+
+`glyph` ushort
+
+
+`metrics` [Avalonia.Media.GlyphMetrics](xref:Avalonia.Media.GlyphMetrics)&amp;
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-327caa7a57"></span>
 
-### TryGetHorizontalGlyphAdvance
+### TryGetHorizontalGlyphAdvance Method
 
 ```csharp
-public Boolean TryGetHorizontalGlyphAdvance(UInt16 glyphId, UInt16& advance)
+public bool TryGetHorizontalGlyphAdvance(ushort glyphId, ushort& advance)
 ```
+
+#### Parameters
+
+`glyphId` ushort
+
+
+`advance` ushort&amp;
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-fff209abba"></span>
 
-### TryGetHorizontalGlyphAdvances
+### TryGetHorizontalGlyphAdvances Method
 
 ```csharp
-public Boolean TryGetHorizontalGlyphAdvances(ReadOnlySpan<UInt16> glyphIds, Span<UInt16> advances)
+public bool TryGetHorizontalGlyphAdvances(ReadOnlySpan<ushort> glyphIds, Span<ushort> advances)
 ```
+
+#### Parameters
+
+`glyphIds` ReadOnlySpan&lt;ushort&gt;
+
+
+`advances` Span&lt;ushort&gt;
+
+
+#### Returns
+
+bool
+
+
+</section>
 
 ## Properties
 
@@ -153,7 +243,7 @@ public Boolean TryGetHorizontalGlyphAdvances(ReadOnlySpan<UInt16> glyphIds, Span
 | [FaceNames](#uid-d5bea81105) | Gets a read-only mapping of culture-specific face names. |
 | [FamilyName](#uid-7117edd23d) | Gets the family name of the font. |
 | [FamilyNames](#uid-c2fc7a9ce5) | Gets a read-only mapping of localized culture-specific family names. |
-| [FontSimulations](#uid-d4b3d5b8f6) | Gets the font simulation settings applied to the Avalonia.Media.GlyphTypeface. |
+| [FontSimulations](#uid-d4b3d5b8f6) | Gets the font simulation settings applied to the [Avalonia.Media.GlyphTypeface](xref:Avalonia.Media.GlyphTypeface). |
 | [GlyphCount](#uid-f8b29671db) | Gets the number of glyphs held by this font. |
 | [Metrics](#uid-49ad964e00) | Gets the font metrics associated with this font. |
 | [PlatformTypeface](#uid-239ceb6ee3) | Gets the platform-specific typeface associated with this font. |
@@ -164,9 +254,11 @@ public Boolean TryGetHorizontalGlyphAdvances(ReadOnlySpan<UInt16> glyphIds, Span
 | [TypographicFamilyName](#uid-5249100e36) | Gets the typographic family name of the font. |
 | [Weight](#uid-076de7204b) | Gets the font weight. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-820bb58c1b"></span>
 
-### CharacterToGlyphMap
+### CharacterToGlyphMap Property
 
 Gets a read-only mapping of Unicode character codes to glyph indices for the font.
 
@@ -174,39 +266,72 @@ Gets a read-only mapping of Unicode character codes to glyph indices for the fon
 public Avalonia.Media.Fonts.Tables.Cmap.CharacterToGlyphMap CharacterToGlyphMap { get; set; }
 ```
 
+#### Remarks
+
+This dictionary provides the correspondence between Unicode code points and the
+glyphs defined in the font. The mapping can be used to look up the glyph index for a given character when
+rendering or processing text. The set of mapped characters depends on the font's supported character
+set.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-d5bea81105"></span>
 
-### FaceNames
+### FaceNames Property
 
 Gets a read-only mapping of culture-specific face names.
 
 ```csharp
-public System.Collections.Generic.IReadOnlyDictionary<System.Globalization.CultureInfo, String> FaceNames { get; set; }
+public System.Collections.Generic.IReadOnlyDictionary<System.Globalization.CultureInfo, string> FaceNames { get; set; }
 ```
+
+#### Remarks
+
+Each entry in the dictionary maps a [System.Globalization.CultureInfo](xref:System.Globalization.CultureInfo) to
+the corresponding localized face name. The dictionary is empty if no face names are defined.
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-7117edd23d"></span>
 
-### FamilyName
+### FamilyName Property
 
 Gets the family name of the font.
 
 ```csharp
-public String FamilyName { get; set; }
+public string FamilyName { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-c2fc7a9ce5"></span>
 
-### FamilyNames
+### FamilyNames Property
 
 Gets a read-only mapping of localized culture-specific family names.
 
 ```csharp
-public System.Collections.Generic.IReadOnlyDictionary<System.Globalization.CultureInfo, String> FamilyNames { get; set; }
+public System.Collections.Generic.IReadOnlyDictionary<System.Globalization.CultureInfo, string> FamilyNames { get; set; }
 ```
+
+#### Remarks
+
+The dictionary contains entries for each supported culture, where the key is a [System.Globalization.CultureInfo](xref:System.Globalization.CultureInfo) representing the culture, and the value is the corresponding localized family name. The
+dictionary may be empty if no family names are available.
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-d4b3d5b8f6"></span>
 
-### FontSimulations
+### FontSimulations Property
 
 Gets the font simulation settings applied to the [Avalonia.Media.GlyphTypeface](xref:Avalonia.Media.GlyphTypeface).
 
@@ -214,19 +339,27 @@ Gets the font simulation settings applied to the [Avalonia.Media.GlyphTypeface](
 public Avalonia.Media.FontSimulations FontSimulations { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-f8b29671db"></span>
 
-### GlyphCount
+### GlyphCount Property
 
 Gets the number of glyphs held by this font.
 
 ```csharp
-public Int32 GlyphCount { get; set; }
+public int GlyphCount { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-49ad964e00"></span>
 
-### Metrics
+### Metrics Property
 
 Gets the font metrics associated with this font.
 
@@ -234,9 +367,13 @@ Gets the font metrics associated with this font.
 public Avalonia.Media.FontMetrics Metrics { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-239ceb6ee3"></span>
 
-### PlatformTypeface
+### PlatformTypeface Property
 
 Gets the platform-specific typeface associated with this font.
 
@@ -244,9 +381,13 @@ Gets the platform-specific typeface associated with this font.
 public Avalonia.Media.IPlatformTypeface PlatformTypeface { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-bef0dfc38f"></span>
 
-### Stretch
+### Stretch Property
 
 Gets the font stretch.
 
@@ -254,9 +395,13 @@ Gets the font stretch.
 public Avalonia.Media.FontStretch Stretch { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-d762ed5152"></span>
 
-### Style
+### Style Property
 
 Gets the font style.
 
@@ -264,9 +409,13 @@ Gets the font style.
 public Avalonia.Media.FontStyle Style { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-61839489bf"></span>
 
-### SupportedFeatures
+### SupportedFeatures Property
 
 Gets the list of OpenType feature tags supported by the font.
 
@@ -274,9 +423,19 @@ Gets the list of OpenType feature tags supported by the font.
 public System.Collections.Generic.IReadOnlyList<Avalonia.Media.Fonts.OpenTypeTag> SupportedFeatures { get; set; }
 ```
 
+#### Remarks
+
+The returned list reflects the features available in the underlying font and is
+read-only. The order of features in the list is not guaranteed. This property does not return null; if the
+font does not support any features, the list will be empty.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-df45934655"></span>
 
-### TextShaperTypeface
+### TextShaperTypeface Property
 
 Gets the typeface information used by the text shaper for this font.
 
@@ -284,25 +443,41 @@ Gets the typeface information used by the text shaper for this font.
 public Avalonia.Media.ITextShaperTypeface TextShaperTypeface { get; set; }
 ```
 
+#### Remarks
+
+The returned typeface is created on demand and cached for subsequent accesses. This
+property is typically used by text rendering components that require low-level font shaping
+details.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-5249100e36"></span>
 
-### TypographicFamilyName
+### TypographicFamilyName Property
 
 Gets the typographic family name of the font.
 
 ```csharp
-public String TypographicFamilyName { get; set; }
+public string TypographicFamilyName { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-076de7204b"></span>
 
-### Weight
+### Weight Property
 
 Gets the font weight.
 
 ```csharp
 public Avalonia.Media.FontWeight Weight { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

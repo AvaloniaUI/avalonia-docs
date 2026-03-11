@@ -53,7 +53,7 @@ public class NativeDock
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> NativeDock
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> NativeDock
 </div>
 </div>
 
@@ -61,12 +61,14 @@ public class NativeDock
 
 | Name | Description |
 | --- | --- |
-| [GetMenu](#uid-c79ff99ff4) | Gets the value of the attached Avalonia.Controls.NativeDock.MenuProperty. |
-| [SetMenu](#uid-17c523efb7) | Sets the value of the attached Avalonia.Controls.NativeDock.MenuProperty. |
+| [GetMenu](#uid-c79ff99ff4) | Gets the value of the attached [Avalonia.Controls.NativeDock.MenuProperty](xref:Avalonia.Controls.NativeDock.MenuProperty). |
+| [SetMenu](#uid-17c523efb7) | Sets the value of the attached [Avalonia.Controls.NativeDock.MenuProperty](xref:Avalonia.Controls.NativeDock.MenuProperty). |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-c79ff99ff4"></span>
 
-### GetMenu
+### GetMenu Method
 
 Gets the value of the attached [Avalonia.Controls.NativeDock.MenuProperty](xref:Avalonia.Controls.NativeDock.MenuProperty).
 
@@ -74,26 +76,47 @@ Gets the value of the attached [Avalonia.Controls.NativeDock.MenuProperty](xref:
 public Avalonia.Controls.NativeMenu GetMenu(Avalonia.AvaloniaObject o)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `o` | The control to get the menu for. |
+#### Parameters
 
-Returns: The menu of the control.
+`o` [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject)
+
+The control to get the menu for.
+
+
+#### Returns
+
+[Avalonia.Controls.NativeMenu](xref:Avalonia.Controls.NativeMenu)
+
+The menu of the control.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-17c523efb7"></span>
 
-### SetMenu
+### SetMenu Method
 
 Sets the value of the attached [Avalonia.Controls.NativeDock.MenuProperty](xref:Avalonia.Controls.NativeDock.MenuProperty).
 
 ```csharp
-public Void SetMenu(Avalonia.AvaloniaObject o, Avalonia.Controls.NativeMenu menu)
+public void SetMenu(Avalonia.AvaloniaObject o, Avalonia.Controls.NativeMenu menu)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `menu` | The menu to set. |
-| `o` | The control to set the menu for. |
+#### Parameters
+
+`o` [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject)
+
+The control to set the menu for.
+
+
+`menu` [Avalonia.Controls.NativeMenu](xref:Avalonia.Controls.NativeMenu)
+
+The menu to set.
+
+
+</section>
 
 ## Fields
 
@@ -101,15 +124,19 @@ public Void SetMenu(Avalonia.AvaloniaObject o, Avalonia.Controls.NativeMenu menu
 | --- | --- |
 | [MenuProperty](#uid-acc15680ba) | Defines the Menu attached property. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-acc15680ba"></span>
 
-### MenuProperty
+### MenuProperty Field
 
 Defines the Menu attached property.
 
 ```csharp
 public Avalonia.AttachedProperty<Avalonia.Controls.NativeMenu> MenuProperty
 ```
+
+</section>
 
 </ApiRefPage>
 

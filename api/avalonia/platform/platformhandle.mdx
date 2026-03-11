@@ -53,7 +53,7 @@ public class PlatformHandle
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> PlatformHandle
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> PlatformHandle
 </div>
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Derived types:</span> <a href="../android/androidviewcontrolhandle">AndroidViewControlHandle</a>, <a href="../browser/jsobjectplatformhandle">JSObjectPlatformHandle</a>
@@ -67,22 +67,33 @@ public class PlatformHandle
 
 | Name | Description |
 | --- | --- |
-| [PlatformHandle](#uid-14ecc67d08) | Initializes a new instance of the Avalonia.Platform.PlatformHandle class. |
+| [PlatformHandle](#uid-14ecc67d08) | Initializes a new instance of the [Avalonia.Platform.PlatformHandle](xref:Avalonia.Platform.PlatformHandle) class. |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-14ecc67d08"></span>
 
-### PlatformHandle
+### PlatformHandle Constructor
 
 Initializes a new instance of the [Avalonia.Platform.PlatformHandle](xref:Avalonia.Platform.PlatformHandle) class.
 
 ```csharp
-public PlatformHandle(IntPtr handle, String descriptor)
+public PlatformHandle(IntPtr handle, string descriptor)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `descriptor` | An optional string that describes what `handle` represents. |
-| `handle` | The handle. |
+#### Parameters
+
+`handle` IntPtr
+
+The handle.
+
+
+`descriptor` string
+
+An optional string that describes what `handle` represents.
+
+
+</section>
 
 ## Methods
 
@@ -96,48 +107,96 @@ public PlatformHandle(IntPtr handle, String descriptor)
 
 ### Equals overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-e677178155"></span>
 
-#### Equals
+#### Equals Method
 
 ```csharp
-public Boolean Equals(Avalonia.Platform.PlatformHandle other)
+public bool Equals(Avalonia.Platform.PlatformHandle other)
 ```
+
+##### Parameters
+
+`other` [Avalonia.Platform.PlatformHandle](xref:Avalonia.Platform.PlatformHandle)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-a405083ca8"></span>
 
-#### Equals
+#### Equals Method
 
 ```csharp
-public Boolean Equals(Object obj)
+public bool Equals(object obj)
 ```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-db119cd1b5"></span>
 
-### GetHashCode
+### GetHashCode Method
 
 ```csharp
-public Int32 GetHashCode()
+public int GetHashCode()
 ```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-aa72c5ec9e"></span>
 
-### ToString
+### ToString Method
 
 ```csharp
-public String ToString()
+public string ToString()
 ```
+
+#### Returns
+
+string
+
+
+</section>
 
 ## Properties
 
 | Name | Description |
 | --- | --- |
 | [Handle](#uid-dca5d79dae) | Gets the handle. |
-| [HandleDescriptor](#uid-84b40c5229) | Gets an optional string that describes what Avalonia.Platform.PlatformHandle.Handle represents. |
+| [HandleDescriptor](#uid-84b40c5229) | Gets an optional string that describes what [Avalonia.Platform.PlatformHandle.Handle](xref:Avalonia.Platform.PlatformHandle.Handle) represents. |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-dca5d79dae"></span>
 
-### Handle
+### Handle Property
 
 Gets the handle.
 
@@ -145,15 +204,21 @@ Gets the handle.
 public IntPtr Handle { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-84b40c5229"></span>
 
-### HandleDescriptor
+### HandleDescriptor Property
 
 Gets an optional string that describes what [Avalonia.Platform.PlatformHandle.Handle](xref:Avalonia.Platform.PlatformHandle.Handle) represents.
 
 ```csharp
-public String HandleDescriptor { get; set; }
+public string HandleDescriptor { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

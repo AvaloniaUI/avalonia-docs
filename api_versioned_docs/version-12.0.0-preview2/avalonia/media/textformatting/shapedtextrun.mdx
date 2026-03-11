@@ -53,7 +53,7 @@ public class ShapedTextRun
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="textrun">TextRun</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="drawabletextrun">DrawableTextRun</a> <span className="apiref-page__relation-separator">-&gt;</span> ShapedTextRun
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="textrun">TextRun</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="drawabletextrun">DrawableTextRun</a> <span className="apiref-page__relation-separator">-&gt;</span> ShapedTextRun
 </div>
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Implements:</span> IDisposable
@@ -66,52 +66,96 @@ public class ShapedTextRun
 | --- | --- |
 | [ShapedTextRun](#uid-110d91d903) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-110d91d903"></span>
 
-### ShapedTextRun
+### ShapedTextRun Constructor
 
 ```csharp
 public ShapedTextRun(Avalonia.Media.TextFormatting.ShapedBuffer shapedBuffer, Avalonia.Media.TextFormatting.TextRunProperties properties)
 ```
+
+#### Parameters
+
+`shapedBuffer` [Avalonia.Media.TextFormatting.ShapedBuffer](xref:Avalonia.Media.TextFormatting.ShapedBuffer)
+
+
+`properties` [Avalonia.Media.TextFormatting.TextRunProperties](xref:Avalonia.Media.TextFormatting.TextRunProperties)
+
+
+</section>
 
 ## Methods
 
 | Name | Description |
 | --- | --- |
 | [Dispose](#uid-6d172079bc) | No summary available. |
-| [Draw](#uid-69b2f1feed) | Draws the Avalonia.Media.TextFormatting.DrawableTextRun at the given origin. |
+| [Draw](#uid-69b2f1feed) | Draws the [Avalonia.Media.TextFormatting.DrawableTextRun](xref:Avalonia.Media.TextFormatting.DrawableTextRun) at the given origin. |
 | [TryMeasureCharacters](#uid-67a85cd94a) | No summary available. |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-6d172079bc"></span>
 
-### Dispose
+### Dispose Method
 
 ```csharp
-public Void Dispose()
+public void Dispose()
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-69b2f1feed"></span>
 
-### Draw
+### Draw Method
 
 Draws the [Avalonia.Media.TextFormatting.DrawableTextRun](xref:Avalonia.Media.TextFormatting.DrawableTextRun) at the given origin.
 
 ```csharp
-public Void Draw(Avalonia.Media.DrawingContext drawingContext, Avalonia.Point origin)
+public void Draw(Avalonia.Media.DrawingContext drawingContext, Avalonia.Point origin)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `drawingContext` | The drawing context. |
-| `origin` | The origin. |
+#### Parameters
+
+`drawingContext` [Avalonia.Media.DrawingContext](xref:Avalonia.Media.DrawingContext)
+
+The drawing context.
+
+
+`origin` [Avalonia.Point](xref:Avalonia.Point)
+
+The origin.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-67a85cd94a"></span>
 
-### TryMeasureCharacters
+### TryMeasureCharacters Method
 
 ```csharp
-public Boolean TryMeasureCharacters(Double availableWidth, Int32& length)
+public bool TryMeasureCharacters(double availableWidth, int& length)
 ```
+
+#### Parameters
+
+`availableWidth` double
+
+
+`length` int&amp;
+
+
+#### Returns
+
+bool
+
+
+</section>
 
 ## Properties
 
@@ -128,51 +172,73 @@ public Boolean TryMeasureCharacters(Double availableWidth, Int32& length)
 | [Text](#uid-5998c75a8a) | Gets the text run's text. |
 | [TextMetrics](#uid-30138f42fd) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-c1eb93ccaa"></span>
 
-### Baseline
+### Baseline Property
 
 ```csharp
-public Double Baseline { get; set; }
+public double Baseline { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-a55212ac10"></span>
 
-### BidiLevel
+### BidiLevel Property
 
 ```csharp
-public SByte BidiLevel { get; set; }
+public sbyte BidiLevel { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-b7d69aea23"></span>
 
-### GlyphRun
+### GlyphRun Property
 
 ```csharp
 public Avalonia.Media.GlyphRun GlyphRun { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-2879f9633a"></span>
 
-### IsReversed
+### IsReversed Property
 
 ```csharp
-public Boolean IsReversed { get; set; }
+public bool IsReversed { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-f94822b621"></span>
 
-### Length
+### Length Property
 
 Gets the text source length.
 
 ```csharp
-public Int32 Length { get; set; }
+public int Length { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-7b21cc5c6b"></span>
 
-### Properties
+### Properties Property
 
 A set of properties shared by every characters in the run
 
@@ -180,45 +246,63 @@ A set of properties shared by every characters in the run
 public Avalonia.Media.TextFormatting.TextRunProperties Properties { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-44e60a11fa"></span>
 
-### ShapedBuffer
+### ShapedBuffer Property
 
 ```csharp
 public Avalonia.Media.TextFormatting.ShapedBuffer ShapedBuffer { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-e1c7604a00"></span>
 
-### Size
+### Size Property
 
 ```csharp
 public Avalonia.Size Size { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-5998c75a8a"></span>
 
-### Text
+### Text Property
 
 Gets the text run's text.
 
 ```csharp
-public ReadOnlyMemory<Char> Text { get; set; }
+public ReadOnlyMemory<char> Text { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-30138f42fd"></span>
 
-### TextMetrics
+### TextMetrics Property
 
 ```csharp
 public Avalonia.Media.TextFormatting.TextMetrics TextMetrics { get; set; }
 ```
 
+</section>
+
 ## Fields
 
 | Name | Description |
 | --- | --- |
-| [DefaultTextSourceLength (Inherited from TextRun)](textrun.mdx#uid-f86dc003de) | No summary available. |
+| [DefaultTextSourceLength](textrun.mdx#uid-f86dc003de) | Inherited from [TextRun](textrun.mdx). |
 
 </ApiRefPage>
 

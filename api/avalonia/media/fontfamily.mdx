@@ -47,7 +47,7 @@ public class FontFamily
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> FontFamily
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> FontFamily
 </div>
 </div>
 
@@ -55,44 +55,62 @@ public class FontFamily
 
 | Name | Description |
 | --- | --- |
-| [FontFamily (2 overloads)](#uid-0e18b52395) | Initializes a new instance of the Avalonia.Media.FontFamily class. |
+| [FontFamily (2 overloads)](#uid-0e18b52395) | Initializes a new instance of the [Avalonia.Media.FontFamily](xref:Avalonia.Media.FontFamily) class. |
 
 <span id="uid-0e18b52395"></span>
 
 ### FontFamily overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-3185eb82cc"></span>
 
-#### FontFamily
+#### FontFamily Constructor
 
 Initializes a new instance of the [Avalonia.Media.FontFamily](xref:Avalonia.Media.FontFamily) class.
 
 ```csharp
-public FontFamily(String name)
+public FontFamily(string name)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `name` | The name of the [Avalonia.Media.FontFamily](xref:Avalonia.Media.FontFamily). |
+##### Parameters
+
+`name` string
+
+The name of the [Avalonia.Media.FontFamily](xref:Avalonia.Media.FontFamily).
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-b5b41ea22d"></span>
 
-#### FontFamily
+#### FontFamily Constructor
 
 Initializes a new instance of the [Avalonia.Media.FontFamily](xref:Avalonia.Media.FontFamily) class.
 
 ```csharp
-public FontFamily(Uri baseUri, String name)
+public FontFamily(Uri baseUri, string name)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `baseUri` | Specifies the base uri that is used to resolve font family assets. |
-| `name` | The name of the [Avalonia.Media.FontFamily](xref:Avalonia.Media.FontFamily). |
+##### Parameters
+
+`baseUri` Uri
+
+Specifies the base uri that is used to resolve font family assets.
+
+
+`name` string
+
+The name of the [Avalonia.Media.FontFamily](xref:Avalonia.Media.FontFamily).
+
 
 ##### Exceptions
 
 - [Base uri must be an absolute uri.](xref:System.ArgumentException)
+
+</section>
 
 ## Methods
 
@@ -100,81 +118,141 @@ public FontFamily(Uri baseUri, String name)
 | --- | --- |
 | [Equals](#uid-cd319f701c) | No summary available. |
 | [GetHashCode](#uid-74ebb27863) | Returns a hash code for this instance. |
-| [Parse (2 overloads)](#uid-4a007a1a18) | Parses a Avalonia.Media.FontFamily string. |
-| [ToString](#uid-95520d9eee) | Returns a String that represents this instance. |
+| [Parse (2 overloads)](#uid-4a007a1a18) | Parses a [Avalonia.Media.FontFamily](xref:Avalonia.Media.FontFamily) string. |
+| [ToString](#uid-95520d9eee) | Returns a [string](xref:System.String) that represents this instance. |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-cd319f701c"></span>
 
-### Equals
+### Equals Method
 
 ```csharp
-public Boolean Equals(Object obj)
+public bool Equals(object obj)
 ```
+
+#### Parameters
+
+`obj` object
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-74ebb27863"></span>
 
-### GetHashCode
+### GetHashCode Method
 
 Returns a hash code for this instance.
 
 ```csharp
-public Int32 GetHashCode()
+public int GetHashCode()
 ```
 
-Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
+#### Returns
+
+int
+
+A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
+
+
+</section>
 
 <span id="uid-4a007a1a18"></span>
 
 ### Parse overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-fe03a4251b"></span>
 
-#### Parse
+#### Parse Method
 
 Parses a [Avalonia.Media.FontFamily](xref:Avalonia.Media.FontFamily) string.
 
 ```csharp
-public Avalonia.Media.FontFamily Parse(String s)
+public Avalonia.Media.FontFamily Parse(string s)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `s` | The [Avalonia.Media.FontFamily](xref:Avalonia.Media.FontFamily) string. |
+##### Parameters
+
+`s` string
+
+The [Avalonia.Media.FontFamily](xref:Avalonia.Media.FontFamily) string.
+
+
+##### Returns
+
+[Avalonia.Media.FontFamily](xref:Avalonia.Media.FontFamily)
+
 
 ##### Exceptions
 
 - [Specified family is not supported.](xref:System.ArgumentException)
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-36c34aa134"></span>
 
-#### Parse
+#### Parse Method
 
 Parses a [Avalonia.Media.FontFamily](xref:Avalonia.Media.FontFamily) string.
 
 ```csharp
-public Avalonia.Media.FontFamily Parse(String s, Uri baseUri)
+public Avalonia.Media.FontFamily Parse(string s, Uri baseUri)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `baseUri` | Specifies the base uri that is used to resolve font family assets. |
-| `s` | The [Avalonia.Media.FontFamily](xref:Avalonia.Media.FontFamily) string. |
+##### Parameters
+
+`s` string
+
+The [Avalonia.Media.FontFamily](xref:Avalonia.Media.FontFamily) string.
+
+
+`baseUri` Uri
+
+Specifies the base uri that is used to resolve font family assets.
+
+
+##### Returns
+
+[Avalonia.Media.FontFamily](xref:Avalonia.Media.FontFamily)
+
 
 ##### Exceptions
 
 - [Specified family is not supported.](xref:System.ArgumentException)
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-95520d9eee"></span>
 
-### ToString
+### ToString Method
 
-Returns a [String](xref:System.String) that represents this instance.
+Returns a [string](xref:System.String) that represents this instance.
 
 ```csharp
-public String ToString()
+public string ToString()
 ```
 
-Returns: A [String](xref:System.String) that represents this instance.
+#### Returns
+
+string
+
+A [string](xref:System.String) that represents this instance.
+
+
+</section>
 
 ## Properties
 
@@ -186,9 +264,11 @@ Returns: A [String](xref:System.String) that represents this instance.
 | [Key](#uid-3ef323ae79) | Gets the key for associated assets. |
 | [Name](#uid-9c49d5f7c1) | Gets the primary family name of the font family. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-88bc13dd98"></span>
 
-### Default
+### Default Property
 
 Represents the default font family
 
@@ -196,9 +276,13 @@ Represents the default font family
 public Avalonia.Media.FontFamily Default { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-586595b1b2"></span>
 
-### FamilyNames
+### FamilyNames Property
 
 Gets the family names.
 
@@ -206,11 +290,18 @@ Gets the family names.
 public Avalonia.Media.Fonts.FamilyNameCollection FamilyNames { get; set; }
 ```
 
-Value: The family familyNames.
+#### Value
+
+The family familyNames.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-550fe9244b"></span>
 
-### FamilyTypefaces
+### FamilyTypefaces Property
 
 Gets the typefaces for this font family.
 
@@ -218,9 +309,13 @@ Gets the typefaces for this font family.
 public System.Collections.Generic.IReadOnlyList<Avalonia.Media.Typeface> FamilyTypefaces { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-3ef323ae79"></span>
 
-### Key
+### Key Property
 
 Gets the key for associated assets.
 
@@ -228,19 +323,35 @@ Gets the key for associated assets.
 public Avalonia.Media.Fonts.FontFamilyKey Key { get; set; }
 ```
 
-Value: The family key.
+#### Value
+
+The family key.
+
+
+#### Remarks
+
+Key is only used for custom fonts.
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-9c49d5f7c1"></span>
 
-### Name
+### Name Property
 
 Gets the primary family name of the font family.
 
 ```csharp
-public String Name { get; set; }
+public string Name { get; set; }
 ```
 
-Value: The primary name of the font family.
+#### Value
+
+The primary name of the font family.
+
+
+</section>
 
 ## Fields
 
@@ -248,13 +359,17 @@ Value: The primary name of the font family.
 | --- | --- |
 | [DefaultFontFamilyName](#uid-4d9d008692) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-4d9d008692"></span>
 
-### DefaultFontFamilyName
+### DefaultFontFamilyName Field
 
 ```csharp
-public String DefaultFontFamilyName
+public string DefaultFontFamilyName
 ```
+
+</section>
 
 </ApiRefPage>
 

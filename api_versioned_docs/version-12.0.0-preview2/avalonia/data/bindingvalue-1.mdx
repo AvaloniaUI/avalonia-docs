@@ -88,11 +88,13 @@ conversion from `T`
 
 | Name | Description |
 | --- | --- |
-| [BindingValue&lt;T&gt;](#uid-506559e5ca) | Initializes a new instance of the Avalonia.Data.BindingValue&amp;lt;T&amp;gt; struct with a type of Avalonia.Data.BindingValueType.Value |
+| [BindingValue&lt;T&gt;](#uid-506559e5ca) | Initializes a new instance of the [Avalonia.Data.BindingValue&lt;T&gt;](xref:Avalonia.Data.BindingValue%601) struct with a type of [Avalonia.Data.BindingValueType.Value](xref:Avalonia.Data.BindingValueType.Value) |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-506559e5ca"></span>
 
-### BindingValue&lt;T&gt;
+### BindingValue&lt;T&gt; Constructor
 
 Initializes a new instance of the [Avalonia.Data.BindingValue&lt;T&gt;](xref:Avalonia.Data.BindingValue%601) struct with a type of
 [Avalonia.Data.BindingValueType.Value](xref:Avalonia.Data.BindingValueType.Value)
@@ -101,32 +103,39 @@ Initializes a new instance of the [Avalonia.Data.BindingValue&lt;T&gt;](xref:Ava
 public BindingValue<T>(T value)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `value` | The value. |
+#### Parameters
+
+`value` T
+
+The value.
+
+
+</section>
 
 ## Methods
 
 | Name | Description |
 | --- | --- |
-| [BindingError (3 overloads)](#uid-b9db6c25b8) | Returns a binding value with a type of Avalonia.Data.BindingValueType.BindingError. |
-| [DataValidationError (3 overloads)](#uid-7ce0664521) | Returns a binding value with a type of Avalonia.Data.BindingValueType.DataValidationError. |
+| [BindingError (3 overloads)](#uid-b9db6c25b8) | Returns a binding value with a type of [Avalonia.Data.BindingValueType.BindingError](xref:Avalonia.Data.BindingValueType.BindingError). |
+| [DataValidationError (3 overloads)](#uid-7ce0664521) | Returns a binding value with a type of [Avalonia.Data.BindingValueType.DataValidationError](xref:Avalonia.Data.BindingValueType.DataValidationError). |
 | [Equals (2 overloads)](#uid-4a184e5d1e) | No summary available. |
-| [FromUntyped (2 overloads)](#uid-e471c0663b) | Creates a Avalonia.Data.BindingValue&amp;lt;T&amp;gt; from an object, handling the special values Avalonia.AvaloniaProperty.UnsetValue, Avalonia.Data.BindingOperations.DoNothing and Avalonia.Data.BindingNotification. |
+| [FromUntyped (2 overloads)](#uid-e471c0663b) | Creates a [Avalonia.Data.BindingValue&lt;T&gt;](xref:Avalonia.Data.BindingValue%601) from an object, handling the special values [Avalonia.AvaloniaProperty.UnsetValue](xref:Avalonia.AvaloniaProperty.UnsetValue), [Avalonia.Data.BindingOperations.DoNothing](xref:Avalonia.Data.BindingOperations.DoNothing) and [Avalonia.Data.BindingNotification](xref:Avalonia.Data.BindingNotification). |
 | [GetHashCode](#uid-6659ee4d4a) | No summary available. |
 | [GetValueOrDefault (3 overloads)](#uid-419c82c88c) | Gets the value of the binding value if present, otherwise the default value. |
-| [ToOptional](#uid-1a36aed827) | Converts the binding value to an Avalonia.Data.Optional&amp;lt;T&amp;gt;. |
+| [ToOptional](#uid-1a36aed827) | Converts the binding value to an [Avalonia.Data.Optional&lt;T&gt;](xref:Avalonia.Data.Optional%601). |
 | [ToString](#uid-e15e641fb3) | No summary available. |
-| [ToUntyped](#uid-9eb66563d8) | Converts the value to untyped representation, using Avalonia.AvaloniaProperty.UnsetValue, Avalonia.Data.BindingOperations.DoNothing and Avalonia.Data.BindingNotification where appropriate. |
+| [ToUntyped](#uid-9eb66563d8) | Converts the value to untyped representation, using [Avalonia.AvaloniaProperty.UnsetValue](xref:Avalonia.AvaloniaProperty.UnsetValue), [Avalonia.Data.BindingOperations.DoNothing](xref:Avalonia.Data.BindingOperations.DoNothing) and [Avalonia.Data.BindingNotification](xref:Avalonia.Data.BindingNotification) where appropriate. |
 | [WithValue](#uid-f120636b88) | Returns a new binding value with the specified value. |
 
 <span id="uid-b9db6c25b8"></span>
 
 ### BindingError overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-78c7c0f6a7"></span>
 
-#### BindingError
+#### BindingError Method
 
 Returns a binding value with a type of [Avalonia.Data.BindingValueType.BindingError](xref:Avalonia.Data.BindingValueType.BindingError).
 
@@ -134,21 +143,50 @@ Returns a binding value with a type of [Avalonia.Data.BindingValueType.BindingEr
 public Avalonia.Data.BindingValue<T><T> BindingError(Exception e)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `e` | The binding error. |
+##### Parameters
+
+`e` Exception
+
+The binding error.
+
+
+##### Returns
+
+Avalonia.Data.BindingValue&lt;T&gt;&lt;T&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-a1b6543c0b"></span>
 
-#### BindingError
+#### BindingError Method
 
 ```csharp
 public Avalonia.Data.BindingValue<T><T> BindingError(Exception e, Avalonia.Data.Optional<T><T> fallbackValue)
 ```
 
+##### Parameters
+
+`e` Exception
+
+
+`fallbackValue` Avalonia.Data.Optional&lt;T&gt;&lt;T&gt;
+
+
+##### Returns
+
+Avalonia.Data.BindingValue&lt;T&gt;&lt;T&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-31debe3e1a"></span>
 
-#### BindingError
+#### BindingError Method
 
 Returns a binding value with a type of [Avalonia.Data.BindingValueType.BindingErrorWithFallback](xref:Avalonia.Data.BindingValueType.BindingErrorWithFallback).
 
@@ -156,18 +194,34 @@ Returns a binding value with a type of [Avalonia.Data.BindingValueType.BindingEr
 public Avalonia.Data.BindingValue<T><T> BindingError(Exception e, T fallbackValue)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `e` | The binding error. |
-| `fallbackValue` | The fallback value. |
+##### Parameters
+
+`e` Exception
+
+The binding error.
+
+
+`fallbackValue` T
+
+The fallback value.
+
+
+##### Returns
+
+Avalonia.Data.BindingValue&lt;T&gt;&lt;T&gt;
+
+
+</section>
 
 <span id="uid-7ce0664521"></span>
 
 ### DataValidationError overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-173f29073e"></span>
 
-#### DataValidationError
+#### DataValidationError Method
 
 Returns a binding value with a type of [Avalonia.Data.BindingValueType.DataValidationError](xref:Avalonia.Data.BindingValueType.DataValidationError).
 
@@ -175,21 +229,50 @@ Returns a binding value with a type of [Avalonia.Data.BindingValueType.DataValid
 public Avalonia.Data.BindingValue<T><T> DataValidationError(Exception e)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `e` | The data validation error. |
+##### Parameters
+
+`e` Exception
+
+The data validation error.
+
+
+##### Returns
+
+Avalonia.Data.BindingValue&lt;T&gt;&lt;T&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-db8f6a96a5"></span>
 
-#### DataValidationError
+#### DataValidationError Method
 
 ```csharp
 public Avalonia.Data.BindingValue<T><T> DataValidationError(Exception e, Avalonia.Data.Optional<T><T> fallbackValue)
 ```
 
+##### Parameters
+
+`e` Exception
+
+
+`fallbackValue` Avalonia.Data.Optional&lt;T&gt;&lt;T&gt;
+
+
+##### Returns
+
+Avalonia.Data.BindingValue&lt;T&gt;&lt;T&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-e0037c1656"></span>
 
-#### DataValidationError
+#### DataValidationError Method
 
 Returns a binding value with a type of [Avalonia.Data.BindingValueType.DataValidationErrorWithFallback](xref:Avalonia.Data.BindingValueType.DataValidationErrorWithFallback).
 
@@ -197,87 +280,168 @@ Returns a binding value with a type of [Avalonia.Data.BindingValueType.DataValid
 public Avalonia.Data.BindingValue<T><T> DataValidationError(Exception e, T fallbackValue)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `e` | The data validation error. |
-| `fallbackValue` | The fallback value. |
+##### Parameters
+
+`e` Exception
+
+The data validation error.
+
+
+`fallbackValue` T
+
+The fallback value.
+
+
+##### Returns
+
+Avalonia.Data.BindingValue&lt;T&gt;&lt;T&gt;
+
+
+</section>
 
 <span id="uid-4a184e5d1e"></span>
 
 ### Equals overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-8a5f92fa66"></span>
 
-#### Equals
+#### Equals Method
 
 ```csharp
-public Boolean Equals(Avalonia.Data.BindingValue<T><T> other)
+public bool Equals(Avalonia.Data.BindingValue<T><T> other)
 ```
+
+##### Parameters
+
+`other` Avalonia.Data.BindingValue&lt;T&gt;&lt;T&gt;
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-87764a851c"></span>
 
-#### Equals
+#### Equals Method
 
 ```csharp
-public Boolean Equals(Object obj)
+public bool Equals(object obj)
 ```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
 
 <span id="uid-e471c0663b"></span>
 
 ### FromUntyped overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-93edf7f40c"></span>
 
-#### FromUntyped
+#### FromUntyped Method
 
 Creates a [Avalonia.Data.BindingValue&lt;T&gt;](xref:Avalonia.Data.BindingValue%601) from an object, handling the special values
 [Avalonia.AvaloniaProperty.UnsetValue](xref:Avalonia.AvaloniaProperty.UnsetValue), [Avalonia.Data.BindingOperations.DoNothing](xref:Avalonia.Data.BindingOperations.DoNothing) and
 [Avalonia.Data.BindingNotification](xref:Avalonia.Data.BindingNotification).
 
 ```csharp
-public Avalonia.Data.BindingValue<T><T> FromUntyped(Object value)
+public Avalonia.Data.BindingValue<T><T> FromUntyped(object value)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `value` | The untyped value. |
+##### Parameters
 
-Returns: The typed binding value.
+`value` object
+
+The untyped value.
+
+
+##### Returns
+
+Avalonia.Data.BindingValue&lt;T&gt;&lt;T&gt;
+
+The typed binding value.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-a9e1a629e8"></span>
 
-#### FromUntyped
+#### FromUntyped Method
 
 Creates a [Avalonia.Data.BindingValue&lt;T&gt;](xref:Avalonia.Data.BindingValue%601) from an object, handling the special values
 [Avalonia.AvaloniaProperty.UnsetValue](xref:Avalonia.AvaloniaProperty.UnsetValue), [Avalonia.Data.BindingOperations.DoNothing](xref:Avalonia.Data.BindingOperations.DoNothing) and
 [Avalonia.Data.BindingNotification](xref:Avalonia.Data.BindingNotification).
 
 ```csharp
-public Avalonia.Data.BindingValue<T><T> FromUntyped(Object value, Type targetType)
+public Avalonia.Data.BindingValue<T><T> FromUntyped(object value, Type targetType)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `targetType` | The runtime target type. |
-| `value` | The untyped value. |
+##### Parameters
 
-Returns: The typed binding value.
+`value` object
+
+The untyped value.
+
+
+`targetType` Type
+
+The runtime target type.
+
+
+##### Returns
+
+Avalonia.Data.BindingValue&lt;T&gt;&lt;T&gt;
+
+The typed binding value.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-6659ee4d4a"></span>
 
-### GetHashCode
+### GetHashCode Method
 
 ```csharp
-public Int32 GetHashCode()
+public int GetHashCode()
 ```
+
+#### Returns
+
+int
+
+
+</section>
 
 <span id="uid-419c82c88c"></span>
 
 ### GetValueOrDefault overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-fe604b9af7"></span>
 
-#### GetValueOrDefault
+#### GetValueOrDefault Method
 
 Gets the value of the binding value if present, otherwise the default value.
 
@@ -285,11 +449,20 @@ Gets the value of the binding value if present, otherwise the default value.
 public TResult GetValueOrDefault<TResult>()
 ```
 
-Returns: The value.
+##### Returns
+
+T
+
+The value.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-0909d1f5df"></span>
 
-#### GetValueOrDefault
+#### GetValueOrDefault Method
 
 Gets the value of the binding value if present, otherwise a default value.
 
@@ -297,23 +470,54 @@ Gets the value of the binding value if present, otherwise a default value.
 public T GetValueOrDefault(T defaultValue)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `defaultValue` | The default value. |
+##### Parameters
 
-Returns: The value.
+`defaultValue` T
+
+The default value.
+
+
+##### Returns
+
+T
+
+The value.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-a1a4d4def2"></span>
 
-#### GetValueOrDefault
+#### GetValueOrDefault Method
 
 ```csharp
 public TResult GetValueOrDefault<TResult>(TResult defaultValue)
 ```
 
+##### Parameters
+
+`defaultValue` TResult
+
+
+##### Type Parameters
+
+`TResult`
+
+
+##### Returns
+
+TResult
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-1a36aed827"></span>
 
-### ToOptional
+### ToOptional Method
 
 Converts the binding value to an [Avalonia.Data.Optional&lt;T&gt;](xref:Avalonia.Data.Optional%601).
 
@@ -321,31 +525,58 @@ Converts the binding value to an [Avalonia.Data.Optional&lt;T&gt;](xref:Avalonia
 public Avalonia.Data.Optional<T><T> ToOptional()
 ```
 
+#### Returns
+
+Avalonia.Data.Optional&lt;T&gt;&lt;T&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-e15e641fb3"></span>
 
-### ToString
+### ToString Method
 
 ```csharp
-public String ToString()
+public string ToString()
 ```
+
+#### Returns
+
+string
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-9eb66563d8"></span>
 
-### ToUntyped
+### ToUntyped Method
 
 Converts the value to untyped representation, using [Avalonia.AvaloniaProperty.UnsetValue](xref:Avalonia.AvaloniaProperty.UnsetValue),
 [Avalonia.Data.BindingOperations.DoNothing](xref:Avalonia.Data.BindingOperations.DoNothing) and [Avalonia.Data.BindingNotification](xref:Avalonia.Data.BindingNotification) where
 appropriate.
 
 ```csharp
-public Object ToUntyped()
+public object ToUntyped()
 ```
 
-Returns: The untyped representation of the binding value.
+#### Returns
+
+object
+
+The untyped representation of the binding value.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-f120636b88"></span>
 
-### WithValue
+### WithValue Method
 
 Returns a new binding value with the specified value.
 
@@ -353,32 +584,44 @@ Returns a new binding value with the specified value.
 public Avalonia.Data.BindingValue<T><T> WithValue(T value)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `value` | The new value. |
+#### Parameters
 
-Returns: The new binding value.
+`value` T
+
+The new value.
+
+
+#### Returns
+
+Avalonia.Data.BindingValue&lt;T&gt;&lt;T&gt;
+
+The new binding value.
+
 
 #### Exceptions
 
 - [The binding type is \[Avalonia.Data.BindingValueType.UnsetValue\](xref:Avalonia.Data.BindingValueType.UnsetValue) or
 \[Avalonia.Data.BindingValueType.DoNothing\](xref:Avalonia.Data.BindingValueType.DoNothing).](xref:System.InvalidOperationException)
 
+</section>
+
 ## Properties
 
 | Name | Description |
 | --- | --- |
-| [DoNothing](#uid-3fb270d22d) | Returns a binding value with a type of Avalonia.Data.BindingValueType.DoNothing. |
+| [DoNothing](#uid-3fb270d22d) | Returns a binding value with a type of [Avalonia.Data.BindingValueType.DoNothing](xref:Avalonia.Data.BindingValueType.DoNothing). |
 | [Error](#uid-1640174bff) | Gets the binding or data validation error. |
 | [HasError](#uid-0c59876f79) | Gets a value indicating whether the binding value represents either a binding or data validation error. |
 | [HasValue](#uid-f5132d92ed) | Gets a value indicating whether the binding value has a value. |
 | [Type](#uid-2aebe2533d) | Gets the type of the binding value. |
-| [Unset](#uid-6c5003d0fb) | Returns a binding value with a type of Avalonia.Data.BindingValueType.UnsetValue. |
+| [Unset](#uid-6c5003d0fb) | Returns a binding value with a type of [Avalonia.Data.BindingValueType.UnsetValue](xref:Avalonia.Data.BindingValueType.UnsetValue). |
 | [Value](#uid-e59c76570a) | Gets the binding value or fallback value. |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-3fb270d22d"></span>
 
-### DoNothing
+### DoNothing Property
 
 Returns a binding value with a type of [Avalonia.Data.BindingValueType.DoNothing](xref:Avalonia.Data.BindingValueType.DoNothing).
 
@@ -386,9 +629,13 @@ Returns a binding value with a type of [Avalonia.Data.BindingValueType.DoNothing
 public Avalonia.Data.BindingValue<T><T> DoNothing { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-1640174bff"></span>
 
-### Error
+### Error Property
 
 Gets the binding or data validation error.
 
@@ -396,30 +643,42 @@ Gets the binding or data validation error.
 public Exception Error { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-0c59876f79"></span>
 
-### HasError
+### HasError Property
 
 Gets a value indicating whether the binding value represents either a binding or data
 validation error.
 
 ```csharp
-public Boolean HasError { get; set; }
+public bool HasError { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-f5132d92ed"></span>
 
-### HasValue
+### HasValue Property
 
 Gets a value indicating whether the binding value has a value.
 
 ```csharp
-public Boolean HasValue { get; set; }
+public bool HasValue { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-2aebe2533d"></span>
 
-### Type
+### Type Property
 
 Gets the type of the binding value.
 
@@ -427,9 +686,13 @@ Gets the type of the binding value.
 public Avalonia.Data.BindingValueType Type { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-6c5003d0fb"></span>
 
-### Unset
+### Unset Property
 
 Returns a binding value with a type of [Avalonia.Data.BindingValueType.UnsetValue](xref:Avalonia.Data.BindingValueType.UnsetValue).
 
@@ -437,9 +700,13 @@ Returns a binding value with a type of [Avalonia.Data.BindingValueType.UnsetValu
 public Avalonia.Data.BindingValue<T><T> Unset { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-e59c76570a"></span>
 
-### Value
+### Value Property
 
 Gets the binding value or fallback value.
 
@@ -450,6 +717,8 @@ public T Value { get; set; }
 #### Exceptions
 
 - [\[Avalonia.Data.BindingValue&amp;lt;T&amp;gt;.HasValue\](xref:Avalonia.Data.BindingValue%601.HasValue) is false.](xref:System.InvalidOperationException)
+
+</section>
 
 </ApiRefPage>
 

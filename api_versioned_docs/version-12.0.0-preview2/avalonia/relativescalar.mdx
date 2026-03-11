@@ -64,22 +64,33 @@ public struct RelativeScalar
 
 | Name | Description |
 | --- | --- |
-| [RelativeScalar](#uid-e32d70c7b3) | Initializes a new instance of the Avalonia.RelativeScalar struct. |
+| [RelativeScalar](#uid-e32d70c7b3) | Initializes a new instance of the [Avalonia.RelativeScalar](xref:Avalonia.RelativeScalar) struct. |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-e32d70c7b3"></span>
 
-### RelativeScalar
+### RelativeScalar Constructor
 
 Initializes a new instance of the [Avalonia.RelativeScalar](xref:Avalonia.RelativeScalar) struct.
 
 ```csharp
-public RelativeScalar(Double scalar, Avalonia.RelativeUnit unit)
+public RelativeScalar(double scalar, Avalonia.RelativeUnit unit)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `scalar` | The scalar value. |
-| `unit` | The unit. |
+#### Parameters
+
+`scalar` double
+
+The scalar value.
+
+
+`unit` [Avalonia.RelativeUnit](xref:Avalonia.RelativeUnit)
+
+The unit.
+
+
+</section>
 
 ## Methods
 
@@ -87,77 +98,149 @@ public RelativeScalar(Double scalar, Avalonia.RelativeUnit unit)
 | --- | --- |
 | [Equals (2 overloads)](#uid-b19093a828) | No summary available. |
 | [GetHashCode](#uid-7817bde15a) | No summary available. |
-| [Parse](#uid-f9f45eb622) | Parses a Avalonia.RelativeScalar string. |
-| [ToString](#uid-c918e3f26c) | Returns a String representing this RelativeScalar instance. |
-| [ToValue](#uid-76c354a680) | Converts a Avalonia.RelativeScalar into a final value. |
+| [Parse](#uid-f9f45eb622) | Parses a [Avalonia.RelativeScalar](xref:Avalonia.RelativeScalar) string. |
+| [ToString](#uid-c918e3f26c) | Returns a String representing this [RelativeScalar](xref:Avalonia.RelativeScalar) instance. |
+| [ToValue](#uid-76c354a680) | Converts a [Avalonia.RelativeScalar](xref:Avalonia.RelativeScalar) into a final value. |
 
 <span id="uid-b19093a828"></span>
 
 ### Equals overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-0ddb37c436"></span>
 
-#### Equals
+#### Equals Method
 
 ```csharp
-public Boolean Equals(Avalonia.RelativeScalar other)
+public bool Equals(Avalonia.RelativeScalar other)
 ```
+
+##### Parameters
+
+`other` [Avalonia.RelativeScalar](xref:Avalonia.RelativeScalar)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-72efb86c5f"></span>
 
-#### Equals
+#### Equals Method
 
 ```csharp
-public Boolean Equals(Object obj)
+public bool Equals(object obj)
 ```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-7817bde15a"></span>
 
-### GetHashCode
+### GetHashCode Method
 
 ```csharp
-public Int32 GetHashCode()
+public int GetHashCode()
 ```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-f9f45eb622"></span>
 
-### Parse
+### Parse Method
 
 Parses a [Avalonia.RelativeScalar](xref:Avalonia.RelativeScalar) string.
 
 ```csharp
-public Avalonia.RelativeScalar Parse(String s)
+public Avalonia.RelativeScalar Parse(string s)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `s` | The string. |
+#### Parameters
 
-Returns: The parsed [Avalonia.RelativeScalar](xref:Avalonia.RelativeScalar).
+`s` string
+
+The string.
+
+
+#### Returns
+
+[Avalonia.RelativeScalar](xref:Avalonia.RelativeScalar)
+
+The parsed [Avalonia.RelativeScalar](xref:Avalonia.RelativeScalar).
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-c918e3f26c"></span>
 
-### ToString
+### ToString Method
 
-Returns a String representing this RelativeScalar instance.
+Returns a String representing this [RelativeScalar](xref:Avalonia.RelativeScalar) instance.
 
 ```csharp
-public String ToString()
+public string ToString()
 ```
 
-Returns: The string representation.
+#### Returns
+
+string
+
+The string representation.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-76c354a680"></span>
 
-### ToValue
+### ToValue Method
 
 Converts a [Avalonia.RelativeScalar](xref:Avalonia.RelativeScalar) into a final value.
 
 ```csharp
-public Double ToValue(Double size)
+public double ToValue(double size)
 ```
 
-Returns: The origin point in pixels.
+#### Parameters
+
+`size` double
+
+
+#### Returns
+
+double
+
+The origin point in pixels.
+
+
+</section>
 
 ## Properties
 
@@ -169,9 +252,11 @@ Returns: The origin point in pixels.
 | [Scalar](#uid-9ce5a08ceb) | Gets the scalar. |
 | [Unit](#uid-7ba2c77cd6) | Gets the unit. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-29333ef7e3"></span>
 
-### Beginning
+### Beginning Property
 
 The value at the beginning of the range
 
@@ -179,9 +264,13 @@ The value at the beginning of the range
 public Avalonia.RelativeScalar Beginning { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-c93f97967d"></span>
 
-### End
+### End Property
 
 The value at the end of the range
 
@@ -189,9 +278,13 @@ The value at the end of the range
 public Avalonia.RelativeScalar End { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-810b8e7acd"></span>
 
-### Middle
+### Middle Property
 
 The value at the middle of the range
 
@@ -199,25 +292,35 @@ The value at the middle of the range
 public Avalonia.RelativeScalar Middle { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-9ce5a08ceb"></span>
 
-### Scalar
+### Scalar Property
 
 Gets the scalar.
 
 ```csharp
-public Double Scalar { get; set; }
+public double Scalar { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-7ba2c77cd6"></span>
 
-### Unit
+### Unit Property
 
 Gets the unit.
 
 ```csharp
 public Avalonia.RelativeUnit Unit { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

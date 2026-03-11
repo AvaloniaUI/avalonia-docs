@@ -224,6 +224,17 @@ Or with a binding converter:
 | `OpacityMask` | `OpacityMask` | Same |
 | `Path` | `Path` | Same; same mini-language |
 
+## Platform services
+
+| WPF | Avalonia | Notes |
+|---|---|---|
+| `SystemParameters.PrimaryScreenWidth` | `TopLevel.GetTopLevel(this).Screens.Primary.Bounds.Width` | Access via [`Screens`](/api/avalonia/controls/screens) on any `TopLevel` |
+| `System.Windows.Forms.Screen.AllScreens` | `TopLevel.GetTopLevel(this).Screens.All` | Returns all connected monitors |
+| `System.Windows.Forms.Screen.PrimaryScreen.WorkingArea` | `TopLevel.GetTopLevel(this).Screens.Primary.WorkingArea` | Excludes taskbar/dock |
+| `PresentationSource.FromVisual().CompositionTarget.TransformToDevice` | `TopLevel.GetTopLevel(this).Screens.Primary.Scaling` | DPI scaling factor |
+
+See [Working with screens](/docs/app-development/window-management#working-with-screens) for full usage details.
+
 ## File structure
 
 | WPF | Avalonia |

@@ -66,15 +66,33 @@ public struct GlyphInfo
 | --- | --- |
 | [GlyphInfo](#uid-f1d5994730) | Represents a single glyph. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-f1d5994730"></span>
 
-### GlyphInfo
+### GlyphInfo Constructor
 
 Represents a single glyph.
 
 ```csharp
-public GlyphInfo(UInt16 GlyphIndex, Int32 GlyphCluster, Double GlyphAdvance, Avalonia.Vector GlyphOffset)
+public GlyphInfo(ushort GlyphIndex, int GlyphCluster, double GlyphAdvance, Avalonia.Vector GlyphOffset)
 ```
+
+#### Parameters
+
+`GlyphIndex` ushort
+
+
+`GlyphCluster` int
+
+
+`GlyphAdvance` double
+
+
+`GlyphOffset` [Avalonia.Vector](xref:Avalonia.Vector)
+
+
+</section>
 
 ## Methods
 
@@ -85,49 +103,113 @@ public GlyphInfo(UInt16 GlyphIndex, Int32 GlyphCluster, Double GlyphAdvance, Ava
 | [GetHashCode](#uid-15b4313c33) | No summary available. |
 | [ToString](#uid-45af49321e) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-ab8d3283d9"></span>
 
-### Deconstruct
+### Deconstruct Method
 
 ```csharp
-public Void Deconstruct(UInt16& GlyphIndex, Int32& GlyphCluster, Double& GlyphAdvance, Avalonia.Vector& GlyphOffset)
+public void Deconstruct(ushort& GlyphIndex, int& GlyphCluster, double& GlyphAdvance, Avalonia.Vector& GlyphOffset)
 ```
+
+#### Parameters
+
+`GlyphIndex` ushort&amp;
+
+
+`GlyphCluster` int&amp;
+
+
+`GlyphAdvance` double&amp;
+
+
+`GlyphOffset` [Avalonia.Vector](xref:Avalonia.Vector)&amp;
+
+
+</section>
 
 <span id="uid-19ba01a61c"></span>
 
 ### Equals overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-92f6e3f156"></span>
 
-#### Equals
+#### Equals Method
 
 ```csharp
-public Boolean Equals(Avalonia.Media.TextFormatting.GlyphInfo other)
+public bool Equals(Avalonia.Media.TextFormatting.GlyphInfo other)
 ```
+
+##### Parameters
+
+`other` [Avalonia.Media.TextFormatting.GlyphInfo](xref:Avalonia.Media.TextFormatting.GlyphInfo)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-a66ac15c0b"></span>
 
-#### Equals
+#### Equals Method
 
 ```csharp
-public Boolean Equals(Object obj)
+public bool Equals(object obj)
 ```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-15b4313c33"></span>
 
-### GetHashCode
+### GetHashCode Method
 
 ```csharp
-public Int32 GetHashCode()
+public int GetHashCode()
 ```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-45af49321e"></span>
 
-### ToString
+### ToString Method
 
 ```csharp
-public String ToString()
+public string ToString()
 ```
+
+#### Returns
+
+string
+
+
+</section>
 
 ## Properties
 
@@ -138,45 +220,61 @@ public String ToString()
 | [GlyphIndex](#uid-8115f79672) | Get the glyph index. |
 | [GlyphOffset](#uid-c79bafbbdd) | Get the glyph offset. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-0f0ff5e687"></span>
 
-### GlyphAdvance
+### GlyphAdvance Property
 
 Get the glyph advance.
 
 ```csharp
-public Double GlyphAdvance { get; set; }
+public double GlyphAdvance { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-0badc778c8"></span>
 
-### GlyphCluster
+### GlyphCluster Property
 
 Get the glyph cluster.
 
 ```csharp
-public Int32 GlyphCluster { get; set; }
+public int GlyphCluster { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-8115f79672"></span>
 
-### GlyphIndex
+### GlyphIndex Property
 
 Get the glyph index.
 
 ```csharp
-public UInt16 GlyphIndex { get; set; }
+public ushort GlyphIndex { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-c79bafbbdd"></span>
 
-### GlyphOffset
+### GlyphOffset Property
 
 Get the glyph offset.
 
 ```csharp
 public Avalonia.Vector GlyphOffset { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

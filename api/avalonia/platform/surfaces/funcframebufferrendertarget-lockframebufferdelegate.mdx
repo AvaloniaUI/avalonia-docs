@@ -54,13 +54,25 @@ public delegate FuncFramebufferRenderTarget.LockFramebufferDelegate
 | --- | --- |
 | [FuncFramebufferRenderTarget.LockFramebufferDelegate](#uid-cb4701a152) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-cb4701a152"></span>
 
-### FuncFramebufferRenderTarget.LockFramebufferDelegate
+### FuncFramebufferRenderTarget.LockFramebufferDelegate Constructor
 
 ```csharp
-public FuncFramebufferRenderTarget.LockFramebufferDelegate(Object object, IntPtr method)
+public FuncFramebufferRenderTarget.LockFramebufferDelegate(object object, IntPtr method)
 ```
+
+#### Parameters
+
+`object` object
+
+
+`method` IntPtr
+
+
+</section>
 
 ## Methods
 
@@ -70,29 +82,86 @@ public FuncFramebufferRenderTarget.LockFramebufferDelegate(Object object, IntPtr
 | [EndInvoke](#uid-7e96cee0bf) | No summary available. |
 | [Invoke](#uid-61de190f42) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-7b96fc8d40"></span>
 
-### BeginInvoke
+### BeginInvoke Method
 
 ```csharp
-public IAsyncResult BeginInvoke(Avalonia.Platform.IRenderTarget.RenderTargetSceneInfo sceneInfo, Avalonia.Platform.Surfaces.FramebufferLockProperties& properties, AsyncCallback callback, Object object)
+public IAsyncResult BeginInvoke(Avalonia.Platform.IRenderTarget.RenderTargetSceneInfo sceneInfo, Avalonia.Platform.Surfaces.FramebufferLockProperties& properties, AsyncCallback callback, object object)
 ```
+
+#### Parameters
+
+`sceneInfo` Avalonia.Platform.IRenderTarget.RenderTargetSceneInfo
+
+
+`properties` [Avalonia.Platform.Surfaces.FramebufferLockProperties](xref:Avalonia.Platform.Surfaces.FramebufferLockProperties)&amp;
+
+
+`callback` AsyncCallback
+
+
+`object` object
+
+
+#### Returns
+
+IAsyncResult
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-7e96cee0bf"></span>
 
-### EndInvoke
+### EndInvoke Method
 
 ```csharp
 public Avalonia.Platform.ILockedFramebuffer EndInvoke(Avalonia.Platform.Surfaces.FramebufferLockProperties& properties, IAsyncResult result)
 ```
 
+#### Parameters
+
+`properties` [Avalonia.Platform.Surfaces.FramebufferLockProperties](xref:Avalonia.Platform.Surfaces.FramebufferLockProperties)&amp;
+
+
+`result` IAsyncResult
+
+
+#### Returns
+
+[Avalonia.Platform.ILockedFramebuffer](xref:Avalonia.Platform.ILockedFramebuffer)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-61de190f42"></span>
 
-### Invoke
+### Invoke Method
 
 ```csharp
 public Avalonia.Platform.ILockedFramebuffer Invoke(Avalonia.Platform.IRenderTarget.RenderTargetSceneInfo sceneInfo, Avalonia.Platform.Surfaces.FramebufferLockProperties& properties)
 ```
+
+#### Parameters
+
+`sceneInfo` Avalonia.Platform.IRenderTarget.RenderTargetSceneInfo
+
+
+`properties` [Avalonia.Platform.Surfaces.FramebufferLockProperties](xref:Avalonia.Platform.Surfaces.FramebufferLockProperties)&amp;
+
+
+#### Returns
+
+[Avalonia.Platform.ILockedFramebuffer](xref:Avalonia.Platform.ILockedFramebuffer)
+
+
+</section>
 
 </ApiRefPage>
 

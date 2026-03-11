@@ -50,7 +50,7 @@ public class KnownPlatformGraphicsExternalImageHandleTypes
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> KnownPlatformGraphicsExternalImageHandleTypes
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> KnownPlatformGraphicsExternalImageHandleTypes
 </div>
 </div>
 
@@ -65,65 +65,89 @@ public class KnownPlatformGraphicsExternalImageHandleTypes
 | [VulkanOpaqueNtHandle](#uid-07b459d6f7) | A NT handle that's been exported by Vulkan using VK_EXTERNAL_MEMORY_HANDLE_TYPE_OPAQUE_WIN32_BIT or in a compatible way |
 | [VulkanOpaquePosixFileDescriptor](#uid-5071f56811) | A POSIX file descriptor that's exported by Vulkan using VK_EXTERNAL_MEMORY_HANDLE_TYPE_OPAQUE_FD_BIT or in a compatible way |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-9aa6429454"></span>
 
-### D3D11TextureGlobalSharedHandle
+### D3D11TextureGlobalSharedHandle Field
 
 An DXGI global shared handle returned by IDXGIResource::GetSharedHandle D3D11_RESOURCE_MISC_SHARED or D3D11_RESOURCE_MISC_SHARED_KEYEDMUTEX flag.
 The handle does not own the reference to the underlying video memory, so the provider should make sure that the resource is valid until
 the handle has been successfully imported
 
 ```csharp
-public String D3D11TextureGlobalSharedHandle
+public string D3D11TextureGlobalSharedHandle
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-fc61ffec8d"></span>
 
-### D3D11TextureNtHandle
+### D3D11TextureNtHandle Field
 
 A DXGI NT handle returned by IDXGIResource1::CreateSharedHandle for a texture created with D3D11_RESOURCE_MISC_SHARED_NTHANDLE or flag
 
 ```csharp
-public String D3D11TextureNtHandle
+public string D3D11TextureNtHandle
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-d4baea1640"></span>
 
-### IOSurfaceRef
+### IOSurfaceRef Field
 
 A reference to IOSurface
 
 ```csharp
-public String IOSurfaceRef
+public string IOSurfaceRef
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-7a8001c1da"></span>
 
-### VulkanOpaqueKmtHandle
+### VulkanOpaqueKmtHandle Field
 
 ```csharp
-public String VulkanOpaqueKmtHandle
+public string VulkanOpaqueKmtHandle
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-07b459d6f7"></span>
 
-### VulkanOpaqueNtHandle
+### VulkanOpaqueNtHandle Field
 
 A NT handle that's been exported by Vulkan using VK_EXTERNAL_MEMORY_HANDLE_TYPE_OPAQUE_WIN32_BIT or in a compatible way
 
 ```csharp
-public String VulkanOpaqueNtHandle
+public string VulkanOpaqueNtHandle
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-5071f56811"></span>
 
-### VulkanOpaquePosixFileDescriptor
+### VulkanOpaquePosixFileDescriptor Field
 
 A POSIX file descriptor that's exported by Vulkan using VK_EXTERNAL_MEMORY_HANDLE_TYPE_OPAQUE_FD_BIT or in a compatible way
 
 ```csharp
-public String VulkanOpaquePosixFileDescriptor
+public string VulkanOpaquePosixFileDescriptor
 ```
+
+</section>
 
 </ApiRefPage>
 

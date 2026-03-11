@@ -56,7 +56,7 @@ public struct Cue
 <span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> Cue
 </div>
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;Cue&gt;, IEquatable&lt;Double&gt;
+<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;Cue&gt;, IEquatable&lt;double&gt;
 </div>
 </div>
 
@@ -64,21 +64,26 @@ public struct Cue
 
 | Name | Description |
 | --- | --- |
-| [Cue](#uid-e31f0dba2d) | Sets a new Avalonia.Animation.Cue object. |
+| [Cue](#uid-e31f0dba2d) | Sets a new [Avalonia.Animation.Cue](xref:Avalonia.Animation.Cue) object. |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-e31f0dba2d"></span>
 
-### Cue
+### Cue Constructor
 
 Sets a new [Avalonia.Animation.Cue](xref:Avalonia.Animation.Cue) object.
 
 ```csharp
-public Cue(Double value)
+public Cue(double value)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `value` |  |
+#### Parameters
+
+`value` double
+
+
+</section>
 
 ## Methods
 
@@ -86,69 +91,142 @@ public Cue(Double value)
 | --- | --- |
 | [Equals (3 overloads)](#uid-b82bd5a70e) | No summary available. |
 | [GetHashCode](#uid-f9e01ff376) | No summary available. |
-| [Parse](#uid-0d48c86aa2) | Parses a string to a Avalonia.Animation.Cue object. |
+| [Parse](#uid-0d48c86aa2) | Parses a string to a [Avalonia.Animation.Cue](xref:Avalonia.Animation.Cue) object. |
 | [ToString](#uid-0d4940c833) | No summary available. |
 
 <span id="uid-b82bd5a70e"></span>
 
 ### Equals overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-d80277d0be"></span>
 
-#### Equals
+#### Equals Method
 
 ```csharp
-public Boolean Equals(Avalonia.Animation.Cue other)
+public bool Equals(Avalonia.Animation.Cue other)
 ```
+
+##### Parameters
+
+`other` [Avalonia.Animation.Cue](xref:Avalonia.Animation.Cue)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-fd6659e9b2"></span>
 
-#### Equals
+#### Equals Method
 
 Checks for equality between a [Avalonia.Animation.Cue](xref:Avalonia.Animation.Cue)
-and a [Double](xref:System.Double) value.
+and a [double](xref:System.Double) value.
 
 ```csharp
-public Boolean Equals(Double other)
+public bool Equals(double other)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `other` |  |
+##### Parameters
+
+`other` double
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-1c7c0157fe"></span>
 
-#### Equals
+#### Equals Method
 
 ```csharp
-public Boolean Equals(Object obj)
+public bool Equals(object obj)
 ```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-f9e01ff376"></span>
 
-### GetHashCode
+### GetHashCode Method
 
 ```csharp
-public Int32 GetHashCode()
+public int GetHashCode()
 ```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-0d48c86aa2"></span>
 
-### Parse
+### Parse Method
 
 Parses a string to a [Avalonia.Animation.Cue](xref:Avalonia.Animation.Cue) object.
 
 ```csharp
-public Avalonia.Animation.Cue Parse(String value, System.Globalization.CultureInfo culture)
+public Avalonia.Animation.Cue Parse(string value, System.Globalization.CultureInfo culture)
 ```
+
+#### Parameters
+
+`value` string
+
+
+`culture` System.Globalization.CultureInfo
+
+
+#### Returns
+
+[Avalonia.Animation.Cue](xref:Avalonia.Animation.Cue)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-0d4940c833"></span>
 
-### ToString
+### ToString Method
 
 ```csharp
-public String ToString()
+public string ToString()
 ```
+
+#### Returns
+
+string
+
+
+</section>
 
 ## Properties
 
@@ -156,15 +234,19 @@ public String ToString()
 | --- | --- |
 | [CueValue](#uid-bfd7741711) | The normalized percent value, ranging from 0.0 to 1.0 |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-bfd7741711"></span>
 
-### CueValue
+### CueValue Property
 
 The normalized percent value, ranging from 0.0 to 1.0
 
 ```csharp
-public Double CueValue { get; set; }
+public double CueValue { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

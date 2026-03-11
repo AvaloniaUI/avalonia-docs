@@ -66,33 +66,47 @@ This interface is implemented by [Avalonia.Controls.ResourceDictionary](xref:Ava
 | [AddOwner](#uid-881ae8c626) | Adds an owner to the resource provider. |
 | [RemoveOwner](#uid-22f466e22f) | Removes a resource provider owner. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-881ae8c626"></span>
 
-### AddOwner
+### AddOwner Method
 
 Adds an owner to the resource provider.
 
 ```csharp
-public Void AddOwner(Avalonia.Controls.IResourceHost owner)
+public void AddOwner(Avalonia.Controls.IResourceHost owner)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `owner` | The owner. |
+#### Parameters
+
+`owner` [Avalonia.Controls.IResourceHost](xref:Avalonia.Controls.IResourceHost)
+
+The owner.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-22f466e22f"></span>
 
-### RemoveOwner
+### RemoveOwner Method
 
 Removes a resource provider owner.
 
 ```csharp
-public Void RemoveOwner(Avalonia.Controls.IResourceHost owner)
+public void RemoveOwner(Avalonia.Controls.IResourceHost owner)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `owner` | The owner. |
+#### Parameters
+
+`owner` [Avalonia.Controls.IResourceHost](xref:Avalonia.Controls.IResourceHost)
+
+The owner.
+
+
+</section>
 
 ## Properties
 
@@ -100,9 +114,11 @@ public Void RemoveOwner(Avalonia.Controls.IResourceHost owner)
 | --- | --- |
 | [Owner](#uid-96b327c927) | Gets the owner of the resource provider. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-96b327c927"></span>
 
-### Owner
+### Owner Property
 
 Gets the owner of the resource provider.
 
@@ -110,21 +126,31 @@ Gets the owner of the resource provider.
 public Avalonia.Controls.IResourceHost Owner { get; set; }
 ```
 
+#### Remarks
+
+If multiple owners are added, returns the first.
+
+</section>
+
 ## Events
 
 | Name | Description |
 | --- | --- |
-| [OwnerChanged](#uid-2492577133) | Raised when the Avalonia.Controls.IResourceProvider.Owner of the resource provider changes. |
+| [OwnerChanged](#uid-2492577133) | Raised when the [Avalonia.Controls.IResourceProvider.Owner](xref:Avalonia.Controls.IResourceProvider.Owner) of the resource provider changes. |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-2492577133"></span>
 
-### OwnerChanged
+### OwnerChanged Event
 
 Raised when the [Avalonia.Controls.IResourceProvider.Owner](xref:Avalonia.Controls.IResourceProvider.Owner) of the resource provider changes.
 
 ```csharp
 public event EventHandler OwnerChanged
 ```
+
+</section>
 
 </ApiRefPage>
 

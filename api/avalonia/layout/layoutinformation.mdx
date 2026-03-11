@@ -53,7 +53,7 @@ public class LayoutInformation
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> LayoutInformation
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> LayoutInformation
 </div>
 </div>
 
@@ -64,9 +64,11 @@ public class LayoutInformation
 | [GetPreviousArrangeBounds](#uid-c2f601f81b) | Gets the control bounds used in the previous layout arrange pass. |
 | [GetPreviousMeasureConstraint](#uid-4670a34368) | Gets the available size constraint passed in the previous layout pass. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-c2f601f81b"></span>
 
-### GetPreviousArrangeBounds
+### GetPreviousArrangeBounds Method
 
 Gets the control bounds used in the previous layout arrange pass.
 
@@ -74,15 +76,27 @@ Gets the control bounds used in the previous layout arrange pass.
 public Nullable<Avalonia.Rect> GetPreviousArrangeBounds(Avalonia.Layout.Layoutable control)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `control` | The control. |
+#### Parameters
 
-Returns: Previous control arrange bounds, if any.
+`control` [Avalonia.Layout.Layoutable](xref:Avalonia.Layout.Layoutable)
+
+The control.
+
+
+#### Returns
+
+Nullable&lt;[Avalonia.Rect](xref:Avalonia.Rect)&gt;
+
+Previous control arrange bounds, if any.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-4670a34368"></span>
 
-### GetPreviousMeasureConstraint
+### GetPreviousMeasureConstraint Method
 
 Gets the available size constraint passed in the previous layout pass.
 
@@ -90,11 +104,21 @@ Gets the available size constraint passed in the previous layout pass.
 public Nullable<Avalonia.Size> GetPreviousMeasureConstraint(Avalonia.Layout.Layoutable control)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `control` | The control. |
+#### Parameters
 
-Returns: Previous control measure constraint, if any.
+`control` [Avalonia.Layout.Layoutable](xref:Avalonia.Layout.Layoutable)
+
+The control.
+
+
+#### Returns
+
+Nullable&lt;[Avalonia.Size](xref:Avalonia.Size)&gt;
+
+Previous control measure constraint, if any.
+
+
+</section>
 
 </ApiRefPage>
 

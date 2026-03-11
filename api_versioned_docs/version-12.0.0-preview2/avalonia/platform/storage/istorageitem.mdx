@@ -65,12 +65,14 @@ This interface inherits [IDisposable](xref:System.IDisposable) . It's recommende
 | [DeleteAsync](#uid-8e9a7cfd51) | Deletes the current storage item and it's contents |
 | [GetBasicPropertiesAsync](#uid-d598a65224) | Gets the basic properties of the current item. |
 | [GetParentAsync](#uid-b325b01e5f) | Gets the parent folder of the current storage item. |
-| [MoveAsync](#uid-d7f8f4e352) | Moves the current storage item and it's contents to a Avalonia.Platform.Storage.IStorageFolder |
+| [MoveAsync](#uid-d7f8f4e352) | Moves the current storage item and it's contents to a [Avalonia.Platform.Storage.IStorageFolder](xref:Avalonia.Platform.Storage.IStorageFolder) |
 | [SaveBookmarkAsync](#uid-adc0859ffa) | Saves items to a bookmark. |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-8e9a7cfd51"></span>
 
-### DeleteAsync
+### DeleteAsync Method
 
 Deletes the current storage item and it's contents
 
@@ -78,9 +80,18 @@ Deletes the current storage item and it's contents
 public System.Threading.Tasks.Task DeleteAsync()
 ```
 
+#### Returns
+
+System.Threading.Tasks.Task
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-d598a65224"></span>
 
-### GetBasicPropertiesAsync
+### GetBasicPropertiesAsync Method
 
 Gets the basic properties of the current item.
 
@@ -88,9 +99,18 @@ Gets the basic properties of the current item.
 public System.Threading.Tasks.Task<Avalonia.Platform.Storage.StorageItemProperties> GetBasicPropertiesAsync()
 ```
 
+#### Returns
+
+System.Threading.Tasks.Task&lt;[Avalonia.Platform.Storage.StorageItemProperties](xref:Avalonia.Platform.Storage.StorageItemProperties)&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-b325b01e5f"></span>
 
-### GetParentAsync
+### GetParentAsync Method
 
 Gets the parent folder of the current storage item.
 
@@ -98,9 +118,18 @@ Gets the parent folder of the current storage item.
 public System.Threading.Tasks.Task<Avalonia.Platform.Storage.IStorageFolder> GetParentAsync()
 ```
 
+#### Returns
+
+System.Threading.Tasks.Task&lt;[Avalonia.Platform.Storage.IStorageFolder](xref:Avalonia.Platform.Storage.IStorageFolder)&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-d7f8f4e352"></span>
 
-### MoveAsync
+### MoveAsync Method
 
 Moves the current storage item and it's contents to a [Avalonia.Platform.Storage.IStorageFolder](xref:Avalonia.Platform.Storage.IStorageFolder)
 
@@ -108,21 +137,40 @@ Moves the current storage item and it's contents to a [Avalonia.Platform.Storage
 public System.Threading.Tasks.Task<Avalonia.Platform.Storage.IStorageItem> MoveAsync(Avalonia.Platform.Storage.IStorageFolder destination)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `destination` | The [Avalonia.Platform.Storage.IStorageFolder](xref:Avalonia.Platform.Storage.IStorageFolder) to move the item into |
+#### Parameters
+
+`destination` [Avalonia.Platform.Storage.IStorageFolder](xref:Avalonia.Platform.Storage.IStorageFolder)
+
+The [Avalonia.Platform.Storage.IStorageFolder](xref:Avalonia.Platform.Storage.IStorageFolder) to move the item into
+
+
+#### Returns
+
+System.Threading.Tasks.Task&lt;[Avalonia.Platform.Storage.IStorageItem](xref:Avalonia.Platform.Storage.IStorageItem)&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-adc0859ffa"></span>
 
-### SaveBookmarkAsync
+### SaveBookmarkAsync Method
 
 Saves items to a bookmark.
 
 ```csharp
-public System.Threading.Tasks.Task<String> SaveBookmarkAsync()
+public System.Threading.Tasks.Task<string> SaveBookmarkAsync()
 ```
 
-Returns: Returns identifier of a bookmark. Can be null if OS denied request.
+#### Returns
+
+System.Threading.Tasks.Task&lt;string&gt;
+
+Returns identifier of a bookmark. Can be null if OS denied request.
+
+
+</section>
 
 ## Properties
 
@@ -132,35 +180,52 @@ Returns: Returns identifier of a bookmark. Can be null if OS denied request.
 | [Name](#uid-aaac65aef5) | Gets the name of the item including the file name extension if there is one. |
 | [Path](#uid-74ea660276) | Gets the file-system path of the item. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-5ad9b0509e"></span>
 
-### CanBookmark
+### CanBookmark Property
 
 Returns true is item can be bookmarked and reused later.
 
 ```csharp
-public Boolean CanBookmark { get; set; }
+public bool CanBookmark { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-aaac65aef5"></span>
 
-### Name
+### Name Property
 
 Gets the name of the item including the file name extension if there is one.
 
 ```csharp
-public String Name { get; set; }
+public string Name { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-74ea660276"></span>
 
-### Path
+### Path Property
 
 Gets the file-system path of the item.
 
 ```csharp
 public Uri Path { get; set; }
 ```
+
+#### Remarks
+
+Android backend might return file path with "content:" scheme.
+Browser and iOS backends might return relative uris.
+
+</section>
 
 </ApiRefPage>
 

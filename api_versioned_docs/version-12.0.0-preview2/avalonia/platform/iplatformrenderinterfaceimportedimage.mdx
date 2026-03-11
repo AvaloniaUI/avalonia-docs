@@ -57,37 +57,103 @@ public interface IPlatformRenderInterfaceImportedImage
 | [SnapshotWithSemaphores](#uid-8568fc9453) | No summary available. |
 | [SnapshotWithTimelineSemaphores](#uid-63542c19d0) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-44a67a09f1"></span>
 
-### SnapshotWithAutomaticSync
+### SnapshotWithAutomaticSync Method
 
 ```csharp
 public Avalonia.Platform.IBitmapImpl SnapshotWithAutomaticSync()
 ```
 
+#### Returns
+
+[Avalonia.Platform.IBitmapImpl](xref:Avalonia.Platform.IBitmapImpl)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-6bc09dfc8c"></span>
 
-### SnapshotWithKeyedMutex
+### SnapshotWithKeyedMutex Method
 
 ```csharp
-public Avalonia.Platform.IBitmapImpl SnapshotWithKeyedMutex(UInt32 acquireIndex, UInt32 releaseIndex)
+public Avalonia.Platform.IBitmapImpl SnapshotWithKeyedMutex(uint acquireIndex, uint releaseIndex)
 ```
+
+#### Parameters
+
+`acquireIndex` uint
+
+
+`releaseIndex` uint
+
+
+#### Returns
+
+[Avalonia.Platform.IBitmapImpl](xref:Avalonia.Platform.IBitmapImpl)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-8568fc9453"></span>
 
-### SnapshotWithSemaphores
+### SnapshotWithSemaphores Method
 
 ```csharp
 public Avalonia.Platform.IBitmapImpl SnapshotWithSemaphores(Avalonia.Platform.IPlatformRenderInterfaceImportedSemaphore waitForSemaphore, Avalonia.Platform.IPlatformRenderInterfaceImportedSemaphore signalSemaphore)
 ```
 
+#### Parameters
+
+`waitForSemaphore` [Avalonia.Platform.IPlatformRenderInterfaceImportedSemaphore](xref:Avalonia.Platform.IPlatformRenderInterfaceImportedSemaphore)
+
+
+`signalSemaphore` [Avalonia.Platform.IPlatformRenderInterfaceImportedSemaphore](xref:Avalonia.Platform.IPlatformRenderInterfaceImportedSemaphore)
+
+
+#### Returns
+
+[Avalonia.Platform.IBitmapImpl](xref:Avalonia.Platform.IBitmapImpl)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-63542c19d0"></span>
 
-### SnapshotWithTimelineSemaphores
+### SnapshotWithTimelineSemaphores Method
 
 ```csharp
-public Avalonia.Platform.IBitmapImpl SnapshotWithTimelineSemaphores(Avalonia.Platform.IPlatformRenderInterfaceImportedSemaphore waitForSemaphore, UInt64 waitForValue, Avalonia.Platform.IPlatformRenderInterfaceImportedSemaphore signalSemaphore, UInt64 signalValue)
+public Avalonia.Platform.IBitmapImpl SnapshotWithTimelineSemaphores(Avalonia.Platform.IPlatformRenderInterfaceImportedSemaphore waitForSemaphore, ulong waitForValue, Avalonia.Platform.IPlatformRenderInterfaceImportedSemaphore signalSemaphore, ulong signalValue)
 ```
+
+#### Parameters
+
+`waitForSemaphore` [Avalonia.Platform.IPlatformRenderInterfaceImportedSemaphore](xref:Avalonia.Platform.IPlatformRenderInterfaceImportedSemaphore)
+
+
+`waitForValue` ulong
+
+
+`signalSemaphore` [Avalonia.Platform.IPlatformRenderInterfaceImportedSemaphore](xref:Avalonia.Platform.IPlatformRenderInterfaceImportedSemaphore)
+
+
+`signalValue` ulong
+
+
+#### Returns
+
+[Avalonia.Platform.IBitmapImpl](xref:Avalonia.Platform.IBitmapImpl)
+
+
+</section>
 
 </ApiRefPage>
 

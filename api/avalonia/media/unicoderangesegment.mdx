@@ -60,13 +60,25 @@ public struct UnicodeRangeSegment
 | --- | --- |
 | [UnicodeRangeSegment](#uid-d4ba62342f) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-d4ba62342f"></span>
 
-### UnicodeRangeSegment
+### UnicodeRangeSegment Constructor
 
 ```csharp
-public UnicodeRangeSegment(Int32 start, Int32 end)
+public UnicodeRangeSegment(int start, int end)
 ```
+
+#### Parameters
+
+`start` int
+
+
+`end` int
+
+
+</section>
 
 ## Methods
 
@@ -75,80 +87,150 @@ public UnicodeRangeSegment(Int32 start, Int32 end)
 | [Equals (2 overloads)](#uid-e86e5b4b12) | No summary available. |
 | [GetHashCode](#uid-47fa57755e) | No summary available. |
 | [IsInRange](#uid-7df3189b09) | Determines if given value is inside the range segment. |
-| [Parse](#uid-6cf8f55d9d) | Parses a Avalonia.Media.UnicodeRangeSegment. |
+| [Parse](#uid-6cf8f55d9d) | Parses a [Avalonia.Media.UnicodeRangeSegment](xref:Avalonia.Media.UnicodeRangeSegment). |
 | [ToString](#uid-55a4667104) | No summary available. |
 
 <span id="uid-e86e5b4b12"></span>
 
 ### Equals overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-2050f361a8"></span>
 
-#### Equals
+#### Equals Method
 
 ```csharp
-public Boolean Equals(Avalonia.Media.UnicodeRangeSegment other)
+public bool Equals(Avalonia.Media.UnicodeRangeSegment other)
 ```
+
+##### Parameters
+
+`other` [Avalonia.Media.UnicodeRangeSegment](xref:Avalonia.Media.UnicodeRangeSegment)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-67cc188d7d"></span>
 
-#### Equals
+#### Equals Method
 
 ```csharp
-public Boolean Equals(Object obj)
+public bool Equals(object obj)
 ```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-47fa57755e"></span>
 
-### GetHashCode
+### GetHashCode Method
 
 ```csharp
-public Int32 GetHashCode()
+public int GetHashCode()
 ```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-7df3189b09"></span>
 
-### IsInRange
+### IsInRange Method
 
 Determines if given value is inside the range segment.
 
 ```csharp
-public Boolean IsInRange(Int32 value)
+public bool IsInRange(int value)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `value` | The value to verify. |
+#### Parameters
 
-Returns: `true` If given value is inside the range segment, `false` otherwise.
+`value` int
+
+The value to verify.
+
+
+#### Returns
+
+bool
+
+`true` If given value is inside the range segment, `false` otherwise.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-6cf8f55d9d"></span>
 
-### Parse
+### Parse Method
 
 Parses a [Avalonia.Media.UnicodeRangeSegment](xref:Avalonia.Media.UnicodeRangeSegment).
 
 ```csharp
-public Avalonia.Media.UnicodeRangeSegment Parse(String s)
+public Avalonia.Media.UnicodeRangeSegment Parse(string s)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `s` | The string to parse. |
+#### Parameters
 
-Returns: The parsed [Avalonia.Media.UnicodeRangeSegment](xref:Avalonia.Media.UnicodeRangeSegment).
+`s` string
+
+The string to parse.
+
+
+#### Returns
+
+[Avalonia.Media.UnicodeRangeSegment](xref:Avalonia.Media.UnicodeRangeSegment)
+
+The parsed [Avalonia.Media.UnicodeRangeSegment](xref:Avalonia.Media.UnicodeRangeSegment).
+
 
 #### Exceptions
 
 - [FormatException](xref:System.FormatException)
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-55a4667104"></span>
 
-### ToString
+### ToString Method
 
 ```csharp
-public String ToString()
+public string ToString()
 ```
+
+#### Returns
+
+string
+
+
+</section>
 
 ## Properties
 
@@ -157,25 +239,33 @@ public String ToString()
 | [End](#uid-cd32882a7d) | Get the end of the segment. |
 | [Start](#uid-a14df5f3dc) | Get the start of the segment. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-cd32882a7d"></span>
 
-### End
+### End Property
 
 Get the end of the segment.
 
 ```csharp
-public Int32 End { get; set; }
+public int End { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-a14df5f3dc"></span>
 
-### Start
+### Start Property
 
 Get the start of the segment.
 
 ```csharp
-public Int32 Start { get; set; }
+public int Start { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

@@ -47,7 +47,7 @@ public class X11Window.XEmbedClientWindowMode
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="x11window-x11windowmode">X11Window.X11WindowMode</a> <span className="apiref-page__relation-separator">-&gt;</span> X11Window.XEmbedClientWindowMode
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="x11window-x11windowmode">X11Window.X11WindowMode</a> <span className="apiref-page__relation-separator">-&gt;</span> X11Window.XEmbedClientWindowMode
 </div>
 </div>
 
@@ -57,13 +57,17 @@ public class X11Window.XEmbedClientWindowMode
 | --- | --- |
 | [X11Window.XEmbedClientWindowMode](#uid-5f3a66190c) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-5f3a66190c"></span>
 
-### X11Window.XEmbedClientWindowMode
+### X11Window.XEmbedClientWindowMode Constructor
 
 ```csharp
 public X11Window.XEmbedClientWindowMode()
 ```
+
+</section>
 
 ## Methods
 
@@ -74,52 +78,112 @@ public X11Window.XEmbedClientWindowMode()
 | [PointToClient](#uid-75e8f1113b) | No summary available. |
 | [PointToScreen](#uid-4a1c0b17e2) | No summary available. |
 | [ProcessInteractiveResize](#uid-e597b463ce) | No summary available. |
-| [Activate (Inherited from X11Window.X11WindowMode)](x11window-x11windowmode.mdx#uid-4bb81a9f41) | No summary available. |
-| [AppendWmProtocols (Inherited from X11Window.X11WindowMode)](x11window-x11windowmode.mdx#uid-330e36fe2f) | No summary available. |
-| [Hide (Inherited from X11Window.X11WindowMode)](x11window-x11windowmode.mdx#uid-55af83f7d4) | No summary available. |
-| [Init (Inherited from X11Window.X11WindowMode)](x11window-x11windowmode.mdx#uid-b8fdf167b1) | No summary available. |
-| [OnDestroyNotify (Inherited from X11Window.X11WindowMode)](x11window-x11windowmode.mdx#uid-e4f67b4cf2) | No summary available. |
-| [Show (Inherited from X11Window.X11WindowMode)](x11window-x11windowmode.mdx#uid-172265013e) | No summary available. |
+| [Activate](x11window-x11windowmode.mdx#uid-4bb81a9f41) | Inherited from [X11Window.X11WindowMode](x11window-x11windowmode.mdx). |
+| [AppendWmProtocols](x11window-x11windowmode.mdx#uid-330e36fe2f) | Inherited from [X11Window.X11WindowMode](x11window-x11windowmode.mdx). |
+| [Hide](x11window-x11windowmode.mdx#uid-55af83f7d4) | Inherited from [X11Window.X11WindowMode](x11window-x11windowmode.mdx). |
+| [Init](x11window-x11windowmode.mdx#uid-b8fdf167b1) | Inherited from [X11Window.X11WindowMode](x11window-x11windowmode.mdx). |
+| [OnDestroyNotify](x11window-x11windowmode.mdx#uid-e4f67b4cf2) | Inherited from [X11Window.X11WindowMode](x11window-x11windowmode.mdx). |
+| [Show](x11window-x11windowmode.mdx#uid-172265013e) | Inherited from [X11Window.X11WindowMode](x11window-x11windowmode.mdx). |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-4aea5cb036"></span>
 
-### OnEvent
+### OnEvent Method
 
 ```csharp
-public Boolean OnEvent(Avalonia.X11.XEvent& ev)
+public bool OnEvent(Avalonia.X11.XEvent& ev)
 ```
+
+#### Parameters
+
+`ev` Avalonia.X11.XEvent&amp;
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-6f53464715"></span>
 
-### OnHandleCreated
+### OnHandleCreated Method
 
 ```csharp
-public Void OnHandleCreated(IntPtr handle)
+public void OnHandleCreated(IntPtr handle)
 ```
+
+#### Parameters
+
+`handle` IntPtr
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-75e8f1113b"></span>
 
-### PointToClient
+### PointToClient Method
 
 ```csharp
 public Avalonia.Point PointToClient(Avalonia.PixelPoint point)
 ```
 
+#### Parameters
+
+`point` [Avalonia.PixelPoint](xref:Avalonia.PixelPoint)
+
+
+#### Returns
+
+[Avalonia.Point](xref:Avalonia.Point)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-4a1c0b17e2"></span>
 
-### PointToScreen
+### PointToScreen Method
 
 ```csharp
 public Avalonia.PixelPoint PointToScreen(Avalonia.Point point)
 ```
 
+#### Parameters
+
+`point` [Avalonia.Point](xref:Avalonia.Point)
+
+
+#### Returns
+
+[Avalonia.PixelPoint](xref:Avalonia.PixelPoint)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-e597b463ce"></span>
 
-### ProcessInteractiveResize
+### ProcessInteractiveResize Method
 
 ```csharp
-public Void ProcessInteractiveResize(Avalonia.PixelSize size)
+public void ProcessInteractiveResize(Avalonia.PixelSize size)
 ```
+
+#### Parameters
+
+`size` [Avalonia.PixelSize](xref:Avalonia.PixelSize)
+
+
+</section>
 
 ## Properties
 
@@ -127,23 +191,31 @@ public Void ProcessInteractiveResize(Avalonia.PixelSize size)
 | --- | --- |
 | [BlockInput](#uid-fec4b0f41a) | No summary available. |
 | [Scaling](#uid-627778831b) | No summary available. |
-| [Window (Inherited from X11Window.X11WindowMode)](x11window-x11windowmode.mdx#uid-8e8d91a9c5) | No summary available. |
+| [Window](x11window-x11windowmode.mdx#uid-8e8d91a9c5) | Inherited from [X11Window.X11WindowMode](x11window-x11windowmode.mdx). |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-fec4b0f41a"></span>
 
-### BlockInput
+### BlockInput Property
 
 ```csharp
-public Boolean BlockInput { get; set; }
+public bool BlockInput { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-627778831b"></span>
 
-### Scaling
+### Scaling Property
 
 ```csharp
-public Double Scaling { get; set; }
+public double Scaling { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

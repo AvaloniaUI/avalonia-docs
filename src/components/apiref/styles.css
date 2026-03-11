@@ -96,6 +96,66 @@
   font-weight: 600;
 }
 
+.apiref-page__doc-item {
+  margin: 0 0 1rem;
+  padding: 0 0 1rem;
+  border-bottom: 1px solid var(--apiref-border-subtle);
+}
+
+.apiref-page__doc-item:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.apiref-page__doc-term {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin-bottom: 0.35rem;
+  color: var(--ifm-heading-color);
+  font-weight: 600;
+}
+
+.apiref-page__doc-type {
+  color: var(--apiref-muted);
+  font-weight: 500;
+}
+
+.apiref-page__doc-term code,
+.apiref-page__doc-type code {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+}
+
+.apiref-page__doc-description {
+  color: var(--ifm-color-emphasis-800);
+  line-height: 1.7;
+}
+
+.apiref-page__doc-description > :last-child {
+  margin-bottom: 0;
+}
+
+.apiref-page__member-entry {
+  margin: 2rem 0 2.75rem;
+  padding-top: 1.35rem;
+  border-top: 1px solid var(--apiref-border);
+}
+
+.apiref-page__member-entry > h3,
+.apiref-page__member-entry > h4 {
+  margin-top: 0;
+  margin-bottom: 0.8rem;
+}
+
+.apiref-page__member-entry > :last-child {
+  margin-bottom: 0;
+}
+
 .apiref-page h2 {
   margin-top: 2.2rem;
   margin-bottom: 0.85rem;

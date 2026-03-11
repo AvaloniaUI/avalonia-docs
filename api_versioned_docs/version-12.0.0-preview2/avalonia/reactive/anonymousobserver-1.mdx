@@ -53,7 +53,7 @@ public class AnonymousObserver<T>
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> AnonymousObserver&lt;T&gt;
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> AnonymousObserver&lt;T&gt;
 </div>
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Implements:</span> IObserver&lt;&gt;
@@ -70,45 +70,102 @@ public class AnonymousObserver<T>
 
 ### AnonymousObserver&lt;T&gt; overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-b0c1639abd"></span>
 
-#### AnonymousObserver&lt;T&gt;
+#### AnonymousObserver&lt;T&gt; Constructor
 
 ```csharp
 public AnonymousObserver<T>(Action<T> onNext)
 ```
 
+##### Parameters
+
+`onNext` Action&lt;T&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-cc747c7efa"></span>
 
-#### AnonymousObserver&lt;T&gt;
+#### AnonymousObserver&lt;T&gt; Constructor
 
 ```csharp
 public AnonymousObserver<T>(Action<T> onNext, Action onCompleted)
 ```
 
+##### Parameters
+
+`onNext` Action&lt;T&gt;
+
+
+`onCompleted` Action
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-e26b7eb5bf"></span>
 
-#### AnonymousObserver&lt;T&gt;
+#### AnonymousObserver&lt;T&gt; Constructor
 
 ```csharp
 public AnonymousObserver<T>(Action<T> onNext, Action<Exception> onError)
 ```
 
+##### Parameters
+
+`onNext` Action&lt;T&gt;
+
+
+`onError` Action&lt;Exception&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-9af2f0bdd2"></span>
 
-#### AnonymousObserver&lt;T&gt;
+#### AnonymousObserver&lt;T&gt; Constructor
 
 ```csharp
 public AnonymousObserver<T>(Action<T> onNext, Action<Exception> onError, Action onCompleted)
 ```
 
+##### Parameters
+
+`onNext` Action&lt;T&gt;
+
+
+`onError` Action&lt;Exception&gt;
+
+
+`onCompleted` Action
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-52aa2fd2d0"></span>
 
-#### AnonymousObserver&lt;T&gt;
+#### AnonymousObserver&lt;T&gt; Constructor
 
 ```csharp
 public AnonymousObserver<T>(System.Threading.Tasks.TaskCompletionSource<T> tcs)
 ```
+
+##### Parameters
+
+`tcs` System.Threading.Tasks.TaskCompletionSource&lt;T&gt;
+
+
+</section>
 
 ## Methods
 
@@ -118,29 +175,51 @@ public AnonymousObserver<T>(System.Threading.Tasks.TaskCompletionSource<T> tcs)
 | [OnError](#uid-221f6caf8a) | No summary available. |
 | [OnNext](#uid-950afdad72) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-7301a5da3c"></span>
 
-### OnCompleted
+### OnCompleted Method
 
 ```csharp
-public Void OnCompleted()
+public void OnCompleted()
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-221f6caf8a"></span>
 
-### OnError
+### OnError Method
 
 ```csharp
-public Void OnError(Exception error)
+public void OnError(Exception error)
 ```
+
+#### Parameters
+
+`error` Exception
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-950afdad72"></span>
 
-### OnNext
+### OnNext Method
 
 ```csharp
-public Void OnNext(T value)
+public void OnNext(T value)
 ```
+
+#### Parameters
+
+`value` T
+
+
+</section>
 
 </ApiRefPage>
 

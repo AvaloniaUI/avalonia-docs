@@ -71,65 +71,151 @@ public struct DispatcherPriority
 | [ToString](#uid-f0f18dbb2a) | No summary available. |
 | [Validate](#uid-343f293063) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-1dd3518257"></span>
 
-### CompareTo
+### CompareTo Method
 
 ```csharp
-public Int32 CompareTo(Avalonia.Threading.DispatcherPriority other)
+public int CompareTo(Avalonia.Threading.DispatcherPriority other)
 ```
+
+#### Parameters
+
+`other` [Avalonia.Threading.DispatcherPriority](xref:Avalonia.Threading.DispatcherPriority)
+
+
+#### Returns
+
+int
+
+
+</section>
 
 <span id="uid-20ccadf777"></span>
 
 ### Equals overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-6aaa855d3b"></span>
 
-#### Equals
+#### Equals Method
 
 ```csharp
-public Boolean Equals(Avalonia.Threading.DispatcherPriority other)
+public bool Equals(Avalonia.Threading.DispatcherPriority other)
 ```
+
+##### Parameters
+
+`other` [Avalonia.Threading.DispatcherPriority](xref:Avalonia.Threading.DispatcherPriority)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-0b9666eabc"></span>
 
-#### Equals
+#### Equals Method
 
 ```csharp
-public Boolean Equals(Object obj)
+public bool Equals(object obj)
 ```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-3feda63af6"></span>
 
-### FromValue
+### FromValue Method
 
 ```csharp
-public Avalonia.Threading.DispatcherPriority FromValue(Int32 value)
+public Avalonia.Threading.DispatcherPriority FromValue(int value)
 ```
+
+#### Parameters
+
+`value` int
+
+
+#### Returns
+
+[Avalonia.Threading.DispatcherPriority](xref:Avalonia.Threading.DispatcherPriority)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-2c7555695b"></span>
 
-### GetHashCode
+### GetHashCode Method
 
 ```csharp
-public Int32 GetHashCode()
+public int GetHashCode()
 ```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-f0f18dbb2a"></span>
 
-### ToString
+### ToString Method
 
 ```csharp
-public String ToString()
+public string ToString()
 ```
+
+#### Returns
+
+string
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-343f293063"></span>
 
-### Validate
+### Validate Method
 
 ```csharp
-public Void Validate(Avalonia.Threading.DispatcherPriority priority, String parameterName)
+public void Validate(Avalonia.Threading.DispatcherPriority priority, string parameterName)
 ```
+
+#### Parameters
+
+`priority` [Avalonia.Threading.DispatcherPriority](xref:Avalonia.Threading.DispatcherPriority)
+
+
+`parameterName` string
+
+
+</section>
 
 ## Properties
 
@@ -137,15 +223,19 @@ public Void Validate(Avalonia.Threading.DispatcherPriority priority, String para
 | --- | --- |
 | [Value](#uid-dc387cece8) | The integer value of the priority |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-dc387cece8"></span>
 
-### Value
+### Value Property
 
 The integer value of the priority
 
 ```csharp
-public Int32 Value { get; set; }
+public int Value { get; set; }
 ```
+
+</section>
 
 ## Fields
 
@@ -166,9 +256,11 @@ public Int32 Value { get; set; }
 | [Send](#uid-3d524495d2) | The job will be processed before other asynchronous operations. |
 | [SystemIdle](#uid-032b2826f5) | The job will be processed when the system is idle. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-523211f594"></span>
 
-### ApplicationIdle
+### ApplicationIdle Field
 
 The job will be processed when the application is idle.
 
@@ -176,9 +268,13 @@ The job will be processed when the application is idle.
 public Avalonia.Threading.DispatcherPriority ApplicationIdle
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-3bb9b4756e"></span>
 
-### Background
+### Background Field
 
 The job will be processed after other non-idle operations have completed.
 
@@ -186,9 +282,13 @@ The job will be processed after other non-idle operations have completed.
 public Avalonia.Threading.DispatcherPriority Background
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-9301e8c271"></span>
 
-### ContextIdle
+### ContextIdle Field
 
 The job will be processed after background operations have completed.
 
@@ -196,9 +296,13 @@ The job will be processed after background operations have completed.
 public Avalonia.Threading.DispatcherPriority ContextIdle
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-b54d0fc666"></span>
 
-### DataBind
+### DataBind Field
 
 The job will be processed with the same priority as data binding.
 
@@ -206,9 +310,13 @@ The job will be processed with the same priority as data binding.
 public Avalonia.Threading.DispatcherPriority DataBind
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-11c7f8fe22"></span>
 
-### Default
+### Default Field
 
 The lowest foreground dispatcher priority
 
@@ -216,9 +324,13 @@ The lowest foreground dispatcher priority
 public Avalonia.Threading.DispatcherPriority Default
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-9d6d87ac15"></span>
 
-### Inactive
+### Inactive Field
 
 A dispatcher priority for jobs that shouldn't be executed yet
 
@@ -226,9 +338,13 @@ A dispatcher priority for jobs that shouldn't be executed yet
 public Avalonia.Threading.DispatcherPriority Inactive
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-37e6f3144c"></span>
 
-### Input
+### Input Field
 
 The job will be processed with the same priority as input.
 
@@ -236,9 +352,13 @@ The job will be processed with the same priority as input.
 public Avalonia.Threading.DispatcherPriority Input
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-e8a15fcd01"></span>
 
-### Invalid
+### Invalid Field
 
 Used internally in dispatcher code
 
@@ -246,9 +366,13 @@ Used internally in dispatcher code
 public Avalonia.Threading.DispatcherPriority Invalid
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-ea1f3e0469"></span>
 
-### Loaded
+### Loaded Field
 
 The job will be processed after layout and render but before input.
 
@@ -256,9 +380,13 @@ The job will be processed after layout and render but before input.
 public Avalonia.Threading.DispatcherPriority Loaded
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-dfb5638419"></span>
 
-### MaxValue
+### MaxValue Field
 
 Maximum possible priority
 
@@ -266,9 +394,13 @@ Maximum possible priority
 public Avalonia.Threading.DispatcherPriority MaxValue
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-10614c3949"></span>
 
-### Normal
+### Normal Field
 
 The job will be processed with normal priority.
 
@@ -276,9 +408,13 @@ The job will be processed with normal priority.
 public Avalonia.Threading.DispatcherPriority Normal
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-b42303fdd5"></span>
 
-### Render
+### Render Field
 
 The job will be processed with the same priority as render.
 
@@ -286,9 +422,13 @@ The job will be processed with the same priority as render.
 public Avalonia.Threading.DispatcherPriority Render
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-3d524495d2"></span>
 
-### Send
+### Send Field
 
 The job will be processed before other asynchronous operations.
 
@@ -296,15 +436,21 @@ The job will be processed before other asynchronous operations.
 public Avalonia.Threading.DispatcherPriority Send
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-032b2826f5"></span>
 
-### SystemIdle
+### SystemIdle Field
 
 The job will be processed when the system is idle.
 
 ```csharp
 public Avalonia.Threading.DispatcherPriority SystemIdle
 ```
+
+</section>
 
 </ApiRefPage>
 

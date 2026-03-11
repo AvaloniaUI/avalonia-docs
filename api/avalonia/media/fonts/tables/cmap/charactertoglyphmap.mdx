@@ -73,50 +73,88 @@ supporting both Format 4 (BMP) and Format 12 (Unicode full repertoire) cmap subt
 | [GetMappedRanges](#uid-76a2fe12c3) | Returns an enumerator that iterates through all code point ranges mapped by this instance. |
 | [TryGetGlyph](#uid-7c39a96845) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-5861530b4d"></span>
 
-### ContainsGlyph
+### ContainsGlyph Method
 
 Determines whether the character map contains a glyph for the specified Unicode code point.
 
 ```csharp
-public Boolean ContainsGlyph(Int32 codePoint)
+public bool ContainsGlyph(int codePoint)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `codePoint` | The Unicode code point to check for the presence of a corresponding glyph. |
+#### Parameters
 
-Returns: true if a glyph exists for the specified code point; otherwise, false.
+`codePoint` int
+
+The Unicode code point to check for the presence of a corresponding glyph.
+
+
+#### Returns
+
+bool
+
+true if a glyph exists for the specified code point; otherwise, false.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-928bce08d1"></span>
 
-### GetGlyph
+### GetGlyph Method
 
 Retrieves the glyph index that corresponds to the specified Unicode code point.
 
 ```csharp
-public UInt16 GetGlyph(Int32 codePoint)
+public ushort GetGlyph(int codePoint)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `codePoint` | The Unicode code point for which to obtain the glyph index. |
+#### Parameters
 
-Returns: The glyph index associated with the specified code point. Returns 0 if the code point is not mapped to any
+`codePoint` int
+
+The Unicode code point for which to obtain the glyph index.
+
+
+#### Returns
+
+ushort
+
+The glyph index associated with the specified code point. Returns 0 if the code point is not mapped to any
 glyph.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-d213acbde0"></span>
 
-### GetGlyphs
+### GetGlyphs Method
 
 ```csharp
-public Void GetGlyphs(ReadOnlySpan<Int32> codePoints, Span<UInt16> glyphIds)
+public void GetGlyphs(ReadOnlySpan<int> codePoints, Span<ushort> glyphIds)
 ```
+
+#### Parameters
+
+`codePoints` ReadOnlySpan&lt;int&gt;
+
+
+`glyphIds` Span&lt;ushort&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-76a2fe12c3"></span>
 
-### GetMappedRanges
+### GetMappedRanges Method
 
 Returns an enumerator that iterates through all code point ranges mapped by this instance.
 
@@ -124,15 +162,39 @@ Returns an enumerator that iterates through all code point ranges mapped by this
 public Avalonia.Media.Fonts.Tables.Cmap.CodepointRangeEnumerator GetMappedRanges()
 ```
 
-Returns: A [Avalonia.Media.Fonts.Tables.Cmap.CodepointRangeEnumerator](xref:Avalonia.Media.Fonts.Tables.Cmap.CodepointRangeEnumerator) that can be used to enumerate the mapped code point ranges.
+#### Returns
+
+[Avalonia.Media.Fonts.Tables.Cmap.CodepointRangeEnumerator](xref:Avalonia.Media.Fonts.Tables.Cmap.CodepointRangeEnumerator)
+
+A [Avalonia.Media.Fonts.Tables.Cmap.CodepointRangeEnumerator](xref:Avalonia.Media.Fonts.Tables.Cmap.CodepointRangeEnumerator) that can be used to enumerate the mapped code point ranges.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-7c39a96845"></span>
 
-### TryGetGlyph
+### TryGetGlyph Method
 
 ```csharp
-public Boolean TryGetGlyph(Int32 codePoint, UInt16& glyphId)
+public bool TryGetGlyph(int codePoint, ushort& glyphId)
 ```
+
+#### Parameters
+
+`codePoint` int
+
+
+`glyphId` ushort&amp;
+
+
+#### Returns
+
+bool
+
+
+</section>
 
 ## Properties
 
@@ -140,13 +202,17 @@ public Boolean TryGetGlyph(Int32 codePoint, UInt16& glyphId)
 | --- | --- |
 | [Item](#uid-1b1fc3576d) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-1b1fc3576d"></span>
 
-### Item
+### Item Property
 
 ```csharp
-public UInt16 Item { get; set; }
+public ushort Item { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

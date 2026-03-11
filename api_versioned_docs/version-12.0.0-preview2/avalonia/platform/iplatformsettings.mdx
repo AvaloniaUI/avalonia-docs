@@ -58,9 +58,11 @@ public interface IPlatformSettings
 | [GetDoubleTapTime](#uid-c0e02e9437) | Gets the maximum time that may occur between the first and second click of a double- tap gesture. |
 | [GetTapSize](#uid-34908b33f3) | The size of the rectangle around the location of a pointer down that a pointer up must occur within in order to register a tap gesture, in device-independent pixels. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-3c69d4c9c5"></span>
 
-### GetColorValues
+### GetColorValues Method
 
 Gets current system color values including dark mode and accent colors.
 
@@ -68,9 +70,18 @@ Gets current system color values including dark mode and accent colors.
 public Avalonia.Platform.PlatformColorValues GetColorValues()
 ```
 
+#### Returns
+
+[Avalonia.Platform.PlatformColorValues](xref:Avalonia.Platform.PlatformColorValues)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-c978d38b41"></span>
 
-### GetDoubleTapSize
+### GetDoubleTapSize Method
 
 The size of the rectangle around the location of a pointer down that a pointer up
 must occur within in order to register a double-tap gesture, in device-independent
@@ -80,13 +91,25 @@ pixels.
 public Avalonia.Size GetDoubleTapSize(Avalonia.Input.PointerType type)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `type` | The pointer type. |
+#### Parameters
+
+`type` [Avalonia.Input.PointerType](xref:Avalonia.Input.PointerType)
+
+The pointer type.
+
+
+#### Returns
+
+[Avalonia.Size](xref:Avalonia.Size)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-c0e02e9437"></span>
 
-### GetDoubleTapTime
+### GetDoubleTapTime Method
 
 Gets the maximum time that may occur between the first and second click of a double-
 tap gesture.
@@ -95,9 +118,23 @@ tap gesture.
 public TimeSpan GetDoubleTapTime(Avalonia.Input.PointerType type)
 ```
 
+#### Parameters
+
+`type` [Avalonia.Input.PointerType](xref:Avalonia.Input.PointerType)
+
+
+#### Returns
+
+TimeSpan
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-34908b33f3"></span>
 
-### GetTapSize
+### GetTapSize Method
 
 The size of the rectangle around the location of a pointer down that a pointer up
 must occur within in order to register a tap gesture, in device-independent pixels.
@@ -106,9 +143,19 @@ must occur within in order to register a tap gesture, in device-independent pixe
 public Avalonia.Size GetTapSize(Avalonia.Input.PointerType type)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `type` | The pointer type. |
+#### Parameters
+
+`type` [Avalonia.Input.PointerType](xref:Avalonia.Input.PointerType)
+
+The pointer type.
+
+
+#### Returns
+
+[Avalonia.Size](xref:Avalonia.Size)
+
+
+</section>
 
 ## Properties
 
@@ -117,9 +164,11 @@ public Avalonia.Size GetTapSize(Avalonia.Input.PointerType type)
 | [HoldWaitDuration](#uid-18e487bd24) | Holding duration between pointer press and when event is fired. |
 | [HotkeyConfiguration](#uid-167fcac31c) | Get a configuration for platform-specific hotkeys in an Avalonia application. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-18e487bd24"></span>
 
-### HoldWaitDuration
+### HoldWaitDuration Property
 
 Holding duration between pointer press and when event is fired.
 
@@ -127,9 +176,13 @@ Holding duration between pointer press and when event is fired.
 public TimeSpan HoldWaitDuration { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-167fcac31c"></span>
 
-### HotkeyConfiguration
+### HotkeyConfiguration Property
 
 Get a configuration for platform-specific hotkeys in an Avalonia application.
 
@@ -137,21 +190,27 @@ Get a configuration for platform-specific hotkeys in an Avalonia application.
 public Avalonia.Input.Platform.PlatformHotkeyConfiguration HotkeyConfiguration { get; set; }
 ```
 
+</section>
+
 ## Events
 
 | Name | Description |
 | --- | --- |
 | [ColorValuesChanged](#uid-9a11a40b95) | Raises when current system color values are changed. Including changing of a dark mode and accent colors. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-9a11a40b95"></span>
 
-### ColorValuesChanged
+### ColorValuesChanged Event
 
 Raises when current system color values are changed. Including changing of a dark mode and accent colors.
 
 ```csharp
 public event EventHandler<Avalonia.Platform.PlatformColorValues> ColorValuesChanged
 ```
+
+</section>
 
 </ApiRefPage>
 

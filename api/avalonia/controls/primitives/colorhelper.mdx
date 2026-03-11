@@ -53,7 +53,7 @@ public class ColorHelper
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> ColorHelper
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> ColorHelper
 </div>
 </div>
 
@@ -64,38 +64,62 @@ public class ColorHelper
 | [GetRelativeLuminance](#uid-4396eaa68e) | Gets the relative (perceptual) luminance/brightness of the given color. 1 is closer to white while 0 is closer to black. |
 | [ToDisplayName](#uid-9f6d2ba493) | Determines an approximate display name for the given color. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-4396eaa68e"></span>
 
-### GetRelativeLuminance
+### GetRelativeLuminance Method
 
 Gets the relative (perceptual) luminance/brightness of the given color.
 1 is closer to white while 0 is closer to black.
 
 ```csharp
-public Double GetRelativeLuminance(Avalonia.Media.Color color)
+public double GetRelativeLuminance(Avalonia.Media.Color color)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `color` | The color to calculate relative luminance for. |
+#### Parameters
 
-Returns: The relative (perceptual) luminance/brightness of the given color.
+`color` [Avalonia.Media.Color](xref:Avalonia.Media.Color)
+
+The color to calculate relative luminance for.
+
+
+#### Returns
+
+double
+
+The relative (perceptual) luminance/brightness of the given color.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-9f6d2ba493"></span>
 
-### ToDisplayName
+### ToDisplayName Method
 
 Determines an approximate display name for the given color.
 
 ```csharp
-public String ToDisplayName(Avalonia.Media.Color color)
+public string ToDisplayName(Avalonia.Media.Color color)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `color` | The color to get the display name for. |
+#### Parameters
 
-Returns: The approximate color display name.
+`color` [Avalonia.Media.Color](xref:Avalonia.Media.Color)
+
+The color to get the display name for.
+
+
+#### Returns
+
+string
+
+The approximate color display name.
+
+
+</section>
 
 ## Properties
 
@@ -103,15 +127,24 @@ Returns: The approximate color display name.
 | --- | --- |
 | [ToDisplayNameExists](#uid-586d82c131) | Determines if color display names are supported based on the current thread culture. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-586d82c131"></span>
 
-### ToDisplayNameExists
+### ToDisplayNameExists Property
 
 Determines if color display names are supported based on the current thread culture.
 
 ```csharp
-public Boolean ToDisplayNameExists { get; set; }
+public bool ToDisplayNameExists { get; set; }
 ```
+
+#### Remarks
+
+Only English names are currently supported following known color names.
+In the future known color names could be localized.
+
+</section>
 
 </ApiRefPage>
 

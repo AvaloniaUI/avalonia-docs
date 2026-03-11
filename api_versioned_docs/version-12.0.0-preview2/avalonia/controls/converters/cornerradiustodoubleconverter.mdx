@@ -53,7 +53,7 @@ public class CornerRadiusToDoubleConverter
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> CornerRadiusToDoubleConverter
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> CornerRadiusToDoubleConverter
 </div>
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Implements:</span> <a href="../../data/converters/ivalueconverter">IValueConverter</a>
@@ -66,13 +66,17 @@ public class CornerRadiusToDoubleConverter
 | --- | --- |
 | [CornerRadiusToDoubleConverter](#uid-918ad9c0e0) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-918ad9c0e0"></span>
 
-### CornerRadiusToDoubleConverter
+### CornerRadiusToDoubleConverter Constructor
 
 ```csharp
 public CornerRadiusToDoubleConverter()
 ```
+
+</section>
 
 ## Methods
 
@@ -81,59 +85,123 @@ public CornerRadiusToDoubleConverter()
 | [Convert](#uid-5b17a893df) | Converts a value. |
 | [ConvertBack](#uid-9119bf48bc) | Converts a value. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-5b17a893df"></span>
 
-### Convert
+### Convert Method
 
 Converts a value.
 
 ```csharp
-public Object Convert(Object value, Type targetType, Object parameter, System.Globalization.CultureInfo culture)
+public object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `culture` | The culture to use. |
-| `parameter` | A user-defined parameter. |
-| `targetType` | The type of the target. |
-| `value` | The value to convert. |
+#### Parameters
 
-Returns: The converted value.
+`value` object
+
+The value to convert.
+
+
+`targetType` Type
+
+The type of the target.
+
+
+`parameter` object
+
+A user-defined parameter.
+
+
+`culture` System.Globalization.CultureInfo
+
+The culture to use.
+
+
+#### Returns
+
+object
+
+The converted value.
+
+
+#### Remarks
+
+This method should not throw exceptions. If the value is not convertible, return
+a [Avalonia.Data.BindingNotification](xref:Avalonia.Data.BindingNotification) in an error state. Any exceptions thrown will be
+treated as an application exception.
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-9119bf48bc"></span>
 
-### ConvertBack
+### ConvertBack Method
 
 Converts a value.
 
 ```csharp
-public Object ConvertBack(Object value, Type targetType, Object parameter, System.Globalization.CultureInfo culture)
+public object ConvertBack(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `culture` | The culture to use. |
-| `parameter` | A user-defined parameter. |
-| `targetType` | The type of the target. |
-| `value` | The value to convert. |
+#### Parameters
 
-Returns: The converted value.
+`value` object
+
+The value to convert.
+
+
+`targetType` Type
+
+The type of the target.
+
+
+`parameter` object
+
+A user-defined parameter.
+
+
+`culture` System.Globalization.CultureInfo
+
+The culture to use.
+
+
+#### Returns
+
+object
+
+The converted value.
+
+
+#### Remarks
+
+This method should not throw exceptions. If the value is not convertible, return
+a [Avalonia.Data.BindingNotification](xref:Avalonia.Data.BindingNotification) in an error state. Any exceptions thrown will be
+treated as an application exception.
+
+</section>
 
 ## Properties
 
 | Name | Description |
 | --- | --- |
-| [Corner](#uid-04632e1127) | Gets or sets the specific corner of the Avalonia.CornerRadius to convert to double. |
+| [Corner](#uid-04632e1127) | Gets or sets the specific corner of the [Avalonia.CornerRadius](xref:Avalonia.CornerRadius) to convert to double. |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-04632e1127"></span>
 
-### Corner
+### Corner Property
 
 Gets or sets the specific corner of the [Avalonia.CornerRadius](xref:Avalonia.CornerRadius) to convert to double.
 
 ```csharp
 public Avalonia.Controls.Converters.Corners Corner { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

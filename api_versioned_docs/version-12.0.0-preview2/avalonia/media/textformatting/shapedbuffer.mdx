@@ -47,7 +47,7 @@ public class ShapedBuffer
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> ShapedBuffer
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> ShapedBuffer
 </div>
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Implements:</span> IEnumerable&lt;GlyphInfo&gt;, IReadOnlyCollection&lt;GlyphInfo&gt;, IReadOnlyList&lt;GlyphInfo&gt;, IEnumerable, IDisposable
@@ -60,13 +60,34 @@ public class ShapedBuffer
 | --- | --- |
 | [ShapedBuffer](#uid-1d47581713) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-1d47581713"></span>
 
-### ShapedBuffer
+### ShapedBuffer Constructor
 
 ```csharp
-public ShapedBuffer(ReadOnlyMemory<Char> text, Int32 bufferLength, Avalonia.Media.GlyphTypeface glyphTypeface, Double fontRenderingEmSize, SByte bidiLevel)
+public ShapedBuffer(ReadOnlyMemory<char> text, int bufferLength, Avalonia.Media.GlyphTypeface glyphTypeface, double fontRenderingEmSize, sbyte bidiLevel)
 ```
+
+#### Parameters
+
+`text` ReadOnlyMemory&lt;char&gt;
+
+
+`bufferLength` int
+
+
+`glyphTypeface` [Avalonia.Media.GlyphTypeface](xref:Avalonia.Media.GlyphTypeface)
+
+
+`fontRenderingEmSize` double
+
+
+`bidiLevel` sbyte
+
+
+</section>
 
 ## Methods
 
@@ -75,49 +96,78 @@ public ShapedBuffer(ReadOnlyMemory<Char> text, Int32 bufferLength, Avalonia.Medi
 | [Dispose](#uid-0bf95ef9df) | No summary available. |
 | [GetEnumerator](#uid-21e93d6c02) | No summary available. |
 | [Reverse](#uid-1245172420) | Reverses the buffer. |
-| [Split](#uid-6413e6994f) | Splits the Avalonia.Media.TextFormatting.TextRun at specified length. |
+| [Split](#uid-6413e6994f) | Splits the [Avalonia.Media.TextFormatting.TextRun](xref:Avalonia.Media.TextFormatting.TextRun) at specified length. |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-0bf95ef9df"></span>
 
-### Dispose
+### Dispose Method
 
 ```csharp
-public Void Dispose()
+public void Dispose()
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-21e93d6c02"></span>
 
-### GetEnumerator
+### GetEnumerator Method
 
 ```csharp
 public System.Collections.Generic.IEnumerator<Avalonia.Media.TextFormatting.GlyphInfo> GetEnumerator()
 ```
 
+#### Returns
+
+System.Collections.Generic.IEnumerator&lt;[Avalonia.Media.TextFormatting.GlyphInfo](xref:Avalonia.Media.TextFormatting.GlyphInfo)&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-1245172420"></span>
 
-### Reverse
+### Reverse Method
 
 Reverses the buffer.
 
 ```csharp
-public Void Reverse()
+public void Reverse()
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-6413e6994f"></span>
 
-### Split
+### Split Method
 
 Splits the [Avalonia.Media.TextFormatting.TextRun](xref:Avalonia.Media.TextFormatting.TextRun) at specified length.
 
 ```csharp
-public Avalonia.Media.TextFormatting.SplitResult<T><Avalonia.Media.TextFormatting.ShapedBuffer> Split(Int32 textLength)
+public Avalonia.Media.TextFormatting.SplitResult<T><Avalonia.Media.TextFormatting.ShapedBuffer> Split(int textLength)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `textLength` | The text length. |
+#### Parameters
 
-Returns: The split result.
+`textLength` int
+
+The text length.
+
+
+#### Returns
+
+Avalonia.Media.TextFormatting.SplitResult&lt;T&gt;&lt;[Avalonia.Media.TextFormatting.ShapedBuffer](xref:Avalonia.Media.TextFormatting.ShapedBuffer)&gt;
+
+The split result.
+
+
+</section>
 
 ## Properties
 
@@ -131,29 +181,39 @@ Returns: The split result.
 | [Length](#uid-3427eb612b) | The buffer's length. |
 | [Text](#uid-197f3ad165) | The text that is represended by this buffer. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-5ded254761"></span>
 
-### BidiLevel
+### BidiLevel Property
 
 The buffer's bidi level.
 
 ```csharp
-public SByte BidiLevel { get; set; }
+public sbyte BidiLevel { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-5c7c9ef6ae"></span>
 
-### FontRenderingEmSize
+### FontRenderingEmSize Property
 
 The buffers font rendering em size.
 
 ```csharp
-public Double FontRenderingEmSize { get; set; }
+public double FontRenderingEmSize { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-9c4431840f"></span>
 
-### GlyphTypeface
+### GlyphTypeface Property
 
 The buffer's glyph typeface.
 
@@ -161,43 +221,61 @@ The buffer's glyph typeface.
 public Avalonia.Media.GlyphTypeface GlyphTypeface { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-980dd70041"></span>
 
-### IsLeftToRight
+### IsLeftToRight Property
 
 The buffer's reading direction.
 
 ```csharp
-public Boolean IsLeftToRight { get; set; }
+public bool IsLeftToRight { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-f74462311e"></span>
 
-### Item
+### Item Property
 
 ```csharp
 public Avalonia.Media.TextFormatting.GlyphInfo Item { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-3427eb612b"></span>
 
-### Length
+### Length Property
 
 The buffer's length.
 
 ```csharp
-public Int32 Length { get; set; }
+public int Length { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-197f3ad165"></span>
 
-### Text
+### Text Property
 
 The text that is represended by this buffer.
 
 ```csharp
-public ReadOnlyMemory<Char> Text { get; set; }
+public ReadOnlyMemory<char> Text { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

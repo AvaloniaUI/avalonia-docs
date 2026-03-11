@@ -66,13 +66,28 @@ public struct ValueSpan<T>
 | --- | --- |
 | [ValueSpan&lt;T&gt;](#uid-bcbda291e2) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-bcbda291e2"></span>
 
-### ValueSpan&lt;T&gt;
+### ValueSpan&lt;T&gt; Constructor
 
 ```csharp
-public ValueSpan<T>(Int32 start, Int32 length, T value)
+public ValueSpan<T>(int start, int length, T value)
 ```
+
+#### Parameters
+
+`start` int
+
+
+`length` int
+
+
+`value` T
+
+
+</section>
 
 ## Methods
 
@@ -86,37 +101,83 @@ public ValueSpan<T>(Int32 start, Int32 length, T value)
 
 ### Equals overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-3e3e71b395"></span>
 
-#### Equals
+#### Equals Method
 
 ```csharp
-public Boolean Equals(Avalonia.Utilities.ValueSpan<T><T> other)
+public bool Equals(Avalonia.Utilities.ValueSpan<T><T> other)
 ```
+
+##### Parameters
+
+`other` Avalonia.Utilities.ValueSpan&lt;T&gt;&lt;T&gt;
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-a422d90154"></span>
 
-#### Equals
+#### Equals Method
 
 ```csharp
-public Boolean Equals(Object obj)
+public bool Equals(object obj)
 ```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-e30d3aea95"></span>
 
-### GetHashCode
+### GetHashCode Method
 
 ```csharp
-public Int32 GetHashCode()
+public int GetHashCode()
 ```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-e4722110af"></span>
 
-### ToString
+### ToString Method
 
 ```csharp
-public String ToString()
+public string ToString()
 ```
+
+#### Returns
+
+string
+
+
+</section>
 
 ## Properties
 
@@ -126,35 +187,47 @@ public String ToString()
 | [Start](#uid-3637231974) | Get's the start of the span. |
 | [Value](#uid-6d0373698e) | Get's the value of the span. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-40f53e1b44"></span>
 
-### Length
+### Length Property
 
 Get's the length of the span.
 
 ```csharp
-public Int32 Length { get; set; }
+public int Length { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-3637231974"></span>
 
-### Start
+### Start Property
 
 Get's the start of the span.
 
 ```csharp
-public Int32 Start { get; set; }
+public int Start { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-6d0373698e"></span>
 
-### Value
+### Value Property
 
 Get's the value of the span.
 
 ```csharp
 public T Value { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

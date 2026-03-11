@@ -47,7 +47,7 @@ public class EffectExtensions
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> EffectExtensions
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> EffectExtensions
 </div>
 </div>
 
@@ -57,9 +57,11 @@ public class EffectExtensions
 | --- | --- |
 | [ToImmutable](#uid-8ea8b6569e) | Converts a effect to an immutable effect. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-8ea8b6569e"></span>
 
-### ToImmutable
+### ToImmutable Method
 
 Converts a effect to an immutable effect.
 
@@ -67,12 +69,22 @@ Converts a effect to an immutable effect.
 public Avalonia.Media.IImmutableEffect ToImmutable(Avalonia.Media.IEffect effect)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `effect` | The effect. |
+#### Parameters
 
-Returns: The result of calling [Avalonia.Media.IMutableEffect.ToImmutable](xref:Avalonia.Media.IMutableEffect.ToImmutable) if the effect is mutable,
+`effect` [Avalonia.Media.IEffect](xref:Avalonia.Media.IEffect)
+
+The effect.
+
+
+#### Returns
+
+[Avalonia.Media.IImmutableEffect](xref:Avalonia.Media.IImmutableEffect)
+
+The result of calling [Avalonia.Media.IMutableEffect.ToImmutable](xref:Avalonia.Media.IMutableEffect.ToImmutable) if the effect is mutable,
 otherwise `effect`.
+
+
+</section>
 
 </ApiRefPage>
 

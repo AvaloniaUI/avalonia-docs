@@ -53,7 +53,7 @@ public class ImmutableTextDecoration
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> ImmutableTextDecoration
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> ImmutableTextDecoration
 </div>
 </div>
 
@@ -63,13 +63,34 @@ public class ImmutableTextDecoration
 | --- | --- |
 | [ImmutableTextDecoration](#uid-a2a857d6c6) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-a2a857d6c6"></span>
 
-### ImmutableTextDecoration
+### ImmutableTextDecoration Constructor
 
 ```csharp
-public ImmutableTextDecoration(Avalonia.Media.TextDecorationLocation location, Avalonia.Media.Immutable.ImmutablePen pen, Avalonia.Media.TextDecorationUnit penThicknessUnit, Double penOffset, Avalonia.Media.TextDecorationUnit penOffsetUnit)
+public ImmutableTextDecoration(Avalonia.Media.TextDecorationLocation location, Avalonia.Media.Immutable.ImmutablePen pen, Avalonia.Media.TextDecorationUnit penThicknessUnit, double penOffset, Avalonia.Media.TextDecorationUnit penOffsetUnit)
 ```
+
+#### Parameters
+
+`location` [Avalonia.Media.TextDecorationLocation](xref:Avalonia.Media.TextDecorationLocation)
+
+
+`pen` [Avalonia.Media.Immutable.ImmutablePen](xref:Avalonia.Media.Immutable.ImmutablePen)
+
+
+`penThicknessUnit` [Avalonia.Media.TextDecorationUnit](xref:Avalonia.Media.TextDecorationUnit)
+
+
+`penOffset` double
+
+
+`penOffsetUnit` [Avalonia.Media.TextDecorationUnit](xref:Avalonia.Media.TextDecorationUnit)
+
+
+</section>
 
 ## Properties
 
@@ -78,12 +99,14 @@ public ImmutableTextDecoration(Avalonia.Media.TextDecorationLocation location, A
 | [Location](#uid-203cbc10e9) | Gets or sets the location. |
 | [Pen](#uid-b31045b8f4) | Gets or sets the pen. |
 | [PenOffset](#uid-85f87baaf7) | Gets or sets the pen offset. |
-| [PenOffsetUnit](#uid-762696e494) | Gets the units in which the Avalonia.Media.Immutable.ImmutableTextDecoration.PenOffset value is expressed. |
-| [PenThicknessUnit](#uid-f114ef4f6f) | Gets the units in which the Thickness of the text decoration's Avalonia.Media.Immutable.ImmutableTextDecoration.Pen is expressed. |
+| [PenOffsetUnit](#uid-762696e494) | Gets the units in which the [Avalonia.Media.Immutable.ImmutableTextDecoration.PenOffset](xref:Avalonia.Media.Immutable.ImmutableTextDecoration.PenOffset) value is expressed. |
+| [PenThicknessUnit](#uid-f114ef4f6f) | Gets the units in which the Thickness of the text decoration's [Avalonia.Media.Immutable.ImmutableTextDecoration.Pen](xref:Avalonia.Media.Immutable.ImmutableTextDecoration.Pen) is expressed. |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-203cbc10e9"></span>
 
-### Location
+### Location Property
 
 Gets or sets the location.
 
@@ -91,11 +114,18 @@ Gets or sets the location.
 public Avalonia.Media.TextDecorationLocation Location { get; set; }
 ```
 
-Value: The location.
+#### Value
+
+The location.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-b31045b8f4"></span>
 
-### Pen
+### Pen Property
 
 Gets or sets the pen.
 
@@ -103,23 +133,37 @@ Gets or sets the pen.
 public Avalonia.Media.Immutable.ImmutablePen Pen { get; set; }
 ```
 
-Value: The pen.
+#### Value
+
+The pen.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-85f87baaf7"></span>
 
-### PenOffset
+### PenOffset Property
 
 Gets or sets the pen offset.
 
 ```csharp
-public Double PenOffset { get; set; }
+public double PenOffset { get; set; }
 ```
 
-Value: The pen offset.
+#### Value
+
+The pen offset.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-762696e494"></span>
 
-### PenOffsetUnit
+### PenOffsetUnit Property
 
 Gets the units in which the [Avalonia.Media.Immutable.ImmutableTextDecoration.PenOffset](xref:Avalonia.Media.Immutable.ImmutableTextDecoration.PenOffset) value is expressed.
 
@@ -127,15 +171,21 @@ Gets the units in which the [Avalonia.Media.Immutable.ImmutableTextDecoration.Pe
 public Avalonia.Media.TextDecorationUnit PenOffsetUnit { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-f114ef4f6f"></span>
 
-### PenThicknessUnit
+### PenThicknessUnit Property
 
 Gets the units in which the Thickness of the text decoration's [Avalonia.Media.Immutable.ImmutableTextDecoration.Pen](xref:Avalonia.Media.Immutable.ImmutableTextDecoration.Pen) is expressed.
 
 ```csharp
 public Avalonia.Media.TextDecorationUnit PenThicknessUnit { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

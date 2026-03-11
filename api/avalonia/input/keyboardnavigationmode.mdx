@@ -64,11 +64,13 @@ public enum KeyboardNavigationMode
 | [Cycle](#uid-8757cd7e4d) | Items in the container will be cycled through, and moving past the first or last control in the container will cause the last/first control to be focused. |
 | [Local](#uid-2d315d6a53) | TabIndexes are considered on local subtree only inside this container |
 | [None](#uid-83fe490d69) | The container's children will not be focused when using the tab key. |
-| [Once](#uid-ad2ca3a82f) | When focus is moved into the container, the control described by the Avalonia.Input.KeyboardNavigation.TabOnceActiveElementProperty attached property on the container will be focused. When focus moves away from this control, focus will move to the previous/next container. |
+| [Once](#uid-ad2ca3a82f) | When focus is moved into the container, the control described by the [Avalonia.Input.KeyboardNavigation.TabOnceActiveElementProperty](xref:Avalonia.Input.KeyboardNavigation.TabOnceActiveElementProperty) attached property on the container will be focused. When focus moves away from this control, focus will move to the previous/next container. |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-973ec485e6"></span>
 
-### Contained
+### Contained Field
 
 Items in the container will be cycled through and focus will stop moving when the edge
 of the container is reached.
@@ -77,9 +79,13 @@ of the container is reached.
 public Avalonia.Input.KeyboardNavigationMode Contained
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-950779fc45"></span>
 
-### Continue
+### Continue Field
 
 Items in the container will be cycled through, and focus will be moved to the
 previous/next container after the first/last control in the container.
@@ -88,9 +94,13 @@ previous/next container after the first/last control in the container.
 public Avalonia.Input.KeyboardNavigationMode Continue
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-8757cd7e4d"></span>
 
-### Cycle
+### Cycle Field
 
 Items in the container will be cycled through, and moving past the first or last
 control in the container will cause the last/first control to be focused.
@@ -99,9 +109,13 @@ control in the container will cause the last/first control to be focused.
 public Avalonia.Input.KeyboardNavigationMode Cycle
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-2d315d6a53"></span>
 
-### Local
+### Local Field
 
 TabIndexes are considered on local subtree only inside this container
 
@@ -109,9 +123,13 @@ TabIndexes are considered on local subtree only inside this container
 public Avalonia.Input.KeyboardNavigationMode Local
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-83fe490d69"></span>
 
-### None
+### None Field
 
 The container's children will not be focused when using the tab key.
 
@@ -119,9 +137,13 @@ The container's children will not be focused when using the tab key.
 public Avalonia.Input.KeyboardNavigationMode None
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-ad2ca3a82f"></span>
 
-### Once
+### Once Field
 
 When focus is moved into the container, the control described by the
 [Avalonia.Input.KeyboardNavigation.TabOnceActiveElementProperty](xref:Avalonia.Input.KeyboardNavigation.TabOnceActiveElementProperty) attached property on the
@@ -131,6 +153,8 @@ the previous/next container.
 ```csharp
 public Avalonia.Input.KeyboardNavigationMode Once
 ```
+
+</section>
 
 </ApiRefPage>
 

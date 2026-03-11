@@ -53,7 +53,7 @@ public class Pen
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> Pen
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> Pen
 </div>
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Implements:</span> <a href="ipen">IPen</a>, ICompositionRenderResource, ICompositionRenderResource&lt;IPen&gt;, ICompositorSerializable
@@ -64,15 +64,17 @@ public class Pen
 
 | Name | Description |
 | --- | --- |
-| [Pen (3 overloads)](#uid-54336c6365) | Initializes a new instance of the Avalonia.Media.Pen class. |
+| [Pen (3 overloads)](#uid-54336c6365) | Initializes a new instance of the [Avalonia.Media.Pen](xref:Avalonia.Media.Pen) class. |
 
 <span id="uid-54336c6365"></span>
 
 ### Pen overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-940183acc6"></span>
 
-#### Pen
+#### Pen Constructor
 
 Initializes a new instance of the [Avalonia.Media.Pen](xref:Avalonia.Media.Pen) class.
 
@@ -80,66 +82,124 @@ Initializes a new instance of the [Avalonia.Media.Pen](xref:Avalonia.Media.Pen) 
 public Pen()
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-a6fc350d89"></span>
 
-#### Pen
+#### Pen Constructor
 
 Initializes a new instance of the [Avalonia.Media.Pen](xref:Avalonia.Media.Pen) class.
 
 ```csharp
-public Pen(Avalonia.Media.IBrush brush, Double thickness, Avalonia.Media.IDashStyle dashStyle, Avalonia.Media.PenLineCap lineCap, Avalonia.Media.PenLineJoin lineJoin, Double miterLimit)
+public Pen(Avalonia.Media.IBrush brush, double thickness, Avalonia.Media.IDashStyle dashStyle, Avalonia.Media.PenLineCap lineCap, Avalonia.Media.PenLineJoin lineJoin, double miterLimit)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `brush` | The brush used to draw. |
-| `dashStyle` | The dash style. |
-| `lineCap` | The line cap. |
-| `lineJoin` | The line join. |
-| `miterLimit` | The miter limit. |
-| `thickness` | The stroke thickness. |
+##### Parameters
+
+`brush` [Avalonia.Media.IBrush](xref:Avalonia.Media.IBrush)
+
+The brush used to draw.
+
+
+`thickness` double
+
+The stroke thickness.
+
+
+`dashStyle` [Avalonia.Media.IDashStyle](xref:Avalonia.Media.IDashStyle)
+
+The dash style.
+
+
+`lineCap` [Avalonia.Media.PenLineCap](xref:Avalonia.Media.PenLineCap)
+
+The line cap.
+
+
+`lineJoin` [Avalonia.Media.PenLineJoin](xref:Avalonia.Media.PenLineJoin)
+
+The line join.
+
+
+`miterLimit` double
+
+The miter limit.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-81755864a4"></span>
 
-#### Pen
+#### Pen Constructor
 
 Initializes a new instance of the [Avalonia.Media.Pen](xref:Avalonia.Media.Pen) class.
 
 ```csharp
-public Pen(UInt32 color, Double thickness, Avalonia.Media.IDashStyle dashStyle, Avalonia.Media.PenLineCap lineCap, Avalonia.Media.PenLineJoin lineJoin, Double miterLimit)
+public Pen(uint color, double thickness, Avalonia.Media.IDashStyle dashStyle, Avalonia.Media.PenLineCap lineCap, Avalonia.Media.PenLineJoin lineJoin, double miterLimit)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `color` | The stroke color. |
-| `dashStyle` | The dash style. |
-| `lineCap` | Specifies the type of graphic shape to use on both ends of a line. |
-| `lineJoin` | The line join. |
-| `miterLimit` | The miter limit. |
-| `thickness` | The stroke thickness. |
+##### Parameters
+
+`color` uint
+
+The stroke color.
+
+
+`thickness` double
+
+The stroke thickness.
+
+
+`dashStyle` [Avalonia.Media.IDashStyle](xref:Avalonia.Media.IDashStyle)
+
+The dash style.
+
+
+`lineCap` [Avalonia.Media.PenLineCap](xref:Avalonia.Media.PenLineCap)
+
+Specifies the type of graphic shape to use on both ends of a line.
+
+
+`lineJoin` [Avalonia.Media.PenLineJoin](xref:Avalonia.Media.PenLineJoin)
+
+The line join.
+
+
+`miterLimit` double
+
+The miter limit.
+
+
+</section>
 
 ## Methods
 
 | Name | Description |
 | --- | --- |
 | [ToImmutable](#uid-ef3aaceb79) | Creates an immutable clone of the brush. |
-| [Bind (8 overloads) (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-1c60c7bda3) | Binds a Avalonia.AvaloniaProperty to an Avalonia.Data.BindingBase. |
-| [CheckAccess (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-260ff7a68d) | Returns a value indicating whether the current thread is the UI thread. |
-| [ClearValue (4 overloads) (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-41de208fbe) | Clears a Avalonia.AvaloniaProperty's local value. |
-| [CoerceValue (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-3bec32f39e) | Coerces the specified Avalonia.AvaloniaProperty. |
-| [Equals (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-a8a8e94305) | Compares two objects using reference equality. |
-| [GetBaseValue (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-9c615efbba) | No summary available. |
-| [GetHashCode (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-7f7db1e7a2) | Gets the hash code for the object. |
-| [GetValue (3 overloads) (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-5142cd4792) | Gets a Avalonia.AvaloniaProperty value. |
-| [IsAnimating (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-8cbfc7521a) | Checks whether a Avalonia.AvaloniaProperty is animating. |
-| [IsSet (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-f8bf0bbdcc) | Checks whether a Avalonia.AvaloniaProperty is set on this object. |
-| [SetCurrentValue (2 overloads) (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-38759fd088) | Sets the value of a dependency property without changing its value source. |
-| [SetValue (3 overloads) (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-47d14e19d7) | Sets a Avalonia.AvaloniaProperty value. |
-| [VerifyAccess (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-3b9d3c9793) | Checks that the current thread is the UI thread and throws if not. |
+| [Bind (8 overloads)](../avaloniaobject.mdx#uid-1c60c7bda3) | Binds a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) to an [Avalonia.Data.BindingBase](xref:Avalonia.Data.BindingBase). Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [CheckAccess](../avaloniaobject.mdx#uid-260ff7a68d) | Returns a value indicating whether the current thread is the UI thread. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [ClearValue (4 overloads)](../avaloniaobject.mdx#uid-41de208fbe) | Clears a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty)'s local value. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [CoerceValue](../avaloniaobject.mdx#uid-3bec32f39e) | Coerces the specified [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty). Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [Equals](../avaloniaobject.mdx#uid-a8a8e94305) | Compares two objects using reference equality. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [GetBaseValue](../avaloniaobject.mdx#uid-9c615efbba) | Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [GetHashCode](../avaloniaobject.mdx#uid-7f7db1e7a2) | Gets the hash code for the object. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [GetValue (3 overloads)](../avaloniaobject.mdx#uid-5142cd4792) | Gets a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [IsAnimating](../avaloniaobject.mdx#uid-8cbfc7521a) | Checks whether a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) is animating. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [IsSet](../avaloniaobject.mdx#uid-f8bf0bbdcc) | Checks whether a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) is set on this object. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [SetCurrentValue (2 overloads)](../avaloniaobject.mdx#uid-38759fd088) | Sets the value of a dependency property without changing its value source. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [SetValue (3 overloads)](../avaloniaobject.mdx#uid-47d14e19d7) | Sets a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [VerifyAccess](../avaloniaobject.mdx#uid-3b9d3c9793) | Checks that the current thread is the UI thread and throws if not. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-ef3aaceb79"></span>
 
-### ToImmutable
+### ToImmutable Method
 
 Creates an immutable clone of the brush.
 
@@ -147,24 +207,33 @@ Creates an immutable clone of the brush.
 public Avalonia.Media.Immutable.ImmutablePen ToImmutable()
 ```
 
-Returns: The immutable clone.
+#### Returns
+
+[Avalonia.Media.Immutable.ImmutablePen](xref:Avalonia.Media.Immutable.ImmutablePen)
+
+The immutable clone.
+
+
+</section>
 
 ## Properties
 
 | Name | Description |
 | --- | --- |
 | [Brush](#uid-7d4f87bb8d) | Gets or sets the brush used to draw the stroke. |
-| [DashStyle](#uid-997f550595) | Gets or sets the style of dashed lines drawn with a Avalonia.Media.Pen object. |
+| [DashStyle](#uid-997f550595) | Gets or sets the style of dashed lines drawn with a [Avalonia.Media.Pen](xref:Avalonia.Media.Pen) object. |
 | [LineCap](#uid-1db7e085d7) | Gets or sets the type of shape to use on both ends of a line. |
-| [LineJoin](#uid-3c535b9132) | Gets or sets the join style for the ends of two consecutive lines drawn with this Avalonia.Media.Pen. |
+| [LineJoin](#uid-3c535b9132) | Gets or sets the join style for the ends of two consecutive lines drawn with this [Avalonia.Media.Pen](xref:Avalonia.Media.Pen). |
 | [MiterLimit](#uid-6774cce551) | Gets or sets the limit of the thickness of the join on a mitered corner. |
 | [Thickness](#uid-3e28960c88) | Gets or sets the stroke thickness. |
-| [Dispatcher (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-b25fa51632) | Returns the Avalonia.AvaloniaObject.Dispatcher that this Avalonia.AvaloniaObject is associated with. |
-| [Item (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-c1d1f1bc0f) | No summary available. |
+| [Dispatcher](../avaloniaobject.mdx#uid-b25fa51632) | Returns the [Avalonia.AvaloniaObject.Dispatcher](xref:Avalonia.AvaloniaObject.Dispatcher) that this [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject) is associated with. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [Item](../avaloniaobject.mdx#uid-c1d1f1bc0f) | Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-7d4f87bb8d"></span>
 
-### Brush
+### Brush Property
 
 Gets or sets the brush used to draw the stroke.
 
@@ -172,9 +241,13 @@ Gets or sets the brush used to draw the stroke.
 public Avalonia.Media.IBrush Brush { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-997f550595"></span>
 
-### DashStyle
+### DashStyle Property
 
 Gets or sets the style of dashed lines drawn with a [Avalonia.Media.Pen](xref:Avalonia.Media.Pen) object.
 
@@ -182,9 +255,13 @@ Gets or sets the style of dashed lines drawn with a [Avalonia.Media.Pen](xref:Av
 public Avalonia.Media.IDashStyle DashStyle { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-1db7e085d7"></span>
 
-### LineCap
+### LineCap Property
 
 Gets or sets the type of shape to use on both ends of a line.
 
@@ -192,9 +269,13 @@ Gets or sets the type of shape to use on both ends of a line.
 public Avalonia.Media.PenLineCap LineCap { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-3c535b9132"></span>
 
-### LineJoin
+### LineJoin Property
 
 Gets or sets the join style for the ends of two consecutive lines drawn with this
 [Avalonia.Media.Pen](xref:Avalonia.Media.Pen).
@@ -203,40 +284,52 @@ Gets or sets the join style for the ends of two consecutive lines drawn with thi
 public Avalonia.Media.PenLineJoin LineJoin { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-6774cce551"></span>
 
-### MiterLimit
+### MiterLimit Property
 
 Gets or sets the limit of the thickness of the join on a mitered corner.
 
 ```csharp
-public Double MiterLimit { get; set; }
+public double MiterLimit { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-3e28960c88"></span>
 
-### Thickness
+### Thickness Property
 
 Gets or sets the stroke thickness.
 
 ```csharp
-public Double Thickness { get; set; }
+public double Thickness { get; set; }
 ```
+
+</section>
 
 ## Fields
 
 | Name | Description |
 | --- | --- |
-| [BrushProperty](#uid-8a5604b95b) | Defines the Avalonia.Media.Pen.Brush property. |
-| [DashStyleProperty](#uid-d266f5ccf3) | Defines the Avalonia.Media.Pen.DashStyle property. |
-| [LineCapProperty](#uid-21998a334e) | Defines the Avalonia.Media.Pen.LineCap property. |
-| [LineJoinProperty](#uid-88ae5331aa) | Defines the Avalonia.Media.Pen.LineJoin property. |
-| [MiterLimitProperty](#uid-a75a366994) | Defines the Avalonia.Media.Pen.MiterLimit property. |
-| [ThicknessProperty](#uid-0e68f24381) | Defines the Avalonia.Media.Pen.Thickness property. |
+| [BrushProperty](#uid-8a5604b95b) | Defines the [Avalonia.Media.Pen.Brush](xref:Avalonia.Media.Pen.Brush) property. |
+| [DashStyleProperty](#uid-d266f5ccf3) | Defines the [Avalonia.Media.Pen.DashStyle](xref:Avalonia.Media.Pen.DashStyle) property. |
+| [LineCapProperty](#uid-21998a334e) | Defines the [Avalonia.Media.Pen.LineCap](xref:Avalonia.Media.Pen.LineCap) property. |
+| [LineJoinProperty](#uid-88ae5331aa) | Defines the [Avalonia.Media.Pen.LineJoin](xref:Avalonia.Media.Pen.LineJoin) property. |
+| [MiterLimitProperty](#uid-a75a366994) | Defines the [Avalonia.Media.Pen.MiterLimit](xref:Avalonia.Media.Pen.MiterLimit) property. |
+| [ThicknessProperty](#uid-0e68f24381) | Defines the [Avalonia.Media.Pen.Thickness](xref:Avalonia.Media.Pen.Thickness) property. |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-8a5604b95b"></span>
 
-### BrushProperty
+### BrushProperty Field
 
 Defines the [Avalonia.Media.Pen.Brush](xref:Avalonia.Media.Pen.Brush) property.
 
@@ -244,9 +337,13 @@ Defines the [Avalonia.Media.Pen.Brush](xref:Avalonia.Media.Pen.Brush) property.
 public Avalonia.StyledProperty<TValue><Avalonia.Media.IBrush> BrushProperty
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-d266f5ccf3"></span>
 
-### DashStyleProperty
+### DashStyleProperty Field
 
 Defines the [Avalonia.Media.Pen.DashStyle](xref:Avalonia.Media.Pen.DashStyle) property.
 
@@ -254,9 +351,13 @@ Defines the [Avalonia.Media.Pen.DashStyle](xref:Avalonia.Media.Pen.DashStyle) pr
 public Avalonia.StyledProperty<TValue><Avalonia.Media.IDashStyle> DashStyleProperty
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-21998a334e"></span>
 
-### LineCapProperty
+### LineCapProperty Field
 
 Defines the [Avalonia.Media.Pen.LineCap](xref:Avalonia.Media.Pen.LineCap) property.
 
@@ -264,9 +365,13 @@ Defines the [Avalonia.Media.Pen.LineCap](xref:Avalonia.Media.Pen.LineCap) proper
 public Avalonia.StyledProperty<TValue><Avalonia.Media.PenLineCap> LineCapProperty
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-88ae5331aa"></span>
 
-### LineJoinProperty
+### LineJoinProperty Field
 
 Defines the [Avalonia.Media.Pen.LineJoin](xref:Avalonia.Media.Pen.LineJoin) property.
 
@@ -274,31 +379,41 @@ Defines the [Avalonia.Media.Pen.LineJoin](xref:Avalonia.Media.Pen.LineJoin) prop
 public Avalonia.StyledProperty<TValue><Avalonia.Media.PenLineJoin> LineJoinProperty
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-a75a366994"></span>
 
-### MiterLimitProperty
+### MiterLimitProperty Field
 
 Defines the [Avalonia.Media.Pen.MiterLimit](xref:Avalonia.Media.Pen.MiterLimit) property.
 
 ```csharp
-public Avalonia.StyledProperty<TValue><Double> MiterLimitProperty
+public Avalonia.StyledProperty<TValue><double> MiterLimitProperty
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-0e68f24381"></span>
 
-### ThicknessProperty
+### ThicknessProperty Field
 
 Defines the [Avalonia.Media.Pen.Thickness](xref:Avalonia.Media.Pen.Thickness) property.
 
 ```csharp
-public Avalonia.StyledProperty<TValue><Double> ThicknessProperty
+public Avalonia.StyledProperty<TValue><double> ThicknessProperty
 ```
+
+</section>
 
 ## Events
 
 | Name | Description |
 | --- | --- |
-| [PropertyChanged (Inherited from AvaloniaObject)](../avaloniaobject.mdx#uid-d758e26fae) | Raised when a Avalonia.AvaloniaProperty value changes on this object. |
+| [PropertyChanged](../avaloniaobject.mdx#uid-d758e26fae) | Raised when a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value changes on this object. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
 
 </ApiRefPage>
 

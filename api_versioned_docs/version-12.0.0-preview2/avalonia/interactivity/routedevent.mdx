@@ -47,7 +47,7 @@ public class RoutedEvent
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> RoutedEvent
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> RoutedEvent
 </div>
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Derived types:</span> <a href="routedevent-1">RoutedEvent&lt;TEventArgs&gt;</a>
@@ -60,13 +60,31 @@ public class RoutedEvent
 | --- | --- |
 | [RoutedEvent](#uid-604ceb1833) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-604ceb1833"></span>
 
-### RoutedEvent
+### RoutedEvent Constructor
 
 ```csharp
-public RoutedEvent(String name, Avalonia.Interactivity.RoutingStrategies routingStrategies, Type eventArgsType, Type ownerType)
+public RoutedEvent(string name, Avalonia.Interactivity.RoutingStrategies routingStrategies, Type eventArgsType, Type ownerType)
 ```
+
+#### Parameters
+
+`name` string
+
+
+`routingStrategies` [Avalonia.Interactivity.RoutingStrategies](xref:Avalonia.Interactivity.RoutingStrategies)
+
+
+`eventArgsType` Type
+
+
+`ownerType` Type
+
+
+</section>
 
 ## Methods
 
@@ -76,41 +94,123 @@ public RoutedEvent(String name, Avalonia.Interactivity.RoutingStrategies routing
 | [Register (2 overloads)](#uid-4633745f66) | No summary available. |
 | [ToString](#uid-091891d52b) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-b6d8630c3e"></span>
 
-### AddClassHandler
+### AddClassHandler Method
 
 ```csharp
-public IDisposable AddClassHandler(Type targetType, EventHandler<Avalonia.Interactivity.RoutedEventArgs> handler, Avalonia.Interactivity.RoutingStrategies routes, Boolean handledEventsToo)
+public IDisposable AddClassHandler(Type targetType, EventHandler<Avalonia.Interactivity.RoutedEventArgs> handler, Avalonia.Interactivity.RoutingStrategies routes, bool handledEventsToo)
 ```
+
+#### Parameters
+
+`targetType` Type
+
+
+`handler` EventHandler&lt;[Avalonia.Interactivity.RoutedEventArgs](xref:Avalonia.Interactivity.RoutedEventArgs)&gt;
+
+
+`routes` [Avalonia.Interactivity.RoutingStrategies](xref:Avalonia.Interactivity.RoutingStrategies)
+
+
+`handledEventsToo` bool
+
+
+#### Returns
+
+IDisposable
+
+
+</section>
 
 <span id="uid-4633745f66"></span>
 
 ### Register overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-09fd5b336e"></span>
 
-#### Register
+#### Register Method
 
 ```csharp
-public Avalonia.Interactivity.RoutedEvent<TEventArgs><TEventArgs> Register<TOwner, TEventArgs>(String name, Avalonia.Interactivity.RoutingStrategies routingStrategy)
+public Avalonia.Interactivity.RoutedEvent<TEventArgs><TEventArgs> Register<TOwner, TEventArgs>(string name, Avalonia.Interactivity.RoutingStrategies routingStrategy)
 ```
+
+##### Parameters
+
+`name` string
+
+
+`routingStrategy` [Avalonia.Interactivity.RoutingStrategies](xref:Avalonia.Interactivity.RoutingStrategies)
+
+
+##### Type Parameters
+
+`TOwner`
+
+
+`TEventArgs`
+
+
+##### Returns
+
+[Avalonia.Interactivity.RoutedEvent](xref:Avalonia.Interactivity.RoutedEvent)&lt;TEventArgs&gt;&lt;TEventArgs&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-38061d7680"></span>
 
-#### Register
+#### Register Method
 
 ```csharp
-public Avalonia.Interactivity.RoutedEvent<TEventArgs><TEventArgs> Register<TEventArgs>(String name, Avalonia.Interactivity.RoutingStrategies routingStrategy, Type ownerType)
+public Avalonia.Interactivity.RoutedEvent<TEventArgs><TEventArgs> Register<TEventArgs>(string name, Avalonia.Interactivity.RoutingStrategies routingStrategy, Type ownerType)
 ```
+
+##### Parameters
+
+`name` string
+
+
+`routingStrategy` [Avalonia.Interactivity.RoutingStrategies](xref:Avalonia.Interactivity.RoutingStrategies)
+
+
+`ownerType` Type
+
+
+##### Type Parameters
+
+`TEventArgs`
+
+
+##### Returns
+
+[Avalonia.Interactivity.RoutedEvent](xref:Avalonia.Interactivity.RoutedEvent)&lt;TEventArgs&gt;&lt;TEventArgs&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-091891d52b"></span>
 
-### ToString
+### ToString Method
 
 ```csharp
-public String ToString()
+public string ToString()
 ```
+
+#### Returns
+
+string
+
+
+</section>
 
 ## Properties
 
@@ -124,61 +224,89 @@ public String ToString()
 | [RouteFinished](#uid-f6e46eddce) | No summary available. |
 | [RoutingStrategies](#uid-e5ef0ca772) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-02254d700b"></span>
 
-### EventArgsType
+### EventArgsType Property
 
 ```csharp
 public Type EventArgsType { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-600aa2a7c4"></span>
 
-### HasRaisedSubscriptions
+### HasRaisedSubscriptions Property
 
 ```csharp
-public Boolean HasRaisedSubscriptions { get; set; }
+public bool HasRaisedSubscriptions { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-c1a91d3f61"></span>
 
-### Name
+### Name Property
 
 ```csharp
-public String Name { get; set; }
+public string Name { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-bea5e282a0"></span>
 
-### OwnerType
+### OwnerType Property
 
 ```csharp
 public Type OwnerType { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-6ca70edd01"></span>
 
-### Raised
+### Raised Property
 
 ```csharp
-public IObservable<ValueTuple<Object,Avalonia.Interactivity.RoutedEventArgs>> Raised { get; set; }
+public IObservable<ValueTuple<object,Avalonia.Interactivity.RoutedEventArgs>> Raised { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-f6e46eddce"></span>
 
-### RouteFinished
+### RouteFinished Property
 
 ```csharp
 public IObservable<Avalonia.Interactivity.RoutedEventArgs> RouteFinished { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-e5ef0ca772"></span>
 
-### RoutingStrategies
+### RoutingStrategies Property
 
 ```csharp
 public Avalonia.Interactivity.RoutingStrategies RoutingStrategies { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

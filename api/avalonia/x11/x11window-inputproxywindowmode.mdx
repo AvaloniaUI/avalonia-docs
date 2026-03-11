@@ -47,7 +47,7 @@ public class X11Window.InputProxyWindowMode
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="x11window-x11windowmode">X11Window.X11WindowMode</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="x11window-defaulttoplevelwindowmode">X11Window.DefaultTopLevelWindowMode</a> <span className="apiref-page__relation-separator">-&gt;</span> X11Window.InputProxyWindowMode
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="x11window-x11windowmode">X11Window.X11WindowMode</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="x11window-defaulttoplevelwindowmode">X11Window.DefaultTopLevelWindowMode</a> <span className="apiref-page__relation-separator">-&gt;</span> X11Window.InputProxyWindowMode
 </div>
 </div>
 
@@ -57,13 +57,17 @@ public class X11Window.InputProxyWindowMode
 | --- | --- |
 | [X11Window.InputProxyWindowMode](#uid-cb2521c042) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-cb2521c042"></span>
 
-### X11Window.InputProxyWindowMode
+### X11Window.InputProxyWindowMode Constructor
 
 ```csharp
 public X11Window.InputProxyWindowMode()
 ```
+
+</section>
 
 ## Methods
 
@@ -73,51 +77,87 @@ public X11Window.InputProxyWindowMode()
 | [OnDestroyNotify](#uid-912c0c74ea) | No summary available. |
 | [OnEvent](#uid-b4f0717ced) | No summary available. |
 | [OnHandleCreated](#uid-a79453cba9) | No summary available. |
-| [Activate (Inherited from X11Window.DefaultTopLevelWindowMode)](x11window-defaulttoplevelwindowmode.mdx#uid-311cf97420) | No summary available. |
-| [Hide (Inherited from X11Window.DefaultTopLevelWindowMode)](x11window-defaulttoplevelwindowmode.mdx#uid-54f43d75f2) | No summary available. |
-| [PointToClient (Inherited from X11Window.DefaultTopLevelWindowMode)](x11window-defaulttoplevelwindowmode.mdx#uid-f5d00c9d4f) | No summary available. |
-| [PointToScreen (Inherited from X11Window.DefaultTopLevelWindowMode)](x11window-defaulttoplevelwindowmode.mdx#uid-48938ce540) | No summary available. |
-| [Show (Inherited from X11Window.DefaultTopLevelWindowMode)](x11window-defaulttoplevelwindowmode.mdx#uid-165e524e9c) | No summary available. |
-| [Init (Inherited from X11Window.X11WindowMode)](x11window-x11windowmode.mdx#uid-b8fdf167b1) | No summary available. |
+| [Activate](x11window-defaulttoplevelwindowmode.mdx#uid-311cf97420) | Inherited from [X11Window.DefaultTopLevelWindowMode](x11window-defaulttoplevelwindowmode.mdx). |
+| [Hide](x11window-defaulttoplevelwindowmode.mdx#uid-54f43d75f2) | Inherited from [X11Window.DefaultTopLevelWindowMode](x11window-defaulttoplevelwindowmode.mdx). |
+| [PointToClient](x11window-defaulttoplevelwindowmode.mdx#uid-f5d00c9d4f) | Inherited from [X11Window.DefaultTopLevelWindowMode](x11window-defaulttoplevelwindowmode.mdx). |
+| [PointToScreen](x11window-defaulttoplevelwindowmode.mdx#uid-48938ce540) | Inherited from [X11Window.DefaultTopLevelWindowMode](x11window-defaulttoplevelwindowmode.mdx). |
+| [Show](x11window-defaulttoplevelwindowmode.mdx#uid-165e524e9c) | Inherited from [X11Window.DefaultTopLevelWindowMode](x11window-defaulttoplevelwindowmode.mdx). |
+| [Init](x11window-x11windowmode.mdx#uid-b8fdf167b1) | Inherited from [X11Window.X11WindowMode](x11window-x11windowmode.mdx). |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-52d8f6dfcf"></span>
 
-### AppendWmProtocols
+### AppendWmProtocols Method
 
 ```csharp
-public Void AppendWmProtocols(System.Collections.Generic.List<IntPtr> data)
+public void AppendWmProtocols(System.Collections.Generic.List<IntPtr> data)
 ```
+
+#### Parameters
+
+`data` System.Collections.Generic.List&lt;IntPtr&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-912c0c74ea"></span>
 
-### OnDestroyNotify
+### OnDestroyNotify Method
 
 ```csharp
-public Void OnDestroyNotify()
+public void OnDestroyNotify()
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-b4f0717ced"></span>
 
-### OnEvent
+### OnEvent Method
 
 ```csharp
-public Boolean OnEvent(Avalonia.X11.XEvent& ev)
+public bool OnEvent(Avalonia.X11.XEvent& ev)
 ```
+
+#### Parameters
+
+`ev` Avalonia.X11.XEvent&amp;
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-a79453cba9"></span>
 
-### OnHandleCreated
+### OnHandleCreated Method
 
 ```csharp
-public Void OnHandleCreated(IntPtr handle)
+public void OnHandleCreated(IntPtr handle)
 ```
+
+#### Parameters
+
+`handle` IntPtr
+
+
+</section>
 
 ## Properties
 
 | Name | Description |
 | --- | --- |
-| [BlockInput (Inherited from X11Window.X11WindowMode)](x11window-x11windowmode.mdx#uid-e3c97029d2) | No summary available. |
-| [Window (Inherited from X11Window.X11WindowMode)](x11window-x11windowmode.mdx#uid-8e8d91a9c5) | No summary available. |
+| [BlockInput](x11window-x11windowmode.mdx#uid-e3c97029d2) | Inherited from [X11Window.X11WindowMode](x11window-x11windowmode.mdx). |
+| [Window](x11window-x11windowmode.mdx#uid-8e8d91a9c5) | Inherited from [X11Window.X11WindowMode](x11window-x11windowmode.mdx). |
 
 </ApiRefPage>
 

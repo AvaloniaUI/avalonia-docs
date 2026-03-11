@@ -56,25 +56,43 @@ public interface IExpandCollapseProvider
 | [Collapse](#uid-d18a9aedda) | Hides all nodes, controls, or content that are descendants of the control. |
 | [Expand](#uid-b9a46f2085) | Displays all child nodes, controls, or content of the control. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-d18a9aedda"></span>
 
-### Collapse
+### Collapse Method
 
 Hides all nodes, controls, or content that are descendants of the control.
 
 ```csharp
-public Void Collapse()
+public void Collapse()
 ```
+
+#### Remarks
+
+- Windows`IExpandCollapseProvider.Collapse`
+- macOS Called by setting `NSAccessibilityProtocol.setAccessibilityExpanded` to false.
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-b9a46f2085"></span>
 
-### Expand
+### Expand Method
 
 Displays all child nodes, controls, or content of the control.
 
 ```csharp
-public Void Expand()
+public void Expand()
 ```
+
+#### Remarks
+
+- Windows`IExpandCollapseProvider.Expand`
+- macOS Called by setting `NSAccessibilityProtocol.setAccessibilityExpanded` to true, by calling `NSAccessibilityProtocol.accessibilityPerformPress`, or by calling `NSAccessibilityProtocol.accessibilityPerformShowMenu` when [Avalonia.Automation.Provider.IExpandCollapseProvider.ShowsMenu](xref:Avalonia.Automation.Provider.IExpandCollapseProvider.ShowsMenu) is true.
+
+</section>
 
 ## Properties
 
@@ -83,9 +101,11 @@ public Void Expand()
 | [ExpandCollapseState](#uid-6a627a6024) | Gets the state, expanded or collapsed, of the control. |
 | [ShowsMenu](#uid-536dc46dde) | Gets a value indicating whether expanding the element shows a menu of items to the user, such as drop-down list. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-6a627a6024"></span>
 
-### ExpandCollapseState
+### ExpandCollapseState Property
 
 Gets the state, expanded or collapsed, of the control.
 
@@ -93,16 +113,35 @@ Gets the state, expanded or collapsed, of the control.
 public Avalonia.Automation.ExpandCollapseState ExpandCollapseState { get; set; }
 ```
 
+#### Remarks
+
+- Windows`IExpandCollapseProvider.ExpandCollapseState`
+- macOS`NSAccessibilityProtocol.isAccessibilityExpanded`
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-536dc46dde"></span>
 
-### ShowsMenu
+### ShowsMenu Property
 
 Gets a value indicating whether expanding the element shows a menu of items to the user,
 such as drop-down list.
 
 ```csharp
-public Boolean ShowsMenu { get; set; }
+public bool ShowsMenu { get; set; }
 ```
+
+#### Remarks
+
+Used in OSX to allow `accessibilityPerformShowMenu` to open expandable controls such as a
+[Avalonia.Controls.ComboBox](xref:Avalonia.Controls.ComboBox); in macOS, a combo box drop-down is considered a menu.
+
+- WindowsNo mapping.
+- macOS When true, `NSAccessibilityProtocol.accessibilityPerformShowMenu` will cause the [Avalonia.Automation.Provider.IExpandCollapseProvider.Expand](xref:Avalonia.Automation.Provider.IExpandCollapseProvider.Expand) method to be triggered.
+
+</section>
 
 </ApiRefPage>
 

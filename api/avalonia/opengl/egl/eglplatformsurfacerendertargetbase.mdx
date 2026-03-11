@@ -47,7 +47,7 @@ public class EglPlatformSurfaceRenderTargetBase
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> EglPlatformSurfaceRenderTargetBase
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> EglPlatformSurfaceRenderTargetBase
 </div>
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Implements:</span> <a href="../surfaces/iglplatformsurfacerendertarget">IGlPlatformSurfaceRenderTarget</a>, <a href="../../platform/surfaces/iplatformrendersurfacerendertarget">IPlatformRenderSurfaceRenderTarget</a>, IDisposable
@@ -62,29 +62,61 @@ public class EglPlatformSurfaceRenderTargetBase
 | [BeginDrawCore](#uid-08cf500f39) | No summary available. |
 | [Dispose](#uid-60731ee6ab) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-59122ff0cb"></span>
 
-### BeginDraw
+### BeginDraw Method
 
 ```csharp
 public Avalonia.OpenGL.Surfaces.IGlPlatformSurfaceRenderingSession BeginDraw(RenderTargetSceneInfo sceneInfo)
 ```
 
+#### Parameters
+
+`sceneInfo` RenderTargetSceneInfo
+
+
+#### Returns
+
+[Avalonia.OpenGL.Surfaces.IGlPlatformSurfaceRenderingSession](xref:Avalonia.OpenGL.Surfaces.IGlPlatformSurfaceRenderingSession)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-08cf500f39"></span>
 
-### BeginDrawCore
+### BeginDrawCore Method
 
 ```csharp
 public Avalonia.OpenGL.Surfaces.IGlPlatformSurfaceRenderingSession BeginDrawCore(RenderTargetSceneInfo sceneInfo)
 ```
 
+#### Parameters
+
+`sceneInfo` RenderTargetSceneInfo
+
+
+#### Returns
+
+[Avalonia.OpenGL.Surfaces.IGlPlatformSurfaceRenderingSession](xref:Avalonia.OpenGL.Surfaces.IGlPlatformSurfaceRenderingSession)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-60731ee6ab"></span>
 
-### Dispose
+### Dispose Method
 
 ```csharp
-public Void Dispose()
+public void Dispose()
 ```
+
+</section>
 
 ## Properties
 
@@ -92,13 +124,17 @@ public Void Dispose()
 | --- | --- |
 | [IsCorrupted](#uid-709c389485) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-709c389485"></span>
 
-### IsCorrupted
+### IsCorrupted Property
 
 ```csharp
-public Boolean IsCorrupted { get; set; }
+public bool IsCorrupted { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

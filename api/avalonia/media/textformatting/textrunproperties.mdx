@@ -39,7 +39,7 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 
 <div className="apiref-page__lead">
 
-Provides a set of properties, such as typeface or foreground brush, that can be applied to a TextRun object. This is an abstract class.
+Provides a set of properties, such as typeface or foreground brush, that can be applied to a [TextRun](xref:Avalonia.Media.TextFormatting.TextRun) object. This is an abstract class.
 
 </div>
 
@@ -53,7 +53,7 @@ public class TextRunProperties
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> TextRunProperties
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> TextRunProperties
 </div>
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Derived types:</span> <a href="generictextrunproperties">GenericTextRunProperties</a>
@@ -79,29 +79,66 @@ This enables the client to implement text run properties in a way that correspon
 
 ### Equals overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-eabf7e9027"></span>
 
-#### Equals
+#### Equals Method
 
 ```csharp
-public Boolean Equals(Avalonia.Media.TextFormatting.TextRunProperties other)
+public bool Equals(Avalonia.Media.TextFormatting.TextRunProperties other)
 ```
+
+##### Parameters
+
+`other` [Avalonia.Media.TextFormatting.TextRunProperties](xref:Avalonia.Media.TextFormatting.TextRunProperties)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-bdf1d6e136"></span>
 
-#### Equals
+#### Equals Method
 
 ```csharp
-public Boolean Equals(Object obj)
+public bool Equals(object obj)
 ```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-d8f145a993"></span>
 
-### GetHashCode
+### GetHashCode Method
 
 ```csharp
-public Int32 GetHashCode()
+public int GetHashCode()
 ```
+
+#### Returns
+
+int
+
+
+</section>
 
 ## Properties
 
@@ -113,12 +150,14 @@ public Int32 GetHashCode()
 | [FontFeatures](#uid-3fc0e30e62) | Optional features of used font. |
 | [FontRenderingEmSize](#uid-b0e03009ed) | Em size of font used to format and display text |
 | [ForegroundBrush](#uid-8d9e648c28) | Brush used to fill text. |
-| [TextDecorations](#uid-f5b89469dc) | Run TextDecorations. |
+| [TextDecorations](#uid-f5b89469dc) | Run [TextDecorations](xref:Avalonia.Media.TextDecorations). |
 | [Typeface](#uid-410ed80435) | Run typeface |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-0a4c37a880"></span>
 
-### BackgroundBrush
+### BackgroundBrush Property
 
 Brush used to paint background of run.
 
@@ -126,9 +165,13 @@ Brush used to paint background of run.
 public Avalonia.Media.IBrush BackgroundBrush { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-7046d8d028"></span>
 
-### BaselineAlignment
+### BaselineAlignment Property
 
 Run vertical box alignment
 
@@ -136,9 +179,13 @@ Run vertical box alignment
 public Avalonia.Media.BaselineAlignment BaselineAlignment { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-3f5b9577a7"></span>
 
-### CultureInfo
+### CultureInfo Property
 
 Run text culture.
 
@@ -146,9 +193,13 @@ Run text culture.
 public System.Globalization.CultureInfo CultureInfo { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-3fc0e30e62"></span>
 
-### FontFeatures
+### FontFeatures Property
 
 Optional features of used font.
 
@@ -156,19 +207,27 @@ Optional features of used font.
 public Avalonia.Media.FontFeatureCollection FontFeatures { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-b0e03009ed"></span>
 
-### FontRenderingEmSize
+### FontRenderingEmSize Property
 
 Em size of font used to format and display text
 
 ```csharp
-public Double FontRenderingEmSize { get; set; }
+public double FontRenderingEmSize { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-8d9e648c28"></span>
 
-### ForegroundBrush
+### ForegroundBrush Property
 
 Brush used to fill text.
 
@@ -176,25 +235,35 @@ Brush used to fill text.
 public Avalonia.Media.IBrush ForegroundBrush { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-f5b89469dc"></span>
 
-### TextDecorations
+### TextDecorations Property
 
-Run TextDecorations.
+Run [TextDecorations](xref:Avalonia.Media.TextDecorations).
 
 ```csharp
 public Avalonia.Media.TextDecorationCollection TextDecorations { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-410ed80435"></span>
 
-### Typeface
+### Typeface Property
 
 Run typeface
 
 ```csharp
 public Avalonia.Media.Typeface Typeface { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

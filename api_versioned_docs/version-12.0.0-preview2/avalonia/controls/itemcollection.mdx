@@ -53,7 +53,7 @@ public class ItemCollection
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="itemssourceview">ItemsSourceView</a> <span className="apiref-page__relation-separator">-&gt;</span> ItemCollection
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="itemssourceview">ItemsSourceView</a> <span className="apiref-page__relation-separator">-&gt;</span> ItemCollection
 </div>
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Implements:</span> ICollection, IEnumerable, IList
@@ -64,109 +64,155 @@ public class ItemCollection
 
 | Name | Description |
 | --- | --- |
-| [Add](#uid-915176b126) | Adds an item to the Avalonia.Controls.ItemsControl. |
+| [Add](#uid-915176b126) | Adds an item to the [Avalonia.Controls.ItemsControl](xref:Avalonia.Controls.ItemsControl). |
 | [Clear](#uid-2b0925e5f9) | Clears the collection and releases the references on all items currently in the collection. |
 | [Insert](#uid-d9349833de) | Inserts an element into the collection at the specified index. |
 | [Remove](#uid-baf4374f06) | Removes the specified item reference from the collection or view. |
 | [RemoveAt](#uid-411eadb120) | Removes the item at the specified index of the collection or view. |
-| [Contains (Inherited from ItemsSourceView)](itemssourceview.mdx#uid-384f51208a) | No summary available. |
-| [GetAt (Inherited from ItemsSourceView)](itemssourceview.mdx#uid-6695c23d5f) | Retrieves the item at the specified index. |
-| [GetEnumerator (Inherited from ItemsSourceView)](itemssourceview.mdx#uid-5163e5545c) | No summary available. |
-| [GetOrCreate (2 overloads) (Inherited from ItemsSourceView)](itemssourceview.mdx#uid-690d93f5ab) | No summary available. |
-| [IndexOf (Inherited from ItemsSourceView)](itemssourceview.mdx#uid-42b8595b39) | No summary available. |
+| [Contains](itemssourceview.mdx#uid-384f51208a) | Inherited from [ItemsSourceView](itemssourceview.mdx). |
+| [GetAt](itemssourceview.mdx#uid-6695c23d5f) | Retrieves the item at the specified index. Inherited from [ItemsSourceView](itemssourceview.mdx). |
+| [GetEnumerator](itemssourceview.mdx#uid-5163e5545c) | Inherited from [ItemsSourceView](itemssourceview.mdx). |
+| [GetOrCreate (2 overloads)](itemssourceview.mdx#uid-690d93f5ab) | Inherited from [ItemsSourceView](itemssourceview.mdx). |
+| [IndexOf](itemssourceview.mdx#uid-42b8595b39) | Inherited from [ItemsSourceView](itemssourceview.mdx). |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-915176b126"></span>
 
-### Add
+### Add Method
 
 Adds an item to the [Avalonia.Controls.ItemsControl](xref:Avalonia.Controls.ItemsControl).
 
 ```csharp
-public Int32 Add(Object value)
+public int Add(object value)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `value` | The item to add to the collection. |
+#### Parameters
 
-Returns: The position into which the new element was inserted, or -1 to indicate that
+`value` object
+
+The item to add to the collection.
+
+
+#### Returns
+
+int
+
+The position into which the new element was inserted, or -1 to indicate that
 the item was not inserted into the collection.
+
 
 #### Exceptions
 
 - [The collection is in ItemsSource mode.](xref:System.InvalidOperationException)
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-2b0925e5f9"></span>
 
-### Clear
+### Clear Method
 
 Clears the collection and releases the references on all items currently in the
 collection.
 
 ```csharp
-public Void Clear()
+public void Clear()
 ```
 
 #### Exceptions
 
 - [The collection is in ItemsSource mode.](xref:System.InvalidOperationException)
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-d9349833de"></span>
 
-### Insert
+### Insert Method
 
 Inserts an element into the collection at the specified index.
 
 ```csharp
-public Void Insert(Int32 index, Object value)
+public void Insert(int index, object value)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `index` | The zero-based index at which to insert the item. |
-| `value` | The item to insert. |
+#### Parameters
+
+`index` int
+
+The zero-based index at which to insert the item.
+
+
+`value` object
+
+The item to insert.
+
 
 #### Exceptions
 
 - [The collection is in ItemsSource mode.](xref:System.InvalidOperationException)
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-baf4374f06"></span>
 
-### Remove
+### Remove Method
 
 Removes the specified item reference from the collection or view.
 
 ```csharp
-public Boolean Remove(Object value)
+public bool Remove(object value)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `value` | The object to remove. |
+#### Parameters
 
-Returns: True if the item was removed; otherwise false.
+`value` object
+
+The object to remove.
+
+
+#### Returns
+
+bool
+
+True if the item was removed; otherwise false.
+
 
 #### Exceptions
 
 - [The collection is in ItemsSource mode.](xref:System.InvalidOperationException)
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-411eadb120"></span>
 
-### RemoveAt
+### RemoveAt Method
 
 Removes the item at the specified index of the collection or view.
 
 ```csharp
-public Void RemoveAt(Int32 index)
+public void RemoveAt(int index)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `index` | The zero-based index of the item to remove. |
+#### Parameters
+
+`index` int
+
+The zero-based index of the item to remove.
+
 
 #### Exceptions
 
 - [The collection is in ItemsSource mode.](xref:System.InvalidOperationException)
+
+</section>
 
 ## Properties
 
@@ -174,31 +220,39 @@ public Void RemoveAt(Int32 index)
 | --- | --- |
 | [IsReadOnly](#uid-78e7f9f89a) | No summary available. |
 | [Item](#uid-1fcf0095ee) | No summary available. |
-| [Count (Inherited from ItemsSourceView)](itemssourceview.mdx#uid-c7dd90d709) | Gets the number of items in the collection. |
-| [Empty (Inherited from ItemsSourceView)](itemssourceview.mdx#uid-4ca040a88a) | Gets an empty Avalonia.Controls.ItemsSourceView |
-| [Source (Inherited from ItemsSourceView)](itemssourceview.mdx#uid-d81337be41) | Gets the source collection. |
+| [Count](itemssourceview.mdx#uid-c7dd90d709) | Gets the number of items in the collection. Inherited from [ItemsSourceView](itemssourceview.mdx). |
+| [Empty](itemssourceview.mdx#uid-4ca040a88a) | Gets an empty [Avalonia.Controls.ItemsSourceView](xref:Avalonia.Controls.ItemsSourceView) Inherited from [ItemsSourceView](itemssourceview.mdx). |
+| [Source](itemssourceview.mdx#uid-d81337be41) | Gets the source collection. Inherited from [ItemsSourceView](itemssourceview.mdx). |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-78e7f9f89a"></span>
 
-### IsReadOnly
+### IsReadOnly Property
 
 ```csharp
-public Boolean IsReadOnly { get; set; }
+public bool IsReadOnly { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-1fcf0095ee"></span>
 
-### Item
+### Item Property
 
 ```csharp
-public Object Item { get; set; }
+public object Item { get; set; }
 ```
+
+</section>
 
 ## Events
 
 | Name | Description |
 | --- | --- |
-| [CollectionChanged (Inherited from ItemsSourceView)](itemssourceview.mdx#uid-13328a2fb4) | Occurs when the collection has changed to indicate the reason for the change and which items changed. |
+| [CollectionChanged](itemssourceview.mdx#uid-13328a2fb4) | Occurs when the collection has changed to indicate the reason for the change and which items changed. Inherited from [ItemsSourceView](itemssourceview.mdx). |
 
 </ApiRefPage>
 

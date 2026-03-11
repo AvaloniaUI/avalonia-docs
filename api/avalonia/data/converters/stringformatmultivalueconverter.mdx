@@ -39,7 +39,7 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 
 <div className="apiref-page__lead">
 
-A multi-value converter which calls [String.Format(String,Object)](xref:System.String.Format%28System.String%2CSystem.Object%29)
+A multi-value converter which calls [string.Format(string,object)](xref:System.String.Format%28System.String%2CSystem.Object%29)
 
 </div>
 
@@ -53,7 +53,7 @@ public class StringFormatMultiValueConverter
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> StringFormatMultiValueConverter
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> StringFormatMultiValueConverter
 </div>
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Implements:</span> <a href="imultivalueconverter">IMultiValueConverter</a>
@@ -64,22 +64,33 @@ public class StringFormatMultiValueConverter
 
 | Name | Description |
 | --- | --- |
-| [StringFormatMultiValueConverter](#uid-a6a2b066bf) | Initializes a new instance of the Avalonia.Data.Converters.StringFormatMultiValueConverter class. |
+| [StringFormatMultiValueConverter](#uid-a6a2b066bf) | Initializes a new instance of the [Avalonia.Data.Converters.StringFormatMultiValueConverter](xref:Avalonia.Data.Converters.StringFormatMultiValueConverter) class. |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-a6a2b066bf"></span>
 
-### StringFormatMultiValueConverter
+### StringFormatMultiValueConverter Constructor
 
 Initializes a new instance of the [Avalonia.Data.Converters.StringFormatMultiValueConverter](xref:Avalonia.Data.Converters.StringFormatMultiValueConverter) class.
 
 ```csharp
-public StringFormatMultiValueConverter(String format, Avalonia.Data.Converters.IMultiValueConverter inner)
+public StringFormatMultiValueConverter(string format, Avalonia.Data.Converters.IMultiValueConverter inner)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `format` | The format string. |
-| `inner` | An optional inner converter to be called before the format takes place. |
+#### Parameters
+
+`format` string
+
+The format string.
+
+
+`inner` [Avalonia.Data.Converters.IMultiValueConverter](xref:Avalonia.Data.Converters.IMultiValueConverter)
+
+An optional inner converter to be called before the format takes place.
+
+
+</section>
 
 ## Methods
 
@@ -87,13 +98,36 @@ public StringFormatMultiValueConverter(String format, Avalonia.Data.Converters.I
 | --- | --- |
 | [Convert](#uid-c2153c3058) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-c2153c3058"></span>
 
-### Convert
+### Convert Method
 
 ```csharp
-public Object Convert(System.Collections.Generic.IList<Object> values, Type targetType, Object parameter, System.Globalization.CultureInfo culture)
+public object Convert(System.Collections.Generic.IList<object> values, Type targetType, object parameter, System.Globalization.CultureInfo culture)
 ```
+
+#### Parameters
+
+`values` System.Collections.Generic.IList&lt;object&gt;
+
+
+`targetType` Type
+
+
+`parameter` object
+
+
+`culture` System.Globalization.CultureInfo
+
+
+#### Returns
+
+object
+
+
+</section>
 
 ## Properties
 
@@ -102,25 +136,33 @@ public Object Convert(System.Collections.Generic.IList<Object> values, Type targ
 | [Format](#uid-d6aeae3bb4) | Gets the format string. |
 | [Inner](#uid-3d5704f24f) | Gets an inner value converter which will be called before the string format takes place. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-d6aeae3bb4"></span>
 
-### Format
+### Format Property
 
 Gets the format string.
 
 ```csharp
-public String Format { get; set; }
+public string Format { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-3d5704f24f"></span>
 
-### Inner
+### Inner Property
 
 Gets an inner value converter which will be called before the string format takes place.
 
 ```csharp
 public Avalonia.Data.Converters.IMultiValueConverter Inner { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

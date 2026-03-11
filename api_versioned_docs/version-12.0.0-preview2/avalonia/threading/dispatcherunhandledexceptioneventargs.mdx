@@ -63,11 +63,13 @@ public class DispatcherUnhandledExceptionEventArgs
 | --- | --- |
 | [Exception](#uid-00d2888ba5) | Gets the exception that was raised when executing code by way of the dispatcher. |
 | [Handled](#uid-1501956bc8) | Gets or sets whether the exception event has been handled. |
-| [Dispatcher (Inherited from DispatcherEventArgs)](dispatchereventargs.mdx#uid-569f2dd50d) | The Dispatcher associated with this event. |
+| [Dispatcher](dispatchereventargs.mdx#uid-569f2dd50d) | The Dispatcher associated with this event. Inherited from [DispatcherEventArgs](dispatchereventargs.mdx). |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-00d2888ba5"></span>
 
-### Exception
+### Exception Property
 
 Gets the exception that was raised when executing code by way of the dispatcher.
 
@@ -75,15 +77,21 @@ Gets the exception that was raised when executing code by way of the dispatcher.
 public Exception Exception { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-1501956bc8"></span>
 
-### Handled
+### Handled Property
 
 Gets or sets whether the exception event has been handled.
 
 ```csharp
-public Boolean Handled { get; set; }
+public bool Handled { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

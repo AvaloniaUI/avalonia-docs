@@ -71,9 +71,11 @@ and stretch characteristics.
 | --- | --- |
 | [FontCollectionKey](#uid-8aa3c2fc18) | Represents a unique key for identifying a font inside a font collection based on style, weight, and stretch attributes. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-8aa3c2fc18"></span>
 
-### FontCollectionKey
+### FontCollectionKey Constructor
 
 Represents a unique key for identifying a font inside a font collection based on style, weight, and stretch attributes.
 
@@ -81,11 +83,29 @@ Represents a unique key for identifying a font inside a font collection based on
 public FontCollectionKey(Avalonia.Media.FontStyle Style, Avalonia.Media.FontWeight Weight, Avalonia.Media.FontStretch Stretch)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `Stretch` | The font stretch to use when constructing the key. |
-| `Style` | The font style to use when constructing the key. |
-| `Weight` | The font weight to use when constructing the key. |
+#### Parameters
+
+`Style` [Avalonia.Media.FontStyle](xref:Avalonia.Media.FontStyle)
+
+The font style to use when constructing the key.
+
+
+`Weight` [Avalonia.Media.FontWeight](xref:Avalonia.Media.FontWeight)
+
+The font weight to use when constructing the key.
+
+
+`Stretch` [Avalonia.Media.FontStretch](xref:Avalonia.Media.FontStretch)
+
+The font stretch to use when constructing the key.
+
+
+#### Remarks
+
+Use this key to efficiently look up or group fonts in a collection by their style, weight,
+and stretch characteristics.
+
+</section>
 
 ## Methods
 
@@ -96,49 +116,110 @@ public FontCollectionKey(Avalonia.Media.FontStyle Style, Avalonia.Media.FontWeig
 | [GetHashCode](#uid-ef090fef6b) | No summary available. |
 | [ToString](#uid-bf73fe1e5b) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-6da6603b7d"></span>
 
-### Deconstruct
+### Deconstruct Method
 
 ```csharp
-public Void Deconstruct(Avalonia.Media.FontStyle& Style, Avalonia.Media.FontWeight& Weight, Avalonia.Media.FontStretch& Stretch)
+public void Deconstruct(Avalonia.Media.FontStyle& Style, Avalonia.Media.FontWeight& Weight, Avalonia.Media.FontStretch& Stretch)
 ```
+
+#### Parameters
+
+`Style` [Avalonia.Media.FontStyle](xref:Avalonia.Media.FontStyle)&amp;
+
+
+`Weight` [Avalonia.Media.FontWeight](xref:Avalonia.Media.FontWeight)&amp;
+
+
+`Stretch` [Avalonia.Media.FontStretch](xref:Avalonia.Media.FontStretch)&amp;
+
+
+</section>
 
 <span id="uid-5eef35641f"></span>
 
 ### Equals overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-da18931fce"></span>
 
-#### Equals
+#### Equals Method
 
 ```csharp
-public Boolean Equals(Avalonia.Media.Fonts.FontCollectionKey other)
+public bool Equals(Avalonia.Media.Fonts.FontCollectionKey other)
 ```
+
+##### Parameters
+
+`other` [Avalonia.Media.Fonts.FontCollectionKey](xref:Avalonia.Media.Fonts.FontCollectionKey)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-027fc3c698"></span>
 
-#### Equals
+#### Equals Method
 
 ```csharp
-public Boolean Equals(Object obj)
+public bool Equals(object obj)
 ```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-ef090fef6b"></span>
 
-### GetHashCode
+### GetHashCode Method
 
 ```csharp
-public Int32 GetHashCode()
+public int GetHashCode()
 ```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-bf73fe1e5b"></span>
 
-### ToString
+### ToString Method
 
 ```csharp
-public String ToString()
+public string ToString()
 ```
+
+#### Returns
+
+string
+
+
+</section>
 
 ## Properties
 
@@ -148,9 +229,11 @@ public String ToString()
 | [Style](#uid-1a4b15a03d) | The font style to use when constructing the key. |
 | [Weight](#uid-ba0993b4b9) | The font weight to use when constructing the key. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-95bc1ff64e"></span>
 
-### Stretch
+### Stretch Property
 
 The font stretch to use when constructing the key.
 
@@ -158,9 +241,13 @@ The font stretch to use when constructing the key.
 public Avalonia.Media.FontStretch Stretch { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-1a4b15a03d"></span>
 
-### Style
+### Style Property
 
 The font style to use when constructing the key.
 
@@ -168,15 +255,21 @@ The font style to use when constructing the key.
 public Avalonia.Media.FontStyle Style { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-ba0993b4b9"></span>
 
-### Weight
+### Weight Property
 
 The font weight to use when constructing the key.
 
 ```csharp
 public Avalonia.Media.FontWeight Weight { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

@@ -53,7 +53,7 @@ public class FlatColorPalette
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> FlatColorPalette
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> FlatColorPalette
 </div>
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Implements:</span> <a href="icolorpalette">IColorPalette</a>
@@ -75,13 +75,17 @@ The GitHub project is licensed as MIT: https://github.com/designmodo/Flat-UI.
 | --- | --- |
 | [FlatColorPalette](#uid-318b3d5312) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-318b3d5312"></span>
 
-### FlatColorPalette
+### FlatColorPalette Constructor
 
 ```csharp
 public FlatColorPalette()
 ```
+
+</section>
 
 ## Methods
 
@@ -89,24 +93,40 @@ public FlatColorPalette()
 | --- | --- |
 | [GetColor](#uid-cc21f2bce4) | Gets a color in the palette by index. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-cc21f2bce4"></span>
 
-### GetColor
+### GetColor Method
 
 Gets a color in the palette by index.
 
 ```csharp
-public Avalonia.Media.Color GetColor(Int32 colorIndex, Int32 shadeIndex)
+public Avalonia.Media.Color GetColor(int colorIndex, int shadeIndex)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `colorIndex` | The index of the color in the palette.
-The index must be between zero and [Avalonia.Controls.IColorPalette.ColorCount](xref:Avalonia.Controls.IColorPalette.ColorCount). |
-| `shadeIndex` | The index of the color shade in the palette.
-The index must be between zero and [Avalonia.Controls.IColorPalette.ShadeCount](xref:Avalonia.Controls.IColorPalette.ShadeCount). |
+#### Parameters
 
-Returns: The color at the specified index or an exception.
+`colorIndex` int
+
+The index of the color in the palette.
+The index must be between zero and [Avalonia.Controls.IColorPalette.ColorCount](xref:Avalonia.Controls.IColorPalette.ColorCount).
+
+
+`shadeIndex` int
+
+The index of the color shade in the palette.
+The index must be between zero and [Avalonia.Controls.IColorPalette.ShadeCount](xref:Avalonia.Controls.IColorPalette.ShadeCount).
+
+
+#### Returns
+
+[Avalonia.Media.Color](xref:Avalonia.Media.Color)
+
+The color at the specified index or an exception.
+
+
+</section>
 
 ## Properties
 
@@ -115,27 +135,43 @@ Returns: The color at the specified index or an exception.
 | [ColorCount](#uid-5eac91433e) | Gets the total number of colors in this palette. A color is not necessarily a single value and may be composed of several shades. |
 | [ShadeCount](#uid-b04ed0c81a) | Gets the total number of shades for each color in this palette. Shades are usually a variation of the color lightening or darkening it. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-5eac91433e"></span>
 
-### ColorCount
+### ColorCount Property
 
 Gets the total number of colors in this palette.
 A color is not necessarily a single value and may be composed of several shades.
 
 ```csharp
-public Int32 ColorCount { get; set; }
+public int ColorCount { get; set; }
 ```
+
+#### Remarks
+
+Represents total columns in a table.
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-b04ed0c81a"></span>
 
-### ShadeCount
+### ShadeCount Property
 
 Gets the total number of shades for each color in this palette.
 Shades are usually a variation of the color lightening or darkening it.
 
 ```csharp
-public Int32 ShadeCount { get; set; }
+public int ShadeCount { get; set; }
 ```
+
+#### Remarks
+
+Represents total rows in a table.
+
+</section>
 
 </ApiRefPage>
 

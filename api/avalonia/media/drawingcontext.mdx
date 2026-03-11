@@ -47,7 +47,7 @@ public class DrawingContext
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> DrawingContext
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> DrawingContext
 </div>
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Implements:</span> IDisposable
@@ -76,264 +76,504 @@ public class DrawingContext
 | [PushTextOptions](#uid-15dfd2b97e) | Pushes text options for the drawing context. |
 | [PushTransform](#uid-edfc386ff3) | Pushes a matrix transformation. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-3173939add"></span>
 
-### Custom
+### Custom Method
 
 Draws a custom drawing operation
 
 ```csharp
-public Void Custom(Avalonia.Rendering.SceneGraph.ICustomDrawOperation custom)
+public void Custom(Avalonia.Rendering.SceneGraph.ICustomDrawOperation custom)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `custom` | custom operation |
+#### Parameters
+
+`custom` [Avalonia.Rendering.SceneGraph.ICustomDrawOperation](xref:Avalonia.Rendering.SceneGraph.ICustomDrawOperation)
+
+custom operation
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-7e988cb5bd"></span>
 
-### Dispose
+### Dispose Method
 
 ```csharp
-public Void Dispose()
+public void Dispose()
 ```
+
+</section>
 
 <span id="uid-20f7294bf2"></span>
 
 ### DrawEllipse overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-5b0c858c08"></span>
 
-#### DrawEllipse
+#### DrawEllipse Method
 
 Draws an ellipse with the specified Brush and Pen.
 
 ```csharp
-public Void DrawEllipse(Avalonia.Media.IBrush brush, Avalonia.Media.IPen pen, Avalonia.Point center, Double radiusX, Double radiusY)
+public void DrawEllipse(Avalonia.Media.IBrush brush, Avalonia.Media.IPen pen, Avalonia.Point center, double radiusX, double radiusY)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `brush` | The brush used to fill the ellipse, or `null` for no fill. |
-| `center` | The location of the center of the ellipse. |
-| `pen` | The pen used to stroke the ellipse, or `null` for no stroke. |
-| `radiusX` | The horizontal radius of the ellipse. |
-| `radiusY` | The vertical radius of the ellipse. |
+##### Parameters
+
+`brush` [Avalonia.Media.IBrush](xref:Avalonia.Media.IBrush)
+
+The brush used to fill the ellipse, or `null` for no fill.
+
+
+`pen` [Avalonia.Media.IPen](xref:Avalonia.Media.IPen)
+
+The pen used to stroke the ellipse, or `null` for no stroke.
+
+
+`center` [Avalonia.Point](xref:Avalonia.Point)
+
+The location of the center of the ellipse.
+
+
+`radiusX` double
+
+The horizontal radius of the ellipse.
+
+
+`radiusY` double
+
+The vertical radius of the ellipse.
+
+
+##### Remarks
+
+The brush and the pen can both be null. If the brush is null, then no fill is performed.
+If the pen is null, then no stoke is performed. If both the pen and the brush are null, then the drawing is not visible.
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-07b7ecb1f1"></span>
 
-#### DrawEllipse
+#### DrawEllipse Method
 
 Draws an ellipse with the specified Brush and Pen.
 
 ```csharp
-public Void DrawEllipse(Avalonia.Media.IBrush brush, Avalonia.Media.IPen pen, Avalonia.Rect rect)
+public void DrawEllipse(Avalonia.Media.IBrush brush, Avalonia.Media.IPen pen, Avalonia.Rect rect)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `brush` | The brush used to fill the ellipse, or `null` for no fill. |
-| `pen` | The pen used to stroke the ellipse, or `null` for no stroke. |
-| `rect` | The bounding rect. |
+##### Parameters
+
+`brush` [Avalonia.Media.IBrush](xref:Avalonia.Media.IBrush)
+
+The brush used to fill the ellipse, or `null` for no fill.
+
+
+`pen` [Avalonia.Media.IPen](xref:Avalonia.Media.IPen)
+
+The pen used to stroke the ellipse, or `null` for no stroke.
+
+
+`rect` [Avalonia.Rect](xref:Avalonia.Rect)
+
+The bounding rect.
+
+
+##### Remarks
+
+The brush and the pen can both be null. If the brush is null, then no fill is performed.
+If the pen is null, then no stoke is performed. If both the pen and the brush are null, then the drawing is not visible.
+
+</section>
 
 <span id="uid-e74ce18cb0"></span>
 
 ### DrawGeometry overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-611d7c9d47"></span>
 
-#### DrawGeometry
+#### DrawGeometry Method
 
 Draws a geometry.
 
 ```csharp
-public Void DrawGeometry(Avalonia.Media.IBrush brush, Avalonia.Media.IPen pen, Avalonia.Media.Geometry geometry)
+public void DrawGeometry(Avalonia.Media.IBrush brush, Avalonia.Media.IPen pen, Avalonia.Media.Geometry geometry)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `brush` | The fill brush. |
-| `geometry` | The geometry. |
-| `pen` | The stroke pen. |
+##### Parameters
+
+`brush` [Avalonia.Media.IBrush](xref:Avalonia.Media.IBrush)
+
+The fill brush.
+
+
+`pen` [Avalonia.Media.IPen](xref:Avalonia.Media.IPen)
+
+The stroke pen.
+
+
+`geometry` [Avalonia.Media.Geometry](xref:Avalonia.Media.Geometry)
+
+The geometry.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-a167942851"></span>
 
-#### DrawGeometry
+#### DrawGeometry Method
 
 Draws a geometry.
 
 ```csharp
-public Void DrawGeometry(Avalonia.Media.IBrush brush, Avalonia.Media.IPen pen, Avalonia.Platform.IGeometryImpl geometry)
+public void DrawGeometry(Avalonia.Media.IBrush brush, Avalonia.Media.IPen pen, Avalonia.Platform.IGeometryImpl geometry)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `brush` | The fill brush. |
-| `geometry` | The geometry. |
-| `pen` | The stroke pen. |
+##### Parameters
+
+`brush` [Avalonia.Media.IBrush](xref:Avalonia.Media.IBrush)
+
+The fill brush.
+
+
+`pen` [Avalonia.Media.IPen](xref:Avalonia.Media.IPen)
+
+The stroke pen.
+
+
+`geometry` [Avalonia.Platform.IGeometryImpl](xref:Avalonia.Platform.IGeometryImpl)
+
+The geometry.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-35674e50e5"></span>
 
-### DrawGlyphRun
+### DrawGlyphRun Method
 
 Draws a glyph run.
 
 ```csharp
-public Void DrawGlyphRun(Avalonia.Media.IBrush foreground, Avalonia.Media.GlyphRun glyphRun)
+public void DrawGlyphRun(Avalonia.Media.IBrush foreground, Avalonia.Media.GlyphRun glyphRun)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `foreground` | The foreground brush. |
-| `glyphRun` | The glyph run. |
+#### Parameters
+
+`foreground` [Avalonia.Media.IBrush](xref:Avalonia.Media.IBrush)
+
+The foreground brush.
+
+
+`glyphRun` [Avalonia.Media.GlyphRun](xref:Avalonia.Media.GlyphRun)
+
+The glyph run.
+
+
+</section>
 
 <span id="uid-492fc6db89"></span>
 
 ### DrawImage overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-d01e27530b"></span>
 
-#### DrawImage
+#### DrawImage Method
 
 Draws an image.
 
 ```csharp
-public Void DrawImage(Avalonia.Media.IImage source, Avalonia.Rect rect)
+public void DrawImage(Avalonia.Media.IImage source, Avalonia.Rect rect)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `rect` | The rect in the output to draw to. |
-| `source` | The image. |
+##### Parameters
+
+`source` [Avalonia.Media.IImage](xref:Avalonia.Media.IImage)
+
+The image.
+
+
+`rect` [Avalonia.Rect](xref:Avalonia.Rect)
+
+The rect in the output to draw to.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-64fd40e678"></span>
 
-#### DrawImage
+#### DrawImage Method
 
 Draws an image.
 
 ```csharp
-public Void DrawImage(Avalonia.Media.IImage source, Avalonia.Rect sourceRect, Avalonia.Rect destRect)
+public void DrawImage(Avalonia.Media.IImage source, Avalonia.Rect sourceRect, Avalonia.Rect destRect)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `destRect` | The rect in the output to draw to. |
-| `source` | The image. |
-| `sourceRect` | The rect in the image to draw. |
+##### Parameters
+
+`source` [Avalonia.Media.IImage](xref:Avalonia.Media.IImage)
+
+The image.
+
+
+`sourceRect` [Avalonia.Rect](xref:Avalonia.Rect)
+
+The rect in the image to draw.
+
+
+`destRect` [Avalonia.Rect](xref:Avalonia.Rect)
+
+The rect in the output to draw to.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-d5a6cf0d81"></span>
 
-### DrawLine
+### DrawLine Method
 
 Draws a line.
 
 ```csharp
-public Void DrawLine(Avalonia.Media.IPen pen, Avalonia.Point p1, Avalonia.Point p2)
+public void DrawLine(Avalonia.Media.IPen pen, Avalonia.Point p1, Avalonia.Point p2)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `p1` | The first point of the line. |
-| `p2` | The second point of the line. |
-| `pen` | The stroke pen. |
+#### Parameters
+
+`pen` [Avalonia.Media.IPen](xref:Avalonia.Media.IPen)
+
+The stroke pen.
+
+
+`p1` [Avalonia.Point](xref:Avalonia.Point)
+
+The first point of the line.
+
+
+`p2` [Avalonia.Point](xref:Avalonia.Point)
+
+The second point of the line.
+
+
+</section>
 
 <span id="uid-d05ce290ae"></span>
 
 ### DrawRectangle overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-2f7e2ec4f0"></span>
 
-#### DrawRectangle
+#### DrawRectangle Method
 
 Draws a rectangle with the specified Brush and Pen.
 
 ```csharp
-public Void DrawRectangle(Avalonia.Media.IBrush brush, Avalonia.Media.IPen pen, Avalonia.Rect rect, Double radiusX, Double radiusY, Avalonia.Media.BoxShadows boxShadows)
+public void DrawRectangle(Avalonia.Media.IBrush brush, Avalonia.Media.IPen pen, Avalonia.Rect rect, double radiusX, double radiusY, Avalonia.Media.BoxShadows boxShadows)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `boxShadows` | Box shadow effect parameters |
-| `brush` | The brush used to fill the rectangle, or `null` for no fill. |
-| `pen` | The pen used to stroke the rectangle, or `null` for no stroke. |
-| `radiusX` | The radius in the X dimension of the rounded corners.
-This value will be clamped to the range of 0 to Width/2 |
-| `radiusY` | The radius in the Y dimension of the rounded corners.
-This value will be clamped to the range of 0 to Height/2 |
-| `rect` | The rectangle bounds. |
+##### Parameters
+
+`brush` [Avalonia.Media.IBrush](xref:Avalonia.Media.IBrush)
+
+The brush used to fill the rectangle, or `null` for no fill.
+
+
+`pen` [Avalonia.Media.IPen](xref:Avalonia.Media.IPen)
+
+The pen used to stroke the rectangle, or `null` for no stroke.
+
+
+`rect` [Avalonia.Rect](xref:Avalonia.Rect)
+
+The rectangle bounds.
+
+
+`radiusX` double
+
+The radius in the X dimension of the rounded corners.
+This value will be clamped to the range of 0 to Width/2
+
+
+`radiusY` double
+
+The radius in the Y dimension of the rounded corners.
+This value will be clamped to the range of 0 to Height/2
+
+
+`boxShadows` [Avalonia.Media.BoxShadows](xref:Avalonia.Media.BoxShadows)
+
+Box shadow effect parameters
+
+
+##### Remarks
+
+The brush and the pen can both be null. If the brush is null, then no fill is performed.
+If the pen is null, then no stroke is performed. If both the pen and the brush are null, then the drawing is not visible.
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-88be8c286a"></span>
 
-#### DrawRectangle
+#### DrawRectangle Method
 
 Draws a rectangle with the specified Brush and Pen.
 
 ```csharp
-public Void DrawRectangle(Avalonia.Media.IBrush brush, Avalonia.Media.IPen pen, Avalonia.RoundedRect rrect, Avalonia.Media.BoxShadows boxShadows)
+public void DrawRectangle(Avalonia.Media.IBrush brush, Avalonia.Media.IPen pen, Avalonia.RoundedRect rrect, Avalonia.Media.BoxShadows boxShadows)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `boxShadows` | Box shadow effect parameters |
-| `brush` | The brush used to fill the rectangle, or `null` for no fill. |
-| `pen` | The pen used to stroke the rectangle, or `null` for no stroke. |
-| `rrect` | The rectangle bounds. |
+##### Parameters
+
+`brush` [Avalonia.Media.IBrush](xref:Avalonia.Media.IBrush)
+
+The brush used to fill the rectangle, or `null` for no fill.
+
+
+`pen` [Avalonia.Media.IPen](xref:Avalonia.Media.IPen)
+
+The pen used to stroke the rectangle, or `null` for no stroke.
+
+
+`rrect` [Avalonia.RoundedRect](xref:Avalonia.RoundedRect)
+
+The rectangle bounds.
+
+
+`boxShadows` [Avalonia.Media.BoxShadows](xref:Avalonia.Media.BoxShadows)
+
+Box shadow effect parameters
+
+
+##### Remarks
+
+The brush and the pen can both be null. If the brush is null, then no fill is performed.
+If the pen is null, then no stoke is performed. If both the pen and the brush are null, then the drawing is not visible.
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-2f5ac732d5"></span>
 
-#### DrawRectangle
+#### DrawRectangle Method
 
 Draws the outline of a rectangle.
 
 ```csharp
-public Void DrawRectangle(Avalonia.Media.IPen pen, Avalonia.Rect rect, Single cornerRadius)
+public void DrawRectangle(Avalonia.Media.IPen pen, Avalonia.Rect rect, float cornerRadius)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `cornerRadius` | The corner radius. |
-| `pen` | The pen. |
-| `rect` | The rectangle bounds. |
+##### Parameters
+
+`pen` [Avalonia.Media.IPen](xref:Avalonia.Media.IPen)
+
+The pen.
+
+
+`rect` [Avalonia.Rect](xref:Avalonia.Rect)
+
+The rectangle bounds.
+
+
+`cornerRadius` float
+
+The corner radius.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-9bbf20a539"></span>
 
-### DrawText
+### DrawText Method
 
 Draws text.
 
 ```csharp
-public Void DrawText(Avalonia.Media.FormattedText text, Avalonia.Point origin)
+public void DrawText(Avalonia.Media.FormattedText text, Avalonia.Point origin)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `origin` | The upper-left corner of the text. |
-| `text` | The text. |
+#### Parameters
+
+`text` [Avalonia.Media.FormattedText](xref:Avalonia.Media.FormattedText)
+
+The text.
+
+
+`origin` [Avalonia.Point](xref:Avalonia.Point)
+
+The upper-left corner of the text.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-3a2836cb4a"></span>
 
-### FillRectangle
+### FillRectangle Method
 
 Draws a filled rectangle.
 
 ```csharp
-public Void FillRectangle(Avalonia.Media.IBrush brush, Avalonia.Rect rect, Single cornerRadius)
+public void FillRectangle(Avalonia.Media.IBrush brush, Avalonia.Rect rect, float cornerRadius)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `brush` | The brush. |
-| `cornerRadius` | The corner radius. |
-| `rect` | The rectangle bounds. |
+#### Parameters
+
+`brush` [Avalonia.Media.IBrush](xref:Avalonia.Media.IBrush)
+
+The brush.
+
+
+`rect` [Avalonia.Rect](xref:Avalonia.Rect)
+
+The rectangle bounds.
+
+
+`cornerRadius` float
+
+The corner radius.
+
+
+</section>
 
 <span id="uid-581bbdf395"></span>
 
 ### PushClip overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-71d8196fcd"></span>
 
-#### PushClip
+#### PushClip Method
 
 Pushes a clip rectangle.
 
@@ -341,15 +581,27 @@ Pushes a clip rectangle.
 public Avalonia.Media.DrawingContext.PushedState PushClip(Avalonia.Rect clip)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `clip` | The clip rectangle. |
+##### Parameters
 
-Returns: A disposable used to undo the clip rectangle.
+`clip` [Avalonia.Rect](xref:Avalonia.Rect)
+
+The clip rectangle.
+
+
+##### Returns
+
+[Avalonia.Media.DrawingContext.PushedState](xref:Avalonia.Media.DrawingContext.PushedState)
+
+A disposable used to undo the clip rectangle.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-0481ebc19b"></span>
 
-#### PushClip
+#### PushClip Method
 
 Pushes a clip rectangle.
 
@@ -357,15 +609,27 @@ Pushes a clip rectangle.
 public Avalonia.Media.DrawingContext.PushedState PushClip(Avalonia.RoundedRect clip)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `clip` | The clip rectangle. |
+##### Parameters
 
-Returns: A disposable used to undo the clip rectangle.
+`clip` [Avalonia.RoundedRect](xref:Avalonia.RoundedRect)
+
+The clip rectangle.
+
+
+##### Returns
+
+[Avalonia.Media.DrawingContext.PushedState](xref:Avalonia.Media.DrawingContext.PushedState)
+
+A disposable used to undo the clip rectangle.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-54c8cd9487"></span>
 
-### PushGeometryClip
+### PushGeometryClip Method
 
 Pushes a clip geometry.
 
@@ -373,31 +637,55 @@ Pushes a clip geometry.
 public Avalonia.Media.DrawingContext.PushedState PushGeometryClip(Avalonia.Media.Geometry clip)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `clip` | The clip geometry. |
+#### Parameters
 
-Returns: A disposable used to undo the clip geometry.
+`clip` [Avalonia.Media.Geometry](xref:Avalonia.Media.Geometry)
+
+The clip geometry.
+
+
+#### Returns
+
+[Avalonia.Media.DrawingContext.PushedState](xref:Avalonia.Media.DrawingContext.PushedState)
+
+A disposable used to undo the clip geometry.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-b8823fb27f"></span>
 
-### PushOpacity
+### PushOpacity Method
 
 Pushes an opacity value.
 
 ```csharp
-public Avalonia.Media.DrawingContext.PushedState PushOpacity(Double opacity)
+public Avalonia.Media.DrawingContext.PushedState PushOpacity(double opacity)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `opacity` | The opacity. |
+#### Parameters
 
-Returns: A disposable used to undo the opacity.
+`opacity` double
+
+The opacity.
+
+
+#### Returns
+
+[Avalonia.Media.DrawingContext.PushedState](xref:Avalonia.Media.DrawingContext.PushedState)
+
+A disposable used to undo the opacity.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-f50efb14c4"></span>
 
-### PushOpacityMask
+### PushOpacityMask Method
 
 Pushes an opacity mask.
 
@@ -405,16 +693,32 @@ Pushes an opacity mask.
 public Avalonia.Media.DrawingContext.PushedState PushOpacityMask(Avalonia.Media.IBrush mask, Avalonia.Rect bounds)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `bounds` | The size of the brush's target area. TODO: Are we sure this is needed? |
-| `mask` | The opacity mask. |
+#### Parameters
 
-Returns: A disposable to undo the opacity mask.
+`mask` [Avalonia.Media.IBrush](xref:Avalonia.Media.IBrush)
+
+The opacity mask.
+
+
+`bounds` [Avalonia.Rect](xref:Avalonia.Rect)
+
+The size of the brush's target area. TODO: Are we sure this is needed?
+
+
+#### Returns
+
+[Avalonia.Media.DrawingContext.PushedState](xref:Avalonia.Media.DrawingContext.PushedState)
+
+A disposable to undo the opacity mask.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-8050498062"></span>
 
-### PushRenderOptions
+### PushRenderOptions Method
 
 Pushes render options.
 
@@ -422,15 +726,27 @@ Pushes render options.
 public Avalonia.Media.DrawingContext.PushedState PushRenderOptions(Avalonia.Media.RenderOptions renderOptions)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `renderOptions` | The render options. |
+#### Parameters
 
-Returns: A disposable to undo the render options.
+`renderOptions` [Avalonia.Media.RenderOptions](xref:Avalonia.Media.RenderOptions)
+
+The render options.
+
+
+#### Returns
+
+[Avalonia.Media.DrawingContext.PushedState](xref:Avalonia.Media.DrawingContext.PushedState)
+
+A disposable to undo the render options.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-15dfd2b97e"></span>
 
-### PushTextOptions
+### PushTextOptions Method
 
 Pushes text options for the drawing context.
 
@@ -438,15 +754,27 @@ Pushes text options for the drawing context.
 public Avalonia.Media.DrawingContext.PushedState PushTextOptions(Avalonia.Media.TextOptions textOptions)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `textOptions` | The text options. |
+#### Parameters
 
-Returns: A disposable to undo the text options.
+`textOptions` [Avalonia.Media.TextOptions](xref:Avalonia.Media.TextOptions)
+
+The text options.
+
+
+#### Returns
+
+[Avalonia.Media.DrawingContext.PushedState](xref:Avalonia.Media.DrawingContext.PushedState)
+
+A disposable to undo the text options.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-edfc386ff3"></span>
 
-### PushTransform
+### PushTransform Method
 
 Pushes a matrix transformation.
 
@@ -454,11 +782,21 @@ Pushes a matrix transformation.
 public Avalonia.Media.DrawingContext.PushedState PushTransform(Avalonia.Matrix matrix)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `matrix` | The matrix |
+#### Parameters
 
-Returns: A disposable used to undo the transformation.
+`matrix` [Avalonia.Matrix](xref:Avalonia.Matrix)
+
+The matrix
+
+
+#### Returns
+
+[Avalonia.Media.DrawingContext.PushedState](xref:Avalonia.Media.DrawingContext.PushedState)
+
+A disposable used to undo the transformation.
+
+
+</section>
 
 </ApiRefPage>
 

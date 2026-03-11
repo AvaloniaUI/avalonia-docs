@@ -54,26 +54,42 @@ public interface ICustomKeyboardNavigation
 | --- | --- |
 | [GetNext](#uid-34d7860505) | Gets the next element in the specified navigation direction. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-34d7860505"></span>
 
-### GetNext
+### GetNext Method
 
 Gets the next element in the specified navigation direction.
 
 ```csharp
-public ValueTuple<Boolean, Avalonia.Input.IInputElement> GetNext(Avalonia.Input.IInputElement element, Avalonia.Input.NavigationDirection direction)
+public ValueTuple<bool, Avalonia.Input.IInputElement> GetNext(Avalonia.Input.IInputElement element, Avalonia.Input.NavigationDirection direction)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `direction` | The navigation direction. |
-| `element` | The element being navigated from. |
+#### Parameters
 
-Returns: A tuple consisting of:
+`element` [Avalonia.Input.IInputElement](xref:Avalonia.Input.IInputElement)
+
+The element being navigated from.
+
+
+`direction` [Avalonia.Input.NavigationDirection](xref:Avalonia.Input.NavigationDirection)
+
+The navigation direction.
+
+
+#### Returns
+
+ValueTuple&lt;bool, [Avalonia.Input.IInputElement](xref:Avalonia.Input.IInputElement)&gt;
+
+A tuple consisting of:
 - A boolean indicating whether the request was handled. If false is returned then
 custom navigation will be ignored and default navigation will take place.
 - If handled is true: the next element in the navigation direction, or null if default
 navigation should continue outside the element.
+
+
+</section>
 
 </ApiRefPage>
 

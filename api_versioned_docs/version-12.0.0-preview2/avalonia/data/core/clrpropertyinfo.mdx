@@ -47,7 +47,7 @@ public class ClrPropertyInfo
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> ClrPropertyInfo
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> ClrPropertyInfo
 </div>
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Derived types:</span> <a href="reflectionclrpropertyinfo">ReflectionClrPropertyInfo</a>
@@ -63,13 +63,31 @@ public class ClrPropertyInfo
 | --- | --- |
 | [ClrPropertyInfo](#uid-0a4f73d00a) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-0a4f73d00a"></span>
 
-### ClrPropertyInfo
+### ClrPropertyInfo Constructor
 
 ```csharp
-public ClrPropertyInfo(String name, Func<Object, Object> getter, Action<Object, Object> setter, Type propertyType)
+public ClrPropertyInfo(string name, Func<object, object> getter, Action<object, object> setter, Type propertyType)
 ```
+
+#### Parameters
+
+`name` string
+
+
+`getter` Func&lt;object, object&gt;
+
+
+`setter` Action&lt;object, object&gt;
+
+
+`propertyType` Type
+
+
+</section>
 
 ## Methods
 
@@ -78,21 +96,47 @@ public ClrPropertyInfo(String name, Func<Object, Object> getter, Action<Object, 
 | [Get](#uid-e20b7767be) | No summary available. |
 | [Set](#uid-5d54e72884) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-e20b7767be"></span>
 
-### Get
+### Get Method
 
 ```csharp
-public Object Get(Object target)
+public object Get(object target)
 ```
+
+#### Parameters
+
+`target` object
+
+
+#### Returns
+
+object
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-5d54e72884"></span>
 
-### Set
+### Set Method
 
 ```csharp
-public Void Set(Object target, Object value)
+public void Set(object target, object value)
 ```
+
+#### Parameters
+
+`target` object
+
+
+`value` object
+
+
+</section>
 
 ## Properties
 
@@ -103,37 +147,53 @@ public Void Set(Object target, Object value)
 | [Name](#uid-4ee36b72a5) | No summary available. |
 | [PropertyType](#uid-1fda7227bd) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-5afbf309d8"></span>
 
-### CanGet
+### CanGet Property
 
 ```csharp
-public Boolean CanGet { get; set; }
+public bool CanGet { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-56969184ec"></span>
 
-### CanSet
+### CanSet Property
 
 ```csharp
-public Boolean CanSet { get; set; }
+public bool CanSet { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-4ee36b72a5"></span>
 
-### Name
+### Name Property
 
 ```csharp
-public String Name { get; set; }
+public string Name { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-1fda7227bd"></span>
 
-### PropertyType
+### PropertyType Property
 
 ```csharp
 public Type PropertyType { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

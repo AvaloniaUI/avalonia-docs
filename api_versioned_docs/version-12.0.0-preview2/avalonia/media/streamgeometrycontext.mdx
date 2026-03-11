@@ -53,7 +53,7 @@ public class StreamGeometryContext
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> StreamGeometryContext
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> StreamGeometryContext
 </div>
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Implements:</span> <a href="../platform/igeometrycontext">IGeometryContext</a>, IDisposable
@@ -70,11 +70,13 @@ of [Avalonia.Media.StreamGeometryContext](xref:Avalonia.Media.StreamGeometryCont
 
 | Name | Description |
 | --- | --- |
-| [StreamGeometryContext](#uid-3dc3f4d06a) | Initializes a new instance of the Avalonia.Media.StreamGeometryContext class. |
+| [StreamGeometryContext](#uid-3dc3f4d06a) | Initializes a new instance of the [Avalonia.Media.StreamGeometryContext](xref:Avalonia.Media.StreamGeometryContext) class. |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-3dc3f4d06a"></span>
 
-### StreamGeometryContext
+### StreamGeometryContext Constructor
 
 Initializes a new instance of the [Avalonia.Media.StreamGeometryContext](xref:Avalonia.Media.StreamGeometryContext) class.
 
@@ -82,9 +84,14 @@ Initializes a new instance of the [Avalonia.Media.StreamGeometryContext](xref:Av
 public StreamGeometryContext(Avalonia.Platform.IStreamGeometryContextImpl impl)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `impl` | The platform-specific implementation. |
+#### Parameters
+
+`impl` [Avalonia.Platform.IStreamGeometryContextImpl](xref:Avalonia.Platform.IStreamGeometryContextImpl)
+
+The platform-specific implementation.
+
+
+</section>
 
 ## Methods
 
@@ -94,150 +101,272 @@ public StreamGeometryContext(Avalonia.Platform.IStreamGeometryContextImpl impl)
 | [BeginFigure](#uid-11ae2a0392) | Begins a new figure. |
 | [CubicBezierTo](#uid-4f50e8a6a8) | Draws a Bezier curve to the specified point. |
 | [Dispose](#uid-944781a4ee) | Finishes the drawing session. |
-| [EndFigure](#uid-f3cfbc992f) | Ends the figure started by Avalonia.Platform.IGeometryContext.BeginFigure(Avalonia.Point,Boolean). |
+| [EndFigure](#uid-f3cfbc992f) | Ends the figure started by [Avalonia.Platform.IGeometryContext.BeginFigure(Avalonia.Point,bool)](xref:Avalonia.Platform.IGeometryContext.BeginFigure%28Avalonia.Point%2CSystem.Boolean%29). |
 | [LineTo](#uid-10f817d4ee) | Draws a line to the specified point. |
 | [PreciseArcTo](#uid-06926b62a0) | Draws an arc to the specified point using polylines, quadratic or cubic Bezier curves Significantly more precise when drawing elliptic arcs with extreme width:height ratios. |
 | [QuadraticBezierTo](#uid-d6614fafeb) | Draws a quadratic Bezier curve to the specified point |
 | [SetFillRule](#uid-57a8199e4d) | Sets path's winding rule (default is EvenOdd). You should call this method before any calls to BeginFigure. If you wonder why, ask Direct2D guys about their design decisions. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-be50654767"></span>
 
-### ArcTo
+### ArcTo Method
 
 Draws an arc to the specified point.
 
 ```csharp
-public Void ArcTo(Avalonia.Point point, Avalonia.Size size, Double rotationAngle, Boolean isLargeArc, Avalonia.Media.SweepDirection sweepDirection, Boolean isStroked)
+public void ArcTo(Avalonia.Point point, Avalonia.Size size, double rotationAngle, bool isLargeArc, Avalonia.Media.SweepDirection sweepDirection, bool isStroked)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `isLargeArc` | true to draw the arc greater than 180 degrees; otherwise, false. |
-| `isStroked` | Whether the segment is stroked |
-| `point` | The destination point. |
-| `rotationAngle` | The rotation angle (in radians) of the oval that specifies the curve. |
-| `size` | The radii of an oval whose perimeter is used to draw the angle. |
-| `sweepDirection` | A value that indicates whether the arc is drawn in the Clockwise or Counterclockwise direction. |
+#### Parameters
+
+`point` [Avalonia.Point](xref:Avalonia.Point)
+
+The destination point.
+
+
+`size` [Avalonia.Size](xref:Avalonia.Size)
+
+The radii of an oval whose perimeter is used to draw the angle.
+
+
+`rotationAngle` double
+
+The rotation angle (in radians) of the oval that specifies the curve.
+
+
+`isLargeArc` bool
+
+true to draw the arc greater than 180 degrees; otherwise, false.
+
+
+`sweepDirection` [Avalonia.Media.SweepDirection](xref:Avalonia.Media.SweepDirection)
+
+A value that indicates whether the arc is drawn in the Clockwise or Counterclockwise direction.
+
+
+`isStroked` bool
+
+Whether the segment is stroked
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-11ae2a0392"></span>
 
-### BeginFigure
+### BeginFigure Method
 
 Begins a new figure.
 
 ```csharp
-public Void BeginFigure(Avalonia.Point startPoint, Boolean isFilled)
+public void BeginFigure(Avalonia.Point startPoint, bool isFilled)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `isFilled` | Whether the figure is filled. |
-| `startPoint` | The starting point for the figure. |
+#### Parameters
+
+`startPoint` [Avalonia.Point](xref:Avalonia.Point)
+
+The starting point for the figure.
+
+
+`isFilled` bool
+
+Whether the figure is filled.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-4f50e8a6a8"></span>
 
-### CubicBezierTo
+### CubicBezierTo Method
 
 Draws a Bezier curve to the specified point.
 
 ```csharp
-public Void CubicBezierTo(Avalonia.Point controlPoint1, Avalonia.Point controlPoint2, Avalonia.Point endPoint, Boolean isStroked)
+public void CubicBezierTo(Avalonia.Point controlPoint1, Avalonia.Point controlPoint2, Avalonia.Point endPoint, bool isStroked)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `controlPoint1` | The first control point used to specify the shape of the curve. |
-| `controlPoint2` | The second control point used to specify the shape of the curve. |
-| `endPoint` | The destination point for the end of the curve. |
-| `isStroked` | Whether the segment is stroked |
+#### Parameters
+
+`controlPoint1` [Avalonia.Point](xref:Avalonia.Point)
+
+The first control point used to specify the shape of the curve.
+
+
+`controlPoint2` [Avalonia.Point](xref:Avalonia.Point)
+
+The second control point used to specify the shape of the curve.
+
+
+`endPoint` [Avalonia.Point](xref:Avalonia.Point)
+
+The destination point for the end of the curve.
+
+
+`isStroked` bool
+
+Whether the segment is stroked
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-944781a4ee"></span>
 
-### Dispose
+### Dispose Method
 
 Finishes the drawing session.
 
 ```csharp
-public Void Dispose()
+public void Dispose()
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-f3cfbc992f"></span>
 
-### EndFigure
+### EndFigure Method
 
-Ends the figure started by [Avalonia.Platform.IGeometryContext.BeginFigure(Avalonia.Point,Boolean)](xref:Avalonia.Platform.IGeometryContext.BeginFigure%28Avalonia.Point%2CSystem.Boolean%29).
+Ends the figure started by [Avalonia.Platform.IGeometryContext.BeginFigure(Avalonia.Point,bool)](xref:Avalonia.Platform.IGeometryContext.BeginFigure%28Avalonia.Point%2CSystem.Boolean%29).
 
 ```csharp
-public Void EndFigure(Boolean isClosed)
+public void EndFigure(bool isClosed)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `isClosed` | Whether the figure is closed. |
+#### Parameters
+
+`isClosed` bool
+
+Whether the figure is closed.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-10f817d4ee"></span>
 
-### LineTo
+### LineTo Method
 
 Draws a line to the specified point.
 
 ```csharp
-public Void LineTo(Avalonia.Point point, Boolean isStroked)
+public void LineTo(Avalonia.Point point, bool isStroked)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `isStroked` | Whether the segment is stroked |
-| `point` | The destination point. |
+#### Parameters
+
+`point` [Avalonia.Point](xref:Avalonia.Point)
+
+The destination point.
+
+
+`isStroked` bool
+
+Whether the segment is stroked
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-06926b62a0"></span>
 
-### PreciseArcTo
+### PreciseArcTo Method
 
 Draws an arc to the specified point using polylines, quadratic or cubic Bezier curves
 Significantly more precise when drawing elliptic arcs with extreme width:height ratios.
 
 ```csharp
-public Void PreciseArcTo(Avalonia.Point point, Avalonia.Size size, Double rotationAngle, Boolean isLargeArc, Avalonia.Media.SweepDirection sweepDirection)
+public void PreciseArcTo(Avalonia.Point point, Avalonia.Size size, double rotationAngle, bool isLargeArc, Avalonia.Media.SweepDirection sweepDirection)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `isLargeArc` | true to draw the arc greater than 180 degrees; otherwise, false. |
-| `point` | The destination point. |
-| `rotationAngle` | The rotation angle (in radians) of the oval that specifies the curve. |
-| `size` | The radii of an oval whose perimeter is used to draw the angle. |
-| `sweepDirection` | A value that indicates whether the arc is drawn in the Clockwise or Counterclockwise direction. |
+#### Parameters
+
+`point` [Avalonia.Point](xref:Avalonia.Point)
+
+The destination point.
+
+
+`size` [Avalonia.Size](xref:Avalonia.Size)
+
+The radii of an oval whose perimeter is used to draw the angle.
+
+
+`rotationAngle` double
+
+The rotation angle (in radians) of the oval that specifies the curve.
+
+
+`isLargeArc` bool
+
+true to draw the arc greater than 180 degrees; otherwise, false.
+
+
+`sweepDirection` [Avalonia.Media.SweepDirection](xref:Avalonia.Media.SweepDirection)
+
+A value that indicates whether the arc is drawn in the Clockwise or Counterclockwise direction.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-d6614fafeb"></span>
 
-### QuadraticBezierTo
+### QuadraticBezierTo Method
 
 Draws a quadratic Bezier curve to the specified point
 
 ```csharp
-public Void QuadraticBezierTo(Avalonia.Point controlPoint, Avalonia.Point endPoint, Boolean isStroked)
+public void QuadraticBezierTo(Avalonia.Point controlPoint, Avalonia.Point endPoint, bool isStroked)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `controlPoint` | The control point used to specify the shape of the curve. |
-| `endPoint` | The destination point for the end of the curve. |
-| `isStroked` | Whether the segment is stroked |
+#### Parameters
+
+`controlPoint` [Avalonia.Point](xref:Avalonia.Point)
+
+The control point used to specify the shape of the curve.
+
+
+`endPoint` [Avalonia.Point](xref:Avalonia.Point)
+
+The destination point for the end of the curve.
+
+
+`isStroked` bool
+
+Whether the segment is stroked
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-57a8199e4d"></span>
 
-### SetFillRule
+### SetFillRule Method
 
 Sets path's winding rule (default is EvenOdd). You should call this method before any calls to BeginFigure. If you wonder why, ask Direct2D guys about their design decisions.
 
 ```csharp
-public Void SetFillRule(Avalonia.Media.FillRule fillRule)
+public void SetFillRule(Avalonia.Media.FillRule fillRule)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `fillRule` |  |
+#### Parameters
+
+`fillRule` [Avalonia.Media.FillRule](xref:Avalonia.Media.FillRule)
+
+
+</section>
 
 </ApiRefPage>
 

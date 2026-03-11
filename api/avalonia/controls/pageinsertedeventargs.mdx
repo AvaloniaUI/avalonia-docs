@@ -61,11 +61,13 @@ public class PageInsertedEventArgs
 
 | Name | Description |
 | --- | --- |
-| [PageInsertedEventArgs](#uid-0af6f57b51) | Initializes a new instance of the Avalonia.Controls.PageInsertedEventArgs class. |
+| [PageInsertedEventArgs](#uid-0af6f57b51) | Initializes a new instance of the [Avalonia.Controls.PageInsertedEventArgs](xref:Avalonia.Controls.PageInsertedEventArgs) class. |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-0af6f57b51"></span>
 
-### PageInsertedEventArgs
+### PageInsertedEventArgs Constructor
 
 Initializes a new instance of the [Avalonia.Controls.PageInsertedEventArgs](xref:Avalonia.Controls.PageInsertedEventArgs) class.
 
@@ -73,10 +75,19 @@ Initializes a new instance of the [Avalonia.Controls.PageInsertedEventArgs](xref
 public PageInsertedEventArgs(Avalonia.Controls.Page page, Avalonia.Controls.Page before)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `before` | The page before which the new page was inserted. |
-| `page` | The page that was inserted. |
+#### Parameters
+
+`page` [Avalonia.Controls.Page](xref:Avalonia.Controls.Page)
+
+The page that was inserted.
+
+
+`before` [Avalonia.Controls.Page](xref:Avalonia.Controls.Page)
+
+The page before which the new page was inserted.
+
+
+</section>
 
 ## Properties
 
@@ -85,9 +96,11 @@ public PageInsertedEventArgs(Avalonia.Controls.Page page, Avalonia.Controls.Page
 | [Before](#uid-43f7780c8b) | Gets the page before which the new page was inserted. |
 | [Page](#uid-2ebfdc43b1) | Gets the page that was inserted. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-43f7780c8b"></span>
 
-### Before
+### Before Property
 
 Gets the page before which the new page was inserted.
 
@@ -95,15 +108,21 @@ Gets the page before which the new page was inserted.
 public Avalonia.Controls.Page Before { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-2ebfdc43b1"></span>
 
-### Page
+### Page Property
 
 Gets the page that was inserted.
 
 ```csharp
 public Avalonia.Controls.Page Page { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

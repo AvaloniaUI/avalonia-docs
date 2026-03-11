@@ -47,7 +47,7 @@ public class GlBasicInfoInterface
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> GlBasicInfoInterface
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> GlBasicInfoInterface
 </div>
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Derived types:</span> <a href="glinterface">GlInterface</a>
@@ -60,13 +60,22 @@ public class GlBasicInfoInterface
 | --- | --- |
 | [GlBasicInfoInterface](#uid-3d7135ebed) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-3d7135ebed"></span>
 
-### GlBasicInfoInterface
+### GlBasicInfoInterface Constructor
 
 ```csharp
-public GlBasicInfoInterface(Func<String, IntPtr> getProcAddress)
+public GlBasicInfoInterface(Func<string, IntPtr> getProcAddress)
 ```
+
+#### Parameters
+
+`getProcAddress` Func&lt;string, IntPtr&gt;
+
+
+</section>
 
 ## Methods
 
@@ -80,73 +89,177 @@ public GlBasicInfoInterface(Func<String, IntPtr> getProcAddress)
 | [GetStringNative](#uid-f5216e7f4a) | No summary available. |
 | [GetStringiNative](#uid-3f7c8607ab) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-335a3ecb4a"></span>
 
-### GetError
+### GetError Method
 
 ```csharp
-public Int32 GetError()
+public int GetError()
 ```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-3dc9cf6f1d"></span>
 
-### GetExtensions
+### GetExtensions Method
 
 ```csharp
-public System.Collections.Generic.List<String> GetExtensions()
+public System.Collections.Generic.List<string> GetExtensions()
 ```
+
+#### Returns
+
+System.Collections.Generic.List&lt;string&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-37f2cd2bf2"></span>
 
-### GetFloatv
+### GetFloatv Method
 
 ```csharp
-public Void GetFloatv(Int32 name, Single& rv)
+public void GetFloatv(int name, float& rv)
 ```
+
+#### Parameters
+
+`name` int
+
+
+`rv` float&amp;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-961400b97d"></span>
 
-### GetIntegerv
+### GetIntegerv Method
 
 ```csharp
-public Void GetIntegerv(Int32 name, Int32& rv)
+public void GetIntegerv(int name, int& rv)
 ```
+
+#### Parameters
+
+`name` int
+
+
+`rv` int&amp;
+
+
+</section>
 
 <span id="uid-6438cbf0f4"></span>
 
 ### GetString overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-5fb5c580d0"></span>
 
-#### GetString
+#### GetString Method
 
 ```csharp
-public String GetString(Int32 v)
+public string GetString(int v)
 ```
+
+##### Parameters
+
+`v` int
+
+
+##### Returns
+
+string
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-af86dd6b9e"></span>
 
-#### GetString
+#### GetString Method
 
 ```csharp
-public String GetString(Int32 v, Int32 index)
+public string GetString(int v, int index)
 ```
+
+##### Parameters
+
+`v` int
+
+
+`index` int
+
+
+##### Returns
+
+string
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-f5216e7f4a"></span>
 
-### GetStringNative
+### GetStringNative Method
 
 ```csharp
-public IntPtr GetStringNative(Int32 v)
+public IntPtr GetStringNative(int v)
 ```
+
+#### Parameters
+
+`v` int
+
+
+#### Returns
+
+IntPtr
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-3f7c8607ab"></span>
 
-### GetStringiNative
+### GetStringiNative Method
 
 ```csharp
-public IntPtr GetStringiNative(Int32 v, Int32 v1)
+public IntPtr GetStringiNative(int v, int v1)
 ```
+
+#### Parameters
+
+`v` int
+
+
+`v1` int
+
+
+#### Returns
+
+IntPtr
+
+
+</section>
 
 </ApiRefPage>
 

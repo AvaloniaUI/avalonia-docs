@@ -53,7 +53,7 @@ public class TextParagraphProperties
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> TextParagraphProperties
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> TextParagraphProperties
 </div>
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Derived types:</span> <a href="generictextparagraphproperties">GenericTextParagraphProperties</a>
@@ -74,32 +74,47 @@ public class TextParagraphProperties
 | [LineHeight](#uid-7e134fef3a) | Gets the height of a line of text. |
 | [ParagraphIndent](#uid-a531ba54fe) | Gets the paragraph indentation. |
 | [TextAlignment](#uid-b3ed9316f0) | Gets a value that describes how an inline content of a block is aligned. |
-| [TextDecorations](#uid-2dbf9914a0) | Gets the collection of TextDecoration objects. |
+| [TextDecorations](#uid-2dbf9914a0) | Gets the collection of [TextDecoration](xref:Avalonia.Media.TextDecoration) objects. |
 | [TextWrapping](#uid-fbbc456c79) | Gets a value that controls whether text wraps when it reaches the flow edge of its containing block box. |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-b52acf9a44"></span>
 
-### AlwaysCollapsible
+### AlwaysCollapsible Property
 
 Gets a value that indicates whether a formatted line can always be collapsed.
 
 ```csharp
-public Boolean AlwaysCollapsible { get; set; }
+public bool AlwaysCollapsible { get; set; }
 ```
+
+#### Remarks
+
+If true, the formatted line may always be collapsed. If false (the default),
+only lines that overflow the paragraph width are collapsed.
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-992c73fd19"></span>
 
-### DefaultIncrementalTab
+### DefaultIncrementalTab Property
 
 Gets the default incremental tab width.
 
 ```csharp
-public Double DefaultIncrementalTab { get; set; }
+public double DefaultIncrementalTab { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-87d6646d98"></span>
 
-### DefaultTextRunProperties
+### DefaultTextRunProperties Property
 
 Gets the default text run properties, such as typeface or foreground brush.
 
@@ -107,19 +122,27 @@ Gets the default text run properties, such as typeface or foreground brush.
 public Avalonia.Media.TextFormatting.TextRunProperties DefaultTextRunProperties { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-1b10907fd7"></span>
 
-### FirstLineInParagraph
+### FirstLineInParagraph Property
 
 Gets a value that indicates whether the text run is the first line of the paragraph.
 
 ```csharp
-public Boolean FirstLineInParagraph { get; set; }
+public bool FirstLineInParagraph { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-a5c18817f3"></span>
 
-### FlowDirection
+### FlowDirection Property
 
 Gets a value that specifies whether the primary text advance direction shall be left-to-right, or right-to-left.
 
@@ -127,49 +150,69 @@ Gets a value that specifies whether the primary text advance direction shall be 
 public Avalonia.Media.FlowDirection FlowDirection { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-2a671bad58"></span>
 
-### Indent
+### Indent Property
 
 Gets the amount of line indentation.
 
 ```csharp
-public Double Indent { get; set; }
+public double Indent { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-c4a89292df"></span>
 
-### LetterSpacing
+### LetterSpacing Property
 
 Gets the amount of letter spacing.
 
 ```csharp
-public Double LetterSpacing { get; set; }
+public double LetterSpacing { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-7e134fef3a"></span>
 
-### LineHeight
+### LineHeight Property
 
 Gets the height of a line of text.
 
 ```csharp
-public Double LineHeight { get; set; }
+public double LineHeight { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-a531ba54fe"></span>
 
-### ParagraphIndent
+### ParagraphIndent Property
 
 Gets the paragraph indentation.
 
 ```csharp
-public Double ParagraphIndent { get; set; }
+public double ParagraphIndent { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-b3ed9316f0"></span>
 
-### TextAlignment
+### TextAlignment Property
 
 Gets a value that describes how an inline content of a block is aligned.
 
@@ -177,25 +220,40 @@ Gets a value that describes how an inline content of a block is aligned.
 public Avalonia.Media.TextAlignment TextAlignment { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-2dbf9914a0"></span>
 
-### TextDecorations
+### TextDecorations Property
 
-Gets the collection of TextDecoration objects.
+Gets the collection of [TextDecoration](xref:Avalonia.Media.TextDecoration) objects.
 
 ```csharp
 public Avalonia.Media.TextDecorationCollection TextDecorations { get; set; }
 ```
 
+#### Remarks
+
+If not null, text decorations to apply to all runs in the line. This is in addition
+to any text decorations specified by the [TextRunProperties](xref:Avalonia.Media.TextFormatting.TextRunProperties) for individual text runs.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-fbbc456c79"></span>
 
-### TextWrapping
+### TextWrapping Property
 
 Gets a value that controls whether text wraps when it reaches the flow edge of its containing block box.
 
 ```csharp
 public Avalonia.Media.TextWrapping TextWrapping { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

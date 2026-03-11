@@ -55,15 +55,24 @@ public interface IToggleProvider
 | --- | --- |
 | [Toggle](#uid-25c07d8b77) | Cycles through the toggle states of a control. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-25c07d8b77"></span>
 
-### Toggle
+### Toggle Method
 
 Cycles through the toggle states of a control.
 
 ```csharp
-public Void Toggle()
+public void Toggle()
 ```
+
+#### Remarks
+
+- Windows`IToggleProvider.Toggle`
+- macOS`NSAccessibilityProtocol.accessibilityPerformPress`
+
+</section>
 
 ## Properties
 
@@ -71,15 +80,24 @@ public Void Toggle()
 | --- | --- |
 | [ToggleState](#uid-808ed47c14) | Gets the toggle state of the control. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-808ed47c14"></span>
 
-### ToggleState
+### ToggleState Property
 
 Gets the toggle state of the control.
 
 ```csharp
 public Avalonia.Automation.Provider.ToggleState ToggleState { get; set; }
 ```
+
+#### Remarks
+
+- Windows`IToggleProvider.ToggleState`
+- macOS`NSAccessibilityProtocol.accessibilityValue`
+
+</section>
 
 </ApiRefPage>
 

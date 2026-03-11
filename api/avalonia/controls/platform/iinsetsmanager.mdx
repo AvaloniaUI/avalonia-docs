@@ -52,39 +52,53 @@ public interface IInsetsManager
 | [SafeAreaPadding](#uid-52365cf938) | Gets the current safe area padding. |
 | [SystemBarColor](#uid-7b764b53c2) | Gets or sets the color of the platform's system bars |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-494be8d52b"></span>
 
-### DisplayEdgeToEdgePreference
+### DisplayEdgeToEdgePreference Property
 
 Gets or sets whether the window draws edge to edge. behind any visible system bars.
 
 ```csharp
-public Boolean DisplayEdgeToEdgePreference { get; set; }
+public bool DisplayEdgeToEdgePreference { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-814b86cb58"></span>
 
-### DisplaysEdgeToEdge
+### DisplaysEdgeToEdge Property
 
 Gets whether the window is currently displaying edge to edge.
 
 ```csharp
-public Boolean DisplaysEdgeToEdge { get; set; }
+public bool DisplaysEdgeToEdge { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-22c6a0cba3"></span>
 
-### IsSystemBarVisible
+### IsSystemBarVisible Property
 
 Gets or sets whether the system bars are visible.
 
 ```csharp
-public Nullable<Boolean> IsSystemBarVisible { get; set; }
+public Nullable<bool> IsSystemBarVisible { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-52365cf938"></span>
 
-### SafeAreaPadding
+### SafeAreaPadding Property
 
 Gets the current safe area padding.
 
@@ -92,9 +106,13 @@ Gets the current safe area padding.
 public Avalonia.Thickness SafeAreaPadding { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-7b764b53c2"></span>
 
-### SystemBarColor
+### SystemBarColor Property
 
 Gets or sets the color of the platform's system bars
 
@@ -102,21 +120,27 @@ Gets or sets the color of the platform's system bars
 public Nullable<Avalonia.Media.Color> SystemBarColor { get; set; }
 ```
 
+</section>
+
 ## Events
 
 | Name | Description |
 | --- | --- |
 | [SafeAreaChanged](#uid-5a8d663a00) | Occurs when safe area for the current window changes. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-5a8d663a00"></span>
 
-### SafeAreaChanged
+### SafeAreaChanged Event
 
 Occurs when safe area for the current window changes.
 
 ```csharp
 public event EventHandler<Avalonia.Controls.Platform.SafeAreaChangedArgs> SafeAreaChanged
 ```
+
+</section>
 
 </ApiRefPage>
 

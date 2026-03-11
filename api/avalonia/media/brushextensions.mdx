@@ -53,7 +53,7 @@ public class BrushExtensions
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> BrushExtensions
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> BrushExtensions
 </div>
 </div>
 
@@ -67,9 +67,11 @@ public class BrushExtensions
 
 ### ToImmutable overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-a4c9058c9c"></span>
 
-#### ToImmutable
+#### ToImmutable Method
 
 Converts a brush to an immutable brush.
 
@@ -77,16 +79,28 @@ Converts a brush to an immutable brush.
 public Avalonia.Media.IImmutableBrush ToImmutable(Avalonia.Media.IBrush brush)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `brush` | The brush. |
+##### Parameters
 
-Returns: The result of calling [Avalonia.Media.IMutableBrush.ToImmutable](xref:Avalonia.Media.IMutableBrush.ToImmutable) if the brush is mutable,
+`brush` [Avalonia.Media.IBrush](xref:Avalonia.Media.IBrush)
+
+The brush.
+
+
+##### Returns
+
+[Avalonia.Media.IImmutableBrush](xref:Avalonia.Media.IImmutableBrush)
+
+The result of calling [Avalonia.Media.IMutableBrush.ToImmutable](xref:Avalonia.Media.IMutableBrush.ToImmutable) if the brush is mutable,
 otherwise `brush`.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-5ad0d76970"></span>
 
-#### ToImmutable
+#### ToImmutable Method
 
 Converts a dash style to an immutable dash style.
 
@@ -94,16 +108,28 @@ Converts a dash style to an immutable dash style.
 public Avalonia.Media.Immutable.ImmutableDashStyle ToImmutable(Avalonia.Media.IDashStyle style)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `style` | The dash style. |
+##### Parameters
 
-Returns: The result of calling [Avalonia.Media.DashStyle.ToImmutable](xref:Avalonia.Media.DashStyle.ToImmutable) if the style is mutable,
+`style` [Avalonia.Media.IDashStyle](xref:Avalonia.Media.IDashStyle)
+
+The dash style.
+
+
+##### Returns
+
+[Avalonia.Media.Immutable.ImmutableDashStyle](xref:Avalonia.Media.Immutable.ImmutableDashStyle)
+
+The result of calling [Avalonia.Media.DashStyle.ToImmutable](xref:Avalonia.Media.DashStyle.ToImmutable) if the style is mutable,
 otherwise `style`.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-5fed10d501"></span>
 
-#### ToImmutable
+#### ToImmutable Method
 
 Converts a pen to an immutable pen.
 
@@ -111,12 +137,22 @@ Converts a pen to an immutable pen.
 public Avalonia.Media.Immutable.ImmutablePen ToImmutable(Avalonia.Media.IPen pen)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `pen` | The pen. |
+##### Parameters
 
-Returns: The result of calling [Avalonia.Media.Pen.ToImmutable](xref:Avalonia.Media.Pen.ToImmutable) if the brush is mutable,
+`pen` [Avalonia.Media.IPen](xref:Avalonia.Media.IPen)
+
+The pen.
+
+
+##### Returns
+
+[Avalonia.Media.Immutable.ImmutablePen](xref:Avalonia.Media.Immutable.ImmutablePen)
+
+The result of calling [Avalonia.Media.Pen.ToImmutable](xref:Avalonia.Media.Pen.ToImmutable) if the brush is mutable,
 otherwise `pen`.
+
+
+</section>
 
 </ApiRefPage>
 

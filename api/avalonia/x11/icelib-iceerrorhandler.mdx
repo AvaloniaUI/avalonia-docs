@@ -54,13 +54,25 @@ public delegate ICELib.IceErrorHandler
 | --- | --- |
 | [ICELib.IceErrorHandler](#uid-712b57bb10) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-712b57bb10"></span>
 
-### ICELib.IceErrorHandler
+### ICELib.IceErrorHandler Constructor
 
 ```csharp
-public ICELib.IceErrorHandler(Object object, IntPtr method)
+public ICELib.IceErrorHandler(object object, IntPtr method)
 ```
+
+#### Parameters
+
+`object` object
+
+
+`method` IntPtr
+
+
+</section>
 
 ## Methods
 
@@ -70,29 +82,103 @@ public ICELib.IceErrorHandler(Object object, IntPtr method)
 | [EndInvoke](#uid-34258a1a65) | No summary available. |
 | [Invoke](#uid-a38e07fef8) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-800bf4784a"></span>
 
-### BeginInvoke
+### BeginInvoke Method
 
 ```csharp
-public IAsyncResult BeginInvoke(IntPtr iceConn, Boolean swap, Int32 offendingMinorOpcode, UIntPtr offendingSequence, Int32 errorClass, Int32 severity, IntPtr values, AsyncCallback callback, Object object)
+public IAsyncResult BeginInvoke(IntPtr iceConn, bool swap, int offendingMinorOpcode, UIntPtr offendingSequence, int errorClass, int severity, IntPtr values, AsyncCallback callback, object object)
 ```
+
+#### Parameters
+
+`iceConn` IntPtr
+
+
+`swap` bool
+
+
+`offendingMinorOpcode` int
+
+
+`offendingSequence` UIntPtr
+
+
+`errorClass` int
+
+
+`severity` int
+
+
+`values` IntPtr
+
+
+`callback` AsyncCallback
+
+
+`object` object
+
+
+#### Returns
+
+IAsyncResult
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-34258a1a65"></span>
 
-### EndInvoke
+### EndInvoke Method
 
 ```csharp
-public Void EndInvoke(IAsyncResult result)
+public void EndInvoke(IAsyncResult result)
 ```
+
+#### Parameters
+
+`result` IAsyncResult
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-a38e07fef8"></span>
 
-### Invoke
+### Invoke Method
 
 ```csharp
-public Void Invoke(IntPtr iceConn, Boolean swap, Int32 offendingMinorOpcode, UIntPtr offendingSequence, Int32 errorClass, Int32 severity, IntPtr values)
+public void Invoke(IntPtr iceConn, bool swap, int offendingMinorOpcode, UIntPtr offendingSequence, int errorClass, int severity, IntPtr values)
 ```
+
+#### Parameters
+
+`iceConn` IntPtr
+
+
+`swap` bool
+
+
+`offendingMinorOpcode` int
+
+
+`offendingSequence` UIntPtr
+
+
+`errorClass` int
+
+
+`severity` int
+
+
+`values` IntPtr
+
+
+</section>
 
 </ApiRefPage>
 

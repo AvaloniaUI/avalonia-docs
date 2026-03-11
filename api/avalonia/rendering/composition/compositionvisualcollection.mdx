@@ -39,7 +39,7 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 
 <div className="apiref-page__lead">
 
-A collection of CompositionVisual objects
+A collection of [CompositionVisual](xref:Avalonia.Rendering.Composition.CompositionVisual) objects
 
 </div>
 
@@ -53,7 +53,7 @@ public class CompositionVisualCollection
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="compositionobject">CompositionObject</a> <span className="apiref-page__relation-separator">-&gt;</span> CompositionVisualCollection
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="compositionobject">CompositionObject</a> <span className="apiref-page__relation-separator">-&gt;</span> CompositionVisualCollection
 </div>
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Implements:</span> IRegisterForSerialization&lt;CompositionVisual,ServerCompositionVisual&gt;, ICollection&lt;CompositionVisual&gt;, IEnumerable&lt;CompositionVisual&gt;, IList&lt;CompositionVisual&gt;, IEnumerable
@@ -78,122 +78,265 @@ public class CompositionVisualCollection
 | [Remove](#uid-31ef7bb445) | No summary available. |
 | [RemoveAll](#uid-3136285f1d) | No summary available. |
 | [RemoveAt](#uid-c74d8ceefe) | No summary available. |
-| [StartAnimation (Inherited from CompositionObject)](compositionobject.mdx#uid-4d2f25fec7) | Connects an animation with the specified property of the object and starts the animation. |
-| [StartAnimationGroup (Inherited from CompositionObject)](compositionobject.mdx#uid-4846f860a0) | Starts an animation group. The StartAnimationGroup method on CompositionObject lets you start CompositionAnimationGroup. All the animations in the group will be started at the same time on the object. |
-| [StopAnimation (Inherited from CompositionObject)](compositionobject.mdx#uid-01077c2b21) | Disconnects an animation from the specified property and stops the animation. |
-| [StopAnimationGroup (Inherited from CompositionObject)](compositionobject.mdx#uid-81dbd02845) | Stops an animation group. |
+| [StartAnimation](compositionobject.mdx#uid-4d2f25fec7) | Connects an animation with the specified property of the object and starts the animation. Inherited from [CompositionObject](compositionobject.mdx). |
+| [StartAnimationGroup](compositionobject.mdx#uid-4846f860a0) | Starts an animation group. The StartAnimationGroup method on [CompositionObject](xref:Avalonia.Rendering.Composition.CompositionObject) lets you start [CompositionAnimationGroup](xref:Avalonia.Rendering.Composition.Animations.CompositionAnimationGroup). All the animations in the group will be started at the same time on the object. Inherited from [CompositionObject](compositionobject.mdx). |
+| [StopAnimation](compositionobject.mdx#uid-01077c2b21) | Disconnects an animation from the specified property and stops the animation. Inherited from [CompositionObject](compositionobject.mdx). |
+| [StopAnimationGroup](compositionobject.mdx#uid-81dbd02845) | Stops an animation group. Inherited from [CompositionObject](compositionobject.mdx). |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-5c0b47ff06"></span>
 
-### Add
+### Add Method
 
 ```csharp
-public Void Add(Avalonia.Rendering.Composition.CompositionVisual item)
+public void Add(Avalonia.Rendering.Composition.CompositionVisual item)
 ```
+
+#### Parameters
+
+`item` [Avalonia.Rendering.Composition.CompositionVisual](xref:Avalonia.Rendering.Composition.CompositionVisual)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-1c4b30623b"></span>
 
-### Clear
+### Clear Method
 
 ```csharp
-public Void Clear()
+public void Clear()
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-db14b76a1b"></span>
 
-### Contains
+### Contains Method
 
 ```csharp
-public Boolean Contains(Avalonia.Rendering.Composition.CompositionVisual item)
+public bool Contains(Avalonia.Rendering.Composition.CompositionVisual item)
 ```
+
+#### Parameters
+
+`item` [Avalonia.Rendering.Composition.CompositionVisual](xref:Avalonia.Rendering.Composition.CompositionVisual)
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-269a9a0a29"></span>
 
-### CopyTo
+### CopyTo Method
 
 ```csharp
-public Void CopyTo(Avalonia.Rendering.Composition.CompositionVisual[] array, Int32 arrayIndex)
+public void CopyTo(Avalonia.Rendering.Composition.CompositionVisual[] array, int arrayIndex)
 ```
+
+#### Parameters
+
+`array` [Avalonia.Rendering.Composition.CompositionVisual](xref:Avalonia.Rendering.Composition.CompositionVisual)[]
+
+
+`arrayIndex` int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-1d937de249"></span>
 
-### GetEnumerator
+### GetEnumerator Method
 
 ```csharp
 public Enumerator<Avalonia.Rendering.Composition.CompositionVisual> GetEnumerator()
 ```
 
+#### Returns
+
+Enumerator&lt;[Avalonia.Rendering.Composition.CompositionVisual](xref:Avalonia.Rendering.Composition.CompositionVisual)&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-9a562a291b"></span>
 
-### IndexOf
+### IndexOf Method
 
 ```csharp
-public Int32 IndexOf(Avalonia.Rendering.Composition.CompositionVisual item)
+public int IndexOf(Avalonia.Rendering.Composition.CompositionVisual item)
 ```
+
+#### Parameters
+
+`item` [Avalonia.Rendering.Composition.CompositionVisual](xref:Avalonia.Rendering.Composition.CompositionVisual)
+
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-1855f6c3ac"></span>
 
-### Insert
+### Insert Method
 
 ```csharp
-public Void Insert(Int32 index, Avalonia.Rendering.Composition.CompositionVisual item)
+public void Insert(int index, Avalonia.Rendering.Composition.CompositionVisual item)
 ```
+
+#### Parameters
+
+`index` int
+
+
+`item` [Avalonia.Rendering.Composition.CompositionVisual](xref:Avalonia.Rendering.Composition.CompositionVisual)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-f14c53ccce"></span>
 
-### InsertAbove
+### InsertAbove Method
 
 ```csharp
-public Void InsertAbove(Avalonia.Rendering.Composition.CompositionVisual newChild, Avalonia.Rendering.Composition.CompositionVisual sibling)
+public void InsertAbove(Avalonia.Rendering.Composition.CompositionVisual newChild, Avalonia.Rendering.Composition.CompositionVisual sibling)
 ```
+
+#### Parameters
+
+`newChild` [Avalonia.Rendering.Composition.CompositionVisual](xref:Avalonia.Rendering.Composition.CompositionVisual)
+
+
+`sibling` [Avalonia.Rendering.Composition.CompositionVisual](xref:Avalonia.Rendering.Composition.CompositionVisual)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-e2a9f5209d"></span>
 
-### InsertAtBottom
+### InsertAtBottom Method
 
 ```csharp
-public Void InsertAtBottom(Avalonia.Rendering.Composition.CompositionVisual newChild)
+public void InsertAtBottom(Avalonia.Rendering.Composition.CompositionVisual newChild)
 ```
+
+#### Parameters
+
+`newChild` [Avalonia.Rendering.Composition.CompositionVisual](xref:Avalonia.Rendering.Composition.CompositionVisual)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-4cf433353e"></span>
 
-### InsertAtTop
+### InsertAtTop Method
 
 ```csharp
-public Void InsertAtTop(Avalonia.Rendering.Composition.CompositionVisual newChild)
+public void InsertAtTop(Avalonia.Rendering.Composition.CompositionVisual newChild)
 ```
+
+#### Parameters
+
+`newChild` [Avalonia.Rendering.Composition.CompositionVisual](xref:Avalonia.Rendering.Composition.CompositionVisual)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-541af38763"></span>
 
-### InsertBelow
+### InsertBelow Method
 
 ```csharp
-public Void InsertBelow(Avalonia.Rendering.Composition.CompositionVisual newChild, Avalonia.Rendering.Composition.CompositionVisual sibling)
+public void InsertBelow(Avalonia.Rendering.Composition.CompositionVisual newChild, Avalonia.Rendering.Composition.CompositionVisual sibling)
 ```
+
+#### Parameters
+
+`newChild` [Avalonia.Rendering.Composition.CompositionVisual](xref:Avalonia.Rendering.Composition.CompositionVisual)
+
+
+`sibling` [Avalonia.Rendering.Composition.CompositionVisual](xref:Avalonia.Rendering.Composition.CompositionVisual)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-31ef7bb445"></span>
 
-### Remove
+### Remove Method
 
 ```csharp
-public Boolean Remove(Avalonia.Rendering.Composition.CompositionVisual item)
+public bool Remove(Avalonia.Rendering.Composition.CompositionVisual item)
 ```
+
+#### Parameters
+
+`item` [Avalonia.Rendering.Composition.CompositionVisual](xref:Avalonia.Rendering.Composition.CompositionVisual)
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-3136285f1d"></span>
 
-### RemoveAll
+### RemoveAll Method
 
 ```csharp
-public Void RemoveAll()
+public void RemoveAll()
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-c74d8ceefe"></span>
 
-### RemoveAt
+### RemoveAt Method
 
 ```csharp
-public Void RemoveAt(Int32 index)
+public void RemoveAt(int index)
 ```
+
+#### Parameters
+
+`index` int
+
+
+</section>
 
 ## Properties
 
@@ -202,33 +345,45 @@ public Void RemoveAt(Int32 index)
 | [Count](#uid-e6cfa780c2) | No summary available. |
 | [IsReadOnly](#uid-7f72d63a2c) | No summary available. |
 | [Item](#uid-af29b7394c) | No summary available. |
-| [Compositor (Inherited from CompositionObject)](compositionobject.mdx#uid-bd6bbc1391) | The associated Compositor |
-| [ImplicitAnimations (Inherited from CompositionObject)](compositionobject.mdx#uid-3929e9ea34) | The collection of implicit animations attached to this object. |
-| [IsDisposed (Inherited from CompositionObject)](compositionobject.mdx#uid-e01437c946) | No summary available. |
+| [Compositor](compositionobject.mdx#uid-bd6bbc1391) | The associated Compositor Inherited from [CompositionObject](compositionobject.mdx). |
+| [ImplicitAnimations](compositionobject.mdx#uid-3929e9ea34) | The collection of implicit animations attached to this object. Inherited from [CompositionObject](compositionobject.mdx). |
+| [IsDisposed](compositionobject.mdx#uid-e01437c946) | Inherited from [CompositionObject](compositionobject.mdx). |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-e6cfa780c2"></span>
 
-### Count
+### Count Property
 
 ```csharp
-public Int32 Count { get; set; }
+public int Count { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-7f72d63a2c"></span>
 
-### IsReadOnly
+### IsReadOnly Property
 
 ```csharp
-public Boolean IsReadOnly { get; set; }
+public bool IsReadOnly { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-af29b7394c"></span>
 
-### Item
+### Item Property
 
 ```csharp
 public Avalonia.Rendering.Composition.CompositionVisual Item { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

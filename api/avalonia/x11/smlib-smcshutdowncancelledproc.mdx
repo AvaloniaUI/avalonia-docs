@@ -54,13 +54,25 @@ public delegate SMLib.SmcShutdownCancelledProc
 | --- | --- |
 | [SMLib.SmcShutdownCancelledProc](#uid-3db01515e9) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-3db01515e9"></span>
 
-### SMLib.SmcShutdownCancelledProc
+### SMLib.SmcShutdownCancelledProc Constructor
 
 ```csharp
-public SMLib.SmcShutdownCancelledProc(Object object, IntPtr method)
+public SMLib.SmcShutdownCancelledProc(object object, IntPtr method)
 ```
+
+#### Parameters
+
+`object` object
+
+
+`method` IntPtr
+
+
+</section>
 
 ## Methods
 
@@ -70,29 +82,73 @@ public SMLib.SmcShutdownCancelledProc(Object object, IntPtr method)
 | [EndInvoke](#uid-df573ecb56) | No summary available. |
 | [Invoke](#uid-3a75622a15) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-ce7de40701"></span>
 
-### BeginInvoke
+### BeginInvoke Method
 
 ```csharp
-public IAsyncResult BeginInvoke(IntPtr smcConn, IntPtr clientData, AsyncCallback callback, Object object)
+public IAsyncResult BeginInvoke(IntPtr smcConn, IntPtr clientData, AsyncCallback callback, object object)
 ```
+
+#### Parameters
+
+`smcConn` IntPtr
+
+
+`clientData` IntPtr
+
+
+`callback` AsyncCallback
+
+
+`object` object
+
+
+#### Returns
+
+IAsyncResult
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-df573ecb56"></span>
 
-### EndInvoke
+### EndInvoke Method
 
 ```csharp
-public Void EndInvoke(IAsyncResult result)
+public void EndInvoke(IAsyncResult result)
 ```
+
+#### Parameters
+
+`result` IAsyncResult
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-3a75622a15"></span>
 
-### Invoke
+### Invoke Method
 
 ```csharp
-public Void Invoke(IntPtr smcConn, IntPtr clientData)
+public void Invoke(IntPtr smcConn, IntPtr clientData)
 ```
+
+#### Parameters
+
+`smcConn` IntPtr
+
+
+`clientData` IntPtr
+
+
+</section>
 
 </ApiRefPage>
 

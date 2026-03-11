@@ -53,7 +53,7 @@ public class FuncFramebufferRenderTarget
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> FuncFramebufferRenderTarget
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> FuncFramebufferRenderTarget
 </div>
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Implements:</span> <a href="iframebufferrendertarget">IFramebufferRenderTarget</a>, <a href="iplatformrendersurfacerendertarget">IPlatformRenderSurfaceRenderTarget</a>, IDisposable
@@ -70,21 +70,42 @@ public class FuncFramebufferRenderTarget
 
 ### FuncFramebufferRenderTarget overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-050fd6dc6d"></span>
 
-#### FuncFramebufferRenderTarget
+#### FuncFramebufferRenderTarget Constructor
 
 ```csharp
-public FuncFramebufferRenderTarget(Avalonia.Platform.Surfaces.FuncFramebufferRenderTarget.LockFramebufferDelegate lockFramebuffer, Boolean retainsFrameContents)
+public FuncFramebufferRenderTarget(Avalonia.Platform.Surfaces.FuncFramebufferRenderTarget.LockFramebufferDelegate lockFramebuffer, bool retainsFrameContents)
 ```
+
+##### Parameters
+
+`lockFramebuffer` [Avalonia.Platform.Surfaces.FuncFramebufferRenderTarget.LockFramebufferDelegate](xref:Avalonia.Platform.Surfaces.FuncFramebufferRenderTarget.LockFramebufferDelegate)
+
+
+`retainsFrameContents` bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-f44f251528"></span>
 
-#### FuncFramebufferRenderTarget
+#### FuncFramebufferRenderTarget Constructor
 
 ```csharp
 public FuncFramebufferRenderTarget(Func<Avalonia.Platform.ILockedFramebuffer> lockFramebuffer)
 ```
+
+##### Parameters
+
+`lockFramebuffer` Func&lt;[Avalonia.Platform.ILockedFramebuffer](xref:Avalonia.Platform.ILockedFramebuffer)&gt;
+
+
+</section>
 
 ## Methods
 
@@ -93,21 +114,42 @@ public FuncFramebufferRenderTarget(Func<Avalonia.Platform.ILockedFramebuffer> lo
 | [Dispose](#uid-89572d25f5) | No summary available. |
 | [Lock](#uid-3003e62d0b) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-89572d25f5"></span>
 
-### Dispose
+### Dispose Method
 
 ```csharp
-public Void Dispose()
+public void Dispose()
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-3003e62d0b"></span>
 
-### Lock
+### Lock Method
 
 ```csharp
 public Avalonia.Platform.ILockedFramebuffer Lock(Avalonia.Platform.IRenderTarget.RenderTargetSceneInfo sceneInfo, Avalonia.Platform.Surfaces.FramebufferLockProperties& properties)
 ```
+
+#### Parameters
+
+`sceneInfo` Avalonia.Platform.IRenderTarget.RenderTargetSceneInfo
+
+
+`properties` [Avalonia.Platform.Surfaces.FramebufferLockProperties](xref:Avalonia.Platform.Surfaces.FramebufferLockProperties)&amp;
+
+
+#### Returns
+
+[Avalonia.Platform.ILockedFramebuffer](xref:Avalonia.Platform.ILockedFramebuffer)
+
+
+</section>
 
 ## Properties
 
@@ -115,13 +157,17 @@ public Avalonia.Platform.ILockedFramebuffer Lock(Avalonia.Platform.IRenderTarget
 | --- | --- |
 | [RetainsFrameContents](#uid-56c99da755) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-56c99da755"></span>
 
-### RetainsFrameContents
+### RetainsFrameContents Property
 
 ```csharp
-public Boolean RetainsFrameContents { get; set; }
+public bool RetainsFrameContents { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

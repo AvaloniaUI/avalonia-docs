@@ -47,7 +47,7 @@ public class RelativeSourceExtension
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> RelativeSourceExtension
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> RelativeSourceExtension
 </div>
 </div>
 
@@ -61,21 +61,34 @@ public class RelativeSourceExtension
 
 ### RelativeSourceExtension overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-d96253629a"></span>
 
-#### RelativeSourceExtension
+#### RelativeSourceExtension Constructor
 
 ```csharp
 public RelativeSourceExtension()
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-9c2c4c9cba"></span>
 
-#### RelativeSourceExtension
+#### RelativeSourceExtension Constructor
 
 ```csharp
 public RelativeSourceExtension(Avalonia.Data.RelativeSourceMode mode)
 ```
+
+##### Parameters
+
+`mode` [Avalonia.Data.RelativeSourceMode](xref:Avalonia.Data.RelativeSourceMode)
+
+
+</section>
 
 ## Methods
 
@@ -83,13 +96,27 @@ public RelativeSourceExtension(Avalonia.Data.RelativeSourceMode mode)
 | --- | --- |
 | [ProvideValue](#uid-018140f640) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-018140f640"></span>
 
-### ProvideValue
+### ProvideValue Method
 
 ```csharp
 public Avalonia.Data.RelativeSource ProvideValue(IServiceProvider serviceProvider)
 ```
+
+#### Parameters
+
+`serviceProvider` IServiceProvider
+
+
+#### Returns
+
+[Avalonia.Data.RelativeSource](xref:Avalonia.Data.RelativeSource)
+
+
+</section>
 
 ## Properties
 
@@ -100,37 +127,53 @@ public Avalonia.Data.RelativeSource ProvideValue(IServiceProvider serviceProvide
 | [Mode](#uid-84a6eb8524) | No summary available. |
 | [Tree](#uid-8840040f66) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-b4774f3c2a"></span>
 
-### AncestorLevel
+### AncestorLevel Property
 
 ```csharp
-public Int32 AncestorLevel { get; set; }
+public int AncestorLevel { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-f395f9071f"></span>
 
-### AncestorType
+### AncestorType Property
 
 ```csharp
 public Type AncestorType { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-84a6eb8524"></span>
 
-### Mode
+### Mode Property
 
 ```csharp
 public Avalonia.Data.RelativeSourceMode Mode { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-8840040f66"></span>
 
-### Tree
+### Tree Property
 
 ```csharp
 public Avalonia.Data.TreeType Tree { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

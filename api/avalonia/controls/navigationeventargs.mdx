@@ -61,11 +61,13 @@ public class NavigationEventArgs
 
 | Name | Description |
 | --- | --- |
-| [NavigationEventArgs](#uid-70b564bd1d) | Initializes a new instance of the Avalonia.Controls.NavigationEventArgs class. |
+| [NavigationEventArgs](#uid-70b564bd1d) | Initializes a new instance of the [Avalonia.Controls.NavigationEventArgs](xref:Avalonia.Controls.NavigationEventArgs) class. |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-70b564bd1d"></span>
 
-### NavigationEventArgs
+### NavigationEventArgs Constructor
 
 Initializes a new instance of the [Avalonia.Controls.NavigationEventArgs](xref:Avalonia.Controls.NavigationEventArgs) class.
 
@@ -73,10 +75,19 @@ Initializes a new instance of the [Avalonia.Controls.NavigationEventArgs](xref:A
 public NavigationEventArgs(Avalonia.Controls.Page page, Avalonia.Controls.NavigationType navigationType)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `navigationType` | The type of navigation that triggered this event. |
-| `page` | The page involved in the navigation operation. |
+#### Parameters
+
+`page` [Avalonia.Controls.Page](xref:Avalonia.Controls.Page)
+
+The page involved in the navigation operation.
+
+
+`navigationType` [Avalonia.Controls.NavigationType](xref:Avalonia.Controls.NavigationType)
+
+The type of navigation that triggered this event.
+
+
+</section>
 
 ## Properties
 
@@ -85,9 +96,11 @@ public NavigationEventArgs(Avalonia.Controls.Page page, Avalonia.Controls.Naviga
 | [NavigationType](#uid-e1dae8ea68) | Gets the type of navigation that triggered this event. |
 | [Page](#uid-0d71c8e71b) | Gets the page involved in the navigation operation. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-e1dae8ea68"></span>
 
-### NavigationType
+### NavigationType Property
 
 Gets the type of navigation that triggered this event.
 
@@ -95,15 +108,21 @@ Gets the type of navigation that triggered this event.
 public Avalonia.Controls.NavigationType NavigationType { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-0d71c8e71b"></span>
 
-### Page
+### Page Property
 
 Gets the page involved in the navigation operation.
 
 ```csharp
 public Avalonia.Controls.Page Page { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

@@ -53,7 +53,7 @@ public class DirectPropertyMetadata<TValue>
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="avaloniapropertymetadata">AvaloniaPropertyMetadata</a> <span className="apiref-page__relation-separator">-&gt;</span> DirectPropertyMetadata&lt;TValue&gt;
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="avaloniapropertymetadata">AvaloniaPropertyMetadata</a> <span className="apiref-page__relation-separator">-&gt;</span> DirectPropertyMetadata&lt;TValue&gt;
 </div>
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Implements:</span> <a href="idirectpropertymetadata">IDirectPropertyMetadata</a>
@@ -66,13 +66,28 @@ public class DirectPropertyMetadata<TValue>
 | --- | --- |
 | [DirectPropertyMetadata&lt;TValue&gt;](#uid-334d4f953d) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-334d4f953d"></span>
 
-### DirectPropertyMetadata&lt;TValue&gt;
+### DirectPropertyMetadata&lt;TValue&gt; Constructor
 
 ```csharp
-public DirectPropertyMetadata<TValue>(TValue unsetValue, Avalonia.Data.BindingMode defaultBindingMode, Nullable<Boolean> enableDataValidation)
+public DirectPropertyMetadata<TValue>(TValue unsetValue, Avalonia.Data.BindingMode defaultBindingMode, Nullable<bool> enableDataValidation)
 ```
+
+#### Parameters
+
+`unsetValue` TValue
+
+
+`defaultBindingMode` [Avalonia.Data.BindingMode](xref:Avalonia.Data.BindingMode)
+
+
+`enableDataValidation` Nullable&lt;bool&gt;
+
+
+</section>
 
 ## Methods
 
@@ -80,11 +95,13 @@ public DirectPropertyMetadata<TValue>(TValue unsetValue, Avalonia.Data.BindingMo
 | --- | --- |
 | [GenerateTypeSafeMetadata](#uid-8348d150cb) | Gets a copy of this object configured for use with any owner type. |
 | [Merge](#uid-0fbbcffba7) | Merges the metadata with the base metadata. |
-| [Freeze (Inherited from AvaloniaPropertyMetadata)](avaloniapropertymetadata.mdx#uid-db1cdb0cff) | Makes this instance read-only. No further modifications are allowed after this call. |
+| [Freeze](avaloniapropertymetadata.mdx#uid-db1cdb0cff) | Makes this instance read-only. No further modifications are allowed after this call. Inherited from [AvaloniaPropertyMetadata](avaloniapropertymetadata.mdx). |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-8348d150cb"></span>
 
-### GenerateTypeSafeMetadata
+### GenerateTypeSafeMetadata Method
 
 Gets a copy of this object configured for use with any owner type.
 
@@ -92,39 +109,65 @@ Gets a copy of this object configured for use with any owner type.
 public Avalonia.AvaloniaPropertyMetadata GenerateTypeSafeMetadata()
 ```
 
+#### Returns
+
+[Avalonia.AvaloniaPropertyMetadata](xref:Avalonia.AvaloniaPropertyMetadata)
+
+
+#### Remarks
+
+For example, delegates which receive the owner object should be removed.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-0fbbcffba7"></span>
 
-### Merge
+### Merge Method
 
 Merges the metadata with the base metadata.
 
 ```csharp
-public Void Merge(Avalonia.AvaloniaPropertyMetadata baseMetadata, Avalonia.AvaloniaProperty property)
+public void Merge(Avalonia.AvaloniaPropertyMetadata baseMetadata, Avalonia.AvaloniaProperty property)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `baseMetadata` | The base metadata to merge. |
-| `property` | The property to which the metadata is being applied. |
+#### Parameters
+
+`baseMetadata` [Avalonia.AvaloniaPropertyMetadata](xref:Avalonia.AvaloniaPropertyMetadata)
+
+The base metadata to merge.
+
+
+`property` [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty)
+
+The property to which the metadata is being applied.
+
+
+</section>
 
 ## Properties
 
 | Name | Description |
 | --- | --- |
-| [UnsetValue](#uid-76f34367f7) | Gets the value to use when the property is set to Avalonia.AvaloniaProperty.UnsetValue. |
-| [DefaultBindingMode (Inherited from AvaloniaPropertyMetadata)](avaloniapropertymetadata.mdx#uid-b6d03b8752) | Gets the default binding mode for the property. |
-| [EnableDataValidation (Inherited from AvaloniaPropertyMetadata)](avaloniapropertymetadata.mdx#uid-aa782b0da1) | Gets a value indicating whether the property is interested in data validation. |
-| [IsReadOnly (Inherited from AvaloniaPropertyMetadata)](avaloniapropertymetadata.mdx#uid-8222a9d293) | Gets whether this instance is read-only and can't be modified. |
+| [UnsetValue](#uid-76f34367f7) | Gets the value to use when the property is set to [Avalonia.AvaloniaProperty.UnsetValue](xref:Avalonia.AvaloniaProperty.UnsetValue). |
+| [DefaultBindingMode](avaloniapropertymetadata.mdx#uid-b6d03b8752) | Gets the default binding mode for the property. Inherited from [AvaloniaPropertyMetadata](avaloniapropertymetadata.mdx). |
+| [EnableDataValidation](avaloniapropertymetadata.mdx#uid-aa782b0da1) | Gets a value indicating whether the property is interested in data validation. Inherited from [AvaloniaPropertyMetadata](avaloniapropertymetadata.mdx). |
+| [IsReadOnly](avaloniapropertymetadata.mdx#uid-8222a9d293) | Gets whether this instance is read-only and can't be modified. Inherited from [AvaloniaPropertyMetadata](avaloniapropertymetadata.mdx). |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-76f34367f7"></span>
 
-### UnsetValue
+### UnsetValue Property
 
 Gets the value to use when the property is set to [Avalonia.AvaloniaProperty.UnsetValue](xref:Avalonia.AvaloniaProperty.UnsetValue).
 
 ```csharp
 public TValue UnsetValue { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

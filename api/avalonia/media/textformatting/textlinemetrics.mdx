@@ -73,37 +73,83 @@ public struct TextLineMetrics
 
 ### Equals overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-3381c4bec6"></span>
 
-#### Equals
+#### Equals Method
 
 ```csharp
-public Boolean Equals(Avalonia.Media.TextFormatting.TextLineMetrics other)
+public bool Equals(Avalonia.Media.TextFormatting.TextLineMetrics other)
 ```
+
+##### Parameters
+
+`other` [Avalonia.Media.TextFormatting.TextLineMetrics](xref:Avalonia.Media.TextFormatting.TextLineMetrics)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-800f6405e4"></span>
 
-#### Equals
+#### Equals Method
 
 ```csharp
-public Boolean Equals(Object obj)
+public bool Equals(object obj)
 ```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-2f14fc2714"></span>
 
-### GetHashCode
+### GetHashCode Method
 
 ```csharp
-public Int32 GetHashCode()
+public int GetHashCode()
 ```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-c85be3b538"></span>
 
-### ToString
+### ToString Method
 
 ```csharp
-public String ToString()
+public string ToString()
 ```
+
+#### Returns
+
+string
+
+
+</section>
 
 ## Properties
 
@@ -122,125 +168,173 @@ public String ToString()
 | [Width](#uid-f74c6922cc) | Gets the width of a line of text, excluding trailing whitespace characters. |
 | [WidthIncludingTrailingWhitespace](#uid-c0e249b6d4) | Gets the width of a line of text, including trailing whitespace characters. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-11692b1546"></span>
 
-### Extent
+### Extent Property
 
 Gets the distance from the top-most to bottom-most black pixel in a line.
 
 ```csharp
-public Double Extent { get; set; }
+public double Extent { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-8969f79e49"></span>
 
-### HasOverflowed
+### HasOverflowed Property
 
 Gets a value that indicates whether content of the line overflows the specified paragraph width.
 
 ```csharp
-public Boolean HasOverflowed { get; set; }
+public bool HasOverflowed { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-ce4c8d39b5"></span>
 
-### Height
+### Height Property
 
 Gets the height of a line of text.
 
 ```csharp
-public Double Height { get; set; }
+public double Height { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-de59e9b52c"></span>
 
-### NewlineLength
+### NewlineLength Property
 
 Gets the number of newline characters at the end of a line.
 
 ```csharp
-public Int32 NewlineLength { get; set; }
+public int NewlineLength { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-4e98a18b86"></span>
 
-### OverhangAfter
+### OverhangAfter Property
 
 Gets the distance that black pixels extend beyond the bottom alignment edge of a line.
 
 ```csharp
-public Double OverhangAfter { get; set; }
+public double OverhangAfter { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-d904ea0e0f"></span>
 
-### OverhangLeading
+### OverhangLeading Property
 
 Gets the distance that black pixels extend prior to the left leading alignment edge of the line.
 
 ```csharp
-public Double OverhangLeading { get; set; }
+public double OverhangLeading { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-a2805dd4ae"></span>
 
-### OverhangTrailing
+### OverhangTrailing Property
 
 Gets the distance that black pixels extend following the right trailing alignment edge of the line.
 
 ```csharp
-public Double OverhangTrailing { get; set; }
+public double OverhangTrailing { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-20723b6419"></span>
 
-### Start
+### Start Property
 
 Gets the distance from the start of a paragraph to the starting point of a line.
 
 ```csharp
-public Double Start { get; set; }
+public double Start { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-c04cfc44b9"></span>
 
-### TextBaseline
+### TextBaseline Property
 
 Gets the distance from the top to the baseline of the line of text.
 
 ```csharp
-public Double TextBaseline { get; set; }
+public double TextBaseline { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-1a19da5d26"></span>
 
-### TrailingWhitespaceLength
+### TrailingWhitespaceLength Property
 
 Gets the number of whitespace code points beyond the last non-blank character in a line.
 
 ```csharp
-public Int32 TrailingWhitespaceLength { get; set; }
+public int TrailingWhitespaceLength { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-f74c6922cc"></span>
 
-### Width
+### Width Property
 
 Gets the width of a line of text, excluding trailing whitespace characters.
 
 ```csharp
-public Double Width { get; set; }
+public double Width { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-c0e249b6d4"></span>
 
-### WidthIncludingTrailingWhitespace
+### WidthIncludingTrailingWhitespace Property
 
 Gets the width of a line of text, including trailing whitespace characters.
 
 ```csharp
-public Double WidthIncludingTrailingWhitespace { get; set; }
+public double WidthIncludingTrailingWhitespace { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

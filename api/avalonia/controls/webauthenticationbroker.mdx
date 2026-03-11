@@ -1,0 +1,96 @@
+---
+title: 'WebAuthenticationBroker'
+hide_title: true
+slug: '/avalonia/controls/webauthenticationbroker'
+uid: 'Avalonia.Controls.WebAuthenticationBroker'
+commentId: 'T:Avalonia.Controls.WebAuthenticationBroker'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.WebView'
+assembly: 'Avalonia.Controls.WebView'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0-android36.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">WebAuthenticationBroker Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.WebView</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.WebView</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+[Avalonia.Controls.WebAuthenticationBroker](xref:Avalonia.Controls.WebAuthenticationBroker) is a utility class that facilitates OAuth and other web-based authentication flows by providing a secure way to handle web authentication in applications.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class WebAuthenticationBroker
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> WebAuthenticationBroker
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [AuthenticateAsync](#uid-4172e6d360) | Starts an authentication flow by navigating to the specified start URI and monitoring for navigation to the end URI. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4172e6d360"></span>
+
+### AuthenticateAsync Method
+
+Starts an authentication flow by navigating to the specified start URI and monitoring for navigation to the end URI.
+
+```csharp
+public System.Threading.Tasks.Task<Avalonia.Controls.WebAuthenticationResult> AuthenticateAsync(Avalonia.Controls.TopLevel topLevel, Avalonia.Controls.WebAuthenticatorOptions options)
+```
+
+#### Parameters
+
+`topLevel` [Avalonia.Controls.TopLevel](xref:Avalonia.Controls.TopLevel)
+
+
+`options` [Avalonia.Controls.WebAuthenticatorOptions](xref:Avalonia.Controls.WebAuthenticatorOptions)
+
+
+#### Returns
+
+System.Threading.Tasks.Task&lt;[Avalonia.Controls.WebAuthenticationResult](xref:Avalonia.Controls.WebAuthenticationResult)&gt;
+
+
+#### Exceptions
+
+- [Platform is not supported.](xref:System.PlatformNotSupportedException)
+- [Operation was cancelled programmatically or by user.](xref:System.OperationCanceledException)
+
+</section>
+
+</ApiRefPage>
+

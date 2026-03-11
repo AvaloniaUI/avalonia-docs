@@ -64,21 +64,54 @@ public struct GlVersion
 
 ### GlVersion overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-d4e8860589"></span>
 
-#### GlVersion
+#### GlVersion Constructor
 
 ```csharp
-public GlVersion(Avalonia.OpenGL.GlProfileType type, Int32 major, Int32 minor)
+public GlVersion(Avalonia.OpenGL.GlProfileType type, int major, int minor)
 ```
+
+##### Parameters
+
+`type` [Avalonia.OpenGL.GlProfileType](xref:Avalonia.OpenGL.GlProfileType)
+
+
+`major` int
+
+
+`minor` int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-d75c6d60c2"></span>
 
-#### GlVersion
+#### GlVersion Constructor
 
 ```csharp
-public GlVersion(Avalonia.OpenGL.GlProfileType type, Int32 major, Int32 minor, Boolean isCompatibilityProfile)
+public GlVersion(Avalonia.OpenGL.GlProfileType type, int major, int minor, bool isCompatibilityProfile)
 ```
+
+##### Parameters
+
+`type` [Avalonia.OpenGL.GlProfileType](xref:Avalonia.OpenGL.GlProfileType)
+
+
+`major` int
+
+
+`minor` int
+
+
+`isCompatibilityProfile` bool
+
+
+</section>
 
 ## Methods
 
@@ -92,37 +125,83 @@ public GlVersion(Avalonia.OpenGL.GlProfileType type, Int32 major, Int32 minor, B
 
 ### Equals overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-836f1e0543"></span>
 
-#### Equals
+#### Equals Method
 
 ```csharp
-public Boolean Equals(Avalonia.OpenGL.GlVersion other)
+public bool Equals(Avalonia.OpenGL.GlVersion other)
 ```
+
+##### Parameters
+
+`other` [Avalonia.OpenGL.GlVersion](xref:Avalonia.OpenGL.GlVersion)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-649e1af1c8"></span>
 
-#### Equals
+#### Equals Method
 
 ```csharp
-public Boolean Equals(Object obj)
+public bool Equals(object obj)
 ```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-6d0b7c8584"></span>
 
-### GetHashCode
+### GetHashCode Method
 
 ```csharp
-public Int32 GetHashCode()
+public int GetHashCode()
 ```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-8c7f2bea9d"></span>
 
-### ToString
+### ToString Method
 
 ```csharp
-public String ToString()
+public string ToString()
 ```
+
+#### Returns
+
+string
+
+
+</section>
 
 ## Properties
 
@@ -133,37 +212,53 @@ public String ToString()
 | [Minor](#uid-44a0d72564) | No summary available. |
 | [Type](#uid-b4ec139f57) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-b44083c259"></span>
 
-### IsCompatibilityProfile
+### IsCompatibilityProfile Property
 
 ```csharp
-public Boolean IsCompatibilityProfile { get; set; }
+public bool IsCompatibilityProfile { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-3d77b606ac"></span>
 
-### Major
+### Major Property
 
 ```csharp
-public Int32 Major { get; set; }
+public int Major { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-44a0d72564"></span>
 
-### Minor
+### Minor Property
 
 ```csharp
-public Int32 Minor { get; set; }
+public int Minor { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-b4ec139f57"></span>
 
-### Type
+### Type Property
 
 ```csharp
 public Avalonia.OpenGL.GlProfileType Type { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

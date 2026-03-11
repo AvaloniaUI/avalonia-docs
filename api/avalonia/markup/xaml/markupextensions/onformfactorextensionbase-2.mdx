@@ -54,7 +54,7 @@ public class OnFormFactorExtensionBase<TReturn, TOn>
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> OnFormFactorExtensionBase&lt;TReturn, TOn&gt;
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> OnFormFactorExtensionBase&lt;TReturn, TOn&gt;
 </div>
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Implements:</span> IAddChild&lt;&lt;T&gt;&gt;
@@ -67,13 +67,22 @@ public class OnFormFactorExtensionBase<TReturn, TOn>
 | --- | --- |
 | [ProvideValue](#uid-702369cdb8) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-702369cdb8"></span>
 
-### ProvideValue
+### ProvideValue Method
 
 ```csharp
-public Object ProvideValue()
+public object ProvideValue()
 ```
+
+#### Returns
+
+object
+
+
+</section>
 
 ## Properties
 
@@ -84,9 +93,11 @@ public Object ProvideValue()
 | [Mobile](#uid-b757442a3d) | Gets or sets the value applied on mobile systems. |
 | [TV](#uid-a3ee9c3e58) | Gets or sets the value applied on TV systems. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-c12b39c63c"></span>
 
-### Default
+### Default Property
 
 Gets or sets the value applied by default.
 If not set, default(TReturn) is assigned to the value.
@@ -95,9 +106,13 @@ If not set, default(TReturn) is assigned to the value.
 public TReturn Default { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-d702b3c7e1"></span>
 
-### Desktop
+### Desktop Property
 
 Gets or sets the value applied on desktop systems.
 
@@ -105,9 +120,13 @@ Gets or sets the value applied on desktop systems.
 public TReturn Desktop { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-b757442a3d"></span>
 
-### Mobile
+### Mobile Property
 
 Gets or sets the value applied on mobile systems.
 
@@ -115,15 +134,21 @@ Gets or sets the value applied on mobile systems.
 public TReturn Mobile { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-a3ee9c3e58"></span>
 
-### TV
+### TV Property
 
 Gets or sets the value applied on TV systems.
 
 ```csharp
 public TReturn TV { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

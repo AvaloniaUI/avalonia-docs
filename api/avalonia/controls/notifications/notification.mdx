@@ -53,7 +53,7 @@ public class Notification
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> Notification
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> Notification
 </div>
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Implements:</span> <a href="inotification">INotification</a>, INotifyPropertyChanged
@@ -69,15 +69,17 @@ This class represents a notification that can be displayed either in a window us
 
 | Name | Description |
 | --- | --- |
-| [Notification (2 overloads)](#uid-5c150e5a29) | Initializes a new instance of the Avalonia.Controls.Notifications.Notification class. |
+| [Notification (2 overloads)](#uid-5c150e5a29) | Initializes a new instance of the [Avalonia.Controls.Notifications.Notification](xref:Avalonia.Controls.Notifications.Notification) class. |
 
 <span id="uid-5c150e5a29"></span>
 
 ### Notification overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-47e4759941"></span>
 
-#### Notification
+#### Notification Constructor
 
 Initializes a new instance of the [Avalonia.Controls.Notifications.Notification](xref:Avalonia.Controls.Notifications.Notification) class.
 
@@ -85,28 +87,56 @@ Initializes a new instance of the [Avalonia.Controls.Notifications.Notification]
 public Notification()
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-6cdb5ec8f9"></span>
 
-#### Notification
+#### Notification Constructor
 
 ```csharp
-public Notification(String title, String message, Avalonia.Controls.Notifications.NotificationType type, Nullable<TimeSpan> expiration, Action onClick, Action onClose)
+public Notification(string title, string message, Avalonia.Controls.Notifications.NotificationType type, Nullable<TimeSpan> expiration, Action onClick, Action onClose)
 ```
+
+##### Parameters
+
+`title` string
+
+
+`message` string
+
+
+`type` [Avalonia.Controls.Notifications.NotificationType](xref:Avalonia.Controls.Notifications.NotificationType)
+
+
+`expiration` Nullable&lt;TimeSpan&gt;
+
+
+`onClick` Action
+
+
+`onClose` Action
+
+
+</section>
 
 ## Properties
 
 | Name | Description |
 | --- | --- |
-| [Expiration](#uid-6fa56101ad) | Gets the expiration time of the notification after which it will automatically close. If the value is TimeSpan.Zero then the notification will remain open until the user closes it. |
+| [Expiration](#uid-6fa56101ad) | Gets the expiration time of the notification after which it will automatically close. If the value is [TimeSpan.Zero](xref:System.TimeSpan.Zero) then the notification will remain open until the user closes it. |
 | [Message](#uid-e0a025cb3b) | Gets the notification message. |
 | [OnClick](#uid-e4001bd734) | Gets an Action to be run when the notification is clicked. |
 | [OnClose](#uid-2e72068dd2) | Gets an Action to be run when the notification is closed. |
 | [Title](#uid-de74ea6caf) | Gets the Title of the notification. |
-| [Type](#uid-406e41cb27) | Gets the Avalonia.Controls.Notifications.NotificationType of the notification. |
+| [Type](#uid-406e41cb27) | Gets the [Avalonia.Controls.Notifications.NotificationType](xref:Avalonia.Controls.Notifications.NotificationType) of the notification. |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-6fa56101ad"></span>
 
-### Expiration
+### Expiration Property
 
 Gets the expiration time of the notification after which it will automatically close.
 If the value is [TimeSpan.Zero](xref:System.TimeSpan.Zero) then the notification will remain open until the user closes it.
@@ -115,19 +145,27 @@ If the value is [TimeSpan.Zero](xref:System.TimeSpan.Zero) then the notification
 public TimeSpan Expiration { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-e0a025cb3b"></span>
 
-### Message
+### Message Property
 
 Gets the notification message.
 
 ```csharp
-public String Message { get; set; }
+public string Message { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-e4001bd734"></span>
 
-### OnClick
+### OnClick Property
 
 Gets an Action to be run when the notification is clicked.
 
@@ -135,9 +173,13 @@ Gets an Action to be run when the notification is clicked.
 public Action OnClick { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-2e72068dd2"></span>
 
-### OnClose
+### OnClose Property
 
 Gets an Action to be run when the notification is closed.
 
@@ -145,19 +187,27 @@ Gets an Action to be run when the notification is closed.
 public Action OnClose { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-de74ea6caf"></span>
 
-### Title
+### Title Property
 
 Gets the Title of the notification.
 
 ```csharp
-public String Title { get; set; }
+public string Title { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-406e41cb27"></span>
 
-### Type
+### Type Property
 
 Gets the [Avalonia.Controls.Notifications.NotificationType](xref:Avalonia.Controls.Notifications.NotificationType) of the notification.
 
@@ -165,19 +215,25 @@ Gets the [Avalonia.Controls.Notifications.NotificationType](xref:Avalonia.Contro
 public Avalonia.Controls.Notifications.NotificationType Type { get; set; }
 ```
 
+</section>
+
 ## Events
 
 | Name | Description |
 | --- | --- |
 | [PropertyChanged](#uid-9005ff89fb) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-9005ff89fb"></span>
 
-### PropertyChanged
+### PropertyChanged Event
 
 ```csharp
 public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged
 ```
+
+</section>
 
 </ApiRefPage>
 

@@ -39,7 +39,7 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 
 <div className="apiref-page__lead">
 
-AppBuilder options for configuring the [Avalonia.Threading.Dispatcher](xref:Avalonia.Threading.Dispatcher).
+[AppBuilder](xref:Avalonia.AppBuilder) options for configuring the [Avalonia.Threading.Dispatcher](xref:Avalonia.Threading.Dispatcher).
 
 </div>
 
@@ -53,7 +53,7 @@ public class DispatcherOptions
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> DispatcherOptions
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> DispatcherOptions
 </div>
 </div>
 
@@ -63,13 +63,17 @@ public class DispatcherOptions
 | --- | --- |
 | [DispatcherOptions](#uid-c4afd64c7d) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-c4afd64c7d"></span>
 
-### DispatcherOptions
+### DispatcherOptions Constructor
 
 ```csharp
 public DispatcherOptions()
 ```
+
+</section>
 
 ## Properties
 
@@ -77,9 +81,11 @@ public DispatcherOptions()
 | --- | --- |
 | [InputStarvationTimeout](#uid-727c33704c) | Gets or sets a timeout after which the dispatcher will start prioritizing input events over rendering. The default value is 1 second. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-727c33704c"></span>
 
-### InputStarvationTimeout
+### InputStarvationTimeout Property
 
 Gets or sets a timeout after which the dispatcher will start prioritizing input events over
 rendering. The default value is 1 second.
@@ -87,6 +93,15 @@ rendering. The default value is 1 second.
 ```csharp
 public TimeSpan InputStarvationTimeout { get; set; }
 ```
+
+#### Remarks
+
+If no input events are processed within this time, the dispatcher will start prioritizing
+input events over rendering to prevent the application from becoming unresponsive. This may
+need to be lowered on resource-constrained platforms where input events are processed on
+the same thread as rendering.
+
+</section>
 
 </ApiRefPage>
 

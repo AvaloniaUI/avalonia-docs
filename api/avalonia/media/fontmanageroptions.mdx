@@ -47,7 +47,7 @@ public class FontManagerOptions
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> FontManagerOptions
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> FontManagerOptions
 </div>
 </div>
 
@@ -57,13 +57,17 @@ public class FontManagerOptions
 | --- | --- |
 | [FontManagerOptions](#uid-35d2618c27) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-35d2618c27"></span>
 
-### FontManagerOptions
+### FontManagerOptions Constructor
 
 ```csharp
 public FontManagerOptions()
 ```
+
+</section>
 
 ## Properties
 
@@ -73,19 +77,25 @@ public FontManagerOptions()
 | [FontFallbacks](#uid-3749c5bb7c) | Gets or sets the font fallbacks. |
 | [FontFamilyMappings](#uid-1868b78c76) | Gets or sets the font family mappings. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-eeb8b71ac1"></span>
 
-### DefaultFamilyName
+### DefaultFamilyName Property
 
 Gets or sets the default font family's name
 
 ```csharp
-public String DefaultFamilyName { get; set; }
+public string DefaultFamilyName { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-3749c5bb7c"></span>
 
-### FontFallbacks
+### FontFallbacks Property
 
 Gets or sets the font fallbacks.
 
@@ -93,15 +103,29 @@ Gets or sets the font fallbacks.
 public System.Collections.Generic.IReadOnlyList<Avalonia.Media.FontFallback> FontFallbacks { get; set; }
 ```
 
+#### Remarks
+
+A fallback is fullfilled before anything else when the font manager tries to match a specific codepoint.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-1868b78c76"></span>
 
-### FontFamilyMappings
+### FontFamilyMappings Property
 
 Gets or sets the font family mappings.
 
 ```csharp
-public System.Collections.Generic.IReadOnlyDictionary<String, Avalonia.Media.FontFamily> FontFamilyMappings { get; set; }
+public System.Collections.Generic.IReadOnlyDictionary<string, Avalonia.Media.FontFamily> FontFamilyMappings { get; set; }
 ```
+
+#### Remarks
+
+A font family mapping is used if a requested family name can't be resolved.
+
+</section>
 
 </ApiRefPage>
 

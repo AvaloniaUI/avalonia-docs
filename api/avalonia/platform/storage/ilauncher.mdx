@@ -55,37 +55,61 @@ public interface ILauncher
 | [LaunchFileAsync](#uid-903e2ae190) | Starts the default app associated with the specified storage file or folder. |
 | [LaunchUriAsync](#uid-76134789ef) | Starts the default app associated with the URI scheme name for the specified URI. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-903e2ae190"></span>
 
-### LaunchFileAsync
+### LaunchFileAsync Method
 
 Starts the default app associated with the specified storage file or folder.
 
 ```csharp
-public System.Threading.Tasks.Task<Boolean> LaunchFileAsync(Avalonia.Platform.Storage.IStorageItem storageItem)
+public System.Threading.Tasks.Task<bool> LaunchFileAsync(Avalonia.Platform.Storage.IStorageItem storageItem)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `storageItem` | The file or folder. |
+#### Parameters
 
-Returns: True, if launch operation was successful. False, if unsupported or failed.
+`storageItem` [Avalonia.Platform.Storage.IStorageItem](xref:Avalonia.Platform.Storage.IStorageItem)
+
+The file or folder.
+
+
+#### Returns
+
+System.Threading.Tasks.Task&lt;bool&gt;
+
+True, if launch operation was successful. False, if unsupported or failed.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-76134789ef"></span>
 
-### LaunchUriAsync
+### LaunchUriAsync Method
 
 Starts the default app associated with the URI scheme name for the specified URI.
 
 ```csharp
-public System.Threading.Tasks.Task<Boolean> LaunchUriAsync(Uri uri)
+public System.Threading.Tasks.Task<bool> LaunchUriAsync(Uri uri)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `uri` | The URI. |
+#### Parameters
 
-Returns: True, if launch operation was successful. False, if unsupported or failed.
+`uri` Uri
+
+The URI.
+
+
+#### Returns
+
+System.Threading.Tasks.Task&lt;bool&gt;
+
+True, if launch operation was successful. False, if unsupported or failed.
+
+
+</section>
 
 </ApiRefPage>
 

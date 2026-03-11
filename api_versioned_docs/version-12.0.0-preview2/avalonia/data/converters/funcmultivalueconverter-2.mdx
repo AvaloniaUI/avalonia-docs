@@ -54,7 +54,7 @@ public class FuncMultiValueConverter<TIn, TOut>
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> FuncMultiValueConverter&lt;TIn, TOut&gt;
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> FuncMultiValueConverter&lt;TIn, TOut&gt;
 </div>
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Implements:</span> <a href="imultivalueconverter">IMultiValueConverter</a>
@@ -71,21 +71,39 @@ public class FuncMultiValueConverter<TIn, TOut>
 
 ### FuncMultiValueConverter&lt;TIn, TOut&gt; overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-6e03fa0f18"></span>
 
-#### FuncMultiValueConverter&lt;TIn, TOut&gt;
+#### FuncMultiValueConverter&lt;TIn, TOut&gt; Constructor
 
 ```csharp
 public FuncMultiValueConverter<TIn, TOut>(Func<System.Collections.Generic.IEnumerable<TIn>, TOut> convert)
 ```
 
+##### Parameters
+
+`convert` Func&lt;System.Collections.Generic.IEnumerable&lt;TIn&gt;, TOut&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-b81597975c"></span>
 
-#### FuncMultiValueConverter&lt;TIn, TOut&gt;
+#### FuncMultiValueConverter&lt;TIn, TOut&gt; Constructor
 
 ```csharp
 public FuncMultiValueConverter<TIn, TOut>(Func<System.Collections.Generic.IReadOnlyList<TIn>, TOut> convert)
 ```
+
+##### Parameters
+
+`convert` Func&lt;System.Collections.Generic.IReadOnlyList&lt;TIn&gt;, TOut&gt;
+
+
+</section>
 
 ## Methods
 
@@ -93,13 +111,36 @@ public FuncMultiValueConverter<TIn, TOut>(Func<System.Collections.Generic.IReadO
 | --- | --- |
 | [Convert](#uid-3ae60970e3) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-3ae60970e3"></span>
 
-### Convert
+### Convert Method
 
 ```csharp
-public Object Convert(System.Collections.Generic.IList<Object> values, Type targetType, Object parameter, System.Globalization.CultureInfo culture)
+public object Convert(System.Collections.Generic.IList<object> values, Type targetType, object parameter, System.Globalization.CultureInfo culture)
 ```
+
+#### Parameters
+
+`values` System.Collections.Generic.IList&lt;object&gt;
+
+
+`targetType` Type
+
+
+`parameter` object
+
+
+`culture` System.Globalization.CultureInfo
+
+
+#### Returns
+
+object
+
+
+</section>
 
 </ApiRefPage>
 

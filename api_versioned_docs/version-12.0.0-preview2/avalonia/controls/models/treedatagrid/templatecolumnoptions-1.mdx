@@ -1,0 +1,115 @@
+---
+title: 'TemplateColumnOptions<TModel>'
+hide_title: true
+slug: '/avalonia/controls/models/treedatagrid/templatecolumnoptions-1'
+uid: 'Avalonia.Controls.Models.TreeDataGrid.TemplateColumnOptions`1'
+commentId: 'T:Avalonia.Controls.Models.TreeDataGrid.TemplateColumnOptions`1'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.TreeDataGrid'
+assembly: 'Avalonia.Controls.TreeDataGrid'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Models.TreeDataGrid'
+tfms:
+  - 'net8.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">TemplateColumnOptions&lt;TModel&gt; Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Models.TreeDataGrid</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Holds less commonly-used options for a [Avalonia.Controls.Models.TreeDataGrid.TemplateColumn&lt;T&gt;](xref:Avalonia.Controls.Models.TreeDataGrid.TemplateColumn%601).
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class TemplateColumnOptions<TModel>
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ColumnOptions&lt;&gt; <span className="apiref-page__relation-separator">-&gt;</span> TemplateColumnOptions&lt;TModel&gt;
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="icelloptions">ICellOptions</a>, <a href="itemplatecelloptions">ITemplateCellOptions</a>
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [TemplateColumnOptions&lt;TModel&gt;](#uid-a238fad61b) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a238fad61b"></span>
+
+### TemplateColumnOptions&lt;TModel&gt; Constructor
+
+```csharp
+public TemplateColumnOptions<TModel>()
+```
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [IsTextSearchEnabled](#uid-94ef2e064d) | Gets or sets a value indicating whether the column takes part in text searches. The default is false. |
+| [TextSearchValueSelector](#uid-11018f997d) | Gets or sets a function which selects the search text from a model. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-94ef2e064d"></span>
+
+### IsTextSearchEnabled Property
+
+Gets or sets a value indicating whether the column takes part in text searches. The
+default is false.
+
+```csharp
+public bool IsTextSearchEnabled { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-11018f997d"></span>
+
+### TextSearchValueSelector Property
+
+Gets or sets a function which selects the search text from a model.
+
+```csharp
+public Func<TModel, string> TextSearchValueSelector { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

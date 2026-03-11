@@ -54,13 +54,25 @@ public delegate LibDrm.DrmEventPageFlipHandler2Delegate
 | --- | --- |
 | [LibDrm.DrmEventPageFlipHandler2Delegate](#uid-64e00add63) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-64e00add63"></span>
 
-### LibDrm.DrmEventPageFlipHandler2Delegate
+### LibDrm.DrmEventPageFlipHandler2Delegate Constructor
 
 ```csharp
-public LibDrm.DrmEventPageFlipHandler2Delegate(Object object, IntPtr method)
+public LibDrm.DrmEventPageFlipHandler2Delegate(object object, IntPtr method)
 ```
+
+#### Parameters
+
+`object` object
+
+
+`method` IntPtr
+
+
+</section>
 
 ## Methods
 
@@ -70,29 +82,107 @@ public LibDrm.DrmEventPageFlipHandler2Delegate(Object object, IntPtr method)
 | [EndInvoke](#uid-7905068cf2) | No summary available. |
 | [Invoke](#uid-fae5e763d0) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-d1786ad15b"></span>
 
-### BeginInvoke
+### BeginInvoke Method
 
 ```csharp
-public IAsyncResult BeginInvoke(Int32 fd, UInt32 sequence, UInt32 tv_sec, UInt32 tv_usec, UInt32 crtc_id, Void* user_data, AsyncCallback callback, Object object)
+public IAsyncResult BeginInvoke(int fd, uint sequence, uint tv_sec, uint tv_usec, uint crtc_id, void* user_data, AsyncCallback callback, object object)
 ```
+
+#### Parameters
+
+`fd` int
+
+
+`sequence` uint
+
+
+`tv_sec` uint
+
+
+`tv_usec` uint
+
+
+`crtc_id` uint
+
+
+`user_data` void*
+
+
+`callback` AsyncCallback
+
+
+`object` object
+
+
+#### Returns
+
+IAsyncResult
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-7905068cf2"></span>
 
-### EndInvoke
+### EndInvoke Method
 
 ```csharp
 public IntPtr EndInvoke(IAsyncResult result)
 ```
 
+#### Parameters
+
+`result` IAsyncResult
+
+
+#### Returns
+
+IntPtr
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-fae5e763d0"></span>
 
-### Invoke
+### Invoke Method
 
 ```csharp
-public IntPtr Invoke(Int32 fd, UInt32 sequence, UInt32 tv_sec, UInt32 tv_usec, UInt32 crtc_id, Void* user_data)
+public IntPtr Invoke(int fd, uint sequence, uint tv_sec, uint tv_usec, uint crtc_id, void* user_data)
 ```
+
+#### Parameters
+
+`fd` int
+
+
+`sequence` uint
+
+
+`tv_sec` uint
+
+
+`tv_usec` uint
+
+
+`crtc_id` uint
+
+
+`user_data` void*
+
+
+#### Returns
+
+IntPtr
+
+
+</section>
 
 </ApiRefPage>
 

@@ -53,7 +53,7 @@ public class X11PlatformOptions
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> X11PlatformOptions
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> X11PlatformOptions
 </div>
 </div>
 
@@ -63,13 +63,17 @@ public class X11PlatformOptions
 | --- | --- |
 | [X11PlatformOptions](#uid-588c114393) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-588c114393"></span>
 
-### X11PlatformOptions
+### X11PlatformOptions Constructor
 
 ```csharp
 public X11PlatformOptions()
 ```
+
+</section>
 
 ## Properties
 
@@ -80,11 +84,11 @@ public X11PlatformOptions()
 | [EnableInputFocusProxy](#uid-67a20d0c32) | Determines whether to use Input Focus Proxy. The default value is false. |
 | [EnableMultiTouch](#uid-4065ae489e) | Enables multitouch support. The default value is true. |
 | [EnableSessionManagement](#uid-7ec896d638) | Determines whether to enable support for the X Session Management Protocol. |
-| [ExternalGLibMainLoopExceptionLogger](#uid-61102a9820) | If Avalonia is in control of a run loop, we propagate exceptions by stopping the run loop frame and rethrowing an exception. However, if there is no Avalonia-controlled run loop frame, there is no way to report such exceptions, since allowing those to escape native-&amp;gt;managed call boundary will likely brick GLib machinery since it's not aware of managed Exceptions This property allows to inspect such exceptions before they will be ignored |
+| [ExternalGLibMainLoopExceptionLogger](#uid-61102a9820) | If Avalonia is in control of a run loop, we propagate exceptions by stopping the run loop frame and rethrowing an exception. However, if there is no Avalonia-controlled run loop frame, there is no way to report such exceptions, since allowing those to escape native-&gt;managed call boundary will likely brick GLib machinery since it's not aware of managed Exceptions This property allows to inspect such exceptions before they will be ignored |
 | [GlProfiles](#uid-9d2c834088) | No summary available. |
 | [GlxRendererBlacklist](#uid-e68483e0ce) | No summary available. |
 | [OverlayPopups](#uid-bb565b2ba8) | Embeds popups to the window when set to true. The default value is false. |
-| [RenderingMode](#uid-1eb188c693) | Gets or sets Avalonia rendering modes with fallbacks. The first element in the array has the highest priority. The default value is: Avalonia.X11RenderingMode.Glx, Avalonia.X11RenderingMode.Software. |
+| [RenderingMode](#uid-1eb188c693) | Gets or sets Avalonia rendering modes with fallbacks. The first element in the array has the highest priority. The default value is: [Avalonia.X11RenderingMode.Glx](xref:Avalonia.X11RenderingMode.Glx), [Avalonia.X11RenderingMode.Software](xref:Avalonia.X11RenderingMode.Software). |
 | [ShouldRenderOnUIThread](#uid-82559e476f) | Render directly on the UI thread instead of using a dedicated render thread. This can be usable if your device don't have multiple cores to begin with. This setting is false by default. |
 | [UseDBusFilePicker](#uid-2ea5009019) | Enables DBus file picker instead of GTK. The default value is true. |
 | [UseDBusMenu](#uid-d169320b9a) | Enables global menu support on Linux desktop environments where it's supported (e. g. XFCE and MATE with plugin, KDE, etc). The default value is true. |
@@ -92,9 +96,11 @@ public X11PlatformOptions()
 | [UseRetainedFramebuffer](#uid-4179d7f252) | Retain window framebuffer contents if using CPU rendering mode. This will keep an offscreen bitmap for each window with contents of the previous frame While improving performance by saving a blit, it will increase memory consumption if you have many windows |
 | [WmClass](#uid-101d63096a) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-74eb15252c"></span>
 
-### EnableDrawnDecorations
+### EnableDrawnDecorations Property
 
 Enables client-side drawn window decorations on X11.
 When true and ExtendClientAreaToDecorationsHint is set on a window,
@@ -102,55 +108,90 @@ Avalonia will draw its own decorations (titlebar, borders, resize grips)
 instead of using the X11 window manager decorations.
 
 ```csharp
-public Nullable<Boolean> EnableDrawnDecorations { get; set; }
+public Nullable<bool> EnableDrawnDecorations { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-207077efd0"></span>
 
-### EnableIme
+### EnableIme Property
 
 Determines whether to use IME.
 IME would be enabled by default if the current user input language is one of the following: Mandarin, Japanese, Vietnamese or Korean.
 
 ```csharp
-public Nullable<Boolean> EnableIme { get; set; }
+public Nullable<bool> EnableIme { get; set; }
 ```
+
+#### Remarks
+
+Input method editor is a component that enables users to generate characters not natively available
+on their input devices by using sequences of characters or mouse operations that are natively available on their input devices.
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-67a20d0c32"></span>
 
-### EnableInputFocusProxy
+### EnableInputFocusProxy Property
 
 Determines whether to use Input Focus Proxy.
 The default value is false.
 
 ```csharp
-public Boolean EnableInputFocusProxy { get; set; }
+public bool EnableInputFocusProxy { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-4065ae489e"></span>
 
-### EnableMultiTouch
+### EnableMultiTouch Property
 
 Enables multitouch support. The default value is true.
 
 ```csharp
-public Nullable<Boolean> EnableMultiTouch { get; set; }
+public Nullable<bool> EnableMultiTouch { get; set; }
 ```
+
+#### Remarks
+
+Multitouch allows a surface (a touchpad or touchscreen) to recognize the presence of more than one point of contact with the surface at the same time.
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-7ec896d638"></span>
 
-### EnableSessionManagement
+### EnableSessionManagement Property
 
 Determines whether to enable support for the
 X Session Management Protocol.
 
 ```csharp
-public Boolean EnableSessionManagement { get; set; }
+public bool EnableSessionManagement { get; set; }
 ```
+
+#### Remarks
+
+X Session Management Protocol is a standard implemented on most
+Linux systems that uses Xorg. This enables apps to control how they
+can control and/or cancel the pending shutdown requested by the user.
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-61102a9820"></span>
 
-### ExternalGLibMainLoopExceptionLogger
+### ExternalGLibMainLoopExceptionLogger Property
 
 If Avalonia is in control of a run loop, we propagate exceptions by stopping the run loop frame
 and rethrowing an exception. However, if there is no Avalonia-controlled run loop frame,
@@ -162,35 +203,51 @@ This property allows to inspect such exceptions before they will be ignored
 public Action<Exception> ExternalGLibMainLoopExceptionLogger { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-9d2c834088"></span>
 
-### GlProfiles
+### GlProfiles Property
 
 ```csharp
 public System.Collections.Generic.IList<Avalonia.OpenGL.GlVersion> GlProfiles { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-e68483e0ce"></span>
 
-### GlxRendererBlacklist
+### GlxRendererBlacklist Property
 
 ```csharp
-public System.Collections.Generic.IList<String> GlxRendererBlacklist { get; set; }
+public System.Collections.Generic.IList<string> GlxRendererBlacklist { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-bb565b2ba8"></span>
 
-### OverlayPopups
+### OverlayPopups Property
 
 Embeds popups to the window when set to true. The default value is false.
 
 ```csharp
-public Boolean OverlayPopups { get; set; }
+public bool OverlayPopups { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-1eb188c693"></span>
 
-### RenderingMode
+### RenderingMode Property
 
 Gets or sets Avalonia rendering modes with fallbacks.
 The first element in the array has the highest priority.
@@ -200,59 +257,83 @@ The default value is: [Avalonia.X11RenderingMode.Glx](xref:Avalonia.X11Rendering
 public System.Collections.Generic.IReadOnlyList<Avalonia.X11RenderingMode> RenderingMode { get; set; }
 ```
 
+#### Remarks
+
+If application should work on as wide range of devices as possible, at least add [Avalonia.X11RenderingMode.Software](xref:Avalonia.X11RenderingMode.Software) as a fallback value.
+
 #### Exceptions
 
 - [Thrown if no values were matched.](xref:System.InvalidOperationException)
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-82559e476f"></span>
 
-### ShouldRenderOnUIThread
+### ShouldRenderOnUIThread Property
 
 Render directly on the UI thread instead of using a dedicated render thread.
 This can be usable if your device don't have multiple cores to begin with.
 This setting is false by default.
 
 ```csharp
-public Boolean ShouldRenderOnUIThread { get; set; }
+public bool ShouldRenderOnUIThread { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-2ea5009019"></span>
 
-### UseDBusFilePicker
+### UseDBusFilePicker Property
 
 Enables DBus file picker instead of GTK.
 The default value is true.
 
 ```csharp
-public Boolean UseDBusFilePicker { get; set; }
+public bool UseDBusFilePicker { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-d169320b9a"></span>
 
-### UseDBusMenu
+### UseDBusMenu Property
 
 Enables global menu support on Linux desktop environments where it's supported (e. g. XFCE and MATE with plugin, KDE, etc).
 The default value is true.
 
 ```csharp
-public Boolean UseDBusMenu { get; set; }
+public bool UseDBusMenu { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-d79a79f8ea"></span>
 
-### UseGLibMainLoop
+### UseGLibMainLoop Property
 
 If this option is set to true, GMainLoop and GSource based dispatcher implementation will be used instead
 of epoll-based one.
 Use this if you need to use GLib-based libraries on the main thread
 
 ```csharp
-public Boolean UseGLibMainLoop { get; set; }
+public bool UseGLibMainLoop { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-4179d7f252"></span>
 
-### UseRetainedFramebuffer
+### UseRetainedFramebuffer Property
 
 Retain window framebuffer contents if using CPU rendering mode.
 This will keep an offscreen bitmap for each window with contents of the previous frame
@@ -260,16 +341,22 @@ While improving performance by saving a blit, it will increase memory consumptio
 if you have many windows
 
 ```csharp
-public Nullable<Boolean> UseRetainedFramebuffer { get; set; }
+public Nullable<bool> UseRetainedFramebuffer { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-101d63096a"></span>
 
-### WmClass
+### WmClass Property
 
 ```csharp
-public String WmClass { get; set; }
+public string WmClass { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

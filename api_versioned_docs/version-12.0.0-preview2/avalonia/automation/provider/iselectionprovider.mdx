@@ -55,15 +55,29 @@ public interface ISelectionProvider
 | --- | --- |
 | [GetSelection](#uid-3792f3ac45) | Retrieves a provider for each child element that is selected. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-3792f3ac45"></span>
 
-### GetSelection
+### GetSelection Method
 
 Retrieves a provider for each child element that is selected.
 
 ```csharp
 public System.Collections.Generic.IReadOnlyList<Avalonia.Automation.Peers.AutomationPeer> GetSelection()
 ```
+
+#### Returns
+
+System.Collections.Generic.IReadOnlyList&lt;[Avalonia.Automation.Peers.AutomationPeer](xref:Avalonia.Automation.Peers.AutomationPeer)&gt;
+
+
+#### Remarks
+
+- Windows`ISelectionProvider.GetSelection`
+- macOS`NSAccessibilityProtocol.accessibilitySelectedChildren` (not implemented).
+
+</section>
 
 ## Properties
 
@@ -72,27 +86,45 @@ public System.Collections.Generic.IReadOnlyList<Avalonia.Automation.Peers.Automa
 | [CanSelectMultiple](#uid-2169c399fa) | Gets a value that indicates whether the provider allows more than one child element to be selected concurrently. |
 | [IsSelectionRequired](#uid-82f4df0e29) | Gets a value that indicates whether the provider requires at least one child element to be selected. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-2169c399fa"></span>
 
-### CanSelectMultiple
+### CanSelectMultiple Property
 
 Gets a value that indicates whether the provider allows more than one child element
 to be selected concurrently.
 
 ```csharp
-public Boolean CanSelectMultiple { get; set; }
+public bool CanSelectMultiple { get; set; }
 ```
+
+#### Remarks
+
+- Windows`ISelectionProvider.CanSelectMultiple`
+- macOSNo mapping.
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-82f4df0e29"></span>
 
-### IsSelectionRequired
+### IsSelectionRequired Property
 
 Gets a value that indicates whether the provider requires at least one child element
 to be selected.
 
 ```csharp
-public Boolean IsSelectionRequired { get; set; }
+public bool IsSelectionRequired { get; set; }
 ```
+
+#### Remarks
+
+- Windows`ISelectionProvider.IsSelectionRequired`
+- macOSNo mapping.
+
+</section>
 
 </ApiRefPage>
 

@@ -53,7 +53,7 @@ public class ImmutableSolidColorBrush
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> ImmutableSolidColorBrush
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> ImmutableSolidColorBrush
 </div>
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Implements:</span> <a href="../ibrush">IBrush</a>, <a href="../iimmutablebrush">IImmutableBrush</a>, <a href="../iimmutablesolidcolorbrush">IImmutableSolidColorBrush</a>, <a href="../isolidcolorbrush">ISolidColorBrush</a>, IEquatable&lt;ImmutableSolidColorBrush&gt;
@@ -64,31 +64,48 @@ public class ImmutableSolidColorBrush
 
 | Name | Description |
 | --- | --- |
-| [ImmutableSolidColorBrush (3 overloads)](#uid-b2964f0ad0) | Initializes a new instance of the Avalonia.Media.Immutable.ImmutableSolidColorBrush class. |
+| [ImmutableSolidColorBrush (3 overloads)](#uid-b2964f0ad0) | Initializes a new instance of the [Avalonia.Media.Immutable.ImmutableSolidColorBrush](xref:Avalonia.Media.Immutable.ImmutableSolidColorBrush) class. |
 
 <span id="uid-b2964f0ad0"></span>
 
 ### ImmutableSolidColorBrush overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-4017cf5783"></span>
 
-#### ImmutableSolidColorBrush
+#### ImmutableSolidColorBrush Constructor
 
 Initializes a new instance of the [Avalonia.Media.Immutable.ImmutableSolidColorBrush](xref:Avalonia.Media.Immutable.ImmutableSolidColorBrush) class.
 
 ```csharp
-public ImmutableSolidColorBrush(Avalonia.Media.Color color, Double opacity, Avalonia.Media.Immutable.ImmutableTransform transform)
+public ImmutableSolidColorBrush(Avalonia.Media.Color color, double opacity, Avalonia.Media.Immutable.ImmutableTransform transform)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `color` | The color to use. |
-| `opacity` | The opacity of the brush. |
-| `transform` | The transform of the brush. |
+##### Parameters
+
+`color` [Avalonia.Media.Color](xref:Avalonia.Media.Color)
+
+The color to use.
+
+
+`opacity` double
+
+The opacity of the brush.
+
+
+`transform` [Avalonia.Media.Immutable.ImmutableTransform](xref:Avalonia.Media.Immutable.ImmutableTransform)
+
+The transform of the brush.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-ab0b986eb7"></span>
 
-#### ImmutableSolidColorBrush
+#### ImmutableSolidColorBrush Constructor
 
 Initializes a new instance of the [Avalonia.Media.Immutable.ImmutableSolidColorBrush](xref:Avalonia.Media.Immutable.ImmutableSolidColorBrush) class.
 
@@ -96,23 +113,35 @@ Initializes a new instance of the [Avalonia.Media.Immutable.ImmutableSolidColorB
 public ImmutableSolidColorBrush(Avalonia.Media.ISolidColorBrush source)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `source` | The brush from which this brush's properties should be copied. |
+##### Parameters
+
+`source` [Avalonia.Media.ISolidColorBrush](xref:Avalonia.Media.ISolidColorBrush)
+
+The brush from which this brush's properties should be copied.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-9c335816da"></span>
 
-#### ImmutableSolidColorBrush
+#### ImmutableSolidColorBrush Constructor
 
 Initializes a new instance of the [Avalonia.Media.Immutable.ImmutableSolidColorBrush](xref:Avalonia.Media.Immutable.ImmutableSolidColorBrush) class.
 
 ```csharp
-public ImmutableSolidColorBrush(UInt32 color)
+public ImmutableSolidColorBrush(uint color)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `color` | The color to use. |
+##### Parameters
+
+`color` uint
+
+The color to use.
+
+
+</section>
 
 ## Methods
 
@@ -126,41 +155,87 @@ public ImmutableSolidColorBrush(UInt32 color)
 
 ### Equals overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-f5c50d0f3b"></span>
 
-#### Equals
+#### Equals Method
 
 ```csharp
-public Boolean Equals(Avalonia.Media.Immutable.ImmutableSolidColorBrush other)
+public bool Equals(Avalonia.Media.Immutable.ImmutableSolidColorBrush other)
 ```
+
+##### Parameters
+
+`other` [Avalonia.Media.Immutable.ImmutableSolidColorBrush](xref:Avalonia.Media.Immutable.ImmutableSolidColorBrush)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-814be2e759"></span>
 
-#### Equals
+#### Equals Method
 
 ```csharp
-public Boolean Equals(Object obj)
+public bool Equals(object obj)
 ```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-97558080ec"></span>
 
-### GetHashCode
+### GetHashCode Method
 
 ```csharp
-public Int32 GetHashCode()
+public int GetHashCode()
 ```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-5005dc788d"></span>
 
-### ToString
+### ToString Method
 
 Returns a string representation of the brush.
 
 ```csharp
-public String ToString()
+public string ToString()
 ```
 
-Returns: A string representation of the brush.
+#### Returns
+
+string
+
+A string representation of the brush.
+
+
+</section>
 
 ## Properties
 
@@ -171,9 +246,11 @@ Returns: A string representation of the brush.
 | [Transform](#uid-7f7b5e1fec) | Gets the transform of the brush. |
 | [TransformOrigin](#uid-a9dec65fbb) | Gets the transform origin of the brush |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-a4632b94c1"></span>
 
-### Color
+### Color Property
 
 Gets the color of the brush.
 
@@ -181,19 +258,27 @@ Gets the color of the brush.
 public Avalonia.Media.Color Color { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-3ee45f50c4"></span>
 
-### Opacity
+### Opacity Property
 
 Gets the opacity of the brush.
 
 ```csharp
-public Double Opacity { get; set; }
+public double Opacity { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-7f7b5e1fec"></span>
 
-### Transform
+### Transform Property
 
 Gets the transform of the brush.
 
@@ -201,15 +286,21 @@ Gets the transform of the brush.
 public Avalonia.Media.ITransform Transform { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-a9dec65fbb"></span>
 
-### TransformOrigin
+### TransformOrigin Property
 
 Gets the transform origin of the brush
 
 ```csharp
 public Avalonia.RelativePoint TransformOrigin { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

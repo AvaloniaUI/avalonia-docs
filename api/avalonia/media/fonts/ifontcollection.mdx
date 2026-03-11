@@ -70,45 +70,172 @@ characters to typefaces, and obtain glyph typefaces based on specific font prope
 | [TryGetNearestMatch](#uid-0fec697313) | No summary available. |
 | [TryMatchCharacter](#uid-8c928c04ca) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-1c3aa817f3"></span>
 
-### TryCreateSyntheticGlyphTypeface
+### TryCreateSyntheticGlyphTypeface Method
 
 ```csharp
-public Boolean TryCreateSyntheticGlyphTypeface(Avalonia.Media.GlyphTypeface glyphTypeface, Avalonia.Media.FontStyle style, Avalonia.Media.FontWeight weight, Avalonia.Media.FontStretch stretch, Avalonia.Media.GlyphTypeface& syntheticGlyphTypeface)
+public bool TryCreateSyntheticGlyphTypeface(Avalonia.Media.GlyphTypeface glyphTypeface, Avalonia.Media.FontStyle style, Avalonia.Media.FontWeight weight, Avalonia.Media.FontStretch stretch, Avalonia.Media.GlyphTypeface& syntheticGlyphTypeface)
 ```
+
+#### Parameters
+
+`glyphTypeface` [Avalonia.Media.GlyphTypeface](xref:Avalonia.Media.GlyphTypeface)
+
+
+`style` [Avalonia.Media.FontStyle](xref:Avalonia.Media.FontStyle)
+
+
+`weight` [Avalonia.Media.FontWeight](xref:Avalonia.Media.FontWeight)
+
+
+`stretch` [Avalonia.Media.FontStretch](xref:Avalonia.Media.FontStretch)
+
+
+`syntheticGlyphTypeface` [Avalonia.Media.GlyphTypeface](xref:Avalonia.Media.GlyphTypeface)&amp;
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-535a1f6c5a"></span>
 
-### TryGetFamilyTypefaces
+### TryGetFamilyTypefaces Method
 
 ```csharp
-public Boolean TryGetFamilyTypefaces(String familyName, System.Collections.Generic.IReadOnlyList<Avalonia.Media.Typeface>& familyTypefaces)
+public bool TryGetFamilyTypefaces(string familyName, System.Collections.Generic.IReadOnlyList<Avalonia.Media.Typeface>& familyTypefaces)
 ```
+
+#### Parameters
+
+`familyName` string
+
+
+`familyTypefaces` System.Collections.Generic.IReadOnlyList&lt;[Avalonia.Media.Typeface](xref:Avalonia.Media.Typeface)&gt;&amp;
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-ebfb3e8f85"></span>
 
-### TryGetGlyphTypeface
+### TryGetGlyphTypeface Method
 
 ```csharp
-public Boolean TryGetGlyphTypeface(String familyName, Avalonia.Media.FontStyle style, Avalonia.Media.FontWeight weight, Avalonia.Media.FontStretch stretch, Avalonia.Media.GlyphTypeface& glyphTypeface)
+public bool TryGetGlyphTypeface(string familyName, Avalonia.Media.FontStyle style, Avalonia.Media.FontWeight weight, Avalonia.Media.FontStretch stretch, Avalonia.Media.GlyphTypeface& glyphTypeface)
 ```
+
+#### Parameters
+
+`familyName` string
+
+
+`style` [Avalonia.Media.FontStyle](xref:Avalonia.Media.FontStyle)
+
+
+`weight` [Avalonia.Media.FontWeight](xref:Avalonia.Media.FontWeight)
+
+
+`stretch` [Avalonia.Media.FontStretch](xref:Avalonia.Media.FontStretch)
+
+
+`glyphTypeface` [Avalonia.Media.GlyphTypeface](xref:Avalonia.Media.GlyphTypeface)&amp;
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-0fec697313"></span>
 
-### TryGetNearestMatch
+### TryGetNearestMatch Method
 
 ```csharp
-public Boolean TryGetNearestMatch(String familyName, Avalonia.Media.FontStyle style, Avalonia.Media.FontWeight weight, Avalonia.Media.FontStretch stretch, Avalonia.Media.GlyphTypeface& glyphTypeface)
+public bool TryGetNearestMatch(string familyName, Avalonia.Media.FontStyle style, Avalonia.Media.FontWeight weight, Avalonia.Media.FontStretch stretch, Avalonia.Media.GlyphTypeface& glyphTypeface)
 ```
+
+#### Parameters
+
+`familyName` string
+
+
+`style` [Avalonia.Media.FontStyle](xref:Avalonia.Media.FontStyle)
+
+
+`weight` [Avalonia.Media.FontWeight](xref:Avalonia.Media.FontWeight)
+
+
+`stretch` [Avalonia.Media.FontStretch](xref:Avalonia.Media.FontStretch)
+
+
+`glyphTypeface` [Avalonia.Media.GlyphTypeface](xref:Avalonia.Media.GlyphTypeface)&amp;
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-8c928c04ca"></span>
 
-### TryMatchCharacter
+### TryMatchCharacter Method
 
 ```csharp
-public Boolean TryMatchCharacter(Int32 codepoint, Avalonia.Media.FontStyle fontStyle, Avalonia.Media.FontWeight fontWeight, Avalonia.Media.FontStretch fontStretch, String familyName, System.Globalization.CultureInfo culture, Avalonia.Media.Typeface& typeface)
+public bool TryMatchCharacter(int codepoint, Avalonia.Media.FontStyle fontStyle, Avalonia.Media.FontWeight fontWeight, Avalonia.Media.FontStretch fontStretch, string familyName, System.Globalization.CultureInfo culture, Avalonia.Media.Typeface& typeface)
 ```
+
+#### Parameters
+
+`codepoint` int
+
+
+`fontStyle` [Avalonia.Media.FontStyle](xref:Avalonia.Media.FontStyle)
+
+
+`fontWeight` [Avalonia.Media.FontWeight](xref:Avalonia.Media.FontWeight)
+
+
+`fontStretch` [Avalonia.Media.FontStretch](xref:Avalonia.Media.FontStretch)
+
+
+`familyName` string
+
+
+`culture` System.Globalization.CultureInfo
+
+
+`typeface` [Avalonia.Media.Typeface](xref:Avalonia.Media.Typeface)&amp;
+
+
+#### Returns
+
+bool
+
+
+</section>
 
 ## Properties
 
@@ -116,15 +243,19 @@ public Boolean TryMatchCharacter(Int32 codepoint, Avalonia.Media.FontStyle fontS
 | --- | --- |
 | [Key](#uid-dcc4272e5f) | Get the font collection's key. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-dcc4272e5f"></span>
 
-### Key
+### Key Property
 
 Get the font collection's key.
 
 ```csharp
 public Uri Key { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

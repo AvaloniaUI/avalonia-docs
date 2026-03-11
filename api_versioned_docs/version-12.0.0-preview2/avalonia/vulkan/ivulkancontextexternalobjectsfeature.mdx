@@ -50,29 +50,74 @@ public interface IVulkanContextExternalObjectsFeature
 | [ImportImage](#uid-4d4912f975) | No summary available. |
 | [ImportSemaphore](#uid-cb3209e8d4) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-be5c110680"></span>
 
-### GetSynchronizationCapabilities
+### GetSynchronizationCapabilities Method
 
 ```csharp
-public Avalonia.Rendering.Composition.CompositionGpuImportedImageSynchronizationCapabilities GetSynchronizationCapabilities(String imageHandleType)
+public Avalonia.Rendering.Composition.CompositionGpuImportedImageSynchronizationCapabilities GetSynchronizationCapabilities(string imageHandleType)
 ```
+
+#### Parameters
+
+`imageHandleType` string
+
+
+#### Returns
+
+[Avalonia.Rendering.Composition.CompositionGpuImportedImageSynchronizationCapabilities](xref:Avalonia.Rendering.Composition.CompositionGpuImportedImageSynchronizationCapabilities)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-4d4912f975"></span>
 
-### ImportImage
+### ImportImage Method
 
 ```csharp
 public Avalonia.Vulkan.IVulkanExternalImage ImportImage(Avalonia.Platform.IPlatformHandle handle, Avalonia.Platform.PlatformGraphicsExternalImageProperties properties)
 ```
 
+#### Parameters
+
+`handle` [Avalonia.Platform.IPlatformHandle](xref:Avalonia.Platform.IPlatformHandle)
+
+
+`properties` [Avalonia.Platform.PlatformGraphicsExternalImageProperties](xref:Avalonia.Platform.PlatformGraphicsExternalImageProperties)
+
+
+#### Returns
+
+[Avalonia.Vulkan.IVulkanExternalImage](xref:Avalonia.Vulkan.IVulkanExternalImage)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-cb3209e8d4"></span>
 
-### ImportSemaphore
+### ImportSemaphore Method
 
 ```csharp
 public Avalonia.Vulkan.IVulkanExternalSemaphore ImportSemaphore(Avalonia.Platform.IPlatformHandle handle)
 ```
+
+#### Parameters
+
+`handle` [Avalonia.Platform.IPlatformHandle](xref:Avalonia.Platform.IPlatformHandle)
+
+
+#### Returns
+
+[Avalonia.Vulkan.IVulkanExternalSemaphore](xref:Avalonia.Vulkan.IVulkanExternalSemaphore)
+
+
+</section>
 
 ## Properties
 
@@ -83,37 +128,53 @@ public Avalonia.Vulkan.IVulkanExternalSemaphore ImportSemaphore(Avalonia.Platfor
 | [SupportedImageHandleTypes](#uid-f0a41bce61) | No summary available. |
 | [SupportedSemaphoreTypes](#uid-3fb979e3f5) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-94e9e5a7cd"></span>
 
-### DeviceLuid
+### DeviceLuid Property
 
 ```csharp
-public Byte[] DeviceLuid { get; set; }
+public byte[] DeviceLuid { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-5c8742de9d"></span>
 
-### DeviceUuid
+### DeviceUuid Property
 
 ```csharp
-public Byte[] DeviceUuid { get; set; }
+public byte[] DeviceUuid { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-f0a41bce61"></span>
 
-### SupportedImageHandleTypes
+### SupportedImageHandleTypes Property
 
 ```csharp
-public System.Collections.Generic.IReadOnlyList<String> SupportedImageHandleTypes { get; set; }
+public System.Collections.Generic.IReadOnlyList<string> SupportedImageHandleTypes { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-3fb979e3f5"></span>
 
-### SupportedSemaphoreTypes
+### SupportedSemaphoreTypes Property
 
 ```csharp
-public System.Collections.Generic.IReadOnlyList<String> SupportedSemaphoreTypes { get; set; }
+public System.Collections.Generic.IReadOnlyList<string> SupportedSemaphoreTypes { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

@@ -53,7 +53,7 @@ public class WindowDecorationProperties
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> WindowDecorationProperties
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> WindowDecorationProperties
 </div>
 </div>
 
@@ -61,12 +61,14 @@ public class WindowDecorationProperties
 
 | Name | Description |
 | --- | --- |
-| [GetElementRole](#uid-9d67656f23) | Gets the Avalonia.Input.WindowDecorationsElementRole for the specified element. |
-| [SetElementRole](#uid-7f4861a389) | Sets the Avalonia.Input.WindowDecorationsElementRole for the specified element. |
+| [GetElementRole](#uid-9d67656f23) | Gets the [Avalonia.Input.WindowDecorationsElementRole](xref:Avalonia.Input.WindowDecorationsElementRole) for the specified element. |
+| [SetElementRole](#uid-7f4861a389) | Sets the [Avalonia.Input.WindowDecorationsElementRole](xref:Avalonia.Input.WindowDecorationsElementRole) for the specified element. |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-9d67656f23"></span>
 
-### GetElementRole
+### GetElementRole Method
 
 Gets the [Avalonia.Input.WindowDecorationsElementRole](xref:Avalonia.Input.WindowDecorationsElementRole) for the specified element.
 
@@ -74,25 +76,51 @@ Gets the [Avalonia.Input.WindowDecorationsElementRole](xref:Avalonia.Input.Windo
 public Avalonia.Input.WindowDecorationsElementRole GetElementRole(Avalonia.Visual element)
 ```
 
+#### Parameters
+
+`element` [Avalonia.Visual](xref:Avalonia.Visual)
+
+
+#### Returns
+
+[Avalonia.Input.WindowDecorationsElementRole](xref:Avalonia.Input.WindowDecorationsElementRole)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-7f4861a389"></span>
 
-### SetElementRole
+### SetElementRole Method
 
 Sets the [Avalonia.Input.WindowDecorationsElementRole](xref:Avalonia.Input.WindowDecorationsElementRole) for the specified element.
 
 ```csharp
-public Void SetElementRole(Avalonia.Visual element, Avalonia.Input.WindowDecorationsElementRole value)
+public void SetElementRole(Avalonia.Visual element, Avalonia.Input.WindowDecorationsElementRole value)
 ```
+
+#### Parameters
+
+`element` [Avalonia.Visual](xref:Avalonia.Visual)
+
+
+`value` [Avalonia.Input.WindowDecorationsElementRole](xref:Avalonia.Input.WindowDecorationsElementRole)
+
+
+</section>
 
 ## Fields
 
 | Name | Description |
 | --- | --- |
-| [ElementRoleProperty](#uid-05e1fd3e4c) | Defines the Avalonia.Input.WindowDecorationsElementRole attached property. Marks a visual element with a specific role for non-client hit-testing. Can be applied to any element in the visual tree, not limited to decoration children. |
+| [ElementRoleProperty](#uid-05e1fd3e4c) | Defines the [Avalonia.Input.WindowDecorationsElementRole](xref:Avalonia.Input.WindowDecorationsElementRole) attached property. Marks a visual element with a specific role for non-client hit-testing. Can be applied to any element in the visual tree, not limited to decoration children. |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-05e1fd3e4c"></span>
 
-### ElementRoleProperty
+### ElementRoleProperty Field
 
 Defines the [Avalonia.Input.WindowDecorationsElementRole](xref:Avalonia.Input.WindowDecorationsElementRole) attached property.
 Marks a visual element with a specific role for non-client hit-testing.
@@ -101,6 +129,8 @@ Can be applied to any element in the visual tree, not limited to decoration chil
 ```csharp
 public Avalonia.AttachedProperty<Avalonia.Input.WindowDecorationsElementRole> ElementRoleProperty
 ```
+
+</section>
 
 </ApiRefPage>
 

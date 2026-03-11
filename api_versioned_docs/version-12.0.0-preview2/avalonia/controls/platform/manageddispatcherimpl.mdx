@@ -47,7 +47,7 @@ public class ManagedDispatcherImpl
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> ManagedDispatcherImpl
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> ManagedDispatcherImpl
 </div>
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Implements:</span> <a href="../../threading/icontrolleddispatcherimpl">IControlledDispatcherImpl</a>, <a href="../../threading/idispatcherimpl">IDispatcherImpl</a>, <a href="../../threading/idispatcherimplwithpendinginput">IDispatcherImplWithPendingInput</a>
@@ -60,13 +60,22 @@ public class ManagedDispatcherImpl
 | --- | --- |
 | [ManagedDispatcherImpl](#uid-2868e17bf4) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-2868e17bf4"></span>
 
-### ManagedDispatcherImpl
+### ManagedDispatcherImpl Constructor
 
 ```csharp
 public ManagedDispatcherImpl(Avalonia.Controls.Platform.ManagedDispatcherImpl.IManagedDispatcherInputProvider inputProvider)
 ```
+
+#### Parameters
+
+`inputProvider` [Avalonia.Controls.Platform.ManagedDispatcherImpl.IManagedDispatcherInputProvider](xref:Avalonia.Controls.Platform.ManagedDispatcherImpl.IManagedDispatcherInputProvider)
+
+
+</section>
 
 ## Methods
 
@@ -76,29 +85,51 @@ public ManagedDispatcherImpl(Avalonia.Controls.Platform.ManagedDispatcherImpl.IM
 | [Signal](#uid-d8dc46671a) | No summary available. |
 | [UpdateTimer](#uid-1d763fa82e) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-c2be68c290"></span>
 
-### RunLoop
+### RunLoop Method
 
 ```csharp
-public Void RunLoop(System.Threading.CancellationToken token)
+public void RunLoop(System.Threading.CancellationToken token)
 ```
+
+#### Parameters
+
+`token` System.Threading.CancellationToken
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-d8dc46671a"></span>
 
-### Signal
+### Signal Method
 
 ```csharp
-public Void Signal()
+public void Signal()
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-1d763fa82e"></span>
 
-### UpdateTimer
+### UpdateTimer Method
 
 ```csharp
-public Void UpdateTimer(Nullable<Int64> dueTimeInMs)
+public void UpdateTimer(Nullable<long> dueTimeInMs)
 ```
+
+#### Parameters
+
+`dueTimeInMs` Nullable&lt;long&gt;
+
+
+</section>
 
 ## Properties
 
@@ -109,37 +140,53 @@ public Void UpdateTimer(Nullable<Int64> dueTimeInMs)
 | [HasPendingInput](#uid-56407130c3) | No summary available. |
 | [Now](#uid-dfd6ad815b) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-0330f85e43"></span>
 
-### CanQueryPendingInput
+### CanQueryPendingInput Property
 
 ```csharp
-public Boolean CanQueryPendingInput { get; set; }
+public bool CanQueryPendingInput { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-0d306eb2f5"></span>
 
-### CurrentThreadIsLoopThread
+### CurrentThreadIsLoopThread Property
 
 ```csharp
-public Boolean CurrentThreadIsLoopThread { get; set; }
+public bool CurrentThreadIsLoopThread { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-56407130c3"></span>
 
-### HasPendingInput
+### HasPendingInput Property
 
 ```csharp
-public Boolean HasPendingInput { get; set; }
+public bool HasPendingInput { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-dfd6ad815b"></span>
 
-### Now
+### Now Property
 
 ```csharp
-public Int64 Now { get; set; }
+public long Now { get; set; }
 ```
+
+</section>
 
 ## Events
 
@@ -148,21 +195,29 @@ public Int64 Now { get; set; }
 | [Signaled](#uid-ae25cc2c8c) | No summary available. |
 | [Timer](#uid-812e18a620) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-ae25cc2c8c"></span>
 
-### Signaled
+### Signaled Event
 
 ```csharp
 public event Action Signaled
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-812e18a620"></span>
 
-### Timer
+### Timer Event
 
 ```csharp
 public event Action Timer
 ```
+
+</section>
 
 </ApiRefPage>
 

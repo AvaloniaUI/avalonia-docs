@@ -69,28 +69,46 @@ and it can choose to do handle the scroll information as it sees fit.
 | --- | --- |
 | [BringIntoView](#uid-7a441f823b) | Attempts to bring a portion of the target visual into view by scrolling the content. |
 | [GetControlInDirection](#uid-85afdefcde) | Gets the next control in the specified direction. |
-| [RaiseScrollInvalidated](#uid-b141a23642) | Raises the Avalonia.Controls.Primitives.ILogicalScrollable.ScrollInvalidated event. |
+| [RaiseScrollInvalidated](#uid-b141a23642) | Raises the [Avalonia.Controls.Primitives.ILogicalScrollable.ScrollInvalidated](xref:Avalonia.Controls.Primitives.ILogicalScrollable.ScrollInvalidated) event. |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-7a441f823b"></span>
 
-### BringIntoView
+### BringIntoView Method
 
 Attempts to bring a portion of the target visual into view by scrolling the content.
 
 ```csharp
-public Boolean BringIntoView(Avalonia.Controls.Control target, Avalonia.Rect targetRect)
+public bool BringIntoView(Avalonia.Controls.Control target, Avalonia.Rect targetRect)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `target` | The target visual. |
-| `targetRect` | The portion of the target visual to bring into view. |
+#### Parameters
 
-Returns: True if the scroll offset was changed; otherwise false.
+`target` [Avalonia.Controls.Control](xref:Avalonia.Controls.Control)
+
+The target visual.
+
+
+`targetRect` [Avalonia.Rect](xref:Avalonia.Rect)
+
+The portion of the target visual to bring into view.
+
+
+#### Returns
+
+bool
+
+True if the scroll offset was changed; otherwise false.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-85afdefcde"></span>
 
-### GetControlInDirection
+### GetControlInDirection Method
 
 Gets the next control in the specified direction.
 
@@ -98,26 +116,47 @@ Gets the next control in the specified direction.
 public Avalonia.Controls.Control GetControlInDirection(Avalonia.Input.NavigationDirection direction, Avalonia.Controls.Control from)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `direction` | The movement direction. |
-| `from` | The control from which movement begins. |
+#### Parameters
 
-Returns: The control.
+`direction` [Avalonia.Input.NavigationDirection](xref:Avalonia.Input.NavigationDirection)
+
+The movement direction.
+
+
+`from` [Avalonia.Controls.Control](xref:Avalonia.Controls.Control)
+
+The control from which movement begins.
+
+
+#### Returns
+
+[Avalonia.Controls.Control](xref:Avalonia.Controls.Control)
+
+The control.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-b141a23642"></span>
 
-### RaiseScrollInvalidated
+### RaiseScrollInvalidated Method
 
 Raises the [Avalonia.Controls.Primitives.ILogicalScrollable.ScrollInvalidated](xref:Avalonia.Controls.Primitives.ILogicalScrollable.ScrollInvalidated) event.
 
 ```csharp
-public Void RaiseScrollInvalidated(EventArgs e)
+public void RaiseScrollInvalidated(EventArgs e)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `e` | The event args. |
+#### Parameters
+
+`e` EventArgs
+
+The event args.
+
+
+</section>
 
 ## Properties
 
@@ -129,39 +168,53 @@ public Void RaiseScrollInvalidated(EventArgs e)
 | [PageScrollSize](#uid-bfd7fa1a78) | Gets the size to page by, in logical units. |
 | [ScrollSize](#uid-4b333409c4) | Gets the size to scroll by, in logical units. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-39a97754b5"></span>
 
-### CanHorizontallyScroll
+### CanHorizontallyScroll Property
 
 Gets or sets a value indicating whether the content can be scrolled horizontally.
 
 ```csharp
-public Boolean CanHorizontallyScroll { get; set; }
+public bool CanHorizontallyScroll { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-348bc972ea"></span>
 
-### CanVerticallyScroll
+### CanVerticallyScroll Property
 
 Gets or sets a value indicating whether the content can be scrolled horizontally.
 
 ```csharp
-public Boolean CanVerticallyScroll { get; set; }
+public bool CanVerticallyScroll { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-81c0a89445"></span>
 
-### IsLogicalScrollEnabled
+### IsLogicalScrollEnabled Property
 
 Gets a value indicating whether logical scrolling is enabled on the control.
 
 ```csharp
-public Boolean IsLogicalScrollEnabled { get; set; }
+public bool IsLogicalScrollEnabled { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-bfd7fa1a78"></span>
 
-### PageScrollSize
+### PageScrollSize Property
 
 Gets the size to page by, in logical units.
 
@@ -169,9 +222,13 @@ Gets the size to page by, in logical units.
 public Avalonia.Size PageScrollSize { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-4b333409c4"></span>
 
-### ScrollSize
+### ScrollSize Property
 
 Gets the size to scroll by, in logical units.
 
@@ -179,21 +236,32 @@ Gets the size to scroll by, in logical units.
 public Avalonia.Size ScrollSize { get; set; }
 ```
 
+</section>
+
 ## Events
 
 | Name | Description |
 | --- | --- |
 | [ScrollInvalidated](#uid-bf246a3c15) | Raised when the scroll is invalidated. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-bf246a3c15"></span>
 
-### ScrollInvalidated
+### ScrollInvalidated Event
 
 Raised when the scroll is invalidated.
 
 ```csharp
 public event EventHandler ScrollInvalidated
 ```
+
+#### Remarks
+
+This event notifies an attached [Avalonia.Controls.ScrollViewer](xref:Avalonia.Controls.ScrollViewer) of a change in
+one of the scroll properties.
+
+</section>
 
 </ApiRefPage>
 

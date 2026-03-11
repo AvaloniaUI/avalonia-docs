@@ -47,7 +47,7 @@ public class EglDisplay
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> EglDisplay
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> EglDisplay
 </div>
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Implements:</span> IDisposable
@@ -64,29 +64,54 @@ public class EglDisplay
 
 ### EglDisplay overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-06498d0963"></span>
 
-#### EglDisplay
+#### EglDisplay Constructor
 
 ```csharp
 public EglDisplay()
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-894931b7a6"></span>
 
-#### EglDisplay
+#### EglDisplay Constructor
 
 ```csharp
 public EglDisplay(Avalonia.OpenGL.Egl.EglDisplayCreationOptions options)
 ```
 
+##### Parameters
+
+`options` [Avalonia.OpenGL.Egl.EglDisplayCreationOptions](xref:Avalonia.OpenGL.Egl.EglDisplayCreationOptions)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-c92572a63c"></span>
 
-#### EglDisplay
+#### EglDisplay Constructor
 
 ```csharp
 public EglDisplay(IntPtr display, Avalonia.OpenGL.Egl.EglDisplayOptions options)
 ```
+
+##### Parameters
+
+`display` IntPtr
+
+
+`options` [Avalonia.OpenGL.Egl.EglDisplayOptions](xref:Avalonia.OpenGL.Egl.EglDisplayOptions)
+
+
+</section>
 
 ## Methods
 
@@ -98,57 +123,138 @@ public EglDisplay(IntPtr display, Avalonia.OpenGL.Egl.EglDisplayOptions options)
 | [Dispose](#uid-ffd72285f0) | No summary available. |
 | [Lock](#uid-0290538407) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-ff2676fb67"></span>
 
-### CreateContext
+### CreateContext Method
 
 ```csharp
 public Avalonia.OpenGL.Egl.EglContext CreateContext(Avalonia.OpenGL.Egl.EglContextOptions options)
 ```
 
+#### Parameters
+
+`options` [Avalonia.OpenGL.Egl.EglContextOptions](xref:Avalonia.OpenGL.Egl.EglContextOptions)
+
+
+#### Returns
+
+[Avalonia.OpenGL.Egl.EglContext](xref:Avalonia.OpenGL.Egl.EglContext)
+
+
+</section>
+
 <span id="uid-b4f682f9fd"></span>
 
 ### CreatePBufferFromClientBuffer overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-b86ceb15ef"></span>
 
-#### CreatePBufferFromClientBuffer
+#### CreatePBufferFromClientBuffer Method
 
 ```csharp
-public Avalonia.OpenGL.Egl.EglSurface CreatePBufferFromClientBuffer(Int32 bufferType, IntPtr handle, Int32* attribs)
+public Avalonia.OpenGL.Egl.EglSurface CreatePBufferFromClientBuffer(int bufferType, IntPtr handle, int* attribs)
 ```
+
+##### Parameters
+
+`bufferType` int
+
+
+`handle` IntPtr
+
+
+`attribs` int*
+
+
+##### Returns
+
+[Avalonia.OpenGL.Egl.EglSurface](xref:Avalonia.OpenGL.Egl.EglSurface)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-a3a7f045fa"></span>
 
-#### CreatePBufferFromClientBuffer
+#### CreatePBufferFromClientBuffer Method
 
 ```csharp
-public Avalonia.OpenGL.Egl.EglSurface CreatePBufferFromClientBuffer(Int32 bufferType, IntPtr handle, Int32[] attribs)
+public Avalonia.OpenGL.Egl.EglSurface CreatePBufferFromClientBuffer(int bufferType, IntPtr handle, int[] attribs)
 ```
+
+##### Parameters
+
+`bufferType` int
+
+
+`handle` IntPtr
+
+
+`attribs` int[]
+
+
+##### Returns
+
+[Avalonia.OpenGL.Egl.EglSurface](xref:Avalonia.OpenGL.Egl.EglSurface)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-d17e49b64c"></span>
 
-### CreateWindowSurface
+### CreateWindowSurface Method
 
 ```csharp
 public Avalonia.OpenGL.Egl.EglSurface CreateWindowSurface(IntPtr window)
 ```
 
+#### Parameters
+
+`window` IntPtr
+
+
+#### Returns
+
+[Avalonia.OpenGL.Egl.EglSurface](xref:Avalonia.OpenGL.Egl.EglSurface)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-ffd72285f0"></span>
 
-### Dispose
+### Dispose Method
 
 ```csharp
-public Void Dispose()
+public void Dispose()
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-0290538407"></span>
 
-### Lock
+### Lock Method
 
 ```csharp
 public IDisposable Lock()
 ```
+
+#### Returns
+
+IDisposable
+
+
+</section>
 
 ## Properties
 
@@ -160,45 +266,65 @@ public IDisposable Lock()
 | [IsLost](#uid-5427b41b1c) | No summary available. |
 | [SupportsSharing](#uid-b6941d47e3) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-be58409da1"></span>
 
-### Config
+### Config Property
 
 ```csharp
 public IntPtr Config { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-7aadc326b5"></span>
 
-### EglInterface
+### EglInterface Property
 
 ```csharp
 public Avalonia.OpenGL.Egl.EglInterface EglInterface { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-1bcd7ea746"></span>
 
-### Handle
+### Handle Property
 
 ```csharp
 public IntPtr Handle { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-5427b41b1c"></span>
 
-### IsLost
+### IsLost Property
 
 ```csharp
-public Boolean IsLost { get; set; }
+public bool IsLost { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-b6941d47e3"></span>
 
-### SupportsSharing
+### SupportsSharing Property
 
 ```csharp
-public Boolean SupportsSharing { get; set; }
+public bool SupportsSharing { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

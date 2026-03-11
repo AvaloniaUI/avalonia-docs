@@ -61,23 +61,34 @@ public class ChildIndexChangedEventArgs
 
 | Name | Description |
 | --- | --- |
-| [ChildIndexChangedEventArgs](#uid-d6acff5998) | Initializes a new instance of the Avalonia.LogicalTree.ChildIndexChangedEventArgs class with an action of Avalonia.LogicalTree.ChildIndexChangedAction.ChildIndexChanged. |
+| [ChildIndexChangedEventArgs](#uid-d6acff5998) | Initializes a new instance of the [Avalonia.LogicalTree.ChildIndexChangedEventArgs](xref:Avalonia.LogicalTree.ChildIndexChangedEventArgs) class with an action of [Avalonia.LogicalTree.ChildIndexChangedAction.ChildIndexChanged](xref:Avalonia.LogicalTree.ChildIndexChangedAction.ChildIndexChanged). |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-d6acff5998"></span>
 
-### ChildIndexChangedEventArgs
+### ChildIndexChangedEventArgs Constructor
 
 Initializes a new instance of the [Avalonia.LogicalTree.ChildIndexChangedEventArgs](xref:Avalonia.LogicalTree.ChildIndexChangedEventArgs) class with
 an action of [Avalonia.LogicalTree.ChildIndexChangedAction.ChildIndexChanged](xref:Avalonia.LogicalTree.ChildIndexChangedAction.ChildIndexChanged).
 
 ```csharp
-public ChildIndexChangedEventArgs(Avalonia.LogicalTree.ILogical child, Int32 index)
+public ChildIndexChangedEventArgs(Avalonia.LogicalTree.ILogical child, int index)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `child` | The child whose index was changed. |
-| `index` | The new index of the child. |
+#### Parameters
+
+`child` [Avalonia.LogicalTree.ILogical](xref:Avalonia.LogicalTree.ILogical)
+
+The child whose index was changed.
+
+
+`index` int
+
+The new index of the child.
+
+
+</section>
 
 ## Properties
 
@@ -85,13 +96,15 @@ public ChildIndexChangedEventArgs(Avalonia.LogicalTree.ILogical child, Int32 ind
 | --- | --- |
 | [Action](#uid-5994cf29b4) | Gets the type of change action that ocurred on the list control. |
 | [Child](#uid-8b58905c7b) | Gets the logical child whose index was changed or null if all children should be re-evaluated. |
-| [ChildIndexesReset](#uid-ee7c1cef4b) | Gets an instance of the Avalonia.LogicalTree.ChildIndexChangedEventArgs with an action of Avalonia.LogicalTree.ChildIndexChangedAction.ChildIndexesReset. |
-| [Index](#uid-49f14a73c2) | Gets the new index of Avalonia.LogicalTree.ChildIndexChangedEventArgs.Child or -1 if all children should be re-evaluated. |
-| [TotalCountChanged](#uid-ddd04506cd) | Gets an instance of the Avalonia.LogicalTree.ChildIndexChangedEventArgs with an action of Avalonia.LogicalTree.ChildIndexChangedAction.TotalCountChanged. |
+| [ChildIndexesReset](#uid-ee7c1cef4b) | Gets an instance of the [Avalonia.LogicalTree.ChildIndexChangedEventArgs](xref:Avalonia.LogicalTree.ChildIndexChangedEventArgs) with an action of [Avalonia.LogicalTree.ChildIndexChangedAction.ChildIndexesReset](xref:Avalonia.LogicalTree.ChildIndexChangedAction.ChildIndexesReset). |
+| [Index](#uid-49f14a73c2) | Gets the new index of [Avalonia.LogicalTree.ChildIndexChangedEventArgs.Child](xref:Avalonia.LogicalTree.ChildIndexChangedEventArgs.Child) or -1 if all children should be re-evaluated. |
+| [TotalCountChanged](#uid-ddd04506cd) | Gets an instance of the [Avalonia.LogicalTree.ChildIndexChangedEventArgs](xref:Avalonia.LogicalTree.ChildIndexChangedEventArgs) with an action of [Avalonia.LogicalTree.ChildIndexChangedAction.TotalCountChanged](xref:Avalonia.LogicalTree.ChildIndexChangedAction.TotalCountChanged). |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-5994cf29b4"></span>
 
-### Action
+### Action Property
 
 Gets the type of change action that ocurred on the list control.
 
@@ -99,9 +112,13 @@ Gets the type of change action that ocurred on the list control.
 public Avalonia.LogicalTree.ChildIndexChangedAction Action { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-8b58905c7b"></span>
 
-### Child
+### Child Property
 
 Gets the logical child whose index was changed or null if all children should be re-evaluated.
 
@@ -109,9 +126,13 @@ Gets the logical child whose index was changed or null if all children should be
 public Avalonia.LogicalTree.ILogical Child { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-ee7c1cef4b"></span>
 
-### ChildIndexesReset
+### ChildIndexesReset Property
 
 Gets an instance of the [Avalonia.LogicalTree.ChildIndexChangedEventArgs](xref:Avalonia.LogicalTree.ChildIndexChangedEventArgs) with an action of
 [Avalonia.LogicalTree.ChildIndexChangedAction.ChildIndexesReset](xref:Avalonia.LogicalTree.ChildIndexChangedAction.ChildIndexesReset).
@@ -120,19 +141,27 @@ Gets an instance of the [Avalonia.LogicalTree.ChildIndexChangedEventArgs](xref:A
 public Avalonia.LogicalTree.ChildIndexChangedEventArgs ChildIndexesReset { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-49f14a73c2"></span>
 
-### Index
+### Index Property
 
 Gets the new index of [Avalonia.LogicalTree.ChildIndexChangedEventArgs.Child](xref:Avalonia.LogicalTree.ChildIndexChangedEventArgs.Child) or -1 if all children should be re-evaluated.
 
 ```csharp
-public Int32 Index { get; set; }
+public int Index { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-ddd04506cd"></span>
 
-### TotalCountChanged
+### TotalCountChanged Property
 
 Gets an instance of the [Avalonia.LogicalTree.ChildIndexChangedEventArgs](xref:Avalonia.LogicalTree.ChildIndexChangedEventArgs) with an action of
 [Avalonia.LogicalTree.ChildIndexChangedAction.TotalCountChanged](xref:Avalonia.LogicalTree.ChildIndexChangedAction.TotalCountChanged).
@@ -140,6 +169,8 @@ Gets an instance of the [Avalonia.LogicalTree.ChildIndexChangedEventArgs](xref:A
 ```csharp
 public Avalonia.LogicalTree.ChildIndexChangedEventArgs TotalCountChanged { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

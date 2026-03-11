@@ -12,6 +12,8 @@ generatedBy: 'dotnet-apiref'
 namespace: 'Avalonia.Media'
 tfms:
   - 'net10.0'
+  - 'net8.0-ios18.0'
+  - 'netstandard2.1'
 ---
 
 import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
@@ -32,6 +34,7 @@ Namespace `Avalonia.Media`
 - [AlignmentX](alignmentx.mdx) - Describes how content is positioned horizontally in a container.
 - [AlignmentY](alignmenty.mdx) - Describes how content is positioned vertically in a container.
 - [ArcSegment](arcsegment.mdx)
+- [AvFoundationMediaPlayerOptions](avfoundationmediaplayeroptions.mdx)
 - [BackgroundSizing](backgroundsizing.mdx) - Defines how a background is drawn relative to its border.
 - [BaselineAlignment](baselinealignment.mdx) - Enum specifying where a box should be positioned Vertically
 - [BaselinePixelAlignment](baselinepixelalignment.mdx) - Specifies the baseline pixel alignment options for rendering text or graphics.
@@ -61,7 +64,7 @@ Namespace `Avalonia.Media`
 - [DrawingContext.RestoreState.PushedStateType](drawingcontext-restorestate-pushedstatetype.mdx)
 - [DrawingGroup](drawinggroup.mdx)
 - [DrawingImage](drawingimage.mdx) - An [Avalonia.Media.IImage](xref:Avalonia.Media.IImage) that uses a [Avalonia.Media.DrawingImage.Drawing](xref:Avalonia.Media.DrawingImage.Drawing) for content.
-- [DropShadowDirectionEffect](dropshadowdirectioneffect.mdx) - This class is compatible with WPF's DropShadowEffect and provides Direction and ShadowDepth properties instead of OffsetX/OffsetY
+- [DropShadowDirectionEffect](dropshadowdirectioneffect.mdx) - This class is compatible with WPF's [DropShadowEffect](xref:Avalonia.Media.DropShadowEffect) and provides Direction and ShadowDepth properties instead of OffsetX/OffsetY
 - [DropShadowEffect](dropshadoweffect.mdx)
 - [DropShadowEffectBase](dropshadoweffectbase.mdx)
 - [EdgeMode](edgemode.mdx)
@@ -83,11 +86,11 @@ It is also responsible for the font fallback.
 - [FontMetrics](fontmetrics.mdx) - The font metrics is holding information about a font's ascent, descent, etc. in design em units.
 - [FontSimulations](fontsimulations.mdx) - Specifies algorithmic style simulations to be applied to the typeface.
 Bold and oblique simulations can be combined via bitwise OR operation.
-- [FontStretch](fontstretch.mdx) - FontStretch describes relative change from the normal aspect ratio
+- [FontStretch](fontstretch.mdx) - [FontStretch](xref:Avalonia.Media.FontStretch) describes relative change from the normal aspect ratio
 as specified by a font designer for the glyphs in a font.
 - [FontStyle](fontstyle.mdx) - Defines the available font styles.
 - [FontWeight](fontweight.mdx) - Defines a set of predefined font weights.
-- [FormattedText](formattedtext.mdx) - The FormattedText class is targeted at programmers needing to add some simple text to a MIL visual.
+- [FormattedText](formattedtext.mdx) - The [FormattedText](xref:Avalonia.Media.FormattedText) class is targeted at programmers needing to add some simple text to a MIL visual.
 - [Geometry](geometry.mdx) - Defines a geometric shape.
 - [GeometryCollection](geometrycollection.mdx)
 - [GeometryCombineMode](geometrycombinemode.mdx)
@@ -127,6 +130,8 @@ This uses a cylindrical-coordinate representation of a color.
 - [IImmutableGlyphRunReference](iimmutableglyphrunreference.mdx)
 - [IImmutableSolidColorBrush](iimmutablesolidcolorbrush.mdx) - Fills an area with a solid color.
 - [ILinearGradientBrush](ilineargradientbrush.mdx) - A brush that draws with a linear gradient.
+- [IMediaPlayer](imediaplayer.mdx)
+- [IMediaRendererProvider](imediarendererprovider.mdx)
 - [IMutableEffect](imutableeffect.mdx)
 - [IMutableExperimentalAcrylicMaterial](imutableexperimentalacrylicmaterial.mdx) - Represents a mutable brush which can return an immutable clone of itself.
 - [IMutableTransform](imutabletransform.mdx)
@@ -154,6 +159,14 @@ This uses a cylindrical-coordinate representation of a color.
 - [MaterialExtensions](materialextensions.mdx)
 - [MatrixTransform](matrixtransform.mdx) - Transforms an [Avalonia.Visual](xref:Avalonia.Visual) according to a [Avalonia.Media.MatrixTransform.Matrix](xref:Avalonia.Media.MatrixTransform.Matrix).
 - [MediaExtensions](mediaextensions.mdx) - Provides extension methods for Avalonia media.
+- [MediaPlayer](mediaplayer.mdx)
+- [MediaPlayerErrorEventArgs](mediaplayererroreventargs.mdx)
+- [MediaPlayerLoadedBehavior](mediaplayerloadedbehavior.mdx)
+- [MediaPlayerOptions](mediaplayeroptions.mdx)
+- [MediaRenderer](mediarenderer.mdx)
+- [MediaSource](mediasource.mdx)
+- [MediaStatistics](mediastatistics.mdx)
+- [NaturalSizeChangedEventArgs](naturalsizechangedeventargs.mdx)
 - [PathFigure](pathfigure.mdx)
 - [PathFigures](pathfigures.mdx)
 - [PathGeometry](pathgeometry.mdx)
@@ -163,12 +176,12 @@ This uses a cylindrical-coordinate representation of a color.
 - [Pen](pen.mdx) - Describes how a stroke is drawn.
 - [PenLineCap](penlinecap.mdx)
 - [PenLineJoin](penlinejoin.mdx)
-- [PolyBezierSegment](polybeziersegment.mdx) - PolyBezierSegment
+- [PolyBezierSegment](polybeziersegment.mdx) - [PolyBezierSegment](xref:Avalonia.Media.PolyBezierSegment)
 - [PolyLineSegment](polylinesegment.mdx) - Represents a set of line segments defined by a points collection with each Point specifying the end point of a line segment.
 - [PolylineGeometry](polylinegeometry.mdx) - Represents the geometry of an polyline or polygon.
 - [PreciseEllipticArcHelper.EllipticalArc](preciseellipticarchelper-ellipticalarc.mdx) - This class represents an elliptical arc on a 2D plane.
 
-This class is adapted for use with WPF StreamGeometryContext, and needs to be created explicitly
+This class is adapted for use with WPF [StreamGeometryContext](xref:Avalonia.Media.StreamGeometryContext), and needs to be created explicitly
 for each particular arc.
 
 Some helpers
@@ -196,8 +209,11 @@ interpolation, edge rendering, blending, and opacity handling.
 - [ScaleTransform](scaletransform.mdx) - Scale an [Avalonia.Visual](xref:Avalonia.Visual).
 - [SkewTransform](skewtransform.mdx) - Skews an [Avalonia.Visual](xref:Avalonia.Visual).
 - [SolidColorBrush](solidcolorbrush.mdx) - Fills an area with a solid color.
+- [StorageFileSource](storagefilesource.mdx)
+- [StorageFileSourcePriority](storagefilesourcepriority.mdx)
 - [StreamGeometry](streamgeometry.mdx) - Represents the geometry of an arbitrarily complex shape.
 - [StreamGeometryContext](streamgeometrycontext.mdx) - Describes a geometry using drawing commands.
+- [StreamSource](streamsource.mdx)
 - [Stretch](stretch.mdx) - Describes how content is resized to fill its allocated space.
 - [StretchDirection](stretchdirection.mdx) - Describes the type of scaling that can be used when scaling content.
 - [SweepDirection](sweepdirection.mdx) - Defines the direction an which elliptical arc is drawn.
@@ -236,6 +252,7 @@ Controls the smoothing and antialiasing applied during text rasterization.
 - [Typeface](typeface.mdx) - Represents a typeface.
 - [UnicodeRange](unicoderange.mdx) - The [Avalonia.Media.UnicodeRange](xref:Avalonia.Media.UnicodeRange) descripes a set of Unicode characters.
 - [UnicodeRangeSegment](unicoderangesegment.mdx)
+- [UriSource](urisource.mdx)
 - [VisualBrush](visualbrush.mdx) - Paints an area with an [Avalonia.Media.VisualBrush.Visual](xref:Avalonia.Media.VisualBrush.Visual).
 </ApiRefPage>
 

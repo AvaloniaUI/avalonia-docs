@@ -57,56 +57,94 @@ public interface ISelectionItemProvider
 | [RemoveFromSelection](#uid-9a753f219d) | Removes the current element from the collection of selected items. |
 | [Select](#uid-db41fba969) | Clears any existing selection and then selects the current element. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-f5d16c51fc"></span>
 
-### AddToSelection
+### AddToSelection Method
 
 Adds the current element to the collection of selected items.
 
 ```csharp
-public Void AddToSelection()
+public void AddToSelection()
 ```
+
+#### Remarks
+
+- Windows`ISelectionItemProvider.AddToSelection`
+- macOS`NSAccessibilityProtocol.accessibilityPerformPick` (not implemented). `NSAccessibilityProtocol.setAccessibilitySelected` (not implemented).
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-9a753f219d"></span>
 
-### RemoveFromSelection
+### RemoveFromSelection Method
 
 Removes the current element from the collection of selected items.
 
 ```csharp
-public Void RemoveFromSelection()
+public void RemoveFromSelection()
 ```
+
+#### Remarks
+
+- Windows`ISelectionItemProvider.RemoveFromSelection`
+- macOS`NSAccessibilityProtocol.setAccessibilitySelected` (not implemented).
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-db41fba969"></span>
 
-### Select
+### Select Method
 
 Clears any existing selection and then selects the current element.
 
 ```csharp
-public Void Select()
+public void Select()
 ```
+
+#### Remarks
+
+- Windows`ISelectionItemProvider.Select`
+- macOSNo mapping.
+
+</section>
 
 ## Properties
 
 | Name | Description |
 | --- | --- |
 | [IsSelected](#uid-5e4e696443) | Gets a value that indicates whether an item is selected. |
-| [SelectionContainer](#uid-67657a949b) | Gets the UI Automation provider that implements Avalonia.Automation.Provider.ISelectionProvider and acts as the container for the calling object. |
+| [SelectionContainer](#uid-67657a949b) | Gets the UI Automation provider that implements [Avalonia.Automation.Provider.ISelectionProvider](xref:Avalonia.Automation.Provider.ISelectionProvider) and acts as the container for the calling object. |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-5e4e696443"></span>
 
-### IsSelected
+### IsSelected Property
 
 Gets a value that indicates whether an item is selected.
 
 ```csharp
-public Boolean IsSelected { get; set; }
+public bool IsSelected { get; set; }
 ```
+
+#### Remarks
+
+- Windows`ISelectionItemProvider.IsSelected`
+- macOS`NSAccessibilityProtocol.isAccessibilitySelected`
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-67657a949b"></span>
 
-### SelectionContainer
+### SelectionContainer Property
 
 Gets the UI Automation provider that implements [Avalonia.Automation.Provider.ISelectionProvider](xref:Avalonia.Automation.Provider.ISelectionProvider) and
 acts as the container for the calling object.
@@ -114,6 +152,13 @@ acts as the container for the calling object.
 ```csharp
 public Avalonia.Automation.Provider.ISelectionProvider SelectionContainer { get; set; }
 ```
+
+#### Remarks
+
+- Windows`ISelectionItemProvider.SelectionContainer`
+- macOSNo mapping.
+
+</section>
 
 </ApiRefPage>
 

@@ -47,7 +47,7 @@ public class RuntimeXamlLoaderConfiguration
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> RuntimeXamlLoaderConfiguration
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> RuntimeXamlLoaderConfiguration
 </div>
 </div>
 
@@ -57,13 +57,17 @@ public class RuntimeXamlLoaderConfiguration
 | --- | --- |
 | [RuntimeXamlLoaderConfiguration](#uid-1cd435eae8) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-1cd435eae8"></span>
 
-### RuntimeXamlLoaderConfiguration
+### RuntimeXamlLoaderConfiguration Constructor
 
 ```csharp
 public RuntimeXamlLoaderConfiguration()
 ```
+
+</section>
 
 ## Properties
 
@@ -73,33 +77,43 @@ public RuntimeXamlLoaderConfiguration()
 | [DesignMode](#uid-e3929fafda) | Indicates whether the XAML is being loaded in design mode. Default is 'false'. |
 | [DiagnosticHandler](#uid-5bfabbf87e) | XAML diagnostics handler. |
 | [LocalAssembly](#uid-aa3a33f9ca) | Default assembly for clr-namespace:. |
-| [UseCompiledBindingsByDefault](#uid-0f0a7eda8b) | Defines is CompiledBinding should be used by default. Default is 'false'. |
+| [UseCompiledBindingsByDefault](#uid-0f0a7eda8b) | Defines is [CompiledBinding](xref:Avalonia.Data.CompiledBinding) should be used by default. Default is 'false'. |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-d4d9a1c382"></span>
 
-### CreateSourceInfo
+### CreateSourceInfo Property
 
 When enabled, the XAML compiler embeds SourceInfo metadata (file path, line, and column) into generated code.
 Default is 'false'.
 
 ```csharp
-public Boolean CreateSourceInfo { get; set; }
+public bool CreateSourceInfo { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-e3929fafda"></span>
 
-### DesignMode
+### DesignMode Property
 
 Indicates whether the XAML is being loaded in design mode.
 Default is 'false'.
 
 ```csharp
-public Boolean DesignMode { get; set; }
+public bool DesignMode { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-5bfabbf87e"></span>
 
-### DiagnosticHandler
+### DiagnosticHandler Property
 
 XAML diagnostics handler.
 
@@ -107,12 +121,19 @@ XAML diagnostics handler.
 public Avalonia.Markup.Xaml.RuntimeXamlLoaderConfiguration.XamlDiagnosticFunc DiagnosticHandler { get; set; }
 ```
 
-Returns: Defines if any diagnostic severity should be overriden.
+#### Returns
+
+Defines if any diagnostic severity should be overriden.
 Note, severity cannot be set lower than minimal for specific diagnostic.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-aa3a33f9ca"></span>
 
-### LocalAssembly
+### LocalAssembly Property
 
 Default assembly for clr-namespace:.
 
@@ -120,16 +141,22 @@ Default assembly for clr-namespace:.
 public System.Reflection.Assembly LocalAssembly { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-0f0a7eda8b"></span>
 
-### UseCompiledBindingsByDefault
+### UseCompiledBindingsByDefault Property
 
-Defines is CompiledBinding should be used by default.
+Defines is [CompiledBinding](xref:Avalonia.Data.CompiledBinding) should be used by default.
 Default is 'false'.
 
 ```csharp
-public Boolean UseCompiledBindingsByDefault { get; set; }
+public bool UseCompiledBindingsByDefault { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

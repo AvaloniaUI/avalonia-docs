@@ -53,7 +53,7 @@ public class AvaloniaXamlLoader
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> AvaloniaXamlLoader
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> AvaloniaXamlLoader
 </div>
 </div>
 
@@ -67,69 +67,123 @@ public class AvaloniaXamlLoader
 
 ### Load overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-e70f947fe9"></span>
 
-#### Load
+#### Load Method
 
 Loads the XAML into a Avalonia component.
 
 ```csharp
-public Void Load(IServiceProvider sp, Object obj)
+public void Load(IServiceProvider sp, object obj)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `obj` | The object to load the XAML into. |
-| `sp` | The parent's service provider. |
+##### Parameters
+
+`sp` IServiceProvider
+
+The parent's service provider.
+
+
+`obj` object
+
+The object to load the XAML into.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-a2a9550409"></span>
 
-#### Load
+#### Load Method
 
 Loads XAML from a URI.
 
 ```csharp
-public Object Load(IServiceProvider sp, Uri uri, Uri baseUri)
+public object Load(IServiceProvider sp, Uri uri, Uri baseUri)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `baseUri` | A base URI to use if `uri` is relative. |
-| `sp` | The parent's service provider. |
-| `uri` | The URI of the XAML file. |
+##### Parameters
 
-Returns: The loaded object.
+`sp` IServiceProvider
+
+The parent's service provider.
+
+
+`uri` Uri
+
+The URI of the XAML file.
+
+
+`baseUri` Uri
+
+A base URI to use if `uri` is relative.
+
+
+##### Returns
+
+object
+
+The loaded object.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-c3951cc877"></span>
 
-#### Load
+#### Load Method
 
 Loads the XAML into a Avalonia component.
 
 ```csharp
-public Void Load(Object obj)
+public void Load(object obj)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `obj` | The object to load the XAML into. |
+##### Parameters
+
+`obj` object
+
+The object to load the XAML into.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-caa44d7b4b"></span>
 
-#### Load
+#### Load Method
 
 Loads XAML from a URI.
 
 ```csharp
-public Object Load(Uri uri, Uri baseUri)
+public object Load(Uri uri, Uri baseUri)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `baseUri` | A base URI to use if `uri` is relative. |
-| `uri` | The URI of the XAML file. |
+##### Parameters
 
-Returns: The loaded object.
+`uri` Uri
+
+The URI of the XAML file.
+
+
+`baseUri` Uri
+
+A base URI to use if `uri` is relative.
+
+
+##### Returns
+
+object
+
+The loaded object.
+
+
+</section>
 
 </ApiRefPage>
 

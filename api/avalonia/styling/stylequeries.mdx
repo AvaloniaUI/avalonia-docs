@@ -53,7 +53,7 @@ public class StyleQueries
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> StyleQueries
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> StyleQueries
 </div>
 </div>
 
@@ -70,9 +70,11 @@ public class StyleQueries
 
 ### And overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-2d2a6ceb2b"></span>
 
-#### And
+#### And Method
 
 Returns a query which ANDs queries.
 
@@ -80,45 +82,91 @@ Returns a query which ANDs queries.
 public Avalonia.Styling.StyleQuery And(Avalonia.Styling.StyleQuery[] queries)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `queries` | The queries to be AND'd. |
+##### Parameters
 
-Returns: The query.
+`queries` [Avalonia.Styling.StyleQuery](xref:Avalonia.Styling.StyleQuery)[]
+
+The queries to be AND'd.
+
+
+##### Returns
+
+[Avalonia.Styling.StyleQuery](xref:Avalonia.Styling.StyleQuery)
+
+The query.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-dec2e678bb"></span>
 
-#### And
+#### And Method
 
 ```csharp
 public Avalonia.Styling.StyleQuery And(System.Collections.Generic.IReadOnlyList<Avalonia.Styling.StyleQuery> query)
 ```
 
+##### Parameters
+
+`query` System.Collections.Generic.IReadOnlyList&lt;[Avalonia.Styling.StyleQuery](xref:Avalonia.Styling.StyleQuery)&gt;
+
+
+##### Returns
+
+[Avalonia.Styling.StyleQuery](xref:Avalonia.Styling.StyleQuery)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-cf74e48129"></span>
 
-### Height
+### Height Method
 
 Returns a query which matches the device height with a value.
 
 ```csharp
-public Avalonia.Styling.StyleQuery Height(Avalonia.Styling.StyleQuery previous, Avalonia.Styling.StyleQueryComparisonOperator operator, Double value)
+public Avalonia.Styling.StyleQuery Height(Avalonia.Styling.StyleQuery previous, Avalonia.Styling.StyleQueryComparisonOperator operator, double value)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `operator` | The operator to match the device height |
-| `previous` | The previous query. |
-| `value` | The height to match |
+#### Parameters
 
-Returns: The query.
+`previous` [Avalonia.Styling.StyleQuery](xref:Avalonia.Styling.StyleQuery)
+
+The previous query.
+
+
+`operator` [Avalonia.Styling.StyleQueryComparisonOperator](xref:Avalonia.Styling.StyleQueryComparisonOperator)
+
+The operator to match the device height
+
+
+`value` double
+
+The height to match
+
+
+#### Returns
+
+[Avalonia.Styling.StyleQuery](xref:Avalonia.Styling.StyleQuery)
+
+The query.
+
+
+</section>
 
 <span id="uid-d2dc803fe9"></span>
 
 ### Or overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-414f1164b7"></span>
 
-#### Or
+#### Or Method
 
 Returns a query which ORs queries.
 
@@ -126,37 +174,81 @@ Returns a query which ORs queries.
 public Avalonia.Styling.StyleQuery Or(Avalonia.Styling.StyleQuery[] queries)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `queries` | The queries to be OR'd. |
+##### Parameters
 
-Returns: The query.
+`queries` [Avalonia.Styling.StyleQuery](xref:Avalonia.Styling.StyleQuery)[]
+
+The queries to be OR'd.
+
+
+##### Returns
+
+[Avalonia.Styling.StyleQuery](xref:Avalonia.Styling.StyleQuery)
+
+The query.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-e73bf5cae1"></span>
 
-#### Or
+#### Or Method
 
 ```csharp
 public Avalonia.Styling.StyleQuery Or(System.Collections.Generic.IReadOnlyList<Avalonia.Styling.StyleQuery> query)
 ```
 
+##### Parameters
+
+`query` System.Collections.Generic.IReadOnlyList&lt;[Avalonia.Styling.StyleQuery](xref:Avalonia.Styling.StyleQuery)&gt;
+
+
+##### Returns
+
+[Avalonia.Styling.StyleQuery](xref:Avalonia.Styling.StyleQuery)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-455754f250"></span>
 
-### Width
+### Width Method
 
 Returns a query which matches the device width with a value.
 
 ```csharp
-public Avalonia.Styling.StyleQuery Width(Avalonia.Styling.StyleQuery previous, Avalonia.Styling.StyleQueryComparisonOperator operator, Double value)
+public Avalonia.Styling.StyleQuery Width(Avalonia.Styling.StyleQuery previous, Avalonia.Styling.StyleQueryComparisonOperator operator, double value)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `operator` | The operator to match the device width |
-| `previous` | The previous query. |
-| `value` | The width to match |
+#### Parameters
 
-Returns: The query.
+`previous` [Avalonia.Styling.StyleQuery](xref:Avalonia.Styling.StyleQuery)
+
+The previous query.
+
+
+`operator` [Avalonia.Styling.StyleQueryComparisonOperator](xref:Avalonia.Styling.StyleQueryComparisonOperator)
+
+The operator to match the device width
+
+
+`value` double
+
+The width to match
+
+
+#### Returns
+
+[Avalonia.Styling.StyleQuery](xref:Avalonia.Styling.StyleQuery)
+
+The query.
+
+
+</section>
 
 </ApiRefPage>
 

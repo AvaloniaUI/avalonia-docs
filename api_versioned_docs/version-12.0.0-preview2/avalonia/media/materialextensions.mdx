@@ -47,7 +47,7 @@ public class MaterialExtensions
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> MaterialExtensions
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> MaterialExtensions
 </div>
 </div>
 
@@ -57,9 +57,11 @@ public class MaterialExtensions
 | --- | --- |
 | [ToImmutable](#uid-3cb02c40a5) | Converts a brush to an immutable brush. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-3cb02c40a5"></span>
 
-### ToImmutable
+### ToImmutable Method
 
 Converts a brush to an immutable brush.
 
@@ -67,12 +69,22 @@ Converts a brush to an immutable brush.
 public Avalonia.Media.IExperimentalAcrylicMaterial ToImmutable(Avalonia.Media.IExperimentalAcrylicMaterial material)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `material` | The brush. |
+#### Parameters
 
-Returns: The result of calling [Avalonia.Media.IMutableBrush.ToImmutable](xref:Avalonia.Media.IMutableBrush.ToImmutable) if the brush is mutable,
+`material` [Avalonia.Media.IExperimentalAcrylicMaterial](xref:Avalonia.Media.IExperimentalAcrylicMaterial)
+
+The brush.
+
+
+#### Returns
+
+[Avalonia.Media.IExperimentalAcrylicMaterial](xref:Avalonia.Media.IExperimentalAcrylicMaterial)
+
+The result of calling [Avalonia.Media.IMutableBrush.ToImmutable](xref:Avalonia.Media.IMutableBrush.ToImmutable) if the brush is mutable,
 otherwise `material`.
+
+
+</section>
 
 </ApiRefPage>
 

@@ -43,7 +43,7 @@ public class LinuxFramebufferPlatformExtensions
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> LinuxFramebufferPlatformExtensions
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> LinuxFramebufferPlatformExtensions
 </div>
 </div>
 
@@ -55,61 +55,217 @@ public class LinuxFramebufferPlatformExtensions
 | [StartLinuxDrm (2 overloads)](#uid-bac62f931b) | No summary available. |
 | [StartLinuxFbDev (3 overloads)](#uid-f2999f0816) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-99312ad319"></span>
 
-### StartLinuxDirect
+### StartLinuxDirect Method
 
 ```csharp
-public Int32 StartLinuxDirect(Avalonia.AppBuilder builder, String[] args, Avalonia.LinuxFramebuffer.Output.IOutputBackend outputBackend, Avalonia.LinuxFramebuffer.Input.IInputBackend inputBackend)
+public int StartLinuxDirect(Avalonia.AppBuilder builder, string[] args, Avalonia.LinuxFramebuffer.Output.IOutputBackend outputBackend, Avalonia.LinuxFramebuffer.Input.IInputBackend inputBackend)
 ```
+
+#### Parameters
+
+`builder` [Avalonia.AppBuilder](xref:Avalonia.AppBuilder)
+
+
+`args` string[]
+
+
+`outputBackend` [Avalonia.LinuxFramebuffer.Output.IOutputBackend](xref:Avalonia.LinuxFramebuffer.Output.IOutputBackend)
+
+
+`inputBackend` [Avalonia.LinuxFramebuffer.Input.IInputBackend](xref:Avalonia.LinuxFramebuffer.Input.IInputBackend)
+
+
+#### Returns
+
+int
+
+
+</section>
 
 <span id="uid-bac62f931b"></span>
 
 ### StartLinuxDrm overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-9d8a90ffef"></span>
 
-#### StartLinuxDrm
+#### StartLinuxDrm Method
 
 ```csharp
-public Int32 StartLinuxDrm(Avalonia.AppBuilder builder, String[] args, String card, Boolean connectorsForceProbe, Avalonia.LinuxFramebuffer.DrmOutputOptions options, Avalonia.LinuxFramebuffer.Input.IInputBackend inputBackend)
+public int StartLinuxDrm(Avalonia.AppBuilder builder, string[] args, string card, bool connectorsForceProbe, Avalonia.LinuxFramebuffer.DrmOutputOptions options, Avalonia.LinuxFramebuffer.Input.IInputBackend inputBackend)
 ```
+
+##### Parameters
+
+`builder` [Avalonia.AppBuilder](xref:Avalonia.AppBuilder)
+
+
+`args` string[]
+
+
+`card` string
+
+
+`connectorsForceProbe` bool
+
+
+`options` [Avalonia.LinuxFramebuffer.DrmOutputOptions](xref:Avalonia.LinuxFramebuffer.DrmOutputOptions)
+
+
+`inputBackend` [Avalonia.LinuxFramebuffer.Input.IInputBackend](xref:Avalonia.LinuxFramebuffer.Input.IInputBackend)
+
+
+##### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-2a2b6fecaa"></span>
 
-#### StartLinuxDrm
+#### StartLinuxDrm Method
 
 ```csharp
-public Int32 StartLinuxDrm(Avalonia.AppBuilder builder, String[] args, String card, Double scaling, Avalonia.LinuxFramebuffer.Input.IInputBackend inputBackend)
+public int StartLinuxDrm(Avalonia.AppBuilder builder, string[] args, string card, double scaling, Avalonia.LinuxFramebuffer.Input.IInputBackend inputBackend)
 ```
+
+##### Parameters
+
+`builder` [Avalonia.AppBuilder](xref:Avalonia.AppBuilder)
+
+
+`args` string[]
+
+
+`card` string
+
+
+`scaling` double
+
+
+`inputBackend` [Avalonia.LinuxFramebuffer.Input.IInputBackend](xref:Avalonia.LinuxFramebuffer.Input.IInputBackend)
+
+
+##### Returns
+
+int
+
+
+</section>
 
 <span id="uid-f2999f0816"></span>
 
 ### StartLinuxFbDev overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-f3167b7290"></span>
 
-#### StartLinuxFbDev
+#### StartLinuxFbDev Method
 
 ```csharp
-public Int32 StartLinuxFbDev(Avalonia.AppBuilder builder, String[] args, Avalonia.LinuxFramebuffer.Output.FbDevOutputOptions options, Avalonia.LinuxFramebuffer.Input.IInputBackend inputBackend)
+public int StartLinuxFbDev(Avalonia.AppBuilder builder, string[] args, Avalonia.LinuxFramebuffer.Output.FbDevOutputOptions options, Avalonia.LinuxFramebuffer.Input.IInputBackend inputBackend)
 ```
+
+##### Parameters
+
+`builder` [Avalonia.AppBuilder](xref:Avalonia.AppBuilder)
+
+
+`args` string[]
+
+
+`options` [Avalonia.LinuxFramebuffer.Output.FbDevOutputOptions](xref:Avalonia.LinuxFramebuffer.Output.FbDevOutputOptions)
+
+
+`inputBackend` [Avalonia.LinuxFramebuffer.Input.IInputBackend](xref:Avalonia.LinuxFramebuffer.Input.IInputBackend)
+
+
+##### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-353f81bfe6"></span>
 
-#### StartLinuxFbDev
+#### StartLinuxFbDev Method
 
 ```csharp
-public Int32 StartLinuxFbDev(Avalonia.AppBuilder builder, String[] args, String fbdev, Double scaling, Avalonia.LinuxFramebuffer.Input.IInputBackend inputBackend)
+public int StartLinuxFbDev(Avalonia.AppBuilder builder, string[] args, string fbdev, double scaling, Avalonia.LinuxFramebuffer.Input.IInputBackend inputBackend)
 ```
+
+##### Parameters
+
+`builder` [Avalonia.AppBuilder](xref:Avalonia.AppBuilder)
+
+
+`args` string[]
+
+
+`fbdev` string
+
+
+`scaling` double
+
+
+`inputBackend` [Avalonia.LinuxFramebuffer.Input.IInputBackend](xref:Avalonia.LinuxFramebuffer.Input.IInputBackend)
+
+
+##### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-18927221ae"></span>
 
-#### StartLinuxFbDev
+#### StartLinuxFbDev Method
 
 ```csharp
-public Int32 StartLinuxFbDev(Avalonia.AppBuilder builder, String[] args, String fbdev, Nullable<Avalonia.Platform.PixelFormat> format, Double scaling, Avalonia.LinuxFramebuffer.Input.IInputBackend inputBackend)
+public int StartLinuxFbDev(Avalonia.AppBuilder builder, string[] args, string fbdev, Nullable<Avalonia.Platform.PixelFormat> format, double scaling, Avalonia.LinuxFramebuffer.Input.IInputBackend inputBackend)
 ```
+
+##### Parameters
+
+`builder` [Avalonia.AppBuilder](xref:Avalonia.AppBuilder)
+
+
+`args` string[]
+
+
+`fbdev` string
+
+
+`format` Nullable&lt;[Avalonia.Platform.PixelFormat](xref:Avalonia.Platform.PixelFormat)&gt;
+
+
+`scaling` double
+
+
+`inputBackend` [Avalonia.LinuxFramebuffer.Input.IInputBackend](xref:Avalonia.LinuxFramebuffer.Input.IInputBackend)
+
+
+##### Returns
+
+int
+
+
+</section>
 
 </ApiRefPage>
 

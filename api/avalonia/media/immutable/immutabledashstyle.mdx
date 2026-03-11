@@ -54,7 +54,7 @@ public class ImmutableDashStyle
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> ImmutableDashStyle
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> ImmutableDashStyle
 </div>
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Implements:</span> <a href="../idashstyle">IDashStyle</a>, IEquatable&lt;IDashStyle&gt;
@@ -67,13 +67,25 @@ public class ImmutableDashStyle
 | --- | --- |
 | [ImmutableDashStyle](#uid-b77f6b6753) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-b77f6b6753"></span>
 
-### ImmutableDashStyle
+### ImmutableDashStyle Constructor
 
 ```csharp
-public ImmutableDashStyle(System.Collections.Generic.IEnumerable<Double> dashes, Double offset)
+public ImmutableDashStyle(System.Collections.Generic.IEnumerable<double> dashes, double offset)
 ```
+
+#### Parameters
+
+`dashes` System.Collections.Generic.IEnumerable&lt;double&gt;
+
+
+`offset` double
+
+
+</section>
 
 ## Methods
 
@@ -86,29 +98,66 @@ public ImmutableDashStyle(System.Collections.Generic.IEnumerable<Double> dashes,
 
 ### Equals overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-6c62e62806"></span>
 
-#### Equals
+#### Equals Method
 
 ```csharp
-public Boolean Equals(Avalonia.Media.IDashStyle other)
+public bool Equals(Avalonia.Media.IDashStyle other)
 ```
+
+##### Parameters
+
+`other` [Avalonia.Media.IDashStyle](xref:Avalonia.Media.IDashStyle)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-1e57ba6de2"></span>
 
-#### Equals
+#### Equals Method
 
 ```csharp
-public Boolean Equals(Object obj)
+public bool Equals(object obj)
 ```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-8f38af112e"></span>
 
-### GetHashCode
+### GetHashCode Method
 
 ```csharp
-public Int32 GetHashCode()
+public int GetHashCode()
 ```
+
+#### Returns
+
+int
+
+
+</section>
 
 ## Properties
 
@@ -117,25 +166,33 @@ public Int32 GetHashCode()
 | [Dashes](#uid-25ed61d9d7) | Gets or sets the length of alternating dashes and gaps. |
 | [Offset](#uid-9d8e25d083) | Gets or sets how far in the dash sequence the stroke will start. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-25ed61d9d7"></span>
 
-### Dashes
+### Dashes Property
 
 Gets or sets the length of alternating dashes and gaps.
 
 ```csharp
-public System.Collections.Generic.IReadOnlyList<Double> Dashes { get; set; }
+public System.Collections.Generic.IReadOnlyList<double> Dashes { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-9d8e25d083"></span>
 
-### Offset
+### Offset Property
 
 Gets or sets how far in the dash sequence the stroke will start.
 
 ```csharp
-public Double Offset { get; set; }
+public double Offset { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

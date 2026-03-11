@@ -53,7 +53,7 @@ public class CompositionBatch
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> CompositionBatch
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> CompositionBatch
 </div>
 </div>
 
@@ -64,9 +64,11 @@ public class CompositionBatch
 | [Processed](#uid-37c34011e0) | Indicates that batch got deserialized on the render thread and will soon be rendered. It's generally a good time to start producing the next one |
 | [Rendered](#uid-7930b51027) | Indicates that batch got rendered on the render thread. It's generally a good time to start producing the next one |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-37c34011e0"></span>
 
-### Processed
+### Processed Property
 
 Indicates that batch got deserialized on the render thread and will soon be rendered.
 It's generally a good time to start producing the next one
@@ -75,9 +77,20 @@ It's generally a good time to start producing the next one
 public System.Threading.Tasks.Task Processed { get; set; }
 ```
 
+#### Remarks
+
+To allow timing-sensitive code to receive the notification in time, the TaskCompletionSource
+is configured to invoke continuations _synchronously_, so your `await` could happen from the render loop
+if it happens to run on the UI thread.
+It's recommended to use Dispatcher.AwaitOnPriority when consuming from the UI thread
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-7930b51027"></span>
 
-### Rendered
+### Rendered Property
 
 Indicates that batch got rendered on the render thread.
 It's generally a good time to start producing the next one
@@ -85,6 +98,15 @@ It's generally a good time to start producing the next one
 ```csharp
 public System.Threading.Tasks.Task Rendered { get; set; }
 ```
+
+#### Remarks
+
+To allow timing-sensitive code to receive the notification in time, the TaskCompletionSource
+is configured to invoke continuations _synchronously_, so your `await` could happen from the render loop
+if it happens to run on the UI thread.
+It's recommended to use Dispatcher.AwaitOnPriority when consuming from the UI thread
+
+</section>
 
 </ApiRefPage>
 

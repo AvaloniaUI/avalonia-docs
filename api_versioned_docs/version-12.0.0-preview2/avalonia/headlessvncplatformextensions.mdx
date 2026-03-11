@@ -47,7 +47,7 @@ public class HeadlessVncPlatformExtensions
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> HeadlessVncPlatformExtensions
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> HeadlessVncPlatformExtensions
 </div>
 </div>
 
@@ -61,46 +61,106 @@ public class HeadlessVncPlatformExtensions
 
 ### StartWithHeadlessVncPlatform overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-3969e7cb8f"></span>
 
-#### StartWithHeadlessVncPlatform
+#### StartWithHeadlessVncPlatform Method
 
 Start Avalonia application with Headless VNC platform with password.
 
 ```csharp
-public Int32 StartWithHeadlessVncPlatform(Avalonia.AppBuilder builder, String host, Int32 port, String password, String[] args, Avalonia.Controls.ShutdownMode shutdownMode)
+public int StartWithHeadlessVncPlatform(Avalonia.AppBuilder builder, string host, int port, string password, string[] args, Avalonia.Controls.ShutdownMode shutdownMode)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `args` | Avalonia application start args |
-| `builder` | Application Builder |
-| `host` | VNC Server IP will be bind, if null or empty IPAddress.LoopBack will be used. |
-| `password` | VNC connection auth password |
-| `port` | VNC Server port will be bind |
-| `shutdownMode` | shut down mode [Avalonia.Controls.ShutdownMode](xref:Avalonia.Controls.ShutdownMode) |
+##### Parameters
+
+`builder` [Avalonia.AppBuilder](xref:Avalonia.AppBuilder)
+
+Application Builder
+
+
+`host` string
+
+VNC Server IP will be bind, if null or empty IPAddress.LoopBack will be used.
+
+
+`port` int
+
+VNC Server port will be bind
+
+
+`password` string
+
+VNC connection auth password
+
+
+`args` string[]
+
+Avalonia application start args
+
+
+`shutdownMode` [Avalonia.Controls.ShutdownMode](xref:Avalonia.Controls.ShutdownMode)
+
+shut down mode [Avalonia.Controls.ShutdownMode](xref:Avalonia.Controls.ShutdownMode)
+
+
+##### Returns
+
+int
+
 
 ##### Exceptions
 
 - [InvalidOperationException](xref:System.InvalidOperationException)
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-d1d8da1ef5"></span>
 
-#### StartWithHeadlessVncPlatform
+#### StartWithHeadlessVncPlatform Method
 
 Start Avalonia application with Headless VNC platform without password.
 
 ```csharp
-public Int32 StartWithHeadlessVncPlatform(Avalonia.AppBuilder builder, String host, Int32 port, String[] args, Avalonia.Controls.ShutdownMode shutdownMode)
+public int StartWithHeadlessVncPlatform(Avalonia.AppBuilder builder, string host, int port, string[] args, Avalonia.Controls.ShutdownMode shutdownMode)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `args` | Avalonia application start args |
-| `builder` | Application Builder |
-| `host` | VNC Server IP will be bind, if null or empty IPAddress.LoopBack will be used. |
-| `port` | VNC Server port will be bind |
-| `shutdownMode` | shut down mode [Avalonia.Controls.ShutdownMode](xref:Avalonia.Controls.ShutdownMode) |
+##### Parameters
+
+`builder` [Avalonia.AppBuilder](xref:Avalonia.AppBuilder)
+
+Application Builder
+
+
+`host` string
+
+VNC Server IP will be bind, if null or empty IPAddress.LoopBack will be used.
+
+
+`port` int
+
+VNC Server port will be bind
+
+
+`args` string[]
+
+Avalonia application start args
+
+
+`shutdownMode` [Avalonia.Controls.ShutdownMode](xref:Avalonia.Controls.ShutdownMode)
+
+shut down mode [Avalonia.Controls.ShutdownMode](xref:Avalonia.Controls.ShutdownMode)
+
+
+##### Returns
+
+int
+
+
+</section>
 
 </ApiRefPage>
 

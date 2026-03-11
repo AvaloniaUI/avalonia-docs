@@ -61,11 +61,13 @@ public class PageSelectionChangedEventArgs
 
 | Name | Description |
 | --- | --- |
-| [PageSelectionChangedEventArgs](#uid-0eb277a97e) | Initializes a new instance of the Avalonia.Controls.PageSelectionChangedEventArgs class. |
+| [PageSelectionChangedEventArgs](#uid-0eb277a97e) | Initializes a new instance of the [Avalonia.Controls.PageSelectionChangedEventArgs](xref:Avalonia.Controls.PageSelectionChangedEventArgs) class. |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-0eb277a97e"></span>
 
-### PageSelectionChangedEventArgs
+### PageSelectionChangedEventArgs Constructor
 
 Initializes a new instance of the [Avalonia.Controls.PageSelectionChangedEventArgs](xref:Avalonia.Controls.PageSelectionChangedEventArgs) class.
 
@@ -73,10 +75,19 @@ Initializes a new instance of the [Avalonia.Controls.PageSelectionChangedEventAr
 public PageSelectionChangedEventArgs(Avalonia.Controls.Page previousPage, Avalonia.Controls.Page currentPage)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `currentPage` | The page that is now selected, or if selection was cleared. |
-| `previousPage` | The page that was selected before the change, or if no page was selected. |
+#### Parameters
+
+`previousPage` [Avalonia.Controls.Page](xref:Avalonia.Controls.Page)
+
+The page that was selected before the change, or if no page was selected.
+
+
+`currentPage` [Avalonia.Controls.Page](xref:Avalonia.Controls.Page)
+
+The page that is now selected, or if selection was cleared.
+
+
+</section>
 
 ## Properties
 
@@ -85,9 +96,11 @@ public PageSelectionChangedEventArgs(Avalonia.Controls.Page previousPage, Avalon
 | [CurrentPage](#uid-70c46628aa) | Gets the page that is now selected. |
 | [PreviousPage](#uid-37e81a015e) | Gets the page that was selected before the change. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-70c46628aa"></span>
 
-### CurrentPage
+### CurrentPage Property
 
 Gets the page that is now selected.
 
@@ -95,15 +108,21 @@ Gets the page that is now selected.
 public Avalonia.Controls.Page CurrentPage { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-37e81a015e"></span>
 
-### PreviousPage
+### PreviousPage Property
 
 Gets the page that was selected before the change.
 
 ```csharp
 public Avalonia.Controls.Page PreviousPage { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

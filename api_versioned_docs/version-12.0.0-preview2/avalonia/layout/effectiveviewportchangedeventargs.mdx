@@ -63,29 +63,47 @@ public class EffectiveViewportChangedEventArgs
 | --- | --- |
 | [EffectiveViewportChangedEventArgs](#uid-f93e810b12) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-f93e810b12"></span>
 
-### EffectiveViewportChangedEventArgs
+### EffectiveViewportChangedEventArgs Constructor
 
 ```csharp
 public EffectiveViewportChangedEventArgs(Avalonia.Rect effectiveViewport)
 ```
 
+#### Parameters
+
+`effectiveViewport` [Avalonia.Rect](xref:Avalonia.Rect)
+
+
+</section>
+
 ## Properties
 
 | Name | Description |
 | --- | --- |
-| [EffectiveViewport](#uid-cfc7779631) | Gets the Avalonia.Rect representing the effective viewport. |
+| [EffectiveViewport](#uid-cfc7779631) | Gets the [Avalonia.Rect](xref:Avalonia.Rect) representing the effective viewport. |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-cfc7779631"></span>
 
-### EffectiveViewport
+### EffectiveViewport Property
 
 Gets the [Avalonia.Rect](xref:Avalonia.Rect) representing the effective viewport.
 
 ```csharp
 public Avalonia.Rect EffectiveViewport { get; set; }
 ```
+
+#### Remarks
+
+The viewport is expressed in coordinates relative to the control that the event is
+raised on.
+
+</section>
 
 </ApiRefPage>
 

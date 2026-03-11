@@ -49,21 +49,55 @@ public interface IVulkanInstance
 | [GetDeviceProcAddress](#uid-78d5f22208) | No summary available. |
 | [GetInstanceProcAddress](#uid-988ee57f51) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-78d5f22208"></span>
 
-### GetDeviceProcAddress
+### GetDeviceProcAddress Method
 
 ```csharp
-public IntPtr GetDeviceProcAddress(IntPtr device, String name)
+public IntPtr GetDeviceProcAddress(IntPtr device, string name)
 ```
+
+#### Parameters
+
+`device` IntPtr
+
+
+`name` string
+
+
+#### Returns
+
+IntPtr
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-988ee57f51"></span>
 
-### GetInstanceProcAddress
+### GetInstanceProcAddress Method
 
 ```csharp
-public IntPtr GetInstanceProcAddress(IntPtr instance, String name)
+public IntPtr GetInstanceProcAddress(IntPtr instance, string name)
 ```
+
+#### Parameters
+
+`instance` IntPtr
+
+
+`name` string
+
+
+#### Returns
+
+IntPtr
+
+
+</section>
 
 ## Properties
 
@@ -72,21 +106,29 @@ public IntPtr GetInstanceProcAddress(IntPtr instance, String name)
 | [EnabledExtensions](#uid-686f5764c5) | No summary available. |
 | [Handle](#uid-6f68b3530e) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-686f5764c5"></span>
 
-### EnabledExtensions
+### EnabledExtensions Property
 
 ```csharp
-public System.Collections.Generic.IEnumerable<String> EnabledExtensions { get; set; }
+public System.Collections.Generic.IEnumerable<string> EnabledExtensions { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-6f68b3530e"></span>
 
-### Handle
+### Handle Property
 
 ```csharp
 public IntPtr Handle { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

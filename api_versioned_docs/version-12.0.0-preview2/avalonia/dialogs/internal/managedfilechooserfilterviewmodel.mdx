@@ -47,7 +47,7 @@ public class ManagedFileChooserFilterViewModel
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="avaloniadialogsinternalviewmodelbase">AvaloniaDialogsInternalViewModelBase</a> <span className="apiref-page__relation-separator">-&gt;</span> ManagedFileChooserFilterViewModel
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="avaloniadialogsinternalviewmodelbase">AvaloniaDialogsInternalViewModelBase</a> <span className="apiref-page__relation-separator">-&gt;</span> ManagedFileChooserFilterViewModel
 </div>
 </div>
 
@@ -61,21 +61,42 @@ public class ManagedFileChooserFilterViewModel
 
 ### ManagedFileChooserFilterViewModel overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-b3776260a2"></span>
 
-#### ManagedFileChooserFilterViewModel
+#### ManagedFileChooserFilterViewModel Constructor
 
 ```csharp
 public ManagedFileChooserFilterViewModel(Avalonia.Platform.Storage.FilePickerFileType filter)
 ```
 
+##### Parameters
+
+`filter` [Avalonia.Platform.Storage.FilePickerFileType](xref:Avalonia.Platform.Storage.FilePickerFileType)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-a8a0510aa2"></span>
 
-#### ManagedFileChooserFilterViewModel
+#### ManagedFileChooserFilterViewModel Constructor
 
 ```csharp
-public ManagedFileChooserFilterViewModel(Avalonia.Platform.Storage.FilePickerFileType filter, Int32 index)
+public ManagedFileChooserFilterViewModel(Avalonia.Platform.Storage.FilePickerFileType filter, int index)
 ```
+
+##### Parameters
+
+`filter` [Avalonia.Platform.Storage.FilePickerFileType](xref:Avalonia.Platform.Storage.FilePickerFileType)
+
+
+`index` int
+
+
+</section>
 
 ## Methods
 
@@ -84,21 +105,44 @@ public ManagedFileChooserFilterViewModel(Avalonia.Platform.Storage.FilePickerFil
 | [Match](#uid-6705cb63f8) | No summary available. |
 | [ToString](#uid-fe50ced234) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-6705cb63f8"></span>
 
-### Match
+### Match Method
 
 ```csharp
-public Boolean Match(String filename)
+public bool Match(string filename)
 ```
+
+#### Parameters
+
+`filename` string
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-fe50ced234"></span>
 
-### ToString
+### ToString Method
 
 ```csharp
-public String ToString()
+public string ToString()
 ```
+
+#### Returns
+
+string
+
+
+</section>
 
 ## Properties
 
@@ -106,19 +150,23 @@ public String ToString()
 | --- | --- |
 | [Name](#uid-5af589ff1b) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-5af589ff1b"></span>
 
-### Name
+### Name Property
 
 ```csharp
-public String Name { get; set; }
+public string Name { get; set; }
 ```
+
+</section>
 
 ## Events
 
 | Name | Description |
 | --- | --- |
-| [PropertyChanged (Inherited from AvaloniaDialogsInternalViewModelBase)](avaloniadialogsinternalviewmodelbase.mdx#uid-302249abe0) | No summary available. |
+| [PropertyChanged](avaloniadialogsinternalviewmodelbase.mdx#uid-302249abe0) | Inherited from [AvaloniaDialogsInternalViewModelBase](avaloniadialogsinternalviewmodelbase.mdx). |
 
 </ApiRefPage>
 

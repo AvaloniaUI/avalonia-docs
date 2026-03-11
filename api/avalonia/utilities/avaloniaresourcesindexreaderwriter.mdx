@@ -47,7 +47,7 @@ public class AvaloniaResourcesIndexReaderWriter
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> AvaloniaResourcesIndexReaderWriter
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> AvaloniaResourcesIndexReaderWriter
 </div>
 </div>
 
@@ -59,29 +59,67 @@ public class AvaloniaResourcesIndexReaderWriter
 | [WriteIndex](#uid-780f160a31) | No summary available. |
 | [WriteResources](#uid-1cdba6e87c) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-e05460378c"></span>
 
-### ReadIndex
+### ReadIndex Method
 
 ```csharp
 public System.Collections.Generic.List<Avalonia.Utilities.AvaloniaResourcesIndexEntry> ReadIndex(System.IO.Stream stream)
 ```
 
+#### Parameters
+
+`stream` System.IO.Stream
+
+
+#### Returns
+
+System.Collections.Generic.List&lt;[Avalonia.Utilities.AvaloniaResourcesIndexEntry](xref:Avalonia.Utilities.AvaloniaResourcesIndexEntry)&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-780f160a31"></span>
 
-### WriteIndex
+### WriteIndex Method
 
 ```csharp
-public Void WriteIndex(System.IO.Stream output, System.Collections.Generic.List<Avalonia.Utilities.AvaloniaResourcesIndexEntry> entries)
+public void WriteIndex(System.IO.Stream output, System.Collections.Generic.List<Avalonia.Utilities.AvaloniaResourcesIndexEntry> entries)
 ```
+
+#### Parameters
+
+`output` System.IO.Stream
+
+
+`entries` System.Collections.Generic.List&lt;[Avalonia.Utilities.AvaloniaResourcesIndexEntry](xref:Avalonia.Utilities.AvaloniaResourcesIndexEntry)&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-1cdba6e87c"></span>
 
-### WriteResources
+### WriteResources Method
 
 ```csharp
-public Void WriteResources(System.IO.Stream output, System.Collections.Generic.IReadOnlyList<Avalonia.Utilities.AvaloniaResourcesEntry> resources)
+public void WriteResources(System.IO.Stream output, System.Collections.Generic.IReadOnlyList<Avalonia.Utilities.AvaloniaResourcesEntry> resources)
 ```
+
+#### Parameters
+
+`output` System.IO.Stream
+
+
+`resources` System.Collections.Generic.IReadOnlyList&lt;[Avalonia.Utilities.AvaloniaResourcesEntry](xref:Avalonia.Utilities.AvaloniaResourcesEntry)&gt;
+
+
+</section>
 
 </ApiRefPage>
 

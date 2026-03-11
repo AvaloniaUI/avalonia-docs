@@ -47,7 +47,7 @@ public class LibInputBackend
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> LibInputBackend
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> LibInputBackend
 </div>
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Implements:</span> <a href="../iinputbackend">IInputBackend</a>
@@ -64,21 +64,34 @@ public class LibInputBackend
 
 ### LibInputBackend overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-c7d1e5b903"></span>
 
-#### LibInputBackend
+#### LibInputBackend Constructor
 
 ```csharp
 public LibInputBackend()
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-ca3e7f29fe"></span>
 
-#### LibInputBackend
+#### LibInputBackend Constructor
 
 ```csharp
 public LibInputBackend(Avalonia.LinuxFramebuffer.Input.LibInput.LibInputBackendOptions options)
 ```
+
+##### Parameters
+
+`options` [Avalonia.LinuxFramebuffer.Input.LibInput.LibInputBackendOptions](xref:Avalonia.LinuxFramebuffer.Input.LibInput.LibInputBackendOptions)
+
+
+</section>
 
 ## Methods
 
@@ -87,21 +100,42 @@ public LibInputBackend(Avalonia.LinuxFramebuffer.Input.LibInput.LibInputBackendO
 | [Initialize](#uid-86653a903d) | No summary available. |
 | [SetInputRoot](#uid-e692c049b2) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-86653a903d"></span>
 
-### Initialize
+### Initialize Method
 
 ```csharp
-public Void Initialize(Avalonia.LinuxFramebuffer.Input.IScreenInfoProvider screen, Action<Avalonia.Input.Raw.RawInputEventArgs> onInput)
+public void Initialize(Avalonia.LinuxFramebuffer.Input.IScreenInfoProvider screen, Action<Avalonia.Input.Raw.RawInputEventArgs> onInput)
 ```
+
+#### Parameters
+
+`screen` [Avalonia.LinuxFramebuffer.Input.IScreenInfoProvider](xref:Avalonia.LinuxFramebuffer.Input.IScreenInfoProvider)
+
+
+`onInput` Action&lt;[Avalonia.Input.Raw.RawInputEventArgs](xref:Avalonia.Input.Raw.RawInputEventArgs)&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-e692c049b2"></span>
 
-### SetInputRoot
+### SetInputRoot Method
 
 ```csharp
-public Void SetInputRoot(Avalonia.Input.IInputRoot root)
+public void SetInputRoot(Avalonia.Input.IInputRoot root)
 ```
+
+#### Parameters
+
+`root` [Avalonia.Input.IInputRoot](xref:Avalonia.Input.IInputRoot)
+
+
+</section>
 
 </ApiRefPage>
 

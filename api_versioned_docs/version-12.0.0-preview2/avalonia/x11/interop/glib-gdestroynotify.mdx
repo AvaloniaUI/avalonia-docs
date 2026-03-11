@@ -54,13 +54,25 @@ public delegate Glib.GDestroyNotify
 | --- | --- |
 | [Glib.GDestroyNotify](#uid-5898211366) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-5898211366"></span>
 
-### Glib.GDestroyNotify
+### Glib.GDestroyNotify Constructor
 
 ```csharp
-public Glib.GDestroyNotify(Object object, IntPtr method)
+public Glib.GDestroyNotify(object object, IntPtr method)
 ```
+
+#### Parameters
+
+`object` object
+
+
+`method` IntPtr
+
+
+</section>
 
 ## Methods
 
@@ -70,29 +82,67 @@ public Glib.GDestroyNotify(Object object, IntPtr method)
 | [EndInvoke](#uid-dbfc736c40) | No summary available. |
 | [Invoke](#uid-64b8183f79) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-b63490b083"></span>
 
-### BeginInvoke
+### BeginInvoke Method
 
 ```csharp
-public IAsyncResult BeginInvoke(IntPtr userData, AsyncCallback callback, Object object)
+public IAsyncResult BeginInvoke(IntPtr userData, AsyncCallback callback, object object)
 ```
+
+#### Parameters
+
+`userData` IntPtr
+
+
+`callback` AsyncCallback
+
+
+`object` object
+
+
+#### Returns
+
+IAsyncResult
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-dbfc736c40"></span>
 
-### EndInvoke
+### EndInvoke Method
 
 ```csharp
-public Void EndInvoke(IAsyncResult result)
+public void EndInvoke(IAsyncResult result)
 ```
+
+#### Parameters
+
+`result` IAsyncResult
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-64b8183f79"></span>
 
-### Invoke
+### Invoke Method
 
 ```csharp
-public Void Invoke(IntPtr userData)
+public void Invoke(IntPtr userData)
 ```
+
+#### Parameters
+
+`userData` IntPtr
+
+
+</section>
 
 </ApiRefPage>
 

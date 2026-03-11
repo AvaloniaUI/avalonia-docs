@@ -54,13 +54,25 @@ public delegate Glib.GSourceFunc
 | --- | --- |
 | [Glib.GSourceFunc](#uid-46146a9865) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-46146a9865"></span>
 
-### Glib.GSourceFunc
+### Glib.GSourceFunc Constructor
 
 ```csharp
-public Glib.GSourceFunc(Object object, IntPtr method)
+public Glib.GSourceFunc(object object, IntPtr method)
 ```
+
+#### Parameters
+
+`object` object
+
+
+`method` IntPtr
+
+
+</section>
 
 ## Methods
 
@@ -70,29 +82,77 @@ public Glib.GSourceFunc(Object object, IntPtr method)
 | [EndInvoke](#uid-3dc1d59e21) | No summary available. |
 | [Invoke](#uid-85954877f3) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-7bccce962c"></span>
 
-### BeginInvoke
+### BeginInvoke Method
 
 ```csharp
-public IAsyncResult BeginInvoke(IntPtr userData, AsyncCallback callback, Object object)
+public IAsyncResult BeginInvoke(IntPtr userData, AsyncCallback callback, object object)
 ```
+
+#### Parameters
+
+`userData` IntPtr
+
+
+`callback` AsyncCallback
+
+
+`object` object
+
+
+#### Returns
+
+IAsyncResult
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-3dc1d59e21"></span>
 
-### EndInvoke
+### EndInvoke Method
 
 ```csharp
-public Int32 EndInvoke(IAsyncResult result)
+public int EndInvoke(IAsyncResult result)
 ```
+
+#### Parameters
+
+`result` IAsyncResult
+
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-85954877f3"></span>
 
-### Invoke
+### Invoke Method
 
 ```csharp
-public Int32 Invoke(IntPtr userData)
+public int Invoke(IntPtr userData)
 ```
+
+#### Parameters
+
+`userData` IntPtr
+
+
+#### Returns
+
+int
+
+
+</section>
 
 </ApiRefPage>
 

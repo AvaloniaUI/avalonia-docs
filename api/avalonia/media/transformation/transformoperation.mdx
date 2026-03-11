@@ -70,59 +70,132 @@ public struct TransformOperation
 | [ToString](#uid-71ce85e9c4) | No summary available. |
 | [TryInterpolate](#uid-1d9e2eb9d9) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-daf459e051"></span>
 
-### Bake
+### Bake Method
 
 Bakes this operation to a transform matrix.
 
 ```csharp
-public Void Bake()
+public void Bake()
 ```
+
+</section>
 
 <span id="uid-a647d0a2bf"></span>
 
 ### Equals overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-868af7f776"></span>
 
-#### Equals
+#### Equals Method
 
 ```csharp
-public Boolean Equals(Avalonia.Media.Transformation.TransformOperation other)
+public bool Equals(Avalonia.Media.Transformation.TransformOperation other)
 ```
+
+##### Parameters
+
+`other` [Avalonia.Media.Transformation.TransformOperation](xref:Avalonia.Media.Transformation.TransformOperation)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-5869677216"></span>
 
-#### Equals
+#### Equals Method
 
 ```csharp
-public Boolean Equals(Object obj)
+public bool Equals(object obj)
 ```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-b4ac176f2d"></span>
 
-### GetHashCode
+### GetHashCode Method
 
 ```csharp
-public Int32 GetHashCode()
+public int GetHashCode()
 ```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-71ce85e9c4"></span>
 
-### ToString
+### ToString Method
 
 ```csharp
-public String ToString()
+public string ToString()
 ```
+
+#### Returns
+
+string
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-1d9e2eb9d9"></span>
 
-### TryInterpolate
+### TryInterpolate Method
 
 ```csharp
-public Boolean TryInterpolate(Nullable<Avalonia.Media.Transformation.TransformOperation> from, Nullable<Avalonia.Media.Transformation.TransformOperation> to, Double progress, Avalonia.Media.Transformation.TransformOperation& result)
+public bool TryInterpolate(Nullable<Avalonia.Media.Transformation.TransformOperation> from, Nullable<Avalonia.Media.Transformation.TransformOperation> to, double progress, Avalonia.Media.Transformation.TransformOperation& result)
 ```
+
+#### Parameters
+
+`from` Nullable&lt;[Avalonia.Media.Transformation.TransformOperation](xref:Avalonia.Media.Transformation.TransformOperation)&gt;
+
+
+`to` Nullable&lt;[Avalonia.Media.Transformation.TransformOperation](xref:Avalonia.Media.Transformation.TransformOperation)&gt;
+
+
+`progress` double
+
+
+`result` [Avalonia.Media.Transformation.TransformOperation](xref:Avalonia.Media.Transformation.TransformOperation)&amp;
+
+
+#### Returns
+
+bool
+
+
+</section>
 
 ## Properties
 
@@ -131,9 +204,11 @@ public Boolean TryInterpolate(Nullable<Avalonia.Media.Transformation.TransformOp
 | [Identity](#uid-5835267b69) | Returns new identity transform operation. |
 | [IsIdentity](#uid-23f7b7bc17) | Returns whether operation produces the identity matrix. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-5835267b69"></span>
 
-### Identity
+### Identity Property
 
 Returns new identity transform operation.
 
@@ -141,15 +216,21 @@ Returns new identity transform operation.
 public Avalonia.Media.Transformation.TransformOperation Identity { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-23f7b7bc17"></span>
 
-### IsIdentity
+### IsIdentity Property
 
 Returns whether operation produces the identity matrix.
 
 ```csharp
-public Boolean IsIdentity { get; set; }
+public bool IsIdentity { get; set; }
 ```
+
+</section>
 
 ## Fields
 
@@ -159,29 +240,41 @@ public Boolean IsIdentity { get; set; }
 | [Matrix](#uid-639fd0e80b) | No summary available. |
 | [Type](#uid-2bebb4896e) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-416b125d23"></span>
 
-### Data
+### Data Field
 
 ```csharp
 public Avalonia.Media.Transformation.TransformOperation.DataLayout Data
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-639fd0e80b"></span>
 
-### Matrix
+### Matrix Field
 
 ```csharp
 public Avalonia.Matrix Matrix
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-2bebb4896e"></span>
 
-### Type
+### Type Field
 
 ```csharp
 public Avalonia.Media.Transformation.TransformOperation.OperationType Type
 ```
+
+</section>
 
 </ApiRefPage>
 

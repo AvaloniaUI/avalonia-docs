@@ -53,7 +53,7 @@ public class StorageProviderExtensions
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> StorageProviderExtensions
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> StorageProviderExtensions
 </div>
 </div>
 
@@ -65,53 +65,113 @@ public class StorageProviderExtensions
 | [TryGetFolderFromPathAsync](#uid-435b21440b) | Attempts to read folder from the file-system by its path. |
 | [TryGetLocalPath](#uid-f9f614344d) | Gets the local file system path of the item as a string. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-34fe3c9619"></span>
 
-### TryGetFileFromPathAsync
+### TryGetFileFromPathAsync Method
 
 Attempts to read file from the file-system by its path.
 
 ```csharp
-public System.Threading.Tasks.Task<Avalonia.Platform.Storage.IStorageFile> TryGetFileFromPathAsync(Avalonia.Platform.Storage.IStorageProvider provider, String filePath)
+public System.Threading.Tasks.Task<Avalonia.Platform.Storage.IStorageFile> TryGetFileFromPathAsync(Avalonia.Platform.Storage.IStorageProvider provider, string filePath)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `filePath` | The path of the item to retrieve in Uri format. |
+#### Parameters
 
-Returns: File or null if it doesn't exist.
+`provider` [Avalonia.Platform.Storage.IStorageProvider](xref:Avalonia.Platform.Storage.IStorageProvider)
+
+
+`filePath` string
+
+The path of the item to retrieve in Uri format.
+
+
+#### Returns
+
+System.Threading.Tasks.Task&lt;[Avalonia.Platform.Storage.IStorageFile](xref:Avalonia.Platform.Storage.IStorageFile)&gt;
+
+File or null if it doesn't exist.
+
+
+#### Remarks
+
+Uri path is usually expected to be an absolute path with "file" scheme.
+But it can be an uri with "content" scheme on the Android.
+It also might ask user for the permission, and throw an exception if it was denied.
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-435b21440b"></span>
 
-### TryGetFolderFromPathAsync
+### TryGetFolderFromPathAsync Method
 
 Attempts to read folder from the file-system by its path.
 
 ```csharp
-public System.Threading.Tasks.Task<Avalonia.Platform.Storage.IStorageFolder> TryGetFolderFromPathAsync(Avalonia.Platform.Storage.IStorageProvider provider, String folderPath)
+public System.Threading.Tasks.Task<Avalonia.Platform.Storage.IStorageFolder> TryGetFolderFromPathAsync(Avalonia.Platform.Storage.IStorageProvider provider, string folderPath)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `folderPath` | The path of the folder to retrieve in Uri format. |
+#### Parameters
 
-Returns: Folder or null if it doesn't exist.
+`provider` [Avalonia.Platform.Storage.IStorageProvider](xref:Avalonia.Platform.Storage.IStorageProvider)
+
+
+`folderPath` string
+
+The path of the folder to retrieve in Uri format.
+
+
+#### Returns
+
+System.Threading.Tasks.Task&lt;[Avalonia.Platform.Storage.IStorageFolder](xref:Avalonia.Platform.Storage.IStorageFolder)&gt;
+
+Folder or null if it doesn't exist.
+
+
+#### Remarks
+
+Uri path is usually expected to be an absolute path with "file" scheme.
+But it can be an uri with "content" scheme on the Android.
+It also might ask user for the permission, and throw an exception if it was denied.
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-f9f614344d"></span>
 
-### TryGetLocalPath
+### TryGetLocalPath Method
 
 Gets the local file system path of the item as a string.
 
 ```csharp
-public String TryGetLocalPath(Avalonia.Platform.Storage.IStorageItem item)
+public string TryGetLocalPath(Avalonia.Platform.Storage.IStorageItem item)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `item` | Storage folder or file. |
+#### Parameters
 
-Returns: Full local path to the folder or file if possible, otherwise null.
+`item` [Avalonia.Platform.Storage.IStorageItem](xref:Avalonia.Platform.Storage.IStorageItem)
+
+Storage folder or file.
+
+
+#### Returns
+
+string
+
+Full local path to the folder or file if possible, otherwise null.
+
+
+#### Remarks
+
+Android platform usually uses "content:" virtual file paths
+and Browser platform has isolated access without full paths,
+so on these platforms this method will return null.
+
+</section>
 
 </ApiRefPage>
 

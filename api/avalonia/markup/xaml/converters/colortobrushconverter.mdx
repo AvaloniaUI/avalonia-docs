@@ -53,7 +53,7 @@ public class ColorToBrushConverter
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> ColorToBrushConverter
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> ColorToBrushConverter
 </div>
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Implements:</span> <a href="../../../data/converters/ivalueconverter">IValueConverter</a>
@@ -66,108 +66,192 @@ public class ColorToBrushConverter
 | --- | --- |
 | [ColorToBrushConverter](#uid-bebacfbe13) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-bebacfbe13"></span>
 
-### ColorToBrushConverter
+### ColorToBrushConverter Constructor
 
 ```csharp
 public ColorToBrushConverter()
 ```
 
+</section>
+
 ## Methods
 
 | Name | Description |
 | --- | --- |
-| [Convert (2 overloads)](#uid-0452eb7499) | Converts a Avalonia.Media.Color to an Avalonia.Media.IBrush if the arguments are of the correct type. |
-| [ConvertBack (2 overloads)](#uid-7db7ae26ec) | Converts an Avalonia.Media.ISolidColorBrush to a Avalonia.Media.Color if the arguments are of the correct type. |
+| [Convert (2 overloads)](#uid-0452eb7499) | Converts a [Avalonia.Media.Color](xref:Avalonia.Media.Color) to an [Avalonia.Media.IBrush](xref:Avalonia.Media.IBrush) if the arguments are of the correct type. |
+| [ConvertBack (2 overloads)](#uid-7db7ae26ec) | Converts an [Avalonia.Media.ISolidColorBrush](xref:Avalonia.Media.ISolidColorBrush) to a [Avalonia.Media.Color](xref:Avalonia.Media.Color) if the arguments are of the correct type. |
 
 <span id="uid-0452eb7499"></span>
 
 ### Convert overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-40cbb17ebe"></span>
 
-#### Convert
+#### Convert Method
 
 Converts a [Avalonia.Media.Color](xref:Avalonia.Media.Color) to an [Avalonia.Media.IBrush](xref:Avalonia.Media.IBrush) if the arguments are of the
 correct type.
 
 ```csharp
-public Object Convert(Object value, Type targetType)
+public object Convert(object value, Type targetType)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `targetType` | The target type. |
-| `value` | The value. |
+##### Parameters
 
-Returns: If `value` is a [Avalonia.Media.Color](xref:Avalonia.Media.Color) and `targetType`
+`value` object
+
+The value.
+
+
+`targetType` Type
+
+The target type.
+
+
+##### Returns
+
+object
+
+If `value` is a [Avalonia.Media.Color](xref:Avalonia.Media.Color) and `targetType`
 is [Avalonia.Media.IBrush](xref:Avalonia.Media.IBrush) then converts the color to a solid color brush.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-8bef656e1c"></span>
 
-#### Convert
+#### Convert Method
 
 Converts a [Avalonia.Media.Color](xref:Avalonia.Media.Color) to an [Avalonia.Media.IBrush](xref:Avalonia.Media.IBrush) if the arguments are of the
 correct type.
 
 ```csharp
-public Object Convert(Object value, Type targetType, Object parameter, System.Globalization.CultureInfo culture)
+public object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `culture` | Not used. |
-| `parameter` | Not used. |
-| `targetType` | The target type. |
-| `value` | The value. |
+##### Parameters
 
-Returns: If `value` is a [Avalonia.Media.Color](xref:Avalonia.Media.Color) and `targetType`
+`value` object
+
+The value.
+
+
+`targetType` Type
+
+The target type.
+
+
+`parameter` object
+
+Not used.
+
+
+`culture` System.Globalization.CultureInfo
+
+Not used.
+
+
+##### Returns
+
+object
+
+If `value` is a [Avalonia.Media.Color](xref:Avalonia.Media.Color) and `targetType`
 is [Avalonia.Media.IBrush](xref:Avalonia.Media.IBrush) then converts the color to a solid color brush.
+
+
+</section>
 
 <span id="uid-7db7ae26ec"></span>
 
 ### ConvertBack overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-f25a119d65"></span>
 
-#### ConvertBack
+#### ConvertBack Method
 
 Converts an [Avalonia.Media.ISolidColorBrush](xref:Avalonia.Media.ISolidColorBrush) to a [Avalonia.Media.Color](xref:Avalonia.Media.Color) if the arguments are of the
 correct type.
 
 ```csharp
-public Object ConvertBack(Object value, Type targetType)
+public object ConvertBack(object value, Type targetType)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `targetType` | The target type. |
-| `value` | The value. |
+##### Parameters
 
-Returns: If `value` is an [Avalonia.Media.ISolidColorBrush](xref:Avalonia.Media.ISolidColorBrush) and `targetType`
+`value` object
+
+The value.
+
+
+`targetType` Type
+
+The target type.
+
+
+##### Returns
+
+object
+
+If `value` is an [Avalonia.Media.ISolidColorBrush](xref:Avalonia.Media.ISolidColorBrush) and `targetType`
 is [Avalonia.Media.Color](xref:Avalonia.Media.Color) then converts the solid color brush to a color.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-9623d490e7"></span>
 
-#### ConvertBack
+#### ConvertBack Method
 
 Converts an [Avalonia.Media.ISolidColorBrush](xref:Avalonia.Media.ISolidColorBrush) to a [Avalonia.Media.Color](xref:Avalonia.Media.Color) if the arguments are of the
 correct type.
 
 ```csharp
-public Object ConvertBack(Object value, Type targetType, Object parameter, System.Globalization.CultureInfo culture)
+public object ConvertBack(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `culture` | Not used. |
-| `parameter` | Not used. |
-| `targetType` | The target type. |
-| `value` | The value. |
+##### Parameters
 
-Returns: If `value` is an [Avalonia.Media.ISolidColorBrush](xref:Avalonia.Media.ISolidColorBrush) and `targetType`
+`value` object
+
+The value.
+
+
+`targetType` Type
+
+The target type.
+
+
+`parameter` object
+
+Not used.
+
+
+`culture` System.Globalization.CultureInfo
+
+Not used.
+
+
+##### Returns
+
+object
+
+If `value` is an [Avalonia.Media.ISolidColorBrush](xref:Avalonia.Media.ISolidColorBrush) and `targetType`
 is [Avalonia.Media.Color](xref:Avalonia.Media.Color) then converts the solid color brush to a color.
+
+
+</section>
 
 </ApiRefPage>
 

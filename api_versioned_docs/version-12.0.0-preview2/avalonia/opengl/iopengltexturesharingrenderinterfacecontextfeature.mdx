@@ -49,21 +49,52 @@ public interface IOpenGlTextureSharingRenderInterfaceContextFeature
 | [CreateSharedContext](#uid-fbef9e79f2) | No summary available. |
 | [CreateSharedTextureForComposition](#uid-92f52b9045) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-fbef9e79f2"></span>
 
-### CreateSharedContext
+### CreateSharedContext Method
 
 ```csharp
 public Avalonia.OpenGL.IGlContext CreateSharedContext(System.Collections.Generic.IEnumerable<Avalonia.OpenGL.GlVersion> preferredVersions)
 ```
 
+#### Parameters
+
+`preferredVersions` System.Collections.Generic.IEnumerable&lt;[Avalonia.OpenGL.GlVersion](xref:Avalonia.OpenGL.GlVersion)&gt;
+
+
+#### Returns
+
+[Avalonia.OpenGL.IGlContext](xref:Avalonia.OpenGL.IGlContext)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-92f52b9045"></span>
 
-### CreateSharedTextureForComposition
+### CreateSharedTextureForComposition Method
 
 ```csharp
 public Avalonia.OpenGL.ICompositionImportableOpenGlSharedTexture CreateSharedTextureForComposition(Avalonia.OpenGL.IGlContext context, Avalonia.PixelSize size)
 ```
+
+#### Parameters
+
+`context` [Avalonia.OpenGL.IGlContext](xref:Avalonia.OpenGL.IGlContext)
+
+
+`size` [Avalonia.PixelSize](xref:Avalonia.PixelSize)
+
+
+#### Returns
+
+[Avalonia.OpenGL.ICompositionImportableOpenGlSharedTexture](xref:Avalonia.OpenGL.ICompositionImportableOpenGlSharedTexture)
+
+
+</section>
 
 ## Properties
 
@@ -71,13 +102,17 @@ public Avalonia.OpenGL.ICompositionImportableOpenGlSharedTexture CreateSharedTex
 | --- | --- |
 | [CanCreateSharedContext](#uid-f410ff7cea) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-f410ff7cea"></span>
 
-### CanCreateSharedContext
+### CanCreateSharedContext Property
 
 ```csharp
-public Boolean CanCreateSharedContext { get; set; }
+public bool CanCreateSharedContext { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

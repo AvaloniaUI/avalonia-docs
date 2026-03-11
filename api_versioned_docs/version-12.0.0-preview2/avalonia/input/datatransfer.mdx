@@ -53,7 +53,7 @@ public class DataTransfer
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> DataTransfer
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> DataTransfer
 </div>
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Implements:</span> <a href="iasyncdatatransfer">IAsyncDataTransfer</a>, <a href="idatatransfer">IDataTransfer</a>, IDisposable
@@ -71,44 +71,57 @@ For advanced usages, consider implementing [Avalonia.Input.IAsyncDataTransfer](x
 | --- | --- |
 | [DataTransfer](#uid-ca3632a975) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-ca3632a975"></span>
 
-### DataTransfer
+### DataTransfer Constructor
 
 ```csharp
 public DataTransfer()
 ```
 
+</section>
+
 ## Methods
 
 | Name | Description |
 | --- | --- |
-| [Add](#uid-5985e0d674) | Adds an existing Avalonia.Input.DataTransferItem to this object. |
+| [Add](#uid-5985e0d674) | Adds an existing [Avalonia.Input.DataTransferItem](xref:Avalonia.Input.DataTransferItem) to this object. |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-5985e0d674"></span>
 
-### Add
+### Add Method
 
 Adds an existing [Avalonia.Input.DataTransferItem](xref:Avalonia.Input.DataTransferItem) to this object.
 
 ```csharp
-public Void Add(Avalonia.Input.DataTransferItem item)
+public void Add(Avalonia.Input.DataTransferItem item)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `item` | The item to add. |
+#### Parameters
+
+`item` [Avalonia.Input.DataTransferItem](xref:Avalonia.Input.DataTransferItem)
+
+The item to add.
+
+
+</section>
 
 ## Properties
 
 | Name | Description |
 | --- | --- |
 | [Formats](#uid-5485a4a5a3) | Gets the formats supported by this item. |
-| [Items](#uid-9f67baaab8) | Gets a list of Avalonia.Input.DataTransferItem contained in this object. |
+| [Items](#uid-9f67baaab8) | Gets a list of [Avalonia.Input.DataTransferItem](xref:Avalonia.Input.DataTransferItem) contained in this object. |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-5485a4a5a3"></span>
 
-### Formats
+### Formats Property
 
 Gets the formats supported by this item.
 
@@ -116,15 +129,21 @@ Gets the formats supported by this item.
 public System.Collections.Generic.IReadOnlyList<Avalonia.Input.DataFormat> Formats { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-9f67baaab8"></span>
 
-### Items
+### Items Property
 
 Gets a list of [Avalonia.Input.DataTransferItem](xref:Avalonia.Input.DataTransferItem) contained in this object.
 
 ```csharp
 public System.Collections.Generic.IReadOnlyList<Avalonia.Input.DataTransferItem> Items { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

@@ -57,13 +57,31 @@ public class SelectionModelSelectionChangedEventArgs<T>
 | --- | --- |
 | [SelectionModelSelectionChangedEventArgs&lt;T&gt;](#uid-91158ca68b) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-91158ca68b"></span>
 
-### SelectionModelSelectionChangedEventArgs&lt;T&gt;
+### SelectionModelSelectionChangedEventArgs&lt;T&gt; Constructor
 
 ```csharp
-public SelectionModelSelectionChangedEventArgs<T>(System.Collections.Generic.IReadOnlyList<Int32> deselectedIndices, System.Collections.Generic.IReadOnlyList<Int32> selectedIndices, System.Collections.Generic.IReadOnlyList<T> deselectedItems, System.Collections.Generic.IReadOnlyList<T> selectedItems)
+public SelectionModelSelectionChangedEventArgs<T>(System.Collections.Generic.IReadOnlyList<int> deselectedIndices, System.Collections.Generic.IReadOnlyList<int> selectedIndices, System.Collections.Generic.IReadOnlyList<T> deselectedItems, System.Collections.Generic.IReadOnlyList<T> selectedItems)
 ```
+
+#### Parameters
+
+`deselectedIndices` System.Collections.Generic.IReadOnlyList&lt;int&gt;
+
+
+`selectedIndices` System.Collections.Generic.IReadOnlyList&lt;int&gt;
+
+
+`deselectedItems` System.Collections.Generic.IReadOnlyList&lt;T&gt;
+
+
+`selectedItems` System.Collections.Generic.IReadOnlyList&lt;T&gt;
+
+
+</section>
 
 ## Properties
 
@@ -74,19 +92,25 @@ public SelectionModelSelectionChangedEventArgs<T>(System.Collections.Generic.IRe
 | [SelectedIndexes](#uid-7e486a9f2f) | Gets the indexes of the items that were added to the selection. |
 | [SelectedItems](#uid-6966cb1f81) | Gets the items that were added to the selection. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-fcab4fbf13"></span>
 
-### DeselectedIndexes
+### DeselectedIndexes Property
 
 Gets the indexes of the items that were removed from the selection.
 
 ```csharp
-public System.Collections.Generic.IReadOnlyList<Int32> DeselectedIndexes { get; set; }
+public System.Collections.Generic.IReadOnlyList<int> DeselectedIndexes { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-b5e7c073a6"></span>
 
-### DeselectedItems
+### DeselectedItems Property
 
 Gets the items that were removed from the selection.
 
@@ -94,25 +118,35 @@ Gets the items that were removed from the selection.
 public System.Collections.Generic.IReadOnlyList<T> DeselectedItems { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-7e486a9f2f"></span>
 
-### SelectedIndexes
+### SelectedIndexes Property
 
 Gets the indexes of the items that were added to the selection.
 
 ```csharp
-public System.Collections.Generic.IReadOnlyList<Int32> SelectedIndexes { get; set; }
+public System.Collections.Generic.IReadOnlyList<int> SelectedIndexes { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-6966cb1f81"></span>
 
-### SelectedItems
+### SelectedItems Property
 
 Gets the items that were added to the selection.
 
 ```csharp
 public System.Collections.Generic.IReadOnlyList<T> SelectedItems { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

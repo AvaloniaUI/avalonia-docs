@@ -50,7 +50,7 @@ public interface ITreeDataTemplate
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Implements:</span> <a href="idatatemplate">IDataTemplate</a>, ITemplate&lt;Object,Control&gt;
+<span className="apiref-page__meta-label">Implements:</span> <a href="idatatemplate">IDataTemplate</a>, ITemplate&lt;object,Control&gt;
 </div>
 </div>
 
@@ -60,23 +60,43 @@ public interface ITreeDataTemplate
 | --- | --- |
 | [BindChildren](#uid-02882febdc) | Binds the children of the specified item to a property on a target object. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-02882febdc"></span>
 
-### BindChildren
+### BindChildren Method
 
 Binds the children of the specified item to a property on a target object.
 
 ```csharp
-public IDisposable BindChildren(Avalonia.AvaloniaObject target, Avalonia.AvaloniaProperty targetProperty, Object item)
+public IDisposable BindChildren(Avalonia.AvaloniaObject target, Avalonia.AvaloniaProperty targetProperty, object item)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `item` | The item whose children should be bound. |
-| `target` | The target object. |
-| `targetProperty` | The target property. |
+#### Parameters
 
-Returns: An [IDisposable](xref:System.IDisposable) that can be used to remove the binding.
+`target` [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject)
+
+The target object.
+
+
+`targetProperty` [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty)
+
+The target property.
+
+
+`item` object
+
+The item whose children should be bound.
+
+
+#### Returns
+
+IDisposable
+
+An [IDisposable](xref:System.IDisposable) that can be used to remove the binding.
+
+
+</section>
 
 </ApiRefPage>
 

@@ -50,7 +50,7 @@ public interface IRecyclingDataTemplate
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Implements:</span> <a href="idatatemplate">IDataTemplate</a>, ITemplate&lt;Object,Control&gt;
+<span className="apiref-page__meta-label">Implements:</span> <a href="idatatemplate">IDataTemplate</a>, ITemplate&lt;object,Control&gt;
 </div>
 </div>
 
@@ -60,23 +60,44 @@ public interface IRecyclingDataTemplate
 | --- | --- |
 | [Build](#uid-b7a424bae2) | Creates or recycles a control to display the specified data. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-b7a424bae2"></span>
 
-### Build
+### Build Method
 
 Creates or recycles a control to display the specified data.
 
 ```csharp
-public Avalonia.Controls.Control Build(Object data, Avalonia.Controls.Control existing)
+public Avalonia.Controls.Control Build(object data, Avalonia.Controls.Control existing)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `data` | The data to display. |
-| `existing` | An optional control to recycle. |
+#### Parameters
 
-Returns: The `existing` control if supplied and applicable to
+`data` object
+
+The data to display.
+
+
+`existing` [Avalonia.Controls.Control](xref:Avalonia.Controls.Control)
+
+An optional control to recycle.
+
+
+#### Returns
+
+[Avalonia.Controls.Control](xref:Avalonia.Controls.Control)
+
+The `existing` control if supplied and applicable to
 `data`, otherwise a new control or null.
+
+
+#### Remarks
+
+The caller should ensure that any control passed to `existing`
+originated from the same data template.
+
+</section>
 
 </ApiRefPage>
 

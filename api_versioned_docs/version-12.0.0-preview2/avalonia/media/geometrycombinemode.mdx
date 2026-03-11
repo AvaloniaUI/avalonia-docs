@@ -57,9 +57,11 @@ public enum GeometryCombineMode
 | [Union](#uid-1168bcde93) | The two regions are combined by taking the union of both. The resulting geometry is geometry A + geometry B. |
 | [Xor](#uid-2093051e79) | The two regions are combined by taking the area that exists in the first region but not the second and the area that exists in the second region but not the first. The new region consists of (A-B) + (B-A), where A and B are geometries. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-14b8405ee2"></span>
 
-### Exclude
+### Exclude Field
 
 The second region is excluded from the first. Given two geometries, A and B, the area of
 geometry B is removed from the area of geometry A, producing a region that is A-B.
@@ -68,9 +70,13 @@ geometry B is removed from the area of geometry A, producing a region that is A-
 public Avalonia.Media.GeometryCombineMode Exclude
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-86df08c956"></span>
 
-### Intersect
+### Intersect Field
 
 The two regions are combined by taking their intersection. The new area consists of the
 overlapping region between the two geometries.
@@ -79,9 +85,13 @@ overlapping region between the two geometries.
 public Avalonia.Media.GeometryCombineMode Intersect
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-1168bcde93"></span>
 
-### Union
+### Union Field
 
 The two regions are combined by taking the union of both. The resulting geometry is
 geometry A + geometry B.
@@ -90,9 +100,13 @@ geometry A + geometry B.
 public Avalonia.Media.GeometryCombineMode Union
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-2093051e79"></span>
 
-### Xor
+### Xor Field
 
 The two regions are combined by taking the area that exists in the first region but not
 the second and the area that exists in the second region but not the first. The new
@@ -101,6 +115,8 @@ region consists of (A-B) + (B-A), where A and B are geometries.
 ```csharp
 public Avalonia.Media.GeometryCombineMode Xor
 ```
+
+</section>
 
 </ApiRefPage>
 

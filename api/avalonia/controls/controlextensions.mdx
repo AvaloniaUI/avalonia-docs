@@ -53,7 +53,7 @@ public class ControlExtensions
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> ControlExtensions
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> ControlExtensions
 </div>
 </div>
 
@@ -70,58 +70,140 @@ public class ControlExtensions
 
 ### BringIntoView overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-9202a91646"></span>
 
-#### BringIntoView
+#### BringIntoView Method
 
 Tries to bring the control into view.
 
 ```csharp
-public Void BringIntoView(Avalonia.Controls.Control control)
+public void BringIntoView(Avalonia.Controls.Control control)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `control` | The control. |
+##### Parameters
+
+`control` [Avalonia.Controls.Control](xref:Avalonia.Controls.Control)
+
+The control.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-b403ecb624"></span>
 
-#### BringIntoView
+#### BringIntoView Method
 
 Tries to bring the control into view.
 
 ```csharp
-public Void BringIntoView(Avalonia.Controls.Control control, Avalonia.Rect rect)
+public void BringIntoView(Avalonia.Controls.Control control, Avalonia.Rect rect)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `control` | The control. |
-| `rect` | The area of the control to being into view. |
+##### Parameters
+
+`control` [Avalonia.Controls.Control](xref:Avalonia.Controls.Control)
+
+The control.
+
+
+`rect` [Avalonia.Rect](xref:Avalonia.Rect)
+
+The area of the control to being into view.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-3c7c4a6dbd"></span>
 
-### FindControl
+### FindControl Method
 
 ```csharp
-public T FindControl<T>(Avalonia.Controls.Control control, String name)
+public T FindControl<T>(Avalonia.Controls.Control control, string name)
 ```
+
+#### Parameters
+
+`control` [Avalonia.Controls.Control](xref:Avalonia.Controls.Control)
+
+
+`name` string
+
+
+#### Type Parameters
+
+`T`
+
+
+#### Returns
+
+T
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-9cd2be4637"></span>
 
-### GetControl
+### GetControl Method
 
 ```csharp
-public T GetControl<T>(Avalonia.Controls.Control control, String name)
+public T GetControl<T>(Avalonia.Controls.Control control, string name)
 ```
+
+#### Parameters
+
+`control` [Avalonia.Controls.Control](xref:Avalonia.Controls.Control)
+
+
+`name` string
+
+
+#### Type Parameters
+
+`T`
+
+
+#### Returns
+
+T
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-e7e4091cb6"></span>
 
-### Set
+### Set Method
 
 ```csharp
-public IDisposable Set(Avalonia.Controls.IPseudoClasses classes, String name, IObservable<Boolean> trigger)
+public IDisposable Set(Avalonia.Controls.IPseudoClasses classes, string name, IObservable<bool> trigger)
 ```
+
+#### Parameters
+
+`classes` [Avalonia.Controls.IPseudoClasses](xref:Avalonia.Controls.IPseudoClasses)
+
+
+`name` string
+
+
+`trigger` IObservable&lt;bool&gt;
+
+
+#### Returns
+
+IDisposable
+
+
+</section>
 
 </ApiRefPage>
 

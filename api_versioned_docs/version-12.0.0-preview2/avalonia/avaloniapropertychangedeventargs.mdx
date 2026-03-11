@@ -66,13 +66,25 @@ public class AvaloniaPropertyChangedEventArgs
 | --- | --- |
 | [AvaloniaPropertyChangedEventArgs](#uid-67a8243622) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-67a8243622"></span>
 
-### AvaloniaPropertyChangedEventArgs
+### AvaloniaPropertyChangedEventArgs Constructor
 
 ```csharp
 public AvaloniaPropertyChangedEventArgs(Avalonia.AvaloniaObject sender, Avalonia.Data.BindingPriority priority)
 ```
+
+#### Parameters
+
+`sender` [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject)
+
+
+`priority` [Avalonia.Data.BindingPriority](xref:Avalonia.Data.BindingPriority)
+
+
+</section>
 
 ## Properties
 
@@ -82,31 +94,41 @@ public AvaloniaPropertyChangedEventArgs(Avalonia.AvaloniaObject sender, Avalonia
 | [OldValue](#uid-d108871c84) | Gets the old value of the property. |
 | [Priority](#uid-734307fc49) | Gets the priority of the binding that produced the value. |
 | [Property](#uid-ef3d054366) | Gets the property that changed. |
-| [Sender](#uid-cdba2ddc47) | Gets the Avalonia.AvaloniaObject that the property changed on. |
+| [Sender](#uid-cdba2ddc47) | Gets the [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject) that the property changed on. |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-48724e9fbb"></span>
 
-### NewValue
+### NewValue Property
 
 Gets the new value of the property.
 
 ```csharp
-public Object NewValue { get; set; }
+public object NewValue { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-d108871c84"></span>
 
-### OldValue
+### OldValue Property
 
 Gets the old value of the property.
 
 ```csharp
-public Object OldValue { get; set; }
+public object OldValue { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-734307fc49"></span>
 
-### Priority
+### Priority Property
 
 Gets the priority of the binding that produced the value.
 
@@ -114,11 +136,18 @@ Gets the priority of the binding that produced the value.
 public Avalonia.Data.BindingPriority Priority { get; set; }
 ```
 
-Value: The priority of the new value.
+#### Value
+
+The priority of the new value.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-ef3d054366"></span>
 
-### Property
+### Property Property
 
 Gets the property that changed.
 
@@ -126,11 +155,18 @@ Gets the property that changed.
 public Avalonia.AvaloniaProperty Property { get; set; }
 ```
 
-Value: The property that changed.
+#### Value
+
+The property that changed.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-cdba2ddc47"></span>
 
-### Sender
+### Sender Property
 
 Gets the [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject) that the property changed on.
 
@@ -138,7 +174,12 @@ Gets the [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject) that the proper
 public Avalonia.AvaloniaObject Sender { get; set; }
 ```
 
-Value: The sender object.
+#### Value
+
+The sender object.
+
+
+</section>
 
 </ApiRefPage>
 

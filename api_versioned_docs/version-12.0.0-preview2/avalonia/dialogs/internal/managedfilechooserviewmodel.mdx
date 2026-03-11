@@ -47,7 +47,7 @@ public class ManagedFileChooserViewModel
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="avaloniadialogsinternalviewmodelbase">AvaloniaDialogsInternalViewModelBase</a> <span className="apiref-page__relation-separator">-&gt;</span> ManagedFileChooserViewModel
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="avaloniadialogsinternalviewmodelbase">AvaloniaDialogsInternalViewModelBase</a> <span className="apiref-page__relation-separator">-&gt;</span> ManagedFileChooserViewModel
 </div>
 </div>
 
@@ -61,37 +61,82 @@ public class ManagedFileChooserViewModel
 
 ### ManagedFileChooserViewModel overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-cae11352ea"></span>
 
-#### ManagedFileChooserViewModel
+#### ManagedFileChooserViewModel Constructor
 
 ```csharp
 public ManagedFileChooserViewModel(Avalonia.Dialogs.ManagedFileDialogOptions options)
 ```
 
+##### Parameters
+
+`options` [Avalonia.Dialogs.ManagedFileDialogOptions](xref:Avalonia.Dialogs.ManagedFileDialogOptions)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-31f3ee1313"></span>
 
-#### ManagedFileChooserViewModel
+#### ManagedFileChooserViewModel Constructor
 
 ```csharp
 public ManagedFileChooserViewModel(Avalonia.Platform.Storage.FilePickerOpenOptions filePickerOpen, Avalonia.Dialogs.ManagedFileDialogOptions options)
 ```
 
+##### Parameters
+
+`filePickerOpen` [Avalonia.Platform.Storage.FilePickerOpenOptions](xref:Avalonia.Platform.Storage.FilePickerOpenOptions)
+
+
+`options` [Avalonia.Dialogs.ManagedFileDialogOptions](xref:Avalonia.Dialogs.ManagedFileDialogOptions)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-7ab2502a67"></span>
 
-#### ManagedFileChooserViewModel
+#### ManagedFileChooserViewModel Constructor
 
 ```csharp
 public ManagedFileChooserViewModel(Avalonia.Platform.Storage.FilePickerSaveOptions filePickerSave, Avalonia.Dialogs.ManagedFileDialogOptions options)
 ```
 
+##### Parameters
+
+`filePickerSave` [Avalonia.Platform.Storage.FilePickerSaveOptions](xref:Avalonia.Platform.Storage.FilePickerSaveOptions)
+
+
+`options` [Avalonia.Dialogs.ManagedFileDialogOptions](xref:Avalonia.Dialogs.ManagedFileDialogOptions)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-bb1b8e29c6"></span>
 
-#### ManagedFileChooserViewModel
+#### ManagedFileChooserViewModel Constructor
 
 ```csharp
 public ManagedFileChooserViewModel(Avalonia.Platform.Storage.FolderPickerOpenOptions folderPickerOpen, Avalonia.Dialogs.ManagedFileDialogOptions options)
 ```
+
+##### Parameters
+
+`folderPickerOpen` [Avalonia.Platform.Storage.FolderPickerOpenOptions](xref:Avalonia.Platform.Storage.FolderPickerOpenOptions)
+
+
+`options` [Avalonia.Dialogs.ManagedFileDialogOptions](xref:Avalonia.Dialogs.ManagedFileDialogOptions)
+
+
+</section>
 
 ## Methods
 
@@ -106,81 +151,148 @@ public ManagedFileChooserViewModel(Avalonia.Platform.Storage.FolderPickerOpenOpt
 | [Refresh](#uid-504a6cad37) | No summary available. |
 | [SelectSingleFile](#uid-fe5c782411) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-a5d8b59c93"></span>
 
-### CanOk
+### CanOk Method
 
 ```csharp
-public Boolean CanOk(Object _)
+public bool CanOk(object _)
 ```
+
+#### Parameters
+
+`_` object
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-75d879649e"></span>
 
-### Cancel
+### Cancel Method
 
 ```csharp
-public Void Cancel()
+public void Cancel()
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-d77f91c88f"></span>
 
-### EnterPressed
+### EnterPressed Method
 
 ```csharp
-public Void EnterPressed()
+public void EnterPressed()
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-78945e5ee6"></span>
 
-### GoUp
+### GoUp Method
 
 ```csharp
-public Void GoUp()
+public void GoUp()
 ```
+
+</section>
 
 <span id="uid-7f559a3b63"></span>
 
 ### Navigate overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-5d4b7cfa58"></span>
 
-#### Navigate
+#### Navigate Method
 
 ```csharp
-public Void Navigate(Avalonia.Platform.Storage.IStorageFolder path, String initialSelectionName)
+public void Navigate(Avalonia.Platform.Storage.IStorageFolder path, string initialSelectionName)
 ```
+
+##### Parameters
+
+`path` [Avalonia.Platform.Storage.IStorageFolder](xref:Avalonia.Platform.Storage.IStorageFolder)
+
+
+`initialSelectionName` string
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-f0ccb5573d"></span>
 
-#### Navigate
+#### Navigate Method
 
 ```csharp
-public Void Navigate(String path, String initialSelectionName)
+public void Navigate(string path, string initialSelectionName)
 ```
+
+##### Parameters
+
+`path` string
+
+
+`initialSelectionName` string
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-3c2a9ac561"></span>
 
-### Ok
+### Ok Method
 
 ```csharp
-public Void Ok()
+public void Ok()
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-504a6cad37"></span>
 
-### Refresh
+### Refresh Method
 
 ```csharp
-public Void Refresh()
+public void Refresh()
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-fe5c782411"></span>
 
-### SelectSingleFile
+### SelectSingleFile Method
 
 ```csharp
-public Void SelectSingleFile(Avalonia.Dialogs.Internal.ManagedFileChooserItemViewModel item)
+public void SelectSingleFile(Avalonia.Dialogs.Internal.ManagedFileChooserItemViewModel item)
 ```
+
+#### Parameters
+
+`item` [Avalonia.Dialogs.Internal.ManagedFileChooserItemViewModel](xref:Avalonia.Dialogs.Internal.ManagedFileChooserItemViewModel)
+
+
+</section>
 
 ## Properties
 
@@ -200,109 +312,161 @@ public Void SelectSingleFile(Avalonia.Dialogs.Internal.ManagedFileChooserItemVie
 | [ShowHiddenFiles](#uid-cffd2513fa) | No summary available. |
 | [Title](#uid-6f2666fc05) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-ade4673cf2"></span>
 
-### FileName
+### FileName Property
 
 ```csharp
-public String FileName { get; set; }
+public string FileName { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-84b9030585"></span>
 
-### Filters
+### Filters Property
 
 ```csharp
 public Avalonia.Collections.AvaloniaList<Avalonia.Dialogs.Internal.ManagedFileChooserFilterViewModel> Filters { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-cd2d93c3a3"></span>
 
-### Items
+### Items Property
 
 ```csharp
 public Avalonia.Collections.AvaloniaList<Avalonia.Dialogs.Internal.ManagedFileChooserItemViewModel> Items { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-65d015d0ef"></span>
 
-### Location
+### Location Property
 
 ```csharp
-public String Location { get; set; }
+public string Location { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-1c5a5d25b7"></span>
 
-### QuickLinks
+### QuickLinks Property
 
 ```csharp
 public Avalonia.Collections.AvaloniaList<Avalonia.Dialogs.Internal.ManagedFileChooserItemViewModel> QuickLinks { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-558e4fb4e1"></span>
 
-### QuickLinksSelectedIndex
+### QuickLinksSelectedIndex Property
 
 ```csharp
-public Int32 QuickLinksSelectedIndex { get; set; }
+public int QuickLinksSelectedIndex { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-fe3e281304"></span>
 
-### SelectedFilter
+### SelectedFilter Property
 
 ```csharp
 public Avalonia.Dialogs.Internal.ManagedFileChooserFilterViewModel SelectedFilter { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-c6d913844d"></span>
 
-### SelectedItems
+### SelectedItems Property
 
 ```csharp
 public Avalonia.Collections.AvaloniaList<Avalonia.Dialogs.Internal.ManagedFileChooserItemViewModel> SelectedItems { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-8187b36119"></span>
 
-### SelectingFolder
+### SelectingFolder Property
 
 ```csharp
-public Boolean SelectingFolder { get; set; }
+public bool SelectingFolder { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-41fba74648"></span>
 
-### SelectionMode
+### SelectionMode Property
 
 ```csharp
 public Avalonia.Controls.SelectionMode SelectionMode { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-522d613d45"></span>
 
-### ShowFilters
+### ShowFilters Property
 
 ```csharp
-public Boolean ShowFilters { get; set; }
+public bool ShowFilters { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-cffd2513fa"></span>
 
-### ShowHiddenFiles
+### ShowHiddenFiles Property
 
 ```csharp
-public Boolean ShowHiddenFiles { get; set; }
+public bool ShowHiddenFiles { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-6f2666fc05"></span>
 
-### Title
+### Title Property
 
 ```csharp
-public String Title { get; set; }
+public string Title { get; set; }
 ```
+
+</section>
 
 ## Events
 
@@ -311,31 +475,43 @@ public String Title { get; set; }
 | [CancelRequested](#uid-b5b4df062a) | No summary available. |
 | [CompleteRequested](#uid-327b1e3ce0) | No summary available. |
 | [OverwritePrompt](#uid-0d7a404765) | No summary available. |
-| [PropertyChanged (Inherited from AvaloniaDialogsInternalViewModelBase)](avaloniadialogsinternalviewmodelbase.mdx#uid-302249abe0) | No summary available. |
+| [PropertyChanged](avaloniadialogsinternalviewmodelbase.mdx#uid-302249abe0) | Inherited from [AvaloniaDialogsInternalViewModelBase](avaloniadialogsinternalviewmodelbase.mdx). |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-b5b4df062a"></span>
 
-### CancelRequested
+### CancelRequested Event
 
 ```csharp
 public event Action CancelRequested
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-327b1e3ce0"></span>
 
-### CompleteRequested
+### CompleteRequested Event
 
 ```csharp
-public event Action<String[]> CompleteRequested
+public event Action<string[]> CompleteRequested
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-0d7a404765"></span>
 
-### OverwritePrompt
+### OverwritePrompt Event
 
 ```csharp
-public event Action<String> OverwritePrompt
+public event Action<string> OverwritePrompt
 ```
+
+</section>
 
 </ApiRefPage>
 

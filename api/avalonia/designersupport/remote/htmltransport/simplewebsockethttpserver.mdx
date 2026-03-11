@@ -47,7 +47,7 @@ public class SimpleWebSocketHttpServer
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> SimpleWebSocketHttpServer
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> SimpleWebSocketHttpServer
 </div>
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Implements:</span> IDisposable
@@ -60,13 +60,25 @@ public class SimpleWebSocketHttpServer
 | --- | --- |
 | [SimpleWebSocketHttpServer](#uid-bbff1ea986) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-bbff1ea986"></span>
 
-### SimpleWebSocketHttpServer
+### SimpleWebSocketHttpServer Constructor
 
 ```csharp
-public SimpleWebSocketHttpServer(System.Net.IPAddress address, Int32 port)
+public SimpleWebSocketHttpServer(System.Net.IPAddress address, int port)
 ```
+
+#### Parameters
+
+`address` System.Net.IPAddress
+
+
+`port` int
+
+
+</section>
 
 ## Methods
 
@@ -76,29 +88,46 @@ public SimpleWebSocketHttpServer(System.Net.IPAddress address, Int32 port)
 | [Dispose](#uid-9e53af1ef1) | No summary available. |
 | [Listen](#uid-e69eff19e9) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-9e8427763c"></span>
 
-### AcceptAsync
+### AcceptAsync Method
 
 ```csharp
 public System.Threading.Tasks.Task<Avalonia.DesignerSupport.Remote.HtmlTransport.SimpleWebSocketHttpRequest> AcceptAsync()
 ```
 
+#### Returns
+
+System.Threading.Tasks.Task&lt;[Avalonia.DesignerSupport.Remote.HtmlTransport.SimpleWebSocketHttpRequest](xref:Avalonia.DesignerSupport.Remote.HtmlTransport.SimpleWebSocketHttpRequest)&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-9e53af1ef1"></span>
 
-### Dispose
+### Dispose Method
 
 ```csharp
-public Void Dispose()
+public void Dispose()
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-e69eff19e9"></span>
 
-### Listen
+### Listen Method
 
 ```csharp
-public Void Listen()
+public void Listen()
 ```
+
+</section>
 
 </ApiRefPage>
 

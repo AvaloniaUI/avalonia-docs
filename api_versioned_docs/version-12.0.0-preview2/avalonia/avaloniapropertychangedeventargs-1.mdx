@@ -63,13 +63,34 @@ public class AvaloniaPropertyChangedEventArgs<T>
 | --- | --- |
 | [AvaloniaPropertyChangedEventArgs&lt;T&gt;](#uid-37afe2b6bc) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-37afe2b6bc"></span>
 
-### AvaloniaPropertyChangedEventArgs&lt;T&gt;
+### AvaloniaPropertyChangedEventArgs&lt;T&gt; Constructor
 
 ```csharp
 public AvaloniaPropertyChangedEventArgs<T>(Avalonia.AvaloniaObject sender, Avalonia.AvaloniaProperty<TValue><T> property, Avalonia.Data.Optional<T><T> oldValue, Avalonia.Data.BindingValue<T><T> newValue, Avalonia.Data.BindingPriority priority)
 ```
+
+#### Parameters
+
+`sender` [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject)
+
+
+`property` [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty)&lt;TValue&gt;&lt;T&gt;
+
+
+`oldValue` Avalonia.Data.Optional&lt;T&gt;&lt;T&gt;
+
+
+`newValue` Avalonia.Data.BindingValue&lt;T&gt;&lt;T&gt;
+
+
+`priority` [Avalonia.Data.BindingPriority](xref:Avalonia.Data.BindingPriority)
+
+
+</section>
 
 ## Properties
 
@@ -78,12 +99,14 @@ public AvaloniaPropertyChangedEventArgs<T>(Avalonia.AvaloniaObject sender, Avalo
 | [NewValue](#uid-1391504d1b) | Gets the new value of the property. |
 | [OldValue](#uid-209d24f117) | Gets the old value of the property. |
 | [Property](#uid-da8e3e8213) | Gets the property that changed. |
-| [Priority (Inherited from AvaloniaPropertyChangedEventArgs)](avaloniapropertychangedeventargs.mdx#uid-734307fc49) | Gets the priority of the binding that produced the value. |
-| [Sender (Inherited from AvaloniaPropertyChangedEventArgs)](avaloniapropertychangedeventargs.mdx#uid-cdba2ddc47) | Gets the Avalonia.AvaloniaObject that the property changed on. |
+| [Priority](avaloniapropertychangedeventargs.mdx#uid-734307fc49) | Gets the priority of the binding that produced the value. Inherited from [AvaloniaPropertyChangedEventArgs](avaloniapropertychangedeventargs.mdx). |
+| [Sender](avaloniapropertychangedeventargs.mdx#uid-cdba2ddc47) | Gets the [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject) that the property changed on. Inherited from [AvaloniaPropertyChangedEventArgs](avaloniapropertychangedeventargs.mdx). |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-1391504d1b"></span>
 
-### NewValue
+### NewValue Property
 
 Gets the new value of the property.
 
@@ -91,9 +114,13 @@ Gets the new value of the property.
 public Avalonia.Data.BindingValue<T><T> NewValue { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-209d24f117"></span>
 
-### OldValue
+### OldValue Property
 
 Gets the old value of the property.
 
@@ -101,9 +128,13 @@ Gets the old value of the property.
 public Avalonia.Data.Optional<T><T> OldValue { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-da8e3e8213"></span>
 
-### Property
+### Property Property
 
 Gets the property that changed.
 
@@ -111,7 +142,12 @@ Gets the property that changed.
 public Avalonia.AvaloniaProperty<TValue><T> Property { get; set; }
 ```
 
-Value: The property that changed.
+#### Value
+
+The property that changed.
+
+
+</section>
 
 </ApiRefPage>
 

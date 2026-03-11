@@ -53,7 +53,7 @@ public class Setter
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="setterbase">SetterBase</a> <span className="apiref-page__relation-separator">-&gt;</span> Setter
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="setterbase">SetterBase</a> <span className="apiref-page__relation-separator">-&gt;</span> Setter
 </div>
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Implements:</span> <a href="../animation/ianimationsetter">IAnimationSetter</a>, IValueEntry, <a href="isetterinstance">ISetterInstance</a>
@@ -69,15 +69,17 @@ A [Avalonia.Styling.Setter](xref:Avalonia.Styling.Setter) is used to set a [Aval
 
 | Name | Description |
 | --- | --- |
-| [Setter (2 overloads)](#uid-39651de642) | Initializes a new instance of the Avalonia.Styling.Setter class. |
+| [Setter (2 overloads)](#uid-39651de642) | Initializes a new instance of the [Avalonia.Styling.Setter](xref:Avalonia.Styling.Setter) class. |
 
 <span id="uid-39651de642"></span>
 
 ### Setter overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-3affa77ce0"></span>
 
-#### Setter
+#### Setter Constructor
 
 Initializes a new instance of the [Avalonia.Styling.Setter](xref:Avalonia.Styling.Setter) class.
 
@@ -85,20 +87,33 @@ Initializes a new instance of the [Avalonia.Styling.Setter](xref:Avalonia.Stylin
 public Setter()
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-7a29ecefc5"></span>
 
-#### Setter
+#### Setter Constructor
 
 Initializes a new instance of the [Avalonia.Styling.Setter](xref:Avalonia.Styling.Setter) class.
 
 ```csharp
-public Setter(Avalonia.AvaloniaProperty property, Object value)
+public Setter(Avalonia.AvaloniaProperty property, object value)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `property` | The property to set. |
-| `value` | The property value. |
+##### Parameters
+
+`property` [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty)
+
+The property to set.
+
+
+`value` object
+
+The property value.
+
+
+</section>
 
 ## Methods
 
@@ -106,13 +121,22 @@ public Setter(Avalonia.AvaloniaProperty property, Object value)
 | --- | --- |
 | [ToString](#uid-2e1d1d4b9a) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-2e1d1d4b9a"></span>
 
-### ToString
+### ToString Method
 
 ```csharp
-public String ToString()
+public string ToString()
 ```
+
+#### Returns
+
+string
+
+
+</section>
 
 ## Properties
 
@@ -121,9 +145,11 @@ public String ToString()
 | [Property](#uid-8c5890876d) | Gets or sets the property to set. |
 | [Value](#uid-231f83767c) | Gets or sets the property value. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-8c5890876d"></span>
 
-### Property
+### Property Property
 
 Gets or sets the property to set.
 
@@ -131,15 +157,21 @@ Gets or sets the property to set.
 public Avalonia.AvaloniaProperty Property { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-231f83767c"></span>
 
-### Value
+### Value Property
 
 Gets or sets the property value.
 
 ```csharp
-public Object Value { get; set; }
+public object Value { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

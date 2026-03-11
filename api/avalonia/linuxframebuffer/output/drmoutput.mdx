@@ -47,7 +47,7 @@ public class DrmOutput
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> DrmOutput
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> DrmOutput
 </div>
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Implements:</span> <a href="igloutputbackend">IGlOutputBackend</a>, <a href="ioutputbackend">IOutputBackend</a>, <a href="../../opengl/surfaces/iglplatformsurface">IGlPlatformSurface</a>, ISurfaceOrientation, <a href="../../platform/surfaces/iplatformrendersurface">IPlatformRenderSurface</a>
@@ -64,37 +64,106 @@ public class DrmOutput
 
 ### DrmOutput overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-466f061506"></span>
 
-#### DrmOutput
+#### DrmOutput Constructor
 
 ```csharp
 public DrmOutput(Avalonia.LinuxFramebuffer.Output.DrmCard card, Avalonia.LinuxFramebuffer.Output.DrmResources resources, Avalonia.LinuxFramebuffer.Output.DrmConnector connector, Avalonia.LinuxFramebuffer.Output.DrmModeInfo modeInfo)
 ```
 
+##### Parameters
+
+`card` [Avalonia.LinuxFramebuffer.Output.DrmCard](xref:Avalonia.LinuxFramebuffer.Output.DrmCard)
+
+
+`resources` [Avalonia.LinuxFramebuffer.Output.DrmResources](xref:Avalonia.LinuxFramebuffer.Output.DrmResources)
+
+
+`connector` [Avalonia.LinuxFramebuffer.Output.DrmConnector](xref:Avalonia.LinuxFramebuffer.Output.DrmConnector)
+
+
+`modeInfo` [Avalonia.LinuxFramebuffer.Output.DrmModeInfo](xref:Avalonia.LinuxFramebuffer.Output.DrmModeInfo)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-6fcd92df07"></span>
 
-#### DrmOutput
+#### DrmOutput Constructor
 
 ```csharp
 public DrmOutput(Avalonia.LinuxFramebuffer.Output.DrmCard card, Avalonia.LinuxFramebuffer.Output.DrmResources resources, Avalonia.LinuxFramebuffer.Output.DrmConnector connector, Avalonia.LinuxFramebuffer.Output.DrmModeInfo modeInfo, Avalonia.LinuxFramebuffer.DrmOutputOptions options)
 ```
 
+##### Parameters
+
+`card` [Avalonia.LinuxFramebuffer.Output.DrmCard](xref:Avalonia.LinuxFramebuffer.Output.DrmCard)
+
+
+`resources` [Avalonia.LinuxFramebuffer.Output.DrmResources](xref:Avalonia.LinuxFramebuffer.Output.DrmResources)
+
+
+`connector` [Avalonia.LinuxFramebuffer.Output.DrmConnector](xref:Avalonia.LinuxFramebuffer.Output.DrmConnector)
+
+
+`modeInfo` [Avalonia.LinuxFramebuffer.Output.DrmModeInfo](xref:Avalonia.LinuxFramebuffer.Output.DrmModeInfo)
+
+
+`options` [Avalonia.LinuxFramebuffer.DrmOutputOptions](xref:Avalonia.LinuxFramebuffer.DrmOutputOptions)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-20f47244b9"></span>
 
-#### DrmOutput
+#### DrmOutput Constructor
 
 ```csharp
-public DrmOutput(Avalonia.LinuxFramebuffer.Output.DrmCard card, Boolean connectorsForceProbe, Avalonia.LinuxFramebuffer.DrmOutputOptions options)
+public DrmOutput(Avalonia.LinuxFramebuffer.Output.DrmCard card, bool connectorsForceProbe, Avalonia.LinuxFramebuffer.DrmOutputOptions options)
 ```
+
+##### Parameters
+
+`card` [Avalonia.LinuxFramebuffer.Output.DrmCard](xref:Avalonia.LinuxFramebuffer.Output.DrmCard)
+
+
+`connectorsForceProbe` bool
+
+
+`options` [Avalonia.LinuxFramebuffer.DrmOutputOptions](xref:Avalonia.LinuxFramebuffer.DrmOutputOptions)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-dadfb8db08"></span>
 
-#### DrmOutput
+#### DrmOutput Constructor
 
 ```csharp
-public DrmOutput(String path, Boolean connectorsForceProbe, Avalonia.LinuxFramebuffer.DrmOutputOptions options)
+public DrmOutput(string path, bool connectorsForceProbe, Avalonia.LinuxFramebuffer.DrmOutputOptions options)
 ```
+
+##### Parameters
+
+`path` string
+
+
+`connectorsForceProbe` bool
+
+
+`options` [Avalonia.LinuxFramebuffer.DrmOutputOptions](xref:Avalonia.LinuxFramebuffer.DrmOutputOptions)
+
+
+</section>
 
 ## Methods
 
@@ -103,33 +172,65 @@ public DrmOutput(String path, Boolean connectorsForceProbe, Avalonia.LinuxFrameb
 | [CreateContext](#uid-a6b34c9699) | No summary available. |
 | [CreateGlRenderTarget (2 overloads)](#uid-f6c2c8b0c5) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-a6b34c9699"></span>
 
-### CreateContext
+### CreateContext Method
 
 ```csharp
 public Avalonia.OpenGL.IGlContext CreateContext()
 ```
 
+#### Returns
+
+[Avalonia.OpenGL.IGlContext](xref:Avalonia.OpenGL.IGlContext)
+
+
+</section>
+
 <span id="uid-f6c2c8b0c5"></span>
 
 ### CreateGlRenderTarget overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-5c20283179"></span>
 
-#### CreateGlRenderTarget
+#### CreateGlRenderTarget Method
 
 ```csharp
 public Avalonia.OpenGL.Surfaces.IGlPlatformSurfaceRenderTarget CreateGlRenderTarget()
 ```
 
+##### Returns
+
+[Avalonia.OpenGL.Surfaces.IGlPlatformSurfaceRenderTarget](xref:Avalonia.OpenGL.Surfaces.IGlPlatformSurfaceRenderTarget)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-1b99e89a86"></span>
 
-#### CreateGlRenderTarget
+#### CreateGlRenderTarget Method
 
 ```csharp
 public Avalonia.OpenGL.Surfaces.IGlPlatformSurfaceRenderTarget CreateGlRenderTarget(Avalonia.OpenGL.IGlContext context)
 ```
+
+##### Parameters
+
+`context` [Avalonia.OpenGL.IGlContext](xref:Avalonia.OpenGL.IGlContext)
+
+
+##### Returns
+
+[Avalonia.OpenGL.Surfaces.IGlPlatformSurfaceRenderTarget](xref:Avalonia.OpenGL.Surfaces.IGlPlatformSurfaceRenderTarget)
+
+
+</section>
 
 ## Properties
 
@@ -140,37 +241,53 @@ public Avalonia.OpenGL.Surfaces.IGlPlatformSurfaceRenderTarget CreateGlRenderTar
 | [PlatformGraphics](#uid-95b81663e0) | No summary available. |
 | [Scaling](#uid-e8fb82dc9d) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-6f6254ec3d"></span>
 
-### Orientation
+### Orientation Property
 
 ```csharp
 public Avalonia.Platform.SurfaceOrientation Orientation { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-7a69cb56aa"></span>
 
-### PixelSize
+### PixelSize Property
 
 ```csharp
 public Avalonia.PixelSize PixelSize { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-95b81663e0"></span>
 
-### PlatformGraphics
+### PlatformGraphics Property
 
 ```csharp
 public Avalonia.Platform.IPlatformGraphics PlatformGraphics { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-e8fb82dc9d"></span>
 
-### Scaling
+### Scaling Property
 
 ```csharp
-public Double Scaling { get; set; }
+public double Scaling { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

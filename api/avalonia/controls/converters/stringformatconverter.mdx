@@ -39,7 +39,7 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 
 <div className="apiref-page__lead">
 
-Calls [String.Format(String,Object\[\])](xref:System.String.Format%28System.String%2CSystem.Object%5B%5D%29) on the passed in values, where the first element in the list
+Calls [string.Format(string,object\[\])](xref:System.String.Format%28System.String%2CSystem.Object%5B%5D%29) on the passed in values, where the first element in the list
 is the string, and everything after it is passed into the object array in order.
 
 </div>
@@ -54,7 +54,7 @@ public class StringFormatConverter
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> StringFormatConverter
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> StringFormatConverter
 </div>
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Implements:</span> <a href="../../data/converters/imultivalueconverter">IMultiValueConverter</a>
@@ -67,13 +67,17 @@ public class StringFormatConverter
 | --- | --- |
 | [StringFormatConverter](#uid-e227e29155) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-e227e29155"></span>
 
-### StringFormatConverter
+### StringFormatConverter Constructor
 
 ```csharp
 public StringFormatConverter()
 ```
+
+</section>
 
 ## Methods
 
@@ -81,13 +85,36 @@ public StringFormatConverter()
 | --- | --- |
 | [Convert](#uid-76f3dc8afc) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-76f3dc8afc"></span>
 
-### Convert
+### Convert Method
 
 ```csharp
-public Object Convert(System.Collections.Generic.IList<Object> values, Type targetType, Object parameter, System.Globalization.CultureInfo culture)
+public object Convert(System.Collections.Generic.IList<object> values, Type targetType, object parameter, System.Globalization.CultureInfo culture)
 ```
+
+#### Parameters
+
+`values` System.Collections.Generic.IList&lt;object&gt;
+
+
+`targetType` Type
+
+
+`parameter` object
+
+
+`culture` System.Globalization.CultureInfo
+
+
+#### Returns
+
+object
+
+
+</section>
 
 </ApiRefPage>
 

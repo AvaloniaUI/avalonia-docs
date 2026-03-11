@@ -47,7 +47,7 @@ public class ItemsSourceView<T>
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="itemssourceview">ItemsSourceView</a> <span className="apiref-page__relation-separator">-&gt;</span> ItemsSourceView&lt;T&gt;
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="itemssourceview">ItemsSourceView</a> <span className="apiref-page__relation-separator">-&gt;</span> ItemsSourceView&lt;T&gt;
 </div>
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Implements:</span> IEnumerable&lt;&gt;, IReadOnlyCollection&lt;&gt;, IReadOnlyList&lt;&gt;, IEnumerable
@@ -60,46 +60,69 @@ public class ItemsSourceView<T>
 | --- | --- |
 | [GetAt](#uid-193f0c424c) | Retrieves the item at the specified index. |
 | [GetEnumerator](#uid-4e513377fb) | No summary available. |
-| [Contains (Inherited from ItemsSourceView)](itemssourceview.mdx#uid-384f51208a) | No summary available. |
-| [GetOrCreate (2 overloads) (Inherited from ItemsSourceView)](itemssourceview.mdx#uid-690d93f5ab) | No summary available. |
-| [IndexOf (Inherited from ItemsSourceView)](itemssourceview.mdx#uid-42b8595b39) | No summary available. |
+| [Contains](itemssourceview.mdx#uid-384f51208a) | Inherited from [ItemsSourceView](itemssourceview.mdx). |
+| [GetOrCreate (2 overloads)](itemssourceview.mdx#uid-690d93f5ab) | Inherited from [ItemsSourceView](itemssourceview.mdx). |
+| [IndexOf](itemssourceview.mdx#uid-42b8595b39) | Inherited from [ItemsSourceView](itemssourceview.mdx). |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-193f0c424c"></span>
 
-### GetAt
+### GetAt Method
 
 Retrieves the item at the specified index.
 
 ```csharp
-public T GetAt(Int32 index)
+public T GetAt(int index)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `index` | The index. |
+#### Parameters
 
-Returns: The item.
+`index` int
+
+The index.
+
+
+#### Returns
+
+T
+
+The item.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-4e513377fb"></span>
 
-### GetEnumerator
+### GetEnumerator Method
 
 ```csharp
 public System.Collections.Generic.IEnumerator<T> GetEnumerator()
 ```
 
+#### Returns
+
+System.Collections.Generic.IEnumerator&lt;T&gt;
+
+
+</section>
+
 ## Properties
 
 | Name | Description |
 | --- | --- |
-| [Empty](#uid-3a721b94df) | Gets an empty Avalonia.Controls.ItemsSourceView |
+| [Empty](#uid-3a721b94df) | Gets an empty [Avalonia.Controls.ItemsSourceView](xref:Avalonia.Controls.ItemsSourceView) |
 | [Item](#uid-bc2872e19a) | No summary available. |
-| [Count (Inherited from ItemsSourceView)](itemssourceview.mdx#uid-c7dd90d709) | Gets the number of items in the collection. |
-| [Source (Inherited from ItemsSourceView)](itemssourceview.mdx#uid-d81337be41) | Gets the source collection. |
+| [Count](itemssourceview.mdx#uid-c7dd90d709) | Gets the number of items in the collection. Inherited from [ItemsSourceView](itemssourceview.mdx). |
+| [Source](itemssourceview.mdx#uid-d81337be41) | Gets the source collection. Inherited from [ItemsSourceView](itemssourceview.mdx). |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-3a721b94df"></span>
 
-### Empty
+### Empty Property
 
 Gets an empty [Avalonia.Controls.ItemsSourceView](xref:Avalonia.Controls.ItemsSourceView)
 
@@ -107,19 +130,25 @@ Gets an empty [Avalonia.Controls.ItemsSourceView](xref:Avalonia.Controls.ItemsSo
 public Avalonia.Controls.ItemsSourceView<T><T> Empty { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-bc2872e19a"></span>
 
-### Item
+### Item Property
 
 ```csharp
 public T Item { get; set; }
 ```
 
+</section>
+
 ## Events
 
 | Name | Description |
 | --- | --- |
-| [CollectionChanged (Inherited from ItemsSourceView)](itemssourceview.mdx#uid-13328a2fb4) | Occurs when the collection has changed to indicate the reason for the change and which items changed. |
+| [CollectionChanged](itemssourceview.mdx#uid-13328a2fb4) | Occurs when the collection has changed to indicate the reason for the change and which items changed. Inherited from [ItemsSourceView](itemssourceview.mdx). |
 
 </ApiRefPage>
 

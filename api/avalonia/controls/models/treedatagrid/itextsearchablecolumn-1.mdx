@@ -1,0 +1,94 @@
+---
+title: 'ITextSearchableColumn<TModel>'
+hide_title: true
+slug: '/avalonia/controls/models/treedatagrid/itextsearchablecolumn-1'
+uid: 'Avalonia.Controls.Models.TreeDataGrid.ITextSearchableColumn`1'
+commentId: 'T:Avalonia.Controls.Models.TreeDataGrid.ITextSearchableColumn`1'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.TreeDataGrid'
+assembly: 'Avalonia.Controls.TreeDataGrid'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Models.TreeDataGrid'
+tfms:
+  - 'net8.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ITextSearchableColumn&lt;TModel&gt; Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Models.TreeDataGrid</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Defines a column in a [Avalonia.Controls.Models.TreeDataGrid](xref:Avalonia.Controls.Models.TreeDataGrid) that supports text-based searching.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface ITextSearchableColumn<TModel>
+```
+
+</div>
+
+## Remarks
+
+The [Avalonia.Controls.Models.TreeDataGrid.ITextSearchableColumn&lt;T&gt;](xref:Avalonia.Controls.Models.TreeDataGrid.ITextSearchableColumn%601) interface is implemented by column types
+that can participate in text search operations within a [TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid). This allows users
+to find rows by typing text that matches content in these columns.
+
+Column implementations like [Avalonia.Controls.Models.TreeDataGrid.TextColumn&lt;T1, T2&gt;](xref:Avalonia.Controls.Models.TreeDataGrid.TextColumn%602) and
+[Avalonia.Controls.Models.TreeDataGrid.TemplateColumn&lt;T&gt;](xref:Avalonia.Controls.Models.TreeDataGrid.TemplateColumn%601) implement this interface to enable their content
+to be searched.
+
+For template columns, the [Avalonia.Controls.Models.TreeDataGrid.TemplateColumnOptions&lt;T&gt;.TextSearchValueSelector](xref:Avalonia.Controls.Models.TreeDataGrid.TemplateColumnOptions%601.TextSearchValueSelector)
+property provides a way to extract searchable text from complex content.
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [IsTextSearchEnabled](#uid-9c0b5e0743) | Gets a value indicating whether text search is enabled for this column. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9c0b5e0743"></span>
+
+### IsTextSearchEnabled Property
+
+Gets a value indicating whether text search is enabled for this column.
+
+```csharp
+public bool IsTextSearchEnabled { get; set; }
+```
+
+#### Remarks
+
+When set to true, the column's content will be included in text search operations.
+When false, the column will be skipped during text searches.
+
+This property can be configured through column options, such as
+[Avalonia.Controls.Models.TreeDataGrid.TextColumnOptions&lt;T&gt;.IsTextSearchEnabled](xref:Avalonia.Controls.Models.TreeDataGrid.TextColumnOptions%601.IsTextSearchEnabled) or
+[Avalonia.Controls.Models.TreeDataGrid.TemplateColumnOptions&lt;T&gt;.IsTextSearchEnabled](xref:Avalonia.Controls.Models.TreeDataGrid.TemplateColumnOptions%601.IsTextSearchEnabled).
+
+</section>
+
+</ApiRefPage>
+

@@ -12,6 +12,7 @@ generatedBy: 'dotnet-apiref'
 namespace: 'Avalonia.Platform'
 tfms:
   - 'net10.0'
+  - 'net10.0-android36.0'
 ---
 
 import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
@@ -29,11 +30,17 @@ Namespace `Avalonia.Platform`
 ## Types
 
 - [AlphaFormat](alphaformat.mdx) - Describes how to interpret the alpha component of a pixel.
+- [AndroidWebViewEnvironmentRequestedEventArgs](androidwebviewenvironmentrequestedeventargs.mdx)
+- [AppleWKWebViewEnvironmentRequestedEventArgs](applewkwebviewenvironmentrequestedeventargs.mdx)
 - [AssetLoader](assetloader.mdx) - Loads assets compiled into the application binary.
 - [ColorContrastPreference](colorcontrastpreference.mdx) - System high contrast preference.
 - [DefaultPlatformSettings](defaultplatformsettings.mdx) - A default implementation of [Avalonia.Platform.IPlatformSettings](xref:Avalonia.Platform.IPlatformSettings) for platforms.
+- [DetailedWebViewAdapterInfo](detailedwebviewadapterinfo.mdx)
 - [DrawingContextImplExtensions](drawingcontextimplextensions.mdx)
 - [FormFactorType](formfactortype.mdx)
+- [GtkWebViewEnvironmentRequestedEventArgs](gtkwebviewenvironmentrequestedeventargs.mdx)
+- [IAndroidWebViewPlatformHandle](iandroidwebviewplatformhandle.mdx)
+- [IAppleWKWebViewPlatformHandle](iapplewkwebviewplatformhandle.mdx)
 - [IAssetLoader](iassetloader.mdx) - Loads assets compiled into the application binary.
 - [IBitmapImpl](ibitmapimpl.mdx) - Defines the platform-specific interface for a [Avalonia.Media.Imaging.Bitmap](xref:Avalonia.Media.Imaging.Bitmap).
 - [ICursorFactory](icursorfactory.mdx)
@@ -61,6 +68,7 @@ This is not needed for fds or DXGI handles, since those are _created_ on demand 
 - [IGeometryContext](igeometrycontext.mdx) - Describes a geometry using drawing commands.
 - [IGeometryImpl](igeometryimpl.mdx) - Defines the platform-specific interface for a [Avalonia.Media.Geometry](xref:Avalonia.Media.Geometry).
 - [IGlyphRunImpl](iglyphrunimpl.mdx) - An immutable platform representation of a [Avalonia.Media.GlyphRun](xref:Avalonia.Media.GlyphRun).
+- [IGtkWebViewPlatformHandle](igtkwebviewplatformhandle.mdx)
 - [ILockedFramebuffer](ilockedframebuffer.mdx)
 - [IMacOSTopLevelPlatformHandle](imacostoplevelplatformhandle.mdx)
 - [INativePlatformHandleSurface](inativeplatformhandlesurface.mdx)
@@ -101,12 +109,14 @@ Some of these settings might be changed by used globally in the OS in runtime.
 - [IWindowIconImpl](iwindowiconimpl.mdx)
 - [IWindowImpl](iwindowimpl.mdx) - Defines a platform-specific window implementation.
 - [IWindowingPlatform](iwindowingplatform.mdx)
+- [IWindowsWebView1PlatformHandle](iwindowswebview1platformhandle.mdx)
+- [IWindowsWebView2PlatformHandle](iwindowswebview2platformhandle.mdx)
 - [IWriteableBitmapImpl](iwriteablebitmapimpl.mdx) - Defines the platform-specific interface for a [Avalonia.Media.Imaging.WriteableBitmap](xref:Avalonia.Media.Imaging.WriteableBitmap).
 - [KnownPlatformGraphicsExternalImageHandleTypes](knownplatformgraphicsexternalimagehandletypes.mdx) - Describes various GPU memory handle types that are currently supported by Avalonia graphics backends
 - [KnownPlatformGraphicsExternalSemaphoreHandleTypes](knownplatformgraphicsexternalsemaphorehandletypes.mdx) - Describes various GPU semaphore handle types that are currently supported by Avalonia graphics backends
 - [LockedFramebuffer](lockedframebuffer.mdx)
 - [LtrbPixelRect](ltrbpixelrect.mdx) - This struct is essentially the same thing as RECT from win32 API
-Unlike our "normal" PixelRect which is more human-readable and human-usable
+Unlike our "normal" [PixelRect](xref:Avalonia.PixelRect) which is more human-readable and human-usable
 this struct is optimized for actual processing that doesn't really care
 about Width and Height but pretty much always only cares about
 Right and Bottom edge coordinates
@@ -147,5 +157,13 @@ be passed to the drawing backend when needed
 - [StandardAssetLoader](standardassetloader.mdx) - Loads assets compiled into the application binary.
 - [StandardRuntimePlatform](standardruntimeplatform.mdx)
 - [SurfaceOrientation](surfaceorientation.mdx)
+- [WebViewAdapterInfo](webviewadapterinfo.mdx)
+- [WebViewAdapterType](webviewadaptertype.mdx)
+- [WebViewEmbeddingScenario](webviewembeddingscenario.mdx)
+- [WebViewEngine](webviewengine.mdx)
+- [WebViewPrintOrientation](webviewprintorientation.mdx)
+- [WebViewPrintSettings](webviewprintsettings.mdx)
+- [WindowsWebView1EnvironmentRequestedEventArgs](windowswebview1environmentrequestedeventargs.mdx)
+- [WindowsWebView2EnvironmentRequestedEventArgs](windowswebview2environmentrequestedeventargs.mdx)
 </ApiRefPage>
 

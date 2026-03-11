@@ -53,7 +53,7 @@ public class Logger
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> Logger
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> Logger
 </div>
 </div>
 
@@ -64,51 +64,103 @@ public class Logger
 | [IsEnabled](#uid-7849073e70) | Checks if given log level is enabled. |
 | [TryGet (2 overloads)](#uid-a80b9554dc) | Returns parametrized logging sink if given log level is enabled. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-7849073e70"></span>
 
-### IsEnabled
+### IsEnabled Method
 
 Checks if given log level is enabled.
 
 ```csharp
-public Boolean IsEnabled(Avalonia.Logging.LogEventLevel level, String area)
+public bool IsEnabled(Avalonia.Logging.LogEventLevel level, string area)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `area` | The log area. |
-| `level` | The log event level. |
+#### Parameters
 
-Returns: if given log level is enabled.
+`level` [Avalonia.Logging.LogEventLevel](xref:Avalonia.Logging.LogEventLevel)
+
+The log event level.
+
+
+`area` string
+
+The log area.
+
+
+#### Returns
+
+bool
+
+if given log level is enabled.
+
+
+</section>
 
 <span id="uid-a80b9554dc"></span>
 
 ### TryGet overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-921fb0a909"></span>
 
-#### TryGet
+#### TryGet Method
 
 Returns parametrized logging sink if given log level is enabled.
 
 ```csharp
-public Nullable<Avalonia.Logging.ParametrizedLogger> TryGet(Avalonia.Logging.LogEventLevel level, String area)
+public Nullable<Avalonia.Logging.ParametrizedLogger> TryGet(Avalonia.Logging.LogEventLevel level, string area)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `area` | The area that the event originates from. |
-| `level` | The log event level. |
+##### Parameters
 
-Returns: Log sink or if log level is not enabled.
+`level` [Avalonia.Logging.LogEventLevel](xref:Avalonia.Logging.LogEventLevel)
+
+The log event level.
+
+
+`area` string
+
+The area that the event originates from.
+
+
+##### Returns
+
+Nullable&lt;[Avalonia.Logging.ParametrizedLogger](xref:Avalonia.Logging.ParametrizedLogger)&gt;
+
+Log sink or if log level is not enabled.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-74962784f1"></span>
 
-#### TryGet
+#### TryGet Method
 
 ```csharp
-public Boolean TryGet(Avalonia.Logging.LogEventLevel level, String area, Avalonia.Logging.ParametrizedLogger& outLogger)
+public bool TryGet(Avalonia.Logging.LogEventLevel level, string area, Avalonia.Logging.ParametrizedLogger& outLogger)
 ```
+
+##### Parameters
+
+`level` [Avalonia.Logging.LogEventLevel](xref:Avalonia.Logging.LogEventLevel)
+
+
+`area` string
+
+
+`outLogger` [Avalonia.Logging.ParametrizedLogger](xref:Avalonia.Logging.ParametrizedLogger)&amp;
+
+
+##### Returns
+
+bool
+
+
+</section>
 
 ## Properties
 
@@ -116,15 +168,19 @@ public Boolean TryGet(Avalonia.Logging.LogEventLevel level, String area, Avaloni
 | --- | --- |
 | [Sink](#uid-4978b18e21) | Gets or sets the application-defined sink that receives the messages. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-4978b18e21"></span>
 
-### Sink
+### Sink Property
 
 Gets or sets the application-defined sink that receives the messages.
 
 ```csharp
 public Avalonia.Logging.ILogSink Sink { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

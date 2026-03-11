@@ -53,7 +53,7 @@ public class MultiBinding
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="bindingbase">BindingBase</a> <span className="apiref-page__relation-separator">-&gt;</span> MultiBinding
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="bindingbase">BindingBase</a> <span className="apiref-page__relation-separator">-&gt;</span> MultiBinding
 </div>
 </div>
 
@@ -63,22 +63,26 @@ public class MultiBinding
 | --- | --- |
 | [MultiBinding](#uid-e7f20ac947) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-e7f20ac947"></span>
 
-### MultiBinding
+### MultiBinding Constructor
 
 ```csharp
 public MultiBinding()
 ```
+
+</section>
 
 ## Properties
 
 | Name | Description |
 | --- | --- |
 | [Bindings](#uid-a44d033896) | Gets the collection of child bindings. |
-| [Converter](#uid-4671a72eec) | Gets or sets the Avalonia.Data.Converters.IMultiValueConverter to use. |
+| [Converter](#uid-4671a72eec) | Gets or sets the [Avalonia.Data.Converters.IMultiValueConverter](xref:Avalonia.Data.Converters.IMultiValueConverter) to use. |
 | [ConverterCulture](#uid-14e24a8228) | Gets or sets the culture in which to evaluate the converter. |
-| [ConverterParameter](#uid-b87ccd9ab2) | Gets or sets a parameter to pass to Avalonia.Data.MultiBinding.Converter. |
+| [ConverterParameter](#uid-b87ccd9ab2) | Gets or sets a parameter to pass to [Avalonia.Data.MultiBinding.Converter](xref:Avalonia.Data.MultiBinding.Converter). |
 | [FallbackValue](#uid-4b6d87b7c3) | Gets or sets the value to use when the binding is unable to produce a value. |
 | [Mode](#uid-a392fad099) | Gets or sets the binding mode. |
 | [Priority](#uid-ef87706676) | Gets or sets the binding priority. |
@@ -86,9 +90,11 @@ public MultiBinding()
 | [StringFormat](#uid-f401114a50) | Gets or sets the string format. |
 | [TargetNullValue](#uid-05378b9819) | Gets or sets the value to use when the binding result is null. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-a44d033896"></span>
 
-### Bindings
+### Bindings Property
 
 Gets the collection of child bindings.
 
@@ -96,9 +102,13 @@ Gets the collection of child bindings.
 public System.Collections.Generic.IList<Avalonia.Data.BindingBase> Bindings { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-4671a72eec"></span>
 
-### Converter
+### Converter Property
 
 Gets or sets the [Avalonia.Data.Converters.IMultiValueConverter](xref:Avalonia.Data.Converters.IMultiValueConverter) to use.
 
@@ -106,9 +116,13 @@ Gets or sets the [Avalonia.Data.Converters.IMultiValueConverter](xref:Avalonia.D
 public Avalonia.Data.Converters.IMultiValueConverter Converter { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-14e24a8228"></span>
 
-### ConverterCulture
+### ConverterCulture Property
 
 Gets or sets the culture in which to evaluate the converter.
 
@@ -116,31 +130,50 @@ Gets or sets the culture in which to evaluate the converter.
 public System.Globalization.CultureInfo ConverterCulture { get; set; }
 ```
 
-Value: The default value is null.
+#### Value
+
+The default value is null.
+
+
+#### Remarks
+
+If this property is not set then [System.Globalization.CultureInfo.CurrentCulture](xref:System.Globalization.CultureInfo.CurrentCulture) will be used.
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-b87ccd9ab2"></span>
 
-### ConverterParameter
+### ConverterParameter Property
 
 Gets or sets a parameter to pass to [Avalonia.Data.MultiBinding.Converter](xref:Avalonia.Data.MultiBinding.Converter).
 
 ```csharp
-public Object ConverterParameter { get; set; }
+public object ConverterParameter { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-4b6d87b7c3"></span>
 
-### FallbackValue
+### FallbackValue Property
 
 Gets or sets the value to use when the binding is unable to produce a value.
 
 ```csharp
-public Object FallbackValue { get; set; }
+public object FallbackValue { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-a392fad099"></span>
 
-### Mode
+### Mode Property
 
 Gets or sets the binding mode.
 
@@ -148,9 +181,13 @@ Gets or sets the binding mode.
 public Avalonia.Data.BindingMode Mode { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-ef87706676"></span>
 
-### Priority
+### Priority Property
 
 Gets or sets the binding priority.
 
@@ -158,9 +195,13 @@ Gets or sets the binding priority.
 public Avalonia.Data.BindingPriority Priority { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-314c25786f"></span>
 
-### RelativeSource
+### RelativeSource Property
 
 Gets or sets the relative source for the binding.
 
@@ -168,25 +209,35 @@ Gets or sets the relative source for the binding.
 public Avalonia.Data.RelativeSource RelativeSource { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-f401114a50"></span>
 
-### StringFormat
+### StringFormat Property
 
 Gets or sets the string format.
 
 ```csharp
-public String StringFormat { get; set; }
+public string StringFormat { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-05378b9819"></span>
 
-### TargetNullValue
+### TargetNullValue Property
 
 Gets or sets the value to use when the binding result is null.
 
 ```csharp
-public Object TargetNullValue { get; set; }
+public object TargetNullValue { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

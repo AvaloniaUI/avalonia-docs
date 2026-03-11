@@ -36,7 +36,7 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 
 <div className="apiref-page__lead">
 
-Child's index and total count information provider used by list-controls (ListBox, StackPanel, etc.)
+Child's index and total count information provider used by list-controls ([ListBox](xref:Avalonia.Controls.ListBox), [StackPanel](xref:Avalonia.Controls.StackPanel), etc.)
 
 </div>
 
@@ -59,29 +59,55 @@ Used by nth-child and nth-last-child selectors.
 | [GetChildIndex](#uid-147b451016) | Gets child's actual index in order of the original source. |
 | [TryGetTotalCount](#uid-478d7ebd91) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-147b451016"></span>
 
-### GetChildIndex
+### GetChildIndex Method
 
 Gets child's actual index in order of the original source.
 
 ```csharp
-public Int32 GetChildIndex(Avalonia.LogicalTree.ILogical child)
+public int GetChildIndex(Avalonia.LogicalTree.ILogical child)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `child` | Logical child. |
+#### Parameters
 
-Returns: Index or -1 if child was not found.
+`child` [Avalonia.LogicalTree.ILogical](xref:Avalonia.LogicalTree.ILogical)
+
+Logical child.
+
+
+#### Returns
+
+int
+
+Index or -1 if child was not found.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-478d7ebd91"></span>
 
-### TryGetTotalCount
+### TryGetTotalCount Method
 
 ```csharp
-public Boolean TryGetTotalCount(Int32& count)
+public bool TryGetTotalCount(int& count)
 ```
+
+#### Parameters
+
+`count` int&amp;
+
+
+#### Returns
+
+bool
+
+
+</section>
 
 ## Events
 
@@ -89,15 +115,19 @@ public Boolean TryGetTotalCount(Int32& count)
 | --- | --- |
 | [ChildIndexChanged](#uid-41b7f16f4a) | Notifies subscriber when a child's index was changed. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-41b7f16f4a"></span>
 
-### ChildIndexChanged
+### ChildIndexChanged Event
 
 Notifies subscriber when a child's index was changed.
 
 ```csharp
 public event EventHandler<Avalonia.LogicalTree.ChildIndexChangedEventArgs> ChildIndexChanged
 ```
+
+</section>
 
 </ApiRefPage>
 

@@ -54,13 +54,25 @@ public delegate SMLib.SmcErrorHandler
 | --- | --- |
 | [SMLib.SmcErrorHandler](#uid-be8588a9e6) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-be8588a9e6"></span>
 
-### SMLib.SmcErrorHandler
+### SMLib.SmcErrorHandler Constructor
 
 ```csharp
-public SMLib.SmcErrorHandler(Object object, IntPtr method)
+public SMLib.SmcErrorHandler(object object, IntPtr method)
 ```
+
+#### Parameters
+
+`object` object
+
+
+`method` IntPtr
+
+
+</section>
 
 ## Methods
 
@@ -70,29 +82,103 @@ public SMLib.SmcErrorHandler(Object object, IntPtr method)
 | [EndInvoke](#uid-b950bfa4de) | No summary available. |
 | [Invoke](#uid-83dba8cffc) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-976b8a32ec"></span>
 
-### BeginInvoke
+### BeginInvoke Method
 
 ```csharp
-public IAsyncResult BeginInvoke(IntPtr smcConn, Boolean swap, Int32 offendingMinorOpcode, UIntPtr offendingSequence, Int32 errorClass, Int32 severity, IntPtr values, AsyncCallback callback, Object object)
+public IAsyncResult BeginInvoke(IntPtr smcConn, bool swap, int offendingMinorOpcode, UIntPtr offendingSequence, int errorClass, int severity, IntPtr values, AsyncCallback callback, object object)
 ```
+
+#### Parameters
+
+`smcConn` IntPtr
+
+
+`swap` bool
+
+
+`offendingMinorOpcode` int
+
+
+`offendingSequence` UIntPtr
+
+
+`errorClass` int
+
+
+`severity` int
+
+
+`values` IntPtr
+
+
+`callback` AsyncCallback
+
+
+`object` object
+
+
+#### Returns
+
+IAsyncResult
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-b950bfa4de"></span>
 
-### EndInvoke
+### EndInvoke Method
 
 ```csharp
-public Void EndInvoke(IAsyncResult result)
+public void EndInvoke(IAsyncResult result)
 ```
+
+#### Parameters
+
+`result` IAsyncResult
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-83dba8cffc"></span>
 
-### Invoke
+### Invoke Method
 
 ```csharp
-public Void Invoke(IntPtr smcConn, Boolean swap, Int32 offendingMinorOpcode, UIntPtr offendingSequence, Int32 errorClass, Int32 severity, IntPtr values)
+public void Invoke(IntPtr smcConn, bool swap, int offendingMinorOpcode, UIntPtr offendingSequence, int errorClass, int severity, IntPtr values)
 ```
+
+#### Parameters
+
+`smcConn` IntPtr
+
+
+`swap` bool
+
+
+`offendingMinorOpcode` int
+
+
+`offendingSequence` UIntPtr
+
+
+`errorClass` int
+
+
+`severity` int
+
+
+`values` IntPtr
+
+
+</section>
 
 </ApiRefPage>
 

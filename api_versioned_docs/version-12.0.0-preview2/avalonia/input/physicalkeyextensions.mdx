@@ -53,7 +53,7 @@ public class PhysicalKeyExtensions
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> PhysicalKeyExtensions
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> PhysicalKeyExtensions
 </div>
 </div>
 
@@ -64,9 +64,11 @@ public class PhysicalKeyExtensions
 | [ToQwertyKey](#uid-cf13f45187) | Maps a physical key to a corresponding key, if possible, on a QWERTY keyboard. |
 | [ToQwertyKeySymbol](#uid-11860c6eb9) | Maps a physical key to a corresponding key symbol, if possible, on a QWERTY keyboard. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-cf13f45187"></span>
 
-### ToQwertyKey
+### ToQwertyKey Method
 
 Maps a physical key to a corresponding key, if possible, on a QWERTY keyboard.
 
@@ -74,28 +76,54 @@ Maps a physical key to a corresponding key, if possible, on a QWERTY keyboard.
 public Avalonia.Input.Key ToQwertyKey(Avalonia.Input.PhysicalKey physicalKey)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `physicalKey` | the physical key to map. |
+#### Parameters
 
-Returns: The key corresponding to `physicalKey`, or [Avalonia.Input.Key.None](xref:Avalonia.Input.Key.None).
+`physicalKey` [Avalonia.Input.PhysicalKey](xref:Avalonia.Input.PhysicalKey)
+
+the physical key to map.
+
+
+#### Returns
+
+[Avalonia.Input.Key](xref:Avalonia.Input.Key)
+
+The key corresponding to `physicalKey`, or [Avalonia.Input.Key.None](xref:Avalonia.Input.Key.None).
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-11860c6eb9"></span>
 
-### ToQwertyKeySymbol
+### ToQwertyKeySymbol Method
 
 Maps a physical key to a corresponding key symbol, if possible, on a QWERTY keyboard.
 
 ```csharp
-public String ToQwertyKeySymbol(Avalonia.Input.PhysicalKey physicalKey, Boolean useShiftModifier)
+public string ToQwertyKeySymbol(Avalonia.Input.PhysicalKey physicalKey, bool useShiftModifier)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `physicalKey` | the physical key to map. |
-| `useShiftModifier` | Indicates whether the Shift key is considered pressed. |
+#### Parameters
 
-Returns: The key corresponding to `physicalKey`, or [Avalonia.Input.Key.None](xref:Avalonia.Input.Key.None).
+`physicalKey` [Avalonia.Input.PhysicalKey](xref:Avalonia.Input.PhysicalKey)
+
+the physical key to map.
+
+
+`useShiftModifier` bool
+
+Indicates whether the Shift key is considered pressed.
+
+
+#### Returns
+
+string
+
+The key corresponding to `physicalKey`, or [Avalonia.Input.Key.None](xref:Avalonia.Input.Key.None).
+
+
+</section>
 
 </ApiRefPage>
 

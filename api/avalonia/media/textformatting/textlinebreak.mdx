@@ -47,7 +47,7 @@ public class TextLineBreak
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> TextLineBreak
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> TextLineBreak
 </div>
 </div>
 
@@ -57,25 +57,42 @@ public class TextLineBreak
 | --- | --- |
 | [TextLineBreak](#uid-61590dd934) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-61590dd934"></span>
 
-### TextLineBreak
+### TextLineBreak Constructor
 
 ```csharp
-public TextLineBreak(Avalonia.Media.TextFormatting.TextEndOfLine textEndOfLine, Avalonia.Media.FlowDirection flowDirection, Boolean isSplit)
+public TextLineBreak(Avalonia.Media.TextFormatting.TextEndOfLine textEndOfLine, Avalonia.Media.FlowDirection flowDirection, bool isSplit)
 ```
+
+#### Parameters
+
+`textEndOfLine` [Avalonia.Media.TextFormatting.TextEndOfLine](xref:Avalonia.Media.TextFormatting.TextEndOfLine)
+
+
+`flowDirection` [Avalonia.Media.FlowDirection](xref:Avalonia.Media.FlowDirection)
+
+
+`isSplit` bool
+
+
+</section>
 
 ## Properties
 
 | Name | Description |
 | --- | --- |
 | [FlowDirection](#uid-d8f277426f) | Get the flow direction for remaining characters. |
-| [IsSplit](#uid-9f94b35911) | Gets whether there were remaining runs after this line break, that were split up by the Avalonia.Media.TextFormatting.TextFormatter during the formatting process. |
+| [IsSplit](#uid-9f94b35911) | Gets whether there were remaining runs after this line break, that were split up by the [Avalonia.Media.TextFormatting.TextFormatter](xref:Avalonia.Media.TextFormatting.TextFormatter) during the formatting process. |
 | [TextEndOfLine](#uid-381e30d0eb) | Get the end of line run. |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-d8f277426f"></span>
 
-### FlowDirection
+### FlowDirection Property
 
 Get the flow direction for remaining characters.
 
@@ -83,26 +100,36 @@ Get the flow direction for remaining characters.
 public Avalonia.Media.FlowDirection FlowDirection { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-9f94b35911"></span>
 
-### IsSplit
+### IsSplit Property
 
 Gets whether there were remaining runs after this line break,
 that were split up by the [Avalonia.Media.TextFormatting.TextFormatter](xref:Avalonia.Media.TextFormatting.TextFormatter) during the formatting process.
 
 ```csharp
-public Boolean IsSplit { get; set; }
+public bool IsSplit { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-381e30d0eb"></span>
 
-### TextEndOfLine
+### TextEndOfLine Property
 
 Get the end of line run.
 
 ```csharp
 public Avalonia.Media.TextFormatting.TextEndOfLine TextEndOfLine { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

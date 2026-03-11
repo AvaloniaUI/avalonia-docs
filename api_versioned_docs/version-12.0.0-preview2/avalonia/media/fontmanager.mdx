@@ -54,7 +54,7 @@ public class FontManager
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> FontManager
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> FontManager
 </div>
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Implements:</span> IDisposable
@@ -67,13 +67,22 @@ public class FontManager
 | --- | --- |
 | [FontManager](#uid-e2e3e84207) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-e2e3e84207"></span>
 
-### FontManager
+### FontManager Constructor
 
 ```csharp
 public FontManager(Avalonia.Platform.IFontManagerImpl platformImpl)
 ```
+
+#### Parameters
+
+`platformImpl` [Avalonia.Platform.IFontManagerImpl](xref:Avalonia.Platform.IFontManagerImpl)
+
+
+</section>
 
 ## Methods
 
@@ -84,53 +93,120 @@ public FontManager(Avalonia.Platform.IFontManagerImpl platformImpl)
 | [TryGetGlyphTypeface](#uid-a951668ae8) | No summary available. |
 | [TryMatchCharacter](#uid-f9bc67a2d1) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-4616d08cf2"></span>
 
-### AddFontCollection
+### AddFontCollection Method
 
 Add a font collection to the manager.
 
 ```csharp
-public Void AddFontCollection(Avalonia.Media.Fonts.IFontCollection fontCollection)
+public void AddFontCollection(Avalonia.Media.Fonts.IFontCollection fontCollection)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `fontCollection` | The font collection. |
+#### Parameters
+
+`fontCollection` [Avalonia.Media.Fonts.IFontCollection](xref:Avalonia.Media.Fonts.IFontCollection)
+
+The font collection.
+
+
+#### Remarks
+
+If a font collection's key is already present the collection is replaced.
 
 #### Exceptions
 
 - [ArgumentException](xref:System.ArgumentException)
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-306932b411"></span>
 
-### RemoveFontCollection
+### RemoveFontCollection Method
 
 Removes the font collection that corresponds to specified key.
 
 ```csharp
-public Void RemoveFontCollection(Uri key)
+public void RemoveFontCollection(Uri key)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `key` | The font collection's key. |
+#### Parameters
+
+`key` Uri
+
+The font collection's key.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-a951668ae8"></span>
 
-### TryGetGlyphTypeface
+### TryGetGlyphTypeface Method
 
 ```csharp
-public Boolean TryGetGlyphTypeface(Avalonia.Media.Typeface typeface, Avalonia.Media.GlyphTypeface& glyphTypeface)
+public bool TryGetGlyphTypeface(Avalonia.Media.Typeface typeface, Avalonia.Media.GlyphTypeface& glyphTypeface)
 ```
+
+#### Parameters
+
+`typeface` [Avalonia.Media.Typeface](xref:Avalonia.Media.Typeface)
+
+
+`glyphTypeface` [Avalonia.Media.GlyphTypeface](xref:Avalonia.Media.GlyphTypeface)&amp;
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-f9bc67a2d1"></span>
 
-### TryMatchCharacter
+### TryMatchCharacter Method
 
 ```csharp
-public Boolean TryMatchCharacter(Int32 codepoint, Avalonia.Media.FontStyle fontStyle, Avalonia.Media.FontWeight fontWeight, Avalonia.Media.FontStretch fontStretch, Avalonia.Media.FontFamily fontFamily, System.Globalization.CultureInfo culture, Avalonia.Media.Typeface& typeface)
+public bool TryMatchCharacter(int codepoint, Avalonia.Media.FontStyle fontStyle, Avalonia.Media.FontWeight fontWeight, Avalonia.Media.FontStretch fontStretch, Avalonia.Media.FontFamily fontFamily, System.Globalization.CultureInfo culture, Avalonia.Media.Typeface& typeface)
 ```
+
+#### Parameters
+
+`codepoint` int
+
+
+`fontStyle` [Avalonia.Media.FontStyle](xref:Avalonia.Media.FontStyle)
+
+
+`fontWeight` [Avalonia.Media.FontWeight](xref:Avalonia.Media.FontWeight)
+
+
+`fontStretch` [Avalonia.Media.FontStretch](xref:Avalonia.Media.FontStretch)
+
+
+`fontFamily` [Avalonia.Media.FontFamily](xref:Avalonia.Media.FontFamily)
+
+
+`culture` System.Globalization.CultureInfo
+
+
+`typeface` [Avalonia.Media.Typeface](xref:Avalonia.Media.Typeface)&amp;
+
+
+#### Returns
+
+bool
+
+
+</section>
 
 ## Properties
 
@@ -140,9 +216,11 @@ public Boolean TryMatchCharacter(Int32 codepoint, Avalonia.Media.FontStyle fontS
 | [DefaultFontFamily](#uid-dcbdf53864) | Gets the system's default font family. |
 | [SystemFonts](#uid-e48c6d2eea) | Get all system fonts. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-cdda802632"></span>
 
-### Current
+### Current Property
 
 Get the current font manager instance.
 
@@ -150,9 +228,13 @@ Get the current font manager instance.
 public Avalonia.Media.FontManager Current { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-dcbdf53864"></span>
 
-### DefaultFontFamily
+### DefaultFontFamily Property
 
 Gets the system's default font family.
 
@@ -160,15 +242,21 @@ Gets the system's default font family.
 public Avalonia.Media.FontFamily DefaultFontFamily { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-e48c6d2eea"></span>
 
-### SystemFonts
+### SystemFonts Property
 
 Get all system fonts.
 
 ```csharp
 public Avalonia.Media.Fonts.IFontCollection SystemFonts { get; set; }
 ```
+
+</section>
 
 ## Fields
 
@@ -178,29 +266,41 @@ public Avalonia.Media.Fonts.IFontCollection SystemFonts { get; set; }
 | [FontCollectionScheme](#uid-59fec01f97) | No summary available. |
 | [SystemFontScheme](#uid-290667f4a6) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-65bd8dd64a"></span>
 
-### CompositeFontScheme
+### CompositeFontScheme Field
 
 ```csharp
-public String CompositeFontScheme
+public string CompositeFontScheme
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-59fec01f97"></span>
 
-### FontCollectionScheme
+### FontCollectionScheme Field
 
 ```csharp
-public String FontCollectionScheme
+public string FontCollectionScheme
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-290667f4a6"></span>
 
-### SystemFontScheme
+### SystemFontScheme Field
 
 ```csharp
-public String SystemFontScheme
+public string SystemFontScheme
 ```
+
+</section>
 
 </ApiRefPage>
 

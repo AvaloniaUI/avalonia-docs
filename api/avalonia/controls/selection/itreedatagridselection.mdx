@@ -1,0 +1,79 @@
+---
+title: 'ITreeDataGridSelection'
+hide_title: true
+slug: '/avalonia/controls/selection/itreedatagridselection'
+uid: 'Avalonia.Controls.Selection.ITreeDataGridSelection'
+commentId: 'T:Avalonia.Controls.Selection.ITreeDataGridSelection'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.TreeDataGrid'
+assembly: 'Avalonia.Controls.TreeDataGrid'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Selection'
+tfms:
+  - 'net8.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ITreeDataGridSelection Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Selection</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Base interface for [TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid) selection models that provides common functionality
+for both row and cell selection.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface ITreeDataGridSelection
+```
+
+</div>
+
+## Remarks
+
+[ITreeDataGridSelection](xref:Avalonia.Controls.Selection.ITreeDataGridSelection) serves as a common base interface for various selection models
+in the [TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid) control, including [Avalonia.Controls.Selection.ITreeDataGridRowSelectionModel](xref:Avalonia.Controls.Selection.ITreeDataGridRowSelectionModel)
+and [Avalonia.Controls.Selection.ITreeDataGridCellSelectionModel](xref:Avalonia.Controls.Selection.ITreeDataGridCellSelectionModel).
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Source](#uid-6585f8381f) | Gets or sets the data source for the selection model. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6585f8381f"></span>
+
+### Source Property
+
+Gets or sets the data source for the selection model.
+
+```csharp
+public System.Collections.IEnumerable Source { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

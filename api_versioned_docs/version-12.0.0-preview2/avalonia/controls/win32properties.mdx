@@ -53,7 +53,7 @@ public class Win32Properties
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> Win32Properties
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> Win32Properties
 </div>
 </div>
 
@@ -68,81 +68,151 @@ public class Win32Properties
 | [RemoveWndProcHookCallback](#uid-e28e9d382c) | Removes a custom callback for the window's WndProc |
 | [SetNonClientHitTestResult](#uid-880349e197) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-b51911f72e"></span>
 
-### AddWindowStylesCallback
+### AddWindowStylesCallback Method
 
 Adds a callback to set the window's style.
 
 ```csharp
-public Void AddWindowStylesCallback(Avalonia.Controls.TopLevel topLevel, Avalonia.Controls.Win32Properties.CustomWindowStylesCallback callback)
+public void AddWindowStylesCallback(Avalonia.Controls.TopLevel topLevel, Avalonia.Controls.Win32Properties.CustomWindowStylesCallback callback)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `callback` | The callback |
-| `topLevel` | The window implementation |
+#### Parameters
+
+`topLevel` [Avalonia.Controls.TopLevel](xref:Avalonia.Controls.TopLevel)
+
+The window implementation
+
+
+`callback` [Avalonia.Controls.Win32Properties.CustomWindowStylesCallback](xref:Avalonia.Controls.Win32Properties.CustomWindowStylesCallback)
+
+The callback
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-ffbfdca626"></span>
 
-### AddWndProcHookCallback
+### AddWndProcHookCallback Method
 
 Adds a custom callback for the window's WndProc
 
 ```csharp
-public Void AddWndProcHookCallback(Avalonia.Controls.TopLevel topLevel, Avalonia.Controls.Win32Properties.CustomWndProcHookCallback callback)
+public void AddWndProcHookCallback(Avalonia.Controls.TopLevel topLevel, Avalonia.Controls.Win32Properties.CustomWndProcHookCallback callback)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `callback` | The callback |
-| `topLevel` | The window |
+#### Parameters
+
+`topLevel` [Avalonia.Controls.TopLevel](xref:Avalonia.Controls.TopLevel)
+
+The window
+
+
+`callback` [Avalonia.Controls.Win32Properties.CustomWndProcHookCallback](xref:Avalonia.Controls.Win32Properties.CustomWndProcHookCallback)
+
+The callback
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-fb40e72aa0"></span>
 
-### GetNonClientHitTestResult
+### GetNonClientHitTestResult Method
 
 ```csharp
 public Avalonia.Controls.Win32Properties.Win32HitTestValue GetNonClientHitTestResult(Avalonia.Visual obj)
 ```
 
+#### Parameters
+
+`obj` [Avalonia.Visual](xref:Avalonia.Visual)
+
+
+#### Returns
+
+[Avalonia.Controls.Win32Properties.Win32HitTestValue](xref:Avalonia.Controls.Win32Properties.Win32HitTestValue)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-1fa69055d6"></span>
 
-### RemoveWindowStylesCallback
+### RemoveWindowStylesCallback Method
 
 Removes a callback to set the window's style.
 
 ```csharp
-public Void RemoveWindowStylesCallback(Avalonia.Controls.TopLevel topLevel, Avalonia.Controls.Win32Properties.CustomWindowStylesCallback callback)
+public void RemoveWindowStylesCallback(Avalonia.Controls.TopLevel topLevel, Avalonia.Controls.Win32Properties.CustomWindowStylesCallback callback)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `callback` | The callback |
-| `topLevel` | The window implementation |
+#### Parameters
+
+`topLevel` [Avalonia.Controls.TopLevel](xref:Avalonia.Controls.TopLevel)
+
+The window implementation
+
+
+`callback` [Avalonia.Controls.Win32Properties.CustomWindowStylesCallback](xref:Avalonia.Controls.Win32Properties.CustomWindowStylesCallback)
+
+The callback
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-e28e9d382c"></span>
 
-### RemoveWndProcHookCallback
+### RemoveWndProcHookCallback Method
 
 Removes a custom callback for the window's WndProc
 
 ```csharp
-public Void RemoveWndProcHookCallback(Avalonia.Controls.TopLevel topLevel, Avalonia.Controls.Win32Properties.CustomWndProcHookCallback callback)
+public void RemoveWndProcHookCallback(Avalonia.Controls.TopLevel topLevel, Avalonia.Controls.Win32Properties.CustomWndProcHookCallback callback)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `callback` | The callback |
-| `topLevel` | The window |
+#### Parameters
+
+`topLevel` [Avalonia.Controls.TopLevel](xref:Avalonia.Controls.TopLevel)
+
+The window
+
+
+`callback` [Avalonia.Controls.Win32Properties.CustomWndProcHookCallback](xref:Avalonia.Controls.Win32Properties.CustomWndProcHookCallback)
+
+The callback
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-880349e197"></span>
 
-### SetNonClientHitTestResult
+### SetNonClientHitTestResult Method
 
 ```csharp
-public Void SetNonClientHitTestResult(Avalonia.Visual obj, Avalonia.Controls.Win32Properties.Win32HitTestValue value)
+public void SetNonClientHitTestResult(Avalonia.Visual obj, Avalonia.Controls.Win32Properties.Win32HitTestValue value)
 ```
+
+#### Parameters
+
+`obj` [Avalonia.Visual](xref:Avalonia.Visual)
+
+
+`value` [Avalonia.Controls.Win32Properties.Win32HitTestValue](xref:Avalonia.Controls.Win32Properties.Win32HitTestValue)
+
+
+</section>
 
 ## Fields
 
@@ -150,13 +220,17 @@ public Void SetNonClientHitTestResult(Avalonia.Visual obj, Avalonia.Controls.Win
 | --- | --- |
 | [NonClientHitTestResultProperty](#uid-5912f2bb07) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-5912f2bb07"></span>
 
-### NonClientHitTestResultProperty
+### NonClientHitTestResultProperty Field
 
 ```csharp
 public Avalonia.AttachedProperty<Avalonia.Controls.Win32Properties.Win32HitTestValue> NonClientHitTestResultProperty
 ```
+
+</section>
 
 </ApiRefPage>
 

@@ -54,13 +54,25 @@ public delegate TransformerConfiguration.XamlValueConverter
 | --- | --- |
 | [TransformerConfiguration.XamlValueConverter](#uid-610a8fab7c) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-610a8fab7c"></span>
 
-### TransformerConfiguration.XamlValueConverter
+### TransformerConfiguration.XamlValueConverter Constructor
 
 ```csharp
-public TransformerConfiguration.XamlValueConverter(Object object, IntPtr method)
+public TransformerConfiguration.XamlValueConverter(object object, IntPtr method)
 ```
+
+#### Parameters
+
+`object` object
+
+
+`method` IntPtr
+
+
+</section>
 
 ## Methods
 
@@ -70,29 +82,104 @@ public TransformerConfiguration.XamlValueConverter(Object object, IntPtr method)
 | [EndInvoke](#uid-86ceca2b36) | No summary available. |
 | [Invoke](#uid-a4fc589428) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-f14832d76c"></span>
 
-### BeginInvoke
+### BeginInvoke Method
 
 ```csharp
-public IAsyncResult BeginInvoke(XamlX.Transform.AstTransformationContext context, XamlX.Ast.IXamlAstValueNode node, System.Collections.Generic.IReadOnlyList<XamlX.TypeSystem.IXamlCustomAttribute> customAttributes, XamlX.TypeSystem.IXamlType type, XamlX.Ast.IXamlAstValueNode& result, AsyncCallback callback, Object object)
+public IAsyncResult BeginInvoke(XamlX.Transform.AstTransformationContext context, XamlX.Ast.IXamlAstValueNode node, System.Collections.Generic.IReadOnlyList<XamlX.TypeSystem.IXamlCustomAttribute> customAttributes, XamlX.TypeSystem.IXamlType type, XamlX.Ast.IXamlAstValueNode& result, AsyncCallback callback, object object)
 ```
+
+#### Parameters
+
+`context` XamlX.Transform.AstTransformationContext
+
+
+`node` XamlX.Ast.IXamlAstValueNode
+
+
+`customAttributes` System.Collections.Generic.IReadOnlyList&lt;XamlX.TypeSystem.IXamlCustomAttribute&gt;
+
+
+`type` XamlX.TypeSystem.IXamlType
+
+
+`result` XamlX.Ast.IXamlAstValueNode&amp;
+
+
+`callback` AsyncCallback
+
+
+`object` object
+
+
+#### Returns
+
+IAsyncResult
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-86ceca2b36"></span>
 
-### EndInvoke
+### EndInvoke Method
 
 ```csharp
-public Boolean EndInvoke(XamlX.Ast.IXamlAstValueNode& result, IAsyncResult __result)
+public bool EndInvoke(XamlX.Ast.IXamlAstValueNode& result, IAsyncResult __result)
 ```
+
+#### Parameters
+
+`result` XamlX.Ast.IXamlAstValueNode&amp;
+
+
+`__result` IAsyncResult
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-a4fc589428"></span>
 
-### Invoke
+### Invoke Method
 
 ```csharp
-public Boolean Invoke(XamlX.Transform.AstTransformationContext context, XamlX.Ast.IXamlAstValueNode node, System.Collections.Generic.IReadOnlyList<XamlX.TypeSystem.IXamlCustomAttribute> customAttributes, XamlX.TypeSystem.IXamlType type, XamlX.Ast.IXamlAstValueNode& result)
+public bool Invoke(XamlX.Transform.AstTransformationContext context, XamlX.Ast.IXamlAstValueNode node, System.Collections.Generic.IReadOnlyList<XamlX.TypeSystem.IXamlCustomAttribute> customAttributes, XamlX.TypeSystem.IXamlType type, XamlX.Ast.IXamlAstValueNode& result)
 ```
+
+#### Parameters
+
+`context` XamlX.Transform.AstTransformationContext
+
+
+`node` XamlX.Ast.IXamlAstValueNode
+
+
+`customAttributes` System.Collections.Generic.IReadOnlyList&lt;XamlX.TypeSystem.IXamlCustomAttribute&gt;
+
+
+`type` XamlX.TypeSystem.IXamlType
+
+
+`result` XamlX.Ast.IXamlAstValueNode&amp;
+
+
+#### Returns
+
+bool
+
+
+</section>
 
 </ApiRefPage>
 

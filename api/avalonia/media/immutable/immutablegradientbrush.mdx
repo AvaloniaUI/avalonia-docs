@@ -53,7 +53,7 @@ public class ImmutableGradientBrush
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> ImmutableGradientBrush
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> ImmutableGradientBrush
 </div>
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Derived types:</span> <a href="immutableconicgradientbrush">ImmutableConicGradientBrush</a>, <a href="immutablelineargradientbrush">ImmutableLinearGradientBrush</a>, <a href="immutableradialgradientbrush">ImmutableRadialGradientBrush</a>
@@ -73,9 +73,11 @@ public class ImmutableGradientBrush
 | [Transform](#uid-2c0dd3ffd3) | Gets the transform of the brush. |
 | [TransformOrigin](#uid-56b8b5945b) | Gets the transform origin of the brush |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-9d195fdf3e"></span>
 
-### GradientStops
+### GradientStops Property
 
 Gets the brush's gradient stops.
 
@@ -83,19 +85,27 @@ Gets the brush's gradient stops.
 public System.Collections.Generic.IReadOnlyList<Avalonia.Media.IGradientStop> GradientStops { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-5f6e07ee47"></span>
 
-### Opacity
+### Opacity Property
 
 Gets the opacity of the brush.
 
 ```csharp
-public Double Opacity { get; set; }
+public double Opacity { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-9b5fcc3168"></span>
 
-### SpreadMethod
+### SpreadMethod Property
 
 Gets the brush's spread method that defines how to draw a gradient that doesn't fill
 the bounds of the destination control.
@@ -104,9 +114,13 @@ the bounds of the destination control.
 public Avalonia.Media.GradientSpreadMethod SpreadMethod { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-2c0dd3ffd3"></span>
 
-### Transform
+### Transform Property
 
 Gets the transform of the brush.
 
@@ -114,15 +128,21 @@ Gets the transform of the brush.
 public Avalonia.Media.ITransform Transform { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-56b8b5945b"></span>
 
-### TransformOrigin
+### TransformOrigin Property
 
 Gets the transform origin of the brush
 
 ```csharp
 public Avalonia.RelativePoint TransformOrigin { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

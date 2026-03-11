@@ -53,7 +53,7 @@ public class Design
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> Design
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> Design
 </div>
 </div>
 
@@ -64,7 +64,7 @@ public class Design
 | [GetDataContext (2 overloads)](#uid-730975f9b1) | Gets the design-time data context for a control. |
 | [GetDesignStyle](#uid-aa9086667b) | Gets the design-time style for a control. |
 | [GetHeight](#uid-d7570e141d) | Gets the design-time height for a control. |
-| [GetPreviewWith (4 overloads)](#uid-3f2107265d) | Gets the preview control for the specified Avalonia.AvaloniaObject at design-time. |
+| [GetPreviewWith (4 overloads)](#uid-3f2107265d) | Gets the preview control for the specified [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject) at design-time. |
 | [GetWidth](#uid-93a3ad0a96) | Gets the design-time width for a control. |
 | [SetDataContext (2 overloads)](#uid-e52d4759ea) | Sets the design-time data context for a control. |
 | [SetDesignStyle](#uid-ac3a719e27) | Sets the design-time style for a control. |
@@ -76,41 +76,67 @@ public class Design
 
 ### GetDataContext overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-37e8be5cf6"></span>
 
-#### GetDataContext
+#### GetDataContext Method
 
 Gets the design-time data context for a control.
 
 ```csharp
-public Object GetDataContext(Avalonia.Controls.Control control)
+public object GetDataContext(Avalonia.Controls.Control control)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `control` | The control to get the data context from. |
+##### Parameters
 
-Returns: The data context value.
+`control` [Avalonia.Controls.Control](xref:Avalonia.Controls.Control)
+
+The control to get the data context from.
+
+
+##### Returns
+
+object
+
+The data context value.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-b27cb3cb6b"></span>
 
-#### GetDataContext
+#### GetDataContext Method
 
 Gets the design-time data context for a control.
 
 ```csharp
-public Object GetDataContext(Avalonia.Controls.Templates.IDataTemplate control)
+public object GetDataContext(Avalonia.Controls.Templates.IDataTemplate control)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `control` | The control to get the data context from. |
+##### Parameters
 
-Returns: The data context value.
+`control` [Avalonia.Controls.Templates.IDataTemplate](xref:Avalonia.Controls.Templates.IDataTemplate)
+
+The control to get the data context from.
+
+
+##### Returns
+
+object
+
+The data context value.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-aa9086667b"></span>
 
-### GetDesignStyle
+### GetDesignStyle Method
 
 Gets the design-time style for a control.
 
@@ -118,35 +144,59 @@ Gets the design-time style for a control.
 public Avalonia.Styling.IStyle GetDesignStyle(Avalonia.Controls.Control control)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `control` | The control to get the style from. |
+#### Parameters
 
-Returns: The style value.
+`control` [Avalonia.Controls.Control](xref:Avalonia.Controls.Control)
+
+The control to get the style from.
+
+
+#### Returns
+
+[Avalonia.Styling.IStyle](xref:Avalonia.Styling.IStyle)
+
+The style value.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-d7570e141d"></span>
 
-### GetHeight
+### GetHeight Method
 
 Gets the design-time height for a control.
 
 ```csharp
-public Double GetHeight(Avalonia.Controls.Control control)
+public double GetHeight(Avalonia.Controls.Control control)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `control` | The control to get the height from. |
+#### Parameters
 
-Returns: The height value.
+`control` [Avalonia.Controls.Control](xref:Avalonia.Controls.Control)
+
+The control to get the height from.
+
+
+#### Returns
+
+double
+
+The height value.
+
+
+</section>
 
 <span id="uid-3f2107265d"></span>
 
 ### GetPreviewWith overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-be0b252cb3"></span>
 
-#### GetPreviewWith
+#### GetPreviewWith Method
 
 Gets the preview control for the specified [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject) at design-time.
 
@@ -154,15 +204,27 @@ Gets the preview control for the specified [Avalonia.AvaloniaObject](xref:Avalon
 public Avalonia.Controls.Control GetPreviewWith(Avalonia.AvaloniaObject target)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `target` | The target object. |
+##### Parameters
 
-Returns: The preview control, or null.
+`target` [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject)
+
+The target object.
+
+
+##### Returns
+
+[Avalonia.Controls.Control](xref:Avalonia.Controls.Control)
+
+The preview control, or null.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-a840a2f083"></span>
 
-#### GetPreviewWith
+#### GetPreviewWith Method
 
 Gets the preview control for the specified [Avalonia.Controls.ResourceDictionary](xref:Avalonia.Controls.ResourceDictionary) at design-time.
 
@@ -170,15 +232,27 @@ Gets the preview control for the specified [Avalonia.Controls.ResourceDictionary
 public Avalonia.Controls.Control GetPreviewWith(Avalonia.Controls.ResourceDictionary target)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `target` | The resource dictionary. |
+##### Parameters
 
-Returns: The preview control, or null.
+`target` [Avalonia.Controls.ResourceDictionary](xref:Avalonia.Controls.ResourceDictionary)
+
+The resource dictionary.
+
+
+##### Returns
+
+[Avalonia.Controls.Control](xref:Avalonia.Controls.Control)
+
+The preview control, or null.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-16607989b4"></span>
 
-#### GetPreviewWith
+#### GetPreviewWith Method
 
 Gets the preview control for the specified [Avalonia.Controls.Templates.IDataTemplate](xref:Avalonia.Controls.Templates.IDataTemplate) at design-time.
 
@@ -186,15 +260,27 @@ Gets the preview control for the specified [Avalonia.Controls.Templates.IDataTem
 public Avalonia.Controls.Control GetPreviewWith(Avalonia.Controls.Templates.IDataTemplate target)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `target` | The data template. |
+##### Parameters
 
-Returns: The preview control, or null.
+`target` [Avalonia.Controls.Templates.IDataTemplate](xref:Avalonia.Controls.Templates.IDataTemplate)
+
+The data template.
+
+
+##### Returns
+
+[Avalonia.Controls.Control](xref:Avalonia.Controls.Control)
+
+The preview control, or null.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-518bf28d0e"></span>
 
-#### GetPreviewWith
+#### GetPreviewWith Method
 
 Gets the preview control for the specified [Avalonia.Styling.IStyle](xref:Avalonia.Styling.IStyle) at design-time.
 
@@ -202,187 +288,360 @@ Gets the preview control for the specified [Avalonia.Styling.IStyle](xref:Avalon
 public Avalonia.Controls.Control GetPreviewWith(Avalonia.Styling.IStyle target)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `target` | The style. |
+##### Parameters
 
-Returns: The preview control, or null.
+`target` [Avalonia.Styling.IStyle](xref:Avalonia.Styling.IStyle)
+
+The style.
+
+
+##### Returns
+
+[Avalonia.Controls.Control](xref:Avalonia.Controls.Control)
+
+The preview control, or null.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-93a3ad0a96"></span>
 
-### GetWidth
+### GetWidth Method
 
 Gets the design-time width for a control.
 
 ```csharp
-public Double GetWidth(Avalonia.Controls.Control control)
+public double GetWidth(Avalonia.Controls.Control control)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `control` | The control to get the width from. |
+#### Parameters
 
-Returns: The width value.
+`control` [Avalonia.Controls.Control](xref:Avalonia.Controls.Control)
+
+The control to get the width from.
+
+
+#### Returns
+
+double
+
+The width value.
+
+
+</section>
 
 <span id="uid-e52d4759ea"></span>
 
 ### SetDataContext overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-c1ecf57e6d"></span>
 
-#### SetDataContext
+#### SetDataContext Method
 
 Sets the design-time data context for a control.
 
 ```csharp
-public Void SetDataContext(Avalonia.Controls.Control control, Object value)
+public void SetDataContext(Avalonia.Controls.Control control, object value)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `control` | The control to set the data context for. |
-| `value` | The data context value. |
+##### Parameters
+
+`control` [Avalonia.Controls.Control](xref:Avalonia.Controls.Control)
+
+The control to set the data context for.
+
+
+`value` object
+
+The data context value.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-41951bd399"></span>
 
-#### SetDataContext
+#### SetDataContext Method
 
 Sets the design-time data context for a control.
 
 ```csharp
-public Void SetDataContext(Avalonia.Controls.Templates.IDataTemplate control, Object value)
+public void SetDataContext(Avalonia.Controls.Templates.IDataTemplate control, object value)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `control` | The control to set the data context for. |
-| `value` | The data context value. |
+##### Parameters
+
+`control` [Avalonia.Controls.Templates.IDataTemplate](xref:Avalonia.Controls.Templates.IDataTemplate)
+
+The control to set the data context for.
+
+
+`value` object
+
+The data context value.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-ac3a719e27"></span>
 
-### SetDesignStyle
+### SetDesignStyle Method
 
 Sets the design-time style for a control.
 
 ```csharp
-public Void SetDesignStyle(Avalonia.Controls.Control control, Avalonia.Styling.IStyle value)
+public void SetDesignStyle(Avalonia.Controls.Control control, Avalonia.Styling.IStyle value)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `control` | The control to set the style for. |
-| `value` | The style value. |
+#### Parameters
+
+`control` [Avalonia.Controls.Control](xref:Avalonia.Controls.Control)
+
+The control to set the style for.
+
+
+`value` [Avalonia.Styling.IStyle](xref:Avalonia.Styling.IStyle)
+
+The style value.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-44fd86c56e"></span>
 
-### SetHeight
+### SetHeight Method
 
 Sets the design-time height for a control.
 
 ```csharp
-public Void SetHeight(Avalonia.Controls.Control control, Double value)
+public void SetHeight(Avalonia.Controls.Control control, double value)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `control` | The control to set the height for. |
-| `value` | The height value. |
+#### Parameters
+
+`control` [Avalonia.Controls.Control](xref:Avalonia.Controls.Control)
+
+The control to set the height for.
+
+
+`value` double
+
+The height value.
+
+
+</section>
 
 <span id="uid-d8dac897b3"></span>
 
 ### SetPreviewWith overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-ee64d0440c"></span>
 
-#### SetPreviewWith
+#### SetPreviewWith Method
 
 ```csharp
-public Void SetPreviewWith(Avalonia.AvaloniaObject target, Avalonia.Controls.ITemplate<TControl><Avalonia.Controls.Control> template)
+public void SetPreviewWith(Avalonia.AvaloniaObject target, Avalonia.Controls.ITemplate<TControl><Avalonia.Controls.Control> template)
 ```
+
+##### Parameters
+
+`target` [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject)
+
+
+`template` Avalonia.Controls.[ITemplate](xref:Avalonia.Styling.ITemplate)&lt;TControl&gt;&lt;[Avalonia.Controls.Control](xref:Avalonia.Controls.Control)&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-ba0ae1afe0"></span>
 
-#### SetPreviewWith
+#### SetPreviewWith Method
 
 Sets a preview template for the specified [Avalonia.Controls.ResourceDictionary](xref:Avalonia.Controls.ResourceDictionary) at design-time.
 
 ```csharp
-public Void SetPreviewWith(Avalonia.Controls.ResourceDictionary target, Avalonia.Controls.Control control)
+public void SetPreviewWith(Avalonia.Controls.ResourceDictionary target, Avalonia.Controls.Control control)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `control` | The preview control. |
-| `target` | The resource dictionary. |
+##### Parameters
+
+`target` [Avalonia.Controls.ResourceDictionary](xref:Avalonia.Controls.ResourceDictionary)
+
+The resource dictionary.
+
+
+`control` [Avalonia.Controls.Control](xref:Avalonia.Controls.Control)
+
+The preview control.
+
+
+##### Remarks
+
+This method allows you to specify a substitute control to be rendered in the previewer.
+[ResourceDictionary](xref:Avalonia.Controls.ResourceDictionary) is attached to that control, displaying real time changes on the control.
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-ec0f5256fc"></span>
 
-#### SetPreviewWith
+#### SetPreviewWith Method
 
 ```csharp
-public Void SetPreviewWith(Avalonia.Controls.ResourceDictionary target, Avalonia.Controls.ITemplate<TControl><Avalonia.Controls.Control> template)
+public void SetPreviewWith(Avalonia.Controls.ResourceDictionary target, Avalonia.Controls.ITemplate<TControl><Avalonia.Controls.Control> template)
 ```
+
+##### Parameters
+
+`target` [Avalonia.Controls.ResourceDictionary](xref:Avalonia.Controls.ResourceDictionary)
+
+
+`template` Avalonia.Controls.[ITemplate](xref:Avalonia.Styling.ITemplate)&lt;TControl&gt;&lt;[Avalonia.Controls.Control](xref:Avalonia.Controls.Control)&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-08c9783ea1"></span>
 
-#### SetPreviewWith
+#### SetPreviewWith Method
 
 Sets a preview template for the specified [Avalonia.Controls.Templates.IDataTemplate](xref:Avalonia.Controls.Templates.IDataTemplate) at design-time.
 
 ```csharp
-public Void SetPreviewWith(Avalonia.Controls.Templates.IDataTemplate target, Avalonia.Controls.Control control)
+public void SetPreviewWith(Avalonia.Controls.Templates.IDataTemplate target, Avalonia.Controls.Control control)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `control` | The preview control. |
-| `target` | The data template. |
+##### Parameters
+
+`target` [Avalonia.Controls.Templates.IDataTemplate](xref:Avalonia.Controls.Templates.IDataTemplate)
+
+The data template.
+
+
+`control` [Avalonia.Controls.Control](xref:Avalonia.Controls.Control)
+
+The preview control.
+
+
+##### Remarks
+
+This method allows you to specify a substitute control to be rendered in the previewer.
+Template must return [ContentControl](xref:Avalonia.Controls.ContentControl), and [IDataTemplate](xref:Avalonia.Controls.Templates.IDataTemplate) will be set assigned to ContentControl.ContentTemplate property.
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-ff3f33201a"></span>
 
-#### SetPreviewWith
+#### SetPreviewWith Method
 
 ```csharp
-public Void SetPreviewWith(Avalonia.Controls.Templates.IDataTemplate target, Avalonia.Controls.ITemplate<TControl><Avalonia.Controls.Control> template)
+public void SetPreviewWith(Avalonia.Controls.Templates.IDataTemplate target, Avalonia.Controls.ITemplate<TControl><Avalonia.Controls.Control> template)
 ```
+
+##### Parameters
+
+`target` [Avalonia.Controls.Templates.IDataTemplate](xref:Avalonia.Controls.Templates.IDataTemplate)
+
+
+`template` Avalonia.Controls.[ITemplate](xref:Avalonia.Styling.ITemplate)&lt;TControl&gt;&lt;[Avalonia.Controls.Control](xref:Avalonia.Controls.Control)&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-8cca5b8ccd"></span>
 
-#### SetPreviewWith
+#### SetPreviewWith Method
 
 Sets a preview template for the specified [Avalonia.Controls.Templates.IDataTemplate](xref:Avalonia.Controls.Templates.IDataTemplate) at design-time.
 
 ```csharp
-public Void SetPreviewWith(Avalonia.Styling.IStyle target, Avalonia.Controls.Control control)
+public void SetPreviewWith(Avalonia.Styling.IStyle target, Avalonia.Controls.Control control)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `control` | The preview control. |
-| `target` | The data template. |
+##### Parameters
+
+`target` [Avalonia.Styling.IStyle](xref:Avalonia.Styling.IStyle)
+
+The data template.
+
+
+`control` [Avalonia.Controls.Control](xref:Avalonia.Controls.Control)
+
+The preview control.
+
+
+##### Remarks
+
+This method allows you to specify a substitute control to be rendered in the previewer.
+Template must return [ContentControl](xref:Avalonia.Controls.ContentControl), and [IDataTemplate](xref:Avalonia.Controls.Templates.IDataTemplate) will be set assigned to ContentControl.ContentTemplate property.
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-9c64a05574"></span>
 
-#### SetPreviewWith
+#### SetPreviewWith Method
 
 ```csharp
-public Void SetPreviewWith(Avalonia.Styling.IStyle target, Avalonia.Controls.ITemplate<TControl><Avalonia.Controls.Control> template)
+public void SetPreviewWith(Avalonia.Styling.IStyle target, Avalonia.Controls.ITemplate<TControl><Avalonia.Controls.Control> template)
 ```
+
+##### Parameters
+
+`target` [Avalonia.Styling.IStyle](xref:Avalonia.Styling.IStyle)
+
+
+`template` Avalonia.Controls.[ITemplate](xref:Avalonia.Styling.ITemplate)&lt;TControl&gt;&lt;[Avalonia.Controls.Control](xref:Avalonia.Controls.Control)&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-90374ec669"></span>
 
-### SetWidth
+### SetWidth Method
 
 Sets the design-time width for a control.
 
 ```csharp
-public Void SetWidth(Avalonia.Controls.Control control, Double value)
+public void SetWidth(Avalonia.Controls.Control control, double value)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `control` | The control to set the width for. |
-| `value` | The width value. |
+#### Parameters
+
+`control` [Avalonia.Controls.Control](xref:Avalonia.Controls.Control)
+
+The control to set the width for.
+
+
+`value` double
+
+The width value.
+
+
+</section>
 
 ## Properties
 
@@ -390,15 +649,24 @@ public Void SetWidth(Avalonia.Controls.Control control, Double value)
 | --- | --- |
 | [IsDesignMode](#uid-d65d5f3b36) | Gets a value indicating whether the application is running in design mode. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-d65d5f3b36"></span>
 
-### IsDesignMode
+### IsDesignMode Property
 
 Gets a value indicating whether the application is running in design mode.
 
 ```csharp
-public Boolean IsDesignMode { get; set; }
+public bool IsDesignMode { get; set; }
 ```
+
+#### Remarks
+
+This property is typically used to enable or disable features that should only be available
+at design-time, such as sample/preview data.
+
+</section>
 
 ## Fields
 
@@ -410,19 +678,25 @@ public Boolean IsDesignMode { get; set; }
 | [PreviewWithProperty](#uid-5a7c962a11) | Defines the PreviewWith attached property. |
 | [WidthProperty](#uid-a44c6d14ef) | Defines the Width attached property. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-ecbf08df66"></span>
 
-### DataContextProperty
+### DataContextProperty Field
 
 Defines the DataContext attached property.
 
 ```csharp
-public Avalonia.AttachedProperty<Object> DataContextProperty
+public Avalonia.AttachedProperty<object> DataContextProperty
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-d5ba4a1fb8"></span>
 
-### DesignStyleProperty
+### DesignStyleProperty Field
 
 Identifies the DesignStyle attached property for design-time use.
 
@@ -430,19 +704,32 @@ Identifies the DesignStyle attached property for design-time use.
 public Avalonia.AttachedProperty<Avalonia.Styling.IStyle> DesignStyleProperty
 ```
 
+#### Remarks
+
+This property allows you to apply a style to a control only at design-time, enabling
+custom visualizations or highlighting in the designer without affecting the runtime appearance.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-da67a69258"></span>
 
-### HeightProperty
+### HeightProperty Field
 
 Defines the Height attached property.
 
 ```csharp
-public Avalonia.AttachedProperty<Double> HeightProperty
+public Avalonia.AttachedProperty<double> HeightProperty
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-5a7c962a11"></span>
 
-### PreviewWithProperty
+### PreviewWithProperty Field
 
 Defines the PreviewWith attached property.
 
@@ -450,15 +737,21 @@ Defines the PreviewWith attached property.
 public Avalonia.AttachedProperty<Avalonia.Controls.Control> PreviewWithProperty
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-a44c6d14ef"></span>
 
-### WidthProperty
+### WidthProperty Field
 
 Defines the Width attached property.
 
 ```csharp
-public Avalonia.AttachedProperty<Double> WidthProperty
+public Avalonia.AttachedProperty<double> WidthProperty
 ```
+
+</section>
 
 </ApiRefPage>
 

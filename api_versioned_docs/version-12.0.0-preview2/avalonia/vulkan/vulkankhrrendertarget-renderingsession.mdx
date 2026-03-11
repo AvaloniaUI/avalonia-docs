@@ -47,7 +47,7 @@ public class VulkanKhrRenderTarget.RenderingSession
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> VulkanKhrRenderTarget.RenderingSession
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> VulkanKhrRenderTarget.RenderingSession
 </div>
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Implements:</span> <a href="ivulkanrendersession">IVulkanRenderSession</a>, IDisposable
@@ -60,13 +60,34 @@ public class VulkanKhrRenderTarget.RenderingSession
 | --- | --- |
 | [VulkanKhrRenderTarget.RenderingSession](#uid-18de0e49ba) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-18de0e49ba"></span>
 
-### VulkanKhrRenderTarget.RenderingSession
+### VulkanKhrRenderTarget.RenderingSession Constructor
 
 ```csharp
-public VulkanKhrRenderTarget.RenderingSession(Avalonia.Vulkan.Interop.VulkanDisplay display, Avalonia.Vulkan.VulkanImage image, Boolean isRgba, Double scaling, IDisposable dispose)
+public VulkanKhrRenderTarget.RenderingSession(Avalonia.Vulkan.Interop.VulkanDisplay display, Avalonia.Vulkan.VulkanImage image, bool isRgba, double scaling, IDisposable dispose)
 ```
+
+#### Parameters
+
+`display` Avalonia.Vulkan.Interop.VulkanDisplay
+
+
+`image` Avalonia.Vulkan.VulkanImage
+
+
+`isRgba` bool
+
+
+`scaling` double
+
+
+`dispose` IDisposable
+
+
+</section>
 
 ## Methods
 
@@ -74,13 +95,17 @@ public VulkanKhrRenderTarget.RenderingSession(Avalonia.Vulkan.Interop.VulkanDisp
 | --- | --- |
 | [Dispose](#uid-f27266ab82) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-f27266ab82"></span>
 
-### Dispose
+### Dispose Method
 
 ```csharp
-public Void Dispose()
+public void Dispose()
 ```
+
+</section>
 
 ## Properties
 
@@ -93,53 +118,77 @@ public Void Dispose()
 | [Scaling](#uid-4faa1937c8) | No summary available. |
 | [Size](#uid-e5c6639248) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-556178c50a"></span>
 
-### Display
+### Display Property
 
 ```csharp
 public Avalonia.Vulkan.Interop.VulkanDisplay Display { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-1343ba259c"></span>
 
-### ImageInfo
+### ImageInfo Property
 
 ```csharp
 public Avalonia.Vulkan.VulkanImageInfo ImageInfo { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-35eec64889"></span>
 
-### IsRgba
+### IsRgba Property
 
 ```csharp
-public Boolean IsRgba { get; set; }
+public bool IsRgba { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-385d45fe83"></span>
 
-### IsYFlipped
+### IsYFlipped Property
 
 ```csharp
-public Boolean IsYFlipped { get; set; }
+public bool IsYFlipped { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-4faa1937c8"></span>
 
-### Scaling
+### Scaling Property
 
 ```csharp
-public Double Scaling { get; set; }
+public double Scaling { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-e5c6639248"></span>
 
-### Size
+### Size Property
 
 ```csharp
 public Avalonia.PixelSize Size { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

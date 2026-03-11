@@ -55,43 +55,72 @@ public interface IStyleHost
 | [StylesAdded](#uid-d78dbc039e) | No summary available. |
 | [StylesRemoved](#uid-72592bfd0c) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-d78dbc039e"></span>
 
-### StylesAdded
+### StylesAdded Method
 
 ```csharp
-public Void StylesAdded(System.Collections.Generic.IReadOnlyList<Avalonia.Styling.IStyle> styles)
+public void StylesAdded(System.Collections.Generic.IReadOnlyList<Avalonia.Styling.IStyle> styles)
 ```
+
+#### Parameters
+
+`styles` System.Collections.Generic.IReadOnlyList&lt;[Avalonia.Styling.IStyle](xref:Avalonia.Styling.IStyle)&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-72592bfd0c"></span>
 
-### StylesRemoved
+### StylesRemoved Method
 
 ```csharp
-public Void StylesRemoved(System.Collections.Generic.IReadOnlyList<Avalonia.Styling.IStyle> styles)
+public void StylesRemoved(System.Collections.Generic.IReadOnlyList<Avalonia.Styling.IStyle> styles)
 ```
+
+#### Parameters
+
+`styles` System.Collections.Generic.IReadOnlyList&lt;[Avalonia.Styling.IStyle](xref:Avalonia.Styling.IStyle)&gt;
+
+
+</section>
 
 ## Properties
 
 | Name | Description |
 | --- | --- |
-| [IsStylesInitialized](#uid-8b5ef026f8) | Gets a value indicating whether Avalonia.Styling.IStyleHost.Styles is initialized. |
+| [IsStylesInitialized](#uid-8b5ef026f8) | Gets a value indicating whether [Avalonia.Styling.IStyleHost.Styles](xref:Avalonia.Styling.IStyleHost.Styles) is initialized. |
 | [Styles](#uid-348b6c38df) | Gets the styles for the element. |
 | [StylingParent](#uid-aafc027218) | Gets the parent style host element. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-8b5ef026f8"></span>
 
-### IsStylesInitialized
+### IsStylesInitialized Property
 
 Gets a value indicating whether [Avalonia.Styling.IStyleHost.Styles](xref:Avalonia.Styling.IStyleHost.Styles) is initialized.
 
 ```csharp
-public Boolean IsStylesInitialized { get; set; }
+public bool IsStylesInitialized { get; set; }
 ```
+
+#### Remarks
+
+The [Avalonia.Styling.IStyleHost.Styles](xref:Avalonia.Styling.IStyleHost.Styles) property may be lazily initialized, if so this property
+indicates whether it has been initialized.
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-348b6c38df"></span>
 
-### Styles
+### Styles Property
 
 Gets the styles for the element.
 
@@ -99,15 +128,21 @@ Gets the styles for the element.
 public Avalonia.Styling.Styles Styles { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-aafc027218"></span>
 
-### StylingParent
+### StylingParent Property
 
 Gets the parent style host element.
 
 ```csharp
 public Avalonia.Styling.IStyleHost StylingParent { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

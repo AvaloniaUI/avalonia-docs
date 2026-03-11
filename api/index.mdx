@@ -14,6 +14,9 @@ tfms:
   - 'net10.0-android36.0'
   - 'net10.0-browser1.0'
   - 'net10.0-windows7.0'
+  - 'net8.0'
+  - 'net8.0-ios18.0'
+  - 'netstandard2.1'
 ---
 
 import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
@@ -34,6 +37,11 @@ API reference for avalonia-docs API Reference.
 - [Avalonia.Android](packages/avalonia-android.mdx) - Avalonia is a cross-platform UI framework for .NET providing a flexible styling system and supporting a wide range of Operating Systems such as Windows, Linux, macOS and with experimental support for Android, iOS and WebAssembly.
 - [Avalonia.Browser](packages/avalonia-browser.mdx) - Avalonia is a cross-platform UI framework for .NET providing a flexible styling system and supporting a wide range of Operating Systems such as Windows, Linux, macOS and with experimental support for Android, iOS and WebAssembly.
 - [Avalonia.Controls.ColorPicker](packages/avalonia-controls-colorpicker.mdx) - Avalonia is a cross-platform UI framework for .NET providing a flexible styling system and supporting a wide range of Operating Systems such as Windows, Linux, macOS and with experimental support for Android, iOS and WebAssembly.
+- [Avalonia.Controls.Markdown](packages/avalonia-controls-markdown.mdx) - Markdown rendering control for Avalonia applications
+- [Avalonia.Controls.MediaPlayer](packages/avalonia-controls-mediaplayer.mdx) - Avalonia [MediaPlayer](xref:Avalonia.Media.MediaPlayer) enables native video and audio playback across Windows, macOS, and Linux, supporting multiple formats for reliable, high-quality media experiences.
+- [Avalonia.Controls.MediaPlayer.Abstractions](packages/avalonia-controls-mediaplayer-abstractions.mdx) - Abstractions for Avalonia Accelerate Media Player
+- [Avalonia.Controls.TreeDataGrid](packages/avalonia-controls-treedatagrid.mdx) - [TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid) is a control which displays hierarchical and tabular data together in a single view. It is a combination of a [TreeView](xref:Avalonia.Controls.TreeView) and DataGrid control.
+- [Avalonia.Controls.WebView](packages/avalonia-controls-webview.mdx) - Avalonia WebView component enables embedding web content in Avalonia applications for use cases like documentation, dashboards, and interactive content.
 - [Avalonia.Desktop](packages/avalonia-desktop.mdx) - Avalonia is a cross-platform UI framework for .NET providing a flexible styling system and supporting a wide range of Operating Systems such as Windows, Linux, macOS and with experimental support for Android, iOS and WebAssembly.
 - [Avalonia.Fonts.Inter](packages/avalonia-fonts-inter.mdx) - Avalonia is a cross-platform UI framework for .NET providing a flexible styling system and supporting a wide range of Operating Systems such as Windows, Linux, macOS and with experimental support for Android, iOS and WebAssembly.
 - [Avalonia.FreeDesktop](packages/avalonia-freedesktop.mdx) - Avalonia is a cross-platform UI framework for .NET providing a flexible styling system and supporting a wide range of Operating Systems such as Windows, Linux, macOS and with experimental support for Android, iOS and WebAssembly.
@@ -47,6 +55,7 @@ API reference for avalonia-docs API Reference.
 - [Avalonia.Themes.Fluent](packages/avalonia-themes-fluent.mdx) - Avalonia is a cross-platform UI framework for .NET providing a flexible styling system and supporting a wide range of Operating Systems such as Windows, Linux, macOS and with experimental support for Android, iOS and WebAssembly.
 - [Avalonia.Win32.Interoperability](packages/avalonia-win32-interoperability.mdx) - Avalonia is a cross-platform UI framework for .NET providing a flexible styling system and supporting a wide range of Operating Systems such as Windows, Linux, macOS and with experimental support for Android, iOS and WebAssembly.
 - [Avalonia.X11](packages/avalonia-x11.mdx) - Avalonia is a cross-platform UI framework for .NET providing a flexible styling system and supporting a wide range of Operating Systems such as Windows, Linux, macOS and with experimental support for Android, iOS and WebAssembly.
+- [AvaloniaUI.DiagnosticsSupport](packages/avaloniaui-diagnosticssupport.mdx) - The Diagnostics Support package is responsible for establishing a connection bridge between the user app and AvaloniaUI Developer Tools process.
 
 ## Namespaces
 
@@ -64,6 +73,7 @@ API reference for avalonia-docs API Reference.
 - [Avalonia.Collections](avalonia/collections/index.mdx)
 - [Avalonia.Collections.Pooled](avalonia/collections/pooled/index.mdx)
 - [Avalonia.Controls](avalonia/controls/index.mdx)
+- [Avalonia.Controls.Android](avalonia/controls/android/index.mdx)
 - [Avalonia.Controls.ApplicationLifetimes](avalonia/controls/applicationlifetimes/index.mdx)
 - [Avalonia.Controls.Automation.Peers](avalonia/controls/automation/peers/index.mdx)
 - [Avalonia.Controls.Chrome](avalonia/controls/chrome/index.mdx)
@@ -73,8 +83,11 @@ API reference for avalonia-docs API Reference.
 - [Avalonia.Controls.Embedding](avalonia/controls/embedding/index.mdx)
 - [Avalonia.Controls.Embedding.Offscreen](avalonia/controls/embedding/offscreen/index.mdx)
 - [Avalonia.Controls.Generators](avalonia/controls/generators/index.mdx)
+- [Avalonia.Controls.MediaPlayer.Abstractions](avalonia/controls/mediaplayer/abstractions/index.mdx)
 - [Avalonia.Controls.Metadata](avalonia/controls/metadata/index.mdx)
 - [Avalonia.Controls.Mixins](avalonia/controls/mixins/index.mdx)
+- [Avalonia.Controls.Models](avalonia/controls/models/index.mdx)
+- [Avalonia.Controls.Models.TreeDataGrid](avalonia/controls/models/treedatagrid/index.mdx)
 - [Avalonia.Controls.Notifications](avalonia/controls/notifications/index.mdx)
 - [Avalonia.Controls.Platform](avalonia/controls/platform/index.mdx)
 - [Avalonia.Controls.Presenters](avalonia/controls/presenters/index.mdx)
@@ -86,6 +99,7 @@ API reference for avalonia-docs API Reference.
 - [Avalonia.Controls.Shapes](avalonia/controls/shapes/index.mdx)
 - [Avalonia.Controls.Templates](avalonia/controls/templates/index.mdx)
 - [Avalonia.Controls.Utils](avalonia/controls/utils/index.mdx)
+- [Avalonia.Controls.Win.WebView2.Interop](avalonia/controls/win/webview2/interop/index.mdx)
 - [Avalonia.Data](avalonia/data/index.mdx)
 - [Avalonia.Data.Converters](avalonia/data/converters/index.mdx)
 - [Avalonia.Data.Core](avalonia/data/core/index.mdx)
@@ -97,6 +111,8 @@ API reference for avalonia-docs API Reference.
 - [Avalonia.Diagnostics](avalonia/diagnostics/index.mdx)
 - [Avalonia.Dialogs](avalonia/dialogs/index.mdx)
 - [Avalonia.Dialogs.Internal](avalonia/dialogs/internal/index.mdx)
+- [Avalonia.Experimental.Data](avalonia/experimental/data/index.mdx)
+- [Avalonia.Experimental.Data.Core](avalonia/experimental/data/core/index.mdx)
 - [Avalonia.Fonts.Inter](avalonia/fonts/inter/index.mdx)
 - [Avalonia.Headless.NUnit](avalonia/headless/nunit/index.mdx)
 - [Avalonia.Headless.Vnc](avalonia/headless/vnc/index.mdx)
@@ -133,6 +149,7 @@ API reference for avalonia-docs API Reference.
 - [Avalonia.Media.Immutable](avalonia/media/immutable/index.mdx)
 - [Avalonia.Media.TextFormatting](avalonia/media/textformatting/index.mdx)
 - [Avalonia.Media.TextFormatting.Unicode](avalonia/media/textformatting/unicode/index.mdx)
+- [Avalonia.Media.Themes.Simple](avalonia/media/themes/simple/index.mdx)
 - [Avalonia.Media.Transformation](avalonia/media/transformation/index.mdx)
 - [Avalonia.Metadata](avalonia/metadata/index.mdx)
 - [Avalonia.Metal](avalonia/metal/index.mdx)
@@ -171,7 +188,15 @@ API reference for avalonia-docs API Reference.
 - [Avalonia.X11.Clipboard](avalonia/x11/clipboard/index.mdx)
 - [Avalonia.X11.Interop](avalonia/x11/interop/index.mdx)
 - [Avalonia.X11.NativeDialogs](avalonia/x11/nativedialogs/index.mdx)
+- [AvaloniaUI.DiagnosticsProtocol](avaloniaui/diagnosticsprotocol/index.mdx)
+- [AvaloniaUI.DiagnosticsProtocol.Application](avaloniaui/diagnosticsprotocol/application/index.mdx)
+- [AvaloniaUI.DiagnosticsProtocol.Protocol](avaloniaui/diagnosticsprotocol/protocol/index.mdx)
+- [AvaloniaUI.DiagnosticsProtocol.Serialization](avaloniaui/diagnosticsprotocol/serialization/index.mdx)
+- [AvaloniaUI.DiagnosticsProtocol.Tree](avaloniaui/diagnosticsprotocol/tree/index.mdx)
+- [AvaloniaUI.DiagnosticsSupport](avaloniaui/diagnosticssupport/index.mdx)
+- [AvaloniaUI.DiagnosticsSupport.Avalonia.Handlers](avaloniaui/diagnosticssupport/avalonia/handlers/index.mdx)
 - [CompiledAvaloniaXaml](compiledavaloniaxaml/index.mdx)
+- [CoreRPC.Utility](corerpc/utility/index.mdx)
 - [Tmds.DBus.SourceGenerator](tmds/dbus/sourcegenerator/index.mdx)
 - [XamlX.IL](xamlx/il/index.mdx)
 - [XamlX.Parsers](xamlx/parsers/index.mdx)

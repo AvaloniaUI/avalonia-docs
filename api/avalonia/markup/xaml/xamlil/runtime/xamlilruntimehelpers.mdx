@@ -47,7 +47,7 @@ public class XamlIlRuntimeHelpers
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> XamlIlRuntimeHelpers
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> XamlIlRuntimeHelpers
 </div>
 </div>
 
@@ -56,7 +56,7 @@ public class XamlIlRuntimeHelpers
 | Name | Description |
 | --- | --- |
 | [ApplyNonMatchingMarkupExtensionV1](#uid-70ad20a9d3) | No summary available. |
-| [AsEagerParentStackProvider](#uid-c543aa31f9) | Converts a Avalonia.Markup.Xaml.XamlIl.Runtime.IAvaloniaXamlIlParentStackProvider into a Avalonia.Markup.Xaml.XamlIl.Runtime.IAvaloniaXamlIlEagerParentStackProvider. |
+| [AsEagerParentStackProvider](#uid-c543aa31f9) | Converts a [Avalonia.Markup.Xaml.XamlIl.Runtime.IAvaloniaXamlIlParentStackProvider](xref:Avalonia.Markup.Xaml.XamlIl.Runtime.IAvaloniaXamlIlParentStackProvider) into a [Avalonia.Markup.Xaml.XamlIl.Runtime.IAvaloniaXamlIlEagerParentStackProvider](xref:Avalonia.Markup.Xaml.XamlIl.Runtime.IAvaloniaXamlIlEagerParentStackProvider). |
 | [CreateInnerServiceProviderV1](#uid-b878ea7170) | No summary available. |
 | [CreateRootServiceProviderV2](#uid-fd4ec5b6cd) | No summary available. |
 | [CreateRootServiceProviderV3](#uid-778a9653ce) | No summary available. |
@@ -64,17 +64,37 @@ public class XamlIlRuntimeHelpers
 | [DeferredTransformationFactoryV2](#uid-3a715139d1) | No summary available. |
 | [DeferredTransformationFactoryV3](#uid-220107fbfa) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-70ad20a9d3"></span>
 
-### ApplyNonMatchingMarkupExtensionV1
+### ApplyNonMatchingMarkupExtensionV1 Method
 
 ```csharp
-public Void ApplyNonMatchingMarkupExtensionV1(Object target, Object property, IServiceProvider prov, Object value)
+public void ApplyNonMatchingMarkupExtensionV1(object target, object property, IServiceProvider prov, object value)
 ```
+
+#### Parameters
+
+`target` object
+
+
+`property` object
+
+
+`prov` IServiceProvider
+
+
+`value` object
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-c543aa31f9"></span>
 
-### AsEagerParentStackProvider
+### AsEagerParentStackProvider Method
 
 Converts a [Avalonia.Markup.Xaml.XamlIl.Runtime.IAvaloniaXamlIlParentStackProvider](xref:Avalonia.Markup.Xaml.XamlIl.Runtime.IAvaloniaXamlIlParentStackProvider) into a
 [Avalonia.Markup.Xaml.XamlIl.Runtime.IAvaloniaXamlIlEagerParentStackProvider](xref:Avalonia.Markup.Xaml.XamlIl.Runtime.IAvaloniaXamlIlEagerParentStackProvider).
@@ -83,53 +103,163 @@ Converts a [Avalonia.Markup.Xaml.XamlIl.Runtime.IAvaloniaXamlIlParentStackProvid
 public Avalonia.Markup.Xaml.XamlIl.Runtime.IAvaloniaXamlIlEagerParentStackProvider AsEagerParentStackProvider(Avalonia.Markup.Xaml.XamlIl.Runtime.IAvaloniaXamlIlParentStackProvider provider)
 ```
 
+#### Parameters
+
+`provider` [Avalonia.Markup.Xaml.XamlIl.Runtime.IAvaloniaXamlIlParentStackProvider](xref:Avalonia.Markup.Xaml.XamlIl.Runtime.IAvaloniaXamlIlParentStackProvider)
+
+
+#### Returns
+
+[Avalonia.Markup.Xaml.XamlIl.Runtime.IAvaloniaXamlIlEagerParentStackProvider](xref:Avalonia.Markup.Xaml.XamlIl.Runtime.IAvaloniaXamlIlEagerParentStackProvider)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-b878ea7170"></span>
 
-### CreateInnerServiceProviderV1
+### CreateInnerServiceProviderV1 Method
 
 ```csharp
 public IServiceProvider CreateInnerServiceProviderV1(IServiceProvider compiled)
 ```
 
+#### Parameters
+
+`compiled` IServiceProvider
+
+
+#### Returns
+
+IServiceProvider
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-fd4ec5b6cd"></span>
 
-### CreateRootServiceProviderV2
+### CreateRootServiceProviderV2 Method
 
 ```csharp
 public IServiceProvider CreateRootServiceProviderV2()
 ```
 
+#### Returns
+
+IServiceProvider
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-778a9653ce"></span>
 
-### CreateRootServiceProviderV3
+### CreateRootServiceProviderV3 Method
 
 ```csharp
 public IServiceProvider CreateRootServiceProviderV3(IServiceProvider parentServiceProvider)
 ```
 
+#### Parameters
+
+`parentServiceProvider` IServiceProvider
+
+
+#### Returns
+
+IServiceProvider
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-37f819a2e0"></span>
 
-### DeferredTransformationFactoryV1
+### DeferredTransformationFactoryV1 Method
 
 ```csharp
-public Func<IServiceProvider, Object> DeferredTransformationFactoryV1(Func<IServiceProvider, Object> builder, IServiceProvider provider)
+public Func<IServiceProvider, object> DeferredTransformationFactoryV1(Func<IServiceProvider, object> builder, IServiceProvider provider)
 ```
+
+#### Parameters
+
+`builder` Func&lt;IServiceProvider, object&gt;
+
+
+`provider` IServiceProvider
+
+
+#### Returns
+
+Func&lt;IServiceProvider, object&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-3a715139d1"></span>
 
-### DeferredTransformationFactoryV2
+### DeferredTransformationFactoryV2 Method
 
 ```csharp
-public Func<IServiceProvider, Object> DeferredTransformationFactoryV2<T>(Func<IServiceProvider, Object> builder, IServiceProvider provider)
+public Func<IServiceProvider, object> DeferredTransformationFactoryV2<T>(Func<IServiceProvider, object> builder, IServiceProvider provider)
 ```
+
+#### Parameters
+
+`builder` Func&lt;IServiceProvider, object&gt;
+
+
+`provider` IServiceProvider
+
+
+#### Type Parameters
+
+`T`
+
+
+#### Returns
+
+Func&lt;IServiceProvider, object&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-220107fbfa"></span>
 
-### DeferredTransformationFactoryV3
+### DeferredTransformationFactoryV3 Method
 
 ```csharp
 public Avalonia.Controls.IDeferredContent DeferredTransformationFactoryV3<T>(IntPtr builder, IServiceProvider provider)
 ```
+
+#### Parameters
+
+`builder` IntPtr
+
+
+`provider` IServiceProvider
+
+
+#### Type Parameters
+
+`T`
+
+
+#### Returns
+
+[Avalonia.Controls.IDeferredContent](xref:Avalonia.Controls.IDeferredContent)
+
+
+</section>
 
 </ApiRefPage>
 

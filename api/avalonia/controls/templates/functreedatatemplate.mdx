@@ -53,13 +53,13 @@ public class FuncTreeDataTemplate
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> FuncTemplate&lt;Object,Control&gt; <span className="apiref-page__relation-separator">-&gt;</span> <a href="funcdatatemplate">FuncDataTemplate</a> <span className="apiref-page__relation-separator">-&gt;</span> FuncTreeDataTemplate
+<span className="apiref-page__meta-label">Inheritance:</span> FuncTemplate&lt;object,Control&gt; <span className="apiref-page__relation-separator">-&gt;</span> <a href="funcdatatemplate">FuncDataTemplate</a> <span className="apiref-page__relation-separator">-&gt;</span> FuncTreeDataTemplate
 </div>
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Derived types:</span> <a href="functreedatatemplate-1">FuncTreeDataTemplate&lt;T&gt;</a>
 </div>
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Implements:</span> <a href="idatatemplate">IDataTemplate</a>, ITemplate&lt;Object,Control&gt;, <a href="itreedatatemplate">ITreeDataTemplate</a>
+<span className="apiref-page__meta-label">Implements:</span> <a href="idatatemplate">IDataTemplate</a>, ITemplate&lt;object,Control&gt;, <a href="itreedatatemplate">ITreeDataTemplate</a>
 </div>
 </div>
 
@@ -73,44 +73,94 @@ public class FuncTreeDataTemplate
 
 ### FuncTreeDataTemplate overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-3c4f176e21"></span>
 
-#### FuncTreeDataTemplate
+#### FuncTreeDataTemplate Constructor
 
 ```csharp
-public FuncTreeDataTemplate(Func<Object, Boolean> match, Func<Object, Avalonia.Controls.INameScope, Avalonia.Controls.Control> build, Func<Object, System.Collections.IEnumerable> itemsSelector)
+public FuncTreeDataTemplate(Func<object, bool> match, Func<object, Avalonia.Controls.INameScope, Avalonia.Controls.Control> build, Func<object, System.Collections.IEnumerable> itemsSelector)
 ```
+
+##### Parameters
+
+`match` Func&lt;object, bool&gt;
+
+
+`build` Func&lt;object, [Avalonia.Controls.INameScope](xref:Avalonia.Controls.INameScope), [Avalonia.Controls.Control](xref:Avalonia.Controls.Control)&gt;
+
+
+`itemsSelector` Func&lt;object, System.Collections.IEnumerable&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-50415a66c1"></span>
 
-#### FuncTreeDataTemplate
+#### FuncTreeDataTemplate Constructor
 
 ```csharp
-public FuncTreeDataTemplate(Type type, Func<Object, Avalonia.Controls.INameScope, Avalonia.Controls.Control> build, Func<Object, System.Collections.IEnumerable> itemsSelector)
+public FuncTreeDataTemplate(Type type, Func<object, Avalonia.Controls.INameScope, Avalonia.Controls.Control> build, Func<object, System.Collections.IEnumerable> itemsSelector)
 ```
+
+##### Parameters
+
+`type` Type
+
+
+`build` Func&lt;object, [Avalonia.Controls.INameScope](xref:Avalonia.Controls.INameScope), [Avalonia.Controls.Control](xref:Avalonia.Controls.Control)&gt;
+
+
+`itemsSelector` Func&lt;object, System.Collections.IEnumerable&gt;
+
+
+</section>
 
 ## Methods
 
 | Name | Description |
 | --- | --- |
 | [BindChildren](#uid-466057c57b) | No summary available. |
-| [Build (Inherited from FuncDataTemplate)](funcdatatemplate.mdx#uid-910f460c06) | Creates or recycles a control to display the specified data. |
-| [Match (Inherited from FuncDataTemplate)](funcdatatemplate.mdx#uid-50eee6cfed) | Checks to see if this data template matches the specified data. |
+| [Build](funcdatatemplate.mdx#uid-910f460c06) | Creates or recycles a control to display the specified data. Inherited from [FuncDataTemplate](funcdatatemplate.mdx). |
+| [Match](funcdatatemplate.mdx#uid-50eee6cfed) | Checks to see if this data template matches the specified data. Inherited from [FuncDataTemplate](funcdatatemplate.mdx). |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-466057c57b"></span>
 
-### BindChildren
+### BindChildren Method
 
 ```csharp
-public IDisposable BindChildren(Avalonia.AvaloniaObject target, Avalonia.AvaloniaProperty targetProperty, Object item)
+public IDisposable BindChildren(Avalonia.AvaloniaObject target, Avalonia.AvaloniaProperty targetProperty, object item)
 ```
+
+#### Parameters
+
+`target` [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject)
+
+
+`targetProperty` [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty)
+
+
+`item` object
+
+
+#### Returns
+
+IDisposable
+
+
+</section>
 
 ## Fields
 
 | Name | Description |
 | --- | --- |
-| [Access (Inherited from FuncDataTemplate)](funcdatatemplate.mdx#uid-c964539ce7) | The default data template used in the case where no matching data template is found but Avalonia.Controls.Primitives.AccessText should be used. |
-| [Default (Inherited from FuncDataTemplate)](funcdatatemplate.mdx#uid-70c1c9b32b) | The default data template used in the case where no matching data template is found. |
+| [Access](funcdatatemplate.mdx#uid-c964539ce7) | The default data template used in the case where no matching data template is found but [Avalonia.Controls.Primitives.AccessText](xref:Avalonia.Controls.Primitives.AccessText) should be used. Inherited from [FuncDataTemplate](funcdatatemplate.mdx). |
+| [Default](funcdatatemplate.mdx#uid-70c1c9b32b) | The default data template used in the case where no matching data template is found. Inherited from [FuncDataTemplate](funcdatatemplate.mdx). |
 
 </ApiRefPage>
 

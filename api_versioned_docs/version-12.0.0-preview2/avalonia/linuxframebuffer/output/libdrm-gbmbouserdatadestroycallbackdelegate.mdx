@@ -54,13 +54,25 @@ public delegate LibDrm.GbmBoUserDataDestroyCallbackDelegate
 | --- | --- |
 | [LibDrm.GbmBoUserDataDestroyCallbackDelegate](#uid-ede6a440f9) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-ede6a440f9"></span>
 
-### LibDrm.GbmBoUserDataDestroyCallbackDelegate
+### LibDrm.GbmBoUserDataDestroyCallbackDelegate Constructor
 
 ```csharp
-public LibDrm.GbmBoUserDataDestroyCallbackDelegate(Object object, IntPtr method)
+public LibDrm.GbmBoUserDataDestroyCallbackDelegate(object object, IntPtr method)
 ```
+
+#### Parameters
+
+`object` object
+
+
+`method` IntPtr
+
+
+</section>
 
 ## Methods
 
@@ -70,29 +82,73 @@ public LibDrm.GbmBoUserDataDestroyCallbackDelegate(Object object, IntPtr method)
 | [EndInvoke](#uid-9ed4df97e3) | No summary available. |
 | [Invoke](#uid-81d418a05d) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-56fe9c2214"></span>
 
-### BeginInvoke
+### BeginInvoke Method
 
 ```csharp
-public IAsyncResult BeginInvoke(IntPtr bo, IntPtr data, AsyncCallback callback, Object object)
+public IAsyncResult BeginInvoke(IntPtr bo, IntPtr data, AsyncCallback callback, object object)
 ```
+
+#### Parameters
+
+`bo` IntPtr
+
+
+`data` IntPtr
+
+
+`callback` AsyncCallback
+
+
+`object` object
+
+
+#### Returns
+
+IAsyncResult
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-9ed4df97e3"></span>
 
-### EndInvoke
+### EndInvoke Method
 
 ```csharp
-public Void EndInvoke(IAsyncResult result)
+public void EndInvoke(IAsyncResult result)
 ```
+
+#### Parameters
+
+`result` IAsyncResult
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-81d418a05d"></span>
 
-### Invoke
+### Invoke Method
 
 ```csharp
-public Void Invoke(IntPtr bo, IntPtr data)
+public void Invoke(IntPtr bo, IntPtr data)
 ```
+
+#### Parameters
+
+`bo` IntPtr
+
+
+`data` IntPtr
+
+
+</section>
 
 </ApiRefPage>
 

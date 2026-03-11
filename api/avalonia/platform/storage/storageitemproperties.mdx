@@ -53,7 +53,7 @@ public class StorageItemProperties
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> StorageItemProperties
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> StorageItemProperties
 </div>
 </div>
 
@@ -63,13 +63,28 @@ public class StorageItemProperties
 | --- | --- |
 | [StorageItemProperties](#uid-e160c7a7b3) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-e160c7a7b3"></span>
 
-### StorageItemProperties
+### StorageItemProperties Constructor
 
 ```csharp
-public StorageItemProperties(Nullable<UInt64> size, Nullable<DateTimeOffset> dateCreated, Nullable<DateTimeOffset> dateModified)
+public StorageItemProperties(Nullable<ulong> size, Nullable<DateTimeOffset> dateCreated, Nullable<DateTimeOffset> dateModified)
 ```
+
+#### Parameters
+
+`size` Nullable&lt;ulong&gt;
+
+
+`dateCreated` Nullable&lt;DateTimeOffset&gt;
+
+
+`dateModified` Nullable&lt;DateTimeOffset&gt;
+
+
+</section>
 
 ## Properties
 
@@ -79,9 +94,11 @@ public StorageItemProperties(Nullable<UInt64> size, Nullable<DateTimeOffset> dat
 | [DateModified](#uid-86a309844c) | Gets the date and time of the last time the file was modified. |
 | [Size](#uid-8c7e685308) | Gets the size of the file in bytes. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-e2dbe256e9"></span>
 
-### DateCreated
+### DateCreated Property
 
 Gets the date and time that the current folder was created.
 
@@ -89,9 +106,17 @@ Gets the date and time that the current folder was created.
 public Nullable<DateTimeOffset> DateCreated { get; set; }
 ```
 
+#### Remarks
+
+Can be null if property is not available.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-86a309844c"></span>
 
-### DateModified
+### DateModified Property
 
 Gets the date and time of the last time the file was modified.
 
@@ -99,15 +124,29 @@ Gets the date and time of the last time the file was modified.
 public Nullable<DateTimeOffset> DateModified { get; set; }
 ```
 
+#### Remarks
+
+Can be null if property is not available.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-8c7e685308"></span>
 
-### Size
+### Size Property
 
 Gets the size of the file in bytes.
 
 ```csharp
-public Nullable<UInt64> Size { get; set; }
+public Nullable<ulong> Size { get; set; }
 ```
+
+#### Remarks
+
+Can be null if property is not available.
+
+</section>
 
 </ApiRefPage>
 

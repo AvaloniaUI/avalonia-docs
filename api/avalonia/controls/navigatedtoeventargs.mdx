@@ -61,11 +61,13 @@ public class NavigatedToEventArgs
 
 | Name | Description |
 | --- | --- |
-| [NavigatedToEventArgs](#uid-1328a76043) | Initializes a new instance of the Avalonia.Controls.NavigatedToEventArgs class. |
+| [NavigatedToEventArgs](#uid-1328a76043) | Initializes a new instance of the [Avalonia.Controls.NavigatedToEventArgs](xref:Avalonia.Controls.NavigatedToEventArgs) class. |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-1328a76043"></span>
 
-### NavigatedToEventArgs
+### NavigatedToEventArgs Constructor
 
 Initializes a new instance of the [Avalonia.Controls.NavigatedToEventArgs](xref:Avalonia.Controls.NavigatedToEventArgs) class.
 
@@ -73,10 +75,19 @@ Initializes a new instance of the [Avalonia.Controls.NavigatedToEventArgs](xref:
 public NavigatedToEventArgs(Avalonia.Controls.Page previousPage, Avalonia.Controls.NavigationType navigationType)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `navigationType` | The type of navigation that triggered this event. |
-| `previousPage` | The page that was active before this navigation, or for the root page. |
+#### Parameters
+
+`previousPage` [Avalonia.Controls.Page](xref:Avalonia.Controls.Page)
+
+The page that was active before this navigation, or for the root page.
+
+
+`navigationType` [Avalonia.Controls.NavigationType](xref:Avalonia.Controls.NavigationType)
+
+The type of navigation that triggered this event.
+
+
+</section>
 
 ## Properties
 
@@ -85,9 +96,11 @@ public NavigatedToEventArgs(Avalonia.Controls.Page previousPage, Avalonia.Contro
 | [NavigationType](#uid-c13412353f) | Gets the type of navigation that triggered this event. |
 | [PreviousPage](#uid-91752c6d3e) | Gets the page that was active before this navigation. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-c13412353f"></span>
 
-### NavigationType
+### NavigationType Property
 
 Gets the type of navigation that triggered this event.
 
@@ -95,15 +108,21 @@ Gets the type of navigation that triggered this event.
 public Avalonia.Controls.NavigationType NavigationType { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-91752c6d3e"></span>
 
-### PreviousPage
+### PreviousPage Property
 
 Gets the page that was active before this navigation.
 
 ```csharp
 public Avalonia.Controls.Page PreviousPage { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

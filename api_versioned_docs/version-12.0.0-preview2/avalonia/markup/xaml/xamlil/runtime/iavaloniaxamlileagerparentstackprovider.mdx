@@ -63,29 +63,37 @@ This interface is used by the XAML compiler and shouldn't be implemented in your
 | Name | Description |
 | --- | --- |
 | [DirectParentsStack](#uid-0f5bf49d32) | Gets the directly available parents (which don't include ones returned by parent providers). The parents are returned in reverse order: the last element is the most direct parent while the first element is the most distant ancestor. |
-| [ParentProvider](#uid-495d3ac9d5) | Gets the parent Avalonia.Markup.Xaml.XamlIl.Runtime.IAvaloniaXamlIlEagerParentStackProvider, if available. |
+| [ParentProvider](#uid-495d3ac9d5) | Gets the parent [Avalonia.Markup.Xaml.XamlIl.Runtime.IAvaloniaXamlIlEagerParentStackProvider](xref:Avalonia.Markup.Xaml.XamlIl.Runtime.IAvaloniaXamlIlEagerParentStackProvider), if available. |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-0f5bf49d32"></span>
 
-### DirectParentsStack
+### DirectParentsStack Property
 
 Gets the directly available parents (which don't include ones returned by parent providers).
 The parents are returned in reverse order:
 the last element is the most direct parent while the first element is the most distant ancestor.
 
 ```csharp
-public System.Collections.Generic.IReadOnlyList<Object> DirectParentsStack { get; set; }
+public System.Collections.Generic.IReadOnlyList<object> DirectParentsStack { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-495d3ac9d5"></span>
 
-### ParentProvider
+### ParentProvider Property
 
 Gets the parent [Avalonia.Markup.Xaml.XamlIl.Runtime.IAvaloniaXamlIlEagerParentStackProvider](xref:Avalonia.Markup.Xaml.XamlIl.Runtime.IAvaloniaXamlIlEagerParentStackProvider), if available.
 
 ```csharp
 public Avalonia.Markup.Xaml.XamlIl.Runtime.IAvaloniaXamlIlEagerParentStackProvider ParentProvider { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

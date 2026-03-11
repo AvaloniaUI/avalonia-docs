@@ -63,11 +63,13 @@ public class DispatcherUnhandledExceptionFilterEventArgs
 | --- | --- |
 | [Exception](#uid-264028a020) | Gets the exception that was raised when executing code by way of the dispatcher. |
 | [RequestCatch](#uid-cb676c75f2) | Gets or sets whether the exception should be caught and the event handlers called.. |
-| [Dispatcher (Inherited from DispatcherEventArgs)](dispatchereventargs.mdx#uid-569f2dd50d) | The Dispatcher associated with this event. |
+| [Dispatcher](dispatchereventargs.mdx#uid-569f2dd50d) | The Dispatcher associated with this event. Inherited from [DispatcherEventArgs](dispatchereventargs.mdx). |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-264028a020"></span>
 
-### Exception
+### Exception Property
 
 Gets the exception that was raised when executing code by way of the dispatcher.
 
@@ -75,15 +77,32 @@ Gets the exception that was raised when executing code by way of the dispatcher.
 public Exception Exception { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-cb676c75f2"></span>
 
-### RequestCatch
+### RequestCatch Property
 
 Gets or sets whether the exception should be caught and the event handlers called..
 
 ```csharp
-public Boolean RequestCatch { get; set; }
+public bool RequestCatch { get; set; }
 ```
+
+#### Remarks
+
+A filter handler can set this property to false to request that
+the exception not be caught, to avoid the callstack getting
+unwound up to the Dispatcher.
+
+A previous handler in the event multicast might have already set this
+property to false, signalling that the exception will not be caught.
+We let the "don't catch" behavior override all others because
+it most likely means a debugging scenario.
+
+</section>
 
 </ApiRefPage>
 

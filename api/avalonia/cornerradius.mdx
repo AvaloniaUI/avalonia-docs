@@ -70,29 +70,68 @@ public struct CornerRadius
 
 ### CornerRadius overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-d6902345eb"></span>
 
-#### CornerRadius
+#### CornerRadius Constructor
 
 ```csharp
-public CornerRadius(Double uniformRadius)
+public CornerRadius(double uniformRadius)
 ```
+
+##### Parameters
+
+`uniformRadius` double
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-31d04eb040"></span>
 
-#### CornerRadius
+#### CornerRadius Constructor
 
 ```csharp
-public CornerRadius(Double top, Double bottom)
+public CornerRadius(double top, double bottom)
 ```
+
+##### Parameters
+
+`top` double
+
+
+`bottom` double
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-997e67bcb4"></span>
 
-#### CornerRadius
+#### CornerRadius Constructor
 
 ```csharp
-public CornerRadius(Double topLeft, Double topRight, Double bottomRight, Double bottomLeft)
+public CornerRadius(double topLeft, double topRight, double bottomRight, double bottomLeft)
 ```
+
+##### Parameters
+
+`topLeft` double
+
+
+`topRight` double
+
+
+`bottomRight` double
+
+
+`bottomLeft` double
+
+
+</section>
 
 ## Methods
 
@@ -107,61 +146,117 @@ public CornerRadius(Double topLeft, Double topRight, Double bottomRight, Double 
 
 ### Equals overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-fe1434fff2"></span>
 
-#### Equals
+#### Equals Method
 
 Returns a boolean indicating whether the corner radius is equal to the other given corner radius.
 
 ```csharp
-public Boolean Equals(Avalonia.CornerRadius other)
+public bool Equals(Avalonia.CornerRadius other)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `other` | The other corner radius to test equality against. |
+##### Parameters
 
-Returns: True if this corner radius is equal to other; False otherwise.
+`other` [Avalonia.CornerRadius](xref:Avalonia.CornerRadius)
+
+The other corner radius to test equality against.
+
+
+##### Returns
+
+bool
+
+True if this corner radius is equal to other; False otherwise.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-853e072f27"></span>
 
-#### Equals
+#### Equals Method
 
 Returns a boolean indicating whether the given Object is equal to this corner radius instance.
 
 ```csharp
-public Boolean Equals(Object obj)
+public bool Equals(object obj)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `obj` | The Object to compare against. |
+##### Parameters
 
-Returns: True if the Object is equal to this corner radius; False otherwise.
+`obj` object
+
+The Object to compare against.
+
+
+##### Returns
+
+bool
+
+True if the Object is equal to this corner radius; False otherwise.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-a6f4f5181c"></span>
 
-### GetHashCode
+### GetHashCode Method
 
 ```csharp
-public Int32 GetHashCode()
+public int GetHashCode()
 ```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-e61b1420ea"></span>
 
-### Parse
+### Parse Method
 
 ```csharp
-public Avalonia.CornerRadius Parse(String s)
+public Avalonia.CornerRadius Parse(string s)
 ```
+
+#### Parameters
+
+`s` string
+
+
+#### Returns
+
+[Avalonia.CornerRadius](xref:Avalonia.CornerRadius)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-01c1fa2067"></span>
 
-### ToString
+### ToString Method
 
 ```csharp
-public String ToString()
+public string ToString()
 ```
+
+#### Returns
+
+string
+
+
+</section>
 
 ## Properties
 
@@ -173,55 +268,75 @@ public String ToString()
 | [TopLeft](#uid-954a54b18e) | Radius of the top left corner. |
 | [TopRight](#uid-97197de5f9) | Radius of the top right corner. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-1947e68bfd"></span>
 
-### BottomLeft
+### BottomLeft Property
 
 Radius of the bottom left corner.
 
 ```csharp
-public Double BottomLeft { get; set; }
+public double BottomLeft { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-074e49b1fe"></span>
 
-### BottomRight
+### BottomRight Property
 
 Radius of the bottom right corner.
 
 ```csharp
-public Double BottomRight { get; set; }
+public double BottomRight { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-7c583e5924"></span>
 
-### IsUniform
+### IsUniform Property
 
 Gets a value indicating whether all corner radii are equal.
 
 ```csharp
-public Boolean IsUniform { get; set; }
+public bool IsUniform { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-954a54b18e"></span>
 
-### TopLeft
+### TopLeft Property
 
 Radius of the top left corner.
 
 ```csharp
-public Double TopLeft { get; set; }
+public double TopLeft { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-97197de5f9"></span>
 
-### TopRight
+### TopRight Property
 
 Radius of the top right corner.
 
 ```csharp
-public Double TopRight { get; set; }
+public double TopRight { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

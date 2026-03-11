@@ -47,7 +47,7 @@ public class VulkanPlatformSpecificOptions
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> VulkanPlatformSpecificOptions
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> VulkanPlatformSpecificOptions
 </div>
 </div>
 
@@ -57,13 +57,17 @@ public class VulkanPlatformSpecificOptions
 | --- | --- |
 | [VulkanPlatformSpecificOptions](#uid-c83b3c3f15) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-c83b3c3f15"></span>
 
-### VulkanPlatformSpecificOptions
+### VulkanPlatformSpecificOptions Constructor
 
 ```csharp
 public VulkanPlatformSpecificOptions()
 ```
+
+</section>
 
 ## Properties
 
@@ -74,37 +78,53 @@ public VulkanPlatformSpecificOptions()
 | [PlatformFeatures](#uid-4ecc2ded95) | No summary available. |
 | [RequiredInstanceExtensions](#uid-26e81fc89d) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-732778a4c6"></span>
 
-### DeviceCheckSurfaceFactory
+### DeviceCheckSurfaceFactory Property
 
 ```csharp
-public Func<Avalonia.Vulkan.IVulkanInstance, UInt64> DeviceCheckSurfaceFactory { get; set; }
+public Func<Avalonia.Vulkan.IVulkanInstance, ulong> DeviceCheckSurfaceFactory { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-34f678b1b3"></span>
 
-### GetProcAddressDelegate
+### GetProcAddressDelegate Property
 
 ```csharp
 public Avalonia.Vulkan.VkGetInstanceProcAddressDelegate GetProcAddressDelegate { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-4ecc2ded95"></span>
 
-### PlatformFeatures
+### PlatformFeatures Property
 
 ```csharp
-public System.Collections.Generic.Dictionary<Type, Object> PlatformFeatures { get; set; }
+public System.Collections.Generic.Dictionary<Type, object> PlatformFeatures { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-26e81fc89d"></span>
 
-### RequiredInstanceExtensions
+### RequiredInstanceExtensions Property
 
 ```csharp
-public System.Collections.Generic.IList<String> RequiredInstanceExtensions { get; set; }
+public System.Collections.Generic.IList<string> RequiredInstanceExtensions { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

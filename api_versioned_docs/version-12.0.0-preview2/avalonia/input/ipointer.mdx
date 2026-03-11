@@ -58,19 +58,32 @@ Some devices, for instance, touchscreen might generate a pointer on each physica
 | --- | --- |
 | [Capture](#uid-a98be99583) | Captures pointer input to the specified control. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-a98be99583"></span>
 
-### Capture
+### Capture Method
 
 Captures pointer input to the specified control.
 
 ```csharp
-public Void Capture(Avalonia.Input.IInputElement control)
+public void Capture(Avalonia.Input.IInputElement control)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `control` | The control. |
+#### Parameters
+
+`control` [Avalonia.Input.IInputElement](xref:Avalonia.Input.IInputElement)
+
+The control.
+
+
+#### Remarks
+
+When an element captures the pointer, it receives pointer input whether the cursor is
+within the control's bounds or not. The current pointer capture control is exposed
+by the [Avalonia.Input.IPointer.Captured](xref:Avalonia.Input.IPointer.Captured) property.
+
+</section>
 
 ## Properties
 
@@ -81,9 +94,11 @@ public Void Capture(Avalonia.Input.IInputElement control)
 | [IsPrimary](#uid-1153e34ba2) | Gets a value that indicates whether the input is from the primary pointer when multiple pointers are registered. |
 | [Type](#uid-56c7072e83) | Gets the pointer device type. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-5988f36226"></span>
 
-### Captured
+### Captured Property
 
 Gets the control that is currently capturing by the pointer, if any.
 
@@ -91,35 +106,55 @@ Gets the control that is currently capturing by the pointer, if any.
 public Avalonia.Input.IInputElement Captured { get; set; }
 ```
 
+#### Remarks
+
+When an element captures the pointer, it receives pointer input whether the cursor is
+within the control's bounds or not. To set the pointer capture, call the
+[Avalonia.Input.IPointer.Capture(Avalonia.Input.IInputElement)](xref:Avalonia.Input.IPointer.Capture%28Avalonia.Input.IInputElement%29) method.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-587d65cec4"></span>
 
-### Id
+### Id Property
 
 Gets a unique identifier for the input pointer.
 
 ```csharp
-public Int32 Id { get; set; }
+public int Id { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-1153e34ba2"></span>
 
-### IsPrimary
+### IsPrimary Property
 
 Gets a value that indicates whether the input is from the primary pointer when multiple pointers are registered.
 
 ```csharp
-public Boolean IsPrimary { get; set; }
+public bool IsPrimary { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-56c7072e83"></span>
 
-### Type
+### Type Property
 
 Gets the pointer device type.
 
 ```csharp
 public Avalonia.Input.PointerType Type { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

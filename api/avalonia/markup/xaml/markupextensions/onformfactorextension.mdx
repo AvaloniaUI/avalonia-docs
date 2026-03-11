@@ -47,7 +47,7 @@ public class OnFormFactorExtension
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> OnFormFactorExtensionBase&lt;Object,On&gt; <span className="apiref-page__relation-separator">-&gt;</span> OnFormFactorExtension
+<span className="apiref-page__meta-label">Inheritance:</span> OnFormFactorExtensionBase&lt;object,On&gt; <span className="apiref-page__relation-separator">-&gt;</span> OnFormFactorExtension
 </div>
 </div>
 
@@ -61,21 +61,34 @@ public class OnFormFactorExtension
 
 ### OnFormFactorExtension overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-dfda486b20"></span>
 
-#### OnFormFactorExtension
+#### OnFormFactorExtension Constructor
 
 ```csharp
 public OnFormFactorExtension()
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-1950160323"></span>
 
-#### OnFormFactorExtension
+#### OnFormFactorExtension Constructor
 
 ```csharp
-public OnFormFactorExtension(Object defaultValue)
+public OnFormFactorExtension(object defaultValue)
 ```
+
+##### Parameters
+
+`defaultValue` object
+
+
+</section>
 
 ## Methods
 
@@ -83,13 +96,30 @@ public OnFormFactorExtension(Object defaultValue)
 | --- | --- |
 | [ShouldProvideOption](#uid-3a55910324) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-3a55910324"></span>
 
-### ShouldProvideOption
+### ShouldProvideOption Method
 
 ```csharp
-public Boolean ShouldProvideOption(IServiceProvider serviceProvider, Avalonia.Platform.FormFactorType option)
+public bool ShouldProvideOption(IServiceProvider serviceProvider, Avalonia.Platform.FormFactorType option)
 ```
+
+#### Parameters
+
+`serviceProvider` IServiceProvider
+
+
+`option` [Avalonia.Platform.FormFactorType](xref:Avalonia.Platform.FormFactorType)
+
+
+#### Returns
+
+bool
+
+
+</section>
 
 </ApiRefPage>
 

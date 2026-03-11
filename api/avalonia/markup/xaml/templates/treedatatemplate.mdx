@@ -47,10 +47,10 @@ public class TreeDataTemplate
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> TreeDataTemplate
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> TreeDataTemplate
 </div>
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Implements:</span> <a href="../../../controls/templates/idatatemplate">IDataTemplate</a>, ITemplate&lt;Object,Control&gt;, <a href="../../../controls/templates/itreedatatemplate">ITreeDataTemplate</a>, <a href="../../../controls/templates/itypeddatatemplate">ITypedDataTemplate</a>
+<span className="apiref-page__meta-label">Implements:</span> <a href="../../../controls/templates/idatatemplate">IDataTemplate</a>, ITemplate&lt;object,Control&gt;, <a href="../../../controls/templates/itreedatatemplate">ITreeDataTemplate</a>, <a href="../../../controls/templates/itypeddatatemplate">ITypedDataTemplate</a>
 </div>
 </div>
 
@@ -60,13 +60,17 @@ public class TreeDataTemplate
 | --- | --- |
 | [TreeDataTemplate](#uid-0ef983ea60) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-0ef983ea60"></span>
 
-### TreeDataTemplate
+### TreeDataTemplate Constructor
 
 ```csharp
 public TreeDataTemplate()
 ```
+
+</section>
 
 ## Methods
 
@@ -76,29 +80,77 @@ public TreeDataTemplate()
 | [Build](#uid-b87afa8c44) | No summary available. |
 | [Match](#uid-30a3e71557) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-631977b3f8"></span>
 
-### BindChildren
+### BindChildren Method
 
 ```csharp
-public IDisposable BindChildren(Avalonia.AvaloniaObject target, Avalonia.AvaloniaProperty targetProperty, Object item)
+public IDisposable BindChildren(Avalonia.AvaloniaObject target, Avalonia.AvaloniaProperty targetProperty, object item)
 ```
+
+#### Parameters
+
+`target` [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject)
+
+
+`targetProperty` [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty)
+
+
+`item` object
+
+
+#### Returns
+
+IDisposable
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-b87afa8c44"></span>
 
-### Build
+### Build Method
 
 ```csharp
-public Avalonia.Controls.Control Build(Object data)
+public Avalonia.Controls.Control Build(object data)
 ```
+
+#### Parameters
+
+`data` object
+
+
+#### Returns
+
+[Avalonia.Controls.Control](xref:Avalonia.Controls.Control)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-30a3e71557"></span>
 
-### Match
+### Match Method
 
 ```csharp
-public Boolean Match(Object data)
+public bool Match(object data)
 ```
+
+#### Parameters
+
+`data` object
+
+
+#### Returns
+
+bool
+
+
+</section>
 
 ## Properties
 
@@ -108,29 +160,41 @@ public Boolean Match(Object data)
 | [DataType](#uid-979ff1955f) | No summary available. |
 | [ItemsSource](#uid-592a162b6f) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-c14310dbac"></span>
 
-### Content
+### Content Property
 
 ```csharp
-public Object Content { get; set; }
+public object Content { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-979ff1955f"></span>
 
-### DataType
+### DataType Property
 
 ```csharp
 public Type DataType { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-592a162b6f"></span>
 
-### ItemsSource
+### ItemsSource Property
 
 ```csharp
 public Avalonia.Data.BindingBase ItemsSource { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

@@ -53,7 +53,7 @@ public class VisualExtensions
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> VisualExtensions
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> VisualExtensions
 </div>
 </div>
 
@@ -63,12 +63,14 @@ public class VisualExtensions
 | --- | --- |
 | [PointToClient](#uid-10509f3e2e) | Converts a point from screen to client coordinates. |
 | [PointToScreen](#uid-678ad8e33d) | Converts a point from client to screen coordinates. |
-| [TransformToVisual](#uid-51afb751e0) | Returns a transform that transforms the visual's coordinates into the coordinates of the specified to. |
+| [TransformToVisual](#uid-51afb751e0) | Returns a transform that transforms the visual's coordinates into the coordinates of the specified `to`. |
 | [TranslatePoint](#uid-646d04f291) | Translates a point relative to this visual to coordinates that are relative to the specified visual. |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-10509f3e2e"></span>
 
-### PointToClient
+### PointToClient Method
 
 Converts a point from screen to client coordinates.
 
@@ -76,16 +78,32 @@ Converts a point from screen to client coordinates.
 public Avalonia.Point PointToClient(Avalonia.Visual visual, Avalonia.PixelPoint point)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `point` | The point in screen coordinates. |
-| `visual` | The visual. |
+#### Parameters
 
-Returns: The point in client coordinates.
+`visual` [Avalonia.Visual](xref:Avalonia.Visual)
+
+The visual.
+
+
+`point` [Avalonia.PixelPoint](xref:Avalonia.PixelPoint)
+
+The point in screen coordinates.
+
+
+#### Returns
+
+[Avalonia.Point](xref:Avalonia.Point)
+
+The point in client coordinates.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-678ad8e33d"></span>
 
-### PointToScreen
+### PointToScreen Method
 
 Converts a point from client to screen coordinates.
 
@@ -93,16 +111,32 @@ Converts a point from client to screen coordinates.
 public Avalonia.PixelPoint PointToScreen(Avalonia.Visual visual, Avalonia.Point point)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `point` | The point in client coordinates. |
-| `visual` | The visual. |
+#### Parameters
 
-Returns: The point in screen coordinates.
+`visual` [Avalonia.Visual](xref:Avalonia.Visual)
+
+The visual.
+
+
+`point` [Avalonia.Point](xref:Avalonia.Point)
+
+The point in client coordinates.
+
+
+#### Returns
+
+[Avalonia.PixelPoint](xref:Avalonia.PixelPoint)
+
+The point in screen coordinates.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-51afb751e0"></span>
 
-### TransformToVisual
+### TransformToVisual Method
 
 Returns a transform that transforms the visual's coordinates into the coordinates
 of the specified `to`.
@@ -111,17 +145,33 @@ of the specified `to`.
 public Nullable<Avalonia.Matrix> TransformToVisual(Avalonia.Visual from, Avalonia.Visual to)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `from` | The visual whose coordinates are to be transformed. |
-| `to` | The visual to translate the coordinates to. |
+#### Parameters
 
-Returns: A [Avalonia.Matrix](xref:Avalonia.Matrix) containing the transform or null if the visuals don't share a
+`from` [Avalonia.Visual](xref:Avalonia.Visual)
+
+The visual whose coordinates are to be transformed.
+
+
+`to` [Avalonia.Visual](xref:Avalonia.Visual)
+
+The visual to translate the coordinates to.
+
+
+#### Returns
+
+Nullable&lt;[Avalonia.Matrix](xref:Avalonia.Matrix)&gt;
+
+A [Avalonia.Matrix](xref:Avalonia.Matrix) containing the transform or null if the visuals don't share a
 common ancestor.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-646d04f291"></span>
 
-### TranslatePoint
+### TranslatePoint Method
 
 Translates a point relative to this visual to coordinates that are relative to the specified visual.
 
@@ -129,14 +179,32 @@ Translates a point relative to this visual to coordinates that are relative to t
 public Nullable<Avalonia.Point> TranslatePoint(Avalonia.Visual visual, Avalonia.Point point, Avalonia.Visual relativeTo)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `point` | The point value, as relative to this visual. |
-| `relativeTo` | The visual to translate the given point into. |
-| `visual` | The visual. |
+#### Parameters
 
-Returns: A point value, now relative to the target visual rather than this source element, or null if the
+`visual` [Avalonia.Visual](xref:Avalonia.Visual)
+
+The visual.
+
+
+`point` [Avalonia.Point](xref:Avalonia.Point)
+
+The point value, as relative to this visual.
+
+
+`relativeTo` [Avalonia.Visual](xref:Avalonia.Visual)
+
+The visual to translate the given point into.
+
+
+#### Returns
+
+Nullable&lt;[Avalonia.Point](xref:Avalonia.Point)&gt;
+
+A point value, now relative to the target visual rather than this source element, or null if the
 two elements have no common ancestor.
+
+
+</section>
 
 </ApiRefPage>
 

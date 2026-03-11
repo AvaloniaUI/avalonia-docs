@@ -60,13 +60,25 @@ public delegate DispatcherUnhandledExceptionEventHandler
 | --- | --- |
 | [DispatcherUnhandledExceptionEventHandler](#uid-20d07f3656) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-20d07f3656"></span>
 
-### DispatcherUnhandledExceptionEventHandler
+### DispatcherUnhandledExceptionEventHandler Constructor
 
 ```csharp
-public DispatcherUnhandledExceptionEventHandler(Object object, IntPtr method)
+public DispatcherUnhandledExceptionEventHandler(object object, IntPtr method)
 ```
+
+#### Parameters
+
+`object` object
+
+
+`method` IntPtr
+
+
+</section>
 
 ## Methods
 
@@ -76,29 +88,73 @@ public DispatcherUnhandledExceptionEventHandler(Object object, IntPtr method)
 | [EndInvoke](#uid-28e9cb3394) | No summary available. |
 | [Invoke](#uid-f7cce37889) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-e90f73b2a0"></span>
 
-### BeginInvoke
+### BeginInvoke Method
 
 ```csharp
-public IAsyncResult BeginInvoke(Object sender, Avalonia.Threading.DispatcherUnhandledExceptionEventArgs e, AsyncCallback callback, Object object)
+public IAsyncResult BeginInvoke(object sender, Avalonia.Threading.DispatcherUnhandledExceptionEventArgs e, AsyncCallback callback, object object)
 ```
+
+#### Parameters
+
+`sender` object
+
+
+`e` [Avalonia.Threading.DispatcherUnhandledExceptionEventArgs](xref:Avalonia.Threading.DispatcherUnhandledExceptionEventArgs)
+
+
+`callback` AsyncCallback
+
+
+`object` object
+
+
+#### Returns
+
+IAsyncResult
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-28e9cb3394"></span>
 
-### EndInvoke
+### EndInvoke Method
 
 ```csharp
-public Void EndInvoke(IAsyncResult result)
+public void EndInvoke(IAsyncResult result)
 ```
+
+#### Parameters
+
+`result` IAsyncResult
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-f7cce37889"></span>
 
-### Invoke
+### Invoke Method
 
 ```csharp
-public Void Invoke(Object sender, Avalonia.Threading.DispatcherUnhandledExceptionEventArgs e)
+public void Invoke(object sender, Avalonia.Threading.DispatcherUnhandledExceptionEventArgs e)
 ```
+
+#### Parameters
+
+`sender` object
+
+
+`e` [Avalonia.Threading.DispatcherUnhandledExceptionEventArgs](xref:Avalonia.Threading.DispatcherUnhandledExceptionEventArgs)
+
+
+</section>
 
 </ApiRefPage>
 

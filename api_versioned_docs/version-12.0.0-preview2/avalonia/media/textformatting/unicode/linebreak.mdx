@@ -66,21 +66,36 @@ public struct LineBreak
 | --- | --- |
 | [LineBreak](#uid-c1d8c8afa9) | Constructor |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-c1d8c8afa9"></span>
 
-### LineBreak
+### LineBreak Constructor
 
 Constructor
 
 ```csharp
-public LineBreak(Int32 positionMeasure, Int32 positionWrap, Boolean required)
+public LineBreak(int positionMeasure, int positionWrap, bool required)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `positionMeasure` | The code point index to measure to |
-| `positionWrap` | The code point index to actually break the line at |
-| `required` | True if this is a required line break; otherwise false |
+#### Parameters
+
+`positionMeasure` int
+
+The code point index to measure to
+
+
+`positionWrap` int
+
+The code point index to actually break the line at
+
+
+`required` bool
+
+True if this is a required line break; otherwise false
+
+
+</section>
 
 ## Methods
 
@@ -94,37 +109,83 @@ public LineBreak(Int32 positionMeasure, Int32 positionWrap, Boolean required)
 
 ### Equals overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-999f60a36e"></span>
 
-#### Equals
+#### Equals Method
 
 ```csharp
-public Boolean Equals(Avalonia.Media.TextFormatting.Unicode.LineBreak other)
+public bool Equals(Avalonia.Media.TextFormatting.Unicode.LineBreak other)
 ```
+
+##### Parameters
+
+`other` [Avalonia.Media.TextFormatting.Unicode.LineBreak](xref:Avalonia.Media.TextFormatting.Unicode.LineBreak)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-5b51df776b"></span>
 
-#### Equals
+#### Equals Method
 
 ```csharp
-public Boolean Equals(Object obj)
+public bool Equals(object obj)
 ```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-e115e081a1"></span>
 
-### GetHashCode
+### GetHashCode Method
 
 ```csharp
-public Int32 GetHashCode()
+public int GetHashCode()
 ```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-513e8a2098"></span>
 
-### ToString
+### ToString Method
 
 ```csharp
-public String ToString()
+public string ToString()
 ```
+
+#### Returns
+
+string
+
+
+</section>
 
 ## Properties
 
@@ -134,35 +195,55 @@ public String ToString()
 | [PositionWrap](#uid-f93d951922) | The break position, after any trailing whitespace |
 | [Required](#uid-06b06a97e8) | True if there should be a forced line break here |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-c9bdf7ff51"></span>
 
-### PositionMeasure
+### PositionMeasure Property
 
 The break position, before any trailing whitespace
 
 ```csharp
-public Int32 PositionMeasure { get; set; }
+public int PositionMeasure { get; set; }
 ```
+
+#### Remarks
+
+This doesn't include trailing whitespace
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-f93d951922"></span>
 
-### PositionWrap
+### PositionWrap Property
 
 The break position, after any trailing whitespace
 
 ```csharp
-public Int32 PositionWrap { get; set; }
+public int PositionWrap { get; set; }
 ```
+
+#### Remarks
+
+This includes trailing whitespace
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-06b06a97e8"></span>
 
-### Required
+### Required Property
 
 True if there should be a forced line break here
 
 ```csharp
-public Boolean Required { get; set; }
+public bool Required { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

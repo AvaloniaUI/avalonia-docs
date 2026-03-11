@@ -47,7 +47,7 @@ public class AndroidPlatformOptions
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> AndroidPlatformOptions
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> AndroidPlatformOptions
 </div>
 </div>
 
@@ -57,23 +57,29 @@ public class AndroidPlatformOptions
 | --- | --- |
 | [AndroidPlatformOptions](#uid-d9b70973e2) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-d9b70973e2"></span>
 
-### AndroidPlatformOptions
+### AndroidPlatformOptions Constructor
 
 ```csharp
 public AndroidPlatformOptions()
 ```
 
+</section>
+
 ## Properties
 
 | Name | Description |
 | --- | --- |
-| [RenderingMode](#uid-5dc669b30e) | Gets or sets Avalonia rendering modes with fallbacks. The first element in the array has the highest priority. The default value is: Avalonia.AndroidRenderingMode.Egl, Avalonia.AndroidRenderingMode.Software. |
+| [RenderingMode](#uid-5dc669b30e) | Gets or sets Avalonia rendering modes with fallbacks. The first element in the array has the highest priority. The default value is: [Avalonia.AndroidRenderingMode.Egl](xref:Avalonia.AndroidRenderingMode.Egl), [Avalonia.AndroidRenderingMode.Software](xref:Avalonia.AndroidRenderingMode.Software). |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-5dc669b30e"></span>
 
-### RenderingMode
+### RenderingMode Property
 
 Gets or sets Avalonia rendering modes with fallbacks.
 The first element in the array has the highest priority.
@@ -83,9 +89,15 @@ The default value is: [Avalonia.AndroidRenderingMode.Egl](xref:Avalonia.AndroidR
 public System.Collections.Generic.IReadOnlyList<Avalonia.AndroidRenderingMode> RenderingMode { get; set; }
 ```
 
+#### Remarks
+
+If application should work on as wide range of devices as possible, at least add [Avalonia.AndroidRenderingMode.Software](xref:Avalonia.AndroidRenderingMode.Software) as a fallback value.
+
 #### Exceptions
 
 - [Thrown if no values were matched.](xref:System.InvalidOperationException)
+
+</section>
 
 </ApiRefPage>
 

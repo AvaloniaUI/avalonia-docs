@@ -53,15 +53,17 @@ public interface IPen
 | Name | Description |
 | --- | --- |
 | [Brush](#uid-ec0a343574) | Gets the brush used to draw the stroke. |
-| [DashStyle](#uid-1cd47a5667) | Gets the style of dashed lines drawn with a Avalonia.Media.Pen object. |
+| [DashStyle](#uid-1cd47a5667) | Gets the style of dashed lines drawn with a [Avalonia.Media.Pen](xref:Avalonia.Media.Pen) object. |
 | [LineCap](#uid-797d03c434) | Gets the type of shape to use on both ends of a line. |
-| [LineJoin](#uid-8612ac83fe) | Gets a value describing how to join consecutive line or curve segments in a Avalonia.Media.PathFigure contained in a Avalonia.Media.PathGeometry object. |
+| [LineJoin](#uid-8612ac83fe) | Gets a value describing how to join consecutive line or curve segments in a [Avalonia.Media.PathFigure](xref:Avalonia.Media.PathFigure) contained in a [Avalonia.Media.PathGeometry](xref:Avalonia.Media.PathGeometry) object. |
 | [MiterLimit](#uid-556d0e09fc) | Gets the limit of the thickness of the join on a mitered corner. |
 | [Thickness](#uid-ef243419a4) | Gets the stroke thickness. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-ec0a343574"></span>
 
-### Brush
+### Brush Property
 
 Gets the brush used to draw the stroke.
 
@@ -69,9 +71,13 @@ Gets the brush used to draw the stroke.
 public Avalonia.Media.IBrush Brush { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-1cd47a5667"></span>
 
-### DashStyle
+### DashStyle Property
 
 Gets the style of dashed lines drawn with a [Avalonia.Media.Pen](xref:Avalonia.Media.Pen) object.
 
@@ -79,9 +85,13 @@ Gets the style of dashed lines drawn with a [Avalonia.Media.Pen](xref:Avalonia.M
 public Avalonia.Media.IDashStyle DashStyle { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-797d03c434"></span>
 
-### LineCap
+### LineCap Property
 
 Gets the type of shape to use on both ends of a line.
 
@@ -89,9 +99,13 @@ Gets the type of shape to use on both ends of a line.
 public Avalonia.Media.PenLineCap LineCap { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-8612ac83fe"></span>
 
-### LineJoin
+### LineJoin Property
 
 Gets a value describing how to join consecutive line or curve segments in a
 [Avalonia.Media.PathFigure](xref:Avalonia.Media.PathFigure) contained in a [Avalonia.Media.PathGeometry](xref:Avalonia.Media.PathGeometry) object.
@@ -100,25 +114,35 @@ Gets a value describing how to join consecutive line or curve segments in a
 public Avalonia.Media.PenLineJoin LineJoin { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-556d0e09fc"></span>
 
-### MiterLimit
+### MiterLimit Property
 
 Gets the limit of the thickness of the join on a mitered corner.
 
 ```csharp
-public Double MiterLimit { get; set; }
+public double MiterLimit { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-ef243419a4"></span>
 
-### Thickness
+### Thickness Property
 
 Gets the stroke thickness.
 
 ```csharp
-public Double Thickness { get; set; }
+public double Thickness { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

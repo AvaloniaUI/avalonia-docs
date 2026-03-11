@@ -39,7 +39,7 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 
 <div className="apiref-page__lead">
 
-IClassicDesktopStyleApplicationLifetime related AppBuilder extensions.
+[IClassicDesktopStyleApplicationLifetime](xref:Avalonia.Controls.ApplicationLifetimes.IClassicDesktopStyleApplicationLifetime) related [AppBuilder](xref:Avalonia.AppBuilder) extensions.
 
 </div>
 
@@ -53,7 +53,7 @@ public class ClassicDesktopStyleApplicationLifetimeExtensions
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> ClassicDesktopStyleApplicationLifetimeExtensions
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> ClassicDesktopStyleApplicationLifetimeExtensions
 </div>
 </div>
 
@@ -62,45 +62,105 @@ public class ClassicDesktopStyleApplicationLifetimeExtensions
 | Name | Description |
 | --- | --- |
 | [SetupWithClassicDesktopLifetime](#uid-e847059770) | No summary available. |
-| [StartWithClassicDesktopLifetime (2 overloads)](#uid-f38952fe2b) | Starts the Application with a IClassicDesktopStyleApplicationLifetime, shows main window and runs application main loop. |
+| [StartWithClassicDesktopLifetime (2 overloads)](#uid-f38952fe2b) | Starts the Application with a [IClassicDesktopStyleApplicationLifetime](xref:Avalonia.Controls.ApplicationLifetimes.IClassicDesktopStyleApplicationLifetime), shows main window and runs application main loop. |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-e847059770"></span>
 
-### SetupWithClassicDesktopLifetime
+### SetupWithClassicDesktopLifetime Method
 
 ```csharp
-public Avalonia.AppBuilder SetupWithClassicDesktopLifetime(Avalonia.AppBuilder builder, String[] args, Action<Avalonia.Controls.ApplicationLifetimes.IClassicDesktopStyleApplicationLifetime> lifetimeBuilder)
+public Avalonia.AppBuilder SetupWithClassicDesktopLifetime(Avalonia.AppBuilder builder, string[] args, Action<Avalonia.Controls.ApplicationLifetimes.IClassicDesktopStyleApplicationLifetime> lifetimeBuilder)
 ```
+
+#### Parameters
+
+`builder` [Avalonia.AppBuilder](xref:Avalonia.AppBuilder)
+
+
+`args` string[]
+
+
+`lifetimeBuilder` Action&lt;[Avalonia.Controls.ApplicationLifetimes.IClassicDesktopStyleApplicationLifetime](xref:Avalonia.Controls.ApplicationLifetimes.IClassicDesktopStyleApplicationLifetime)&gt;
+
+
+#### Returns
+
+[Avalonia.AppBuilder](xref:Avalonia.AppBuilder)
+
+
+</section>
 
 <span id="uid-f38952fe2b"></span>
 
 ### StartWithClassicDesktopLifetime overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-586e8ef460"></span>
 
-#### StartWithClassicDesktopLifetime
+#### StartWithClassicDesktopLifetime Method
 
-Starts the Application with a IClassicDesktopStyleApplicationLifetime, shows main window and runs application main loop.
+Starts the Application with a [IClassicDesktopStyleApplicationLifetime](xref:Avalonia.Controls.ApplicationLifetimes.IClassicDesktopStyleApplicationLifetime), shows main window and runs application main loop.
 
 ```csharp
-public Int32 StartWithClassicDesktopLifetime(Avalonia.AppBuilder builder, String[] args, Avalonia.Controls.ShutdownMode shutdownMode)
+public int StartWithClassicDesktopLifetime(Avalonia.AppBuilder builder, string[] args, Avalonia.Controls.ShutdownMode shutdownMode)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `args` | Startup arguments. |
-| `builder` | Application builder. |
-| `shutdownMode` | Lifetime shutdown mode. |
+##### Parameters
 
-Returns: Exit code.
+`builder` [Avalonia.AppBuilder](xref:Avalonia.AppBuilder)
+
+Application builder.
+
+
+`args` string[]
+
+Startup arguments.
+
+
+`shutdownMode` [Avalonia.Controls.ShutdownMode](xref:Avalonia.Controls.ShutdownMode)
+
+Lifetime shutdown mode.
+
+
+##### Returns
+
+int
+
+Exit code.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-243ccda69c"></span>
 
-#### StartWithClassicDesktopLifetime
+#### StartWithClassicDesktopLifetime Method
 
 ```csharp
-public Int32 StartWithClassicDesktopLifetime(Avalonia.AppBuilder builder, String[] args, Action<Avalonia.Controls.ApplicationLifetimes.IClassicDesktopStyleApplicationLifetime> lifetimeBuilder)
+public int StartWithClassicDesktopLifetime(Avalonia.AppBuilder builder, string[] args, Action<Avalonia.Controls.ApplicationLifetimes.IClassicDesktopStyleApplicationLifetime> lifetimeBuilder)
 ```
+
+##### Parameters
+
+`builder` [Avalonia.AppBuilder](xref:Avalonia.AppBuilder)
+
+
+`args` string[]
+
+
+`lifetimeBuilder` Action&lt;[Avalonia.Controls.ApplicationLifetimes.IClassicDesktopStyleApplicationLifetime](xref:Avalonia.Controls.ApplicationLifetimes.IClassicDesktopStyleApplicationLifetime)&gt;
+
+
+##### Returns
+
+int
+
+
+</section>
 
 </ApiRefPage>
 

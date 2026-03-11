@@ -64,30 +64,43 @@ public struct Size
 
 | Name | Description |
 | --- | --- |
-| [Size (2 overloads)](#uid-454ccbb95a) | Initializes a new instance of the Avalonia.Size structure. |
+| [Size (2 overloads)](#uid-454ccbb95a) | Initializes a new instance of the [Avalonia.Size](xref:Avalonia.Size) structure. |
 
 <span id="uid-454ccbb95a"></span>
 
 ### Size overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-34605aafdc"></span>
 
-#### Size
+#### Size Constructor
 
 Initializes a new instance of the [Avalonia.Size](xref:Avalonia.Size) structure.
 
 ```csharp
-public Size(Double width, Double height)
+public Size(double width, double height)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `height` | The height. |
-| `width` | The width. |
+##### Parameters
+
+`width` double
+
+The width.
+
+
+`height` double
+
+The height.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-17dc211301"></span>
 
-#### Size
+#### Size Constructor
 
 Initializes a new instance of the [Avalonia.Size](xref:Avalonia.Size) structure.
 
@@ -95,9 +108,14 @@ Initializes a new instance of the [Avalonia.Size](xref:Avalonia.Size) structure.
 public Size(System.Numerics.Vector2 vector2)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `vector2` | The vector to take values from. |
+##### Parameters
+
+`vector2` System.Numerics.Vector2
+
+The vector to take values from.
+
+
+</section>
 
 ## Methods
 
@@ -105,19 +123,21 @@ public Size(System.Numerics.Vector2 vector2)
 | --- | --- |
 | [Constrain](#uid-2d29cf854e) | Constrains the size. |
 | [Deconstruct](#uid-f874a31ae4) | No summary available. |
-| [Deflate](#uid-eeadea36f8) | Deflates the size by a Avalonia.Thickness. |
+| [Deflate](#uid-eeadea36f8) | Deflates the size by a [Avalonia.Thickness](xref:Avalonia.Thickness). |
 | [Equals (2 overloads)](#uid-b9cb8dbbef) | Returns a boolean indicating whether the size is equal to the other given size (bitwise). |
-| [GetHashCode](#uid-0468d68394) | Returns a hash code for a Avalonia.Size. |
-| [Inflate](#uid-6053fa86c5) | Inflates the size by a Avalonia.Thickness. |
+| [GetHashCode](#uid-0468d68394) | Returns a hash code for a [Avalonia.Size](xref:Avalonia.Size). |
+| [Inflate](#uid-6053fa86c5) | Inflates the size by a [Avalonia.Thickness](xref:Avalonia.Thickness). |
 | [NearlyEquals](#uid-9d4346ca02) | Returns a boolean indicating whether the size is equal to the other given size (numerically). |
-| [Parse](#uid-b50eddb408) | Parses a Avalonia.Size string. |
+| [Parse](#uid-b50eddb408) | Parses a [Avalonia.Size](xref:Avalonia.Size) string. |
 | [ToString](#uid-0123cae676) | Returns the string representation of the size. |
-| [WithHeight](#uid-4878b9be3d) | Returns a new Avalonia.Size with the same width and the specified height. |
-| [WithWidth](#uid-db13f0fbd4) | Returns a new Avalonia.Size with the same height and the specified width. |
+| [WithHeight](#uid-4878b9be3d) | Returns a new [Avalonia.Size](xref:Avalonia.Size) with the same width and the specified height. |
+| [WithWidth](#uid-db13f0fbd4) | Returns a new [Avalonia.Size](xref:Avalonia.Size) with the same height and the specified width. |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-2d29cf854e"></span>
 
-### Constrain
+### Constrain Method
 
 Constrains the size.
 
@@ -125,23 +145,47 @@ Constrains the size.
 public Avalonia.Size Constrain(Avalonia.Size constraint)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `constraint` | The size to constrain to. |
+#### Parameters
 
-Returns: The constrained size.
+`constraint` [Avalonia.Size](xref:Avalonia.Size)
+
+The size to constrain to.
+
+
+#### Returns
+
+[Avalonia.Size](xref:Avalonia.Size)
+
+The constrained size.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-f874a31ae4"></span>
 
-### Deconstruct
+### Deconstruct Method
 
 ```csharp
-public Void Deconstruct(Double& width, Double& height)
+public void Deconstruct(double& width, double& height)
 ```
+
+#### Parameters
+
+`width` double&amp;
+
+
+`height` double&amp;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-eeadea36f8"></span>
 
-### Deflate
+### Deflate Method
 
 Deflates the size by a [Avalonia.Thickness](xref:Avalonia.Thickness).
 
@@ -149,63 +193,112 @@ Deflates the size by a [Avalonia.Thickness](xref:Avalonia.Thickness).
 public Avalonia.Size Deflate(Avalonia.Thickness thickness)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `thickness` | The thickness. |
+#### Parameters
 
-Returns: The deflated size.
+`thickness` [Avalonia.Thickness](xref:Avalonia.Thickness)
+
+The thickness.
+
+
+#### Returns
+
+[Avalonia.Size](xref:Avalonia.Size)
+
+The deflated size.
+
+
+#### Remarks
+
+The deflated size cannot be less than 0.
+
+</section>
 
 <span id="uid-b9cb8dbbef"></span>
 
 ### Equals overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-8c4fee60a0"></span>
 
-#### Equals
+#### Equals Method
 
 Returns a boolean indicating whether the size is equal to the other given size (bitwise).
 
 ```csharp
-public Boolean Equals(Avalonia.Size other)
+public bool Equals(Avalonia.Size other)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `other` | The other size to test equality against. |
+##### Parameters
 
-Returns: True if this size is equal to other; False otherwise.
+`other` [Avalonia.Size](xref:Avalonia.Size)
+
+The other size to test equality against.
+
+
+##### Returns
+
+bool
+
+True if this size is equal to other; False otherwise.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-fe511f4364"></span>
 
-#### Equals
+#### Equals Method
 
 Checks for equality between a size and an object.
 
 ```csharp
-public Boolean Equals(Object obj)
+public bool Equals(object obj)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `obj` | The object. |
+##### Parameters
 
-Returns: True if `obj` is a size that equals the current size.
+`obj` object
+
+The object.
+
+
+##### Returns
+
+bool
+
+True if `obj` is a size that equals the current size.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-0468d68394"></span>
 
-### GetHashCode
+### GetHashCode Method
 
 Returns a hash code for a [Avalonia.Size](xref:Avalonia.Size).
 
 ```csharp
-public Int32 GetHashCode()
+public int GetHashCode()
 ```
 
-Returns: The hash code.
+#### Returns
+
+int
+
+The hash code.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-6053fa86c5"></span>
 
-### Inflate
+### Inflate Method
 
 Inflates the size by a [Avalonia.Thickness](xref:Avalonia.Thickness).
 
@@ -213,87 +306,154 @@ Inflates the size by a [Avalonia.Thickness](xref:Avalonia.Thickness).
 public Avalonia.Size Inflate(Avalonia.Thickness thickness)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `thickness` | The thickness. |
+#### Parameters
 
-Returns: The inflated size.
+`thickness` [Avalonia.Thickness](xref:Avalonia.Thickness)
+
+The thickness.
+
+
+#### Returns
+
+[Avalonia.Size](xref:Avalonia.Size)
+
+The inflated size.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-9d4346ca02"></span>
 
-### NearlyEquals
+### NearlyEquals Method
 
 Returns a boolean indicating whether the size is equal to the other given size (numerically).
 
 ```csharp
-public Boolean NearlyEquals(Avalonia.Size other)
+public bool NearlyEquals(Avalonia.Size other)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `other` | The other size to test equality against. |
+#### Parameters
 
-Returns: True if this size is equal to other; False otherwise.
+`other` [Avalonia.Size](xref:Avalonia.Size)
+
+The other size to test equality against.
+
+
+#### Returns
+
+bool
+
+True if this size is equal to other; False otherwise.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-b50eddb408"></span>
 
-### Parse
+### Parse Method
 
 Parses a [Avalonia.Size](xref:Avalonia.Size) string.
 
 ```csharp
-public Avalonia.Size Parse(String s)
+public Avalonia.Size Parse(string s)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `s` | The string. |
+#### Parameters
 
-Returns: The [Avalonia.Size](xref:Avalonia.Size).
+`s` string
+
+The string.
+
+
+#### Returns
+
+[Avalonia.Size](xref:Avalonia.Size)
+
+The [Avalonia.Size](xref:Avalonia.Size).
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-0123cae676"></span>
 
-### ToString
+### ToString Method
 
 Returns the string representation of the size.
 
 ```csharp
-public String ToString()
+public string ToString()
 ```
 
-Returns: The string representation of the size.
+#### Returns
+
+string
+
+The string representation of the size.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-4878b9be3d"></span>
 
-### WithHeight
+### WithHeight Method
 
 Returns a new [Avalonia.Size](xref:Avalonia.Size) with the same width and the specified height.
 
 ```csharp
-public Avalonia.Size WithHeight(Double height)
+public Avalonia.Size WithHeight(double height)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `height` | The height. |
+#### Parameters
 
-Returns: The new [Avalonia.Size](xref:Avalonia.Size).
+`height` double
+
+The height.
+
+
+#### Returns
+
+[Avalonia.Size](xref:Avalonia.Size)
+
+The new [Avalonia.Size](xref:Avalonia.Size).
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-db13f0fbd4"></span>
 
-### WithWidth
+### WithWidth Method
 
 Returns a new [Avalonia.Size](xref:Avalonia.Size) with the same height and the specified width.
 
 ```csharp
-public Avalonia.Size WithWidth(Double width)
+public Avalonia.Size WithWidth(double width)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `width` | The width. |
+#### Parameters
 
-Returns: The new [Avalonia.Size](xref:Avalonia.Size).
+`width` double
+
+The width.
+
+
+#### Returns
+
+[Avalonia.Size](xref:Avalonia.Size)
+
+The new [Avalonia.Size](xref:Avalonia.Size).
+
+
+</section>
 
 ## Properties
 
@@ -303,35 +463,47 @@ Returns: The new [Avalonia.Size](xref:Avalonia.Size).
 | [Height](#uid-38d775d8b5) | Gets the height. |
 | [Width](#uid-646cb67085) | Gets the width. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-84b8e2fcfa"></span>
 
-### AspectRatio
+### AspectRatio Property
 
 Gets the aspect ratio of the size.
 
 ```csharp
-public Double AspectRatio { get; set; }
+public double AspectRatio { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-38d775d8b5"></span>
 
-### Height
+### Height Property
 
 Gets the height.
 
 ```csharp
-public Double Height { get; set; }
+public double Height { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-646cb67085"></span>
 
-### Width
+### Width Property
 
 Gets the width.
 
 ```csharp
-public Double Width { get; set; }
+public double Width { get; set; }
 ```
+
+</section>
 
 ## Fields
 
@@ -339,15 +511,19 @@ public Double Width { get; set; }
 | --- | --- |
 | [Infinity](#uid-0a821f9fc4) | A size representing infinity. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-0a821f9fc4"></span>
 
-### Infinity
+### Infinity Field
 
 A size representing infinity.
 
 ```csharp
 public Avalonia.Size Infinity
 ```
+
+</section>
 
 </ApiRefPage>
 

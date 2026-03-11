@@ -54,13 +54,25 @@ public delegate SMLib.SmcDieProc
 | --- | --- |
 | [SMLib.SmcDieProc](#uid-4a2f2c9a58) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-4a2f2c9a58"></span>
 
-### SMLib.SmcDieProc
+### SMLib.SmcDieProc Constructor
 
 ```csharp
-public SMLib.SmcDieProc(Object object, IntPtr method)
+public SMLib.SmcDieProc(object object, IntPtr method)
 ```
+
+#### Parameters
+
+`object` object
+
+
+`method` IntPtr
+
+
+</section>
 
 ## Methods
 
@@ -70,29 +82,73 @@ public SMLib.SmcDieProc(Object object, IntPtr method)
 | [EndInvoke](#uid-fc88d64b1e) | No summary available. |
 | [Invoke](#uid-e7ca5951da) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-6d9ee8737d"></span>
 
-### BeginInvoke
+### BeginInvoke Method
 
 ```csharp
-public IAsyncResult BeginInvoke(IntPtr smcConn, IntPtr clientData, AsyncCallback callback, Object object)
+public IAsyncResult BeginInvoke(IntPtr smcConn, IntPtr clientData, AsyncCallback callback, object object)
 ```
+
+#### Parameters
+
+`smcConn` IntPtr
+
+
+`clientData` IntPtr
+
+
+`callback` AsyncCallback
+
+
+`object` object
+
+
+#### Returns
+
+IAsyncResult
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-fc88d64b1e"></span>
 
-### EndInvoke
+### EndInvoke Method
 
 ```csharp
-public Void EndInvoke(IAsyncResult result)
+public void EndInvoke(IAsyncResult result)
 ```
+
+#### Parameters
+
+`result` IAsyncResult
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-e7ca5951da"></span>
 
-### Invoke
+### Invoke Method
 
 ```csharp
-public Void Invoke(IntPtr smcConn, IntPtr clientData)
+public void Invoke(IntPtr smcConn, IntPtr clientData)
 ```
+
+#### Parameters
+
+`smcConn` IntPtr
+
+
+`clientData` IntPtr
+
+
+</section>
 
 </ApiRefPage>
 

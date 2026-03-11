@@ -55,33 +55,47 @@ public interface IScrollAnchorProvider
 | [RegisterAnchorCandidate](#uid-3fe9754229) | Registers a control as a potential scroll anchor candidate. |
 | [UnregisterAnchorCandidate](#uid-8e791baa7f) | Unregisters a control as a potential scroll anchor candidate. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-3fe9754229"></span>
 
-### RegisterAnchorCandidate
+### RegisterAnchorCandidate Method
 
 Registers a control as a potential scroll anchor candidate.
 
 ```csharp
-public Void RegisterAnchorCandidate(Avalonia.Controls.Control element)
+public void RegisterAnchorCandidate(Avalonia.Controls.Control element)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `element` | A control within the subtree of the [Avalonia.Controls.IScrollAnchorProvider](xref:Avalonia.Controls.IScrollAnchorProvider). |
+#### Parameters
+
+`element` [Avalonia.Controls.Control](xref:Avalonia.Controls.Control)
+
+A control within the subtree of the [Avalonia.Controls.IScrollAnchorProvider](xref:Avalonia.Controls.IScrollAnchorProvider).
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-8e791baa7f"></span>
 
-### UnregisterAnchorCandidate
+### UnregisterAnchorCandidate Method
 
 Unregisters a control as a potential scroll anchor candidate.
 
 ```csharp
-public Void UnregisterAnchorCandidate(Avalonia.Controls.Control element)
+public void UnregisterAnchorCandidate(Avalonia.Controls.Control element)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `element` | A control within the subtree of the [Avalonia.Controls.IScrollAnchorProvider](xref:Avalonia.Controls.IScrollAnchorProvider). |
+#### Parameters
+
+`element` [Avalonia.Controls.Control](xref:Avalonia.Controls.Control)
+
+A control within the subtree of the [Avalonia.Controls.IScrollAnchorProvider](xref:Avalonia.Controls.IScrollAnchorProvider).
+
+
+</section>
 
 ## Properties
 
@@ -89,15 +103,19 @@ public Void UnregisterAnchorCandidate(Avalonia.Controls.Control element)
 | --- | --- |
 | [CurrentAnchor](#uid-025ab7cd63) | The currently chosen anchor element to use for scroll anchoring. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-025ab7cd63"></span>
 
-### CurrentAnchor
+### CurrentAnchor Property
 
 The currently chosen anchor element to use for scroll anchoring.
 
 ```csharp
 public Avalonia.Controls.Control CurrentAnchor { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

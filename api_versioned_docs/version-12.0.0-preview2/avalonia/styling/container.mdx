@@ -47,7 +47,7 @@ public class Container
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> Container
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> Container
 </div>
 </div>
 
@@ -60,25 +60,39 @@ public class Container
 | [SetName](#uid-2ad43bc260) | Sets the value of the Container.Name attached property. |
 | [SetSizing](#uid-6a2e7f8a35) | Sets the value of the Container.Name attached property. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-012c2819ad"></span>
 
-### GetName
+### GetName Method
 
 Gets the value of the Container.Name attached property.
 
 ```csharp
-public String GetName(Avalonia.Layout.Layoutable layoutable)
+public string GetName(Avalonia.Layout.Layoutable layoutable)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `layoutable` | The layoutable to read the value from. |
+#### Parameters
 
-Returns: The container name of the layoutable
+`layoutable` [Avalonia.Layout.Layoutable](xref:Avalonia.Layout.Layoutable)
+
+The layoutable to read the value from.
+
+
+#### Returns
+
+string
+
+The container name of the layoutable
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-af1457262f"></span>
 
-### GetSizing
+### GetSizing Method
 
 Gets the value of the Container.Sizing attached property.
 
@@ -86,41 +100,73 @@ Gets the value of the Container.Sizing attached property.
 public Avalonia.Styling.ContainerSizing GetSizing(Avalonia.Layout.Layoutable layoutable)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `layoutable` | The layoutable to read the value from. |
+#### Parameters
 
-Returns: The container sizing mode of the layoutable
+`layoutable` [Avalonia.Layout.Layoutable](xref:Avalonia.Layout.Layoutable)
+
+The layoutable to read the value from.
+
+
+#### Returns
+
+[Avalonia.Styling.ContainerSizing](xref:Avalonia.Styling.ContainerSizing)
+
+The container sizing mode of the layoutable
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-2ad43bc260"></span>
 
-### SetName
+### SetName Method
 
 Sets the value of the Container.Name attached property.
 
 ```csharp
-public Void SetName(Avalonia.Layout.Layoutable layoutable, String name)
+public void SetName(Avalonia.Layout.Layoutable layoutable, string name)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `layoutable` | The layoutable to set the value on. |
-| `name` | The container name. |
+#### Parameters
+
+`layoutable` [Avalonia.Layout.Layoutable](xref:Avalonia.Layout.Layoutable)
+
+The layoutable to set the value on.
+
+
+`name` string
+
+The container name.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-6a2e7f8a35"></span>
 
-### SetSizing
+### SetSizing Method
 
 Sets the value of the Container.Name attached property.
 
 ```csharp
-public Void SetSizing(Avalonia.Layout.Layoutable layoutable, Avalonia.Styling.ContainerSizing sizing)
+public void SetSizing(Avalonia.Layout.Layoutable layoutable, Avalonia.Styling.ContainerSizing sizing)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `layoutable` | The layoutable to set the value on. |
-| `sizing` | The container sizing mode. |
+#### Parameters
+
+`layoutable` [Avalonia.Layout.Layoutable](xref:Avalonia.Layout.Layoutable)
+
+The layoutable to set the value on.
+
+
+`sizing` [Avalonia.Styling.ContainerSizing](xref:Avalonia.Styling.ContainerSizing)
+
+The container sizing mode.
+
+
+</section>
 
 ## Fields
 
@@ -129,25 +175,33 @@ public Void SetSizing(Avalonia.Layout.Layoutable layoutable, Avalonia.Styling.Co
 | [NameProperty](#uid-3f5957669f) | Defines the Name attached property. |
 | [SizingProperty](#uid-8647cc4b09) | Defines the Sizing attached property. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-3f5957669f"></span>
 
-### NameProperty
+### NameProperty Field
 
 Defines the Name attached property.
 
 ```csharp
-public Avalonia.AttachedProperty<TValue><String> NameProperty
+public Avalonia.AttachedProperty<TValue><string> NameProperty
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-8647cc4b09"></span>
 
-### SizingProperty
+### SizingProperty Field
 
 Defines the Sizing attached property.
 
 ```csharp
 public Avalonia.AttachedProperty<TValue><Avalonia.Styling.ContainerSizing> SizingProperty
 ```
+
+</section>
 
 </ApiRefPage>
 

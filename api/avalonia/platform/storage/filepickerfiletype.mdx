@@ -53,7 +53,7 @@ public class FilePickerFileType
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> FilePickerFileType
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> FilePickerFileType
 </div>
 </div>
 
@@ -63,15 +63,24 @@ public class FilePickerFileType
 | --- | --- |
 | [FilePickerFileType](#uid-dd70c9d7d8) | Represents a name mapped to the associated file types (extensions). |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-dd70c9d7d8"></span>
 
-### FilePickerFileType
+### FilePickerFileType Constructor
 
 Represents a name mapped to the associated file types (extensions).
 
 ```csharp
-public FilePickerFileType(String name)
+public FilePickerFileType(string name)
 ```
+
+#### Parameters
+
+`name` string
+
+
+</section>
 
 ## Methods
 
@@ -79,13 +88,22 @@ public FilePickerFileType(String name)
 | --- | --- |
 | [ToString](#uid-8ce8a2223b) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-8ce8a2223b"></span>
 
-### ToString
+### ToString Method
 
 ```csharp
-public String ToString()
+public string ToString()
 ```
+
+#### Returns
+
+string
+
+
+</section>
 
 ## Properties
 
@@ -96,45 +114,74 @@ public String ToString()
 | [Name](#uid-1f66aca370) | File type name. |
 | [Patterns](#uid-42b7c026bf) | List of extensions in GLOB format. I.e. "*.png" or "*.*". |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-30268f70de"></span>
 
-### AppleUniformTypeIdentifiers
+### AppleUniformTypeIdentifiers Property
 
 List of extensions in Apple uniform format.
 
 ```csharp
-public System.Collections.Generic.IReadOnlyList<String> AppleUniformTypeIdentifiers { get; set; }
+public System.Collections.Generic.IReadOnlyList<string> AppleUniformTypeIdentifiers { get; set; }
 ```
+
+#### Remarks
+
+Used only on Apple devices.
+See https://developer.apple.com/documentation/uniformtypeidentifiers/system_declared_uniform_type_identifiers.
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-a6dc321d73"></span>
 
-### MimeTypes
+### MimeTypes Property
 
 List of extensions in MIME format.
 
 ```csharp
-public System.Collections.Generic.IReadOnlyList<String> MimeTypes { get; set; }
+public System.Collections.Generic.IReadOnlyList<string> MimeTypes { get; set; }
 ```
+
+#### Remarks
+
+Used on Android, Linux and Browser platforms.
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-1f66aca370"></span>
 
-### Name
+### Name Property
 
 File type name.
 
 ```csharp
-public String Name { get; set; }
+public string Name { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-42b7c026bf"></span>
 
-### Patterns
+### Patterns Property
 
 List of extensions in GLOB format. I.e. "*.png" or "*.*".
 
 ```csharp
-public System.Collections.Generic.IReadOnlyList<String> Patterns { get; set; }
+public System.Collections.Generic.IReadOnlyList<string> Patterns { get; set; }
 ```
+
+#### Remarks
+
+Used on Windows, Linux and Browser platforms.
+
+</section>
 
 </ApiRefPage>
 

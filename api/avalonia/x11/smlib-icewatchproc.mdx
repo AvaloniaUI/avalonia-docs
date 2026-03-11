@@ -54,13 +54,25 @@ public delegate SMLib.IceWatchProc
 | --- | --- |
 | [SMLib.IceWatchProc](#uid-1614df6f79) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-1614df6f79"></span>
 
-### SMLib.IceWatchProc
+### SMLib.IceWatchProc Constructor
 
 ```csharp
-public SMLib.IceWatchProc(Object object, IntPtr method)
+public SMLib.IceWatchProc(object object, IntPtr method)
 ```
+
+#### Parameters
+
+`object` object
+
+
+`method` IntPtr
+
+
+</section>
 
 ## Methods
 
@@ -70,29 +82,85 @@ public SMLib.IceWatchProc(Object object, IntPtr method)
 | [EndInvoke](#uid-1130a1409a) | No summary available. |
 | [Invoke](#uid-da502594da) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-44e83dbb9b"></span>
 
-### BeginInvoke
+### BeginInvoke Method
 
 ```csharp
-public IAsyncResult BeginInvoke(IntPtr iceConn, IntPtr clientData, Boolean opening, IntPtr* watchData, AsyncCallback callback, Object object)
+public IAsyncResult BeginInvoke(IntPtr iceConn, IntPtr clientData, bool opening, IntPtr* watchData, AsyncCallback callback, object object)
 ```
+
+#### Parameters
+
+`iceConn` IntPtr
+
+
+`clientData` IntPtr
+
+
+`opening` bool
+
+
+`watchData` IntPtr*
+
+
+`callback` AsyncCallback
+
+
+`object` object
+
+
+#### Returns
+
+IAsyncResult
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-1130a1409a"></span>
 
-### EndInvoke
+### EndInvoke Method
 
 ```csharp
-public Void EndInvoke(IAsyncResult result)
+public void EndInvoke(IAsyncResult result)
 ```
+
+#### Parameters
+
+`result` IAsyncResult
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-da502594da"></span>
 
-### Invoke
+### Invoke Method
 
 ```csharp
-public Void Invoke(IntPtr iceConn, IntPtr clientData, Boolean opening, IntPtr* watchData)
+public void Invoke(IntPtr iceConn, IntPtr clientData, bool opening, IntPtr* watchData)
 ```
+
+#### Parameters
+
+`iceConn` IntPtr
+
+
+`clientData` IntPtr
+
+
+`opening` bool
+
+
+`watchData` IntPtr*
+
+
+</section>
 
 </ApiRefPage>
 

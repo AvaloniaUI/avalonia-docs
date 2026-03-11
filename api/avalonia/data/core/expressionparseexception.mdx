@@ -61,23 +61,38 @@ public class ExpressionParseException
 
 | Name | Description |
 | --- | --- |
-| [ExpressionParseException](#uid-c2591891c7) | Initializes a new instance of the Avalonia.Data.Core.ExpressionParseException class. |
+| [ExpressionParseException](#uid-c2591891c7) | Initializes a new instance of the [Avalonia.Data.Core.ExpressionParseException](xref:Avalonia.Data.Core.ExpressionParseException) class. |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-c2591891c7"></span>
 
-### ExpressionParseException
+### ExpressionParseException Constructor
 
 Initializes a new instance of the [Avalonia.Data.Core.ExpressionParseException](xref:Avalonia.Data.Core.ExpressionParseException) class.
 
 ```csharp
-public ExpressionParseException(Int32 column, String message, Exception innerException)
+public ExpressionParseException(int column, string message, Exception innerException)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `column` | The column position of the error. |
-| `innerException` | The exception that caused the parsing failure. |
-| `message` | The exception message. |
+#### Parameters
+
+`column` int
+
+The column position of the error.
+
+
+`message` string
+
+The exception message.
+
+
+`innerException` Exception
+
+The exception that caused the parsing failure.
+
+
+</section>
 
 ## Properties
 
@@ -85,15 +100,19 @@ public ExpressionParseException(Int32 column, String message, Exception innerExc
 | --- | --- |
 | [Column](#uid-723d6687d4) | Gets the column position at which the error occurred. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-723d6687d4"></span>
 
-### Column
+### Column Property
 
 Gets the column position at which the error occurred.
 
 ```csharp
-public Int32 Column { get; set; }
+public int Column { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

@@ -53,7 +53,7 @@ public class FolderPickerOpenOptions
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="pickeroptions">PickerOptions</a> <span className="apiref-page__relation-separator">-&gt;</span> FolderPickerOpenOptions
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="pickeroptions">PickerOptions</a> <span className="apiref-page__relation-separator">-&gt;</span> FolderPickerOpenOptions
 </div>
 </div>
 
@@ -63,32 +63,40 @@ public class FolderPickerOpenOptions
 | --- | --- |
 | [FolderPickerOpenOptions](#uid-8012a5ff45) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-8012a5ff45"></span>
 
-### FolderPickerOpenOptions
+### FolderPickerOpenOptions Constructor
 
 ```csharp
 public FolderPickerOpenOptions()
 ```
+
+</section>
 
 ## Properties
 
 | Name | Description |
 | --- | --- |
 | [AllowMultiple](#uid-0908ae5d95) | Gets or sets an option indicating whether open picker allows users to select multiple folders. |
-| [SuggestedFileName (Inherited from PickerOptions)](pickeroptions.mdx#uid-87696bd66c) | Gets or sets the file name that the file picker suggests to the user. |
-| [SuggestedStartLocation (Inherited from PickerOptions)](pickeroptions.mdx#uid-792044079c) | Gets or sets the initial location where the file open picker looks for files to present to the user. Can be obtained from previously picked folder or using Avalonia.Platform.Storage.IStorageProvider.TryGetFolderFromPathAsync(Uri) or Avalonia.Platform.Storage.IStorageProvider.TryGetWellKnownFolderAsync(Avalonia.Platform.Storage.WellKnownFolder). |
-| [Title (Inherited from PickerOptions)](pickeroptions.mdx#uid-825079a1b0) | Gets or sets the text that appears in the title bar of a picker. |
+| [SuggestedFileName](pickeroptions.mdx#uid-87696bd66c) | Gets or sets the file name that the file picker suggests to the user. Inherited from [PickerOptions](pickeroptions.mdx). |
+| [SuggestedStartLocation](pickeroptions.mdx#uid-792044079c) | Gets or sets the initial location where the file open picker looks for files to present to the user. Can be obtained from previously picked folder or using [Avalonia.Platform.Storage.IStorageProvider.TryGetFolderFromPathAsync(Uri)](xref:Avalonia.Platform.Storage.IStorageProvider.TryGetFolderFromPathAsync%28System.Uri%29) or [Avalonia.Platform.Storage.IStorageProvider.TryGetWellKnownFolderAsync(Avalonia.Platform.Storage.WellKnownFolder)](xref:Avalonia.Platform.Storage.IStorageProvider.TryGetWellKnownFolderAsync%28Avalonia.Platform.Storage.WellKnownFolder%29). Inherited from [PickerOptions](pickeroptions.mdx). |
+| [Title](pickeroptions.mdx#uid-825079a1b0) | Gets or sets the text that appears in the title bar of a picker. Inherited from [PickerOptions](pickeroptions.mdx). |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-0908ae5d95"></span>
 
-### AllowMultiple
+### AllowMultiple Property
 
 Gets or sets an option indicating whether open picker allows users to select multiple folders.
 
 ```csharp
-public Boolean AllowMultiple { get; set; }
+public bool AllowMultiple { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

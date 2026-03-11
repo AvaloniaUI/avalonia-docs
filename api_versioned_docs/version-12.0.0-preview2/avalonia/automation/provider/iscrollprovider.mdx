@@ -56,40 +56,72 @@ public interface IScrollProvider
 | [Scroll](#uid-2c98c2b745) | Scrolls the visible region of the content area horizontally and vertically. |
 | [SetScrollPercent](#uid-3735cebfd9) | Sets the horizontal and vertical scroll position as a percentage of the total content area within the control. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-2c98c2b745"></span>
 
-### Scroll
+### Scroll Method
 
 Scrolls the visible region of the content area horizontally and vertically.
 
 ```csharp
-public Void Scroll(Avalonia.Automation.Provider.ScrollAmount horizontalAmount, Avalonia.Automation.Provider.ScrollAmount verticalAmount)
+public void Scroll(Avalonia.Automation.Provider.ScrollAmount horizontalAmount, Avalonia.Automation.Provider.ScrollAmount verticalAmount)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `horizontalAmount` | The horizontal increment specific to the control. |
-| `verticalAmount` | The vertical increment specific to the control. |
+#### Parameters
+
+`horizontalAmount` [Avalonia.Automation.Provider.ScrollAmount](xref:Avalonia.Automation.Provider.ScrollAmount)
+
+The horizontal increment specific to the control.
+
+
+`verticalAmount` [Avalonia.Automation.Provider.ScrollAmount](xref:Avalonia.Automation.Provider.ScrollAmount)
+
+The vertical increment specific to the control.
+
+
+#### Remarks
+
+- Windows`IScrollProvider.Scroll`
+- macOSNo mapping.
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-3735cebfd9"></span>
 
-### SetScrollPercent
+### SetScrollPercent Method
 
 Sets the horizontal and vertical scroll position as a percentage of the total content
 area within the control.
 
 ```csharp
-public Void SetScrollPercent(Double horizontalPercent, Double verticalPercent)
+public void SetScrollPercent(double horizontalPercent, double verticalPercent)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `horizontalPercent` | The horizontal position as a percentage of the content area's total range.
+#### Parameters
+
+`horizontalPercent` double
+
+The horizontal position as a percentage of the content area's total range.
 [Avalonia.Automation.ScrollPatternIdentifiers.NoScroll](xref:Avalonia.Automation.ScrollPatternIdentifiers.NoScroll) should be passed in if the control
-cannot be scrolled in this direction. |
-| `verticalPercent` | The vertical position as a percentage of the content area's total range.
+cannot be scrolled in this direction.
+
+
+`verticalPercent` double
+
+The vertical position as a percentage of the content area's total range.
 [Avalonia.Automation.ScrollPatternIdentifiers.NoScroll](xref:Avalonia.Automation.ScrollPatternIdentifiers.NoScroll) should be passed in if the control
-cannot be scrolled in this direction. |
+cannot be scrolled in this direction.
+
+
+#### Remarks
+
+- Windows`IScrollProvider.SetScrollPercent`
+- macOSNo mapping.
+
+</section>
 
 ## Properties
 
@@ -102,65 +134,119 @@ cannot be scrolled in this direction. |
 | [VerticalViewSize](#uid-d04ac6b142) | Gets the vertical view size. |
 | [VerticallyScrollable](#uid-f6a3279088) | Gets a value that indicates whether the control can scroll vertically. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-b1248aa738"></span>
 
-### HorizontalScrollPercent
+### HorizontalScrollPercent Property
 
 Gets the current horizontal scroll position.
 
 ```csharp
-public Double HorizontalScrollPercent { get; set; }
+public double HorizontalScrollPercent { get; set; }
 ```
+
+#### Remarks
+
+- Windows`IScrollProvider.HorizontalScrollPercent`
+- macOSNo mapping.
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-e0b06e8d92"></span>
 
-### HorizontalViewSize
+### HorizontalViewSize Property
 
 Gets the current horizontal view size.
 
 ```csharp
-public Double HorizontalViewSize { get; set; }
+public double HorizontalViewSize { get; set; }
 ```
+
+#### Remarks
+
+- Windows`IScrollProvider.HorizontalViewSize`
+- macOSNo mapping.
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-b71163329b"></span>
 
-### HorizontallyScrollable
+### HorizontallyScrollable Property
 
 Gets a value that indicates whether the control can scroll horizontally.
 
 ```csharp
-public Boolean HorizontallyScrollable { get; set; }
+public bool HorizontallyScrollable { get; set; }
 ```
+
+#### Remarks
+
+- Windows`IScrollProvider.HorizontallyScrollable`
+- macOSNo mapping.
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-29deba5aa9"></span>
 
-### VerticalScrollPercent
+### VerticalScrollPercent Property
 
 Gets the current vertical scroll position.
 
 ```csharp
-public Double VerticalScrollPercent { get; set; }
+public double VerticalScrollPercent { get; set; }
 ```
+
+#### Remarks
+
+- Windows`IScrollProvider.VerticalScrollPercent`
+- macOSNo mapping.
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-d04ac6b142"></span>
 
-### VerticalViewSize
+### VerticalViewSize Property
 
 Gets the vertical view size.
 
 ```csharp
-public Double VerticalViewSize { get; set; }
+public double VerticalViewSize { get; set; }
 ```
+
+#### Remarks
+
+- Windows`IScrollProvider.VerticalViewSize`
+- macOSNo mapping.
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-f6a3279088"></span>
 
-### VerticallyScrollable
+### VerticallyScrollable Property
 
 Gets a value that indicates whether the control can scroll vertically.
 
 ```csharp
-public Boolean VerticallyScrollable { get; set; }
+public bool VerticallyScrollable { get; set; }
 ```
+
+#### Remarks
+
+- Windows`IScrollProvider.VerticallyScrollable`
+- macOSNo mapping.
+
+</section>
 
 </ApiRefPage>
 

@@ -47,7 +47,7 @@ public class BrowserPlatformOptions
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> BrowserPlatformOptions
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> BrowserPlatformOptions
 </div>
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;BrowserPlatformOptions&gt;
@@ -60,13 +60,17 @@ public class BrowserPlatformOptions
 | --- | --- |
 | [BrowserPlatformOptions](#uid-c700eaecc9) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-c700eaecc9"></span>
 
-### BrowserPlatformOptions
+### BrowserPlatformOptions Constructor
 
 ```csharp
 public BrowserPlatformOptions()
 ```
+
+</section>
 
 ## Methods
 
@@ -77,86 +81,151 @@ public BrowserPlatformOptions()
 | [GetHashCode](#uid-eedcb29ee9) | No summary available. |
 | [ToString](#uid-68fd32bd5c) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-861462f22f"></span>
 
-### &lt;Clone&gt;$
+### &lt;Clone&gt;$ Method
 
 ```csharp
 public Avalonia.Browser.BrowserPlatformOptions <Clone>$()
 ```
 
+#### Returns
+
+[Avalonia.Browser.BrowserPlatformOptions](xref:Avalonia.Browser.BrowserPlatformOptions)
+
+
+</section>
+
 <span id="uid-432897edf0"></span>
 
 ### Equals overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-f52a8d5fa0"></span>
 
-#### Equals
+#### Equals Method
 
 ```csharp
-public Boolean Equals(Avalonia.Browser.BrowserPlatformOptions other)
+public bool Equals(Avalonia.Browser.BrowserPlatformOptions other)
 ```
+
+##### Parameters
+
+`other` [Avalonia.Browser.BrowserPlatformOptions](xref:Avalonia.Browser.BrowserPlatformOptions)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-cb0adaddc9"></span>
 
-#### Equals
+#### Equals Method
 
 ```csharp
-public Boolean Equals(Object obj)
+public bool Equals(object obj)
 ```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-eedcb29ee9"></span>
 
-### GetHashCode
+### GetHashCode Method
 
 ```csharp
-public Int32 GetHashCode()
+public int GetHashCode()
 ```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-68fd32bd5c"></span>
 
-### ToString
+### ToString Method
 
 ```csharp
-public String ToString()
+public string ToString()
 ```
+
+#### Returns
+
+string
+
+
+</section>
 
 ## Properties
 
 | Name | Description |
 | --- | --- |
-| [AvaloniaServiceWorkerScope](#uid-00e6e230f3) | If Avalonia.Browser.BrowserPlatformOptions.RegisterAvaloniaServiceWorker is enabled, it is possible to redefine scope for the worker. By default, current domain root is used as a scope. |
+| [AvaloniaServiceWorkerScope](#uid-00e6e230f3) | If [Avalonia.Browser.BrowserPlatformOptions.RegisterAvaloniaServiceWorker](xref:Avalonia.Browser.BrowserPlatformOptions.RegisterAvaloniaServiceWorker) is enabled, it is possible to redefine scope for the worker. By default, current domain root is used as a scope. |
 | [FrameworkAssetPathResolver](#uid-980d1644e0) | Defines paths where avalonia modules and service locator should be resolved. If null, default path resolved depending on the backend (browser or blazor) is used. |
 | [PreferFileDialogPolyfill](#uid-c664813675) | Avalonia uses "native-file-system-adapter" polyfill for the file dialogs. If native implementation is available, by default it is used. This property forces polyfill to be always used. For more details, see https://github.com/jimmywarting/native-file-system-adapter#a-note-when-downloading-with-the-polyfilled-version. |
 | [PreferManagedThreadDispatcher](#uid-33ce7962eb) | Defines if Avalonia should create a controlled dispatcher loop on the web worker thread. If used only when WasmEnableThreads is set to true. Default value is true. |
 | [RegisterAvaloniaServiceWorker](#uid-16d8fcda5f) | Defines if the service worker used by Avalonia should be registered. If registered, service worker can work as a save file picker fallback on the browsers that don't support native implementation. For more details, see https://github.com/jimmywarting/native-file-system-adapter#a-note-when-downloading-with-the-polyfilled-version. |
 | [RenderingMode](#uid-59c97f7de1) | Gets or sets Avalonia rendering modes with fallbacks. The first element in the array has the highest priority. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-00e6e230f3"></span>
 
-### AvaloniaServiceWorkerScope
+### AvaloniaServiceWorkerScope Property
 
 If [Avalonia.Browser.BrowserPlatformOptions.RegisterAvaloniaServiceWorker](xref:Avalonia.Browser.BrowserPlatformOptions.RegisterAvaloniaServiceWorker) is enabled, it is possible to redefine scope for the worker.
 By default, current domain root is used as a scope.
 
 ```csharp
-public String AvaloniaServiceWorkerScope { get; set; }
+public string AvaloniaServiceWorkerScope { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-980d1644e0"></span>
 
-### FrameworkAssetPathResolver
+### FrameworkAssetPathResolver Property
 
 Defines paths where avalonia modules and service locator should be resolved.
 If null, default path resolved depending on the backend (browser or blazor) is used.
 
 ```csharp
-public Func<String, String> FrameworkAssetPathResolver { get; set; }
+public Func<string, string> FrameworkAssetPathResolver { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-c664813675"></span>
 
-### PreferFileDialogPolyfill
+### PreferFileDialogPolyfill Property
 
 Avalonia uses "native-file-system-adapter" polyfill for the file dialogs.
 If native implementation is available, by default it is used.
@@ -164,35 +233,47 @@ This property forces polyfill to be always used.
 For more details, see https://github.com/jimmywarting/native-file-system-adapter#a-note-when-downloading-with-the-polyfilled-version.
 
 ```csharp
-public Boolean PreferFileDialogPolyfill { get; set; }
+public bool PreferFileDialogPolyfill { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-33ce7962eb"></span>
 
-### PreferManagedThreadDispatcher
+### PreferManagedThreadDispatcher Property
 
 Defines if Avalonia should create a controlled dispatcher loop on the web worker thread.
 If used only when WasmEnableThreads is set to true. Default value is true.
 
 ```csharp
-public Nullable<Boolean> PreferManagedThreadDispatcher { get; set; }
+public Nullable<bool> PreferManagedThreadDispatcher { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-16d8fcda5f"></span>
 
-### RegisterAvaloniaServiceWorker
+### RegisterAvaloniaServiceWorker Property
 
 Defines if the service worker used by Avalonia should be registered.
 If registered, service worker can work as a save file picker fallback on the browsers that don't support native implementation.
 For more details, see https://github.com/jimmywarting/native-file-system-adapter#a-note-when-downloading-with-the-polyfilled-version.
 
 ```csharp
-public Boolean RegisterAvaloniaServiceWorker { get; set; }
+public bool RegisterAvaloniaServiceWorker { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-59c97f7de1"></span>
 
-### RenderingMode
+### RenderingMode Property
 
 Gets or sets Avalonia rendering modes with fallbacks.
 The first element in the array has the highest priority.
@@ -204,6 +285,8 @@ public System.Collections.Generic.IReadOnlyList<Avalonia.Browser.BrowserRenderin
 #### Exceptions
 
 - [Thrown if no values were matched.](xref:System.InvalidOperationException)
+
+</section>
 
 </ApiRefPage>
 

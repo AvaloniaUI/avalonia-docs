@@ -54,20 +54,31 @@ public interface ICommandSource
 | --- | --- |
 | [CanExecuteChanged](#uid-0744a0d0dc) | Called for the CanExecuteChanged event when changes are detected. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-0744a0d0dc"></span>
 
-### CanExecuteChanged
+### CanExecuteChanged Method
 
 Called for the CanExecuteChanged event when changes are detected.
 
 ```csharp
-public Void CanExecuteChanged(Object sender, EventArgs e)
+public void CanExecuteChanged(object sender, EventArgs e)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `e` | The event args. |
-| `sender` | The event sender. |
+#### Parameters
+
+`sender` object
+
+The event sender.
+
+
+`e` EventArgs
+
+The event args.
+
+
+</section>
 
 ## Properties
 
@@ -77,9 +88,11 @@ public Void CanExecuteChanged(Object sender, EventArgs e)
 | [CommandParameter](#uid-6f613dbc61) | The parameter that will be passed to the command when executing the command. The property may be implemented as read-write if desired. |
 | [IsEffectivelyEnabled](#uid-09a2634b4d) | Gets a value indicating whether this control and all its parents are enabled. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-8148535dad"></span>
 
-### Command
+### Command Property
 
 The command that will be executed when the class is "invoked."
 Classes that implement this interface should enable or disable based on the command's CanExecute return value.
@@ -89,26 +102,36 @@ The property may be implemented as read-write if desired.
 public System.Windows.Input.ICommand Command { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-6f613dbc61"></span>
 
-### CommandParameter
+### CommandParameter Property
 
 The parameter that will be passed to the command when executing the command.
 The property may be implemented as read-write if desired.
 
 ```csharp
-public Object CommandParameter { get; set; }
+public object CommandParameter { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-09a2634b4d"></span>
 
-### IsEffectivelyEnabled
+### IsEffectivelyEnabled Property
 
 Gets a value indicating whether this control and all its parents are enabled.
 
 ```csharp
-public Boolean IsEffectivelyEnabled { get; set; }
+public bool IsEffectivelyEnabled { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

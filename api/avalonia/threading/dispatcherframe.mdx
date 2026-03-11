@@ -53,7 +53,7 @@ public class DispatcherFrame
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> DispatcherFrame
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> DispatcherFrame
 </div>
 </div>
 
@@ -61,35 +61,43 @@ public class DispatcherFrame
 
 | Name | Description |
 | --- | --- |
-| [DispatcherFrame (2 overloads)](#uid-48dfa1dd55) | Constructs a new instance of the DispatcherFrame class. |
+| [DispatcherFrame (2 overloads)](#uid-48dfa1dd55) | Constructs a new instance of the [DispatcherFrame](xref:Avalonia.Threading.DispatcherFrame) class. |
 
 <span id="uid-48dfa1dd55"></span>
 
 ### DispatcherFrame overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-f5a73d9e66"></span>
 
-#### DispatcherFrame
+#### DispatcherFrame Constructor
 
-Constructs a new instance of the DispatcherFrame class.
+Constructs a new instance of the [DispatcherFrame](xref:Avalonia.Threading.DispatcherFrame) class.
 
 ```csharp
 public DispatcherFrame()
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-b9a9eaeac3"></span>
 
-#### DispatcherFrame
+#### DispatcherFrame Constructor
 
-Constructs a new instance of the DispatcherFrame class.
+Constructs a new instance of the [DispatcherFrame](xref:Avalonia.Threading.DispatcherFrame) class.
 
 ```csharp
-public DispatcherFrame(Boolean exitWhenRequested)
+public DispatcherFrame(bool exitWhenRequested)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `exitWhenRequested` | Indicates whether or not this frame will exit when all frames
+##### Parameters
+
+`exitWhenRequested` bool
+
+Indicates whether or not this frame will exit when all frames
 are requested to exit.
 
 Dispatcher frames typically break down into two categories:
@@ -99,7 +107,10 @@ told to. These frames should exit when requested.
 when an important criteria is met. These frames may
 consider not exiting when requested in favor of waiting
 for their important criteria to be met. These frames
-should have a timeout associated with them. |
+should have a timeout associated with them.
+
+
+</section>
 
 ## Properties
 
@@ -108,23 +119,31 @@ should have a timeout associated with them. |
 | [Continue](#uid-29b199c468) | Indicates that this dispatcher frame should exit. |
 | [Dispatcher](#uid-f311fa8a3b) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-29b199c468"></span>
 
-### Continue
+### Continue Property
 
 Indicates that this dispatcher frame should exit.
 
 ```csharp
-public Boolean Continue { get; set; }
+public bool Continue { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-f311fa8a3b"></span>
 
-### Dispatcher
+### Dispatcher Property
 
 ```csharp
 public Avalonia.Threading.Dispatcher Dispatcher { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

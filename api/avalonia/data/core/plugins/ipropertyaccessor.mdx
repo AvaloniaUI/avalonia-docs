@@ -62,40 +62,69 @@ public interface IPropertyAccessor
 | [Subscribe](#uid-c921d7ba8d) | No summary available. |
 | [Unsubscribe](#uid-b3e34178af) | Unsubscribes to the value of the member. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-920c069334"></span>
 
-### SetValue
+### SetValue Method
 
 Sets the property value.
 
 ```csharp
-public Boolean SetValue(Object value, Avalonia.Data.BindingPriority priority)
+public bool SetValue(object value, Avalonia.Data.BindingPriority priority)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `priority` | The priority with which to set the value. |
-| `value` | The value to set. Guaranteed to be of a valid type for the property. |
+#### Parameters
 
-Returns: True if the property was set; false if the property could not be set.
+`value` object
+
+The value to set. Guaranteed to be of a valid type for the property.
+
+
+`priority` [Avalonia.Data.BindingPriority](xref:Avalonia.Data.BindingPriority)
+
+The priority with which to set the value.
+
+
+#### Returns
+
+bool
+
+True if the property was set; false if the property could not be set.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-c921d7ba8d"></span>
 
-### Subscribe
+### Subscribe Method
 
 ```csharp
-public Void Subscribe(Action<Object> listener)
+public void Subscribe(Action<object> listener)
 ```
+
+#### Parameters
+
+`listener` Action&lt;object&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-b3e34178af"></span>
 
-### Unsubscribe
+### Unsubscribe Method
 
 Unsubscribes to the value of the member.
 
 ```csharp
-public Void Unsubscribe()
+public void Unsubscribe()
 ```
+
+</section>
 
 ## Properties
 
@@ -104,9 +133,11 @@ public Void Unsubscribe()
 | [PropertyType](#uid-d7909bfc94) | Gets the type of the property. |
 | [Value](#uid-0c25b45a44) | Gets the current value of the property. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-d7909bfc94"></span>
 
-### PropertyType
+### PropertyType Property
 
 Gets the type of the property.
 
@@ -118,15 +149,21 @@ public Type PropertyType { get; set; }
 
 - [The accessor has not been subscribed to yet.](xref:System.InvalidOperationException)
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-0c25b45a44"></span>
 
-### Value
+### Value Property
 
 Gets the current value of the property.
 
 ```csharp
-public Object Value { get; set; }
+public object Value { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

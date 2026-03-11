@@ -53,7 +53,7 @@ public class Visual
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="animation/animatable">Animatable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="styledelement">StyledElement</a> <span className="apiref-page__relation-separator">-&gt;</span> Visual
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="animation/animatable">Animatable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="styledelement">StyledElement</a> <span className="apiref-page__relation-separator">-&gt;</span> Visual
 </div>
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Derived types:</span> <a href="layout/layoutable">Layoutable</a>
@@ -74,11 +74,13 @@ extension methods defined in [Avalonia.VisualExtensions](xref:Avalonia.VisualExt
 
 | Name | Description |
 | --- | --- |
-| [Visual](#uid-94584ffd3d) | Initializes a new instance of the Avalonia.Visual class. |
+| [Visual](#uid-94584ffd3d) | Initializes a new instance of the [Avalonia.Visual](xref:Avalonia.Visual) class. |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-94584ffd3d"></span>
 
-### Visual
+### Visual Constructor
 
 Initializes a new instance of the [Avalonia.Visual](xref:Avalonia.Visual) class.
 
@@ -86,35 +88,39 @@ Initializes a new instance of the [Avalonia.Visual](xref:Avalonia.Visual) class.
 public Visual()
 ```
 
+</section>
+
 ## Methods
 
 | Name | Description |
 | --- | --- |
-| [GetFlowDirection](#uid-12716acd38) | Gets the value of the attached Avalonia.Visual.FlowDirectionProperty on a control. |
+| [GetFlowDirection](#uid-12716acd38) | Gets the value of the attached [Avalonia.Visual.FlowDirectionProperty](xref:Avalonia.Visual.FlowDirectionProperty) on a control. |
 | [InvalidateVisual](#uid-1cd22a7496) | Invalidates the visual and queues a repaint. |
-| [Render](#uid-615917604b) | Renders the visual to a Avalonia.Media.DrawingContext. |
-| [SetFlowDirection](#uid-a670b680eb) | Sets the value of the attached Avalonia.Visual.FlowDirectionProperty on a control. |
-| [ApplyStyling (Inherited from StyledElement)](styledelement.mdx#uid-b0f81a6f8f) | Applies styling to the control if the control is initialized and styling is not already applied. |
-| [BeginInit (Inherited from StyledElement)](styledelement.mdx#uid-91c6ccadce) | No summary available. |
-| [EndInit (Inherited from StyledElement)](styledelement.mdx#uid-17b450469d) | No summary available. |
-| [TryGetResource (Inherited from StyledElement)](styledelement.mdx#uid-2046a6b284) | No summary available. |
-| [Bind (8 overloads) (Inherited from AvaloniaObject)](avaloniaobject.mdx#uid-1c60c7bda3) | Binds a Avalonia.AvaloniaProperty to an Avalonia.Data.BindingBase. |
-| [CheckAccess (Inherited from AvaloniaObject)](avaloniaobject.mdx#uid-260ff7a68d) | Returns a value indicating whether the current thread is the UI thread. |
-| [ClearValue (4 overloads) (Inherited from AvaloniaObject)](avaloniaobject.mdx#uid-41de208fbe) | Clears a Avalonia.AvaloniaProperty's local value. |
-| [CoerceValue (Inherited from AvaloniaObject)](avaloniaobject.mdx#uid-3bec32f39e) | Coerces the specified Avalonia.AvaloniaProperty. |
-| [Equals (Inherited from AvaloniaObject)](avaloniaobject.mdx#uid-a8a8e94305) | Compares two objects using reference equality. |
-| [GetBaseValue (Inherited from AvaloniaObject)](avaloniaobject.mdx#uid-9c615efbba) | No summary available. |
-| [GetHashCode (Inherited from AvaloniaObject)](avaloniaobject.mdx#uid-7f7db1e7a2) | Gets the hash code for the object. |
-| [GetValue (3 overloads) (Inherited from AvaloniaObject)](avaloniaobject.mdx#uid-5142cd4792) | Gets a Avalonia.AvaloniaProperty value. |
-| [IsAnimating (Inherited from AvaloniaObject)](avaloniaobject.mdx#uid-8cbfc7521a) | Checks whether a Avalonia.AvaloniaProperty is animating. |
-| [IsSet (Inherited from AvaloniaObject)](avaloniaobject.mdx#uid-f8bf0bbdcc) | Checks whether a Avalonia.AvaloniaProperty is set on this object. |
-| [SetCurrentValue (2 overloads) (Inherited from AvaloniaObject)](avaloniaobject.mdx#uid-38759fd088) | Sets the value of a dependency property without changing its value source. |
-| [SetValue (3 overloads) (Inherited from AvaloniaObject)](avaloniaobject.mdx#uid-47d14e19d7) | Sets a Avalonia.AvaloniaProperty value. |
-| [VerifyAccess (Inherited from AvaloniaObject)](avaloniaobject.mdx#uid-3b9d3c9793) | Checks that the current thread is the UI thread and throws if not. |
+| [Render](#uid-615917604b) | Renders the visual to a [Avalonia.Media.DrawingContext](xref:Avalonia.Media.DrawingContext). |
+| [SetFlowDirection](#uid-a670b680eb) | Sets the value of the attached [Avalonia.Visual.FlowDirectionProperty](xref:Avalonia.Visual.FlowDirectionProperty) on a control. |
+| [ApplyStyling](styledelement.mdx#uid-b0f81a6f8f) | Applies styling to the control if the control is initialized and styling is not already applied. Inherited from [StyledElement](styledelement.mdx). |
+| [BeginInit](styledelement.mdx#uid-91c6ccadce) | Inherited from [StyledElement](styledelement.mdx). |
+| [EndInit](styledelement.mdx#uid-17b450469d) | Inherited from [StyledElement](styledelement.mdx). |
+| [TryGetResource](styledelement.mdx#uid-2046a6b284) | Inherited from [StyledElement](styledelement.mdx). |
+| [Bind (8 overloads)](avaloniaobject.mdx#uid-1c60c7bda3) | Binds a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) to an [Avalonia.Data.BindingBase](xref:Avalonia.Data.BindingBase). Inherited from [AvaloniaObject](avaloniaobject.mdx). |
+| [CheckAccess](avaloniaobject.mdx#uid-260ff7a68d) | Returns a value indicating whether the current thread is the UI thread. Inherited from [AvaloniaObject](avaloniaobject.mdx). |
+| [ClearValue (4 overloads)](avaloniaobject.mdx#uid-41de208fbe) | Clears a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty)'s local value. Inherited from [AvaloniaObject](avaloniaobject.mdx). |
+| [CoerceValue](avaloniaobject.mdx#uid-3bec32f39e) | Coerces the specified [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty). Inherited from [AvaloniaObject](avaloniaobject.mdx). |
+| [Equals](avaloniaobject.mdx#uid-a8a8e94305) | Compares two objects using reference equality. Inherited from [AvaloniaObject](avaloniaobject.mdx). |
+| [GetBaseValue](avaloniaobject.mdx#uid-9c615efbba) | Inherited from [AvaloniaObject](avaloniaobject.mdx). |
+| [GetHashCode](avaloniaobject.mdx#uid-7f7db1e7a2) | Gets the hash code for the object. Inherited from [AvaloniaObject](avaloniaobject.mdx). |
+| [GetValue (3 overloads)](avaloniaobject.mdx#uid-5142cd4792) | Gets a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value. Inherited from [AvaloniaObject](avaloniaobject.mdx). |
+| [IsAnimating](avaloniaobject.mdx#uid-8cbfc7521a) | Checks whether a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) is animating. Inherited from [AvaloniaObject](avaloniaobject.mdx). |
+| [IsSet](avaloniaobject.mdx#uid-f8bf0bbdcc) | Checks whether a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) is set on this object. Inherited from [AvaloniaObject](avaloniaobject.mdx). |
+| [SetCurrentValue (2 overloads)](avaloniaobject.mdx#uid-38759fd088) | Sets the value of a dependency property without changing its value source. Inherited from [AvaloniaObject](avaloniaobject.mdx). |
+| [SetValue (3 overloads)](avaloniaobject.mdx#uid-47d14e19d7) | Sets a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value. Inherited from [AvaloniaObject](avaloniaobject.mdx). |
+| [VerifyAccess](avaloniaobject.mdx#uid-3b9d3c9793) | Checks that the current thread is the UI thread and throws if not. Inherited from [AvaloniaObject](avaloniaobject.mdx). |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-12716acd38"></span>
 
-### GetFlowDirection
+### GetFlowDirection Method
 
 Gets the value of the attached [Avalonia.Visual.FlowDirectionProperty](xref:Avalonia.Visual.FlowDirectionProperty) on a control.
 
@@ -122,50 +128,82 @@ Gets the value of the attached [Avalonia.Visual.FlowDirectionProperty](xref:Aval
 public Avalonia.Media.FlowDirection GetFlowDirection(Avalonia.Visual visual)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `visual` | The control. |
+#### Parameters
 
-Returns: The flow direction.
+`visual` [Avalonia.Visual](xref:Avalonia.Visual)
+
+The control.
+
+
+#### Returns
+
+[Avalonia.Media.FlowDirection](xref:Avalonia.Media.FlowDirection)
+
+The flow direction.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-1cd22a7496"></span>
 
-### InvalidateVisual
+### InvalidateVisual Method
 
 Invalidates the visual and queues a repaint.
 
 ```csharp
-public Void InvalidateVisual()
+public void InvalidateVisual()
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-615917604b"></span>
 
-### Render
+### Render Method
 
 Renders the visual to a [Avalonia.Media.DrawingContext](xref:Avalonia.Media.DrawingContext).
 
 ```csharp
-public Void Render(Avalonia.Media.DrawingContext context)
+public void Render(Avalonia.Media.DrawingContext context)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `context` | The drawing context. |
+#### Parameters
+
+`context` [Avalonia.Media.DrawingContext](xref:Avalonia.Media.DrawingContext)
+
+The drawing context.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-a670b680eb"></span>
 
-### SetFlowDirection
+### SetFlowDirection Method
 
 Sets the value of the attached [Avalonia.Visual.FlowDirectionProperty](xref:Avalonia.Visual.FlowDirectionProperty) on a control.
 
 ```csharp
-public Void SetFlowDirection(Avalonia.Visual visual, Avalonia.Media.FlowDirection value)
+public void SetFlowDirection(Avalonia.Visual visual, Avalonia.Media.FlowDirection value)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `value` | The property value to set. |
-| `visual` | The control. |
+#### Parameters
+
+`visual` [Avalonia.Visual](xref:Avalonia.Visual)
+
+The control.
+
+
+`value` [Avalonia.Media.FlowDirection](xref:Avalonia.Media.FlowDirection)
+
+The property value to set.
+
+
+</section>
 
 ## Properties
 
@@ -185,24 +223,26 @@ public Void SetFlowDirection(Avalonia.Visual visual, Avalonia.Media.FlowDirectio
 | [RenderTransform](#uid-7ee76ff32a) | Gets or sets the render transform of the control. |
 | [RenderTransformOrigin](#uid-3501120c25) | Gets or sets the transform origin of the control. |
 | [ZIndex](#uid-a3275ade9d) | Gets or sets the Z index of the control. |
-| [ActualThemeVariant (Inherited from StyledElement)](styledelement.mdx#uid-776bcbe4bf) | Gets the UI theme that is currently used by the element, which might be different than the RequestedThemeVariantProperty. |
-| [Classes (Inherited from StyledElement)](styledelement.mdx#uid-b7b7edea05) | Gets or sets the styled element's classes. |
-| [DataContext (Inherited from StyledElement)](styledelement.mdx#uid-647f924a56) | Gets or sets the control's data context. |
-| [IsInitialized (Inherited from StyledElement)](styledelement.mdx#uid-59a7cddacb) | Gets a value that indicates whether the element has finished initialization. |
-| [Name (Inherited from StyledElement)](styledelement.mdx#uid-245f4ccff5) | Gets or sets the name of the styled element. |
-| [Parent (Inherited from StyledElement)](styledelement.mdx#uid-aad2c5c78d) | Gets the styled element's logical parent. |
-| [Resources (Inherited from StyledElement)](styledelement.mdx#uid-f6488ca4b7) | Gets or sets the styled element's resource dictionary. |
-| [StyleKey (Inherited from StyledElement)](styledelement.mdx#uid-081584075e) | Gets the type by which the element is styled. |
-| [Styles (Inherited from StyledElement)](styledelement.mdx#uid-ae663139cc) | Gets the styles for the styled element. |
-| [TemplatedParent (Inherited from StyledElement)](styledelement.mdx#uid-dbf6ddacc3) | Gets the styled element whose lookless template this styled element is part of. |
-| [Theme (Inherited from StyledElement)](styledelement.mdx#uid-1aebed283d) | Gets or sets the theme to be applied to the element. |
-| [Transitions (Inherited from Animatable)](animation/animatable.mdx#uid-1b3138f517) | Gets or sets the property transitions for the control. |
-| [Dispatcher (Inherited from AvaloniaObject)](avaloniaobject.mdx#uid-b25fa51632) | Returns the Avalonia.AvaloniaObject.Dispatcher that this Avalonia.AvaloniaObject is associated with. |
-| [Item (Inherited from AvaloniaObject)](avaloniaobject.mdx#uid-c1d1f1bc0f) | No summary available. |
+| [ActualThemeVariant](styledelement.mdx#uid-776bcbe4bf) | Gets the UI theme that is currently used by the element, which might be different than the RequestedThemeVariantProperty. Inherited from [StyledElement](styledelement.mdx). |
+| [Classes](styledelement.mdx#uid-b7b7edea05) | Gets or sets the styled element's classes. Inherited from [StyledElement](styledelement.mdx). |
+| [DataContext](styledelement.mdx#uid-647f924a56) | Gets or sets the control's data context. Inherited from [StyledElement](styledelement.mdx). |
+| [IsInitialized](styledelement.mdx#uid-59a7cddacb) | Gets a value that indicates whether the element has finished initialization. Inherited from [StyledElement](styledelement.mdx). |
+| [Name](styledelement.mdx#uid-245f4ccff5) | Gets or sets the name of the styled element. Inherited from [StyledElement](styledelement.mdx). |
+| [Parent](styledelement.mdx#uid-aad2c5c78d) | Gets the styled element's logical parent. Inherited from [StyledElement](styledelement.mdx). |
+| [Resources](styledelement.mdx#uid-f6488ca4b7) | Gets or sets the styled element's resource dictionary. Inherited from [StyledElement](styledelement.mdx). |
+| [StyleKey](styledelement.mdx#uid-081584075e) | Gets the type by which the element is styled. Inherited from [StyledElement](styledelement.mdx). |
+| [Styles](styledelement.mdx#uid-ae663139cc) | Gets the styles for the styled element. Inherited from [StyledElement](styledelement.mdx). |
+| [TemplatedParent](styledelement.mdx#uid-dbf6ddacc3) | Gets the styled element whose lookless template this styled element is part of. Inherited from [StyledElement](styledelement.mdx). |
+| [Theme](styledelement.mdx#uid-1aebed283d) | Gets or sets the theme to be applied to the element. Inherited from [StyledElement](styledelement.mdx). |
+| [Transitions](animation/animatable.mdx#uid-1b3138f517) | Gets or sets the property transitions for the control. Inherited from [Animatable](animation/animatable.mdx). |
+| [Dispatcher](avaloniaobject.mdx#uid-b25fa51632) | Returns the [Avalonia.AvaloniaObject.Dispatcher](xref:Avalonia.AvaloniaObject.Dispatcher) that this [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject) is associated with. Inherited from [AvaloniaObject](avaloniaobject.mdx). |
+| [Item](avaloniaobject.mdx#uid-c1d1f1bc0f) | Inherited from [AvaloniaObject](avaloniaobject.mdx). |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-a01c3022f7"></span>
 
-### Bounds
+### Bounds Property
 
 Gets the bounds of the control relative to its parent.
 
@@ -210,9 +250,13 @@ Gets the bounds of the control relative to its parent.
 public Avalonia.Rect Bounds { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-c565afad32"></span>
 
-### CacheMode
+### CacheMode Property
 
 Gets or sets the cache mode of the visual.
 
@@ -220,9 +264,13 @@ Gets or sets the cache mode of the visual.
 public Avalonia.Media.CacheMode CacheMode { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-7623faaeaf"></span>
 
-### Clip
+### Clip Property
 
 Gets or sets the geometry clip for this visual.
 
@@ -230,19 +278,27 @@ Gets or sets the geometry clip for this visual.
 public Avalonia.Media.Geometry Clip { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-63c348aebd"></span>
 
-### ClipToBounds
+### ClipToBounds Property
 
 Gets or sets a value indicating whether the control should be clipped to its bounds.
 
 ```csharp
-public Boolean ClipToBounds { get; set; }
+public bool ClipToBounds { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-65e2be6b7c"></span>
 
-### Effect
+### Effect Property
 
 Gets or sets the effect of the control.
 
@@ -250,9 +306,13 @@ Gets or sets the effect of the control.
 public Avalonia.Media.IEffect Effect { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-c7929bde53"></span>
 
-### FlowDirection
+### FlowDirection Property
 
 Gets or sets the text flow direction.
 
@@ -260,49 +320,69 @@ Gets or sets the text flow direction.
 public Avalonia.Media.FlowDirection FlowDirection { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-70dc13a730"></span>
 
-### HasMirrorTransform
+### HasMirrorTransform Property
 
 Gets or sets a value indicating whether to apply mirror transform on this control.
 
 ```csharp
-public Boolean HasMirrorTransform { get; set; }
+public bool HasMirrorTransform { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-03d6c15a63"></span>
 
-### IsEffectivelyVisible
+### IsEffectivelyVisible Property
 
 Gets a value indicating whether this control and all its parents are visible.
 
 ```csharp
-public Boolean IsEffectivelyVisible { get; set; }
+public bool IsEffectivelyVisible { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-da2b0ca167"></span>
 
-### IsVisible
+### IsVisible Property
 
 Gets or sets a value indicating whether this control is visible.
 
 ```csharp
-public Boolean IsVisible { get; set; }
+public bool IsVisible { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-9eaf1e3d57"></span>
 
-### Opacity
+### Opacity Property
 
 Gets or sets the opacity of the control.
 
 ```csharp
-public Double Opacity { get; set; }
+public double Opacity { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-b6579b9244"></span>
 
-### OpacityMask
+### OpacityMask Property
 
 Gets or sets the opacity mask of the control.
 
@@ -310,9 +390,13 @@ Gets or sets the opacity mask of the control.
 public Avalonia.Media.IBrush OpacityMask { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-7ee76ff32a"></span>
 
-### RenderTransform
+### RenderTransform Property
 
 Gets or sets the render transform of the control.
 
@@ -320,9 +404,13 @@ Gets or sets the render transform of the control.
 public Avalonia.Media.ITransform RenderTransform { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-3501120c25"></span>
 
-### RenderTransformOrigin
+### RenderTransformOrigin Property
 
 Gets or sets the transform origin of the control.
 
@@ -330,44 +418,58 @@ Gets or sets the transform origin of the control.
 public Avalonia.RelativePoint RenderTransformOrigin { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-a3275ade9d"></span>
 
-### ZIndex
+### ZIndex Property
 
 Gets or sets the Z index of the control.
 
 ```csharp
-public Int32 ZIndex { get; set; }
+public int ZIndex { get; set; }
 ```
+
+#### Remarks
+
+Controls with a higher [Avalonia.Visual.ZIndex](xref:Avalonia.Visual.ZIndex) will appear in front of controls with
+a lower ZIndex. If two controls have the same ZIndex then the control that appears
+later in the containing element's children collection will appear on top.
+
+</section>
 
 ## Fields
 
 | Name | Description |
 | --- | --- |
-| [BoundsProperty](#uid-f22a27348f) | Defines the Avalonia.Visual.Bounds property. |
-| [CacheModeProperty](#uid-5c89b0f2fc) | Defines the Avalonia.Visual.CacheMode property. |
-| [ClipProperty](#uid-06ffce3308) | Defines the Avalonia.Visual.Clip property. |
-| [ClipToBoundsProperty](#uid-4bc41df166) | Defines the Avalonia.Visual.ClipToBounds property. |
-| [EffectProperty](#uid-9374086bff) | Defines the Avalonia.Visual.Effect property. |
-| [FlowDirectionProperty](#uid-79d00f257f) | Defines the Avalonia.Visual.FlowDirection property. |
-| [HasMirrorTransformProperty](#uid-1f37ec4745) | Defines the Avalonia.Visual.HasMirrorTransform property. |
-| [IsVisibleProperty](#uid-8e0edf21ac) | Defines the Avalonia.Visual.IsVisible property. |
-| [OpacityMaskProperty](#uid-aad2c3f7c2) | Defines the Avalonia.Visual.OpacityMask property. |
-| [OpacityProperty](#uid-2a53e27b1f) | Defines the Avalonia.Visual.Opacity property. |
-| [RenderTransformOriginProperty](#uid-963d266cdd) | Defines the Avalonia.Visual.RenderTransformOrigin property. |
-| [RenderTransformProperty](#uid-31d20942c2) | Defines the Avalonia.Visual.RenderTransform property. |
-| [VisualParentProperty](#uid-12214f81b9) | Defines the Avalonia.Visual.VisualParent property. |
-| [ZIndexProperty](#uid-1dc9376c1e) | Defines the Avalonia.Visual.ZIndex property. |
-| [DataContextProperty (Inherited from StyledElement)](styledelement.mdx#uid-7eefabb929) | Defines the Avalonia.StyledElement.DataContext property. |
-| [NameProperty (Inherited from StyledElement)](styledelement.mdx#uid-bcdbb9de56) | Defines the Avalonia.StyledElement.Name property. |
-| [ParentProperty (Inherited from StyledElement)](styledelement.mdx#uid-dc6481a488) | Defines the Avalonia.StyledElement.Parent property. |
-| [TemplatedParentProperty (Inherited from StyledElement)](styledelement.mdx#uid-a2c7149a6b) | Defines the Avalonia.StyledElement.TemplatedParent property. |
-| [ThemeProperty (Inherited from StyledElement)](styledelement.mdx#uid-05852d7b9a) | Defines the Avalonia.StyledElement.Theme property. |
-| [TransitionsProperty (Inherited from Animatable)](animation/animatable.mdx#uid-c79f18fac2) | Defines the Avalonia.Animation.Animatable.Transitions property. |
+| [BoundsProperty](#uid-f22a27348f) | Defines the [Avalonia.Visual.Bounds](xref:Avalonia.Visual.Bounds) property. |
+| [CacheModeProperty](#uid-5c89b0f2fc) | Defines the [Avalonia.Visual.CacheMode](xref:Avalonia.Visual.CacheMode) property. |
+| [ClipProperty](#uid-06ffce3308) | Defines the [Avalonia.Visual.Clip](xref:Avalonia.Visual.Clip) property. |
+| [ClipToBoundsProperty](#uid-4bc41df166) | Defines the [Avalonia.Visual.ClipToBounds](xref:Avalonia.Visual.ClipToBounds) property. |
+| [EffectProperty](#uid-9374086bff) | Defines the [Avalonia.Visual.Effect](xref:Avalonia.Visual.Effect) property. |
+| [FlowDirectionProperty](#uid-79d00f257f) | Defines the [Avalonia.Visual.FlowDirection](xref:Avalonia.Visual.FlowDirection) property. |
+| [HasMirrorTransformProperty](#uid-1f37ec4745) | Defines the [Avalonia.Visual.HasMirrorTransform](xref:Avalonia.Visual.HasMirrorTransform) property. |
+| [IsVisibleProperty](#uid-8e0edf21ac) | Defines the [Avalonia.Visual.IsVisible](xref:Avalonia.Visual.IsVisible) property. |
+| [OpacityMaskProperty](#uid-aad2c3f7c2) | Defines the [Avalonia.Visual.OpacityMask](xref:Avalonia.Visual.OpacityMask) property. |
+| [OpacityProperty](#uid-2a53e27b1f) | Defines the [Avalonia.Visual.Opacity](xref:Avalonia.Visual.Opacity) property. |
+| [RenderTransformOriginProperty](#uid-963d266cdd) | Defines the [Avalonia.Visual.RenderTransformOrigin](xref:Avalonia.Visual.RenderTransformOrigin) property. |
+| [RenderTransformProperty](#uid-31d20942c2) | Defines the [Avalonia.Visual.RenderTransform](xref:Avalonia.Visual.RenderTransform) property. |
+| [VisualParentProperty](#uid-12214f81b9) | Defines the [Avalonia.Visual.VisualParent](xref:Avalonia.Visual.VisualParent) property. |
+| [ZIndexProperty](#uid-1dc9376c1e) | Defines the [Avalonia.Visual.ZIndex](xref:Avalonia.Visual.ZIndex) property. |
+| [DataContextProperty](styledelement.mdx#uid-7eefabb929) | Defines the [Avalonia.StyledElement.DataContext](xref:Avalonia.StyledElement.DataContext) property. Inherited from [StyledElement](styledelement.mdx). |
+| [NameProperty](styledelement.mdx#uid-bcdbb9de56) | Defines the [Avalonia.StyledElement.Name](xref:Avalonia.StyledElement.Name) property. Inherited from [StyledElement](styledelement.mdx). |
+| [ParentProperty](styledelement.mdx#uid-dc6481a488) | Defines the [Avalonia.StyledElement.Parent](xref:Avalonia.StyledElement.Parent) property. Inherited from [StyledElement](styledelement.mdx). |
+| [TemplatedParentProperty](styledelement.mdx#uid-a2c7149a6b) | Defines the [Avalonia.StyledElement.TemplatedParent](xref:Avalonia.StyledElement.TemplatedParent) property. Inherited from [StyledElement](styledelement.mdx). |
+| [ThemeProperty](styledelement.mdx#uid-05852d7b9a) | Defines the [Avalonia.StyledElement.Theme](xref:Avalonia.StyledElement.Theme) property. Inherited from [StyledElement](styledelement.mdx). |
+| [TransitionsProperty](animation/animatable.mdx#uid-c79f18fac2) | Defines the [Avalonia.Animation.Animatable.Transitions](xref:Avalonia.Animation.Animatable.Transitions) property. Inherited from [Animatable](animation/animatable.mdx). |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-f22a27348f"></span>
 
-### BoundsProperty
+### BoundsProperty Field
 
 Defines the [Avalonia.Visual.Bounds](xref:Avalonia.Visual.Bounds) property.
 
@@ -375,9 +477,13 @@ Defines the [Avalonia.Visual.Bounds](xref:Avalonia.Visual.Bounds) property.
 public Avalonia.DirectProperty<TOwner,TValue><Avalonia.Visual, Avalonia.Rect> BoundsProperty
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-5c89b0f2fc"></span>
 
-### CacheModeProperty
+### CacheModeProperty Field
 
 Defines the [Avalonia.Visual.CacheMode](xref:Avalonia.Visual.CacheMode) property.
 
@@ -385,9 +491,13 @@ Defines the [Avalonia.Visual.CacheMode](xref:Avalonia.Visual.CacheMode) property
 public Avalonia.StyledProperty<TValue><Avalonia.Media.CacheMode> CacheModeProperty
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-06ffce3308"></span>
 
-### ClipProperty
+### ClipProperty Field
 
 Defines the [Avalonia.Visual.Clip](xref:Avalonia.Visual.Clip) property.
 
@@ -395,19 +505,27 @@ Defines the [Avalonia.Visual.Clip](xref:Avalonia.Visual.Clip) property.
 public Avalonia.StyledProperty<TValue><Avalonia.Media.Geometry> ClipProperty
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-4bc41df166"></span>
 
-### ClipToBoundsProperty
+### ClipToBoundsProperty Field
 
 Defines the [Avalonia.Visual.ClipToBounds](xref:Avalonia.Visual.ClipToBounds) property.
 
 ```csharp
-public Avalonia.StyledProperty<TValue><Boolean> ClipToBoundsProperty
+public Avalonia.StyledProperty<TValue><bool> ClipToBoundsProperty
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-9374086bff"></span>
 
-### EffectProperty
+### EffectProperty Field
 
 Defines the [Avalonia.Visual.Effect](xref:Avalonia.Visual.Effect) property.
 
@@ -415,9 +533,13 @@ Defines the [Avalonia.Visual.Effect](xref:Avalonia.Visual.Effect) property.
 public Avalonia.StyledProperty<TValue><Avalonia.Media.IEffect> EffectProperty
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-79d00f257f"></span>
 
-### FlowDirectionProperty
+### FlowDirectionProperty Field
 
 Defines the [Avalonia.Visual.FlowDirection](xref:Avalonia.Visual.FlowDirection) property.
 
@@ -425,29 +547,41 @@ Defines the [Avalonia.Visual.FlowDirection](xref:Avalonia.Visual.FlowDirection) 
 public Avalonia.AttachedProperty<TValue><Avalonia.Media.FlowDirection> FlowDirectionProperty
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-1f37ec4745"></span>
 
-### HasMirrorTransformProperty
+### HasMirrorTransformProperty Field
 
 Defines the [Avalonia.Visual.HasMirrorTransform](xref:Avalonia.Visual.HasMirrorTransform) property.
 
 ```csharp
-public Avalonia.DirectProperty<TOwner,TValue><Avalonia.Visual, Boolean> HasMirrorTransformProperty
+public Avalonia.DirectProperty<TOwner,TValue><Avalonia.Visual, bool> HasMirrorTransformProperty
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-8e0edf21ac"></span>
 
-### IsVisibleProperty
+### IsVisibleProperty Field
 
 Defines the [Avalonia.Visual.IsVisible](xref:Avalonia.Visual.IsVisible) property.
 
 ```csharp
-public Avalonia.StyledProperty<TValue><Boolean> IsVisibleProperty
+public Avalonia.StyledProperty<TValue><bool> IsVisibleProperty
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-aad2c3f7c2"></span>
 
-### OpacityMaskProperty
+### OpacityMaskProperty Field
 
 Defines the [Avalonia.Visual.OpacityMask](xref:Avalonia.Visual.OpacityMask) property.
 
@@ -455,19 +589,27 @@ Defines the [Avalonia.Visual.OpacityMask](xref:Avalonia.Visual.OpacityMask) prop
 public Avalonia.StyledProperty<TValue><Avalonia.Media.IBrush> OpacityMaskProperty
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-2a53e27b1f"></span>
 
-### OpacityProperty
+### OpacityProperty Field
 
 Defines the [Avalonia.Visual.Opacity](xref:Avalonia.Visual.Opacity) property.
 
 ```csharp
-public Avalonia.StyledProperty<TValue><Double> OpacityProperty
+public Avalonia.StyledProperty<TValue><double> OpacityProperty
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-963d266cdd"></span>
 
-### RenderTransformOriginProperty
+### RenderTransformOriginProperty Field
 
 Defines the [Avalonia.Visual.RenderTransformOrigin](xref:Avalonia.Visual.RenderTransformOrigin) property.
 
@@ -475,9 +617,13 @@ Defines the [Avalonia.Visual.RenderTransformOrigin](xref:Avalonia.Visual.RenderT
 public Avalonia.StyledProperty<TValue><Avalonia.RelativePoint> RenderTransformOriginProperty
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-31d20942c2"></span>
 
-### RenderTransformProperty
+### RenderTransformProperty Field
 
 Defines the [Avalonia.Visual.RenderTransform](xref:Avalonia.Visual.RenderTransform) property.
 
@@ -485,9 +631,13 @@ Defines the [Avalonia.Visual.RenderTransform](xref:Avalonia.Visual.RenderTransfo
 public Avalonia.StyledProperty<TValue><Avalonia.Media.ITransform> RenderTransformProperty
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-12214f81b9"></span>
 
-### VisualParentProperty
+### VisualParentProperty Field
 
 Defines the [Avalonia.Visual.VisualParent](xref:Avalonia.Visual.VisualParent) property.
 
@@ -495,15 +645,21 @@ Defines the [Avalonia.Visual.VisualParent](xref:Avalonia.Visual.VisualParent) pr
 public Avalonia.DirectProperty<TOwner,TValue><Avalonia.Visual, Avalonia.Visual> VisualParentProperty
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-1dc9376c1e"></span>
 
-### ZIndexProperty
+### ZIndexProperty Field
 
 Defines the [Avalonia.Visual.ZIndex](xref:Avalonia.Visual.ZIndex) property.
 
 ```csharp
-public Avalonia.StyledProperty<TValue><Int32> ZIndexProperty
+public Avalonia.StyledProperty<TValue><int> ZIndexProperty
 ```
+
+</section>
 
 ## Events
 
@@ -511,17 +667,19 @@ public Avalonia.StyledProperty<TValue><Int32> ZIndexProperty
 | --- | --- |
 | [AttachedToVisualTree](#uid-df40bddf6b) | Raised when the control is attached to a rooted visual tree. |
 | [DetachedFromVisualTree](#uid-3f64dafb1c) | Raised when the control is detached from a rooted visual tree. |
-| [ActualThemeVariantChanged (Inherited from StyledElement)](styledelement.mdx#uid-e69ef27e71) | Raised when the theme variant is changed on the element or an ancestor of the element. |
-| [AttachedToLogicalTree (Inherited from StyledElement)](styledelement.mdx#uid-717aa68e85) | Raised when the styled element is attached to a rooted logical tree. |
-| [DataContextChanged (Inherited from StyledElement)](styledelement.mdx#uid-4b1cc873f8) | Occurs when the Avalonia.StyledElement.DataContext property changes. |
-| [DetachedFromLogicalTree (Inherited from StyledElement)](styledelement.mdx#uid-d9f5afa535) | Raised when the styled element is detached from a rooted logical tree. |
-| [Initialized (Inherited from StyledElement)](styledelement.mdx#uid-bd6a5e5c0e) | Occurs when the styled element has finished initialization. |
-| [ResourcesChanged (Inherited from StyledElement)](styledelement.mdx#uid-99a7f47c56) | Occurs when a resource in this styled element or a parent styled element has changed. |
-| [PropertyChanged (Inherited from AvaloniaObject)](avaloniaobject.mdx#uid-d758e26fae) | Raised when a Avalonia.AvaloniaProperty value changes on this object. |
+| [ActualThemeVariantChanged](styledelement.mdx#uid-e69ef27e71) | Raised when the theme variant is changed on the element or an ancestor of the element. Inherited from [StyledElement](styledelement.mdx). |
+| [AttachedToLogicalTree](styledelement.mdx#uid-717aa68e85) | Raised when the styled element is attached to a rooted logical tree. Inherited from [StyledElement](styledelement.mdx). |
+| [DataContextChanged](styledelement.mdx#uid-4b1cc873f8) | Occurs when the [Avalonia.StyledElement.DataContext](xref:Avalonia.StyledElement.DataContext) property changes. Inherited from [StyledElement](styledelement.mdx). |
+| [DetachedFromLogicalTree](styledelement.mdx#uid-d9f5afa535) | Raised when the styled element is detached from a rooted logical tree. Inherited from [StyledElement](styledelement.mdx). |
+| [Initialized](styledelement.mdx#uid-bd6a5e5c0e) | Occurs when the styled element has finished initialization. Inherited from [StyledElement](styledelement.mdx). |
+| [ResourcesChanged](styledelement.mdx#uid-99a7f47c56) | Occurs when a resource in this styled element or a parent styled element has changed. Inherited from [StyledElement](styledelement.mdx). |
+| [PropertyChanged](avaloniaobject.mdx#uid-d758e26fae) | Raised when a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value changes on this object. Inherited from [AvaloniaObject](avaloniaobject.mdx). |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-df40bddf6b"></span>
 
-### AttachedToVisualTree
+### AttachedToVisualTree Event
 
 Raised when the control is attached to a rooted visual tree.
 
@@ -529,15 +687,21 @@ Raised when the control is attached to a rooted visual tree.
 public event EventHandler<Avalonia.VisualTreeAttachmentEventArgs> AttachedToVisualTree
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-3f64dafb1c"></span>
 
-### DetachedFromVisualTree
+### DetachedFromVisualTree Event
 
 Raised when the control is detached from a rooted visual tree.
 
 ```csharp
 public event EventHandler<Avalonia.VisualTreeAttachmentEventArgs> DetachedFromVisualTree
 ```
+
+</section>
 
 </ApiRefPage>
 

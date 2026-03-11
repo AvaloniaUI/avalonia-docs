@@ -53,7 +53,7 @@ public class TypeUtilities
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> TypeUtilities
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> TypeUtilities
 </div>
 </div>
 
@@ -75,126 +75,299 @@ public class TypeUtilities
 
 ### AcceptsNull overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-86f1c83d4a"></span>
 
-#### AcceptsNull
+#### AcceptsNull Method
 
 ```csharp
-public Boolean AcceptsNull<T>()
+public bool AcceptsNull<T>()
 ```
+
+##### Type Parameters
+
+`T`
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-870e76f538"></span>
 
-#### AcceptsNull
+#### AcceptsNull Method
 
 Returns a value indicating whether null can be assigned to the specified type.
 
 ```csharp
-public Boolean AcceptsNull(Type type)
+public bool AcceptsNull(Type type)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `type` | The type. |
+##### Parameters
 
-Returns: True if the type accepts null values; otherwise false.
+`type` Type
+
+The type.
+
+
+##### Returns
+
+bool
+
+True if the type accepts null values; otherwise false.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-1bc57e47b6"></span>
 
-### CanCast
+### CanCast Method
 
 ```csharp
-public Boolean CanCast<T>(Object value)
+public bool CanCast<T>(object value)
 ```
+
+#### Parameters
+
+`value` object
+
+
+#### Type Parameters
+
+`T`
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-a5ec827ebc"></span>
 
-### ConvertImplicit
+### ConvertImplicit Method
 
 ```csharp
-public T ConvertImplicit<T>(Object value)
+public T ConvertImplicit<T>(object value)
 ```
+
+#### Parameters
+
+`value` object
+
+
+#### Type Parameters
+
+`T`
+
+
+#### Returns
+
+T
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-e02ea85d39"></span>
 
-### ConvertImplicitOrDefault
+### ConvertImplicitOrDefault Method
 
 Convert a value to a type using the implicit conversions allowed by the C# language or
 return the default for the type if the value could not be converted.
 
 ```csharp
-public Object ConvertImplicitOrDefault(Object value, Type type)
+public object ConvertImplicitOrDefault(object value, Type type)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `type` | The type to convert to. |
-| `value` | The value to convert. |
+#### Parameters
 
-Returns: A value of `type`.
+`value` object
+
+The value to convert.
+
+
+`type` Type
+
+The type to convert to.
+
+
+#### Returns
+
+object
+
+A value of `type`.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-021554d856"></span>
 
-### ConvertOrDefault
+### ConvertOrDefault Method
 
 Convert a value to a type by any means possible, returning the default for that type
 if the value could not be converted.
 
 ```csharp
-public Object ConvertOrDefault(Object value, Type type, System.Globalization.CultureInfo culture)
+public object ConvertOrDefault(object value, Type type, System.Globalization.CultureInfo culture)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `culture` | The culture to use. |
-| `type` | The type to convert to. |
-| `value` | The value to convert. |
+#### Parameters
 
-Returns: A value of `type`.
+`value` object
+
+The value to convert.
+
+
+`type` Type
+
+The type to convert to.
+
+
+`culture` System.Globalization.CultureInfo
+
+The culture to use.
+
+
+#### Returns
+
+object
+
+A value of `type`.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-55f12a8f0d"></span>
 
-### Default
+### Default Method
 
 Gets the default value for the specified type.
 
 ```csharp
-public Object Default(Type type)
+public object Default(Type type)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `type` | The type. |
+#### Parameters
 
-Returns: The default value.
+`type` Type
+
+The type.
+
+
+#### Returns
+
+object
+
+The default value.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-6adf09cecc"></span>
 
-### IsNumeric
+### IsNumeric Method
 
 Determines if a type is numeric. Nullable numeric types are considered numeric.
 
 ```csharp
-public Boolean IsNumeric(Type type)
+public bool IsNumeric(Type type)
 ```
 
-Returns: True if the type is numeric; otherwise false.
+#### Parameters
+
+`type` Type
+
+
+#### Returns
+
+bool
+
+True if the type is numeric; otherwise false.
+
+
+#### Remarks
+
+Boolean is not considered numeric.
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-19e28b3b5f"></span>
 
-### TryConvert
+### TryConvert Method
 
 ```csharp
-public Boolean TryConvert(Type to, Object value, System.Globalization.CultureInfo culture, Object& result)
+public bool TryConvert(Type to, object value, System.Globalization.CultureInfo culture, object& result)
 ```
+
+#### Parameters
+
+`to` Type
+
+
+`value` object
+
+
+`culture` System.Globalization.CultureInfo
+
+
+`result` object&amp;
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-d9e79f4461"></span>
 
-### TryConvertImplicit
+### TryConvertImplicit Method
 
 ```csharp
-public Boolean TryConvertImplicit(Type to, Object value, Object& result)
+public bool TryConvertImplicit(Type to, object value, object& result)
 ```
+
+#### Parameters
+
+`to` Type
+
+
+`value` object
+
+
+`result` object&amp;
+
+
+#### Returns
+
+bool
+
+
+</section>
 
 </ApiRefPage>
 

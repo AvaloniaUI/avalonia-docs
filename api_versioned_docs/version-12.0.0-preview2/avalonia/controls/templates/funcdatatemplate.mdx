@@ -53,13 +53,13 @@ public class FuncDataTemplate
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> FuncTemplate&lt;Object,Control&gt; <span className="apiref-page__relation-separator">-&gt;</span> FuncDataTemplate
+<span className="apiref-page__meta-label">Inheritance:</span> FuncTemplate&lt;object,Control&gt; <span className="apiref-page__relation-separator">-&gt;</span> FuncDataTemplate
 </div>
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Derived types:</span> <a href="funcdatatemplate-1">FuncDataTemplate&lt;T&gt;</a>, <a href="functreedatatemplate">FuncTreeDataTemplate</a>
 </div>
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Implements:</span> <a href="idatatemplate">IDataTemplate</a>, <a href="irecyclingdatatemplate">IRecyclingDataTemplate</a>, ITemplate&lt;Object,Control&gt;
+<span className="apiref-page__meta-label">Implements:</span> <a href="idatatemplate">IDataTemplate</a>, <a href="irecyclingdatatemplate">IRecyclingDataTemplate</a>, ITemplate&lt;object,Control&gt;
 </div>
 </div>
 
@@ -73,21 +73,51 @@ public class FuncDataTemplate
 
 ### FuncDataTemplate overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-081cc2ea9b"></span>
 
-#### FuncDataTemplate
+#### FuncDataTemplate Constructor
 
 ```csharp
-public FuncDataTemplate(Func<Object, Boolean> match, Func<Object, Avalonia.Controls.INameScope, Avalonia.Controls.Control> build, Boolean supportsRecycling)
+public FuncDataTemplate(Func<object, bool> match, Func<object, Avalonia.Controls.INameScope, Avalonia.Controls.Control> build, bool supportsRecycling)
 ```
+
+##### Parameters
+
+`match` Func&lt;object, bool&gt;
+
+
+`build` Func&lt;object, [Avalonia.Controls.INameScope](xref:Avalonia.Controls.INameScope), [Avalonia.Controls.Control](xref:Avalonia.Controls.Control)&gt;
+
+
+`supportsRecycling` bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-c27f2ab1db"></span>
 
-#### FuncDataTemplate
+#### FuncDataTemplate Constructor
 
 ```csharp
-public FuncDataTemplate(Type type, Func<Object, Avalonia.Controls.INameScope, Avalonia.Controls.Control> build, Boolean supportsRecycling)
+public FuncDataTemplate(Type type, Func<object, Avalonia.Controls.INameScope, Avalonia.Controls.Control> build, bool supportsRecycling)
 ```
+
+##### Parameters
+
+`type` Type
+
+
+`build` Func&lt;object, [Avalonia.Controls.INameScope](xref:Avalonia.Controls.INameScope), [Avalonia.Controls.Control](xref:Avalonia.Controls.Control)&gt;
+
+
+`supportsRecycling` bool
+
+
+</section>
 
 ## Methods
 
@@ -96,50 +126,85 @@ public FuncDataTemplate(Type type, Func<Object, Avalonia.Controls.INameScope, Av
 | [Build](#uid-910f460c06) | Creates or recycles a control to display the specified data. |
 | [Match](#uid-50eee6cfed) | Checks to see if this data template matches the specified data. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-910f460c06"></span>
 
-### Build
+### Build Method
 
 Creates or recycles a control to display the specified data.
 
 ```csharp
-public Avalonia.Controls.Control Build(Object data, Avalonia.Controls.Control existing)
+public Avalonia.Controls.Control Build(object data, Avalonia.Controls.Control existing)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `data` | The data to display. |
-| `existing` | An optional control to recycle. |
+#### Parameters
 
-Returns: The `existing` control if supplied and applicable to
+`data` object
+
+The data to display.
+
+
+`existing` [Avalonia.Controls.Control](xref:Avalonia.Controls.Control)
+
+An optional control to recycle.
+
+
+#### Returns
+
+[Avalonia.Controls.Control](xref:Avalonia.Controls.Control)
+
+The `existing` control if supplied and applicable to
 `data`, otherwise a new control or null.
+
+
+#### Remarks
+
+The caller should ensure that any control passed to `existing`
+originated from the same data template.
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-50eee6cfed"></span>
 
-### Match
+### Match Method
 
 Checks to see if this data template matches the specified data.
 
 ```csharp
-public Boolean Match(Object data)
+public bool Match(object data)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `data` | The data. |
+#### Parameters
 
-Returns: True if the data template can build a control for the data, otherwise false.
+`data` object
+
+The data.
+
+
+#### Returns
+
+bool
+
+True if the data template can build a control for the data, otherwise false.
+
+
+</section>
 
 ## Fields
 
 | Name | Description |
 | --- | --- |
-| [Access](#uid-c964539ce7) | The default data template used in the case where no matching data template is found but Avalonia.Controls.Primitives.AccessText should be used. |
+| [Access](#uid-c964539ce7) | The default data template used in the case where no matching data template is found but [Avalonia.Controls.Primitives.AccessText](xref:Avalonia.Controls.Primitives.AccessText) should be used. |
 | [Default](#uid-70c1c9b32b) | The default data template used in the case where no matching data template is found. |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-c964539ce7"></span>
 
-### Access
+### Access Field
 
 The default data template used in the case where no matching data template is found
 but [Avalonia.Controls.Primitives.AccessText](xref:Avalonia.Controls.Primitives.AccessText) should be used.
@@ -148,15 +213,21 @@ but [Avalonia.Controls.Primitives.AccessText](xref:Avalonia.Controls.Primitives.
 public Avalonia.Controls.Templates.FuncDataTemplate Access
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-70c1c9b32b"></span>
 
-### Default
+### Default Field
 
 The default data template used in the case where no matching data template is found.
 
 ```csharp
 public Avalonia.Controls.Templates.FuncDataTemplate Default
 ```
+
+</section>
 
 </ApiRefPage>
 

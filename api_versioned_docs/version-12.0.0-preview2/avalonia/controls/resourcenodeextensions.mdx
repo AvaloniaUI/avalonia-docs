@@ -47,7 +47,7 @@ public class ResourceNodeExtensions
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> ResourceNodeExtensions
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> ResourceNodeExtensions
 </div>
 </div>
 
@@ -64,96 +64,258 @@ public class ResourceNodeExtensions
 
 ### FindResource overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-9c011dc637"></span>
 
-#### FindResource
+#### FindResource Method
 
 Finds the specified resource by searching up the logical tree and then global styles.
 
 ```csharp
-public Object FindResource(Avalonia.Controls.IResourceHost control, Avalonia.Styling.ThemeVariant theme, Object key)
+public object FindResource(Avalonia.Controls.IResourceHost control, Avalonia.Styling.ThemeVariant theme, object key)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `control` | The control. |
-| `key` | The resource key. |
-| `theme` | Theme used to select theme dictionary. |
+##### Parameters
 
-Returns: The resource, or [Avalonia.AvaloniaProperty.UnsetValue](xref:Avalonia.AvaloniaProperty.UnsetValue) if not found.
+`control` [Avalonia.Controls.IResourceHost](xref:Avalonia.Controls.IResourceHost)
+
+The control.
+
+
+`theme` [Avalonia.Styling.ThemeVariant](xref:Avalonia.Styling.ThemeVariant)
+
+Theme used to select theme dictionary.
+
+
+`key` object
+
+The resource key.
+
+
+##### Returns
+
+object
+
+The resource, or [Avalonia.AvaloniaProperty.UnsetValue](xref:Avalonia.AvaloniaProperty.UnsetValue) if not found.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-ccf49cf52b"></span>
 
-#### FindResource
+#### FindResource Method
 
 Finds the specified resource by searching up the logical tree and then global styles.
 
 ```csharp
-public Object FindResource(Avalonia.Controls.IResourceHost control, Object key)
+public object FindResource(Avalonia.Controls.IResourceHost control, object key)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `control` | The control. |
-| `key` | The resource key. |
+##### Parameters
 
-Returns: The resource, or [Avalonia.AvaloniaProperty.UnsetValue](xref:Avalonia.AvaloniaProperty.UnsetValue) if not found.
+`control` [Avalonia.Controls.IResourceHost](xref:Avalonia.Controls.IResourceHost)
+
+The control.
+
+
+`key` object
+
+The resource key.
+
+
+##### Returns
+
+object
+
+The resource, or [Avalonia.AvaloniaProperty.UnsetValue](xref:Avalonia.AvaloniaProperty.UnsetValue) if not found.
+
+
+</section>
 
 <span id="uid-ed9785dc04"></span>
 
 ### GetResourceObservable overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-bf91918296"></span>
 
-#### GetResourceObservable
+#### GetResourceObservable Method
 
 ```csharp
-public IObservable<Object> GetResourceObservable(Avalonia.Controls.IResourceHost control, Object key, Func<Object, Object> converter)
+public IObservable<object> GetResourceObservable(Avalonia.Controls.IResourceHost control, object key, Func<object, object> converter)
 ```
+
+##### Parameters
+
+`control` [Avalonia.Controls.IResourceHost](xref:Avalonia.Controls.IResourceHost)
+
+
+`key` object
+
+
+`converter` Func&lt;object, object&gt;
+
+
+##### Returns
+
+IObservable&lt;object&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-e1898da5af"></span>
 
-#### GetResourceObservable
+#### GetResourceObservable Method
 
 ```csharp
-public IObservable<Object> GetResourceObservable(Avalonia.Controls.IResourceProvider resourceProvider, Object key, Avalonia.Styling.ThemeVariant defaultThemeVariant, Func<Object, Object> converter)
+public IObservable<object> GetResourceObservable(Avalonia.Controls.IResourceProvider resourceProvider, object key, Avalonia.Styling.ThemeVariant defaultThemeVariant, Func<object, object> converter)
 ```
+
+##### Parameters
+
+`resourceProvider` [Avalonia.Controls.IResourceProvider](xref:Avalonia.Controls.IResourceProvider)
+
+
+`key` object
+
+
+`defaultThemeVariant` [Avalonia.Styling.ThemeVariant](xref:Avalonia.Styling.ThemeVariant)
+
+
+`converter` Func&lt;object, object&gt;
+
+
+##### Returns
+
+IObservable&lt;object&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-bd8335806f"></span>
 
-#### GetResourceObservable
+#### GetResourceObservable Method
 
 ```csharp
-public IObservable<Object> GetResourceObservable(Avalonia.Controls.IResourceProvider resourceProvider, Object key, Func<Object, Object> converter)
+public IObservable<object> GetResourceObservable(Avalonia.Controls.IResourceProvider resourceProvider, object key, Func<object, object> converter)
 ```
+
+##### Parameters
+
+`resourceProvider` [Avalonia.Controls.IResourceProvider](xref:Avalonia.Controls.IResourceProvider)
+
+
+`key` object
+
+
+`converter` Func&lt;object, object&gt;
+
+
+##### Returns
+
+IObservable&lt;object&gt;
+
+
+</section>
 
 <span id="uid-9444696616"></span>
 
 ### TryFindResource overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-e84f3e6595"></span>
 
-#### TryFindResource
+#### TryFindResource Method
 
 ```csharp
-public Boolean TryFindResource(Avalonia.Controls.IResourceHost control, Object key, Avalonia.Styling.ThemeVariant theme, Object& value)
+public bool TryFindResource(Avalonia.Controls.IResourceHost control, object key, Avalonia.Styling.ThemeVariant theme, object& value)
 ```
+
+##### Parameters
+
+`control` [Avalonia.Controls.IResourceHost](xref:Avalonia.Controls.IResourceHost)
+
+
+`key` object
+
+
+`theme` [Avalonia.Styling.ThemeVariant](xref:Avalonia.Styling.ThemeVariant)
+
+
+`value` object&amp;
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-9b16787778"></span>
 
-#### TryFindResource
+#### TryFindResource Method
 
 ```csharp
-public Boolean TryFindResource(Avalonia.Controls.IResourceHost control, Object key, Object& value)
+public bool TryFindResource(Avalonia.Controls.IResourceHost control, object key, object& value)
 ```
+
+##### Parameters
+
+`control` [Avalonia.Controls.IResourceHost](xref:Avalonia.Controls.IResourceHost)
+
+
+`key` object
+
+
+`value` object&amp;
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-c358b1cce0"></span>
 
-### TryGetResource
+### TryGetResource Method
 
 ```csharp
-public Boolean TryGetResource(Avalonia.Controls.IResourceHost control, Object key, Object& value)
+public bool TryGetResource(Avalonia.Controls.IResourceHost control, object key, object& value)
 ```
+
+#### Parameters
+
+`control` [Avalonia.Controls.IResourceHost](xref:Avalonia.Controls.IResourceHost)
+
+
+`key` object
+
+
+`value` object&amp;
+
+
+#### Returns
+
+bool
+
+
+</section>
 
 </ApiRefPage>
 

@@ -47,7 +47,7 @@ public class DesktopApplicationExtensions
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> DesktopApplicationExtensions
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> DesktopApplicationExtensions
 </div>
 </div>
 
@@ -62,49 +62,106 @@ public class DesktopApplicationExtensions
 
 ### Run overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-9c92fcd0cc"></span>
 
-#### Run
+#### Run Method
 
 On desktop-style platforms runs the application's main loop until main window is closed
 
 ```csharp
-public Void Run(Avalonia.Application app, Avalonia.Controls.Window mainWindow)
+public void Run(Avalonia.Application app, Avalonia.Controls.Window mainWindow)
 ```
+
+##### Parameters
+
+`app` [Avalonia.Application](xref:Avalonia.Application)
+
+
+`mainWindow` [Avalonia.Controls.Window](xref:Avalonia.Controls.Window)
+
+
+##### Remarks
+
+Consider using StartWithDesktopStyleLifetime instead, see https://github.com/AvaloniaUI/Avalonia/wiki/Application-lifetimes for details
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-0fe9ee9782"></span>
 
-#### Run
+#### Run Method
 
 On desktop-style platforms runs the application's main loop until closable is closed
 
 ```csharp
-public Void Run(Avalonia.Application app, Avalonia.Input.ICloseable closable)
+public void Run(Avalonia.Application app, Avalonia.Input.ICloseable closable)
 ```
+
+##### Parameters
+
+`app` [Avalonia.Application](xref:Avalonia.Application)
+
+
+`closable` [Avalonia.Input.ICloseable](xref:Avalonia.Input.ICloseable)
+
+
+##### Remarks
+
+Consider using StartWithDesktopStyleLifetime instead, see https://github.com/AvaloniaUI/Avalonia/wiki/Application-lifetimes for details
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-3698ed72b2"></span>
 
-#### Run
+#### Run Method
 
 On desktop-style platforms runs the application's main loop with custom CancellationToken
 without setting a lifetime.
 
 ```csharp
-public Void Run(Avalonia.Application app, System.Threading.CancellationToken token)
+public void Run(Avalonia.Application app, System.Threading.CancellationToken token)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `app` | The application. |
-| `token` | The token to track. |
+##### Parameters
+
+`app` [Avalonia.Application](xref:Avalonia.Application)
+
+The application.
+
+
+`token` System.Threading.CancellationToken
+
+The token to track.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-42908e930f"></span>
 
-### RunWithMainWindow
+### RunWithMainWindow Method
 
 ```csharp
-public Void RunWithMainWindow<TWindow>(Avalonia.Application app)
+public void RunWithMainWindow<TWindow>(Avalonia.Application app)
 ```
+
+#### Parameters
+
+`app` [Avalonia.Application](xref:Avalonia.Application)
+
+
+#### Type Parameters
+
+`TWindow`
+
+
+</section>
 
 </ApiRefPage>
 

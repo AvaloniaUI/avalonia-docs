@@ -54,7 +54,7 @@ public class SelectingItemsControlSelectionAdapter
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> SelectingItemsControlSelectionAdapter
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> SelectingItemsControlSelectionAdapter
 </div>
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Implements:</span> <a href="iselectionadapter">ISelectionAdapter</a>
@@ -65,15 +65,17 @@ public class SelectingItemsControlSelectionAdapter
 
 | Name | Description |
 | --- | --- |
-| [SelectingItemsControlSelectionAdapter (2 overloads)](#uid-d2d8e6a169) | Initializes a new instance of the Avalonia.Controls.Utils.SelectingItemsControlSelectionAdapter class. |
+| [SelectingItemsControlSelectionAdapter (2 overloads)](#uid-d2d8e6a169) | Initializes a new instance of the [Avalonia.Controls.Utils.SelectingItemsControlSelectionAdapter](xref:Avalonia.Controls.Utils.SelectingItemsControlSelectionAdapter) class. |
 
 <span id="uid-d2d8e6a169"></span>
 
 ### SelectingItemsControlSelectionAdapter overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-148eb03904"></span>
 
-#### SelectingItemsControlSelectionAdapter
+#### SelectingItemsControlSelectionAdapter Constructor
 
 Initializes a new instance of the
 [Avalonia.Controls.Utils.SelectingItemsControlSelectionAdapter](xref:Avalonia.Controls.Utils.SelectingItemsControlSelectionAdapter)
@@ -83,9 +85,13 @@ class.
 public SelectingItemsControlSelectionAdapter()
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-256f13c8e2"></span>
 
-#### SelectingItemsControlSelectionAdapter
+#### SelectingItemsControlSelectionAdapter Constructor
 
 Initializes a new instance of the
 [Avalonia.Controls.Utils.SelectingItemsControlSelectionAdapterr](xref:Avalonia.Controls.Utils.SelectingItemsControlSelectionAdapterr)
@@ -97,22 +103,29 @@ control.
 public SelectingItemsControlSelectionAdapter(Avalonia.Controls.Primitives.SelectingItemsControl selector)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `selector` | The
+##### Parameters
+
+`selector` [Avalonia.Controls.Primitives.SelectingItemsControl](xref:Avalonia.Controls.Primitives.SelectingItemsControl)
+
+The
 [Avalonia.Controls.Primitives.SelectingItemsControl](xref:Avalonia.Controls.Primitives.SelectingItemsControl) control
 to wrap as a
-[Avalonia.Controls.Utils.SelectingItemsControlSelectionAdapter](xref:Avalonia.Controls.Utils.SelectingItemsControlSelectionAdapter). |
+[Avalonia.Controls.Utils.SelectingItemsControlSelectionAdapter](xref:Avalonia.Controls.Utils.SelectingItemsControlSelectionAdapter).
+
+
+</section>
 
 ## Methods
 
 | Name | Description |
 | --- | --- |
-| [HandleKeyDown](#uid-c3c522716f) | Provides handling for the Avalonia.Input.InputElement.KeyDown event that occurs when a key is pressed while the drop-down portion of the Avalonia.Controls.AutoCompleteBox has focus. |
+| [HandleKeyDown](#uid-c3c522716f) | Provides handling for the [Avalonia.Input.InputElement.KeyDown](xref:Avalonia.Input.InputElement.KeyDown) event that occurs when a key is pressed while the drop-down portion of the [Avalonia.Controls.AutoCompleteBox](xref:Avalonia.Controls.AutoCompleteBox) has focus. |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-c3c522716f"></span>
 
-### HandleKeyDown
+### HandleKeyDown Method
 
 Provides handling for the
 [Avalonia.Input.InputElement.KeyDown](xref:Avalonia.Input.InputElement.KeyDown) event that occurs
@@ -120,14 +133,19 @@ when a key is pressed while the drop-down portion of the
 [Avalonia.Controls.AutoCompleteBox](xref:Avalonia.Controls.AutoCompleteBox) has focus.
 
 ```csharp
-public Void HandleKeyDown(Avalonia.Input.KeyEventArgs e)
+public void HandleKeyDown(Avalonia.Input.KeyEventArgs e)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `e` | A [Avalonia.Input.KeyEventArgs](xref:Avalonia.Input.KeyEventArgs)
+#### Parameters
+
+`e` [Avalonia.Input.KeyEventArgs](xref:Avalonia.Input.KeyEventArgs)
+
+A [Avalonia.Input.KeyEventArgs](xref:Avalonia.Input.KeyEventArgs)
 that contains data about the
-[Avalonia.Input.InputElement.KeyDown](xref:Avalonia.Input.InputElement.KeyDown) event. |
+[Avalonia.Input.InputElement.KeyDown](xref:Avalonia.Input.InputElement.KeyDown) event.
+
+
+</section>
 
 ## Properties
 
@@ -135,11 +153,13 @@ that contains data about the
 | --- | --- |
 | [ItemsSource](#uid-356f0233aa) | Gets or sets a collection that is used to generate the content of the selection adapter. |
 | [SelectedItem](#uid-da0df7cfa6) | Gets or sets the selected item of the selection adapter. |
-| [SelectorControl](#uid-b0ee6cf81a) | Gets or sets the underlying Avalonia.Controls.Primitives.SelectingItemsControl control. |
+| [SelectorControl](#uid-b0ee6cf81a) | Gets or sets the underlying [Avalonia.Controls.Primitives.SelectingItemsControl](xref:Avalonia.Controls.Primitives.SelectingItemsControl) control. |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-356f0233aa"></span>
 
-### ItemsSource
+### ItemsSource Property
 
 Gets or sets a collection that is used to generate the content of
 the selection adapter.
@@ -148,24 +168,38 @@ the selection adapter.
 public System.Collections.IEnumerable ItemsSource { get; set; }
 ```
 
-Value: The collection used to generate content for the selection
+#### Value
+
+The collection used to generate content for the selection
 adapter.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-da0df7cfa6"></span>
 
-### SelectedItem
+### SelectedItem Property
 
 Gets or sets the selected item of the selection adapter.
 
 ```csharp
-public Object SelectedItem { get; set; }
+public object SelectedItem { get; set; }
 ```
 
-Value: The selected item of the underlying selection adapter.
+#### Value
+
+The selected item of the underlying selection adapter.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-b0ee6cf81a"></span>
 
-### SelectorControl
+### SelectorControl Property
 
 Gets or sets the underlying
 [Avalonia.Controls.Primitives.SelectingItemsControl](xref:Avalonia.Controls.Primitives.SelectingItemsControl)
@@ -175,21 +209,28 @@ control.
 public Avalonia.Controls.Primitives.SelectingItemsControl SelectorControl { get; set; }
 ```
 
-Value: The underlying
+#### Value
+
+The underlying
 [Avalonia.Controls.Primitives.SelectingItemsControl](xref:Avalonia.Controls.Primitives.SelectingItemsControl)
 control.
+
+
+</section>
 
 ## Events
 
 | Name | Description |
 | --- | --- |
 | [Cancel](#uid-c027f8b00f) | Occurs when a selection is canceled before it is committed. |
-| [Commit](#uid-fc99ab3e5b) | Occurs when an item is selected and is committed to the underlying Avalonia.Controls.Primitives.SelectingItemsControl control. |
-| [SelectionChanged](#uid-9b212eb799) | Occurs when the Avalonia.Controls.Utils.SelectingItemsControlSelectionAdapter.SelectedItem property value changes. |
+| [Commit](#uid-fc99ab3e5b) | Occurs when an item is selected and is committed to the underlying [Avalonia.Controls.Primitives.SelectingItemsControl](xref:Avalonia.Controls.Primitives.SelectingItemsControl) control. |
+| [SelectionChanged](#uid-9b212eb799) | Occurs when the [Avalonia.Controls.Utils.SelectingItemsControlSelectionAdapter.SelectedItem](xref:Avalonia.Controls.Utils.SelectingItemsControlSelectionAdapter.SelectedItem) property value changes. |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-c027f8b00f"></span>
 
-### Cancel
+### Cancel Event
 
 Occurs when a selection is canceled before it is committed.
 
@@ -197,9 +238,13 @@ Occurs when a selection is canceled before it is committed.
 public event EventHandler<Avalonia.Interactivity.RoutedEventArgs> Cancel
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-fc99ab3e5b"></span>
 
-### Commit
+### Commit Event
 
 Occurs when an item is selected and is committed to the underlying
 [Avalonia.Controls.Primitives.SelectingItemsControl](xref:Avalonia.Controls.Primitives.SelectingItemsControl)
@@ -209,9 +254,13 @@ control.
 public event EventHandler<Avalonia.Interactivity.RoutedEventArgs> Commit
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-9b212eb799"></span>
 
-### SelectionChanged
+### SelectionChanged Event
 
 Occurs when the
 [Avalonia.Controls.Utils.SelectingItemsControlSelectionAdapter.SelectedItem](xref:Avalonia.Controls.Utils.SelectingItemsControlSelectionAdapter.SelectedItem)
@@ -220,6 +269,8 @@ property value changes.
 ```csharp
 public event EventHandler<Avalonia.Controls.SelectionChangedEventArgs> SelectionChanged
 ```
+
+</section>
 
 </ApiRefPage>
 

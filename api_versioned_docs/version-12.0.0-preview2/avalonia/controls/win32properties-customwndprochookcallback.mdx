@@ -54,13 +54,25 @@ public delegate Win32Properties.CustomWndProcHookCallback
 | --- | --- |
 | [Win32Properties.CustomWndProcHookCallback](#uid-680aa5d7a5) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-680aa5d7a5"></span>
 
-### Win32Properties.CustomWndProcHookCallback
+### Win32Properties.CustomWndProcHookCallback Constructor
 
 ```csharp
-public Win32Properties.CustomWndProcHookCallback(Object object, IntPtr method)
+public Win32Properties.CustomWndProcHookCallback(object object, IntPtr method)
 ```
+
+#### Parameters
+
+`object` object
+
+
+`method` IntPtr
+
+
+</section>
 
 ## Methods
 
@@ -70,29 +82,104 @@ public Win32Properties.CustomWndProcHookCallback(Object object, IntPtr method)
 | [EndInvoke](#uid-15ef5e85f7) | No summary available. |
 | [Invoke](#uid-aa55c79cf3) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-bbbc14cfb5"></span>
 
-### BeginInvoke
+### BeginInvoke Method
 
 ```csharp
-public IAsyncResult BeginInvoke(IntPtr hWnd, UInt32 msg, IntPtr wParam, IntPtr lParam, Boolean& handled, AsyncCallback callback, Object object)
+public IAsyncResult BeginInvoke(IntPtr hWnd, uint msg, IntPtr wParam, IntPtr lParam, bool& handled, AsyncCallback callback, object object)
 ```
+
+#### Parameters
+
+`hWnd` IntPtr
+
+
+`msg` uint
+
+
+`wParam` IntPtr
+
+
+`lParam` IntPtr
+
+
+`handled` bool&amp;
+
+
+`callback` AsyncCallback
+
+
+`object` object
+
+
+#### Returns
+
+IAsyncResult
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-15ef5e85f7"></span>
 
-### EndInvoke
+### EndInvoke Method
 
 ```csharp
-public IntPtr EndInvoke(Boolean& handled, IAsyncResult result)
+public IntPtr EndInvoke(bool& handled, IAsyncResult result)
 ```
+
+#### Parameters
+
+`handled` bool&amp;
+
+
+`result` IAsyncResult
+
+
+#### Returns
+
+IntPtr
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-aa55c79cf3"></span>
 
-### Invoke
+### Invoke Method
 
 ```csharp
-public IntPtr Invoke(IntPtr hWnd, UInt32 msg, IntPtr wParam, IntPtr lParam, Boolean& handled)
+public IntPtr Invoke(IntPtr hWnd, uint msg, IntPtr wParam, IntPtr lParam, bool& handled)
 ```
+
+#### Parameters
+
+`hWnd` IntPtr
+
+
+`msg` uint
+
+
+`wParam` IntPtr
+
+
+`lParam` IntPtr
+
+
+`handled` bool&amp;
+
+
+#### Returns
+
+IntPtr
+
+
+</section>
 
 </ApiRefPage>
 

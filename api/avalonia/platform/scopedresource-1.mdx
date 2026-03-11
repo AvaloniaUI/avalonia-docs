@@ -47,7 +47,7 @@ public class ScopedResource<T>
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> ScopedResource&lt;T&gt;
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> ScopedResource&lt;T&gt;
 </div>
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Implements:</span> IScopedResource&lt;&gt;, IDisposable
@@ -61,21 +61,42 @@ public class ScopedResource<T>
 | [Create](#uid-24e74643e5) | No summary available. |
 | [Dispose](#uid-b3f335283e) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-24e74643e5"></span>
 
-### Create
+### Create Method
 
 ```csharp
 public Avalonia.Platform.IScopedResource<T><T> Create(T value, Action dispose)
 ```
 
+#### Parameters
+
+`value` T
+
+
+`dispose` Action
+
+
+#### Returns
+
+Avalonia.Platform.IScopedResource&lt;T&gt;&lt;T&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-b3f335283e"></span>
 
-### Dispose
+### Dispose Method
 
 ```csharp
-public Void Dispose()
+public void Dispose()
 ```
+
+</section>
 
 ## Properties
 
@@ -83,13 +104,17 @@ public Void Dispose()
 | --- | --- |
 | [Value](#uid-7cfff6863a) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-7cfff6863a"></span>
 
-### Value
+### Value Property
 
 ```csharp
 public T Value { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

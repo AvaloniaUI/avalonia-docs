@@ -76,11 +76,13 @@ conversion from `T`
 
 | Name | Description |
 | --- | --- |
-| [Optional&lt;T&gt;](#uid-e4ea874621) | Initializes a new instance of the Avalonia.Data.Optional&amp;lt;T&amp;gt; struct with value. |
+| [Optional&lt;T&gt;](#uid-e4ea874621) | Initializes a new instance of the [Avalonia.Data.Optional&lt;T&gt;](xref:Avalonia.Data.Optional%601) struct with value. |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-e4ea874621"></span>
 
-### Optional&lt;T&gt;
+### Optional&lt;T&gt; Constructor
 
 Initializes a new instance of the [Avalonia.Data.Optional&lt;T&gt;](xref:Avalonia.Data.Optional%601) struct with value.
 
@@ -88,9 +90,14 @@ Initializes a new instance of the [Avalonia.Data.Optional&lt;T&gt;](xref:Avaloni
 public Optional<T>(T value)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `value` | The value. |
+#### Parameters
+
+`value` T
+
+The value.
+
+
+</section>
 
 ## Methods
 
@@ -99,44 +106,83 @@ public Optional<T>(T value)
 | [Equals (2 overloads)](#uid-daec08aaea) | No summary available. |
 | [GetHashCode](#uid-d44c766616) | No summary available. |
 | [GetValueOrDefault (3 overloads)](#uid-318fde8c7e) | Gets the value if present, otherwise the default value. |
-| [ToObject](#uid-425d9af8f7) | Casts the value (if any) to an Object. |
+| [ToObject](#uid-425d9af8f7) | Casts the value (if any) to an [object](xref:System.Object). |
 | [ToString](#uid-b1080f8c8b) | No summary available. |
 
 <span id="uid-daec08aaea"></span>
 
 ### Equals overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-ee2ccbf1e8"></span>
 
-#### Equals
+#### Equals Method
 
 ```csharp
-public Boolean Equals(Avalonia.Data.Optional<T><T> other)
+public bool Equals(Avalonia.Data.Optional<T><T> other)
 ```
+
+##### Parameters
+
+`other` Avalonia.Data.Optional&lt;T&gt;&lt;T&gt;
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-5de262a61b"></span>
 
-#### Equals
+#### Equals Method
 
 ```csharp
-public Boolean Equals(Object obj)
+public bool Equals(object obj)
 ```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-d44c766616"></span>
 
-### GetHashCode
+### GetHashCode Method
 
 ```csharp
-public Int32 GetHashCode()
+public int GetHashCode()
 ```
+
+#### Returns
+
+int
+
+
+</section>
 
 <span id="uid-318fde8c7e"></span>
 
 ### GetValueOrDefault overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-07601d6570"></span>
 
-#### GetValueOrDefault
+#### GetValueOrDefault Method
 
 Gets the value if present, otherwise the default value.
 
@@ -144,11 +190,20 @@ Gets the value if present, otherwise the default value.
 public TResult GetValueOrDefault<TResult>()
 ```
 
-Returns: The value.
+##### Returns
+
+T
+
+The value.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-5710a5acf3"></span>
 
-#### GetValueOrDefault
+#### GetValueOrDefault Method
 
 Gets the value if present, otherwise a default value.
 
@@ -156,51 +211,100 @@ Gets the value if present, otherwise a default value.
 public T GetValueOrDefault(T defaultValue)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `defaultValue` | The default value. |
+##### Parameters
 
-Returns: The value.
+`defaultValue` T
+
+The default value.
+
+
+##### Returns
+
+T
+
+The value.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-860fb12a64"></span>
 
-#### GetValueOrDefault
+#### GetValueOrDefault Method
 
 ```csharp
 public TResult GetValueOrDefault<TResult>(TResult defaultValue)
 ```
 
+##### Parameters
+
+`defaultValue` TResult
+
+
+##### Type Parameters
+
+`TResult`
+
+
+##### Returns
+
+TResult
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-425d9af8f7"></span>
 
-### ToObject
+### ToObject Method
 
-Casts the value (if any) to an [Object](xref:System.Object).
+Casts the value (if any) to an [object](xref:System.Object).
 
 ```csharp
-public Avalonia.Data.Optional<T><Object> ToObject()
+public Avalonia.Data.Optional<T><object> ToObject()
 ```
 
-Returns: The cast optional value.
+#### Returns
+
+Avalonia.Data.Optional&lt;T&gt;&lt;object&gt;
+
+The cast optional value.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-b1080f8c8b"></span>
 
-### ToString
+### ToString Method
 
 ```csharp
-public String ToString()
+public string ToString()
 ```
+
+#### Returns
+
+string
+
+
+</section>
 
 ## Properties
 
 | Name | Description |
 | --- | --- |
-| [Empty](#uid-0b3429dc46) | Returns an Avalonia.Data.Optional&amp;lt;T&amp;gt; without a value. |
+| [Empty](#uid-0b3429dc46) | Returns an [Avalonia.Data.Optional&lt;T&gt;](xref:Avalonia.Data.Optional%601) without a value. |
 | [HasValue](#uid-1727d4bf92) | Gets a value indicating whether a value is present. |
 | [Value](#uid-a37ba8c329) | Gets the value. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-0b3429dc46"></span>
 
-### Empty
+### Empty Property
 
 Returns an [Avalonia.Data.Optional&lt;T&gt;](xref:Avalonia.Data.Optional%601) without a value.
 
@@ -208,19 +312,27 @@ Returns an [Avalonia.Data.Optional&lt;T&gt;](xref:Avalonia.Data.Optional%601) wi
 public Avalonia.Data.Optional<T><T> Empty { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-1727d4bf92"></span>
 
-### HasValue
+### HasValue Property
 
 Gets a value indicating whether a value is present.
 
 ```csharp
-public Boolean HasValue { get; set; }
+public bool HasValue { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-a37ba8c329"></span>
 
-### Value
+### Value Property
 
 Gets the value.
 
@@ -231,6 +343,8 @@ public T Value { get; set; }
 #### Exceptions
 
 - [\[Avalonia.Data.Optional&amp;lt;T&amp;gt;.HasValue\](xref:Avalonia.Data.Optional%601.HasValue) is false.](xref:System.InvalidOperationException)
+
+</section>
 
 </ApiRefPage>
 

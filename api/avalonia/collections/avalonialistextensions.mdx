@@ -53,7 +53,7 @@ public class AvaloniaListExtensions
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> AvaloniaListExtensions
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> AvaloniaListExtensions
 </div>
 </div>
 
@@ -68,29 +68,113 @@ public class AvaloniaListExtensions
 
 ### ForEachItem overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-bc65e285d8"></span>
 
-#### ForEachItem
+#### ForEachItem Method
 
 ```csharp
-public IDisposable ForEachItem<T>(Avalonia.Collections.IAvaloniaReadOnlyList<T><T> collection, Action<T> added, Action<T> removed, Action reset, Boolean weakSubscription)
+public IDisposable ForEachItem<T>(Avalonia.Collections.IAvaloniaReadOnlyList<T><T> collection, Action<T> added, Action<T> removed, Action reset, bool weakSubscription)
 ```
+
+##### Parameters
+
+`collection` Avalonia.Collections.IAvaloniaReadOnlyList&lt;T&gt;&lt;T&gt;
+
+
+`added` Action&lt;T&gt;
+
+
+`removed` Action&lt;T&gt;
+
+
+`reset` Action
+
+
+`weakSubscription` bool
+
+
+##### Type Parameters
+
+`T`
+
+
+##### Returns
+
+IDisposable
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-dffc1a0e9c"></span>
 
-#### ForEachItem
+#### ForEachItem Method
 
 ```csharp
-public IDisposable ForEachItem<T>(Avalonia.Collections.IAvaloniaReadOnlyList<T><T> collection, Action<Int32, T> added, Action<Int32, T> removed, Action reset, Boolean weakSubscription)
+public IDisposable ForEachItem<T>(Avalonia.Collections.IAvaloniaReadOnlyList<T><T> collection, Action<int, T> added, Action<int, T> removed, Action reset, bool weakSubscription)
 ```
+
+##### Parameters
+
+`collection` Avalonia.Collections.IAvaloniaReadOnlyList&lt;T&gt;&lt;T&gt;
+
+
+`added` Action&lt;int, T&gt;
+
+
+`removed` Action&lt;int, T&gt;
+
+
+`reset` Action
+
+
+`weakSubscription` bool
+
+
+##### Type Parameters
+
+`T`
+
+
+##### Returns
+
+IDisposable
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-b6b7f5dd26"></span>
 
-### TrackItemPropertyChanged
+### TrackItemPropertyChanged Method
 
 ```csharp
-public IDisposable TrackItemPropertyChanged<T>(Avalonia.Collections.IAvaloniaReadOnlyList<T><T> collection, Action<Tuple<Object,System.ComponentModel.PropertyChangedEventArgs>> callback)
+public IDisposable TrackItemPropertyChanged<T>(Avalonia.Collections.IAvaloniaReadOnlyList<T><T> collection, Action<Tuple<object,System.ComponentModel.PropertyChangedEventArgs>> callback)
 ```
+
+#### Parameters
+
+`collection` Avalonia.Collections.IAvaloniaReadOnlyList&lt;T&gt;&lt;T&gt;
+
+
+`callback` Action&lt;Tuple&lt;object,System.ComponentModel.PropertyChangedEventArgs&gt;&gt;
+
+
+#### Type Parameters
+
+`T`
+
+
+#### Returns
+
+IDisposable
+
+
+</section>
 
 </ApiRefPage>
 

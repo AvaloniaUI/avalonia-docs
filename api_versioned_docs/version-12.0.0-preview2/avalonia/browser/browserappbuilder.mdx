@@ -47,7 +47,7 @@ public class BrowserAppBuilder
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> BrowserAppBuilder
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> BrowserAppBuilder
 </div>
 </div>
 
@@ -59,9 +59,11 @@ public class BrowserAppBuilder
 | [StartBrowserAppAsync](#uid-74a424b928) | Configures browser backend, loads avalonia javascript modules and creates a single view lifetime from the passed parameter. |
 | [UseBrowser](#uid-9393c37a35) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-c08431a003"></span>
 
-### SetupBrowserAppAsync
+### SetupBrowserAppAsync Method
 
 Loads avalonia javascript modules and configures browser backend.
 
@@ -69,34 +71,87 @@ Loads avalonia javascript modules and configures browser backend.
 public System.Threading.Tasks.Task SetupBrowserAppAsync(Avalonia.AppBuilder builder, Avalonia.Browser.BrowserPlatformOptions options)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `builder` | Application builder. |
-| `options` | Browser backend specific options. |
+#### Parameters
+
+`builder` [Avalonia.AppBuilder](xref:Avalonia.AppBuilder)
+
+Application builder.
+
+
+`options` [Avalonia.Browser.BrowserPlatformOptions](xref:Avalonia.Browser.BrowserPlatformOptions)
+
+Browser backend specific options.
+
+
+#### Returns
+
+System.Threading.Tasks.Task
+
+
+#### Remarks
+
+This method doesn't creates any avalonia views to be rendered. To do so create an [Avalonia.Browser.AvaloniaView](xref:Avalonia.Browser.AvaloniaView) object.
+Alternatively, you can call [Avalonia.Browser.BrowserAppBuilder.StartBrowserAppAsync(Avalonia.AppBuilder,string,Avalonia.Browser.BrowserPlatformOptions)](xref:Avalonia.Browser.BrowserAppBuilder.StartBrowserAppAsync%28Avalonia.AppBuilder%2CSystem.String%2CAvalonia.Browser.BrowserPlatformOptions%29) method instead of [Avalonia.Browser.BrowserAppBuilder.SetupBrowserAppAsync(Avalonia.AppBuilder,Avalonia.Browser.BrowserPlatformOptions)](xref:Avalonia.Browser.BrowserAppBuilder.SetupBrowserAppAsync%28Avalonia.AppBuilder%2CAvalonia.Browser.BrowserPlatformOptions%29).
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-74a424b928"></span>
 
-### StartBrowserAppAsync
+### StartBrowserAppAsync Method
 
 Configures browser backend, loads avalonia javascript modules and creates a single view lifetime from the passed parameter.
 
 ```csharp
-public System.Threading.Tasks.Task StartBrowserAppAsync(Avalonia.AppBuilder builder, String mainDivId, Avalonia.Browser.BrowserPlatformOptions options)
+public System.Threading.Tasks.Task StartBrowserAppAsync(Avalonia.AppBuilder builder, string mainDivId, Avalonia.Browser.BrowserPlatformOptions options)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `builder` | Application builder. |
-| `mainDivId` | ID of the html element where avalonia content should be rendered. |
-| `options` | Browser backend specific options. |
+#### Parameters
+
+`builder` [Avalonia.AppBuilder](xref:Avalonia.AppBuilder)
+
+Application builder.
+
+
+`mainDivId` string
+
+ID of the html element where avalonia content should be rendered.
+
+
+`options` [Avalonia.Browser.BrowserPlatformOptions](xref:Avalonia.Browser.BrowserPlatformOptions)
+
+Browser backend specific options.
+
+
+#### Returns
+
+System.Threading.Tasks.Task
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-9393c37a35"></span>
 
-### UseBrowser
+### UseBrowser Method
 
 ```csharp
 public Avalonia.AppBuilder UseBrowser(Avalonia.AppBuilder builder)
 ```
+
+#### Parameters
+
+`builder` [Avalonia.AppBuilder](xref:Avalonia.AppBuilder)
+
+
+#### Returns
+
+[Avalonia.AppBuilder](xref:Avalonia.AppBuilder)
+
+
+</section>
 
 </ApiRefPage>
 

@@ -47,7 +47,7 @@ public class VulkanPlatformGraphics
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> VulkanPlatformGraphics
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> VulkanPlatformGraphics
 </div>
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Implements:</span> <a href="../platform/iplatformgraphics">IPlatformGraphics</a>
@@ -60,13 +60,25 @@ public class VulkanPlatformGraphics
 | --- | --- |
 | [VulkanPlatformGraphics](#uid-2d5515d7ca) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-2d5515d7ca"></span>
 
-### VulkanPlatformGraphics
+### VulkanPlatformGraphics Constructor
 
 ```csharp
 public VulkanPlatformGraphics(Avalonia.Vulkan.VulkanPlatformGraphics.IVulkanDeviceFactory factory, Avalonia.Vulkan.VulkanPlatformSpecificOptions platformOptions)
 ```
+
+#### Parameters
+
+`factory` [Avalonia.Vulkan.VulkanPlatformGraphics.IVulkanDeviceFactory](xref:Avalonia.Vulkan.VulkanPlatformGraphics.IVulkanDeviceFactory)
+
+
+`platformOptions` [Avalonia.Vulkan.VulkanPlatformSpecificOptions](xref:Avalonia.Vulkan.VulkanPlatformSpecificOptions)
+
+
+</section>
 
 ## Methods
 
@@ -76,29 +88,64 @@ public VulkanPlatformGraphics(Avalonia.Vulkan.VulkanPlatformGraphics.IVulkanDevi
 | [GetSharedContext](#uid-b1e1106917) | No summary available. |
 | [TryCreate](#uid-f0836858b1) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-009ab660c6"></span>
 
-### CreateContext
+### CreateContext Method
 
 ```csharp
 public Avalonia.Platform.IPlatformGraphicsContext CreateContext()
 ```
 
+#### Returns
+
+[Avalonia.Platform.IPlatformGraphicsContext](xref:Avalonia.Platform.IPlatformGraphicsContext)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-b1e1106917"></span>
 
-### GetSharedContext
+### GetSharedContext Method
 
 ```csharp
 public Avalonia.Platform.IPlatformGraphicsContext GetSharedContext()
 ```
 
+#### Returns
+
+[Avalonia.Platform.IPlatformGraphicsContext](xref:Avalonia.Platform.IPlatformGraphicsContext)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-f0836858b1"></span>
 
-### TryCreate
+### TryCreate Method
 
 ```csharp
 public Avalonia.Vulkan.VulkanPlatformGraphics TryCreate(Avalonia.Vulkan.VulkanOptions options, Avalonia.Vulkan.VulkanPlatformSpecificOptions platformOptions)
 ```
+
+#### Parameters
+
+`options` [Avalonia.Vulkan.VulkanOptions](xref:Avalonia.Vulkan.VulkanOptions)
+
+
+`platformOptions` [Avalonia.Vulkan.VulkanPlatformSpecificOptions](xref:Avalonia.Vulkan.VulkanPlatformSpecificOptions)
+
+
+#### Returns
+
+[Avalonia.Vulkan.VulkanPlatformGraphics](xref:Avalonia.Vulkan.VulkanPlatformGraphics)
+
+
+</section>
 
 ## Properties
 
@@ -106,13 +153,17 @@ public Avalonia.Vulkan.VulkanPlatformGraphics TryCreate(Avalonia.Vulkan.VulkanOp
 | --- | --- |
 | [UsesSharedContext](#uid-fc4ec67e7d) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-fc4ec67e7d"></span>
 
-### UsesSharedContext
+### UsesSharedContext Property
 
 ```csharp
-public Boolean UsesSharedContext { get; set; }
+public bool UsesSharedContext { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

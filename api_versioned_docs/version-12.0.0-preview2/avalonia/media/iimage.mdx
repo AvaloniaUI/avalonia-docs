@@ -52,23 +52,38 @@ public interface IImage
 
 | Name | Description |
 | --- | --- |
-| [Draw](#uid-44209dd3b4) | Draws the image to a Avalonia.Media.DrawingContext. |
+| [Draw](#uid-44209dd3b4) | Draws the image to a [Avalonia.Media.DrawingContext](xref:Avalonia.Media.DrawingContext). |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-44209dd3b4"></span>
 
-### Draw
+### Draw Method
 
 Draws the image to a [Avalonia.Media.DrawingContext](xref:Avalonia.Media.DrawingContext).
 
 ```csharp
-public Void Draw(Avalonia.Media.DrawingContext context, Avalonia.Rect sourceRect, Avalonia.Rect destRect)
+public void Draw(Avalonia.Media.DrawingContext context, Avalonia.Rect sourceRect, Avalonia.Rect destRect)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `context` | The drawing context. |
-| `destRect` | The rect in the output to draw to. |
-| `sourceRect` | The rect in the image to draw. |
+#### Parameters
+
+`context` [Avalonia.Media.DrawingContext](xref:Avalonia.Media.DrawingContext)
+
+The drawing context.
+
+
+`sourceRect` [Avalonia.Rect](xref:Avalonia.Rect)
+
+The rect in the image to draw.
+
+
+`destRect` [Avalonia.Rect](xref:Avalonia.Rect)
+
+The rect in the output to draw to.
+
+
+</section>
 
 ## Properties
 
@@ -76,15 +91,19 @@ public Void Draw(Avalonia.Media.DrawingContext context, Avalonia.Rect sourceRect
 | --- | --- |
 | [Size](#uid-e8ee007c6b) | Gets the size of the image, in device independent pixels. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-e8ee007c6b"></span>
 
-### Size
+### Size Property
 
 Gets the size of the image, in device independent pixels.
 
 ```csharp
 public Avalonia.Size Size { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

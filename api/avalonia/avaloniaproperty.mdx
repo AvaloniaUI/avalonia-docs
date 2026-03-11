@@ -53,7 +53,7 @@ public class AvaloniaProperty
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> AvaloniaProperty
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> AvaloniaProperty
 </div>
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Derived types:</span> <a href="avaloniaproperty-1">AvaloniaProperty&lt;TValue&gt;</a>
@@ -67,20 +67,22 @@ public class AvaloniaProperty
 
 | Name | Description |
 | --- | --- |
-| [Bind](#uid-c40d1b5dcb) | Returns a binding accessor that can be passed to Avalonia.AvaloniaObject's [] operator to initiate a binding. |
+| [Bind](#uid-c40d1b5dcb) | Returns a binding accessor that can be passed to [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject)'s [] operator to initiate a binding. |
 | [Equals (2 overloads)](#uid-3837f11261) | No summary available. |
 | [GetHashCode](#uid-7d1eae41db) | No summary available. |
 | [GetMetadata (3 overloads)](#uid-5f3ddcc8fd) | No summary available. |
-| [IsValidValue](#uid-636d332b13) | Checks whether the value is valid for the property. |
+| [IsValidValue](#uid-636d332b13) | Checks whether the `value` is valid for the property. |
 | [Register](#uid-2e25cc2d00) | No summary available. |
 | [RegisterAttached (2 overloads)](#uid-769b8defa4) | No summary available. |
 | [RegisterDirect](#uid-2e19e6c29e) | No summary available. |
 | [ToString](#uid-4c7006dd35) | Gets the string representation of the property. |
 | [Unregister](#uid-919cfa2853) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-c40d1b5dcb"></span>
 
-### Bind
+### Bind Method
 
 Returns a binding accessor that can be passed to [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject)'s []
 operator to initiate a binding.
@@ -89,51 +91,115 @@ operator to initiate a binding.
 public Avalonia.Data.IndexerDescriptor Bind()
 ```
 
-Returns: A [Avalonia.Data.IndexerDescriptor](xref:Avalonia.Data.IndexerDescriptor).
+#### Returns
+
+[Avalonia.Data.IndexerDescriptor](xref:Avalonia.Data.IndexerDescriptor)
+
+A [Avalonia.Data.IndexerDescriptor](xref:Avalonia.Data.IndexerDescriptor).
+
+
+#### Remarks
+
+The ! and ~ operators are short forms of this.
+
+</section>
 
 <span id="uid-3837f11261"></span>
 
 ### Equals overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-d30f98c66c"></span>
 
-#### Equals
+#### Equals Method
 
 ```csharp
-public Boolean Equals(Avalonia.AvaloniaProperty other)
+public bool Equals(Avalonia.AvaloniaProperty other)
 ```
+
+##### Parameters
+
+`other` [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-bb0e528aa8"></span>
 
-#### Equals
+#### Equals Method
 
 ```csharp
-public Boolean Equals(Object obj)
+public bool Equals(object obj)
 ```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-7d1eae41db"></span>
 
-### GetHashCode
+### GetHashCode Method
 
 ```csharp
-public Int32 GetHashCode()
+public int GetHashCode()
 ```
+
+#### Returns
+
+int
+
+
+</section>
 
 <span id="uid-5f3ddcc8fd"></span>
 
 ### GetMetadata overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-e74154aebe"></span>
 
-#### GetMetadata
+#### GetMetadata Method
 
 ```csharp
 public Avalonia.AvaloniaPropertyMetadata GetMetadata<T>()
 ```
 
+##### Type Parameters
+
+`T`
+
+
+##### Returns
+
+[Avalonia.AvaloniaPropertyMetadata](xref:Avalonia.AvaloniaPropertyMetadata)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-72e5f3b9f5"></span>
 
-#### GetMetadata
+#### GetMetadata Method
 
 Gets the [Avalonia.AvaloniaPropertyMetadata](xref:Avalonia.AvaloniaPropertyMetadata) which applies to this property when it is used with the specified object.
 
@@ -141,99 +207,312 @@ Gets the [Avalonia.AvaloniaPropertyMetadata](xref:Avalonia.AvaloniaPropertyMetad
 public Avalonia.AvaloniaPropertyMetadata GetMetadata(Avalonia.AvaloniaObject owner)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `owner` | The object for which to retrieve metadata. |
+##### Parameters
+
+`owner` [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject)
+
+The object for which to retrieve metadata.
+
+
+##### Returns
+
+[Avalonia.AvaloniaPropertyMetadata](xref:Avalonia.AvaloniaPropertyMetadata)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-ae1a38fb68"></span>
 
-#### GetMetadata
+#### GetMetadata Method
 
 ```csharp
 public Avalonia.AvaloniaPropertyMetadata GetMetadata(Type type)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `type` | The type for which to retrieve metadata. |
+##### Parameters
+
+`type` Type
+
+The type for which to retrieve metadata.
+
+
+##### Returns
+
+[Avalonia.AvaloniaPropertyMetadata](xref:Avalonia.AvaloniaPropertyMetadata)
+
+
+##### Remarks
+
+For performance, prefer the [Avalonia.AvaloniaProperty.GetMetadata(Avalonia.AvaloniaObject)](xref:Avalonia.AvaloniaProperty.GetMetadata%28Avalonia.AvaloniaObject%29) overload when possible.
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-636d332b13"></span>
 
-### IsValidValue
+### IsValidValue Method
 
 Checks whether the `value` is valid for the property.
 
 ```csharp
-public Boolean IsValidValue(Object value)
+public bool IsValidValue(object value)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `value` | The value. |
+#### Parameters
 
-Returns: True if the value is valid, otherwise false.
+`value` object
+
+The value.
+
+
+#### Returns
+
+bool
+
+True if the value is valid, otherwise false.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-2e25cc2d00"></span>
 
-### Register
+### Register Method
 
 ```csharp
-public Avalonia.StyledProperty<TValue><TValue> Register<TOwner, TValue>(String name, TValue defaultValue, Boolean inherits, Avalonia.Data.BindingMode defaultBindingMode, Func<TValue, Boolean> validate, Func<Avalonia.AvaloniaObject, TValue, TValue> coerce, Boolean enableDataValidation)
+public Avalonia.StyledProperty<TValue><TValue> Register<TOwner, TValue>(string name, TValue defaultValue, bool inherits, Avalonia.Data.BindingMode defaultBindingMode, Func<TValue, bool> validate, Func<Avalonia.AvaloniaObject, TValue, TValue> coerce, bool enableDataValidation)
 ```
+
+#### Parameters
+
+`name` string
+
+
+`defaultValue` TValue
+
+
+`inherits` bool
+
+
+`defaultBindingMode` [Avalonia.Data.BindingMode](xref:Avalonia.Data.BindingMode)
+
+
+`validate` Func&lt;TValue, bool&gt;
+
+
+`coerce` Func&lt;[Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject), TValue, TValue&gt;
+
+
+`enableDataValidation` bool
+
+
+#### Type Parameters
+
+`TOwner`
+
+
+`TValue`
+
+
+#### Returns
+
+Avalonia.StyledProperty&lt;TValue&gt;&lt;TValue&gt;
+
+
+</section>
 
 <span id="uid-769b8defa4"></span>
 
 ### RegisterAttached overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-343394276c"></span>
 
-#### RegisterAttached
+#### RegisterAttached Method
 
 ```csharp
-public Avalonia.AttachedProperty<TValue><TValue> RegisterAttached<THost, TValue>(String name, Type ownerType, TValue defaultValue, Boolean inherits, Avalonia.Data.BindingMode defaultBindingMode, Func<TValue, Boolean> validate, Func<Avalonia.AvaloniaObject, TValue, TValue> coerce)
+public Avalonia.AttachedProperty<TValue><TValue> RegisterAttached<THost, TValue>(string name, Type ownerType, TValue defaultValue, bool inherits, Avalonia.Data.BindingMode defaultBindingMode, Func<TValue, bool> validate, Func<Avalonia.AvaloniaObject, TValue, TValue> coerce)
 ```
+
+##### Parameters
+
+`name` string
+
+
+`ownerType` Type
+
+
+`defaultValue` TValue
+
+
+`inherits` bool
+
+
+`defaultBindingMode` [Avalonia.Data.BindingMode](xref:Avalonia.Data.BindingMode)
+
+
+`validate` Func&lt;TValue, bool&gt;
+
+
+`coerce` Func&lt;[Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject), TValue, TValue&gt;
+
+
+##### Type Parameters
+
+`THost`
+
+
+`TValue`
+
+
+##### Returns
+
+Avalonia.AttachedProperty&lt;TValue&gt;&lt;TValue&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-420e6c58d9"></span>
 
-#### RegisterAttached
+#### RegisterAttached Method
 
 ```csharp
-public Avalonia.AttachedProperty<TValue><TValue> RegisterAttached<TOwner, THost, TValue>(String name, TValue defaultValue, Boolean inherits, Avalonia.Data.BindingMode defaultBindingMode, Func<TValue, Boolean> validate, Func<Avalonia.AvaloniaObject, TValue, TValue> coerce)
+public Avalonia.AttachedProperty<TValue><TValue> RegisterAttached<TOwner, THost, TValue>(string name, TValue defaultValue, bool inherits, Avalonia.Data.BindingMode defaultBindingMode, Func<TValue, bool> validate, Func<Avalonia.AvaloniaObject, TValue, TValue> coerce)
 ```
+
+##### Parameters
+
+`name` string
+
+
+`defaultValue` TValue
+
+
+`inherits` bool
+
+
+`defaultBindingMode` [Avalonia.Data.BindingMode](xref:Avalonia.Data.BindingMode)
+
+
+`validate` Func&lt;TValue, bool&gt;
+
+
+`coerce` Func&lt;[Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject), TValue, TValue&gt;
+
+
+##### Type Parameters
+
+`TOwner`
+
+
+`THost`
+
+
+`TValue`
+
+
+##### Returns
+
+Avalonia.AttachedProperty&lt;TValue&gt;&lt;TValue&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-2e19e6c29e"></span>
 
-### RegisterDirect
+### RegisterDirect Method
 
 ```csharp
-public Avalonia.DirectProperty<TOwner,TValue><TOwner, TValue> RegisterDirect<TOwner, TValue>(String name, Func<TOwner, TValue> getter, Action<TOwner, TValue> setter, TValue unsetValue, Avalonia.Data.BindingMode defaultBindingMode, Boolean enableDataValidation)
+public Avalonia.DirectProperty<TOwner,TValue><TOwner, TValue> RegisterDirect<TOwner, TValue>(string name, Func<TOwner, TValue> getter, Action<TOwner, TValue> setter, TValue unsetValue, Avalonia.Data.BindingMode defaultBindingMode, bool enableDataValidation)
 ```
+
+#### Parameters
+
+`name` string
+
+
+`getter` Func&lt;TOwner, TValue&gt;
+
+
+`setter` Action&lt;TOwner, TValue&gt;
+
+
+`unsetValue` TValue
+
+
+`defaultBindingMode` [Avalonia.Data.BindingMode](xref:Avalonia.Data.BindingMode)
+
+
+`enableDataValidation` bool
+
+
+#### Type Parameters
+
+`TOwner`
+
+
+`TValue`
+
+
+#### Returns
+
+Avalonia.DirectProperty&lt;TOwner,TValue&gt;&lt;TOwner, TValue&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-4c7006dd35"></span>
 
-### ToString
+### ToString Method
 
 Gets the string representation of the property.
 
 ```csharp
-public String ToString()
+public string ToString()
 ```
 
-Returns: The property's string representation.
+#### Returns
+
+string
+
+The property's string representation.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-919cfa2853"></span>
 
-### Unregister
+### Unregister Method
 
 ```csharp
-public Void Unregister(Type type)
+public void Unregister(Type type)
 ```
+
+#### Parameters
+
+`type` Type
+
+
+</section>
 
 ## Properties
 
 | Name | Description |
 | --- | --- |
-| [Changed](#uid-91ae21dc93) | Gets an observable that is fired when this property changes on any Avalonia.AvaloniaObject instance. |
+| [Changed](#uid-91ae21dc93) | Gets an observable that is fired when this property changes on any [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject) instance. |
 | [Inherits](#uid-cedb5e4e38) | Gets a value indicating whether the property inherits its value. |
 | [IsAttached](#uid-33c0761938) | Gets a value indicating whether this is an attached property. |
 | [IsDirect](#uid-af873b4d3c) | Gets a value indicating whether this is a direct property. |
@@ -242,9 +521,11 @@ public Void Unregister(Type type)
 | [OwnerType](#uid-efffba9cb8) | Gets the type of the class that registered the property. |
 | [PropertyType](#uid-c1e5099c6c) | Gets the type of the property's value. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-91ae21dc93"></span>
 
-### Changed
+### Changed Property
 
 Gets an observable that is fired when this property changes on any
 [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject) instance.
@@ -253,62 +534,89 @@ Gets an observable that is fired when this property changes on any
 public IObservable<Avalonia.AvaloniaPropertyChangedEventArgs> Changed { get; set; }
 ```
 
-Value: An observable that is fired when this property changes on any
+#### Value
+
+An observable that is fired when this property changes on any
 [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject) instance.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-cedb5e4e38"></span>
 
-### Inherits
+### Inherits Property
 
 Gets a value indicating whether the property inherits its value.
 
 ```csharp
-public Boolean Inherits { get; set; }
+public bool Inherits { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-33c0761938"></span>
 
-### IsAttached
+### IsAttached Property
 
 Gets a value indicating whether this is an attached property.
 
 ```csharp
-public Boolean IsAttached { get; set; }
+public bool IsAttached { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-af873b4d3c"></span>
 
-### IsDirect
+### IsDirect Property
 
 Gets a value indicating whether this is a direct property.
 
 ```csharp
-public Boolean IsDirect { get; set; }
+public bool IsDirect { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-2b867c83ad"></span>
 
-### IsReadOnly
+### IsReadOnly Property
 
 Gets a value indicating whether this is a readonly property.
 
 ```csharp
-public Boolean IsReadOnly { get; set; }
+public bool IsReadOnly { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-228b4a9a70"></span>
 
-### Name
+### Name Property
 
 Gets the name of the property.
 
 ```csharp
-public String Name { get; set; }
+public string Name { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-efffba9cb8"></span>
 
-### OwnerType
+### OwnerType Property
 
 Gets the type of the class that registered the property.
 
@@ -316,9 +624,13 @@ Gets the type of the class that registered the property.
 public Type OwnerType { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-c1e5099c6c"></span>
 
-### PropertyType
+### PropertyType Property
 
 Gets the type of the property's value.
 
@@ -326,21 +638,27 @@ Gets the type of the property's value.
 public Type PropertyType { get; set; }
 ```
 
+</section>
+
 ## Fields
 
 | Name | Description |
 | --- | --- |
 | [UnsetValue](#uid-d3a3dfda6d) | Represents an unset property value. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-d3a3dfda6d"></span>
 
-### UnsetValue
+### UnsetValue Field
 
 Represents an unset property value.
 
 ```csharp
-public Object UnsetValue
+public object UnsetValue
 ```
+
+</section>
 
 </ApiRefPage>
 

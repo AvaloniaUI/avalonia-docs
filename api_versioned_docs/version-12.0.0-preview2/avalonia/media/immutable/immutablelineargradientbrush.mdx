@@ -53,7 +53,7 @@ public class ImmutableLinearGradientBrush
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="immutablegradientbrush">ImmutableGradientBrush</a> <span className="apiref-page__relation-separator">-&gt;</span> ImmutableLinearGradientBrush
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="immutablegradientbrush">ImmutableGradientBrush</a> <span className="apiref-page__relation-separator">-&gt;</span> ImmutableLinearGradientBrush
 </div>
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Implements:</span> <a href="../ibrush">IBrush</a>, <a href="../igradientbrush">IGradientBrush</a>, <a href="../ilineargradientbrush">ILinearGradientBrush</a>
@@ -64,15 +64,17 @@ public class ImmutableLinearGradientBrush
 
 | Name | Description |
 | --- | --- |
-| [ImmutableLinearGradientBrush (2 overloads)](#uid-214a69a3db) | Initializes a new instance of the Avalonia.Media.Immutable.ImmutableLinearGradientBrush class. |
+| [ImmutableLinearGradientBrush (2 overloads)](#uid-214a69a3db) | Initializes a new instance of the [Avalonia.Media.Immutable.ImmutableLinearGradientBrush](xref:Avalonia.Media.Immutable.ImmutableLinearGradientBrush) class. |
 
 <span id="uid-214a69a3db"></span>
 
 ### ImmutableLinearGradientBrush overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-0d51c31f5b"></span>
 
-#### ImmutableLinearGradientBrush
+#### ImmutableLinearGradientBrush Constructor
 
 Initializes a new instance of the [Avalonia.Media.Immutable.ImmutableLinearGradientBrush](xref:Avalonia.Media.Immutable.ImmutableLinearGradientBrush) class.
 
@@ -80,17 +82,49 @@ Initializes a new instance of the [Avalonia.Media.Immutable.ImmutableLinearGradi
 public ImmutableLinearGradientBrush(Avalonia.Media.LinearGradientBrush source)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `source` | The brush from which this brush's properties should be copied. |
+##### Parameters
+
+`source` [Avalonia.Media.LinearGradientBrush](xref:Avalonia.Media.LinearGradientBrush)
+
+The brush from which this brush's properties should be copied.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-d4f3798fb1"></span>
 
-#### ImmutableLinearGradientBrush
+#### ImmutableLinearGradientBrush Constructor
 
 ```csharp
-public ImmutableLinearGradientBrush(System.Collections.Generic.IReadOnlyList<Avalonia.Media.Immutable.ImmutableGradientStop> gradientStops, Double opacity, Avalonia.Media.Immutable.ImmutableTransform transform, Nullable<Avalonia.RelativePoint> transformOrigin, Avalonia.Media.GradientSpreadMethod spreadMethod, Nullable<Avalonia.RelativePoint> startPoint, Nullable<Avalonia.RelativePoint> endPoint)
+public ImmutableLinearGradientBrush(System.Collections.Generic.IReadOnlyList<Avalonia.Media.Immutable.ImmutableGradientStop> gradientStops, double opacity, Avalonia.Media.Immutable.ImmutableTransform transform, Nullable<Avalonia.RelativePoint> transformOrigin, Avalonia.Media.GradientSpreadMethod spreadMethod, Nullable<Avalonia.RelativePoint> startPoint, Nullable<Avalonia.RelativePoint> endPoint)
 ```
+
+##### Parameters
+
+`gradientStops` System.Collections.Generic.IReadOnlyList&lt;[Avalonia.Media.Immutable.ImmutableGradientStop](xref:Avalonia.Media.Immutable.ImmutableGradientStop)&gt;
+
+
+`opacity` double
+
+
+`transform` [Avalonia.Media.Immutable.ImmutableTransform](xref:Avalonia.Media.Immutable.ImmutableTransform)
+
+
+`transformOrigin` Nullable&lt;[Avalonia.RelativePoint](xref:Avalonia.RelativePoint)&gt;
+
+
+`spreadMethod` [Avalonia.Media.GradientSpreadMethod](xref:Avalonia.Media.GradientSpreadMethod)
+
+
+`startPoint` Nullable&lt;[Avalonia.RelativePoint](xref:Avalonia.RelativePoint)&gt;
+
+
+`endPoint` Nullable&lt;[Avalonia.RelativePoint](xref:Avalonia.RelativePoint)&gt;
+
+
+</section>
 
 ## Properties
 
@@ -98,15 +132,17 @@ public ImmutableLinearGradientBrush(System.Collections.Generic.IReadOnlyList<Ava
 | --- | --- |
 | [EndPoint](#uid-3cf5b8dd45) | Gets or sets the end point for the gradient. |
 | [StartPoint](#uid-5b82bd5fa5) | Gets or sets the start point for the gradient. |
-| [GradientStops (Inherited from ImmutableGradientBrush)](immutablegradientbrush.mdx#uid-9d195fdf3e) | Gets the brush's gradient stops. |
-| [Opacity (Inherited from ImmutableGradientBrush)](immutablegradientbrush.mdx#uid-5f6e07ee47) | Gets the opacity of the brush. |
-| [SpreadMethod (Inherited from ImmutableGradientBrush)](immutablegradientbrush.mdx#uid-9b5fcc3168) | Gets the brush's spread method that defines how to draw a gradient that doesn't fill the bounds of the destination control. |
-| [Transform (Inherited from ImmutableGradientBrush)](immutablegradientbrush.mdx#uid-2c0dd3ffd3) | Gets the transform of the brush. |
-| [TransformOrigin (Inherited from ImmutableGradientBrush)](immutablegradientbrush.mdx#uid-56b8b5945b) | Gets the transform origin of the brush |
+| [GradientStops](immutablegradientbrush.mdx#uid-9d195fdf3e) | Gets the brush's gradient stops. Inherited from [ImmutableGradientBrush](immutablegradientbrush.mdx). |
+| [Opacity](immutablegradientbrush.mdx#uid-5f6e07ee47) | Gets the opacity of the brush. Inherited from [ImmutableGradientBrush](immutablegradientbrush.mdx). |
+| [SpreadMethod](immutablegradientbrush.mdx#uid-9b5fcc3168) | Gets the brush's spread method that defines how to draw a gradient that doesn't fill the bounds of the destination control. Inherited from [ImmutableGradientBrush](immutablegradientbrush.mdx). |
+| [Transform](immutablegradientbrush.mdx#uid-2c0dd3ffd3) | Gets the transform of the brush. Inherited from [ImmutableGradientBrush](immutablegradientbrush.mdx). |
+| [TransformOrigin](immutablegradientbrush.mdx#uid-56b8b5945b) | Gets the transform origin of the brush Inherited from [ImmutableGradientBrush](immutablegradientbrush.mdx). |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-3cf5b8dd45"></span>
 
-### EndPoint
+### EndPoint Property
 
 Gets or sets the end point for the gradient.
 
@@ -114,15 +150,21 @@ Gets or sets the end point for the gradient.
 public Avalonia.RelativePoint EndPoint { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-5b82bd5fa5"></span>
 
-### StartPoint
+### StartPoint Property
 
 Gets or sets the start point for the gradient.
 
 ```csharp
 public Avalonia.RelativePoint StartPoint { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

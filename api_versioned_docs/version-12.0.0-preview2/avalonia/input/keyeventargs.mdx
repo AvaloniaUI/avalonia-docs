@@ -66,13 +66,17 @@ public class KeyEventArgs
 | --- | --- |
 | [KeyEventArgs](#uid-28c328981c) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-28c328981c"></span>
 
-### KeyEventArgs
+### KeyEventArgs Constructor
 
 ```csharp
 public KeyEventArgs()
 ```
+
+</section>
 
 ## Properties
 
@@ -83,14 +87,16 @@ public KeyEventArgs()
 | [KeyModifiers](#uid-de779f0376) | No summary available. |
 | [KeySymbol](#uid-59ae3f9572) | Gets the unicode symbol of the key, or null if none is applicable. |
 | [PhysicalKey](#uid-64f9cd5a30) | Gets the physical key for the associated event. |
-| [Handled (Inherited from RoutedEventArgs)](../interactivity/routedeventargs.mdx#uid-204d2af354) | Gets or sets a value indicating whether the routed event has already been handled. |
-| [Route (Inherited from RoutedEventArgs)](../interactivity/routedeventargs.mdx#uid-751be73db9) | Gets or sets the routing strategy (direct, bubbling, or tunneling) of the routed event. |
-| [RoutedEvent (Inherited from RoutedEventArgs)](../interactivity/routedeventargs.mdx#uid-4e102999d9) | Gets or sets the routed event associated with these event args. |
-| [Source (Inherited from RoutedEventArgs)](../interactivity/routedeventargs.mdx#uid-4385b523d5) | Gets or sets the source object that raised the routed event. |
+| [Handled](../interactivity/routedeventargs.mdx#uid-204d2af354) | Gets or sets a value indicating whether the routed event has already been handled. Inherited from [RoutedEventArgs](../interactivity/routedeventargs.mdx). |
+| [Route](../interactivity/routedeventargs.mdx#uid-751be73db9) | Gets or sets the routing strategy (direct, bubbling, or tunneling) of the routed event. Inherited from [RoutedEventArgs](../interactivity/routedeventargs.mdx). |
+| [RoutedEvent](../interactivity/routedeventargs.mdx#uid-4e102999d9) | Gets or sets the routed event associated with these event args. Inherited from [RoutedEventArgs](../interactivity/routedeventargs.mdx). |
+| [Source](../interactivity/routedeventargs.mdx#uid-4385b523d5) | Gets or sets the source object that raised the routed event. Inherited from [RoutedEventArgs](../interactivity/routedeventargs.mdx). |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-c74fcb4c9f"></span>
 
-### Key
+### Key Property
 
 Gets the virtual-key for the associated event.
 A given physical key can result in different virtual keys depending on the current keyboard layout.
@@ -107,14 +113,26 @@ this property returns:
 public Avalonia.Input.Key Key { get; set; }
 ```
 
+#### Remarks
+
+This property should be used for letter-related shortcuts only.
+Prefer using [Avalonia.Input.KeyEventArgs.PhysicalKey](xref:Avalonia.Input.KeyEventArgs.PhysicalKey) if you need to refer to a key given its position on the keyboard (a
+common usage is moving the player with WASD-like keys in games), or [Avalonia.Input.KeyEventArgs.KeySymbol](xref:Avalonia.Input.KeyEventArgs.KeySymbol) if you want to know
+which character the key will output.
+Avoid using this for shortcuts related to punctuation keys, as they differ wildly depending on keyboard layouts.
+
 #### See also
 
 - [Avalonia.Input.KeyEventArgs.PhysicalKey](xref:Avalonia.Input.KeyEventArgs.PhysicalKey)
 - [Avalonia.Input.KeyEventArgs.KeySymbol](xref:Avalonia.Input.KeyEventArgs.KeySymbol)
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-b372dcbc8c"></span>
 
-### KeyDeviceType
+### KeyDeviceType Property
 
 Type of the device that fire the event
 
@@ -122,17 +140,25 @@ Type of the device that fire the event
 public Avalonia.Input.KeyDeviceType KeyDeviceType { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-de779f0376"></span>
 
-### KeyModifiers
+### KeyModifiers Property
 
 ```csharp
 public Avalonia.Input.KeyModifiers KeyModifiers { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-59ae3f9572"></span>
 
-### KeySymbol
+### KeySymbol Property
 
 Gets the unicode symbol of the key, or null if none is applicable.
 
@@ -144,12 +170,16 @@ this property returns:
 - `я` for a Russian (JCUKEN) layout
 
 ```csharp
-public String KeySymbol { get; set; }
+public string KeySymbol { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-64f9cd5a30"></span>
 
-### PhysicalKey
+### PhysicalKey Property
 
 Gets the physical key for the associated event.
 
@@ -160,10 +190,17 @@ US English QWERTY keyboard.
 public Avalonia.Input.PhysicalKey PhysicalKey { get; set; }
 ```
 
+#### Remarks
+
+Use this property if you need to refer to a key given its position on the keyboard (a common usage is moving the
+player with WASD-like keys).
+
 #### See also
 
 - [Avalonia.Input.KeyEventArgs.Key](xref:Avalonia.Input.KeyEventArgs.Key)
 - [Avalonia.Input.KeyEventArgs.KeySymbol](xref:Avalonia.Input.KeyEventArgs.KeySymbol)
+
+</section>
 
 </ApiRefPage>
 

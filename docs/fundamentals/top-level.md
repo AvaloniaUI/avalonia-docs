@@ -110,6 +110,16 @@ Gets the scaling factor to use in rendering.
 double RenderScaling { get; }
 ```
 
+### Screens
+
+Gets the [`Screens`](/api/avalonia/controls/screens) instance that provides information about connected monitors, including resolution, working area, scaling, and orientation.
+
+```csharp
+Screens Screens { get; }
+```
+
+Use `Screens` to query the primary display, enumerate all displays, or find the screen containing a specific window or point. See [Working with screens](/docs/app-development/window-management#working-with-screens) for usage examples.
+
 ### RequestedThemeVariant
 
 Gets or sets the UI theme variant that is used by the control (and its child elements) for resource determination. The UI theme you specify with `ThemeVariant` can override the app-level `ThemeVariant`.
@@ -244,6 +254,7 @@ IPlatformHandle? TryGetPlatformHandle()
 
 - [Main window](/docs/fundamentals/main-window)
 - [Application lifetimes](/docs/fundamentals/application-lifetimes)
+- [Working with screens](/docs/app-development/window-management#working-with-screens): Query monitor resolution, bounds, and scaling.
 - [Custom rendering](/docs/graphics-animation/custom-rendering): Custom drawing and render-thread callbacks.
 - [Composition animations](/docs/graphics-animation/composition-animations): Render-thread property animations.
 - [`TopLevel.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/TopLevel.cs)

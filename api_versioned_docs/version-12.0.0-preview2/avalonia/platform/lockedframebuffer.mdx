@@ -47,7 +47,7 @@ public class LockedFramebuffer
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> LockedFramebuffer
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> LockedFramebuffer
 </div>
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Implements:</span> <a href="ilockedframebuffer">ILockedFramebuffer</a>, IDisposable
@@ -60,13 +60,40 @@ public class LockedFramebuffer
 | --- | --- |
 | [LockedFramebuffer](#uid-b0418d2849) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-b0418d2849"></span>
 
-### LockedFramebuffer
+### LockedFramebuffer Constructor
 
 ```csharp
-public LockedFramebuffer(IntPtr address, Avalonia.PixelSize size, Int32 rowBytes, Avalonia.Vector dpi, Avalonia.Platform.PixelFormat format, Avalonia.Platform.AlphaFormat alphaFormat, Action onDispose)
+public LockedFramebuffer(IntPtr address, Avalonia.PixelSize size, int rowBytes, Avalonia.Vector dpi, Avalonia.Platform.PixelFormat format, Avalonia.Platform.AlphaFormat alphaFormat, Action onDispose)
 ```
+
+#### Parameters
+
+`address` IntPtr
+
+
+`size` [Avalonia.PixelSize](xref:Avalonia.PixelSize)
+
+
+`rowBytes` int
+
+
+`dpi` [Avalonia.Vector](xref:Avalonia.Vector)
+
+
+`format` [Avalonia.Platform.PixelFormat](xref:Avalonia.Platform.PixelFormat)
+
+
+`alphaFormat` [Avalonia.Platform.AlphaFormat](xref:Avalonia.Platform.AlphaFormat)
+
+
+`onDispose` Action
+
+
+</section>
 
 ## Methods
 
@@ -74,13 +101,17 @@ public LockedFramebuffer(IntPtr address, Avalonia.PixelSize size, Int32 rowBytes
 | --- | --- |
 | [Dispose](#uid-b9cdd5099c) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-b9cdd5099c"></span>
 
-### Dispose
+### Dispose Method
 
 ```csharp
-public Void Dispose()
+public void Dispose()
 ```
+
+</section>
 
 ## Properties
 
@@ -93,53 +124,77 @@ public Void Dispose()
 | [RowBytes](#uid-d68a1167f5) | No summary available. |
 | [Size](#uid-05c8934baf) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-620c1cd058"></span>
 
-### Address
+### Address Property
 
 ```csharp
 public IntPtr Address { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-7a2192d1e4"></span>
 
-### AlphaFormat
+### AlphaFormat Property
 
 ```csharp
 public Avalonia.Platform.AlphaFormat AlphaFormat { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-574475538d"></span>
 
-### Dpi
+### Dpi Property
 
 ```csharp
 public Avalonia.Vector Dpi { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-07fed7ea3d"></span>
 
-### Format
+### Format Property
 
 ```csharp
 public Avalonia.Platform.PixelFormat Format { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-d68a1167f5"></span>
 
-### RowBytes
+### RowBytes Property
 
 ```csharp
-public Int32 RowBytes { get; set; }
+public int RowBytes { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-05c8934baf"></span>
 
-### Size
+### Size Property
 
 ```csharp
 public Avalonia.PixelSize Size { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

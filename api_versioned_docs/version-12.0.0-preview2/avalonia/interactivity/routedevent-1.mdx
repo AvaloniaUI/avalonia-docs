@@ -47,7 +47,7 @@ public class RoutedEvent<TEventArgs>
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="routedevent">RoutedEvent</a> <span className="apiref-page__relation-separator">-&gt;</span> RoutedEvent&lt;TEventArgs&gt;
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="routedevent">RoutedEvent</a> <span className="apiref-page__relation-separator">-&gt;</span> RoutedEvent&lt;TEventArgs&gt;
 </div>
 </div>
 
@@ -57,42 +57,82 @@ public class RoutedEvent<TEventArgs>
 | --- | --- |
 | [RoutedEvent&lt;TEventArgs&gt;](#uid-6026b8f2fd) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-6026b8f2fd"></span>
 
-### RoutedEvent&lt;TEventArgs&gt;
+### RoutedEvent&lt;TEventArgs&gt; Constructor
 
 ```csharp
-public RoutedEvent<TEventArgs>(String name, Avalonia.Interactivity.RoutingStrategies routingStrategies, Type ownerType)
+public RoutedEvent<TEventArgs>(string name, Avalonia.Interactivity.RoutingStrategies routingStrategies, Type ownerType)
 ```
+
+#### Parameters
+
+`name` string
+
+
+`routingStrategies` [Avalonia.Interactivity.RoutingStrategies](xref:Avalonia.Interactivity.RoutingStrategies)
+
+
+`ownerType` Type
+
+
+</section>
 
 ## Methods
 
 | Name | Description |
 | --- | --- |
 | [AddClassHandler](#uid-0a66ffb7c2) | No summary available. |
-| [AddClassHandler (Inherited from RoutedEvent)](routedevent.mdx#uid-b6d8630c3e) | No summary available. |
-| [Register (2 overloads) (Inherited from RoutedEvent)](routedevent.mdx#uid-4633745f66) | No summary available. |
-| [ToString (Inherited from RoutedEvent)](routedevent.mdx#uid-091891d52b) | No summary available. |
+| [AddClassHandler](routedevent.mdx#uid-b6d8630c3e) | Inherited from [RoutedEvent](routedevent.mdx). |
+| [Register (2 overloads)](routedevent.mdx#uid-4633745f66) | Inherited from [RoutedEvent](routedevent.mdx). |
+| [ToString](routedevent.mdx#uid-091891d52b) | Inherited from [RoutedEvent](routedevent.mdx). |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-0a66ffb7c2"></span>
 
-### AddClassHandler
+### AddClassHandler Method
 
 ```csharp
-public IDisposable AddClassHandler<TTarget>(Action<TTarget, TEventArgs> handler, Avalonia.Interactivity.RoutingStrategies routes, Boolean handledEventsToo)
+public IDisposable AddClassHandler<TTarget>(Action<TTarget, TEventArgs> handler, Avalonia.Interactivity.RoutingStrategies routes, bool handledEventsToo)
 ```
+
+#### Parameters
+
+`handler` Action&lt;TTarget, TEventArgs&gt;
+
+
+`routes` [Avalonia.Interactivity.RoutingStrategies](xref:Avalonia.Interactivity.RoutingStrategies)
+
+
+`handledEventsToo` bool
+
+
+#### Type Parameters
+
+`TTarget`
+
+
+#### Returns
+
+IDisposable
+
+
+</section>
 
 ## Properties
 
 | Name | Description |
 | --- | --- |
-| [EventArgsType (Inherited from RoutedEvent)](routedevent.mdx#uid-02254d700b) | No summary available. |
-| [HasRaisedSubscriptions (Inherited from RoutedEvent)](routedevent.mdx#uid-600aa2a7c4) | No summary available. |
-| [Name (Inherited from RoutedEvent)](routedevent.mdx#uid-c1a91d3f61) | No summary available. |
-| [OwnerType (Inherited from RoutedEvent)](routedevent.mdx#uid-bea5e282a0) | No summary available. |
-| [Raised (Inherited from RoutedEvent)](routedevent.mdx#uid-6ca70edd01) | No summary available. |
-| [RouteFinished (Inherited from RoutedEvent)](routedevent.mdx#uid-f6e46eddce) | No summary available. |
-| [RoutingStrategies (Inherited from RoutedEvent)](routedevent.mdx#uid-e5ef0ca772) | No summary available. |
+| [EventArgsType](routedevent.mdx#uid-02254d700b) | Inherited from [RoutedEvent](routedevent.mdx). |
+| [HasRaisedSubscriptions](routedevent.mdx#uid-600aa2a7c4) | Inherited from [RoutedEvent](routedevent.mdx). |
+| [Name](routedevent.mdx#uid-c1a91d3f61) | Inherited from [RoutedEvent](routedevent.mdx). |
+| [OwnerType](routedevent.mdx#uid-bea5e282a0) | Inherited from [RoutedEvent](routedevent.mdx). |
+| [Raised](routedevent.mdx#uid-6ca70edd01) | Inherited from [RoutedEvent](routedevent.mdx). |
+| [RouteFinished](routedevent.mdx#uid-f6e46eddce) | Inherited from [RoutedEvent](routedevent.mdx). |
+| [RoutingStrategies](routedevent.mdx#uid-e5ef0ca772) | Inherited from [RoutedEvent](routedevent.mdx). |
 
 </ApiRefPage>
 

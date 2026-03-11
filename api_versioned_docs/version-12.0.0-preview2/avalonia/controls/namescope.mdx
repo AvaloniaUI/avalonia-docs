@@ -53,7 +53,7 @@ public class NameScope
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> NameScope
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> NameScope
 </div>
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Implements:</span> <a href="inamescope">INameScope</a>
@@ -66,13 +66,17 @@ public class NameScope
 | --- | --- |
 | [NameScope](#uid-19022cf61d) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-19022cf61d"></span>
 
-### NameScope
+### NameScope Constructor
 
 ```csharp
 public NameScope()
 ```
+
+</section>
 
 ## Methods
 
@@ -81,45 +85,77 @@ public NameScope()
 | [Complete](#uid-6412b604db) | No summary available. |
 | [Find](#uid-2b1b1d98b0) | Finds a named element in the name scope, returns immediately, doesn't traverse the name scope stack |
 | [FindAsync](#uid-50f6013761) | No summary available. |
-| [GetNameScope](#uid-cdd3344597) | Gets the value of the attached Avalonia.Controls.NameScope.NameScopeProperty on a styled element. |
+| [GetNameScope](#uid-cdd3344597) | Gets the value of the attached [Avalonia.Controls.NameScope.NameScopeProperty](xref:Avalonia.Controls.NameScope.NameScopeProperty) on a styled element. |
 | [Register](#uid-4f0d08f4fb) | Registers an element in the name scope. |
-| [SetNameScope](#uid-5cff727967) | Sets the value of the attached Avalonia.Controls.NameScope.NameScopeProperty on a styled element. |
+| [SetNameScope](#uid-5cff727967) | Sets the value of the attached [Avalonia.Controls.NameScope.NameScopeProperty](xref:Avalonia.Controls.NameScope.NameScopeProperty) on a styled element. |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-6412b604db"></span>
 
-### Complete
+### Complete Method
 
 ```csharp
-public Void Complete()
+public void Complete()
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-2b1b1d98b0"></span>
 
-### Find
+### Find Method
 
 Finds a named element in the name scope, returns immediately, doesn't traverse the name scope stack
 
 ```csharp
-public Object Find(String name)
+public object Find(string name)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `name` | The name. |
+#### Parameters
 
-Returns: The element, or null if the name was not found.
+`name` string
+
+The name.
+
+
+#### Returns
+
+object
+
+The element, or null if the name was not found.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-50f6013761"></span>
 
-### FindAsync
+### FindAsync Method
 
 ```csharp
-public Avalonia.Utilities.SynchronousCompletionAsyncResult<T><Object> FindAsync(String name)
+public Avalonia.Utilities.SynchronousCompletionAsyncResult<T><object> FindAsync(string name)
 ```
+
+#### Parameters
+
+`name` string
+
+
+#### Returns
+
+Avalonia.Utilities.SynchronousCompletionAsyncResult&lt;T&gt;&lt;object&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-cdd3344597"></span>
 
-### GetNameScope
+### GetNameScope Method
 
 Gets the value of the attached [Avalonia.Controls.NameScope.NameScopeProperty](xref:Avalonia.Controls.NameScope.NameScopeProperty) on a styled element.
 
@@ -127,41 +163,73 @@ Gets the value of the attached [Avalonia.Controls.NameScope.NameScopeProperty](x
 public Avalonia.Controls.INameScope GetNameScope(Avalonia.StyledElement styled)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `styled` | The styled element. |
+#### Parameters
 
-Returns: The value of the NameScope attached property.
+`styled` [Avalonia.StyledElement](xref:Avalonia.StyledElement)
+
+The styled element.
+
+
+#### Returns
+
+[Avalonia.Controls.INameScope](xref:Avalonia.Controls.INameScope)
+
+The value of the [NameScope](xref:Avalonia.Controls.NameScope) attached property.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-4f0d08f4fb"></span>
 
-### Register
+### Register Method
 
 Registers an element in the name scope.
 
 ```csharp
-public Void Register(String name, Object element)
+public void Register(string name, object element)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `element` | The element. |
-| `name` | The element name. |
+#### Parameters
+
+`name` string
+
+The element name.
+
+
+`element` object
+
+The element.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-5cff727967"></span>
 
-### SetNameScope
+### SetNameScope Method
 
 Sets the value of the attached [Avalonia.Controls.NameScope.NameScopeProperty](xref:Avalonia.Controls.NameScope.NameScopeProperty) on a styled element.
 
 ```csharp
-public Void SetNameScope(Avalonia.StyledElement styled, Avalonia.Controls.INameScope value)
+public void SetNameScope(Avalonia.StyledElement styled, Avalonia.Controls.INameScope value)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `styled` | The styled element. |
-| `value` | The value to set. |
+#### Parameters
+
+`styled` [Avalonia.StyledElement](xref:Avalonia.StyledElement)
+
+The styled element.
+
+
+`value` [Avalonia.Controls.INameScope](xref:Avalonia.Controls.INameScope)
+
+The value to set.
+
+
+</section>
 
 ## Properties
 
@@ -169,31 +237,39 @@ public Void SetNameScope(Avalonia.StyledElement styled, Avalonia.Controls.INameS
 | --- | --- |
 | [IsCompleted](#uid-47e0381d73) | Returns whether further registrations are allowed on the scope |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-47e0381d73"></span>
 
-### IsCompleted
+### IsCompleted Property
 
 Returns whether further registrations are allowed on the scope
 
 ```csharp
-public Boolean IsCompleted { get; set; }
+public bool IsCompleted { get; set; }
 ```
+
+</section>
 
 ## Fields
 
 | Name | Description |
 | --- | --- |
-| [NameScopeProperty](#uid-86cfe784c0) | Defines the NameScope attached property. |
+| [NameScopeProperty](#uid-86cfe784c0) | Defines the [NameScope](xref:Avalonia.Controls.NameScope) attached property. |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-86cfe784c0"></span>
 
-### NameScopeProperty
+### NameScopeProperty Field
 
-Defines the NameScope attached property.
+Defines the [NameScope](xref:Avalonia.Controls.NameScope) attached property.
 
 ```csharp
 public Avalonia.AttachedProperty<TValue><Avalonia.Controls.INameScope> NameScopeProperty
 ```
+
+</section>
 
 </ApiRefPage>
 

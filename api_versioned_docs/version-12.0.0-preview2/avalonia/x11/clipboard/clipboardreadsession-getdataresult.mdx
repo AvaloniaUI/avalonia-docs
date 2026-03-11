@@ -47,7 +47,7 @@ public class ClipboardReadSession.GetDataResult
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> ClipboardReadSession.GetDataResult
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> ClipboardReadSession.GetDataResult
 </div>
 </div>
 
@@ -57,13 +57,28 @@ public class ClipboardReadSession.GetDataResult
 | --- | --- |
 | [ClipboardReadSession.GetDataResult](#uid-241d16cf04) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-241d16cf04"></span>
 
-### ClipboardReadSession.GetDataResult
+### ClipboardReadSession.GetDataResult Constructor
 
 ```csharp
-public ClipboardReadSession.GetDataResult(Byte[] data, System.IO.MemoryStream stream, IntPtr actualTypeAtom)
+public ClipboardReadSession.GetDataResult(byte[] data, System.IO.MemoryStream stream, IntPtr actualTypeAtom)
 ```
+
+#### Parameters
+
+`data` byte[]
+
+
+`stream` System.IO.MemoryStream
+
+
+`actualTypeAtom` IntPtr
+
+
+</section>
 
 ## Methods
 
@@ -72,21 +87,39 @@ public ClipboardReadSession.GetDataResult(Byte[] data, System.IO.MemoryStream st
 | [AsBytes](#uid-a55497d2ea) | No summary available. |
 | [AsStream](#uid-710ced02db) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-a55497d2ea"></span>
 
-### AsBytes
+### AsBytes Method
 
 ```csharp
-public Byte[] AsBytes()
+public byte[] AsBytes()
 ```
+
+#### Returns
+
+byte[]
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-710ced02db"></span>
 
-### AsStream
+### AsStream Method
 
 ```csharp
 public System.IO.MemoryStream AsStream()
 ```
+
+#### Returns
+
+System.IO.MemoryStream
+
+
+</section>
 
 ## Properties
 
@@ -94,13 +127,17 @@ public System.IO.MemoryStream AsStream()
 | --- | --- |
 | [TypeAtom](#uid-c60bfd0367) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-c60bfd0367"></span>
 
-### TypeAtom
+### TypeAtom Property
 
 ```csharp
 public IntPtr TypeAtom { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

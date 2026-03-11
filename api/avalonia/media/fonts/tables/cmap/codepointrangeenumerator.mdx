@@ -70,17 +70,32 @@ heap or used across await or yield boundaries.
 | --- | --- |
 | [MoveNext](#uid-463d976a5f) | Advances the enumerator to the next character mapping range in the collection. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-463d976a5f"></span>
 
-### MoveNext
+### MoveNext Method
 
 Advances the enumerator to the next character mapping range in the collection.
 
 ```csharp
-public Boolean MoveNext()
+public bool MoveNext()
 ```
 
-Returns: true if the enumerator was successfully advanced to the next range; otherwise, false.
+#### Returns
+
+bool
+
+true if the enumerator was successfully advanced to the next range; otherwise, false.
+
+
+#### Remarks
+
+After calling MoveNext, check the Current property to access the current character
+mapping range. If the end of the collection is reached, MoveNext returns false and Current is set to its
+default value.
+
+</section>
 
 ## Properties
 
@@ -88,15 +103,19 @@ Returns: true if the enumerator was successfully advanced to the next range; oth
 | --- | --- |
 | [Current](#uid-e63b2cc2d0) | Gets the current code point range in the enumeration sequence. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-e63b2cc2d0"></span>
 
-### Current
+### Current Property
 
 Gets the current code point range in the enumeration sequence.
 
 ```csharp
 public Avalonia.Media.Fonts.Tables.Cmap.CodepointRange Current { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

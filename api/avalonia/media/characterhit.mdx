@@ -62,30 +62,41 @@ public struct CharacterHit
 
 ## Remarks
 
-The CharacterHit structure provides information about the index of the first
+The [CharacterHit](xref:Avalonia.Media.CharacterHit) structure provides information about the index of the first
 character that got hit as well as information about leading or trailing edge.
 
 ## Constructors
 
 | Name | Description |
 | --- | --- |
-| [CharacterHit](#uid-9b9049bfde) | Initializes a new instance of the Avalonia.Media.CharacterHit structure. |
+| [CharacterHit](#uid-9b9049bfde) | Initializes a new instance of the [Avalonia.Media.CharacterHit](xref:Avalonia.Media.CharacterHit) structure. |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-9b9049bfde"></span>
 
-### CharacterHit
+### CharacterHit Constructor
 
 Initializes a new instance of the [Avalonia.Media.CharacterHit](xref:Avalonia.Media.CharacterHit) structure.
 
 ```csharp
-public CharacterHit(Int32 firstCharacterIndex, Int32 trailingLength)
+public CharacterHit(int firstCharacterIndex, int trailingLength)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `firstCharacterIndex` | Index of the first character that got hit. |
-| `trailingLength` | In the case of a leading edge, this value is 0. In the case of a trailing edge,
-this value is the number of code points until the next valid caret position. |
+#### Parameters
+
+`firstCharacterIndex` int
+
+Index of the first character that got hit.
+
+
+`trailingLength` int
+
+In the case of a leading edge, this value is 0. In the case of a trailing edge,
+this value is the number of code points until the next valid caret position.
+
+
+</section>
 
 ## Methods
 
@@ -98,29 +109,66 @@ this value is the number of code points until the next valid caret position. |
 
 ### Equals overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-a3c77a4b67"></span>
 
-#### Equals
+#### Equals Method
 
 ```csharp
-public Boolean Equals(Avalonia.Media.CharacterHit other)
+public bool Equals(Avalonia.Media.CharacterHit other)
 ```
+
+##### Parameters
+
+`other` [Avalonia.Media.CharacterHit](xref:Avalonia.Media.CharacterHit)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-22799906da"></span>
 
-#### Equals
+#### Equals Method
 
 ```csharp
-public Boolean Equals(Object obj)
+public bool Equals(object obj)
 ```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-9792b1e13c"></span>
 
-### GetHashCode
+### GetHashCode Method
 
 ```csharp
-public Int32 GetHashCode()
+public int GetHashCode()
 ```
+
+#### Returns
+
+int
+
+
+</section>
 
 ## Properties
 
@@ -129,25 +177,38 @@ public Int32 GetHashCode()
 | [FirstCharacterIndex](#uid-b3656761f7) | Gets the index of the first character that got hit. |
 | [TrailingLength](#uid-afe539c36c) | Gets the trailing length value for the character that got hit. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-b3656761f7"></span>
 
-### FirstCharacterIndex
+### FirstCharacterIndex Property
 
 Gets the index of the first character that got hit.
 
 ```csharp
-public Int32 FirstCharacterIndex { get; set; }
+public int FirstCharacterIndex { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-afe539c36c"></span>
 
-### TrailingLength
+### TrailingLength Property
 
 Gets the trailing length value for the character that got hit.
 
 ```csharp
-public Int32 TrailingLength { get; set; }
+public int TrailingLength { get; set; }
 ```
+
+#### Remarks
+
+In the case of a leading edge, this value is 0. In the case of a trailing edge,
+this value is the number of code points until the next valid caret position.
+
+</section>
 
 </ApiRefPage>
 

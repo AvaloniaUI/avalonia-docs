@@ -53,7 +53,7 @@ public class AssetLoader
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> AssetLoader
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> AssetLoader
 </div>
 </div>
 
@@ -67,28 +67,46 @@ public class AssetLoader
 | [InvalidateAssemblyCache (2 overloads)](#uid-21c212713d) | Removes the assembly from the cache. |
 | [Open](#uid-7f4ecce179) | Opens the asset with the requested URI. |
 | [OpenAndGetAssembly](#uid-6979d66c9f) | Opens the asset with the requested URI and returns the asset stream and the assembly containing the asset. |
-| [SetDefaultAssembly](#uid-646a20e9ab) | We need a way to override the default assembly selected by the host platform because right now it is selecting the wrong one for PCL based Apps. The AssetLoader needs a refactor cause right now it lives in 3+ platforms which can all be loaded on Windows. |
+| [SetDefaultAssembly](#uid-646a20e9ab) | We need a way to override the default assembly selected by the host platform because right now it is selecting the wrong one for PCL based Apps. The [AssetLoader](xref:Avalonia.Platform.AssetLoader) needs a refactor cause right now it lives in 3+ platforms which can all be loaded on Windows. |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-a2d936751b"></span>
 
-### Exists
+### Exists Method
 
 Checks if an asset with the specified URI exists.
 
 ```csharp
-public Boolean Exists(Uri uri, Uri baseUri)
+public bool Exists(Uri uri, Uri baseUri)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `baseUri` | A base URI to use if `uri` is relative. |
-| `uri` | The URI. |
+#### Parameters
 
-Returns: True if the asset could be found; otherwise false.
+`uri` Uri
+
+The URI.
+
+
+`baseUri` Uri
+
+A base URI to use if `uri` is relative.
+
+
+#### Returns
+
+bool
+
+True if the asset could be found; otherwise false.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-b6ea2136e2"></span>
 
-### GetAssembly
+### GetAssembly Method
 
 Extracts assembly information from URI
 
@@ -96,16 +114,32 @@ Extracts assembly information from URI
 public System.Reflection.Assembly GetAssembly(Uri uri, Uri baseUri)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `baseUri` | A base URI to use if `uri` is relative. |
-| `uri` | The URI. |
+#### Parameters
 
-Returns: Assembly associated with the Uri
+`uri` Uri
+
+The URI.
+
+
+`baseUri` Uri
+
+A base URI to use if `uri` is relative.
+
+
+#### Returns
+
+System.Reflection.Assembly
+
+Assembly associated with the Uri
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-6ff7ed26c8"></span>
 
-### GetAssets
+### GetAssets Method
 
 Gets all assets of a folder and subfolders that match specified uri.
 
@@ -113,44 +147,76 @@ Gets all assets of a folder and subfolders that match specified uri.
 public System.Collections.Generic.IEnumerable<Uri> GetAssets(Uri uri, Uri baseUri)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `baseUri` | The base URI. |
-| `uri` | The URI. |
+#### Parameters
 
-Returns: All matching assets as a tuple of the absolute path to the asset and the assembly containing the asset
+`uri` Uri
+
+The URI.
+
+
+`baseUri` Uri
+
+The base URI.
+
+
+#### Returns
+
+System.Collections.Generic.IEnumerable&lt;Uri&gt;
+
+All matching assets as a tuple of the absolute path to the asset and the assembly containing the asset
+
+
+</section>
 
 <span id="uid-21c212713d"></span>
 
 ### InvalidateAssemblyCache overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-1d9a9acaca"></span>
 
-#### InvalidateAssemblyCache
+#### InvalidateAssemblyCache Method
 
 Removes the assembly from the cache.
 
 ```csharp
-public Void InvalidateAssemblyCache()
+public void InvalidateAssemblyCache()
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `name` | The Assemblies.First().GetName().Name |
+##### Parameters
+
+`name`
+
+The Assemblies.First().GetName().Name
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-69bab483c0"></span>
 
-#### InvalidateAssemblyCache
+#### InvalidateAssemblyCache Method
 
 Removes all assemblies from the cache.
 
 ```csharp
-public Void InvalidateAssemblyCache(String name)
+public void InvalidateAssemblyCache(string name)
 ```
+
+##### Parameters
+
+`name` string
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-7f4ecce179"></span>
 
-### Open
+### Open Method
 
 Opens the asset with the requested URI.
 
@@ -158,20 +224,36 @@ Opens the asset with the requested URI.
 public System.IO.Stream Open(Uri uri, Uri baseUri)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `baseUri` | A base URI to use if `uri` is relative. |
-| `uri` | The URI. |
+#### Parameters
 
-Returns: A stream containing the asset contents.
+`uri` Uri
+
+The URI.
+
+
+`baseUri` Uri
+
+A base URI to use if `uri` is relative.
+
+
+#### Returns
+
+System.IO.Stream
+
+A stream containing the asset contents.
+
 
 #### Exceptions
 
 - [The asset could not be found.](xref:System.IO.FileNotFoundException)
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-6979d66c9f"></span>
 
-### OpenAndGetAssembly
+### OpenAndGetAssembly Method
 
 Opens the asset with the requested URI and returns the asset stream and the
 assembly containing the asset.
@@ -180,33 +262,52 @@ assembly containing the asset.
 public ValueTuple<System.IO.Stream, System.Reflection.Assembly> OpenAndGetAssembly(Uri uri, Uri baseUri)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `baseUri` | A base URI to use if `uri` is relative. |
-| `uri` | The URI. |
+#### Parameters
 
-Returns: The stream containing the asset contents together with the assembly.
+`uri` Uri
+
+The URI.
+
+
+`baseUri` Uri
+
+A base URI to use if `uri` is relative.
+
+
+#### Returns
+
+ValueTuple&lt;System.IO.Stream, System.Reflection.Assembly&gt;
+
+The stream containing the asset contents together with the assembly.
+
 
 #### Exceptions
 
 - [The asset could not be found.](xref:System.IO.FileNotFoundException)
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-646a20e9ab"></span>
 
-### SetDefaultAssembly
+### SetDefaultAssembly Method
 
 We need a way to override the default assembly selected by the host platform
 because right now it is selecting the wrong one for PCL based Apps. The
-AssetLoader needs a refactor cause right now it lives in 3+ platforms which
+[AssetLoader](xref:Avalonia.Platform.AssetLoader) needs a refactor cause right now it lives in 3+ platforms which
 can all be loaded on Windows.
 
 ```csharp
-public Void SetDefaultAssembly(System.Reflection.Assembly assembly)
+public void SetDefaultAssembly(System.Reflection.Assembly assembly)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `assembly` |  |
+#### Parameters
+
+`assembly` System.Reflection.Assembly
+
+
+</section>
 
 </ApiRefPage>
 

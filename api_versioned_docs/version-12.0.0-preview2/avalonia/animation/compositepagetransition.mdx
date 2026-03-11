@@ -53,7 +53,7 @@ public class CompositePageTransition
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> CompositePageTransition
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> CompositePageTransition
 </div>
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Implements:</span> <a href="ipagetransition">IPageTransition</a>
@@ -83,13 +83,17 @@ For example, you can combine [Avalonia.Animation.CrossFade](xref:Avalonia.Animat
 | --- | --- |
 | [CompositePageTransition](#uid-391c4aef35) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-391c4aef35"></span>
 
-### CompositePageTransition
+### CompositePageTransition Constructor
 
 ```csharp
 public CompositePageTransition()
 ```
+
+</section>
 
 ## Methods
 
@@ -97,24 +101,48 @@ public CompositePageTransition()
 | --- | --- |
 | [Start](#uid-00a1b4bc97) | Starts the animation. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-00a1b4bc97"></span>
 
-### Start
+### Start Method
 
 Starts the animation.
 
 ```csharp
-public System.Threading.Tasks.Task Start(Avalonia.Visual from, Avalonia.Visual to, Boolean forward, System.Threading.CancellationToken cancellationToken)
+public System.Threading.Tasks.Task Start(Avalonia.Visual from, Avalonia.Visual to, bool forward, System.Threading.CancellationToken cancellationToken)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `cancellationToken` | Animation cancellation. |
-| `forward` | If the animation is bidirectional, controls the direction of the animation. |
-| `from` | The control that is being transitioned away from. May be null. |
-| `to` | The control that is being transitioned to. May be null. |
+#### Parameters
 
-Returns: A [System.Threading.Tasks.Task](xref:System.Threading.Tasks.Task) that tracks the progress of the animation.
+`from` [Avalonia.Visual](xref:Avalonia.Visual)
+
+The control that is being transitioned away from. May be null.
+
+
+`to` [Avalonia.Visual](xref:Avalonia.Visual)
+
+The control that is being transitioned to. May be null.
+
+
+`forward` bool
+
+If the animation is bidirectional, controls the direction of the animation.
+
+
+`cancellationToken` System.Threading.CancellationToken
+
+Animation cancellation.
+
+
+#### Returns
+
+System.Threading.Tasks.Task
+
+A [System.Threading.Tasks.Task](xref:System.Threading.Tasks.Task) that tracks the progress of the animation.
+
+
+</section>
 
 ## Properties
 
@@ -122,15 +150,19 @@ Returns: A [System.Threading.Tasks.Task](xref:System.Threading.Tasks.Task) that 
 | --- | --- |
 | [PageTransitions](#uid-a1aa58a748) | Gets or sets the transitions to be executed. Can be defined from XAML. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-a1aa58a748"></span>
 
-### PageTransitions
+### PageTransitions Property
 
 Gets or sets the transitions to be executed. Can be defined from XAML.
 
 ```csharp
 public System.Collections.Generic.List<Avalonia.Animation.IPageTransition> PageTransitions { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

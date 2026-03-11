@@ -63,13 +63,28 @@ public class ContainerIndexChangedEventArgs
 | --- | --- |
 | [ContainerIndexChangedEventArgs](#uid-00904a18a2) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-00904a18a2"></span>
 
-### ContainerIndexChangedEventArgs
+### ContainerIndexChangedEventArgs Constructor
 
 ```csharp
-public ContainerIndexChangedEventArgs(Avalonia.Controls.Control container, Int32 oldIndex, Int32 newIndex)
+public ContainerIndexChangedEventArgs(Avalonia.Controls.Control container, int oldIndex, int newIndex)
 ```
+
+#### Parameters
+
+`container` [Avalonia.Controls.Control](xref:Avalonia.Controls.Control)
+
+
+`oldIndex` int
+
+
+`newIndex` int
+
+
+</section>
 
 ## Properties
 
@@ -79,9 +94,11 @@ public ContainerIndexChangedEventArgs(Avalonia.Controls.Control container, Int32
 | [NewIndex](#uid-0b35de4aa3) | Gets the index of the container after the change. |
 | [OldIndex](#uid-c4079d671e) | Gets the index of the container before the change. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-2bc6967e3e"></span>
 
-### Container
+### Container Property
 
 Get the container for which the index changed.
 
@@ -89,25 +106,35 @@ Get the container for which the index changed.
 public Avalonia.Controls.Control Container { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-0b35de4aa3"></span>
 
-### NewIndex
+### NewIndex Property
 
 Gets the index of the container after the change.
 
 ```csharp
-public Int32 NewIndex { get; set; }
+public int NewIndex { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-c4079d671e"></span>
 
-### OldIndex
+### OldIndex Property
 
 Gets the index of the container before the change.
 
 ```csharp
-public Int32 OldIndex { get; set; }
+public int OldIndex { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

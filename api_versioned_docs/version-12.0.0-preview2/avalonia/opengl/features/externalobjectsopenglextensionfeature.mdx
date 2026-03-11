@@ -47,7 +47,7 @@ public class ExternalObjectsOpenGlExtensionFeature
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> ExternalObjectsOpenGlExtensionFeature
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> ExternalObjectsOpenGlExtensionFeature
 </div>
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Implements:</span> <a href="../iglcontextexternalobjectsfeature">IGlContextExternalObjectsFeature</a>
@@ -66,61 +66,168 @@ public class ExternalObjectsOpenGlExtensionFeature
 | [ImportSemaphore](#uid-df44850623) | No summary available. |
 | [TryCreate](#uid-5ea85aa8e1) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-81b78c2e4c"></span>
 
-### CreateImage
+### CreateImage Method
 
 ```csharp
-public Avalonia.OpenGL.IGlExportableExternalImageTexture CreateImage(String type, Avalonia.PixelSize size, Avalonia.Platform.PlatformGraphicsExternalImageFormat format)
+public Avalonia.OpenGL.IGlExportableExternalImageTexture CreateImage(string type, Avalonia.PixelSize size, Avalonia.Platform.PlatformGraphicsExternalImageFormat format)
 ```
+
+#### Parameters
+
+`type` string
+
+
+`size` [Avalonia.PixelSize](xref:Avalonia.PixelSize)
+
+
+`format` [Avalonia.Platform.PlatformGraphicsExternalImageFormat](xref:Avalonia.Platform.PlatformGraphicsExternalImageFormat)
+
+
+#### Returns
+
+[Avalonia.OpenGL.IGlExportableExternalImageTexture](xref:Avalonia.OpenGL.IGlExportableExternalImageTexture)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-d376d58d22"></span>
 
-### CreateSemaphore
+### CreateSemaphore Method
 
 ```csharp
-public Avalonia.OpenGL.IGlExportableExternalImageTexture CreateSemaphore(String type)
+public Avalonia.OpenGL.IGlExportableExternalImageTexture CreateSemaphore(string type)
 ```
+
+#### Parameters
+
+`type` string
+
+
+#### Returns
+
+[Avalonia.OpenGL.IGlExportableExternalImageTexture](xref:Avalonia.OpenGL.IGlExportableExternalImageTexture)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-f98f8581b9"></span>
 
-### GetSupportedFormatsForExternalMemoryType
+### GetSupportedFormatsForExternalMemoryType Method
 
 ```csharp
-public System.Collections.Generic.IReadOnlyList<Avalonia.Platform.PlatformGraphicsExternalImageFormat> GetSupportedFormatsForExternalMemoryType(String type)
+public System.Collections.Generic.IReadOnlyList<Avalonia.Platform.PlatformGraphicsExternalImageFormat> GetSupportedFormatsForExternalMemoryType(string type)
 ```
+
+#### Parameters
+
+`type` string
+
+
+#### Returns
+
+System.Collections.Generic.IReadOnlyList&lt;[Avalonia.Platform.PlatformGraphicsExternalImageFormat](xref:Avalonia.Platform.PlatformGraphicsExternalImageFormat)&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-7fe8612354"></span>
 
-### GetSynchronizationCapabilities
+### GetSynchronizationCapabilities Method
 
 ```csharp
-public Avalonia.Rendering.Composition.CompositionGpuImportedImageSynchronizationCapabilities GetSynchronizationCapabilities(String imageHandleType)
+public Avalonia.Rendering.Composition.CompositionGpuImportedImageSynchronizationCapabilities GetSynchronizationCapabilities(string imageHandleType)
 ```
+
+#### Parameters
+
+`imageHandleType` string
+
+
+#### Returns
+
+[Avalonia.Rendering.Composition.CompositionGpuImportedImageSynchronizationCapabilities](xref:Avalonia.Rendering.Composition.CompositionGpuImportedImageSynchronizationCapabilities)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-064cfdec89"></span>
 
-### ImportImage
+### ImportImage Method
 
 ```csharp
 public Avalonia.OpenGL.IGlExternalImageTexture ImportImage(Avalonia.Platform.IPlatformHandle handle, Avalonia.Platform.PlatformGraphicsExternalImageProperties properties)
 ```
 
+#### Parameters
+
+`handle` [Avalonia.Platform.IPlatformHandle](xref:Avalonia.Platform.IPlatformHandle)
+
+
+`properties` [Avalonia.Platform.PlatformGraphicsExternalImageProperties](xref:Avalonia.Platform.PlatformGraphicsExternalImageProperties)
+
+
+#### Returns
+
+[Avalonia.OpenGL.IGlExternalImageTexture](xref:Avalonia.OpenGL.IGlExternalImageTexture)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-df44850623"></span>
 
-### ImportSemaphore
+### ImportSemaphore Method
 
 ```csharp
 public Avalonia.OpenGL.IGlExternalSemaphore ImportSemaphore(Avalonia.Platform.IPlatformHandle handle)
 ```
 
+#### Parameters
+
+`handle` [Avalonia.Platform.IPlatformHandle](xref:Avalonia.Platform.IPlatformHandle)
+
+
+#### Returns
+
+[Avalonia.OpenGL.IGlExternalSemaphore](xref:Avalonia.OpenGL.IGlExternalSemaphore)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-5ea85aa8e1"></span>
 
-### TryCreate
+### TryCreate Method
 
 ```csharp
 public Avalonia.OpenGL.Features.ExternalObjectsOpenGlExtensionFeature TryCreate(Avalonia.OpenGL.IGlContext context)
 ```
+
+#### Parameters
+
+`context` [Avalonia.OpenGL.IGlContext](xref:Avalonia.OpenGL.IGlContext)
+
+
+#### Returns
+
+[Avalonia.OpenGL.Features.ExternalObjectsOpenGlExtensionFeature](xref:Avalonia.OpenGL.Features.ExternalObjectsOpenGlExtensionFeature)
+
+
+</section>
 
 ## Properties
 
@@ -133,53 +240,77 @@ public Avalonia.OpenGL.Features.ExternalObjectsOpenGlExtensionFeature TryCreate(
 | [SupportedImportableExternalImageTypes](#uid-0470cc8caa) | No summary available. |
 | [SupportedImportableExternalSemaphoreTypes](#uid-91db9273f0) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-5b97e4897e"></span>
 
-### DeviceLuid
+### DeviceLuid Property
 
 ```csharp
-public Byte[] DeviceLuid { get; set; }
+public byte[] DeviceLuid { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-23324423d7"></span>
 
-### DeviceUuid
+### DeviceUuid Property
 
 ```csharp
-public Byte[] DeviceUuid { get; set; }
+public byte[] DeviceUuid { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-4d13524116"></span>
 
-### SupportedExportableExternalImageTypes
+### SupportedExportableExternalImageTypes Property
 
 ```csharp
-public System.Collections.Generic.IReadOnlyList<String> SupportedExportableExternalImageTypes { get; set; }
+public System.Collections.Generic.IReadOnlyList<string> SupportedExportableExternalImageTypes { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-9e5306446c"></span>
 
-### SupportedExportableExternalSemaphoreTypes
+### SupportedExportableExternalSemaphoreTypes Property
 
 ```csharp
-public System.Collections.Generic.IReadOnlyList<String> SupportedExportableExternalSemaphoreTypes { get; set; }
+public System.Collections.Generic.IReadOnlyList<string> SupportedExportableExternalSemaphoreTypes { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-0470cc8caa"></span>
 
-### SupportedImportableExternalImageTypes
+### SupportedImportableExternalImageTypes Property
 
 ```csharp
-public System.Collections.Generic.IReadOnlyList<String> SupportedImportableExternalImageTypes { get; set; }
+public System.Collections.Generic.IReadOnlyList<string> SupportedImportableExternalImageTypes { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-91db9273f0"></span>
 
-### SupportedImportableExternalSemaphoreTypes
+### SupportedImportableExternalSemaphoreTypes Property
 
 ```csharp
-public System.Collections.Generic.IReadOnlyList<String> SupportedImportableExternalSemaphoreTypes { get; set; }
+public System.Collections.Generic.IReadOnlyList<string> SupportedImportableExternalSemaphoreTypes { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

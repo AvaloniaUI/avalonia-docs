@@ -72,13 +72,44 @@ allows the avalonia property system to read and write the current value.
 | --- | --- |
 | [AddOwner](#uid-6e2086f2cf) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-6e2086f2cf"></span>
 
-### AddOwner
+### AddOwner Method
 
 ```csharp
-public Avalonia.DirectProperty<TOwner,TValue><TNewOwner, TValue> AddOwner<TNewOwner>(Func<TNewOwner, TValue> getter, Action<TNewOwner, TValue> setter, TValue unsetValue, Avalonia.Data.BindingMode defaultBindingMode, Boolean enableDataValidation)
+public Avalonia.DirectProperty<TOwner,TValue><TNewOwner, TValue> AddOwner<TNewOwner>(Func<TNewOwner, TValue> getter, Action<TNewOwner, TValue> setter, TValue unsetValue, Avalonia.Data.BindingMode defaultBindingMode, bool enableDataValidation)
 ```
+
+#### Parameters
+
+`getter` Func&lt;TNewOwner, TValue&gt;
+
+
+`setter` Action&lt;TNewOwner, TValue&gt;
+
+
+`unsetValue` TValue
+
+
+`defaultBindingMode` [Avalonia.Data.BindingMode](xref:Avalonia.Data.BindingMode)
+
+
+`enableDataValidation` bool
+
+
+#### Type Parameters
+
+`TNewOwner`
+
+
+#### Returns
+
+Avalonia.DirectProperty&lt;TOwner,TValue&gt;&lt;TNewOwner, TValue&gt;
+
+
+</section>
 
 ## Properties
 
@@ -87,9 +118,11 @@ public Avalonia.DirectProperty<TOwner,TValue><TNewOwner, TValue> AddOwner<TNewOw
 | [Getter](#uid-ebd5fdac29) | Gets the getter function. |
 | [Setter](#uid-c069e9ea2d) | Gets the setter function. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-ebd5fdac29"></span>
 
-### Getter
+### Getter Property
 
 Gets the getter function.
 
@@ -97,15 +130,21 @@ Gets the getter function.
 public Func<TOwner, TValue> Getter { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-c069e9ea2d"></span>
 
-### Setter
+### Setter Property
 
 Gets the setter function.
 
 ```csharp
 public Action<TOwner, TValue> Setter { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

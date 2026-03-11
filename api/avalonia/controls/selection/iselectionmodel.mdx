@@ -62,77 +62,149 @@ public interface ISelectionModel
 | [SelectAll](#uid-7966ff20f4) | No summary available. |
 | [SelectRange](#uid-0ead09ec4e) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-45193f97c7"></span>
 
-### BeginBatchUpdate
+### BeginBatchUpdate Method
 
 ```csharp
-public Void BeginBatchUpdate()
+public void BeginBatchUpdate()
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-5cd2a7770f"></span>
 
-### Clear
+### Clear Method
 
 ```csharp
-public Void Clear()
+public void Clear()
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-56862e8f36"></span>
 
-### Deselect
+### Deselect Method
 
 ```csharp
-public Void Deselect(Int32 index)
+public void Deselect(int index)
 ```
+
+#### Parameters
+
+`index` int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-85801ed530"></span>
 
-### DeselectRange
+### DeselectRange Method
 
 ```csharp
-public Void DeselectRange(Int32 start, Int32 end)
+public void DeselectRange(int start, int end)
 ```
+
+#### Parameters
+
+`start` int
+
+
+`end` int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-71a3845693"></span>
 
-### EndBatchUpdate
+### EndBatchUpdate Method
 
 ```csharp
-public Void EndBatchUpdate()
+public void EndBatchUpdate()
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-9b7cd12904"></span>
 
-### IsSelected
+### IsSelected Method
 
 ```csharp
-public Boolean IsSelected(Int32 index)
+public bool IsSelected(int index)
 ```
+
+#### Parameters
+
+`index` int
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-ac832fbc5c"></span>
 
-### Select
+### Select Method
 
 ```csharp
-public Void Select(Int32 index)
+public void Select(int index)
 ```
+
+#### Parameters
+
+`index` int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-7966ff20f4"></span>
 
-### SelectAll
+### SelectAll Method
 
 ```csharp
-public Void SelectAll()
+public void SelectAll()
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-0ead09ec4e"></span>
 
-### SelectRange
+### SelectRange Method
 
 ```csharp
-public Void SelectRange(Int32 start, Int32 end)
+public void SelectRange(int start, int end)
 ```
+
+#### Parameters
+
+`start` int
+
+
+`end` int
+
+
+</section>
 
 ## Properties
 
@@ -147,69 +219,101 @@ public Void SelectRange(Int32 start, Int32 end)
 | [SingleSelect](#uid-d583816d65) | No summary available. |
 | [Source](#uid-6cfaaa5ce3) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-8ff8de8454"></span>
 
-### AnchorIndex
+### AnchorIndex Property
 
 ```csharp
-public Int32 AnchorIndex { get; set; }
+public int AnchorIndex { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-7a3dd7c3f6"></span>
 
-### Count
+### Count Property
 
 ```csharp
-public Int32 Count { get; set; }
+public int Count { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-df5390923d"></span>
 
-### SelectedIndex
+### SelectedIndex Property
 
 ```csharp
-public Int32 SelectedIndex { get; set; }
+public int SelectedIndex { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-820b26c1c2"></span>
 
-### SelectedIndexes
+### SelectedIndexes Property
 
 ```csharp
-public System.Collections.Generic.IReadOnlyList<Int32> SelectedIndexes { get; set; }
+public System.Collections.Generic.IReadOnlyList<int> SelectedIndexes { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-4eba651bcf"></span>
 
-### SelectedItem
+### SelectedItem Property
 
 ```csharp
-public Object SelectedItem { get; set; }
+public object SelectedItem { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-4dda2e92e7"></span>
 
-### SelectedItems
+### SelectedItems Property
 
 ```csharp
-public System.Collections.Generic.IReadOnlyList<Object> SelectedItems { get; set; }
+public System.Collections.Generic.IReadOnlyList<object> SelectedItems { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-d583816d65"></span>
 
-### SingleSelect
+### SingleSelect Property
 
 ```csharp
-public Boolean SingleSelect { get; set; }
+public bool SingleSelect { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-6cfaaa5ce3"></span>
 
-### Source
+### Source Property
 
 ```csharp
 public System.Collections.IEnumerable Source { get; set; }
 ```
+
+</section>
 
 ## Events
 
@@ -220,37 +324,53 @@ public System.Collections.IEnumerable Source { get; set; }
 | [SelectionChanged](#uid-006e2aeebf) | No summary available. |
 | [SourceReset](#uid-9717935e88) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-565d8e0070"></span>
 
-### IndexesChanged
+### IndexesChanged Event
 
 ```csharp
 public event EventHandler<Avalonia.Controls.Selection.SelectionModelIndexesChangedEventArgs> IndexesChanged
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-cd037151c3"></span>
 
-### LostSelection
+### LostSelection Event
 
 ```csharp
 public event EventHandler LostSelection
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-006e2aeebf"></span>
 
-### SelectionChanged
+### SelectionChanged Event
 
 ```csharp
 public event EventHandler<Avalonia.Controls.Selection.SelectionModelSelectionChangedEventArgs> SelectionChanged
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-9717935e88"></span>
 
-### SourceReset
+### SourceReset Event
 
 ```csharp
 public event EventHandler SourceReset
 ```
+
+</section>
 
 </ApiRefPage>
 

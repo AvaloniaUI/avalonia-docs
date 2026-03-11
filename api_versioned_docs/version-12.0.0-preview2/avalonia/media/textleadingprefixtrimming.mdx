@@ -47,7 +47,7 @@ public class TextLeadingPrefixTrimming
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="texttrimming">TextTrimming</a> <span className="apiref-page__relation-separator">-&gt;</span> TextLeadingPrefixTrimming
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="texttrimming">TextTrimming</a> <span className="apiref-page__relation-separator">-&gt;</span> TextLeadingPrefixTrimming
 </div>
 </div>
 
@@ -57,13 +57,25 @@ public class TextLeadingPrefixTrimming
 | --- | --- |
 | [TextLeadingPrefixTrimming](#uid-18c7eb4963) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-18c7eb4963"></span>
 
-### TextLeadingPrefixTrimming
+### TextLeadingPrefixTrimming Constructor
 
 ```csharp
-public TextLeadingPrefixTrimming(String ellipsis, Int32 prefixLength)
+public TextLeadingPrefixTrimming(string ellipsis, int prefixLength)
 ```
+
+#### Parameters
+
+`ellipsis` string
+
+
+`prefixLength` int
+
+
+</section>
 
 ## Methods
 
@@ -71,34 +83,57 @@ public TextLeadingPrefixTrimming(String ellipsis, Int32 prefixLength)
 | --- | --- |
 | [CreateCollapsingProperties](#uid-4c8b9fef22) | No summary available. |
 | [ToString](#uid-683a8e4483) | No summary available. |
-| [Parse (Inherited from TextTrimming)](texttrimming.mdx#uid-88f35cc419) | Parses a text trimming string. Names must match static properties defined in this class. |
+| [Parse](texttrimming.mdx#uid-88f35cc419) | Parses a text trimming string. Names must match static properties defined in this class. Inherited from [TextTrimming](texttrimming.mdx). |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-4c8b9fef22"></span>
 
-### CreateCollapsingProperties
+### CreateCollapsingProperties Method
 
 ```csharp
 public Avalonia.Media.TextFormatting.TextCollapsingProperties CreateCollapsingProperties(Avalonia.Media.TextCollapsingCreateInfo createInfo)
 ```
 
+#### Parameters
+
+`createInfo` [Avalonia.Media.TextCollapsingCreateInfo](xref:Avalonia.Media.TextCollapsingCreateInfo)
+
+
+#### Returns
+
+[Avalonia.Media.TextFormatting.TextCollapsingProperties](xref:Avalonia.Media.TextFormatting.TextCollapsingProperties)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-683a8e4483"></span>
 
-### ToString
+### ToString Method
 
 ```csharp
-public String ToString()
+public string ToString()
 ```
+
+#### Returns
+
+string
+
+
+</section>
 
 ## Properties
 
 | Name | Description |
 | --- | --- |
-| [CharacterEllipsis (Inherited from TextTrimming)](texttrimming.mdx#uid-e084945626) | Text is trimmed at a character boundary. An ellipsis (...) is drawn in place of remaining text. |
-| [LeadingCharacterEllipsis (Inherited from TextTrimming)](texttrimming.mdx#uid-b98185ed17) | Text is trimmed at a character boundary starting from the beginning. An ellipsis (...) is drawn in place of remaining text. |
-| [None (Inherited from TextTrimming)](texttrimming.mdx#uid-b45a12be51) | Text is not trimmed. |
-| [PathSegmentEllipsis (Inherited from TextTrimming)](texttrimming.mdx#uid-240bf38530) | Gets a text trimming strategy that inserts an ellipsis to indicate omitted segments in a path string. |
-| [PrefixCharacterEllipsis (Inherited from TextTrimming)](texttrimming.mdx#uid-31f7b79bf5) | Text is trimmed after a given prefix length. An ellipsis (...) is drawn in between prefix and suffix and represents remaining text. |
-| [WordEllipsis (Inherited from TextTrimming)](texttrimming.mdx#uid-2b9b4c2055) | Text is trimmed at a word boundary. An ellipsis (...) is drawn in place of remaining text. |
+| [CharacterEllipsis](texttrimming.mdx#uid-e084945626) | Text is trimmed at a character boundary. An ellipsis (...) is drawn in place of remaining text. Inherited from [TextTrimming](texttrimming.mdx). |
+| [LeadingCharacterEllipsis](texttrimming.mdx#uid-b98185ed17) | Text is trimmed at a character boundary starting from the beginning. An ellipsis (...) is drawn in place of remaining text. Inherited from [TextTrimming](texttrimming.mdx). |
+| [None](texttrimming.mdx#uid-b45a12be51) | Text is not trimmed. Inherited from [TextTrimming](texttrimming.mdx). |
+| [PathSegmentEllipsis](texttrimming.mdx#uid-240bf38530) | Gets a text trimming strategy that inserts an ellipsis to indicate omitted segments in a path string. Inherited from [TextTrimming](texttrimming.mdx). |
+| [PrefixCharacterEllipsis](texttrimming.mdx#uid-31f7b79bf5) | Text is trimmed after a given prefix length. An ellipsis (...) is drawn in between prefix and suffix and represents remaining text. Inherited from [TextTrimming](texttrimming.mdx). |
+| [WordEllipsis](texttrimming.mdx#uid-2b9b4c2055) | Text is trimmed at a word boundary. An ellipsis (...) is drawn in place of remaining text. Inherited from [TextTrimming](texttrimming.mdx). |
 
 </ApiRefPage>
 

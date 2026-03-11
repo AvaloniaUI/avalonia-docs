@@ -55,35 +55,59 @@ public interface ICustomDrawOperation
 | [HitTest](#uid-0a80a791c2) | Hit test the geometry in this node. |
 | [Render](#uid-6661d736a4) | Renders the node to a drawing context. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-0a80a791c2"></span>
 
-### HitTest
+### HitTest Method
 
 Hit test the geometry in this node.
 
 ```csharp
-public Boolean HitTest(Avalonia.Point p)
+public bool HitTest(Avalonia.Point p)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `p` | The point in global coordinates. |
+#### Parameters
 
-Returns: True if the point hits the node's geometry; otherwise false.
+`p` [Avalonia.Point](xref:Avalonia.Point)
+
+The point in global coordinates.
+
+
+#### Returns
+
+bool
+
+True if the point hits the node's geometry; otherwise false.
+
+
+#### Remarks
+
+This method does not recurse to childs, if you want
+to hit test children they must be hit tested manually.
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-6661d736a4"></span>
 
-### Render
+### Render Method
 
 Renders the node to a drawing context.
 
 ```csharp
-public Void Render(Avalonia.Media.ImmediateDrawingContext context)
+public void Render(Avalonia.Media.ImmediateDrawingContext context)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `context` | The drawing context. |
+#### Parameters
+
+`context` [Avalonia.Media.ImmediateDrawingContext](xref:Avalonia.Media.ImmediateDrawingContext)
+
+The drawing context.
+
+
+</section>
 
 ## Properties
 
@@ -91,15 +115,19 @@ public Void Render(Avalonia.Media.ImmediateDrawingContext context)
 | --- | --- |
 | [Bounds](#uid-865e4f10d7) | Gets the bounds of the visible content in the node in global coordinates. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-865e4f10d7"></span>
 
-### Bounds
+### Bounds Property
 
 Gets the bounds of the visible content in the node in global coordinates.
 
 ```csharp
 public Avalonia.Rect Bounds { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

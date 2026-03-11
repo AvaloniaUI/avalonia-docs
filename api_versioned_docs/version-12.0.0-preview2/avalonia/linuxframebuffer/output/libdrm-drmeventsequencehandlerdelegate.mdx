@@ -54,13 +54,25 @@ public delegate LibDrm.DrmEventSequenceHandlerDelegate
 | --- | --- |
 | [LibDrm.DrmEventSequenceHandlerDelegate](#uid-a1c7eb234f) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-a1c7eb234f"></span>
 
-### LibDrm.DrmEventSequenceHandlerDelegate
+### LibDrm.DrmEventSequenceHandlerDelegate Constructor
 
 ```csharp
-public LibDrm.DrmEventSequenceHandlerDelegate(Object object, IntPtr method)
+public LibDrm.DrmEventSequenceHandlerDelegate(object object, IntPtr method)
 ```
+
+#### Parameters
+
+`object` object
+
+
+`method` IntPtr
+
+
+</section>
 
 ## Methods
 
@@ -70,29 +82,85 @@ public LibDrm.DrmEventSequenceHandlerDelegate(Object object, IntPtr method)
 | [EndInvoke](#uid-dd95cabd6f) | No summary available. |
 | [Invoke](#uid-a7a8918621) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-f981634b40"></span>
 
-### BeginInvoke
+### BeginInvoke Method
 
 ```csharp
-public IAsyncResult BeginInvoke(Int32 fd, UInt64 sequence, UInt64 ns, UInt64 user_data, AsyncCallback callback, Object object)
+public IAsyncResult BeginInvoke(int fd, ulong sequence, ulong ns, ulong user_data, AsyncCallback callback, object object)
 ```
+
+#### Parameters
+
+`fd` int
+
+
+`sequence` ulong
+
+
+`ns` ulong
+
+
+`user_data` ulong
+
+
+`callback` AsyncCallback
+
+
+`object` object
+
+
+#### Returns
+
+IAsyncResult
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-dd95cabd6f"></span>
 
-### EndInvoke
+### EndInvoke Method
 
 ```csharp
-public Void EndInvoke(IAsyncResult result)
+public void EndInvoke(IAsyncResult result)
 ```
+
+#### Parameters
+
+`result` IAsyncResult
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-a7a8918621"></span>
 
-### Invoke
+### Invoke Method
 
 ```csharp
-public Void Invoke(Int32 fd, UInt64 sequence, UInt64 ns, UInt64 user_data)
+public void Invoke(int fd, ulong sequence, ulong ns, ulong user_data)
 ```
+
+#### Parameters
+
+`fd` int
+
+
+`sequence` ulong
+
+
+`ns` ulong
+
+
+`user_data` ulong
+
+
+</section>
 
 </ApiRefPage>
 

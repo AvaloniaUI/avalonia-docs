@@ -53,7 +53,7 @@ public class FontFamilyKey
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> FontFamilyKey
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> FontFamilyKey
 </div>
 </div>
 
@@ -61,11 +61,13 @@ public class FontFamilyKey
 
 | Name | Description |
 | --- | --- |
-| [FontFamilyKey](#uid-92c32595bd) | Creates a new instance of Avalonia.Media.Fonts.FontFamilyKey |
+| [FontFamilyKey](#uid-92c32595bd) | Creates a new instance of [Avalonia.Media.Fonts.FontFamilyKey](xref:Avalonia.Media.Fonts.FontFamilyKey) |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-92c32595bd"></span>
 
-### FontFamilyKey
+### FontFamilyKey Constructor
 
 Creates a new instance of [Avalonia.Media.Fonts.FontFamilyKey](xref:Avalonia.Media.Fonts.FontFamilyKey)
 
@@ -73,69 +75,106 @@ Creates a new instance of [Avalonia.Media.Fonts.FontFamilyKey](xref:Avalonia.Med
 public FontFamilyKey(Uri source, Uri baseUri)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `baseUri` |  |
-| `source` |  |
+#### Parameters
+
+`source` Uri
+
+
+`baseUri` Uri
+
+
+</section>
 
 ## Methods
 
 | Name | Description |
 | --- | --- |
-| [Equals](#uid-fdb0fef25e) | Determines whether the specified Object, is equal to this instance. |
+| [Equals](#uid-fdb0fef25e) | Determines whether the specified [object](xref:System.Object), is equal to this instance. |
 | [GetHashCode](#uid-e20ce1b9eb) | Returns a hash code for this instance. |
-| [ToString](#uid-6646924e42) | Returns a String that represents this instance. |
+| [ToString](#uid-6646924e42) | Returns a [string](xref:System.String) that represents this instance. |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-fdb0fef25e"></span>
 
-### Equals
+### Equals Method
 
-Determines whether the specified [Object](xref:System.Object), is equal to this instance.
+Determines whether the specified [object](xref:System.Object), is equal to this instance.
 
 ```csharp
-public Boolean Equals(Object obj)
+public bool Equals(object obj)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `obj` | The [Object](xref:System.Object) to compare with this instance. |
+#### Parameters
 
-Returns: `true` if the specified [Object](xref:System.Object) is equal to this instance; otherwise, `false`.
+`obj` object
+
+The [object](xref:System.Object) to compare with this instance.
+
+
+#### Returns
+
+bool
+
+`true` if the specified [object](xref:System.Object) is equal to this instance; otherwise, `false`.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-e20ce1b9eb"></span>
 
-### GetHashCode
+### GetHashCode Method
 
 Returns a hash code for this instance.
 
 ```csharp
-public Int32 GetHashCode()
+public int GetHashCode()
 ```
 
-Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
+#### Returns
+
+int
+
+A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-6646924e42"></span>
 
-### ToString
+### ToString Method
 
-Returns a [String](xref:System.String) that represents this instance.
+Returns a [string](xref:System.String) that represents this instance.
 
 ```csharp
-public String ToString()
+public string ToString()
 ```
 
-Returns: A [String](xref:System.String) that represents this instance.
+#### Returns
+
+string
+
+A [string](xref:System.String) that represents this instance.
+
+
+</section>
 
 ## Properties
 
 | Name | Description |
 | --- | --- |
-| [BaseUri](#uid-4d0199ea8b) | A base URI to use if Avalonia.Media.Fonts.FontFamilyKey.Source is relative |
-| [Source](#uid-ed486f8990) | Source of stored font asset that belongs to a Avalonia.Media.FontFamily |
+| [BaseUri](#uid-4d0199ea8b) | A base URI to use if [Avalonia.Media.Fonts.FontFamilyKey.Source](xref:Avalonia.Media.Fonts.FontFamilyKey.Source) is relative |
+| [Source](#uid-ed486f8990) | Source of stored font asset that belongs to a [Avalonia.Media.FontFamily](xref:Avalonia.Media.FontFamily) |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-4d0199ea8b"></span>
 
-### BaseUri
+### BaseUri Property
 
 A base URI to use if [Avalonia.Media.Fonts.FontFamilyKey.Source](xref:Avalonia.Media.Fonts.FontFamilyKey.Source) is relative
 
@@ -143,15 +182,21 @@ A base URI to use if [Avalonia.Media.Fonts.FontFamilyKey.Source](xref:Avalonia.M
 public Uri BaseUri { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-ed486f8990"></span>
 
-### Source
+### Source Property
 
 Source of stored font asset that belongs to a [Avalonia.Media.FontFamily](xref:Avalonia.Media.FontFamily)
 
 ```csharp
 public Uri Source { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

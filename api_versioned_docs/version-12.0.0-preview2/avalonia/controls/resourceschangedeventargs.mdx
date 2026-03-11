@@ -70,36 +70,50 @@ Avoid using a default instance of this type or its default constructor, call [Av
 
 | Name | Description |
 | --- | --- |
-| [ResourcesChangedEventArgs](#uid-bd63302dcf) | Represents the event arguments of Avalonia.Controls.IResourceHost.ResourcesChanged. The Avalonia.Controls.ResourcesChangedEventArgs.SequenceNumber identifies the changes. |
+| [ResourcesChangedEventArgs](#uid-bd63302dcf) | Represents the event arguments of [Avalonia.Controls.IResourceHost.ResourcesChanged](xref:Avalonia.Controls.IResourceHost.ResourcesChanged). The [Avalonia.Controls.ResourcesChangedEventArgs.SequenceNumber](xref:Avalonia.Controls.ResourcesChangedEventArgs.SequenceNumber) identifies the changes. |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-bd63302dcf"></span>
 
-### ResourcesChangedEventArgs
+### ResourcesChangedEventArgs Constructor
 
 Represents the event arguments of [Avalonia.Controls.IResourceHost.ResourcesChanged](xref:Avalonia.Controls.IResourceHost.ResourcesChanged).
 The [Avalonia.Controls.ResourcesChangedEventArgs.SequenceNumber](xref:Avalonia.Controls.ResourcesChangedEventArgs.SequenceNumber) identifies the changes.
 
 ```csharp
-public ResourcesChangedEventArgs(Int32 SequenceNumber)
+public ResourcesChangedEventArgs(int SequenceNumber)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `SequenceNumber` | The sequence number used to identify the changes. |
+#### Parameters
+
+`SequenceNumber` int
+
+The sequence number used to identify the changes.
+
+
+#### Remarks
+
+For performance reasons, this type is a struct.
+Avoid using a default instance of this type or its default constructor, call [Avalonia.Controls.ResourcesChangedEventArgs.Create](xref:Avalonia.Controls.ResourcesChangedEventArgs.Create) instead.
+
+</section>
 
 ## Methods
 
 | Name | Description |
 | --- | --- |
-| [Create](#uid-954a97e788) | Creates a new instance of Avalonia.Controls.ResourcesChangedEventArgs with an auto-incremented sequence number. |
+| [Create](#uid-954a97e788) | Creates a new instance of [Avalonia.Controls.ResourcesChangedEventArgs](xref:Avalonia.Controls.ResourcesChangedEventArgs) with an auto-incremented sequence number. |
 | [Deconstruct](#uid-04c79d7563) | No summary available. |
 | [Equals (2 overloads)](#uid-793488e1d0) | No summary available. |
 | [GetHashCode](#uid-e227c8332a) | No summary available. |
 | [ToString](#uid-50186fed84) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-954a97e788"></span>
 
-### Create
+### Create Method
 
 Creates a new instance of [Avalonia.Controls.ResourcesChangedEventArgs](xref:Avalonia.Controls.ResourcesChangedEventArgs) with an auto-incremented sequence number.
 
@@ -107,49 +121,111 @@ Creates a new instance of [Avalonia.Controls.ResourcesChangedEventArgs](xref:Ava
 public Avalonia.Controls.ResourcesChangedEventArgs Create()
 ```
 
+#### Returns
+
+[Avalonia.Controls.ResourcesChangedEventArgs](xref:Avalonia.Controls.ResourcesChangedEventArgs)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-04c79d7563"></span>
 
-### Deconstruct
+### Deconstruct Method
 
 ```csharp
-public Void Deconstruct(Int32& SequenceNumber)
+public void Deconstruct(int& SequenceNumber)
 ```
+
+#### Parameters
+
+`SequenceNumber` int&amp;
+
+
+</section>
 
 <span id="uid-793488e1d0"></span>
 
 ### Equals overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-0ddf7648a3"></span>
 
-#### Equals
+#### Equals Method
 
 ```csharp
-public Boolean Equals(Avalonia.Controls.ResourcesChangedEventArgs other)
+public bool Equals(Avalonia.Controls.ResourcesChangedEventArgs other)
 ```
+
+##### Parameters
+
+`other` [Avalonia.Controls.ResourcesChangedEventArgs](xref:Avalonia.Controls.ResourcesChangedEventArgs)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-36e7f0b2af"></span>
 
-#### Equals
+#### Equals Method
 
 ```csharp
-public Boolean Equals(Object obj)
+public bool Equals(object obj)
 ```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-e227c8332a"></span>
 
-### GetHashCode
+### GetHashCode Method
 
 ```csharp
-public Int32 GetHashCode()
+public int GetHashCode()
 ```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-50186fed84"></span>
 
-### ToString
+### ToString Method
 
 ```csharp
-public String ToString()
+public string ToString()
 ```
+
+#### Returns
+
+string
+
+
+</section>
 
 ## Properties
 
@@ -157,15 +233,19 @@ public String ToString()
 | --- | --- |
 | [SequenceNumber](#uid-1cbd8e9ac4) | The sequence number used to identify the changes. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-1cbd8e9ac4"></span>
 
-### SequenceNumber
+### SequenceNumber Property
 
 The sequence number used to identify the changes.
 
 ```csharp
-public Int32 SequenceNumber { get; set; }
+public int SequenceNumber { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

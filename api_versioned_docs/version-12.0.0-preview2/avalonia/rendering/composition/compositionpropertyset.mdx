@@ -59,7 +59,7 @@ public class CompositionPropertySet
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> <a href="compositionobject">CompositionObject</a> <span className="apiref-page__relation-separator">-&gt;</span> CompositionPropertySet
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="compositionobject">CompositionObject</a> <span className="apiref-page__relation-separator">-&gt;</span> CompositionPropertySet
 </div>
 </div>
 
@@ -85,162 +85,423 @@ public class CompositionPropertySet
 | [TryGetVector2](#uid-c3f177b5d5) | No summary available. |
 | [TryGetVector3](#uid-aede08e71a) | No summary available. |
 | [TryGetVector4](#uid-c5319b1407) | No summary available. |
-| [StartAnimation (Inherited from CompositionObject)](compositionobject.mdx#uid-4d2f25fec7) | Connects an animation with the specified property of the object and starts the animation. |
-| [StartAnimationGroup (Inherited from CompositionObject)](compositionobject.mdx#uid-4846f860a0) | Starts an animation group. The StartAnimationGroup method on CompositionObject lets you start CompositionAnimationGroup. All the animations in the group will be started at the same time on the object. |
-| [StopAnimation (Inherited from CompositionObject)](compositionobject.mdx#uid-01077c2b21) | Disconnects an animation from the specified property and stops the animation. |
-| [StopAnimationGroup (Inherited from CompositionObject)](compositionobject.mdx#uid-81dbd02845) | Stops an animation group. |
+| [StartAnimation](compositionobject.mdx#uid-4d2f25fec7) | Connects an animation with the specified property of the object and starts the animation. Inherited from [CompositionObject](compositionobject.mdx). |
+| [StartAnimationGroup](compositionobject.mdx#uid-4846f860a0) | Starts an animation group. The StartAnimationGroup method on [CompositionObject](xref:Avalonia.Rendering.Composition.CompositionObject) lets you start [CompositionAnimationGroup](xref:Avalonia.Rendering.Composition.Animations.CompositionAnimationGroup). All the animations in the group will be started at the same time on the object. Inherited from [CompositionObject](compositionobject.mdx). |
+| [StopAnimation](compositionobject.mdx#uid-01077c2b21) | Disconnects an animation from the specified property and stops the animation. Inherited from [CompositionObject](compositionobject.mdx). |
+| [StopAnimationGroup](compositionobject.mdx#uid-81dbd02845) | Stops an animation group. Inherited from [CompositionObject](compositionobject.mdx). |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-b49484b88b"></span>
 
-### InsertBoolean
+### InsertBoolean Method
 
 ```csharp
-public Void InsertBoolean(String propertyName, Boolean value)
+public void InsertBoolean(string propertyName, bool value)
 ```
+
+#### Parameters
+
+`propertyName` string
+
+
+`value` bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-b81a565f2e"></span>
 
-### InsertColor
+### InsertColor Method
 
 ```csharp
-public Void InsertColor(String propertyName, Avalonia.Media.Color value)
+public void InsertColor(string propertyName, Avalonia.Media.Color value)
 ```
+
+#### Parameters
+
+`propertyName` string
+
+
+`value` [Avalonia.Media.Color](xref:Avalonia.Media.Color)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-9f10c005ee"></span>
 
-### InsertMatrix3x2
+### InsertMatrix3x2 Method
 
 ```csharp
-public Void InsertMatrix3x2(String propertyName, System.Numerics.Matrix3x2 value)
+public void InsertMatrix3x2(string propertyName, System.Numerics.Matrix3x2 value)
 ```
+
+#### Parameters
+
+`propertyName` string
+
+
+`value` System.Numerics.Matrix3x2
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-e81610c741"></span>
 
-### InsertMatrix4x4
+### InsertMatrix4x4 Method
 
 ```csharp
-public Void InsertMatrix4x4(String propertyName, System.Numerics.Matrix4x4 value)
+public void InsertMatrix4x4(string propertyName, System.Numerics.Matrix4x4 value)
 ```
+
+#### Parameters
+
+`propertyName` string
+
+
+`value` System.Numerics.Matrix4x4
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-68f3a3b336"></span>
 
-### InsertQuaternion
+### InsertQuaternion Method
 
 ```csharp
-public Void InsertQuaternion(String propertyName, System.Numerics.Quaternion value)
+public void InsertQuaternion(string propertyName, System.Numerics.Quaternion value)
 ```
+
+#### Parameters
+
+`propertyName` string
+
+
+`value` System.Numerics.Quaternion
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-73172dde86"></span>
 
-### InsertScalar
+### InsertScalar Method
 
 ```csharp
-public Void InsertScalar(String propertyName, Single value)
+public void InsertScalar(string propertyName, float value)
 ```
+
+#### Parameters
+
+`propertyName` string
+
+
+`value` float
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-2a399bd65d"></span>
 
-### InsertVector2
+### InsertVector2 Method
 
 ```csharp
-public Void InsertVector2(String propertyName, System.Numerics.Vector2 value)
+public void InsertVector2(string propertyName, System.Numerics.Vector2 value)
 ```
+
+#### Parameters
+
+`propertyName` string
+
+
+`value` System.Numerics.Vector2
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-c79eb83025"></span>
 
-### InsertVector3
+### InsertVector3 Method
 
 ```csharp
-public Void InsertVector3(String propertyName, System.Numerics.Vector3 value)
+public void InsertVector3(string propertyName, System.Numerics.Vector3 value)
 ```
+
+#### Parameters
+
+`propertyName` string
+
+
+`value` System.Numerics.Vector3
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-dbbfff0d8c"></span>
 
-### InsertVector4
+### InsertVector4 Method
 
 ```csharp
-public Void InsertVector4(String propertyName, System.Numerics.Vector4 value)
+public void InsertVector4(string propertyName, System.Numerics.Vector4 value)
 ```
+
+#### Parameters
+
+`propertyName` string
+
+
+`value` System.Numerics.Vector4
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-35a5bf41c6"></span>
 
-### TryGetBoolean
+### TryGetBoolean Method
 
 ```csharp
-public Avalonia.Rendering.Composition.CompositionGetValueStatus TryGetBoolean(String propertyName, Boolean& value)
+public Avalonia.Rendering.Composition.CompositionGetValueStatus TryGetBoolean(string propertyName, bool& value)
 ```
+
+#### Parameters
+
+`propertyName` string
+
+
+`value` bool&amp;
+
+
+#### Returns
+
+[Avalonia.Rendering.Composition.CompositionGetValueStatus](xref:Avalonia.Rendering.Composition.CompositionGetValueStatus)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-dfe711f1e8"></span>
 
-### TryGetColor
+### TryGetColor Method
 
 ```csharp
-public Avalonia.Rendering.Composition.CompositionGetValueStatus TryGetColor(String propertyName, Avalonia.Media.Color& value)
+public Avalonia.Rendering.Composition.CompositionGetValueStatus TryGetColor(string propertyName, Avalonia.Media.Color& value)
 ```
+
+#### Parameters
+
+`propertyName` string
+
+
+`value` [Avalonia.Media.Color](xref:Avalonia.Media.Color)&amp;
+
+
+#### Returns
+
+[Avalonia.Rendering.Composition.CompositionGetValueStatus](xref:Avalonia.Rendering.Composition.CompositionGetValueStatus)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-7862025530"></span>
 
-### TryGetMatrix3x2
+### TryGetMatrix3x2 Method
 
 ```csharp
-public Avalonia.Rendering.Composition.CompositionGetValueStatus TryGetMatrix3x2(String propertyName, System.Numerics.Matrix3x2& value)
+public Avalonia.Rendering.Composition.CompositionGetValueStatus TryGetMatrix3x2(string propertyName, System.Numerics.Matrix3x2& value)
 ```
+
+#### Parameters
+
+`propertyName` string
+
+
+`value` System.Numerics.Matrix3x2&amp;
+
+
+#### Returns
+
+[Avalonia.Rendering.Composition.CompositionGetValueStatus](xref:Avalonia.Rendering.Composition.CompositionGetValueStatus)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-498c352b46"></span>
 
-### TryGetMatrix4x4
+### TryGetMatrix4x4 Method
 
 ```csharp
-public Avalonia.Rendering.Composition.CompositionGetValueStatus TryGetMatrix4x4(String propertyName, System.Numerics.Matrix4x4& value)
+public Avalonia.Rendering.Composition.CompositionGetValueStatus TryGetMatrix4x4(string propertyName, System.Numerics.Matrix4x4& value)
 ```
+
+#### Parameters
+
+`propertyName` string
+
+
+`value` System.Numerics.Matrix4x4&amp;
+
+
+#### Returns
+
+[Avalonia.Rendering.Composition.CompositionGetValueStatus](xref:Avalonia.Rendering.Composition.CompositionGetValueStatus)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-5ca5dc503f"></span>
 
-### TryGetQuaternion
+### TryGetQuaternion Method
 
 ```csharp
-public Avalonia.Rendering.Composition.CompositionGetValueStatus TryGetQuaternion(String propertyName, System.Numerics.Quaternion& value)
+public Avalonia.Rendering.Composition.CompositionGetValueStatus TryGetQuaternion(string propertyName, System.Numerics.Quaternion& value)
 ```
+
+#### Parameters
+
+`propertyName` string
+
+
+`value` System.Numerics.Quaternion&amp;
+
+
+#### Returns
+
+[Avalonia.Rendering.Composition.CompositionGetValueStatus](xref:Avalonia.Rendering.Composition.CompositionGetValueStatus)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-fff8ed75dc"></span>
 
-### TryGetScalar
+### TryGetScalar Method
 
 ```csharp
-public Avalonia.Rendering.Composition.CompositionGetValueStatus TryGetScalar(String propertyName, Single& value)
+public Avalonia.Rendering.Composition.CompositionGetValueStatus TryGetScalar(string propertyName, float& value)
 ```
+
+#### Parameters
+
+`propertyName` string
+
+
+`value` float&amp;
+
+
+#### Returns
+
+[Avalonia.Rendering.Composition.CompositionGetValueStatus](xref:Avalonia.Rendering.Composition.CompositionGetValueStatus)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-c3f177b5d5"></span>
 
-### TryGetVector2
+### TryGetVector2 Method
 
 ```csharp
-public Avalonia.Rendering.Composition.CompositionGetValueStatus TryGetVector2(String propertyName, System.Numerics.Vector2& value)
+public Avalonia.Rendering.Composition.CompositionGetValueStatus TryGetVector2(string propertyName, System.Numerics.Vector2& value)
 ```
+
+#### Parameters
+
+`propertyName` string
+
+
+`value` System.Numerics.Vector2&amp;
+
+
+#### Returns
+
+[Avalonia.Rendering.Composition.CompositionGetValueStatus](xref:Avalonia.Rendering.Composition.CompositionGetValueStatus)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-aede08e71a"></span>
 
-### TryGetVector3
+### TryGetVector3 Method
 
 ```csharp
-public Avalonia.Rendering.Composition.CompositionGetValueStatus TryGetVector3(String propertyName, System.Numerics.Vector3& value)
+public Avalonia.Rendering.Composition.CompositionGetValueStatus TryGetVector3(string propertyName, System.Numerics.Vector3& value)
 ```
+
+#### Parameters
+
+`propertyName` string
+
+
+`value` System.Numerics.Vector3&amp;
+
+
+#### Returns
+
+[Avalonia.Rendering.Composition.CompositionGetValueStatus](xref:Avalonia.Rendering.Composition.CompositionGetValueStatus)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-c5319b1407"></span>
 
-### TryGetVector4
+### TryGetVector4 Method
 
 ```csharp
-public Avalonia.Rendering.Composition.CompositionGetValueStatus TryGetVector4(String propertyName, System.Numerics.Vector4& value)
+public Avalonia.Rendering.Composition.CompositionGetValueStatus TryGetVector4(string propertyName, System.Numerics.Vector4& value)
 ```
+
+#### Parameters
+
+`propertyName` string
+
+
+`value` System.Numerics.Vector4&amp;
+
+
+#### Returns
+
+[Avalonia.Rendering.Composition.CompositionGetValueStatus](xref:Avalonia.Rendering.Composition.CompositionGetValueStatus)
+
+
+</section>
 
 ## Properties
 
 | Name | Description |
 | --- | --- |
-| [Compositor (Inherited from CompositionObject)](compositionobject.mdx#uid-bd6bbc1391) | The associated Compositor |
-| [ImplicitAnimations (Inherited from CompositionObject)](compositionobject.mdx#uid-3929e9ea34) | The collection of implicit animations attached to this object. |
-| [IsDisposed (Inherited from CompositionObject)](compositionobject.mdx#uid-e01437c946) | No summary available. |
+| [Compositor](compositionobject.mdx#uid-bd6bbc1391) | The associated Compositor Inherited from [CompositionObject](compositionobject.mdx). |
+| [ImplicitAnimations](compositionobject.mdx#uid-3929e9ea34) | The collection of implicit animations attached to this object. Inherited from [CompositionObject](compositionobject.mdx). |
+| [IsDisposed](compositionobject.mdx#uid-e01437c946) | Inherited from [CompositionObject](compositionobject.mdx). |
 
 </ApiRefPage>
 

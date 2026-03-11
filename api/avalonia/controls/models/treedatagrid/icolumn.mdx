@@ -1,0 +1,188 @@
+---
+title: 'IColumn'
+hide_title: true
+slug: '/avalonia/controls/models/treedatagrid/icolumn'
+uid: 'Avalonia.Controls.Models.TreeDataGrid.IColumn'
+commentId: 'T:Avalonia.Controls.Models.TreeDataGrid.IColumn'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.TreeDataGrid'
+assembly: 'Avalonia.Controls.TreeDataGrid'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Models.TreeDataGrid'
+tfms:
+  - 'net8.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IColumn Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Models.TreeDataGrid</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Represents a column in an [Avalonia.Controls.ITreeDataGridSource](xref:Avalonia.Controls.ITreeDataGridSource).
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface IColumn
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> INotifyPropertyChanged
+</div>
+</div>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [ActualWidth](#uid-c01848649c) | Gets the actual width of the column after measurement. |
+| [CanUserResize](#uid-def50d0b23) | Gets a value indicating whether the user can resize the column. |
+| [Header](#uid-1769ed5048) | Gets the column header. |
+| [IsVisible](#uid-616491b592) | Gets or sets a value indicating whether the column is visible. |
+| [SortDirection](#uid-5890d64ddb) | Gets or sets the sort direction indicator that will be displayed on the column. |
+| [Tag](#uid-a15f7120c4) | Gets or sets a user-defined object attached to the column. |
+| [Width](#uid-dc2727f3b7) | Gets the width of the column. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c01848649c"></span>
+
+### ActualWidth Property
+
+Gets the actual width of the column after measurement.
+
+```csharp
+public double ActualWidth { get; set; }
+```
+
+#### Returns
+
+The width of the column in pixels, or NaN if the column has not yet been laid out.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-def50d0b23"></span>
+
+### CanUserResize Property
+
+Gets a value indicating whether the user can resize the column.
+
+```csharp
+public Nullable<bool> CanUserResize { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1769ed5048"></span>
+
+### Header Property
+
+Gets the column header.
+
+```csharp
+public object Header { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-616491b592"></span>
+
+### IsVisible Property
+
+Gets or sets a value indicating whether the column is visible.
+
+```csharp
+public bool IsVisible { get; set; }
+```
+
+#### Remarks
+
+When set to false, the column header and cells will not be rendered and the column
+will not contribute to layout calculations.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5890d64ddb"></span>
+
+### SortDirection Property
+
+Gets or sets the sort direction indicator that will be displayed on the column.
+
+```csharp
+public Nullable<System.ComponentModel.ListSortDirection> SortDirection { get; set; }
+```
+
+#### Remarks
+
+Note that changing this property does not change the sorting of the data, it is only
+used to display a sort direction indicator. To sort data according to a column use
+[Avalonia.Controls.ITreeDataGridSource.SortBy(Avalonia.Controls.Models.TreeDataGrid.IColumn,System.ComponentModel.ListSortDirection)](xref:Avalonia.Controls.ITreeDataGridSource.SortBy%28Avalonia.Controls.Models.TreeDataGrid.IColumn%2CSystem.ComponentModel.ListSortDirection%29).
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a15f7120c4"></span>
+
+### Tag Property
+
+Gets or sets a user-defined object attached to the column.
+
+```csharp
+public object Tag { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-dc2727f3b7"></span>
+
+### Width Property
+
+Gets the width of the column.
+
+```csharp
+public Avalonia.Controls.GridLength Width { get; set; }
+```
+
+#### Remarks
+
+To set the column width use [Avalonia.Controls.Models.TreeDataGrid.IColumns.SetColumnWidth(int,Avalonia.Controls.GridLength)](xref:Avalonia.Controls.Models.TreeDataGrid.IColumns.SetColumnWidth%28System.Int32%2CAvalonia.Controls.GridLength%29).
+
+</section>
+
+</ApiRefPage>
+

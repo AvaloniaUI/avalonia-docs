@@ -39,7 +39,7 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 
 <div className="apiref-page__lead">
 
-Provides platform specific formatting information for the KeyGesture class
+Provides platform specific formatting information for the [KeyGesture](xref:Avalonia.Input.KeyGesture) class
 
 </div>
 
@@ -53,7 +53,7 @@ public class KeyGestureFormatInfo
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> KeyGestureFormatInfo
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> KeyGestureFormatInfo
 </div>
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Implements:</span> IFormatProvider
@@ -66,13 +66,34 @@ public class KeyGestureFormatInfo
 | --- | --- |
 | [KeyGestureFormatInfo](#uid-daad60c40d) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-daad60c40d"></span>
 
-### KeyGestureFormatInfo
+### KeyGestureFormatInfo Constructor
 
 ```csharp
-public KeyGestureFormatInfo(System.Collections.Generic.IReadOnlyDictionary<Avalonia.Input.Key, String> platformKeyOverrides, String meta, String ctrl, String alt, String shift)
+public KeyGestureFormatInfo(System.Collections.Generic.IReadOnlyDictionary<Avalonia.Input.Key, string> platformKeyOverrides, string meta, string ctrl, string alt, string shift)
 ```
+
+#### Parameters
+
+`platformKeyOverrides` System.Collections.Generic.IReadOnlyDictionary&lt;[Avalonia.Input.Key](xref:Avalonia.Input.Key), string&gt;
+
+
+`meta` string
+
+
+`ctrl` string
+
+
+`alt` string
+
+
+`shift` string
+
+
+</section>
 
 ## Methods
 
@@ -80,11 +101,13 @@ public KeyGestureFormatInfo(System.Collections.Generic.IReadOnlyDictionary<Avalo
 | --- | --- |
 | [FormatKey](#uid-f5307b89c8) | Checks the platformKeyOverrides and s_commonKeyOverrides Dictionaries, in order, for the appropriate string to represent the given Key on this platform. NOTE: If platformKeyOverrides is null, this is assumed to be the Invariant and the Dictionaries are not checked. The plain Enum string is returned instead. |
 | [GetFormat](#uid-7ea541db92) | No summary available. |
-| [GetInstance](#uid-c918e9fb28) | Gets the most appropriate KeyGestureFormatInfo for the IFormatProvider requested. This will be, in order: 1. The provided IFormatProvider as a KeyGestureFormatInfo 2. The currently registered platform specific KeyGestureFormatInfo, if present. 3. The Invariant otherwise. |
+| [GetInstance](#uid-c918e9fb28) | Gets the most appropriate [KeyGestureFormatInfo](xref:Avalonia.Input.Platform.KeyGestureFormatInfo) for the IFormatProvider requested. This will be, in order: 1. The provided IFormatProvider as a [KeyGestureFormatInfo](xref:Avalonia.Input.Platform.KeyGestureFormatInfo) 2. The currently registered platform specific [KeyGestureFormatInfo](xref:Avalonia.Input.Platform.KeyGestureFormatInfo), if present. 3. The Invariant otherwise. |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-f5307b89c8"></span>
 
-### FormatKey
+### FormatKey Method
 
 Checks the platformKeyOverrides and s_commonKeyOverrides Dictionaries, in order, for the appropriate
 string to represent the given Key on this platform.
@@ -92,39 +115,75 @@ NOTE: If platformKeyOverrides is null, this is assumed to be the Invariant and t
 The plain Enum string is returned instead.
 
 ```csharp
-public String FormatKey(Avalonia.Input.Key key)
+public string FormatKey(Avalonia.Input.Key key)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `key` | The Key to format. |
+#### Parameters
 
-Returns: The appropriate platform specific or common override if present, key.ToString() if not or this is the Invariant.
+`key` [Avalonia.Input.Key](xref:Avalonia.Input.Key)
+
+The Key to format.
+
+
+#### Returns
+
+string
+
+The appropriate platform specific or common override if present, key.ToString() if not or this is the Invariant.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-7ea541db92"></span>
 
-### GetFormat
+### GetFormat Method
 
 ```csharp
-public Object GetFormat(Type formatType)
+public object GetFormat(Type formatType)
 ```
+
+#### Parameters
+
+`formatType` Type
+
+
+#### Returns
+
+object
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-c918e9fb28"></span>
 
-### GetInstance
+### GetInstance Method
 
-Gets the most appropriate KeyGestureFormatInfo for the IFormatProvider requested. This will be, in order:
-1. The provided IFormatProvider as a KeyGestureFormatInfo
-2. The currently registered platform specific KeyGestureFormatInfo, if present.
+Gets the most appropriate [KeyGestureFormatInfo](xref:Avalonia.Input.Platform.KeyGestureFormatInfo) for the IFormatProvider requested. This will be, in order:
+1. The provided IFormatProvider as a [KeyGestureFormatInfo](xref:Avalonia.Input.Platform.KeyGestureFormatInfo)
+2. The currently registered platform specific [KeyGestureFormatInfo](xref:Avalonia.Input.Platform.KeyGestureFormatInfo), if present.
 3. The Invariant otherwise.
 
 ```csharp
 public Avalonia.Input.Platform.KeyGestureFormatInfo GetInstance(IFormatProvider formatProvider)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `formatProvider` | The IFormatProvider to get a KeyGestureFormatInfo for. |
+#### Parameters
+
+`formatProvider` IFormatProvider
+
+The IFormatProvider to get a [KeyGestureFormatInfo](xref:Avalonia.Input.Platform.KeyGestureFormatInfo) for.
+
+
+#### Returns
+
+[Avalonia.Input.Platform.KeyGestureFormatInfo](xref:Avalonia.Input.Platform.KeyGestureFormatInfo)
+
+
+</section>
 
 ## Properties
 
@@ -136,29 +195,39 @@ public Avalonia.Input.Platform.KeyGestureFormatInfo GetInstance(IFormatProvider 
 | [Meta](#uid-bdbb98095f) | The string used to represent Meta on the appropriate platform. Defaults to "Cmd". |
 | [Shift](#uid-1970ae80f7) | The string used to represent Shift on the appropriate platform. Defaults to "Shift". |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-ccf04534ec"></span>
 
-### Alt
+### Alt Property
 
 The string used to represent Alt on the appropriate platform. Defaults to "Alt".
 
 ```csharp
-public String Alt { get; set; }
+public string Alt { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-7adb04c43b"></span>
 
-### Ctrl
+### Ctrl Property
 
 The string used to represent Ctrl on the appropriate platform. Defaults to "Ctrl".
 
 ```csharp
-public String Ctrl { get; set; }
+public string Ctrl { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-9acb50d4dd"></span>
 
-### Invariant
+### Invariant Property
 
 The Invariant format. Only uses strings straight from the appropriate Enums.
 
@@ -166,25 +235,35 @@ The Invariant format. Only uses strings straight from the appropriate Enums.
 public Avalonia.Input.Platform.KeyGestureFormatInfo Invariant { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-bdbb98095f"></span>
 
-### Meta
+### Meta Property
 
 The string used to represent Meta on the appropriate platform. Defaults to "Cmd".
 
 ```csharp
-public String Meta { get; set; }
+public string Meta { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-1970ae80f7"></span>
 
-### Shift
+### Shift Property
 
 The string used to represent Shift on the appropriate platform. Defaults to "Shift".
 
 ```csharp
-public String Shift { get; set; }
+public string Shift { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

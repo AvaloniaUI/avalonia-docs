@@ -64,22 +64,33 @@ public struct Vector
 
 | Name | Description |
 | --- | --- |
-| [Vector](#uid-90b2ee44cc) | Initializes a new instance of the Avalonia.Vector structure. |
+| [Vector](#uid-90b2ee44cc) | Initializes a new instance of the [Avalonia.Vector](xref:Avalonia.Vector) structure. |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-90b2ee44cc"></span>
 
-### Vector
+### Vector Constructor
 
 Initializes a new instance of the [Avalonia.Vector](xref:Avalonia.Vector) structure.
 
 ```csharp
-public Vector(Double x, Double y)
+public Vector(double x, double y)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `x` | The X component. |
-| `y` | The Y component. |
+#### Parameters
+
+`x` double
+
+The X component.
+
+
+`y` double
+
+The Y component.
+
+
+</section>
 
 ## Methods
 
@@ -102,15 +113,17 @@ public Vector(Double x, Double y)
 | [NearlyEquals](#uid-2fc575cc4e) | Check if two vectors are nearly equal (numerically). |
 | [Negate (2 overloads)](#uid-318cdc1482) | Returns a negated version of this vector. |
 | [Normalize (2 overloads)](#uid-f0c0c4d580) | Returns a normalized version of this vector. |
-| [Parse](#uid-1bf83f4e65) | Parses a Avalonia.Vector string. |
+| [Parse](#uid-1bf83f4e65) | Parses a [Avalonia.Vector](xref:Avalonia.Vector) string. |
 | [Subtract](#uid-a968b81add) | Subtracts the second from the first vector |
 | [ToString](#uid-668c8eb0f9) | Returns the string representation of the vector. |
 | [WithX](#uid-8154f8665f) | Returns a new vector with the specified X component. |
 | [WithY](#uid-57fd81b139) | Returns a new vector with the specified Y component. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-46c877565a"></span>
 
-### Abs
+### Abs Method
 
 Returns a vector whose elements are the absolute values of each of the specified vector's elements.
 
@@ -118,9 +131,18 @@ Returns a vector whose elements are the absolute values of each of the specified
 public Avalonia.Vector Abs()
 ```
 
+#### Returns
+
+[Avalonia.Vector](xref:Avalonia.Vector)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-5223085307"></span>
 
-### Add
+### Add Method
 
 Adds the second to the first vector
 
@@ -128,16 +150,32 @@ Adds the second to the first vector
 public Avalonia.Vector Add(Avalonia.Vector a, Avalonia.Vector b)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `a` | The first vector. |
-| `b` | The second vector. |
+#### Parameters
 
-Returns: The summed vector.
+`a` [Avalonia.Vector](xref:Avalonia.Vector)
+
+The first vector.
+
+
+`b` [Avalonia.Vector](xref:Avalonia.Vector)
+
+The second vector.
+
+
+#### Returns
+
+[Avalonia.Vector](xref:Avalonia.Vector)
+
+The summed vector.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-a7f3ebdb43"></span>
 
-### Clamp
+### Clamp Method
 
 Restricts a vector between a minimum and a maximum value.
 
@@ -145,72 +183,152 @@ Restricts a vector between a minimum and a maximum value.
 public Avalonia.Vector Clamp(Avalonia.Vector value, Avalonia.Vector min, Avalonia.Vector max)
 ```
 
+#### Parameters
+
+`value` [Avalonia.Vector](xref:Avalonia.Vector)
+
+
+`min` [Avalonia.Vector](xref:Avalonia.Vector)
+
+
+`max` [Avalonia.Vector](xref:Avalonia.Vector)
+
+
+#### Returns
+
+[Avalonia.Vector](xref:Avalonia.Vector)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-fe0327d565"></span>
 
-### Cross
+### Cross Method
 
 Returns the cross product of two vectors.
 
 ```csharp
-public Double Cross(Avalonia.Vector a, Avalonia.Vector b)
+public double Cross(Avalonia.Vector a, Avalonia.Vector b)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `a` | The first vector. |
-| `b` | The second vector. |
+#### Parameters
 
-Returns: The cross product.
+`a` [Avalonia.Vector](xref:Avalonia.Vector)
+
+The first vector.
+
+
+`b` [Avalonia.Vector](xref:Avalonia.Vector)
+
+The second vector.
+
+
+#### Returns
+
+double
+
+The cross product.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-2a859cf516"></span>
 
-### Deconstruct
+### Deconstruct Method
 
 ```csharp
-public Void Deconstruct(Double& x, Double& y)
+public void Deconstruct(double& x, double& y)
 ```
+
+#### Parameters
+
+`x` double&amp;
+
+
+`y` double&amp;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-f1e68aa94c"></span>
 
-### Distance
+### Distance Method
 
 Computes the Euclidean distance between the two given points.
 
 ```csharp
-public Double Distance(Avalonia.Vector value1, Avalonia.Vector value2)
+public double Distance(Avalonia.Vector value1, Avalonia.Vector value2)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `value1` | The first point. |
-| `value2` | The second point. |
+#### Parameters
 
-Returns: The Euclidean distance.
+`value1` [Avalonia.Vector](xref:Avalonia.Vector)
+
+The first point.
+
+
+`value2` [Avalonia.Vector](xref:Avalonia.Vector)
+
+The second point.
+
+
+#### Returns
+
+double
+
+The Euclidean distance.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-8f960f5cea"></span>
 
-### DistanceSquared
+### DistanceSquared Method
 
 Returns the Euclidean distance squared between two specified points
 
 ```csharp
-public Double DistanceSquared(Avalonia.Vector value1, Avalonia.Vector value2)
+public double DistanceSquared(Avalonia.Vector value1, Avalonia.Vector value2)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `value1` | The first point. |
-| `value2` | The second point. |
+#### Parameters
 
-Returns: The Euclidean distance squared.
+`value1` [Avalonia.Vector](xref:Avalonia.Vector)
+
+The first point.
+
+
+`value2` [Avalonia.Vector](xref:Avalonia.Vector)
+
+The second point.
+
+
+#### Returns
+
+double
+
+The Euclidean distance squared.
+
+
+</section>
 
 <span id="uid-4e3b9274dd"></span>
 
 ### Divide overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-da1aa4470a"></span>
 
-#### Divide
+#### Divide Method
 
 Divides the first vector by the second.
 
@@ -218,84 +336,165 @@ Divides the first vector by the second.
 public Avalonia.Vector Divide(Avalonia.Vector a, Avalonia.Vector b)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `a` | The first vector. |
-| `b` | The second vector. |
+##### Parameters
 
-Returns: The scaled vector.
+`a` [Avalonia.Vector](xref:Avalonia.Vector)
+
+The first vector.
+
+
+`b` [Avalonia.Vector](xref:Avalonia.Vector)
+
+The second vector.
+
+
+##### Returns
+
+[Avalonia.Vector](xref:Avalonia.Vector)
+
+The scaled vector.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-a9c5d076b3"></span>
 
-#### Divide
+#### Divide Method
 
 Divides the vector by the given scalar.
 
 ```csharp
-public Avalonia.Vector Divide(Avalonia.Vector vector, Double scalar)
+public Avalonia.Vector Divide(Avalonia.Vector vector, double scalar)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `scalar` | The scalar value |
-| `vector` | The vector |
+##### Parameters
 
-Returns: The scaled vector.
+`vector` [Avalonia.Vector](xref:Avalonia.Vector)
+
+The vector
+
+
+`scalar` double
+
+The scalar value
+
+
+##### Returns
+
+[Avalonia.Vector](xref:Avalonia.Vector)
+
+The scaled vector.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-4148913918"></span>
 
-### Dot
+### Dot Method
 
 Returns the dot product of two vectors.
 
 ```csharp
-public Double Dot(Avalonia.Vector a, Avalonia.Vector b)
+public double Dot(Avalonia.Vector a, Avalonia.Vector b)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `a` | The first vector. |
-| `b` | The second vector. |
+#### Parameters
 
-Returns: The dot product.
+`a` [Avalonia.Vector](xref:Avalonia.Vector)
+
+The first vector.
+
+
+`b` [Avalonia.Vector](xref:Avalonia.Vector)
+
+The second vector.
+
+
+#### Returns
+
+double
+
+The dot product.
+
+
+</section>
 
 <span id="uid-ce2cfe6ee3"></span>
 
 ### Equals overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-22a91123f3"></span>
 
-#### Equals
+#### Equals Method
 
 Check if two vectors are equal (bitwise).
 
 ```csharp
-public Boolean Equals(Avalonia.Vector other)
+public bool Equals(Avalonia.Vector other)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `other` |  |
+##### Parameters
+
+`other` [Avalonia.Vector](xref:Avalonia.Vector)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-a8dcc78606"></span>
 
-#### Equals
+#### Equals Method
 
 ```csharp
-public Boolean Equals(Object obj)
+public bool Equals(object obj)
 ```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-c00d23029d"></span>
 
-### GetHashCode
+### GetHashCode Method
 
 ```csharp
-public Int32 GetHashCode()
+public int GetHashCode()
 ```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-2be81d4b1f"></span>
 
-### Max
+### Max Method
 
 Returns a vector whose elements are the maximum of each of the pairs of elements in two specified vectors
 
@@ -303,9 +502,26 @@ Returns a vector whose elements are the maximum of each of the pairs of elements
 public Avalonia.Vector Max(Avalonia.Vector left, Avalonia.Vector right)
 ```
 
+#### Parameters
+
+`left` [Avalonia.Vector](xref:Avalonia.Vector)
+
+
+`right` [Avalonia.Vector](xref:Avalonia.Vector)
+
+
+#### Returns
+
+[Avalonia.Vector](xref:Avalonia.Vector)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-e5a3e14aec"></span>
 
-### Min
+### Min Method
 
 Returns a vector whose elements are the minimum of each of the pairs of elements in two specified vectors
 
@@ -313,13 +529,30 @@ Returns a vector whose elements are the minimum of each of the pairs of elements
 public Avalonia.Vector Min(Avalonia.Vector left, Avalonia.Vector right)
 ```
 
+#### Parameters
+
+`left` [Avalonia.Vector](xref:Avalonia.Vector)
+
+
+`right` [Avalonia.Vector](xref:Avalonia.Vector)
+
+
+#### Returns
+
+[Avalonia.Vector](xref:Avalonia.Vector)
+
+
+</section>
+
 <span id="uid-3669f7bd63"></span>
 
 ### Multiply overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-99976aa58d"></span>
 
-#### Multiply
+#### Multiply Method
 
 Multiplies the first vector by the second.
 
@@ -327,53 +560,97 @@ Multiplies the first vector by the second.
 public Avalonia.Vector Multiply(Avalonia.Vector a, Avalonia.Vector b)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `a` | The first vector. |
-| `b` | The second vector. |
+##### Parameters
 
-Returns: The scaled vector.
+`a` [Avalonia.Vector](xref:Avalonia.Vector)
+
+The first vector.
+
+
+`b` [Avalonia.Vector](xref:Avalonia.Vector)
+
+The second vector.
+
+
+##### Returns
+
+[Avalonia.Vector](xref:Avalonia.Vector)
+
+The scaled vector.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-e4bbf973e3"></span>
 
-#### Multiply
+#### Multiply Method
 
 Multiplies the vector by the given scalar.
 
 ```csharp
-public Avalonia.Vector Multiply(Avalonia.Vector vector, Double scalar)
+public Avalonia.Vector Multiply(Avalonia.Vector vector, double scalar)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `scalar` | The scalar value |
-| `vector` | The vector |
+##### Parameters
 
-Returns: The scaled vector.
+`vector` [Avalonia.Vector](xref:Avalonia.Vector)
+
+The vector
+
+
+`scalar` double
+
+The scalar value
+
+
+##### Returns
+
+[Avalonia.Vector](xref:Avalonia.Vector)
+
+The scaled vector.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-2fc575cc4e"></span>
 
-### NearlyEquals
+### NearlyEquals Method
 
 Check if two vectors are nearly equal (numerically).
 
 ```csharp
-public Boolean NearlyEquals(Avalonia.Vector other)
+public bool NearlyEquals(Avalonia.Vector other)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `other` | The other vector. |
+#### Parameters
 
-Returns: True if vectors are nearly equal.
+`other` [Avalonia.Vector](xref:Avalonia.Vector)
+
+The other vector.
+
+
+#### Returns
+
+bool
+
+True if vectors are nearly equal.
+
+
+</section>
 
 <span id="uid-318cdc1482"></span>
 
 ### Negate overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-fbcb857f06"></span>
 
-#### Negate
+#### Negate Method
 
 Returns a negated version of this vector.
 
@@ -381,11 +658,20 @@ Returns a negated version of this vector.
 public Avalonia.Vector Negate()
 ```
 
-Returns: The negated vector.
+##### Returns
+
+[Avalonia.Vector](xref:Avalonia.Vector)
+
+The negated vector.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-f0680a96eb"></span>
 
-#### Negate
+#### Negate Method
 
 Negates the vector
 
@@ -393,19 +679,31 @@ Negates the vector
 public Avalonia.Vector Negate(Avalonia.Vector vector)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `vector` | The vector to negate. |
+##### Parameters
 
-Returns: The scaled vector.
+`vector` [Avalonia.Vector](xref:Avalonia.Vector)
+
+The vector to negate.
+
+
+##### Returns
+
+[Avalonia.Vector](xref:Avalonia.Vector)
+
+The scaled vector.
+
+
+</section>
 
 <span id="uid-f0c0c4d580"></span>
 
 ### Normalize overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-b5ccc4e6e3"></span>
 
-#### Normalize
+#### Normalize Method
 
 Returns a normalized version of this vector.
 
@@ -413,11 +711,20 @@ Returns a normalized version of this vector.
 public Avalonia.Vector Normalize()
 ```
 
-Returns: The normalized vector.
+##### Returns
+
+[Avalonia.Vector](xref:Avalonia.Vector)
+
+The normalized vector.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-dcf2f0693d"></span>
 
-#### Normalize
+#### Normalize Method
 
 Normalizes the given vector.
 
@@ -425,31 +732,55 @@ Normalizes the given vector.
 public Avalonia.Vector Normalize(Avalonia.Vector vector)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `vector` | The vector |
+##### Parameters
 
-Returns: The normalized vector.
+`vector` [Avalonia.Vector](xref:Avalonia.Vector)
+
+The vector
+
+
+##### Returns
+
+[Avalonia.Vector](xref:Avalonia.Vector)
+
+The normalized vector.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-1bf83f4e65"></span>
 
-### Parse
+### Parse Method
 
 Parses a [Avalonia.Vector](xref:Avalonia.Vector) string.
 
 ```csharp
-public Avalonia.Vector Parse(String s)
+public Avalonia.Vector Parse(string s)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `s` | The string. |
+#### Parameters
 
-Returns: The [Avalonia.Vector](xref:Avalonia.Vector).
+`s` string
+
+The string.
+
+
+#### Returns
+
+[Avalonia.Vector](xref:Avalonia.Vector)
+
+The [Avalonia.Vector](xref:Avalonia.Vector).
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-a968b81add"></span>
 
-### Subtract
+### Subtract Method
 
 Subtracts the second from the first vector
 
@@ -457,56 +788,103 @@ Subtracts the second from the first vector
 public Avalonia.Vector Subtract(Avalonia.Vector a, Avalonia.Vector b)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `a` | The first vector. |
-| `b` | The second vector. |
+#### Parameters
 
-Returns: The difference vector.
+`a` [Avalonia.Vector](xref:Avalonia.Vector)
+
+The first vector.
+
+
+`b` [Avalonia.Vector](xref:Avalonia.Vector)
+
+The second vector.
+
+
+#### Returns
+
+[Avalonia.Vector](xref:Avalonia.Vector)
+
+The difference vector.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-668c8eb0f9"></span>
 
-### ToString
+### ToString Method
 
 Returns the string representation of the vector.
 
 ```csharp
-public String ToString()
+public string ToString()
 ```
 
-Returns: The string representation of the vector.
+#### Returns
+
+string
+
+The string representation of the vector.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-8154f8665f"></span>
 
-### WithX
+### WithX Method
 
 Returns a new vector with the specified X component.
 
 ```csharp
-public Avalonia.Vector WithX(Double x)
+public Avalonia.Vector WithX(double x)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `x` | The X component. |
+#### Parameters
 
-Returns: The new vector.
+`x` double
+
+The X component.
+
+
+#### Returns
+
+[Avalonia.Vector](xref:Avalonia.Vector)
+
+The new vector.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-57fd81b139"></span>
 
-### WithY
+### WithY Method
 
 Returns a new vector with the specified Y component.
 
 ```csharp
-public Avalonia.Vector WithY(Double y)
+public Avalonia.Vector WithY(double y)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `y` | The Y component. |
+#### Parameters
 
-Returns: The new vector.
+`y` double
+
+The Y component.
+
+
+#### Returns
+
+[Avalonia.Vector](xref:Avalonia.Vector)
+
+The new vector.
+
+
+</section>
 
 ## Properties
 
@@ -521,19 +899,25 @@ Returns: The new vector.
 | [Y](#uid-38ae948a77) | Gets the Y component. |
 | [Zero](#uid-8dc4bebed3) | Returns the vector (0.0, 0.0). |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-a06f8dab3b"></span>
 
-### Length
+### Length Property
 
 Length of the vector.
 
 ```csharp
-public Double Length { get; set; }
+public double Length { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-01d5e8302a"></span>
 
-### One
+### One Property
 
 Returns the vector (1.0, 1.0).
 
@@ -541,19 +925,27 @@ Returns the vector (1.0, 1.0).
 public Avalonia.Vector One { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-5f97b69ad8"></span>
 
-### SquaredLength
+### SquaredLength Property
 
 Squared Length of the vector.
 
 ```csharp
-public Double SquaredLength { get; set; }
+public double SquaredLength { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-5b46c08276"></span>
 
-### UnitX
+### UnitX Property
 
 Returns the vector (1.0, 0.0).
 
@@ -561,9 +953,13 @@ Returns the vector (1.0, 0.0).
 public Avalonia.Vector UnitX { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-9d76c17fb1"></span>
 
-### UnitY
+### UnitY Property
 
 Returns the vector (0.0, 1.0).
 
@@ -571,35 +967,49 @@ Returns the vector (0.0, 1.0).
 public Avalonia.Vector UnitY { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-99a4e6db09"></span>
 
-### X
+### X Property
 
 Gets the X component.
 
 ```csharp
-public Double X { get; set; }
+public double X { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-38ae948a77"></span>
 
-### Y
+### Y Property
 
 Gets the Y component.
 
 ```csharp
-public Double Y { get; set; }
+public double Y { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-8dc4bebed3"></span>
 
-### Zero
+### Zero Property
 
 Returns the vector (0.0, 0.0).
 
 ```csharp
 public Avalonia.Vector Zero { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

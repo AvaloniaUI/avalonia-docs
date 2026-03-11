@@ -66,13 +66,40 @@ public struct TextShaperOptions
 | --- | --- |
 | [TextShaperOptions](#uid-722846aa0c) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-722846aa0c"></span>
 
-### TextShaperOptions
+### TextShaperOptions Constructor
 
 ```csharp
-public TextShaperOptions(Avalonia.Media.GlyphTypeface typeface, Double fontRenderingEmSize, SByte bidiLevel, System.Globalization.CultureInfo culture, Double incrementalTabWidth, Double letterSpacing, System.Collections.Generic.IReadOnlyList<Avalonia.Media.FontFeature> fontFeatures)
+public TextShaperOptions(Avalonia.Media.GlyphTypeface typeface, double fontRenderingEmSize, sbyte bidiLevel, System.Globalization.CultureInfo culture, double incrementalTabWidth, double letterSpacing, System.Collections.Generic.IReadOnlyList<Avalonia.Media.FontFeature> fontFeatures)
 ```
+
+#### Parameters
+
+`typeface` [Avalonia.Media.GlyphTypeface](xref:Avalonia.Media.GlyphTypeface)
+
+
+`fontRenderingEmSize` double
+
+
+`bidiLevel` sbyte
+
+
+`culture` System.Globalization.CultureInfo
+
+
+`incrementalTabWidth` double
+
+
+`letterSpacing` double
+
+
+`fontFeatures` System.Collections.Generic.IReadOnlyList&lt;[Avalonia.Media.FontFeature](xref:Avalonia.Media.FontFeature)&gt;
+
+
+</section>
 
 ## Methods
 
@@ -86,37 +113,83 @@ public TextShaperOptions(Avalonia.Media.GlyphTypeface typeface, Double fontRende
 
 ### Equals overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-ae9641f7e8"></span>
 
-#### Equals
+#### Equals Method
 
 ```csharp
-public Boolean Equals(Avalonia.Media.TextFormatting.TextShaperOptions other)
+public bool Equals(Avalonia.Media.TextFormatting.TextShaperOptions other)
 ```
+
+##### Parameters
+
+`other` [Avalonia.Media.TextFormatting.TextShaperOptions](xref:Avalonia.Media.TextFormatting.TextShaperOptions)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-fbbb5bd998"></span>
 
-#### Equals
+#### Equals Method
 
 ```csharp
-public Boolean Equals(Object obj)
+public bool Equals(object obj)
 ```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-5904d0871a"></span>
 
-### GetHashCode
+### GetHashCode Method
 
 ```csharp
-public Int32 GetHashCode()
+public int GetHashCode()
 ```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-051ff93bc7"></span>
 
-### ToString
+### ToString Method
 
 ```csharp
-public String ToString()
+public string ToString()
 ```
+
+#### Returns
+
+string
+
+
+</section>
 
 ## Properties
 
@@ -130,19 +203,25 @@ public String ToString()
 | [IncrementalTabWidth](#uid-ca721dff2e) | Get the incremental tab width. |
 | [LetterSpacing](#uid-6cf9b2adfe) | Get the letter spacing. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-a39f9db201"></span>
 
-### BidiLevel
+### BidiLevel Property
 
 Get the bidi level of the text.
 
 ```csharp
-public SByte BidiLevel { get; set; }
+public sbyte BidiLevel { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-c82a97ba76"></span>
 
-### Culture
+### Culture Property
 
 Get the culture.
 
@@ -150,9 +229,13 @@ Get the culture.
 public System.Globalization.CultureInfo Culture { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-6819d68282"></span>
 
-### FontFeatures
+### FontFeatures Property
 
 Get features.
 
@@ -160,19 +243,27 @@ Get features.
 public System.Collections.Generic.IReadOnlyList<Avalonia.Media.FontFeature> FontFeatures { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-b9eb5ff677"></span>
 
-### FontRenderingEmSize
+### FontRenderingEmSize Property
 
 Get the font rendering em size.
 
 ```csharp
-public Double FontRenderingEmSize { get; set; }
+public double FontRenderingEmSize { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-43d67386ba"></span>
 
-### GlyphTypeface
+### GlyphTypeface Property
 
 Get the typeface.
 
@@ -180,25 +271,35 @@ Get the typeface.
 public Avalonia.Media.GlyphTypeface GlyphTypeface { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-ca721dff2e"></span>
 
-### IncrementalTabWidth
+### IncrementalTabWidth Property
 
 Get the incremental tab width.
 
 ```csharp
-public Double IncrementalTabWidth { get; set; }
+public double IncrementalTabWidth { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-6cf9b2adfe"></span>
 
-### LetterSpacing
+### LetterSpacing Property
 
 Get the letter spacing.
 
 ```csharp
-public Double LetterSpacing { get; set; }
+public double LetterSpacing { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

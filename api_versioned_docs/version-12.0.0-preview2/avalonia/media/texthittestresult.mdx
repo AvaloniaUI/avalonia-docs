@@ -66,13 +66,31 @@ public struct TextHitTestResult
 | --- | --- |
 | [TextHitTestResult](#uid-ba44fe3b17) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-ba44fe3b17"></span>
 
-### TextHitTestResult
+### TextHitTestResult Constructor
 
 ```csharp
-public TextHitTestResult(Avalonia.Media.CharacterHit characterHit, Int32 textPosition, Boolean isInside, Boolean isTrailing)
+public TextHitTestResult(Avalonia.Media.CharacterHit characterHit, int textPosition, bool isInside, bool isTrailing)
 ```
+
+#### Parameters
+
+`characterHit` [Avalonia.Media.CharacterHit](xref:Avalonia.Media.CharacterHit)
+
+
+`textPosition` int
+
+
+`isInside` bool
+
+
+`isTrailing` bool
+
+
+</section>
 
 ## Methods
 
@@ -86,37 +104,83 @@ public TextHitTestResult(Avalonia.Media.CharacterHit characterHit, Int32 textPos
 
 ### Equals overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-f2726be803"></span>
 
-#### Equals
+#### Equals Method
 
 ```csharp
-public Boolean Equals(Avalonia.Media.TextHitTestResult other)
+public bool Equals(Avalonia.Media.TextHitTestResult other)
 ```
+
+##### Parameters
+
+`other` [Avalonia.Media.TextHitTestResult](xref:Avalonia.Media.TextHitTestResult)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-0b2bbbfb9b"></span>
 
-#### Equals
+#### Equals Method
 
 ```csharp
-public Boolean Equals(Object obj)
+public bool Equals(object obj)
 ```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-259594b82d"></span>
 
-### GetHashCode
+### GetHashCode Method
 
 ```csharp
-public Int32 GetHashCode()
+public int GetHashCode()
 ```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-31dfc2216f"></span>
 
-### ToString
+### ToString Method
 
 ```csharp
-public String ToString()
+public string ToString()
 ```
+
+#### Returns
+
+string
+
+
+</section>
 
 ## Properties
 
@@ -127,9 +191,11 @@ public String ToString()
 | [IsTrailing](#uid-59df025f1a) | Gets a value indicating whether the hit is on the trailing edge of the character. |
 | [TextPosition](#uid-bc9e154fcc) | Gets the index of the hit character in the text. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-86b39f9066"></span>
 
-### CharacterHit
+### CharacterHit Property
 
 Gets the character hit of the hit test result.
 
@@ -137,35 +203,49 @@ Gets the character hit of the hit test result.
 public Avalonia.Media.CharacterHit CharacterHit { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-3f3085d0af"></span>
 
-### IsInside
+### IsInside Property
 
 Gets a value indicating whether the point is inside the bounds of the text.
 
 ```csharp
-public Boolean IsInside { get; set; }
+public bool IsInside { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-59df025f1a"></span>
 
-### IsTrailing
+### IsTrailing Property
 
 Gets a value indicating whether the hit is on the trailing edge of the character.
 
 ```csharp
-public Boolean IsTrailing { get; set; }
+public bool IsTrailing { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-bc9e154fcc"></span>
 
-### TextPosition
+### TextPosition Property
 
 Gets the index of the hit character in the text.
 
 ```csharp
-public Int32 TextPosition { get; set; }
+public int TextPosition { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 

@@ -61,15 +61,17 @@ public class SizeChangedEventArgs
 
 | Name | Description |
 | --- | --- |
-| [SizeChangedEventArgs (3 overloads)](#uid-f41fd4da41) | Initializes a new instance of the Avalonia.Controls.SizeChangedEventArgs class. |
+| [SizeChangedEventArgs (3 overloads)](#uid-f41fd4da41) | Initializes a new instance of the [Avalonia.Controls.SizeChangedEventArgs](xref:Avalonia.Controls.SizeChangedEventArgs) class. |
 
 <span id="uid-f41fd4da41"></span>
 
 ### SizeChangedEventArgs overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-da58759041"></span>
 
-#### SizeChangedEventArgs
+#### SizeChangedEventArgs Constructor
 
 Initializes a new instance of the [Avalonia.Controls.SizeChangedEventArgs](xref:Avalonia.Controls.SizeChangedEventArgs) class.
 
@@ -77,41 +79,76 @@ Initializes a new instance of the [Avalonia.Controls.SizeChangedEventArgs](xref:
 public SizeChangedEventArgs(Avalonia.Interactivity.RoutedEvent routedEvent)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `routedEvent` | The routed event associated with these event args. |
+##### Parameters
+
+`routedEvent` [Avalonia.Interactivity.RoutedEvent](xref:Avalonia.Interactivity.RoutedEvent)
+
+The routed event associated with these event args.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-8b85e88d7c"></span>
 
-#### SizeChangedEventArgs
+#### SizeChangedEventArgs Constructor
 
 Initializes a new instance of the [Avalonia.Controls.SizeChangedEventArgs](xref:Avalonia.Controls.SizeChangedEventArgs) class.
 
 ```csharp
-public SizeChangedEventArgs(Avalonia.Interactivity.RoutedEvent routedEvent, Object source)
+public SizeChangedEventArgs(Avalonia.Interactivity.RoutedEvent routedEvent, object source)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `routedEvent` | The routed event associated with these event args. |
-| `source` | The source object that raised the routed event. |
+##### Parameters
+
+`routedEvent` [Avalonia.Interactivity.RoutedEvent](xref:Avalonia.Interactivity.RoutedEvent)
+
+The routed event associated with these event args.
+
+
+`source` object
+
+The source object that raised the routed event.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-2a416e2b94"></span>
 
-#### SizeChangedEventArgs
+#### SizeChangedEventArgs Constructor
 
 Initializes a new instance of the [Avalonia.Controls.SizeChangedEventArgs](xref:Avalonia.Controls.SizeChangedEventArgs) class.
 
 ```csharp
-public SizeChangedEventArgs(Avalonia.Interactivity.RoutedEvent routedEvent, Object source, Avalonia.Size previousSize, Avalonia.Size newSize)
+public SizeChangedEventArgs(Avalonia.Interactivity.RoutedEvent routedEvent, object source, Avalonia.Size previousSize, Avalonia.Size newSize)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `newSize` | The new size (or bounds) of the object. |
-| `previousSize` | The previous size (or bounds) of the object. |
-| `routedEvent` | The routed event associated with these event args. |
-| `source` | The source object that raised the routed event. |
+##### Parameters
+
+`routedEvent` [Avalonia.Interactivity.RoutedEvent](xref:Avalonia.Interactivity.RoutedEvent)
+
+The routed event associated with these event args.
+
+
+`source` object
+
+The source object that raised the routed event.
+
+
+`previousSize` [Avalonia.Size](xref:Avalonia.Size)
+
+The previous size (or bounds) of the object.
+
+
+`newSize` [Avalonia.Size](xref:Avalonia.Size)
+
+The new size (or bounds) of the object.
+
+
+</section>
 
 ## Properties
 
@@ -121,25 +158,38 @@ public SizeChangedEventArgs(Avalonia.Interactivity.RoutedEvent routedEvent, Obje
 | [NewSize](#uid-5d2e8078e8) | Gets the new size (or bounds) of the object. |
 | [PreviousSize](#uid-dafb62870a) | Gets the previous size (or bounds) of the object. |
 | [WidthChanged](#uid-54b34b0269) | Gets a value indicating whether the width of the new size is considered different than the previous size width. |
-| [Handled (Inherited from RoutedEventArgs)](../interactivity/routedeventargs.mdx#uid-204d2af354) | Gets or sets a value indicating whether the routed event has already been handled. |
-| [Route (Inherited from RoutedEventArgs)](../interactivity/routedeventargs.mdx#uid-751be73db9) | Gets or sets the routing strategy (direct, bubbling, or tunneling) of the routed event. |
-| [RoutedEvent (Inherited from RoutedEventArgs)](../interactivity/routedeventargs.mdx#uid-4e102999d9) | Gets or sets the routed event associated with these event args. |
-| [Source (Inherited from RoutedEventArgs)](../interactivity/routedeventargs.mdx#uid-4385b523d5) | Gets or sets the source object that raised the routed event. |
+| [Handled](../interactivity/routedeventargs.mdx#uid-204d2af354) | Gets or sets a value indicating whether the routed event has already been handled. Inherited from [RoutedEventArgs](../interactivity/routedeventargs.mdx). |
+| [Route](../interactivity/routedeventargs.mdx#uid-751be73db9) | Gets or sets the routing strategy (direct, bubbling, or tunneling) of the routed event. Inherited from [RoutedEventArgs](../interactivity/routedeventargs.mdx). |
+| [RoutedEvent](../interactivity/routedeventargs.mdx#uid-4e102999d9) | Gets or sets the routed event associated with these event args. Inherited from [RoutedEventArgs](../interactivity/routedeventargs.mdx). |
+| [Source](../interactivity/routedeventargs.mdx#uid-4385b523d5) | Gets or sets the source object that raised the routed event. Inherited from [RoutedEventArgs](../interactivity/routedeventargs.mdx). |
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-5470a07b0b"></span>
 
-### HeightChanged
+### HeightChanged Property
 
 Gets a value indicating whether the height of the new size is considered
 different than the previous size height.
 
 ```csharp
-public Boolean HeightChanged { get; set; }
+public bool HeightChanged { get; set; }
 ```
+
+#### Remarks
+
+This will take into account layout epsilon and will not be true if both
+heights are considered equivalent for layout purposes. Remember there can
+be small variations in the calculations between layout cycles due to
+rounding and precision even when the size has not otherwise changed.
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-5d2e8078e8"></span>
 
-### NewSize
+### NewSize Property
 
 Gets the new size (or bounds) of the object.
 
@@ -147,9 +197,13 @@ Gets the new size (or bounds) of the object.
 public Avalonia.Size NewSize { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-dafb62870a"></span>
 
-### PreviousSize
+### PreviousSize Property
 
 Gets the previous size (or bounds) of the object.
 
@@ -157,16 +211,29 @@ Gets the previous size (or bounds) of the object.
 public Avalonia.Size PreviousSize { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-54b34b0269"></span>
 
-### WidthChanged
+### WidthChanged Property
 
 Gets a value indicating whether the width of the new size is considered
 different than the previous size width.
 
 ```csharp
-public Boolean WidthChanged { get; set; }
+public bool WidthChanged { get; set; }
 ```
+
+#### Remarks
+
+This will take into account layout epsilon and will not be true if both
+widths are considered equivalent for layout purposes. Remember there can
+be small variations in the calculations between layout cycles due to
+rounding and precision even when the size has not otherwise changed.
+
+</section>
 
 </ApiRefPage>
 

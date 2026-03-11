@@ -47,7 +47,7 @@ public class NotifyCollectionChangedExtensions
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> Object <span className="apiref-page__relation-separator">-&gt;</span> NotifyCollectionChangedExtensions
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> NotifyCollectionChangedExtensions
 </div>
 </div>
 
@@ -58,9 +58,11 @@ public class NotifyCollectionChangedExtensions
 | [GetWeakCollectionChangedObservable](#uid-82f8ff213c) | Gets a weak observable for the CollectionChanged event. |
 | [WeakSubscribe (2 overloads)](#uid-3ca5cd51f7) | No summary available. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-82f8ff213c"></span>
 
-### GetWeakCollectionChangedObservable
+### GetWeakCollectionChangedObservable Method
 
 Gets a weak observable for the CollectionChanged event.
 
@@ -68,27 +70,56 @@ Gets a weak observable for the CollectionChanged event.
 public IObservable<System.Collections.Specialized.NotifyCollectionChangedEventArgs> GetWeakCollectionChangedObservable(System.Collections.Specialized.INotifyCollectionChanged collection)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `collection` | The collection. |
+#### Parameters
 
-Returns: An observable.
+`collection` System.Collections.Specialized.INotifyCollectionChanged
+
+The collection.
+
+
+#### Returns
+
+IObservable&lt;System.Collections.Specialized.NotifyCollectionChangedEventArgs&gt;
+
+An observable.
+
+
+</section>
 
 <span id="uid-3ca5cd51f7"></span>
 
 ### WeakSubscribe overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-22d68987d3"></span>
 
-#### WeakSubscribe
+#### WeakSubscribe Method
 
 ```csharp
 public IDisposable WeakSubscribe(System.Collections.Specialized.INotifyCollectionChanged collection, Action<System.Collections.Specialized.NotifyCollectionChangedEventArgs> handler)
 ```
 
+##### Parameters
+
+`collection` System.Collections.Specialized.INotifyCollectionChanged
+
+
+`handler` Action&lt;System.Collections.Specialized.NotifyCollectionChangedEventArgs&gt;
+
+
+##### Returns
+
+IDisposable
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-ce11c63ce0"></span>
 
-#### WeakSubscribe
+#### WeakSubscribe Method
 
 Subscribes to the CollectionChanged event using a weak subscription.
 
@@ -96,12 +127,26 @@ Subscribes to the CollectionChanged event using a weak subscription.
 public IDisposable WeakSubscribe(System.Collections.Specialized.INotifyCollectionChanged collection, System.Collections.Specialized.NotifyCollectionChangedEventHandler handler)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `collection` | The collection. |
-| `handler` | An action called when the collection event is raised. |
+##### Parameters
 
-Returns: A disposable used to terminate the subscription.
+`collection` System.Collections.Specialized.INotifyCollectionChanged
+
+The collection.
+
+
+`handler` System.Collections.Specialized.NotifyCollectionChangedEventHandler
+
+An action called when the collection event is raised.
+
+
+##### Returns
+
+IDisposable
+
+A disposable used to terminate the subscription.
+
+
+</section>
 
 </ApiRefPage>
 

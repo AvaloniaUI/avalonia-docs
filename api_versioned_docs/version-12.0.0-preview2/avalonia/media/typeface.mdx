@@ -64,15 +64,17 @@ public struct Typeface
 
 | Name | Description |
 | --- | --- |
-| [Typeface (2 overloads)](#uid-ec0511fb00) | Initializes a new instance of the Avalonia.Media.Typeface class. |
+| [Typeface (2 overloads)](#uid-ec0511fb00) | Initializes a new instance of the [Avalonia.Media.Typeface](xref:Avalonia.Media.Typeface) class. |
 
 <span id="uid-ec0511fb00"></span>
 
 ### Typeface overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-4c66dd6bce"></span>
 
-#### Typeface
+#### Typeface Constructor
 
 Initializes a new instance of the [Avalonia.Media.Typeface](xref:Avalonia.Media.Typeface) class.
 
@@ -80,29 +82,65 @@ Initializes a new instance of the [Avalonia.Media.Typeface](xref:Avalonia.Media.
 public Typeface(Avalonia.Media.FontFamily fontFamily, Avalonia.Media.FontStyle style, Avalonia.Media.FontWeight weight, Avalonia.Media.FontStretch stretch)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `fontFamily` | The font family. |
-| `stretch` | The font stretch. |
-| `style` | The font style. |
-| `weight` | The font weight. |
+##### Parameters
+
+`fontFamily` [Avalonia.Media.FontFamily](xref:Avalonia.Media.FontFamily)
+
+The font family.
+
+
+`style` [Avalonia.Media.FontStyle](xref:Avalonia.Media.FontStyle)
+
+The font style.
+
+
+`weight` [Avalonia.Media.FontWeight](xref:Avalonia.Media.FontWeight)
+
+The font weight.
+
+
+`stretch` [Avalonia.Media.FontStretch](xref:Avalonia.Media.FontStretch)
+
+The font stretch.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-c1ddc03c16"></span>
 
-#### Typeface
+#### Typeface Constructor
 
 Initializes a new instance of the [Avalonia.Media.Typeface](xref:Avalonia.Media.Typeface) class.
 
 ```csharp
-public Typeface(String fontFamilyName, Avalonia.Media.FontStyle style, Avalonia.Media.FontWeight weight, Avalonia.Media.FontStretch stretch)
+public Typeface(string fontFamilyName, Avalonia.Media.FontStyle style, Avalonia.Media.FontWeight weight, Avalonia.Media.FontStretch stretch)
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `fontFamilyName` | The name of the font family. |
-| `stretch` | The font stretch. |
-| `style` | The font style. |
-| `weight` | The font weight. |
+##### Parameters
+
+`fontFamilyName` string
+
+The name of the font family.
+
+
+`style` [Avalonia.Media.FontStyle](xref:Avalonia.Media.FontStyle)
+
+The font style.
+
+
+`weight` [Avalonia.Media.FontWeight](xref:Avalonia.Media.FontWeight)
+
+The font weight.
+
+
+`stretch` [Avalonia.Media.FontStretch](xref:Avalonia.Media.FontStretch)
+
+The font stretch.
+
+
+</section>
 
 ## Methods
 
@@ -116,37 +154,88 @@ public Typeface(String fontFamilyName, Avalonia.Media.FontStyle style, Avalonia.
 
 ### Equals overloads
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-2ca3f03a07"></span>
 
-#### Equals
+#### Equals Method
 
 ```csharp
-public Boolean Equals(Avalonia.Media.Typeface other)
+public bool Equals(Avalonia.Media.Typeface other)
 ```
+
+##### Parameters
+
+`other` [Avalonia.Media.Typeface](xref:Avalonia.Media.Typeface)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-1410c670be"></span>
 
-#### Equals
+#### Equals Method
 
 ```csharp
-public Boolean Equals(Object obj)
+public bool Equals(object obj)
 ```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-cb60978dac"></span>
 
-### GetHashCode
+### GetHashCode Method
 
 ```csharp
-public Int32 GetHashCode()
+public int GetHashCode()
 ```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-7fb1c2031e"></span>
 
-### Normalize
+### Normalize Method
 
 ```csharp
-public Avalonia.Media.Typeface Normalize(String& normalizedFamilyName)
+public Avalonia.Media.Typeface Normalize(string& normalizedFamilyName)
 ```
+
+#### Parameters
+
+`normalizedFamilyName` string&amp;
+
+
+#### Returns
+
+[Avalonia.Media.Typeface](xref:Avalonia.Media.Typeface)
+
+
+</section>
 
 ## Properties
 
@@ -159,17 +248,23 @@ public Avalonia.Media.Typeface Normalize(String& normalizedFamilyName)
 | [Style](#uid-f2d5e74904) | Gets the font style. |
 | [Weight](#uid-6122f85e52) | Gets the font weight. |
 
+<section className="apiref-page__member-entry">
+
 <span id="uid-e3791f6243"></span>
 
-### Default
+### Default Property
 
 ```csharp
 public Avalonia.Media.Typeface Default { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-9880ff516f"></span>
 
-### FontFamily
+### FontFamily Property
 
 Gets the font family.
 
@@ -177,9 +272,13 @@ Gets the font family.
 public Avalonia.Media.FontFamily FontFamily { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-b68bfe8140"></span>
 
-### GlyphTypeface
+### GlyphTypeface Property
 
 Gets the glyph typeface.
 
@@ -187,11 +286,18 @@ Gets the glyph typeface.
 public Avalonia.Media.GlyphTypeface GlyphTypeface { get; set; }
 ```
 
-Value: The glyph typeface.
+#### Value
+
+The glyph typeface.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
 
 <span id="uid-581db379bc"></span>
 
-### Stretch
+### Stretch Property
 
 Gets the font stretch.
 
@@ -199,9 +305,13 @@ Gets the font stretch.
 public Avalonia.Media.FontStretch Stretch { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-f2d5e74904"></span>
 
-### Style
+### Style Property
 
 Gets the font style.
 
@@ -209,15 +319,21 @@ Gets the font style.
 public Avalonia.Media.FontStyle Style { get; set; }
 ```
 
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-6122f85e52"></span>
 
-### Weight
+### Weight Property
 
 Gets the font weight.
 
 ```csharp
 public Avalonia.Media.FontWeight Weight { get; set; }
 ```
+
+</section>
 
 </ApiRefPage>
 
