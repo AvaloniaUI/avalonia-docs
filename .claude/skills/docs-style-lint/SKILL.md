@@ -86,6 +86,7 @@ Apply rules from [house-rules.yaml](references/house-rules.yaml) that match the 
 19. **SEO-001**: Frontmatter `description` present, 50-160 characters, no marketing buzzwords
 20. **SEO-002**: Frontmatter `title` is <= 60 characters
 21. **QUAL-003**: On task pages (tutorial, how-to, troubleshooting, migration), average sentence length <= 25 words; flag individual sentences over 40 words
+22. **QUAL-004**: ARI (Automated Readability Index) score <= 14 across all prose. Calculate using `4.71 × (characters ÷ words) + 0.5 × (words ÷ sentences) − 21.43`. Strip all fenced code blocks, inline code spans, frontmatter, and admonition markers before counting — measure prose only. Report score to one decimal place with the grade-level label (≤ 8 = high-school, 9–12 = standard adult, 13–14 = college, > 14 = graduate). Scores above 14 are a warning to simplify sentence structure and word choice.
 
 ### Step 3: Run anti-marketing checks
 
@@ -154,7 +155,16 @@ Flag any use of:
 | "Robust" | Describe the specific reliability characteristic |
 | "Game-changing" / "Revolutionary" | Describe the concrete improvement |
 
-### Step 8: Generate report
+### Step 8: Run inclusive language checks
+
+Apply inclusive language rules from [house-rules.yaml](references/house-rules.yaml).
+
+**Major-level:**
+
+1. **INC-001**: Scan for gendered pronouns used generically (`he`/`she`/`him`/`her`/`his`/`hers` referring to an unspecified person or the reader) and gendered nouns (`guys` as a group address, `mankind`, `manmade`, `man-hours`). Suggest `they`/`them`/`their`, `everyone`, `humankind`, `human-made`, `person-hours`. Flag singular pronoun uses as candidates — distinguish generic use from a named individual (manual review).
+2. **INC-002**: Scan for legacy technical terms with exclusionary connotations: `blacklist`/`whitelist` → `blocklist`/`allowlist`; `master`/`slave` in role contexts → `primary`/`replica`; `sanity check` → `verify` or `check`; `dummy` as placeholder data → `placeholder`/`sample`/`stub`. Context-sensitive uses (e.g. `master` in a git command literal, established API names like `MasterDetail`) require human review before flagging.
+
+### Step 9: Generate report
 
 Output a structured lint report:
 
@@ -182,6 +192,13 @@ Output a structured lint report:
 - Declared doc-type: [type]
 - Forbidden content detected: [none / list]
 - Single responsibility: [pass / concern]
+
+### Inclusive language
+- INC-001 (gender-neutral language): [pass / N findings]
+- INC-002 (inclusive terminology): [pass / N findings]
+
+### Readability
+- QUAL-004 (ARI score): [X.X — grade label (pass / warning: above 14)]
 
 ### Accessibility & SEO
 - ACC-001 (image alt text): [pass / N findings]
