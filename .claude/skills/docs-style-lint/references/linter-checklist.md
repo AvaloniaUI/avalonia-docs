@@ -44,6 +44,9 @@ Severity levels:
 | `SEO-002` | minor | all pages | Frontmatter `title` is <= 60 characters. | Title too long for search result display. |
 | `TERM-004` | major | tutorial, overview | Avalonia jargon explained inline or linked on first use. | Framework-specific terms used without introduction on introductory pages. |
 | `QUAL-003` | minor | task pages | Average sentence length <= 25 words; no sentences over 40 words. | Dense, complex sentences on action-oriented pages. |
+| `QUAL-004` | minor | all pages | ARI score <= 14 (college senior level) calculated over prose only, excluding code blocks and inline code. | ARI score > 14 indicates excessively dense prose. |
+| `INC-001` | major | all pages | Text uses gender-neutral pronouns (they/them/their) and nouns; avoids gendered generic references and terms like "guys", "mankind", "man-hours". | Gendered pronouns (he/she/him/her) as generic references; "guys" as group address; "mankind", "manmade", "man-hours". |
+| `INC-002` | major | all pages | Text uses inclusive technical terminology: "blocklist"/"allowlist", "primary"/"replica", "verify"/"check", "placeholder"/"sample". | Legacy terms: "blacklist"/"whitelist", "master"/"slave" in role context, "sanity check", "dummy" as example data. |
 
 ## Automation notes
 
@@ -67,6 +70,11 @@ Fast automatable checks:
 - Frontmatter `description` presence and length (`SEO-001`)
 - Frontmatter `title` length (`SEO-002`)
 - Sentence length statistics (`QUAL-003`, partial: word counts are automatable but flagged sentences need human review for splitting)
+- ARI score calculation (`QUAL-004`: fully automatable once prose is isolated; requires stripping code blocks, inline code, and frontmatter before counting)
+
+Partial automatable checks (term scan is fast; context judgment is manual):
+- Gendered pronoun and gendered noun scan (`INC-001`)
+- Legacy technical term scan (`INC-002`)
 
 Manual/semantic checks:
 - UI label bolding (`MIC-001`)

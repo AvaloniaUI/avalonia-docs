@@ -440,7 +440,86 @@ rules:
     dont_example: "Walk the visual tree to find the parent ContentPresenter."
     automated: false
 
+  # --- Inclusive language rules (INC) ---
+
+  - id: INC-001
+    category: inclusive-language
+    severity: major
+    scope: [all]
+    pattern: "gender-neutral pronouns and nouns"
+    pass_criteria: "text avoids gendered pronouns (he/she/him/her/his/hers) as generic references; avoids 'guys' as a group address; avoids 'mankind', 'manmade', 'man-hours'"
+    rationale: "Documentation addresses a diverse global audience. Gender-neutral language is inclusive and avoids assumptions about the reader or developer."
+    flagged_terms:
+      - "he or she"
+      - "his or her"
+      - "him or her"
+      - "s/he"
+      - "guys (as group address)"
+      - mankind
+      - manmade
+      - man-hours
+    replacements:
+      "he or she": "they"
+      "his or her": "their"
+      "him or her": "them"
+      guys: "everyone, team, developers, users"
+      mankind: "humanity, people, humankind"
+      manmade: "artificial, synthetic, human-made"
+      man-hours: "person-hours, hours"
+    do_example: "When a developer adds a binding, they must provide a valid path."
+    dont_example: "When a developer adds a binding, he must provide a valid path."
+    automated: partial
+    note: "Singular gendered pronouns require context to distinguish generic use from a named individual. Flag as candidates for human review."
+
+  - id: INC-002
+    category: inclusive-language
+    severity: major
+    scope: [all]
+    pattern: "inclusive technical terminology"
+    pass_criteria: "text avoids legacy technical terms with exclusionary connotations; uses modern inclusive alternatives"
+    rationale: "Technical communities have broadly adopted inclusive terminology. Using modern alternatives improves accessibility and aligns with industry standards."
+    flagged_terms:
+      - blacklist
+      - whitelist
+      - master (as role or primary node in technical context)
+      - slave (as subordinate or secondary node in technical context)
+      - sanity check
+      - dummy (as placeholder or example data)
+    replacements:
+      blacklist: "blocklist, denylist"
+      whitelist: "allowlist, passlist"
+      master: "primary, main, leader"
+      slave: "replica, secondary, follower, worker"
+      "sanity check": "check, verify, validate"
+      dummy: "placeholder, sample, example, stub"
+    do_example: "Add the IP address to the allowlist."
+    dont_example: "Add the IP address to the whitelist."
+    automated: partial
+    note: "Context-sensitive: 'master' in git branch names or established API/property names (e.g. MasterDetail) and 'dummy' in idiomatic phrases require human review before flagging."
+
   # --- Extended quality rules (QUAL) ---
+
+  - id: QUAL-004
+    category: quality
+    severity: minor
+    scope: [all]
+    pattern: "ARI readability target"
+    pass_criteria: "Automated Readability Index (ARI) score <= 14 for prose content (code blocks excluded)"
+    rationale: "ARI grade 14 corresponds to a college senior reading level, which is the recommended ceiling for technical documentation targeting a broad developer audience. Scores above 14 indicate prose that is unnecessarily dense and should be simplified."
+    formula: "ARI = 4.71 × (characters ÷ words) + 0.5 × (words ÷ sentences) − 21.43"
+    formula_notes:
+      - "characters: alphanumeric characters only, prose text only (strip fenced code blocks, inline code, frontmatter)"
+      - "words: whitespace-delimited tokens in prose"
+      - "sentences: count of sentence-ending punctuation (. ! ?)"
+    grade_reference:
+      "≤ 8": "High-school level — most accessible"
+      "9–12": "Standard adult / technical audience"
+      "13–14": "College level — acceptable for developer docs"
+      "> 14": "Graduate level — flag for simplification"
+    do_example: "Set `IsVisible` to `true`. The control appears in the visual tree."
+    dont_example: "In order to ensure that the control is rendered within the visual tree during the subsequent layout pass, it is necessary to assign the boolean value `true` to the `IsVisible` property."
+    automated: true
+    note: "Calculate ARI over prose only. Strip all fenced code blocks (``` ... ```), inline code spans, frontmatter, and admonition syntax markers before counting. Report score to one decimal place alongside the grade-level label."
 
   - id: QUAL-003
     category: quality
