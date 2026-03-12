@@ -24,7 +24,7 @@ The Avalonia rich text editor consists of three components:
 
 ## Block elements
 
-These block elements are used by `FlowDocument` to build the document model and organize content.
+Block elements are used by `FlowDocument` to build the document model and organize content.
 
 | Element | Description |
 | --- | --- |
@@ -75,6 +75,21 @@ Some properties have `Null` or `NaN` defaults, meaning their default values are 
 
 ## Inline elements
 
+Inline elements are used to specify content styles within a block.
+
+| Element | Description |
+| --- | --- |
+| `RichBold` | Indicates bolded text. |
+| `RichHyperlink` |
+| `RichInline` |
+| `RichItalic` | Indicates italicized text. |
+| `RichLineBreak` |
+| `RichRun`| Terminal element in text flow hierarchy, containing a continuous run of unicode characters. Uses the `Text` property to read and write to an attached `TextDocument`. |
+| `RichSpan` |
+| `RichSubscript` |
+| `RichSuperScript` |
+| `RichUnderline` | Indicates underlined text. |
+
 ## Architecture
 
 The Avalonia rich text editor separates functions into an eight-layer architecture.
@@ -89,3 +104,8 @@ The Avalonia rich text editor separates functions into an eight-layer architectu
 | 6 | Undo/Redo | Stores operation history to allow reversals. | `IUndoManager`, `UndoManager` |
 | 7 | RTF serialization | Import and export Rich Text Format (RTF) documents. | `IDocumentSerializer`, `RtfSerializer`, `DocumentSnapshot`, `FlowDocumentBuilder` |
 | 8 | User-facing control | Integration of all layers into a templated Avalonia control. | `RichTextEditor`, `FlowDocument`, `Block` elements, `Inline` elements |
+
+## Samples
+
+- [Sandbox](https://github.com/AvaloniaUI/Avalonia.Controls.RichTextEditor/tree/main/samples/Sandbox)
+- [Debugger](https://github.com/AvaloniaUI/Avalonia.Controls.RichTextEditor/tree/main/samples/RichTextEditor.Debugger)
