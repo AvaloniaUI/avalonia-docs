@@ -1,0 +1,1662 @@
+---
+title: 'InputElement'
+hide_title: true
+slug: '/avalonia/input/inputelement'
+uid: 'Avalonia.Input.InputElement'
+commentId: 'T:Avalonia.Input.InputElement'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Input'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">InputElement Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Input</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Input/InputElement.Gestures.cs">InputElement.Gestures.cs</a>, <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Input/InputElement.cs">InputElement.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Implements input-related functionality for a control.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class InputElement
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../animation/animatable">Animatable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../styledelement">StyledElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../visual">Visual</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../layout/layoutable">Layoutable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../interactivity/interactive">Interactive</a> <span className="apiref-page__relation-separator">-&gt;</span> InputElement
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Derived types:</span> <a href="../controls/control">Control</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="iinputelement">IInputElement</a>
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [InputElement](#uid-8770295d51) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8770295d51"></span>
+
+### InputElement Constructor
+
+```csharp
+public InputElement()
+```
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Focus](#uid-6b657af583) | Focuses the control. |
+| [GetIsHoldWithMouseEnabled](#uid-0420943ecd) | No summary available. |
+| [GetIsHoldingEnabled](#uid-2af9987676) | No summary available. |
+| [SetIsHoldWithMouseEnabled](#uid-a494efd7c7) | No summary available. |
+| [SetIsHoldingEnabled](#uid-90a47948ad) | No summary available. |
+| [AddHandler (2 overloads)](../interactivity/interactive.mdx#uid-02518f5b3a) | Adds a handler for the specified routed event. Inherited from [Interactive](../interactivity/interactive.mdx). |
+| [RaiseEvent](../interactivity/interactive.mdx#uid-d6aba452e6) | Raises a routed event. Inherited from [Interactive](../interactivity/interactive.mdx). |
+| [RemoveHandler (2 overloads)](../interactivity/interactive.mdx#uid-456e485be9) | Removes a handler for the specified routed event. Inherited from [Interactive](../interactivity/interactive.mdx). |
+| [ApplyTemplate](../layout/layoutable.mdx#uid-cc46768b1a) | Creates the visual children of the control, if necessary Inherited from [Layoutable](../layout/layoutable.mdx). |
+| [Arrange](../layout/layoutable.mdx#uid-d7a19ca8f7) | Arranges the control and its children. Inherited from [Layoutable](../layout/layoutable.mdx). |
+| [InvalidateArrange](../layout/layoutable.mdx#uid-3e9d4ebe35) | Invalidates the arrangement of the control and queues a new layout pass. Inherited from [Layoutable](../layout/layoutable.mdx). |
+| [InvalidateMeasure](../layout/layoutable.mdx#uid-31c6107bb9) | Invalidates the measurement of the control and queues a new layout pass. Inherited from [Layoutable](../layout/layoutable.mdx). |
+| [Measure](../layout/layoutable.mdx#uid-1da410eb81) | Carries out a measure of the control. Inherited from [Layoutable](../layout/layoutable.mdx). |
+| [UpdateLayout](../layout/layoutable.mdx#uid-529d4a08ea) | Executes a layout pass. Inherited from [Layoutable](../layout/layoutable.mdx). |
+| [GetFlowDirection](../visual.mdx#uid-12716acd38) | Gets the value of the attached [Avalonia.Visual.FlowDirectionProperty](xref:Avalonia.Visual.FlowDirectionProperty) on a control. Inherited from [Visual](../visual.mdx). |
+| [InvalidateVisual](../visual.mdx#uid-1cd22a7496) | Invalidates the visual and queues a repaint. Inherited from [Visual](../visual.mdx). |
+| [Render](../visual.mdx#uid-615917604b) | Renders the visual to a [Avalonia.Media.DrawingContext](xref:Avalonia.Media.DrawingContext). Inherited from [Visual](../visual.mdx). |
+| [SetFlowDirection](../visual.mdx#uid-a670b680eb) | Sets the value of the attached [Avalonia.Visual.FlowDirectionProperty](xref:Avalonia.Visual.FlowDirectionProperty) on a control. Inherited from [Visual](../visual.mdx). |
+| [ApplyStyling](../styledelement.mdx#uid-b0f81a6f8f) | Applies styling to the control if the control is initialized and styling is not already applied. Inherited from [StyledElement](../styledelement.mdx). |
+| [BeginInit](../styledelement.mdx#uid-91c6ccadce) | Inherited from [StyledElement](../styledelement.mdx). |
+| [EndInit](../styledelement.mdx#uid-17b450469d) | Inherited from [StyledElement](../styledelement.mdx). |
+| [TryGetResource](../styledelement.mdx#uid-2046a6b284) | Inherited from [StyledElement](../styledelement.mdx). |
+| [Bind (8 overloads)](../avaloniaobject.mdx#uid-1c60c7bda3) | Binds a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) to an [Avalonia.Data.BindingBase](xref:Avalonia.Data.BindingBase). Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [CheckAccess](../avaloniaobject.mdx#uid-260ff7a68d) | Returns a value indicating whether the current thread is the UI thread. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [ClearValue (4 overloads)](../avaloniaobject.mdx#uid-41de208fbe) | Clears a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty)'s local value. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [CoerceValue](../avaloniaobject.mdx#uid-3bec32f39e) | Coerces the specified [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty). Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [Equals](../avaloniaobject.mdx#uid-a8a8e94305) | Compares two objects using reference equality. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [GetBaseValue](../avaloniaobject.mdx#uid-9c615efbba) | Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [GetHashCode](../avaloniaobject.mdx#uid-7f7db1e7a2) | Gets the hash code for the object. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [GetValue (3 overloads)](../avaloniaobject.mdx#uid-5142cd4792) | Gets a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [IsAnimating](../avaloniaobject.mdx#uid-8cbfc7521a) | Checks whether a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) is animating. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [IsSet](../avaloniaobject.mdx#uid-f8bf0bbdcc) | Checks whether a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) is set on this object. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [SetCurrentValue (2 overloads)](../avaloniaobject.mdx#uid-38759fd088) | Sets the value of a dependency property without changing its value source. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [SetValue (3 overloads)](../avaloniaobject.mdx#uid-47d14e19d7) | Sets a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [VerifyAccess](../avaloniaobject.mdx#uid-3b9d3c9793) | Checks that the current thread is the UI thread and throws if not. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6b657af583"></span>
+
+### Focus Method
+
+Focuses the control.
+
+```csharp
+public bool Focus(Avalonia.Input.NavigationMethod method, Avalonia.Input.KeyModifiers keyModifiers)
+```
+
+#### Parameters
+
+`method` [Avalonia.Input.NavigationMethod](xref:Avalonia.Input.NavigationMethod)
+
+The method by which focus was changed.
+
+
+`keyModifiers` [Avalonia.Input.KeyModifiers](xref:Avalonia.Input.KeyModifiers)
+
+Any key modifiers active at the time of focus.
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0420943ecd"></span>
+
+### GetIsHoldWithMouseEnabled Method
+
+```csharp
+public bool GetIsHoldWithMouseEnabled(Avalonia.StyledElement element)
+```
+
+#### Parameters
+
+`element` [Avalonia.StyledElement](xref:Avalonia.StyledElement)
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2af9987676"></span>
+
+### GetIsHoldingEnabled Method
+
+```csharp
+public bool GetIsHoldingEnabled(Avalonia.StyledElement element)
+```
+
+#### Parameters
+
+`element` [Avalonia.StyledElement](xref:Avalonia.StyledElement)
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a494efd7c7"></span>
+
+### SetIsHoldWithMouseEnabled Method
+
+```csharp
+public void SetIsHoldWithMouseEnabled(Avalonia.StyledElement element, bool value)
+```
+
+#### Parameters
+
+`element` [Avalonia.StyledElement](xref:Avalonia.StyledElement)
+
+
+`value` bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-90a47948ad"></span>
+
+### SetIsHoldingEnabled Method
+
+```csharp
+public void SetIsHoldingEnabled(Avalonia.StyledElement element, bool value)
+```
+
+#### Parameters
+
+`element` [Avalonia.StyledElement](xref:Avalonia.StyledElement)
+
+
+`value` bool
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Cursor](#uid-4222de38cf) | Gets or sets associated mouse cursor. |
+| [Focusable](#uid-20168c45b2) | Gets or sets a value indicating whether the control can receive focus. |
+| [GestureRecognizers](#uid-ddee464eee) | No summary available. |
+| [IsEffectivelyEnabled](#uid-48ba4c0379) | Gets a value indicating whether this control and all its parents are enabled. |
+| [IsEnabled](#uid-31817dbbc9) | Gets or sets a value indicating whether the control is enabled for user interaction. |
+| [IsFocused](#uid-e4cd1a3717) | Gets a value indicating whether the control is focused. |
+| [IsHitTestVisible](#uid-11cb006f8b) | Gets or sets a value indicating whether the control is considered for hit testing. |
+| [IsKeyboardFocusWithin](#uid-6e5855b185) | Gets a value indicating whether keyboard focus is anywhere within the element or its visual tree child elements. |
+| [IsPointerOver](#uid-09e1553c00) | Gets a value indicating whether the pointer is currently over the control. |
+| [IsTabStop](#uid-455d73fca4) | Gets or sets a value that indicates whether the control is included in tab navigation. |
+| [KeyBindings](#uid-827a5420b2) | No summary available. |
+| [TabIndex](#uid-82ec6bf9ac) | Gets or sets a value that determines the order in which elements receive focus when the user navigates through controls by pressing the Tab key. |
+| [DesiredSize](../layout/layoutable.mdx#uid-5eb61af32f) | Gets the size that this element computed during the measure pass of the layout process. Inherited from [Layoutable](../layout/layoutable.mdx). |
+| [Height](../layout/layoutable.mdx#uid-4334ab83b4) | Gets or sets the height of the element. Inherited from [Layoutable](../layout/layoutable.mdx). |
+| [HorizontalAlignment](../layout/layoutable.mdx#uid-c621d98d6c) | Gets or sets the element's preferred horizontal alignment in its parent. Inherited from [Layoutable](../layout/layoutable.mdx). |
+| [IsArrangeValid](../layout/layoutable.mdx#uid-97d1d86c71) | Gets a value indicating whether the control's layouts arrange is valid. Inherited from [Layoutable](../layout/layoutable.mdx). |
+| [IsMeasureValid](../layout/layoutable.mdx#uid-2b3ce6ad30) | Gets a value indicating whether the control's layout measure is valid. Inherited from [Layoutable](../layout/layoutable.mdx). |
+| [Margin](../layout/layoutable.mdx#uid-3785e24bed) | Gets or sets the margin around the element. Inherited from [Layoutable](../layout/layoutable.mdx). |
+| [MaxHeight](../layout/layoutable.mdx#uid-6ffe996277) | Gets or sets the maximum height of the element. Inherited from [Layoutable](../layout/layoutable.mdx). |
+| [MaxWidth](../layout/layoutable.mdx#uid-ea6041bc57) | Gets or sets the maximum width of the element. Inherited from [Layoutable](../layout/layoutable.mdx). |
+| [MinHeight](../layout/layoutable.mdx#uid-822cd64c83) | Gets or sets the minimum height of the element. Inherited from [Layoutable](../layout/layoutable.mdx). |
+| [MinWidth](../layout/layoutable.mdx#uid-5bd3b5bb2c) | Gets or sets the minimum width of the element. Inherited from [Layoutable](../layout/layoutable.mdx). |
+| [UseLayoutRounding](../layout/layoutable.mdx#uid-5998a3d47c) | Gets or sets a value that determines whether the element should be snapped to pixel boundaries at layout time. Inherited from [Layoutable](../layout/layoutable.mdx). |
+| [VerticalAlignment](../layout/layoutable.mdx#uid-9652a1b295) | Gets or sets the element's preferred vertical alignment in its parent. Inherited from [Layoutable](../layout/layoutable.mdx). |
+| [Width](../layout/layoutable.mdx#uid-491c41475f) | Gets or sets the width of the element. Inherited from [Layoutable](../layout/layoutable.mdx). |
+| [Bounds](../visual.mdx#uid-a01c3022f7) | Gets the bounds of the control relative to its parent. Inherited from [Visual](../visual.mdx). |
+| [CacheMode](../visual.mdx#uid-c565afad32) | Gets or sets the cache mode of the visual. Inherited from [Visual](../visual.mdx). |
+| [Clip](../visual.mdx#uid-7623faaeaf) | Gets or sets the geometry clip for this visual. Inherited from [Visual](../visual.mdx). |
+| [ClipToBounds](../visual.mdx#uid-63c348aebd) | Gets or sets a value indicating whether the control should be clipped to its bounds. Inherited from [Visual](../visual.mdx). |
+| [Effect](../visual.mdx#uid-65e2be6b7c) | Gets or sets the effect of the control. Inherited from [Visual](../visual.mdx). |
+| [FlowDirection](../visual.mdx#uid-c7929bde53) | Gets or sets the text flow direction. Inherited from [Visual](../visual.mdx). |
+| [HasMirrorTransform](../visual.mdx#uid-70dc13a730) | Gets or sets a value indicating whether to apply mirror transform on this control. Inherited from [Visual](../visual.mdx). |
+| [IsEffectivelyVisible](../visual.mdx#uid-03d6c15a63) | Gets a value indicating whether this control and all its parents are visible. Inherited from [Visual](../visual.mdx). |
+| [IsVisible](../visual.mdx#uid-da2b0ca167) | Gets or sets a value indicating whether this control is visible. Inherited from [Visual](../visual.mdx). |
+| [Opacity](../visual.mdx#uid-9eaf1e3d57) | Gets or sets the opacity of the control. Inherited from [Visual](../visual.mdx). |
+| [OpacityMask](../visual.mdx#uid-b6579b9244) | Gets or sets the opacity mask of the control. Inherited from [Visual](../visual.mdx). |
+| [RenderTransform](../visual.mdx#uid-7ee76ff32a) | Gets or sets the render transform of the control. Inherited from [Visual](../visual.mdx). |
+| [RenderTransformOrigin](../visual.mdx#uid-3501120c25) | Gets or sets the transform origin of the control. Inherited from [Visual](../visual.mdx). |
+| [ZIndex](../visual.mdx#uid-a3275ade9d) | Gets or sets the Z index of the control. Inherited from [Visual](../visual.mdx). |
+| [ActualThemeVariant](../styledelement.mdx#uid-776bcbe4bf) | Gets the UI theme that is currently used by the element, which might be different than the RequestedThemeVariantProperty. Inherited from [StyledElement](../styledelement.mdx). |
+| [Classes](../styledelement.mdx#uid-b7b7edea05) | Gets or sets the styled element's classes. Inherited from [StyledElement](../styledelement.mdx). |
+| [DataContext](../styledelement.mdx#uid-647f924a56) | Gets or sets the control's data context. Inherited from [StyledElement](../styledelement.mdx). |
+| [IsInitialized](../styledelement.mdx#uid-59a7cddacb) | Gets a value that indicates whether the element has finished initialization. Inherited from [StyledElement](../styledelement.mdx). |
+| [Name](../styledelement.mdx#uid-245f4ccff5) | Gets or sets the name of the styled element. Inherited from [StyledElement](../styledelement.mdx). |
+| [Parent](../styledelement.mdx#uid-aad2c5c78d) | Gets the styled element's logical parent. Inherited from [StyledElement](../styledelement.mdx). |
+| [Resources](../styledelement.mdx#uid-f6488ca4b7) | Gets or sets the styled element's resource dictionary. Inherited from [StyledElement](../styledelement.mdx). |
+| [StyleKey](../styledelement.mdx#uid-081584075e) | Gets the type by which the element is styled. Inherited from [StyledElement](../styledelement.mdx). |
+| [Styles](../styledelement.mdx#uid-ae663139cc) | Gets the styles for the styled element. Inherited from [StyledElement](../styledelement.mdx). |
+| [TemplatedParent](../styledelement.mdx#uid-dbf6ddacc3) | Gets the styled element whose lookless template this styled element is part of. Inherited from [StyledElement](../styledelement.mdx). |
+| [Theme](../styledelement.mdx#uid-1aebed283d) | Gets or sets the theme to be applied to the element. Inherited from [StyledElement](../styledelement.mdx). |
+| [Transitions](../animation/animatable.mdx#uid-1b3138f517) | Gets or sets the property transitions for the control. Inherited from [Animatable](../animation/animatable.mdx). |
+| [Dispatcher](../avaloniaobject.mdx#uid-b25fa51632) | Returns the [Avalonia.AvaloniaObject.Dispatcher](xref:Avalonia.AvaloniaObject.Dispatcher) that this [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject) is associated with. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [Item](../avaloniaobject.mdx#uid-c1d1f1bc0f) | Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4222de38cf"></span>
+
+### Cursor Property
+
+Gets or sets associated mouse cursor.
+
+```csharp
+public Avalonia.Input.Cursor Cursor { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-20168c45b2"></span>
+
+### Focusable Property
+
+Gets or sets a value indicating whether the control can receive focus.
+
+```csharp
+public bool Focusable { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ddee464eee"></span>
+
+### GestureRecognizers Property
+
+```csharp
+public Avalonia.Input.GestureRecognizers.GestureRecognizerCollection GestureRecognizers { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-48ba4c0379"></span>
+
+### IsEffectivelyEnabled Property
+
+Gets a value indicating whether this control and all its parents are enabled.
+
+```csharp
+public bool IsEffectivelyEnabled { get; set; }
+```
+
+#### Remarks
+
+The [Avalonia.Input.IInputElement.IsEnabled](xref:Avalonia.Input.IInputElement.IsEnabled) property is used to toggle the enabled state for individual
+controls. The [Avalonia.Input.IInputElement.IsEffectivelyEnabled](xref:Avalonia.Input.IInputElement.IsEffectivelyEnabled) property takes into account the
+[Avalonia.Input.IInputElement.IsEnabled](xref:Avalonia.Input.IInputElement.IsEnabled) value of this control and its parent controls.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-31817dbbc9"></span>
+
+### IsEnabled Property
+
+Gets or sets a value indicating whether the control is enabled for user interaction.
+
+```csharp
+public bool IsEnabled { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e4cd1a3717"></span>
+
+### IsFocused Property
+
+Gets a value indicating whether the control is focused.
+
+```csharp
+public bool IsFocused { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-11cb006f8b"></span>
+
+### IsHitTestVisible Property
+
+Gets or sets a value indicating whether the control is considered for hit testing.
+
+```csharp
+public bool IsHitTestVisible { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6e5855b185"></span>
+
+### IsKeyboardFocusWithin Property
+
+Gets a value indicating whether keyboard focus is anywhere within the element or its visual tree child elements.
+
+```csharp
+public bool IsKeyboardFocusWithin { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-09e1553c00"></span>
+
+### IsPointerOver Property
+
+Gets a value indicating whether the pointer is currently over the control.
+
+```csharp
+public bool IsPointerOver { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-455d73fca4"></span>
+
+### IsTabStop Property
+
+Gets or sets a value that indicates whether the control is included in tab navigation.
+
+```csharp
+public bool IsTabStop { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-827a5420b2"></span>
+
+### KeyBindings Property
+
+```csharp
+public System.Collections.Generic.List<Avalonia.Input.KeyBinding> KeyBindings { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-82ec6bf9ac"></span>
+
+### TabIndex Property
+
+Gets or sets a value that determines the order in which elements receive focus when the
+user navigates through controls by pressing the Tab key.
+
+```csharp
+public int TabIndex { get; set; }
+```
+
+</section>
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [ContextCanceledEvent](#uid-c58107fdb9) | Provides event data for the [Avalonia.Input.InputElement.ContextCanceled](xref:Avalonia.Input.InputElement.ContextCanceled) event. |
+| [ContextRequestedEvent](#uid-11362fc1dd) | Provides event data for the [Avalonia.Input.InputElement.ContextRequested](xref:Avalonia.Input.InputElement.ContextRequested) event. |
+| [CursorProperty](#uid-37a51ae89c) | Gets or sets associated mouse cursor. |
+| [DoubleTappedEvent](#uid-932047336f) | Defines the [Avalonia.Input.InputElement.DoubleTapped](xref:Avalonia.Input.InputElement.DoubleTapped) event. |
+| [FocusableProperty](#uid-402835abd7) | Defines the [Avalonia.Input.InputElement.Focusable](xref:Avalonia.Input.InputElement.Focusable) property. |
+| [GettingFocusEvent](#uid-23a6940484) | Defines the [Avalonia.Input.InputElement.GettingFocus](xref:Avalonia.Input.InputElement.GettingFocus) event. |
+| [GotFocusEvent](#uid-750ce32b53) | Defines the [Avalonia.Input.InputElement.GotFocus](xref:Avalonia.Input.InputElement.GotFocus) event. |
+| [HoldingEvent](#uid-b1eab1bcd8) | Defines the [Avalonia.Input.InputElement.Holding](xref:Avalonia.Input.InputElement.Holding) event. |
+| [IsEffectivelyEnabledProperty](#uid-df18a2cff1) | Defines the [Avalonia.Input.InputElement.IsEffectivelyEnabled](xref:Avalonia.Input.InputElement.IsEffectivelyEnabled) property. |
+| [IsEnabledProperty](#uid-2f2893a804) | Defines the [Avalonia.Input.InputElement.IsEnabled](xref:Avalonia.Input.InputElement.IsEnabled) property. |
+| [IsFocusedProperty](#uid-ec811cc35b) | Defines the [Avalonia.Input.InputElement.IsFocused](xref:Avalonia.Input.InputElement.IsFocused) property. |
+| [IsHitTestVisibleProperty](#uid-e774aa17ad) | Defines the [Avalonia.Input.InputElement.IsHitTestVisible](xref:Avalonia.Input.InputElement.IsHitTestVisible) property. |
+| [IsHoldWithMouseEnabledProperty](#uid-3f460ccdfe) | Defines the IsHoldWithMouseEnabled attached property. |
+| [IsHoldingEnabledProperty](#uid-a893be5e44) | Defines the IsHoldingEnabled attached property. |
+| [IsKeyboardFocusWithinProperty](#uid-2dc1dd0d3d) | Defines the [Avalonia.Input.InputElement.IsKeyboardFocusWithin](xref:Avalonia.Input.InputElement.IsKeyboardFocusWithin) property. |
+| [IsPointerOverProperty](#uid-be6c8adde2) | Defines the [Avalonia.Input.InputElement.IsPointerOver](xref:Avalonia.Input.InputElement.IsPointerOver) property. |
+| [IsTabStopProperty](#uid-ed162e7441) | Defines the [Avalonia.Input.InputElement.IsTabStop](xref:Avalonia.Input.InputElement.IsTabStop) property. |
+| [KeyDownEvent](#uid-71dfb758e3) | Defines the [Avalonia.Input.InputElement.KeyDown](xref:Avalonia.Input.InputElement.KeyDown) event. |
+| [KeyUpEvent](#uid-e694f9abc6) | Defines the [Avalonia.Input.InputElement.KeyUp](xref:Avalonia.Input.InputElement.KeyUp) event. |
+| [LosingFocusEvent](#uid-6ed71d3568) | Defines the [Avalonia.Input.InputElement.LosingFocus](xref:Avalonia.Input.InputElement.LosingFocus) event. |
+| [LostFocusEvent](#uid-267344bb96) | Defines the [Avalonia.Input.InputElement.LostFocus](xref:Avalonia.Input.InputElement.LostFocus) event. |
+| [PinchEndedEvent](#uid-3f6a3485dd) | Defines the [Avalonia.Input.InputElement.PinchEnded](xref:Avalonia.Input.InputElement.PinchEnded) event. |
+| [PinchEvent](#uid-d109d8c674) | Defines the [Avalonia.Input.InputElement.Pinch](xref:Avalonia.Input.InputElement.Pinch) event. |
+| [PointerCaptureLostEvent](#uid-e76450a6b8) | Defines the [Avalonia.Input.InputElement.PointerCaptureLost](xref:Avalonia.Input.InputElement.PointerCaptureLost) routed event. |
+| [PointerEnteredEvent](#uid-ff4d54fcc4) | Defines the [Avalonia.Input.InputElement.PointerEntered](xref:Avalonia.Input.InputElement.PointerEntered) event. |
+| [PointerExitedEvent](#uid-fc90c076e6) | Defines the [Avalonia.Input.InputElement.PointerExited](xref:Avalonia.Input.InputElement.PointerExited) event. |
+| [PointerMovedEvent](#uid-559b3b80ee) | Defines the [Avalonia.Input.InputElement.PointerMoved](xref:Avalonia.Input.InputElement.PointerMoved) event. |
+| [PointerPressedEvent](#uid-3b7a47d5fd) | Defines the [Avalonia.Input.InputElement.PointerPressed](xref:Avalonia.Input.InputElement.PointerPressed) event. |
+| [PointerReleasedEvent](#uid-f5b0e74f53) | Defines the [Avalonia.Input.InputElement.PointerReleased](xref:Avalonia.Input.InputElement.PointerReleased) event. |
+| [PointerTouchPadGestureMagnifyEvent](#uid-72785e777d) | Defines the [Avalonia.Input.InputElement.PointerTouchPadGestureMagnify](xref:Avalonia.Input.InputElement.PointerTouchPadGestureMagnify) event. |
+| [PointerTouchPadGestureRotateEvent](#uid-409dcc6358) | Defines the [Avalonia.Input.InputElement.PointerTouchPadGestureRotate](xref:Avalonia.Input.InputElement.PointerTouchPadGestureRotate) event. |
+| [PointerTouchPadGestureSwipeEvent](#uid-959da18351) | Defines the [Avalonia.Input.InputElement.PointerTouchPadGestureSwipe](xref:Avalonia.Input.InputElement.PointerTouchPadGestureSwipe) event. |
+| [PointerWheelChangedEvent](#uid-dcb45add6a) | Defines the [Avalonia.Input.InputElement.PointerWheelChanged](xref:Avalonia.Input.InputElement.PointerWheelChanged) event. |
+| [PullGestureEndedEvent](#uid-274f53878f) | Defines the [Avalonia.Input.InputElement.PullGestureEnded](xref:Avalonia.Input.InputElement.PullGestureEnded) event. |
+| [PullGestureEvent](#uid-b9a60d43c7) | Defines the [Avalonia.Input.InputElement.PullGesture](xref:Avalonia.Input.InputElement.PullGesture) event. |
+| [RightTappedEvent](#uid-a67d4b1367) | Defines the [Avalonia.Input.InputElement.RightTapped](xref:Avalonia.Input.InputElement.RightTapped) event. |
+| [ScrollGestureEndedEvent](#uid-5f3e85c372) | Defines the [Avalonia.Input.InputElement.ScrollGestureEnded](xref:Avalonia.Input.InputElement.ScrollGestureEnded) event. |
+| [ScrollGestureEvent](#uid-d098469113) | Defines the [Avalonia.Input.InputElement.ScrollGesture](xref:Avalonia.Input.InputElement.ScrollGesture) event. |
+| [ScrollGestureInertiaStartingEvent](#uid-02f504d2ea) | Defines the [Avalonia.Input.InputElement.ScrollGestureInertiaStarting](xref:Avalonia.Input.InputElement.ScrollGestureInertiaStarting) event. |
+| [SwipeGestureEvent](#uid-e431c01e95) | Defines the [Avalonia.Input.InputElement.SwipeGesture](xref:Avalonia.Input.InputElement.SwipeGesture) event. |
+| [TabIndexProperty](#uid-3708b5bfca) | Defines the [Avalonia.Input.InputElement.TabIndex](xref:Avalonia.Input.InputElement.TabIndex) property. |
+| [TappedEvent](#uid-15efc26145) | Defines the [Avalonia.Input.InputElement.Tapped](xref:Avalonia.Input.InputElement.Tapped) event. |
+| [TextInputEvent](#uid-b82dd03ac9) | Defines the [Avalonia.Input.InputElement.TextInput](xref:Avalonia.Input.InputElement.TextInput) event. |
+| [TextInputMethodClientRequestedEvent](#uid-679852bb37) | Defines the [Avalonia.Input.InputElement.TextInputMethodClientRequested](xref:Avalonia.Input.InputElement.TextInputMethodClientRequested) event. |
+| [DesiredSizeProperty](../layout/layoutable.mdx#uid-b46bed86fe) | Defines the [Avalonia.Layout.Layoutable.DesiredSize](xref:Avalonia.Layout.Layoutable.DesiredSize) property. Inherited from [Layoutable](../layout/layoutable.mdx). |
+| [HeightProperty](../layout/layoutable.mdx#uid-78fa90222f) | Defines the [Avalonia.Layout.Layoutable.Height](xref:Avalonia.Layout.Layoutable.Height) property. Inherited from [Layoutable](../layout/layoutable.mdx). |
+| [HorizontalAlignmentProperty](../layout/layoutable.mdx#uid-43606c2354) | Defines the [Avalonia.Layout.Layoutable.HorizontalAlignment](xref:Avalonia.Layout.Layoutable.HorizontalAlignment) property. Inherited from [Layoutable](../layout/layoutable.mdx). |
+| [MarginProperty](../layout/layoutable.mdx#uid-e730ad0d44) | Defines the [Avalonia.Layout.Layoutable.Margin](xref:Avalonia.Layout.Layoutable.Margin) property. Inherited from [Layoutable](../layout/layoutable.mdx). |
+| [MaxHeightProperty](../layout/layoutable.mdx#uid-0a0a1f20cb) | Defines the [Avalonia.Layout.Layoutable.MaxHeight](xref:Avalonia.Layout.Layoutable.MaxHeight) property. Inherited from [Layoutable](../layout/layoutable.mdx). |
+| [MaxWidthProperty](../layout/layoutable.mdx#uid-febdea8f4d) | Defines the [Avalonia.Layout.Layoutable.MaxWidth](xref:Avalonia.Layout.Layoutable.MaxWidth) property. Inherited from [Layoutable](../layout/layoutable.mdx). |
+| [MinHeightProperty](../layout/layoutable.mdx#uid-f78bf9b812) | Defines the [Avalonia.Layout.Layoutable.MinHeight](xref:Avalonia.Layout.Layoutable.MinHeight) property. Inherited from [Layoutable](../layout/layoutable.mdx). |
+| [MinWidthProperty](../layout/layoutable.mdx#uid-ec0935c392) | Defines the [Avalonia.Layout.Layoutable.MinWidth](xref:Avalonia.Layout.Layoutable.MinWidth) property. Inherited from [Layoutable](../layout/layoutable.mdx). |
+| [UseLayoutRoundingProperty](../layout/layoutable.mdx#uid-e6d86b68b5) | Defines the [Avalonia.Layout.Layoutable.UseLayoutRounding](xref:Avalonia.Layout.Layoutable.UseLayoutRounding) property. Inherited from [Layoutable](../layout/layoutable.mdx). |
+| [VerticalAlignmentProperty](../layout/layoutable.mdx#uid-b50722555e) | Defines the [Avalonia.Layout.Layoutable.VerticalAlignment](xref:Avalonia.Layout.Layoutable.VerticalAlignment) property. Inherited from [Layoutable](../layout/layoutable.mdx). |
+| [WidthProperty](../layout/layoutable.mdx#uid-6f3212affd) | Defines the [Avalonia.Layout.Layoutable.Width](xref:Avalonia.Layout.Layoutable.Width) property. Inherited from [Layoutable](../layout/layoutable.mdx). |
+| [BoundsProperty](../visual.mdx#uid-f22a27348f) | Defines the [Avalonia.Visual.Bounds](xref:Avalonia.Visual.Bounds) property. Inherited from [Visual](../visual.mdx). |
+| [CacheModeProperty](../visual.mdx#uid-5c89b0f2fc) | Defines the [Avalonia.Visual.CacheMode](xref:Avalonia.Visual.CacheMode) property. Inherited from [Visual](../visual.mdx). |
+| [ClipProperty](../visual.mdx#uid-06ffce3308) | Defines the [Avalonia.Visual.Clip](xref:Avalonia.Visual.Clip) property. Inherited from [Visual](../visual.mdx). |
+| [ClipToBoundsProperty](../visual.mdx#uid-4bc41df166) | Defines the [Avalonia.Visual.ClipToBounds](xref:Avalonia.Visual.ClipToBounds) property. Inherited from [Visual](../visual.mdx). |
+| [EffectProperty](../visual.mdx#uid-9374086bff) | Defines the [Avalonia.Visual.Effect](xref:Avalonia.Visual.Effect) property. Inherited from [Visual](../visual.mdx). |
+| [FlowDirectionProperty](../visual.mdx#uid-79d00f257f) | Defines the [Avalonia.Visual.FlowDirection](xref:Avalonia.Visual.FlowDirection) property. Inherited from [Visual](../visual.mdx). |
+| [HasMirrorTransformProperty](../visual.mdx#uid-1f37ec4745) | Defines the [Avalonia.Visual.HasMirrorTransform](xref:Avalonia.Visual.HasMirrorTransform) property. Inherited from [Visual](../visual.mdx). |
+| [IsVisibleProperty](../visual.mdx#uid-8e0edf21ac) | Defines the [Avalonia.Visual.IsVisible](xref:Avalonia.Visual.IsVisible) property. Inherited from [Visual](../visual.mdx). |
+| [OpacityMaskProperty](../visual.mdx#uid-aad2c3f7c2) | Defines the [Avalonia.Visual.OpacityMask](xref:Avalonia.Visual.OpacityMask) property. Inherited from [Visual](../visual.mdx). |
+| [OpacityProperty](../visual.mdx#uid-2a53e27b1f) | Defines the [Avalonia.Visual.Opacity](xref:Avalonia.Visual.Opacity) property. Inherited from [Visual](../visual.mdx). |
+| [RenderTransformOriginProperty](../visual.mdx#uid-963d266cdd) | Defines the [Avalonia.Visual.RenderTransformOrigin](xref:Avalonia.Visual.RenderTransformOrigin) property. Inherited from [Visual](../visual.mdx). |
+| [RenderTransformProperty](../visual.mdx#uid-31d20942c2) | Defines the [Avalonia.Visual.RenderTransform](xref:Avalonia.Visual.RenderTransform) property. Inherited from [Visual](../visual.mdx). |
+| [VisualParentProperty](../visual.mdx#uid-12214f81b9) | Defines the [Avalonia.Visual.VisualParent](xref:Avalonia.Visual.VisualParent) property. Inherited from [Visual](../visual.mdx). |
+| [ZIndexProperty](../visual.mdx#uid-1dc9376c1e) | Defines the [Avalonia.Visual.ZIndex](xref:Avalonia.Visual.ZIndex) property. Inherited from [Visual](../visual.mdx). |
+| [DataContextProperty](../styledelement.mdx#uid-7eefabb929) | Defines the [Avalonia.StyledElement.DataContext](xref:Avalonia.StyledElement.DataContext) property. Inherited from [StyledElement](../styledelement.mdx). |
+| [NameProperty](../styledelement.mdx#uid-bcdbb9de56) | Defines the [Avalonia.StyledElement.Name](xref:Avalonia.StyledElement.Name) property. Inherited from [StyledElement](../styledelement.mdx). |
+| [ParentProperty](../styledelement.mdx#uid-dc6481a488) | Defines the [Avalonia.StyledElement.Parent](xref:Avalonia.StyledElement.Parent) property. Inherited from [StyledElement](../styledelement.mdx). |
+| [TemplatedParentProperty](../styledelement.mdx#uid-a2c7149a6b) | Defines the [Avalonia.StyledElement.TemplatedParent](xref:Avalonia.StyledElement.TemplatedParent) property. Inherited from [StyledElement](../styledelement.mdx). |
+| [ThemeProperty](../styledelement.mdx#uid-05852d7b9a) | Defines the [Avalonia.StyledElement.Theme](xref:Avalonia.StyledElement.Theme) property. Inherited from [StyledElement](../styledelement.mdx). |
+| [TransitionsProperty](../animation/animatable.mdx#uid-c79f18fac2) | Defines the [Avalonia.Animation.Animatable.Transitions](xref:Avalonia.Animation.Animatable.Transitions) property. Inherited from [Animatable](../animation/animatable.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c58107fdb9"></span>
+
+### ContextCanceledEvent Field
+
+Provides event data for the [Avalonia.Input.InputElement.ContextCanceled](xref:Avalonia.Input.InputElement.ContextCanceled) event.
+
+```csharp
+public Avalonia.Interactivity.RoutedEvent<TEventArgs><Avalonia.Interactivity.RoutedEventArgs> ContextCanceledEvent
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-11362fc1dd"></span>
+
+### ContextRequestedEvent Field
+
+Provides event data for the [Avalonia.Input.InputElement.ContextRequested](xref:Avalonia.Input.InputElement.ContextRequested) event.
+
+```csharp
+public Avalonia.Interactivity.RoutedEvent<TEventArgs><Avalonia.Input.ContextRequestedEventArgs> ContextRequestedEvent
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-37a51ae89c"></span>
+
+### CursorProperty Field
+
+Gets or sets associated mouse cursor.
+
+```csharp
+public Avalonia.StyledProperty<TValue><Avalonia.Input.Cursor> CursorProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-932047336f"></span>
+
+### DoubleTappedEvent Field
+
+Defines the [Avalonia.Input.InputElement.DoubleTapped](xref:Avalonia.Input.InputElement.DoubleTapped) event.
+
+```csharp
+public Avalonia.Interactivity.RoutedEvent<TEventArgs><Avalonia.Input.TappedEventArgs> DoubleTappedEvent
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-402835abd7"></span>
+
+### FocusableProperty Field
+
+Defines the [Avalonia.Input.InputElement.Focusable](xref:Avalonia.Input.InputElement.Focusable) property.
+
+```csharp
+public Avalonia.StyledProperty<TValue><bool> FocusableProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-23a6940484"></span>
+
+### GettingFocusEvent Field
+
+Defines the [Avalonia.Input.InputElement.GettingFocus](xref:Avalonia.Input.InputElement.GettingFocus) event.
+
+```csharp
+public Avalonia.Interactivity.RoutedEvent<TEventArgs><Avalonia.Input.FocusChangingEventArgs> GettingFocusEvent
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-750ce32b53"></span>
+
+### GotFocusEvent Field
+
+Defines the [Avalonia.Input.InputElement.GotFocus](xref:Avalonia.Input.InputElement.GotFocus) event.
+
+```csharp
+public Avalonia.Interactivity.RoutedEvent<TEventArgs><Avalonia.Input.GotFocusEventArgs> GotFocusEvent
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b1eab1bcd8"></span>
+
+### HoldingEvent Field
+
+Defines the [Avalonia.Input.InputElement.Holding](xref:Avalonia.Input.InputElement.Holding) event.
+
+```csharp
+public Avalonia.Interactivity.RoutedEvent<TEventArgs><Avalonia.Input.HoldingRoutedEventArgs> HoldingEvent
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-df18a2cff1"></span>
+
+### IsEffectivelyEnabledProperty Field
+
+Defines the [Avalonia.Input.InputElement.IsEffectivelyEnabled](xref:Avalonia.Input.InputElement.IsEffectivelyEnabled) property.
+
+```csharp
+public Avalonia.DirectProperty<TOwner,TValue><Avalonia.Input.InputElement, bool> IsEffectivelyEnabledProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2f2893a804"></span>
+
+### IsEnabledProperty Field
+
+Defines the [Avalonia.Input.InputElement.IsEnabled](xref:Avalonia.Input.InputElement.IsEnabled) property.
+
+```csharp
+public Avalonia.StyledProperty<TValue><bool> IsEnabledProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ec811cc35b"></span>
+
+### IsFocusedProperty Field
+
+Defines the [Avalonia.Input.InputElement.IsFocused](xref:Avalonia.Input.InputElement.IsFocused) property.
+
+```csharp
+public Avalonia.DirectProperty<TOwner,TValue><Avalonia.Input.InputElement, bool> IsFocusedProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e774aa17ad"></span>
+
+### IsHitTestVisibleProperty Field
+
+Defines the [Avalonia.Input.InputElement.IsHitTestVisible](xref:Avalonia.Input.InputElement.IsHitTestVisible) property.
+
+```csharp
+public Avalonia.StyledProperty<TValue><bool> IsHitTestVisibleProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3f460ccdfe"></span>
+
+### IsHoldWithMouseEnabledProperty Field
+
+Defines the IsHoldWithMouseEnabled attached property.
+
+```csharp
+public Avalonia.AttachedProperty<TValue><bool> IsHoldWithMouseEnabledProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a893be5e44"></span>
+
+### IsHoldingEnabledProperty Field
+
+Defines the IsHoldingEnabled attached property.
+
+```csharp
+public Avalonia.AttachedProperty<TValue><bool> IsHoldingEnabledProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2dc1dd0d3d"></span>
+
+### IsKeyboardFocusWithinProperty Field
+
+Defines the [Avalonia.Input.InputElement.IsKeyboardFocusWithin](xref:Avalonia.Input.InputElement.IsKeyboardFocusWithin) property.
+
+```csharp
+public Avalonia.DirectProperty<TOwner,TValue><Avalonia.Input.InputElement, bool> IsKeyboardFocusWithinProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-be6c8adde2"></span>
+
+### IsPointerOverProperty Field
+
+Defines the [Avalonia.Input.InputElement.IsPointerOver](xref:Avalonia.Input.InputElement.IsPointerOver) property.
+
+```csharp
+public Avalonia.DirectProperty<TOwner,TValue><Avalonia.Input.InputElement, bool> IsPointerOverProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ed162e7441"></span>
+
+### IsTabStopProperty Field
+
+Defines the [Avalonia.Input.InputElement.IsTabStop](xref:Avalonia.Input.InputElement.IsTabStop) property.
+
+```csharp
+public Avalonia.StyledProperty<TValue><bool> IsTabStopProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-71dfb758e3"></span>
+
+### KeyDownEvent Field
+
+Defines the [Avalonia.Input.InputElement.KeyDown](xref:Avalonia.Input.InputElement.KeyDown) event.
+
+```csharp
+public Avalonia.Interactivity.RoutedEvent<TEventArgs><Avalonia.Input.KeyEventArgs> KeyDownEvent
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e694f9abc6"></span>
+
+### KeyUpEvent Field
+
+Defines the [Avalonia.Input.InputElement.KeyUp](xref:Avalonia.Input.InputElement.KeyUp) event.
+
+```csharp
+public Avalonia.Interactivity.RoutedEvent<TEventArgs><Avalonia.Input.KeyEventArgs> KeyUpEvent
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6ed71d3568"></span>
+
+### LosingFocusEvent Field
+
+Defines the [Avalonia.Input.InputElement.LosingFocus](xref:Avalonia.Input.InputElement.LosingFocus) event.
+
+```csharp
+public Avalonia.Interactivity.RoutedEvent<TEventArgs><Avalonia.Input.FocusChangingEventArgs> LosingFocusEvent
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-267344bb96"></span>
+
+### LostFocusEvent Field
+
+Defines the [Avalonia.Input.InputElement.LostFocus](xref:Avalonia.Input.InputElement.LostFocus) event.
+
+```csharp
+public Avalonia.Interactivity.RoutedEvent<TEventArgs><Avalonia.Interactivity.RoutedEventArgs> LostFocusEvent
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3f6a3485dd"></span>
+
+### PinchEndedEvent Field
+
+Defines the [Avalonia.Input.InputElement.PinchEnded](xref:Avalonia.Input.InputElement.PinchEnded) event.
+
+```csharp
+public Avalonia.Interactivity.RoutedEvent<TEventArgs><Avalonia.Input.PinchEndedEventArgs> PinchEndedEvent
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d109d8c674"></span>
+
+### PinchEvent Field
+
+Defines the [Avalonia.Input.InputElement.Pinch](xref:Avalonia.Input.InputElement.Pinch) event.
+
+```csharp
+public Avalonia.Interactivity.RoutedEvent<TEventArgs><Avalonia.Input.PinchEventArgs> PinchEvent
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e76450a6b8"></span>
+
+### PointerCaptureLostEvent Field
+
+Defines the [Avalonia.Input.InputElement.PointerCaptureLost](xref:Avalonia.Input.InputElement.PointerCaptureLost) routed event.
+
+```csharp
+public Avalonia.Interactivity.RoutedEvent<TEventArgs><Avalonia.Input.PointerCaptureLostEventArgs> PointerCaptureLostEvent
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ff4d54fcc4"></span>
+
+### PointerEnteredEvent Field
+
+Defines the [Avalonia.Input.InputElement.PointerEntered](xref:Avalonia.Input.InputElement.PointerEntered) event.
+
+```csharp
+public Avalonia.Interactivity.RoutedEvent<TEventArgs><Avalonia.Input.PointerEventArgs> PointerEnteredEvent
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-fc90c076e6"></span>
+
+### PointerExitedEvent Field
+
+Defines the [Avalonia.Input.InputElement.PointerExited](xref:Avalonia.Input.InputElement.PointerExited) event.
+
+```csharp
+public Avalonia.Interactivity.RoutedEvent<TEventArgs><Avalonia.Input.PointerEventArgs> PointerExitedEvent
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-559b3b80ee"></span>
+
+### PointerMovedEvent Field
+
+Defines the [Avalonia.Input.InputElement.PointerMoved](xref:Avalonia.Input.InputElement.PointerMoved) event.
+
+```csharp
+public Avalonia.Interactivity.RoutedEvent<TEventArgs><Avalonia.Input.PointerEventArgs> PointerMovedEvent
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3b7a47d5fd"></span>
+
+### PointerPressedEvent Field
+
+Defines the [Avalonia.Input.InputElement.PointerPressed](xref:Avalonia.Input.InputElement.PointerPressed) event.
+
+```csharp
+public Avalonia.Interactivity.RoutedEvent<TEventArgs><Avalonia.Input.PointerPressedEventArgs> PointerPressedEvent
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f5b0e74f53"></span>
+
+### PointerReleasedEvent Field
+
+Defines the [Avalonia.Input.InputElement.PointerReleased](xref:Avalonia.Input.InputElement.PointerReleased) event.
+
+```csharp
+public Avalonia.Interactivity.RoutedEvent<TEventArgs><Avalonia.Input.PointerReleasedEventArgs> PointerReleasedEvent
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-72785e777d"></span>
+
+### PointerTouchPadGestureMagnifyEvent Field
+
+Defines the [Avalonia.Input.InputElement.PointerTouchPadGestureMagnify](xref:Avalonia.Input.InputElement.PointerTouchPadGestureMagnify) event.
+
+```csharp
+public Avalonia.Interactivity.RoutedEvent<TEventArgs><Avalonia.Input.PointerDeltaEventArgs> PointerTouchPadGestureMagnifyEvent
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-409dcc6358"></span>
+
+### PointerTouchPadGestureRotateEvent Field
+
+Defines the [Avalonia.Input.InputElement.PointerTouchPadGestureRotate](xref:Avalonia.Input.InputElement.PointerTouchPadGestureRotate) event.
+
+```csharp
+public Avalonia.Interactivity.RoutedEvent<TEventArgs><Avalonia.Input.PointerDeltaEventArgs> PointerTouchPadGestureRotateEvent
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-959da18351"></span>
+
+### PointerTouchPadGestureSwipeEvent Field
+
+Defines the [Avalonia.Input.InputElement.PointerTouchPadGestureSwipe](xref:Avalonia.Input.InputElement.PointerTouchPadGestureSwipe) event.
+
+```csharp
+public Avalonia.Interactivity.RoutedEvent<TEventArgs><Avalonia.Input.PointerDeltaEventArgs> PointerTouchPadGestureSwipeEvent
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-dcb45add6a"></span>
+
+### PointerWheelChangedEvent Field
+
+Defines the [Avalonia.Input.InputElement.PointerWheelChanged](xref:Avalonia.Input.InputElement.PointerWheelChanged) event.
+
+```csharp
+public Avalonia.Interactivity.RoutedEvent<TEventArgs><Avalonia.Input.PointerWheelEventArgs> PointerWheelChangedEvent
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-274f53878f"></span>
+
+### PullGestureEndedEvent Field
+
+Defines the [Avalonia.Input.InputElement.PullGestureEnded](xref:Avalonia.Input.InputElement.PullGestureEnded) event.
+
+```csharp
+public Avalonia.Interactivity.RoutedEvent<TEventArgs><Avalonia.Input.PullGestureEndedEventArgs> PullGestureEndedEvent
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b9a60d43c7"></span>
+
+### PullGestureEvent Field
+
+Defines the [Avalonia.Input.InputElement.PullGesture](xref:Avalonia.Input.InputElement.PullGesture) event.
+
+```csharp
+public Avalonia.Interactivity.RoutedEvent<TEventArgs><Avalonia.Input.PullGestureEventArgs> PullGestureEvent
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a67d4b1367"></span>
+
+### RightTappedEvent Field
+
+Defines the [Avalonia.Input.InputElement.RightTapped](xref:Avalonia.Input.InputElement.RightTapped) event.
+
+```csharp
+public Avalonia.Interactivity.RoutedEvent<TEventArgs><Avalonia.Input.TappedEventArgs> RightTappedEvent
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5f3e85c372"></span>
+
+### ScrollGestureEndedEvent Field
+
+Defines the [Avalonia.Input.InputElement.ScrollGestureEnded](xref:Avalonia.Input.InputElement.ScrollGestureEnded) event.
+
+```csharp
+public Avalonia.Interactivity.RoutedEvent<TEventArgs><Avalonia.Input.ScrollGestureEndedEventArgs> ScrollGestureEndedEvent
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d098469113"></span>
+
+### ScrollGestureEvent Field
+
+Defines the [Avalonia.Input.InputElement.ScrollGesture](xref:Avalonia.Input.InputElement.ScrollGesture) event.
+
+```csharp
+public Avalonia.Interactivity.RoutedEvent<TEventArgs><Avalonia.Input.ScrollGestureEventArgs> ScrollGestureEvent
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-02f504d2ea"></span>
+
+### ScrollGestureInertiaStartingEvent Field
+
+Defines the [Avalonia.Input.InputElement.ScrollGestureInertiaStarting](xref:Avalonia.Input.InputElement.ScrollGestureInertiaStarting) event.
+
+```csharp
+public Avalonia.Interactivity.RoutedEvent<TEventArgs><Avalonia.Input.ScrollGestureInertiaStartingEventArgs> ScrollGestureInertiaStartingEvent
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e431c01e95"></span>
+
+### SwipeGestureEvent Field
+
+Defines the [Avalonia.Input.InputElement.SwipeGesture](xref:Avalonia.Input.InputElement.SwipeGesture) event.
+
+```csharp
+public Avalonia.Interactivity.RoutedEvent<TEventArgs><Avalonia.Input.SwipeGestureEventArgs> SwipeGestureEvent
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3708b5bfca"></span>
+
+### TabIndexProperty Field
+
+Defines the [Avalonia.Input.InputElement.TabIndex](xref:Avalonia.Input.InputElement.TabIndex) property.
+
+```csharp
+public Avalonia.StyledProperty<TValue><int> TabIndexProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-15efc26145"></span>
+
+### TappedEvent Field
+
+Defines the [Avalonia.Input.InputElement.Tapped](xref:Avalonia.Input.InputElement.Tapped) event.
+
+```csharp
+public Avalonia.Interactivity.RoutedEvent<TEventArgs><Avalonia.Input.TappedEventArgs> TappedEvent
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b82dd03ac9"></span>
+
+### TextInputEvent Field
+
+Defines the [Avalonia.Input.InputElement.TextInput](xref:Avalonia.Input.InputElement.TextInput) event.
+
+```csharp
+public Avalonia.Interactivity.RoutedEvent<TEventArgs><Avalonia.Input.TextInputEventArgs> TextInputEvent
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-679852bb37"></span>
+
+### TextInputMethodClientRequestedEvent Field
+
+Defines the [Avalonia.Input.InputElement.TextInputMethodClientRequested](xref:Avalonia.Input.InputElement.TextInputMethodClientRequested) event.
+
+```csharp
+public Avalonia.Interactivity.RoutedEvent<TEventArgs><Avalonia.Input.TextInput.TextInputMethodClientRequestedEventArgs> TextInputMethodClientRequestedEvent
+```
+
+</section>
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [ContextCanceled](#uid-0132e74ca9) | Occurs when the context input gesture continues into another gesture, to notify the element that the context flyout should not be opened. |
+| [ContextRequested](#uid-9067484d6e) | Occurs when the user has completed a context input gesture, such as a right-click. |
+| [DoubleTapped](#uid-ad13083e0c) | Occurs when a double-tap gesture occurs on the control. |
+| [GettingFocus](#uid-4d054164ee) | Occurs before the control receives focus. |
+| [GotFocus](#uid-d41d7ad59c) | Occurs when the control receives focus. |
+| [Holding](#uid-8cda030fe2) | Occurs when a hold gesture occurs on the control. |
+| [KeyDown](#uid-ee9d987ed5) | Occurs when a key is pressed while the control has focus. |
+| [KeyUp](#uid-1131e95f55) | Occurs when a key is released while the control has focus. |
+| [LosingFocus](#uid-425fe24716) | Occurs before the control loses focus. |
+| [LostFocus](#uid-2061fc85a1) | Occurs when the control loses focus. |
+| [Pinch](#uid-96b68421dc) | Occurs when a pinch gesture occurs on the control. |
+| [PinchEnded](#uid-50614bd917) | Occurs when a pinch gesture ends on the control. |
+| [PointerCaptureLost](#uid-2121c500a4) | Occurs when the control or its child control loses the pointer capture for any reason, event will not be triggered for a parent control if capture was transferred to another child of that parent control. |
+| [PointerEntered](#uid-a81f2c5c9a) | Occurs when the pointer enters the control. |
+| [PointerExited](#uid-522e8d0a47) | Occurs when the pointer leaves the control. |
+| [PointerMoved](#uid-0990295ea3) | Occurs when the pointer moves over the control. |
+| [PointerPressed](#uid-913cdc0df1) | Occurs when the pointer is pressed over the control. |
+| [PointerReleased](#uid-5b59b21d5e) | Occurs when the pointer is released over the control. |
+| [PointerTouchPadGestureMagnify](#uid-8f1fe6dc4a) | Occurs when a touchpad magnify gesture occurs on the control. |
+| [PointerTouchPadGestureRotate](#uid-d966c43661) | Occurs when a touchpad rotate gesture occurs on the control. |
+| [PointerTouchPadGestureSwipe](#uid-9011c6de89) | Occurs when a touchpad swipe gesture occurs on the control. |
+| [PointerWheelChanged](#uid-6687ab6f2e) | Occurs when the mouse is scrolled over the control. |
+| [PullGesture](#uid-d85f52cac5) | Occurs when a pull gesture occurs on the control. |
+| [PullGestureEnded](#uid-a37f51b846) | Occurs when a pull gesture ends on the control. |
+| [RightTapped](#uid-11a576692d) | Occurs when a right tap gesture occurs on the control. |
+| [ScrollGesture](#uid-b571ab3acc) | Occurs when a scroll gesture occurs on the control. |
+| [ScrollGestureEnded](#uid-eb3914c3a8) | Occurs when a scroll gesture ends on the control. |
+| [ScrollGestureInertiaStarting](#uid-c8cd2731a5) | Occurs when a scroll gesture inertia starts on the control. |
+| [SwipeGesture](#uid-0f4fc613ec) | Occurs when a swipe gesture occurs on the control. |
+| [Tapped](#uid-6df36c079d) | Occurs when a tap gesture occurs on the control. |
+| [TextInput](#uid-6dcb8fae07) | Occurs when a user typed some text while the control has focus. |
+| [TextInputMethodClientRequested](#uid-5d96b89080) | Occurs when an input element gains input focus and input method is looking for the corresponding client |
+| [EffectiveViewportChanged](../layout/layoutable.mdx#uid-1922b89fa5) | Occurs when the element's effective viewport changes. Inherited from [Layoutable](../layout/layoutable.mdx). |
+| [LayoutUpdated](../layout/layoutable.mdx#uid-05ea32f689) | Occurs when a layout pass completes for the control. Inherited from [Layoutable](../layout/layoutable.mdx). |
+| [AttachedToVisualTree](../visual.mdx#uid-df40bddf6b) | Raised when the control is attached to a rooted visual tree. Inherited from [Visual](../visual.mdx). |
+| [DetachedFromVisualTree](../visual.mdx#uid-3f64dafb1c) | Raised when the control is detached from a rooted visual tree. Inherited from [Visual](../visual.mdx). |
+| [ActualThemeVariantChanged](../styledelement.mdx#uid-e69ef27e71) | Raised when the theme variant is changed on the element or an ancestor of the element. Inherited from [StyledElement](../styledelement.mdx). |
+| [AttachedToLogicalTree](../styledelement.mdx#uid-717aa68e85) | Raised when the styled element is attached to a rooted logical tree. Inherited from [StyledElement](../styledelement.mdx). |
+| [DataContextChanged](../styledelement.mdx#uid-4b1cc873f8) | Occurs when the [Avalonia.StyledElement.DataContext](xref:Avalonia.StyledElement.DataContext) property changes. Inherited from [StyledElement](../styledelement.mdx). |
+| [DetachedFromLogicalTree](../styledelement.mdx#uid-d9f5afa535) | Raised when the styled element is detached from a rooted logical tree. Inherited from [StyledElement](../styledelement.mdx). |
+| [Initialized](../styledelement.mdx#uid-bd6a5e5c0e) | Occurs when the styled element has finished initialization. Inherited from [StyledElement](../styledelement.mdx). |
+| [ResourcesChanged](../styledelement.mdx#uid-99a7f47c56) | Occurs when a resource in this styled element or a parent styled element has changed. Inherited from [StyledElement](../styledelement.mdx). |
+| [PropertyChanged](../avaloniaobject.mdx#uid-d758e26fae) | Raised when a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value changes on this object. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0132e74ca9"></span>
+
+### ContextCanceled Event
+
+Occurs when the context input gesture continues into another gesture, to notify the element that the context flyout should not be opened.
+
+```csharp
+public event EventHandler<Avalonia.Interactivity.RoutedEventArgs> ContextCanceled
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9067484d6e"></span>
+
+### ContextRequested Event
+
+Occurs when the user has completed a context input gesture, such as a right-click.
+
+```csharp
+public event EventHandler<Avalonia.Input.ContextRequestedEventArgs> ContextRequested
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ad13083e0c"></span>
+
+### DoubleTapped Event
+
+Occurs when a double-tap gesture occurs on the control.
+
+```csharp
+public event EventHandler<Avalonia.Input.TappedEventArgs> DoubleTapped
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4d054164ee"></span>
+
+### GettingFocus Event
+
+Occurs before the control receives focus.
+
+```csharp
+public event EventHandler<Avalonia.Input.FocusChangingEventArgs> GettingFocus
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d41d7ad59c"></span>
+
+### GotFocus Event
+
+Occurs when the control receives focus.
+
+```csharp
+public event EventHandler<Avalonia.Input.GotFocusEventArgs> GotFocus
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8cda030fe2"></span>
+
+### Holding Event
+
+Occurs when a hold gesture occurs on the control.
+
+```csharp
+public event EventHandler<Avalonia.Input.HoldingRoutedEventArgs> Holding
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ee9d987ed5"></span>
+
+### KeyDown Event
+
+Occurs when a key is pressed while the control has focus.
+
+```csharp
+public event EventHandler<Avalonia.Input.KeyEventArgs> KeyDown
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1131e95f55"></span>
+
+### KeyUp Event
+
+Occurs when a key is released while the control has focus.
+
+```csharp
+public event EventHandler<Avalonia.Input.KeyEventArgs> KeyUp
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-425fe24716"></span>
+
+### LosingFocus Event
+
+Occurs before the control loses focus.
+
+```csharp
+public event EventHandler<Avalonia.Input.FocusChangingEventArgs> LosingFocus
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2061fc85a1"></span>
+
+### LostFocus Event
+
+Occurs when the control loses focus.
+
+```csharp
+public event EventHandler<Avalonia.Interactivity.RoutedEventArgs> LostFocus
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-96b68421dc"></span>
+
+### Pinch Event
+
+Occurs when a pinch gesture occurs on the control.
+
+```csharp
+public event EventHandler<Avalonia.Input.PinchEventArgs> Pinch
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-50614bd917"></span>
+
+### PinchEnded Event
+
+Occurs when a pinch gesture ends on the control.
+
+```csharp
+public event EventHandler<Avalonia.Input.PinchEndedEventArgs> PinchEnded
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2121c500a4"></span>
+
+### PointerCaptureLost Event
+
+Occurs when the control or its child control loses the pointer capture for any reason,
+event will not be triggered for a parent control if capture was transferred to another child of that parent control.
+
+```csharp
+public event EventHandler<Avalonia.Input.PointerCaptureLostEventArgs> PointerCaptureLost
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a81f2c5c9a"></span>
+
+### PointerEntered Event
+
+Occurs when the pointer enters the control.
+
+```csharp
+public event EventHandler<Avalonia.Input.PointerEventArgs> PointerEntered
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-522e8d0a47"></span>
+
+### PointerExited Event
+
+Occurs when the pointer leaves the control.
+
+```csharp
+public event EventHandler<Avalonia.Input.PointerEventArgs> PointerExited
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0990295ea3"></span>
+
+### PointerMoved Event
+
+Occurs when the pointer moves over the control.
+
+```csharp
+public event EventHandler<Avalonia.Input.PointerEventArgs> PointerMoved
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-913cdc0df1"></span>
+
+### PointerPressed Event
+
+Occurs when the pointer is pressed over the control.
+
+```csharp
+public event EventHandler<Avalonia.Input.PointerPressedEventArgs> PointerPressed
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5b59b21d5e"></span>
+
+### PointerReleased Event
+
+Occurs when the pointer is released over the control.
+
+```csharp
+public event EventHandler<Avalonia.Input.PointerReleasedEventArgs> PointerReleased
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8f1fe6dc4a"></span>
+
+### PointerTouchPadGestureMagnify Event
+
+Occurs when a touchpad magnify gesture occurs on the control.
+
+```csharp
+public event EventHandler<Avalonia.Input.PointerDeltaEventArgs> PointerTouchPadGestureMagnify
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d966c43661"></span>
+
+### PointerTouchPadGestureRotate Event
+
+Occurs when a touchpad rotate gesture occurs on the control.
+
+```csharp
+public event EventHandler<Avalonia.Input.PointerDeltaEventArgs> PointerTouchPadGestureRotate
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9011c6de89"></span>
+
+### PointerTouchPadGestureSwipe Event
+
+Occurs when a touchpad swipe gesture occurs on the control.
+
+```csharp
+public event EventHandler<Avalonia.Input.PointerDeltaEventArgs> PointerTouchPadGestureSwipe
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6687ab6f2e"></span>
+
+### PointerWheelChanged Event
+
+Occurs when the mouse is scrolled over the control.
+
+```csharp
+public event EventHandler<Avalonia.Input.PointerWheelEventArgs> PointerWheelChanged
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d85f52cac5"></span>
+
+### PullGesture Event
+
+Occurs when a pull gesture occurs on the control.
+
+```csharp
+public event EventHandler<Avalonia.Input.PullGestureEventArgs> PullGesture
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a37f51b846"></span>
+
+### PullGestureEnded Event
+
+Occurs when a pull gesture ends on the control.
+
+```csharp
+public event EventHandler<Avalonia.Input.PullGestureEndedEventArgs> PullGestureEnded
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-11a576692d"></span>
+
+### RightTapped Event
+
+Occurs when a right tap gesture occurs on the control.
+
+```csharp
+public event EventHandler<Avalonia.Input.TappedEventArgs> RightTapped
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b571ab3acc"></span>
+
+### ScrollGesture Event
+
+Occurs when a scroll gesture occurs on the control.
+
+```csharp
+public event EventHandler<Avalonia.Input.ScrollGestureEventArgs> ScrollGesture
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-eb3914c3a8"></span>
+
+### ScrollGestureEnded Event
+
+Occurs when a scroll gesture ends on the control.
+
+```csharp
+public event EventHandler<Avalonia.Input.ScrollGestureEndedEventArgs> ScrollGestureEnded
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c8cd2731a5"></span>
+
+### ScrollGestureInertiaStarting Event
+
+Occurs when a scroll gesture inertia starts on the control.
+
+```csharp
+public event EventHandler<Avalonia.Input.ScrollGestureInertiaStartingEventArgs> ScrollGestureInertiaStarting
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0f4fc613ec"></span>
+
+### SwipeGesture Event
+
+Occurs when a swipe gesture occurs on the control.
+
+```csharp
+public event EventHandler<Avalonia.Input.SwipeGestureEventArgs> SwipeGesture
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6df36c079d"></span>
+
+### Tapped Event
+
+Occurs when a tap gesture occurs on the control.
+
+```csharp
+public event EventHandler<Avalonia.Input.TappedEventArgs> Tapped
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6dcb8fae07"></span>
+
+### TextInput Event
+
+Occurs when a user typed some text while the control has focus.
+
+```csharp
+public event EventHandler<Avalonia.Input.TextInputEventArgs> TextInput
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5d96b89080"></span>
+
+### TextInputMethodClientRequested Event
+
+Occurs when an input element gains input focus and input method is looking for the corresponding client
+
+```csharp
+public event EventHandler<Avalonia.Input.TextInput.TextInputMethodClientRequestedEventArgs> TextInputMethodClientRequested
+```
+
+</section>
+
+</ApiRefPage>
+

@@ -1,0 +1,199 @@
+---
+title: 'ClrPropertyInfo'
+hide_title: true
+slug: '/avalonia/data/core/clrpropertyinfo'
+uid: 'Avalonia.Data.Core.ClrPropertyInfo'
+commentId: 'T:Avalonia.Data.Core.ClrPropertyInfo'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Data.Core'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ClrPropertyInfo Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Data.Core</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Data/Core/ClrPropertyInfo.cs">ClrPropertyInfo.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class ClrPropertyInfo
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> ClrPropertyInfo
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Derived types:</span> <a href="reflectionclrpropertyinfo">ReflectionClrPropertyInfo</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="ipropertyinfo">IPropertyInfo</a>
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [ClrPropertyInfo](#uid-0a4f73d00a) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0a4f73d00a"></span>
+
+### ClrPropertyInfo Constructor
+
+```csharp
+public ClrPropertyInfo(string name, Func<object, object> getter, Action<object, object> setter, Type propertyType)
+```
+
+#### Parameters
+
+`name` string
+
+
+`getter` Func&lt;object, object&gt;
+
+
+`setter` Action&lt;object, object&gt;
+
+
+`propertyType` Type
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Get](#uid-e20b7767be) | No summary available. |
+| [Set](#uid-5d54e72884) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e20b7767be"></span>
+
+### Get Method
+
+```csharp
+public object Get(object target)
+```
+
+#### Parameters
+
+`target` object
+
+
+#### Returns
+
+object
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5d54e72884"></span>
+
+### Set Method
+
+```csharp
+public void Set(object target, object value)
+```
+
+#### Parameters
+
+`target` object
+
+
+`value` object
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [CanGet](#uid-5afbf309d8) | No summary available. |
+| [CanSet](#uid-56969184ec) | No summary available. |
+| [Name](#uid-4ee36b72a5) | No summary available. |
+| [PropertyType](#uid-1fda7227bd) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5afbf309d8"></span>
+
+### CanGet Property
+
+```csharp
+public bool CanGet { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-56969184ec"></span>
+
+### CanSet Property
+
+```csharp
+public bool CanSet { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4ee36b72a5"></span>
+
+### Name Property
+
+```csharp
+public string Name { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1fda7227bd"></span>
+
+### PropertyType Property
+
+```csharp
+public Type PropertyType { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

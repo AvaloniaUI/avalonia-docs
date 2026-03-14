@@ -1,0 +1,251 @@
+---
+title: 'TextHitTestResult'
+hide_title: true
+slug: '/avalonia/media/texthittestresult'
+uid: 'Avalonia.Media.TextHitTestResult'
+commentId: 'T:Avalonia.Media.TextHitTestResult'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Media'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">TextHitTestResult Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Media</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Media/TextHitTestResult.cs">TextHitTestResult.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Holds a hit test result from a [Avalonia.Media.TextFormatting.TextLayout](xref:Avalonia.Media.TextFormatting.TextLayout).
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct TextHitTestResult
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> TextHitTestResult
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;TextHitTestResult&gt;
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [TextHitTestResult](#uid-ba44fe3b17) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ba44fe3b17"></span>
+
+### TextHitTestResult Constructor
+
+```csharp
+public TextHitTestResult(Avalonia.Media.CharacterHit characterHit, int textPosition, bool isInside, bool isTrailing)
+```
+
+#### Parameters
+
+`characterHit` [Avalonia.Media.CharacterHit](xref:Avalonia.Media.CharacterHit)
+
+
+`textPosition` int
+
+
+`isInside` bool
+
+
+`isTrailing` bool
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Equals (2 overloads)](#uid-f370613ead) | No summary available. |
+| [GetHashCode](#uid-259594b82d) | No summary available. |
+| [ToString](#uid-31dfc2216f) | No summary available. |
+
+<span id="uid-f370613ead"></span>
+
+### Equals overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f2726be803"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(Avalonia.Media.TextHitTestResult other)
+```
+
+##### Parameters
+
+`other` [Avalonia.Media.TextHitTestResult](xref:Avalonia.Media.TextHitTestResult)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0b2bbbfb9b"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(object obj)
+```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-259594b82d"></span>
+
+### GetHashCode Method
+
+```csharp
+public int GetHashCode()
+```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-31dfc2216f"></span>
+
+### ToString Method
+
+```csharp
+public string ToString()
+```
+
+#### Returns
+
+string
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [CharacterHit](#uid-86b39f9066) | Gets the character hit of the hit test result. |
+| [IsInside](#uid-3f3085d0af) | Gets a value indicating whether the point is inside the bounds of the text. |
+| [IsTrailing](#uid-59df025f1a) | Gets a value indicating whether the hit is on the trailing edge of the character. |
+| [TextPosition](#uid-bc9e154fcc) | Gets the index of the hit character in the text. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-86b39f9066"></span>
+
+### CharacterHit Property
+
+Gets the character hit of the hit test result.
+
+```csharp
+public Avalonia.Media.CharacterHit CharacterHit { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3f3085d0af"></span>
+
+### IsInside Property
+
+Gets a value indicating whether the point is inside the bounds of the text.
+
+```csharp
+public bool IsInside { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-59df025f1a"></span>
+
+### IsTrailing Property
+
+Gets a value indicating whether the hit is on the trailing edge of the character.
+
+```csharp
+public bool IsTrailing { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-bc9e154fcc"></span>
+
+### TextPosition Property
+
+Gets the index of the hit character in the text.
+
+```csharp
+public int TextPosition { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

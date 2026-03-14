@@ -1,0 +1,178 @@
+---
+title: 'CalendarDatePickerDateValidationErrorEventArgs'
+hide_title: true
+slug: '/avalonia/controls/calendardatepickerdatevalidationerroreventargs'
+uid: 'Avalonia.Controls.CalendarDatePickerDateValidationErrorEventArgs'
+commentId: 'T:Avalonia.Controls.CalendarDatePickerDateValidationErrorEventArgs'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">CalendarDatePickerDateValidationErrorEventArgs Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Controls/CalendarDatePicker/CalendarDatePickerDateValidationErrorEventArgs.cs">CalendarDatePickerDateValidationErrorEventArgs.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Provides data for the
+[Avalonia.Controls.CalendarDatePicker.DateValidationError](xref:Avalonia.Controls.CalendarDatePicker.DateValidationError)
+event.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class CalendarDatePickerDateValidationErrorEventArgs
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> EventArgs <span className="apiref-page__relation-separator">-&gt;</span> CalendarDatePickerDateValidationErrorEventArgs
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [CalendarDatePickerDateValidationErrorEventArgs](#uid-c3be2d4e0f) | Initializes a new instance of the [Avalonia.Controls.CalendarDatePickerDateValidationErrorEventArgs](xref:Avalonia.Controls.CalendarDatePickerDateValidationErrorEventArgs) class. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c3be2d4e0f"></span>
+
+### CalendarDatePickerDateValidationErrorEventArgs Constructor
+
+Initializes a new instance of the
+[Avalonia.Controls.CalendarDatePickerDateValidationErrorEventArgs](xref:Avalonia.Controls.CalendarDatePickerDateValidationErrorEventArgs)
+class.
+
+```csharp
+public CalendarDatePickerDateValidationErrorEventArgs(Exception exception, string text)
+```
+
+#### Parameters
+
+`exception` Exception
+
+The initial exception from the
+[Avalonia.Controls.CalendarDatePicker.DateValidationError](xref:Avalonia.Controls.CalendarDatePicker.DateValidationError)
+event.
+
+
+`text` string
+
+The text that caused the
+[Avalonia.Controls.CalendarDatePicker.DateValidationError](xref:Avalonia.Controls.CalendarDatePicker.DateValidationError)
+event.
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Exception](#uid-c762d43a52) | Gets the initial exception associated with the [Avalonia.Controls.CalendarDatePicker.DateValidationError](xref:Avalonia.Controls.CalendarDatePicker.DateValidationError) event. |
+| [Text](#uid-63f735f1d8) | Gets the text that caused the [Avalonia.Controls.CalendarDatePicker.DateValidationError](xref:Avalonia.Controls.CalendarDatePicker.DateValidationError) event. |
+| [ThrowException](#uid-467deba4fa) | Gets or sets a value indicating whether [Avalonia.Controls.CalendarDatePickerDateValidationErrorEventArgs.Exception](xref:Avalonia.Controls.CalendarDatePickerDateValidationErrorEventArgs.Exception) should be thrown. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c762d43a52"></span>
+
+### Exception Property
+
+Gets the initial exception associated with the
+[Avalonia.Controls.CalendarDatePicker.DateValidationError](xref:Avalonia.Controls.CalendarDatePicker.DateValidationError)
+event.
+
+```csharp
+public Exception Exception { get; set; }
+```
+
+#### Value
+
+The exception associated with the validation failure.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-63f735f1d8"></span>
+
+### Text Property
+
+Gets the text that caused the
+[Avalonia.Controls.CalendarDatePicker.DateValidationError](xref:Avalonia.Controls.CalendarDatePicker.DateValidationError)
+event.
+
+```csharp
+public string Text { get; set; }
+```
+
+#### Value
+
+The text that caused the validation failure.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-467deba4fa"></span>
+
+### ThrowException Property
+
+Gets or sets a value indicating whether
+[Avalonia.Controls.CalendarDatePickerDateValidationErrorEventArgs.Exception](xref:Avalonia.Controls.CalendarDatePickerDateValidationErrorEventArgs.Exception)
+should be thrown.
+
+```csharp
+public bool ThrowException { get; set; }
+```
+
+#### Value
+
+True if the exception should be thrown; otherwise, false.
+
+
+#### Exceptions
+
+- [If set to true and
+\[Avalonia.Controls.CalendarDatePickerDateValidationErrorEventArgs.Exception\](xref:Avalonia.Controls.CalendarDatePickerDateValidationErrorEventArgs.Exception)
+is null.](xref:System.ArgumentException)
+
+</section>
+
+</ApiRefPage>
+

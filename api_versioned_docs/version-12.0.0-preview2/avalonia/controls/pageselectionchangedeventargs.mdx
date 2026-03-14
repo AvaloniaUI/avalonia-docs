@@ -1,0 +1,128 @@
+---
+title: 'PageSelectionChangedEventArgs'
+hide_title: true
+slug: '/avalonia/controls/pageselectionchangedeventargs'
+uid: 'Avalonia.Controls.PageSelectionChangedEventArgs'
+commentId: 'T:Avalonia.Controls.PageSelectionChangedEventArgs'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">PageSelectionChangedEventArgs Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Controls/Page/PageSelectionChangedEventArgs.cs">PageSelectionChangedEventArgs.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Provides data for a page selection-changed event.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class PageSelectionChangedEventArgs
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> EventArgs <span className="apiref-page__relation-separator">-&gt;</span> PageSelectionChangedEventArgs
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [PageSelectionChangedEventArgs](#uid-0eb277a97e) | Initializes a new instance of the [Avalonia.Controls.PageSelectionChangedEventArgs](xref:Avalonia.Controls.PageSelectionChangedEventArgs) class. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0eb277a97e"></span>
+
+### PageSelectionChangedEventArgs Constructor
+
+Initializes a new instance of the [Avalonia.Controls.PageSelectionChangedEventArgs](xref:Avalonia.Controls.PageSelectionChangedEventArgs) class.
+
+```csharp
+public PageSelectionChangedEventArgs(Avalonia.Controls.Page previousPage, Avalonia.Controls.Page currentPage)
+```
+
+#### Parameters
+
+`previousPage` [Avalonia.Controls.Page](xref:Avalonia.Controls.Page)
+
+The page that was selected before the change, or if no page was selected.
+
+
+`currentPage` [Avalonia.Controls.Page](xref:Avalonia.Controls.Page)
+
+The page that is now selected, or if selection was cleared.
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [CurrentPage](#uid-70c46628aa) | Gets the page that is now selected. |
+| [PreviousPage](#uid-37e81a015e) | Gets the page that was selected before the change. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-70c46628aa"></span>
+
+### CurrentPage Property
+
+Gets the page that is now selected.
+
+```csharp
+public Avalonia.Controls.Page CurrentPage { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-37e81a015e"></span>
+
+### PreviousPage Property
+
+Gets the page that was selected before the change.
+
+```csharp
+public Avalonia.Controls.Page PreviousPage { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

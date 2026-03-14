@@ -1,0 +1,254 @@
+---
+title: 'CheckBoxCell'
+hide_title: true
+slug: '/avalonia/controls/models/treedatagrid/checkboxcell'
+uid: 'Avalonia.Controls.Models.TreeDataGrid.CheckBoxCell'
+commentId: 'T:Avalonia.Controls.Models.TreeDataGrid.CheckBoxCell'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.TreeDataGrid'
+assembly: 'Avalonia.Controls.TreeDataGrid'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Models.TreeDataGrid'
+tfms:
+  - 'net8.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">CheckBoxCell Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Models.TreeDataGrid</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Represents a cell in a [Avalonia.Controls.Models.TreeDataGrid](xref:Avalonia.Controls.Models.TreeDataGrid) that contains a checkbox control.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class CheckBoxCell
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../notifyingbase">NotifyingBase</a> <span className="apiref-page__relation-separator">-&gt;</span> CheckBoxCell
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="icell">ICell</a>, IDisposable
+</div>
+</div>
+
+## Remarks
+
+The [Avalonia.Controls.Models.TreeDataGrid.CheckBoxCell](xref:Avalonia.Controls.Models.TreeDataGrid.CheckBoxCell) class provides checkbox functionality within a [TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid) cell,
+supporting both read-only and editable states, as well as two-state and three-state checkbox behavior.
+
+This class serves as the data model that backs the
+[Avalonia.Controls.Primitives.TreeDataGridCheckBoxCell](xref:Avalonia.Controls.Primitives.TreeDataGridCheckBoxCell) primitive control. The
+control handles UI rendering and user interactions, while this model manages the underlying
+data and state.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [CheckBoxCell (2 overloads)](#uid-953b947ed2) | No summary available. |
+
+<span id="uid-953b947ed2"></span>
+
+### CheckBoxCell overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a562464522"></span>
+
+#### CheckBoxCell Constructor
+
+```csharp
+public CheckBoxCell(IObserver<Avalonia.Data.BindingValue<Nullable<bool>>> bindingObserver, IObservable<Avalonia.Data.BindingValue<Nullable<bool>>> bindingObservable, bool isReadOnly, bool isThreeState)
+```
+
+##### Parameters
+
+`bindingObserver` IObserver&lt;Avalonia.Data.BindingValue&lt;Nullable&lt;bool&gt;&gt;&gt;
+
+
+`bindingObservable` IObservable&lt;Avalonia.Data.BindingValue&lt;Nullable&lt;bool&gt;&gt;&gt;
+
+
+`isReadOnly` bool
+
+
+`isThreeState` bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f9bcc7103b"></span>
+
+#### CheckBoxCell Constructor
+
+```csharp
+public CheckBoxCell(Nullable<bool> value)
+```
+
+##### Parameters
+
+`value` Nullable&lt;bool&gt;
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Dispose](#uid-671f52c568) | Disposes the resources used by the [Avalonia.Controls.Models.TreeDataGrid.CheckBoxCell](xref:Avalonia.Controls.Models.TreeDataGrid.CheckBoxCell). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-671f52c568"></span>
+
+### Dispose Method
+
+Disposes the resources used by the [Avalonia.Controls.Models.TreeDataGrid.CheckBoxCell](xref:Avalonia.Controls.Models.TreeDataGrid.CheckBoxCell).
+
+```csharp
+public void Dispose()
+```
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [CanEdit](#uid-f4843ba033) | Gets a value indicating whether the cell can enter edit mode. |
+| [EditGestures](#uid-b504478fe3) | Gets the gestures that cause the cell to enter edit mode. |
+| [IsReadOnly](#uid-02c1aa68fc) | Gets a value indicating whether the cell is read-only. |
+| [IsThreeState](#uid-e25889cfb7) | Gets a value indicating whether the checkbox supports three states. |
+| [Value](#uid-183c95f288) | Gets or sets the value of the checkbox. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f4843ba033"></span>
+
+### CanEdit Property
+
+Gets a value indicating whether the cell can enter edit mode.
+
+```csharp
+public bool CanEdit { get; set; }
+```
+
+#### Remarks
+
+Always returns false as checkbox cells don't support explicit edit mode.
+Instead, they are toggled directly when clicked.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b504478fe3"></span>
+
+### EditGestures Property
+
+Gets the gestures that cause the cell to enter edit mode.
+
+```csharp
+public Avalonia.Controls.Models.TreeDataGrid.BeginEditGestures EditGestures { get; set; }
+```
+
+#### Remarks
+
+Returns [Avalonia.Controls.Models.TreeDataGrid.BeginEditGestures.None](xref:Avalonia.Controls.Models.TreeDataGrid.BeginEditGestures.None) as checkbox cells don't use an edit mode.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-02c1aa68fc"></span>
+
+### IsReadOnly Property
+
+Gets a value indicating whether the cell is read-only.
+
+```csharp
+public bool IsReadOnly { get; set; }
+```
+
+#### Remarks
+
+When true, the checkbox value cannot be changed by the user.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e25889cfb7"></span>
+
+### IsThreeState Property
+
+Gets a value indicating whether the checkbox supports three states.
+
+```csharp
+public bool IsThreeState { get; set; }
+```
+
+#### Remarks
+
+When true, the checkbox can be in checked, unchecked, or indeterminate states.
+When false, only checked and unchecked states are supported.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-183c95f288"></span>
+
+### Value Property
+
+Gets or sets the value of the checkbox.
+
+```csharp
+public Nullable<bool> Value { get; set; }
+```
+
+#### Remarks
+
+The value can be true (checked), false (unchecked), or null (indeterminate, if
+[Avalonia.Controls.Models.TreeDataGrid.CheckBoxCell.IsThreeState](xref:Avalonia.Controls.Models.TreeDataGrid.CheckBoxCell.IsThreeState) is true). Setting this property will update the underlying
+data if the cell is not read-only.
+
+</section>
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [PropertyChanged](../notifyingbase.mdx#uid-cfba2a29fd) | Occurs when a property value changes. Inherited from [NotifyingBase](../notifyingbase.mdx). |
+
+</ApiRefPage>
+

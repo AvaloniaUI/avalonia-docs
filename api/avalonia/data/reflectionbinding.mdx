@@ -1,0 +1,356 @@
+---
+title: 'ReflectionBinding'
+hide_title: true
+slug: '/avalonia/data/reflectionbinding'
+uid: 'Avalonia.Data.ReflectionBinding'
+commentId: 'T:Avalonia.Data.ReflectionBinding'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Data'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ReflectionBinding Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Data</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Data/ReflectionBinding.cs">ReflectionBinding.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A binding that uses reflection to access members.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class ReflectionBinding
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="bindingbase">BindingBase</a> <span className="apiref-page__relation-separator">-&gt;</span> ReflectionBinding
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Derived types:</span> <a href="binding">Binding</a>, <a href="../markup/xaml/markupextensions/reflectionbindingextension">ReflectionBindingExtension</a>
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [ReflectionBinding (2 overloads)](#uid-f65cb88fcb) | Initializes a new instance of the [Avalonia.Data.ReflectionBinding](xref:Avalonia.Data.ReflectionBinding) class. |
+
+<span id="uid-f65cb88fcb"></span>
+
+### ReflectionBinding overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-116c6719b1"></span>
+
+#### ReflectionBinding Constructor
+
+Initializes a new instance of the [Avalonia.Data.ReflectionBinding](xref:Avalonia.Data.ReflectionBinding) class.
+
+```csharp
+public ReflectionBinding()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-fe23a8d31d"></span>
+
+#### ReflectionBinding Constructor
+
+Initializes a new instance of the [Avalonia.Data.ReflectionBinding](xref:Avalonia.Data.ReflectionBinding) class.
+
+```csharp
+public ReflectionBinding(string path)
+```
+
+##### Parameters
+
+`path` string
+
+The binding path.
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Converter](#uid-1ee9768a6d) | Gets or sets the [Avalonia.Data.Converters.IValueConverter](xref:Avalonia.Data.Converters.IValueConverter) to use. |
+| [ConverterCulture](#uid-af235b01d2) | Gets or sets the culture in which to evaluate the converter. |
+| [ConverterParameter](#uid-a66fd908cb) | Gets or sets a parameter to pass to [Avalonia.Data.ReflectionBinding.Converter](xref:Avalonia.Data.ReflectionBinding.Converter). |
+| [Delay](#uid-5f725d75b9) | Gets or sets the amount of time, in milliseconds, to wait before updating the binding source after the value on the target changes. |
+| [ElementName](#uid-c5576e6ba1) | Gets or sets the name of the element to use as the binding source. |
+| [FallbackValue](#uid-4167f89070) | Gets or sets the value to use when the binding is unable to produce a value. |
+| [Mode](#uid-094aff5586) | Gets or sets the binding mode. |
+| [Path](#uid-9f99936cab) | Gets or sets the binding path. |
+| [Priority](#uid-d52ca0f81c) | Gets or sets the binding priority. |
+| [RelativeSource](#uid-349a17205a) | Gets or sets the relative source for the binding. |
+| [Source](#uid-0c3d8d9565) | Gets or sets the source for the binding. |
+| [StringFormat](#uid-4dae1cc603) | Gets or sets the string format. |
+| [TargetNullValue](#uid-ba726385ba) | Gets or sets the value to use when the binding result is null. |
+| [TypeResolver](#uid-878d6742bf) | Gets or sets a function used to resolve types from names in the binding path. |
+| [UpdateSourceTrigger](#uid-4b2dab820f) | Gets or sets a value that determines the timing of binding source updates for [Avalonia.Data.BindingMode.TwoWay](xref:Avalonia.Data.BindingMode.TwoWay) and [Avalonia.Data.BindingMode.OneWayToSource](xref:Avalonia.Data.BindingMode.OneWayToSource) bindings. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1ee9768a6d"></span>
+
+### Converter Property
+
+Gets or sets the [Avalonia.Data.Converters.IValueConverter](xref:Avalonia.Data.Converters.IValueConverter) to use.
+
+```csharp
+public Avalonia.Data.Converters.IValueConverter Converter { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-af235b01d2"></span>
+
+### ConverterCulture Property
+
+Gets or sets the culture in which to evaluate the converter.
+
+```csharp
+public System.Globalization.CultureInfo ConverterCulture { get; set; }
+```
+
+#### Value
+
+The default value is null.
+
+
+#### Remarks
+
+If this property is not set then [System.Globalization.CultureInfo.CurrentCulture](xref:System.Globalization.CultureInfo.CurrentCulture) will be used.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a66fd908cb"></span>
+
+### ConverterParameter Property
+
+Gets or sets a parameter to pass to [Avalonia.Data.ReflectionBinding.Converter](xref:Avalonia.Data.ReflectionBinding.Converter).
+
+```csharp
+public object ConverterParameter { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5f725d75b9"></span>
+
+### Delay Property
+
+Gets or sets the amount of time, in milliseconds, to wait before updating the binding
+source after the value on the target changes.
+
+```csharp
+public int Delay { get; set; }
+```
+
+#### Remarks
+
+There is no delay when the source is updated via [Avalonia.Data.UpdateSourceTrigger.LostFocus](xref:Avalonia.Data.UpdateSourceTrigger.LostFocus)
+or [Avalonia.Data.BindingExpressionBase.UpdateSource](xref:Avalonia.Data.BindingExpressionBase.UpdateSource). Nor is there a delay when
+[Avalonia.Data.BindingMode.OneWayToSource](xref:Avalonia.Data.BindingMode.OneWayToSource) is active and a new source object is provided.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c5576e6ba1"></span>
+
+### ElementName Property
+
+Gets or sets the name of the element to use as the binding source.
+
+```csharp
+public string ElementName { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4167f89070"></span>
+
+### FallbackValue Property
+
+Gets or sets the value to use when the binding is unable to produce a value.
+
+```csharp
+public object FallbackValue { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-094aff5586"></span>
+
+### Mode Property
+
+Gets or sets the binding mode.
+
+```csharp
+public Avalonia.Data.BindingMode Mode { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9f99936cab"></span>
+
+### Path Property
+
+Gets or sets the binding path.
+
+```csharp
+public string Path { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d52ca0f81c"></span>
+
+### Priority Property
+
+Gets or sets the binding priority.
+
+```csharp
+public Avalonia.Data.BindingPriority Priority { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-349a17205a"></span>
+
+### RelativeSource Property
+
+Gets or sets the relative source for the binding.
+
+```csharp
+public Avalonia.Data.RelativeSource RelativeSource { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0c3d8d9565"></span>
+
+### Source Property
+
+Gets or sets the source for the binding.
+
+```csharp
+public object Source { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4dae1cc603"></span>
+
+### StringFormat Property
+
+Gets or sets the string format.
+
+```csharp
+public string StringFormat { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ba726385ba"></span>
+
+### TargetNullValue Property
+
+Gets or sets the value to use when the binding result is null.
+
+```csharp
+public object TargetNullValue { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-878d6742bf"></span>
+
+### TypeResolver Property
+
+Gets or sets a function used to resolve types from names in the binding path.
+
+```csharp
+public Func<string, string, Type> TypeResolver { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4b2dab820f"></span>
+
+### UpdateSourceTrigger Property
+
+Gets or sets a value that determines the timing of binding source updates for
+[Avalonia.Data.BindingMode.TwoWay](xref:Avalonia.Data.BindingMode.TwoWay) and [Avalonia.Data.BindingMode.OneWayToSource](xref:Avalonia.Data.BindingMode.OneWayToSource) bindings.
+
+```csharp
+public Avalonia.Data.UpdateSourceTrigger UpdateSourceTrigger { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

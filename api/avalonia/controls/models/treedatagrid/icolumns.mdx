@@ -1,0 +1,279 @@
+---
+title: 'IColumns'
+hide_title: true
+slug: '/avalonia/controls/models/treedatagrid/icolumns'
+uid: 'Avalonia.Controls.Models.TreeDataGrid.IColumns'
+commentId: 'T:Avalonia.Controls.Models.TreeDataGrid.IColumns'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.TreeDataGrid'
+assembly: 'Avalonia.Controls.TreeDataGrid'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Models.TreeDataGrid'
+tfms:
+  - 'net8.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IColumns Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Models.TreeDataGrid</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Represents a collection of columns in an [Avalonia.Controls.ITreeDataGridSource](xref:Avalonia.Controls.ITreeDataGridSource).
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface IColumns
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEnumerable&lt;IColumn&gt;, IReadOnlyCollection&lt;IColumn&gt;, IReadOnlyList&lt;IColumn&gt;, IEnumerable, INotifyCollectionChanged
+</div>
+</div>
+
+## Remarks
+
+Note that items retrieved from an [Avalonia.Controls.Models.TreeDataGrid.IColumns](xref:Avalonia.Controls.Models.TreeDataGrid.IColumns) collection may be reused, so the
+[Avalonia.Controls.Models.TreeDataGrid.IColumn](xref:Avalonia.Controls.Models.TreeDataGrid.IColumn) should be treated as valid only until the next item is retrieved from
+the collection.
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [CellMeasured](#uid-227cf2fda2) | Called by the [Avalonia.Controls.Models.TreeDataGrid](xref:Avalonia.Controls.Models.TreeDataGrid) when a cell has been measured. |
+| [CommitActualWidths](#uid-1921a19ad9) | Commits the actual widths of the columns. |
+| [GetColumnAt](#uid-6b66a7187e) | Gets the index and X position of the column at the specified X position, if it can be calculated. |
+| [GetEstimatedWidth](#uid-22ccd3f2cb) | Gets the estimated total width of all columns. |
+| [GetFrozenColumnsWidth](#uid-4d816e1b93) | Gets the total width of frozen columns. |
+| [SetColumnWidth](#uid-186557f859) | Sets the width of a column. |
+| [ViewportChanged](#uid-7325ffcf17) | Called by the [Avalonia.Controls.Models.TreeDataGrid](xref:Avalonia.Controls.Models.TreeDataGrid) when the viewport changes. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-227cf2fda2"></span>
+
+### CellMeasured Method
+
+Called by the [Avalonia.Controls.Models.TreeDataGrid](xref:Avalonia.Controls.Models.TreeDataGrid) when a cell has been measured.
+
+```csharp
+public Avalonia.Size CellMeasured(int columnIndex, int rowIndex, Avalonia.Size size)
+```
+
+#### Parameters
+
+`columnIndex` int
+
+The cell column index or -1 for a row header.
+
+
+`rowIndex` int
+
+The cell row index or -1 for a column header.
+
+
+`size` [Avalonia.Size](xref:Avalonia.Size)
+
+The measured size.
+
+
+#### Returns
+
+[Avalonia.Size](xref:Avalonia.Size)
+
+The desired size of the cell after column sizing has been applied.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1921a19ad9"></span>
+
+### CommitActualWidths Method
+
+Commits the actual widths of the columns.
+
+```csharp
+public void CommitActualWidths()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6b66a7187e"></span>
+
+### GetColumnAt Method
+
+Gets the index and X position of the column at the specified X position, if it can be
+calculated.
+
+```csharp
+public ValueTuple<int, double> GetColumnAt(double x)
+```
+
+#### Parameters
+
+`x` double
+
+The X position
+
+
+#### Returns
+
+ValueTuple&lt;int, double&gt;
+
+A tuple containing the column index and X position of the column, or (-1,-1) if the
+column could not be calculated.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-22ccd3f2cb"></span>
+
+### GetEstimatedWidth Method
+
+Gets the estimated total width of all columns.
+
+```csharp
+public double GetEstimatedWidth(double constraint)
+```
+
+#### Parameters
+
+`constraint` double
+
+The available viewport width.
+
+
+#### Returns
+
+double
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4d816e1b93"></span>
+
+### GetFrozenColumnsWidth Method
+
+Gets the total width of frozen columns.
+
+```csharp
+public double GetFrozenColumnsWidth(int frozenColumnCount)
+```
+
+#### Parameters
+
+`frozenColumnCount` int
+
+The number of frozen columns.
+
+
+#### Returns
+
+double
+
+The combined width of all frozen columns, or 0 if columns have not been measured yet.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-186557f859"></span>
+
+### SetColumnWidth Method
+
+Sets the width of a column.
+
+```csharp
+public void SetColumnWidth(int columnIndex, Avalonia.Controls.GridLength width)
+```
+
+#### Parameters
+
+`columnIndex` int
+
+The column index.
+
+
+`width` [Avalonia.Controls.GridLength](xref:Avalonia.Controls.GridLength)
+
+The column width
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7325ffcf17"></span>
+
+### ViewportChanged Method
+
+Called by the [Avalonia.Controls.Models.TreeDataGrid](xref:Avalonia.Controls.Models.TreeDataGrid) when the viewport changes.
+
+```csharp
+public void ViewportChanged(Avalonia.Rect viewport)
+```
+
+#### Parameters
+
+`viewport` [Avalonia.Rect](xref:Avalonia.Rect)
+
+The current viewport.
+
+
+</section>
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [LayoutInvalidated](#uid-06d6ab301a) | Occurs when the layout of columns is invalidated. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-06d6ab301a"></span>
+
+### LayoutInvalidated Event
+
+Occurs when the layout of columns is invalidated.
+
+```csharp
+public event EventHandler LayoutInvalidated
+```
+
+</section>
+
+</ApiRefPage>
+

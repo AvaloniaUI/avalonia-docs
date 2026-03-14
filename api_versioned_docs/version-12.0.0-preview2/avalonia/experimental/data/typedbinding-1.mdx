@@ -1,0 +1,213 @@
+---
+title: 'TypedBinding<TIn>'
+hide_title: true
+slug: '/avalonia/experimental/data/typedbinding-1'
+uid: 'Avalonia.Experimental.Data.TypedBinding`1'
+commentId: 'T:Avalonia.Experimental.Data.TypedBinding`1'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.TreeDataGrid'
+assembly: 'Avalonia.Controls.TreeDataGrid'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Experimental.Data'
+tfms:
+  - 'net8.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">TypedBinding&lt;TIn&gt; Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Experimental.Data</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Provides factory methods for creating [Avalonia.Experimental.Data.TypedBinding&lt;T1, T2&gt;](xref:Avalonia.Experimental.Data.TypedBinding%602) objects from
+C# lambda expressions.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class TypedBinding<TIn>
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> TypedBinding&lt;TIn&gt;
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Default](#uid-791d7aeb1b) | No summary available. |
+| [OneTime](#uid-0c2b55fe5e) | No summary available. |
+| [OneWay](#uid-b161e53554) | No summary available. |
+| [TwoWay (2 overloads)](#uid-98610aaab1) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-791d7aeb1b"></span>
+
+### Default Method
+
+```csharp
+public Avalonia.Experimental.Data.TypedBinding<TIn,TOut><TIn, TOut> Default<TOut>(System.Linq.Expressions.Expression<Func<TIn,TOut>> read, Action<TIn, TOut> write)
+```
+
+#### Parameters
+
+`read` System.Linq.Expressions.Expression&lt;Func&lt;TIn,TOut&gt;&gt;
+
+
+`write` Action&lt;TIn, TOut&gt;
+
+
+#### Type Parameters
+
+`TOut`
+
+
+#### Returns
+
+Avalonia.Experimental.Data.TypedBinding&lt;TIn,TOut&gt;&lt;TIn, TOut&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0c2b55fe5e"></span>
+
+### OneTime Method
+
+```csharp
+public Avalonia.Experimental.Data.TypedBinding<TIn,TOut><TIn, TOut> OneTime<TOut>(System.Linq.Expressions.Expression<Func<TIn,TOut>> read)
+```
+
+#### Parameters
+
+`read` System.Linq.Expressions.Expression&lt;Func&lt;TIn,TOut&gt;&gt;
+
+
+#### Type Parameters
+
+`TOut`
+
+
+#### Returns
+
+Avalonia.Experimental.Data.TypedBinding&lt;TIn,TOut&gt;&lt;TIn, TOut&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b161e53554"></span>
+
+### OneWay Method
+
+```csharp
+public Avalonia.Experimental.Data.TypedBinding<TIn,TOut><TIn, TOut> OneWay<TOut>(System.Linq.Expressions.Expression<Func<TIn,TOut>> read)
+```
+
+#### Parameters
+
+`read` System.Linq.Expressions.Expression&lt;Func&lt;TIn,TOut&gt;&gt;
+
+
+#### Type Parameters
+
+`TOut`
+
+
+#### Returns
+
+Avalonia.Experimental.Data.TypedBinding&lt;TIn,TOut&gt;&lt;TIn, TOut&gt;
+
+
+</section>
+
+<span id="uid-98610aaab1"></span>
+
+### TwoWay overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3fe61198e5"></span>
+
+#### TwoWay Method
+
+```csharp
+public Avalonia.Experimental.Data.TypedBinding<TIn,TOut><TIn, TOut> TwoWay<TOut>(System.Linq.Expressions.Expression<Func<TIn,TOut>> expression)
+```
+
+##### Parameters
+
+`expression` System.Linq.Expressions.Expression&lt;Func&lt;TIn,TOut&gt;&gt;
+
+
+##### Type Parameters
+
+`TOut`
+
+
+##### Returns
+
+Avalonia.Experimental.Data.TypedBinding&lt;TIn,TOut&gt;&lt;TIn, TOut&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f5bcb3ca24"></span>
+
+#### TwoWay Method
+
+```csharp
+public Avalonia.Experimental.Data.TypedBinding<TIn,TOut><TIn, TOut> TwoWay<TOut>(System.Linq.Expressions.Expression<Func<TIn,TOut>> read, Action<TIn, TOut> write)
+```
+
+##### Parameters
+
+`read` System.Linq.Expressions.Expression&lt;Func&lt;TIn,TOut&gt;&gt;
+
+
+`write` Action&lt;TIn, TOut&gt;
+
+
+##### Type Parameters
+
+`TOut`
+
+
+##### Returns
+
+Avalonia.Experimental.Data.TypedBinding&lt;TIn,TOut&gt;&lt;TIn, TOut&gt;
+
+
+</section>
+
+</ApiRefPage>
+

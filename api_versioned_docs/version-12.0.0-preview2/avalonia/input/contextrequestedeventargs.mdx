@@ -1,0 +1,163 @@
+---
+title: 'ContextRequestedEventArgs'
+hide_title: true
+slug: '/avalonia/input/contextrequestedeventargs'
+uid: 'Avalonia.Input.ContextRequestedEventArgs'
+commentId: 'T:Avalonia.Input.ContextRequestedEventArgs'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Input'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ContextRequestedEventArgs Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Input</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Input/ContextRequestedEventArgs.cs">ContextRequestedEventArgs.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Provides event data for the ContextRequested event.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class ContextRequestedEventArgs
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> EventArgs <span className="apiref-page__relation-separator">-&gt;</span> <a href="../interactivity/routedeventargs">RoutedEventArgs</a> <span className="apiref-page__relation-separator">-&gt;</span> ContextRequestedEventArgs
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [ContextRequestedEventArgs (3 overloads)](#uid-44ab040ace) | Initializes a new instance of the [ContextRequestedEventArgs](xref:Avalonia.Input.ContextRequestedEventArgs) class. |
+
+<span id="uid-44ab040ace"></span>
+
+### ContextRequestedEventArgs overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f491f4324a"></span>
+
+#### ContextRequestedEventArgs Constructor
+
+Initializes a new instance of the [ContextRequestedEventArgs](xref:Avalonia.Input.ContextRequestedEventArgs) class.
+
+```csharp
+public ContextRequestedEventArgs()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0f3a030815"></span>
+
+#### ContextRequestedEventArgs Constructor
+
+Initializes a new instance of the [ContextRequestedEventArgs](xref:Avalonia.Input.ContextRequestedEventArgs) class.
+
+```csharp
+public ContextRequestedEventArgs(Avalonia.Input.ContextRequestedEventArgs contextRequestedEventArgs)
+```
+
+##### Parameters
+
+`contextRequestedEventArgs` [Avalonia.Input.ContextRequestedEventArgs](xref:Avalonia.Input.ContextRequestedEventArgs)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-82f7caaf76"></span>
+
+#### ContextRequestedEventArgs Constructor
+
+Initializes a new instance of the [ContextRequestedEventArgs](xref:Avalonia.Input.ContextRequestedEventArgs) class.
+
+```csharp
+public ContextRequestedEventArgs(Avalonia.Input.PointerEventArgs pointerEventArgs)
+```
+
+##### Parameters
+
+`pointerEventArgs` [Avalonia.Input.PointerEventArgs](xref:Avalonia.Input.PointerEventArgs)
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [TryGetPosition](#uid-512e242d4f) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-512e242d4f"></span>
+
+### TryGetPosition Method
+
+```csharp
+public bool TryGetPosition(Avalonia.Input.InputElement relativeTo, Avalonia.Point& point)
+```
+
+#### Parameters
+
+`relativeTo` [Avalonia.Input.InputElement](xref:Avalonia.Input.InputElement)
+
+
+`point` [Avalonia.Point](xref:Avalonia.Point)&amp;
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Handled](../interactivity/routedeventargs.mdx#uid-204d2af354) | Gets or sets a value indicating whether the routed event has already been handled. Inherited from [RoutedEventArgs](../interactivity/routedeventargs.mdx). |
+| [Route](../interactivity/routedeventargs.mdx#uid-751be73db9) | Gets or sets the routing strategy (direct, bubbling, or tunneling) of the routed event. Inherited from [RoutedEventArgs](../interactivity/routedeventargs.mdx). |
+| [RoutedEvent](../interactivity/routedeventargs.mdx#uid-4e102999d9) | Gets or sets the routed event associated with these event args. Inherited from [RoutedEventArgs](../interactivity/routedeventargs.mdx). |
+| [Source](../interactivity/routedeventargs.mdx#uid-4385b523d5) | Gets or sets the source object that raised the routed event. Inherited from [RoutedEventArgs](../interactivity/routedeventargs.mdx). |
+
+</ApiRefPage>
+

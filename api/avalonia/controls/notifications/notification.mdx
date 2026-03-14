@@ -1,0 +1,239 @@
+---
+title: 'Notification'
+hide_title: true
+slug: '/avalonia/controls/notifications/notification'
+uid: 'Avalonia.Controls.Notifications.Notification'
+commentId: 'T:Avalonia.Controls.Notifications.Notification'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Notifications'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">Notification Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Notifications</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Controls/Notifications/Notification.cs">Notification.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A notification that can be shown in a window or by the host operating system.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class Notification
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> Notification
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="inotification">INotification</a>, INotifyPropertyChanged
+</div>
+</div>
+
+## Remarks
+
+This class represents a notification that can be displayed either in a window using
+[Avalonia.Controls.Notifications.WindowNotificationManager](xref:Avalonia.Controls.Notifications.WindowNotificationManager) or by the host operating system (to be implemented).
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [Notification (2 overloads)](#uid-5c150e5a29) | Initializes a new instance of the [Avalonia.Controls.Notifications.Notification](xref:Avalonia.Controls.Notifications.Notification) class. |
+
+<span id="uid-5c150e5a29"></span>
+
+### Notification overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-47e4759941"></span>
+
+#### Notification Constructor
+
+Initializes a new instance of the [Avalonia.Controls.Notifications.Notification](xref:Avalonia.Controls.Notifications.Notification) class.
+
+```csharp
+public Notification()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6cdb5ec8f9"></span>
+
+#### Notification Constructor
+
+```csharp
+public Notification(string title, string message, Avalonia.Controls.Notifications.NotificationType type, Nullable<TimeSpan> expiration, Action onClick, Action onClose)
+```
+
+##### Parameters
+
+`title` string
+
+
+`message` string
+
+
+`type` [Avalonia.Controls.Notifications.NotificationType](xref:Avalonia.Controls.Notifications.NotificationType)
+
+
+`expiration` Nullable&lt;TimeSpan&gt;
+
+
+`onClick` Action
+
+
+`onClose` Action
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Expiration](#uid-6fa56101ad) | Gets the expiration time of the notification after which it will automatically close. If the value is [TimeSpan.Zero](xref:System.TimeSpan.Zero) then the notification will remain open until the user closes it. |
+| [Message](#uid-e0a025cb3b) | Gets the notification message. |
+| [OnClick](#uid-e4001bd734) | Gets an Action to be run when the notification is clicked. |
+| [OnClose](#uid-2e72068dd2) | Gets an Action to be run when the notification is closed. |
+| [Title](#uid-de74ea6caf) | Gets the Title of the notification. |
+| [Type](#uid-406e41cb27) | Gets the [Avalonia.Controls.Notifications.NotificationType](xref:Avalonia.Controls.Notifications.NotificationType) of the notification. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6fa56101ad"></span>
+
+### Expiration Property
+
+Gets the expiration time of the notification after which it will automatically close.
+If the value is [TimeSpan.Zero](xref:System.TimeSpan.Zero) then the notification will remain open until the user closes it.
+
+```csharp
+public TimeSpan Expiration { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e0a025cb3b"></span>
+
+### Message Property
+
+Gets the notification message.
+
+```csharp
+public string Message { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e4001bd734"></span>
+
+### OnClick Property
+
+Gets an Action to be run when the notification is clicked.
+
+```csharp
+public Action OnClick { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2e72068dd2"></span>
+
+### OnClose Property
+
+Gets an Action to be run when the notification is closed.
+
+```csharp
+public Action OnClose { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-de74ea6caf"></span>
+
+### Title Property
+
+Gets the Title of the notification.
+
+```csharp
+public string Title { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-406e41cb27"></span>
+
+### Type Property
+
+Gets the [Avalonia.Controls.Notifications.NotificationType](xref:Avalonia.Controls.Notifications.NotificationType) of the notification.
+
+```csharp
+public Avalonia.Controls.Notifications.NotificationType Type { get; set; }
+```
+
+</section>
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [PropertyChanged](#uid-9005ff89fb) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9005ff89fb"></span>
+
+### PropertyChanged Event
+
+```csharp
+public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged
+```
+
+</section>
+
+</ApiRefPage>
+

@@ -1,0 +1,1081 @@
+---
+title: 'Rect'
+hide_title: true
+slug: '/avalonia/rect'
+uid: 'Avalonia.Rect'
+commentId: 'T:Avalonia.Rect'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">Rect Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Rect.cs">Rect.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Defines a rectangle.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct Rect
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> Rect
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;Rect&gt;
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [Rect (4 overloads)](#uid-71c3e8d70d) | Initializes a new instance of the [Avalonia.Rect](xref:Avalonia.Rect) structure. |
+
+<span id="uid-71c3e8d70d"></span>
+
+### Rect overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a5f2a10d11"></span>
+
+#### Rect Constructor
+
+Initializes a new instance of the [Avalonia.Rect](xref:Avalonia.Rect) structure.
+
+```csharp
+public Rect(Avalonia.Point topLeft, Avalonia.Point bottomRight)
+```
+
+##### Parameters
+
+`topLeft` [Avalonia.Point](xref:Avalonia.Point)
+
+The top left position of the rectangle.
+
+
+`bottomRight` [Avalonia.Point](xref:Avalonia.Point)
+
+The bottom right position of the rectangle.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-73ca984f15"></span>
+
+#### Rect Constructor
+
+Initializes a new instance of the [Avalonia.Rect](xref:Avalonia.Rect) structure.
+
+```csharp
+public Rect(Avalonia.Point position, Avalonia.Size size)
+```
+
+##### Parameters
+
+`position` [Avalonia.Point](xref:Avalonia.Point)
+
+The position of the rectangle.
+
+
+`size` [Avalonia.Size](xref:Avalonia.Size)
+
+The size of the rectangle.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d67c32e718"></span>
+
+#### Rect Constructor
+
+Initializes a new instance of the [Avalonia.Rect](xref:Avalonia.Rect) structure.
+
+```csharp
+public Rect(Avalonia.Size size)
+```
+
+##### Parameters
+
+`size` [Avalonia.Size](xref:Avalonia.Size)
+
+The size of the rectangle.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-06119fa495"></span>
+
+#### Rect Constructor
+
+Initializes a new instance of the [Avalonia.Rect](xref:Avalonia.Rect) structure.
+
+```csharp
+public Rect(double x, double y, double width, double height)
+```
+
+##### Parameters
+
+`x` double
+
+The X position.
+
+
+`y` double
+
+The Y position.
+
+
+`width` double
+
+The width.
+
+
+`height` double
+
+The height.
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [CenterRect](#uid-2472614349) | Centers another rectangle in this rectangle. |
+| [Contains (2 overloads)](#uid-5040bd7115) | Determines whether a point is in the bounds of the rectangle. |
+| [ContainsExclusive](#uid-54c66388ba) | Determines whether a point is in the bounds of the rectangle, exclusive of the rectangle's bottom/right edge. |
+| [Deflate (2 overloads)](#uid-80a0b4cabe) | Deflates the rectangle by a [Avalonia.Thickness](xref:Avalonia.Thickness). |
+| [Equals (2 overloads)](#uid-2ef0deadf5) | Returns a boolean indicating whether the rect is equal to the other given rect. |
+| [GetHashCode](#uid-80cde6e52c) | Returns the hash code for this instance. |
+| [Inflate (2 overloads)](#uid-c822ee841c) | Inflates the rectangle. |
+| [Intersect](#uid-3fe10318df) | Gets the intersection of two rectangles. |
+| [Intersects](#uid-364e7cc562) | Determines whether a rectangle intersects with this rectangle. |
+| [Normalize](#uid-3629fbea6d) | Normalizes the rectangle so both the [Avalonia.Rect.Width](xref:Avalonia.Rect.Width) and [Avalonia.Rect.Height](xref:Avalonia.Rect.Height) are positive, without changing the location of the rectangle |
+| [Parse](#uid-9058fe2601) | Parses a [Avalonia.Rect](xref:Avalonia.Rect) string. |
+| [ToString](#uid-48d1660868) | Returns the string representation of the rectangle. |
+| [TransformToAABB](#uid-9b40128191) | Returns the axis-aligned bounding box of a transformed rectangle. |
+| [Translate](#uid-1bc7e8335f) | Translates the rectangle by an offset. |
+| [Union](#uid-951f6c32aa) | Gets the union of two rectangles. |
+| [WithHeight](#uid-304dbb7634) | Returns a new [Avalonia.Rect](xref:Avalonia.Rect) with the specified height. |
+| [WithWidth](#uid-520737bfa4) | Returns a new [Avalonia.Rect](xref:Avalonia.Rect) with the specified width. |
+| [WithX](#uid-1e6448c5ea) | Returns a new [Avalonia.Rect](xref:Avalonia.Rect) with the specified X position. |
+| [WithY](#uid-c3c7b3889d) | Returns a new [Avalonia.Rect](xref:Avalonia.Rect) with the specified Y position. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2472614349"></span>
+
+### CenterRect Method
+
+Centers another rectangle in this rectangle.
+
+```csharp
+public Avalonia.Rect CenterRect(Avalonia.Rect rect)
+```
+
+#### Parameters
+
+`rect` [Avalonia.Rect](xref:Avalonia.Rect)
+
+The rectangle to center.
+
+
+#### Returns
+
+[Avalonia.Rect](xref:Avalonia.Rect)
+
+The centered rectangle.
+
+
+</section>
+
+<span id="uid-5040bd7115"></span>
+
+### Contains overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-bc17d3bf80"></span>
+
+#### Contains Method
+
+Determines whether a point is in the bounds of the rectangle.
+
+```csharp
+public bool Contains(Avalonia.Point p)
+```
+
+##### Parameters
+
+`p` [Avalonia.Point](xref:Avalonia.Point)
+
+The point.
+
+
+##### Returns
+
+bool
+
+true if the point is in the bounds of the rectangle; otherwise false.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f3f39a66d0"></span>
+
+#### Contains Method
+
+Determines whether the rectangle fully contains another rectangle.
+
+```csharp
+public bool Contains(Avalonia.Rect r)
+```
+
+##### Parameters
+
+`r` [Avalonia.Rect](xref:Avalonia.Rect)
+
+The rectangle.
+
+
+##### Returns
+
+bool
+
+true if the rectangle is fully contained; otherwise false.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-54c66388ba"></span>
+
+### ContainsExclusive Method
+
+Determines whether a point is in the bounds of the rectangle, exclusive of the
+rectangle's bottom/right edge.
+
+```csharp
+public bool ContainsExclusive(Avalonia.Point p)
+```
+
+#### Parameters
+
+`p` [Avalonia.Point](xref:Avalonia.Point)
+
+The point.
+
+
+#### Returns
+
+bool
+
+true if the point is in the bounds of the rectangle; otherwise false.
+
+
+</section>
+
+<span id="uid-80a0b4cabe"></span>
+
+### Deflate overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c9f90a855e"></span>
+
+#### Deflate Method
+
+Deflates the rectangle by a [Avalonia.Thickness](xref:Avalonia.Thickness).
+
+```csharp
+public Avalonia.Rect Deflate(Avalonia.Thickness thickness)
+```
+
+##### Parameters
+
+`thickness` [Avalonia.Thickness](xref:Avalonia.Thickness)
+
+The thickness to be subtracted for each side of the rectangle.
+
+
+##### Returns
+
+[Avalonia.Rect](xref:Avalonia.Rect)
+
+The deflated rectangle.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ef13d38fb3"></span>
+
+#### Deflate Method
+
+Deflates the rectangle.
+
+```csharp
+public Avalonia.Rect Deflate(double thickness)
+```
+
+##### Parameters
+
+`thickness` double
+
+The thickness to be subtracted for each side of the rectangle.
+
+
+##### Returns
+
+[Avalonia.Rect](xref:Avalonia.Rect)
+
+The deflated rectangle.
+
+
+</section>
+
+<span id="uid-2ef0deadf5"></span>
+
+### Equals overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c64d747f75"></span>
+
+#### Equals Method
+
+Returns a boolean indicating whether the rect is equal to the other given rect.
+
+```csharp
+public bool Equals(Avalonia.Rect other)
+```
+
+##### Parameters
+
+`other` [Avalonia.Rect](xref:Avalonia.Rect)
+
+The other rect to test equality against.
+
+
+##### Returns
+
+bool
+
+True if this rect is equal to other; False otherwise.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-28e9607aca"></span>
+
+#### Equals Method
+
+Returns a boolean indicating whether the given object is equal to this rectangle.
+
+```csharp
+public bool Equals(object obj)
+```
+
+##### Parameters
+
+`obj` object
+
+The object to compare against.
+
+
+##### Returns
+
+bool
+
+True if the object is equal to this rectangle; false otherwise.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-80cde6e52c"></span>
+
+### GetHashCode Method
+
+Returns the hash code for this instance.
+
+```csharp
+public int GetHashCode()
+```
+
+#### Returns
+
+int
+
+The hash code.
+
+
+</section>
+
+<span id="uid-c822ee841c"></span>
+
+### Inflate overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-bfac218498"></span>
+
+#### Inflate Method
+
+Inflates the rectangle.
+
+```csharp
+public Avalonia.Rect Inflate(Avalonia.Thickness thickness)
+```
+
+##### Parameters
+
+`thickness` [Avalonia.Thickness](xref:Avalonia.Thickness)
+
+The thickness to be subtracted for each side of the rectangle.
+
+
+##### Returns
+
+[Avalonia.Rect](xref:Avalonia.Rect)
+
+The inflated rectangle.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a49887f864"></span>
+
+#### Inflate Method
+
+Inflates the rectangle.
+
+```csharp
+public Avalonia.Rect Inflate(double thickness)
+```
+
+##### Parameters
+
+`thickness` double
+
+The thickness to be subtracted for each side of the rectangle.
+
+
+##### Returns
+
+[Avalonia.Rect](xref:Avalonia.Rect)
+
+The inflated rectangle.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3fe10318df"></span>
+
+### Intersect Method
+
+Gets the intersection of two rectangles.
+
+```csharp
+public Avalonia.Rect Intersect(Avalonia.Rect rect)
+```
+
+#### Parameters
+
+`rect` [Avalonia.Rect](xref:Avalonia.Rect)
+
+The other rectangle.
+
+
+#### Returns
+
+[Avalonia.Rect](xref:Avalonia.Rect)
+
+The intersection.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-364e7cc562"></span>
+
+### Intersects Method
+
+Determines whether a rectangle intersects with this rectangle.
+
+```csharp
+public bool Intersects(Avalonia.Rect rect)
+```
+
+#### Parameters
+
+`rect` [Avalonia.Rect](xref:Avalonia.Rect)
+
+The other rectangle.
+
+
+#### Returns
+
+bool
+
+True if the specified rectangle intersects with this one; otherwise false.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3629fbea6d"></span>
+
+### Normalize Method
+
+Normalizes the rectangle so both the [Avalonia.Rect.Width](xref:Avalonia.Rect.Width) and [Avalonia.Rect.Height](xref:Avalonia.Rect.Height) are positive, without changing the location of the rectangle
+
+```csharp
+public Avalonia.Rect Normalize()
+```
+
+#### Returns
+
+[Avalonia.Rect](xref:Avalonia.Rect)
+
+Normalized Rect
+
+
+#### Remarks
+
+Empty rect will be return when Rect contains invalid values. Like NaN.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9058fe2601"></span>
+
+### Parse Method
+
+Parses a [Avalonia.Rect](xref:Avalonia.Rect) string.
+
+```csharp
+public Avalonia.Rect Parse(string s)
+```
+
+#### Parameters
+
+`s` string
+
+The string.
+
+
+#### Returns
+
+[Avalonia.Rect](xref:Avalonia.Rect)
+
+The parsed [Avalonia.Rect](xref:Avalonia.Rect).
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-48d1660868"></span>
+
+### ToString Method
+
+Returns the string representation of the rectangle.
+
+```csharp
+public string ToString()
+```
+
+#### Returns
+
+string
+
+The string representation of the rectangle.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9b40128191"></span>
+
+### TransformToAABB Method
+
+Returns the axis-aligned bounding box of a transformed rectangle.
+
+```csharp
+public Avalonia.Rect TransformToAABB(Avalonia.Matrix matrix)
+```
+
+#### Parameters
+
+`matrix` [Avalonia.Matrix](xref:Avalonia.Matrix)
+
+The transform.
+
+
+#### Returns
+
+[Avalonia.Rect](xref:Avalonia.Rect)
+
+The bounding box
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1bc7e8335f"></span>
+
+### Translate Method
+
+Translates the rectangle by an offset.
+
+```csharp
+public Avalonia.Rect Translate(Avalonia.Vector offset)
+```
+
+#### Parameters
+
+`offset` [Avalonia.Vector](xref:Avalonia.Vector)
+
+The offset.
+
+
+#### Returns
+
+[Avalonia.Rect](xref:Avalonia.Rect)
+
+The translated rectangle.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-951f6c32aa"></span>
+
+### Union Method
+
+Gets the union of two rectangles.
+
+```csharp
+public Avalonia.Rect Union(Avalonia.Rect rect)
+```
+
+#### Parameters
+
+`rect` [Avalonia.Rect](xref:Avalonia.Rect)
+
+The other rectangle.
+
+
+#### Returns
+
+[Avalonia.Rect](xref:Avalonia.Rect)
+
+The union.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-304dbb7634"></span>
+
+### WithHeight Method
+
+Returns a new [Avalonia.Rect](xref:Avalonia.Rect) with the specified height.
+
+```csharp
+public Avalonia.Rect WithHeight(double height)
+```
+
+#### Parameters
+
+`height` double
+
+The height.
+
+
+#### Returns
+
+[Avalonia.Rect](xref:Avalonia.Rect)
+
+The new [Avalonia.Rect](xref:Avalonia.Rect).
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-520737bfa4"></span>
+
+### WithWidth Method
+
+Returns a new [Avalonia.Rect](xref:Avalonia.Rect) with the specified width.
+
+```csharp
+public Avalonia.Rect WithWidth(double width)
+```
+
+#### Parameters
+
+`width` double
+
+The width.
+
+
+#### Returns
+
+[Avalonia.Rect](xref:Avalonia.Rect)
+
+The new [Avalonia.Rect](xref:Avalonia.Rect).
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1e6448c5ea"></span>
+
+### WithX Method
+
+Returns a new [Avalonia.Rect](xref:Avalonia.Rect) with the specified X position.
+
+```csharp
+public Avalonia.Rect WithX(double x)
+```
+
+#### Parameters
+
+`x` double
+
+The x position.
+
+
+#### Returns
+
+[Avalonia.Rect](xref:Avalonia.Rect)
+
+The new [Avalonia.Rect](xref:Avalonia.Rect).
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c3c7b3889d"></span>
+
+### WithY Method
+
+Returns a new [Avalonia.Rect](xref:Avalonia.Rect) with the specified Y position.
+
+```csharp
+public Avalonia.Rect WithY(double y)
+```
+
+#### Parameters
+
+`y` double
+
+The y position.
+
+
+#### Returns
+
+[Avalonia.Rect](xref:Avalonia.Rect)
+
+The new [Avalonia.Rect](xref:Avalonia.Rect).
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Bottom](#uid-9463039512) | Gets the bottom position of the rectangle. |
+| [BottomLeft](#uid-b1ae4617a3) | Gets the bottom left point of the rectangle. |
+| [BottomRight](#uid-c3eebdc20d) | Gets the bottom right point of the rectangle. |
+| [Center](#uid-82560a8c5b) | Gets the center point of the rectangle. |
+| [Height](#uid-aec34b0ad3) | Gets the height. |
+| [Left](#uid-78a4b0ba67) | Gets the left position. |
+| [Position](#uid-79620f185d) | Gets the position of the rectangle. |
+| [Right](#uid-95c66b7e57) | Gets the right position of the rectangle. |
+| [Size](#uid-4f385f158f) | Gets the size of the rectangle. |
+| [Top](#uid-cb140f1340) | Gets the top position. |
+| [TopLeft](#uid-4d37e32e39) | Gets the top left point of the rectangle. |
+| [TopRight](#uid-0da1c79764) | Gets the top right point of the rectangle. |
+| [Width](#uid-756b1401ba) | Gets the width. |
+| [X](#uid-758a8e6e3a) | Gets the X position. |
+| [Y](#uid-9b180e6629) | Gets the Y position. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9463039512"></span>
+
+### Bottom Property
+
+Gets the bottom position of the rectangle.
+
+```csharp
+public double Bottom { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b1ae4617a3"></span>
+
+### BottomLeft Property
+
+Gets the bottom left point of the rectangle.
+
+```csharp
+public Avalonia.Point BottomLeft { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c3eebdc20d"></span>
+
+### BottomRight Property
+
+Gets the bottom right point of the rectangle.
+
+```csharp
+public Avalonia.Point BottomRight { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-82560a8c5b"></span>
+
+### Center Property
+
+Gets the center point of the rectangle.
+
+```csharp
+public Avalonia.Point Center { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-aec34b0ad3"></span>
+
+### Height Property
+
+Gets the height.
+
+```csharp
+public double Height { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-78a4b0ba67"></span>
+
+### Left Property
+
+Gets the left position.
+
+```csharp
+public double Left { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-79620f185d"></span>
+
+### Position Property
+
+Gets the position of the rectangle.
+
+```csharp
+public Avalonia.Point Position { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-95c66b7e57"></span>
+
+### Right Property
+
+Gets the right position of the rectangle.
+
+```csharp
+public double Right { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4f385f158f"></span>
+
+### Size Property
+
+Gets the size of the rectangle.
+
+```csharp
+public Avalonia.Size Size { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-cb140f1340"></span>
+
+### Top Property
+
+Gets the top position.
+
+```csharp
+public double Top { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4d37e32e39"></span>
+
+### TopLeft Property
+
+Gets the top left point of the rectangle.
+
+```csharp
+public Avalonia.Point TopLeft { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0da1c79764"></span>
+
+### TopRight Property
+
+Gets the top right point of the rectangle.
+
+```csharp
+public Avalonia.Point TopRight { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-756b1401ba"></span>
+
+### Width Property
+
+Gets the width.
+
+```csharp
+public double Width { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-758a8e6e3a"></span>
+
+### X Property
+
+Gets the X position.
+
+```csharp
+public double X { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9b180e6629"></span>
+
+### Y Property
+
+Gets the Y position.
+
+```csharp
+public double Y { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

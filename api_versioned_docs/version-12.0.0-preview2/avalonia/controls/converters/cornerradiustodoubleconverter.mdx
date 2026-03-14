@@ -1,0 +1,207 @@
+---
+title: 'CornerRadiusToDoubleConverter'
+hide_title: true
+slug: '/avalonia/controls/converters/cornerradiustodoubleconverter'
+uid: 'Avalonia.Controls.Converters.CornerRadiusToDoubleConverter'
+commentId: 'T:Avalonia.Controls.Converters.CornerRadiusToDoubleConverter'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Converters'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">CornerRadiusToDoubleConverter Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Converters</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Controls/Converters/CornerRadiusToDoubleConverter.cs">CornerRadiusToDoubleConverter.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Converts one corner of a [Avalonia.CornerRadius](xref:Avalonia.CornerRadius) to its double value.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class CornerRadiusToDoubleConverter
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> CornerRadiusToDoubleConverter
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="../../data/converters/ivalueconverter">IValueConverter</a>
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [CornerRadiusToDoubleConverter](#uid-918ad9c0e0) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-918ad9c0e0"></span>
+
+### CornerRadiusToDoubleConverter Constructor
+
+```csharp
+public CornerRadiusToDoubleConverter()
+```
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Convert](#uid-5b17a893df) | Converts a value. |
+| [ConvertBack](#uid-9119bf48bc) | Converts a value. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5b17a893df"></span>
+
+### Convert Method
+
+Converts a value.
+
+```csharp
+public object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
+```
+
+#### Parameters
+
+`value` object
+
+The value to convert.
+
+
+`targetType` Type
+
+The type of the target.
+
+
+`parameter` object
+
+A user-defined parameter.
+
+
+`culture` System.Globalization.CultureInfo
+
+The culture to use.
+
+
+#### Returns
+
+object
+
+The converted value.
+
+
+#### Remarks
+
+This method should not throw exceptions. If the value is not convertible, return
+a [Avalonia.Data.BindingNotification](xref:Avalonia.Data.BindingNotification) in an error state. Any exceptions thrown will be
+treated as an application exception.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9119bf48bc"></span>
+
+### ConvertBack Method
+
+Converts a value.
+
+```csharp
+public object ConvertBack(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
+```
+
+#### Parameters
+
+`value` object
+
+The value to convert.
+
+
+`targetType` Type
+
+The type of the target.
+
+
+`parameter` object
+
+A user-defined parameter.
+
+
+`culture` System.Globalization.CultureInfo
+
+The culture to use.
+
+
+#### Returns
+
+object
+
+The converted value.
+
+
+#### Remarks
+
+This method should not throw exceptions. If the value is not convertible, return
+a [Avalonia.Data.BindingNotification](xref:Avalonia.Data.BindingNotification) in an error state. Any exceptions thrown will be
+treated as an application exception.
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Corner](#uid-04632e1127) | Gets or sets the specific corner of the [Avalonia.CornerRadius](xref:Avalonia.CornerRadius) to convert to double. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-04632e1127"></span>
+
+### Corner Property
+
+Gets or sets the specific corner of the [Avalonia.CornerRadius](xref:Avalonia.CornerRadius) to convert to double.
+
+```csharp
+public Avalonia.Controls.Converters.Corners Corner { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

@@ -1,0 +1,96 @@
+---
+title: 'WindowClosingEventArgs'
+hide_title: true
+slug: '/avalonia/controls/windowclosingeventargs'
+uid: 'Avalonia.Controls.WindowClosingEventArgs'
+commentId: 'T:Avalonia.Controls.WindowClosingEventArgs'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">WindowClosingEventArgs Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Controls/WindowClosingEventArgs.cs">WindowClosingEventArgs.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Provides data for the [Avalonia.Controls.Window.Closing](xref:Avalonia.Controls.Window.Closing) event.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class WindowClosingEventArgs
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> CancelEventArgs <span className="apiref-page__relation-separator">-&gt;</span> WindowClosingEventArgs
+</div>
+</div>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [CloseReason](#uid-05e399225b) | Gets a value that indicates why the window is being closed. |
+| [IsProgrammatic](#uid-50a4c6410e) | Gets a value indicating whether the window is being closed programmatically. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-05e399225b"></span>
+
+### CloseReason Property
+
+Gets a value that indicates why the window is being closed.
+
+```csharp
+public Avalonia.Controls.WindowCloseReason CloseReason { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-50a4c6410e"></span>
+
+### IsProgrammatic Property
+
+Gets a value indicating whether the window is being closed programmatically.
+
+```csharp
+public bool IsProgrammatic { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

@@ -1,0 +1,647 @@
+---
+title: 'Color'
+hide_title: true
+slug: '/avalonia/media/color'
+uid: 'Avalonia.Media.Color'
+commentId: 'T:Avalonia.Media.Color'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Media'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">Color Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Media</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Media/Color.cs">Color.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+An ARGB color.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct Color
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> Color
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;Color&gt;
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [Color](#uid-148662991e) | Initializes a new instance of the [Avalonia.Media.Color](xref:Avalonia.Media.Color) struct. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-148662991e"></span>
+
+### Color Constructor
+
+Initializes a new instance of the [Avalonia.Media.Color](xref:Avalonia.Media.Color) struct.
+
+```csharp
+public Color(byte a, byte r, byte g, byte b)
+```
+
+#### Parameters
+
+`a` byte
+
+The alpha component.
+
+
+`r` byte
+
+The red component.
+
+
+`g` byte
+
+The green component.
+
+
+`b` byte
+
+The blue component.
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Equals (2 overloads)](#uid-af0ab43f63) | No summary available. |
+| [FromArgb](#uid-011961335d) | Creates a [Avalonia.Media.Color](xref:Avalonia.Media.Color) from alpha, red, green and blue components. |
+| [FromRgb](#uid-3361ba4fa9) | Creates a [Avalonia.Media.Color](xref:Avalonia.Media.Color) from red, green and blue components. |
+| [FromUInt32](#uid-a5dd186c16) | Creates a [Avalonia.Media.Color](xref:Avalonia.Media.Color) from an integer. |
+| [GetHashCode](#uid-7850f2509e) | No summary available. |
+| [Parse (2 overloads)](#uid-5ca4765242) | No summary available. |
+| [ToHsl (2 overloads)](#uid-d769ee9358) | Returns the HSL color model equivalent of this RGB color. |
+| [ToHsv (2 overloads)](#uid-27b49b139b) | Returns the HSV color model equivalent of this RGB color. |
+| [ToString](#uid-0fad8fd540) | Returns the string representation of the color. |
+| [ToUInt32](#uid-7a7df0058c) | Returns the integer representation of the color. |
+| [TryParse (2 overloads)](#uid-7415fd8e5e) | No summary available. |
+
+<span id="uid-af0ab43f63"></span>
+
+### Equals overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9526ca4ec0"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(Avalonia.Media.Color other)
+```
+
+##### Parameters
+
+`other` [Avalonia.Media.Color](xref:Avalonia.Media.Color)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ef7cecc8d8"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(object obj)
+```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-011961335d"></span>
+
+### FromArgb Method
+
+Creates a [Avalonia.Media.Color](xref:Avalonia.Media.Color) from alpha, red, green and blue components.
+
+```csharp
+public Avalonia.Media.Color FromArgb(byte a, byte r, byte g, byte b)
+```
+
+#### Parameters
+
+`a` byte
+
+The alpha component.
+
+
+`r` byte
+
+The red component.
+
+
+`g` byte
+
+The green component.
+
+
+`b` byte
+
+The blue component.
+
+
+#### Returns
+
+[Avalonia.Media.Color](xref:Avalonia.Media.Color)
+
+The color.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3361ba4fa9"></span>
+
+### FromRgb Method
+
+Creates a [Avalonia.Media.Color](xref:Avalonia.Media.Color) from red, green and blue components.
+
+```csharp
+public Avalonia.Media.Color FromRgb(byte r, byte g, byte b)
+```
+
+#### Parameters
+
+`r` byte
+
+The red component.
+
+
+`g` byte
+
+The green component.
+
+
+`b` byte
+
+The blue component.
+
+
+#### Returns
+
+[Avalonia.Media.Color](xref:Avalonia.Media.Color)
+
+The color.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a5dd186c16"></span>
+
+### FromUInt32 Method
+
+Creates a [Avalonia.Media.Color](xref:Avalonia.Media.Color) from an integer.
+
+```csharp
+public Avalonia.Media.Color FromUInt32(uint value)
+```
+
+#### Parameters
+
+`value` uint
+
+The integer value.
+
+
+#### Returns
+
+[Avalonia.Media.Color](xref:Avalonia.Media.Color)
+
+The color.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7850f2509e"></span>
+
+### GetHashCode Method
+
+```csharp
+public int GetHashCode()
+```
+
+#### Returns
+
+int
+
+
+</section>
+
+<span id="uid-5ca4765242"></span>
+
+### Parse overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-cdf88ee54a"></span>
+
+#### Parse Method
+
+```csharp
+public Avalonia.Media.Color Parse(ReadOnlySpan<char> s)
+```
+
+##### Parameters
+
+`s` ReadOnlySpan&lt;char&gt;
+
+
+##### Returns
+
+[Avalonia.Media.Color](xref:Avalonia.Media.Color)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-cea9944afe"></span>
+
+#### Parse Method
+
+Parses a color string.
+
+```csharp
+public Avalonia.Media.Color Parse(string s)
+```
+
+##### Parameters
+
+`s` string
+
+The color string.
+
+
+##### Returns
+
+[Avalonia.Media.Color](xref:Avalonia.Media.Color)
+
+The [Avalonia.Media.Color](xref:Avalonia.Media.Color).
+
+
+</section>
+
+<span id="uid-d769ee9358"></span>
+
+### ToHsl overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3028eddebc"></span>
+
+#### ToHsl Method
+
+Returns the HSL color model equivalent of this RGB color.
+
+```csharp
+public Avalonia.Media.HslColor ToHsl()
+```
+
+##### Returns
+
+[Avalonia.Media.HslColor](xref:Avalonia.Media.HslColor)
+
+The HSL equivalent color.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8461400a9a"></span>
+
+#### ToHsl Method
+
+Converts the given RGBA color component values to their HSL color equivalent.
+
+```csharp
+public Avalonia.Media.HslColor ToHsl(byte red, byte green, byte blue, byte alpha)
+```
+
+##### Parameters
+
+`red` byte
+
+The Red component in the RGB color model.
+
+
+`green` byte
+
+The Green component in the RGB color model.
+
+
+`blue` byte
+
+The Blue component in the RGB color model.
+
+
+`alpha` byte
+
+The Alpha component.
+
+
+##### Returns
+
+[Avalonia.Media.HslColor](xref:Avalonia.Media.HslColor)
+
+A new [Avalonia.Media.HslColor](xref:Avalonia.Media.HslColor) equivalent to the given RGBA values.
+
+
+</section>
+
+<span id="uid-27b49b139b"></span>
+
+### ToHsv overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-223f479835"></span>
+
+#### ToHsv Method
+
+Returns the HSV color model equivalent of this RGB color.
+
+```csharp
+public Avalonia.Media.HsvColor ToHsv()
+```
+
+##### Returns
+
+[Avalonia.Media.HsvColor](xref:Avalonia.Media.HsvColor)
+
+The HSV equivalent color.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ed10916f8f"></span>
+
+#### ToHsv Method
+
+Converts the given RGBA color component values to their HSV color equivalent.
+
+```csharp
+public Avalonia.Media.HsvColor ToHsv(byte red, byte green, byte blue, byte alpha)
+```
+
+##### Parameters
+
+`red` byte
+
+The Red component in the RGB color model.
+
+
+`green` byte
+
+The Green component in the RGB color model.
+
+
+`blue` byte
+
+The Blue component in the RGB color model.
+
+
+`alpha` byte
+
+The Alpha component.
+
+
+##### Returns
+
+[Avalonia.Media.HsvColor](xref:Avalonia.Media.HsvColor)
+
+A new [Avalonia.Media.HsvColor](xref:Avalonia.Media.HsvColor) equivalent to the given RGBA values.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0fad8fd540"></span>
+
+### ToString Method
+
+Returns the string representation of the color.
+
+```csharp
+public string ToString()
+```
+
+#### Returns
+
+string
+
+The string representation of the color.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7a7df0058c"></span>
+
+### ToUInt32 Method
+
+Returns the integer representation of the color.
+
+```csharp
+public uint ToUInt32()
+```
+
+#### Returns
+
+uint
+
+The integer representation of the color.
+
+
+</section>
+
+<span id="uid-7415fd8e5e"></span>
+
+### TryParse overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2d7ac767df"></span>
+
+#### TryParse Method
+
+```csharp
+public bool TryParse(ReadOnlySpan<char> s, Avalonia.Media.Color& color)
+```
+
+##### Parameters
+
+`s` ReadOnlySpan&lt;char&gt;
+
+
+`color` [Avalonia.Media.Color](xref:Avalonia.Media.Color)&amp;
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-22bdeeaa59"></span>
+
+#### TryParse Method
+
+```csharp
+public bool TryParse(string s, Avalonia.Media.Color& color)
+```
+
+##### Parameters
+
+`s` string
+
+
+`color` [Avalonia.Media.Color](xref:Avalonia.Media.Color)&amp;
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [A](#uid-e63a4d10ba) | Gets the Alpha component of the color. |
+| [B](#uid-b8aea3d327) | Gets the Blue component of the color. |
+| [G](#uid-3c4c0a5d6c) | Gets the Green component of the color. |
+| [R](#uid-06a553c114) | Gets the Red component of the color. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e63a4d10ba"></span>
+
+### A Property
+
+Gets the Alpha component of the color.
+
+```csharp
+public byte A { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b8aea3d327"></span>
+
+### B Property
+
+Gets the Blue component of the color.
+
+```csharp
+public byte B { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3c4c0a5d6c"></span>
+
+### G Property
+
+Gets the Green component of the color.
+
+```csharp
+public byte G { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-06a553c114"></span>
+
+### R Property
+
+Gets the Red component of the color.
+
+```csharp
+public byte R { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

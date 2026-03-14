@@ -1,0 +1,71 @@
+---
+title: 'LtrbPixelRect'
+hide_title: true
+slug: '/avalonia/platform/ltrbpixelrect'
+uid: 'Avalonia.Platform.LtrbPixelRect'
+commentId: 'T:Avalonia.Platform.LtrbPixelRect'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Platform'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">LtrbPixelRect Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Platform</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Platform/LtrbRect.cs">LtrbRect.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+This struct is essentially the same thing as RECT from win32 API
+Unlike our "normal" [PixelRect](xref:Avalonia.PixelRect) which is more human-readable and human-usable
+this struct is optimized for actual processing that doesn't really care
+about Width and Height but pretty much always only cares about
+Right and Bottom edge coordinates
+
+Not having to constantly convert between Width/Height and Right/Bottom for no actual reason
+saves us some perf
+
+This structure is intended to be mostly internal, but it's exposed as a PrivateApi type so it can
+be passed to the drawing backend when needed
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct LtrbPixelRect
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> LtrbPixelRect
+</div>
+</div>
+
+</ApiRefPage>
+

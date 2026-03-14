@@ -1,0 +1,334 @@
+---
+title: 'ImmutablePen'
+hide_title: true
+slug: '/avalonia/media/immutable/immutablepen'
+uid: 'Avalonia.Media.Immutable.ImmutablePen'
+commentId: 'T:Avalonia.Media.Immutable.ImmutablePen'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Media.Immutable'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ImmutablePen Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Media.Immutable</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Media/Immutable/ImmutablePen.cs">ImmutablePen.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Describes how a stroke is drawn.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class ImmutablePen
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> ImmutablePen
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="../ipen">IPen</a>, IEquatable&lt;IPen&gt;
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [ImmutablePen (2 overloads)](#uid-94d9793124) | Initializes a new instance of the [Avalonia.Media.Pen](xref:Avalonia.Media.Pen) class. |
+
+<span id="uid-94d9793124"></span>
+
+### ImmutablePen overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-90d3a3a84e"></span>
+
+#### ImmutablePen Constructor
+
+Initializes a new instance of the [Avalonia.Media.Pen](xref:Avalonia.Media.Pen) class.
+
+```csharp
+public ImmutablePen(Avalonia.Media.IImmutableBrush brush, double thickness, Avalonia.Media.Immutable.ImmutableDashStyle dashStyle, Avalonia.Media.PenLineCap lineCap, Avalonia.Media.PenLineJoin lineJoin, double miterLimit)
+```
+
+##### Parameters
+
+`brush` [Avalonia.Media.IImmutableBrush](xref:Avalonia.Media.IImmutableBrush)
+
+The brush used to draw.
+
+
+`thickness` double
+
+The stroke thickness.
+
+
+`dashStyle` [Avalonia.Media.Immutable.ImmutableDashStyle](xref:Avalonia.Media.Immutable.ImmutableDashStyle)
+
+The dash style.
+
+
+`lineCap` [Avalonia.Media.PenLineCap](xref:Avalonia.Media.PenLineCap)
+
+The line cap.
+
+
+`lineJoin` [Avalonia.Media.PenLineJoin](xref:Avalonia.Media.PenLineJoin)
+
+The line join.
+
+
+`miterLimit` double
+
+The miter limit.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-be5f22bcc5"></span>
+
+#### ImmutablePen Constructor
+
+Initializes a new instance of the [Avalonia.Media.Pen](xref:Avalonia.Media.Pen) class.
+
+```csharp
+public ImmutablePen(uint color, double thickness, Avalonia.Media.Immutable.ImmutableDashStyle dashStyle, Avalonia.Media.PenLineCap lineCap, Avalonia.Media.PenLineJoin lineJoin, double miterLimit)
+```
+
+##### Parameters
+
+`color` uint
+
+The stroke color.
+
+
+`thickness` double
+
+The stroke thickness.
+
+
+`dashStyle` [Avalonia.Media.Immutable.ImmutableDashStyle](xref:Avalonia.Media.Immutable.ImmutableDashStyle)
+
+The dash style.
+
+
+`lineCap` [Avalonia.Media.PenLineCap](xref:Avalonia.Media.PenLineCap)
+
+Specifies the type of graphic shape to use on both ends of a line.
+
+
+`lineJoin` [Avalonia.Media.PenLineJoin](xref:Avalonia.Media.PenLineJoin)
+
+The line join.
+
+
+`miterLimit` double
+
+The miter limit.
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Equals (2 overloads)](#uid-ed345fd97b) | No summary available. |
+| [GetHashCode](#uid-892b293043) | No summary available. |
+
+<span id="uid-ed345fd97b"></span>
+
+### Equals overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-05c266c5fd"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(Avalonia.Media.IPen other)
+```
+
+##### Parameters
+
+`other` [Avalonia.Media.IPen](xref:Avalonia.Media.IPen)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4a7f927088"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(object obj)
+```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-892b293043"></span>
+
+### GetHashCode Method
+
+```csharp
+public int GetHashCode()
+```
+
+#### Returns
+
+int
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Brush](#uid-f96af0250e) | Gets the brush used to draw the stroke. |
+| [DashStyle](#uid-f401b74694) | Specifies the style of dashed lines drawn with a [Avalonia.Media.Pen](xref:Avalonia.Media.Pen) object. |
+| [LineCap](#uid-9d5baf773b) | Specifies the type of graphic shape to use on both ends of a line. |
+| [LineJoin](#uid-7fde90cc5c) | Specifies how to join consecutive line or curve segments in a [Avalonia.Media.PathFigure](xref:Avalonia.Media.PathFigure) (subpaths) contained in a [Avalonia.Media.PathGeometry](xref:Avalonia.Media.PathGeometry) object. |
+| [MiterLimit](#uid-5cc7bae2e3) | The limit on the ratio of the miter length to half this pen's Thickness. |
+| [Thickness](#uid-86b3114135) | Gets the stroke thickness. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f96af0250e"></span>
+
+### Brush Property
+
+Gets the brush used to draw the stroke.
+
+```csharp
+public Avalonia.Media.IBrush Brush { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f401b74694"></span>
+
+### DashStyle Property
+
+Specifies the style of dashed lines drawn with a [Avalonia.Media.Pen](xref:Avalonia.Media.Pen) object.
+
+```csharp
+public Avalonia.Media.IDashStyle DashStyle { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9d5baf773b"></span>
+
+### LineCap Property
+
+Specifies the type of graphic shape to use on both ends of a line.
+
+```csharp
+public Avalonia.Media.PenLineCap LineCap { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7fde90cc5c"></span>
+
+### LineJoin Property
+
+Specifies how to join consecutive line or curve segments in a [Avalonia.Media.PathFigure](xref:Avalonia.Media.PathFigure)
+(subpaths) contained in a [Avalonia.Media.PathGeometry](xref:Avalonia.Media.PathGeometry) object.
+
+```csharp
+public Avalonia.Media.PenLineJoin LineJoin { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5cc7bae2e3"></span>
+
+### MiterLimit Property
+
+The limit on the ratio of the miter length to half this pen's Thickness.
+
+```csharp
+public double MiterLimit { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-86b3114135"></span>
+
+### Thickness Property
+
+Gets the stroke thickness.
+
+```csharp
+public double Thickness { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

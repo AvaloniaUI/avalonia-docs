@@ -1,0 +1,441 @@
+---
+title: 'FontCollectionBase'
+hide_title: true
+slug: '/avalonia/media/fonts/fontcollectionbase'
+uid: 'Avalonia.Media.Fonts.FontCollectionBase'
+commentId: 'T:Avalonia.Media.Fonts.FontCollectionBase'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Media.Fonts'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">FontCollectionBase Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Media.Fonts</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Media/Fonts/FontCollectionBase.cs">FontCollectionBase.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class FontCollectionBase
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> FontCollectionBase
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Derived types:</span> <a href="embeddedfontcollection">EmbeddedFontCollection</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="ifontcollection">IFontCollection</a>, IEnumerable&lt;FontFamily&gt;, IReadOnlyCollection&lt;FontFamily&gt;, IReadOnlyList&lt;FontFamily&gt;, IEnumerable, IDisposable
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [GetEnumerator](#uid-6bbcb9f4f9) | No summary available. |
+| [TryAddFontSource](#uid-126fc012f3) | Attempts to add a font source to the font collection. |
+| [TryAddGlyphTypeface (3 overloads)](#uid-6691b7ebaf) | Attempts to add the specified [Avalonia.Media.GlyphTypeface](xref:Avalonia.Media.GlyphTypeface) to the font collection. |
+| [TryCreateSyntheticGlyphTypeface](#uid-b5d7083d39) | No summary available. |
+| [TryGetFamilyTypefaces](#uid-914d5895fd) | No summary available. |
+| [TryGetGlyphTypeface](#uid-4b6a0baff2) | No summary available. |
+| [TryGetNearestMatch](#uid-94e13da064) | No summary available. |
+| [TryMatchCharacter](#uid-d6ab1b26c8) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6bbcb9f4f9"></span>
+
+### GetEnumerator Method
+
+```csharp
+public System.Collections.Generic.IEnumerator<Avalonia.Media.FontFamily> GetEnumerator()
+```
+
+#### Returns
+
+System.Collections.Generic.IEnumerator&lt;[Avalonia.Media.FontFamily](xref:Avalonia.Media.FontFamily)&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-126fc012f3"></span>
+
+### TryAddFontSource Method
+
+Attempts to add a font source to the font collection.
+
+```csharp
+public bool TryAddFontSource(Uri source)
+```
+
+#### Parameters
+
+`source` Uri
+
+The URI of the font source to add. This can be a file path, a resource URI, or another valid font source
+URI.
+
+
+#### Returns
+
+bool
+
+if at least one font from the specified source was successfully added to the font
+collection; otherwise, .
+
+
+#### Remarks
+
+This method processes the specified font source and attempts to load all available
+fonts from it. Fonts are added to the collection based on their family name and typographic family name (if
+available). If the `source` is , the method returns .
+
+</section>
+
+<span id="uid-6691b7ebaf"></span>
+
+### TryAddGlyphTypeface overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-167c5b3c2f"></span>
+
+#### TryAddGlyphTypeface Method
+
+Attempts to add the specified [Avalonia.Media.GlyphTypeface](xref:Avalonia.Media.GlyphTypeface) to the font collection.
+
+```csharp
+public bool TryAddGlyphTypeface(Avalonia.Media.GlyphTypeface glyphTypeface)
+```
+
+##### Parameters
+
+`glyphTypeface` [Avalonia.Media.GlyphTypeface](xref:Avalonia.Media.GlyphTypeface)
+
+The glyph typeface to add. Must not be and must have a non-empty [Avalonia.Media.GlyphTypeface.FamilyName](xref:Avalonia.Media.GlyphTypeface.FamilyName).
+
+
+##### Returns
+
+bool
+
+if the glyph typeface was successfully added to the collection; otherwise, .
+
+
+##### Remarks
+
+This method checks the [Avalonia.Media.GlyphTypeface.FamilyName](xref:Avalonia.Media.GlyphTypeface.FamilyName) and, if applicable,
+the typographic family name and other family names provided by the [Avalonia.Media.GlyphTypeface](xref:Avalonia.Media.GlyphTypeface) interface.
+If any of these names can be associated with the glyph typeface, the typeface is added to the collection.
+The method ensures that duplicate entries are not added.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4511fbb6f6"></span>
+
+#### TryAddGlyphTypeface Method
+
+Attempts to add the specified glyph typeface to the collection using the provided key.
+
+```csharp
+public bool TryAddGlyphTypeface(Avalonia.Media.GlyphTypeface glyphTypeface, Avalonia.Media.Fonts.FontCollectionKey key)
+```
+
+##### Parameters
+
+`glyphTypeface` [Avalonia.Media.GlyphTypeface](xref:Avalonia.Media.GlyphTypeface)
+
+The glyph typeface to add. Cannot be null, and its FamilyName property must not be null or empty.
+
+
+`key` [Avalonia.Media.Fonts.FontCollectionKey](xref:Avalonia.Media.Fonts.FontCollectionKey)
+
+The key that identifies the font collection to which the glyph typeface will be added.
+
+
+##### Returns
+
+bool
+
+true if the glyph typeface was successfully added to the collection; otherwise, false.
+
+
+##### Remarks
+
+The method adds the glyph typeface using both its typographic family name and all
+available family names. If the glyph typeface or its family name is invalid, the method returns false and
+does not add the typeface.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e619ea7f35"></span>
+
+#### TryAddGlyphTypeface Method
+
+```csharp
+public bool TryAddGlyphTypeface(System.IO.Stream stream, Avalonia.Media.GlyphTypeface& glyphTypeface)
+```
+
+##### Parameters
+
+`stream` System.IO.Stream
+
+
+`glyphTypeface` [Avalonia.Media.GlyphTypeface](xref:Avalonia.Media.GlyphTypeface)&amp;
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b5d7083d39"></span>
+
+### TryCreateSyntheticGlyphTypeface Method
+
+```csharp
+public bool TryCreateSyntheticGlyphTypeface(Avalonia.Media.GlyphTypeface glyphTypeface, Avalonia.Media.FontStyle style, Avalonia.Media.FontWeight weight, Avalonia.Media.FontStretch stretch, Avalonia.Media.GlyphTypeface& syntheticGlyphTypeface)
+```
+
+#### Parameters
+
+`glyphTypeface` [Avalonia.Media.GlyphTypeface](xref:Avalonia.Media.GlyphTypeface)
+
+
+`style` [Avalonia.Media.FontStyle](xref:Avalonia.Media.FontStyle)
+
+
+`weight` [Avalonia.Media.FontWeight](xref:Avalonia.Media.FontWeight)
+
+
+`stretch` [Avalonia.Media.FontStretch](xref:Avalonia.Media.FontStretch)
+
+
+`syntheticGlyphTypeface` [Avalonia.Media.GlyphTypeface](xref:Avalonia.Media.GlyphTypeface)&amp;
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-914d5895fd"></span>
+
+### TryGetFamilyTypefaces Method
+
+```csharp
+public bool TryGetFamilyTypefaces(string familyName, System.Collections.Generic.IReadOnlyList<Avalonia.Media.Typeface>& familyTypefaces)
+```
+
+#### Parameters
+
+`familyName` string
+
+
+`familyTypefaces` System.Collections.Generic.IReadOnlyList&lt;[Avalonia.Media.Typeface](xref:Avalonia.Media.Typeface)&gt;&amp;
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4b6a0baff2"></span>
+
+### TryGetGlyphTypeface Method
+
+```csharp
+public bool TryGetGlyphTypeface(string familyName, Avalonia.Media.FontStyle style, Avalonia.Media.FontWeight weight, Avalonia.Media.FontStretch stretch, Avalonia.Media.GlyphTypeface& glyphTypeface)
+```
+
+#### Parameters
+
+`familyName` string
+
+
+`style` [Avalonia.Media.FontStyle](xref:Avalonia.Media.FontStyle)
+
+
+`weight` [Avalonia.Media.FontWeight](xref:Avalonia.Media.FontWeight)
+
+
+`stretch` [Avalonia.Media.FontStretch](xref:Avalonia.Media.FontStretch)
+
+
+`glyphTypeface` [Avalonia.Media.GlyphTypeface](xref:Avalonia.Media.GlyphTypeface)&amp;
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-94e13da064"></span>
+
+### TryGetNearestMatch Method
+
+```csharp
+public bool TryGetNearestMatch(string familyName, Avalonia.Media.FontStyle style, Avalonia.Media.FontWeight weight, Avalonia.Media.FontStretch stretch, Avalonia.Media.GlyphTypeface& glyphTypeface)
+```
+
+#### Parameters
+
+`familyName` string
+
+
+`style` [Avalonia.Media.FontStyle](xref:Avalonia.Media.FontStyle)
+
+
+`weight` [Avalonia.Media.FontWeight](xref:Avalonia.Media.FontWeight)
+
+
+`stretch` [Avalonia.Media.FontStretch](xref:Avalonia.Media.FontStretch)
+
+
+`glyphTypeface` [Avalonia.Media.GlyphTypeface](xref:Avalonia.Media.GlyphTypeface)&amp;
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d6ab1b26c8"></span>
+
+### TryMatchCharacter Method
+
+```csharp
+public bool TryMatchCharacter(int codepoint, Avalonia.Media.FontStyle style, Avalonia.Media.FontWeight weight, Avalonia.Media.FontStretch stretch, string familyName, System.Globalization.CultureInfo culture, Avalonia.Media.Typeface& match)
+```
+
+#### Parameters
+
+`codepoint` int
+
+
+`style` [Avalonia.Media.FontStyle](xref:Avalonia.Media.FontStyle)
+
+
+`weight` [Avalonia.Media.FontWeight](xref:Avalonia.Media.FontWeight)
+
+
+`stretch` [Avalonia.Media.FontStretch](xref:Avalonia.Media.FontStretch)
+
+
+`familyName` string
+
+
+`culture` System.Globalization.CultureInfo
+
+
+`match` [Avalonia.Media.Typeface](xref:Avalonia.Media.Typeface)&amp;
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Count](#uid-9556cb2142) | No summary available. |
+| [Item](#uid-4ccbe060c2) | No summary available. |
+| [Key](#uid-fecde0daef) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9556cb2142"></span>
+
+### Count Property
+
+```csharp
+public int Count { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4ccbe060c2"></span>
+
+### Item Property
+
+```csharp
+public Avalonia.Media.FontFamily Item { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-fecde0daef"></span>
+
+### Key Property
+
+```csharp
+public Uri Key { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

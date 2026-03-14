@@ -1,0 +1,250 @@
+---
+title: 'SynchronousCompletionAsyncResult<T>'
+hide_title: true
+slug: '/avalonia/utilities/synchronouscompletionasyncresult-1'
+uid: 'Avalonia.Utilities.SynchronousCompletionAsyncResult`1'
+commentId: 'T:Avalonia.Utilities.SynchronousCompletionAsyncResult`1'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Utilities'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">SynchronousCompletionAsyncResult&lt;T&gt; Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Utilities</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Utilities/SynchronousCompletionAsyncResult.cs">SynchronousCompletionAsyncResult.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A task-like operation that is guaranteed to finish continuations synchronously,
+can be used for parametrized one-shot events
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct SynchronousCompletionAsyncResult<T>
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> SynchronousCompletionAsyncResult&lt;T&gt;
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;SynchronousCompletionAsyncResult&lt;&gt;&gt;, INotifyCompletion
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [SynchronousCompletionAsyncResult&lt;T&gt;](#uid-23e8bf7252) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-23e8bf7252"></span>
+
+### SynchronousCompletionAsyncResult&lt;T&gt; Constructor
+
+```csharp
+public SynchronousCompletionAsyncResult<T>(T result)
+```
+
+#### Parameters
+
+`result` T
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Equals (2 overloads)](#uid-d05fbb85f4) | No summary available. |
+| [GetAwaiter](#uid-97a6bacd0a) | No summary available. |
+| [GetHashCode](#uid-a5f70f5123) | No summary available. |
+| [GetResult](#uid-e6c36f50d3) | No summary available. |
+| [OnCompleted](#uid-a71a9b8102) | No summary available. |
+| [ToString](#uid-b656ac028c) | No summary available. |
+
+<span id="uid-d05fbb85f4"></span>
+
+### Equals overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5173543255"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(Avalonia.Utilities.SynchronousCompletionAsyncResult<T><T> other)
+```
+
+##### Parameters
+
+`other` Avalonia.Utilities.SynchronousCompletionAsyncResult&lt;T&gt;&lt;T&gt;
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6e9a7d33c0"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(object obj)
+```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-97a6bacd0a"></span>
+
+### GetAwaiter Method
+
+```csharp
+public Avalonia.Utilities.SynchronousCompletionAsyncResult<T><T> GetAwaiter()
+```
+
+#### Returns
+
+Avalonia.Utilities.SynchronousCompletionAsyncResult&lt;T&gt;&lt;T&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a5f70f5123"></span>
+
+### GetHashCode Method
+
+```csharp
+public int GetHashCode()
+```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e6c36f50d3"></span>
+
+### GetResult Method
+
+```csharp
+public T GetResult()
+```
+
+#### Returns
+
+T
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a71a9b8102"></span>
+
+### OnCompleted Method
+
+```csharp
+public void OnCompleted(Action continuation)
+```
+
+#### Parameters
+
+`continuation` Action
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b656ac028c"></span>
+
+### ToString Method
+
+```csharp
+public string ToString()
+```
+
+#### Returns
+
+string
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [IsCompleted](#uid-74af58f2b6) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-74af58f2b6"></span>
+
+### IsCompleted Property
+
+```csharp
+public bool IsCompleted { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

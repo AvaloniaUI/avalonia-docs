@@ -1,0 +1,277 @@
+---
+title: 'SpanHelpers'
+hide_title: true
+slug: '/avalonia/utilities/spanhelpers'
+uid: 'Avalonia.Utilities.SpanHelpers'
+commentId: 'T:Avalonia.Utilities.SpanHelpers'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Utilities'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">SpanHelpers Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Utilities</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Utilities/SpanHelpers.cs">SpanHelpers.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class SpanHelpers
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> SpanHelpers
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [ParseDouble](#uid-b64df72a11) | No summary available. |
+| [TryParseByte](#uid-0cc415b2b1) | No summary available. |
+| [TryParseDouble](#uid-6e25064a29) | No summary available. |
+| [TryParseEnum](#uid-02b7a15ff4) | No summary available. |
+| [TryParseInt (2 overloads)](#uid-43fd4f5cfe) | No summary available. |
+| [TryParseUInt](#uid-f264c34aa6) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b64df72a11"></span>
+
+### ParseDouble Method
+
+```csharp
+public double ParseDouble(ReadOnlySpan<char> span, IFormatProvider provider)
+```
+
+#### Parameters
+
+`span` ReadOnlySpan&lt;char&gt;
+
+
+`provider` IFormatProvider
+
+
+#### Returns
+
+double
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0cc415b2b1"></span>
+
+### TryParseByte Method
+
+```csharp
+public bool TryParseByte(ReadOnlySpan<char> span, System.Globalization.NumberStyles style, IFormatProvider provider, byte& value)
+```
+
+#### Parameters
+
+`span` ReadOnlySpan&lt;char&gt;
+
+
+`style` System.Globalization.NumberStyles
+
+
+`provider` IFormatProvider
+
+
+`value` byte&amp;
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6e25064a29"></span>
+
+### TryParseDouble Method
+
+```csharp
+public bool TryParseDouble(ReadOnlySpan<char> span, System.Globalization.NumberStyles style, IFormatProvider provider, double& value)
+```
+
+#### Parameters
+
+`span` ReadOnlySpan&lt;char&gt;
+
+
+`style` System.Globalization.NumberStyles
+
+
+`provider` IFormatProvider
+
+
+`value` double&amp;
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-02b7a15ff4"></span>
+
+### TryParseEnum Method
+
+```csharp
+public bool TryParseEnum<TEnum>(ReadOnlySpan<char> span, bool ignoreCase, TEnum& value)
+```
+
+#### Parameters
+
+`span` ReadOnlySpan&lt;char&gt;
+
+
+`ignoreCase` bool
+
+
+`value` TEnum&amp;
+
+
+#### Type Parameters
+
+`TEnum`
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<span id="uid-43fd4f5cfe"></span>
+
+### TryParseInt overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f3ea7c9fc7"></span>
+
+#### TryParseInt Method
+
+```csharp
+public bool TryParseInt(ReadOnlySpan<char> span, System.Globalization.NumberStyles style, IFormatProvider provider, int& value)
+```
+
+##### Parameters
+
+`span` ReadOnlySpan&lt;char&gt;
+
+
+`style` System.Globalization.NumberStyles
+
+
+`provider` IFormatProvider
+
+
+`value` int&amp;
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-55af653b83"></span>
+
+#### TryParseInt Method
+
+```csharp
+public bool TryParseInt(ReadOnlySpan<char> span, int& value)
+```
+
+##### Parameters
+
+`span` ReadOnlySpan&lt;char&gt;
+
+
+`value` int&amp;
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f264c34aa6"></span>
+
+### TryParseUInt Method
+
+```csharp
+public bool TryParseUInt(ReadOnlySpan<char> span, System.Globalization.NumberStyles style, IFormatProvider provider, uint& value)
+```
+
+#### Parameters
+
+`span` ReadOnlySpan&lt;char&gt;
+
+
+`style` System.Globalization.NumberStyles
+
+
+`provider` IFormatProvider
+
+
+`value` uint&amp;
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+</ApiRefPage>
+

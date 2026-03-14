@@ -1,0 +1,620 @@
+---
+title: 'HierarchicalTreeDataGridSource<TModel>'
+hide_title: true
+slug: '/avalonia/controls/hierarchicaltreedatagridsource-1'
+uid: 'Avalonia.Controls.HierarchicalTreeDataGridSource`1'
+commentId: 'T:Avalonia.Controls.HierarchicalTreeDataGridSource`1'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.TreeDataGrid'
+assembly: 'Avalonia.Controls.TreeDataGrid'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net8.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">HierarchicalTreeDataGridSource&lt;TModel&gt; Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A data source for a [Avalonia.Controls.TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid) which displays a hierarchial tree where each
+row may have multiple columns.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class HierarchicalTreeDataGridSource<TModel>
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="models/notifyingbase">NotifyingBase</a> <span className="apiref-page__relation-separator">-&gt;</span> HierarchicalTreeDataGridSource&lt;TModel&gt;
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="itreedatagridsource">ITreeDataGridSource</a>, ITreeDataGridSource&lt;&gt;, IExpanderRowController&lt;&gt;, INotifyPropertyChanged, IDisposable
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [HierarchicalTreeDataGridSource&lt;TModel&gt; (2 overloads)](#uid-605da012ea) | No summary available. |
+
+<span id="uid-605da012ea"></span>
+
+### HierarchicalTreeDataGridSource&lt;TModel&gt; overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6d872cdcb1"></span>
+
+#### HierarchicalTreeDataGridSource&lt;TModel&gt; Constructor
+
+```csharp
+public HierarchicalTreeDataGridSource<TModel>(System.Collections.Generic.IEnumerable<TModel> items)
+```
+
+##### Parameters
+
+`items` System.Collections.Generic.IEnumerable&lt;TModel&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-910c95098a"></span>
+
+#### HierarchicalTreeDataGridSource&lt;TModel&gt; Constructor
+
+Initializes a new instance of the [Avalonia.Controls.HierarchicalTreeDataGridSource&lt;T&gt;](xref:Avalonia.Controls.HierarchicalTreeDataGridSource%601)
+class with a single root item.
+
+```csharp
+public HierarchicalTreeDataGridSource<TModel>(TModel item)
+```
+
+##### Parameters
+
+`item` TModel
+
+The root item to display.
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [ClearSort](#uid-b176ad9169) | Clears any sorting applied to the specified column. |
+| [Collapse](#uid-5e67fcdd5f) | Collapses the row at the specified index. |
+| [CollapseAll](#uid-0ebcf7f1f5) | Collapses all rows. |
+| [Dispose](#uid-1824a7e978) | No summary available. |
+| [Expand](#uid-c660c5533a) | Expands the row at the specified index. |
+| [ExpandAll](#uid-d9c5dfe234) | Expands all rows. |
+| [ExpandCollapseRecursive (2 overloads)](#uid-ad2985dddf) | No summary available. |
+| [Filter](#uid-10b946258c) | No summary available. |
+| [RefreshFilter](#uid-0d25155d18) | Refreshes the current filter applied to the collection. |
+| [Sort](#uid-8ba934b7f9) | No summary available. |
+| [SortBy](#uid-6b9fda607d) | Requests to sort the source by the specified column. |
+| [TryGetModelAt](#uid-27167f5a71) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b176ad9169"></span>
+
+### ClearSort Method
+
+Clears any sorting applied to the specified column.
+
+```csharp
+public void ClearSort(Avalonia.Controls.Models.TreeDataGrid.IColumn column)
+```
+
+#### Parameters
+
+`column` [Avalonia.Controls.Models.TreeDataGrid.IColumn](xref:Avalonia.Controls.Models.TreeDataGrid.IColumn)
+
+The column.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5e67fcdd5f"></span>
+
+### Collapse Method
+
+Collapses the row at the specified index.
+
+```csharp
+public void Collapse(Avalonia.Controls.IndexPath index)
+```
+
+#### Parameters
+
+`index` [Avalonia.Controls.IndexPath](xref:Avalonia.Controls.IndexPath)
+
+The index path of the row to collapse.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0ebcf7f1f5"></span>
+
+### CollapseAll Method
+
+Collapses all rows.
+
+```csharp
+public void CollapseAll()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1824a7e978"></span>
+
+### Dispose Method
+
+```csharp
+public void Dispose()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c660c5533a"></span>
+
+### Expand Method
+
+Expands the row at the specified index.
+
+```csharp
+public void Expand(Avalonia.Controls.IndexPath index)
+```
+
+#### Parameters
+
+`index` [Avalonia.Controls.IndexPath](xref:Avalonia.Controls.IndexPath)
+
+The index path of the row to expand.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d9c5dfe234"></span>
+
+### ExpandAll Method
+
+Expands all rows.
+
+```csharp
+public void ExpandAll()
+```
+
+</section>
+
+<span id="uid-ad2985dddf"></span>
+
+### ExpandCollapseRecursive overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f01f7c2db6"></span>
+
+#### ExpandCollapseRecursive Method
+
+```csharp
+public void ExpandCollapseRecursive(Avalonia.Controls.Models.TreeDataGrid.HierarchicalRow<TModel><TModel> row, Func<TModel, bool> predicate)
+```
+
+##### Parameters
+
+`row` Avalonia.Controls.Models.TreeDataGrid.HierarchicalRow&lt;TModel&gt;&lt;TModel&gt;
+
+
+`predicate` Func&lt;TModel, bool&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-98748127e6"></span>
+
+#### ExpandCollapseRecursive Method
+
+```csharp
+public void ExpandCollapseRecursive(Func<TModel, bool> predicate)
+```
+
+##### Parameters
+
+`predicate` Func&lt;TModel, bool&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-10b946258c"></span>
+
+### Filter Method
+
+```csharp
+public void Filter(Func<TModel, bool> filter)
+```
+
+#### Parameters
+
+`filter` Func&lt;TModel, bool&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0d25155d18"></span>
+
+### RefreshFilter Method
+
+Refreshes the current filter applied to the collection.
+
+```csharp
+public void RefreshFilter()
+```
+
+#### Remarks
+
+Call this method if the filter predicate depends on external state which has changed,
+to re-apply the filter to the collection.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8ba934b7f9"></span>
+
+### Sort Method
+
+```csharp
+public void Sort(Comparison<TModel> comparison)
+```
+
+#### Parameters
+
+`comparison` Comparison&lt;TModel&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6b9fda607d"></span>
+
+### SortBy Method
+
+Requests to sort the source by the specified column.
+
+```csharp
+public bool SortBy(Avalonia.Controls.Models.TreeDataGrid.IColumn column, System.ComponentModel.ListSortDirection direction)
+```
+
+#### Parameters
+
+`column` [Avalonia.Controls.Models.TreeDataGrid.IColumn](xref:Avalonia.Controls.Models.TreeDataGrid.IColumn)
+
+The column.
+
+
+`direction` System.ComponentModel.ListSortDirection
+
+The sort direction.
+
+
+#### Returns
+
+bool
+
+True if the sort could be performed; otherwise false.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-27167f5a71"></span>
+
+### TryGetModelAt Method
+
+```csharp
+public bool TryGetModelAt(Avalonia.Controls.IndexPath index, TModel& result)
+```
+
+#### Parameters
+
+`index` [Avalonia.Controls.IndexPath](xref:Avalonia.Controls.IndexPath)
+
+
+`result` TModel&amp;
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [CellSelection](#uid-3f2a7f6c39) | Gets the cell selection model if cell selection is being used. |
+| [Columns](#uid-05481cc77c) | Gets the columns to be displayed. |
+| [IsFiltered](#uid-3a33721782) | Gets a value indicating whether the data source is filtered. |
+| [IsHierarchical](#uid-6d39e40f08) | Gets a value indicating whether the data source is hierarchical. |
+| [IsSorted](#uid-9cef2b77c9) | Gets a value indicating whether the data source is currently sorted. |
+| [Items](#uid-04df0ed43b) | Gets the items in the data source. |
+| [RowSelection](#uid-ccb3dd7309) | Gets the row selection model if row selection is being used. |
+| [Rows](#uid-e93421ca5e) | Gets the rows to be displayed. |
+| [Selection](#uid-cab824017d) | Gets or sets the selection model. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3f2a7f6c39"></span>
+
+### CellSelection Property
+
+Gets the cell selection model if cell selection is being used.
+
+```csharp
+public Avalonia.Controls.Selection.ITreeDataGridCellSelectionModel<T><TModel> CellSelection { get; set; }
+```
+
+#### Remarks
+
+This property is equivalent to casting the [Avalonia.Controls.HierarchicalTreeDataGridSource&lt;T&gt;.Selection](xref:Avalonia.Controls.HierarchicalTreeDataGridSource%601.Selection) property to
+[Avalonia.Controls.Selection.ITreeDataGridCellSelectionModel&lt;T&gt;](xref:Avalonia.Controls.Selection.ITreeDataGridCellSelectionModel%601).
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-05481cc77c"></span>
+
+### Columns Property
+
+Gets the columns to be displayed.
+
+```csharp
+public Avalonia.Controls.Models.TreeDataGrid.ColumnList<TModel><TModel> Columns { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3a33721782"></span>
+
+### IsFiltered Property
+
+Gets a value indicating whether the data source is filtered.
+
+```csharp
+public bool IsFiltered { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6d39e40f08"></span>
+
+### IsHierarchical Property
+
+Gets a value indicating whether the data source is hierarchical.
+
+```csharp
+public bool IsHierarchical { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9cef2b77c9"></span>
+
+### IsSorted Property
+
+Gets a value indicating whether the data source is currently sorted.
+
+```csharp
+public bool IsSorted { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-04df0ed43b"></span>
+
+### Items Property
+
+Gets the items in the data source.
+
+```csharp
+public System.Collections.Generic.IEnumerable<TModel> Items { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ccb3dd7309"></span>
+
+### RowSelection Property
+
+Gets the row selection model if row selection is being used.
+
+```csharp
+public Avalonia.Controls.Selection.ITreeDataGridRowSelectionModel<T><TModel> RowSelection { get; set; }
+```
+
+#### Remarks
+
+This property is equivalent to casting the [Avalonia.Controls.HierarchicalTreeDataGridSource&lt;T&gt;.Selection](xref:Avalonia.Controls.HierarchicalTreeDataGridSource%601.Selection) property to
+[Avalonia.Controls.Selection.ITreeDataGridRowSelectionModel&lt;T&gt;](xref:Avalonia.Controls.Selection.ITreeDataGridRowSelectionModel%601).
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e93421ca5e"></span>
+
+### Rows Property
+
+Gets the rows to be displayed.
+
+```csharp
+public Avalonia.Controls.Models.TreeDataGrid.IRows Rows { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-cab824017d"></span>
+
+### Selection Property
+
+Gets or sets the selection model.
+
+```csharp
+public Avalonia.Controls.Selection.ITreeDataGridSelection Selection { get; set; }
+```
+
+#### Remarks
+
+The selection mode of the control may be changed by setting this property to either an
+instance of [Avalonia.Controls.Selection.TreeDataGridRowSelectionModel&lt;T&gt;](xref:Avalonia.Controls.Selection.TreeDataGridRowSelectionModel%601) for row selection, or
+[Avalonia.Controls.Selection.TreeDataGridCellSelectionModel&lt;T&gt;](xref:Avalonia.Controls.Selection.TreeDataGridCellSelectionModel%601) for cell selection.
+
+</section>
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [RowCollapsed](#uid-5f100222ee) | Occurs when a hierarchical row is collapsed. |
+| [RowCollapsing](#uid-8606e70882) | Occurs when a hierarchical row is about to collapse. |
+| [RowExpanded](#uid-1afd7a5abf) | Occurs when a row in the hierarchical data structure is expanded. |
+| [RowExpanding](#uid-b2c0356a5c) | Occurs when a row in the hierarchical data structure is about to expand. |
+| [Sorted](#uid-56cb9f0e9f) | Occurs after sorting has changed on the data source. |
+| [PropertyChanged](models/notifyingbase.mdx#uid-cfba2a29fd) | Occurs when a property value changes. Inherited from [NotifyingBase](models/notifyingbase.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5f100222ee"></span>
+
+### RowCollapsed Event
+
+Occurs when a hierarchical row is collapsed.
+
+```csharp
+public event EventHandler<Avalonia.Controls.Models.TreeDataGrid.RowEventArgs<TRow><Avalonia.Controls.Models.TreeDataGrid.HierarchicalRow<TModel><TModel>>> RowCollapsed
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8606e70882"></span>
+
+### RowCollapsing Event
+
+Occurs when a hierarchical row is about to collapse.
+
+```csharp
+public event EventHandler<Avalonia.Controls.Models.TreeDataGrid.RowEventArgs<TRow><Avalonia.Controls.Models.TreeDataGrid.HierarchicalRow<TModel><TModel>>> RowCollapsing
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1afd7a5abf"></span>
+
+### RowExpanded Event
+
+Occurs when a row in the hierarchical data structure is expanded.
+
+```csharp
+public event EventHandler<Avalonia.Controls.Models.TreeDataGrid.RowEventArgs<TRow><Avalonia.Controls.Models.TreeDataGrid.HierarchicalRow<TModel><TModel>>> RowExpanded
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b2c0356a5c"></span>
+
+### RowExpanding Event
+
+Occurs when a row in the hierarchical data structure is about to expand.
+
+```csharp
+public event EventHandler<Avalonia.Controls.Models.TreeDataGrid.RowEventArgs<TRow><Avalonia.Controls.Models.TreeDataGrid.HierarchicalRow<TModel><TModel>>> RowExpanding
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-56cb9f0e9f"></span>
+
+### Sorted Event
+
+Occurs after sorting has changed on the data source.
+
+```csharp
+public event Action Sorted
+```
+
+</section>
+
+</ApiRefPage>
+

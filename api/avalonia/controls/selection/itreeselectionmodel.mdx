@@ -1,0 +1,428 @@
+---
+title: 'ITreeSelectionModel'
+hide_title: true
+slug: '/avalonia/controls/selection/itreeselectionmodel'
+uid: 'Avalonia.Controls.Selection.ITreeSelectionModel'
+commentId: 'T:Avalonia.Controls.Selection.ITreeSelectionModel'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.TreeDataGrid'
+assembly: 'Avalonia.Controls.TreeDataGrid'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Selection'
+tfms:
+  - 'net8.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ITreeSelectionModel Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Selection</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Stores and manipulates the selection state of of items in a hierarchical data source.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface ITreeSelectionModel
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> INotifyPropertyChanged
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [BeginBatchUpdate](#uid-91f567be51) | Begins a batch update of the selection. |
+| [Clear](#uid-18a489d90f) | Clears the selection. |
+| [Deselect](#uid-5eb0d8eb82) | Deselects an item by its index in the source data. |
+| [EndBatchUpdate](#uid-4479fc4daf) | Ends a batch update started by [Avalonia.Controls.Selection.ITreeSelectionModel.BeginBatchUpdate](xref:Avalonia.Controls.Selection.ITreeSelectionModel.BeginBatchUpdate). |
+| [IsSelected](#uid-29092d0163) | Queries whether an item is currently selected. |
+| [Select](#uid-5b11de566d) | Selects an item by its index in the source data. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-91f567be51"></span>
+
+### BeginBatchUpdate Method
+
+Begins a batch update of the selection.
+
+```csharp
+public void BeginBatchUpdate()
+```
+
+#### Remarks
+
+During a batch update no changes to the selection will be reflected in the model's
+properties and no events will be raised until [Avalonia.Controls.Selection.ITreeSelectionModel.EndBatchUpdate](xref:Avalonia.Controls.Selection.ITreeSelectionModel.EndBatchUpdate) is called.
+
+[Avalonia.Controls.Selection.ITreeSelectionModel.BeginBatchUpdate](xref:Avalonia.Controls.Selection.ITreeSelectionModel.BeginBatchUpdate) may be called multiple times, even when a batch update
+is already in progress; each call must have a corresponding call to
+[Avalonia.Controls.Selection.ITreeSelectionModel.EndBatchUpdate](xref:Avalonia.Controls.Selection.ITreeSelectionModel.EndBatchUpdate) in order to finish the operation.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-18a489d90f"></span>
+
+### Clear Method
+
+Clears the selection.
+
+```csharp
+public void Clear()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5eb0d8eb82"></span>
+
+### Deselect Method
+
+Deselects an item by its index in the source data.
+
+```csharp
+public void Deselect(Avalonia.Controls.IndexPath index)
+```
+
+#### Parameters
+
+`index` [Avalonia.Controls.IndexPath](xref:Avalonia.Controls.IndexPath)
+
+The index into the source data.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4479fc4daf"></span>
+
+### EndBatchUpdate Method
+
+Ends a batch update started by [Avalonia.Controls.Selection.ITreeSelectionModel.BeginBatchUpdate](xref:Avalonia.Controls.Selection.ITreeSelectionModel.BeginBatchUpdate).
+
+```csharp
+public void EndBatchUpdate()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-29092d0163"></span>
+
+### IsSelected Method
+
+Queries whether an item is currently selected.
+
+```csharp
+public bool IsSelected(Avalonia.Controls.IndexPath index)
+```
+
+#### Parameters
+
+`index` [Avalonia.Controls.IndexPath](xref:Avalonia.Controls.IndexPath)
+
+The index of the item in the source data.
+
+
+#### Returns
+
+bool
+
+True if the item is selected; otherwise false.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5b11de566d"></span>
+
+### Select Method
+
+Selects an item by its index in the source data.
+
+```csharp
+public void Select(Avalonia.Controls.IndexPath index)
+```
+
+#### Parameters
+
+`index` [Avalonia.Controls.IndexPath](xref:Avalonia.Controls.IndexPath)
+
+The index path of the item to select.
+
+
+#### Remarks
+
+If [Avalonia.Controls.Selection.ITreeSelectionModel.SingleSelect](xref:Avalonia.Controls.Selection.ITreeSelectionModel.SingleSelect) is true, this method will clear any existing selection
+before selecting the specified item.
+
+If the item is already selected, this method does nothing.
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [AnchorIndex](#uid-3fb44a3ed9) | Gets or sets the anchor index. |
+| [Count](#uid-3f2a26e67f) | Gets the number of selected items. |
+| [RangeAnchorIndex](#uid-1ad0a748b7) | Gets or sets the range anchor index. |
+| [SelectedIndex](#uid-584e06b762) | Gets or sets the selected index within the data. |
+| [SelectedIndexes](#uid-2fa3ff0074) | Gets the indexes of the selected items. |
+| [SelectedItem](#uid-60a404e94e) | Gets the selected item. |
+| [SelectedItems](#uid-478cd85496) | Gets the selected items. |
+| [SingleSelect](#uid-fa047172a7) | Gets or sets a value indicating whether the model supports single or multiple selection. |
+| [Source](#uid-7840a2b20d) | Gets or sets the root of the hierarchical data. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3fb44a3ed9"></span>
+
+### AnchorIndex Property
+
+Gets or sets the anchor index.
+
+```csharp
+public Avalonia.Controls.IndexPath AnchorIndex { get; set; }
+```
+
+#### Remarks
+
+The anchor index holds the index of the item from which non-ranged keyboard selection
+will start, i.e. in a vertical list it will hold the item from which selection should
+be moved by pressing the up or down arrow key. This is usually the last selected item.
+
+[Avalonia.Controls.Selection.ITreeSelectionModel.AnchorIndex](xref:Avalonia.Controls.Selection.ITreeSelectionModel.AnchorIndex) is automatically set when selecting an item via
+[Avalonia.Controls.Selection.ITreeSelectionModel.SelectedIndex](xref:Avalonia.Controls.Selection.ITreeSelectionModel.SelectedIndex) or [Avalonia.Controls.Selection.ITreeSelectionModel.Select(Avalonia.Controls.IndexPath)](xref:Avalonia.Controls.Selection.ITreeSelectionModel.Select%28Avalonia.Controls.IndexPath%29).
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3f2a26e67f"></span>
+
+### Count Property
+
+Gets the number of selected items.
+
+```csharp
+public int Count { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1ad0a748b7"></span>
+
+### RangeAnchorIndex Property
+
+Gets or sets the range anchor index.
+
+```csharp
+public Avalonia.Controls.IndexPath RangeAnchorIndex { get; set; }
+```
+
+#### Remarks
+
+The range anchor index holds the index of the item from which ranged selection will
+start, i.e. when shift-clicking an item it represents the start of the range to be
+selected whereas the shift-clicked item will be the end of the range.
+
+[Avalonia.Controls.Selection.ITreeSelectionModel.RangeAnchorIndex](xref:Avalonia.Controls.Selection.ITreeSelectionModel.RangeAnchorIndex) is set when selecting an item via
+[Avalonia.Controls.Selection.ITreeSelectionModel.SelectedIndex](xref:Avalonia.Controls.Selection.ITreeSelectionModel.SelectedIndex) but not via [Avalonia.Controls.Selection.ITreeSelectionModel.Select(Avalonia.Controls.IndexPath)](xref:Avalonia.Controls.Selection.ITreeSelectionModel.Select%28Avalonia.Controls.IndexPath%29).
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-584e06b762"></span>
+
+### SelectedIndex Property
+
+Gets or sets the selected index within the data.
+
+```csharp
+public Avalonia.Controls.IndexPath SelectedIndex { get; set; }
+```
+
+#### Remarks
+
+Setting this property clears any existing selection and selects only the item at the
+specified index path. When multiple items are selected, this property represents the
+first selected item.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2fa3ff0074"></span>
+
+### SelectedIndexes Property
+
+Gets the indexes of the selected items.
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<Avalonia.Controls.IndexPath> SelectedIndexes { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-60a404e94e"></span>
+
+### SelectedItem Property
+
+Gets the selected item.
+
+```csharp
+public object SelectedItem { get; set; }
+```
+
+#### Remarks
+
+In the case of multiple selected items, returns the item that was first selected.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-478cd85496"></span>
+
+### SelectedItems Property
+
+Gets the selected items.
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<object> SelectedItems { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-fa047172a7"></span>
+
+### SingleSelect Property
+
+Gets or sets a value indicating whether the model supports single or multiple selection.
+
+```csharp
+public bool SingleSelect { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7840a2b20d"></span>
+
+### Source Property
+
+Gets or sets the root of the hierarchical data.
+
+```csharp
+public System.Collections.IEnumerable Source { get; set; }
+```
+
+</section>
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [IndexesChanged](#uid-bfc4545dd9) | Occurs when the indexes of the selected items are changed due to items being added or removed from the source data. |
+| [SelectionChanged](#uid-6555bf615a) | Occurs when the selection changes due to items being selected/deselected, or selected items being removed from the source. |
+| [SourceReset](#uid-adc528081e) | Occurs when a [System.Collections.Specialized.NotifyCollectionChangedAction.Reset](xref:System.Collections.Specialized.NotifyCollectionChangedAction.Reset) signal is retreived on the source data. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-bfc4545dd9"></span>
+
+### IndexesChanged Event
+
+Occurs when the indexes of the selected items are changed due to items being added or
+removed from the source data.
+
+```csharp
+public event EventHandler<Avalonia.Controls.Selection.TreeSelectionModelIndexesChangedEventArgs> IndexesChanged
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6555bf615a"></span>
+
+### SelectionChanged Event
+
+Occurs when the selection changes due to items being selected/deselected, or selected
+items being removed from the source.
+
+```csharp
+public event EventHandler<Avalonia.Controls.Selection.TreeSelectionModelSelectionChangedEventArgs> SelectionChanged
+```
+
+#### Remarks
+
+Note that due to limitations of the [System.Collections.Specialized.INotifyCollectionChanged](xref:System.Collections.Specialized.INotifyCollectionChanged) feature in
+the .NET BCL, this event will not be raised when a
+[System.Collections.Specialized.NotifyCollectionChangedAction.Reset](xref:System.Collections.Specialized.NotifyCollectionChangedAction.Reset) signal is retreived due to e.g.
+calling [System.Collections.IList.Clear](xref:System.Collections.IList.Clear) on an [System.Collections.ObjectModel.ObservableCollection&lt;T&gt;](xref:System.Collections.ObjectModel.ObservableCollection%601).
+For this reason it is advised that all subscriptions to [Avalonia.Controls.Selection.ITreeSelectionModel.SelectionChanged](xref:Avalonia.Controls.Selection.ITreeSelectionModel.SelectionChanged)
+are paired with a subscription to [Avalonia.Controls.Selection.ITreeSelectionModel.SourceReset](xref:Avalonia.Controls.Selection.ITreeSelectionModel.SourceReset).
+///
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-adc528081e"></span>
+
+### SourceReset Event
+
+Occurs when a [System.Collections.Specialized.NotifyCollectionChangedAction.Reset](xref:System.Collections.Specialized.NotifyCollectionChangedAction.Reset) signal is retreived on
+the source data.
+
+```csharp
+public event EventHandler<Avalonia.Controls.Selection.TreeSelectionModelSourceResetEventArgs> SourceReset
+```
+
+</section>
+
+</ApiRefPage>
+

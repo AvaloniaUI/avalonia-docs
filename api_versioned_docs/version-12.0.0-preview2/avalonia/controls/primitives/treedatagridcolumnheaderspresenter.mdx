@@ -1,0 +1,221 @@
+---
+title: 'TreeDataGridColumnHeadersPresenter'
+hide_title: true
+slug: '/avalonia/controls/primitives/treedatagridcolumnheaderspresenter'
+uid: 'Avalonia.Controls.Primitives.TreeDataGridColumnHeadersPresenter'
+commentId: 'T:Avalonia.Controls.Primitives.TreeDataGridColumnHeadersPresenter'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.TreeDataGrid'
+assembly: 'Avalonia.Controls.TreeDataGrid'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Primitives'
+tfms:
+  - 'net8.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">TreeDataGridColumnHeadersPresenter Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Primitives</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Presents and manages column headers in a [Avalonia.Controls.TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid) control.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class TreeDataGridColumnHeadersPresenter
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> TreeDataGridColumnarPresenterBase&lt;IColumn&gt; <span className="apiref-page__relation-separator">-&gt;</span> TreeDataGridColumnHeadersPresenter
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="../../logicaltree/ichildindexprovider">IChildIndexProvider</a>
+</div>
+</div>
+
+## Remarks
+
+[TreeDataGridColumnHeadersPresenter](xref:Avalonia.Controls.Primitives.TreeDataGridColumnHeadersPresenter) is responsible for creating, recycling, and arranging
+column headers horizontally at the top of a [TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid). It handles the virtualization of
+column headers, ensuring that only visible headers are realized in the visual tree to
+improve performance.
+
+This presenter coordinates with the [Avalonia.Controls.Models.TreeDataGrid.IColumns](xref:Avalonia.Controls.Models.TreeDataGrid.IColumns) collection to manage column
+widths, measurement, and layout. It also handles column resizing by committing the actual
+column widths during arrangement.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [TreeDataGridColumnHeadersPresenter](#uid-d80143b8aa) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d80143b8aa"></span>
+
+### TreeDataGridColumnHeadersPresenter Constructor
+
+```csharp
+public TreeDataGridColumnHeadersPresenter()
+```
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [GetChildIndex](#uid-22f07cee90) | Gets the index of a logical child element. |
+| [TryGetTotalCount](#uid-a72570dfae) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-22f07cee90"></span>
+
+### GetChildIndex Method
+
+Gets the index of a logical child element.
+
+```csharp
+public int GetChildIndex(Avalonia.LogicalTree.ILogical child)
+```
+
+#### Parameters
+
+`child` [Avalonia.LogicalTree.ILogical](xref:Avalonia.LogicalTree.ILogical)
+
+The logical child element.
+
+
+#### Returns
+
+int
+
+The index of the child element, or -1 if the element is not a column header or is not found.
+
+
+#### Remarks
+
+This method is part of the [Avalonia.LogicalTree.IChildIndexProvider](xref:Avalonia.LogicalTree.IChildIndexProvider) interface implementation,
+which allows the presenter to provide indices for its logical children.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a72570dfae"></span>
+
+### TryGetTotalCount Method
+
+```csharp
+public bool TryGetTotalCount(int& count)
+```
+
+#### Parameters
+
+`count` int&amp;
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [FrozenColumnCount](#uid-b18c4d654f) | Gets or sets the number of frozen columns. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b18c4d654f"></span>
+
+### FrozenColumnCount Property
+
+Gets or sets the number of frozen columns.
+
+```csharp
+public int FrozenColumnCount { get; set; }
+```
+
+#### Remarks
+
+Frozen columns do not scroll horizontally and remain visible at all times.
+
+</section>
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [FrozenColumnCountProperty](#uid-8a2e566f56) | Defines the [Avalonia.Controls.Primitives.TreeDataGridColumnHeadersPresenter.FrozenColumnCount](xref:Avalonia.Controls.Primitives.TreeDataGridColumnHeadersPresenter.FrozenColumnCount) property. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8a2e566f56"></span>
+
+### FrozenColumnCountProperty Field
+
+Defines the [Avalonia.Controls.Primitives.TreeDataGridColumnHeadersPresenter.FrozenColumnCount](xref:Avalonia.Controls.Primitives.TreeDataGridColumnHeadersPresenter.FrozenColumnCount) property.
+
+```csharp
+public Avalonia.StyledProperty<int> FrozenColumnCountProperty
+```
+
+</section>
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [ChildIndexChanged](#uid-a869eb1c83) | Occurs when the index of a child element in the presenter changes. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a869eb1c83"></span>
+
+### ChildIndexChanged Event
+
+Occurs when the index of a child element in the presenter changes.
+
+```csharp
+public event EventHandler<Avalonia.LogicalTree.ChildIndexChangedEventArgs> ChildIndexChanged
+```
+
+#### Remarks
+
+This event is raised when column headers are realized, unrealized, or when their
+indices change due to column insertions or removals.
+
+</section>
+
+</ApiRefPage>
+

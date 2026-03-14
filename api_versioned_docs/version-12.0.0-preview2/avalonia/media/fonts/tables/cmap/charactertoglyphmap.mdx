@@ -1,0 +1,218 @@
+---
+title: 'CharacterToGlyphMap'
+hide_title: true
+slug: '/avalonia/media/fonts/tables/cmap/charactertoglyphmap'
+uid: 'Avalonia.Media.Fonts.Tables.Cmap.CharacterToGlyphMap'
+commentId: 'T:Avalonia.Media.Fonts.Tables.Cmap.CharacterToGlyphMap'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Media.Fonts.Tables.Cmap'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">CharacterToGlyphMap Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Media.Fonts.Tables.Cmap</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Media/Fonts/Tables/Cmap/CharacterToGlyphMap.cs">CharacterToGlyphMap.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Provides a read-only mapping from Unicode code points to glyph identifiers for a font's character map (cmap)
+table.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct CharacterToGlyphMap
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> CharacterToGlyphMap
+</div>
+</div>
+
+## Remarks
+
+This struct enables efficient lookup of glyph IDs corresponding to Unicode code points,
+supporting both Format 4 (BMP) and Format 12 (Unicode full repertoire) cmap subtables.
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [ContainsGlyph](#uid-5861530b4d) | Determines whether the character map contains a glyph for the specified Unicode code point. |
+| [GetGlyph](#uid-928bce08d1) | Retrieves the glyph index that corresponds to the specified Unicode code point. |
+| [GetGlyphs](#uid-d213acbde0) | No summary available. |
+| [GetMappedRanges](#uid-76a2fe12c3) | Returns an enumerator that iterates through all code point ranges mapped by this instance. |
+| [TryGetGlyph](#uid-7c39a96845) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5861530b4d"></span>
+
+### ContainsGlyph Method
+
+Determines whether the character map contains a glyph for the specified Unicode code point.
+
+```csharp
+public bool ContainsGlyph(int codePoint)
+```
+
+#### Parameters
+
+`codePoint` int
+
+The Unicode code point to check for the presence of a corresponding glyph.
+
+
+#### Returns
+
+bool
+
+true if a glyph exists for the specified code point; otherwise, false.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-928bce08d1"></span>
+
+### GetGlyph Method
+
+Retrieves the glyph index that corresponds to the specified Unicode code point.
+
+```csharp
+public ushort GetGlyph(int codePoint)
+```
+
+#### Parameters
+
+`codePoint` int
+
+The Unicode code point for which to obtain the glyph index.
+
+
+#### Returns
+
+ushort
+
+The glyph index associated with the specified code point. Returns 0 if the code point is not mapped to any
+glyph.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d213acbde0"></span>
+
+### GetGlyphs Method
+
+```csharp
+public void GetGlyphs(ReadOnlySpan<int> codePoints, Span<ushort> glyphIds)
+```
+
+#### Parameters
+
+`codePoints` ReadOnlySpan&lt;int&gt;
+
+
+`glyphIds` Span&lt;ushort&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-76a2fe12c3"></span>
+
+### GetMappedRanges Method
+
+Returns an enumerator that iterates through all code point ranges mapped by this instance.
+
+```csharp
+public Avalonia.Media.Fonts.Tables.Cmap.CodepointRangeEnumerator GetMappedRanges()
+```
+
+#### Returns
+
+[Avalonia.Media.Fonts.Tables.Cmap.CodepointRangeEnumerator](xref:Avalonia.Media.Fonts.Tables.Cmap.CodepointRangeEnumerator)
+
+A [Avalonia.Media.Fonts.Tables.Cmap.CodepointRangeEnumerator](xref:Avalonia.Media.Fonts.Tables.Cmap.CodepointRangeEnumerator) that can be used to enumerate the mapped code point ranges.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7c39a96845"></span>
+
+### TryGetGlyph Method
+
+```csharp
+public bool TryGetGlyph(int codePoint, ushort& glyphId)
+```
+
+#### Parameters
+
+`codePoint` int
+
+
+`glyphId` ushort&amp;
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Item](#uid-1b1fc3576d) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1b1fc3576d"></span>
+
+### Item Property
+
+```csharp
+public ushort Item { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

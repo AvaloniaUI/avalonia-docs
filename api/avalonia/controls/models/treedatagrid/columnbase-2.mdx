@@ -1,0 +1,189 @@
+---
+title: 'ColumnBase<TModel, TValue>'
+hide_title: true
+slug: '/avalonia/controls/models/treedatagrid/columnbase-2'
+uid: 'Avalonia.Controls.Models.TreeDataGrid.ColumnBase`2'
+commentId: 'T:Avalonia.Controls.Models.TreeDataGrid.ColumnBase`2'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.TreeDataGrid'
+assembly: 'Avalonia.Controls.TreeDataGrid'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Models.TreeDataGrid'
+tfms:
+  - 'net8.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ColumnBase&lt;TModel, TValue&gt; Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Models.TreeDataGrid</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Base class for columns which select cell values from a model.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class ColumnBase<TModel, TValue>
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ColumnBase&lt;&gt; <span className="apiref-page__relation-separator">-&gt;</span> ColumnBase&lt;TModel, TValue&gt;
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [ColumnBase&lt;TModel, TValue&gt; (2 overloads)](#uid-3cff8543b3) | No summary available. |
+
+<span id="uid-3cff8543b3"></span>
+
+### ColumnBase&lt;TModel, TValue&gt; overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b1767d5b21"></span>
+
+#### ColumnBase&lt;TModel, TValue&gt; Constructor
+
+```csharp
+public ColumnBase<TModel, TValue>(object header, Func<TModel, TValue> valueSelector, Avalonia.Experimental.Data.TypedBinding<TIn,TOut><TModel, TValue> binding, Nullable<Avalonia.Controls.GridLength> width, Avalonia.Controls.Models.TreeDataGrid.ColumnOptions<TModel><TModel> options)
+```
+
+##### Parameters
+
+`header` object
+
+
+`valueSelector` Func&lt;TModel, TValue&gt;
+
+
+`binding` Avalonia.Experimental.Data.TypedBinding&lt;TIn,TOut&gt;&lt;TModel, TValue&gt;
+
+
+`width` Nullable&lt;[Avalonia.Controls.GridLength](xref:Avalonia.Controls.GridLength)&gt;
+
+
+`options` Avalonia.Controls.Models.TreeDataGrid.ColumnOptions&lt;TModel&gt;&lt;TModel&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e69456dca3"></span>
+
+#### ColumnBase&lt;TModel, TValue&gt; Constructor
+
+```csharp
+public ColumnBase<TModel, TValue>(object header, System.Linq.Expressions.Expression<Func<TModel,TValue>> getter, Action<TModel, TValue> setter, Nullable<Avalonia.Controls.GridLength> width, Avalonia.Controls.Models.TreeDataGrid.ColumnOptions<TModel><TModel> options)
+```
+
+##### Parameters
+
+`header` object
+
+
+`getter` System.Linq.Expressions.Expression&lt;Func&lt;TModel,TValue&gt;&gt;
+
+
+`setter` Action&lt;TModel, TValue&gt;
+
+
+`width` Nullable&lt;[Avalonia.Controls.GridLength](xref:Avalonia.Controls.GridLength)&gt;
+
+
+`options` Avalonia.Controls.Models.TreeDataGrid.ColumnOptions&lt;TModel&gt;&lt;TModel&gt;
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [GetComparison](#uid-13c69c1039) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-13c69c1039"></span>
+
+### GetComparison Method
+
+```csharp
+public Comparison<TModel> GetComparison(System.ComponentModel.ListSortDirection direction)
+```
+
+#### Parameters
+
+`direction` System.ComponentModel.ListSortDirection
+
+
+#### Returns
+
+Comparison&lt;TModel&gt;
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Binding](#uid-2243e11000) | Gets a binding which selects the column value from the model. |
+| [ValueSelector](#uid-4a38eca3c4) | Gets the function which selects the column value from the model. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2243e11000"></span>
+
+### Binding Property
+
+Gets a binding which selects the column value from the model.
+
+```csharp
+public Avalonia.Experimental.Data.TypedBinding<TIn,TOut><TModel, TValue> Binding { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4a38eca3c4"></span>
+
+### ValueSelector Property
+
+Gets the function which selects the column value from the model.
+
+```csharp
+public Func<TModel, TValue> ValueSelector { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

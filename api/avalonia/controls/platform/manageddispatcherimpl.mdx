@@ -1,0 +1,223 @@
+---
+title: 'ManagedDispatcherImpl'
+hide_title: true
+slug: '/avalonia/controls/platform/manageddispatcherimpl'
+uid: 'Avalonia.Controls.Platform.ManagedDispatcherImpl'
+commentId: 'T:Avalonia.Controls.Platform.ManagedDispatcherImpl'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Platform'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ManagedDispatcherImpl Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Platform</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Platform/ManagedDispatcherImpl.cs">ManagedDispatcherImpl.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class ManagedDispatcherImpl
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> ManagedDispatcherImpl
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="../../threading/icontrolleddispatcherimpl">IControlledDispatcherImpl</a>, <a href="../../threading/idispatcherimpl">IDispatcherImpl</a>, <a href="../../threading/idispatcherimplwithpendinginput">IDispatcherImplWithPendingInput</a>
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [ManagedDispatcherImpl](#uid-2868e17bf4) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2868e17bf4"></span>
+
+### ManagedDispatcherImpl Constructor
+
+```csharp
+public ManagedDispatcherImpl(Avalonia.Controls.Platform.ManagedDispatcherImpl.IManagedDispatcherInputProvider inputProvider)
+```
+
+#### Parameters
+
+`inputProvider` [Avalonia.Controls.Platform.ManagedDispatcherImpl.IManagedDispatcherInputProvider](xref:Avalonia.Controls.Platform.ManagedDispatcherImpl.IManagedDispatcherInputProvider)
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [RunLoop](#uid-c2be68c290) | No summary available. |
+| [Signal](#uid-d8dc46671a) | No summary available. |
+| [UpdateTimer](#uid-1d763fa82e) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c2be68c290"></span>
+
+### RunLoop Method
+
+```csharp
+public void RunLoop(System.Threading.CancellationToken token)
+```
+
+#### Parameters
+
+`token` System.Threading.CancellationToken
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d8dc46671a"></span>
+
+### Signal Method
+
+```csharp
+public void Signal()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1d763fa82e"></span>
+
+### UpdateTimer Method
+
+```csharp
+public void UpdateTimer(Nullable<long> dueTimeInMs)
+```
+
+#### Parameters
+
+`dueTimeInMs` Nullable&lt;long&gt;
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [CanQueryPendingInput](#uid-0330f85e43) | No summary available. |
+| [CurrentThreadIsLoopThread](#uid-0d306eb2f5) | No summary available. |
+| [HasPendingInput](#uid-56407130c3) | No summary available. |
+| [Now](#uid-dfd6ad815b) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0330f85e43"></span>
+
+### CanQueryPendingInput Property
+
+```csharp
+public bool CanQueryPendingInput { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0d306eb2f5"></span>
+
+### CurrentThreadIsLoopThread Property
+
+```csharp
+public bool CurrentThreadIsLoopThread { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-56407130c3"></span>
+
+### HasPendingInput Property
+
+```csharp
+public bool HasPendingInput { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-dfd6ad815b"></span>
+
+### Now Property
+
+```csharp
+public long Now { get; set; }
+```
+
+</section>
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [Signaled](#uid-ae25cc2c8c) | No summary available. |
+| [Timer](#uid-812e18a620) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ae25cc2c8c"></span>
+
+### Signaled Event
+
+```csharp
+public event Action Signaled
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-812e18a620"></span>
+
+### Timer Event
+
+```csharp
+public event Action Timer
+```
+
+</section>
+
+</ApiRefPage>
+

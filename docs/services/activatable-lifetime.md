@@ -1,0 +1,173 @@
+---
+id: activatable-lifetime
+title: Activatable lifetime
+description: API reference for IActivatableLifetime, the service that exposes application activation and deactivation events and background state methods.
+doc-type: reference
+---
+
+The [`IActivatableLifetime`](/api/avalonia/controls/applicationlifetimes/iactivatablelifetime) service defines a set of methods and events related to the activation and deactivation lifecycle of an app. `IActivatableLifetime` is a global app-level service that is accessed from the application instance using the `TryGetFeature` method:
+
+```csharp
+Application.Current.TryGetFeature<IActivatableLifetime>();
+```
+
+## Events
+
+### Activated
+
+An event that is raised when the application is `Activated` for various reasons as described by the `ActivationKind` enumeration.
+
+### Deactivated
+
+An event that is raised when the application is `Deactivated` for various reasons as described by the `ActivationKind` enumeration.
+
+## Methods
+
+### TryLeaveBackground
+
+Tells the application to attempt to leave background state.
+
+Returns `true` if it was possible on the given platform. Otherwise, returns `false`.
+
+**Example:** `[NSApp unhide]` on macOS.
+
+### TryEnterBackground
+
+Tells the application to attempt to enter background state.
+
+Returns `true` if it was possible on the given platform. Otherwise, returns `false`.
+
+**Example:** `[NSApp hide]` on macOS.
+
+## Subscribing early for startup events
+
+To receive activation events that occur at app startup (for example, when the user double-clicks an associated file to launch the app), subscribe to `Activated` inside `OnFrameworkInitializationCompleted` before any `await` calls. If the handler is attached too late, the startup activation event may have already fired and will be missed.
+
+```csharp
+public override void OnFrameworkInitializationCompleted()
+{
+    if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktopLifetime)
+    {
+        desktopLifetime.MainWindow = new MainWindow();
+
+        if (this.TryGetFeature<IActivatableLifetime>() is { } activatableLifetime)
+        {
+            activatableLifetime.Activated += (_, e) =>
+            {
+                if (e is ProtocolActivatedEventArgs protocolArgs)
+                {
+                    Console.WriteLine($"Protocol: {protocolArgs.Uri}");
+                }
+                else if (e is FileActivatedEventArgs fileArgs)
+                {
+                    Console.WriteLine($"File: {fileArgs.Files.FirstOrDefault()?.Path}");
+                }
+            };
+        }
+    }
+
+    base.OnFrameworkInitializationCompleted();
+}
+```
+
+:::caution
+Use the correct event args type for each activation kind. `ProtocolActivatedEventArgs` handles URI/deep link activation (`ActivationKind.OpenUri`). `FileActivatedEventArgs` handles file association activation (`ActivationKind.File`). Checking for `ProtocolActivatedEventArgs` when a file is opened will not match, and the event will appear to not fire.
+:::
+
+## Examples
+
+### Entering and exiting background state
+
+You may want an app to pause or stop some code processing when it is in the background, e.g., pausing multimedia playback, or disabling recurrent HTTP requests.
+
+```csharp
+if (Application.Current?.TryGetFeature<IActivatableLifetime>() is { } activatableLifetime)
+{
+    activatableLifetime.Activated += (sender, args) =>
+    {
+        if (args.Kind == ActivationKind.Background)
+        {
+            Console.WriteLine($"App exited background");
+        }
+    };
+    activatableLifetime.Deactivated += (sender, args) =>
+    {
+        if (args.Kind == ActivationKind.Background)
+        {
+            Console.WriteLine($"App entered background");
+        }
+    };
+}
+```
+
+### Handling URI activation
+
+Your app may need to support protocol activation, more commonly called deep linking. Link schemas must be registered in the system and associated with the app. Once registered, the OS can redirect the links to the app.
+
+Typical use cases are navigating to a specific page, or creating a [redirect URL in OAuth operations](https://www.oauth.com/oauth2-servers/oauth-native-apps/redirect-urls-for-native-apps/).
+
+```csharp
+if (Application.Current?.TryGetFeature<IActivatableLifetime>() is { } activatableLifetime)
+{
+    activatableLifetime.Activated += (s, a) =>
+   {
+        if (a is ProtocolActivatedEventArgs protocolArgs && protocolArgs.Kind == ActivationKind.OpenUri)
+        {
+            Console.WriteLine($"App activated via Uri: {protocolArgs.Uri}");
+        }
+   };
+}
+```
+
+:::note
+Some platforms have specific steps to update the manifest and enable protocol handling.
+
+**macOS and iOS:** Add `CFBundleURLTypes` with `CFBundleURLSchemes` segment to your `Info.plist`. See [Creating an app custom URL scheme](https://rderik.com/blog/creating-app-custom-url-scheme/) (skip the Swift part, which is handled by `IActivatableLifetime`).
+
+**Android:** Add `intent-filter` with specific `android:scheme` to your `AndroidManifest.xml`. See [Deep linking on Android](https://developer.android.com/training/app-links/deep-linking) for details (skip Kotlin/Java parts, which are handled by `IActivatableLifetime`).
+:::
+
+### Handling file activation
+
+Your app may need to handle file activation, which occurs when the OS launches or foregrounds your app (usually because the user opens a file associated with it). Like link schemas, file type associations must be registered in the system and linked to your app. Once registered, opening an associated file also opens your app via this event.
+
+Typical use cases are opening a document, importing a file, or processing files passed from the OS shell.
+
+```csharp
+if (Application.Current?.TryGetFeature<IActivatableLifetime>() is { } activatableLifetime)
+{
+    activatableLifetime.Activated += (s, a) =>
+    {
+        if (a is FileActivatedEventArgs fileArgs && fileArgs.Kind == ActivationKind.File)
+        {
+            foreach (var file in fileArgs.Files)
+            {
+                Console.WriteLine($"App activated via file: {file.Name}");
+            }
+        }
+    };
+}
+```
+
+:::note
+Some platforms have specific steps to update the manifest and enable file type associations.
+
+**macOS and iOS:** Add `CFBundleDocumentTypes` to your `Info.plist` to declare the file types your app handles. See the [Apple documentation](https://developer.apple.com/documentation/bundleresources/information_property_list/cfbundledocumenttypes) for details.
+
+**Android:** Add an `intent-filter` with `action.VIEW` and the appropriate `data` MIME type or file extension to your `AndroidManifest.xml`. See the [Android documentation](https://developer.android.com/training/data-storage/shared/documents-files) for details (skip Kotlin/Java parts, as it's handled by `IActivatableLifetime`).
+:::
+
+## Platform compatibility
+
+| Feature        |  Windows | macOS | Linux | Browser | Android |  iOS |
+|---------------|-------|-------|-------|-------|-------|-------|
+| `ActivationKind.Background` | ✖ | ✔ | ✖ | ✔ | ✔ | ✔ |
+| `ActivationKind.File` | ✖ | ✔ | ✖ | ✖ | ✔ | ✔ |
+| `ActivationKind.OpenUri` | ✖ | ✔ | ✖ | ✖ | ✔ | ✔ |
+| `ActivationKind.Reopen` | ✖ | ✔ | ✖ | ✖ | ✖ | ✖ |
+| `TryLeaveBackground`  | ✖ | ✔ | ✖ | ✖ | ✖ | ✖ |
+| `TryEnterBackground` | ✖ | ✔ | ✖ | ✖ | ✔ | ✖ |
+
+## See also
+
+- [IActivatableLifetime issue and discussion (#15316)](https://github.com/AvaloniaUI/Avalonia/issues/15316)

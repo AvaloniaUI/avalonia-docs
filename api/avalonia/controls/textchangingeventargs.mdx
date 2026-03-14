@@ -1,0 +1,127 @@
+---
+title: 'TextChangingEventArgs'
+hide_title: true
+slug: '/avalonia/controls/textchangingeventargs'
+uid: 'Avalonia.Controls.TextChangingEventArgs'
+commentId: 'T:Avalonia.Controls.TextChangingEventArgs'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">TextChangingEventArgs Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Controls/TextChangingEventArgs.cs">TextChangingEventArgs.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Provides data specific to a [Avalonia.Controls.TextBox.TextChanging](xref:Avalonia.Controls.TextBox.TextChanging) event.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class TextChangingEventArgs
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> EventArgs <span className="apiref-page__relation-separator">-&gt;</span> <a href="../interactivity/routedeventargs">RoutedEventArgs</a> <span className="apiref-page__relation-separator">-&gt;</span> TextChangingEventArgs
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [TextChangingEventArgs (2 overloads)](#uid-561dc7adf0) | Initializes a new instance of the [Avalonia.Controls.TextChangingEventArgs](xref:Avalonia.Controls.TextChangingEventArgs) class. |
+
+<span id="uid-561dc7adf0"></span>
+
+### TextChangingEventArgs overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0d68db47d0"></span>
+
+#### TextChangingEventArgs Constructor
+
+Initializes a new instance of the [Avalonia.Controls.TextChangingEventArgs](xref:Avalonia.Controls.TextChangingEventArgs) class.
+
+```csharp
+public TextChangingEventArgs(Avalonia.Interactivity.RoutedEvent routedEvent)
+```
+
+##### Parameters
+
+`routedEvent` [Avalonia.Interactivity.RoutedEvent](xref:Avalonia.Interactivity.RoutedEvent)
+
+The routed event associated with these event args.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b0f68784bb"></span>
+
+#### TextChangingEventArgs Constructor
+
+Initializes a new instance of the [Avalonia.Controls.TextChangingEventArgs](xref:Avalonia.Controls.TextChangingEventArgs) class.
+
+```csharp
+public TextChangingEventArgs(Avalonia.Interactivity.RoutedEvent routedEvent, Avalonia.Interactivity.Interactive source)
+```
+
+##### Parameters
+
+`routedEvent` [Avalonia.Interactivity.RoutedEvent](xref:Avalonia.Interactivity.RoutedEvent)
+
+The routed event associated with these event args.
+
+
+`source` [Avalonia.Interactivity.Interactive](xref:Avalonia.Interactivity.Interactive)
+
+The source object that raised the routed event.
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Handled](../interactivity/routedeventargs.mdx#uid-204d2af354) | Gets or sets a value indicating whether the routed event has already been handled. Inherited from [RoutedEventArgs](../interactivity/routedeventargs.mdx). |
+| [Route](../interactivity/routedeventargs.mdx#uid-751be73db9) | Gets or sets the routing strategy (direct, bubbling, or tunneling) of the routed event. Inherited from [RoutedEventArgs](../interactivity/routedeventargs.mdx). |
+| [RoutedEvent](../interactivity/routedeventargs.mdx#uid-4e102999d9) | Gets or sets the routed event associated with these event args. Inherited from [RoutedEventArgs](../interactivity/routedeventargs.mdx). |
+| [Source](../interactivity/routedeventargs.mdx#uid-4385b523d5) | Gets or sets the source object that raised the routed event. Inherited from [RoutedEventArgs](../interactivity/routedeventargs.mdx). |
+
+</ApiRefPage>
+

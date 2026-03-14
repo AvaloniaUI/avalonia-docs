@@ -1,0 +1,206 @@
+---
+title: 'KeyEventArgs'
+hide_title: true
+slug: '/avalonia/input/keyeventargs'
+uid: 'Avalonia.Input.KeyEventArgs'
+commentId: 'T:Avalonia.Input.KeyEventArgs'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Input'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">KeyEventArgs Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Input</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Input/KeyEventArgs.cs">KeyEventArgs.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Provides information specific to a keyboard event.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class KeyEventArgs
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> EventArgs <span className="apiref-page__relation-separator">-&gt;</span> <a href="../interactivity/routedeventargs">RoutedEventArgs</a> <span className="apiref-page__relation-separator">-&gt;</span> KeyEventArgs
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="ikeymodifierseventargs">IKeyModifiersEventArgs</a>
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [KeyEventArgs](#uid-28c328981c) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-28c328981c"></span>
+
+### KeyEventArgs Constructor
+
+```csharp
+public KeyEventArgs()
+```
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Key](#uid-c74fcb4c9f) | Gets the virtual-key for the associated event. A given physical key can result in different virtual keys depending on the current keyboard layout. This is the key that is generally referred to when creating keyboard shortcuts. |
+| [KeyDeviceType](#uid-b372dcbc8c) | Type of the device that fire the event |
+| [KeyModifiers](#uid-de779f0376) | No summary available. |
+| [KeySymbol](#uid-59ae3f9572) | Gets the unicode symbol of the key, or null if none is applicable. |
+| [PhysicalKey](#uid-64f9cd5a30) | Gets the physical key for the associated event. |
+| [Handled](../interactivity/routedeventargs.mdx#uid-204d2af354) | Gets or sets a value indicating whether the routed event has already been handled. Inherited from [RoutedEventArgs](../interactivity/routedeventargs.mdx). |
+| [Route](../interactivity/routedeventargs.mdx#uid-751be73db9) | Gets or sets the routing strategy (direct, bubbling, or tunneling) of the routed event. Inherited from [RoutedEventArgs](../interactivity/routedeventargs.mdx). |
+| [RoutedEvent](../interactivity/routedeventargs.mdx#uid-4e102999d9) | Gets or sets the routed event associated with these event args. Inherited from [RoutedEventArgs](../interactivity/routedeventargs.mdx). |
+| [Source](../interactivity/routedeventargs.mdx#uid-4385b523d5) | Gets or sets the source object that raised the routed event. Inherited from [RoutedEventArgs](../interactivity/routedeventargs.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c74fcb4c9f"></span>
+
+### Key Property
+
+Gets the virtual-key for the associated event.
+A given physical key can result in different virtual keys depending on the current keyboard layout.
+This is the key that is generally referred to when creating keyboard shortcuts.
+
+For example, when pressing the key located at the `Z` position on standard US English QWERTY keyboard,
+this property returns:
+- [Avalonia.Input.Key.Z](xref:Avalonia.Input.Key.Z) for an English (QWERTY) layout
+- [Avalonia.Input.Key.W](xref:Avalonia.Input.Key.W) for a French (AZERTY) layout
+- [Avalonia.Input.Key.Y](xref:Avalonia.Input.Key.Y) for a German (QWERTZ) layout
+- [Avalonia.Input.Key.Z](xref:Avalonia.Input.Key.Z) for a Russian (JCUKEN) layout
+
+```csharp
+public Avalonia.Input.Key Key { get; set; }
+```
+
+#### Remarks
+
+This property should be used for letter-related shortcuts only.
+Prefer using [Avalonia.Input.KeyEventArgs.PhysicalKey](xref:Avalonia.Input.KeyEventArgs.PhysicalKey) if you need to refer to a key given its position on the keyboard (a
+common usage is moving the player with WASD-like keys in games), or [Avalonia.Input.KeyEventArgs.KeySymbol](xref:Avalonia.Input.KeyEventArgs.KeySymbol) if you want to know
+which character the key will output.
+Avoid using this for shortcuts related to punctuation keys, as they differ wildly depending on keyboard layouts.
+
+#### See also
+
+- [Avalonia.Input.KeyEventArgs.PhysicalKey](xref:Avalonia.Input.KeyEventArgs.PhysicalKey)
+- [Avalonia.Input.KeyEventArgs.KeySymbol](xref:Avalonia.Input.KeyEventArgs.KeySymbol)
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b372dcbc8c"></span>
+
+### KeyDeviceType Property
+
+Type of the device that fire the event
+
+```csharp
+public Avalonia.Input.KeyDeviceType KeyDeviceType { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-de779f0376"></span>
+
+### KeyModifiers Property
+
+```csharp
+public Avalonia.Input.KeyModifiers KeyModifiers { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-59ae3f9572"></span>
+
+### KeySymbol Property
+
+Gets the unicode symbol of the key, or null if none is applicable.
+
+For example, when pressing the key located at the `Z` position on standard US English QWERTY keyboard,
+this property returns:
+- `z` for an English (QWERTY) layout
+- `w` for a French (AZERTY) layout
+- `y` for a German (QWERTZ) layout
+- `я` for a Russian (JCUKEN) layout
+
+```csharp
+public string KeySymbol { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-64f9cd5a30"></span>
+
+### PhysicalKey Property
+
+Gets the physical key for the associated event.
+
+This value is independent of the current keyboard layout and usually correspond to the key printed on a standard
+US English QWERTY keyboard.
+
+```csharp
+public Avalonia.Input.PhysicalKey PhysicalKey { get; set; }
+```
+
+#### Remarks
+
+Use this property if you need to refer to a key given its position on the keyboard (a common usage is moving the
+player with WASD-like keys).
+
+#### See also
+
+- [Avalonia.Input.KeyEventArgs.Key](xref:Avalonia.Input.KeyEventArgs.Key)
+- [Avalonia.Input.KeyEventArgs.KeySymbol](xref:Avalonia.Input.KeyEventArgs.KeySymbol)
+
+</section>
+
+</ApiRefPage>
+

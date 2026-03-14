@@ -1,0 +1,330 @@
+---
+title: 'DispatcherTimer'
+hide_title: true
+slug: '/avalonia/threading/dispatchertimer'
+uid: 'Avalonia.Threading.DispatcherTimer'
+commentId: 'T:Avalonia.Threading.DispatcherTimer'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Threading'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">DispatcherTimer Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Threading</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Threading/DispatcherTimer.cs">DispatcherTimer.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A timer that is integrated into the Dispatcher queues, and will
+be processed after a given amount of time at a specified priority.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class DispatcherTimer
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> DispatcherTimer
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [DispatcherTimer (3 overloads)](#uid-c83de3d8be) | Creates a timer that uses theUI thread's Dispatcher2 to process the timer event at background priority. |
+
+<span id="uid-c83de3d8be"></span>
+
+### DispatcherTimer overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-fc899f7790"></span>
+
+#### DispatcherTimer Constructor
+
+Creates a timer that uses theUI thread's Dispatcher2 to
+process the timer event at background priority.
+
+```csharp
+public DispatcherTimer()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d116c72116"></span>
+
+#### DispatcherTimer Constructor
+
+Creates a timer that uses the UI thread's Dispatcher2 to
+process the timer event at the specified priority.
+
+```csharp
+public DispatcherTimer(Avalonia.Threading.DispatcherPriority priority)
+```
+
+##### Parameters
+
+`priority` [Avalonia.Threading.DispatcherPriority](xref:Avalonia.Threading.DispatcherPriority)
+
+The priority to process the timer at.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-97fafa82a4"></span>
+
+#### DispatcherTimer Constructor
+
+Creates a timer that uses the UI thread's Dispatcher2 to
+process the timer event at the specified priority after the specified timeout.
+
+```csharp
+public DispatcherTimer(TimeSpan interval, Avalonia.Threading.DispatcherPriority priority, EventHandler callback)
+```
+
+##### Parameters
+
+`interval` TimeSpan
+
+The interval to tick the timer after.
+
+
+`priority` [Avalonia.Threading.DispatcherPriority](xref:Avalonia.Threading.DispatcherPriority)
+
+The priority to process the timer at.
+
+
+`callback` EventHandler
+
+The callback to call when the timer ticks.
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Run](#uid-2b5f5f961d) | No summary available. |
+| [RunOnce](#uid-67b1f4f56d) | Runs a method once, after the specified interval. |
+| [Start](#uid-54f94d09c4) | Starts the timer. |
+| [Stop](#uid-a33fed7146) | Stops the timer. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2b5f5f961d"></span>
+
+### Run Method
+
+```csharp
+public IDisposable Run(Func<bool> action, TimeSpan interval, Avalonia.Threading.DispatcherPriority priority)
+```
+
+#### Parameters
+
+`action` Func&lt;bool&gt;
+
+
+`interval` TimeSpan
+
+
+`priority` [Avalonia.Threading.DispatcherPriority](xref:Avalonia.Threading.DispatcherPriority)
+
+
+#### Returns
+
+IDisposable
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-67b1f4f56d"></span>
+
+### RunOnce Method
+
+Runs a method once, after the specified interval.
+
+```csharp
+public IDisposable RunOnce(Action action, TimeSpan interval, Avalonia.Threading.DispatcherPriority priority)
+```
+
+#### Parameters
+
+`action` Action
+
+The method to call after the interval has elapsed.
+
+
+`interval` TimeSpan
+
+The interval after which to call the method.
+
+
+`priority` [Avalonia.Threading.DispatcherPriority](xref:Avalonia.Threading.DispatcherPriority)
+
+The priority to use.
+
+
+#### Returns
+
+IDisposable
+
+An [IDisposable](xref:System.IDisposable) used to cancel the timer.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-54f94d09c4"></span>
+
+### Start Method
+
+Starts the timer.
+
+```csharp
+public void Start()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a33fed7146"></span>
+
+### Stop Method
+
+Stops the timer.
+
+```csharp
+public void Stop()
+```
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Dispatcher](#uid-15af505ee6) | Gets the dispatcher this timer is associated with. |
+| [Interval](#uid-dfa363fbd7) | Gets or sets the time between timer ticks. |
+| [IsEnabled](#uid-b8bf5f8e8d) | Gets or sets whether the timer is running. |
+| [Tag](#uid-dbb68dcdf3) | Any data that the caller wants to pass along with the timer. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-15af505ee6"></span>
+
+### Dispatcher Property
+
+Gets the dispatcher this timer is associated with.
+
+```csharp
+public Avalonia.Threading.Dispatcher Dispatcher { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-dfa363fbd7"></span>
+
+### Interval Property
+
+Gets or sets the time between timer ticks.
+
+```csharp
+public TimeSpan Interval { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b8bf5f8e8d"></span>
+
+### IsEnabled Property
+
+Gets or sets whether the timer is running.
+
+```csharp
+public bool IsEnabled { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-dbb68dcdf3"></span>
+
+### Tag Property
+
+Any data that the caller wants to pass along with the timer.
+
+```csharp
+public object Tag { get; set; }
+```
+
+</section>
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [Tick](#uid-1ce5b2923e) | Occurs when the specified timer interval has elapsed and the timer is enabled. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1ce5b2923e"></span>
+
+### Tick Event
+
+Occurs when the specified timer interval has elapsed and the
+timer is enabled.
+
+```csharp
+public event EventHandler Tick
+```
+
+</section>
+
+</ApiRefPage>
+

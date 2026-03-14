@@ -1,0 +1,161 @@
+---
+title: 'LogicalTreeAttachmentEventArgs'
+hide_title: true
+slug: '/avalonia/logicaltree/logicaltreeattachmenteventargs'
+uid: 'Avalonia.LogicalTree.LogicalTreeAttachmentEventArgs'
+commentId: 'T:Avalonia.LogicalTree.LogicalTreeAttachmentEventArgs'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.LogicalTree'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">LogicalTreeAttachmentEventArgs Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.LogicalTree</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/LogicalTree/LogicalTreeAttachmentEventArgs.cs">LogicalTreeAttachmentEventArgs.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Holds the event arguments for the [Avalonia.LogicalTree.ILogical.AttachedToLogicalTree](xref:Avalonia.LogicalTree.ILogical.AttachedToLogicalTree) and
+[Avalonia.LogicalTree.ILogical.DetachedFromLogicalTree](xref:Avalonia.LogicalTree.ILogical.DetachedFromLogicalTree) events.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class LogicalTreeAttachmentEventArgs
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> EventArgs <span className="apiref-page__relation-separator">-&gt;</span> LogicalTreeAttachmentEventArgs
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [LogicalTreeAttachmentEventArgs](#uid-549559faf1) | Initializes a new instance of the [Avalonia.LogicalTree.LogicalTreeAttachmentEventArgs](xref:Avalonia.LogicalTree.LogicalTreeAttachmentEventArgs) class. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-549559faf1"></span>
+
+### LogicalTreeAttachmentEventArgs Constructor
+
+Initializes a new instance of the [Avalonia.LogicalTree.LogicalTreeAttachmentEventArgs](xref:Avalonia.LogicalTree.LogicalTreeAttachmentEventArgs) class.
+
+```csharp
+public LogicalTreeAttachmentEventArgs(Avalonia.LogicalTree.ILogicalRoot root, Avalonia.LogicalTree.ILogical source, Avalonia.LogicalTree.ILogical parent)
+```
+
+#### Parameters
+
+`root` [Avalonia.LogicalTree.ILogicalRoot](xref:Avalonia.LogicalTree.ILogicalRoot)
+
+The root of the logical tree.
+
+
+`source` [Avalonia.LogicalTree.ILogical](xref:Avalonia.LogicalTree.ILogical)
+
+The control being attached/detached.
+
+
+`parent` [Avalonia.LogicalTree.ILogical](xref:Avalonia.LogicalTree.ILogical)
+
+The [Avalonia.LogicalTree.LogicalTreeAttachmentEventArgs.Parent](xref:Avalonia.LogicalTree.LogicalTreeAttachmentEventArgs.Parent).
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Parent](#uid-211343dc8d) | Gets the control that [Avalonia.LogicalTree.LogicalTreeAttachmentEventArgs.Source](xref:Avalonia.LogicalTree.LogicalTreeAttachmentEventArgs.Source) is being attached to or detached from. |
+| [Root](#uid-4097f192b8) | Gets the root of the logical tree that the control is being attached to or detached from. |
+| [Source](#uid-0f9181ef4c) | Gets the control that was attached or detached from the logical tree. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-211343dc8d"></span>
+
+### Parent Property
+
+Gets the control that [Avalonia.LogicalTree.LogicalTreeAttachmentEventArgs.Source](xref:Avalonia.LogicalTree.LogicalTreeAttachmentEventArgs.Source) is being attached to or detached from.
+
+```csharp
+public Avalonia.LogicalTree.ILogical Parent { get; set; }
+```
+
+#### Remarks
+
+For logical tree attachment, holds the new logical parent of [Avalonia.LogicalTree.LogicalTreeAttachmentEventArgs.Source](xref:Avalonia.LogicalTree.LogicalTreeAttachmentEventArgs.Source). For
+detachment, holds the old logical parent of [Avalonia.LogicalTree.LogicalTreeAttachmentEventArgs.Source](xref:Avalonia.LogicalTree.LogicalTreeAttachmentEventArgs.Source). If the detachment event
+was caused by a top-level control being closed, then this property will be null.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4097f192b8"></span>
+
+### Root Property
+
+Gets the root of the logical tree that the control is being attached to or detached from.
+
+```csharp
+public Avalonia.LogicalTree.ILogicalRoot Root { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0f9181ef4c"></span>
+
+### Source Property
+
+Gets the control that was attached or detached from the logical tree.
+
+```csharp
+public Avalonia.LogicalTree.ILogical Source { get; set; }
+```
+
+#### Remarks
+
+Logical tree attachment events travel down the attached logical tree from the point of
+attachment/detachment, so this control may be different from the control that the
+event is being raised on.
+
+</section>
+
+</ApiRefPage>
+

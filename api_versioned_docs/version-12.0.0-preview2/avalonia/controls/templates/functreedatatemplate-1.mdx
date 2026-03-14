@@ -1,0 +1,129 @@
+---
+title: 'FuncTreeDataTemplate<T>'
+hide_title: true
+slug: '/avalonia/controls/templates/functreedatatemplate-1'
+uid: 'Avalonia.Controls.Templates.FuncTreeDataTemplate`1'
+commentId: 'T:Avalonia.Controls.Templates.FuncTreeDataTemplate`1'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Templates'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">FuncTreeDataTemplate&lt;T&gt; Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Templates</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Controls/Templates/FuncTreeDataTemplate%601.cs">FuncTreeDataTemplate`1.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A template used to build hierarchical data.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class FuncTreeDataTemplate<T>
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> FuncTemplate&lt;object,Control&gt; <span className="apiref-page__relation-separator">-&gt;</span> <a href="funcdatatemplate">FuncDataTemplate</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="functreedatatemplate">FuncTreeDataTemplate</a> <span className="apiref-page__relation-separator">-&gt;</span> FuncTreeDataTemplate&lt;T&gt;
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [FuncTreeDataTemplate&lt;T&gt; (2 overloads)](#uid-73e94e45f4) | No summary available. |
+
+<span id="uid-73e94e45f4"></span>
+
+### FuncTreeDataTemplate&lt;T&gt; overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d2fc273bee"></span>
+
+#### FuncTreeDataTemplate&lt;T&gt; Constructor
+
+```csharp
+public FuncTreeDataTemplate<T>(Func<T, bool> match, Func<T, Avalonia.Controls.INameScope, Avalonia.Controls.Control> build, Func<T, System.Collections.IEnumerable> itemsSelector)
+```
+
+##### Parameters
+
+`match` Func&lt;T, bool&gt;
+
+
+`build` Func&lt;T, [Avalonia.Controls.INameScope](xref:Avalonia.Controls.INameScope), [Avalonia.Controls.Control](xref:Avalonia.Controls.Control)&gt;
+
+
+`itemsSelector` Func&lt;T, System.Collections.IEnumerable&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-77d8fce0cd"></span>
+
+#### FuncTreeDataTemplate&lt;T&gt; Constructor
+
+```csharp
+public FuncTreeDataTemplate<T>(Func<T, Avalonia.Controls.INameScope, Avalonia.Controls.Control> build, Func<T, System.Collections.IEnumerable> itemsSelector)
+```
+
+##### Parameters
+
+`build` Func&lt;T, [Avalonia.Controls.INameScope](xref:Avalonia.Controls.INameScope), [Avalonia.Controls.Control](xref:Avalonia.Controls.Control)&gt;
+
+
+`itemsSelector` Func&lt;T, System.Collections.IEnumerable&gt;
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [BindChildren](functreedatatemplate.mdx#uid-466057c57b) | Inherited from [FuncTreeDataTemplate](functreedatatemplate.mdx). |
+| [Build](funcdatatemplate.mdx#uid-910f460c06) | Creates or recycles a control to display the specified data. Inherited from [FuncDataTemplate](funcdatatemplate.mdx). |
+| [Match](funcdatatemplate.mdx#uid-50eee6cfed) | Checks to see if this data template matches the specified data. Inherited from [FuncDataTemplate](funcdatatemplate.mdx). |
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [Access](funcdatatemplate.mdx#uid-c964539ce7) | The default data template used in the case where no matching data template is found but [Avalonia.Controls.Primitives.AccessText](xref:Avalonia.Controls.Primitives.AccessText) should be used. Inherited from [FuncDataTemplate](funcdatatemplate.mdx). |
+| [Default](funcdatatemplate.mdx#uid-70c1c9b32b) | The default data template used in the case where no matching data template is found. Inherited from [FuncDataTemplate](funcdatatemplate.mdx). |
+
+</ApiRefPage>
+

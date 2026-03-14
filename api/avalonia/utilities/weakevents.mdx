@@ -1,0 +1,138 @@
+---
+title: 'WeakEvents'
+hide_title: true
+slug: '/avalonia/utilities/weakevents'
+uid: 'Avalonia.Utilities.WeakEvents'
+commentId: 'T:Avalonia.Utilities.WeakEvents'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Utilities'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">WeakEvents Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Utilities</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Utilities/WeakEvents.cs">WeakEvents.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class WeakEvents
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> WeakEvents
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [WeakEvents](#uid-663ba98565) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-663ba98565"></span>
+
+### WeakEvents Constructor
+
+```csharp
+public WeakEvents()
+```
+
+</section>
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [AvaloniaPropertyChanged](#uid-6a6d501159) | Represents PropertyChanged event from [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject) |
+| [CollectionChanged](#uid-bde14cac3c) | Represents CollectionChanged event from [System.Collections.Specialized.INotifyCollectionChanged](xref:System.Collections.Specialized.INotifyCollectionChanged) |
+| [CommandCanExecuteChanged](#uid-69e6eb8413) | Represents CanExecuteChanged event from [System.Windows.Input.ICommand](xref:System.Windows.Input.ICommand) |
+| [ThreadSafePropertyChanged](#uid-58cce5e149) | Represents PropertyChanged event from [System.ComponentModel.INotifyPropertyChanged](xref:System.ComponentModel.INotifyPropertyChanged) with auto-dispatching to the UI thread |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6a6d501159"></span>
+
+### AvaloniaPropertyChanged Field
+
+Represents PropertyChanged event from [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject)
+
+```csharp
+public Avalonia.Utilities.WeakEvent<TSender,TEventArgs><Avalonia.AvaloniaObject, Avalonia.AvaloniaPropertyChangedEventArgs> AvaloniaPropertyChanged
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-bde14cac3c"></span>
+
+### CollectionChanged Field
+
+Represents CollectionChanged event from [System.Collections.Specialized.INotifyCollectionChanged](xref:System.Collections.Specialized.INotifyCollectionChanged)
+
+```csharp
+public Avalonia.Utilities.WeakEvent<TSender,TEventArgs><System.Collections.Specialized.INotifyCollectionChanged, System.Collections.Specialized.NotifyCollectionChangedEventArgs> CollectionChanged
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-69e6eb8413"></span>
+
+### CommandCanExecuteChanged Field
+
+Represents CanExecuteChanged event from [System.Windows.Input.ICommand](xref:System.Windows.Input.ICommand)
+
+```csharp
+public Avalonia.Utilities.WeakEvent<TSender,TEventArgs><System.Windows.Input.ICommand, EventArgs> CommandCanExecuteChanged
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-58cce5e149"></span>
+
+### ThreadSafePropertyChanged Field
+
+Represents PropertyChanged event from [System.ComponentModel.INotifyPropertyChanged](xref:System.ComponentModel.INotifyPropertyChanged) with auto-dispatching to the UI thread
+
+```csharp
+public Avalonia.Utilities.WeakEvent<TSender,TEventArgs><System.ComponentModel.INotifyPropertyChanged, System.ComponentModel.PropertyChangedEventArgs> ThreadSafePropertyChanged
+```
+
+</section>
+
+</ApiRefPage>
+

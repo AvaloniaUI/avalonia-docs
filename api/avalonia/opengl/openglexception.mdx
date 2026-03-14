@@ -1,0 +1,207 @@
+---
+title: 'OpenGlException'
+hide_title: true
+slug: '/avalonia/opengl/openglexception'
+uid: 'Avalonia.OpenGL.OpenGlException'
+commentId: 'T:Avalonia.OpenGL.OpenGlException'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.OpenGL'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.OpenGL'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">OpenGlException Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.OpenGL</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.OpenGL</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.OpenGL/OpenGlException.cs">OpenGlException.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class OpenGlException
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Exception <span className="apiref-page__relation-separator">-&gt;</span> OpenGlException
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [OpenGlException](#uid-06058cc1c6) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-06058cc1c6"></span>
+
+### OpenGlException Constructor
+
+```csharp
+public OpenGlException(string message)
+```
+
+#### Parameters
+
+`message` string
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [GetFormattedEglException](#uid-c39bc43fea) | No summary available. |
+| [GetFormattedException (3 overloads)](#uid-9164e2d715) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c39bc43fea"></span>
+
+### GetFormattedEglException Method
+
+```csharp
+public Avalonia.OpenGL.OpenGlException GetFormattedEglException(string funcName, int errorCode)
+```
+
+#### Parameters
+
+`funcName` string
+
+
+`errorCode` int
+
+
+#### Returns
+
+[Avalonia.OpenGL.OpenGlException](xref:Avalonia.OpenGL.OpenGlException)
+
+
+</section>
+
+<span id="uid-9164e2d715"></span>
+
+### GetFormattedException overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e13dbf3029"></span>
+
+#### GetFormattedException Method
+
+```csharp
+public Avalonia.OpenGL.OpenGlException GetFormattedException(string funcName, Avalonia.OpenGL.Egl.EglInterface egl)
+```
+
+##### Parameters
+
+`funcName` string
+
+
+`egl` [Avalonia.OpenGL.Egl.EglInterface](xref:Avalonia.OpenGL.Egl.EglInterface)
+
+
+##### Returns
+
+[Avalonia.OpenGL.OpenGlException](xref:Avalonia.OpenGL.OpenGlException)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6266f1ae53"></span>
+
+#### GetFormattedException Method
+
+```csharp
+public Avalonia.OpenGL.OpenGlException GetFormattedException(string funcName, Avalonia.OpenGL.GlInterface gl)
+```
+
+##### Parameters
+
+`funcName` string
+
+
+`gl` [Avalonia.OpenGL.GlInterface](xref:Avalonia.OpenGL.GlInterface)
+
+
+##### Returns
+
+[Avalonia.OpenGL.OpenGlException](xref:Avalonia.OpenGL.OpenGlException)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c40cbc2f1b"></span>
+
+#### GetFormattedException Method
+
+```csharp
+public Avalonia.OpenGL.OpenGlException GetFormattedException(string funcName, int errorCode)
+```
+
+##### Parameters
+
+`funcName` string
+
+
+`errorCode` int
+
+
+##### Returns
+
+[Avalonia.OpenGL.OpenGlException](xref:Avalonia.OpenGL.OpenGlException)
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [ErrorCode](#uid-a5ff08b80d) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a5ff08b80d"></span>
+
+### ErrorCode Property
+
+```csharp
+public Nullable<int> ErrorCode { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

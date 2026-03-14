@@ -1,0 +1,252 @@
+---
+title: 'Cue'
+hide_title: true
+slug: '/avalonia/animation/cue'
+uid: 'Avalonia.Animation.Cue'
+commentId: 'T:Avalonia.Animation.Cue'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Animation'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">Cue Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Animation</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Animation/Cue.cs">Cue.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Determines the time index for a [Avalonia.Animation.KeyFrame](xref:Avalonia.Animation.KeyFrame).
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct Cue
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> Cue
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;Cue&gt;, IEquatable&lt;double&gt;
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [Cue](#uid-e31f0dba2d) | Sets a new [Avalonia.Animation.Cue](xref:Avalonia.Animation.Cue) object. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e31f0dba2d"></span>
+
+### Cue Constructor
+
+Sets a new [Avalonia.Animation.Cue](xref:Avalonia.Animation.Cue) object.
+
+```csharp
+public Cue(double value)
+```
+
+#### Parameters
+
+`value` double
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Equals (3 overloads)](#uid-b82bd5a70e) | No summary available. |
+| [GetHashCode](#uid-f9e01ff376) | No summary available. |
+| [Parse](#uid-0d48c86aa2) | Parses a string to a [Avalonia.Animation.Cue](xref:Avalonia.Animation.Cue) object. |
+| [ToString](#uid-0d4940c833) | No summary available. |
+
+<span id="uid-b82bd5a70e"></span>
+
+### Equals overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d80277d0be"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(Avalonia.Animation.Cue other)
+```
+
+##### Parameters
+
+`other` [Avalonia.Animation.Cue](xref:Avalonia.Animation.Cue)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-fd6659e9b2"></span>
+
+#### Equals Method
+
+Checks for equality between a [Avalonia.Animation.Cue](xref:Avalonia.Animation.Cue)
+and a [double](xref:System.Double) value.
+
+```csharp
+public bool Equals(double other)
+```
+
+##### Parameters
+
+`other` double
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1c7c0157fe"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(object obj)
+```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f9e01ff376"></span>
+
+### GetHashCode Method
+
+```csharp
+public int GetHashCode()
+```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0d48c86aa2"></span>
+
+### Parse Method
+
+Parses a string to a [Avalonia.Animation.Cue](xref:Avalonia.Animation.Cue) object.
+
+```csharp
+public Avalonia.Animation.Cue Parse(string value, System.Globalization.CultureInfo culture)
+```
+
+#### Parameters
+
+`value` string
+
+
+`culture` System.Globalization.CultureInfo
+
+
+#### Returns
+
+[Avalonia.Animation.Cue](xref:Avalonia.Animation.Cue)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0d4940c833"></span>
+
+### ToString Method
+
+```csharp
+public string ToString()
+```
+
+#### Returns
+
+string
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [CueValue](#uid-bfd7741711) | The normalized percent value, ranging from 0.0 to 1.0 |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-bfd7741711"></span>
+
+### CueValue Property
+
+The normalized percent value, ranging from 0.0 to 1.0
+
+```csharp
+public double CueValue { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

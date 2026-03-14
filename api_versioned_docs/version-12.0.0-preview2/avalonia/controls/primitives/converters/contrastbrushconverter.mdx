@@ -1,0 +1,212 @@
+---
+title: 'ContrastBrushConverter'
+hide_title: true
+slug: '/avalonia/controls/primitives/converters/contrastbrushconverter'
+uid: 'Avalonia.Controls.Primitives.Converters.ContrastBrushConverter'
+commentId: 'T:Avalonia.Controls.Primitives.Converters.ContrastBrushConverter'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.ColorPicker'
+assembly: 'Avalonia.Controls.ColorPicker'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Primitives.Converters'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ContrastBrushConverter Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Primitives.Converters</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.ColorPicker</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.ColorPicker</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Controls.ColorPicker/Converters/ContrastBrushConverter.cs">ContrastBrushConverter.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Gets a [Avalonia.Media.SolidColorBrush](xref:Avalonia.Media.SolidColorBrush), either black or white, depending on the luminance of the supplied color.
+A default color supplied in the converter parameter may be returned if alpha is below the set threshold.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class ContrastBrushConverter
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> ContrastBrushConverter
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="../../../data/converters/ivalueconverter">IValueConverter</a>
+</div>
+</div>
+
+## Remarks
+
+This is a highly-specialized converter for the color picker.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [ContrastBrushConverter](#uid-c73a92138c) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c73a92138c"></span>
+
+### ContrastBrushConverter Constructor
+
+```csharp
+public ContrastBrushConverter()
+```
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Convert](#uid-efb129de57) | Converts a value. |
+| [ConvertBack](#uid-ee30a3b8ee) | Converts a value. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-efb129de57"></span>
+
+### Convert Method
+
+Converts a value.
+
+```csharp
+public object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
+```
+
+#### Parameters
+
+`value` object
+
+The value to convert.
+
+
+`targetType` Type
+
+The type of the target.
+
+
+`parameter` object
+
+A user-defined parameter.
+
+
+`culture` System.Globalization.CultureInfo
+
+The culture to use.
+
+
+#### Returns
+
+object
+
+The converted value.
+
+
+#### Remarks
+
+This method should not throw exceptions. If the value is not convertible, return
+a [Avalonia.Data.BindingNotification](xref:Avalonia.Data.BindingNotification) in an error state. Any exceptions thrown will be
+treated as an application exception.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ee30a3b8ee"></span>
+
+### ConvertBack Method
+
+Converts a value.
+
+```csharp
+public object ConvertBack(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
+```
+
+#### Parameters
+
+`value` object
+
+The value to convert.
+
+
+`targetType` Type
+
+The type of the target.
+
+
+`parameter` object
+
+A user-defined parameter.
+
+
+`culture` System.Globalization.CultureInfo
+
+The culture to use.
+
+
+#### Returns
+
+object
+
+The converted value.
+
+
+#### Remarks
+
+This method should not throw exceptions. If the value is not convertible, return
+a [Avalonia.Data.BindingNotification](xref:Avalonia.Data.BindingNotification) in an error state. Any exceptions thrown will be
+treated as an application exception.
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [AlphaThreshold](#uid-d0c8484ac1) | Gets or sets the alpha channel threshold below which a default color is used instead of black/white. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d0c8484ac1"></span>
+
+### AlphaThreshold Property
+
+Gets or sets the alpha channel threshold below which a default color is used instead of black/white.
+
+```csharp
+public byte AlphaThreshold { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

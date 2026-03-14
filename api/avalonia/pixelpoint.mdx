@@ -1,0 +1,616 @@
+---
+title: 'PixelPoint'
+hide_title: true
+slug: '/avalonia/pixelpoint'
+uid: 'Avalonia.PixelPoint'
+commentId: 'T:Avalonia.PixelPoint'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">PixelPoint Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/PixelPoint.cs">PixelPoint.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Represents a point in device pixels.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct PixelPoint
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> PixelPoint
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;PixelPoint&gt;
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [PixelPoint](#uid-8bd06374ed) | Initializes a new instance of the [Avalonia.PixelPoint](xref:Avalonia.PixelPoint) structure. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8bd06374ed"></span>
+
+### PixelPoint Constructor
+
+Initializes a new instance of the [Avalonia.PixelPoint](xref:Avalonia.PixelPoint) structure.
+
+```csharp
+public PixelPoint(int x, int y)
+```
+
+#### Parameters
+
+`x` int
+
+The X co-ordinate.
+
+
+`y` int
+
+The Y co-ordinate.
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Equals (2 overloads)](#uid-afb83deb7e) | Returns a boolean indicating whether the point is equal to the other given point. |
+| [FromPoint (2 overloads)](#uid-8439f1d3ad) | Converts a [Avalonia.Point](xref:Avalonia.Point) to device pixels using the specified scaling factor. |
+| [FromPointWithDpi (2 overloads)](#uid-1334c8745d) | Converts a [Avalonia.Point](xref:Avalonia.Point) to device pixels using the specified dots per inch (DPI). |
+| [GetHashCode](#uid-61c5d6442e) | Returns a hash code for a [Avalonia.PixelPoint](xref:Avalonia.PixelPoint). |
+| [Parse](#uid-ed7841f67e) | Parses a [Avalonia.PixelPoint](xref:Avalonia.PixelPoint) string. |
+| [ToPoint (2 overloads)](#uid-0a49304e51) | Converts the [Avalonia.PixelPoint](xref:Avalonia.PixelPoint) to a device-independent [Avalonia.Point](xref:Avalonia.Point) using the specified scaling factor. |
+| [ToPointWithDpi (2 overloads)](#uid-3c44106e38) | Converts the [Avalonia.PixelPoint](xref:Avalonia.PixelPoint) to a device-independent [Avalonia.Point](xref:Avalonia.Point) using the specified dots per inch (DPI). |
+| [ToString](#uid-cf9f043d5f) | Returns the string representation of the point. |
+| [WithX](#uid-b00b2ed10d) | Returns a new [Avalonia.PixelPoint](xref:Avalonia.PixelPoint) with the same Y co-ordinate and the specified X co-ordinate. |
+| [WithY](#uid-1261b633a5) | Returns a new [Avalonia.PixelPoint](xref:Avalonia.PixelPoint) with the same X co-ordinate and the specified Y co-ordinate. |
+
+<span id="uid-afb83deb7e"></span>
+
+### Equals overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1d575ecdc4"></span>
+
+#### Equals Method
+
+Returns a boolean indicating whether the point is equal to the other given point.
+
+```csharp
+public bool Equals(Avalonia.PixelPoint other)
+```
+
+##### Parameters
+
+`other` [Avalonia.PixelPoint](xref:Avalonia.PixelPoint)
+
+The other point to test equality against.
+
+
+##### Returns
+
+bool
+
+True if this point is equal to other; False otherwise.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6e2f8fd7f1"></span>
+
+#### Equals Method
+
+Checks for equality between a point and an object.
+
+```csharp
+public bool Equals(object obj)
+```
+
+##### Parameters
+
+`obj` object
+
+The object.
+
+
+##### Returns
+
+bool
+
+True if `obj` is a point that equals the current point.
+
+
+</section>
+
+<span id="uid-8439f1d3ad"></span>
+
+### FromPoint overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7f2d37f49e"></span>
+
+#### FromPoint Method
+
+Converts a [Avalonia.Point](xref:Avalonia.Point) to device pixels using the specified scaling factor.
+
+```csharp
+public Avalonia.PixelPoint FromPoint(Avalonia.Point point, Avalonia.Vector scale)
+```
+
+##### Parameters
+
+`point` [Avalonia.Point](xref:Avalonia.Point)
+
+The point.
+
+
+`scale` [Avalonia.Vector](xref:Avalonia.Vector)
+
+The scaling factor.
+
+
+##### Returns
+
+[Avalonia.PixelPoint](xref:Avalonia.PixelPoint)
+
+The device-independent point.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1de7d61283"></span>
+
+#### FromPoint Method
+
+Converts a [Avalonia.Point](xref:Avalonia.Point) to device pixels using the specified scaling factor.
+
+```csharp
+public Avalonia.PixelPoint FromPoint(Avalonia.Point point, double scale)
+```
+
+##### Parameters
+
+`point` [Avalonia.Point](xref:Avalonia.Point)
+
+The point.
+
+
+`scale` double
+
+The scaling factor.
+
+
+##### Returns
+
+[Avalonia.PixelPoint](xref:Avalonia.PixelPoint)
+
+The device-independent point.
+
+
+</section>
+
+<span id="uid-1334c8745d"></span>
+
+### FromPointWithDpi overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-76e1554292"></span>
+
+#### FromPointWithDpi Method
+
+Converts a [Avalonia.Point](xref:Avalonia.Point) to device pixels using the specified dots per inch (DPI).
+
+```csharp
+public Avalonia.PixelPoint FromPointWithDpi(Avalonia.Point point, Avalonia.Vector dpi)
+```
+
+##### Parameters
+
+`point` [Avalonia.Point](xref:Avalonia.Point)
+
+The point.
+
+
+`dpi` [Avalonia.Vector](xref:Avalonia.Vector)
+
+The dots per inch of the device.
+
+
+##### Returns
+
+[Avalonia.PixelPoint](xref:Avalonia.PixelPoint)
+
+The device-independent point.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8af98b5dd6"></span>
+
+#### FromPointWithDpi Method
+
+Converts a [Avalonia.Point](xref:Avalonia.Point) to device pixels using the specified dots per inch (DPI).
+
+```csharp
+public Avalonia.PixelPoint FromPointWithDpi(Avalonia.Point point, double dpi)
+```
+
+##### Parameters
+
+`point` [Avalonia.Point](xref:Avalonia.Point)
+
+The point.
+
+
+`dpi` double
+
+The dots per inch of the device.
+
+
+##### Returns
+
+[Avalonia.PixelPoint](xref:Avalonia.PixelPoint)
+
+The device-independent point.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-61c5d6442e"></span>
+
+### GetHashCode Method
+
+Returns a hash code for a [Avalonia.PixelPoint](xref:Avalonia.PixelPoint).
+
+```csharp
+public int GetHashCode()
+```
+
+#### Returns
+
+int
+
+The hash code.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ed7841f67e"></span>
+
+### Parse Method
+
+Parses a [Avalonia.PixelPoint](xref:Avalonia.PixelPoint) string.
+
+```csharp
+public Avalonia.PixelPoint Parse(string s)
+```
+
+#### Parameters
+
+`s` string
+
+The string.
+
+
+#### Returns
+
+[Avalonia.PixelPoint](xref:Avalonia.PixelPoint)
+
+The [Avalonia.PixelPoint](xref:Avalonia.PixelPoint).
+
+
+</section>
+
+<span id="uid-0a49304e51"></span>
+
+### ToPoint overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f628e9dc1a"></span>
+
+#### ToPoint Method
+
+Converts the [Avalonia.PixelPoint](xref:Avalonia.PixelPoint) to a device-independent [Avalonia.Point](xref:Avalonia.Point) using the
+specified scaling factor.
+
+```csharp
+public Avalonia.Point ToPoint(Avalonia.Vector scale)
+```
+
+##### Parameters
+
+`scale` [Avalonia.Vector](xref:Avalonia.Vector)
+
+The scaling factor.
+
+
+##### Returns
+
+[Avalonia.Point](xref:Avalonia.Point)
+
+The device-independent point.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2b8b075ae8"></span>
+
+#### ToPoint Method
+
+Converts the [Avalonia.PixelPoint](xref:Avalonia.PixelPoint) to a device-independent [Avalonia.Point](xref:Avalonia.Point) using the
+specified scaling factor.
+
+```csharp
+public Avalonia.Point ToPoint(double scale)
+```
+
+##### Parameters
+
+`scale` double
+
+The scaling factor.
+
+
+##### Returns
+
+[Avalonia.Point](xref:Avalonia.Point)
+
+The device-independent point.
+
+
+</section>
+
+<span id="uid-3c44106e38"></span>
+
+### ToPointWithDpi overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b040a9ad0a"></span>
+
+#### ToPointWithDpi Method
+
+Converts the [Avalonia.PixelPoint](xref:Avalonia.PixelPoint) to a device-independent [Avalonia.Point](xref:Avalonia.Point) using the
+specified dots per inch (DPI).
+
+```csharp
+public Avalonia.Point ToPointWithDpi(Avalonia.Vector dpi)
+```
+
+##### Parameters
+
+`dpi` [Avalonia.Vector](xref:Avalonia.Vector)
+
+The dots per inch of the device.
+
+
+##### Returns
+
+[Avalonia.Point](xref:Avalonia.Point)
+
+The device-independent point.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f212fda9cd"></span>
+
+#### ToPointWithDpi Method
+
+Converts the [Avalonia.PixelPoint](xref:Avalonia.PixelPoint) to a device-independent [Avalonia.Point](xref:Avalonia.Point) using the
+specified dots per inch (DPI).
+
+```csharp
+public Avalonia.Point ToPointWithDpi(double dpi)
+```
+
+##### Parameters
+
+`dpi` double
+
+The dots per inch of the device.
+
+
+##### Returns
+
+[Avalonia.Point](xref:Avalonia.Point)
+
+The device-independent point.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-cf9f043d5f"></span>
+
+### ToString Method
+
+Returns the string representation of the point.
+
+```csharp
+public string ToString()
+```
+
+#### Returns
+
+string
+
+The string representation of the point.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b00b2ed10d"></span>
+
+### WithX Method
+
+Returns a new [Avalonia.PixelPoint](xref:Avalonia.PixelPoint) with the same Y co-ordinate and the specified X co-ordinate.
+
+```csharp
+public Avalonia.PixelPoint WithX(int x)
+```
+
+#### Parameters
+
+`x` int
+
+The X co-ordinate.
+
+
+#### Returns
+
+[Avalonia.PixelPoint](xref:Avalonia.PixelPoint)
+
+The new [Avalonia.PixelPoint](xref:Avalonia.PixelPoint).
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1261b633a5"></span>
+
+### WithY Method
+
+Returns a new [Avalonia.PixelPoint](xref:Avalonia.PixelPoint) with the same X co-ordinate and the specified Y co-ordinate.
+
+```csharp
+public Avalonia.PixelPoint WithY(int y)
+```
+
+#### Parameters
+
+`y` int
+
+The Y co-ordinate.
+
+
+#### Returns
+
+[Avalonia.PixelPoint](xref:Avalonia.PixelPoint)
+
+The new [Avalonia.PixelPoint](xref:Avalonia.PixelPoint).
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [X](#uid-40aaa9f263) | Gets the X co-ordinate. |
+| [Y](#uid-3c9dffebf8) | Gets the Y co-ordinate. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-40aaa9f263"></span>
+
+### X Property
+
+Gets the X co-ordinate.
+
+```csharp
+public int X { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3c9dffebf8"></span>
+
+### Y Property
+
+Gets the Y co-ordinate.
+
+```csharp
+public int Y { get; set; }
+```
+
+</section>
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [Origin](#uid-173942e1d0) | A point representing 0,0. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-173942e1d0"></span>
+
+### Origin Field
+
+A point representing 0,0.
+
+```csharp
+public Avalonia.PixelPoint Origin
+```
+
+</section>
+
+</ApiRefPage>
+

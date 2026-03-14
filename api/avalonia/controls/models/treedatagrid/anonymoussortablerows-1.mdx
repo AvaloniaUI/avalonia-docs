@@ -1,0 +1,422 @@
+---
+title: 'AnonymousSortableRows<TModel>'
+hide_title: true
+slug: '/avalonia/controls/models/treedatagrid/anonymoussortablerows-1'
+uid: 'Avalonia.Controls.Models.TreeDataGrid.AnonymousSortableRows`1'
+commentId: 'T:Avalonia.Controls.Models.TreeDataGrid.AnonymousSortableRows`1'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.TreeDataGrid'
+assembly: 'Avalonia.Controls.TreeDataGrid'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Models.TreeDataGrid'
+tfms:
+  - 'net8.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">AnonymousSortableRows&lt;TModel&gt; Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Models.TreeDataGrid</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Exposes a sortable collection of models as anonymous rows.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class AnonymousSortableRows<TModel>
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ReadOnlyListBase&lt;IRow&lt;&gt;&gt; <span className="apiref-page__relation-separator">-&gt;</span> AnonymousSortableRows&lt;TModel&gt;
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="irows">IRows</a>, IEnumerable&lt;IRow&gt;, IReadOnlyCollection&lt;IRow&gt;, IReadOnlyList&lt;IRow&gt;, IEnumerable, INotifyCollectionChanged, IDisposable
+</div>
+</div>
+
+## Remarks
+
+In a flat grid where rows cannot be resized, it is not necessary to persist any information
+about rows; the same row object can be updated and reused when a new row is requested.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [AnonymousSortableRows&lt;TModel&gt;](#uid-62775eb4ae) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-62775eb4ae"></span>
+
+### AnonymousSortableRows&lt;TModel&gt; Constructor
+
+```csharp
+public AnonymousSortableRows<TModel>(Avalonia.Controls.TreeDataGridItemsSourceView<T><TModel> items, System.Collections.Generic.IComparer<TModel> comparer)
+```
+
+#### Parameters
+
+`items` [Avalonia.Controls.TreeDataGridItemsSourceView](xref:Avalonia.Controls.TreeDataGridItemsSourceView)&lt;T&gt;&lt;TModel&gt;
+
+
+`comparer` System.Collections.Generic.IComparer&lt;TModel&gt;
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Dispose](#uid-c6972df98d) | No summary available. |
+| [Filter](#uid-08dd35640b) | No summary available. |
+| [GetEnumerator](#uid-7a8c140812) | No summary available. |
+| [GetRowAt](#uid-e22af493a2) | Gets the index and Y position of the row at the specified Y position, if it can be calculated. |
+| [ModelIndexToRowIndex](#uid-91bbec5d04) | Given a model index, returns an index into [Avalonia.Controls.Models.TreeDataGrid.IRows](xref:Avalonia.Controls.Models.TreeDataGrid.IRows). |
+| [RealizeCell](#uid-44d4eb0759) | Realizes a cell model for display on-screen. |
+| [RefreshFilter](#uid-08a9e77e12) | Refreshes the current filter applied to the collection. |
+| [RowIndexToModelIndex](#uid-5dd5be0ef6) | Given a row index, returns a model index. |
+| [SetItems](#uid-ef596861e7) | No summary available. |
+| [Sort](#uid-d685c5b82d) | No summary available. |
+| [UnrealizeCell](#uid-6e0a4df884) | Unrealizes a cell model realized with [Avalonia.Controls.Models.TreeDataGrid.IRows.RealizeCell(Avalonia.Controls.Models.TreeDataGrid.IColumn,int,int)](xref:Avalonia.Controls.Models.TreeDataGrid.IRows.RealizeCell%28Avalonia.Controls.Models.TreeDataGrid.IColumn%2CSystem.Int32%2CSystem.Int32%29). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c6972df98d"></span>
+
+### Dispose Method
+
+```csharp
+public void Dispose()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-08dd35640b"></span>
+
+### Filter Method
+
+```csharp
+public void Filter(Func<TModel, bool> filter)
+```
+
+#### Parameters
+
+`filter` Func&lt;TModel, bool&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7a8c140812"></span>
+
+### GetEnumerator Method
+
+```csharp
+public System.Collections.Generic.IEnumerator<Avalonia.Controls.Models.TreeDataGrid.IRow<TModel><TModel>> GetEnumerator()
+```
+
+#### Returns
+
+System.Collections.Generic.IEnumerator&lt;[Avalonia.Controls.Models.TreeDataGrid.IRow](xref:Avalonia.Controls.Models.TreeDataGrid.IRow)&lt;TModel&gt;&lt;TModel&gt;&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e22af493a2"></span>
+
+### GetRowAt Method
+
+Gets the index and Y position of the row at the specified Y position, if it can be
+calculated.
+
+```csharp
+public ValueTuple<int, double> GetRowAt(double y)
+```
+
+#### Parameters
+
+`y` double
+
+The Y position
+
+
+#### Returns
+
+ValueTuple&lt;int, double&gt;
+
+A tuple containing the row index and Y position of the row, or (-1,-1) if the row
+could not be calculated.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-91bbec5d04"></span>
+
+### ModelIndexToRowIndex Method
+
+Given a model index, returns an index into [Avalonia.Controls.Models.TreeDataGrid.IRows](xref:Avalonia.Controls.Models.TreeDataGrid.IRows).
+
+```csharp
+public int ModelIndexToRowIndex(Avalonia.Controls.IndexPath modelIndex)
+```
+
+#### Parameters
+
+`modelIndex` [Avalonia.Controls.IndexPath](xref:Avalonia.Controls.IndexPath)
+
+The model index.
+
+
+#### Returns
+
+int
+
+The row index, or -1 if the model index is not displayed.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-44d4eb0759"></span>
+
+### RealizeCell Method
+
+Realizes a cell model for display on-screen.
+
+```csharp
+public Avalonia.Controls.Models.TreeDataGrid.ICell RealizeCell(Avalonia.Controls.Models.TreeDataGrid.IColumn column, int columnIndex, int rowIndex)
+```
+
+#### Parameters
+
+`column` [Avalonia.Controls.Models.TreeDataGrid.IColumn](xref:Avalonia.Controls.Models.TreeDataGrid.IColumn)
+
+The cell's column.
+
+
+`columnIndex` int
+
+The index of the cell's column.
+
+
+`rowIndex` int
+
+The index of the cell's row.
+
+
+#### Returns
+
+[Avalonia.Controls.Models.TreeDataGrid.ICell](xref:Avalonia.Controls.Models.TreeDataGrid.ICell)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-08a9e77e12"></span>
+
+### RefreshFilter Method
+
+Refreshes the current filter applied to the collection.
+
+```csharp
+public void RefreshFilter()
+```
+
+#### Remarks
+
+Call this method if the filter predicate depends on external state which has changed,
+to re-apply the filter to the collection.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5dd5be0ef6"></span>
+
+### RowIndexToModelIndex Method
+
+Given a row index, returns a model index.
+
+```csharp
+public Avalonia.Controls.IndexPath RowIndexToModelIndex(int rowIndex)
+```
+
+#### Parameters
+
+`rowIndex` int
+
+The row index.
+
+
+#### Returns
+
+[Avalonia.Controls.IndexPath](xref:Avalonia.Controls.IndexPath)
+
+The row index, or an empty path if the row index is not valid.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ef596861e7"></span>
+
+### SetItems Method
+
+```csharp
+public void SetItems(Avalonia.Controls.TreeDataGridItemsSourceView<T><TModel> items)
+```
+
+#### Parameters
+
+`items` [Avalonia.Controls.TreeDataGridItemsSourceView](xref:Avalonia.Controls.TreeDataGridItemsSourceView)&lt;T&gt;&lt;TModel&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d685c5b82d"></span>
+
+### Sort Method
+
+```csharp
+public void Sort(System.Collections.Generic.IComparer<TModel> comparer)
+```
+
+#### Parameters
+
+`comparer` System.Collections.Generic.IComparer&lt;TModel&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6e0a4df884"></span>
+
+### UnrealizeCell Method
+
+Unrealizes a cell model realized with [Avalonia.Controls.Models.TreeDataGrid.IRows.RealizeCell(Avalonia.Controls.Models.TreeDataGrid.IColumn,int,int)](xref:Avalonia.Controls.Models.TreeDataGrid.IRows.RealizeCell%28Avalonia.Controls.Models.TreeDataGrid.IColumn%2CSystem.Int32%2CSystem.Int32%29).
+
+```csharp
+public void UnrealizeCell(Avalonia.Controls.Models.TreeDataGrid.ICell cell, int columnIndex, int rowIndex)
+```
+
+#### Parameters
+
+`cell` [Avalonia.Controls.Models.TreeDataGrid.ICell](xref:Avalonia.Controls.Models.TreeDataGrid.ICell)
+
+The cell model.
+
+
+`columnIndex` int
+
+The index of the cell's column.
+
+
+`rowIndex` int
+
+The index of the cell's row.
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Count](#uid-18cb5ddd12) | No summary available. |
+| [IsFiltered](#uid-5295354f8d) | No summary available. |
+| [Item](#uid-f9a0f9830d) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-18cb5ddd12"></span>
+
+### Count Property
+
+```csharp
+public int Count { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5295354f8d"></span>
+
+### IsFiltered Property
+
+```csharp
+public bool IsFiltered { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f9a0f9830d"></span>
+
+### Item Property
+
+```csharp
+public Avalonia.Controls.Models.TreeDataGrid.IRow<TModel><TModel> Item { get; set; }
+```
+
+</section>
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [CollectionChanged](#uid-671ffaaaa1) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-671ffaaaa1"></span>
+
+### CollectionChanged Event
+
+```csharp
+public event System.Collections.Specialized.NotifyCollectionChangedEventHandler CollectionChanged
+```
+
+</section>
+
+</ApiRefPage>
+

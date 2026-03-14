@@ -1,0 +1,112 @@
+---
+title: 'CompositionBatch'
+hide_title: true
+slug: '/avalonia/rendering/composition/transport/compositionbatch'
+uid: 'Avalonia.Rendering.Composition.Transport.CompositionBatch'
+commentId: 'T:Avalonia.Rendering.Composition.Transport.CompositionBatch'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Rendering.Composition.Transport'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">CompositionBatch Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Rendering.Composition.Transport</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Rendering/Composition/Transport/Batch.cs">Batch.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Represents a group of serialized changes from the UI thread to be atomically applied at the render thread
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class CompositionBatch
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> CompositionBatch
+</div>
+</div>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Processed](#uid-37c34011e0) | Indicates that batch got deserialized on the render thread and will soon be rendered. It's generally a good time to start producing the next one |
+| [Rendered](#uid-7930b51027) | Indicates that batch got rendered on the render thread. It's generally a good time to start producing the next one |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-37c34011e0"></span>
+
+### Processed Property
+
+Indicates that batch got deserialized on the render thread and will soon be rendered.
+It's generally a good time to start producing the next one
+
+```csharp
+public System.Threading.Tasks.Task Processed { get; set; }
+```
+
+#### Remarks
+
+To allow timing-sensitive code to receive the notification in time, the TaskCompletionSource
+is configured to invoke continuations _synchronously_, so your `await` could happen from the render loop
+if it happens to run on the UI thread.
+It's recommended to use Dispatcher.AwaitOnPriority when consuming from the UI thread
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7930b51027"></span>
+
+### Rendered Property
+
+Indicates that batch got rendered on the render thread.
+It's generally a good time to start producing the next one
+
+```csharp
+public System.Threading.Tasks.Task Rendered { get; set; }
+```
+
+#### Remarks
+
+To allow timing-sensitive code to receive the notification in time, the TaskCompletionSource
+is configured to invoke continuations _synchronously_, so your `await` could happen from the render loop
+if it happens to run on the UI thread.
+It's recommended to use Dispatcher.AwaitOnPriority when consuming from the UI thread
+
+</section>
+
+</ApiRefPage>
+

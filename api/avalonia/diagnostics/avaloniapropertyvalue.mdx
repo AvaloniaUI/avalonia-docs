@@ -1,0 +1,143 @@
+---
+title: 'AvaloniaPropertyValue'
+hide_title: true
+slug: '/avalonia/diagnostics/avaloniapropertyvalue'
+uid: 'Avalonia.Diagnostics.AvaloniaPropertyValue'
+commentId: 'T:Avalonia.Diagnostics.AvaloniaPropertyValue'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Diagnostics'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">AvaloniaPropertyValue Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Diagnostics</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Diagnostics/AvaloniaPropertyValue.cs">AvaloniaPropertyValue.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Holds diagnostic-related information about the value of an [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty)
+on an [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject).
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class AvaloniaPropertyValue
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> AvaloniaPropertyValue
+</div>
+</div>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Diagnostic](#uid-6f12da6eea) | Gets a diagnostic string. |
+| [IsOverriddenCurrentValue](#uid-31715b53b6) | Gets a value indicating whether the [Avalonia.Diagnostics.AvaloniaPropertyValue.Value](xref:Avalonia.Diagnostics.AvaloniaPropertyValue.Value) was overridden by a call to [Avalonia.AvaloniaObject.SetCurrentValue&lt;T&gt;(Avalonia.StyledProperty&#123;&lt;&gt;&#125;,&lt;&gt;)](xref:Avalonia.AvaloniaObject.SetCurrentValue%60%601%28Avalonia.StyledProperty%7B%60%600%7D%2C%60%600%29). |
+| [Priority](#uid-78e156d463) | Gets the priority of the current value. |
+| [Property](#uid-da64b2f272) | Gets the property. |
+| [Value](#uid-aaa702342b) | Gets the current property value. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6f12da6eea"></span>
+
+### Diagnostic Property
+
+Gets a diagnostic string.
+
+```csharp
+public string Diagnostic { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-31715b53b6"></span>
+
+### IsOverriddenCurrentValue Property
+
+Gets a value indicating whether the [Avalonia.Diagnostics.AvaloniaPropertyValue.Value](xref:Avalonia.Diagnostics.AvaloniaPropertyValue.Value) was overridden by a call to
+[Avalonia.AvaloniaObject.SetCurrentValue&lt;T&gt;(Avalonia.StyledProperty&#123;&lt;&gt;&#125;,&lt;&gt;)](xref:Avalonia.AvaloniaObject.SetCurrentValue%60%601%28Avalonia.StyledProperty%7B%60%600%7D%2C%60%600%29).
+
+```csharp
+public bool IsOverriddenCurrentValue { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-78e156d463"></span>
+
+### Priority Property
+
+Gets the priority of the current value.
+
+```csharp
+public Avalonia.Data.BindingPriority Priority { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-da64b2f272"></span>
+
+### Property Property
+
+Gets the property.
+
+```csharp
+public Avalonia.AvaloniaProperty Property { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-aaa702342b"></span>
+
+### Value Property
+
+Gets the current property value.
+
+```csharp
+public object Value { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

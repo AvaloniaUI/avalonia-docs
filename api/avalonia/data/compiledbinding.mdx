@@ -1,0 +1,380 @@
+---
+title: 'CompiledBinding'
+hide_title: true
+slug: '/avalonia/data/compiledbinding'
+uid: 'Avalonia.Data.CompiledBinding'
+commentId: 'T:Avalonia.Data.CompiledBinding'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Data'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">CompiledBinding Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Data</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Data/CompiledBinding.cs">CompiledBinding.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A binding which does not use reflection to access members.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class CompiledBinding
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="bindingbase">BindingBase</a> <span className="apiref-page__relation-separator">-&gt;</span> CompiledBinding
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Derived types:</span> <a href="../markup/xaml/markupextensions/compiledbindingextension">CompiledBindingExtension</a>
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [CompiledBinding (2 overloads)](#uid-30f20551af) | Initializes a new instance of the [Avalonia.Data.CompiledBinding](xref:Avalonia.Data.CompiledBinding) class. |
+
+<span id="uid-30f20551af"></span>
+
+### CompiledBinding overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9ebd370cdf"></span>
+
+#### CompiledBinding Constructor
+
+Initializes a new instance of the [Avalonia.Data.CompiledBinding](xref:Avalonia.Data.CompiledBinding) class.
+
+```csharp
+public CompiledBinding()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7037711a78"></span>
+
+#### CompiledBinding Constructor
+
+Initializes a new instance of the [Avalonia.Data.CompiledBinding](xref:Avalonia.Data.CompiledBinding) class.
+
+```csharp
+public CompiledBinding(Avalonia.Data.CompiledBindingPath path)
+```
+
+##### Parameters
+
+`path` [Avalonia.Data.CompiledBindingPath](xref:Avalonia.Data.CompiledBindingPath)
+
+The binding path.
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Create](#uid-57ecf18708) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-57ecf18708"></span>
+
+### Create Method
+
+```csharp
+public Avalonia.Data.CompiledBinding Create<TIn, TOut>(System.Linq.Expressions.Expression<Func<TIn,TOut>> expression, object source, Avalonia.Data.Converters.IValueConverter converter, Avalonia.Data.BindingMode mode, Avalonia.Data.BindingPriority priority, System.Globalization.CultureInfo converterCulture, object converterParameter, object fallbackValue, string stringFormat, object targetNullValue, Avalonia.Data.UpdateSourceTrigger updateSourceTrigger, int delay)
+```
+
+#### Parameters
+
+`expression` System.Linq.Expressions.Expression&lt;Func&lt;TIn,TOut&gt;&gt;
+
+
+`source` object
+
+
+`converter` [Avalonia.Data.Converters.IValueConverter](xref:Avalonia.Data.Converters.IValueConverter)
+
+
+`mode` [Avalonia.Data.BindingMode](xref:Avalonia.Data.BindingMode)
+
+
+`priority` [Avalonia.Data.BindingPriority](xref:Avalonia.Data.BindingPriority)
+
+
+`converterCulture` System.Globalization.CultureInfo
+
+
+`converterParameter` object
+
+
+`fallbackValue` object
+
+
+`stringFormat` string
+
+
+`targetNullValue` object
+
+
+`updateSourceTrigger` [Avalonia.Data.UpdateSourceTrigger](xref:Avalonia.Data.UpdateSourceTrigger)
+
+
+`delay` int
+
+
+#### Type Parameters
+
+`TIn`
+
+
+`TOut`
+
+
+#### Returns
+
+[Avalonia.Data.CompiledBinding](xref:Avalonia.Data.CompiledBinding)
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Converter](#uid-28db53eecb) | Gets or sets the [Avalonia.Data.Converters.IValueConverter](xref:Avalonia.Data.Converters.IValueConverter) to use. |
+| [ConverterCulture](#uid-8557e5d29e) | Gets or sets the culture in which to evaluate the converter. |
+| [ConverterParameter](#uid-6d9782b4c9) | Gets or sets a parameter to pass to [Avalonia.Data.CompiledBinding.Converter](xref:Avalonia.Data.CompiledBinding.Converter). |
+| [Delay](#uid-0bf0d20318) | Gets or sets the amount of time, in milliseconds, to wait before updating the binding source after the value on the target changes. |
+| [FallbackValue](#uid-95e9c1e2f6) | Gets or sets the value to use when the binding is unable to produce a value. |
+| [Mode](#uid-06c843929f) | Gets or sets the binding mode. |
+| [Path](#uid-3c9fd8a221) | Gets or sets the binding path. |
+| [Priority](#uid-6c4332c942) | Gets or sets the binding priority. |
+| [Source](#uid-78b9327aba) | Gets or sets the source for the binding. |
+| [StringFormat](#uid-33c4f73df3) | Gets or sets the string format. |
+| [TargetNullValue](#uid-6ebfe776f4) | Gets or sets the value to use when the binding result is null. |
+| [UpdateSourceTrigger](#uid-56a3da996f) | Gets or sets a value that determines the timing of binding source updates for [Avalonia.Data.BindingMode.TwoWay](xref:Avalonia.Data.BindingMode.TwoWay) and [Avalonia.Data.BindingMode.OneWayToSource](xref:Avalonia.Data.BindingMode.OneWayToSource) bindings. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-28db53eecb"></span>
+
+### Converter Property
+
+Gets or sets the [Avalonia.Data.Converters.IValueConverter](xref:Avalonia.Data.Converters.IValueConverter) to use.
+
+```csharp
+public Avalonia.Data.Converters.IValueConverter Converter { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8557e5d29e"></span>
+
+### ConverterCulture Property
+
+Gets or sets the culture in which to evaluate the converter.
+
+```csharp
+public System.Globalization.CultureInfo ConverterCulture { get; set; }
+```
+
+#### Value
+
+The default value is null.
+
+
+#### Remarks
+
+If this property is not set then [System.Globalization.CultureInfo.CurrentCulture](xref:System.Globalization.CultureInfo.CurrentCulture) will be used.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6d9782b4c9"></span>
+
+### ConverterParameter Property
+
+Gets or sets a parameter to pass to [Avalonia.Data.CompiledBinding.Converter](xref:Avalonia.Data.CompiledBinding.Converter).
+
+```csharp
+public object ConverterParameter { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0bf0d20318"></span>
+
+### Delay Property
+
+Gets or sets the amount of time, in milliseconds, to wait before updating the binding
+source after the value on the target changes.
+
+```csharp
+public int Delay { get; set; }
+```
+
+#### Remarks
+
+There is no delay when the source is updated via [Avalonia.Data.UpdateSourceTrigger.LostFocus](xref:Avalonia.Data.UpdateSourceTrigger.LostFocus)
+or [Avalonia.Data.BindingExpressionBase.UpdateSource](xref:Avalonia.Data.BindingExpressionBase.UpdateSource). Nor is there a delay when
+[Avalonia.Data.BindingMode.OneWayToSource](xref:Avalonia.Data.BindingMode.OneWayToSource) is active and a new source object is provided.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-95e9c1e2f6"></span>
+
+### FallbackValue Property
+
+Gets or sets the value to use when the binding is unable to produce a value.
+
+```csharp
+public object FallbackValue { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-06c843929f"></span>
+
+### Mode Property
+
+Gets or sets the binding mode.
+
+```csharp
+public Avalonia.Data.BindingMode Mode { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3c9fd8a221"></span>
+
+### Path Property
+
+Gets or sets the binding path.
+
+```csharp
+public Avalonia.Data.CompiledBindingPath Path { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6c4332c942"></span>
+
+### Priority Property
+
+Gets or sets the binding priority.
+
+```csharp
+public Avalonia.Data.BindingPriority Priority { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-78b9327aba"></span>
+
+### Source Property
+
+Gets or sets the source for the binding.
+
+```csharp
+public object Source { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-33c4f73df3"></span>
+
+### StringFormat Property
+
+Gets or sets the string format.
+
+```csharp
+public string StringFormat { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6ebfe776f4"></span>
+
+### TargetNullValue Property
+
+Gets or sets the value to use when the binding result is null.
+
+```csharp
+public object TargetNullValue { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-56a3da996f"></span>
+
+### UpdateSourceTrigger Property
+
+Gets or sets a value that determines the timing of binding source updates for
+[Avalonia.Data.BindingMode.TwoWay](xref:Avalonia.Data.BindingMode.TwoWay) and [Avalonia.Data.BindingMode.OneWayToSource](xref:Avalonia.Data.BindingMode.OneWayToSource) bindings.
+
+```csharp
+public Avalonia.Data.UpdateSourceTrigger UpdateSourceTrigger { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

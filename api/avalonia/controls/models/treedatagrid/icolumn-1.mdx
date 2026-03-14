@@ -1,0 +1,116 @@
+---
+title: 'IColumn<TModel>'
+hide_title: true
+slug: '/avalonia/controls/models/treedatagrid/icolumn-1'
+uid: 'Avalonia.Controls.Models.TreeDataGrid.IColumn`1'
+commentId: 'T:Avalonia.Controls.Models.TreeDataGrid.IColumn`1'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.TreeDataGrid'
+assembly: 'Avalonia.Controls.TreeDataGrid'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Models.TreeDataGrid'
+tfms:
+  - 'net8.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IColumn&lt;TModel&gt; Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Models.TreeDataGrid</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Represents a column in an [Avalonia.Controls.ITreeDataGridSource](xref:Avalonia.Controls.ITreeDataGridSource) which selects cell values from
+a model.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface IColumn<TModel>
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="icolumn">IColumn</a>, INotifyPropertyChanged
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [CreateCell](#uid-d5e4f3077f) | No summary available. |
+| [GetComparison](#uid-72553212c5) | Gets a comparison function for the column. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d5e4f3077f"></span>
+
+### CreateCell Method
+
+```csharp
+public Avalonia.Controls.Models.TreeDataGrid.ICell CreateCell(Avalonia.Controls.Models.TreeDataGrid.IRow<TModel><TModel> row)
+```
+
+#### Parameters
+
+`row` [Avalonia.Controls.Models.TreeDataGrid.IRow](xref:Avalonia.Controls.Models.TreeDataGrid.IRow)&lt;TModel&gt;&lt;TModel&gt;
+
+
+#### Returns
+
+[Avalonia.Controls.Models.TreeDataGrid.ICell](xref:Avalonia.Controls.Models.TreeDataGrid.ICell)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-72553212c5"></span>
+
+### GetComparison Method
+
+Gets a comparison function for the column.
+
+```csharp
+public Comparison<TModel> GetComparison(System.ComponentModel.ListSortDirection direction)
+```
+
+#### Parameters
+
+`direction` System.ComponentModel.ListSortDirection
+
+The sort direction.
+
+
+#### Returns
+
+Comparison&lt;TModel&gt;
+
+The comparison function or null if sorting cannot be performed on the column.
+
+
+</section>
+
+</ApiRefPage>
+

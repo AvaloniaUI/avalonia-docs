@@ -1,0 +1,301 @@
+---
+title: 'KeyGesture'
+hide_title: true
+slug: '/avalonia/input/keygesture'
+uid: 'Avalonia.Input.KeyGesture'
+commentId: 'T:Avalonia.Input.KeyGesture'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Input'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">KeyGesture Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Input</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Input/KeyGesture.cs">KeyGesture.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Defines a keyboard input combination.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class KeyGesture
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> KeyGesture
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;KeyGesture&gt;, IFormattable
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [KeyGesture](#uid-21dffcf52d) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-21dffcf52d"></span>
+
+### KeyGesture Constructor
+
+```csharp
+public KeyGesture(Avalonia.Input.Key key, Avalonia.Input.KeyModifiers modifiers)
+```
+
+#### Parameters
+
+`key` [Avalonia.Input.Key](xref:Avalonia.Input.Key)
+
+
+`modifiers` [Avalonia.Input.KeyModifiers](xref:Avalonia.Input.KeyModifiers)
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Equals (2 overloads)](#uid-c5a1021fad) | No summary available. |
+| [GetHashCode](#uid-542b866eeb) | No summary available. |
+| [Matches](#uid-10a604ecd0) | No summary available. |
+| [Parse](#uid-97916525ff) | No summary available. |
+| [ToString (2 overloads)](#uid-d37373586e) | No summary available. |
+
+<span id="uid-c5a1021fad"></span>
+
+### Equals overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-27dcf71580"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(Avalonia.Input.KeyGesture other)
+```
+
+##### Parameters
+
+`other` [Avalonia.Input.KeyGesture](xref:Avalonia.Input.KeyGesture)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c31721cfad"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(object obj)
+```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-542b866eeb"></span>
+
+### GetHashCode Method
+
+```csharp
+public int GetHashCode()
+```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-10a604ecd0"></span>
+
+### Matches Method
+
+```csharp
+public bool Matches(Avalonia.Input.KeyEventArgs keyEvent)
+```
+
+#### Parameters
+
+`keyEvent` [Avalonia.Input.KeyEventArgs](xref:Avalonia.Input.KeyEventArgs)
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-97916525ff"></span>
+
+### Parse Method
+
+```csharp
+public Avalonia.Input.KeyGesture Parse(string gesture)
+```
+
+#### Parameters
+
+`gesture` string
+
+
+#### Returns
+
+[Avalonia.Input.KeyGesture](xref:Avalonia.Input.KeyGesture)
+
+
+</section>
+
+<span id="uid-d37373586e"></span>
+
+### ToString overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c3cdb91901"></span>
+
+#### ToString Method
+
+```csharp
+public string ToString()
+```
+
+##### Returns
+
+string
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f2fb1d2c00"></span>
+
+#### ToString Method
+
+Returns the current [KeyGesture](xref:Avalonia.Input.KeyGesture) as a string formatted according to the format string and appropriate IFormatProvider
+
+```csharp
+public string ToString(string format, IFormatProvider formatProvider)
+```
+
+##### Parameters
+
+`format` string
+
+The format to use.
+
+- null or "" or "g"The Invariant format, uses Enum.ToString() to format Keys.
+- "p"Use platform specific formatting as registerd.
+
+
+`formatProvider` IFormatProvider
+
+The IFormatProvider to use. If null, uses the appropriate provider registered in the Avalonia Locator, or Invariant.
+
+
+##### Returns
+
+string
+
+The formatted string.
+
+
+##### Exceptions
+
+- [Thrown if the format string is not null, "", "g", or "p"](xref:System.FormatException)
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Key](#uid-e90c04c155) | No summary available. |
+| [KeyModifiers](#uid-275a790ba4) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e90c04c155"></span>
+
+### Key Property
+
+```csharp
+public Avalonia.Input.Key Key { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-275a790ba4"></span>
+
+### KeyModifiers Property
+
+```csharp
+public Avalonia.Input.KeyModifiers KeyModifiers { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

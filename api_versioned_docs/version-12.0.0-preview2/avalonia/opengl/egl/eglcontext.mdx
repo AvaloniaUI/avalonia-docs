@@ -1,0 +1,386 @@
+---
+title: 'EglContext'
+hide_title: true
+slug: '/avalonia/opengl/egl/eglcontext'
+uid: 'Avalonia.OpenGL.Egl.EglContext'
+commentId: 'T:Avalonia.OpenGL.Egl.EglContext'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.OpenGL'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.OpenGL.Egl'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">EglContext Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.OpenGL.Egl</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.OpenGL</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.OpenGL/Egl/EglContext.cs">EglContext.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class EglContext
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> EglContext
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="../../ioptionalfeatureprovider">IOptionalFeatureProvider</a>, <a href="../iglcontext">IGlContext</a>, <a href="../../platform/iplatformgraphicscontext">IPlatformGraphicsContext</a>, IDisposable
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [CreateSharedContext](#uid-b84700637f) | No summary available. |
+| [Dispose](#uid-d128b06ef9) | No summary available. |
+| [EnsureCurrent](#uid-075dc13876) | No summary available. |
+| [EnsureLocked](#uid-64200f5857) | No summary available. |
+| [IsSharedWith](#uid-3c1f0760a6) | No summary available. |
+| [MakeCurrent (2 overloads)](#uid-55e38d3faf) | No summary available. |
+| [NotifyContextLost](#uid-ba613861c5) | No summary available. |
+| [TryGetFeature](#uid-24b6a55332) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b84700637f"></span>
+
+### CreateSharedContext Method
+
+```csharp
+public Avalonia.OpenGL.IGlContext CreateSharedContext(System.Collections.Generic.IEnumerable<Avalonia.OpenGL.GlVersion> preferredVersions)
+```
+
+#### Parameters
+
+`preferredVersions` System.Collections.Generic.IEnumerable&lt;[Avalonia.OpenGL.GlVersion](xref:Avalonia.OpenGL.GlVersion)&gt;
+
+
+#### Returns
+
+[Avalonia.OpenGL.IGlContext](xref:Avalonia.OpenGL.IGlContext)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d128b06ef9"></span>
+
+### Dispose Method
+
+```csharp
+public void Dispose()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-075dc13876"></span>
+
+### EnsureCurrent Method
+
+```csharp
+public IDisposable EnsureCurrent()
+```
+
+#### Returns
+
+IDisposable
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-64200f5857"></span>
+
+### EnsureLocked Method
+
+```csharp
+public IDisposable EnsureLocked()
+```
+
+#### Returns
+
+IDisposable
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3c1f0760a6"></span>
+
+### IsSharedWith Method
+
+```csharp
+public bool IsSharedWith(Avalonia.OpenGL.IGlContext context)
+```
+
+#### Parameters
+
+`context` [Avalonia.OpenGL.IGlContext](xref:Avalonia.OpenGL.IGlContext)
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<span id="uid-55e38d3faf"></span>
+
+### MakeCurrent overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-41e17bb438"></span>
+
+#### MakeCurrent Method
+
+```csharp
+public IDisposable MakeCurrent()
+```
+
+##### Returns
+
+IDisposable
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-170563eec0"></span>
+
+#### MakeCurrent Method
+
+```csharp
+public IDisposable MakeCurrent(Avalonia.OpenGL.Egl.EglSurface surface)
+```
+
+##### Parameters
+
+`surface` [Avalonia.OpenGL.Egl.EglSurface](xref:Avalonia.OpenGL.Egl.EglSurface)
+
+
+##### Returns
+
+IDisposable
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ba613861c5"></span>
+
+### NotifyContextLost Method
+
+```csharp
+public void NotifyContextLost()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-24b6a55332"></span>
+
+### TryGetFeature Method
+
+```csharp
+public object TryGetFeature(Type featureType)
+```
+
+#### Parameters
+
+`featureType` Type
+
+
+#### Returns
+
+object
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [CanCreateSharedContext](#uid-7a3c045abd) | No summary available. |
+| [Context](#uid-7c3293dffe) | No summary available. |
+| [Display](#uid-ff39096414) | No summary available. |
+| [EglInterface](#uid-15ea76babb) | No summary available. |
+| [GlInterface](#uid-6c20077e10) | No summary available. |
+| [IsCurrent](#uid-e2a0fd2c9d) | No summary available. |
+| [IsLost](#uid-91022ae078) | No summary available. |
+| [OffscreenSurface](#uid-f0f550bd4e) | No summary available. |
+| [SampleCount](#uid-7912f57684) | No summary available. |
+| [StencilSize](#uid-2313731b0c) | No summary available. |
+| [Version](#uid-690a56c9af) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7a3c045abd"></span>
+
+### CanCreateSharedContext Property
+
+```csharp
+public bool CanCreateSharedContext { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7c3293dffe"></span>
+
+### Context Property
+
+```csharp
+public IntPtr Context { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ff39096414"></span>
+
+### Display Property
+
+```csharp
+public Avalonia.OpenGL.Egl.EglDisplay Display { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-15ea76babb"></span>
+
+### EglInterface Property
+
+```csharp
+public Avalonia.OpenGL.Egl.EglInterface EglInterface { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6c20077e10"></span>
+
+### GlInterface Property
+
+```csharp
+public Avalonia.OpenGL.GlInterface GlInterface { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e2a0fd2c9d"></span>
+
+### IsCurrent Property
+
+```csharp
+public bool IsCurrent { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-91022ae078"></span>
+
+### IsLost Property
+
+```csharp
+public bool IsLost { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f0f550bd4e"></span>
+
+### OffscreenSurface Property
+
+```csharp
+public Avalonia.OpenGL.Egl.EglSurface OffscreenSurface { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7912f57684"></span>
+
+### SampleCount Property
+
+```csharp
+public int SampleCount { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2313731b0c"></span>
+
+### StencilSize Property
+
+```csharp
+public int StencilSize { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-690a56c9af"></span>
+
+### Version Property
+
+```csharp
+public Avalonia.OpenGL.GlVersion Version { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

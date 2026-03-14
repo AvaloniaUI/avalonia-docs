@@ -1,0 +1,257 @@
+---
+title: 'ColorToBrushConverter'
+hide_title: true
+slug: '/avalonia/markup/xaml/converters/colortobrushconverter'
+uid: 'Avalonia.Markup.Xaml.Converters.ColorToBrushConverter'
+commentId: 'T:Avalonia.Markup.Xaml.Converters.ColorToBrushConverter'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Markup.Xaml'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Markup.Xaml.Converters'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ColorToBrushConverter Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Markup.Xaml.Converters</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Markup.Xaml</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Markup/Avalonia.Markup.Xaml/Converters/ColorToBrushConverter.cs">ColorToBrushConverter.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Converts a [Avalonia.Media.Color](xref:Avalonia.Media.Color) to an [Avalonia.Media.IBrush](xref:Avalonia.Media.IBrush).
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class ColorToBrushConverter
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> ColorToBrushConverter
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="../../../data/converters/ivalueconverter">IValueConverter</a>
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [ColorToBrushConverter](#uid-bebacfbe13) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-bebacfbe13"></span>
+
+### ColorToBrushConverter Constructor
+
+```csharp
+public ColorToBrushConverter()
+```
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Convert (2 overloads)](#uid-0452eb7499) | Converts a [Avalonia.Media.Color](xref:Avalonia.Media.Color) to an [Avalonia.Media.IBrush](xref:Avalonia.Media.IBrush) if the arguments are of the correct type. |
+| [ConvertBack (2 overloads)](#uid-7db7ae26ec) | Converts an [Avalonia.Media.ISolidColorBrush](xref:Avalonia.Media.ISolidColorBrush) to a [Avalonia.Media.Color](xref:Avalonia.Media.Color) if the arguments are of the correct type. |
+
+<span id="uid-0452eb7499"></span>
+
+### Convert overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-40cbb17ebe"></span>
+
+#### Convert Method
+
+Converts a [Avalonia.Media.Color](xref:Avalonia.Media.Color) to an [Avalonia.Media.IBrush](xref:Avalonia.Media.IBrush) if the arguments are of the
+correct type.
+
+```csharp
+public object Convert(object value, Type targetType)
+```
+
+##### Parameters
+
+`value` object
+
+The value.
+
+
+`targetType` Type
+
+The target type.
+
+
+##### Returns
+
+object
+
+If `value` is a [Avalonia.Media.Color](xref:Avalonia.Media.Color) and `targetType`
+is [Avalonia.Media.IBrush](xref:Avalonia.Media.IBrush) then converts the color to a solid color brush.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8bef656e1c"></span>
+
+#### Convert Method
+
+Converts a [Avalonia.Media.Color](xref:Avalonia.Media.Color) to an [Avalonia.Media.IBrush](xref:Avalonia.Media.IBrush) if the arguments are of the
+correct type.
+
+```csharp
+public object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
+```
+
+##### Parameters
+
+`value` object
+
+The value.
+
+
+`targetType` Type
+
+The target type.
+
+
+`parameter` object
+
+Not used.
+
+
+`culture` System.Globalization.CultureInfo
+
+Not used.
+
+
+##### Returns
+
+object
+
+If `value` is a [Avalonia.Media.Color](xref:Avalonia.Media.Color) and `targetType`
+is [Avalonia.Media.IBrush](xref:Avalonia.Media.IBrush) then converts the color to a solid color brush.
+
+
+</section>
+
+<span id="uid-7db7ae26ec"></span>
+
+### ConvertBack overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f25a119d65"></span>
+
+#### ConvertBack Method
+
+Converts an [Avalonia.Media.ISolidColorBrush](xref:Avalonia.Media.ISolidColorBrush) to a [Avalonia.Media.Color](xref:Avalonia.Media.Color) if the arguments are of the
+correct type.
+
+```csharp
+public object ConvertBack(object value, Type targetType)
+```
+
+##### Parameters
+
+`value` object
+
+The value.
+
+
+`targetType` Type
+
+The target type.
+
+
+##### Returns
+
+object
+
+If `value` is an [Avalonia.Media.ISolidColorBrush](xref:Avalonia.Media.ISolidColorBrush) and `targetType`
+is [Avalonia.Media.Color](xref:Avalonia.Media.Color) then converts the solid color brush to a color.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9623d490e7"></span>
+
+#### ConvertBack Method
+
+Converts an [Avalonia.Media.ISolidColorBrush](xref:Avalonia.Media.ISolidColorBrush) to a [Avalonia.Media.Color](xref:Avalonia.Media.Color) if the arguments are of the
+correct type.
+
+```csharp
+public object ConvertBack(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
+```
+
+##### Parameters
+
+`value` object
+
+The value.
+
+
+`targetType` Type
+
+The target type.
+
+
+`parameter` object
+
+Not used.
+
+
+`culture` System.Globalization.CultureInfo
+
+Not used.
+
+
+##### Returns
+
+object
+
+If `value` is an [Avalonia.Media.ISolidColorBrush](xref:Avalonia.Media.ISolidColorBrush) and `targetType`
+is [Avalonia.Media.Color](xref:Avalonia.Media.Color) then converts the solid color brush to a color.
+
+
+</section>
+
+</ApiRefPage>
+

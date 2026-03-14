@@ -1,0 +1,135 @@
+---
+title: 'ITreeDataGridRowSelectionModel<T>'
+hide_title: true
+slug: '/avalonia/controls/selection/itreedatagridrowselectionmodel-1'
+uid: 'Avalonia.Controls.Selection.ITreeDataGridRowSelectionModel`1'
+commentId: 'T:Avalonia.Controls.Selection.ITreeDataGridRowSelectionModel`1'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.TreeDataGrid'
+assembly: 'Avalonia.Controls.TreeDataGrid'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Selection'
+tfms:
+  - 'net8.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ITreeDataGridRowSelectionModel&lt;T&gt; Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Selection</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Provides strongly-typed access to the row selection state for a [Avalonia.Controls.TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid)
+control.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface ITreeDataGridRowSelectionModel<T>
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="itreedatagridrowselectionmodel">ITreeDataGridRowSelectionModel</a>, <a href="itreedatagridselection">ITreeDataGridSelection</a>, <a href="itreeselectionmodel">ITreeSelectionModel</a>, INotifyPropertyChanged
+</div>
+</div>
+
+## Remarks
+
+[Avalonia.Controls.Selection.ITreeDataGridRowSelectionModel&lt;T&gt;](xref:Avalonia.Controls.Selection.ITreeDataGridRowSelectionModel%601) extends the non-generic
+[Avalonia.Controls.Selection.ITreeDataGridRowSelectionModel](xref:Avalonia.Controls.Selection.ITreeDataGridRowSelectionModel) interface to provide strongly-typed access to
+the selected rows.
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [SelectedItem](#uid-e0598cd5c2) | Gets the currently selected row item. |
+| [SelectedItems](#uid-beed0fd92f) | Gets the currently selected row items. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e0598cd5c2"></span>
+
+### SelectedItem Property
+
+Gets the currently selected row item.
+
+```csharp
+public T SelectedItem { get; set; }
+```
+
+#### Value
+
+The primary selected row item, or the default value for `T` if no row is selected.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-beed0fd92f"></span>
+
+### SelectedItems Property
+
+Gets the currently selected row items.
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<T> SelectedItems { get; set; }
+```
+
+#### Value
+
+A read-only list of the selected row items, with the type `T`.
+
+
+</section>
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [SelectionChanged](#uid-803d51af93) | Occurs when the row selection changes. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-803d51af93"></span>
+
+### SelectionChanged Event
+
+Occurs when the row selection changes.
+
+```csharp
+public event EventHandler<Avalonia.Controls.Selection.TreeSelectionModelSelectionChangedEventArgs<T><T>> SelectionChanged
+```
+
+#### Remarks
+
+This event is raised when the selection of rows changes, either through user interaction
+or programmatically. It provides strongly-typed access to the selection changes.
+
+</section>
+
+</ApiRefPage>
+

@@ -1,0 +1,267 @@
+---
+title: 'IndexerDescriptor'
+hide_title: true
+slug: '/avalonia/data/indexerdescriptor'
+uid: 'Avalonia.Data.IndexerDescriptor'
+commentId: 'T:Avalonia.Data.IndexerDescriptor'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Data'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IndexerDescriptor Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Data</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Data/IndexerDescriptor.cs">IndexerDescriptor.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Holds a description of a binding for [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject)'s [] operator.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class IndexerDescriptor
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> IndexerDescriptor
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="../idescription">IDescription</a>, IObservable&lt;object&gt;
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [IndexerDescriptor](#uid-62dee295f5) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-62dee295f5"></span>
+
+### IndexerDescriptor Constructor
+
+```csharp
+public IndexerDescriptor()
+```
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Subscribe](#uid-a2c1be1956) | No summary available. |
+| [WithMode](#uid-0c7743cabf) | Modifies the binding mode. |
+| [WithPriority](#uid-3672faafb0) | Modifies the binding priority. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a2c1be1956"></span>
+
+### Subscribe Method
+
+```csharp
+public IDisposable Subscribe(IObserver<object> observer)
+```
+
+#### Parameters
+
+`observer` IObserver&lt;object&gt;
+
+
+#### Returns
+
+IDisposable
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0c7743cabf"></span>
+
+### WithMode Method
+
+Modifies the binding mode.
+
+```csharp
+public Avalonia.Data.IndexerDescriptor WithMode(Avalonia.Data.BindingMode mode)
+```
+
+#### Parameters
+
+`mode` [Avalonia.Data.BindingMode](xref:Avalonia.Data.BindingMode)
+
+The binding mode.
+
+
+#### Returns
+
+[Avalonia.Data.IndexerDescriptor](xref:Avalonia.Data.IndexerDescriptor)
+
+The object that the method was called on.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3672faafb0"></span>
+
+### WithPriority Method
+
+Modifies the binding priority.
+
+```csharp
+public Avalonia.Data.IndexerDescriptor WithPriority(Avalonia.Data.BindingPriority priority)
+```
+
+#### Parameters
+
+`priority` [Avalonia.Data.BindingPriority](xref:Avalonia.Data.BindingPriority)
+
+The binding priority.
+
+
+#### Returns
+
+[Avalonia.Data.IndexerDescriptor](xref:Avalonia.Data.IndexerDescriptor)
+
+The object that the method was called on.
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Description](#uid-5dd9a3a0c9) | Gets a description of the binding. |
+| [Mode](#uid-da9feefd4a) | Gets or sets the binding mode. |
+| [Priority](#uid-fa83bcc170) | Gets or sets the binding priority. |
+| [Property](#uid-1c15fa993e) | Gets or sets the source property. |
+| [Source](#uid-a7b19ad229) | Gets or sets the source object. |
+| [SourceObservable](#uid-5d20c8b4df) | Gets or sets the source observable. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5dd9a3a0c9"></span>
+
+### Description Property
+
+Gets a description of the binding.
+
+```csharp
+public string Description { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-da9feefd4a"></span>
+
+### Mode Property
+
+Gets or sets the binding mode.
+
+```csharp
+public Avalonia.Data.BindingMode Mode { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-fa83bcc170"></span>
+
+### Priority Property
+
+Gets or sets the binding priority.
+
+```csharp
+public Avalonia.Data.BindingPriority Priority { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1c15fa993e"></span>
+
+### Property Property
+
+Gets or sets the source property.
+
+```csharp
+public Avalonia.AvaloniaProperty Property { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a7b19ad229"></span>
+
+### Source Property
+
+Gets or sets the source object.
+
+```csharp
+public Avalonia.AvaloniaObject Source { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5d20c8b4df"></span>
+
+### SourceObservable Property
+
+Gets or sets the source observable.
+
+```csharp
+public IObservable<object> SourceObservable { get; set; }
+```
+
+#### Remarks
+
+If null, then [Avalonia.Data.IndexerDescriptor.Source](xref:Avalonia.Data.IndexerDescriptor.Source).[Avalonia.Data.IndexerDescriptor.Property](xref:Avalonia.Data.IndexerDescriptor.Property) will be used.
+
+</section>
+
+</ApiRefPage>
+

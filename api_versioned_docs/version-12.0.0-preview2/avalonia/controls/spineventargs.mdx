@@ -1,0 +1,194 @@
+---
+title: 'SpinEventArgs'
+hide_title: true
+slug: '/avalonia/controls/spineventargs'
+uid: 'Avalonia.Controls.SpinEventArgs'
+commentId: 'T:Avalonia.Controls.SpinEventArgs'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">SpinEventArgs Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Controls/Spinner.cs">Spinner.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Provides data for the Spinner.Spin event.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class SpinEventArgs
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> EventArgs <span className="apiref-page__relation-separator">-&gt;</span> <a href="../interactivity/routedeventargs">RoutedEventArgs</a> <span className="apiref-page__relation-separator">-&gt;</span> SpinEventArgs
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [SpinEventArgs (4 overloads)](#uid-33f38bef57) | Initializes a new instance of the [SpinEventArgs](xref:Avalonia.Controls.SpinEventArgs) class. |
+
+<span id="uid-33f38bef57"></span>
+
+### SpinEventArgs overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-fd24f253d3"></span>
+
+#### SpinEventArgs Constructor
+
+Initializes a new instance of the [SpinEventArgs](xref:Avalonia.Controls.SpinEventArgs) class.
+
+```csharp
+public SpinEventArgs(Avalonia.Controls.SpinDirection direction)
+```
+
+##### Parameters
+
+`direction` [Avalonia.Controls.SpinDirection](xref:Avalonia.Controls.SpinDirection)
+
+Spin direction.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8fcab312ee"></span>
+
+#### SpinEventArgs Constructor
+
+```csharp
+public SpinEventArgs(Avalonia.Controls.SpinDirection direction, bool usingMouseWheel)
+```
+
+##### Parameters
+
+`direction` [Avalonia.Controls.SpinDirection](xref:Avalonia.Controls.SpinDirection)
+
+
+`usingMouseWheel` bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-bc5cd8344d"></span>
+
+#### SpinEventArgs Constructor
+
+```csharp
+public SpinEventArgs(Avalonia.Interactivity.RoutedEvent routedEvent, Avalonia.Controls.SpinDirection direction)
+```
+
+##### Parameters
+
+`routedEvent` [Avalonia.Interactivity.RoutedEvent](xref:Avalonia.Interactivity.RoutedEvent)
+
+
+`direction` [Avalonia.Controls.SpinDirection](xref:Avalonia.Controls.SpinDirection)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b43aa278e5"></span>
+
+#### SpinEventArgs Constructor
+
+```csharp
+public SpinEventArgs(Avalonia.Interactivity.RoutedEvent routedEvent, Avalonia.Controls.SpinDirection direction, bool usingMouseWheel)
+```
+
+##### Parameters
+
+`routedEvent` [Avalonia.Interactivity.RoutedEvent](xref:Avalonia.Interactivity.RoutedEvent)
+
+
+`direction` [Avalonia.Controls.SpinDirection](xref:Avalonia.Controls.SpinDirection)
+
+
+`usingMouseWheel` bool
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Direction](#uid-4a11a860a2) | Gets the [SpinDirection](xref:Avalonia.Controls.SpinDirection) for the spin that has been initiated by the end-user. |
+| [UsingMouseWheel](#uid-d36bd47eec) | Get or set whether the spin event originated from a mouse wheel event. |
+| [Handled](../interactivity/routedeventargs.mdx#uid-204d2af354) | Gets or sets a value indicating whether the routed event has already been handled. Inherited from [RoutedEventArgs](../interactivity/routedeventargs.mdx). |
+| [Route](../interactivity/routedeventargs.mdx#uid-751be73db9) | Gets or sets the routing strategy (direct, bubbling, or tunneling) of the routed event. Inherited from [RoutedEventArgs](../interactivity/routedeventargs.mdx). |
+| [RoutedEvent](../interactivity/routedeventargs.mdx#uid-4e102999d9) | Gets or sets the routed event associated with these event args. Inherited from [RoutedEventArgs](../interactivity/routedeventargs.mdx). |
+| [Source](../interactivity/routedeventargs.mdx#uid-4385b523d5) | Gets or sets the source object that raised the routed event. Inherited from [RoutedEventArgs](../interactivity/routedeventargs.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4a11a860a2"></span>
+
+### Direction Property
+
+Gets the [SpinDirection](xref:Avalonia.Controls.SpinDirection) for the spin that has been initiated by the end-user.
+
+```csharp
+public Avalonia.Controls.SpinDirection Direction { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d36bd47eec"></span>
+
+### UsingMouseWheel Property
+
+Get or set whether the spin event originated from a mouse wheel event.
+
+```csharp
+public bool UsingMouseWheel { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

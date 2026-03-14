@@ -1,0 +1,389 @@
+---
+title: 'StyledProperty<TValue>'
+hide_title: true
+slug: '/avalonia/styledproperty-1'
+uid: 'Avalonia.StyledProperty`1'
+commentId: 'T:Avalonia.StyledProperty`1'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">StyledProperty&lt;TValue&gt; Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/StyledProperty.cs">StyledProperty.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A styled avalonia property.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class StyledProperty<TValue>
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> AvaloniaProperty&lt;&gt; <span className="apiref-page__relation-separator">-&gt;</span> StyledProperty&lt;TValue&gt;
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IStyledPropertyAccessor
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [AddOwner](#uid-c924301c33) | No summary available. |
+| [CoerceValue](#uid-061dd4a28b) | No summary available. |
+| [GetDefaultValue (2 overloads)](#uid-3f68630f83) | Gets the default value for the property on the specified object. |
+| [GetMetadata (2 overloads)](#uid-93b7eff4df) | Gets the [Avalonia.AvaloniaPropertyMetadata](xref:Avalonia.AvaloniaPropertyMetadata) which applies to this property when it is used with the specified object. |
+| [OverrideDefaultValue (2 overloads)](#uid-2e51c5f73c) | Overrides the default value for the property on the specified type. |
+| [OverrideMetadata (2 overloads)](#uid-2a40013894) | No summary available. |
+| [ToString](#uid-c313ea99bf) | Gets the string representation of the property. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c924301c33"></span>
+
+### AddOwner Method
+
+```csharp
+public Avalonia.StyledProperty<TValue><TValue> AddOwner<TOwner>(Avalonia.StyledPropertyMetadata<TValue><TValue> metadata)
+```
+
+#### Parameters
+
+`metadata` Avalonia.StyledPropertyMetadata&lt;TValue&gt;&lt;TValue&gt;
+
+
+#### Type Parameters
+
+`TOwner`
+
+
+#### Returns
+
+Avalonia.StyledProperty&lt;TValue&gt;&lt;TValue&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-061dd4a28b"></span>
+
+### CoerceValue Method
+
+```csharp
+public TValue CoerceValue(Avalonia.AvaloniaObject instance, TValue baseValue)
+```
+
+#### Parameters
+
+`instance` [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject)
+
+
+`baseValue` TValue
+
+
+#### Returns
+
+TValue
+
+
+</section>
+
+<span id="uid-3f68630f83"></span>
+
+### GetDefaultValue overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8cf772e2c9"></span>
+
+#### GetDefaultValue Method
+
+Gets the default value for the property on the specified object.
+
+```csharp
+public TValue GetDefaultValue(Avalonia.AvaloniaObject owner)
+```
+
+##### Parameters
+
+`owner` [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject)
+
+The object.
+
+
+##### Returns
+
+TValue
+
+The default value.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e8ed2726a4"></span>
+
+#### GetDefaultValue Method
+
+Gets the default value for the property on the specified type.
+
+```csharp
+public TValue GetDefaultValue(Type type)
+```
+
+##### Parameters
+
+`type` Type
+
+The type.
+
+
+##### Returns
+
+TValue
+
+The default value.
+
+
+##### Remarks
+
+For performance, prefer the [Avalonia.StyledProperty&lt;T&gt;.GetDefaultValue(Avalonia.AvaloniaObject)](xref:Avalonia.StyledProperty%601.GetDefaultValue%28Avalonia.AvaloniaObject%29) overload when possible.
+
+</section>
+
+<span id="uid-93b7eff4df"></span>
+
+### GetMetadata overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6b85e2327d"></span>
+
+#### GetMetadata Method
+
+Gets the [Avalonia.AvaloniaPropertyMetadata](xref:Avalonia.AvaloniaPropertyMetadata) which applies to this property when it is used with the specified object.
+
+```csharp
+public Avalonia.StyledPropertyMetadata<TValue><TValue> GetMetadata(Avalonia.AvaloniaObject owner)
+```
+
+##### Parameters
+
+`owner` [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject)
+
+The object for which to retrieve metadata.
+
+
+##### Returns
+
+Avalonia.StyledPropertyMetadata&lt;TValue&gt;&lt;TValue&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5fb9c310f0"></span>
+
+#### GetMetadata Method
+
+```csharp
+public Avalonia.StyledPropertyMetadata<TValue><TValue> GetMetadata(Type type)
+```
+
+##### Parameters
+
+`type` Type
+
+The type for which to retrieve metadata.
+
+
+##### Returns
+
+Avalonia.StyledPropertyMetadata&lt;TValue&gt;&lt;TValue&gt;
+
+
+##### Remarks
+
+For performance, prefer the [Avalonia.AvaloniaProperty.GetMetadata(Avalonia.AvaloniaObject)](xref:Avalonia.AvaloniaProperty.GetMetadata%28Avalonia.AvaloniaObject%29) overload when possible.
+
+</section>
+
+<span id="uid-2e51c5f73c"></span>
+
+### OverrideDefaultValue overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9a841ead06"></span>
+
+#### OverrideDefaultValue Method
+
+Overrides the default value for the property on the specified type.
+
+```csharp
+public void OverrideDefaultValue(Type type, TValue defaultValue)
+```
+
+##### Parameters
+
+`type` Type
+
+The type.
+
+
+`defaultValue` TValue
+
+The default value.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b55489bf4b"></span>
+
+#### OverrideDefaultValue Method
+
+```csharp
+public void OverrideDefaultValue<T>(TValue defaultValue)
+```
+
+##### Parameters
+
+`defaultValue` TValue
+
+
+##### Type Parameters
+
+`T`
+
+
+</section>
+
+<span id="uid-2a40013894"></span>
+
+### OverrideMetadata overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f16e35d0c6"></span>
+
+#### OverrideMetadata Method
+
+```csharp
+public void OverrideMetadata<T>(Avalonia.StyledPropertyMetadata<TValue><TValue> metadata)
+```
+
+##### Parameters
+
+`metadata` Avalonia.StyledPropertyMetadata&lt;TValue&gt;&lt;TValue&gt;
+
+
+##### Type Parameters
+
+`T`
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-cfc9ee19c1"></span>
+
+#### OverrideMetadata Method
+
+```csharp
+public void OverrideMetadata(Type type, Avalonia.StyledPropertyMetadata<TValue><TValue> metadata)
+```
+
+##### Parameters
+
+`type` Type
+
+
+`metadata` Avalonia.StyledPropertyMetadata&lt;TValue&gt;&lt;TValue&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c313ea99bf"></span>
+
+### ToString Method
+
+Gets the string representation of the property.
+
+```csharp
+public string ToString()
+```
+
+#### Returns
+
+string
+
+The property's string representation.
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [ValidateValue](#uid-4f98099b69) | A method which returns "false" for values that are never valid for this property. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4f98099b69"></span>
+
+### ValidateValue Property
+
+A method which returns "false" for values that are never valid for this property.
+
+```csharp
+public Func<TValue, bool> ValidateValue { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

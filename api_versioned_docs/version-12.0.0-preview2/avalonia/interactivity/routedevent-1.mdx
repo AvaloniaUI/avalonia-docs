@@ -1,0 +1,138 @@
+---
+title: 'RoutedEvent<TEventArgs>'
+hide_title: true
+slug: '/avalonia/interactivity/routedevent-1'
+uid: 'Avalonia.Interactivity.RoutedEvent`1'
+commentId: 'T:Avalonia.Interactivity.RoutedEvent`1'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Interactivity'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">RoutedEvent&lt;TEventArgs&gt; Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Interactivity</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Interactivity/RoutedEvent.cs">RoutedEvent.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class RoutedEvent<TEventArgs>
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="routedevent">RoutedEvent</a> <span className="apiref-page__relation-separator">-&gt;</span> RoutedEvent&lt;TEventArgs&gt;
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [RoutedEvent&lt;TEventArgs&gt;](#uid-6026b8f2fd) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6026b8f2fd"></span>
+
+### RoutedEvent&lt;TEventArgs&gt; Constructor
+
+```csharp
+public RoutedEvent<TEventArgs>(string name, Avalonia.Interactivity.RoutingStrategies routingStrategies, Type ownerType)
+```
+
+#### Parameters
+
+`name` string
+
+
+`routingStrategies` [Avalonia.Interactivity.RoutingStrategies](xref:Avalonia.Interactivity.RoutingStrategies)
+
+
+`ownerType` Type
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [AddClassHandler](#uid-0a66ffb7c2) | No summary available. |
+| [AddClassHandler](routedevent.mdx#uid-b6d8630c3e) | Inherited from [RoutedEvent](routedevent.mdx). |
+| [Register (2 overloads)](routedevent.mdx#uid-4633745f66) | Inherited from [RoutedEvent](routedevent.mdx). |
+| [ToString](routedevent.mdx#uid-091891d52b) | Inherited from [RoutedEvent](routedevent.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0a66ffb7c2"></span>
+
+### AddClassHandler Method
+
+```csharp
+public IDisposable AddClassHandler<TTarget>(Action<TTarget, TEventArgs> handler, Avalonia.Interactivity.RoutingStrategies routes, bool handledEventsToo)
+```
+
+#### Parameters
+
+`handler` Action&lt;TTarget, TEventArgs&gt;
+
+
+`routes` [Avalonia.Interactivity.RoutingStrategies](xref:Avalonia.Interactivity.RoutingStrategies)
+
+
+`handledEventsToo` bool
+
+
+#### Type Parameters
+
+`TTarget`
+
+
+#### Returns
+
+IDisposable
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [EventArgsType](routedevent.mdx#uid-02254d700b) | Inherited from [RoutedEvent](routedevent.mdx). |
+| [HasRaisedSubscriptions](routedevent.mdx#uid-600aa2a7c4) | Inherited from [RoutedEvent](routedevent.mdx). |
+| [Name](routedevent.mdx#uid-c1a91d3f61) | Inherited from [RoutedEvent](routedevent.mdx). |
+| [OwnerType](routedevent.mdx#uid-bea5e282a0) | Inherited from [RoutedEvent](routedevent.mdx). |
+| [Raised](routedevent.mdx#uid-6ca70edd01) | Inherited from [RoutedEvent](routedevent.mdx). |
+| [RouteFinished](routedevent.mdx#uid-f6e46eddce) | Inherited from [RoutedEvent](routedevent.mdx). |
+| [RoutingStrategies](routedevent.mdx#uid-e5ef0ca772) | Inherited from [RoutedEvent](routedevent.mdx). |
+
+</ApiRefPage>
+

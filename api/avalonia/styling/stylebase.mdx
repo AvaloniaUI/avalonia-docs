@@ -1,0 +1,257 @@
+---
+title: 'StyleBase'
+hide_title: true
+slug: '/avalonia/styling/stylebase'
+uid: 'Avalonia.Styling.StyleBase'
+commentId: 'T:Avalonia.Styling.StyleBase'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Styling'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">StyleBase Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Styling</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Styling/StyleBase.cs">StyleBase.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Base class for [Avalonia.Styling.Style](xref:Avalonia.Styling.Style) and [Avalonia.Styling.ControlTheme](xref:Avalonia.Styling.ControlTheme).
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class StyleBase
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> StyleBase
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Derived types:</span> <a href="containerquery">ContainerQuery</a>, <a href="controltheme">ControlTheme</a>, <a href="style">Style</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="../controls/iresourcenode">IResourceNode</a>, <a href="../controls/iresourceprovider">IResourceProvider</a>, <a href="../metadata/iaddchild">IAddChild</a>, <a href="istyle">IStyle</a>
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Add (2 overloads)](#uid-3f4cc028a1) | No summary available. |
+| [TryGetResource](#uid-dcc255315b) | No summary available. |
+| [Bind (8 overloads)](../avaloniaobject.mdx#uid-1c60c7bda3) | Binds a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) to an [Avalonia.Data.BindingBase](xref:Avalonia.Data.BindingBase). Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [CheckAccess](../avaloniaobject.mdx#uid-260ff7a68d) | Returns a value indicating whether the current thread is the UI thread. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [ClearValue (4 overloads)](../avaloniaobject.mdx#uid-41de208fbe) | Clears a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty)'s local value. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [CoerceValue](../avaloniaobject.mdx#uid-3bec32f39e) | Coerces the specified [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty). Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [Equals](../avaloniaobject.mdx#uid-a8a8e94305) | Compares two objects using reference equality. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [GetBaseValue](../avaloniaobject.mdx#uid-9c615efbba) | Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [GetHashCode](../avaloniaobject.mdx#uid-7f7db1e7a2) | Gets the hash code for the object. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [GetValue (3 overloads)](../avaloniaobject.mdx#uid-5142cd4792) | Gets a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [IsAnimating](../avaloniaobject.mdx#uid-8cbfc7521a) | Checks whether a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) is animating. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [IsSet](../avaloniaobject.mdx#uid-f8bf0bbdcc) | Checks whether a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) is set on this object. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [SetCurrentValue (2 overloads)](../avaloniaobject.mdx#uid-38759fd088) | Sets the value of a dependency property without changing its value source. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [SetValue (3 overloads)](../avaloniaobject.mdx#uid-47d14e19d7) | Sets a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [VerifyAccess](../avaloniaobject.mdx#uid-3b9d3c9793) | Checks that the current thread is the UI thread and throws if not. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+
+<span id="uid-3f4cc028a1"></span>
+
+### Add overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-50a2a85952"></span>
+
+#### Add Method
+
+```csharp
+public void Add(Avalonia.Styling.IStyle style)
+```
+
+##### Parameters
+
+`style` [Avalonia.Styling.IStyle](xref:Avalonia.Styling.IStyle)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ec9df4d24a"></span>
+
+#### Add Method
+
+```csharp
+public void Add(Avalonia.Styling.SetterBase setter)
+```
+
+##### Parameters
+
+`setter` [Avalonia.Styling.SetterBase](xref:Avalonia.Styling.SetterBase)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-dcc255315b"></span>
+
+### TryGetResource Method
+
+```csharp
+public bool TryGetResource(object key, Avalonia.Styling.ThemeVariant themeVariant, object& result)
+```
+
+#### Parameters
+
+`key` object
+
+
+`themeVariant` [Avalonia.Styling.ThemeVariant](xref:Avalonia.Styling.ThemeVariant)
+
+
+`result` object&amp;
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Animations](#uid-258706a5fa) | No summary available. |
+| [Children](#uid-e180c2ce0c) | No summary available. |
+| [Owner](#uid-03eed8a1b3) | No summary available. |
+| [Parent](#uid-921fbf50c3) | No summary available. |
+| [Resources](#uid-392a49a2e9) | No summary available. |
+| [Setters](#uid-c5f3933b1f) | No summary available. |
+| [Dispatcher](../avaloniaobject.mdx#uid-b25fa51632) | Returns the [Avalonia.AvaloniaObject.Dispatcher](xref:Avalonia.AvaloniaObject.Dispatcher) that this [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject) is associated with. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [Item](../avaloniaobject.mdx#uid-c1d1f1bc0f) | Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-258706a5fa"></span>
+
+### Animations Property
+
+```csharp
+public System.Collections.Generic.IList<Avalonia.Animation.IAnimation> Animations { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e180c2ce0c"></span>
+
+### Children Property
+
+```csharp
+public System.Collections.Generic.IList<Avalonia.Styling.IStyle> Children { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-03eed8a1b3"></span>
+
+### Owner Property
+
+```csharp
+public Avalonia.Controls.IResourceHost Owner { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-921fbf50c3"></span>
+
+### Parent Property
+
+```csharp
+public Avalonia.Styling.IStyle Parent { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-392a49a2e9"></span>
+
+### Resources Property
+
+```csharp
+public Avalonia.Controls.IResourceDictionary Resources { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c5f3933b1f"></span>
+
+### Setters Property
+
+```csharp
+public System.Collections.Generic.IList<Avalonia.Styling.SetterBase> Setters { get; set; }
+```
+
+</section>
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [OwnerChanged](#uid-f706aa8537) | No summary available. |
+| [PropertyChanged](../avaloniaobject.mdx#uid-d758e26fae) | Raised when a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value changes on this object. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f706aa8537"></span>
+
+### OwnerChanged Event
+
+```csharp
+public event EventHandler OwnerChanged
+```
+
+</section>
+
+</ApiRefPage>
+

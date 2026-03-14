@@ -1,0 +1,786 @@
+---
+title: 'VisualExtensions'
+hide_title: true
+slug: '/avalonia/visualtree/visualextensions'
+uid: 'Avalonia.VisualTree.VisualExtensions'
+commentId: 'T:Avalonia.VisualTree.VisualExtensions'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.VisualTree'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">VisualExtensions Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.VisualTree</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/VisualTree/VisualExtensions.cs">VisualExtensions.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Provides extension methods for working with the visual tree.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class VisualExtensions
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> VisualExtensions
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [CalculateDistanceFromAncestor](#uid-2bcae1cf48) | Calculates the distance from a visual's ancestor. |
+| [CalculateDistanceFromRoot](#uid-58cb5b3968) | Calculates the distance from a visual's root. |
+| [FindAncestorOfType (2 overloads)](#uid-ac924aa932) | No summary available. |
+| [FindCommonVisualAncestor](#uid-e2a8c77885) | Tries to get the first common ancestor of two visuals. |
+| [FindDescendantOfType (2 overloads)](#uid-3137febcb3) | No summary available. |
+| [GetLayoutManager](#uid-c260324354) | Gets the layout manager for the visual's presentation source, or null if the visual is not attached to a visual root. |
+| [GetPlatformSettings](#uid-309dd67ab3) | Attempts to obtain platform settings from the visual's root. This will return null if the visual is not attached to a visual root. |
+| [GetPresentationSource](#uid-67d648fa7f) | No summary available. |
+| [GetSelfAndVisualAncestors](#uid-4f4085c684) | Enumerates an [Avalonia.Visual](xref:Avalonia.Visual) and its ancestors in the visual tree. |
+| [GetSelfAndVisualDescendants](#uid-a62ec3fa53) | Enumerates an [Avalonia.Visual](xref:Avalonia.Visual) and its descendants in the visual tree. |
+| [GetTransformedBounds](#uid-9dd6a1542d) | No summary available. |
+| [GetVisualAncestors](#uid-3718ba8e9e) | Enumerates the ancestors of an [Avalonia.Visual](xref:Avalonia.Visual) in the visual tree. |
+| [GetVisualAt (2 overloads)](#uid-558e3c5252) | Gets the first visual in the visual tree whose bounds contain a point. |
+| [GetVisualChildren](#uid-46c0f766d8) | Enumerates the children of an [Avalonia.Visual](xref:Avalonia.Visual) in the visual tree. |
+| [GetVisualDescendants](#uid-b12bb1e778) | Enumerates the descendants of an [Avalonia.Visual](xref:Avalonia.Visual) in the visual tree. |
+| [GetVisualParent](#uid-3b19a7efbd) | Gets the visual parent of an [Avalonia.Visual](xref:Avalonia.Visual). |
+| [GetVisualsAt (2 overloads)](#uid-80be4d730c) | Enumerates the visible visuals in the visual tree whose bounds contain a point. |
+| [IsAttachedToVisualTree](#uid-6f068f121d) | Returns a value indicating whether this control is attached to a visual root. |
+| [IsVisualAncestorOf](#uid-7d9754bffc) | Tests whether an [Avalonia.Visual](xref:Avalonia.Visual) is an ancestor of another visual. |
+| [SortByZIndex](#uid-d2c1ad496d) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2bcae1cf48"></span>
+
+### CalculateDistanceFromAncestor Method
+
+Calculates the distance from a visual's ancestor.
+
+```csharp
+public int CalculateDistanceFromAncestor(Avalonia.Visual visual, Avalonia.Visual ancestor)
+```
+
+#### Parameters
+
+`visual` [Avalonia.Visual](xref:Avalonia.Visual)
+
+The visual.
+
+
+`ancestor` [Avalonia.Visual](xref:Avalonia.Visual)
+
+The ancestor visual.
+
+
+#### Returns
+
+int
+
+The number of steps from the visual to the ancestor or -1 if
+`visual` is not a descendent of `ancestor`.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-58cb5b3968"></span>
+
+### CalculateDistanceFromRoot Method
+
+Calculates the distance from a visual's root.
+
+```csharp
+public int CalculateDistanceFromRoot(Avalonia.Visual visual)
+```
+
+#### Parameters
+
+`visual` [Avalonia.Visual](xref:Avalonia.Visual)
+
+The visual.
+
+
+#### Returns
+
+int
+
+The number of steps from the visual to the root.
+
+
+</section>
+
+<span id="uid-ac924aa932"></span>
+
+### FindAncestorOfType overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2d8e7357f1"></span>
+
+#### FindAncestorOfType Method
+
+```csharp
+public T FindAncestorOfType<T>(Avalonia.Visual visual, bool includeSelf)
+```
+
+##### Parameters
+
+`visual` [Avalonia.Visual](xref:Avalonia.Visual)
+
+
+`includeSelf` bool
+
+
+##### Type Parameters
+
+`T`
+
+
+##### Returns
+
+T
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-cead99a72f"></span>
+
+#### FindAncestorOfType Method
+
+```csharp
+public T FindAncestorOfType<T>(Avalonia.Visual visual, bool includeSelf, Predicate<T> predicate)
+```
+
+##### Parameters
+
+`visual` [Avalonia.Visual](xref:Avalonia.Visual)
+
+
+`includeSelf` bool
+
+
+`predicate` Predicate&lt;T&gt;
+
+
+##### Type Parameters
+
+`T`
+
+
+##### Returns
+
+T
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e2a8c77885"></span>
+
+### FindCommonVisualAncestor Method
+
+Tries to get the first common ancestor of two visuals.
+
+```csharp
+public Avalonia.Visual FindCommonVisualAncestor(Avalonia.Visual visual, Avalonia.Visual target)
+```
+
+#### Parameters
+
+`visual` [Avalonia.Visual](xref:Avalonia.Visual)
+
+The first visual.
+
+
+`target` [Avalonia.Visual](xref:Avalonia.Visual)
+
+The second visual.
+
+
+#### Returns
+
+[Avalonia.Visual](xref:Avalonia.Visual)
+
+The common ancestor, or null if not found.
+
+
+</section>
+
+<span id="uid-3137febcb3"></span>
+
+### FindDescendantOfType overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-fb596ca834"></span>
+
+#### FindDescendantOfType Method
+
+```csharp
+public T FindDescendantOfType<T>(Avalonia.Visual visual, bool includeSelf)
+```
+
+##### Parameters
+
+`visual` [Avalonia.Visual](xref:Avalonia.Visual)
+
+
+`includeSelf` bool
+
+
+##### Type Parameters
+
+`T`
+
+
+##### Returns
+
+T
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1711a15e6b"></span>
+
+#### FindDescendantOfType Method
+
+```csharp
+public T FindDescendantOfType<T>(Avalonia.Visual visual, bool includeSelf, Predicate<T> predicate)
+```
+
+##### Parameters
+
+`visual` [Avalonia.Visual](xref:Avalonia.Visual)
+
+
+`includeSelf` bool
+
+
+`predicate` Predicate&lt;T&gt;
+
+
+##### Type Parameters
+
+`T`
+
+
+##### Returns
+
+T
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c260324354"></span>
+
+### GetLayoutManager Method
+
+Gets the layout manager for the visual's presentation source, or null if the visual is not attached to a visual root.
+
+```csharp
+public Avalonia.Layout.ILayoutManager GetLayoutManager(Avalonia.Visual visual)
+```
+
+#### Parameters
+
+`visual` [Avalonia.Visual](xref:Avalonia.Visual)
+
+
+#### Returns
+
+[Avalonia.Layout.ILayoutManager](xref:Avalonia.Layout.ILayoutManager)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-309dd67ab3"></span>
+
+### GetPlatformSettings Method
+
+Attempts to obtain platform settings from the visual's root.
+This will return null if the visual is not attached to a visual root.
+
+```csharp
+public Avalonia.Platform.IPlatformSettings GetPlatformSettings(Avalonia.Visual visual)
+```
+
+#### Parameters
+
+`visual` [Avalonia.Visual](xref:Avalonia.Visual)
+
+
+#### Returns
+
+[Avalonia.Platform.IPlatformSettings](xref:Avalonia.Platform.IPlatformSettings)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-67d648fa7f"></span>
+
+### GetPresentationSource Method
+
+```csharp
+public Avalonia.Rendering.IPresentationSource GetPresentationSource(Avalonia.Visual visual)
+```
+
+#### Parameters
+
+`visual` [Avalonia.Visual](xref:Avalonia.Visual)
+
+
+#### Returns
+
+[Avalonia.Rendering.IPresentationSource](xref:Avalonia.Rendering.IPresentationSource)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4f4085c684"></span>
+
+### GetSelfAndVisualAncestors Method
+
+Enumerates an [Avalonia.Visual](xref:Avalonia.Visual) and its ancestors in the visual tree.
+
+```csharp
+public System.Collections.Generic.IEnumerable<Avalonia.Visual> GetSelfAndVisualAncestors(Avalonia.Visual visual)
+```
+
+#### Parameters
+
+`visual` [Avalonia.Visual](xref:Avalonia.Visual)
+
+The visual.
+
+
+#### Returns
+
+System.Collections.Generic.IEnumerable&lt;[Avalonia.Visual](xref:Avalonia.Visual)&gt;
+
+The visual and its ancestors.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a62ec3fa53"></span>
+
+### GetSelfAndVisualDescendants Method
+
+Enumerates an [Avalonia.Visual](xref:Avalonia.Visual) and its descendants in the visual tree.
+
+```csharp
+public System.Collections.Generic.IEnumerable<Avalonia.Visual> GetSelfAndVisualDescendants(Avalonia.Visual visual)
+```
+
+#### Parameters
+
+`visual` [Avalonia.Visual](xref:Avalonia.Visual)
+
+The visual.
+
+
+#### Returns
+
+System.Collections.Generic.IEnumerable&lt;[Avalonia.Visual](xref:Avalonia.Visual)&gt;
+
+The visual and its ancestors.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9dd6a1542d"></span>
+
+### GetTransformedBounds Method
+
+```csharp
+public Nullable<Avalonia.VisualTree.TransformedBounds> GetTransformedBounds(Avalonia.Visual visual)
+```
+
+#### Parameters
+
+`visual` [Avalonia.Visual](xref:Avalonia.Visual)
+
+
+#### Returns
+
+Nullable&lt;[Avalonia.VisualTree.TransformedBounds](xref:Avalonia.VisualTree.TransformedBounds)&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3718ba8e9e"></span>
+
+### GetVisualAncestors Method
+
+Enumerates the ancestors of an [Avalonia.Visual](xref:Avalonia.Visual) in the visual tree.
+
+```csharp
+public System.Collections.Generic.IEnumerable<Avalonia.Visual> GetVisualAncestors(Avalonia.Visual visual)
+```
+
+#### Parameters
+
+`visual` [Avalonia.Visual](xref:Avalonia.Visual)
+
+The visual.
+
+
+#### Returns
+
+System.Collections.Generic.IEnumerable&lt;[Avalonia.Visual](xref:Avalonia.Visual)&gt;
+
+The visual's ancestors.
+
+
+</section>
+
+<span id="uid-558e3c5252"></span>
+
+### GetVisualAt overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-645d3d4da8"></span>
+
+#### GetVisualAt Method
+
+Gets the first visual in the visual tree whose bounds contain a point.
+
+```csharp
+public Avalonia.Visual GetVisualAt(Avalonia.Visual visual, Avalonia.Point p)
+```
+
+##### Parameters
+
+`visual` [Avalonia.Visual](xref:Avalonia.Visual)
+
+The root visual to test.
+
+
+`p` [Avalonia.Point](xref:Avalonia.Point)
+
+The point.
+
+
+##### Returns
+
+[Avalonia.Visual](xref:Avalonia.Visual)
+
+The visual at the requested point.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5928854718"></span>
+
+#### GetVisualAt Method
+
+```csharp
+public Avalonia.Visual GetVisualAt(Avalonia.Visual visual, Avalonia.Point p, Func<Avalonia.Visual, bool> filter)
+```
+
+##### Parameters
+
+`visual` [Avalonia.Visual](xref:Avalonia.Visual)
+
+
+`p` [Avalonia.Point](xref:Avalonia.Point)
+
+
+`filter` Func&lt;[Avalonia.Visual](xref:Avalonia.Visual), bool&gt;
+
+
+##### Returns
+
+[Avalonia.Visual](xref:Avalonia.Visual)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-46c0f766d8"></span>
+
+### GetVisualChildren Method
+
+Enumerates the children of an [Avalonia.Visual](xref:Avalonia.Visual) in the visual tree.
+
+```csharp
+public System.Collections.Generic.IEnumerable<Avalonia.Visual> GetVisualChildren(Avalonia.Visual visual)
+```
+
+#### Parameters
+
+`visual` [Avalonia.Visual](xref:Avalonia.Visual)
+
+The visual.
+
+
+#### Returns
+
+System.Collections.Generic.IEnumerable&lt;[Avalonia.Visual](xref:Avalonia.Visual)&gt;
+
+The visual children.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b12bb1e778"></span>
+
+### GetVisualDescendants Method
+
+Enumerates the descendants of an [Avalonia.Visual](xref:Avalonia.Visual) in the visual tree.
+
+```csharp
+public System.Collections.Generic.IEnumerable<Avalonia.Visual> GetVisualDescendants(Avalonia.Visual visual)
+```
+
+#### Parameters
+
+`visual` [Avalonia.Visual](xref:Avalonia.Visual)
+
+The visual.
+
+
+#### Returns
+
+System.Collections.Generic.IEnumerable&lt;[Avalonia.Visual](xref:Avalonia.Visual)&gt;
+
+The visual's ancestors.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3b19a7efbd"></span>
+
+### GetVisualParent Method
+
+Gets the visual parent of an [Avalonia.Visual](xref:Avalonia.Visual).
+
+```csharp
+public T GetVisualParent<T>(Avalonia.Visual visual)
+```
+
+#### Parameters
+
+`visual` [Avalonia.Visual](xref:Avalonia.Visual)
+
+The visual.
+
+
+#### Returns
+
+[Avalonia.Visual](xref:Avalonia.Visual)
+
+The parent, or null if the visual is unparented.
+
+
+</section>
+
+<span id="uid-80be4d730c"></span>
+
+### GetVisualsAt overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1ab66edfa1"></span>
+
+#### GetVisualsAt Method
+
+Enumerates the visible visuals in the visual tree whose bounds contain a point.
+
+```csharp
+public System.Collections.Generic.IEnumerable<Avalonia.Visual> GetVisualsAt(Avalonia.Visual visual, Avalonia.Point p)
+```
+
+##### Parameters
+
+`visual` [Avalonia.Visual](xref:Avalonia.Visual)
+
+The root visual to test.
+
+
+`p` [Avalonia.Point](xref:Avalonia.Point)
+
+The point.
+
+
+##### Returns
+
+System.Collections.Generic.IEnumerable&lt;[Avalonia.Visual](xref:Avalonia.Visual)&gt;
+
+The visuals at the requested point.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-af26952a32"></span>
+
+#### GetVisualsAt Method
+
+```csharp
+public System.Collections.Generic.IEnumerable<Avalonia.Visual> GetVisualsAt(Avalonia.Visual visual, Avalonia.Point p, Func<Avalonia.Visual, bool> filter)
+```
+
+##### Parameters
+
+`visual` [Avalonia.Visual](xref:Avalonia.Visual)
+
+
+`p` [Avalonia.Point](xref:Avalonia.Point)
+
+
+`filter` Func&lt;[Avalonia.Visual](xref:Avalonia.Visual), bool&gt;
+
+
+##### Returns
+
+System.Collections.Generic.IEnumerable&lt;[Avalonia.Visual](xref:Avalonia.Visual)&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6f068f121d"></span>
+
+### IsAttachedToVisualTree Method
+
+Returns a value indicating whether this control is attached to a visual root.
+
+```csharp
+public bool IsAttachedToVisualTree(Avalonia.Visual visual)
+```
+
+#### Parameters
+
+`visual` [Avalonia.Visual](xref:Avalonia.Visual)
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7d9754bffc"></span>
+
+### IsVisualAncestorOf Method
+
+Tests whether an [Avalonia.Visual](xref:Avalonia.Visual) is an ancestor of another visual.
+
+```csharp
+public bool IsVisualAncestorOf(Avalonia.Visual visual, Avalonia.Visual target)
+```
+
+#### Parameters
+
+`visual` [Avalonia.Visual](xref:Avalonia.Visual)
+
+The visual.
+
+
+`target` [Avalonia.Visual](xref:Avalonia.Visual)
+
+The potential descendant.
+
+
+#### Returns
+
+bool
+
+True if `visual` is an ancestor of `target`;
+otherwise false.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d2c1ad496d"></span>
+
+### SortByZIndex Method
+
+```csharp
+public System.Collections.Generic.IEnumerable<Avalonia.Visual> SortByZIndex(System.Collections.Generic.IEnumerable<Avalonia.Visual> elements)
+```
+
+#### Parameters
+
+`elements` System.Collections.Generic.IEnumerable&lt;[Avalonia.Visual](xref:Avalonia.Visual)&gt;
+
+
+#### Returns
+
+System.Collections.Generic.IEnumerable&lt;[Avalonia.Visual](xref:Avalonia.Visual)&gt;
+
+
+</section>
+
+</ApiRefPage>
+

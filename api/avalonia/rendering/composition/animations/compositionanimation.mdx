@@ -1,0 +1,330 @@
+---
+title: 'CompositionAnimation'
+hide_title: true
+slug: '/avalonia/rendering/composition/animations/compositionanimation'
+uid: 'Avalonia.Rendering.Composition.Animations.CompositionAnimation'
+commentId: 'T:Avalonia.Rendering.Composition.Animations.CompositionAnimation'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Rendering.Composition.Animations'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">CompositionAnimation Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Rendering.Composition.Animations</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Rendering/Composition/Animations/CompositionAnimation.cs">CompositionAnimation.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+This is the base class for [ExpressionAnimation](xref:Avalonia.Rendering.Composition.Animations.ExpressionAnimation) and [KeyFrameAnimation](xref:Avalonia.Rendering.Composition.Animations.KeyFrameAnimation).
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class CompositionAnimation
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../compositionobject">CompositionObject</a> <span className="apiref-page__relation-separator">-&gt;</span> CompositionAnimation
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Derived types:</span> <a href="expressionanimation">ExpressionAnimation</a>, <a href="keyframeanimation">KeyFrameAnimation</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="icompositionanimationbase">ICompositionAnimationBase</a>
+</div>
+</div>
+
+## Remarks
+
+Use the [Avalonia.Rendering.Composition.CompositionObject.StartAnimation(string,Avalonia.Rendering.Composition.Animations.CompositionAnimation)](xref:Avalonia.Rendering.Composition.CompositionObject.StartAnimation%28System.String%2CAvalonia.Rendering.Composition.Animations.CompositionAnimation%29) method to start the animation.
+Value parameters (as opposed to reference parameters which are set using [Avalonia.Rendering.Composition.Animations.CompositionAnimation.SetReferenceParameter(string,Avalonia.Rendering.Composition.CompositionObject)](xref:Avalonia.Rendering.Composition.Animations.CompositionAnimation.SetReferenceParameter%28System.String%2CAvalonia.Rendering.Composition.CompositionObject%29))
+are copied and "embedded" into an expression at the time CompositionObject.StartAnimation is called.
+Changing the value of the variable after [Avalonia.Rendering.Composition.CompositionObject.StartAnimation(string,Avalonia.Rendering.Composition.Animations.CompositionAnimation)](xref:Avalonia.Rendering.Composition.CompositionObject.StartAnimation%28System.String%2CAvalonia.Rendering.Composition.Animations.CompositionAnimation%29) is called will not affect
+the value of the [ExpressionAnimation](xref:Avalonia.Rendering.Composition.Animations.ExpressionAnimation).
+See the remarks section of [ExpressionAnimation](xref:Avalonia.Rendering.Composition.Animations.ExpressionAnimation) for additional information.
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [ClearAllParameters](#uid-fabe099f1e) | Clears all of the parameters of the animation. |
+| [ClearParameter](#uid-a8d50b919b) | Clears a parameter from the animation. |
+| [SetColorParameter](#uid-08114cabfc) | No summary available. |
+| [SetMatrix3x2Parameter](#uid-54d5e6b170) | No summary available. |
+| [SetMatrix4x4Parameter](#uid-eca8ffd8b7) | No summary available. |
+| [SetQuaternionParameter](#uid-12d8ac27fb) | No summary available. |
+| [SetReferenceParameter](#uid-e9b8944c6b) | No summary available. |
+| [SetScalarParameter](#uid-9ca4077133) | No summary available. |
+| [SetVector2Parameter](#uid-23a56bbf8b) | No summary available. |
+| [SetVector3Parameter](#uid-36e4f14775) | No summary available. |
+| [SetVector4Parameter](#uid-18adc85c82) | No summary available. |
+| [StartAnimation](../compositionobject.mdx#uid-4d2f25fec7) | Connects an animation with the specified property of the object and starts the animation. Inherited from [CompositionObject](../compositionobject.mdx). |
+| [StartAnimationGroup](../compositionobject.mdx#uid-4846f860a0) | Starts an animation group. The StartAnimationGroup method on [CompositionObject](xref:Avalonia.Rendering.Composition.CompositionObject) lets you start [CompositionAnimationGroup](xref:Avalonia.Rendering.Composition.Animations.CompositionAnimationGroup). All the animations in the group will be started at the same time on the object. Inherited from [CompositionObject](../compositionobject.mdx). |
+| [StopAnimation](../compositionobject.mdx#uid-01077c2b21) | Disconnects an animation from the specified property and stops the animation. Inherited from [CompositionObject](../compositionobject.mdx). |
+| [StopAnimationGroup](../compositionobject.mdx#uid-81dbd02845) | Stops an animation group. Inherited from [CompositionObject](../compositionobject.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-fabe099f1e"></span>
+
+### ClearAllParameters Method
+
+Clears all of the parameters of the animation.
+
+```csharp
+public void ClearAllParameters()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a8d50b919b"></span>
+
+### ClearParameter Method
+
+Clears a parameter from the animation.
+
+```csharp
+public void ClearParameter(string key)
+```
+
+#### Parameters
+
+`key` string
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-08114cabfc"></span>
+
+### SetColorParameter Method
+
+```csharp
+public void SetColorParameter(string key, Avalonia.Media.Color value)
+```
+
+#### Parameters
+
+`key` string
+
+
+`value` [Avalonia.Media.Color](xref:Avalonia.Media.Color)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-54d5e6b170"></span>
+
+### SetMatrix3x2Parameter Method
+
+```csharp
+public void SetMatrix3x2Parameter(string key, System.Numerics.Matrix3x2 value)
+```
+
+#### Parameters
+
+`key` string
+
+
+`value` System.Numerics.Matrix3x2
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-eca8ffd8b7"></span>
+
+### SetMatrix4x4Parameter Method
+
+```csharp
+public void SetMatrix4x4Parameter(string key, System.Numerics.Matrix4x4 value)
+```
+
+#### Parameters
+
+`key` string
+
+
+`value` System.Numerics.Matrix4x4
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-12d8ac27fb"></span>
+
+### SetQuaternionParameter Method
+
+```csharp
+public void SetQuaternionParameter(string key, System.Numerics.Quaternion value)
+```
+
+#### Parameters
+
+`key` string
+
+
+`value` System.Numerics.Quaternion
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e9b8944c6b"></span>
+
+### SetReferenceParameter Method
+
+```csharp
+public void SetReferenceParameter(string key, Avalonia.Rendering.Composition.CompositionObject compositionObject)
+```
+
+#### Parameters
+
+`key` string
+
+
+`compositionObject` [Avalonia.Rendering.Composition.CompositionObject](xref:Avalonia.Rendering.Composition.CompositionObject)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9ca4077133"></span>
+
+### SetScalarParameter Method
+
+```csharp
+public void SetScalarParameter(string key, float value)
+```
+
+#### Parameters
+
+`key` string
+
+
+`value` float
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-23a56bbf8b"></span>
+
+### SetVector2Parameter Method
+
+```csharp
+public void SetVector2Parameter(string key, System.Numerics.Vector2 value)
+```
+
+#### Parameters
+
+`key` string
+
+
+`value` System.Numerics.Vector2
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-36e4f14775"></span>
+
+### SetVector3Parameter Method
+
+```csharp
+public void SetVector3Parameter(string key, System.Numerics.Vector3 value)
+```
+
+#### Parameters
+
+`key` string
+
+
+`value` System.Numerics.Vector3
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-18adc85c82"></span>
+
+### SetVector4Parameter Method
+
+```csharp
+public void SetVector4Parameter(string key, System.Numerics.Vector4 value)
+```
+
+#### Parameters
+
+`key` string
+
+
+`value` System.Numerics.Vector4
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Target](#uid-c4cb7997f1) | No summary available. |
+| [Compositor](../compositionobject.mdx#uid-bd6bbc1391) | The associated Compositor Inherited from [CompositionObject](../compositionobject.mdx). |
+| [ImplicitAnimations](../compositionobject.mdx#uid-3929e9ea34) | The collection of implicit animations attached to this object. Inherited from [CompositionObject](../compositionobject.mdx). |
+| [IsDisposed](../compositionobject.mdx#uid-e01437c946) | Inherited from [CompositionObject](../compositionobject.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c4cb7997f1"></span>
+
+### Target Property
+
+```csharp
+public string Target { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

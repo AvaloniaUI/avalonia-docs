@@ -1,0 +1,155 @@
+---
+title: 'DispatcherOperation<T>'
+hide_title: true
+slug: '/avalonia/threading/dispatcheroperation-1'
+uid: 'Avalonia.Threading.DispatcherOperation`1'
+commentId: 'T:Avalonia.Threading.DispatcherOperation`1'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Threading'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">DispatcherOperation&lt;T&gt; Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Threading</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Threading/DispatcherOperation.cs">DispatcherOperation.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class DispatcherOperation<T>
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="dispatcheroperation">DispatcherOperation</a> <span className="apiref-page__relation-separator">-&gt;</span> DispatcherOperation&lt;T&gt;
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [DispatcherOperation&lt;T&gt;](#uid-763da8bbb9) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-763da8bbb9"></span>
+
+### DispatcherOperation&lt;T&gt; Constructor
+
+```csharp
+public DispatcherOperation<T>(Avalonia.Threading.Dispatcher dispatcher, Avalonia.Threading.DispatcherPriority priority, Func<T> callback)
+```
+
+#### Parameters
+
+`dispatcher` [Avalonia.Threading.Dispatcher](xref:Avalonia.Threading.Dispatcher)
+
+
+`priority` [Avalonia.Threading.DispatcherPriority](xref:Avalonia.Threading.DispatcherPriority)
+
+
+`callback` Func&lt;T&gt;
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [GetAwaiter](#uid-2a70bf99dd) | No summary available. |
+| [GetTask](#uid-3a602b7d5b) | No summary available. |
+| [Abort](dispatcheroperation.mdx#uid-cb67a1e87d) | Inherited from [DispatcherOperation](dispatcheroperation.mdx). |
+| [Wait (2 overloads)](dispatcheroperation.mdx#uid-178e059bd4) | Waits for this operation to complete. Inherited from [DispatcherOperation](dispatcheroperation.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2a70bf99dd"></span>
+
+### GetAwaiter Method
+
+```csharp
+public System.Runtime.CompilerServices.TaskAwaiter<T> GetAwaiter()
+```
+
+#### Returns
+
+System.Runtime.CompilerServices.TaskAwaiter&lt;T&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3a602b7d5b"></span>
+
+### GetTask Method
+
+```csharp
+public System.Threading.Tasks.Task<T> GetTask()
+```
+
+#### Returns
+
+System.Threading.Tasks.Task&lt;T&gt;
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Result](#uid-826538278e) | No summary available. |
+| [Dispatcher](dispatcheroperation.mdx#uid-1b2bdaa79a) | Inherited from [DispatcherOperation](dispatcheroperation.mdx). |
+| [Priority](dispatcheroperation.mdx#uid-e98b1e57bd) | Inherited from [DispatcherOperation](dispatcheroperation.mdx). |
+| [Status](dispatcheroperation.mdx#uid-8bbc21bb30) | Inherited from [DispatcherOperation](dispatcheroperation.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-826538278e"></span>
+
+### Result Property
+
+```csharp
+public T Result { get; set; }
+```
+
+</section>
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [Aborted](dispatcheroperation.mdx#uid-2a2288d0ad) | An event that is raised when the operation is aborted or canceled. Inherited from [DispatcherOperation](dispatcheroperation.mdx). |
+| [Completed](dispatcheroperation.mdx#uid-b9f2587a42) | An event that is raised when the operation completes. Inherited from [DispatcherOperation](dispatcheroperation.mdx). |
+
+</ApiRefPage>
+

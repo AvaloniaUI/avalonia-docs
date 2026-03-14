@@ -1,0 +1,309 @@
+---
+title: 'FontFeature'
+hide_title: true
+slug: '/avalonia/media/fontfeature'
+uid: 'Avalonia.Media.FontFeature'
+commentId: 'T:Avalonia.Media.FontFeature'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Media'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">FontFeature Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Media</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Media/FontFeature.cs">FontFeature.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Font feature
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class FontFeature
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> FontFeature
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;FontFeature&gt;
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [FontFeature](#uid-ef593895f9) | Creates an instance of [FontFeature](xref:Avalonia.Media.FontFeature). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ef593895f9"></span>
+
+### FontFeature Constructor
+
+Creates an instance of [FontFeature](xref:Avalonia.Media.FontFeature).
+
+```csharp
+public FontFeature()
+```
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [&lt;Clone&gt;$](#uid-7195bdeffb) | No summary available. |
+| [Equals (2 overloads)](#uid-1b564226cf) | No summary available. |
+| [GetHashCode](#uid-c2a1c1ae7a) | No summary available. |
+| [Parse](#uid-cc463edcd1) | Parses a string to return a [Avalonia.Media.FontFeature](xref:Avalonia.Media.FontFeature). Syntax is the following: |
+| [ToString](#uid-1e88070b05) | Gets a string representation of the [Avalonia.Media.FontFeature](xref:Avalonia.Media.FontFeature). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7195bdeffb"></span>
+
+### &lt;Clone&gt;$ Method
+
+```csharp
+public Avalonia.Media.FontFeature <Clone>$()
+```
+
+#### Returns
+
+[Avalonia.Media.FontFeature](xref:Avalonia.Media.FontFeature)
+
+
+</section>
+
+<span id="uid-1b564226cf"></span>
+
+### Equals overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7c5bc7f370"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(Avalonia.Media.FontFeature other)
+```
+
+##### Parameters
+
+`other` [Avalonia.Media.FontFeature](xref:Avalonia.Media.FontFeature)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-968e20e5f2"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(object obj)
+```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c2a1c1ae7a"></span>
+
+### GetHashCode Method
+
+```csharp
+public int GetHashCode()
+```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-cc463edcd1"></span>
+
+### Parse Method
+
+Parses a string to return a [Avalonia.Media.FontFeature](xref:Avalonia.Media.FontFeature).
+Syntax is the following:
+
+Syntax Value Start End
+Setting value:
+kern 1 0 ∞ Turn feature on
++kern 1 0 ∞ Turn feature on
+-kern 0 0 ∞ Turn feature off
+kern=0 0 0 ∞ Turn feature off
+kern=1 1 0 ∞ Turn feature on
+aalt=2 2 0 ∞ Choose 2nd alternate
+Setting index:
+kern[] 1 0 ∞ Turn feature on
+kern[:] 1 0 ∞ Turn feature on
+kern[5:] 1 5 ∞ Turn feature on, partial
+kern[:5] 1 0 5 Turn feature on, partial
+kern[3:5] 1 3 5 Turn feature on, range
+kern[3] 1 3 3+1 Turn feature on, single char
+Mixing it all:
+aalt[3:5]=2 2 3 5 Turn 2nd alternate on for range
+
+```csharp
+public Avalonia.Media.FontFeature Parse(string s)
+```
+
+#### Parameters
+
+`s` string
+
+The string.
+
+
+#### Returns
+
+[Avalonia.Media.FontFeature](xref:Avalonia.Media.FontFeature)
+
+The [Avalonia.Media.FontFeature](xref:Avalonia.Media.FontFeature).
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1e88070b05"></span>
+
+### ToString Method
+
+Gets a string representation of the [Avalonia.Media.FontFeature](xref:Avalonia.Media.FontFeature).
+
+```csharp
+public string ToString()
+```
+
+#### Returns
+
+string
+
+The string representation.
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [End](#uid-df01d285f5) | Gets or sets the end. |
+| [Start](#uid-2d7a2c535f) | Gets or sets the start. |
+| [Tag](#uid-8475d824a2) | Gets or sets the tag. |
+| [Value](#uid-4cbb102372) | Gets or sets the value. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-df01d285f5"></span>
+
+### End Property
+
+Gets or sets the end.
+
+```csharp
+public int End { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2d7a2c535f"></span>
+
+### Start Property
+
+Gets or sets the start.
+
+```csharp
+public int Start { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8475d824a2"></span>
+
+### Tag Property
+
+Gets or sets the tag.
+
+```csharp
+public string Tag { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4cbb102372"></span>
+
+### Value Property
+
+Gets or sets the value.
+
+```csharp
+public int Value { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

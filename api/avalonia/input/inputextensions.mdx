@@ -1,0 +1,287 @@
+---
+title: 'InputExtensions'
+hide_title: true
+slug: '/avalonia/input/inputextensions'
+uid: 'Avalonia.Input.InputExtensions'
+commentId: 'T:Avalonia.Input.InputExtensions'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Input'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">InputExtensions Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Input</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Input/InputExtensions.cs">InputExtensions.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Defines extensions for the [Avalonia.Input.IInputElement](xref:Avalonia.Input.IInputElement) interface.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class InputExtensions
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> InputExtensions
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [GetInputElementsAt (2 overloads)](#uid-65f6aa8f40) | Returns the active input elements at a point on an [Avalonia.Input.IInputElement](xref:Avalonia.Input.IInputElement). |
+| [InputHitTest (4 overloads)](#uid-f46f08bee9) | Returns the topmost active input element at a point on an [Avalonia.Input.IInputElement](xref:Avalonia.Input.IInputElement). |
+
+<span id="uid-65f6aa8f40"></span>
+
+### GetInputElementsAt overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3a6166c808"></span>
+
+#### GetInputElementsAt Method
+
+Returns the active input elements at a point on an [Avalonia.Input.IInputElement](xref:Avalonia.Input.IInputElement).
+
+```csharp
+public System.Collections.Generic.IEnumerable<Avalonia.Input.IInputElement> GetInputElementsAt(Avalonia.Input.IInputElement element, Avalonia.Point p)
+```
+
+##### Parameters
+
+`element` [Avalonia.Input.IInputElement](xref:Avalonia.Input.IInputElement)
+
+The element to test.
+
+
+`p` [Avalonia.Point](xref:Avalonia.Point)
+
+The point on `element`.
+
+
+`enabledElementsOnly`
+
+Whether to only return elements for which [Avalonia.Input.IInputElement.IsEffectivelyEnabled](xref:Avalonia.Input.IInputElement.IsEffectivelyEnabled) is true.
+
+
+##### Returns
+
+System.Collections.Generic.IEnumerable&lt;[Avalonia.Input.IInputElement](xref:Avalonia.Input.IInputElement)&gt;
+
+The active input elements found at the point, ordered topmost first.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ad5b8bf67e"></span>
+
+#### GetInputElementsAt Method
+
+Returns the active input elements at a point on an [Avalonia.Input.IInputElement](xref:Avalonia.Input.IInputElement).
+
+```csharp
+public System.Collections.Generic.IEnumerable<Avalonia.Input.IInputElement> GetInputElementsAt(Avalonia.Input.IInputElement element, Avalonia.Point p, bool enabledElementsOnly)
+```
+
+##### Parameters
+
+`element` [Avalonia.Input.IInputElement](xref:Avalonia.Input.IInputElement)
+
+The element to test.
+
+
+`p` [Avalonia.Point](xref:Avalonia.Point)
+
+The point on `element`.
+
+
+`enabledElementsOnly` bool
+
+Whether to only return elements for which [Avalonia.Input.IInputElement.IsEffectivelyEnabled](xref:Avalonia.Input.IInputElement.IsEffectivelyEnabled) is true.
+
+
+##### Returns
+
+System.Collections.Generic.IEnumerable&lt;[Avalonia.Input.IInputElement](xref:Avalonia.Input.IInputElement)&gt;
+
+The active input elements found at the point, ordered topmost first.
+
+
+</section>
+
+<span id="uid-f46f08bee9"></span>
+
+### InputHitTest overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6e1c0b77f9"></span>
+
+#### InputHitTest Method
+
+Returns the topmost active input element at a point on an [Avalonia.Input.IInputElement](xref:Avalonia.Input.IInputElement).
+
+```csharp
+public Avalonia.Input.IInputElement InputHitTest(Avalonia.Input.IInputElement element, Avalonia.Point p)
+```
+
+##### Parameters
+
+`element` [Avalonia.Input.IInputElement](xref:Avalonia.Input.IInputElement)
+
+The element to test.
+
+
+`p` [Avalonia.Point](xref:Avalonia.Point)
+
+The point on `element`.
+
+
+`enabledElementsOnly`
+
+Whether to only return elements for which [Avalonia.Input.IInputElement.IsEffectivelyEnabled](xref:Avalonia.Input.IInputElement.IsEffectivelyEnabled) is true.
+
+
+##### Returns
+
+[Avalonia.Input.IInputElement](xref:Avalonia.Input.IInputElement)
+
+The topmost [Avalonia.Input.IInputElement](xref:Avalonia.Input.IInputElement) at the specified position.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9f69ba1412"></span>
+
+#### InputHitTest Method
+
+Returns the topmost active input element at a point on an [Avalonia.Input.IInputElement](xref:Avalonia.Input.IInputElement).
+
+```csharp
+public Avalonia.Input.IInputElement InputHitTest(Avalonia.Input.IInputElement element, Avalonia.Point p, bool enabledElementsOnly)
+```
+
+##### Parameters
+
+`element` [Avalonia.Input.IInputElement](xref:Avalonia.Input.IInputElement)
+
+The element to test.
+
+
+`p` [Avalonia.Point](xref:Avalonia.Point)
+
+The point on `element`.
+
+
+`enabledElementsOnly` bool
+
+Whether to only return elements for which [Avalonia.Input.IInputElement.IsEffectivelyEnabled](xref:Avalonia.Input.IInputElement.IsEffectivelyEnabled) is true.
+
+
+##### Returns
+
+[Avalonia.Input.IInputElement](xref:Avalonia.Input.IInputElement)
+
+The topmost [Avalonia.Input.IInputElement](xref:Avalonia.Input.IInputElement) at the specified position.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6338bff73c"></span>
+
+#### InputHitTest Method
+
+```csharp
+public Avalonia.Input.IInputElement InputHitTest(Avalonia.Input.IInputElement element, Avalonia.Point p, Func<Avalonia.Visual, bool> filter)
+```
+
+##### Parameters
+
+`element` [Avalonia.Input.IInputElement](xref:Avalonia.Input.IInputElement)
+
+
+`p` [Avalonia.Point](xref:Avalonia.Point)
+
+
+`filter` Func&lt;[Avalonia.Visual](xref:Avalonia.Visual), bool&gt;
+
+
+##### Returns
+
+[Avalonia.Input.IInputElement](xref:Avalonia.Input.IInputElement)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0e44ec4be3"></span>
+
+#### InputHitTest Method
+
+```csharp
+public Avalonia.Input.IInputElement InputHitTest(Avalonia.Input.IInputElement element, Avalonia.Point p, Func<Avalonia.Visual, bool> filter, bool enabledElementsOnly)
+```
+
+##### Parameters
+
+`element` [Avalonia.Input.IInputElement](xref:Avalonia.Input.IInputElement)
+
+
+`p` [Avalonia.Point](xref:Avalonia.Point)
+
+
+`filter` Func&lt;[Avalonia.Visual](xref:Avalonia.Visual), bool&gt;
+
+
+`enabledElementsOnly` bool
+
+
+##### Returns
+
+[Avalonia.Input.IInputElement](xref:Avalonia.Input.IInputElement)
+
+
+</section>
+
+</ApiRefPage>
+

@@ -1,0 +1,147 @@
+---
+title: 'CompositionAnimationGroup'
+hide_title: true
+slug: '/avalonia/rendering/composition/animations/compositionanimationgroup'
+uid: 'Avalonia.Rendering.Composition.Animations.CompositionAnimationGroup'
+commentId: 'T:Avalonia.Rendering.Composition.Animations.CompositionAnimationGroup'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Rendering.Composition.Animations'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">CompositionAnimationGroup Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Rendering.Composition.Animations</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Rendering/Composition/Animations/CompositionAnimationGroup.cs">CompositionAnimationGroup.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class CompositionAnimationGroup
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../compositionobject">CompositionObject</a> <span className="apiref-page__relation-separator">-&gt;</span> CompositionAnimationGroup
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="icompositionanimationbase">ICompositionAnimationBase</a>
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [CompositionAnimationGroup](#uid-12b7efa0f7) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-12b7efa0f7"></span>
+
+### CompositionAnimationGroup Constructor
+
+```csharp
+public CompositionAnimationGroup(Avalonia.Rendering.Composition.Compositor compositor)
+```
+
+#### Parameters
+
+`compositor` [Avalonia.Rendering.Composition.Compositor](xref:Avalonia.Rendering.Composition.Compositor)
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Add](#uid-08f6a938cc) | No summary available. |
+| [Remove](#uid-30a324c2bd) | No summary available. |
+| [RemoveAll](#uid-f46bb5523f) | No summary available. |
+| [StartAnimation](../compositionobject.mdx#uid-4d2f25fec7) | Connects an animation with the specified property of the object and starts the animation. Inherited from [CompositionObject](../compositionobject.mdx). |
+| [StartAnimationGroup](../compositionobject.mdx#uid-4846f860a0) | Starts an animation group. The StartAnimationGroup method on [CompositionObject](xref:Avalonia.Rendering.Composition.CompositionObject) lets you start [CompositionAnimationGroup](xref:Avalonia.Rendering.Composition.Animations.CompositionAnimationGroup). All the animations in the group will be started at the same time on the object. Inherited from [CompositionObject](../compositionobject.mdx). |
+| [StopAnimation](../compositionobject.mdx#uid-01077c2b21) | Disconnects an animation from the specified property and stops the animation. Inherited from [CompositionObject](../compositionobject.mdx). |
+| [StopAnimationGroup](../compositionobject.mdx#uid-81dbd02845) | Stops an animation group. Inherited from [CompositionObject](../compositionobject.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-08f6a938cc"></span>
+
+### Add Method
+
+```csharp
+public void Add(Avalonia.Rendering.Composition.Animations.CompositionAnimation value)
+```
+
+#### Parameters
+
+`value` [Avalonia.Rendering.Composition.Animations.CompositionAnimation](xref:Avalonia.Rendering.Composition.Animations.CompositionAnimation)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-30a324c2bd"></span>
+
+### Remove Method
+
+```csharp
+public void Remove(Avalonia.Rendering.Composition.Animations.CompositionAnimation value)
+```
+
+#### Parameters
+
+`value` [Avalonia.Rendering.Composition.Animations.CompositionAnimation](xref:Avalonia.Rendering.Composition.Animations.CompositionAnimation)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f46bb5523f"></span>
+
+### RemoveAll Method
+
+```csharp
+public void RemoveAll()
+```
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Compositor](../compositionobject.mdx#uid-bd6bbc1391) | The associated Compositor Inherited from [CompositionObject](../compositionobject.mdx). |
+| [ImplicitAnimations](../compositionobject.mdx#uid-3929e9ea34) | The collection of implicit animations attached to this object. Inherited from [CompositionObject](../compositionobject.mdx). |
+| [IsDisposed](../compositionobject.mdx#uid-e01437c946) | Inherited from [CompositionObject](../compositionobject.mdx). |
+
+</ApiRefPage>
+

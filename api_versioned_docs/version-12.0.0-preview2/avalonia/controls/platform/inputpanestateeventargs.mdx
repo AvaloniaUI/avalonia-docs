@@ -1,0 +1,203 @@
+---
+title: 'InputPaneStateEventArgs'
+hide_title: true
+slug: '/avalonia/controls/platform/inputpanestateeventargs'
+uid: 'Avalonia.Controls.Platform.InputPaneStateEventArgs'
+commentId: 'T:Avalonia.Controls.Platform.InputPaneStateEventArgs'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Platform'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">InputPaneStateEventArgs Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Platform</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Controls/Platform/IInputPane.cs">IInputPane.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Provides state change information about the input pane.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class InputPaneStateEventArgs
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> EventArgs <span className="apiref-page__relation-separator">-&gt;</span> InputPaneStateEventArgs
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [InputPaneStateEventArgs (2 overloads)](#uid-61523ba0b4) | No summary available. |
+
+<span id="uid-61523ba0b4"></span>
+
+### InputPaneStateEventArgs overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f72d969d93"></span>
+
+#### InputPaneStateEventArgs Constructor
+
+```csharp
+public InputPaneStateEventArgs(Avalonia.Controls.Platform.InputPaneState newState, Nullable<Avalonia.Rect> startRect, Avalonia.Rect endRect)
+```
+
+##### Parameters
+
+`newState` [Avalonia.Controls.Platform.InputPaneState](xref:Avalonia.Controls.Platform.InputPaneState)
+
+
+`startRect` Nullable&lt;[Avalonia.Rect](xref:Avalonia.Rect)&gt;
+
+
+`endRect` [Avalonia.Rect](xref:Avalonia.Rect)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c8fe1a71e9"></span>
+
+#### InputPaneStateEventArgs Constructor
+
+```csharp
+public InputPaneStateEventArgs(Avalonia.Controls.Platform.InputPaneState newState, Nullable<Avalonia.Rect> startRect, Avalonia.Rect endRect, TimeSpan animationDuration, Avalonia.Animation.Easings.IEasing easing)
+```
+
+##### Parameters
+
+`newState` [Avalonia.Controls.Platform.InputPaneState](xref:Avalonia.Controls.Platform.InputPaneState)
+
+
+`startRect` Nullable&lt;[Avalonia.Rect](xref:Avalonia.Rect)&gt;
+
+
+`endRect` [Avalonia.Rect](xref:Avalonia.Rect)
+
+
+`animationDuration` TimeSpan
+
+
+`easing` [Avalonia.Animation.Easings.IEasing](xref:Avalonia.Animation.Easings.IEasing)
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [AnimationDuration](#uid-2cea7820fe) | The duration of the input pane's state change animation. |
+| [Easing](#uid-7ebcd05084) | The easing of the input pane's state changed animation. |
+| [EndRect](#uid-5fdfbdad1c) | The final bounds of the input pane. |
+| [NewState](#uid-dcc5d2cd70) | The new state of the input pane |
+| [StartRect](#uid-27dd88d308) | The initial bounds of the input pane. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2cea7820fe"></span>
+
+### AnimationDuration Property
+
+The duration of the input pane's state change animation.
+
+```csharp
+public TimeSpan AnimationDuration { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7ebcd05084"></span>
+
+### Easing Property
+
+The easing of the input pane's state changed animation.
+
+```csharp
+public Avalonia.Animation.Easings.IEasing Easing { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5fdfbdad1c"></span>
+
+### EndRect Property
+
+The final bounds of the input pane.
+
+```csharp
+public Avalonia.Rect EndRect { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-dcc5d2cd70"></span>
+
+### NewState Property
+
+The new state of the input pane
+
+```csharp
+public Avalonia.Controls.Platform.InputPaneState NewState { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-27dd88d308"></span>
+
+### StartRect Property
+
+The initial bounds of the input pane.
+
+```csharp
+public Nullable<Avalonia.Rect> StartRect { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

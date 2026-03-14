@@ -1,0 +1,416 @@
+---
+title: 'RelativePoint'
+hide_title: true
+slug: '/avalonia/relativepoint'
+uid: 'Avalonia.RelativePoint'
+commentId: 'T:Avalonia.RelativePoint'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">RelativePoint Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/RelativePoint.cs">RelativePoint.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Defines a point that may be defined relative to a containing element.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct RelativePoint
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> RelativePoint
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;RelativePoint&gt;
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [RelativePoint (2 overloads)](#uid-90ed1ba85b) | Initializes a new instance of the [Avalonia.RelativePoint](xref:Avalonia.RelativePoint) struct. |
+
+<span id="uid-90ed1ba85b"></span>
+
+### RelativePoint overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b027b65989"></span>
+
+#### RelativePoint Constructor
+
+Initializes a new instance of the [Avalonia.RelativePoint](xref:Avalonia.RelativePoint) struct.
+
+```csharp
+public RelativePoint(Avalonia.Point point, Avalonia.RelativeUnit unit)
+```
+
+##### Parameters
+
+`point` [Avalonia.Point](xref:Avalonia.Point)
+
+The point.
+
+
+`unit` [Avalonia.RelativeUnit](xref:Avalonia.RelativeUnit)
+
+The unit.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4884b31816"></span>
+
+#### RelativePoint Constructor
+
+Initializes a new instance of the [Avalonia.RelativePoint](xref:Avalonia.RelativePoint) struct.
+
+```csharp
+public RelativePoint(double x, double y, Avalonia.RelativeUnit unit)
+```
+
+##### Parameters
+
+`x` double
+
+The X point.
+
+
+`y` double
+
+The Y point
+
+
+`unit` [Avalonia.RelativeUnit](xref:Avalonia.RelativeUnit)
+
+The unit.
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Equals (2 overloads)](#uid-ddd4e41dd9) | Checks if the [Avalonia.RelativePoint](xref:Avalonia.RelativePoint) equals another point. |
+| [GetHashCode](#uid-20168bf635) | Gets a hashcode for a [Avalonia.RelativePoint](xref:Avalonia.RelativePoint). |
+| [Parse](#uid-0fe3a4e2b3) | Parses a [Avalonia.RelativePoint](xref:Avalonia.RelativePoint) string. |
+| [ToPixels (2 overloads)](#uid-7ea36c4cb1) | Converts a [Avalonia.RelativePoint](xref:Avalonia.RelativePoint) into pixels. |
+| [ToString](#uid-1b9eb1f8a6) | Returns a String representing this [RelativePoint](xref:Avalonia.RelativePoint) instance. |
+
+<span id="uid-ddd4e41dd9"></span>
+
+### Equals overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0120f85241"></span>
+
+#### Equals Method
+
+Checks if the [Avalonia.RelativePoint](xref:Avalonia.RelativePoint) equals another point.
+
+```csharp
+public bool Equals(Avalonia.RelativePoint p)
+```
+
+##### Parameters
+
+`p` [Avalonia.RelativePoint](xref:Avalonia.RelativePoint)
+
+The other point.
+
+
+##### Returns
+
+bool
+
+True if the objects are equal, otherwise false.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-11f6c72880"></span>
+
+#### Equals Method
+
+Checks if the [Avalonia.RelativePoint](xref:Avalonia.RelativePoint) equals another object.
+
+```csharp
+public bool Equals(object obj)
+```
+
+##### Parameters
+
+`obj` object
+
+The other object.
+
+
+##### Returns
+
+bool
+
+True if the objects are equal, otherwise false.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-20168bf635"></span>
+
+### GetHashCode Method
+
+Gets a hashcode for a [Avalonia.RelativePoint](xref:Avalonia.RelativePoint).
+
+```csharp
+public int GetHashCode()
+```
+
+#### Returns
+
+int
+
+A hash code.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0fe3a4e2b3"></span>
+
+### Parse Method
+
+Parses a [Avalonia.RelativePoint](xref:Avalonia.RelativePoint) string.
+
+```csharp
+public Avalonia.RelativePoint Parse(string s)
+```
+
+#### Parameters
+
+`s` string
+
+The string.
+
+
+#### Returns
+
+[Avalonia.RelativePoint](xref:Avalonia.RelativePoint)
+
+The parsed [Avalonia.RelativePoint](xref:Avalonia.RelativePoint).
+
+
+</section>
+
+<span id="uid-7ea36c4cb1"></span>
+
+### ToPixels overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ec33c54000"></span>
+
+#### ToPixels Method
+
+Converts a [Avalonia.RelativePoint](xref:Avalonia.RelativePoint) into pixels.
+
+```csharp
+public Avalonia.Point ToPixels(Avalonia.Rect rect)
+```
+
+##### Parameters
+
+`rect` [Avalonia.Rect](xref:Avalonia.Rect)
+
+The bounding box of the rendering primitive.
+
+
+##### Returns
+
+[Avalonia.Point](xref:Avalonia.Point)
+
+The origin point in pixels.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6237e111e0"></span>
+
+#### ToPixels Method
+
+Converts a [Avalonia.RelativePoint](xref:Avalonia.RelativePoint) into pixels.
+
+```csharp
+public Avalonia.Point ToPixels(Avalonia.Size size)
+```
+
+##### Parameters
+
+`size` [Avalonia.Size](xref:Avalonia.Size)
+
+The size of the visual.
+
+
+##### Returns
+
+[Avalonia.Point](xref:Avalonia.Point)
+
+The origin point in pixels.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1b9eb1f8a6"></span>
+
+### ToString Method
+
+Returns a String representing this [RelativePoint](xref:Avalonia.RelativePoint) instance.
+
+```csharp
+public string ToString()
+```
+
+#### Returns
+
+string
+
+The string representation.
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Point](#uid-1d248bda92) | Gets the point. |
+| [Unit](#uid-e4c35bb3c7) | Gets the unit. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1d248bda92"></span>
+
+### Point Property
+
+Gets the point.
+
+```csharp
+public Avalonia.Point Point { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e4c35bb3c7"></span>
+
+### Unit Property
+
+Gets the unit.
+
+```csharp
+public Avalonia.RelativeUnit Unit { get; set; }
+```
+
+</section>
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [BottomRight](#uid-0dd183df3f) | A point at the bottom right of the containing element. |
+| [Center](#uid-d26268f3b0) | A point at the center of the containing element. |
+| [TopLeft](#uid-8327080049) | A point at the top left of the containing element. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0dd183df3f"></span>
+
+### BottomRight Field
+
+A point at the bottom right of the containing element.
+
+```csharp
+public Avalonia.RelativePoint BottomRight
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d26268f3b0"></span>
+
+### Center Field
+
+A point at the center of the containing element.
+
+```csharp
+public Avalonia.RelativePoint Center
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8327080049"></span>
+
+### TopLeft Field
+
+A point at the top left of the containing element.
+
+```csharp
+public Avalonia.RelativePoint TopLeft
+```
+
+</section>
+
+</ApiRefPage>
+

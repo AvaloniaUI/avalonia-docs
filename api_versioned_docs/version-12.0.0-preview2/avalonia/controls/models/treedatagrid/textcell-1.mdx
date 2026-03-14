@@ -1,0 +1,396 @@
+---
+title: 'TextCell<T>'
+hide_title: true
+slug: '/avalonia/controls/models/treedatagrid/textcell-1'
+uid: 'Avalonia.Controls.Models.TreeDataGrid.TextCell`1'
+commentId: 'T:Avalonia.Controls.Models.TreeDataGrid.TextCell`1'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.TreeDataGrid'
+assembly: 'Avalonia.Controls.TreeDataGrid'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Models.TreeDataGrid'
+tfms:
+  - 'net8.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">TextCell&lt;T&gt; Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Models.TreeDataGrid</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Represents a cell in a [Avalonia.Controls.Models.TreeDataGrid](xref:Avalonia.Controls.Models.TreeDataGrid) that displays and edits text values.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class TextCell<T>
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../notifyingbase">NotifyingBase</a> <span className="apiref-page__relation-separator">-&gt;</span> TextCell&lt;T&gt;
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="icell">ICell</a>, <a href="itextcell">ITextCell</a>, IEditableObject, IDisposable
+</div>
+</div>
+
+## Remarks
+
+The [Avalonia.Controls.Models.TreeDataGrid.TextCell&lt;T&gt;](xref:Avalonia.Controls.Models.TreeDataGrid.TextCell%601) class provides text display and editing functionality
+within a [TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid) cell, supporting various text formatting options such as trimming,
+wrapping, and alignment.
+
+This class serves as the data model that backs the
+[Avalonia.Controls.Primitives.TreeDataGridTextCell](xref:Avalonia.Controls.Primitives.TreeDataGridTextCell) primitive control. The
+primitive control handles UI rendering and user interactions, while this model manages
+the underlying data, state, and edit operations.
+
+The generic type parameter `T` allows the cell to store values of any type,
+which are converted to and from string representations as needed for display and editing.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [TextCell&lt;T&gt; (2 overloads)](#uid-2ca4f8561d) | No summary available. |
+
+<span id="uid-2ca4f8561d"></span>
+
+### TextCell&lt;T&gt; overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c3b05126b1"></span>
+
+#### TextCell&lt;T&gt; Constructor
+
+```csharp
+public TextCell<T>(IObserver<Avalonia.Data.BindingValue<T>> bindingSubject, IObservable<Avalonia.Data.BindingValue<T>> bindingObservable, bool isReadOnly, Avalonia.Controls.Models.TreeDataGrid.ITextCellOptions options)
+```
+
+##### Parameters
+
+`bindingSubject` IObserver&lt;Avalonia.Data.BindingValue&lt;T&gt;&gt;
+
+
+`bindingObservable` IObservable&lt;Avalonia.Data.BindingValue&lt;T&gt;&gt;
+
+
+`isReadOnly` bool
+
+
+`options` [Avalonia.Controls.Models.TreeDataGrid.ITextCellOptions](xref:Avalonia.Controls.Models.TreeDataGrid.ITextCellOptions)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1b29ece718"></span>
+
+#### TextCell&lt;T&gt; Constructor
+
+Initializes a new instance of the [Avalonia.Controls.Models.TreeDataGrid.TextCell&lt;T&gt;](xref:Avalonia.Controls.Models.TreeDataGrid.TextCell%601) class with a fixed value.
+
+```csharp
+public TextCell<T>(T value)
+```
+
+##### Parameters
+
+`value` T
+
+The value to be displayed in the cell.
+
+
+##### Remarks
+
+This constructor creates a read-only text cell with the specified value.
+The value will be converted to a string representation for display.
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [BeginEdit](#uid-9cfd2dee12) | Begins an edit operation on the cell. |
+| [CancelEdit](#uid-df4132f3c1) | Cancels the current edit operation and restores the original value. |
+| [Dispose](#uid-29867db47e) | Releases resources used by the [Avalonia.Controls.Models.TreeDataGrid.TextCell&lt;T&gt;](xref:Avalonia.Controls.Models.TreeDataGrid.TextCell%601). |
+| [EndEdit](#uid-d805473b88) | Commits the current edit operation and applies the changes to the cell value. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9cfd2dee12"></span>
+
+### BeginEdit Method
+
+Begins an edit operation on the cell.
+
+```csharp
+public void BeginEdit()
+```
+
+#### Remarks
+
+When edit mode is entered, the current text representation of the value is stored
+in an edit buffer. Changes to the [Avalonia.Controls.Models.TreeDataGrid.TextCell&lt;T&gt;.Text](xref:Avalonia.Controls.Models.TreeDataGrid.TextCell%601.Text) property during edit mode
+update this buffer rather than the underlying value.
+
+The edit must be completed with [Avalonia.Controls.Models.TreeDataGrid.TextCell&lt;T&gt;.EndEdit](xref:Avalonia.Controls.Models.TreeDataGrid.TextCell%601.EndEdit) or canceled with
+[Avalonia.Controls.Models.TreeDataGrid.TextCell&lt;T&gt;.CancelEdit](xref:Avalonia.Controls.Models.TreeDataGrid.TextCell%601.CancelEdit).
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-df4132f3c1"></span>
+
+### CancelEdit Method
+
+Cancels the current edit operation and restores the original value.
+
+```csharp
+public void CancelEdit()
+```
+
+#### Remarks
+
+Discards any changes made to the [Avalonia.Controls.Models.TreeDataGrid.TextCell&lt;T&gt;.Text](xref:Avalonia.Controls.Models.TreeDataGrid.TextCell%601.Text) property since
+[Avalonia.Controls.Models.TreeDataGrid.TextCell&lt;T&gt;.BeginEdit](xref:Avalonia.Controls.Models.TreeDataGrid.TextCell%601.BeginEdit) was called.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-29867db47e"></span>
+
+### Dispose Method
+
+Releases resources used by the [Avalonia.Controls.Models.TreeDataGrid.TextCell&lt;T&gt;](xref:Avalonia.Controls.Models.TreeDataGrid.TextCell%601).
+
+```csharp
+public void Dispose()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d805473b88"></span>
+
+### EndEdit Method
+
+Commits the current edit operation and applies the changes to the cell value.
+
+```csharp
+public void EndEdit()
+```
+
+#### Remarks
+
+Converts the current edit text to a value of type `T` and assigns
+it to the [Avalonia.Controls.Models.TreeDataGrid.TextCell&lt;T&gt;.Value](xref:Avalonia.Controls.Models.TreeDataGrid.TextCell%601.Value) property.
+
+If the cell has a binding, the new value is propagated to the bound source.
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [CanEdit](#uid-0370eb7072) | Gets a value indicating whether the cell can enter edit mode. |
+| [EditGestures](#uid-63a50e2412) | Gets the gestures that cause the cell to enter edit mode. |
+| [IsReadOnly](#uid-7e2bed657d) | Gets a value indicating whether the cell is read-only. |
+| [Text](#uid-7e4ebcb847) | Gets or sets the cell's value as a string. |
+| [TextAlignment](#uid-11eb7283b9) | Gets the text alignment mode for the cell. |
+| [TextTrimming](#uid-a397c161df) | Gets the text trimming mode for the cell. |
+| [TextWrapping](#uid-cb3e8f5bc9) | Gets the text wrapping mode for the cell. |
+| [Value](#uid-f00c4cd9fb) | Gets or sets the strongly-typed value of the cell. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0370eb7072"></span>
+
+### CanEdit Property
+
+Gets a value indicating whether the cell can enter edit mode.
+
+```csharp
+public bool CanEdit { get; set; }
+```
+
+#### Remarks
+
+Returns true if the cell is not read-only; otherwise, false.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-63a50e2412"></span>
+
+### EditGestures Property
+
+Gets the gestures that cause the cell to enter edit mode.
+
+```csharp
+public Avalonia.Controls.Models.TreeDataGrid.BeginEditGestures EditGestures { get; set; }
+```
+
+#### Remarks
+
+Returns the edit gestures specified in the cell options, or the default gestures if
+not specified. Default gestures include F2 key press and double-tap.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7e2bed657d"></span>
+
+### IsReadOnly Property
+
+Gets a value indicating whether the cell is read-only.
+
+```csharp
+public bool IsReadOnly { get; set; }
+```
+
+#### Remarks
+
+When true, the cell's value cannot be changed by the user through the UI.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7e4ebcb847"></span>
+
+### Text Property
+
+Gets or sets the cell's value as a string.
+
+```csharp
+public string Text { get; set; }
+```
+
+#### Remarks
+
+When getting this property, it returns the string representation of the cell's value,
+applying any string formatting specified in the cell options.
+
+When setting this property, it attempts to convert the string to the appropriate value type
+and update the cell's value. If the cell is in edit mode, it updates the edit buffer instead.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-11eb7283b9"></span>
+
+### TextAlignment Property
+
+Gets the text alignment mode for the cell.
+
+```csharp
+public Avalonia.Media.TextAlignment TextAlignment { get; set; }
+```
+
+#### Remarks
+
+Determines how text is aligned horizontally within the cell. Returns the alignment
+specified in the cell options, or [Avalonia.Media.TextAlignment.Left](xref:Avalonia.Media.TextAlignment.Left) if not specified.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a397c161df"></span>
+
+### TextTrimming Property
+
+Gets the text trimming mode for the cell.
+
+```csharp
+public Avalonia.Media.TextTrimming TextTrimming { get; set; }
+```
+
+#### Remarks
+
+Determines how text is trimmed when it doesn't fit within the cell's bounds. Returns
+the trimming mode specified in the cell options, or [Avalonia.Media.TextTrimming.None](xref:Avalonia.Media.TextTrimming.None) if
+not specified.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-cb3e8f5bc9"></span>
+
+### TextWrapping Property
+
+Gets the text wrapping mode for the cell.
+
+```csharp
+public Avalonia.Media.TextWrapping TextWrapping { get; set; }
+```
+
+#### Remarks
+
+Determines whether and how text wraps within the cell. Returns the wrapping mode
+specified in the cell options, or [Avalonia.Media.TextWrapping.NoWrap](xref:Avalonia.Media.TextWrapping.NoWrap) if not specified.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f00c4cd9fb"></span>
+
+### Value Property
+
+Gets or sets the strongly-typed value of the cell.
+
+```csharp
+public T Value { get; set; }
+```
+
+#### Remarks
+
+When setting this property, if the cell is not read-only and not in edit mode, the
+change is propagated to the binding.
+
+</section>
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [PropertyChanged](../notifyingbase.mdx#uid-cfba2a29fd) | Occurs when a property value changes. Inherited from [NotifyingBase](../notifyingbase.mdx). |
+
+</ApiRefPage>
+

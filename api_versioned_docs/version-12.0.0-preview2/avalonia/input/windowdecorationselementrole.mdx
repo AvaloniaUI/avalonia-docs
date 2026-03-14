@@ -1,0 +1,316 @@
+---
+title: 'WindowDecorationsElementRole'
+hide_title: true
+slug: '/avalonia/input/windowdecorationselementrole'
+uid: 'Avalonia.Input.WindowDecorationsElementRole'
+commentId: 'T:Avalonia.Input.WindowDecorationsElementRole'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Enum'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Input'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">WindowDecorationsElementRole Enum</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Input</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Defines the cross-platform role of a visual element for non-client hit-testing.
+Used to mark elements as titlebar drag areas, resize grips, etc.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public enum WindowDecorationsElementRole
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Enum <span className="apiref-page__relation-separator">-&gt;</span> WindowDecorationsElementRole
+</div>
+</div>
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [CloseButton](#uid-194d509007) | The element acts as the window close button. On Win32, maps to HTCLOSE for system close behavior. On other platforms, treated as an interactive decoration element. |
+| [DecorationsElement](#uid-f868040ad4) | An interactive element that is part of the decorations chrome (e.g., a caption button). Set by themes on decoration template elements. Input is passed through to the element rather than being intercepted for non-client actions. |
+| [FullScreenButton](#uid-3e4e349d46) | The element acts as the window fullscreen toggle button. Treated as an interactive decoration element on all platforms. |
+| [MaximizeButton](#uid-a51a9f2831) | The element acts as the window maximize/restore button. On Win32, maps to HTMAXBUTTON for system maximize behavior. On other platforms, treated as an interactive decoration element. |
+| [MinimizeButton](#uid-fb6f873eda) | The element acts as the window minimize button. On Win32, maps to HTMINBUTTON for system minimize behavior. On other platforms, treated as an interactive decoration element. |
+| [None](#uid-8ce0744b61) | No special role. The element is invisible to chrome hit-testing. |
+| [ResizeE](#uid-830310a2a9) | Resize grip for the east (right) edge. |
+| [ResizeN](#uid-ac10cd17aa) | Resize grip for the north (top) edge. |
+| [ResizeNE](#uid-3b94c31968) | Resize grip for the northeast corner. |
+| [ResizeNW](#uid-5077e9e3e8) | Resize grip for the northwest corner. |
+| [ResizeS](#uid-c31bb84981) | Resize grip for the south (bottom) edge. |
+| [ResizeSE](#uid-e350cea064) | Resize grip for the southeast corner. |
+| [ResizeSW](#uid-9940a2763b) | Resize grip for the southwest corner. |
+| [ResizeW](#uid-ceaf9edb7e) | Resize grip for the west (left) edge. |
+| [TitleBar](#uid-84c4aed0c3) | The element acts as a titlebar drag area. Clicking and dragging on this element initiates a platform window move. |
+| [User](#uid-7d2b4dd18f) | An interactive element set by user code that should receive input even when overlapping chrome areas. Has the same effect as [Avalonia.Input.WindowDecorationsElementRole.DecorationsElement](xref:Avalonia.Input.WindowDecorationsElementRole.DecorationsElement) but is intended for use by application developers. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-194d509007"></span>
+
+### CloseButton Field
+
+The element acts as the window close button.
+On Win32, maps to HTCLOSE for system close behavior.
+On other platforms, treated as an interactive decoration element.
+
+```csharp
+public Avalonia.Input.WindowDecorationsElementRole CloseButton
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f868040ad4"></span>
+
+### DecorationsElement Field
+
+An interactive element that is part of the decorations chrome (e.g., a caption button).
+Set by themes on decoration template elements. Input is passed through to the element
+rather than being intercepted for non-client actions.
+
+```csharp
+public Avalonia.Input.WindowDecorationsElementRole DecorationsElement
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3e4e349d46"></span>
+
+### FullScreenButton Field
+
+The element acts as the window fullscreen toggle button.
+Treated as an interactive decoration element on all platforms.
+
+```csharp
+public Avalonia.Input.WindowDecorationsElementRole FullScreenButton
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a51a9f2831"></span>
+
+### MaximizeButton Field
+
+The element acts as the window maximize/restore button.
+On Win32, maps to HTMAXBUTTON for system maximize behavior.
+On other platforms, treated as an interactive decoration element.
+
+```csharp
+public Avalonia.Input.WindowDecorationsElementRole MaximizeButton
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-fb6f873eda"></span>
+
+### MinimizeButton Field
+
+The element acts as the window minimize button.
+On Win32, maps to HTMINBUTTON for system minimize behavior.
+On other platforms, treated as an interactive decoration element.
+
+```csharp
+public Avalonia.Input.WindowDecorationsElementRole MinimizeButton
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8ce0744b61"></span>
+
+### None Field
+
+No special role. The element is invisible to chrome hit-testing.
+
+```csharp
+public Avalonia.Input.WindowDecorationsElementRole None
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-830310a2a9"></span>
+
+### ResizeE Field
+
+Resize grip for the east (right) edge.
+
+```csharp
+public Avalonia.Input.WindowDecorationsElementRole ResizeE
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ac10cd17aa"></span>
+
+### ResizeN Field
+
+Resize grip for the north (top) edge.
+
+```csharp
+public Avalonia.Input.WindowDecorationsElementRole ResizeN
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3b94c31968"></span>
+
+### ResizeNE Field
+
+Resize grip for the northeast corner.
+
+```csharp
+public Avalonia.Input.WindowDecorationsElementRole ResizeNE
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5077e9e3e8"></span>
+
+### ResizeNW Field
+
+Resize grip for the northwest corner.
+
+```csharp
+public Avalonia.Input.WindowDecorationsElementRole ResizeNW
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c31bb84981"></span>
+
+### ResizeS Field
+
+Resize grip for the south (bottom) edge.
+
+```csharp
+public Avalonia.Input.WindowDecorationsElementRole ResizeS
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e350cea064"></span>
+
+### ResizeSE Field
+
+Resize grip for the southeast corner.
+
+```csharp
+public Avalonia.Input.WindowDecorationsElementRole ResizeSE
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9940a2763b"></span>
+
+### ResizeSW Field
+
+Resize grip for the southwest corner.
+
+```csharp
+public Avalonia.Input.WindowDecorationsElementRole ResizeSW
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ceaf9edb7e"></span>
+
+### ResizeW Field
+
+Resize grip for the west (left) edge.
+
+```csharp
+public Avalonia.Input.WindowDecorationsElementRole ResizeW
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-84c4aed0c3"></span>
+
+### TitleBar Field
+
+The element acts as a titlebar drag area.
+Clicking and dragging on this element initiates a platform window move.
+
+```csharp
+public Avalonia.Input.WindowDecorationsElementRole TitleBar
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7d2b4dd18f"></span>
+
+### User Field
+
+An interactive element set by user code that should receive input even when
+overlapping chrome areas. Has the same effect as [Avalonia.Input.WindowDecorationsElementRole.DecorationsElement](xref:Avalonia.Input.WindowDecorationsElementRole.DecorationsElement)
+but is intended for use by application developers.
+
+```csharp
+public Avalonia.Input.WindowDecorationsElementRole User
+```
+
+</section>
+
+</ApiRefPage>
+

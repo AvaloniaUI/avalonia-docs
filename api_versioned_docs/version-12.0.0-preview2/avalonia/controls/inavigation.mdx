@@ -1,0 +1,584 @@
+---
+title: 'INavigation'
+hide_title: true
+slug: '/avalonia/controls/inavigation'
+uid: 'Avalonia.Controls.INavigation'
+commentId: 'T:Avalonia.Controls.INavigation'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">INavigation Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Provides navigation operations for stack-based and modal page navigation.
+Exposed via [Avalonia.Controls.Page.Navigation](xref:Avalonia.Controls.Page.Navigation) when a page is hosted in a [NavigationPage](xref:Avalonia.Controls.NavigationPage).
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface INavigation
+```
+
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [InsertPage](#uid-33cfc04285) | Inserts `page` immediately before `before` in the stack. Does not change the currently visible page. |
+| [PopAllModalsAsync (2 overloads)](#uid-0a85e6ed09) | Pops all modal pages, animating only the topmost dismissal. |
+| [PopAsync (2 overloads)](#uid-82629c38f5) | Pops the top page using the host's default transition. |
+| [PopModalAsync (2 overloads)](#uid-1f98367bea) | Pops the top modal page using the host's modal transition. |
+| [PopToPageAsync (2 overloads)](#uid-b00afe5f7d) | Pops all pages above `page` using the host's default transition. |
+| [PopToRootAsync (2 overloads)](#uid-a047944b32) | Pops all pages above the root using the host's default transition. |
+| [PushAsync (2 overloads)](#uid-efed8dca8f) | Pushes `page` using the host's default transition. |
+| [PushModalAsync (2 overloads)](#uid-9e90393b6e) | Pushes `page` as a modal using the host's modal transition. |
+| [RemovePage](#uid-9985148e2b) | Removes `page` from the navigation stack without animation. |
+| [ReplaceAsync (2 overloads)](#uid-eb81155046) | Replaces the current top page with `page` using the host's default transition. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-33cfc04285"></span>
+
+### InsertPage Method
+
+Inserts `page` immediately before `before` in the stack.
+Does not change the currently visible page.
+
+```csharp
+public void InsertPage(Avalonia.Controls.Page page, Avalonia.Controls.Page before)
+```
+
+#### Parameters
+
+`page` [Avalonia.Controls.Page](xref:Avalonia.Controls.Page)
+
+
+`before` [Avalonia.Controls.Page](xref:Avalonia.Controls.Page)
+
+
+</section>
+
+<span id="uid-0a85e6ed09"></span>
+
+### PopAllModalsAsync overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-24b7af8588"></span>
+
+#### PopAllModalsAsync Method
+
+Pops all modal pages, animating only the topmost dismissal.
+
+```csharp
+public System.Threading.Tasks.Task PopAllModalsAsync()
+```
+
+##### Returns
+
+System.Threading.Tasks.Task
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-328783332b"></span>
+
+#### PopAllModalsAsync Method
+
+Pops all modal pages using `transition`. Pass for no animation.
+
+```csharp
+public System.Threading.Tasks.Task PopAllModalsAsync(Avalonia.Animation.IPageTransition transition)
+```
+
+##### Parameters
+
+`transition` [Avalonia.Animation.IPageTransition](xref:Avalonia.Animation.IPageTransition)
+
+
+##### Returns
+
+System.Threading.Tasks.Task
+
+
+</section>
+
+<span id="uid-82629c38f5"></span>
+
+### PopAsync overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-743dfd4e3a"></span>
+
+#### PopAsync Method
+
+Pops the top page using the host's default transition.
+
+```csharp
+public System.Threading.Tasks.Task<Avalonia.Controls.Page> PopAsync()
+```
+
+##### Returns
+
+System.Threading.Tasks.Task&lt;[Avalonia.Controls.Page](xref:Avalonia.Controls.Page)&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9b0aa285bd"></span>
+
+#### PopAsync Method
+
+Pops the top page using `transition`. Pass for no animation.
+
+```csharp
+public System.Threading.Tasks.Task<Avalonia.Controls.Page> PopAsync(Avalonia.Animation.IPageTransition transition)
+```
+
+##### Parameters
+
+`transition` [Avalonia.Animation.IPageTransition](xref:Avalonia.Animation.IPageTransition)
+
+
+##### Returns
+
+System.Threading.Tasks.Task&lt;[Avalonia.Controls.Page](xref:Avalonia.Controls.Page)&gt;
+
+
+</section>
+
+<span id="uid-1f98367bea"></span>
+
+### PopModalAsync overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ec202aea94"></span>
+
+#### PopModalAsync Method
+
+Pops the top modal page using the host's modal transition.
+
+```csharp
+public System.Threading.Tasks.Task<Avalonia.Controls.Page> PopModalAsync()
+```
+
+##### Returns
+
+System.Threading.Tasks.Task&lt;[Avalonia.Controls.Page](xref:Avalonia.Controls.Page)&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6abdd5c008"></span>
+
+#### PopModalAsync Method
+
+Pops the top modal page using `transition`. Pass for no animation.
+
+```csharp
+public System.Threading.Tasks.Task<Avalonia.Controls.Page> PopModalAsync(Avalonia.Animation.IPageTransition transition)
+```
+
+##### Parameters
+
+`transition` [Avalonia.Animation.IPageTransition](xref:Avalonia.Animation.IPageTransition)
+
+
+##### Returns
+
+System.Threading.Tasks.Task&lt;[Avalonia.Controls.Page](xref:Avalonia.Controls.Page)&gt;
+
+
+</section>
+
+<span id="uid-b00afe5f7d"></span>
+
+### PopToPageAsync overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-76c857803d"></span>
+
+#### PopToPageAsync Method
+
+Pops all pages above `page` using the host's default transition.
+
+```csharp
+public System.Threading.Tasks.Task PopToPageAsync(Avalonia.Controls.Page page)
+```
+
+##### Parameters
+
+`page` [Avalonia.Controls.Page](xref:Avalonia.Controls.Page)
+
+
+##### Returns
+
+System.Threading.Tasks.Task
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-474bf14d12"></span>
+
+#### PopToPageAsync Method
+
+Pops all pages above `page` using `transition`. Pass for no animation.
+
+```csharp
+public System.Threading.Tasks.Task PopToPageAsync(Avalonia.Controls.Page page, Avalonia.Animation.IPageTransition transition)
+```
+
+##### Parameters
+
+`page` [Avalonia.Controls.Page](xref:Avalonia.Controls.Page)
+
+
+`transition` [Avalonia.Animation.IPageTransition](xref:Avalonia.Animation.IPageTransition)
+
+
+##### Returns
+
+System.Threading.Tasks.Task
+
+
+</section>
+
+<span id="uid-a047944b32"></span>
+
+### PopToRootAsync overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-232c8be7cd"></span>
+
+#### PopToRootAsync Method
+
+Pops all pages above the root using the host's default transition.
+
+```csharp
+public System.Threading.Tasks.Task PopToRootAsync()
+```
+
+##### Returns
+
+System.Threading.Tasks.Task
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b514fbfd39"></span>
+
+#### PopToRootAsync Method
+
+Pops all pages above the root using `transition`. Pass for no animation.
+
+```csharp
+public System.Threading.Tasks.Task PopToRootAsync(Avalonia.Animation.IPageTransition transition)
+```
+
+##### Parameters
+
+`transition` [Avalonia.Animation.IPageTransition](xref:Avalonia.Animation.IPageTransition)
+
+
+##### Returns
+
+System.Threading.Tasks.Task
+
+
+</section>
+
+<span id="uid-efed8dca8f"></span>
+
+### PushAsync overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-24f44f8c90"></span>
+
+#### PushAsync Method
+
+Pushes `page` using the host's default transition.
+
+```csharp
+public System.Threading.Tasks.Task PushAsync(Avalonia.Controls.Page page)
+```
+
+##### Parameters
+
+`page` [Avalonia.Controls.Page](xref:Avalonia.Controls.Page)
+
+
+##### Returns
+
+System.Threading.Tasks.Task
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-27e4b4a18f"></span>
+
+#### PushAsync Method
+
+Pushes `page` using `transition`. Pass for no animation.
+
+```csharp
+public System.Threading.Tasks.Task PushAsync(Avalonia.Controls.Page page, Avalonia.Animation.IPageTransition transition)
+```
+
+##### Parameters
+
+`page` [Avalonia.Controls.Page](xref:Avalonia.Controls.Page)
+
+
+`transition` [Avalonia.Animation.IPageTransition](xref:Avalonia.Animation.IPageTransition)
+
+
+##### Returns
+
+System.Threading.Tasks.Task
+
+
+</section>
+
+<span id="uid-9e90393b6e"></span>
+
+### PushModalAsync overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f2fa326eff"></span>
+
+#### PushModalAsync Method
+
+Pushes `page` as a modal using the host's modal transition.
+
+```csharp
+public System.Threading.Tasks.Task PushModalAsync(Avalonia.Controls.Page page)
+```
+
+##### Parameters
+
+`page` [Avalonia.Controls.Page](xref:Avalonia.Controls.Page)
+
+
+##### Returns
+
+System.Threading.Tasks.Task
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4709bea7e9"></span>
+
+#### PushModalAsync Method
+
+Pushes `page` as a modal using `transition`. Pass for no animation.
+
+```csharp
+public System.Threading.Tasks.Task PushModalAsync(Avalonia.Controls.Page page, Avalonia.Animation.IPageTransition transition)
+```
+
+##### Parameters
+
+`page` [Avalonia.Controls.Page](xref:Avalonia.Controls.Page)
+
+
+`transition` [Avalonia.Animation.IPageTransition](xref:Avalonia.Animation.IPageTransition)
+
+
+##### Returns
+
+System.Threading.Tasks.Task
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9985148e2b"></span>
+
+### RemovePage Method
+
+Removes `page` from the navigation stack without animation.
+
+```csharp
+public void RemovePage(Avalonia.Controls.Page page)
+```
+
+#### Parameters
+
+`page` [Avalonia.Controls.Page](xref:Avalonia.Controls.Page)
+
+
+</section>
+
+<span id="uid-eb81155046"></span>
+
+### ReplaceAsync overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7aa44e8b7a"></span>
+
+#### ReplaceAsync Method
+
+Replaces the current top page with `page` using the host's default transition.
+
+```csharp
+public System.Threading.Tasks.Task ReplaceAsync(Avalonia.Controls.Page page)
+```
+
+##### Parameters
+
+`page` [Avalonia.Controls.Page](xref:Avalonia.Controls.Page)
+
+
+##### Returns
+
+System.Threading.Tasks.Task
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5cdb94f35e"></span>
+
+#### ReplaceAsync Method
+
+Replaces the current top page with `page` using `transition`. Pass for no animation.
+
+```csharp
+public System.Threading.Tasks.Task ReplaceAsync(Avalonia.Controls.Page page, Avalonia.Animation.IPageTransition transition)
+```
+
+##### Parameters
+
+`page` [Avalonia.Controls.Page](xref:Avalonia.Controls.Page)
+
+
+`transition` [Avalonia.Animation.IPageTransition](xref:Avalonia.Animation.IPageTransition)
+
+
+##### Returns
+
+System.Threading.Tasks.Task
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [CanGoBack](#uid-752489894f) | Gets whether a pop operation is possible (stack has more than one entry). |
+| [ModalStack](#uid-b1e7fc8f43) | Gets the current modal stack. Index 0 is the oldest (bottom-most) modal; the last index is the most recently pushed (topmost) modal. |
+| [NavigationStack](#uid-51db62d90a) | Gets the current navigation stack. The root page is at index 0; the visible page is last. |
+| [StackDepth](#uid-6909ce9c57) | Gets the number of pages in the navigation stack. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-752489894f"></span>
+
+### CanGoBack Property
+
+Gets whether a pop operation is possible (stack has more than one entry).
+
+```csharp
+public bool CanGoBack { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b1e7fc8f43"></span>
+
+### ModalStack Property
+
+Gets the current modal stack. Index 0 is the oldest (bottom-most) modal;
+the last index is the most recently pushed (topmost) modal.
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<Avalonia.Controls.Page> ModalStack { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-51db62d90a"></span>
+
+### NavigationStack Property
+
+Gets the current navigation stack. The root page is at index 0; the visible page is last.
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<Avalonia.Controls.Page> NavigationStack { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6909ce9c57"></span>
+
+### StackDepth Property
+
+Gets the number of pages in the navigation stack.
+
+```csharp
+public int StackDepth { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

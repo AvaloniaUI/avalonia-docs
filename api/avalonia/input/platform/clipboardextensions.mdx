@@ -1,0 +1,510 @@
+---
+title: 'ClipboardExtensions'
+hide_title: true
+slug: '/avalonia/input/platform/clipboardextensions'
+uid: 'Avalonia.Input.Platform.ClipboardExtensions'
+commentId: 'T:Avalonia.Input.Platform.ClipboardExtensions'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Input.Platform'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ClipboardExtensions Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Input.Platform</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Input/Platform/ClipboardExtensions.cs">ClipboardExtensions.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Contains extension methods related to [Avalonia.Input.Platform.IClipboard](xref:Avalonia.Input.Platform.IClipboard).
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class ClipboardExtensions
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> ClipboardExtensions
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [GetDataFormatsAsync](#uid-cbeb8b6ee4) | Gets a list containing the formats currently available from the clipboard. |
+| [SetBitmapAsync](#uid-a692e1644e) | Places a bitmap on the clipboard. |
+| [SetFileAsync](#uid-261202830d) | Places a file on the clipboard. |
+| [SetFilesAsync](#uid-b5acdd9ee1) | No summary available. |
+| [SetTextAsync](#uid-27f8de40cc) | Places a text on the clipboard. |
+| [SetValueAsync](#uid-bd62710180) | No summary available. |
+| [SetValuesAsync](#uid-7776d74383) | No summary available. |
+| [TryGetBitmapAsync](#uid-eb3b91154a) | Returns a bitmap, if available, from the clipboard. |
+| [TryGetFileAsync](#uid-3be0afb601) | Returns a file, if available, from the clipboard. |
+| [TryGetFilesAsync](#uid-9607040a37) | Returns a list of files, if available, from the clipboard. |
+| [TryGetTextAsync](#uid-6c2a7e0aa5) | Returns a text, if available, from the clipboard. |
+| [TryGetValueAsync](#uid-f930098184) | No summary available. |
+| [TryGetValuesAsync](#uid-2a57c4a0d5) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-cbeb8b6ee4"></span>
+
+### GetDataFormatsAsync Method
+
+Gets a list containing the formats currently available from the clipboard.
+
+```csharp
+public System.Threading.Tasks.Task<System.Collections.Generic.IReadOnlyList<Avalonia.Input.DataFormat>> GetDataFormatsAsync(Avalonia.Input.Platform.IClipboard clipboard)
+```
+
+#### Parameters
+
+`clipboard` [Avalonia.Input.Platform.IClipboard](xref:Avalonia.Input.Platform.IClipboard)
+
+
+#### Returns
+
+System.Threading.Tasks.Task&lt;System.Collections.Generic.IReadOnlyList&lt;[Avalonia.Input.DataFormat](xref:Avalonia.Input.DataFormat)&gt;&gt;
+
+A list of formats. It can be empty if the clipboard is empty.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a692e1644e"></span>
+
+### SetBitmapAsync Method
+
+Places a bitmap on the clipboard.
+
+```csharp
+public System.Threading.Tasks.Task SetBitmapAsync(Avalonia.Input.Platform.IClipboard clipboard, Avalonia.Media.Imaging.Bitmap bitmap)
+```
+
+#### Parameters
+
+`clipboard` [Avalonia.Input.Platform.IClipboard](xref:Avalonia.Input.Platform.IClipboard)
+
+The clipboard instance.
+
+
+`bitmap` [Avalonia.Media.Imaging.Bitmap](xref:Avalonia.Media.Imaging.Bitmap)
+
+The bitmap to place on the clipboard.
+
+
+#### Returns
+
+System.Threading.Tasks.Task
+
+
+#### Remarks
+
+By calling this method, the clipboard will get cleared of any possible previous data.
+
+If `bitmap` is null, nothing will get placed on the clipboard and this method
+will be equivalent to [Avalonia.Input.Platform.IClipboard.ClearAsync](xref:Avalonia.Input.Platform.IClipboard.ClearAsync).
+
+#### See also
+
+- [Avalonia.Input.DataFormat.Bitmap](xref:Avalonia.Input.DataFormat.Bitmap)
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-261202830d"></span>
+
+### SetFileAsync Method
+
+Places a file on the clipboard.
+
+```csharp
+public System.Threading.Tasks.Task SetFileAsync(Avalonia.Input.Platform.IClipboard clipboard, Avalonia.Platform.Storage.IStorageItem file)
+```
+
+#### Parameters
+
+`clipboard` [Avalonia.Input.Platform.IClipboard](xref:Avalonia.Input.Platform.IClipboard)
+
+The clipboard instance.
+
+
+`file` [Avalonia.Platform.Storage.IStorageItem](xref:Avalonia.Platform.Storage.IStorageItem)
+
+The file to place on the clipboard.
+
+
+#### Returns
+
+System.Threading.Tasks.Task
+
+
+#### Remarks
+
+By calling this method, the clipboard will get cleared of any possible previous data.
+
+If `file` is null, nothing will get placed on the clipboard and this method
+will be equivalent to [Avalonia.Input.Platform.IClipboard.ClearAsync](xref:Avalonia.Input.Platform.IClipboard.ClearAsync).
+
+#### See also
+
+- [Avalonia.Input.DataFormat.File](xref:Avalonia.Input.DataFormat.File)
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b5acdd9ee1"></span>
+
+### SetFilesAsync Method
+
+```csharp
+public System.Threading.Tasks.Task SetFilesAsync(Avalonia.Input.Platform.IClipboard clipboard, System.Collections.Generic.IEnumerable<Avalonia.Platform.Storage.IStorageItem> files)
+```
+
+#### Parameters
+
+`clipboard` [Avalonia.Input.Platform.IClipboard](xref:Avalonia.Input.Platform.IClipboard)
+
+
+`files` System.Collections.Generic.IEnumerable&lt;[Avalonia.Platform.Storage.IStorageItem](xref:Avalonia.Platform.Storage.IStorageItem)&gt;
+
+
+#### Returns
+
+System.Threading.Tasks.Task
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-27f8de40cc"></span>
+
+### SetTextAsync Method
+
+Places a text on the clipboard.
+
+```csharp
+public System.Threading.Tasks.Task SetTextAsync(Avalonia.Input.Platform.IClipboard clipboard, string text)
+```
+
+#### Parameters
+
+`clipboard` [Avalonia.Input.Platform.IClipboard](xref:Avalonia.Input.Platform.IClipboard)
+
+The clipboard instance.
+
+
+`text` string
+
+The value to place on the clipboard.
+
+
+#### Returns
+
+System.Threading.Tasks.Task
+
+
+#### Remarks
+
+By calling this method, the clipboard will get cleared of any possible previous data.
+
+If `text` is null, nothing will get placed on the clipboard and this method
+will be equivalent to [Avalonia.Input.Platform.IClipboard.ClearAsync](xref:Avalonia.Input.Platform.IClipboard.ClearAsync).
+
+#### See also
+
+- [Avalonia.Input.DataFormat.Text](xref:Avalonia.Input.DataFormat.Text)
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-bd62710180"></span>
+
+### SetValueAsync Method
+
+```csharp
+public System.Threading.Tasks.Task SetValueAsync<T>(Avalonia.Input.Platform.IClipboard clipboard, Avalonia.Input.DataFormat<T><T> format, T value)
+```
+
+#### Parameters
+
+`clipboard` [Avalonia.Input.Platform.IClipboard](xref:Avalonia.Input.Platform.IClipboard)
+
+
+`format` [Avalonia.Input.DataFormat](xref:Avalonia.Input.DataFormat)&lt;T&gt;&lt;T&gt;
+
+
+`value` T
+
+
+#### Type Parameters
+
+`T`
+
+
+#### Returns
+
+System.Threading.Tasks.Task
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7776d74383"></span>
+
+### SetValuesAsync Method
+
+```csharp
+public System.Threading.Tasks.Task SetValuesAsync<T>(Avalonia.Input.Platform.IClipboard clipboard, Avalonia.Input.DataFormat<T><T> format, System.Collections.Generic.IEnumerable<T> values)
+```
+
+#### Parameters
+
+`clipboard` [Avalonia.Input.Platform.IClipboard](xref:Avalonia.Input.Platform.IClipboard)
+
+
+`format` [Avalonia.Input.DataFormat](xref:Avalonia.Input.DataFormat)&lt;T&gt;&lt;T&gt;
+
+
+`values` System.Collections.Generic.IEnumerable&lt;T&gt;
+
+
+#### Type Parameters
+
+`T`
+
+
+#### Returns
+
+System.Threading.Tasks.Task
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-eb3b91154a"></span>
+
+### TryGetBitmapAsync Method
+
+Returns a bitmap, if available, from the clipboard.
+
+```csharp
+public System.Threading.Tasks.Task<Avalonia.Media.Imaging.Bitmap> TryGetBitmapAsync(Avalonia.Input.Platform.IClipboard clipboard)
+```
+
+#### Parameters
+
+`clipboard` [Avalonia.Input.Platform.IClipboard](xref:Avalonia.Input.Platform.IClipboard)
+
+The clipboard instance.
+
+
+#### Returns
+
+System.Threading.Tasks.Task&lt;[Avalonia.Media.Imaging.Bitmap](xref:Avalonia.Media.Imaging.Bitmap)&gt;
+
+A [Avalonia.Media.Imaging.Bitmap](xref:Avalonia.Media.Imaging.Bitmap), or null if the format isn't available.
+
+
+#### See also
+
+- [Avalonia.Input.DataFormat.Bitmap](xref:Avalonia.Input.DataFormat.Bitmap)
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3be0afb601"></span>
+
+### TryGetFileAsync Method
+
+Returns a file, if available, from the clipboard.
+
+```csharp
+public System.Threading.Tasks.Task<Avalonia.Platform.Storage.IStorageItem> TryGetFileAsync(Avalonia.Input.Platform.IClipboard clipboard)
+```
+
+#### Parameters
+
+`clipboard` [Avalonia.Input.Platform.IClipboard](xref:Avalonia.Input.Platform.IClipboard)
+
+The clipboard instance.
+
+
+#### Returns
+
+System.Threading.Tasks.Task&lt;[Avalonia.Platform.Storage.IStorageItem](xref:Avalonia.Platform.Storage.IStorageItem)&gt;
+
+An [Avalonia.Platform.Storage.IStorageItem](xref:Avalonia.Platform.Storage.IStorageItem) (file or folder), or null if the format isn't available.
+
+
+#### See also
+
+- [Avalonia.Input.DataFormat.File](xref:Avalonia.Input.DataFormat.File)
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9607040a37"></span>
+
+### TryGetFilesAsync Method
+
+Returns a list of files, if available, from the clipboard.
+
+```csharp
+public System.Threading.Tasks.Task<Avalonia.Platform.Storage.IStorageItem[]> TryGetFilesAsync(Avalonia.Input.Platform.IClipboard clipboard)
+```
+
+#### Parameters
+
+`clipboard` [Avalonia.Input.Platform.IClipboard](xref:Avalonia.Input.Platform.IClipboard)
+
+The clipboard instance.
+
+
+#### Returns
+
+System.Threading.Tasks.Task&lt;[Avalonia.Platform.Storage.IStorageItem](xref:Avalonia.Platform.Storage.IStorageItem)[]&gt;
+
+An array of [Avalonia.Platform.Storage.IStorageItem](xref:Avalonia.Platform.Storage.IStorageItem) (files or folders), or null if the format isn't available.
+
+
+#### See also
+
+- [Avalonia.Input.DataFormat.File](xref:Avalonia.Input.DataFormat.File)
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6c2a7e0aa5"></span>
+
+### TryGetTextAsync Method
+
+Returns a text, if available, from the clipboard.
+
+```csharp
+public System.Threading.Tasks.Task<string> TryGetTextAsync(Avalonia.Input.Platform.IClipboard clipboard)
+```
+
+#### Parameters
+
+`clipboard` [Avalonia.Input.Platform.IClipboard](xref:Avalonia.Input.Platform.IClipboard)
+
+The clipboard instance.
+
+
+#### Returns
+
+System.Threading.Tasks.Task&lt;string&gt;
+
+A string, or null if the format isn't available.
+
+
+#### See also
+
+- [Avalonia.Input.DataFormat.Text](xref:Avalonia.Input.DataFormat.Text)
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f930098184"></span>
+
+### TryGetValueAsync Method
+
+```csharp
+public System.Threading.Tasks.Task<T> TryGetValueAsync<T>(Avalonia.Input.Platform.IClipboard clipboard, Avalonia.Input.DataFormat<T><T> format)
+```
+
+#### Parameters
+
+`clipboard` [Avalonia.Input.Platform.IClipboard](xref:Avalonia.Input.Platform.IClipboard)
+
+
+`format` [Avalonia.Input.DataFormat](xref:Avalonia.Input.DataFormat)&lt;T&gt;&lt;T&gt;
+
+
+#### Type Parameters
+
+`T`
+
+
+#### Returns
+
+System.Threading.Tasks.Task&lt;T&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2a57c4a0d5"></span>
+
+### TryGetValuesAsync Method
+
+```csharp
+public System.Threading.Tasks.Task<T[]> TryGetValuesAsync<T>(Avalonia.Input.Platform.IClipboard clipboard, Avalonia.Input.DataFormat<T><T> format)
+```
+
+#### Parameters
+
+`clipboard` [Avalonia.Input.Platform.IClipboard](xref:Avalonia.Input.Platform.IClipboard)
+
+
+`format` [Avalonia.Input.DataFormat](xref:Avalonia.Input.DataFormat)&lt;T&gt;&lt;T&gt;
+
+
+#### Type Parameters
+
+`T`
+
+
+#### Returns
+
+System.Threading.Tasks.Task&lt;T[]&gt;
+
+
+</section>
+
+</ApiRefPage>
+

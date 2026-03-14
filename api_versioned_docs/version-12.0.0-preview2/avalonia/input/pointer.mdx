@@ -1,0 +1,211 @@
+---
+title: 'Pointer'
+hide_title: true
+slug: '/avalonia/input/pointer'
+uid: 'Avalonia.Input.Pointer'
+commentId: 'T:Avalonia.Input.Pointer'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Input'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">Pointer Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Input</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Input/Pointer.cs">Pointer.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class Pointer
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> Pointer
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="ipointer">IPointer</a>, IDisposable
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [Pointer](#uid-8d282058e1) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8d282058e1"></span>
+
+### Pointer Constructor
+
+```csharp
+public Pointer(int id, Avalonia.Input.PointerType type, bool isPrimary)
+```
+
+#### Parameters
+
+`id` int
+
+
+`type` [Avalonia.Input.PointerType](xref:Avalonia.Input.PointerType)
+
+
+`isPrimary` bool
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Capture](#uid-cb7a8b5311) | No summary available. |
+| [Dispose](#uid-4676b4eba1) | No summary available. |
+| [GetNextFreeId](#uid-fcadf21fee) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-cb7a8b5311"></span>
+
+### Capture Method
+
+```csharp
+public void Capture(Avalonia.Input.IInputElement control)
+```
+
+#### Parameters
+
+`control` [Avalonia.Input.IInputElement](xref:Avalonia.Input.IInputElement)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4676b4eba1"></span>
+
+### Dispose Method
+
+```csharp
+public void Dispose()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-fcadf21fee"></span>
+
+### GetNextFreeId Method
+
+```csharp
+public int GetNextFreeId()
+```
+
+#### Returns
+
+int
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Captured](#uid-56c1e27b69) | No summary available. |
+| [Id](#uid-567554185b) | No summary available. |
+| [IsGestureRecognitionSkipped](#uid-6e17180a3e) | No summary available. |
+| [IsPrimary](#uid-8be945e2c5) | No summary available. |
+| [Type](#uid-f6f5d8ca1e) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-56c1e27b69"></span>
+
+### Captured Property
+
+```csharp
+public Avalonia.Input.IInputElement Captured { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-567554185b"></span>
+
+### Id Property
+
+```csharp
+public int Id { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6e17180a3e"></span>
+
+### IsGestureRecognitionSkipped Property
+
+```csharp
+public bool IsGestureRecognitionSkipped { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8be945e2c5"></span>
+
+### IsPrimary Property
+
+```csharp
+public bool IsPrimary { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f6f5d8ca1e"></span>
+
+### Type Property
+
+```csharp
+public Avalonia.Input.PointerType Type { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

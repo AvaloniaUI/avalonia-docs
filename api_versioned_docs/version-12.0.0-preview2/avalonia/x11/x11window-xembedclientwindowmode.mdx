@@ -1,0 +1,221 @@
+---
+title: 'X11Window.XEmbedClientWindowMode'
+hide_title: true
+slug: '/avalonia/x11/x11window-xembedclientwindowmode'
+uid: 'Avalonia.X11.X11Window.XEmbedClientWindowMode'
+commentId: 'T:Avalonia.X11.X11Window.XEmbedClientWindowMode'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.X11'
+assembly: 'Avalonia.X11'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.X11'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">X11Window.XEmbedClientWindowMode Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.X11</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.X11</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.X11</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.X11/X11WindowModes/XEmbedClientWindowMode.cs">XEmbedClientWindowMode.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class X11Window.XEmbedClientWindowMode
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="x11window-x11windowmode">X11Window.X11WindowMode</a> <span className="apiref-page__relation-separator">-&gt;</span> X11Window.XEmbedClientWindowMode
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [X11Window.XEmbedClientWindowMode](#uid-5f3a66190c) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5f3a66190c"></span>
+
+### X11Window.XEmbedClientWindowMode Constructor
+
+```csharp
+public X11Window.XEmbedClientWindowMode()
+```
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [OnEvent](#uid-4aea5cb036) | No summary available. |
+| [OnHandleCreated](#uid-6f53464715) | No summary available. |
+| [PointToClient](#uid-75e8f1113b) | No summary available. |
+| [PointToScreen](#uid-4a1c0b17e2) | No summary available. |
+| [ProcessInteractiveResize](#uid-e597b463ce) | No summary available. |
+| [Activate](x11window-x11windowmode.mdx#uid-4bb81a9f41) | Inherited from [X11Window.X11WindowMode](x11window-x11windowmode.mdx). |
+| [AppendWmProtocols](x11window-x11windowmode.mdx#uid-330e36fe2f) | Inherited from [X11Window.X11WindowMode](x11window-x11windowmode.mdx). |
+| [Hide](x11window-x11windowmode.mdx#uid-55af83f7d4) | Inherited from [X11Window.X11WindowMode](x11window-x11windowmode.mdx). |
+| [Init](x11window-x11windowmode.mdx#uid-b8fdf167b1) | Inherited from [X11Window.X11WindowMode](x11window-x11windowmode.mdx). |
+| [OnDestroyNotify](x11window-x11windowmode.mdx#uid-e4f67b4cf2) | Inherited from [X11Window.X11WindowMode](x11window-x11windowmode.mdx). |
+| [Show](x11window-x11windowmode.mdx#uid-172265013e) | Inherited from [X11Window.X11WindowMode](x11window-x11windowmode.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4aea5cb036"></span>
+
+### OnEvent Method
+
+```csharp
+public bool OnEvent(Avalonia.X11.XEvent& ev)
+```
+
+#### Parameters
+
+`ev` Avalonia.X11.XEvent&amp;
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6f53464715"></span>
+
+### OnHandleCreated Method
+
+```csharp
+public void OnHandleCreated(IntPtr handle)
+```
+
+#### Parameters
+
+`handle` IntPtr
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-75e8f1113b"></span>
+
+### PointToClient Method
+
+```csharp
+public Avalonia.Point PointToClient(Avalonia.PixelPoint point)
+```
+
+#### Parameters
+
+`point` [Avalonia.PixelPoint](xref:Avalonia.PixelPoint)
+
+
+#### Returns
+
+[Avalonia.Point](xref:Avalonia.Point)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4a1c0b17e2"></span>
+
+### PointToScreen Method
+
+```csharp
+public Avalonia.PixelPoint PointToScreen(Avalonia.Point point)
+```
+
+#### Parameters
+
+`point` [Avalonia.Point](xref:Avalonia.Point)
+
+
+#### Returns
+
+[Avalonia.PixelPoint](xref:Avalonia.PixelPoint)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e597b463ce"></span>
+
+### ProcessInteractiveResize Method
+
+```csharp
+public void ProcessInteractiveResize(Avalonia.PixelSize size)
+```
+
+#### Parameters
+
+`size` [Avalonia.PixelSize](xref:Avalonia.PixelSize)
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [BlockInput](#uid-fec4b0f41a) | No summary available. |
+| [Scaling](#uid-627778831b) | No summary available. |
+| [Window](x11window-x11windowmode.mdx#uid-8e8d91a9c5) | Inherited from [X11Window.X11WindowMode](x11window-x11windowmode.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-fec4b0f41a"></span>
+
+### BlockInput Property
+
+```csharp
+public bool BlockInput { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-627778831b"></span>
+
+### Scaling Property
+
+```csharp
+public double Scaling { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

@@ -1,0 +1,176 @@
+---
+title: 'ChildIndexChangedEventArgs'
+hide_title: true
+slug: '/avalonia/logicaltree/childindexchangedeventargs'
+uid: 'Avalonia.LogicalTree.ChildIndexChangedEventArgs'
+commentId: 'T:Avalonia.LogicalTree.ChildIndexChangedEventArgs'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.LogicalTree'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ChildIndexChangedEventArgs Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.LogicalTree</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/LogicalTree/ChildIndexChangedEventArgs.cs">ChildIndexChangedEventArgs.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Event args for [Avalonia.LogicalTree.IChildIndexProvider.ChildIndexChanged](xref:Avalonia.LogicalTree.IChildIndexProvider.ChildIndexChanged) event.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class ChildIndexChangedEventArgs
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> EventArgs <span className="apiref-page__relation-separator">-&gt;</span> ChildIndexChangedEventArgs
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [ChildIndexChangedEventArgs](#uid-d6acff5998) | Initializes a new instance of the [Avalonia.LogicalTree.ChildIndexChangedEventArgs](xref:Avalonia.LogicalTree.ChildIndexChangedEventArgs) class with an action of [Avalonia.LogicalTree.ChildIndexChangedAction.ChildIndexChanged](xref:Avalonia.LogicalTree.ChildIndexChangedAction.ChildIndexChanged). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d6acff5998"></span>
+
+### ChildIndexChangedEventArgs Constructor
+
+Initializes a new instance of the [Avalonia.LogicalTree.ChildIndexChangedEventArgs](xref:Avalonia.LogicalTree.ChildIndexChangedEventArgs) class with
+an action of [Avalonia.LogicalTree.ChildIndexChangedAction.ChildIndexChanged](xref:Avalonia.LogicalTree.ChildIndexChangedAction.ChildIndexChanged).
+
+```csharp
+public ChildIndexChangedEventArgs(Avalonia.LogicalTree.ILogical child, int index)
+```
+
+#### Parameters
+
+`child` [Avalonia.LogicalTree.ILogical](xref:Avalonia.LogicalTree.ILogical)
+
+The child whose index was changed.
+
+
+`index` int
+
+The new index of the child.
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Action](#uid-5994cf29b4) | Gets the type of change action that ocurred on the list control. |
+| [Child](#uid-8b58905c7b) | Gets the logical child whose index was changed or null if all children should be re-evaluated. |
+| [ChildIndexesReset](#uid-ee7c1cef4b) | Gets an instance of the [Avalonia.LogicalTree.ChildIndexChangedEventArgs](xref:Avalonia.LogicalTree.ChildIndexChangedEventArgs) with an action of [Avalonia.LogicalTree.ChildIndexChangedAction.ChildIndexesReset](xref:Avalonia.LogicalTree.ChildIndexChangedAction.ChildIndexesReset). |
+| [Index](#uid-49f14a73c2) | Gets the new index of [Avalonia.LogicalTree.ChildIndexChangedEventArgs.Child](xref:Avalonia.LogicalTree.ChildIndexChangedEventArgs.Child) or -1 if all children should be re-evaluated. |
+| [TotalCountChanged](#uid-ddd04506cd) | Gets an instance of the [Avalonia.LogicalTree.ChildIndexChangedEventArgs](xref:Avalonia.LogicalTree.ChildIndexChangedEventArgs) with an action of [Avalonia.LogicalTree.ChildIndexChangedAction.TotalCountChanged](xref:Avalonia.LogicalTree.ChildIndexChangedAction.TotalCountChanged). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5994cf29b4"></span>
+
+### Action Property
+
+Gets the type of change action that ocurred on the list control.
+
+```csharp
+public Avalonia.LogicalTree.ChildIndexChangedAction Action { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8b58905c7b"></span>
+
+### Child Property
+
+Gets the logical child whose index was changed or null if all children should be re-evaluated.
+
+```csharp
+public Avalonia.LogicalTree.ILogical Child { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ee7c1cef4b"></span>
+
+### ChildIndexesReset Property
+
+Gets an instance of the [Avalonia.LogicalTree.ChildIndexChangedEventArgs](xref:Avalonia.LogicalTree.ChildIndexChangedEventArgs) with an action of
+[Avalonia.LogicalTree.ChildIndexChangedAction.ChildIndexesReset](xref:Avalonia.LogicalTree.ChildIndexChangedAction.ChildIndexesReset).
+
+```csharp
+public Avalonia.LogicalTree.ChildIndexChangedEventArgs ChildIndexesReset { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-49f14a73c2"></span>
+
+### Index Property
+
+Gets the new index of [Avalonia.LogicalTree.ChildIndexChangedEventArgs.Child](xref:Avalonia.LogicalTree.ChildIndexChangedEventArgs.Child) or -1 if all children should be re-evaluated.
+
+```csharp
+public int Index { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ddd04506cd"></span>
+
+### TotalCountChanged Property
+
+Gets an instance of the [Avalonia.LogicalTree.ChildIndexChangedEventArgs](xref:Avalonia.LogicalTree.ChildIndexChangedEventArgs) with an action of
+[Avalonia.LogicalTree.ChildIndexChangedAction.TotalCountChanged](xref:Avalonia.LogicalTree.ChildIndexChangedAction.TotalCountChanged).
+
+```csharp
+public Avalonia.LogicalTree.ChildIndexChangedEventArgs TotalCountChanged { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

@@ -1,0 +1,910 @@
+---
+title: 'EglInterface'
+hide_title: true
+slug: '/avalonia/opengl/egl/eglinterface'
+uid: 'Avalonia.OpenGL.Egl.EglInterface'
+commentId: 'T:Avalonia.OpenGL.Egl.EglInterface'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.OpenGL'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.OpenGL.Egl'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">EglInterface Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.OpenGL.Egl</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.OpenGL</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.OpenGL/Egl/EglInterface.cs">EglInterface.cs</a>, <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.OpenGL/obj/Release/net10.0/DevGenerators/Generator.GetProcAddressInitializationGenerator/globalAvalonia.OpenGL.Egl.EglInterface.cs">globalAvalonia.OpenGL.Egl.EglInterface.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class EglInterface
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> EglInterface
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [EglInterface (3 overloads)](#uid-0ae5a0b9b9) | No summary available. |
+
+<span id="uid-0ae5a0b9b9"></span>
+
+### EglInterface overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-52453e51cf"></span>
+
+#### EglInterface Constructor
+
+```csharp
+public EglInterface()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-60ac5be1fe"></span>
+
+#### EglInterface Constructor
+
+```csharp
+public EglInterface(Func<string, IntPtr> getProcAddress)
+```
+
+##### Parameters
+
+`getProcAddress` Func&lt;string, IntPtr&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f7ef09c096"></span>
+
+#### EglInterface Constructor
+
+```csharp
+public EglInterface(string library)
+```
+
+##### Parameters
+
+`library` string
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [BindApi](#uid-805d0cb9e5) | No summary available. |
+| [BindTexImage](#uid-789bee844a) | No summary available. |
+| [ChooseConfig](#uid-54e6877cc1) | No summary available. |
+| [CreateContext](#uid-19f85aec8e) | No summary available. |
+| [CreatePBufferSurface](#uid-adb9f241be) | No summary available. |
+| [CreatePbufferFromClientBuffer](#uid-63f941ac31) | No summary available. |
+| [CreatePbufferFromClientBufferPtr](#uid-12de878bed) | No summary available. |
+| [CreateWindowSurface](#uid-3a05611877) | No summary available. |
+| [DestroyContext](#uid-898aaba5f2) | No summary available. |
+| [DestroySurface](#uid-2741d3836d) | No summary available. |
+| [GetConfigAttrib](#uid-77b209828a) | No summary available. |
+| [GetCurrentContext](#uid-b3b4666407) | No summary available. |
+| [GetCurrentDisplay](#uid-fadf00b154) | No summary available. |
+| [GetCurrentSurface](#uid-e640bcd072) | No summary available. |
+| [GetDisplay](#uid-329adf345c) | No summary available. |
+| [GetError](#uid-c0e76ca207) | No summary available. |
+| [GetPlatformDisplayExt](#uid-a988a3980e) | No summary available. |
+| [GetProcAddress](#uid-3fa890b826) | No summary available. |
+| [Initialize](#uid-4345d1d2e4) | No summary available. |
+| [MakeCurrent](#uid-d252dc33e3) | No summary available. |
+| [QueryDeviceAttribExt](#uid-9911ebf310) | No summary available. |
+| [QueryDisplayAttribExt](#uid-a90a4cd3e7) | No summary available. |
+| [QueryString](#uid-a12928cbb0) | No summary available. |
+| [QueryStringNative](#uid-534df08fa9) | No summary available. |
+| [SwapBuffers](#uid-d6d3bd7210) | No summary available. |
+| [Terminate](#uid-ca4e4435c3) | No summary available. |
+| [WaitClient](#uid-f34c449522) | No summary available. |
+| [WaitGL](#uid-071917b6ea) | No summary available. |
+| [WaitNative](#uid-9189e829e5) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-805d0cb9e5"></span>
+
+### BindApi Method
+
+```csharp
+public bool BindApi(int api)
+```
+
+#### Parameters
+
+`api` int
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-789bee844a"></span>
+
+### BindTexImage Method
+
+```csharp
+public int BindTexImage(IntPtr display, IntPtr surface, int buffer)
+```
+
+#### Parameters
+
+`display` IntPtr
+
+
+`surface` IntPtr
+
+
+`buffer` int
+
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-54e6877cc1"></span>
+
+### ChooseConfig Method
+
+```csharp
+public bool ChooseConfig(IntPtr display, int[] attribs, IntPtr& surfaceConfig, int numConfigs, int& choosenConfig)
+```
+
+#### Parameters
+
+`display` IntPtr
+
+
+`attribs` int[]
+
+
+`surfaceConfig` IntPtr&amp;
+
+
+`numConfigs` int
+
+
+`choosenConfig` int&amp;
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-19f85aec8e"></span>
+
+### CreateContext Method
+
+```csharp
+public IntPtr CreateContext(IntPtr display, IntPtr config, IntPtr share, int[] attrs)
+```
+
+#### Parameters
+
+`display` IntPtr
+
+
+`config` IntPtr
+
+
+`share` IntPtr
+
+
+`attrs` int[]
+
+
+#### Returns
+
+IntPtr
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-adb9f241be"></span>
+
+### CreatePBufferSurface Method
+
+```csharp
+public IntPtr CreatePBufferSurface(IntPtr display, IntPtr config, int[] attrs)
+```
+
+#### Parameters
+
+`display` IntPtr
+
+
+`config` IntPtr
+
+
+`attrs` int[]
+
+
+#### Returns
+
+IntPtr
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-63f941ac31"></span>
+
+### CreatePbufferFromClientBuffer Method
+
+```csharp
+public IntPtr CreatePbufferFromClientBuffer(IntPtr display, int buftype, IntPtr buffer, IntPtr config, int[] attrib_list)
+```
+
+#### Parameters
+
+`display` IntPtr
+
+
+`buftype` int
+
+
+`buffer` IntPtr
+
+
+`config` IntPtr
+
+
+`attrib_list` int[]
+
+
+#### Returns
+
+IntPtr
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-12de878bed"></span>
+
+### CreatePbufferFromClientBufferPtr Method
+
+```csharp
+public IntPtr CreatePbufferFromClientBufferPtr(IntPtr display, int buftype, IntPtr buffer, IntPtr config, int* attrib_list)
+```
+
+#### Parameters
+
+`display` IntPtr
+
+
+`buftype` int
+
+
+`buffer` IntPtr
+
+
+`config` IntPtr
+
+
+`attrib_list` int*
+
+
+#### Returns
+
+IntPtr
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3a05611877"></span>
+
+### CreateWindowSurface Method
+
+```csharp
+public IntPtr CreateWindowSurface(IntPtr display, IntPtr config, IntPtr window, int[] attrs)
+```
+
+#### Parameters
+
+`display` IntPtr
+
+
+`config` IntPtr
+
+
+`window` IntPtr
+
+
+`attrs` int[]
+
+
+#### Returns
+
+IntPtr
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-898aaba5f2"></span>
+
+### DestroyContext Method
+
+```csharp
+public bool DestroyContext(IntPtr display, IntPtr context)
+```
+
+#### Parameters
+
+`display` IntPtr
+
+
+`context` IntPtr
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2741d3836d"></span>
+
+### DestroySurface Method
+
+```csharp
+public void DestroySurface(IntPtr display, IntPtr surface)
+```
+
+#### Parameters
+
+`display` IntPtr
+
+
+`surface` IntPtr
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-77b209828a"></span>
+
+### GetConfigAttrib Method
+
+```csharp
+public bool GetConfigAttrib(IntPtr display, IntPtr config, int attr, int& rv)
+```
+
+#### Parameters
+
+`display` IntPtr
+
+
+`config` IntPtr
+
+
+`attr` int
+
+
+`rv` int&amp;
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b3b4666407"></span>
+
+### GetCurrentContext Method
+
+```csharp
+public IntPtr GetCurrentContext()
+```
+
+#### Returns
+
+IntPtr
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-fadf00b154"></span>
+
+### GetCurrentDisplay Method
+
+```csharp
+public IntPtr GetCurrentDisplay()
+```
+
+#### Returns
+
+IntPtr
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e640bcd072"></span>
+
+### GetCurrentSurface Method
+
+```csharp
+public IntPtr GetCurrentSurface(int readDraw)
+```
+
+#### Parameters
+
+`readDraw` int
+
+
+#### Returns
+
+IntPtr
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-329adf345c"></span>
+
+### GetDisplay Method
+
+```csharp
+public IntPtr GetDisplay(IntPtr nativeDisplay)
+```
+
+#### Parameters
+
+`nativeDisplay` IntPtr
+
+
+#### Returns
+
+IntPtr
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c0e76ca207"></span>
+
+### GetError Method
+
+```csharp
+public int GetError()
+```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a988a3980e"></span>
+
+### GetPlatformDisplayExt Method
+
+```csharp
+public IntPtr GetPlatformDisplayExt(int platform, IntPtr nativeDisplay, int[] attrs)
+```
+
+#### Parameters
+
+`platform` int
+
+
+`nativeDisplay` IntPtr
+
+
+`attrs` int[]
+
+
+#### Returns
+
+IntPtr
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3fa890b826"></span>
+
+### GetProcAddress Method
+
+```csharp
+public IntPtr GetProcAddress(IntPtr proc)
+```
+
+#### Parameters
+
+`proc` IntPtr
+
+
+#### Returns
+
+IntPtr
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4345d1d2e4"></span>
+
+### Initialize Method
+
+```csharp
+public bool Initialize(IntPtr display, int& major, int& minor)
+```
+
+#### Parameters
+
+`display` IntPtr
+
+
+`major` int&amp;
+
+
+`minor` int&amp;
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d252dc33e3"></span>
+
+### MakeCurrent Method
+
+```csharp
+public bool MakeCurrent(IntPtr display, IntPtr draw, IntPtr read, IntPtr context)
+```
+
+#### Parameters
+
+`display` IntPtr
+
+
+`draw` IntPtr
+
+
+`read` IntPtr
+
+
+`context` IntPtr
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9911ebf310"></span>
+
+### QueryDeviceAttribExt Method
+
+```csharp
+public bool QueryDeviceAttribExt(IntPtr display, int attr, IntPtr& res)
+```
+
+#### Parameters
+
+`display` IntPtr
+
+
+`attr` int
+
+
+`res` IntPtr&amp;
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a90a4cd3e7"></span>
+
+### QueryDisplayAttribExt Method
+
+```csharp
+public bool QueryDisplayAttribExt(IntPtr display, int attr, IntPtr& res)
+```
+
+#### Parameters
+
+`display` IntPtr
+
+
+`attr` int
+
+
+`res` IntPtr&amp;
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a12928cbb0"></span>
+
+### QueryString Method
+
+```csharp
+public string QueryString(IntPtr display, int i)
+```
+
+#### Parameters
+
+`display` IntPtr
+
+
+`i` int
+
+
+#### Returns
+
+string
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-534df08fa9"></span>
+
+### QueryStringNative Method
+
+```csharp
+public IntPtr QueryStringNative(IntPtr display, int i)
+```
+
+#### Parameters
+
+`display` IntPtr
+
+
+`i` int
+
+
+#### Returns
+
+IntPtr
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d6d3bd7210"></span>
+
+### SwapBuffers Method
+
+```csharp
+public void SwapBuffers(IntPtr display, IntPtr surface)
+```
+
+#### Parameters
+
+`display` IntPtr
+
+
+`surface` IntPtr
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ca4e4435c3"></span>
+
+### Terminate Method
+
+```csharp
+public void Terminate(IntPtr display)
+```
+
+#### Parameters
+
+`display` IntPtr
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f34c449522"></span>
+
+### WaitClient Method
+
+```csharp
+public bool WaitClient()
+```
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-071917b6ea"></span>
+
+### WaitGL Method
+
+```csharp
+public bool WaitGL()
+```
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9189e829e5"></span>
+
+### WaitNative Method
+
+```csharp
+public bool WaitNative(int engine)
+```
+
+#### Parameters
+
+`engine` int
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [IsGetPlatformDisplayExtAvailable](#uid-fb9d19de69) | No summary available. |
+| [IsQueryDeviceAttribExtAvailable](#uid-5f95b932cb) | No summary available. |
+| [IsQueryDisplayAttribExtAvailable](#uid-bfabc405c6) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-fb9d19de69"></span>
+
+### IsGetPlatformDisplayExtAvailable Property
+
+```csharp
+public bool IsGetPlatformDisplayExtAvailable { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5f95b932cb"></span>
+
+### IsQueryDeviceAttribExtAvailable Property
+
+```csharp
+public bool IsQueryDeviceAttribExtAvailable { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-bfabc405c6"></span>
+
+### IsQueryDisplayAttribExtAvailable Property
+
+```csharp
+public bool IsQueryDisplayAttribExtAvailable { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

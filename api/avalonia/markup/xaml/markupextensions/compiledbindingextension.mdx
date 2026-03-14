@@ -1,0 +1,153 @@
+---
+title: 'CompiledBindingExtension'
+hide_title: true
+slug: '/avalonia/markup/xaml/markupextensions/compiledbindingextension'
+uid: 'Avalonia.Markup.Xaml.MarkupExtensions.CompiledBindingExtension'
+commentId: 'T:Avalonia.Markup.Xaml.MarkupExtensions.CompiledBindingExtension'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Markup.Xaml'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Markup.Xaml.MarkupExtensions'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">CompiledBindingExtension Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Markup.Xaml.MarkupExtensions</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Markup.Xaml</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Markup/Avalonia.Markup.Xaml/MarkupExtensions/CompiledBindingExtension.cs">CompiledBindingExtension.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class CompiledBindingExtension
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../../data/bindingbase">BindingBase</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../../data/compiledbinding">CompiledBinding</a> <span className="apiref-page__relation-separator">-&gt;</span> CompiledBindingExtension
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [CompiledBindingExtension (2 overloads)](#uid-07b9259adb) | No summary available. |
+
+<span id="uid-07b9259adb"></span>
+
+### CompiledBindingExtension overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d6f3035267"></span>
+
+#### CompiledBindingExtension Constructor
+
+```csharp
+public CompiledBindingExtension()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a1618b223f"></span>
+
+#### CompiledBindingExtension Constructor
+
+```csharp
+public CompiledBindingExtension(Avalonia.Data.CompiledBindingPath path)
+```
+
+##### Parameters
+
+`path` [Avalonia.Data.CompiledBindingPath](xref:Avalonia.Data.CompiledBindingPath)
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [ProvideValue](#uid-3909c6181a) | No summary available. |
+| [Create](../../../data/compiledbinding.mdx#uid-57ecf18708) | Inherited from [CompiledBinding](../../../data/compiledbinding.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3909c6181a"></span>
+
+### ProvideValue Method
+
+```csharp
+public Avalonia.Data.CompiledBinding ProvideValue(IServiceProvider provider)
+```
+
+#### Parameters
+
+`provider` IServiceProvider
+
+
+#### Returns
+
+[Avalonia.Data.CompiledBinding](xref:Avalonia.Data.CompiledBinding)
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [DataType](#uid-98f0a98416) | No summary available. |
+| [Converter](../../../data/compiledbinding.mdx#uid-28db53eecb) | Gets or sets the [Avalonia.Data.Converters.IValueConverter](xref:Avalonia.Data.Converters.IValueConverter) to use. Inherited from [CompiledBinding](../../../data/compiledbinding.mdx). |
+| [ConverterCulture](../../../data/compiledbinding.mdx#uid-8557e5d29e) | Gets or sets the culture in which to evaluate the converter. Inherited from [CompiledBinding](../../../data/compiledbinding.mdx). |
+| [ConverterParameter](../../../data/compiledbinding.mdx#uid-6d9782b4c9) | Gets or sets a parameter to pass to [Avalonia.Data.CompiledBinding.Converter](xref:Avalonia.Data.CompiledBinding.Converter). Inherited from [CompiledBinding](../../../data/compiledbinding.mdx). |
+| [Delay](../../../data/compiledbinding.mdx#uid-0bf0d20318) | Gets or sets the amount of time, in milliseconds, to wait before updating the binding source after the value on the target changes. Inherited from [CompiledBinding](../../../data/compiledbinding.mdx). |
+| [FallbackValue](../../../data/compiledbinding.mdx#uid-95e9c1e2f6) | Gets or sets the value to use when the binding is unable to produce a value. Inherited from [CompiledBinding](../../../data/compiledbinding.mdx). |
+| [Mode](../../../data/compiledbinding.mdx#uid-06c843929f) | Gets or sets the binding mode. Inherited from [CompiledBinding](../../../data/compiledbinding.mdx). |
+| [Path](../../../data/compiledbinding.mdx#uid-3c9fd8a221) | Gets or sets the binding path. Inherited from [CompiledBinding](../../../data/compiledbinding.mdx). |
+| [Priority](../../../data/compiledbinding.mdx#uid-6c4332c942) | Gets or sets the binding priority. Inherited from [CompiledBinding](../../../data/compiledbinding.mdx). |
+| [Source](../../../data/compiledbinding.mdx#uid-78b9327aba) | Gets or sets the source for the binding. Inherited from [CompiledBinding](../../../data/compiledbinding.mdx). |
+| [StringFormat](../../../data/compiledbinding.mdx#uid-33c4f73df3) | Gets or sets the string format. Inherited from [CompiledBinding](../../../data/compiledbinding.mdx). |
+| [TargetNullValue](../../../data/compiledbinding.mdx#uid-6ebfe776f4) | Gets or sets the value to use when the binding result is null. Inherited from [CompiledBinding](../../../data/compiledbinding.mdx). |
+| [UpdateSourceTrigger](../../../data/compiledbinding.mdx#uid-56a3da996f) | Gets or sets a value that determines the timing of binding source updates for [Avalonia.Data.BindingMode.TwoWay](xref:Avalonia.Data.BindingMode.TwoWay) and [Avalonia.Data.BindingMode.OneWayToSource](xref:Avalonia.Data.BindingMode.OneWayToSource) bindings. Inherited from [CompiledBinding](../../../data/compiledbinding.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-98f0a98416"></span>
+
+### DataType Property
+
+```csharp
+public Type DataType { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

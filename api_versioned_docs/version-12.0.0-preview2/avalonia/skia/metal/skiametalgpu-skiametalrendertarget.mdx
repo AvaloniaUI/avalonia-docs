@@ -1,0 +1,156 @@
+---
+title: 'SkiaMetalGpu.SkiaMetalRenderTarget'
+hide_title: true
+slug: '/avalonia/skia/metal/skiametalgpu-skiametalrendertarget'
+uid: 'Avalonia.Skia.Metal.SkiaMetalGpu.SkiaMetalRenderTarget'
+commentId: 'T:Avalonia.Skia.Metal.SkiaMetalGpu.SkiaMetalRenderTarget'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Skia'
+assembly: 'Avalonia.Skia'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Skia.Metal'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">SkiaMetalGpu.SkiaMetalRenderTarget Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Skia.Metal</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Skia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Skia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Skia/Avalonia.Skia/Gpu/Metal/SkiaMetalGpu.cs">SkiaMetalGpu.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class SkiaMetalGpu.SkiaMetalRenderTarget
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> SkiaMetalGpu.SkiaMetalRenderTarget
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="../iskiagpurendertarget">ISkiaGpuRenderTarget</a>, IDisposable
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [SkiaMetalGpu.SkiaMetalRenderTarget](#uid-4ef3ff5692) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4ef3ff5692"></span>
+
+### SkiaMetalGpu.SkiaMetalRenderTarget Constructor
+
+```csharp
+public SkiaMetalGpu.SkiaMetalRenderTarget(Avalonia.Skia.Metal.SkiaMetalGpu gpu, Avalonia.Metal.IMetalPlatformSurfaceRenderTarget target)
+```
+
+#### Parameters
+
+`gpu` Avalonia.Skia.Metal.SkiaMetalGpu
+
+
+`target` [Avalonia.Metal.IMetalPlatformSurfaceRenderTarget](xref:Avalonia.Metal.IMetalPlatformSurfaceRenderTarget)
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [BeginRenderingSession](#uid-c8b592b175) | No summary available. |
+| [Dispose](#uid-42e588ff94) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c8b592b175"></span>
+
+### BeginRenderingSession Method
+
+```csharp
+public Avalonia.Skia.ISkiaGpuRenderSession BeginRenderingSession(RenderTargetSceneInfo sceneInfo)
+```
+
+#### Parameters
+
+`sceneInfo` RenderTargetSceneInfo
+
+
+#### Returns
+
+[Avalonia.Skia.ISkiaGpuRenderSession](xref:Avalonia.Skia.ISkiaGpuRenderSession)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-42e588ff94"></span>
+
+### Dispose Method
+
+```csharp
+public void Dispose()
+```
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [IsCorrupted](#uid-5fe24149e2) | No summary available. |
+| [IsReady](#uid-7e6137e157) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5fe24149e2"></span>
+
+### IsCorrupted Property
+
+```csharp
+public bool IsCorrupted { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7e6137e157"></span>
+
+### IsReady Property
+
+```csharp
+public bool IsReady { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

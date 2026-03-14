@@ -1,0 +1,158 @@
+---
+title: 'BrushExtensions'
+hide_title: true
+slug: '/avalonia/media/brushextensions'
+uid: 'Avalonia.Media.BrushExtensions'
+commentId: 'T:Avalonia.Media.BrushExtensions'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Media'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">BrushExtensions Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Media</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Media/BrushExtensions.cs">BrushExtensions.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Extension methods for brush classes.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class BrushExtensions
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> BrushExtensions
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [ToImmutable (3 overloads)](#uid-0940e012df) | Converts a brush to an immutable brush. |
+
+<span id="uid-0940e012df"></span>
+
+### ToImmutable overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a4c9058c9c"></span>
+
+#### ToImmutable Method
+
+Converts a brush to an immutable brush.
+
+```csharp
+public Avalonia.Media.IImmutableBrush ToImmutable(Avalonia.Media.IBrush brush)
+```
+
+##### Parameters
+
+`brush` [Avalonia.Media.IBrush](xref:Avalonia.Media.IBrush)
+
+The brush.
+
+
+##### Returns
+
+[Avalonia.Media.IImmutableBrush](xref:Avalonia.Media.IImmutableBrush)
+
+The result of calling [Avalonia.Media.IMutableBrush.ToImmutable](xref:Avalonia.Media.IMutableBrush.ToImmutable) if the brush is mutable,
+otherwise `brush`.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5ad0d76970"></span>
+
+#### ToImmutable Method
+
+Converts a dash style to an immutable dash style.
+
+```csharp
+public Avalonia.Media.Immutable.ImmutableDashStyle ToImmutable(Avalonia.Media.IDashStyle style)
+```
+
+##### Parameters
+
+`style` [Avalonia.Media.IDashStyle](xref:Avalonia.Media.IDashStyle)
+
+The dash style.
+
+
+##### Returns
+
+[Avalonia.Media.Immutable.ImmutableDashStyle](xref:Avalonia.Media.Immutable.ImmutableDashStyle)
+
+The result of calling [Avalonia.Media.DashStyle.ToImmutable](xref:Avalonia.Media.DashStyle.ToImmutable) if the style is mutable,
+otherwise `style`.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5fed10d501"></span>
+
+#### ToImmutable Method
+
+Converts a pen to an immutable pen.
+
+```csharp
+public Avalonia.Media.Immutable.ImmutablePen ToImmutable(Avalonia.Media.IPen pen)
+```
+
+##### Parameters
+
+`pen` [Avalonia.Media.IPen](xref:Avalonia.Media.IPen)
+
+The pen.
+
+
+##### Returns
+
+[Avalonia.Media.Immutable.ImmutablePen](xref:Avalonia.Media.Immutable.ImmutablePen)
+
+The result of calling [Avalonia.Media.Pen.ToImmutable](xref:Avalonia.Media.Pen.ToImmutable) if the brush is mutable,
+otherwise `pen`.
+
+
+</section>
+
+</ApiRefPage>
+

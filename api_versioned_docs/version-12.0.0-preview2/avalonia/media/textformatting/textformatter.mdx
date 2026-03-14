@@ -1,0 +1,171 @@
+---
+title: 'TextFormatter'
+hide_title: true
+slug: '/avalonia/media/textformatting/textformatter'
+uid: 'Avalonia.Media.TextFormatting.TextFormatter'
+commentId: 'T:Avalonia.Media.TextFormatting.TextFormatter'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Media.TextFormatting'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">TextFormatter Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Media.TextFormatting</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Media/TextFormatting/TextFormatter.cs">TextFormatter.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Represents a base class for text formatting.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class TextFormatter
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> TextFormatter
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [CreateSymbol](#uid-c6e58dc336) | Creates a shaped symbol. |
+| [FormatLine](#uid-9314f0a9a8) | Formats a text line. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c6e58dc336"></span>
+
+### CreateSymbol Method
+
+Creates a shaped symbol.
+
+```csharp
+public Avalonia.Media.TextFormatting.ShapedTextRun CreateSymbol(Avalonia.Media.TextFormatting.TextRun textRun, Avalonia.Media.FlowDirection flowDirection)
+```
+
+#### Parameters
+
+`textRun` [Avalonia.Media.TextFormatting.TextRun](xref:Avalonia.Media.TextFormatting.TextRun)
+
+The symbol run to shape.
+
+
+`flowDirection` [Avalonia.Media.FlowDirection](xref:Avalonia.Media.FlowDirection)
+
+The flow direction.
+
+
+#### Returns
+
+[Avalonia.Media.TextFormatting.ShapedTextRun](xref:Avalonia.Media.TextFormatting.ShapedTextRun)
+
+The shaped symbol.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9314f0a9a8"></span>
+
+### FormatLine Method
+
+Formats a text line.
+
+```csharp
+public Avalonia.Media.TextFormatting.TextLine FormatLine(Avalonia.Media.TextFormatting.ITextSource textSource, int firstTextSourceIndex, double paragraphWidth, Avalonia.Media.TextFormatting.TextParagraphProperties paragraphProperties, Avalonia.Media.TextFormatting.TextLineBreak previousLineBreak)
+```
+
+#### Parameters
+
+`textSource` [Avalonia.Media.TextFormatting.ITextSource](xref:Avalonia.Media.TextFormatting.ITextSource)
+
+The text source.
+
+
+`firstTextSourceIndex` int
+
+The first character index to start the text line from.
+
+
+`paragraphWidth` double
+
+A [double](xref:System.Double) value that specifies the width of the paragraph that the line fills.
+
+
+`paragraphProperties` [Avalonia.Media.TextFormatting.TextParagraphProperties](xref:Avalonia.Media.TextFormatting.TextParagraphProperties)
+
+A [Avalonia.Media.TextFormatting.TextParagraphProperties](xref:Avalonia.Media.TextFormatting.TextParagraphProperties) value that represents paragraph properties,
+such as [TextWrapping](xref:Avalonia.Media.TextWrapping), [TextAlignment](xref:Avalonia.Media.TextAlignment), or TextStyle.
+
+
+`previousLineBreak` [Avalonia.Media.TextFormatting.TextLineBreak](xref:Avalonia.Media.TextFormatting.TextLineBreak)
+
+A [Avalonia.Media.TextFormatting.TextLineBreak](xref:Avalonia.Media.TextFormatting.TextLineBreak) value that specifies the text formatter state,
+in terms of where the previous line in the paragraph was broken by the text formatting process.
+
+
+#### Returns
+
+[Avalonia.Media.TextFormatting.TextLine](xref:Avalonia.Media.TextFormatting.TextLine)
+
+The formatted line.
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Current](#uid-229dccc18c) | Gets the current [Avalonia.Media.TextFormatting.TextFormatter](xref:Avalonia.Media.TextFormatting.TextFormatter) that is used for non complex text formatting. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-229dccc18c"></span>
+
+### Current Property
+
+Gets the current [Avalonia.Media.TextFormatting.TextFormatter](xref:Avalonia.Media.TextFormatting.TextFormatter) that is used for non complex text formatting.
+
+```csharp
+public Avalonia.Media.TextFormatting.TextFormatter Current { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

@@ -1,0 +1,326 @@
+---
+title: 'PixelVector'
+hide_title: true
+slug: '/avalonia/pixelvector'
+uid: 'Avalonia.PixelVector'
+commentId: 'T:Avalonia.PixelVector'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">PixelVector Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/PixelVector.cs">PixelVector.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Defines a vector.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct PixelVector
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> PixelVector
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [PixelVector](#uid-7d806d3845) | Initializes a new instance of the [Avalonia.PixelVector](xref:Avalonia.PixelVector) structure. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7d806d3845"></span>
+
+### PixelVector Constructor
+
+Initializes a new instance of the [Avalonia.PixelVector](xref:Avalonia.PixelVector) structure.
+
+```csharp
+public PixelVector(int x, int y)
+```
+
+#### Parameters
+
+`x` int
+
+The X vector.
+
+
+`y` int
+
+The Y vector.
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Equals (2 overloads)](#uid-49d4c3886f) | Check if two vectors are equal (bitwise). |
+| [GetHashCode](#uid-68ca1c05f6) | No summary available. |
+| [NearlyEquals](#uid-e34f35193c) | Check if two vectors are nearly equal (numerically). |
+| [ToString](#uid-69224b05ba) | Returns the string representation of the point. |
+| [WithX](#uid-90f8cc3018) | Returns a new vector with the specified X coordinate. |
+| [WithY](#uid-6e89ab708f) | Returns a new vector with the specified Y coordinate. |
+
+<span id="uid-49d4c3886f"></span>
+
+### Equals overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-51010e0a1e"></span>
+
+#### Equals Method
+
+Check if two vectors are equal (bitwise).
+
+```csharp
+public bool Equals(Avalonia.PixelVector other)
+```
+
+##### Parameters
+
+`other` [Avalonia.PixelVector](xref:Avalonia.PixelVector)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7f441e8438"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(object obj)
+```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-68ca1c05f6"></span>
+
+### GetHashCode Method
+
+```csharp
+public int GetHashCode()
+```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e34f35193c"></span>
+
+### NearlyEquals Method
+
+Check if two vectors are nearly equal (numerically).
+
+```csharp
+public bool NearlyEquals(Avalonia.PixelVector other)
+```
+
+#### Parameters
+
+`other` [Avalonia.PixelVector](xref:Avalonia.PixelVector)
+
+The other vector.
+
+
+#### Returns
+
+bool
+
+True if vectors are nearly equal.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-69224b05ba"></span>
+
+### ToString Method
+
+Returns the string representation of the point.
+
+```csharp
+public string ToString()
+```
+
+#### Returns
+
+string
+
+The string representation of the point.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-90f8cc3018"></span>
+
+### WithX Method
+
+Returns a new vector with the specified X coordinate.
+
+```csharp
+public Avalonia.PixelVector WithX(int x)
+```
+
+#### Parameters
+
+`x` int
+
+The X coordinate.
+
+
+#### Returns
+
+[Avalonia.PixelVector](xref:Avalonia.PixelVector)
+
+The new vector.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6e89ab708f"></span>
+
+### WithY Method
+
+Returns a new vector with the specified Y coordinate.
+
+```csharp
+public Avalonia.PixelVector WithY(int y)
+```
+
+#### Parameters
+
+`y` int
+
+The Y coordinate.
+
+
+#### Returns
+
+[Avalonia.PixelVector](xref:Avalonia.PixelVector)
+
+The new vector.
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Length](#uid-5fcf70c3eb) | Length of the vector |
+| [X](#uid-38a48f6dda) | Gets the X vector. |
+| [Y](#uid-fd0c6a2a0a) | Gets the Y vector. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5fcf70c3eb"></span>
+
+### Length Property
+
+Length of the vector
+
+```csharp
+public double Length { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-38a48f6dda"></span>
+
+### X Property
+
+Gets the X vector.
+
+```csharp
+public int X { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-fd0c6a2a0a"></span>
+
+### Y Property
+
+Gets the Y vector.
+
+```csharp
+public int Y { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

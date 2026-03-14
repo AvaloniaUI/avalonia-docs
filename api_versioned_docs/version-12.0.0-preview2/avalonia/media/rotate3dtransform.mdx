@@ -1,0 +1,403 @@
+---
+title: 'Rotate3DTransform'
+hide_title: true
+slug: '/avalonia/media/rotate3dtransform'
+uid: 'Avalonia.Media.Rotate3DTransform'
+commentId: 'T:Avalonia.Media.Rotate3DTransform'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Media'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">Rotate3DTransform Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Media</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Rotate3DTransform.cs">Rotate3DTransform.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Non-Affine 3D transformation for rotating a visual around a definable axis
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class Rotate3DTransform
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../animation/animatable">Animatable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="transform">Transform</a> <span className="apiref-page__relation-separator">-&gt;</span> Rotate3DTransform
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [Rotate3DTransform (2 overloads)](#uid-8d16159108) | Initializes a new instance of the [Avalonia.Media.Rotate3DTransform](xref:Avalonia.Media.Rotate3DTransform) class. |
+
+<span id="uid-8d16159108"></span>
+
+### Rotate3DTransform overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ee16e7c112"></span>
+
+#### Rotate3DTransform Constructor
+
+Initializes a new instance of the [Avalonia.Media.Rotate3DTransform](xref:Avalonia.Media.Rotate3DTransform) class.
+
+```csharp
+public Rotate3DTransform()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0b6529971a"></span>
+
+#### Rotate3DTransform Constructor
+
+Initializes a new instance of the [Avalonia.Media.Rotate3DTransform](xref:Avalonia.Media.Rotate3DTransform) class.
+
+```csharp
+public Rotate3DTransform(double angleX, double angleY, double angleZ, double centerX, double centerY, double centerZ, double depth)
+```
+
+##### Parameters
+
+`angleX` double
+
+The rotation around the X-Axis
+
+
+`angleY` double
+
+The rotation around the Y-Axis
+
+
+`angleZ` double
+
+The rotation around the Z-Axis
+
+
+`centerX` double
+
+The origin of the X-Axis
+
+
+`centerY` double
+
+The origin of the Y-Axis
+
+
+`centerZ` double
+
+The origin of the Z-Axis
+
+
+`depth` double
+
+The depth of the 3D effect
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Parse](transform.mdx#uid-1be8bdbe67) | Parses a [Avalonia.Media.Transform](xref:Avalonia.Media.Transform) string. Inherited from [Transform](transform.mdx). |
+| [ToImmutable](transform.mdx#uid-1ae7a66239) | Converts a transform to an immutable transform. Inherited from [Transform](transform.mdx). |
+| [ToString](transform.mdx#uid-582ae45701) | Returns a String representing this transform matrix instance. Inherited from [Transform](transform.mdx). |
+| [Bind (8 overloads)](../avaloniaobject.mdx#uid-1c60c7bda3) | Binds a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) to an [Avalonia.Data.BindingBase](xref:Avalonia.Data.BindingBase). Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [CheckAccess](../avaloniaobject.mdx#uid-260ff7a68d) | Returns a value indicating whether the current thread is the UI thread. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [ClearValue (4 overloads)](../avaloniaobject.mdx#uid-41de208fbe) | Clears a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty)'s local value. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [CoerceValue](../avaloniaobject.mdx#uid-3bec32f39e) | Coerces the specified [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty). Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [Equals](../avaloniaobject.mdx#uid-a8a8e94305) | Compares two objects using reference equality. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [GetBaseValue](../avaloniaobject.mdx#uid-9c615efbba) | Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [GetHashCode](../avaloniaobject.mdx#uid-7f7db1e7a2) | Gets the hash code for the object. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [GetValue (3 overloads)](../avaloniaobject.mdx#uid-5142cd4792) | Gets a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [IsAnimating](../avaloniaobject.mdx#uid-8cbfc7521a) | Checks whether a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) is animating. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [IsSet](../avaloniaobject.mdx#uid-f8bf0bbdcc) | Checks whether a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) is set on this object. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [SetCurrentValue (2 overloads)](../avaloniaobject.mdx#uid-38759fd088) | Sets the value of a dependency property without changing its value source. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [SetValue (3 overloads)](../avaloniaobject.mdx#uid-47d14e19d7) | Sets a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [VerifyAccess](../avaloniaobject.mdx#uid-3b9d3c9793) | Checks that the current thread is the UI thread and throws if not. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [AngleX](#uid-de99bee189) | Sets the rotation around the X-Axis |
+| [AngleY](#uid-20b1bd1bdc) | Sets the rotation around the Y-Axis |
+| [AngleZ](#uid-dc73947d31) | Sets the rotation around the Z-Axis |
+| [CenterX](#uid-5103a7daeb) | Moves the origin the X-Axis rotates around |
+| [CenterY](#uid-a527380c05) | Moves the origin the Y-Axis rotates around |
+| [CenterZ](#uid-c2ee15e117) | Moves the origin the Z-Axis rotates around |
+| [Depth](#uid-45858fd84b) | Affects the depth of the rotation effect |
+| [Value](#uid-188d2ffe69) | Gets the transform's [Avalonia.Matrix](xref:Avalonia.Matrix). |
+| [Transitions](../animation/animatable.mdx#uid-1b3138f517) | Gets or sets the property transitions for the control. Inherited from [Animatable](../animation/animatable.mdx). |
+| [Dispatcher](../avaloniaobject.mdx#uid-b25fa51632) | Returns the [Avalonia.AvaloniaObject.Dispatcher](xref:Avalonia.AvaloniaObject.Dispatcher) that this [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject) is associated with. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [Item](../avaloniaobject.mdx#uid-c1d1f1bc0f) | Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-de99bee189"></span>
+
+### AngleX Property
+
+Sets the rotation around the X-Axis
+
+```csharp
+public double AngleX { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-20b1bd1bdc"></span>
+
+### AngleY Property
+
+Sets the rotation around the Y-Axis
+
+```csharp
+public double AngleY { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-dc73947d31"></span>
+
+### AngleZ Property
+
+Sets the rotation around the Z-Axis
+
+```csharp
+public double AngleZ { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5103a7daeb"></span>
+
+### CenterX Property
+
+Moves the origin the X-Axis rotates around
+
+```csharp
+public double CenterX { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a527380c05"></span>
+
+### CenterY Property
+
+Moves the origin the Y-Axis rotates around
+
+```csharp
+public double CenterY { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c2ee15e117"></span>
+
+### CenterZ Property
+
+Moves the origin the Z-Axis rotates around
+
+```csharp
+public double CenterZ { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-45858fd84b"></span>
+
+### Depth Property
+
+Affects the depth of the rotation effect
+
+```csharp
+public double Depth { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-188d2ffe69"></span>
+
+### Value Property
+
+Gets the transform's [Avalonia.Matrix](xref:Avalonia.Matrix).
+
+```csharp
+public Avalonia.Matrix Value { get; set; }
+```
+
+</section>
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [AngleXProperty](#uid-d47a6e76f0) | Defines the [Avalonia.Media.Rotate3DTransform.AngleX](xref:Avalonia.Media.Rotate3DTransform.AngleX) property. |
+| [AngleYProperty](#uid-bea6320cf7) | Defines the [Avalonia.Media.Rotate3DTransform.AngleY](xref:Avalonia.Media.Rotate3DTransform.AngleY) property. |
+| [AngleZProperty](#uid-324be1aafa) | Defines the [Avalonia.Media.Rotate3DTransform.AngleZ](xref:Avalonia.Media.Rotate3DTransform.AngleZ) property. |
+| [CenterXProperty](#uid-a0cddb7c2e) | Defines the [Avalonia.Media.Rotate3DTransform.CenterX](xref:Avalonia.Media.Rotate3DTransform.CenterX) property. |
+| [CenterYProperty](#uid-4761f0f778) | Defines the [Avalonia.Media.Rotate3DTransform.CenterY](xref:Avalonia.Media.Rotate3DTransform.CenterY) property. |
+| [CenterZProperty](#uid-2a889ebb4c) | Defines the [Avalonia.Media.Rotate3DTransform.CenterZ](xref:Avalonia.Media.Rotate3DTransform.CenterZ) property. |
+| [DepthProperty](#uid-8f388f3412) | Defines the [Avalonia.Media.Rotate3DTransform.Depth](xref:Avalonia.Media.Rotate3DTransform.Depth) property. |
+| [TransitionsProperty](../animation/animatable.mdx#uid-c79f18fac2) | Defines the [Avalonia.Animation.Animatable.Transitions](xref:Avalonia.Animation.Animatable.Transitions) property. Inherited from [Animatable](../animation/animatable.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d47a6e76f0"></span>
+
+### AngleXProperty Field
+
+Defines the [Avalonia.Media.Rotate3DTransform.AngleX](xref:Avalonia.Media.Rotate3DTransform.AngleX) property.
+
+```csharp
+public Avalonia.StyledProperty<TValue><double> AngleXProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-bea6320cf7"></span>
+
+### AngleYProperty Field
+
+Defines the [Avalonia.Media.Rotate3DTransform.AngleY](xref:Avalonia.Media.Rotate3DTransform.AngleY) property.
+
+```csharp
+public Avalonia.StyledProperty<TValue><double> AngleYProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-324be1aafa"></span>
+
+### AngleZProperty Field
+
+Defines the [Avalonia.Media.Rotate3DTransform.AngleZ](xref:Avalonia.Media.Rotate3DTransform.AngleZ) property.
+
+```csharp
+public Avalonia.StyledProperty<TValue><double> AngleZProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a0cddb7c2e"></span>
+
+### CenterXProperty Field
+
+Defines the [Avalonia.Media.Rotate3DTransform.CenterX](xref:Avalonia.Media.Rotate3DTransform.CenterX) property.
+
+```csharp
+public Avalonia.StyledProperty<TValue><double> CenterXProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4761f0f778"></span>
+
+### CenterYProperty Field
+
+Defines the [Avalonia.Media.Rotate3DTransform.CenterY](xref:Avalonia.Media.Rotate3DTransform.CenterY) property.
+
+```csharp
+public Avalonia.StyledProperty<TValue><double> CenterYProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2a889ebb4c"></span>
+
+### CenterZProperty Field
+
+Defines the [Avalonia.Media.Rotate3DTransform.CenterZ](xref:Avalonia.Media.Rotate3DTransform.CenterZ) property.
+
+```csharp
+public Avalonia.StyledProperty<TValue><double> CenterZProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8f388f3412"></span>
+
+### DepthProperty Field
+
+Defines the [Avalonia.Media.Rotate3DTransform.Depth](xref:Avalonia.Media.Rotate3DTransform.Depth) property.
+
+```csharp
+public Avalonia.StyledProperty<TValue><double> DepthProperty
+```
+
+</section>
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [Changed](transform.mdx#uid-59de490f29) | Raised when the transform changes. Inherited from [Transform](transform.mdx). |
+| [PropertyChanged](../avaloniaobject.mdx#uid-d758e26fae) | Raised when a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value changes on this object. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+
+</ApiRefPage>
+

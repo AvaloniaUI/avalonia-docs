@@ -1,0 +1,689 @@
+---
+title: 'AvaloniaList<T>'
+hide_title: true
+slug: '/avalonia/collections/avalonialist-1'
+uid: 'Avalonia.Collections.AvaloniaList`1'
+commentId: 'T:Avalonia.Collections.AvaloniaList`1'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Collections'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">AvaloniaList&lt;T&gt; Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Collections</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Collections/AvaloniaList.cs">AvaloniaList.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A notifying list.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class AvaloniaList<T>
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> AvaloniaList&lt;T&gt;
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IAvaloniaList&lt;&gt;, IAvaloniaReadOnlyList&lt;&gt;, INotifyCollectionChangedDebug, ICollection&lt;&gt;, IEnumerable&lt;&gt;, IList&lt;&gt;, IReadOnlyCollection&lt;&gt;, IReadOnlyList&lt;&gt;, ICollection, IEnumerable, IList, INotifyCollectionChanged, INotifyPropertyChanged
+</div>
+</div>
+
+## Remarks
+
+AvaloniaList is similar to [System.Collections.ObjectModel.ObservableCollection&lt;T&gt;](xref:System.Collections.ObjectModel.ObservableCollection%601)
+with a few added features:
+
+- It can be configured to notify the [Avalonia.Collections.AvaloniaList&lt;T&gt;.CollectionChanged](xref:Avalonia.Collections.AvaloniaList%601.CollectionChanged) event with a [System.Collections.Specialized.NotifyCollectionChangedAction.Remove](xref:System.Collections.Specialized.NotifyCollectionChangedAction.Remove) action instead of a [System.Collections.Specialized.NotifyCollectionChangedAction.Reset](xref:System.Collections.Specialized.NotifyCollectionChangedAction.Reset) when the list is cleared by setting [Avalonia.Collections.AvaloniaList&lt;T&gt;.ResetBehavior](xref:Avalonia.Collections.AvaloniaList%601.ResetBehavior) to [Avalonia.Collections.ResetBehavior.Remove](xref:Avalonia.Collections.ResetBehavior.Remove).
+- A [Avalonia.Collections.AvaloniaList&lt;T&gt;.Validate](xref:Avalonia.Collections.AvaloniaList%601.Validate) function can be used to validate each item before insertion.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [AvaloniaList&lt;T&gt; (4 overloads)](#uid-ce95a71d9c) | Initializes a new instance of the [Avalonia.Collections.AvaloniaList&lt;T&gt;](xref:Avalonia.Collections.AvaloniaList%601) class. |
+
+<span id="uid-ce95a71d9c"></span>
+
+### AvaloniaList&lt;T&gt; overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-96dbb8edbe"></span>
+
+#### AvaloniaList&lt;T&gt; Constructor
+
+Initializes a new instance of the [Avalonia.Collections.AvaloniaList&lt;T&gt;](xref:Avalonia.Collections.AvaloniaList%601) class.
+
+```csharp
+public AvaloniaList<T>()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-211673bd3b"></span>
+
+#### AvaloniaList&lt;T&gt; Constructor
+
+```csharp
+public AvaloniaList<T>(System.Collections.Generic.IEnumerable<T> items)
+```
+
+##### Parameters
+
+`items` System.Collections.Generic.IEnumerable&lt;T&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f6e489484d"></span>
+
+#### AvaloniaList&lt;T&gt; Constructor
+
+Initializes a new instance of the [Avalonia.Collections.AvaloniaList&lt;T&gt;](xref:Avalonia.Collections.AvaloniaList%601).
+
+```csharp
+public AvaloniaList<T>(int capacity)
+```
+
+##### Parameters
+
+`capacity` int
+
+Initial list capacity.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-cf220b5187"></span>
+
+#### AvaloniaList&lt;T&gt; Constructor
+
+Initializes a new instance of the [Avalonia.Collections.AvaloniaList&lt;T&gt;](xref:Avalonia.Collections.AvaloniaList%601) class.
+
+```csharp
+public AvaloniaList<T>(T[] items)
+```
+
+##### Parameters
+
+`items` T[]
+
+The initial items for the collection.
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Add](#uid-8760c50d74) | Adds an item to the collection. |
+| [AddRange](#uid-dd087d7c3c) | No summary available. |
+| [Clear](#uid-374fe42b60) | Removes all items from the collection. |
+| [Contains](#uid-b753fee143) | Tests if the collection contains the specified item. |
+| [CopyTo](#uid-aa3649f581) | Copies the collection's contents to an array. |
+| [EnsureCapacity](#uid-a30c145818) | Ensures that the capacity of the list is at least [Avalonia.Collections.AvaloniaList&lt;T&gt;.Capacity](xref:Avalonia.Collections.AvaloniaList%601.Capacity). |
+| [GetEnumerator](#uid-7d58e25258) | No summary available. |
+| [GetRange](#uid-d65775833c) | Gets a range of items from the collection. |
+| [IndexOf](#uid-ff46abbfbb) | Gets the index of the specified item in the collection. |
+| [Insert](#uid-8cd746cd54) | Inserts an item at the specified index. |
+| [InsertRange](#uid-c0a5e1213f) | No summary available. |
+| [Move](#uid-e45f94fdd0) | Moves an item to a new index. |
+| [MoveRange](#uid-d5c954bee9) | Moves multiple items to a new index. |
+| [Remove](#uid-867c926626) | Removes an item from the collection. |
+| [RemoveAll](#uid-4fefc41f09) | No summary available. |
+| [RemoveAt](#uid-a51b185a94) | Removes the item at the specified index. |
+| [RemoveRange](#uid-96411ebd0d) | Removes a range of elements from the collection. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8760c50d74"></span>
+
+### Add Method
+
+Adds an item to the collection.
+
+```csharp
+public void Add(T item)
+```
+
+#### Parameters
+
+`item` T
+
+The item.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-dd087d7c3c"></span>
+
+### AddRange Method
+
+```csharp
+public void AddRange(System.Collections.Generic.IEnumerable<T> items)
+```
+
+#### Parameters
+
+`items` System.Collections.Generic.IEnumerable&lt;T&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-374fe42b60"></span>
+
+### Clear Method
+
+Removes all items from the collection.
+
+```csharp
+public void Clear()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b753fee143"></span>
+
+### Contains Method
+
+Tests if the collection contains the specified item.
+
+```csharp
+public bool Contains(T item)
+```
+
+#### Parameters
+
+`item` T
+
+The item.
+
+
+#### Returns
+
+bool
+
+True if the collection contains the item; otherwise false.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-aa3649f581"></span>
+
+### CopyTo Method
+
+Copies the collection's contents to an array.
+
+```csharp
+public void CopyTo(T[] array, int arrayIndex)
+```
+
+#### Parameters
+
+`array` T[]
+
+The array.
+
+
+`arrayIndex` int
+
+The first index of the array to copy to.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a30c145818"></span>
+
+### EnsureCapacity Method
+
+Ensures that the capacity of the list is at least [Avalonia.Collections.AvaloniaList&lt;T&gt;.Capacity](xref:Avalonia.Collections.AvaloniaList%601.Capacity).
+
+```csharp
+public void EnsureCapacity(int capacity)
+```
+
+#### Parameters
+
+`capacity` int
+
+The capacity.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7d58e25258"></span>
+
+### GetEnumerator Method
+
+```csharp
+public Avalonia.Collections.AvaloniaList<T>.Enumerator<T><T> GetEnumerator()
+```
+
+#### Returns
+
+Avalonia.Collections.AvaloniaList&lt;T&gt;.Enumerator&lt;T&gt;&lt;T&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d65775833c"></span>
+
+### GetRange Method
+
+Gets a range of items from the collection.
+
+```csharp
+public System.Collections.Generic.IEnumerable<T> GetRange(int index, int count)
+```
+
+#### Parameters
+
+`index` int
+
+The zero-based [Avalonia.Collections.AvaloniaList&lt;T&gt;](xref:Avalonia.Collections.AvaloniaList%601) index at which the range starts.
+
+
+`count` int
+
+The number of elements in the range.
+
+
+#### Returns
+
+System.Collections.Generic.IEnumerable&lt;T&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ff46abbfbb"></span>
+
+### IndexOf Method
+
+Gets the index of the specified item in the collection.
+
+```csharp
+public int IndexOf(T item)
+```
+
+#### Parameters
+
+`item` T
+
+The item.
+
+
+#### Returns
+
+int
+
+The index of the item or -1 if the item is not contained in the collection.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8cd746cd54"></span>
+
+### Insert Method
+
+Inserts an item at the specified index.
+
+```csharp
+public void Insert(int index, T item)
+```
+
+#### Parameters
+
+`index` int
+
+The index.
+
+
+`item` T
+
+The item.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c0a5e1213f"></span>
+
+### InsertRange Method
+
+```csharp
+public void InsertRange(int index, System.Collections.Generic.IEnumerable<T> items)
+```
+
+#### Parameters
+
+`index` int
+
+
+`items` System.Collections.Generic.IEnumerable&lt;T&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e45f94fdd0"></span>
+
+### Move Method
+
+Moves an item to a new index.
+
+```csharp
+public void Move(int oldIndex, int newIndex)
+```
+
+#### Parameters
+
+`oldIndex` int
+
+The index of the item to move.
+
+
+`newIndex` int
+
+The index to move the item to.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d5c954bee9"></span>
+
+### MoveRange Method
+
+Moves multiple items to a new index.
+
+```csharp
+public void MoveRange(int oldIndex, int count, int newIndex)
+```
+
+#### Parameters
+
+`oldIndex` int
+
+The first index of the items to move.
+
+
+`count` int
+
+The number of items to move.
+
+
+`newIndex` int
+
+The index to move the items to.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-867c926626"></span>
+
+### Remove Method
+
+Removes an item from the collection.
+
+```csharp
+public bool Remove(T item)
+```
+
+#### Parameters
+
+`item` T
+
+The item.
+
+
+#### Returns
+
+bool
+
+True if the item was found and removed, otherwise false.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4fefc41f09"></span>
+
+### RemoveAll Method
+
+```csharp
+public void RemoveAll(System.Collections.Generic.IEnumerable<T> items)
+```
+
+#### Parameters
+
+`items` System.Collections.Generic.IEnumerable&lt;T&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a51b185a94"></span>
+
+### RemoveAt Method
+
+Removes the item at the specified index.
+
+```csharp
+public void RemoveAt(int index)
+```
+
+#### Parameters
+
+`index` int
+
+The index.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-96411ebd0d"></span>
+
+### RemoveRange Method
+
+Removes a range of elements from the collection.
+
+```csharp
+public void RemoveRange(int index, int count)
+```
+
+#### Parameters
+
+`index` int
+
+The first index to remove.
+
+
+`count` int
+
+The number of items to remove.
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Capacity](#uid-4a853a2f80) | Gets or sets the total number of elements the internal data structure can hold without resizing. |
+| [Count](#uid-b41fd65fb1) | Gets the number of items in the collection. |
+| [Item](#uid-1d41620245) | No summary available. |
+| [ResetBehavior](#uid-518fc92cf0) | Gets or sets the reset behavior of the list. |
+| [Validate](#uid-71ccb4ef1d) | Gets or sets a validation routine that can be used to validate items before they are added. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4a853a2f80"></span>
+
+### Capacity Property
+
+Gets or sets the total number of elements the internal data structure can hold without resizing.
+
+```csharp
+public int Capacity { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b41fd65fb1"></span>
+
+### Count Property
+
+Gets the number of items in the collection.
+
+```csharp
+public int Count { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1d41620245"></span>
+
+### Item Property
+
+```csharp
+public T Item { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-518fc92cf0"></span>
+
+### ResetBehavior Property
+
+Gets or sets the reset behavior of the list.
+
+```csharp
+public Avalonia.Collections.ResetBehavior ResetBehavior { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-71ccb4ef1d"></span>
+
+### Validate Property
+
+Gets or sets a validation routine that can be used to validate items before they are
+added.
+
+```csharp
+public Action<T> Validate { get; set; }
+```
+
+</section>
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [CollectionChanged](#uid-46cafc7a04) | Raised when a change is made to the collection's items. |
+| [PropertyChanged](#uid-b2858b35f9) | Raised when a property on the collection changes. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-46cafc7a04"></span>
+
+### CollectionChanged Event
+
+Raised when a change is made to the collection's items.
+
+```csharp
+public event System.Collections.Specialized.NotifyCollectionChangedEventHandler CollectionChanged
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b2858b35f9"></span>
+
+### PropertyChanged Event
+
+Raised when a property on the collection changes.
+
+```csharp
+public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged
+```
+
+</section>
+
+</ApiRefPage>
+

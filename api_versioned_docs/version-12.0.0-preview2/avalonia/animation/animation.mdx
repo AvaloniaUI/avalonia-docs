@@ -1,0 +1,447 @@
+---
+title: 'Animation'
+hide_title: true
+slug: '/avalonia/animation/animation'
+uid: 'Avalonia.Animation.Animation'
+commentId: 'T:Avalonia.Animation.Animation'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Animation'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">Animation Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Animation</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Animation/Animation.AnimatorRegistry.cs">Animation.AnimatorRegistry.cs</a>, <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Animation/Animation.cs">Animation.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Tracks the progress of an animation.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class Animation
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> Animation
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="ianimation">IAnimation</a>
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [Animation](#uid-904d77599b) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-904d77599b"></span>
+
+### Animation Constructor
+
+```csharp
+public Animation()
+```
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [RegisterCustomAnimator](#uid-bd27627eaf) | No summary available. |
+| [RunAsync](#uid-76fee20be2) | No summary available. |
+| [SetAnimator](#uid-9ee0394ead) | Sets the value of the Animator attached property for a setter. |
+| [Bind (8 overloads)](../avaloniaobject.mdx#uid-1c60c7bda3) | Binds a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) to an [Avalonia.Data.BindingBase](xref:Avalonia.Data.BindingBase). Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [CheckAccess](../avaloniaobject.mdx#uid-260ff7a68d) | Returns a value indicating whether the current thread is the UI thread. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [ClearValue (4 overloads)](../avaloniaobject.mdx#uid-41de208fbe) | Clears a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty)'s local value. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [CoerceValue](../avaloniaobject.mdx#uid-3bec32f39e) | Coerces the specified [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty). Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [Equals](../avaloniaobject.mdx#uid-a8a8e94305) | Compares two objects using reference equality. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [GetBaseValue](../avaloniaobject.mdx#uid-9c615efbba) | Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [GetHashCode](../avaloniaobject.mdx#uid-7f7db1e7a2) | Gets the hash code for the object. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [GetValue (3 overloads)](../avaloniaobject.mdx#uid-5142cd4792) | Gets a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [IsAnimating](../avaloniaobject.mdx#uid-8cbfc7521a) | Checks whether a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) is animating. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [IsSet](../avaloniaobject.mdx#uid-f8bf0bbdcc) | Checks whether a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) is set on this object. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [SetCurrentValue (2 overloads)](../avaloniaobject.mdx#uid-38759fd088) | Sets the value of a dependency property without changing its value source. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [SetValue (3 overloads)](../avaloniaobject.mdx#uid-47d14e19d7) | Sets a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [VerifyAccess](../avaloniaobject.mdx#uid-3b9d3c9793) | Checks that the current thread is the UI thread and throws if not. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-bd27627eaf"></span>
+
+### RegisterCustomAnimator Method
+
+```csharp
+public void RegisterCustomAnimator<T, TAnimator>()
+```
+
+#### Type Parameters
+
+`T`
+
+
+`TAnimator`
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-76fee20be2"></span>
+
+### RunAsync Method
+
+```csharp
+public System.Threading.Tasks.Task RunAsync(Avalonia.Animation.Animatable control, System.Threading.CancellationToken cancellationToken)
+```
+
+#### Parameters
+
+`control` [Avalonia.Animation.Animatable](xref:Avalonia.Animation.Animatable)
+
+
+`cancellationToken` System.Threading.CancellationToken
+
+
+#### Returns
+
+System.Threading.Tasks.Task
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9ee0394ead"></span>
+
+### SetAnimator Method
+
+Sets the value of the Animator attached property for a setter.
+
+```csharp
+public void SetAnimator(Avalonia.Animation.IAnimationSetter setter, Avalonia.Animation.ICustomAnimator value)
+```
+
+#### Parameters
+
+`setter` [Avalonia.Animation.IAnimationSetter](xref:Avalonia.Animation.IAnimationSetter)
+
+The animation setter.
+
+
+`value` [Avalonia.Animation.ICustomAnimator](xref:Avalonia.Animation.ICustomAnimator)
+
+The property animator value.
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Children](#uid-2272519f3f) | Gets the children of the [Avalonia.Animation.Animation](xref:Avalonia.Animation.Animation). |
+| [Delay](#uid-c4c7c73101) | Gets or sets the initial delay time for this animation. |
+| [DelayBetweenIterations](#uid-ee5446d172) | Gets or sets the delay time in between iterations. |
+| [Duration](#uid-f936a8d6bd) | Gets or sets the active time of this animation. |
+| [Easing](#uid-b6f7e77fbe) | Gets or sets the easing function to be used for this animation. |
+| [FillMode](#uid-6688637d32) | Gets or sets the value fill mode for this animation. |
+| [IterationCount](#uid-59218da67c) | Gets or sets the repeat count for this animation. |
+| [PlaybackDirection](#uid-4d4f78fa89) | Gets or sets the playback direction for this animation. |
+| [SpeedRatio](#uid-62b83f8af0) | Gets or sets the speed multiple for this animation. |
+| [Dispatcher](../avaloniaobject.mdx#uid-b25fa51632) | Returns the [Avalonia.AvaloniaObject.Dispatcher](xref:Avalonia.AvaloniaObject.Dispatcher) that this [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject) is associated with. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [Item](../avaloniaobject.mdx#uid-c1d1f1bc0f) | Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2272519f3f"></span>
+
+### Children Property
+
+Gets the children of the [Avalonia.Animation.Animation](xref:Avalonia.Animation.Animation).
+
+```csharp
+public Avalonia.Animation.KeyFrames Children { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c4c7c73101"></span>
+
+### Delay Property
+
+Gets or sets the initial delay time for this animation.
+
+```csharp
+public TimeSpan Delay { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ee5446d172"></span>
+
+### DelayBetweenIterations Property
+
+Gets or sets the delay time in between iterations.
+
+```csharp
+public TimeSpan DelayBetweenIterations { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f936a8d6bd"></span>
+
+### Duration Property
+
+Gets or sets the active time of this animation.
+
+```csharp
+public TimeSpan Duration { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b6f7e77fbe"></span>
+
+### Easing Property
+
+Gets or sets the easing function to be used for this animation.
+
+```csharp
+public Avalonia.Animation.Easings.Easing Easing { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6688637d32"></span>
+
+### FillMode Property
+
+Gets or sets the value fill mode for this animation.
+
+```csharp
+public Avalonia.Animation.FillMode FillMode { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-59218da67c"></span>
+
+### IterationCount Property
+
+Gets or sets the repeat count for this animation.
+
+```csharp
+public Avalonia.Animation.IterationCount IterationCount { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4d4f78fa89"></span>
+
+### PlaybackDirection Property
+
+Gets or sets the playback direction for this animation.
+
+```csharp
+public Avalonia.Animation.PlaybackDirection PlaybackDirection { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-62b83f8af0"></span>
+
+### SpeedRatio Property
+
+Gets or sets the speed multiple for this animation.
+
+```csharp
+public double SpeedRatio { get; set; }
+```
+
+</section>
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [DelayBetweenIterationsProperty](#uid-6c35e30eaf) | Defines the [Avalonia.Animation.Animation.DelayBetweenIterations](xref:Avalonia.Animation.Animation.DelayBetweenIterations) property. |
+| [DelayProperty](#uid-f4f4470b31) | Defines the [Avalonia.Animation.Animation.Delay](xref:Avalonia.Animation.Animation.Delay) property. |
+| [DurationProperty](#uid-9610b0c968) | Defines the [Avalonia.Animation.Animation.Duration](xref:Avalonia.Animation.Animation.Duration) property. |
+| [EasingProperty](#uid-c7189658a2) | Defines the [Avalonia.Animation.Animation.Easing](xref:Avalonia.Animation.Animation.Easing) property. |
+| [FillModeProperty](#uid-b8c7e8cc61) | Defines the [Avalonia.Animation.Animation.FillMode](xref:Avalonia.Animation.Animation.FillMode) property. |
+| [IterationCountProperty](#uid-a174ad39e6) | Defines the [Avalonia.Animation.Animation.IterationCount](xref:Avalonia.Animation.Animation.IterationCount) property. |
+| [PlaybackDirectionProperty](#uid-8b2c6dfeea) | Defines the [Avalonia.Animation.Animation.PlaybackDirection](xref:Avalonia.Animation.Animation.PlaybackDirection) property. |
+| [SpeedRatioProperty](#uid-83ce379868) | Defines the [Avalonia.Animation.Animation.SpeedRatio](xref:Avalonia.Animation.Animation.SpeedRatio) property. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6c35e30eaf"></span>
+
+### DelayBetweenIterationsProperty Field
+
+Defines the [Avalonia.Animation.Animation.DelayBetweenIterations](xref:Avalonia.Animation.Animation.DelayBetweenIterations) property.
+
+```csharp
+public Avalonia.DirectProperty<TOwner,TValue><Avalonia.Animation.Animation, TimeSpan> DelayBetweenIterationsProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f4f4470b31"></span>
+
+### DelayProperty Field
+
+Defines the [Avalonia.Animation.Animation.Delay](xref:Avalonia.Animation.Animation.Delay) property.
+
+```csharp
+public Avalonia.DirectProperty<TOwner,TValue><Avalonia.Animation.Animation, TimeSpan> DelayProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9610b0c968"></span>
+
+### DurationProperty Field
+
+Defines the [Avalonia.Animation.Animation.Duration](xref:Avalonia.Animation.Animation.Duration) property.
+
+```csharp
+public Avalonia.DirectProperty<TOwner,TValue><Avalonia.Animation.Animation, TimeSpan> DurationProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c7189658a2"></span>
+
+### EasingProperty Field
+
+Defines the [Avalonia.Animation.Animation.Easing](xref:Avalonia.Animation.Animation.Easing) property.
+
+```csharp
+public Avalonia.DirectProperty<TOwner,TValue><Avalonia.Animation.Animation, Avalonia.Animation.Easings.Easing> EasingProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b8c7e8cc61"></span>
+
+### FillModeProperty Field
+
+Defines the [Avalonia.Animation.Animation.FillMode](xref:Avalonia.Animation.Animation.FillMode) property.
+
+```csharp
+public Avalonia.DirectProperty<TOwner,TValue><Avalonia.Animation.Animation, Avalonia.Animation.FillMode> FillModeProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a174ad39e6"></span>
+
+### IterationCountProperty Field
+
+Defines the [Avalonia.Animation.Animation.IterationCount](xref:Avalonia.Animation.Animation.IterationCount) property.
+
+```csharp
+public Avalonia.DirectProperty<TOwner,TValue><Avalonia.Animation.Animation, Avalonia.Animation.IterationCount> IterationCountProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8b2c6dfeea"></span>
+
+### PlaybackDirectionProperty Field
+
+Defines the [Avalonia.Animation.Animation.PlaybackDirection](xref:Avalonia.Animation.Animation.PlaybackDirection) property.
+
+```csharp
+public Avalonia.DirectProperty<TOwner,TValue><Avalonia.Animation.Animation, Avalonia.Animation.PlaybackDirection> PlaybackDirectionProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-83ce379868"></span>
+
+### SpeedRatioProperty Field
+
+Defines the [Avalonia.Animation.Animation.SpeedRatio](xref:Avalonia.Animation.Animation.SpeedRatio) property.
+
+```csharp
+public Avalonia.DirectProperty<TOwner,TValue><Avalonia.Animation.Animation, double> SpeedRatioProperty
+```
+
+</section>
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [PropertyChanged](../avaloniaobject.mdx#uid-d758e26fae) | Raised when a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value changes on this object. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+
+</ApiRefPage>
+

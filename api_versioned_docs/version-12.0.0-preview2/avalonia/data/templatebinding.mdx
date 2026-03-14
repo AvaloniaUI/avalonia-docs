@@ -1,0 +1,212 @@
+---
+title: 'TemplateBinding'
+hide_title: true
+slug: '/avalonia/data/templatebinding'
+uid: 'Avalonia.Data.TemplateBinding'
+commentId: 'T:Avalonia.Data.TemplateBinding'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Data'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">TemplateBinding Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Data</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Data/TemplateBinding.cs">TemplateBinding.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A XAML binding to a property on a control's templated parent.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class TemplateBinding
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="bindingbase">BindingBase</a> <span className="apiref-page__relation-separator">-&gt;</span> TemplateBinding
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [TemplateBinding (2 overloads)](#uid-c668371c7d) | No summary available. |
+
+<span id="uid-c668371c7d"></span>
+
+### TemplateBinding overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-36958b43e2"></span>
+
+#### TemplateBinding Constructor
+
+```csharp
+public TemplateBinding()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f39e0516ab"></span>
+
+#### TemplateBinding Constructor
+
+```csharp
+public TemplateBinding(Avalonia.AvaloniaProperty property)
+```
+
+##### Parameters
+
+`property` [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty)
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [ProvideValue](#uid-565c2c3b3d) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-565c2c3b3d"></span>
+
+### ProvideValue Method
+
+```csharp
+public Avalonia.Data.BindingBase ProvideValue()
+```
+
+#### Returns
+
+[Avalonia.Data.BindingBase](xref:Avalonia.Data.BindingBase)
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Converter](#uid-3698a35887) | Gets or sets the [Avalonia.Data.Converters.IValueConverter](xref:Avalonia.Data.Converters.IValueConverter) to use. |
+| [ConverterCulture](#uid-c39b658660) | Gets or sets the culture in which to evaluate the converter. |
+| [ConverterParameter](#uid-0a1b15e9be) | Gets or sets a parameter to pass to [Avalonia.Data.TemplateBinding.Converter](xref:Avalonia.Data.TemplateBinding.Converter). |
+| [Mode](#uid-9d2c6e787c) | Gets or sets the binding mode. |
+| [Property](#uid-aca464fce4) | Gets or sets the name of the source property on the templated parent. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3698a35887"></span>
+
+### Converter Property
+
+Gets or sets the [Avalonia.Data.Converters.IValueConverter](xref:Avalonia.Data.Converters.IValueConverter) to use.
+
+```csharp
+public Avalonia.Data.Converters.IValueConverter Converter { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c39b658660"></span>
+
+### ConverterCulture Property
+
+Gets or sets the culture in which to evaluate the converter.
+
+```csharp
+public System.Globalization.CultureInfo ConverterCulture { get; set; }
+```
+
+#### Value
+
+The default value is null.
+
+
+#### Remarks
+
+If this property is not set then [System.Globalization.CultureInfo.CurrentCulture](xref:System.Globalization.CultureInfo.CurrentCulture) will be used.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0a1b15e9be"></span>
+
+### ConverterParameter Property
+
+Gets or sets a parameter to pass to [Avalonia.Data.TemplateBinding.Converter](xref:Avalonia.Data.TemplateBinding.Converter).
+
+```csharp
+public object ConverterParameter { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9d2c6e787c"></span>
+
+### Mode Property
+
+Gets or sets the binding mode.
+
+```csharp
+public Avalonia.Data.BindingMode Mode { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-aca464fce4"></span>
+
+### Property Property
+
+Gets or sets the name of the source property on the templated parent.
+
+```csharp
+public Avalonia.AvaloniaProperty Property { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

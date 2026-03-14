@@ -1,0 +1,123 @@
+---
+title: 'SkiaOptions'
+hide_title: true
+slug: '/avalonia/skiaoptions'
+uid: 'Avalonia.SkiaOptions'
+commentId: 'T:Avalonia.SkiaOptions'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Skia'
+assembly: 'Avalonia.Skia'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">SkiaOptions Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Skia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Skia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Skia/Avalonia.Skia/SkiaOptions.cs">SkiaOptions.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Options for Skia rendering subsystem.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class SkiaOptions
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> SkiaOptions
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [SkiaOptions](#uid-a5845e4027) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a5845e4027"></span>
+
+### SkiaOptions Constructor
+
+```csharp
+public SkiaOptions()
+```
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [MaxGpuResourceSizeBytes](#uid-4018646757) | The maximum number of bytes for video memory to store textures and resources. |
+| [UseOpacitySaveLayer](#uid-44688647b8) | Use Skia's SaveLayer API to handling opacity. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4018646757"></span>
+
+### MaxGpuResourceSizeBytes Property
+
+The maximum number of bytes for video memory to store textures and resources.
+
+```csharp
+public Nullable<long> MaxGpuResourceSizeBytes { get; set; }
+```
+
+#### Remarks
+
+This is set by default to the recommended value for Avalonia.
+Setting this to null will give you the default Skia value.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-44688647b8"></span>
+
+### UseOpacitySaveLayer Property
+
+Use Skia's SaveLayer API to handling opacity.
+
+```csharp
+public bool UseOpacitySaveLayer { get; set; }
+```
+
+#### Remarks
+
+Enabling this might have performance implications.
+
+</section>
+
+</ApiRefPage>
+

@@ -1,0 +1,329 @@
+---
+title: 'DataTransferExtensions'
+hide_title: true
+slug: '/avalonia/input/datatransferextensions'
+uid: 'Avalonia.Input.DataTransferExtensions'
+commentId: 'T:Avalonia.Input.DataTransferExtensions'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Input'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">DataTransferExtensions Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Input</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Input/DataTransferExtensions.cs">DataTransferExtensions.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Contains extension methods for [Avalonia.Input.IDataTransfer](xref:Avalonia.Input.IDataTransfer).
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class DataTransferExtensions
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> DataTransferExtensions
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Contains](#uid-fd19a2ef22) | Gets whether a [Avalonia.Input.IDataTransfer](xref:Avalonia.Input.IDataTransfer) supports a specific format. |
+| [GetItems](#uid-12948ec178) | Gets the list of [Avalonia.Input.IDataTransferItem](xref:Avalonia.Input.IDataTransferItem) contained in this object, filtered by a given format. |
+| [TryGetBitmap](#uid-d54ba1699a) | Returns a bitmap, if available, from a [Avalonia.Input.IDataTransfer](xref:Avalonia.Input.IDataTransfer) instance. |
+| [TryGetFile](#uid-d8e8d736ce) | Returns a file, if available, from a [Avalonia.Input.IDataTransfer](xref:Avalonia.Input.IDataTransfer) instance. |
+| [TryGetFiles](#uid-cd9312c50d) | Returns a list of files, if available, from a [Avalonia.Input.IDataTransfer](xref:Avalonia.Input.IDataTransfer) instance. |
+| [TryGetText](#uid-9f804d4370) | Returns a text, if available, from a [Avalonia.Input.IDataTransfer](xref:Avalonia.Input.IDataTransfer) instance. |
+| [TryGetValue](#uid-e57a2799cc) | No summary available. |
+| [TryGetValues](#uid-cb2f49aa26) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-fd19a2ef22"></span>
+
+### Contains Method
+
+Gets whether a [Avalonia.Input.IDataTransfer](xref:Avalonia.Input.IDataTransfer) supports a specific format.
+
+```csharp
+public bool Contains(Avalonia.Input.IDataTransfer dataTransfer, Avalonia.Input.DataFormat format)
+```
+
+#### Parameters
+
+`dataTransfer` [Avalonia.Input.IDataTransfer](xref:Avalonia.Input.IDataTransfer)
+
+The [Avalonia.Input.IDataTransfer](xref:Avalonia.Input.IDataTransfer) instance.
+
+
+`format` [Avalonia.Input.DataFormat](xref:Avalonia.Input.DataFormat)
+
+The format to check.
+
+
+#### Returns
+
+bool
+
+true if `format` is supported, false otherwise.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-12948ec178"></span>
+
+### GetItems Method
+
+Gets the list of [Avalonia.Input.IDataTransferItem](xref:Avalonia.Input.IDataTransferItem) contained in this object, filtered by a given format.
+
+```csharp
+public System.Collections.Generic.IEnumerable<Avalonia.Input.IDataTransferItem> GetItems(Avalonia.Input.IDataTransfer dataTransfer, Avalonia.Input.DataFormat format)
+```
+
+#### Parameters
+
+`dataTransfer` [Avalonia.Input.IDataTransfer](xref:Avalonia.Input.IDataTransfer)
+
+
+`format` [Avalonia.Input.DataFormat](xref:Avalonia.Input.DataFormat)
+
+
+#### Returns
+
+System.Collections.Generic.IEnumerable&lt;[Avalonia.Input.IDataTransferItem](xref:Avalonia.Input.IDataTransferItem)&gt;
+
+
+#### Remarks
+
+Some platforms (such as Windows and X11) may only support a single data item for all formats
+except [Avalonia.Input.DataFormat.File](xref:Avalonia.Input.DataFormat.File).
+
+Items returned by this property must stay valid until the [Avalonia.Input.IDataTransfer](xref:Avalonia.Input.IDataTransfer) is disposed.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d54ba1699a"></span>
+
+### TryGetBitmap Method
+
+Returns a bitmap, if available, from a [Avalonia.Input.IDataTransfer](xref:Avalonia.Input.IDataTransfer) instance.
+
+```csharp
+public Avalonia.Media.Imaging.Bitmap TryGetBitmap(Avalonia.Input.IDataTransfer dataTransfer)
+```
+
+#### Parameters
+
+`dataTransfer` [Avalonia.Input.IDataTransfer](xref:Avalonia.Input.IDataTransfer)
+
+The [Avalonia.Input.IDataTransfer](xref:Avalonia.Input.IDataTransfer) instance.
+
+
+#### Returns
+
+[Avalonia.Media.Imaging.Bitmap](xref:Avalonia.Media.Imaging.Bitmap)
+
+A [Avalonia.Media.Imaging.Bitmap](xref:Avalonia.Media.Imaging.Bitmap), or null if the format isn't available.
+
+
+#### See also
+
+- [Avalonia.Input.DataFormat.Bitmap](xref:Avalonia.Input.DataFormat.Bitmap)
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d8e8d736ce"></span>
+
+### TryGetFile Method
+
+Returns a file, if available, from a [Avalonia.Input.IDataTransfer](xref:Avalonia.Input.IDataTransfer) instance.
+
+```csharp
+public Avalonia.Platform.Storage.IStorageItem TryGetFile(Avalonia.Input.IDataTransfer dataTransfer)
+```
+
+#### Parameters
+
+`dataTransfer` [Avalonia.Input.IDataTransfer](xref:Avalonia.Input.IDataTransfer)
+
+The [Avalonia.Input.IDataTransfer](xref:Avalonia.Input.IDataTransfer) instance.
+
+
+#### Returns
+
+[Avalonia.Platform.Storage.IStorageItem](xref:Avalonia.Platform.Storage.IStorageItem)
+
+An [Avalonia.Platform.Storage.IStorageItem](xref:Avalonia.Platform.Storage.IStorageItem) (file or folder), or null if the format isn't available.
+
+
+#### See also
+
+- [Avalonia.Input.DataFormat.File](xref:Avalonia.Input.DataFormat.File)
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-cd9312c50d"></span>
+
+### TryGetFiles Method
+
+Returns a list of files, if available, from a [Avalonia.Input.IDataTransfer](xref:Avalonia.Input.IDataTransfer) instance.
+
+```csharp
+public Avalonia.Platform.Storage.IStorageItem[] TryGetFiles(Avalonia.Input.IDataTransfer dataTransfer)
+```
+
+#### Parameters
+
+`dataTransfer` [Avalonia.Input.IDataTransfer](xref:Avalonia.Input.IDataTransfer)
+
+The [Avalonia.Input.IDataTransfer](xref:Avalonia.Input.IDataTransfer) instance.
+
+
+#### Returns
+
+[Avalonia.Platform.Storage.IStorageItem](xref:Avalonia.Platform.Storage.IStorageItem)[]
+
+An array of [Avalonia.Platform.Storage.IStorageItem](xref:Avalonia.Platform.Storage.IStorageItem) (files or folders), or null if the format isn't available.
+
+
+#### See also
+
+- [Avalonia.Input.DataFormat.File](xref:Avalonia.Input.DataFormat.File)
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9f804d4370"></span>
+
+### TryGetText Method
+
+Returns a text, if available, from a [Avalonia.Input.IDataTransfer](xref:Avalonia.Input.IDataTransfer) instance.
+
+```csharp
+public string TryGetText(Avalonia.Input.IDataTransfer dataTransfer)
+```
+
+#### Parameters
+
+`dataTransfer` [Avalonia.Input.IDataTransfer](xref:Avalonia.Input.IDataTransfer)
+
+The [Avalonia.Input.IDataTransfer](xref:Avalonia.Input.IDataTransfer) instance.
+
+
+#### Returns
+
+string
+
+A string, or null if the format isn't available.
+
+
+#### See also
+
+- [Avalonia.Input.DataFormat.Text](xref:Avalonia.Input.DataFormat.Text)
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e57a2799cc"></span>
+
+### TryGetValue Method
+
+```csharp
+public T TryGetValue<T>(Avalonia.Input.IDataTransfer dataTransfer, Avalonia.Input.DataFormat<T><T> format)
+```
+
+#### Parameters
+
+`dataTransfer` [Avalonia.Input.IDataTransfer](xref:Avalonia.Input.IDataTransfer)
+
+
+`format` [Avalonia.Input.DataFormat](xref:Avalonia.Input.DataFormat)&lt;T&gt;&lt;T&gt;
+
+
+#### Type Parameters
+
+`T`
+
+
+#### Returns
+
+T
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-cb2f49aa26"></span>
+
+### TryGetValues Method
+
+```csharp
+public T[] TryGetValues<T>(Avalonia.Input.IDataTransfer dataTransfer, Avalonia.Input.DataFormat<T><T> format)
+```
+
+#### Parameters
+
+`dataTransfer` [Avalonia.Input.IDataTransfer](xref:Avalonia.Input.IDataTransfer)
+
+
+`format` [Avalonia.Input.DataFormat](xref:Avalonia.Input.DataFormat)&lt;T&gt;&lt;T&gt;
+
+
+#### Type Parameters
+
+`T`
+
+
+#### Returns
+
+T[]
+
+
+</section>
+
+</ApiRefPage>
+

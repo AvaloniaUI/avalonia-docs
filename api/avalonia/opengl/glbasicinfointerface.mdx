@@ -1,0 +1,265 @@
+---
+title: 'GlBasicInfoInterface'
+hide_title: true
+slug: '/avalonia/opengl/glbasicinfointerface'
+uid: 'Avalonia.OpenGL.GlBasicInfoInterface'
+commentId: 'T:Avalonia.OpenGL.GlBasicInfoInterface'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.OpenGL'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.OpenGL'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">GlBasicInfoInterface Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.OpenGL</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.OpenGL</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.OpenGL/GlBasicInfoInterface.cs">GlBasicInfoInterface.cs</a>, <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.OpenGL/obj/Release/net10.0/DevGenerators/Generator.GetProcAddressInitializationGenerator/globalAvalonia.OpenGL.GlBasicInfoInterface.cs">globalAvalonia.OpenGL.GlBasicInfoInterface.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class GlBasicInfoInterface
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> GlBasicInfoInterface
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Derived types:</span> <a href="glinterface">GlInterface</a>
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [GlBasicInfoInterface](#uid-3d7135ebed) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3d7135ebed"></span>
+
+### GlBasicInfoInterface Constructor
+
+```csharp
+public GlBasicInfoInterface(Func<string, IntPtr> getProcAddress)
+```
+
+#### Parameters
+
+`getProcAddress` Func&lt;string, IntPtr&gt;
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [GetError](#uid-335a3ecb4a) | No summary available. |
+| [GetExtensions](#uid-3dc9cf6f1d) | No summary available. |
+| [GetFloatv](#uid-37f2cd2bf2) | No summary available. |
+| [GetIntegerv](#uid-961400b97d) | No summary available. |
+| [GetString (2 overloads)](#uid-6438cbf0f4) | No summary available. |
+| [GetStringNative](#uid-f5216e7f4a) | No summary available. |
+| [GetStringiNative](#uid-3f7c8607ab) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-335a3ecb4a"></span>
+
+### GetError Method
+
+```csharp
+public int GetError()
+```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3dc9cf6f1d"></span>
+
+### GetExtensions Method
+
+```csharp
+public System.Collections.Generic.List<string> GetExtensions()
+```
+
+#### Returns
+
+System.Collections.Generic.List&lt;string&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-37f2cd2bf2"></span>
+
+### GetFloatv Method
+
+```csharp
+public void GetFloatv(int name, float& rv)
+```
+
+#### Parameters
+
+`name` int
+
+
+`rv` float&amp;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-961400b97d"></span>
+
+### GetIntegerv Method
+
+```csharp
+public void GetIntegerv(int name, int& rv)
+```
+
+#### Parameters
+
+`name` int
+
+
+`rv` int&amp;
+
+
+</section>
+
+<span id="uid-6438cbf0f4"></span>
+
+### GetString overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5fb5c580d0"></span>
+
+#### GetString Method
+
+```csharp
+public string GetString(int v)
+```
+
+##### Parameters
+
+`v` int
+
+
+##### Returns
+
+string
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-af86dd6b9e"></span>
+
+#### GetString Method
+
+```csharp
+public string GetString(int v, int index)
+```
+
+##### Parameters
+
+`v` int
+
+
+`index` int
+
+
+##### Returns
+
+string
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f5216e7f4a"></span>
+
+### GetStringNative Method
+
+```csharp
+public IntPtr GetStringNative(int v)
+```
+
+#### Parameters
+
+`v` int
+
+
+#### Returns
+
+IntPtr
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3f7c8607ab"></span>
+
+### GetStringiNative Method
+
+```csharp
+public IntPtr GetStringiNative(int v, int v1)
+```
+
+#### Parameters
+
+`v` int
+
+
+`v1` int
+
+
+#### Returns
+
+IntPtr
+
+
+</section>
+
+</ApiRefPage>
+

@@ -1,0 +1,90 @@
+---
+title: 'EffectExtensions'
+hide_title: true
+slug: '/avalonia/media/effectextensions'
+uid: 'Avalonia.Media.EffectExtensions'
+commentId: 'T:Avalonia.Media.EffectExtensions'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Media'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">EffectExtensions Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Media</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Media/Effects/EffectExtesions.cs">EffectExtesions.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class EffectExtensions
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> EffectExtensions
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [ToImmutable](#uid-8ea8b6569e) | Converts a effect to an immutable effect. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8ea8b6569e"></span>
+
+### ToImmutable Method
+
+Converts a effect to an immutable effect.
+
+```csharp
+public Avalonia.Media.IImmutableEffect ToImmutable(Avalonia.Media.IEffect effect)
+```
+
+#### Parameters
+
+`effect` [Avalonia.Media.IEffect](xref:Avalonia.Media.IEffect)
+
+The effect.
+
+
+#### Returns
+
+[Avalonia.Media.IImmutableEffect](xref:Avalonia.Media.IImmutableEffect)
+
+The result of calling [Avalonia.Media.IMutableEffect.ToImmutable](xref:Avalonia.Media.IMutableEffect.ToImmutable) if the effect is mutable,
+otherwise `effect`.
+
+
+</section>
+
+</ApiRefPage>
+

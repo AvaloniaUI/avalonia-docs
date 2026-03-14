@@ -1,0 +1,252 @@
+---
+title: 'IScrollProvider'
+hide_title: true
+slug: '/avalonia/automation/provider/iscrollprovider'
+uid: 'Avalonia.Automation.Provider.IScrollProvider'
+commentId: 'T:Avalonia.Automation.Provider.IScrollProvider'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Automation.Provider'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IScrollProvider Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Automation.Provider</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Exposes methods and properties to support access by a UI Automation client to a control
+that acts as a scrollable container for a collection of child objects.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface IScrollProvider
+```
+
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Scroll](#uid-2c98c2b745) | Scrolls the visible region of the content area horizontally and vertically. |
+| [SetScrollPercent](#uid-3735cebfd9) | Sets the horizontal and vertical scroll position as a percentage of the total content area within the control. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2c98c2b745"></span>
+
+### Scroll Method
+
+Scrolls the visible region of the content area horizontally and vertically.
+
+```csharp
+public void Scroll(Avalonia.Automation.Provider.ScrollAmount horizontalAmount, Avalonia.Automation.Provider.ScrollAmount verticalAmount)
+```
+
+#### Parameters
+
+`horizontalAmount` [Avalonia.Automation.Provider.ScrollAmount](xref:Avalonia.Automation.Provider.ScrollAmount)
+
+The horizontal increment specific to the control.
+
+
+`verticalAmount` [Avalonia.Automation.Provider.ScrollAmount](xref:Avalonia.Automation.Provider.ScrollAmount)
+
+The vertical increment specific to the control.
+
+
+#### Remarks
+
+- Windows`IScrollProvider.Scroll`
+- macOSNo mapping.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3735cebfd9"></span>
+
+### SetScrollPercent Method
+
+Sets the horizontal and vertical scroll position as a percentage of the total content
+area within the control.
+
+```csharp
+public void SetScrollPercent(double horizontalPercent, double verticalPercent)
+```
+
+#### Parameters
+
+`horizontalPercent` double
+
+The horizontal position as a percentage of the content area's total range.
+[Avalonia.Automation.ScrollPatternIdentifiers.NoScroll](xref:Avalonia.Automation.ScrollPatternIdentifiers.NoScroll) should be passed in if the control
+cannot be scrolled in this direction.
+
+
+`verticalPercent` double
+
+The vertical position as a percentage of the content area's total range.
+[Avalonia.Automation.ScrollPatternIdentifiers.NoScroll](xref:Avalonia.Automation.ScrollPatternIdentifiers.NoScroll) should be passed in if the control
+cannot be scrolled in this direction.
+
+
+#### Remarks
+
+- Windows`IScrollProvider.SetScrollPercent`
+- macOSNo mapping.
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [HorizontalScrollPercent](#uid-b1248aa738) | Gets the current horizontal scroll position. |
+| [HorizontalViewSize](#uid-e0b06e8d92) | Gets the current horizontal view size. |
+| [HorizontallyScrollable](#uid-b71163329b) | Gets a value that indicates whether the control can scroll horizontally. |
+| [VerticalScrollPercent](#uid-29deba5aa9) | Gets the current vertical scroll position. |
+| [VerticalViewSize](#uid-d04ac6b142) | Gets the vertical view size. |
+| [VerticallyScrollable](#uid-f6a3279088) | Gets a value that indicates whether the control can scroll vertically. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b1248aa738"></span>
+
+### HorizontalScrollPercent Property
+
+Gets the current horizontal scroll position.
+
+```csharp
+public double HorizontalScrollPercent { get; set; }
+```
+
+#### Remarks
+
+- Windows`IScrollProvider.HorizontalScrollPercent`
+- macOSNo mapping.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e0b06e8d92"></span>
+
+### HorizontalViewSize Property
+
+Gets the current horizontal view size.
+
+```csharp
+public double HorizontalViewSize { get; set; }
+```
+
+#### Remarks
+
+- Windows`IScrollProvider.HorizontalViewSize`
+- macOSNo mapping.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b71163329b"></span>
+
+### HorizontallyScrollable Property
+
+Gets a value that indicates whether the control can scroll horizontally.
+
+```csharp
+public bool HorizontallyScrollable { get; set; }
+```
+
+#### Remarks
+
+- Windows`IScrollProvider.HorizontallyScrollable`
+- macOSNo mapping.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-29deba5aa9"></span>
+
+### VerticalScrollPercent Property
+
+Gets the current vertical scroll position.
+
+```csharp
+public double VerticalScrollPercent { get; set; }
+```
+
+#### Remarks
+
+- Windows`IScrollProvider.VerticalScrollPercent`
+- macOSNo mapping.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d04ac6b142"></span>
+
+### VerticalViewSize Property
+
+Gets the vertical view size.
+
+```csharp
+public double VerticalViewSize { get; set; }
+```
+
+#### Remarks
+
+- Windows`IScrollProvider.VerticalViewSize`
+- macOSNo mapping.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f6a3279088"></span>
+
+### VerticallyScrollable Property
+
+Gets a value that indicates whether the control can scroll vertically.
+
+```csharp
+public bool VerticallyScrollable { get; set; }
+```
+
+#### Remarks
+
+- Windows`IScrollProvider.VerticallyScrollable`
+- macOSNo mapping.
+
+</section>
+
+</ApiRefPage>
+

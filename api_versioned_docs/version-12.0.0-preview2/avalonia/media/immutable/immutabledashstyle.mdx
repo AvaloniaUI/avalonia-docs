@@ -1,0 +1,198 @@
+---
+title: 'ImmutableDashStyle'
+hide_title: true
+slug: '/avalonia/media/immutable/immutabledashstyle'
+uid: 'Avalonia.Media.Immutable.ImmutableDashStyle'
+commentId: 'T:Avalonia.Media.Immutable.ImmutableDashStyle'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Media.Immutable'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ImmutableDashStyle Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Media.Immutable</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Media/Immutable/ImmutableDashStyle.cs">ImmutableDashStyle.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Represents the sequence of dashes and gaps that will be applied by an
+[Avalonia.Media.Immutable.ImmutablePen](xref:Avalonia.Media.Immutable.ImmutablePen).
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class ImmutableDashStyle
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> ImmutableDashStyle
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="../idashstyle">IDashStyle</a>, IEquatable&lt;IDashStyle&gt;
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [ImmutableDashStyle](#uid-b77f6b6753) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b77f6b6753"></span>
+
+### ImmutableDashStyle Constructor
+
+```csharp
+public ImmutableDashStyle(System.Collections.Generic.IEnumerable<double> dashes, double offset)
+```
+
+#### Parameters
+
+`dashes` System.Collections.Generic.IEnumerable&lt;double&gt;
+
+
+`offset` double
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Equals (2 overloads)](#uid-efbed5e10e) | No summary available. |
+| [GetHashCode](#uid-8f38af112e) | No summary available. |
+
+<span id="uid-efbed5e10e"></span>
+
+### Equals overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6c62e62806"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(Avalonia.Media.IDashStyle other)
+```
+
+##### Parameters
+
+`other` [Avalonia.Media.IDashStyle](xref:Avalonia.Media.IDashStyle)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1e57ba6de2"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(object obj)
+```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8f38af112e"></span>
+
+### GetHashCode Method
+
+```csharp
+public int GetHashCode()
+```
+
+#### Returns
+
+int
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Dashes](#uid-25ed61d9d7) | Gets or sets the length of alternating dashes and gaps. |
+| [Offset](#uid-9d8e25d083) | Gets or sets how far in the dash sequence the stroke will start. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-25ed61d9d7"></span>
+
+### Dashes Property
+
+Gets or sets the length of alternating dashes and gaps.
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<double> Dashes { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9d8e25d083"></span>
+
+### Offset Property
+
+Gets or sets how far in the dash sequence the stroke will start.
+
+```csharp
+public double Offset { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

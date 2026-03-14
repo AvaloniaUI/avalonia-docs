@@ -1,0 +1,185 @@
+---
+title: 'TextCollapsingProperties'
+hide_title: true
+slug: '/avalonia/media/textformatting/textcollapsingproperties'
+uid: 'Avalonia.Media.TextFormatting.TextCollapsingProperties'
+commentId: 'T:Avalonia.Media.TextFormatting.TextCollapsingProperties'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Media.TextFormatting'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">TextCollapsingProperties Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Media.TextFormatting</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Media/TextFormatting/TextCollapsingProperties.cs">TextCollapsingProperties.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Properties of text collapsing.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class TextCollapsingProperties
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> TextCollapsingProperties
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Derived types:</span> <a href="textleadingprefixcharacterellipsis">TextLeadingPrefixCharacterEllipsis</a>, <a href="texttrailingcharacterellipsis">TextTrailingCharacterEllipsis</a>, <a href="texttrailingwordellipsis">TextTrailingWordEllipsis</a>, <a href="../textpathsegmentellipsis">TextPathSegmentEllipsis</a>
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Collapse](#uid-c0e1200b8b) | Collapses given text line. |
+| [CreateCollapsedRuns](#uid-3f1ae847f7) | Creates a list of runs for given collapsed length which includes specified symbol at the end. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c0e1200b8b"></span>
+
+### Collapse Method
+
+Collapses given text line.
+
+```csharp
+public Avalonia.Media.TextFormatting.TextRun[] Collapse(Avalonia.Media.TextFormatting.TextLine textLine)
+```
+
+#### Parameters
+
+`textLine` [Avalonia.Media.TextFormatting.TextLine](xref:Avalonia.Media.TextFormatting.TextLine)
+
+Text line to collapse.
+
+
+#### Returns
+
+[Avalonia.Media.TextFormatting.TextRun](xref:Avalonia.Media.TextFormatting.TextRun)[]
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3f1ae847f7"></span>
+
+### CreateCollapsedRuns Method
+
+Creates a list of runs for given collapsed length which includes specified symbol at the end.
+
+```csharp
+public Avalonia.Media.TextFormatting.TextRun[] CreateCollapsedRuns(Avalonia.Media.TextFormatting.TextLine textLine, int collapsedLength, Avalonia.Media.TextFormatting.TextRun shapedSymbol)
+```
+
+#### Parameters
+
+`textLine` [Avalonia.Media.TextFormatting.TextLine](xref:Avalonia.Media.TextFormatting.TextLine)
+
+The text line.
+
+
+`collapsedLength` int
+
+The collapsed length.
+
+
+`shapedSymbol` [Avalonia.Media.TextFormatting.TextRun](xref:Avalonia.Media.TextFormatting.TextRun)
+
+The symbol.
+
+
+#### Returns
+
+[Avalonia.Media.TextFormatting.TextRun](xref:Avalonia.Media.TextFormatting.TextRun)[]
+
+List of remaining runs.
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [FlowDirection](#uid-d9e94298aa) | Gets the flow direction that is used for collapsing. |
+| [Symbol](#uid-0840453083) | Gets the text run that is used as collapsing symbol. |
+| [Width](#uid-abfb22c286) | Gets the width in which the collapsible range is constrained to. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d9e94298aa"></span>
+
+### FlowDirection Property
+
+Gets the flow direction that is used for collapsing.
+
+```csharp
+public Avalonia.Media.FlowDirection FlowDirection { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0840453083"></span>
+
+### Symbol Property
+
+Gets the text run that is used as collapsing symbol.
+
+```csharp
+public Avalonia.Media.TextFormatting.TextRun Symbol { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-abfb22c286"></span>
+
+### Width Property
+
+Gets the width in which the collapsible range is constrained to.
+
+```csharp
+public double Width { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

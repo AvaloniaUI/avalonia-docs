@@ -1,0 +1,169 @@
+---
+title: 'TemplatePartAttribute'
+hide_title: true
+slug: '/avalonia/controls/metadata/templatepartattribute'
+uid: 'Avalonia.Controls.Metadata.TemplatePartAttribute'
+commentId: 'T:Avalonia.Controls.Metadata.TemplatePartAttribute'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Metadata'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">TemplatePartAttribute Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Metadata</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Controls/Metadata/TemplatePartAttribute.cs">TemplatePartAttribute.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Defines a control template part referenced by name in code.
+Template part names should begin with the "PART_" prefix.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class TemplatePartAttribute
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Attribute <span className="apiref-page__relation-separator">-&gt;</span> TemplatePartAttribute
+</div>
+</div>
+
+## Remarks
+
+Style authors should be able to identify the part type used for styling the specific control.
+The part is usually required in the style and should have a specific predefined name.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [TemplatePartAttribute (2 overloads)](#uid-3acab673b9) | Initializes a new instance of the [Avalonia.Controls.Metadata.TemplatePartAttribute](xref:Avalonia.Controls.Metadata.TemplatePartAttribute) class. |
+
+<span id="uid-3acab673b9"></span>
+
+### TemplatePartAttribute overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4623221f49"></span>
+
+#### TemplatePartAttribute Constructor
+
+Initializes a new instance of the [Avalonia.Controls.Metadata.TemplatePartAttribute](xref:Avalonia.Controls.Metadata.TemplatePartAttribute) class.
+
+```csharp
+public TemplatePartAttribute()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3d37936951"></span>
+
+#### TemplatePartAttribute Constructor
+
+Initializes a new instance of the [Avalonia.Controls.Metadata.TemplatePartAttribute](xref:Avalonia.Controls.Metadata.TemplatePartAttribute) class.
+
+```csharp
+public TemplatePartAttribute(string name, Type type)
+```
+
+##### Parameters
+
+`name` string
+
+The part name used by the class to identify a required element in the style.
+
+
+`type` Type
+
+The type of the element that should be used as a part with name.
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [IsRequired](#uid-4bc06cbdfb) | Gets or sets a value indicating whether the template part is mandatory to be present in the template. |
+| [Name](#uid-272c4e6c12) | Gets or sets the part name used by the class to identify a required element in the style. Template part names should begin with the "PART_" prefix. |
+| [Type](#uid-d04dc1a8d1) | Gets or sets the type of the element that should be used as a part with name specified in [Avalonia.Controls.Metadata.TemplatePartAttribute.Name](xref:Avalonia.Controls.Metadata.TemplatePartAttribute.Name). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4bc06cbdfb"></span>
+
+### IsRequired Property
+
+Gets or sets a value indicating whether the template part is mandatory to be present in the template.
+
+```csharp
+public bool IsRequired { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-272c4e6c12"></span>
+
+### Name Property
+
+Gets or sets the part name used by the class to identify a required element in the style.
+Template part names should begin with the "PART_" prefix.
+
+```csharp
+public string Name { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d04dc1a8d1"></span>
+
+### Type Property
+
+Gets or sets the type of the element that should be used as a part with name specified
+in [Avalonia.Controls.Metadata.TemplatePartAttribute.Name](xref:Avalonia.Controls.Metadata.TemplatePartAttribute.Name).
+
+```csharp
+public Type Type { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

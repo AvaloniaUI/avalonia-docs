@@ -1,0 +1,382 @@
+---
+title: 'AvaloniaDictionary<TKey, TValue>'
+hide_title: true
+slug: '/avalonia/collections/avaloniadictionary-2'
+uid: 'Avalonia.Collections.AvaloniaDictionary`2'
+commentId: 'T:Avalonia.Collections.AvaloniaDictionary`2'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Collections'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">AvaloniaDictionary&lt;TKey, TValue&gt; Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Collections</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Collections/AvaloniaDictionary.cs">AvaloniaDictionary.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A notifying dictionary.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class AvaloniaDictionary<TKey, TValue>
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> AvaloniaDictionary&lt;TKey, TValue&gt;
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IAvaloniaDictionary&lt;,&lt;T&gt;&gt;, IAvaloniaReadOnlyDictionary&lt;,&lt;T&gt;&gt;, ICollection&lt;KeyValuePair&lt;,&lt;T&gt;&gt;&gt;, IDictionary&lt;,&lt;T&gt;&gt;, IEnumerable&lt;KeyValuePair&lt;,&lt;T&gt;&gt;&gt;, IReadOnlyCollection&lt;KeyValuePair&lt;,&lt;T&gt;&gt;&gt;, IReadOnlyDictionary&lt;,&lt;T&gt;&gt;, ICollection, IDictionary, IEnumerable, INotifyCollectionChanged, INotifyPropertyChanged
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [AvaloniaDictionary&lt;TKey, TValue&gt; (3 overloads)](#uid-51b75506c1) | Initializes a new instance of the [Avalonia.Collections.AvaloniaDictionary&lt;T1, T2&gt;](xref:Avalonia.Collections.AvaloniaDictionary%602) class. |
+
+<span id="uid-51b75506c1"></span>
+
+### AvaloniaDictionary&lt;TKey, TValue&gt; overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1cc319448d"></span>
+
+#### AvaloniaDictionary&lt;TKey, TValue&gt; Constructor
+
+Initializes a new instance of the [Avalonia.Collections.AvaloniaDictionary&lt;T1, T2&gt;](xref:Avalonia.Collections.AvaloniaDictionary%602) class.
+
+```csharp
+public AvaloniaDictionary<TKey, TValue>()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-367f97051d"></span>
+
+#### AvaloniaDictionary&lt;TKey, TValue&gt; Constructor
+
+```csharp
+public AvaloniaDictionary<TKey, TValue>(System.Collections.Generic.IDictionary<TKey, TValue> dictionary, System.Collections.Generic.IEqualityComparer<TKey> comparer)
+```
+
+##### Parameters
+
+`dictionary` System.Collections.Generic.IDictionary&lt;TKey, TValue&gt;
+
+
+`comparer` System.Collections.Generic.IEqualityComparer&lt;TKey&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-cd9463fc7c"></span>
+
+#### AvaloniaDictionary&lt;TKey, TValue&gt; Constructor
+
+Initializes a new instance of the [Avalonia.Collections.AvaloniaDictionary&lt;T1, T2&gt;](xref:Avalonia.Collections.AvaloniaDictionary%602) class.
+
+```csharp
+public AvaloniaDictionary<TKey, TValue>(int capacity)
+```
+
+##### Parameters
+
+`capacity` int
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Add](#uid-44bd517dbb) | No summary available. |
+| [Clear](#uid-0dd8c4fd5d) | No summary available. |
+| [ContainsKey](#uid-16ed1ff6e4) | No summary available. |
+| [CopyTo](#uid-d6c8a242ea) | No summary available. |
+| [GetEnumerator](#uid-2e7b7dae3f) | No summary available. |
+| [Remove](#uid-c71324d6a6) | No summary available. |
+| [TryGetValue](#uid-c92bdca6aa) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-44bd517dbb"></span>
+
+### Add Method
+
+```csharp
+public void Add(TKey key, TValue value)
+```
+
+#### Parameters
+
+`key` TKey
+
+
+`value` TValue
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0dd8c4fd5d"></span>
+
+### Clear Method
+
+```csharp
+public void Clear()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-16ed1ff6e4"></span>
+
+### ContainsKey Method
+
+```csharp
+public bool ContainsKey(TKey key)
+```
+
+#### Parameters
+
+`key` TKey
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d6c8a242ea"></span>
+
+### CopyTo Method
+
+```csharp
+public void CopyTo(System.Collections.Generic.KeyValuePair<TKey, TValue>[] array, int arrayIndex)
+```
+
+#### Parameters
+
+`array` System.Collections.Generic.KeyValuePair&lt;TKey, TValue&gt;[]
+
+
+`arrayIndex` int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2e7b7dae3f"></span>
+
+### GetEnumerator Method
+
+```csharp
+public System.Collections.Generic.IEnumerator<System.Collections.Generic.KeyValuePair<TKey,TValue>> GetEnumerator()
+```
+
+#### Returns
+
+System.Collections.Generic.IEnumerator&lt;System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c71324d6a6"></span>
+
+### Remove Method
+
+```csharp
+public bool Remove(TKey key)
+```
+
+#### Parameters
+
+`key` TKey
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c92bdca6aa"></span>
+
+### TryGetValue Method
+
+```csharp
+public bool TryGetValue(TKey key, TValue& value)
+```
+
+#### Parameters
+
+`key` TKey
+
+
+`value` TValue&amp;
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Count](#uid-7e63c20e1f) | No summary available. |
+| [IsReadOnly](#uid-847995fe8f) | No summary available. |
+| [Item](#uid-a05920a999) | No summary available. |
+| [Keys](#uid-00ab8285da) | No summary available. |
+| [Values](#uid-8511f15050) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7e63c20e1f"></span>
+
+### Count Property
+
+```csharp
+public int Count { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-847995fe8f"></span>
+
+### IsReadOnly Property
+
+```csharp
+public bool IsReadOnly { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a05920a999"></span>
+
+### Item Property
+
+```csharp
+public TValue Item { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-00ab8285da"></span>
+
+### Keys Property
+
+```csharp
+public System.Collections.Generic.ICollection<TKey> Keys { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8511f15050"></span>
+
+### Values Property
+
+```csharp
+public System.Collections.Generic.ICollection<TValue> Values { get; set; }
+```
+
+</section>
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [CollectionChanged](#uid-f3b443a858) | Occurs when the collection changes. |
+| [PropertyChanged](#uid-c1b3acf80c) | Raised when a property on the collection changes. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f3b443a858"></span>
+
+### CollectionChanged Event
+
+Occurs when the collection changes.
+
+```csharp
+public event System.Collections.Specialized.NotifyCollectionChangedEventHandler CollectionChanged
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c1b3acf80c"></span>
+
+### PropertyChanged Event
+
+Raised when a property on the collection changes.
+
+```csharp
+public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged
+```
+
+</section>
+
+</ApiRefPage>
+

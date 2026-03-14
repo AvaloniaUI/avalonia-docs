@@ -1,0 +1,507 @@
+---
+title: 'CompositionPropertySet'
+hide_title: true
+slug: '/avalonia/rendering/composition/compositionpropertyset'
+uid: 'Avalonia.Rendering.Composition.CompositionPropertySet'
+commentId: 'T:Avalonia.Rendering.Composition.CompositionPropertySet'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Rendering.Composition'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">CompositionPropertySet Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Rendering.Composition</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Rendering/Composition/CompositionPropertySet.cs">CompositionPropertySet.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+[Avalonia.Rendering.Composition.CompositionPropertySet](xref:Avalonia.Rendering.Composition.CompositionPropertySet)s are [Avalonia.Rendering.Composition.CompositionObject](xref:Avalonia.Rendering.Composition.CompositionObject)s that allow storage of key values pairs
+that can be shared across the application and are not tied to the lifetime of another composition object.
+[Avalonia.Rendering.Composition.CompositionPropertySet](xref:Avalonia.Rendering.Composition.CompositionPropertySet)s are most commonly used with animations, where they maintain key-value pairs
+that are referenced to drive portions of composition animations. [Avalonia.Rendering.Composition.CompositionPropertySet](xref:Avalonia.Rendering.Composition.CompositionPropertySet)s
+provide the ability to insert key-value pairs or retrieve a value for a given key.
+[Avalonia.Rendering.Composition.CompositionPropertySet](xref:Avalonia.Rendering.Composition.CompositionPropertySet) does not support a delete function – ensure you use [Avalonia.Rendering.Composition.CompositionPropertySet](xref:Avalonia.Rendering.Composition.CompositionPropertySet)
+to store values that will be shared across the application.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class CompositionPropertySet
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="compositionobject">CompositionObject</a> <span className="apiref-page__relation-separator">-&gt;</span> CompositionPropertySet
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [InsertBoolean](#uid-b49484b88b) | No summary available. |
+| [InsertColor](#uid-b81a565f2e) | No summary available. |
+| [InsertMatrix3x2](#uid-9f10c005ee) | No summary available. |
+| [InsertMatrix4x4](#uid-e81610c741) | No summary available. |
+| [InsertQuaternion](#uid-68f3a3b336) | No summary available. |
+| [InsertScalar](#uid-73172dde86) | No summary available. |
+| [InsertVector2](#uid-2a399bd65d) | No summary available. |
+| [InsertVector3](#uid-c79eb83025) | No summary available. |
+| [InsertVector4](#uid-dbbfff0d8c) | No summary available. |
+| [TryGetBoolean](#uid-35a5bf41c6) | No summary available. |
+| [TryGetColor](#uid-dfe711f1e8) | No summary available. |
+| [TryGetMatrix3x2](#uid-7862025530) | No summary available. |
+| [TryGetMatrix4x4](#uid-498c352b46) | No summary available. |
+| [TryGetQuaternion](#uid-5ca5dc503f) | No summary available. |
+| [TryGetScalar](#uid-fff8ed75dc) | No summary available. |
+| [TryGetVector2](#uid-c3f177b5d5) | No summary available. |
+| [TryGetVector3](#uid-aede08e71a) | No summary available. |
+| [TryGetVector4](#uid-c5319b1407) | No summary available. |
+| [StartAnimation](compositionobject.mdx#uid-4d2f25fec7) | Connects an animation with the specified property of the object and starts the animation. Inherited from [CompositionObject](compositionobject.mdx). |
+| [StartAnimationGroup](compositionobject.mdx#uid-4846f860a0) | Starts an animation group. The StartAnimationGroup method on [CompositionObject](xref:Avalonia.Rendering.Composition.CompositionObject) lets you start [CompositionAnimationGroup](xref:Avalonia.Rendering.Composition.Animations.CompositionAnimationGroup). All the animations in the group will be started at the same time on the object. Inherited from [CompositionObject](compositionobject.mdx). |
+| [StopAnimation](compositionobject.mdx#uid-01077c2b21) | Disconnects an animation from the specified property and stops the animation. Inherited from [CompositionObject](compositionobject.mdx). |
+| [StopAnimationGroup](compositionobject.mdx#uid-81dbd02845) | Stops an animation group. Inherited from [CompositionObject](compositionobject.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b49484b88b"></span>
+
+### InsertBoolean Method
+
+```csharp
+public void InsertBoolean(string propertyName, bool value)
+```
+
+#### Parameters
+
+`propertyName` string
+
+
+`value` bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b81a565f2e"></span>
+
+### InsertColor Method
+
+```csharp
+public void InsertColor(string propertyName, Avalonia.Media.Color value)
+```
+
+#### Parameters
+
+`propertyName` string
+
+
+`value` [Avalonia.Media.Color](xref:Avalonia.Media.Color)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9f10c005ee"></span>
+
+### InsertMatrix3x2 Method
+
+```csharp
+public void InsertMatrix3x2(string propertyName, System.Numerics.Matrix3x2 value)
+```
+
+#### Parameters
+
+`propertyName` string
+
+
+`value` System.Numerics.Matrix3x2
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e81610c741"></span>
+
+### InsertMatrix4x4 Method
+
+```csharp
+public void InsertMatrix4x4(string propertyName, System.Numerics.Matrix4x4 value)
+```
+
+#### Parameters
+
+`propertyName` string
+
+
+`value` System.Numerics.Matrix4x4
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-68f3a3b336"></span>
+
+### InsertQuaternion Method
+
+```csharp
+public void InsertQuaternion(string propertyName, System.Numerics.Quaternion value)
+```
+
+#### Parameters
+
+`propertyName` string
+
+
+`value` System.Numerics.Quaternion
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-73172dde86"></span>
+
+### InsertScalar Method
+
+```csharp
+public void InsertScalar(string propertyName, float value)
+```
+
+#### Parameters
+
+`propertyName` string
+
+
+`value` float
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2a399bd65d"></span>
+
+### InsertVector2 Method
+
+```csharp
+public void InsertVector2(string propertyName, System.Numerics.Vector2 value)
+```
+
+#### Parameters
+
+`propertyName` string
+
+
+`value` System.Numerics.Vector2
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c79eb83025"></span>
+
+### InsertVector3 Method
+
+```csharp
+public void InsertVector3(string propertyName, System.Numerics.Vector3 value)
+```
+
+#### Parameters
+
+`propertyName` string
+
+
+`value` System.Numerics.Vector3
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-dbbfff0d8c"></span>
+
+### InsertVector4 Method
+
+```csharp
+public void InsertVector4(string propertyName, System.Numerics.Vector4 value)
+```
+
+#### Parameters
+
+`propertyName` string
+
+
+`value` System.Numerics.Vector4
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-35a5bf41c6"></span>
+
+### TryGetBoolean Method
+
+```csharp
+public Avalonia.Rendering.Composition.CompositionGetValueStatus TryGetBoolean(string propertyName, bool& value)
+```
+
+#### Parameters
+
+`propertyName` string
+
+
+`value` bool&amp;
+
+
+#### Returns
+
+[Avalonia.Rendering.Composition.CompositionGetValueStatus](xref:Avalonia.Rendering.Composition.CompositionGetValueStatus)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-dfe711f1e8"></span>
+
+### TryGetColor Method
+
+```csharp
+public Avalonia.Rendering.Composition.CompositionGetValueStatus TryGetColor(string propertyName, Avalonia.Media.Color& value)
+```
+
+#### Parameters
+
+`propertyName` string
+
+
+`value` [Avalonia.Media.Color](xref:Avalonia.Media.Color)&amp;
+
+
+#### Returns
+
+[Avalonia.Rendering.Composition.CompositionGetValueStatus](xref:Avalonia.Rendering.Composition.CompositionGetValueStatus)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7862025530"></span>
+
+### TryGetMatrix3x2 Method
+
+```csharp
+public Avalonia.Rendering.Composition.CompositionGetValueStatus TryGetMatrix3x2(string propertyName, System.Numerics.Matrix3x2& value)
+```
+
+#### Parameters
+
+`propertyName` string
+
+
+`value` System.Numerics.Matrix3x2&amp;
+
+
+#### Returns
+
+[Avalonia.Rendering.Composition.CompositionGetValueStatus](xref:Avalonia.Rendering.Composition.CompositionGetValueStatus)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-498c352b46"></span>
+
+### TryGetMatrix4x4 Method
+
+```csharp
+public Avalonia.Rendering.Composition.CompositionGetValueStatus TryGetMatrix4x4(string propertyName, System.Numerics.Matrix4x4& value)
+```
+
+#### Parameters
+
+`propertyName` string
+
+
+`value` System.Numerics.Matrix4x4&amp;
+
+
+#### Returns
+
+[Avalonia.Rendering.Composition.CompositionGetValueStatus](xref:Avalonia.Rendering.Composition.CompositionGetValueStatus)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5ca5dc503f"></span>
+
+### TryGetQuaternion Method
+
+```csharp
+public Avalonia.Rendering.Composition.CompositionGetValueStatus TryGetQuaternion(string propertyName, System.Numerics.Quaternion& value)
+```
+
+#### Parameters
+
+`propertyName` string
+
+
+`value` System.Numerics.Quaternion&amp;
+
+
+#### Returns
+
+[Avalonia.Rendering.Composition.CompositionGetValueStatus](xref:Avalonia.Rendering.Composition.CompositionGetValueStatus)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-fff8ed75dc"></span>
+
+### TryGetScalar Method
+
+```csharp
+public Avalonia.Rendering.Composition.CompositionGetValueStatus TryGetScalar(string propertyName, float& value)
+```
+
+#### Parameters
+
+`propertyName` string
+
+
+`value` float&amp;
+
+
+#### Returns
+
+[Avalonia.Rendering.Composition.CompositionGetValueStatus](xref:Avalonia.Rendering.Composition.CompositionGetValueStatus)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c3f177b5d5"></span>
+
+### TryGetVector2 Method
+
+```csharp
+public Avalonia.Rendering.Composition.CompositionGetValueStatus TryGetVector2(string propertyName, System.Numerics.Vector2& value)
+```
+
+#### Parameters
+
+`propertyName` string
+
+
+`value` System.Numerics.Vector2&amp;
+
+
+#### Returns
+
+[Avalonia.Rendering.Composition.CompositionGetValueStatus](xref:Avalonia.Rendering.Composition.CompositionGetValueStatus)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-aede08e71a"></span>
+
+### TryGetVector3 Method
+
+```csharp
+public Avalonia.Rendering.Composition.CompositionGetValueStatus TryGetVector3(string propertyName, System.Numerics.Vector3& value)
+```
+
+#### Parameters
+
+`propertyName` string
+
+
+`value` System.Numerics.Vector3&amp;
+
+
+#### Returns
+
+[Avalonia.Rendering.Composition.CompositionGetValueStatus](xref:Avalonia.Rendering.Composition.CompositionGetValueStatus)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c5319b1407"></span>
+
+### TryGetVector4 Method
+
+```csharp
+public Avalonia.Rendering.Composition.CompositionGetValueStatus TryGetVector4(string propertyName, System.Numerics.Vector4& value)
+```
+
+#### Parameters
+
+`propertyName` string
+
+
+`value` System.Numerics.Vector4&amp;
+
+
+#### Returns
+
+[Avalonia.Rendering.Composition.CompositionGetValueStatus](xref:Avalonia.Rendering.Composition.CompositionGetValueStatus)
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Compositor](compositionobject.mdx#uid-bd6bbc1391) | The associated Compositor Inherited from [CompositionObject](compositionobject.mdx). |
+| [ImplicitAnimations](compositionobject.mdx#uid-3929e9ea34) | The collection of implicit animations attached to this object. Inherited from [CompositionObject](compositionobject.mdx). |
+| [IsDisposed](compositionobject.mdx#uid-e01437c946) | Inherited from [CompositionObject](compositionobject.mdx). |
+
+</ApiRefPage>
+

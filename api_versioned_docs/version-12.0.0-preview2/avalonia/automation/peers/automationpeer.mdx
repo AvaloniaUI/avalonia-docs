@@ -1,0 +1,838 @@
+---
+title: 'AutomationPeer'
+hide_title: true
+slug: '/avalonia/automation/peers/automationpeer'
+uid: 'Avalonia.Automation.Peers.AutomationPeer'
+commentId: 'T:Avalonia.Automation.Peers.AutomationPeer'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Automation.Peers'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">AutomationPeer Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Automation.Peers</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Controls/Automation/Peers/AutomationPeer.cs">AutomationPeer.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Provides a base class that exposes an element to UI Automation.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class AutomationPeer
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> AutomationPeer
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Derived types:</span> <a href="controlautomationpeer">ControlAutomationPeer</a>, <a href="unrealizedelementautomationpeer">UnrealizedElementAutomationPeer</a>
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [BringIntoView](#uid-0ce0c26ad7) | Attempts to bring the element associated with the automation peer into view. |
+| [GetAcceleratorKey](#uid-b27b870e23) | Gets the accelerator key combinations for the element that is associated with the UI Automation peer. |
+| [GetAccessKey](#uid-0c0606dfaf) | Gets the access key for the element that is associated with the automation peer. |
+| [GetAutomationControlType](#uid-f7daf3a583) | Gets the control type for the element that is associated with the UI Automation peer. |
+| [GetAutomationId](#uid-ec722c2168) | Gets the automation ID of the element that is associated with the UI Automation peer. |
+| [GetBoundingRectangle](#uid-f04c4b54df) | Gets the bounding rectangle of the element that is associated with the automation peer in top-level coordinates. |
+| [GetChildren](#uid-1974fa1efa) | Gets the child automation peers. |
+| [GetClassName](#uid-ee7505094d) | Gets a string that describes the class of the element. |
+| [GetHeadingLevel](#uid-52680c5dea) | Gets the heading level that is associated with this automation peer. |
+| [GetHelpText](#uid-3613ae2a30) | Gets text that provides help for the element that is associated with this automation peer. |
+| [GetItemStatus](#uid-798f219773) | Gets the item status that is associated with this automation peer. |
+| [GetItemType](#uid-d858421abf) | Gets the item type that is associated with this automation peer. |
+| [GetLabeledBy](#uid-98bd49471d) | Gets the automation peer for the label that is targeted to the element. |
+| [GetLandmarkType](#uid-57bba04eba) | Gets the control type for the element that is associated with the UI Automation peer. |
+| [GetLiveSetting](#uid-75007f578a) | Gets the current live setting that is associated with this this automation peer. |
+| [GetLocalizedControlType](#uid-262763e857) | Gets a human-readable localized string that represents the type of the control that is associated with this automation peer. |
+| [GetName](#uid-ac6dd5a547) | Gets text that describes the element that is associated with this automation peer. |
+| [GetParent](#uid-947969c77f) | Gets the [Avalonia.Automation.Peers.AutomationPeer](xref:Avalonia.Automation.Peers.AutomationPeer) that is the parent of this [Avalonia.Automation.Peers.AutomationPeer](xref:Avalonia.Automation.Peers.AutomationPeer). |
+| [GetPlaceholderText](#uid-1ced74e763) | Gets text that provides a placeholder for the element that is associated with this automation peer. |
+| [GetProvider](#uid-ee05fc8d1e) | No summary available. |
+| [HasKeyboardFocus](#uid-5f0d3a3d10) | Gets a value that indicates whether the element that is associated with this automation peer currently has keyboard focus. |
+| [IsContentElement](#uid-5202d69eb1) | Gets a value that indicates whether the element that is associated with this automation peer contains data that is presented to the user. |
+| [IsControlElement](#uid-665cdd1957) | Gets a value that indicates whether the element is understood by the user as interactive or as contributing to the logical structure of the control in the GUI. |
+| [IsEnabled](#uid-cc55d0a61a) | Gets a value indicating whether the control is enabled for user interaction. |
+| [IsKeyboardFocusable](#uid-c9dfcdf842) | Gets a value that indicates whether the element can accept keyboard focus. |
+| [IsOffscreen](#uid-72084dcbfb) | Gets a value that indicates whether an element is off the screen. |
+| [RaisePropertyChangedEvent](#uid-ffcc0e3d63) | Raises an event to notify the automation client of a changed property value. |
+| [SetFocus](#uid-6a8d233e48) | Sets the keyboard focus on the element that is associated with this automation peer. |
+| [ShowContextMenu](#uid-8bfe04d25b) | Shows the context menu for the element that is associated with this automation peer. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0ce0c26ad7"></span>
+
+### BringIntoView Method
+
+Attempts to bring the element associated with the automation peer into view.
+
+```csharp
+public void BringIntoView()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b27b870e23"></span>
+
+### GetAcceleratorKey Method
+
+Gets the accelerator key combinations for the element that is associated with the UI
+Automation peer.
+
+```csharp
+public string GetAcceleratorKey()
+```
+
+#### Returns
+
+string
+
+
+#### Remarks
+
+An accelerator key (sometimes called a shortcut key) exposes a key combination for
+which can be used to invoke an action, for example, an "Open..." menu item on Windows
+often has an accelerator key of "Ctrl+O".
+
+- Windows`UIA_AcceleratorKeyPropertyId`
+- macOSNo mapping
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0c0606dfaf"></span>
+
+### GetAccessKey Method
+
+Gets the access key for the element that is associated with the automation peer.
+
+```csharp
+public string GetAccessKey()
+```
+
+#### Returns
+
+string
+
+
+#### Remarks
+
+An access key (sometimes called a mnemonic) is a character in the text of a menu, menu
+item, or label of a control such as a button, that activates the associated function.
+For example, to open the File menu, for which the access key is typically F, the user
+would press ALT+F.
+
+- Windows`UIA_AccessKeyPropertyId`
+- macOSNo mapping
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f7daf3a583"></span>
+
+### GetAutomationControlType Method
+
+Gets the control type for the element that is associated with the UI Automation peer.
+
+```csharp
+public Avalonia.Automation.Peers.AutomationControlType GetAutomationControlType()
+```
+
+#### Returns
+
+[Avalonia.Automation.Peers.AutomationControlType](xref:Avalonia.Automation.Peers.AutomationControlType)
+
+
+#### Remarks
+
+Gets the type of the element.
+
+- Windows`UIA_ControlTypePropertyId`
+- macOS`NSAccessibilityProtocol.accessibilityRole`
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ec722c2168"></span>
+
+### GetAutomationId Method
+
+Gets the automation ID of the element that is associated with the UI Automation peer.
+
+```csharp
+public string GetAutomationId()
+```
+
+#### Returns
+
+string
+
+
+#### Remarks
+
+- Windows`UIA_AutomationIdPropertyId`
+- macOS`NSAccessibilityProtocol.accessibilityIdentifier`
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f04c4b54df"></span>
+
+### GetBoundingRectangle Method
+
+Gets the bounding rectangle of the element that is associated with the automation peer
+in top-level coordinates.
+
+```csharp
+public Avalonia.Rect GetBoundingRectangle()
+```
+
+#### Returns
+
+[Avalonia.Rect](xref:Avalonia.Rect)
+
+
+#### Remarks
+
+- Windows`IRawElementProviderFragment.get_BoundingRectangle`
+- macOS`NSAccessibilityProtocol.accessibilityFrame`
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1974fa1efa"></span>
+
+### GetChildren Method
+
+Gets the child automation peers.
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<Avalonia.Automation.Peers.AutomationPeer> GetChildren()
+```
+
+#### Returns
+
+System.Collections.Generic.IReadOnlyList&lt;[Avalonia.Automation.Peers.AutomationPeer](xref:Avalonia.Automation.Peers.AutomationPeer)&gt;
+
+
+#### Remarks
+
+- Windows`IRawElementProviderFragment.Navigate`
+- macOS`NSAccessibilityProtocol.accessibilityChildren`
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ee7505094d"></span>
+
+### GetClassName Method
+
+Gets a string that describes the class of the element.
+
+```csharp
+public string GetClassName()
+```
+
+#### Returns
+
+string
+
+
+#### Remarks
+
+A string containing the class name for the automation element as assigned by the
+control developer. This is often the C# class name of the control.
+
+- Windows`UIA_ClassNamePropertyId`
+- macOSNo mapping.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-52680c5dea"></span>
+
+### GetHeadingLevel Method
+
+Gets the heading level that is associated with this automation peer.
+
+```csharp
+public int GetHeadingLevel()
+```
+
+#### Returns
+
+int
+
+
+#### Remarks
+
+- Windows`UIA_HeadingLevelPropertyId`
+- macOS`NSAccessibilityProtocol.accessibilityValue`
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3613ae2a30"></span>
+
+### GetHelpText Method
+
+Gets text that provides help for the element that is associated with this automation peer.
+
+```csharp
+public string GetHelpText()
+```
+
+#### Returns
+
+string
+
+
+#### Remarks
+
+- Windows`UIA_HelpTextPropertyId`
+- macOS`NSAccessibilityProtocol.accessibilityHelp`
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-798f219773"></span>
+
+### GetItemStatus Method
+
+Gets the item status that is associated with this automation peer.
+
+```csharp
+public string GetItemStatus()
+```
+
+#### Returns
+
+string
+
+
+#### Remarks
+
+- Windows`UIA_ItemStatusPropertyId`
+- macOSNo mapping.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d858421abf"></span>
+
+### GetItemType Method
+
+Gets the item type that is associated with this automation peer.
+
+```csharp
+public string GetItemType()
+```
+
+#### Returns
+
+string
+
+
+#### Remarks
+
+- Windows`UIA_ItemTypePropertyId`
+- macOSNo mapping.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-98bd49471d"></span>
+
+### GetLabeledBy Method
+
+Gets the automation peer for the label that is targeted to the element.
+
+```csharp
+public Avalonia.Automation.Peers.AutomationPeer GetLabeledBy()
+```
+
+#### Returns
+
+[Avalonia.Automation.Peers.AutomationPeer](xref:Avalonia.Automation.Peers.AutomationPeer)
+
+
+#### Remarks
+
+Identifies an automation peer representing an element which that contains the text
+label for this element.
+
+- Windows`UIA_LabeledByPropertyId` (not yet implemented)
+- macOS`NSAccessibilityProtocol.accessibilityLabelUIElements` (not yet implemented)
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-57bba04eba"></span>
+
+### GetLandmarkType Method
+
+Gets the control type for the element that is associated with the UI Automation peer.
+
+```csharp
+public Nullable<Avalonia.Automation.Peers.AutomationLandmarkType> GetLandmarkType()
+```
+
+#### Returns
+
+Nullable&lt;[Avalonia.Automation.Peers.AutomationLandmarkType](xref:Avalonia.Automation.Peers.AutomationLandmarkType)&gt;
+
+
+#### Remarks
+
+Gets the type of the element.
+
+- Windows`UIA_LandmarkTypePropertyId`, `UIA_LocalizedLandmarkTypePropertyId`
+- macOS`NSAccessibilityProtocol.accessibilityRole`, `NSAccessibilityProtocol.accessibilitySubrole`
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-75007f578a"></span>
+
+### GetLiveSetting Method
+
+Gets the current live setting that is associated with this this automation peer.
+
+```csharp
+public Avalonia.Automation.AutomationLiveSetting GetLiveSetting()
+```
+
+#### Returns
+
+[Avalonia.Automation.AutomationLiveSetting](xref:Avalonia.Automation.AutomationLiveSetting)
+
+The live setting to use for automation.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-262763e857"></span>
+
+### GetLocalizedControlType Method
+
+Gets a human-readable localized string that represents the type of the control that is
+associated with this automation peer.
+
+```csharp
+public string GetLocalizedControlType()
+```
+
+#### Returns
+
+string
+
+
+#### Remarks
+
+- Windows`UIA_LocalizedControlTypePropertyId` (not yet implemented)
+- macOSNo mapping.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ac6dd5a547"></span>
+
+### GetName Method
+
+Gets text that describes the element that is associated with this automation peer.
+
+```csharp
+public string GetName()
+```
+
+#### Returns
+
+string
+
+
+#### Remarks
+
+- Windows`UIA_NamePropertyId` (not yet implemented)
+- macOS When the control type is [Avalonia.Automation.Peers.AutomationControlType.Text](xref:Avalonia.Automation.Peers.AutomationControlType.Text), this value is exposed by both `NSAccessibilityProtocol.accessibilityTitle` and `NSAccessibilityProtocol.accessibilityValue` .
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-947969c77f"></span>
+
+### GetParent Method
+
+Gets the [Avalonia.Automation.Peers.AutomationPeer](xref:Avalonia.Automation.Peers.AutomationPeer) that is the parent of this [Avalonia.Automation.Peers.AutomationPeer](xref:Avalonia.Automation.Peers.AutomationPeer).
+
+```csharp
+public Avalonia.Automation.Peers.AutomationPeer GetParent()
+```
+
+#### Returns
+
+[Avalonia.Automation.Peers.AutomationPeer](xref:Avalonia.Automation.Peers.AutomationPeer)
+
+
+#### Remarks
+
+- Windows`IRawElementProviderFragment.Navigate`
+- macOS`NSAccessibilityProtocol.accessibilityParent`
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1ced74e763"></span>
+
+### GetPlaceholderText Method
+
+Gets text that provides a placeholder for the element that is associated with this automation peer.
+
+```csharp
+public string GetPlaceholderText()
+```
+
+#### Returns
+
+string
+
+
+#### Remarks
+
+- WindowsNo mapping.
+- macOS`NSAccessibilityProtocol.accessibilityPlaceholderValue`
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ee05fc8d1e"></span>
+
+### GetProvider Method
+
+```csharp
+public T GetProvider<T>()
+```
+
+#### Type Parameters
+
+`T`
+
+
+#### Returns
+
+T
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5f0d3a3d10"></span>
+
+### HasKeyboardFocus Method
+
+Gets a value that indicates whether the element that is associated with this automation
+peer currently has keyboard focus.
+
+```csharp
+public bool HasKeyboardFocus()
+```
+
+#### Returns
+
+bool
+
+
+#### Remarks
+
+- Windows`UIA_HasKeyboardFocusPropertyId`
+- macOS`NSAccessibilityProtocol.isAccessibilityFocused`
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5202d69eb1"></span>
+
+### IsContentElement Method
+
+Gets a value that indicates whether the element that is associated with this automation
+peer contains data that is presented to the user.
+
+```csharp
+public bool IsContentElement()
+```
+
+#### Returns
+
+bool
+
+
+#### Remarks
+
+- Windows`UIA_IsContentElementPropertyId`
+- macOSNo mapping.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-665cdd1957"></span>
+
+### IsControlElement Method
+
+Gets a value that indicates whether the element is understood by the user as
+interactive or as contributing to the logical structure of the control in the GUI.
+
+```csharp
+public bool IsControlElement()
+```
+
+#### Returns
+
+bool
+
+
+#### Remarks
+
+- Windows`UIA_IsControlElementPropertyId`
+- macOS`NSAccessibilityProtocol.isAccessibilityElement`
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-cc55d0a61a"></span>
+
+### IsEnabled Method
+
+Gets a value indicating whether the control is enabled for user interaction.
+
+```csharp
+public bool IsEnabled()
+```
+
+#### Returns
+
+bool
+
+
+#### Remarks
+
+- Windows`UIA_IsEnabledPropertyId`
+- macOS`NSAccessibilityProtocol.isAccessibilityEnabled`
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c9dfcdf842"></span>
+
+### IsKeyboardFocusable Method
+
+Gets a value that indicates whether the element can accept keyboard focus.
+
+```csharp
+public bool IsKeyboardFocusable()
+```
+
+#### Returns
+
+bool
+
+
+#### Remarks
+
+- Windows`UIA_IsKeyboardFocusablePropertyId`
+- macOSNo mapping.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-72084dcbfb"></span>
+
+### IsOffscreen Method
+
+Gets a value that indicates whether an element is off the screen.
+
+```csharp
+public bool IsOffscreen()
+```
+
+#### Returns
+
+bool
+
+
+#### Remarks
+
+This property does not indicate whether the element is visible. In some circumstances,
+an element is on the screen but is still not visible. For example, if the element is
+on the screen but obscured by other elements, it might not be visible. In this case,
+the method returns false.
+
+- Windows`UIA_IsOffscreenPropertyId`
+- macOSNo mapping.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ffcc0e3d63"></span>
+
+### RaisePropertyChangedEvent Method
+
+Raises an event to notify the automation client of a changed property value.
+
+```csharp
+public void RaisePropertyChangedEvent(Avalonia.Automation.AutomationProperty property, object oldValue, object newValue)
+```
+
+#### Parameters
+
+`property` [Avalonia.Automation.AutomationProperty](xref:Avalonia.Automation.AutomationProperty)
+
+The property that changed.
+
+
+`oldValue` object
+
+The previous value of the property.
+
+
+`newValue` object
+
+The new value of the property.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6a8d233e48"></span>
+
+### SetFocus Method
+
+Sets the keyboard focus on the element that is associated with this automation peer.
+
+```csharp
+public void SetFocus()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8bfe04d25b"></span>
+
+### ShowContextMenu Method
+
+Shows the context menu for the element that is associated with this automation peer.
+
+```csharp
+public bool ShowContextMenu()
+```
+
+#### Returns
+
+bool
+
+true if a context menu is present for the element; otherwise false.
+
+
+</section>
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [ChildrenChanged](#uid-d7771086b7) | Occurs when the children of the automation peer have changed. |
+| [PropertyChanged](#uid-7b87077a9e) | Occurs when a property value of the automation peer has changed. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d7771086b7"></span>
+
+### ChildrenChanged Event
+
+Occurs when the children of the automation peer have changed.
+
+```csharp
+public event EventHandler ChildrenChanged
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7b87077a9e"></span>
+
+### PropertyChanged Event
+
+Occurs when a property value of the automation peer has changed.
+
+```csharp
+public event EventHandler<Avalonia.Automation.AutomationPropertyChangedEventArgs> PropertyChanged
+```
+
+</section>
+
+</ApiRefPage>
+

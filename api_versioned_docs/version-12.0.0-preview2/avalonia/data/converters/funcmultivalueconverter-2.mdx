@@ -1,0 +1,146 @@
+---
+title: 'FuncMultiValueConverter<TIn, TOut>'
+hide_title: true
+slug: '/avalonia/data/converters/funcmultivalueconverter-2'
+uid: 'Avalonia.Data.Converters.FuncMultiValueConverter`2'
+commentId: 'T:Avalonia.Data.Converters.FuncMultiValueConverter`2'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Data.Converters'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">FuncMultiValueConverter&lt;TIn, TOut&gt; Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Data.Converters</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Data/Converters/FuncMultiValueConverter.cs">FuncMultiValueConverter.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A general purpose [Avalonia.Data.Converters.IValueConverter](xref:Avalonia.Data.Converters.IValueConverter) that uses a [Func&lt;T1, T2&gt;](xref:System.Func%602)
+to provide the converter logic.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class FuncMultiValueConverter<TIn, TOut>
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> FuncMultiValueConverter&lt;TIn, TOut&gt;
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="imultivalueconverter">IMultiValueConverter</a>
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [FuncMultiValueConverter&lt;TIn, TOut&gt; (2 overloads)](#uid-63c3f66937) | No summary available. |
+
+<span id="uid-63c3f66937"></span>
+
+### FuncMultiValueConverter&lt;TIn, TOut&gt; overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6e03fa0f18"></span>
+
+#### FuncMultiValueConverter&lt;TIn, TOut&gt; Constructor
+
+```csharp
+public FuncMultiValueConverter<TIn, TOut>(Func<System.Collections.Generic.IEnumerable<TIn>, TOut> convert)
+```
+
+##### Parameters
+
+`convert` Func&lt;System.Collections.Generic.IEnumerable&lt;TIn&gt;, TOut&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b81597975c"></span>
+
+#### FuncMultiValueConverter&lt;TIn, TOut&gt; Constructor
+
+```csharp
+public FuncMultiValueConverter<TIn, TOut>(Func<System.Collections.Generic.IReadOnlyList<TIn>, TOut> convert)
+```
+
+##### Parameters
+
+`convert` Func&lt;System.Collections.Generic.IReadOnlyList&lt;TIn&gt;, TOut&gt;
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Convert](#uid-3ae60970e3) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3ae60970e3"></span>
+
+### Convert Method
+
+```csharp
+public object Convert(System.Collections.Generic.IList<object> values, Type targetType, object parameter, System.Globalization.CultureInfo culture)
+```
+
+#### Parameters
+
+`values` System.Collections.Generic.IList&lt;object&gt;
+
+
+`targetType` Type
+
+
+`parameter` object
+
+
+`culture` System.Globalization.CultureInfo
+
+
+#### Returns
+
+object
+
+
+</section>
+
+</ApiRefPage>
+

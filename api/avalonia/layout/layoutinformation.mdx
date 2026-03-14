@@ -1,0 +1,124 @@
+---
+title: 'LayoutInformation'
+hide_title: true
+slug: '/avalonia/layout/layoutinformation'
+uid: 'Avalonia.Layout.LayoutInformation'
+commentId: 'T:Avalonia.Layout.LayoutInformation'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Layout'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">LayoutInformation Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Layout</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Layout/LayoutInformation.cs">LayoutInformation.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Provides access to layout information of a control.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class LayoutInformation
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> LayoutInformation
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [GetPreviousArrangeBounds](#uid-c2f601f81b) | Gets the control bounds used in the previous layout arrange pass. |
+| [GetPreviousMeasureConstraint](#uid-4670a34368) | Gets the available size constraint passed in the previous layout pass. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c2f601f81b"></span>
+
+### GetPreviousArrangeBounds Method
+
+Gets the control bounds used in the previous layout arrange pass.
+
+```csharp
+public Nullable<Avalonia.Rect> GetPreviousArrangeBounds(Avalonia.Layout.Layoutable control)
+```
+
+#### Parameters
+
+`control` [Avalonia.Layout.Layoutable](xref:Avalonia.Layout.Layoutable)
+
+The control.
+
+
+#### Returns
+
+Nullable&lt;[Avalonia.Rect](xref:Avalonia.Rect)&gt;
+
+Previous control arrange bounds, if any.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4670a34368"></span>
+
+### GetPreviousMeasureConstraint Method
+
+Gets the available size constraint passed in the previous layout pass.
+
+```csharp
+public Nullable<Avalonia.Size> GetPreviousMeasureConstraint(Avalonia.Layout.Layoutable control)
+```
+
+#### Parameters
+
+`control` [Avalonia.Layout.Layoutable](xref:Avalonia.Layout.Layoutable)
+
+The control.
+
+
+#### Returns
+
+Nullable&lt;[Avalonia.Size](xref:Avalonia.Size)&gt;
+
+Previous control measure constraint, if any.
+
+
+</section>
+
+</ApiRefPage>
+

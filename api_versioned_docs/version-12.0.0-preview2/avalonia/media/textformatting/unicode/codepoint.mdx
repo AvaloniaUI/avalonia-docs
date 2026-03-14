@@ -1,0 +1,459 @@
+---
+title: 'Codepoint'
+hide_title: true
+slug: '/avalonia/media/textformatting/unicode/codepoint'
+uid: 'Avalonia.Media.TextFormatting.Unicode.Codepoint'
+commentId: 'T:Avalonia.Media.TextFormatting.Unicode.Codepoint'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Media.TextFormatting.Unicode'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">Codepoint Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Media.TextFormatting.Unicode</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Media/TextFormatting/Unicode/Codepoint.cs">Codepoint.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct Codepoint
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> Codepoint
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;Codepoint&gt;
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [Codepoint](#uid-5b12d6563d) | Creates a new instance of [Avalonia.Media.TextFormatting.Unicode.Codepoint](xref:Avalonia.Media.TextFormatting.Unicode.Codepoint) with the specified value. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5b12d6563d"></span>
+
+### Codepoint Constructor
+
+Creates a new instance of [Avalonia.Media.TextFormatting.Unicode.Codepoint](xref:Avalonia.Media.TextFormatting.Unicode.Codepoint) with the specified value.
+
+```csharp
+public Codepoint(uint value)
+```
+
+#### Parameters
+
+`value` uint
+
+The codepoint value.
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Equals (2 overloads)](#uid-6351ac6589) | No summary available. |
+| [GetHashCode](#uid-15974339b1) | No summary available. |
+| [IsInRangeInclusive](#uid-674e3f72f7) | Returns if `cp` is between `lowerBound` and `upperBound`, inclusive. |
+| [ReadAt](#uid-660ce1483b) | No summary available. |
+| [ToString](#uid-36b555528f) | No summary available. |
+| [TryGetPairedBracket](#uid-e925e4cb0b) | No summary available. |
+
+<span id="uid-6351ac6589"></span>
+
+### Equals overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f699c7b85b"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(Avalonia.Media.TextFormatting.Unicode.Codepoint other)
+```
+
+##### Parameters
+
+`other` [Avalonia.Media.TextFormatting.Unicode.Codepoint](xref:Avalonia.Media.TextFormatting.Unicode.Codepoint)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-18ece104d9"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(object obj)
+```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-15974339b1"></span>
+
+### GetHashCode Method
+
+```csharp
+public int GetHashCode()
+```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-674e3f72f7"></span>
+
+### IsInRangeInclusive Method
+
+Returns if `cp` is between
+`lowerBound` and `upperBound`, inclusive.
+
+```csharp
+public bool IsInRangeInclusive(Avalonia.Media.TextFormatting.Unicode.Codepoint cp, uint lowerBound, uint upperBound)
+```
+
+#### Parameters
+
+`cp` [Avalonia.Media.TextFormatting.Unicode.Codepoint](xref:Avalonia.Media.TextFormatting.Unicode.Codepoint)
+
+
+`lowerBound` uint
+
+
+`upperBound` uint
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-660ce1483b"></span>
+
+### ReadAt Method
+
+```csharp
+public Avalonia.Media.TextFormatting.Unicode.Codepoint ReadAt(ReadOnlySpan<char> text, int index, int& count)
+```
+
+#### Parameters
+
+`text` ReadOnlySpan&lt;char&gt;
+
+
+`index` int
+
+
+`count` int&amp;
+
+
+#### Returns
+
+[Avalonia.Media.TextFormatting.Unicode.Codepoint](xref:Avalonia.Media.TextFormatting.Unicode.Codepoint)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-36b555528f"></span>
+
+### ToString Method
+
+```csharp
+public string ToString()
+```
+
+#### Returns
+
+string
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e925e4cb0b"></span>
+
+### TryGetPairedBracket Method
+
+```csharp
+public bool TryGetPairedBracket(Avalonia.Media.TextFormatting.Unicode.Codepoint& codepoint)
+```
+
+#### Parameters
+
+`codepoint` [Avalonia.Media.TextFormatting.Unicode.Codepoint](xref:Avalonia.Media.TextFormatting.Unicode.Codepoint)&amp;
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [BiDiClass](#uid-b5a7f3973c) | Gets the [Avalonia.Media.TextFormatting.Unicode.BidiClass](xref:Avalonia.Media.TextFormatting.Unicode.BidiClass). |
+| [EastAsianWidthClass](#uid-357be760f5) | Gets the [Avalonia.Media.TextFormatting.Unicode.Codepoint.EastAsianWidthClass](xref:Avalonia.Media.TextFormatting.Unicode.Codepoint.EastAsianWidthClass). |
+| [GeneralCategory](#uid-7d954df176) | Gets the [Avalonia.Media.TextFormatting.Unicode.GeneralCategory](xref:Avalonia.Media.TextFormatting.Unicode.GeneralCategory). |
+| [GraphemeBreakClass](#uid-daa1c3c948) | Gets the [Avalonia.Media.TextFormatting.Unicode.Codepoint.GraphemeBreakClass](xref:Avalonia.Media.TextFormatting.Unicode.Codepoint.GraphemeBreakClass). |
+| [IsBreakChar](#uid-8af230e886) | Determines whether this [Avalonia.Media.TextFormatting.Unicode.Codepoint](xref:Avalonia.Media.TextFormatting.Unicode.Codepoint) is a break char. |
+| [IsEastAsian](#uid-f274a5aa9c) | Determines whether this [Avalonia.Media.TextFormatting.Unicode.Codepoint](xref:Avalonia.Media.TextFormatting.Unicode.Codepoint) is an east asian char. |
+| [IsWhiteSpace](#uid-d9bcca02c4) | Determines whether this [Avalonia.Media.TextFormatting.Unicode.Codepoint](xref:Avalonia.Media.TextFormatting.Unicode.Codepoint) is white space. |
+| [LineBreakClass](#uid-76ddb5784b) | Gets the [Avalonia.Media.TextFormatting.Unicode.LineBreakClass](xref:Avalonia.Media.TextFormatting.Unicode.LineBreakClass). |
+| [PairedBracketType](#uid-92a6225357) | Gets the [Avalonia.Media.TextFormatting.Unicode.BidiPairedBracketType](xref:Avalonia.Media.TextFormatting.Unicode.BidiPairedBracketType). |
+| [ReplacementCodepoint](#uid-0aa9145d35) | The replacement codepoint that is used for non supported values. |
+| [Script](#uid-45250a99f7) | Gets the [Avalonia.Media.TextFormatting.Unicode.Script](xref:Avalonia.Media.TextFormatting.Unicode.Script). |
+| [Value](#uid-274c02ef02) | Get the codepoint's value. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b5a7f3973c"></span>
+
+### BiDiClass Property
+
+Gets the [Avalonia.Media.TextFormatting.Unicode.BidiClass](xref:Avalonia.Media.TextFormatting.Unicode.BidiClass).
+
+```csharp
+public Avalonia.Media.TextFormatting.Unicode.BidiClass BiDiClass { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-357be760f5"></span>
+
+### EastAsianWidthClass Property
+
+Gets the [Avalonia.Media.TextFormatting.Unicode.Codepoint.EastAsianWidthClass](xref:Avalonia.Media.TextFormatting.Unicode.Codepoint.EastAsianWidthClass).
+
+```csharp
+public Avalonia.Media.TextFormatting.Unicode.EastAsianWidthClass EastAsianWidthClass { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7d954df176"></span>
+
+### GeneralCategory Property
+
+Gets the [Avalonia.Media.TextFormatting.Unicode.GeneralCategory](xref:Avalonia.Media.TextFormatting.Unicode.GeneralCategory).
+
+```csharp
+public Avalonia.Media.TextFormatting.Unicode.GeneralCategory GeneralCategory { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-daa1c3c948"></span>
+
+### GraphemeBreakClass Property
+
+Gets the [Avalonia.Media.TextFormatting.Unicode.Codepoint.GraphemeBreakClass](xref:Avalonia.Media.TextFormatting.Unicode.Codepoint.GraphemeBreakClass).
+
+```csharp
+public Avalonia.Media.TextFormatting.Unicode.GraphemeBreakClass GraphemeBreakClass { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8af230e886"></span>
+
+### IsBreakChar Property
+
+Determines whether this [Avalonia.Media.TextFormatting.Unicode.Codepoint](xref:Avalonia.Media.TextFormatting.Unicode.Codepoint) is a break char.
+
+```csharp
+public bool IsBreakChar { get; set; }
+```
+
+#### Returns
+
+`true` if [is break character]; otherwise, `false`.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f274a5aa9c"></span>
+
+### IsEastAsian Property
+
+Determines whether this [Avalonia.Media.TextFormatting.Unicode.Codepoint](xref:Avalonia.Media.TextFormatting.Unicode.Codepoint) is an east asian char.
+
+```csharp
+public bool IsEastAsian { get; set; }
+```
+
+#### Returns
+
+`true` if [is an east asian character]; otherwise, `false`.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d9bcca02c4"></span>
+
+### IsWhiteSpace Property
+
+Determines whether this [Avalonia.Media.TextFormatting.Unicode.Codepoint](xref:Avalonia.Media.TextFormatting.Unicode.Codepoint) is white space.
+
+```csharp
+public bool IsWhiteSpace { get; set; }
+```
+
+#### Returns
+
+`true` if [is whitespace]; otherwise, `false`.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-76ddb5784b"></span>
+
+### LineBreakClass Property
+
+Gets the [Avalonia.Media.TextFormatting.Unicode.LineBreakClass](xref:Avalonia.Media.TextFormatting.Unicode.LineBreakClass).
+
+```csharp
+public Avalonia.Media.TextFormatting.Unicode.LineBreakClass LineBreakClass { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-92a6225357"></span>
+
+### PairedBracketType Property
+
+Gets the [Avalonia.Media.TextFormatting.Unicode.BidiPairedBracketType](xref:Avalonia.Media.TextFormatting.Unicode.BidiPairedBracketType).
+
+```csharp
+public Avalonia.Media.TextFormatting.Unicode.BidiPairedBracketType PairedBracketType { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0aa9145d35"></span>
+
+### ReplacementCodepoint Property
+
+The replacement codepoint that is used for non supported values.
+
+```csharp
+public Avalonia.Media.TextFormatting.Unicode.Codepoint ReplacementCodepoint { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-45250a99f7"></span>
+
+### Script Property
+
+Gets the [Avalonia.Media.TextFormatting.Unicode.Script](xref:Avalonia.Media.TextFormatting.Unicode.Script).
+
+```csharp
+public Avalonia.Media.TextFormatting.Unicode.Script Script { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-274c02ef02"></span>
+
+### Value Property
+
+Get the codepoint's value.
+
+```csharp
+public uint Value { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

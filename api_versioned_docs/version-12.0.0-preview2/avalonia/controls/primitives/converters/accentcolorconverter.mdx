@@ -1,0 +1,251 @@
+---
+title: 'AccentColorConverter'
+hide_title: true
+slug: '/avalonia/controls/primitives/converters/accentcolorconverter'
+uid: 'Avalonia.Controls.Primitives.Converters.AccentColorConverter'
+commentId: 'T:Avalonia.Controls.Primitives.Converters.AccentColorConverter'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.ColorPicker'
+assembly: 'Avalonia.Controls.ColorPicker'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Primitives.Converters'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">AccentColorConverter Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Primitives.Converters</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.ColorPicker</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.ColorPicker</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Controls.ColorPicker/Converters/AccentColorConverter.cs">AccentColorConverter.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Creates an accent color for a given base color value and step parameter.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class AccentColorConverter
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> AccentColorConverter
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="../../../data/converters/ivalueconverter">IValueConverter</a>
+</div>
+</div>
+
+## Remarks
+
+This is a highly-specialized converter for the color picker.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [AccentColorConverter](#uid-1dbc1ed79e) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1dbc1ed79e"></span>
+
+### AccentColorConverter Constructor
+
+```csharp
+public AccentColorConverter()
+```
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Convert](#uid-ac1dd8c018) | Converts a value. |
+| [ConvertBack](#uid-ea9a04cc8e) | Converts a value. |
+| [GetAccent](#uid-a8ab38b141) | This does not account for perceptual differences and also does not match with system accent color calculation. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ac1dd8c018"></span>
+
+### Convert Method
+
+Converts a value.
+
+```csharp
+public object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
+```
+
+#### Parameters
+
+`value` object
+
+The value to convert.
+
+
+`targetType` Type
+
+The type of the target.
+
+
+`parameter` object
+
+A user-defined parameter.
+
+
+`culture` System.Globalization.CultureInfo
+
+The culture to use.
+
+
+#### Returns
+
+object
+
+The converted value.
+
+
+#### Remarks
+
+This method should not throw exceptions. If the value is not convertible, return
+a [Avalonia.Data.BindingNotification](xref:Avalonia.Data.BindingNotification) in an error state. Any exceptions thrown will be
+treated as an application exception.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ea9a04cc8e"></span>
+
+### ConvertBack Method
+
+Converts a value.
+
+```csharp
+public object ConvertBack(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
+```
+
+#### Parameters
+
+`value` object
+
+The value to convert.
+
+
+`targetType` Type
+
+The type of the target.
+
+
+`parameter` object
+
+A user-defined parameter.
+
+
+`culture` System.Globalization.CultureInfo
+
+The culture to use.
+
+
+#### Returns
+
+object
+
+The converted value.
+
+
+#### Remarks
+
+This method should not throw exceptions. If the value is not convertible, return
+a [Avalonia.Data.BindingNotification](xref:Avalonia.Data.BindingNotification) in an error state. Any exceptions thrown will be
+treated as an application exception.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a8ab38b141"></span>
+
+### GetAccent Method
+
+This does not account for perceptual differences and also does not match with
+system accent color calculation.
+
+```csharp
+public Avalonia.Media.HsvColor GetAccent(Avalonia.Media.HsvColor hsvColor, int accentStep)
+```
+
+#### Parameters
+
+`hsvColor` [Avalonia.Media.HsvColor](xref:Avalonia.Media.HsvColor)
+
+The base color to calculate the accent from.
+
+
+`accentStep` int
+
+The number of accent color steps to move.
+
+
+#### Returns
+
+[Avalonia.Media.HsvColor](xref:Avalonia.Media.HsvColor)
+
+The new accent color.
+
+
+#### Remarks
+
+Use the HSV representation as it's more perceptual.
+In most cases only the value is changed by a fixed percentage so the algorithm is reproducible.
+
+</section>
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [ValueDelta](#uid-15cfd736fa) | The amount to change the Value component for each accent color step. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-15cfd736fa"></span>
+
+### ValueDelta Field
+
+The amount to change the Value component for each accent color step.
+
+```csharp
+public double ValueDelta
+```
+
+</section>
+
+</ApiRefPage>
+

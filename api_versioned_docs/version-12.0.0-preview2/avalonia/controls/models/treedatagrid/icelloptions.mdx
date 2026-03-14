@@ -1,0 +1,98 @@
+---
+title: 'ICellOptions'
+hide_title: true
+slug: '/avalonia/controls/models/treedatagrid/icelloptions'
+uid: 'Avalonia.Controls.Models.TreeDataGrid.ICellOptions'
+commentId: 'T:Avalonia.Controls.Models.TreeDataGrid.ICellOptions'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.TreeDataGrid'
+assembly: 'Avalonia.Controls.TreeDataGrid'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Models.TreeDataGrid'
+tfms:
+  - 'net8.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ICellOptions Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Models.TreeDataGrid</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Defines common options that control the behavior of cells in a [Avalonia.Controls.Models.TreeDataGrid](xref:Avalonia.Controls.Models.TreeDataGrid).
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface ICellOptions
+```
+
+</div>
+
+## Remarks
+
+The [Avalonia.Controls.Models.TreeDataGrid.ICellOptions](xref:Avalonia.Controls.Models.TreeDataGrid.ICellOptions) interface serves as a base for various cell option interfaces
+in the [TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid) component. It provides the most fundamental editing behavior options
+that apply across different cell types.
+
+Specific cell types extend this interface with additional options relevant to their
+particular functionality, such as [Avalonia.Controls.Models.TreeDataGrid.ITextCellOptions](xref:Avalonia.Controls.Models.TreeDataGrid.ITextCellOptions) for text formatting
+options or [Avalonia.Controls.Models.TreeDataGrid.ITemplateCellOptions](xref:Avalonia.Controls.Models.TreeDataGrid.ITemplateCellOptions) for template-specific options.
+
+Column implementations typically provide these options through their respective
+options classes (e.g., [Avalonia.Controls.Models.TreeDataGrid.TextColumnOptions&lt;T&gt;](xref:Avalonia.Controls.Models.TreeDataGrid.TextColumnOptions%601),
+[Avalonia.Controls.Models.TreeDataGrid.CheckBoxColumnOptions&lt;T&gt;](xref:Avalonia.Controls.Models.TreeDataGrid.CheckBoxColumnOptions%601), etc.).
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [BeginEditGestures](#uid-b4abfb892b) | Gets the gesture(s) that will cause the cell to enter edit mode. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b4abfb892b"></span>
+
+### BeginEditGestures Property
+
+Gets the gesture(s) that will cause the cell to enter edit mode.
+
+```csharp
+public Avalonia.Controls.Models.TreeDataGrid.BeginEditGestures BeginEditGestures { get; set; }
+```
+
+#### Remarks
+
+This property determines which user interactions will trigger the cell to enter edit mode.
+
+The default value is [Avalonia.Controls.Models.TreeDataGrid.BeginEditGestures.Default](xref:Avalonia.Controls.Models.TreeDataGrid.BeginEditGestures.Default), which includes F2 key press
+and double-tap gestures. Other options include single tap, or requiring the cell to be
+selected first.
+
+To prevent a cell from entering edit mode through user interaction, use
+[Avalonia.Controls.Models.TreeDataGrid.BeginEditGestures.None](xref:Avalonia.Controls.Models.TreeDataGrid.BeginEditGestures.None). The cell can still be programmatically
+put into edit mode.
+
+</section>
+
+</ApiRefPage>
+

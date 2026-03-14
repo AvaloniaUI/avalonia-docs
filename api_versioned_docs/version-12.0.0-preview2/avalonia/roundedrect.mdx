@@ -1,0 +1,473 @@
+---
+title: 'RoundedRect'
+hide_title: true
+slug: '/avalonia/roundedrect'
+uid: 'Avalonia.RoundedRect'
+commentId: 'T:Avalonia.RoundedRect'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">RoundedRect Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/RoundedRect.cs">RoundedRect.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct RoundedRect
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> RoundedRect
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [RoundedRect (7 overloads)](#uid-7e4d4d4e9e) | No summary available. |
+
+<span id="uid-7e4d4d4e9e"></span>
+
+### RoundedRect overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e5cbabf8f8"></span>
+
+#### RoundedRect Constructor
+
+```csharp
+public RoundedRect(Avalonia.Rect& bounds, Avalonia.CornerRadius& radius)
+```
+
+##### Parameters
+
+`bounds` [Avalonia.Rect](xref:Avalonia.Rect)&amp;
+
+
+`radius` [Avalonia.CornerRadius](xref:Avalonia.CornerRadius)&amp;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-cd95a81699"></span>
+
+#### RoundedRect Constructor
+
+```csharp
+public RoundedRect(Avalonia.Rect rect)
+```
+
+##### Parameters
+
+`rect` [Avalonia.Rect](xref:Avalonia.Rect)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-090b5f7456"></span>
+
+#### RoundedRect Constructor
+
+```csharp
+public RoundedRect(Avalonia.Rect rect, Avalonia.Vector radii)
+```
+
+##### Parameters
+
+`rect` [Avalonia.Rect](xref:Avalonia.Rect)
+
+
+`radii` [Avalonia.Vector](xref:Avalonia.Vector)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c2fe9043bd"></span>
+
+#### RoundedRect Constructor
+
+```csharp
+public RoundedRect(Avalonia.Rect rect, Avalonia.Vector radiiTopLeft, Avalonia.Vector radiiTopRight, Avalonia.Vector radiiBottomRight, Avalonia.Vector radiiBottomLeft)
+```
+
+##### Parameters
+
+`rect` [Avalonia.Rect](xref:Avalonia.Rect)
+
+
+`radiiTopLeft` [Avalonia.Vector](xref:Avalonia.Vector)
+
+
+`radiiTopRight` [Avalonia.Vector](xref:Avalonia.Vector)
+
+
+`radiiBottomRight` [Avalonia.Vector](xref:Avalonia.Vector)
+
+
+`radiiBottomLeft` [Avalonia.Vector](xref:Avalonia.Vector)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a7655bd7b3"></span>
+
+#### RoundedRect Constructor
+
+```csharp
+public RoundedRect(Avalonia.Rect rect, double radius)
+```
+
+##### Parameters
+
+`rect` [Avalonia.Rect](xref:Avalonia.Rect)
+
+
+`radius` double
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-54c2cffcf6"></span>
+
+#### RoundedRect Constructor
+
+```csharp
+public RoundedRect(Avalonia.Rect rect, double radiusX, double radiusY)
+```
+
+##### Parameters
+
+`rect` [Avalonia.Rect](xref:Avalonia.Rect)
+
+
+`radiusX` double
+
+
+`radiusY` double
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b129489c0c"></span>
+
+#### RoundedRect Constructor
+
+```csharp
+public RoundedRect(Avalonia.Rect rect, double radiusTopLeft, double radiusTopRight, double radiusBottomRight, double radiusBottomLeft)
+```
+
+##### Parameters
+
+`rect` [Avalonia.Rect](xref:Avalonia.Rect)
+
+
+`radiusTopLeft` double
+
+
+`radiusTopRight` double
+
+
+`radiusBottomRight` double
+
+
+`radiusBottomLeft` double
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [ContainsExclusive](#uid-309f96c000) | Determines whether a point is in the bounds of the rounded rectangle, exclusive of the rounded rectangle's bottom/right edge. |
+| [Deflate](#uid-8c326201c5) | No summary available. |
+| [Equals (2 overloads)](#uid-24e549146b) | No summary available. |
+| [GetHashCode](#uid-bbeea59cd4) | No summary available. |
+| [Inflate](#uid-157ed9d970) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-309f96c000"></span>
+
+### ContainsExclusive Method
+
+Determines whether a point is in the bounds of the rounded rectangle, exclusive of the
+rounded rectangle's bottom/right edge.
+
+```csharp
+public bool ContainsExclusive(Avalonia.Point p)
+```
+
+#### Parameters
+
+`p` [Avalonia.Point](xref:Avalonia.Point)
+
+The point.
+
+
+#### Returns
+
+bool
+
+true if the point is in the bounds of the rounded rectangle; otherwise false.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8c326201c5"></span>
+
+### Deflate Method
+
+```csharp
+public Avalonia.RoundedRect Deflate(double dx, double dy)
+```
+
+#### Parameters
+
+`dx` double
+
+
+`dy` double
+
+
+#### Returns
+
+[Avalonia.RoundedRect](xref:Avalonia.RoundedRect)
+
+
+</section>
+
+<span id="uid-24e549146b"></span>
+
+### Equals overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ed8a4299f8"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(Avalonia.RoundedRect other)
+```
+
+##### Parameters
+
+`other` [Avalonia.RoundedRect](xref:Avalonia.RoundedRect)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8de260de7b"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(object obj)
+```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-bbeea59cd4"></span>
+
+### GetHashCode Method
+
+```csharp
+public int GetHashCode()
+```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-157ed9d970"></span>
+
+### Inflate Method
+
+```csharp
+public Avalonia.RoundedRect Inflate(double dx, double dy)
+```
+
+#### Parameters
+
+`dx` double
+
+
+`dy` double
+
+
+#### Returns
+
+[Avalonia.RoundedRect](xref:Avalonia.RoundedRect)
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [IsRounded](#uid-ab19f7f99e) | No summary available. |
+| [IsUniform](#uid-793c7da263) | No summary available. |
+| [RadiiBottomLeft](#uid-31941a12fe) | No summary available. |
+| [RadiiBottomRight](#uid-4d4d0d449c) | No summary available. |
+| [RadiiTopLeft](#uid-f92cb72816) | No summary available. |
+| [RadiiTopRight](#uid-fcb8dccb03) | No summary available. |
+| [Rect](#uid-6ea50bd8b7) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ab19f7f99e"></span>
+
+### IsRounded Property
+
+```csharp
+public bool IsRounded { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-793c7da263"></span>
+
+### IsUniform Property
+
+```csharp
+public bool IsUniform { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-31941a12fe"></span>
+
+### RadiiBottomLeft Property
+
+```csharp
+public Avalonia.Vector RadiiBottomLeft { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4d4d0d449c"></span>
+
+### RadiiBottomRight Property
+
+```csharp
+public Avalonia.Vector RadiiBottomRight { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f92cb72816"></span>
+
+### RadiiTopLeft Property
+
+```csharp
+public Avalonia.Vector RadiiTopLeft { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-fcb8dccb03"></span>
+
+### RadiiTopRight Property
+
+```csharp
+public Avalonia.Vector RadiiTopRight { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6ea50bd8b7"></span>
+
+### Rect Property
+
+```csharp
+public Avalonia.Rect Rect { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

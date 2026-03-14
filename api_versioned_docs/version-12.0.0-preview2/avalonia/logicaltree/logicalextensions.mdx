@@ -1,0 +1,366 @@
+---
+title: 'LogicalExtensions'
+hide_title: true
+slug: '/avalonia/logicaltree/logicalextensions'
+uid: 'Avalonia.LogicalTree.LogicalExtensions'
+commentId: 'T:Avalonia.LogicalTree.LogicalExtensions'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.LogicalTree'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">LogicalExtensions Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.LogicalTree</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/LogicalTree/LogicalExtensions.cs">LogicalExtensions.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Provides extension methods for working with the logical tree.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class LogicalExtensions
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> LogicalExtensions
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [FindLogicalAncestorOfType](#uid-1ccbb5bd60) | No summary available. |
+| [FindLogicalDescendantOfType](#uid-9c5c81f9ca) | No summary available. |
+| [GetLogicalAncestors](#uid-7afee9d407) | Enumerates the ancestors of an [Avalonia.LogicalTree.ILogical](xref:Avalonia.LogicalTree.ILogical) in the logical tree. |
+| [GetLogicalChildren](#uid-c140632816) | Enumerates the children of an [Avalonia.LogicalTree.ILogical](xref:Avalonia.LogicalTree.ILogical) in the logical tree. |
+| [GetLogicalDescendants](#uid-14b3fc514d) | Enumerates the descendants of an [Avalonia.LogicalTree.ILogical](xref:Avalonia.LogicalTree.ILogical) in the logical tree. |
+| [GetLogicalParent](#uid-bd4c7d3d95) | Gets the logical parent of an [Avalonia.LogicalTree.ILogical](xref:Avalonia.LogicalTree.ILogical). |
+| [GetLogicalSiblings](#uid-5c6d083d49) | Enumerates the siblings of an [Avalonia.LogicalTree.ILogical](xref:Avalonia.LogicalTree.ILogical) in the logical tree. |
+| [GetSelfAndLogicalAncestors](#uid-a6c6bc1fc6) | Enumerates an [Avalonia.LogicalTree.ILogical](xref:Avalonia.LogicalTree.ILogical) and its ancestors in the logical tree. |
+| [GetSelfAndLogicalDescendants](#uid-1994719439) | Enumerates an [Avalonia.LogicalTree.ILogical](xref:Avalonia.LogicalTree.ILogical) and its descendants in the logical tree. |
+| [IsLogicalAncestorOf](#uid-66f0cae862) | Tests whether an [Avalonia.LogicalTree.ILogical](xref:Avalonia.LogicalTree.ILogical) is an ancestor of another logical. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1ccbb5bd60"></span>
+
+### FindLogicalAncestorOfType Method
+
+```csharp
+public T FindLogicalAncestorOfType<T>(Avalonia.LogicalTree.ILogical logical, bool includeSelf)
+```
+
+#### Parameters
+
+`logical` [Avalonia.LogicalTree.ILogical](xref:Avalonia.LogicalTree.ILogical)
+
+
+`includeSelf` bool
+
+
+#### Type Parameters
+
+`T`
+
+
+#### Returns
+
+T
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9c5c81f9ca"></span>
+
+### FindLogicalDescendantOfType Method
+
+```csharp
+public T FindLogicalDescendantOfType<T>(Avalonia.LogicalTree.ILogical logical, bool includeSelf)
+```
+
+#### Parameters
+
+`logical` [Avalonia.LogicalTree.ILogical](xref:Avalonia.LogicalTree.ILogical)
+
+
+`includeSelf` bool
+
+
+#### Type Parameters
+
+`T`
+
+
+#### Returns
+
+T
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7afee9d407"></span>
+
+### GetLogicalAncestors Method
+
+Enumerates the ancestors of an [Avalonia.LogicalTree.ILogical](xref:Avalonia.LogicalTree.ILogical) in the logical tree.
+
+```csharp
+public System.Collections.Generic.IEnumerable<Avalonia.LogicalTree.ILogical> GetLogicalAncestors(Avalonia.LogicalTree.ILogical logical)
+```
+
+#### Parameters
+
+`logical` [Avalonia.LogicalTree.ILogical](xref:Avalonia.LogicalTree.ILogical)
+
+The logical.
+
+
+#### Returns
+
+System.Collections.Generic.IEnumerable&lt;[Avalonia.LogicalTree.ILogical](xref:Avalonia.LogicalTree.ILogical)&gt;
+
+The logical's ancestors.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c140632816"></span>
+
+### GetLogicalChildren Method
+
+Enumerates the children of an [Avalonia.LogicalTree.ILogical](xref:Avalonia.LogicalTree.ILogical) in the logical tree.
+
+```csharp
+public System.Collections.Generic.IEnumerable<Avalonia.LogicalTree.ILogical> GetLogicalChildren(Avalonia.LogicalTree.ILogical logical)
+```
+
+#### Parameters
+
+`logical` [Avalonia.LogicalTree.ILogical](xref:Avalonia.LogicalTree.ILogical)
+
+The logical.
+
+
+#### Returns
+
+System.Collections.Generic.IEnumerable&lt;[Avalonia.LogicalTree.ILogical](xref:Avalonia.LogicalTree.ILogical)&gt;
+
+The logical children.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-14b3fc514d"></span>
+
+### GetLogicalDescendants Method
+
+Enumerates the descendants of an [Avalonia.LogicalTree.ILogical](xref:Avalonia.LogicalTree.ILogical) in the logical tree.
+
+```csharp
+public System.Collections.Generic.IEnumerable<Avalonia.LogicalTree.ILogical> GetLogicalDescendants(Avalonia.LogicalTree.ILogical logical)
+```
+
+#### Parameters
+
+`logical` [Avalonia.LogicalTree.ILogical](xref:Avalonia.LogicalTree.ILogical)
+
+The logical.
+
+
+#### Returns
+
+System.Collections.Generic.IEnumerable&lt;[Avalonia.LogicalTree.ILogical](xref:Avalonia.LogicalTree.ILogical)&gt;
+
+The logical's ancestors.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-bd4c7d3d95"></span>
+
+### GetLogicalParent Method
+
+Gets the logical parent of an [Avalonia.LogicalTree.ILogical](xref:Avalonia.LogicalTree.ILogical).
+
+```csharp
+public T GetLogicalParent<T>(Avalonia.LogicalTree.ILogical logical)
+```
+
+#### Parameters
+
+`logical` [Avalonia.LogicalTree.ILogical](xref:Avalonia.LogicalTree.ILogical)
+
+The logical.
+
+
+#### Returns
+
+[Avalonia.LogicalTree.ILogical](xref:Avalonia.LogicalTree.ILogical)
+
+The parent, or null if the logical is unparented.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5c6d083d49"></span>
+
+### GetLogicalSiblings Method
+
+Enumerates the siblings of an [Avalonia.LogicalTree.ILogical](xref:Avalonia.LogicalTree.ILogical) in the logical tree.
+
+```csharp
+public System.Collections.Generic.IEnumerable<Avalonia.LogicalTree.ILogical> GetLogicalSiblings(Avalonia.LogicalTree.ILogical logical)
+```
+
+#### Parameters
+
+`logical` [Avalonia.LogicalTree.ILogical](xref:Avalonia.LogicalTree.ILogical)
+
+The logical.
+
+
+#### Returns
+
+System.Collections.Generic.IEnumerable&lt;[Avalonia.LogicalTree.ILogical](xref:Avalonia.LogicalTree.ILogical)&gt;
+
+The logical siblings.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a6c6bc1fc6"></span>
+
+### GetSelfAndLogicalAncestors Method
+
+Enumerates an [Avalonia.LogicalTree.ILogical](xref:Avalonia.LogicalTree.ILogical) and its ancestors in the logical tree.
+
+```csharp
+public System.Collections.Generic.IEnumerable<Avalonia.LogicalTree.ILogical> GetSelfAndLogicalAncestors(Avalonia.LogicalTree.ILogical logical)
+```
+
+#### Parameters
+
+`logical` [Avalonia.LogicalTree.ILogical](xref:Avalonia.LogicalTree.ILogical)
+
+The logical.
+
+
+#### Returns
+
+System.Collections.Generic.IEnumerable&lt;[Avalonia.LogicalTree.ILogical](xref:Avalonia.LogicalTree.ILogical)&gt;
+
+The logical and its ancestors.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1994719439"></span>
+
+### GetSelfAndLogicalDescendants Method
+
+Enumerates an [Avalonia.LogicalTree.ILogical](xref:Avalonia.LogicalTree.ILogical) and its descendants in the logical tree.
+
+```csharp
+public System.Collections.Generic.IEnumerable<Avalonia.LogicalTree.ILogical> GetSelfAndLogicalDescendants(Avalonia.LogicalTree.ILogical logical)
+```
+
+#### Parameters
+
+`logical` [Avalonia.LogicalTree.ILogical](xref:Avalonia.LogicalTree.ILogical)
+
+The logical.
+
+
+#### Returns
+
+System.Collections.Generic.IEnumerable&lt;[Avalonia.LogicalTree.ILogical](xref:Avalonia.LogicalTree.ILogical)&gt;
+
+The logical and its ancestors.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-66f0cae862"></span>
+
+### IsLogicalAncestorOf Method
+
+Tests whether an [Avalonia.LogicalTree.ILogical](xref:Avalonia.LogicalTree.ILogical) is an ancestor of another logical.
+
+```csharp
+public bool IsLogicalAncestorOf(Avalonia.LogicalTree.ILogical logical, Avalonia.LogicalTree.ILogical target)
+```
+
+#### Parameters
+
+`logical` [Avalonia.LogicalTree.ILogical](xref:Avalonia.LogicalTree.ILogical)
+
+The logical.
+
+
+`target` [Avalonia.LogicalTree.ILogical](xref:Avalonia.LogicalTree.ILogical)
+
+The potential descendant.
+
+
+#### Returns
+
+bool
+
+True if `logical` is an ancestor of `target`;
+otherwise false.
+
+
+</section>
+
+</ApiRefPage>
+

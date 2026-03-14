@@ -1,0 +1,148 @@
+---
+title: 'ReflectionBindingExtension'
+hide_title: true
+slug: '/avalonia/markup/xaml/markupextensions/reflectionbindingextension'
+uid: 'Avalonia.Markup.Xaml.MarkupExtensions.ReflectionBindingExtension'
+commentId: 'T:Avalonia.Markup.Xaml.MarkupExtensions.ReflectionBindingExtension'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Markup.Xaml'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Markup.Xaml.MarkupExtensions'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ReflectionBindingExtension Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Markup.Xaml.MarkupExtensions</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Markup.Xaml</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Markup/Avalonia.Markup.Xaml/MarkupExtensions/ReflectionBindingExtension.cs">ReflectionBindingExtension.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class ReflectionBindingExtension
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../../data/bindingbase">BindingBase</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../../data/reflectionbinding">ReflectionBinding</a> <span className="apiref-page__relation-separator">-&gt;</span> ReflectionBindingExtension
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [ReflectionBindingExtension (2 overloads)](#uid-67ce33403c) | Initializes a new instance of the [Avalonia.Data.ReflectionBinding](xref:Avalonia.Data.ReflectionBinding) class. |
+
+<span id="uid-67ce33403c"></span>
+
+### ReflectionBindingExtension overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-38b75d96d6"></span>
+
+#### ReflectionBindingExtension Constructor
+
+Initializes a new instance of the [Avalonia.Data.ReflectionBinding](xref:Avalonia.Data.ReflectionBinding) class.
+
+```csharp
+public ReflectionBindingExtension()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-76abc2b0d3"></span>
+
+#### ReflectionBindingExtension Constructor
+
+Initializes a new instance of the [Avalonia.Data.ReflectionBinding](xref:Avalonia.Data.ReflectionBinding) class.
+
+```csharp
+public ReflectionBindingExtension(string path)
+```
+
+##### Parameters
+
+`path` string
+
+The binding path.
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [ProvideValue](#uid-0992a9d384) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0992a9d384"></span>
+
+### ProvideValue Method
+
+```csharp
+public Avalonia.Data.ReflectionBinding ProvideValue(IServiceProvider serviceProvider)
+```
+
+#### Parameters
+
+`serviceProvider` IServiceProvider
+
+
+#### Returns
+
+[Avalonia.Data.ReflectionBinding](xref:Avalonia.Data.ReflectionBinding)
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Converter](../../../data/reflectionbinding.mdx#uid-1ee9768a6d) | Gets or sets the [Avalonia.Data.Converters.IValueConverter](xref:Avalonia.Data.Converters.IValueConverter) to use. Inherited from [ReflectionBinding](../../../data/reflectionbinding.mdx). |
+| [ConverterCulture](../../../data/reflectionbinding.mdx#uid-af235b01d2) | Gets or sets the culture in which to evaluate the converter. Inherited from [ReflectionBinding](../../../data/reflectionbinding.mdx). |
+| [ConverterParameter](../../../data/reflectionbinding.mdx#uid-a66fd908cb) | Gets or sets a parameter to pass to [Avalonia.Data.ReflectionBinding.Converter](xref:Avalonia.Data.ReflectionBinding.Converter). Inherited from [ReflectionBinding](../../../data/reflectionbinding.mdx). |
+| [Delay](../../../data/reflectionbinding.mdx#uid-5f725d75b9) | Gets or sets the amount of time, in milliseconds, to wait before updating the binding source after the value on the target changes. Inherited from [ReflectionBinding](../../../data/reflectionbinding.mdx). |
+| [ElementName](../../../data/reflectionbinding.mdx#uid-c5576e6ba1) | Gets or sets the name of the element to use as the binding source. Inherited from [ReflectionBinding](../../../data/reflectionbinding.mdx). |
+| [FallbackValue](../../../data/reflectionbinding.mdx#uid-4167f89070) | Gets or sets the value to use when the binding is unable to produce a value. Inherited from [ReflectionBinding](../../../data/reflectionbinding.mdx). |
+| [Mode](../../../data/reflectionbinding.mdx#uid-094aff5586) | Gets or sets the binding mode. Inherited from [ReflectionBinding](../../../data/reflectionbinding.mdx). |
+| [Path](../../../data/reflectionbinding.mdx#uid-9f99936cab) | Gets or sets the binding path. Inherited from [ReflectionBinding](../../../data/reflectionbinding.mdx). |
+| [Priority](../../../data/reflectionbinding.mdx#uid-d52ca0f81c) | Gets or sets the binding priority. Inherited from [ReflectionBinding](../../../data/reflectionbinding.mdx). |
+| [RelativeSource](../../../data/reflectionbinding.mdx#uid-349a17205a) | Gets or sets the relative source for the binding. Inherited from [ReflectionBinding](../../../data/reflectionbinding.mdx). |
+| [Source](../../../data/reflectionbinding.mdx#uid-0c3d8d9565) | Gets or sets the source for the binding. Inherited from [ReflectionBinding](../../../data/reflectionbinding.mdx). |
+| [StringFormat](../../../data/reflectionbinding.mdx#uid-4dae1cc603) | Gets or sets the string format. Inherited from [ReflectionBinding](../../../data/reflectionbinding.mdx). |
+| [TargetNullValue](../../../data/reflectionbinding.mdx#uid-ba726385ba) | Gets or sets the value to use when the binding result is null. Inherited from [ReflectionBinding](../../../data/reflectionbinding.mdx). |
+| [TypeResolver](../../../data/reflectionbinding.mdx#uid-878d6742bf) | Gets or sets a function used to resolve types from names in the binding path. Inherited from [ReflectionBinding](../../../data/reflectionbinding.mdx). |
+| [UpdateSourceTrigger](../../../data/reflectionbinding.mdx#uid-4b2dab820f) | Gets or sets a value that determines the timing of binding source updates for [Avalonia.Data.BindingMode.TwoWay](xref:Avalonia.Data.BindingMode.TwoWay) and [Avalonia.Data.BindingMode.OneWayToSource](xref:Avalonia.Data.BindingMode.OneWayToSource) bindings. Inherited from [ReflectionBinding](../../../data/reflectionbinding.mdx). |
+
+</ApiRefPage>
+

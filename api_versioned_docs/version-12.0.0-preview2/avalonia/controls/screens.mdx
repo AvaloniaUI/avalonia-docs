@@ -1,0 +1,324 @@
+---
+title: 'Screens'
+hide_title: true
+slug: '/avalonia/controls/screens'
+uid: 'Avalonia.Controls.Screens'
+commentId: 'T:Avalonia.Controls.Screens'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">Screens Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Controls/Screens.cs">Screens.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Represents all screens available on a device.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class Screens
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> Screens
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [RequestScreenDetails](#uid-22fd0897f8) | Asks underlying platform to provide detailed screen information. On some platforms it might include non-primary screens, as well as display names. |
+| [ScreenFromBounds](#uid-eaf8a4f3a3) | Retrieves a Screen for the display that contains the rectangle. |
+| [ScreenFromPoint](#uid-33a8414294) | Retrieves a Screen for the display that contains the specified point. |
+| [ScreenFromTopLevel](#uid-8d0ddac6d3) | Retrieves a Screen for the display that contains the specified [Avalonia.Controls.TopLevel](xref:Avalonia.Controls.TopLevel). |
+| [ScreenFromVisual](#uid-2100666c09) | Retrieves a Screen for the display that contains the specified [Avalonia.Visual](xref:Avalonia.Visual). |
+| [ScreenFromWindow](#uid-303ce34047) | Retrieves a Screen for the display that contains the specified [Avalonia.Controls.WindowBase](xref:Avalonia.Controls.WindowBase). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-22fd0897f8"></span>
+
+### RequestScreenDetails Method
+
+Asks underlying platform to provide detailed screen information.
+On some platforms it might include non-primary screens, as well as display names.
+
+```csharp
+public System.Threading.Tasks.Task<bool> RequestScreenDetails()
+```
+
+#### Returns
+
+System.Threading.Tasks.Task&lt;bool&gt;
+
+True, if detailed screen information was provided. False, if denied by the platform or user.
+
+
+#### Remarks
+
+This method is async and might show a dialog to the user asking for a permission.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-eaf8a4f3a3"></span>
+
+### ScreenFromBounds Method
+
+Retrieves a Screen for the display that contains the rectangle.
+
+```csharp
+public Avalonia.Platform.Screen ScreenFromBounds(Avalonia.PixelRect bounds)
+```
+
+#### Parameters
+
+`bounds` [Avalonia.PixelRect](xref:Avalonia.PixelRect)
+
+Bounds that specifies the area for which to retrieve the display.
+
+
+#### Returns
+
+[Avalonia.Platform.Screen](xref:Avalonia.Platform.Screen)
+
+The [Avalonia.Platform.Screen](xref:Avalonia.Platform.Screen).
+
+
+#### Remarks
+
+On mobile, this method always returns null.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-33a8414294"></span>
+
+### ScreenFromPoint Method
+
+Retrieves a Screen for the display that contains the specified point.
+
+```csharp
+public Avalonia.Platform.Screen ScreenFromPoint(Avalonia.PixelPoint point)
+```
+
+#### Parameters
+
+`point` [Avalonia.PixelPoint](xref:Avalonia.PixelPoint)
+
+A Point that specifies the location for which to retrieve a Screen.
+
+
+#### Returns
+
+[Avalonia.Platform.Screen](xref:Avalonia.Platform.Screen)
+
+The [Avalonia.Platform.Screen](xref:Avalonia.Platform.Screen).
+
+
+#### Remarks
+
+On mobile, this method always returns null.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8d0ddac6d3"></span>
+
+### ScreenFromTopLevel Method
+
+Retrieves a Screen for the display that contains the specified [Avalonia.Controls.TopLevel](xref:Avalonia.Controls.TopLevel).
+
+```csharp
+public Avalonia.Platform.Screen ScreenFromTopLevel(Avalonia.Controls.TopLevel topLevel)
+```
+
+#### Parameters
+
+`topLevel` [Avalonia.Controls.TopLevel](xref:Avalonia.Controls.TopLevel)
+
+The top level for which to retrieve the Screen.
+
+
+#### Returns
+
+[Avalonia.Platform.Screen](xref:Avalonia.Platform.Screen)
+
+The [Avalonia.Platform.Screen](xref:Avalonia.Platform.Screen).
+
+
+#### Exceptions
+
+- [TopLevel platform implementation was already disposed.](xref:System.ObjectDisposedException)
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2100666c09"></span>
+
+### ScreenFromVisual Method
+
+Retrieves a Screen for the display that contains the specified [Avalonia.Visual](xref:Avalonia.Visual).
+
+```csharp
+public Avalonia.Platform.Screen ScreenFromVisual(Avalonia.Visual visual)
+```
+
+#### Parameters
+
+`visual` [Avalonia.Visual](xref:Avalonia.Visual)
+
+A Visual for which to retrieve a Screen.
+
+
+#### Returns
+
+[Avalonia.Platform.Screen](xref:Avalonia.Platform.Screen)
+
+The [Avalonia.Platform.Screen](xref:Avalonia.Platform.Screen).
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-303ce34047"></span>
+
+### ScreenFromWindow Method
+
+Retrieves a Screen for the display that contains the specified [Avalonia.Controls.WindowBase](xref:Avalonia.Controls.WindowBase).
+
+```csharp
+public Avalonia.Platform.Screen ScreenFromWindow(Avalonia.Controls.WindowBase window)
+```
+
+#### Parameters
+
+`window` [Avalonia.Controls.WindowBase](xref:Avalonia.Controls.WindowBase)
+
+The window for which to retrieve the Screen.
+
+
+#### Returns
+
+[Avalonia.Platform.Screen](xref:Avalonia.Platform.Screen)
+
+The [Avalonia.Platform.Screen](xref:Avalonia.Platform.Screen).
+
+
+#### Exceptions
+
+- [Window platform implementation was already disposed.](xref:System.ObjectDisposedException)
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [All](#uid-a3f5947216) | Gets the list of all screens available on the device. |
+| [Primary](#uid-ed0f4ff833) | Gets the primary screen on the device. |
+| [ScreenCount](#uid-e84cc646f1) | Gets the total number of screens available on the device. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a3f5947216"></span>
+
+### All Property
+
+Gets the list of all screens available on the device.
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<Avalonia.Platform.Screen> All { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ed0f4ff833"></span>
+
+### Primary Property
+
+Gets the primary screen on the device.
+
+```csharp
+public Avalonia.Platform.Screen Primary { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e84cc646f1"></span>
+
+### ScreenCount Property
+
+Gets the total number of screens available on the device.
+
+```csharp
+public int ScreenCount { get; set; }
+```
+
+</section>
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [Changed](#uid-34ee15773c) | Event raised when any screen was changed. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-34ee15773c"></span>
+
+### Changed Event
+
+Event raised when any screen was changed.
+
+```csharp
+public event EventHandler Changed
+```
+
+</section>
+
+</ApiRefPage>
+

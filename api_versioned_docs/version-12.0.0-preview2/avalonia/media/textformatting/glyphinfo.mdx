@@ -1,0 +1,280 @@
+---
+title: 'GlyphInfo'
+hide_title: true
+slug: '/avalonia/media/textformatting/glyphinfo'
+uid: 'Avalonia.Media.TextFormatting.GlyphInfo'
+commentId: 'T:Avalonia.Media.TextFormatting.GlyphInfo'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Media.TextFormatting'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">GlyphInfo Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Media.TextFormatting</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Media/TextFormatting/GlyphInfo.cs">GlyphInfo.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Represents a single glyph.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct GlyphInfo
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> GlyphInfo
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;GlyphInfo&gt;
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [GlyphInfo](#uid-f1d5994730) | Represents a single glyph. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f1d5994730"></span>
+
+### GlyphInfo Constructor
+
+Represents a single glyph.
+
+```csharp
+public GlyphInfo(ushort GlyphIndex, int GlyphCluster, double GlyphAdvance, Avalonia.Vector GlyphOffset)
+```
+
+#### Parameters
+
+`GlyphIndex` ushort
+
+
+`GlyphCluster` int
+
+
+`GlyphAdvance` double
+
+
+`GlyphOffset` [Avalonia.Vector](xref:Avalonia.Vector)
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Deconstruct](#uid-ab8d3283d9) | No summary available. |
+| [Equals (2 overloads)](#uid-19ba01a61c) | No summary available. |
+| [GetHashCode](#uid-15b4313c33) | No summary available. |
+| [ToString](#uid-45af49321e) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ab8d3283d9"></span>
+
+### Deconstruct Method
+
+```csharp
+public void Deconstruct(ushort& GlyphIndex, int& GlyphCluster, double& GlyphAdvance, Avalonia.Vector& GlyphOffset)
+```
+
+#### Parameters
+
+`GlyphIndex` ushort&amp;
+
+
+`GlyphCluster` int&amp;
+
+
+`GlyphAdvance` double&amp;
+
+
+`GlyphOffset` [Avalonia.Vector](xref:Avalonia.Vector)&amp;
+
+
+</section>
+
+<span id="uid-19ba01a61c"></span>
+
+### Equals overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-92f6e3f156"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(Avalonia.Media.TextFormatting.GlyphInfo other)
+```
+
+##### Parameters
+
+`other` [Avalonia.Media.TextFormatting.GlyphInfo](xref:Avalonia.Media.TextFormatting.GlyphInfo)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a66ac15c0b"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(object obj)
+```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-15b4313c33"></span>
+
+### GetHashCode Method
+
+```csharp
+public int GetHashCode()
+```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-45af49321e"></span>
+
+### ToString Method
+
+```csharp
+public string ToString()
+```
+
+#### Returns
+
+string
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [GlyphAdvance](#uid-0f0ff5e687) | Get the glyph advance. |
+| [GlyphCluster](#uid-0badc778c8) | Get the glyph cluster. |
+| [GlyphIndex](#uid-8115f79672) | Get the glyph index. |
+| [GlyphOffset](#uid-c79bafbbdd) | Get the glyph offset. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0f0ff5e687"></span>
+
+### GlyphAdvance Property
+
+Get the glyph advance.
+
+```csharp
+public double GlyphAdvance { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0badc778c8"></span>
+
+### GlyphCluster Property
+
+Get the glyph cluster.
+
+```csharp
+public int GlyphCluster { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8115f79672"></span>
+
+### GlyphIndex Property
+
+Get the glyph index.
+
+```csharp
+public ushort GlyphIndex { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c79bafbbdd"></span>
+
+### GlyphOffset Property
+
+Get the glyph offset.
+
+```csharp
+public Avalonia.Vector GlyphOffset { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

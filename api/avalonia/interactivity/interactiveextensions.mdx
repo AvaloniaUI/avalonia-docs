@@ -1,0 +1,166 @@
+---
+title: 'InteractiveExtensions'
+hide_title: true
+slug: '/avalonia/interactivity/interactiveextensions'
+uid: 'Avalonia.Interactivity.InteractiveExtensions'
+commentId: 'T:Avalonia.Interactivity.InteractiveExtensions'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Interactivity'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">InteractiveExtensions Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Interactivity</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Interactivity/InteractiveExtensions.cs">InteractiveExtensions.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Provides extension methods for the [Avalonia.Interactivity.Interactive](xref:Avalonia.Interactivity.Interactive) interface.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class InteractiveExtensions
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> InteractiveExtensions
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [AddDisposableHandler](#uid-3f5f3f6277) | No summary available. |
+| [GetInteractiveParent](#uid-a47cd845b8) | No summary available. |
+| [GetObservable](#uid-3c143b6b8c) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3f5f3f6277"></span>
+
+### AddDisposableHandler Method
+
+```csharp
+public IDisposable AddDisposableHandler<TEventArgs>(Avalonia.Interactivity.Interactive o, Avalonia.Interactivity.RoutedEvent<TEventArgs><TEventArgs> routedEvent, EventHandler<TEventArgs> handler, Avalonia.Interactivity.RoutingStrategies routes, bool handledEventsToo)
+```
+
+#### Parameters
+
+`o` [Avalonia.Interactivity.Interactive](xref:Avalonia.Interactivity.Interactive)
+
+
+`routedEvent` [Avalonia.Interactivity.RoutedEvent](xref:Avalonia.Interactivity.RoutedEvent)&lt;TEventArgs&gt;&lt;TEventArgs&gt;
+
+
+`handler` EventHandler&lt;TEventArgs&gt;
+
+
+`routes` [Avalonia.Interactivity.RoutingStrategies](xref:Avalonia.Interactivity.RoutingStrategies)
+
+
+`handledEventsToo` bool
+
+
+#### Type Parameters
+
+`TEventArgs`
+
+
+#### Returns
+
+IDisposable
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a47cd845b8"></span>
+
+### GetInteractiveParent Method
+
+```csharp
+public Avalonia.Interactivity.Interactive GetInteractiveParent(Avalonia.Interactivity.Interactive o)
+```
+
+#### Parameters
+
+`o` [Avalonia.Interactivity.Interactive](xref:Avalonia.Interactivity.Interactive)
+
+
+#### Returns
+
+[Avalonia.Interactivity.Interactive](xref:Avalonia.Interactivity.Interactive)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3c143b6b8c"></span>
+
+### GetObservable Method
+
+```csharp
+public IObservable<TEventArgs> GetObservable<TEventArgs>(Avalonia.Interactivity.Interactive o, Avalonia.Interactivity.RoutedEvent<TEventArgs><TEventArgs> routedEvent, Avalonia.Interactivity.RoutingStrategies routes, bool handledEventsToo)
+```
+
+#### Parameters
+
+`o` [Avalonia.Interactivity.Interactive](xref:Avalonia.Interactivity.Interactive)
+
+
+`routedEvent` [Avalonia.Interactivity.RoutedEvent](xref:Avalonia.Interactivity.RoutedEvent)&lt;TEventArgs&gt;&lt;TEventArgs&gt;
+
+
+`routes` [Avalonia.Interactivity.RoutingStrategies](xref:Avalonia.Interactivity.RoutingStrategies)
+
+
+`handledEventsToo` bool
+
+
+#### Type Parameters
+
+`TEventArgs`
+
+
+#### Returns
+
+IObservable&lt;TEventArgs&gt;
+
+
+</section>
+
+</ApiRefPage>
+

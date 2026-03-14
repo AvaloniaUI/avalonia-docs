@@ -1,0 +1,501 @@
+---
+title: 'PointerPointProperties'
+hide_title: true
+slug: '/avalonia/input/pointerpointproperties'
+uid: 'Avalonia.Input.PointerPointProperties'
+commentId: 'T:Avalonia.Input.PointerPointProperties'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Input'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">PointerPointProperties Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Input</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Input/PointerPoint.cs">PointerPoint.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Describes the state of a pointer device when it generated a specific input.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct PointerPointProperties
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> PointerPointProperties
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;PointerPointProperties&gt;
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [PointerPointProperties (4 overloads)](#uid-66aa8d2aea) | No summary available. |
+
+<span id="uid-66aa8d2aea"></span>
+
+### PointerPointProperties overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-de467d6d46"></span>
+
+#### PointerPointProperties Constructor
+
+```csharp
+public PointerPointProperties()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-fa60e12cc6"></span>
+
+#### PointerPointProperties Constructor
+
+```csharp
+public PointerPointProperties(Avalonia.Input.RawInputModifiers modifiers, Avalonia.Input.PointerUpdateKind kind)
+```
+
+##### Parameters
+
+`modifiers` [Avalonia.Input.RawInputModifiers](xref:Avalonia.Input.RawInputModifiers)
+
+
+`kind` [Avalonia.Input.PointerUpdateKind](xref:Avalonia.Input.PointerUpdateKind)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-657fd9a21b"></span>
+
+#### PointerPointProperties Constructor
+
+```csharp
+public PointerPointProperties(Avalonia.Input.RawInputModifiers modifiers, Avalonia.Input.PointerUpdateKind kind, float twist, float pressure, float xTilt, float yTilt)
+```
+
+##### Parameters
+
+`modifiers` [Avalonia.Input.RawInputModifiers](xref:Avalonia.Input.RawInputModifiers)
+
+
+`kind` [Avalonia.Input.PointerUpdateKind](xref:Avalonia.Input.PointerUpdateKind)
+
+
+`twist` float
+
+
+`pressure` float
+
+
+`xTilt` float
+
+
+`yTilt` float
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-51f7050089"></span>
+
+#### PointerPointProperties Constructor
+
+```csharp
+public PointerPointProperties(Avalonia.Input.RawInputModifiers modifiers, Avalonia.Input.PointerUpdateKind kind, float twist, float pressure, float xTilt, float yTilt, Avalonia.Rect contactRect)
+```
+
+##### Parameters
+
+`modifiers` [Avalonia.Input.RawInputModifiers](xref:Avalonia.Input.RawInputModifiers)
+
+
+`kind` [Avalonia.Input.PointerUpdateKind](xref:Avalonia.Input.PointerUpdateKind)
+
+
+`twist` float
+
+
+`pressure` float
+
+
+`xTilt` float
+
+
+`yTilt` float
+
+
+`contactRect` [Avalonia.Rect](xref:Avalonia.Rect)
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Equals (2 overloads)](#uid-91af8e1622) | No summary available. |
+| [GetHashCode](#uid-304f283e0c) | No summary available. |
+| [ToString](#uid-b293b260b1) | No summary available. |
+
+<span id="uid-91af8e1622"></span>
+
+### Equals overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9f97f879e9"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(Avalonia.Input.PointerPointProperties other)
+```
+
+##### Parameters
+
+`other` [Avalonia.Input.PointerPointProperties](xref:Avalonia.Input.PointerPointProperties)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b0105f11ec"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(object obj)
+```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-304f283e0c"></span>
+
+### GetHashCode Method
+
+```csharp
+public int GetHashCode()
+```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b293b260b1"></span>
+
+### ToString Method
+
+```csharp
+public string ToString()
+```
+
+#### Returns
+
+string
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [ContactRect](#uid-67375c616c) | Gets the bounding rectangle of the contact area (typically from touch input). |
+| [IsBarrelButtonPressed](#uid-ede1fc6e59) | Gets whether the barrel button of the pen/stylus device was pressed when this input occurred. |
+| [IsEraser](#uid-a86e4b9660) | Gets whether the input was generated by the use of a pen eraser. |
+| [IsInverted](#uid-dd43613e6d) | Gets whether the input was generated by an inverted digitizer pen. |
+| [IsLeftButtonPressed](#uid-d40431159c) | Gets whether the device's primary action (e.g. [Avalonia.Input.MouseButton.Left](xref:Avalonia.Input.MouseButton.Left)) was active when this input occurred. |
+| [IsMiddleButtonPressed](#uid-fc83916e07) | Gets whether the device's tertiary action (e.g. [Avalonia.Input.MouseButton.Middle](xref:Avalonia.Input.MouseButton.Middle)) was active when this input occurred. |
+| [IsRightButtonPressed](#uid-26271e4e16) | Gets whether the device's secondary action (e.g. [Avalonia.Input.MouseButton.Right](xref:Avalonia.Input.MouseButton.Right)) was active when this input occurred. |
+| [IsXButton1Pressed](#uid-a07e0d5d1e) | Gets whether the device's first extended action (e.g. [Avalonia.Input.MouseButton.XButton1](xref:Avalonia.Input.MouseButton.XButton1)) was active when this input occurred. |
+| [IsXButton2Pressed](#uid-6f3ec97ac0) | Gets whether the device's second extended action (e.g. [Avalonia.Input.MouseButton.XButton2](xref:Avalonia.Input.MouseButton.XButton2)) was active when this input occurred. |
+| [None](#uid-3403297dba) | No summary available. |
+| [PointerUpdateKind](#uid-60dd59a7f6) | Gets the state change that triggered this input. This is typically a button press or release. |
+| [Pressure](#uid-0b476d4ba2) | Gets the force that the pointer device (typically a pen/stylus) was exerting on the surface of the digitizer when this input occurred. |
+| [Twist](#uid-56ea0b90ef) | Gets the clockwise rotation in degrees of the pen around its own major axis (such as when the user spins the pen in their fingers) when this input occurred. |
+| [XTilt](#uid-d2ea63f287) | Gets how many degrees of rotation the pen/stylus was tilted left (negative values) or right (positive values) when this input occurred. |
+| [YTilt](#uid-0a27fbbced) | Gets how many degrees of rotation the pen/stylus was tilted up (negative values) or down (positive values) when this input occurred. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-67375c616c"></span>
+
+### ContactRect Property
+
+Gets the bounding rectangle of the contact area (typically from touch input).
+
+```csharp
+public Avalonia.Rect ContactRect { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ede1fc6e59"></span>
+
+### IsBarrelButtonPressed Property
+
+Gets whether the barrel button of the pen/stylus device was pressed when this input occurred.
+
+```csharp
+public bool IsBarrelButtonPressed { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a86e4b9660"></span>
+
+### IsEraser Property
+
+Gets whether the input was generated by the use of a pen eraser.
+
+```csharp
+public bool IsEraser { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-dd43613e6d"></span>
+
+### IsInverted Property
+
+Gets whether the input was generated by an inverted digitizer pen.
+
+```csharp
+public bool IsInverted { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d40431159c"></span>
+
+### IsLeftButtonPressed Property
+
+Gets whether the device's primary action (e.g. [Avalonia.Input.MouseButton.Left](xref:Avalonia.Input.MouseButton.Left)) was active when this input occurred.
+
+```csharp
+public bool IsLeftButtonPressed { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-fc83916e07"></span>
+
+### IsMiddleButtonPressed Property
+
+Gets whether the device's tertiary action (e.g. [Avalonia.Input.MouseButton.Middle](xref:Avalonia.Input.MouseButton.Middle)) was active when this input occurred.
+
+```csharp
+public bool IsMiddleButtonPressed { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-26271e4e16"></span>
+
+### IsRightButtonPressed Property
+
+Gets whether the device's secondary action (e.g. [Avalonia.Input.MouseButton.Right](xref:Avalonia.Input.MouseButton.Right)) was active when this input occurred.
+
+```csharp
+public bool IsRightButtonPressed { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a07e0d5d1e"></span>
+
+### IsXButton1Pressed Property
+
+Gets whether the device's first extended action (e.g. [Avalonia.Input.MouseButton.XButton1](xref:Avalonia.Input.MouseButton.XButton1)) was active when this input occurred.
+
+```csharp
+public bool IsXButton1Pressed { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6f3ec97ac0"></span>
+
+### IsXButton2Pressed Property
+
+Gets whether the device's second extended action (e.g. [Avalonia.Input.MouseButton.XButton2](xref:Avalonia.Input.MouseButton.XButton2)) was active when this input occurred.
+
+```csharp
+public bool IsXButton2Pressed { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3403297dba"></span>
+
+### None Property
+
+```csharp
+public Avalonia.Input.PointerPointProperties None { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-60dd59a7f6"></span>
+
+### PointerUpdateKind Property
+
+Gets the state change that triggered this input. This is typically a button press or release.
+
+```csharp
+public Avalonia.Input.PointerUpdateKind PointerUpdateKind { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0b476d4ba2"></span>
+
+### Pressure Property
+
+Gets the force that the pointer device (typically a pen/stylus) was exerting on the surface of the digitizer when this input occurred.
+
+```csharp
+public float Pressure { get; set; }
+```
+
+#### Returns
+
+A value from 0 to 1.0. The default value is 0.5.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-56ea0b90ef"></span>
+
+### Twist Property
+
+Gets the clockwise rotation in degrees of the pen around its own major axis (such as when the user spins the pen in their fingers) when this input occurred.
+
+```csharp
+public float Twist { get; set; }
+```
+
+#### Returns
+
+A value between 0.0 and 359.0 in degrees of rotation. The default value is 0.0.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d2ea63f287"></span>
+
+### XTilt Property
+
+Gets how many degrees of rotation the pen/stylus was tilted left (negative values) or right (positive values) when this input occurred.
+
+```csharp
+public float XTilt { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0a27fbbced"></span>
+
+### YTilt Property
+
+Gets how many degrees of rotation the pen/stylus was tilted up (negative values) or down (positive values) when this input occurred.
+
+```csharp
+public float YTilt { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

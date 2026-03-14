@@ -1,0 +1,282 @@
+---
+title: 'ExpanderCell<TModel>'
+hide_title: true
+slug: '/avalonia/controls/models/treedatagrid/expandercell-1'
+uid: 'Avalonia.Controls.Models.TreeDataGrid.ExpanderCell`1'
+commentId: 'T:Avalonia.Controls.Models.TreeDataGrid.ExpanderCell`1'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.TreeDataGrid'
+assembly: 'Avalonia.Controls.TreeDataGrid'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Models.TreeDataGrid'
+tfms:
+  - 'net8.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ExpanderCell&lt;TModel&gt; Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Models.TreeDataGrid</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Represents a cell in a hierarchical [Avalonia.Controls.Models.TreeDataGrid](xref:Avalonia.Controls.Models.TreeDataGrid) that can expand or collapse
+to reveal nested data.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class ExpanderCell<TModel>
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../notifyingbase">NotifyingBase</a> <span className="apiref-page__relation-separator">-&gt;</span> ExpanderCell&lt;TModel&gt;
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="icell">ICell</a>, <a href="iexpander">IExpander</a>, <a href="iexpandercell">IExpanderCell</a>, IDisposable
+</div>
+</div>
+
+## Remarks
+
+The [Avalonia.Controls.Models.TreeDataGrid.ExpanderCell&lt;T&gt;](xref:Avalonia.Controls.Models.TreeDataGrid.ExpanderCell%601) class wraps another cell (typically a
+[Avalonia.Controls.Models.TreeDataGrid.TextCell&lt;T&gt;](xref:Avalonia.Controls.Models.TreeDataGrid.TextCell%601)) and adds expansion functionality to display hierarchical data
+in a tree structure. It manages the expanded/collapsed state of a row and the visibility of
+the expander button.
+
+This class serves as the data model that backs the
+[Avalonia.Controls.Primitives.TreeDataGridExpanderCell](xref:Avalonia.Controls.Primitives.TreeDataGridExpanderCell) primitive control. The
+primitive control handles UI rendering and user interactions, while this model manages the
+underlying expansion state and coordinates with its parent row.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [ExpanderCell&lt;TModel&gt;](#uid-17b0dd0701) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-17b0dd0701"></span>
+
+### ExpanderCell&lt;TModel&gt; Constructor
+
+```csharp
+public ExpanderCell<TModel>(Avalonia.Controls.Models.TreeDataGrid.ICell inner, Avalonia.Controls.Models.TreeDataGrid.IExpanderRow<TModel><TModel> row, IObservable<bool> showExpander, Avalonia.Experimental.Data.Core.TypedBindingExpression<TIn,TOut><TModel, bool> isExpanded)
+```
+
+#### Parameters
+
+`inner` [Avalonia.Controls.Models.TreeDataGrid.ICell](xref:Avalonia.Controls.Models.TreeDataGrid.ICell)
+
+
+`row` Avalonia.Controls.Models.TreeDataGrid.IExpanderRow&lt;TModel&gt;&lt;TModel&gt;
+
+
+`showExpander` IObservable&lt;bool&gt;
+
+
+`isExpanded` Avalonia.Experimental.Data.Core.TypedBindingExpression&lt;TIn,TOut&gt;&lt;TModel, bool&gt;
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Dispose](#uid-1824f69c98) | Releases resources used by the [Avalonia.Controls.Models.TreeDataGrid.ExpanderCell&lt;T&gt;](xref:Avalonia.Controls.Models.TreeDataGrid.ExpanderCell%601). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1824f69c98"></span>
+
+### Dispose Method
+
+Releases resources used by the [Avalonia.Controls.Models.TreeDataGrid.ExpanderCell&lt;T&gt;](xref:Avalonia.Controls.Models.TreeDataGrid.ExpanderCell%601).
+
+```csharp
+public void Dispose()
+```
+
+#### Remarks
+
+Unsubscribes from events and disposes subscriptions to prevent memory leaks.
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [CanEdit](#uid-b30b2239c3) | Gets a value indicating whether the cell can enter edit mode. |
+| [Content](#uid-9839a9474b) | Gets the inner cell that provides the content for this expander cell. |
+| [EditGestures](#uid-f0bdff5c78) | Gets the gestures that cause the inner cell to enter edit mode. |
+| [IsExpanded](#uid-10526e9088) | Gets or sets a value indicating whether the row is expanded to show child rows. |
+| [Row](#uid-528f67156d) | Gets the row that this cell belongs to. |
+| [ShowExpander](#uid-71a01a5bcf) | Gets a value indicating whether the expander button should be shown. |
+| [Value](#uid-2eaf986250) | Gets the value of the cell. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b30b2239c3"></span>
+
+### CanEdit Property
+
+Gets a value indicating whether the cell can enter edit mode.
+
+```csharp
+public bool CanEdit { get; set; }
+```
+
+#### Remarks
+
+This property delegates to the inner cell's [Avalonia.Controls.Models.TreeDataGrid.ICell.CanEdit](xref:Avalonia.Controls.Models.TreeDataGrid.ICell.CanEdit) property.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9839a9474b"></span>
+
+### Content Property
+
+Gets the inner cell that provides the content for this expander cell.
+
+```csharp
+public Avalonia.Controls.Models.TreeDataGrid.ICell Content { get; set; }
+```
+
+#### Remarks
+
+The inner cell is wrapped by this expander cell and provides the actual content
+display (such as text or a checkbox).
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f0bdff5c78"></span>
+
+### EditGestures Property
+
+Gets the gestures that cause the inner cell to enter edit mode.
+
+```csharp
+public Avalonia.Controls.Models.TreeDataGrid.BeginEditGestures EditGestures { get; set; }
+```
+
+#### Remarks
+
+This property delegates to the inner cell's [Avalonia.Controls.Models.TreeDataGrid.ICell.EditGestures](xref:Avalonia.Controls.Models.TreeDataGrid.ICell.EditGestures) property.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-10526e9088"></span>
+
+### IsExpanded Property
+
+Gets or sets a value indicating whether the row is expanded to show child rows.
+
+```csharp
+public bool IsExpanded { get; set; }
+```
+
+#### Remarks
+
+When set, this property updates the expansion state of both the cell and its associated row.
+Setting it to true expands the row to show its children, while setting it to false
+collapses the row to hide its children.
+
+This property delegates to the row's [Avalonia.Controls.Models.TreeDataGrid.IExpander.IsExpanded](xref:Avalonia.Controls.Models.TreeDataGrid.IExpander.IsExpanded) property.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-528f67156d"></span>
+
+### Row Property
+
+Gets the row that this cell belongs to.
+
+```csharp
+public Avalonia.Controls.Models.TreeDataGrid.IExpanderRow<TModel><TModel> Row { get; set; }
+```
+
+#### Remarks
+
+The row provides context about the position of this cell in the hierarchical structure
+and manages the expansion state at the row level.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-71a01a5bcf"></span>
+
+### ShowExpander Property
+
+Gets a value indicating whether the expander button should be shown.
+
+```csharp
+public bool ShowExpander { get; set; }
+```
+
+#### Remarks
+
+When true, the cell displays an expander button that can be clicked to expand or collapse the row.
+When false, no expander is shown, indicating that the row has no children to display.
+This property delegates to the row's [Avalonia.Controls.Models.TreeDataGrid.IExpander.ShowExpander](xref:Avalonia.Controls.Models.TreeDataGrid.IExpander.ShowExpander) property.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2eaf986250"></span>
+
+### Value Property
+
+Gets the value of the cell.
+
+```csharp
+public object Value { get; set; }
+```
+
+#### Remarks
+
+This property delegates to the inner cell's [Avalonia.Controls.Models.TreeDataGrid.ICell.Value](xref:Avalonia.Controls.Models.TreeDataGrid.ICell.Value) property.
+
+</section>
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [PropertyChanged](../notifyingbase.mdx#uid-cfba2a29fd) | Occurs when a property value changes. Inherited from [NotifyingBase](../notifyingbase.mdx). |
+
+</ApiRefPage>
+

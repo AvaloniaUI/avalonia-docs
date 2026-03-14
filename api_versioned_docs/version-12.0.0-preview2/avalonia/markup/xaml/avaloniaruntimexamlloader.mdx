@@ -1,0 +1,254 @@
+---
+title: 'AvaloniaRuntimeXamlLoader'
+hide_title: true
+slug: '/avalonia/markup/xaml/avaloniaruntimexamlloader'
+uid: 'Avalonia.Markup.Xaml.AvaloniaRuntimeXamlLoader'
+commentId: 'T:Avalonia.Markup.Xaml.AvaloniaRuntimeXamlLoader'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Markup.Xaml.Loader'
+assembly: 'Avalonia.Markup.Xaml.Loader'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Markup.Xaml'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">AvaloniaRuntimeXamlLoader Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Markup.Xaml</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Markup.Xaml.Loader</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Markup.Xaml.Loader</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Markup/Avalonia.Markup.Xaml.Loader/AvaloniaRuntimeXamlLoader.cs">AvaloniaRuntimeXamlLoader.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class AvaloniaRuntimeXamlLoader
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> AvaloniaRuntimeXamlLoader
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Load (3 overloads)](#uid-dd1980b716) | Loads XAML from a stream. |
+| [LoadGroup](#uid-596d84fb43) | No summary available. |
+| [Parse](#uid-bdbb362a91) | Parse XAML from a string. |
+
+<span id="uid-dd1980b716"></span>
+
+### Load overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5c3aa114a8"></span>
+
+#### Load Method
+
+Loads XAML from a stream.
+
+```csharp
+public object Load(Avalonia.Markup.Xaml.RuntimeXamlLoaderDocument document, Avalonia.Markup.Xaml.RuntimeXamlLoaderConfiguration configuration)
+```
+
+##### Parameters
+
+`document` [Avalonia.Markup.Xaml.RuntimeXamlLoaderDocument](xref:Avalonia.Markup.Xaml.RuntimeXamlLoaderDocument)
+
+The stream containing the XAML.
+
+
+`configuration` [Avalonia.Markup.Xaml.RuntimeXamlLoaderConfiguration](xref:Avalonia.Markup.Xaml.RuntimeXamlLoaderConfiguration)
+
+Xaml loader configuration.
+
+
+##### Returns
+
+object
+
+The loaded object.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-be4a5cbb27"></span>
+
+#### Load Method
+
+Loads XAML from a stream.
+
+```csharp
+public object Load(System.IO.Stream stream, System.Reflection.Assembly localAssembly, object rootInstance, Uri uri, bool designMode)
+```
+
+##### Parameters
+
+`stream` System.IO.Stream
+
+The stream containing the XAML.
+
+
+`localAssembly` System.Reflection.Assembly
+
+Default assembly for clr-namespace:
+
+
+`rootInstance` object
+
+The optional instance into which the XAML should be loaded.
+
+
+`uri` Uri
+
+The URI of the XAML being loaded.
+
+
+`designMode` bool
+
+Indicates whether the XAML is being loaded in design mode.
+
+
+##### Returns
+
+object
+
+The loaded object.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c87fe483d8"></span>
+
+#### Load Method
+
+Loads XAML from a string.
+
+```csharp
+public object Load(string xaml, System.Reflection.Assembly localAssembly, object rootInstance, Uri uri, bool designMode)
+```
+
+##### Parameters
+
+`xaml` string
+
+The string containing the XAML.
+
+
+`localAssembly` System.Reflection.Assembly
+
+Default assembly for clr-namespace:.
+
+
+`rootInstance` object
+
+The optional instance into which the XAML should be loaded.
+
+
+`uri` Uri
+
+The URI of the XAML being loaded.
+
+
+`designMode` bool
+
+Indicates whether the XAML is being loaded in design mode.
+
+
+##### Returns
+
+object
+
+The loaded object.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-596d84fb43"></span>
+
+### LoadGroup Method
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<object> LoadGroup(System.Collections.Generic.IReadOnlyCollection<Avalonia.Markup.Xaml.RuntimeXamlLoaderDocument> documents, Avalonia.Markup.Xaml.RuntimeXamlLoaderConfiguration configuration)
+```
+
+#### Parameters
+
+`documents` System.Collections.Generic.IReadOnlyCollection&lt;[Avalonia.Markup.Xaml.RuntimeXamlLoaderDocument](xref:Avalonia.Markup.Xaml.RuntimeXamlLoaderDocument)&gt;
+
+
+`configuration` [Avalonia.Markup.Xaml.RuntimeXamlLoaderConfiguration](xref:Avalonia.Markup.Xaml.RuntimeXamlLoaderConfiguration)
+
+
+#### Returns
+
+System.Collections.Generic.IReadOnlyList&lt;object&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-bdbb362a91"></span>
+
+### Parse Method
+
+Parse XAML from a string.
+
+```csharp
+public T Parse<T>(string xaml, System.Reflection.Assembly localAssembly)
+```
+
+#### Parameters
+
+`xaml` string
+
+The string containing the XAML.
+
+
+`localAssembly` System.Reflection.Assembly
+
+Default assembly for clr-namespace:.
+
+
+#### Returns
+
+object
+
+The loaded object.
+
+
+</section>
+
+</ApiRefPage>
+

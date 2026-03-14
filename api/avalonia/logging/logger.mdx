@@ -1,0 +1,186 @@
+---
+title: 'Logger'
+hide_title: true
+slug: '/avalonia/logging/logger'
+uid: 'Avalonia.Logging.Logger'
+commentId: 'T:Avalonia.Logging.Logger'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Logging'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">Logger Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Logging</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Logging/Logger.cs">Logger.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Logs avalonia messages.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class Logger
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> Logger
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [IsEnabled](#uid-7849073e70) | Checks if given log level is enabled. |
+| [TryGet (2 overloads)](#uid-a80b9554dc) | Returns parametrized logging sink if given log level is enabled. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7849073e70"></span>
+
+### IsEnabled Method
+
+Checks if given log level is enabled.
+
+```csharp
+public bool IsEnabled(Avalonia.Logging.LogEventLevel level, string area)
+```
+
+#### Parameters
+
+`level` [Avalonia.Logging.LogEventLevel](xref:Avalonia.Logging.LogEventLevel)
+
+The log event level.
+
+
+`area` string
+
+The log area.
+
+
+#### Returns
+
+bool
+
+if given log level is enabled.
+
+
+</section>
+
+<span id="uid-a80b9554dc"></span>
+
+### TryGet overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-921fb0a909"></span>
+
+#### TryGet Method
+
+Returns parametrized logging sink if given log level is enabled.
+
+```csharp
+public Nullable<Avalonia.Logging.ParametrizedLogger> TryGet(Avalonia.Logging.LogEventLevel level, string area)
+```
+
+##### Parameters
+
+`level` [Avalonia.Logging.LogEventLevel](xref:Avalonia.Logging.LogEventLevel)
+
+The log event level.
+
+
+`area` string
+
+The area that the event originates from.
+
+
+##### Returns
+
+Nullable&lt;[Avalonia.Logging.ParametrizedLogger](xref:Avalonia.Logging.ParametrizedLogger)&gt;
+
+Log sink or if log level is not enabled.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-74962784f1"></span>
+
+#### TryGet Method
+
+```csharp
+public bool TryGet(Avalonia.Logging.LogEventLevel level, string area, Avalonia.Logging.ParametrizedLogger& outLogger)
+```
+
+##### Parameters
+
+`level` [Avalonia.Logging.LogEventLevel](xref:Avalonia.Logging.LogEventLevel)
+
+
+`area` string
+
+
+`outLogger` [Avalonia.Logging.ParametrizedLogger](xref:Avalonia.Logging.ParametrizedLogger)&amp;
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Sink](#uid-4978b18e21) | Gets or sets the application-defined sink that receives the messages. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4978b18e21"></span>
+
+### Sink Property
+
+Gets or sets the application-defined sink that receives the messages.
+
+```csharp
+public Avalonia.Logging.ILogSink Sink { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

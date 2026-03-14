@@ -1,0 +1,149 @@
+---
+title: 'DataTransfer'
+hide_title: true
+slug: '/avalonia/input/datatransfer'
+uid: 'Avalonia.Input.DataTransfer'
+commentId: 'T:Avalonia.Input.DataTransfer'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Input'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">DataTransfer Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Input</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Input/DataTransfer.cs">DataTransfer.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A mutable implementation of [Avalonia.Input.IDataTransfer](xref:Avalonia.Input.IDataTransfer) and [Avalonia.Input.IAsyncDataTransfer](xref:Avalonia.Input.IAsyncDataTransfer).
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class DataTransfer
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> DataTransfer
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="iasyncdatatransfer">IAsyncDataTransfer</a>, <a href="idatatransfer">IDataTransfer</a>, IDisposable
+</div>
+</div>
+
+## Remarks
+
+While it also implements [Avalonia.Input.IAsyncDataTransfer](xref:Avalonia.Input.IAsyncDataTransfer), this class always returns data synchronously.
+For advanced usages, consider implementing [Avalonia.Input.IAsyncDataTransfer](xref:Avalonia.Input.IAsyncDataTransfer) directly.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [DataTransfer](#uid-ca3632a975) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ca3632a975"></span>
+
+### DataTransfer Constructor
+
+```csharp
+public DataTransfer()
+```
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Add](#uid-5985e0d674) | Adds an existing [Avalonia.Input.DataTransferItem](xref:Avalonia.Input.DataTransferItem) to this object. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5985e0d674"></span>
+
+### Add Method
+
+Adds an existing [Avalonia.Input.DataTransferItem](xref:Avalonia.Input.DataTransferItem) to this object.
+
+```csharp
+public void Add(Avalonia.Input.DataTransferItem item)
+```
+
+#### Parameters
+
+`item` [Avalonia.Input.DataTransferItem](xref:Avalonia.Input.DataTransferItem)
+
+The item to add.
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Formats](#uid-5485a4a5a3) | Gets the formats supported by this item. |
+| [Items](#uid-9f67baaab8) | Gets a list of [Avalonia.Input.DataTransferItem](xref:Avalonia.Input.DataTransferItem) contained in this object. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5485a4a5a3"></span>
+
+### Formats Property
+
+Gets the formats supported by this item.
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<Avalonia.Input.DataFormat> Formats { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9f67baaab8"></span>
+
+### Items Property
+
+Gets a list of [Avalonia.Input.DataTransferItem](xref:Avalonia.Input.DataTransferItem) contained in this object.
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<Avalonia.Input.DataTransferItem> Items { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

@@ -1,0 +1,497 @@
+---
+title: 'CompiledBindingPathBuilder'
+hide_title: true
+slug: '/avalonia/data/compiledbindingpathbuilder'
+uid: 'Avalonia.Data.CompiledBindingPathBuilder'
+commentId: 'T:Avalonia.Data.CompiledBindingPathBuilder'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Data'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">CompiledBindingPathBuilder Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Data</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Data/CompiledBindingPath.cs">CompiledBindingPath.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class CompiledBindingPathBuilder
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> CompiledBindingPathBuilder
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [CompiledBindingPathBuilder](#uid-47aba4dc64) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-47aba4dc64"></span>
+
+### CompiledBindingPathBuilder Constructor
+
+```csharp
+public CompiledBindingPathBuilder()
+```
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Ancestor](#uid-306caa81e8) | No summary available. |
+| [ArrayElement](#uid-86e5b96f9e) | No summary available. |
+| [Build](#uid-a234b6b78f) | No summary available. |
+| [Command](#uid-19390708c5) | No summary available. |
+| [ElementName](#uid-6c1a4a3d18) | No summary available. |
+| [Method (2 overloads)](#uid-47fc2ea1d9) | No summary available. |
+| [Not](#uid-f7d6c7a72c) | No summary available. |
+| [Property (2 overloads)](#uid-76400c934d) | No summary available. |
+| [Self](#uid-27bd01ca27) | No summary available. |
+| [StreamObservable](#uid-8d5b7b27af) | No summary available. |
+| [StreamTask](#uid-bb37dceed6) | No summary available. |
+| [TemplatedParent](#uid-999e3840df) | No summary available. |
+| [TypeCast (2 overloads)](#uid-531e967f7a) | No summary available. |
+| [VisualAncestor](#uid-7e1f29e74f) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-306caa81e8"></span>
+
+### Ancestor Method
+
+```csharp
+public Avalonia.Data.CompiledBindingPathBuilder Ancestor(Type ancestorType, int level)
+```
+
+#### Parameters
+
+`ancestorType` Type
+
+
+`level` int
+
+
+#### Returns
+
+[Avalonia.Data.CompiledBindingPathBuilder](xref:Avalonia.Data.CompiledBindingPathBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-86e5b96f9e"></span>
+
+### ArrayElement Method
+
+```csharp
+public Avalonia.Data.CompiledBindingPathBuilder ArrayElement(int[] indices, Type elementType)
+```
+
+#### Parameters
+
+`indices` int[]
+
+
+`elementType` Type
+
+
+#### Returns
+
+[Avalonia.Data.CompiledBindingPathBuilder](xref:Avalonia.Data.CompiledBindingPathBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a234b6b78f"></span>
+
+### Build Method
+
+```csharp
+public Avalonia.Data.CompiledBindingPath Build()
+```
+
+#### Returns
+
+[Avalonia.Data.CompiledBindingPath](xref:Avalonia.Data.CompiledBindingPath)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-19390708c5"></span>
+
+### Command Method
+
+```csharp
+public Avalonia.Data.CompiledBindingPathBuilder Command(string methodName, Action<object, object> executeHelper, Func<object, object, bool> canExecuteHelper, string[] dependsOnProperties)
+```
+
+#### Parameters
+
+`methodName` string
+
+
+`executeHelper` Action&lt;object, object&gt;
+
+
+`canExecuteHelper` Func&lt;object, object, bool&gt;
+
+
+`dependsOnProperties` string[]
+
+
+#### Returns
+
+[Avalonia.Data.CompiledBindingPathBuilder](xref:Avalonia.Data.CompiledBindingPathBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6c1a4a3d18"></span>
+
+### ElementName Method
+
+```csharp
+public Avalonia.Data.CompiledBindingPathBuilder ElementName(Avalonia.Controls.INameScope nameScope, string name)
+```
+
+#### Parameters
+
+`nameScope` [Avalonia.Controls.INameScope](xref:Avalonia.Controls.INameScope)
+
+
+`name` string
+
+
+#### Returns
+
+[Avalonia.Data.CompiledBindingPathBuilder](xref:Avalonia.Data.CompiledBindingPathBuilder)
+
+
+</section>
+
+<span id="uid-47fc2ea1d9"></span>
+
+### Method overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-89a320460f"></span>
+
+#### Method Method
+
+```csharp
+public Avalonia.Data.CompiledBindingPathBuilder Method(RuntimeMethodHandle handle, RuntimeTypeHandle delegateType)
+```
+
+##### Parameters
+
+`handle` RuntimeMethodHandle
+
+
+`delegateType` RuntimeTypeHandle
+
+
+##### Returns
+
+[Avalonia.Data.CompiledBindingPathBuilder](xref:Avalonia.Data.CompiledBindingPathBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d41527824e"></span>
+
+#### Method Method
+
+```csharp
+public Avalonia.Data.CompiledBindingPathBuilder Method(RuntimeMethodHandle handle, RuntimeTypeHandle delegateType, bool acceptsNull)
+```
+
+##### Parameters
+
+`handle` RuntimeMethodHandle
+
+
+`delegateType` RuntimeTypeHandle
+
+
+`acceptsNull` bool
+
+
+##### Returns
+
+[Avalonia.Data.CompiledBindingPathBuilder](xref:Avalonia.Data.CompiledBindingPathBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f7d6c7a72c"></span>
+
+### Not Method
+
+```csharp
+public Avalonia.Data.CompiledBindingPathBuilder Not()
+```
+
+#### Returns
+
+[Avalonia.Data.CompiledBindingPathBuilder](xref:Avalonia.Data.CompiledBindingPathBuilder)
+
+
+</section>
+
+<span id="uid-76400c934d"></span>
+
+### Property overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3aaabcd6ca"></span>
+
+#### Property Method
+
+```csharp
+public Avalonia.Data.CompiledBindingPathBuilder Property(Avalonia.Data.Core.IPropertyInfo info, Func<WeakReference<object>, Avalonia.Data.Core.IPropertyInfo, Avalonia.Data.Core.Plugins.IPropertyAccessor> accessorFactory)
+```
+
+##### Parameters
+
+`info` [Avalonia.Data.Core.IPropertyInfo](xref:Avalonia.Data.Core.IPropertyInfo)
+
+
+`accessorFactory` Func&lt;WeakReference&lt;object&gt;, [Avalonia.Data.Core.IPropertyInfo](xref:Avalonia.Data.Core.IPropertyInfo), [Avalonia.Data.Core.Plugins.IPropertyAccessor](xref:Avalonia.Data.Core.Plugins.IPropertyAccessor)&gt;
+
+
+##### Returns
+
+[Avalonia.Data.CompiledBindingPathBuilder](xref:Avalonia.Data.CompiledBindingPathBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-88866f09d2"></span>
+
+#### Property Method
+
+```csharp
+public Avalonia.Data.CompiledBindingPathBuilder Property(Avalonia.Data.Core.IPropertyInfo info, Func<WeakReference<object>, Avalonia.Data.Core.IPropertyInfo, Avalonia.Data.Core.Plugins.IPropertyAccessor> accessorFactory, bool acceptsNull)
+```
+
+##### Parameters
+
+`info` [Avalonia.Data.Core.IPropertyInfo](xref:Avalonia.Data.Core.IPropertyInfo)
+
+
+`accessorFactory` Func&lt;WeakReference&lt;object&gt;, [Avalonia.Data.Core.IPropertyInfo](xref:Avalonia.Data.Core.IPropertyInfo), [Avalonia.Data.Core.Plugins.IPropertyAccessor](xref:Avalonia.Data.Core.Plugins.IPropertyAccessor)&gt;
+
+
+`acceptsNull` bool
+
+
+##### Returns
+
+[Avalonia.Data.CompiledBindingPathBuilder](xref:Avalonia.Data.CompiledBindingPathBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-27bd01ca27"></span>
+
+### Self Method
+
+```csharp
+public Avalonia.Data.CompiledBindingPathBuilder Self()
+```
+
+#### Returns
+
+[Avalonia.Data.CompiledBindingPathBuilder](xref:Avalonia.Data.CompiledBindingPathBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8d5b7b27af"></span>
+
+### StreamObservable Method
+
+```csharp
+public Avalonia.Data.CompiledBindingPathBuilder StreamObservable()
+```
+
+#### Type Parameters
+
+`T`
+
+
+#### Returns
+
+[Avalonia.Data.CompiledBindingPathBuilder](xref:Avalonia.Data.CompiledBindingPathBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-bb37dceed6"></span>
+
+### StreamTask Method
+
+```csharp
+public Avalonia.Data.CompiledBindingPathBuilder StreamTask()
+```
+
+#### Type Parameters
+
+`T`
+
+
+#### Returns
+
+[Avalonia.Data.CompiledBindingPathBuilder](xref:Avalonia.Data.CompiledBindingPathBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-999e3840df"></span>
+
+### TemplatedParent Method
+
+```csharp
+public Avalonia.Data.CompiledBindingPathBuilder TemplatedParent()
+```
+
+#### Returns
+
+[Avalonia.Data.CompiledBindingPathBuilder](xref:Avalonia.Data.CompiledBindingPathBuilder)
+
+
+</section>
+
+<span id="uid-531e967f7a"></span>
+
+### TypeCast overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-259cf49e2f"></span>
+
+#### TypeCast Method
+
+```csharp
+public Avalonia.Data.CompiledBindingPathBuilder TypeCast<T>()
+```
+
+##### Type Parameters
+
+`T`
+
+
+##### Returns
+
+[Avalonia.Data.CompiledBindingPathBuilder](xref:Avalonia.Data.CompiledBindingPathBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-43c5c4957a"></span>
+
+#### TypeCast Method
+
+```csharp
+public Avalonia.Data.CompiledBindingPathBuilder TypeCast(Type targetType)
+```
+
+##### Parameters
+
+`targetType` Type
+
+
+##### Returns
+
+[Avalonia.Data.CompiledBindingPathBuilder](xref:Avalonia.Data.CompiledBindingPathBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7e1f29e74f"></span>
+
+### VisualAncestor Method
+
+```csharp
+public Avalonia.Data.CompiledBindingPathBuilder VisualAncestor(Type ancestorType, int level)
+```
+
+#### Parameters
+
+`ancestorType` Type
+
+
+`level` int
+
+
+#### Returns
+
+[Avalonia.Data.CompiledBindingPathBuilder](xref:Avalonia.Data.CompiledBindingPathBuilder)
+
+
+</section>
+
+</ApiRefPage>
+

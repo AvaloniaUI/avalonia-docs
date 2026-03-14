@@ -1,0 +1,403 @@
+---
+title: 'Thickness'
+hide_title: true
+slug: '/avalonia/thickness'
+uid: 'Avalonia.Thickness'
+commentId: 'T:Avalonia.Thickness'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">Thickness Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Thickness.cs">Thickness.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Describes the thickness of a frame around a rectangle.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct Thickness
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> Thickness
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;Thickness&gt;
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [Thickness (3 overloads)](#uid-7d8cc44302) | Initializes a new instance of the [Avalonia.Thickness](xref:Avalonia.Thickness) structure. |
+
+<span id="uid-7d8cc44302"></span>
+
+### Thickness overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d7c803fcd2"></span>
+
+#### Thickness Constructor
+
+Initializes a new instance of the [Avalonia.Thickness](xref:Avalonia.Thickness) structure.
+
+```csharp
+public Thickness(double uniformLength)
+```
+
+##### Parameters
+
+`uniformLength` double
+
+The length that should be applied to all sides.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-704e74d3bb"></span>
+
+#### Thickness Constructor
+
+Initializes a new instance of the [Avalonia.Thickness](xref:Avalonia.Thickness) structure.
+
+```csharp
+public Thickness(double horizontal, double vertical)
+```
+
+##### Parameters
+
+`horizontal` double
+
+The thickness on the left and right.
+
+
+`vertical` double
+
+The thickness on the top and bottom.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a4b04a1941"></span>
+
+#### Thickness Constructor
+
+Initializes a new instance of the [Avalonia.Thickness](xref:Avalonia.Thickness) structure.
+
+```csharp
+public Thickness(double left, double top, double right, double bottom)
+```
+
+##### Parameters
+
+`left` double
+
+The thickness on the left.
+
+
+`top` double
+
+The thickness on the top.
+
+
+`right` double
+
+The thickness on the right.
+
+
+`bottom` double
+
+The thickness on the bottom.
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Deconstruct](#uid-8d9a696bd7) | No summary available. |
+| [Equals (2 overloads)](#uid-cf2a0a36a3) | Returns a boolean indicating whether the thickness is equal to the other given point. |
+| [GetHashCode](#uid-6044788e05) | Returns a hash code for a [Avalonia.Thickness](xref:Avalonia.Thickness). |
+| [Parse](#uid-b13e988d90) | Parses a [Avalonia.Thickness](xref:Avalonia.Thickness) string. |
+| [ToString](#uid-5ee779e23a) | Returns the string representation of the thickness. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8d9a696bd7"></span>
+
+### Deconstruct Method
+
+```csharp
+public void Deconstruct(double& left, double& top, double& right, double& bottom)
+```
+
+#### Parameters
+
+`left` double&amp;
+
+
+`top` double&amp;
+
+
+`right` double&amp;
+
+
+`bottom` double&amp;
+
+
+</section>
+
+<span id="uid-cf2a0a36a3"></span>
+
+### Equals overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-870cc60f4c"></span>
+
+#### Equals Method
+
+Returns a boolean indicating whether the thickness is equal to the other given point.
+
+```csharp
+public bool Equals(Avalonia.Thickness other)
+```
+
+##### Parameters
+
+`other` [Avalonia.Thickness](xref:Avalonia.Thickness)
+
+The other thickness to test equality against.
+
+
+##### Returns
+
+bool
+
+True if this thickness is equal to other; False otherwise.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-95212ab394"></span>
+
+#### Equals Method
+
+Checks for equality between a thickness and an object.
+
+```csharp
+public bool Equals(object obj)
+```
+
+##### Parameters
+
+`obj` object
+
+The object.
+
+
+##### Returns
+
+bool
+
+True if `obj` is a size that equals the current size.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6044788e05"></span>
+
+### GetHashCode Method
+
+Returns a hash code for a [Avalonia.Thickness](xref:Avalonia.Thickness).
+
+```csharp
+public int GetHashCode()
+```
+
+#### Returns
+
+int
+
+The hash code.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b13e988d90"></span>
+
+### Parse Method
+
+Parses a [Avalonia.Thickness](xref:Avalonia.Thickness) string.
+
+```csharp
+public Avalonia.Thickness Parse(string s)
+```
+
+#### Parameters
+
+`s` string
+
+The string.
+
+
+#### Returns
+
+[Avalonia.Thickness](xref:Avalonia.Thickness)
+
+The [Avalonia.Thickness](xref:Avalonia.Thickness).
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5ee779e23a"></span>
+
+### ToString Method
+
+Returns the string representation of the thickness.
+
+```csharp
+public string ToString()
+```
+
+#### Returns
+
+string
+
+The string representation of the thickness.
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Bottom](#uid-6f10ae43e3) | Gets the thickness on the bottom. |
+| [IsUniform](#uid-9fde083e1c) | Gets a value indicating whether all sides are equal. |
+| [Left](#uid-a06dc39d97) | Gets the thickness on the left. |
+| [Right](#uid-81b7fd7491) | Gets the thickness on the right. |
+| [Top](#uid-7588d575b0) | Gets the thickness on the top. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6f10ae43e3"></span>
+
+### Bottom Property
+
+Gets the thickness on the bottom.
+
+```csharp
+public double Bottom { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9fde083e1c"></span>
+
+### IsUniform Property
+
+Gets a value indicating whether all sides are equal.
+
+```csharp
+public bool IsUniform { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a06dc39d97"></span>
+
+### Left Property
+
+Gets the thickness on the left.
+
+```csharp
+public double Left { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-81b7fd7491"></span>
+
+### Right Property
+
+Gets the thickness on the right.
+
+```csharp
+public double Right { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7588d575b0"></span>
+
+### Top Property
+
+Gets the thickness on the top.
+
+```csharp
+public double Top { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

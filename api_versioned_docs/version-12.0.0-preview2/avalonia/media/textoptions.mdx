@@ -1,0 +1,443 @@
+---
+title: 'TextOptions'
+hide_title: true
+slug: '/avalonia/media/textoptions'
+uid: 'Avalonia.Media.TextOptions'
+commentId: 'T:Avalonia.Media.TextOptions'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Media'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">TextOptions Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Media</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Media/TextOptions.cs">TextOptions.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Provides options for controlling text rendering behavior, including rendering mode, hinting mode, and baseline
+pixel alignment. Used to configure how text appears within visual elements.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct TextOptions
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> TextOptions
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;TextOptions&gt;
+</div>
+</div>
+
+## Remarks
+
+[TextOptions](xref:Avalonia.Media.TextOptions) encapsulates settings that influence the clarity, sharpness, and positioning of
+rendered text. These options can be applied to visual elements to customize text appearance for different
+display scenarios, such as optimizing for readability at small font sizes or ensuring pixel-perfect alignment.
+The struct supports merging with other instances to inherit unspecified values, and exposes attached properties
+for use with visuals.
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Equals (2 overloads)](#uid-5fccb9f28e) | No summary available. |
+| [GetBaselinePixelAlignment](#uid-2d9c19ab72) | Gets the [BaselinePixelAlignment](xref:Avalonia.Media.BaselinePixelAlignment) attached property for a visual. |
+| [GetHashCode](#uid-4d8ea847e0) | No summary available. |
+| [GetTextHintingMode](#uid-6f1807f0c6) | Gets the [TextHintingMode](xref:Avalonia.Media.TextHintingMode) attached property for a visual. |
+| [GetTextOptions](#uid-1a788dc536) | Gets the [TextOptions](xref:Avalonia.Media.TextOptions) attached value for a visual. |
+| [GetTextRenderingMode](#uid-c19ae512a0) | Gets the [TextRenderingMode](xref:Avalonia.Media.TextRenderingMode) attached property for a visual. |
+| [MergeWith](#uid-98cd9c3ebf) | Merges this instance with `other` using inheritance semantics: unspecified values on this instance are taken from `other`. |
+| [SetBaselinePixelAlignment](#uid-c28c02fb12) | Sets the [BaselinePixelAlignment](xref:Avalonia.Media.BaselinePixelAlignment) attached property for a visual. |
+| [SetTextHintingMode](#uid-34465f819a) | Sets the [TextHintingMode](xref:Avalonia.Media.TextHintingMode) attached property for a visual. |
+| [SetTextOptions](#uid-f99058e794) | Sets the [TextOptions](xref:Avalonia.Media.TextOptions) attached value for a visual. |
+| [SetTextRenderingMode](#uid-72275aa669) | Sets the [TextRenderingMode](xref:Avalonia.Media.TextRenderingMode) attached property for a visual. |
+| [ToString](#uid-400c8d364a) | No summary available. |
+
+<span id="uid-5fccb9f28e"></span>
+
+### Equals overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d153eb05ca"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(Avalonia.Media.TextOptions other)
+```
+
+##### Parameters
+
+`other` [Avalonia.Media.TextOptions](xref:Avalonia.Media.TextOptions)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-236df423cb"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(object obj)
+```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2d9c19ab72"></span>
+
+### GetBaselinePixelAlignment Method
+
+Gets the [BaselinePixelAlignment](xref:Avalonia.Media.BaselinePixelAlignment) attached property for a visual.
+
+```csharp
+public Avalonia.Media.BaselinePixelAlignment GetBaselinePixelAlignment(Avalonia.Visual visual)
+```
+
+#### Parameters
+
+`visual` [Avalonia.Visual](xref:Avalonia.Visual)
+
+
+#### Returns
+
+[Avalonia.Media.BaselinePixelAlignment](xref:Avalonia.Media.BaselinePixelAlignment)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4d8ea847e0"></span>
+
+### GetHashCode Method
+
+```csharp
+public int GetHashCode()
+```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6f1807f0c6"></span>
+
+### GetTextHintingMode Method
+
+Gets the [TextHintingMode](xref:Avalonia.Media.TextHintingMode) attached property for a visual.
+
+```csharp
+public Avalonia.Media.TextHintingMode GetTextHintingMode(Avalonia.Visual visual)
+```
+
+#### Parameters
+
+`visual` [Avalonia.Visual](xref:Avalonia.Visual)
+
+
+#### Returns
+
+[Avalonia.Media.TextHintingMode](xref:Avalonia.Media.TextHintingMode)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1a788dc536"></span>
+
+### GetTextOptions Method
+
+Gets the [TextOptions](xref:Avalonia.Media.TextOptions) attached value for a visual.
+
+```csharp
+public Avalonia.Media.TextOptions GetTextOptions(Avalonia.Visual visual)
+```
+
+#### Parameters
+
+`visual` [Avalonia.Visual](xref:Avalonia.Visual)
+
+
+#### Returns
+
+[Avalonia.Media.TextOptions](xref:Avalonia.Media.TextOptions)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c19ae512a0"></span>
+
+### GetTextRenderingMode Method
+
+Gets the [TextRenderingMode](xref:Avalonia.Media.TextRenderingMode) attached property for a visual.
+
+```csharp
+public Avalonia.Media.TextRenderingMode GetTextRenderingMode(Avalonia.Visual visual)
+```
+
+#### Parameters
+
+`visual` [Avalonia.Visual](xref:Avalonia.Visual)
+
+
+#### Returns
+
+[Avalonia.Media.TextRenderingMode](xref:Avalonia.Media.TextRenderingMode)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-98cd9c3ebf"></span>
+
+### MergeWith Method
+
+Merges this instance with `other` using inheritance semantics: unspecified values on this
+instance are taken from `other`.
+
+```csharp
+public Avalonia.Media.TextOptions MergeWith(Avalonia.Media.TextOptions other)
+```
+
+#### Parameters
+
+`other` [Avalonia.Media.TextOptions](xref:Avalonia.Media.TextOptions)
+
+
+#### Returns
+
+[Avalonia.Media.TextOptions](xref:Avalonia.Media.TextOptions)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c28c02fb12"></span>
+
+### SetBaselinePixelAlignment Method
+
+Sets the [BaselinePixelAlignment](xref:Avalonia.Media.BaselinePixelAlignment) attached property for a visual.
+
+```csharp
+public void SetBaselinePixelAlignment(Avalonia.Visual visual, Avalonia.Media.BaselinePixelAlignment value)
+```
+
+#### Parameters
+
+`visual` [Avalonia.Visual](xref:Avalonia.Visual)
+
+
+`value` [Avalonia.Media.BaselinePixelAlignment](xref:Avalonia.Media.BaselinePixelAlignment)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-34465f819a"></span>
+
+### SetTextHintingMode Method
+
+Sets the [TextHintingMode](xref:Avalonia.Media.TextHintingMode) attached property for a visual.
+
+```csharp
+public void SetTextHintingMode(Avalonia.Visual visual, Avalonia.Media.TextHintingMode value)
+```
+
+#### Parameters
+
+`visual` [Avalonia.Visual](xref:Avalonia.Visual)
+
+
+`value` [Avalonia.Media.TextHintingMode](xref:Avalonia.Media.TextHintingMode)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f99058e794"></span>
+
+### SetTextOptions Method
+
+Sets the [TextOptions](xref:Avalonia.Media.TextOptions) attached value for a visual.
+
+```csharp
+public void SetTextOptions(Avalonia.Visual visual, Avalonia.Media.TextOptions value)
+```
+
+#### Parameters
+
+`visual` [Avalonia.Visual](xref:Avalonia.Visual)
+
+
+`value` [Avalonia.Media.TextOptions](xref:Avalonia.Media.TextOptions)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-72275aa669"></span>
+
+### SetTextRenderingMode Method
+
+Sets the [TextRenderingMode](xref:Avalonia.Media.TextRenderingMode) attached property for a visual.
+
+```csharp
+public void SetTextRenderingMode(Avalonia.Visual visual, Avalonia.Media.TextRenderingMode value)
+```
+
+#### Parameters
+
+`visual` [Avalonia.Visual](xref:Avalonia.Visual)
+
+
+`value` [Avalonia.Media.TextRenderingMode](xref:Avalonia.Media.TextRenderingMode)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-400c8d364a"></span>
+
+### ToString Method
+
+```csharp
+public string ToString()
+```
+
+#### Returns
+
+string
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [BaselinePixelAlignment](#uid-eef1e02329) | Gets a value indicating whether the text baseline should be aligned to the pixel grid. |
+| [TextHintingMode](#uid-5bd8faf1ba) | Gets the text rendering hinting mode used to optimize the display of text. |
+| [TextRenderingMode](#uid-86f3a0a4c2) | Gets the text rendering mode used to control how text glyphs are rendered. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-eef1e02329"></span>
+
+### BaselinePixelAlignment Property
+
+Gets a value indicating whether the text baseline should be aligned to the pixel grid.
+
+```csharp
+public Avalonia.Media.BaselinePixelAlignment BaselinePixelAlignment { get; set; }
+```
+
+#### Remarks
+
+When enabled, the vertical position of the text baseline is snapped to whole pixel boundaries.
+This ensures consistent sharpness and reduces blurriness caused by fractional positioning,
+particularly at small font sizes or low DPI settings.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5bd8faf1ba"></span>
+
+### TextHintingMode Property
+
+Gets the text rendering hinting mode used to optimize the display of text.
+
+```csharp
+public Avalonia.Media.TextHintingMode TextHintingMode { get; set; }
+```
+
+#### Remarks
+
+The hinting mode determines how text is rendered to improve clarity and readability,
+especially at small font sizes. Changing this value may affect the appearance of text depending on the
+rendering engine and display device.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-86f3a0a4c2"></span>
+
+### TextRenderingMode Property
+
+Gets the text rendering mode used to control how text glyphs are rendered.
+
+```csharp
+public Avalonia.Media.TextRenderingMode TextRenderingMode { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

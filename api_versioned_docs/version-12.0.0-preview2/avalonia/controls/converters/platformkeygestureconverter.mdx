@@ -1,0 +1,182 @@
+---
+title: 'PlatformKeyGestureConverter'
+hide_title: true
+slug: '/avalonia/controls/converters/platformkeygestureconverter'
+uid: 'Avalonia.Controls.Converters.PlatformKeyGestureConverter'
+commentId: 'T:Avalonia.Controls.Converters.PlatformKeyGestureConverter'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Converters'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">PlatformKeyGestureConverter Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Converters</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Controls/Converters/PlatformKeyGestureConverter.cs">PlatformKeyGestureConverter.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Converts a [Avalonia.Input.KeyGesture](xref:Avalonia.Input.KeyGesture) to a string, formatting it according to the current
+platform's style guidelines.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class PlatformKeyGestureConverter
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> PlatformKeyGestureConverter
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="../../data/converters/ivalueconverter">IValueConverter</a>
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [PlatformKeyGestureConverter](#uid-03bf92997b) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-03bf92997b"></span>
+
+### PlatformKeyGestureConverter Constructor
+
+```csharp
+public PlatformKeyGestureConverter()
+```
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Convert](#uid-7b4ed78af9) | No summary available. |
+| [ConvertBack](#uid-599fb79b31) | No summary available. |
+| [ToPlatformString](#uid-6d4b48af50) | Converts a [Avalonia.Input.KeyGesture](xref:Avalonia.Input.KeyGesture) to a string, formatting it according to the current platform's style guidelines. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7b4ed78af9"></span>
+
+### Convert Method
+
+```csharp
+public object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
+```
+
+#### Parameters
+
+`value` object
+
+
+`targetType` Type
+
+
+`parameter` object
+
+
+`culture` System.Globalization.CultureInfo
+
+
+#### Returns
+
+object
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-599fb79b31"></span>
+
+### ConvertBack Method
+
+```csharp
+public object ConvertBack(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
+```
+
+#### Parameters
+
+`value` object
+
+
+`targetType` Type
+
+
+`parameter` object
+
+
+`culture` System.Globalization.CultureInfo
+
+
+#### Returns
+
+object
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6d4b48af50"></span>
+
+### ToPlatformString Method
+
+Converts a [Avalonia.Input.KeyGesture](xref:Avalonia.Input.KeyGesture) to a string, formatting it according to the current
+platform's style guidelines.
+
+```csharp
+public string ToPlatformString(Avalonia.Input.KeyGesture gesture)
+```
+
+#### Parameters
+
+`gesture` [Avalonia.Input.KeyGesture](xref:Avalonia.Input.KeyGesture)
+
+The gesture.
+
+
+#### Returns
+
+string
+
+The gesture formatted according to the current platform.
+
+
+</section>
+
+</ApiRefPage>
+

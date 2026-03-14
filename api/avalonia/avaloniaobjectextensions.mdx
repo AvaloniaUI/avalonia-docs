@@ -1,0 +1,665 @@
+---
+title: 'AvaloniaObjectExtensions'
+hide_title: true
+slug: '/avalonia/avaloniaobjectextensions'
+uid: 'Avalonia.AvaloniaObjectExtensions'
+commentId: 'T:Avalonia.AvaloniaObjectExtensions'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">AvaloniaObjectExtensions Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/AvaloniaObjectExtensions.cs">AvaloniaObjectExtensions.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Provides extension methods for [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject) and related classes.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class AvaloniaObjectExtensions
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> AvaloniaObjectExtensions
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [AddClassHandler (2 overloads)](#uid-12da34fda2) | No summary available. |
+| [Bind (2 overloads)](#uid-d8548d79f1) | No summary available. |
+| [GetBaseValue (2 overloads)](#uid-a44baab4f1) | Gets an [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) base value. |
+| [GetBindingObservable (4 overloads)](#uid-5976ecb078) | Gets an observable for an [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty). |
+| [GetObservable (4 overloads)](#uid-0707411a55) | Gets an observable for an [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty). |
+| [GetPropertyChangedObservable](#uid-ef3b80a9cc) | Gets an observable that listens for property changed events for an [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty). |
+| [GetValue](#uid-7a26ab89ee) | No summary available. |
+| [ToBinding](#uid-c28a43eaea) | No summary available. |
+
+<span id="uid-12da34fda2"></span>
+
+### AddClassHandler overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8ddecd9a9f"></span>
+
+#### AddClassHandler Method
+
+```csharp
+public IDisposable AddClassHandler<TTarget>(IObservable<Avalonia.AvaloniaPropertyChangedEventArgs> observable, Action<TTarget, Avalonia.AvaloniaPropertyChangedEventArgs> action)
+```
+
+##### Parameters
+
+`observable` IObservable&lt;[Avalonia.AvaloniaPropertyChangedEventArgs](xref:Avalonia.AvaloniaPropertyChangedEventArgs)&gt;
+
+
+`action` Action&lt;TTarget, [Avalonia.AvaloniaPropertyChangedEventArgs](xref:Avalonia.AvaloniaPropertyChangedEventArgs)&gt;
+
+
+##### Type Parameters
+
+`TTarget`
+
+
+##### Returns
+
+IDisposable
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2787e01711"></span>
+
+#### AddClassHandler Method
+
+```csharp
+public IDisposable AddClassHandler<TTarget, TValue>(IObservable<Avalonia.AvaloniaPropertyChangedEventArgs<T><TValue>> observable, Action<TTarget, Avalonia.AvaloniaPropertyChangedEventArgs<T><TValue>> action)
+```
+
+##### Parameters
+
+`observable` IObservable&lt;[Avalonia.AvaloniaPropertyChangedEventArgs](xref:Avalonia.AvaloniaPropertyChangedEventArgs)&lt;T&gt;&lt;TValue&gt;&gt;
+
+
+`action` Action&lt;TTarget, [Avalonia.AvaloniaPropertyChangedEventArgs](xref:Avalonia.AvaloniaPropertyChangedEventArgs)&lt;T&gt;&lt;TValue&gt;&gt;
+
+
+##### Type Parameters
+
+`TTarget`
+
+
+`TValue`
+
+
+##### Returns
+
+IDisposable
+
+
+</section>
+
+<span id="uid-d8548d79f1"></span>
+
+### Bind overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1635771dd0"></span>
+
+#### Bind Method
+
+```csharp
+public IDisposable Bind<T>(Avalonia.AvaloniaObject target, Avalonia.AvaloniaProperty<TValue><T> property, IObservable<Avalonia.Data.BindingValue<T><T>> source, Avalonia.Data.BindingPriority priority)
+```
+
+##### Parameters
+
+`target` [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject)
+
+
+`property` [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty)&lt;TValue&gt;&lt;T&gt;
+
+
+`source` IObservable&lt;Avalonia.Data.BindingValue&lt;T&gt;&lt;T&gt;&gt;
+
+
+`priority` [Avalonia.Data.BindingPriority](xref:Avalonia.Data.BindingPriority)
+
+
+##### Type Parameters
+
+`T`
+
+
+##### Returns
+
+IDisposable
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7c6693d3d9"></span>
+
+#### Bind Method
+
+```csharp
+public IDisposable Bind<T>(Avalonia.AvaloniaObject target, Avalonia.AvaloniaProperty<TValue><T> property, IObservable<T> source, Avalonia.Data.BindingPriority priority)
+```
+
+##### Parameters
+
+`target` [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject)
+
+
+`property` [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty)&lt;TValue&gt;&lt;T&gt;
+
+
+`source` IObservable&lt;T&gt;
+
+
+`priority` [Avalonia.Data.BindingPriority](xref:Avalonia.Data.BindingPriority)
+
+
+##### Type Parameters
+
+`T`
+
+
+##### Returns
+
+IDisposable
+
+
+</section>
+
+<span id="uid-a44baab4f1"></span>
+
+### GetBaseValue overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-edf0442b44"></span>
+
+#### GetBaseValue Method
+
+Gets an [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) base value.
+
+```csharp
+public object GetBaseValue(Avalonia.AvaloniaObject target, Avalonia.AvaloniaProperty property)
+```
+
+##### Parameters
+
+`target` [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject)
+
+The object.
+
+
+`property` [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty)
+
+The property.
+
+
+##### Returns
+
+object
+
+
+##### Remarks
+
+For styled properties, gets the value of the property excluding animated values, otherwise
+[Avalonia.AvaloniaProperty.UnsetValue](xref:Avalonia.AvaloniaProperty.UnsetValue). Note that this method does not return
+property values that come from inherited or default values.
+
+For direct properties returns the current value of the property.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-67aa6a4785"></span>
+
+#### GetBaseValue Method
+
+```csharp
+public Avalonia.Data.Optional<T><T> GetBaseValue<T>(Avalonia.AvaloniaObject target, Avalonia.AvaloniaProperty<TValue><T> property)
+```
+
+##### Parameters
+
+`target` [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject)
+
+
+`property` [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty)&lt;TValue&gt;&lt;T&gt;
+
+
+##### Type Parameters
+
+`T`
+
+
+##### Returns
+
+Avalonia.Data.Optional&lt;T&gt;&lt;T&gt;
+
+
+</section>
+
+<span id="uid-5976ecb078"></span>
+
+### GetBindingObservable overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c1363b78b3"></span>
+
+#### GetBindingObservable Method
+
+Gets an observable for an [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty).
+
+```csharp
+public IObservable<Avalonia.Data.BindingValue<T><object>> GetBindingObservable(Avalonia.AvaloniaObject o, Avalonia.AvaloniaProperty property)
+```
+
+##### Parameters
+
+`o` [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject)
+
+The object.
+
+
+`property` [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty)
+
+The property.
+
+
+##### Returns
+
+IObservable&lt;Avalonia.Data.BindingValue&lt;T&gt;&lt;object&gt;&gt;
+
+An observable which fires immediately with the current value of the property on the
+object and subsequently each time the property value changes.
+
+
+##### Remarks
+
+The subscription to `o` is created using a weak reference.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4b75a6b2ce"></span>
+
+#### GetBindingObservable Method
+
+```csharp
+public IObservable<Avalonia.Data.BindingValue<T><TResult>> GetBindingObservable<TResult>(Avalonia.AvaloniaObject o, Avalonia.AvaloniaProperty property, Func<object, TResult> converter)
+```
+
+##### Parameters
+
+`o` [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject)
+
+
+`property` [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty)
+
+
+`converter` Func&lt;object, TResult&gt;
+
+
+##### Type Parameters
+
+`TResult`
+
+
+##### Returns
+
+IObservable&lt;Avalonia.Data.BindingValue&lt;T&gt;&lt;TResult&gt;&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ef38bab6bc"></span>
+
+#### GetBindingObservable Method
+
+```csharp
+public IObservable<Avalonia.Data.BindingValue<T><T>> GetBindingObservable<T>(Avalonia.AvaloniaObject o, Avalonia.AvaloniaProperty<TValue><T> property)
+```
+
+##### Parameters
+
+`o` [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject)
+
+
+`property` [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty)&lt;TValue&gt;&lt;T&gt;
+
+
+##### Type Parameters
+
+`T`
+
+
+##### Returns
+
+IObservable&lt;Avalonia.Data.BindingValue&lt;T&gt;&lt;T&gt;&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1e158c64cf"></span>
+
+#### GetBindingObservable Method
+
+```csharp
+public IObservable<Avalonia.Data.BindingValue<T><TResult>> GetBindingObservable<TSource, TResult>(Avalonia.AvaloniaObject o, Avalonia.AvaloniaProperty<TValue><TSource> property, Func<TSource, TResult> converter)
+```
+
+##### Parameters
+
+`o` [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject)
+
+
+`property` [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty)&lt;TValue&gt;&lt;TSource&gt;
+
+
+`converter` Func&lt;TSource, TResult&gt;
+
+
+##### Type Parameters
+
+`TSource`
+
+
+`TResult`
+
+
+##### Returns
+
+IObservable&lt;Avalonia.Data.BindingValue&lt;T&gt;&lt;TResult&gt;&gt;
+
+
+</section>
+
+<span id="uid-0707411a55"></span>
+
+### GetObservable overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-351ba03a1c"></span>
+
+#### GetObservable Method
+
+Gets an observable for an [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty).
+
+```csharp
+public IObservable<object> GetObservable(Avalonia.AvaloniaObject o, Avalonia.AvaloniaProperty property)
+```
+
+##### Parameters
+
+`o` [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject)
+
+The object.
+
+
+`property` [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty)
+
+The property.
+
+
+##### Returns
+
+IObservable&lt;object&gt;
+
+An observable which fires immediately with the current value of the property on the
+object and subsequently each time the property value changes.
+
+
+##### Remarks
+
+The subscription to `o` is created using a weak reference.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-43c8f81402"></span>
+
+#### GetObservable Method
+
+```csharp
+public IObservable<TResult> GetObservable<TResult>(Avalonia.AvaloniaObject o, Avalonia.AvaloniaProperty property, Func<object, TResult> converter)
+```
+
+##### Parameters
+
+`o` [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject)
+
+
+`property` [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty)
+
+
+`converter` Func&lt;object, TResult&gt;
+
+
+##### Type Parameters
+
+`TResult`
+
+
+##### Returns
+
+IObservable&lt;TResult&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a2f315dbd4"></span>
+
+#### GetObservable Method
+
+```csharp
+public IObservable<T> GetObservable<T>(Avalonia.AvaloniaObject o, Avalonia.AvaloniaProperty<TValue><T> property)
+```
+
+##### Parameters
+
+`o` [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject)
+
+
+`property` [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty)&lt;TValue&gt;&lt;T&gt;
+
+
+##### Type Parameters
+
+`T`
+
+
+##### Returns
+
+IObservable&lt;T&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-163790c8aa"></span>
+
+#### GetObservable Method
+
+```csharp
+public IObservable<TResult> GetObservable<TSource, TResult>(Avalonia.AvaloniaObject o, Avalonia.AvaloniaProperty<TValue><TSource> property, Func<TSource, TResult> converter)
+```
+
+##### Parameters
+
+`o` [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject)
+
+
+`property` [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty)&lt;TValue&gt;&lt;TSource&gt;
+
+
+`converter` Func&lt;TSource, TResult&gt;
+
+
+##### Type Parameters
+
+`TSource`
+
+
+`TResult`
+
+
+##### Returns
+
+IObservable&lt;TResult&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ef3b80a9cc"></span>
+
+### GetPropertyChangedObservable Method
+
+Gets an observable that listens for property changed events for an
+[Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty).
+
+```csharp
+public IObservable<Avalonia.AvaloniaPropertyChangedEventArgs> GetPropertyChangedObservable(Avalonia.AvaloniaObject o, Avalonia.AvaloniaProperty property)
+```
+
+#### Parameters
+
+`o` [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject)
+
+The object.
+
+
+`property` [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty)
+
+The property.
+
+
+#### Returns
+
+IObservable&lt;[Avalonia.AvaloniaPropertyChangedEventArgs](xref:Avalonia.AvaloniaPropertyChangedEventArgs)&gt;
+
+An observable which when subscribed pushes the property changed event args
+each time a [Avalonia.AvaloniaObject.PropertyChanged](xref:Avalonia.AvaloniaObject.PropertyChanged) event is raised
+for the specified property.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7a26ab89ee"></span>
+
+### GetValue Method
+
+```csharp
+public T GetValue<T>(Avalonia.AvaloniaObject target, Avalonia.AvaloniaProperty<TValue><T> property)
+```
+
+#### Parameters
+
+`target` [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject)
+
+
+`property` [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty)&lt;TValue&gt;&lt;T&gt;
+
+
+#### Type Parameters
+
+`T`
+
+
+#### Returns
+
+T
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c28a43eaea"></span>
+
+### ToBinding Method
+
+```csharp
+public Avalonia.Data.BindingBase ToBinding<T>(IObservable<T> source)
+```
+
+#### Parameters
+
+`source` IObservable&lt;T&gt;
+
+
+#### Type Parameters
+
+`T`
+
+
+#### Returns
+
+[Avalonia.Data.BindingBase](xref:Avalonia.Data.BindingBase)
+
+
+</section>
+
+</ApiRefPage>
+

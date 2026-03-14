@@ -1,0 +1,237 @@
+---
+title: 'GenericTextRunProperties'
+hide_title: true
+slug: '/avalonia/media/textformatting/generictextrunproperties'
+uid: 'Avalonia.Media.TextFormatting.GenericTextRunProperties'
+commentId: 'T:Avalonia.Media.TextFormatting.GenericTextRunProperties'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Media.TextFormatting'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">GenericTextRunProperties Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Media.TextFormatting</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Media/TextFormatting/GenericTextRunProperties.cs">GenericTextRunProperties.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Generic implementation of [TextRunProperties](xref:Avalonia.Media.TextFormatting.TextRunProperties)
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class GenericTextRunProperties
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="textrunproperties">TextRunProperties</a> <span className="apiref-page__relation-separator">-&gt;</span> GenericTextRunProperties
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [GenericTextRunProperties](#uid-a6c3febe8b) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a6c3febe8b"></span>
+
+### GenericTextRunProperties Constructor
+
+```csharp
+public GenericTextRunProperties(Avalonia.Media.Typeface typeface, double fontRenderingEmSize, Avalonia.Media.TextDecorationCollection textDecorations, Avalonia.Media.IBrush foregroundBrush, Avalonia.Media.IBrush backgroundBrush, Avalonia.Media.BaselineAlignment baselineAlignment, System.Globalization.CultureInfo cultureInfo, Avalonia.Media.FontFeatureCollection fontFeatures)
+```
+
+#### Parameters
+
+`typeface` [Avalonia.Media.Typeface](xref:Avalonia.Media.Typeface)
+
+
+`fontRenderingEmSize` double
+
+
+`textDecorations` [Avalonia.Media.TextDecorationCollection](xref:Avalonia.Media.TextDecorationCollection)
+
+
+`foregroundBrush` [Avalonia.Media.IBrush](xref:Avalonia.Media.IBrush)
+
+
+`backgroundBrush` [Avalonia.Media.IBrush](xref:Avalonia.Media.IBrush)
+
+
+`baselineAlignment` [Avalonia.Media.BaselineAlignment](xref:Avalonia.Media.BaselineAlignment)
+
+
+`cultureInfo` System.Globalization.CultureInfo
+
+
+`fontFeatures` [Avalonia.Media.FontFeatureCollection](xref:Avalonia.Media.FontFeatureCollection)
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Equals (2 overloads)](textrunproperties.mdx#uid-5aa3313db5) | Inherited from [TextRunProperties](textrunproperties.mdx). |
+| [GetHashCode](textrunproperties.mdx#uid-d8f145a993) | Inherited from [TextRunProperties](textrunproperties.mdx). |
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [BackgroundBrush](#uid-fb2a0f0718) | Brush used to paint background of run. |
+| [BaselineAlignment](#uid-b2261a957e) | Run vertical box alignment |
+| [CultureInfo](#uid-f1a3e2075c) | Run text culture. |
+| [FontFeatures](#uid-299ce6d908) | Optional features of used font. |
+| [FontRenderingEmSize](#uid-aff2cae311) | Em size of font used to format and display text |
+| [ForegroundBrush](#uid-d08193337b) | Brush used to fill text. |
+| [TextDecorations](#uid-7287d1fc93) | Run [TextDecorations](xref:Avalonia.Media.TextDecorations). |
+| [Typeface](#uid-3bbec8ee99) | Run typeface |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-fb2a0f0718"></span>
+
+### BackgroundBrush Property
+
+Brush used to paint background of run.
+
+```csharp
+public Avalonia.Media.IBrush BackgroundBrush { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b2261a957e"></span>
+
+### BaselineAlignment Property
+
+Run vertical box alignment
+
+```csharp
+public Avalonia.Media.BaselineAlignment BaselineAlignment { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f1a3e2075c"></span>
+
+### CultureInfo Property
+
+Run text culture.
+
+```csharp
+public System.Globalization.CultureInfo CultureInfo { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-299ce6d908"></span>
+
+### FontFeatures Property
+
+Optional features of used font.
+
+```csharp
+public Avalonia.Media.FontFeatureCollection FontFeatures { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-aff2cae311"></span>
+
+### FontRenderingEmSize Property
+
+Em size of font used to format and display text
+
+```csharp
+public double FontRenderingEmSize { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d08193337b"></span>
+
+### ForegroundBrush Property
+
+Brush used to fill text.
+
+```csharp
+public Avalonia.Media.IBrush ForegroundBrush { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7287d1fc93"></span>
+
+### TextDecorations Property
+
+Run [TextDecorations](xref:Avalonia.Media.TextDecorations).
+
+```csharp
+public Avalonia.Media.TextDecorationCollection TextDecorations { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3bbec8ee99"></span>
+
+### Typeface Property
+
+Run typeface
+
+```csharp
+public Avalonia.Media.Typeface Typeface { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

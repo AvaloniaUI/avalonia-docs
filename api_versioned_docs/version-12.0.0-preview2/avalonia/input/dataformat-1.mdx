@@ -1,0 +1,92 @@
+---
+title: 'DataFormat<T>'
+hide_title: true
+slug: '/avalonia/input/dataformat-1'
+uid: 'Avalonia.Input.DataFormat`1'
+commentId: 'T:Avalonia.Input.DataFormat`1'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Input'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">DataFormat&lt;T&gt; Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Input</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Input/DataFormatOfT.cs">DataFormatOfT.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Represents a format usable with the clipboard and drag-and-drop, with a data type.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class DataFormat<T>
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="dataformat">DataFormat</a> <span className="apiref-page__relation-separator">-&gt;</span> DataFormat&lt;T&gt;
+</div>
+</div>
+
+## Remarks
+
+This class cannot be instantiated directly.
+Use universal formats such as [Avalonia.Input.DataFormat.Text](xref:Avalonia.Input.DataFormat.Text) and [Avalonia.Input.DataFormat.File](xref:Avalonia.Input.DataFormat.File),
+or create custom formats using [Avalonia.Input.DataFormat.CreateBytesApplicationFormat(string)](xref:Avalonia.Input.DataFormat.CreateBytesApplicationFormat%28System.String%29),
+[Avalonia.Input.DataFormat.CreateStringApplicationFormat(string)](xref:Avalonia.Input.DataFormat.CreateStringApplicationFormat%28System.String%29), [Avalonia.Input.DataFormat.CreateBytesPlatformFormat(string)](xref:Avalonia.Input.DataFormat.CreateBytesPlatformFormat%28System.String%29)
+or [Avalonia.Input.DataFormat.CreateStringPlatformFormat(string)](xref:Avalonia.Input.DataFormat.CreateStringPlatformFormat%28System.String%29).
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [CreateBytesApplicationFormat](dataformat.mdx#uid-3fbe38b6ba) | Creates a new format specific to the application that returns an array of [byte](xref:System.Byte). Inherited from [DataFormat](dataformat.mdx). |
+| [CreateBytesPlatformFormat](dataformat.mdx#uid-1efc4cf482) | Creates a new format for the current platform that returns an array of [byte](xref:System.Byte). Inherited from [DataFormat](dataformat.mdx). |
+| [CreateStringApplicationFormat](dataformat.mdx#uid-7587d5d188) | Creates a new format specific to the application that returns a [string](xref:System.String). Inherited from [DataFormat](dataformat.mdx). |
+| [CreateStringPlatformFormat](dataformat.mdx#uid-5b39021fd9) | Creates a new format for the current platform that returns a [string](xref:System.String). Inherited from [DataFormat](dataformat.mdx). |
+| [Equals (2 overloads)](dataformat.mdx#uid-78ddc432ce) | Inherited from [DataFormat](dataformat.mdx). |
+| [GetHashCode](dataformat.mdx#uid-f95a08c254) | Inherited from [DataFormat](dataformat.mdx). |
+| [ToString](dataformat.mdx#uid-fd15320886) | Inherited from [DataFormat](dataformat.mdx). |
+| [ToSystemName](dataformat.mdx#uid-02047ff4d5) | Creates a name for this format, usable by the underlying platform. Inherited from [DataFormat](dataformat.mdx). |
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Bitmap](dataformat.mdx#uid-11b203b3e5) | Gets a data format representing a bitmap. Its data type is [Avalonia.Media.Imaging.Bitmap](xref:Avalonia.Media.Imaging.Bitmap). Inherited from [DataFormat](dataformat.mdx). |
+| [File](dataformat.mdx#uid-4c6a2805bf) | Gets a data format representing a single file. Its data type is [Avalonia.Platform.Storage.IStorageItem](xref:Avalonia.Platform.Storage.IStorageItem). Inherited from [DataFormat](dataformat.mdx). |
+| [Identifier](dataformat.mdx#uid-397db05437) | Gets the identifier of the data format. Inherited from [DataFormat](dataformat.mdx). |
+| [Kind](dataformat.mdx#uid-65f1b1de50) | Gets the kind of the data format. Inherited from [DataFormat](dataformat.mdx). |
+| [Text](dataformat.mdx#uid-a2e19e2523) | Gets a data format representing plain text. Its data type is [string](xref:System.String). Inherited from [DataFormat](dataformat.mdx). |
+
+</ApiRefPage>
+

@@ -1,0 +1,170 @@
+---
+title: 'ScrollEventType'
+hide_title: true
+slug: '/avalonia/controls/primitives/scrolleventtype'
+uid: 'Avalonia.Controls.Primitives.ScrollEventType'
+commentId: 'T:Avalonia.Controls.Primitives.ScrollEventType'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Enum'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Primitives'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ScrollEventType Enum</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Primitives</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Specifies the type of [Avalonia.Controls.Primitives.ScrollBar.Scroll](xref:Avalonia.Controls.Primitives.ScrollBar.Scroll) event
+that occurred.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public enum ScrollEventType
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Enum <span className="apiref-page__relation-separator">-&gt;</span> ScrollEventType
+</div>
+</div>
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [EndScroll](#uid-c7909e14a8) | Specifies that the [Avalonia.Controls.Primitives.Thumb](xref:Avalonia.Controls.Primitives.Thumb) was dragged to a new position and is now no longer being dragged by the user. |
+| [LargeDecrement](#uid-638b35b4f4) | Specifies that the [Avalonia.Controls.Primitives.Thumb](xref:Avalonia.Controls.Primitives.Thumb) moved a specified distance, as determined by the value of [Avalonia.Controls.Primitives.RangeBase.LargeChange](xref:Avalonia.Controls.Primitives.RangeBase.LargeChange). The [Avalonia.Controls.Primitives.Thumb](xref:Avalonia.Controls.Primitives.Thumb) moved to the left for a horizontal [Avalonia.Controls.Primitives.ScrollBar](xref:Avalonia.Controls.Primitives.ScrollBar) or upward for a vertical [Avalonia.Controls.Primitives.ScrollBar](xref:Avalonia.Controls.Primitives.ScrollBar). |
+| [LargeIncrement](#uid-d1161f8a26) | Specifies that the [Avalonia.Controls.Primitives.Thumb](xref:Avalonia.Controls.Primitives.Thumb) moved a specified distance, as determined by the value of [Avalonia.Controls.Primitives.RangeBase.LargeChange](xref:Avalonia.Controls.Primitives.RangeBase.LargeChange). The [Avalonia.Controls.Primitives.Thumb](xref:Avalonia.Controls.Primitives.Thumb) moved to the right for a horizontal [Avalonia.Controls.Primitives.ScrollBar](xref:Avalonia.Controls.Primitives.ScrollBar) or downward for a vertical [Avalonia.Controls.Primitives.ScrollBar](xref:Avalonia.Controls.Primitives.ScrollBar). |
+| [SmallDecrement](#uid-1653177d6d) | Specifies that the [Avalonia.Controls.Primitives.Thumb](xref:Avalonia.Controls.Primitives.Thumb) moved a specified distance, as determined by the value of [Avalonia.Controls.Primitives.RangeBase.SmallChange](xref:Avalonia.Controls.Primitives.RangeBase.SmallChange). The [Avalonia.Controls.Primitives.Thumb](xref:Avalonia.Controls.Primitives.Thumb) moved to the left for a horizontal [Avalonia.Controls.Primitives.ScrollBar](xref:Avalonia.Controls.Primitives.ScrollBar) or upward for a vertical [Avalonia.Controls.Primitives.ScrollBar](xref:Avalonia.Controls.Primitives.ScrollBar). |
+| [SmallIncrement](#uid-baf51db972) | Specifies that the [Avalonia.Controls.Primitives.Thumb](xref:Avalonia.Controls.Primitives.Thumb) moved a specified distance, as determined by the value of [Avalonia.Controls.Primitives.RangeBase.SmallChange](xref:Avalonia.Controls.Primitives.RangeBase.SmallChange). The [Avalonia.Controls.Primitives.Thumb](xref:Avalonia.Controls.Primitives.Thumb) moved to the right for a horizontal [Avalonia.Controls.Primitives.ScrollBar](xref:Avalonia.Controls.Primitives.ScrollBar) or downward for a vertical [Avalonia.Controls.Primitives.ScrollBar](xref:Avalonia.Controls.Primitives.ScrollBar). |
+| [ThumbTrack](#uid-e8da00b08c) | The [Avalonia.Controls.Primitives.Thumb](xref:Avalonia.Controls.Primitives.Thumb) was dragged and caused a Avalonia.UIElement.MouseMove event. A [Avalonia.Controls.Primitives.ScrollBar.Scroll](xref:Avalonia.Controls.Primitives.ScrollBar.Scroll) event of this [Avalonia.Controls.Primitives.ScrollEventType](xref:Avalonia.Controls.Primitives.ScrollEventType) may occur more than one time when the [Avalonia.Controls.Primitives.Thumb](xref:Avalonia.Controls.Primitives.Thumb) is dragged in the [Avalonia.Controls.Primitives.ScrollBar](xref:Avalonia.Controls.Primitives.ScrollBar). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c7909e14a8"></span>
+
+### EndScroll Field
+
+Specifies that the [Avalonia.Controls.Primitives.Thumb](xref:Avalonia.Controls.Primitives.Thumb) was dragged to a
+new position and is now no longer being dragged by the user.
+
+```csharp
+public Avalonia.Controls.Primitives.ScrollEventType EndScroll
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-638b35b4f4"></span>
+
+### LargeDecrement Field
+
+Specifies that the [Avalonia.Controls.Primitives.Thumb](xref:Avalonia.Controls.Primitives.Thumb) moved a specified
+distance, as determined by the value of [Avalonia.Controls.Primitives.RangeBase.LargeChange](xref:Avalonia.Controls.Primitives.RangeBase.LargeChange).
+The [Avalonia.Controls.Primitives.Thumb](xref:Avalonia.Controls.Primitives.Thumb) moved to the left for a horizontal
+[Avalonia.Controls.Primitives.ScrollBar](xref:Avalonia.Controls.Primitives.ScrollBar) or upward for a vertical [Avalonia.Controls.Primitives.ScrollBar](xref:Avalonia.Controls.Primitives.ScrollBar).
+
+```csharp
+public Avalonia.Controls.Primitives.ScrollEventType LargeDecrement
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d1161f8a26"></span>
+
+### LargeIncrement Field
+
+Specifies that the [Avalonia.Controls.Primitives.Thumb](xref:Avalonia.Controls.Primitives.Thumb) moved a specified
+distance, as determined by the value of [Avalonia.Controls.Primitives.RangeBase.LargeChange](xref:Avalonia.Controls.Primitives.RangeBase.LargeChange).
+The [Avalonia.Controls.Primitives.Thumb](xref:Avalonia.Controls.Primitives.Thumb) moved to the right for a horizontal
+[Avalonia.Controls.Primitives.ScrollBar](xref:Avalonia.Controls.Primitives.ScrollBar) or downward for a vertical [Avalonia.Controls.Primitives.ScrollBar](xref:Avalonia.Controls.Primitives.ScrollBar).
+
+```csharp
+public Avalonia.Controls.Primitives.ScrollEventType LargeIncrement
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1653177d6d"></span>
+
+### SmallDecrement Field
+
+Specifies that the [Avalonia.Controls.Primitives.Thumb](xref:Avalonia.Controls.Primitives.Thumb) moved a specified
+distance, as determined by the value of [Avalonia.Controls.Primitives.RangeBase.SmallChange](xref:Avalonia.Controls.Primitives.RangeBase.SmallChange).
+The [Avalonia.Controls.Primitives.Thumb](xref:Avalonia.Controls.Primitives.Thumb) moved to the left for a horizontal
+[Avalonia.Controls.Primitives.ScrollBar](xref:Avalonia.Controls.Primitives.ScrollBar) or upward for a vertical [Avalonia.Controls.Primitives.ScrollBar](xref:Avalonia.Controls.Primitives.ScrollBar).
+
+```csharp
+public Avalonia.Controls.Primitives.ScrollEventType SmallDecrement
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-baf51db972"></span>
+
+### SmallIncrement Field
+
+Specifies that the [Avalonia.Controls.Primitives.Thumb](xref:Avalonia.Controls.Primitives.Thumb) moved a specified
+distance, as determined by the value of [Avalonia.Controls.Primitives.RangeBase.SmallChange](xref:Avalonia.Controls.Primitives.RangeBase.SmallChange).
+The [Avalonia.Controls.Primitives.Thumb](xref:Avalonia.Controls.Primitives.Thumb) moved to the right for a horizontal
+[Avalonia.Controls.Primitives.ScrollBar](xref:Avalonia.Controls.Primitives.ScrollBar) or downward for a vertical [Avalonia.Controls.Primitives.ScrollBar](xref:Avalonia.Controls.Primitives.ScrollBar).
+
+```csharp
+public Avalonia.Controls.Primitives.ScrollEventType SmallIncrement
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e8da00b08c"></span>
+
+### ThumbTrack Field
+
+The [Avalonia.Controls.Primitives.Thumb](xref:Avalonia.Controls.Primitives.Thumb) was dragged and caused a Avalonia.UIElement.MouseMove
+event. A [Avalonia.Controls.Primitives.ScrollBar.Scroll](xref:Avalonia.Controls.Primitives.ScrollBar.Scroll) event of this [Avalonia.Controls.Primitives.ScrollEventType](xref:Avalonia.Controls.Primitives.ScrollEventType)
+may occur more than one time when the [Avalonia.Controls.Primitives.Thumb](xref:Avalonia.Controls.Primitives.Thumb)
+is dragged in the [Avalonia.Controls.Primitives.ScrollBar](xref:Avalonia.Controls.Primitives.ScrollBar).
+
+```csharp
+public Avalonia.Controls.Primitives.ScrollEventType ThumbTrack
+```
+
+</section>
+
+</ApiRefPage>
+

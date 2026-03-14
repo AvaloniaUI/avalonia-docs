@@ -1,0 +1,225 @@
+---
+title: 'AnonymousObserver<T>'
+hide_title: true
+slug: '/avalonia/reactive/anonymousobserver-1'
+uid: 'Avalonia.Reactive.AnonymousObserver`1'
+commentId: 'T:Avalonia.Reactive.AnonymousObserver`1'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Reactive'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">AnonymousObserver&lt;T&gt; Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Reactive</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Reactive/AnonymousObserver.cs">AnonymousObserver.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Class to create an [IObserver&lt;T&gt;](xref:System.IObserver%601) instance from delegate-based implementations of the On* methods.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class AnonymousObserver<T>
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> AnonymousObserver&lt;T&gt;
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IObserver&lt;&gt;
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [AnonymousObserver&lt;T&gt; (5 overloads)](#uid-b2ae0db13b) | No summary available. |
+
+<span id="uid-b2ae0db13b"></span>
+
+### AnonymousObserver&lt;T&gt; overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b0c1639abd"></span>
+
+#### AnonymousObserver&lt;T&gt; Constructor
+
+```csharp
+public AnonymousObserver<T>(Action<T> onNext)
+```
+
+##### Parameters
+
+`onNext` Action&lt;T&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-cc747c7efa"></span>
+
+#### AnonymousObserver&lt;T&gt; Constructor
+
+```csharp
+public AnonymousObserver<T>(Action<T> onNext, Action onCompleted)
+```
+
+##### Parameters
+
+`onNext` Action&lt;T&gt;
+
+
+`onCompleted` Action
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e26b7eb5bf"></span>
+
+#### AnonymousObserver&lt;T&gt; Constructor
+
+```csharp
+public AnonymousObserver<T>(Action<T> onNext, Action<Exception> onError)
+```
+
+##### Parameters
+
+`onNext` Action&lt;T&gt;
+
+
+`onError` Action&lt;Exception&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9af2f0bdd2"></span>
+
+#### AnonymousObserver&lt;T&gt; Constructor
+
+```csharp
+public AnonymousObserver<T>(Action<T> onNext, Action<Exception> onError, Action onCompleted)
+```
+
+##### Parameters
+
+`onNext` Action&lt;T&gt;
+
+
+`onError` Action&lt;Exception&gt;
+
+
+`onCompleted` Action
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-52aa2fd2d0"></span>
+
+#### AnonymousObserver&lt;T&gt; Constructor
+
+```csharp
+public AnonymousObserver<T>(System.Threading.Tasks.TaskCompletionSource<T> tcs)
+```
+
+##### Parameters
+
+`tcs` System.Threading.Tasks.TaskCompletionSource&lt;T&gt;
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [OnCompleted](#uid-7301a5da3c) | No summary available. |
+| [OnError](#uid-221f6caf8a) | No summary available. |
+| [OnNext](#uid-950afdad72) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7301a5da3c"></span>
+
+### OnCompleted Method
+
+```csharp
+public void OnCompleted()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-221f6caf8a"></span>
+
+### OnError Method
+
+```csharp
+public void OnError(Exception error)
+```
+
+#### Parameters
+
+`error` Exception
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-950afdad72"></span>
+
+### OnNext Method
+
+```csharp
+public void OnNext(T value)
+```
+
+#### Parameters
+
+`value` T
+
+
+</section>
+
+</ApiRefPage>
+

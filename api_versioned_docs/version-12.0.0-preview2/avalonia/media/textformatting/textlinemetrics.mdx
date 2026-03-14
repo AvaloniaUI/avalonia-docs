@@ -1,0 +1,340 @@
+---
+title: 'TextLineMetrics'
+hide_title: true
+slug: '/avalonia/media/textformatting/textlinemetrics'
+uid: 'Avalonia.Media.TextFormatting.TextLineMetrics'
+commentId: 'T:Avalonia.Media.TextFormatting.TextLineMetrics'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Media.TextFormatting'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">TextLineMetrics Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Media.TextFormatting</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Media/TextFormatting/TextLineMetrics.cs">TextLineMetrics.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Represents a metric for a [Avalonia.Media.TextFormatting.TextLine](xref:Avalonia.Media.TextFormatting.TextLine) objects,
+that holds information about ascent, descent, line gap, size and origin of the text line.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct TextLineMetrics
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> TextLineMetrics
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;TextLineMetrics&gt;
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Equals (2 overloads)](#uid-7636fc681d) | No summary available. |
+| [GetHashCode](#uid-2f14fc2714) | No summary available. |
+| [ToString](#uid-c85be3b538) | No summary available. |
+
+<span id="uid-7636fc681d"></span>
+
+### Equals overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3381c4bec6"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(Avalonia.Media.TextFormatting.TextLineMetrics other)
+```
+
+##### Parameters
+
+`other` [Avalonia.Media.TextFormatting.TextLineMetrics](xref:Avalonia.Media.TextFormatting.TextLineMetrics)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-800f6405e4"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(object obj)
+```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2f14fc2714"></span>
+
+### GetHashCode Method
+
+```csharp
+public int GetHashCode()
+```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c85be3b538"></span>
+
+### ToString Method
+
+```csharp
+public string ToString()
+```
+
+#### Returns
+
+string
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Extent](#uid-11692b1546) | Gets the distance from the top-most to bottom-most black pixel in a line. |
+| [HasOverflowed](#uid-8969f79e49) | Gets a value that indicates whether content of the line overflows the specified paragraph width. |
+| [Height](#uid-ce4c8d39b5) | Gets the height of a line of text. |
+| [NewlineLength](#uid-de59e9b52c) | Gets the number of newline characters at the end of a line. |
+| [OverhangAfter](#uid-4e98a18b86) | Gets the distance that black pixels extend beyond the bottom alignment edge of a line. |
+| [OverhangLeading](#uid-d904ea0e0f) | Gets the distance that black pixels extend prior to the left leading alignment edge of the line. |
+| [OverhangTrailing](#uid-a2805dd4ae) | Gets the distance that black pixels extend following the right trailing alignment edge of the line. |
+| [Start](#uid-20723b6419) | Gets the distance from the start of a paragraph to the starting point of a line. |
+| [TextBaseline](#uid-c04cfc44b9) | Gets the distance from the top to the baseline of the line of text. |
+| [TrailingWhitespaceLength](#uid-1a19da5d26) | Gets the number of whitespace code points beyond the last non-blank character in a line. |
+| [Width](#uid-f74c6922cc) | Gets the width of a line of text, excluding trailing whitespace characters. |
+| [WidthIncludingTrailingWhitespace](#uid-c0e249b6d4) | Gets the width of a line of text, including trailing whitespace characters. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-11692b1546"></span>
+
+### Extent Property
+
+Gets the distance from the top-most to bottom-most black pixel in a line.
+
+```csharp
+public double Extent { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8969f79e49"></span>
+
+### HasOverflowed Property
+
+Gets a value that indicates whether content of the line overflows the specified paragraph width.
+
+```csharp
+public bool HasOverflowed { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ce4c8d39b5"></span>
+
+### Height Property
+
+Gets the height of a line of text.
+
+```csharp
+public double Height { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-de59e9b52c"></span>
+
+### NewlineLength Property
+
+Gets the number of newline characters at the end of a line.
+
+```csharp
+public int NewlineLength { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4e98a18b86"></span>
+
+### OverhangAfter Property
+
+Gets the distance that black pixels extend beyond the bottom alignment edge of a line.
+
+```csharp
+public double OverhangAfter { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d904ea0e0f"></span>
+
+### OverhangLeading Property
+
+Gets the distance that black pixels extend prior to the left leading alignment edge of the line.
+
+```csharp
+public double OverhangLeading { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a2805dd4ae"></span>
+
+### OverhangTrailing Property
+
+Gets the distance that black pixels extend following the right trailing alignment edge of the line.
+
+```csharp
+public double OverhangTrailing { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-20723b6419"></span>
+
+### Start Property
+
+Gets the distance from the start of a paragraph to the starting point of a line.
+
+```csharp
+public double Start { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c04cfc44b9"></span>
+
+### TextBaseline Property
+
+Gets the distance from the top to the baseline of the line of text.
+
+```csharp
+public double TextBaseline { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1a19da5d26"></span>
+
+### TrailingWhitespaceLength Property
+
+Gets the number of whitespace code points beyond the last non-blank character in a line.
+
+```csharp
+public int TrailingWhitespaceLength { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f74c6922cc"></span>
+
+### Width Property
+
+Gets the width of a line of text, excluding trailing whitespace characters.
+
+```csharp
+public double Width { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c0e249b6d4"></span>
+
+### WidthIncludingTrailingWhitespace Property
+
+Gets the width of a line of text, including trailing whitespace characters.
+
+```csharp
+public double WidthIncludingTrailingWhitespace { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

@@ -1,0 +1,135 @@
+---
+title: 'TextLineBreak'
+hide_title: true
+slug: '/avalonia/media/textformatting/textlinebreak'
+uid: 'Avalonia.Media.TextFormatting.TextLineBreak'
+commentId: 'T:Avalonia.Media.TextFormatting.TextLineBreak'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Media.TextFormatting'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">TextLineBreak Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Media.TextFormatting</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Media/TextFormatting/TextLineBreak.cs">TextLineBreak.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class TextLineBreak
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> TextLineBreak
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [TextLineBreak](#uid-61590dd934) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-61590dd934"></span>
+
+### TextLineBreak Constructor
+
+```csharp
+public TextLineBreak(Avalonia.Media.TextFormatting.TextEndOfLine textEndOfLine, Avalonia.Media.FlowDirection flowDirection, bool isSplit)
+```
+
+#### Parameters
+
+`textEndOfLine` [Avalonia.Media.TextFormatting.TextEndOfLine](xref:Avalonia.Media.TextFormatting.TextEndOfLine)
+
+
+`flowDirection` [Avalonia.Media.FlowDirection](xref:Avalonia.Media.FlowDirection)
+
+
+`isSplit` bool
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [FlowDirection](#uid-d8f277426f) | Get the flow direction for remaining characters. |
+| [IsSplit](#uid-9f94b35911) | Gets whether there were remaining runs after this line break, that were split up by the [Avalonia.Media.TextFormatting.TextFormatter](xref:Avalonia.Media.TextFormatting.TextFormatter) during the formatting process. |
+| [TextEndOfLine](#uid-381e30d0eb) | Get the end of line run. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d8f277426f"></span>
+
+### FlowDirection Property
+
+Get the flow direction for remaining characters.
+
+```csharp
+public Avalonia.Media.FlowDirection FlowDirection { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9f94b35911"></span>
+
+### IsSplit Property
+
+Gets whether there were remaining runs after this line break,
+that were split up by the [Avalonia.Media.TextFormatting.TextFormatter](xref:Avalonia.Media.TextFormatting.TextFormatter) during the formatting process.
+
+```csharp
+public bool IsSplit { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-381e30d0eb"></span>
+
+### TextEndOfLine Property
+
+Get the end of line run.
+
+```csharp
+public Avalonia.Media.TextFormatting.TextEndOfLine TextEndOfLine { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

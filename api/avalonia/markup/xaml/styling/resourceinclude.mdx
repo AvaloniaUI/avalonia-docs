@@ -1,0 +1,224 @@
+---
+title: 'ResourceInclude'
+hide_title: true
+slug: '/avalonia/markup/xaml/styling/resourceinclude'
+uid: 'Avalonia.Markup.Xaml.Styling.ResourceInclude'
+commentId: 'T:Avalonia.Markup.Xaml.Styling.ResourceInclude'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Markup.Xaml'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Markup.Xaml.Styling'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ResourceInclude Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Markup.Xaml.Styling</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Markup.Xaml</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Markup/Avalonia.Markup.Xaml/Styling/ResourceInclude.cs">ResourceInclude.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Loads a resource dictionary from a specified URL.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class ResourceInclude
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> ResourceInclude
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Derived types:</span> <a href="mergeresourceinclude">MergeResourceInclude</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="../../../controls/iresourcenode">IResourceNode</a>, <a href="../../../controls/iresourceprovider">IResourceProvider</a>, <a href="../../../controls/ithemevariantprovider">IThemeVariantProvider</a>
+</div>
+</div>
+
+## Remarks
+
+If used from the XAML code, it is replaced with direct resource dictionary reference.
+When used in runtime, this type might be unsafe with trimming and AOT.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [ResourceInclude (2 overloads)](#uid-417f6b06cc) | Initializes a new instance of the [Avalonia.Markup.Xaml.Styling.ResourceInclude](xref:Avalonia.Markup.Xaml.Styling.ResourceInclude) class. |
+
+<span id="uid-417f6b06cc"></span>
+
+### ResourceInclude overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3dd66f5307"></span>
+
+#### ResourceInclude Constructor
+
+Initializes a new instance of the [Avalonia.Markup.Xaml.Styling.ResourceInclude](xref:Avalonia.Markup.Xaml.Styling.ResourceInclude) class.
+
+```csharp
+public ResourceInclude(IServiceProvider serviceProvider)
+```
+
+##### Parameters
+
+`serviceProvider` IServiceProvider
+
+The XAML service provider.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-57e0723059"></span>
+
+#### ResourceInclude Constructor
+
+Initializes a new instance of the [Avalonia.Markup.Xaml.Styling.ResourceInclude](xref:Avalonia.Markup.Xaml.Styling.ResourceInclude) class.
+
+```csharp
+public ResourceInclude(Uri baseUri)
+```
+
+##### Parameters
+
+`baseUri` Uri
+
+The base URL for the XAML context.
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [TryGetResource](#uid-f4b44da17a) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f4b44da17a"></span>
+
+### TryGetResource Method
+
+```csharp
+public bool TryGetResource(object key, Avalonia.Styling.ThemeVariant theme, object& value)
+```
+
+#### Parameters
+
+`key` object
+
+
+`theme` [Avalonia.Styling.ThemeVariant](xref:Avalonia.Styling.ThemeVariant)
+
+
+`value` object&amp;
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Loaded](#uid-71a0e79d4a) | Gets the loaded resource dictionary. |
+| [Owner](#uid-b55252134b) | No summary available. |
+| [Source](#uid-a4fa9114c1) | Gets or sets the source URL. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-71a0e79d4a"></span>
+
+### Loaded Property
+
+Gets the loaded resource dictionary.
+
+```csharp
+public Avalonia.Controls.IResourceDictionary Loaded { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b55252134b"></span>
+
+### Owner Property
+
+```csharp
+public Avalonia.Controls.IResourceHost Owner { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a4fa9114c1"></span>
+
+### Source Property
+
+Gets or sets the source URL.
+
+```csharp
+public Uri Source { get; set; }
+```
+
+</section>
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [OwnerChanged](#uid-61ff0cac80) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-61ff0cac80"></span>
+
+### OwnerChanged Event
+
+```csharp
+public event EventHandler OwnerChanged
+```
+
+</section>
+
+</ApiRefPage>
+

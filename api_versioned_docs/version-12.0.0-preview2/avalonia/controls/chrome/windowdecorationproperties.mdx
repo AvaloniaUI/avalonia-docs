@@ -1,0 +1,136 @@
+---
+title: 'WindowDecorationProperties'
+hide_title: true
+slug: '/avalonia/controls/chrome/windowdecorationproperties'
+uid: 'Avalonia.Controls.Chrome.WindowDecorationProperties'
+commentId: 'T:Avalonia.Controls.Chrome.WindowDecorationProperties'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Chrome'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">WindowDecorationProperties Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Chrome</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Controls/Chrome/WindowDecorationProperties.cs">WindowDecorationProperties.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Provides attached properties for window decoration hit-testing.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class WindowDecorationProperties
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> WindowDecorationProperties
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [GetElementRole](#uid-9d67656f23) | Gets the [Avalonia.Input.WindowDecorationsElementRole](xref:Avalonia.Input.WindowDecorationsElementRole) for the specified element. |
+| [SetElementRole](#uid-7f4861a389) | Sets the [Avalonia.Input.WindowDecorationsElementRole](xref:Avalonia.Input.WindowDecorationsElementRole) for the specified element. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9d67656f23"></span>
+
+### GetElementRole Method
+
+Gets the [Avalonia.Input.WindowDecorationsElementRole](xref:Avalonia.Input.WindowDecorationsElementRole) for the specified element.
+
+```csharp
+public Avalonia.Input.WindowDecorationsElementRole GetElementRole(Avalonia.Visual element)
+```
+
+#### Parameters
+
+`element` [Avalonia.Visual](xref:Avalonia.Visual)
+
+
+#### Returns
+
+[Avalonia.Input.WindowDecorationsElementRole](xref:Avalonia.Input.WindowDecorationsElementRole)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7f4861a389"></span>
+
+### SetElementRole Method
+
+Sets the [Avalonia.Input.WindowDecorationsElementRole](xref:Avalonia.Input.WindowDecorationsElementRole) for the specified element.
+
+```csharp
+public void SetElementRole(Avalonia.Visual element, Avalonia.Input.WindowDecorationsElementRole value)
+```
+
+#### Parameters
+
+`element` [Avalonia.Visual](xref:Avalonia.Visual)
+
+
+`value` [Avalonia.Input.WindowDecorationsElementRole](xref:Avalonia.Input.WindowDecorationsElementRole)
+
+
+</section>
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [ElementRoleProperty](#uid-05e1fd3e4c) | Defines the [Avalonia.Input.WindowDecorationsElementRole](xref:Avalonia.Input.WindowDecorationsElementRole) attached property. Marks a visual element with a specific role for non-client hit-testing. Can be applied to any element in the visual tree, not limited to decoration children. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-05e1fd3e4c"></span>
+
+### ElementRoleProperty Field
+
+Defines the [Avalonia.Input.WindowDecorationsElementRole](xref:Avalonia.Input.WindowDecorationsElementRole) attached property.
+Marks a visual element with a specific role for non-client hit-testing.
+Can be applied to any element in the visual tree, not limited to decoration children.
+
+```csharp
+public Avalonia.AttachedProperty<Avalonia.Input.WindowDecorationsElementRole> ElementRoleProperty
+```
+
+</section>
+
+</ApiRefPage>
+

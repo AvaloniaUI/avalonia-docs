@@ -1,0 +1,147 @@
+---
+title: 'RefreshRequestedEventArgs'
+hide_title: true
+slug: '/avalonia/controls/refreshrequestedeventargs'
+uid: 'Avalonia.Controls.RefreshRequestedEventArgs'
+commentId: 'T:Avalonia.Controls.RefreshRequestedEventArgs'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">RefreshRequestedEventArgs Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Controls/PullToRefresh/RefreshRequestedEventArgs.cs">RefreshRequestedEventArgs.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Provides event data for RefreshRequested events.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class RefreshRequestedEventArgs
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> EventArgs <span className="apiref-page__relation-separator">-&gt;</span> <a href="../interactivity/routedeventargs">RoutedEventArgs</a> <span className="apiref-page__relation-separator">-&gt;</span> RefreshRequestedEventArgs
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [RefreshRequestedEventArgs (2 overloads)](#uid-6306d6aa6f) | No summary available. |
+
+<span id="uid-6306d6aa6f"></span>
+
+### RefreshRequestedEventArgs overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e16d07ab7d"></span>
+
+#### RefreshRequestedEventArgs Constructor
+
+```csharp
+public RefreshRequestedEventArgs(Avalonia.Controls.RefreshCompletionDeferral completionDeferral, Avalonia.Interactivity.RoutedEvent routedEvent)
+```
+
+##### Parameters
+
+`completionDeferral` [Avalonia.Controls.RefreshCompletionDeferral](xref:Avalonia.Controls.RefreshCompletionDeferral)
+
+
+`routedEvent` [Avalonia.Interactivity.RoutedEvent](xref:Avalonia.Interactivity.RoutedEvent)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-403e1e4153"></span>
+
+#### RefreshRequestedEventArgs Constructor
+
+```csharp
+public RefreshRequestedEventArgs(Action deferredAction, Avalonia.Interactivity.RoutedEvent routedEvent)
+```
+
+##### Parameters
+
+`deferredAction` Action
+
+
+`routedEvent` [Avalonia.Interactivity.RoutedEvent](xref:Avalonia.Interactivity.RoutedEvent)
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [GetDeferral](#uid-c6db7990b0) | Gets a deferral object for managing the work done in the RefreshRequested event handler. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c6db7990b0"></span>
+
+### GetDeferral Method
+
+Gets a deferral object for managing the work done in the RefreshRequested event handler.
+
+```csharp
+public Avalonia.Controls.RefreshCompletionDeferral GetDeferral()
+```
+
+#### Returns
+
+[Avalonia.Controls.RefreshCompletionDeferral](xref:Avalonia.Controls.RefreshCompletionDeferral)
+
+A [Avalonia.Controls.RefreshCompletionDeferral](xref:Avalonia.Controls.RefreshCompletionDeferral) object
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Handled](../interactivity/routedeventargs.mdx#uid-204d2af354) | Gets or sets a value indicating whether the routed event has already been handled. Inherited from [RoutedEventArgs](../interactivity/routedeventargs.mdx). |
+| [Route](../interactivity/routedeventargs.mdx#uid-751be73db9) | Gets or sets the routing strategy (direct, bubbling, or tunneling) of the routed event. Inherited from [RoutedEventArgs](../interactivity/routedeventargs.mdx). |
+| [RoutedEvent](../interactivity/routedeventargs.mdx#uid-4e102999d9) | Gets or sets the routed event associated with these event args. Inherited from [RoutedEventArgs](../interactivity/routedeventargs.mdx). |
+| [Source](../interactivity/routedeventargs.mdx#uid-4385b523d5) | Gets or sets the source object that raised the routed event. Inherited from [RoutedEventArgs](../interactivity/routedeventargs.mdx). |
+
+</ApiRefPage>
+

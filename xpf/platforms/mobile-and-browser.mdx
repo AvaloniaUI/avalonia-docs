@@ -1,0 +1,304 @@
+---
+id: mobile-and-browser
+title: Mobile and Browser
+---
+
+import FileTree from '@site/src/components/global/FileTree';
+
+## Prerequisites
+
+Before adding mobile or browser targets, make sure your project already runs on XPF for Desktop and that the XPF SDK is configured correctly. See [Getting Started](/xpf/getting-started) if you have not done this yet.
+
+:::tip
+The [CalculatorDemo repository](https://github.com/AvaloniaUIOU/CalculatorDemo/tree/mobile-browser) contains a working example of XPF on all platforms. Ask the support team for access if needed.
+:::
+
+You also need to prepare your development machine for each target platform. These steps are shared with all .NET mobile and browser projects:
+
+- [Setting up an Android dev environment](/docs/platform-specific-guides/android)
+- [Setting up an iOS dev environment](/docs/platform-specific-guides/ios)
+- [Setting up a Browser dev environment](/docs/platform-specific-guides/webassembly)
+
+## Multi-targeting
+
+Mobile and browser support in .NET is powered by platform-specific workloads and target frameworks. Desktop applications normally use `net8.0` or `net8.0-windows`, which also works on Linux and macOS through the XPF SDK compatibility layer.
+
+To support Android, iOS, or Browser, your project needs the corresponding target frameworks: `net8.0-android`, `net8.0-ios`, and `net8.0-browser`.
+
+If you are familiar with Avalonia's cross-platform templates, you may know that Avalonia recommends creating separate projects per target. This is **not recommended** for XPF projects. WPF's embedded resource system assumes the executable project is the main project with all resources, and splitting into separate projects can break this.
+
+Instead, use a single multi-targeted project by changing your `.csproj`:
+
+```diff
+-        <TargetFramework>net8.0-windows</TargetFramework>
++        <TargetFrameworks>net8.0;net8.0-ios;net8.0-android;net8.0-browser</TargetFrameworks>
+```
+
+Where `net8.0` is reused for all desktop platforms.
+
+Additionally, enable multi-targeting support in the XPF SDK:
+
+```diff
++        <XpfSingleProject>true</XpfSingleProject>
+```
+
+:::caution
+Add `net8.0-android`, `net8.0-ios`, and `net8.0-browser` target frameworks **only on the executable project**. Do not add them to shared library projects. In particular, `net8.0-browser` is not supported on non-executable projects and will cause build errors such as "Program does not contain a static 'Main' method suitable for an entry point."
+
+Library projects should target `net8.0`. You can use the XPF SDK on library projects if needed. If a library needs access to native mobile APIs, you can add `net8.0-android` or `net8.0-ios`, but not `net8.0-browser`.
+:::
+
+## Defining an entry point
+
+Desktop WPF applications start with a `Main` method, but mobile and browser platforms have different entry point mechanisms. Android requires a root `Activity`, iOS requires an `AppDelegate`, and browser applications are launched by the web page itself.
+
+To handle this, define a shared entry point in your `Application` class that each platform can call:
+
+```diff
+    public partial class App : Application
+    {
++        /// Shared App entry point.
++        public static int Start()
++        {
++            var app = new App();
++            app.InitializeComponent();
++
++            // Note, this method returns early on Mobile and Browser.
++            return app.Run();
++        }
+    }
+```
+
+## Platform-specific folders
+
+The final step before building is to define platform-specific folders containing the entry point for each target. After this step, your project structure should look like this:
+
+<FileTree data={[
+  {
+    name: 'MyApp',
+    type: 'folder',
+    children: [
+      {
+        name: 'Platforms',
+        type: 'folder',
+        children: [
+          {
+            name: 'Android',
+            type: 'folder',
+            children: [
+              { name: 'MainActivity.cs', type: 'file', comment: 'entry point Activity' },
+              { name: 'AndroidManifest.xml', type: 'file', comment: 'app metadata and permissions' },
+            ]
+          },
+          {
+            name: 'Browser',
+            type: 'folder',
+            children: [
+              { name: 'Program.cs', type: 'file', comment: 'C# entry point' },
+              {
+                name: 'wwwroot',
+                type: 'folder',
+                comment: 'web entry point',
+                children: [
+                  { name: 'index.html', type: 'file' },
+                  { name: 'main.js', type: 'file' },
+                ]
+              },
+            ]
+          },
+          {
+            name: 'Desktop',
+            type: 'folder',
+            children: [
+              { name: 'Program.cs', type: 'file', comment: 'standard desktop entry point' },
+            ]
+          },
+          {
+            name: 'iOS',
+            type: 'folder',
+            children: [
+              { name: 'AppDelegate.cs', type: 'file', comment: 'entry point' },
+              { name: 'Info.plist', type: 'file', comment: 'app metadata and permissions' },
+            ]
+          },
+        ]
+      },
+      { name: 'App.xaml', type: 'file' },
+      { name: 'App.xaml.cs', type: 'file', comment: 'contains shared App.Start() method' },
+      { name: 'MyApp.csproj', type: 'file' },
+    ]
+  }
+]} />
+
+You can download pre-created platform folders from the [SingleProjectPlatforms repository](https://github.com/AvaloniaUIOU/SingleProjectPlatforms/archive/refs/heads/main.zip).
+
+Each platform entry point calls the `App.Start()` method defined in the previous step.
+
+## Building
+
+### .NET CLI
+
+Build all platforms at once:
+
+```bash
+dotnet build
+```
+
+Build for a specific platform:
+
+```bash
+dotnet build -f net8.0-android
+```
+
+Run the browser target:
+
+```bash
+dotnet run -f net8.0-browser
+```
+
+:::note
+.NET does not officially support running Android or iOS apps from the CLI directly. Use an IDE for these targets.
+:::
+
+### Visual Studio
+
+By default, Visual Studio targets the desktop framework (`net8.0`). To select a different platform, use the target framework dropdown:
+
+![VS target selector](/img/running-on-mobile-and-browser/vs-target-selector.png)
+
+When Android is selected, Visual Studio shows a selector for emulators or connected devices:
+
+![VS Android emulators selector](/img/running-on-mobile-and-browser/vs-android-emulators-selector.png)
+
+If no emulators appear, verify that:
+- The Android SDK is installed (install it from the Visual Studio Installer under "Individual Components")
+- At least one Android emulator is configured (open **Tools > Android > Android Device Manager** to create one)
+- Both Visual Studio and the XPF SDK are up to date
+
+### JetBrains Rider
+
+Rider works similarly to Visual Studio. Select your target framework from the run configuration dropdown:
+
+![Rider target selector](/img/running-on-mobile-and-browser/rider-target-selector.png)
+
+The Browser target is not shown by default. To add it, click **Edit Configurations** in the dropdown and add a new ".NET Project" configuration, selecting the correct target framework. Rider fills in the remaining fields automatically.
+
+![Rider adding browser target](/img/running-on-mobile-and-browser/rider-adding-browser-target.png)
+
+### VS Code
+
+VS Code works with the [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) and [.NET MAUI](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.dotnet-maui) extensions for mobile targets.
+
+:::note
+Apple does not allow iOS simulators or connected iOS devices on non-macOS machines. Use macOS for Apple mobile targets, or experiment with [Visual Studio's macOS pairing feature](https://learn.microsoft.com/en-us/dotnet/maui/ios/pair-to-mac?view=net-maui-8.0).
+:::
+
+### Example: WPF Calculator Demo on Android
+
+![Calculator Demo on Android emulator](/img/running-on-mobile-and-browser/calc-demo.png)
+
+## Publishing
+
+Use the .NET CLI for publishing:
+
+```bash
+# Outputs an APK in /bin/Release/net8.0-android/publish/
+dotnet publish -f net8.0-android
+
+# Outputs an IPA in /bin/Release/net8.0-ios/publish/
+dotnet publish -f net8.0-ios
+
+# Outputs an app bundle in /bin/Release/net8.0-browser/browser-wasm/AppBundle/
+dotnet publish -f net8.0-browser
+```
+
+:::caution
+Publishing in Release configuration has known issues with Mobile and Browser projects due to trimming and AOT compilation. Test your published output thoroughly.
+:::
+
+## Known limitations
+
+Browser and mobile platforms have inherent constraints compared to desktop. XPF provides compatibility layers for some of these, but others require changes in your application code.
+
+### Windowing
+
+XPF supports the `Window` class on mobile and browser targets through a virtual desktop embedded in the platform's single view (the mobile app view or web page content). No extra code is needed to enable this.
+
+Current limitations of virtual windows:
+- Resizing and dragging are not yet supported
+- Window decorations are not rendered
+- Owned windows are not yet supported (but `ShowDialog` works)
+
+Maximize your main window so it fills the full screen on mobile and browser:
+
+```csharp
+public MainWindow()
+{
+    InitializeComponent();
+
+    if (OperatingSystem.IsBrowser() || OperatingSystem.IsAndroid() || OperatingSystem.IsIOS())
+    {
+        WindowState = WindowState.Maximized;
+    }
+}
+```
+
+### DispatcherFrame
+
+`DispatcherFrame` and related `Dispatcher` APIs are not supported on any mobile or browser platform.
+
+### Synchronous dialog APIs
+
+WPF's synchronous dialog APIs (`Window.ShowDialog()`, `MessageBox.Show()`) work on desktop but cannot be supported on mobile and browser because the main thread cannot be blocked on these platforms.
+
+Use the async extension methods instead:
+
+**MessageBox:**
+```diff
+-var result = MessageBox.Show(parent, "Operation cannot be performed", "Title", MessageBoxButton.OK);
++var result = await MessageBoxEx.ShowAsync(parent, "Operation cannot be performed", "Title", MessageBoxButton.OK);
+```
+
+**ShowDialog:**
+```diff
+var dialog = new Window();
+dialog.Owner = this;
+-var result = dialog.ShowDialog();
++var result = await dialog.ShowDialogAsync();
+```
+
+These extension methods also work on desktop targets, so you can use them everywhere for consistency.
+
+:::note
+Async extension methods for file dialogs are not yet available but are planned. Contact the support team if you need these or other APIs on mobile or browser.
+:::
+
+### File system access
+
+Mobile and browser applications are sandboxed. Direct file system access by path is not available.
+
+Limit your file API usage to file pickers and stream-based APIs. To access a writable application data folder on mobile:
+
+```csharp
+var appDataPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+```
+
+:::note
+Browser applications have no file system access except through user-initiated file dialogs.
+:::
+
+### Threading in the browser
+
+The browser environment has very limited threading support. Treat it as an environment where async is not optional but required, because the main thread of a web application cannot be blocked.
+
+To enable minimal threading support (such as `Task.Run` or `new Thread()`), add the following to your project file:
+
+```xml
+<PropertyGroup>
+  <WasmEnableThreads>true</WasmEnableThreads>
+</PropertyGroup>
+```
+
+### Platform-specific code
+
+If you need to access platform-specific APIs from your XPF project, the approach is the same as in an Avalonia application. See [Platform-specific .NET](/docs/platform-specific-guides/dotnet) for details.

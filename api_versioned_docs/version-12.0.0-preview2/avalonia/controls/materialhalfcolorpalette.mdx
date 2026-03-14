@@ -1,0 +1,181 @@
+---
+title: 'MaterialHalfColorPalette'
+hide_title: true
+slug: '/avalonia/controls/materialhalfcolorpalette'
+uid: 'Avalonia.Controls.MaterialHalfColorPalette'
+commentId: 'T:Avalonia.Controls.MaterialHalfColorPalette'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.ColorPicker'
+assembly: 'Avalonia.Controls.ColorPicker'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">MaterialHalfColorPalette Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.ColorPicker</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.ColorPicker</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Controls.ColorPicker/ColorPalettes/MaterialHalfColorPalette.cs">MaterialHalfColorPalette.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Implements half of the [Avalonia.Controls.MaterialColorPalette](xref:Avalonia.Controls.MaterialColorPalette) for improved usability.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class MaterialHalfColorPalette
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> MaterialHalfColorPalette
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="icolorpalette">IColorPalette</a>
+</div>
+</div>
+
+## Remarks
+
+This palette is based on the one outlined here:
+
+https://material.io/design/color/the-color-system.html#tools-for-picking-colors
+
+In order to make the palette uniform and rectangular the following
+alterations were made:
+
+1. The A100-A700 shades of each color are excluded.
+These shades do not exist for all colors (brown/gray).
+2. Black/White are stand-alone and are also excluded.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [MaterialHalfColorPalette](#uid-f27c18e7cb) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f27c18e7cb"></span>
+
+### MaterialHalfColorPalette Constructor
+
+```csharp
+public MaterialHalfColorPalette()
+```
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [GetColor](#uid-a89ffebdf1) | Gets a color in the palette by index. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a89ffebdf1"></span>
+
+### GetColor Method
+
+Gets a color in the palette by index.
+
+```csharp
+public Avalonia.Media.Color GetColor(int colorIndex, int shadeIndex)
+```
+
+#### Parameters
+
+`colorIndex` int
+
+The index of the color in the palette.
+The index must be between zero and [Avalonia.Controls.IColorPalette.ColorCount](xref:Avalonia.Controls.IColorPalette.ColorCount).
+
+
+`shadeIndex` int
+
+The index of the color shade in the palette.
+The index must be between zero and [Avalonia.Controls.IColorPalette.ShadeCount](xref:Avalonia.Controls.IColorPalette.ShadeCount).
+
+
+#### Returns
+
+[Avalonia.Media.Color](xref:Avalonia.Media.Color)
+
+The color at the specified index or an exception.
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [ColorCount](#uid-99c5563237) | Gets the total number of colors in this palette. A color is not necessarily a single value and may be composed of several shades. |
+| [ShadeCount](#uid-1e14d443e5) | Gets the total number of shades for each color in this palette. Shades are usually a variation of the color lightening or darkening it. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-99c5563237"></span>
+
+### ColorCount Property
+
+Gets the total number of colors in this palette.
+A color is not necessarily a single value and may be composed of several shades.
+
+```csharp
+public int ColorCount { get; set; }
+```
+
+#### Remarks
+
+Represents total columns in a table.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1e14d443e5"></span>
+
+### ShadeCount Property
+
+Gets the total number of shades for each color in this palette.
+Shades are usually a variation of the color lightening or darkening it.
+
+```csharp
+public int ShadeCount { get; set; }
+```
+
+#### Remarks
+
+Represents total rows in a table.
+
+</section>
+
+</ApiRefPage>
+

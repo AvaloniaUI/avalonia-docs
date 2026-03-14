@@ -1,0 +1,315 @@
+---
+title: 'ItemsSourceView'
+hide_title: true
+slug: '/avalonia/controls/itemssourceview'
+uid: 'Avalonia.Controls.ItemsSourceView'
+commentId: 'T:Avalonia.Controls.ItemsSourceView'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ItemsSourceView Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Controls/ItemsSourceView.cs">ItemsSourceView.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Represents a standardized view of the supported interactions between an items collection
+and an items control.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class ItemsSourceView
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> ItemsSourceView
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Derived types:</span> <a href="itemcollection">ItemCollection</a>, <a href="itemssourceview-1">ItemsSourceView&lt;T&gt;</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> ICollectionChangedListener, IEnumerable&lt;object&gt;, IReadOnlyCollection&lt;object&gt;, IReadOnlyList&lt;object&gt;, ICollection, IEnumerable, IList, INotifyCollectionChanged
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Contains](#uid-384f51208a) | No summary available. |
+| [GetAt](#uid-6695c23d5f) | Retrieves the item at the specified index. |
+| [GetEnumerator](#uid-5163e5545c) | No summary available. |
+| [GetOrCreate (2 overloads)](#uid-690d93f5ab) | No summary available. |
+| [IndexOf](#uid-42b8595b39) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-384f51208a"></span>
+
+### Contains Method
+
+```csharp
+public bool Contains(object item)
+```
+
+#### Parameters
+
+`item` object
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6695c23d5f"></span>
+
+### GetAt Method
+
+Retrieves the item at the specified index.
+
+```csharp
+public object GetAt(int index)
+```
+
+#### Parameters
+
+`index` int
+
+The index.
+
+
+#### Returns
+
+object
+
+The item.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5163e5545c"></span>
+
+### GetEnumerator Method
+
+```csharp
+public System.Collections.Generic.IEnumerator<object> GetEnumerator()
+```
+
+#### Returns
+
+System.Collections.Generic.IEnumerator&lt;object&gt;
+
+
+</section>
+
+<span id="uid-690d93f5ab"></span>
+
+### GetOrCreate overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7273578632"></span>
+
+#### GetOrCreate Method
+
+```csharp
+public Avalonia.Controls.ItemsSourceView<T><T> GetOrCreate<T>(System.Collections.Generic.IEnumerable<T> items)
+```
+
+##### Parameters
+
+`items` System.Collections.Generic.IEnumerable&lt;T&gt;
+
+
+##### Type Parameters
+
+`T`
+
+
+##### Returns
+
+[Avalonia.Controls.ItemsSourceView](xref:Avalonia.Controls.ItemsSourceView)&lt;T&gt;&lt;T&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-342cfe9787"></span>
+
+#### GetOrCreate Method
+
+Gets or creates an [Avalonia.Controls.ItemsSourceView](xref:Avalonia.Controls.ItemsSourceView) for the specified enumerable.
+
+```csharp
+public Avalonia.Controls.ItemsSourceView<T><T> GetOrCreate<T>(System.Collections.IEnumerable items)
+```
+
+##### Parameters
+
+`items` System.Collections.IEnumerable
+
+The enumerable.
+
+
+##### Returns
+
+[Avalonia.Controls.ItemsSourceView](xref:Avalonia.Controls.ItemsSourceView)
+
+
+##### Remarks
+
+This method handles the following three cases:
+- If `items` is null, returns [Avalonia.Controls.ItemsSourceView.Empty](xref:Avalonia.Controls.ItemsSourceView.Empty)
+- If `items` is an [Avalonia.Controls.ItemsSourceView](xref:Avalonia.Controls.ItemsSourceView) returns the existing
+[Avalonia.Controls.ItemsSourceView](xref:Avalonia.Controls.ItemsSourceView)
+- Otherwise creates a new [Avalonia.Controls.ItemsSourceView](xref:Avalonia.Controls.ItemsSourceView)
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-42b8595b39"></span>
+
+### IndexOf Method
+
+```csharp
+public int IndexOf(object item)
+```
+
+#### Parameters
+
+`item` object
+
+
+#### Returns
+
+int
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Count](#uid-c7dd90d709) | Gets the number of items in the collection. |
+| [Empty](#uid-4ca040a88a) | Gets an empty [Avalonia.Controls.ItemsSourceView](xref:Avalonia.Controls.ItemsSourceView) |
+| [Item](#uid-e787f7367e) | No summary available. |
+| [Source](#uid-d81337be41) | Gets the source collection. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c7dd90d709"></span>
+
+### Count Property
+
+Gets the number of items in the collection.
+
+```csharp
+public int Count { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4ca040a88a"></span>
+
+### Empty Property
+
+Gets an empty [Avalonia.Controls.ItemsSourceView](xref:Avalonia.Controls.ItemsSourceView)
+
+```csharp
+public Avalonia.Controls.ItemsSourceView Empty { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e787f7367e"></span>
+
+### Item Property
+
+```csharp
+public object Item { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d81337be41"></span>
+
+### Source Property
+
+Gets the source collection.
+
+```csharp
+public System.Collections.IList Source { get; set; }
+```
+
+</section>
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [CollectionChanged](#uid-13328a2fb4) | Occurs when the collection has changed to indicate the reason for the change and which items changed. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-13328a2fb4"></span>
+
+### CollectionChanged Event
+
+Occurs when the collection has changed to indicate the reason for the change and which items changed.
+
+```csharp
+public event System.Collections.Specialized.NotifyCollectionChangedEventHandler CollectionChanged
+```
+
+</section>
+
+</ApiRefPage>
+

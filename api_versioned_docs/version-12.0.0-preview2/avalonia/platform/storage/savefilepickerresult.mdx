@@ -1,0 +1,189 @@
+---
+title: 'SaveFilePickerResult'
+hide_title: true
+slug: '/avalonia/platform/storage/savefilepickerresult'
+uid: 'Avalonia.Platform.Storage.SaveFilePickerResult'
+commentId: 'T:Avalonia.Platform.Storage.SaveFilePickerResult'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Platform.Storage'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">SaveFilePickerResult Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Platform.Storage</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Platform/Storage/SaveFilePickerResult.cs">SaveFilePickerResult.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Extended result of the [Avalonia.Platform.Storage.IStorageProvider.SaveFilePickerWithResultAsync(Avalonia.Platform.Storage.FilePickerSaveOptions)](xref:Avalonia.Platform.Storage.IStorageProvider.SaveFilePickerWithResultAsync%28Avalonia.Platform.Storage.FilePickerSaveOptions%29) operation.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct SaveFilePickerResult
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> SaveFilePickerResult
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;SaveFilePickerResult&gt;
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Equals (2 overloads)](#uid-a69888fc6e) | No summary available. |
+| [GetHashCode](#uid-0accbb5256) | No summary available. |
+| [ToString](#uid-9840e10d24) | No summary available. |
+
+<span id="uid-a69888fc6e"></span>
+
+### Equals overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d636837015"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(Avalonia.Platform.Storage.SaveFilePickerResult other)
+```
+
+##### Parameters
+
+`other` [Avalonia.Platform.Storage.SaveFilePickerResult](xref:Avalonia.Platform.Storage.SaveFilePickerResult)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a77cbd7190"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(object obj)
+```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0accbb5256"></span>
+
+### GetHashCode Method
+
+```csharp
+public int GetHashCode()
+```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9840e10d24"></span>
+
+### ToString Method
+
+```csharp
+public string ToString()
+```
+
+#### Returns
+
+string
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [File](#uid-01a24bff25) | Saved [Avalonia.Platform.Storage.IStorageFile](xref:Avalonia.Platform.Storage.IStorageFile) or null if user canceled the dialog. |
+| [SelectedFileType](#uid-711f47a123) | Selected file type or null if not supported. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-01a24bff25"></span>
+
+### File Property
+
+Saved [Avalonia.Platform.Storage.IStorageFile](xref:Avalonia.Platform.Storage.IStorageFile) or null if user canceled the dialog.
+
+```csharp
+public Avalonia.Platform.Storage.IStorageFile File { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-711f47a123"></span>
+
+### SelectedFileType Property
+
+Selected file type or null if not supported.
+
+```csharp
+public Avalonia.Platform.Storage.FilePickerFileType SelectedFileType { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

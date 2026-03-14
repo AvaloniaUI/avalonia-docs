@@ -1,0 +1,187 @@
+---
+title: 'BindingChainException'
+hide_title: true
+slug: '/avalonia/data/bindingchainexception'
+uid: 'Avalonia.Data.BindingChainException'
+commentId: 'T:Avalonia.Data.BindingChainException'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Data'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">BindingChainException Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Data</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Data/BindingChainException.cs">BindingChainException.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+An exception returned through [Avalonia.Data.BindingNotification](xref:Avalonia.Data.BindingNotification) signaling that a
+requested binding expression could not be evaluated because of an error in one of
+the links of the binding chain.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class BindingChainException
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Exception <span className="apiref-page__relation-separator">-&gt;</span> BindingChainException
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [BindingChainException (3 overloads)](#uid-82707489f1) | Initializes a new instance of the [Avalonia.Data.BindingChainException](xref:Avalonia.Data.BindingChainException) class. |
+
+<span id="uid-82707489f1"></span>
+
+### BindingChainException overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8c17dda5ac"></span>
+
+#### BindingChainException Constructor
+
+Initializes a new instance of the [Avalonia.Data.BindingChainException](xref:Avalonia.Data.BindingChainException) class.
+
+```csharp
+public BindingChainException()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f7de989ef7"></span>
+
+#### BindingChainException Constructor
+
+Initializes a new instance of the [Avalonia.Data.BindingChainException](xref:Avalonia.Data.BindingChainException) class.
+
+```csharp
+public BindingChainException(string message)
+```
+
+##### Parameters
+
+`message` string
+
+The error message.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a3a91a6a41"></span>
+
+#### BindingChainException Constructor
+
+Initializes a new instance of the [Avalonia.Data.BindingChainException](xref:Avalonia.Data.BindingChainException) class.
+
+```csharp
+public BindingChainException(string message, string expression, string errorPoint)
+```
+
+##### Parameters
+
+`message` string
+
+The error message.
+
+
+`expression` string
+
+The expression.
+
+
+`errorPoint` string
+
+The point in the expression at which the error was encountered.
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Expression](#uid-593abf2abb) | Gets the expression that could not be evaluated. |
+| [ExpressionErrorPoint](#uid-d29964fc36) | Gets the point in the expression at which the error occurred. |
+| [Message](#uid-d0466cb300) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-593abf2abb"></span>
+
+### Expression Property
+
+Gets the expression that could not be evaluated.
+
+```csharp
+public string Expression { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d29964fc36"></span>
+
+### ExpressionErrorPoint Property
+
+Gets the point in the expression at which the error occurred.
+
+```csharp
+public string ExpressionErrorPoint { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d0466cb300"></span>
+
+### Message Property
+
+```csharp
+public string Message { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

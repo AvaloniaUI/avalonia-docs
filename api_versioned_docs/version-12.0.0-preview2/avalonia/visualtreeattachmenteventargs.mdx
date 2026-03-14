@@ -1,0 +1,172 @@
+---
+title: 'VisualTreeAttachmentEventArgs'
+hide_title: true
+slug: '/avalonia/visualtreeattachmenteventargs'
+uid: 'Avalonia.VisualTreeAttachmentEventArgs'
+commentId: 'T:Avalonia.VisualTreeAttachmentEventArgs'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">VisualTreeAttachmentEventArgs Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/VisualTreeAttachmentEventArgs.cs">VisualTreeAttachmentEventArgs.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Holds the event arguments for the [Avalonia.Visual.AttachedToVisualTree](xref:Avalonia.Visual.AttachedToVisualTree) and
+[Avalonia.Visual.DetachedFromVisualTree](xref:Avalonia.Visual.DetachedFromVisualTree) events.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class VisualTreeAttachmentEventArgs
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> EventArgs <span className="apiref-page__relation-separator">-&gt;</span> VisualTreeAttachmentEventArgs
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [VisualTreeAttachmentEventArgs](#uid-d733a2f561) | Initializes a new instance of the [Avalonia.VisualTreeAttachmentEventArgs](xref:Avalonia.VisualTreeAttachmentEventArgs) class. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d733a2f561"></span>
+
+### VisualTreeAttachmentEventArgs Constructor
+
+Initializes a new instance of the [Avalonia.VisualTreeAttachmentEventArgs](xref:Avalonia.VisualTreeAttachmentEventArgs) class.
+
+```csharp
+public VisualTreeAttachmentEventArgs(Avalonia.Visual attachmentPoint, Avalonia.Rendering.IPresentationSource presentationSource)
+```
+
+#### Parameters
+
+`attachmentPoint` [Avalonia.Visual](xref:Avalonia.Visual)
+
+The parent that the visual's tree is being attached to or detached from.
+
+
+`presentationSource` [Avalonia.Rendering.IPresentationSource](xref:Avalonia.Rendering.IPresentationSource)
+
+Presentation source this visual is being attached to.
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [AttachmentPoint](#uid-c0494e9bdf) | Gets the parent that the visual's tree is being attached to or detached from, null means that the entire tree is being attached to a PresentationSource |
+| [Parent](#uid-3a963265cf) | No summary available. |
+| [PresentationSource](#uid-1d16719bc8) | Gets the root of the visual tree that the visual is being attached to or detached from. |
+| [Root](#uid-4bccb63be9) | No summary available. |
+| [RootVisual](#uid-47fefa8738) | The root visual of the tree this visual is being attached to or detached from. This is guaranteed to be non-null and will be the same as [Avalonia.Rendering.IPresentationSource.RootVisual](xref:Avalonia.Rendering.IPresentationSource.RootVisual). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c0494e9bdf"></span>
+
+### AttachmentPoint Property
+
+Gets the parent that the visual's tree is being attached to or detached from, null means that
+the entire tree is being attached to a PresentationSource
+
+```csharp
+public Avalonia.Visual AttachmentPoint { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3a963265cf"></span>
+
+### Parent Property
+
+```csharp
+public Avalonia.Visual Parent { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1d16719bc8"></span>
+
+### PresentationSource Property
+
+Gets the root of the visual tree that the visual is being attached to or detached from.
+
+```csharp
+public Avalonia.Rendering.IPresentationSource PresentationSource { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4bccb63be9"></span>
+
+### Root Property
+
+```csharp
+public Avalonia.Visual Root { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-47fefa8738"></span>
+
+### RootVisual Property
+
+The root visual of the tree this visual is being attached to or detached from.
+This is guaranteed to be non-null and will be the same as [Avalonia.Rendering.IPresentationSource.RootVisual](xref:Avalonia.Rendering.IPresentationSource.RootVisual).
+
+```csharp
+public Avalonia.Visual RootVisual { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

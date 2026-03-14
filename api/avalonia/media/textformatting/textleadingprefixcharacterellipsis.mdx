@@ -1,0 +1,189 @@
+---
+title: 'TextLeadingPrefixCharacterEllipsis'
+hide_title: true
+slug: '/avalonia/media/textformatting/textleadingprefixcharacterellipsis'
+uid: 'Avalonia.Media.TextFormatting.TextLeadingPrefixCharacterEllipsis'
+commentId: 'T:Avalonia.Media.TextFormatting.TextLeadingPrefixCharacterEllipsis'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Media.TextFormatting'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">TextLeadingPrefixCharacterEllipsis Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Media.TextFormatting</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Media/TextFormatting/TextLeadingPrefixCharacterEllipsis.cs">TextLeadingPrefixCharacterEllipsis.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Ellipsis based on a fixed length leading prefix and suffix growing from the end at character granularity.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class TextLeadingPrefixCharacterEllipsis
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="textcollapsingproperties">TextCollapsingProperties</a> <span className="apiref-page__relation-separator">-&gt;</span> TextLeadingPrefixCharacterEllipsis
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [TextLeadingPrefixCharacterEllipsis](#uid-d764bc57d5) | Construct a text trailing word ellipsis collapsing properties. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d764bc57d5"></span>
+
+### TextLeadingPrefixCharacterEllipsis Constructor
+
+Construct a text trailing word ellipsis collapsing properties.
+
+```csharp
+public TextLeadingPrefixCharacterEllipsis(string ellipsis, int prefixLength, double width, Avalonia.Media.TextFormatting.TextRunProperties textRunProperties, Avalonia.Media.FlowDirection flowDirection)
+```
+
+#### Parameters
+
+`ellipsis` string
+
+Text used as collapsing symbol.
+
+
+`prefixLength` int
+
+Length of leading prefix.
+
+
+`width` double
+
+width in which collapsing is constrained to
+
+
+`textRunProperties` [Avalonia.Media.TextFormatting.TextRunProperties](xref:Avalonia.Media.TextFormatting.TextRunProperties)
+
+text run properties of ellipsis symbol
+
+
+`flowDirection` [Avalonia.Media.FlowDirection](xref:Avalonia.Media.FlowDirection)
+
+the flow direction of the collapes line.
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Collapse](#uid-99b824a2aa) | Collapses given text line. |
+| [CreateCollapsedRuns](textcollapsingproperties.mdx#uid-3f1ae847f7) | Creates a list of runs for given collapsed length which includes specified symbol at the end. Inherited from [TextCollapsingProperties](textcollapsingproperties.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-99b824a2aa"></span>
+
+### Collapse Method
+
+Collapses given text line.
+
+```csharp
+public Avalonia.Media.TextFormatting.TextRun[] Collapse(Avalonia.Media.TextFormatting.TextLine textLine)
+```
+
+#### Parameters
+
+`textLine` [Avalonia.Media.TextFormatting.TextLine](xref:Avalonia.Media.TextFormatting.TextLine)
+
+Text line to collapse.
+
+
+#### Returns
+
+[Avalonia.Media.TextFormatting.TextRun](xref:Avalonia.Media.TextFormatting.TextRun)[]
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [FlowDirection](#uid-bcd3188d1d) | No summary available. |
+| [Symbol](#uid-4269fc21cc) | Gets the text run that is used as collapsing symbol. |
+| [Width](#uid-52070d53d4) | Gets the width in which the collapsible range is constrained to. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-bcd3188d1d"></span>
+
+### FlowDirection Property
+
+```csharp
+public Avalonia.Media.FlowDirection FlowDirection { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4269fc21cc"></span>
+
+### Symbol Property
+
+Gets the text run that is used as collapsing symbol.
+
+```csharp
+public Avalonia.Media.TextFormatting.TextRun Symbol { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-52070d53d4"></span>
+
+### Width Property
+
+Gets the width in which the collapsible range is constrained to.
+
+```csharp
+public double Width { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

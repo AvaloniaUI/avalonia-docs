@@ -1,0 +1,167 @@
+---
+title: 'DesktopApplicationExtensions'
+hide_title: true
+slug: '/avalonia/controls/desktopapplicationextensions'
+uid: 'Avalonia.Controls.DesktopApplicationExtensions'
+commentId: 'T:Avalonia.Controls.DesktopApplicationExtensions'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">DesktopApplicationExtensions Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Controls/DesktopApplicationExtensions.cs">DesktopApplicationExtensions.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class DesktopApplicationExtensions
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> DesktopApplicationExtensions
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Run (3 overloads)](#uid-3bc7934b45) | On desktop-style platforms runs the application's main loop until main window is closed |
+| [RunWithMainWindow](#uid-42908e930f) | No summary available. |
+
+<span id="uid-3bc7934b45"></span>
+
+### Run overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9c92fcd0cc"></span>
+
+#### Run Method
+
+On desktop-style platforms runs the application's main loop until main window is closed
+
+```csharp
+public void Run(Avalonia.Application app, Avalonia.Controls.Window mainWindow)
+```
+
+##### Parameters
+
+`app` [Avalonia.Application](xref:Avalonia.Application)
+
+
+`mainWindow` [Avalonia.Controls.Window](xref:Avalonia.Controls.Window)
+
+
+##### Remarks
+
+Consider using StartWithDesktopStyleLifetime instead, see https://github.com/AvaloniaUI/Avalonia/wiki/Application-lifetimes for details
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0fe9ee9782"></span>
+
+#### Run Method
+
+On desktop-style platforms runs the application's main loop until closable is closed
+
+```csharp
+public void Run(Avalonia.Application app, Avalonia.Input.ICloseable closable)
+```
+
+##### Parameters
+
+`app` [Avalonia.Application](xref:Avalonia.Application)
+
+
+`closable` [Avalonia.Input.ICloseable](xref:Avalonia.Input.ICloseable)
+
+
+##### Remarks
+
+Consider using StartWithDesktopStyleLifetime instead, see https://github.com/AvaloniaUI/Avalonia/wiki/Application-lifetimes for details
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3698ed72b2"></span>
+
+#### Run Method
+
+On desktop-style platforms runs the application's main loop with custom CancellationToken
+without setting a lifetime.
+
+```csharp
+public void Run(Avalonia.Application app, System.Threading.CancellationToken token)
+```
+
+##### Parameters
+
+`app` [Avalonia.Application](xref:Avalonia.Application)
+
+The application.
+
+
+`token` System.Threading.CancellationToken
+
+The token to track.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-42908e930f"></span>
+
+### RunWithMainWindow Method
+
+```csharp
+public void RunWithMainWindow<TWindow>(Avalonia.Application app)
+```
+
+#### Parameters
+
+`app` [Avalonia.Application](xref:Avalonia.Application)
+
+
+#### Type Parameters
+
+`TWindow`
+
+
+</section>
+
+</ApiRefPage>
+

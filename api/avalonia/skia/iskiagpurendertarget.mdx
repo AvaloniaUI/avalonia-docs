@@ -1,0 +1,120 @@
+---
+title: 'ISkiaGpuRenderTarget'
+hide_title: true
+slug: '/avalonia/skia/iskiagpurendertarget'
+uid: 'Avalonia.Skia.ISkiaGpuRenderTarget'
+commentId: 'T:Avalonia.Skia.ISkiaGpuRenderTarget'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Skia'
+assembly: 'Avalonia.Skia'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Skia'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ISkiaGpuRenderTarget Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Skia</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Skia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Skia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Skia/Avalonia.Skia/Gpu/ISkiaGpuRenderTarget.cs">ISkiaGpuRenderTarget.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Custom Skia render target.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface ISkiaGpuRenderTarget
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IDisposable
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [BeginRenderingSession](#uid-f89745b98d) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f89745b98d"></span>
+
+### BeginRenderingSession Method
+
+```csharp
+public Avalonia.Skia.ISkiaGpuRenderSession BeginRenderingSession(RenderTargetSceneInfo sceneInfo)
+```
+
+#### Parameters
+
+`sceneInfo` RenderTargetSceneInfo
+
+
+#### Returns
+
+[Avalonia.Skia.ISkiaGpuRenderSession](xref:Avalonia.Skia.ISkiaGpuRenderSession)
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [IsCorrupted](#uid-e0ce68d348) | No summary available. |
+| [IsReady](#uid-377b49607a) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e0ce68d348"></span>
+
+### IsCorrupted Property
+
+```csharp
+public bool IsCorrupted { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-377b49607a"></span>
+
+### IsReady Property
+
+```csharp
+public bool IsReady { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

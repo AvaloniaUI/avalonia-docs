@@ -1,0 +1,275 @@
+---
+title: 'FontCollectionKey'
+hide_title: true
+slug: '/avalonia/media/fonts/fontcollectionkey'
+uid: 'Avalonia.Media.Fonts.FontCollectionKey'
+commentId: 'T:Avalonia.Media.Fonts.FontCollectionKey'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Media.Fonts'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">FontCollectionKey Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Media.Fonts</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Media/Fonts/FontCollectionKey.cs">FontCollectionKey.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Represents a unique key for identifying a font inside a font collection based on style, weight, and stretch attributes.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct FontCollectionKey
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> FontCollectionKey
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;FontCollectionKey&gt;
+</div>
+</div>
+
+## Remarks
+
+Use this key to efficiently look up or group fonts in a collection by their style, weight,
+and stretch characteristics.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [FontCollectionKey](#uid-8aa3c2fc18) | Represents a unique key for identifying a font inside a font collection based on style, weight, and stretch attributes. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8aa3c2fc18"></span>
+
+### FontCollectionKey Constructor
+
+Represents a unique key for identifying a font inside a font collection based on style, weight, and stretch attributes.
+
+```csharp
+public FontCollectionKey(Avalonia.Media.FontStyle Style, Avalonia.Media.FontWeight Weight, Avalonia.Media.FontStretch Stretch)
+```
+
+#### Parameters
+
+`Style` [Avalonia.Media.FontStyle](xref:Avalonia.Media.FontStyle)
+
+The font style to use when constructing the key.
+
+
+`Weight` [Avalonia.Media.FontWeight](xref:Avalonia.Media.FontWeight)
+
+The font weight to use when constructing the key.
+
+
+`Stretch` [Avalonia.Media.FontStretch](xref:Avalonia.Media.FontStretch)
+
+The font stretch to use when constructing the key.
+
+
+#### Remarks
+
+Use this key to efficiently look up or group fonts in a collection by their style, weight,
+and stretch characteristics.
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Deconstruct](#uid-6da6603b7d) | No summary available. |
+| [Equals (2 overloads)](#uid-5eef35641f) | No summary available. |
+| [GetHashCode](#uid-ef090fef6b) | No summary available. |
+| [ToString](#uid-bf73fe1e5b) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6da6603b7d"></span>
+
+### Deconstruct Method
+
+```csharp
+public void Deconstruct(Avalonia.Media.FontStyle& Style, Avalonia.Media.FontWeight& Weight, Avalonia.Media.FontStretch& Stretch)
+```
+
+#### Parameters
+
+`Style` [Avalonia.Media.FontStyle](xref:Avalonia.Media.FontStyle)&amp;
+
+
+`Weight` [Avalonia.Media.FontWeight](xref:Avalonia.Media.FontWeight)&amp;
+
+
+`Stretch` [Avalonia.Media.FontStretch](xref:Avalonia.Media.FontStretch)&amp;
+
+
+</section>
+
+<span id="uid-5eef35641f"></span>
+
+### Equals overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-da18931fce"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(Avalonia.Media.Fonts.FontCollectionKey other)
+```
+
+##### Parameters
+
+`other` [Avalonia.Media.Fonts.FontCollectionKey](xref:Avalonia.Media.Fonts.FontCollectionKey)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-027fc3c698"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(object obj)
+```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ef090fef6b"></span>
+
+### GetHashCode Method
+
+```csharp
+public int GetHashCode()
+```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-bf73fe1e5b"></span>
+
+### ToString Method
+
+```csharp
+public string ToString()
+```
+
+#### Returns
+
+string
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Stretch](#uid-95bc1ff64e) | The font stretch to use when constructing the key. |
+| [Style](#uid-1a4b15a03d) | The font style to use when constructing the key. |
+| [Weight](#uid-ba0993b4b9) | The font weight to use when constructing the key. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-95bc1ff64e"></span>
+
+### Stretch Property
+
+The font stretch to use when constructing the key.
+
+```csharp
+public Avalonia.Media.FontStretch Stretch { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1a4b15a03d"></span>
+
+### Style Property
+
+The font style to use when constructing the key.
+
+```csharp
+public Avalonia.Media.FontStyle Style { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ba0993b4b9"></span>
+
+### Weight Property
+
+The font weight to use when constructing the key.
+
+```csharp
+public Avalonia.Media.FontWeight Weight { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

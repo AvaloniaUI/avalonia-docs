@@ -1,0 +1,121 @@
+---
+title: 'FuncTemplate<TParam, TControl>'
+hide_title: true
+slug: '/avalonia/controls/templates/functemplate-2'
+uid: 'Avalonia.Controls.Templates.FuncTemplate`2'
+commentId: 'T:Avalonia.Controls.Templates.FuncTemplate`2'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Templates'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">FuncTemplate&lt;TParam, TControl&gt; Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Templates</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Controls/Templates/FuncTemplate%602.cs">FuncTemplate`2.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Creates a control from a [Func&lt;T1, T2&gt;](xref:System.Func%602).
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class FuncTemplate<TParam, TControl>
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> FuncTemplate&lt;TParam, TControl&gt;
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> ITemplate&lt;,&lt;T&gt;&gt;
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [FuncTemplate&lt;TParam, TControl&gt;](#uid-f1f5010440) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f1f5010440"></span>
+
+### FuncTemplate&lt;TParam, TControl&gt; Constructor
+
+```csharp
+public FuncTemplate<TParam, TControl>(Func<TParam, Avalonia.Controls.INameScope, TControl> func)
+```
+
+#### Parameters
+
+`func` Func&lt;TParam, [Avalonia.Controls.INameScope](xref:Avalonia.Controls.INameScope), TControl&gt;
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Build](#uid-e91fcd9832) | Creates the control. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e91fcd9832"></span>
+
+### Build Method
+
+Creates the control.
+
+```csharp
+public TControl Build(TParam param)
+```
+
+#### Parameters
+
+`param` TParam
+
+The parameter.
+
+
+#### Returns
+
+TControl
+
+The created control.
+
+
+</section>
+
+</ApiRefPage>
+

@@ -1,0 +1,182 @@
+---
+title: 'HeadlessVncFramebufferSource'
+hide_title: true
+slug: '/avalonia/headless/vnc/headlessvncframebuffersource'
+uid: 'Avalonia.Headless.Vnc.HeadlessVncFramebufferSource'
+commentId: 'T:Avalonia.Headless.Vnc.HeadlessVncFramebufferSource'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Headless.Vnc'
+assembly: 'Avalonia.Headless.Vnc'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Headless.Vnc'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">HeadlessVncFramebufferSource Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Headless.Vnc</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Headless.Vnc</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Headless.Vnc</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Headless/Avalonia.Headless.Vnc/HeadlessVncFramebufferSource.cs">HeadlessVncFramebufferSource.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class HeadlessVncFramebufferSource
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> HeadlessVncFramebufferSource
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IVncFramebufferSource
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [HeadlessVncFramebufferSource](#uid-3c6af02a32) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3c6af02a32"></span>
+
+### HeadlessVncFramebufferSource Constructor
+
+```csharp
+public HeadlessVncFramebufferSource(RemoteViewing.Vnc.Server.VncServerSession session, Avalonia.Controls.Window window)
+```
+
+#### Parameters
+
+`session` RemoteViewing.Vnc.Server.VncServerSession
+
+
+`window` [Avalonia.Controls.Window](xref:Avalonia.Controls.Window)
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Capture](#uid-44bbc74edc) | No summary available. |
+| [SetDesktopSize](#uid-60ad90f5e6) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-44bbc74edc"></span>
+
+### Capture Method
+
+```csharp
+public RemoteViewing.Vnc.VncFramebuffer Capture()
+```
+
+#### Returns
+
+RemoteViewing.Vnc.VncFramebuffer
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-60ad90f5e6"></span>
+
+### SetDesktopSize Method
+
+```csharp
+public RemoteViewing.Vnc.ExtendedDesktopSizeStatus SetDesktopSize(int width, int height)
+```
+
+#### Parameters
+
+`width` int
+
+
+`height` int
+
+
+#### Returns
+
+RemoteViewing.Vnc.ExtendedDesktopSizeStatus
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [SupportsResizing](#uid-2bae941cf6) | No summary available. |
+| [Window](#uid-ecc03f142b) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2bae941cf6"></span>
+
+### SupportsResizing Property
+
+```csharp
+public bool SupportsResizing { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ecc03f142b"></span>
+
+### Window Property
+
+```csharp
+public Avalonia.Controls.Window Window { get; set; }
+```
+
+</section>
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [_framebuffer](#uid-de0e73d26c) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-de0e73d26c"></span>
+
+### _framebuffer Field
+
+```csharp
+public RemoteViewing.Vnc.VncFramebuffer _framebuffer
+```
+
+</section>
+
+</ApiRefPage>
+

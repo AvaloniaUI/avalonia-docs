@@ -1,0 +1,492 @@
+---
+title: 'ParametrizedLogger'
+hide_title: true
+slug: '/avalonia/logging/parametrizedlogger'
+uid: 'Avalonia.Logging.ParametrizedLogger'
+commentId: 'T:Avalonia.Logging.ParametrizedLogger'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Logging'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ParametrizedLogger Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Logging</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Logging/ParametrizedLogger.cs">ParametrizedLogger.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Logger sink parametrized for given logging level.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct ParametrizedLogger
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> ParametrizedLogger
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;ParametrizedLogger&gt;
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [ParametrizedLogger](#uid-a26a202933) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a26a202933"></span>
+
+### ParametrizedLogger Constructor
+
+```csharp
+public ParametrizedLogger(Avalonia.Logging.ILogSink sink, Avalonia.Logging.LogEventLevel level, string area)
+```
+
+#### Parameters
+
+`sink` [Avalonia.Logging.ILogSink](xref:Avalonia.Logging.ILogSink)
+
+
+`level` [Avalonia.Logging.LogEventLevel](xref:Avalonia.Logging.LogEventLevel)
+
+
+`area` string
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Equals (2 overloads)](#uid-6565ea6575) | No summary available. |
+| [GetHashCode](#uid-153db5a06f) | No summary available. |
+| [Log (7 overloads)](#uid-5a75e52709) | Logs an event. |
+| [ToString](#uid-bd3cbae93e) | No summary available. |
+
+<span id="uid-6565ea6575"></span>
+
+### Equals overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-803d4ff408"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(Avalonia.Logging.ParametrizedLogger other)
+```
+
+##### Parameters
+
+`other` [Avalonia.Logging.ParametrizedLogger](xref:Avalonia.Logging.ParametrizedLogger)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f0a4b65169"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(object obj)
+```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-153db5a06f"></span>
+
+### GetHashCode Method
+
+```csharp
+public int GetHashCode()
+```
+
+#### Returns
+
+int
+
+
+</section>
+
+<span id="uid-5a75e52709"></span>
+
+### Log overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-140da5cbd3"></span>
+
+#### Log Method
+
+Logs an event.
+
+```csharp
+public void Log(object source, string messageTemplate)
+```
+
+##### Parameters
+
+`source` object
+
+The object from which the event originates.
+
+
+`messageTemplate` string
+
+The message template.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7bf1a0e635"></span>
+
+#### Log Method
+
+```csharp
+public void Log<T0>(object source, string messageTemplate, T0 propertyValue0)
+```
+
+##### Parameters
+
+`source` object
+
+
+`messageTemplate` string
+
+
+`propertyValue0` T0
+
+
+##### Type Parameters
+
+`T0`
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-63b50afd42"></span>
+
+#### Log Method
+
+```csharp
+public void Log<T0, T1>(object source, string messageTemplate, T0 propertyValue0, T1 propertyValue1)
+```
+
+##### Parameters
+
+`source` object
+
+
+`messageTemplate` string
+
+
+`propertyValue0` T0
+
+
+`propertyValue1` T1
+
+
+##### Type Parameters
+
+`T0`
+
+
+`T1`
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-85df853b51"></span>
+
+#### Log Method
+
+```csharp
+public void Log<T0, T1, T2>(object source, string messageTemplate, T0 propertyValue0, T1 propertyValue1, T2 propertyValue2)
+```
+
+##### Parameters
+
+`source` object
+
+
+`messageTemplate` string
+
+
+`propertyValue0` T0
+
+
+`propertyValue1` T1
+
+
+`propertyValue2` T2
+
+
+##### Type Parameters
+
+`T0`
+
+
+`T1`
+
+
+`T2`
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-39ee9e3091"></span>
+
+#### Log Method
+
+```csharp
+public void Log<T0, T1, T2, T3>(object source, string messageTemplate, T0 propertyValue0, T1 propertyValue1, T2 propertyValue2, T3 propertyValue3)
+```
+
+##### Parameters
+
+`source` object
+
+
+`messageTemplate` string
+
+
+`propertyValue0` T0
+
+
+`propertyValue1` T1
+
+
+`propertyValue2` T2
+
+
+`propertyValue3` T3
+
+
+##### Type Parameters
+
+`T0`
+
+
+`T1`
+
+
+`T2`
+
+
+`T3`
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d9b2a9730e"></span>
+
+#### Log Method
+
+```csharp
+public void Log<T0, T1, T2, T3, T4>(object source, string messageTemplate, T0 propertyValue0, T1 propertyValue1, T2 propertyValue2, T3 propertyValue3, T4 propertyValue4)
+```
+
+##### Parameters
+
+`source` object
+
+
+`messageTemplate` string
+
+
+`propertyValue0` T0
+
+
+`propertyValue1` T1
+
+
+`propertyValue2` T2
+
+
+`propertyValue3` T3
+
+
+`propertyValue4` T4
+
+
+##### Type Parameters
+
+`T0`
+
+
+`T1`
+
+
+`T2`
+
+
+`T3`
+
+
+`T4`
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-fd0f8b719f"></span>
+
+#### Log Method
+
+```csharp
+public void Log<T0, T1, T2, T3, T4, T5>(object source, string messageTemplate, T0 propertyValue0, T1 propertyValue1, T2 propertyValue2, T3 propertyValue3, T4 propertyValue4, T5 propertyValue5)
+```
+
+##### Parameters
+
+`source` object
+
+
+`messageTemplate` string
+
+
+`propertyValue0` T0
+
+
+`propertyValue1` T1
+
+
+`propertyValue2` T2
+
+
+`propertyValue3` T3
+
+
+`propertyValue4` T4
+
+
+`propertyValue5` T5
+
+
+##### Type Parameters
+
+`T0`
+
+
+`T1`
+
+
+`T2`
+
+
+`T3`
+
+
+`T4`
+
+
+`T5`
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-bd3cbae93e"></span>
+
+### ToString Method
+
+```csharp
+public string ToString()
+```
+
+#### Returns
+
+string
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [IsValid](#uid-f8e695a035) | Checks if this logger can be used. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f8e695a035"></span>
+
+### IsValid Property
+
+Checks if this logger can be used.
+
+```csharp
+public bool IsValid { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

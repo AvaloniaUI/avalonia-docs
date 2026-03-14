@@ -1,0 +1,271 @@
+---
+title: 'UnicodeRangeSegment'
+hide_title: true
+slug: '/avalonia/media/unicoderangesegment'
+uid: 'Avalonia.Media.UnicodeRangeSegment'
+commentId: 'T:Avalonia.Media.UnicodeRangeSegment'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Media'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">UnicodeRangeSegment Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Media</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Media/UnicodeRange.cs">UnicodeRange.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct UnicodeRangeSegment
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> UnicodeRangeSegment
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;UnicodeRangeSegment&gt;
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [UnicodeRangeSegment](#uid-d4ba62342f) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d4ba62342f"></span>
+
+### UnicodeRangeSegment Constructor
+
+```csharp
+public UnicodeRangeSegment(int start, int end)
+```
+
+#### Parameters
+
+`start` int
+
+
+`end` int
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Equals (2 overloads)](#uid-e86e5b4b12) | No summary available. |
+| [GetHashCode](#uid-47fa57755e) | No summary available. |
+| [IsInRange](#uid-7df3189b09) | Determines if given value is inside the range segment. |
+| [Parse](#uid-6cf8f55d9d) | Parses a [Avalonia.Media.UnicodeRangeSegment](xref:Avalonia.Media.UnicodeRangeSegment). |
+| [ToString](#uid-55a4667104) | No summary available. |
+
+<span id="uid-e86e5b4b12"></span>
+
+### Equals overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2050f361a8"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(Avalonia.Media.UnicodeRangeSegment other)
+```
+
+##### Parameters
+
+`other` [Avalonia.Media.UnicodeRangeSegment](xref:Avalonia.Media.UnicodeRangeSegment)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-67cc188d7d"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(object obj)
+```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-47fa57755e"></span>
+
+### GetHashCode Method
+
+```csharp
+public int GetHashCode()
+```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7df3189b09"></span>
+
+### IsInRange Method
+
+Determines if given value is inside the range segment.
+
+```csharp
+public bool IsInRange(int value)
+```
+
+#### Parameters
+
+`value` int
+
+The value to verify.
+
+
+#### Returns
+
+bool
+
+`true` If given value is inside the range segment, `false` otherwise.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6cf8f55d9d"></span>
+
+### Parse Method
+
+Parses a [Avalonia.Media.UnicodeRangeSegment](xref:Avalonia.Media.UnicodeRangeSegment).
+
+```csharp
+public Avalonia.Media.UnicodeRangeSegment Parse(string s)
+```
+
+#### Parameters
+
+`s` string
+
+The string to parse.
+
+
+#### Returns
+
+[Avalonia.Media.UnicodeRangeSegment](xref:Avalonia.Media.UnicodeRangeSegment)
+
+The parsed [Avalonia.Media.UnicodeRangeSegment](xref:Avalonia.Media.UnicodeRangeSegment).
+
+
+#### Exceptions
+
+- [FormatException](xref:System.FormatException)
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-55a4667104"></span>
+
+### ToString Method
+
+```csharp
+public string ToString()
+```
+
+#### Returns
+
+string
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [End](#uid-cd32882a7d) | Get the end of the segment. |
+| [Start](#uid-a14df5f3dc) | Get the start of the segment. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-cd32882a7d"></span>
+
+### End Property
+
+Get the end of the segment.
+
+```csharp
+public int End { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a14df5f3dc"></span>
+
+### Start Property
+
+Get the start of the segment.
+
+```csharp
+public int Start { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

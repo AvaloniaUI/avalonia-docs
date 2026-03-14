@@ -1,0 +1,338 @@
+---
+title: 'ImplicitAnimationCollection'
+hide_title: true
+slug: '/avalonia/rendering/composition/animations/implicitanimationcollection'
+uid: 'Avalonia.Rendering.Composition.Animations.ImplicitAnimationCollection'
+commentId: 'T:Avalonia.Rendering.Composition.Animations.ImplicitAnimationCollection'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Rendering.Composition.Animations'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ImplicitAnimationCollection Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Rendering.Composition.Animations</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Rendering/Composition/Animations/ImplicitAnimationCollection.cs">ImplicitAnimationCollection.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A collection of animations triggered when a condition is met.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class ImplicitAnimationCollection
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../compositionobject">CompositionObject</a> <span className="apiref-page__relation-separator">-&gt;</span> ImplicitAnimationCollection
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> ICollection&lt;KeyValuePair&lt;string,ICompositionAnimationBase&gt;&gt;, IDictionary&lt;string,ICompositionAnimationBase&gt;, IEnumerable&lt;KeyValuePair&lt;string,ICompositionAnimationBase&gt;&gt;, IEnumerable
+</div>
+</div>
+
+## Remarks
+
+Implicit animations let you drive animations by specifying trigger conditions rather than requiring the manual definition of animation behavior.
+They help decouple animation start logic from core app logic. You define animations and the events that should trigger these animations.
+Currently the only available trigger is animated property change.
+
+When expression is used in [ImplicitAnimationCollection](xref:Avalonia.Rendering.Composition.Animations.ImplicitAnimationCollection) a special keyword `this.FinalValue` will represent
+the final value of the animated property that was changed
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Add](#uid-bb73cb4873) | No summary available. |
+| [Clear](#uid-6c1e62ef81) | No summary available. |
+| [ContainsKey](#uid-8c37a90a5a) | No summary available. |
+| [GetEnumerator](#uid-fa934bfab0) | No summary available. |
+| [GetView](#uid-90cbaafd17) | No summary available. |
+| [HasKey](#uid-9ea1f1e80f) | No summary available. |
+| [Insert](#uid-e0d483e8e3) | No summary available. |
+| [Lookup](#uid-358bf51542) | No summary available. |
+| [Remove](#uid-3edc5a6caf) | No summary available. |
+| [TryGetValue](#uid-361118d602) | No summary available. |
+| [StartAnimation](../compositionobject.mdx#uid-4d2f25fec7) | Connects an animation with the specified property of the object and starts the animation. Inherited from [CompositionObject](../compositionobject.mdx). |
+| [StartAnimationGroup](../compositionobject.mdx#uid-4846f860a0) | Starts an animation group. The StartAnimationGroup method on [CompositionObject](xref:Avalonia.Rendering.Composition.CompositionObject) lets you start [CompositionAnimationGroup](xref:Avalonia.Rendering.Composition.Animations.CompositionAnimationGroup). All the animations in the group will be started at the same time on the object. Inherited from [CompositionObject](../compositionobject.mdx). |
+| [StopAnimation](../compositionobject.mdx#uid-01077c2b21) | Disconnects an animation from the specified property and stops the animation. Inherited from [CompositionObject](../compositionobject.mdx). |
+| [StopAnimationGroup](../compositionobject.mdx#uid-81dbd02845) | Stops an animation group. Inherited from [CompositionObject](../compositionobject.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-bb73cb4873"></span>
+
+### Add Method
+
+```csharp
+public void Add(string key, Avalonia.Rendering.Composition.Animations.ICompositionAnimationBase value)
+```
+
+#### Parameters
+
+`key` string
+
+
+`value` [Avalonia.Rendering.Composition.Animations.ICompositionAnimationBase](xref:Avalonia.Rendering.Composition.Animations.ICompositionAnimationBase)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6c1e62ef81"></span>
+
+### Clear Method
+
+```csharp
+public void Clear()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8c37a90a5a"></span>
+
+### ContainsKey Method
+
+```csharp
+public bool ContainsKey(string key)
+```
+
+#### Parameters
+
+`key` string
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-fa934bfab0"></span>
+
+### GetEnumerator Method
+
+```csharp
+public System.Collections.Generic.IEnumerator<System.Collections.Generic.KeyValuePair<string,Avalonia.Rendering.Composition.Animations.ICompositionAnimationBase>> GetEnumerator()
+```
+
+#### Returns
+
+System.Collections.Generic.IEnumerator&lt;System.Collections.Generic.KeyValuePair&lt;string,[Avalonia.Rendering.Composition.Animations.ICompositionAnimationBase](xref:Avalonia.Rendering.Composition.Animations.ICompositionAnimationBase)&gt;&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-90cbaafd17"></span>
+
+### GetView Method
+
+```csharp
+public System.Collections.Generic.IReadOnlyDictionary<string, Avalonia.Rendering.Composition.Animations.ICompositionAnimationBase> GetView()
+```
+
+#### Returns
+
+System.Collections.Generic.IReadOnlyDictionary&lt;string, [Avalonia.Rendering.Composition.Animations.ICompositionAnimationBase](xref:Avalonia.Rendering.Composition.Animations.ICompositionAnimationBase)&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9ea1f1e80f"></span>
+
+### HasKey Method
+
+```csharp
+public bool HasKey(string key)
+```
+
+#### Parameters
+
+`key` string
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e0d483e8e3"></span>
+
+### Insert Method
+
+```csharp
+public void Insert(string key, Avalonia.Rendering.Composition.Animations.ICompositionAnimationBase animation)
+```
+
+#### Parameters
+
+`key` string
+
+
+`animation` [Avalonia.Rendering.Composition.Animations.ICompositionAnimationBase](xref:Avalonia.Rendering.Composition.Animations.ICompositionAnimationBase)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-358bf51542"></span>
+
+### Lookup Method
+
+```csharp
+public Avalonia.Rendering.Composition.Animations.ICompositionAnimationBase Lookup(string key)
+```
+
+#### Parameters
+
+`key` string
+
+
+#### Returns
+
+[Avalonia.Rendering.Composition.Animations.ICompositionAnimationBase](xref:Avalonia.Rendering.Composition.Animations.ICompositionAnimationBase)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3edc5a6caf"></span>
+
+### Remove Method
+
+```csharp
+public bool Remove(string key)
+```
+
+#### Parameters
+
+`key` string
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-361118d602"></span>
+
+### TryGetValue Method
+
+```csharp
+public bool TryGetValue(string key, Avalonia.Rendering.Composition.Animations.ICompositionAnimationBase& value)
+```
+
+#### Parameters
+
+`key` string
+
+
+`value` [Avalonia.Rendering.Composition.Animations.ICompositionAnimationBase](xref:Avalonia.Rendering.Composition.Animations.ICompositionAnimationBase)&amp;
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Count](#uid-972ab9b4c2) | No summary available. |
+| [Item](#uid-c66ce36dae) | No summary available. |
+| [Size](#uid-c606188463) | No summary available. |
+| [Compositor](../compositionobject.mdx#uid-bd6bbc1391) | The associated Compositor Inherited from [CompositionObject](../compositionobject.mdx). |
+| [ImplicitAnimations](../compositionobject.mdx#uid-3929e9ea34) | The collection of implicit animations attached to this object. Inherited from [CompositionObject](../compositionobject.mdx). |
+| [IsDisposed](../compositionobject.mdx#uid-e01437c946) | Inherited from [CompositionObject](../compositionobject.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-972ab9b4c2"></span>
+
+### Count Property
+
+```csharp
+public int Count { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c66ce36dae"></span>
+
+### Item Property
+
+```csharp
+public Avalonia.Rendering.Composition.Animations.ICompositionAnimationBase Item { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c606188463"></span>
+
+### Size Property
+
+```csharp
+public uint Size { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

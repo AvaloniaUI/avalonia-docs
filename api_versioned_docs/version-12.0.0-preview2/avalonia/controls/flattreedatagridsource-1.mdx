@@ -1,0 +1,373 @@
+---
+title: 'FlatTreeDataGridSource<TModel>'
+hide_title: true
+slug: '/avalonia/controls/flattreedatagridsource-1'
+uid: 'Avalonia.Controls.FlatTreeDataGridSource`1'
+commentId: 'T:Avalonia.Controls.FlatTreeDataGridSource`1'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.TreeDataGrid'
+assembly: 'Avalonia.Controls.TreeDataGrid'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net8.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">FlatTreeDataGridSource&lt;TModel&gt; Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A data source for a [Avalonia.Controls.TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid) which displays a flat grid.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class FlatTreeDataGridSource<TModel>
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="models/notifyingbase">NotifyingBase</a> <span className="apiref-page__relation-separator">-&gt;</span> FlatTreeDataGridSource&lt;TModel&gt;
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="itreedatagridsource">ITreeDataGridSource</a>, ITreeDataGridSource&lt;&gt;, INotifyPropertyChanged, IDisposable
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [FlatTreeDataGridSource&lt;TModel&gt;](#uid-879b27cb82) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-879b27cb82"></span>
+
+### FlatTreeDataGridSource&lt;TModel&gt; Constructor
+
+```csharp
+public FlatTreeDataGridSource<TModel>(System.Collections.Generic.IEnumerable<TModel> items)
+```
+
+#### Parameters
+
+`items` System.Collections.Generic.IEnumerable&lt;TModel&gt;
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [ClearSort](#uid-4f39937c54) | Clears any sorting applied to the specified column. |
+| [Dispose](#uid-217f8a3654) | No summary available. |
+| [Filter](#uid-1a55ef6c0a) | No summary available. |
+| [RefreshFilter](#uid-df5d01f953) | Refreshes the current filter applied to the collection. |
+| [SortBy](#uid-0be8ff2da7) | Requests to sort the source by the specified column. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4f39937c54"></span>
+
+### ClearSort Method
+
+Clears any sorting applied to the specified column.
+
+```csharp
+public void ClearSort(Avalonia.Controls.Models.TreeDataGrid.IColumn column)
+```
+
+#### Parameters
+
+`column` [Avalonia.Controls.Models.TreeDataGrid.IColumn](xref:Avalonia.Controls.Models.TreeDataGrid.IColumn)
+
+The column.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-217f8a3654"></span>
+
+### Dispose Method
+
+```csharp
+public void Dispose()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1a55ef6c0a"></span>
+
+### Filter Method
+
+```csharp
+public void Filter(Func<TModel, bool> filter)
+```
+
+#### Parameters
+
+`filter` Func&lt;TModel, bool&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-df5d01f953"></span>
+
+### RefreshFilter Method
+
+Refreshes the current filter applied to the collection.
+
+```csharp
+public void RefreshFilter()
+```
+
+#### Remarks
+
+Call this method if the filter predicate depends on external state which has changed,
+to re-apply the filter to the collection.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0be8ff2da7"></span>
+
+### SortBy Method
+
+Requests to sort the source by the specified column.
+
+```csharp
+public bool SortBy(Avalonia.Controls.Models.TreeDataGrid.IColumn column, System.ComponentModel.ListSortDirection direction)
+```
+
+#### Parameters
+
+`column` [Avalonia.Controls.Models.TreeDataGrid.IColumn](xref:Avalonia.Controls.Models.TreeDataGrid.IColumn)
+
+The column.
+
+
+`direction` System.ComponentModel.ListSortDirection
+
+The sort direction.
+
+
+#### Returns
+
+bool
+
+True if the sort could be performed; otherwise false.
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [CellSelection](#uid-647bcfea27) | Gets the cell selection model if cell selection is being used. |
+| [Columns](#uid-2ee8e1d951) | Gets the columns to be displayed. |
+| [IsFiltered](#uid-7abc1a3443) | Gets a value indicating whether the data source is filtered. |
+| [IsHierarchical](#uid-0c6d0344a7) | Gets a value indicating whether the data source is hierarchical. |
+| [IsSorted](#uid-3754e2690d) | Gets a value indicating whether the data source is currently sorted. |
+| [Items](#uid-1cbefbf7e7) | Gets the items in the data source. |
+| [RowSelection](#uid-2c77f53cad) | Gets the row selection model if row selection is being used. |
+| [Rows](#uid-ea28c771a3) | Gets the rows to be displayed. |
+| [Selection](#uid-f3189f01f1) | Gets or sets the selection model. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-647bcfea27"></span>
+
+### CellSelection Property
+
+Gets the cell selection model if cell selection is being used.
+
+```csharp
+public Avalonia.Controls.Selection.ITreeDataGridCellSelectionModel<T><TModel> CellSelection { get; set; }
+```
+
+#### Remarks
+
+This property is equivalent to casting the [Avalonia.Controls.FlatTreeDataGridSource&lt;T&gt;.Selection](xref:Avalonia.Controls.FlatTreeDataGridSource%601.Selection) property to
+[Avalonia.Controls.Selection.ITreeDataGridCellSelectionModel&lt;T&gt;](xref:Avalonia.Controls.Selection.ITreeDataGridCellSelectionModel%601).
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2ee8e1d951"></span>
+
+### Columns Property
+
+Gets the columns to be displayed.
+
+```csharp
+public Avalonia.Controls.Models.TreeDataGrid.ColumnList<TModel><TModel> Columns { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7abc1a3443"></span>
+
+### IsFiltered Property
+
+Gets a value indicating whether the data source is filtered.
+
+```csharp
+public bool IsFiltered { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0c6d0344a7"></span>
+
+### IsHierarchical Property
+
+Gets a value indicating whether the data source is hierarchical.
+
+```csharp
+public bool IsHierarchical { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3754e2690d"></span>
+
+### IsSorted Property
+
+Gets a value indicating whether the data source is currently sorted.
+
+```csharp
+public bool IsSorted { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1cbefbf7e7"></span>
+
+### Items Property
+
+Gets the items in the data source.
+
+```csharp
+public System.Collections.Generic.IEnumerable<TModel> Items { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2c77f53cad"></span>
+
+### RowSelection Property
+
+Gets the row selection model if row selection is being used.
+
+```csharp
+public Avalonia.Controls.Selection.ITreeDataGridRowSelectionModel<T><TModel> RowSelection { get; set; }
+```
+
+#### Remarks
+
+This property is equivalent to casting the [Avalonia.Controls.FlatTreeDataGridSource&lt;T&gt;.Selection](xref:Avalonia.Controls.FlatTreeDataGridSource%601.Selection) property to
+[Avalonia.Controls.Selection.ITreeDataGridRowSelectionModel&lt;T&gt;](xref:Avalonia.Controls.Selection.ITreeDataGridRowSelectionModel%601).
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ea28c771a3"></span>
+
+### Rows Property
+
+Gets the rows to be displayed.
+
+```csharp
+public Avalonia.Controls.Models.TreeDataGrid.IRows Rows { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f3189f01f1"></span>
+
+### Selection Property
+
+Gets or sets the selection model.
+
+```csharp
+public Avalonia.Controls.Selection.ITreeDataGridSelection Selection { get; set; }
+```
+
+#### Remarks
+
+The selection mode of the control may be changed by setting this property to either an
+instance of [Avalonia.Controls.Selection.TreeDataGridRowSelectionModel&lt;T&gt;](xref:Avalonia.Controls.Selection.TreeDataGridRowSelectionModel%601) for row selection, or
+[Avalonia.Controls.Selection.TreeDataGridCellSelectionModel&lt;T&gt;](xref:Avalonia.Controls.Selection.TreeDataGridCellSelectionModel%601) for cell selection.
+
+</section>
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [Sorted](#uid-0837e9b598) | Occurs after sorting has changed on the data source. |
+| [PropertyChanged](models/notifyingbase.mdx#uid-cfba2a29fd) | Occurs when a property value changes. Inherited from [NotifyingBase](models/notifyingbase.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0837e9b598"></span>
+
+### Sorted Event
+
+Occurs after sorting has changed on the data source.
+
+```csharp
+public event Action Sorted
+```
+
+</section>
+
+</ApiRefPage>
+

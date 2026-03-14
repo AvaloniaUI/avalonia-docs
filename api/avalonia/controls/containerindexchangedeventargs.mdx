@@ -1,0 +1,140 @@
+---
+title: 'ContainerIndexChangedEventArgs'
+hide_title: true
+slug: '/avalonia/controls/containerindexchangedeventargs'
+uid: 'Avalonia.Controls.ContainerIndexChangedEventArgs'
+commentId: 'T:Avalonia.Controls.ContainerIndexChangedEventArgs'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ContainerIndexChangedEventArgs Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Controls/ContainerIndexChangedEventArgs.cs">ContainerIndexChangedEventArgs.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Provides data for the [Avalonia.Controls.ItemsControl.ContainerIndexChanged](xref:Avalonia.Controls.ItemsControl.ContainerIndexChanged) event.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class ContainerIndexChangedEventArgs
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> EventArgs <span className="apiref-page__relation-separator">-&gt;</span> ContainerIndexChangedEventArgs
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [ContainerIndexChangedEventArgs](#uid-00904a18a2) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-00904a18a2"></span>
+
+### ContainerIndexChangedEventArgs Constructor
+
+```csharp
+public ContainerIndexChangedEventArgs(Avalonia.Controls.Control container, int oldIndex, int newIndex)
+```
+
+#### Parameters
+
+`container` [Avalonia.Controls.Control](xref:Avalonia.Controls.Control)
+
+
+`oldIndex` int
+
+
+`newIndex` int
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Container](#uid-2bc6967e3e) | Get the container for which the index changed. |
+| [NewIndex](#uid-0b35de4aa3) | Gets the index of the container after the change. |
+| [OldIndex](#uid-c4079d671e) | Gets the index of the container before the change. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2bc6967e3e"></span>
+
+### Container Property
+
+Get the container for which the index changed.
+
+```csharp
+public Avalonia.Controls.Control Container { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0b35de4aa3"></span>
+
+### NewIndex Property
+
+Gets the index of the container after the change.
+
+```csharp
+public int NewIndex { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c4079d671e"></span>
+
+### OldIndex Property
+
+Gets the index of the container before the change.
+
+```csharp
+public int OldIndex { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

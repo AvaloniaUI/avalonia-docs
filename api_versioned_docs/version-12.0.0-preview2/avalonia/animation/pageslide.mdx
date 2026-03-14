@@ -1,0 +1,249 @@
+---
+title: 'PageSlide'
+hide_title: true
+slug: '/avalonia/animation/pageslide'
+uid: 'Avalonia.Animation.PageSlide'
+commentId: 'T:Avalonia.Animation.PageSlide'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Animation'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">PageSlide Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Animation</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Animation/PageSlide.cs">PageSlide.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Transitions between two pages by sliding them horizontally or vertically.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class PageSlide
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> PageSlide
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Derived types:</span> <a href="rotate3dtransition">Rotate3DTransition</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="ipagetransition">IPageTransition</a>
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [PageSlide (2 overloads)](#uid-efbf20bd9a) | Initializes a new instance of the [Avalonia.Animation.PageSlide](xref:Avalonia.Animation.PageSlide) class. |
+
+<span id="uid-efbf20bd9a"></span>
+
+### PageSlide overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-10712d4ba1"></span>
+
+#### PageSlide Constructor
+
+Initializes a new instance of the [Avalonia.Animation.PageSlide](xref:Avalonia.Animation.PageSlide) class.
+
+```csharp
+public PageSlide()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-db5191ea9e"></span>
+
+#### PageSlide Constructor
+
+Initializes a new instance of the [Avalonia.Animation.PageSlide](xref:Avalonia.Animation.PageSlide) class.
+
+```csharp
+public PageSlide(TimeSpan duration, Avalonia.Animation.PageSlide.SlideAxis orientation)
+```
+
+##### Parameters
+
+`duration` TimeSpan
+
+The duration of the animation.
+
+
+`orientation` [Avalonia.Animation.PageSlide.SlideAxis](xref:Avalonia.Animation.PageSlide.SlideAxis)
+
+The axis on which the animation should occur
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Start](#uid-dcf9e8a843) | Starts the animation. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-dcf9e8a843"></span>
+
+### Start Method
+
+Starts the animation.
+
+```csharp
+public System.Threading.Tasks.Task Start(Avalonia.Visual from, Avalonia.Visual to, bool forward, System.Threading.CancellationToken cancellationToken)
+```
+
+#### Parameters
+
+`from` [Avalonia.Visual](xref:Avalonia.Visual)
+
+The control that is being transitioned away from. May be null.
+
+
+`to` [Avalonia.Visual](xref:Avalonia.Visual)
+
+The control that is being transitioned to. May be null.
+
+
+`forward` bool
+
+If the animation is bidirectional, controls the direction of the animation.
+
+
+`cancellationToken` System.Threading.CancellationToken
+
+Animation cancellation.
+
+
+#### Returns
+
+System.Threading.Tasks.Task
+
+A [System.Threading.Tasks.Task](xref:System.Threading.Tasks.Task) that tracks the progress of the animation.
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Duration](#uid-cb46c3b57d) | Gets the duration of the animation. |
+| [FillMode](#uid-e066627e36) | Gets or sets the fill mode applied to both slide animations. Defaults to [Avalonia.Animation.FillMode.Forward](xref:Avalonia.Animation.FillMode.Forward), which keeps the final transform value after the animation completes and prevents a one-frame flash where the outgoing element snaps back to its original position before `IsVisible = false` takes effect. |
+| [Orientation](#uid-3f35e71b0b) | Gets the orientation of the animation. |
+| [SlideInEasing](#uid-c709af8e90) | Gets or sets element entrance easing. |
+| [SlideOutEasing](#uid-5d64b2750e) | Gets or sets element exit easing. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-cb46c3b57d"></span>
+
+### Duration Property
+
+Gets the duration of the animation.
+
+```csharp
+public TimeSpan Duration { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e066627e36"></span>
+
+### FillMode Property
+
+Gets or sets the fill mode applied to both slide animations.
+Defaults to [Avalonia.Animation.FillMode.Forward](xref:Avalonia.Animation.FillMode.Forward), which keeps the final transform value after
+the animation completes and prevents a one-frame flash where the outgoing element snaps
+back to its original position before `IsVisible = false` takes effect.
+
+```csharp
+public Avalonia.Animation.FillMode FillMode { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3f35e71b0b"></span>
+
+### Orientation Property
+
+Gets the orientation of the animation.
+
+```csharp
+public Avalonia.Animation.PageSlide.SlideAxis Orientation { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c709af8e90"></span>
+
+### SlideInEasing Property
+
+Gets or sets element entrance easing.
+
+```csharp
+public Avalonia.Animation.Easings.Easing SlideInEasing { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5d64b2750e"></span>
+
+### SlideOutEasing Property
+
+Gets or sets element exit easing.
+
+```csharp
+public Avalonia.Animation.Easings.Easing SlideOutEasing { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

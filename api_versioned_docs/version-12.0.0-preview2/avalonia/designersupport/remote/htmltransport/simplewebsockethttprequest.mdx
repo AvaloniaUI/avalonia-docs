@@ -1,0 +1,214 @@
+---
+title: 'SimpleWebSocketHttpRequest'
+hide_title: true
+slug: '/avalonia/designersupport/remote/htmltransport/simplewebsockethttprequest'
+uid: 'Avalonia.DesignerSupport.Remote.HtmlTransport.SimpleWebSocketHttpRequest'
+commentId: 'T:Avalonia.DesignerSupport.Remote.HtmlTransport.SimpleWebSocketHttpRequest'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.DesignerSupport'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.DesignerSupport.Remote.HtmlTransport'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">SimpleWebSocketHttpRequest Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.DesignerSupport.Remote.HtmlTransport</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.DesignerSupport</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.DesignerSupport/Remote/HtmlTransport/SimpleWebSocketHttpServer.cs">SimpleWebSocketHttpServer.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class SimpleWebSocketHttpRequest
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> SimpleWebSocketHttpRequest
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IDisposable
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [SimpleWebSocketHttpRequest](#uid-c71a954f8d) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c71a954f8d"></span>
+
+### SimpleWebSocketHttpRequest Constructor
+
+```csharp
+public SimpleWebSocketHttpRequest(System.Net.Sockets.NetworkStream stream, string path, System.Collections.Generic.Dictionary<string, string> headers)
+```
+
+#### Parameters
+
+`stream` System.Net.Sockets.NetworkStream
+
+
+`path` string
+
+
+`headers` System.Collections.Generic.Dictionary&lt;string, string&gt;
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [AcceptWebSocket](#uid-5413e20205) | No summary available. |
+| [Dispose](#uid-46328b4baa) | No summary available. |
+| [RespondAsync](#uid-f87e52b871) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5413e20205"></span>
+
+### AcceptWebSocket Method
+
+```csharp
+public System.Threading.Tasks.Task<Avalonia.DesignerSupport.Remote.HtmlTransport.SimpleWebSocket> AcceptWebSocket(string protocol)
+```
+
+#### Parameters
+
+`protocol` string
+
+
+#### Returns
+
+System.Threading.Tasks.Task&lt;[Avalonia.DesignerSupport.Remote.HtmlTransport.SimpleWebSocket](xref:Avalonia.DesignerSupport.Remote.HtmlTransport.SimpleWebSocket)&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-46328b4baa"></span>
+
+### Dispose Method
+
+```csharp
+public void Dispose()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f87e52b871"></span>
+
+### RespondAsync Method
+
+```csharp
+public System.Threading.Tasks.Task RespondAsync(int code, byte[] data, string contentType)
+```
+
+#### Parameters
+
+`code` int
+
+
+`data` byte[]
+
+
+`contentType` string
+
+
+#### Returns
+
+System.Threading.Tasks.Task
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Headers](#uid-b4c0491db4) | No summary available. |
+| [IsWebsocketRequest](#uid-44ea20ded6) | No summary available. |
+| [Path](#uid-213344bc8d) | No summary available. |
+| [WebSocketProtocols](#uid-be91900750) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b4c0491db4"></span>
+
+### Headers Property
+
+```csharp
+public System.Collections.Generic.Dictionary<string, string> Headers { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-44ea20ded6"></span>
+
+### IsWebsocketRequest Property
+
+```csharp
+public bool IsWebsocketRequest { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-213344bc8d"></span>
+
+### Path Property
+
+```csharp
+public string Path { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-be91900750"></span>
+
+### WebSocketProtocols Property
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<string> WebSocketProtocols { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

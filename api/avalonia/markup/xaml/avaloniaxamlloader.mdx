@@ -1,0 +1,189 @@
+---
+title: 'AvaloniaXamlLoader'
+hide_title: true
+slug: '/avalonia/markup/xaml/avaloniaxamlloader'
+uid: 'Avalonia.Markup.Xaml.AvaloniaXamlLoader'
+commentId: 'T:Avalonia.Markup.Xaml.AvaloniaXamlLoader'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Markup.Xaml'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Markup.Xaml'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">AvaloniaXamlLoader Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Markup.Xaml</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Markup.Xaml</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Markup/Avalonia.Markup.Xaml/AvaloniaXamlLoader.cs">AvaloniaXamlLoader.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Loads XAML for a avalonia application.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class AvaloniaXamlLoader
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> AvaloniaXamlLoader
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Load (4 overloads)](#uid-c86998d3a6) | Loads the XAML into a Avalonia component. |
+
+<span id="uid-c86998d3a6"></span>
+
+### Load overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e70f947fe9"></span>
+
+#### Load Method
+
+Loads the XAML into a Avalonia component.
+
+```csharp
+public void Load(IServiceProvider sp, object obj)
+```
+
+##### Parameters
+
+`sp` IServiceProvider
+
+The parent's service provider.
+
+
+`obj` object
+
+The object to load the XAML into.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a2a9550409"></span>
+
+#### Load Method
+
+Loads XAML from a URI.
+
+```csharp
+public object Load(IServiceProvider sp, Uri uri, Uri baseUri)
+```
+
+##### Parameters
+
+`sp` IServiceProvider
+
+The parent's service provider.
+
+
+`uri` Uri
+
+The URI of the XAML file.
+
+
+`baseUri` Uri
+
+A base URI to use if `uri` is relative.
+
+
+##### Returns
+
+object
+
+The loaded object.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c3951cc877"></span>
+
+#### Load Method
+
+Loads the XAML into a Avalonia component.
+
+```csharp
+public void Load(object obj)
+```
+
+##### Parameters
+
+`obj` object
+
+The object to load the XAML into.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-caa44d7b4b"></span>
+
+#### Load Method
+
+Loads XAML from a URI.
+
+```csharp
+public object Load(Uri uri, Uri baseUri)
+```
+
+##### Parameters
+
+`uri` Uri
+
+The URI of the XAML file.
+
+
+`baseUri` Uri
+
+A base URI to use if `uri` is relative.
+
+
+##### Returns
+
+object
+
+The loaded object.
+
+
+</section>
+
+</ApiRefPage>
+

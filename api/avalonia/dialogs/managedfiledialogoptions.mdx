@@ -1,0 +1,233 @@
+---
+title: 'ManagedFileDialogOptions'
+hide_title: true
+slug: '/avalonia/dialogs/managedfiledialogoptions'
+uid: 'Avalonia.Dialogs.ManagedFileDialogOptions'
+commentId: 'T:Avalonia.Dialogs.ManagedFileDialogOptions'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Dialogs'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Dialogs'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ManagedFileDialogOptions Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Dialogs</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Dialogs</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Dialogs/ManagedFileDialogOptions.cs">ManagedFileDialogOptions.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class ManagedFileDialogOptions
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> ManagedFileDialogOptions
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;ManagedFileDialogOptions&gt;
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [ManagedFileDialogOptions](#uid-26035f5dd6) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-26035f5dd6"></span>
+
+### ManagedFileDialogOptions Constructor
+
+```csharp
+public ManagedFileDialogOptions()
+```
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [&lt;Clone&gt;$](#uid-88d154ba7f) | No summary available. |
+| [Equals (2 overloads)](#uid-b9e01bcfea) | No summary available. |
+| [GetHashCode](#uid-a1a3050edc) | No summary available. |
+| [ToString](#uid-41cc319fcb) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-88d154ba7f"></span>
+
+### &lt;Clone&gt;$ Method
+
+```csharp
+public Avalonia.Dialogs.ManagedFileDialogOptions <Clone>$()
+```
+
+#### Returns
+
+[Avalonia.Dialogs.ManagedFileDialogOptions](xref:Avalonia.Dialogs.ManagedFileDialogOptions)
+
+
+</section>
+
+<span id="uid-b9e01bcfea"></span>
+
+### Equals overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-26eb27b6df"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(Avalonia.Dialogs.ManagedFileDialogOptions other)
+```
+
+##### Parameters
+
+`other` [Avalonia.Dialogs.ManagedFileDialogOptions](xref:Avalonia.Dialogs.ManagedFileDialogOptions)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-684ce304df"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(object obj)
+```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a1a3050edc"></span>
+
+### GetHashCode Method
+
+```csharp
+public int GetHashCode()
+```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-41cc319fcb"></span>
+
+### ToString Method
+
+```csharp
+public string ToString()
+```
+
+#### Returns
+
+string
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [AllowDirectorySelection](#uid-2207c57361) | No summary available. |
+| [ContentRootFactory](#uid-45c090fe50) | Allows to redefine content root. Can be a custom Window or any [ContentControl](xref:Avalonia.Controls.ContentControl) (Popup hosted). |
+| [CustomVolumeInfoProvider](#uid-ce0ead6bed) | Allows to redefine how root volumes are populated in the dialog. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2207c57361"></span>
+
+### AllowDirectorySelection Property
+
+```csharp
+public bool AllowDirectorySelection { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-45c090fe50"></span>
+
+### ContentRootFactory Property
+
+Allows to redefine content root.
+Can be a custom Window or any [ContentControl](xref:Avalonia.Controls.ContentControl) (Popup hosted).
+
+```csharp
+public Func<Avalonia.Controls.ContentControl> ContentRootFactory { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ce0ead6bed"></span>
+
+### CustomVolumeInfoProvider Property
+
+Allows to redefine how root volumes are populated in the dialog.
+
+```csharp
+public Avalonia.Controls.Platform.IMountedVolumeInfoProvider CustomVolumeInfoProvider { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+
