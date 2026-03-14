@@ -17,8 +17,11 @@
     "apiref:materialise": "npm run apiref -- materialise --site ."
   },
   "dependencies": {
+    "@docsearch/docusaurus-adapter": "^4.6.0",
     "@docusaurus/core": "^3.8.1",
     "@docusaurus/plugin-client-redirects": "^3.8.1",
+    "@docusaurus/plugin-content-docs": "^3.8.1",
+    "@docusaurus/plugin-content-pages": "^3.8.1",
     "@docusaurus/plugin-google-gtag": "^3.8.1",
     "@docusaurus/plugin-sitemap": "^3.8.1",
     "@docusaurus/preset-classic": "^3.8.1",
@@ -41,9 +44,7 @@
     "react-dom": "^18.3.1",
     "react-feather": "^2.0.10",
     "sass": "^1.94.0",
-    "use-editable": "^2.3.3",
-    "@docusaurus/plugin-content-docs": "^3.8.1",
-    "@docusaurus/plugin-content-pages": "^3.8.1"
+    "use-editable": "^2.3.3"
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "3.8.1",

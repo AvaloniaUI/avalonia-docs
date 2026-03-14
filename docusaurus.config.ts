@@ -119,12 +119,14 @@ const config: Config = {
             './node_modules/modern-normalize/modern-normalize.css',
             './node_modules/@ionic-internal/ionic-ds/dist/tokens/tokens.css',
             './src/styles/custom.scss',
+            './src/styles/docsearch.scss',
           ],
         },
       } satisfies Preset.Options,
     ],
   ],
   plugins: [
+    '@docsearch/docusaurus-adapter',
     'docusaurus-plugin-sass',
     tailwindPlugin,
     function cioPlugin() {
@@ -377,12 +379,33 @@ const config: Config = {
       },
       additionalLanguages: ['csharp', 'bash', 'shell-session', 'diff'],
     },
-    algolia: {
+    docsearch: {
       appId: 'V9UF6750GH',
       apiKey: '028e3dad834905a2a2c2a7ad9da9e666',
       indexName: 'avaloniaui_docs',
+      contextualSearch: true,
+      translations: {
+        button: {
+          buttonText: 'Search',
+          buttonAriaLabel: 'Search',
+        },
+        modal: {
+          startScreen: {
+            recentSearchesTitle: 'Recent',
+            noRecentSearchesText: 'No recent searches',
+            saveRecentSearchButtonTitle: 'Save to recent',
+            removeRecentSearchButtonTitle: 'Remove from recent',
+            favoriteSearchesTitle: 'Favourites',
+            removeFavoriteSearchButtonTitle: 'Remove from favourites',
+          },
+        },
+      },
+      askAi: {
+        assistantId: 'ILptDNvSVJ1v',
+        sidePanel: true,
+      },
     },
-  } satisfies Preset.ThemeConfig,
+  },
 };
 
 export default config;
