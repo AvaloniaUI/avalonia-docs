@@ -4,7 +4,7 @@ title: AI Tools
 doc-type: overview
 ---
 
-Avalonia Accelerate includes MCP (Model Context Protocol) servers for both DevTools and Parcel, allowing AI coding assistants to interact directly with your running applications and packaging workflows. Rather than copying error messages or describing your UI in text, your AI assistant can inspect the visual tree, take screenshots, set properties, and package your app for you.
+Avalonia provides MCP (Model Context Protocol) servers that connect AI coding assistants to documentation, running applications, and packaging workflows. Rather than copying error messages or describing your UI in text, your AI assistant can search the official docs, inspect the visual tree, take screenshots, set properties, and package your app for you.
 
 ## What is MCP?
 
@@ -12,14 +12,24 @@ Model Context Protocol (MCP) is an open standard that allows AI models to use ex
 
 ## Supported AI assistants
 
-Both MCP servers work with any assistant that supports the STDIO transport. Each MCP setup page includes step-by-step configuration instructions for the following editors:
+Each MCP setup page includes step-by-step configuration instructions for the following editors and CLI tools:
 
 - VS Code with GitHub Copilot
 - Visual Studio with Copilot
 - JetBrains Rider (AI Assistant and Copilot plugins)
 - Cursor
+- Windsurf
 - Claude Code
 - Claude Desktop
+- Gemini CLI
+
+## Build MCP
+
+The Build MCP server gives your AI coding assistant direct access to the Avalonia documentation. Your assistant can search guides, tutorials, and API references in real time, returning answers grounded in the official docs rather than relying on training data that may be outdated.
+
+Build MCP is **free to use** and requires no license key or local installation. It runs as a remote server that connects over HTTP, so setup takes only a few seconds.
+
+[Set up Build MCP](/tools/ai-tools/build-mcp)
 
 ## DevTools MCP
 
@@ -39,6 +49,7 @@ With the Parcel MCP server, you describe what you want in plain English and the 
 
 ## See also
 
+- [Build MCP](/tools/ai-tools/build-mcp)
 - [DevTools MCP](/tools/developer-tools/mcp)
 - [Parcel MCP](/tools/parcel/mcp)
 - [Avalonia Tools overview](/tools/)
