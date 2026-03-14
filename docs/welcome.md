@@ -85,5 +85,3 @@ To report a bug, open an issue on [GitHub](https://github.com/AvaloniaUI/Avaloni
 - [Supported platforms](supported-platforms)
 - [Samples and tutorials](samples-tutorials/index.md)
 - [Avalonia GitHub repository](https://github.com/AvaloniaUI/Avalonia)
-
-<XpfAd/>

@@ -87,7 +87,7 @@ html[data-theme='dark'] {
   padding: 0 0.75rem;
   height: var(--docsearch-searchbox-height);
   background: var(--docsearch-searchbox-background);
-  border: 1px solid var(--color-gray-300);
+  border: none;
   border-radius: 0.5rem;
   color: var(--docsearch-muted-color);
   font-family: var(--ifm-font-family-base);
@@ -103,13 +103,11 @@ html[data-theme='dark'] {
 
   &:hover {
     background: var(--docsearch-searchbox-focus-background);
-    border-color: var(--color-gray-400);
     box-shadow: var(--shadow-theme-xs);
   }
 
   &:focus {
     outline: none;
-    border-color: var(--color-brand-500);
     box-shadow: 0 0 0 3px rgba(0, 125, 249, 0.15);
   }
 
@@ -158,11 +156,9 @@ html[data-theme='dark'] {
 
 html[data-theme='dark'] .DocSearch-Button {
   background: var(--docsearch-searchbox-background);
-  border-color: var(--docs-color-border);
 
   &:hover {
     background: var(--docs-color-background-200);
-    border-color: var(--color-gray-600);
   }
 
   .DocSearch-Search-Icon {
@@ -233,11 +229,11 @@ html[data-theme='dark'] .DocSearch-Modal {
 
 .DocSearch-SearchBar {
   padding: 1rem;
-  border-bottom: 1px solid var(--color-gray-200);
+  border-bottom: none;
 }
 
 html[data-theme='dark'] .DocSearch-SearchBar {
-  border-bottom-color: var(--docs-color-border);
+  border-bottom: none;
 }
 
 .DocSearch-Form {
@@ -675,6 +671,20 @@ html[data-theme='dark'] .DocSearch-Commands-Key {
       display: none;
     }
   }
+}
+
+// =============================================================================
+// AskAI Sidepanel Button
+// =============================================================================
+
+.DocSearch-SidepanelButton.inline {
+  border: none;
+}
+
+.DocSearch-Sidepanel-Header {
+  height: var(--ifm-navbar-height) !important;
+  border-bottom: none !important;
+  box-shadow: var(--ifm-navbar-shadow) !important;
 }
 
 // =============================================================================
