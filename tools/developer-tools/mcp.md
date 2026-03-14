@@ -3,6 +3,20 @@ id: mcp
 title: DevTools MCP
 sidebar_label: DevTools MCP
 doc-type: how-to
+description: "Set up the DevTools MCP server to let AI assistants inspect, debug, and modify your running Avalonia application."
+keywords:
+  - mcp
+  - model context protocol
+  - ai assistant
+  - devtools
+  - copilot
+  - claude
+  - cursor
+  - ai tools
+tags:
+  - mcp
+  - ai
+  - accelerate
 ---
 
 import Tabs from '@theme/Tabs';
@@ -82,6 +96,53 @@ See the editor-specific setup instructions below for where to place this block.
 :::note
 DevTools MCP is only available with a full Accelerate license.
 :::
+
+## Prepare your application
+
+The MCP server communicates with your Avalonia application through the `AvaloniaUI.DiagnosticsSupport` package. Without this package and the required startup call, the MCP server cannot discover or attach to your running app.
+
+:::caution[Required for MCP connectivity]
+This step is required for `attach-to-app` to work. If you skip it, the MCP server will repeatedly fail to connect with no clear error. The `attach-to-file` tool (XAML previewer) does not require a running application, but still requires the package to be installed.
+:::
+
+**1. Add the diagnostics support package to your project:**
+
+```bash
+dotnet add package AvaloniaUI.DiagnosticsSupport
+```
+
+**2. Enable developer tools in your application startup.**
+
+Choose one of the following approaches:
+
+<Tabs>
+<TabItem value="appbuilder" label="App builder (Program.cs)">
+
+```csharp
+public static AppBuilder BuildAvaloniaApp()
+    => AppBuilder.Configure<App>()
+        .UsePlatformDetect()
+        .WithDeveloperTools();
+```
+
+</TabItem>
+<TabItem value="application" label="Application class (App.axaml.cs)">
+
+```csharp
+public override void Initialize()
+{
+    AvaloniaXamlLoader.Load(this);
+
+#if DEBUG
+    this.AttachDeveloperTools();
+#endif
+}
+```
+
+</TabItem>
+</Tabs>
+
+For the full installation walkthrough, including platform-specific requirements and activation, see [Installing the Accelerate developer tools](/tools/developer-tools/installation).
 
 ## Setting up the MCP server
 
@@ -279,9 +340,20 @@ If the MCP server starts but reports a missing or invalid license key:
 
 ### Server connects but cannot find the application
 
-- Ensure your Avalonia application is running before asking the assistant to connect.
+- **Verify your app has the diagnostics package installed.** The `AvaloniaUI.DiagnosticsSupport` NuGet package must be added to your project, and you must call `.WithDeveloperTools()` on your app builder or `this.AttachDeveloperTools()` in your `Application` class. See [Prepare your application](#prepare-your-application) above.
+- **Ensure your Avalonia application is running** before asking the assistant to connect.
 - If multiple Avalonia apps are running, the assistant will list them and ask which one to attach to.
-- For XAML previewing, use `attach-to-file` instead of `attach-to-app`.
+- For XAML previewing, use `attach-to-file` instead of `attach-to-app`. This connects to the XAML previewer and does not require a running application.
+
+### Cannot attach to a running application
+
+This is the most common issue when first setting up the MCP server. The `attach-to-app` tool requires all of the following:
+
+1. The `AvaloniaUI.DiagnosticsSupport` package is installed in your project.
+2. `.WithDeveloperTools()` or `.AttachDeveloperTools()` is called at app startup.
+3. The application is running and has fully started (past the splash screen or initialization phase).
+
+If any of these are missing, the MCP server will fail to find your application. Pressing F12 in your app has no effect on MCP connectivity; that shortcut opens the standalone DevTools window, not the MCP connection.
 
 ### Updating DevTools
 
@@ -367,6 +439,26 @@ Describe what you want to accomplish in natural language. The AI assistant calls
 ```text
 "Set the Background of the sidebar panel to #F0F0F0."
 ```
+
+**Iterating on UI design with screenshots:**
+
+The following prompt demonstrates a complete design iteration workflow. The AI assistant writes XAML, previews it with `attach-to-file`, takes screenshots, and keeps refining until the result matches the target design:
+
+```text
+"Create an Avalonia application and recreate the attached UI. You can write XAML
+and prefer MVVM-friendly code. Use the Avalonia MCP server to periodically confirm
+if designs match. Design for the light theme. If the design doesn't match, you must
+continue to iterate on it until it does. Use the Avalonia MVVM template and install
+AvaloniaUI.DiagnosticsSupport and add .WithDeveloperTools() to the app builder to
+enable MCP. Only use the attach-to-file tool. Don't call detach. You don't need to
+rebuild the project on change."
+```
+
+This prompt works well because it:
+
+- Tells the assistant to use `attach-to-file` (which connects to the XAML previewer without needing to rebuild).
+- Includes the app instrumentation instructions (`DiagnosticsSupport` + `.WithDeveloperTools()`) directly in the prompt, so the assistant sets up the project correctly from the start.
+- Creates a feedback loop where the assistant keeps iterating until the design matches.
 
 ## See also
 
