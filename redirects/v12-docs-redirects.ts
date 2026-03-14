@@ -1301,39 +1301,39 @@ const redirects: Redirect[] = [
             "/xpf/embedding/avalonia-in-xpf/adding-global-style-for-avalonia-controls-in-XPF",
             "/xpf/advanced/avalonia-interop",
         ],
-        "to": "/xpf/guides/embedding-avalonia-in-xpf"
+        "to": "/xpf/interop/embedding-avalonia-in-xpf"
     },
     {
         "from": "/xpf/embedding/xpf-in-avalonia",
-        "to": "/xpf/guides/using-xpf-in-avalonia"
+        "to": "/xpf/interop/using-xpf-in-avalonia"
     },
     {
         "from": "/xpf/advanced/centralized-management",
-        "to": "/xpf/guides/centralizing-multiple-xpf-projects"
+        "to": "/xpf/configuration/centralizing-multiple-xpf-projects"
     },
     {
         "from": "/xpf/advanced/customizing-init",
-        "to": "/xpf/guides/customizing-initialization"
+        "to": "/xpf/configuration/customizing-initialization"
     },
     {
         "from": "/xpf/advanced/customizing-window-decorations",
-        "to": "/xpf/guides/removing-the-titlebar"
+        "to": "/xpf/migration/removing-the-titlebar"
     },
     {
         "from": "/xpf/advanced/headless-testing",
-        "to": "/xpf/guides/headless-testing"
+        "to": "/xpf/testing/headless-testing"
     },
     {
         "from": "/xpf/advanced/key-mapping",
-        "to": "/xpf/guides/key-mapping"
+        "to": "/xpf/migration/key-mapping"
     },
     {
         "from": "/xpf/advanced/window-handles",
-        "to": "/xpf/guides/native-window-handles"
+        "to": "/xpf/interop/native-window-handles"
     },
     {
         "from": "/xpf/troubleshooting",
-        "to": "/troubleshooting/xpf"
+        "to": "/xpf/troubleshooting"
     },
     {
         "from": [

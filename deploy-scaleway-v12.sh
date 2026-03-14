@@ -65,6 +65,7 @@ build() {
         npm ci
 
         log "Building Docusaurus site"
+        export NODE_OPTIONS="--max-old-space-size=16384"
         npm run build || true  # redirect plugin may fail; build output is still valid
     fi
 
