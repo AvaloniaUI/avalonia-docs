@@ -25,7 +25,7 @@ Each MCP setup page includes step-by-step configuration instructions for the fol
 
 ## Build MCP
 
-The Build MCP server gives your AI coding assistant direct access to the Avalonia documentation. Your assistant can search guides, tutorials, and API references in real time, returning answers grounded in the official docs rather than relying on training data that may be outdated.
+The Build MCP server gives your AI coding assistant direct access to the Avalonia documentation and expert development rules. Your assistant can search guides, tutorials, and API references in real time, load comprehensive coding rules for idiomatic Avalonia development, and use guided prompts for common workflows like creating new projects or recreating a UI from a screenshot.
 
 Build MCP is **free to use** and requires no license key or local installation. It runs as a remote server that connects over HTTP, so setup takes only a few seconds.
 

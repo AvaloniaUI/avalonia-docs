@@ -25,7 +25,7 @@ import TabItem from '@theme/TabItem';
 
 ## What is Build MCP?
 
-The Build MCP server gives your AI coding assistant direct access to the Avalonia documentation. Instead of relying on training data that may be outdated or incomplete, your assistant can search guides, tutorials, and API references in real time and return answers grounded in the official docs.
+The Build MCP server gives your AI coding assistant direct access to the Avalonia documentation and expert development guidance. Instead of relying on training data that may be outdated or incomplete, your assistant can search guides, tutorials, and API references in real time, load Avalonia-specific coding rules, and use guided prompts for common workflows like creating new projects or recreating a UI from a screenshot.
 
 Build MCP is **free to use** and requires no license key or local installation. It runs as a remote server, so setup takes only a few seconds in any MCP-compatible editor or CLI tool.
 
@@ -33,12 +33,27 @@ For a general introduction to MCP, see [AI Tools](/tools/ai-tools/).
 
 ## Available tools
 
-The Build MCP server exposes two tools to your AI assistant:
+The Build MCP server exposes three tools to your AI assistant:
 
 | Tool | Description |
 |------|-------------|
-| `search_avalonia_docs` | Searches the full Avalonia documentation, including API references, tutorials, guides, and migration docs. Accepts a natural language query and returns matching results with source links. |
-| `lookup_avalonia_api` | Looks up a specific Avalonia class, property, method, or event in the API reference. Use this for targeted API queries such as `TextBlock`, `Window.Show`, or `StyledProperty`. |
+| `search_avalonia_docs` | Searches the full Avalonia documentation, including API references, tutorials, guides, and migration docs. Common topics like "styling", "binding", and "mvvm" are automatically routed to optimized queries for better results. |
+| `lookup_avalonia_api` | Looks up a specific Avalonia class, property, method, or event in the API reference. Use this for targeted queries such as `TextBlock`, `Window.Show`, or `StyledProperty`. |
+| `get_avalonia_expert_rules` | Returns a comprehensive set of Avalonia development rules covering AXAML syntax, the property system, styling, data binding, MVVM patterns, custom controls, layout, theming, assets, threading, and common mistakes to avoid. Call this at the start of a development session so your assistant writes correct, idiomatic Avalonia code. |
+
+## Available prompts
+
+In addition to tools, the Build MCP server provides prompts that configure your assistant for specific workflows. MCP prompts are pre-written instructions that set up the assistant's context and behavior for a task.
+
+:::note
+Prompt support varies by client. Claude Desktop, Claude Code, and Cursor support MCP prompts. Other editors may not surface them in the UI. If your editor does not support prompts, you can achieve the same effect by asking your assistant to call the `get_avalonia_expert_rules` tool directly.
+:::
+
+| Prompt | Description |
+|--------|-------------|
+| `init` | Initializes an Avalonia expert session for an existing project. Loads development rules, sets up concise response behavior, and configures the assistant to use the documentation tools for every technical question. |
+| `new` | Guides you through creating a new Avalonia application. Covers template selection (`avalonia.mvvm` for desktop, `avalonia.xplat` for cross-platform), project creation with CommunityToolkit.Mvvm, compiled bindings setup, and developer tools installation. Accepts an optional `app_name` parameter. |
+| `recreate-ui` | Sets up an iterative design workflow for recreating a UI from a screenshot or image. The assistant writes AXAML, previews it using the [DevTools MCP](/tools/developer-tools/mcp) `attach-to-file` tool, takes screenshots to compare against the target, and keeps refining until the result matches. Accepts an optional `theme` parameter (`light` or `dark`). Requires a paid [Accelerate license](https://my.avalonia.dev/) for the DevTools MCP integration. |
 
 ## Setting up the MCP server
 
@@ -250,16 +265,30 @@ Describe what you want to accomplish in natural language. The AI assistant calls
 "Look up the Avalonia TextBlock control in the API reference."
 ```
 
+**Loading expert rules at the start of a session:**
+
+```text
+"Load the Avalonia expert rules so you can help me build my app correctly."
+```
+
+**Creating a new project (using the `new` prompt):**
+
+```text
+"Create a new Avalonia desktop app called WeatherTracker."
+```
+
+**Recreating a UI from a screenshot (using the `recreate-ui` prompt):**
+
+```text
+"Recreate this UI in Avalonia. Use the light theme."
+```
+
+This prompt works best when combined with the [DevTools MCP](/tools/developer-tools/mcp), which provides the `attach-to-file` tool for live XAML previewing. The assistant writes AXAML, previews it, takes screenshots, and iterates until the result matches your target design. DevTools MCP requires a paid [Accelerate license](https://my.avalonia.dev/).
+
 **Migration guidance:**
 
 ```text
 "Search the Avalonia docs for how to migrate from WPF to Avalonia."
-```
-
-**Finding tutorials:**
-
-```text
-"Find an Avalonia tutorial on building an MVVM application."
 ```
 
 ## See also
