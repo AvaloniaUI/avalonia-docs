@@ -13,10 +13,8 @@
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
     "typecheck": "tsc",
-    "apiref": "/Users/michaeljames/.dotnet/tools/dotnet-apiref",
-    "apiref:materialise": "npm run apiref -- materialise --site .",
-    "prestart": "npm run apiref:materialise",
-    "prebuild": "npm run apiref:materialise"
+    "apiref": "dotnet-apiref",
+    "apiref:materialise": "npm run apiref -- materialise --site ."
   },
   "dependencies": {
     "@docusaurus/core": "^3.8.1",

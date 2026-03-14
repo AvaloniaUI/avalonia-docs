@@ -72,13 +72,38 @@ The two suggested workflows are:
 npm install
 ```
 
-### Starting 
+### Starting
 
 ```bash
 npx docusaurus start
 npx docusaurus start --locale zh-Hans
 npx docusaurus start --locale ru
 ```
+
+### API Reference Generation
+
+The API reference pages are generated using the `dotnet-apiref` tool and the configuration in `apiref.json`. The generated output is committed to the repository, so CI and other contributors do not need the tool installed to build the site.
+
+#### Running manually
+
+To regenerate API reference content locally, install the `dotnet-apiref` tool and run:
+
+```bash
+npm run apiref:materialise
+```
+
+This runs `dotnet-apiref materialise --site .`, which reads `apiref.json`, fetches NuGet packages, and writes API documentation files into the site.
+
+#### Automatic regeneration (optional)
+
+If you want API reference content to regenerate automatically before every local `build` or `start`, add these lifecycle hooks to the `scripts` section of `package.json`:
+
+```json
+"prestart": "npm run apiref:materialise",
+"prebuild": "npm run apiref:materialise"
+```
+
+Do not commit these hooks, as CI does not have `dotnet-apiref` installed and the build will fail. The generated API reference files are already committed to the repository.
 
 ## Thanks 💜
 
