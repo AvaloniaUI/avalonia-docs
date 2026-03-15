@@ -153,7 +153,18 @@ When the `TopLevel` (your window or main view) is set as a container, container 
 
 ## OnFormFactor
 
-The `OnFormFactor` markup extension selects a value based on the device type. It resolves once at startup, so it does not respond to window resizing at runtime:
+The `OnFormFactor` markup extension selects a value based on the device type. It resolves once at startup, so it does not respond to window resizing at runtime.
+
+### Form factor values
+
+| Parameter | Matches | Typical platforms |
+|-----------|---------|-------------------|
+| `Desktop` | Desktop systems | Windows, macOS, Linux |
+| `Mobile` | Mobile systems | iOS, Android |
+| `TV` | Television systems | tvOS, Android TV |
+| `Default` | Fallback when the current form factor is not specified | Any |
+
+If the current form factor does not match any of the specified parameters, the `Default` value is used. If `Default` is not set, the property receives its type's default value.
 
 ```xml
 <Grid ColumnDefinitions="{OnFormFactor Desktop='250,*', Mobile='*'}">
@@ -167,6 +178,28 @@ The `OnFormFactor` markup extension selects a value based on the device type. It
 ```
 
 Use `OnFormFactor` when your desktop and mobile layouts are structurally different and you do not need to respond to live resizing. For layouts that must adapt as the user resizes the window, use container queries instead.
+
+### OnPlatform
+
+The related `OnPlatform` markup extension selects a value based on the operating system rather than the device type. It also resolves once at startup.
+
+| Parameter | Matches |
+|-----------|---------|
+| `Windows` | Windows |
+| `macOS` | macOS |
+| `Linux` | Linux |
+| `iOS` | iOS |
+| `Android` | Android |
+| `Browser` | WebAssembly (WASM) in a browser |
+| `Default` | Fallback when the current platform is not specified |
+
+```xml
+<TextBlock FontFamily="{OnPlatform macOS='San Francisco',
+                                   Windows='Segoe UI',
+                                   Default='Inter'}" />
+```
+
+`OnFormFactor` and `OnPlatform` serve different purposes. Use `OnFormFactor` for structural layout differences between device categories (desktop vs. mobile). Use `OnPlatform` for platform-specific adjustments like native font families or OS-specific styling.
 
 ## Reflowing panels
 
@@ -272,3 +305,5 @@ You can combine these techniques. For example, use `OnFormFactor` for a top-leve
 - [How to: Build responsive layouts](/docs/how-to/responsive-layout-how-to): Step-by-step recipes for common responsive patterns.
 - [Layout](/docs/layout/layout): How the Avalonia measure and arrange system works.
 - [Choosing a layout panel](/docs/layout/choosing-a-layout-panel): Picking the right panel for your scenario.
+- [`OnFormFactorExtension` API reference](/api/avalonia/markup/xaml/markupextensions/onformfactorextension)
+- [`OnPlatformExtension` API reference](/api/avalonia/markup/xaml/markupextensions/onplatformextension)
