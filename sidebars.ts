@@ -94,6 +94,7 @@ const sidebars: SidebarsConfig = {
         'styling/themes',
         'styling/container-queries',
         'styling/custom-fonts',
+        'styling/typography',
         'styling/sharing-styles',
         'styling/theme-variants',
         'styling/style-selectors',
