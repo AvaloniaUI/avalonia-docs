@@ -42,6 +42,67 @@ WinUI uses `VisualStateManager` with visual states and storyboards to handle con
 
 Avalonia's approach is more concise and composable. For a full guide on how styling works, see [Styles](/docs/styling/styles).
 
+#### AdaptiveTrigger to container queries
+
+WinUI uses `AdaptiveTrigger` inside `VisualStateManager` to adapt layout based on window size. Avalonia replaces this with container queries, which can respond to the size of any ancestor control (not only the window).
+
+**WinUI (AdaptiveTrigger):**
+
+```xml
+<VisualStateManager.VisualStateGroups>
+    <VisualStateGroup>
+        <VisualState x:Name="Narrow">
+            <VisualState.StateTriggers>
+                <AdaptiveTrigger MinWindowWidth="0" />
+            </VisualState.StateTriggers>
+            <VisualState.Setters>
+                <Setter Target="ContentGrid.Columns" Value="1" />
+            </VisualState.Setters>
+        </VisualState>
+        <VisualState x:Name="Wide">
+            <VisualState.StateTriggers>
+                <AdaptiveTrigger MinWindowWidth="800" />
+            </VisualState.StateTriggers>
+            <VisualState.Setters>
+                <Setter Target="ContentGrid.Columns" Value="3" />
+            </VisualState.Setters>
+        </VisualState>
+    </VisualStateGroup>
+</VisualStateManager.VisualStateGroups>
+```
+
+**Avalonia (container queries):**
+
+```xml
+<Panel Container.Name="root" Container.Sizing="Width">
+    <Panel.Styles>
+        <ContainerQuery Name="root" Query="max-width:800">
+            <Style Selector="UniformGrid#ContentGrid">
+                <Setter Property="Columns" Value="1" />
+            </Style>
+        </ContainerQuery>
+        <ContainerQuery Name="root" Query="min-width:800">
+            <Style Selector="UniformGrid#ContentGrid">
+                <Setter Property="Columns" Value="3" />
+            </Style>
+        </ContainerQuery>
+    </Panel.Styles>
+
+    <UniformGrid x:Name="ContentGrid">
+        <!-- content -->
+    </UniformGrid>
+</Panel>
+```
+
+Container queries offer two advantages over WinUI's `AdaptiveTrigger`:
+
+- **Component-level responsiveness.** `AdaptiveTrigger` always measures the window. Container queries measure any ancestor, so a component adapts correctly whether it appears full-width, in a sidebar, or in a dialog.
+- **No visual state boilerplate.** You define the query and the style in one place without declaring state groups, state names, or trigger objects.
+
+You can also combine width and height conditions in a single query using `and` or `,` operators, and target any styleable property (font size, spacing, visibility, colours) alongside layout properties.
+
+For the full query syntax, see [Container queries](/docs/styling/container-queries). For guidance on choosing between container queries, `OnFormFactor`, reflowing panels, and code-driven breakpoints, see [Responsive layouts](/docs/layout/responsive-layouts).
+
 ### XAML namespace
 
 | WinUI / UWP | Avalonia |
@@ -163,5 +224,7 @@ Moving from WinUI to Avalonia is not only about cross-platform. There are a few 
 
 - [Get Started with Avalonia](/docs/get-started/first-app): Create your first Avalonia application.
 - [Styles](/docs/styling/styles): How Avalonia's CSS-like styling works.
+- [Container queries](/docs/styling/container-queries): Size-based styling, replacing WinUI's AdaptiveTrigger.
+- [Responsive layouts](/docs/layout/responsive-layouts): Building adaptive layouts with container queries and reflowing panels.
 - [Data Binding Syntax](/docs/data-binding/data-binding-syntax): Avalonia binding syntax reference.
 - [Controls Reference](/controls): Full Avalonia controls documentation.

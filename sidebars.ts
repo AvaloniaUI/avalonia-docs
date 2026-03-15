@@ -80,6 +80,7 @@ const sidebars: SidebarsConfig = {
       items: [
         'layout/choosing-a-layout-panel',
         'layout/positioning-controls',
+        'layout/responsive-layouts',
       ],
     },
     {

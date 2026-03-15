@@ -79,4 +79,5 @@ For details and code examples, see [Overlay Layers](/docs/fundamentals/visual-an
 ## See also
 
 - [Positioning Controls](/docs/layout/positioning-controls): Alignment, margins, and positioning.
+- [Responsive Layouts](/docs/layout/responsive-layouts): Adapting layout to different sizes using container queries and reflowing panels.
 - [Overlay Layers](/docs/fundamentals/visual-and-logical-trees#overlay-layers): Adding custom overlay content above normal controls.
