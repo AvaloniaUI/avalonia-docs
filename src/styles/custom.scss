@@ -200,6 +200,11 @@ iframe {
   padding-right: 32px;
 }
 
+.header-github-link {
+  padding-left: 0 !important;
+  margin-left: 4px;
+}
+
 .header-github-link::before {
   content: "";
   width: 24px;
