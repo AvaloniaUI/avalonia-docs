@@ -15,18 +15,18 @@ html[data-theme='light'] {
 }
 
 html[data-theme='dark'] {
-  // Obsidian dark sidebar colors
-  --sidebar-category-c: #C1BBB8;
-  --sidebar-border-c: rgba(255, 255, 255, 0.12);
+  // Neutral dark sidebar colors
+  --sidebar-category-c: #a1a1aa;
+  --sidebar-border-c: rgba(255, 255, 255, 0.08);
 
-  --ifm-menu-color: #C1BBB8;
+  --ifm-menu-color: #a1a1aa;
 
   --sidebar-item-bg-active: rgba(255, 255, 255, 0.06);
-  --sidebar-item-text-active: #fff;
-  --sidebar-item-text-inactive: #C1BBB8;
+  --sidebar-item-text-active: #ededef;
+  --sidebar-item-text-inactive: #a1a1aa;
   --sidebar-item-hover-bg: rgba(255, 255, 255, 0.06);
   --sidebar-item-icon-active: var(--color-brand-400);
-  --sidebar-item-icon-inactive: #686770;
+  --sidebar-item-icon-inactive: #71717a;
 }
 
 :root {

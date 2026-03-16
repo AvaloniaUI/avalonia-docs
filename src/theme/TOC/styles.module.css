@@ -45,7 +45,7 @@
 
 :global(html[data-theme='dark']) .tocDropdownButton {
   background: transparent;
-  color: #C1BBB8;
+  color: #a1a1aa;
 }
 
 :global(html[data-theme='dark']) .tocDropdownButton:hover {
