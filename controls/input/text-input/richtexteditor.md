@@ -2,6 +2,8 @@
 id: richtexteditor
 title: RichTextEditor
 doc-type: reference
+tags:
+ - accelerate
 ---
 
 import Tabs from '@theme/Tabs';
@@ -171,6 +173,14 @@ void UpdateWordCount()
         Console.WriteLine($"Word count: {wordCount}");
     }
 }
+```
+
+## Customizing selection highlight color
+
+The highlight color of text selections can be customized by specifying an ARGB value for `SelectionBrush`.
+
+```xml
+<RichTextEditor SelectionBrush="#ffff529e">
 ```
 
 ## Components

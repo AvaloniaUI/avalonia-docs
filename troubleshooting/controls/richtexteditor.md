@@ -12,6 +12,8 @@ tags:
 This control is available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Enterprise.
 :::
 
+For reference information on this control, see the [RichTextEditor](/controls/input/text-input/richtexteditor) page.
+
 ## Document is null
 
 Ensure you have set the `FlowDocument` to be accessed by the editor.

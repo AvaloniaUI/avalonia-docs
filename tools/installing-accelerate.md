@@ -41,10 +41,11 @@ Replace the package name with the one you need. The following Accelerate package
 
 | Package | Description |
 |---------|-------------|
-| `Avalonia.Controls.MediaPlayer` | Audio and video playback control |
-| `Avalonia.Controls.WebView` | Native web content embedding |
 | `Avalonia.Controls.Markdown` | Markdown text rendering |
+| `Avalonia.Controls.MediaPlayer` | Audio and video playback |
+| `Avalonia.Controls.RichTextEditor` | Document editing and processing |
 | `Avalonia.Controls.TreeDataGrid` | Hierarchical and flat data grid |
+| `Avalonia.Controls.WebView` | Native web content embedding |
 
 ## Add your license key
 
