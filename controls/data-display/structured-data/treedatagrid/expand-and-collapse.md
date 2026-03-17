@@ -95,33 +95,22 @@ Source.RowCollapsed += (sender, e) =>
 
 ## Lazy loading data on expand
 
-A common pattern is to load child data on demand when the user expands a row, rather than loading your entire tree upfront. You can use the `RowExpanding` event to fetch children just before a row opens. This keeps initial load times fast, especially for large or remote data sets.
+A common pattern is to load child data on demand when the user expands a row, rather than loading your entire tree upfront. You can use the `RowExpanding` event to populate children just before a row opens. This keeps initial load times fast, especially for large data sets.
 
 ```csharp
-Source.RowExpanding += async (sender, e) =>
+Source.RowExpanding += (sender, e) =>
 {
     var person = (Person)e.Row.Model!;
 
     if (!person.ChildrenLoaded)
     {
-        try
-        {
-            var children = await MyDataService.LoadChildrenAsync(person.Id);
-            person.Children.Clear();
-            person.Children.AddRange(children);
-            person.ChildrenLoaded = true;
-        }
-        catch (Exception ex)
-        {
-            Debug.WriteLine($"Failed to load children: {ex.Message}");
-        }
+        var children = MyDataService.LoadChildren(person.Id);
+        person.Children.Clear();
+        person.Children.AddRange(children);
+        person.ChildrenLoaded = true;
     }
 };
 ```
-
-:::tip
-The `RowExpanding` event handler can be `async`. The grid will display child rows immediately, so ensure your data is ready or handle the loading state appropriately.
-:::
 
 ## See also
 
