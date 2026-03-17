@@ -13,7 +13,7 @@ export default function NotFoundContent({className}: Props): ReactNode {
                 <Translate
                   id="theme.NotFound.title"
                   description="The title of the 404 page">
-                  Page Not Found
+                  Page not found
                 </Translate>
               </h1>
               <p>
@@ -24,6 +24,7 @@ export default function NotFoundContent({className}: Props): ReactNode {
                 </Translate>
               </p>
               <img src='https://media.giphy.com/media/PibODdY9C5xiKzmRhW/giphy.gif'/>
+              <br/>
               <p>
                 <Translate
                   id="theme.NotFound.p2"
