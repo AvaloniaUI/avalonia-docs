@@ -25,7 +25,7 @@ export default function QuickStartSection(): JSX.Element {
       <div className="max-w-[1200px] mx-auto grid md:grid-cols-2 gap-12 items-start">
         {/* Left: Quick Start Guide card */}
         <div
-          className="rounded-2xl bg-white dark:bg-[#0B2A54] p-8"
+          className="rounded-2xl bg-white dark:bg-[#18181b] p-8"
           style={{ border: '1px solid #E3DFDC' }}
         >
           <h3

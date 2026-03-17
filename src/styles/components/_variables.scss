@@ -224,44 +224,46 @@
 
 // Dark theme overrides
 html[data-theme='dark'] {
-  // Warm neutral dark palette
-  --color-gray-25: #0B2A54;
-  --color-gray-50: #0B2A54;
-  --color-gray-100: rgba(255, 255, 255, 0.08);
-  --color-gray-200: rgba(255, 255, 255, 0.12);
+  // Neutral dark palette (Mintlify-inspired)
+  --color-gray-25: #191a1f;
+  --color-gray-50: #191a1f;
+  --color-gray-100: rgba(255, 255, 255, 0.06);
+  --color-gray-200: rgba(255, 255, 255, 0.1);
   --color-gray-700: #d0d5dd;
   --color-gray-800: #e4e7ec;
-  --color-gray-900: #F3F1F0;
+  --color-gray-900: #f1f1f1;
 
   // Text colors
-  --docs-color-text: #ffffff;
-  --docs-color-text-100: #C1BBB8;
-  --docs-color-text-400: 153 153 153;
+  --docs-color-text: #ededef;
+  --docs-color-text-100: #a1a1aa;
+  --docs-color-text-400: 161 161 170;
+  --color-muted: #71717a;
+  --color-body-text: #a1a1aa;
 
   // Secondary colors
-  --docs-color-secondary-700: 71 71 71;
-  --docs-color-secondary-800: 38 38 38;
-  --docs-color-secondary-900: 27 42 78;
+  --docs-color-secondary-700: 63 63 70;
+  --docs-color-secondary-800: 39 39 42;
+  --docs-color-secondary-900: 24 24 27;
   --docs-color-secondary-1000: 0 0 0;
 
-  // Background colors (obsidian)
-  --docs-color-background: #05051E;
-  --docs-color-background-100: #0B2A54;
-  --docs-color-background-200: rgba(255, 255, 255, 0.08);
-  --docs-color-background-300: rgba(255, 255, 255, 0.16);
+  // Background colors (near-black)
+  --docs-color-background: #111113;
+  --docs-color-background-100: #191a1f;
+  --docs-color-background-200: rgba(255, 255, 255, 0.06);
+  --docs-color-background-300: rgba(255, 255, 255, 0.1);
 
-  // Border colors (warm dark)
-  --docs-color-border: rgba(255, 255, 255, 0.12);
+  // Border colors (subtle)
+  --docs-color-border: rgba(255, 255, 255, 0.1);
 
   // Code colors
-  --docs-color-code-background: #0B2A54;
+  --docs-color-code-background: #18181b;
 
   // Navbar colors
-  --navbar-second-row-background: #0B2A54;
-  --navbar-second-row-border: rgba(255, 255, 255, 0.12);
+  --navbar-second-row-background: #18181b;
+  --navbar-second-row-border: rgba(255, 255, 255, 0.1);
 
   // Card colors
-  --docs-card-background: #0B2A54;
+  --docs-card-background: #18181b;
 
   // Links (using brand colors)
   --ifm-link-color: var(--color-brand-400);
@@ -272,19 +274,19 @@ html[data-theme='dark'] {
   --ifm-brand-logo-color: white;
 
   // Footer
-  --ifm-footer-background-color: var(--color-obsidian);
+  --ifm-footer-background-color: #111113;
   --ifm-footer-brand-color: white;
 
   // Navigation
-  --ifm-background-surface-color: #05051E;
-  --ifm-background-color: #05051E;
-  --ifm-toc-border-color: rgba(255, 255, 255, 0.12);
+  --ifm-background-surface-color: #111113;
+  --ifm-background-color: #111113;
+  --ifm-toc-border-color: rgba(255, 255, 255, 0.1);
 
   // Content
-  --ifm-color-content: #e7e7e7;
+  --ifm-color-content: #ededef;
 
   // Code highlighting
-  --docusaurus-highlighted-code-line-bg: rgba(0, 125, 249, 0.2);
+  --docusaurus-highlighted-code-line-bg: rgba(0, 125, 249, 0.15);
 
   // Primary color
   --ifm-color-primary: #007df9;
@@ -353,9 +355,9 @@ html[data-theme='light'] {
 }
 
 html[data-theme='dark'] {
-  // Obsidian background
-  --token-primary-bg-c: #05051E;
-  --token-secondary-bg-c: #05051E;
+  // Near-black background (Mintlify-inspired)
+  --token-primary-bg-c: #111113;
+  --token-secondary-bg-c: #111113;
 
   // Links use brand color (lighter for dark mode)
   --ifm-link-color: var(--color-brand-400);
@@ -363,16 +365,16 @@ html[data-theme='dark'] {
 
   --ifm-background-surface-color: var(--token-primary-bg-c);
 
-  --ifm-navbar-background-color: rgb(1, 11, 20);
-  --ifm-navbar-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.12);
+  --ifm-navbar-background-color: #111113;
+  --ifm-navbar-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.08);
 
-  --ifm-heading-color: #fff;
-  --ifm-secondary-heading-color: #F3F1F0;
+  --ifm-heading-color: #ededef;
+  --ifm-secondary-heading-color: #d4d4d8;
 
-  --ifm-font-color-base: #C1BBB8;
+  --ifm-font-color-base: #a1a1aa;
   --ifm-background-color: var(--token-primary-bg-c);
-  --ifm-dropdown-background-color: var(--token-secondary-bg-c);
-  --ifm-info-color-bg: #C1BBB8;
+  --ifm-dropdown-background-color: #18181b;
+  --ifm-info-color-bg: #a1a1aa;
 
   --ifm-menu-link-sublist-icon-filter: invert(100%);
 }

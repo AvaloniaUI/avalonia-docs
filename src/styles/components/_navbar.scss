@@ -12,13 +12,13 @@ html[data-theme='light'] {
 }
 
 html[data-theme='dark'] {
-  // Marketing website navbar colors (dark mode)
-  --navbar-link-c: #C1BBB8;
+  // Neutral dark navbar colors
+  --navbar-link-c: #a1a1aa;
   --navbar-link-hover-bg: rgba(255, 255, 255, 0.06);
 
-  --navbar-separator-bg-c: rgba(255, 255, 255, 0.12);
+  --navbar-separator-bg-c: rgba(255, 255, 255, 0.08);
 
-  --navbar-icon-link-c: #fff;
+  --navbar-icon-link-c: #d4d4d8;
 }
 
 :root {

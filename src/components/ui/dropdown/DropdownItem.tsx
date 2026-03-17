@@ -19,7 +19,7 @@ export const DropdownItem: React.FC<DropdownItemProps> = ({
   target,
   rel,
 }) => {
-  const baseClassName = "flex items-center gap-3 rounded-lg px-4 py-3 text-sm font-[570] tracking-[0.02em] text-[#161C2D] hover:bg-[#F3F1F0] hover:text-[#05051E] dark:text-[#C1BBB8] dark:hover:bg-white/[0.06] dark:hover:text-[#F3F1F0] w-full text-left transition-colors duration-150 ease-out";
+  const baseClassName = "flex items-center gap-3 rounded-lg px-4 py-3 text-sm font-[570] tracking-[0.02em] text-[#161C2D] hover:bg-[#F3F1F0] hover:text-[#05051E] dark:text-[#F3F1F0] dark:hover:bg-white/[0.06] dark:hover:text-[#F3F1F0] w-full text-left transition-colors duration-150 ease-out";
   const combinedClasses = `${baseClassName} ${className}`.trim();
 
   if (tag === "a" && href) {

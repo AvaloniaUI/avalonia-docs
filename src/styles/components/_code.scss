@@ -18,10 +18,9 @@ html[data-theme='light'] {
 }
 
 html[data-theme='dark'] {
-  // Marketing: obsidian background, subtle white border
-  --code-block-bg-c: #05051E;
-  --code-block-border-c: rgba(255, 255, 255, 0.12);
-  --ifm-code-background: #0B2A54;
+  --code-block-bg-c: #18181b;
+  --code-block-border-c: rgba(255, 255, 255, 0.08);
+  --ifm-code-background: #18181b;
   --color-neutral-30: rgba(255, 255, 255, 0.06);
 }
 

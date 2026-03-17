@@ -257,18 +257,18 @@ const config: Config = {
       },
     ]
   ],
-  themeConfig: {
+ themeConfig: {
     image: 'img/social-card.png',
     colorMode: {
       defaultMode: 'light',
-      disableSwitch: true,
-      respectPrefersColorScheme: false,
+      disableSwitch: false,
+      respectPrefersColorScheme: true,
     },
     zoom: {
       selector: '.markdown :not(em) > img:not(.Card-icon)',
       background: {
         light: 'rgb(196, 196, 196)',
-        dark: 'rgb(22, 28, 45)'
+        dark: 'rgb(17, 17, 19)'
       },
       config: {
         margin: 50,
@@ -314,6 +314,11 @@ const config: Config = {
           label: 'More',
           items: [
             {
+              label: 'Avalonia XPF',
+              to: '/xpf',
+              activeBasePath: '/xpf'
+            },
+            {
               label: 'Enhanced Support',
               href: 'https://avaloniaui.net/support?utm_source=docs&utm_medium=referral&utm_content=nav_link',
               target: '_blank',
@@ -354,11 +359,6 @@ const config: Config = {
           position: 'right',
         },
         {
-          type: 'html',
-          position: 'right',
-          value: '<div class="separator" aria-hidden></div>',
-        },
-        {
           href: "https://github.com/avaloniaui/",
           position: "right",
           className: "header-github-link",
@@ -375,7 +375,7 @@ const config: Config = {
       },
       darkTheme: {
         ...prismThemes.vsDark,
-        plain: { ...prismThemes.vsDark.plain, backgroundColor: '#05051E' },
+        plain: { ...prismThemes.vsDark.plain, backgroundColor: '#18181b' },
       },
       additionalLanguages: ['csharp', 'bash', 'shell-session', 'diff'],
     },
