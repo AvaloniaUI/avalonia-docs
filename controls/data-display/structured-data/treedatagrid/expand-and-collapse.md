@@ -13,15 +13,18 @@ This control is available as part of [Avalonia Accelerate](https://avaloniaui.ne
 
 When you use a hierarchical `TreeDataGrid`, your users can expand and collapse rows to navigate parent-child relationships. Avalonia provides methods on `HierarchicalTreeDataGridSource<T>` that let you control this behavior programmatically, whether you need to expand a single node, expand all nodes at once, or conditionally expand rows that match a filter. You can also subscribe to events that fire before and after each expand or collapse operation.
 
+:::note
+Programmatic expand/collapse and expand/collapse events require the code-behind `Source` approach with `HierarchicalTreeDataGridSource<T>`.
+:::
+
 ## Basic expand and collapse operations
 
 You can programmatically expand or collapse rows in a hierarchical `TreeDataGrid`:
 
 ```csharp
 var Source = new HierarchicalTreeDataGridSource<Person>(_people)
-{
-    Columns = { /* columns */ }
-};
+    .WithHierarchicalExpanderTextColumn(x => x.Name, x => x.Children)
+    .WithTextColumn(x => x.Age);
 
 // Expand a specific node by index path
 Source.Expand(new IndexPath(0));  // Expand first root item
@@ -60,7 +63,7 @@ Source.ExpandCollapseRecursive(_ => false);
 
 ## Responding to expand and collapse events
 
-You can handle expand and collapse events to load data on demand or perform other actions:
+You can handle expand and collapse events to load data on demand or perform other actions. These events use `TreeDataGridRowModelEventArgs`:
 
 ```csharp
 Source.RowExpanding += (sender, e) =>
