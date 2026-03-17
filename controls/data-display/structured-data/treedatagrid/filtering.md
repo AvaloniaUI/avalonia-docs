@@ -240,7 +240,7 @@ public class PersonListViewModel : ViewModelBase
 ```xml
 <StackPanel>
     <TextBox Text="{Binding SearchText}"
-             Watermark="Search..."
+             PlaceholderText="Search..."
              Margin="0,0,0,10" />
     <TreeDataGrid Source="{Binding Source}"
                   Height="400" />

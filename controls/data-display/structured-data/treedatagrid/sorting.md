@@ -52,10 +52,7 @@ You can sort columns programmatically using the `SortBy` and `ClearSort` methods
 Source.SortBy(Source.Columns[0], ListSortDirection.Ascending);
 Source.SortBy(Source.Columns[1], ListSortDirection.Descending);
 
-// Clear sorting from all columns
-Source.SortBy(null, ListSortDirection.Ascending);
-
-// Clear sorting only if column is currently sorted
+// Clear sorting on a specific column
 Source.ClearSort(Source.Columns[0]);
 ```
 

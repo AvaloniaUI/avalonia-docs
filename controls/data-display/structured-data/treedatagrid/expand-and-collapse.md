@@ -68,27 +68,27 @@ You can handle expand and collapse events to load data on demand or perform othe
 ```csharp
 Source.RowExpanding += (sender, e) =>
 {
-    var person = e.Row.Model;
+    var person = (Person)e.Row.Model!;
     var indexPath = e.Row.ModelIndexPath;
     Debug.WriteLine($"Expanding: {person.Name} at {indexPath}");
 };
 
 Source.RowExpanded += (sender, e) =>
 {
-    var person = e.Row.Model;
+    var person = (Person)e.Row.Model!;
     var indexPath = e.Row.ModelIndexPath;
     Debug.WriteLine($"Expanded: {person.Name} at {indexPath}");
 };
 
 Source.RowCollapsing += (sender, e) =>
 {
-    var person = e.Row.Model;
+    var person = (Person)e.Row.Model!;
     Debug.WriteLine($"Collapsing: {person.Name}");
 };
 
 Source.RowCollapsed += (sender, e) =>
 {
-    var person = e.Row.Model;
+    var person = (Person)e.Row.Model!;
     Debug.WriteLine($"Collapsed: {person.Name}");
 };
 ```
@@ -100,13 +100,10 @@ A common pattern is to load child data on demand when the user expands a row, ra
 ```csharp
 Source.RowExpanding += async (sender, e) =>
 {
-    var person = e.Row.Model;
+    var person = (Person)e.Row.Model!;
 
     if (!person.ChildrenLoaded)
     {
-        // Signal that the operation is async so the grid waits for it
-        var deferral = e.GetDeferral();
-
         try
         {
             var children = await MyDataService.LoadChildrenAsync(person.Id);
@@ -114,16 +111,16 @@ Source.RowExpanding += async (sender, e) =>
             person.Children.AddRange(children);
             person.ChildrenLoaded = true;
         }
-        finally
+        catch (Exception ex)
         {
-            deferral.Dispose();
+            Debug.WriteLine($"Failed to load children: {ex.Message}");
         }
     }
 };
 ```
 
 :::tip
-Call `e.GetDeferral()` in your `RowExpanding` handler to tell the grid to wait until your asynchronous work completes before displaying the child rows. Dispose the deferral when loading finishes.
+The `RowExpanding` event handler can be `async`. The grid will display child rows immediately, so ensure your data is ready or handle the loading state appropriately.
 :::
 
 ## See also
