@@ -314,6 +314,11 @@ const config: Config = {
           label: 'More',
           items: [
             {
+              label: 'Avalonia XPF',
+              to: '/xpf',
+              activeBasePath: '/xpf'
+            },
+            {
               label: 'Enhanced Support',
               href: 'https://avaloniaui.net/support?utm_source=docs&utm_medium=referral&utm_content=nav_link',
               target: '_blank',
