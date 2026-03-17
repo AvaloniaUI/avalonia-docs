@@ -125,7 +125,7 @@ export default function TOC({ className, ...props }: Props): ReactNode {
             </li>
             {/* Divider */}
             <li>
-              <span className="my-1.5 block h-px w-full bg-gray-200 dark:bg-[#353C49]"></span>
+              <span className="my-1.5 block h-px w-full bg-gray-200 dark:bg-white/[0.08]"></span>
             </li>
             <li>
               <DropdownItem
@@ -167,7 +167,7 @@ export default function TOC({ className, ...props }: Props): ReactNode {
             {editUrl && (
               <>
                 <li>
-                  <span className="my-1.5 block h-px w-full bg-gray-200 dark:bg-[#353C49]"></span>
+                  <span className="my-1.5 block h-px w-full bg-gray-200 dark:bg-white/[0.08]"></span>
                 </li>
                 <li>
                   <DropdownItem
