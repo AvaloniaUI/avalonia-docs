@@ -224,6 +224,7 @@ html[data-theme='dark'] {
     &::after {
       background: var(--ifm-menu-link-sublist-icon) center / var(--dropdown-icon-width) var(--dropdown-icon-height);
       background-repeat: no-repeat;
+      filter: var(--ifm-menu-link-sublist-icon-filter, none);
 
       min-width: auto;
 
@@ -280,6 +281,7 @@ html[data-theme='dark'] {
         background: var(--ifm-menu-link-sublist-icon)
           center / var(--dropdown-icon-width) var(--dropdown-icon-height)
           no-repeat;
+        filter: var(--ifm-menu-link-sublist-icon-filter, none);
 
         min-width: auto;
 
