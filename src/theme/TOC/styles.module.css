@@ -50,7 +50,7 @@
 
 :global(html[data-theme='dark']) .tocDropdownButton:hover {
   background: var(--navbar-link-hover-bg, rgba(255, 255, 255, 0.06));
-  color: var(--color-brand-400, #1a90ff);
+  color: #f4f4f5;
 }
 
 @media (max-width: 996px) {
