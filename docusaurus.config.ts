@@ -301,22 +301,22 @@ const config: Config = {
           activeBasePath: '/tools'
         },
         {
-          label: 'Troubleshooting',
-          to: '/troubleshooting',
-          activeBasePath: '/troubleshooting'
+          label: 'APIs',
+          to: '/api',
+          activeBasePath: '/api'
         },
         {
-          label: 'API',
-          to: '/api/avalonia',
-          activeBasePath: '/api'
+          label: 'Avalonia XPF',
+          to: '/xpf',
+          activeBasePath: '/xpf'
         },
         {
           label: 'More',
           items: [
             {
-              label: 'Avalonia XPF',
-              to: '/xpf',
-              activeBasePath: '/xpf'
+              label: 'Troubleshooting',
+              to: '/troubleshooting',
+              activeBasePath: '/troubleshooting'
             },
             {
               label: 'Enhanced Support',
@@ -348,11 +348,6 @@ const config: Config = {
         {
           type: 'html',
           value: '<div class="separator" aria-hidden></div>',
-        },
-        {
-          label: 'Avalonia XPF',
-          to: '/xpf',
-          activeBasePath: '/xpf'
         },
         {
           type: 'search',
