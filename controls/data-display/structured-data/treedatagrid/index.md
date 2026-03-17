@@ -25,10 +25,10 @@ TreeDataGrid v12 introduces significant API changes including renamed column typ
 
 See the [Installation Guide](/tools/installing-accelerate) for full instructions on installing Accelerate components.
 
-Add the `TreeDataGrid` package to your project:
+Add the `TreeDataGrid` package to your project. While v12 is in preview, you need to include the `--prerelease` flag:
 
 ```bash
-dotnet add package Avalonia.Controls.TreeDataGrid
+dotnet add package Avalonia.Controls.TreeDataGrid --prerelease
 ```
 
 ### Add the licence key
