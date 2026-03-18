@@ -1336,6 +1336,10 @@ const redirects: Redirect[] = [
         "to": "/xpf/troubleshooting"
     },
     {
+        "from": "/xpf/release-notes",
+        "to": "/xpf/version-info/release-notes"
+    },
+    {
         "from": [
             "/accelerate/tools/vs-extension/getting-started",
             "/accelerate/tools/vs-extension/settings"
