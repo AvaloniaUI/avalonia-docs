@@ -306,11 +306,6 @@ const config: Config = {
           activeBasePath: '/api'
         },
         {
-          label: 'Avalonia XPF',
-          to: '/xpf',
-          activeBasePath: '/xpf'
-        },
-        {
           label: 'More',
           items: [
             {
@@ -348,6 +343,11 @@ const config: Config = {
         {
           type: 'html',
           value: '<div class="separator" aria-hidden></div>',
+        },
+        {
+          label: 'Avalonia XPF',
+          to: '/xpf',
+          activeBasePath: '/xpf'
         },
         {
           type: 'search',
