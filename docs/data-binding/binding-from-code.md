@@ -3,6 +3,7 @@ id: binding-from-code
 title: How to bind from code
 description: Create and apply data bindings programmatically in C# instead of XAML.
 doc-type: how-to
+description: This guide shows you how to create and manage data bindings from C# code rather than XAML.
 ---
 
 ## Creating compiled bindings from code
@@ -117,10 +118,10 @@ source.OnNext("world!");
 subscription.Dispose();
 ```
 
-Notice that the `Bind` method returns an `IDisposable` which can be used to terminate the binding. If you never call this, then then binding will automatically terminate when the observable finishes via `OnCompleted` or `OnError`.
+Notice that the `Bind` method returns an `IDisposable` which can be used to terminate the binding. If you never call this, then the binding will automatically terminate when the observable finishes via `OnCompleted` or `OnError`.
 
 :::note
-Unlike standard Avalonia bindings, observables to not use weak references, so you are responsible for controlling their lifetime and preventing leaks.
+Unlike standard Avalonia bindings, observables do not use weak references, so you are responsible for controlling their lifetime and preventing leaks.
 :::
 
 ## Setting a binding in an object initializer
