@@ -1,9 +1,8 @@
 ---
 id: binding-from-code
 title: How to bind from code
-description: Create and apply data bindings programmatically in C# instead of XAML.
 doc-type: how-to
-description: This guide shows you how to create and manage data bindings from C# code rather than XAML.
+description: Create and manage data bindings from C# code rather than XAML.
 ---
 
 ## Creating compiled bindings from code
