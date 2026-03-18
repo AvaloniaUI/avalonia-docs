@@ -1,158 +1,44 @@
 ---
 id: binding-from-code
 title: How to bind from code
-description: Create and apply data bindings programmatically in C# instead of XAML.
 doc-type: how-to
+description: Create and manage data bindings from C# code rather than XAML.
 ---
 
+## Creating compiled bindings from code
 
-Binding from code in Avalonia works somewhat differently to WPF/UWP. At the low level, Avalonia's binding system is based on Reactive Extensions' `IObservable` which is then built upon by XAML bindings (which can also be instantiated in code).
+The [`CompiledBinding.Create`](/api/avalonia/data/compiledbinding#create-method) method lets you create type-safe bindings using LINQ expressions. The expression is validated at compile time, so errors in property names produce compiler errors rather than silent runtime failures.
 
-## Subscribing to changes to a property
+The method takes two generic parameters: the type of the [`DataContext`](data-context) and the type of the property being selected. It then accepts a lambda expression to select the property to bind.
 
-You can subscribe to changes on a property by calling the `GetObservable` method. This returns an `IObservable<T>` which can be used to listen for changes to the property:
+For example, if you have a control whose [`DataContext`](data-context) is an instance of `MyViewModel`, and you want to select a `string Title { get; set; }` property from it, you would write:
 
 ```csharp
-var textBlock = new TextBlock();
-var text = textBlock.GetObservable(TextBlock.TextProperty);
+var binding = CompiledBinding.Create<MyViewModel, string>(x => x.Title);
 ```
 
-Each property that can be subscribed to has a static readonly field called `[PropertyName]Property` which is passed to `GetObservable` to subscribe to the property's changes.
-
-`IObservable` (part of Reactive Extensions, or rx for short) is out of scope for this guide, but here's an example which uses the returned observable to print a message with the changing property values to the console:
+Then to bind this to a control:
 
 ```csharp
-var textBlock = new TextBlock();
-var text = textBlock.GetObservable(TextBlock.TextProperty);
-text.Subscribe(value => Console.WriteLine(value + " Changed"));
-```
-
-When the returned observable is subscribed, it will return the current value of the property immediately and then push a new value each time the property changes. If you don't want the current value, you can use the rx `Skip` operator:
-
-```csharp
-var text = textBlock.GetObservable(TextBlock.TextProperty).Skip(1);
-```
-
-## Binding to an observable
-
-You can bind a property to an observable using the `AvaloniaObject.Bind` method:
-
-```csharp
-// We use an Rx Subject here so we can push new values using OnNext
-var source = new Subject<string>();
-var textBlock = new TextBlock();
-
-// Bind TextBlock.Text to source
-var subscription = textBlock.Bind(TextBlock.TextProperty, source);
-
-// Set textBlock.Text to "hello"
-source.OnNext("hello");
-// Set textBlock.Text to "world!"
-source.OnNext("world!");
-
-// Terminate the binding
-subscription.Dispose();
-```
-
-Notice that the `Bind` method returns an `IDisposable` which can be used to terminate the binding. If you never call this, then then binding will automatically terminate when the observable finishes via `OnCompleted` or `OnError`.
-
-## Setting a binding in an object initializer
-
-It is often useful to set up bindings in object initializers. You can do this using the indexer:
-
-```csharp
-var source = new Subject<string>();
-var textBlock = new TextBlock
-{
-    Foreground = Brushes.Red,
-    MaxWidth = 200,
-    [!TextBlock.TextProperty] = source.ToBinding(),
-};
-```
-
-Using this method you can also easily bind a property on one control to a property on another:
-
-```csharp
-var textBlock1 = new TextBlock();
-var textBlock2 = new TextBlock
-{
-    Foreground = Brushes.Red,
-    MaxWidth = 200,
-    [!TextBlock.TextProperty] = textBlock1[!TextBlock.TextProperty],
-};
-```
-
-Of course the indexer can be used outside object initializers too:
-
-```csharp
-textBlock2[!TextBlock.TextProperty] = textBlock1[!TextBlock.TextProperty];
-```
-
-The only downside of this syntax is that no `IDisposable` is returned. If you need to manually terminate the binding then you should use the `Bind` method.
-
-## Transforming binding values
-
-Because we're working with observables, we can easily transform the values we're binding!
-
-```csharp
-var source = new Subject<string>();
-var textBlock = new TextBlock
-{
-    Foreground = Brushes.Red,
-    MaxWidth = 200,
-    [!TextBlock.TextProperty] = source.Select(x => "Hello " + x).ToBinding(),
-};
-```
-
-## Using reflection bindings from code
-
-Sometimes when you want the additional features that XAML bindings provide, it's easier to use bindings from code. For example, using only observables you could bind to a property on `DataContext` like this:
-
-```csharp
-var textBlock = new TextBlock();
-var viewModelProperty = textBlock.GetObservable(TextBlock.DataContextProperty)
-    .OfType<MyViewModel>()
-    .Select(x => x?.Name);
-textBlock.Bind(TextBlock.TextProperty, viewModelProperty);
-```
-
-However, it might be preferable to use a `ReflectionBinding` in this case:
-
-```csharp
-var textBlock = new TextBlock
-{
-    [!TextBlock.TextProperty] = new ReflectionBinding("Name")
-};
-```
-
-Or, if you need an `IDisposable` to terminate the binding:
-
-```csharp
-var textBlock = new TextBlock();
-var subscription = textBlock.Bind(TextBlock.TextProperty, new ReflectionBinding("Name"));
-
-subscription.Dispose();
-```
-
-For type-safe bindings that are validated at compile time, prefer `CompiledBinding.Create` (see below).
-
-## Compiled bindings from code
-
-The `CompiledBinding.Create` factory method lets you create type-safe bindings using LINQ expressions instead of string-based property paths. The expression is validated at compile time, so typos in property names produce compiler errors rather than silent runtime failures.
-
-```csharp
-var textBlock = new TextBlock();
-var binding = CompiledBinding.Create<MyViewModel, string>(
-    expression: vm => vm.Name);
 textBlock.Bind(TextBlock.TextProperty, binding);
+```
+
+The [`CompiledBinding.Create`](/api/avalonia/data/compiledbinding#create-method) method takes various optional parameters to control the binding. 
+
+The following example selects a one-way binding from an explicit `viewModel` source (instead of using the data context):
+
+```csharp
+var binding = CompiledBinding.Create<MyViewModel, string>(
+    expression: vm => vm.Title,
+    source: viewModel,
+    mode: BindingMode.OneWay);
 ```
 
 The expression supports nested properties, indexers, and casts:
 
 ```csharp
 // Nested property
-CompiledBinding.Create<MyViewModel, string>(
-    expression: vm => vm.Address.City);
+CompiledBinding.Create<MyViewModel, string>(vm => vm.Address.City);
 
 // With a value converter
 CompiledBinding.Create<MyViewModel, bool>(
@@ -172,6 +58,102 @@ var textBlock = new TextBlock
 ```
 
 This approach gives you the same performance and safety benefits as XAML compiled bindings, but from C# code. See [Compiled Bindings](/docs/data-binding/compiled-bindings) for the XAML equivalent.
+
+## Subscribing to property changes
+
+You can subscribe to [`AvaloniaObject`](/api/avalonia/avaloniaobject) property changes by calling the [`GetObservable`](/api/avalonia/avaloniaobjectextensions#getobservable-method) extension method. This returns an [`IObservable<T>`](https://learn.microsoft.com/en-us/dotnet/api/system.iobservable-1?view=net-10.0) which can be used to listen for changes to the property:
+
+```csharp
+var textBlock = new TextBlock();
+var text = textBlock.GetObservable(TextBlock.TextProperty);
+```
+
+Each property that can be subscribed to has a static readonly field called `[PropertyName]Property` which is passed to `GetObservable` to subscribe to the property's changes.
+
+[`IObservable<T>`](https://learn.microsoft.com/en-us/dotnet/api/system.iobservable-1?view=net-10.0) (part of Reactive Extensions, or rx for short) is out of scope for this guide, but here's an example which uses the returned observable to print a message with the changing property values to the console:
+
+```csharp
+var textBlock = new TextBlock();
+var text = textBlock.GetObservable(TextBlock.TextProperty);
+text.Subscribe(value => Console.WriteLine(value + " Changed"));
+```
+
+When the returned observable is subscribed, it will return the current value of the property immediately and then push a new value each time the property changes. If you don't want the current value, you can use the rx `Skip` operator:
+
+```csharp
+var text = textBlock.GetObservable(TextBlock.TextProperty).Skip(1);
+```
+
+Alternatively, you can subscribe to the [`AvaloniaObject.PropertyChanged`](/api/avalonia/avaloniaobject#propertychanged-event) event, which fires whenever _any_ property changes on the element.
+
+```csharp
+textBlock.PropertyChanged += (s, e) =>
+{
+    if (e.Property == TextBlock.TextProperty)
+    {
+        Console.WriteLine(e.NewValue + " Changed");
+    }
+};
+```
+
+## Binding to an observable
+
+You can bind a property to an observable using the [`AvaloniaObject.Bind`](/api/avalonia/avaloniaobject#bind-method-1) method:
+
+```csharp
+// We use an Rx Subject here so we can push new values using OnNext
+var source = new Subject<string>();
+var textBlock = new TextBlock();
+
+// Bind TextBlock.Text to source
+var subscription = textBlock.Bind(TextBlock.TextProperty, source);
+
+// Set textBlock.Text to "hello"
+source.OnNext("hello");
+// Set textBlock.Text to "world!"
+source.OnNext("world!");
+
+// Terminate the binding
+subscription.Dispose();
+```
+
+Notice that the `Bind` method returns an `IDisposable` which can be used to terminate the binding. If you never call this, then the binding will automatically terminate when the observable finishes via `OnCompleted` or `OnError`.
+
+:::note
+Unlike standard Avalonia bindings, observables do not use weak references, so you are responsible for controlling their lifetime and preventing leaks.
+:::
+
+## Setting a binding in an object initializer
+
+It is often useful to set up bindings in object initializers. You can do this using the indexer:
+
+```csharp
+var source = new Subject<string>();
+var textBlock = new TextBlock
+{
+    Foreground = Brushes.Red,
+    MaxWidth = 200,
+    [!TextBlock.TextProperty] = CompiledBinding.Create<MyViewModel, string>(x => x.Title),
+};
+```
+
+The indexer can be used outside of object initializers too:
+
+```csharp
+textBlock2[!TextBlock.TextProperty] = textBlock1[!TextBlock.TextProperty];
+```
+
+The only downside of this syntax is that no `IDisposable` is returned. If you need to manually terminate the binding then you should use the `Bind` method.
+
+## Using reflection bindings from code
+
+To create a reflection binding from code:
+
+```csharp
+var binding = new ReflectionBinding("Name");
+```
+
+For type-safe bindings that are validated at compile time, prefer [compiled bindings](#creating-compiled-bindings-from-code).
 
 ## Subscribing to a property on any object
 
@@ -195,22 +177,6 @@ private static void FooChanged(MyControl sender, AvaloniaPropertyChangedEventArg
 {
     // The 'e' parameter describes what's changed.
 }
-```
-
-## Binding to `INotifyPropertyChanged` objects
-
-Binding to objects that implements `INotifyPropertyChanged` is also available.
-
-```csharp
-var textBlock = new TextBlock();
-
-var binding = new ReflectionBinding
-{
-    Source = someObjectImplementingINotifyPropertyChanged,
-    Path = nameof(someObjectImplementingINotifyPropertyChanged.MyProperty)
-};
-
-textBlock.Bind(TextBlock.TextProperty, binding);
 ```
 
 ## Inspecting active bindings
