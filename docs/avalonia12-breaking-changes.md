@@ -620,7 +620,7 @@ See [`TopLevel` changes](#toplevel-changes) for context.
 | `LayoutManager` class | `ILayoutManager` | [#20624](https://github.com/AvaloniaUI/Avalonia/pull/20624) |
 | `TopLevel.PlatformSettings` property | `VisualExtensions.GetPlatformSettings` | [#20624](https://github.com/AvaloniaUI/Avalonia/pull/20624) |
 | `TopLevel.PointerOverElement` property | Remove usages | [#20624](https://github.com/AvaloniaUI/Avalonia/pull/20624) |
-| `TopLevel.StartRendering/StopRendering` | `Embedding.StartRendering/StopRendering` | [#20624](https://github.com/AvaloniaUI/Avalonia/pull/20624) |
+| `TopLevel.StartRendering/StopRendering` | `EmbeddableControlRoot.StartRendering/StopRendering` | [#20624](https://github.com/AvaloniaUI/Avalonia/pull/20624) |
 | `VisualExtensions.GetVisualRoot` method | `GetPresentationSource` + `IPresentationSource.RootVisual` | [#20624](https://github.com/AvaloniaUI/Avalonia/pull/20624) |
 
 ### Window decorations
