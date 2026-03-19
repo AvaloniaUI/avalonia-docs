@@ -383,6 +383,25 @@ Example:
 
 PR: [#20789](https://github.com/AvaloniaUI/Avalonia/pull/20789)
 
+
+## Focus event arguments changed
+
+The type of the event arguments for the `InputElement.GotFocus` and `InputElement.LostFocus` events has been changed to the new `FocusChangedEventArgs` class. This type provides more information about the previous and currently focused elements.
+
+Update your event handlers accordingly.
+
+Example:
+```diff
+-private void TextBox_GotFocus(object? sender, GotFocusEventArgs e)
++private void TextBox_GotFocus(object? sender, FocusChangedEventArgs e)
+
+-private void TextBox_LostFocus(object? sender, RoutedEventArgs e)
++private void TextBox_LostFocus(object? sender, FocusChangedEventArgs e)
+```
+
+PR: [#20859](https://github.com/AvaloniaUI/Avalonia/pull/20859)
+
+
 ## Windows
 
 ### Direct2D1 support removed
@@ -625,6 +644,14 @@ See [Gesture events moved](#gesture-events-moved) for context.
 | Removed member | Replacement | PR |
 |---|---|---|
 | `Gestures` class (all attached events) | Events on `InputElement` | [#20789](https://github.com/AvaloniaUI/Avalonia/pull/20789) |
+
+### Focus events
+
+See [Focus event arguments changed](#focus-event-arguments-changed) for context.
+
+| Removed member | Replacement | PR |
+|---|---|---|
+| `GotFocusEventArgs` class | `FocusChangedEventArgs` | [#20859](https://github.com/AvaloniaUI/Avalonia/pull/20859) |
 
 ### Other specific removals
 
