@@ -402,6 +402,13 @@ Example:
 PR: [#20859](https://github.com/AvaloniaUI/Avalonia/pull/20859)
 
 
+## Animations are stopped on invisible controls
+
+For efficiency, animations no longer tick when their corresponding control is hidden, resulting in improved CPU usage in several situations.
+
+PR: [#20820](https://github.com/AvaloniaUI/Avalonia/pull/20820)
+
+
 ## Windows
 
 ### Direct2D1 support removed
