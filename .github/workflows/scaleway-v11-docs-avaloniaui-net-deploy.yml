@@ -1,0 +1,93 @@
+name: Deploy v11.docs.avaloniaui.net to Scaleway
+
+on:
+  push:
+    branches: [v11]
+  pull_request:
+    branches: [v11]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-v11-docs-avaloniaui-net-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    name: Build and Deploy
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: true
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build || true
+
+      - name: Verify build output
+        run: |
+          if [ ! -f build/index.html ]; then
+            echo "ERROR: build/index.html not found"
+            exit 1
+          fi
+          echo "Build size: $(du -sh build | cut -f1)"
+
+      - name: Install rclone
+        if: github.ref == 'refs/heads/v11' && github.event_name != 'pull_request'
+        run: |
+          curl -fsSL https://rclone.org/install.sh | sudo bash
+          rclone version
+
+      - name: Upload hashed assets (immutable cache)
+        if: github.ref == 'refs/heads/v11' && github.event_name != 'pull_request'
+        env:
+          RCLONE_CONFIG_SCALEWAY_TYPE: s3
+          RCLONE_CONFIG_SCALEWAY_PROVIDER: Scaleway
+          RCLONE_CONFIG_SCALEWAY_ACCESS_KEY_ID: ${{ secrets.SCW_ACCESS_KEY_ID }}
+          RCLONE_CONFIG_SCALEWAY_SECRET_ACCESS_KEY: ${{ secrets.SCW_SECRET_ACCESS_KEY }}
+          RCLONE_CONFIG_SCALEWAY_ENDPOINT: s3.fr-par.scw.cloud
+          RCLONE_CONFIG_SCALEWAY_REGION: fr-par
+          RCLONE_CONFIG_SCALEWAY_ACL: public-read
+        run: |
+          rclone sync build/assets/ scaleway:v11.docs.avaloniaui.net/assets/ \
+            --header-upload "Cache-Control: public, max-age=31536000, immutable" \
+            --s3-acl public-read \
+            --verbose
+
+      - name: Upload remaining files (short cache)
+        if: github.ref == 'refs/heads/v11' && github.event_name != 'pull_request'
+        env:
+          RCLONE_CONFIG_SCALEWAY_TYPE: s3
+          RCLONE_CONFIG_SCALEWAY_PROVIDER: Scaleway
+          RCLONE_CONFIG_SCALEWAY_ACCESS_KEY_ID: ${{ secrets.SCW_ACCESS_KEY_ID }}
+          RCLONE_CONFIG_SCALEWAY_SECRET_ACCESS_KEY: ${{ secrets.SCW_SECRET_ACCESS_KEY }}
+          RCLONE_CONFIG_SCALEWAY_ENDPOINT: s3.fr-par.scw.cloud
+          RCLONE_CONFIG_SCALEWAY_REGION: fr-par
+          RCLONE_CONFIG_SCALEWAY_ACL: public-read
+        run: |
+          rclone sync build/ scaleway:v11.docs.avaloniaui.net/ \
+            --exclude "assets/**" \
+            --header-upload "Cache-Control: public, max-age=300, s-maxage=3600" \
+            --s3-acl public-read \
+            --verbose
+
+      - name: Verify deployment
+        if: github.ref == 'refs/heads/v11' && github.event_name != 'pull_request'
+        run: |
+          HTTP_STATUS=$(curl -s -o /dev/null -w "%{http_code}" https://v11.docs.avaloniaui.net.s3-website.fr-par.scw.cloud)
+          if [ "$HTTP_STATUS" = "200" ]; then
+            echo "Verification passed (HTTP $HTTP_STATUS)"
+          else
+            echo "WARNING: Website returned HTTP $HTTP_STATUS"
+            exit 1
+          fi
