@@ -384,7 +384,7 @@ Example:
 PR: [#20789](https://github.com/AvaloniaUI/Avalonia/pull/20789)
 
 
-## Focus event arguments changed
+## Focus improvements
 
 The type of the event arguments for the `InputElement.GotFocus` and `InputElement.LostFocus` events has been changed to the new `FocusChangedEventArgs` class. This type provides more information about the previous and currently focused elements.
 
@@ -399,7 +399,9 @@ Example:
 +private void TextBox_LostFocus(object? sender, FocusChangedEventArgs e)
 ```
 
-PR: [#20859](https://github.com/AvaloniaUI/Avalonia/pull/20859)
+All focus handling is now managed by the `FocusManager` class and `IFocusManager` interface. Usages of `KeyboardNavigationHandler.GetNext` need to be replaced with `FocusManager.GetNextElement`.
+
+PR: [#20859](https://github.com/AvaloniaUI/Avalonia/pull/20859), [#18647](https://github.com/AvaloniaUI/Avalonia/pull/18647), [#20930](https://github.com/AvaloniaUI/Avalonia/pull/20930)
 
 
 ## Animations are stopped on invisible controls
@@ -652,13 +654,14 @@ See [Gesture events moved](#gesture-events-moved) for context.
 |---|---|---|
 | `Gestures` class (all attached events) | Events on `InputElement` | [#20789](https://github.com/AvaloniaUI/Avalonia/pull/20789) |
 
-### Focus events
+### Focus handling
 
-See [Focus event arguments changed](#focus-event-arguments-changed) for context.
+See [Focus improvements](#focus-improvements) for context.
 
 | Removed member | Replacement | PR |
 |---|---|---|
 | `GotFocusEventArgs` class | `FocusChangedEventArgs` | [#20859](https://github.com/AvaloniaUI/Avalonia/pull/20859) |
+| `KeyboardNavigationHandler` class | `FocusManager` | [#18647](https://github.com/AvaloniaUI/Avalonia/pull/18647) |
 
 ### Other specific removals
 
