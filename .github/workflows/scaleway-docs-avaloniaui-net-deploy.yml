@@ -84,7 +84,7 @@ jobs:
       - name: Verify deployment
         if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
         run: |
-          HTTP_STATUS=$(curl -s -o /dev/null -w "%{http_code}" https://docs.avaloniaui.net.s3-website.fr-par.scw.cloud)
+          HTTP_STATUS=$(curl -s -o /dev/null -w "%{http_code}" http://docs.avaloniaui.net.s3-website.fr-par.scw.cloud)
           if [ "$HTTP_STATUS" = "200" ]; then
             echo "Verification passed (HTTP $HTTP_STATUS)"
           else
