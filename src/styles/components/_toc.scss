@@ -7,11 +7,11 @@ html[data-theme='light'] {
 }
 
 html[data-theme='dark'] {
-  // Obsidian dark palette
-  --toc-separator-c: rgba(255, 255, 255, 0.12);
-  --ifm-toc-link-color: #C1BBB8;
-  --toc-link-hover-color: var(--color-brand-400, #3399ff);
-  --toc-link-active-color: var(--color-brand-400, #3399ff);
+  // Neutral dark palette
+  --toc-separator-c: rgba(255, 255, 255, 0.08);
+  --ifm-toc-link-color: #a1a1aa;
+  --toc-link-hover-color: #ededef;
+  --toc-link-active-color: #ededef;
 }
 
 :root {

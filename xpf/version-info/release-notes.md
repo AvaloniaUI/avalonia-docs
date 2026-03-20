@@ -3,6 +3,15 @@ id: release-notes
 title: Release notes
 ---
 
+## XPF 1.6.2 (2026-03-20)
+
+* Fixed crash on macOS when right-clicking TextBox while clipboard is empty
+* Fixed extra click required when closing popup from its button (macOS, Linux)
+* Fixed clicking on scrollbar inside ComboBox 
+* Fixed clicking on a menu item that has opened submenu
+* Fixed opening ComboBox inside Menu
+* Fixed menus with a lot of items taking too much space, covering the parent element
+
 ## XPF 1.6.1 (2026-02-19)
 
 * Avalonia version updated from 11.3.11 to 11.3.12

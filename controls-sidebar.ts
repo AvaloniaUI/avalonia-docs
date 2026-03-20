@@ -271,6 +271,7 @@ const sidebars: SidebarsConfig = {
       items:[
         'navigation/trayicon',
         'primitives/window',
+        'primitives/windowdrawndecorations',
       ],
     },
     {

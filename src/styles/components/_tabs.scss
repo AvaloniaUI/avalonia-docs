@@ -8,11 +8,11 @@ html[data-theme='light'] {
 }
 
 html[data-theme='dark'] {
-  --ifm-tabs-color: #C1BBB8;
-  --ifm-tabs-color-hover: #F3F1F0;
+  --ifm-tabs-color: #a1a1aa;
+  --ifm-tabs-color-hover: #d4d4d8;
   --ifm-tabs-color-active: var(--color-brand-400);
   --ifm-tabs-color-active-border: var(--color-brand-400);
-  --tabs-border-c: rgba(255, 255, 255, 0.12);
+  --tabs-border-c: rgba(255, 255, 255, 0.08);
 }
 
 :root {

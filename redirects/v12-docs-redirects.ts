@@ -9,13 +9,13 @@ function createRedirects(existingPath: string): string[] | undefined {
 
         // Whole-folder redirects for folders that are mostly unchanged
         const v12_redirect = existingPath
-            .replace('/docs/guides/data-binding/', '/docs/data/')
+            .replace('/docs/guides/data-binding/', '/docs/data-binding/')
+            .replace('/docs/basics/data/data-binding/', '/docs/data-binding/')
             .replace('/docs/basics/user-interface/controls/creating-controls/', '/docs/ui-development/custom-controls/')
-            .replace('/docs/basics/data/data-binding/', '/concepts/data-concepts/data-binding/')
             .replace('/docs/concepts/input/', '/concepts/ui-concepts/user-input/')
             .replace('/docs/concepts/reactiveui/', '/docs/app-development/reactiveui/')
-            .replace('/docs/concepts/services/', '/reference/services/')
-            .replace('/docs/concepts/services/storage-provider/', '/reference/services/storage/')
+            .replace('/docs/concepts/services/', '/docs/services/')
+            .replace('/docs/concepts/services/storage-provider/', '/docs/services/storage/')
         if (v12_redirect !== existingPath) {
           redirects.push(v12_redirect);
         }
@@ -32,14 +32,23 @@ const redirects: Redirect[] = [
             "/docs/guides/developer-guides/",
             "/docs/overview/what-is-avalonia",
             "/docs/guides/index",
-            "/docs/guides/implementation-guides/index",
+            "/docs/guides/implementation-guides/",
             "/docs/guides/development-guides/how-to-implement-multi-page-apps",
-            "/docs/guides/development-guides/how-to-show-and-hide-a-split-view-pane-with-mvvm",
-            "/docs/deployment/index",
-            "/docs/stay-up-to-date/index",
+            "/docs/deployment/",
+            "/docs/stay-up-to-date/",
             "/docs/stay-up-to-date/breaking-changes",
             "/docs/stay-up-to-date/upgrade-from-0.10",
-            "/docs/stay-up-to-date/whats-new"
+            "/docs/stay-up-to-date/whats-new",
+            "/docs/community",
+            "/docs/concepts/",
+            "/docs/faq",
+            "/docs/guides/",
+            "/docs/reference/",
+            "/docs/concepts/services/",
+            "/docs/reference/gestures/",
+            "/docs/reference/properties/index",
+            "/docs/reference/styles/index",
+            "/docs/reference/properties/",
         ],
         "to": "/docs/welcome"
     },
@@ -69,7 +78,9 @@ const redirects: Redirect[] = [
             "/docs/getting-started/programming-with-avalonia/the-model-view-viewmodel-pattern-mvvm",
             "/docs/guides/implementation-guides/using-avalonia-with-mvvm-frameworks",
             "/docs/concepts/the-mvvm-pattern/index",
-            "/docs/concepts/the-mvvm-pattern/avalonia-ui-and-mvvm"
+            "/docs/concepts/the-mvvm-pattern/avalonia-ui-and-mvvm",
+            "/docs/guides/implementation-guides/how-to-use-the-mvvm-pattern",
+            "/docs/guides/development-guides/how-to-show-and-hide-a-split-view-pane-with-mvvm",
         ],
         "to": "/docs/fundamentals/the-mvvm-pattern"
     },
@@ -78,7 +89,7 @@ const redirects: Redirect[] = [
             "/docs/tutorials/developing-for-mobile/create-a-cross-platform-solution",
             "/docs/guides/building-cross-platform-applications/architecture",
             "/docs/guides/building-cross-platform-applications/dealing-with-platforms",
-            "/docs/guides/building-cross-platform-applications/index",
+            "/docs/guides/building-cross-platform-applications/",
         ],
         "to": "/docs/fundamentals/cross-platform-architecture"
     },
@@ -107,7 +118,10 @@ const redirects: Redirect[] = [
     {
         "from": [
             "/docs/guides/data/how-to-bind-to-a-command-with-reactiveui",
-            "/docs/guides/data-binding/how-to-bind-to-a-command-without-reactiveui"
+            "/docs/guides/data-binding/how-to-bind-to-a-command-without-reactiveui",
+            "/docs/guides/data-binding/how-to-bind-to-a-command-with-reactiveui",
+            "/docs/concepts/reactiveui/command-update",
+            "/docs/concepts/reactiveui/reactive-command",
         ],
         "to": "/docs/data-binding/binding-to-commands"
     },
@@ -126,10 +140,7 @@ const redirects: Redirect[] = [
         "to": "/docs/styling/property-setters"
     },
     {
-        "from": [
-            "/docs/styling/styles",
-            "/docs/guides/styles-and-resources/how-to-use-included-styles",
-        ],
+        "from": "/docs/guides/styles-and-resources/how-to-use-included-styles",
         "to": "/docs/styling/sharing-styles"
     },
     {
@@ -171,6 +182,7 @@ const redirects: Redirect[] = [
     {
         "from": [
             "/docs/animations/transitions",
+            "/docs/guides/graphics-and-animation/transitions",
             "/docs/guides/ui-development/graphics/transitions",
         ],
         "to": "/docs/graphics-animation/control-transitions"
@@ -200,11 +212,12 @@ const redirects: Redirect[] = [
             "/docs/next/basics/user-interface/controls/creating-controls/choosing-a-custom-contro-type",
             "/docs/authoring-controls/",
             "/docs/authoring-controls/types-of-control",
-            "/docs/guides/custom-controls/index",
+            "/docs/guides/custom-controls/",
             "/docs/guides/custom-controls/types-of-control",
             "/docs/guides/custom-controls/how-to-create-advanced-custom-controls",
             "/docs/basics/user-interface/controls/creating-controls/index",
             "/docs/concepts/templated-controls",
+            "/docs/basics/user-interface/controls/creating-controls/",
         ],
         "to": "/docs/custom-controls/"
     },
@@ -219,8 +232,13 @@ const redirects: Redirect[] = [
         "from": [
             "/docs/authoring-controls/defining-properties",
             "/docs/guides/custom-controls/defining-properties",
+            "/docs/basics/user-interface/controls/creating-controls/defining-properties",
         ],
         "to": "/docs/custom-controls/defining-properties"
+    },
+    {
+        "from": "/docs/basics/user-interface/controls/creating-controls/defining-events",
+        "to": "/docs/custom-controls/defining-events"
     },
     {
         "from": "/docs/guides/custom-controls/draw-with-a-property",
@@ -285,7 +303,10 @@ const redirects: Redirect[] = [
         "to": "/docs/platform-specific-guides/webassembly"
     },
     {
-        "from": "/docs/guides/platforms/macos-development",
+        "from": [
+            "/docs/guides/platforms/macos-development",
+            "/docs/deployment/macOS"
+        ],
         "to": "/docs/deployment/macos"
     },
     {
@@ -299,7 +320,7 @@ const redirects: Redirect[] = [
     },
     {
         "from": [
-            "/docs/guides/platforms/ios/index",
+            "/docs/guides/platforms/ios/",
             "/docs/guides/platforms/ios/setting-up-your-developer-environment-for-ios",
             "/docs/guides/platforms/ios/build-and-run-your-application-on-your-iphone-or-ipad",
             "/docs/guides/platforms/ios/build-and-run-your-application-on-a-simulator"
@@ -308,7 +329,7 @@ const redirects: Redirect[] = [
     },
     {
         "from": [
-            "/docs/guides/platforms/android/index",
+            "/docs/guides/platforms/android/",
             "/docs/guides/platforms/android/build-and-run-your-application-on-a-device",
             "/docs/guides/platforms/android/build-and-run-your-application-on-a-simulator",
             "/docs/guides/platforms/android/setting-up-your-developer-environment-for-android"
@@ -334,7 +355,7 @@ const redirects: Redirect[] = [
     {
         "from": [
             "/docs/guides/developer-guides/comparison-of-avalonia-with-wpf-and-uwp",
-            "/docs/get-started/wpf/index",
+            "/docs/get-started/wpf/",
             "/docs/get-started/wpf/comparison-of-avalonia-with-wpf-and-uwp"
         ],
         "to": "/docs/migration/wpf/"
@@ -385,7 +406,7 @@ const redirects: Redirect[] = [
             "/docs/reference/controls/image-controls",
             "/docs/reference/controls/menu-controls",
             "/docs/reference/controls/popup-controls",
-            "/docs/basics/user-interface/controls/index",
+            "/docs/basics/user-interface/controls/",
             "/docs/basics/user-interface/controls/builtin-controls",
             "/docs/basics/user-interface/building-layouts/panels-overview"
         ],
@@ -394,16 +415,6 @@ const redirects: Redirect[] = [
     {
         "from": "/docs/reference/animation-settings",
         "to": "/docs/graphics-animation/animation-settings"
-    },
-    {
-        "from": [
-            "/docs/reference/index",
-            "/docs/concepts/services/index",
-            "/docs/reference/gestures/",
-            "/docs/reference/properties/index",
-            "/docs/reference/styles/index",
-        ],
-        "to": "/docs/welcome"
     },
     {
         "from": "/docs/reference/built-in-data-binding-converters",
@@ -480,8 +491,13 @@ const redirects: Redirect[] = [
         "from": [
             "/docs/controls/calendardatepicker",
             "/docs/reference/controls/calendar-date-picker",
+            "/docs/reference/controls/calendar/calendar-date-picker",
         ],
         "to": "/controls/input/date-and-time/calendardatepicker"
+    },
+    {
+        "from": "/docs/reference/controls/canvas",
+        "to": "/controls/layout/panels/canvas"
     },
     {
         "from": "/docs/reference/controls/carousel",
@@ -496,7 +512,10 @@ const redirects: Redirect[] = [
         "to": "/controls/input/selectors/colorpicker"
     },
     {
-        "from": "/docs/reference/controls/colorview",
+        "from": [
+            "/docs/reference/controls/colorview",
+            "/docs/reference/controls/colorpicker/colorview"
+        ],
         "to": "/controls/input/selectors/colorview"
     },
     {
@@ -721,6 +740,7 @@ const redirects: Redirect[] = [
     },
     {
         "from": [
+            "/docs/reference/controls/treedatagrid/",
             "/docs/reference/controls/detailed-reference/treedatagrid",
             "/docs/reference/controls/detailed-reference/treedatagrid/creating-a-flat-treedatagrid",
             "/docs/reference/controls/detailed-reference/treedatagrid/creating-a-hierarchical-treedatagrid",
@@ -776,7 +796,10 @@ const redirects: Redirect[] = [
         "to": "/controls/layout/panels/wrappanel"
     },
     {
-        "from": "/docs/tutorials/samples",
+        "from": [
+            "/docs/tutorials/",
+            "/docs/tutorials/samples",
+        ],
         "to": "/docs/samples-tutorials"
     },
     {
@@ -814,7 +837,7 @@ const redirects: Redirect[] = [
     {
         "from": [
             "/docs/layout/",
-            "/docs/basics/user-interface/building-layouts/index",
+            "/docs/basics/user-interface/building-layouts/",
             "/docs/concepts/layout/layout-zones"
         ],
         "to": "/docs/layout/"
@@ -829,8 +852,9 @@ const redirects: Redirect[] = [
     {
         "from": [
             "/docs/styling/",
-            "/docs/basics/user-interface/styling/index",
-            "/docs/basics/user-interface/styling/styles"
+            "/docs/reference/styles/",
+            "/docs/basics/user-interface/styling/",
+            "/docs/basics/user-interface/styling/styles",
         ],
         "to": "/docs/styling/styles"
     },
@@ -848,14 +872,17 @@ const redirects: Redirect[] = [
     },
     {
         "from": [
-            "/docs/basics/user-interface/styling/themes/index",
+            "/docs/basics/user-interface/styling/themes/",
             "/docs/basics/user-interface/styling/themes/fluent",
             "/docs/basics/user-interface/styling/themes/simple"
         ],
         "to": "/docs/styling/themes"
     },
     {
-        "from": "/docs/styling/troubleshooting",
+        "from": [
+            "/docs/styling/troubleshooting",
+            "/docs/guides/styles-and-resources/troubleshooting",
+        ],
         "to": "/troubleshooting/ui-development/styles"
     },
     {
@@ -899,6 +926,7 @@ const redirects: Redirect[] = [
     {
         "from": [
             "/docs/data-binding/",
+            "/docs/guides/data-binding/",
             "/docs/data-binding/binding-classes",
             "/docs/data-binding/binding-to-controls",
             "/docs/data-binding/binding-from-code",
@@ -906,13 +934,16 @@ const redirects: Redirect[] = [
             "/docs/data-binding/binding-to-tasks-and-observables",
             "/docs/data-binding/bindings",
             "/docs/data-binding/compiledbindings",
-            "/docs/data-binding/compiled-bindings",
+            "/docs/basics/data/data-binding/compiled-bindings",
             "/docs/data-binding/converting-binding-values",
             "/docs/data-binding/the-datacontext",
+            "/docs/basics/data/data-binding/data-context",
             "/docs/getting-started/programming-with-avalonia/data-binding",
             "/docs/data-binding/change-notifications",
             "/docs/basics/data/data-binding/",
-            "/concepts/data-concepts/data-binding/"
+            "/docs/basics/data/data-binding/data-binding-syntax",
+            "/docs/concepts/reactiveui/binding-to-sorted-filtered-list",
+            "/docs/concepts/reactiveui/data-persistence",
         ],
         "to": "/docs/data-binding/introduction-to-data-binding"
     },
@@ -924,9 +955,13 @@ const redirects: Redirect[] = [
             "/docs/templates/implement-IDataTemplate",
             "/docs/templates/implement-idatatemplates",
             "/docs/basics/data/data-templates",
-            "/docs/concepts/templates/index",
+            "/docs/concepts/templates/",
         ],
         "to": "/docs/data-templates/introduction-to-data-templates"
+    },
+    {
+        "from": "/docs/concepts/templates/reusing-data-templates",
+        "to": "/docs/data-templates/reusing-data-templates"
     },
     {
         "from": [
@@ -975,7 +1010,7 @@ const redirects: Redirect[] = [
     },
     {
         "from": [
-            "/docs/concepts/headless/index",
+            "/docs/concepts/headless/",
             "/docs/concepts/headless/headless-custom",
         ],
         "to": "/docs/testing/setting-up-the-headless-platform"
@@ -1003,11 +1038,25 @@ const redirects: Redirect[] = [
         "to": "/docs/input-interaction/pointer"
     },
     {
-        "from": "/docs/input/hotkeys",
+        "from": [
+            "/docs/input/hotkeys",
+            "/docs/concepts/input/hotkeys"
+        ],
         "to": "/docs/input-interaction/keyboard-and-hotkeys"
     },
     {
-        "from": "/docs/input/routed-events",
+        "from": "/docs/concepts/input/focus",
+        "to": "/docs/input-interaction/focus"
+    },
+    {
+        "from": "/docs/concepts/input/gestures",
+        "to": "/docs/input-interaction/gestures"
+    },
+    {
+        "from": [
+            "/docs/input/routed-events",
+            "/docs/concepts/input/routed-events",
+        ],
         "to": "/docs/input-interaction/routed-events"
     },
     {
@@ -1019,24 +1068,32 @@ const redirects: Redirect[] = [
     },
     {
         "from": [
-            "/docs/concepts/markupextensions/index",
+            "/docs/concepts/markupextensions/",
             "/docs/concepts/markupextensions/options-markup-extensions"
         ],
         "to": "/docs/data-binding/markup-extensions"
     },
     {
         "from": [
-            "/docs/concepts/reactiveui/index",
-            "/docs/app-development/reactiveui/index"
+            "/docs/concepts/reactiveui/",
+            "/docs/app-development/reactiveui/index",
+            "/docs/concepts/reactiveui/reactive-view-model",
+            "/docs/concepts/reactiveui/routing",
+            "/docs/concepts/reactiveui/view-activation",
+            "/docs/concepts/the-mvvm-pattern/",
         ],
         "to": "/docs/fundamentals/the-mvvm-pattern"
     },
     {
         "from": [
-            "/docs/concepts/services/storage-provider/index",
+            "/docs/concepts/services/storage-provider/",
             "/reference/services/storage/index"
         ],
         "to": "/docs/services/storage/storage-provider"
+    },
+    {
+        "from": "/docs/concepts/services/clipboard",
+        "to": "/docs/services/clipboard"
     },
     {
         "from": "/docs/concepts/image-interpolation",
@@ -1115,11 +1172,12 @@ const redirects: Redirect[] = [
         "to": "/controls/media/mediasource"
     },
     {
-        "from": "/accelerate/components/markdown/quickstart",
-        "to": "/controls/data-display/text-display/markdown"
-    },
-    {
-        "from": "/accelerate/components/markdown/markdown",
+        "from": [
+            "/accelerate/components/markdown/quickstart",
+            "/accelerate/components/markdown/markdown",
+            "/accelerate/components/markdown/",
+            "/accelerate/components/markdown/example",
+        ],
         "to": "/controls/data-display/text-display/markdown"
     },
     {
@@ -1152,6 +1210,7 @@ const redirects: Redirect[] = [
     },
     {
         "from": [
+            "/accelerate/components/virtual-keyboard/",
             "/accelerate/components/virtual-keyboard/virtual-keyboard",
             "/accelerate/components/virtual-keyboard/styling",
             "/accelerate/components/virtual-keyboard/input-method-identifiers"
@@ -1232,6 +1291,7 @@ const redirects: Redirect[] = [
     },
     {
         "from": [
+            "/accelerate/tools/dev-tools/tools/elements/",
             "/accelerate/tools/dev-tools/tools/elements/elements",
             "/accelerate/tools/dev-tools/tools/elements/properties",
             "/accelerate/tools/dev-tools/tools/elements/overlay",
@@ -1254,6 +1314,10 @@ const redirects: Redirect[] = [
     {
         "from": "/accelerate/tools/dev-tools/tools/metrics",
         "to": "/tools/developer-tools/metrics-tool"
+    },
+    {
+        "from": "/accelerate/tools/dev-tools/tools/profiler",
+        "to": "/tools/developer-tools/profiler-tool"
     },
     {
         "from": "/accelerate/tools/dev-tools/advanced/options-reference",
@@ -1281,6 +1345,10 @@ const redirects: Redirect[] = [
             "/accelerate/tools/dev-tools/advanced/attaching-browser-or-mobile"
         ],
         "to": "/tools/developer-tools/attaching-applications"
+    },
+    {
+        "from": "/xpf/welcome",
+        "to": "/xpf"
     },
     {
         "from": "/xpf/porting-tips",
@@ -1332,6 +1400,10 @@ const redirects: Redirect[] = [
         "to": "/xpf/interop/native-window-handles"
     },
     {
+        "from": "/xpf/third-party-libraries",
+        "to": "/xpf/third-party/compatibility"
+    },
+    {
         "from": "/xpf/troubleshooting",
         "to": "/xpf/troubleshooting"
     },
@@ -1360,6 +1432,7 @@ const redirects: Redirect[] = [
     {
         "from": [
             "/docs/distribution-publishing/macos",
+            "/accelerate/tools/parcel/apple/",
             "/accelerate/tools/parcel/guies/apple-notary",
             "/accelerate/tools/parcel/guies/apple-signing",
             "/accelerate/tools/parcel/apple/packaging",
@@ -1371,6 +1444,7 @@ const redirects: Redirect[] = [
     },
     {
         "from": [
+            "/accelerate/tools/parcel/windows/",
             "/accelerate/tools/parcel/windows/signing",
             "/accelerate/tools/parcel/windows/installer",
             "/accelerate/tools/parcel/windows/index",
@@ -1379,6 +1453,7 @@ const redirects: Redirect[] = [
     },
     {
         "from": [
+            "/accelerate/tools/parcel/linux/",
             "/accelerate/tools/parcel/linux/packaging",
             "/accelerate/tools/parcel/linux/index",
         ],
