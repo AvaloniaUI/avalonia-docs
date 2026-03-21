@@ -23,13 +23,30 @@ function toTargetUrl(maybePathOrUrl) {
   return s;
 }
 
+function stripTrailingSlash(s) {
+  if (s.length > 1 && s.endsWith('/')) {
+    return s.slice(0, -1);
+  }
+  return s;
+}
+
+function toKvKey(sourceUrl) {
+  // sourceUrl is like "docs.avaloniaui.net/some/path" — extract path part
+  let p = sourceUrl.replace(/^docs\.avaloniaui\.net/, '');
+  if (!p.startsWith('/')) p = '/' + p;
+  // Normalise: lowercase, strip trailing slash
+  p = p.toLowerCase();
+  return stripTrailingSlash(p);
+}
+
+function toKvValue(targetUrl) {
+  return stripTrailingSlash(targetUrl);
+}
+
 function findRedirectsArrayLiteral(tsText, fileNameForErrors) {
-  // Prefer the typed top-level redirects array (avoids matching local `const redirects: string[] = []`).
   const typedDecl = /const\s+redirects\s*:\s*Redirect\s*\[\s*\]\s*=\s*/g;
   const typedMatch = typedDecl.exec(tsText);
 
-  // Fall back to any `const redirects = ...` if the typed one isn't present.
-  // (Not expected in this repo, but keeps the script resilient.)
   const fallbackDecl = /const\s+redirects\s*=\s*/g;
   const fallbackMatch = typedMatch ? null : fallbackDecl.exec(tsText);
 
@@ -44,7 +61,6 @@ function findRedirectsArrayLiteral(tsText, fileNameForErrors) {
     throw new Error(`${fileNameForErrors}: could not find '[' after redirects declaration`);
   }
 
-  // Scan forward to find the matching closing ']'.
   let i = openBracketIdx;
   let bracketDepth = 0;
   let inString = false;
@@ -64,14 +80,14 @@ function findRedirectsArrayLiteral(tsText, fileNameForErrors) {
     if (inBlockComment) {
       if (ch === '*' && next === '/') {
         inBlockComment = false;
-        i++; // consume '/'
+        i++;
       }
       continue;
     }
 
     if (inString) {
       if (ch === '\\') {
-        i++; // skip escaped char
+        i++;
         continue;
       }
       if (ch === stringQuote) {
@@ -81,15 +97,14 @@ function findRedirectsArrayLiteral(tsText, fileNameForErrors) {
       continue;
     }
 
-    // Not in comment/string
     if (ch === '/' && next === '/') {
       inLineComment = true;
-      i++; // consume second '/'
+      i++;
       continue;
     }
     if (ch === '/' && next === '*') {
       inBlockComment = true;
-      i++; // consume '*'
+      i++;
       continue;
     }
 
@@ -107,8 +122,7 @@ function findRedirectsArrayLiteral(tsText, fileNameForErrors) {
     if (ch === ']') {
       bracketDepth--;
       if (bracketDepth === 0) {
-        const endIdxInclusive = i;
-        return tsText.slice(openBracketIdx, endIdxInclusive + 1);
+        return tsText.slice(openBracketIdx, i + 1);
       }
       continue;
     }
@@ -118,8 +132,6 @@ function findRedirectsArrayLiteral(tsText, fileNameForErrors) {
 }
 
 function evalArrayLiteral(arrayLiteral, fileNameForErrors) {
-  // The literal is expected to be a pure array/object/string literal.
-  // Run it in an empty VM context to avoid accidental access to Node globals.
   const context = vm.createContext(Object.create(null));
   const result = vm.runInContext(arrayLiteral, context, { filename: fileNameForErrors });
   if (!Array.isArray(result)) {
@@ -133,10 +145,7 @@ function extractRedirectPairsFromFile(filePath) {
   const arrayLiteral = findRedirectsArrayLiteral(tsText, path.basename(filePath));
   const redirects = evalArrayLiteral(arrayLiteral, path.basename(filePath));
 
-  /** @type {{ from: string | string[]; to: string }[]} */
   const normalized = redirects.map((r) => ({ from: r.from, to: r.to }));
-
-  /** @type {{ source_url: string; target_url: string; status: number; origin: string }[]} */
   const rows = [];
 
   for (const r of normalized) {
@@ -152,7 +161,6 @@ function extractRedirectPairsFromFile(filePath) {
       rows.push({
         source_url: toSourceUrl(source),
         target_url: toTargetUrl(r.to),
-        status: 301,
         origin: path.basename(filePath),
       });
     }
@@ -165,26 +173,15 @@ function extractIndexLiteralRedirects(indexFilePath) {
   const tsText = readFileSync(indexFilePath, 'utf8');
   const rows = [];
 
-  // Only pick explicit { from: '...', to: '...' } objects.
-  // This intentionally ignores spreads like ...music_store_redirects.redirects.
   const re = /\{\s*from\s*:\s*(['"])(.*?)\1\s*,\s*to\s*:\s*(['"])(.*?)\3\s*\}/gms;
   for (const match of tsText.matchAll(re)) {
     rows.push({
       source_url: toSourceUrl(match[2]),
       target_url: toTargetUrl(match[4]),
-      status: 301,
       origin: path.basename(indexFilePath),
     });
   }
   return rows;
-}
-
-function csvEscape(value) {
-  const s = String(value);
-  if (/[\n\r,"]/u.test(s)) {
-    return `"${s.replace(/"/g, '""')}"`;
-  }
-  return s;
 }
 
 function main() {
@@ -208,60 +205,56 @@ function main() {
   console.log(`index.ts (explicit literals only): ${indexRows.length}`);
   rows = rows.concat(indexRows);
 
-  // De-dupe by exact source_url, keep first (stable).
-  /** @type {Map<string, { source_url: string; target_url: string; status: number; origin: string }>} */
-  const bySource = new Map();
-  /** @type {{ source_url: string; kept_target_url: string; dropped_target_url: string; kept_origin: string; dropped_origin: string }[]} */
+  // De-dupe by KV key (normalized source), keep first (stable).
+  const byKey = new Map();
   const duplicates = [];
 
   for (const row of rows) {
-    const existing = bySource.get(row.source_url);
+    const key = toKvKey(row.source_url);
+    const value = toKvValue(row.target_url);
+    const existing = byKey.get(key);
     if (!existing) {
-      bySource.set(row.source_url, row);
-    } else if (existing.target_url !== row.target_url) {
+      byKey.set(key, { key, value, origin: row.origin });
+    } else if (existing.value !== value) {
       duplicates.push({
-        source_url: row.source_url,
-        kept_target_url: existing.target_url,
-        dropped_target_url: row.target_url,
+        key,
+        kept_value: existing.value,
+        dropped_value: value,
         kept_origin: existing.origin,
         dropped_origin: row.origin,
       });
     }
   }
 
-  const uniqueRows = [...bySource.values()].sort((a, b) => a.source_url.localeCompare(b.source_url));
+  const entries = [...byKey.values()].sort((a, b) => a.key.localeCompare(b.key));
 
-  // Filter out self-referencing redirects (source == target after normalising scheme).
-  const selfRedirects = uniqueRows.filter((r) => {
-    const normSource = r.source_url.replace(/^https?:\/\//, '');
-    const normTarget = r.target_url.replace(/^https?:\/\//, '');
-    return normSource === normTarget;
+  // Filter out self-referencing redirects
+  const selfRedirects = entries.filter((e) => {
+    const normKey = e.key;
+    const normValue = e.value.replace(/^https?:\/\/[^/]*/, '').toLowerCase();
+    return normKey === normValue;
   });
   if (selfRedirects.length) {
     console.warn(`WARNING: Skipping ${selfRedirects.length} self-referencing redirect(s):`);
-    for (const r of selfRedirects) {
-      console.warn(`  ${r.origin}: ${r.source_url} -> ${r.target_url}`);
+    for (const e of selfRedirects) {
+      console.warn(`  ${e.origin}: ${e.key} -> ${e.value}`);
     }
   }
-  const filteredRows = uniqueRows.filter((r) => {
-    const normSource = r.source_url.replace(/^https?:\/\//, '');
-    const normTarget = r.target_url.replace(/^https?:\/\//, '');
-    return normSource !== normTarget;
+  const filtered = entries.filter((e) => {
+    const normKey = e.key;
+    const normValue = e.value.replace(/^https?:\/\/[^/]*/, '').toLowerCase();
+    return normKey !== normValue;
   });
 
-  const header = ['source_url', 'target_url', 'status'].join(',');
-  const lines = [header];
-  for (const r of filteredRows) {
-    lines.push([csvEscape(r.source_url), csvEscape(r.target_url), '301'].join(','));
-  }
+  // Output format for `wrangler kv bulk put`
+  const kvEntries = filtered.map((e) => ({ key: e.key, value: e.value }));
 
-  const outPath = path.join(redirectsDir, 'cloudflare-bulk-redirects-301.csv');
-  writeFileSync(outPath, `${lines.join('\n')}\n`, 'utf8');
+  const outPath = path.join(redirectsDir, 'kv-redirects.json');
+  writeFileSync(outPath, JSON.stringify(kvEntries, null, 2) + '\n', 'utf8');
 
-  // Diagnostics to stdout (kept minimal so it doesn't spam).
-  console.log(`Wrote ${filteredRows.length} redirects to ${path.relative(process.cwd(), outPath)}`);
+  console.log(`Wrote ${kvEntries.length} KV entries to ${path.relative(process.cwd(), outPath)}`);
   if (duplicates.length) {
-    console.warn(`WARNING: ${duplicates.length} duplicate source_url entries had differing targets (kept first).`);
+    console.warn(`WARNING: ${duplicates.length} duplicate keys had differing targets (kept first).`);
   }
 }
 

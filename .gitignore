@@ -8,6 +8,7 @@
 # Generated files
 .docusaurus
 .cache-loader
+redirects/cloudflare_worker_kv_redirects/kv-redirects.json
 .idea
 .apiref
 

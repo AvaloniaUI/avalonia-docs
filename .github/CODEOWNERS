@@ -1,0 +1,7 @@
+# This file is itself protected — changes require review
+/.github/CODEOWNERS      @AvaloniaUI/company @msivers @kekekeks @grokys @MikeCodesDotNET @MrJul
+
+# Cloudflare Workers and redirect infrastructure require review
+/workers/                @msivers @kekekeks @grokys @MikeCodesDotNET @MrJul
+/redirects/              @msivers @kekekeks @grokys @MikeCodesDotNET @MrJul
+/.github/workflows/deploy-docs-redirect-worker.yml @msivers @kekekeks @grokys @MikeCodesDotNET @MrJul
