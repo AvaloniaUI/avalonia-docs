@@ -4,6 +4,11 @@ export interface Env {
 
 const STATIC_EXT = /\.(?:js|css|png|jpg|jpeg|gif|svg|ico|woff|woff2|ttf|eot|map|json|xml|txt|webp|avif|mp4|webm)$/i;
 
+const EDGE_CACHE: RequestInitCfProperties = {
+  cacheTtl: 604800,
+  cacheEverything: true,
+};
+
 function isStaticAsset(path: string): boolean {
   return path.startsWith('/assets/') || path.startsWith('/img/') || STATIC_EXT.test(path);
 }
@@ -59,10 +64,19 @@ export default {
       const rewrittenUrl = new URL(request.url);
       rewrittenUrl.pathname = url.pathname + '/';
       const rewrittenRequest = new Request(rewrittenUrl.toString(), request);
-      return fetch(rewrittenRequest);
+      return withBrowserCache(await fetch(rewrittenRequest, { cf: EDGE_CACHE }));
     }
 
     // Default: passthrough to origin
-    return fetch(request);
+    return withBrowserCache(await fetch(request, { cf: EDGE_CACHE }));
   },
 };
+
+function withBrowserCache(response: Response): Response {
+  if (response.headers.has('Cache-Control')) {
+    return response;
+  }
+  const newResponse = new Response(response.body, response);
+  newResponse.headers.set('Cache-Control', 'public, max-age=300');
+  return newResponse;
+}

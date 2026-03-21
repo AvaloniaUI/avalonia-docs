@@ -43,8 +43,11 @@ This produces `kv-redirects.json` (gitignored).
 
 ```bash
 npx wrangler kv bulk put kv-redirects.json \
-  --namespace-id ae8131374b0d409e9ab0537882dafe0b
+  --namespace-id ae8131374b0d409e9ab0537882dafe0b \
+  --remote
 ```
+
+> **Note:** Wrangler v4 defaults to local KV. The `--remote` flag is required to write to the production KV namespace.
 
 ## CI/CD
 
