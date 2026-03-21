@@ -148,6 +148,7 @@ const sidebars: SidebarsConfig = {
           items:[
               'input/text-input/autocompletebox',
               'input/text-input/maskedtextbox',
+              'input/text-input/richtexteditor',
               'input/text-input/textbox',
           ],
         },

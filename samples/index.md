@@ -144,6 +144,22 @@ Avalonia has tons of great samples to help you get started!
 
 </DocsCards>
 
+## RichTextEditor
+
+:::info
+[`RichTextEditor`](/controls/input/text-input/richtexteditor) is available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Enterprise.
+:::
+
+<DocsCards>
+  
+  <DocsCard header="Sandbox" href="https://github.com/AvaloniaUI/Avalonia.Controls.RichTextEditor/blob/main/samples/Sandbox">
+    <p>A wide-open playground to experiment with the rich text editor's features.</p>
+  </DocsCard>
+
+  <DocsCard header="Debugger" href="https://github.com/AvaloniaUI/Avalonia.Controls.RichTextEditor/blob/main/samples/RichTextEditor.Debugger">
+    <p>Implement a debugging and diagnostic tool to understand the internal status of the rich text editor.</p>
+  </DocsCard>
+
 ## Other
 
 <DocsCards>
