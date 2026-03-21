@@ -105,20 +105,6 @@ If you want API reference content to regenerate automatically before every local
 
 Do not commit these hooks, as CI does not have `dotnet-apiref` installed and the build will fail. The generated API reference files are already committed to the repository.
 
-## Caching
-
-The site is served through a Cloudflare Worker ([`workers/docs-redirects`](workers/docs-redirects)) which handles redirects, trailing-slash normalization, and edge caching.
-
-| Content | Edge (Cloudflare) | Browser |
-|---|---|---|
-| Hashed assets (`/assets/*`) | 1 year | 1 year, immutable |
-| Other static files (`/img/*`, etc.) | Respects origin headers | 5 min |
-| HTML pages | 7 days | 5 min |
-
-The edge cache for `docs.avaloniaui.net` is automatically purged on every deploy to `main`, so content updates are served immediately.
-
-See [`workers/docs-redirects/README.md`](workers/docs-redirects/README.md) for full details.
-
 ## Thanks 💜
 
 Thanks for all your contributions and efforts towards improving the Avalonia UI documentation. We thank you being part of our ✨ community ✨!
