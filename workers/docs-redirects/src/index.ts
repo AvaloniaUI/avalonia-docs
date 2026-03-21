@@ -37,16 +37,17 @@ export default {
 
     if (target) {
       // Build redirect URL, preserving query string from original request
-      let redirectUrl = target;
+      const redirectUrl = new URL(target, url);
       if (url.search) {
-        const sep = target.includes('?') ? '&' : '?';
-        redirectUrl = target + sep + url.search.slice(1);
+        url.searchParams.forEach((value, key) => {
+          redirectUrl.searchParams.append(key, value);
+        });
       }
 
       return new Response(null, {
         status: 301,
         headers: {
-          'Location': redirectUrl,
+          'Location': redirectUrl.toString(),
           'Cache-Control': 'public, max-age=86400',
         },
       });
