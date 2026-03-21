@@ -1,5 +1,5 @@
 export interface Env {
-  REDIRECTS: KVNamespace;
+  DOCS_REDIRECTS: KVNamespace;
 }
 
 const STATIC_EXT = /\.(?:js|css|png|jpg|jpeg|gif|svg|ico|woff|woff2|ttf|eot|map|json|xml|txt|webp|avif|mp4|webm)$/i;
@@ -33,7 +33,7 @@ export default {
     const normalized = normalizePath(url.pathname);
 
     // Check KV for a redirect
-    const target = await env.REDIRECTS.get(normalized);
+    const target = await env.DOCS_REDIRECTS.get(normalized);
 
     if (target) {
       // Build redirect URL, preserving query string from original request

@@ -8,5 +8,5 @@ pattern = "docs.avaloniaui.net/*"
 zone_name = "avaloniaui.net"
 
 [[kv_namespaces]]
-binding = "REDIRECTS"
+binding = "DOCS_REDIRECTS"
 id = "ae8131374b0d409e9ab0537882dafe0b"
