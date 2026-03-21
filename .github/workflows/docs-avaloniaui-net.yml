@@ -92,17 +92,6 @@ jobs:
             exit 1
           fi
 
-      - name: Purge Cloudflare edge cache
-        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
-        env:
-          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-        run: |
-          curl -sf -X POST \
-            "https://api.cloudflare.com/client/v4/zones/aaa9cb3f1e40e56edad4ceba5226d0e0/purge_cache" \
-            -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" \
-            -H "Content-Type: application/json" \
-            --data '{"hosts":["docs.avaloniaui.net"]}'
-
       - name: Generate KV redirect entries
         if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
         working-directory: redirects/cloudflare_worker_kv_redirects
@@ -141,3 +130,14 @@ jobs:
           npx wrangler kv bulk put redirects/kv-redirects.json \
             --namespace-id ae8131374b0d409e9ab0537882dafe0b \
             --remote
+
+      - name: Purge Cloudflare edge cache
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: |
+          curl -sf -X POST \
+            "https://api.cloudflare.com/client/v4/zones/aaa9cb3f1e40e56edad4ceba5226d0e0/purge_cache" \
+            -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" \
+            -H "Content-Type: application/json" \
+            --data '{"hosts":["docs.avaloniaui.net"]}'
