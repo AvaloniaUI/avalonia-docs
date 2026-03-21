@@ -128,4 +128,5 @@ jobs:
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
         run: |
           npx wrangler kv bulk put redirects/kv-redirects.json \
-            --namespace-id ae8131374b0d409e9ab0537882dafe0b
+            --namespace-id ae8131374b0d409e9ab0537882dafe0b \
+            --remote
