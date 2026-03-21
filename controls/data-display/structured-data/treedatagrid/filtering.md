@@ -13,6 +13,10 @@ This control is available as part of [Avalonia Accelerate](https://avaloniaui.ne
 
 Filtering lets you display only the rows that match specific criteria in your `TreeDataGrid`. Both `FlatTreeDataGridSource` and `HierarchicalTreeDataGridSource` support filtering through predicate functions.
 
+:::note
+Filtering requires the code-behind `Source` approach. There is currently no XAML equivalent for filtering — you must create a `FlatTreeDataGridSource` or `HierarchicalTreeDataGridSource` in your view model. We plan to add an API for filtering XAML-based controls in future.
+:::
+
 ## Enabling filtering
 
 You enable filtering by calling the `Filter` method on your `FlatTreeDataGridSource` or `HierarchicalTreeDataGridSource` with a predicate function. The predicate receives each model item and returns `true` if the item should be visible, or `false` if it should be hidden.
@@ -210,14 +214,9 @@ public class PersonListViewModel : ViewModelBase
         };
 
         Source = new FlatTreeDataGridSource<Person>(_allPeople)
-        {
-            Columns =
-            {
-                new TextColumn<Person, string>("Name", x => x.Name),
-                new TextColumn<Person, int>("Age", x => x.Age),
-                new TextColumn<Person, string>("Department", x => x.Department),
-            }
-        };
+            .WithTextColumn(x => x.Name)
+            .WithTextColumn(x => x.Age)
+            .WithTextColumn(x => x.Department);
     }
 
     private void ApplyFilter()
@@ -241,7 +240,7 @@ public class PersonListViewModel : ViewModelBase
 ```xml
 <StackPanel>
     <TextBox Text="{Binding SearchText}"
-             Watermark="Search..."
+             PlaceholderText="Search..."
              Margin="0,0,0,10" />
     <TreeDataGrid Source="{Binding Source}"
                   Height="400" />
