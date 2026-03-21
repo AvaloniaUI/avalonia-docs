@@ -185,7 +185,7 @@ function extractIndexLiteralRedirects(indexFilePath) {
 }
 
 function main() {
-  const redirectsDir = path.resolve(process.cwd());
+  const redirectsDir = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
 
   const sourceFiles = [
     'get-started-redirects.ts',

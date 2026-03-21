@@ -100,13 +100,13 @@ jobs:
       - name: Validate KV redirects
         if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
         run: |
-          ENTRY_COUNT=$(python3 -c "import json; print(len(json.load(open('redirects/cloudflare_worker_kv_redirects/kv-redirects.json'))))")
+          ENTRY_COUNT=$(python3 -c "import json; print(len(json.load(open('redirects/kv-redirects.json'))))")
           echo "Redirect entries: $ENTRY_COUNT"
 
           # Sanity check: all targets must be https URLs on known domains
           SUSPECT=$(python3 -c "
           import json, sys
-          data = json.load(open('redirects/cloudflare_worker_kv_redirects/kv-redirects.json'))
+          data = json.load(open('redirects/kv-redirects.json'))
           allowed = ['https://docs.avaloniaui.net', 'https://github.com/AvaloniaUI']
           bad = [e for e in data if not any(e['value'].startswith(p) for p in allowed)]
           for e in bad:
@@ -127,5 +127,5 @@ jobs:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
         run: |
-          npx wrangler kv bulk put redirects/cloudflare_worker_kv_redirects/kv-redirects.json \
+          npx wrangler kv bulk put redirects/kv-redirects.json \
             --namespace-id ae8131374b0d409e9ab0537882dafe0b
