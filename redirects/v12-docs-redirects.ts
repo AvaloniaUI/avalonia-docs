@@ -927,10 +927,6 @@ const redirects: Redirect[] = [
         "from": [
             "/docs/data-binding/",
             "/docs/guides/data-binding/",
-            "/docs/data-binding/binding-classes",
-            "/docs/data-binding/binding-to-controls",
-            "/docs/data-binding/binding-from-code",
-            "/docs/data-binding/binding-to-commands",
             "/docs/data-binding/binding-to-tasks-and-observables",
             "/docs/data-binding/bindings",
             "/docs/data-binding/compiledbindings",
@@ -1402,6 +1398,10 @@ const redirects: Redirect[] = [
     {
         "from": "/xpf/third-party-libraries",
         "to": "/xpf/third-party/compatibility"
+    },
+    {
+        "from": "/xpf/release-notes",
+        "to": "/xpf/version-info/release-notes"
     },
     {
         "from": "/xpf/troubleshooting",
