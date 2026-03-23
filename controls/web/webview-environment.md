@@ -1,13 +1,7 @@
 ---
 id: webview-environment
 title: WebView environment
-tags:
-  - accelerate
 ---
-
-:::info
-This control is available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Business or higher.
-:::
 
 ## Overview
 

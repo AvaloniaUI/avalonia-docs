@@ -1,16 +1,9 @@
 ---
 id: nativewebdialog
 title: NativeWebDialog
-tags:
-  - accelerate
 ---
 
 `NativeWebDialog` is a dialog window that hosts a native web browser. It is useful on platforms like Linux where an embedded `NativeWebView` control is not available, or when you want to show web content in a separate window without embedding it in your layout.
-
-
-:::info
-This control is available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Business or higher.
-:::
 
 ## Useful properties
 

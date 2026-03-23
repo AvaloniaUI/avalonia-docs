@@ -2,12 +2,7 @@
 id: nativewebview
 title: NativeWebView
 tags:
-  - accelerate
 ---
-
-:::info
-This control is available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Business or higher.
-:::
 
 ## Overview
 
