@@ -3,6 +3,9 @@ title: CarouselPage
 description: REFERENCE - Built-in Controls
 ---
 
+import CarouselPageBasicScreenshot from '/img/reference/controls/carouselpage/carouselpage-basic.png';
+import CarouselPageDataTemplateScreenshot from '/img/reference/controls/carouselpage/carouselpage-data-template.png';
+
 # CarouselPage
 
 `CarouselPage` displays a collection of pages in a horizontally scrollable carousel. Users swipe or use arrow keys to move between pages. An optional page transition animates the change.
@@ -116,6 +119,8 @@ var carousel = new CarouselPage
 
 window.Page = carousel;
 ```
+
+<img src={CarouselPageBasicScreenshot} alt="" />
 
 ### Page Transitions
 
@@ -273,6 +278,8 @@ var carousel = new CarouselPage
 // Add or remove items at runtime, the carousel updates automatically
 items.Add(new PhotoViewModel { Title = "New Photo", ImageSource = newBitmap });
 ```
+
+<img src={CarouselPageDataTemplateScreenshot} alt="" />
 
 ### CarouselPage Inside a NavigationPage
 
