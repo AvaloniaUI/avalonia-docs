@@ -14,7 +14,7 @@ import TabbedPageInDrawerPageScreenshot from '/img/reference/controls/tabbedpage
 
 `TabbedPage` displays a collection of pages through a tab strip. Each child `Page` becomes one tab. The tab header is built from the page's `Header` property for the label and its `Icon` property for the icon. The tab strip position adapts to the target platform by default.
 
-`TabbedPage` extends `SelectingMultiPage`, which extends `MultiPage`. This inheritance chain provides the `Pages` collection, `PageTemplate`, `SelectedIndex`, `SelectedPage`, `CurrentPage`, and the `SelectionChanged`, `PagesChanged`, and `CurrentPageChanged` events.
+`TabbedPage` extends `SelectingMultiPage`, which extends `MultiPage`. This inheritance chain provides the `Pages` collection, `ItemsSource`, `PageTemplate`, `SelectedIndex`, `SelectedPage`, `CurrentPage`, and the `SelectionChanged`, `PagesChanged`, and `CurrentPageChanged` events.
 
 ## Useful Properties
 
@@ -314,16 +314,16 @@ private async void OnItemClick(object? sender, RoutedEventArgs e)
 
 Each `NavigationPage` maintains its own back stack independently. Switching tabs does not reset the stack.
 
-### Data-Driven Tabs with PageTemplate
+### Data-Driven Tabs with ItemsSource
 
-When `Pages` contains view-model objects, use `PageTemplate` to generate the pages:
+Bind a view-model collection to `ItemsSource` and use `PageTemplate` to generate the pages:
 
 ```xml
 <TabbedPage xmlns="https://github.com/avaloniaui"
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
             xmlns:vm="clr-namespace:MyApp.ViewModels"
             x:Class="MyApp.MainTabs"
-            Pages="{Binding Sections}">
+            ItemsSource="{Binding Sections}">
 
     <TabbedPage.PageTemplate>
         <DataTemplate x:DataType="vm:SectionViewModel">

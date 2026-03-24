@@ -64,8 +64,8 @@ When `IsGestureEnabled` is `true`:
 
     <ContentPage Header="Welcome">
         <StackPanel VerticalAlignment="Center"
-                             HorizontalAlignment="Center"
-                             Spacing="16">
+                    HorizontalAlignment="Center"
+                    Spacing="16">
             <TextBlock Text="Welcome to MyApp"
                        FontSize="28"
                        HorizontalAlignment="Center" />
@@ -77,8 +77,8 @@ When `IsGestureEnabled` is `true`:
 
     <ContentPage Header="Features">
         <StackPanel VerticalAlignment="Center"
-                             HorizontalAlignment="Center"
-                             Spacing="16">
+                    HorizontalAlignment="Center"
+                    Spacing="16">
             <TextBlock Text="Powerful Features"
                        FontSize="28"
                        HorizontalAlignment="Center" />
@@ -90,8 +90,8 @@ When `IsGestureEnabled` is `true`:
 
     <ContentPage Header="Get Started">
         <StackPanel VerticalAlignment="Center"
-                             HorizontalAlignment="Center"
-                             Spacing="16">
+                    HorizontalAlignment="Center"
+                    Spacing="16">
             <TextBlock Text="Ready?"
                        FontSize="28"
                        HorizontalAlignment="Center" />
