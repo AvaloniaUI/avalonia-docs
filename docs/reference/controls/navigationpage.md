@@ -44,8 +44,10 @@ You will probably use these properties most often:
 | `IsBackButtonVisible` | `bool` | `true` | Global switch that controls whether a back button is ever shown in the bar. |
 | `IsGestureEnabled` | `bool` | `true` | Enables the edge-swipe gesture to navigate back. |
 | `CanGoBack` | `bool` | computed | Read-only. `true` when the navigation stack has more than one entry. |
-| `IsBackButtonEffectivelyVisible` | `bool?` | computed | Read-only. The resolved back button visibility, taking into account `IsBackButtonVisible`, the per-page `HasBackButton` attached property, and stack depth. `null` when not yet determined. |
+| `IsBackButtonEffectivelyVisible` | `bool` | computed | Read-only. The resolved back button visibility, taking into account `IsBackButtonVisible`, the per-page `HasBackButton` attached property, and stack depth. |
+| `ModalStack` | `IReadOnlyList<Page>` | computed | Read-only. Currently presented modal pages, oldest at index 0 and topmost last. |
 | `NavigationStack` | `IReadOnlyList<Page>` | computed | Read-only. Ordered list of pages on the stack, root first and top last. |
+| `IsNavigating` | `bool` | computed | Read-only. `true` while a navigation operation (push, pop, replace, or modal) is in progress. |
 
 ## Attached Properties
 
@@ -82,13 +84,17 @@ Navigation is performed through the `INavigation` interface, accessible via `Pag
 | `PopToRootAsync()` | Pops all pages down to the root. |
 | `PopToRootAsync(transition)` | Same, with a specific transition. |
 | `PopToPageAsync(page)` | Pops all pages above the specified page. |
+| `PopToPageAsync(page, transition)` | Same, with a specific transition. |
 | `ReplaceAsync(page)` | Replaces the current top page with a new one. |
+| `ReplaceAsync(page, transition)` | Same, with a specific transition. |
 | `InsertPage(page, before)` | Inserts a page immediately before another in the stack, without animation. |
 | `RemovePage(page)` | Removes a specific page from the stack, without animation. |
 | `PushModalAsync(page)` | Presents a page modally, covering the entire `NavigationPage`. |
 | `PushModalAsync(page, transition)` | Presents modally with a specific transition. |
 | `PopModalAsync()` | Dismisses the top modal page. |
+| `PopModalAsync(transition)` | Dismisses the top modal with a specific transition. |
 | `PopAllModalsAsync()` | Dismisses all modal pages. |
+| `PopAllModalsAsync(transition)` | Dismisses all modals with a specific transition. |
 | `NavigationStack` | Read-only list of pages on the stack, root at index 0. |
 | `ModalStack` | Read-only list of currently presented modal pages. |
 | `StackDepth` | Number of pages currently on the navigation stack. |
@@ -123,7 +129,7 @@ The system back button automatically calls `PopAsync()` when `StackDepth > 1`.
 ### Basic NavigationPage in Code
 
 ```csharp
-window.Page = new NavigationPage(new HomePage());
+window.Page = new NavigationPage { Content = new HomePage() };
 ```
 
 The root page shows the `Header` in the navigation bar with no back button:
@@ -237,8 +243,9 @@ Set a transition on the `NavigationPage` to animate pushes and pops:
 
 ```csharp
 // Horizontal slide (default direction)
-var navPage = new NavigationPage(new HomePage())
+var navPage = new NavigationPage
 {
+    Content = new HomePage(),
     PageTransition = new PageSlide(TimeSpan.FromMilliseconds(300))
 };
 
@@ -272,8 +279,9 @@ int modalCount = Navigation.ModalStack.Count;
 ### Modal Transitions
 
 ```csharp
-var navPage = new NavigationPage(new HomePage())
+var navPage = new NavigationPage
 {
+    Content = new HomePage(),
     ModalTransition = new CrossFade(TimeSpan.FromMilliseconds(300))
 };
 ```
@@ -282,8 +290,9 @@ var navPage = new NavigationPage(new HomePage())
 
 ```csharp
 // Global default
-var navPage = new NavigationPage(new HomePage())
+var navPage = new NavigationPage
 {
+    Content = new HomePage(),
     BarHeight = 64
 };
 
@@ -340,7 +349,7 @@ When `NavigationPage` is the `Content` of a `DrawerPage`, a hamburger toggle app
 var shell = new DrawerPage
 {
     Drawer  = new MenuPage(),
-    Content = new NavigationPage(new HomePage())
+    Content = new NavigationPage { Content = new HomePage() }
 };
 window.Page = shell;
 ```

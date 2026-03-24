@@ -12,7 +12,7 @@ import ContentPageAsTabScreenshot from '/img/reference/controls/contentpage/cont
 
 # ContentPage
 
-`ContentPage` is the foundational screen building block for Avalonia apps. It holds a single root view, typically a layout panel, and integrates with the other page containers: `NavigationPage`, `TabbedPage`, and `DrawerPage`. Every screen in an app that uses the page navigation system is typically a `ContentPage` or a subclass of it.
+`ContentPage` is the foundational screen building block for Avalonia apps. It holds a single root view, typically a layout panel, and integrates with the other page containers: `NavigationPage`, `TabbedPage`, `DrawerPage`, and `CarouselPage`. Every screen in an app that uses the page navigation system is typically a `ContentPage` or a subclass of it.
 
 The class hierarchy is `ContentPage -> Page -> TemplatedControl`, which means it benefits from full Avalonia styling, theming, and data binding.
 
@@ -35,7 +35,7 @@ You will probably use these properties most often:
 
 | Property | Type | Default | Description |
 | -------- | ---- | ------- | ----------- |
-| `Content` | `object?` | `null` | The single root view displayed on the page. This is the XAML content property. Typically a layout panel such as `Grid`, `StackPanel`, or `ScrollView`. |
+| `Content` | `object?` | `null` | The single root view displayed on the page. This is the XAML content property. Typically a layout panel such as `Grid` or `StackPanel`. |
 | `ContentTemplate` | `IDataTemplate?` | `null` | Data template used to display `Content` when it is a data object rather than a control. |
 | `AutomaticallyApplySafeAreaPadding` | `bool` | `true` | When `true`, platform safe-area insets (notch, status bar, home indicator) are automatically applied as padding to the content presenter. Set to `false` for full-bleed designs such as maps or splash screens. |
 | `TopCommandBar` | `object?` | `null` | Content rendered in a command bar slot above the page content. Typically a `CommandBar`. Hidden automatically when `null`. |
@@ -51,6 +51,7 @@ Inherited from `Page` and available on all page types.
 | -------- | ---- | ------- | ----------- |
 | `Header` | `object?` | `null` | Text or custom view shown in the navigation bar or tab strip. Accepts a string or any Avalonia control. |
 | `Icon` | `object?` | `null` | Icon shown in the tab strip when hosted in a `TabbedPage`. Accepts a `Geometry`, `PathIcon`, `IImage`, or SVG path string. |
+| `IconTemplate` | `IDataTemplate?` | `null` | Data template used to display the `Icon` property. When set, the icon is rendered through a `ContentPresenter` using this template rather than relying on built-in icon type handling. |
 | `SafeAreaPadding` | `Thickness` | `default` | The safe-area insets currently active for this page, propagated by the parent page or platform. |
 | `Navigation` | `INavigation?` | `null` | Navigation service injected by the parent `NavigationPage`. `null` when the page is not inside a `NavigationPage`. |
 | `IsInNavigationPage` | `bool` | `false` | `true` while this page is hosted inside a `NavigationPage`. Useful to conditionally show or hide in-page back navigation controls. |
@@ -116,10 +117,10 @@ public partial class FeedPage : ContentPage
              x:Class="MyApp.HomePage"
              Header="Home">
 
-    <VerticalStackLayout Padding="20" Spacing="16">
+    <StackPanel Margin="20" Spacing="16">
         <TextBlock Text="Hello, Avalonia!" FontSize="24" />
         <Button Content="Go to Details" Click="OnGoToDetailsClick" />
-    </VerticalStackLayout>
+    </StackPanel>
 
 </ContentPage>
 ```
@@ -130,7 +131,7 @@ public partial class FeedPage : ContentPage
 var page = new ContentPage
 {
     Header = "Home",
-    Content = new VerticalStackLayout
+    Content = new StackPanel
     {
         Spacing = 16,
         Margin = new Thickness(20),
@@ -160,12 +161,12 @@ Set the page directly on a window, optionally wrapped in a `NavigationPage` for 
 window.Page = new MainPage();
 
 // With navigation support
-window.Page = new NavigationPage(new MainPage());
+window.Page = new NavigationPage { Content = new MainPage() };
 ```
 
 ### ContentPage with a Scrollable Layout
 
-Wrap the layout in a `ScrollView` when the content may be taller than the screen:
+Wrap the layout in a `ScrollViewer` when the content may be taller than the screen:
 
 ```xml
 <ContentPage xmlns="https://github.com/avaloniaui"
@@ -173,8 +174,8 @@ Wrap the layout in a `ScrollView` when the content may be taller than the screen
              x:Class="MyApp.ProfilePage"
              Header="Profile">
 
-    <ScrollView>
-        <VerticalStackLayout Padding="20" Spacing="12">
+    <ScrollViewer>
+        <StackPanel Margin="20" Spacing="12">
             <Image Source="avatar.png"
                    Width="80" Height="80"
                    HorizontalAlignment="Center" />
@@ -183,8 +184,8 @@ Wrap the layout in a `ScrollView` when the content may be taller than the screen
                        HorizontalAlignment="Center" />
             <TextBlock Text="{Binding Bio}"
                        TextWrapping="Wrap" />
-        </VerticalStackLayout>
-    </ScrollView>
+        </StackPanel>
+    </ScrollViewer>
 
 </ContentPage>
 ```
@@ -199,7 +200,7 @@ Wrap the layout in a `ScrollView` when the content may be taller than the screen
              Header="Sign In"
              x:DataType="vm:LoginViewModel">
 
-    <VerticalStackLayout Padding="32" Spacing="16" VerticalAlignment="Center">
+    <StackPanel Margin="32" Spacing="16" VerticalAlignment="Center">
         <TextBox Watermark="Email"
                  Text="{Binding Email}" />
         <TextBox Watermark="Password"
@@ -211,7 +212,7 @@ Wrap the layout in a `ScrollView` when the content may be taller than the screen
         <TextBlock Text="{Binding ErrorMessage}"
                    Foreground="Red"
                    IsVisible="{Binding HasError}" />
-    </VerticalStackLayout>
+    </StackPanel>
 
 </ContentPage>
 ```
@@ -247,9 +248,9 @@ Place a `CommandBar` or any other control in the `TopCommandBar` slot. The slot 
         </CommandBar>
     </ContentPage.TopCommandBar>
 
-    <ScrollView>
+    <ScrollViewer>
         <TextBox AcceptsReturn="True" Text="{Binding DocumentText}" />
-    </ScrollView>
+    </ScrollViewer>
 
 </ContentPage>
 ```

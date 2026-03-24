@@ -23,7 +23,8 @@ You will probably use these properties most often:
 | Property | Type | Default | Description |
 | -------- | ---- | ------- | ----------- |
 | `Pages` | `IEnumerable<Page>?` | `null` | The collection of child pages. This is the XAML content property. Supports any `IEnumerable<Page>`, including observable collections. |
-| `PageTemplate` | `IDataTemplate?` | `null` | Data template used to generate `Page` instances when `Pages` contains data objects rather than pages directly. |
+| `ItemsSource` | `IEnumerable?` | `null` | View-model collection. When set, takes precedence over `Pages` as the item source. Use together with `PageTemplate` to convert each item into a `Page`. |
+| `PageTemplate` | `IDataTemplate?` | `null` | Data template used to generate `Page` instances when the source contains data objects rather than pages directly. |
 | `TabPlacement` | `TabPlacement` | `Auto` | Position of the tab strip. See the `TabPlacement` values table below. |
 | `IsKeyboardNavigationEnabled` | `bool` | `true` | Enables arrow keys and Ctrl+Tab, Ctrl+Shift+Tab to switch tabs. |
 | `IsGestureEnabled` | `bool` | `false` | Enables swipe gestures to switch tabs. Off by default. |
@@ -52,13 +53,31 @@ Set on individual child `Page` instances to control tab enablement.
 
 ## Tab Icons
 
-The `Icon` property on each child `Page` controls the icon in the tab header. Accepted values:
+The `Icon` property on each child `Page` controls the icon in the tab header. `TabbedPage` passes `Icon` and `IconTemplate` from the page to the underlying `TabItem`, so the standard `Content`/`ContentTemplate` rendering applies.
+
+When no `IconTemplate` is set, the default handling accepts these values:
 
 - `Geometry`: rendered as a path shape.
-- `PathIcon`: the `Data` geometry is extracted and rendered as a path.
+- `PathIcon`: used directly as a one-to-one control mapping.
 - `DrawingImage` with a `GeometryDrawing`: the geometry is extracted.
 - `string`: parsed as an SVG path geometry string.
 - `IImage`: rendered as a bitmap image.
+
+Alternatively, set `IconTemplate` on the page to control how any icon data is rendered:
+
+```xml
+<ContentPage Header="Home">
+    <ContentPage.Icon>
+        <StreamGeometry>M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z</StreamGeometry>
+    </ContentPage.Icon>
+    <ContentPage.IconTemplate>
+        <DataTemplate DataType="Geometry">
+            <PathIcon Data="{Binding}" Width="20" Height="20" />
+        </DataTemplate>
+    </ContentPage.IconTemplate>
+    <!-- content -->
+</ContentPage>
+```
 
 ## Events
 
@@ -330,10 +349,10 @@ Combine a drawer navigation menu with tabbed content in the detail area:
 
     <DrawerPage.Drawer>
         <ContentPage Header="Menu">
-            <VerticalStackLayout Margin="12" Spacing="8">
+            <StackPanel Margin="12" Spacing="8">
                 <Button Content="Dashboard" Click="OnDashboardClick" />
                 <Button Content="Reports"   Click="OnReportsClick" />
-            </VerticalStackLayout>
+            </StackPanel>
         </ContentPage>
     </DrawerPage.Drawer>
 

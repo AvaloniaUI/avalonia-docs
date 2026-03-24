@@ -38,7 +38,8 @@ You will probably use these properties most often:
 | `DrawerPlacement` | `DrawerPlacement` | `Left` | Which edge the drawer slides in from. See the `DrawerPlacement` values table below. |
 | `DrawerHeader` | `object?` | `null` | Content rendered at the top of the drawer pane, above the main drawer content. |
 | `DrawerFooter` | `object?` | `null` | Content rendered at the bottom of the drawer pane, below the main drawer content. |
-| `DrawerIcon` | `object?` | `null` | Icon displayed in the drawer toggle button. Accepts a `Geometry`, `PathIcon`, `IImage`, or an SVG path string. `PathIcon` instances are cloned automatically for each slot. Other `Control` subtypes are not supported and will not render. |
+| `DrawerIcon` | `object?` | `null` | Icon data displayed in the drawer toggle button. Use together with `DrawerIconTemplate` to control rendering. When no template is provided, the default template handles `Geometry`, `PathIcon`, `IImage`, and SVG path strings. |
+| `DrawerIconTemplate` | `IDataTemplate?` | `null` | Data template used to render the `DrawerIcon` in each icon presenter slot. Each presenter independently materializes its own visual from this template. |
 | `DrawerBackground` | `IBrush?` | `null` | Background brush of the drawer pane. |
 | `DrawerHeaderBackground` | `IBrush?` | `null` | Background brush of the drawer header area. |
 | `DrawerHeaderForeground` | `IBrush?` | `null` | Foreground brush of the drawer header area. |
@@ -113,11 +114,11 @@ When `Content` is a `NavigationPage`, `DrawerPage` automatically:
 
     <DrawerPage.Drawer>
         <ContentPage Header="Menu">
-            <VerticalStackLayout Spacing="8" Margin="12">
+            <StackPanel Spacing="8" Margin="12">
                 <Button Content="Home"     Click="OnHomeClick" />
                 <Button Content="Profile"  Click="OnProfileClick" />
                 <Button Content="Settings" Click="OnSettingsClick" />
-            </VerticalStackLayout>
+            </StackPanel>
         </ContentPage>
     </DrawerPage.Drawer>
 
@@ -136,7 +137,7 @@ var drawerPage = new DrawerPage
     Drawer = new ContentPage
     {
         Header = "Menu",
-        Content = new VerticalStackLayout
+        Content = new StackPanel
         {
             Children =
             {
@@ -145,7 +146,7 @@ var drawerPage = new DrawerPage
             }
         }
     },
-    Content = new NavigationPage(new HomePage())
+    Content = new NavigationPage { Content = new HomePage() }
 };
 
 window.Page = drawerPage;
@@ -217,15 +218,17 @@ private void OnProfileClick(object? sender, RoutedEventArgs e)
     </DrawerPage.Drawer>
 
     <DrawerPage.DrawerHeader>
-        <StackPanel Background="#1E3A5F" Padding="16">
-            <TextBlock Text="My App"
-                       Foreground="White"
-                       FontSize="20"
-                       FontWeight="SemiBold" />
-            <TextBlock Text="user@example.com"
-                       Foreground="#AAD4F5"
-                       FontSize="13" />
-        </StackPanel>
+        <Border Background="#1E3A5F" Padding="16">
+            <StackPanel>
+                <TextBlock Text="My App"
+                           Foreground="White"
+                           FontSize="20"
+                           FontWeight="SemiBold" />
+                <TextBlock Text="user@example.com"
+                           Foreground="#AAD4F5"
+                           FontSize="13" />
+            </StackPanel>
+        </Border>
     </DrawerPage.DrawerHeader>
 
     <DrawerPage.DrawerFooter>
@@ -255,7 +258,7 @@ var drawerPage = new DrawerPage
     DrawerLayoutBehavior = DrawerLayoutBehavior.Split,
     DrawerLength = 240,
     Drawer = sidebarPage,
-    Content = new NavigationPage(new HomePage())
+    Content = new NavigationPage { Content = new HomePage() }
 };
 ```
 
@@ -305,7 +308,7 @@ var drawerPage = new DrawerPage
     CompactDrawerLength = 56,
     DrawerLength = 240,
     Drawer = navRailPage,
-    Content = new NavigationPage(new HomePage())
+    Content = new NavigationPage { Content = new HomePage() }
 };
 ```
 
@@ -434,15 +437,26 @@ private bool _isMenuOpen;
 
 ### Custom Drawer Icon
 
-Replace the default hamburger icon in the toggle button:
+Set `DrawerIcon` to a `Geometry` value and provide a `DrawerIconTemplate` so each icon presenter independently materializes its own visual:
 
 ```xml
 <DrawerPage>
     <DrawerPage.DrawerIcon>
-        <PathIcon Data="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" />
+        <StreamGeometry>M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z</StreamGeometry>
     </DrawerPage.DrawerIcon>
+    <DrawerPage.DrawerIconTemplate>
+        <DataTemplate DataType="Geometry">
+            <PathIcon Data="{Binding}" />
+        </DataTemplate>
+    </DrawerPage.DrawerIconTemplate>
     <!-- ... -->
 </DrawerPage>
+```
+
+Change the icon programmatically at runtime:
+
+```csharp
+drawerPage.DrawerIcon = Geometry.Parse("M4,8H8V4H4V8M10,20H14V16H10V20M4,20H8V16H4V20M4,14H8V10H4V14M10,14H14V10H10V14M16,4V8H20V4H16M10,8H14V4H10V8M16,14H20V10H16V14M16,20H20V16H16V20Z");
 ```
 
 ### Locked Drawer (Always Open)
@@ -462,8 +476,9 @@ drawerPage.DrawerBehavior = DrawerBehavior.Disabled;
 ### DrawerPage with a CrossFade Transition on the NavigationPage
 
 ```csharp
-var navPage = new NavigationPage(new HomePage())
+var navPage = new NavigationPage
 {
+    Content = new HomePage(),
     PageTransition = new CrossFade(TimeSpan.FromMilliseconds(250))
 };
 
