@@ -27,7 +27,7 @@ You will probably use these properties most often:
 | `ItemsPanel` | `ITemplate<Panel?>` | `VirtualizingCarouselPanel` | The container panel used to arrange items. See [ItemsControl](/controls/data-display/collections/itemscontrol) for details on customising the items panel. |
 | `AutoScrollToSelectedItem` | `bool` | `true` | Automatically scrolls to bring the selected item into view. |
 
-## Example
+## Examples
 
 This example has three images in the items collection, with buttons to move the display forwards and back. The buttons have click event handlers in the C# code-behind.
 
