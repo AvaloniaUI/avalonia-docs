@@ -31,7 +31,7 @@ You will probably use these properties most often:
 | `IsOpen` | `bool` | `false` | Whether the drawer pane is currently open. Bindable. Setting it to `true` when `DrawerBehavior` is `Disabled` is a no-op, and setting it to `false` when `DrawerBehavior` is `Locked` is a no-op. |
 | `DrawerLength` | `double` | `320` | Width, or height for top and bottom placement, of the drawer pane when fully open. |
 | `CompactDrawerLength` | `double` | `48` | Width, or height for `Top` and `Bottom` placement, of the visible compact rail strip in `CompactOverlay` and `CompactInline` layout modes. |
-| `DrawerBreakpointWidth` | `double` | `0` | Responsive breakpoint. When greater than `0` and the page width drops below this value, the layout switches to `Overlay` automatically regardless of `DrawerLayoutBehavior`. Applies to `Left` and `Right` placement only. Set to `0` to disable responsive switching. |
+| `DrawerBreakpointLength` | `double` | `0` | Responsive breakpoint. When greater than `0` and the page width drops below this value, the layout switches to `Overlay` automatically regardless of `DrawerLayoutBehavior`. Applies to `Left` and `Right` placement only. Set to `0` to disable responsive switching. |
 | `IsGestureEnabled` | `bool` | `true` | Enables swipe gestures to open and close the drawer. |
 | `DrawerBehavior` | `DrawerBehavior` | `Auto` | Controls the open and close behavior. See the `DrawerBehavior` values table below. |
 | `DrawerLayoutBehavior` | `DrawerLayoutBehavior` | `Overlay` | Controls the layout mode when `DrawerBehavior` is `Auto`. See the `DrawerLayoutBehavior` values table below. |
@@ -46,7 +46,7 @@ You will probably use these properties most often:
 | `DrawerFooterBackground` | `IBrush?` | `null` | Background brush of the drawer footer area. |
 | `DrawerFooterForeground` | `IBrush?` | `null` | Foreground brush of the drawer footer area. |
 | `BackdropBrush` | `IBrush?` | `null` | Brush rendered over the content area while the drawer is open in overlay mode. A semi-transparent brush creates a scrim effect. Hidden when `null`. |
-| `DisplayMode` | `SplitViewDisplayMode` | computed | Computed. The resolved display mode currently applied to the internal `SplitView`. Managed automatically by `DrawerBehavior`, `DrawerLayoutBehavior`, and `DrawerBreakpointWidth`. |
+| `DisplayMode` | `SplitViewDisplayMode` | computed | Computed. The resolved display mode currently applied to the internal `SplitView`. Managed automatically by `DrawerBehavior`, `DrawerLayoutBehavior`, and `DrawerBreakpointLength`. |
 | `HorizontalContentAlignment` | `HorizontalAlignment` | `Stretch` | Horizontal alignment of the main content. |
 | `VerticalContentAlignment` | `VerticalAlignment` | `Stretch` | Vertical alignment of the main content. |
 
@@ -54,7 +54,7 @@ You will probably use these properties most often:
 
 | Value | Description |
 | ----- | ----------- |
-| `Auto` | Default. Uses `DrawerLayoutBehavior` to determine the display mode. Respects `DrawerBreakpointWidth` for responsive switching. |
+| `Auto` | Default. Uses `DrawerLayoutBehavior` to determine the display mode. Respects `DrawerBreakpointLength` for responsive switching. |
 | `Flyout` | Always opens as an overlay, ignoring `DrawerLayoutBehavior`. |
 | `Locked` | Always open. Cannot be closed by the user or by setting `IsOpen = false`. |
 | `Disabled` | Always closed. The drawer toggle is hidden and gestures are blocked. Setting `IsOpen = true` is a no-op. |
@@ -316,7 +316,7 @@ var drawerPage = new DrawerPage
 
 <img src={DrawerPageCompactExpandedScreenshot} alt="" />
 
-### Responsive Layout with DrawerBreakpointWidth
+### Responsive Layout with DrawerBreakpointLength
 
 Switch automatically between a split sidebar on wide windows and an overlay flyout on narrow windows. When the page width drops below the breakpoint the drawer closes and switches to `Overlay`. When the width grows back above it, the configured layout is restored and the drawer opens automatically.
 
@@ -324,7 +324,7 @@ This applies to `Left` and `Right` placement only.
 
 ```xml
 <DrawerPage DrawerLayoutBehavior="Split"
-            DrawerBreakpointWidth="720"
+            DrawerBreakpointLength="720"
             DrawerLength="240">
     <!-- drawer and content -->
 </DrawerPage>
@@ -334,7 +334,7 @@ This applies to `Left` and `Right` placement only.
 var drawerPage = new DrawerPage
 {
     DrawerLayoutBehavior = DrawerLayoutBehavior.Split,
-    DrawerBreakpointWidth = 720, // overlay when width < 720 px, split when >= 720 px
+    DrawerBreakpointLength = 720, // overlay when width < 720 px, split when >= 720 px
     Drawer = menuPage,
     Content = mainPage
 };
