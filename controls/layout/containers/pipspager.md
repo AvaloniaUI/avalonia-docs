@@ -5,12 +5,12 @@ description: Reference for the PipsPager control in Avalonia, which displays int
 doc-type: reference
 ---
 
-import PipsPagerDefaultScreenshot from '/img/reference/controls/pipspager/pipspager-default.png';
-import PipsPagerCarouselScreenshot from '/img/reference/controls/pipspager/pipspager-carousel.png';
-import PipsPagerLargeCollectionScreenshot from '/img/reference/controls/pipspager/pipspager-large-collection.png';
-import PipsPagerCustomColorsScreenshot from '/img/reference/controls/pipspager/pipspager-custom-colors.png';
-import PipsPagerCustomButtonsScreenshot from '/img/reference/controls/pipspager/pipspager-custom-buttons.png';
-import PipsPagerPillTemplateScreenshot from '/img/reference/controls/pipspager/pipspager-pill-template.png';
+import PipsPagerDefaultScreenshot from '/img/controls/pipspager/pipspager-default.png';
+import PipsPagerCarouselScreenshot from '/img/controls/pipspager/pipspager-carousel.png';
+import PipsPagerLargeCollectionScreenshot from '/img/controls/pipspager/pipspager-large-collection.png';
+import PipsPagerCustomColorsScreenshot from '/img/controls/pipspager/pipspager-custom-colors.png';
+import PipsPagerCustomButtonsScreenshot from '/img/controls/pipspager/pipspager-custom-buttons.png';
+import PipsPagerPillTemplateScreenshot from '/img/controls/pipspager/pipspager-pill-template.png';
 
 # PipsPager
 
@@ -66,7 +66,7 @@ Override these resource keys on the `PipsPager` or an ancestor to customize pip 
 | `PipsPagerSelectionIndicatorForegroundPointerOver` | Pip color on pointer hover. |
 | `PipsPagerSelectionIndicatorForegroundPressed` | Pip color when pressed. |
 
-## Example
+## Examples
 
 ### Basic PipsPager
 
@@ -330,12 +330,7 @@ pager.IsPreviousButtonVisible = false;
 pager.IsNextButtonVisible = false;
 ```
 
-## More Information
+## See also
 
-:::info
-For the complete API documentation about this control, see [here](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_PipsPager).
-:::
-
-:::info
-View the source code on _GitHub_ [`PipsPager.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/PipsPager/PipsPager.cs)
-:::
+- [API reference](/api/avalonia/controls/pipspager)
+- [Source code](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/PipsPager/PipsPager.cs)
