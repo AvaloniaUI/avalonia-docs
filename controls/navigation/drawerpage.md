@@ -1,16 +1,17 @@
 ---
 title: DrawerPage
-description: REFERENCE - Built-in Controls
+description: '`DrawerPage` combines a sliding drawer pane with a main content area. The drawer can open as a flyout overlay, sit permanently alongside the content as a split sidebar, or render as a compact navigation rail.'
+doc-type: reference
 ---
 
-import DrawerPageClosedScreenshot from '/img/reference/controls/drawerpage/drawerpage-closed.png';
-import DrawerPageOpenScreenshot from '/img/reference/controls/drawerpage/drawerpage-open.png';
-import DrawerPageHeaderFooterScreenshot from '/img/reference/controls/drawerpage/drawerpage-header-footer.png';
-import DrawerPageCompactCollapsedScreenshot from '/img/reference/controls/drawerpage/drawerpage-compact-collapsed.png';
-import DrawerPageCompactExpandedScreenshot from '/img/reference/controls/drawerpage/drawerpage-compact-expanded.png';
-import DrawerPageSplitScreenshot from '/img/reference/controls/drawerpage/drawerpage-split.png';
-import DrawerPageRightScreenshot from '/img/reference/controls/drawerpage/drawerpage-right.png';
-import DrawerPageRtlScreenshot from '/img/reference/controls/drawerpage/drawerpage-rtl.png';
+import DrawerPageClosedScreenshot from '/img/controls/drawerpage/drawerpage-closed.png';
+import DrawerPageOpenScreenshot from '/img/controls/drawerpage/drawerpage-open.png';
+import DrawerPageHeaderFooterScreenshot from '/img/controls/drawerpage/drawerpage-header-footer.png';
+import DrawerPageCompactCollapsedScreenshot from '/img/controls/drawerpage/drawerpage-compact-collapsed.png';
+import DrawerPageCompactExpandedScreenshot from '/img/controls/drawerpage/drawerpage-compact-expanded.png';
+import DrawerPageSplitScreenshot from '/img/controls/drawerpage/drawerpage-split.png';
+import DrawerPageRightScreenshot from '/img/controls/drawerpage/drawerpage-right.png';
+import DrawerPageRtlScreenshot from '/img/controls/drawerpage/drawerpage-rtl.png';
 
 # DrawerPage
 
@@ -46,7 +47,7 @@ You will probably use these properties most often:
 | `DrawerFooterBackground` | `IBrush?` | `null` | Background brush of the drawer footer area. |
 | `DrawerFooterForeground` | `IBrush?` | `null` | Foreground brush of the drawer footer area. |
 | `BackdropBrush` | `IBrush?` | `null` | Brush rendered over the content area while the drawer is open in overlay mode. A semi-transparent brush creates a scrim effect. Hidden when `null`. |
-| `DisplayMode` | `SplitViewDisplayMode` | computed | Computed. The resolved display mode currently applied to the internal `SplitView`. Managed automatically by `DrawerBehavior`, `DrawerLayoutBehavior`, and `DrawerBreakpointLength`. |
+| `DisplayMode` | `SplitViewDisplayMode` | computed | Read-only. The resolved display mode currently applied to the internal `SplitView`. Managed automatically by `DrawerBehavior`, `DrawerLayoutBehavior`, and `DrawerBreakpointLength`. |
 | `HorizontalContentAlignment` | `HorizontalAlignment` | `Stretch` | Horizontal alignment of the main content. |
 | `VerticalContentAlignment` | `VerticalAlignment` | `Stretch` | Vertical alignment of the main content. |
 
@@ -103,7 +104,7 @@ When `Content` is a `NavigationPage`, `DrawerPage` automatically:
 - Shows a hamburger toggle button in the navigation bar at the root of the `NavigationPage` stack.
 - Hides the hamburger button when the user navigates deeper into the stack, where the back button takes its place.
 
-## Example
+## Examples
 
 ### Basic DrawerPage in XAML
 
@@ -491,12 +492,7 @@ var drawerPage = new DrawerPage
 };
 ```
 
-## More Information
+## See also
 
-:::info
-For the complete API documentation about this control, see [here](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_DrawerPage).
-:::
-
-:::info
-View the source code on _GitHub_ [`DrawerPage.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Page/DrawerPage.cs)
-:::
+- [API reference](/api/avalonia/controls/drawerpage)
+- [Source code](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Page/DrawerPage.cs)

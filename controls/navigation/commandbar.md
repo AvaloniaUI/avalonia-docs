@@ -1,14 +1,15 @@
 ---
 title: CommandBar
-description: REFERENCE - Built-in Controls
+description: '`CommandBar` is a toolbar that displays a row of command buttons.'
+doc-type: reference
 ---
 
-import CommandBarLabelBottomScreenshot from '/img/reference/controls/commandbar/commandbar-label-bottom.png';
-import CommandBarLabelRightScreenshot from '/img/reference/controls/commandbar/commandbar-label-right.png';
-import CommandBarLabelCollapsedScreenshot from '/img/reference/controls/commandbar/commandbar-label-collapsed.png';
-import CommandBarSecondaryCommandsScreenshot from '/img/reference/controls/commandbar/commandbar-secondary-commands.png';
-import CommandBarContentScreenshot from '/img/reference/controls/commandbar/commandbar-content.png';
-import CommandBarToggleButtonScreenshot from '/img/reference/controls/commandbar/commandbar-toggle-button.png';
+import CommandBarLabelBottomScreenshot from '/img/controls/commandbar/commandbar-label-bottom.png';
+import CommandBarLabelRightScreenshot from '/img/controls/commandbar/commandbar-label-right.png';
+import CommandBarLabelCollapsedScreenshot from '/img/controls/commandbar/commandbar-label-collapsed.png';
+import CommandBarSecondaryCommandsScreenshot from '/img/controls/commandbar/commandbar-secondary-commands.png';
+import CommandBarContentScreenshot from '/img/controls/commandbar/commandbar-content.png';
+import CommandBarToggleButtonScreenshot from '/img/controls/commandbar/commandbar-toggle-button.png';
 
 # CommandBar
 
@@ -89,7 +90,7 @@ The items in a `CommandBar` implement the `ICommandBarElement` interface. The bu
 
 `AppBarSeparator` draws a visual divider between groups of commands. It has no label or icon. It implements `ICommandBarElement` so it can be placed in `PrimaryCommands` or `SecondaryCommands`.
 
-## Example
+## Examples
 
 ### Basic CommandBar in XAML
 
@@ -363,12 +364,7 @@ private void OnBoldChanged(object? sender, RoutedEventArgs e)
 
 <img src={CommandBarToggleButtonScreenshot} alt="" />
 
-## More Information
+## See also
 
-:::info
-For the complete API documentation about this control, see [here](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_CommandBar).
-:::
-
-:::info
-View the source code on _GitHub_ [`CommandBar.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/CommandBar/CommandBar.cs)
-:::
+- [API reference](/api/avalonia/controls/commandbar)
+- [Source code](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/CommandBar/CommandBar.cs)

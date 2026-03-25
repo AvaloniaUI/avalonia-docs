@@ -1,20 +1,21 @@
 ---
 title: ContentPage
-description: REFERENCE - Built-in Controls
+description: '`ContentPage` is the foundational screen building block for Avalonia apps. It holds a single root view and integrates with the other page containers.'
+doc-type: reference
 ---
 
-import ContentPageInNavigationScreenshot from '/img/reference/controls/contentpage/contentpage-in-navigationpage.png';
-import ContentPageStandaloneScreenshot from '/img/reference/controls/contentpage/contentpage-standalone.png';
-import ContentPageTopCommandBarScreenshot from '/img/reference/controls/contentpage/contentpage-top-commandbar.png';
-import ContentPageBottomCommandBarScreenshot from '/img/reference/controls/contentpage/contentpage-bottom-commandbar.png';
-import ContentPageSafeAreaDisabledScreenshot from '/img/reference/controls/contentpage/contentpage-safe-area-disabled.png';
-import ContentPageAsTabScreenshot from '/img/reference/controls/contentpage/contentpage-as-tab.png';
+import ContentPageInNavigationScreenshot from '/img/controls/contentpage/contentpage-in-navigationpage.png';
+import ContentPageStandaloneScreenshot from '/img/controls/contentpage/contentpage-standalone.png';
+import ContentPageTopCommandBarScreenshot from '/img/controls/contentpage/contentpage-top-commandbar.png';
+import ContentPageBottomCommandBarScreenshot from '/img/controls/contentpage/contentpage-bottom-commandbar.png';
+import ContentPageSafeAreaDisabledScreenshot from '/img/controls/contentpage/contentpage-safe-area-disabled.png';
+import ContentPageAsTabScreenshot from '/img/controls/contentpage/contentpage-as-tab.png';
 
 # ContentPage
 
 `ContentPage` is the foundational screen building block for Avalonia apps. It holds a single root view, typically a layout panel, and integrates with the other page containers: `NavigationPage`, `TabbedPage`, `DrawerPage`, and `CarouselPage`. Every screen in an app that uses the page navigation system is typically a `ContentPage` or a subclass of it.
 
-The class hierarchy is `ContentPage -> Page -> TemplatedControl`, which means it benefits from full Avalonia styling, theming, and data binding.
+The class hierarchy is `TemplatedControl -> Page -> ContentPage`, which means it benefits from full Avalonia styling, theming, and data binding.
 
 ## How the Header Displays
 
@@ -107,7 +108,7 @@ public partial class FeedPage : ContentPage
 
 `NavigatedTo` and `NavigatedFrom` are different from Avalonia's `Loaded` and `Unloaded` events. `Loaded` fires once when the control joins the visual tree. `NavigatedTo` fires every time the page becomes the top page, including when the user navigates back to it after visiting a child page. Use `NavigatedTo` for data that must be refreshed on every visit.
 
-## Example
+## Examples
 
 ### Minimal ContentPage in XAML
 
@@ -394,12 +395,8 @@ var homePage = new ContentPage
 
 <img src={ContentPageAsTabScreenshot} alt="" />
 
-## More Information
+## See also
 
-:::info
-For the complete API documentation about this control, see [here](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_ContentPage).
-:::
-
-:::info
-View the source code on _GitHub_ [`ContentPage.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Page/ContentPage.cs) and [`Page.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Page/Page.cs)
-:::
+- [API reference](/api/avalonia/controls/contentpage)
+- [`ContentPage.cs` source code](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Page/ContentPage.cs)
+- [`Page.cs` source code](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Page/Page.cs)

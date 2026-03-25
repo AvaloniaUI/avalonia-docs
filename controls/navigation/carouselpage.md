@@ -1,16 +1,27 @@
 ---
 title: CarouselPage
-description: REFERENCE - Built-in Controls
+description: '`CarouselPage` displays a collection of pages in a horizontally scrollable carousel.'
+doc-type: reference
 ---
 
-import CarouselPageBasicScreenshot from '/img/reference/controls/carouselpage/carouselpage-basic.png';
-import CarouselPageDataTemplateScreenshot from '/img/reference/controls/carouselpage/carouselpage-data-template.png';
+import CarouselPageBasicScreenshot from '/img/controls/carouselpage/carouselpage-basic.png';
+import CarouselPageDataTemplateScreenshot from '/img/controls/carouselpage/carouselpage-data-template.png';
 
 # CarouselPage
 
 `CarouselPage` displays a collection of pages in a horizontally scrollable carousel. Users swipe or use arrow keys to move between pages. An optional page transition animates the change.
 
-`CarouselPage` extends `SelectingMultiPage`, which extends `MultiPage`. This inheritance chain provides the `Pages` collection, `ItemsSource`, `PageTemplate`, `SelectedIndex`, `SelectedPage`, `CurrentPage`, and the `SelectionChanged`, `PagesChanged`, and `CurrentPageChanged` events.
+`CarouselPage` extends `SelectingMultiPage`, which extends `MultiPage`. This inheritance chain provides:
+
+- `Pages` collection
+- `ItemsSource`
+- `PageTemplate`
+- `SelectedIndex`
+- `SelectedPage`
+- `CurrentPage`
+- `SelectionChanged` event
+- `PagesChanged` event
+- `CurrentPageChanged` event
 
 ## Useful Properties
 
@@ -23,7 +34,7 @@ You will probably use these properties most often:
 | `PageTemplate` | `IDataTemplate?` | `DefaultPageDataTemplate` | Data template used to generate `Page` instances when the source contains data objects rather than pages directly. |
 | `PageTransition` | `IPageTransition?` | `null` | Animated transition played when the selected page changes. |
 | `IsGestureEnabled` | `bool` | `true` | Enables swipe and scroll-wheel gestures to navigate between pages. |
-| `IsKeyboardNavigationEnabled` | `bool` | `true` | Enables arrow keys, Home, and End to navigate between pages. |
+| `IsKeyboardNavigationEnabled` | `bool` | `true` | Enables arrow, Home, and End keys to navigate between pages. |
 | `ItemsPanel` | `ITemplate<Panel?>` | `VirtualizingCarouselPanel` | The panel template used to arrange page items inside the underlying `Carousel`. |
 | `SelectedIndex` | `int` | `-1` | Zero-based index of the currently selected page. |
 | `SelectedPage` | `Page?` | `null` | Read-only. The currently selected page. |
@@ -43,7 +54,7 @@ Navigation lifecycle events (`NavigatedTo`, `Navigating`, `NavigatedFrom`) fire 
 When `IsKeyboardNavigationEnabled` is `true`:
 
 - Left and right arrow keys move to the previous and next page. RTL layouts reverse the direction.
-- Up and down arrow keys also move between pages.
+- Up arrow moves to the previous page. Down arrow moves to the next page.
 - `Home` jumps to the first page. `End` jumps to the last page.
 
 ## Gesture Navigation
@@ -53,7 +64,7 @@ When `IsGestureEnabled` is `true`:
 - Swipe left or right to move between pages.
 - Mouse scroll wheel moves between pages. RTL layouts reverse the direction.
 
-## Example
+## Examples
 
 ### Basic CarouselPage in XAML
 
@@ -311,12 +322,7 @@ if (pages.Count > 1)
     pages.RemoveAt(pages.Count - 1);
 ```
 
-## More Information
+## See also
 
-:::info
-For the complete API documentation about this control, see [here](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_CarouselPage).
-:::
-
-:::info
-View the source code on _GitHub_ [`CarouselPage.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Page/CarouselPage.cs)
-:::
+- [API reference](/api/avalonia/controls/carouselpage)
+- [Source code](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Page/CarouselPage.cs)

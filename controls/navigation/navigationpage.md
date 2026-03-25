@@ -1,23 +1,24 @@
 ---
 title: NavigationPage
-description: REFERENCE - Built-in Controls
+description: '`NavigationPage` provides stack-based page navigation. It includes a navigation bar, a back button, and optional page-specific command bars.'
+doc-type: reference
 ---
 
-import NavigationPageRootScreenshot from '/img/reference/controls/navigationpage/navigationpage-root.png';
-import NavigationPagePushedScreenshot from '/img/reference/controls/navigationpage/navigationpage-pushed.png';
-import NavigationPageCustomBackScreenshot from '/img/reference/controls/navigationpage/navigationpage-custom-back-button.png';
-import NavigationPageNoNavbarScreenshot from '/img/reference/controls/navigationpage/navigationpage-no-navbar.png';
-import NavigationPageOverlayBarScreenshot from '/img/reference/controls/navigationpage/navigationpage-overlay-bar.png';
-import NavigationPageTopCommandBarScreenshot from '/img/reference/controls/navigationpage/navigationpage-top-commandbar.png';
-import NavigationPageAppearanceScreenshot from '/img/reference/controls/navigationpage/navigationpage-appearance.png';
-import NavigationPageModalScreenshot from '/img/reference/controls/navigationpage/navigationpage-modal.png';
-import NavigationPageDrawerIntegrationScreenshot from '/img/reference/controls/navigationpage/navigationpage-drawer-integration.png';
+import NavigationPageRootScreenshot from '/img/controls/navigationpage/navigationpage-root.png';
+import NavigationPagePushedScreenshot from '/img/controls/navigationpage/navigationpage-pushed.png';
+import NavigationPageCustomBackScreenshot from '/img/controls/navigationpage/navigationpage-custom-back-button.png';
+import NavigationPageNoNavbarScreenshot from '/img/controls/navigationpage/navigationpage-no-navbar.png';
+import NavigationPageOverlayBarScreenshot from '/img/controls/navigationpage/navigationpage-overlay-bar.png';
+import NavigationPageTopCommandBarScreenshot from '/img/controls/navigationpage/navigationpage-top-commandbar.png';
+import NavigationPageAppearanceScreenshot from '/img/controls/navigationpage/navigationpage-appearance.png';
+import NavigationPageModalScreenshot from '/img/controls/navigationpage/navigationpage-modal.png';
+import NavigationPageDrawerIntegrationScreenshot from '/img/controls/navigationpage/navigationpage-drawer-integration.png';
 
 # NavigationPage
 
 `NavigationPage` provides stack-based navigation. Pages are pushed onto and popped off the stack through the `INavigation` interface. A navigation bar is rendered at the top of the page by default, showing the current page title, a back button when the stack depth is greater than 1, and optional command bars contributed by child pages.
 
-`NavigationPage` implements `INavigation` directly, so the navigation API is available both through `Page.Navigation` on child pages and through a direct reference to the `NavigationPage` instance.
+`NavigationPage` implements `INavigation` directly. The navigation API is available either through `Page.Navigation` on child pages, or through a direct reference to the `NavigationPage` instance.
 
 ## Navigation Bar Layout
 
@@ -55,12 +56,12 @@ Set these on individual child `Page` instances to control per-page navigation ba
 
 | Property | Type | Default | Description |
 | -------- | ---- | ------- | ----------- |
-| `NavigationPage.HasNavigationBar` | `bool` | `true` | Hides or shows the navigation bar for a specific page. |
-| `NavigationPage.HasBackButton` | `bool` | `true` | Hides or shows the back button for a specific page. |
-| `NavigationPage.IsBackButtonEnabled` | `bool` | `true` | Enables or disables the back button for a specific page. |
+| `NavigationPage.HasNavigationBar` | `bool` | `true` | Shows the navigation bar for a specific page. |
+| `NavigationPage.HasBackButton` | `bool` | `true` | Shows the back button for a specific page. |
+| `NavigationPage.IsBackButtonEnabled` | `bool` | `true` | Enables the back button for a specific page. |
 | `NavigationPage.BackButtonContent` | `object?` | `null` | Custom content rendered inside the back button for a specific page. |
 | `NavigationPage.TopCommandBar` | `Control?` | `null` | A control rendered in the right zone of the navigation bar when that page is active. |
-| `NavigationPage.BottomCommandBar` | `Control?` | `null` | A control rendered in a command bar area below the page content. |
+| `NavigationPage.BottomCommandBar` | `Control?` | `null` | A control rendered in a command bar area below the page content when that page is active. |
 | `NavigationPage.BarLayoutBehavior` | `BarLayoutBehavior?` | `null` | Overrides how the navigation bar is laid out for a specific page. |
 | `NavigationPage.BarHeightOverride` | `double?` | `null` | Overrides `BarHeight` for a specific page. |
 
@@ -82,15 +83,15 @@ Navigation is performed through the `INavigation` interface, accessible via `Pag
 | `PopAsync()` | Pops the top page with the configured `PageTransition`. |
 | `PopAsync(transition)` | Pops with a specific transition. Pass `null` for no animation. |
 | `PopToRootAsync()` | Pops all pages down to the root. |
-| `PopToRootAsync(transition)` | Same, with a specific transition. |
+| `PopToRootAsync(transition)` | Pops all pages down to the root, with a specific transition. |
 | `PopToPageAsync(page)` | Pops all pages above the specified page. |
-| `PopToPageAsync(page, transition)` | Same, with a specific transition. |
+| `PopToPageAsync(page, transition)` | Pops all pages above the specified page, with a specific transition. |
 | `ReplaceAsync(page)` | Replaces the current top page with a new one. |
-| `ReplaceAsync(page, transition)` | Same, with a specific transition. |
+| `ReplaceAsync(page, transition)` | Replaces the current top page with a new one, with a specific transition. |
 | `InsertPage(page, before)` | Inserts a page immediately before another in the stack, without animation. |
 | `RemovePage(page)` | Removes a specific page from the stack, without animation. |
 | `PushModalAsync(page)` | Presents a page modally, covering the entire `NavigationPage`. |
-| `PushModalAsync(page, transition)` | Presents modally with a specific transition. |
+| `PushModalAsync(page, transition)` | Presents a page modally with a specific transition. |
 | `PopModalAsync()` | Dismisses the top modal page. |
 | `PopModalAsync(transition)` | Dismisses the top modal with a specific transition. |
 | `PopAllModalsAsync()` | Dismisses all modal pages. |
@@ -114,7 +115,7 @@ The system back button automatically calls `PopAsync()` when `StackDepth > 1`.
 | `ModalPushed` | `ModalPushedEventArgs` | Raised after a modal page is presented. `args.Modal` is the modal page. |
 | `ModalPopped` | `ModalPoppedEventArgs` | Raised after a modal page is dismissed. `args.Modal` is the page that was dismissed. |
 
-## Example
+## Examples
 
 ### Basic NavigationPage in XAML
 
@@ -362,12 +363,7 @@ window.Page = shell;
 navPage.IsGestureEnabled = false;
 ```
 
-## More Information
+## See also
 
-:::info
-For the complete API documentation about this control, see [here](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_NavigationPage).
-:::
-
-:::info
-View the source code on _GitHub_ [`NavigationPage.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Page/NavigationPage.cs)
-:::
+- [API reference](/api/avalonia/controls/navigationpage)
+- [Source code](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Page/NavigationPage.cs)

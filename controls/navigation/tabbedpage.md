@@ -1,20 +1,31 @@
 ---
 title: TabbedPage
-description: REFERENCE - Built-in Controls
+description: '`TabbedPage` displays a collection of pages through a tab strip. Each child `Page` becomes one tab.'
+doc-type: reference
 ---
 
-import TabbedPageBottomScreenshot from '/img/reference/controls/tabbedpage/tabbedpage-bottom.png';
-import TabbedPageIconsScreenshot from '/img/reference/controls/tabbedpage/tabbedpage-icons.png';
-import TabbedPageTopScreenshot from '/img/reference/controls/tabbedpage/tabbedpage-top.png';
-import TabbedPageLeftScreenshot from '/img/reference/controls/tabbedpage/tabbedpage-left.png';
-import TabbedPageRightScreenshot from '/img/reference/controls/tabbedpage/tabbedpage-right.png';
-import TabbedPageInDrawerPageScreenshot from '/img/reference/controls/tabbedpage/tabbedpage-in-drawerpage.png';
+import TabbedPageBottomScreenshot from '/img/controls/tabbedpage/tabbedpage-bottom.png';
+import TabbedPageIconsScreenshot from '/img/controls/tabbedpage/tabbedpage-icons.png';
+import TabbedPageTopScreenshot from '/img/controls/tabbedpage/tabbedpage-top.png';
+import TabbedPageLeftScreenshot from '/img/controls/tabbedpage/tabbedpage-left.png';
+import TabbedPageRightScreenshot from '/img/controls/tabbedpage/tabbedpage-right.png';
+import TabbedPageInDrawerPageScreenshot from '/img/controls/tabbedpage/tabbedpage-in-drawerpage.png';
 
 # TabbedPage
 
 `TabbedPage` displays a collection of pages through a tab strip. Each child `Page` becomes one tab. The tab header is built from the page's `Header` property for the label and its `Icon` property for the icon. The tab strip position adapts to the target platform by default.
 
-`TabbedPage` extends `SelectingMultiPage`, which extends `MultiPage`. This inheritance chain provides the `Pages` collection, `ItemsSource`, `PageTemplate`, `SelectedIndex`, `SelectedPage`, `CurrentPage`, and the `SelectionChanged`, `PagesChanged`, and `CurrentPageChanged` events.
+`TabbedPage` extends `SelectingMultiPage`, which extends `MultiPage`. This inheritance chain provides:
+
+- `Pages` collection
+- `ItemsSource`
+- `PageTemplate`
+- `SelectedIndex`
+- `SelectedPage`
+- `CurrentPage`
+- `SelectionChanged` event
+- `PagesChanged` event
+- `CurrentPageChanged` event
 
 ## Useful Properties
 
@@ -99,7 +110,7 @@ When `IsKeyboardNavigationEnabled` is `true`:
 
 Disabled tabs (via `IsTabEnabled = false`) are always skipped.
 
-## Example
+## Examples
 
 ### Basic TabbedPage in XAML
 
@@ -370,12 +381,7 @@ Combine a drawer navigation menu with tabbed content in the detail area:
 
 <img src={TabbedPageInDrawerPageScreenshot} alt="" />
 
-## More Information
+## See also
 
-:::info
-For the complete API documentation about this control, see [here](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_TabbedPage).
-:::
-
-:::info
-View the source code on _GitHub_ [`TabbedPage.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Page/TabbedPage.cs)
-:::
+- [API reference](/api/avalonia/controls/tabbedpage)
+- [Source code](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Page/TabbedPage.cs)
