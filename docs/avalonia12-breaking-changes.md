@@ -383,6 +383,34 @@ Example:
 
 PR: [#20789](https://github.com/AvaloniaUI/Avalonia/pull/20789)
 
+
+## Focus improvements
+
+The type of the event arguments for the `InputElement.GotFocus` and `InputElement.LostFocus` events has been changed to the new `FocusChangedEventArgs` class. This type provides more information about the previous and currently focused elements.
+
+Update your event handlers accordingly.
+
+Example:
+```diff
+-private void TextBox_GotFocus(object? sender, GotFocusEventArgs e)
++private void TextBox_GotFocus(object? sender, FocusChangedEventArgs e)
+
+-private void TextBox_LostFocus(object? sender, RoutedEventArgs e)
++private void TextBox_LostFocus(object? sender, FocusChangedEventArgs e)
+```
+
+All focus handling is now managed by the `FocusManager` class and `IFocusManager` interface. Usages of `KeyboardNavigationHandler.GetNext` need to be replaced with `FocusManager.GetNextElement`.
+
+PR: [#20859](https://github.com/AvaloniaUI/Avalonia/pull/20859), [#18647](https://github.com/AvaloniaUI/Avalonia/pull/18647), [#20930](https://github.com/AvaloniaUI/Avalonia/pull/20930)
+
+
+## Animations are stopped on invisible controls
+
+For efficiency, animations no longer tick when their corresponding control is hidden, resulting in improved CPU usage in several situations.
+
+PR: [#20820](https://github.com/AvaloniaUI/Avalonia/pull/20820)
+
+
 ## Windows
 
 ### Direct2D1 support removed
@@ -594,7 +622,7 @@ See [`TopLevel` changes](#toplevel-changes) for context.
 | `LayoutManager` class | `ILayoutManager` | [#20624](https://github.com/AvaloniaUI/Avalonia/pull/20624) |
 | `TopLevel.PlatformSettings` property | `VisualExtensions.GetPlatformSettings` | [#20624](https://github.com/AvaloniaUI/Avalonia/pull/20624) |
 | `TopLevel.PointerOverElement` property | Remove usages | [#20624](https://github.com/AvaloniaUI/Avalonia/pull/20624) |
-| `TopLevel.StartRendering/StopRendering` | `Embedding.StartRendering/StopRendering` | [#20624](https://github.com/AvaloniaUI/Avalonia/pull/20624) |
+| `TopLevel.StartRendering/StopRendering` | `EmbeddableControlRoot.StartRendering/StopRendering` | [#20624](https://github.com/AvaloniaUI/Avalonia/pull/20624) |
 | `VisualExtensions.GetVisualRoot` method | `GetPresentationSource` + `IPresentationSource.RootVisual` | [#20624](https://github.com/AvaloniaUI/Avalonia/pull/20624) |
 
 ### Window decorations
@@ -625,6 +653,15 @@ See [Gesture events moved](#gesture-events-moved) for context.
 | Removed member | Replacement | PR |
 |---|---|---|
 | `Gestures` class (all attached events) | Events on `InputElement` | [#20789](https://github.com/AvaloniaUI/Avalonia/pull/20789) |
+
+### Focus handling
+
+See [Focus improvements](#focus-improvements) for context.
+
+| Removed member | Replacement | PR |
+|---|---|---|
+| `GotFocusEventArgs` class | `FocusChangedEventArgs` | [#20859](https://github.com/AvaloniaUI/Avalonia/pull/20859) |
+| `KeyboardNavigationHandler` class | `FocusManager` | [#18647](https://github.com/AvaloniaUI/Avalonia/pull/18647) |
 
 ### Other specific removals
 
