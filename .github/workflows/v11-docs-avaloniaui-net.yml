@@ -59,10 +59,19 @@ jobs:
           RCLONE_CONFIG_SCALEWAY_REGION: fr-par
           RCLONE_CONFIG_SCALEWAY_ACL: public-read
         run: |
-          rclone sync build/assets/ scaleway:v11.docs.avaloniaui.net/assets/ \
-            --header-upload "Cache-Control: public, max-age=31536000, immutable" \
-            --s3-acl public-read \
-            --verbose
+          for rel in \
+            "assets/" \
+            "ru/assets/" \
+            "zh-Hans/assets/"
+          do
+            src="build/$rel"
+            dest="scaleway:v11.docs.avaloniaui.net/$rel"
+
+            rclone sync "$src" "$dest" \
+              --header-upload "Cache-Control: public, max-age=31536000, immutable" \
+              --s3-acl public-read \
+              --verbose
+          done
 
       - name: Upload remaining files (short cache)
         if: github.ref == 'refs/heads/v11-main' && github.event_name != 'pull_request'
