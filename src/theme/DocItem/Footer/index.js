@@ -4,8 +4,6 @@ import {ThemeClassNames} from '@docusaurus/theme-common';
 import {useDoc} from '@docusaurus/plugin-content-docs/client';
 import TagsListInline from '@theme/TagsListInline';
 import EditMetaRow from '@theme/EditMetaRow';
-import Footer from '@theme-original/DocItem/Footer';
-import Comments from "@site/src/components/Comments";
 
 export default function DocItemFooter() {
   const {metadata} = useDoc();
@@ -41,7 +39,6 @@ export default function DocItemFooter() {
             lastUpdatedAt={lastUpdatedAt}
             lastUpdatedBy={lastUpdatedBy}
           />
-          <Comments />
         </>
       )}
     </footer>
