@@ -1,20 +1,14 @@
 ---
 id: swipe-gesture-recognizer
-title: SwipeGestureRecognizer
-description: Reference for the SwipeGestureRecognizer gesture recognizer in Avalonia UI, which detects swipe and flick gestures for discrete paging interactions.
-doc-type: reference
+title: Swipe
 ---
 
-# SwipeGestureRecognizer
+A gesture recognizer that tracks swipe gestures for discrete paging interactions. `SwipeGestureRecognizer` detects when a user rapidly drags a pointer in a single direction, providing per-event velocity data that enables speed-sensitive transitions such as carousel page changes. Unlike `ScrollGestureRecognizer`, it does not include inertia or continuous scrolling physics.
 
-A gesture recognizer that tracks swipe gestures. This can be attached to a control to detect when a user rapidly drags a pointer in a single direction. It is optimized for discrete paging interactions such as carousel navigation, where a swipe left or right moves to the next or previous page. Unlike `ScrollGestureRecognizer`, it does not include inertia or continuous scrolling physics.
-
-`SwipeGestureRecognizer` provides per-event velocity data, enabling speed-sensitive interactions where the flick speed determines whether a transition completes.
+Use `SwipeGestureRecognizer` when a control needs to respond to deliberate directional flicks (such as navigating between pages in a carousel). For continuous panning with inertia, use [`ScrollGestureRecognizer`](/docs/input-interaction/gestures/scroll-gesture-recognizer) instead.
 
 ## Using a SwipeGestureRecognizer
-
 A SwipeGestureRecognizer can be attached to a control using the control's `GestureRecognizers` property.
-
 ```xml
 <Border Name="swipeArea" Background="Transparent" Height="300">
     <Border.GestureRecognizers>
@@ -26,7 +20,7 @@ A SwipeGestureRecognizer can be attached to a control using the control's `Gestu
 </Border>
 ```
 
-```csharp
+```csharp title='C#'
 swipeArea.GestureRecognizers.Add(new SwipeGestureRecognizer
 {
     CanHorizontallySwipe = true,
@@ -34,90 +28,61 @@ swipeArea.GestureRecognizers.Add(new SwipeGestureRecognizer
 });
 ```
 
-The SwipeGestureRecognizer raises the `SwipeGesture` event during the swipe as the pointer moves. When the swipe ends (pointer released), it raises the `SwipeGestureEnded` event.
+The SwipeGestureRecognizer raises a `InputElement.SwipeGestureEvent` during the swipe as the pointer moves. When the swipe ends, from the pointer being released or another gesture start, it raises a `InputElement.SwipeGestureEndedEvent`.
 
-## Binding Events
-
-After the SwipeGestureRecognizer has been added to your control, bind the events in your code-behind either through an inline handler or an event function:
-
-```csharp
-swipeArea.AddHandler(InputElement.SwipeGestureEvent, (s, e) =>
-{
-    // Called continuously during the swipe
-    var direction = e.SwipeDirection; // Left, Right, Up, or Down
-    var delta = e.Delta;             // Pixel delta since last event
-    var velocity = e.Velocity;       // Current velocity in pixels/second
-});
-
-swipeArea.AddHandler(InputElement.SwipeGestureEndedEvent, (s, e) =>
-{
-    // Called when the pointer is released
-    var velocity = e.Velocity; // Final velocity at release
-});
+## Binding events
+After the SwipeGestureRecognizer has been added to your control, you need to bind them in your code behind either through an inline handler or to an event function:
+```csharp title='C#'
+swipeArea.AddHandler(InputElement.SwipeGestureEvent, (s, e) => { });
+swipeArea.AddHandler(InputElement.SwipeGestureEndedEvent, (s, e) => { });
 ```
-
-Or use the CLR event wrappers directly:
-
-```csharp
-swipeArea.SwipeGesture += OnSwipeGesture;
-swipeArea.SwipeGestureEnded += OnSwipeGestureEnded;
-
+```csharp title='C#'
+swipeArea.AddHandler(InputElement.SwipeGestureEvent, OnSwipeGesture);
+swipeArea.AddHandler(InputElement.SwipeGestureEndedEvent, OnSwipeGestureEnded);
+...
 private void OnSwipeGesture(object? sender, SwipeGestureEventArgs e) { }
 private void OnSwipeGestureEnded(object? sender, SwipeGestureEndedEventArgs e) { }
 ```
-
 If your event handles the gesture completely, you can mark the event as handled by setting:
-
-```csharp
+```csharp title='C#'
 e.Handled = true;
 ```
 
-## SwipeDirection Values
+## Event args
 
-The `SwipeDirection` property on `SwipeGestureEventArgs` indicates the dominant swipe axis:
-
-| Value | Description |
-| ----- | ----------- |
-| `Left` | Horizontal swipe toward the left. |
-| `Right` | Horizontal swipe toward the right. |
-| `Up` | Vertical swipe upward. |
-| `Down` | Vertical swipe downward. |
-
-The direction is computed from the delta: if the horizontal distance is greater than or equal to the vertical distance, the direction is `Left` or `Right`; otherwise `Up` or `Down`.
-
-## Useful Properties
-
-You will probably use these properties most often:
-
-| Property | Type | Default | Description |
-| -------- | ---- | ------- | ----------- |
-| `CanHorizontallySwipe` | `bool` | `false` | Enables tracking of horizontal (left/right) swipes. |
-| `CanVerticallySwipe` | `bool` | `false` | Enables tracking of vertical (up/down) swipes. |
-| `Threshold` | `double` | `0` | Minimum pointer movement in pixels before the swipe is recognized. When `0`, the platform default threshold is used. |
-| `IsMouseEnabled` | `bool` | `false` | When `true`, mouse pointer events trigger swipe gestures in addition to touch and pen. Touch and pen are always enabled. |
-| `IsEnabled` | `bool` | `true` | Enables or disables the recognizer entirely. |
-
-## SwipeGestureEventArgs Properties
+`SwipeGestureEventArgs` is raised during the gesture:
 
 | Property | Type | Description |
-| -------- | ---- | ----------- |
+|---|---|---|
 | `Id` | `int` | Unique identifier for this gesture sequence. |
 | `Delta` | `Vector` | Pixel delta since the last event. |
 | `Velocity` | `Vector` | Current swipe velocity in pixels per second. |
-| `SwipeDirection` | `SwipeDirection` | Dominant swipe direction computed from `Delta`. |
+| `SwipeDirection` | `SwipeDirection` | Dominant swipe direction: `Left`, `Right`, `Up`, or `Down`. |
 
-## SwipeGestureEndedEventArgs Properties
+`SwipeGestureEndedEventArgs` is raised when the pointer is released:
 
 | Property | Type | Description |
-| -------- | ---- | ----------- |
+|---|---|---|
 | `Id` | `int` | Unique identifier for this gesture sequence. |
 | `Velocity` | `Vector` | Swipe velocity at the moment the pointer was released. |
 
-## Example
+## Useful properties
 
-### Detecting Horizontal Swipes to Navigate Pages
+You will probably use these properties most often:
 
-```csharp
+| Property | Description |
+|---|---|
+| `CanHorizontallySwipe` | Enables tracking of horizontal (left/right) swipes. Default: `false`. |
+| `CanVerticallySwipe` | Enables tracking of vertical (up/down) swipes. Default: `false`. |
+| `Threshold` | Minimum pointer movement in pixels before the swipe is recognized. When `0`, the platform default threshold is used. |
+| `IsMouseEnabled` | When `true`, mouse pointer events trigger swipe gestures in addition to touch and pen. Default: `false`. |
+| `IsEnabled` | Enables or disables the recognizer entirely. Default: `true`. |
+
+## Examples
+
+### Detecting horizontal swipes to navigate pages
+
+```csharp title='C#'
 int currentPage = 0;
 int totalPages = 5;
 
@@ -133,7 +98,7 @@ swipeArea.AddHandler(InputElement.SwipeGestureEndedEvent, (s, e) =>
 });
 ```
 
-### Vertical Swipe Detection
+### Vertical swipe detection
 
 ```xml
 <Border Name="verticalSwipeArea" Background="Transparent">
@@ -143,7 +108,7 @@ swipeArea.AddHandler(InputElement.SwipeGestureEndedEvent, (s, e) =>
 </Border>
 ```
 
-### Enabling Mouse Support
+### Enabling mouse support
 
 By default, only touch and pen input trigger swipe gestures. Enable mouse support for desktop scenarios:
 
@@ -154,12 +119,19 @@ By default, only touch and pen input trigger swipe gestures. Enable mouse suppor
 </Border.GestureRecognizers>
 ```
 
-## More Information
+## More information
 
 :::info
-For the complete API documentation about this gesture recognizer, see [here](https://api-docs.avaloniaui.net/docs/T_Avalonia_Input_GestureRecognizers_SwipeGestureRecognizer).
+For the complete API documentation about this gesture recognizer, see the [SwipeGestureRecognizer API reference](/api/avalonia/input/gesturerecognizers/swipegesturerecognizer).
 :::
 
 :::info
 View the source code on _GitHub_ [`SwipeGestureRecognizer.cs`](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Base/Input/GestureRecognizers/SwipeGestureRecognizer.cs)
 :::
+
+## See also
+
+- [Gestures](/docs/input-interaction/gestures): Overview of gesture recognizers and built-in gesture events.
+- [Scroll Gesture Recognizer](/docs/input-interaction/gestures/scroll-gesture-recognizer): Scroll gesture for continuous panning with inertia.
+- [Pull Gesture Recognizer](/docs/input-interaction/gestures/pull-gesture-recognizer): Pull gesture for pull-to-refresh interactions.
+- [Pinch Gesture Recognizer](/docs/input-interaction/gestures/pinch-gesture-recognizer): Pinch gesture for zoom interactions.
