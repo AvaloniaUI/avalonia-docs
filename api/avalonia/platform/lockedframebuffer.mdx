@@ -1,0 +1,200 @@
+---
+title: 'LockedFramebuffer'
+hide_title: true
+slug: '/avalonia/platform/lockedframebuffer'
+uid: 'Avalonia.Platform.LockedFramebuffer'
+commentId: 'T:Avalonia.Platform.LockedFramebuffer'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Platform'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">LockedFramebuffer Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Platform</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Platform/LockedFramebuffer.cs">LockedFramebuffer.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class LockedFramebuffer
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> LockedFramebuffer
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="ilockedframebuffer">ILockedFramebuffer</a>, IDisposable
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [LockedFramebuffer](#uid-b0418d2849) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b0418d2849"></span>
+
+### LockedFramebuffer Constructor
+
+```csharp
+public LockedFramebuffer(IntPtr address, Avalonia.PixelSize size, int rowBytes, Avalonia.Vector dpi, Avalonia.Platform.PixelFormat format, Avalonia.Platform.AlphaFormat alphaFormat, Action onDispose)
+```
+
+#### Parameters
+
+`address` IntPtr
+
+
+`size` [Avalonia.PixelSize](xref:Avalonia.PixelSize)
+
+
+`rowBytes` int
+
+
+`dpi` [Avalonia.Vector](xref:Avalonia.Vector)
+
+
+`format` [Avalonia.Platform.PixelFormat](xref:Avalonia.Platform.PixelFormat)
+
+
+`alphaFormat` [Avalonia.Platform.AlphaFormat](xref:Avalonia.Platform.AlphaFormat)
+
+
+`onDispose` Action
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Dispose](#uid-b9cdd5099c) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b9cdd5099c"></span>
+
+### Dispose Method
+
+```csharp
+public void Dispose()
+```
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Address](#uid-620c1cd058) | No summary available. |
+| [AlphaFormat](#uid-7a2192d1e4) | No summary available. |
+| [Dpi](#uid-574475538d) | No summary available. |
+| [Format](#uid-07fed7ea3d) | No summary available. |
+| [RowBytes](#uid-d68a1167f5) | No summary available. |
+| [Size](#uid-05c8934baf) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-620c1cd058"></span>
+
+### Address Property
+
+```csharp
+public IntPtr Address { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7a2192d1e4"></span>
+
+### AlphaFormat Property
+
+```csharp
+public Avalonia.Platform.AlphaFormat AlphaFormat { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-574475538d"></span>
+
+### Dpi Property
+
+```csharp
+public Avalonia.Vector Dpi { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-07fed7ea3d"></span>
+
+### Format Property
+
+```csharp
+public Avalonia.Platform.PixelFormat Format { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d68a1167f5"></span>
+
+### RowBytes Property
+
+```csharp
+public int RowBytes { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-05c8934baf"></span>
+
+### Size Property
+
+```csharp
+public Avalonia.PixelSize Size { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

@@ -1,0 +1,132 @@
+---
+title: 'TextRun'
+hide_title: true
+slug: '/avalonia/media/textformatting/textrun'
+uid: 'Avalonia.Media.TextFormatting.TextRun'
+commentId: 'T:Avalonia.Media.TextFormatting.TextRun'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Media.TextFormatting'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">TextRun Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Media.TextFormatting</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Media/TextFormatting/TextRun.cs">TextRun.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Represents a portion of a [Avalonia.Media.TextFormatting.TextLine](xref:Avalonia.Media.TextFormatting.TextLine) object.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class TextRun
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> TextRun
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Derived types:</span> <a href="drawabletextrun">DrawableTextRun</a>, <a href="textcharacters">TextCharacters</a>, <a href="textendofline">TextEndOfLine</a>, <a href="unshapedtextrun">UnshapedTextRun</a>
+</div>
+</div>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Length](#uid-d32ddedc42) | Gets the text source length. |
+| [Properties](#uid-f4da24c6cf) | A set of properties shared by every characters in the run |
+| [Text](#uid-d2d945f661) | Gets the text run's text. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d32ddedc42"></span>
+
+### Length Property
+
+Gets the text source length.
+
+```csharp
+public int Length { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f4da24c6cf"></span>
+
+### Properties Property
+
+A set of properties shared by every characters in the run
+
+```csharp
+public Avalonia.Media.TextFormatting.TextRunProperties Properties { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d2d945f661"></span>
+
+### Text Property
+
+Gets the text run's text.
+
+```csharp
+public ReadOnlyMemory<char> Text { get; set; }
+```
+
+</section>
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [DefaultTextSourceLength](#uid-f86dc003de) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f86dc003de"></span>
+
+### DefaultTextSourceLength Field
+
+```csharp
+public int DefaultTextSourceLength
+```
+
+</section>
+
+</ApiRefPage>
+

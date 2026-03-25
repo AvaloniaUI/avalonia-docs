@@ -1,0 +1,154 @@
+---
+title: 'RowHeaderCell'
+hide_title: true
+slug: '/avalonia/controls/models/treedatagrid/rowheadercell'
+uid: 'Avalonia.Controls.Models.TreeDataGrid.RowHeaderCell'
+commentId: 'T:Avalonia.Controls.Models.TreeDataGrid.RowHeaderCell'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.TreeDataGrid'
+assembly: 'Avalonia.Controls.TreeDataGrid'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Models.TreeDataGrid'
+tfms:
+  - 'net8.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">RowHeaderCell Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Models.TreeDataGrid</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Represents a read-only cell that displays the visual row number.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class RowHeaderCell
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> RowHeaderCell
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="icell">ICell</a>
+</div>
+</div>
+
+## Remarks
+
+The [Avalonia.Controls.Models.TreeDataGrid.RowHeaderCell](xref:Avalonia.Controls.Models.TreeDataGrid.RowHeaderCell) class displays the visual row number (0, 1, 2...) in a
+[TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid). The displayed number always represents the visual position of the row,
+remaining sequential regardless of sorting or whether the data source is flat or
+hierarchical.
+
+This cell is always read-only and cannot be edited by the user. It is designed to be used
+with [Avalonia.Controls.Models.TreeDataGrid.RowHeaderColumn&lt;T&gt;](xref:Avalonia.Controls.Models.TreeDataGrid.RowHeaderColumn%601) to display row numbers.
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [CanEdit](#uid-7217c79b36) | Gets a value indicating whether the cell can enter edit mode. |
+| [EditGestures](#uid-aa7298b3b3) | Gets the gestures that cause the cell to enter edit mode. |
+| [Instance](#uid-b1c7116b64) | Gets the singleton instance of [Avalonia.Controls.Models.TreeDataGrid.RowHeaderCell](xref:Avalonia.Controls.Models.TreeDataGrid.RowHeaderCell). |
+| [Value](#uid-487b0d8a58) | Gets the value of the cell. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7217c79b36"></span>
+
+### CanEdit Property
+
+Gets a value indicating whether the cell can enter edit mode.
+
+```csharp
+public bool CanEdit { get; set; }
+```
+
+#### Remarks
+
+Always returns false as row header cells are read-only.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-aa7298b3b3"></span>
+
+### EditGestures Property
+
+Gets the gestures that cause the cell to enter edit mode.
+
+```csharp
+public Avalonia.Controls.Models.TreeDataGrid.BeginEditGestures EditGestures { get; set; }
+```
+
+#### Remarks
+
+Returns [Avalonia.Controls.Models.TreeDataGrid.BeginEditGestures.None](xref:Avalonia.Controls.Models.TreeDataGrid.BeginEditGestures.None) as row header cells cannot be edited.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b1c7116b64"></span>
+
+### Instance Property
+
+Gets the singleton instance of [Avalonia.Controls.Models.TreeDataGrid.RowHeaderCell](xref:Avalonia.Controls.Models.TreeDataGrid.RowHeaderCell).
+
+```csharp
+public Avalonia.Controls.Models.TreeDataGrid.RowHeaderCell Instance { get; set; }
+```
+
+#### Remarks
+
+Since all row header cells behave identically (displaying the visual row index),
+a single instance can be shared across all rows.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-487b0d8a58"></span>
+
+### Value Property
+
+Gets the value of the cell.
+
+```csharp
+public object Value { get; set; }
+```
+
+#### Remarks
+
+Returns null as the actual displayed value (the visual row index) is determined
+at render time by [Avalonia.Controls.Primitives.TreeDataGridRowHeaderCell](xref:Avalonia.Controls.Primitives.TreeDataGridRowHeaderCell).
+
+</section>
+
+</ApiRefPage>
+

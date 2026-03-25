@@ -1,0 +1,330 @@
+---
+title: 'EglDisplay'
+hide_title: true
+slug: '/avalonia/opengl/egl/egldisplay'
+uid: 'Avalonia.OpenGL.Egl.EglDisplay'
+commentId: 'T:Avalonia.OpenGL.Egl.EglDisplay'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.OpenGL'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.OpenGL.Egl'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">EglDisplay Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.OpenGL.Egl</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.OpenGL</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.OpenGL/Egl/EglDisplay.cs">EglDisplay.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class EglDisplay
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> EglDisplay
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IDisposable
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [EglDisplay (3 overloads)](#uid-630c05b7cf) | No summary available. |
+
+<span id="uid-630c05b7cf"></span>
+
+### EglDisplay overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-06498d0963"></span>
+
+#### EglDisplay Constructor
+
+```csharp
+public EglDisplay()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-894931b7a6"></span>
+
+#### EglDisplay Constructor
+
+```csharp
+public EglDisplay(Avalonia.OpenGL.Egl.EglDisplayCreationOptions options)
+```
+
+##### Parameters
+
+`options` [Avalonia.OpenGL.Egl.EglDisplayCreationOptions](xref:Avalonia.OpenGL.Egl.EglDisplayCreationOptions)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c92572a63c"></span>
+
+#### EglDisplay Constructor
+
+```csharp
+public EglDisplay(IntPtr display, Avalonia.OpenGL.Egl.EglDisplayOptions options)
+```
+
+##### Parameters
+
+`display` IntPtr
+
+
+`options` [Avalonia.OpenGL.Egl.EglDisplayOptions](xref:Avalonia.OpenGL.Egl.EglDisplayOptions)
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [CreateContext](#uid-ff2676fb67) | No summary available. |
+| [CreatePBufferFromClientBuffer (2 overloads)](#uid-b4f682f9fd) | No summary available. |
+| [CreateWindowSurface](#uid-d17e49b64c) | No summary available. |
+| [Dispose](#uid-ffd72285f0) | No summary available. |
+| [Lock](#uid-0290538407) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ff2676fb67"></span>
+
+### CreateContext Method
+
+```csharp
+public Avalonia.OpenGL.Egl.EglContext CreateContext(Avalonia.OpenGL.Egl.EglContextOptions options)
+```
+
+#### Parameters
+
+`options` [Avalonia.OpenGL.Egl.EglContextOptions](xref:Avalonia.OpenGL.Egl.EglContextOptions)
+
+
+#### Returns
+
+[Avalonia.OpenGL.Egl.EglContext](xref:Avalonia.OpenGL.Egl.EglContext)
+
+
+</section>
+
+<span id="uid-b4f682f9fd"></span>
+
+### CreatePBufferFromClientBuffer overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b86ceb15ef"></span>
+
+#### CreatePBufferFromClientBuffer Method
+
+```csharp
+public Avalonia.OpenGL.Egl.EglSurface CreatePBufferFromClientBuffer(int bufferType, IntPtr handle, int* attribs)
+```
+
+##### Parameters
+
+`bufferType` int
+
+
+`handle` IntPtr
+
+
+`attribs` int*
+
+
+##### Returns
+
+[Avalonia.OpenGL.Egl.EglSurface](xref:Avalonia.OpenGL.Egl.EglSurface)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a3a7f045fa"></span>
+
+#### CreatePBufferFromClientBuffer Method
+
+```csharp
+public Avalonia.OpenGL.Egl.EglSurface CreatePBufferFromClientBuffer(int bufferType, IntPtr handle, int[] attribs)
+```
+
+##### Parameters
+
+`bufferType` int
+
+
+`handle` IntPtr
+
+
+`attribs` int[]
+
+
+##### Returns
+
+[Avalonia.OpenGL.Egl.EglSurface](xref:Avalonia.OpenGL.Egl.EglSurface)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d17e49b64c"></span>
+
+### CreateWindowSurface Method
+
+```csharp
+public Avalonia.OpenGL.Egl.EglSurface CreateWindowSurface(IntPtr window)
+```
+
+#### Parameters
+
+`window` IntPtr
+
+
+#### Returns
+
+[Avalonia.OpenGL.Egl.EglSurface](xref:Avalonia.OpenGL.Egl.EglSurface)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ffd72285f0"></span>
+
+### Dispose Method
+
+```csharp
+public void Dispose()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0290538407"></span>
+
+### Lock Method
+
+```csharp
+public IDisposable Lock()
+```
+
+#### Returns
+
+IDisposable
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Config](#uid-be58409da1) | No summary available. |
+| [EglInterface](#uid-7aadc326b5) | No summary available. |
+| [Handle](#uid-1bcd7ea746) | No summary available. |
+| [IsLost](#uid-5427b41b1c) | No summary available. |
+| [SupportsSharing](#uid-b6941d47e3) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-be58409da1"></span>
+
+### Config Property
+
+```csharp
+public IntPtr Config { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7aadc326b5"></span>
+
+### EglInterface Property
+
+```csharp
+public Avalonia.OpenGL.Egl.EglInterface EglInterface { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1bcd7ea746"></span>
+
+### Handle Property
+
+```csharp
+public IntPtr Handle { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5427b41b1c"></span>
+
+### IsLost Property
+
+```csharp
+public bool IsLost { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b6941d47e3"></span>
+
+### SupportsSharing Property
+
+```csharp
+public bool SupportsSharing { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

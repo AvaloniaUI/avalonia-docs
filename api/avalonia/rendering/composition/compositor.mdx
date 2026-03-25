@@ -1,0 +1,589 @@
+---
+title: 'Compositor'
+hide_title: true
+slug: '/avalonia/rendering/composition/compositor'
+uid: 'Avalonia.Rendering.Composition.Compositor'
+commentId: 'T:Avalonia.Rendering.Composition.Compositor'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Rendering.Composition'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">Compositor Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Rendering.Composition</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/obj/GeneratedFiles/DevGenerators/Avalonia.SourceGenerator.CompositionGenerator.CompositionRoslynGenerator/CompositionAnimations.cs">CompositionAnimations.cs</a>, <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Rendering/Composition/Compositor.Factories.cs">Compositor.Factories.cs</a>, <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Rendering/Composition/Compositor.cs">Compositor.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+The Compositor class manages communication between UI-thread and render-thread parts of the composition engine.
+It also serves as a factory to create UI-thread parts of various composition objects
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class Compositor
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> Compositor
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [CreateAnimationGroup](#uid-b1c21ed088) | No summary available. |
+| [CreateBooleanKeyFrameAnimation](#uid-e22ef80cc8) | No summary available. |
+| [CreateColorKeyFrameAnimation](#uid-d6d63e3e92) | No summary available. |
+| [CreateCompositionVisualSnapshot](#uid-928469a2b5) | No summary available. |
+| [CreateContainerVisual](#uid-b184a8da59) | No summary available. |
+| [CreateCustomVisual](#uid-71904a36c2) | No summary available. |
+| [CreateDoubleKeyFrameAnimation](#uid-536d7926d6) | No summary available. |
+| [CreateDrawingSurface](#uid-1b1323db16) | No summary available. |
+| [CreateExpressionAnimation (2 overloads)](#uid-dd602c8ad0) | No summary available. |
+| [CreateImplicitAnimationCollection](#uid-8583a670e4) | No summary available. |
+| [CreateQuaternionKeyFrameAnimation](#uid-b1df178619) | No summary available. |
+| [CreateScalarKeyFrameAnimation](#uid-835956d6ab) | No summary available. |
+| [CreateSolidColorVisual](#uid-ceff242099) | No summary available. |
+| [CreateSurfaceVisual](#uid-142c919484) | No summary available. |
+| [CreateVector2KeyFrameAnimation](#uid-f882fc73a5) | No summary available. |
+| [CreateVector3DKeyFrameAnimation](#uid-e9ce02ecba) | No summary available. |
+| [CreateVector3KeyFrameAnimation](#uid-d4bdffe43c) | No summary available. |
+| [CreateVector4KeyFrameAnimation](#uid-65eb4c836b) | No summary available. |
+| [CreateVectorKeyFrameAnimation](#uid-9d7562aa67) | No summary available. |
+| [RequestCommitAsync](#uid-1b4bd4c0f6) | Requests pending changes in the composition objects to be serialized and sent to the render thread |
+| [RequestCompositionBatchCommitAsync](#uid-597adef303) | Requests pending changes in the composition objects to be serialized and sent to the render thread |
+| [RequestCompositionUpdate](#uid-9f81b9e7ae) | Enqueues a callback to be called before the next scheduled commit. If there is no scheduled commit it automatically schedules one This is useful for updating your composition tree objects after binding and layout passes have completed |
+| [TryGetCompositionGpuInterop](#uid-2ef6811b7e) | Attempts to query for GPU interop feature from the platform render interface |
+| [TryGetDefaultCompositor](#uid-f25f58f1a3) | Attempts to get the Compositor instance that will be used by default for new TopLevels created by the current platform backend. |
+| [TryGetRenderInterfaceFeature](#uid-e874a58cdc) | Attempts to query for a feature from the platform render interface |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b1c21ed088"></span>
+
+### CreateAnimationGroup Method
+
+```csharp
+public Avalonia.Rendering.Composition.Animations.CompositionAnimationGroup CreateAnimationGroup()
+```
+
+#### Returns
+
+[Avalonia.Rendering.Composition.Animations.CompositionAnimationGroup](xref:Avalonia.Rendering.Composition.Animations.CompositionAnimationGroup)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e22ef80cc8"></span>
+
+### CreateBooleanKeyFrameAnimation Method
+
+```csharp
+public Avalonia.Rendering.Composition.BooleanKeyFrameAnimation CreateBooleanKeyFrameAnimation()
+```
+
+#### Returns
+
+[Avalonia.Rendering.Composition.BooleanKeyFrameAnimation](xref:Avalonia.Rendering.Composition.BooleanKeyFrameAnimation)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d6d63e3e92"></span>
+
+### CreateColorKeyFrameAnimation Method
+
+```csharp
+public Avalonia.Rendering.Composition.ColorKeyFrameAnimation CreateColorKeyFrameAnimation()
+```
+
+#### Returns
+
+[Avalonia.Rendering.Composition.ColorKeyFrameAnimation](xref:Avalonia.Rendering.Composition.ColorKeyFrameAnimation)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-928469a2b5"></span>
+
+### CreateCompositionVisualSnapshot Method
+
+```csharp
+public System.Threading.Tasks.Task<Avalonia.Media.Imaging.Bitmap> CreateCompositionVisualSnapshot(Avalonia.Rendering.Composition.CompositionVisual visual, double scaling)
+```
+
+#### Parameters
+
+`visual` [Avalonia.Rendering.Composition.CompositionVisual](xref:Avalonia.Rendering.Composition.CompositionVisual)
+
+
+`scaling` double
+
+
+#### Returns
+
+System.Threading.Tasks.Task&lt;[Avalonia.Media.Imaging.Bitmap](xref:Avalonia.Media.Imaging.Bitmap)&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b184a8da59"></span>
+
+### CreateContainerVisual Method
+
+```csharp
+public Avalonia.Rendering.Composition.CompositionContainerVisual CreateContainerVisual()
+```
+
+#### Returns
+
+[Avalonia.Rendering.Composition.CompositionContainerVisual](xref:Avalonia.Rendering.Composition.CompositionContainerVisual)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-71904a36c2"></span>
+
+### CreateCustomVisual Method
+
+```csharp
+public Avalonia.Rendering.Composition.CompositionCustomVisual CreateCustomVisual(Avalonia.Rendering.Composition.CompositionCustomVisualHandler handler)
+```
+
+#### Parameters
+
+`handler` [Avalonia.Rendering.Composition.CompositionCustomVisualHandler](xref:Avalonia.Rendering.Composition.CompositionCustomVisualHandler)
+
+
+#### Returns
+
+[Avalonia.Rendering.Composition.CompositionCustomVisual](xref:Avalonia.Rendering.Composition.CompositionCustomVisual)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-536d7926d6"></span>
+
+### CreateDoubleKeyFrameAnimation Method
+
+```csharp
+public Avalonia.Rendering.Composition.DoubleKeyFrameAnimation CreateDoubleKeyFrameAnimation()
+```
+
+#### Returns
+
+[Avalonia.Rendering.Composition.DoubleKeyFrameAnimation](xref:Avalonia.Rendering.Composition.DoubleKeyFrameAnimation)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1b1323db16"></span>
+
+### CreateDrawingSurface Method
+
+```csharp
+public Avalonia.Rendering.Composition.CompositionDrawingSurface CreateDrawingSurface()
+```
+
+#### Returns
+
+[Avalonia.Rendering.Composition.CompositionDrawingSurface](xref:Avalonia.Rendering.Composition.CompositionDrawingSurface)
+
+
+</section>
+
+<span id="uid-dd602c8ad0"></span>
+
+### CreateExpressionAnimation overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f96c478711"></span>
+
+#### CreateExpressionAnimation Method
+
+```csharp
+public Avalonia.Rendering.Composition.Animations.ExpressionAnimation CreateExpressionAnimation()
+```
+
+##### Returns
+
+[Avalonia.Rendering.Composition.Animations.ExpressionAnimation](xref:Avalonia.Rendering.Composition.Animations.ExpressionAnimation)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-df5315f48b"></span>
+
+#### CreateExpressionAnimation Method
+
+```csharp
+public Avalonia.Rendering.Composition.Animations.ExpressionAnimation CreateExpressionAnimation(string expression)
+```
+
+##### Parameters
+
+`expression` string
+
+
+##### Returns
+
+[Avalonia.Rendering.Composition.Animations.ExpressionAnimation](xref:Avalonia.Rendering.Composition.Animations.ExpressionAnimation)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8583a670e4"></span>
+
+### CreateImplicitAnimationCollection Method
+
+```csharp
+public Avalonia.Rendering.Composition.Animations.ImplicitAnimationCollection CreateImplicitAnimationCollection()
+```
+
+#### Returns
+
+[Avalonia.Rendering.Composition.Animations.ImplicitAnimationCollection](xref:Avalonia.Rendering.Composition.Animations.ImplicitAnimationCollection)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b1df178619"></span>
+
+### CreateQuaternionKeyFrameAnimation Method
+
+```csharp
+public Avalonia.Rendering.Composition.QuaternionKeyFrameAnimation CreateQuaternionKeyFrameAnimation()
+```
+
+#### Returns
+
+[Avalonia.Rendering.Composition.QuaternionKeyFrameAnimation](xref:Avalonia.Rendering.Composition.QuaternionKeyFrameAnimation)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-835956d6ab"></span>
+
+### CreateScalarKeyFrameAnimation Method
+
+```csharp
+public Avalonia.Rendering.Composition.ScalarKeyFrameAnimation CreateScalarKeyFrameAnimation()
+```
+
+#### Returns
+
+[Avalonia.Rendering.Composition.ScalarKeyFrameAnimation](xref:Avalonia.Rendering.Composition.ScalarKeyFrameAnimation)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ceff242099"></span>
+
+### CreateSolidColorVisual Method
+
+```csharp
+public Avalonia.Rendering.Composition.CompositionSolidColorVisual CreateSolidColorVisual()
+```
+
+#### Returns
+
+[Avalonia.Rendering.Composition.CompositionSolidColorVisual](xref:Avalonia.Rendering.Composition.CompositionSolidColorVisual)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-142c919484"></span>
+
+### CreateSurfaceVisual Method
+
+```csharp
+public Avalonia.Rendering.Composition.CompositionSurfaceVisual CreateSurfaceVisual()
+```
+
+#### Returns
+
+[Avalonia.Rendering.Composition.CompositionSurfaceVisual](xref:Avalonia.Rendering.Composition.CompositionSurfaceVisual)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f882fc73a5"></span>
+
+### CreateVector2KeyFrameAnimation Method
+
+```csharp
+public Avalonia.Rendering.Composition.Vector2KeyFrameAnimation CreateVector2KeyFrameAnimation()
+```
+
+#### Returns
+
+[Avalonia.Rendering.Composition.Vector2KeyFrameAnimation](xref:Avalonia.Rendering.Composition.Vector2KeyFrameAnimation)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e9ce02ecba"></span>
+
+### CreateVector3DKeyFrameAnimation Method
+
+```csharp
+public Avalonia.Rendering.Composition.Vector3DKeyFrameAnimation CreateVector3DKeyFrameAnimation()
+```
+
+#### Returns
+
+[Avalonia.Rendering.Composition.Vector3DKeyFrameAnimation](xref:Avalonia.Rendering.Composition.Vector3DKeyFrameAnimation)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d4bdffe43c"></span>
+
+### CreateVector3KeyFrameAnimation Method
+
+```csharp
+public Avalonia.Rendering.Composition.Vector3KeyFrameAnimation CreateVector3KeyFrameAnimation()
+```
+
+#### Returns
+
+[Avalonia.Rendering.Composition.Vector3KeyFrameAnimation](xref:Avalonia.Rendering.Composition.Vector3KeyFrameAnimation)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-65eb4c836b"></span>
+
+### CreateVector4KeyFrameAnimation Method
+
+```csharp
+public Avalonia.Rendering.Composition.Vector4KeyFrameAnimation CreateVector4KeyFrameAnimation()
+```
+
+#### Returns
+
+[Avalonia.Rendering.Composition.Vector4KeyFrameAnimation](xref:Avalonia.Rendering.Composition.Vector4KeyFrameAnimation)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9d7562aa67"></span>
+
+### CreateVectorKeyFrameAnimation Method
+
+```csharp
+public Avalonia.Rendering.Composition.VectorKeyFrameAnimation CreateVectorKeyFrameAnimation()
+```
+
+#### Returns
+
+[Avalonia.Rendering.Composition.VectorKeyFrameAnimation](xref:Avalonia.Rendering.Composition.VectorKeyFrameAnimation)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1b4bd4c0f6"></span>
+
+### RequestCommitAsync Method
+
+Requests pending changes in the composition objects to be serialized and sent to the render thread
+
+```csharp
+public System.Threading.Tasks.Task RequestCommitAsync()
+```
+
+#### Returns
+
+System.Threading.Tasks.Task
+
+A task that completes when sent changes are applied on the render thread
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-597adef303"></span>
+
+### RequestCompositionBatchCommitAsync Method
+
+Requests pending changes in the composition objects to be serialized and sent to the render thread
+
+```csharp
+public Avalonia.Rendering.Composition.Transport.CompositionBatch RequestCompositionBatchCommitAsync()
+```
+
+#### Returns
+
+[Avalonia.Rendering.Composition.Transport.CompositionBatch](xref:Avalonia.Rendering.Composition.Transport.CompositionBatch)
+
+A [CompositionBatch](xref:Avalonia.Rendering.Composition.Transport.CompositionBatch) object that provides batch lifetime information
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9f81b9e7ae"></span>
+
+### RequestCompositionUpdate Method
+
+Enqueues a callback to be called before the next scheduled commit.
+If there is no scheduled commit it automatically schedules one
+This is useful for updating your composition tree objects after binding
+and layout passes have completed
+
+```csharp
+public void RequestCompositionUpdate(Action action)
+```
+
+#### Parameters
+
+`action` Action
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2ef6811b7e"></span>
+
+### TryGetCompositionGpuInterop Method
+
+Attempts to query for GPU interop feature from the platform render interface
+
+```csharp
+public System.Threading.Tasks.ValueTask<Avalonia.Rendering.Composition.ICompositionGpuInterop> TryGetCompositionGpuInterop()
+```
+
+#### Returns
+
+System.Threading.Tasks.ValueTask&lt;[Avalonia.Rendering.Composition.ICompositionGpuInterop](xref:Avalonia.Rendering.Composition.ICompositionGpuInterop)&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f25f58f1a3"></span>
+
+### TryGetDefaultCompositor Method
+
+Attempts to get the Compositor instance that will be used by default for new TopLevels
+created by the current platform backend.
+
+This won't work for every single platform backend and backend settings, e. g. with web we'll need to have
+separate Compositor instances per output HTML canvas since they don't share OpenGL state.
+Another case where default compositor won't be available is our planned multithreaded rendering mode
+where each window would get its own Compositor instance
+
+This method is still useful for obtaining GPU device LUID to speed up initialization, but you should
+always check if default Compositor matches one used by our control once it gets attached to a [TopLevel](xref:Avalonia.Controls.TopLevel)
+
+```csharp
+public Avalonia.Rendering.Composition.Compositor TryGetDefaultCompositor()
+```
+
+#### Returns
+
+[Avalonia.Rendering.Composition.Compositor](xref:Avalonia.Rendering.Composition.Compositor)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e874a58cdc"></span>
+
+### TryGetRenderInterfaceFeature Method
+
+Attempts to query for a feature from the platform render interface
+
+```csharp
+public System.Threading.Tasks.ValueTask<object> TryGetRenderInterfaceFeature(Type featureType)
+```
+
+#### Parameters
+
+`featureType` Type
+
+
+#### Returns
+
+System.Threading.Tasks.ValueTask&lt;object&gt;
+
+
+</section>
+
+</ApiRefPage>
+

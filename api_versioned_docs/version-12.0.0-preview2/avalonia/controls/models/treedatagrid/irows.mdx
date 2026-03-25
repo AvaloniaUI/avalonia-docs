@@ -1,0 +1,227 @@
+---
+title: 'IRows'
+hide_title: true
+slug: '/avalonia/controls/models/treedatagrid/irows'
+uid: 'Avalonia.Controls.Models.TreeDataGrid.IRows'
+commentId: 'T:Avalonia.Controls.Models.TreeDataGrid.IRows'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.TreeDataGrid'
+assembly: 'Avalonia.Controls.TreeDataGrid'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Models.TreeDataGrid'
+tfms:
+  - 'net8.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IRows Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Models.TreeDataGrid</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Represents a collection of rows in an [Avalonia.Controls.ITreeDataGridSource](xref:Avalonia.Controls.ITreeDataGridSource).
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface IRows
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEnumerable&lt;IRow&gt;, IReadOnlyCollection&lt;IRow&gt;, IReadOnlyList&lt;IRow&gt;, IEnumerable, INotifyCollectionChanged
+</div>
+</div>
+
+## Remarks
+
+Note that items retrieved from an [Avalonia.Controls.Models.TreeDataGrid.IRows](xref:Avalonia.Controls.Models.TreeDataGrid.IRows) collection may be reused, so the
+[Avalonia.Controls.Models.TreeDataGrid.IRow](xref:Avalonia.Controls.Models.TreeDataGrid.IRow) should be treated as valid only until the next item is retrieved from
+the collection.
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [GetRowAt](#uid-86ec99adfa) | Gets the index and Y position of the row at the specified Y position, if it can be calculated. |
+| [ModelIndexToRowIndex](#uid-15d66f61ca) | Given a model index, returns an index into [Avalonia.Controls.Models.TreeDataGrid.IRows](xref:Avalonia.Controls.Models.TreeDataGrid.IRows). |
+| [RealizeCell](#uid-c532cbe7a1) | Realizes a cell model for display on-screen. |
+| [RowIndexToModelIndex](#uid-bffe494352) | Given a row index, returns a model index. |
+| [UnrealizeCell](#uid-d9366cad4f) | Unrealizes a cell model realized with [Avalonia.Controls.Models.TreeDataGrid.IRows.RealizeCell(Avalonia.Controls.Models.TreeDataGrid.IColumn,int,int)](xref:Avalonia.Controls.Models.TreeDataGrid.IRows.RealizeCell%28Avalonia.Controls.Models.TreeDataGrid.IColumn%2CSystem.Int32%2CSystem.Int32%29). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-86ec99adfa"></span>
+
+### GetRowAt Method
+
+Gets the index and Y position of the row at the specified Y position, if it can be
+calculated.
+
+```csharp
+public ValueTuple<int, double> GetRowAt(double y)
+```
+
+#### Parameters
+
+`y` double
+
+The Y position
+
+
+#### Returns
+
+ValueTuple&lt;int, double&gt;
+
+A tuple containing the row index and Y position of the row, or (-1,-1) if the row
+could not be calculated.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-15d66f61ca"></span>
+
+### ModelIndexToRowIndex Method
+
+Given a model index, returns an index into [Avalonia.Controls.Models.TreeDataGrid.IRows](xref:Avalonia.Controls.Models.TreeDataGrid.IRows).
+
+```csharp
+public int ModelIndexToRowIndex(Avalonia.Controls.IndexPath modelIndex)
+```
+
+#### Parameters
+
+`modelIndex` [Avalonia.Controls.IndexPath](xref:Avalonia.Controls.IndexPath)
+
+The model index.
+
+
+#### Returns
+
+int
+
+The row index, or -1 if the model index is not displayed.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c532cbe7a1"></span>
+
+### RealizeCell Method
+
+Realizes a cell model for display on-screen.
+
+```csharp
+public Avalonia.Controls.Models.TreeDataGrid.ICell RealizeCell(Avalonia.Controls.Models.TreeDataGrid.IColumn column, int columnIndex, int rowIndex)
+```
+
+#### Parameters
+
+`column` [Avalonia.Controls.Models.TreeDataGrid.IColumn](xref:Avalonia.Controls.Models.TreeDataGrid.IColumn)
+
+The cell's column.
+
+
+`columnIndex` int
+
+The index of the cell's column.
+
+
+`rowIndex` int
+
+The index of the cell's row.
+
+
+#### Returns
+
+[Avalonia.Controls.Models.TreeDataGrid.ICell](xref:Avalonia.Controls.Models.TreeDataGrid.ICell)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-bffe494352"></span>
+
+### RowIndexToModelIndex Method
+
+Given a row index, returns a model index.
+
+```csharp
+public Avalonia.Controls.IndexPath RowIndexToModelIndex(int rowIndex)
+```
+
+#### Parameters
+
+`rowIndex` int
+
+The row index.
+
+
+#### Returns
+
+[Avalonia.Controls.IndexPath](xref:Avalonia.Controls.IndexPath)
+
+The row index, or an empty path if the row index is not valid.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d9366cad4f"></span>
+
+### UnrealizeCell Method
+
+Unrealizes a cell model realized with [Avalonia.Controls.Models.TreeDataGrid.IRows.RealizeCell(Avalonia.Controls.Models.TreeDataGrid.IColumn,int,int)](xref:Avalonia.Controls.Models.TreeDataGrid.IRows.RealizeCell%28Avalonia.Controls.Models.TreeDataGrid.IColumn%2CSystem.Int32%2CSystem.Int32%29).
+
+```csharp
+public void UnrealizeCell(Avalonia.Controls.Models.TreeDataGrid.ICell cell, int columnIndex, int rowIndex)
+```
+
+#### Parameters
+
+`cell` [Avalonia.Controls.Models.TreeDataGrid.ICell](xref:Avalonia.Controls.Models.TreeDataGrid.ICell)
+
+The cell model.
+
+
+`columnIndex` int
+
+The index of the cell's column.
+
+
+`rowIndex` int
+
+The index of the cell's row.
+
+
+</section>
+
+</ApiRefPage>
+

@@ -1,0 +1,1478 @@
+---
+title: 'AutomationProperties'
+hide_title: true
+slug: '/avalonia/automation/automationproperties'
+uid: 'Avalonia.Automation.AutomationProperties'
+commentId: 'T:Avalonia.Automation.AutomationProperties'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Automation'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">AutomationProperties Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Automation</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Controls/Automation/AutomationProperties.cs">AutomationProperties.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class AutomationProperties
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> AutomationProperties
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [GetAcceleratorKey](#uid-6bb99765ed) | Helper for reading the value of the [Avalonia.Automation.AutomationProperties.AcceleratorKeyProperty](xref:Avalonia.Automation.AutomationProperties.AcceleratorKeyProperty) on a [StyledElement](xref:Avalonia.StyledElement). |
+| [GetAccessKey](#uid-26c8569f8f) | Helper for reading the value of the [Avalonia.Automation.AutomationProperties.AccessKeyProperty](xref:Avalonia.Automation.AutomationProperties.AccessKeyProperty) on a [StyledElement](xref:Avalonia.StyledElement). |
+| [GetAccessibilityView](#uid-c28782b68d) | Helper for reading the value of the [Avalonia.Automation.AutomationProperties.AccessibilityViewProperty](xref:Avalonia.Automation.AutomationProperties.AccessibilityViewProperty) on a [StyledElement](xref:Avalonia.StyledElement). |
+| [GetAutomationId](#uid-06aa62279e) | Helper for reading the value of the [Avalonia.Automation.AutomationProperties.AutomationIdProperty](xref:Avalonia.Automation.AutomationProperties.AutomationIdProperty) on a [StyledElement](xref:Avalonia.StyledElement). |
+| [GetClassNameOverride](#uid-e65a4635fd) | Helper for reading the value of the [Avalonia.Automation.AutomationProperties.ClassNameOverrideProperty](xref:Avalonia.Automation.AutomationProperties.ClassNameOverrideProperty) on a [StyledElement](xref:Avalonia.StyledElement). |
+| [GetControlTypeOverride](#uid-77471e006e) | Helper for reading the value of the [Avalonia.Automation.AutomationProperties.ControlTypeOverrideProperty](xref:Avalonia.Automation.AutomationProperties.ControlTypeOverrideProperty) on a [StyledElement](xref:Avalonia.StyledElement). |
+| [GetHeadingLevel](#uid-6e019c9ce6) | Helper for reading the value of the [Avalonia.Automation.AutomationProperties.HeadingLevelProperty](xref:Avalonia.Automation.AutomationProperties.HeadingLevelProperty) on a [StyledElement](xref:Avalonia.StyledElement). |
+| [GetHelpText](#uid-c79ebe5455) | Helper for reading the value of the [Avalonia.Automation.AutomationProperties.HelpTextProperty](xref:Avalonia.Automation.AutomationProperties.HelpTextProperty) on a [StyledElement](xref:Avalonia.StyledElement). |
+| [GetIsColumnHeader](#uid-e6346b7780) | Helper for reading the value of the [Avalonia.Automation.AutomationProperties.IsColumnHeaderProperty](xref:Avalonia.Automation.AutomationProperties.IsColumnHeaderProperty) on a [StyledElement](xref:Avalonia.StyledElement). |
+| [GetIsControlElementOverride](#uid-c6cab6b614) | Helper for reading the value of the [Avalonia.Automation.AutomationProperties.IsControlElementOverrideProperty](xref:Avalonia.Automation.AutomationProperties.IsControlElementOverrideProperty) on a [StyledElement](xref:Avalonia.StyledElement). |
+| [GetIsOffscreenBehavior](#uid-7d4051710c) | Helper for reading the value of the [Avalonia.Automation.AutomationProperties.IsOffscreenBehaviorProperty](xref:Avalonia.Automation.AutomationProperties.IsOffscreenBehaviorProperty) on a [StyledElement](xref:Avalonia.StyledElement). |
+| [GetIsRequiredForForm](#uid-7c68680457) | Helper for reading the value of the [Avalonia.Automation.AutomationProperties.IsRequiredForFormProperty](xref:Avalonia.Automation.AutomationProperties.IsRequiredForFormProperty) on a [StyledElement](xref:Avalonia.StyledElement). |
+| [GetIsRowHeader](#uid-162b33a6be) | Helper for reading the value of the [Avalonia.Automation.AutomationProperties.IsRowHeaderProperty](xref:Avalonia.Automation.AutomationProperties.IsRowHeaderProperty) on a [StyledElement](xref:Avalonia.StyledElement). |
+| [GetItemStatus](#uid-0cb690e233) | Helper for reading the value of the [Avalonia.Automation.AutomationProperties.ItemStatusProperty](xref:Avalonia.Automation.AutomationProperties.ItemStatusProperty) on a [StyledElement](xref:Avalonia.StyledElement). |
+| [GetItemType](#uid-ccde2866d3) | Helper for reading the value of the [Avalonia.Automation.AutomationProperties.ItemTypeProperty](xref:Avalonia.Automation.AutomationProperties.ItemTypeProperty) on a [StyledElement](xref:Avalonia.StyledElement). |
+| [GetLabeledBy](#uid-dad6cde2ec) | Helper for reading the value of the [Avalonia.Automation.AutomationProperties.LabeledByProperty](xref:Avalonia.Automation.AutomationProperties.LabeledByProperty) on a [StyledElement](xref:Avalonia.StyledElement). |
+| [GetLandmarkType](#uid-dd73c85d2d) | Helper for reading the value of the [Avalonia.Automation.AutomationProperties.LandmarkTypeProperty](xref:Avalonia.Automation.AutomationProperties.LandmarkTypeProperty) on a [StyledElement](xref:Avalonia.StyledElement). |
+| [GetLiveSetting](#uid-c8e4875122) | Helper for reading the value of the [Avalonia.Automation.AutomationProperties.LiveSettingProperty](xref:Avalonia.Automation.AutomationProperties.LiveSettingProperty) on a [StyledElement](xref:Avalonia.StyledElement). |
+| [GetName](#uid-a701f092df) | Helper for reading the value of the [Avalonia.Automation.AutomationProperties.NameProperty](xref:Avalonia.Automation.AutomationProperties.NameProperty) on a [StyledElement](xref:Avalonia.StyledElement). |
+| [GetPositionInSet](#uid-602f7d2b8a) | Helper for reading the value of the [Avalonia.Automation.AutomationProperties.PositionInSetProperty](xref:Avalonia.Automation.AutomationProperties.PositionInSetProperty) on a [StyledElement](xref:Avalonia.StyledElement). |
+| [GetSizeOfSet](#uid-b36536a2ef) | Helper for reading the value of the [Avalonia.Automation.AutomationProperties.SizeOfSetProperty](xref:Avalonia.Automation.AutomationProperties.SizeOfSetProperty) on a [StyledElement](xref:Avalonia.StyledElement). |
+| [SetAcceleratorKey](#uid-a3e491a65f) | Helper for setting the value of the [Avalonia.Automation.AutomationProperties.AcceleratorKeyProperty](xref:Avalonia.Automation.AutomationProperties.AcceleratorKeyProperty) on a [StyledElement](xref:Avalonia.StyledElement). |
+| [SetAccessKey](#uid-0faff21684) | Helper for setting the value of the [Avalonia.Automation.AutomationProperties.AccessKeyProperty](xref:Avalonia.Automation.AutomationProperties.AccessKeyProperty) on a [StyledElement](xref:Avalonia.StyledElement). |
+| [SetAccessibilityView](#uid-d5037ef409) | Helper for setting the value of the [Avalonia.Automation.AutomationProperties.AccessibilityViewProperty](xref:Avalonia.Automation.AutomationProperties.AccessibilityViewProperty) on a [StyledElement](xref:Avalonia.StyledElement). |
+| [SetAutomationId](#uid-3f5008ecd2) | Helper for setting the value of the [Avalonia.Automation.AutomationProperties.AutomationIdProperty](xref:Avalonia.Automation.AutomationProperties.AutomationIdProperty) on a [StyledElement](xref:Avalonia.StyledElement). |
+| [SetClassNameOverride](#uid-641ef61a40) | Helper for setting the value of the [Avalonia.Automation.AutomationProperties.ClassNameOverrideProperty](xref:Avalonia.Automation.AutomationProperties.ClassNameOverrideProperty) on a [StyledElement](xref:Avalonia.StyledElement). |
+| [SetControlTypeOverride](#uid-1039b89a76) | No summary available. |
+| [SetHeadingLevel](#uid-60f556b5c8) | Helper for setting the value of the [Avalonia.Automation.AutomationProperties.HeadingLevelProperty](xref:Avalonia.Automation.AutomationProperties.HeadingLevelProperty) on a [StyledElement](xref:Avalonia.StyledElement). |
+| [SetHelpText](#uid-fdd4ed3586) | Helper for setting the value of the [Avalonia.Automation.AutomationProperties.HelpTextProperty](xref:Avalonia.Automation.AutomationProperties.HelpTextProperty) on a [StyledElement](xref:Avalonia.StyledElement). |
+| [SetIsColumnHeader](#uid-aa6adaff5b) | Helper for setting the value of the [Avalonia.Automation.AutomationProperties.IsColumnHeaderProperty](xref:Avalonia.Automation.AutomationProperties.IsColumnHeaderProperty) on a [StyledElement](xref:Avalonia.StyledElement). |
+| [SetIsControlElementOverride](#uid-b991655eeb) | No summary available. |
+| [SetIsOffscreenBehavior](#uid-d8e2998804) | Helper for setting the value of the [Avalonia.Automation.AutomationProperties.IsOffscreenBehaviorProperty](xref:Avalonia.Automation.AutomationProperties.IsOffscreenBehaviorProperty) on a [StyledElement](xref:Avalonia.StyledElement). |
+| [SetIsRequiredForForm](#uid-79587f39a3) | Helper for setting the value of the [Avalonia.Automation.AutomationProperties.IsRequiredForFormProperty](xref:Avalonia.Automation.AutomationProperties.IsRequiredForFormProperty) on a [StyledElement](xref:Avalonia.StyledElement). |
+| [SetIsRowHeader](#uid-ad401036fd) | Helper for setting the value of the [Avalonia.Automation.AutomationProperties.IsRowHeaderProperty](xref:Avalonia.Automation.AutomationProperties.IsRowHeaderProperty) on a [StyledElement](xref:Avalonia.StyledElement). |
+| [SetItemStatus](#uid-526568661e) | Helper for setting the value of the [Avalonia.Automation.AutomationProperties.ItemStatusProperty](xref:Avalonia.Automation.AutomationProperties.ItemStatusProperty) on a [StyledElement](xref:Avalonia.StyledElement). |
+| [SetItemType](#uid-45fbb3a143) | Helper for setting the value of the [Avalonia.Automation.AutomationProperties.ItemTypeProperty](xref:Avalonia.Automation.AutomationProperties.ItemTypeProperty) on a [StyledElement](xref:Avalonia.StyledElement). |
+| [SetLabeledBy](#uid-f1bc01705f) | Helper for setting the value of the [Avalonia.Automation.AutomationProperties.LabeledByProperty](xref:Avalonia.Automation.AutomationProperties.LabeledByProperty) on a [StyledElement](xref:Avalonia.StyledElement). |
+| [SetLandmarkType](#uid-bc8bfe26ec) | No summary available. |
+| [SetLiveSetting](#uid-72fb5c2b98) | Helper for setting the value of the [Avalonia.Automation.AutomationProperties.LiveSettingProperty](xref:Avalonia.Automation.AutomationProperties.LiveSettingProperty) on a [StyledElement](xref:Avalonia.StyledElement). |
+| [SetName](#uid-4f15c31f94) | Helper for setting the value of the [Avalonia.Automation.AutomationProperties.NameProperty](xref:Avalonia.Automation.AutomationProperties.NameProperty) on a [StyledElement](xref:Avalonia.StyledElement). |
+| [SetPositionInSet](#uid-03d657d27f) | Helper for setting the value of the [Avalonia.Automation.AutomationProperties.PositionInSetProperty](xref:Avalonia.Automation.AutomationProperties.PositionInSetProperty) on a [StyledElement](xref:Avalonia.StyledElement). |
+| [SetSizeOfSet](#uid-79dddbb656) | Helper for setting the value of the [Avalonia.Automation.AutomationProperties.SizeOfSetProperty](xref:Avalonia.Automation.AutomationProperties.SizeOfSetProperty) on a [StyledElement](xref:Avalonia.StyledElement). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6bb99765ed"></span>
+
+### GetAcceleratorKey Method
+
+Helper for reading the value of the [Avalonia.Automation.AutomationProperties.AcceleratorKeyProperty](xref:Avalonia.Automation.AutomationProperties.AcceleratorKeyProperty) on a [StyledElement](xref:Avalonia.StyledElement).
+
+```csharp
+public string GetAcceleratorKey(Avalonia.StyledElement element)
+```
+
+#### Parameters
+
+`element` [Avalonia.StyledElement](xref:Avalonia.StyledElement)
+
+
+#### Returns
+
+string
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-26c8569f8f"></span>
+
+### GetAccessKey Method
+
+Helper for reading the value of the [Avalonia.Automation.AutomationProperties.AccessKeyProperty](xref:Avalonia.Automation.AutomationProperties.AccessKeyProperty) on a [StyledElement](xref:Avalonia.StyledElement).
+
+```csharp
+public string GetAccessKey(Avalonia.StyledElement element)
+```
+
+#### Parameters
+
+`element` [Avalonia.StyledElement](xref:Avalonia.StyledElement)
+
+
+#### Returns
+
+string
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c28782b68d"></span>
+
+### GetAccessibilityView Method
+
+Helper for reading the value of the [Avalonia.Automation.AutomationProperties.AccessibilityViewProperty](xref:Avalonia.Automation.AutomationProperties.AccessibilityViewProperty) on a [StyledElement](xref:Avalonia.StyledElement).
+
+```csharp
+public Avalonia.Automation.AccessibilityView GetAccessibilityView(Avalonia.StyledElement element)
+```
+
+#### Parameters
+
+`element` [Avalonia.StyledElement](xref:Avalonia.StyledElement)
+
+
+#### Returns
+
+[Avalonia.Automation.AccessibilityView](xref:Avalonia.Automation.AccessibilityView)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-06aa62279e"></span>
+
+### GetAutomationId Method
+
+Helper for reading the value of the [Avalonia.Automation.AutomationProperties.AutomationIdProperty](xref:Avalonia.Automation.AutomationProperties.AutomationIdProperty) on a [StyledElement](xref:Avalonia.StyledElement).
+
+```csharp
+public string GetAutomationId(Avalonia.StyledElement element)
+```
+
+#### Parameters
+
+`element` [Avalonia.StyledElement](xref:Avalonia.StyledElement)
+
+
+#### Returns
+
+string
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e65a4635fd"></span>
+
+### GetClassNameOverride Method
+
+Helper for reading the value of the [Avalonia.Automation.AutomationProperties.ClassNameOverrideProperty](xref:Avalonia.Automation.AutomationProperties.ClassNameOverrideProperty) on a [StyledElement](xref:Avalonia.StyledElement).
+
+```csharp
+public string GetClassNameOverride(Avalonia.StyledElement element)
+```
+
+#### Parameters
+
+`element` [Avalonia.StyledElement](xref:Avalonia.StyledElement)
+
+
+#### Returns
+
+string
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-77471e006e"></span>
+
+### GetControlTypeOverride Method
+
+Helper for reading the value of the [Avalonia.Automation.AutomationProperties.ControlTypeOverrideProperty](xref:Avalonia.Automation.AutomationProperties.ControlTypeOverrideProperty) on a [StyledElement](xref:Avalonia.StyledElement).
+
+```csharp
+public Nullable<Avalonia.Automation.Peers.AutomationControlType> GetControlTypeOverride(Avalonia.StyledElement element)
+```
+
+#### Parameters
+
+`element` [Avalonia.StyledElement](xref:Avalonia.StyledElement)
+
+
+#### Returns
+
+Nullable&lt;[Avalonia.Automation.Peers.AutomationControlType](xref:Avalonia.Automation.Peers.AutomationControlType)&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6e019c9ce6"></span>
+
+### GetHeadingLevel Method
+
+Helper for reading the value of the [Avalonia.Automation.AutomationProperties.HeadingLevelProperty](xref:Avalonia.Automation.AutomationProperties.HeadingLevelProperty) on a [StyledElement](xref:Avalonia.StyledElement).
+
+```csharp
+public int GetHeadingLevel(Avalonia.StyledElement element)
+```
+
+#### Parameters
+
+`element` [Avalonia.StyledElement](xref:Avalonia.StyledElement)
+
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c79ebe5455"></span>
+
+### GetHelpText Method
+
+Helper for reading the value of the [Avalonia.Automation.AutomationProperties.HelpTextProperty](xref:Avalonia.Automation.AutomationProperties.HelpTextProperty) on a [StyledElement](xref:Avalonia.StyledElement).
+
+```csharp
+public string GetHelpText(Avalonia.StyledElement element)
+```
+
+#### Parameters
+
+`element` [Avalonia.StyledElement](xref:Avalonia.StyledElement)
+
+
+#### Returns
+
+string
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e6346b7780"></span>
+
+### GetIsColumnHeader Method
+
+Helper for reading the value of the [Avalonia.Automation.AutomationProperties.IsColumnHeaderProperty](xref:Avalonia.Automation.AutomationProperties.IsColumnHeaderProperty) on a [StyledElement](xref:Avalonia.StyledElement).
+
+```csharp
+public bool GetIsColumnHeader(Avalonia.StyledElement element)
+```
+
+#### Parameters
+
+`element` [Avalonia.StyledElement](xref:Avalonia.StyledElement)
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c6cab6b614"></span>
+
+### GetIsControlElementOverride Method
+
+Helper for reading the value of the [Avalonia.Automation.AutomationProperties.IsControlElementOverrideProperty](xref:Avalonia.Automation.AutomationProperties.IsControlElementOverrideProperty) on a [StyledElement](xref:Avalonia.StyledElement).
+
+```csharp
+public Nullable<bool> GetIsControlElementOverride(Avalonia.StyledElement element)
+```
+
+#### Parameters
+
+`element` [Avalonia.StyledElement](xref:Avalonia.StyledElement)
+
+
+#### Returns
+
+Nullable&lt;bool&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7d4051710c"></span>
+
+### GetIsOffscreenBehavior Method
+
+Helper for reading the value of the [Avalonia.Automation.AutomationProperties.IsOffscreenBehaviorProperty](xref:Avalonia.Automation.AutomationProperties.IsOffscreenBehaviorProperty) on a [StyledElement](xref:Avalonia.StyledElement).
+
+```csharp
+public Avalonia.Automation.IsOffscreenBehavior GetIsOffscreenBehavior(Avalonia.StyledElement element)
+```
+
+#### Parameters
+
+`element` [Avalonia.StyledElement](xref:Avalonia.StyledElement)
+
+
+#### Returns
+
+[Avalonia.Automation.IsOffscreenBehavior](xref:Avalonia.Automation.IsOffscreenBehavior)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7c68680457"></span>
+
+### GetIsRequiredForForm Method
+
+Helper for reading the value of the [Avalonia.Automation.AutomationProperties.IsRequiredForFormProperty](xref:Avalonia.Automation.AutomationProperties.IsRequiredForFormProperty) on a [StyledElement](xref:Avalonia.StyledElement).
+
+```csharp
+public bool GetIsRequiredForForm(Avalonia.StyledElement element)
+```
+
+#### Parameters
+
+`element` [Avalonia.StyledElement](xref:Avalonia.StyledElement)
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-162b33a6be"></span>
+
+### GetIsRowHeader Method
+
+Helper for reading the value of the [Avalonia.Automation.AutomationProperties.IsRowHeaderProperty](xref:Avalonia.Automation.AutomationProperties.IsRowHeaderProperty) on a [StyledElement](xref:Avalonia.StyledElement).
+
+```csharp
+public bool GetIsRowHeader(Avalonia.StyledElement element)
+```
+
+#### Parameters
+
+`element` [Avalonia.StyledElement](xref:Avalonia.StyledElement)
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0cb690e233"></span>
+
+### GetItemStatus Method
+
+Helper for reading the value of the [Avalonia.Automation.AutomationProperties.ItemStatusProperty](xref:Avalonia.Automation.AutomationProperties.ItemStatusProperty) on a [StyledElement](xref:Avalonia.StyledElement).
+
+```csharp
+public string GetItemStatus(Avalonia.StyledElement element)
+```
+
+#### Parameters
+
+`element` [Avalonia.StyledElement](xref:Avalonia.StyledElement)
+
+
+#### Returns
+
+string
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ccde2866d3"></span>
+
+### GetItemType Method
+
+Helper for reading the value of the [Avalonia.Automation.AutomationProperties.ItemTypeProperty](xref:Avalonia.Automation.AutomationProperties.ItemTypeProperty) on a [StyledElement](xref:Avalonia.StyledElement).
+
+```csharp
+public string GetItemType(Avalonia.StyledElement element)
+```
+
+#### Parameters
+
+`element` [Avalonia.StyledElement](xref:Avalonia.StyledElement)
+
+
+#### Returns
+
+string
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-dad6cde2ec"></span>
+
+### GetLabeledBy Method
+
+Helper for reading the value of the [Avalonia.Automation.AutomationProperties.LabeledByProperty](xref:Avalonia.Automation.AutomationProperties.LabeledByProperty) on a [StyledElement](xref:Avalonia.StyledElement).
+
+```csharp
+public Avalonia.Controls.Control GetLabeledBy(Avalonia.StyledElement element)
+```
+
+#### Parameters
+
+`element` [Avalonia.StyledElement](xref:Avalonia.StyledElement)
+
+
+#### Returns
+
+[Avalonia.Controls.Control](xref:Avalonia.Controls.Control)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-dd73c85d2d"></span>
+
+### GetLandmarkType Method
+
+Helper for reading the value of the [Avalonia.Automation.AutomationProperties.LandmarkTypeProperty](xref:Avalonia.Automation.AutomationProperties.LandmarkTypeProperty) on a [StyledElement](xref:Avalonia.StyledElement).
+
+```csharp
+public Nullable<Avalonia.Automation.Peers.AutomationLandmarkType> GetLandmarkType(Avalonia.StyledElement element)
+```
+
+#### Parameters
+
+`element` [Avalonia.StyledElement](xref:Avalonia.StyledElement)
+
+
+#### Returns
+
+Nullable&lt;[Avalonia.Automation.Peers.AutomationLandmarkType](xref:Avalonia.Automation.Peers.AutomationLandmarkType)&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c8e4875122"></span>
+
+### GetLiveSetting Method
+
+Helper for reading the value of the [Avalonia.Automation.AutomationProperties.LiveSettingProperty](xref:Avalonia.Automation.AutomationProperties.LiveSettingProperty) on a [StyledElement](xref:Avalonia.StyledElement).
+
+```csharp
+public Avalonia.Automation.AutomationLiveSetting GetLiveSetting(Avalonia.StyledElement element)
+```
+
+#### Parameters
+
+`element` [Avalonia.StyledElement](xref:Avalonia.StyledElement)
+
+
+#### Returns
+
+[Avalonia.Automation.AutomationLiveSetting](xref:Avalonia.Automation.AutomationLiveSetting)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a701f092df"></span>
+
+### GetName Method
+
+Helper for reading the value of the [Avalonia.Automation.AutomationProperties.NameProperty](xref:Avalonia.Automation.AutomationProperties.NameProperty) on a [StyledElement](xref:Avalonia.StyledElement).
+
+```csharp
+public string GetName(Avalonia.StyledElement element)
+```
+
+#### Parameters
+
+`element` [Avalonia.StyledElement](xref:Avalonia.StyledElement)
+
+
+#### Returns
+
+string
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-602f7d2b8a"></span>
+
+### GetPositionInSet Method
+
+Helper for reading the value of the [Avalonia.Automation.AutomationProperties.PositionInSetProperty](xref:Avalonia.Automation.AutomationProperties.PositionInSetProperty) on a [StyledElement](xref:Avalonia.StyledElement).
+
+```csharp
+public int GetPositionInSet(Avalonia.StyledElement element)
+```
+
+#### Parameters
+
+`element` [Avalonia.StyledElement](xref:Avalonia.StyledElement)
+
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b36536a2ef"></span>
+
+### GetSizeOfSet Method
+
+Helper for reading the value of the [Avalonia.Automation.AutomationProperties.SizeOfSetProperty](xref:Avalonia.Automation.AutomationProperties.SizeOfSetProperty) on a [StyledElement](xref:Avalonia.StyledElement).
+
+```csharp
+public int GetSizeOfSet(Avalonia.StyledElement element)
+```
+
+#### Parameters
+
+`element` [Avalonia.StyledElement](xref:Avalonia.StyledElement)
+
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a3e491a65f"></span>
+
+### SetAcceleratorKey Method
+
+Helper for setting the value of the [Avalonia.Automation.AutomationProperties.AcceleratorKeyProperty](xref:Avalonia.Automation.AutomationProperties.AcceleratorKeyProperty) on a [StyledElement](xref:Avalonia.StyledElement).
+
+```csharp
+public void SetAcceleratorKey(Avalonia.StyledElement element, string value)
+```
+
+#### Parameters
+
+`element` [Avalonia.StyledElement](xref:Avalonia.StyledElement)
+
+
+`value` string
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0faff21684"></span>
+
+### SetAccessKey Method
+
+Helper for setting the value of the [Avalonia.Automation.AutomationProperties.AccessKeyProperty](xref:Avalonia.Automation.AutomationProperties.AccessKeyProperty) on a [StyledElement](xref:Avalonia.StyledElement).
+
+```csharp
+public void SetAccessKey(Avalonia.StyledElement element, string value)
+```
+
+#### Parameters
+
+`element` [Avalonia.StyledElement](xref:Avalonia.StyledElement)
+
+
+`value` string
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d5037ef409"></span>
+
+### SetAccessibilityView Method
+
+Helper for setting the value of the [Avalonia.Automation.AutomationProperties.AccessibilityViewProperty](xref:Avalonia.Automation.AutomationProperties.AccessibilityViewProperty) on a [StyledElement](xref:Avalonia.StyledElement).
+
+```csharp
+public void SetAccessibilityView(Avalonia.StyledElement element, Avalonia.Automation.AccessibilityView value)
+```
+
+#### Parameters
+
+`element` [Avalonia.StyledElement](xref:Avalonia.StyledElement)
+
+
+`value` [Avalonia.Automation.AccessibilityView](xref:Avalonia.Automation.AccessibilityView)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3f5008ecd2"></span>
+
+### SetAutomationId Method
+
+Helper for setting the value of the [Avalonia.Automation.AutomationProperties.AutomationIdProperty](xref:Avalonia.Automation.AutomationProperties.AutomationIdProperty) on a [StyledElement](xref:Avalonia.StyledElement).
+
+```csharp
+public void SetAutomationId(Avalonia.StyledElement element, string value)
+```
+
+#### Parameters
+
+`element` [Avalonia.StyledElement](xref:Avalonia.StyledElement)
+
+
+`value` string
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-641ef61a40"></span>
+
+### SetClassNameOverride Method
+
+Helper for setting the value of the [Avalonia.Automation.AutomationProperties.ClassNameOverrideProperty](xref:Avalonia.Automation.AutomationProperties.ClassNameOverrideProperty) on a [StyledElement](xref:Avalonia.StyledElement).
+
+```csharp
+public void SetClassNameOverride(Avalonia.StyledElement element, string value)
+```
+
+#### Parameters
+
+`element` [Avalonia.StyledElement](xref:Avalonia.StyledElement)
+
+
+`value` string
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1039b89a76"></span>
+
+### SetControlTypeOverride Method
+
+```csharp
+public void SetControlTypeOverride(Avalonia.StyledElement element, Nullable<Avalonia.Automation.Peers.AutomationControlType> value)
+```
+
+#### Parameters
+
+`element` [Avalonia.StyledElement](xref:Avalonia.StyledElement)
+
+
+`value` Nullable&lt;[Avalonia.Automation.Peers.AutomationControlType](xref:Avalonia.Automation.Peers.AutomationControlType)&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-60f556b5c8"></span>
+
+### SetHeadingLevel Method
+
+Helper for setting the value of the [Avalonia.Automation.AutomationProperties.HeadingLevelProperty](xref:Avalonia.Automation.AutomationProperties.HeadingLevelProperty) on a [StyledElement](xref:Avalonia.StyledElement).
+
+```csharp
+public void SetHeadingLevel(Avalonia.StyledElement element, int value)
+```
+
+#### Parameters
+
+`element` [Avalonia.StyledElement](xref:Avalonia.StyledElement)
+
+
+`value` int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-fdd4ed3586"></span>
+
+### SetHelpText Method
+
+Helper for setting the value of the [Avalonia.Automation.AutomationProperties.HelpTextProperty](xref:Avalonia.Automation.AutomationProperties.HelpTextProperty) on a [StyledElement](xref:Avalonia.StyledElement).
+
+```csharp
+public void SetHelpText(Avalonia.StyledElement element, string value)
+```
+
+#### Parameters
+
+`element` [Avalonia.StyledElement](xref:Avalonia.StyledElement)
+
+
+`value` string
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-aa6adaff5b"></span>
+
+### SetIsColumnHeader Method
+
+Helper for setting the value of the [Avalonia.Automation.AutomationProperties.IsColumnHeaderProperty](xref:Avalonia.Automation.AutomationProperties.IsColumnHeaderProperty) on a [StyledElement](xref:Avalonia.StyledElement).
+
+```csharp
+public void SetIsColumnHeader(Avalonia.StyledElement element, bool value)
+```
+
+#### Parameters
+
+`element` [Avalonia.StyledElement](xref:Avalonia.StyledElement)
+
+
+`value` bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b991655eeb"></span>
+
+### SetIsControlElementOverride Method
+
+```csharp
+public void SetIsControlElementOverride(Avalonia.StyledElement element, Nullable<bool> value)
+```
+
+#### Parameters
+
+`element` [Avalonia.StyledElement](xref:Avalonia.StyledElement)
+
+
+`value` Nullable&lt;bool&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d8e2998804"></span>
+
+### SetIsOffscreenBehavior Method
+
+Helper for setting the value of the [Avalonia.Automation.AutomationProperties.IsOffscreenBehaviorProperty](xref:Avalonia.Automation.AutomationProperties.IsOffscreenBehaviorProperty) on a [StyledElement](xref:Avalonia.StyledElement).
+
+```csharp
+public void SetIsOffscreenBehavior(Avalonia.StyledElement element, Avalonia.Automation.IsOffscreenBehavior value)
+```
+
+#### Parameters
+
+`element` [Avalonia.StyledElement](xref:Avalonia.StyledElement)
+
+
+`value` [Avalonia.Automation.IsOffscreenBehavior](xref:Avalonia.Automation.IsOffscreenBehavior)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-79587f39a3"></span>
+
+### SetIsRequiredForForm Method
+
+Helper for setting the value of the [Avalonia.Automation.AutomationProperties.IsRequiredForFormProperty](xref:Avalonia.Automation.AutomationProperties.IsRequiredForFormProperty) on a [StyledElement](xref:Avalonia.StyledElement).
+
+```csharp
+public void SetIsRequiredForForm(Avalonia.StyledElement element, bool value)
+```
+
+#### Parameters
+
+`element` [Avalonia.StyledElement](xref:Avalonia.StyledElement)
+
+
+`value` bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ad401036fd"></span>
+
+### SetIsRowHeader Method
+
+Helper for setting the value of the [Avalonia.Automation.AutomationProperties.IsRowHeaderProperty](xref:Avalonia.Automation.AutomationProperties.IsRowHeaderProperty) on a [StyledElement](xref:Avalonia.StyledElement).
+
+```csharp
+public void SetIsRowHeader(Avalonia.StyledElement element, bool value)
+```
+
+#### Parameters
+
+`element` [Avalonia.StyledElement](xref:Avalonia.StyledElement)
+
+
+`value` bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-526568661e"></span>
+
+### SetItemStatus Method
+
+Helper for setting the value of the [Avalonia.Automation.AutomationProperties.ItemStatusProperty](xref:Avalonia.Automation.AutomationProperties.ItemStatusProperty) on a [StyledElement](xref:Avalonia.StyledElement).
+
+```csharp
+public void SetItemStatus(Avalonia.StyledElement element, string value)
+```
+
+#### Parameters
+
+`element` [Avalonia.StyledElement](xref:Avalonia.StyledElement)
+
+
+`value` string
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-45fbb3a143"></span>
+
+### SetItemType Method
+
+Helper for setting the value of the [Avalonia.Automation.AutomationProperties.ItemTypeProperty](xref:Avalonia.Automation.AutomationProperties.ItemTypeProperty) on a [StyledElement](xref:Avalonia.StyledElement).
+
+```csharp
+public void SetItemType(Avalonia.StyledElement element, string value)
+```
+
+#### Parameters
+
+`element` [Avalonia.StyledElement](xref:Avalonia.StyledElement)
+
+
+`value` string
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f1bc01705f"></span>
+
+### SetLabeledBy Method
+
+Helper for setting the value of the [Avalonia.Automation.AutomationProperties.LabeledByProperty](xref:Avalonia.Automation.AutomationProperties.LabeledByProperty) on a [StyledElement](xref:Avalonia.StyledElement).
+
+```csharp
+public void SetLabeledBy(Avalonia.StyledElement element, Avalonia.Controls.Control value)
+```
+
+#### Parameters
+
+`element` [Avalonia.StyledElement](xref:Avalonia.StyledElement)
+
+
+`value` [Avalonia.Controls.Control](xref:Avalonia.Controls.Control)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-bc8bfe26ec"></span>
+
+### SetLandmarkType Method
+
+```csharp
+public void SetLandmarkType(Avalonia.StyledElement element, Nullable<Avalonia.Automation.Peers.AutomationLandmarkType> value)
+```
+
+#### Parameters
+
+`element` [Avalonia.StyledElement](xref:Avalonia.StyledElement)
+
+
+`value` Nullable&lt;[Avalonia.Automation.Peers.AutomationLandmarkType](xref:Avalonia.Automation.Peers.AutomationLandmarkType)&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-72fb5c2b98"></span>
+
+### SetLiveSetting Method
+
+Helper for setting the value of the [Avalonia.Automation.AutomationProperties.LiveSettingProperty](xref:Avalonia.Automation.AutomationProperties.LiveSettingProperty) on a [StyledElement](xref:Avalonia.StyledElement).
+
+```csharp
+public void SetLiveSetting(Avalonia.StyledElement element, Avalonia.Automation.AutomationLiveSetting value)
+```
+
+#### Parameters
+
+`element` [Avalonia.StyledElement](xref:Avalonia.StyledElement)
+
+
+`value` [Avalonia.Automation.AutomationLiveSetting](xref:Avalonia.Automation.AutomationLiveSetting)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4f15c31f94"></span>
+
+### SetName Method
+
+Helper for setting the value of the [Avalonia.Automation.AutomationProperties.NameProperty](xref:Avalonia.Automation.AutomationProperties.NameProperty) on a [StyledElement](xref:Avalonia.StyledElement).
+
+```csharp
+public void SetName(Avalonia.StyledElement element, string value)
+```
+
+#### Parameters
+
+`element` [Avalonia.StyledElement](xref:Avalonia.StyledElement)
+
+
+`value` string
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-03d657d27f"></span>
+
+### SetPositionInSet Method
+
+Helper for setting the value of the [Avalonia.Automation.AutomationProperties.PositionInSetProperty](xref:Avalonia.Automation.AutomationProperties.PositionInSetProperty) on a [StyledElement](xref:Avalonia.StyledElement).
+
+```csharp
+public void SetPositionInSet(Avalonia.StyledElement element, int value)
+```
+
+#### Parameters
+
+`element` [Avalonia.StyledElement](xref:Avalonia.StyledElement)
+
+
+`value` int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-79dddbb656"></span>
+
+### SetSizeOfSet Method
+
+Helper for setting the value of the [Avalonia.Automation.AutomationProperties.SizeOfSetProperty](xref:Avalonia.Automation.AutomationProperties.SizeOfSetProperty) on a [StyledElement](xref:Avalonia.StyledElement).
+
+```csharp
+public void SetSizeOfSet(Avalonia.StyledElement element, int value)
+```
+
+#### Parameters
+
+`element` [Avalonia.StyledElement](xref:Avalonia.StyledElement)
+
+
+`value` int
+
+
+</section>
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [AcceleratorKeyProperty](#uid-5375e8be01) | Defines the AutomationProperties.AcceleratorKey attached property. |
+| [AccessKeyProperty](#uid-91f8afe39a) | Defines the AutomationProperties.AccessKey attached property |
+| [AccessibilityViewProperty](#uid-84ed7706af) | Defines the AutomationProperties.[AccessibilityView](xref:Avalonia.Automation.AccessibilityView) attached property. |
+| [AutomationIdProperty](#uid-4618cbc31c) | Defines the AutomationProperties.AutomationId attached property. |
+| [ClassNameOverrideProperty](#uid-ec74a81553) | Defines the AutomationProperties.ClassNameOverride attached property. |
+| [ControlTypeOverrideProperty](#uid-3fabc9aa90) | Defines the AutomationProperties.ControlTypeOverride attached property. |
+| [HeadingLevelProperty](#uid-50ab2a82f4) | Defines the AutomationProperties.HeadingLevel attached property. |
+| [HelpTextProperty](#uid-9f8d7d3f32) | Defines the AutomationProperties.HelpText attached property. |
+| [IsColumnHeaderProperty](#uid-945f0d4f64) | Defines the AutomationProperties.IsColumnHeader attached property. |
+| [IsControlElementOverrideProperty](#uid-2afc58870b) | Defines the AutomationProperties.IsControlElementOverride attached property. |
+| [IsOffscreenBehaviorProperty](#uid-500676a5b9) | Defines the AutomationProperties.[IsOffscreenBehavior](xref:Avalonia.Automation.IsOffscreenBehavior) attached property. |
+| [IsRequiredForFormProperty](#uid-8f8df6ab63) | Defines the AutomationProperties.IsRequiredForForm attached property. |
+| [IsRowHeaderProperty](#uid-80441430e6) | Defines the AutomationProperties.IsRowHeader attached property. |
+| [ItemStatusProperty](#uid-45744c1c81) | Defines the AutomationProperties.ItemStatus attached property. |
+| [ItemTypeProperty](#uid-f6d5bf018a) | Defines the AutomationProperties.ItemType attached property. |
+| [LabeledByProperty](#uid-6c84aac1de) | Defines the AutomationProperties.LabeledBy attached property. |
+| [LandmarkTypeProperty](#uid-ddb5d0359a) | Defines the AutomationProperties.LandmarkType attached property. |
+| [LiveSettingProperty](#uid-28465ba717) | Defines the AutomationProperties.LiveSetting attached property. |
+| [NameProperty](#uid-c5bab1d101) | Defines the AutomationProperties.Name attached attached property. |
+| [PositionInSetProperty](#uid-6b8b4bb625) | Defines the AutomationProperties.PositionInSet attached property. |
+| [SizeOfSetProperty](#uid-012ef89d2d) | Defines the AutomationProperties.SizeOfSet attached property. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5375e8be01"></span>
+
+### AcceleratorKeyProperty Field
+
+Defines the AutomationProperties.AcceleratorKey attached property.
+
+```csharp
+public Avalonia.AttachedProperty<string> AcceleratorKeyProperty
+```
+
+#### Remarks
+
+This property affects the default value for [Avalonia.Automation.Peers.AutomationPeer.GetAcceleratorKey](xref:Avalonia.Automation.Peers.AutomationPeer.GetAcceleratorKey).
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-91f8afe39a"></span>
+
+### AccessKeyProperty Field
+
+Defines the AutomationProperties.AccessKey attached property
+
+```csharp
+public Avalonia.AttachedProperty<string> AccessKeyProperty
+```
+
+#### Remarks
+
+This property affects the default value for [Avalonia.Automation.Peers.AutomationPeer.GetAccessKey](xref:Avalonia.Automation.Peers.AutomationPeer.GetAccessKey).
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-84ed7706af"></span>
+
+### AccessibilityViewProperty Field
+
+Defines the AutomationProperties.[AccessibilityView](xref:Avalonia.Automation.AccessibilityView) attached property.
+
+```csharp
+public Avalonia.AttachedProperty<Avalonia.Automation.AccessibilityView> AccessibilityViewProperty
+```
+
+#### Remarks
+
+The value of this property affects the default value of the
+[Avalonia.Automation.Peers.AutomationPeer.IsContentElement](xref:Avalonia.Automation.Peers.AutomationPeer.IsContentElement) and
+[Avalonia.Automation.Peers.AutomationPeer.IsControlElement](xref:Avalonia.Automation.Peers.AutomationPeer.IsControlElement) properties.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4618cbc31c"></span>
+
+### AutomationIdProperty Field
+
+Defines the AutomationProperties.AutomationId attached property.
+
+```csharp
+public Avalonia.AttachedProperty<string> AutomationIdProperty
+```
+
+#### Remarks
+
+This property affects the default value for [Avalonia.Automation.Peers.AutomationPeer.GetAutomationId](xref:Avalonia.Automation.Peers.AutomationPeer.GetAutomationId).
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ec74a81553"></span>
+
+### ClassNameOverrideProperty Field
+
+Defines the AutomationProperties.ClassNameOverride attached property.
+
+```csharp
+public Avalonia.AttachedProperty<string> ClassNameOverrideProperty
+```
+
+#### Remarks
+
+This property affects the default value for [Avalonia.Automation.Peers.AutomationPeer.GetClassName](xref:Avalonia.Automation.Peers.AutomationPeer.GetClassName).
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3fabc9aa90"></span>
+
+### ControlTypeOverrideProperty Field
+
+Defines the AutomationProperties.ControlTypeOverride attached property.
+
+```csharp
+public Avalonia.AttachedProperty<Nullable<Avalonia.Automation.Peers.AutomationControlType>> ControlTypeOverrideProperty
+```
+
+#### Remarks
+
+This property affects the default value for
+[Avalonia.Automation.Peers.AutomationPeer.GetAutomationControlType](xref:Avalonia.Automation.Peers.AutomationPeer.GetAutomationControlType).
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-50ab2a82f4"></span>
+
+### HeadingLevelProperty Field
+
+Defines the AutomationProperties.HeadingLevel attached property.
+
+```csharp
+public Avalonia.AttachedProperty<int> HeadingLevelProperty
+```
+
+#### Remarks
+
+This property affects the default value for [Avalonia.Automation.Peers.AutomationPeer.GetHeadingLevel](xref:Avalonia.Automation.Peers.AutomationPeer.GetHeadingLevel).
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9f8d7d3f32"></span>
+
+### HelpTextProperty Field
+
+Defines the AutomationProperties.HelpText attached property.
+
+```csharp
+public Avalonia.AttachedProperty<string> HelpTextProperty
+```
+
+#### Remarks
+
+This property affects the default value for [Avalonia.Automation.Peers.AutomationPeer.GetHelpText](xref:Avalonia.Automation.Peers.AutomationPeer.GetHelpText).
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-945f0d4f64"></span>
+
+### IsColumnHeaderProperty Field
+
+Defines the AutomationProperties.IsColumnHeader attached property.
+
+```csharp
+public Avalonia.AttachedProperty<bool> IsColumnHeaderProperty
+```
+
+#### Remarks
+
+This property currently has no effect.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2afc58870b"></span>
+
+### IsControlElementOverrideProperty Field
+
+Defines the AutomationProperties.IsControlElementOverride attached property.
+
+```csharp
+public Avalonia.AttachedProperty<Nullable<bool>> IsControlElementOverrideProperty
+```
+
+#### Remarks
+
+This property affects the default value for
+[Avalonia.Automation.Peers.AutomationPeer.IsControlElement](xref:Avalonia.Automation.Peers.AutomationPeer.IsControlElement).
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-500676a5b9"></span>
+
+### IsOffscreenBehaviorProperty Field
+
+Defines the AutomationProperties.[IsOffscreenBehavior](xref:Avalonia.Automation.IsOffscreenBehavior) attached property.
+
+```csharp
+public Avalonia.AttachedProperty<Avalonia.Automation.IsOffscreenBehavior> IsOffscreenBehaviorProperty
+```
+
+#### Remarks
+
+This property affects the default value for [Avalonia.Automation.Peers.AutomationPeer.IsOffscreen](xref:Avalonia.Automation.Peers.AutomationPeer.IsOffscreen).
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8f8df6ab63"></span>
+
+### IsRequiredForFormProperty Field
+
+Defines the AutomationProperties.IsRequiredForForm attached property.
+
+```csharp
+public Avalonia.AttachedProperty<bool> IsRequiredForFormProperty
+```
+
+#### Remarks
+
+This property currently has no effect.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-80441430e6"></span>
+
+### IsRowHeaderProperty Field
+
+Defines the AutomationProperties.IsRowHeader attached property.
+
+```csharp
+public Avalonia.AttachedProperty<bool> IsRowHeaderProperty
+```
+
+#### Remarks
+
+This property currently has no effect.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-45744c1c81"></span>
+
+### ItemStatusProperty Field
+
+Defines the AutomationProperties.ItemStatus attached property.
+
+```csharp
+public Avalonia.AttachedProperty<string> ItemStatusProperty
+```
+
+#### Remarks
+
+This property currently has no effect.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f6d5bf018a"></span>
+
+### ItemTypeProperty Field
+
+Defines the AutomationProperties.ItemType attached property.
+
+```csharp
+public Avalonia.AttachedProperty<string> ItemTypeProperty
+```
+
+#### Remarks
+
+This property currently has no effect.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6c84aac1de"></span>
+
+### LabeledByProperty Field
+
+Defines the AutomationProperties.LabeledBy attached property.
+
+```csharp
+public Avalonia.AttachedProperty<Avalonia.Controls.Control> LabeledByProperty
+```
+
+#### Remarks
+
+This property affects the default value for [Avalonia.Automation.Peers.AutomationPeer.GetLabeledBy](xref:Avalonia.Automation.Peers.AutomationPeer.GetLabeledBy).
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ddb5d0359a"></span>
+
+### LandmarkTypeProperty Field
+
+Defines the AutomationProperties.LandmarkType attached property.
+
+```csharp
+public Avalonia.AttachedProperty<Nullable<Avalonia.Automation.Peers.AutomationLandmarkType>> LandmarkTypeProperty
+```
+
+#### Remarks
+
+This property affects the default value for [Avalonia.Automation.Peers.AutomationPeer.GetLandmarkType](xref:Avalonia.Automation.Peers.AutomationPeer.GetLandmarkType)
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-28465ba717"></span>
+
+### LiveSettingProperty Field
+
+Defines the AutomationProperties.LiveSetting attached property.
+
+```csharp
+public Avalonia.AttachedProperty<Avalonia.Automation.AutomationLiveSetting> LiveSettingProperty
+```
+
+#### Remarks
+
+This property affects the default value for [Avalonia.Automation.Peers.AutomationPeer.GetLiveSetting](xref:Avalonia.Automation.Peers.AutomationPeer.GetLiveSetting) and controls whether live region changed events are emitted.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c5bab1d101"></span>
+
+### NameProperty Field
+
+Defines the AutomationProperties.Name attached attached property.
+
+```csharp
+public Avalonia.AttachedProperty<string> NameProperty
+```
+
+#### Remarks
+
+This property affects the default value for [Avalonia.Automation.Peers.AutomationPeer.GetName](xref:Avalonia.Automation.Peers.AutomationPeer.GetName).
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6b8b4bb625"></span>
+
+### PositionInSetProperty Field
+
+Defines the AutomationProperties.PositionInSet attached property.
+
+```csharp
+public Avalonia.AttachedProperty<int> PositionInSetProperty
+```
+
+#### Remarks
+
+NOTE: This property currently has no effect.
+
+The PositionInSet property describes the ordinal location of the element within a set
+of elements which are considered to be siblings. PositionInSet works in coordination
+with the SizeOfSet property to describe the ordinal location in the set.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-012ef89d2d"></span>
+
+### SizeOfSetProperty Field
+
+Defines the AutomationProperties.SizeOfSet attached property.
+
+```csharp
+public Avalonia.AttachedProperty<int> SizeOfSetProperty
+```
+
+#### Remarks
+
+NOTE: This property currently has no effect.
+
+The SizeOfSet property describes the count of automation elements in a group or set
+that are considered to be siblings. SizeOfSet works in coordination with the PositionInSet
+property to describe the count of items in the set.
+
+</section>
+
+</ApiRefPage>
+

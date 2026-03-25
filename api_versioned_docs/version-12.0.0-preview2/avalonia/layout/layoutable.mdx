@@ -1,0 +1,680 @@
+---
+title: 'Layoutable'
+hide_title: true
+slug: '/avalonia/layout/layoutable'
+uid: 'Avalonia.Layout.Layoutable'
+commentId: 'T:Avalonia.Layout.Layoutable'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Layout'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">Layoutable Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Layout</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Layout/Layoutable.cs">Layoutable.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Implements layout-related functionality for a control.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class Layoutable
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../animation/animatable">Animatable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../styledelement">StyledElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../visual">Visual</a> <span className="apiref-page__relation-separator">-&gt;</span> Layoutable
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Derived types:</span> <a href="../interactivity/interactive">Interactive</a>
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [Layoutable](#uid-caaf38294e) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-caaf38294e"></span>
+
+### Layoutable Constructor
+
+```csharp
+public Layoutable()
+```
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [ApplyTemplate](#uid-cc46768b1a) | Creates the visual children of the control, if necessary |
+| [Arrange](#uid-d7a19ca8f7) | Arranges the control and its children. |
+| [InvalidateArrange](#uid-3e9d4ebe35) | Invalidates the arrangement of the control and queues a new layout pass. |
+| [InvalidateMeasure](#uid-31c6107bb9) | Invalidates the measurement of the control and queues a new layout pass. |
+| [Measure](#uid-1da410eb81) | Carries out a measure of the control. |
+| [UpdateLayout](#uid-529d4a08ea) | Executes a layout pass. |
+| [GetFlowDirection](../visual.mdx#uid-12716acd38) | Gets the value of the attached [Avalonia.Visual.FlowDirectionProperty](xref:Avalonia.Visual.FlowDirectionProperty) on a control. Inherited from [Visual](../visual.mdx). |
+| [InvalidateVisual](../visual.mdx#uid-1cd22a7496) | Invalidates the visual and queues a repaint. Inherited from [Visual](../visual.mdx). |
+| [Render](../visual.mdx#uid-615917604b) | Renders the visual to a [Avalonia.Media.DrawingContext](xref:Avalonia.Media.DrawingContext). Inherited from [Visual](../visual.mdx). |
+| [SetFlowDirection](../visual.mdx#uid-a670b680eb) | Sets the value of the attached [Avalonia.Visual.FlowDirectionProperty](xref:Avalonia.Visual.FlowDirectionProperty) on a control. Inherited from [Visual](../visual.mdx). |
+| [ApplyStyling](../styledelement.mdx#uid-b0f81a6f8f) | Applies styling to the control if the control is initialized and styling is not already applied. Inherited from [StyledElement](../styledelement.mdx). |
+| [BeginInit](../styledelement.mdx#uid-91c6ccadce) | Inherited from [StyledElement](../styledelement.mdx). |
+| [EndInit](../styledelement.mdx#uid-17b450469d) | Inherited from [StyledElement](../styledelement.mdx). |
+| [TryGetResource](../styledelement.mdx#uid-2046a6b284) | Inherited from [StyledElement](../styledelement.mdx). |
+| [Bind (8 overloads)](../avaloniaobject.mdx#uid-1c60c7bda3) | Binds a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) to an [Avalonia.Data.BindingBase](xref:Avalonia.Data.BindingBase). Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [CheckAccess](../avaloniaobject.mdx#uid-260ff7a68d) | Returns a value indicating whether the current thread is the UI thread. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [ClearValue (4 overloads)](../avaloniaobject.mdx#uid-41de208fbe) | Clears a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty)'s local value. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [CoerceValue](../avaloniaobject.mdx#uid-3bec32f39e) | Coerces the specified [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty). Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [Equals](../avaloniaobject.mdx#uid-a8a8e94305) | Compares two objects using reference equality. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [GetBaseValue](../avaloniaobject.mdx#uid-9c615efbba) | Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [GetHashCode](../avaloniaobject.mdx#uid-7f7db1e7a2) | Gets the hash code for the object. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [GetValue (3 overloads)](../avaloniaobject.mdx#uid-5142cd4792) | Gets a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [IsAnimating](../avaloniaobject.mdx#uid-8cbfc7521a) | Checks whether a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) is animating. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [IsSet](../avaloniaobject.mdx#uid-f8bf0bbdcc) | Checks whether a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) is set on this object. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [SetCurrentValue (2 overloads)](../avaloniaobject.mdx#uid-38759fd088) | Sets the value of a dependency property without changing its value source. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [SetValue (3 overloads)](../avaloniaobject.mdx#uid-47d14e19d7) | Sets a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [VerifyAccess](../avaloniaobject.mdx#uid-3b9d3c9793) | Checks that the current thread is the UI thread and throws if not. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-cc46768b1a"></span>
+
+### ApplyTemplate Method
+
+Creates the visual children of the control, if necessary
+
+```csharp
+public void ApplyTemplate()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d7a19ca8f7"></span>
+
+### Arrange Method
+
+Arranges the control and its children.
+
+```csharp
+public void Arrange(Avalonia.Rect rect)
+```
+
+#### Parameters
+
+`rect` [Avalonia.Rect](xref:Avalonia.Rect)
+
+The control's new bounds.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3e9d4ebe35"></span>
+
+### InvalidateArrange Method
+
+Invalidates the arrangement of the control and queues a new layout pass.
+
+```csharp
+public void InvalidateArrange()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-31c6107bb9"></span>
+
+### InvalidateMeasure Method
+
+Invalidates the measurement of the control and queues a new layout pass.
+
+```csharp
+public void InvalidateMeasure()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1da410eb81"></span>
+
+### Measure Method
+
+Carries out a measure of the control.
+
+```csharp
+public void Measure(Avalonia.Size availableSize)
+```
+
+#### Parameters
+
+`availableSize` [Avalonia.Size](xref:Avalonia.Size)
+
+The available size for the control.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-529d4a08ea"></span>
+
+### UpdateLayout Method
+
+Executes a layout pass.
+
+```csharp
+public void UpdateLayout()
+```
+
+#### Remarks
+
+You should not usually need to call this method explictly, the layout manager will
+schedule layout passes itself.
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [DesiredSize](#uid-5eb61af32f) | Gets the size that this element computed during the measure pass of the layout process. |
+| [Height](#uid-4334ab83b4) | Gets or sets the height of the element. |
+| [HorizontalAlignment](#uid-c621d98d6c) | Gets or sets the element's preferred horizontal alignment in its parent. |
+| [IsArrangeValid](#uid-97d1d86c71) | Gets a value indicating whether the control's layouts arrange is valid. |
+| [IsMeasureValid](#uid-2b3ce6ad30) | Gets a value indicating whether the control's layout measure is valid. |
+| [Margin](#uid-3785e24bed) | Gets or sets the margin around the element. |
+| [MaxHeight](#uid-6ffe996277) | Gets or sets the maximum height of the element. |
+| [MaxWidth](#uid-ea6041bc57) | Gets or sets the maximum width of the element. |
+| [MinHeight](#uid-822cd64c83) | Gets or sets the minimum height of the element. |
+| [MinWidth](#uid-5bd3b5bb2c) | Gets or sets the minimum width of the element. |
+| [UseLayoutRounding](#uid-5998a3d47c) | Gets or sets a value that determines whether the element should be snapped to pixel boundaries at layout time. |
+| [VerticalAlignment](#uid-9652a1b295) | Gets or sets the element's preferred vertical alignment in its parent. |
+| [Width](#uid-491c41475f) | Gets or sets the width of the element. |
+| [Bounds](../visual.mdx#uid-a01c3022f7) | Gets the bounds of the control relative to its parent. Inherited from [Visual](../visual.mdx). |
+| [CacheMode](../visual.mdx#uid-c565afad32) | Gets or sets the cache mode of the visual. Inherited from [Visual](../visual.mdx). |
+| [Clip](../visual.mdx#uid-7623faaeaf) | Gets or sets the geometry clip for this visual. Inherited from [Visual](../visual.mdx). |
+| [ClipToBounds](../visual.mdx#uid-63c348aebd) | Gets or sets a value indicating whether the control should be clipped to its bounds. Inherited from [Visual](../visual.mdx). |
+| [Effect](../visual.mdx#uid-65e2be6b7c) | Gets or sets the effect of the control. Inherited from [Visual](../visual.mdx). |
+| [FlowDirection](../visual.mdx#uid-c7929bde53) | Gets or sets the text flow direction. Inherited from [Visual](../visual.mdx). |
+| [HasMirrorTransform](../visual.mdx#uid-70dc13a730) | Gets or sets a value indicating whether to apply mirror transform on this control. Inherited from [Visual](../visual.mdx). |
+| [IsEffectivelyVisible](../visual.mdx#uid-03d6c15a63) | Gets a value indicating whether this control and all its parents are visible. Inherited from [Visual](../visual.mdx). |
+| [IsVisible](../visual.mdx#uid-da2b0ca167) | Gets or sets a value indicating whether this control is visible. Inherited from [Visual](../visual.mdx). |
+| [Opacity](../visual.mdx#uid-9eaf1e3d57) | Gets or sets the opacity of the control. Inherited from [Visual](../visual.mdx). |
+| [OpacityMask](../visual.mdx#uid-b6579b9244) | Gets or sets the opacity mask of the control. Inherited from [Visual](../visual.mdx). |
+| [RenderTransform](../visual.mdx#uid-7ee76ff32a) | Gets or sets the render transform of the control. Inherited from [Visual](../visual.mdx). |
+| [RenderTransformOrigin](../visual.mdx#uid-3501120c25) | Gets or sets the transform origin of the control. Inherited from [Visual](../visual.mdx). |
+| [ZIndex](../visual.mdx#uid-a3275ade9d) | Gets or sets the Z index of the control. Inherited from [Visual](../visual.mdx). |
+| [ActualThemeVariant](../styledelement.mdx#uid-776bcbe4bf) | Gets the UI theme that is currently used by the element, which might be different than the RequestedThemeVariantProperty. Inherited from [StyledElement](../styledelement.mdx). |
+| [Classes](../styledelement.mdx#uid-b7b7edea05) | Gets or sets the styled element's classes. Inherited from [StyledElement](../styledelement.mdx). |
+| [DataContext](../styledelement.mdx#uid-647f924a56) | Gets or sets the control's data context. Inherited from [StyledElement](../styledelement.mdx). |
+| [IsInitialized](../styledelement.mdx#uid-59a7cddacb) | Gets a value that indicates whether the element has finished initialization. Inherited from [StyledElement](../styledelement.mdx). |
+| [Name](../styledelement.mdx#uid-245f4ccff5) | Gets or sets the name of the styled element. Inherited from [StyledElement](../styledelement.mdx). |
+| [Parent](../styledelement.mdx#uid-aad2c5c78d) | Gets the styled element's logical parent. Inherited from [StyledElement](../styledelement.mdx). |
+| [Resources](../styledelement.mdx#uid-f6488ca4b7) | Gets or sets the styled element's resource dictionary. Inherited from [StyledElement](../styledelement.mdx). |
+| [StyleKey](../styledelement.mdx#uid-081584075e) | Gets the type by which the element is styled. Inherited from [StyledElement](../styledelement.mdx). |
+| [Styles](../styledelement.mdx#uid-ae663139cc) | Gets the styles for the styled element. Inherited from [StyledElement](../styledelement.mdx). |
+| [TemplatedParent](../styledelement.mdx#uid-dbf6ddacc3) | Gets the styled element whose lookless template this styled element is part of. Inherited from [StyledElement](../styledelement.mdx). |
+| [Theme](../styledelement.mdx#uid-1aebed283d) | Gets or sets the theme to be applied to the element. Inherited from [StyledElement](../styledelement.mdx). |
+| [Transitions](../animation/animatable.mdx#uid-1b3138f517) | Gets or sets the property transitions for the control. Inherited from [Animatable](../animation/animatable.mdx). |
+| [Dispatcher](../avaloniaobject.mdx#uid-b25fa51632) | Returns the [Avalonia.AvaloniaObject.Dispatcher](xref:Avalonia.AvaloniaObject.Dispatcher) that this [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject) is associated with. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [Item](../avaloniaobject.mdx#uid-c1d1f1bc0f) | Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5eb61af32f"></span>
+
+### DesiredSize Property
+
+Gets the size that this element computed during the measure pass of the layout process.
+
+```csharp
+public Avalonia.Size DesiredSize { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4334ab83b4"></span>
+
+### Height Property
+
+Gets or sets the height of the element.
+
+```csharp
+public double Height { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c621d98d6c"></span>
+
+### HorizontalAlignment Property
+
+Gets or sets the element's preferred horizontal alignment in its parent.
+
+```csharp
+public Avalonia.Layout.HorizontalAlignment HorizontalAlignment { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-97d1d86c71"></span>
+
+### IsArrangeValid Property
+
+Gets a value indicating whether the control's layouts arrange is valid.
+
+```csharp
+public bool IsArrangeValid { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2b3ce6ad30"></span>
+
+### IsMeasureValid Property
+
+Gets a value indicating whether the control's layout measure is valid.
+
+```csharp
+public bool IsMeasureValid { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3785e24bed"></span>
+
+### Margin Property
+
+Gets or sets the margin around the element.
+
+```csharp
+public Avalonia.Thickness Margin { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6ffe996277"></span>
+
+### MaxHeight Property
+
+Gets or sets the maximum height of the element.
+
+```csharp
+public double MaxHeight { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ea6041bc57"></span>
+
+### MaxWidth Property
+
+Gets or sets the maximum width of the element.
+
+```csharp
+public double MaxWidth { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-822cd64c83"></span>
+
+### MinHeight Property
+
+Gets or sets the minimum height of the element.
+
+```csharp
+public double MinHeight { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5bd3b5bb2c"></span>
+
+### MinWidth Property
+
+Gets or sets the minimum width of the element.
+
+```csharp
+public double MinWidth { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5998a3d47c"></span>
+
+### UseLayoutRounding Property
+
+Gets or sets a value that determines whether the element should be snapped to pixel
+boundaries at layout time.
+
+```csharp
+public bool UseLayoutRounding { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9652a1b295"></span>
+
+### VerticalAlignment Property
+
+Gets or sets the element's preferred vertical alignment in its parent.
+
+```csharp
+public Avalonia.Layout.VerticalAlignment VerticalAlignment { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-491c41475f"></span>
+
+### Width Property
+
+Gets or sets the width of the element.
+
+```csharp
+public double Width { get; set; }
+```
+
+</section>
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [DesiredSizeProperty](#uid-b46bed86fe) | Defines the [Avalonia.Layout.Layoutable.DesiredSize](xref:Avalonia.Layout.Layoutable.DesiredSize) property. |
+| [HeightProperty](#uid-78fa90222f) | Defines the [Avalonia.Layout.Layoutable.Height](xref:Avalonia.Layout.Layoutable.Height) property. |
+| [HorizontalAlignmentProperty](#uid-43606c2354) | Defines the [Avalonia.Layout.Layoutable.HorizontalAlignment](xref:Avalonia.Layout.Layoutable.HorizontalAlignment) property. |
+| [MarginProperty](#uid-e730ad0d44) | Defines the [Avalonia.Layout.Layoutable.Margin](xref:Avalonia.Layout.Layoutable.Margin) property. |
+| [MaxHeightProperty](#uid-0a0a1f20cb) | Defines the [Avalonia.Layout.Layoutable.MaxHeight](xref:Avalonia.Layout.Layoutable.MaxHeight) property. |
+| [MaxWidthProperty](#uid-febdea8f4d) | Defines the [Avalonia.Layout.Layoutable.MaxWidth](xref:Avalonia.Layout.Layoutable.MaxWidth) property. |
+| [MinHeightProperty](#uid-f78bf9b812) | Defines the [Avalonia.Layout.Layoutable.MinHeight](xref:Avalonia.Layout.Layoutable.MinHeight) property. |
+| [MinWidthProperty](#uid-ec0935c392) | Defines the [Avalonia.Layout.Layoutable.MinWidth](xref:Avalonia.Layout.Layoutable.MinWidth) property. |
+| [UseLayoutRoundingProperty](#uid-e6d86b68b5) | Defines the [Avalonia.Layout.Layoutable.UseLayoutRounding](xref:Avalonia.Layout.Layoutable.UseLayoutRounding) property. |
+| [VerticalAlignmentProperty](#uid-b50722555e) | Defines the [Avalonia.Layout.Layoutable.VerticalAlignment](xref:Avalonia.Layout.Layoutable.VerticalAlignment) property. |
+| [WidthProperty](#uid-6f3212affd) | Defines the [Avalonia.Layout.Layoutable.Width](xref:Avalonia.Layout.Layoutable.Width) property. |
+| [BoundsProperty](../visual.mdx#uid-f22a27348f) | Defines the [Avalonia.Visual.Bounds](xref:Avalonia.Visual.Bounds) property. Inherited from [Visual](../visual.mdx). |
+| [CacheModeProperty](../visual.mdx#uid-5c89b0f2fc) | Defines the [Avalonia.Visual.CacheMode](xref:Avalonia.Visual.CacheMode) property. Inherited from [Visual](../visual.mdx). |
+| [ClipProperty](../visual.mdx#uid-06ffce3308) | Defines the [Avalonia.Visual.Clip](xref:Avalonia.Visual.Clip) property. Inherited from [Visual](../visual.mdx). |
+| [ClipToBoundsProperty](../visual.mdx#uid-4bc41df166) | Defines the [Avalonia.Visual.ClipToBounds](xref:Avalonia.Visual.ClipToBounds) property. Inherited from [Visual](../visual.mdx). |
+| [EffectProperty](../visual.mdx#uid-9374086bff) | Defines the [Avalonia.Visual.Effect](xref:Avalonia.Visual.Effect) property. Inherited from [Visual](../visual.mdx). |
+| [FlowDirectionProperty](../visual.mdx#uid-79d00f257f) | Defines the [Avalonia.Visual.FlowDirection](xref:Avalonia.Visual.FlowDirection) property. Inherited from [Visual](../visual.mdx). |
+| [HasMirrorTransformProperty](../visual.mdx#uid-1f37ec4745) | Defines the [Avalonia.Visual.HasMirrorTransform](xref:Avalonia.Visual.HasMirrorTransform) property. Inherited from [Visual](../visual.mdx). |
+| [IsVisibleProperty](../visual.mdx#uid-8e0edf21ac) | Defines the [Avalonia.Visual.IsVisible](xref:Avalonia.Visual.IsVisible) property. Inherited from [Visual](../visual.mdx). |
+| [OpacityMaskProperty](../visual.mdx#uid-aad2c3f7c2) | Defines the [Avalonia.Visual.OpacityMask](xref:Avalonia.Visual.OpacityMask) property. Inherited from [Visual](../visual.mdx). |
+| [OpacityProperty](../visual.mdx#uid-2a53e27b1f) | Defines the [Avalonia.Visual.Opacity](xref:Avalonia.Visual.Opacity) property. Inherited from [Visual](../visual.mdx). |
+| [RenderTransformOriginProperty](../visual.mdx#uid-963d266cdd) | Defines the [Avalonia.Visual.RenderTransformOrigin](xref:Avalonia.Visual.RenderTransformOrigin) property. Inherited from [Visual](../visual.mdx). |
+| [RenderTransformProperty](../visual.mdx#uid-31d20942c2) | Defines the [Avalonia.Visual.RenderTransform](xref:Avalonia.Visual.RenderTransform) property. Inherited from [Visual](../visual.mdx). |
+| [VisualParentProperty](../visual.mdx#uid-12214f81b9) | Defines the [Avalonia.Visual.VisualParent](xref:Avalonia.Visual.VisualParent) property. Inherited from [Visual](../visual.mdx). |
+| [ZIndexProperty](../visual.mdx#uid-1dc9376c1e) | Defines the [Avalonia.Visual.ZIndex](xref:Avalonia.Visual.ZIndex) property. Inherited from [Visual](../visual.mdx). |
+| [DataContextProperty](../styledelement.mdx#uid-7eefabb929) | Defines the [Avalonia.StyledElement.DataContext](xref:Avalonia.StyledElement.DataContext) property. Inherited from [StyledElement](../styledelement.mdx). |
+| [NameProperty](../styledelement.mdx#uid-bcdbb9de56) | Defines the [Avalonia.StyledElement.Name](xref:Avalonia.StyledElement.Name) property. Inherited from [StyledElement](../styledelement.mdx). |
+| [ParentProperty](../styledelement.mdx#uid-dc6481a488) | Defines the [Avalonia.StyledElement.Parent](xref:Avalonia.StyledElement.Parent) property. Inherited from [StyledElement](../styledelement.mdx). |
+| [TemplatedParentProperty](../styledelement.mdx#uid-a2c7149a6b) | Defines the [Avalonia.StyledElement.TemplatedParent](xref:Avalonia.StyledElement.TemplatedParent) property. Inherited from [StyledElement](../styledelement.mdx). |
+| [ThemeProperty](../styledelement.mdx#uid-05852d7b9a) | Defines the [Avalonia.StyledElement.Theme](xref:Avalonia.StyledElement.Theme) property. Inherited from [StyledElement](../styledelement.mdx). |
+| [TransitionsProperty](../animation/animatable.mdx#uid-c79f18fac2) | Defines the [Avalonia.Animation.Animatable.Transitions](xref:Avalonia.Animation.Animatable.Transitions) property. Inherited from [Animatable](../animation/animatable.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b46bed86fe"></span>
+
+### DesiredSizeProperty Field
+
+Defines the [Avalonia.Layout.Layoutable.DesiredSize](xref:Avalonia.Layout.Layoutable.DesiredSize) property.
+
+```csharp
+public Avalonia.DirectProperty<TOwner,TValue><Avalonia.Layout.Layoutable, Avalonia.Size> DesiredSizeProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-78fa90222f"></span>
+
+### HeightProperty Field
+
+Defines the [Avalonia.Layout.Layoutable.Height](xref:Avalonia.Layout.Layoutable.Height) property.
+
+```csharp
+public Avalonia.StyledProperty<TValue><double> HeightProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-43606c2354"></span>
+
+### HorizontalAlignmentProperty Field
+
+Defines the [Avalonia.Layout.Layoutable.HorizontalAlignment](xref:Avalonia.Layout.Layoutable.HorizontalAlignment) property.
+
+```csharp
+public Avalonia.StyledProperty<TValue><Avalonia.Layout.HorizontalAlignment> HorizontalAlignmentProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e730ad0d44"></span>
+
+### MarginProperty Field
+
+Defines the [Avalonia.Layout.Layoutable.Margin](xref:Avalonia.Layout.Layoutable.Margin) property.
+
+```csharp
+public Avalonia.StyledProperty<TValue><Avalonia.Thickness> MarginProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0a0a1f20cb"></span>
+
+### MaxHeightProperty Field
+
+Defines the [Avalonia.Layout.Layoutable.MaxHeight](xref:Avalonia.Layout.Layoutable.MaxHeight) property.
+
+```csharp
+public Avalonia.StyledProperty<TValue><double> MaxHeightProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-febdea8f4d"></span>
+
+### MaxWidthProperty Field
+
+Defines the [Avalonia.Layout.Layoutable.MaxWidth](xref:Avalonia.Layout.Layoutable.MaxWidth) property.
+
+```csharp
+public Avalonia.StyledProperty<TValue><double> MaxWidthProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f78bf9b812"></span>
+
+### MinHeightProperty Field
+
+Defines the [Avalonia.Layout.Layoutable.MinHeight](xref:Avalonia.Layout.Layoutable.MinHeight) property.
+
+```csharp
+public Avalonia.StyledProperty<TValue><double> MinHeightProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ec0935c392"></span>
+
+### MinWidthProperty Field
+
+Defines the [Avalonia.Layout.Layoutable.MinWidth](xref:Avalonia.Layout.Layoutable.MinWidth) property.
+
+```csharp
+public Avalonia.StyledProperty<TValue><double> MinWidthProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e6d86b68b5"></span>
+
+### UseLayoutRoundingProperty Field
+
+Defines the [Avalonia.Layout.Layoutable.UseLayoutRounding](xref:Avalonia.Layout.Layoutable.UseLayoutRounding) property.
+
+```csharp
+public Avalonia.StyledProperty<TValue><bool> UseLayoutRoundingProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b50722555e"></span>
+
+### VerticalAlignmentProperty Field
+
+Defines the [Avalonia.Layout.Layoutable.VerticalAlignment](xref:Avalonia.Layout.Layoutable.VerticalAlignment) property.
+
+```csharp
+public Avalonia.StyledProperty<TValue><Avalonia.Layout.VerticalAlignment> VerticalAlignmentProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6f3212affd"></span>
+
+### WidthProperty Field
+
+Defines the [Avalonia.Layout.Layoutable.Width](xref:Avalonia.Layout.Layoutable.Width) property.
+
+```csharp
+public Avalonia.StyledProperty<TValue><double> WidthProperty
+```
+
+</section>
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [EffectiveViewportChanged](#uid-1922b89fa5) | Occurs when the element's effective viewport changes. |
+| [LayoutUpdated](#uid-05ea32f689) | Occurs when a layout pass completes for the control. |
+| [AttachedToVisualTree](../visual.mdx#uid-df40bddf6b) | Raised when the control is attached to a rooted visual tree. Inherited from [Visual](../visual.mdx). |
+| [DetachedFromVisualTree](../visual.mdx#uid-3f64dafb1c) | Raised when the control is detached from a rooted visual tree. Inherited from [Visual](../visual.mdx). |
+| [ActualThemeVariantChanged](../styledelement.mdx#uid-e69ef27e71) | Raised when the theme variant is changed on the element or an ancestor of the element. Inherited from [StyledElement](../styledelement.mdx). |
+| [AttachedToLogicalTree](../styledelement.mdx#uid-717aa68e85) | Raised when the styled element is attached to a rooted logical tree. Inherited from [StyledElement](../styledelement.mdx). |
+| [DataContextChanged](../styledelement.mdx#uid-4b1cc873f8) | Occurs when the [Avalonia.StyledElement.DataContext](xref:Avalonia.StyledElement.DataContext) property changes. Inherited from [StyledElement](../styledelement.mdx). |
+| [DetachedFromLogicalTree](../styledelement.mdx#uid-d9f5afa535) | Raised when the styled element is detached from a rooted logical tree. Inherited from [StyledElement](../styledelement.mdx). |
+| [Initialized](../styledelement.mdx#uid-bd6a5e5c0e) | Occurs when the styled element has finished initialization. Inherited from [StyledElement](../styledelement.mdx). |
+| [ResourcesChanged](../styledelement.mdx#uid-99a7f47c56) | Occurs when a resource in this styled element or a parent styled element has changed. Inherited from [StyledElement](../styledelement.mdx). |
+| [PropertyChanged](../avaloniaobject.mdx#uid-d758e26fae) | Raised when a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value changes on this object. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1922b89fa5"></span>
+
+### EffectiveViewportChanged Event
+
+Occurs when the element's effective viewport changes.
+
+```csharp
+public event EventHandler<Avalonia.Layout.EffectiveViewportChangedEventArgs> EffectiveViewportChanged
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-05ea32f689"></span>
+
+### LayoutUpdated Event
+
+Occurs when a layout pass completes for the control.
+
+```csharp
+public event EventHandler LayoutUpdated
+```
+
+</section>
+
+</ApiRefPage>
+

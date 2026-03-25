@@ -1,0 +1,129 @@
+---
+id: tooltip
+title: ToolTip
+---
+
+import ToolTipTextHoverScreenshot from '/img/reference/controls/tooltip/tooltip-text-hover.gif';
+import ToolTipContentScreenshot from '/img/reference/controls/tooltip/tooltip-content-hover.gif';
+
+The `ToolTip` is a popup that shows its content when the user hovers over the 'host' control to which it is attached.
+
+## Useful properties
+
+You will probably use these properties most often:
+
+<table>
+    <thead>
+        <tr>
+            <th width="298">Property</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>ToolTip.Tip</code></td>
+            <td>Attached property for the tooltip contents.</td>
+        </tr>
+        <tr>
+            <td><code>ToolTip.Placement</code></td>
+            <td>Defines the placement for the tooltip relative to the host or the pointer. Choose from top, bottom,
+                left, right, anchor and gravity, pointer. The default value is pointer which places the tip content at
+                the position where the pointer stops moving.</td>
+        </tr>
+        <tr>
+            <td><code>ToolTip.HorizontalOffset</code></td>
+            <td>The tooltip horizontal offset from the placement (default 0).</td>
+        </tr>
+        <tr>
+            <td><code>ToolTip.VerticalOffset</code></td>
+            <td>The tooltip vertical offset from the placement (default 20).</td>
+        </tr>
+        <tr>
+            <td><code>ToolTip.ShowDelay</code></td>
+            <td>The amount of time the pointer has to be still before the tooltip appears, in milliseconds (default
+                400).</td>
+        </tr>
+        <tr>
+            <td><code>ToolTip.BetweenShowDelay</code></td>
+            <td>The amount of time the tooltip will not show up for after last show, in milliseconds (default 100).</td>
+        </tr>
+        <tr>
+            <td><code>ToolTip.ShowOnDisabled</code></td>
+            <td>Determines whether the tooltip should be shown for disabled elements (default false).</td>
+        </tr>
+        <tr>
+            <td><code>ToolTip.ServiceEnabled</code></td>
+            <td>Determines whether the tooltip service is enabled (default true).</td>
+        </tr>
+    </tbody>
+</table>
+
+## Events
+
+| Event | Type | Description |
+|---|---|---|
+| `ToolTip.ToolTipOpening` | `CancelRoutedEventArgs` | Raised when a tooltip is about to open. Set `Cancel = true` to prevent the tooltip from showing. |
+| `ToolTip.ToolTipClosing` | `RoutedEventArgs` | Raised when a tooltip is about to close. |
+
+These are attached routed events. Subscribe in XAML or code:
+
+```xml
+<Button Content="Hover me"
+        ToolTip.Tip="Dynamic tooltip"
+        ToolTip.ToolTipOpening="OnToolTipOpening" />
+```
+
+```csharp
+private void OnToolTipOpening(object? sender, CancelRoutedEventArgs e)
+{
+    // Optionally prevent the tooltip from showing
+    if (ShouldSuppressTooltip)
+    {
+        e.Cancel = true;
+    }
+}
+```
+
+## Examples
+
+This is a simple text-based tooltip, using default values for the placement and delay properties. Hover over the rectangle in the preview to see the tooltip.
+
+<XamlPreview>
+
+```xml
+<UserControl xmlns="https://github.com/avaloniaui">
+  <Rectangle Fill="Aqua" Height="150" Width="200"
+             ToolTip.Tip="This is a rectangle" />
+</UserControl>
+```
+
+</XamlPreview>
+
+<img src={ToolTipTextHoverScreenshot} alt="" />
+
+To provide a richer presentation for a tooltip, use a `<ToolTip.Tip>` element. Hover over the rectangle in the preview to see the tooltip.
+
+<XamlPreview>
+
+```xml
+<UserControl xmlns="https://github.com/avaloniaui">
+  <Rectangle Fill="Aqua" Height="150" Width="200"
+             ToolTip.Placement="Bottom">
+      <ToolTip.Tip>
+        <StackPanel>
+          <TextBlock FontSize="16">Rectangle</TextBlock>
+          <TextBlock>Some explanation here.</TextBlock>
+        </StackPanel>
+      </ToolTip.Tip>
+  </Rectangle>
+</UserControl>
+```
+
+</XamlPreview>
+
+<img src={ToolTipContentScreenshot} alt="" />
+
+## See also
+
+- [ToolTip API reference](/api/avalonia/controls/tooltip)
+- [`ToolTip.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/ToolTip.cs)

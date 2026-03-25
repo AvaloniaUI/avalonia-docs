@@ -1,0 +1,340 @@
+---
+title: 'TreeDataGridCellSelectionModel<TModel>'
+hide_title: true
+slug: '/avalonia/controls/selection/treedatagridcellselectionmodel-1'
+uid: 'Avalonia.Controls.Selection.TreeDataGridCellSelectionModel`1'
+commentId: 'T:Avalonia.Controls.Selection.TreeDataGridCellSelectionModel`1'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.TreeDataGrid'
+assembly: 'Avalonia.Controls.TreeDataGrid'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Selection'
+tfms:
+  - 'net8.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">TreeDataGridCellSelectionModel&lt;TModel&gt; Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Selection</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Implements cell selection functionality for a [Avalonia.Controls.TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid) control.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class TreeDataGridCellSelectionModel<TModel>
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> TreeDataGridCellSelectionModel&lt;TModel&gt;
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="itreedatagridcellselectionmodel">ITreeDataGridCellSelectionModel</a>, ITreeDataGridCellSelectionModel&lt;&gt;, <a href="itreedatagridselection">ITreeDataGridSelection</a>, <a href="itreedatagridselectioninteraction">ITreeDataGridSelectionInteraction</a>
+</div>
+</div>
+
+## Remarks
+
+TreeDataGridCellSelectionModel manages cell selection in a [TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid), supporting both
+single and multiple selection modes.
+
+Cell selection supports the following user interactions:
+
+- Clicking on cells to select them
+- Using arrow keys to navigate between cells
+- Using Shift key to select ranges of cells
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [TreeDataGridCellSelectionModel&lt;TModel&gt;](#uid-23438ad1ca) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-23438ad1ca"></span>
+
+### TreeDataGridCellSelectionModel&lt;TModel&gt; Constructor
+
+```csharp
+public TreeDataGridCellSelectionModel<TModel>(Avalonia.Controls.ITreeDataGridSource<TModel><TModel> source)
+```
+
+#### Parameters
+
+`source` [Avalonia.Controls.ITreeDataGridSource](xref:Avalonia.Controls.ITreeDataGridSource)&lt;TModel&gt;&lt;TModel&gt;
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [BeginBatchUpdate](#uid-33369fa084) | Begins a batch update of the selection. |
+| [EndBatchUpdate](#uid-2eacfb3815) | Ends a batch update started by [Avalonia.Controls.Selection.TreeDataGridCellSelectionModel&lt;T&gt;.BeginBatchUpdate](xref:Avalonia.Controls.Selection.TreeDataGridCellSelectionModel%601.BeginBatchUpdate). |
+| [IsSelected (2 overloads)](#uid-ac6ca39f4b) | Checks whether the specified cell is selected. |
+| [SetSelectedRange](#uid-a0a9c7592b) | Sets the current selection to the specified range of cells. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-33369fa084"></span>
+
+### BeginBatchUpdate Method
+
+Begins a batch update of the selection.
+
+```csharp
+public void BeginBatchUpdate()
+```
+
+#### Remarks
+
+During a batch update no changes to the selection will be reflected in the model's
+properties and no events will be raised until [Avalonia.Controls.Selection.TreeDataGridCellSelectionModel&lt;T&gt;.EndBatchUpdate](xref:Avalonia.Controls.Selection.TreeDataGridCellSelectionModel%601.EndBatchUpdate) is called.
+
+[Avalonia.Controls.Selection.TreeDataGridCellSelectionModel&lt;T&gt;.BeginBatchUpdate](xref:Avalonia.Controls.Selection.TreeDataGridCellSelectionModel%601.BeginBatchUpdate) may be called multiple times, even when a batch update
+is already in progress; each call must have a corresponding call to
+[Avalonia.Controls.Selection.TreeDataGridCellSelectionModel&lt;T&gt;.EndBatchUpdate](xref:Avalonia.Controls.Selection.TreeDataGridCellSelectionModel%601.EndBatchUpdate) in order to finish the operation.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2eacfb3815"></span>
+
+### EndBatchUpdate Method
+
+Ends a batch update started by [Avalonia.Controls.Selection.TreeDataGridCellSelectionModel&lt;T&gt;.BeginBatchUpdate](xref:Avalonia.Controls.Selection.TreeDataGridCellSelectionModel%601.BeginBatchUpdate).
+
+```csharp
+public void EndBatchUpdate()
+```
+
+</section>
+
+<span id="uid-ac6ca39f4b"></span>
+
+### IsSelected overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d73cb9c915"></span>
+
+#### IsSelected Method
+
+Checks whether the specified cell is selected.
+
+```csharp
+public bool IsSelected(Avalonia.Controls.CellIndex index)
+```
+
+##### Parameters
+
+`index` [Avalonia.Controls.CellIndex](xref:Avalonia.Controls.CellIndex)
+
+The index of the cell.
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-881447ef26"></span>
+
+#### IsSelected Method
+
+Checks whether the specified cell is selected.
+
+```csharp
+public bool IsSelected(int columnIndex, Avalonia.Controls.IndexPath rowIndex)
+```
+
+##### Parameters
+
+`columnIndex` int
+
+The column index of the cell.
+
+
+`rowIndex` [Avalonia.Controls.IndexPath](xref:Avalonia.Controls.IndexPath)
+
+The row index of the cell.
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a0a9c7592b"></span>
+
+### SetSelectedRange Method
+
+Sets the current selection to the specified range of cells.
+
+```csharp
+public void SetSelectedRange(Avalonia.Controls.CellIndex start, int columnCount, int rowCount)
+```
+
+#### Parameters
+
+`start` [Avalonia.Controls.CellIndex](xref:Avalonia.Controls.CellIndex)
+
+The cell from which the selection should start.
+
+
+`columnCount` int
+
+The number of columns in the selection.
+
+
+`rowCount` int
+
+The number of rows in the selection.
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Count](#uid-80f392fb22) | Gets the number of cells currently selected. |
+| [SelectedIndex](#uid-48f7e44756) | Gets or sets the index of the currently selected cell. |
+| [SelectedIndexes](#uid-14221c8b68) | Gets a read-only list of the indices of all selected cells. |
+| [SingleSelect](#uid-5eef67c7c1) | Gets or sets a value indicating whether only a single cell can be selected at a time. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-80f392fb22"></span>
+
+### Count Property
+
+Gets the number of cells currently selected.
+
+```csharp
+public int Count { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-48f7e44756"></span>
+
+### SelectedIndex Property
+
+Gets or sets the index of the currently selected cell.
+
+```csharp
+public Avalonia.Controls.CellIndex SelectedIndex { get; set; }
+```
+
+#### Remarks
+
+If multiple cells are selected, this property represents the anchor cell of the
+selection. Setting this property will select the cell at the specified index and
+deselect all other cells.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-14221c8b68"></span>
+
+### SelectedIndexes Property
+
+Gets a read-only list of the indices of all selected cells.
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<Avalonia.Controls.CellIndex> SelectedIndexes { get; set; }
+```
+
+#### Value
+
+A read-only list of [Avalonia.Controls.CellIndex](xref:Avalonia.Controls.CellIndex) objects representing the coordinates of
+all selected cells.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5eef67c7c1"></span>
+
+### SingleSelect Property
+
+Gets or sets a value indicating whether only a single cell can be selected at a time.
+
+```csharp
+public bool SingleSelect { get; set; }
+```
+
+#### Remarks
+
+When set to true, selecting a cell will deselect any previously selected cells.
+When set to false, additional cells can be selected by holding Shift.
+
+</section>
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [SelectionChanged](#uid-22b5155014) | Occurs when the cell selection changes. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-22b5155014"></span>
+
+### SelectionChanged Event
+
+Occurs when the cell selection changes.
+
+```csharp
+public event EventHandler<Avalonia.Controls.Selection.TreeDataGridCellSelectionChangedEventArgs<T><TModel>> SelectionChanged
+```
+
+#### Remarks
+
+This event is raised when cells are selected or deselected, either through user
+interaction or programmatically.
+
+</section>
+
+</ApiRefPage>
+

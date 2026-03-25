@@ -1,0 +1,289 @@
+---
+title: 'Screen'
+hide_title: true
+slug: '/avalonia/platform/screen'
+uid: 'Avalonia.Platform.Screen'
+commentId: 'T:Avalonia.Platform.Screen'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Platform'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">Screen Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Platform</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Controls/Platform/Screen.cs">Screen.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Represents a single display screen.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class Screen
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> Screen
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Derived types:</span> <a href="platformscreen">PlatformScreen</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;Screen&gt;
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Equals (2 overloads)](#uid-0cc2256fc2) | No summary available. |
+| [GetHashCode](#uid-ee5e217024) | No summary available. |
+| [ToString](#uid-758bca91a3) | No summary available. |
+| [TryGetPlatformHandle](#uid-ed5df29d51) | Tries to get the platform handle for the Screen. |
+
+<span id="uid-0cc2256fc2"></span>
+
+### Equals overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9104516cd5"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(Avalonia.Platform.Screen other)
+```
+
+##### Parameters
+
+`other` [Avalonia.Platform.Screen](xref:Avalonia.Platform.Screen)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5fea9bfe97"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(object obj)
+```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ee5e217024"></span>
+
+### GetHashCode Method
+
+```csharp
+public int GetHashCode()
+```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-758bca91a3"></span>
+
+### ToString Method
+
+```csharp
+public string ToString()
+```
+
+#### Returns
+
+string
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ed5df29d51"></span>
+
+### TryGetPlatformHandle Method
+
+Tries to get the platform handle for the Screen.
+
+```csharp
+public Avalonia.Platform.IPlatformHandle TryGetPlatformHandle()
+```
+
+#### Returns
+
+[Avalonia.Platform.IPlatformHandle](xref:Avalonia.Platform.IPlatformHandle)
+
+An [Avalonia.Platform.IPlatformHandle](xref:Avalonia.Platform.IPlatformHandle) describing the screen handle, or null if the handle
+could not be retrieved.
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Bounds](#uid-431a78d8a7) | Gets the overall pixel-size and position of the screen. |
+| [CurrentOrientation](#uid-601b197107) | Gets the current orientation of a screen. |
+| [DisplayName](#uid-011eb558c3) | Gets the device name associated with a display. |
+| [IsPrimary](#uid-40613fab85) | Gets a value indicating whether the screen is the primary one. |
+| [Scaling](#uid-d8a65d09f6) | Gets the scaling factor applied to the screen by the operating system. |
+| [WorkingArea](#uid-bbc7481aa9) | Gets the actual working-area pixel-size of the screen. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-431a78d8a7"></span>
+
+### Bounds Property
+
+Gets the overall pixel-size and position of the screen.
+
+```csharp
+public Avalonia.PixelRect Bounds { get; set; }
+```
+
+#### Remarks
+
+This generally is the raw pixel counts in both the X and Y direction.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-601b197107"></span>
+
+### CurrentOrientation Property
+
+Gets the current orientation of a screen.
+
+```csharp
+public Avalonia.Platform.ScreenOrientation CurrentOrientation { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-011eb558c3"></span>
+
+### DisplayName Property
+
+Gets the device name associated with a display.
+
+```csharp
+public string DisplayName { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-40613fab85"></span>
+
+### IsPrimary Property
+
+Gets a value indicating whether the screen is the primary one.
+
+```csharp
+public bool IsPrimary { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d8a65d09f6"></span>
+
+### Scaling Property
+
+Gets the scaling factor applied to the screen by the operating system.
+
+```csharp
+public double Scaling { get; set; }
+```
+
+#### Remarks
+
+Multiply this value by 100 to get a percentage.
+Both X and Y scaling factors are assumed uniform.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-bbc7481aa9"></span>
+
+### WorkingArea Property
+
+Gets the actual working-area pixel-size of the screen.
+
+```csharp
+public Avalonia.PixelRect WorkingArea { get; set; }
+```
+
+#### Remarks
+
+This area may be smaller than [Bounds](Bounds) to account for notches and
+other block-out areas such as taskbars etc.
+
+</section>
+
+</ApiRefPage>
+

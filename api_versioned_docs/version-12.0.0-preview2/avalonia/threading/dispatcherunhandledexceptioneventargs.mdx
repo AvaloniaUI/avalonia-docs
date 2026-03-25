@@ -1,0 +1,97 @@
+---
+title: 'DispatcherUnhandledExceptionEventArgs'
+hide_title: true
+slug: '/avalonia/threading/dispatcherunhandledexceptioneventargs'
+uid: 'Avalonia.Threading.DispatcherUnhandledExceptionEventArgs'
+commentId: 'T:Avalonia.Threading.DispatcherUnhandledExceptionEventArgs'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Threading'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">DispatcherUnhandledExceptionEventArgs Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Threading</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Threading/DispatcherUnhandledExceptionEventArgs.cs">DispatcherUnhandledExceptionEventArgs.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Provides data for the [Avalonia.Threading.Dispatcher.UnhandledException](xref:Avalonia.Threading.Dispatcher.UnhandledException) event.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class DispatcherUnhandledExceptionEventArgs
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> EventArgs <span className="apiref-page__relation-separator">-&gt;</span> <a href="dispatchereventargs">DispatcherEventArgs</a> <span className="apiref-page__relation-separator">-&gt;</span> DispatcherUnhandledExceptionEventArgs
+</div>
+</div>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Exception](#uid-00d2888ba5) | Gets the exception that was raised when executing code by way of the dispatcher. |
+| [Handled](#uid-1501956bc8) | Gets or sets whether the exception event has been handled. |
+| [Dispatcher](dispatchereventargs.mdx#uid-569f2dd50d) | The Dispatcher associated with this event. Inherited from [DispatcherEventArgs](dispatchereventargs.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-00d2888ba5"></span>
+
+### Exception Property
+
+Gets the exception that was raised when executing code by way of the dispatcher.
+
+```csharp
+public Exception Exception { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1501956bc8"></span>
+
+### Handled Property
+
+Gets or sets whether the exception event has been handled.
+
+```csharp
+public bool Handled { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

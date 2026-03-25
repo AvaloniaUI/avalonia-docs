@@ -1,0 +1,189 @@
+---
+title: 'NotifyingListBase<T>'
+hide_title: true
+slug: '/avalonia/controls/models/notifyinglistbase-1'
+uid: 'Avalonia.Controls.Models.NotifyingListBase`1'
+commentId: 'T:Avalonia.Controls.Models.NotifyingListBase`1'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.TreeDataGrid'
+assembly: 'Avalonia.Controls.TreeDataGrid'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Models'
+tfms:
+  - 'net8.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">NotifyingListBase&lt;T&gt; Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Models</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A base class for observable collections that implements [System.Collections.Specialized.INotifyCollectionChanged](xref:System.Collections.Specialized.INotifyCollectionChanged)
+and [System.ComponentModel.INotifyPropertyChanged](xref:System.ComponentModel.INotifyPropertyChanged) with support for batch operations.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class NotifyingListBase<T>
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Collection&lt;&gt; <span className="apiref-page__relation-separator">-&gt;</span> NotifyingListBase&lt;T&gt;
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> INotifyCollectionChanged, INotifyPropertyChanged
+</div>
+</div>
+
+## Remarks
+
+This class should be considered internal to the [TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid) package and is not intended
+for use outside of this package.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [NotifyingListBase&lt;T&gt;](#uid-61ba116483) | Initializes a new instance of the [Avalonia.Controls.Models.NotifyingListBase&lt;T&gt;](xref:Avalonia.Controls.Models.NotifyingListBase%601) class. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-61ba116483"></span>
+
+### NotifyingListBase&lt;T&gt; Constructor
+
+Initializes a new instance of the [Avalonia.Controls.Models.NotifyingListBase&lt;T&gt;](xref:Avalonia.Controls.Models.NotifyingListBase%601) class.
+
+```csharp
+public NotifyingListBase<T>()
+```
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [InsertRange](#uid-d0a41450b2) | No summary available. |
+| [RemoveRange](#uid-1c3fb94d0b) | Removes multiple items from the collection starting at the specified index as a batch operation. |
+| [Reset](#uid-eafabe69b8) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d0a41450b2"></span>
+
+### InsertRange Method
+
+```csharp
+public void InsertRange(int index, Action<Action<T>> action)
+```
+
+#### Parameters
+
+`index` int
+
+
+`action` Action&lt;Action&lt;T&gt;&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1c3fb94d0b"></span>
+
+### RemoveRange Method
+
+Removes multiple items from the collection starting at the specified index as a batch operation.
+
+```csharp
+public void RemoveRange(int index, int count)
+```
+
+#### Parameters
+
+`index` int
+
+The zero-based starting index of the items to remove.
+
+
+`count` int
+
+The number of items to remove.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-eafabe69b8"></span>
+
+### Reset Method
+
+```csharp
+public void Reset(Action<System.Collections.Generic.IList<T>> action)
+```
+
+#### Parameters
+
+`action` Action&lt;System.Collections.Generic.IList&lt;T&gt;&gt;
+
+
+</section>
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [CollectionChanged](#uid-dcdb07ff2c) | No summary available. |
+| [PropertyChanged](#uid-8b623d9140) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-dcdb07ff2c"></span>
+
+### CollectionChanged Event
+
+```csharp
+public event System.Collections.Specialized.NotifyCollectionChangedEventHandler CollectionChanged
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8b623d9140"></span>
+
+### PropertyChanged Event
+
+```csharp
+public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged
+```
+
+</section>
+
+</ApiRefPage>
+

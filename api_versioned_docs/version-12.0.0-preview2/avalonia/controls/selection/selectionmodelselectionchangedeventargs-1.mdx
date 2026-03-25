@@ -1,0 +1,152 @@
+---
+title: 'SelectionModelSelectionChangedEventArgs<T>'
+hide_title: true
+slug: '/avalonia/controls/selection/selectionmodelselectionchangedeventargs-1'
+uid: 'Avalonia.Controls.Selection.SelectionModelSelectionChangedEventArgs`1'
+commentId: 'T:Avalonia.Controls.Selection.SelectionModelSelectionChangedEventArgs`1'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Selection'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">SelectionModelSelectionChangedEventArgs&lt;T&gt; Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Selection</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Controls/Selection/SelectionModelSelectionChangedEventArgs.cs">SelectionModelSelectionChangedEventArgs.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class SelectionModelSelectionChangedEventArgs<T>
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> EventArgs <span className="apiref-page__relation-separator">-&gt;</span> <a href="selectionmodelselectionchangedeventargs">SelectionModelSelectionChangedEventArgs</a> <span className="apiref-page__relation-separator">-&gt;</span> SelectionModelSelectionChangedEventArgs&lt;T&gt;
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [SelectionModelSelectionChangedEventArgs&lt;T&gt;](#uid-91158ca68b) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-91158ca68b"></span>
+
+### SelectionModelSelectionChangedEventArgs&lt;T&gt; Constructor
+
+```csharp
+public SelectionModelSelectionChangedEventArgs<T>(System.Collections.Generic.IReadOnlyList<int> deselectedIndices, System.Collections.Generic.IReadOnlyList<int> selectedIndices, System.Collections.Generic.IReadOnlyList<T> deselectedItems, System.Collections.Generic.IReadOnlyList<T> selectedItems)
+```
+
+#### Parameters
+
+`deselectedIndices` System.Collections.Generic.IReadOnlyList&lt;int&gt;
+
+
+`selectedIndices` System.Collections.Generic.IReadOnlyList&lt;int&gt;
+
+
+`deselectedItems` System.Collections.Generic.IReadOnlyList&lt;T&gt;
+
+
+`selectedItems` System.Collections.Generic.IReadOnlyList&lt;T&gt;
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [DeselectedIndexes](#uid-fcab4fbf13) | Gets the indexes of the items that were removed from the selection. |
+| [DeselectedItems](#uid-b5e7c073a6) | Gets the items that were removed from the selection. |
+| [SelectedIndexes](#uid-7e486a9f2f) | Gets the indexes of the items that were added to the selection. |
+| [SelectedItems](#uid-6966cb1f81) | Gets the items that were added to the selection. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-fcab4fbf13"></span>
+
+### DeselectedIndexes Property
+
+Gets the indexes of the items that were removed from the selection.
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<int> DeselectedIndexes { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b5e7c073a6"></span>
+
+### DeselectedItems Property
+
+Gets the items that were removed from the selection.
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<T> DeselectedItems { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7e486a9f2f"></span>
+
+### SelectedIndexes Property
+
+Gets the indexes of the items that were added to the selection.
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<int> SelectedIndexes { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6966cb1f81"></span>
+
+### SelectedItems Property
+
+Gets the items that were added to the selection.
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<T> SelectedItems { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

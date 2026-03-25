@@ -1,0 +1,135 @@
+---
+title: 'XmlnsPrefixAttribute'
+hide_title: true
+slug: '/avalonia/metadata/xmlnsprefixattribute'
+uid: 'Avalonia.Metadata.XmlnsPrefixAttribute'
+commentId: 'T:Avalonia.Metadata.XmlnsPrefixAttribute'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Metadata'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">XmlnsPrefixAttribute Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Metadata</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Metadata/XmlnsPrefixAttribute.cs">XmlnsPrefixAttribute.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Use to predefine the prefix associated to an xml namespace in a xaml file
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class XmlnsPrefixAttribute
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Attribute <span className="apiref-page__relation-separator">-&gt;</span> XmlnsPrefixAttribute
+</div>
+</div>
+
+## Remarks
+
+example:
+[assembly: XmlnsPrefix("https://github.com/avaloniaui", "av")]
+xaml:
+xmlns:av="https://github.com/avaloniaui"
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [XmlnsPrefixAttribute](#uid-7e2709431f) | Constructor |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7e2709431f"></span>
+
+### XmlnsPrefixAttribute Constructor
+
+Constructor
+
+```csharp
+public XmlnsPrefixAttribute(string xmlNamespace, string prefix)
+```
+
+#### Parameters
+
+`xmlNamespace` string
+
+XML namespce
+
+
+`prefix` string
+
+recommended prefix
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Prefix](#uid-7c6ce36fb6) | New Xml Namespace |
+| [XmlNamespace](#uid-4387a1f788) | XML Namespace |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7c6ce36fb6"></span>
+
+### Prefix Property
+
+New Xml Namespace
+
+```csharp
+public string Prefix { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4387a1f788"></span>
+
+### XmlNamespace Property
+
+XML Namespace
+
+```csharp
+public string XmlNamespace { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

@@ -1,0 +1,353 @@
+---
+title: 'TreeDataGridCellsPresenter'
+hide_title: true
+slug: '/avalonia/controls/primitives/treedatagridcellspresenter'
+uid: 'Avalonia.Controls.Primitives.TreeDataGridCellsPresenter'
+commentId: 'T:Avalonia.Controls.Primitives.TreeDataGridCellsPresenter'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.TreeDataGrid'
+assembly: 'Avalonia.Controls.TreeDataGrid'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Primitives'
+tfms:
+  - 'net8.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">TreeDataGridCellsPresenter Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Primitives</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Presents and manages cells within a row of a [Avalonia.Controls.TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid) control.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class TreeDataGridCellsPresenter
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> TreeDataGridColumnarPresenterBase&lt;IColumn&gt; <span className="apiref-page__relation-separator">-&gt;</span> TreeDataGridCellsPresenter
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="../../logicaltree/ichildindexprovider">IChildIndexProvider</a>
+</div>
+</div>
+
+## Remarks
+
+[TreeDataGridCellsPresenter](xref:Avalonia.Controls.Primitives.TreeDataGridCellsPresenter) is responsible for creating, recycling, and arranging cells
+horizontally within a row of a [TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid). It handles the virtualization of cells,
+ensuring that only visible cells are realized in the visual tree to improve performance.
+
+This presenter is typically used within a [Avalonia.Controls.Primitives.TreeDataGridRow](xref:Avalonia.Controls.Primitives.TreeDataGridRow) control template to
+display the cells for that row. It coordinates with its parent row and the [TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid) to
+manage cell lifecycle, selection state, and layout.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [TreeDataGridCellsPresenter](#uid-a20003fcac) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a20003fcac"></span>
+
+### TreeDataGridCellsPresenter Constructor
+
+```csharp
+public TreeDataGridCellsPresenter()
+```
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [GetChildIndex](#uid-4ed80c1342) | Gets child's actual index in order of the original source. |
+| [Realize](#uid-38e6a32204) | Prepares the presenter to display cells for the specified row index. |
+| [TryGetTotalCount](#uid-09f75ca547) | No summary available. |
+| [Unrealize](#uid-36ee437a25) | Releases resources used by the presenter and prepares it for reuse. |
+| [UpdateRowIndex](#uid-65ae81a589) | Updates the row index of this presenter and all its cells. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4ed80c1342"></span>
+
+### GetChildIndex Method
+
+Gets child's actual index in order of the original source.
+
+```csharp
+public int GetChildIndex(Avalonia.LogicalTree.ILogical child)
+```
+
+#### Parameters
+
+`child` [Avalonia.LogicalTree.ILogical](xref:Avalonia.LogicalTree.ILogical)
+
+Logical child.
+
+
+#### Returns
+
+int
+
+Index or -1 if child was not found.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-38e6a32204"></span>
+
+### Realize Method
+
+Prepares the presenter to display cells for the specified row index.
+
+```csharp
+public void Realize(int index)
+```
+
+#### Parameters
+
+`index` int
+
+The index of the row to realize.
+
+
+#### Remarks
+
+This method is called by the [TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid) when a row needs to be prepared for display.
+It initializes the presenter with the specified row index and triggers a measure pass
+to create and arrange the cells.
+
+#### Exceptions
+
+- [The presenter is already realized.](xref:System.InvalidOperationException)
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-09f75ca547"></span>
+
+### TryGetTotalCount Method
+
+```csharp
+public bool TryGetTotalCount(int& count)
+```
+
+#### Parameters
+
+`count` int&amp;
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-36ee437a25"></span>
+
+### Unrealize Method
+
+Releases resources used by the presenter and prepares it for reuse.
+
+```csharp
+public void Unrealize()
+```
+
+#### Remarks
+
+This method is called by the [TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid) when a row is no longer needed for display.
+It clears the presenter's row index and recycles all cell elements.
+
+#### Exceptions
+
+- [The presenter is not realized.](xref:System.InvalidOperationException)
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-65ae81a589"></span>
+
+### UpdateRowIndex Method
+
+Updates the row index of this presenter and all its cells.
+
+```csharp
+public void UpdateRowIndex(int index)
+```
+
+#### Parameters
+
+`index` int
+
+The new row index.
+
+
+#### Remarks
+
+This method is called when the index of the row changes, such as when rows are inserted or removed above it.
+It updates the presenter's row index and updates the row index of all realized cells.
+
+#### Exceptions
+
+- [The index is out of range.](xref:System.ArgumentOutOfRangeException)
+- [The presenter is not realized.](xref:System.InvalidOperationException)
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [FrozenColumnCount](#uid-6fb6bff391) | Gets or sets the number of frozen columns. |
+| [RowIndex](#uid-03c7645085) | Gets the index of the row that this presenter is currently displaying. |
+| [Rows](#uid-4034f03b39) | Gets or sets the rows collection from which to obtain cell data. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6fb6bff391"></span>
+
+### FrozenColumnCount Property
+
+Gets or sets the number of frozen columns.
+
+```csharp
+public int FrozenColumnCount { get; set; }
+```
+
+#### Remarks
+
+Frozen columns do not scroll horizontally and remain visible at all times.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-03c7645085"></span>
+
+### RowIndex Property
+
+Gets the index of the row that this presenter is currently displaying.
+
+```csharp
+public int RowIndex { get; set; }
+```
+
+#### Value
+
+The zero-based row index, or -1 if the presenter is not realized.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4034f03b39"></span>
+
+### Rows Property
+
+Gets or sets the rows collection from which to obtain cell data.
+
+```csharp
+public Avalonia.Controls.Models.TreeDataGrid.IRows Rows { get; set; }
+```
+
+#### Value
+
+The collection of rows used to populate cells in this presenter.
+
+
+</section>
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [FrozenColumnCountProperty](#uid-2b51aeaef5) | Defines the [Avalonia.Controls.Primitives.TreeDataGridCellsPresenter.FrozenColumnCount](xref:Avalonia.Controls.Primitives.TreeDataGridCellsPresenter.FrozenColumnCount) property. |
+| [RowsProperty](#uid-f277ec165a) | Defines the [Avalonia.Controls.Primitives.TreeDataGridCellsPresenter.Rows](xref:Avalonia.Controls.Primitives.TreeDataGridCellsPresenter.Rows) property. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2b51aeaef5"></span>
+
+### FrozenColumnCountProperty Field
+
+Defines the [Avalonia.Controls.Primitives.TreeDataGridCellsPresenter.FrozenColumnCount](xref:Avalonia.Controls.Primitives.TreeDataGridCellsPresenter.FrozenColumnCount) property.
+
+```csharp
+public Avalonia.StyledProperty<int> FrozenColumnCountProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f277ec165a"></span>
+
+### RowsProperty Field
+
+Defines the [Avalonia.Controls.Primitives.TreeDataGridCellsPresenter.Rows](xref:Avalonia.Controls.Primitives.TreeDataGridCellsPresenter.Rows) property.
+
+```csharp
+public Avalonia.DirectProperty<Avalonia.Controls.Primitives.TreeDataGridCellsPresenter, Avalonia.Controls.Models.TreeDataGrid.IRows> RowsProperty
+```
+
+</section>
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [ChildIndexChanged](#uid-c2edfe4e1e) | Occurs when the index of a child element in the presenter changes. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c2edfe4e1e"></span>
+
+### ChildIndexChanged Event
+
+Occurs when the index of a child element in the presenter changes.
+
+```csharp
+public event EventHandler<Avalonia.LogicalTree.ChildIndexChangedEventArgs> ChildIndexChanged
+```
+
+</section>
+
+</ApiRefPage>
+

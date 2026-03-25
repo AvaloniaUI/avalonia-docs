@@ -1,0 +1,254 @@
+---
+title: 'StyleQueries'
+hide_title: true
+slug: '/avalonia/styling/stylequeries'
+uid: 'Avalonia.Styling.StyleQueries'
+commentId: 'T:Avalonia.Styling.StyleQueries'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Styling'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">StyleQueries Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Styling</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Styling/StyleQueries.cs">StyleQueries.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Extension methods for [Avalonia.Styling.StyleQuery](xref:Avalonia.Styling.StyleQuery).
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class StyleQueries
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> StyleQueries
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [And (2 overloads)](#uid-342505de3b) | Returns a query which ANDs queries. |
+| [Height](#uid-cf74e48129) | Returns a query which matches the device height with a value. |
+| [Or (2 overloads)](#uid-d2dc803fe9) | Returns a query which ORs queries. |
+| [Width](#uid-455754f250) | Returns a query which matches the device width with a value. |
+
+<span id="uid-342505de3b"></span>
+
+### And overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2d2a6ceb2b"></span>
+
+#### And Method
+
+Returns a query which ANDs queries.
+
+```csharp
+public Avalonia.Styling.StyleQuery And(Avalonia.Styling.StyleQuery[] queries)
+```
+
+##### Parameters
+
+`queries` [Avalonia.Styling.StyleQuery](xref:Avalonia.Styling.StyleQuery)[]
+
+The queries to be AND'd.
+
+
+##### Returns
+
+[Avalonia.Styling.StyleQuery](xref:Avalonia.Styling.StyleQuery)
+
+The query.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-dec2e678bb"></span>
+
+#### And Method
+
+```csharp
+public Avalonia.Styling.StyleQuery And(System.Collections.Generic.IReadOnlyList<Avalonia.Styling.StyleQuery> query)
+```
+
+##### Parameters
+
+`query` System.Collections.Generic.IReadOnlyList&lt;[Avalonia.Styling.StyleQuery](xref:Avalonia.Styling.StyleQuery)&gt;
+
+
+##### Returns
+
+[Avalonia.Styling.StyleQuery](xref:Avalonia.Styling.StyleQuery)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-cf74e48129"></span>
+
+### Height Method
+
+Returns a query which matches the device height with a value.
+
+```csharp
+public Avalonia.Styling.StyleQuery Height(Avalonia.Styling.StyleQuery previous, Avalonia.Styling.StyleQueryComparisonOperator operator, double value)
+```
+
+#### Parameters
+
+`previous` [Avalonia.Styling.StyleQuery](xref:Avalonia.Styling.StyleQuery)
+
+The previous query.
+
+
+`operator` [Avalonia.Styling.StyleQueryComparisonOperator](xref:Avalonia.Styling.StyleQueryComparisonOperator)
+
+The operator to match the device height
+
+
+`value` double
+
+The height to match
+
+
+#### Returns
+
+[Avalonia.Styling.StyleQuery](xref:Avalonia.Styling.StyleQuery)
+
+The query.
+
+
+</section>
+
+<span id="uid-d2dc803fe9"></span>
+
+### Or overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-414f1164b7"></span>
+
+#### Or Method
+
+Returns a query which ORs queries.
+
+```csharp
+public Avalonia.Styling.StyleQuery Or(Avalonia.Styling.StyleQuery[] queries)
+```
+
+##### Parameters
+
+`queries` [Avalonia.Styling.StyleQuery](xref:Avalonia.Styling.StyleQuery)[]
+
+The queries to be OR'd.
+
+
+##### Returns
+
+[Avalonia.Styling.StyleQuery](xref:Avalonia.Styling.StyleQuery)
+
+The query.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e73bf5cae1"></span>
+
+#### Or Method
+
+```csharp
+public Avalonia.Styling.StyleQuery Or(System.Collections.Generic.IReadOnlyList<Avalonia.Styling.StyleQuery> query)
+```
+
+##### Parameters
+
+`query` System.Collections.Generic.IReadOnlyList&lt;[Avalonia.Styling.StyleQuery](xref:Avalonia.Styling.StyleQuery)&gt;
+
+
+##### Returns
+
+[Avalonia.Styling.StyleQuery](xref:Avalonia.Styling.StyleQuery)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-455754f250"></span>
+
+### Width Method
+
+Returns a query which matches the device width with a value.
+
+```csharp
+public Avalonia.Styling.StyleQuery Width(Avalonia.Styling.StyleQuery previous, Avalonia.Styling.StyleQueryComparisonOperator operator, double value)
+```
+
+#### Parameters
+
+`previous` [Avalonia.Styling.StyleQuery](xref:Avalonia.Styling.StyleQuery)
+
+The previous query.
+
+
+`operator` [Avalonia.Styling.StyleQueryComparisonOperator](xref:Avalonia.Styling.StyleQueryComparisonOperator)
+
+The operator to match the device width
+
+
+`value` double
+
+The width to match
+
+
+#### Returns
+
+[Avalonia.Styling.StyleQuery](xref:Avalonia.Styling.StyleQuery)
+
+The query.
+
+
+</section>
+
+</ApiRefPage>
+

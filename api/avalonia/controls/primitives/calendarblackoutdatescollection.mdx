@@ -1,0 +1,207 @@
+---
+title: 'CalendarBlackoutDatesCollection'
+hide_title: true
+slug: '/avalonia/controls/primitives/calendarblackoutdatescollection'
+uid: 'Avalonia.Controls.Primitives.CalendarBlackoutDatesCollection'
+commentId: 'T:Avalonia.Controls.Primitives.CalendarBlackoutDatesCollection'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Primitives'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">CalendarBlackoutDatesCollection Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Primitives</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Controls/Calendar/CalendarBlackoutDatesCollection.cs">CalendarBlackoutDatesCollection.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class CalendarBlackoutDatesCollection
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ObservableCollection&lt;CalendarDateRange&gt; <span className="apiref-page__relation-separator">-&gt;</span> CalendarBlackoutDatesCollection
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [CalendarBlackoutDatesCollection](#uid-25bcabacac) | Initializes a new instance of the [Avalonia.Controls.Primitives.CalendarBlackoutDatesCollection](xref:Avalonia.Controls.Primitives.CalendarBlackoutDatesCollection) class. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-25bcabacac"></span>
+
+### CalendarBlackoutDatesCollection Constructor
+
+Initializes a new instance of the
+[Avalonia.Controls.Primitives.CalendarBlackoutDatesCollection](xref:Avalonia.Controls.Primitives.CalendarBlackoutDatesCollection)
+class.
+
+```csharp
+public CalendarBlackoutDatesCollection(Avalonia.Controls.Calendar owner)
+```
+
+#### Parameters
+
+`owner` [Avalonia.Controls.Calendar](xref:Avalonia.Controls.Calendar)
+
+The [Avalonia.Controls.Calendar](xref:Avalonia.Controls.Calendar) whose dates
+this object represents.
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [AddDatesInPast](#uid-a58eae0d59) | Adds all dates before [DateTime.Today](xref:System.DateTime.Today) to the collection. |
+| [Contains (2 overloads)](#uid-f878b60e2a) | Returns a value that represents whether this collection contains the specified date. |
+| [ContainsAny](#uid-2a83d70b6e) | Returns a value that represents whether this collection contains any date in the specified range. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a58eae0d59"></span>
+
+### AddDatesInPast Method
+
+Adds all dates before [DateTime.Today](xref:System.DateTime.Today) to the
+collection.
+
+```csharp
+public void AddDatesInPast()
+```
+
+</section>
+
+<span id="uid-f878b60e2a"></span>
+
+### Contains overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-875f31b2bf"></span>
+
+#### Contains Method
+
+Returns a value that represents whether this collection contains the
+specified date.
+
+```csharp
+public bool Contains(DateTime date)
+```
+
+##### Parameters
+
+`date` DateTime
+
+The date to search for.
+
+
+##### Returns
+
+bool
+
+True if the collection contains the specified date; otherwise,
+false.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-668eeb6661"></span>
+
+#### Contains Method
+
+Returns a value that represents whether this collection contains the
+specified range of dates.
+
+```csharp
+public bool Contains(DateTime start, DateTime end)
+```
+
+##### Parameters
+
+`start` DateTime
+
+The start of the date range.
+
+
+`end` DateTime
+
+The end of the date range.
+
+
+##### Returns
+
+bool
+
+True if all dates in the range are contained in the collection;
+otherwise, false.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2a83d70b6e"></span>
+
+### ContainsAny Method
+
+Returns a value that represents whether this collection contains any
+date in the specified range.
+
+```csharp
+public bool ContainsAny(Avalonia.Controls.CalendarDateRange range)
+```
+
+#### Parameters
+
+`range` [Avalonia.Controls.CalendarDateRange](xref:Avalonia.Controls.CalendarDateRange)
+
+The range of dates to search for.
+
+
+#### Returns
+
+bool
+
+True if any date in the range is contained in the collection;
+otherwise, false.
+
+
+</section>
+
+</ApiRefPage>
+

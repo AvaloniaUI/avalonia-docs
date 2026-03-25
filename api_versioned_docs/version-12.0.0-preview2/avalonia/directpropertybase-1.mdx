@@ -1,0 +1,258 @@
+---
+title: 'DirectPropertyBase<TValue>'
+hide_title: true
+slug: '/avalonia/directpropertybase-1'
+uid: 'Avalonia.DirectPropertyBase`1'
+commentId: 'T:Avalonia.DirectPropertyBase`1'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">DirectPropertyBase&lt;TValue&gt; Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/DirectPropertyBase.cs">DirectPropertyBase.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Base class for direct properties.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class DirectPropertyBase<TValue>
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> AvaloniaProperty&lt;&gt; <span className="apiref-page__relation-separator">-&gt;</span> DirectPropertyBase&lt;TValue&gt;
+</div>
+</div>
+
+## Remarks
+
+Whereas [Avalonia.DirectProperty&lt;T1, T2&gt;](xref:Avalonia.DirectProperty%602) is typed on the owner type, this base
+class provides a non-owner-typed interface to a direct property.
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [GetMetadata (2 overloads)](#uid-b6c6ae1a42) | Gets the [Avalonia.AvaloniaPropertyMetadata](xref:Avalonia.AvaloniaPropertyMetadata) which applies to this property when it is used with the specified object. |
+| [GetUnsetValue (2 overloads)](#uid-fe50eae041) | Gets the unset value for the property on the specified object. |
+| [OverrideMetadata (2 overloads)](#uid-1ce4e62b9a) | No summary available. |
+
+<span id="uid-b6c6ae1a42"></span>
+
+### GetMetadata overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c1179f17b1"></span>
+
+#### GetMetadata Method
+
+Gets the [Avalonia.AvaloniaPropertyMetadata](xref:Avalonia.AvaloniaPropertyMetadata) which applies to this property when it is used with the specified object.
+
+```csharp
+public Avalonia.DirectPropertyMetadata<TValue><TValue> GetMetadata(Avalonia.AvaloniaObject owner)
+```
+
+##### Parameters
+
+`owner` [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject)
+
+The object for which to retrieve metadata.
+
+
+##### Returns
+
+Avalonia.DirectPropertyMetadata&lt;TValue&gt;&lt;TValue&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9cf4d7da4e"></span>
+
+#### GetMetadata Method
+
+```csharp
+public Avalonia.DirectPropertyMetadata<TValue><TValue> GetMetadata(Type type)
+```
+
+##### Parameters
+
+`type` Type
+
+The type for which to retrieve metadata.
+
+
+##### Returns
+
+Avalonia.DirectPropertyMetadata&lt;TValue&gt;&lt;TValue&gt;
+
+
+##### Remarks
+
+For performance, prefer the [Avalonia.AvaloniaProperty.GetMetadata(Avalonia.AvaloniaObject)](xref:Avalonia.AvaloniaProperty.GetMetadata%28Avalonia.AvaloniaObject%29) overload when possible.
+
+</section>
+
+<span id="uid-fe50eae041"></span>
+
+### GetUnsetValue overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1746ef5106"></span>
+
+#### GetUnsetValue Method
+
+Gets the unset value for the property on the specified object.
+
+```csharp
+public TValue GetUnsetValue(Avalonia.AvaloniaObject owner)
+```
+
+##### Parameters
+
+`owner` [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject)
+
+The object.
+
+
+##### Returns
+
+TValue
+
+The unset value.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e2534a53cd"></span>
+
+#### GetUnsetValue Method
+
+Gets the unset value for the property on the specified type.
+
+```csharp
+public TValue GetUnsetValue(Type type)
+```
+
+##### Parameters
+
+`type` Type
+
+The type.
+
+
+##### Returns
+
+TValue
+
+The unset value.
+
+
+</section>
+
+<span id="uid-1ce4e62b9a"></span>
+
+### OverrideMetadata overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-76fb8d47ae"></span>
+
+#### OverrideMetadata Method
+
+```csharp
+public void OverrideMetadata<T>(Avalonia.DirectPropertyMetadata<TValue><TValue> metadata)
+```
+
+##### Parameters
+
+`metadata` Avalonia.DirectPropertyMetadata&lt;TValue&gt;&lt;TValue&gt;
+
+
+##### Type Parameters
+
+`T`
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5fcd8c28ed"></span>
+
+#### OverrideMetadata Method
+
+```csharp
+public void OverrideMetadata(Type type, Avalonia.DirectPropertyMetadata<TValue><TValue> metadata)
+```
+
+##### Parameters
+
+`type` Type
+
+
+`metadata` Avalonia.DirectPropertyMetadata&lt;TValue&gt;&lt;TValue&gt;
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Owner](#uid-9a89944347) | Gets the type that registered the property. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9a89944347"></span>
+
+### Owner Property
+
+Gets the type that registered the property.
+
+```csharp
+public Type Owner { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

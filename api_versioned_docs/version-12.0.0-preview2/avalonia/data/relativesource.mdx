@@ -1,0 +1,177 @@
+---
+title: 'RelativeSource'
+hide_title: true
+slug: '/avalonia/data/relativesource'
+uid: 'Avalonia.Data.RelativeSource'
+commentId: 'T:Avalonia.Data.RelativeSource'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Data'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">RelativeSource Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Data</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Data/RelativeSource.cs">RelativeSource.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Describes the location of a binding source, relative to the binding target.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class RelativeSource
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> RelativeSource
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [RelativeSource (2 overloads)](#uid-717bf7d302) | Initializes a new instance of the [Avalonia.Data.RelativeSource](xref:Avalonia.Data.RelativeSource) class. |
+
+<span id="uid-717bf7d302"></span>
+
+### RelativeSource overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b3c8f31d37"></span>
+
+#### RelativeSource Constructor
+
+Initializes a new instance of the [Avalonia.Data.RelativeSource](xref:Avalonia.Data.RelativeSource) class.
+
+```csharp
+public RelativeSource()
+```
+
+##### Remarks
+
+This constructor initializes [Avalonia.Data.RelativeSource.Mode](xref:Avalonia.Data.RelativeSource.Mode) to [Avalonia.Data.RelativeSourceMode.FindAncestor](xref:Avalonia.Data.RelativeSourceMode.FindAncestor).
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ea3be9392a"></span>
+
+#### RelativeSource Constructor
+
+Initializes a new instance of the [Avalonia.Data.RelativeSource](xref:Avalonia.Data.RelativeSource) class.
+
+```csharp
+public RelativeSource(Avalonia.Data.RelativeSourceMode mode)
+```
+
+##### Parameters
+
+`mode` [Avalonia.Data.RelativeSourceMode](xref:Avalonia.Data.RelativeSourceMode)
+
+The relative source mode.
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [AncestorLevel](#uid-222088beaf) | Gets the level of ancestor to look for when in [Avalonia.Data.RelativeSourceMode.FindAncestor](xref:Avalonia.Data.RelativeSourceMode.FindAncestor) mode. |
+| [AncestorType](#uid-55b6bced12) | Gets the type of ancestor to look for when in [Avalonia.Data.RelativeSourceMode.FindAncestor](xref:Avalonia.Data.RelativeSourceMode.FindAncestor) mode. |
+| [Mode](#uid-ee152f8329) | Gets or sets a value that describes the type of relative source lookup. |
+| [Tree](#uid-aef1da28b8) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-222088beaf"></span>
+
+### AncestorLevel Property
+
+Gets the level of ancestor to look for when in [Avalonia.Data.RelativeSourceMode.FindAncestor](xref:Avalonia.Data.RelativeSourceMode.FindAncestor) mode.
+
+```csharp
+public int AncestorLevel { get; set; }
+```
+
+#### Remarks
+
+Use the default value of 1 to look for the first ancestor of the specified type.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-55b6bced12"></span>
+
+### AncestorType Property
+
+Gets the type of ancestor to look for when in [Avalonia.Data.RelativeSourceMode.FindAncestor](xref:Avalonia.Data.RelativeSourceMode.FindAncestor) mode.
+
+```csharp
+public Type AncestorType { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ee152f8329"></span>
+
+### Mode Property
+
+Gets or sets a value that describes the type of relative source lookup.
+
+```csharp
+public Avalonia.Data.RelativeSourceMode Mode { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-aef1da28b8"></span>
+
+### Tree Property
+
+```csharp
+public Avalonia.Data.TreeType Tree { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

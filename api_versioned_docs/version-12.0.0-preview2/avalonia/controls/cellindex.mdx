@@ -1,0 +1,239 @@
+---
+title: 'CellIndex'
+hide_title: true
+slug: '/avalonia/controls/cellindex'
+uid: 'Avalonia.Controls.CellIndex'
+commentId: 'T:Avalonia.Controls.CellIndex'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.TreeDataGrid'
+assembly: 'Avalonia.Controls.TreeDataGrid'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net8.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">CellIndex Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Represents a cell in a [Avalonia.Controls.TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid).
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct CellIndex
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> CellIndex
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;CellIndex&gt;
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [CellIndex](#uid-326651a7ed) | Represents a cell in a [Avalonia.Controls.TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-326651a7ed"></span>
+
+### CellIndex Constructor
+
+Represents a cell in a [Avalonia.Controls.TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid).
+
+```csharp
+public CellIndex(int ColumnIndex, Avalonia.Controls.IndexPath RowIndex)
+```
+
+#### Parameters
+
+`ColumnIndex` int
+
+The index of the cell in the [Avalonia.Controls.TreeDataGrid.Columns](xref:Avalonia.Controls.TreeDataGrid.Columns) collection.
+
+
+`RowIndex` [Avalonia.Controls.IndexPath](xref:Avalonia.Controls.IndexPath)
+
+The hierarchical index of the row model in the data source.
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Deconstruct](#uid-61f7d3d1e5) | No summary available. |
+| [Equals (2 overloads)](#uid-9f8f6efc10) | No summary available. |
+| [GetHashCode](#uid-59879d3065) | No summary available. |
+| [ToString](#uid-5840b33103) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-61f7d3d1e5"></span>
+
+### Deconstruct Method
+
+```csharp
+public void Deconstruct(int& ColumnIndex, Avalonia.Controls.IndexPath& RowIndex)
+```
+
+#### Parameters
+
+`ColumnIndex` int&amp;
+
+
+`RowIndex` [Avalonia.Controls.IndexPath](xref:Avalonia.Controls.IndexPath)&amp;
+
+
+</section>
+
+<span id="uid-9f8f6efc10"></span>
+
+### Equals overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-aefc8b9d1c"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(Avalonia.Controls.CellIndex other)
+```
+
+##### Parameters
+
+`other` [Avalonia.Controls.CellIndex](xref:Avalonia.Controls.CellIndex)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-58e9aa5785"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(object obj)
+```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-59879d3065"></span>
+
+### GetHashCode Method
+
+```csharp
+public int GetHashCode()
+```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5840b33103"></span>
+
+### ToString Method
+
+```csharp
+public string ToString()
+```
+
+#### Returns
+
+string
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [ColumnIndex](#uid-58106fbe94) | The index of the cell in the [Avalonia.Controls.TreeDataGrid.Columns](xref:Avalonia.Controls.TreeDataGrid.Columns) collection. |
+| [RowIndex](#uid-0b48722cc9) | The hierarchical index of the row model in the data source. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-58106fbe94"></span>
+
+### ColumnIndex Property
+
+The index of the cell in the [Avalonia.Controls.TreeDataGrid.Columns](xref:Avalonia.Controls.TreeDataGrid.Columns) collection.
+
+```csharp
+public int ColumnIndex { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0b48722cc9"></span>
+
+### RowIndex Property
+
+The hierarchical index of the row model in the data source.
+
+```csharp
+public Avalonia.Controls.IndexPath RowIndex { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

@@ -1,0 +1,215 @@
+---
+title: 'RoutedEventRegistry'
+hide_title: true
+slug: '/avalonia/interactivity/routedeventregistry'
+uid: 'Avalonia.Interactivity.RoutedEventRegistry'
+commentId: 'T:Avalonia.Interactivity.RoutedEventRegistry'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Interactivity'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">RoutedEventRegistry Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Interactivity</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Interactivity/RoutedEventRegistry.cs">RoutedEventRegistry.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Tracks registered [Avalonia.Interactivity.RoutedEvent](xref:Avalonia.Interactivity.RoutedEvent)s.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class RoutedEventRegistry
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> RoutedEventRegistry
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [RoutedEventRegistry](#uid-214ec73639) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-214ec73639"></span>
+
+### RoutedEventRegistry Constructor
+
+```csharp
+public RoutedEventRegistry()
+```
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [GetAllRegistered](#uid-396c5219f9) | Returns all routed events, that are currently registered in the event registry. |
+| [GetRegistered (2 overloads)](#uid-68a2e56b91) | No summary available. |
+| [Register](#uid-6b61f44227) | Registers a [Avalonia.Interactivity.RoutedEvent](xref:Avalonia.Interactivity.RoutedEvent) on a type. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-396c5219f9"></span>
+
+### GetAllRegistered Method
+
+Returns all routed events, that are currently registered in the event registry.
+
+```csharp
+public System.Collections.Generic.IEnumerable<Avalonia.Interactivity.RoutedEvent> GetAllRegistered()
+```
+
+#### Returns
+
+System.Collections.Generic.IEnumerable&lt;[Avalonia.Interactivity.RoutedEvent](xref:Avalonia.Interactivity.RoutedEvent)&gt;
+
+All routed events, that are currently registered in the event registry.
+
+
+</section>
+
+<span id="uid-68a2e56b91"></span>
+
+### GetRegistered overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4476d626c9"></span>
+
+#### GetRegistered Method
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<Avalonia.Interactivity.RoutedEvent> GetRegistered<TOwner>()
+```
+
+##### Type Parameters
+
+`TOwner`
+
+
+##### Returns
+
+System.Collections.Generic.IReadOnlyList&lt;[Avalonia.Interactivity.RoutedEvent](xref:Avalonia.Interactivity.RoutedEvent)&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9ea2ff0028"></span>
+
+#### GetRegistered Method
+
+Returns all routed events registered with the provided type.
+If the type is not found or does not provide any routed events, an empty list is returned.
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<Avalonia.Interactivity.RoutedEvent> GetRegistered(Type type)
+```
+
+##### Parameters
+
+`type` Type
+
+The type.
+
+
+##### Returns
+
+System.Collections.Generic.IReadOnlyList&lt;[Avalonia.Interactivity.RoutedEvent](xref:Avalonia.Interactivity.RoutedEvent)&gt;
+
+All routed events registered with the provided type.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6b61f44227"></span>
+
+### Register Method
+
+Registers a [Avalonia.Interactivity.RoutedEvent](xref:Avalonia.Interactivity.RoutedEvent) on a type.
+
+```csharp
+public void Register(Type type, Avalonia.Interactivity.RoutedEvent event)
+```
+
+#### Parameters
+
+`type` Type
+
+The type.
+
+
+`event` [Avalonia.Interactivity.RoutedEvent](xref:Avalonia.Interactivity.RoutedEvent)
+
+The event.
+
+
+#### Remarks
+
+You won't usually want to call this method directly, instead use the
+[Avalonia.Interactivity.RoutedEvent.Register&lt;T1, T2&gt;(string,Avalonia.Interactivity.RoutingStrategies)](xref:Avalonia.Interactivity.RoutedEvent.Register%60%602%28System.String%2CAvalonia.Interactivity.RoutingStrategies%29)
+method.
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Instance](#uid-1bddaa3cb2) | Gets the [Avalonia.Interactivity.RoutedEventRegistry](xref:Avalonia.Interactivity.RoutedEventRegistry) instance. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1bddaa3cb2"></span>
+
+### Instance Property
+
+Gets the [Avalonia.Interactivity.RoutedEventRegistry](xref:Avalonia.Interactivity.RoutedEventRegistry) instance.
+
+```csharp
+public Avalonia.Interactivity.RoutedEventRegistry Instance { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

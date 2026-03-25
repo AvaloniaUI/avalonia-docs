@@ -1,0 +1,179 @@
+---
+title: 'WeakEvent'
+hide_title: true
+slug: '/avalonia/utilities/weakevent'
+uid: 'Avalonia.Utilities.WeakEvent'
+commentId: 'T:Avalonia.Utilities.WeakEvent'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Utilities'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">WeakEvent Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Utilities</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Utilities/WeakEvent.cs">WeakEvent.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class WeakEvent
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> WeakEvent
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Derived types:</span> <a href="weakevent-2">WeakEvent&lt;TSender, TEventArgs&gt;</a>
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [WeakEvent](#uid-4cf60bfbdc) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4cf60bfbdc"></span>
+
+### WeakEvent Constructor
+
+```csharp
+public WeakEvent()
+```
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Register (3 overloads)](#uid-88a4223e32) | No summary available. |
+
+<span id="uid-88a4223e32"></span>
+
+### Register overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-20daa98eb3"></span>
+
+#### Register Method
+
+```csharp
+public Avalonia.Utilities.WeakEvent<TSender,TEventArgs><TSender, EventArgs> Register<TSender>(Action<TSender, EventHandler> subscribe, Action<TSender, EventHandler> unsubscribe)
+```
+
+##### Parameters
+
+`subscribe` Action&lt;TSender, EventHandler&gt;
+
+
+`unsubscribe` Action&lt;TSender, EventHandler&gt;
+
+
+##### Type Parameters
+
+`TSender`
+
+
+##### Returns
+
+[Avalonia.Utilities.WeakEvent](xref:Avalonia.Utilities.WeakEvent)&lt;TSender,TEventArgs&gt;&lt;TSender, EventArgs&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e14383efe2"></span>
+
+#### Register Method
+
+```csharp
+public Avalonia.Utilities.WeakEvent<TSender,TEventArgs><TSender, TEventArgs> Register<TSender, TEventArgs>(Action<TSender, EventHandler<TEventArgs>> subscribe, Action<TSender, EventHandler<TEventArgs>> unsubscribe)
+```
+
+##### Parameters
+
+`subscribe` Action&lt;TSender, EventHandler&lt;TEventArgs&gt;&gt;
+
+
+`unsubscribe` Action&lt;TSender, EventHandler&lt;TEventArgs&gt;&gt;
+
+
+##### Type Parameters
+
+`TSender`
+
+
+`TEventArgs`
+
+
+##### Returns
+
+[Avalonia.Utilities.WeakEvent](xref:Avalonia.Utilities.WeakEvent)&lt;TSender,TEventArgs&gt;&lt;TSender, TEventArgs&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9086b937b9"></span>
+
+#### Register Method
+
+```csharp
+public Avalonia.Utilities.WeakEvent<TSender,TEventArgs><TSender, TEventArgs> Register<TSender, TEventArgs>(Func<TSender, EventHandler<TEventArgs>, Action> subscribe)
+```
+
+##### Parameters
+
+`subscribe` Func&lt;TSender, EventHandler&lt;TEventArgs&gt;, Action&gt;
+
+
+##### Type Parameters
+
+`TSender`
+
+
+`TEventArgs`
+
+
+##### Returns
+
+[Avalonia.Utilities.WeakEvent](xref:Avalonia.Utilities.WeakEvent)&lt;TSender,TEventArgs&gt;&lt;TSender, TEventArgs&gt;
+
+
+</section>
+
+</ApiRefPage>
+

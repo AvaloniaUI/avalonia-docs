@@ -1,0 +1,373 @@
+---
+title: 'TypeUtilities'
+hide_title: true
+slug: '/avalonia/utilities/typeutilities'
+uid: 'Avalonia.Utilities.TypeUtilities'
+commentId: 'T:Avalonia.Utilities.TypeUtilities'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Utilities'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">TypeUtilities Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Utilities</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Utilities/TypeUtilities.cs">TypeUtilities.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Provides utilities for working with types at runtime.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class TypeUtilities
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> TypeUtilities
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [AcceptsNull (2 overloads)](#uid-4f32229275) | No summary available. |
+| [CanCast](#uid-1bc57e47b6) | No summary available. |
+| [ConvertImplicit](#uid-a5ec827ebc) | No summary available. |
+| [ConvertImplicitOrDefault](#uid-e02ea85d39) | Convert a value to a type using the implicit conversions allowed by the C# language or return the default for the type if the value could not be converted. |
+| [ConvertOrDefault](#uid-021554d856) | Convert a value to a type by any means possible, returning the default for that type if the value could not be converted. |
+| [Default](#uid-55f12a8f0d) | Gets the default value for the specified type. |
+| [IsNumeric](#uid-6adf09cecc) | Determines if a type is numeric. Nullable numeric types are considered numeric. |
+| [TryConvert](#uid-19e28b3b5f) | No summary available. |
+| [TryConvertImplicit](#uid-d9e79f4461) | No summary available. |
+
+<span id="uid-4f32229275"></span>
+
+### AcceptsNull overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-86f1c83d4a"></span>
+
+#### AcceptsNull Method
+
+```csharp
+public bool AcceptsNull<T>()
+```
+
+##### Type Parameters
+
+`T`
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-870e76f538"></span>
+
+#### AcceptsNull Method
+
+Returns a value indicating whether null can be assigned to the specified type.
+
+```csharp
+public bool AcceptsNull(Type type)
+```
+
+##### Parameters
+
+`type` Type
+
+The type.
+
+
+##### Returns
+
+bool
+
+True if the type accepts null values; otherwise false.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1bc57e47b6"></span>
+
+### CanCast Method
+
+```csharp
+public bool CanCast<T>(object value)
+```
+
+#### Parameters
+
+`value` object
+
+
+#### Type Parameters
+
+`T`
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a5ec827ebc"></span>
+
+### ConvertImplicit Method
+
+```csharp
+public T ConvertImplicit<T>(object value)
+```
+
+#### Parameters
+
+`value` object
+
+
+#### Type Parameters
+
+`T`
+
+
+#### Returns
+
+T
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e02ea85d39"></span>
+
+### ConvertImplicitOrDefault Method
+
+Convert a value to a type using the implicit conversions allowed by the C# language or
+return the default for the type if the value could not be converted.
+
+```csharp
+public object ConvertImplicitOrDefault(object value, Type type)
+```
+
+#### Parameters
+
+`value` object
+
+The value to convert.
+
+
+`type` Type
+
+The type to convert to.
+
+
+#### Returns
+
+object
+
+A value of `type`.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-021554d856"></span>
+
+### ConvertOrDefault Method
+
+Convert a value to a type by any means possible, returning the default for that type
+if the value could not be converted.
+
+```csharp
+public object ConvertOrDefault(object value, Type type, System.Globalization.CultureInfo culture)
+```
+
+#### Parameters
+
+`value` object
+
+The value to convert.
+
+
+`type` Type
+
+The type to convert to.
+
+
+`culture` System.Globalization.CultureInfo
+
+The culture to use.
+
+
+#### Returns
+
+object
+
+A value of `type`.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-55f12a8f0d"></span>
+
+### Default Method
+
+Gets the default value for the specified type.
+
+```csharp
+public object Default(Type type)
+```
+
+#### Parameters
+
+`type` Type
+
+The type.
+
+
+#### Returns
+
+object
+
+The default value.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6adf09cecc"></span>
+
+### IsNumeric Method
+
+Determines if a type is numeric. Nullable numeric types are considered numeric.
+
+```csharp
+public bool IsNumeric(Type type)
+```
+
+#### Parameters
+
+`type` Type
+
+
+#### Returns
+
+bool
+
+True if the type is numeric; otherwise false.
+
+
+#### Remarks
+
+Boolean is not considered numeric.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-19e28b3b5f"></span>
+
+### TryConvert Method
+
+```csharp
+public bool TryConvert(Type to, object value, System.Globalization.CultureInfo culture, object& result)
+```
+
+#### Parameters
+
+`to` Type
+
+
+`value` object
+
+
+`culture` System.Globalization.CultureInfo
+
+
+`result` object&amp;
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d9e79f4461"></span>
+
+### TryConvertImplicit Method
+
+```csharp
+public bool TryConvertImplicit(Type to, object value, object& result)
+```
+
+#### Parameters
+
+`to` Type
+
+
+`value` object
+
+
+`result` object&amp;
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+</ApiRefPage>
+

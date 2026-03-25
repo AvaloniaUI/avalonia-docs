@@ -1,0 +1,164 @@
+---
+title: 'TextShaper'
+hide_title: true
+slug: '/avalonia/media/textformatting/textshaper'
+uid: 'Avalonia.Media.TextFormatting.TextShaper'
+commentId: 'T:Avalonia.Media.TextFormatting.TextShaper'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Media.TextFormatting'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">TextShaper Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Media.TextFormatting</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Media/TextFormatting/TextShaper.cs">TextShaper.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A class that is responsible for text shaping.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class TextShaper
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> TextShaper
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [TextShaper](#uid-4b874df2e1) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4b874df2e1"></span>
+
+### TextShaper Constructor
+
+```csharp
+public TextShaper(Avalonia.Platform.ITextShaperImpl platformImpl)
+```
+
+#### Parameters
+
+`platformImpl` [Avalonia.Platform.ITextShaperImpl](xref:Avalonia.Platform.ITextShaperImpl)
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [ShapeText (2 overloads)](#uid-8899833dfe) | No summary available. |
+
+<span id="uid-8899833dfe"></span>
+
+### ShapeText overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-aacc72bca6"></span>
+
+#### ShapeText Method
+
+```csharp
+public Avalonia.Media.TextFormatting.ShapedBuffer ShapeText(ReadOnlyMemory<char> text, Avalonia.Media.TextFormatting.TextShaperOptions options)
+```
+
+##### Parameters
+
+`text` ReadOnlyMemory&lt;char&gt;
+
+
+`options` [Avalonia.Media.TextFormatting.TextShaperOptions](xref:Avalonia.Media.TextFormatting.TextShaperOptions)
+
+
+##### Returns
+
+[Avalonia.Media.TextFormatting.ShapedBuffer](xref:Avalonia.Media.TextFormatting.ShapedBuffer)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-108428e7e1"></span>
+
+#### ShapeText Method
+
+```csharp
+public Avalonia.Media.TextFormatting.ShapedBuffer ShapeText(string text, Avalonia.Media.TextFormatting.TextShaperOptions options)
+```
+
+##### Parameters
+
+`text` string
+
+
+`options` [Avalonia.Media.TextFormatting.TextShaperOptions](xref:Avalonia.Media.TextFormatting.TextShaperOptions)
+
+
+##### Returns
+
+[Avalonia.Media.TextFormatting.ShapedBuffer](xref:Avalonia.Media.TextFormatting.ShapedBuffer)
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Current](#uid-57cafd8262) | Gets the current text shaper. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-57cafd8262"></span>
+
+### Current Property
+
+Gets the current text shaper.
+
+```csharp
+public Avalonia.Media.TextFormatting.TextShaper Current { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

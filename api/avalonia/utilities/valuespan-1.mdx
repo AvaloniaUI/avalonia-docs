@@ -1,0 +1,233 @@
+---
+title: 'ValueSpan<T>'
+hide_title: true
+slug: '/avalonia/utilities/valuespan-1'
+uid: 'Avalonia.Utilities.ValueSpan`1'
+commentId: 'T:Avalonia.Utilities.ValueSpan`1'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Utilities'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ValueSpan&lt;T&gt; Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Utilities</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Utilities/ValueSpan.cs">ValueSpan.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Pairing of value and positions sharing that value.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct ValueSpan<T>
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> ValueSpan&lt;T&gt;
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;ValueSpan&lt;&gt;&gt;
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [ValueSpan&lt;T&gt;](#uid-bcbda291e2) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-bcbda291e2"></span>
+
+### ValueSpan&lt;T&gt; Constructor
+
+```csharp
+public ValueSpan<T>(int start, int length, T value)
+```
+
+#### Parameters
+
+`start` int
+
+
+`length` int
+
+
+`value` T
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Equals (2 overloads)](#uid-414e623428) | No summary available. |
+| [GetHashCode](#uid-e30d3aea95) | No summary available. |
+| [ToString](#uid-e4722110af) | No summary available. |
+
+<span id="uid-414e623428"></span>
+
+### Equals overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3e3e71b395"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(Avalonia.Utilities.ValueSpan<T><T> other)
+```
+
+##### Parameters
+
+`other` Avalonia.Utilities.ValueSpan&lt;T&gt;&lt;T&gt;
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a422d90154"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(object obj)
+```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e30d3aea95"></span>
+
+### GetHashCode Method
+
+```csharp
+public int GetHashCode()
+```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e4722110af"></span>
+
+### ToString Method
+
+```csharp
+public string ToString()
+```
+
+#### Returns
+
+string
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Length](#uid-40f53e1b44) | Get's the length of the span. |
+| [Start](#uid-3637231974) | Get's the start of the span. |
+| [Value](#uid-6d0373698e) | Get's the value of the span. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-40f53e1b44"></span>
+
+### Length Property
+
+Get's the length of the span.
+
+```csharp
+public int Length { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3637231974"></span>
+
+### Start Property
+
+Get's the start of the span.
+
+```csharp
+public int Start { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6d0373698e"></span>
+
+### Value Property
+
+Get's the value of the span.
+
+```csharp
+public T Value { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

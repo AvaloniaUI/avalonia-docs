@@ -1,0 +1,509 @@
+---
+title: 'IndexPath'
+hide_title: true
+slug: '/avalonia/controls/indexpath'
+uid: 'Avalonia.Controls.IndexPath'
+commentId: 'T:Avalonia.Controls.IndexPath'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.TreeDataGrid'
+assembly: 'Avalonia.Controls.TreeDataGrid'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net8.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IndexPath Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Represents a path of indexes used to identify a specific item in a hierarchical data
+structure. Each index in the path represents a level of depth in the hierarchy.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct IndexPath
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> IndexPath
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEnumerable&lt;int&gt;, IReadOnlyCollection&lt;int&gt;, IReadOnlyList&lt;int&gt;, IEnumerable, IComparable&lt;IndexPath&gt;, IEquatable&lt;IndexPath&gt;
+</div>
+</div>
+
+## Remarks
+
+[IndexPath](xref:Avalonia.Controls.IndexPath) is used to specify the location of an item in a hierarchical data structure.
+Each index in the path represents a level of depth in the hierarchy.
+
+Consider the following tree structure:
+
+```csharp
+Item A IndexPath: (0)
+├─ Item A1 IndexPath: (0, 0)
+└─ Item A2 IndexPath: (0, 1)
+Item B IndexPath: (1)
+├─ Item B1 IndexPath: (1, 0)
+│ └─ Item B1a IndexPath: (1, 0, 0)
+└─ Item B2 IndexPath: (1, 1)
+Item C IndexPath: (2)
+└─ Item C1 IndexPath: (2, 0)
+```
+
+Each [IndexPath](xref:Avalonia.Controls.IndexPath) represents the sequence of child indexes needed to navigate from the
+root to reach that specific item in the hierarchy.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [IndexPath (3 overloads)](#uid-66c59e1bca) | No summary available. |
+
+<span id="uid-66c59e1bca"></span>
+
+### IndexPath overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f7bca984d6"></span>
+
+#### IndexPath Constructor
+
+```csharp
+public IndexPath(System.Collections.Generic.IEnumerable<int> indexes)
+```
+
+##### Parameters
+
+`indexes` System.Collections.Generic.IEnumerable&lt;int&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ee02698fa9"></span>
+
+#### IndexPath Constructor
+
+Initializes a new instance of the [Avalonia.Controls.IndexPath](xref:Avalonia.Controls.IndexPath) struct with a single
+index.
+
+```csharp
+public IndexPath(int index)
+```
+
+##### Parameters
+
+`index` int
+
+The index value.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-dfb608319e"></span>
+
+#### IndexPath Constructor
+
+Initializes a new instance of the [Avalonia.Controls.IndexPath](xref:Avalonia.Controls.IndexPath) struct with multiple
+indexes.
+
+```csharp
+public IndexPath(int[] indexes)
+```
+
+##### Parameters
+
+`indexes` int[]
+
+The array of indexes representing the path.
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Append](#uid-2ebd5e55e0) | Creates a new [IndexPath](xref:Avalonia.Controls.IndexPath) by appending a child index to this path. |
+| [CompareTo](#uid-d1190c8a53) | Compares this [IndexPath](xref:Avalonia.Controls.IndexPath) with another [IndexPath](xref:Avalonia.Controls.IndexPath). |
+| [Equals (2 overloads)](#uid-5479a14e85) | Determines whether the specified [IndexPath](xref:Avalonia.Controls.IndexPath) is equal to this [IndexPath](xref:Avalonia.Controls.IndexPath). |
+| [GetEnumerator](#uid-6f66926059) | Returns an enumerator that iterates through the indexes in this path. |
+| [GetHashCode](#uid-cdc4d05a71) | Returns the hash code for this [IndexPath](xref:Avalonia.Controls.IndexPath). |
+| [IsAncestorOf](#uid-43c31e7c47) | No summary available. |
+| [IsParentOf](#uid-ed2cdaa4c4) | No summary available. |
+| [Slice](#uid-89b122ebcb) | Creates a new [IndexPath](xref:Avalonia.Controls.IndexPath) containing a portion of this path. |
+| [ToArray](#uid-d299da6208) | Converts this [IndexPath](xref:Avalonia.Controls.IndexPath) to an array of integers. |
+| [ToString](#uid-96d87be4f0) | Returns a string representation of the [IndexPath](xref:Avalonia.Controls.IndexPath). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2ebd5e55e0"></span>
+
+### Append Method
+
+Creates a new [IndexPath](xref:Avalonia.Controls.IndexPath) by appending a child index to this path.
+
+```csharp
+public Avalonia.Controls.IndexPath Append(int childIndex)
+```
+
+#### Parameters
+
+`childIndex` int
+
+The child index to append.
+
+
+#### Returns
+
+[Avalonia.Controls.IndexPath](xref:Avalonia.Controls.IndexPath)
+
+A new [IndexPath](xref:Avalonia.Controls.IndexPath) with the child index appended.
+
+
+#### Exceptions
+
+- [Thrown when childIndex is negative.](xref:System.ArgumentException)
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d1190c8a53"></span>
+
+### CompareTo Method
+
+Compares this [IndexPath](xref:Avalonia.Controls.IndexPath) with another [IndexPath](xref:Avalonia.Controls.IndexPath).
+
+```csharp
+public int CompareTo(Avalonia.Controls.IndexPath other)
+```
+
+#### Parameters
+
+`other` [Avalonia.Controls.IndexPath](xref:Avalonia.Controls.IndexPath)
+
+The [IndexPath](xref:Avalonia.Controls.IndexPath) to compare with.
+
+
+#### Returns
+
+int
+
+A value less than 0 if this path is less than other, 0 if equal, greater than 0
+if greater.
+
+
+</section>
+
+<span id="uid-5479a14e85"></span>
+
+### Equals overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-cba3911557"></span>
+
+#### Equals Method
+
+Determines whether the specified [IndexPath](xref:Avalonia.Controls.IndexPath) is equal to this [IndexPath](xref:Avalonia.Controls.IndexPath).
+
+```csharp
+public bool Equals(Avalonia.Controls.IndexPath other)
+```
+
+##### Parameters
+
+`other` [Avalonia.Controls.IndexPath](xref:Avalonia.Controls.IndexPath)
+
+The [IndexPath](xref:Avalonia.Controls.IndexPath) to compare with this [IndexPath](xref:Avalonia.Controls.IndexPath).
+
+
+##### Returns
+
+bool
+
+true if the specified [IndexPath](xref:Avalonia.Controls.IndexPath) is equal to this [IndexPath](xref:Avalonia.Controls.IndexPath); otherwise, false.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4e29660f95"></span>
+
+#### Equals Method
+
+Determines whether the specified object is equal to this [IndexPath](xref:Avalonia.Controls.IndexPath).
+
+```csharp
+public bool Equals(object obj)
+```
+
+##### Parameters
+
+`obj` object
+
+The object to compare with this [IndexPath](xref:Avalonia.Controls.IndexPath).
+
+
+##### Returns
+
+bool
+
+true if the specified object is equal to this [IndexPath](xref:Avalonia.Controls.IndexPath); otherwise, false.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6f66926059"></span>
+
+### GetEnumerator Method
+
+Returns an enumerator that iterates through the indexes in this path.
+
+```csharp
+public System.Collections.Generic.IEnumerator<int> GetEnumerator()
+```
+
+#### Returns
+
+System.Collections.Generic.IEnumerator&lt;int&gt;
+
+An enumerator for the indexes in this path.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-cdc4d05a71"></span>
+
+### GetHashCode Method
+
+Returns the hash code for this [IndexPath](xref:Avalonia.Controls.IndexPath).
+
+```csharp
+public int GetHashCode()
+```
+
+#### Returns
+
+int
+
+A hash code for this [IndexPath](xref:Avalonia.Controls.IndexPath).
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-43c31e7c47"></span>
+
+### IsAncestorOf Method
+
+```csharp
+public bool IsAncestorOf(Avalonia.Controls.IndexPath& other)
+```
+
+#### Parameters
+
+`other` [Avalonia.Controls.IndexPath](xref:Avalonia.Controls.IndexPath)&amp;
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ed2cdaa4c4"></span>
+
+### IsParentOf Method
+
+```csharp
+public bool IsParentOf(Avalonia.Controls.IndexPath& other)
+```
+
+#### Parameters
+
+`other` [Avalonia.Controls.IndexPath](xref:Avalonia.Controls.IndexPath)&amp;
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-89b122ebcb"></span>
+
+### Slice Method
+
+Creates a new [IndexPath](xref:Avalonia.Controls.IndexPath) containing a portion of this path.
+
+```csharp
+public Avalonia.Controls.IndexPath Slice(int start, int length)
+```
+
+#### Parameters
+
+`start` int
+
+The starting position of the slice.
+
+
+`length` int
+
+The number of indexes to include in the slice.
+
+
+#### Returns
+
+[Avalonia.Controls.IndexPath](xref:Avalonia.Controls.IndexPath)
+
+A new [IndexPath](xref:Avalonia.Controls.IndexPath) containing the specified portion of this path.
+
+
+#### Exceptions
+
+- [Thrown when start or length are invalid.](xref:System.IndexOutOfRangeException)
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d299da6208"></span>
+
+### ToArray Method
+
+Converts this [IndexPath](xref:Avalonia.Controls.IndexPath) to an array of integers.
+
+```csharp
+public int[] ToArray()
+```
+
+#### Returns
+
+int[]
+
+An array containing all indexes in this path.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-96d87be4f0"></span>
+
+### ToString Method
+
+Returns a string representation of the [IndexPath](xref:Avalonia.Controls.IndexPath).
+
+```csharp
+public string ToString()
+```
+
+#### Returns
+
+string
+
+A string in the format "(index1.index2.index3)" or "()" for empty paths.
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Count](#uid-e464ba6301) | Gets the number of indexes in this path. |
+| [Item](#uid-22862e9778) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e464ba6301"></span>
+
+### Count Property
+
+Gets the number of indexes in this path.
+
+```csharp
+public int Count { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-22862e9778"></span>
+
+### Item Property
+
+```csharp
+public int Item { get; set; }
+```
+
+</section>
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [Unselected](#uid-7ce16a592d) | Gets an empty [IndexPath](xref:Avalonia.Controls.IndexPath) representing no selection. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7ce16a592d"></span>
+
+### Unselected Field
+
+Gets an empty [IndexPath](xref:Avalonia.Controls.IndexPath) representing no selection.
+
+```csharp
+public Avalonia.Controls.IndexPath Unselected
+```
+
+</section>
+
+</ApiRefPage>
+

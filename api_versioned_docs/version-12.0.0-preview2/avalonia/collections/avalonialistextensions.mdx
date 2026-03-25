@@ -1,0 +1,180 @@
+---
+title: 'AvaloniaListExtensions'
+hide_title: true
+slug: '/avalonia/collections/avalonialistextensions'
+uid: 'Avalonia.Collections.AvaloniaListExtensions'
+commentId: 'T:Avalonia.Collections.AvaloniaListExtensions'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Collections'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">AvaloniaListExtensions Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Collections</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Collections/AvaloniaListExtensions.cs">AvaloniaListExtensions.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Defines extension methods for working with [Avalonia.Collections.AvaloniaList&lt;T&gt;](xref:Avalonia.Collections.AvaloniaList%601)s.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class AvaloniaListExtensions
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> AvaloniaListExtensions
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [ForEachItem (2 overloads)](#uid-740f59017c) | No summary available. |
+| [TrackItemPropertyChanged](#uid-b6b7f5dd26) | No summary available. |
+
+<span id="uid-740f59017c"></span>
+
+### ForEachItem overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-bc65e285d8"></span>
+
+#### ForEachItem Method
+
+```csharp
+public IDisposable ForEachItem<T>(Avalonia.Collections.IAvaloniaReadOnlyList<T><T> collection, Action<T> added, Action<T> removed, Action reset, bool weakSubscription)
+```
+
+##### Parameters
+
+`collection` Avalonia.Collections.IAvaloniaReadOnlyList&lt;T&gt;&lt;T&gt;
+
+
+`added` Action&lt;T&gt;
+
+
+`removed` Action&lt;T&gt;
+
+
+`reset` Action
+
+
+`weakSubscription` bool
+
+
+##### Type Parameters
+
+`T`
+
+
+##### Returns
+
+IDisposable
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-dffc1a0e9c"></span>
+
+#### ForEachItem Method
+
+```csharp
+public IDisposable ForEachItem<T>(Avalonia.Collections.IAvaloniaReadOnlyList<T><T> collection, Action<int, T> added, Action<int, T> removed, Action reset, bool weakSubscription)
+```
+
+##### Parameters
+
+`collection` Avalonia.Collections.IAvaloniaReadOnlyList&lt;T&gt;&lt;T&gt;
+
+
+`added` Action&lt;int, T&gt;
+
+
+`removed` Action&lt;int, T&gt;
+
+
+`reset` Action
+
+
+`weakSubscription` bool
+
+
+##### Type Parameters
+
+`T`
+
+
+##### Returns
+
+IDisposable
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b6b7f5dd26"></span>
+
+### TrackItemPropertyChanged Method
+
+```csharp
+public IDisposable TrackItemPropertyChanged<T>(Avalonia.Collections.IAvaloniaReadOnlyList<T><T> collection, Action<Tuple<object,System.ComponentModel.PropertyChangedEventArgs>> callback)
+```
+
+#### Parameters
+
+`collection` Avalonia.Collections.IAvaloniaReadOnlyList&lt;T&gt;&lt;T&gt;
+
+
+`callback` Action&lt;Tuple&lt;object,System.ComponentModel.PropertyChangedEventArgs&gt;&gt;
+
+
+#### Type Parameters
+
+`T`
+
+
+#### Returns
+
+IDisposable
+
+
+</section>
+
+</ApiRefPage>
+

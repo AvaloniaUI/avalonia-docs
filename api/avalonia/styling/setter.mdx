@@ -1,0 +1,177 @@
+---
+title: 'Setter'
+hide_title: true
+slug: '/avalonia/styling/setter'
+uid: 'Avalonia.Styling.Setter'
+commentId: 'T:Avalonia.Styling.Setter'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Styling'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">Setter Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Styling</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Styling/Setter.cs">Setter.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A setter for a [Avalonia.Styling.Style](xref:Avalonia.Styling.Style).
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class Setter
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="setterbase">SetterBase</a> <span className="apiref-page__relation-separator">-&gt;</span> Setter
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="../animation/ianimationsetter">IAnimationSetter</a>, IValueEntry, <a href="isetterinstance">ISetterInstance</a>
+</div>
+</div>
+
+## Remarks
+
+A [Avalonia.Styling.Setter](xref:Avalonia.Styling.Setter) is used to set a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value on a
+[Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject) depending on a condition.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [Setter (2 overloads)](#uid-39651de642) | Initializes a new instance of the [Avalonia.Styling.Setter](xref:Avalonia.Styling.Setter) class. |
+
+<span id="uid-39651de642"></span>
+
+### Setter overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3affa77ce0"></span>
+
+#### Setter Constructor
+
+Initializes a new instance of the [Avalonia.Styling.Setter](xref:Avalonia.Styling.Setter) class.
+
+```csharp
+public Setter()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7a29ecefc5"></span>
+
+#### Setter Constructor
+
+Initializes a new instance of the [Avalonia.Styling.Setter](xref:Avalonia.Styling.Setter) class.
+
+```csharp
+public Setter(Avalonia.AvaloniaProperty property, object value)
+```
+
+##### Parameters
+
+`property` [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty)
+
+The property to set.
+
+
+`value` object
+
+The property value.
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [ToString](#uid-2e1d1d4b9a) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2e1d1d4b9a"></span>
+
+### ToString Method
+
+```csharp
+public string ToString()
+```
+
+#### Returns
+
+string
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Property](#uid-8c5890876d) | Gets or sets the property to set. |
+| [Value](#uid-231f83767c) | Gets or sets the property value. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8c5890876d"></span>
+
+### Property Property
+
+Gets or sets the property to set.
+
+```csharp
+public Avalonia.AvaloniaProperty Property { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-231f83767c"></span>
+
+### Value Property
+
+Gets or sets the property value.
+
+```csharp
+public object Value { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

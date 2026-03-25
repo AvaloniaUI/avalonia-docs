@@ -1,0 +1,128 @@
+---
+title: 'NavigationEventArgs'
+hide_title: true
+slug: '/avalonia/controls/navigationeventargs'
+uid: 'Avalonia.Controls.NavigationEventArgs'
+commentId: 'T:Avalonia.Controls.NavigationEventArgs'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">NavigationEventArgs Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Controls/Page/NavigationEventArgs.cs">NavigationEventArgs.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Provides data for [Avalonia.Controls.NavigationPage](xref:Avalonia.Controls.NavigationPage) push and pop events.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class NavigationEventArgs
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> EventArgs <span className="apiref-page__relation-separator">-&gt;</span> NavigationEventArgs
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [NavigationEventArgs](#uid-70b564bd1d) | Initializes a new instance of the [Avalonia.Controls.NavigationEventArgs](xref:Avalonia.Controls.NavigationEventArgs) class. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-70b564bd1d"></span>
+
+### NavigationEventArgs Constructor
+
+Initializes a new instance of the [Avalonia.Controls.NavigationEventArgs](xref:Avalonia.Controls.NavigationEventArgs) class.
+
+```csharp
+public NavigationEventArgs(Avalonia.Controls.Page page, Avalonia.Controls.NavigationType navigationType)
+```
+
+#### Parameters
+
+`page` [Avalonia.Controls.Page](xref:Avalonia.Controls.Page)
+
+The page involved in the navigation operation.
+
+
+`navigationType` [Avalonia.Controls.NavigationType](xref:Avalonia.Controls.NavigationType)
+
+The type of navigation that triggered this event.
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [NavigationType](#uid-e1dae8ea68) | Gets the type of navigation that triggered this event. |
+| [Page](#uid-0d71c8e71b) | Gets the page involved in the navigation operation. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e1dae8ea68"></span>
+
+### NavigationType Property
+
+Gets the type of navigation that triggered this event.
+
+```csharp
+public Avalonia.Controls.NavigationType NavigationType { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0d71c8e71b"></span>
+
+### Page Property
+
+Gets the page involved in the navigation operation.
+
+```csharp
+public Avalonia.Controls.Page Page { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

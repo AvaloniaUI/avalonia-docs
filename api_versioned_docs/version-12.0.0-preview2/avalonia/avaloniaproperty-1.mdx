@@ -1,0 +1,116 @@
+---
+title: 'AvaloniaProperty<TValue>'
+hide_title: true
+slug: '/avalonia/avaloniaproperty-1'
+uid: 'Avalonia.AvaloniaProperty`1'
+commentId: 'T:Avalonia.AvaloniaProperty`1'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">AvaloniaProperty&lt;TValue&gt; Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/AvaloniaProperty%601.cs">AvaloniaProperty`1.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A typed avalonia property.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class AvaloniaProperty<TValue>
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="avaloniaproperty">AvaloniaProperty</a> <span className="apiref-page__relation-separator">-&gt;</span> AvaloniaProperty&lt;TValue&gt;
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Bind](avaloniaproperty.mdx#uid-c40d1b5dcb) | Returns a binding accessor that can be passed to [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject)'s [] operator to initiate a binding. Inherited from [AvaloniaProperty](avaloniaproperty.mdx). |
+| [Equals (2 overloads)](avaloniaproperty.mdx#uid-3837f11261) | Inherited from [AvaloniaProperty](avaloniaproperty.mdx). |
+| [GetHashCode](avaloniaproperty.mdx#uid-7d1eae41db) | Inherited from [AvaloniaProperty](avaloniaproperty.mdx). |
+| [GetMetadata (3 overloads)](avaloniaproperty.mdx#uid-5f3ddcc8fd) | Inherited from [AvaloniaProperty](avaloniaproperty.mdx). |
+| [IsValidValue](avaloniaproperty.mdx#uid-636d332b13) | Checks whether the `value` is valid for the property. Inherited from [AvaloniaProperty](avaloniaproperty.mdx). |
+| [Register](avaloniaproperty.mdx#uid-2e25cc2d00) | Inherited from [AvaloniaProperty](avaloniaproperty.mdx). |
+| [RegisterAttached (2 overloads)](avaloniaproperty.mdx#uid-769b8defa4) | Inherited from [AvaloniaProperty](avaloniaproperty.mdx). |
+| [RegisterDirect](avaloniaproperty.mdx#uid-2e19e6c29e) | Inherited from [AvaloniaProperty](avaloniaproperty.mdx). |
+| [ToString](avaloniaproperty.mdx#uid-4c7006dd35) | Gets the string representation of the property. Inherited from [AvaloniaProperty](avaloniaproperty.mdx). |
+| [Unregister](avaloniaproperty.mdx#uid-919cfa2853) | Inherited from [AvaloniaProperty](avaloniaproperty.mdx). |
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Changed](#uid-5cb9e8a91f) | Gets an observable that is fired when this property changes on any [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject) instance. |
+| [Inherits](avaloniaproperty.mdx#uid-cedb5e4e38) | Gets a value indicating whether the property inherits its value. Inherited from [AvaloniaProperty](avaloniaproperty.mdx). |
+| [IsAttached](avaloniaproperty.mdx#uid-33c0761938) | Gets a value indicating whether this is an attached property. Inherited from [AvaloniaProperty](avaloniaproperty.mdx). |
+| [IsDirect](avaloniaproperty.mdx#uid-af873b4d3c) | Gets a value indicating whether this is a direct property. Inherited from [AvaloniaProperty](avaloniaproperty.mdx). |
+| [IsReadOnly](avaloniaproperty.mdx#uid-2b867c83ad) | Gets a value indicating whether this is a readonly property. Inherited from [AvaloniaProperty](avaloniaproperty.mdx). |
+| [Name](avaloniaproperty.mdx#uid-228b4a9a70) | Gets the name of the property. Inherited from [AvaloniaProperty](avaloniaproperty.mdx). |
+| [OwnerType](avaloniaproperty.mdx#uid-efffba9cb8) | Gets the type of the class that registered the property. Inherited from [AvaloniaProperty](avaloniaproperty.mdx). |
+| [PropertyType](avaloniaproperty.mdx#uid-c1e5099c6c) | Gets the type of the property's value. Inherited from [AvaloniaProperty](avaloniaproperty.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5cb9e8a91f"></span>
+
+### Changed Property
+
+Gets an observable that is fired when this property changes on any
+[Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject) instance.
+
+```csharp
+public IObservable<Avalonia.AvaloniaPropertyChangedEventArgs<T><TValue>> Changed { get; set; }
+```
+
+#### Value
+
+An observable that is fired when this property changes on any
+[Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject) instance.
+
+
+</section>
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [UnsetValue](avaloniaproperty.mdx#uid-d3a3dfda6d) | Represents an unset property value. Inherited from [AvaloniaProperty](avaloniaproperty.mdx). |
+
+</ApiRefPage>
+

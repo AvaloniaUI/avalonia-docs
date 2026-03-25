@@ -1,0 +1,551 @@
+---
+title: 'GlyphRun'
+hide_title: true
+slug: '/avalonia/media/glyphrun'
+uid: 'Avalonia.Media.GlyphRun'
+commentId: 'T:Avalonia.Media.GlyphRun'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Media'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">GlyphRun Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Media</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Media/GlyphRun.cs">GlyphRun.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Represents a sequence of glyphs from a single face of a single font at a single size, and with a single rendering style.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class GlyphRun
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> GlyphRun
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IDisposable
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [GlyphRun (2 overloads)](#uid-e2f38debc1) | No summary available. |
+
+<span id="uid-e2f38debc1"></span>
+
+### GlyphRun overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-fe9b5e19a9"></span>
+
+#### GlyphRun Constructor
+
+```csharp
+public GlyphRun(Avalonia.Media.GlyphTypeface glyphTypeface, double fontRenderingEmSize, ReadOnlyMemory<char> characters, System.Collections.Generic.IReadOnlyList<Avalonia.Media.TextFormatting.GlyphInfo> glyphInfos, Nullable<Avalonia.Point> baselineOrigin, int biDiLevel)
+```
+
+##### Parameters
+
+`glyphTypeface` [Avalonia.Media.GlyphTypeface](xref:Avalonia.Media.GlyphTypeface)
+
+
+`fontRenderingEmSize` double
+
+
+`characters` ReadOnlyMemory&lt;char&gt;
+
+
+`glyphInfos` System.Collections.Generic.IReadOnlyList&lt;[Avalonia.Media.TextFormatting.GlyphInfo](xref:Avalonia.Media.TextFormatting.GlyphInfo)&gt;
+
+
+`baselineOrigin` Nullable&lt;[Avalonia.Point](xref:Avalonia.Point)&gt;
+
+
+`biDiLevel` int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-42a5244e24"></span>
+
+#### GlyphRun Constructor
+
+```csharp
+public GlyphRun(Avalonia.Media.GlyphTypeface glyphTypeface, double fontRenderingEmSize, ReadOnlyMemory<char> characters, System.Collections.Generic.IReadOnlyList<ushort> glyphIndices, Nullable<Avalonia.Point> baselineOrigin, int biDiLevel)
+```
+
+##### Parameters
+
+`glyphTypeface` [Avalonia.Media.GlyphTypeface](xref:Avalonia.Media.GlyphTypeface)
+
+
+`fontRenderingEmSize` double
+
+
+`characters` ReadOnlyMemory&lt;char&gt;
+
+
+`glyphIndices` System.Collections.Generic.IReadOnlyList&lt;ushort&gt;
+
+
+`baselineOrigin` Nullable&lt;[Avalonia.Point](xref:Avalonia.Point)&gt;
+
+
+`biDiLevel` int
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [BuildGeometry](#uid-cf91c83fe2) | Obtains geometry for the glyph run. |
+| [Dispose](#uid-278570385c) | No summary available. |
+| [FindGlyphIndex](#uid-10244c375b) | Finds a glyph index for given character index. |
+| [FindNearestCharacterHit](#uid-f54f26d06a) | No summary available. |
+| [GetCharacterHitFromDistance](#uid-067259b333) | No summary available. |
+| [GetDistanceFromCharacterHit](#uid-d5b6f8b32d) | Retrieves the offset from the leading edge of the [Avalonia.Media.GlyphRun](xref:Avalonia.Media.GlyphRun) to the leading or trailing edge of a caret stop containing the specified character hit. |
+| [GetIntersections](#uid-2087dc8294) | Gets the intersections of specified upper and lower limit. |
+| [GetNextCaretCharacterHit](#uid-809121e182) | Retrieves the next valid caret character hit in the logical direction in the [Avalonia.Media.GlyphRun](xref:Avalonia.Media.GlyphRun). |
+| [GetPreviousCaretCharacterHit](#uid-02e6bed1e6) | Retrieves the previous valid caret character hit in the logical direction in the [Avalonia.Media.GlyphRun](xref:Avalonia.Media.GlyphRun). |
+| [TryCreateImmutableGlyphRunReference](#uid-9fb0b850ca) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-cf91c83fe2"></span>
+
+### BuildGeometry Method
+
+Obtains geometry for the glyph run.
+
+```csharp
+public Avalonia.Media.Geometry BuildGeometry()
+```
+
+#### Returns
+
+[Avalonia.Media.Geometry](xref:Avalonia.Media.Geometry)
+
+The geometry returned contains the combined geometry of all glyphs in the glyph run.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-278570385c"></span>
+
+### Dispose Method
+
+```csharp
+public void Dispose()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-10244c375b"></span>
+
+### FindGlyphIndex Method
+
+Finds a glyph index for given character index.
+
+```csharp
+public int FindGlyphIndex(int characterIndex)
+```
+
+#### Parameters
+
+`characterIndex` int
+
+The character index.
+
+
+#### Returns
+
+int
+
+The glyph index.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f54f26d06a"></span>
+
+### FindNearestCharacterHit Method
+
+```csharp
+public Avalonia.Media.CharacterHit FindNearestCharacterHit(int index, double& width)
+```
+
+#### Parameters
+
+`index` int
+
+
+`width` double&amp;
+
+
+#### Returns
+
+[Avalonia.Media.CharacterHit](xref:Avalonia.Media.CharacterHit)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-067259b333"></span>
+
+### GetCharacterHitFromDistance Method
+
+```csharp
+public Avalonia.Media.CharacterHit GetCharacterHitFromDistance(double distance, bool& isInside)
+```
+
+#### Parameters
+
+`distance` double
+
+
+`isInside` bool&amp;
+
+
+#### Returns
+
+[Avalonia.Media.CharacterHit](xref:Avalonia.Media.CharacterHit)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d5b6f8b32d"></span>
+
+### GetDistanceFromCharacterHit Method
+
+Retrieves the offset from the leading edge of the [Avalonia.Media.GlyphRun](xref:Avalonia.Media.GlyphRun)
+to the leading or trailing edge of a caret stop containing the specified character hit.
+
+```csharp
+public double GetDistanceFromCharacterHit(Avalonia.Media.CharacterHit characterHit)
+```
+
+#### Parameters
+
+`characterHit` [Avalonia.Media.CharacterHit](xref:Avalonia.Media.CharacterHit)
+
+The [Avalonia.Media.CharacterHit](xref:Avalonia.Media.CharacterHit) to use for computing the offset.
+
+
+#### Returns
+
+double
+
+A [double](xref:System.Double) that represents the offset from the leading edge of the [Avalonia.Media.GlyphRun](xref:Avalonia.Media.GlyphRun)
+to the leading or trailing edge of a caret stop containing the character hit.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2087dc8294"></span>
+
+### GetIntersections Method
+
+Gets the intersections of specified upper and lower limit.
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<float> GetIntersections(float lowerLimit, float upperLimit)
+```
+
+#### Parameters
+
+`lowerLimit` float
+
+Upper limit.
+
+
+`upperLimit` float
+
+Lower limit.
+
+
+#### Returns
+
+System.Collections.Generic.IReadOnlyList&lt;float&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-809121e182"></span>
+
+### GetNextCaretCharacterHit Method
+
+Retrieves the next valid caret character hit in the logical direction in the [Avalonia.Media.GlyphRun](xref:Avalonia.Media.GlyphRun).
+
+```csharp
+public Avalonia.Media.CharacterHit GetNextCaretCharacterHit(Avalonia.Media.CharacterHit characterHit)
+```
+
+#### Parameters
+
+`characterHit` [Avalonia.Media.CharacterHit](xref:Avalonia.Media.CharacterHit)
+
+The [Avalonia.Media.CharacterHit](xref:Avalonia.Media.CharacterHit) to use for computing the next hit value.
+
+
+#### Returns
+
+[Avalonia.Media.CharacterHit](xref:Avalonia.Media.CharacterHit)
+
+A [Avalonia.Media.CharacterHit](xref:Avalonia.Media.CharacterHit) that represents the next valid caret character hit in the logical direction.
+If the return value is equal to `characterHit`, no further navigation is possible in the [Avalonia.Media.GlyphRun](xref:Avalonia.Media.GlyphRun).
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-02e6bed1e6"></span>
+
+### GetPreviousCaretCharacterHit Method
+
+Retrieves the previous valid caret character hit in the logical direction in the [Avalonia.Media.GlyphRun](xref:Avalonia.Media.GlyphRun).
+
+```csharp
+public Avalonia.Media.CharacterHit GetPreviousCaretCharacterHit(Avalonia.Media.CharacterHit characterHit)
+```
+
+#### Parameters
+
+`characterHit` [Avalonia.Media.CharacterHit](xref:Avalonia.Media.CharacterHit)
+
+The [Avalonia.Media.CharacterHit](xref:Avalonia.Media.CharacterHit) to use for computing the previous hit value.
+
+
+#### Returns
+
+[Avalonia.Media.CharacterHit](xref:Avalonia.Media.CharacterHit)
+
+A cref="[CharacterHit](xref:Avalonia.Media.CharacterHit)"/&gt; that represents the previous valid caret character hit in the logical direction.
+If the return value is equal to `characterHit`, no further navigation is possible in the [Avalonia.Media.GlyphRun](xref:Avalonia.Media.GlyphRun).
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9fb0b850ca"></span>
+
+### TryCreateImmutableGlyphRunReference Method
+
+```csharp
+public Avalonia.Media.IImmutableGlyphRunReference TryCreateImmutableGlyphRunReference()
+```
+
+#### Returns
+
+[Avalonia.Media.IImmutableGlyphRunReference](xref:Avalonia.Media.IImmutableGlyphRunReference)
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [BaselineOrigin](#uid-8aa5de2c7a) | Gets or sets the baseline origin of the[Avalonia.Media.GlyphRun](xref:Avalonia.Media.GlyphRun). |
+| [BiDiLevel](#uid-675d46b58c) | Gets or sets the bidirectional nesting level of the [Avalonia.Media.GlyphRun](xref:Avalonia.Media.GlyphRun). |
+| [Bounds](#uid-ba6b22dd20) | Gets the conservative bounding box of the [Avalonia.Media.GlyphRun](xref:Avalonia.Media.GlyphRun). |
+| [Characters](#uid-ca48e5ed44) | Gets or sets the list of UTF16 code points that represent the Unicode content of the [Avalonia.Media.GlyphRun](xref:Avalonia.Media.GlyphRun). |
+| [FontRenderingEmSize](#uid-ac261e95fc) | Gets or sets the em size used for rendering the [Avalonia.Media.GlyphRun](xref:Avalonia.Media.GlyphRun). |
+| [GlyphInfos](#uid-a5fe313c08) | Gets or sets the list of glyphs to use to render this run. |
+| [GlyphTypeface](#uid-daa6bc349c) | Gets the [Avalonia.Media.GlyphRun.GlyphTypeface](xref:Avalonia.Media.GlyphRun.GlyphTypeface) for the [Avalonia.Media.GlyphRun](xref:Avalonia.Media.GlyphRun). |
+| [InkBounds](#uid-cdd7824107) | No summary available. |
+| [IsLeftToRight](#uid-964a430ddd) | Returns `true` if the text direction is left-to-right. Otherwise, returns `false`. |
+| [Metrics](#uid-e9df7b4b7a) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8aa5de2c7a"></span>
+
+### BaselineOrigin Property
+
+Gets or sets the baseline origin of the[Avalonia.Media.GlyphRun](xref:Avalonia.Media.GlyphRun).
+
+```csharp
+public Avalonia.Point BaselineOrigin { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-675d46b58c"></span>
+
+### BiDiLevel Property
+
+Gets or sets the bidirectional nesting level of the [Avalonia.Media.GlyphRun](xref:Avalonia.Media.GlyphRun).
+
+```csharp
+public int BiDiLevel { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ba6b22dd20"></span>
+
+### Bounds Property
+
+Gets the conservative bounding box of the [Avalonia.Media.GlyphRun](xref:Avalonia.Media.GlyphRun).
+
+```csharp
+public Avalonia.Rect Bounds { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ca48e5ed44"></span>
+
+### Characters Property
+
+Gets or sets the list of UTF16 code points that represent the Unicode content of the [Avalonia.Media.GlyphRun](xref:Avalonia.Media.GlyphRun).
+
+```csharp
+public ReadOnlyMemory<char> Characters { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ac261e95fc"></span>
+
+### FontRenderingEmSize Property
+
+Gets or sets the em size used for rendering the [Avalonia.Media.GlyphRun](xref:Avalonia.Media.GlyphRun).
+
+```csharp
+public double FontRenderingEmSize { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a5fe313c08"></span>
+
+### GlyphInfos Property
+
+Gets or sets the list of glyphs to use to render this run.
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<Avalonia.Media.TextFormatting.GlyphInfo> GlyphInfos { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-daa6bc349c"></span>
+
+### GlyphTypeface Property
+
+Gets the [Avalonia.Media.GlyphRun.GlyphTypeface](xref:Avalonia.Media.GlyphRun.GlyphTypeface) for the [Avalonia.Media.GlyphRun](xref:Avalonia.Media.GlyphRun).
+
+```csharp
+public Avalonia.Media.GlyphTypeface GlyphTypeface { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-cdd7824107"></span>
+
+### InkBounds Property
+
+```csharp
+public Avalonia.Rect InkBounds { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-964a430ddd"></span>
+
+### IsLeftToRight Property
+
+Returns `true` if the text direction is left-to-right. Otherwise, returns `false`.
+
+```csharp
+public bool IsLeftToRight { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e9df7b4b7a"></span>
+
+### Metrics Property
+
+```csharp
+public Avalonia.Media.GlyphRunMetrics Metrics { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

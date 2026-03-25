@@ -1,0 +1,158 @@
+---
+title: 'AvaloniaNativePlatformOptions'
+hide_title: true
+slug: '/avalonia/avalonianativeplatformoptions'
+uid: 'Avalonia.AvaloniaNativePlatformOptions'
+commentId: 'T:Avalonia.AvaloniaNativePlatformOptions'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Native'
+assembly: 'Avalonia.Native'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">AvaloniaNativePlatformOptions Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Native</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Native</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Native/AvaloniaNativePlatformExtensions.cs">AvaloniaNativePlatformExtensions.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+OSX backend options.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class AvaloniaNativePlatformOptions
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> AvaloniaNativePlatformOptions
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [AvaloniaNativePlatformOptions](#uid-97a0d3f6fd) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-97a0d3f6fd"></span>
+
+### AvaloniaNativePlatformOptions Constructor
+
+```csharp
+public AvaloniaNativePlatformOptions()
+```
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [AppSandboxEnabled](#uid-6d7dbd8e7b) | If you distribute your app in App Store - it should be with sandbox enabled. This parameter enables [Avalonia.Platform.Storage.IStorageItem.SaveBookmarkAsync](xref:Avalonia.Platform.Storage.IStorageItem.SaveBookmarkAsync) and related APIs, as well as wrapping all storage related calls in secure context. The default value is true. |
+| [AvaloniaNativeLibraryPath](#uid-b803078be8) | This property should be used in case you want to build Avalonia OSX native part by yourself and make your Avalonia app run with it. The default value is null. |
+| [OverlayPopups](#uid-8d93333eba) | Embeds popups to the window when set to true. The default value is false. |
+| [RenderingMode](#uid-f081327cee) | Gets or sets Avalonia rendering modes with fallbacks. The first element in the array has the highest priority. The default value is: [Avalonia.AvaloniaNativeRenderingMode.OpenGl](xref:Avalonia.AvaloniaNativeRenderingMode.OpenGl), [Avalonia.AvaloniaNativeRenderingMode.Software](xref:Avalonia.AvaloniaNativeRenderingMode.Software). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6d7dbd8e7b"></span>
+
+### AppSandboxEnabled Property
+
+If you distribute your app in App Store - it should be with sandbox enabled.
+This parameter enables [Avalonia.Platform.Storage.IStorageItem.SaveBookmarkAsync](xref:Avalonia.Platform.Storage.IStorageItem.SaveBookmarkAsync) and related APIs,
+as well as wrapping all storage related calls in secure context. The default value is true.
+
+```csharp
+public bool AppSandboxEnabled { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b803078be8"></span>
+
+### AvaloniaNativeLibraryPath Property
+
+This property should be used in case you want to build Avalonia OSX native part by yourself
+and make your Avalonia app run with it. The default value is null.
+
+```csharp
+public string AvaloniaNativeLibraryPath { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8d93333eba"></span>
+
+### OverlayPopups Property
+
+Embeds popups to the window when set to true. The default value is false.
+
+```csharp
+public bool OverlayPopups { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f081327cee"></span>
+
+### RenderingMode Property
+
+Gets or sets Avalonia rendering modes with fallbacks.
+The first element in the array has the highest priority.
+The default value is: [Avalonia.AvaloniaNativeRenderingMode.OpenGl](xref:Avalonia.AvaloniaNativeRenderingMode.OpenGl), [Avalonia.AvaloniaNativeRenderingMode.Software](xref:Avalonia.AvaloniaNativeRenderingMode.Software).
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<Avalonia.AvaloniaNativeRenderingMode> RenderingMode { get; set; }
+```
+
+#### Remarks
+
+If application should work on as wide range of devices as possible,
+at least add [Avalonia.AvaloniaNativeRenderingMode.Software](xref:Avalonia.AvaloniaNativeRenderingMode.Software) as a fallback value.
+
+#### Exceptions
+
+- [Thrown if no values were matched.](xref:System.InvalidOperationException)
+
+</section>
+
+</ApiRefPage>
+

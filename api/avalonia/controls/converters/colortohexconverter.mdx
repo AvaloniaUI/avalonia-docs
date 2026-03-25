@@ -1,0 +1,308 @@
+---
+title: 'ColorToHexConverter'
+hide_title: true
+slug: '/avalonia/controls/converters/colortohexconverter'
+uid: 'Avalonia.Controls.Converters.ColorToHexConverter'
+commentId: 'T:Avalonia.Controls.Converters.ColorToHexConverter'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.ColorPicker'
+assembly: 'Avalonia.Controls.ColorPicker'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Converters'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ColorToHexConverter Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Converters</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.ColorPicker</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.ColorPicker</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Controls.ColorPicker/Converters/ColorToHexConverter.cs">ColorToHexConverter.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Converts a color to a hex string and vice versa.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class ColorToHexConverter
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> ColorToHexConverter
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="../../data/converters/ivalueconverter">IValueConverter</a>
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [ColorToHexConverter](#uid-d34c223a45) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d34c223a45"></span>
+
+### ColorToHexConverter Constructor
+
+```csharp
+public ColorToHexConverter()
+```
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Convert](#uid-d2b3f16945) | Converts a value. |
+| [ConvertBack](#uid-fa184892e4) | Converts a value. |
+| [ParseHexString](#uid-2858de8c4f) | Parses a hex color value string into a new [Avalonia.Media.Color](xref:Avalonia.Media.Color). |
+| [ToHexString](#uid-09980d8423) | Converts the given color to its hex color value string representation. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d2b3f16945"></span>
+
+### Convert Method
+
+Converts a value.
+
+```csharp
+public object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
+```
+
+#### Parameters
+
+`value` object
+
+The value to convert.
+
+
+`targetType` Type
+
+The type of the target.
+
+
+`parameter` object
+
+A user-defined parameter.
+
+
+`culture` System.Globalization.CultureInfo
+
+The culture to use.
+
+
+#### Returns
+
+object
+
+The converted value.
+
+
+#### Remarks
+
+This method should not throw exceptions. If the value is not convertible, return
+a [Avalonia.Data.BindingNotification](xref:Avalonia.Data.BindingNotification) in an error state. Any exceptions thrown will be
+treated as an application exception.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-fa184892e4"></span>
+
+### ConvertBack Method
+
+Converts a value.
+
+```csharp
+public object ConvertBack(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
+```
+
+#### Parameters
+
+`value` object
+
+The value to convert.
+
+
+`targetType` Type
+
+The type of the target.
+
+
+`parameter` object
+
+A user-defined parameter.
+
+
+`culture` System.Globalization.CultureInfo
+
+The culture to use.
+
+
+#### Returns
+
+object
+
+The converted value.
+
+
+#### Remarks
+
+This method should not throw exceptions. If the value is not convertible, return
+a [Avalonia.Data.BindingNotification](xref:Avalonia.Data.BindingNotification) in an error state. Any exceptions thrown will be
+treated as an application exception.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2858de8c4f"></span>
+
+### ParseHexString Method
+
+Parses a hex color value string into a new [Avalonia.Media.Color](xref:Avalonia.Media.Color).
+
+```csharp
+public Nullable<Avalonia.Media.Color> ParseHexString(string hexColor, Avalonia.Controls.AlphaComponentPosition alphaPosition)
+```
+
+#### Parameters
+
+`hexColor` string
+
+The hex color string to parse.
+
+
+`alphaPosition` [Avalonia.Controls.AlphaComponentPosition](xref:Avalonia.Controls.AlphaComponentPosition)
+
+The input position of the alpha component.
+
+
+#### Returns
+
+Nullable&lt;[Avalonia.Media.Color](xref:Avalonia.Media.Color)&gt;
+
+The parsed [Avalonia.Media.Color](xref:Avalonia.Media.Color); otherwise, null.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-09980d8423"></span>
+
+### ToHexString Method
+
+Converts the given color to its hex color value string representation.
+
+```csharp
+public string ToHexString(Avalonia.Media.Color color, Avalonia.Controls.AlphaComponentPosition alphaPosition, bool includeAlpha, bool includeSymbol)
+```
+
+#### Parameters
+
+`color` [Avalonia.Media.Color](xref:Avalonia.Media.Color)
+
+The color to represent as a hex value string.
+
+
+`alphaPosition` [Avalonia.Controls.AlphaComponentPosition](xref:Avalonia.Controls.AlphaComponentPosition)
+
+The output position of the alpha component.
+
+
+`includeAlpha` bool
+
+Whether the alpha component will be included in the hex string.
+
+
+`includeSymbol` bool
+
+Whether the hex symbol '#' will be added.
+
+
+#### Returns
+
+string
+
+The input color converted to its hex value string.
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [AlphaPosition](#uid-7e36f29bf3) | Gets or sets the position of a color's alpha component relative to all other components. |
+| [IsAlphaVisible](#uid-3ab36802e9) | Gets or sets a value indicating whether the alpha component is visible in the Hex formatted text. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7e36f29bf3"></span>
+
+### AlphaPosition Property
+
+Gets or sets the position of a color's alpha component relative to all other components.
+
+```csharp
+public Avalonia.Controls.AlphaComponentPosition AlphaPosition { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3ab36802e9"></span>
+
+### IsAlphaVisible Property
+
+Gets or sets a value indicating whether the alpha component is visible in the Hex formatted text.
+
+```csharp
+public bool IsAlphaVisible { get; set; }
+```
+
+#### Remarks
+
+When hidden the existing alpha component value is maintained. Also when hidden the user is still
+able to input an 8-digit number with alpha. Alpha will be processed but then removed when displayed.
+
+Because this property only controls whether alpha is displayed (and it is still processed regardless)
+it is termed 'Visible' instead of 'Enabled'.
+
+</section>
+
+</ApiRefPage>
+

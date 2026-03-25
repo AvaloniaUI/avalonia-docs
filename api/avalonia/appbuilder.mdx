@@ -1,0 +1,675 @@
+---
+title: 'AppBuilder'
+hide_title: true
+slug: '/avalonia/appbuilder'
+uid: 'Avalonia.AppBuilder'
+commentId: 'T:Avalonia.AppBuilder'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">AppBuilder Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Controls/AppBuilder.cs">AppBuilder.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Initializes platform-specific services for an [Avalonia.Application](xref:Avalonia.Application).
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class AppBuilder
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> AppBuilder
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [AfterPlatformServicesSetup](#uid-e8900c2d32) | No summary available. |
+| [AfterSetup](#uid-948b082425) | No summary available. |
+| [Configure (2 overloads)](#uid-ba4b51c1d4) | No summary available. |
+| [ConfigureFonts](#uid-06e9575c0d) | No summary available. |
+| [SetupWithLifetime](#uid-ee63b9b324) | Sets up the platform-specific services for the application and initialized it with a particular lifetime, but does not run it. |
+| [SetupWithoutStarting](#uid-7a43d023ba) | Sets up the platform-specific services for the application, but does not run it. |
+| [Start](#uid-2cf633e0ab) | No summary available. |
+| [UseRenderingSubsystem](#uid-49ad9d2a31) | Specifies a rendering subsystem to use. |
+| [UseRuntimePlatformSubsystem](#uid-7a05af4f10) | Specifies a runtime platform subsystem to use. |
+| [UseStandardRuntimePlatformSubsystem](#uid-dbd65a6582) | Specifies a standard runtime platform subsystem to use. |
+| [UseTextShapingSubsystem](#uid-23c741705f) | Specifies a text shaping subsystem to use. |
+| [UseWindowingSubsystem](#uid-4172c3e4f3) | Specifies a windowing subsystem to use. |
+| [With (2 overloads)](#uid-dabbace251) | No summary available. |
+| [WithDataAnnotationsValidation](#uid-eadbb2e8ae) | Adds support for validation using `System.ComponentModel.DataAnnotations`. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e8900c2d32"></span>
+
+### AfterPlatformServicesSetup Method
+
+```csharp
+public Avalonia.AppBuilder AfterPlatformServicesSetup(Action<Avalonia.AppBuilder> callback)
+```
+
+#### Parameters
+
+`callback` Action&lt;[Avalonia.AppBuilder](xref:Avalonia.AppBuilder)&gt;
+
+
+#### Returns
+
+[Avalonia.AppBuilder](xref:Avalonia.AppBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-948b082425"></span>
+
+### AfterSetup Method
+
+```csharp
+public Avalonia.AppBuilder AfterSetup(Action<Avalonia.AppBuilder> callback)
+```
+
+#### Parameters
+
+`callback` Action&lt;[Avalonia.AppBuilder](xref:Avalonia.AppBuilder)&gt;
+
+
+#### Returns
+
+[Avalonia.AppBuilder](xref:Avalonia.AppBuilder)
+
+
+</section>
+
+<span id="uid-ba4b51c1d4"></span>
+
+### Configure overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-23837318b4"></span>
+
+#### Configure Method
+
+```csharp
+public Avalonia.AppBuilder Configure<TApp>()
+```
+
+##### Type Parameters
+
+`TApp`
+
+
+##### Returns
+
+[Avalonia.AppBuilder](xref:Avalonia.AppBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0cdac3da0e"></span>
+
+#### Configure Method
+
+```csharp
+public Avalonia.AppBuilder Configure<TApp>(Func<TApp> appFactory)
+```
+
+##### Parameters
+
+`appFactory` Func&lt;TApp&gt;
+
+
+##### Type Parameters
+
+`TApp`
+
+
+##### Returns
+
+[Avalonia.AppBuilder](xref:Avalonia.AppBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-06e9575c0d"></span>
+
+### ConfigureFonts Method
+
+```csharp
+public Avalonia.AppBuilder ConfigureFonts(Action<Avalonia.Media.FontManager> action)
+```
+
+#### Parameters
+
+`action` Action&lt;[Avalonia.Media.FontManager](xref:Avalonia.Media.FontManager)&gt;
+
+
+#### Returns
+
+[Avalonia.AppBuilder](xref:Avalonia.AppBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ee63b9b324"></span>
+
+### SetupWithLifetime Method
+
+Sets up the platform-specific services for the application and initialized it with a particular lifetime, but does not run it.
+
+```csharp
+public Avalonia.AppBuilder SetupWithLifetime(Avalonia.Controls.ApplicationLifetimes.IApplicationLifetime lifetime)
+```
+
+#### Parameters
+
+`lifetime` [Avalonia.Controls.ApplicationLifetimes.IApplicationLifetime](xref:Avalonia.Controls.ApplicationLifetimes.IApplicationLifetime)
+
+
+#### Returns
+
+[Avalonia.AppBuilder](xref:Avalonia.AppBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7a43d023ba"></span>
+
+### SetupWithoutStarting Method
+
+Sets up the platform-specific services for the application, but does not run it.
+
+```csharp
+public Avalonia.AppBuilder SetupWithoutStarting()
+```
+
+#### Returns
+
+[Avalonia.AppBuilder](xref:Avalonia.AppBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2cf633e0ab"></span>
+
+### Start Method
+
+```csharp
+public void Start(Avalonia.AppBuilder.AppMainDelegate main, string[] args)
+```
+
+#### Parameters
+
+`main` [Avalonia.AppBuilder.AppMainDelegate](xref:Avalonia.AppBuilder.AppMainDelegate)
+
+
+`args` string[]
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-49ad9d2a31"></span>
+
+### UseRenderingSubsystem Method
+
+Specifies a rendering subsystem to use.
+
+```csharp
+public Avalonia.AppBuilder UseRenderingSubsystem(Action initializer, string name)
+```
+
+#### Parameters
+
+`initializer` Action
+
+The method to call to initialize the rendering subsystem.
+
+
+`name` string
+
+The name of the rendering subsystem.
+
+
+#### Returns
+
+[Avalonia.AppBuilder](xref:Avalonia.AppBuilder)
+
+An [Avalonia.AppBuilder](xref:Avalonia.AppBuilder) instance.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7a05af4f10"></span>
+
+### UseRuntimePlatformSubsystem Method
+
+Specifies a runtime platform subsystem to use.
+
+```csharp
+public Avalonia.AppBuilder UseRuntimePlatformSubsystem(Action initializer, string name)
+```
+
+#### Parameters
+
+`initializer` Action
+
+The method to call to initialize the runtime platform subsystem.
+
+
+`name` string
+
+The name of the runtime platform subsystem.
+
+
+#### Returns
+
+[Avalonia.AppBuilder](xref:Avalonia.AppBuilder)
+
+An [Avalonia.AppBuilder](xref:Avalonia.AppBuilder) instance.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-dbd65a6582"></span>
+
+### UseStandardRuntimePlatformSubsystem Method
+
+Specifies a standard runtime platform subsystem to use.
+
+```csharp
+public Avalonia.AppBuilder UseStandardRuntimePlatformSubsystem()
+```
+
+#### Returns
+
+[Avalonia.AppBuilder](xref:Avalonia.AppBuilder)
+
+An [Avalonia.AppBuilder](xref:Avalonia.AppBuilder) instance.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-23c741705f"></span>
+
+### UseTextShapingSubsystem Method
+
+Specifies a text shaping subsystem to use.
+
+```csharp
+public Avalonia.AppBuilder UseTextShapingSubsystem(Action initializer, string name)
+```
+
+#### Parameters
+
+`initializer` Action
+
+The method to call to initialize the text shaping subsystem.
+
+
+`name` string
+
+The name of the text shaping subsystem.
+
+
+#### Returns
+
+[Avalonia.AppBuilder](xref:Avalonia.AppBuilder)
+
+An [Avalonia.AppBuilder](xref:Avalonia.AppBuilder) instance.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4172c3e4f3"></span>
+
+### UseWindowingSubsystem Method
+
+Specifies a windowing subsystem to use.
+
+```csharp
+public Avalonia.AppBuilder UseWindowingSubsystem(Action initializer, string name)
+```
+
+#### Parameters
+
+`initializer` Action
+
+The method to call to initialize the windowing subsystem.
+
+
+`name` string
+
+The name of the windowing subsystem.
+
+
+#### Returns
+
+[Avalonia.AppBuilder](xref:Avalonia.AppBuilder)
+
+An [Avalonia.AppBuilder](xref:Avalonia.AppBuilder) instance.
+
+
+</section>
+
+<span id="uid-dabbace251"></span>
+
+### With overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e46dc48141"></span>
+
+#### With Method
+
+```csharp
+public Avalonia.AppBuilder With<T>(Func<T> options)
+```
+
+##### Parameters
+
+`options` Func&lt;T&gt;
+
+
+##### Type Parameters
+
+`T`
+
+
+##### Returns
+
+[Avalonia.AppBuilder](xref:Avalonia.AppBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-76292f668e"></span>
+
+#### With Method
+
+```csharp
+public Avalonia.AppBuilder With<T>(T options)
+```
+
+##### Parameters
+
+`options` T
+
+
+##### Type Parameters
+
+`T`
+
+
+##### Returns
+
+[Avalonia.AppBuilder](xref:Avalonia.AppBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-eadbb2e8ae"></span>
+
+### WithDataAnnotationsValidation Method
+
+Adds support for validation using `System.ComponentModel.DataAnnotations`.
+
+```csharp
+public Avalonia.AppBuilder WithDataAnnotationsValidation()
+```
+
+#### Returns
+
+[Avalonia.AppBuilder](xref:Avalonia.AppBuilder)
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [AfterPlatformServicesSetupCallback](#uid-d104da838b) | No summary available. |
+| [AfterSetupCallback](#uid-62825021bb) | Gets a method to call after the [Avalonia.Application](xref:Avalonia.Application) is setup. |
+| [ApplicationType](#uid-16dc62a0ac) | Gets the type of the Instance (even if it's not created yet) |
+| [Instance](#uid-ea3a6ab475) | Gets the [Avalonia.Application](xref:Avalonia.Application) instance being initialized. |
+| [RenderingSubsystemInitializer](#uid-ad8cee057a) | Gets or sets a method to call the initialize the windowing subsystem. |
+| [RenderingSubsystemName](#uid-eb1c42e656) | Gets the name of the currently selected rendering subsystem. |
+| [RuntimePlatformServicesInitializer](#uid-ea87d2ecfb) | Gets or sets a method to call the initialize the runtime platform services (e. g. [AssetLoader](xref:Avalonia.Platform.AssetLoader)) |
+| [RuntimePlatformServicesName](#uid-41be63bf0d) | Gets the name of the currently selected windowing subsystem. |
+| [TextShapingSubsystemInitializer](#uid-c1b81b7390) | Gets or sets a method to call the initialize the text shaping subsystem. |
+| [TextShapingSubsystemName](#uid-a3cc06ef06) | Gets the name of the currently selected text shaping subsystem. |
+| [WindowingSubsystemInitializer](#uid-78f8ad74a9) | Gets or sets a method to call the initialize the windowing subsystem. |
+| [WindowingSubsystemName](#uid-7d0f73060a) | Gets the name of the currently selected windowing subsystem. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d104da838b"></span>
+
+### AfterPlatformServicesSetupCallback Property
+
+```csharp
+public Action<Avalonia.AppBuilder> AfterPlatformServicesSetupCallback { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-62825021bb"></span>
+
+### AfterSetupCallback Property
+
+Gets a method to call after the [Avalonia.Application](xref:Avalonia.Application) is setup.
+
+```csharp
+public Action<Avalonia.AppBuilder> AfterSetupCallback { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-16dc62a0ac"></span>
+
+### ApplicationType Property
+
+Gets the type of the Instance (even if it's not created yet)
+
+```csharp
+public Type ApplicationType { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ea3a6ab475"></span>
+
+### Instance Property
+
+Gets the [Avalonia.Application](xref:Avalonia.Application) instance being initialized.
+
+```csharp
+public Avalonia.Application Instance { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ad8cee057a"></span>
+
+### RenderingSubsystemInitializer Property
+
+Gets or sets a method to call the initialize the windowing subsystem.
+
+```csharp
+public Action RenderingSubsystemInitializer { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-eb1c42e656"></span>
+
+### RenderingSubsystemName Property
+
+Gets the name of the currently selected rendering subsystem.
+
+```csharp
+public string RenderingSubsystemName { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ea87d2ecfb"></span>
+
+### RuntimePlatformServicesInitializer Property
+
+Gets or sets a method to call the initialize the runtime platform services (e. g. [AssetLoader](xref:Avalonia.Platform.AssetLoader))
+
+```csharp
+public Action RuntimePlatformServicesInitializer { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-41be63bf0d"></span>
+
+### RuntimePlatformServicesName Property
+
+Gets the name of the currently selected windowing subsystem.
+
+```csharp
+public string RuntimePlatformServicesName { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c1b81b7390"></span>
+
+### TextShapingSubsystemInitializer Property
+
+Gets or sets a method to call the initialize the text shaping subsystem.
+
+```csharp
+public Action TextShapingSubsystemInitializer { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a3cc06ef06"></span>
+
+### TextShapingSubsystemName Property
+
+Gets the name of the currently selected text shaping subsystem.
+
+```csharp
+public string TextShapingSubsystemName { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-78f8ad74a9"></span>
+
+### WindowingSubsystemInitializer Property
+
+Gets or sets a method to call the initialize the windowing subsystem.
+
+```csharp
+public Action WindowingSubsystemInitializer { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7d0f73060a"></span>
+
+### WindowingSubsystemName Property
+
+Gets the name of the currently selected windowing subsystem.
+
+```csharp
+public string WindowingSubsystemName { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

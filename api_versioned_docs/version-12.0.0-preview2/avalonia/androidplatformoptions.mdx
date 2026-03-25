@@ -1,0 +1,103 @@
+---
+title: 'AndroidPlatformOptions'
+hide_title: true
+slug: '/avalonia/androidplatformoptions'
+uid: 'Avalonia.AndroidPlatformOptions'
+commentId: 'T:Avalonia.AndroidPlatformOptions'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Android'
+assembly: 'Avalonia.Android'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia'
+tfms:
+  - 'net10.0-android36.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">AndroidPlatformOptions Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Android</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Android</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Android/Avalonia.Android/AndroidPlatform.cs">AndroidPlatform.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class AndroidPlatformOptions
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> AndroidPlatformOptions
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [AndroidPlatformOptions](#uid-d9b70973e2) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d9b70973e2"></span>
+
+### AndroidPlatformOptions Constructor
+
+```csharp
+public AndroidPlatformOptions()
+```
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [RenderingMode](#uid-5dc669b30e) | Gets or sets Avalonia rendering modes with fallbacks. The first element in the array has the highest priority. The default value is: [Avalonia.AndroidRenderingMode.Egl](xref:Avalonia.AndroidRenderingMode.Egl), [Avalonia.AndroidRenderingMode.Software](xref:Avalonia.AndroidRenderingMode.Software). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5dc669b30e"></span>
+
+### RenderingMode Property
+
+Gets or sets Avalonia rendering modes with fallbacks.
+The first element in the array has the highest priority.
+The default value is: [Avalonia.AndroidRenderingMode.Egl](xref:Avalonia.AndroidRenderingMode.Egl), [Avalonia.AndroidRenderingMode.Software](xref:Avalonia.AndroidRenderingMode.Software).
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<Avalonia.AndroidRenderingMode> RenderingMode { get; set; }
+```
+
+#### Remarks
+
+If application should work on as wide range of devices as possible, at least add [Avalonia.AndroidRenderingMode.Software](xref:Avalonia.AndroidRenderingMode.Software) as a fallback value.
+
+#### Exceptions
+
+- [Thrown if no values were matched.](xref:System.InvalidOperationException)
+
+</section>
+
+</ApiRefPage>
+

@@ -1,0 +1,442 @@
+---
+title: 'Point'
+hide_title: true
+slug: '/avalonia/point'
+uid: 'Avalonia.Point'
+commentId: 'T:Avalonia.Point'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">Point Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Point.cs">Point.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Defines a point.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct Point
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> Point
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;Point&gt;
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [Point](#uid-bcb8fb5a5c) | Initializes a new instance of the [Avalonia.Point](xref:Avalonia.Point) structure. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-bcb8fb5a5c"></span>
+
+### Point Constructor
+
+Initializes a new instance of the [Avalonia.Point](xref:Avalonia.Point) structure.
+
+```csharp
+public Point(double x, double y)
+```
+
+#### Parameters
+
+`x` double
+
+The X position.
+
+
+`y` double
+
+The Y position.
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Deconstruct](#uid-899de7602b) | No summary available. |
+| [Distance](#uid-47d4ccdee2) | Computes the Euclidean distance between the two given points. |
+| [Equals (2 overloads)](#uid-70e0d96d54) | Returns a boolean indicating whether the point is equal to the other given point (bitwise). |
+| [GetHashCode](#uid-7302b75982) | Returns a hash code for a [Avalonia.Point](xref:Avalonia.Point). |
+| [NearlyEquals](#uid-3565881de4) | Returns a boolean indicating whether the point is equal to the other given point (numerically). |
+| [Parse](#uid-4405139e80) | Parses a [Avalonia.Point](xref:Avalonia.Point) string. |
+| [ToString](#uid-51f21be4ab) | Returns the string representation of the point. |
+| [Transform](#uid-bd1f666664) | Transforms the point by a matrix. |
+| [WithX](#uid-266e13a995) | Returns a new point with the specified X coordinate. |
+| [WithY](#uid-9d555f725a) | Returns a new point with the specified Y coordinate. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-899de7602b"></span>
+
+### Deconstruct Method
+
+```csharp
+public void Deconstruct(double& x, double& y)
+```
+
+#### Parameters
+
+`x` double&amp;
+
+
+`y` double&amp;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-47d4ccdee2"></span>
+
+### Distance Method
+
+Computes the Euclidean distance between the two given points.
+
+```csharp
+public double Distance(Avalonia.Point value1, Avalonia.Point value2)
+```
+
+#### Parameters
+
+`value1` [Avalonia.Point](xref:Avalonia.Point)
+
+The first point.
+
+
+`value2` [Avalonia.Point](xref:Avalonia.Point)
+
+The second point.
+
+
+#### Returns
+
+double
+
+The Euclidean distance.
+
+
+</section>
+
+<span id="uid-70e0d96d54"></span>
+
+### Equals overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-085b52e5b8"></span>
+
+#### Equals Method
+
+Returns a boolean indicating whether the point is equal to the other given point (bitwise).
+
+```csharp
+public bool Equals(Avalonia.Point other)
+```
+
+##### Parameters
+
+`other` [Avalonia.Point](xref:Avalonia.Point)
+
+The other point to test equality against.
+
+
+##### Returns
+
+bool
+
+True if this point is equal to other; False otherwise.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b52bc8253a"></span>
+
+#### Equals Method
+
+Checks for equality between a point and an object.
+
+```csharp
+public bool Equals(object obj)
+```
+
+##### Parameters
+
+`obj` object
+
+The object.
+
+
+##### Returns
+
+bool
+
+True if `obj` is a point that equals the current point.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7302b75982"></span>
+
+### GetHashCode Method
+
+Returns a hash code for a [Avalonia.Point](xref:Avalonia.Point).
+
+```csharp
+public int GetHashCode()
+```
+
+#### Returns
+
+int
+
+The hash code.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3565881de4"></span>
+
+### NearlyEquals Method
+
+Returns a boolean indicating whether the point is equal to the other given point
+(numerically).
+
+```csharp
+public bool NearlyEquals(Avalonia.Point other)
+```
+
+#### Parameters
+
+`other` [Avalonia.Point](xref:Avalonia.Point)
+
+The other point to test equality against.
+
+
+#### Returns
+
+bool
+
+True if this point is equal to other; False otherwise.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4405139e80"></span>
+
+### Parse Method
+
+Parses a [Avalonia.Point](xref:Avalonia.Point) string.
+
+```csharp
+public Avalonia.Point Parse(string s)
+```
+
+#### Parameters
+
+`s` string
+
+The string.
+
+
+#### Returns
+
+[Avalonia.Point](xref:Avalonia.Point)
+
+The [Avalonia.Point](xref:Avalonia.Point).
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-51f21be4ab"></span>
+
+### ToString Method
+
+Returns the string representation of the point.
+
+```csharp
+public string ToString()
+```
+
+#### Returns
+
+string
+
+The string representation of the point.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-bd1f666664"></span>
+
+### Transform Method
+
+Transforms the point by a matrix.
+
+```csharp
+public Avalonia.Point Transform(Avalonia.Matrix transform)
+```
+
+#### Parameters
+
+`transform` [Avalonia.Matrix](xref:Avalonia.Matrix)
+
+The transform.
+
+
+#### Returns
+
+[Avalonia.Point](xref:Avalonia.Point)
+
+The transformed point.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-266e13a995"></span>
+
+### WithX Method
+
+Returns a new point with the specified X coordinate.
+
+```csharp
+public Avalonia.Point WithX(double x)
+```
+
+#### Parameters
+
+`x` double
+
+The X coordinate.
+
+
+#### Returns
+
+[Avalonia.Point](xref:Avalonia.Point)
+
+The new point.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9d555f725a"></span>
+
+### WithY Method
+
+Returns a new point with the specified Y coordinate.
+
+```csharp
+public Avalonia.Point WithY(double y)
+```
+
+#### Parameters
+
+`y` double
+
+The Y coordinate.
+
+
+#### Returns
+
+[Avalonia.Point](xref:Avalonia.Point)
+
+The new point.
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [X](#uid-757991c7da) | Gets the X position. |
+| [Y](#uid-f7ccabda4f) | Gets the Y position. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-757991c7da"></span>
+
+### X Property
+
+Gets the X position.
+
+```csharp
+public double X { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f7ccabda4f"></span>
+
+### Y Property
+
+Gets the Y position.
+
+```csharp
+public double Y { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

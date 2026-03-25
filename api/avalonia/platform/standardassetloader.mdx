@@ -1,0 +1,332 @@
+---
+title: 'StandardAssetLoader'
+hide_title: true
+slug: '/avalonia/platform/standardassetloader'
+uid: 'Avalonia.Platform.StandardAssetLoader'
+commentId: 'T:Avalonia.Platform.StandardAssetLoader'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Platform'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">StandardAssetLoader Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Platform</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Platform/StandardAssetLoader.cs">StandardAssetLoader.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Loads assets compiled into the application binary.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class StandardAssetLoader
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> StandardAssetLoader
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="iassetloader">IAssetLoader</a>
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [StandardAssetLoader](#uid-091693ee4a) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-091693ee4a"></span>
+
+### StandardAssetLoader Constructor
+
+```csharp
+public StandardAssetLoader(System.Reflection.Assembly assembly)
+```
+
+#### Parameters
+
+`assembly` System.Reflection.Assembly
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Exists](#uid-cd2e4a5b72) | Checks if an asset with the specified URI exists. |
+| [GetAssembly](#uid-7ba9def467) | No summary available. |
+| [GetAssets](#uid-6f83c235fe) | Gets all assets of a folder and subfolders that match specified uri. |
+| [InvalidateAssemblyCache (2 overloads)](#uid-371c85a4f3) | No summary available. |
+| [Open](#uid-11b09534e4) | Opens the asset with the requested URI. |
+| [OpenAndGetAssembly](#uid-11100a9b4f) | Opens the asset with the requested URI and returns the asset stream and the assembly containing the asset. |
+| [RegisterResUriParsers](#uid-6cffcfb154) | No summary available. |
+| [SetDefaultAssembly](#uid-a66a77b805) | Sets the default assembly from which to load assets for which no assembly is specified. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-cd2e4a5b72"></span>
+
+### Exists Method
+
+Checks if an asset with the specified URI exists.
+
+```csharp
+public bool Exists(Uri uri, Uri baseUri)
+```
+
+#### Parameters
+
+`uri` Uri
+
+The URI.
+
+
+`baseUri` Uri
+
+A base URI to use if `uri` is relative.
+
+
+#### Returns
+
+bool
+
+True if the asset could be found; otherwise false.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7ba9def467"></span>
+
+### GetAssembly Method
+
+```csharp
+public System.Reflection.Assembly GetAssembly(Uri uri, Uri baseUri)
+```
+
+#### Parameters
+
+`uri` Uri
+
+
+`baseUri` Uri
+
+
+#### Returns
+
+System.Reflection.Assembly
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6f83c235fe"></span>
+
+### GetAssets Method
+
+Gets all assets of a folder and subfolders that match specified uri.
+
+```csharp
+public System.Collections.Generic.IEnumerable<Uri> GetAssets(Uri uri, Uri baseUri)
+```
+
+#### Parameters
+
+`uri` Uri
+
+The URI.
+
+
+`baseUri` Uri
+
+Base URI that is used if `uri` is relative.
+
+
+#### Returns
+
+System.Collections.Generic.IEnumerable&lt;Uri&gt;
+
+All matching assets as a tuple of the absolute path to the asset and the assembly containing the asset
+
+
+</section>
+
+<span id="uid-371c85a4f3"></span>
+
+### InvalidateAssemblyCache overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5abc1dba35"></span>
+
+#### InvalidateAssemblyCache Method
+
+```csharp
+public void InvalidateAssemblyCache()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ffc7c364a3"></span>
+
+#### InvalidateAssemblyCache Method
+
+```csharp
+public void InvalidateAssemblyCache(string name)
+```
+
+##### Parameters
+
+`name` string
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-11b09534e4"></span>
+
+### Open Method
+
+Opens the asset with the requested URI.
+
+```csharp
+public System.IO.Stream Open(Uri uri, Uri baseUri)
+```
+
+#### Parameters
+
+`uri` Uri
+
+The URI.
+
+
+`baseUri` Uri
+
+A base URI to use if `uri` is relative.
+
+
+#### Returns
+
+System.IO.Stream
+
+A stream containing the asset contents.
+
+
+#### Exceptions
+
+- [The asset could not be found.](xref:System.IO.FileNotFoundException)
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-11100a9b4f"></span>
+
+### OpenAndGetAssembly Method
+
+Opens the asset with the requested URI and returns the asset stream and the
+assembly containing the asset.
+
+```csharp
+public ValueTuple<System.IO.Stream, System.Reflection.Assembly> OpenAndGetAssembly(Uri uri, Uri baseUri)
+```
+
+#### Parameters
+
+`uri` Uri
+
+The URI.
+
+
+`baseUri` Uri
+
+A base URI to use if `uri` is relative.
+
+
+#### Returns
+
+ValueTuple&lt;System.IO.Stream, System.Reflection.Assembly&gt;
+
+The stream containing the resource contents together with the assembly.
+
+
+#### Exceptions
+
+- [The asset could not be found.](xref:System.IO.FileNotFoundException)
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6cffcfb154"></span>
+
+### RegisterResUriParsers Method
+
+```csharp
+public void RegisterResUriParsers()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a66a77b805"></span>
+
+### SetDefaultAssembly Method
+
+Sets the default assembly from which to load assets for which no assembly is specified.
+
+```csharp
+public void SetDefaultAssembly(System.Reflection.Assembly assembly)
+```
+
+#### Parameters
+
+`assembly` System.Reflection.Assembly
+
+The default assembly.
+
+
+</section>
+
+</ApiRefPage>
+

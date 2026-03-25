@@ -1,0 +1,132 @@
+---
+title: 'IValueProvider'
+hide_title: true
+slug: '/avalonia/automation/provider/ivalueprovider'
+uid: 'Avalonia.Automation.Provider.IValueProvider'
+commentId: 'T:Avalonia.Automation.Provider.IValueProvider'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Automation.Provider'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IValueProvider Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Automation.Provider</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Exposes methods and properties to support access by a UI Automation client to controls
+that have an intrinsic value that does not span a range and that can be represented as
+a string.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface IValueProvider
+```
+
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [SetValue](#uid-771200876a) | Sets the value of a control. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-771200876a"></span>
+
+### SetValue Method
+
+Sets the value of a control.
+
+```csharp
+public void SetValue(string value)
+```
+
+#### Parameters
+
+`value` string
+
+The value to set. The provider is responsible for converting the value to the
+appropriate data type.
+
+
+#### Remarks
+
+- Windows`IValueProvider.SetValue`
+- macOS`NSAccessibilityProtocol.setAccessibilityValue`
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [IsReadOnly](#uid-c1da945c4f) | Gets a value that indicates whether the value of a control is read-only. |
+| [Value](#uid-4b82af0490) | Gets the value of the control. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c1da945c4f"></span>
+
+### IsReadOnly Property
+
+Gets a value that indicates whether the value of a control is read-only.
+
+```csharp
+public bool IsReadOnly { get; set; }
+```
+
+#### Remarks
+
+- Windows`IValueProvider.IsReadOnly`
+- macOSNo mapping.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4b82af0490"></span>
+
+### Value Property
+
+Gets the value of the control.
+
+```csharp
+public string Value { get; set; }
+```
+
+#### Remarks
+
+- Windows`IValueProvider.Value`
+- macOS`NSAccessibilityProtocol.accessibilityValue`
+
+</section>
+
+</ApiRefPage>
+

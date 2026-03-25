@@ -1,0 +1,110 @@
+---
+title: 'NameScopeLocator'
+hide_title: true
+slug: '/avalonia/controls/namescopelocator'
+uid: 'Avalonia.Controls.NameScopeLocator'
+commentId: 'T:Avalonia.Controls.NameScopeLocator'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">NameScopeLocator Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Controls/NameScopeLocator.cs">NameScopeLocator.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class NameScopeLocator
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> NameScopeLocator
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [NameScopeLocator](#uid-47b9afb2cc) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-47b9afb2cc"></span>
+
+### NameScopeLocator Constructor
+
+```csharp
+public NameScopeLocator()
+```
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Track](#uid-baf22a7ca5) | Tracks a named control relative to another control. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-baf22a7ca5"></span>
+
+### Track Method
+
+Tracks a named control relative to another control.
+
+```csharp
+public IObservable<object> Track(Avalonia.Controls.INameScope scope, string name)
+```
+
+#### Parameters
+
+`scope` [Avalonia.Controls.INameScope](xref:Avalonia.Controls.INameScope)
+
+The scope relative from which the object should be resolved.
+
+
+`name` string
+
+The name of the object to find.
+
+
+#### Returns
+
+IObservable&lt;object&gt;
+
+
+</section>
+
+</ApiRefPage>
+

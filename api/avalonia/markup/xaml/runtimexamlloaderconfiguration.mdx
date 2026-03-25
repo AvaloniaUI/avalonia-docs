@@ -1,0 +1,162 @@
+---
+title: 'RuntimeXamlLoaderConfiguration'
+hide_title: true
+slug: '/avalonia/markup/xaml/runtimexamlloaderconfiguration'
+uid: 'Avalonia.Markup.Xaml.RuntimeXamlLoaderConfiguration'
+commentId: 'T:Avalonia.Markup.Xaml.RuntimeXamlLoaderConfiguration'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Markup.Xaml'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Markup.Xaml'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">RuntimeXamlLoaderConfiguration Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Markup.Xaml</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Markup.Xaml</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Markup/Avalonia.Markup.Xaml/RuntimeXamlLoaderConfiguration.cs">RuntimeXamlLoaderConfiguration.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class RuntimeXamlLoaderConfiguration
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> RuntimeXamlLoaderConfiguration
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [RuntimeXamlLoaderConfiguration](#uid-1cd435eae8) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1cd435eae8"></span>
+
+### RuntimeXamlLoaderConfiguration Constructor
+
+```csharp
+public RuntimeXamlLoaderConfiguration()
+```
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [CreateSourceInfo](#uid-d4d9a1c382) | When enabled, the XAML compiler embeds SourceInfo metadata (file path, line, and column) into generated code. Default is 'false'. |
+| [DesignMode](#uid-e3929fafda) | Indicates whether the XAML is being loaded in design mode. Default is 'false'. |
+| [DiagnosticHandler](#uid-5bfabbf87e) | XAML diagnostics handler. |
+| [LocalAssembly](#uid-aa3a33f9ca) | Default assembly for clr-namespace:. |
+| [UseCompiledBindingsByDefault](#uid-0f0a7eda8b) | Defines is [CompiledBinding](xref:Avalonia.Data.CompiledBinding) should be used by default. Default is 'false'. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d4d9a1c382"></span>
+
+### CreateSourceInfo Property
+
+When enabled, the XAML compiler embeds SourceInfo metadata (file path, line, and column) into generated code.
+Default is 'false'.
+
+```csharp
+public bool CreateSourceInfo { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e3929fafda"></span>
+
+### DesignMode Property
+
+Indicates whether the XAML is being loaded in design mode.
+Default is 'false'.
+
+```csharp
+public bool DesignMode { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5bfabbf87e"></span>
+
+### DiagnosticHandler Property
+
+XAML diagnostics handler.
+
+```csharp
+public Avalonia.Markup.Xaml.RuntimeXamlLoaderConfiguration.XamlDiagnosticFunc DiagnosticHandler { get; set; }
+```
+
+#### Returns
+
+Defines if any diagnostic severity should be overriden.
+Note, severity cannot be set lower than minimal for specific diagnostic.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-aa3a33f9ca"></span>
+
+### LocalAssembly Property
+
+Default assembly for clr-namespace:.
+
+```csharp
+public System.Reflection.Assembly LocalAssembly { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0f0a7eda8b"></span>
+
+### UseCompiledBindingsByDefault Property
+
+Defines is [CompiledBinding](xref:Avalonia.Data.CompiledBinding) should be used by default.
+Default is 'false'.
+
+```csharp
+public bool UseCompiledBindingsByDefault { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

@@ -1,0 +1,137 @@
+---
+title: 'SelectionChangedEventArgs'
+hide_title: true
+slug: '/avalonia/controls/selectionchangedeventargs'
+uid: 'Avalonia.Controls.SelectionChangedEventArgs'
+commentId: 'T:Avalonia.Controls.SelectionChangedEventArgs'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">SelectionChangedEventArgs Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Controls/SelectionChangedEventArgs.cs">SelectionChangedEventArgs.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Provides data for the [Avalonia.Controls.Primitives.SelectingItemsControl.SelectionChanged](xref:Avalonia.Controls.Primitives.SelectingItemsControl.SelectionChanged) event.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class SelectionChangedEventArgs
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> EventArgs <span className="apiref-page__relation-separator">-&gt;</span> <a href="../interactivity/routedeventargs">RoutedEventArgs</a> <span className="apiref-page__relation-separator">-&gt;</span> SelectionChangedEventArgs
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [SelectionChangedEventArgs](#uid-c5affbb34e) | Initializes a new instance of the [Avalonia.Controls.SelectionChangedEventArgs](xref:Avalonia.Controls.SelectionChangedEventArgs) class. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c5affbb34e"></span>
+
+### SelectionChangedEventArgs Constructor
+
+Initializes a new instance of the [Avalonia.Controls.SelectionChangedEventArgs](xref:Avalonia.Controls.SelectionChangedEventArgs) class.
+
+```csharp
+public SelectionChangedEventArgs(Avalonia.Interactivity.RoutedEvent routedEvent, System.Collections.IList removedItems, System.Collections.IList addedItems)
+```
+
+#### Parameters
+
+`routedEvent` [Avalonia.Interactivity.RoutedEvent](xref:Avalonia.Interactivity.RoutedEvent)
+
+The event being raised.
+
+
+`removedItems` System.Collections.IList
+
+The items removed from the selection.
+
+
+`addedItems` System.Collections.IList
+
+The items added to the selection.
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [AddedItems](#uid-f5e9758270) | Gets the items that were added to the selection. |
+| [RemovedItems](#uid-d2fc02a6cf) | Gets the items that were removed from the selection. |
+| [Handled](../interactivity/routedeventargs.mdx#uid-204d2af354) | Gets or sets a value indicating whether the routed event has already been handled. Inherited from [RoutedEventArgs](../interactivity/routedeventargs.mdx). |
+| [Route](../interactivity/routedeventargs.mdx#uid-751be73db9) | Gets or sets the routing strategy (direct, bubbling, or tunneling) of the routed event. Inherited from [RoutedEventArgs](../interactivity/routedeventargs.mdx). |
+| [RoutedEvent](../interactivity/routedeventargs.mdx#uid-4e102999d9) | Gets or sets the routed event associated with these event args. Inherited from [RoutedEventArgs](../interactivity/routedeventargs.mdx). |
+| [Source](../interactivity/routedeventargs.mdx#uid-4385b523d5) | Gets or sets the source object that raised the routed event. Inherited from [RoutedEventArgs](../interactivity/routedeventargs.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f5e9758270"></span>
+
+### AddedItems Property
+
+Gets the items that were added to the selection.
+
+```csharp
+public System.Collections.IList AddedItems { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d2fc02a6cf"></span>
+
+### RemovedItems Property
+
+Gets the items that were removed from the selection.
+
+```csharp
+public System.Collections.IList RemovedItems { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

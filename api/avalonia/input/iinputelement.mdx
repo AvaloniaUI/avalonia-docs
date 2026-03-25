@@ -1,0 +1,511 @@
+---
+title: 'IInputElement'
+hide_title: true
+slug: '/avalonia/input/iinputelement'
+uid: 'Avalonia.Input.IInputElement'
+commentId: 'T:Avalonia.Input.IInputElement'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Input'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IInputElement Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Input</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Defines input-related functionality for a control.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface IInputElement
+```
+
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [AddHandler](#uid-4ed662f866) | Adds a handler for the specified routed event. |
+| [Focus](#uid-2aed735c56) | Focuses the control. |
+| [RaiseEvent](#uid-55167c193d) | Raises a routed event. |
+| [RemoveHandler](#uid-580f070f3a) | Removes a handler for the specified routed event. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4ed662f866"></span>
+
+### AddHandler Method
+
+Adds a handler for the specified routed event.
+
+```csharp
+public void AddHandler(Avalonia.Interactivity.RoutedEvent routedEvent, Delegate handler, Avalonia.Interactivity.RoutingStrategies routes, bool handledEventsToo)
+```
+
+#### Parameters
+
+`routedEvent` [Avalonia.Interactivity.RoutedEvent](xref:Avalonia.Interactivity.RoutedEvent)
+
+The routed event.
+
+
+`handler` Delegate
+
+The handler.
+
+
+`routes` [Avalonia.Interactivity.RoutingStrategies](xref:Avalonia.Interactivity.RoutingStrategies)
+
+The routing strategies to listen to.
+
+
+`handledEventsToo` bool
+
+Whether handled events should also be listened for.
+
+
+#### Returns
+
+A disposable that terminates the event subscription.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2aed735c56"></span>
+
+### Focus Method
+
+Focuses the control.
+
+```csharp
+public bool Focus(Avalonia.Input.NavigationMethod method, Avalonia.Input.KeyModifiers keyModifiers)
+```
+
+#### Parameters
+
+`method` [Avalonia.Input.NavigationMethod](xref:Avalonia.Input.NavigationMethod)
+
+The method by which focus was changed.
+
+
+`keyModifiers` [Avalonia.Input.KeyModifiers](xref:Avalonia.Input.KeyModifiers)
+
+Any key modifiers active at the time of focus.
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-55167c193d"></span>
+
+### RaiseEvent Method
+
+Raises a routed event.
+
+```csharp
+public void RaiseEvent(Avalonia.Interactivity.RoutedEventArgs e)
+```
+
+#### Parameters
+
+`e` [Avalonia.Interactivity.RoutedEventArgs](xref:Avalonia.Interactivity.RoutedEventArgs)
+
+The event args.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-580f070f3a"></span>
+
+### RemoveHandler Method
+
+Removes a handler for the specified routed event.
+
+```csharp
+public void RemoveHandler(Avalonia.Interactivity.RoutedEvent routedEvent, Delegate handler)
+```
+
+#### Parameters
+
+`routedEvent` [Avalonia.Interactivity.RoutedEvent](xref:Avalonia.Interactivity.RoutedEvent)
+
+The routed event.
+
+
+`handler` Delegate
+
+The handler.
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Cursor](#uid-412b7ee968) | Gets or sets the associated mouse cursor. |
+| [Focusable](#uid-4bf6390935) | Gets or sets a value indicating whether the control can receive keyboard focus. |
+| [IsEffectivelyEnabled](#uid-9f6953e853) | Gets a value indicating whether this control and all its parents are enabled. |
+| [IsEffectivelyVisible](#uid-035cf31db2) | Gets a value indicating whether this control and all its parents are visible. |
+| [IsEnabled](#uid-7937346c85) | Gets or sets a value indicating whether the control is enabled for user interaction. |
+| [IsFocused](#uid-29f406974f) | Gets a value indicating whether the control is focused. |
+| [IsHitTestVisible](#uid-15e527fdd2) | Gets a value indicating whether the control is considered for hit testing. |
+| [IsKeyboardFocusWithin](#uid-2e257ffd75) | Gets a value indicating whether keyboard focus is anywhere within the element or its visual tree child elements. |
+| [IsPointerOver](#uid-95cf373dfb) | Gets a value indicating whether the pointer is currently over the control. |
+| [KeyBindings](#uid-01dfeeba85) | Gets the key bindings for the element. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-412b7ee968"></span>
+
+### Cursor Property
+
+Gets or sets the associated mouse cursor.
+
+```csharp
+public Avalonia.Input.Cursor Cursor { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4bf6390935"></span>
+
+### Focusable Property
+
+Gets or sets a value indicating whether the control can receive keyboard focus.
+
+```csharp
+public bool Focusable { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9f6953e853"></span>
+
+### IsEffectivelyEnabled Property
+
+Gets a value indicating whether this control and all its parents are enabled.
+
+```csharp
+public bool IsEffectivelyEnabled { get; set; }
+```
+
+#### Remarks
+
+The [Avalonia.Input.IInputElement.IsEnabled](xref:Avalonia.Input.IInputElement.IsEnabled) property is used to toggle the enabled state for individual
+controls. The [Avalonia.Input.IInputElement.IsEffectivelyEnabled](xref:Avalonia.Input.IInputElement.IsEffectivelyEnabled) property takes into account the
+[Avalonia.Input.IInputElement.IsEnabled](xref:Avalonia.Input.IInputElement.IsEnabled) value of this control and its parent controls.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-035cf31db2"></span>
+
+### IsEffectivelyVisible Property
+
+Gets a value indicating whether this control and all its parents are visible.
+
+```csharp
+public bool IsEffectivelyVisible { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7937346c85"></span>
+
+### IsEnabled Property
+
+Gets or sets a value indicating whether the control is enabled for user interaction.
+
+```csharp
+public bool IsEnabled { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-29f406974f"></span>
+
+### IsFocused Property
+
+Gets a value indicating whether the control is focused.
+
+```csharp
+public bool IsFocused { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-15e527fdd2"></span>
+
+### IsHitTestVisible Property
+
+Gets a value indicating whether the control is considered for hit testing.
+
+```csharp
+public bool IsHitTestVisible { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2e257ffd75"></span>
+
+### IsKeyboardFocusWithin Property
+
+Gets a value indicating whether keyboard focus is anywhere within the element or its visual tree child elements.
+
+```csharp
+public bool IsKeyboardFocusWithin { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-95cf373dfb"></span>
+
+### IsPointerOver Property
+
+Gets a value indicating whether the pointer is currently over the control.
+
+```csharp
+public bool IsPointerOver { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-01dfeeba85"></span>
+
+### KeyBindings Property
+
+Gets the key bindings for the element.
+
+```csharp
+public System.Collections.Generic.List<Avalonia.Input.KeyBinding> KeyBindings { get; set; }
+```
+
+</section>
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [GotFocus](#uid-6a2ac4b0e8) | Occurs when the control receives focus. |
+| [KeyDown](#uid-307fe4873f) | Occurs when a key is pressed while the control has focus. |
+| [KeyUp](#uid-c9264d8d2f) | Occurs when a key is released while the control has focus. |
+| [LostFocus](#uid-96c57250cf) | Occurs when the control loses focus. |
+| [PointerEntered](#uid-4b5da6d7d2) | Occurs when the pointer enters the control. |
+| [PointerExited](#uid-e2f2721256) | Occurs when the pointer leaves the control. |
+| [PointerMoved](#uid-449a25b8d3) | Occurs when the pointer moves over the control. |
+| [PointerPressed](#uid-bcc921191c) | Occurs when the pointer is pressed over the control. |
+| [PointerReleased](#uid-d968fd4cc3) | Occurs when the pointer is released over the control. |
+| [PointerWheelChanged](#uid-4e4b9681df) | Occurs when the mouse wheel is scrolled over the control. |
+| [TextInput](#uid-096256fc6d) | Occurs when a user typed some text while the control has focus. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6a2ac4b0e8"></span>
+
+### GotFocus Event
+
+Occurs when the control receives focus.
+
+```csharp
+public event EventHandler<Avalonia.Input.GotFocusEventArgs> GotFocus
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-307fe4873f"></span>
+
+### KeyDown Event
+
+Occurs when a key is pressed while the control has focus.
+
+```csharp
+public event EventHandler<Avalonia.Input.KeyEventArgs> KeyDown
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c9264d8d2f"></span>
+
+### KeyUp Event
+
+Occurs when a key is released while the control has focus.
+
+```csharp
+public event EventHandler<Avalonia.Input.KeyEventArgs> KeyUp
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-96c57250cf"></span>
+
+### LostFocus Event
+
+Occurs when the control loses focus.
+
+```csharp
+public event EventHandler<Avalonia.Interactivity.RoutedEventArgs> LostFocus
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4b5da6d7d2"></span>
+
+### PointerEntered Event
+
+Occurs when the pointer enters the control.
+
+```csharp
+public event EventHandler<Avalonia.Input.PointerEventArgs> PointerEntered
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e2f2721256"></span>
+
+### PointerExited Event
+
+Occurs when the pointer leaves the control.
+
+```csharp
+public event EventHandler<Avalonia.Input.PointerEventArgs> PointerExited
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-449a25b8d3"></span>
+
+### PointerMoved Event
+
+Occurs when the pointer moves over the control.
+
+```csharp
+public event EventHandler<Avalonia.Input.PointerEventArgs> PointerMoved
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-bcc921191c"></span>
+
+### PointerPressed Event
+
+Occurs when the pointer is pressed over the control.
+
+```csharp
+public event EventHandler<Avalonia.Input.PointerPressedEventArgs> PointerPressed
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d968fd4cc3"></span>
+
+### PointerReleased Event
+
+Occurs when the pointer is released over the control.
+
+```csharp
+public event EventHandler<Avalonia.Input.PointerReleasedEventArgs> PointerReleased
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4e4b9681df"></span>
+
+### PointerWheelChanged Event
+
+Occurs when the mouse wheel is scrolled over the control.
+
+```csharp
+public event EventHandler<Avalonia.Input.PointerWheelEventArgs> PointerWheelChanged
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-096256fc6d"></span>
+
+### TextInput Event
+
+Occurs when a user typed some text while the control has focus.
+
+```csharp
+public event EventHandler<Avalonia.Input.TextInputEventArgs> TextInput
+```
+
+</section>
+
+</ApiRefPage>
+

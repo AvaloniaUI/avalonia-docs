@@ -1,0 +1,118 @@
+---
+title: 'ExpressionParseException'
+hide_title: true
+slug: '/avalonia/data/core/expressionparseexception'
+uid: 'Avalonia.Data.Core.ExpressionParseException'
+commentId: 'T:Avalonia.Data.Core.ExpressionParseException'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Data.Core'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ExpressionParseException Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Data.Core</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Data/Core/ExpressionParseException.cs">ExpressionParseException.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Exception thrown when the provided binding expression string could not be parsed.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class ExpressionParseException
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Exception <span className="apiref-page__relation-separator">-&gt;</span> ExpressionParseException
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [ExpressionParseException](#uid-c2591891c7) | Initializes a new instance of the [Avalonia.Data.Core.ExpressionParseException](xref:Avalonia.Data.Core.ExpressionParseException) class. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c2591891c7"></span>
+
+### ExpressionParseException Constructor
+
+Initializes a new instance of the [Avalonia.Data.Core.ExpressionParseException](xref:Avalonia.Data.Core.ExpressionParseException) class.
+
+```csharp
+public ExpressionParseException(int column, string message, Exception innerException)
+```
+
+#### Parameters
+
+`column` int
+
+The column position of the error.
+
+
+`message` string
+
+The exception message.
+
+
+`innerException` Exception
+
+The exception that caused the parsing failure.
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Column](#uid-723d6687d4) | Gets the column position at which the error occurred. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-723d6687d4"></span>
+
+### Column Property
+
+Gets the column position at which the error occurred.
+
+```csharp
+public int Column { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

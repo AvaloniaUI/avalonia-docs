@@ -1,0 +1,679 @@
+---
+title: 'Vector3D'
+hide_title: true
+slug: '/avalonia/vector3d'
+uid: 'Avalonia.Vector3D'
+commentId: 'T:Avalonia.Vector3D'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">Vector3D Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Vector3D.cs">Vector3D.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct Vector3D
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> Vector3D
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;Vector3D&gt;
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [Vector3D](#uid-391c9e118c) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-391c9e118c"></span>
+
+### Vector3D Constructor
+
+```csharp
+public Vector3D(double X, double Y, double Z)
+```
+
+#### Parameters
+
+`X` double
+
+
+`Y` double
+
+
+`Z` double
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Abs](#uid-fc1af86743) | Returns a vector whose elements are the absolute values of each of the specified vector's elements. |
+| [Add](#uid-ed5e0e177b) | Adds the second to the first vector |
+| [Clamp](#uid-0467b800d3) | Restricts a vector between a minimum and a maximum value. |
+| [Deconstruct](#uid-803792bb97) | No summary available. |
+| [Distance](#uid-ccc54c032e) | Computes the Euclidean distance between the two given points. |
+| [DistanceSquared](#uid-4c80d659ae) | Computes the squared Euclidean distance between the two given points. |
+| [Divide (2 overloads)](#uid-a2d8f86330) | Divides the first vector by the second. |
+| [Dot](#uid-7cbc06f210) | Calculates the dot product of two vectors. |
+| [Equals (2 overloads)](#uid-be9039705b) | No summary available. |
+| [GetHashCode](#uid-05d10e9f04) | No summary available. |
+| [Max](#uid-9f08821f68) | Returns a vector whose elements are the maximum of each of the pairs of elements in two specified vectors |
+| [Min](#uid-3b5021a75f) | Returns a vector whose elements are the minimum of each of the pairs of elements in two specified vectors |
+| [Multiply (2 overloads)](#uid-ca8b2dd3f3) | Multiplies the first vector by the second. |
+| [Normalize](#uid-561aeb3cee) | Returns a normalized version of this vector. |
+| [Parse](#uid-7c201400f8) | Parses a [Avalonia.Vector](xref:Avalonia.Vector) string. |
+| [Substract](#uid-55e0a513e7) | Subtracts the second from the first vector |
+| [ToString](#uid-3a9153b9b1) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-fc1af86743"></span>
+
+### Abs Method
+
+Returns a vector whose elements are the absolute values of each of the specified vector's elements.
+
+```csharp
+public Avalonia.Vector3D Abs()
+```
+
+#### Returns
+
+[Avalonia.Vector3D](xref:Avalonia.Vector3D)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ed5e0e177b"></span>
+
+### Add Method
+
+Adds the second to the first vector
+
+```csharp
+public Avalonia.Vector3D Add(Avalonia.Vector3D left, Avalonia.Vector3D right)
+```
+
+#### Parameters
+
+`left` [Avalonia.Vector3D](xref:Avalonia.Vector3D)
+
+
+`right` [Avalonia.Vector3D](xref:Avalonia.Vector3D)
+
+
+#### Returns
+
+[Avalonia.Vector3D](xref:Avalonia.Vector3D)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0467b800d3"></span>
+
+### Clamp Method
+
+Restricts a vector between a minimum and a maximum value.
+
+```csharp
+public Avalonia.Vector3D Clamp(Avalonia.Vector3D value, Avalonia.Vector3D min, Avalonia.Vector3D max)
+```
+
+#### Parameters
+
+`value` [Avalonia.Vector3D](xref:Avalonia.Vector3D)
+
+
+`min` [Avalonia.Vector3D](xref:Avalonia.Vector3D)
+
+
+`max` [Avalonia.Vector3D](xref:Avalonia.Vector3D)
+
+
+#### Returns
+
+[Avalonia.Vector3D](xref:Avalonia.Vector3D)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-803792bb97"></span>
+
+### Deconstruct Method
+
+```csharp
+public void Deconstruct(double& X, double& Y, double& Z)
+```
+
+#### Parameters
+
+`X` double&amp;
+
+
+`Y` double&amp;
+
+
+`Z` double&amp;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ccc54c032e"></span>
+
+### Distance Method
+
+Computes the Euclidean distance between the two given points.
+
+```csharp
+public double Distance(Avalonia.Vector3D value1, Avalonia.Vector3D value2)
+```
+
+#### Parameters
+
+`value1` [Avalonia.Vector3D](xref:Avalonia.Vector3D)
+
+
+`value2` [Avalonia.Vector3D](xref:Avalonia.Vector3D)
+
+
+#### Returns
+
+double
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4c80d659ae"></span>
+
+### DistanceSquared Method
+
+Computes the squared Euclidean distance between the two given points.
+
+```csharp
+public double DistanceSquared(Avalonia.Vector3D value1, Avalonia.Vector3D value2)
+```
+
+#### Parameters
+
+`value1` [Avalonia.Vector3D](xref:Avalonia.Vector3D)
+
+
+`value2` [Avalonia.Vector3D](xref:Avalonia.Vector3D)
+
+
+#### Returns
+
+double
+
+
+</section>
+
+<span id="uid-a2d8f86330"></span>
+
+### Divide overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-62cd0afe98"></span>
+
+#### Divide Method
+
+Divides the first vector by the second.
+
+```csharp
+public Avalonia.Vector3D Divide(Avalonia.Vector3D left, Avalonia.Vector3D right)
+```
+
+##### Parameters
+
+`left` [Avalonia.Vector3D](xref:Avalonia.Vector3D)
+
+
+`right` [Avalonia.Vector3D](xref:Avalonia.Vector3D)
+
+
+##### Returns
+
+[Avalonia.Vector3D](xref:Avalonia.Vector3D)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8ed6aadbaf"></span>
+
+#### Divide Method
+
+Divides the vector by the given scalar.
+
+```csharp
+public Avalonia.Vector3D Divide(Avalonia.Vector3D left, double right)
+```
+
+##### Parameters
+
+`left` [Avalonia.Vector3D](xref:Avalonia.Vector3D)
+
+
+`right` double
+
+
+##### Returns
+
+[Avalonia.Vector3D](xref:Avalonia.Vector3D)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7cbc06f210"></span>
+
+### Dot Method
+
+Calculates the dot product of two vectors.
+
+```csharp
+public double Dot(Avalonia.Vector3D vector1, Avalonia.Vector3D vector2)
+```
+
+#### Parameters
+
+`vector1` [Avalonia.Vector3D](xref:Avalonia.Vector3D)
+
+
+`vector2` [Avalonia.Vector3D](xref:Avalonia.Vector3D)
+
+
+#### Returns
+
+double
+
+
+</section>
+
+<span id="uid-be9039705b"></span>
+
+### Equals overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b6752c1ec3"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(Avalonia.Vector3D other)
+```
+
+##### Parameters
+
+`other` [Avalonia.Vector3D](xref:Avalonia.Vector3D)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-673731acb2"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(object obj)
+```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-05d10e9f04"></span>
+
+### GetHashCode Method
+
+```csharp
+public int GetHashCode()
+```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9f08821f68"></span>
+
+### Max Method
+
+Returns a vector whose elements are the maximum of each of the pairs of elements in two specified vectors
+
+```csharp
+public Avalonia.Vector3D Max(Avalonia.Vector3D left, Avalonia.Vector3D right)
+```
+
+#### Parameters
+
+`left` [Avalonia.Vector3D](xref:Avalonia.Vector3D)
+
+
+`right` [Avalonia.Vector3D](xref:Avalonia.Vector3D)
+
+
+#### Returns
+
+[Avalonia.Vector3D](xref:Avalonia.Vector3D)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3b5021a75f"></span>
+
+### Min Method
+
+Returns a vector whose elements are the minimum of each of the pairs of elements in two specified vectors
+
+```csharp
+public Avalonia.Vector3D Min(Avalonia.Vector3D left, Avalonia.Vector3D right)
+```
+
+#### Parameters
+
+`left` [Avalonia.Vector3D](xref:Avalonia.Vector3D)
+
+
+`right` [Avalonia.Vector3D](xref:Avalonia.Vector3D)
+
+
+#### Returns
+
+[Avalonia.Vector3D](xref:Avalonia.Vector3D)
+
+
+</section>
+
+<span id="uid-ca8b2dd3f3"></span>
+
+### Multiply overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-25ad67fd55"></span>
+
+#### Multiply Method
+
+Multiplies the first vector by the second.
+
+```csharp
+public Avalonia.Vector3D Multiply(Avalonia.Vector3D left, Avalonia.Vector3D right)
+```
+
+##### Parameters
+
+`left` [Avalonia.Vector3D](xref:Avalonia.Vector3D)
+
+
+`right` [Avalonia.Vector3D](xref:Avalonia.Vector3D)
+
+
+##### Returns
+
+[Avalonia.Vector3D](xref:Avalonia.Vector3D)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8a32b2f652"></span>
+
+#### Multiply Method
+
+Multiplies the vector by the given scalar.
+
+```csharp
+public Avalonia.Vector3D Multiply(Avalonia.Vector3D left, double right)
+```
+
+##### Parameters
+
+`left` [Avalonia.Vector3D](xref:Avalonia.Vector3D)
+
+
+`right` double
+
+
+##### Returns
+
+[Avalonia.Vector3D](xref:Avalonia.Vector3D)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-561aeb3cee"></span>
+
+### Normalize Method
+
+Returns a normalized version of this vector.
+
+```csharp
+public Avalonia.Vector3D Normalize(Avalonia.Vector3D value)
+```
+
+#### Parameters
+
+`value` [Avalonia.Vector3D](xref:Avalonia.Vector3D)
+
+
+#### Returns
+
+[Avalonia.Vector3D](xref:Avalonia.Vector3D)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7c201400f8"></span>
+
+### Parse Method
+
+Parses a [Avalonia.Vector](xref:Avalonia.Vector) string.
+
+```csharp
+public Avalonia.Vector3D Parse(string s)
+```
+
+#### Parameters
+
+`s` string
+
+The string.
+
+
+#### Returns
+
+[Avalonia.Vector3D](xref:Avalonia.Vector3D)
+
+The [Avalonia.Vector3D](xref:Avalonia.Vector3D).
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-55e0a513e7"></span>
+
+### Substract Method
+
+Subtracts the second from the first vector
+
+```csharp
+public Avalonia.Vector3D Substract(Avalonia.Vector3D left, Avalonia.Vector3D right)
+```
+
+#### Parameters
+
+`left` [Avalonia.Vector3D](xref:Avalonia.Vector3D)
+
+
+`right` [Avalonia.Vector3D](xref:Avalonia.Vector3D)
+
+
+#### Returns
+
+[Avalonia.Vector3D](xref:Avalonia.Vector3D)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3a9153b9b1"></span>
+
+### ToString Method
+
+```csharp
+public string ToString()
+```
+
+#### Returns
+
+string
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Length](#uid-5bf4055ddf) | Length of the vector. |
+| [X](#uid-2bd9bad449) | No summary available. |
+| [Y](#uid-f879f25929) | No summary available. |
+| [Z](#uid-903f83f3d9) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5bf4055ddf"></span>
+
+### Length Property
+
+Length of the vector.
+
+```csharp
+public double Length { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2bd9bad449"></span>
+
+### X Property
+
+```csharp
+public double X { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f879f25929"></span>
+
+### Y Property
+
+```csharp
+public double Y { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-903f83f3d9"></span>
+
+### Z Property
+
+```csharp
+public double Z { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

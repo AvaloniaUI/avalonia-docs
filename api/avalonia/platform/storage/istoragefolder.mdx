@@ -1,0 +1,201 @@
+---
+title: 'IStorageFolder'
+hide_title: true
+slug: '/avalonia/platform/storage/istoragefolder'
+uid: 'Avalonia.Platform.Storage.IStorageFolder'
+commentId: 'T:Avalonia.Platform.Storage.IStorageFolder'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Platform.Storage'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IStorageFolder Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Platform.Storage</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Manipulates folders and their contents, and provides information about them.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface IStorageFolder
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="istorageitem">IStorageItem</a>, IDisposable
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [CreateFileAsync](#uid-62e9f74535) | Creates a file with specified name as a child of the current storage folder |
+| [CreateFolderAsync](#uid-78abc588e4) | Creates a folder with specified name as a child of the current storage folder |
+| [GetFileAsync](#uid-8327cd9e13) | Gets the file with the specified name from the current folder. |
+| [GetFolderAsync](#uid-99a0212bbc) | Gets the folder with the specified name from the current folder. |
+| [GetItemsAsync](#uid-edd3ed2278) | Gets the files and subfolders in the current folder. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-62e9f74535"></span>
+
+### CreateFileAsync Method
+
+Creates a file with specified name as a child of the current storage folder
+
+```csharp
+public System.Threading.Tasks.Task<Avalonia.Platform.Storage.IStorageFile> CreateFileAsync(string name)
+```
+
+#### Parameters
+
+`name` string
+
+The display name
+
+
+#### Returns
+
+System.Threading.Tasks.Task&lt;[Avalonia.Platform.Storage.IStorageFile](xref:Avalonia.Platform.Storage.IStorageFile)&gt;
+
+A new [Avalonia.Platform.Storage.IStorageFile](xref:Avalonia.Platform.Storage.IStorageFile) pointing to the moved file. If not null, the current storage item becomes invalid
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-78abc588e4"></span>
+
+### CreateFolderAsync Method
+
+Creates a folder with specified name as a child of the current storage folder
+
+```csharp
+public System.Threading.Tasks.Task<Avalonia.Platform.Storage.IStorageFolder> CreateFolderAsync(string name)
+```
+
+#### Parameters
+
+`name` string
+
+The display name
+
+
+#### Returns
+
+System.Threading.Tasks.Task&lt;[Avalonia.Platform.Storage.IStorageFolder](xref:Avalonia.Platform.Storage.IStorageFolder)&gt;
+
+A new [Avalonia.Platform.Storage.IStorageFolder](xref:Avalonia.Platform.Storage.IStorageFolder) pointing to the moved file. If not null, the current storage item becomes invalid
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8327cd9e13"></span>
+
+### GetFileAsync Method
+
+Gets the file with the specified name from the current folder.
+
+```csharp
+public System.Threading.Tasks.Task<Avalonia.Platform.Storage.IStorageFile> GetFileAsync(string name)
+```
+
+#### Parameters
+
+`name` string
+
+The name of the file to get
+
+
+#### Returns
+
+System.Threading.Tasks.Task&lt;[Avalonia.Platform.Storage.IStorageFile](xref:Avalonia.Platform.Storage.IStorageFile)&gt;
+
+When this method completes successfully, it returns the file with the specified name from the current folder.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-99a0212bbc"></span>
+
+### GetFolderAsync Method
+
+Gets the folder with the specified name from the current folder.
+
+```csharp
+public System.Threading.Tasks.Task<Avalonia.Platform.Storage.IStorageFolder> GetFolderAsync(string name)
+```
+
+#### Parameters
+
+`name` string
+
+The name of the folder to get
+
+
+#### Returns
+
+System.Threading.Tasks.Task&lt;[Avalonia.Platform.Storage.IStorageFolder](xref:Avalonia.Platform.Storage.IStorageFolder)&gt;
+
+When this method completes successfully, it returns the folder with the specified name from the current folder.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-edd3ed2278"></span>
+
+### GetItemsAsync Method
+
+Gets the files and subfolders in the current folder.
+
+```csharp
+public System.Collections.Generic.IAsyncEnumerable<Avalonia.Platform.Storage.IStorageItem> GetItemsAsync()
+```
+
+#### Returns
+
+System.Collections.Generic.IAsyncEnumerable&lt;[Avalonia.Platform.Storage.IStorageItem](xref:Avalonia.Platform.Storage.IStorageItem)&gt;
+
+When this method completes successfully, it returns a list of the files and folders in the current folder. Each item in the list is represented by an [Avalonia.Platform.Storage.IStorageItem](xref:Avalonia.Platform.Storage.IStorageItem) implementation object.
+
+
+</section>
+
+</ApiRefPage>
+

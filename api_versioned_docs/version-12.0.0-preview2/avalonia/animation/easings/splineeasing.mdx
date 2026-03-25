@@ -1,0 +1,223 @@
+---
+title: 'SplineEasing'
+hide_title: true
+slug: '/avalonia/animation/easings/splineeasing'
+uid: 'Avalonia.Animation.Easings.SplineEasing'
+commentId: 'T:Avalonia.Animation.Easings.SplineEasing'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Animation.Easings'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">SplineEasing Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Animation.Easings</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Animation/Easings/SplineEasing.cs">SplineEasing.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Eases a [double](xref:System.Double) value
+using a user-defined cubic bezier curve.
+Good for custom easing functions that doesn't quite
+fit with the built-in ones.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class SplineEasing
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="easing">Easing</a> <span className="apiref-page__relation-separator">-&gt;</span> SplineEasing
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [SplineEasing (3 overloads)](#uid-0f909eaaad) | No summary available. |
+
+<span id="uid-0f909eaaad"></span>
+
+### SplineEasing overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b7bdc263a0"></span>
+
+#### SplineEasing Constructor
+
+```csharp
+public SplineEasing()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0c47cdb9b1"></span>
+
+#### SplineEasing Constructor
+
+```csharp
+public SplineEasing(Avalonia.Animation.KeySpline keySpline)
+```
+
+##### Parameters
+
+`keySpline` [Avalonia.Animation.KeySpline](xref:Avalonia.Animation.KeySpline)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-45a5c1434c"></span>
+
+#### SplineEasing Constructor
+
+```csharp
+public SplineEasing(double x1, double y1, double x2, double y2)
+```
+
+##### Parameters
+
+`x1` double
+
+
+`y1` double
+
+
+`x2` double
+
+
+`y2` double
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Ease](#uid-8a9da45a9e) | No summary available. |
+| [Parse](easing.mdx#uid-c851a9a9b7) | Parses a Easing type string. Inherited from [Easing](easing.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8a9da45a9e"></span>
+
+### Ease Method
+
+```csharp
+public double Ease(double progress)
+```
+
+#### Parameters
+
+`progress` double
+
+
+#### Returns
+
+double
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [X1](#uid-5bb247ccb3) | X coordinate of the first control point |
+| [X2](#uid-dbe4bed5ae) | X coordinate of the second control point |
+| [Y1](#uid-5d80ac868e) | Y coordinate of the first control point |
+| [Y2](#uid-bb6b872ad0) | Y coordinate of the second control point |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5bb247ccb3"></span>
+
+### X1 Property
+
+X coordinate of the first control point
+
+```csharp
+public double X1 { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-dbe4bed5ae"></span>
+
+### X2 Property
+
+X coordinate of the second control point
+
+```csharp
+public double X2 { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5d80ac868e"></span>
+
+### Y1 Property
+
+Y coordinate of the first control point
+
+```csharp
+public double Y1 { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-bb6b872ad0"></span>
+
+### Y2 Property
+
+Y coordinate of the second control point
+
+```csharp
+public double Y2 { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

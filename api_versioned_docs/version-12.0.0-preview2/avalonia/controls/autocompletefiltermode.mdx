@@ -1,0 +1,319 @@
+---
+title: 'AutoCompleteFilterMode'
+hide_title: true
+slug: '/avalonia/controls/autocompletefiltermode'
+uid: 'Avalonia.Controls.AutoCompleteFilterMode'
+commentId: 'T:Avalonia.Controls.AutoCompleteFilterMode'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Enum'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">AutoCompleteFilterMode Enum</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Specifies how text in the text box portion of the [Avalonia.Controls.AutoCompleteBox](xref:Avalonia.Controls.AutoCompleteBox)
+control is used to filter items specified by the [Avalonia.Controls.AutoCompleteBox.ItemsSource](xref:Avalonia.Controls.AutoCompleteBox.ItemsSource)
+property for display in the drop-down.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public enum AutoCompleteFilterMode
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Enum <span className="apiref-page__relation-separator">-&gt;</span> AutoCompleteFilterMode
+</div>
+</div>
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [Contains](#uid-566823812e) | Specifies a culture-sensitive, case-insensitive filter where the returned items contain the specified text. |
+| [ContainsCaseSensitive](#uid-c69acc81d7) | Specifies a culture-sensitive, case-sensitive filter where the returned items contain the specified text. |
+| [ContainsOrdinal](#uid-5510a05293) | Specifies an ordinal, case-insensitive filter where the returned items contain the specified text. |
+| [ContainsOrdinalCaseSensitive](#uid-f610952423) | Specifies an ordinal, case-sensitive filter where the returned items contain the specified text. |
+| [Custom](#uid-382d28989d) | Specifies that a custom filter is used. This mode is used when the [Avalonia.Controls.AutoCompleteBox.TextFilter](xref:Avalonia.Controls.AutoCompleteBox.TextFilter) or [Avalonia.Controls.AutoCompleteBox.ItemFilter](xref:Avalonia.Controls.AutoCompleteBox.ItemFilter) properties are set. |
+| [Equals](#uid-cb0e603473) | Specifies a culture-sensitive, case-insensitive filter where the returned items equal the specified text. The filter uses the [string.Equals(string,StringComparison)](xref:System.String.Equals%28System.String%2CSystem.StringComparison%29) method, specifying [StringComparer.CurrentCultureIgnoreCase](xref:System.StringComparer.CurrentCultureIgnoreCase) as the search comparison criteria. |
+| [EqualsCaseSensitive](#uid-b1473d7f1a) | Specifies a culture-sensitive, case-sensitive filter where the returned items equal the specified text. The filter uses the [string.Equals(string,StringComparison)](xref:System.String.Equals%28System.String%2CSystem.StringComparison%29) method, specifying [StringComparer.CurrentCulture](xref:System.StringComparer.CurrentCulture) as the string comparison criteria. |
+| [EqualsOrdinal](#uid-c976f46117) | Specifies an ordinal, case-insensitive filter where the returned items equal the specified text. The filter uses the [string.Equals(string,StringComparison)](xref:System.String.Equals%28System.String%2CSystem.StringComparison%29) method, specifying [StringComparer.OrdinalIgnoreCase](xref:System.StringComparer.OrdinalIgnoreCase) as the string comparison criteria. |
+| [EqualsOrdinalCaseSensitive](#uid-68bac69866) | Specifies an ordinal, case-sensitive filter where the returned items equal the specified text. The filter uses the [string.Equals(string,StringComparison)](xref:System.String.Equals%28System.String%2CSystem.StringComparison%29) method, specifying [StringComparer.Ordinal](xref:System.StringComparer.Ordinal) as the string comparison criteria. |
+| [None](#uid-fc81838c3d) | Specifies that no filter is used. All items are returned. |
+| [StartsWith](#uid-e5ca991c19) | Specifies a culture-sensitive, case-insensitive filter where the returned items start with the specified text. The filter uses the [string.StartsWith(string,StringComparison)](xref:System.String.StartsWith%28System.String%2CSystem.StringComparison%29) method, specifying [StringComparer.CurrentCultureIgnoreCase](xref:System.StringComparer.CurrentCultureIgnoreCase) as the string comparison criteria. |
+| [StartsWithCaseSensitive](#uid-246b119019) | Specifies a culture-sensitive, case-sensitive filter where the returned items start with the specified text. The filter uses the [string.StartsWith(string,StringComparison)](xref:System.String.StartsWith%28System.String%2CSystem.StringComparison%29) method, specifying [StringComparer.CurrentCulture](xref:System.StringComparer.CurrentCulture) as the string comparison criteria. |
+| [StartsWithOrdinal](#uid-7c744ddecb) | Specifies an ordinal, case-insensitive filter where the returned items start with the specified text. The filter uses the [string.StartsWith(string,StringComparison)](xref:System.String.StartsWith%28System.String%2CSystem.StringComparison%29) method, specifying [StringComparer.OrdinalIgnoreCase](xref:System.StringComparer.OrdinalIgnoreCase) as the string comparison criteria. |
+| [StartsWithOrdinalCaseSensitive](#uid-8194c4b82f) | Specifies an ordinal, case-sensitive filter where the returned items start with the specified text. The filter uses the [string.StartsWith(string,StringComparison)](xref:System.String.StartsWith%28System.String%2CSystem.StringComparison%29) method, specifying [StringComparer.Ordinal](xref:System.StringComparer.Ordinal) as the string comparison criteria. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-566823812e"></span>
+
+### Contains Field
+
+Specifies a culture-sensitive, case-insensitive filter where the
+returned items contain the specified text.
+
+```csharp
+public Avalonia.Controls.AutoCompleteFilterMode Contains
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c69acc81d7"></span>
+
+### ContainsCaseSensitive Field
+
+Specifies a culture-sensitive, case-sensitive filter where the
+returned items contain the specified text.
+
+```csharp
+public Avalonia.Controls.AutoCompleteFilterMode ContainsCaseSensitive
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5510a05293"></span>
+
+### ContainsOrdinal Field
+
+Specifies an ordinal, case-insensitive filter where the returned
+items contain the specified text.
+
+```csharp
+public Avalonia.Controls.AutoCompleteFilterMode ContainsOrdinal
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f610952423"></span>
+
+### ContainsOrdinalCaseSensitive Field
+
+Specifies an ordinal, case-sensitive filter where the returned items
+contain the specified text.
+
+```csharp
+public Avalonia.Controls.AutoCompleteFilterMode ContainsOrdinalCaseSensitive
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-382d28989d"></span>
+
+### Custom Field
+
+Specifies that a custom filter is used. This mode is used when the
+[Avalonia.Controls.AutoCompleteBox.TextFilter](xref:Avalonia.Controls.AutoCompleteBox.TextFilter) or [Avalonia.Controls.AutoCompleteBox.ItemFilter](xref:Avalonia.Controls.AutoCompleteBox.ItemFilter)
+properties are set.
+
+```csharp
+public Avalonia.Controls.AutoCompleteFilterMode Custom
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-cb0e603473"></span>
+
+### Equals Field
+
+Specifies a culture-sensitive, case-insensitive filter where the
+returned items equal the specified text. The filter uses the
+[string.Equals(string,StringComparison)](xref:System.String.Equals%28System.String%2CSystem.StringComparison%29)
+method, specifying
+[StringComparer.CurrentCultureIgnoreCase](xref:System.StringComparer.CurrentCultureIgnoreCase) as
+the search comparison criteria.
+
+```csharp
+public Avalonia.Controls.AutoCompleteFilterMode Equals
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b1473d7f1a"></span>
+
+### EqualsCaseSensitive Field
+
+Specifies a culture-sensitive, case-sensitive filter where the
+returned items equal the specified text. The filter uses the
+[string.Equals(string,StringComparison)](xref:System.String.Equals%28System.String%2CSystem.StringComparison%29)
+method, specifying
+[StringComparer.CurrentCulture](xref:System.StringComparer.CurrentCulture) as the string
+comparison criteria.
+
+```csharp
+public Avalonia.Controls.AutoCompleteFilterMode EqualsCaseSensitive
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c976f46117"></span>
+
+### EqualsOrdinal Field
+
+Specifies an ordinal, case-insensitive filter where the returned
+items equal the specified text. The filter uses the
+[string.Equals(string,StringComparison)](xref:System.String.Equals%28System.String%2CSystem.StringComparison%29)
+method, specifying
+[StringComparer.OrdinalIgnoreCase](xref:System.StringComparer.OrdinalIgnoreCase) as the
+string comparison criteria.
+
+```csharp
+public Avalonia.Controls.AutoCompleteFilterMode EqualsOrdinal
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-68bac69866"></span>
+
+### EqualsOrdinalCaseSensitive Field
+
+Specifies an ordinal, case-sensitive filter where the returned items
+equal the specified text. The filter uses the
+[string.Equals(string,StringComparison)](xref:System.String.Equals%28System.String%2CSystem.StringComparison%29)
+method, specifying [StringComparer.Ordinal](xref:System.StringComparer.Ordinal) as
+the string comparison criteria.
+
+```csharp
+public Avalonia.Controls.AutoCompleteFilterMode EqualsOrdinalCaseSensitive
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-fc81838c3d"></span>
+
+### None Field
+
+Specifies that no filter is used. All items are returned.
+
+```csharp
+public Avalonia.Controls.AutoCompleteFilterMode None
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e5ca991c19"></span>
+
+### StartsWith Field
+
+Specifies a culture-sensitive, case-insensitive filter where the
+returned items start with the specified text. The filter uses the
+[string.StartsWith(string,StringComparison)](xref:System.String.StartsWith%28System.String%2CSystem.StringComparison%29)
+method, specifying
+[StringComparer.CurrentCultureIgnoreCase](xref:System.StringComparer.CurrentCultureIgnoreCase) as
+the string comparison criteria.
+
+```csharp
+public Avalonia.Controls.AutoCompleteFilterMode StartsWith
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-246b119019"></span>
+
+### StartsWithCaseSensitive Field
+
+Specifies a culture-sensitive, case-sensitive filter where the
+returned items start with the specified text. The filter uses the
+[string.StartsWith(string,StringComparison)](xref:System.String.StartsWith%28System.String%2CSystem.StringComparison%29)
+method, specifying
+[StringComparer.CurrentCulture](xref:System.StringComparer.CurrentCulture) as the string
+comparison criteria.
+
+```csharp
+public Avalonia.Controls.AutoCompleteFilterMode StartsWithCaseSensitive
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7c744ddecb"></span>
+
+### StartsWithOrdinal Field
+
+Specifies an ordinal, case-insensitive filter where the returned
+items start with the specified text. The filter uses the
+[string.StartsWith(string,StringComparison)](xref:System.String.StartsWith%28System.String%2CSystem.StringComparison%29)
+method, specifying
+[StringComparer.OrdinalIgnoreCase](xref:System.StringComparer.OrdinalIgnoreCase) as the
+string comparison criteria.
+
+```csharp
+public Avalonia.Controls.AutoCompleteFilterMode StartsWithOrdinal
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8194c4b82f"></span>
+
+### StartsWithOrdinalCaseSensitive Field
+
+Specifies an ordinal, case-sensitive filter where the returned items
+start with the specified text. The filter uses the
+[string.StartsWith(string,StringComparison)](xref:System.String.StartsWith%28System.String%2CSystem.StringComparison%29)
+method, specifying [StringComparer.Ordinal](xref:System.StringComparer.Ordinal) as
+the string comparison criteria.
+
+```csharp
+public Avalonia.Controls.AutoCompleteFilterMode StartsWithOrdinalCaseSensitive
+```
+
+</section>
+
+</ApiRefPage>
+

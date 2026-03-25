@@ -1,0 +1,204 @@
+---
+title: 'TransformOperations'
+hide_title: true
+slug: '/avalonia/media/transformation/transformoperations'
+uid: 'Avalonia.Media.Transformation.TransformOperations'
+commentId: 'T:Avalonia.Media.Transformation.TransformOperations'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Media.Transformation'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">TransformOperations Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Media.Transformation</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Media/Transformation/TransformOperations.cs">TransformOperations.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Contains a list of [Avalonia.Media.Transformation.TransformOperation](xref:Avalonia.Media.Transformation.TransformOperation) that represent primitive transforms that will be
+applied in declared order.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class TransformOperations
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> TransformOperations
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="../itransform">ITransform</a>
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [CreateBuilder](#uid-9c8955df67) | No summary available. |
+| [Interpolate](#uid-632f37d051) | No summary available. |
+| [Parse](#uid-e9b2c85f27) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9c8955df67"></span>
+
+### CreateBuilder Method
+
+```csharp
+public Avalonia.Media.Transformation.TransformOperations.Builder CreateBuilder(int capacity)
+```
+
+#### Parameters
+
+`capacity` int
+
+
+#### Returns
+
+[Avalonia.Media.Transformation.TransformOperations.Builder](xref:Avalonia.Media.Transformation.TransformOperations.Builder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-632f37d051"></span>
+
+### Interpolate Method
+
+```csharp
+public Avalonia.Media.Transformation.TransformOperations Interpolate(Avalonia.Media.Transformation.TransformOperations from, Avalonia.Media.Transformation.TransformOperations to, double progress)
+```
+
+#### Parameters
+
+`from` [Avalonia.Media.Transformation.TransformOperations](xref:Avalonia.Media.Transformation.TransformOperations)
+
+
+`to` [Avalonia.Media.Transformation.TransformOperations](xref:Avalonia.Media.Transformation.TransformOperations)
+
+
+`progress` double
+
+
+#### Returns
+
+[Avalonia.Media.Transformation.TransformOperations](xref:Avalonia.Media.Transformation.TransformOperations)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e9b2c85f27"></span>
+
+### Parse Method
+
+```csharp
+public Avalonia.Media.Transformation.TransformOperations Parse(string s)
+```
+
+#### Parameters
+
+`s` string
+
+
+#### Returns
+
+[Avalonia.Media.Transformation.TransformOperations](xref:Avalonia.Media.Transformation.TransformOperations)
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Identity](#uid-959903cf15) | No summary available. |
+| [IsIdentity](#uid-c8a4a1bc7b) | Returns whether all operations combined together produce the identity matrix. |
+| [Operations](#uid-e6f64d26d7) | No summary available. |
+| [Value](#uid-2d71d4aa67) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-959903cf15"></span>
+
+### Identity Property
+
+```csharp
+public Avalonia.Media.Transformation.TransformOperations Identity { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c8a4a1bc7b"></span>
+
+### IsIdentity Property
+
+Returns whether all operations combined together produce the identity matrix.
+
+```csharp
+public bool IsIdentity { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e6f64d26d7"></span>
+
+### Operations Property
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<Avalonia.Media.Transformation.TransformOperation> Operations { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2d71d4aa67"></span>
+
+### Value Property
+
+```csharp
+public Avalonia.Matrix Value { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

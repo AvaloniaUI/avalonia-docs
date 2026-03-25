@@ -1,0 +1,540 @@
+---
+title: 'BindingNotification'
+hide_title: true
+slug: '/avalonia/data/bindingnotification'
+uid: 'Avalonia.Data.BindingNotification'
+commentId: 'T:Avalonia.Data.BindingNotification'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Data'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">BindingNotification Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Data</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Data/BindingNotification.cs">BindingNotification.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Represents a binding notification that can be a valid binding value, or a binding or
+data validation error.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class BindingNotification
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> BindingNotification
+</div>
+</div>
+
+## Remarks
+
+This class is very similar to [Avalonia.Data.BindingValue&lt;T&gt;](xref:Avalonia.Data.BindingValue%601), but where [Avalonia.Data.BindingValue&lt;T&gt;](xref:Avalonia.Data.BindingValue%601)
+is used by typed bindings, this class is used to hold binding and data validation errors in
+untyped bindings. As Avalonia moves towards using typed bindings by default we may want to remove
+this class.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [BindingNotification (3 overloads)](#uid-7b71cd0a9f) | Initializes a new instance of the [Avalonia.Data.BindingNotification](xref:Avalonia.Data.BindingNotification) class. |
+
+<span id="uid-7b71cd0a9f"></span>
+
+### BindingNotification overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a776052f35"></span>
+
+#### BindingNotification Constructor
+
+Initializes a new instance of the [Avalonia.Data.BindingNotification](xref:Avalonia.Data.BindingNotification) class.
+
+```csharp
+public BindingNotification(Exception error, Avalonia.Data.BindingErrorType errorType)
+```
+
+##### Parameters
+
+`error` Exception
+
+The binding error.
+
+
+`errorType` [Avalonia.Data.BindingErrorType](xref:Avalonia.Data.BindingErrorType)
+
+The type of the binding error.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5cdc575f4a"></span>
+
+#### BindingNotification Constructor
+
+Initializes a new instance of the [Avalonia.Data.BindingNotification](xref:Avalonia.Data.BindingNotification) class.
+
+```csharp
+public BindingNotification(Exception error, Avalonia.Data.BindingErrorType errorType, object fallbackValue)
+```
+
+##### Parameters
+
+`error` Exception
+
+The binding error.
+
+
+`errorType` [Avalonia.Data.BindingErrorType](xref:Avalonia.Data.BindingErrorType)
+
+The type of the binding error.
+
+
+`fallbackValue` object
+
+The fallback value.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e6706abb64"></span>
+
+#### BindingNotification Constructor
+
+Initializes a new instance of the [Avalonia.Data.BindingNotification](xref:Avalonia.Data.BindingNotification) class.
+
+```csharp
+public BindingNotification(object value)
+```
+
+##### Parameters
+
+`value` object
+
+The binding value.
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [AddError](#uid-82f7cf32d6) | Adds an error to the [Avalonia.Data.BindingNotification](xref:Avalonia.Data.BindingNotification). |
+| [ClearValue](#uid-12c73d840e) | Removes the [Avalonia.Data.BindingNotification.Value](xref:Avalonia.Data.BindingNotification.Value) and makes [Avalonia.Data.BindingNotification.HasValue](xref:Avalonia.Data.BindingNotification.HasValue) return null. |
+| [Equals (2 overloads)](#uid-440cbded4f) | Compares a value to an instance of [Avalonia.Data.BindingNotification](xref:Avalonia.Data.BindingNotification) for equality. |
+| [ExtractError](#uid-19fdf147ee) | Gets an exception from an object that may be a [Avalonia.Data.BindingNotification](xref:Avalonia.Data.BindingNotification). |
+| [ExtractValue](#uid-2bbe8d0e66) | Gets a value from an object that may be a [Avalonia.Data.BindingNotification](xref:Avalonia.Data.BindingNotification). |
+| [GetHashCode](#uid-4b886034fc) | Gets the hash code for this instance of [Avalonia.Data.BindingNotification](xref:Avalonia.Data.BindingNotification). |
+| [SetValue](#uid-534c7b22d4) | Sets the [Avalonia.Data.BindingNotification.Value](xref:Avalonia.Data.BindingNotification.Value). |
+| [ToString](#uid-1c7fb2a6a9) | No summary available. |
+| [UpdateValue](#uid-6fc39f5e3b) | Updates the value of an object that may be a [Avalonia.Data.BindingNotification](xref:Avalonia.Data.BindingNotification). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-82f7cf32d6"></span>
+
+### AddError Method
+
+Adds an error to the [Avalonia.Data.BindingNotification](xref:Avalonia.Data.BindingNotification).
+
+```csharp
+public void AddError(Exception e, Avalonia.Data.BindingErrorType type)
+```
+
+#### Parameters
+
+`e` Exception
+
+The error to add.
+
+
+`type` [Avalonia.Data.BindingErrorType](xref:Avalonia.Data.BindingErrorType)
+
+The error type.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-12c73d840e"></span>
+
+### ClearValue Method
+
+Removes the [Avalonia.Data.BindingNotification.Value](xref:Avalonia.Data.BindingNotification.Value) and makes [Avalonia.Data.BindingNotification.HasValue](xref:Avalonia.Data.BindingNotification.HasValue) return null.
+
+```csharp
+public void ClearValue()
+```
+
+</section>
+
+<span id="uid-440cbded4f"></span>
+
+### Equals overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1778213b8c"></span>
+
+#### Equals Method
+
+Compares a value to an instance of [Avalonia.Data.BindingNotification](xref:Avalonia.Data.BindingNotification) for equality.
+
+```csharp
+public bool Equals(Avalonia.Data.BindingNotification other)
+```
+
+##### Parameters
+
+`other` [Avalonia.Data.BindingNotification](xref:Avalonia.Data.BindingNotification)
+
+The value to compare.
+
+
+##### Returns
+
+bool
+
+true if the two instances are equal; otherwise false.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-72aee28829"></span>
+
+#### Equals Method
+
+Compares an object to an instance of [Avalonia.Data.BindingNotification](xref:Avalonia.Data.BindingNotification) for equality.
+
+```csharp
+public bool Equals(object obj)
+```
+
+##### Parameters
+
+`obj` object
+
+The object to compare.
+
+
+##### Returns
+
+bool
+
+true if the two instances are equal; otherwise false.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-19fdf147ee"></span>
+
+### ExtractError Method
+
+Gets an exception from an object that may be a [Avalonia.Data.BindingNotification](xref:Avalonia.Data.BindingNotification).
+
+```csharp
+public object ExtractError(object o)
+```
+
+#### Parameters
+
+`o` object
+
+The object.
+
+
+#### Returns
+
+object
+
+The value.
+
+
+#### Remarks
+
+If `o` is a [Avalonia.Data.BindingNotification](xref:Avalonia.Data.BindingNotification) then returns the binding
+notification's [Avalonia.Data.BindingNotification.Error](xref:Avalonia.Data.BindingNotification.Error). If not, returns the object unchanged.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2bbe8d0e66"></span>
+
+### ExtractValue Method
+
+Gets a value from an object that may be a [Avalonia.Data.BindingNotification](xref:Avalonia.Data.BindingNotification).
+
+```csharp
+public object ExtractValue(object o)
+```
+
+#### Parameters
+
+`o` object
+
+The object.
+
+
+#### Returns
+
+object
+
+The value.
+
+
+#### Remarks
+
+If `o` is a [Avalonia.Data.BindingNotification](xref:Avalonia.Data.BindingNotification) then returns the binding
+notification's [Avalonia.Data.BindingNotification.Value](xref:Avalonia.Data.BindingNotification.Value). If not, returns the object unchanged.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4b886034fc"></span>
+
+### GetHashCode Method
+
+Gets the hash code for this instance of [Avalonia.Data.BindingNotification](xref:Avalonia.Data.BindingNotification).
+
+```csharp
+public int GetHashCode()
+```
+
+#### Returns
+
+int
+
+A hash code.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-534c7b22d4"></span>
+
+### SetValue Method
+
+Sets the [Avalonia.Data.BindingNotification.Value](xref:Avalonia.Data.BindingNotification.Value).
+
+```csharp
+public void SetValue(object value)
+```
+
+#### Parameters
+
+`value` object
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1c7fb2a6a9"></span>
+
+### ToString Method
+
+```csharp
+public string ToString()
+```
+
+#### Returns
+
+string
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6fc39f5e3b"></span>
+
+### UpdateValue Method
+
+Updates the value of an object that may be a [Avalonia.Data.BindingNotification](xref:Avalonia.Data.BindingNotification).
+
+```csharp
+public object UpdateValue(object o, object value)
+```
+
+#### Parameters
+
+`o` object
+
+The object that may be a binding notification.
+
+
+`value` object
+
+The new value.
+
+
+#### Returns
+
+object
+
+The updated binding notification if `o` is a binding notification;
+otherwise `value`.
+
+
+#### Remarks
+
+If `o` is a [Avalonia.Data.BindingNotification](xref:Avalonia.Data.BindingNotification) then sets its value
+to `value`. If `value` is a
+[Avalonia.Data.BindingNotification](xref:Avalonia.Data.BindingNotification) then the value will first be extracted.
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Error](#uid-0d48ab39f1) | Gets the error that occurred on the source, if any. |
+| [ErrorType](#uid-2739077871) | Gets the type of error that [Avalonia.Data.BindingNotification.Error](xref:Avalonia.Data.BindingNotification.Error) represents, if any. |
+| [HasValue](#uid-032cbb332f) | Gets a value indicating whether [Avalonia.Data.BindingNotification.Value](xref:Avalonia.Data.BindingNotification.Value) should be pushed to the target. |
+| [Value](#uid-d6e17b8825) | Gets the value that should be passed to the target when [Avalonia.Data.BindingNotification.HasValue](xref:Avalonia.Data.BindingNotification.HasValue) is true. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0d48ab39f1"></span>
+
+### Error Property
+
+Gets the error that occurred on the source, if any.
+
+```csharp
+public Exception Error { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2739077871"></span>
+
+### ErrorType Property
+
+Gets the type of error that [Avalonia.Data.BindingNotification.Error](xref:Avalonia.Data.BindingNotification.Error) represents, if any.
+
+```csharp
+public Avalonia.Data.BindingErrorType ErrorType { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-032cbb332f"></span>
+
+### HasValue Property
+
+Gets a value indicating whether [Avalonia.Data.BindingNotification.Value](xref:Avalonia.Data.BindingNotification.Value) should be pushed to the target.
+
+```csharp
+public bool HasValue { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d6e17b8825"></span>
+
+### Value Property
+
+Gets the value that should be passed to the target when [Avalonia.Data.BindingNotification.HasValue](xref:Avalonia.Data.BindingNotification.HasValue)
+is true.
+
+```csharp
+public object Value { get; set; }
+```
+
+#### Remarks
+
+If this property is read when [Avalonia.Data.BindingNotification.HasValue](xref:Avalonia.Data.BindingNotification.HasValue) is false then it will return
+[Avalonia.AvaloniaProperty.UnsetValue](xref:Avalonia.AvaloniaProperty.UnsetValue).
+
+</section>
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [Null](#uid-68b23b28e5) | A binding notification representing the null value. |
+| [UnsetValue](#uid-223bd19879) | A binding notification representing [Avalonia.AvaloniaProperty.UnsetValue](xref:Avalonia.AvaloniaProperty.UnsetValue). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-68b23b28e5"></span>
+
+### Null Field
+
+A binding notification representing the null value.
+
+```csharp
+public Avalonia.Data.BindingNotification Null
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-223bd19879"></span>
+
+### UnsetValue Field
+
+A binding notification representing [Avalonia.AvaloniaProperty.UnsetValue](xref:Avalonia.AvaloniaProperty.UnsetValue).
+
+```csharp
+public Avalonia.Data.BindingNotification UnsetValue
+```
+
+</section>
+
+</ApiRefPage>
+

@@ -1,0 +1,375 @@
+---
+title: 'FontFamily'
+hide_title: true
+slug: '/avalonia/media/fontfamily'
+uid: 'Avalonia.Media.FontFamily'
+commentId: 'T:Avalonia.Media.FontFamily'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Media'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">FontFamily Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Media</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Media/FontFamily.cs">FontFamily.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class FontFamily
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> FontFamily
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [FontFamily (2 overloads)](#uid-0e18b52395) | Initializes a new instance of the [Avalonia.Media.FontFamily](xref:Avalonia.Media.FontFamily) class. |
+
+<span id="uid-0e18b52395"></span>
+
+### FontFamily overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3185eb82cc"></span>
+
+#### FontFamily Constructor
+
+Initializes a new instance of the [Avalonia.Media.FontFamily](xref:Avalonia.Media.FontFamily) class.
+
+```csharp
+public FontFamily(string name)
+```
+
+##### Parameters
+
+`name` string
+
+The name of the [Avalonia.Media.FontFamily](xref:Avalonia.Media.FontFamily).
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b5b41ea22d"></span>
+
+#### FontFamily Constructor
+
+Initializes a new instance of the [Avalonia.Media.FontFamily](xref:Avalonia.Media.FontFamily) class.
+
+```csharp
+public FontFamily(Uri baseUri, string name)
+```
+
+##### Parameters
+
+`baseUri` Uri
+
+Specifies the base uri that is used to resolve font family assets.
+
+
+`name` string
+
+The name of the [Avalonia.Media.FontFamily](xref:Avalonia.Media.FontFamily).
+
+
+##### Exceptions
+
+- [Base uri must be an absolute uri.](xref:System.ArgumentException)
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Equals](#uid-cd319f701c) | No summary available. |
+| [GetHashCode](#uid-74ebb27863) | Returns a hash code for this instance. |
+| [Parse (2 overloads)](#uid-4a007a1a18) | Parses a [Avalonia.Media.FontFamily](xref:Avalonia.Media.FontFamily) string. |
+| [ToString](#uid-95520d9eee) | Returns a [string](xref:System.String) that represents this instance. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-cd319f701c"></span>
+
+### Equals Method
+
+```csharp
+public bool Equals(object obj)
+```
+
+#### Parameters
+
+`obj` object
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-74ebb27863"></span>
+
+### GetHashCode Method
+
+Returns a hash code for this instance.
+
+```csharp
+public int GetHashCode()
+```
+
+#### Returns
+
+int
+
+A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
+
+
+</section>
+
+<span id="uid-4a007a1a18"></span>
+
+### Parse overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-fe03a4251b"></span>
+
+#### Parse Method
+
+Parses a [Avalonia.Media.FontFamily](xref:Avalonia.Media.FontFamily) string.
+
+```csharp
+public Avalonia.Media.FontFamily Parse(string s)
+```
+
+##### Parameters
+
+`s` string
+
+The [Avalonia.Media.FontFamily](xref:Avalonia.Media.FontFamily) string.
+
+
+##### Returns
+
+[Avalonia.Media.FontFamily](xref:Avalonia.Media.FontFamily)
+
+
+##### Exceptions
+
+- [Specified family is not supported.](xref:System.ArgumentException)
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-36c34aa134"></span>
+
+#### Parse Method
+
+Parses a [Avalonia.Media.FontFamily](xref:Avalonia.Media.FontFamily) string.
+
+```csharp
+public Avalonia.Media.FontFamily Parse(string s, Uri baseUri)
+```
+
+##### Parameters
+
+`s` string
+
+The [Avalonia.Media.FontFamily](xref:Avalonia.Media.FontFamily) string.
+
+
+`baseUri` Uri
+
+Specifies the base uri that is used to resolve font family assets.
+
+
+##### Returns
+
+[Avalonia.Media.FontFamily](xref:Avalonia.Media.FontFamily)
+
+
+##### Exceptions
+
+- [Specified family is not supported.](xref:System.ArgumentException)
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-95520d9eee"></span>
+
+### ToString Method
+
+Returns a [string](xref:System.String) that represents this instance.
+
+```csharp
+public string ToString()
+```
+
+#### Returns
+
+string
+
+A [string](xref:System.String) that represents this instance.
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Default](#uid-88bc13dd98) | Represents the default font family |
+| [FamilyNames](#uid-586595b1b2) | Gets the family names. |
+| [FamilyTypefaces](#uid-550fe9244b) | Gets the typefaces for this font family. |
+| [Key](#uid-3ef323ae79) | Gets the key for associated assets. |
+| [Name](#uid-9c49d5f7c1) | Gets the primary family name of the font family. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-88bc13dd98"></span>
+
+### Default Property
+
+Represents the default font family
+
+```csharp
+public Avalonia.Media.FontFamily Default { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-586595b1b2"></span>
+
+### FamilyNames Property
+
+Gets the family names.
+
+```csharp
+public Avalonia.Media.Fonts.FamilyNameCollection FamilyNames { get; set; }
+```
+
+#### Value
+
+The family familyNames.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-550fe9244b"></span>
+
+### FamilyTypefaces Property
+
+Gets the typefaces for this font family.
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<Avalonia.Media.Typeface> FamilyTypefaces { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3ef323ae79"></span>
+
+### Key Property
+
+Gets the key for associated assets.
+
+```csharp
+public Avalonia.Media.Fonts.FontFamilyKey Key { get; set; }
+```
+
+#### Value
+
+The family key.
+
+
+#### Remarks
+
+Key is only used for custom fonts.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9c49d5f7c1"></span>
+
+### Name Property
+
+Gets the primary family name of the font family.
+
+```csharp
+public string Name { get; set; }
+```
+
+#### Value
+
+The primary name of the font family.
+
+
+</section>
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [DefaultFontFamilyName](#uid-4d9d008692) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4d9d008692"></span>
+
+### DefaultFontFamilyName Field
+
+```csharp
+public string DefaultFontFamilyName
+```
+
+</section>
+
+</ApiRefPage>
+

@@ -1,0 +1,184 @@
+---
+title: 'EglPlatformGraphics'
+hide_title: true
+slug: '/avalonia/opengl/egl/eglplatformgraphics'
+uid: 'Avalonia.OpenGL.Egl.EglPlatformGraphics'
+commentId: 'T:Avalonia.OpenGL.Egl.EglPlatformGraphics'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.OpenGL'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.OpenGL.Egl'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">EglPlatformGraphics Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.OpenGL.Egl</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.OpenGL</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.OpenGL/Egl/EglPlatformGraphics.cs">EglPlatformGraphics.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class EglPlatformGraphics
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> EglPlatformGraphics
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="../../platform/iplatformgraphics">IPlatformGraphics</a>
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [EglPlatformGraphics](#uid-35961b55a1) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-35961b55a1"></span>
+
+### EglPlatformGraphics Constructor
+
+```csharp
+public EglPlatformGraphics(Avalonia.OpenGL.Egl.EglDisplay display)
+```
+
+#### Parameters
+
+`display` [Avalonia.OpenGL.Egl.EglDisplay](xref:Avalonia.OpenGL.Egl.EglDisplay)
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [CreateContext](#uid-e3a4d7e231) | No summary available. |
+| [GetSharedContext](#uid-840026b33f) | No summary available. |
+| [TryCreate (2 overloads)](#uid-aea1f7c342) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e3a4d7e231"></span>
+
+### CreateContext Method
+
+```csharp
+public Avalonia.Platform.IPlatformGraphicsContext CreateContext()
+```
+
+#### Returns
+
+[Avalonia.Platform.IPlatformGraphicsContext](xref:Avalonia.Platform.IPlatformGraphicsContext)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-840026b33f"></span>
+
+### GetSharedContext Method
+
+```csharp
+public Avalonia.Platform.IPlatformGraphicsContext GetSharedContext()
+```
+
+#### Returns
+
+[Avalonia.Platform.IPlatformGraphicsContext](xref:Avalonia.Platform.IPlatformGraphicsContext)
+
+
+</section>
+
+<span id="uid-aea1f7c342"></span>
+
+### TryCreate overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-28cde72245"></span>
+
+#### TryCreate Method
+
+```csharp
+public Avalonia.OpenGL.Egl.EglPlatformGraphics TryCreate()
+```
+
+##### Returns
+
+[Avalonia.OpenGL.Egl.EglPlatformGraphics](xref:Avalonia.OpenGL.Egl.EglPlatformGraphics)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4c3664dc55"></span>
+
+#### TryCreate Method
+
+```csharp
+public Avalonia.OpenGL.Egl.EglPlatformGraphics TryCreate(Func<Avalonia.OpenGL.Egl.EglDisplay> displayFactory)
+```
+
+##### Parameters
+
+`displayFactory` Func&lt;[Avalonia.OpenGL.Egl.EglDisplay](xref:Avalonia.OpenGL.Egl.EglDisplay)&gt;
+
+
+##### Returns
+
+[Avalonia.OpenGL.Egl.EglPlatformGraphics](xref:Avalonia.OpenGL.Egl.EglPlatformGraphics)
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [UsesSharedContext](#uid-eb90df1f57) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-eb90df1f57"></span>
+
+### UsesSharedContext Property
+
+```csharp
+public bool UsesSharedContext { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

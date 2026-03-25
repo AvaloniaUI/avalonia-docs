@@ -1,0 +1,173 @@
+---
+title: 'DefaultMenuInteractionHandler'
+hide_title: true
+slug: '/avalonia/controls/platform/defaultmenuinteractionhandler'
+uid: 'Avalonia.Controls.Platform.DefaultMenuInteractionHandler'
+commentId: 'T:Avalonia.Controls.Platform.DefaultMenuInteractionHandler'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Platform'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">DefaultMenuInteractionHandler Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Platform</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Controls/Platform/DefaultMenuInteractionHandler.cs">DefaultMenuInteractionHandler.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Provides the default keyboard and pointer interaction for menus.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class DefaultMenuInteractionHandler
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> DefaultMenuInteractionHandler
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="imenuinteractionhandler">IMenuInteractionHandler</a>
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [DefaultMenuInteractionHandler (2 overloads)](#uid-2bddbe8aee) | No summary available. |
+
+<span id="uid-2bddbe8aee"></span>
+
+### DefaultMenuInteractionHandler overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0d7129217d"></span>
+
+#### DefaultMenuInteractionHandler Constructor
+
+```csharp
+public DefaultMenuInteractionHandler(bool isContextMenu)
+```
+
+##### Parameters
+
+`isContextMenu` bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-cdeea65b22"></span>
+
+#### DefaultMenuInteractionHandler Constructor
+
+```csharp
+public DefaultMenuInteractionHandler(bool isContextMenu, Avalonia.Input.IInputManager inputManager, Action<Action, TimeSpan> delayRun)
+```
+
+##### Parameters
+
+`isContextMenu` bool
+
+
+`inputManager` [Avalonia.Input.IInputManager](xref:Avalonia.Input.IInputManager)
+
+
+`delayRun` Action&lt;Action, TimeSpan&gt;
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Attach](#uid-66d9c76ad1) | No summary available. |
+| [Detach](#uid-78d4c8f416) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-66d9c76ad1"></span>
+
+### Attach Method
+
+```csharp
+public void Attach(Avalonia.Controls.MenuBase menu)
+```
+
+#### Parameters
+
+`menu` [Avalonia.Controls.MenuBase](xref:Avalonia.Controls.MenuBase)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-78d4c8f416"></span>
+
+### Detach Method
+
+```csharp
+public void Detach(Avalonia.Controls.MenuBase menu)
+```
+
+#### Parameters
+
+`menu` [Avalonia.Controls.MenuBase](xref:Avalonia.Controls.MenuBase)
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [MenuShowDelay](#uid-d632ead1d1) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d632ead1d1"></span>
+
+### MenuShowDelay Property
+
+```csharp
+public TimeSpan MenuShowDelay { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

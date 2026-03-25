@@ -1,0 +1,673 @@
+---
+title: 'NativeWebDialog'
+hide_title: true
+slug: '/avalonia/controls/nativewebdialog'
+uid: 'Avalonia.Controls.NativeWebDialog'
+commentId: 'T:Avalonia.Controls.NativeWebDialog'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.WebView'
+assembly: 'Avalonia.Controls.WebView'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0-android36.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">NativeWebDialog Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.WebView</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.WebView</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+[Avalonia.Controls.NativeWebDialog](xref:Avalonia.Controls.NativeWebDialog) is a dialog window that hosts a native web browser implementation.
+It provides a way to display web content in a separate window, particularly useful for platforms like Linux where embedded WebView controls might not be available.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class NativeWebDialog
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> NativeWebDialog
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IDisposable, ne, nf
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [NativeWebDialog](#uid-6b9f1587c1) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6b9f1587c1"></span>
+
+### NativeWebDialog Constructor
+
+```csharp
+public NativeWebDialog()
+```
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Close](#uid-bdc4d526bd) | No summary available. |
+| [Dispose](#uid-fc0cbac38c) | No summary available. |
+| [GoBack](#uid-9f4aa70734) | No summary available. |
+| [GoForward](#uid-82ae650e38) | No summary available. |
+| [InvokeScript](#uid-b7cc3f254e) | No summary available. |
+| [Move](#uid-e6cc8a96fc) | No summary available. |
+| [Navigate](#uid-51c4494217) | No summary available. |
+| [NavigateToString](#uid-6efe8bb206) | No summary available. |
+| [PrintToPdfStreamAsync (2 overloads)](#uid-2f7986f3bd) | No summary available. |
+| [Refresh](#uid-5cd7f02391) | No summary available. |
+| [Resize](#uid-692b89559c) | No summary available. |
+| [Show (2 overloads)](#uid-9b901632a8) | No summary available. |
+| [ShowPrintUI](#uid-5ae0b56733) | No summary available. |
+| [Stop](#uid-c7c001c8b9) | No summary available. |
+| [TryGetCommandManager](#uid-566b2a7332) | No summary available. |
+| [TryGetCookieManager](#uid-fa0f118892) | No summary available. |
+| [TryGetPlatformHandle](#uid-d37c9ff9fd) | No summary available. |
+| [TryGetWebViewPlatformHandle](#uid-7cc0522c58) | Gets platform handle of the webview hosted inside the dialog. |
+| [TryGetWindow](#uid-43355e2807) | If dialog is based on a [Avalonia.Controls.Window](xref:Avalonia.Controls.Window), returns its instance to allow full control. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-bdc4d526bd"></span>
+
+### Close Method
+
+```csharp
+public void Close()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-fc0cbac38c"></span>
+
+### Dispose Method
+
+```csharp
+public void Dispose()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9f4aa70734"></span>
+
+### GoBack Method
+
+```csharp
+public bool GoBack()
+```
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-82ae650e38"></span>
+
+### GoForward Method
+
+```csharp
+public bool GoForward()
+```
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b7cc3f254e"></span>
+
+### InvokeScript Method
+
+```csharp
+public System.Threading.Tasks.Task<string> InvokeScript(string script)
+```
+
+#### Parameters
+
+`script` string
+
+
+#### Returns
+
+System.Threading.Tasks.Task&lt;string&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e6cc8a96fc"></span>
+
+### Move Method
+
+```csharp
+public bool Move(int x, int y)
+```
+
+#### Parameters
+
+`x` int
+
+
+`y` int
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-51c4494217"></span>
+
+### Navigate Method
+
+```csharp
+public void Navigate(Uri url)
+```
+
+#### Parameters
+
+`url` Uri
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6efe8bb206"></span>
+
+### NavigateToString Method
+
+```csharp
+public void NavigateToString(string text)
+```
+
+#### Parameters
+
+`text` string
+
+
+</section>
+
+<span id="uid-2f7986f3bd"></span>
+
+### PrintToPdfStreamAsync overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6f73031cab"></span>
+
+#### PrintToPdfStreamAsync Method
+
+```csharp
+public System.Threading.Tasks.Task<System.IO.Stream> PrintToPdfStreamAsync()
+```
+
+##### Returns
+
+System.Threading.Tasks.Task&lt;System.IO.Stream&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c37be87b8c"></span>
+
+#### PrintToPdfStreamAsync Method
+
+```csharp
+public System.Threading.Tasks.Task<System.IO.Stream> PrintToPdfStreamAsync(Avalonia.Platform.WebViewPrintSettings printSettings)
+```
+
+##### Parameters
+
+`printSettings` [Avalonia.Platform.WebViewPrintSettings](xref:Avalonia.Platform.WebViewPrintSettings)
+
+
+##### Returns
+
+System.Threading.Tasks.Task&lt;System.IO.Stream&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5cd7f02391"></span>
+
+### Refresh Method
+
+```csharp
+public bool Refresh()
+```
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-692b89559c"></span>
+
+### Resize Method
+
+```csharp
+public bool Resize(int width, int height)
+```
+
+#### Parameters
+
+`width` int
+
+
+`height` int
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<span id="uid-9b901632a8"></span>
+
+### Show overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6f214a4fb3"></span>
+
+#### Show Method
+
+```csharp
+public void Show()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-168aef560f"></span>
+
+#### Show Method
+
+Opens the WebView dialog with [Avalonia.Controls.TopLevel](xref:Avalonia.Controls.TopLevel) owner.
+
+```csharp
+public void Show(Avalonia.Controls.TopLevel owner)
+```
+
+##### Parameters
+
+`owner` [Avalonia.Controls.TopLevel](xref:Avalonia.Controls.TopLevel)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5ae0b56733"></span>
+
+### ShowPrintUI Method
+
+```csharp
+public void ShowPrintUI()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c7c001c8b9"></span>
+
+### Stop Method
+
+```csharp
+public bool Stop()
+```
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-566b2a7332"></span>
+
+### TryGetCommandManager Method
+
+```csharp
+public Avalonia.Controls.NativeWebViewCommandManager TryGetCommandManager()
+```
+
+#### Returns
+
+[Avalonia.Controls.NativeWebViewCommandManager](xref:Avalonia.Controls.NativeWebViewCommandManager)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-fa0f118892"></span>
+
+### TryGetCookieManager Method
+
+```csharp
+public Avalonia.Controls.NativeWebViewCookieManager TryGetCookieManager()
+```
+
+#### Returns
+
+[Avalonia.Controls.NativeWebViewCookieManager](xref:Avalonia.Controls.NativeWebViewCookieManager)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d37c9ff9fd"></span>
+
+### TryGetPlatformHandle Method
+
+```csharp
+public Avalonia.Platform.IPlatformHandle TryGetPlatformHandle()
+```
+
+#### Returns
+
+[Avalonia.Platform.IPlatformHandle](xref:Avalonia.Platform.IPlatformHandle)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7cc0522c58"></span>
+
+### TryGetWebViewPlatformHandle Method
+
+Gets platform handle of the webview hosted inside the dialog.
+
+```csharp
+public Avalonia.Platform.IPlatformHandle TryGetWebViewPlatformHandle()
+```
+
+#### Returns
+
+[Avalonia.Platform.IPlatformHandle](xref:Avalonia.Platform.IPlatformHandle)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-43355e2807"></span>
+
+### TryGetWindow Method
+
+If dialog is based on a [Avalonia.Controls.Window](xref:Avalonia.Controls.Window), returns its instance to allow full control.
+
+```csharp
+public Avalonia.Controls.Window TryGetWindow()
+```
+
+#### Returns
+
+[Avalonia.Controls.Window](xref:Avalonia.Controls.Window)
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [CanGoBack](#uid-1abeb46316) | No summary available. |
+| [CanGoForward](#uid-17271cb5d4) | No summary available. |
+| [CanUserResize](#uid-74aa486fb3) | No summary available. |
+| [Source](#uid-69e6d8451a) | No summary available. |
+| [Title](#uid-ead2a18dd9) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1abeb46316"></span>
+
+### CanGoBack Property
+
+```csharp
+public bool CanGoBack { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-17271cb5d4"></span>
+
+### CanGoForward Property
+
+```csharp
+public bool CanGoForward { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-74aa486fb3"></span>
+
+### CanUserResize Property
+
+```csharp
+public bool CanUserResize { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-69e6d8451a"></span>
+
+### Source Property
+
+```csharp
+public Uri Source { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ead2a18dd9"></span>
+
+### Title Property
+
+```csharp
+public string Title { get; set; }
+```
+
+</section>
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [AdapterCreated](#uid-7780de1303) | No summary available. |
+| [AdapterDestroyed](#uid-4796f86e20) | No summary available. |
+| [Closing](#uid-5610a4f997) | No summary available. |
+| [EnvironmentRequested](#uid-b8c83d991c) | No summary available. |
+| [NavigationCompleted](#uid-ef7eaf1bc9) | No summary available. |
+| [NavigationStarted](#uid-5d8c1d9cf0) | No summary available. |
+| [NewWindowRequested](#uid-5ed1493b23) | No summary available. |
+| [WebMessageReceived](#uid-56d50970d7) | No summary available. |
+| [WebResourceRequested](#uid-cf5fb58e62) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7780de1303"></span>
+
+### AdapterCreated Event
+
+```csharp
+public event EventHandler<Avalonia.Controls.WebViewAdapterEventArgs> AdapterCreated
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4796f86e20"></span>
+
+### AdapterDestroyed Event
+
+```csharp
+public event EventHandler<Avalonia.Controls.WebViewAdapterEventArgs> AdapterDestroyed
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5610a4f997"></span>
+
+### Closing Event
+
+```csharp
+public event EventHandler Closing
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b8c83d991c"></span>
+
+### EnvironmentRequested Event
+
+```csharp
+public event EventHandler<Avalonia.Controls.WebViewEnvironmentRequestedEventArgs> EnvironmentRequested
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ef7eaf1bc9"></span>
+
+### NavigationCompleted Event
+
+```csharp
+public event EventHandler<Avalonia.Controls.WebViewNavigationCompletedEventArgs> NavigationCompleted
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5d8c1d9cf0"></span>
+
+### NavigationStarted Event
+
+```csharp
+public event EventHandler<Avalonia.Controls.WebViewNavigationStartingEventArgs> NavigationStarted
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5ed1493b23"></span>
+
+### NewWindowRequested Event
+
+```csharp
+public event EventHandler<Avalonia.Controls.WebViewNewWindowRequestedEventArgs> NewWindowRequested
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-56d50970d7"></span>
+
+### WebMessageReceived Event
+
+```csharp
+public event EventHandler<Avalonia.Controls.WebMessageReceivedEventArgs> WebMessageReceived
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-cf5fb58e62"></span>
+
+### WebResourceRequested Event
+
+```csharp
+public event EventHandler<Avalonia.Controls.WebResourceRequestedEventArgs> WebResourceRequested
+```
+
+</section>
+
+</ApiRefPage>
+

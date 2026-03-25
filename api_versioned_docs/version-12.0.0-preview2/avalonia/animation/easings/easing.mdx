@@ -1,0 +1,126 @@
+---
+title: 'Easing'
+hide_title: true
+slug: '/avalonia/animation/easings/easing'
+uid: 'Avalonia.Animation.Easings.Easing'
+commentId: 'T:Avalonia.Animation.Easings.Easing'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Animation.Easings'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">Easing Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Animation.Easings</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/obj/GeneratedFiles/DevGenerators/Avalonia.SourceGenerator.SubtypesFactoryGenerator/Avalonia.Animation.Easings.Easing.TryCreateEasingInstance.gen.cs">Avalonia.Animation.Easings.Easing.TryCreateEasingInstance.gen.cs</a>, <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Animation/Easings/Easing.cs">Easing.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Base class for all Easing classes.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class Easing
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> Easing
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Derived types:</span> <a href="backeasein">BackEaseIn</a>, <a href="backeaseinout">BackEaseInOut</a>, <a href="backeaseout">BackEaseOut</a>, <a href="bounceeasein">BounceEaseIn</a>, <a href="bounceeaseinout">BounceEaseInOut</a>, <a href="bounceeaseout">BounceEaseOut</a>, <a href="circulareasein">CircularEaseIn</a>, <a href="circulareaseinout">CircularEaseInOut</a>, <a href="circulareaseout">CircularEaseOut</a>, <a href="cubiceasein">CubicEaseIn</a>, <a href="cubiceaseinout">CubicEaseInOut</a>, <a href="cubiceaseout">CubicEaseOut</a>, <a href="elasticeasein">ElasticEaseIn</a>, <a href="elasticeaseinout">ElasticEaseInOut</a>, <a href="elasticeaseout">ElasticEaseOut</a>, <a href="exponentialeasein">ExponentialEaseIn</a>, <a href="exponentialeaseinout">ExponentialEaseInOut</a>, <a href="exponentialeaseout">ExponentialEaseOut</a>, <a href="lineareasing">LinearEasing</a>, <a href="quadraticeasein">QuadraticEaseIn</a>, <a href="quadraticeaseinout">QuadraticEaseInOut</a>, <a href="quadraticeaseout">QuadraticEaseOut</a>, <a href="quarticeasein">QuarticEaseIn</a>, <a href="quarticeaseinout">QuarticEaseInOut</a>, <a href="quarticeaseout">QuarticEaseOut</a>, <a href="quinticeasein">QuinticEaseIn</a>, <a href="quinticeaseinout">QuinticEaseInOut</a>, <a href="quinticeaseout">QuinticEaseOut</a>, <a href="sineeasein">SineEaseIn</a>, <a href="sineeaseinout">SineEaseInOut</a>, <a href="sineeaseout">SineEaseOut</a>, <a href="splineeasing">SplineEasing</a>, <a href="springeasing">SpringEasing</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="ieasing">IEasing</a>
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Ease](#uid-9726b60d1c) | Returns the value of the transition for the specified progress. |
+| [Parse](#uid-c851a9a9b7) | Parses a Easing type string. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9726b60d1c"></span>
+
+### Ease Method
+
+Returns the value of the transition for the specified progress.
+
+```csharp
+public double Ease(double progress)
+```
+
+#### Parameters
+
+`progress` double
+
+
+#### Returns
+
+double
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c851a9a9b7"></span>
+
+### Parse Method
+
+Parses a Easing type string.
+
+```csharp
+public Avalonia.Animation.Easings.Easing Parse(string e)
+```
+
+#### Parameters
+
+`e` string
+
+The Easing type string.
+
+
+#### Returns
+
+[Avalonia.Animation.Easings.Easing](xref:Avalonia.Animation.Easings.Easing)
+
+Returns the instance of the parsed type.
+
+
+</section>
+
+</ApiRefPage>
+

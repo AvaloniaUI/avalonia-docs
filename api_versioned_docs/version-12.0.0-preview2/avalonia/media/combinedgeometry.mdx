@@ -1,0 +1,344 @@
+---
+title: 'CombinedGeometry'
+hide_title: true
+slug: '/avalonia/media/combinedgeometry'
+uid: 'Avalonia.Media.CombinedGeometry'
+commentId: 'T:Avalonia.Media.CombinedGeometry'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Media'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">CombinedGeometry Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Media</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/CombinedGeometry.cs">CombinedGeometry.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Represents a 2-D geometric shape defined by the combination of two Geometry objects.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class CombinedGeometry
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="geometry">Geometry</a> <span className="apiref-page__relation-separator">-&gt;</span> CombinedGeometry
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [CombinedGeometry (4 overloads)](#uid-28fd53a529) | Initializes a new instance of the [Avalonia.Media.CombinedGeometry](xref:Avalonia.Media.CombinedGeometry) class. |
+
+<span id="uid-28fd53a529"></span>
+
+### CombinedGeometry overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9688a59315"></span>
+
+#### CombinedGeometry Constructor
+
+Initializes a new instance of the [Avalonia.Media.CombinedGeometry](xref:Avalonia.Media.CombinedGeometry) class.
+
+```csharp
+public CombinedGeometry()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-be89ae6df5"></span>
+
+#### CombinedGeometry Constructor
+
+Initializes a new instance of the [Avalonia.Media.CombinedGeometry](xref:Avalonia.Media.CombinedGeometry) class with the
+specified [Avalonia.Media.Geometry](xref:Avalonia.Media.Geometry) objects.
+
+```csharp
+public CombinedGeometry(Avalonia.Media.Geometry geometry1, Avalonia.Media.Geometry geometry2)
+```
+
+##### Parameters
+
+`geometry1` [Avalonia.Media.Geometry](xref:Avalonia.Media.Geometry)
+
+The first geometry to combine.
+
+
+`geometry2` [Avalonia.Media.Geometry](xref:Avalonia.Media.Geometry)
+
+The second geometry to combine.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-37b8655f0b"></span>
+
+#### CombinedGeometry Constructor
+
+Initializes a new instance of the [Avalonia.Media.CombinedGeometry](xref:Avalonia.Media.CombinedGeometry) class with the
+specified [Avalonia.Media.Geometry](xref:Avalonia.Media.Geometry) objects and [Avalonia.Media.CombinedGeometry.GeometryCombineMode](xref:Avalonia.Media.CombinedGeometry.GeometryCombineMode).
+
+```csharp
+public CombinedGeometry(Avalonia.Media.GeometryCombineMode combineMode, Avalonia.Media.Geometry geometry1, Avalonia.Media.Geometry geometry2)
+```
+
+##### Parameters
+
+`combineMode` [Avalonia.Media.GeometryCombineMode](xref:Avalonia.Media.GeometryCombineMode)
+
+The method by which geometry1 and geometry2 are combined.
+
+
+`geometry1` [Avalonia.Media.Geometry](xref:Avalonia.Media.Geometry)
+
+The first geometry to combine.
+
+
+`geometry2` [Avalonia.Media.Geometry](xref:Avalonia.Media.Geometry)
+
+The second geometry to combine.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-52e9bd90ef"></span>
+
+#### CombinedGeometry Constructor
+
+Initializes a new instance of the [Avalonia.Media.CombinedGeometry](xref:Avalonia.Media.CombinedGeometry) class with the
+specified [Avalonia.Media.Geometry](xref:Avalonia.Media.Geometry) objects, [Avalonia.Media.CombinedGeometry.GeometryCombineMode](xref:Avalonia.Media.CombinedGeometry.GeometryCombineMode) and
+[Avalonia.Media.Transform](xref:Avalonia.Media.Transform).
+
+```csharp
+public CombinedGeometry(Avalonia.Media.GeometryCombineMode combineMode, Avalonia.Media.Geometry geometry1, Avalonia.Media.Geometry geometry2, Avalonia.Media.Transform transform)
+```
+
+##### Parameters
+
+`combineMode` [Avalonia.Media.GeometryCombineMode](xref:Avalonia.Media.GeometryCombineMode)
+
+The method by which geometry1 and geometry2 are combined.
+
+
+`geometry1` [Avalonia.Media.Geometry](xref:Avalonia.Media.Geometry)
+
+The first geometry to combine.
+
+
+`geometry2` [Avalonia.Media.Geometry](xref:Avalonia.Media.Geometry)
+
+The second geometry to combine.
+
+
+`transform` [Avalonia.Media.Transform](xref:Avalonia.Media.Transform)
+
+The transform applied to the geometry.
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Clone](#uid-c2d9031327) | No summary available. |
+| [Combine](geometry.mdx#uid-03ba6ba14f) | Combines the two geometries using the specified [Avalonia.Media.GeometryCombineMode](xref:Avalonia.Media.GeometryCombineMode) and applies the specified transform to the resulting geometry. Inherited from [Geometry](geometry.mdx). |
+| [FillContains](geometry.mdx#uid-1ecc042e3b) | Indicates whether the geometry's fill contains the specified point. Inherited from [Geometry](geometry.mdx). |
+| [GetRenderBounds](geometry.mdx#uid-4f903c64e7) | Gets the geometry's bounding rectangle with the specified pen. Inherited from [Geometry](geometry.mdx). |
+| [GetWidenedGeometry](geometry.mdx#uid-9265c7d05d) | Gets a [Avalonia.Media.Geometry](xref:Avalonia.Media.Geometry) that is the shape defined by the stroke on the Geometry produced by the specified Pen. Inherited from [Geometry](geometry.mdx). |
+| [Parse](geometry.mdx#uid-f0f323635b) | Creates a [Avalonia.Media.Geometry](xref:Avalonia.Media.Geometry) from a string. Inherited from [Geometry](geometry.mdx). |
+| [StrokeContains](geometry.mdx#uid-9137804922) | Indicates whether the geometry's stroke contains the specified point. Inherited from [Geometry](geometry.mdx). |
+| [TryGetPointAndTangentAtDistance](geometry.mdx#uid-0cb785d427) | Inherited from [Geometry](geometry.mdx). |
+| [TryGetPointAtDistance](geometry.mdx#uid-8e9f7dcc61) | Inherited from [Geometry](geometry.mdx). |
+| [TryGetSegment](geometry.mdx#uid-50b46fd171) | Inherited from [Geometry](geometry.mdx). |
+| [Bind (8 overloads)](../avaloniaobject.mdx#uid-1c60c7bda3) | Binds a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) to an [Avalonia.Data.BindingBase](xref:Avalonia.Data.BindingBase). Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [CheckAccess](../avaloniaobject.mdx#uid-260ff7a68d) | Returns a value indicating whether the current thread is the UI thread. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [ClearValue (4 overloads)](../avaloniaobject.mdx#uid-41de208fbe) | Clears a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty)'s local value. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [CoerceValue](../avaloniaobject.mdx#uid-3bec32f39e) | Coerces the specified [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty). Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [Equals](../avaloniaobject.mdx#uid-a8a8e94305) | Compares two objects using reference equality. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [GetBaseValue](../avaloniaobject.mdx#uid-9c615efbba) | Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [GetHashCode](../avaloniaobject.mdx#uid-7f7db1e7a2) | Gets the hash code for the object. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [GetValue (3 overloads)](../avaloniaobject.mdx#uid-5142cd4792) | Gets a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [IsAnimating](../avaloniaobject.mdx#uid-8cbfc7521a) | Checks whether a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) is animating. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [IsSet](../avaloniaobject.mdx#uid-f8bf0bbdcc) | Checks whether a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) is set on this object. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [SetCurrentValue (2 overloads)](../avaloniaobject.mdx#uid-38759fd088) | Sets the value of a dependency property without changing its value source. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [SetValue (3 overloads)](../avaloniaobject.mdx#uid-47d14e19d7) | Sets a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [VerifyAccess](../avaloniaobject.mdx#uid-3b9d3c9793) | Checks that the current thread is the UI thread and throws if not. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c2d9031327"></span>
+
+### Clone Method
+
+```csharp
+public Avalonia.Media.Geometry Clone()
+```
+
+#### Returns
+
+[Avalonia.Media.Geometry](xref:Avalonia.Media.Geometry)
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Geometry1](#uid-87591a37ca) | Gets or sets the first [Avalonia.Media.Geometry](xref:Avalonia.Media.Geometry) object of this [Avalonia.Media.CombinedGeometry](xref:Avalonia.Media.CombinedGeometry) object. |
+| [Geometry2](#uid-ba9539f63d) | Gets or sets the second [Avalonia.Media.Geometry](xref:Avalonia.Media.Geometry) object of this [Avalonia.Media.CombinedGeometry](xref:Avalonia.Media.CombinedGeometry) object. |
+| [GeometryCombineMode](#uid-9d3f5a1879) | Gets or sets the method by which the two geometries (specified by the [Avalonia.Media.CombinedGeometry.Geometry1](xref:Avalonia.Media.CombinedGeometry.Geometry1) and [Avalonia.Media.CombinedGeometry.Geometry2](xref:Avalonia.Media.CombinedGeometry.Geometry2) properties) are combined. The default value is [Avalonia.Media.GeometryCombineMode.Union](xref:Avalonia.Media.GeometryCombineMode.Union). |
+| [Bounds](geometry.mdx#uid-404ee0d0a8) | Gets the geometry's bounding rectangle. Inherited from [Geometry](geometry.mdx). |
+| [ContourLength](geometry.mdx#uid-5dc65c547e) | Gets the geometry's total length as if all its contours are placed in a straight line. Inherited from [Geometry](geometry.mdx). |
+| [Transform](geometry.mdx#uid-ca73562bb3) | Gets or sets a transform to apply to the geometry. Inherited from [Geometry](geometry.mdx). |
+| [Dispatcher](../avaloniaobject.mdx#uid-b25fa51632) | Returns the [Avalonia.AvaloniaObject.Dispatcher](xref:Avalonia.AvaloniaObject.Dispatcher) that this [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject) is associated with. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [Item](../avaloniaobject.mdx#uid-c1d1f1bc0f) | Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-87591a37ca"></span>
+
+### Geometry1 Property
+
+Gets or sets the first [Avalonia.Media.Geometry](xref:Avalonia.Media.Geometry) object of this
+[Avalonia.Media.CombinedGeometry](xref:Avalonia.Media.CombinedGeometry) object.
+
+```csharp
+public Avalonia.Media.Geometry Geometry1 { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ba9539f63d"></span>
+
+### Geometry2 Property
+
+Gets or sets the second [Avalonia.Media.Geometry](xref:Avalonia.Media.Geometry) object of this
+[Avalonia.Media.CombinedGeometry](xref:Avalonia.Media.CombinedGeometry) object.
+
+```csharp
+public Avalonia.Media.Geometry Geometry2 { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9d3f5a1879"></span>
+
+### GeometryCombineMode Property
+
+Gets or sets the method by which the two geometries (specified by the
+[Avalonia.Media.CombinedGeometry.Geometry1](xref:Avalonia.Media.CombinedGeometry.Geometry1) and [Avalonia.Media.CombinedGeometry.Geometry2](xref:Avalonia.Media.CombinedGeometry.Geometry2) properties) are combined. The
+default value is [Avalonia.Media.GeometryCombineMode.Union](xref:Avalonia.Media.GeometryCombineMode.Union).
+
+```csharp
+public Avalonia.Media.GeometryCombineMode GeometryCombineMode { get; set; }
+```
+
+</section>
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [Geometry1Property](#uid-ebe84435a7) | Defines the [Avalonia.Media.CombinedGeometry.Geometry1](xref:Avalonia.Media.CombinedGeometry.Geometry1) property. |
+| [Geometry2Property](#uid-660219d876) | Defines the [Avalonia.Media.CombinedGeometry.Geometry2](xref:Avalonia.Media.CombinedGeometry.Geometry2) property. |
+| [GeometryCombineModeProperty](#uid-a4b06a82d8) | Defines the [Avalonia.Media.CombinedGeometry.GeometryCombineMode](xref:Avalonia.Media.CombinedGeometry.GeometryCombineMode) property. |
+| [TransformProperty](geometry.mdx#uid-deccb386d8) | Defines the [Avalonia.Media.Geometry.Transform](xref:Avalonia.Media.Geometry.Transform) property. Inherited from [Geometry](geometry.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ebe84435a7"></span>
+
+### Geometry1Property Field
+
+Defines the [Avalonia.Media.CombinedGeometry.Geometry1](xref:Avalonia.Media.CombinedGeometry.Geometry1) property.
+
+```csharp
+public Avalonia.StyledProperty<TValue><Avalonia.Media.Geometry> Geometry1Property
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-660219d876"></span>
+
+### Geometry2Property Field
+
+Defines the [Avalonia.Media.CombinedGeometry.Geometry2](xref:Avalonia.Media.CombinedGeometry.Geometry2) property.
+
+```csharp
+public Avalonia.StyledProperty<TValue><Avalonia.Media.Geometry> Geometry2Property
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a4b06a82d8"></span>
+
+### GeometryCombineModeProperty Field
+
+Defines the [Avalonia.Media.CombinedGeometry.GeometryCombineMode](xref:Avalonia.Media.CombinedGeometry.GeometryCombineMode) property.
+
+```csharp
+public Avalonia.StyledProperty<TValue><Avalonia.Media.GeometryCombineMode> GeometryCombineModeProperty
+```
+
+</section>
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [Changed](geometry.mdx#uid-9001f59bae) | Raised when the geometry changes. Inherited from [Geometry](geometry.mdx). |
+| [PropertyChanged](../avaloniaobject.mdx#uid-d758e26fae) | Raised when a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value changes on this object. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+
+</ApiRefPage>
+

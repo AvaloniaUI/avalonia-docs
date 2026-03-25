@@ -1,0 +1,251 @@
+---
+title: 'ResourcesChangedEventArgs'
+hide_title: true
+slug: '/avalonia/controls/resourceschangedeventargs'
+uid: 'Avalonia.Controls.ResourcesChangedEventArgs'
+commentId: 'T:Avalonia.Controls.ResourcesChangedEventArgs'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ResourcesChangedEventArgs Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Controls/ResourcesChangedEventArgs.cs">ResourcesChangedEventArgs.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Represents the event arguments of [Avalonia.Controls.IResourceHost.ResourcesChanged](xref:Avalonia.Controls.IResourceHost.ResourcesChanged).
+The [Avalonia.Controls.ResourcesChangedEventArgs.SequenceNumber](xref:Avalonia.Controls.ResourcesChangedEventArgs.SequenceNumber) identifies the changes.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct ResourcesChangedEventArgs
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> ResourcesChangedEventArgs
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;ResourcesChangedEventArgs&gt;
+</div>
+</div>
+
+## Remarks
+
+For performance reasons, this type is a struct.
+Avoid using a default instance of this type or its default constructor, call [Avalonia.Controls.ResourcesChangedEventArgs.Create](xref:Avalonia.Controls.ResourcesChangedEventArgs.Create) instead.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [ResourcesChangedEventArgs](#uid-bd63302dcf) | Represents the event arguments of [Avalonia.Controls.IResourceHost.ResourcesChanged](xref:Avalonia.Controls.IResourceHost.ResourcesChanged). The [Avalonia.Controls.ResourcesChangedEventArgs.SequenceNumber](xref:Avalonia.Controls.ResourcesChangedEventArgs.SequenceNumber) identifies the changes. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-bd63302dcf"></span>
+
+### ResourcesChangedEventArgs Constructor
+
+Represents the event arguments of [Avalonia.Controls.IResourceHost.ResourcesChanged](xref:Avalonia.Controls.IResourceHost.ResourcesChanged).
+The [Avalonia.Controls.ResourcesChangedEventArgs.SequenceNumber](xref:Avalonia.Controls.ResourcesChangedEventArgs.SequenceNumber) identifies the changes.
+
+```csharp
+public ResourcesChangedEventArgs(int SequenceNumber)
+```
+
+#### Parameters
+
+`SequenceNumber` int
+
+The sequence number used to identify the changes.
+
+
+#### Remarks
+
+For performance reasons, this type is a struct.
+Avoid using a default instance of this type or its default constructor, call [Avalonia.Controls.ResourcesChangedEventArgs.Create](xref:Avalonia.Controls.ResourcesChangedEventArgs.Create) instead.
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Create](#uid-954a97e788) | Creates a new instance of [Avalonia.Controls.ResourcesChangedEventArgs](xref:Avalonia.Controls.ResourcesChangedEventArgs) with an auto-incremented sequence number. |
+| [Deconstruct](#uid-04c79d7563) | No summary available. |
+| [Equals (2 overloads)](#uid-793488e1d0) | No summary available. |
+| [GetHashCode](#uid-e227c8332a) | No summary available. |
+| [ToString](#uid-50186fed84) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-954a97e788"></span>
+
+### Create Method
+
+Creates a new instance of [Avalonia.Controls.ResourcesChangedEventArgs](xref:Avalonia.Controls.ResourcesChangedEventArgs) with an auto-incremented sequence number.
+
+```csharp
+public Avalonia.Controls.ResourcesChangedEventArgs Create()
+```
+
+#### Returns
+
+[Avalonia.Controls.ResourcesChangedEventArgs](xref:Avalonia.Controls.ResourcesChangedEventArgs)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-04c79d7563"></span>
+
+### Deconstruct Method
+
+```csharp
+public void Deconstruct(int& SequenceNumber)
+```
+
+#### Parameters
+
+`SequenceNumber` int&amp;
+
+
+</section>
+
+<span id="uid-793488e1d0"></span>
+
+### Equals overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0ddf7648a3"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(Avalonia.Controls.ResourcesChangedEventArgs other)
+```
+
+##### Parameters
+
+`other` [Avalonia.Controls.ResourcesChangedEventArgs](xref:Avalonia.Controls.ResourcesChangedEventArgs)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-36e7f0b2af"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(object obj)
+```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e227c8332a"></span>
+
+### GetHashCode Method
+
+```csharp
+public int GetHashCode()
+```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-50186fed84"></span>
+
+### ToString Method
+
+```csharp
+public string ToString()
+```
+
+#### Returns
+
+string
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [SequenceNumber](#uid-1cbd8e9ac4) | The sequence number used to identify the changes. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1cbd8e9ac4"></span>
+
+### SequenceNumber Property
+
+The sequence number used to identify the changes.
+
+```csharp
+public int SequenceNumber { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

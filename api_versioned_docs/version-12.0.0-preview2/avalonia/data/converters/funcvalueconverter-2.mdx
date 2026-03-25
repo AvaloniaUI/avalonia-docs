@@ -1,0 +1,217 @@
+---
+title: 'FuncValueConverter<TIn, TOut>'
+hide_title: true
+slug: '/avalonia/data/converters/funcvalueconverter-2'
+uid: 'Avalonia.Data.Converters.FuncValueConverter`2'
+commentId: 'T:Avalonia.Data.Converters.FuncValueConverter`2'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Data.Converters'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">FuncValueConverter&lt;TIn, TOut&gt; Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Data.Converters</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Data/Converters/FuncValueConverter.cs">FuncValueConverter.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A general purpose [Avalonia.Data.Converters.IValueConverter](xref:Avalonia.Data.Converters.IValueConverter) that uses a [Func&lt;T1, T2&gt;](xref:System.Func%602)
+to provide the converter logic.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class FuncValueConverter<TIn, TOut>
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> FuncValueConverter&lt;TIn, TOut&gt;
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="ivalueconverter">IValueConverter</a>
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [FuncValueConverter&lt;TIn, TOut&gt; (2 overloads)](#uid-13d43d6541) | No summary available. |
+
+<span id="uid-13d43d6541"></span>
+
+### FuncValueConverter&lt;TIn, TOut&gt; overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-36c23f2f2b"></span>
+
+#### FuncValueConverter&lt;TIn, TOut&gt; Constructor
+
+```csharp
+public FuncValueConverter<TIn, TOut>(Func<TIn, TOut> convert)
+```
+
+##### Parameters
+
+`convert` Func&lt;TIn, TOut&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-cfeb788d43"></span>
+
+#### FuncValueConverter&lt;TIn, TOut&gt; Constructor
+
+```csharp
+public FuncValueConverter<TIn, TOut>(Func<TIn, TOut> convert, Func<TOut, TIn> convertBack)
+```
+
+##### Parameters
+
+`convert` Func&lt;TIn, TOut&gt;
+
+
+`convertBack` Func&lt;TOut, TIn&gt;
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Convert](#uid-95a218e537) | Converts a value. |
+| [ConvertBack](#uid-de2355f1bd) | Converts a value. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-95a218e537"></span>
+
+### Convert Method
+
+Converts a value.
+
+```csharp
+public object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
+```
+
+#### Parameters
+
+`value` object
+
+The value to convert.
+
+
+`targetType` Type
+
+The type of the target.
+
+
+`parameter` object
+
+A user-defined parameter.
+
+
+`culture` System.Globalization.CultureInfo
+
+The culture to use.
+
+
+#### Returns
+
+object
+
+The converted value.
+
+
+#### Remarks
+
+This method should not throw exceptions. If the value is not convertible, return
+a [Avalonia.Data.BindingNotification](xref:Avalonia.Data.BindingNotification) in an error state. Any exceptions thrown will be
+treated as an application exception.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-de2355f1bd"></span>
+
+### ConvertBack Method
+
+Converts a value.
+
+```csharp
+public object ConvertBack(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
+```
+
+#### Parameters
+
+`value` object
+
+The value to convert.
+
+
+`targetType` Type
+
+The type of the target.
+
+
+`parameter` object
+
+A user-defined parameter.
+
+
+`culture` System.Globalization.CultureInfo
+
+The culture to use.
+
+
+#### Returns
+
+object
+
+The converted value.
+
+
+#### Remarks
+
+This method should not throw exceptions. If the value is not convertible, return
+a [Avalonia.Data.BindingNotification](xref:Avalonia.Data.BindingNotification) in an error state. Any exceptions thrown will be
+treated as an application exception.
+
+</section>
+
+</ApiRefPage>
+

@@ -1,0 +1,124 @@
+---
+title: 'DispatcherPriorityAwaiter'
+hide_title: true
+slug: '/avalonia/threading/dispatcherpriorityawaiter'
+uid: 'Avalonia.Threading.DispatcherPriorityAwaiter'
+commentId: 'T:Avalonia.Threading.DispatcherPriorityAwaiter'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Threading'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">DispatcherPriorityAwaiter Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Threading</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Threading/DispatcherPriorityAwaitable.cs">DispatcherPriorityAwaitable.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A simple awaiter type that will queue the continuation to a dispatcher at a specific priority.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct DispatcherPriorityAwaiter
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> DispatcherPriorityAwaiter
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> INotifyCompletion
+</div>
+</div>
+
+## Remarks
+
+This is returned from DispatcherPriorityAwaitable.GetAwaiter()
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [GetResult](#uid-1a72a3e999) | No summary available. |
+| [OnCompleted](#uid-576d285769) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1a72a3e999"></span>
+
+### GetResult Method
+
+```csharp
+public void GetResult()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-576d285769"></span>
+
+### OnCompleted Method
+
+```csharp
+public void OnCompleted(Action continuation)
+```
+
+#### Parameters
+
+`continuation` Action
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [IsCompleted](#uid-bc9d7b291d) | This always returns false since continuation is requested to be queued to a dispatcher queue |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-bc9d7b291d"></span>
+
+### IsCompleted Property
+
+This always returns false since continuation is requested to be queued to a dispatcher queue
+
+```csharp
+public bool IsCompleted { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

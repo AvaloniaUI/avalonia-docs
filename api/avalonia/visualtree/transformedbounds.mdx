@@ -1,0 +1,264 @@
+---
+title: 'TransformedBounds'
+hide_title: true
+slug: '/avalonia/visualtree/transformedbounds'
+uid: 'Avalonia.VisualTree.TransformedBounds'
+commentId: 'T:Avalonia.VisualTree.TransformedBounds'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.VisualTree'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">TransformedBounds Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.VisualTree</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/VisualTree/TransformedBounds.cs">TransformedBounds.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Holds information about the bounds of a control, together with a transform and a clip.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct TransformedBounds
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> TransformedBounds
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;TransformedBounds&gt;
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [TransformedBounds](#uid-0664aefdf0) | Initializes a new instance of the [Avalonia.VisualTree.TransformedBounds](xref:Avalonia.VisualTree.TransformedBounds) struct. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0664aefdf0"></span>
+
+### TransformedBounds Constructor
+
+Initializes a new instance of the [Avalonia.VisualTree.TransformedBounds](xref:Avalonia.VisualTree.TransformedBounds) struct.
+
+```csharp
+public TransformedBounds(Avalonia.Rect bounds, Avalonia.Rect clip, Avalonia.Matrix transform)
+```
+
+#### Parameters
+
+`bounds` [Avalonia.Rect](xref:Avalonia.Rect)
+
+The control's bounds.
+
+
+`clip` [Avalonia.Rect](xref:Avalonia.Rect)
+
+The control's clip rectangle.
+
+
+`transform` [Avalonia.Matrix](xref:Avalonia.Matrix)
+
+The control's transform.
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Contains](#uid-eae00ef883) | No summary available. |
+| [Equals (2 overloads)](#uid-f407462ac4) | No summary available. |
+| [GetHashCode](#uid-a285329880) | No summary available. |
+| [ToString](#uid-5ba6e447d4) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-eae00ef883"></span>
+
+### Contains Method
+
+```csharp
+public bool Contains(Avalonia.Point point)
+```
+
+#### Parameters
+
+`point` [Avalonia.Point](xref:Avalonia.Point)
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<span id="uid-f407462ac4"></span>
+
+### Equals overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-21ca133daf"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(Avalonia.VisualTree.TransformedBounds other)
+```
+
+##### Parameters
+
+`other` [Avalonia.VisualTree.TransformedBounds](xref:Avalonia.VisualTree.TransformedBounds)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-bc7802cd4e"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(object obj)
+```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a285329880"></span>
+
+### GetHashCode Method
+
+```csharp
+public int GetHashCode()
+```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5ba6e447d4"></span>
+
+### ToString Method
+
+```csharp
+public string ToString()
+```
+
+#### Returns
+
+string
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Bounds](#uid-1c11ad2494) | Gets the control's bounds in its local coordinate space. |
+| [Clip](#uid-1e725d2e86) | Gets the control's clip rectangle in global coordinate space. |
+| [Transform](#uid-6b36965c2f) | Gets the transform from local to global coordinate space. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1c11ad2494"></span>
+
+### Bounds Property
+
+Gets the control's bounds in its local coordinate space.
+
+```csharp
+public Avalonia.Rect Bounds { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1e725d2e86"></span>
+
+### Clip Property
+
+Gets the control's clip rectangle in global coordinate space.
+
+```csharp
+public Avalonia.Rect Clip { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6b36965c2f"></span>
+
+### Transform Property
+
+Gets the transform from local to global coordinate space.
+
+```csharp
+public Avalonia.Matrix Transform { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

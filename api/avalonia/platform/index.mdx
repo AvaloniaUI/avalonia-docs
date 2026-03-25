@@ -1,0 +1,169 @@
+---
+title: 'Avalonia.Platform'
+hide_title: true
+slug: '/avalonia/platform'
+uid: 'Avalonia.Platform'
+commentId: 'N:Avalonia.Platform'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Namespace'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Platform'
+tfms:
+  - 'net10.0'
+  - 'net10.0-android36.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">Platform Namespace</h1>
+
+<div className="apiref-page__lead">
+
+Namespace `Avalonia.Platform`
+
+</div>
+
+## Types
+
+- [AlphaFormat](alphaformat.mdx) - Describes how to interpret the alpha component of a pixel.
+- [AndroidWebViewEnvironmentRequestedEventArgs](androidwebviewenvironmentrequestedeventargs.mdx)
+- [AppleWKWebViewEnvironmentRequestedEventArgs](applewkwebviewenvironmentrequestedeventargs.mdx)
+- [AssetLoader](assetloader.mdx) - Loads assets compiled into the application binary.
+- [ColorContrastPreference](colorcontrastpreference.mdx) - System high contrast preference.
+- [DefaultPlatformSettings](defaultplatformsettings.mdx) - A default implementation of [Avalonia.Platform.IPlatformSettings](xref:Avalonia.Platform.IPlatformSettings) for platforms.
+- [DetailedWebViewAdapterInfo](detailedwebviewadapterinfo.mdx)
+- [DrawingContextImplExtensions](drawingcontextimplextensions.mdx)
+- [FormFactorType](formfactortype.mdx)
+- [GtkWebViewEnvironmentRequestedEventArgs](gtkwebviewenvironmentrequestedeventargs.mdx)
+- [IAndroidWebViewPlatformHandle](iandroidwebviewplatformhandle.mdx)
+- [IAppleWKWebViewPlatformHandle](iapplewkwebviewplatformhandle.mdx)
+- [IAssetLoader](iassetloader.mdx) - Loads assets compiled into the application binary.
+- [IBitmapImpl](ibitmapimpl.mdx) - Defines the platform-specific interface for a [Avalonia.Media.Imaging.Bitmap](xref:Avalonia.Media.Imaging.Bitmap).
+- [ICursorFactory](icursorfactory.mdx)
+- [ICursorImpl](icursorimpl.mdx) - Represents a platform implementation of a [Avalonia.Input.Cursor](xref:Avalonia.Input.Cursor).
+- [IDrawingContextImpl](idrawingcontextimpl.mdx) - Defines the interface through which drawing occurs.
+- [IDrawingContextImplWithEffects](idrawingcontextimplwitheffects.mdx)
+- [IDrawingContextLayerImpl](idrawingcontextlayerimpl.mdx)
+- [IDrawingContextLayerWithRenderContextAffinityImpl](idrawingcontextlayerwithrendercontextaffinityimpl.mdx)
+- [IDrawingContextWithAcrylicLikeSupport](idrawingcontextwithacryliclikesupport.mdx)
+- [IExternalObjectsHandleWrapRenderInterfaceContextFeature](iexternalobjectshandlewraprenderinterfacecontextfeature.mdx) - This interface allows proper management of ref-counted platform handles.
+If we immediately wrap the handle, the caller can destroy its copy immediately after the call
+This is needed for MoltenVK-based users that can e.g. get an MTLSharedEvent from a VkSemaphore.
+This does NOT actually increase the ref-counter of MTLSharedEvent, since it's declared as
+__unsafe_unretained in vulkan headers.
+Same happens with exporting an IOSurfaceRef from a VkImage.
+So in a case when the VkSemaphore or VkImage is destroyed, the "handle" which is actually a pointer
+will be pointing to a dead object.
+To prevent this we need to increase the reference counter in a handle-specific means
+synchronously before returning control back to the user.
+
+This is not needed for fds or DXGI handles, since those are _created_ on demand as proper NT handles
+- [IExternalObjectsRenderInterfaceContextFeature](iexternalobjectsrenderinterfacecontextfeature.mdx)
+- [IExternalObjectsWrappedGpuHandle](iexternalobjectswrappedgpuhandle.mdx)
+- [IFontManagerImpl](ifontmanagerimpl.mdx)
+- [IGeometryContext](igeometrycontext.mdx) - Describes a geometry using drawing commands.
+- [IGeometryImpl](igeometryimpl.mdx) - Defines the platform-specific interface for a [Avalonia.Media.Geometry](xref:Avalonia.Media.Geometry).
+- [IGlyphRunImpl](iglyphrunimpl.mdx) - An immutable platform representation of a [Avalonia.Media.GlyphRun](xref:Avalonia.Media.GlyphRun).
+- [IGtkWebViewPlatformHandle](igtkwebviewplatformhandle.mdx)
+- [ILockedFramebuffer](ilockedframebuffer.mdx)
+- [IMacOSTopLevelPlatformHandle](imacostoplevelplatformhandle.mdx)
+- [INativePlatformHandleSurface](inativeplatformhandlesurface.mdx)
+- [IPlatformBehaviorInhibition](iplatformbehaviorinhibition.mdx) - Allows to inhibit platform specific behavior.
+- [IPlatformGraphics](iplatformgraphics.mdx)
+- [IPlatformGraphicsContext](iplatformgraphicscontext.mdx)
+- [IPlatformGraphicsReadyStateFeature](iplatformgraphicsreadystatefeature.mdx)
+- [IPlatformGraphicsWithFeatures](iplatformgraphicswithfeatures.mdx)
+- [IPlatformHandle](iplatformhandle.mdx) - Represents a platform-specific handle.
+- [IPlatformIconLoader](iplatformiconloader.mdx)
+- [IPlatformLifetimeEventsImpl](iplatformlifetimeeventsimpl.mdx)
+- [IPlatformRenderInterface](iplatformrenderinterface.mdx) - Defines the main platform-specific interface for the rendering subsystem.
+- [IPlatformRenderInterfaceContext](iplatformrenderinterfacecontext.mdx)
+- [IPlatformRenderInterfaceImportedImage](iplatformrenderinterfaceimportedimage.mdx)
+- [IPlatformRenderInterfaceImportedObject](iplatformrenderinterfaceimportedobject.mdx)
+- [IPlatformRenderInterfaceImportedSemaphore](iplatformrenderinterfaceimportedsemaphore.mdx)
+- [IPlatformRenderInterfaceRegion](iplatformrenderinterfaceregion.mdx)
+- [IPlatformSettings](iplatformsettings.mdx) - The [Avalonia.Platform.IPlatformSettings](xref:Avalonia.Platform.IPlatformSettings) interface represents a contract for accessing platform-specific settings and information.
+Some of these settings might be changed by used globally in the OS in runtime.
+- [IPlatformThreadingInterface](iplatformthreadinginterface.mdx) - Provides platform-specific services relating to threading.
+- [IPopupImpl](ipopupimpl.mdx) - Defines a platform-specific popup window implementation.
+- [IReadableBitmapImpl](ireadablebitmapimpl.mdx)
+- [IRenderTarget](irendertarget.mdx) - Defines a render target
+- [IRenderTargetBitmapImpl](irendertargetbitmapimpl.mdx) - Defines the platform-specific interface for a
+[Avalonia.Media.Imaging.RenderTargetBitmap](xref:Avalonia.Media.Imaging.RenderTargetBitmap).
+- [IRuntimePlatform](iruntimeplatform.mdx)
+- [IScopedResource&lt;T&gt;](iscopedresource-1.mdx)
+- [IScreenImpl](iscreenimpl.mdx)
+- [IStreamGeometryContextImpl](istreamgeometrycontextimpl.mdx) - Describes a geometry using drawing commands.
+- [IStreamGeometryImpl](istreamgeometryimpl.mdx) - Defines the platform-specific interface for a [Avalonia.Media.StreamGeometry](xref:Avalonia.Media.StreamGeometry).
+- [ISystemNavigationManagerImpl](isystemnavigationmanagerimpl.mdx)
+- [ITextShaperImpl](itextshaperimpl.mdx) - An abstraction that is used produce shaped text.
+- [ITopLevelImpl](itoplevelimpl.mdx) - Defines a platform-specific top-level window implementation.
+- [ITransformedGeometryImpl](itransformedgeometryimpl.mdx) - Represents a geometry with a transform applied.
+- [ITrayIconImpl](itrayiconimpl.mdx)
+- [ITrayIconWithIsTemplateImpl](itrayiconwithistemplateimpl.mdx)
+- [IWindowBaseImpl](iwindowbaseimpl.mdx)
+- [IWindowIconImpl](iwindowiconimpl.mdx)
+- [IWindowImpl](iwindowimpl.mdx) - Defines a platform-specific window implementation.
+- [IWindowingPlatform](iwindowingplatform.mdx)
+- [IWindowsWebView1PlatformHandle](iwindowswebview1platformhandle.mdx)
+- [IWindowsWebView2PlatformHandle](iwindowswebview2platformhandle.mdx)
+- [IWriteableBitmapImpl](iwriteablebitmapimpl.mdx) - Defines the platform-specific interface for a [Avalonia.Media.Imaging.WriteableBitmap](xref:Avalonia.Media.Imaging.WriteableBitmap).
+- [KnownPlatformGraphicsExternalImageHandleTypes](knownplatformgraphicsexternalimagehandletypes.mdx) - Describes various GPU memory handle types that are currently supported by Avalonia graphics backends
+- [KnownPlatformGraphicsExternalSemaphoreHandleTypes](knownplatformgraphicsexternalsemaphorehandletypes.mdx) - Describes various GPU semaphore handle types that are currently supported by Avalonia graphics backends
+- [LockedFramebuffer](lockedframebuffer.mdx)
+- [LtrbPixelRect](ltrbpixelrect.mdx) - This struct is essentially the same thing as RECT from win32 API
+Unlike our "normal" [PixelRect](xref:Avalonia.PixelRect) which is more human-readable and human-usable
+this struct is optimized for actual processing that doesn't really care
+about Width and Height but pretty much always only cares about
+Right and Bottom edge coordinates
+
+Not having to constantly convert between Width/Height and Right/Bottom for no actual reason
+saves us some perf
+
+This structure is intended to be mostly internal, but it's exposed as a PrivateApi type so it can
+be passed to the drawing backend when needed
+- [LtrbRect](ltrbrect.mdx) - This struct is essentially the same thing as MilRectD
+Unlike our "normal" Rect which is more human-readable and human-usable
+this struct is optimized for actual processing that doesn't really care
+about Width and Height but pretty much always only cares about
+Right and Bottom edge coordinates
+
+Not having to constantly convert between Width/Height and Right/Bottom for no actual reason
+saves us some perf
+
+This structure is intended to be mostly internal, but it's exposed as a PrivateApi type so it can
+be passed to the drawing backend when needed
+- [PixelFormat](pixelformat.mdx)
+- [PixelFormats](pixelformats.mdx)
+- [PlatformColorValues](platformcolorvalues.mdx) - Information about current system color values, including information about dark mode and accent colors.
+- [PlatformGraphicsContextLostException](platformgraphicscontextlostexception.mdx)
+- [PlatformGraphicsDeviceAdapterDescription](platformgraphicsdeviceadapterdescription.mdx)
+- [PlatformGraphicsExternalImageFormat](platformgraphicsexternalimageformat.mdx)
+- [PlatformGraphicsExternalImageProperties](platformgraphicsexternalimageproperties.mdx)
+- [PlatformHandle](platformhandle.mdx) - Represents a platform-specific handle.
+- [PlatformScreen](platformscreen.mdx)
+- [PlatformThemeVariant](platformthemevariant.mdx) - System theme variant or mode.
+- [RenderTargetDrawingContextProperties](rendertargetdrawingcontextproperties.mdx)
+- [RenderTargetProperties](rendertargetproperties.mdx)
+- [RuntimePlatformInfo](runtimeplatforminfo.mdx)
+- [ScopedResource&lt;T&gt;](scopedresource-1.mdx)
+- [Screen](screen.mdx) - Represents a single display screen.
+- [ScreenOrientation](screenorientation.mdx) - Describes the orientation of a screen.
+- [ScreensBase&lt;TKey, TScreen&gt;](screensbase-2.mdx)
+- [StandardAssetLoader](standardassetloader.mdx) - Loads assets compiled into the application binary.
+- [StandardRuntimePlatform](standardruntimeplatform.mdx)
+- [SurfaceOrientation](surfaceorientation.mdx)
+- [WebViewAdapterInfo](webviewadapterinfo.mdx)
+- [WebViewAdapterType](webviewadaptertype.mdx)
+- [WebViewEmbeddingScenario](webviewembeddingscenario.mdx)
+- [WebViewEngine](webviewengine.mdx)
+- [WebViewPrintOrientation](webviewprintorientation.mdx)
+- [WebViewPrintSettings](webviewprintsettings.mdx)
+- [WindowsWebView1EnvironmentRequestedEventArgs](windowswebview1environmentrequestedeventargs.mdx)
+- [WindowsWebView2EnvironmentRequestedEventArgs](windowswebview2environmentrequestedeventargs.mdx)
+</ApiRefPage>
+

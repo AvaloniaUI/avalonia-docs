@@ -1,0 +1,102 @@
+---
+title: 'FolderPickerOpenOptions'
+hide_title: true
+slug: '/avalonia/platform/storage/folderpickeropenoptions'
+uid: 'Avalonia.Platform.Storage.FolderPickerOpenOptions'
+commentId: 'T:Avalonia.Platform.Storage.FolderPickerOpenOptions'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Platform.Storage'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">FolderPickerOpenOptions Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Platform.Storage</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Platform/Storage/FolderPickerOpenOptions.cs">FolderPickerOpenOptions.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Options class for [Avalonia.Platform.Storage.IStorageProvider.OpenFolderPickerAsync(Avalonia.Platform.Storage.FolderPickerOpenOptions)](xref:Avalonia.Platform.Storage.IStorageProvider.OpenFolderPickerAsync%28Avalonia.Platform.Storage.FolderPickerOpenOptions%29) method.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class FolderPickerOpenOptions
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="pickeroptions">PickerOptions</a> <span className="apiref-page__relation-separator">-&gt;</span> FolderPickerOpenOptions
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [FolderPickerOpenOptions](#uid-8012a5ff45) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8012a5ff45"></span>
+
+### FolderPickerOpenOptions Constructor
+
+```csharp
+public FolderPickerOpenOptions()
+```
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [AllowMultiple](#uid-0908ae5d95) | Gets or sets an option indicating whether open picker allows users to select multiple folders. |
+| [SuggestedFileName](pickeroptions.mdx#uid-87696bd66c) | Gets or sets the file name that the file picker suggests to the user. Inherited from [PickerOptions](pickeroptions.mdx). |
+| [SuggestedStartLocation](pickeroptions.mdx#uid-792044079c) | Gets or sets the initial location where the file open picker looks for files to present to the user. Can be obtained from previously picked folder or using [Avalonia.Platform.Storage.IStorageProvider.TryGetFolderFromPathAsync(Uri)](xref:Avalonia.Platform.Storage.IStorageProvider.TryGetFolderFromPathAsync%28System.Uri%29) or [Avalonia.Platform.Storage.IStorageProvider.TryGetWellKnownFolderAsync(Avalonia.Platform.Storage.WellKnownFolder)](xref:Avalonia.Platform.Storage.IStorageProvider.TryGetWellKnownFolderAsync%28Avalonia.Platform.Storage.WellKnownFolder%29). Inherited from [PickerOptions](pickeroptions.mdx). |
+| [Title](pickeroptions.mdx#uid-825079a1b0) | Gets or sets the text that appears in the title bar of a picker. Inherited from [PickerOptions](pickeroptions.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0908ae5d95"></span>
+
+### AllowMultiple Property
+
+Gets or sets an option indicating whether open picker allows users to select multiple folders.
+
+```csharp
+public bool AllowMultiple { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

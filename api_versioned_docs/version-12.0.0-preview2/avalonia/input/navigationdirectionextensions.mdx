@@ -1,0 +1,155 @@
+---
+title: 'NavigationDirectionExtensions'
+hide_title: true
+slug: '/avalonia/input/navigationdirectionextensions'
+uid: 'Avalonia.Input.NavigationDirectionExtensions'
+commentId: 'T:Avalonia.Input.NavigationDirectionExtensions'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Input'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">NavigationDirectionExtensions Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Input</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Input/NavigationDirection.cs">NavigationDirection.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class NavigationDirectionExtensions
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> NavigationDirectionExtensions
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [IsDirectional](#uid-22ce294619) | Checks whether a [Avalonia.Input.NavigationDirection](xref:Avalonia.Input.NavigationDirection) represents a directional movement. |
+| [IsTab](#uid-e9175748a9) | Checks whether a [Avalonia.Input.NavigationDirection](xref:Avalonia.Input.NavigationDirection) represents a tab movement. |
+| [ToNavigationDirection](#uid-f23d6716dc) | Converts a keypress into a [Avalonia.Input.NavigationDirection](xref:Avalonia.Input.NavigationDirection). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-22ce294619"></span>
+
+### IsDirectional Method
+
+Checks whether a [Avalonia.Input.NavigationDirection](xref:Avalonia.Input.NavigationDirection) represents a directional movement.
+
+```csharp
+public bool IsDirectional(Avalonia.Input.NavigationDirection direction)
+```
+
+#### Parameters
+
+`direction` [Avalonia.Input.NavigationDirection](xref:Avalonia.Input.NavigationDirection)
+
+The direction.
+
+
+#### Returns
+
+bool
+
+True if the direction represents a directional movement (any value except
+[Avalonia.Input.NavigationDirection.Next](xref:Avalonia.Input.NavigationDirection.Next) and [Avalonia.Input.NavigationDirection.Previous](xref:Avalonia.Input.NavigationDirection.Previous));
+otherwise false.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e9175748a9"></span>
+
+### IsTab Method
+
+Checks whether a [Avalonia.Input.NavigationDirection](xref:Avalonia.Input.NavigationDirection) represents a tab movement.
+
+```csharp
+public bool IsTab(Avalonia.Input.NavigationDirection direction)
+```
+
+#### Parameters
+
+`direction` [Avalonia.Input.NavigationDirection](xref:Avalonia.Input.NavigationDirection)
+
+The direction.
+
+
+#### Returns
+
+bool
+
+True if the direction represents a tab movement ([Avalonia.Input.NavigationDirection.Next](xref:Avalonia.Input.NavigationDirection.Next)
+or [Avalonia.Input.NavigationDirection.Previous](xref:Avalonia.Input.NavigationDirection.Previous)); otherwise false.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f23d6716dc"></span>
+
+### ToNavigationDirection Method
+
+Converts a keypress into a [Avalonia.Input.NavigationDirection](xref:Avalonia.Input.NavigationDirection).
+
+```csharp
+public Nullable<Avalonia.Input.NavigationDirection> ToNavigationDirection(Avalonia.Input.Key key, Avalonia.Input.KeyModifiers modifiers)
+```
+
+#### Parameters
+
+`key` [Avalonia.Input.Key](xref:Avalonia.Input.Key)
+
+The key.
+
+
+`modifiers` [Avalonia.Input.KeyModifiers](xref:Avalonia.Input.KeyModifiers)
+
+The keyboard modifiers.
+
+
+#### Returns
+
+Nullable&lt;[Avalonia.Input.NavigationDirection](xref:Avalonia.Input.NavigationDirection)&gt;
+
+A [Avalonia.Input.NavigationDirection](xref:Avalonia.Input.NavigationDirection) if the keypress represents a navigation keypress.
+
+
+</section>
+
+</ApiRefPage>
+

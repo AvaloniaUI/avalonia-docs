@@ -1,0 +1,281 @@
+---
+title: 'ShapedBuffer'
+hide_title: true
+slug: '/avalonia/media/textformatting/shapedbuffer'
+uid: 'Avalonia.Media.TextFormatting.ShapedBuffer'
+commentId: 'T:Avalonia.Media.TextFormatting.ShapedBuffer'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Media.TextFormatting'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ShapedBuffer Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Media.TextFormatting</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Media/TextFormatting/ShapedBuffer.cs">ShapedBuffer.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class ShapedBuffer
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> ShapedBuffer
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEnumerable&lt;GlyphInfo&gt;, IReadOnlyCollection&lt;GlyphInfo&gt;, IReadOnlyList&lt;GlyphInfo&gt;, IEnumerable, IDisposable
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [ShapedBuffer](#uid-1d47581713) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1d47581713"></span>
+
+### ShapedBuffer Constructor
+
+```csharp
+public ShapedBuffer(ReadOnlyMemory<char> text, int bufferLength, Avalonia.Media.GlyphTypeface glyphTypeface, double fontRenderingEmSize, sbyte bidiLevel)
+```
+
+#### Parameters
+
+`text` ReadOnlyMemory&lt;char&gt;
+
+
+`bufferLength` int
+
+
+`glyphTypeface` [Avalonia.Media.GlyphTypeface](xref:Avalonia.Media.GlyphTypeface)
+
+
+`fontRenderingEmSize` double
+
+
+`bidiLevel` sbyte
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Dispose](#uid-0bf95ef9df) | No summary available. |
+| [GetEnumerator](#uid-21e93d6c02) | No summary available. |
+| [Reverse](#uid-1245172420) | Reverses the buffer. |
+| [Split](#uid-6413e6994f) | Splits the [Avalonia.Media.TextFormatting.TextRun](xref:Avalonia.Media.TextFormatting.TextRun) at specified length. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0bf95ef9df"></span>
+
+### Dispose Method
+
+```csharp
+public void Dispose()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-21e93d6c02"></span>
+
+### GetEnumerator Method
+
+```csharp
+public System.Collections.Generic.IEnumerator<Avalonia.Media.TextFormatting.GlyphInfo> GetEnumerator()
+```
+
+#### Returns
+
+System.Collections.Generic.IEnumerator&lt;[Avalonia.Media.TextFormatting.GlyphInfo](xref:Avalonia.Media.TextFormatting.GlyphInfo)&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1245172420"></span>
+
+### Reverse Method
+
+Reverses the buffer.
+
+```csharp
+public void Reverse()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6413e6994f"></span>
+
+### Split Method
+
+Splits the [Avalonia.Media.TextFormatting.TextRun](xref:Avalonia.Media.TextFormatting.TextRun) at specified length.
+
+```csharp
+public Avalonia.Media.TextFormatting.SplitResult<T><Avalonia.Media.TextFormatting.ShapedBuffer> Split(int textLength)
+```
+
+#### Parameters
+
+`textLength` int
+
+The text length.
+
+
+#### Returns
+
+Avalonia.Media.TextFormatting.SplitResult&lt;T&gt;&lt;[Avalonia.Media.TextFormatting.ShapedBuffer](xref:Avalonia.Media.TextFormatting.ShapedBuffer)&gt;
+
+The split result.
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [BidiLevel](#uid-5ded254761) | The buffer's bidi level. |
+| [FontRenderingEmSize](#uid-5c7c9ef6ae) | The buffers font rendering em size. |
+| [GlyphTypeface](#uid-9c4431840f) | The buffer's glyph typeface. |
+| [IsLeftToRight](#uid-980dd70041) | The buffer's reading direction. |
+| [Item](#uid-f74462311e) | No summary available. |
+| [Length](#uid-3427eb612b) | The buffer's length. |
+| [Text](#uid-197f3ad165) | The text that is represended by this buffer. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5ded254761"></span>
+
+### BidiLevel Property
+
+The buffer's bidi level.
+
+```csharp
+public sbyte BidiLevel { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5c7c9ef6ae"></span>
+
+### FontRenderingEmSize Property
+
+The buffers font rendering em size.
+
+```csharp
+public double FontRenderingEmSize { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9c4431840f"></span>
+
+### GlyphTypeface Property
+
+The buffer's glyph typeface.
+
+```csharp
+public Avalonia.Media.GlyphTypeface GlyphTypeface { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-980dd70041"></span>
+
+### IsLeftToRight Property
+
+The buffer's reading direction.
+
+```csharp
+public bool IsLeftToRight { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f74462311e"></span>
+
+### Item Property
+
+```csharp
+public Avalonia.Media.TextFormatting.GlyphInfo Item { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3427eb612b"></span>
+
+### Length Property
+
+The buffer's length.
+
+```csharp
+public int Length { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-197f3ad165"></span>
+
+### Text Property
+
+The text that is represended by this buffer.
+
+```csharp
+public ReadOnlyMemory<char> Text { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

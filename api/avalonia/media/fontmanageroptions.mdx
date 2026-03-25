@@ -1,0 +1,131 @@
+---
+title: 'FontManagerOptions'
+hide_title: true
+slug: '/avalonia/media/fontmanageroptions'
+uid: 'Avalonia.Media.FontManagerOptions'
+commentId: 'T:Avalonia.Media.FontManagerOptions'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Media'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">FontManagerOptions Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Media</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Media/FontManagerOptions.cs">FontManagerOptions.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class FontManagerOptions
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> FontManagerOptions
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [FontManagerOptions](#uid-35d2618c27) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-35d2618c27"></span>
+
+### FontManagerOptions Constructor
+
+```csharp
+public FontManagerOptions()
+```
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [DefaultFamilyName](#uid-eeb8b71ac1) | Gets or sets the default font family's name |
+| [FontFallbacks](#uid-3749c5bb7c) | Gets or sets the font fallbacks. |
+| [FontFamilyMappings](#uid-1868b78c76) | Gets or sets the font family mappings. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-eeb8b71ac1"></span>
+
+### DefaultFamilyName Property
+
+Gets or sets the default font family's name
+
+```csharp
+public string DefaultFamilyName { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3749c5bb7c"></span>
+
+### FontFallbacks Property
+
+Gets or sets the font fallbacks.
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<Avalonia.Media.FontFallback> FontFallbacks { get; set; }
+```
+
+#### Remarks
+
+A fallback is fullfilled before anything else when the font manager tries to match a specific codepoint.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1868b78c76"></span>
+
+### FontFamilyMappings Property
+
+Gets or sets the font family mappings.
+
+```csharp
+public System.Collections.Generic.IReadOnlyDictionary<string, Avalonia.Media.FontFamily> FontFamilyMappings { get; set; }
+```
+
+#### Remarks
+
+A font family mapping is used if a requested family name can't be resolved.
+
+</section>
+
+</ApiRefPage>
+

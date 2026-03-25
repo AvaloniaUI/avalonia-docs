@@ -1,0 +1,101 @@
+---
+title: 'SelectableMixin'
+hide_title: true
+slug: '/avalonia/controls/mixins/selectablemixin'
+uid: 'Avalonia.Controls.Mixins.SelectableMixin'
+commentId: 'T:Avalonia.Controls.Mixins.SelectableMixin'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Mixins'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">SelectableMixin Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Mixins</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Controls/Mixins/SelectableMixin.cs">SelectableMixin.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Adds selectable functionality to control classes.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class SelectableMixin
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> SelectableMixin
+</div>
+</div>
+
+## Remarks
+
+The [Avalonia.Controls.Mixins.SelectableMixin](xref:Avalonia.Controls.Mixins.SelectableMixin) adds behavior to a control which can be
+selected. It adds the following behavior:
+
+- Raises an [Avalonia.Controls.Primitives.SelectingItemsControl.IsSelectedChangedEvent](xref:Avalonia.Controls.Primitives.SelectingItemsControl.IsSelectedChangedEvent) when the value if the IsSelected property changes.
+- Adds a 'selected' class to selected controls.
+- Requests that the control is scrolled into view when focused.
+
+Mixins apply themselves to classes and not instances, and as such should be created in
+a static constructor.
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Attach](#uid-878a8a9e5e) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-878a8a9e5e"></span>
+
+### Attach Method
+
+```csharp
+public void Attach<TControl>(Avalonia.AvaloniaProperty<bool> isSelected)
+```
+
+#### Parameters
+
+`isSelected` [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty)&lt;bool&gt;
+
+
+#### Type Parameters
+
+`TControl`
+
+
+</section>
+
+</ApiRefPage>
+

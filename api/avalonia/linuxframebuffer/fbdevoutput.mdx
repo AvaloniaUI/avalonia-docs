@@ -1,0 +1,237 @@
+---
+title: 'FbdevOutput'
+hide_title: true
+slug: '/avalonia/linuxframebuffer/fbdevoutput'
+uid: 'Avalonia.LinuxFramebuffer.FbdevOutput'
+commentId: 'T:Avalonia.LinuxFramebuffer.FbdevOutput'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.LinuxFramebuffer'
+assembly: 'Avalonia.LinuxFramebuffer'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.LinuxFramebuffer'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">FbdevOutput Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.LinuxFramebuffer</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.LinuxFramebuffer</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.LinuxFramebuffer</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Linux/Avalonia.LinuxFramebuffer/Output/FbdevOutput.cs">FbdevOutput.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class FbdevOutput
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> FbdevOutput
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="output/ioutputbackend">IOutputBackend</a>, <a href="../platform/surfaces/iframebufferplatformsurface">IFramebufferPlatformSurface</a>, <a href="../platform/surfaces/iplatformrendersurface">IPlatformRenderSurface</a>, IDisposable
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [FbdevOutput (3 overloads)](#uid-455ac9cc2d) | Create a Linux frame buffer device output |
+
+<span id="uid-455ac9cc2d"></span>
+
+### FbdevOutput overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-45dd3957aa"></span>
+
+#### FbdevOutput Constructor
+
+Create a Linux frame buffer device output
+
+```csharp
+public FbdevOutput(Avalonia.LinuxFramebuffer.Output.FbDevOutputOptions options)
+```
+
+##### Parameters
+
+`options` [Avalonia.LinuxFramebuffer.Output.FbDevOutputOptions](xref:Avalonia.LinuxFramebuffer.Output.FbDevOutputOptions)
+
+Options
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b28f6697ae"></span>
+
+#### FbdevOutput Constructor
+
+Create a Linux frame buffer device output
+
+```csharp
+public FbdevOutput(string fileName)
+```
+
+##### Parameters
+
+`fileName` string
+
+The frame buffer device name.
+Defaults to the value in environment variable FRAMEBUFFER or /dev/fb0 when FRAMEBUFFER is not set
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a3f462a019"></span>
+
+#### FbdevOutput Constructor
+
+```csharp
+public FbdevOutput(string fileName, Nullable<Avalonia.Platform.PixelFormat> format)
+```
+
+##### Parameters
+
+`fileName` string
+
+
+`format` Nullable&lt;[Avalonia.Platform.PixelFormat](xref:Avalonia.Platform.PixelFormat)&gt;
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [CreateFramebufferRenderTarget](#uid-1d19b27d76) | No summary available. |
+| [Dispose](#uid-ae3043c7e0) | No summary available. |
+| [Lock](#uid-e8ddbb44af) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1d19b27d76"></span>
+
+### CreateFramebufferRenderTarget Method
+
+```csharp
+public Avalonia.Platform.Surfaces.IFramebufferRenderTarget CreateFramebufferRenderTarget()
+```
+
+#### Returns
+
+[Avalonia.Platform.Surfaces.IFramebufferRenderTarget](xref:Avalonia.Platform.Surfaces.IFramebufferRenderTarget)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ae3043c7e0"></span>
+
+### Dispose Method
+
+```csharp
+public void Dispose()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e8ddbb44af"></span>
+
+### Lock Method
+
+```csharp
+public Avalonia.Platform.ILockedFramebuffer Lock(RenderTargetSceneInfo _, Avalonia.Platform.Surfaces.FramebufferLockProperties& properties)
+```
+
+#### Parameters
+
+`_` RenderTargetSceneInfo
+
+
+`properties` [Avalonia.Platform.Surfaces.FramebufferLockProperties](xref:Avalonia.Platform.Surfaces.FramebufferLockProperties)&amp;
+
+
+#### Returns
+
+[Avalonia.Platform.ILockedFramebuffer](xref:Avalonia.Platform.ILockedFramebuffer)
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Id](#uid-6326ebf4db) | No summary available. |
+| [PixelSize](#uid-15e00ce680) | No summary available. |
+| [Scaling](#uid-bf3310dec9) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6326ebf4db"></span>
+
+### Id Property
+
+```csharp
+public string Id { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-15e00ce680"></span>
+
+### PixelSize Property
+
+```csharp
+public Avalonia.PixelSize PixelSize { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-bf3310dec9"></span>
+
+### Scaling Property
+
+```csharp
+public double Scaling { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

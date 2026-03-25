@@ -1,0 +1,120 @@
+---
+title: 'BindingExpressionBase'
+hide_title: true
+slug: '/avalonia/data/bindingexpressionbase'
+uid: 'Avalonia.Data.BindingExpressionBase'
+commentId: 'T:Avalonia.Data.BindingExpressionBase'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Data'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">BindingExpressionBase Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Data</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Data/BindingExpressionBase.cs">BindingExpressionBase.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class BindingExpressionBase
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> BindingExpressionBase
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Derived types:</span> <a href="core/untypedbindingexpressionbase">UntypedBindingExpressionBase</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="../styling/isetterinstance">ISetterInstance</a>, IDisposable
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Dispose](#uid-2ebfa59e03) | No summary available. |
+| [UpdateSource](#uid-fd0c9ff1d3) | Sends the current binding target value to the binding source property in [Avalonia.Data.BindingMode.TwoWay](xref:Avalonia.Data.BindingMode.TwoWay) or [Avalonia.Data.BindingMode.OneWayToSource](xref:Avalonia.Data.BindingMode.OneWayToSource) bindings. |
+| [UpdateTarget](#uid-2633f25166) | Forces a data transfer from the binding source to the binding target. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2ebfa59e03"></span>
+
+### Dispose Method
+
+```csharp
+public void Dispose()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-fd0c9ff1d3"></span>
+
+### UpdateSource Method
+
+Sends the current binding target value to the binding source property in
+[Avalonia.Data.BindingMode.TwoWay](xref:Avalonia.Data.BindingMode.TwoWay) or [Avalonia.Data.BindingMode.OneWayToSource](xref:Avalonia.Data.BindingMode.OneWayToSource) bindings.
+
+```csharp
+public void UpdateSource()
+```
+
+#### Remarks
+
+This method does nothing when the Mode of the binding is not
+[Avalonia.Data.BindingMode.TwoWay](xref:Avalonia.Data.BindingMode.TwoWay) or [Avalonia.Data.BindingMode.OneWayToSource](xref:Avalonia.Data.BindingMode.OneWayToSource).
+
+If the [UpdateSourceTrigger](xref:Avalonia.Data.UpdateSourceTrigger) value of your binding is set to
+[Avalonia.Data.UpdateSourceTrigger.Explicit](xref:Avalonia.Data.UpdateSourceTrigger.Explicit), you must call the
+[Avalonia.Data.BindingExpressionBase.UpdateSource](xref:Avalonia.Data.BindingExpressionBase.UpdateSource) method or the changes will not propagate back to the
+source.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2633f25166"></span>
+
+### UpdateTarget Method
+
+Forces a data transfer from the binding source to the binding target.
+
+```csharp
+public void UpdateTarget()
+```
+
+</section>
+
+</ApiRefPage>
+

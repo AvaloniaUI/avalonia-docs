@@ -1,0 +1,169 @@
+---
+title: 'IPropertyAccessor'
+hide_title: true
+slug: '/avalonia/data/core/plugins/ipropertyaccessor'
+uid: 'Avalonia.Data.Core.Plugins.IPropertyAccessor'
+commentId: 'T:Avalonia.Data.Core.Plugins.IPropertyAccessor'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Data.Core.Plugins'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IPropertyAccessor Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Data.Core.Plugins</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Defines an accessor to a property on an object.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface IPropertyAccessor
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IDisposable
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [SetValue](#uid-920c069334) | Sets the property value. |
+| [Subscribe](#uid-c921d7ba8d) | No summary available. |
+| [Unsubscribe](#uid-b3e34178af) | Unsubscribes to the value of the member. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-920c069334"></span>
+
+### SetValue Method
+
+Sets the property value.
+
+```csharp
+public bool SetValue(object value, Avalonia.Data.BindingPriority priority)
+```
+
+#### Parameters
+
+`value` object
+
+The value to set. Guaranteed to be of a valid type for the property.
+
+
+`priority` [Avalonia.Data.BindingPriority](xref:Avalonia.Data.BindingPriority)
+
+The priority with which to set the value.
+
+
+#### Returns
+
+bool
+
+True if the property was set; false if the property could not be set.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c921d7ba8d"></span>
+
+### Subscribe Method
+
+```csharp
+public void Subscribe(Action<object> listener)
+```
+
+#### Parameters
+
+`listener` Action&lt;object&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b3e34178af"></span>
+
+### Unsubscribe Method
+
+Unsubscribes to the value of the member.
+
+```csharp
+public void Unsubscribe()
+```
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [PropertyType](#uid-d7909bfc94) | Gets the type of the property. |
+| [Value](#uid-0c25b45a44) | Gets the current value of the property. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d7909bfc94"></span>
+
+### PropertyType Property
+
+Gets the type of the property.
+
+```csharp
+public Type PropertyType { get; set; }
+```
+
+#### Exceptions
+
+- [The accessor has not been subscribed to yet.](xref:System.InvalidOperationException)
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0c25b45a44"></span>
+
+### Value Property
+
+Gets the current value of the property.
+
+```csharp
+public object Value { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

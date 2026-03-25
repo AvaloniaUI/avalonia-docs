@@ -1,0 +1,191 @@
+---
+title: 'StyledPropertyMetadata<TValue>'
+hide_title: true
+slug: '/avalonia/styledpropertymetadata-1'
+uid: 'Avalonia.StyledPropertyMetadata`1'
+commentId: 'T:Avalonia.StyledPropertyMetadata`1'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">StyledPropertyMetadata&lt;TValue&gt; Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/StyledPropertyMetadata%601.cs">StyledPropertyMetadata`1.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Metadata for styled avalonia properties.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class StyledPropertyMetadata<TValue>
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="avaloniapropertymetadata">AvaloniaPropertyMetadata</a> <span className="apiref-page__relation-separator">-&gt;</span> StyledPropertyMetadata&lt;TValue&gt;
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="istyledpropertymetadata">IStyledPropertyMetadata</a>
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [StyledPropertyMetadata&lt;TValue&gt;](#uid-e775a56c4c) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e775a56c4c"></span>
+
+### StyledPropertyMetadata&lt;TValue&gt; Constructor
+
+```csharp
+public StyledPropertyMetadata<TValue>(Avalonia.Data.Optional<T><TValue> defaultValue, Avalonia.Data.BindingMode defaultBindingMode, Func<Avalonia.AvaloniaObject, TValue, TValue> coerce, bool enableDataValidation)
+```
+
+#### Parameters
+
+`defaultValue` Avalonia.Data.Optional&lt;T&gt;&lt;TValue&gt;
+
+
+`defaultBindingMode` [Avalonia.Data.BindingMode](xref:Avalonia.Data.BindingMode)
+
+
+`coerce` Func&lt;[Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject), TValue, TValue&gt;
+
+
+`enableDataValidation` bool
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [GenerateTypeSafeMetadata](#uid-eebbc90d76) | Gets a copy of this object configured for use with any owner type. |
+| [Merge](#uid-c3f1feadb7) | Merges the metadata with the base metadata. |
+| [Freeze](avaloniapropertymetadata.mdx#uid-db1cdb0cff) | Makes this instance read-only. No further modifications are allowed after this call. Inherited from [AvaloniaPropertyMetadata](avaloniapropertymetadata.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-eebbc90d76"></span>
+
+### GenerateTypeSafeMetadata Method
+
+Gets a copy of this object configured for use with any owner type.
+
+```csharp
+public Avalonia.AvaloniaPropertyMetadata GenerateTypeSafeMetadata()
+```
+
+#### Returns
+
+[Avalonia.AvaloniaPropertyMetadata](xref:Avalonia.AvaloniaPropertyMetadata)
+
+
+#### Remarks
+
+For example, delegates which receive the owner object should be removed.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c3f1feadb7"></span>
+
+### Merge Method
+
+Merges the metadata with the base metadata.
+
+```csharp
+public void Merge(Avalonia.AvaloniaPropertyMetadata baseMetadata, Avalonia.AvaloniaProperty property)
+```
+
+#### Parameters
+
+`baseMetadata` [Avalonia.AvaloniaPropertyMetadata](xref:Avalonia.AvaloniaPropertyMetadata)
+
+The base metadata to merge.
+
+
+`property` [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty)
+
+The property to which the metadata is being applied.
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [CoerceValue](#uid-a439fc7f25) | Gets the value coercion callback, if any. |
+| [DefaultValue](#uid-2232ffa60f) | Gets the default value for the property. |
+| [DefaultBindingMode](avaloniapropertymetadata.mdx#uid-b6d03b8752) | Gets the default binding mode for the property. Inherited from [AvaloniaPropertyMetadata](avaloniapropertymetadata.mdx). |
+| [EnableDataValidation](avaloniapropertymetadata.mdx#uid-aa782b0da1) | Gets a value indicating whether the property is interested in data validation. Inherited from [AvaloniaPropertyMetadata](avaloniapropertymetadata.mdx). |
+| [IsReadOnly](avaloniapropertymetadata.mdx#uid-8222a9d293) | Gets whether this instance is read-only and can't be modified. Inherited from [AvaloniaPropertyMetadata](avaloniapropertymetadata.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a439fc7f25"></span>
+
+### CoerceValue Property
+
+Gets the value coercion callback, if any.
+
+```csharp
+public Func<Avalonia.AvaloniaObject, TValue, TValue> CoerceValue { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2232ffa60f"></span>
+
+### DefaultValue Property
+
+Gets the default value for the property.
+
+```csharp
+public TValue DefaultValue { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

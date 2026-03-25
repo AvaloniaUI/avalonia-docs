@@ -1,0 +1,3958 @@
+{
+  "apiSidebar": [
+    "index",
+    {
+      "type": "category",
+      "label": "Avalonia",
+      "items": [
+        {
+          "type": "category",
+          "label": "Avalonia",
+          "items": [
+            "avalonia/appbuilder",
+            "avalonia/appbuilder-appmaindelegate",
+            "avalonia/application",
+            "avalonia/attachedproperty-1",
+            "avalonia/avaloniainternalexception",
+            "avalonia/avalonialocator",
+            "avalonia/avaloniaobject",
+            "avalonia/avaloniaobjectextensions",
+            "avalonia/avaloniaproperty",
+            "avalonia/avaloniaproperty-1",
+            "avalonia/avaloniapropertychangedeventargs",
+            "avalonia/avaloniapropertychangedeventargs-1",
+            "avalonia/avaloniapropertychangedextensions",
+            "avalonia/avaloniapropertymetadata",
+            "avalonia/avaloniapropertyregistry",
+            "avalonia/classicdesktopstyleapplicationlifetimeextensions",
+            "avalonia/cornerradius",
+            "avalonia/directproperty-2",
+            "avalonia/directpropertybase-1",
+            "avalonia/directpropertymetadata-1",
+            "avalonia/iavaloniadependencyresolver",
+            "avalonia/idatacontextprovider",
+            "avalonia/idescription",
+            "avalonia/idirectpropertymetadata",
+            "avalonia/inamed",
+            "avalonia/ioptionalfeatureprovider",
+            "avalonia/istyledpropertymetadata",
+            "avalonia/locatorextensions",
+            "avalonia/loggingextensions",
+            "avalonia/matrix",
+            "avalonia/matrix-decomposed",
+            "avalonia/optionalfeatureproviderextensions",
+            "avalonia/pixelpoint",
+            "avalonia/pixelrect",
+            "avalonia/pixelsize",
+            "avalonia/pixelvector",
+            "avalonia/point",
+            "avalonia/points",
+            "avalonia/rect",
+            "avalonia/relativepoint",
+            "avalonia/relativerect",
+            "avalonia/relativescalar",
+            "avalonia/relativeunit",
+            "avalonia/rendertargetcorruptedexception",
+            "avalonia/rendertargetnotreadyexception",
+            "avalonia/roundedrect",
+            "avalonia/size",
+            "avalonia/streambindingextensions",
+            "avalonia/styledelement",
+            "avalonia/styledelementextensions",
+            "avalonia/styledproperty-1",
+            "avalonia/styledpropertymetadata-1",
+            "avalonia/systemfontappbuilderextension",
+            "avalonia/thickness",
+            "avalonia/unsetvaluetype",
+            "avalonia/urlopenedeventargs",
+            "avalonia/vector",
+            "avalonia/vector3d",
+            "avalonia/visual",
+            "avalonia/visualextensions",
+            "avalonia/visualtreeattachmenteventargs"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Animation",
+          "items": [
+            "avalonia/animation/animatable",
+            "avalonia/animation/animation",
+            "avalonia/animation/booltransition",
+            "avalonia/animation/boxshadowstransition",
+            "avalonia/animation/brushtransition",
+            "avalonia/animation/colortransition",
+            "avalonia/animation/compositepagetransition",
+            "avalonia/animation/cornerradiustransition",
+            "avalonia/animation/crossfade",
+            "avalonia/animation/cue",
+            "avalonia/animation/cuetypeconverter",
+            "avalonia/animation/doubletransition",
+            "avalonia/animation/effecttransition",
+            "avalonia/animation/fillmode",
+            "avalonia/animation/floattransition",
+            "avalonia/animation/ianimation",
+            "avalonia/animation/ianimationsetter",
+            "avalonia/animation/icustomanimator",
+            "avalonia/animation/ipagetransition",
+            "avalonia/animation/itransition",
+            "avalonia/animation/integertransition",
+            "avalonia/animation/interpolatinganimator-1",
+            "avalonia/animation/interpolatingtransitionbase-1",
+            "avalonia/animation/iterationcount",
+            "avalonia/animation/iterationcounttypeconverter",
+            "avalonia/animation/iterationtype",
+            "avalonia/animation/keyframe",
+            "avalonia/animation/keyframes",
+            "avalonia/animation/keyspline",
+            "avalonia/animation/keysplinetypeconverter",
+            "avalonia/animation/pageslide",
+            "avalonia/animation/pageslide-slideaxis",
+            "avalonia/animation/playstate",
+            "avalonia/animation/playbackdirection",
+            "avalonia/animation/pointtransition",
+            "avalonia/animation/relativepointtransition",
+            "avalonia/animation/rotate3dtransition",
+            "avalonia/animation/sizetransition",
+            "avalonia/animation/thicknesstransition",
+            "avalonia/animation/transformoperationstransition",
+            "avalonia/animation/transition-1",
+            "avalonia/animation/transitionbase",
+            "avalonia/animation/transitions",
+            "avalonia/animation/vectortransition"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/animation/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Animation.Easings",
+          "items": [
+            "avalonia/animation/easings/backeasein",
+            "avalonia/animation/easings/backeaseinout",
+            "avalonia/animation/easings/backeaseout",
+            "avalonia/animation/easings/bounceeasein",
+            "avalonia/animation/easings/bounceeaseinout",
+            "avalonia/animation/easings/bounceeaseout",
+            "avalonia/animation/easings/circulareasein",
+            "avalonia/animation/easings/circulareaseinout",
+            "avalonia/animation/easings/circulareaseout",
+            "avalonia/animation/easings/cubiceasein",
+            "avalonia/animation/easings/cubiceaseinout",
+            "avalonia/animation/easings/cubiceaseout",
+            "avalonia/animation/easings/easing",
+            "avalonia/animation/easings/easingtypeconverter",
+            "avalonia/animation/easings/elasticeasein",
+            "avalonia/animation/easings/elasticeaseinout",
+            "avalonia/animation/easings/elasticeaseout",
+            "avalonia/animation/easings/exponentialeasein",
+            "avalonia/animation/easings/exponentialeaseinout",
+            "avalonia/animation/easings/exponentialeaseout",
+            "avalonia/animation/easings/ieasing",
+            "avalonia/animation/easings/lineareasing",
+            "avalonia/animation/easings/quadraticeasein",
+            "avalonia/animation/easings/quadraticeaseinout",
+            "avalonia/animation/easings/quadraticeaseout",
+            "avalonia/animation/easings/quarticeasein",
+            "avalonia/animation/easings/quarticeaseinout",
+            "avalonia/animation/easings/quarticeaseout",
+            "avalonia/animation/easings/quinticeasein",
+            "avalonia/animation/easings/quinticeaseinout",
+            "avalonia/animation/easings/quinticeaseout",
+            "avalonia/animation/easings/sineeasein",
+            "avalonia/animation/easings/sineeaseinout",
+            "avalonia/animation/easings/sineeaseout",
+            "avalonia/animation/easings/splineeasing",
+            "avalonia/animation/easings/springeasing"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/animation/easings/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Automation",
+          "items": [
+            "avalonia/automation/accessibilityview",
+            "avalonia/automation/automationelementidentifiers",
+            "avalonia/automation/automationlivesetting",
+            "avalonia/automation/automationproperties",
+            "avalonia/automation/automationproperty",
+            "avalonia/automation/automationpropertychangedeventargs",
+            "avalonia/automation/elementnotenabledexception",
+            "avalonia/automation/expandcollapsepatternidentifiers",
+            "avalonia/automation/expandcollapsestate",
+            "avalonia/automation/isoffscreenbehavior",
+            "avalonia/automation/rangevaluepatternidentifiers",
+            "avalonia/automation/scrollpatternidentifiers",
+            "avalonia/automation/selectionitempatternidentifiers",
+            "avalonia/automation/selectionpatternidentifiers",
+            "avalonia/automation/togglepatternidentifiers",
+            "avalonia/automation/valuepatternidentifiers"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/automation/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Automation.Peers",
+          "items": [
+            "avalonia/automation/peers/automationcontroltype",
+            "avalonia/automation/peers/automationlandmarktype",
+            "avalonia/automation/peers/automationpeer",
+            "avalonia/automation/peers/buttonautomationpeer",
+            "avalonia/automation/peers/comboboxautomationpeer",
+            "avalonia/automation/peers/contentcontrolautomationpeer",
+            "avalonia/automation/peers/contentpageautomationpeer",
+            "avalonia/automation/peers/controlautomationpeer",
+            "avalonia/automation/peers/datepickerautomationpeer",
+            "avalonia/automation/peers/drawerpageautomationpeer",
+            "avalonia/automation/peers/itemscontrolautomationpeer",
+            "avalonia/automation/peers/listitemautomationpeer",
+            "avalonia/automation/peers/menuitemautomationpeer",
+            "avalonia/automation/peers/navigationpageautomationpeer",
+            "avalonia/automation/peers/noneautomationpeer",
+            "avalonia/automation/peers/popupautomationpeer",
+            "avalonia/automation/peers/popuprootautomationpeer",
+            "avalonia/automation/peers/rangebaseautomationpeer",
+            "avalonia/automation/peers/scrollbarautomationpeer",
+            "avalonia/automation/peers/scrollviewerautomationpeer",
+            "avalonia/automation/peers/selectingitemscontrolautomationpeer",
+            "avalonia/automation/peers/tabbedpageautomationpeer",
+            "avalonia/automation/peers/textblockautomationpeer",
+            "avalonia/automation/peers/textboxautomationpeer",
+            "avalonia/automation/peers/timepickerautomationpeer",
+            "avalonia/automation/peers/togglebuttonautomationpeer",
+            "avalonia/automation/peers/treeviewautomationpeer",
+            "avalonia/automation/peers/treeviewitemautomationpeer",
+            "avalonia/automation/peers/unrealizedelementautomationpeer",
+            "avalonia/automation/peers/windowautomationpeer",
+            "avalonia/automation/peers/windowbaseautomationpeer"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/automation/peers/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Automation.Provider",
+          "items": [
+            "avalonia/automation/provider/iembeddedrootprovider",
+            "avalonia/automation/provider/iexpandcollapseprovider",
+            "avalonia/automation/provider/iinvokeprovider",
+            "avalonia/automation/provider/irangevalueprovider",
+            "avalonia/automation/provider/irootprovider",
+            "avalonia/automation/provider/iscrollprovider",
+            "avalonia/automation/provider/iselectionitemprovider",
+            "avalonia/automation/provider/iselectionprovider",
+            "avalonia/automation/provider/itoggleprovider",
+            "avalonia/automation/provider/ivalueprovider",
+            "avalonia/automation/provider/scrollamount",
+            "avalonia/automation/provider/togglestate"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/automation/provider/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Collections",
+          "items": [
+            "avalonia/collections/avaloniadictionary-2",
+            "avalonia/collections/avaloniadictionaryextensions",
+            "avalonia/collections/avalonialist-1",
+            "avalonia/collections/avalonialist-1-enumerator",
+            "avalonia/collections/avalonialistconverter-1",
+            "avalonia/collections/avalonialistextensions",
+            "avalonia/collections/iavaloniadictionary-2",
+            "avalonia/collections/iavalonialist-1",
+            "avalonia/collections/iavaloniareadonlydictionary-2",
+            "avalonia/collections/iavaloniareadonlylist-1",
+            "avalonia/collections/notifycollectionchangedextensions",
+            "avalonia/collections/resetbehavior"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/collections/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Collections.Pooled",
+          "items": [
+            "avalonia/collections/pooled/pooledlist-1-enumerator",
+            "avalonia/collections/pooled/pooledstack-1-enumerator"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/collections/pooled/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Controls",
+          "items": [
+            "avalonia/controls/acrylicplatformcompensationlevels",
+            "avalonia/controls/appbarbutton",
+            "avalonia/controls/appbarseparator",
+            "avalonia/controls/appbartogglebutton",
+            "avalonia/controls/autocompletebox",
+            "avalonia/controls/autocompletefiltermode",
+            "avalonia/controls/autocompletefilterpredicate-1",
+            "avalonia/controls/autocompleteselector-1",
+            "avalonia/controls/barlayoutbehavior",
+            "avalonia/controls/border",
+            "avalonia/controls/button",
+            "avalonia/controls/buttonspinner",
+            "avalonia/controls/calendar",
+            "avalonia/controls/calendardatechangedeventargs",
+            "avalonia/controls/calendardatepicker",
+            "avalonia/controls/calendardatepickerdatevalidationerroreventargs",
+            "avalonia/controls/calendardatepickerformat",
+            "avalonia/controls/calendardaterange",
+            "avalonia/controls/calendarmode",
+            "avalonia/controls/calendarmodechangedeventargs",
+            "avalonia/controls/calendarselectionmode",
+            "avalonia/controls/canvas",
+            "avalonia/controls/carousel",
+            "avalonia/controls/checkbox",
+            "avalonia/controls/classes",
+            "avalonia/controls/clickmode",
+            "avalonia/controls/columndefinition",
+            "avalonia/controls/columndefinitions",
+            "avalonia/controls/combobox",
+            "avalonia/controls/comboboxitem",
+            "avalonia/controls/commandbar",
+            "avalonia/controls/commandbardefaultlabelposition",
+            "avalonia/controls/commandbaroverflowbuttonvisibility",
+            "avalonia/controls/containerclearingeventargs",
+            "avalonia/controls/containerindexchangedeventargs",
+            "avalonia/controls/containerpreparedeventargs",
+            "avalonia/controls/contentcontrol",
+            "avalonia/controls/contentpage",
+            "avalonia/controls/contextmenu",
+            "avalonia/controls/control",
+            "avalonia/controls/controlextensions",
+            "avalonia/controls/controls",
+            "avalonia/controls/datavalidationerrors",
+            "avalonia/controls/datepicker",
+            "avalonia/controls/datepickerpresenter",
+            "avalonia/controls/datepickerselectedvaluechangedeventargs",
+            "avalonia/controls/decorator",
+            "avalonia/controls/definitionbase",
+            "avalonia/controls/definitionlist-1",
+            "avalonia/controls/design",
+            "avalonia/controls/desktopapplicationextensions",
+            "avalonia/controls/dock",
+            "avalonia/controls/dockpanel",
+            "avalonia/controls/drawerbehavior",
+            "avalonia/controls/drawerclosingeventargs",
+            "avalonia/controls/drawerlayoutbehavior",
+            "avalonia/controls/drawerpage",
+            "avalonia/controls/drawerplacement",
+            "avalonia/controls/dropdownbutton",
+            "avalonia/controls/expanddirection",
+            "avalonia/controls/expander",
+            "avalonia/controls/experimentalacrylicborder",
+            "avalonia/controls/flyout",
+            "avalonia/controls/flyoutpresenter",
+            "avalonia/controls/flyoutshowmode",
+            "avalonia/controls/grid",
+            "avalonia/controls/gridlength",
+            "avalonia/controls/gridresizebehavior",
+            "avalonia/controls/gridresizedirection",
+            "avalonia/controls/gridsplitter",
+            "avalonia/controls/gridunittype",
+            "avalonia/controls/groupbox",
+            "avalonia/controls/hotkeymanager",
+            "avalonia/controls/hyperlinkbutton",
+            "avalonia/controls/icommandbarelement",
+            "avalonia/controls/ideferredcontent",
+            "avalonia/controls/iglobaldatatemplates",
+            "avalonia/controls/inamescope",
+            "avalonia/controls/inativemenuexportereventsimplbridge",
+            "avalonia/controls/inativemenuitemexportereventsimplbridge",
+            "avalonia/controls/inavigation",
+            "avalonia/controls/ipseudoclasses",
+            "avalonia/controls/iresourcedictionary",
+            "avalonia/controls/iresourcehost",
+            "avalonia/controls/iresourcenode",
+            "avalonia/controls/iresourceprovider",
+            "avalonia/controls/iscrollanchorprovider",
+            "avalonia/controls/iselectable",
+            "avalonia/controls/isetinheritanceparent",
+            "avalonia/controls/isetlogicalparent",
+            "avalonia/controls/itemplate-1",
+            "avalonia/controls/ithemevariantprovider",
+            "avalonia/controls/iconelement",
+            "avalonia/controls/image",
+            "avalonia/controls/itemcollection",
+            "avalonia/controls/itemscontrol",
+            "avalonia/controls/itemssourceview",
+            "avalonia/controls/itemssourceview-1",
+            "avalonia/controls/label",
+            "avalonia/controls/layouttransformcontrol",
+            "avalonia/controls/listbox",
+            "avalonia/controls/listboxitem",
+            "avalonia/controls/location",
+            "avalonia/controls/macosproperties",
+            "avalonia/controls/maskedtextbox",
+            "avalonia/controls/menu",
+            "avalonia/controls/menubase",
+            "avalonia/controls/menuflyout",
+            "avalonia/controls/menuflyoutpresenter",
+            "avalonia/controls/menuitem",
+            "avalonia/controls/menuitemtoggletype",
+            "avalonia/controls/modalpoppedeventargs",
+            "avalonia/controls/modalpushedeventargs",
+            "avalonia/controls/multipage",
+            "avalonia/controls/namescope",
+            "avalonia/controls/namescopeextensions",
+            "avalonia/controls/namescopelocator",
+            "avalonia/controls/nativecontrolhost",
+            "avalonia/controls/nativedock",
+            "avalonia/controls/nativemenu",
+            "avalonia/controls/nativemenubar",
+            "avalonia/controls/nativemenuitem",
+            "avalonia/controls/nativemenuitembase",
+            "avalonia/controls/nativemenuitemseparator",
+            "avalonia/controls/navigatedfromeventargs",
+            "avalonia/controls/navigatedtoeventargs",
+            "avalonia/controls/navigatingfromeventargs",
+            "avalonia/controls/navigationeventargs",
+            "avalonia/controls/navigationpage",
+            "avalonia/controls/navigationtype",
+            "avalonia/controls/numericupdown",
+            "avalonia/controls/numericupdownvaluechangedeventargs",
+            "avalonia/controls/page",
+            "avalonia/controls/pageinsertedeventargs",
+            "avalonia/controls/pagenavigationhost",
+            "avalonia/controls/pageremovedeventargs",
+            "avalonia/controls/pageselectionchangedeventargs",
+            "avalonia/controls/panel",
+            "avalonia/controls/pathicon",
+            "avalonia/controls/pixelpointeventargs",
+            "avalonia/controls/placementmode",
+            "avalonia/controls/platforminhibitiontype",
+            "avalonia/controls/populatedeventargs",
+            "avalonia/controls/populatingeventargs",
+            "avalonia/controls/progressbar",
+            "avalonia/controls/progressbar-progressbartemplatesettings",
+            "avalonia/controls/pseudoclassesextensions",
+            "avalonia/controls/radiobutton",
+            "avalonia/controls/refreshcompletiondeferral",
+            "avalonia/controls/refreshcontainer",
+            "avalonia/controls/refreshrequestedeventargs",
+            "avalonia/controls/refreshvisualizer",
+            "avalonia/controls/refreshvisualizerorientation",
+            "avalonia/controls/refreshvisualizerstate",
+            "avalonia/controls/relativepanel",
+            "avalonia/controls/repeatbutton",
+            "avalonia/controls/requestbringintovieweventargs",
+            "avalonia/controls/resolvebynameattribute",
+            "avalonia/controls/resourcedictionary",
+            "avalonia/controls/resourcenodeextensions",
+            "avalonia/controls/resourceprovider",
+            "avalonia/controls/resourceschangedeventargs",
+            "avalonia/controls/reversiblestackpanel",
+            "avalonia/controls/rowdefinition",
+            "avalonia/controls/rowdefinitions",
+            "avalonia/controls/screens",
+            "avalonia/controls/scrollchangedeventargs",
+            "avalonia/controls/scrollviewer",
+            "avalonia/controls/selectabletextblock",
+            "avalonia/controls/selectingmultipage",
+            "avalonia/controls/selectionchangedeventargs",
+            "avalonia/controls/selectionmode",
+            "avalonia/controls/separator",
+            "avalonia/controls/shutdownmode",
+            "avalonia/controls/sizechangedeventargs",
+            "avalonia/controls/sizetocontent",
+            "avalonia/controls/slider",
+            "avalonia/controls/spindirection",
+            "avalonia/controls/spineventargs",
+            "avalonia/controls/spinner",
+            "avalonia/controls/splitbutton",
+            "avalonia/controls/splitview",
+            "avalonia/controls/splitviewdisplaymode",
+            "avalonia/controls/splitviewpaneplacement",
+            "avalonia/controls/stackpanel",
+            "avalonia/controls/tabcontrol",
+            "avalonia/controls/tabitem",
+            "avalonia/controls/tabplacement",
+            "avalonia/controls/tabbedpage",
+            "avalonia/controls/textblock",
+            "avalonia/controls/textbox",
+            "avalonia/controls/textchangedeventargs",
+            "avalonia/controls/textchangingeventargs",
+            "avalonia/controls/themevariantscope",
+            "avalonia/controls/tickbar",
+            "avalonia/controls/tickbarplacement",
+            "avalonia/controls/tickplacement",
+            "avalonia/controls/timepicker",
+            "avalonia/controls/timepickerpresenter",
+            "avalonia/controls/timepickerselectedvaluechangedeventargs",
+            "avalonia/controls/togglesplitbutton",
+            "avalonia/controls/toggleswitch",
+            "avalonia/controls/tooltip",
+            "avalonia/controls/toplevel",
+            "avalonia/controls/transitioncompletedeventargs",
+            "avalonia/controls/transitioningcontentcontrol",
+            "avalonia/controls/trayicon",
+            "avalonia/controls/trayicons",
+            "avalonia/controls/treeview",
+            "avalonia/controls/treeviewitem",
+            "avalonia/controls/usercontrol",
+            "avalonia/controls/validspindirections",
+            "avalonia/controls/viewbox",
+            "avalonia/controls/virtualizingcarouselpanel",
+            "avalonia/controls/virtualizingpanel",
+            "avalonia/controls/virtualizingstackpanel",
+            "avalonia/controls/win32properties",
+            "avalonia/controls/win32properties-customwindowstylescallback",
+            "avalonia/controls/win32properties-customwndprochookcallback",
+            "avalonia/controls/win32properties-win32hittestvalue",
+            "avalonia/controls/window",
+            "avalonia/controls/windowbase",
+            "avalonia/controls/windowclosereason",
+            "avalonia/controls/windowclosingbehavior",
+            "avalonia/controls/windowclosingeventargs",
+            "avalonia/controls/windowdecorations",
+            "avalonia/controls/windowedge",
+            "avalonia/controls/windowicon",
+            "avalonia/controls/windowresizereason",
+            "avalonia/controls/windowresizedeventargs",
+            "avalonia/controls/windowstartuplocation",
+            "avalonia/controls/windowstate",
+            "avalonia/controls/windowtransparencylevel",
+            "avalonia/controls/windowtransparencylevelcollection",
+            "avalonia/controls/wrappanel",
+            "avalonia/controls/wrappanelitemsalignment",
+            "avalonia/controls/x11properties"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/controls/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Controls.ApplicationLifetimes",
+          "items": [
+            "avalonia/controls/applicationlifetimes/activatablelifetimebase",
+            "avalonia/controls/applicationlifetimes/activatedeventargs",
+            "avalonia/controls/applicationlifetimes/activationkind",
+            "avalonia/controls/applicationlifetimes/classicdesktopstyleapplicationlifetime",
+            "avalonia/controls/applicationlifetimes/controlledapplicationlifetimeexiteventargs",
+            "avalonia/controls/applicationlifetimes/controlledapplicationlifetimestartupeventargs",
+            "avalonia/controls/applicationlifetimes/fileactivatedeventargs",
+            "avalonia/controls/applicationlifetimes/iactivatablelifetime",
+            "avalonia/controls/applicationlifetimes/iactivityapplicationlifetime",
+            "avalonia/controls/applicationlifetimes/iapplicationlifetime",
+            "avalonia/controls/applicationlifetimes/iclassicdesktopstyleapplicationlifetime",
+            "avalonia/controls/applicationlifetimes/icontrolledapplicationlifetime",
+            "avalonia/controls/applicationlifetimes/isingletoplevelapplicationlifetime",
+            "avalonia/controls/applicationlifetimes/isingleviewapplicationlifetime",
+            "avalonia/controls/applicationlifetimes/protocolactivatedeventargs",
+            "avalonia/controls/applicationlifetimes/shutdownrequestedeventargs"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/controls/applicationlifetimes/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Controls.Automation.Peers",
+          "items": [
+            "avalonia/controls/automation/peers/embeddablecontrolrootautomationpeer",
+            "avalonia/controls/automation/peers/expanderautomationpeer",
+            "avalonia/controls/automation/peers/imageautomationpeer",
+            "avalonia/controls/automation/peers/labelautomationpeer",
+            "avalonia/controls/automation/peers/progressbarautomationpeer",
+            "avalonia/controls/automation/peers/radiobuttonautomationpeer",
+            "avalonia/controls/automation/peers/sliderautomationpeer",
+            "avalonia/controls/automation/peers/thumbautomationpeer",
+            "avalonia/controls/automation/peers/usercontrolautomationpeer"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/controls/automation/peers/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Controls.Chrome",
+          "items": [
+            "avalonia/controls/chrome/iwindowdrawndecorationstemplate",
+            "avalonia/controls/chrome/windowdecorationproperties",
+            "avalonia/controls/chrome/windowdrawndecorations",
+            "avalonia/controls/chrome/windowdrawndecorationscontent"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/controls/chrome/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Controls.Converters",
+          "items": [
+            "avalonia/controls/converters/cornerradiusfilterconverter",
+            "avalonia/controls/converters/cornerradiustodoubleconverter",
+            "avalonia/controls/converters/corners",
+            "avalonia/controls/converters/enumtoboolconverter",
+            "avalonia/controls/converters/marginmultiplierconverter",
+            "avalonia/controls/converters/menuscrollingvisibilityconverter",
+            "avalonia/controls/converters/platformkeygestureconverter",
+            "avalonia/controls/converters/stringformatconverter",
+            "avalonia/controls/converters/treeviewitemindentconverter"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/controls/converters/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Controls.Diagnostics",
+          "items": [
+            "avalonia/controls/diagnostics/tooltipdiagnostics"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/controls/diagnostics/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Controls.Documents",
+          "items": [
+            "avalonia/controls/documents/bold",
+            "avalonia/controls/documents/inline",
+            "avalonia/controls/documents/inlinecollection",
+            "avalonia/controls/documents/inlineuicontainer",
+            "avalonia/controls/documents/italic",
+            "avalonia/controls/documents/linebreak",
+            "avalonia/controls/documents/run",
+            "avalonia/controls/documents/span",
+            "avalonia/controls/documents/textelement",
+            "avalonia/controls/documents/underline"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/controls/documents/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Controls.Embedding",
+          "items": [
+            "avalonia/controls/embedding/embeddablecontrolroot"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/controls/embedding/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Controls.Embedding.Offscreen",
+          "items": [
+            "avalonia/controls/embedding/offscreen/offscreentoplevelimplbase"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/controls/embedding/offscreen/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Controls.Generators",
+          "items": [
+            "avalonia/controls/generators/itemcontainergenerator"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/controls/generators/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Controls.Metadata",
+          "items": [
+            "avalonia/controls/metadata/pseudoclassesattribute",
+            "avalonia/controls/metadata/templatepartattribute"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/controls/metadata/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Controls.Mixins",
+          "items": [
+            "avalonia/controls/mixins/pressedmixin",
+            "avalonia/controls/mixins/selectablemixin"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/controls/mixins/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Controls.Notifications",
+          "items": [
+            "avalonia/controls/notifications/imanagednotificationmanager",
+            "avalonia/controls/notifications/inotification",
+            "avalonia/controls/notifications/inotificationmanager",
+            "avalonia/controls/notifications/notification",
+            "avalonia/controls/notifications/notificationcard",
+            "avalonia/controls/notifications/notificationposition",
+            "avalonia/controls/notifications/notificationtype",
+            "avalonia/controls/notifications/windownotificationmanager"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/controls/notifications/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Controls.Platform",
+          "items": [
+            "avalonia/controls/platform/defaultmenuinteractionhandler",
+            "avalonia/controls/platform/iinputpane",
+            "avalonia/controls/platform/iinsetsmanager",
+            "avalonia/controls/platform/imenuinteractionhandler",
+            "avalonia/controls/platform/imountedvolumeinfoprovider",
+            "avalonia/controls/platform/inativecontrolhostcontroltoplevelattachment",
+            "avalonia/controls/platform/inativecontrolhostdestroyablecontrolhandle",
+            "avalonia/controls/platform/inativecontrolhostimpl",
+            "avalonia/controls/platform/inativemenuexporter",
+            "avalonia/controls/platform/inativemenuexporterprovider",
+            "avalonia/controls/platform/istorageproviderfactory",
+            "avalonia/controls/platform/itoplevelnativemenuexporter",
+            "avalonia/controls/platform/iwin32optionstoplevelimpl",
+            "avalonia/controls/platform/ix11optionstoplevelimplfeature",
+            "avalonia/controls/platform/inputpanebase",
+            "avalonia/controls/platform/inputpanestate",
+            "avalonia/controls/platform/inputpanestateeventargs",
+            "avalonia/controls/platform/insetsmanagerbase",
+            "avalonia/controls/platform/manageddispatcherimpl",
+            "avalonia/controls/platform/manageddispatcherimpl-imanageddispatcherinputprovider",
+            "avalonia/controls/platform/mountedvolumeinfo",
+            "avalonia/controls/platform/platformmanager",
+            "avalonia/controls/platform/platformrequesteddrawndecoration",
+            "avalonia/controls/platform/safeareachangedargs",
+            "avalonia/controls/platform/systembartheme",
+            "avalonia/controls/platform/x11netwmwindowtype"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/controls/platform/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Controls.Presenters",
+          "items": [
+            "avalonia/controls/presenters/contentpresenter",
+            "avalonia/controls/presenters/itemspresenter",
+            "avalonia/controls/presenters/scrollcontentpresenter",
+            "avalonia/controls/presenters/textpresenter"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/controls/presenters/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Controls.Primitives",
+          "items": [
+            "avalonia/controls/primitives/accesstext",
+            "avalonia/controls/primitives/adornerlayer",
+            "avalonia/controls/primitives/calendarblackoutdatescollection",
+            "avalonia/controls/primitives/calendarbutton",
+            "avalonia/controls/primitives/calendardaybutton",
+            "avalonia/controls/primitives/calendaritem",
+            "avalonia/controls/primitives/datetimepickerpanel",
+            "avalonia/controls/primitives/datetimepickerpaneltype",
+            "avalonia/controls/primitives/flyoutbase",
+            "avalonia/controls/primitives/headeredcontentcontrol",
+            "avalonia/controls/primitives/headereditemscontrol",
+            "avalonia/controls/primitives/headeredselectingitemscontrol",
+            "avalonia/controls/primitives/ilogicalscrollable",
+            "avalonia/controls/primitives/iscrollsnappointsinfo",
+            "avalonia/controls/primitives/iscrollable",
+            "avalonia/controls/primitives/itemselectioneventtriggers",
+            "avalonia/controls/primitives/overlaylayer",
+            "avalonia/controls/primitives/overlaypopuphost",
+            "avalonia/controls/primitives/pickerpresenterbase",
+            "avalonia/controls/primitives/popup",
+            "avalonia/controls/primitives/popupflyoutbase",
+            "avalonia/controls/primitives/popuproot",
+            "avalonia/controls/primitives/rangebase",
+            "avalonia/controls/primitives/rangebasevaluechangedeventargs",
+            "avalonia/controls/primitives/scrollbar",
+            "avalonia/controls/primitives/scrollbarvisibility",
+            "avalonia/controls/primitives/scrolleventargs",
+            "avalonia/controls/primitives/scrolleventtype",
+            "avalonia/controls/primitives/selecteddatescollection",
+            "avalonia/controls/primitives/selectingitemscontrol",
+            "avalonia/controls/primitives/selectionhandletype",
+            "avalonia/controls/primitives/snappointsalignment",
+            "avalonia/controls/primitives/snappointstype",
+            "avalonia/controls/primitives/splitviewtemplatesettings",
+            "avalonia/controls/primitives/tabstrip",
+            "avalonia/controls/primitives/tabstripitem",
+            "avalonia/controls/primitives/templateappliedeventargs",
+            "avalonia/controls/primitives/templatedcontrol",
+            "avalonia/controls/primitives/textsearch",
+            "avalonia/controls/primitives/textselectionhandle",
+            "avalonia/controls/primitives/textselectorlayer",
+            "avalonia/controls/primitives/thumb",
+            "avalonia/controls/primitives/togglebutton",
+            "avalonia/controls/primitives/track",
+            "avalonia/controls/primitives/uniformgrid",
+            "avalonia/controls/primitives/visuallayermanager"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/controls/primitives/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Controls.Primitives.PopupPositioning",
+          "items": [
+            "avalonia/controls/primitives/popuppositioning/custompopupplacement",
+            "avalonia/controls/primitives/popuppositioning/custompopupplacementcallback",
+            "avalonia/controls/primitives/popuppositioning/imanagedpopuppositionerpopup",
+            "avalonia/controls/primitives/popuppositioning/ipopuppositioner",
+            "avalonia/controls/primitives/popuppositioning/managedpopuppositioner",
+            "avalonia/controls/primitives/popuppositioning/managedpopuppositionerpopupimplhelper",
+            "avalonia/controls/primitives/popuppositioning/managedpopuppositionerscreeninfo",
+            "avalonia/controls/primitives/popuppositioning/popupanchor",
+            "avalonia/controls/primitives/popuppositioning/popupgravity",
+            "avalonia/controls/primitives/popuppositioning/popuppositionrequest",
+            "avalonia/controls/primitives/popuppositioning/popuppositionerconstraintadjustment",
+            "avalonia/controls/primitives/popuppositioning/popuppositionerparameters"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/controls/primitives/popuppositioning/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Controls.Remote",
+          "items": [
+            "avalonia/controls/remote/remotewidget-sizingmode"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/controls/remote/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Controls.Selection",
+          "items": [
+            "avalonia/controls/selection/iselectionmodel",
+            "avalonia/controls/selection/selecteditems-1-untyped",
+            "avalonia/controls/selection/selectionmodel-1",
+            "avalonia/controls/selection/selectionmodel-1-batchupdateoperation",
+            "avalonia/controls/selection/selectionmodelextensions",
+            "avalonia/controls/selection/selectionmodelextensions-batchupdateoperation",
+            "avalonia/controls/selection/selectionmodelindexeschangedeventargs",
+            "avalonia/controls/selection/selectionmodelselectionchangedeventargs",
+            "avalonia/controls/selection/selectionmodelselectionchangedeventargs-1",
+            "avalonia/controls/selection/selectionnodebase-1"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/controls/selection/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Controls.Shapes",
+          "items": [
+            "avalonia/controls/shapes/arc",
+            "avalonia/controls/shapes/ellipse",
+            "avalonia/controls/shapes/line",
+            "avalonia/controls/shapes/path",
+            "avalonia/controls/shapes/polygon",
+            "avalonia/controls/shapes/polyline",
+            "avalonia/controls/shapes/rectangle",
+            "avalonia/controls/shapes/sector",
+            "avalonia/controls/shapes/shape"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/controls/shapes/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Controls.Templates",
+          "items": [
+            "avalonia/controls/templates/datatemplateextensions",
+            "avalonia/controls/templates/datatemplates",
+            "avalonia/controls/templates/funccontroltemplate",
+            "avalonia/controls/templates/funccontroltemplate-1",
+            "avalonia/controls/templates/funcdatatemplate",
+            "avalonia/controls/templates/funcdatatemplate-1",
+            "avalonia/controls/templates/functemplate-1",
+            "avalonia/controls/templates/functemplate-2",
+            "avalonia/controls/templates/functemplatenamescopeextensions",
+            "avalonia/controls/templates/functreedatatemplate",
+            "avalonia/controls/templates/functreedatatemplate-1",
+            "avalonia/controls/templates/icontroltemplate",
+            "avalonia/controls/templates/idatatemplate",
+            "avalonia/controls/templates/idatatemplatehost",
+            "avalonia/controls/templates/irecyclingdatatemplate",
+            "avalonia/controls/templates/itemplate-2",
+            "avalonia/controls/templates/itemplateresult",
+            "avalonia/controls/templates/itreedatatemplate",
+            "avalonia/controls/templates/itypeddatatemplate",
+            "avalonia/controls/templates/templateextensions",
+            "avalonia/controls/templates/templateresult-1"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/controls/templates/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Controls.Utils",
+          "items": [
+            "avalonia/controls/utils/ancestorfinder",
+            "avalonia/controls/utils/iselectionadapter",
+            "avalonia/controls/utils/selectingitemscontrolselectionadapter",
+            "avalonia/controls/utils/undoredohelper-1-iundoredohost"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/controls/utils/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Data",
+          "items": [
+            "avalonia/data/assignbindingattribute",
+            "avalonia/data/binding",
+            "avalonia/data/bindingbase",
+            "avalonia/data/bindingchainexception",
+            "avalonia/data/bindingerrortype",
+            "avalonia/data/bindingexpressionbase",
+            "avalonia/data/bindingmode",
+            "avalonia/data/bindingnotification",
+            "avalonia/data/bindingoperations",
+            "avalonia/data/bindingpriority",
+            "avalonia/data/bindingvalue-1",
+            "avalonia/data/bindingvaluetype",
+            "avalonia/data/compiledbinding",
+            "avalonia/data/compiledbindingpath",
+            "avalonia/data/compiledbindingpathbuilder",
+            "avalonia/data/cultureinfoietflanguagetagconverter",
+            "avalonia/data/datavalidationexception",
+            "avalonia/data/donothingtype",
+            "avalonia/data/indexerdescriptor",
+            "avalonia/data/multibinding",
+            "avalonia/data/optional-1",
+            "avalonia/data/optionalextensions",
+            "avalonia/data/reflectionbinding",
+            "avalonia/data/relativesource",
+            "avalonia/data/relativesourcemode",
+            "avalonia/data/templatebinding",
+            "avalonia/data/treetype",
+            "avalonia/data/updatesourcetrigger"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/data/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Data.Converters",
+          "items": [
+            "avalonia/data/converters/boolconverters",
+            "avalonia/data/converters/defaultvalueconverter",
+            "avalonia/data/converters/funcmultivalueconverter-2",
+            "avalonia/data/converters/funcvalueconverter-2",
+            "avalonia/data/converters/funcvalueconverter-3",
+            "avalonia/data/converters/imultivalueconverter",
+            "avalonia/data/converters/ivalueconverter",
+            "avalonia/data/converters/objectconverters",
+            "avalonia/data/converters/stringconverters",
+            "avalonia/data/converters/stringformatmultivalueconverter",
+            "avalonia/data/converters/stringformatvalueconverter"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/data/converters/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Data.Core",
+          "items": [
+            "avalonia/data/core/clrpropertyinfo",
+            "avalonia/data/core/expressionparseexception",
+            "avalonia/data/core/ipropertyinfo",
+            "avalonia/data/core/reflectionclrpropertyinfo",
+            "avalonia/data/core/untypedbindingexpressionbase"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/data/core/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Data.Core.Parsers",
+          "items": [
+            "avalonia/data/core/parsers/bindingexpressiongrammar-ancestornode",
+            "avalonia/data/core/parsers/bindingexpressiongrammar-attachedpropertynamenode",
+            "avalonia/data/core/parsers/bindingexpressiongrammar-emptyexpressionnode",
+            "avalonia/data/core/parsers/bindingexpressiongrammar-inode",
+            "avalonia/data/core/parsers/bindingexpressiongrammar-itransformnode",
+            "avalonia/data/core/parsers/bindingexpressiongrammar-indexernode",
+            "avalonia/data/core/parsers/bindingexpressiongrammar-namenode",
+            "avalonia/data/core/parsers/bindingexpressiongrammar-notnode",
+            "avalonia/data/core/parsers/bindingexpressiongrammar-propertynamenode",
+            "avalonia/data/core/parsers/bindingexpressiongrammar-selfnode",
+            "avalonia/data/core/parsers/bindingexpressiongrammar-streamnode",
+            "avalonia/data/core/parsers/bindingexpressiongrammar-typecastnode"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/data/core/parsers/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Data.Core.Plugins",
+          "items": [
+            "avalonia/data/core/plugins/dataannotationsvalidationplugin",
+            "avalonia/data/core/plugins/ipropertyaccessor"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/data/core/plugins/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.DesignerSupport",
+          "items": [
+            "avalonia/designersupport/designwindowloader"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/designersupport/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.DesignerSupport.Remote",
+          "items": [
+            "avalonia/designersupport/remote/remotedesignerentrypoint"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/designersupport/remote/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.DesignerSupport.Remote.HtmlTransport",
+          "items": [
+            "avalonia/designersupport/remote/htmltransport/htmlwebsockettransport",
+            "avalonia/designersupport/remote/htmltransport/simplewebsocket",
+            "avalonia/designersupport/remote/htmltransport/simplewebsockethttprequest",
+            "avalonia/designersupport/remote/htmltransport/simplewebsockethttpserver",
+            "avalonia/designersupport/remote/htmltransport/simplewebsocketmessage"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/designersupport/remote/htmltransport/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Diagnostics",
+          "items": [
+            "avalonia/diagnostics/avaloniaobjectextensions",
+            "avalonia/diagnostics/avaloniapropertyvalue",
+            "avalonia/diagnostics/diagnostic-meters",
+            "avalonia/diagnostics/diagnostic-tags",
+            "avalonia/diagnostics/ivalueframediagnostic",
+            "avalonia/diagnostics/valueentrydiagnostic",
+            "avalonia/diagnostics/valuestorediagnostic"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/diagnostics/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Dialogs",
+          "items": [
+            "avalonia/dialogs/aboutavaloniadialog",
+            "avalonia/dialogs/managedfilechooser",
+            "avalonia/dialogs/managedfilechooseroverwriteprompt",
+            "avalonia/dialogs/managedfiledialogextensions",
+            "avalonia/dialogs/managedfiledialogoptions"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/dialogs/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Dialogs.Internal",
+          "items": [
+            "avalonia/dialogs/internal/avaloniadialogsinternalviewmodelbase",
+            "avalonia/dialogs/internal/childfitter",
+            "avalonia/dialogs/internal/filesizestringconverter",
+            "avalonia/dialogs/internal/managedfilechooserfilterviewmodel",
+            "avalonia/dialogs/internal/managedfilechooseritemtype",
+            "avalonia/dialogs/internal/managedfilechooseritemviewmodel",
+            "avalonia/dialogs/internal/managedfilechoosernavigationitem",
+            "avalonia/dialogs/internal/managedfilechooserviewmodel",
+            "avalonia/dialogs/internal/resourceselectorconverter"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/dialogs/internal/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Input",
+          "items": [
+            "avalonia/input/asyncdatatransferextensions",
+            "avalonia/input/asyncdatatransferitemextensions",
+            "avalonia/input/contextrequestedeventargs",
+            "avalonia/input/cursor",
+            "avalonia/input/dataformat",
+            "avalonia/input/dataformat-1",
+            "avalonia/input/dataformatkind",
+            "avalonia/input/dataformats",
+            "avalonia/input/dataobject",
+            "avalonia/input/datatransfer",
+            "avalonia/input/datatransferextensions",
+            "avalonia/input/datatransferitem",
+            "avalonia/input/datatransferitemextensions",
+            "avalonia/input/dragdrop",
+            "avalonia/input/dragdropdevice",
+            "avalonia/input/dragdropeffects",
+            "avalonia/input/drageventargs",
+            "avalonia/input/findnextelementoptions",
+            "avalonia/input/focuschangingeventargs",
+            "avalonia/input/focusmanager",
+            "avalonia/input/gotfocuseventargs",
+            "avalonia/input/holdingroutedeventargs",
+            "avalonia/input/holdingstate",
+            "avalonia/input/iasyncdatatransfer",
+            "avalonia/input/iasyncdatatransferitem",
+            "avalonia/input/icloseable",
+            "avalonia/input/icommandsource",
+            "avalonia/input/icustomkeyboardnavigation",
+            "avalonia/input/idatatransfer",
+            "avalonia/input/idatatransferitem",
+            "avalonia/input/ifocusmanager",
+            "avalonia/input/ifocusscope",
+            "avalonia/input/iinputdevice",
+            "avalonia/input/iinputelement",
+            "avalonia/input/iinputmanager",
+            "avalonia/input/iinputroot",
+            "avalonia/input/ikeymodifierseventargs",
+            "avalonia/input/ikeyboarddevice",
+            "avalonia/input/imousedevice",
+            "avalonia/input/inavigablecontainer",
+            "avalonia/input/ipendevice",
+            "avalonia/input/ipointer",
+            "avalonia/input/ipointerdevice",
+            "avalonia/input/inputelement",
+            "avalonia/input/inputextensions",
+            "avalonia/input/inputmethod",
+            "avalonia/input/key",
+            "avalonia/input/keybinding",
+            "avalonia/input/keydevicetype",
+            "avalonia/input/keyeventargs",
+            "avalonia/input/keygesture",
+            "avalonia/input/keymodifiers",
+            "avalonia/input/keystates",
+            "avalonia/input/keyboarddevice",
+            "avalonia/input/keyboardnavigation",
+            "avalonia/input/keyboardnavigationmode",
+            "avalonia/input/mousebutton",
+            "avalonia/input/mousedevice",
+            "avalonia/input/navigationdirection",
+            "avalonia/input/navigationdirectionextensions",
+            "avalonia/input/navigationmethod",
+            "avalonia/input/pendevice",
+            "avalonia/input/physicalkey",
+            "avalonia/input/physicalkeyextensions",
+            "avalonia/input/pinchendedeventargs",
+            "avalonia/input/pincheventargs",
+            "avalonia/input/pinchgesturerecognizer",
+            "avalonia/input/pointer",
+            "avalonia/input/pointercapturelosteventargs",
+            "avalonia/input/pointerdeltaeventargs",
+            "avalonia/input/pointereventargs",
+            "avalonia/input/pointerpoint",
+            "avalonia/input/pointerpointproperties",
+            "avalonia/input/pointerpressedeventargs",
+            "avalonia/input/pointerreleasedeventargs",
+            "avalonia/input/pointertype",
+            "avalonia/input/pointerupdatekind",
+            "avalonia/input/pointerupdatekindextensions",
+            "avalonia/input/pointerwheeleventargs",
+            "avalonia/input/pulldirection",
+            "avalonia/input/pullgestureendedeventargs",
+            "avalonia/input/pullgestureeventargs",
+            "avalonia/input/pullgesturerecognizer",
+            "avalonia/input/rawinputmodifiers",
+            "avalonia/input/scrollgestureendedeventargs",
+            "avalonia/input/scrollgestureeventargs",
+            "avalonia/input/scrollgestureinertiastartingeventargs",
+            "avalonia/input/standardcursortype",
+            "avalonia/input/swipedirection",
+            "avalonia/input/swipegestureeventargs",
+            "avalonia/input/tappedeventargs",
+            "avalonia/input/textinputeventargs",
+            "avalonia/input/touchdevice",
+            "avalonia/input/vectoreventargs",
+            "avalonia/input/windowdecorationselementrole",
+            "avalonia/input/xyfocus",
+            "avalonia/input/xyfocusnavigationmodes",
+            "avalonia/input/xyfocusnavigationstrategy"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/input/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Input.GestureRecognizers",
+          "items": [
+            "avalonia/input/gesturerecognizers/gesturerecognizer",
+            "avalonia/input/gesturerecognizers/gesturerecognizercollection",
+            "avalonia/input/gesturerecognizers/scrollgesturerecognizer",
+            "avalonia/input/gesturerecognizers/swipegesturerecognizer"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/input/gesturerecognizers/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Input.Platform",
+          "items": [
+            "avalonia/input/platform/clipboardextensions",
+            "avalonia/input/platform/iclipboard",
+            "avalonia/input/platform/iclipboardimpl",
+            "avalonia/input/platform/iflushableclipboardimpl",
+            "avalonia/input/platform/iownedclipboardimpl",
+            "avalonia/input/platform/iplatformdragsource",
+            "avalonia/input/platform/keygestureformatinfo",
+            "avalonia/input/platform/platformhotkeyconfiguration"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/input/platform/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Input.Raw",
+          "items": [
+            "avalonia/input/raw/idragdropdevice",
+            "avalonia/input/raw/rawdragevent",
+            "avalonia/input/raw/rawdrageventtype",
+            "avalonia/input/raw/rawinputeventargs",
+            "avalonia/input/raw/rawkeyeventargs",
+            "avalonia/input/raw/rawkeyeventtype",
+            "avalonia/input/raw/rawmousewheeleventargs",
+            "avalonia/input/raw/rawpointereventargs",
+            "avalonia/input/raw/rawpointereventtype",
+            "avalonia/input/raw/rawpointergestureeventargs",
+            "avalonia/input/raw/rawpointerpoint",
+            "avalonia/input/raw/rawsizeeventargs",
+            "avalonia/input/raw/rawtextinputeventargs",
+            "avalonia/input/raw/rawtoucheventargs"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/input/raw/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Input.TextInput",
+          "items": [
+            "avalonia/input/textinput/contextmenuaction",
+            "avalonia/input/textinput/itextinputmethodimpl",
+            "avalonia/input/textinput/textinputcontenttype",
+            "avalonia/input/textinput/textinputmethodclient",
+            "avalonia/input/textinput/textinputmethodclientrequeryrequestedeventargs",
+            "avalonia/input/textinput/textinputmethodclientrequestedeventargs",
+            "avalonia/input/textinput/textinputoptions",
+            "avalonia/input/textinput/textinputreturnkeytype",
+            "avalonia/input/textinput/textselection"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/input/textinput/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Interactivity",
+          "items": [
+            "avalonia/interactivity/cancelroutedeventargs",
+            "avalonia/interactivity/eventroute",
+            "avalonia/interactivity/interactive",
+            "avalonia/interactivity/interactiveextensions",
+            "avalonia/interactivity/routedevent",
+            "avalonia/interactivity/routedevent-1",
+            "avalonia/interactivity/routedeventargs",
+            "avalonia/interactivity/routedeventregistry",
+            "avalonia/interactivity/routingstrategies"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/interactivity/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Layout",
+          "items": [
+            "avalonia/layout/effectiveviewportchangedeventargs",
+            "avalonia/layout/horizontalalignment",
+            "avalonia/layout/ilayoutmanager",
+            "avalonia/layout/layoutextensions",
+            "avalonia/layout/layouthelper",
+            "avalonia/layout/layoutinformation",
+            "avalonia/layout/layoutable",
+            "avalonia/layout/orientation",
+            "avalonia/layout/verticalalignment"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/layout/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Logging",
+          "items": [
+            "avalonia/logging/ilogsink",
+            "avalonia/logging/logarea",
+            "avalonia/logging/logeventlevel",
+            "avalonia/logging/logger",
+            "avalonia/logging/parametrizedlogger"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/logging/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.LogicalTree",
+          "items": [
+            "avalonia/logicaltree/childindexchangedaction",
+            "avalonia/logicaltree/childindexchangedeventargs",
+            "avalonia/logicaltree/controllocator",
+            "avalonia/logicaltree/ichildindexprovider",
+            "avalonia/logicaltree/ilogical",
+            "avalonia/logicaltree/ilogicalroot",
+            "avalonia/logicaltree/logicalextensions",
+            "avalonia/logicaltree/logicaltreeattachmenteventargs"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/logicaltree/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Markup.Parsers",
+          "items": [
+            "avalonia/markup/parsers/containerquerygrammar-andsyntax",
+            "avalonia/markup/parsers/containerquerygrammar-heightsyntax",
+            "avalonia/markup/parsers/containerquerygrammar-isyntax",
+            "avalonia/markup/parsers/containerquerygrammar-orsyntax",
+            "avalonia/markup/parsers/containerquerygrammar-querysyntax-1",
+            "avalonia/markup/parsers/containerquerygrammar-rangesyntax",
+            "avalonia/markup/parsers/containerquerygrammar-widthsyntax",
+            "avalonia/markup/parsers/propertypathgrammar-casttypesyntax",
+            "avalonia/markup/parsers/propertypathgrammar-childtraversalsyntax",
+            "avalonia/markup/parsers/propertypathgrammar-ensuretypesyntax",
+            "avalonia/markup/parsers/propertypathgrammar-isyntax",
+            "avalonia/markup/parsers/propertypathgrammar-propertysyntax",
+            "avalonia/markup/parsers/propertypathgrammar-typequalifiedpropertysyntax",
+            "avalonia/markup/parsers/selectorgrammar-attachedpropertysyntax",
+            "avalonia/markup/parsers/selectorgrammar-childsyntax",
+            "avalonia/markup/parsers/selectorgrammar-classsyntax",
+            "avalonia/markup/parsers/selectorgrammar-commasyntax",
+            "avalonia/markup/parsers/selectorgrammar-decimalsyntax",
+            "avalonia/markup/parsers/selectorgrammar-descendantsyntax",
+            "avalonia/markup/parsers/selectorgrammar-isyntax",
+            "avalonia/markup/parsers/selectorgrammar-itypesyntax",
+            "avalonia/markup/parsers/selectorgrammar-issyntax",
+            "avalonia/markup/parsers/selectorgrammar-namesyntax",
+            "avalonia/markup/parsers/selectorgrammar-nestingsyntax",
+            "avalonia/markup/parsers/selectorgrammar-notsyntax",
+            "avalonia/markup/parsers/selectorgrammar-nthchildsyntax",
+            "avalonia/markup/parsers/selectorgrammar-nthlastchildsyntax",
+            "avalonia/markup/parsers/selectorgrammar-oftypesyntax",
+            "avalonia/markup/parsers/selectorgrammar-propertysyntax",
+            "avalonia/markup/parsers/selectorgrammar-templatesyntax"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/markup/parsers/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Markup.Xaml",
+          "items": [
+            "avalonia/markup/xaml/avaloniaxamlloader",
+            "avalonia/markup/xaml/iprovidevaluetarget",
+            "avalonia/markup/xaml/irootobjectprovider",
+            "avalonia/markup/xaml/iuricontext",
+            "avalonia/markup/xaml/ixamltyperesolver",
+            "avalonia/markup/xaml/markupextension",
+            "avalonia/markup/xaml/runtimexamldiagnostic",
+            "avalonia/markup/xaml/runtimexamldiagnosticseverity",
+            "avalonia/markup/xaml/runtimexamlloaderconfiguration",
+            "avalonia/markup/xaml/runtimexamlloaderconfiguration-xamldiagnosticfunc",
+            "avalonia/markup/xaml/runtimexamlloaderdocument",
+            "avalonia/markup/xaml/xamlloadexception"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/markup/xaml/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Markup.Xaml.Converters",
+          "items": [
+            "avalonia/markup/xaml/converters/avaloniapropertytypeconverter",
+            "avalonia/markup/xaml/converters/avaloniauritypeconverter",
+            "avalonia/markup/xaml/converters/bitmaptypeconverter",
+            "avalonia/markup/xaml/converters/colortobrushconverter",
+            "avalonia/markup/xaml/converters/fontfamilytypeconverter",
+            "avalonia/markup/xaml/converters/icontypeconverter",
+            "avalonia/markup/xaml/converters/pointslisttypeconverter",
+            "avalonia/markup/xaml/converters/timespantypeconverter"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/markup/xaml/converters/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Markup.Xaml.Diagnostics",
+          "items": [
+            "avalonia/markup/xaml/diagnostics/xamlsourceinfo"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/markup/xaml/diagnostics/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Markup.Xaml.MarkupExtensions",
+          "items": [
+            "avalonia/markup/xaml/markupextensions/compiledbindingextension",
+            "avalonia/markup/xaml/markupextensions/dynamicresourceextension",
+            "avalonia/markup/xaml/markupextensions/on",
+            "avalonia/markup/xaml/markupextensions/on-1",
+            "avalonia/markup/xaml/markupextensions/onformfactorextension",
+            "avalonia/markup/xaml/markupextensions/onformfactorextension-1",
+            "avalonia/markup/xaml/markupextensions/onformfactorextensionbase-2",
+            "avalonia/markup/xaml/markupextensions/onplatformextension",
+            "avalonia/markup/xaml/markupextensions/onplatformextension-1",
+            "avalonia/markup/xaml/markupextensions/onplatformextensionbase-2",
+            "avalonia/markup/xaml/markupextensions/reflectionbindingextension",
+            "avalonia/markup/xaml/markupextensions/relativesourceextension",
+            "avalonia/markup/xaml/markupextensions/resolvebynameextension",
+            "avalonia/markup/xaml/markupextensions/staticresourceextension"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/markup/xaml/markupextensions/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Markup.Xaml.MarkupExtensions.CompiledBindings",
+          "items": [
+            "avalonia/markup/xaml/markupextensions/compiledbindings/propertyinfoaccessorfactory"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/markup/xaml/markupextensions/compiledbindings/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Markup.Xaml.Styling",
+          "items": [
+            "avalonia/markup/xaml/styling/mergeresourceinclude",
+            "avalonia/markup/xaml/styling/resourceinclude",
+            "avalonia/markup/xaml/styling/styleinclude"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/markup/xaml/styling/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Markup.Xaml.Templates",
+          "items": [
+            "avalonia/markup/xaml/templates/controltemplate",
+            "avalonia/markup/xaml/templates/datatemplate",
+            "avalonia/markup/xaml/templates/focusadornertemplate",
+            "avalonia/markup/xaml/templates/itemspaneltemplate",
+            "avalonia/markup/xaml/templates/template",
+            "avalonia/markup/xaml/templates/templatecontent",
+            "avalonia/markup/xaml/templates/treedatatemplate",
+            "avalonia/markup/xaml/templates/windowdrawndecorationstemplate"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/markup/xaml/templates/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Markup.Xaml.XamlIl.Runtime",
+          "items": [
+            "avalonia/markup/xaml/xamlil/runtime/avaloniaxamlilxmlnamespaceinfo",
+            "avalonia/markup/xaml/xamlil/runtime/iavaloniaxamlilcontroltemplateprovider",
+            "avalonia/markup/xaml/xamlil/runtime/iavaloniaxamlileagerparentstackprovider",
+            "avalonia/markup/xaml/xamlil/runtime/iavaloniaxamlilparentstackprovider",
+            "avalonia/markup/xaml/xamlil/runtime/iavaloniaxamlilxmlnamespaceinfoprovider",
+            "avalonia/markup/xaml/xamlil/runtime/xamlilruntimehelpers"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/markup/xaml/xamlil/runtime/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Media",
+          "items": [
+            "avalonia/media/acrylicbackgroundsource",
+            "avalonia/media/alignmentx",
+            "avalonia/media/alignmenty",
+            "avalonia/media/arcsegment",
+            "avalonia/media/backgroundsizing",
+            "avalonia/media/baselinealignment",
+            "avalonia/media/baselinepixelalignment",
+            "avalonia/media/beziersegment",
+            "avalonia/media/bitmapcache",
+            "avalonia/media/blureffect",
+            "avalonia/media/boxshadow",
+            "avalonia/media/boxshadows",
+            "avalonia/media/boxshadows-boxshadowsenumerator",
+            "avalonia/media/brush",
+            "avalonia/media/brushconverter",
+            "avalonia/media/brushextensions",
+            "avalonia/media/brushmappingmode",
+            "avalonia/media/brushes",
+            "avalonia/media/cachemode",
+            "avalonia/media/characterhit",
+            "avalonia/media/color",
+            "avalonia/media/colors",
+            "avalonia/media/combinedgeometry",
+            "avalonia/media/conicgradientbrush",
+            "avalonia/media/dashstyle",
+            "avalonia/media/drawing",
+            "avalonia/media/drawingbrush",
+            "avalonia/media/drawingcollection",
+            "avalonia/media/drawingcontext",
+            "avalonia/media/drawingcontext-pushedstate",
+            "avalonia/media/drawingcontext-restorestate-pushedstatetype",
+            "avalonia/media/drawinggroup",
+            "avalonia/media/drawingimage",
+            "avalonia/media/dropshadowdirectioneffect",
+            "avalonia/media/dropshadoweffect",
+            "avalonia/media/dropshadoweffectbase",
+            "avalonia/media/edgemode",
+            "avalonia/media/effect",
+            "avalonia/media/effectconverter",
+            "avalonia/media/effectextensions",
+            "avalonia/media/ellipsegeometry",
+            "avalonia/media/experimentalacrylicmaterial",
+            "avalonia/media/fillrule",
+            "avalonia/media/flowdirection",
+            "avalonia/media/fontfallback",
+            "avalonia/media/fontfamily",
+            "avalonia/media/fontfeature",
+            "avalonia/media/fontfeaturecollection",
+            "avalonia/media/fontmanager",
+            "avalonia/media/fontmanageroptions",
+            "avalonia/media/fontmetrics",
+            "avalonia/media/fontsimulations",
+            "avalonia/media/fontstretch",
+            "avalonia/media/fontstyle",
+            "avalonia/media/fontweight",
+            "avalonia/media/formattedtext",
+            "avalonia/media/geometry",
+            "avalonia/media/geometrycollection",
+            "avalonia/media/geometrycombinemode",
+            "avalonia/media/geometrydrawing",
+            "avalonia/media/geometrygroup",
+            "avalonia/media/geometrytypeconverter",
+            "avalonia/media/glyphmetrics",
+            "avalonia/media/glyphrun",
+            "avalonia/media/glyphrundrawing",
+            "avalonia/media/glyphrunmetrics",
+            "avalonia/media/glyphtypeface",
+            "avalonia/media/gradientbrush",
+            "avalonia/media/gradientspreadmethod",
+            "avalonia/media/gradientstop",
+            "avalonia/media/gradientstops",
+            "avalonia/media/hslcolor",
+            "avalonia/media/hsvcolor",
+            "avalonia/media/iblureffect",
+            "avalonia/media/ibrush",
+            "avalonia/media/iconicgradientbrush",
+            "avalonia/media/idashstyle",
+            "avalonia/media/idropshadoweffect",
+            "avalonia/media/ieffect",
+            "avalonia/media/iexperimentalacrylicmaterial",
+            "avalonia/media/ifontmemory",
+            "avalonia/media/igradientbrush",
+            "avalonia/media/igradientstop",
+            "avalonia/media/iimage",
+            "avalonia/media/iimagebrush",
+            "avalonia/media/iimagebrushsource",
+            "avalonia/media/iimmutablebrush",
+            "avalonia/media/iimmutableeffect",
+            "avalonia/media/iimmutableglyphrunreference",
+            "avalonia/media/iimmutablesolidcolorbrush",
+            "avalonia/media/ilineargradientbrush",
+            "avalonia/media/imutableeffect",
+            "avalonia/media/imutableexperimentalacrylicmaterial",
+            "avalonia/media/imutabletransform",
+            "avalonia/media/ipen",
+            "avalonia/media/iplatformtypeface",
+            "avalonia/media/iradialgradientbrush",
+            "avalonia/media/iscenebrush",
+            "avalonia/media/iscenebrushcontent",
+            "avalonia/media/isolidcolorbrush",
+            "avalonia/media/itextshapertypeface",
+            "avalonia/media/itilebrush",
+            "avalonia/media/itransform",
+            "avalonia/media/imagebrush",
+            "avalonia/media/imagedrawing",
+            "avalonia/media/immediatedrawingcontext",
+            "avalonia/media/immediatedrawingcontext-pushedstate",
+            "avalonia/media/immediatedrawingcontext-pushedstate-pushedstatetype",
+            "avalonia/media/immutableblureffect",
+            "avalonia/media/immutabledropshadowdirectioneffect",
+            "avalonia/media/immutabledropshadoweffect",
+            "avalonia/media/immutableexperimentalacrylicmaterial",
+            "avalonia/media/linegeometry",
+            "avalonia/media/linesegment",
+            "avalonia/media/lineargradientbrush",
+            "avalonia/media/materialextensions",
+            "avalonia/media/matrixtransform",
+            "avalonia/media/mediaextensions",
+            "avalonia/media/pathfigure",
+            "avalonia/media/pathfigures",
+            "avalonia/media/pathgeometry",
+            "avalonia/media/pathmarkupparser",
+            "avalonia/media/pathsegment",
+            "avalonia/media/pathsegments",
+            "avalonia/media/pen",
+            "avalonia/media/penlinecap",
+            "avalonia/media/penlinejoin",
+            "avalonia/media/polybeziersegment",
+            "avalonia/media/polylinesegment",
+            "avalonia/media/polylinegeometry",
+            "avalonia/media/preciseellipticarchelper-ellipticalarc",
+            "avalonia/media/quadraticbeziersegment",
+            "avalonia/media/radialgradientbrush",
+            "avalonia/media/rectanglegeometry",
+            "avalonia/media/renderoptions",
+            "avalonia/media/rotate3dtransform",
+            "avalonia/media/rotatetransform",
+            "avalonia/media/scaletransform",
+            "avalonia/media/skewtransform",
+            "avalonia/media/solidcolorbrush",
+            "avalonia/media/streamgeometry",
+            "avalonia/media/streamgeometrycontext",
+            "avalonia/media/stretch",
+            "avalonia/media/stretchdirection",
+            "avalonia/media/sweepdirection",
+            "avalonia/media/textalignment",
+            "avalonia/media/textcollapsingcreateinfo",
+            "avalonia/media/textdecoration",
+            "avalonia/media/textdecorationcollection",
+            "avalonia/media/textdecorationlocation",
+            "avalonia/media/textdecorationunit",
+            "avalonia/media/textdecorations",
+            "avalonia/media/texthintingmode",
+            "avalonia/media/texthittestresult",
+            "avalonia/media/textleadingprefixtrimming",
+            "avalonia/media/textoptions",
+            "avalonia/media/textpathsegmentellipsis",
+            "avalonia/media/textpathsegmenttrimming",
+            "avalonia/media/textrenderingmode",
+            "avalonia/media/texttrailingtrimming",
+            "avalonia/media/texttrimming",
+            "avalonia/media/textwrapping",
+            "avalonia/media/tilebrush",
+            "avalonia/media/tilemode",
+            "avalonia/media/transform",
+            "avalonia/media/transformconverter",
+            "avalonia/media/transformextensions",
+            "avalonia/media/transformgroup",
+            "avalonia/media/transforms",
+            "avalonia/media/translatetransform",
+            "avalonia/media/typeface",
+            "avalonia/media/unicoderange",
+            "avalonia/media/unicoderangesegment",
+            "avalonia/media/visualbrush"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/media/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Media.Fonts",
+          "items": [
+            "avalonia/media/fonts/embeddedfontcollection",
+            "avalonia/media/fonts/familynamecollection",
+            "avalonia/media/fonts/fontcollectionbase",
+            "avalonia/media/fonts/fontcollectionkey",
+            "avalonia/media/fonts/fontfamilykey",
+            "avalonia/media/fonts/ifontcollection",
+            "avalonia/media/fonts/opentypetag"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/media/fonts/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Media.Fonts.Tables.Cmap",
+          "items": [
+            "avalonia/media/fonts/tables/cmap/charactertoglyphmap",
+            "avalonia/media/fonts/tables/cmap/codepointrange",
+            "avalonia/media/fonts/tables/cmap/codepointrangeenumerator"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/media/fonts/tables/cmap/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Media.Imaging",
+          "items": [
+            "avalonia/media/imaging/bitmap",
+            "avalonia/media/imaging/bitmapblendingmode",
+            "avalonia/media/imaging/bitmapinterpolationmode",
+            "avalonia/media/imaging/croppedbitmap",
+            "avalonia/media/imaging/pixelformatreader-bgr24pixelformatreader",
+            "avalonia/media/imaging/pixelformatreader-bgr32pixelformatreader",
+            "avalonia/media/imaging/pixelformatreader-bgr555pixelformatreader",
+            "avalonia/media/imaging/pixelformatreader-bgr565pixelformatreader",
+            "avalonia/media/imaging/pixelformatreader-bgra8888pixelformatreader",
+            "avalonia/media/imaging/pixelformatreader-blackwhitepixelformatreader",
+            "avalonia/media/imaging/pixelformatreader-gray16pixelformatreader",
+            "avalonia/media/imaging/pixelformatreader-gray2pixelformatreader",
+            "avalonia/media/imaging/pixelformatreader-gray32floatpixelformatreader",
+            "avalonia/media/imaging/pixelformatreader-gray4pixelformatreader",
+            "avalonia/media/imaging/pixelformatreader-gray8pixelformatreader",
+            "avalonia/media/imaging/pixelformatreader-rgb24pixelformatreader",
+            "avalonia/media/imaging/pixelformatreader-rgb32pixelformatreader",
+            "avalonia/media/imaging/pixelformatreader-rgba64pixelformatreader",
+            "avalonia/media/imaging/pixelformatreader-rgba8888pixelformatreader",
+            "avalonia/media/imaging/pixelformatwriter-bgr24pixelformatwriter",
+            "avalonia/media/imaging/pixelformatwriter-bgr32pixelformatwriter",
+            "avalonia/media/imaging/pixelformatwriter-bgr555pixelformatwriter",
+            "avalonia/media/imaging/pixelformatwriter-bgr565pixelformatwriter",
+            "avalonia/media/imaging/pixelformatwriter-bgra32pixelformatwriter",
+            "avalonia/media/imaging/pixelformatwriter-bgra8888pixelformatwriter",
+            "avalonia/media/imaging/pixelformatwriter-blackwhitepixelformatwriter",
+            "avalonia/media/imaging/pixelformatwriter-gray16pixelformatwriter",
+            "avalonia/media/imaging/pixelformatwriter-gray2pixelformatwriter",
+            "avalonia/media/imaging/pixelformatwriter-gray32floatpixelformatwriter",
+            "avalonia/media/imaging/pixelformatwriter-gray4pixelformatwriter",
+            "avalonia/media/imaging/pixelformatwriter-gray8pixelformatwriter",
+            "avalonia/media/imaging/pixelformatwriter-rgb24pixelformatwriter",
+            "avalonia/media/imaging/pixelformatwriter-rgb32pixelformatwriter",
+            "avalonia/media/imaging/pixelformatwriter-rgba64pixelformatwriter",
+            "avalonia/media/imaging/pixelformatwriter-rgba8888pixelformatwriter",
+            "avalonia/media/imaging/rendertargetbitmap",
+            "avalonia/media/imaging/writeablebitmap"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/media/imaging/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Media.Immutable",
+          "items": [
+            "avalonia/media/immutable/immutableconicgradientbrush",
+            "avalonia/media/immutable/immutabledashstyle",
+            "avalonia/media/immutable/immutablegradientbrush",
+            "avalonia/media/immutable/immutablegradientstop",
+            "avalonia/media/immutable/immutablelineargradientbrush",
+            "avalonia/media/immutable/immutablepen",
+            "avalonia/media/immutable/immutableradialgradientbrush",
+            "avalonia/media/immutable/immutablesolidcolorbrush",
+            "avalonia/media/immutable/immutabletextdecoration",
+            "avalonia/media/immutable/immutabletilebrush",
+            "avalonia/media/immutable/immutabletransform"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/media/immutable/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Media.TextFormatting",
+          "items": [
+            "avalonia/media/textformatting/drawabletextrun",
+            "avalonia/media/textformatting/generictextparagraphproperties",
+            "avalonia/media/textformatting/generictextrunproperties",
+            "avalonia/media/textformatting/glyphinfo",
+            "avalonia/media/textformatting/itextsource",
+            "avalonia/media/textformatting/justificationproperties",
+            "avalonia/media/textformatting/logicaldirection",
+            "avalonia/media/textformatting/shapedbuffer",
+            "avalonia/media/textformatting/shapedtextrun",
+            "avalonia/media/textformatting/splitresult-1",
+            "avalonia/media/textformatting/textbounds",
+            "avalonia/media/textformatting/textcharacters",
+            "avalonia/media/textformatting/textcollapsingproperties",
+            "avalonia/media/textformatting/textendofline",
+            "avalonia/media/textformatting/textendofparagraph",
+            "avalonia/media/textformatting/textformatter",
+            "avalonia/media/textformatting/textlayout",
+            "avalonia/media/textformatting/textleadingprefixcharacterellipsis",
+            "avalonia/media/textformatting/textline",
+            "avalonia/media/textformatting/textlinebreak",
+            "avalonia/media/textformatting/textlinemetrics",
+            "avalonia/media/textformatting/textmetrics",
+            "avalonia/media/textformatting/textparagraphproperties",
+            "avalonia/media/textformatting/textrange",
+            "avalonia/media/textformatting/textrun",
+            "avalonia/media/textformatting/textrunbounds",
+            "avalonia/media/textformatting/textrunproperties",
+            "avalonia/media/textformatting/textshaper",
+            "avalonia/media/textformatting/textshaperoptions",
+            "avalonia/media/textformatting/texttrailingcharacterellipsis",
+            "avalonia/media/textformatting/texttrailingwordellipsis",
+            "avalonia/media/textformatting/unshapedtextrun"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/media/textformatting/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Media.TextFormatting.Unicode",
+          "items": [
+            "avalonia/media/textformatting/unicode/bidiclass",
+            "avalonia/media/textformatting/unicode/bidipairedbrackettype",
+            "avalonia/media/textformatting/unicode/codepoint",
+            "avalonia/media/textformatting/unicode/codepointenumerator",
+            "avalonia/media/textformatting/unicode/eastasianwidthclass",
+            "avalonia/media/textformatting/unicode/generalcategory",
+            "avalonia/media/textformatting/unicode/grapheme",
+            "avalonia/media/textformatting/unicode/graphemebreakclass",
+            "avalonia/media/textformatting/unicode/graphemeenumerator",
+            "avalonia/media/textformatting/unicode/linebreak",
+            "avalonia/media/textformatting/unicode/linebreakclass",
+            "avalonia/media/textformatting/unicode/linebreakenumerator",
+            "avalonia/media/textformatting/unicode/script"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/media/textformatting/unicode/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Media.Transformation",
+          "items": [
+            "avalonia/media/transformation/transformoperation",
+            "avalonia/media/transformation/transformoperation-datalayout",
+            "avalonia/media/transformation/transformoperation-datalayout-rotatelayout",
+            "avalonia/media/transformation/transformoperation-datalayout-scalelayout",
+            "avalonia/media/transformation/transformoperation-datalayout-skewlayout",
+            "avalonia/media/transformation/transformoperation-datalayout-translatelayout",
+            "avalonia/media/transformation/transformoperation-operationtype",
+            "avalonia/media/transformation/transformoperations",
+            "avalonia/media/transformation/transformoperations-builder"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/media/transformation/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Metadata",
+          "items": [
+            "avalonia/metadata/ambientattribute",
+            "avalonia/metadata/avalonialistattribute",
+            "avalonia/metadata/constructorargumentattribute",
+            "avalonia/metadata/contentattribute",
+            "avalonia/metadata/controltemplatescopeattribute",
+            "avalonia/metadata/datatypeattribute",
+            "avalonia/metadata/dependsonattribute",
+            "avalonia/metadata/iaddchild",
+            "avalonia/metadata/iaddchild-1",
+            "avalonia/metadata/inheritdatatypefromattribute",
+            "avalonia/metadata/inheritdatatypefromitemsattribute",
+            "avalonia/metadata/inheritdatatypefromscopekind",
+            "avalonia/metadata/markupextensiondefaultoptionattribute",
+            "avalonia/metadata/markupextensionoptionattribute",
+            "avalonia/metadata/notclientimplementableattribute",
+            "avalonia/metadata/privateapiattribute",
+            "avalonia/metadata/templatecontentattribute",
+            "avalonia/metadata/trimsurroundingwhitespaceattribute",
+            "avalonia/metadata/unstableattribute",
+            "avalonia/metadata/usableduringinitializationattribute",
+            "avalonia/metadata/whitespacesignificantcollectionattribute",
+            "avalonia/metadata/xmlnsdefinitionattribute",
+            "avalonia/metadata/xmlnsprefixattribute"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/metadata/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Metal",
+          "items": [
+            "avalonia/metal/imetaldevice",
+            "avalonia/metal/imetalexternalobjectsfeature",
+            "avalonia/metal/imetalexternaltexture",
+            "avalonia/metal/imetalplatformsurface",
+            "avalonia/metal/imetalplatformsurfacerendertarget",
+            "avalonia/metal/imetalplatformsurfacerenderingsession",
+            "avalonia/metal/imetalsharedevent"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/metal/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.MicroCom",
+          "items": [
+            "avalonia/microcom/callbackbase"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/microcom/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.OpenGL",
+          "items": [
+            "avalonia/opengl/glbasicinfointerface",
+            "avalonia/opengl/glconsts",
+            "avalonia/opengl/glerrors",
+            "avalonia/opengl/glinterface",
+            "avalonia/opengl/glinterface-glcontextinfo",
+            "avalonia/opengl/glprofiletype",
+            "avalonia/opengl/glversion",
+            "avalonia/opengl/icompositionimportableopenglsharedtexture",
+            "avalonia/opengl/iglcontext",
+            "avalonia/opengl/iglcontextexternalobjectsfeature",
+            "avalonia/opengl/iglexportableexternalimagetexture",
+            "avalonia/opengl/iglexportableexternalsemaphore",
+            "avalonia/opengl/iglexternalimagetexture",
+            "avalonia/opengl/iglexternalsemaphore",
+            "avalonia/opengl/iglplatformsurfacerendertargetfactory",
+            "avalonia/opengl/iopengltexturesharingrenderinterfacecontextfeature",
+            "avalonia/opengl/iplatformgraphicsopenglcontextfactory",
+            "avalonia/opengl/openglexception"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/opengl/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.OpenGL.Controls",
+          "items": [
+            "avalonia/opengl/controls/openglcontrolbase"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/opengl/controls/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.OpenGL.Egl",
+          "items": [
+            "avalonia/opengl/egl/eglconsts",
+            "avalonia/opengl/egl/eglcontext",
+            "avalonia/opengl/egl/eglcontextoptions",
+            "avalonia/opengl/egl/egldisplay",
+            "avalonia/opengl/egl/egldisplaycreationoptions",
+            "avalonia/opengl/egl/egldisplayoptions",
+            "avalonia/opengl/egl/eglerrors",
+            "avalonia/opengl/egl/eglglplatformsurface",
+            "avalonia/opengl/egl/eglglplatformsurface-ieglwindowglplatformsurfaceinfo",
+            "avalonia/opengl/egl/eglglplatformsurface-ieglwindowglplatformsurfaceinfowithwaitpolicy",
+            "avalonia/opengl/egl/eglglplatformsurfacebase",
+            "avalonia/opengl/egl/eglinterface",
+            "avalonia/opengl/egl/eglplatformgraphics",
+            "avalonia/opengl/egl/eglplatformsurfacerendertargetbase",
+            "avalonia/opengl/egl/eglsurface"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/opengl/egl/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.OpenGL.Features",
+          "items": [
+            "avalonia/opengl/features/externalobjectsopenglextensionfeature"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/opengl/features/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.OpenGL.Surfaces",
+          "items": [
+            "avalonia/opengl/surfaces/iglplatformsurface",
+            "avalonia/opengl/surfaces/iglplatformsurfacerendertarget",
+            "avalonia/opengl/surfaces/iglplatformsurfacerenderingsession"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/opengl/surfaces/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Platform",
+          "items": [
+            "avalonia/platform/alphaformat",
+            "avalonia/platform/assetloader",
+            "avalonia/platform/colorcontrastpreference",
+            "avalonia/platform/defaultplatformsettings",
+            "avalonia/platform/drawingcontextimplextensions",
+            "avalonia/platform/formfactortype",
+            "avalonia/platform/iassetloader",
+            "avalonia/platform/ibitmapimpl",
+            "avalonia/platform/icursorfactory",
+            "avalonia/platform/icursorimpl",
+            "avalonia/platform/idrawingcontextimpl",
+            "avalonia/platform/idrawingcontextimplwitheffects",
+            "avalonia/platform/idrawingcontextlayerimpl",
+            "avalonia/platform/idrawingcontextlayerwithrendercontextaffinityimpl",
+            "avalonia/platform/idrawingcontextwithacryliclikesupport",
+            "avalonia/platform/iexternalobjectshandlewraprenderinterfacecontextfeature",
+            "avalonia/platform/iexternalobjectsrenderinterfacecontextfeature",
+            "avalonia/platform/iexternalobjectswrappedgpuhandle",
+            "avalonia/platform/ifontmanagerimpl",
+            "avalonia/platform/igeometrycontext",
+            "avalonia/platform/igeometryimpl",
+            "avalonia/platform/iglyphrunimpl",
+            "avalonia/platform/ilockedframebuffer",
+            "avalonia/platform/imacostoplevelplatformhandle",
+            "avalonia/platform/inativeplatformhandlesurface",
+            "avalonia/platform/iplatformbehaviorinhibition",
+            "avalonia/platform/iplatformgraphics",
+            "avalonia/platform/iplatformgraphicscontext",
+            "avalonia/platform/iplatformgraphicsreadystatefeature",
+            "avalonia/platform/iplatformgraphicswithfeatures",
+            "avalonia/platform/iplatformhandle",
+            "avalonia/platform/iplatformiconloader",
+            "avalonia/platform/iplatformlifetimeeventsimpl",
+            "avalonia/platform/iplatformrenderinterface",
+            "avalonia/platform/iplatformrenderinterfacecontext",
+            "avalonia/platform/iplatformrenderinterfaceimportedimage",
+            "avalonia/platform/iplatformrenderinterfaceimportedobject",
+            "avalonia/platform/iplatformrenderinterfaceimportedsemaphore",
+            "avalonia/platform/iplatformrenderinterfaceregion",
+            "avalonia/platform/iplatformsettings",
+            "avalonia/platform/iplatformthreadinginterface",
+            "avalonia/platform/ipopupimpl",
+            "avalonia/platform/ireadablebitmapimpl",
+            "avalonia/platform/irendertarget",
+            "avalonia/platform/irendertargetbitmapimpl",
+            "avalonia/platform/iruntimeplatform",
+            "avalonia/platform/iscopedresource-1",
+            "avalonia/platform/iscreenimpl",
+            "avalonia/platform/istreamgeometrycontextimpl",
+            "avalonia/platform/istreamgeometryimpl",
+            "avalonia/platform/isystemnavigationmanagerimpl",
+            "avalonia/platform/itextshaperimpl",
+            "avalonia/platform/itoplevelimpl",
+            "avalonia/platform/itransformedgeometryimpl",
+            "avalonia/platform/itrayiconimpl",
+            "avalonia/platform/itrayiconwithistemplateimpl",
+            "avalonia/platform/iwindowbaseimpl",
+            "avalonia/platform/iwindowiconimpl",
+            "avalonia/platform/iwindowimpl",
+            "avalonia/platform/iwindowingplatform",
+            "avalonia/platform/iwriteablebitmapimpl",
+            "avalonia/platform/knownplatformgraphicsexternalimagehandletypes",
+            "avalonia/platform/knownplatformgraphicsexternalsemaphorehandletypes",
+            "avalonia/platform/lockedframebuffer",
+            "avalonia/platform/ltrbpixelrect",
+            "avalonia/platform/ltrbrect",
+            "avalonia/platform/pixelformat",
+            "avalonia/platform/pixelformats",
+            "avalonia/platform/platformcolorvalues",
+            "avalonia/platform/platformgraphicscontextlostexception",
+            "avalonia/platform/platformgraphicsdeviceadapterdescription",
+            "avalonia/platform/platformgraphicsexternalimageformat",
+            "avalonia/platform/platformgraphicsexternalimageproperties",
+            "avalonia/platform/platformhandle",
+            "avalonia/platform/platformscreen",
+            "avalonia/platform/platformthemevariant",
+            "avalonia/platform/rendertargetdrawingcontextproperties",
+            "avalonia/platform/rendertargetproperties",
+            "avalonia/platform/runtimeplatforminfo",
+            "avalonia/platform/scopedresource-1",
+            "avalonia/platform/screen",
+            "avalonia/platform/screenorientation",
+            "avalonia/platform/screensbase-2",
+            "avalonia/platform/standardassetloader",
+            "avalonia/platform/standardruntimeplatform",
+            "avalonia/platform/surfaceorientation"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/platform/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Platform.Storage",
+          "items": [
+            "avalonia/platform/storage/filepickerfiletype",
+            "avalonia/platform/storage/filepickerfiletypes",
+            "avalonia/platform/storage/filepickeropenoptions",
+            "avalonia/platform/storage/filepickersaveoptions",
+            "avalonia/platform/storage/folderpickeropenoptions",
+            "avalonia/platform/storage/ilauncher",
+            "avalonia/platform/storage/istoragebookmarkfile",
+            "avalonia/platform/storage/istoragebookmarkfolder",
+            "avalonia/platform/storage/istoragebookmarkitem",
+            "avalonia/platform/storage/istoragefile",
+            "avalonia/platform/storage/istoragefolder",
+            "avalonia/platform/storage/istorageitem",
+            "avalonia/platform/storage/istorageprovider",
+            "avalonia/platform/storage/launcherextensions",
+            "avalonia/platform/storage/pickeroptions",
+            "avalonia/platform/storage/savefilepickerresult",
+            "avalonia/platform/storage/storageitemproperties",
+            "avalonia/platform/storage/storageproviderextensions",
+            "avalonia/platform/storage/wellknownfolder"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/platform/storage/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Platform.Storage.FileIO",
+          "items": [
+            "avalonia/platform/storage/fileio/storagebookmarkhelper-decoderesult"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/platform/storage/fileio/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Platform.Surfaces",
+          "items": [
+            "avalonia/platform/surfaces/framebufferlockproperties",
+            "avalonia/platform/surfaces/funcframebufferrendertarget",
+            "avalonia/platform/surfaces/funcframebufferrendertarget-lockframebufferdelegate",
+            "avalonia/platform/surfaces/iframebufferplatformsurface",
+            "avalonia/platform/surfaces/iframebufferrendertarget",
+            "avalonia/platform/surfaces/iplatformrendersurface",
+            "avalonia/platform/surfaces/iplatformrendersurfacerendertarget"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/platform/surfaces/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Reactive",
+          "items": [
+            "avalonia/reactive/anonymousobserver-1"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/reactive/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Rendering",
+          "items": [
+            "avalonia/rendering/defaultrendertimer",
+            "avalonia/rendering/icustomhittest",
+            "avalonia/rendering/ipresentationsource",
+            "avalonia/rendering/irendertimer",
+            "avalonia/rendering/rendererdebugoverlays",
+            "avalonia/rendering/rendererdiagnostics",
+            "avalonia/rendering/sceneinvalidatedeventargs",
+            "avalonia/rendering/sleeplooprendertimer",
+            "avalonia/rendering/threadproxyrendertimer",
+            "avalonia/rendering/uithreadrendertimer"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/rendering/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Rendering.Composition",
+          "items": [
+            "avalonia/rendering/composition/booleankeyframeanimation",
+            "avalonia/rendering/composition/colorkeyframeanimation",
+            "avalonia/rendering/composition/compositionblendmode",
+            "avalonia/rendering/composition/compositioncontainervisual",
+            "avalonia/rendering/composition/compositioncustomvisual",
+            "avalonia/rendering/composition/compositioncustomvisualhandler",
+            "avalonia/rendering/composition/compositiondrawingsurface",
+            "avalonia/rendering/composition/compositiongetvaluestatus",
+            "avalonia/rendering/composition/compositiongpuimportedimagesynchronizationcapabilities",
+            "avalonia/rendering/composition/compositiongradientextendmode",
+            "avalonia/rendering/composition/compositionobject",
+            "avalonia/rendering/composition/compositionoptions",
+            "avalonia/rendering/composition/compositionpropertyset",
+            "avalonia/rendering/composition/compositionsolidcolorvisual",
+            "avalonia/rendering/composition/compositionstretch",
+            "avalonia/rendering/composition/compositionsurface",
+            "avalonia/rendering/composition/compositionsurfacevisual",
+            "avalonia/rendering/composition/compositiontilemode",
+            "avalonia/rendering/composition/compositionvisual",
+            "avalonia/rendering/composition/compositionvisualcollection",
+            "avalonia/rendering/composition/compositor",
+            "avalonia/rendering/composition/doublekeyframeanimation",
+            "avalonia/rendering/composition/elementcomposition",
+            "avalonia/rendering/composition/icompositiongpuimportedobject",
+            "avalonia/rendering/composition/icompositiongpuinterop",
+            "avalonia/rendering/composition/icompositionimportablesharedgpucontextimage",
+            "avalonia/rendering/composition/icompositionimportablesharedgpucontextobject",
+            "avalonia/rendering/composition/icompositionimportablesharedgpucontextsemaphore",
+            "avalonia/rendering/composition/icompositionimportedgpuimage",
+            "avalonia/rendering/composition/icompositionimportedgpusemaphore",
+            "avalonia/rendering/composition/quaternionkeyframeanimation",
+            "avalonia/rendering/composition/scalarkeyframeanimation",
+            "avalonia/rendering/composition/vector2keyframeanimation",
+            "avalonia/rendering/composition/vector3dkeyframeanimation",
+            "avalonia/rendering/composition/vector3keyframeanimation",
+            "avalonia/rendering/composition/vector4keyframeanimation",
+            "avalonia/rendering/composition/vectorkeyframeanimation"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/rendering/composition/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Rendering.Composition.Animations",
+          "items": [
+            "avalonia/rendering/composition/animations/animationdelaybehavior",
+            "avalonia/rendering/composition/animations/animationiterationbehavior",
+            "avalonia/rendering/composition/animations/animationstopbehavior",
+            "avalonia/rendering/composition/animations/compositionanimation",
+            "avalonia/rendering/composition/animations/compositionanimationgroup",
+            "avalonia/rendering/composition/animations/expressionanimation",
+            "avalonia/rendering/composition/animations/icompositionanimationbase",
+            "avalonia/rendering/composition/animations/implicitanimationcollection",
+            "avalonia/rendering/composition/animations/keyframeanimation",
+            "avalonia/rendering/composition/animations/propertysetsnapshot-value"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/rendering/composition/animations/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Rendering.Composition.Drawing",
+          "items": [
+            "avalonia/rendering/composition/drawing/compositionrenderdatascenebrushcontent-properties"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/rendering/composition/drawing/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Rendering.Composition.Expressions",
+          "items": [
+            "avalonia/rendering/composition/expressions/expressiontrackedobjects-pool"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/rendering/composition/expressions/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Rendering.Composition.Server",
+          "items": [
+            "avalonia/rendering/composition/server/compositorpools-stackpool-1",
+            "avalonia/rendering/composition/server/servercompositionvisual-readbackdata",
+            "avalonia/rendering/composition/server/servercompositionvisual-treewalkerframe"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/rendering/composition/server/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Rendering.Composition.Transport",
+          "items": [
+            "avalonia/rendering/composition/transport/batchstreamsegment-1",
+            "avalonia/rendering/composition/transport/compositionbatch",
+            "avalonia/rendering/composition/transport/serverlistproxyhelper-2-iregisterforserialization"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/rendering/composition/transport/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Rendering.SceneGraph",
+          "items": [
+            "avalonia/rendering/scenegraph/icustomdrawoperation"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/rendering/scenegraph/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Styling",
+          "items": [
+            "avalonia/styling/container",
+            "avalonia/styling/containerquery",
+            "avalonia/styling/containersizing",
+            "avalonia/styling/controltheme",
+            "avalonia/styling/iglobalstyles",
+            "avalonia/styling/isetterinstance",
+            "avalonia/styling/isettervalue",
+            "avalonia/styling/istyle",
+            "avalonia/styling/istylehost",
+            "avalonia/styling/itemplate",
+            "avalonia/styling/ithemevarianthost",
+            "avalonia/styling/selector",
+            "avalonia/styling/selectors",
+            "avalonia/styling/setter",
+            "avalonia/styling/setterbase",
+            "avalonia/styling/style",
+            "avalonia/styling/stylebase",
+            "avalonia/styling/stylequeries",
+            "avalonia/styling/stylequery",
+            "avalonia/styling/stylequerycomparisonoperator",
+            "avalonia/styling/styles",
+            "avalonia/styling/themevariant",
+            "avalonia/styling/themevarianttypeconverter"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/styling/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Threading",
+          "items": [
+            "avalonia/threading/avaloniasynchronizationcontext",
+            "avalonia/threading/avaloniasynchronizationcontext-restorecontext",
+            "avalonia/threading/dispatcher",
+            "avalonia/threading/dispatcher-dispatcherprocessingdisabled",
+            "avalonia/threading/dispatchereventargs",
+            "avalonia/threading/dispatcherframe",
+            "avalonia/threading/dispatcheroperation",
+            "avalonia/threading/dispatcheroperation-1",
+            "avalonia/threading/dispatcheroperationstatus",
+            "avalonia/threading/dispatcheroptions",
+            "avalonia/threading/dispatcherpriority",
+            "avalonia/threading/dispatcherpriorityawaitable",
+            "avalonia/threading/dispatcherpriorityawaitable-1",
+            "avalonia/threading/dispatcherpriorityawaiter",
+            "avalonia/threading/dispatcherpriorityawaiter-1",
+            "avalonia/threading/dispatchertimer",
+            "avalonia/threading/dispatcherunhandledexceptioneventargs",
+            "avalonia/threading/dispatcherunhandledexceptioneventhandler",
+            "avalonia/threading/dispatcherunhandledexceptionfiltereventargs",
+            "avalonia/threading/dispatcherunhandledexceptionfiltereventhandler",
+            "avalonia/threading/icontrolleddispatcherimpl",
+            "avalonia/threading/idispatcher",
+            "avalonia/threading/idispatcherimpl",
+            "avalonia/threading/idispatcherimplwithexplicitbackgroundprocessing",
+            "avalonia/threading/idispatcherimplwithpendinginput"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/threading/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Utilities",
+          "items": [
+            "avalonia/utilities/avaloniaresourcesentry",
+            "avalonia/utilities/avaloniaresourcesindexentry",
+            "avalonia/utilities/avaloniaresourcesindexreaderwriter",
+            "avalonia/utilities/iweakeventsubscriber-1",
+            "avalonia/utilities/immutablereadonlyliststructenumerator-1",
+            "avalonia/utilities/inlinedictionary-2-enumerator",
+            "avalonia/utilities/nonpumpinglockhelper-ihelperimpl",
+            "avalonia/utilities/pooledinlinelist-1-enumerator",
+            "avalonia/utilities/safeenumerablehashset-1-enumerator",
+            "avalonia/utilities/spanhelpers",
+            "avalonia/utilities/synchronouscompletionasyncresult-1",
+            "avalonia/utilities/synchronouscompletionasyncresultsource-1",
+            "avalonia/utilities/targetweakeventsubscriber-2",
+            "avalonia/utilities/typeutilities",
+            "avalonia/utilities/valuespan-1",
+            "avalonia/utilities/weakevent",
+            "avalonia/utilities/weakevent-2",
+            "avalonia/utilities/weakeventhandlermanager",
+            "avalonia/utilities/weakeventsubscriber-1",
+            "avalonia/utilities/weakevents"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/utilities/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.VisualTree",
+          "items": [
+            "avalonia/visualtree/transformedbounds",
+            "avalonia/visualtree/visualextensions",
+            "avalonia/visualtree/visuallocator"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/visualtree/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Visuals.Platform",
+          "items": [
+            "avalonia/visuals/platform/pathgeometrycontext"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/visuals/platform/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Vulkan",
+          "items": [
+            "avalonia/vulkan/ivulkancontextexternalobjectsfeature",
+            "avalonia/vulkan/ivulkandevice",
+            "avalonia/vulkan/ivulkanexternalimage",
+            "avalonia/vulkan/ivulkanexternalsemaphore",
+            "avalonia/vulkan/ivulkaninstance",
+            "avalonia/vulkan/ivulkankhrsurfaceplatformsurface",
+            "avalonia/vulkan/ivulkankhrsurfaceplatformsurfacefactory",
+            "avalonia/vulkan/ivulkanplatformgraphicscontext",
+            "avalonia/vulkan/ivulkanrendersession",
+            "avalonia/vulkan/ivulkanrendertarget",
+            "avalonia/vulkan/vkgetinstanceprocaddressdelegate",
+            "avalonia/vulkan/vulkandevicecreationoptions",
+            "avalonia/vulkan/vulkanexception",
+            "avalonia/vulkan/vulkanimagebase-memoryimportinfo",
+            "avalonia/vulkan/vulkanimageinfo",
+            "avalonia/vulkan/vulkaninstancecreationoptions",
+            "avalonia/vulkan/vulkankhrrendertarget-renderingsession",
+            "avalonia/vulkan/vulkanoptions",
+            "avalonia/vulkan/vulkanplatformgraphics",
+            "avalonia/vulkan/vulkanplatformgraphics-ivulkandevicefactory",
+            "avalonia/vulkan/vulkanplatformspecificoptions"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/vulkan/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Vulkan.UnmanagedInterop",
+          "items": [
+            "avalonia/vulkan/unmanagedinterop/vkphysicaldevicememoryproperties-vkmemoryheapsbuffer",
+            "avalonia/vulkan/unmanagedinterop/vkphysicaldevicememoryproperties-vkmemorytypesbuffer"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/vulkan/unmanagedinterop/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "CompiledAvaloniaXaml",
+          "items": [
+            "compiledavaloniaxaml/avaloniaresources",
+            "compiledavaloniaxaml/xamlloader",
+            "compiledavaloniaxaml/xamlilcontext-context-1",
+            "compiledavaloniaxaml/xamlilcontext-parentstackenumerable-enumerator"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "compiledavaloniaxaml/index"
+          }
+        }
+      ],
+      "link": {
+        "type": "doc",
+        "id": "packages/avalonia"
+      }
+    },
+    {
+      "type": "category",
+      "label": "Avalonia.Android",
+      "items": [
+        {
+          "type": "category",
+          "label": "Avalonia",
+          "items": [
+            "avalonia/androidapplicationextensions",
+            "avalonia/androidplatformoptions",
+            "avalonia/androidrenderingmode"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Android",
+          "items": [
+            "avalonia/android/androidbackrequestedeventargs",
+            "avalonia/android/androidviewcontrolhandle",
+            "avalonia/android/avaloniaactivity",
+            "avalonia/android/avaloniaandroidapplication-1",
+            "avalonia/android/avaloniamainactivity",
+            "avalonia/android/avaloniaview",
+            "avalonia/android/iactivitynavigationservice",
+            "avalonia/android/iactivityresulthandler",
+            "avalonia/android/iavaloniaactivity"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/android/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Android.Automation",
+          "items": [
+            "avalonia/android/automation/inodeinfoprovider"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/android/automation/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Android.Internal",
+          "items": [
+            "avalonia/android/internal/resource"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/android/internal/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Android.Platform.SkiaPlatform",
+          "items": [
+            "avalonia/android/platform/skiaplatform/androidframebuffer-androidpixelformat"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/android/platform/skiaplatform/index"
+          }
+        }
+      ],
+      "link": {
+        "type": "doc",
+        "id": "packages/avalonia-android"
+      }
+    },
+    {
+      "type": "category",
+      "label": "Avalonia.Browser",
+      "items": [
+        {
+          "type": "category",
+          "label": "Avalonia.Browser",
+          "items": [
+            "avalonia/browser/avaloniaview",
+            "avalonia/browser/browserappbuilder",
+            "avalonia/browser/browserplatformoptions",
+            "avalonia/browser/browserrenderingmode",
+            "avalonia/browser/jsobjectcontrolhandle",
+            "avalonia/browser/jsobjectplatformhandle"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/browser/index"
+          }
+        }
+      ],
+      "link": {
+        "type": "doc",
+        "id": "packages/avalonia-browser"
+      }
+    },
+    {
+      "type": "category",
+      "label": "Avalonia.Controls.ColorPicker",
+      "items": [
+        {
+          "type": "category",
+          "label": "Avalonia.Controls",
+          "items": [
+            "avalonia/controls/alphacomponentposition",
+            "avalonia/controls/colorchangedeventargs",
+            "avalonia/controls/colorcomponent",
+            "avalonia/controls/colormodel",
+            "avalonia/controls/colorpicker",
+            "avalonia/controls/colorspectrumcomponents",
+            "avalonia/controls/colorspectrumshape",
+            "avalonia/controls/colorview",
+            "avalonia/controls/colorviewtab",
+            "avalonia/controls/flatcolorpalette",
+            "avalonia/controls/flatcolorpalette-flatcolor",
+            "avalonia/controls/flathalfcolorpalette",
+            "avalonia/controls/fluentcolorpalette",
+            "avalonia/controls/hsvcomponent",
+            "avalonia/controls/icolorpalette",
+            "avalonia/controls/materialcolorpalette",
+            "avalonia/controls/materialcolorpalette-materialcolor",
+            "avalonia/controls/materialhalfcolorpalette",
+            "avalonia/controls/rgbcomponent",
+            "avalonia/controls/sixteencolorpalette"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/controls/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Controls.Converters",
+          "items": [
+            "avalonia/controls/converters/colortodisplaynameconverter",
+            "avalonia/controls/converters/colortohexconverter",
+            "avalonia/controls/converters/donothingfornullconverter",
+            "avalonia/controls/converters/tobrushconverter",
+            "avalonia/controls/converters/tocolorconverter"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/controls/converters/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Controls.Primitives",
+          "items": [
+            "avalonia/controls/primitives/colorhelper",
+            "avalonia/controls/primitives/colorpreviewer",
+            "avalonia/controls/primitives/colorslider",
+            "avalonia/controls/primitives/colorspectrum"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/controls/primitives/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Controls.Primitives.Converters",
+          "items": [
+            "avalonia/controls/primitives/converters/accentcolorconverter",
+            "avalonia/controls/primitives/converters/contrastbrushconverter"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/controls/primitives/converters/index"
+          }
+        },
+        "compiledavaloniaxaml/index"
+      ],
+      "link": {
+        "type": "doc",
+        "id": "packages/avalonia-controls-colorpicker"
+      }
+    },
+    {
+      "type": "category",
+      "label": "Avalonia.Controls.Markdown",
+      "items": [
+        {
+          "type": "category",
+          "label": "Avalonia.Controls",
+          "items": [
+            "avalonia/controls/codehighlighter",
+            "avalonia/controls/markdown",
+            "avalonia/controls/markdownextensions",
+            "avalonia/controls/markdownimageloader"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/controls/index"
+          }
+        },
+        "compiledavaloniaxaml/index"
+      ],
+      "link": {
+        "type": "doc",
+        "id": "packages/avalonia-controls-markdown"
+      }
+    },
+    {
+      "type": "category",
+      "label": "Avalonia.Controls.MediaPlayer",
+      "items": [
+        {
+          "type": "category",
+          "label": "Avalonia",
+          "items": [
+            "avalonia/appbuilderextensions"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Controls",
+          "items": [
+            "avalonia/controls/mediaplayercontrol",
+            "avalonia/controls/mediaplayercontrolerroreventargs",
+            "avalonia/controls/mediaplayerpresenter"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/controls/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Media",
+          "items": [
+            "avalonia/media/avfoundationmediaplayeroptions",
+            "avalonia/media/mediaplayer",
+            "avalonia/media/mediaplayeroptions"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/media/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Media.Themes.Simple",
+          "items": [
+            "avalonia/media/themes/simple/simplefluenttheme"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/media/themes/simple/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Themes.Fluent",
+          "items": [
+            "avalonia/themes/fluent/mediafluenttheme"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/themes/fluent/index"
+          }
+        },
+        "compiledavaloniaxaml/index",
+        {
+          "type": "category",
+          "label": "global",
+          "items": [
+            "global/r-2-b",
+            "global/r-2-c"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "global/index"
+          }
+        }
+      ],
+      "link": {
+        "type": "doc",
+        "id": "packages/avalonia-controls-mediaplayer"
+      }
+    },
+    {
+      "type": "category",
+      "label": "Avalonia.Controls.MediaPlayer.Abstractions",
+      "items": [
+        {
+          "type": "category",
+          "label": "Avalonia.Controls.MediaPlayer.Abstractions",
+          "items": [
+            "avalonia/controls/mediaplayer/abstractions/acceleratemediaplayerregistry",
+            "avalonia/controls/mediaplayer/abstractions/durationtype",
+            "avalonia/controls/mediaplayer/abstractions/iduration"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/controls/mediaplayer/abstractions/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Media",
+          "items": [
+            "avalonia/media/imediaplayer",
+            "avalonia/media/imediarendererprovider",
+            "avalonia/media/mediaplayererroreventargs",
+            "avalonia/media/mediaplayerloadedbehavior",
+            "avalonia/media/mediarenderer",
+            "avalonia/media/mediasource",
+            "avalonia/media/mediastatistics",
+            "avalonia/media/naturalsizechangedeventargs",
+            "avalonia/media/storagefilesource",
+            "avalonia/media/storagefilesourcepriority",
+            "avalonia/media/streamsource",
+            "avalonia/media/urisource"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/media/index"
+          }
+        }
+      ],
+      "link": {
+        "type": "doc",
+        "id": "packages/avalonia-controls-mediaplayer-abstractions"
+      }
+    },
+    {
+      "type": "category",
+      "label": "Avalonia.Controls.TreeDataGrid",
+      "items": [
+        {
+          "type": "category",
+          "label": "Avalonia.Controls",
+          "items": [
+            "avalonia/controls/cellindex",
+            "avalonia/controls/flattreedatagridsource-1",
+            "avalonia/controls/hierarchicaltreedatagridsource-1",
+            "avalonia/controls/itreedatagridsource",
+            "avalonia/controls/itreedatagridsource-1",
+            "avalonia/controls/indexpath",
+            "avalonia/controls/treedatagrid",
+            "avalonia/controls/treedatagridcelleventargs",
+            "avalonia/controls/treedatagriditemssourceview",
+            "avalonia/controls/treedatagriditemssourceview-1",
+            "avalonia/controls/treedatagridrowdrageventargs",
+            "avalonia/controls/treedatagridrowdragstartedeventargs",
+            "avalonia/controls/treedatagridrowdropposition",
+            "avalonia/controls/treedatagridroweventargs"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/controls/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Controls.Converters",
+          "items": [
+            "avalonia/controls/converters/indentconverter"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/controls/converters/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Controls.Models",
+          "items": [
+            "avalonia/controls/models/notifyingbase",
+            "avalonia/controls/models/notifyinglistbase-1",
+            "avalonia/controls/models/readonlylistbase-1"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/controls/models/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Controls.Models.TreeDataGrid",
+          "items": [
+            "avalonia/controls/models/treedatagrid/anonymoussortablerows-1",
+            "avalonia/controls/models/treedatagrid/begineditgestures",
+            "avalonia/controls/models/treedatagrid/checkboxcell",
+            "avalonia/controls/models/treedatagrid/checkboxcolumn-1",
+            "avalonia/controls/models/treedatagrid/checkboxcolumnoptions-1",
+            "avalonia/controls/models/treedatagrid/columnbase-2",
+            "avalonia/controls/models/treedatagrid/columnbase-1",
+            "avalonia/controls/models/treedatagrid/columnlist-1",
+            "avalonia/controls/models/treedatagrid/columnoptions-1",
+            "avalonia/controls/models/treedatagrid/draginfo",
+            "avalonia/controls/models/treedatagrid/expandercell-1",
+            "avalonia/controls/models/treedatagrid/hierarchicalexpandercolumn-1",
+            "avalonia/controls/models/treedatagrid/hierarchicalrow-1",
+            "avalonia/controls/models/treedatagrid/hierarchicalrows-1",
+            "avalonia/controls/models/treedatagrid/icell",
+            "avalonia/controls/models/treedatagrid/icelloptions",
+            "avalonia/controls/models/treedatagrid/icolumn",
+            "avalonia/controls/models/treedatagrid/icolumn-1",
+            "avalonia/controls/models/treedatagrid/icolumns",
+            "avalonia/controls/models/treedatagrid/iexpander",
+            "avalonia/controls/models/treedatagrid/iexpandercell",
+            "avalonia/controls/models/treedatagrid/iexpandercolumn-1",
+            "avalonia/controls/models/treedatagrid/iexpanderrow-1",
+            "avalonia/controls/models/treedatagrid/iexpanderrowcontroller-1",
+            "avalonia/controls/models/treedatagrid/iindentedrow",
+            "avalonia/controls/models/treedatagrid/imodelindexablerow",
+            "avalonia/controls/models/treedatagrid/irow",
+            "avalonia/controls/models/treedatagrid/irow-1",
+            "avalonia/controls/models/treedatagrid/irows",
+            "avalonia/controls/models/treedatagrid/itemplatecelloptions",
+            "avalonia/controls/models/treedatagrid/itextcell",
+            "avalonia/controls/models/treedatagrid/itextcelloptions",
+            "avalonia/controls/models/treedatagrid/itextsearchablecolumn-1",
+            "avalonia/controls/models/treedatagrid/iupdatecolumnlayout",
+            "avalonia/controls/models/treedatagrid/roweventargs",
+            "avalonia/controls/models/treedatagrid/roweventargs-1",
+            "avalonia/controls/models/treedatagrid/rowheadercell",
+            "avalonia/controls/models/treedatagrid/rowheadercolumn-1",
+            "avalonia/controls/models/treedatagrid/sortablerowsbase-2",
+            "avalonia/controls/models/treedatagrid/templatecell",
+            "avalonia/controls/models/treedatagrid/templatecolumn-1",
+            "avalonia/controls/models/treedatagrid/templatecolumnoptions-1",
+            "avalonia/controls/models/treedatagrid/textcell-1",
+            "avalonia/controls/models/treedatagrid/textcolumn-2",
+            "avalonia/controls/models/treedatagrid/textcolumnoptions-1"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/controls/models/treedatagrid/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Controls.Primitives",
+          "items": [
+            "avalonia/controls/primitives/treedatagridcell",
+            "avalonia/controls/primitives/treedatagridcellspresenter",
+            "avalonia/controls/primitives/treedatagridcheckboxcell",
+            "avalonia/controls/primitives/treedatagridcolumnheader",
+            "avalonia/controls/primitives/treedatagridcolumnheaderspresenter",
+            "avalonia/controls/primitives/treedatagridcolumnarpresenterbase-1",
+            "avalonia/controls/primitives/treedatagridelementfactory",
+            "avalonia/controls/primitives/treedatagridexpandercell",
+            "avalonia/controls/primitives/treedatagridpresenterbase-1",
+            "avalonia/controls/primitives/treedatagridrow",
+            "avalonia/controls/primitives/treedatagridrowheadercell",
+            "avalonia/controls/primitives/treedatagridrowspresenter",
+            "avalonia/controls/primitives/treedatagridtemplatecell",
+            "avalonia/controls/primitives/treedatagridtextcell"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/controls/primitives/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Controls.Selection",
+          "items": [
+            "avalonia/controls/selection/itreedatagridcellselectionmodel",
+            "avalonia/controls/selection/itreedatagridcellselectionmodel-1",
+            "avalonia/controls/selection/itreedatagridrowselectionmodel",
+            "avalonia/controls/selection/itreedatagridrowselectionmodel-1",
+            "avalonia/controls/selection/itreedatagridselection",
+            "avalonia/controls/selection/itreedatagridselectioninteraction",
+            "avalonia/controls/selection/itreeselectionmodel",
+            "avalonia/controls/selection/treedatagridcellselectionchangedeventargs",
+            "avalonia/controls/selection/treedatagridcellselectionchangedeventargs-1",
+            "avalonia/controls/selection/treedatagridcellselectionmodel-1",
+            "avalonia/controls/selection/treedatagridrowselectionmodel-1",
+            "avalonia/controls/selection/treeselectionmodelbase-1",
+            "avalonia/controls/selection/treeselectionmodelbase-1-batchupdateoperation",
+            "avalonia/controls/selection/treeselectionmodelindexeschangedeventargs",
+            "avalonia/controls/selection/treeselectionmodelselectionchangedeventargs",
+            "avalonia/controls/selection/treeselectionmodelselectionchangedeventargs-1",
+            "avalonia/controls/selection/treeselectionmodelsourcereseteventargs"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/controls/selection/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Experimental.Data",
+          "items": [
+            "avalonia/experimental/data/typedbinding-2",
+            "avalonia/experimental/data/typedbinding-1"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/experimental/data/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Experimental.Data.Core",
+          "items": [
+            "avalonia/experimental/data/core/lightweightobservablebase-1",
+            "avalonia/experimental/data/core/typedbindingexpression-2"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/experimental/data/core/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "CompiledAvaloniaXaml",
+          "items": [
+            "compiledavaloniaxaml/avaloniaresources-namespaceinfo-themes-fluent-axaml",
+            "compiledavaloniaxaml/avaloniaresources-namespaceinfo-themes-generic-axaml"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "compiledavaloniaxaml/index"
+          }
+        }
+      ],
+      "link": {
+        "type": "doc",
+        "id": "packages/avalonia-controls-treedatagrid"
+      }
+    },
+    {
+      "type": "category",
+      "label": "Avalonia.Controls.WebView",
+      "items": [
+        {
+          "type": "category",
+          "label": "Avalonia.Controls",
+          "items": [
+            "avalonia/controls/nativewebdialog",
+            "avalonia/controls/nativewebview",
+            "avalonia/controls/nativewebviewcommandmanager",
+            "avalonia/controls/nativewebviewcookiemanager",
+            "avalonia/controls/webauthenticationbroker",
+            "avalonia/controls/webauthenticationresult",
+            "avalonia/controls/webauthenticatoroptions",
+            "avalonia/controls/webmessagereceivedeventargs",
+            "avalonia/controls/webresourcerequestedeventargs",
+            "avalonia/controls/webviewadaptereventargs",
+            "avalonia/controls/webviewenvironmentrequestedeventargs",
+            "avalonia/controls/webviewnavigationcompletedeventargs",
+            "avalonia/controls/webviewnavigationeventargs",
+            "avalonia/controls/webviewnavigationstartingeventargs",
+            "avalonia/controls/webviewnewwindowrequestedeventargs",
+            "avalonia/controls/webviewwebrequestheaders",
+            "avalonia/controls/webviewwebresourcerequest"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/controls/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Controls.Android",
+          "items": [
+            "avalonia/controls/android/redirecturireceiveractivity"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/controls/android/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Controls.Win.WebView2.Interop",
+          "items": [
+            "avalonia/controls/win/webview2/interop/corewebview2-mouse-event-kind",
+            "avalonia/controls/win/webview2/interop/corewebview2-mouse-event-virtual-keys"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/controls/win/webview2/interop/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Platform",
+          "items": [
+            "avalonia/platform/androidwebviewenvironmentrequestedeventargs",
+            "avalonia/platform/applewkwebviewenvironmentrequestedeventargs",
+            "avalonia/platform/detailedwebviewadapterinfo",
+            "avalonia/platform/gtkwebviewenvironmentrequestedeventargs",
+            "avalonia/platform/iandroidwebviewplatformhandle",
+            "avalonia/platform/iapplewkwebviewplatformhandle",
+            "avalonia/platform/igtkwebviewplatformhandle",
+            "avalonia/platform/iwindowswebview1platformhandle",
+            "avalonia/platform/iwindowswebview2platformhandle",
+            "avalonia/platform/webviewadapterinfo",
+            "avalonia/platform/webviewadaptertype",
+            "avalonia/platform/webviewembeddingscenario",
+            "avalonia/platform/webviewengine",
+            "avalonia/platform/webviewprintorientation",
+            "avalonia/platform/webviewprintsettings",
+            "avalonia/platform/windowswebview1environmentrequestedeventargs",
+            "avalonia/platform/windowswebview2environmentrequestedeventargs"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/platform/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "global",
+          "items": [
+            "global/mz-scriptresultcommand",
+            "global/mz-a",
+            "global/mz-b",
+            "global/na-a",
+            "global/nh-a",
+            "global/nr-a",
+            "global/nr-b",
+            "global/nr-c",
+            "global/nr-d",
+            "global/nr-e",
+            "global/nr-f",
+            "global/tp-a",
+            "global/tv-2-b",
+            "global/tv-2-c",
+            "global/ua-a",
+            "global/uo-a",
+            "global/uv-a",
+            "global/vd-a",
+            "global/vg-a",
+            "global/wa-h",
+            "global/wa-i",
+            "global/wp-a",
+            "global/wp-b"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "global/index"
+          }
+        }
+      ],
+      "link": {
+        "type": "doc",
+        "id": "packages/avalonia-controls-webview"
+      }
+    },
+    {
+      "type": "category",
+      "label": "Avalonia.Desktop",
+      "items": [
+        {
+          "type": "category",
+          "label": "Avalonia",
+          "items": [
+            "avalonia/appbuilderdesktopextensions"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/index"
+          }
+        }
+      ],
+      "link": {
+        "type": "doc",
+        "id": "packages/avalonia-desktop"
+      }
+    },
+    {
+      "type": "category",
+      "label": "Avalonia.Fonts.Inter",
+      "items": [
+        {
+          "type": "category",
+          "label": "Avalonia",
+          "items": [
+            "avalonia/appbuilderextension"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Fonts.Inter",
+          "items": [
+            "avalonia/fonts/inter/interfontcollection"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/fonts/inter/index"
+          }
+        }
+      ],
+      "link": {
+        "type": "doc",
+        "id": "packages/avalonia-fonts-inter"
+      }
+    },
+    {
+      "type": "category",
+      "label": "Avalonia.FreeDesktop",
+      "items": [
+        {
+          "type": "category",
+          "label": "Tmds.DBus.SourceGenerator",
+          "items": [
+            "tmds/dbus/sourcegenerator/orgfreedesktopdbusproxy-orgfreedesktopdbusproperties",
+            "tmds/dbus/sourcegenerator/orgfreedesktopibusinputcontextproxy-orgfreedesktopibusinputcontextproperties",
+            "tmds/dbus/sourcegenerator/orgfreedesktopportalfilechooserproxy-orgfreedesktopportalfilechooserproperties",
+            "tmds/dbus/sourcegenerator/orgfreedesktopportalsettingsproxy-orgfreedesktopportalsettingsproperties",
+            "tmds/dbus/sourcegenerator/orgkdestatusnotifierwatcherproxy-orgkdestatusnotifierwatcherproperties"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "tmds/dbus/sourcegenerator/index"
+          }
+        }
+      ],
+      "link": {
+        "type": "doc",
+        "id": "packages/avalonia-freedesktop"
+      }
+    },
+    {
+      "type": "category",
+      "label": "Avalonia.Headless.NUnit",
+      "items": [
+        {
+          "type": "category",
+          "label": "Avalonia.Headless.NUnit",
+          "items": [
+            "avalonia/headless/nunit/avaloniatestattribute",
+            "avalonia/headless/nunit/avaloniatheoryattribute"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/headless/nunit/index"
+          }
+        }
+      ],
+      "link": {
+        "type": "doc",
+        "id": "packages/avalonia-headless-nunit"
+      }
+    },
+    {
+      "type": "category",
+      "label": "Avalonia.Headless.Vnc",
+      "items": [
+        {
+          "type": "category",
+          "label": "Avalonia",
+          "items": [
+            "avalonia/headlessvncplatformextensions"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Headless.Vnc",
+          "items": [
+            "avalonia/headless/vnc/headlessvncframebuffersource"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/headless/vnc/index"
+          }
+        }
+      ],
+      "link": {
+        "type": "doc",
+        "id": "packages/avalonia-headless-vnc"
+      }
+    },
+    {
+      "type": "category",
+      "label": "Avalonia.Headless.XUnit",
+      "items": [
+        {
+          "type": "category",
+          "label": "Avalonia.Headless.XUnit",
+          "items": [
+            "avalonia/headless/xunit/avaloniafactattribute",
+            "avalonia/headless/xunit/avaloniafactdiscoverer",
+            "avalonia/headless/xunit/avaloniatestframeworkattribute",
+            "avalonia/headless/xunit/avaloniatheoryattribute",
+            "avalonia/headless/xunit/avaloniatheorydiscoverer"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/headless/xunit/index"
+          }
+        }
+      ],
+      "link": {
+        "type": "doc",
+        "id": "packages/avalonia-headless-xunit"
+      }
+    },
+    {
+      "type": "category",
+      "label": "Avalonia.LinuxFramebuffer",
+      "items": [
+        {
+          "type": "category",
+          "label": "Avalonia.LinuxFramebuffer",
+          "items": [
+            "avalonia/linuxframebuffer/drmconnectortype",
+            "avalonia/linuxframebuffer/drmoutputoptions",
+            "avalonia/linuxframebuffer/fbdevoutput",
+            "avalonia/linuxframebuffer/linuxframebufferplatformoptions"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/linuxframebuffer/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.LinuxFramebuffer.Input",
+          "items": [
+            "avalonia/linuxframebuffer/input/iinputbackend",
+            "avalonia/linuxframebuffer/input/iscreeninfoprovider"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/linuxframebuffer/input/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.LinuxFramebuffer.Input.EvDev",
+          "items": [
+            "avalonia/linuxframebuffer/input/evdev/evdevbackend",
+            "avalonia/linuxframebuffer/input/evdev/evdevdevicedescription",
+            "avalonia/linuxframebuffer/input/evdev/evdevtouchscreendevicedescription"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/linuxframebuffer/input/evdev/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.LinuxFramebuffer.Input.LibInput",
+          "items": [
+            "avalonia/linuxframebuffer/input/libinput/libinputbackend",
+            "avalonia/linuxframebuffer/input/libinput/libinputbackendoptions",
+            "avalonia/linuxframebuffer/input/libinput/libinputnativeunsafemethods-libinputeventtype",
+            "avalonia/linuxframebuffer/input/libinput/libinputnativeunsafemethods-libinputpointeraxis",
+            "avalonia/linuxframebuffer/input/libinput/libinputnativeunsafemethods-libinputpointeraxissource"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/linuxframebuffer/input/libinput/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.LinuxFramebuffer.Input.NullInput",
+          "items": [
+            "avalonia/linuxframebuffer/input/nullinput/nullinputbackend"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/linuxframebuffer/input/nullinput/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.LinuxFramebuffer.Output",
+          "items": [
+            "avalonia/linuxframebuffer/output/drmcard",
+            "avalonia/linuxframebuffer/output/drmconnector",
+            "avalonia/linuxframebuffer/output/drmmodeconnection",
+            "avalonia/linuxframebuffer/output/drmmodeinfo",
+            "avalonia/linuxframebuffer/output/drmmodesubpixel",
+            "avalonia/linuxframebuffer/output/drmoutput",
+            "avalonia/linuxframebuffer/output/drmresources",
+            "avalonia/linuxframebuffer/output/fbdevoutputoptions",
+            "avalonia/linuxframebuffer/output/igloutputbackend",
+            "avalonia/linuxframebuffer/output/ioutputbackend",
+            "avalonia/linuxframebuffer/output/libdrm-drmeventcontext",
+            "avalonia/linuxframebuffer/output/libdrm-drmeventpagefliphandler2delegate",
+            "avalonia/linuxframebuffer/output/libdrm-drmeventpagefliphandlerdelegate",
+            "avalonia/linuxframebuffer/output/libdrm-drmeventsequencehandlerdelegate",
+            "avalonia/linuxframebuffer/output/libdrm-drmeventvblankhandlerdelegate",
+            "avalonia/linuxframebuffer/output/libdrm-drmmodepageflip",
+            "avalonia/linuxframebuffer/output/libdrm-drmmodetype",
+            "avalonia/linuxframebuffer/output/libdrm-gbmboflags",
+            "avalonia/linuxframebuffer/output/libdrm-gbmbohandle",
+            "avalonia/linuxframebuffer/output/libdrm-gbmbouserdatadestroycallbackdelegate",
+            "avalonia/linuxframebuffer/output/libdrm-gbmcolorformats",
+            "avalonia/linuxframebuffer/output/libdrm-drmmodeconnector",
+            "avalonia/linuxframebuffer/output/libdrm-drmmodecrtc",
+            "avalonia/linuxframebuffer/output/libdrm-drmmodeencoder",
+            "avalonia/linuxframebuffer/output/libdrm-drmmodemodeinfo",
+            "avalonia/linuxframebuffer/output/libdrm-drmmoderes"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/linuxframebuffer/output/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "global",
+          "items": [
+            "global/linuxframebufferplatformextensions"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "global/index"
+          }
+        }
+      ],
+      "link": {
+        "type": "doc",
+        "id": "packages/avalonia-linuxframebuffer"
+      }
+    },
+    {
+      "type": "category",
+      "label": "Avalonia.Markup.Xaml.Loader",
+      "items": [
+        {
+          "type": "category",
+          "label": "Avalonia.Markup.Xaml",
+          "items": [
+            "avalonia/markup/xaml/avaloniaruntimexamlloader"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/markup/xaml/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Markup.Xaml.XamlIl.CompilerExtensions.Transformers",
+          "items": [
+            "avalonia/markup/xaml/xamlil/compilerextensions/transformers/avaloniaxamlilensureresourcedictionarycapacitytransformer-ensurecapacitynode",
+            "avalonia/markup/xaml/xamlil/compilerextensions/transformers/avaloniaxamliltargettypemetadatanode-scopetypes",
+            "avalonia/markup/xaml/xamlil/compilerextensions/transformers/xamlilcombinatorquery-combinatorquerytype",
+            "avalonia/markup/xaml/xamlil/compilerextensions/transformers/xamlilcombinatorselector-combinatorselectortype",
+            "avalonia/markup/xaml/xamlil/compilerextensions/transformers/xamlilnthchildselector-selectortype",
+            "avalonia/markup/xaml/xamlil/compilerextensions/transformers/xamlilstringquery-querytype",
+            "avalonia/markup/xaml/xamlil/compilerextensions/transformers/xamlilstringselector-selectortype"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/markup/xaml/xamlil/compilerextensions/transformers/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "XamlX.IL",
+          "items": [
+            "xamlx/il/recordingilemitter-labelinfo",
+            "xamlx/il/recordingilemitter-localinfo",
+            "xamlx/il/recordingilemitter-recordedinstruction"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "xamlx/il/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "XamlX.Parsers",
+          "items": [
+            "xamlx/parsers/commaseparatedparenthesestreeparser-node",
+            "xamlx/parsers/commaseparatedparenthesestreeparser-parseexception"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "xamlx/parsers/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "XamlX.Transform",
+          "items": [
+            "xamlx/transform/namespaceinfohelper-namespaceresolveresult",
+            "xamlx/transform/transformerconfiguration-xamlvalueconverter"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "xamlx/transform/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "XamlX.TypeSystem",
+          "items": [
+            "xamlx/typesystem/xamllocalspool-pooledlocal"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "xamlx/typesystem/index"
+          }
+        }
+      ],
+      "link": {
+        "type": "doc",
+        "id": "packages/avalonia-markup-xaml-loader"
+      }
+    },
+    {
+      "type": "category",
+      "label": "Avalonia.Native",
+      "items": [
+        {
+          "type": "category",
+          "label": "Avalonia",
+          "items": [
+            "avalonia/avalonianativeplatformextensions",
+            "avalonia/avalonianativeplatformoptions",
+            "avalonia/avalonianativerenderingmode",
+            "avalonia/macosplatformoptions"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/index"
+          }
+        }
+      ],
+      "link": {
+        "type": "doc",
+        "id": "packages/avalonia-native"
+      }
+    },
+    {
+      "type": "category",
+      "label": "Avalonia.Skia",
+      "items": [
+        {
+          "type": "category",
+          "label": "Avalonia",
+          "items": [
+            "avalonia/skiaapplicationextensions",
+            "avalonia/skiaoptions"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Skia",
+          "items": [
+            "avalonia/skia/drawingcontextimpl-createinfo",
+            "avalonia/skia/iglskiaspecificoptionsfeature",
+            "avalonia/skia/iskiagpurendersession",
+            "avalonia/skia/iskiagpurendertarget",
+            "avalonia/skia/iskiasharpapilease",
+            "avalonia/skia/iskiasharpapileasefeature",
+            "avalonia/skia/iskiasharpplatformgraphicsapilease",
+            "avalonia/skia/iskiasurface",
+            "avalonia/skia/skiaplatform",
+            "avalonia/skia/skiasharpextensions",
+            "avalonia/skia/surfacerendertarget-createinfo"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/skia/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Skia.Helpers",
+          "items": [
+            "avalonia/skia/helpers/drawingcontexthelper",
+            "avalonia/skia/helpers/imagesavinghelper",
+            "avalonia/skia/helpers/pixelformathelper"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/skia/helpers/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Skia.Metal",
+          "items": [
+            "avalonia/skia/metal/skiametalgpu-skiametalrendertarget"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/skia/metal/index"
+          }
+        }
+      ],
+      "link": {
+        "type": "doc",
+        "id": "packages/avalonia-skia"
+      }
+    },
+    {
+      "type": "category",
+      "label": "Avalonia.Themes.Fluent",
+      "items": [
+        {
+          "type": "category",
+          "label": "Avalonia.Themes.Fluent",
+          "items": [
+            "avalonia/themes/fluent/colorpaletteresources",
+            "avalonia/themes/fluent/densitystyle",
+            "avalonia/themes/fluent/fluenttheme"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/themes/fluent/index"
+          }
+        },
+        "compiledavaloniaxaml/index"
+      ],
+      "link": {
+        "type": "doc",
+        "id": "packages/avalonia-themes-fluent"
+      }
+    },
+    {
+      "type": "category",
+      "label": "Avalonia.Win32.Interoperability",
+      "items": [
+        {
+          "type": "category",
+          "label": "Avalonia.Win32.Interoperability",
+          "items": [
+            "avalonia/win32/interoperability/winformsavaloniacontrolhost"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/win32/interoperability/index"
+          }
+        }
+      ],
+      "link": {
+        "type": "doc",
+        "id": "packages/avalonia-win32-interoperability"
+      }
+    },
+    {
+      "type": "category",
+      "label": "Avalonia.X11",
+      "items": [
+        {
+          "type": "category",
+          "label": "Avalonia",
+          "items": [
+            "avalonia/avaloniax11platformextensions",
+            "avalonia/x11platformoptions",
+            "avalonia/x11renderingmode"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.X11",
+          "items": [
+            "avalonia/x11/icelib-iceerrorhandler",
+            "avalonia/x11/icelib-iceioerrorhandler",
+            "avalonia/x11/icelib-iceprocessmessagesstatus",
+            "avalonia/x11/smlib-icewatchproc",
+            "avalonia/x11/smlib-smdialogvalue",
+            "avalonia/x11/smlib-smccallbacks",
+            "avalonia/x11/smlib-smcdieproc",
+            "avalonia/x11/smlib-smcerrorhandler",
+            "avalonia/x11/smlib-smcinteractproc",
+            "avalonia/x11/smlib-smcsavecompleteproc",
+            "avalonia/x11/smlib-smcsaveyourselfproc",
+            "avalonia/x11/smlib-smcshutdowncancelledproc",
+            "avalonia/x11/x11eventdispatcher-eventhandler",
+            "avalonia/x11/x11globals-windowactivationtrackingmode",
+            "avalonia/x11/x11window-defaulttoplevelwindowmode",
+            "avalonia/x11/x11window-inputproxywindowmode",
+            "avalonia/x11/x11window-surfaceplatformhandle",
+            "avalonia/x11/x11window-x11windowmode",
+            "avalonia/x11/x11window-xembedclientwindowmode",
+            "avalonia/x11/xembedplug",
+            "avalonia/x11/xkeyboardstate-autorepeats",
+            "avalonia/x11/xlib-xclasshint",
+            "avalonia/x11/xlib-xgeometry",
+            "avalonia/x11/xlib-xlookupstatus",
+            "avalonia/x11/xlib-xsyncvalue"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/x11/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.X11.Clipboard",
+          "items": [
+            "avalonia/x11/clipboard/clipboardreadsession-getdataresult"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/x11/clipboard/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.X11.Interop",
+          "items": [
+            "avalonia/x11/interop/glib-gdestroynotify",
+            "avalonia/x11/interop/glib-giocondition",
+            "avalonia/x11/interop/glib-gsourcefunc",
+            "avalonia/x11/interop/glib-gunixfdsourcefunc",
+            "avalonia/x11/interop/gtkinterophelper"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/x11/interop/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.X11.NativeDialogs",
+          "items": [
+            "avalonia/x11/nativedialogs/gtk-signal-dialog-response",
+            "avalonia/x11/nativedialogs/gtk-signal-generic"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/x11/nativedialogs/index"
+          }
+        }
+      ],
+      "link": {
+        "type": "doc",
+        "id": "packages/avalonia-x11"
+      }
+    },
+    {
+      "type": "category",
+      "label": "AvaloniaUI.DiagnosticsSupport",
+      "items": [
+        {
+          "type": "category",
+          "label": "Avalonia",
+          "items": [
+            "avalonia/developertoolsextensions"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "AvaloniaUI.DiagnosticsProtocol",
+          "items": [
+            "avaloniaui/diagnosticsprotocol/79d49280-9f55-4197-89a8-9ff9b45290e2-observerslist-2-observerslistperparam",
+            "avaloniaui/diagnosticsprotocol/diagnosticlogger"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avaloniaui/diagnosticsprotocol/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "AvaloniaUI.DiagnosticsProtocol.Application",
+          "items": [
+            "avaloniaui/diagnosticsprotocol/application/logentryverbosity"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avaloniaui/diagnosticsprotocol/application/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "AvaloniaUI.DiagnosticsProtocol.Protocol",
+          "items": [
+            "avaloniaui/diagnosticsprotocol/protocol/79d49280-9f55-4197-89a8-9ff9b45290e2-diagnosticsconsts-args",
+            "avaloniaui/diagnosticsprotocol/protocol/79d49280-9f55-4197-89a8-9ff9b45290e2-diagnosticsconsts-env"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avaloniaui/diagnosticsprotocol/protocol/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "AvaloniaUI.DiagnosticsProtocol.Serialization",
+          "items": [
+            "avaloniaui/diagnosticsprotocol/serialization/79d49280-9f55-4197-89a8-9ff9b45290e2-systemtextjsonmethodcallserializer-remoteexceptioncontext"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avaloniaui/diagnosticsprotocol/serialization/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "AvaloniaUI.DiagnosticsProtocol.Tree",
+          "items": [
+            "avaloniaui/diagnosticsprotocol/tree/79d49280-9f55-4197-89a8-9ff9b45290e2-elementstreesearchresponse-searchitem"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avaloniaui/diagnosticsprotocol/tree/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "AvaloniaUI.DiagnosticsSupport",
+          "items": [
+            "avaloniaui/diagnosticssupport/developertoolsoptions",
+            "avaloniaui/diagnosticssupport/developertoolsprotocol",
+            "avaloniaui/diagnosticssupport/developertoolsrunner",
+            "avaloniaui/diagnosticssupport/iloggerobservable",
+            "avaloniaui/diagnosticssupport/iloggerobserver"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avaloniaui/diagnosticssupport/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "AvaloniaUI.DiagnosticsSupport.Avalonia.Handlers",
+          "items": [
+            "avaloniaui/diagnosticssupport/avalonia/handlers/avnpropertyhelper-grid"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avaloniaui/diagnosticssupport/avalonia/handlers/index"
+          }
+        },
+        "compiledavaloniaxaml/index",
+        {
+          "type": "category",
+          "label": "CoreRPC.Utility",
+          "items": [
+            "corerpc/utility/79d49280-9f55-4197-89a8-9ff9b45290e2-concurentbulkreadoptimizedcache-2-cachecontext"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "corerpc/utility/index"
+          }
+        }
+      ],
+      "link": {
+        "type": "doc",
+        "id": "packages/avaloniaui-diagnosticssupport"
+      }
+    }
+  ]
+}

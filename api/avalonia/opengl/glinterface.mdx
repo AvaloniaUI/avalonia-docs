@@ -1,0 +1,1966 @@
+---
+title: 'GlInterface'
+hide_title: true
+slug: '/avalonia/opengl/glinterface'
+uid: 'Avalonia.OpenGL.GlInterface'
+commentId: 'T:Avalonia.OpenGL.GlInterface'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.OpenGL'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.OpenGL'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">GlInterface Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.OpenGL</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.OpenGL</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.OpenGL/GlInterface.cs">GlInterface.cs</a>, <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.OpenGL/obj/Release/net10.0/DevGenerators/Generator.GetProcAddressInitializationGenerator/globalAvalonia.OpenGL.GlInterface.cs">globalAvalonia.OpenGL.GlInterface.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+[GlInterface](xref:Avalonia.OpenGL.GlInterface) only includes essential members and members necessary for Avalonia itself.
+It is not a general-purpose interface for OpenGL API.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class GlInterface
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="glbasicinfointerface">GlBasicInfoInterface</a> <span className="apiref-page__relation-separator">-&gt;</span> GlInterface
+</div>
+</div>
+
+## Remarks
+
+Use [Avalonia.OpenGL.GlInterface.GetProcAddress(string)](xref:Avalonia.OpenGL.GlInterface.GetProcAddress%28System.String%29) to get GL procedures you need, or integrate it with third-party GL wrappers.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [GlInterface](#uid-4ad6089ffd) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4ad6089ffd"></span>
+
+### GlInterface Constructor
+
+```csharp
+public GlInterface(Avalonia.OpenGL.GlVersion version, Func<string, IntPtr> getProcAddress)
+```
+
+#### Parameters
+
+`version` [Avalonia.OpenGL.GlVersion](xref:Avalonia.OpenGL.GlVersion)
+
+
+`getProcAddress` Func&lt;string, IntPtr&gt;
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [ActiveTexture](#uid-5bf3b91701) | No summary available. |
+| [AttachShader](#uid-418a32f834) | No summary available. |
+| [BindAttribLocation](#uid-3e0fecf1f5) | No summary available. |
+| [BindAttribLocationString](#uid-8e562023fa) | No summary available. |
+| [BindBuffer](#uid-ab35a3b66d) | No summary available. |
+| [BindFramebuffer](#uid-839838940c) | No summary available. |
+| [BindRenderbuffer](#uid-d08ffd18fa) | No summary available. |
+| [BindTexture](#uid-8aa86a2cf7) | No summary available. |
+| [BindVertexArray](#uid-e4270e9f8e) | No summary available. |
+| [BlitFramebuffer](#uid-763ffad6f1) | No summary available. |
+| [BufferData](#uid-aaa36e6681) | No summary available. |
+| [CheckFramebufferStatus](#uid-a8c4b494a0) | No summary available. |
+| [Clear](#uid-56b61bd229) | No summary available. |
+| [ClearColor](#uid-9ba4562ba8) | No summary available. |
+| [ClearDepth](#uid-08c809bba8) | No summary available. |
+| [ClearStencil](#uid-ce6adec6f9) | No summary available. |
+| [CompileShader](#uid-5a7bf70632) | No summary available. |
+| [CompileShaderAndGetError](#uid-61d47c2296) | No summary available. |
+| [CopyTexSubImage2D](#uid-34571c355d) | No summary available. |
+| [CreateProgram](#uid-b0d0d32c1e) | No summary available. |
+| [CreateShader](#uid-ac04ccd26c) | No summary available. |
+| [DeleteBuffer](#uid-547febd8f0) | No summary available. |
+| [DeleteBuffers](#uid-65d7c79ff5) | No summary available. |
+| [DeleteFramebuffer](#uid-a298001b6b) | No summary available. |
+| [DeleteFramebuffers](#uid-4d5f78a054) | No summary available. |
+| [DeleteProgram](#uid-c2e8aef2ae) | No summary available. |
+| [DeleteRenderbuffer](#uid-c353f22da5) | No summary available. |
+| [DeleteRenderbuffers](#uid-fe0ed42dd4) | No summary available. |
+| [DeleteShader](#uid-9060aced7b) | No summary available. |
+| [DeleteTexture](#uid-357b3f7750) | No summary available. |
+| [DeleteTextures](#uid-63ea48a851) | No summary available. |
+| [DeleteVertexArray](#uid-9e48b9cfd0) | No summary available. |
+| [DeleteVertexArrays](#uid-6ea5cc9959) | No summary available. |
+| [DepthFunc](#uid-2c34c2bced) | No summary available. |
+| [DepthMask](#uid-41d40e4c0b) | No summary available. |
+| [Disable](#uid-6b2cc85dd0) | No summary available. |
+| [DrawArrays](#uid-d3a884f043) | No summary available. |
+| [DrawElements](#uid-ea6a2579e2) | No summary available. |
+| [Enable](#uid-f10cec6e90) | No summary available. |
+| [EnableVertexAttribArray](#uid-0eb6735fad) | No summary available. |
+| [Finish](#uid-1838ef846d) | No summary available. |
+| [Flush](#uid-3a05fe0ae1) | No summary available. |
+| [FramebufferRenderbuffer](#uid-bb8978d295) | No summary available. |
+| [FramebufferTexture2D](#uid-49a3cadc24) | No summary available. |
+| [FromNativeUtf8GetProcAddress](#uid-27803329bb) | No summary available. |
+| [GenBuffer](#uid-319b006ae4) | No summary available. |
+| [GenBuffers](#uid-6b22ed580e) | No summary available. |
+| [GenFramebuffer](#uid-3881e99fc6) | No summary available. |
+| [GenFramebuffers](#uid-cd33a433e4) | No summary available. |
+| [GenRenderbuffer](#uid-f2f0d9a6d9) | No summary available. |
+| [GenRenderbuffers](#uid-cca04c199d) | No summary available. |
+| [GenTexture](#uid-320d2ad493) | No summary available. |
+| [GenTextures](#uid-4a81918c26) | No summary available. |
+| [GenVertexArray](#uid-d447ca3613) | No summary available. |
+| [GenVertexArrays](#uid-463e1d8909) | No summary available. |
+| [GetAttribLocation](#uid-d3dcf31f83) | No summary available. |
+| [GetAttribLocationString](#uid-113562fe1e) | No summary available. |
+| [GetProcAddress](#uid-235411e7d9) | Returns an OpenGL function by name. |
+| [GetProgramInfoLog](#uid-a2222cb704) | No summary available. |
+| [GetProgramiv](#uid-6694e2ab22) | No summary available. |
+| [GetRenderbufferParameteriv](#uid-0d0bc985b6) | No summary available. |
+| [GetShaderInfoLog](#uid-c02f6a1f7f) | No summary available. |
+| [GetShaderiv](#uid-c62e662122) | No summary available. |
+| [GetUniformLocation](#uid-013f2ae8ae) | No summary available. |
+| [GetUniformLocationString](#uid-269c0cbc80) | No summary available. |
+| [LinkProgram](#uid-a8294a5f2b) | No summary available. |
+| [LinkProgramAndGetError](#uid-5ac3785672) | No summary available. |
+| [RenderbufferStorage](#uid-a543469bca) | No summary available. |
+| [ShaderSource](#uid-357d1c6697) | No summary available. |
+| [ShaderSourceString](#uid-2e04d5997d) | No summary available. |
+| [TexImage2D](#uid-ad49471c4b) | No summary available. |
+| [TexParameteri](#uid-9bc8a961f8) | No summary available. |
+| [Uniform1f](#uid-43d103169e) | No summary available. |
+| [Uniform1i](#uid-78e1540108) | No summary available. |
+| [UniformMatrix4fv](#uid-6e94672d0b) | No summary available. |
+| [UseProgram](#uid-c8518c48ae) | No summary available. |
+| [VertexAttribPointer](#uid-0674e7c6d3) | No summary available. |
+| [Viewport](#uid-ca1437e6df) | No summary available. |
+| [GetError](glbasicinfointerface.mdx#uid-335a3ecb4a) | Inherited from [GlBasicInfoInterface](glbasicinfointerface.mdx). |
+| [GetExtensions](glbasicinfointerface.mdx#uid-3dc9cf6f1d) | Inherited from [GlBasicInfoInterface](glbasicinfointerface.mdx). |
+| [GetFloatv](glbasicinfointerface.mdx#uid-37f2cd2bf2) | Inherited from [GlBasicInfoInterface](glbasicinfointerface.mdx). |
+| [GetIntegerv](glbasicinfointerface.mdx#uid-961400b97d) | Inherited from [GlBasicInfoInterface](glbasicinfointerface.mdx). |
+| [GetString (2 overloads)](glbasicinfointerface.mdx#uid-6438cbf0f4) | Inherited from [GlBasicInfoInterface](glbasicinfointerface.mdx). |
+| [GetStringNative](glbasicinfointerface.mdx#uid-f5216e7f4a) | Inherited from [GlBasicInfoInterface](glbasicinfointerface.mdx). |
+| [GetStringiNative](glbasicinfointerface.mdx#uid-3f7c8607ab) | Inherited from [GlBasicInfoInterface](glbasicinfointerface.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5bf3b91701"></span>
+
+### ActiveTexture Method
+
+```csharp
+public void ActiveTexture(int texture)
+```
+
+#### Parameters
+
+`texture` int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-418a32f834"></span>
+
+### AttachShader Method
+
+```csharp
+public void AttachShader(int program, int shader)
+```
+
+#### Parameters
+
+`program` int
+
+
+`shader` int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3e0fecf1f5"></span>
+
+### BindAttribLocation Method
+
+```csharp
+public void BindAttribLocation(int program, int index, IntPtr name)
+```
+
+#### Parameters
+
+`program` int
+
+
+`index` int
+
+
+`name` IntPtr
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8e562023fa"></span>
+
+### BindAttribLocationString Method
+
+```csharp
+public void BindAttribLocationString(int program, int index, string name)
+```
+
+#### Parameters
+
+`program` int
+
+
+`index` int
+
+
+`name` string
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ab35a3b66d"></span>
+
+### BindBuffer Method
+
+```csharp
+public void BindBuffer(int target, int buffer)
+```
+
+#### Parameters
+
+`target` int
+
+
+`buffer` int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-839838940c"></span>
+
+### BindFramebuffer Method
+
+```csharp
+public void BindFramebuffer(int target, int fb)
+```
+
+#### Parameters
+
+`target` int
+
+
+`fb` int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d08ffd18fa"></span>
+
+### BindRenderbuffer Method
+
+```csharp
+public void BindRenderbuffer(int target, int fb)
+```
+
+#### Parameters
+
+`target` int
+
+
+`fb` int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8aa86a2cf7"></span>
+
+### BindTexture Method
+
+```csharp
+public void BindTexture(int target, int fb)
+```
+
+#### Parameters
+
+`target` int
+
+
+`fb` int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e4270e9f8e"></span>
+
+### BindVertexArray Method
+
+```csharp
+public void BindVertexArray(int array)
+```
+
+#### Parameters
+
+`array` int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-763ffad6f1"></span>
+
+### BlitFramebuffer Method
+
+```csharp
+public void BlitFramebuffer(int srcX0, int srcY0, int srcX1, int srcY1, int dstX0, int dstY0, int dstX1, int dstY1, int mask, int filter)
+```
+
+#### Parameters
+
+`srcX0` int
+
+
+`srcY0` int
+
+
+`srcX1` int
+
+
+`srcY1` int
+
+
+`dstX0` int
+
+
+`dstY0` int
+
+
+`dstX1` int
+
+
+`dstY1` int
+
+
+`mask` int
+
+
+`filter` int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-aaa36e6681"></span>
+
+### BufferData Method
+
+```csharp
+public void BufferData(int target, IntPtr size, IntPtr data, int usage)
+```
+
+#### Parameters
+
+`target` int
+
+
+`size` IntPtr
+
+
+`data` IntPtr
+
+
+`usage` int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a8c4b494a0"></span>
+
+### CheckFramebufferStatus Method
+
+```csharp
+public int CheckFramebufferStatus(int target)
+```
+
+#### Parameters
+
+`target` int
+
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-56b61bd229"></span>
+
+### Clear Method
+
+```csharp
+public void Clear(int bits)
+```
+
+#### Parameters
+
+`bits` int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9ba4562ba8"></span>
+
+### ClearColor Method
+
+```csharp
+public void ClearColor(float r, float g, float b, float a)
+```
+
+#### Parameters
+
+`r` float
+
+
+`g` float
+
+
+`b` float
+
+
+`a` float
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-08c809bba8"></span>
+
+### ClearDepth Method
+
+```csharp
+public void ClearDepth(float value)
+```
+
+#### Parameters
+
+`value` float
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ce6adec6f9"></span>
+
+### ClearStencil Method
+
+```csharp
+public void ClearStencil(int s)
+```
+
+#### Parameters
+
+`s` int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5a7bf70632"></span>
+
+### CompileShader Method
+
+```csharp
+public void CompileShader(int shader)
+```
+
+#### Parameters
+
+`shader` int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-61d47c2296"></span>
+
+### CompileShaderAndGetError Method
+
+```csharp
+public string CompileShaderAndGetError(int shader, string source)
+```
+
+#### Parameters
+
+`shader` int
+
+
+`source` string
+
+
+#### Returns
+
+string
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-34571c355d"></span>
+
+### CopyTexSubImage2D Method
+
+```csharp
+public void CopyTexSubImage2D(int target, int level, int xoffset, int yoffset, int x, int y, int width, int height)
+```
+
+#### Parameters
+
+`target` int
+
+
+`level` int
+
+
+`xoffset` int
+
+
+`yoffset` int
+
+
+`x` int
+
+
+`y` int
+
+
+`width` int
+
+
+`height` int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b0d0d32c1e"></span>
+
+### CreateProgram Method
+
+```csharp
+public int CreateProgram()
+```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ac04ccd26c"></span>
+
+### CreateShader Method
+
+```csharp
+public int CreateShader(int shaderType)
+```
+
+#### Parameters
+
+`shaderType` int
+
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-547febd8f0"></span>
+
+### DeleteBuffer Method
+
+```csharp
+public void DeleteBuffer(int buffer)
+```
+
+#### Parameters
+
+`buffer` int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-65d7c79ff5"></span>
+
+### DeleteBuffers Method
+
+```csharp
+public void DeleteBuffers(int count, int* buffers)
+```
+
+#### Parameters
+
+`count` int
+
+
+`buffers` int*
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a298001b6b"></span>
+
+### DeleteFramebuffer Method
+
+```csharp
+public void DeleteFramebuffer(int fb)
+```
+
+#### Parameters
+
+`fb` int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4d5f78a054"></span>
+
+### DeleteFramebuffers Method
+
+```csharp
+public void DeleteFramebuffers(int count, int* framebuffers)
+```
+
+#### Parameters
+
+`count` int
+
+
+`framebuffers` int*
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c2e8aef2ae"></span>
+
+### DeleteProgram Method
+
+```csharp
+public void DeleteProgram(int program)
+```
+
+#### Parameters
+
+`program` int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c353f22da5"></span>
+
+### DeleteRenderbuffer Method
+
+```csharp
+public void DeleteRenderbuffer(int renderbuffer)
+```
+
+#### Parameters
+
+`renderbuffer` int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-fe0ed42dd4"></span>
+
+### DeleteRenderbuffers Method
+
+```csharp
+public void DeleteRenderbuffers(int count, int* renderbuffers)
+```
+
+#### Parameters
+
+`count` int
+
+
+`renderbuffers` int*
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9060aced7b"></span>
+
+### DeleteShader Method
+
+```csharp
+public void DeleteShader(int shader)
+```
+
+#### Parameters
+
+`shader` int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-357b3f7750"></span>
+
+### DeleteTexture Method
+
+```csharp
+public void DeleteTexture(int texture)
+```
+
+#### Parameters
+
+`texture` int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-63ea48a851"></span>
+
+### DeleteTextures Method
+
+```csharp
+public void DeleteTextures(int count, int* textures)
+```
+
+#### Parameters
+
+`count` int
+
+
+`textures` int*
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9e48b9cfd0"></span>
+
+### DeleteVertexArray Method
+
+```csharp
+public void DeleteVertexArray(int array)
+```
+
+#### Parameters
+
+`array` int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6ea5cc9959"></span>
+
+### DeleteVertexArrays Method
+
+```csharp
+public void DeleteVertexArrays(int count, int* arrays)
+```
+
+#### Parameters
+
+`count` int
+
+
+`arrays` int*
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2c34c2bced"></span>
+
+### DepthFunc Method
+
+```csharp
+public void DepthFunc(int value)
+```
+
+#### Parameters
+
+`value` int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-41d40e4c0b"></span>
+
+### DepthMask Method
+
+```csharp
+public void DepthMask(int value)
+```
+
+#### Parameters
+
+`value` int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6b2cc85dd0"></span>
+
+### Disable Method
+
+```csharp
+public void Disable(int what)
+```
+
+#### Parameters
+
+`what` int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d3a884f043"></span>
+
+### DrawArrays Method
+
+```csharp
+public void DrawArrays(int mode, int first, IntPtr count)
+```
+
+#### Parameters
+
+`mode` int
+
+
+`first` int
+
+
+`count` IntPtr
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ea6a2579e2"></span>
+
+### DrawElements Method
+
+```csharp
+public void DrawElements(int mode, int count, int type, IntPtr indices)
+```
+
+#### Parameters
+
+`mode` int
+
+
+`count` int
+
+
+`type` int
+
+
+`indices` IntPtr
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f10cec6e90"></span>
+
+### Enable Method
+
+```csharp
+public void Enable(int what)
+```
+
+#### Parameters
+
+`what` int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0eb6735fad"></span>
+
+### EnableVertexAttribArray Method
+
+```csharp
+public void EnableVertexAttribArray(int index)
+```
+
+#### Parameters
+
+`index` int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1838ef846d"></span>
+
+### Finish Method
+
+```csharp
+public void Finish()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3a05fe0ae1"></span>
+
+### Flush Method
+
+```csharp
+public void Flush()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-bb8978d295"></span>
+
+### FramebufferRenderbuffer Method
+
+```csharp
+public void FramebufferRenderbuffer(int target, int attachment, int renderbufferTarget, int renderbuffer)
+```
+
+#### Parameters
+
+`target` int
+
+
+`attachment` int
+
+
+`renderbufferTarget` int
+
+
+`renderbuffer` int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-49a3cadc24"></span>
+
+### FramebufferTexture2D Method
+
+```csharp
+public void FramebufferTexture2D(int target, int attachment, int texTarget, int texture, int level)
+```
+
+#### Parameters
+
+`target` int
+
+
+`attachment` int
+
+
+`texTarget` int
+
+
+`texture` int
+
+
+`level` int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-27803329bb"></span>
+
+### FromNativeUtf8GetProcAddress Method
+
+```csharp
+public Avalonia.OpenGL.GlInterface FromNativeUtf8GetProcAddress(Avalonia.OpenGL.GlVersion version, Func<IntPtr, IntPtr> getProcAddress)
+```
+
+#### Parameters
+
+`version` [Avalonia.OpenGL.GlVersion](xref:Avalonia.OpenGL.GlVersion)
+
+
+`getProcAddress` Func&lt;IntPtr, IntPtr&gt;
+
+
+#### Returns
+
+[Avalonia.OpenGL.GlInterface](xref:Avalonia.OpenGL.GlInterface)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-319b006ae4"></span>
+
+### GenBuffer Method
+
+```csharp
+public int GenBuffer()
+```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6b22ed580e"></span>
+
+### GenBuffers Method
+
+```csharp
+public void GenBuffers(int len, int* rv)
+```
+
+#### Parameters
+
+`len` int
+
+
+`rv` int*
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3881e99fc6"></span>
+
+### GenFramebuffer Method
+
+```csharp
+public int GenFramebuffer()
+```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-cd33a433e4"></span>
+
+### GenFramebuffers Method
+
+```csharp
+public void GenFramebuffers(int count, int* res)
+```
+
+#### Parameters
+
+`count` int
+
+
+`res` int*
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f2f0d9a6d9"></span>
+
+### GenRenderbuffer Method
+
+```csharp
+public int GenRenderbuffer()
+```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-cca04c199d"></span>
+
+### GenRenderbuffers Method
+
+```csharp
+public void GenRenderbuffers(int count, int* res)
+```
+
+#### Parameters
+
+`count` int
+
+
+`res` int*
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-320d2ad493"></span>
+
+### GenTexture Method
+
+```csharp
+public int GenTexture()
+```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4a81918c26"></span>
+
+### GenTextures Method
+
+```csharp
+public void GenTextures(int count, int* res)
+```
+
+#### Parameters
+
+`count` int
+
+
+`res` int*
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d447ca3613"></span>
+
+### GenVertexArray Method
+
+```csharp
+public int GenVertexArray()
+```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-463e1d8909"></span>
+
+### GenVertexArrays Method
+
+```csharp
+public void GenVertexArrays(int n, int* rv)
+```
+
+#### Parameters
+
+`n` int
+
+
+`rv` int*
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d3dcf31f83"></span>
+
+### GetAttribLocation Method
+
+```csharp
+public int GetAttribLocation(int program, IntPtr name)
+```
+
+#### Parameters
+
+`program` int
+
+
+`name` IntPtr
+
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-113562fe1e"></span>
+
+### GetAttribLocationString Method
+
+```csharp
+public int GetAttribLocationString(int program, string name)
+```
+
+#### Parameters
+
+`program` int
+
+
+`name` string
+
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-235411e7d9"></span>
+
+### GetProcAddress Method
+
+Returns an OpenGL function by name.
+
+```csharp
+public IntPtr GetProcAddress(string proc)
+```
+
+#### Parameters
+
+`proc` string
+
+Function name.
+
+
+#### Returns
+
+IntPtr
+
+Handle of function, which can be casted to unmanaged function pointer.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a2222cb704"></span>
+
+### GetProgramInfoLog Method
+
+```csharp
+public void GetProgramInfoLog(int program, int maxLength, int& len, void* infoLog)
+```
+
+#### Parameters
+
+`program` int
+
+
+`maxLength` int
+
+
+`len` int&amp;
+
+
+`infoLog` void*
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6694e2ab22"></span>
+
+### GetProgramiv Method
+
+```csharp
+public void GetProgramiv(int program, int name, int* parameters)
+```
+
+#### Parameters
+
+`program` int
+
+
+`name` int
+
+
+`parameters` int*
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0d0bc985b6"></span>
+
+### GetRenderbufferParameteriv Method
+
+```csharp
+public void GetRenderbufferParameteriv(int target, int name, int& value)
+```
+
+#### Parameters
+
+`target` int
+
+
+`name` int
+
+
+`value` int&amp;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c02f6a1f7f"></span>
+
+### GetShaderInfoLog Method
+
+```csharp
+public void GetShaderInfoLog(int shader, int maxLength, int& length, void* infoLog)
+```
+
+#### Parameters
+
+`shader` int
+
+
+`maxLength` int
+
+
+`length` int&amp;
+
+
+`infoLog` void*
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c62e662122"></span>
+
+### GetShaderiv Method
+
+```csharp
+public void GetShaderiv(int shader, int name, int* parameters)
+```
+
+#### Parameters
+
+`shader` int
+
+
+`name` int
+
+
+`parameters` int*
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-013f2ae8ae"></span>
+
+### GetUniformLocation Method
+
+```csharp
+public int GetUniformLocation(int program, IntPtr name)
+```
+
+#### Parameters
+
+`program` int
+
+
+`name` IntPtr
+
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-269c0cbc80"></span>
+
+### GetUniformLocationString Method
+
+```csharp
+public int GetUniformLocationString(int program, string name)
+```
+
+#### Parameters
+
+`program` int
+
+
+`name` string
+
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a8294a5f2b"></span>
+
+### LinkProgram Method
+
+```csharp
+public void LinkProgram(int program)
+```
+
+#### Parameters
+
+`program` int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5ac3785672"></span>
+
+### LinkProgramAndGetError Method
+
+```csharp
+public string LinkProgramAndGetError(int program)
+```
+
+#### Parameters
+
+`program` int
+
+
+#### Returns
+
+string
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a543469bca"></span>
+
+### RenderbufferStorage Method
+
+```csharp
+public void RenderbufferStorage(int target, int internalFormat, int width, int height)
+```
+
+#### Parameters
+
+`target` int
+
+
+`internalFormat` int
+
+
+`width` int
+
+
+`height` int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-357d1c6697"></span>
+
+### ShaderSource Method
+
+```csharp
+public void ShaderSource(int shader, int count, IntPtr strings, IntPtr lengths)
+```
+
+#### Parameters
+
+`shader` int
+
+
+`count` int
+
+
+`strings` IntPtr
+
+
+`lengths` IntPtr
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2e04d5997d"></span>
+
+### ShaderSourceString Method
+
+```csharp
+public void ShaderSourceString(int shader, string source)
+```
+
+#### Parameters
+
+`shader` int
+
+
+`source` string
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ad49471c4b"></span>
+
+### TexImage2D Method
+
+```csharp
+public void TexImage2D(int target, int level, int internalFormat, int width, int height, int border, int format, int type, IntPtr data)
+```
+
+#### Parameters
+
+`target` int
+
+
+`level` int
+
+
+`internalFormat` int
+
+
+`width` int
+
+
+`height` int
+
+
+`border` int
+
+
+`format` int
+
+
+`type` int
+
+
+`data` IntPtr
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9bc8a961f8"></span>
+
+### TexParameteri Method
+
+```csharp
+public void TexParameteri(int target, int name, int value)
+```
+
+#### Parameters
+
+`target` int
+
+
+`name` int
+
+
+`value` int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-43d103169e"></span>
+
+### Uniform1f Method
+
+```csharp
+public void Uniform1f(int location, float falue)
+```
+
+#### Parameters
+
+`location` int
+
+
+`falue` float
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-78e1540108"></span>
+
+### Uniform1i Method
+
+```csharp
+public void Uniform1i(int location, int value)
+```
+
+#### Parameters
+
+`location` int
+
+
+`value` int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6e94672d0b"></span>
+
+### UniformMatrix4fv Method
+
+```csharp
+public void UniformMatrix4fv(int location, int count, bool transpose, void* value)
+```
+
+#### Parameters
+
+`location` int
+
+
+`count` int
+
+
+`transpose` bool
+
+
+`value` void*
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c8518c48ae"></span>
+
+### UseProgram Method
+
+```csharp
+public void UseProgram(int program)
+```
+
+#### Parameters
+
+`program` int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0674e7c6d3"></span>
+
+### VertexAttribPointer Method
+
+```csharp
+public void VertexAttribPointer(int index, int size, int type, int normalized, int stride, IntPtr pointer)
+```
+
+#### Parameters
+
+`index` int
+
+
+`size` int
+
+
+`type` int
+
+
+`normalized` int
+
+
+`stride` int
+
+
+`pointer` IntPtr
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ca1437e6df"></span>
+
+### Viewport Method
+
+```csharp
+public void Viewport(int x, int y, int width, int height)
+```
+
+#### Parameters
+
+`x` int
+
+
+`y` int
+
+
+`width` int
+
+
+`height` int
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [ContextInfo](#uid-e5d711ad1c) | No summary available. |
+| [IsBindVertexArrayAvailable](#uid-35d5d10cba) | No summary available. |
+| [IsBlitFramebufferAvailable](#uid-819722db71) | No summary available. |
+| [IsDeleteVertexArraysAvailable](#uid-26a96e8953) | No summary available. |
+| [IsGenVertexArraysAvailable](#uid-31ec4cb68b) | No summary available. |
+| [Renderer](#uid-a4cbddaeb4) | No summary available. |
+| [Vendor](#uid-a0d1f59df7) | No summary available. |
+| [Version](#uid-499f67454c) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e5d711ad1c"></span>
+
+### ContextInfo Property
+
+```csharp
+public Avalonia.OpenGL.GlInterface.GlContextInfo ContextInfo { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-35d5d10cba"></span>
+
+### IsBindVertexArrayAvailable Property
+
+```csharp
+public bool IsBindVertexArrayAvailable { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-819722db71"></span>
+
+### IsBlitFramebufferAvailable Property
+
+```csharp
+public bool IsBlitFramebufferAvailable { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-26a96e8953"></span>
+
+### IsDeleteVertexArraysAvailable Property
+
+```csharp
+public bool IsDeleteVertexArraysAvailable { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-31ec4cb68b"></span>
+
+### IsGenVertexArraysAvailable Property
+
+```csharp
+public bool IsGenVertexArraysAvailable { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a4cbddaeb4"></span>
+
+### Renderer Property
+
+```csharp
+public string Renderer { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a0d1f59df7"></span>
+
+### Vendor Property
+
+```csharp
+public string Vendor { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-499f67454c"></span>
+
+### Version Property
+
+```csharp
+public string Version { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

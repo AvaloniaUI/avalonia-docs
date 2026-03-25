@@ -1,0 +1,319 @@
+---
+title: 'TransformOperations.Builder'
+hide_title: true
+slug: '/avalonia/media/transformation/transformoperations-builder'
+uid: 'Avalonia.Media.Transformation.TransformOperations.Builder'
+commentId: 'T:Avalonia.Media.Transformation.TransformOperations.Builder'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Media.Transformation'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">TransformOperations.Builder Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Media.Transformation</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Media/Transformation/TransformOperations.cs">TransformOperations.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct TransformOperations.Builder
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> TransformOperations.Builder
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;Builder&gt;
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [TransformOperations.Builder](#uid-9005f35177) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9005f35177"></span>
+
+### TransformOperations.Builder Constructor
+
+```csharp
+public TransformOperations.Builder(int capacity)
+```
+
+#### Parameters
+
+`capacity` int
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Append](#uid-9bc84f9410) | No summary available. |
+| [AppendIdentity](#uid-40a962a712) | No summary available. |
+| [AppendMatrix](#uid-0274208fb8) | No summary available. |
+| [AppendRotate](#uid-b2bffbafd0) | No summary available. |
+| [AppendScale](#uid-65562f5500) | No summary available. |
+| [AppendSkew](#uid-6a780f5e5e) | No summary available. |
+| [AppendTranslate](#uid-c4ae2a4223) | No summary available. |
+| [Build](#uid-0ccf92d355) | No summary available. |
+| [Equals (2 overloads)](#uid-04c60ed8e7) | No summary available. |
+| [GetHashCode](#uid-9ba9bb0c2f) | No summary available. |
+| [ToString](#uid-7b6f606f25) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9bc84f9410"></span>
+
+### Append Method
+
+```csharp
+public void Append(Avalonia.Media.Transformation.TransformOperation toAdd)
+```
+
+#### Parameters
+
+`toAdd` [Avalonia.Media.Transformation.TransformOperation](xref:Avalonia.Media.Transformation.TransformOperation)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-40a962a712"></span>
+
+### AppendIdentity Method
+
+```csharp
+public void AppendIdentity()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0274208fb8"></span>
+
+### AppendMatrix Method
+
+```csharp
+public void AppendMatrix(Avalonia.Matrix matrix)
+```
+
+#### Parameters
+
+`matrix` [Avalonia.Matrix](xref:Avalonia.Matrix)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b2bffbafd0"></span>
+
+### AppendRotate Method
+
+```csharp
+public void AppendRotate(double angle)
+```
+
+#### Parameters
+
+`angle` double
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-65562f5500"></span>
+
+### AppendScale Method
+
+```csharp
+public void AppendScale(double x, double y)
+```
+
+#### Parameters
+
+`x` double
+
+
+`y` double
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6a780f5e5e"></span>
+
+### AppendSkew Method
+
+```csharp
+public void AppendSkew(double x, double y)
+```
+
+#### Parameters
+
+`x` double
+
+
+`y` double
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c4ae2a4223"></span>
+
+### AppendTranslate Method
+
+```csharp
+public void AppendTranslate(double x, double y)
+```
+
+#### Parameters
+
+`x` double
+
+
+`y` double
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0ccf92d355"></span>
+
+### Build Method
+
+```csharp
+public Avalonia.Media.Transformation.TransformOperations Build()
+```
+
+#### Returns
+
+[Avalonia.Media.Transformation.TransformOperations](xref:Avalonia.Media.Transformation.TransformOperations)
+
+
+</section>
+
+<span id="uid-04c60ed8e7"></span>
+
+### Equals overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c5f7696cda"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(Avalonia.Media.Transformation.TransformOperations.Builder other)
+```
+
+##### Parameters
+
+`other` [Avalonia.Media.Transformation.TransformOperations.Builder](xref:Avalonia.Media.Transformation.TransformOperations.Builder)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-02f6b58a25"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(object obj)
+```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9ba9bb0c2f"></span>
+
+### GetHashCode Method
+
+```csharp
+public int GetHashCode()
+```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7b6f606f25"></span>
+
+### ToString Method
+
+```csharp
+public string ToString()
+```
+
+#### Returns
+
+string
+
+
+</section>
+
+</ApiRefPage>
+

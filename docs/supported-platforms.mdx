@@ -1,0 +1,155 @@
+---
+id: supported-platforms
+title: Supported platforms
+---
+
+import TierBadge from '@site/src/components/global/TierBadge';
+
+Avalonia apps can target Windows, macOS, Linux, iOS, Android, and WebAssembly. The level of support varies by operating system version, organised into three tiers. These tiers are reviewed with each major Avalonia release, so platforms may move between tiers over time.
+
+## Support tiers
+
+:::tip[Tier 1: Fully tested and supported]
+Tested against every release. Bugs on Tier 1 platforms get fixed. Community PRs are actively reviewed and merged.
+:::
+
+:::info[Tier 2: Best effort]
+Not part of the test matrix, but kept working on a best-effort basis. Issues are deprioritised behind Tier 1 work and some may never get fixed. Community PRs are evaluated case by case, and fixes may need to be backed by a [commercial engagement](https://avaloniaui.net/support) if the maintenance burden is significant.
+:::
+
+:::caution[Tier 3: Commercial support only]
+Any platform not listed in Tier 1 or Tier 2. Issues will be closed and PRs will not be reviewed. If you need Avalonia on a Tier 3 platform, see [Enhanced Support](https://avaloniaui.net/support) or [Professional Services](https://avaloniaui.net/professional-services).
+:::
+
+## Windows
+
+Avalonia uses the Win32 API directly on Windows. No additional workloads or dependencies are needed beyond the .NET SDK.
+
+| Version | Minimum build | Architectures | Tier |
+|---|---|---|---|
+| Windows 11 | 24H2 (build 26100) | x64, ARM64 | <TierBadge tier={1} /> |
+| Windows 11 | 22H2 (build 22621) | x64, ARM64 | <TierBadge tier={2} /> |
+| Windows 10 | 22H2 (build 19045) | x64 | <TierBadge tier={2} /> |
+| Windows 10 / 11 | Earlier builds | x64, x86 | <TierBadge tier={3} /> |
+
+For WinForms interop and other Windows-specific features, see the [Windows platform guide](/docs/platform-specific-guides/windows).
+
+## macOS
+
+Avalonia ships its own native Objective-C++ backend and does not use the standard .NET macOS workload. Apps can be cross-compiled from Windows or Linux.
+
+| Version | Name | Architectures | Tier |
+|---|---|---|---|
+| macOS 26 | Tahoe | ARM64 (Apple Silicon), x64 | <TierBadge tier={1} /> |
+| macOS 15 | Sequoia | ARM64, x64 | <TierBadge tier={2} /> |
+| macOS 14 | Sonoma | ARM64, x64 | <TierBadge tier={2} /> |
+| macOS 13 and earlier | | | <TierBadge tier={3} /> |
+
+For native menus, platform conventions, and embedding native views, see the [macOS platform guide](/docs/platform-specific-guides/macos).
+
+## iOS and iPadOS
+
+.NET support on iOS follows the MAUI lifecycle. When Microsoft drops support for a mobile OS version under the [MAUI support policy](https://dotnet.microsoft.com/en-us/platform/support/policy/maui), our support for that version ends too.
+
+| Version | Architectures | Tier |
+|---|---|---|
+| iOS / iPadOS 26 | ARM64 | <TierBadge tier={1} /> |
+| iOS 18.x | ARM64 | <TierBadge tier={2} /> |
+| iOS 17.x and earlier | ARM64 | <TierBadge tier={3} /> |
+
+**Minimum .NET version:** .NET 10.0. Mobile .NET versions follow the [MAUI support policy](https://dotnet.microsoft.com/en-us/platform/support/policy/maui). Microsoft removed .NET 8 mobile workloads from the .NET 10 SDK, so .NET 8 iOS builds are not available when using the .NET 10 SDK.
+
+For setup instructions, see the [iOS platform guide](/docs/platform-specific-guides/ios).
+
+## Android
+
+.NET support on Android follows the MAUI lifecycle. When Microsoft drops support for a mobile OS version under the [MAUI support policy](https://dotnet.microsoft.com/en-us/platform/support/policy/maui), our support for that version ends too.
+
+| Version | API level | Architectures | Tier |
+|---|---|---|---|
+| Android 16 | API 36 | ARM64, x64 | <TierBadge tier={1} /> |
+| Android 12 to 15 | API 31 to 35 | ARM64, ARM32, x64 | <TierBadge tier={2} /> |
+| Android 11 and earlier | API 30 and below | | <TierBadge tier={3} /> |
+
+**Minimum .NET version:** .NET 10.0. Mobile .NET versions follow the [MAUI support policy](https://dotnet.microsoft.com/en-us/platform/support/policy/maui). Microsoft removed .NET 8 mobile workloads from the .NET 10 SDK, so .NET 8 Android builds are not available when using the .NET 10 SDK.
+
+For setup instructions, see the [Android platform guide](/docs/platform-specific-guides/android).
+
+## Desktop Linux
+
+Avalonia targets X11 directly on Linux. Wayland support is currently in private preview. Most distributions that support the .NET SDK and have X11 or framebuffer capabilities will run Avalonia applications.
+
+| Distribution | Version | Architectures | Tier |
+|---|---|---|---|
+| Ubuntu | 25.x | x64, ARM64 | <TierBadge tier={1} /> |
+| Fedora | 43 | x64 | <TierBadge tier={1} /> |
+| Debian | 13 (Trixie) | x64, ARM64 | <TierBadge tier={1} /> |
+| Ubuntu | 16.04 to 24.x | x64, ARM64 | <TierBadge tier={2} /> |
+| Fedora | 30 to 42 | x64 | <TierBadge tier={2} /> |
+| Debian | 9 (Stretch) to 12 | x64, ARM64 | <TierBadge tier={2} /> |
+| Other distributions | (Arch, Alpine, NixOS, Gentoo, and others) | Varies | <TierBadge tier={3} /> |
+
+**Rendering:** OpenGL via Skia (X11), software rendering (framebuffer).
+**glibc requirement:** Skia is built against glibc 2.17. Distributions using a different C library (such as musl) require a custom `libSkiaSharp.so` build. See [SkiaSharp](https://github.com/mono/SkiaSharp) for details. Distributions that need a custom Skia build are Tier 3.
+
+**Required packages:**
+```bash
+libx11-6 libice6 libsm6 libfontconfig1
+```
+
+For WSL 2 and other configuration details, see the [Linux platform guide](/docs/platform-specific-guides/linux).
+
+### Embedded Linux
+
+Avalonia supports running on embedded Linux devices without a desktop environment using either the Linux framebuffer or DRM (Direct Rendering Manager).
+
+| Distribution | Architectures | Runtime identifier | Tier |
+|---|---|---|---|
+| Raspberry Pi OS | ARM64, ARM32 | `linux-arm64`, `linux-arm` | <TierBadge tier={1} /> |
+| Other embedded Linux | Varies | Varies | <TierBadge tier={3} /> |
+
+**Required packages:** `libgbm1`, `libgl1-mesa-dri`, `libegl1-mesa`, `libinput10`
+
+For display output configuration and device setup, see the [Embedded Linux guide](/docs/platform-specific-guides/embedded-linux).
+
+## WebAssembly
+
+Avalonia runs in any browser with full WebAssembly support. No server-side component is required.
+
+| Requirement | Details |
+|---|---|
+| .NET version | .NET 8 or later |
+| Browser support | All browsers with WebAssembly support ([Can I use WebAssembly](https://caniuse.com/wasm)) |
+| Rendering | Skia via CanvasKit (WebGL) |
+
+For setup and deployment, see the [WebAssembly platform guide](/docs/platform-specific-guides/webassembly).
+
+## .NET version requirements
+
+| Target | Minimum .NET version | Notes |
+|---|---|---|
+| Desktop (Windows, macOS, Linux) | .NET 8.0 | Follows standard .NET LTS support. |
+| iOS / Android | .NET 10.0 | Mobile .NET versions follow the [MAUI support policy](https://dotnet.microsoft.com/en-us/platform/support/policy/maui). .NET 8 mobile workloads are not available in the .NET 10 SDK. |
+| WebAssembly | .NET 8.0 | |
+
+## Contributing platform-specific fixes
+
+Platform-specific contributions are welcome, but they need to align with the tiers above to keep the project healthy.
+
+**Tier 1** fixes are always welcome and go through the normal review process.
+
+**Tier 2** fixes are evaluated case by case. The review considers the complexity involved, the risk of regression to Tier 1, and the ongoing maintenance cost. If the maintenance burden is significant, the work may need to be backed by a commercial engagement.
+
+**Tier 3** fixes require a commercial engagement before review. This applies no matter how small the change looks, because the cost is not in the patch itself, it is in maintaining and testing it release after release.
+
+If you are not sure whether your contribution needs a commercial engagement, ask before you start work to save time up front.
+
+## See also
+
+- [Windows platform guide](/docs/platform-specific-guides/windows)
+- [macOS platform guide](/docs/platform-specific-guides/macos)
+- [iOS platform guide](/docs/platform-specific-guides/ios)
+- [Android platform guide](/docs/platform-specific-guides/android)
+- [Linux platform guide](/docs/platform-specific-guides/linux)
+- [Embedded Linux guide](/docs/platform-specific-guides/embedded-linux)
+- [WebAssembly platform guide](/docs/platform-specific-guides/webassembly)

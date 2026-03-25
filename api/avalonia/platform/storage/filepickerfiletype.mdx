@@ -1,0 +1,187 @@
+---
+title: 'FilePickerFileType'
+hide_title: true
+slug: '/avalonia/platform/storage/filepickerfiletype'
+uid: 'Avalonia.Platform.Storage.FilePickerFileType'
+commentId: 'T:Avalonia.Platform.Storage.FilePickerFileType'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Platform.Storage'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">FilePickerFileType Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Platform.Storage</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Platform/Storage/FilePickerFileType.cs">FilePickerFileType.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Represents a name mapped to the associated file types (extensions).
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class FilePickerFileType
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> FilePickerFileType
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [FilePickerFileType](#uid-dd70c9d7d8) | Represents a name mapped to the associated file types (extensions). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-dd70c9d7d8"></span>
+
+### FilePickerFileType Constructor
+
+Represents a name mapped to the associated file types (extensions).
+
+```csharp
+public FilePickerFileType(string name)
+```
+
+#### Parameters
+
+`name` string
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [ToString](#uid-8ce8a2223b) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8ce8a2223b"></span>
+
+### ToString Method
+
+```csharp
+public string ToString()
+```
+
+#### Returns
+
+string
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [AppleUniformTypeIdentifiers](#uid-30268f70de) | List of extensions in Apple uniform format. |
+| [MimeTypes](#uid-a6dc321d73) | List of extensions in MIME format. |
+| [Name](#uid-1f66aca370) | File type name. |
+| [Patterns](#uid-42b7c026bf) | List of extensions in GLOB format. I.e. "*.png" or "*.*". |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-30268f70de"></span>
+
+### AppleUniformTypeIdentifiers Property
+
+List of extensions in Apple uniform format.
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<string> AppleUniformTypeIdentifiers { get; set; }
+```
+
+#### Remarks
+
+Used only on Apple devices.
+See https://developer.apple.com/documentation/uniformtypeidentifiers/system_declared_uniform_type_identifiers.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a6dc321d73"></span>
+
+### MimeTypes Property
+
+List of extensions in MIME format.
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<string> MimeTypes { get; set; }
+```
+
+#### Remarks
+
+Used on Android, Linux and Browser platforms.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1f66aca370"></span>
+
+### Name Property
+
+File type name.
+
+```csharp
+public string Name { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-42b7c026bf"></span>
+
+### Patterns Property
+
+List of extensions in GLOB format. I.e. "*.png" or "*.*".
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<string> Patterns { get; set; }
+```
+
+#### Remarks
+
+Used on Windows, Linux and Browser platforms.
+
+</section>
+
+</ApiRefPage>
+

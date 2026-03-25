@@ -1,0 +1,109 @@
+---
+title: 'TreeSelectionModelBase<T>.BatchUpdateOperation<T>'
+hide_title: true
+slug: '/avalonia/controls/selection/treeselectionmodelbase-1-batchupdateoperation'
+uid: 'Avalonia.Controls.Selection.TreeSelectionModelBase`1.BatchUpdateOperation'
+commentId: 'T:Avalonia.Controls.Selection.TreeSelectionModelBase`1.BatchUpdateOperation'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.TreeDataGrid'
+assembly: 'Avalonia.Controls.TreeDataGrid'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Selection'
+tfms:
+  - 'net8.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">TreeSelectionModelBase&lt;T&gt;.BatchUpdateOperation&lt;T&gt; Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Selection</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Represents a batch update operation that defers selection change notifications.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct TreeSelectionModelBase<T>.BatchUpdateOperation<T>
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> TreeSelectionModelBase&lt;T&gt;.BatchUpdateOperation&lt;T&gt;
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IDisposable
+</div>
+</div>
+
+## Remarks
+
+This struct implements [IDisposable](xref:System.IDisposable) to allow using it with a using statement
+to automatically end the batch update when the using block exits.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [TreeSelectionModelBase&lt;T&gt;.BatchUpdateOperation&lt;T&gt;](#uid-b46669481a) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b46669481a"></span>
+
+### TreeSelectionModelBase&lt;T&gt;.BatchUpdateOperation&lt;T&gt; Constructor
+
+```csharp
+public TreeSelectionModelBase<T>.BatchUpdateOperation<T>(Avalonia.Controls.Selection.TreeSelectionModelBase<T><T> owner)
+```
+
+#### Parameters
+
+`owner` Avalonia.Controls.Selection.TreeSelectionModelBase&lt;T&gt;&lt;T&gt;
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Dispose](#uid-8d11053649) | Ends the batch update operation and commits the selection changes. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8d11053649"></span>
+
+### Dispose Method
+
+Ends the batch update operation and commits the selection changes.
+
+```csharp
+public void Dispose()
+```
+
+</section>
+
+</ApiRefPage>
+

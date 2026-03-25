@@ -1,0 +1,309 @@
+---
+title: 'FontMetrics'
+hide_title: true
+slug: '/avalonia/media/fontmetrics'
+uid: 'Avalonia.Media.FontMetrics'
+commentId: 'T:Avalonia.Media.FontMetrics'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Media'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">FontMetrics Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Media</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Media/FontMetrics.cs">FontMetrics.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+The font metrics is holding information about a font's ascent, descent, etc. in design em units.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct FontMetrics
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> FontMetrics
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;FontMetrics&gt;
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Equals (2 overloads)](#uid-4a0e148bff) | No summary available. |
+| [GetHashCode](#uid-3ce01f7b9a) | No summary available. |
+| [ToString](#uid-1b0455e4e2) | No summary available. |
+
+<span id="uid-4a0e148bff"></span>
+
+### Equals overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-56f6d67608"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(Avalonia.Media.FontMetrics other)
+```
+
+##### Parameters
+
+`other` [Avalonia.Media.FontMetrics](xref:Avalonia.Media.FontMetrics)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-fa046df2d5"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(object obj)
+```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3ce01f7b9a"></span>
+
+### GetHashCode Method
+
+```csharp
+public int GetHashCode()
+```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1b0455e4e2"></span>
+
+### ToString Method
+
+```csharp
+public string ToString()
+```
+
+#### Returns
+
+string
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Ascent](#uid-9f048ff9ae) | Gets the recommended distance above the baseline in design em size. |
+| [Descent](#uid-d8c456ce64) | Gets the recommended distance under the baseline in design em size. |
+| [DesignEmHeight](#uid-34a5418510) | Gets the font design units per em. |
+| [IsFixedPitch](#uid-a1c40d3384) | A [bool](xref:System.Boolean) value indicating whether all glyphs in the font have the same advancement. |
+| [LineGap](#uid-764e6ae249) | Gets the recommended additional space between two lines of text in design em size. |
+| [LineSpacing](#uid-2560905711) | Gets the recommended line spacing of a formed text line. |
+| [StrikethroughPosition](#uid-d9d623909d) | Gets a value that indicates the distance of the strikethrough from the baseline in design em size. |
+| [StrikethroughThickness](#uid-fdd7495225) | Gets a value that indicates the thickness of the underline in design em size. |
+| [UnderlinePosition](#uid-60776ac815) | Gets a value that indicates the distance of the underline from the baseline in design em size. |
+| [UnderlineThickness](#uid-a8d3977212) | Gets a value that indicates the thickness of the underline in design em size. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9f048ff9ae"></span>
+
+### Ascent Property
+
+Gets the recommended distance above the baseline in design em size.
+
+```csharp
+public int Ascent { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d8c456ce64"></span>
+
+### Descent Property
+
+Gets the recommended distance under the baseline in design em size.
+
+```csharp
+public int Descent { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-34a5418510"></span>
+
+### DesignEmHeight Property
+
+Gets the font design units per em.
+
+```csharp
+public ushort DesignEmHeight { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a1c40d3384"></span>
+
+### IsFixedPitch Property
+
+A [bool](xref:System.Boolean) value indicating whether all glyphs in the font have the same advancement.
+
+```csharp
+public bool IsFixedPitch { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-764e6ae249"></span>
+
+### LineGap Property
+
+Gets the recommended additional space between two lines of text in design em size.
+
+```csharp
+public int LineGap { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2560905711"></span>
+
+### LineSpacing Property
+
+Gets the recommended line spacing of a formed text line.
+
+```csharp
+public int LineSpacing { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d9d623909d"></span>
+
+### StrikethroughPosition Property
+
+Gets a value that indicates the distance of the strikethrough from the baseline in design em size.
+
+```csharp
+public int StrikethroughPosition { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-fdd7495225"></span>
+
+### StrikethroughThickness Property
+
+Gets a value that indicates the thickness of the underline in design em size.
+
+```csharp
+public int StrikethroughThickness { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-60776ac815"></span>
+
+### UnderlinePosition Property
+
+Gets a value that indicates the distance of the underline from the baseline in design em size.
+
+```csharp
+public int UnderlinePosition { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a8d3977212"></span>
+
+### UnderlineThickness Property
+
+Gets a value that indicates the thickness of the underline in design em size.
+
+```csharp
+public int UnderlineThickness { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

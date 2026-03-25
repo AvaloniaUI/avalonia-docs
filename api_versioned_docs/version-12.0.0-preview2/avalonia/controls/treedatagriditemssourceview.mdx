@@ -1,0 +1,365 @@
+---
+title: 'TreeDataGridItemsSourceView'
+hide_title: true
+slug: '/avalonia/controls/treedatagriditemssourceview'
+uid: 'Avalonia.Controls.TreeDataGridItemsSourceView'
+commentId: 'T:Avalonia.Controls.TreeDataGridItemsSourceView'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.TreeDataGrid'
+assembly: 'Avalonia.Controls.TreeDataGrid'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net8.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">TreeDataGridItemsSourceView Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Represents a standardized view of the supported interactions between a given ItemsSource
+object and a [Avalonia.Controls.TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid) control.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class TreeDataGridItemsSourceView
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> TreeDataGridItemsSourceView
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Derived types:</span> <a href="treedatagriditemssourceview-1">TreeDataGridItemsSourceView&lt;T&gt;</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> INotifyCollectionChanged, IDisposable, x
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [TreeDataGridItemsSourceView](#uid-9c72a6e351) | Initializes a new instance of the [ItemsSourceView](xref:Avalonia.Controls.ItemsSourceView) class for the specified data source. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9c72a6e351"></span>
+
+### TreeDataGridItemsSourceView Constructor
+
+Initializes a new instance of the [ItemsSourceView](xref:Avalonia.Controls.ItemsSourceView) class for the specified data source.
+
+```csharp
+public TreeDataGridItemsSourceView(System.Collections.IEnumerable source)
+```
+
+#### Parameters
+
+`source` System.Collections.IEnumerable
+
+The data source.
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Dispose](#uid-4ee58e2519) | No summary available. |
+| [GetAt](#uid-07776d26a9) | Retrieves the item at the specified index. |
+| [GetOrCreate](#uid-3d962da852) | Gets or creates a [Avalonia.Controls.TreeDataGridItemsSourceView](xref:Avalonia.Controls.TreeDataGridItemsSourceView) for the specified items. |
+| [IndexFromKey](#uid-136907135a) | Retrieves the unique identifier (key) for the item at the specified index. |
+| [IndexOf](#uid-2660c2c683) | Gets the index of the specified item in the collection. |
+| [KeyFromIndex](#uid-eb46b1cc61) | Retrieves the index of the item that has the specified unique identifier (key). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4ee58e2519"></span>
+
+### Dispose Method
+
+```csharp
+public void Dispose()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-07776d26a9"></span>
+
+### GetAt Method
+
+Retrieves the item at the specified index.
+
+```csharp
+public object GetAt(int index)
+```
+
+#### Parameters
+
+`index` int
+
+The index.
+
+
+#### Returns
+
+object
+
+The item.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3d962da852"></span>
+
+### GetOrCreate Method
+
+Gets or creates a [Avalonia.Controls.TreeDataGridItemsSourceView](xref:Avalonia.Controls.TreeDataGridItemsSourceView) for the specified items.
+
+```csharp
+public Avalonia.Controls.TreeDataGridItemsSourceView GetOrCreate(System.Collections.IEnumerable items)
+```
+
+#### Parameters
+
+`items` System.Collections.IEnumerable
+
+The items collection, or null.
+
+
+#### Returns
+
+[Avalonia.Controls.TreeDataGridItemsSourceView](xref:Avalonia.Controls.TreeDataGridItemsSourceView)
+
+A view wrapping the items, or [Avalonia.Controls.TreeDataGridItemsSourceView.Empty](xref:Avalonia.Controls.TreeDataGridItemsSourceView.Empty) if items is null.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-136907135a"></span>
+
+### IndexFromKey Method
+
+Retrieves the unique identifier (key) for the item at the specified index.
+
+```csharp
+public int IndexFromKey(string key)
+```
+
+#### Parameters
+
+`key` string
+
+The key.
+
+
+#### Returns
+
+int
+
+The index.
+
+
+#### Remarks
+
+TODO: Not yet implemented in Avalonia.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2660c2c683"></span>
+
+### IndexOf Method
+
+Gets the index of the specified item in the collection.
+
+```csharp
+public int IndexOf(object item)
+```
+
+#### Parameters
+
+`item` object
+
+The item to locate.
+
+
+#### Returns
+
+int
+
+The zero-based index of the item, or -1 if not found.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-eb46b1cc61"></span>
+
+### KeyFromIndex Method
+
+Retrieves the index of the item that has the specified unique identifier (key).
+
+```csharp
+public string KeyFromIndex(int index)
+```
+
+#### Parameters
+
+`index` int
+
+The index.
+
+
+#### Returns
+
+string
+
+The key
+
+
+#### Remarks
+
+TODO: Not yet implemented in Avalonia.
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Count](#uid-413c18728e) | Gets the number of items in the collection. |
+| [Empty](#uid-3b57905360) | Gets an empty [Avalonia.Controls.TreeDataGridItemsSourceView](xref:Avalonia.Controls.TreeDataGridItemsSourceView) |
+| [HasKeyIndexMapping](#uid-f516bb9541) | Gets a value that indicates whether the items source can provide a unique key for each item. |
+| [Inner](#uid-31d7d95e76) | Gets the inner collection. |
+| [Item](#uid-7116b497d9) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-413c18728e"></span>
+
+### Count Property
+
+Gets the number of items in the collection.
+
+```csharp
+public int Count { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3b57905360"></span>
+
+### Empty Property
+
+Gets an empty [Avalonia.Controls.TreeDataGridItemsSourceView](xref:Avalonia.Controls.TreeDataGridItemsSourceView)
+
+```csharp
+public Avalonia.Controls.TreeDataGridItemsSourceView Empty { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f516bb9541"></span>
+
+### HasKeyIndexMapping Property
+
+Gets a value that indicates whether the items source can provide a unique key for each item.
+
+```csharp
+public bool HasKeyIndexMapping { get; set; }
+```
+
+#### Remarks
+
+TODO: Not yet implemented in Avalonia.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-31d7d95e76"></span>
+
+### Inner Property
+
+Gets the inner collection.
+
+```csharp
+public System.Collections.IList Inner { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7116b497d9"></span>
+
+### Item Property
+
+```csharp
+public object Item { get; set; }
+```
+
+</section>
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [CollectionChanged](#uid-a26fd90d10) | Occurs when the collection has changed to indicate the reason for the change and which items changed. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a26fd90d10"></span>
+
+### CollectionChanged Event
+
+Occurs when the collection has changed to indicate the reason for the change and which items changed.
+
+```csharp
+public event System.Collections.Specialized.NotifyCollectionChangedEventHandler CollectionChanged
+```
+
+</section>
+
+</ApiRefPage>
+

@@ -1,0 +1,224 @@
+---
+title: 'CornerRadiusFilterConverter'
+hide_title: true
+slug: '/avalonia/controls/converters/cornerradiusfilterconverter'
+uid: 'Avalonia.Controls.Converters.CornerRadiusFilterConverter'
+commentId: 'T:Avalonia.Controls.Converters.CornerRadiusFilterConverter'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Converters'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">CornerRadiusFilterConverter Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Converters</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Controls/Converters/CornerRadiusFilterConverter.cs">CornerRadiusFilterConverter.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Converts an existing [CornerRadius](xref:Avalonia.CornerRadius) struct to a new [CornerRadius](xref:Avalonia.CornerRadius) struct,
+with filters applied to extract only the specified corners, leaving the others set to 0.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class CornerRadiusFilterConverter
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> CornerRadiusFilterConverter
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="../../data/converters/ivalueconverter">IValueConverter</a>
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [CornerRadiusFilterConverter](#uid-54cf2f9cc9) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-54cf2f9cc9"></span>
+
+### CornerRadiusFilterConverter Constructor
+
+```csharp
+public CornerRadiusFilterConverter()
+```
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Convert](#uid-5ab3b58cba) | Converts a value. |
+| [ConvertBack](#uid-77de62215f) | Converts a value. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5ab3b58cba"></span>
+
+### Convert Method
+
+Converts a value.
+
+```csharp
+public object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
+```
+
+#### Parameters
+
+`value` object
+
+The value to convert.
+
+
+`targetType` Type
+
+The type of the target.
+
+
+`parameter` object
+
+A user-defined parameter.
+
+
+`culture` System.Globalization.CultureInfo
+
+The culture to use.
+
+
+#### Returns
+
+object
+
+The converted value.
+
+
+#### Remarks
+
+This method should not throw exceptions. If the value is not convertible, return
+a [Avalonia.Data.BindingNotification](xref:Avalonia.Data.BindingNotification) in an error state. Any exceptions thrown will be
+treated as an application exception.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-77de62215f"></span>
+
+### ConvertBack Method
+
+Converts a value.
+
+```csharp
+public object ConvertBack(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
+```
+
+#### Parameters
+
+`value` object
+
+The value to convert.
+
+
+`targetType` Type
+
+The type of the target.
+
+
+`parameter` object
+
+A user-defined parameter.
+
+
+`culture` System.Globalization.CultureInfo
+
+The culture to use.
+
+
+#### Returns
+
+object
+
+The converted value.
+
+
+#### Remarks
+
+This method should not throw exceptions. If the value is not convertible, return
+a [Avalonia.Data.BindingNotification](xref:Avalonia.Data.BindingNotification) in an error state. Any exceptions thrown will be
+treated as an application exception.
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Filter](#uid-b7ba1819d4) | Gets or sets the corners to filter by. Only the specified corners will be included in the converted [Avalonia.CornerRadius](xref:Avalonia.CornerRadius). |
+| [Scale](#uid-1a112bbedc) | Gets or sets the scale multiplier applied uniformly to each corner. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b7ba1819d4"></span>
+
+### Filter Property
+
+Gets or sets the corners to filter by.
+Only the specified corners will be included in the converted [Avalonia.CornerRadius](xref:Avalonia.CornerRadius).
+
+```csharp
+public Avalonia.Controls.Converters.Corners Filter { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1a112bbedc"></span>
+
+### Scale Property
+
+Gets or sets the scale multiplier applied uniformly to each corner.
+
+```csharp
+public double Scale { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

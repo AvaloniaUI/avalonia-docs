@@ -1,0 +1,141 @@
+---
+title: 'LibInputBackend'
+hide_title: true
+slug: '/avalonia/linuxframebuffer/input/libinput/libinputbackend'
+uid: 'Avalonia.LinuxFramebuffer.Input.LibInput.LibInputBackend'
+commentId: 'T:Avalonia.LinuxFramebuffer.Input.LibInput.LibInputBackend'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.LinuxFramebuffer'
+assembly: 'Avalonia.LinuxFramebuffer'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.LinuxFramebuffer.Input.LibInput'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">LibInputBackend Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.LinuxFramebuffer.Input.LibInput</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.LinuxFramebuffer</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.LinuxFramebuffer</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Linux/Avalonia.LinuxFramebuffer/Input/LibInput/LibInputBackend.Pointer.cs">LibInputBackend.Pointer.cs</a>, <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Linux/Avalonia.LinuxFramebuffer/Input/LibInput/LibInputBackend.Touch.cs">LibInputBackend.Touch.cs</a>, <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Linux/Avalonia.LinuxFramebuffer/Input/LibInput/LibInputBackend.cs">LibInputBackend.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class LibInputBackend
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> LibInputBackend
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="../iinputbackend">IInputBackend</a>
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [LibInputBackend (2 overloads)](#uid-9996b1dd1d) | No summary available. |
+
+<span id="uid-9996b1dd1d"></span>
+
+### LibInputBackend overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c7d1e5b903"></span>
+
+#### LibInputBackend Constructor
+
+```csharp
+public LibInputBackend()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ca3e7f29fe"></span>
+
+#### LibInputBackend Constructor
+
+```csharp
+public LibInputBackend(Avalonia.LinuxFramebuffer.Input.LibInput.LibInputBackendOptions options)
+```
+
+##### Parameters
+
+`options` [Avalonia.LinuxFramebuffer.Input.LibInput.LibInputBackendOptions](xref:Avalonia.LinuxFramebuffer.Input.LibInput.LibInputBackendOptions)
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Initialize](#uid-86653a903d) | No summary available. |
+| [SetInputRoot](#uid-e692c049b2) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-86653a903d"></span>
+
+### Initialize Method
+
+```csharp
+public void Initialize(Avalonia.LinuxFramebuffer.Input.IScreenInfoProvider screen, Action<Avalonia.Input.Raw.RawInputEventArgs> onInput)
+```
+
+#### Parameters
+
+`screen` [Avalonia.LinuxFramebuffer.Input.IScreenInfoProvider](xref:Avalonia.LinuxFramebuffer.Input.IScreenInfoProvider)
+
+
+`onInput` Action&lt;[Avalonia.Input.Raw.RawInputEventArgs](xref:Avalonia.Input.Raw.RawInputEventArgs)&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e692c049b2"></span>
+
+### SetInputRoot Method
+
+```csharp
+public void SetInputRoot(Avalonia.Input.IInputRoot root)
+```
+
+#### Parameters
+
+`root` [Avalonia.Input.IInputRoot](xref:Avalonia.Input.IInputRoot)
+
+
+</section>
+
+</ApiRefPage>
+

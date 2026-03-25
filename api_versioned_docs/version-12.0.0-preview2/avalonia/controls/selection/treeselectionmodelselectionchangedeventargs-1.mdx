@@ -1,0 +1,219 @@
+---
+title: 'TreeSelectionModelSelectionChangedEventArgs<T>'
+hide_title: true
+slug: '/avalonia/controls/selection/treeselectionmodelselectionchangedeventargs-1'
+uid: 'Avalonia.Controls.Selection.TreeSelectionModelSelectionChangedEventArgs`1'
+commentId: 'T:Avalonia.Controls.Selection.TreeSelectionModelSelectionChangedEventArgs`1'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.TreeDataGrid'
+assembly: 'Avalonia.Controls.TreeDataGrid'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Selection'
+tfms:
+  - 'net8.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">TreeSelectionModelSelectionChangedEventArgs&lt;T&gt; Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Selection</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Provides strongly-typed data for the
+[Avalonia.Controls.Selection.TreeSelectionModelBase&lt;T&gt;.SelectionChanged](xref:Avalonia.Controls.Selection.TreeSelectionModelBase%601.SelectionChanged) event.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class TreeSelectionModelSelectionChangedEventArgs<T>
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> EventArgs <span className="apiref-page__relation-separator">-&gt;</span> <a href="treeselectionmodelselectionchangedeventargs">TreeSelectionModelSelectionChangedEventArgs</a> <span className="apiref-page__relation-separator">-&gt;</span> TreeSelectionModelSelectionChangedEventArgs&lt;T&gt;
+</div>
+</div>
+
+## Remarks
+
+This class extends [Avalonia.Controls.Selection.TreeSelectionModelSelectionChangedEventArgs](xref:Avalonia.Controls.Selection.TreeSelectionModelSelectionChangedEventArgs) to provide
+strongly-typed access to the selected and deselected items, making it easier to work
+with the specific item types in the selection model.
+
+It provides information about which items were selected and deselected, including both
+their index paths in the hierarchy and the actual item objects.
+
+Important: When items are removed from the source collection, they no longer have valid
+index paths and therefore won't appear in [Avalonia.Controls.Selection.TreeSelectionModelSelectionChangedEventArgs&lt;T&gt;.DeselectedIndexes](xref:Avalonia.Controls.Selection.TreeSelectionModelSelectionChangedEventArgs%601.DeselectedIndexes). However, the
+removed items will still be available in [Avalonia.Controls.Selection.TreeSelectionModelSelectionChangedEventArgs&lt;T&gt;.DeselectedItems](xref:Avalonia.Controls.Selection.TreeSelectionModelSelectionChangedEventArgs%601.DeselectedItems). This behavior
+ensures that handlers can access the removed items even though their positions in the
+collection are no longer valid.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [TreeSelectionModelSelectionChangedEventArgs&lt;T&gt;](#uid-61161d657e) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-61161d657e"></span>
+
+### TreeSelectionModelSelectionChangedEventArgs&lt;T&gt; Constructor
+
+```csharp
+public TreeSelectionModelSelectionChangedEventArgs<T>(System.Collections.Generic.IReadOnlyList<Avalonia.Controls.IndexPath> deselectedIndexes, System.Collections.Generic.IReadOnlyList<Avalonia.Controls.IndexPath> selectedIndexes, System.Collections.Generic.IReadOnlyList<T> deselectedItems, System.Collections.Generic.IReadOnlyList<T> selectedItems)
+```
+
+#### Parameters
+
+`deselectedIndexes` System.Collections.Generic.IReadOnlyList&lt;[Avalonia.Controls.IndexPath](xref:Avalonia.Controls.IndexPath)&gt;
+
+
+`selectedIndexes` System.Collections.Generic.IReadOnlyList&lt;[Avalonia.Controls.IndexPath](xref:Avalonia.Controls.IndexPath)&gt;
+
+
+`deselectedItems` System.Collections.Generic.IReadOnlyList&lt;T&gt;
+
+
+`selectedItems` System.Collections.Generic.IReadOnlyList&lt;T&gt;
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [DeselectedIndexes](#uid-b47d216697) | Gets the indexes of the items that were removed from the selection. |
+| [DeselectedItems](#uid-2e4d325400) | Gets the strongly-typed items that were removed from the selection. |
+| [SelectedIndexes](#uid-008f589d1c) | Gets the indexes of the items that were added to the selection. |
+| [SelectedItems](#uid-dc1a1c0119) | Gets the strongly-typed items that were added to the selection. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b47d216697"></span>
+
+### DeselectedIndexes Property
+
+Gets the indexes of the items that were removed from the selection.
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<Avalonia.Controls.IndexPath> DeselectedIndexes { get; set; }
+```
+
+#### Value
+
+A read-only list of [Avalonia.Controls.IndexPath](xref:Avalonia.Controls.IndexPath) objects representing the positions
+in the hierarchy of the items that were deselected.
+
+
+#### Remarks
+
+Note that when items are removed from the source collection, they will not appear
+in this collection because they no longer have valid index paths. Use
+[Avalonia.Controls.Selection.TreeSelectionModelSelectionChangedEventArgs&lt;T&gt;.DeselectedItems](xref:Avalonia.Controls.Selection.TreeSelectionModelSelectionChangedEventArgs%601.DeselectedItems) to access items that were deselected due to being removed
+from the collection.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2e4d325400"></span>
+
+### DeselectedItems Property
+
+Gets the strongly-typed items that were removed from the selection.
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<T> DeselectedItems { get; set; }
+```
+
+#### Value
+
+A read-only list of the items that were deselected, typed as `T`.
+
+
+#### Remarks
+
+This property hides the base class property to provide strongly-typed access
+to the deselected items.
+
+Unlike [Avalonia.Controls.Selection.TreeSelectionModelSelectionChangedEventArgs&lt;T&gt;.DeselectedIndexes](xref:Avalonia.Controls.Selection.TreeSelectionModelSelectionChangedEventArgs%601.DeselectedIndexes), this collection includes items that were
+deselected because they were removed from the source collection. This is important
+when handling selection changes caused by collection modifications.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-008f589d1c"></span>
+
+### SelectedIndexes Property
+
+Gets the indexes of the items that were added to the selection.
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<Avalonia.Controls.IndexPath> SelectedIndexes { get; set; }
+```
+
+#### Value
+
+A read-only list of [Avalonia.Controls.IndexPath](xref:Avalonia.Controls.IndexPath) objects representing the positions
+in the hierarchy of the items that were selected.
+
+
+#### Remarks
+
+This property overrides the base class property to provide the specific
+implementation for this event args class.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-dc1a1c0119"></span>
+
+### SelectedItems Property
+
+Gets the strongly-typed items that were added to the selection.
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<T> SelectedItems { get; set; }
+```
+
+#### Value
+
+A read-only list of the items that were selected, typed as `T`.
+
+
+#### Remarks
+
+This property hides the base class property to provide strongly-typed access
+to the selected items.
+
+</section>
+
+</ApiRefPage>
+

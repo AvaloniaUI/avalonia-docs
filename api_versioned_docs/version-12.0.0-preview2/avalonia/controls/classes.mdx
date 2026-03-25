@@ -1,0 +1,436 @@
+---
+title: 'Classes'
+hide_title: true
+slug: '/avalonia/controls/classes'
+uid: 'Avalonia.Controls.Classes'
+commentId: 'T:Avalonia.Controls.Classes'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">Classes Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Controls/Classes.cs">Classes.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Holds a collection of style classes for an [Avalonia.StyledElement](xref:Avalonia.StyledElement).
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class Classes
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> AvaloniaList&lt;string&gt; <span className="apiref-page__relation-separator">-&gt;</span> Classes
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="ipseudoclasses">IPseudoClasses</a>
+</div>
+</div>
+
+## Remarks
+
+Similar to CSS, each control may have any number of styling classes applied.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [Classes (3 overloads)](#uid-ca189c56bd) | Initializes a new instance of the [Avalonia.Controls.Classes](xref:Avalonia.Controls.Classes) class. |
+
+<span id="uid-ca189c56bd"></span>
+
+### Classes overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a143d40c74"></span>
+
+#### Classes Constructor
+
+Initializes a new instance of the [Avalonia.Controls.Classes](xref:Avalonia.Controls.Classes) class.
+
+```csharp
+public Classes()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-32e5443bd8"></span>
+
+#### Classes Constructor
+
+```csharp
+public Classes(System.Collections.Generic.IEnumerable<string> items)
+```
+
+##### Parameters
+
+`items` System.Collections.Generic.IEnumerable&lt;string&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-78bfb5612c"></span>
+
+#### Classes Constructor
+
+Initializes a new instance of the [Avalonia.Controls.Classes](xref:Avalonia.Controls.Classes) class.
+
+```csharp
+public Classes(string[] items)
+```
+
+##### Parameters
+
+`items` string[]
+
+The initial items.
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Add](#uid-3ba48408fa) | Adds a style class to the collection. |
+| [AddRange](#uid-9a28e8aa35) | No summary available. |
+| [Clear](#uid-1685480fad) | Removes all non-pseudoclasses from the collection. |
+| [Insert](#uid-b1bf045bb7) | Inserts a style class into the collection. |
+| [InsertRange](#uid-6678ef939f) | No summary available. |
+| [Parse](#uid-ca8d1cc047) | Parses a classes string. |
+| [Remove](#uid-324c15f0ac) | Removes a style class from the collection. |
+| [RemoveAll](#uid-b585b9f0d1) | No summary available. |
+| [RemoveAt](#uid-8777405fe9) | Removes a style class from the collection. |
+| [RemoveRange](#uid-834f25b738) | Removes style classes from the collection. |
+| [Replace](#uid-a2b86ffd66) | No summary available. |
+| [Set](#uid-a620531f15) | Adds a or removes a style class to/from the collection. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3ba48408fa"></span>
+
+### Add Method
+
+Adds a style class to the collection.
+
+```csharp
+public void Add(string name)
+```
+
+#### Parameters
+
+`name` string
+
+The class name.
+
+
+#### Remarks
+
+Only standard classes may be added via this method. To add pseudoclasses (classes
+beginning with a ':' character) use the protected [Avalonia.StyledElement.PseudoClasses](xref:Avalonia.StyledElement.PseudoClasses)
+property.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9a28e8aa35"></span>
+
+### AddRange Method
+
+```csharp
+public void AddRange(System.Collections.Generic.IEnumerable<string> names)
+```
+
+#### Parameters
+
+`names` System.Collections.Generic.IEnumerable&lt;string&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1685480fad"></span>
+
+### Clear Method
+
+Removes all non-pseudoclasses from the collection.
+
+```csharp
+public void Clear()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b1bf045bb7"></span>
+
+### Insert Method
+
+Inserts a style class into the collection.
+
+```csharp
+public void Insert(int index, string name)
+```
+
+#### Parameters
+
+`index` int
+
+The index to insert the class at.
+
+
+`name` string
+
+The class name.
+
+
+#### Remarks
+
+Only standard classes may be added via this method. To add pseudoclasses (classes
+beginning with a ':' character) use the protected [Avalonia.StyledElement.PseudoClasses](xref:Avalonia.StyledElement.PseudoClasses)
+property.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6678ef939f"></span>
+
+### InsertRange Method
+
+```csharp
+public void InsertRange(int index, System.Collections.Generic.IEnumerable<string> names)
+```
+
+#### Parameters
+
+`index` int
+
+
+`names` System.Collections.Generic.IEnumerable&lt;string&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ca8d1cc047"></span>
+
+### Parse Method
+
+Parses a classes string.
+
+```csharp
+public Avalonia.Controls.Classes Parse(string s)
+```
+
+#### Parameters
+
+`s` string
+
+The string.
+
+
+#### Returns
+
+[Avalonia.Controls.Classes](xref:Avalonia.Controls.Classes)
+
+The [Avalonia.Controls.Classes](xref:Avalonia.Controls.Classes).
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-324c15f0ac"></span>
+
+### Remove Method
+
+Removes a style class from the collection.
+
+```csharp
+public bool Remove(string name)
+```
+
+#### Parameters
+
+`name` string
+
+The class name.
+
+
+#### Returns
+
+bool
+
+
+#### Remarks
+
+Only standard classes may be removed via this method. To remove pseudoclasses (classes
+beginning with a ':' character) use the protected [Avalonia.StyledElement.PseudoClasses](xref:Avalonia.StyledElement.PseudoClasses)
+property.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b585b9f0d1"></span>
+
+### RemoveAll Method
+
+```csharp
+public void RemoveAll(System.Collections.Generic.IEnumerable<string> names)
+```
+
+#### Parameters
+
+`names` System.Collections.Generic.IEnumerable&lt;string&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8777405fe9"></span>
+
+### RemoveAt Method
+
+Removes a style class from the collection.
+
+```csharp
+public void RemoveAt(int index)
+```
+
+#### Parameters
+
+`index` int
+
+The index of the class in the collection.
+
+
+#### Remarks
+
+Only standard classes may be removed via this method. To remove pseudoclasses (classes
+beginning with a ':' character) use the protected [Avalonia.StyledElement.PseudoClasses](xref:Avalonia.StyledElement.PseudoClasses)
+property.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-834f25b738"></span>
+
+### RemoveRange Method
+
+Removes style classes from the collection.
+
+```csharp
+public void RemoveRange(int index, int count)
+```
+
+#### Parameters
+
+`index` int
+
+The first index to remove.
+
+
+`count` int
+
+The number of items to remove.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a2b86ffd66"></span>
+
+### Replace Method
+
+```csharp
+public void Replace(System.Collections.Generic.IList<string> source)
+```
+
+#### Parameters
+
+`source` System.Collections.Generic.IList&lt;string&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a620531f15"></span>
+
+### Set Method
+
+Adds a or removes a style class to/from the collection.
+
+```csharp
+public void Set(string name, bool value)
+```
+
+#### Parameters
+
+`name` string
+
+The class names.
+
+
+`value` bool
+
+If true adds the class, if false, removes it.
+
+
+#### Remarks
+
+Only standard classes may be added or removed via this method. To add pseudoclasses (classes
+beginning with a ':' character) use the protected [Avalonia.StyledElement.PseudoClasses](xref:Avalonia.StyledElement.PseudoClasses)
+property.
+
+</section>
+
+</ApiRefPage>
+

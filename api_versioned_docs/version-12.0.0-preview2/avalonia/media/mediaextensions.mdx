@@ -1,0 +1,154 @@
+---
+title: 'MediaExtensions'
+hide_title: true
+slug: '/avalonia/media/mediaextensions'
+uid: 'Avalonia.Media.MediaExtensions'
+commentId: 'T:Avalonia.Media.MediaExtensions'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Media'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">MediaExtensions Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Media</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Media/MediaExtensions.cs">MediaExtensions.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Provides extension methods for Avalonia media.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class MediaExtensions
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> MediaExtensions
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [CalculateScaling](#uid-70d542506f) | Calculates scaling based on a [Avalonia.Media.Stretch](xref:Avalonia.Media.Stretch) value. |
+| [CalculateSize](#uid-7f1b76a0e4) | Calculates a scaled size based on a [Avalonia.Media.Stretch](xref:Avalonia.Media.Stretch) value. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-70d542506f"></span>
+
+### CalculateScaling Method
+
+Calculates scaling based on a [Avalonia.Media.Stretch](xref:Avalonia.Media.Stretch) value.
+
+```csharp
+public Avalonia.Vector CalculateScaling(Avalonia.Media.Stretch stretch, Avalonia.Size destinationSize, Avalonia.Size sourceSize, Avalonia.Media.StretchDirection stretchDirection)
+```
+
+#### Parameters
+
+`stretch` [Avalonia.Media.Stretch](xref:Avalonia.Media.Stretch)
+
+The stretch mode.
+
+
+`destinationSize` [Avalonia.Size](xref:Avalonia.Size)
+
+The size of the destination viewport.
+
+
+`sourceSize` [Avalonia.Size](xref:Avalonia.Size)
+
+The size of the source.
+
+
+`stretchDirection` [Avalonia.Media.StretchDirection](xref:Avalonia.Media.StretchDirection)
+
+The stretch direction.
+
+
+#### Returns
+
+[Avalonia.Vector](xref:Avalonia.Vector)
+
+A vector with the X and Y scaling factors.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7f1b76a0e4"></span>
+
+### CalculateSize Method
+
+Calculates a scaled size based on a [Avalonia.Media.Stretch](xref:Avalonia.Media.Stretch) value.
+
+```csharp
+public Avalonia.Size CalculateSize(Avalonia.Media.Stretch stretch, Avalonia.Size destinationSize, Avalonia.Size sourceSize, Avalonia.Media.StretchDirection stretchDirection)
+```
+
+#### Parameters
+
+`stretch` [Avalonia.Media.Stretch](xref:Avalonia.Media.Stretch)
+
+The stretch mode.
+
+
+`destinationSize` [Avalonia.Size](xref:Avalonia.Size)
+
+The size of the destination viewport.
+
+
+`sourceSize` [Avalonia.Size](xref:Avalonia.Size)
+
+The size of the source.
+
+
+`stretchDirection` [Avalonia.Media.StretchDirection](xref:Avalonia.Media.StretchDirection)
+
+The stretch direction.
+
+
+#### Returns
+
+[Avalonia.Size](xref:Avalonia.Size)
+
+The size of the stretched source.
+
+
+</section>
+
+</ApiRefPage>
+

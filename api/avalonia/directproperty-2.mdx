@@ -1,0 +1,150 @@
+---
+title: 'DirectProperty<TOwner, TValue>'
+hide_title: true
+slug: '/avalonia/directproperty-2'
+uid: 'Avalonia.DirectProperty`2'
+commentId: 'T:Avalonia.DirectProperty`2'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">DirectProperty&lt;TOwner, TValue&gt; Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/DirectProperty.cs">DirectProperty.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A direct avalonia property.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class DirectProperty<TOwner, TValue>
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> DirectPropertyBase&lt;&lt;T&gt;&gt; <span className="apiref-page__relation-separator">-&gt;</span> DirectProperty&lt;TOwner, TValue&gt;
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IDirectPropertyAccessor
+</div>
+</div>
+
+## Remarks
+
+Direct avalonia properties are backed by a field on the object, but exposed via the
+[Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) system. They hold a getter and an optional setter which
+allows the avalonia property system to read and write the current value.
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [AddOwner](#uid-6e2086f2cf) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6e2086f2cf"></span>
+
+### AddOwner Method
+
+```csharp
+public Avalonia.DirectProperty<TOwner,TValue><TNewOwner, TValue> AddOwner<TNewOwner>(Func<TNewOwner, TValue> getter, Action<TNewOwner, TValue> setter, TValue unsetValue, Avalonia.Data.BindingMode defaultBindingMode, bool enableDataValidation)
+```
+
+#### Parameters
+
+`getter` Func&lt;TNewOwner, TValue&gt;
+
+
+`setter` Action&lt;TNewOwner, TValue&gt;
+
+
+`unsetValue` TValue
+
+
+`defaultBindingMode` [Avalonia.Data.BindingMode](xref:Avalonia.Data.BindingMode)
+
+
+`enableDataValidation` bool
+
+
+#### Type Parameters
+
+`TNewOwner`
+
+
+#### Returns
+
+Avalonia.DirectProperty&lt;TOwner,TValue&gt;&lt;TNewOwner, TValue&gt;
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Getter](#uid-ebd5fdac29) | Gets the getter function. |
+| [Setter](#uid-c069e9ea2d) | Gets the setter function. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ebd5fdac29"></span>
+
+### Getter Property
+
+Gets the getter function.
+
+```csharp
+public Func<TOwner, TValue> Getter { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c069e9ea2d"></span>
+
+### Setter Property
+
+Gets the setter function.
+
+```csharp
+public Action<TOwner, TValue> Setter { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

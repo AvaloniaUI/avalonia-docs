@@ -1,0 +1,143 @@
+---
+title: 'EvDevBackend'
+hide_title: true
+slug: '/avalonia/linuxframebuffer/input/evdev/evdevbackend'
+uid: 'Avalonia.LinuxFramebuffer.Input.EvDev.EvDevBackend'
+commentId: 'T:Avalonia.LinuxFramebuffer.Input.EvDev.EvDevBackend'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.LinuxFramebuffer'
+assembly: 'Avalonia.LinuxFramebuffer'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.LinuxFramebuffer.Input.EvDev'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">EvDevBackend Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.LinuxFramebuffer.Input.EvDev</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.LinuxFramebuffer</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.LinuxFramebuffer</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Linux/Avalonia.LinuxFramebuffer/Input/EvDev/EvDevBackend.cs">EvDevBackend.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class EvDevBackend
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> EvDevBackend
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="../iinputbackend">IInputBackend</a>
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [EvDevBackend](#uid-9f6e220271) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9f6e220271"></span>
+
+### EvDevBackend Constructor
+
+```csharp
+public EvDevBackend(Avalonia.LinuxFramebuffer.Input.EvDev.EvDevDeviceDescription[] devices)
+```
+
+#### Parameters
+
+`devices` [Avalonia.LinuxFramebuffer.Input.EvDev.EvDevDeviceDescription](xref:Avalonia.LinuxFramebuffer.Input.EvDev.EvDevDeviceDescription)[]
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [CreateFromEnvironment](#uid-e1a04211f4) | No summary available. |
+| [Initialize](#uid-2c1afe6240) | No summary available. |
+| [SetInputRoot](#uid-79f6e0717a) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e1a04211f4"></span>
+
+### CreateFromEnvironment Method
+
+```csharp
+public Avalonia.LinuxFramebuffer.Input.EvDev.EvDevBackend CreateFromEnvironment()
+```
+
+#### Returns
+
+[Avalonia.LinuxFramebuffer.Input.EvDev.EvDevBackend](xref:Avalonia.LinuxFramebuffer.Input.EvDev.EvDevBackend)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2c1afe6240"></span>
+
+### Initialize Method
+
+```csharp
+public void Initialize(Avalonia.LinuxFramebuffer.Input.IScreenInfoProvider info, Action<Avalonia.Input.Raw.RawInputEventArgs> onInput)
+```
+
+#### Parameters
+
+`info` [Avalonia.LinuxFramebuffer.Input.IScreenInfoProvider](xref:Avalonia.LinuxFramebuffer.Input.IScreenInfoProvider)
+
+
+`onInput` Action&lt;[Avalonia.Input.Raw.RawInputEventArgs](xref:Avalonia.Input.Raw.RawInputEventArgs)&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-79f6e0717a"></span>
+
+### SetInputRoot Method
+
+```csharp
+public void SetInputRoot(Avalonia.Input.IInputRoot root)
+```
+
+#### Parameters
+
+`root` [Avalonia.Input.IInputRoot](xref:Avalonia.Input.IInputRoot)
+
+
+</section>
+
+</ApiRefPage>
+

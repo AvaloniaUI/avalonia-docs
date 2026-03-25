@@ -1,0 +1,264 @@
+---
+title: 'GlVersion'
+hide_title: true
+slug: '/avalonia/opengl/glversion'
+uid: 'Avalonia.OpenGL.GlVersion'
+commentId: 'T:Avalonia.OpenGL.GlVersion'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.OpenGL'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.OpenGL'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">GlVersion Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.OpenGL</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.OpenGL</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.OpenGL/GlVersion.cs">GlVersion.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct GlVersion
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> GlVersion
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;GlVersion&gt;
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [GlVersion (2 overloads)](#uid-bcd2f436c7) | No summary available. |
+
+<span id="uid-bcd2f436c7"></span>
+
+### GlVersion overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d4e8860589"></span>
+
+#### GlVersion Constructor
+
+```csharp
+public GlVersion(Avalonia.OpenGL.GlProfileType type, int major, int minor)
+```
+
+##### Parameters
+
+`type` [Avalonia.OpenGL.GlProfileType](xref:Avalonia.OpenGL.GlProfileType)
+
+
+`major` int
+
+
+`minor` int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d75c6d60c2"></span>
+
+#### GlVersion Constructor
+
+```csharp
+public GlVersion(Avalonia.OpenGL.GlProfileType type, int major, int minor, bool isCompatibilityProfile)
+```
+
+##### Parameters
+
+`type` [Avalonia.OpenGL.GlProfileType](xref:Avalonia.OpenGL.GlProfileType)
+
+
+`major` int
+
+
+`minor` int
+
+
+`isCompatibilityProfile` bool
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Equals (2 overloads)](#uid-28d8307e26) | No summary available. |
+| [GetHashCode](#uid-6d0b7c8584) | No summary available. |
+| [ToString](#uid-8c7f2bea9d) | No summary available. |
+
+<span id="uid-28d8307e26"></span>
+
+### Equals overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-836f1e0543"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(Avalonia.OpenGL.GlVersion other)
+```
+
+##### Parameters
+
+`other` [Avalonia.OpenGL.GlVersion](xref:Avalonia.OpenGL.GlVersion)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-649e1af1c8"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(object obj)
+```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6d0b7c8584"></span>
+
+### GetHashCode Method
+
+```csharp
+public int GetHashCode()
+```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8c7f2bea9d"></span>
+
+### ToString Method
+
+```csharp
+public string ToString()
+```
+
+#### Returns
+
+string
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [IsCompatibilityProfile](#uid-b44083c259) | No summary available. |
+| [Major](#uid-3d77b606ac) | No summary available. |
+| [Minor](#uid-44a0d72564) | No summary available. |
+| [Type](#uid-b4ec139f57) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b44083c259"></span>
+
+### IsCompatibilityProfile Property
+
+```csharp
+public bool IsCompatibilityProfile { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3d77b606ac"></span>
+
+### Major Property
+
+```csharp
+public int Major { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-44a0d72564"></span>
+
+### Minor Property
+
+```csharp
+public int Minor { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b4ec139f57"></span>
+
+### Type Property
+
+```csharp
+public Avalonia.OpenGL.GlProfileType Type { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

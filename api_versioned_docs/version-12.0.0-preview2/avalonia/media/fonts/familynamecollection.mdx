@@ -1,0 +1,258 @@
+---
+title: 'FamilyNameCollection'
+hide_title: true
+slug: '/avalonia/media/fonts/familynamecollection'
+uid: 'Avalonia.Media.Fonts.FamilyNameCollection'
+commentId: 'T:Avalonia.Media.Fonts.FamilyNameCollection'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Media.Fonts'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">FamilyNameCollection Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Media.Fonts</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Media/Fonts/FamilyNameCollection.cs">FamilyNameCollection.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class FamilyNameCollection
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> FamilyNameCollection
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEnumerable&lt;string&gt;, IReadOnlyCollection&lt;string&gt;, IReadOnlyList&lt;string&gt;, IEnumerable
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [FamilyNameCollection](#uid-c81b67469b) | Initializes a new instance of the [Avalonia.Media.Fonts.FamilyNameCollection](xref:Avalonia.Media.Fonts.FamilyNameCollection) class. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c81b67469b"></span>
+
+### FamilyNameCollection Constructor
+
+Initializes a new instance of the [Avalonia.Media.Fonts.FamilyNameCollection](xref:Avalonia.Media.Fonts.FamilyNameCollection) class.
+
+```csharp
+public FamilyNameCollection(string familyNames)
+```
+
+#### Parameters
+
+`familyNames` string
+
+The family names.
+
+
+#### Exceptions
+
+- [familyNames](xref:System.ArgumentException)
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Equals](#uid-49520ec39f) | Determines whether the specified [object](xref:System.Object), is equal to this instance. |
+| [GetEnumerator](#uid-2c38028f85) | Returns an enumerator for the name collection. |
+| [GetHashCode](#uid-c2caf6e54c) | Returns a hash code for this instance. |
+| [ToString](#uid-e35683a07a) | Returns a [string](xref:System.String) that represents this instance. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-49520ec39f"></span>
+
+### Equals Method
+
+Determines whether the specified [object](xref:System.Object), is equal to this instance.
+
+```csharp
+public bool Equals(object obj)
+```
+
+#### Parameters
+
+`obj` object
+
+The [object](xref:System.Object) to compare with this instance.
+
+
+#### Returns
+
+bool
+
+`true` if the specified [object](xref:System.Object) is equal to this instance; otherwise, `false`.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2c38028f85"></span>
+
+### GetEnumerator Method
+
+Returns an enumerator for the name collection.
+
+```csharp
+public Avalonia.Utilities.ImmutableReadOnlyListStructEnumerator<T><string> GetEnumerator()
+```
+
+#### Returns
+
+Avalonia.Utilities.ImmutableReadOnlyListStructEnumerator&lt;T&gt;&lt;string&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c2caf6e54c"></span>
+
+### GetHashCode Method
+
+Returns a hash code for this instance.
+
+```csharp
+public int GetHashCode()
+```
+
+#### Returns
+
+int
+
+A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e35683a07a"></span>
+
+### ToString Method
+
+Returns a [string](xref:System.String) that represents this instance.
+
+```csharp
+public string ToString()
+```
+
+#### Returns
+
+string
+
+A [string](xref:System.String) that represents this instance.
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Count](#uid-2b09bf4b86) | No summary available. |
+| [HasFallbacks](#uid-f0a95a1758) | Gets a value indicating whether fallbacks are defined. |
+| [Item](#uid-930d480762) | No summary available. |
+| [PrimaryFamilyName](#uid-8d971e411e) | Gets the primary family name. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2b09bf4b86"></span>
+
+### Count Property
+
+```csharp
+public int Count { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f0a95a1758"></span>
+
+### HasFallbacks Property
+
+Gets a value indicating whether fallbacks are defined.
+
+```csharp
+public bool HasFallbacks { get; set; }
+```
+
+#### Value
+
+`true` if fallbacks are defined; otherwise, `false`.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-930d480762"></span>
+
+### Item Property
+
+```csharp
+public string Item { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8d971e411e"></span>
+
+### PrimaryFamilyName Property
+
+Gets the primary family name.
+
+```csharp
+public string PrimaryFamilyName { get; set; }
+```
+
+#### Value
+
+The primary family name.
+
+
+</section>
+
+</ApiRefPage>
+

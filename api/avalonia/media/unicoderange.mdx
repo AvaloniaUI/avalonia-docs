@@ -1,0 +1,298 @@
+---
+title: 'UnicodeRange'
+hide_title: true
+slug: '/avalonia/media/unicoderange'
+uid: 'Avalonia.Media.UnicodeRange'
+commentId: 'T:Avalonia.Media.UnicodeRange'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Media'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">UnicodeRange Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Media</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Media/UnicodeRange.cs">UnicodeRange.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+The [Avalonia.Media.UnicodeRange](xref:Avalonia.Media.UnicodeRange) descripes a set of Unicode characters.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct UnicodeRange
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> UnicodeRange
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;UnicodeRange&gt;
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [UnicodeRange (3 overloads)](#uid-698fa87732) | No summary available. |
+
+<span id="uid-698fa87732"></span>
+
+### UnicodeRange overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1ad712370e"></span>
+
+#### UnicodeRange Constructor
+
+```csharp
+public UnicodeRange(Avalonia.Media.UnicodeRangeSegment single)
+```
+
+##### Parameters
+
+`single` [Avalonia.Media.UnicodeRangeSegment](xref:Avalonia.Media.UnicodeRangeSegment)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-307487f0e5"></span>
+
+#### UnicodeRange Constructor
+
+```csharp
+public UnicodeRange(System.Collections.Generic.IReadOnlyList<Avalonia.Media.UnicodeRangeSegment> segments)
+```
+
+##### Parameters
+
+`segments` System.Collections.Generic.IReadOnlyList&lt;[Avalonia.Media.UnicodeRangeSegment](xref:Avalonia.Media.UnicodeRangeSegment)&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3a0b980d52"></span>
+
+#### UnicodeRange Constructor
+
+```csharp
+public UnicodeRange(int start, int end)
+```
+
+##### Parameters
+
+`start` int
+
+
+`end` int
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Equals (2 overloads)](#uid-68173d3074) | No summary available. |
+| [GetHashCode](#uid-314629c0c3) | No summary available. |
+| [IsInRange](#uid-9492c694d6) | Determines if given value is inside the range. |
+| [Parse](#uid-84e6d3f175) | Parses a [Avalonia.Media.UnicodeRange](xref:Avalonia.Media.UnicodeRange). |
+| [ToString](#uid-5ed826c90b) | No summary available. |
+
+<span id="uid-68173d3074"></span>
+
+### Equals overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-062c4c39b8"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(Avalonia.Media.UnicodeRange other)
+```
+
+##### Parameters
+
+`other` [Avalonia.Media.UnicodeRange](xref:Avalonia.Media.UnicodeRange)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2b2097ccf2"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(object obj)
+```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-314629c0c3"></span>
+
+### GetHashCode Method
+
+```csharp
+public int GetHashCode()
+```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9492c694d6"></span>
+
+### IsInRange Method
+
+Determines if given value is inside the range.
+
+```csharp
+public bool IsInRange(int value)
+```
+
+#### Parameters
+
+`value` int
+
+The value to verify.
+
+
+#### Returns
+
+bool
+
+`true` If given value is inside the range, `false` otherwise.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-84e6d3f175"></span>
+
+### Parse Method
+
+Parses a [Avalonia.Media.UnicodeRange](xref:Avalonia.Media.UnicodeRange).
+
+```csharp
+public Avalonia.Media.UnicodeRange Parse(string s)
+```
+
+#### Parameters
+
+`s` string
+
+The string to parse.
+
+
+#### Returns
+
+[Avalonia.Media.UnicodeRange](xref:Avalonia.Media.UnicodeRange)
+
+The parsed [Avalonia.Media.UnicodeRange](xref:Avalonia.Media.UnicodeRange).
+
+
+#### Exceptions
+
+- [FormatException](xref:System.FormatException)
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5ed826c90b"></span>
+
+### ToString Method
+
+```csharp
+public string ToString()
+```
+
+#### Returns
+
+string
+
+
+</section>
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [Default](#uid-fecdd7572f) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-fecdd7572f"></span>
+
+### Default Field
+
+```csharp
+public Avalonia.Media.UnicodeRange Default
+```
+
+</section>
+
+</ApiRefPage>
+

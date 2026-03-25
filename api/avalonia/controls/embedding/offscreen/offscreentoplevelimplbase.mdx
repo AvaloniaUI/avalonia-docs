@@ -1,0 +1,505 @@
+---
+title: 'OffscreenTopLevelImplBase'
+hide_title: true
+slug: '/avalonia/controls/embedding/offscreen/offscreentoplevelimplbase'
+uid: 'Avalonia.Controls.Embedding.Offscreen.OffscreenTopLevelImplBase'
+commentId: 'T:Avalonia.Controls.Embedding.Offscreen.OffscreenTopLevelImplBase'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Embedding.Offscreen'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">OffscreenTopLevelImplBase Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Embedding.Offscreen</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Controls/Embedding/Offscreen/OffscreenTopLevelImpl.cs">OffscreenTopLevelImpl.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class OffscreenTopLevelImplBase
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> OffscreenTopLevelImplBase
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="../../../ioptionalfeatureprovider">IOptionalFeatureProvider</a>, <a href="../../../platform/itoplevelimpl">ITopLevelImpl</a>, IDisposable
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [OffscreenTopLevelImplBase](#uid-46ae1f687d) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-46ae1f687d"></span>
+
+### OffscreenTopLevelImplBase Constructor
+
+```csharp
+public OffscreenTopLevelImplBase()
+```
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [CreatePopup](#uid-9b27816e1f) | No summary available. |
+| [Dispose](#uid-fd06e546f8) | No summary available. |
+| [PointToClient](#uid-287d7a6ef0) | No summary available. |
+| [PointToScreen](#uid-1ce855e8da) | No summary available. |
+| [SetCursor](#uid-da9c7b571f) | No summary available. |
+| [SetFrameThemeVariant](#uid-d88c90ea3f) | No summary available. |
+| [SetInputRoot](#uid-7915ddd2fe) | No summary available. |
+| [SetTransparencyLevelHint](#uid-868bd1cbf5) | No summary available. |
+| [TryGetFeature](#uid-7f90fad888) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9b27816e1f"></span>
+
+### CreatePopup Method
+
+```csharp
+public Avalonia.Platform.IPopupImpl CreatePopup()
+```
+
+#### Returns
+
+[Avalonia.Platform.IPopupImpl](xref:Avalonia.Platform.IPopupImpl)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-fd06e546f8"></span>
+
+### Dispose Method
+
+```csharp
+public void Dispose()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-287d7a6ef0"></span>
+
+### PointToClient Method
+
+```csharp
+public Avalonia.Point PointToClient(Avalonia.PixelPoint point)
+```
+
+#### Parameters
+
+`point` [Avalonia.PixelPoint](xref:Avalonia.PixelPoint)
+
+
+#### Returns
+
+[Avalonia.Point](xref:Avalonia.Point)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1ce855e8da"></span>
+
+### PointToScreen Method
+
+```csharp
+public Avalonia.PixelPoint PointToScreen(Avalonia.Point point)
+```
+
+#### Parameters
+
+`point` [Avalonia.Point](xref:Avalonia.Point)
+
+
+#### Returns
+
+[Avalonia.PixelPoint](xref:Avalonia.PixelPoint)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-da9c7b571f"></span>
+
+### SetCursor Method
+
+```csharp
+public void SetCursor(Avalonia.Platform.ICursorImpl cursor)
+```
+
+#### Parameters
+
+`cursor` [Avalonia.Platform.ICursorImpl](xref:Avalonia.Platform.ICursorImpl)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d88c90ea3f"></span>
+
+### SetFrameThemeVariant Method
+
+```csharp
+public void SetFrameThemeVariant(Avalonia.Platform.PlatformThemeVariant themeVariant)
+```
+
+#### Parameters
+
+`themeVariant` [Avalonia.Platform.PlatformThemeVariant](xref:Avalonia.Platform.PlatformThemeVariant)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7915ddd2fe"></span>
+
+### SetInputRoot Method
+
+```csharp
+public void SetInputRoot(Avalonia.Input.IInputRoot inputRoot)
+```
+
+#### Parameters
+
+`inputRoot` [Avalonia.Input.IInputRoot](xref:Avalonia.Input.IInputRoot)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-868bd1cbf5"></span>
+
+### SetTransparencyLevelHint Method
+
+```csharp
+public void SetTransparencyLevelHint(System.Collections.Generic.IReadOnlyList<Avalonia.Controls.WindowTransparencyLevel> transparencyLevel)
+```
+
+#### Parameters
+
+`transparencyLevel` System.Collections.Generic.IReadOnlyList&lt;[Avalonia.Controls.WindowTransparencyLevel](xref:Avalonia.Controls.WindowTransparencyLevel)&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7f90fad888"></span>
+
+### TryGetFeature Method
+
+```csharp
+public object TryGetFeature(Type featureType)
+```
+
+#### Parameters
+
+`featureType` Type
+
+
+#### Returns
+
+object
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [AcrylicCompensationLevels](#uid-a6dddf0917) | No summary available. |
+| [ClientSize](#uid-656f6d28c1) | No summary available. |
+| [Closed](#uid-4fddbbb7db) | No summary available. |
+| [Compositor](#uid-28d3e76ec7) | No summary available. |
+| [DesktopScaling](#uid-a0616eb540) | No summary available. |
+| [FrameSize](#uid-0b9cb64daa) | No summary available. |
+| [Handle](#uid-5c41267251) | No summary available. |
+| [Input](#uid-4da8f621e8) | No summary available. |
+| [InputRoot](#uid-1b7a78f39b) | No summary available. |
+| [IsDisposed](#uid-9666816367) | No summary available. |
+| [LostFocus](#uid-711b75464b) | No summary available. |
+| [MouseDevice](#uid-dd0183d4ed) | No summary available. |
+| [Paint](#uid-a8ce80ad86) | No summary available. |
+| [RenderScaling](#uid-572ce08207) | No summary available. |
+| [Resized](#uid-1f25df88b2) | No summary available. |
+| [ScalingChanged](#uid-348d2d2493) | No summary available. |
+| [Surfaces](#uid-79b1549855) | No summary available. |
+| [TransparencyLevel](#uid-3f42737506) | No summary available. |
+| [TransparencyLevelChanged](#uid-e2ecee237e) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a6dddf0917"></span>
+
+### AcrylicCompensationLevels Property
+
+```csharp
+public Avalonia.Controls.AcrylicPlatformCompensationLevels AcrylicCompensationLevels { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-656f6d28c1"></span>
+
+### ClientSize Property
+
+```csharp
+public Avalonia.Size ClientSize { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4fddbbb7db"></span>
+
+### Closed Property
+
+```csharp
+public Action Closed { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-28d3e76ec7"></span>
+
+### Compositor Property
+
+```csharp
+public Avalonia.Rendering.Composition.Compositor Compositor { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a0616eb540"></span>
+
+### DesktopScaling Property
+
+```csharp
+public double DesktopScaling { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0b9cb64daa"></span>
+
+### FrameSize Property
+
+```csharp
+public Nullable<Avalonia.Size> FrameSize { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5c41267251"></span>
+
+### Handle Property
+
+```csharp
+public Avalonia.Platform.IPlatformHandle Handle { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4da8f621e8"></span>
+
+### Input Property
+
+```csharp
+public Action<Avalonia.Input.Raw.RawInputEventArgs> Input { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1b7a78f39b"></span>
+
+### InputRoot Property
+
+```csharp
+public Avalonia.Input.IInputRoot InputRoot { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9666816367"></span>
+
+### IsDisposed Property
+
+```csharp
+public bool IsDisposed { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-711b75464b"></span>
+
+### LostFocus Property
+
+```csharp
+public Action LostFocus { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-dd0183d4ed"></span>
+
+### MouseDevice Property
+
+```csharp
+public Avalonia.Input.IMouseDevice MouseDevice { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a8ce80ad86"></span>
+
+### Paint Property
+
+```csharp
+public Action<Avalonia.Rect> Paint { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-572ce08207"></span>
+
+### RenderScaling Property
+
+```csharp
+public double RenderScaling { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1f25df88b2"></span>
+
+### Resized Property
+
+```csharp
+public Action<Avalonia.Size, Avalonia.Controls.WindowResizeReason> Resized { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-348d2d2493"></span>
+
+### ScalingChanged Property
+
+```csharp
+public Action<double> ScalingChanged { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-79b1549855"></span>
+
+### Surfaces Property
+
+```csharp
+public Avalonia.Platform.Surfaces.IPlatformRenderSurface[] Surfaces { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3f42737506"></span>
+
+### TransparencyLevel Property
+
+```csharp
+public Avalonia.Controls.WindowTransparencyLevel TransparencyLevel { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e2ecee237e"></span>
+
+### TransparencyLevelChanged Property
+
+```csharp
+public Action<Avalonia.Controls.WindowTransparencyLevel> TransparencyLevelChanged { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

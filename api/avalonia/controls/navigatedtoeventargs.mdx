@@ -1,0 +1,128 @@
+---
+title: 'NavigatedToEventArgs'
+hide_title: true
+slug: '/avalonia/controls/navigatedtoeventargs'
+uid: 'Avalonia.Controls.NavigatedToEventArgs'
+commentId: 'T:Avalonia.Controls.NavigatedToEventArgs'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">NavigatedToEventArgs Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Controls/Page/NavigatedToEventArgs.cs">NavigatedToEventArgs.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Provides data for the [Avalonia.Controls.Page.NavigatedTo](xref:Avalonia.Controls.Page.NavigatedTo) event.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class NavigatedToEventArgs
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> EventArgs <span className="apiref-page__relation-separator">-&gt;</span> NavigatedToEventArgs
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [NavigatedToEventArgs](#uid-1328a76043) | Initializes a new instance of the [Avalonia.Controls.NavigatedToEventArgs](xref:Avalonia.Controls.NavigatedToEventArgs) class. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1328a76043"></span>
+
+### NavigatedToEventArgs Constructor
+
+Initializes a new instance of the [Avalonia.Controls.NavigatedToEventArgs](xref:Avalonia.Controls.NavigatedToEventArgs) class.
+
+```csharp
+public NavigatedToEventArgs(Avalonia.Controls.Page previousPage, Avalonia.Controls.NavigationType navigationType)
+```
+
+#### Parameters
+
+`previousPage` [Avalonia.Controls.Page](xref:Avalonia.Controls.Page)
+
+The page that was active before this navigation, or for the root page.
+
+
+`navigationType` [Avalonia.Controls.NavigationType](xref:Avalonia.Controls.NavigationType)
+
+The type of navigation that triggered this event.
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [NavigationType](#uid-c13412353f) | Gets the type of navigation that triggered this event. |
+| [PreviousPage](#uid-91752c6d3e) | Gets the page that was active before this navigation. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c13412353f"></span>
+
+### NavigationType Property
+
+Gets the type of navigation that triggered this event.
+
+```csharp
+public Avalonia.Controls.NavigationType NavigationType { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-91752c6d3e"></span>
+
+### PreviousPage Property
+
+Gets the page that was active before this navigation.
+
+```csharp
+public Avalonia.Controls.Page PreviousPage { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

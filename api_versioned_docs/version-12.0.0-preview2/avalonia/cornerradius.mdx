@@ -1,0 +1,342 @@
+---
+title: 'CornerRadius'
+hide_title: true
+slug: '/avalonia/cornerradius'
+uid: 'Avalonia.CornerRadius'
+commentId: 'T:Avalonia.CornerRadius'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">CornerRadius Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/CornerRadius.cs">CornerRadius.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Represents the radii of a rectangle's corners.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct CornerRadius
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> CornerRadius
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;CornerRadius&gt;
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [CornerRadius (3 overloads)](#uid-24ac4ee686) | No summary available. |
+
+<span id="uid-24ac4ee686"></span>
+
+### CornerRadius overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d6902345eb"></span>
+
+#### CornerRadius Constructor
+
+```csharp
+public CornerRadius(double uniformRadius)
+```
+
+##### Parameters
+
+`uniformRadius` double
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-31d04eb040"></span>
+
+#### CornerRadius Constructor
+
+```csharp
+public CornerRadius(double top, double bottom)
+```
+
+##### Parameters
+
+`top` double
+
+
+`bottom` double
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-997e67bcb4"></span>
+
+#### CornerRadius Constructor
+
+```csharp
+public CornerRadius(double topLeft, double topRight, double bottomRight, double bottomLeft)
+```
+
+##### Parameters
+
+`topLeft` double
+
+
+`topRight` double
+
+
+`bottomRight` double
+
+
+`bottomLeft` double
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Equals (2 overloads)](#uid-33f9fdf754) | Returns a boolean indicating whether the corner radius is equal to the other given corner radius. |
+| [GetHashCode](#uid-a6f4f5181c) | No summary available. |
+| [Parse](#uid-e61b1420ea) | No summary available. |
+| [ToString](#uid-01c1fa2067) | No summary available. |
+
+<span id="uid-33f9fdf754"></span>
+
+### Equals overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-fe1434fff2"></span>
+
+#### Equals Method
+
+Returns a boolean indicating whether the corner radius is equal to the other given corner radius.
+
+```csharp
+public bool Equals(Avalonia.CornerRadius other)
+```
+
+##### Parameters
+
+`other` [Avalonia.CornerRadius](xref:Avalonia.CornerRadius)
+
+The other corner radius to test equality against.
+
+
+##### Returns
+
+bool
+
+True if this corner radius is equal to other; False otherwise.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-853e072f27"></span>
+
+#### Equals Method
+
+Returns a boolean indicating whether the given Object is equal to this corner radius instance.
+
+```csharp
+public bool Equals(object obj)
+```
+
+##### Parameters
+
+`obj` object
+
+The Object to compare against.
+
+
+##### Returns
+
+bool
+
+True if the Object is equal to this corner radius; False otherwise.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a6f4f5181c"></span>
+
+### GetHashCode Method
+
+```csharp
+public int GetHashCode()
+```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e61b1420ea"></span>
+
+### Parse Method
+
+```csharp
+public Avalonia.CornerRadius Parse(string s)
+```
+
+#### Parameters
+
+`s` string
+
+
+#### Returns
+
+[Avalonia.CornerRadius](xref:Avalonia.CornerRadius)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-01c1fa2067"></span>
+
+### ToString Method
+
+```csharp
+public string ToString()
+```
+
+#### Returns
+
+string
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [BottomLeft](#uid-1947e68bfd) | Radius of the bottom left corner. |
+| [BottomRight](#uid-074e49b1fe) | Radius of the bottom right corner. |
+| [IsUniform](#uid-7c583e5924) | Gets a value indicating whether all corner radii are equal. |
+| [TopLeft](#uid-954a54b18e) | Radius of the top left corner. |
+| [TopRight](#uid-97197de5f9) | Radius of the top right corner. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1947e68bfd"></span>
+
+### BottomLeft Property
+
+Radius of the bottom left corner.
+
+```csharp
+public double BottomLeft { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-074e49b1fe"></span>
+
+### BottomRight Property
+
+Radius of the bottom right corner.
+
+```csharp
+public double BottomRight { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7c583e5924"></span>
+
+### IsUniform Property
+
+Gets a value indicating whether all corner radii are equal.
+
+```csharp
+public bool IsUniform { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-954a54b18e"></span>
+
+### TopLeft Property
+
+Radius of the top left corner.
+
+```csharp
+public double TopLeft { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-97197de5f9"></span>
+
+### TopRight Property
+
+Radius of the top right corner.
+
+```csharp
+public double TopRight { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

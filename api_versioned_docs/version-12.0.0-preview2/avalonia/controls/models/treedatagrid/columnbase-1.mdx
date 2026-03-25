@@ -1,0 +1,272 @@
+---
+title: 'ColumnBase<TModel>'
+hide_title: true
+slug: '/avalonia/controls/models/treedatagrid/columnbase-1'
+uid: 'Avalonia.Controls.Models.TreeDataGrid.ColumnBase`1'
+commentId: 'T:Avalonia.Controls.Models.TreeDataGrid.ColumnBase`1'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.TreeDataGrid'
+assembly: 'Avalonia.Controls.TreeDataGrid'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Models.TreeDataGrid'
+tfms:
+  - 'net8.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ColumnBase&lt;TModel&gt; Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Models.TreeDataGrid</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Base class for columns which select cell values from a model.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class ColumnBase<TModel>
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../notifyingbase">NotifyingBase</a> <span className="apiref-page__relation-separator">-&gt;</span> ColumnBase&lt;TModel&gt;
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="icolumn">IColumn</a>, IColumn&lt;&gt;, <a href="iupdatecolumnlayout">IUpdateColumnLayout</a>, INotifyPropertyChanged
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [ColumnBase&lt;TModel&gt;](#uid-75fa984b52) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-75fa984b52"></span>
+
+### ColumnBase&lt;TModel&gt; Constructor
+
+```csharp
+public ColumnBase<TModel>(object header, Nullable<Avalonia.Controls.GridLength> width, Avalonia.Controls.Models.TreeDataGrid.ColumnOptions<TModel><TModel> options)
+```
+
+#### Parameters
+
+`header` object
+
+
+`width` Nullable&lt;[Avalonia.Controls.GridLength](xref:Avalonia.Controls.GridLength)&gt;
+
+
+`options` Avalonia.Controls.Models.TreeDataGrid.ColumnOptions&lt;TModel&gt;&lt;TModel&gt;
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [CreateCell](#uid-60648c67fa) | No summary available. |
+| [GetComparison](#uid-bb1fbc0951) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-60648c67fa"></span>
+
+### CreateCell Method
+
+```csharp
+public Avalonia.Controls.Models.TreeDataGrid.ICell CreateCell(Avalonia.Controls.Models.TreeDataGrid.IRow<TModel><TModel> row)
+```
+
+#### Parameters
+
+`row` [Avalonia.Controls.Models.TreeDataGrid.IRow](xref:Avalonia.Controls.Models.TreeDataGrid.IRow)&lt;TModel&gt;&lt;TModel&gt;
+
+
+#### Returns
+
+[Avalonia.Controls.Models.TreeDataGrid.ICell](xref:Avalonia.Controls.Models.TreeDataGrid.ICell)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-bb1fbc0951"></span>
+
+### GetComparison Method
+
+```csharp
+public Comparison<TModel> GetComparison(System.ComponentModel.ListSortDirection direction)
+```
+
+#### Parameters
+
+`direction` System.ComponentModel.ListSortDirection
+
+
+#### Returns
+
+Comparison&lt;TModel&gt;
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [ActualWidth](#uid-c0492c8417) | Gets the actual width of the column after measurement. |
+| [Header](#uid-9128c21ace) | Gets or sets the column header. |
+| [IsVisible](#uid-d3bdccf2c0) | Gets or sets a value indicating whether the column is visible. |
+| [Options](#uid-9863f54d63) | Gets the column options. |
+| [SortDirection](#uid-4eacaaeae3) | Gets or sets the sort direction indicator that will be displayed on the column. |
+| [Tag](#uid-7ec2bf4222) | Gets or sets a user-defined object attached to the column. |
+| [Width](#uid-f2d3d22f2c) | Gets the width of the column. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c0492c8417"></span>
+
+### ActualWidth Property
+
+Gets the actual width of the column after measurement.
+
+```csharp
+public double ActualWidth { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9128c21ace"></span>
+
+### Header Property
+
+Gets or sets the column header.
+
+```csharp
+public object Header { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d3bdccf2c0"></span>
+
+### IsVisible Property
+
+Gets or sets a value indicating whether the column is visible.
+
+```csharp
+public bool IsVisible { get; set; }
+```
+
+#### Remarks
+
+When set to false, the column header and cells will not be rendered and the column
+will not contribute to layout calculations.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9863f54d63"></span>
+
+### Options Property
+
+Gets the column options.
+
+```csharp
+public Avalonia.Controls.Models.TreeDataGrid.ColumnOptions<TModel><TModel> Options { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4eacaaeae3"></span>
+
+### SortDirection Property
+
+Gets or sets the sort direction indicator that will be displayed on the column.
+
+```csharp
+public Nullable<System.ComponentModel.ListSortDirection> SortDirection { get; set; }
+```
+
+#### Remarks
+
+Note that changing this property does not change the sorting of the data, it is only
+used to display a sort direction indicator. To sort data according to a column use
+[Avalonia.Controls.ITreeDataGridSource.SortBy(Avalonia.Controls.Models.TreeDataGrid.IColumn,System.ComponentModel.ListSortDirection)](xref:Avalonia.Controls.ITreeDataGridSource.SortBy%28Avalonia.Controls.Models.TreeDataGrid.IColumn%2CSystem.ComponentModel.ListSortDirection%29).
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7ec2bf4222"></span>
+
+### Tag Property
+
+Gets or sets a user-defined object attached to the column.
+
+```csharp
+public object Tag { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f2d3d22f2c"></span>
+
+### Width Property
+
+Gets the width of the column.
+
+```csharp
+public Avalonia.Controls.GridLength Width { get; set; }
+```
+
+#### Remarks
+
+To set the column width use [Avalonia.Controls.Models.TreeDataGrid.IColumns.SetColumnWidth(int,Avalonia.Controls.GridLength)](xref:Avalonia.Controls.Models.TreeDataGrid.IColumns.SetColumnWidth%28System.Int32%2CAvalonia.Controls.GridLength%29).
+
+</section>
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [PropertyChanged](../notifyingbase.mdx#uid-cfba2a29fd) | Occurs when a property value changes. Inherited from [NotifyingBase](../notifyingbase.mdx). |
+
+</ApiRefPage>
+

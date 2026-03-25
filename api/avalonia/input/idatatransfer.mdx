@@ -1,0 +1,109 @@
+---
+title: 'IDataTransfer'
+hide_title: true
+slug: '/avalonia/input/idatatransfer'
+uid: 'Avalonia.Input.IDataTransfer'
+commentId: 'T:Avalonia.Input.IDataTransfer'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Input'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IDataTransfer Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Input</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Represents an object providing a list of [Avalonia.Input.IDataTransferItem](xref:Avalonia.Input.IDataTransferItem) usableduring a drag and drop operation.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface IDataTransfer
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IDisposable
+</div>
+</div>
+
+## Remarks
+
+When an implementation of this interface is used as a drag source using [Avalonia.Input.DragDrop.DoDragDropAsync(Avalonia.Input.PointerEventArgs,Avalonia.Input.IDataTransfer,Avalonia.Input.DragDropEffects)](xref:Avalonia.Input.DragDrop.DoDragDropAsync%28Avalonia.Input.PointerEventArgs%2CAvalonia.Input.IDataTransfer%2CAvalonia.Input.DragDropEffects%29),
+it must NOT be disposed by the caller. The system will dispose of it automatically when the drag operation completes.
+
+## See also
+
+- [Avalonia.Input.DataTransfer](xref:Avalonia.Input.DataTransfer)
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Formats](#uid-da959dd67b) | Gets the formats supported by a [Avalonia.Input.IDataTransfer](xref:Avalonia.Input.IDataTransfer). |
+| [Items](#uid-bd01544761) | Gets a list of [Avalonia.Input.IDataTransferItem](xref:Avalonia.Input.IDataTransferItem) contained in this object. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-da959dd67b"></span>
+
+### Formats Property
+
+Gets the formats supported by a [Avalonia.Input.IDataTransfer](xref:Avalonia.Input.IDataTransfer).
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<Avalonia.Input.DataFormat> Formats { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-bd01544761"></span>
+
+### Items Property
+
+Gets a list of [Avalonia.Input.IDataTransferItem](xref:Avalonia.Input.IDataTransferItem) contained in this object.
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<Avalonia.Input.IDataTransferItem> Items { get; set; }
+```
+
+#### Remarks
+
+Some platforms (such as Windows and X11) may only support a single data item for all formats
+except [Avalonia.Input.DataFormat.File](xref:Avalonia.Input.DataFormat.File).
+
+Items returned by this property must stay valid until the [Avalonia.Input.IDataTransfer](xref:Avalonia.Input.IDataTransfer) is disposed.
+
+</section>
+
+</ApiRefPage>
+

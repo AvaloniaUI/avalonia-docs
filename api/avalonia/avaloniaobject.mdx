@@ -1,0 +1,969 @@
+---
+title: 'AvaloniaObject'
+hide_title: true
+slug: '/avalonia/avaloniaobject'
+uid: 'Avalonia.AvaloniaObject'
+commentId: 'T:Avalonia.AvaloniaObject'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">AvaloniaObject Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/AvaloniaObject.cs">AvaloniaObject.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+An object with [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) support.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class AvaloniaObject
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> AvaloniaObject
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Derived types:</span> <a href="animation/animatable">Animatable</a>, <a href="animation/animation">Animation</a>, <a href="animation/keyframe">KeyFrame</a>, <a href="animation/keyspline">KeySpline</a>, <a href="animation/transitionbase">TransitionBase</a>, <a href="application">Application</a>, <a href="controls/definitionbase">DefinitionBase</a>, <a href="controls/nativemenu">NativeMenu</a>, <a href="controls/nativemenuitembase">NativeMenuItemBase</a>, <a href="controls/primitives/flyoutbase">FlyoutBase</a>, <a href="controls/primitives/splitviewtemplatesettings">SplitViewTemplateSettings</a>, <a href="controls/progressbar-progressbartemplatesettings">ProgressBar.ProgressBarTemplateSettings</a>, <a href="controls/resourceprovider">ResourceProvider</a>, <a href="controls/trayicon">TrayIcon</a>, <a href="input/keybinding">KeyBinding</a>, <a href="media/drawing">Drawing</a>, <a href="media/drawingimage">DrawingImage</a>, <a href="media/experimentalacrylicmaterial">ExperimentalAcrylicMaterial</a>, <a href="media/geometry">Geometry</a>, <a href="media/gradientstop">GradientStop</a>, <a href="media/imaging/croppedbitmap">CroppedBitmap</a>, <a href="media/pathfigure">PathFigure</a>, <a href="media/pathsegment">PathSegment</a>, <a href="media/pen">Pen</a>, <a href="media/textdecoration">TextDecoration</a>, <a href="styling/stylebase">StyleBase</a>, <a href="styling/styles">Styles</a>, <a href="../avaloniaui/diagnosticssupport/avalonia/handlers/avnpropertyhelper-grid">AvnPropertyHelper.Grid</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IAvaloniaObjectDebug, INotifyPropertyChanged
+</div>
+</div>
+
+## Remarks
+
+This class is analogous to DependencyObject in WPF.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [AvaloniaObject](#uid-fc2c2e3573) | Initializes a new instance of the [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject) class. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-fc2c2e3573"></span>
+
+### AvaloniaObject Constructor
+
+Initializes a new instance of the [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject) class.
+
+```csharp
+public AvaloniaObject()
+```
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Bind (8 overloads)](#uid-1c60c7bda3) | Binds a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) to an [Avalonia.Data.BindingBase](xref:Avalonia.Data.BindingBase). |
+| [CheckAccess](#uid-260ff7a68d) | Returns a value indicating whether the current thread is the UI thread. |
+| [ClearValue (4 overloads)](#uid-41de208fbe) | Clears a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty)'s local value. |
+| [CoerceValue](#uid-3bec32f39e) | Coerces the specified [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty). |
+| [Equals](#uid-a8a8e94305) | Compares two objects using reference equality. |
+| [GetBaseValue](#uid-9c615efbba) | No summary available. |
+| [GetHashCode](#uid-7f7db1e7a2) | Gets the hash code for the object. |
+| [GetValue (3 overloads)](#uid-5142cd4792) | Gets a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value. |
+| [IsAnimating](#uid-8cbfc7521a) | Checks whether a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) is animating. |
+| [IsSet](#uid-f8bf0bbdcc) | Checks whether a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) is set on this object. |
+| [SetCurrentValue (2 overloads)](#uid-38759fd088) | Sets the value of a dependency property without changing its value source. |
+| [SetValue (3 overloads)](#uid-47d14e19d7) | Sets a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value. |
+| [VerifyAccess](#uid-3b9d3c9793) | Checks that the current thread is the UI thread and throws if not. |
+
+<span id="uid-1c60c7bda3"></span>
+
+### Bind overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5a7868c126"></span>
+
+#### Bind Method
+
+Binds a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) to an [Avalonia.Data.BindingBase](xref:Avalonia.Data.BindingBase).
+
+```csharp
+public Avalonia.Data.BindingExpressionBase Bind(Avalonia.AvaloniaProperty property, Avalonia.Data.BindingBase binding)
+```
+
+##### Parameters
+
+`property` [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty)
+
+The property.
+
+
+`binding` [Avalonia.Data.BindingBase](xref:Avalonia.Data.BindingBase)
+
+The binding.
+
+
+##### Returns
+
+[Avalonia.Data.BindingExpressionBase](xref:Avalonia.Data.BindingExpressionBase)
+
+The binding expression which represents the binding instance on this object.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3ebb35a95c"></span>
+
+#### Bind Method
+
+```csharp
+public IDisposable Bind(Avalonia.AvaloniaProperty property, IObservable<object> source, Avalonia.Data.BindingPriority priority)
+```
+
+##### Parameters
+
+`property` [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty)
+
+
+`source` IObservable&lt;object&gt;
+
+
+`priority` [Avalonia.Data.BindingPriority](xref:Avalonia.Data.BindingPriority)
+
+
+##### Returns
+
+IDisposable
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-35b4d18a3f"></span>
+
+#### Bind Method
+
+```csharp
+public IDisposable Bind<T>(Avalonia.DirectPropertyBase<TValue><T> property, IObservable<Avalonia.Data.BindingValue<T><T>> source)
+```
+
+##### Parameters
+
+`property` Avalonia.DirectPropertyBase&lt;TValue&gt;&lt;T&gt;
+
+
+`source` IObservable&lt;Avalonia.Data.BindingValue&lt;T&gt;&lt;T&gt;&gt;
+
+
+##### Type Parameters
+
+`T`
+
+
+##### Returns
+
+IDisposable
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6494c8de82"></span>
+
+#### Bind Method
+
+```csharp
+public IDisposable Bind<T>(Avalonia.DirectPropertyBase<TValue><T> property, IObservable<object> source)
+```
+
+##### Parameters
+
+`property` Avalonia.DirectPropertyBase&lt;TValue&gt;&lt;T&gt;
+
+
+`source` IObservable&lt;object&gt;
+
+
+##### Type Parameters
+
+`T`
+
+
+##### Returns
+
+IDisposable
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-eb1a9c4b50"></span>
+
+#### Bind Method
+
+```csharp
+public IDisposable Bind<T>(Avalonia.DirectPropertyBase<TValue><T> property, IObservable<T> source)
+```
+
+##### Parameters
+
+`property` Avalonia.DirectPropertyBase&lt;TValue&gt;&lt;T&gt;
+
+
+`source` IObservable&lt;T&gt;
+
+
+##### Type Parameters
+
+`T`
+
+
+##### Returns
+
+IDisposable
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f66c5a88bd"></span>
+
+#### Bind Method
+
+```csharp
+public IDisposable Bind<T>(Avalonia.StyledProperty<TValue><T> property, IObservable<Avalonia.Data.BindingValue<T><T>> source, Avalonia.Data.BindingPriority priority)
+```
+
+##### Parameters
+
+`property` Avalonia.StyledProperty&lt;TValue&gt;&lt;T&gt;
+
+
+`source` IObservable&lt;Avalonia.Data.BindingValue&lt;T&gt;&lt;T&gt;&gt;
+
+
+`priority` [Avalonia.Data.BindingPriority](xref:Avalonia.Data.BindingPriority)
+
+
+##### Type Parameters
+
+`T`
+
+
+##### Returns
+
+IDisposable
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-fb59823d2f"></span>
+
+#### Bind Method
+
+```csharp
+public IDisposable Bind<T>(Avalonia.StyledProperty<TValue><T> property, IObservable<object> source, Avalonia.Data.BindingPriority priority)
+```
+
+##### Parameters
+
+`property` Avalonia.StyledProperty&lt;TValue&gt;&lt;T&gt;
+
+
+`source` IObservable&lt;object&gt;
+
+
+`priority` [Avalonia.Data.BindingPriority](xref:Avalonia.Data.BindingPriority)
+
+
+##### Type Parameters
+
+`T`
+
+
+##### Returns
+
+IDisposable
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-55e5696054"></span>
+
+#### Bind Method
+
+```csharp
+public IDisposable Bind<T>(Avalonia.StyledProperty<TValue><T> property, IObservable<T> source, Avalonia.Data.BindingPriority priority)
+```
+
+##### Parameters
+
+`property` Avalonia.StyledProperty&lt;TValue&gt;&lt;T&gt;
+
+
+`source` IObservable&lt;T&gt;
+
+
+`priority` [Avalonia.Data.BindingPriority](xref:Avalonia.Data.BindingPriority)
+
+
+##### Type Parameters
+
+`T`
+
+
+##### Returns
+
+IDisposable
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-260ff7a68d"></span>
+
+### CheckAccess Method
+
+Returns a value indicating whether the current thread is the UI thread.
+
+```csharp
+public bool CheckAccess()
+```
+
+#### Returns
+
+bool
+
+true if the current thread is the UI thread; otherwise false.
+
+
+</section>
+
+<span id="uid-41de208fbe"></span>
+
+### ClearValue overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-25f38dfbf3"></span>
+
+#### ClearValue Method
+
+Clears a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty)'s local value.
+
+```csharp
+public void ClearValue(Avalonia.AvaloniaProperty property)
+```
+
+##### Parameters
+
+`property` [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty)
+
+The property.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0ca9c3e409"></span>
+
+#### ClearValue Method
+
+```csharp
+public void ClearValue<T>(Avalonia.AvaloniaProperty<TValue><T> property)
+```
+
+##### Parameters
+
+`property` [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty)&lt;TValue&gt;&lt;T&gt;
+
+
+##### Type Parameters
+
+`T`
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6b86f664a3"></span>
+
+#### ClearValue Method
+
+```csharp
+public void ClearValue<T>(Avalonia.DirectPropertyBase<TValue><T> property)
+```
+
+##### Parameters
+
+`property` Avalonia.DirectPropertyBase&lt;TValue&gt;&lt;T&gt;
+
+
+##### Type Parameters
+
+`T`
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-37f4828667"></span>
+
+#### ClearValue Method
+
+```csharp
+public void ClearValue<T>(Avalonia.StyledProperty<TValue><T> property)
+```
+
+##### Parameters
+
+`property` Avalonia.StyledProperty&lt;TValue&gt;&lt;T&gt;
+
+
+##### Type Parameters
+
+`T`
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3bec32f39e"></span>
+
+### CoerceValue Method
+
+Coerces the specified [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty).
+
+```csharp
+public void CoerceValue(Avalonia.AvaloniaProperty property)
+```
+
+#### Parameters
+
+`property` [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty)
+
+The property.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a8a8e94305"></span>
+
+### Equals Method
+
+Compares two objects using reference equality.
+
+```csharp
+public bool Equals(object obj)
+```
+
+#### Parameters
+
+`obj` object
+
+The object to compare.
+
+
+#### Returns
+
+bool
+
+
+#### Remarks
+
+Overriding Equals and GetHashCode on an [AvaloniaObject](xref:Avalonia.AvaloniaObject) is disallowed for two reasons:
+
+- AvaloniaObjects are by their nature mutable
+- The presence of attached properties means that the semantics of equality are
+difficult to define
+
+See https://github.com/AvaloniaUI/Avalonia/pull/2747 for the discussion that prompted
+this.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9c615efbba"></span>
+
+### GetBaseValue Method
+
+```csharp
+public Avalonia.Data.Optional<T><T> GetBaseValue<T>(Avalonia.StyledProperty<TValue><T> property)
+```
+
+#### Parameters
+
+`property` Avalonia.StyledProperty&lt;TValue&gt;&lt;T&gt;
+
+
+#### Type Parameters
+
+`T`
+
+
+#### Returns
+
+Avalonia.Data.Optional&lt;T&gt;&lt;T&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7f7db1e7a2"></span>
+
+### GetHashCode Method
+
+Gets the hash code for the object.
+
+```csharp
+public int GetHashCode()
+```
+
+#### Returns
+
+int
+
+
+#### Remarks
+
+Overriding Equals and GetHashCode on an [AvaloniaObject](xref:Avalonia.AvaloniaObject) is disallowed for two reasons:
+
+- AvaloniaObjects are by their nature mutable
+- The presence of attached properties means that the semantics of equality are
+difficult to define
+
+See https://github.com/AvaloniaUI/Avalonia/pull/2747 for the discussion that prompted
+this.
+
+</section>
+
+<span id="uid-5142cd4792"></span>
+
+### GetValue overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e0a153b6e7"></span>
+
+#### GetValue Method
+
+Gets a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value.
+
+```csharp
+public object GetValue(Avalonia.AvaloniaProperty property)
+```
+
+##### Parameters
+
+`property` [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty)
+
+The property.
+
+
+##### Returns
+
+object
+
+The value.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8c162a89e0"></span>
+
+#### GetValue Method
+
+```csharp
+public T GetValue<T>(Avalonia.DirectPropertyBase<TValue><T> property)
+```
+
+##### Parameters
+
+`property` Avalonia.DirectPropertyBase&lt;TValue&gt;&lt;T&gt;
+
+
+##### Type Parameters
+
+`T`
+
+
+##### Returns
+
+T
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-be330a67d1"></span>
+
+#### GetValue Method
+
+```csharp
+public T GetValue<T>(Avalonia.StyledProperty<TValue><T> property)
+```
+
+##### Parameters
+
+`property` Avalonia.StyledProperty&lt;TValue&gt;&lt;T&gt;
+
+
+##### Type Parameters
+
+`T`
+
+
+##### Returns
+
+T
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8cbfc7521a"></span>
+
+### IsAnimating Method
+
+Checks whether a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) is animating.
+
+```csharp
+public bool IsAnimating(Avalonia.AvaloniaProperty property)
+```
+
+#### Parameters
+
+`property` [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty)
+
+The property.
+
+
+#### Returns
+
+bool
+
+True if the property is animating, otherwise false.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f8bf0bbdcc"></span>
+
+### IsSet Method
+
+Checks whether a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) is set on this object.
+
+```csharp
+public bool IsSet(Avalonia.AvaloniaProperty property)
+```
+
+#### Parameters
+
+`property` [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty)
+
+The property.
+
+
+#### Returns
+
+bool
+
+True if the property is set, otherwise false.
+
+
+#### Remarks
+
+Returns true if `property` is a styled property which has a value
+assigned to it or a binding targeting it; otherwise false.
+
+</section>
+
+<span id="uid-38759fd088"></span>
+
+### SetCurrentValue overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-703f017fe7"></span>
+
+#### SetCurrentValue Method
+
+Sets the value of a dependency property without changing its value source.
+
+```csharp
+public void SetCurrentValue(Avalonia.AvaloniaProperty property, object value)
+```
+
+##### Parameters
+
+`property` [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty)
+
+The property.
+
+
+`value` object
+
+The value.
+
+
+##### Remarks
+
+This method is used by a component that programmatically sets the value of one of its
+own properties without disabling an application's declared use of the property. The
+method changes the effective value of the property, but existing data bindings and
+styles will continue to work.
+
+The new value will have the property's current [Avalonia.Data.BindingPriority](xref:Avalonia.Data.BindingPriority), even if
+that priority is [Avalonia.Data.BindingPriority.Unset](xref:Avalonia.Data.BindingPriority.Unset) or
+[Avalonia.Data.BindingPriority.Inherited](xref:Avalonia.Data.BindingPriority.Inherited).
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c1d6fc4e67"></span>
+
+#### SetCurrentValue Method
+
+```csharp
+public void SetCurrentValue<T>(Avalonia.StyledProperty<TValue><T> property, T value)
+```
+
+##### Parameters
+
+`property` Avalonia.StyledProperty&lt;TValue&gt;&lt;T&gt;
+
+
+`value` T
+
+
+##### Type Parameters
+
+`T`
+
+
+</section>
+
+<span id="uid-47d14e19d7"></span>
+
+### SetValue overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-917caebbc9"></span>
+
+#### SetValue Method
+
+Sets a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value.
+
+```csharp
+public IDisposable SetValue(Avalonia.AvaloniaProperty property, object value, Avalonia.Data.BindingPriority priority)
+```
+
+##### Parameters
+
+`property` [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty)
+
+The property.
+
+
+`value` object
+
+The value.
+
+
+`priority` [Avalonia.Data.BindingPriority](xref:Avalonia.Data.BindingPriority)
+
+The priority of the value.
+
+
+##### Returns
+
+IDisposable
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c0b4ec727b"></span>
+
+#### SetValue Method
+
+```csharp
+public void SetValue<T>(Avalonia.DirectPropertyBase<TValue><T> property, T value)
+```
+
+##### Parameters
+
+`property` Avalonia.DirectPropertyBase&lt;TValue&gt;&lt;T&gt;
+
+
+`value` T
+
+
+##### Type Parameters
+
+`T`
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-17a1a7502a"></span>
+
+#### SetValue Method
+
+```csharp
+public IDisposable SetValue<T>(Avalonia.StyledProperty<TValue><T> property, T value, Avalonia.Data.BindingPriority priority)
+```
+
+##### Parameters
+
+`property` Avalonia.StyledProperty&lt;TValue&gt;&lt;T&gt;
+
+
+`value` T
+
+
+`priority` [Avalonia.Data.BindingPriority](xref:Avalonia.Data.BindingPriority)
+
+
+##### Type Parameters
+
+`T`
+
+
+##### Returns
+
+IDisposable
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3b9d3c9793"></span>
+
+### VerifyAccess Method
+
+Checks that the current thread is the UI thread and throws if not.
+
+```csharp
+public void VerifyAccess()
+```
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Dispatcher](#uid-b25fa51632) | Returns the [Avalonia.AvaloniaObject.Dispatcher](xref:Avalonia.AvaloniaObject.Dispatcher) that this [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject) is associated with. |
+| [Item](#uid-c1d1f1bc0f) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b25fa51632"></span>
+
+### Dispatcher Property
+
+Returns the [Avalonia.AvaloniaObject.Dispatcher](xref:Avalonia.AvaloniaObject.Dispatcher) that this
+[Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject) is associated with.
+
+```csharp
+public Avalonia.Threading.Dispatcher Dispatcher { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c1d1f1bc0f"></span>
+
+### Item Property
+
+```csharp
+public Avalonia.Data.BindingBase Item { get; set; }
+```
+
+</section>
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [PropertyChanged](#uid-d758e26fae) | Raised when a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value changes on this object. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d758e26fae"></span>
+
+### PropertyChanged Event
+
+Raised when a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value changes on this object.
+
+```csharp
+public event EventHandler<Avalonia.AvaloniaPropertyChangedEventArgs> PropertyChanged
+```
+
+</section>
+
+</ApiRefPage>
+

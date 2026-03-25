@@ -1,0 +1,113 @@
+---
+title: 'InheritDataTypeFromAttribute'
+hide_title: true
+slug: '/avalonia/metadata/inheritdatatypefromattribute'
+uid: 'Avalonia.Metadata.InheritDataTypeFromAttribute'
+commentId: 'T:Avalonia.Metadata.InheritDataTypeFromAttribute'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Metadata'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">InheritDataTypeFromAttribute Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Metadata</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Metadata/InheritDataTypeFromAttribute.cs">InheritDataTypeFromAttribute.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Attribute that instructs the compiler to resolve the data type using specific scope hints, such as Style or [ControlTemplate](xref:Avalonia.Markup.Xaml.Templates.ControlTemplate).
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class InheritDataTypeFromAttribute
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Attribute <span className="apiref-page__relation-separator">-&gt;</span> InheritDataTypeFromAttribute
+</div>
+</div>
+
+## Remarks
+
+This attribute is used to configure markup extensions like [TemplateBinding](xref:Avalonia.Data.TemplateBinding) to properly parse [AvaloniaProperty](xref:Avalonia.AvaloniaProperty) values,
+targeting a specific scope data type.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [InheritDataTypeFromAttribute](#uid-4f084544c4) | Initializes a new instance of the [Avalonia.Metadata.InheritDataTypeFromAttribute](xref:Avalonia.Metadata.InheritDataTypeFromAttribute) class with the specified scope kind. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4f084544c4"></span>
+
+### InheritDataTypeFromAttribute Constructor
+
+Initializes a new instance of the [Avalonia.Metadata.InheritDataTypeFromAttribute](xref:Avalonia.Metadata.InheritDataTypeFromAttribute) class with the specified scope kind.
+
+```csharp
+public InheritDataTypeFromAttribute(Avalonia.Metadata.InheritDataTypeFromScopeKind scopeKind)
+```
+
+#### Parameters
+
+`scopeKind` [Avalonia.Metadata.InheritDataTypeFromScopeKind](xref:Avalonia.Metadata.InheritDataTypeFromScopeKind)
+
+The kind of scope from which to inherit the data type.
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [ScopeKind](#uid-7aedc2719e) | Gets the kind of scope from which the data type should be inherited. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7aedc2719e"></span>
+
+### ScopeKind Property
+
+Gets the kind of scope from which the data type should be inherited.
+
+```csharp
+public Avalonia.Metadata.InheritDataTypeFromScopeKind ScopeKind { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

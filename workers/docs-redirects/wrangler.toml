@@ -1,0 +1,12 @@
+name = "avalonia-docs-redirects"
+main = "src/index.ts"
+compatibility_date = "2024-09-23"
+account_id = "9ef53ed9991bad2f5dcb328e0792bb77"
+
+[[routes]]
+pattern = "docs.avaloniaui.net/*"
+zone_name = "avaloniaui.net"
+
+[[kv_namespaces]]
+binding = "DOCS_REDIRECTS"
+id = "ae8131374b0d409e9ab0537882dafe0b"

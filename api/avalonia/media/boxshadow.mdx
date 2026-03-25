@@ -1,0 +1,339 @@
+---
+title: 'BoxShadow'
+hide_title: true
+slug: '/avalonia/media/boxshadow'
+uid: 'Avalonia.Media.BoxShadow'
+commentId: 'T:Avalonia.Media.BoxShadow'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Media'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">BoxShadow Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Media</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Media/BoxShadow.cs">BoxShadow.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Represents a box shadow which can be attached to an element or control.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct BoxShadow
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> BoxShadow
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Equals (2 overloads)](#uid-5cbc5e2b4b) | No summary available. |
+| [GetHashCode](#uid-12d2d1ef29) | No summary available. |
+| [Parse](#uid-6312b75018) | Parses a [Avalonia.Media.BoxShadow](xref:Avalonia.Media.BoxShadow) string. |
+| [ToString](#uid-1801256060) | No summary available. |
+| [TransformBounds](#uid-db7eb6bcbb) | No summary available. |
+
+<span id="uid-5cbc5e2b4b"></span>
+
+### Equals overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-630b98c2d3"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(Avalonia.Media.BoxShadow& other)
+```
+
+##### Parameters
+
+`other` [Avalonia.Media.BoxShadow](xref:Avalonia.Media.BoxShadow)&amp;
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8385a54fb4"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(object obj)
+```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-12d2d1ef29"></span>
+
+### GetHashCode Method
+
+```csharp
+public int GetHashCode()
+```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6312b75018"></span>
+
+### Parse Method
+
+Parses a [Avalonia.Media.BoxShadow](xref:Avalonia.Media.BoxShadow) string.
+
+```csharp
+public Avalonia.Media.BoxShadow Parse(string s)
+```
+
+#### Parameters
+
+`s` string
+
+The input string to parse.
+
+
+#### Returns
+
+[Avalonia.Media.BoxShadow](xref:Avalonia.Media.BoxShadow)
+
+A new [Avalonia.Media.BoxShadow](xref:Avalonia.Media.BoxShadow)
+
+
+#### Remarks
+
+A box shadow may be specified in multiple formats with separate components:
+
+- Two, three, or four length values.
+- A color value.
+- An optional inset keyword.
+
+If only two length values are given they will be interpreted as [Avalonia.Media.BoxShadow.OffsetX](xref:Avalonia.Media.BoxShadow.OffsetX) and [Avalonia.Media.BoxShadow.OffsetY](xref:Avalonia.Media.BoxShadow.OffsetY).
+If a third value is given, it is interpreted as a [Avalonia.Media.BoxShadow.Blur](xref:Avalonia.Media.BoxShadow.Blur), and if a fourth value is given,
+it is interpreted as [Avalonia.Media.BoxShadow.Spread](xref:Avalonia.Media.BoxShadow.Spread).
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1801256060"></span>
+
+### ToString Method
+
+```csharp
+public string ToString()
+```
+
+#### Returns
+
+string
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-db7eb6bcbb"></span>
+
+### TransformBounds Method
+
+```csharp
+public Avalonia.Rect TransformBounds(Avalonia.Rect& rect)
+```
+
+#### Parameters
+
+`rect` [Avalonia.Rect](xref:Avalonia.Rect)&amp;
+
+
+#### Returns
+
+[Avalonia.Rect](xref:Avalonia.Rect)
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Blur](#uid-cdf3e14bf9) | Gets or sets the blur radius. This is used to control the amount of blurring. |
+| [Color](#uid-9742fddd1a) | Gets or sets the color of the shadow. |
+| [IsInset](#uid-fcbf9bad40) | Gets or sets a value indicating whether the shadow is inset and drawn within the element rather than outside of it. |
+| [OffsetX](#uid-5909914467) | Gets or sets the horizontal offset (distance) of the shadow. |
+| [OffsetY](#uid-bdd7383d93) | Gets or sets the vertical offset (distance) of the shadow. |
+| [Spread](#uid-4dd5886a2c) | Gets or sets the spread radius. This is used to control the overall size of the shadow. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-cdf3e14bf9"></span>
+
+### Blur Property
+
+Gets or sets the blur radius.
+This is used to control the amount of blurring.
+
+```csharp
+public double Blur { get; set; }
+```
+
+#### Remarks
+
+The larger this value, the bigger the blur effect, so the shadow becomes larger and more transparent.
+Negative values are not allowed. If not specified, the default (zero) is used and the shadow edge is sharp.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9742fddd1a"></span>
+
+### Color Property
+
+Gets or sets the color of the shadow.
+
+```csharp
+public Avalonia.Media.Color Color { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-fcbf9bad40"></span>
+
+### IsInset Property
+
+Gets or sets a value indicating whether the shadow is inset and drawn within the element rather than outside of it.
+
+```csharp
+public bool IsInset { get; set; }
+```
+
+#### Remarks
+
+Inset changes the shadow to inside the element (as if the content was depressed inside the box).
+If false (the default), the shadow is assumed to be a drop shadow (as if the box were raised above the content).
+
+Inset shadows are drawn inside the element, above the background (even when it's transparent), but below any content.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5909914467"></span>
+
+### OffsetX Property
+
+Gets or sets the horizontal offset (distance) of the shadow.
+
+```csharp
+public double OffsetX { get; set; }
+```
+
+#### Remarks
+
+Positive values place the shadow to the right of the element while
+negative values place the shadow to the left.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-bdd7383d93"></span>
+
+### OffsetY Property
+
+Gets or sets the vertical offset (distance) of the shadow.
+
+```csharp
+public double OffsetY { get; set; }
+```
+
+#### Remarks
+
+Positive values place the shadow below the element while
+negative values place the shadow above.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4dd5886a2c"></span>
+
+### Spread Property
+
+Gets or sets the spread radius.
+This is used to control the overall size of the shadow.
+
+```csharp
+public double Spread { get; set; }
+```
+
+#### Remarks
+
+Positive values will cause the shadow to expand and grow larger, negative values will cause the shadow to shrink.
+If not specified, the default (zero) is used and the shadow will be the same size as the element.
+
+</section>
+
+</ApiRefPage>
+

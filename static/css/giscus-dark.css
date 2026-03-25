@@ -1,0 +1,312 @@
+/*! Custom Giscus Theme - Avalonia Customer Portal Dark */
+
+/* Import Saans-like fallback font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+main {
+  /* Font - Customer Portal uses Saans, fallback to Inter */
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  /* Syntax highlighting */
+  --color-prettylights-syntax-comment: #8b949e;
+  --color-prettylights-syntax-constant: #79c0ff;
+  --color-prettylights-syntax-entity: #d2a8ff;
+  --color-prettylights-syntax-storage-modifier-import: #c9d1d9;
+  --color-prettylights-syntax-entity-tag: #7ee787;
+  --color-prettylights-syntax-keyword: #ff7b72;
+  --color-prettylights-syntax-string: #a5d6ff;
+  --color-prettylights-syntax-variable: #ffa657;
+  --color-prettylights-syntax-brackethighlighter-unmatched: #f85149;
+  --color-prettylights-syntax-invalid-illegal-text: #f0f6fc;
+  --color-prettylights-syntax-invalid-illegal-bg: #8e1519;
+  --color-prettylights-syntax-carriage-return-text: #f0f6fc;
+  --color-prettylights-syntax-carriage-return-bg: #b62324;
+  --color-prettylights-syntax-string-regexp: #7ee787;
+  --color-prettylights-syntax-markup-list: #f2cc60;
+  --color-prettylights-syntax-markup-heading: #1f6feb;
+  --color-prettylights-syntax-markup-italic: #c9d1d9;
+  --color-prettylights-syntax-markup-bold: #c9d1d9;
+  --color-prettylights-syntax-markup-deleted-text: #ffdcd7;
+  --color-prettylights-syntax-markup-deleted-bg: #67060c;
+  --color-prettylights-syntax-markup-inserted-text: #aff5b4;
+  --color-prettylights-syntax-markup-inserted-bg: #033a16;
+  --color-prettylights-syntax-markup-changed-text: #ffdfb6;
+  --color-prettylights-syntax-markup-changed-bg: #5a1e02;
+  --color-prettylights-syntax-markup-ignored-text: #c9d1d9;
+  --color-prettylights-syntax-markup-ignored-bg: #1158c7;
+  --color-prettylights-syntax-meta-diff-range: #d2a8ff;
+  --color-prettylights-syntax-brackethighlighter-angle: #8b949e;
+  --color-prettylights-syntax-sublimelinter-gutter-mark: #484f58;
+  --color-prettylights-syntax-constant-other-reference-link: #a5d6ff;
+
+  /* Canvas - Customer Portal dark: bg-white/[0.03] which is essentially transparent with slight white */
+  --color-canvas-default: rgba(255, 255, 255, 0.03);
+  --color-canvas-overlay: #1d2939;
+  --color-canvas-inset: #101828;
+  --color-canvas-subtle: #1d2939;
+
+  /* Borders - Customer Portal dark: border-gray-800 (#1d2939) */
+  --color-border-default: #344054;
+  --color-border-muted: #344054;
+  --color-border-subtle: rgba(255, 255, 255, 0.1);
+
+  /* Shadows */
+  --color-shadow-small: 0px 1px 3px 0px rgba(0, 0, 0, 0.3), 0px 1px 2px 0px rgba(0, 0, 0, 0.2);
+  --color-shadow-medium: 0px 4px 8px -2px rgba(0, 0, 0, 0.4), 0px 2px 4px -2px rgba(0, 0, 0, 0.3);
+  --color-shadow-large: 0px 12px 16px -4px rgba(0, 0, 0, 0.4), 0px 4px 6px -2px rgba(0, 0, 0, 0.3);
+
+  /* Neutral */
+  --color-neutral-muted: rgba(255, 255, 255, 0.08);
+  --color-neutral-subtle: rgba(255, 255, 255, 0.04);
+  --color-neutral-emphasis-plus: #f9fafb;
+  --color-neutral-emphasis: #98a2b3;
+
+  /* Brand accent - Customer Portal dark: brand-400 (#3399ff) for better contrast */
+  --color-accent-fg: #3399ff;
+  --color-accent-emphasis: #007df9;
+  --color-accent-muted: rgba(51, 153, 255, 0.4);
+  --color-accent-subtle: rgba(51, 153, 255, 0.15);
+
+  /* Success */
+  --color-success-fg: #32d583;
+  --color-success-emphasis: #12b76a;
+  --color-success-muted: rgba(50, 213, 131, 0.4);
+  --color-success-subtle: rgba(50, 213, 131, 0.15);
+
+  /* Warning */
+  --color-attention-fg: #fdb022;
+  --color-attention-emphasis: #f79009;
+  --color-attention-muted: rgba(253, 176, 34, 0.4);
+  --color-attention-subtle: rgba(253, 176, 34, 0.15);
+
+  /* Error */
+  --color-danger-fg: #f97066;
+  --color-danger-emphasis: #f04438;
+  --color-danger-muted: rgba(249, 112, 102, 0.4);
+  --color-danger-subtle: rgba(249, 112, 102, 0.15);
+
+  /* Text - Customer Portal dark: text-white/90 for primary, text-gray-400 for secondary */
+  --color-fg-default: rgba(255, 255, 255, 0.9);
+  --color-fg-muted: #98a2b3;
+  --color-fg-subtle: #667085;
+  --color-fg-on-emphasis: #ffffff;
+
+  /* Buttons - Customer Portal dark style */
+  --color-btn-text: rgba(255, 255, 255, 0.9);
+  --color-btn-bg: rgba(255, 255, 255, 0.05);
+  --color-btn-border: #344054;
+  --color-btn-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --color-btn-inset-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  --color-btn-hover-bg: rgba(255, 255, 255, 0.08);
+  --color-btn-hover-border: #475467;
+  --color-btn-active-bg: rgba(255, 255, 255, 0.1);
+  --color-btn-active-border: #667085;
+  --color-btn-selected-bg: rgba(255, 255, 255, 0.08);
+
+  /* Primary button */
+  --color-btn-primary-text: #ffffff;
+  --color-btn-primary-bg: #007df9;
+  --color-btn-primary-border: #007df9;
+  --color-btn-primary-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --color-btn-primary-inset-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  --color-btn-primary-hover-bg: #3399ff;
+  --color-btn-primary-hover-border: #3399ff;
+  --color-btn-primary-selected-bg: #0066cc;
+  --color-btn-primary-disabled-text: rgba(255, 255, 255, 0.5);
+  --color-btn-primary-disabled-bg: #0c3d6e;
+  --color-btn-primary-disabled-border: #0c3d6e;
+
+  /* Counter */
+  --color-counter-bg: rgba(255, 255, 255, 0.12);
+
+  /* Header */
+  --color-header-text: rgba(255, 255, 255, 0.9);
+  --color-header-bg: #0c111d;
+  --color-header-divider: #344054;
+  --color-header-logo: #ffffff;
+}
+
+/* Override all fonts to match Customer Portal */
+main,
+main * {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+}
+
+/* Border radius - Customer Portal uses rounded-2xl (16px) for containers, rounded-lg (8px) for elements */
+main .gsc-comments > .gsc-header,
+main .gsc-comments > .gsc-comment-box,
+main .gsc-comment-box,
+main .gsc-comment {
+  border-radius: 16px !important;
+}
+
+main .gsc-comment-box-textarea,
+main .gsc-reply-box,
+main .gsc-comment-content,
+main .gsc-reactions-button,
+main .BtnGroup-item,
+main .btn,
+main .btn-primary,
+main .gsc-emoji-button {
+  border-radius: 8px !important;
+}
+
+/* Comment box styling - Customer Portal dark: bg-white/[0.03] */
+main .gsc-comment-box {
+  background: rgba(255, 255, 255, 0.03) !important;
+  border: 1px solid #344054 !important;
+}
+
+/* Textarea styling */
+main .gsc-comment-box-textarea {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid #344054 !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-size: 14px !important;
+  line-height: 20px !important;
+}
+
+main .gsc-comment-box-textarea:focus {
+  border-color: #3399ff !important;
+  box-shadow: 0px 0px 0px 4px rgba(51, 153, 255, 0.15) !important;
+  outline: none !important;
+}
+
+main .gsc-comment-box-textarea::placeholder {
+  color: #667085 !important;
+}
+
+/* Comments styling - Customer Portal dark: bg-white/[0.03] */
+main .gsc-comment {
+  background: rgba(255, 255, 255, 0.03) !important;
+  border: 1px solid #344054 !important;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.3), 0px 1px 2px 0px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Timeline connector */
+main .gsc-tl-line {
+  background-color: #344054 !important;
+}
+
+/* Reaction buttons - Customer Portal dark hover style */
+main .gsc-reactions-button {
+  border: 1px solid #344054 !important;
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-size: 12px !important;
+}
+
+main .gsc-reactions-button:hover {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  border-color: #475467 !important;
+}
+
+/* Links - Customer Portal dark: brand-400 */
+main a {
+  color: #3399ff !important;
+}
+
+main a:hover {
+  color: #66b3ff !important;
+}
+
+/* Button styling */
+main .btn-primary {
+  background-color: #007df9 !important;
+  border-color: #007df9 !important;
+  font-weight: 500 !important;
+  font-size: 14px !important;
+}
+
+main .btn-primary:hover {
+  background-color: #3399ff !important;
+  border-color: #3399ff !important;
+}
+
+/* Text - Customer Portal dark: text-white/90 */
+main .gsc-comment-author-avatar {
+  border-radius: 9999px !important;
+}
+
+main .gsc-comment-author {
+  font-weight: 500 !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+main .gsc-comment-content {
+  font-size: 14px !important;
+  line-height: 20px !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+main .gsc-comment-content p {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Login box */
+main .gsc-login-box {
+  border-radius: 16px !important;
+  border: 1px solid #344054 !important;
+  background: rgba(255, 255, 255, 0.03) !important;
+}
+
+/* Header */
+main .gsc-header {
+  padding-bottom: 16px !important;
+  border-bottom: 1px solid #344054 !important;
+}
+
+/* Footer */
+main .gsc-footer {
+  font-size: 12px !important;
+  color: #98a2b3 !important;
+}
+
+/* Markdown content styling */
+main .markdown-body {
+  font-size: 14px !important;
+  line-height: 20px !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Code blocks */
+main .markdown-body pre,
+main .markdown-body code {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  border-radius: 8px !important;
+  font-size: 14px !important;
+  color: #98a2b3 !important;
+}
+
+/* Blockquotes */
+main .markdown-body blockquote {
+  border-left: 3px solid #344054 !important;
+  color: #98a2b3 !important;
+}
+
+/* Scrollbar styling - Customer Portal dark */
+main ::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+main ::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 9999px;
+}
+
+main ::-webkit-scrollbar-thumb {
+  background: #344054;
+  border-radius: 9999px;
+}
+
+main ::-webkit-scrollbar-thumb:hover {
+  background: #475467;
+}
+
+/* Timestamps and meta info */
+main .gsc-comment-header time,
+main .gsc-comment-header .color-fg-muted {
+  color: #98a2b3 !important;
+  font-size: 12px !important;
+}

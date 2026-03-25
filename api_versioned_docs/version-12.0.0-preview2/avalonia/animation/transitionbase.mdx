@@ -1,0 +1,221 @@
+---
+title: 'TransitionBase'
+hide_title: true
+slug: '/avalonia/animation/transitionbase'
+uid: 'Avalonia.Animation.TransitionBase'
+commentId: 'T:Avalonia.Animation.TransitionBase'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Animation'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">TransitionBase Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Animation</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Animation/TransitionBase.cs">TransitionBase.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Defines how a property should be animated using a transition.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class TransitionBase
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> TransitionBase
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Derived types:</span> <a href="transition-1">Transition&lt;T&gt;</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="itransition">ITransition</a>
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Bind (8 overloads)](../avaloniaobject.mdx#uid-1c60c7bda3) | Binds a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) to an [Avalonia.Data.BindingBase](xref:Avalonia.Data.BindingBase). Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [CheckAccess](../avaloniaobject.mdx#uid-260ff7a68d) | Returns a value indicating whether the current thread is the UI thread. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [ClearValue (4 overloads)](../avaloniaobject.mdx#uid-41de208fbe) | Clears a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty)'s local value. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [CoerceValue](../avaloniaobject.mdx#uid-3bec32f39e) | Coerces the specified [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty). Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [Equals](../avaloniaobject.mdx#uid-a8a8e94305) | Compares two objects using reference equality. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [GetBaseValue](../avaloniaobject.mdx#uid-9c615efbba) | Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [GetHashCode](../avaloniaobject.mdx#uid-7f7db1e7a2) | Gets the hash code for the object. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [GetValue (3 overloads)](../avaloniaobject.mdx#uid-5142cd4792) | Gets a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [IsAnimating](../avaloniaobject.mdx#uid-8cbfc7521a) | Checks whether a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) is animating. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [IsSet](../avaloniaobject.mdx#uid-f8bf0bbdcc) | Checks whether a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) is set on this object. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [SetCurrentValue (2 overloads)](../avaloniaobject.mdx#uid-38759fd088) | Sets the value of a dependency property without changing its value source. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [SetValue (3 overloads)](../avaloniaobject.mdx#uid-47d14e19d7) | Sets a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [VerifyAccess](../avaloniaobject.mdx#uid-3b9d3c9793) | Checks that the current thread is the UI thread and throws if not. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Delay](#uid-b8fdb31850) | Gets or sets delay before starting the transition. |
+| [Duration](#uid-40b46b7737) | Gets or sets the duration of the transition. |
+| [Easing](#uid-087e59b4eb) | Gets the easing class to be used. |
+| [Property](#uid-8c304576c1) | No summary available. |
+| [Dispatcher](../avaloniaobject.mdx#uid-b25fa51632) | Returns the [Avalonia.AvaloniaObject.Dispatcher](xref:Avalonia.AvaloniaObject.Dispatcher) that this [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject) is associated with. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [Item](../avaloniaobject.mdx#uid-c1d1f1bc0f) | Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b8fdb31850"></span>
+
+### Delay Property
+
+Gets or sets delay before starting the transition.
+
+```csharp
+public TimeSpan Delay { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-40b46b7737"></span>
+
+### Duration Property
+
+Gets or sets the duration of the transition.
+
+```csharp
+public TimeSpan Duration { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-087e59b4eb"></span>
+
+### Easing Property
+
+Gets the easing class to be used.
+
+```csharp
+public Avalonia.Animation.Easings.Easing Easing { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8c304576c1"></span>
+
+### Property Property
+
+```csharp
+public Avalonia.AvaloniaProperty Property { get; set; }
+```
+
+</section>
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [DelayProperty](#uid-1c45a7027d) | Defines the [Avalonia.Animation.TransitionBase.Delay](xref:Avalonia.Animation.TransitionBase.Delay) property. |
+| [DurationProperty](#uid-609efd5524) | Defines the [Avalonia.Animation.TransitionBase.Duration](xref:Avalonia.Animation.TransitionBase.Duration) property. |
+| [EasingProperty](#uid-4d933ee722) | Defines the [Avalonia.Animation.TransitionBase.Easing](xref:Avalonia.Animation.TransitionBase.Easing) property. |
+| [PropertyProperty](#uid-b4014c1563) | Defines the [Avalonia.Animation.TransitionBase.Property](xref:Avalonia.Animation.TransitionBase.Property) property. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1c45a7027d"></span>
+
+### DelayProperty Field
+
+Defines the [Avalonia.Animation.TransitionBase.Delay](xref:Avalonia.Animation.TransitionBase.Delay) property.
+
+```csharp
+public Avalonia.DirectProperty<TOwner,TValue><Avalonia.Animation.TransitionBase, TimeSpan> DelayProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-609efd5524"></span>
+
+### DurationProperty Field
+
+Defines the [Avalonia.Animation.TransitionBase.Duration](xref:Avalonia.Animation.TransitionBase.Duration) property.
+
+```csharp
+public Avalonia.DirectProperty<TOwner,TValue><Avalonia.Animation.TransitionBase, TimeSpan> DurationProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4d933ee722"></span>
+
+### EasingProperty Field
+
+Defines the [Avalonia.Animation.TransitionBase.Easing](xref:Avalonia.Animation.TransitionBase.Easing) property.
+
+```csharp
+public Avalonia.DirectProperty<TOwner,TValue><Avalonia.Animation.TransitionBase, Avalonia.Animation.Easings.Easing> EasingProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b4014c1563"></span>
+
+### PropertyProperty Field
+
+Defines the [Avalonia.Animation.TransitionBase.Property](xref:Avalonia.Animation.TransitionBase.Property) property.
+
+```csharp
+public Avalonia.DirectProperty<TOwner,TValue><Avalonia.Animation.TransitionBase, Avalonia.AvaloniaProperty> PropertyProperty
+```
+
+</section>
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [PropertyChanged](../avaloniaobject.mdx#uid-d758e26fae) | Raised when a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value changes on this object. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+
+</ApiRefPage>
+

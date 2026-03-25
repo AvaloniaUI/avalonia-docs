@@ -1,0 +1,661 @@
+---
+title: 'PixelSize'
+hide_title: true
+slug: '/avalonia/pixelsize'
+uid: 'Avalonia.PixelSize'
+commentId: 'T:Avalonia.PixelSize'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">PixelSize Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/PixelSize.cs">PixelSize.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Represents a size in device pixels.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct PixelSize
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> PixelSize
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;PixelSize&gt;
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [PixelSize](#uid-8827b63f48) | Initializes a new instance of the [Avalonia.PixelSize](xref:Avalonia.PixelSize) structure. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8827b63f48"></span>
+
+### PixelSize Constructor
+
+Initializes a new instance of the [Avalonia.PixelSize](xref:Avalonia.PixelSize) structure.
+
+```csharp
+public PixelSize(int width, int height)
+```
+
+#### Parameters
+
+`width` int
+
+The width.
+
+
+`height` int
+
+The height.
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Equals (2 overloads)](#uid-af4273c925) | Returns a boolean indicating whether the size is equal to the other given size. |
+| [FromSize (2 overloads)](#uid-1d467bcf81) | Converts a [Avalonia.Size](xref:Avalonia.Size) to device pixels using the specified scaling factor. |
+| [FromSizeWithDpi (2 overloads)](#uid-b9efcfc667) | Converts a [Avalonia.Size](xref:Avalonia.Size) to device pixels using the specified dots per inch (DPI). |
+| [GetHashCode](#uid-b48d6afc7a) | Returns a hash code for a [Avalonia.PixelSize](xref:Avalonia.PixelSize). |
+| [Parse](#uid-497e3d79f0) | Parses a [Avalonia.PixelSize](xref:Avalonia.PixelSize) string. |
+| [ToSize (2 overloads)](#uid-818d1acecc) | Converts the [Avalonia.PixelSize](xref:Avalonia.PixelSize) to a device-independent [Avalonia.Size](xref:Avalonia.Size) using the specified scaling factor. |
+| [ToSizeWithDpi (2 overloads)](#uid-64f7abb2c1) | Converts the [Avalonia.PixelSize](xref:Avalonia.PixelSize) to a device-independent [Avalonia.Size](xref:Avalonia.Size) using the specified dots per inch (DPI). |
+| [ToString](#uid-1bf3300292) | Returns the string representation of the size. |
+| [TryParse](#uid-da4fd59734) | No summary available. |
+| [WithHeight](#uid-c0cedf7124) | Returns a new [Avalonia.PixelSize](xref:Avalonia.PixelSize) with the same width and the specified height. |
+| [WithWidth](#uid-71f53c69c4) | Returns a new [Avalonia.PixelSize](xref:Avalonia.PixelSize) with the same height and the specified width. |
+
+<span id="uid-af4273c925"></span>
+
+### Equals overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c77908e825"></span>
+
+#### Equals Method
+
+Returns a boolean indicating whether the size is equal to the other given size.
+
+```csharp
+public bool Equals(Avalonia.PixelSize other)
+```
+
+##### Parameters
+
+`other` [Avalonia.PixelSize](xref:Avalonia.PixelSize)
+
+The other size to test equality against.
+
+
+##### Returns
+
+bool
+
+True if this size is equal to other; False otherwise.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1ca8358dd8"></span>
+
+#### Equals Method
+
+Checks for equality between a size and an object.
+
+```csharp
+public bool Equals(object obj)
+```
+
+##### Parameters
+
+`obj` object
+
+The object.
+
+
+##### Returns
+
+bool
+
+True if `obj` is a size that equals the current size.
+
+
+</section>
+
+<span id="uid-1d467bcf81"></span>
+
+### FromSize overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1aa0829c73"></span>
+
+#### FromSize Method
+
+Converts a [Avalonia.Size](xref:Avalonia.Size) to device pixels using the specified scaling factor.
+
+```csharp
+public Avalonia.PixelSize FromSize(Avalonia.Size size, Avalonia.Vector scale)
+```
+
+##### Parameters
+
+`size` [Avalonia.Size](xref:Avalonia.Size)
+
+The size.
+
+
+`scale` [Avalonia.Vector](xref:Avalonia.Vector)
+
+The scaling factor.
+
+
+##### Returns
+
+[Avalonia.PixelSize](xref:Avalonia.PixelSize)
+
+The device-independent size.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-98cad0b6da"></span>
+
+#### FromSize Method
+
+Converts a [Avalonia.Size](xref:Avalonia.Size) to device pixels using the specified scaling factor.
+
+```csharp
+public Avalonia.PixelSize FromSize(Avalonia.Size size, double scale)
+```
+
+##### Parameters
+
+`size` [Avalonia.Size](xref:Avalonia.Size)
+
+The size.
+
+
+`scale` double
+
+The scaling factor.
+
+
+##### Returns
+
+[Avalonia.PixelSize](xref:Avalonia.PixelSize)
+
+The device-independent size.
+
+
+</section>
+
+<span id="uid-b9efcfc667"></span>
+
+### FromSizeWithDpi overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b3d2d83059"></span>
+
+#### FromSizeWithDpi Method
+
+Converts a [Avalonia.Size](xref:Avalonia.Size) to device pixels using the specified dots per inch (DPI).
+
+```csharp
+public Avalonia.PixelSize FromSizeWithDpi(Avalonia.Size size, Avalonia.Vector dpi)
+```
+
+##### Parameters
+
+`size` [Avalonia.Size](xref:Avalonia.Size)
+
+The size.
+
+
+`dpi` [Avalonia.Vector](xref:Avalonia.Vector)
+
+The dots per inch.
+
+
+##### Returns
+
+[Avalonia.PixelSize](xref:Avalonia.PixelSize)
+
+The device-independent size.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-320134a5e9"></span>
+
+#### FromSizeWithDpi Method
+
+Converts a [Avalonia.Size](xref:Avalonia.Size) to device pixels using the specified dots per inch (DPI).
+
+```csharp
+public Avalonia.PixelSize FromSizeWithDpi(Avalonia.Size size, double dpi)
+```
+
+##### Parameters
+
+`size` [Avalonia.Size](xref:Avalonia.Size)
+
+The size.
+
+
+`dpi` double
+
+The dots per inch.
+
+
+##### Returns
+
+[Avalonia.PixelSize](xref:Avalonia.PixelSize)
+
+The device-independent size.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b48d6afc7a"></span>
+
+### GetHashCode Method
+
+Returns a hash code for a [Avalonia.PixelSize](xref:Avalonia.PixelSize).
+
+```csharp
+public int GetHashCode()
+```
+
+#### Returns
+
+int
+
+The hash code.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-497e3d79f0"></span>
+
+### Parse Method
+
+Parses a [Avalonia.PixelSize](xref:Avalonia.PixelSize) string.
+
+```csharp
+public Avalonia.PixelSize Parse(string s)
+```
+
+#### Parameters
+
+`s` string
+
+The string.
+
+
+#### Returns
+
+[Avalonia.PixelSize](xref:Avalonia.PixelSize)
+
+The [Avalonia.PixelSize](xref:Avalonia.PixelSize).
+
+
+#### Exceptions
+
+- [FormatException](xref:System.FormatException)
+
+</section>
+
+<span id="uid-818d1acecc"></span>
+
+### ToSize overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7f601fe2e0"></span>
+
+#### ToSize Method
+
+Converts the [Avalonia.PixelSize](xref:Avalonia.PixelSize) to a device-independent [Avalonia.Size](xref:Avalonia.Size) using the
+specified scaling factor.
+
+```csharp
+public Avalonia.Size ToSize(Avalonia.Vector scale)
+```
+
+##### Parameters
+
+`scale` [Avalonia.Vector](xref:Avalonia.Vector)
+
+The scaling factor.
+
+
+##### Returns
+
+[Avalonia.Size](xref:Avalonia.Size)
+
+The device-independent size.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-94469ed5eb"></span>
+
+#### ToSize Method
+
+Converts the [Avalonia.PixelSize](xref:Avalonia.PixelSize) to a device-independent [Avalonia.Size](xref:Avalonia.Size) using the
+specified scaling factor.
+
+```csharp
+public Avalonia.Size ToSize(double scale)
+```
+
+##### Parameters
+
+`scale` double
+
+The scaling factor.
+
+
+##### Returns
+
+[Avalonia.Size](xref:Avalonia.Size)
+
+The device-independent size.
+
+
+</section>
+
+<span id="uid-64f7abb2c1"></span>
+
+### ToSizeWithDpi overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-944fff0ad6"></span>
+
+#### ToSizeWithDpi Method
+
+Converts the [Avalonia.PixelSize](xref:Avalonia.PixelSize) to a device-independent [Avalonia.Size](xref:Avalonia.Size) using the
+specified dots per inch (DPI).
+
+```csharp
+public Avalonia.Size ToSizeWithDpi(Avalonia.Vector dpi)
+```
+
+##### Parameters
+
+`dpi` [Avalonia.Vector](xref:Avalonia.Vector)
+
+The dots per inch.
+
+
+##### Returns
+
+[Avalonia.Size](xref:Avalonia.Size)
+
+The device-independent size.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-20c1e60960"></span>
+
+#### ToSizeWithDpi Method
+
+Converts the [Avalonia.PixelSize](xref:Avalonia.PixelSize) to a device-independent [Avalonia.Size](xref:Avalonia.Size) using the
+specified dots per inch (DPI).
+
+```csharp
+public Avalonia.Size ToSizeWithDpi(double dpi)
+```
+
+##### Parameters
+
+`dpi` double
+
+The dots per inch.
+
+
+##### Returns
+
+[Avalonia.Size](xref:Avalonia.Size)
+
+The device-independent size.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1bf3300292"></span>
+
+### ToString Method
+
+Returns the string representation of the size.
+
+```csharp
+public string ToString()
+```
+
+#### Returns
+
+string
+
+The string representation of the size.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-da4fd59734"></span>
+
+### TryParse Method
+
+```csharp
+public bool TryParse(string source, Avalonia.PixelSize& result)
+```
+
+#### Parameters
+
+`source` string
+
+
+`result` [Avalonia.PixelSize](xref:Avalonia.PixelSize)&amp;
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c0cedf7124"></span>
+
+### WithHeight Method
+
+Returns a new [Avalonia.PixelSize](xref:Avalonia.PixelSize) with the same width and the specified height.
+
+```csharp
+public Avalonia.PixelSize WithHeight(int height)
+```
+
+#### Parameters
+
+`height` int
+
+The height.
+
+
+#### Returns
+
+[Avalonia.PixelSize](xref:Avalonia.PixelSize)
+
+The new [Avalonia.PixelSize](xref:Avalonia.PixelSize).
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-71f53c69c4"></span>
+
+### WithWidth Method
+
+Returns a new [Avalonia.PixelSize](xref:Avalonia.PixelSize) with the same height and the specified width.
+
+```csharp
+public Avalonia.PixelSize WithWidth(int width)
+```
+
+#### Parameters
+
+`width` int
+
+The width.
+
+
+#### Returns
+
+[Avalonia.PixelSize](xref:Avalonia.PixelSize)
+
+The new [Avalonia.PixelSize](xref:Avalonia.PixelSize).
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [AspectRatio](#uid-51543a5e56) | Gets the aspect ratio of the size. |
+| [Height](#uid-2ebe21dcf6) | Gets the height. |
+| [Width](#uid-3ff8c5cee0) | Gets the width. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-51543a5e56"></span>
+
+### AspectRatio Property
+
+Gets the aspect ratio of the size.
+
+```csharp
+public double AspectRatio { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2ebe21dcf6"></span>
+
+### Height Property
+
+Gets the height.
+
+```csharp
+public int Height { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3ff8c5cee0"></span>
+
+### Width Property
+
+Gets the width.
+
+```csharp
+public int Width { get; set; }
+```
+
+</section>
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [Empty](#uid-d5771c240b) | A size representing zero |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d5771c240b"></span>
+
+### Empty Field
+
+A size representing zero
+
+```csharp
+public Avalonia.PixelSize Empty
+```
+
+</section>
+
+</ApiRefPage>
+

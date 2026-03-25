@@ -1,0 +1,209 @@
+---
+title: 'CrossFade'
+hide_title: true
+slug: '/avalonia/animation/crossfade'
+uid: 'Avalonia.Animation.CrossFade'
+commentId: 'T:Avalonia.Animation.CrossFade'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Animation'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">CrossFade Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Animation</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Animation/CrossFade.cs">CrossFade.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Defines a cross-fade animation between two [Avalonia.Visual](xref:Avalonia.Visual)s.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class CrossFade
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> CrossFade
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="ipagetransition">IPageTransition</a>
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [CrossFade (2 overloads)](#uid-f820766fd9) | Initializes a new instance of the [Avalonia.Animation.CrossFade](xref:Avalonia.Animation.CrossFade) class. |
+
+<span id="uid-f820766fd9"></span>
+
+### CrossFade overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d19002e5f1"></span>
+
+#### CrossFade Constructor
+
+Initializes a new instance of the [Avalonia.Animation.CrossFade](xref:Avalonia.Animation.CrossFade) class.
+
+```csharp
+public CrossFade()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9bca2b5024"></span>
+
+#### CrossFade Constructor
+
+Initializes a new instance of the [Avalonia.Animation.CrossFade](xref:Avalonia.Animation.CrossFade) class.
+
+```csharp
+public CrossFade(TimeSpan duration)
+```
+
+##### Parameters
+
+`duration` TimeSpan
+
+The duration of the animation.
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Start](#uid-ed8bb3dfc3) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ed8bb3dfc3"></span>
+
+### Start Method
+
+```csharp
+public System.Threading.Tasks.Task Start(Avalonia.Visual from, Avalonia.Visual to, System.Threading.CancellationToken cancellationToken)
+```
+
+#### Parameters
+
+`from` [Avalonia.Visual](xref:Avalonia.Visual)
+
+
+`to` [Avalonia.Visual](xref:Avalonia.Visual)
+
+
+`cancellationToken` System.Threading.CancellationToken
+
+
+#### Returns
+
+System.Threading.Tasks.Task
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Duration](#uid-fdf0301563) | Gets the duration of the animation. |
+| [FadeInEasing](#uid-c8a448bdad) | Gets or sets element entrance easing. |
+| [FadeOutEasing](#uid-c99095c437) | Gets or sets element exit easing. |
+| [FillMode](#uid-3af1c02aeb) | Gets or sets the fill mode applied to both fade animations. Defaults to [Avalonia.Animation.FillMode.Forward](xref:Avalonia.Animation.FillMode.Forward). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-fdf0301563"></span>
+
+### Duration Property
+
+Gets the duration of the animation.
+
+```csharp
+public TimeSpan Duration { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c8a448bdad"></span>
+
+### FadeInEasing Property
+
+Gets or sets element entrance easing.
+
+```csharp
+public Avalonia.Animation.Easings.Easing FadeInEasing { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c99095c437"></span>
+
+### FadeOutEasing Property
+
+Gets or sets element exit easing.
+
+```csharp
+public Avalonia.Animation.Easings.Easing FadeOutEasing { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3af1c02aeb"></span>
+
+### FillMode Property
+
+Gets or sets the fill mode applied to both fade animations.
+Defaults to [Avalonia.Animation.FillMode.Forward](xref:Avalonia.Animation.FillMode.Forward).
+
+```csharp
+public Avalonia.Animation.FillMode FillMode { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

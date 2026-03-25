@@ -1,0 +1,277 @@
+---
+title: 'SortableRowsBase<TModel, TRow>'
+hide_title: true
+slug: '/avalonia/controls/models/treedatagrid/sortablerowsbase-2'
+uid: 'Avalonia.Controls.Models.TreeDataGrid.SortableRowsBase`2'
+commentId: 'T:Avalonia.Controls.Models.TreeDataGrid.SortableRowsBase`2'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.TreeDataGrid'
+assembly: 'Avalonia.Controls.TreeDataGrid'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Models.TreeDataGrid'
+tfms:
+  - 'net8.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">SortableRowsBase&lt;TModel, TRow&gt; Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Models.TreeDataGrid</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+An abstract base class for a sortable collection of rows in a [Avalonia.Controls.Models.TreeDataGrid](xref:Avalonia.Controls.Models.TreeDataGrid).
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class SortableRowsBase<TModel, TRow>
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ReadOnlyListBase&lt;&lt;T&gt;&gt; <span className="apiref-page__relation-separator">-&gt;</span> SortableRowsBase&lt;TModel, TRow&gt;
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IDisposable
+</div>
+</div>
+
+## Remarks
+
+SortableRowsBase provides the core functionality for managing a collection of rows that can be sorted
+according to a provided comparison function. The class handles the complexity of maintaining both
+the original ordering of rows and the sorted view, efficiently responding to collection changes.
+
+The class is designed to efficiently handle collection modifications (adding, removing, replacing items)
+in both sorted and unsorted states, managing row creation and disposal, and maintaining proper
+model-to-row index mappings.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [SortableRowsBase&lt;TModel, TRow&gt;](#uid-a6844f857d) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a6844f857d"></span>
+
+### SortableRowsBase&lt;TModel, TRow&gt; Constructor
+
+```csharp
+public SortableRowsBase<TModel, TRow>(Avalonia.Controls.TreeDataGridItemsSourceView<T><TModel> items, Comparison<TModel> comparison)
+```
+
+#### Parameters
+
+`items` [Avalonia.Controls.TreeDataGridItemsSourceView](xref:Avalonia.Controls.TreeDataGridItemsSourceView)&lt;T&gt;&lt;TModel&gt;
+
+
+`comparison` Comparison&lt;TModel&gt;
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Dispose](#uid-4077e5924e) | Releases all resources used by the [Avalonia.Controls.Models.TreeDataGrid.SortableRowsBase&lt;T1, T2&gt;](xref:Avalonia.Controls.Models.TreeDataGrid.SortableRowsBase%602) instance. |
+| [Filter](#uid-11ce1a23a2) | No summary available. |
+| [GetEnumerator](#uid-918c37630d) | No summary available. |
+| [RefreshFilter](#uid-a35c4fe01c) | Refreshes the current filter applied to the collection. |
+| [SetItems](#uid-81bcff9822) | No summary available. |
+| [Sort](#uid-a97d48204d) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4077e5924e"></span>
+
+### Dispose Method
+
+Releases all resources used by the [Avalonia.Controls.Models.TreeDataGrid.SortableRowsBase&lt;T1, T2&gt;](xref:Avalonia.Controls.Models.TreeDataGrid.SortableRowsBase%602) instance.
+
+```csharp
+public void Dispose()
+```
+
+#### Remarks
+
+Sets the items source to an empty collection, which will dispose all row objects.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-11ce1a23a2"></span>
+
+### Filter Method
+
+```csharp
+public void Filter(Func<TModel, bool> filter)
+```
+
+#### Parameters
+
+`filter` Func&lt;TModel, bool&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-918c37630d"></span>
+
+### GetEnumerator Method
+
+```csharp
+public System.Collections.Generic.IEnumerator<TRow> GetEnumerator()
+```
+
+#### Returns
+
+System.Collections.Generic.IEnumerator&lt;TRow&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a35c4fe01c"></span>
+
+### RefreshFilter Method
+
+Refreshes the current filter applied to the collection.
+
+```csharp
+public void RefreshFilter()
+```
+
+#### Remarks
+
+Call this method if the filter predicate depends on external state which has changed,
+to re-apply the filter to the collection.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-81bcff9822"></span>
+
+### SetItems Method
+
+```csharp
+public void SetItems(Avalonia.Controls.TreeDataGridItemsSourceView<T><TModel> items)
+```
+
+#### Parameters
+
+`items` [Avalonia.Controls.TreeDataGridItemsSourceView](xref:Avalonia.Controls.TreeDataGridItemsSourceView)&lt;T&gt;&lt;TModel&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a97d48204d"></span>
+
+### Sort Method
+
+```csharp
+public void Sort(Comparison<TModel> comparison)
+```
+
+#### Parameters
+
+`comparison` Comparison&lt;TModel&gt;
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Count](#uid-563a168d93) | No summary available. |
+| [IsFiltered](#uid-f4804fc133) | No summary available. |
+| [Item](#uid-e8c476b55b) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-563a168d93"></span>
+
+### Count Property
+
+```csharp
+public int Count { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f4804fc133"></span>
+
+### IsFiltered Property
+
+```csharp
+public bool IsFiltered { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e8c476b55b"></span>
+
+### Item Property
+
+```csharp
+public TRow Item { get; set; }
+```
+
+</section>
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [CollectionChanged](#uid-7fd067ea4d) | Occurs when the contents of the collection changes. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7fd067ea4d"></span>
+
+### CollectionChanged Event
+
+Occurs when the contents of the collection changes.
+
+```csharp
+public event System.Collections.Specialized.NotifyCollectionChangedEventHandler CollectionChanged
+```
+
+</section>
+
+</ApiRefPage>
+

@@ -1,0 +1,117 @@
+---
+title: 'LinuxFramebufferPlatformOptions'
+hide_title: true
+slug: '/avalonia/linuxframebuffer/linuxframebufferplatformoptions'
+uid: 'Avalonia.LinuxFramebuffer.LinuxFramebufferPlatformOptions'
+commentId: 'T:Avalonia.LinuxFramebuffer.LinuxFramebufferPlatformOptions'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.LinuxFramebuffer'
+assembly: 'Avalonia.LinuxFramebuffer'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.LinuxFramebuffer'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">LinuxFramebufferPlatformOptions Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.LinuxFramebuffer</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.LinuxFramebuffer</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.LinuxFramebuffer</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Linux/Avalonia.LinuxFramebuffer/LinuxFramebufferPlatformOptions.cs">LinuxFramebufferPlatformOptions.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Platform-specific options which apply to the Linux framebuffer.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class LinuxFramebufferPlatformOptions
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> LinuxFramebufferPlatformOptions
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [LinuxFramebufferPlatformOptions](#uid-7fb7d64be7) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7fb7d64be7"></span>
+
+### LinuxFramebufferPlatformOptions Constructor
+
+```csharp
+public LinuxFramebufferPlatformOptions()
+```
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Fps](#uid-27f0a08e38) | Gets or sets the number of frames per second at which the renderer should run. Default 60. |
+| [ShouldRenderOnUIThread](#uid-18441bb8b2) | Render directly on the UI thread instead of using a dedicated render thread. This can be usable if your device don't have multiple cores to begin with. This setting is false by default. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-27f0a08e38"></span>
+
+### Fps Property
+
+Gets or sets the number of frames per second at which the renderer should run.
+Default 60.
+
+```csharp
+public int Fps { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-18441bb8b2"></span>
+
+### ShouldRenderOnUIThread Property
+
+Render directly on the UI thread instead of using a dedicated render thread.
+This can be usable if your device don't have multiple cores to begin with.
+This setting is false by default.
+
+```csharp
+public bool ShouldRenderOnUIThread { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

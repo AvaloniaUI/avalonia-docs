@@ -1,0 +1,401 @@
+---
+title: 'XamlSourceInfo'
+hide_title: true
+slug: '/avalonia/markup/xaml/diagnostics/xamlsourceinfo'
+uid: 'Avalonia.Markup.Xaml.Diagnostics.XamlSourceInfo'
+commentId: 'T:Avalonia.Markup.Xaml.Diagnostics.XamlSourceInfo'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Markup.Xaml'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Markup.Xaml.Diagnostics'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">XamlSourceInfo Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Markup.Xaml.Diagnostics</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Markup.Xaml</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Markup/Avalonia.Markup.Xaml/Diagnostics/XamlSourceInfo.cs">XamlSourceInfo.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Represents source location information for an element within a XAML or code file.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class XamlSourceInfo
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> XamlSourceInfo
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;XamlSourceInfo&gt;
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [XamlSourceInfo](#uid-130b653175) | Initializes a new instance of the [Avalonia.Markup.Xaml.Diagnostics.XamlSourceInfo](xref:Avalonia.Markup.Xaml.Diagnostics.XamlSourceInfo) class with a specified line, column, and file path. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-130b653175"></span>
+
+### XamlSourceInfo Constructor
+
+Initializes a new instance of the [Avalonia.Markup.Xaml.Diagnostics.XamlSourceInfo](xref:Avalonia.Markup.Xaml.Diagnostics.XamlSourceInfo) class
+with a specified line, column, and file path.
+
+```csharp
+public XamlSourceInfo(int line, int column, string filePath)
+```
+
+#### Parameters
+
+`line` int
+
+The line number of the source element.
+
+
+`column` int
+
+The column number of the source element.
+
+
+`filePath` string
+
+The full path of the source file.
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [&lt;Clone&gt;$](#uid-660169cfa2) | No summary available. |
+| [Equals (2 overloads)](#uid-7a89eb518f) | No summary available. |
+| [GetHashCode](#uid-3f08bc1fbd) | No summary available. |
+| [GetXamlSourceInfo (2 overloads)](#uid-cef4b79f49) | Retrieves the XAML source information associated with the specified key in the given resource dictionary, if available. |
+| [SetXamlSourceInfo (2 overloads)](#uid-8783d052c9) | Associates XAML source information with the specified key in the given resource dictionary. |
+| [ToString](#uid-9f478522f9) | Returns a string that represents the current [Avalonia.Markup.Xaml.Diagnostics.XamlSourceInfo](xref:Avalonia.Markup.Xaml.Diagnostics.XamlSourceInfo). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-660169cfa2"></span>
+
+### &lt;Clone&gt;$ Method
+
+```csharp
+public Avalonia.Markup.Xaml.Diagnostics.XamlSourceInfo <Clone>$()
+```
+
+#### Returns
+
+[Avalonia.Markup.Xaml.Diagnostics.XamlSourceInfo](xref:Avalonia.Markup.Xaml.Diagnostics.XamlSourceInfo)
+
+
+</section>
+
+<span id="uid-7a89eb518f"></span>
+
+### Equals overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e8489fe262"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(Avalonia.Markup.Xaml.Diagnostics.XamlSourceInfo other)
+```
+
+##### Parameters
+
+`other` [Avalonia.Markup.Xaml.Diagnostics.XamlSourceInfo](xref:Avalonia.Markup.Xaml.Diagnostics.XamlSourceInfo)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-de3bbdc15b"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(object obj)
+```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3f08bc1fbd"></span>
+
+### GetHashCode Method
+
+```csharp
+public int GetHashCode()
+```
+
+#### Returns
+
+int
+
+
+</section>
+
+<span id="uid-cef4b79f49"></span>
+
+### GetXamlSourceInfo overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0de6388fbb"></span>
+
+#### GetXamlSourceInfo Method
+
+Retrieves the XAML source information associated with the specified key in the given resource dictionary, if available.
+
+```csharp
+public Avalonia.Markup.Xaml.Diagnostics.XamlSourceInfo GetXamlSourceInfo(Avalonia.Controls.IResourceDictionary dictionary, object key)
+```
+
+##### Parameters
+
+`dictionary` [Avalonia.Controls.IResourceDictionary](xref:Avalonia.Controls.IResourceDictionary)
+
+The resource dictionary associated with the XAML source information.
+
+
+`key` object
+
+The key associated with the source info.
+
+
+##### Returns
+
+[Avalonia.Markup.Xaml.Diagnostics.XamlSourceInfo](xref:Avalonia.Markup.Xaml.Diagnostics.XamlSourceInfo)
+
+A [Avalonia.Markup.Xaml.Diagnostics.XamlSourceInfo](xref:Avalonia.Markup.Xaml.Diagnostics.XamlSourceInfo) instance containing the XAML source information for the specified key, or
+if no source information is available.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a9e1c0aac2"></span>
+
+#### GetXamlSourceInfo Method
+
+Retrieves the XAML source information associated with the specified object, if available.
+
+```csharp
+public Avalonia.Markup.Xaml.Diagnostics.XamlSourceInfo GetXamlSourceInfo(object obj)
+```
+
+##### Parameters
+
+`obj` object
+
+The object for which to obtain XAML source information. Cannot be null.
+
+
+##### Returns
+
+[Avalonia.Markup.Xaml.Diagnostics.XamlSourceInfo](xref:Avalonia.Markup.Xaml.Diagnostics.XamlSourceInfo)
+
+A [Avalonia.Markup.Xaml.Diagnostics.XamlSourceInfo](xref:Avalonia.Markup.Xaml.Diagnostics.XamlSourceInfo) instance containing the XAML source information for the specified object, or
+if no source information is available.
+
+
+</section>
+
+<span id="uid-8783d052c9"></span>
+
+### SetXamlSourceInfo overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7d9551afbe"></span>
+
+#### SetXamlSourceInfo Method
+
+Associates XAML source information with the specified key in the given resource dictionary.
+
+```csharp
+public void SetXamlSourceInfo(Avalonia.Controls.IResourceDictionary dictionary, object key, Avalonia.Markup.Xaml.Diagnostics.XamlSourceInfo info)
+```
+
+##### Parameters
+
+`dictionary` [Avalonia.Controls.IResourceDictionary](xref:Avalonia.Controls.IResourceDictionary)
+
+The resource dictionary to associate with the XAML source information.
+
+
+`key` object
+
+The key associated with the source info.
+
+
+`info` [Avalonia.Markup.Xaml.Diagnostics.XamlSourceInfo](xref:Avalonia.Markup.Xaml.Diagnostics.XamlSourceInfo)
+
+The XAML source information to associate with the object, or null to remove any existing association.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d30d21a605"></span>
+
+#### SetXamlSourceInfo Method
+
+Associates XAML source information with the specified object for debugging or diagnostic purposes.
+
+```csharp
+public void SetXamlSourceInfo(object obj, Avalonia.Markup.Xaml.Diagnostics.XamlSourceInfo info)
+```
+
+##### Parameters
+
+`obj` object
+
+The object to associate with the XAML source information. Cannot be null.
+
+
+`info` [Avalonia.Markup.Xaml.Diagnostics.XamlSourceInfo](xref:Avalonia.Markup.Xaml.Diagnostics.XamlSourceInfo)
+
+The XAML source information to associate with the object, or null to remove any existing association.
+
+
+##### Remarks
+
+This method is typically used to enable enhanced debugging or diagnostics by tracking
+the origin of XAML elements at runtime. If the same object is passed multiple times, the most recent source
+information will overwrite any previous value.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9f478522f9"></span>
+
+### ToString Method
+
+Returns a string that represents the current [Avalonia.Markup.Xaml.Diagnostics.XamlSourceInfo](xref:Avalonia.Markup.Xaml.Diagnostics.XamlSourceInfo).
+
+```csharp
+public string ToString()
+```
+
+#### Returns
+
+string
+
+A formatted string in the form `"FilePath:Line,Column"`,
+or `"(unknown):Line,Column"` if the file path is not set.
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [LineNumber](#uid-5191ba5415) | Gets the 1-based line number in the source file where the element is defined. |
+| [LinePosition](#uid-5a138b6142) | Gets the 1-based column number in the source file where the element is defined. |
+| [SourceUri](#uid-9c5921654a) | Gets the full path of the source file containing the element, or `null` if unavailable. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5191ba5415"></span>
+
+### LineNumber Property
+
+Gets the 1-based line number in the source file where the element is defined.
+
+```csharp
+public int LineNumber { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5a138b6142"></span>
+
+### LinePosition Property
+
+Gets the 1-based column number in the source file where the element is defined.
+
+```csharp
+public int LinePosition { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9c5921654a"></span>
+
+### SourceUri Property
+
+Gets the full path of the source file containing the element, or `null` if unavailable.
+
+```csharp
+public Uri SourceUri { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

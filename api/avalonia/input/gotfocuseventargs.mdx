@@ -1,0 +1,121 @@
+---
+title: 'GotFocusEventArgs'
+hide_title: true
+slug: '/avalonia/input/gotfocuseventargs'
+uid: 'Avalonia.Input.GotFocusEventArgs'
+commentId: 'T:Avalonia.Input.GotFocusEventArgs'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Input'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">GotFocusEventArgs Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Input</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Input/GotFocusEventArgs.cs">GotFocusEventArgs.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Holds arguments for a [Avalonia.Input.InputElement.GotFocusEvent](xref:Avalonia.Input.InputElement.GotFocusEvent).
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class GotFocusEventArgs
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> EventArgs <span className="apiref-page__relation-separator">-&gt;</span> <a href="../interactivity/routedeventargs">RoutedEventArgs</a> <span className="apiref-page__relation-separator">-&gt;</span> GotFocusEventArgs
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="ikeymodifierseventargs">IKeyModifiersEventArgs</a>
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [GotFocusEventArgs](#uid-91daaa7a0b) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-91daaa7a0b"></span>
+
+### GotFocusEventArgs Constructor
+
+```csharp
+public GotFocusEventArgs()
+```
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [KeyModifiers](#uid-1e59f7d291) | Gets or sets any key modifiers active at the time of focus. |
+| [NavigationMethod](#uid-a58f980b87) | Gets or sets a value indicating how the change in focus occurred. |
+| [Handled](../interactivity/routedeventargs.mdx#uid-204d2af354) | Gets or sets a value indicating whether the routed event has already been handled. Inherited from [RoutedEventArgs](../interactivity/routedeventargs.mdx). |
+| [Route](../interactivity/routedeventargs.mdx#uid-751be73db9) | Gets or sets the routing strategy (direct, bubbling, or tunneling) of the routed event. Inherited from [RoutedEventArgs](../interactivity/routedeventargs.mdx). |
+| [RoutedEvent](../interactivity/routedeventargs.mdx#uid-4e102999d9) | Gets or sets the routed event associated with these event args. Inherited from [RoutedEventArgs](../interactivity/routedeventargs.mdx). |
+| [Source](../interactivity/routedeventargs.mdx#uid-4385b523d5) | Gets or sets the source object that raised the routed event. Inherited from [RoutedEventArgs](../interactivity/routedeventargs.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1e59f7d291"></span>
+
+### KeyModifiers Property
+
+Gets or sets any key modifiers active at the time of focus.
+
+```csharp
+public Avalonia.Input.KeyModifiers KeyModifiers { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a58f980b87"></span>
+
+### NavigationMethod Property
+
+Gets or sets a value indicating how the change in focus occurred.
+
+```csharp
+public Avalonia.Input.NavigationMethod NavigationMethod { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

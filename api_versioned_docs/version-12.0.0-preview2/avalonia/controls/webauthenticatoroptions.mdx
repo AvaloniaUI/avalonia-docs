@@ -1,0 +1,302 @@
+---
+title: 'WebAuthenticatorOptions'
+hide_title: true
+slug: '/avalonia/controls/webauthenticatoroptions'
+uid: 'Avalonia.Controls.WebAuthenticatorOptions'
+commentId: 'T:Avalonia.Controls.WebAuthenticatorOptions'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.WebView'
+assembly: 'Avalonia.Controls.WebView'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0-android36.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">WebAuthenticatorOptions Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.WebView</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.WebView</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Authentication options that control the broker's behavior.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class WebAuthenticatorOptions
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> WebAuthenticatorOptions
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;WebAuthenticatorOptions&gt;
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [WebAuthenticatorOptions](#uid-28624eef68) | Authentication options that control the broker's behavior. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-28624eef68"></span>
+
+### WebAuthenticatorOptions Constructor
+
+Authentication options that control the broker's behavior.
+
+```csharp
+public WebAuthenticatorOptions(Uri RequestUri, Uri RedirectUri)
+```
+
+#### Parameters
+
+`RequestUri` Uri
+
+The initial URI that starts the authentication flow.
+
+
+`RedirectUri` Uri
+
+URI that indicates the completion of the authentication flow.
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [&lt;Clone&gt;$](#uid-12e3929d0b) | No summary available. |
+| [Deconstruct](#uid-65941568b7) | No summary available. |
+| [Equals (2 overloads)](#uid-54a173f468) | No summary available. |
+| [GetHashCode](#uid-a2bcf011b9) | No summary available. |
+| [ToString](#uid-b4378a4adf) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-12e3929d0b"></span>
+
+### &lt;Clone&gt;$ Method
+
+```csharp
+public Avalonia.Controls.WebAuthenticatorOptions <Clone>$()
+```
+
+#### Returns
+
+[Avalonia.Controls.WebAuthenticatorOptions](xref:Avalonia.Controls.WebAuthenticatorOptions)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-65941568b7"></span>
+
+### Deconstruct Method
+
+```csharp
+public void Deconstruct(Uri& RequestUri, Uri& RedirectUri)
+```
+
+#### Parameters
+
+`RequestUri` Uri&amp;
+
+
+`RedirectUri` Uri&amp;
+
+
+</section>
+
+<span id="uid-54a173f468"></span>
+
+### Equals overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9d103c62e9"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(Avalonia.Controls.WebAuthenticatorOptions other)
+```
+
+##### Parameters
+
+`other` [Avalonia.Controls.WebAuthenticatorOptions](xref:Avalonia.Controls.WebAuthenticatorOptions)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-89432f39f9"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(object obj)
+```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a2bcf011b9"></span>
+
+### GetHashCode Method
+
+```csharp
+public int GetHashCode()
+```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b4378a4adf"></span>
+
+### ToString Method
+
+```csharp
+public string ToString()
+```
+
+#### Returns
+
+string
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [NativeWebDialogFactory](#uid-72e40d181b) | Callback that can be used to override [NativeWebDialog](xref:Avalonia.Controls.NativeWebDialog) creation when [WebAuthenticationBroker](xref:Avalonia.Controls.WebAuthenticationBroker) uses dialog implementation instead of system auth APIs. |
+| [NonPersistent](#uid-0ae5ac2c43) | Hint for the platform implementation to not store any session data persistently. |
+| [PreferNativeWebDialog](#uid-b8e82620e4) | If true, [WebAuthenticationBroker](xref:Avalonia.Controls.WebAuthenticationBroker) will avoid platform specific implementation option, and will use webview dialog window. |
+| [RedirectUri](#uid-3bc63df7ee) | URI that indicates the completion of the authentication flow. |
+| [RequestUri](#uid-d5e38c6464) | The initial URI that starts the authentication flow. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-72e40d181b"></span>
+
+### NativeWebDialogFactory Property
+
+Callback that can be used to override [NativeWebDialog](xref:Avalonia.Controls.NativeWebDialog) creation when [WebAuthenticationBroker](xref:Avalonia.Controls.WebAuthenticationBroker) uses dialog implementation instead of system auth APIs.
+
+```csharp
+public Func<Avalonia.Controls.NativeWebDialog> NativeWebDialogFactory { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0ae5ac2c43"></span>
+
+### NonPersistent Property
+
+Hint for the platform implementation to not store any session data persistently.
+
+```csharp
+public bool NonPersistent { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b8e82620e4"></span>
+
+### PreferNativeWebDialog Property
+
+If true, [WebAuthenticationBroker](xref:Avalonia.Controls.WebAuthenticationBroker) will avoid platform specific implementation option, and will use webview dialog window.
+
+```csharp
+public bool PreferNativeWebDialog { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3bc63df7ee"></span>
+
+### RedirectUri Property
+
+URI that indicates the completion of the authentication flow.
+
+```csharp
+public Uri RedirectUri { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d5e38c6464"></span>
+
+### RequestUri Property
+
+The initial URI that starts the authentication flow.
+
+```csharp
+public Uri RequestUri { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

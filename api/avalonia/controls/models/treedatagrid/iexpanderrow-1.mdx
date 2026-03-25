@@ -1,0 +1,91 @@
+---
+title: 'IExpanderRow<TModel>'
+hide_title: true
+slug: '/avalonia/controls/models/treedatagrid/iexpanderrow-1'
+uid: 'Avalonia.Controls.Models.TreeDataGrid.IExpanderRow`1'
+commentId: 'T:Avalonia.Controls.Models.TreeDataGrid.IExpanderRow`1'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.TreeDataGrid'
+assembly: 'Avalonia.Controls.TreeDataGrid'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Models.TreeDataGrid'
+tfms:
+  - 'net8.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IExpanderRow&lt;TModel&gt; Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Models.TreeDataGrid</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Represents a row which can be expanded to reveal nested data.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface IExpanderRow<TModel>
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="iexpander">IExpander</a>, <a href="irow">IRow</a>, IRow&lt;&gt;, INotifyPropertyChanged
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [UpdateShowExpander](#uid-3b83a1300d) | Called by an [Avalonia.Controls.Models.TreeDataGrid.IExpanderCell](xref:Avalonia.Controls.Models.TreeDataGrid.IExpanderCell) when it receives a notification that the row's [Avalonia.Controls.Models.TreeDataGrid.IExpander.ShowExpander](xref:Avalonia.Controls.Models.TreeDataGrid.IExpander.ShowExpander) state should be changed. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3b83a1300d"></span>
+
+### UpdateShowExpander Method
+
+Called by an [Avalonia.Controls.Models.TreeDataGrid.IExpanderCell](xref:Avalonia.Controls.Models.TreeDataGrid.IExpanderCell) when it receives a notification that the
+row's [Avalonia.Controls.Models.TreeDataGrid.IExpander.ShowExpander](xref:Avalonia.Controls.Models.TreeDataGrid.IExpander.ShowExpander) state should be changed.
+
+```csharp
+public void UpdateShowExpander(Avalonia.Controls.Models.TreeDataGrid.IExpanderCell cell, bool value)
+```
+
+#### Parameters
+
+`cell` [Avalonia.Controls.Models.TreeDataGrid.IExpanderCell](xref:Avalonia.Controls.Models.TreeDataGrid.IExpanderCell)
+
+The cell whose property has changed.
+
+
+`value` bool
+
+The new value.
+
+
+</section>
+
+</ApiRefPage>
+

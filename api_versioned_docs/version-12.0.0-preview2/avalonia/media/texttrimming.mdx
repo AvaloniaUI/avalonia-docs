@@ -1,0 +1,226 @@
+---
+title: 'TextTrimming'
+hide_title: true
+slug: '/avalonia/media/texttrimming'
+uid: 'Avalonia.Media.TextTrimming'
+commentId: 'T:Avalonia.Media.TextTrimming'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Media'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">TextTrimming Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Media</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Media/TextTrimming.cs">TextTrimming.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Describes how text is trimmed when it overflows.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class TextTrimming
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> TextTrimming
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Derived types:</span> <a href="textleadingprefixtrimming">TextLeadingPrefixTrimming</a>, <a href="textpathsegmenttrimming">TextPathSegmentTrimming</a>, <a href="texttrailingtrimming">TextTrailingTrimming</a>
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [CreateCollapsingProperties](#uid-3f476477a6) | Creates properties that will be used for collapsing lines of text. |
+| [Parse](#uid-88f35cc419) | Parses a text trimming string. Names must match static properties defined in this class. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3f476477a6"></span>
+
+### CreateCollapsingProperties Method
+
+Creates properties that will be used for collapsing lines of text.
+
+```csharp
+public Avalonia.Media.TextFormatting.TextCollapsingProperties CreateCollapsingProperties(Avalonia.Media.TextCollapsingCreateInfo createInfo)
+```
+
+#### Parameters
+
+`createInfo` [Avalonia.Media.TextCollapsingCreateInfo](xref:Avalonia.Media.TextCollapsingCreateInfo)
+
+Contextual info about text that will be collapsed.
+
+
+#### Returns
+
+[Avalonia.Media.TextFormatting.TextCollapsingProperties](xref:Avalonia.Media.TextFormatting.TextCollapsingProperties)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-88f35cc419"></span>
+
+### Parse Method
+
+Parses a text trimming string. Names must match static properties defined in this class.
+
+```csharp
+public Avalonia.Media.TextTrimming Parse(string s)
+```
+
+#### Parameters
+
+`s` string
+
+The text trimming string.
+
+
+#### Returns
+
+[Avalonia.Media.TextTrimming](xref:Avalonia.Media.TextTrimming)
+
+The [Avalonia.Media.TextTrimming](xref:Avalonia.Media.TextTrimming).
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [CharacterEllipsis](#uid-e084945626) | Text is trimmed at a character boundary. An ellipsis (...) is drawn in place of remaining text. |
+| [LeadingCharacterEllipsis](#uid-b98185ed17) | Text is trimmed at a character boundary starting from the beginning. An ellipsis (...) is drawn in place of remaining text. |
+| [None](#uid-b45a12be51) | Text is not trimmed. |
+| [PathSegmentEllipsis](#uid-240bf38530) | Gets a text trimming strategy that inserts an ellipsis to indicate omitted segments in a path string. |
+| [PrefixCharacterEllipsis](#uid-31f7b79bf5) | Text is trimmed after a given prefix length. An ellipsis (...) is drawn in between prefix and suffix and represents remaining text. |
+| [WordEllipsis](#uid-2b9b4c2055) | Text is trimmed at a word boundary. An ellipsis (...) is drawn in place of remaining text. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e084945626"></span>
+
+### CharacterEllipsis Property
+
+Text is trimmed at a character boundary. An ellipsis (...) is drawn in place of remaining text.
+
+```csharp
+public Avalonia.Media.TextTrimming CharacterEllipsis { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b98185ed17"></span>
+
+### LeadingCharacterEllipsis Property
+
+Text is trimmed at a character boundary starting from the beginning. An ellipsis (...) is drawn in place of remaining text.
+
+```csharp
+public Avalonia.Media.TextTrimming LeadingCharacterEllipsis { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b45a12be51"></span>
+
+### None Property
+
+Text is not trimmed.
+
+```csharp
+public Avalonia.Media.TextTrimming None { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-240bf38530"></span>
+
+### PathSegmentEllipsis Property
+
+Gets a text trimming strategy that inserts an ellipsis to indicate omitted segments in a path string.
+
+```csharp
+public Avalonia.Media.TextTrimming PathSegmentEllipsis { get; set; }
+```
+
+#### Remarks
+
+Use this property to display long file or directory paths in a shortened form, with
+an ellipsis representing omitted segments. This is useful for UI scenarios where space is limited and the
+full path cannot be shown.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-31f7b79bf5"></span>
+
+### PrefixCharacterEllipsis Property
+
+Text is trimmed after a given prefix length. An ellipsis (...) is drawn in between prefix and suffix and represents remaining text.
+
+```csharp
+public Avalonia.Media.TextTrimming PrefixCharacterEllipsis { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2b9b4c2055"></span>
+
+### WordEllipsis Property
+
+Text is trimmed at a word boundary. An ellipsis (...) is drawn in place of remaining text.
+
+```csharp
+public Avalonia.Media.TextTrimming WordEllipsis { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

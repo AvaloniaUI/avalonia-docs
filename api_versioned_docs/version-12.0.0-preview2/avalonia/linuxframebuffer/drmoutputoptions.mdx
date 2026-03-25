@@ -1,0 +1,196 @@
+---
+title: 'DrmOutputOptions'
+hide_title: true
+slug: '/avalonia/linuxframebuffer/drmoutputoptions'
+uid: 'Avalonia.LinuxFramebuffer.DrmOutputOptions'
+commentId: 'T:Avalonia.LinuxFramebuffer.DrmOutputOptions'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.LinuxFramebuffer'
+assembly: 'Avalonia.LinuxFramebuffer'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.LinuxFramebuffer'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">DrmOutputOptions Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.LinuxFramebuffer</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.LinuxFramebuffer</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.LinuxFramebuffer</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Linux/Avalonia.LinuxFramebuffer/DrmOutputOptions.cs">DrmOutputOptions.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+DRM Output Options
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class DrmOutputOptions
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> DrmOutputOptions
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [DrmOutputOptions](#uid-4120128114) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4120128114"></span>
+
+### DrmOutputOptions Constructor
+
+```csharp
+public DrmOutputOptions()
+```
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [ConnectorType](#uid-972e0f4435) | Specifies whether our connector is HDMI-A, DVI, DisplayPort, etc. If null, the preferred connector will be used. |
+| [ConnectorTypeId](#uid-5cd52b9e7d) | Specifies the connector type ID used with [Avalonia.LinuxFramebuffer.DrmOutputOptions.ConnectorType](xref:Avalonia.LinuxFramebuffer.DrmOutputOptions.ConnectorType). If null, the preferred connector type ID will be used. |
+| [EnableInitialBufferSwapping](#uid-ffff67032e) | If true an two cycle buffer swapping is processed at init. Default: True |
+| [InitialBufferSwappingColor](#uid-8886ce87c2) | Color for [Avalonia.LinuxFramebuffer.DrmOutputOptions.EnableInitialBufferSwapping](xref:Avalonia.LinuxFramebuffer.DrmOutputOptions.EnableInitialBufferSwapping) Default: R0 G0 B0 A0 |
+| [Orientation](#uid-ba674e22fa) | The orientation of the screen relative to the frame buffer memory orientation Default: Normal |
+| [Scaling](#uid-bf80f0a4c8) | Scaling factor. Default: 1.0 |
+| [VideoMode](#uid-febefd2873) | Specifies the video mode with which the [DrmOutput](xref:Avalonia.LinuxFramebuffer.Output.DrmOutput) should be created, if it is not found it will fallback to the preferred mode. If null, the preferred mode will be used. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-972e0f4435"></span>
+
+### ConnectorType Property
+
+Specifies whether our connector is HDMI-A, DVI, DisplayPort, etc.
+If null, the preferred connector will be used.
+
+```csharp
+public Nullable<Avalonia.LinuxFramebuffer.DrmConnectorType> ConnectorType { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5cd52b9e7d"></span>
+
+### ConnectorTypeId Property
+
+Specifies the connector type ID used with [Avalonia.LinuxFramebuffer.DrmOutputOptions.ConnectorType](xref:Avalonia.LinuxFramebuffer.DrmOutputOptions.ConnectorType).
+If null, the preferred connector type ID will be used.
+
+```csharp
+public Nullable<uint> ConnectorTypeId { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ffff67032e"></span>
+
+### EnableInitialBufferSwapping Property
+
+If true an two cycle buffer swapping is processed at init.
+Default: True
+
+```csharp
+public bool EnableInitialBufferSwapping { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8886ce87c2"></span>
+
+### InitialBufferSwappingColor Property
+
+Color for [Avalonia.LinuxFramebuffer.DrmOutputOptions.EnableInitialBufferSwapping](xref:Avalonia.LinuxFramebuffer.DrmOutputOptions.EnableInitialBufferSwapping)
+Default: R0 G0 B0 A0
+
+```csharp
+public Avalonia.Media.Color InitialBufferSwappingColor { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ba674e22fa"></span>
+
+### Orientation Property
+
+The orientation of the screen relative to the frame buffer memory orientation
+Default: Normal
+
+```csharp
+public Avalonia.Platform.SurfaceOrientation Orientation { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-bf80f0a4c8"></span>
+
+### Scaling Property
+
+Scaling factor.
+Default: 1.0
+
+```csharp
+public double Scaling { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-febefd2873"></span>
+
+### VideoMode Property
+
+Specifies the video mode with which the [DrmOutput](xref:Avalonia.LinuxFramebuffer.Output.DrmOutput) should be created, if it is not found it will fallback to the preferred mode.
+If null, the preferred mode will be used.
+
+```csharp
+public Nullable<Avalonia.PixelSize> VideoMode { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

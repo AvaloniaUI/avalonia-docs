@@ -1,0 +1,305 @@
+---
+title: 'RuntimeXamlLoaderDocument'
+hide_title: true
+slug: '/avalonia/markup/xaml/runtimexamlloaderdocument'
+uid: 'Avalonia.Markup.Xaml.RuntimeXamlLoaderDocument'
+commentId: 'T:Avalonia.Markup.Xaml.RuntimeXamlLoaderDocument'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Markup.Xaml'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Markup.Xaml'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">RuntimeXamlLoaderDocument Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Markup.Xaml</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Markup.Xaml</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Markup/Avalonia.Markup.Xaml/RuntimeXamlLoaderDocument.cs">RuntimeXamlLoaderDocument.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class RuntimeXamlLoaderDocument
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> RuntimeXamlLoaderDocument
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [RuntimeXamlLoaderDocument (8 overloads)](#uid-56bebfe1a0) | No summary available. |
+
+<span id="uid-56bebfe1a0"></span>
+
+### RuntimeXamlLoaderDocument overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5a6e237328"></span>
+
+#### RuntimeXamlLoaderDocument Constructor
+
+```csharp
+public RuntimeXamlLoaderDocument(System.IO.Stream stream)
+```
+
+##### Parameters
+
+`stream` System.IO.Stream
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2bec6c7460"></span>
+
+#### RuntimeXamlLoaderDocument Constructor
+
+```csharp
+public RuntimeXamlLoaderDocument(object rootInstance, System.IO.Stream stream)
+```
+
+##### Parameters
+
+`rootInstance` object
+
+
+`stream` System.IO.Stream
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b2cc9d6629"></span>
+
+#### RuntimeXamlLoaderDocument Constructor
+
+```csharp
+public RuntimeXamlLoaderDocument(object rootInstance, string xaml)
+```
+
+##### Parameters
+
+`rootInstance` object
+
+
+`xaml` string
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4c9c10b610"></span>
+
+#### RuntimeXamlLoaderDocument Constructor
+
+```csharp
+public RuntimeXamlLoaderDocument(string xaml)
+```
+
+##### Parameters
+
+`xaml` string
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-54bafb4cbc"></span>
+
+#### RuntimeXamlLoaderDocument Constructor
+
+```csharp
+public RuntimeXamlLoaderDocument(Uri baseUri, System.IO.Stream stream)
+```
+
+##### Parameters
+
+`baseUri` Uri
+
+
+`stream` System.IO.Stream
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-38e3c7ef70"></span>
+
+#### RuntimeXamlLoaderDocument Constructor
+
+```csharp
+public RuntimeXamlLoaderDocument(Uri baseUri, object rootInstance, System.IO.Stream stream)
+```
+
+##### Parameters
+
+`baseUri` Uri
+
+
+`rootInstance` object
+
+
+`stream` System.IO.Stream
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7bf66a7ca7"></span>
+
+#### RuntimeXamlLoaderDocument Constructor
+
+```csharp
+public RuntimeXamlLoaderDocument(Uri baseUri, object rootInstance, string xaml)
+```
+
+##### Parameters
+
+`baseUri` Uri
+
+
+`rootInstance` object
+
+
+`xaml` string
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d2479c6916"></span>
+
+#### RuntimeXamlLoaderDocument Constructor
+
+```csharp
+public RuntimeXamlLoaderDocument(Uri baseUri, string xaml)
+```
+
+##### Parameters
+
+`baseUri` Uri
+
+
+`xaml` string
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [BaseUri](#uid-b5de20e5af) | The URI of the XAML being loaded. |
+| [Document](#uid-ddceede5e2) | Path to the XAML document being loaded. |
+| [RootInstance](#uid-086cd0f9b2) | The optional instance into which the XAML should be loaded. |
+| [ServiceProvider](#uid-29c6758014) | Parent's service provider to pass to the Build method or type ctor, if available. |
+| [XamlStream](#uid-d73bbd126f) | The stream containing the XAML. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b5de20e5af"></span>
+
+### BaseUri Property
+
+The URI of the XAML being loaded.
+
+```csharp
+public Uri BaseUri { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ddceede5e2"></span>
+
+### Document Property
+
+Path to the XAML document being loaded.
+
+```csharp
+public string Document { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-086cd0f9b2"></span>
+
+### RootInstance Property
+
+The optional instance into which the XAML should be loaded.
+
+```csharp
+public object RootInstance { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-29c6758014"></span>
+
+### ServiceProvider Property
+
+Parent's service provider to pass to the Build method or type ctor, if available.
+
+```csharp
+public IServiceProvider ServiceProvider { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d73bbd126f"></span>
+
+### XamlStream Property
+
+The stream containing the XAML.
+
+```csharp
+public System.IO.Stream XamlStream { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

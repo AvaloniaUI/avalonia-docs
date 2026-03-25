@@ -1,0 +1,129 @@
+---
+title: 'InheritDataTypeFromItemsAttribute'
+hide_title: true
+slug: '/avalonia/metadata/inheritdatatypefromitemsattribute'
+uid: 'Avalonia.Metadata.InheritDataTypeFromItemsAttribute'
+commentId: 'T:Avalonia.Metadata.InheritDataTypeFromItemsAttribute'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Metadata'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">InheritDataTypeFromItemsAttribute Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Metadata</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Metadata/InheritDataTypeFromItemsAttribute.cs">InheritDataTypeFromItemsAttribute.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Instructs the compiler to resolve the compiled bindings data type for the item-specific properties of collection-like controls.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class InheritDataTypeFromItemsAttribute
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Attribute <span className="apiref-page__relation-separator">-&gt;</span> InheritDataTypeFromItemsAttribute
+</div>
+</div>
+
+## Remarks
+
+A typical usage example is a [ListBox](xref:Avalonia.Controls.ListBox) control, where [Avalonia.Metadata.InheritDataTypeFromItemsAttribute](xref:Avalonia.Metadata.InheritDataTypeFromItemsAttribute) is defined on the ItemTemplate property,
+allowing the template to inherit the data type from the Items collection binding.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [InheritDataTypeFromItemsAttribute](#uid-ee14dfb5cd) | Initializes a new instance of the [Avalonia.Metadata.InheritDataTypeFromItemsAttribute](xref:Avalonia.Metadata.InheritDataTypeFromItemsAttribute) class. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ee14dfb5cd"></span>
+
+### InheritDataTypeFromItemsAttribute Constructor
+
+Initializes a new instance of the [Avalonia.Metadata.InheritDataTypeFromItemsAttribute](xref:Avalonia.Metadata.InheritDataTypeFromItemsAttribute) class.
+
+```csharp
+public InheritDataTypeFromItemsAttribute(string ancestorItemsProperty)
+```
+
+#### Parameters
+
+`ancestorItemsProperty` string
+
+The name of the property whose item type should be used on the target property.
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [AncestorItemsProperty](#uid-329ac4f787) | The name of the property whose item type should be used on the target property. |
+| [AncestorType](#uid-ccda529168) | The ancestor type to be used in a lookup for the [Avalonia.Metadata.InheritDataTypeFromItemsAttribute.AncestorItemsProperty](xref:Avalonia.Metadata.InheritDataTypeFromItemsAttribute.AncestorItemsProperty). If null, the declaring type of the target property is used. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-329ac4f787"></span>
+
+### AncestorItemsProperty Property
+
+The name of the property whose item type should be used on the target property.
+
+```csharp
+public string AncestorItemsProperty { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ccda529168"></span>
+
+### AncestorType Property
+
+The ancestor type to be used in a lookup for the [Avalonia.Metadata.InheritDataTypeFromItemsAttribute.AncestorItemsProperty](xref:Avalonia.Metadata.InheritDataTypeFromItemsAttribute.AncestorItemsProperty).
+If null, the declaring type of the target property is used.
+
+```csharp
+public Type AncestorType { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

@@ -1,83 +1,87 @@
 ---
 id: welcome
 title: Welcome
+description: Get started with the Avalonia cross-platform .NET UI framework. Find installation guides, tutorials, migration paths, and API references.
+doc-type: overview
 ---
 
-Welcome to the documentation for Avalonia.
+<head>
+  <title>Avalonia documentation</title>
+  <meta
+    name="description"
+    content="Documentation for Avalonia, the cross-platform .NET UI framework. Build apps for Windows, macOS, Linux, iOS, Android, and WebAssembly from a single codebase."
+  />
+</head>
 
-## Overview 
-Avalonia is a powerful framework that enables developers to create cross-platform application using .NET. It uses its own rendering engine to draw UI controls, ensuring consistent appearance and behavior across various platforms, including Windows, macOS, Linux, Android, iOS and WebAssembly. This means that developers can share their UI code and maintain a uniform look and feel regardless of the target platform.
-
-Applications built with Avalonia are written in C# or F#, which makes it easy to rapidly prototype applications that can develop over time into complex systems. Unlike other toolkits that might be restricted by limited APIs, or poor performance, Avalonia applications have the advantage of full access to the platform's capabilities and deliver incredible performance, thanks to the compositional renderer. 
-
-
-As Avalonia applications are cross-platform applications, they are architected similarly to other traditional cross-platform applications. The most common approach is to create a core project that houses the shared code, and then develop platform-specific projects that will consume this shared code.
-
-Avalonia offers two techniques to create user interfaces. The first one is to use code to build UI views leveraging the extensive API provided by Avalonia. Alternatively, developers can utilize the Extensible Application Markup Language (XAML), a declarative markup language that allows developers to define user interfaces. In this approach, the user interface structure is described in a XAML file, while the runtime behavior is defined in a separate code-behind file. To learn more about XAML, refer to [Avalonia XAML](basics/user-interface/introduction-to-xaml).
-
-## Get Started
-
-Get started right away even if you are completely new to Avalonia using a simple step-by-step tutorial, with introductions to the basic concepts behind the framework.
+Welcome to the Avalonia documentation. Whether you are building your first app or migrating an existing project, these docs cover everything from installation to deployment.
 
 :::info
-Get started [here](get-started).
+
+These docs cover Avalonia 12. For Avalonia 11 documentation, visit [v11.docs.avaloniaui.net](https://v11.docs.avaloniaui.net/).
+
 :::
 
-## Continue Your Learning
+## What is Avalonia?
 
-Learn the basic concepts of Avalonia.
+Avalonia is an open-source, cross-platform UI framework for building applications with .NET. It uses its own rendering engine to draw controls, so your app looks and behaves the same on every platform. Write your UI once in C# or F# with XAML, and deploy to:
 
-:::info
-Get started [here](basics).
-:::
+- **Windows** (10, 11)
+- **macOS** (Apple Silicon and Intel)
+- **Desktop Linux** (X11 and Wayland)
+- **Embedded Linux** (framebuffer on Raspberry Pi and similar devices)
+- **iOS** and **Android**
+- **WebAssembly**
 
-### How-To Guides
+For exact version and architecture details, see [Supported platforms](supported-platforms).
 
-Our guides offer practical implementation advice, often as step-by-step procedures. This section is organised by task.
+## Key capabilities
 
-:::info
-Get the guides for practical advice [here](guides).
-:::
-### Advanced Concepts
+| Capability | Description |
+|---|---|
+| **Cross-platform rendering** | Avalonia's own rendering engine produces pixel-identical output on every platform. Skia is the default backend, and the team is collaborating with Google's Flutter team to bring the [Impeller](https://avaloniaui.net/blog/avalonia-partners-with-google-s-flutter-t-eam-to-bring-impeller-rendering-to-net) rendering engine to .NET. No native control wrappers, no platform-specific quirks. |
+| **XAML and code-behind** | Describe your UI declaratively with XAML or build it entirely in code. Avalonia XAML will feel familiar if you have worked with WPF or UWP. |
+| **Styling system** | A CSS-inspired styling system with selectors, style classes, pseudoclasses, and control themes. See [Styles](styling/styles). |
+| **Data binding** | Compiled bindings checked at build time, full MVVM support, and integration with CommunityToolkit.Mvvm. See [Data binding](data-binding/introduction-to-data-binding). |
+| **Rich control library** | 60+ built-in controls including DataGrid, TreeView, TabControl, Calendar, and more. Fully styleable and templatable. |
+| **Accessibility** | Built-in support for screen readers and keyboard navigation across platforms. |
+| **DevTools** | Press <kbd>F12</kbd> at runtime to inspect the visual tree, properties, styles, and layout. |
 
-Read this section to expand your knowledge of the concepts used by Avalonia. This section is organised by subject.
+## Choose your path
 
-:::info
-Explore the advanced Avalonia concepts [here](concepts).
-:::
+### New to Avalonia?
 
-## Coming from WPF?
+1. [Install Avalonia](get-started/install-avalonia) and [set up your IDE](get-started/set-up-your-ide)
+2. [Create your first project](get-started/create-your-first-project)
+3. [Follow the starter tutorial](get-started/starter-tutorial/index.mdx) to build a temperature converter app
+4. [Learn the fundamentals](fundamentals/avalonia-xaml): XAML, controls, layout, and the visual tree
 
-We have specific guidance and some detailed reference material for developers who are converting applications from WPF (Windows Presentation Foundation).
+### Coming from WPF?
 
-:::info
-See our WPF migration guide [here](get-started/wpf).
-:::
+Avalonia's API is intentionally close to WPF, but there are important differences in styling, templates, and the property system.
 
-<XpfAd/>
+- [WPF migration guide](migration/wpf/index.md): a section-by-section comparison
+- [WPF cheat sheet](migration/wpf/cheat-sheet): quick mapping of WPF concepts to Avalonia equivalents
 
-## Consult Our Reference
+If you need to run an existing WPF application cross-platform without rewriting it, [Avalonia XPF](/xpf) provides binary-compatible WPF support on top of Avalonia's rendering engine.
 
-:::info
-See our reference section [here](reference).
-:::
+### Upgrading from Avalonia 11?
 
-## Getting Help
+Avalonia 12 includes compiled bindings by default, a new clipboard API, updated window decorations, and more.
 
-If you encounter any issues or bugs with _Avalonia_, please open a new issue on _GitHub_.
+- [Breaking changes in Avalonia 12](avalonia12-breaking-changes): full list with migration guidance for each change
 
-:::info
-Access the _Avalonia_ _GitHub_ [here](https://github.com/AvaloniaUI/Avalonia).
-:::
+### Looking for samples?
 
-We have an active developer community on _Gitter_ and _Telegram_ that can often help.
+- [Samples and tutorials](samples-tutorials/index.md): starter apps, real-world examples, and video walkthroughs
 
-:::info
-Connect to community support using the details [here](community.md).
-:::
+## Need help?
 
-In addition to community support, we offer a range of commercial support plans that provide priority assistance from the core contributors.
+If you get stuck, check the [Troubleshooting](/troubleshooting) pages or connect with the community on [GitHub Discussions](https://github.com/AvaloniaUI/Avalonia/discussions).
 
-:::info
-To learn more about commercial support, see our website page [here](https://avaloniaui.net/Support).
-:::
+To report a bug, open an issue on [GitHub](https://github.com/AvaloniaUI/Avalonia).
+
+## See also
+
+- [Supported platforms](supported-platforms)
+- [Samples and tutorials](samples-tutorials/index.md)
+- [Avalonia GitHub repository](https://github.com/AvaloniaUI/Avalonia)

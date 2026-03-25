@@ -1,0 +1,109 @@
+---
+title: 'WeakEvent<TSender, TEventArgs>'
+hide_title: true
+slug: '/avalonia/utilities/weakevent-2'
+uid: 'Avalonia.Utilities.WeakEvent`2'
+commentId: 'T:Avalonia.Utilities.WeakEvent`2'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Utilities'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">WeakEvent&lt;TSender, TEventArgs&gt; Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Utilities</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Utilities/WeakEvent.cs">WeakEvent.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Manages subscriptions to events using weak listeners.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class WeakEvent<TSender, TEventArgs>
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="weakevent">WeakEvent</a> <span className="apiref-page__relation-separator">-&gt;</span> WeakEvent&lt;TSender, TEventArgs&gt;
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Subscribe](#uid-ca7be98fae) | No summary available. |
+| [Unsubscribe](#uid-9ededeed37) | No summary available. |
+| [Register (3 overloads)](weakevent.mdx#uid-88a4223e32) | Inherited from [WeakEvent](weakevent.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ca7be98fae"></span>
+
+### Subscribe Method
+
+```csharp
+public void Subscribe(TSender target, Avalonia.Utilities.IWeakEventSubscriber<TEventArgs><TEventArgs> subscriber)
+```
+
+#### Parameters
+
+`target` TSender
+
+
+`subscriber` Avalonia.Utilities.IWeakEventSubscriber&lt;TEventArgs&gt;&lt;TEventArgs&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9ededeed37"></span>
+
+### Unsubscribe Method
+
+```csharp
+public void Unsubscribe(TSender target, Avalonia.Utilities.IWeakEventSubscriber<TEventArgs><TEventArgs> subscriber)
+```
+
+#### Parameters
+
+`target` TSender
+
+
+`subscriber` Avalonia.Utilities.IWeakEventSubscriber&lt;TEventArgs&gt;&lt;TEventArgs&gt;
+
+
+</section>
+
+</ApiRefPage>
+

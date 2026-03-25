@@ -1,0 +1,316 @@
+---
+title: 'TextInputMethodClient'
+hide_title: true
+slug: '/avalonia/input/textinput/textinputmethodclient'
+uid: 'Avalonia.Input.TextInput.TextInputMethodClient'
+commentId: 'T:Avalonia.Input.TextInput.TextInputMethodClient'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Input.TextInput'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">TextInputMethodClient Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Input.TextInput</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Input/TextInput/TextInputMethodClient.cs">TextInputMethodClient.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class TextInputMethodClient
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> TextInputMethodClient
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [ExecuteContextMenuAction](#uid-09a71bff40) | Execute specific context menu actions |
+| [SetPreeditText (2 overloads)](#uid-07ee636bcb) | Sets the non-committed input string |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-09a71bff40"></span>
+
+### ExecuteContextMenuAction Method
+
+Execute specific context menu actions
+
+```csharp
+public void ExecuteContextMenuAction(Avalonia.Input.TextInput.ContextMenuAction action)
+```
+
+#### Parameters
+
+`action` [Avalonia.Input.TextInput.ContextMenuAction](xref:Avalonia.Input.TextInput.ContextMenuAction)
+
+The [Avalonia.Input.TextInput.ContextMenuAction](xref:Avalonia.Input.TextInput.ContextMenuAction) to perform
+
+
+</section>
+
+<span id="uid-07ee636bcb"></span>
+
+### SetPreeditText overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7191b38837"></span>
+
+#### SetPreeditText Method
+
+Sets the non-committed input string
+
+```csharp
+public void SetPreeditText(string preeditText)
+```
+
+##### Parameters
+
+`preeditText` string
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e77dcd6575"></span>
+
+#### SetPreeditText Method
+
+```csharp
+public void SetPreeditText(string preeditText, Nullable<int> cursorPos)
+```
+
+##### Parameters
+
+`preeditText` string
+
+
+`cursorPos` Nullable&lt;int&gt;
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [CursorRectangle](#uid-1df1a50378) | Gets the cursor rectangle relative to the TextViewVisual |
+| [Selection](#uid-18676137da) | Gets or sets the curent selection range within current surrounding text. |
+| [SupportsPreedit](#uid-98d5f46c95) | Indicates if TextViewVisual is capable of displaying non-committed input on the cursor position |
+| [SupportsSurroundingText](#uid-b000dfcc62) | Indicates if text input client is capable of providing the text around the cursor |
+| [SurroundingText](#uid-31223fd910) | Returns the text around the cursor, usually the current paragraph |
+| [TextViewVisual](#uid-0cd0343efd) | The visual that's showing the text |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1df1a50378"></span>
+
+### CursorRectangle Property
+
+Gets the cursor rectangle relative to the TextViewVisual
+
+```csharp
+public Avalonia.Rect CursorRectangle { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-18676137da"></span>
+
+### Selection Property
+
+Gets or sets the curent selection range within current surrounding text.
+
+```csharp
+public Avalonia.Input.TextInput.TextSelection Selection { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-98d5f46c95"></span>
+
+### SupportsPreedit Property
+
+Indicates if TextViewVisual is capable of displaying non-committed input on the cursor position
+
+```csharp
+public bool SupportsPreedit { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b000dfcc62"></span>
+
+### SupportsSurroundingText Property
+
+Indicates if text input client is capable of providing the text around the cursor
+
+```csharp
+public bool SupportsSurroundingText { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-31223fd910"></span>
+
+### SurroundingText Property
+
+Returns the text around the cursor, usually the current paragraph
+
+```csharp
+public string SurroundingText { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0cd0343efd"></span>
+
+### TextViewVisual Property
+
+The visual that's showing the text
+
+```csharp
+public Avalonia.Visual TextViewVisual { get; set; }
+```
+
+</section>
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [CursorRectangleChanged](#uid-82e53c08fd) | Fires when the cursor rectangle has changed |
+| [InputPaneActivationRequested](#uid-8ea89f8553) | Fires when client requests the input panel be opened. |
+| [ResetRequested](#uid-57ea1c6a90) | Fires when client wants to reset IME state |
+| [SelectionChanged](#uid-25cfcfdf97) | Fires when the selection has changed |
+| [SurroundingTextChanged](#uid-898a8095ac) | Fires when the surrounding text has changed |
+| [TextViewVisualChanged](#uid-a856fcd295) | Fires when the text view visual has changed |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-82e53c08fd"></span>
+
+### CursorRectangleChanged Event
+
+Fires when the cursor rectangle has changed
+
+```csharp
+public event EventHandler CursorRectangleChanged
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8ea89f8553"></span>
+
+### InputPaneActivationRequested Event
+
+Fires when client requests the input panel be opened.
+
+```csharp
+public event EventHandler InputPaneActivationRequested
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-57ea1c6a90"></span>
+
+### ResetRequested Event
+
+Fires when client wants to reset IME state
+
+```csharp
+public event EventHandler ResetRequested
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-25cfcfdf97"></span>
+
+### SelectionChanged Event
+
+Fires when the selection has changed
+
+```csharp
+public event EventHandler SelectionChanged
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-898a8095ac"></span>
+
+### SurroundingTextChanged Event
+
+Fires when the surrounding text has changed
+
+```csharp
+public event EventHandler SurroundingTextChanged
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a856fcd295"></span>
+
+### TextViewVisualChanged Event
+
+Fires when the text view visual has changed
+
+```csharp
+public event EventHandler TextViewVisualChanged
+```
+
+</section>
+
+</ApiRefPage>
+
