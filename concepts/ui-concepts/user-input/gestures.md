@@ -18,6 +18,7 @@ Avalonia provides the following built-in gesture recognizers:
 | `ScrollGestureRecognizer` | Detects scrolling (panning) in horizontal, vertical, or both directions. |
 | `PinchGestureRecognizer` | Detects pinch-to-zoom interactions where two pointer contacts move toward or away from each other. |
 | `PullGestureRecognizer` | Detects pull (drag from edge) gestures in a specified direction, useful for pull-to-refresh patterns. |
+| `SwipeGestureRecognizer` | Detects swipe and flick gestures for discrete paging interactions such as carousel navigation. Provides velocity data for speed-sensitive transitions. |
 
 ## Attaching a gesture recognizer
 
@@ -93,5 +94,6 @@ You can view the source for related classes on GitHub:
 - [Pinch gesture recognizer](/docs/input-interaction/gestures/pinch-gesture-recognizer)
 - [Pull gesture recognizer](/docs/input-interaction/gestures/pull-gesture-recognizer)
 - [Scroll gesture recognizer](/docs/input-interaction/gestures/scroll-gesture-recognizer)
+- [Swipe gesture recognizer](/docs/input-interaction/gestures/swipe-gesture-recognizer)
 - [Pointer devices](pointer)
 - [Routed events](routed-events)
