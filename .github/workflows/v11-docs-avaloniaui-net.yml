@@ -1,4 +1,4 @@
-name: v11-docs.avaloniaui.net CI/CD
+name: deploy.v11.docs.avaloniaui.net CI/CD
 
 on:
   push:
@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
 
 concurrency:
-  group: v11-deploy-docs-avaloniaui-net-${{ github.ref }}
+  group: deploy.v11.docs.avaloniaui.net-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
@@ -59,7 +59,7 @@ jobs:
           RCLONE_CONFIG_SCALEWAY_REGION: fr-par
           RCLONE_CONFIG_SCALEWAY_ACL: public-read
         run: |
-          rclone sync build/assets/ scaleway:v11-docs.avaloniaui.net/assets/ \
+          rclone sync build/assets/ scaleway:v11.docs.avaloniaui.net/assets/ \
             --header-upload "Cache-Control: public, max-age=31536000, immutable" \
             --s3-acl public-read \
             --verbose
@@ -75,7 +75,7 @@ jobs:
           RCLONE_CONFIG_SCALEWAY_REGION: fr-par
           RCLONE_CONFIG_SCALEWAY_ACL: public-read
         run: |
-          rclone sync build/ scaleway:v11-docs.avaloniaui.net/ \
+          rclone sync build/ scaleway:v11.docs.avaloniaui.net/ \
             --exclude "assets/**" \
             --header-upload "Cache-Control: public, max-age=300, s-maxage=3600" \
             --s3-acl public-read \
@@ -84,7 +84,7 @@ jobs:
       - name: Verify deployment
         if: github.ref == 'refs/heads/v11-main' && github.event_name != 'pull_request'
         run: |
-          HTTP_STATUS=$(curl -s -o /dev/null -w "%{http_code}" http://v11-docs.avaloniaui.net.s3-website.fr-par.scw.cloud)
+          HTTP_STATUS=$(curl -s -o /dev/null -w "%{http_code}" http://v11.docs.avaloniaui.net.s3-website.fr-par.scw.cloud)
           if [ "$HTTP_STATUS" = "200" ]; then
             echo "Verification passed (HTTP $HTTP_STATUS)"
           else
