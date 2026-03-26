@@ -814,7 +814,6 @@ const sidebars = {
             "avalonia/controls/primitives/scrolleventtype",
             "avalonia/controls/primitives/selecteddatescollection",
             "avalonia/controls/primitives/selectingitemscontrol",
-            "avalonia/controls/primitives/selectionhandletype",
             "avalonia/controls/primitives/snappointsalignment",
             "avalonia/controls/primitives/snappointstype",
             "avalonia/controls/primitives/splitviewtemplatesettings",
@@ -1173,7 +1172,6 @@ const sidebars = {
             "avalonia/input/findnextelementoptions",
             "avalonia/input/focuschangingeventargs",
             "avalonia/input/focusmanager",
-            "avalonia/input/gotfocuseventargs",
             "avalonia/input/holdingroutedeventargs",
             "avalonia/input/holdingstate",
             "avalonia/input/iasyncdatatransfer",
@@ -1885,7 +1883,6 @@ const sidebars = {
             "avalonia/media/textformatting/textlinemetrics",
             "avalonia/media/textformatting/textmetrics",
             "avalonia/media/textformatting/textparagraphproperties",
-            "avalonia/media/textformatting/textrange",
             "avalonia/media/textformatting/textrun",
             "avalonia/media/textformatting/textrunbounds",
             "avalonia/media/textformatting/textrunproperties",
@@ -3154,29 +3151,6 @@ const sidebars = {
         },
         {
           "type": "category",
-          "label": "Avalonia.Controls.Android",
-          "items": [
-            "avalonia/controls/android/redirecturireceiveractivity"
-          ],
-          "link": {
-            "type": "doc",
-            "id": "avalonia/controls/android/index"
-          }
-        },
-        {
-          "type": "category",
-          "label": "Avalonia.Controls.Win.WebView2.Interop",
-          "items": [
-            "avalonia/controls/win/webview2/interop/corewebview2-mouse-event-kind",
-            "avalonia/controls/win/webview2/interop/corewebview2-mouse-event-virtual-keys"
-          ],
-          "link": {
-            "type": "doc",
-            "id": "avalonia/controls/win/webview2/interop/index"
-          }
-        },
-        {
-          "type": "category",
           "label": "Avalonia.Platform",
           "items": [
             "avalonia/platform/androidwebviewenvironmentrequestedeventargs",
@@ -3202,39 +3176,6 @@ const sidebars = {
             "id": "avalonia/platform/index"
           }
         },
-        {
-          "type": "category",
-          "label": "global",
-          "items": [
-            "global/mz-scriptresultcommand",
-            "global/mz-a",
-            "global/mz-b",
-            "global/na-a",
-            "global/nh-a",
-            "global/nr-a",
-            "global/nr-b",
-            "global/nr-c",
-            "global/nr-d",
-            "global/nr-e",
-            "global/nr-f",
-            "global/tp-a",
-            "global/tv-2-b",
-            "global/tv-2-c",
-            "global/ua-a",
-            "global/uo-a",
-            "global/uv-a",
-            "global/vd-a",
-            "global/vg-a",
-            "global/wa-h",
-            "global/wa-i",
-            "global/wp-a",
-            "global/wp-b"
-          ],
-          "link": {
-            "type": "doc",
-            "id": "global/index"
-          }
-        }
       ],
       "link": {
         "type": "doc",
