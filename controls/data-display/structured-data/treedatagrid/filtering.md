@@ -14,7 +14,7 @@ This control is available as part of [Avalonia Accelerate](https://avaloniaui.ne
 Filtering lets you display only the rows that match specific criteria in your `TreeDataGrid`. Both `FlatTreeDataGridSource` and `HierarchicalTreeDataGridSource` support filtering through predicate functions.
 
 :::note
-Filtering requires the code-behind `Source` approach. There is currently no XAML equivalent for filtering — you must create a `FlatTreeDataGridSource` or `HierarchicalTreeDataGridSource` in your view model. We plan to add an API for filtering XAML-based controls in future.
+Filtering requires the code-behind `Source` approach. There is currently no XAML equivalent for filtering. You must create a `FlatTreeDataGridSource` or `HierarchicalTreeDataGridSource` in your view model.
 :::
 
 ## Enabling filtering

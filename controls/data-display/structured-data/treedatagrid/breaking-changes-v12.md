@@ -63,11 +63,11 @@ continues to work as before (with the API changes described in this document).
 
 There is now a fluent API for creating columns from code.
 
-Note that separate getter/setter lambdas are no longer used. The getter expression is used for
-two-way binding automatically when the expression is writable. If you wish to create a readonly
+Separate getter/setter lambdas are no longer used. The getter expression is used for
+two-way binding automatically when the expression is writable. If you wish to create a read-only
 column, set `IsReadOnly` in the options callback.
 
-When the header matches the property selected by the lambda, you can omit it entirely.
+When the header matches the property selected by the lambda, you can omit it.
 
 ### `WithTextColumn`
 
@@ -132,7 +132,7 @@ For hierarchical data with a text column inside the expander:
 +})
 ```
 
-Note that the header and width have moved from the inner column to the expander column.
+The header and width have now moved from the inner column to the expander column.
 
 For an expander with a custom inner column (e.g. a template column), use
 `WithHierarchicalExpanderColumn`:
@@ -195,8 +195,8 @@ configured via a lambda callback on the fluent methods:
 
 The `CanUserResizeColumn` property has been renamed to `CanUserResize`.
 
-Note that `IsTextSearchEnabled` on `TextColumnCreateOptions` now defaults to `true` (it was
-`false` in 11.x). If you do not want text search on a text column, you must now explicitly
+`IsTextSearchEnabled` on `TextColumnCreateOptions` now defaults to `true`. Previously, it was
+`false` in 11.x. If you do not want text search on a text column, you must now explicitly
 disable it:
 
 ```csharp
@@ -229,7 +229,7 @@ The following types have been renamed:
 
 ## Removed types
 
-The following internal types were removed:
+The following types were removed:
 
 - `NotifyingBase`, `ReadOnlyListBase<T>`, `SortableRowsBase<TModel, TRow>`
 - `AnonymousSortableRows<TModel>`, `HierarchicalRows<TModel>`, `HierarchicalRow<TModel>`
@@ -285,7 +285,7 @@ The `RowExpanding`, `RowExpanded`, `RowCollapsing`, and `RowCollapsed` events no
 ## Text search uses bindings
 
 Text search configuration has changed from lambda-based value selectors to Avalonia
-bindings:
+bindings.
 
 For template columns, the `TextSearchValueSelector` lambda on `TemplateColumnOptions` has
 been replaced with a `TextSearchBinding` property on `TemplateColumnCreateOptions`:
