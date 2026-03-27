@@ -1,11 +1,12 @@
 ---
-id: navigationpage
 title: NavigationPage
+description: '`NavigationPage` provides stack-based page navigation. It includes a navigation bar, a back button, and optional page-specific command bars.'
+doc-type: reference
 ---
 
 import NavigationPageRootScreenshot from '/img/controls/navigationpage/navigationpage-root.png';
 import NavigationPagePushedScreenshot from '/img/controls/navigationpage/navigationpage-pushed.png';
-import NavigationPageCustomBackButtonScreenshot from '/img/controls/navigationpage/navigationpage-custom-back-button.png';
+import NavigationPageCustomBackScreenshot from '/img/controls/navigationpage/navigationpage-custom-back-button.png';
 import NavigationPageNoNavbarScreenshot from '/img/controls/navigationpage/navigationpage-no-navbar.png';
 import NavigationPageOverlayBarScreenshot from '/img/controls/navigationpage/navigationpage-overlay-bar.png';
 import NavigationPageTopCommandBarScreenshot from '/img/controls/navigationpage/navigationpage-top-commandbar.png';
@@ -13,404 +14,356 @@ import NavigationPageAppearanceScreenshot from '/img/controls/navigationpage/nav
 import NavigationPageModalScreenshot from '/img/controls/navigationpage/navigationpage-modal.png';
 import NavigationPageDrawerIntegrationScreenshot from '/img/controls/navigationpage/navigationpage-drawer-integration.png';
 
-The [`NavigationPage`](/api/avalonia/controls/navigationpage) manages a stack-based navigation system, allowing you to push and pop pages with animated transitions. It displays a navigation bar with a back button and the current page's header.
+# NavigationPage
 
-`NavigationPage` implements the `INavigation` interface, providing a full set of async navigation methods for pushing, popping, and replacing pages.
+`NavigationPage` provides stack-based navigation. Pages are pushed onto and popped off the stack through the `INavigation` interface. A navigation bar is rendered at the top of the page by default, showing the current page title, a back button when the stack depth is greater than 1, and optional command bars contributed by child pages.
 
-## Navigation bar layout
+`NavigationPage` implements `INavigation` directly. The navigation API is available either through `Page.Navigation` on child pages, or through a direct reference to the `NavigationPage` instance.
 
-The navigation bar is divided into three zones:
+## Navigation Bar Layout
 
-| Zone | Content |
-| --- | --- |
-| Left | Back button (when applicable) or custom `BackButtonContent` |
-| Center | The current page's `Header` |
-| Right | Reserved for future use or custom content via `TopCommandBar` |
+The navigation bar contains:
 
-## Useful properties
+| Zone | Contents |
+| ---- | -------- |
+| Left | Back button when depth is greater than 1. Hamburger toggle when at the root inside a `DrawerPage`. |
+| Center | Page title from the active page's `Header` property. |
+| Right | `TopCommandBar` control set via the `NavigationPage.TopCommandBar` attached property. |
+
+## Useful Properties
+
+You will probably use these properties most often:
 
 | Property | Type | Default | Description |
-| --- | --- | --- | --- |
-| `Content` | [`Page`](/api/avalonia/controls/page) | `null` | The initial root page displayed in the navigation stack. |
-| `PageTransition` | [`IPageTransition`](/api/avalonia/animation/ipagetransition) | Platform default | The transition animation used when navigating between pages. |
-| `ModalTransition` | `IPageTransition` | Platform default | The transition animation used when presenting or dismissing modal pages. |
-| `HasShadow` | `bool` | `false` | Displays a shadow beneath the navigation bar. |
-| `BarHeight` | `double` | `48` | The height of the navigation bar. |
-| `EffectiveBarHeight` | `double` | Computed | Read-only. The actual bar height after applying safe area insets and overrides. |
-| `IsBackButtonVisible` | `bool` | `true` | Controls whether the back button is shown when navigation is possible. |
-| `IsGestureEnabled` | `bool` | `true` | Enables swipe gestures for back navigation. |
-| `CanGoBack` | `bool` | `false` | Read-only. Returns `true` when there is more than one page on the navigation stack. |
-| `IsBackButtonEffectivelyVisible` | `bool` | Computed | Read-only. The resolved visibility of the back button, accounting for stack depth, `IsBackButtonVisible`, and per-page overrides. |
-| `NavigationStack` | `IReadOnlyList<Page>` | Empty | Read-only. The current stack of pages. |
+| -------- | ---- | ------- | ----------- |
+| `Content` | `object?` | `null` | The root page. Setting this pushes the page onto the stack automatically. This is the XAML content property. |
+| `PageTransition` | `IPageTransition?` | `null` | Transition played when pushing or popping pages. |
+| `ModalTransition` | `IPageTransition?` | `null` | Transition played when presenting or dismissing modal pages. |
+| `HasShadow` | `bool` | `false` | Whether the navigation bar casts a shadow onto the page content below. |
+| `BarHeight` | `double` | `48` | Default height of the navigation bar in device-independent pixels. |
+| `EffectiveBarHeight` | `double` | computed | Read-only. The actual bar height in use, taking per-page overrides into account. |
+| `IsBackButtonVisible` | `bool` | `true` | Global switch that controls whether a back button is ever shown in the bar. |
+| `IsGestureEnabled` | `bool` | `true` | Enables the edge-swipe gesture to navigate back. |
+| `CanGoBack` | `bool` | computed | Read-only. `true` when the navigation stack has more than one entry. |
+| `IsBackButtonEffectivelyVisible` | `bool` | computed | Read-only. The resolved back button visibility, taking into account `IsBackButtonVisible`, the per-page `HasBackButton` attached property, and stack depth. |
+| `ModalStack` | `IReadOnlyList<Page>` | computed | Read-only. Currently presented modal pages, oldest at index 0 and topmost last. |
+| `NavigationStack` | `IReadOnlyList<Page>` | computed | Read-only. Ordered list of pages on the stack, root first and top last. |
+| `IsNavigating` | `bool` | computed | Read-only. `true` while a navigation operation (push, pop, replace, or modal) is in progress. |
 
-## Attached properties
+## Attached Properties
 
-These properties can be set on individual `Page` instances to customize their appearance within the `NavigationPage`:
+Set these on individual child `Page` instances to control per-page navigation bar behavior.
 
-| Attached Property | Type | Default | Description |
-| --- | --- | --- | --- |
-| `NavigationPage.HasNavigationBar` | `bool` | `true` | Whether the navigation bar is visible for this page. |
-| `NavigationPage.HasBackButton` | `bool` | `true` | Whether the back button is shown for this page. |
-| `NavigationPage.IsBackButtonEnabled` | `bool` | `true` | Whether the back button is enabled for this page. |
-| `NavigationPage.BackButtonContent` | `object` | `null` | Custom content for the back button. |
-| `NavigationPage.TopCommandBar` | `Control` | `null` | A command bar displayed below the navigation bar for this page. |
-| `NavigationPage.BottomCommandBar` | `Control` | `null` | A command bar displayed at the bottom for this page. |
-| `NavigationPage.BarLayoutBehavior` | `BarLayoutBehavior?` | `null` | Controls how the navigation bar interacts with page content. |
-| `NavigationPage.BarHeightOverride` | `double?` | `null` | Overrides the bar height for this page. |
+| Property | Type | Default | Description |
+| -------- | ---- | ------- | ----------- |
+| `NavigationPage.HasNavigationBar` | `bool` | `true` | Shows the navigation bar for a specific page. |
+| `NavigationPage.HasBackButton` | `bool` | `true` | Shows the back button for a specific page. |
+| `NavigationPage.IsBackButtonEnabled` | `bool` | `true` | Enables the back button for a specific page. |
+| `NavigationPage.BackButtonContent` | `object?` | `null` | Custom content rendered inside the back button for a specific page. |
+| `NavigationPage.TopCommandBar` | `Control?` | `null` | A control rendered in the right zone of the navigation bar when that page is active. |
+| `NavigationPage.BottomCommandBar` | `Control?` | `null` | A control rendered in a command bar area below the page content when that page is active. |
+| `NavigationPage.BarLayoutBehavior` | `BarLayoutBehavior?` | `null` | Overrides how the navigation bar is laid out for a specific page. |
+| `NavigationPage.BarHeightOverride` | `double?` | `null` | Overrides `BarHeight` for a specific page. |
 
-### BarLayoutBehavior values
+## BarLayoutBehavior Values
 
 | Value | Description |
-| --- | --- |
-| `Inset` | The navigation bar pushes page content down. This is the default behavior. |
-| `Overlay` | The navigation bar floats over the page content without affecting its layout. |
+| ----- | ----------- |
+| `Inset` | Default. The navigation bar occupies layout space. Page content is laid out below it. |
+| `Overlay` | The navigation bar floats above the page content. Content extends behind the bar and should handle the inset via `SafeAreaPadding`. |
 
-## Navigation methods
+## Navigation Methods
 
-All navigation methods are asynchronous and return `Task`. Each method has an overload that accepts an `IPageTransition` parameter to override the default transition.
-
-| Method | Description |
-| --- | --- |
-| `PushAsync(Page)` | Pushes a new page onto the navigation stack. |
-| `PopAsync()` | Removes the current page from the stack and returns it. |
-| `PopToRootAsync()` | Pops all pages except the root page. |
-| `PopToPageAsync(Page)` | Pops pages until the specified page is on top. |
-| `ReplaceAsync(Page)` | Replaces the current page with a new page. |
-| `InsertPage(Page, Page)` | Inserts a page into the stack before the specified page. |
-| `RemovePage(Page)` | Removes a specific page from the stack. |
-
-### Modal navigation
+Navigation is performed through the `INavigation` interface, accessible via `Page.Navigation` on any child page, or directly on the `NavigationPage` instance.
 
 | Method | Description |
-| --- | --- |
-| `PushModalAsync(Page)` | Presents a page as a modal overlay. |
-| `PopModalAsync()` | Dismisses the current modal and returns it. |
-| `PopAllModalsAsync()` | Dismisses all modals. |
+| ------ | ----------- |
+| `PushAsync(page)` | Pushes a page with the configured `PageTransition`. |
+| `PushAsync(page, transition)` | Pushes with a specific transition. Pass `null` for no animation. |
+| `PopAsync()` | Pops the top page with the configured `PageTransition`. |
+| `PopAsync(transition)` | Pops with a specific transition. Pass `null` for no animation. |
+| `PopToRootAsync()` | Pops all pages down to the root. |
+| `PopToRootAsync(transition)` | Pops all pages down to the root, with a specific transition. |
+| `PopToPageAsync(page)` | Pops all pages above the specified page. |
+| `PopToPageAsync(page, transition)` | Pops all pages above the specified page, with a specific transition. |
+| `ReplaceAsync(page)` | Replaces the current top page with a new one. |
+| `ReplaceAsync(page, transition)` | Replaces the current top page with a new one, with a specific transition. |
+| `InsertPage(page, before)` | Inserts a page immediately before another in the stack, without animation. |
+| `RemovePage(page)` | Removes a specific page from the stack, without animation. |
+| `PushModalAsync(page)` | Presents a page modally, covering the entire `NavigationPage`. |
+| `PushModalAsync(page, transition)` | Presents a page modally with a specific transition. |
+| `PopModalAsync()` | Dismisses the top modal page. |
+| `PopModalAsync(transition)` | Dismisses the top modal with a specific transition. |
+| `PopAllModalsAsync()` | Dismisses all modal pages. |
+| `PopAllModalsAsync(transition)` | Dismisses all modals with a specific transition. |
+| `NavigationStack` | Read-only list of pages on the stack, root at index 0. |
+| `ModalStack` | Read-only list of currently presented modal pages. |
+| `StackDepth` | Number of pages currently on the navigation stack. |
+| `CanGoBack` | `true` when the stack has more than one entry. |
 
-### Stack properties
-
-| Property | Description |
-| --- | --- |
-| `NavigationStack` | Read-only list of pages currently on the navigation stack. |
-| `ModalStack` | Read-only list of pages currently presented as modals. |
-| `StackDepth` | The number of pages on the navigation stack. |
-| `CanGoBack` | Returns `true` when there is more than one page on the stack. |
+The system back button automatically calls `PopAsync()` when `StackDepth > 1`.
 
 ## Events
 
-| Event | Description |
-| --- | --- |
-| `Pushed` | Raised after a page is pushed onto the stack. |
-| `Popped` | Raised after a page is popped from the stack. |
-| `PoppedToRoot` | Raised after all pages are popped to the root. |
-| `PageInserted` | Raised after a page is inserted into the stack. |
-| `PageRemoved` | Raised after a page is removed from the stack. |
-| `ModalPushed` | Raised after a modal page is presented. |
-| `ModalPopped` | Raised after a modal page is dismissed. |
+| Event | Args type | Description |
+| ----- | --------- | ----------- |
+| `Pushed` | `NavigationEventArgs` | Raised after a page is pushed onto the stack. `args.Page` is the page that was pushed. |
+| `Popped` | `NavigationEventArgs` | Raised after a page is popped from the stack. `args.Page` is the page that was removed. |
+| `PoppedToRoot` | `NavigationEventArgs` | Raised after `PopToRootAsync` completes. `args.Page` is the new top page (the root). |
+| `PageInserted` | `PageInsertedEventArgs` | Raised after `InsertPage` completes. `args.Page` is the inserted page; `args.Before` is the page it was inserted before. |
+| `PageRemoved` | `PageRemovedEventArgs` | Raised after `RemovePage` completes. `args.Page` is the page that was removed. |
+| `ModalPushed` | `ModalPushedEventArgs` | Raised after a modal page is presented. `args.Modal` is the modal page. |
+| `ModalPopped` | `ModalPoppedEventArgs` | Raised after a modal page is dismissed. `args.Modal` is the page that was dismissed. |
 
 ## Examples
 
 ### Basic NavigationPage in XAML
 
-Define a `NavigationPage` with an initial root page:
-
 ```xml
-<NavigationPage xmlns="https://github.com/avaloniaui">
-    <ContentPage Header="Home">
-        <StackPanel Margin="16" Spacing="8">
-            <TextBlock Text="Home Page" FontSize="24" />
-            <Button Content="Go to Details" Click="OnGoToDetails" />
-        </StackPanel>
-    </ContentPage>
+<NavigationPage xmlns="https://github.com/avaloniaui"
+                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                x:Class="MyApp.AppShell">
+    <local:HomePage />
 </NavigationPage>
 ```
 
-<img src={NavigationPageRootScreenshot} alt="NavigationPage with root page" />
-
-### Basic NavigationPage in code
-
-You can also create a `NavigationPage` and set its root page in code:
+### Basic NavigationPage in Code
 
 ```csharp
-var navigationPage = new NavigationPage
+window.Page = new NavigationPage { Content = new HomePage() };
+```
+
+The root page shows the `Header` in the navigation bar with no back button:
+
+<img src={NavigationPageRootScreenshot} alt="" />
+
+When a page is pushed, the back button appears automatically:
+
+<img src={NavigationPagePushedScreenshot} alt="" />
+
+### Pushing and Popping Pages
+
+Access `Navigation` from within any child `ContentPage`:
+
+```csharp
+// Push a new page
+private async void OnGoToDetailsClick(object? sender, RoutedEventArgs e)
 {
-    Content = new ContentPage
-    {
-        Header = "Home",
-        Content = new StackPanel
-        {
-            Margin = new Thickness(16),
-            Spacing = 8,
-            Children =
-            {
-                new TextBlock { Text = "Home Page", FontSize = 24 },
-                new Button { Content = "Go to Details" }
-            }
-        }
-    }
-};
-```
+    await Navigation.PushAsync(new DetailPage());
+}
 
-### Pushing and popping pages
-
-Every `Page` exposes a `Navigation` property (of type `INavigation`) that references the nearest `NavigationPage` ancestor. Use this to navigate from within any page:
-
-```csharp
-// Push a new page onto the stack
-await Navigation.PushAsync(new DetailsPage());
-
-// Pop back to the previous page
-await Navigation.PopAsync();
-
-// Pop all the way back to the root page
-await Navigation.PopToRootAsync();
-```
-
-<img src={NavigationPagePushedScreenshot} alt="NavigationPage after pushing a page" />
-
-### Tracking stack depth
-
-Use the `StackDepth` property or the `CanGoBack` property to respond to navigation changes:
-
-```csharp
-navigationPage.Pushed += (sender, args) =>
+// Pop back
+private async void OnBackClick(object? sender, RoutedEventArgs e)
 {
-    Console.WriteLine($"Stack depth: {navigationPage.StackDepth}");
-    Console.WriteLine($"Can go back: {navigationPage.CanGoBack}");
-};
+    await Navigation.PopAsync();
+}
 
-navigationPage.Popped += (sender, args) =>
+// Pop to root from anywhere in the stack
+private async void OnGoHomeClick(object? sender, RoutedEventArgs e)
 {
-    Console.WriteLine($"Returned to: {navigationPage.NavigationStack.Last().Header}");
+    await Navigation.PopToRootAsync();
+}
+```
+
+### Tracking Stack Depth and Current Page
+
+```csharp
+private void UpdateStatus()
+{
+    StatusText.Text = $"Depth: {Navigation.StackDepth}";
+    HeaderText.Text = $"Current: {Navigation.NavigationStack[^1].Header}";
+    CanGoBackText.Text = Navigation.CanGoBack ? "Can go back" : "At root";
+}
+```
+
+### Hiding the Navigation Bar for a Page
+
+```xml
+<ContentPage NavigationPage.HasNavigationBar="False"
+             Header="Full Screen">
+    <!-- content fills the entire NavigationPage area -->
+</ContentPage>
+```
+
+```csharp
+NavigationPage.SetHasNavigationBar(page, false);
+```
+
+<img src={NavigationPageNoNavbarScreenshot} alt="" />
+
+### Hiding the Back Button
+
+```xml
+<ContentPage NavigationPage.HasBackButton="False" Header="Start">
+    <!-- user cannot navigate back from here -->
+</ContentPage>
+```
+
+```csharp
+NavigationPage.SetHasBackButton(page, false);
+```
+
+### Custom Back Button Content
+
+Replace the default back arrow with custom text or a control:
+
+```csharp
+NavigationPage.SetBackButtonContent(page, new TextBlock { Text = "Home" });
+```
+
+<img src={NavigationPageCustomBackScreenshot} alt="" />
+
+### Per-Page TopCommandBar
+
+Assign a command bar to a child page. It is rendered in the navigation bar area when that page is at the top of the stack.
+
+```xml
+<ContentPage xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyApp.ItemsPage"
+             Header="Items"
+             NavigationPage.TopCommandBar="{x:Reference TopBar}">
+
+    <CommandBar x:Name="TopBar">
+        <CommandBar.PrimaryCommands>
+            <AppBarButton Label="Add"    Click="OnAddClick" />
+            <AppBarButton Label="Filter" Click="OnFilterClick" />
+        </CommandBar.PrimaryCommands>
+    </CommandBar>
+
+    <ListBox ItemsSource="{Binding Items}" />
+
+</ContentPage>
+```
+
+<img src={NavigationPageTopCommandBarScreenshot} alt="" />
+
+### Page Transitions
+
+Set a transition on the `NavigationPage` to animate pushes and pops:
+
+```csharp
+// Horizontal slide (default direction)
+var navPage = new NavigationPage
+{
+    Content = new HomePage(),
+    PageTransition = new PageSlide(TimeSpan.FromMilliseconds(300))
 };
+
+// Cross-fade
+navPage.PageTransition = new CrossFade(TimeSpan.FromMilliseconds(250));
+
+// No animation
+await Navigation.PushAsync(new DetailPage(), transition: null);
 ```
 
-### Hiding the navigation bar
+### Modal Pages
 
-Set the `NavigationPage.HasNavigationBar` attached property to `False` on a page to hide the navigation bar for that page:
-
-```xml
-<ContentPage xmlns="https://github.com/avaloniaui"
-             Header="Immersive View"
-             NavigationPage.HasNavigationBar="False">
-    <!-- Full-screen content with no navigation bar -->
-    <Image Source="avares://MyApp/Assets/hero.jpg" Stretch="UniformToFill" />
-</ContentPage>
-```
-
-<img src={NavigationPageNoNavbarScreenshot} alt="NavigationPage with hidden navigation bar" />
-
-### Hiding the back button
-
-Set the `NavigationPage.HasBackButton` attached property to `False` on a page to hide the back button while keeping the navigation bar visible:
-
-```xml
-<ContentPage xmlns="https://github.com/avaloniaui"
-             Header="No Back Button"
-             NavigationPage.HasBackButton="False">
-    <TextBlock Text="The back button is hidden on this page" Margin="16" />
-</ContentPage>
-```
-
-### Custom back button content
-
-Provide custom content for the back button using the `NavigationPage.BackButtonContent` attached property:
-
-```xml
-<ContentPage xmlns="https://github.com/avaloniaui"
-             Header="Custom Back">
-    <NavigationPage.BackButtonContent>
-        <StackPanel Orientation="Horizontal" Spacing="4">
-            <PathIcon Data="{StaticResource ArrowLeftIcon}" />
-            <TextBlock Text="Return" VerticalAlignment="Center" />
-        </StackPanel>
-    </NavigationPage.BackButtonContent>
-
-    <TextBlock Text="Page with custom back button" Margin="16" />
-</ContentPage>
-```
-
-<img src={NavigationPageCustomBackButtonScreenshot} alt="NavigationPage with custom back button content" />
-
-### Per-page TopCommandBar
-
-Add a command bar below the navigation bar for a specific page using the `NavigationPage.TopCommandBar` attached property:
-
-```xml
-<ContentPage xmlns="https://github.com/avaloniaui"
-             Header="Search">
-    <NavigationPage.TopCommandBar>
-        <TextBox Watermark="Search..." Margin="8" />
-    </NavigationPage.TopCommandBar>
-
-    <TextBlock Text="Search results appear here" Margin="16" />
-</ContentPage>
-```
-
-<img src={NavigationPageTopCommandBarScreenshot} alt="NavigationPage with top command bar" />
-
-### Page transitions
-
-Customize the transition animation used when pushing and popping pages:
-
-```xml
-<NavigationPage xmlns="https://github.com/avaloniaui">
-    <NavigationPage.PageTransition>
-        <PageSlide Duration="0:00:00.300" Orientation="Horizontal" />
-    </NavigationPage.PageTransition>
-
-    <ContentPage Header="Home">
-        <TextBlock Text="Slide transitions" Margin="16" />
-    </ContentPage>
-</NavigationPage>
-```
-
-You can also override the transition for a single navigation call:
+Present a page that covers the full `NavigationPage` area. Useful for login flows, pickers, or any full-screen dialog:
 
 ```csharp
-var customTransition = new PageSlide(TimeSpan.FromMilliseconds(500));
-await Navigation.PushAsync(new DetailsPage(), customTransition);
-```
-
-<img src={NavigationPageAppearanceScreenshot} alt="NavigationPage appearance and transitions" />
-
-### Modal pages
-
-Modal pages are presented on top of the current navigation stack. They have their own separate stack:
-
-```csharp
-// Present a modal page
+// Present modally
 await Navigation.PushModalAsync(new LoginPage());
 
-// Dismiss the modal page
+// Dismiss
 await Navigation.PopModalAsync();
 
-// Dismiss all modal pages at once
+// Dismiss all modals at once
 await Navigation.PopAllModalsAsync();
+
+// Check how many modals are open
+int modalCount = Navigation.ModalStack.Count;
 ```
 
-<img src={NavigationPageModalScreenshot} alt="NavigationPage with modal page" />
+<img src={NavigationPageModalScreenshot} alt="" />
 
-### Modal transitions
-
-Customize the transition animation for modal pages separately from regular page transitions:
-
-```xml
-<NavigationPage xmlns="https://github.com/avaloniaui">
-    <NavigationPage.ModalTransition>
-        <PageSlide Duration="0:00:00.400" Orientation="Vertical" />
-    </NavigationPage.ModalTransition>
-
-    <ContentPage Header="Home">
-        <Button Content="Show Modal" Click="OnShowModal" />
-    </ContentPage>
-</NavigationPage>
-```
-
-### Customizing bar height
-
-Set a custom height for the navigation bar across all pages, or override it for a specific page:
-
-```xml
-<!-- Global bar height -->
-<NavigationPage xmlns="https://github.com/avaloniaui"
-                BarHeight="64">
-    <ContentPage Header="Tall Bar">
-        <TextBlock Text="This page has a taller navigation bar" Margin="16" />
-    </ContentPage>
-</NavigationPage>
-```
-
-```xml
-<!-- Per-page bar height override -->
-<ContentPage xmlns="https://github.com/avaloniaui"
-             Header="Custom Height"
-             NavigationPage.BarHeightOverride="72">
-    <TextBlock Text="This page overrides the bar height" Margin="16" />
-</ContentPage>
-```
-
-### Navigation bar shadow
-
-Enable a shadow beneath the navigation bar for a subtle depth effect:
-
-```xml
-<NavigationPage xmlns="https://github.com/avaloniaui"
-                HasShadow="True">
-    <ContentPage Header="Home">
-        <TextBlock Text="The navigation bar has a shadow" Margin="16" />
-    </ContentPage>
-</NavigationPage>
-```
-
-### Overlay navigation bar
-
-Use the `BarLayoutBehavior` attached property to make the navigation bar float over the page content instead of pushing it down:
-
-```xml
-<ContentPage xmlns="https://github.com/avaloniaui"
-             Header="Overlay"
-             NavigationPage.BarLayoutBehavior="Overlay">
-    <!-- Content extends behind the navigation bar -->
-    <Image Source="avares://MyApp/Assets/hero.jpg" Stretch="UniformToFill" />
-</ContentPage>
-```
-
-<img src={NavigationPageOverlayBarScreenshot} alt="NavigationPage with overlay bar layout" />
-
-### Replacing a login screen
-
-Use `ReplaceAsync` to swap the current page without adding to the back stack. This is useful for replacing a login screen with the main app screen after authentication:
+### Modal Transitions
 
 ```csharp
-// After successful login, replace the login page with the main page
-await Navigation.ReplaceAsync(new MainPage());
+var navPage = new NavigationPage
+{
+    Content = new HomePage(),
+    ModalTransition = new CrossFade(TimeSpan.FromMilliseconds(300))
+};
 ```
 
-The user will not be able to navigate back to the replaced page.
+### Customizing the Bar Height
 
-### DrawerPage integration
+```csharp
+// Global default
+var navPage = new NavigationPage
+{
+    Content = new HomePage(),
+    BarHeight = 64
+};
 
-When a `DrawerPage` is the root page of a `NavigationPage`, the drawer hamburger icon automatically switches to a back button when the navigation stack has more than one page:
-
-```xml
-<NavigationPage xmlns="https://github.com/avaloniaui">
-    <DrawerPage Header="Home">
-        <DrawerPage.Drawer>
-            <StackPanel Spacing="4" Margin="8">
-                <Button Content="Home" />
-                <Button Content="Settings" />
-            </StackPanel>
-        </DrawerPage.Drawer>
-
-        <StackPanel Margin="16" Spacing="8">
-            <TextBlock Text="Home Page" FontSize="24" />
-            <Button Content="Go to Details" Click="OnGoToDetails" />
-        </StackPanel>
-    </DrawerPage>
-</NavigationPage>
+// Override for a single page
+NavigationPage.SetBarHeightOverride(page, 56);
 ```
 
-<img src={NavigationPageDrawerIntegrationScreenshot} alt="NavigationPage with DrawerPage integration" />
+<img src={NavigationPageAppearanceScreenshot} alt="" />
 
-### Disabling back-swipe gesture
+### Navigation Bar Shadow
 
-Disable the swipe-to-go-back gesture globally or check whether it is enabled:
+```csharp
+navPage.HasShadow = true;
+```
+
+### Overlay Navigation Bar
+
+Use `BarLayoutBehavior.Overlay` so the bar floats above a hero image or map:
 
 ```xml
-<NavigationPage xmlns="https://github.com/avaloniaui"
-                IsGestureEnabled="False">
-    <ContentPage Header="No Swipe">
-        <TextBlock Text="Back-swipe gesture is disabled" Margin="16" />
-    </ContentPage>
-</NavigationPage>
+<ContentPage NavigationPage.BarLayoutBehavior="Overlay"
+             Header="Map">
+    <!-- content extends behind the bar -->
+    <MapView />
+</ContentPage>
+```
+
+<img src={NavigationPageOverlayBarScreenshot} alt="" />
+
+### Replacing the Login Screen After Sign-In
+
+After a successful login, replace the root page so the user cannot navigate back to the login screen:
+
+```csharp
+private async void OnLoginSuccess()
+{
+    // Remove the login page and push the main page
+    Navigation.InsertPage(new MainPage(), before: Navigation.NavigationStack[0]);
+    await Navigation.PopToRootAsync(transition: null);
+}
+```
+
+Or use `ReplaceAsync` to swap the top page:
+
+```csharp
+await Navigation.ReplaceAsync(new HomePage());
+```
+
+### DrawerPage Integration
+
+When `NavigationPage` is the `Content` of a `DrawerPage`, a hamburger toggle appears in the navigation bar at the root of the stack. It disappears when the user navigates deeper.
+
+```csharp
+var shell = new DrawerPage
+{
+    Drawer  = new MenuPage(),
+    Content = new NavigationPage { Content = new HomePage() }
+};
+window.Page = shell;
+```
+
+<img src={NavigationPageDrawerIntegrationScreenshot} alt="" />
+
+### Disabling Back-Swipe Gesture
+
+```csharp
+navPage.IsGestureEnabled = false;
 ```
 
 ## See also
 
-- [ContentPage](contentpage)
-- [TabbedPage](tabbedpage)
-- [DrawerPage](drawerpage)
-- [Page Transitions](/docs/graphics-animation/page-transitions)
-- [NavigationPage API reference](/api/avalonia/controls/navigationpage)
-- [`NavigationPage.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Page/NavigationPage.cs)
+- [API reference](/api/avalonia/controls/navigationpage)
+- [Source code](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Page/NavigationPage.cs)

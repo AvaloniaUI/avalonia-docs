@@ -1,6 +1,7 @@
 ---
-id: tabbedpage
 title: TabbedPage
+description: '`TabbedPage` displays a collection of pages through a tab strip. Each child `Page` becomes one tab.'
+doc-type: reference
 ---
 
 import TabbedPageBottomScreenshot from '/img/controls/tabbedpage/tabbedpage-bottom.png';
@@ -10,330 +11,377 @@ import TabbedPageLeftScreenshot from '/img/controls/tabbedpage/tabbedpage-left.p
 import TabbedPageRightScreenshot from '/img/controls/tabbedpage/tabbedpage-right.png';
 import TabbedPageInDrawerPageScreenshot from '/img/controls/tabbedpage/tabbedpage-in-drawerpage.png';
 
-The [`TabbedPage`](/api/avalonia/controls/tabbedpage) displays a collection of pages through a tab strip, allowing users to switch between pages by selecting tabs. Each child page becomes a tab, with the tab header and icon derived from the page's `Header` and `Icon` properties.
+# TabbedPage
 
-`TabbedPage` inherits from `SelectingMultiPage`, which in turn inherits from `MultiPage`. This inheritance chain provides built-in selection tracking, page lifecycle management, and support for page transitions.
+`TabbedPage` displays a collection of pages through a tab strip. Each child `Page` becomes one tab. The tab header is built from the page's `Header` property for the label and its `Icon` property for the icon. The tab strip position adapts to the target platform by default.
 
-:::info
-If you need a simple tab strip without page-based navigation features (lifecycle events, safe area handling), consider using the standard [TabControl](/controls/navigation/tabcontrol) instead.
-:::
+`TabbedPage` extends `SelectingMultiPage`, which extends `MultiPage`. This inheritance chain provides:
 
-## Useful properties
+- `Pages` collection
+- `ItemsSource`
+- `PageTemplate`
+- `SelectedIndex`
+- `SelectedPage`
+- `CurrentPage`
+- `SelectionChanged` event
+- `PagesChanged` event
+- `CurrentPageChanged` event
+
+## Useful Properties
+
+You will probably use these properties most often:
 
 | Property | Type | Default | Description |
-| --- | --- | --- | --- |
-| `Pages` | `IEnumerable` | `null` | The collection of [`Page`](/api/avalonia/controls/page) children displayed as tabs. |
-| `PageTemplate` | `IDataTemplate` | `null` | A data template used to render page content when binding to non-Page items. |
-| [`TabPlacement`](/api/avalonia/controls/tabplacement) | `Dock` | `Auto` | Controls where tabs are positioned. See the TabPlacement values table below. |
-| `IsKeyboardNavigationEnabled` | `bool` | `true` | Allows tab switching with keyboard input. |
-| `IsGestureEnabled` | `bool` | `false` | Enables swipe gestures to switch tabs. |
-| `PageTransition` | `IPageTransition` | `null` | The transition animation used when switching between tabs. |
-| `IndicatorTemplate` | `IDataTemplate` | `null` | A data template for the selected tab indicator. |
-| `SelectedIndex` | `int` | `0` | The index of the currently selected tab. |
-| `SelectedPage` | `Page` | `null` | Read-only. The currently selected `Page`. |
+| -------- | ---- | ------- | ----------- |
+| `Pages` | `IEnumerable<Page>?` | `null` | The collection of child pages. This is the XAML content property. Supports any `IEnumerable<Page>`, including observable collections. |
+| `ItemsSource` | `IEnumerable?` | `null` | View-model collection. When set, takes precedence over `Pages` as the item source. Use together with `PageTemplate` to convert each item into a `Page`. |
+| `PageTemplate` | `IDataTemplate?` | `null` | Data template used to generate `Page` instances when the source contains data objects rather than pages directly. |
+| `TabPlacement` | `TabPlacement` | `Auto` | Position of the tab strip. See the `TabPlacement` values table below. |
+| `IsKeyboardNavigationEnabled` | `bool` | `true` | Enables arrow keys and Ctrl+Tab, Ctrl+Shift+Tab to switch tabs. |
+| `IsGestureEnabled` | `bool` | `false` | Enables swipe gestures to switch tabs. Off by default. |
+| `PageTransition` | `IPageTransition?` | `null` | Transition animation played when switching between tabs. |
+| `IndicatorTemplate` | `IDataTemplate?` | `null` | Data template used to render the selection indicator on each tab item. |
+| `SelectedIndex` | `int` | `-1` | Zero-based index of the currently selected tab. |
+| `SelectedPage` | `Page?` | `null` | Read-only. The currently selected page. |
 
-### TabPlacement values
+## TabPlacement Values
 
 | Value | Description |
-| --- | --- |
-| `Auto` | The platform determines the tab position. Bottom on mobile, top on desktop. |
-| `Top` | Tabs are placed along the top edge. |
-| `Bottom` | Tabs are placed along the bottom edge. |
-| `Left` | Tabs are placed along the left edge. |
-| `Right` | Tabs are placed along the right edge. |
+| ----- | ----------- |
+| `Auto` | Platform-adaptive. Resolves to `Bottom` on Android and iOS, and `Top` on all other platforms. |
+| `Top` | Tab strip at the top of the content area. |
+| `Bottom` | Tab strip at the bottom of the content area. |
+| `Left` | Tab strip along the left side of the content area. |
+| `Right` | Tab strip along the right side of the content area. |
 
-### Attached properties
+## Attached Property
 
-| Attached Property | Type | Default | Description |
-| --- | --- | --- | --- |
-| `TabbedPage.IsTabEnabled` | `bool` | `true` | Set on a child `Page` to enable or disable its tab. A disabled tab cannot be selected by the user. |
+Set on individual child `Page` instances to control tab enablement.
 
-### Tab icons
+| Property | Type | Default | Description |
+| -------- | ---- | ------- | ----------- |
+| `TabbedPage.IsTabEnabled` | `bool` | `true` | When `false`, the tab is visually disabled and is skipped during keyboard and swipe navigation. If the currently selected tab is disabled, selection moves automatically to the nearest enabled tab. |
 
-The `Icon` property on a child page accepts the following value types:
+## Tab Icons
 
-- `StreamGeometry` path data
-- `DrawingImage`
-- `Bitmap` or other `IImage` implementations
-- String paths resolved through an asset loader
+The `Icon` property on each child `Page` controls the icon in the tab header. `TabbedPage` passes `Icon` and `IconTemplate` from the page to the underlying `TabItem`, so the standard `Content`/`ContentTemplate` rendering applies.
+
+When no `IconTemplate` is set, the default handling accepts these values:
+
+- `Geometry`: rendered as a path shape.
+- `PathIcon`: used directly as a one-to-one control mapping.
+- `DrawingImage` with a `GeometryDrawing`: the geometry is extracted.
+- `string`: parsed as an SVG path geometry string.
+- `IImage`: rendered as a bitmap image.
+
+Alternatively, set `IconTemplate` on the page to control how any icon data is rendered:
+
+```xml
+<ContentPage Header="Home">
+    <ContentPage.Icon>
+        <StreamGeometry>M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z</StreamGeometry>
+    </ContentPage.Icon>
+    <ContentPage.IconTemplate>
+        <DataTemplate DataType="Geometry">
+            <PathIcon Data="{Binding}" Width="20" Height="20" />
+        </DataTemplate>
+    </ContentPage.IconTemplate>
+    <!-- content -->
+</ContentPage>
+```
 
 ## Events
 
 | Event | Description |
-| --- | --- |
+| ----- | ----------- |
 | `SelectionChanged` | Raised when the selected tab changes. Provides `PreviousPage` and `CurrentPage`. |
-| `CurrentPageChanged` | Raised when the current page changes. |
-| `PagesChanged` | Raised when the `Pages` collection is modified (tabs added or removed). |
+| `CurrentPageChanged` | Raised when `CurrentPage` changes. |
+| `PagesChanged` | Raised when the `Pages` collection changes. |
 
-## Keyboard navigation
+Navigation lifecycle events (`NavigatedTo`, `Navigating`, `NavigatedFrom`) fire on each child `Page` as the active tab changes.
 
-When `IsKeyboardNavigationEnabled` is `true` (the default), users can switch tabs using the keyboard. The exact key bindings depend on the `TabPlacement` value:
+## Keyboard Navigation
 
-- **Top/Bottom tabs:** Left and Right arrow keys move between tabs.
-- **Left/Right tabs:** Up and Down arrow keys move between tabs.
+When `IsKeyboardNavigationEnabled` is `true`:
+
+- Horizontal tabs (Top, Bottom): left and right arrow keys switch tabs. RTL layouts reverse the direction.
+- Vertical tabs (Left, Right): up and down arrow keys switch tabs.
+- `Ctrl+Tab` moves to the next enabled tab. `Ctrl+Shift+Tab` moves to the previous.
+
+Disabled tabs (via `IsTabEnabled = false`) are always skipped.
 
 ## Examples
 
-### Basic tabbed layout (XAML)
-
-```xml
-<TabbedPage xmlns="https://github.com/avaloniaui">
-    <ContentPage Header="Home" Icon="{StaticResource HomeIcon}">
-        <TextBlock Text="Home content" Margin="16" />
-    </ContentPage>
-    <ContentPage Header="Search" Icon="{StaticResource SearchIcon}">
-        <TextBlock Text="Search content" Margin="16" />
-    </ContentPage>
-    <ContentPage Header="Profile" Icon="{StaticResource ProfileIcon}">
-        <TextBlock Text="Profile content" Margin="16" />
-    </ContentPage>
-</TabbedPage>
-```
-
-<img src={TabbedPageTopScreenshot} alt="TabbedPage with top tabs" />
-
-### Basic tabbed layout (code)
-
-```csharp
-var tabbedPage = new TabbedPage();
-
-var homePage = new ContentPage
-{
-    Header = "Home",
-    Content = new TextBlock { Text = "Home content", Margin = new Thickness(16) }
-};
-
-var searchPage = new ContentPage
-{
-    Header = "Search",
-    Content = new TextBlock { Text = "Search content", Margin = new Thickness(16) }
-};
-
-var profilePage = new ContentPage
-{
-    Header = "Profile",
-    Content = new TextBlock { Text = "Profile content", Margin = new Thickness(16) }
-};
-
-tabbedPage.Pages = new[] { homePage, searchPage, profilePage };
-```
-
-### Tab icons
-
-You can assign icons to tabs using the `Icon` property on each child page. Icons appear alongside the tab header text.
+### Basic TabbedPage in XAML
 
 ```xml
 <TabbedPage xmlns="https://github.com/avaloniaui"
-            TabPlacement="Bottom">
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="MyApp.MainTabs">
+
     <ContentPage Header="Home">
-        <ContentPage.Icon>
-            <StreamGeometry>M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z</StreamGeometry>
-        </ContentPage.Icon>
-        <TextBlock Text="Home content" Margin="16" />
+        <TextBlock Text="Home content"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center" />
     </ContentPage>
-    <ContentPage Header="Search">
-        <ContentPage.Icon>
-            <StreamGeometry>M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 ... Z</StreamGeometry>
-        </ContentPage.Icon>
-        <TextBlock Text="Search content" Margin="16" />
+
+    <ContentPage Header="Profile">
+        <TextBlock Text="Profile content"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center" />
     </ContentPage>
+
+    <ContentPage Header="Settings">
+        <TextBlock Text="Settings content"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center" />
+    </ContentPage>
+
 </TabbedPage>
+```
+
+### TabbedPage in Code
+
+```csharp
+var tabbedPage = new TabbedPage
+{
+    TabPlacement = TabPlacement.Bottom,
+    Pages = new AvaloniaList<Page>
+    {
+        new ContentPage { Header = "Home",     Content = homeView },
+        new ContentPage { Header = "Profile",  Content = profileView },
+        new ContentPage { Header = "Settings", Content = settingsView }
+    }
+};
+
+window.Page = tabbedPage;
+```
+
+<img src={TabbedPageBottomScreenshot} alt="" />
+
+### Tab Icons
+
+Set the `Icon` property on each child page:
+
+```xml
+<ContentPage Header="Home">
+    <ContentPage.Icon>
+        <StreamGeometry>M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z</StreamGeometry>
+    </ContentPage.Icon>
+    <!-- content -->
+</ContentPage>
+
+<ContentPage Header="Profile">
+    <ContentPage.Icon>
+        <StreamGeometry>M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z</StreamGeometry>
+    </ContentPage.Icon>
+    <!-- content -->
+</ContentPage>
 ```
 
 ```csharp
 var homePage = new ContentPage
 {
     Header = "Home",
-    Icon = StreamGeometry.Parse("M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z"),
-    Content = new TextBlock { Text = "Home content", Margin = new Thickness(16) }
+    Icon   = Geometry.Parse("M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"),
+    Content = homeView
 };
 ```
 
-<img src={TabbedPageIconsScreenshot} alt="TabbedPage with tab icons" />
+<img src={TabbedPageIconsScreenshot} alt="" />
 
 ### Controlling TabPlacement
 
-Use the `TabPlacement` property to position tabs on different edges of the control.
+```csharp
+// Explicit bottom tabs (default on mobile)
+tabbedPage.TabPlacement = TabPlacement.Bottom;
+
+// Sidebar tabs on desktop
+tabbedPage.TabPlacement = TabPlacement.Left;
+```
+
+In XAML:
 
 ```xml
-<TabbedPage xmlns="https://github.com/avaloniaui"
-            TabPlacement="Bottom">
-    <ContentPage Header="Feed">
-        <TextBlock Text="Feed content" Margin="16" />
-    </ContentPage>
-    <ContentPage Header="Messages">
-        <TextBlock Text="Messages content" Margin="16" />
-    </ContentPage>
+<TabbedPage TabPlacement="Left">
+    <!-- pages -->
 </TabbedPage>
 ```
 
-<img src={TabbedPageBottomScreenshot} alt="TabbedPage with bottom tabs" />
+<img src={TabbedPageTopScreenshot} alt="" />
 
-<img src={TabbedPageLeftScreenshot} alt="TabbedPage with left tabs" />
+<img src={TabbedPageLeftScreenshot} alt="" />
 
-<img src={TabbedPageRightScreenshot} alt="TabbedPage with right tabs" />
+<img src={TabbedPageRightScreenshot} alt="" />
 
-### Dynamic tab management
+### Dynamic Tab Management
 
-You can add and remove tabs at runtime by modifying the `Pages` collection.
+Add and remove pages at runtime. The tab strip updates automatically:
 
 ```csharp
-// Add a new tab
-var newPage = new ContentPage
+var pages = new AvaloniaList<Page>();
+tabbedPage.Pages = pages;
+
+// Add a tab
+pages.Add(new ContentPage
 {
-    Header = "New Tab",
-    Content = new TextBlock { Text = "Dynamically added tab", Margin = new Thickness(16) }
-};
-tabbedPage.Pages = tabbedPage.Pages.Append(newPage).ToList();
+    Header  = "Reports",
+    Content = new ReportsView()
+});
 
 // Remove a tab
-var pages = tabbedPage.Pages.ToList();
-pages.Remove(newPage);
-tabbedPage.Pages = pages;
+if (pages.Count > 1)
+    pages.RemoveAt(pages.Count - 1);
 ```
 
-### Enabling swipe gestures
-
-Set `IsGestureEnabled` to `True` to allow users to swipe between tabs on touch devices.
-
-```xml
-<TabbedPage xmlns="https://github.com/avaloniaui"
-            IsGestureEnabled="True"
-            TabPlacement="Bottom">
-    <ContentPage Header="Page 1">
-        <TextBlock Text="Swipe left or right" Margin="16" />
-    </ContentPage>
-    <ContentPage Header="Page 2">
-        <TextBlock Text="Page 2 content" Margin="16" />
-    </ContentPage>
-</TabbedPage>
-```
-
-### Disabling a tab
-
-Use the `TabbedPage.IsTabEnabled` attached property to prevent a specific tab from being selected.
-
-```xml
-<TabbedPage xmlns="https://github.com/avaloniaui">
-    <ContentPage Header="Active Tab">
-        <TextBlock Text="This tab is enabled" Margin="16" />
-    </ContentPage>
-    <ContentPage Header="Locked Tab" TabbedPage.IsTabEnabled="False">
-        <TextBlock Text="This tab is disabled" Margin="16" />
-    </ContentPage>
-</TabbedPage>
-```
-
-### Responding to selection changes
-
-Handle the `SelectionChanged` event to react when the user switches tabs.
+### Enabling Swipe Gestures
 
 ```csharp
-tabbedPage.SelectionChanged += (sender, args) =>
+tabbedPage.IsGestureEnabled = true;
+```
+
+Swipe left or right on horizontal tab strips. Swipe up or down on vertical tab strips.
+
+### Disabling a Tab
+
+```csharp
+TabbedPage.SetIsTabEnabled(settingsPage, false);
+```
+
+In XAML:
+
+```xml
+<ContentPage TabbedPage.IsTabEnabled="False" Header="Settings">
+    <!-- ... -->
+</ContentPage>
+```
+
+A disabled tab is skipped during keyboard and swipe navigation. If it is currently selected when disabled, selection moves to the nearest enabled tab automatically.
+
+### Responding to Selection Changes
+
+```csharp
+tabbedPage.SelectionChanged += (sender, e) =>
 {
-    var previousPage = args.PreviousPage;
-    var currentPage = args.CurrentPage;
-    Console.WriteLine($"Switched from {previousPage?.Header} to {currentPage?.Header}");
+    Console.WriteLine($"Switched from {e.PreviousPage?.Header} to {e.CurrentPage?.Header}");
 };
 ```
 
-### Programmatic tab selection
+Use the navigation lifecycle events on child pages to react when a tab becomes active:
 
-You can change the active tab in code by setting `SelectedIndex` or `SelectedPage`.
+```csharp
+public partial class ProfilePage : ContentPage
+{
+    protected override void OnNavigatedTo(NavigatedToEventArgs args)
+    {
+        base.OnNavigatedTo(args);
+        // This tab is now active, refresh data.
+        _ = LoadProfileAsync();
+    }
+}
+```
+
+### Programmatic Tab Selection
 
 ```csharp
 // Select by index
 tabbedPage.SelectedIndex = 2;
-
-// Select by page reference
-tabbedPage.SelectedPage = profilePage;
 ```
 
-### Independent navigation stack per tab
+### Independent Navigation Stack per Tab
 
-A common pattern is to place a `NavigationPage` inside each tab, giving each tab its own independent navigation stack.
+Each tab can host its own `NavigationPage` to maintain an independent navigation stack. Navigation inside one tab does not affect the other tabs. There is no special integration between `TabbedPage` and `NavigationPage`: `TabbedPage` treats a `NavigationPage` child the same as any other `Page`, reading its `Header` and `Icon` for the tab strip.
 
 ```xml
 <TabbedPage xmlns="https://github.com/avaloniaui"
-            TabPlacement="Bottom">
-    <NavigationPage Header="Home" Icon="{StaticResource HomeIcon}">
-        <ContentPage Header="Home">
-            <Button Content="View Details" Click="OnViewDetails" />
-        </ContentPage>
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="MyApp.MainShell">
+
+    <!-- Home tab: full navigation stack -->
+    <NavigationPage Header="Home">
+        <local:HomeRootPage />
     </NavigationPage>
-    <NavigationPage Header="Settings" Icon="{StaticResource SettingsIcon}">
-        <ContentPage Header="Settings">
-            <TextBlock Text="Settings page" Margin="16" />
-        </ContentPage>
+
+    <!-- Explore tab: independent stack -->
+    <NavigationPage Header="Explore">
+        <local:ExploreRootPage />
     </NavigationPage>
-</TabbedPage>
-```
 
-### Data-driven tabs with PageTemplate
+    <!-- Profile tab: single page, no nav stack needed -->
+    <ContentPage Header="Profile">
+        <local:ProfileView />
+    </ContentPage>
 
-Use `PageTemplate` to generate tabs from a bound data collection. Each item in the collection is rendered using the specified template.
-
-```xml
-<TabbedPage xmlns="https://github.com/avaloniaui"
-            Pages="{Binding Tabs}">
-    <TabbedPage.PageTemplate>
-        <DataTemplate>
-            <ContentPage Header="{Binding Title}">
-                <TextBlock Text="{Binding Body}" Margin="16" />
-            </ContentPage>
-        </DataTemplate>
-    </TabbedPage.PageTemplate>
 </TabbedPage>
 ```
 
 ```csharp
-public class MainViewModel
+// Navigate within a specific tab's stack from that tab's ContentPage:
+private async void OnItemClick(object? sender, RoutedEventArgs e)
 {
-    public ObservableCollection<TabItem> Tabs { get; } = new()
-    {
-        new TabItem { Title = "Home", Body = "Home content" },
-        new TabItem { Title = "News", Body = "News content" },
-        new TabItem { Title = "Settings", Body = "Settings content" }
-    };
-}
-
-public class TabItem
-{
-    public string Title { get; set; }
-    public string Body { get; set; }
+    await Navigation.PushAsync(new ItemDetailPage());
 }
 ```
 
-### TabbedPage inside a DrawerPage
+Each `NavigationPage` maintains its own back stack independently. Switching tabs does not reset the stack.
 
-You can nest a `TabbedPage` inside a `DrawerPage` to combine a side drawer with tabbed navigation.
+### Data-Driven Tabs with ItemsSource
+
+Bind a view-model collection to `ItemsSource` and use `PageTemplate` to generate the pages:
 
 ```xml
-<DrawerPage xmlns="https://github.com/avaloniaui">
+<TabbedPage xmlns="https://github.com/avaloniaui"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:vm="clr-namespace:MyApp.ViewModels"
+            x:Class="MyApp.MainTabs"
+            ItemsSource="{Binding Sections}">
+
+    <TabbedPage.PageTemplate>
+        <DataTemplate x:DataType="vm:SectionViewModel">
+            <ContentPage Header="{Binding Title}">
+                <TextBlock Text="{Binding Description}"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Center" />
+            </ContentPage>
+        </DataTemplate>
+    </TabbedPage.PageTemplate>
+
+</TabbedPage>
+```
+
+### TabbedPage Inside a DrawerPage
+
+Combine a drawer navigation menu with tabbed content in the detail area:
+
+```xml
+<DrawerPage xmlns="https://github.com/avaloniaui"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="MyApp.Shell">
+
     <DrawerPage.Drawer>
-        <StackPanel Margin="16">
-            <TextBlock Text="Drawer Menu" FontSize="20" />
-            <Button Content="Option A" />
-            <Button Content="Option B" />
-        </StackPanel>
-    </DrawerPage.Drawer>
-    <TabbedPage TabPlacement="Bottom">
-        <ContentPage Header="Home">
-            <TextBlock Text="Home content" Margin="16" />
+        <ContentPage Header="Menu">
+            <StackPanel Margin="12" Spacing="8">
+                <Button Content="Dashboard" Click="OnDashboardClick" />
+                <Button Content="Reports"   Click="OnReportsClick" />
+            </StackPanel>
         </ContentPage>
-        <ContentPage Header="Search">
-            <TextBlock Text="Search content" Margin="16" />
+    </DrawerPage.Drawer>
+
+    <TabbedPage>
+        <ContentPage Header="Overview">
+            <local:OverviewView />
+        </ContentPage>
+        <ContentPage Header="Analytics">
+            <local:AnalyticsView />
         </ContentPage>
     </TabbedPage>
+
 </DrawerPage>
 ```
 
-<img src={TabbedPageInDrawerPageScreenshot} alt="TabbedPage inside a DrawerPage" />
+<img src={TabbedPageInDrawerPageScreenshot} alt="" />
 
 ## See also
 
-- [ContentPage](contentpage)
-- [NavigationPage](navigationpage)
-- [TabControl](/controls/navigation/tabcontrol)
-- [TabbedPage API reference](/api/avalonia/controls/tabbedpage)
-- [`TabbedPage.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Page/TabbedPage.cs)
+- [API reference](/api/avalonia/controls/tabbedpage)
+- [Source code](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Page/TabbedPage.cs)
