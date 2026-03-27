@@ -11,7 +11,7 @@ apiKind: 'Class'
 generatedBy: 'dotnet-apiref'
 namespace: 'Avalonia.Controls'
 tfms:
-  - 'net10.0-android36.0'
+  - 'net10.0-browser1.0'
 ---
 
 import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
@@ -32,11 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.WebView</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/3111696698e2c3d6fe9aace8cb954153ee16b3e4/src/Avalonia.Controls.WebView/WebAuthenticatorOptions.cs">WebAuthenticatorOptions.cs</a>
 </div>
-
-<div className="apiref-page__lead">
-
-Authentication options that control the broker's behavior.
 
 </div>
 
@@ -61,15 +59,13 @@ public class WebAuthenticatorOptions
 
 | Name | Description |
 | --- | --- |
-| [WebAuthenticatorOptions](#uid-28624eef68) | Authentication options that control the broker's behavior. |
+| [WebAuthenticatorOptions](#uid-28624eef68) | No summary available. |
 
 <section className="apiref-page__member-entry">
 
 <span id="uid-28624eef68"></span>
 
 ### WebAuthenticatorOptions Constructor
-
-Authentication options that control the broker's behavior.
 
 ```csharp
 public WebAuthenticatorOptions(Uri RequestUri, Uri RedirectUri)
@@ -79,12 +75,8 @@ public WebAuthenticatorOptions(Uri RequestUri, Uri RedirectUri)
 
 `RequestUri` Uri
 
-The initial URI that starts the authentication flow.
-
 
 `RedirectUri` Uri
-
-URI that indicates the completion of the authentication flow.
 
 
 </section>
@@ -222,19 +214,17 @@ string
 
 | Name | Description |
 | --- | --- |
-| [NativeWebDialogFactory](#uid-72e40d181b) | Callback that can be used to override [NativeWebDialog](xref:Avalonia.Controls.NativeWebDialog) creation when [WebAuthenticationBroker](xref:Avalonia.Controls.WebAuthenticationBroker) uses dialog implementation instead of system auth APIs. |
-| [NonPersistent](#uid-0ae5ac2c43) | Hint for the platform implementation to not store any session data persistently. |
-| [PreferNativeWebDialog](#uid-b8e82620e4) | If true, [WebAuthenticationBroker](xref:Avalonia.Controls.WebAuthenticationBroker) will avoid platform specific implementation option, and will use webview dialog window. |
-| [RedirectUri](#uid-3bc63df7ee) | URI that indicates the completion of the authentication flow. |
-| [RequestUri](#uid-d5e38c6464) | The initial URI that starts the authentication flow. |
+| [NativeWebDialogFactory](#uid-72e40d181b) | No summary available. |
+| [NonPersistent](#uid-0ae5ac2c43) | No summary available. |
+| [PreferNativeWebDialog](#uid-b8e82620e4) | No summary available. |
+| [RedirectUri](#uid-3bc63df7ee) | No summary available. |
+| [RequestUri](#uid-d5e38c6464) | No summary available. |
 
 <section className="apiref-page__member-entry">
 
 <span id="uid-72e40d181b"></span>
 
 ### NativeWebDialogFactory Property
-
-Callback that can be used to override [NativeWebDialog](xref:Avalonia.Controls.NativeWebDialog) creation when [WebAuthenticationBroker](xref:Avalonia.Controls.WebAuthenticationBroker) uses dialog implementation instead of system auth APIs.
 
 ```csharp
 public Func<Avalonia.Controls.NativeWebDialog> NativeWebDialogFactory { get; set; }
@@ -248,8 +238,6 @@ public Func<Avalonia.Controls.NativeWebDialog> NativeWebDialogFactory { get; set
 
 ### NonPersistent Property
 
-Hint for the platform implementation to not store any session data persistently.
-
 ```csharp
 public bool NonPersistent { get; set; }
 ```
@@ -261,8 +249,6 @@ public bool NonPersistent { get; set; }
 <span id="uid-b8e82620e4"></span>
 
 ### PreferNativeWebDialog Property
-
-If true, [WebAuthenticationBroker](xref:Avalonia.Controls.WebAuthenticationBroker) will avoid platform specific implementation option, and will use webview dialog window.
 
 ```csharp
 public bool PreferNativeWebDialog { get; set; }
@@ -276,8 +262,6 @@ public bool PreferNativeWebDialog { get; set; }
 
 ### RedirectUri Property
 
-URI that indicates the completion of the authentication flow.
-
 ```csharp
 public Uri RedirectUri { get; set; }
 ```
@@ -289,8 +273,6 @@ public Uri RedirectUri { get; set; }
 <span id="uid-d5e38c6464"></span>
 
 ### RequestUri Property
-
-The initial URI that starts the authentication flow.
 
 ```csharp
 public Uri RequestUri { get; set; }

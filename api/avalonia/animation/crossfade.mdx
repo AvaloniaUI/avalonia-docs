@@ -33,8 +33,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Animation/CrossFade.cs">CrossFade.cs</a>
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/3111696698e2c3d6fe9aace8cb954153ee16b3e4/src/Avalonia.Base/Animation/CrossFade.cs">CrossFade.cs</a>
 </div>
+
 </div>
 
 <div className="apiref-page__lead">
@@ -56,7 +57,7 @@ public class CrossFade
 <span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> CrossFade
 </div>
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Implements:</span> <a href="ipagetransition">IPageTransition</a>
+<span className="apiref-page__meta-label">Implements:</span> <a href="ipagetransition">IPageTransition</a>, <a href="iprogresspagetransition">IProgressPageTransition</a>
 </div>
 </div>
 
@@ -109,7 +110,30 @@ The duration of the animation.
 
 | Name | Description |
 | --- | --- |
+| [Reset](#uid-271d3e5493) | Resets any visual state applied to the given visual by this transition. |
 | [Start](#uid-ed8bb3dfc3) | No summary available. |
+| [Update](#uid-82a57fe2fd) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-271d3e5493"></span>
+
+### Reset Method
+
+Resets any visual state applied to the given visual by this transition.
+
+```csharp
+public void Reset(Avalonia.Visual visual)
+```
+
+#### Parameters
+
+`visual` [Avalonia.Visual](xref:Avalonia.Visual)
+
+The visual to reset.
+
+
+</section>
 
 <section className="apiref-page__member-entry">
 
@@ -135,6 +159,38 @@ public System.Threading.Tasks.Task Start(Avalonia.Visual from, Avalonia.Visual t
 #### Returns
 
 System.Threading.Tasks.Task
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-82a57fe2fd"></span>
+
+### Update Method
+
+```csharp
+public void Update(double progress, Avalonia.Visual from, Avalonia.Visual to, bool forward, double pageLength, System.Collections.Generic.IReadOnlyList<Avalonia.Animation.PageTransitionItem> visibleItems)
+```
+
+#### Parameters
+
+`progress` double
+
+
+`from` [Avalonia.Visual](xref:Avalonia.Visual)
+
+
+`to` [Avalonia.Visual](xref:Avalonia.Visual)
+
+
+`forward` bool
+
+
+`pageLength` double
+
+
+`visibleItems` System.Collections.Generic.IReadOnlyList&lt;[Avalonia.Animation.PageTransitionItem](xref:Avalonia.Animation.PageTransitionItem)&gt;
 
 
 </section>

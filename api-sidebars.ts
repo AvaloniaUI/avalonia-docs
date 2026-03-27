@@ -103,6 +103,7 @@ const sidebars = {
             "avalonia/animation/integertransition",
             "avalonia/animation/interpolatinganimator-1",
             "avalonia/animation/interpolatingtransitionbase-1",
+            "avalonia/animation/iprogresspagetransition",
             "avalonia/animation/iterationcount",
             "avalonia/animation/iterationcounttypeconverter",
             "avalonia/animation/iterationtype",
@@ -112,6 +113,7 @@ const sidebars = {
             "avalonia/animation/keysplinetypeconverter",
             "avalonia/animation/pageslide",
             "avalonia/animation/pageslide-slideaxis",
+            "avalonia/animation/pagetransitionitem",
             "avalonia/animation/playstate",
             "avalonia/animation/playbackdirection",
             "avalonia/animation/pointtransition",
@@ -210,6 +212,7 @@ const sidebars = {
             "avalonia/automation/peers/automationlandmarktype",
             "avalonia/automation/peers/automationpeer",
             "avalonia/automation/peers/buttonautomationpeer",
+            "avalonia/automation/peers/carouselpageautomationpeer",
             "avalonia/automation/peers/comboboxautomationpeer",
             "avalonia/automation/peers/contentcontrolautomationpeer",
             "avalonia/automation/peers/contentpageautomationpeer",
@@ -221,6 +224,7 @@ const sidebars = {
             "avalonia/automation/peers/menuitemautomationpeer",
             "avalonia/automation/peers/navigationpageautomationpeer",
             "avalonia/automation/peers/noneautomationpeer",
+            "avalonia/automation/peers/pipspagerautomationpeer",
             "avalonia/automation/peers/popupautomationpeer",
             "avalonia/automation/peers/popuprootautomationpeer",
             "avalonia/automation/peers/rangebaseautomationpeer",
@@ -326,6 +330,7 @@ const sidebars = {
             "avalonia/controls/calendarselectionmode",
             "avalonia/controls/canvas",
             "avalonia/controls/carousel",
+            "avalonia/controls/carouselpage",
             "avalonia/controls/checkbox",
             "avalonia/controls/classes",
             "avalonia/controls/clickmode",
@@ -442,6 +447,7 @@ const sidebars = {
             "avalonia/controls/pageselectionchangedeventargs",
             "avalonia/controls/panel",
             "avalonia/controls/pathicon",
+            "avalonia/controls/pipspager",
             "avalonia/controls/pixelpointeventargs",
             "avalonia/controls/placementmode",
             "avalonia/controls/platforminhibitiontype",
@@ -609,6 +615,7 @@ const sidebars = {
           "type": "category",
           "label": "Avalonia.Controls.Converters",
           "items": [
+            "avalonia/controls/converters/bordergapmaskconverter",
             "avalonia/controls/converters/cornerradiusfilterconverter",
             "avalonia/controls/converters/cornerradiustodoubleconverter",
             "avalonia/controls/converters/corners",
@@ -803,6 +810,7 @@ const sidebars = {
             "avalonia/controls/primitives/overlaylayer",
             "avalonia/controls/primitives/overlaypopuphost",
             "avalonia/controls/primitives/pickerpresenterbase",
+            "avalonia/controls/primitives/pipspagertemplatesettings",
             "avalonia/controls/primitives/popup",
             "avalonia/controls/primitives/popupflyoutbase",
             "avalonia/controls/primitives/popuproot",
@@ -814,7 +822,6 @@ const sidebars = {
             "avalonia/controls/primitives/scrolleventtype",
             "avalonia/controls/primitives/selecteddatescollection",
             "avalonia/controls/primitives/selectingitemscontrol",
-            "avalonia/controls/primitives/selectionhandletype",
             "avalonia/controls/primitives/snappointsalignment",
             "avalonia/controls/primitives/snappointstype",
             "avalonia/controls/primitives/splitviewtemplatesettings",
@@ -1171,9 +1178,9 @@ const sidebars = {
             "avalonia/input/dragdropeffects",
             "avalonia/input/drageventargs",
             "avalonia/input/findnextelementoptions",
+            "avalonia/input/focuschangedeventargs",
             "avalonia/input/focuschangingeventargs",
             "avalonia/input/focusmanager",
-            "avalonia/input/gotfocuseventargs",
             "avalonia/input/holdingroutedeventargs",
             "avalonia/input/holdingstate",
             "avalonia/input/iasyncdatatransfer",
@@ -1242,6 +1249,7 @@ const sidebars = {
             "avalonia/input/scrollgestureinertiastartingeventargs",
             "avalonia/input/standardcursortype",
             "avalonia/input/swipedirection",
+            "avalonia/input/swipegestureendedeventargs",
             "avalonia/input/swipegestureeventargs",
             "avalonia/input/tappedeventargs",
             "avalonia/input/textinputeventargs",
@@ -1885,7 +1893,6 @@ const sidebars = {
             "avalonia/media/textformatting/textlinemetrics",
             "avalonia/media/textformatting/textmetrics",
             "avalonia/media/textformatting/textparagraphproperties",
-            "avalonia/media/textformatting/textrange",
             "avalonia/media/textformatting/textrun",
             "avalonia/media/textformatting/textrunbounds",
             "avalonia/media/textformatting/textrunproperties",
@@ -2117,6 +2124,7 @@ const sidebars = {
             "avalonia/platform/igeometrycontext",
             "avalonia/platform/igeometryimpl",
             "avalonia/platform/iglyphrunimpl",
+            "avalonia/platform/ilinuxwpeplatformhandle",
             "avalonia/platform/ilockedframebuffer",
             "avalonia/platform/imacostoplevelplatformhandle",
             "avalonia/platform/inativeplatformhandlesurface",
@@ -2158,6 +2166,7 @@ const sidebars = {
             "avalonia/platform/iwriteablebitmapimpl",
             "avalonia/platform/knownplatformgraphicsexternalimagehandletypes",
             "avalonia/platform/knownplatformgraphicsexternalsemaphorehandletypes",
+            "avalonia/platform/linuxwpewebviewenvironmentrequestedeventargs",
             "avalonia/platform/lockedframebuffer",
             "avalonia/platform/ltrbpixelrect",
             "avalonia/platform/ltrbrect",
@@ -2180,7 +2189,8 @@ const sidebars = {
             "avalonia/platform/screensbase-2",
             "avalonia/platform/standardassetloader",
             "avalonia/platform/standardruntimeplatform",
-            "avalonia/platform/surfaceorientation"
+            "avalonia/platform/surfaceorientation",
+            "avalonia/platform/wperenderingmode"
           ],
           "link": {
             "type": "doc",
@@ -2262,9 +2272,11 @@ const sidebars = {
             "avalonia/rendering/defaultrendertimer",
             "avalonia/rendering/icustomhittest",
             "avalonia/rendering/ipresentationsource",
+            "avalonia/rendering/irenderloop",
             "avalonia/rendering/irendertimer",
             "avalonia/rendering/rendererdebugoverlays",
             "avalonia/rendering/rendererdiagnostics",
+            "avalonia/rendering/renderloop",
             "avalonia/rendering/sceneinvalidatedeventargs",
             "avalonia/rendering/sleeplooprendertimer",
             "avalonia/rendering/threadproxyrendertimer",
@@ -3154,29 +3166,6 @@ const sidebars = {
         },
         {
           "type": "category",
-          "label": "Avalonia.Controls.Android",
-          "items": [
-            "avalonia/controls/android/redirecturireceiveractivity"
-          ],
-          "link": {
-            "type": "doc",
-            "id": "avalonia/controls/android/index"
-          }
-        },
-        {
-          "type": "category",
-          "label": "Avalonia.Controls.Win.WebView2.Interop",
-          "items": [
-            "avalonia/controls/win/webview2/interop/corewebview2-mouse-event-kind",
-            "avalonia/controls/win/webview2/interop/corewebview2-mouse-event-virtual-keys"
-          ],
-          "link": {
-            "type": "doc",
-            "id": "avalonia/controls/win/webview2/interop/index"
-          }
-        },
-        {
-          "type": "category",
           "label": "Avalonia.Platform",
           "items": [
             "avalonia/platform/androidwebviewenvironmentrequestedeventargs",
@@ -3202,39 +3191,6 @@ const sidebars = {
             "id": "avalonia/platform/index"
           }
         },
-        {
-          "type": "category",
-          "label": "global",
-          "items": [
-            "global/mz-scriptresultcommand",
-            "global/mz-a",
-            "global/mz-b",
-            "global/na-a",
-            "global/nh-a",
-            "global/nr-a",
-            "global/nr-b",
-            "global/nr-c",
-            "global/nr-d",
-            "global/nr-e",
-            "global/nr-f",
-            "global/tp-a",
-            "global/tv-2-b",
-            "global/tv-2-c",
-            "global/ua-a",
-            "global/uo-a",
-            "global/uv-a",
-            "global/vd-a",
-            "global/vg-a",
-            "global/wa-h",
-            "global/wa-i",
-            "global/wp-a",
-            "global/wp-b"
-          ],
-          "link": {
-            "type": "doc",
-            "id": "global/index"
-          }
-        }
       ],
       "link": {
         "type": "doc",
@@ -3729,7 +3685,8 @@ const sidebars = {
           "type": "category",
           "label": "Avalonia.Win32.Interoperability",
           "items": [
-            "avalonia/win32/interoperability/winformsavaloniacontrolhost"
+            "avalonia/win32/interoperability/winformsavaloniacontrolhost",
+            "avalonia/win32/interoperability/winformsavaloniamessagefilter"
           ],
           "link": {
             "type": "doc",
