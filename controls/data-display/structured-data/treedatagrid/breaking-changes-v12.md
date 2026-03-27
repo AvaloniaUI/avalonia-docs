@@ -21,14 +21,14 @@ document.
 All column classes have had their generic type parameters removed and have been renamed
 with a `TreeDataGrid` prefix. Columns are no longer generic over the model type.
 
-| 11.x | 12.x |
+| 12.x | Replaces |
 |---|---|
-| `TextColumn<TModel, TValue>` | `TreeDataGridTextColumn` |
-| `CheckBoxColumn<TModel>` | `TreeDataGridCheckBoxColumn` |
-| `TemplateColumn<TModel>` | `TreeDataGridTemplateColumn` |
-| `HierarchicalExpanderColumn<TModel>` | `TreeDataGridHierarchicalExpanderColumn` |
-| `RowHeaderColumn<TModel>` | `TreeDataGridRowHeaderColumn` |
-| `ColumnList<TModel>` | `TreeDataGridColumns` |
+| `TreeDataGridTextColumn` | `TextColumn<TModel, TValue>` |
+| `TreeDataGridCheckBoxColumn` | `CheckBoxColumn<TModel>` |
+| `TreeDataGridTemplateColumn` | `TemplateColumn<TModel>` |
+| `TreeDataGridHierarchicalExpanderColumn` | `HierarchicalExpanderColumn<TModel>` |
+| `TreeDataGridRowHeaderColumn` | `RowHeaderColumn<TModel>` |
+| `TreeDataGridColumns` | `ColumnList<TModel>` |
 
 ## XAML support
 
@@ -170,12 +170,12 @@ var source = new FlatTreeDataGridSource<Country>(data)
 Column options classes have been replaced with top-level `*CreateOptions` classes,
 configured via a lambda callback on the fluent methods:
 
-| 11.x | 12.x |
+| 12.x | Replaces |
 |---|---|
-| `ColumnOptions<TModel>` | `ColumnCreateOptions` |
-| `TextColumnOptions<TModel>` | `TextColumnCreateOptions` |
-| `TemplateColumnOptions<TModel>` | `TemplateColumnCreateOptions` |
-| `CheckBoxColumnOptions<TModel>` | `CheckBoxColumnCreateOptions` |
+| `ColumnCreateOptions` | `ColumnOptions<TModel>` |
+| `TextColumnCreateOptions` | `TextColumnOptions<TModel>` |
+| `TemplateColumnCreateOptions` | `TemplateColumnOptions<TModel>` |
+| `CheckBoxColumnCreateOptions` | `CheckBoxColumnOptions<TModel>` |
 
 ```diff
 -new TextColumn<Country, string>(
@@ -207,25 +207,25 @@ source.WithTextColumn("Name", x => x.Name, o => o.IsTextSearchEnabled = false)
 
 The major interfaces in the TreeDataGrid API have been replaced with abstract classes:
 
-| 11.x | 12.x |
+| 12.x | Replaces |
 |---|---|
-| `ITreeDataGridSource` | `TreeDataGridSource` |
-| `ITreeDataGridSource<TModel>` | `TreeDataGridSource<TModel>` |
-| `IColumn` | `TreeDataGridColumn` |
-| `IColumns` | `TreeDataGridColumns` |
-| `IRows` | `TreeDataGridRows` |
-| `ITreeDataGridSelection` | `TreeDataGridSelectionModel` |
-| `ITreeDataGridRowSelectionModel<T>` | `TreeDataGridRowSelectionModel<T>` |
-| `ITreeDataGridCellSelectionModel<T>` | `TreeDataGridCellSelectionModel<T>` |
+| `TreeDataGridSource` | `ITreeDataGridSource` |
+| `TreeDataGridSource<TModel>` | `ITreeDataGridSource<TModel>` |
+| `TreeDataGridColumn` | `IColumn` |
+| `TreeDataGridColumns` | `IColumns` |
+| `TreeDataGridRows` | `IRows` |
+| `TreeDataGridSelectionModel` | `ITreeDataGridSelection` |
+| `TreeDataGridRowSelectionModel<T>` | `ITreeDataGridRowSelectionModel<T>` |
+| `TreeDataGridCellSelectionModel<T>` | `ITreeDataGridCellSelectionModel<T>` |
 
 ## Renamed types
 
 The following types have been renamed:
 
-| 11.x | 12.x |
+| 12.x | Replaces |
 |---|---|
-| `ICell` | `ITreeDataGridCellModel` |
-| `IRow` | `ITreeDataGridRowModel` |
+| `ITreeDataGridCellModel` | `ICell` |
+| `ITreeDataGridRowModel` | `IRow` |
 
 ## Removed types
 
