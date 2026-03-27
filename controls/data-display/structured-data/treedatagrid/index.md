@@ -78,7 +78,7 @@ You will probably use these properties most often:
 
 There are two ways to set up a `TreeDataGrid`:
 
-- **XAML columns** — set `ItemsSource` and define columns directly in XAML markup. This is the simplest approach and familiar to XAML developers.
+- **XAML columns** — set `ItemsSource` and define columns directly in XAML markup. This is the simplest approach.
 - **Code-behind source** — create a `FlatTreeDataGridSource` or `HierarchicalTreeDataGridSource` in your view model using the fluent API, and bind it to the `Source` property. This approach is required for features like filtering and programmatic expand/collapse.
 
 Both approaches are shown in the examples below.
@@ -145,7 +145,7 @@ public class MainWindowViewModel
     {
         new Person { FirstName = "Eleanor", LastName = "Pope", Age = 32 },
         new Person { FirstName = "Jeremy", LastName = "Navarro", Age = 74 },
-        new Person { FirstName = "Lailah ", LastName = "Velazquez", Age = 16 },
+        new Person { FirstName = "Lailah", LastName = "Velazquez", Age = 16 },
         new Person { FirstName = "Jazmine", LastName = "Schroeder", Age = 52 },
     };
 

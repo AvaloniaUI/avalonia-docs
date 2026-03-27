@@ -55,7 +55,7 @@ treeDataGrid.SelectionChanged += (sender, e) =>
 };
 ```
 
-This event works with both the XAML (`ItemsSource`) and code-behind (`Source`) approaches.
+This event works with both the XAML (`ItemsSource`) and code-behind (`Source`) approaches. (See [the main reference page](/controls/data-display/structured-data/treedatagrid#two-approaches) for details.)
 
 ## Index paths
 
