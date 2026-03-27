@@ -17,18 +17,7 @@ The `TreeDataGrid` control supports sorting rows by clicking column headers. You
 
 ### Enable sorting
 
-Sorting is enabled by default for all columns. Users can click column headers to sort:
-
-```csharp
-Source = new FlatTreeDataGridSource<Person>(_people)
-{
-    Columns =
-    {
-        new TextColumn<Person, string>("Name", x => x.Name),
-        new TextColumn<Person, int>("Age", x => x.Age)
-    }
-};
-```
+Sorting is enabled by default for all columns. Users can click column headers to sort.
 
 To disable sorting for the entire grid:
 
@@ -39,16 +28,19 @@ To disable sorting for the entire grid:
 
 ### Make specific columns non-sortable
 
-To prevent sorting on specific columns:
+In XAML, set the `CanUserSortColumn` attribute on the column:
+
+```xml
+<TreeDataGridTextColumn Header="Name" Binding="{Binding Name}" CanUserSortColumn="False" />
+```
+
+In code-behind, use the options lambda:
 
 ```csharp
-new TextColumn<Person, string>(
-    "Name",
-    x => x.Name,
-    options: new TextColumnOptions<Person>
-    {
-        CanUserSortColumn = false
-    })
+source.WithTextColumn("Name", x => x.Name, o =>
+{
+    o.CanUserSortColumn = false;
+})
 ```
 
 ### Programmatic sorting
@@ -60,31 +52,27 @@ You can sort columns programmatically using the `SortBy` and `ClearSort` methods
 Source.SortBy(Source.Columns[0], ListSortDirection.Ascending);
 Source.SortBy(Source.Columns[1], ListSortDirection.Descending);
 
-// Clear sorting from all columns
-Source.SortBy(null, ListSortDirection.Ascending);
-
-// Clear sorting only if column is currently sorted
+// Clear sorting on a specific column
 Source.ClearSort(Source.Columns[0]);
 ```
 
 ## Custom sorting
 
-You can provide custom sorting logic using a comparer.
+You can provide custom sorting logic using comparison delegates in code-behind. The delegates receive `object?` parameters that must be cast to your model type:
 
 ```csharp
-new TextColumn<Person, string>(
-    "Name",
-    x => x.Name,
-    options: new TextColumnOptions<Person>
-    {
-        CompareAscending = (a, b) => string.Compare(a.Name, b.Name, StringComparison.OrdinalIgnoreCase),
-        CompareDescending = (a, b) => string.Compare(b.Name, a.Name, StringComparison.OrdinalIgnoreCase)
-    })
+source.WithTextColumn("Name", x => x.Name, o =>
+{
+    o.CompareAscending = (a, b) =>
+        string.Compare(((Person?)a)?.Name, ((Person?)b)?.Name, StringComparison.OrdinalIgnoreCase);
+    o.CompareDescending = (a, b) =>
+        string.Compare(((Person?)b)?.Name, ((Person?)a)?.Name, StringComparison.OrdinalIgnoreCase);
+})
 ```
 
 This can be useful if you need to sort by multiple fields within a single column click.
 
-Two separate comparer functions must be provided: one for ascending and one for descending order. If one is not provided, `Comparer<TModel>.Default` will be used.
+Two separate comparer functions must be provided: one for ascending and one for descending order.
 
 :::note
 `TreeDataGrid` supports single-column sorting only. When a user clicks a column header (or you call `SortBy` programmatically), any existing sort on another column is cleared. If you need to sort by multiple fields at once, use a custom comparer on one column that compares by the primary field first, then by secondary fields as tiebreakers.

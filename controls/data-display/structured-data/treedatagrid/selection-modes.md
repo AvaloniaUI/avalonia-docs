@@ -17,6 +17,46 @@ Both selection types support either single or multiple selection. The default se
 This control is available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Business or higher.
 :::
 
+## Setting the selection mode in XAML
+
+Set the `SelectionMode` attribute directly on the `TreeDataGrid` control. This works with both `ItemsSource` and `Source`:
+
+```xml
+<!-- Single row selection (default) -->
+<TreeDataGrid ItemsSource="{Binding People}" SelectionMode="Row" />
+
+<!-- Multiple row selection -->
+<TreeDataGrid ItemsSource="{Binding People}" SelectionMode="Row,Multiple" />
+
+<!-- Single cell selection -->
+<TreeDataGrid ItemsSource="{Binding People}" SelectionMode="Cell" />
+
+<!-- Multiple cell selection -->
+<TreeDataGrid ItemsSource="{Binding People}" SelectionMode="Cell,Multiple" />
+```
+
+## SelectionChanged event
+
+The `TreeDataGrid` control has a `SelectionChanged` event that fires whenever the selection changes:
+
+```csharp
+treeDataGrid.SelectionChanged += (sender, e) =>
+{
+    // e is TreeDataGridSelectionChangedEventArgs
+    foreach (var item in e.SelectedItems)
+    {
+        Debug.WriteLine($"Selected: {item}");
+    }
+
+    foreach (var item in e.DeselectedItems)
+    {
+        Debug.WriteLine($"Deselected: {item}");
+    }
+};
+```
+
+This event works with both the XAML (`ItemsSource`) and code-behind (`Source`) approaches. (See [the main reference page](/controls/data-display/structured-data/treedatagrid#two-approaches) for details.)
+
 ## Index paths
 
 Because `TreeDataGrid` supports hierarchical data, using a simple index to identify a row in the data source isn't enough. Instead indexes are represented using the `IndexPath` struct.
@@ -41,24 +81,19 @@ Consider the following data source:
 
 `IndexPath` is an immutable struct which is constructed with an array of integers, e.g.: `new IndexPath(0, 1, 0)`. There is also an implicit conversion from `int` for when working with a flat data source.
 
-## Row selection
+## Row selection (code-behind)
 
-Row selection is the default and is exposed via the `RowSelection` property on the source.
+When using the code-behind `Source` approach, row selection is exposed via the `RowSelection` property on the source.
 
 Row selection is stored in an instance of the `TreeDataGridRowSelectionModel<TModel>` class.
 
-The default is single selection. To enable multiple selection set the the `SingleSelect` property to `false`, e.g.:
+The default is single selection. To enable multiple selection, set the `SingleSelect` property to `false`:
 
 ```csharp
 Source = new FlatTreeDataGridSource<Person>(_people)
-{
-    Columns =
-    {
-        new TextColumn<Person, string>("First Name", x => x.FirstName),
-        new TextColumn<Person, string>("Last Name", x => x.LastName),
-        new TextColumn<Person, int>("Age", x => x.Age),
-    },
-};
+    .WithTextColumn("First Name", x => x.FirstName)
+    .WithTextColumn("Last Name", x => x.LastName)
+    .WithTextColumn(x => x.Age);
 
 Source.RowSelection!.SingleSelect = false;
 ```
@@ -118,31 +153,27 @@ selection.EndBatchUpdate();
 
 ### Selection changed event
 
-Handle selection changes with the `SelectionChanged` event:
+Handle selection changes with the `SelectionChanged` event on the selection model:
 
 ```csharp
 Source.RowSelection.SelectionChanged += (sender, e) =>
 {
+    // e is TreeDataGridSelectionChangedEventArgs<Person>
     Debug.WriteLine($"Selection changed");
     Debug.WriteLine($"Added: {e.SelectedItems.Count}");
     Debug.WriteLine($"Removed: {e.DeselectedItems.Count}");
 };
 ```
 
-## Cell selection
+## Cell selection (code-behind)
 
-To enable cell selection for a TreeDataGrid source, assign an instance of `TreeDataGridCellSelectionModel<TModel>` to the source's `Selection` property:
+To enable cell selection when using the code-behind approach, assign an instance of `TreeDataGridCellSelectionModel<TModel>` to the source's `Selection` property:
 
 ```csharp
 Source = new FlatTreeDataGridSource<Person>(_people)
-{
-    Columns =
-    {
-        new TextColumn<Person, string>("First Name", x => x.FirstName),
-        new TextColumn<Person, string>("Last Name", x => x.LastName),
-        new TextColumn<Person, int>("Age", x => x.Age),
-    },
-};
+    .WithTextColumn("First Name", x => x.FirstName)
+    .WithTextColumn("Last Name", x => x.LastName)
+    .WithTextColumn(x => x.Age);
 
 Source.Selection = new TreeDataGridCellSelectionModel<Person>(Source);
 ```
@@ -186,8 +217,6 @@ if (selection.SelectedIndex.ColumnIndex != -1 &&
 }
 
 // Get multiple selected cells
-var selection = Source.CellSelection!;
-
 foreach (var selected in selection.SelectedIndexes)
 {
     if (selected.ColumnIndex != -1 && selected.RowIndex.Count == 1)
