@@ -1,0 +1,105 @@
+---
+id: respond-to-an-event
+title: 响应事件
+---
+import useBaseUrl from '@docusaurus/useBaseUrl';
+import EventDebugOutputScreenshot from '/img/get-started/test-drive/event-debug-output.png';
+import RiderDebugButton from '/img/get-started/test-drive/rider-toolbar-debug.png';
+
+在 Avalonia 应用程序中有多种实现操作的方法。本页将演示最简单的一种方式：如何为按钮点击事件编写处理代码。
+
+首先，我们将编写一个不与其他控件交互的按钮点击事件处理程序。
+
+## 代码后置（Code-Behind）
+
+XAML 文件可以关联 C# 源文件，这种文件被称为"code-behind"。代码后置用于访问命名控件并处理其关联 XAML 的事件。在使用 IDE 时，您可以在**解决方案资源管理器**中将其视为 `.axaml` 文件的子项找到该文件。
+
+<ThemedImage
+            alt="Solution Explorer"
+            className="center"
+            sources={{
+                light: useBaseUrl('/img/get-started/test-drive/codebehind-mainwindow-light.png'),
+                dark: useBaseUrl('/img/get-started/test-drive/codebehind-mainwindow-dark.png'),
+            }}
+            />
+
+要修改 `MainWindow` 的代码后置：
+
+- 打开 `MainWindow.axaml.cs` 文件
+
+您应该看到如下 C# 代码：
+
+```csharp
+using Avalonia.Controls;
+
+namespace GetStartedApp.Views;
+
+public partial class MainWindow : Window
+{
+    public MainWindow()
+    {
+        InitializeComponent();
+    }
+}
+```
+
+这个分部类 `MainWindow` 对应由 Avalonia 根据现有 XAML 创建的 `Window`。XAML 和代码后置中的命名空间和类名必须一致。您可以在根 XAML 标签中找到这个类名：
+
+```xml
+<UserControl x:Class="GetStartedApp.Views.MainWindow"
+    ...>
+</UserControl>
+```
+
+要为 `Button` 添加事件处理程序，请按照以下步骤操作：
+
+- 在代码后置文件中定位 `MainWindow` 构造函数（参见上文说明）
+- 在构造函数之后添加以下代码：
+
+```csharp
+private void Button_OnClick(object? sender, RoutedEventArgs e)
+{
+    Debug.WriteLine("Click!");
+}
+```
+
+这需要添加以下 using 语句：
+
+```cs
+using Avalonia.Interactivity;
+using System.Diagnostics;
+```
+
+- 切换到 XAML 文件并定位 `<Button>` 标签
+- 在标签末尾添加 `Click` 属性，如下所示：
+
+```xml
+<Button Grid.Row="2"  Grid.Column="1" Click="Button_OnClick">Calculate</Button>
+```
+
+- 在 Debug 模式下运行应用程序并点击 Calculate 按钮
+
+<Tabs groupId="ide">
+    <TabItem value="rider" label="Rider">
+        <img className="center" src={RiderDebugButton} alt="" />
+
+        您应该在 Debug 的输出窗口中看到如下结果：
+<ThemedImage
+            alt="Application running"
+            className="center"
+            sources={{
+                light: useBaseUrl('/img/get-started/test-drive/rider-event-debug-output-light.png'),
+                dark: useBaseUrl('/img/get-started/test-drive/rider-event-debug-output-dark.png'),
+            }}
+            />
+
+    </TabItem>
+    <TabItem value="vs" label="Visual Studio">
+    您应该在 Debug 的输出窗口中看到如下结果：
+
+    <img className="center" src={EventDebugOutputScreenshot} alt="" />
+    </TabItem>
+
+</Tabs>
+
+在下一页，您将了解如何使用代码后置在运行时读取和修改 Avalonia 控件的属性。

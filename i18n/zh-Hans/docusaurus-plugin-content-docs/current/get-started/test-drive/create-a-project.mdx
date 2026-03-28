@@ -1,0 +1,142 @@
+---
+id: create-a-project
+title: 创建并运行一个项目
+---
+
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
+import VsFindAvaloniaTemplateScreenshot from '/img/get-started/test-drive/vs-find-avalonia-template-screenshot.png';
+import VsNewAvaloniaProjectScreenshot from '/img/get-started/test-drive/vs-new-avalonia-project-screenshot.png';
+import RiderRunScreenshot from '/img/get-started/test-drive/rider-toolbar-run.png';
+import InitialWindowScreenshot from '/img/get-started/test-drive/initial-window.png';
+
+import vscode1 from '/img/get-started/test-drive/vscode-command-new-project.png';
+import vscode2 from '/img/get-started/test-drive/vscode-select-project-template.png';
+import vscode3 from '/img/get-started/test-drive/vscode-name-new-project.png';
+import vscode4 from '/img/get-started/test-drive/vscode-create-project.png';
+import vscode6 from '/img/get-started/test-drive/vscode-select-csharp.png';
+import vscode7 from '/img/get-started/test-drive/vscode-launch-app.png';
+import vscode8 from '/img/get-started/test-drive/vscode-app-running.png';
+
+
+## 创建项目
+
+我们将使用 MVVM 模式的 Avalonia 模板：`Avalonia MVVM Application`（CLI 中为 `avalonia.mvvm`）。
+
+<Tabs groupId="ide">  
+  <TabItem value="rider" label="Rider">
+
+1. 在 Rider 启动界面选择 **New Solution** 打开新建解决方案向导。若已安装 [Avalonia 模板](../install.md)，您将看到三个选项：
+    * **Avalonia .NET App:** 使用代码隐藏（code-behind）模式的桌面应用模板（支持 Windows、macOS 和 Linux）
+    * **Avalonia .NET MVVM App:** 使用 MVVM 模式（默认集成 RxUI）的桌面应用模板（支持 Windows、macOS 和 Linux）
+    * **Avalonia Cross-Platform Application:** 全平台应用模板（支持 Windows、macOS、Linux、iOS、Android 和 WASM），需要额外安装工作负载
+
+2. 在侧边栏中选择 `Avalonia .NET MVVM App`
+<ThemedImage
+            alt="使用 JetBrains Rider 创建 Avalonia 解决方案"
+            className="center"
+            sources={{
+                light: useBaseUrl('/img/get-started/test-drive/rider-new-solution-light.png'),
+                dark: useBaseUrl('/img/get-started/test-drive/rider-new-solution-dark.png'),
+            }}
+            />
+3. 在 **Solution Name** 字段输入 `GetStartedApp`
+4. 点击 **Create**
+
+模板将自动创建新的解决方案和项目。
+
+<ThemedImage
+            alt="使用 JetBrains Rider 创建 Avalonia 解决方案"
+            className="center"
+            sources={{
+                light: useBaseUrl('/img/get-started/test-drive/rider-solution-light.png'),
+                dark: useBaseUrl('/img/get-started/test-drive/rider-solution-dark.png'),
+            }}
+            />
+
+  </TabItem>
+  <TabItem value="vs" label="Visual Studio">
+- 在 **Visual Studio** 中点击 **Create a new project**
+- 在搜索框输入 `Avalonia`
+- 选择 **Avalonia Application** 然后点击 **Next**
+
+<img className="center" src={VsFindAvaloniaTemplateScreenshot} />
+
+- 将项目命名为 `GetStartedApp`，点击 **Create**
+
+- 在目标平台选择界面点击 **Desktop** 然后点击 **Next**
+
+- 在设计模式选择界面点击 **ReactiveUI** 然后点击 **Create**
+
+模板将创建新解决方案和两个项目。`GetStartedApp` 是跨平台共享的主项目，`GetStartedApp.Desktop` 是桌面平台的专用项目。
+
+<img className="center" src={VsNewAvaloniaProjectScreenshot} />
+
+  </TabItem>
+  <TabItem value="vsc" label="Visual Studio Code">
+     * 使用 `⇧ ⌘ P` 打开命令面板，输入 ".NET" 并选择 **.NET: New Project** 命令
+     <img className="center" src={vscode1} />
+     * 选择 **Avalonia MVVM app** 模板
+    <img className="center" src={vscode2} />
+    * 输入项目名称 `GetStartedApp` 并回车
+    <img className="center" src={vscode3} />
+    * 选择项目存储路径后点击 **Create project**
+    <img className="center" src={vscode4} />
+  </TabItem>
+  <TabItem value="cli" label="命令行工具" default>
+运行命令：
+
+```bash title='Bash'
+dotnet new avalonia.mvvm -o GetStartedApp
+```
+
+该命令将创建名为 `GetStartedApp` 的新项目文件夹。
+  </TabItem>
+</Tabs>
+
+## 运行项目
+
+现在可以运行项目了！
+
+<Tabs groupId="ide">  
+  <TabItem value="rider" label="Rider">
+
+点击 Rider 工具栏中的 **Run** 按钮：
+
+<img className="center" src={RiderRunScreenshot} />
+
+  </TabItem>
+  <TabItem value="vs" label="Visual Studio">
+
+  右键单击 `GetStartedApp.Desktop` 项目并选择 **Set as Startup Project**
+
+  按 `F5` 运行项目
+
+  </TabItem>
+  <TabItem value="vsc" label="Visual Studio Code">
+   * 按 `F5` 运行项目，选择 `C#` 调试器
+    <img className="center" src={vscode6} />
+  * 选择 **C#: GetStartedApp Demo** 启动带调试器的应用
+    <img className="center" src={vscode7} />
+  </TabItem>
+  <TabItem value="cli" label="命令行工具" default>
+进入 `GetStartedApp` 目录并运行：
+
+```bash title='Bash'
+dotnet run
+```
+  </TabItem>
+</Tabs>
+
+解决方案将自动构建并运行。
+
+现在您已经成功运行了第一个 Avalonia 应用程序！
+
+<ThemedImage
+  alt="应用程序运行界面"
+  className="center"
+  sources={{
+      light: useBaseUrl('/img/get-started/test-drive/main-window-app-running-light.png'),
+      dark: useBaseUrl('/img/get-started/test-drive/main-window-app-running-dark.png'),
+  }}
+  />

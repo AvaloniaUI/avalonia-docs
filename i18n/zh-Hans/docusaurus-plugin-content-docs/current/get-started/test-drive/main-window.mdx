@@ -1,0 +1,129 @@
+---
+id: main-window
+title: 主窗口
+---
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
+import LayoutZonesDiagram from '/img/concepts/layout/layout-zones.png';
+import ViewModelScreenshot from '/img/get-started/test-drive/main-window-viewmodel.png';
+import AppRunningScreenshot from '/img/get-started/test-drive/main-window-app-running.png';
+import VsPreviewerScreenshot from '/img/get-started/test-drive/vs-previewer.png';
+import VsPreviewPaneScreenshot from '/img/get-started/test-drive/vs-preview-pane.png';
+
+现在您可以开始探索Avalonia项目。我们将从主应用窗口开始，请打开**MainWindow.axaml**文件。
+
+:::info
+在Avalonia中，XAML文件使用 **.axaml** 扩展名（而非.xaml）。这代表"Avalonia XAML"，该扩展名的引入是出于技术原因。
+:::
+
+## 发生了什么？
+
+在**MainWindow.axaml** XAML文件中，`<Window>...</Window>`标签代表一个Avalonia窗口。与其他Avalonia控件类似，窗口在目标平台上绘制时会包含4个**布局区域**：外边距（margin）、边框（border）、内边距（padding）和内容区域（content）。
+
+<img src={LayoutZonesDiagram} alt="" />
+
+## 主窗口内容
+
+在Window的Content属性中，您会看到`<TextBlock>...</TextBlock>`标签。这代表一个`TextBlock`控件，用于在屏幕上显示文本。`TextBlock`的`Text`属性绑定到**MainViewModel**类的**Greeting**属性。
+
+:::note
+类名可能显示为以下两种形式：  
+- `MainViewModel`  
+- `MainWindowViewModel`  
+
+请根据项目使用的模板确认正确的名称。  
+:::
+
+```xml title='XAML'
+<TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+```
+
+您可以通过修改**MainWindowViewModel.cs**文件中的文本来观察用户界面的变化。
+
+```csharp title='C#'
+namespace GetStartedApp.ViewModels;
+
+public class MainWindowViewModel : ViewModelBase
+{
+    public string Greeting => "Welcome to Avalonia! This is my added text.";
+}
+```
+
+<ThemedImage
+            alt="运行中的应用程序"
+            className="center"
+            sources={{
+                light: useBaseUrl('/img/get-started/test-drive/main-window-app-running-light.png'),
+                dark: useBaseUrl('/img/get-started/test-drive/main-window-app-running-dark.png'),
+            }}
+            />
+
+:::info
+有关控件布局区域概念的更多信息，请参阅[此处](../../concepts/layout/layout-zones)。
+:::
+
+## XAML预览器
+
+如果您使用的IDE安装了我们的扩展（如Rider、Visual Studio或Visual Studio Code），可以在预览视图中实时查看XAML代码的修改效果。
+
+XAML预览器会在特殊的设计模式（design mode）下创建应用程序实例。当应用在设计模式下运行时，可以执行与可视化设计器协调的特殊逻辑。`Design.IsDesignMode` 
+
+<Tabs groupId="ide">
+    <TabItem value="rider" label="Rider">
+        导航到**MainWindow.axaml**文件，点击编辑器窗口右上角的**Split View**按钮。
+
+        <ThemedImage
+            alt="Rider Avalonia预览器控件"
+            className="center"
+            sources={{
+                light: useBaseUrl('/img/get-started/test-drive/rider-previewer-controls-light.png'),
+                dark: useBaseUrl('/img/get-started/test-drive/rider-previewer-controls-dark.png'),
+            }}
+            />
+
+        <ThemedImage
+        alt="打开Avalonia XAML预览器的Rider界面"
+        className="center"
+        sources={{
+            light: useBaseUrl('/img/get-started/test-drive/rider-previewer-light.png'),
+            dark: useBaseUrl('/img/get-started/test-drive/rider-previewer-dark.png'),
+        }}
+        />
+
+    - 生成项目
+
+     <ThemedImage
+        alt="Avalonia XAML预览器"
+        className="center"
+        sources={{
+            light: useBaseUrl('/img/get-started/test-drive/rider-preview-pane-light.png'),
+            dark: useBaseUrl('/img/get-started/test-drive/rider-preview-pane-dark.png'),
+        }}
+        />
+
+    </TabItem>
+    <TabItem value="vs" label="Visual Studio">
+
+导航到**MainView.axaml**文件，点击编辑器窗口顶部的**Split View**按钮。
+
+<img className="center" src={VsPreviewerScreenshot} alt="" />
+
+:::info
+如果看到红色感叹号图标（左上角）和提示信息**The designer is loading...**，表示需要先生成项目才能使预览窗格正常工作。
+:::
+
+- 生成项目
+- 向左滚动预览窗格以查看预览轮廓和左上角显示的文本
+
+<img className="center" src={VsPreviewPaneScreenshot} alt="" />
+</TabItem>
+
+</Tabs>
+
+- 移除绑定`{Binding Greeting}`并修改文本为`<TextBlock Text="my text" />`
+
+您将在输入时看到预览窗格中的文本实时更新。这展示了Avalonia的**设计时预览行为**，能帮助您快速精准地开发用户界面。
+
+- 运行项目以查看新文本在运行时的显示效果
+
+在下一页中，我们将为窗口添加一个简单的`Button`控件。
