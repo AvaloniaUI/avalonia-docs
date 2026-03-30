@@ -77,7 +77,7 @@ Similarly to the previous sample, OnPlatform can be part of complex property set
         </OnPlatform.Default>
         <OnPlatform.iOS>
             <SolidColorBrush Color="Yellow" />
-        </OnPlatform.Windows>
+        </OnPlatform.iOS>
     </OnPlatform>
 </ResourceDictionary>
 ```
