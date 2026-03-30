@@ -1,13 +1,13 @@
 ---
 id: imageloader
 title: ImageLoader
-description: Customize how the Markdown control loads and resolves images by implementing a custom MarkdownImageLoader.
+description: Customize how the Markdown control loads and resolves images by implementing a custom MarkdownImageLoader and assigning it via a style on MarkdownImage.
 doc-type: reference
 tags:
   - accelerate
 ---
 
-The `Markdown` control supports custom image loading via the `ImageLoader` property. This allows you to handle image formats such as SVG, remote images, or any custom logic for image resolution.
+The `Markdown` control supports custom image loading via the `ImageLoader` property on `MarkdownImage`. Because the Markdown control is built on the shared document model, each image is a `MarkdownImage` element (a `StyledElement`), and you assign a loader using a standard Avalonia style selector.
 
 
 :::info
@@ -16,7 +16,7 @@ This control is available as part of [Avalonia Accelerate](https://avaloniaui.ne
 
 ## Default behavior
 
-When you do not set a custom `ImageLoader`, the `Markdown` control resolves image URIs using `avares://` URIs from your application's embedded resources. This means any image bundled as an Avalonia resource can be displayed without additional configuration. If you need to load images from other sources (such as the web or the local file system) or support formats like SVG, you must provide a custom `MarkdownImageLoader`.
+When you do not set a custom `ImageLoader`, images are not loaded automatically. To enable image loading, create a `MarkdownImageLoader` subclass and assign it via a style targeting `MarkdownImage`. The default `MarkdownImageLoader` base class supports `http://`, `https://`, and `file://` schemes, returning a `Bitmap` on success or `null` on failure.
 
 ## Example: loading SVG images
 
@@ -124,15 +124,38 @@ public class CustomImageLoader : MarkdownImageLoader
 
 ## Usage
 
-Assign your custom loader to the `ImageLoader` property:
+Assign your custom loader to `MarkdownImage` elements via a style. This is the recommended approach because image elements are created dynamically by the document model:
+
+### XAML
+
+```xml
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:local="using:MarkdownSample">
+  <Window.Resources>
+    <local:CustomImageLoader x:Key="CustomImageLoader" />
+  </Window.Resources>
+
+  <Window.Styles>
+    <Style Selector="MarkdownImage">
+      <Setter Property="ImageLoader" Value="{StaticResource CustomImageLoader}" />
+    </Style>
+  </Window.Styles>
+
+  <Markdown Text="![SVG Image](https://example.com/image.svg)" />
+</Window>
+```
+
+### Code-behind
 
 ```csharp
-var markdown = new Markdown
-{
-    Text = "![SVG Image](https://example.com/image.svg)",
-    ImageLoader = new CustomImageLoader()
-};
+var loader = new CustomImageLoader();
+
+var style = new Style(x => x.OfType<MarkdownImage>());
+style.Setters.Add(new Setter(MarkdownImage.ImageLoaderProperty, loader));
+myMarkdownControl.Styles.Add(style);
 ```
+
+Image loading is deferred until both `ImageSource` (set automatically from the Markdown source) and `ImageLoader` (set via the style) are available. This decouples the document model from image resolution.
 
 ## When to use
 
