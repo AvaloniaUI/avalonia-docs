@@ -7,7 +7,7 @@ tags:
   - accelerate
 ---
 
-The `CodeHighlighter` property on the `Markdown` control enables syntax highlighting for fenced code blocks. Avalonia ships two highlighter implementations as separate NuGet packages: `ColorCodeHighlighter` (lightweight, limited language support) and `TextMateHighlighter` (full TextMate grammar support with themes).
+The `Markdown` control supports syntax highlighting for fenced code blocks via the `Highlighter` property on `MarkdownCodeBlock`. Because the Markdown control is built on the shared document model, each code block is a full `StyledElement` — you assign a highlighter using a standard Avalonia style selector. Two implementations ship as separate NuGet packages: `ColorCodeHighlighter` (lightweight, limited language support) and `TextMateHighlighter` (full TextMate grammar support with themes).
 
 :::info
 This control is available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Business or higher.
@@ -42,7 +42,7 @@ If you only need to highlight a handful of popular languages and want to keep de
 
 ## Using `TextMateHighlighter` in XAML
 
-Add the highlighter as a resource and bind it to the `CodeHighlighter` property on your `Markdown` control:
+Define the highlighter as a resource and assign it to `MarkdownCodeBlock` elements via a style:
 
 ```xml
 <Window xmlns="https://github.com/avaloniaui"
@@ -51,12 +51,17 @@ Add the highlighter as a resource and bind it to the `CodeHighlighter` property 
     <textMate:TextMateHighlighter x:Key="TextMateHighlighter" Theme="LightPlus"/>
   </Window.Resources>
 
-  <Markdown Text="# Example&#10;&#10;```csharp&#10;var x = 1;&#10;```"
-            CodeHighlighter="{StaticResource TextMateHighlighter}" />
+  <Window.Styles>
+    <Style Selector="MarkdownCodeBlock">
+      <Setter Property="Highlighter" Value="{StaticResource TextMateHighlighter}" />
+    </Style>
+  </Window.Styles>
+
+  <Markdown Text="# Example&#10;&#10;```csharp&#10;var x = 1;&#10;```" />
 </Window>
 ```
 
-You can switch the theme at runtime by changing the `Theme` property on the `TextMateHighlighter` resource.
+You can switch the theme at runtime by changing the `Theme` property on the `TextMateHighlighter` resource. Code blocks automatically re-highlight when the highlighter raises its `Invalidated` event.
 
 ## Using `ColorCodeHighlighter` in XAML
 
@@ -67,23 +72,28 @@ You can switch the theme at runtime by changing the `Theme` property on the `Tex
     <cc:ColorCodeHighlighter x:Key="ColorCodeHighlighter" />
   </Window.Resources>
 
-  <Markdown Text="# Example&#10;&#10;```csharp&#10;var x = 1;&#10;```"
-            CodeHighlighter="{StaticResource ColorCodeHighlighter}" />
+  <Window.Styles>
+    <Style Selector="MarkdownCodeBlock">
+      <Setter Property="Highlighter" Value="{StaticResource ColorCodeHighlighter}" />
+    </Style>
+  </Window.Styles>
+
+  <Markdown Text="# Example&#10;&#10;```csharp&#10;var x = 1;&#10;```" />
 </Window>
 ```
 
 ## Setting the highlighter in code-behind
 
-You can also assign either highlighter in C#:
+You can also create a style programmatically or assign the highlighter to a specific `MarkdownCodeBlock` instance:
 
 ```csharp
-// ColorCode
-var colorCodeHighlighter = new ColorCodeHighlighter();
-myMarkdownControl.CodeHighlighter = colorCodeHighlighter;
-
-// TextMate
+// Create the highlighter
 var textMateHighlighter = new TextMateHighlighter { Theme = "DarkPlus" };
-myMarkdownControl.CodeHighlighter = textMateHighlighter;
+
+// Option 1: Apply via a style (preferred — affects all code blocks)
+var style = new Style(x => x.OfType<MarkdownCodeBlock>());
+style.Setters.Add(new Setter(MarkdownCodeBlock.HighlighterProperty, textMateHighlighter));
+myMarkdownControl.Styles.Add(style);
 ```
 
 ## Specifying languages in code blocks
@@ -96,12 +106,13 @@ Console.WriteLine("Hello, world!");
 ```
 ````
 
-If you omit the language identifier, the highlighter will render the block as plain text without coloring.
+If you omit the language identifier, the highlighter will render the block as plain text without coloring. The language identifier is stored on the `MarkdownCodeBlock.LanguageId` property.
 
 ## Notes
 
 - The `Markdown` control listens for property changes on the highlighter and re-renders code blocks automatically when you update properties such as `Theme`.
-- Each `Markdown` control accepts a single `CodeHighlighter` instance. If you have multiple `Markdown` controls, you can share the same highlighter resource across all of them.
+- Each `Markdown` control accepts a single `CodeHighlighter` instance shared across all its code blocks via the style. If you have multiple `Markdown` controls, you can share the same highlighter resource.
+- `MarkdownCodeBlock` extends `Paragraph` and is a full `StyledElement`, so you can combine the highlighter style with other visual customizations (background, padding, font family) in a single selector.
 
 ## See also
 

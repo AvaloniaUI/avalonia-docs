@@ -149,6 +149,19 @@ const sidebars: SidebarsConfig = {
           items:[
               'input/text-input/autocompletebox',
               'input/text-input/maskedtextbox',
+              {
+                type: 'category',
+                label: 'RichTextEditor',
+                link: {
+                  type: 'doc',
+                  id: 'input/text-input/richtexteditor'
+                },
+                items: [
+                  'input/text-input/richtexteditor-guides/extension-patterns',
+                  'input/text-input/richtexteditor-guides/performance-tuning',
+                  'input/text-input/richtexteditor-guides/thread-safety',
+                ],
+              },
               'input/text-input/textbox',
           ],
         },

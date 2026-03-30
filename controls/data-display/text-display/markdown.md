@@ -1,18 +1,28 @@
 ---
 id: markdown
 title: Markdown
-description: Render Markdown-formatted text using the Avalonia.Controls.Markdown control with support for theming, selection, and custom image loading.
+description: Render Markdown-formatted text using the Avalonia.Controls.Markdown control, built on the shared FlowDocument model with full DocumentNode styling, selection, streaming, and custom image loading.
 doc-type: reference
 tags:
   - accelerate
 ---
 
-The Avalonia.Controls.Markdown control renders Markdown-formatted text in Avalonia applications, supporting common Markdown features and theming.
-
+The `Markdown` control renders Markdown-formatted text in Avalonia applications. It is built on the same FlowDocument model used by the [RichTextEditor](/controls/input/text-input/richtexteditor), giving it full support for DocumentNode-based styling, text selection, and high-performance streaming updates.
 
 :::info
 This control is available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Business or higher.
 :::
+
+## Architecture
+
+The `Markdown` control converts Markdown text into a live `FlowDocument` using the following pipeline:
+
+1. **Markdown text** is parsed into a Markdig AST.
+2. The AST is rendered into a `DocumentSnapshot` (an immutable, thread-safe representation).
+3. The snapshot is applied to a `FlowDocument`, which owns the live document tree.
+4. An `EditorTextView` (the same renderer used by `RichTextEditor`) renders the document.
+
+Because the control shares the document model with `RichTextEditor`, all document elements (`Paragraph`, `Section`, `Table`, `RichSpan`, `RichHyperlink`, etc.) are full `StyledElement` instances. This means you can target them with Avalonia style selectors and CSS-like classes, not just named resources.
 
 ## Usage examples
 
@@ -100,7 +110,7 @@ public class MarkdownViewModel
 }
 ```
 
-### C# Usage
+### C# usage
 
 ```csharp
 var markdown = new Markdown
@@ -108,6 +118,24 @@ var markdown = new Markdown
     Text = "# Hello, Markdown!"
 };
 ```
+
+### Streaming usage
+
+The `Markdown` control supports incremental text appending, which is useful for rendering content from an LLM or other streaming source:
+
+```csharp
+// Simple convenience method with automatic session management
+markdown.AppendText("# Streaming\n\nContent arrives ");
+markdown.AppendText("incrementally...");
+
+// Full control via a streaming session
+using var session = markdown.BeginStreaming();
+session.Append("# Response\n\n");
+session.Append("Paragraph text...");
+await session.CompleteAsync();
+```
+
+The streaming engine runs Markdown parsing on a background thread, diffs the AST against the previous version, and applies only the changed blocks to the live document. Set `AutoScrollToEnd="True"` to keep the viewport pinned to the bottom during streaming.
 
 ## API overview
 
@@ -117,38 +145,72 @@ var markdown = new Markdown
 |--------------------|-----------------------------|----------------------------------------------------------|
 | Text               | string?                     | Markdown text to render.                                 |
 | SelectionBrush     | IBrush?                     | Brush for selection highlight.                           |
-| SelectionStart     | int                         | Start index of selection.                                |
-| SelectionEnd       | int                         | End index of selection.                                  |
-| SelectedText       | string                      | Content of current selection.                            |
-| CanCopy            | bool                        | Whether the Copy command can be executed.                |
-| ImageLoader        | MarkdownImageLoader         | Loader for resolving images.                             |
-| IsSelectionEnabled | bool                        | Enables/disables text selection.                         |
+| CaretBrush         | IBrush?                     | Brush for the caret cursor.                              |
+| SelectedText       | string                      | Read-only. Content of the current selection.             |
+| CanCopy            | bool                        | Read-only. Whether the Copy command can be executed.     |
+| AutoScrollToEnd    | bool                        | Keeps the viewport scrolled to the bottom during streaming. |
 
 ### Methods
 
-| Method         | Description                                  |
-|----------------|----------------------------------------------|
-| Copy()         | Copies current selection to clipboard.        |
-| SelectAll()    | Selects all content.                         |
-| ClearSelection()| Clears current selection.                    |
+| Method                            | Description                                                        |
+|-----------------------------------|--------------------------------------------------------------------|
+| Copy()                            | Copies the current selection to the clipboard.                     |
+| SelectAll()                       | Selects all content.                                               |
+| ClearSelection()                  | Clears the current selection.                                      |
+| ScrollToEnd()                     | Scrolls the viewport to the end of the document.                   |
+| BeginStreaming()                   | Starts a `MarkdownStreamingSession` for incremental appending.     |
+| AppendText(string, TimeSpan?)     | Convenience method that creates or reuses a streaming session.     |
 
 ### Events
 
-| Event                | Description                                 |
-|----------------------|---------------------------------------------|
-| CopyingToClipboard   | Raised when selection is copied to clipboard.|
+| Event                | Description                                          |
+|----------------------|------------------------------------------------------|
+| CopyingToClipboard   | Raised before selection is copied to the clipboard. Can be handled to prevent the copy. |
+| SelectionChanged     | Raised when the text selection changes.              |
 
 ## Custom image loader
 
-See the [Image Loader](/docs/markdown/imageloader) page for a detailed example how to customize image loading.
+Image loading is handled by the `MarkdownImage` document element, not the `Markdown` control itself. You assign a loader via a style that targets `MarkdownImage`:
+
+```xml
+<Style Selector="MarkdownImage">
+    <Setter Property="ImageLoader" Value="{StaticResource MyCustomLoader}" />
+</Style>
+```
+
+See the [Image Loader](/controls/data-display/text-display/imageloader) page for a detailed example of how to implement a custom `MarkdownImageLoader`.
 
 ## Code highlighter
 
-See the [Code Highlighter](/docs/markdown/codehighlighter) page for information on enabling syntax highlighting for code blocks, installation packages, and usage examples for the included highlighters.
+Syntax highlighting is handled by the `MarkdownCodeBlock` document element. You assign a highlighter via a style:
+
+```xml
+<Style Selector="MarkdownCodeBlock">
+    <Setter Property="Highlighter" Value="{StaticResource TextMateHighlighter}" />
+</Style>
+```
+
+See the [Code Highlighter](/controls/data-display/text-display/codehighlighter) page for installation packages and usage examples.
 
 ## Styling
 
-See the [Markdown styling](/docs/markdown/markdown-styling) page for a full list of resources you can override.
+Because the `Markdown` control is built on the shared document model, all rendered elements (`Paragraph`, `Section`, `Table`, `RichSpan`, `RichHyperlink`, etc.) are full Avalonia `StyledElement` instances with CSS-like classes. You can style them with standard Avalonia style selectors:
+
+```xml
+<!-- Make all H1 headings red -->
+<Style Selector="Paragraph.h1">
+    <Setter Property="Foreground" Value="Red" />
+</Style>
+
+<!-- Custom quote block background -->
+<Style Selector="Section.quoteBlock">
+    <Setter Property="Background" Value="#f0f0f0" />
+</Style>
+```
+
+Named resources are also available for common values such as font sizes, margins, and theme-variant colors.
+
+See the [Markdown styling](/controls/data-display/text-display/markdown-styling) page for the full list of style selectors and resources.
 
 ## Installation
 
