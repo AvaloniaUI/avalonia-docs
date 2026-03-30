@@ -29,17 +29,22 @@ Use this setup to get started with a basic implementation of the rich text edito
     ```xml
     <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:docs="using:Avalonia.Controls.Documents"
         Title="My Rich Text Editor" 
         Width="800" Height="600">
     
-    <docs:RichTextEditor x:Name="Editor">
-        <docs:FlowDocument>
-            <docs:Paragraph>
-                Welcome to <docs:Bold>RichTextEditor</docs:Bold>!
-            </docs:Paragraph>
-        </docs:FlowDocument>
-    </docs:RichTextEditor>
+    <RichTextEditor x:Name="Editor">
+        <RichTextEditor.Document>
+            <FlowDocument>
+                <Paragraph>
+                    <RichRun Text="Welcome to " />
+                    <RichBold>
+                        <RichRun Text="RichTextEditor" />
+                    </RichBold>
+                    <RichRun Text="!" />
+                </Paragraph>
+            </FlowDocument>
+        </RichTextEditor.Document>
+    </RichTextEditor>
     
     </Window>
     ```
@@ -49,8 +54,8 @@ Use this setup to get started with a basic implementation of the rich text edito
 <TabItem value="csharp" label="Code-behind">
 
   ```csharp
+  using Avalonia.Controls;
   using Avalonia.Controls.Documents;
-  using Avalonia.Controls.Documents.TextModel;
 
   public partial class MainWindow : Window
   {
@@ -58,14 +63,12 @@ Use this setup to get started with a basic implementation of the rich text edito
       {
           InitializeComponent();
           
-          // Access editor
           var editor = this.FindControl<RichTextEditor>("Editor");
-          
-          // Enable undo/redo
-          if (editor?.Document != null)
-          {
-              editor.Document.TextDocument.UndoManager = new UndoManager();
-          }
+
+          // Undo/redo is ready to use — the editor creates an UndoManager
+          // automatically when a Document is attached.
+          // To change the limit:
+          // editor.UndoLimit = 50;
       }
   }
   ```
@@ -83,9 +86,9 @@ If preferred, you can create and edit documents from the code-behind instead of 
   ```csharp
   var document = new FlowDocument();
   var paragraph = new Paragraph();
-  paragraph.Inlines.Add(new Run("Hello "));
-  paragraph.Inlines.Add(new Bold(new Run("World")));
-  paragraph.Inlines.Add(new Run("!"));
+  paragraph.Inlines.Add(new RichRun("Hello "));
+  paragraph.Inlines.Add(new RichBold(new RichRun("World")));
+  paragraph.Inlines.Add(new RichRun("!"));
   document.Blocks.Add(paragraph);
   
   editor.Document = document;
@@ -121,8 +124,8 @@ If preferred, you can create and edit documents from the code-behind instead of 
       var end = doc.CreatePointer(10);
       var range = new TextRange(start, end);
       
-      range.ApplyPropertyValue(TextElement.ForegroundProperty, Brushes.Red);
-      range.ApplyPropertyValue(TextElement.FontSizeProperty, 20.0);
+      range.ApplyPropertyValue(RichTextElement.ForegroundProperty, Brushes.Red);
+      range.ApplyPropertyValue(RichTextElement.FontSizeProperty, 20.0);
   }
   ```
 
@@ -131,24 +134,47 @@ If preferred, you can create and edit documents from the code-behind instead of 
 
 ## Loading and saving files
 
-To load a file, use `File.OpenRead` and specify the target file path.
-
-To save a file, use `File.Create` and specify the target file path.
-
-`RichTextEditor` has built-in support for RTF and plain-text file formats.
+Load and Save accept an `IDocumentSerializer` instance. Each format lives in its own package.
 
 ```csharp
-// Load RTF
-using (var stream = File.OpenRead("document.rtf"))
+using Avalonia.Controls.Documents.Rtf.Serialization;
+
+// Load RTF (async, preferred)
+await using (var stream = File.OpenRead("document.rtf"))
 {
-    editor.Load(stream, DocumentFormat.Rtf);
+    await editor.LoadAsync(stream, new RtfSerializer());
 }
 
-// Save RTF
-using (var stream = File.Create("output.rtf"))
+// Save RTF (async, preferred)
+await using (var stream = File.Create("output.rtf"))
 {
-    editor.Save(stream, DocumentFormat.Rtf);
+    await editor.SaveAsync(stream, new RtfSerializer());
 }
+```
+
+Synchronous overloads are also available:
+
+```csharp
+editor.Load(stream, new RtfSerializer());
+editor.Save(stream, new RtfSerializer());
+```
+
+Available serializers:
+
+| Serializer | Package | Extension |
+|---|---|---|
+| `RtfSerializer` | `Avalonia.Controls.Documents.Rtf` | `.rtf` |
+| `DocxSerializer` | `Avalonia.Controls.Documents.Docx` | `.docx` |
+| `XamlSerializer` | `Avalonia.Controls.Documents.Xaml` | `.xaml` |
+| `PlainTextSerializer` | `Avalonia.Controls.Documents` (core) | `.txt` |
+
+### Loading a document without an editor
+
+`FlowDocument.LoadAsync` creates a document directly from a stream, useful for preview or conversion scenarios:
+
+```csharp
+await using var stream = File.OpenRead("document.rtf");
+var document = await FlowDocument.LoadAsync(stream, new RtfSerializer());
 ```
 
 ## Adding a word counter
@@ -164,10 +190,9 @@ editor.TextChanged += (sender, args) =>
 
 void UpdateWordCount()
 {
-    var doc = editor.Document?.TextDocument;
-    if (doc != null)
+    string? text = editor.Document?.ContentRange?.Text;
+    if (text != null)
     {
-        string text = doc.GetText(0, doc.Length);
         int wordCount = text.Split(new[] { ' ', '\n', '\r' }, 
                                     StringSplitOptions.RemoveEmptyEntries).Length;
         Console.WriteLine($"Word count: {wordCount}");
@@ -188,7 +213,7 @@ The highlight color of text selections can be customized by specifying an ARGB v
 The Avalonia rich text editor consists of three components:
 
 1. `RichTextEditor`: Interactive editing control that renders a document and allows users to type, select, format, undo/redo, etc.
-2. `FlowDocumentView`: Read-only viewer that displays a document without editing capabilities.
+2. `FlowDocumentScrollViewer`: Read-only viewer that displays a document without editing capabilities.
 3. `FlowDocument`: Document model that organizes rich text content into [blocks](#block-elements).
 
 ### RichTextEditor properties
@@ -268,7 +293,7 @@ Block elements are used by `FlowDocument` to build the document model and organi
 | `LineHeight` | `double` | Height of each line of text in the block. | `double.NaN` |
 | `Margin` | `Thickness` | Outer spacing around the block element. | `Null` |
 | `MarkerOffset` | `double` | Used by `List`. Determines the spacing after a list marker. | `double.NaN` |
-| `MarkerStyle` | `MarkerStyle` | Used by `List`. Selects the style of the list marker, e.g., `Disc`, `Decimal`, `LowerAlpha`. | `Null` |
+| `MarkerStyle` | `TextMarkerStyle` | Used by `List`. Selects the style of the list marker, e.g., `Disc`, `Decimal`, `LowerLatin`. | `Null` |
 | `Padding` | `Thickness` | Inner spacing between the block's borders and its content. | `Null` |
 | `RowSpan` | `int` | Used by `TableCell`. The number of rows the cell spans. | 1 |
 | `StartIndex` | `int` | Used by `List`. Specifies the starting index for numbered lists. | 1 |
@@ -292,7 +317,7 @@ Inline elements are used to specify content styles within a block.
 | `RichRun`| Basic text run. Allows character-level formatting. Text content is defined by the [`Text` property](#properties-1). |
 | `RichSpan` | Inline element that groups other inline elements. |
 | `RichSubscript` | Indicates subscript text. Sets `BaselineAlignment` property to `Subscript`.  |
-| `RichSuperScript` | Indicates superscript text. Sets `BaselineAlignment` property to `Superscript`. |
+| `RichSuperscript` | Indicates superscript text. Sets `BaselineAlignment` property to `Superscript`. |
 | `RichUnderline` | Indicates underlined text. Overrides global `TextDecorations` property. |
 
 ### Properties
@@ -325,7 +350,7 @@ The Avalonia rich text editor separates functions into an eight-layer architectu
 | 4 | Editing | Handles user input from keyboard, mouse, or other devices. | `TextSelection`, `TextEditorTyping`, `TextEditorKeyboard`, `TextEditorMouse`, `CaretElement` |
 | 5 | Highlighting | Visual effects for highlighting, used in selections, annotations, find/replace, etc. | `IHighlightLayer`, `HighlightLayerBase`, `SelectionHighlightLayer` |
 | 6 | Undo/Redo | Stores operation history to allow reversals. | `IUndoManager`, `UndoManager` |
-| 7 | RTF serialization | Import and export RTF documents. | `IDocumentSerializer`, `RtfSerializer`, `DocumentSnapshot`, `FlowDocumentBuilder` |
+| 7 | Serialization | Import and export documents in multiple formats (RTF, DOCX, XAML, plain text). | `IDocumentSerializer`, `DocumentSnapshot`, `FlowDocumentBuilder` |
 | 8 | User-facing control | Integration of all layers into a templated Avalonia control. | `RichTextEditor`, `FlowDocument`, `Block` elements, `Inline` elements |
 
 ## Sample projects
