@@ -186,6 +186,10 @@ renderTarget.Render(myControl);
 renderTarget.Save("output.png");
 ```
 
+:::note
+`RenderTargetBitmap` uses software rendering. Controls that rely on GPU-specific rendering paths (such as `OpenGlControlBase` or custom GPU interop) may not render correctly when captured this way.
+:::
+
 ## ICustomDrawOperation for SkiaSharp
 
 For direct access to the SkiaSharp canvas (e.g., for complex charts, 3D rendering, or game graphics), implement `ICustomDrawOperation`:
