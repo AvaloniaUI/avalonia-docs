@@ -32,7 +32,6 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.TreeDataGrid</code>
 </div>
-
 </div>
 
 <div className="apiref-page__lead">
@@ -51,17 +50,18 @@ public class TreeDataGridRowSelectionModel<TModel>
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> TreeSelectionModelBase&lt;&gt; <span className="apiref-page__relation-separator">-&gt;</span> TreeDataGridRowSelectionModel&lt;TModel&gt;
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="treedatagridselectionmodel">TreeDataGridSelectionModel</a> <span className="apiref-page__relation-separator">-&gt;</span> TreeDataGridRowSelectionModel&lt;TModel&gt;
 </div>
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Implements:</span> <a href="itreedatagridrowselectionmodel">ITreeDataGridRowSelectionModel</a>, ITreeDataGridRowSelectionModel&lt;&gt;, <a href="itreedatagridselection">ITreeDataGridSelection</a>, <a href="itreedatagridselectioninteraction">ITreeDataGridSelectionInteraction</a>, <a href="itreeselectionmodel">ITreeSelectionModel</a>, INotifyPropertyChanged
+<span className="apiref-page__meta-label">Implements:</span> ae, af
 </div>
 </div>
 
 ## Remarks
 
 TreeDataGridRowSelectionModel manages row selection in a [TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid), supporting both
-single and multiple selection modes.
+single and multiple selection modes. It tracks selection using [Avalonia.Controls.IndexPath](xref:Avalonia.Controls.IndexPath)
+instances that represent positions in the hierarchical structure.
 
 Row selection supports the following user interactions:
 
@@ -75,22 +75,370 @@ Row selection supports the following user interactions:
 
 | Name | Description |
 | --- | --- |
-| [TreeDataGridRowSelectionModel&lt;TModel&gt;](#uid-ca629a8b52) | No summary available. |
+| [TreeDataGridRowSelectionModel&lt;TModel&gt;](#uid-0dc9e85b67) | No summary available. |
 
 <section className="apiref-page__member-entry">
 
-<span id="uid-ca629a8b52"></span>
+<span id="uid-0dc9e85b67"></span>
 
 ### TreeDataGridRowSelectionModel&lt;TModel&gt; Constructor
 
 ```csharp
-public TreeDataGridRowSelectionModel<TModel>(Avalonia.Controls.ITreeDataGridSource<TModel><TModel> source)
+public TreeDataGridRowSelectionModel<TModel>(Avalonia.Controls.TreeDataGridSource<TModel><TModel> source)
 ```
 
 #### Parameters
 
-`source` [Avalonia.Controls.ITreeDataGridSource](xref:Avalonia.Controls.ITreeDataGridSource)&lt;TModel&gt;&lt;TModel&gt;
+`source` [Avalonia.Controls.TreeDataGridSource](xref:Avalonia.Controls.TreeDataGridSource)&lt;TModel&gt;&lt;TModel&gt;
 
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [BatchUpdate](#uid-b429a7d5e5) | Creates a batch update operation that will defer selection change notifications until disposed. |
+| [BeginBatchUpdate](#uid-ed5f30f702) | Begins a batch update of the selection. |
+| [Clear](#uid-2f92e71c89) | Clears the selection. |
+| [Deselect](#uid-faf9452a6f) | Deselects an item by its index in the source data. |
+| [EndBatchUpdate](#uid-0bfd82da33) | Ends a batch update started by [Avalonia.Controls.Selection.TreeDataGridRowSelectionModel&lt;T&gt;.BeginBatchUpdate](xref:Avalonia.Controls.Selection.TreeDataGridRowSelectionModel%601.BeginBatchUpdate). |
+| [IsSelected](#uid-8bfc2b06d0) | Queries whether an item is currently selected. |
+| [Select](#uid-f5c53b35ba) | Selects an item by its index in the source data. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b429a7d5e5"></span>
+
+### BatchUpdate Method
+
+Creates a batch update operation that will defer selection change notifications until
+disposed.
+
+```csharp
+public Avalonia.Controls.Selection.TreeDataGridRowSelectionModel<TModel>.BatchUpdateOperation<TModel><TModel> BatchUpdate()
+```
+
+#### Returns
+
+Avalonia.Controls.Selection.TreeDataGridRowSelectionModel&lt;TModel&gt;.BatchUpdateOperation&lt;TModel&gt;&lt;TModel&gt;
+
+A disposable object that, when disposed, will commit the selection changes and raise
+appropriate events.
+
+
+#### Remarks
+
+Use this method with a using statement to group multiple selection operations together and
+raise only a single set of change events when the batch is complete. This is equivalent to
+calling [Avalonia.Controls.Selection.TreeDataGridRowSelectionModel&lt;T&gt;.BeginBatchUpdate](xref:Avalonia.Controls.Selection.TreeDataGridRowSelectionModel%601.BeginBatchUpdate) and [Avalonia.Controls.Selection.TreeDataGridRowSelectionModel&lt;T&gt;.EndBatchUpdate](xref:Avalonia.Controls.Selection.TreeDataGridRowSelectionModel%601.EndBatchUpdate).
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ed5f30f702"></span>
+
+### BeginBatchUpdate Method
+
+Begins a batch update of the selection.
+
+```csharp
+public void BeginBatchUpdate()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2f92e71c89"></span>
+
+### Clear Method
+
+Clears the selection.
+
+```csharp
+public void Clear()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-faf9452a6f"></span>
+
+### Deselect Method
+
+Deselects an item by its index in the source data.
+
+```csharp
+public void Deselect(Avalonia.Controls.IndexPath index)
+```
+
+#### Parameters
+
+`index` [Avalonia.Controls.IndexPath](xref:Avalonia.Controls.IndexPath)
+
+The index into the source data.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0bfd82da33"></span>
+
+### EndBatchUpdate Method
+
+Ends a batch update started by [Avalonia.Controls.Selection.TreeDataGridRowSelectionModel&lt;T&gt;.BeginBatchUpdate](xref:Avalonia.Controls.Selection.TreeDataGridRowSelectionModel%601.BeginBatchUpdate).
+
+```csharp
+public void EndBatchUpdate()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8bfc2b06d0"></span>
+
+### IsSelected Method
+
+Queries whether an item is currently selected.
+
+```csharp
+public bool IsSelected(Avalonia.Controls.IndexPath index)
+```
+
+#### Parameters
+
+`index` [Avalonia.Controls.IndexPath](xref:Avalonia.Controls.IndexPath)
+
+The index of the item in the source data.
+
+
+#### Returns
+
+bool
+
+True if the item is selected; otherwise false.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f5c53b35ba"></span>
+
+### Select Method
+
+Selects an item by its index in the source data.
+
+```csharp
+public void Select(Avalonia.Controls.IndexPath index)
+```
+
+#### Parameters
+
+`index` [Avalonia.Controls.IndexPath](xref:Avalonia.Controls.IndexPath)
+
+The index path of the item to select.
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [AnchorIndex](#uid-53c460df07) | Gets or sets the anchor index. |
+| [Count](#uid-8b55b5da6d) | No summary available. |
+| [IsCellSelectionModel](#uid-6a10385dfa) | Gets a value indicating whether this is a cell selection model. |
+| [RangeAnchorIndex](#uid-d7d024ac17) | Gets or sets the range anchor index. |
+| [SelectedIndex](#uid-cdc1462ee3) | Gets or sets the selected index within the data. |
+| [SelectedIndexes](#uid-5951beb0b0) | Gets the indexes of the selected items. |
+| [SelectedItem](#uid-d03873e1f9) | Gets the currently selected item. |
+| [SelectedItems](#uid-51a5504eb2) | Gets a collection containing all selected items. |
+| [SingleSelect](#uid-c98ed464f3) | Gets or sets a value indicating whether only a single item can be selected at a time. |
+| [Source](#uid-4053d3eb2c) | Gets the data source for the selection model. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-53c460df07"></span>
+
+### AnchorIndex Property
+
+Gets or sets the anchor index.
+
+```csharp
+public Avalonia.Controls.IndexPath AnchorIndex { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8b55b5da6d"></span>
+
+### Count Property
+
+```csharp
+public int Count { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6a10385dfa"></span>
+
+### IsCellSelectionModel Property
+
+Gets a value indicating whether this is a cell selection model.
+
+```csharp
+public bool IsCellSelectionModel { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d7d024ac17"></span>
+
+### RangeAnchorIndex Property
+
+Gets or sets the range anchor index.
+
+```csharp
+public Avalonia.Controls.IndexPath RangeAnchorIndex { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-cdc1462ee3"></span>
+
+### SelectedIndex Property
+
+Gets or sets the selected index within the data.
+
+```csharp
+public Avalonia.Controls.IndexPath SelectedIndex { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5951beb0b0"></span>
+
+### SelectedIndexes Property
+
+Gets the indexes of the selected items.
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<Avalonia.Controls.IndexPath> SelectedIndexes { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d03873e1f9"></span>
+
+### SelectedItem Property
+
+Gets the currently selected item.
+
+```csharp
+public TModel SelectedItem { get; set; }
+```
+
+#### Value
+
+The selected item, or default(TModel) if no item is selected.
+
+
+#### Remarks
+
+When multiple items are selected, this property returns the first selected item.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-51a5504eb2"></span>
+
+### SelectedItems Property
+
+Gets a collection containing all selected items.
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<TModel> SelectedItems { get; set; }
+```
+
+#### Value
+
+A read-only list of the selected items.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c98ed464f3"></span>
+
+### SingleSelect Property
+
+Gets or sets a value indicating whether only a single item can be selected at a time.
+
+```csharp
+public bool SingleSelect { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4053d3eb2c"></span>
+
+### Source Property
+
+Gets the data source for the selection model.
+
+```csharp
+public System.Collections.IEnumerable Source { get; set; }
+```
+
+</section>
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [SelectionChanged](#uid-20d38a3933) | Occurs when the selection changes. |
+| [IndexesChanged](treedatagridselectionmodel.mdx#uid-c5c2106a08) | Occurs when item indexes change due to insertions or removals in the data source. Inherited from [TreeDataGridSelectionModel](treedatagridselectionmodel.mdx). |
+| [PropertyChanged](treedatagridselectionmodel.mdx#uid-c2ee82eef9) | Inherited from [TreeDataGridSelectionModel](treedatagridselectionmodel.mdx). |
+| [SourceReset](treedatagridselectionmodel.mdx#uid-eac05c7ba6) | Occurs when the data source is reset. Inherited from [TreeDataGridSelectionModel](treedatagridselectionmodel.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-20d38a3933"></span>
+
+### SelectionChanged Event
+
+Occurs when the selection changes.
+
+```csharp
+public event EventHandler<Avalonia.Controls.Selection.TreeDataGridSelectionChangedEventArgs<T><TModel>> SelectionChanged
+```
+
+#### Remarks
+
+This event provides strongly-typed access to the selection changes, including the
+items and index paths that were selected and deselected.
 
 </section>
 

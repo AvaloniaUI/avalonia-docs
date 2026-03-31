@@ -32,10 +32,6 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.TreeDataGrid</code>
 </div>
-<div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/3111696698e2c3d6fe9aace8cb954153ee16b3e4/src/Avalonia.Controls.TreeDataGrid/Primitives/TreeDataGridElementFactory.cs">TreeDataGridElementFactory.cs</a>
-</div>
-
 </div>
 
 <div className="apiref-page__lead">
@@ -85,86 +81,6 @@ by overriding the [Avalonia.Controls.Primitives.TreeDataGridElementFactory.Creat
 ```csharp
 public TreeDataGridElementFactory()
 ```
-
-</section>
-
-## Methods
-
-| Name | Description |
-| --- | --- |
-| [GetOrCreateElement](#uid-b88b0e820e) | Gets an existing recycled element or creates a new element for the specified data. |
-| [RecycleElement](#uid-23443f481b) | Recycles an element for later reuse. |
-
-<section className="apiref-page__member-entry">
-
-<span id="uid-b88b0e820e"></span>
-
-### GetOrCreateElement Method
-
-Gets an existing recycled element or creates a new element for the specified data.
-
-```csharp
-public Avalonia.Controls.Control GetOrCreateElement(object data, Avalonia.Controls.Control parent)
-```
-
-#### Parameters
-
-`data` object
-
-The [TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid) model for which to get or create an element, e.g. [Avalonia.Controls.Models.TreeDataGrid.ICell](xref:Avalonia.Controls.Models.TreeDataGrid.ICell)
-or [Avalonia.Controls.Models.TreeDataGrid.CheckBoxCell](xref:Avalonia.Controls.Models.TreeDataGrid.CheckBoxCell).
-
-
-`parent` [Avalonia.Controls.Control](xref:Avalonia.Controls.Control)
-
-The parent control that will host the element, e.g. a [Avalonia.Controls.Primitives.TreeDataGridRow](xref:Avalonia.Controls.Primitives.TreeDataGridRow).
-
-
-#### Returns
-
-[Avalonia.Controls.Control](xref:Avalonia.Controls.Control)
-
-A control that can be used to display the specified data.
-
-
-#### Remarks
-
-This method first attempts to reuse an existing element from the recycle pool. It
-tries to find an element with the same parent, then an element with no parent, and
-finally creates a new element if necessary.
-
-The returned element will be ready to use but may need to be further configured with
-specific data, for example the DataContext is not set by this method.
-
-</section>
-
-<section className="apiref-page__member-entry">
-
-<span id="uid-23443f481b"></span>
-
-### RecycleElement Method
-
-Recycles an element for later reuse.
-
-```csharp
-public void RecycleElement(Avalonia.Controls.Control element)
-```
-
-#### Parameters
-
-`element` [Avalonia.Controls.Control](xref:Avalonia.Controls.Control)
-
-The control element to recycle.
-
-
-#### Remarks
-
-When an element is no longer needed (e.g., when it scrolls out of view), this method
-should be called to add it to the recycle pool. The element can then be reused later
-when a similar element is needed, improving performance by reducing the need to create
-new elements.
-
-Recycled elements should be in a clean state, with any data-specific state cleared.
 
 </section>
 

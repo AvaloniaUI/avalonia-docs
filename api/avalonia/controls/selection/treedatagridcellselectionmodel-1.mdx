@@ -32,7 +32,6 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.TreeDataGrid</code>
 </div>
-
 </div>
 
 <div className="apiref-page__lead">
@@ -51,10 +50,10 @@ public class TreeDataGridCellSelectionModel<TModel>
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> TreeDataGridCellSelectionModel&lt;TModel&gt;
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="treedatagridselectionmodel">TreeDataGridSelectionModel</a> <span className="apiref-page__relation-separator">-&gt;</span> TreeDataGridCellSelectionModel&lt;TModel&gt;
 </div>
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Implements:</span> <a href="itreedatagridcellselectionmodel">ITreeDataGridCellSelectionModel</a>, ITreeDataGridCellSelectionModel&lt;&gt;, <a href="itreedatagridselection">ITreeDataGridSelection</a>, <a href="itreedatagridselectioninteraction">ITreeDataGridSelectionInteraction</a>
+<span className="apiref-page__meta-label">Implements:</span> af
 </div>
 </div>
 
@@ -73,21 +72,21 @@ Cell selection supports the following user interactions:
 
 | Name | Description |
 | --- | --- |
-| [TreeDataGridCellSelectionModel&lt;TModel&gt;](#uid-23438ad1ca) | No summary available. |
+| [TreeDataGridCellSelectionModel&lt;TModel&gt;](#uid-3d8f85b68d) | No summary available. |
 
 <section className="apiref-page__member-entry">
 
-<span id="uid-23438ad1ca"></span>
+<span id="uid-3d8f85b68d"></span>
 
 ### TreeDataGridCellSelectionModel&lt;TModel&gt; Constructor
 
 ```csharp
-public TreeDataGridCellSelectionModel<TModel>(Avalonia.Controls.ITreeDataGridSource<TModel><TModel> source)
+public TreeDataGridCellSelectionModel<TModel>(Avalonia.Controls.TreeDataGridSource<TModel><TModel> source)
 ```
 
 #### Parameters
 
-`source` [Avalonia.Controls.ITreeDataGridSource](xref:Avalonia.Controls.ITreeDataGridSource)&lt;TModel&gt;&lt;TModel&gt;
+`source` [Avalonia.Controls.TreeDataGridSource](xref:Avalonia.Controls.TreeDataGridSource)&lt;TModel&gt;&lt;TModel&gt;
 
 
 </section>
@@ -96,10 +95,38 @@ public TreeDataGridCellSelectionModel<TModel>(Avalonia.Controls.ITreeDataGridSou
 
 | Name | Description |
 | --- | --- |
+| [BatchUpdate](#uid-805a5b61ea) | Returns a disposable that groups multiple selection operations into a single batch, raising only a single set of change events when disposed. |
 | [BeginBatchUpdate](#uid-33369fa084) | Begins a batch update of the selection. |
+| [Clear](#uid-2a99e8803a) | Clears the selection. |
 | [EndBatchUpdate](#uid-2eacfb3815) | Ends a batch update started by [Avalonia.Controls.Selection.TreeDataGridCellSelectionModel&lt;T&gt;.BeginBatchUpdate](xref:Avalonia.Controls.Selection.TreeDataGridCellSelectionModel%601.BeginBatchUpdate). |
 | [IsSelected (2 overloads)](#uid-ac6ca39f4b) | Checks whether the specified cell is selected. |
 | [SetSelectedRange](#uid-a0a9c7592b) | Sets the current selection to the specified range of cells. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-805a5b61ea"></span>
+
+### BatchUpdate Method
+
+Returns a disposable that groups multiple selection operations into a single batch,
+raising only a single set of change events when disposed.
+
+```csharp
+public Avalonia.Controls.Selection.TreeDataGridCellSelectionModel<TModel>.BatchUpdateOperation<TModel><TModel> BatchUpdate()
+```
+
+#### Returns
+
+Avalonia.Controls.Selection.TreeDataGridCellSelectionModel&lt;TModel&gt;.BatchUpdateOperation&lt;TModel&gt;&lt;TModel&gt;
+
+
+#### Remarks
+
+Use this method with a using statement to group multiple selection operations together and
+raise only a single set of change events when the batch is complete. This is equivalent to
+calling [Avalonia.Controls.Selection.TreeDataGridCellSelectionModel&lt;T&gt;.BeginBatchUpdate](xref:Avalonia.Controls.Selection.TreeDataGridCellSelectionModel%601.BeginBatchUpdate) and [Avalonia.Controls.Selection.TreeDataGridCellSelectionModel&lt;T&gt;.EndBatchUpdate](xref:Avalonia.Controls.Selection.TreeDataGridCellSelectionModel%601.EndBatchUpdate).
+
+</section>
 
 <section className="apiref-page__member-entry">
 
@@ -121,6 +148,20 @@ properties and no events will be raised until [Avalonia.Controls.Selection.TreeD
 [Avalonia.Controls.Selection.TreeDataGridCellSelectionModel&lt;T&gt;.BeginBatchUpdate](xref:Avalonia.Controls.Selection.TreeDataGridCellSelectionModel%601.BeginBatchUpdate) may be called multiple times, even when a batch update
 is already in progress; each call must have a corresponding call to
 [Avalonia.Controls.Selection.TreeDataGridCellSelectionModel&lt;T&gt;.EndBatchUpdate](xref:Avalonia.Controls.Selection.TreeDataGridCellSelectionModel%601.EndBatchUpdate) in order to finish the operation.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2a99e8803a"></span>
+
+### Clear Method
+
+Clears the selection.
+
+```csharp
+public void Clear()
+```
 
 </section>
 
@@ -235,9 +276,11 @@ The number of rows in the selection.
 | Name | Description |
 | --- | --- |
 | [Count](#uid-80f392fb22) | Gets the number of cells currently selected. |
+| [IsCellSelectionModel](#uid-41a16315c0) | Gets a value indicating whether this is a cell selection model. |
 | [SelectedIndex](#uid-48f7e44756) | Gets or sets the index of the currently selected cell. |
 | [SelectedIndexes](#uid-14221c8b68) | Gets a read-only list of the indices of all selected cells. |
 | [SingleSelect](#uid-5eef67c7c1) | Gets or sets a value indicating whether only a single cell can be selected at a time. |
+| [Source](#uid-8703b78b1d) | Gets the data source for the selection model. |
 
 <section className="apiref-page__member-entry">
 
@@ -249,6 +292,20 @@ Gets the number of cells currently selected.
 
 ```csharp
 public int Count { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-41a16315c0"></span>
+
+### IsCellSelectionModel Property
+
+Gets a value indicating whether this is a cell selection model.
+
+```csharp
+public bool IsCellSelectionModel { get; set; }
 ```
 
 </section>
@@ -312,11 +369,28 @@ When set to false, additional cells can be selected by holding Shift.
 
 </section>
 
+<section className="apiref-page__member-entry">
+
+<span id="uid-8703b78b1d"></span>
+
+### Source Property
+
+Gets the data source for the selection model.
+
+```csharp
+public System.Collections.IEnumerable Source { get; set; }
+```
+
+</section>
+
 ## Events
 
 | Name | Description |
 | --- | --- |
 | [SelectionChanged](#uid-22b5155014) | Occurs when the cell selection changes. |
+| [IndexesChanged](treedatagridselectionmodel.mdx#uid-c5c2106a08) | Occurs when item indexes change due to insertions or removals in the data source. Inherited from [TreeDataGridSelectionModel](treedatagridselectionmodel.mdx). |
+| [PropertyChanged](treedatagridselectionmodel.mdx#uid-c2ee82eef9) | Inherited from [TreeDataGridSelectionModel](treedatagridselectionmodel.mdx). |
+| [SourceReset](treedatagridselectionmodel.mdx#uid-eac05c7ba6) | Occurs when the data source is reset. Inherited from [TreeDataGridSelectionModel](treedatagridselectionmodel.mdx). |
 
 <section className="apiref-page__member-entry">
 
@@ -327,7 +401,7 @@ When set to false, additional cells can be selected by holding Shift.
 Occurs when the cell selection changes.
 
 ```csharp
-public event EventHandler<Avalonia.Controls.Selection.TreeDataGridCellSelectionChangedEventArgs<T><TModel>> SelectionChanged
+public event EventHandler<Avalonia.Controls.Selection.TreeDataGridSelectionChangedEventArgs<T><TModel>> SelectionChanged
 ```
 
 #### Remarks
