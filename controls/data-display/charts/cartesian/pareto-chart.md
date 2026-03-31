@@ -1,0 +1,56 @@
+---
+id: pareto-chart
+title: Pareto Chart
+description: Combines descending bars with a cumulative line to highlight the most significant factors, based on the 80/20 principle.
+doc_type: reference
+tags:
+  - accelerate
+---
+
+import chartsStatisticalPareto from '/img/controls/charts/charts-statistical-pareto.png';
+
+:::info
+[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Enterprise.
+:::
+
+A Pareto chart contains both bars and a line graph, where individual values are represented in descending order by bars, and the cumulative total is represented by the line.
+
+<Image light={chartsStatisticalPareto} maxWidth={400} position="center" cornerRadius="true" alt="Pareto chart with descending bars and a cumulative percentage line highlighting the most significant factors." />
+
+## When to Use
+- **Quality Control**: Identifying the "vital few" causes of defects (80/20 rule).
+- **Resource Management**: Pinpointing which categories account for most costs.
+- **Customer Service**: Analyzing which complaints are most frequent.
+
+## Code Example
+
+### XAML
+```xml
+<controls:ParetoChart Title="Complaint Analysis" Height="400"
+                      ItemsSource="{Binding ComplaintData}"
+                      ValuePath="Count"
+                      LabelPath="Category" />
+```
+
+### Data Model (C#)
+```csharp
+public record Complaint(string Category, double Count);
+
+public ObservableCollection<Complaint> ComplaintData { get; } = new()
+{
+    new("Late Delivery", 450),
+    new("Damaged Item", 280),
+    new("Wrong Item", 120),
+    new("Support Quality", 45)
+};
+```
+
+## Common Properties
+
+| Property | Description | Default |
+| :--- | :--- | :--- |
+| `ItemsSource` | The collection of categories. | `null` |
+| `ValuePath` | Property determining bar height. | `null` |
+| `LabelPath` | Property for the category names. | `null` |
+| `LineStroke` | Color of the cumulative percentage line. | `Red` |
+| `ShowLabels` | Toggles values on bars/line points. | `true` |
