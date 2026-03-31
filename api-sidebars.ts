@@ -2941,20 +2941,36 @@ const sidebars = {
           "type": "category",
           "label": "Avalonia.Controls",
           "items": [
+            "avalonia/controls/begineditgestures",
             "avalonia/controls/cellindex",
+            "avalonia/controls/checkboxcolumncreateoptions",
+            "avalonia/controls/columncreateoptions",
             "avalonia/controls/flattreedatagridsource-1",
+            "avalonia/controls/hierarchicalexpandercolumncreateoptions-1",
+            "avalonia/controls/hierarchicalexpandertextcolumncreateoptions-1",
             "avalonia/controls/hierarchicaltreedatagridsource-1",
-            "avalonia/controls/itreedatagridsource",
-            "avalonia/controls/itreedatagridsource-1",
             "avalonia/controls/indexpath",
+            "avalonia/controls/templatecolumncreateoptions",
+            "avalonia/controls/textcolumncreateoptions",
             "avalonia/controls/treedatagrid",
+            "avalonia/controls/treedatagridboundcolumn",
             "avalonia/controls/treedatagridcelleventargs",
-            "avalonia/controls/treedatagriditemssourceview",
-            "avalonia/controls/treedatagriditemssourceview-1",
+            "avalonia/controls/treedatagridcheckboxcolumn",
+            "avalonia/controls/treedatagridcolumn",
+            "avalonia/controls/treedatagridcolumns",
+            "avalonia/controls/treedatagridhierarchicalexpandercolumn",
             "avalonia/controls/treedatagridrowdrageventargs",
             "avalonia/controls/treedatagridrowdragstartedeventargs",
             "avalonia/controls/treedatagridrowdropposition",
-            "avalonia/controls/treedatagridroweventargs"
+            "avalonia/controls/treedatagridroweventargs",
+            "avalonia/controls/treedatagridrowheadercolumn",
+            "avalonia/controls/treedatagridrows",
+            "avalonia/controls/treedatagridselectionmode",
+            "avalonia/controls/treedatagridsource",
+            "avalonia/controls/treedatagridsource-1",
+            "avalonia/controls/treedatagridsourceextensions",
+            "avalonia/controls/treedatagridtemplatecolumn",
+            "avalonia/controls/treedatagridtextcolumn"
           ],
           "link": {
             "type": "doc",
@@ -2976,68 +2992,13 @@ const sidebars = {
           "type": "category",
           "label": "Avalonia.Controls.Models",
           "items": [
-            "avalonia/controls/models/notifyingbase",
-            "avalonia/controls/models/notifyinglistbase-1",
-            "avalonia/controls/models/readonlylistbase-1"
+            "avalonia/controls/models/itreedatagridcellmodel",
+            "avalonia/controls/models/itreedatagridrowmodel",
+            "avalonia/controls/models/treedatagridrowmodeleventargs"
           ],
           "link": {
             "type": "doc",
             "id": "avalonia/controls/models/index"
-          }
-        },
-        {
-          "type": "category",
-          "label": "Avalonia.Controls.Models.TreeDataGrid",
-          "items": [
-            "avalonia/controls/models/treedatagrid/anonymoussortablerows-1",
-            "avalonia/controls/models/treedatagrid/begineditgestures",
-            "avalonia/controls/models/treedatagrid/checkboxcell",
-            "avalonia/controls/models/treedatagrid/checkboxcolumn-1",
-            "avalonia/controls/models/treedatagrid/checkboxcolumnoptions-1",
-            "avalonia/controls/models/treedatagrid/columnbase-2",
-            "avalonia/controls/models/treedatagrid/columnbase-1",
-            "avalonia/controls/models/treedatagrid/columnlist-1",
-            "avalonia/controls/models/treedatagrid/columnoptions-1",
-            "avalonia/controls/models/treedatagrid/draginfo",
-            "avalonia/controls/models/treedatagrid/expandercell-1",
-            "avalonia/controls/models/treedatagrid/hierarchicalexpandercolumn-1",
-            "avalonia/controls/models/treedatagrid/hierarchicalrow-1",
-            "avalonia/controls/models/treedatagrid/hierarchicalrows-1",
-            "avalonia/controls/models/treedatagrid/icell",
-            "avalonia/controls/models/treedatagrid/icelloptions",
-            "avalonia/controls/models/treedatagrid/icolumn",
-            "avalonia/controls/models/treedatagrid/icolumn-1",
-            "avalonia/controls/models/treedatagrid/icolumns",
-            "avalonia/controls/models/treedatagrid/iexpander",
-            "avalonia/controls/models/treedatagrid/iexpandercell",
-            "avalonia/controls/models/treedatagrid/iexpandercolumn-1",
-            "avalonia/controls/models/treedatagrid/iexpanderrow-1",
-            "avalonia/controls/models/treedatagrid/iexpanderrowcontroller-1",
-            "avalonia/controls/models/treedatagrid/iindentedrow",
-            "avalonia/controls/models/treedatagrid/imodelindexablerow",
-            "avalonia/controls/models/treedatagrid/irow",
-            "avalonia/controls/models/treedatagrid/irow-1",
-            "avalonia/controls/models/treedatagrid/irows",
-            "avalonia/controls/models/treedatagrid/itemplatecelloptions",
-            "avalonia/controls/models/treedatagrid/itextcell",
-            "avalonia/controls/models/treedatagrid/itextcelloptions",
-            "avalonia/controls/models/treedatagrid/itextsearchablecolumn-1",
-            "avalonia/controls/models/treedatagrid/iupdatecolumnlayout",
-            "avalonia/controls/models/treedatagrid/roweventargs",
-            "avalonia/controls/models/treedatagrid/roweventargs-1",
-            "avalonia/controls/models/treedatagrid/rowheadercell",
-            "avalonia/controls/models/treedatagrid/rowheadercolumn-1",
-            "avalonia/controls/models/treedatagrid/sortablerowsbase-2",
-            "avalonia/controls/models/treedatagrid/templatecell",
-            "avalonia/controls/models/treedatagrid/templatecolumn-1",
-            "avalonia/controls/models/treedatagrid/templatecolumnoptions-1",
-            "avalonia/controls/models/treedatagrid/textcell-1",
-            "avalonia/controls/models/treedatagrid/textcolumn-2",
-            "avalonia/controls/models/treedatagrid/textcolumnoptions-1"
-          ],
-          "link": {
-            "type": "doc",
-            "id": "avalonia/controls/models/treedatagrid/index"
           }
         },
         {
@@ -3047,9 +3008,9 @@ const sidebars = {
             "avalonia/controls/primitives/treedatagridcell",
             "avalonia/controls/primitives/treedatagridcellspresenter",
             "avalonia/controls/primitives/treedatagridcheckboxcell",
+            "avalonia/controls/primitives/treedatagridcolumnarpresenterbase-1",
             "avalonia/controls/primitives/treedatagridcolumnheader",
             "avalonia/controls/primitives/treedatagridcolumnheaderspresenter",
-            "avalonia/controls/primitives/treedatagridcolumnarpresenterbase-1",
             "avalonia/controls/primitives/treedatagridelementfactory",
             "avalonia/controls/primitives/treedatagridexpandercell",
             "avalonia/controls/primitives/treedatagridpresenterbase-1",
@@ -3068,23 +3029,15 @@ const sidebars = {
           "type": "category",
           "label": "Avalonia.Controls.Selection",
           "items": [
-            "avalonia/controls/selection/itreedatagridcellselectionmodel",
-            "avalonia/controls/selection/itreedatagridcellselectionmodel-1",
-            "avalonia/controls/selection/itreedatagridrowselectionmodel",
-            "avalonia/controls/selection/itreedatagridrowselectionmodel-1",
-            "avalonia/controls/selection/itreedatagridselection",
-            "avalonia/controls/selection/itreedatagridselectioninteraction",
-            "avalonia/controls/selection/itreeselectionmodel",
-            "avalonia/controls/selection/treedatagridcellselectionchangedeventargs",
-            "avalonia/controls/selection/treedatagridcellselectionchangedeventargs-1",
             "avalonia/controls/selection/treedatagridcellselectionmodel-1",
+            "avalonia/controls/selection/treedatagridcellselectionmodel-1-batchupdateoperation",
+            "avalonia/controls/selection/treedatagridindexeschangedeventargs",
+            "avalonia/controls/selection/treedatagriditemsreseteventargs",
             "avalonia/controls/selection/treedatagridrowselectionmodel-1",
-            "avalonia/controls/selection/treeselectionmodelbase-1",
-            "avalonia/controls/selection/treeselectionmodelbase-1-batchupdateoperation",
-            "avalonia/controls/selection/treeselectionmodelindexeschangedeventargs",
-            "avalonia/controls/selection/treeselectionmodelselectionchangedeventargs",
-            "avalonia/controls/selection/treeselectionmodelselectionchangedeventargs-1",
-            "avalonia/controls/selection/treeselectionmodelsourcereseteventargs"
+            "avalonia/controls/selection/treedatagridrowselectionmodel-1-batchupdateoperation",
+            "avalonia/controls/selection/treedatagridselectionchangedeventargs",
+            "avalonia/controls/selection/treedatagridselectionchangedeventargs-1",
+            "avalonia/controls/selection/treedatagridselectionmodel"
           ],
           "link": {
             "type": "doc",
@@ -3093,34 +3046,12 @@ const sidebars = {
         },
         {
           "type": "category",
-          "label": "Avalonia.Experimental.Data",
-          "items": [
-            "avalonia/experimental/data/typedbinding-2",
-            "avalonia/experimental/data/typedbinding-1"
-          ],
-          "link": {
-            "type": "doc",
-            "id": "avalonia/experimental/data/index"
-          }
-        },
-        {
-          "type": "category",
-          "label": "Avalonia.Experimental.Data.Core",
-          "items": [
-            "avalonia/experimental/data/core/lightweightobservablebase-1",
-            "avalonia/experimental/data/core/typedbindingexpression-2"
-          ],
-          "link": {
-            "type": "doc",
-            "id": "avalonia/experimental/data/core/index"
-          }
-        },
-        {
-          "type": "category",
           "label": "CompiledAvaloniaXaml",
           "items": [
-            "compiledavaloniaxaml/avaloniaresources-namespaceinfo-themes-fluent-axaml",
-            "compiledavaloniaxaml/avaloniaresources-namespaceinfo-themes-generic-axaml"
+            "compiledavaloniaxaml/avaloniaresources",
+            "compiledavaloniaxaml/xamlilcontext-context-1",
+            "compiledavaloniaxaml/xamlilcontext-parentstackenumerable-enumerator",
+            "compiledavaloniaxaml/xamlloader"
           ],
           "link": {
             "type": "doc",
