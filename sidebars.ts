@@ -376,6 +376,7 @@ const sidebars: SidebarsConfig = {
       items: [
         'deployment/macos',
         'deployment/linux',
+        'deployment/docker',
         'deployment/embedded-linux/embedded-linux',
         'deployment/android',
         'deployment/ios',
