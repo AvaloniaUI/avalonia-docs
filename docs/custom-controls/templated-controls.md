@@ -29,6 +29,12 @@ public class ToggleLabel : TemplatedControl
 
 This gives you a control with a `LabelText` property but no visual representation yet. The visuals come from a control theme.
 
+:::caution Do not set DataContext = this
+Never assign `DataContext = this` in a custom control's constructor. This overrides the `DataContext` that consumers of your control expect to inherit from the parent visual tree. Bindings set on your control from the outside (for example, `<MyControl Items="{Binding SelectedItems}" />`) will resolve against your control type instead of the parent's ViewModel, causing silent binding failures.
+
+Templated controls do not need self-referencing `DataContext`. Use [`TemplateBinding`](#templatebinding-details) inside your control template to access your control's own properties, and let the `DataContext` flow naturally from the parent.
+:::
+
 ## Defining the control theme
 
 Every templated control needs a default `ControlTheme` that contains its `ControlTemplate`. This is typically placed in a resource dictionary such as `Themes/Generic.axaml` and included in your application's resources.

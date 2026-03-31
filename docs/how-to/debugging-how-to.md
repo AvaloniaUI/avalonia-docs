@@ -7,7 +7,7 @@ doc-type: how-to
 
 This guide covers techniques for debugging bindings, layout, styling, and rendering issues in Avalonia applications.
 
-## Debugging Data Bindings
+## Debugging data bindings
 
 ### Enable binding error logging
 
@@ -29,14 +29,15 @@ Binding errors appear as warnings like:
 
 | Symptom | Likely cause |
 |---|---|
-| Control shows nothing | Property name typo, DataContext not set, or wrong DataContext type. |
-| "Binding error" in output | Property doesn't exist on the DataContext. Check casing and spelling. |
+| Control shows nothing | Property name typo, `DataContext` not set, or wrong `DataContext` type. |
+| "Binding error" in output | Property doesn't exist on the `DataContext`. Check casing and spelling. |
 | One-way works, two-way doesn't | Property setter missing, or property doesn't raise `PropertyChanged`. |
 | Collection doesn't update | Using `List<T>` instead of `ObservableCollection<T>`. |
+| Custom control ignores bound values | Setting `DataContext = this` in the control constructor. This overrides the inherited `DataContext` and breaks bindings set by the parent. Remove the assignment and use `TemplateBinding` inside the control template instead. |
 
 ### Verify the DataContext
 
-Check what DataContext a control has at runtime:
+Check what `DataContext` a control has at runtime:
 
 ```csharp
 // In code-behind for debugging
@@ -57,7 +58,7 @@ protected override void OnLoaded(RoutedEventArgs e)
 </UserControl>
 ```
 
-## Debugging Layout Issues
+## Debugging layout issues
 
 ### Make layout visible
 
@@ -150,7 +151,7 @@ Non-virtualizing panels like `StackPanel` inside an `ItemsControl` create all it
 <ListBox ItemsSource="{Binding LargeList}" />
 ```
 
-## Useful Debugging Tools
+## Useful debugging tools
 
 | Tool | Purpose |
 |---|---|
@@ -159,7 +160,7 @@ Non-virtualizing panels like `StackPanel` inside an `ItemsControl` create all it
 | **LogToTrace** | See binding errors and other warnings in the debug output. |
 | **Conditional breakpoints** | Break on property changes in view model setters. |
 
-## See Also
+## See also
 
 - [Binding Debugging](/docs/data-binding/binding-debugging): Detailed binding diagnostics.
 - [Compiled Bindings](/docs/data-binding/compiled-bindings): Catch binding errors at build time.
