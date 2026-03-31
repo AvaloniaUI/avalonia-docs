@@ -5,6 +5,10 @@ title: Headless Testing Platform
 
 The headless platform runs Avalonia without a visible window, making it ideal for automated testing in CI/CD environments and on machines without a display. It provides the full Avalonia control tree, layout, styling, and data binding, but replaces the real windowing and rendering backends with in-memory implementations.
 
+:::tip[Not just for testing]
+The headless platform is also useful outside of testing. If you need to render controls without a visible window (for example, server-side image generation, PDF export, or batch processing), enable the Skia renderer with `UseHeadlessDrawing = false` as shown in [Visual regression testing](#visual-regression-testing). This gives you a full rendering pipeline in memory. See also [Running headless in Docker](/docs/deployment/docker#using-the-headless-platform-instead).
+:::
+
 ## Simulating user input
 
 The headless platform has no real input devices, so you simulate input using extension methods on `Window`. These methods raise the same events that real input would trigger.

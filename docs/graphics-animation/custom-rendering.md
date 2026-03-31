@@ -190,6 +190,10 @@ renderTarget.Save("output.png");
 `RenderTargetBitmap` uses software rendering. Controls that rely on GPU-specific rendering paths (such as `OpenGlControlBase` or custom GPU interop) may not render correctly when captured this way.
 :::
 
+:::tip[Offscreen rendering]
+`RenderTargetBitmap.Render` requires the target control to be attached to a visible window. If you need to render controls without displaying a window (for example, server-side image generation or batch export), use the [headless platform](/docs/testing/setting-up-the-headless-platform) with the Skia renderer enabled. The headless platform provides a full layout and rendering pipeline in memory without opening a visible window.
+:::
+
 ## ICustomDrawOperation for SkiaSharp
 
 For direct access to the SkiaSharp canvas (e.g., for complex charts, 3D rendering, or game graphics), implement `ICustomDrawOperation`:

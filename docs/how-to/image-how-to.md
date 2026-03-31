@@ -184,6 +184,8 @@ renderTarget.Render(myControl);
 renderTarget.Save("screenshot.png");
 ```
 
+The target control must be attached to a visible window. To render without displaying a window, use the [headless platform](/docs/testing/setting-up-the-headless-platform#visual-regression-testing) with the Skia renderer enabled.
+
 ## Key Properties
 
 | Property | Type | Description |
