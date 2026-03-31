@@ -1,6 +1,8 @@
 ---
 id: property-setters
 title: Property setters
+description: Define property values in styles using setters, bindings, templates, and understand setter precedence rules.
+doc-type: reference
 ---
 
 import SetterPrecedenceAnimationWrongScreenshot from '/img/reference/styles/setter-precedence-animation-wrong.gif';
@@ -36,6 +38,12 @@ A style can also set properties using bindings. After the usual selection proces
 ```xml
 <Setter Property="FontSize" Value="{Binding SelectedFontSize}"/>
 ```
+
+:::caution
+Bindings in setters resolve against the **target control's** `DataContext`. Styles declared inside `<Application.Styles>` still bind against the matched control's `DataContext`, not a `DataContext` set on `Application` itself. `Application` is not part of the visual or logical tree, so setting `DataContext` on it has no effect on setter bindings.
+
+If you need to apply configurable values (such as user-chosen colors) at the application level, use `DynamicResource` references together with runtime resource updates instead of data bindings. See [Resources overview](/docs/app-development/resources) and [How to switch themes](/docs/how-to/theme-switching-how-to) for details.
+:::
 
 ## Style priority
 
@@ -279,7 +287,7 @@ Recall the `Animation` example above. If you hover, the animated background is r
 despite `BindingPriority.Animation` having the highest priority. This is because the `Selector` targets the wrong 
 `Control`. Examining the `ControlTheme` is necessary to diagnose the cause.
 
-<img src={SetterPrecedenceAnimationWrongScreenshot} alt="" />
+<img src={SetterPrecedenceAnimationWrongScreenshot} alt="Button animation overridden by pointer-over style due to incorrect selector target" />
 
 ```xml title='ControlTheme for Button, Trimmed'
 <ControlTheme x:Key="{x:Type Button}" TargetType="Button">
@@ -335,7 +343,7 @@ on priority alone is insufficient to effectively style an application.
 </Button>
 ```
 
-<img src={SetterPrecedenceAnimationCorrectScreenshot} alt="" />
+<img src={SetterPrecedenceAnimationCorrectScreenshot} alt="Button animation working correctly after targeting the ContentPresenter directly" />
 
 ## See also
 
