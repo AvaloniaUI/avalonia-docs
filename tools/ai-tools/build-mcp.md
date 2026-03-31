@@ -199,21 +199,12 @@ claude mcp list
 </TabItem>
 <TabItem value="claude-desktop" label="Claude Desktop">
 
-1. Open **Settings** > **Developer** and click **Edit Config**.
-2. Add the Build MCP server to `claude_desktop_config.json`:
-
-```json
-{
-    "mcpServers": {
-        "avalonia-docs": {
-            "type": "url",
-            "url": "https://docs-mcp.avaloniaui.net/mcp"
-        }
-    }
-}
-```
-
-3. Save the file and restart Claude Desktop.
+1. Go to **Customize** → **Connectors**.
+2. Click the **+** button at the top of the window, then **Add custom connector**.
+3. In the "Name" field, input "avalonia-docs".
+4. In the "Remote MCP server URL" field, input "https://docs-mcp.avaloniaui.net/mcp".
+5. Click **Add**.
+6. You may need to restart Claude Desktop.
 
 </TabItem>
 <TabItem value="gemini-cli" label="Gemini CLI">
