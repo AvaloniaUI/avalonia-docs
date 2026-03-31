@@ -1,6 +1,8 @@
 ---
 id: pinch-gesture-recognizer
 title: Pinch
+description: Track pinch gestures for zoom interactions using PinchGestureRecognizer.
+doc-type: reference
 ---
 
 A gesture recognizer that tracks a pinch gesture. A pinch gesture occurs when two pointer contacts are brought towards each other, or away from each other. This is useful in controls that implement a pinch-to-zoom interaction.
@@ -94,6 +96,10 @@ If your event handles the gesture completely, you can mark the event as handled 
 ```csharp title='C#'
 e.Handled = true;
 ```
+
+## Pointer type filtering
+
+`PinchGestureRecognizer` responds to all pointer types (mouse, touch, and pen). If your application needs pinch-to-zoom only from touch input (for example, to reserve pen input for drawing), you need to create a [custom gesture recognizer](/docs/input-interaction/gestures#custom-gesture-recognizers) that filters by `PointerType.Touch`.
 
 ## More information
 

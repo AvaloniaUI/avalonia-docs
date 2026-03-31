@@ -1,6 +1,8 @@
 ---
 id: gestures
 title: Gestures
+description: Built-in gesture events, gesture recognizers, and custom gesture handling for touch, pen, and mouse input.
+doc-type: overview
 ---
 
 Avalonia uses a unified pointer event system. Mouse, touch, and stylus input all flow through the same `PointerPressed`, `PointerMoved`, and `PointerReleased` events rather than having separate event types for each device. Pointer events tell you what the hardware did: a button went down, a finger moved.
@@ -78,6 +80,85 @@ To allow mouse pointers (not just touch) to trigger holding, set `InputElement.I
         InputElement.IsHoldWithMouseEnabled="True"
         Holding="OnHolding" />
 ```
+
+## Combining multiple gesture recognizers
+
+You can attach more than one gesture recognizer to the same control. For example, to support both pinch-to-zoom and panning on an image:
+
+```xml
+<Image Name="image" Source="/image.jpg">
+  <Image.GestureRecognizers>
+    <PinchGestureRecognizer />
+    <ScrollGestureRecognizer CanHorizontallyScroll="True"
+                              CanVerticallyScroll="True" />
+  </Image.GestureRecognizers>
+</Image>
+```
+
+When multiple recognizers are attached, they each independently monitor the control's pointer events. Only one recognizer can be active at a time: when a recognizer captures a gesture, it prevents other recognizers from activating until the gesture completes.
+
+## Pointer type filtering
+
+Built-in gesture recognizers process all pointer types (mouse, touch, and pen). This can be a problem in applications that assign different behaviors to different input devices. For example, a drawing app might use pen input for drawing and touch input for panning and zooming.
+
+To distinguish between input devices, check the `PointerType` on the pointer event args:
+
+```csharp title='C#'
+private void OnPointerPressed(object? sender, PointerPressedEventArgs e)
+{
+    var pointerType = e.Pointer.Type;
+
+    if (pointerType == PointerType.Pen)
+    {
+        // Handle drawing
+    }
+    else if (pointerType == PointerType.Touch)
+    {
+        // Handle pan/zoom navigation
+    }
+}
+```
+
+Because the built-in recognizers do not filter by pointer type, scenarios that need device-specific gesture handling (such as reserving touch for pan/zoom while using pen for drawing) require a custom gesture recognizer.
+
+## Custom gesture recognizers
+
+To create a custom gesture recognizer, subclass `GestureRecognizer` and override its pointer-tracking methods. This gives you full control over which pointer events are captured, how gestures are detected, and which events are raised.
+
+```csharp title='C#'
+public class TouchOnlyPinchRecognizer : GestureRecognizer
+{
+    protected override void PointerPressed(PointerPressedEventArgs e)
+    {
+        if (e.Pointer.Type != PointerType.Touch)
+            return;
+
+        // Track touch contacts for pinch detection
+    }
+
+    protected override void PointerMoved(PointerEventArgs e)
+    {
+        // Calculate pinch scale from tracked contacts
+    }
+
+    protected override void PointerReleased(PointerReleasedEventArgs e)
+    {
+        // End gesture tracking
+    }
+}
+```
+
+Custom recognizers are attached the same way as built-in ones:
+
+```xml
+<Image Name="image" Source="/image.jpg">
+  <Image.GestureRecognizers>
+    <local:TouchOnlyPinchRecognizer />
+  </Image.GestureRecognizers>
+</Image>
+```
+
+For reference implementations, see the [built-in gesture recognizer source code](https://github.com/AvaloniaUI/Avalonia/tree/master/src/Avalonia.Base/Input/GestureRecognizers) on GitHub.
 
 ## See also
 
