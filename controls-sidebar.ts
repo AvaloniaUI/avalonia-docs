@@ -13,12 +13,12 @@ const sidebars: SidebarsConfig = {
       label: 'Data display',
       collapsed: true,
       items: [
-        'data-display/charts/index',
         {
           type: 'category',
           label: 'Charts',
           collapsed: true,
           items: [
+            'data-display/charts/index',
             {
               type: 'category',
               label: 'Analytics',

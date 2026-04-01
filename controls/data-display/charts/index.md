@@ -27,6 +27,25 @@ Charts are suited for:
 
 ## Chart categories
 
+### Analytics and KPI charts
+
+Charts for summarizing metrics, identifying patterns, and presenting findings.
+
+| Chart | Description |
+| --- | --- |
+| [KPI card](analytics/kpi-card) | Displays a key metric alongside a trend indicator and a sparkline. |
+| [Heatmap chart](analytics/heatmap-chart) | Shows a matrix of values as a color-coded grid. |
+| [Funnel chart](analytics/funnel-chart) | Visualizes a sequential process where volume decreases at each stage. |
+| [Waffle chart](analytics/waffle-chart) | Represents a percentage as filled cells in a grid. |
+| [Word cloud chart](analytics/word-cloud-chart) | Sizes words by frequency to show prominence in a dataset. |
+| [Matrix chart](analytics/matrix-chart) | Displays relationships between two sets of categories in a grid. |
+| [Table chart](analytics/table-chart) | Presents data in rows and columns with optional conditional formatting. |
+| [Bump chart](analytics/bump-chart) | Tracks rank changes over time using crossed lines. |
+| [Slope chart](analytics/slope-chart) | Compares values at two points in time using angled lines. |
+| [Pyramid chart](analytics/pyramid-chart) | Stacks segments vertically to show hierarchical or sequential proportions. |
+| [Theme river chart](analytics/theme-river-chart) | Displays how category proportions change over time as a flowing stream. |
+| [Pictorial bar chart](analytics/pictorial-bar-chart) | Replaces standard bars with icons or shapes sized by value. |
+
 ### Cartesian charts
 
 Charts that plot data on horizontal and vertical axes. Use these for trends, comparisons, distributions, and correlations.
@@ -140,25 +159,6 @@ Charts for time-based planning, project management, sequential data, etc.
 | [Swimlane chart](scheduling/swimlane-chart) | Organizes tasks into parallel rows to show ownership or phase. |
 | [Spiral timeline chart](scheduling/spiral-timeline-chart) | Arranges time-based data along a spiral for cyclical patterns. |
 | [Sparkline chart](scheduling/sparkline-chart) | An inline miniature chart for showing trends within a small space. |
-
-### Analytics and KPI charts
-
-Charts for summarizing metrics, identifying patterns, and presenting findings.
-
-| Chart | Description |
-| --- | --- |
-| [KPI card](analytics/kpi-card) | Displays a key metric alongside a trend indicator and a sparkline. |
-| [Heatmap chart](analytics/heatmap-chart) | Shows a matrix of values as a color-coded grid. |
-| [Funnel chart](analytics/funnel-chart) | Visualizes a sequential process where volume decreases at each stage. |
-| [Waffle chart](analytics/waffle-chart) | Represents a percentage as filled cells in a grid. |
-| [Word cloud chart](analytics/word-cloud-chart) | Sizes words by frequency to show prominence in a dataset. |
-| [Matrix chart](analytics/matrix-chart) | Displays relationships between two sets of categories in a grid. |
-| [Table chart](analytics/table-chart) | Presents data in rows and columns with optional conditional formatting. |
-| [Bump chart](analytics/bump-chart) | Tracks rank changes over time using crossed lines. |
-| [Slope chart](analytics/slope-chart) | Compares values at two points in time using angled lines. |
-| [Pyramid chart](analytics/pyramid-chart) | Stacks segments vertically to show hierarchical or sequential proportions. |
-| [Theme river chart](analytics/theme-river-chart) | Displays how category proportions change over time as a flowing stream. |
-| [Pictorial bar chart](analytics/pictorial-bar-chart) | Replaces standard bars with icons or shapes sized by value. |
 
 ### Statistical charts
 
