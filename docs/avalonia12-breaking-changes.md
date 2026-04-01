@@ -241,6 +241,8 @@ While not technically a breaking change, Avalonia v12 now supports multiple disp
 
 Using `Dispatcher.UIThread` is still perfectly acceptable for applications. However, library and control authors should start using the `AvaloniaObject.Dispatcher` and `Dispatcher.CurrentDispatcher` properties to support multiple dispatchers properly.
 
+`DispatcherTimer` and `AvaloniaSynchronizationContext` use the current dispatcher by default, rather than the UI thread as in previous versions. Make sure that instantiations of those types are made from the correct thread. Alternatively, pass the target dispatcher to the appropriate constructor.
+
 Multiple UI threads are currently still unsupported.
 
 PR: [#18686](https://github.com/AvaloniaUI/Avalonia/pull/18686)
