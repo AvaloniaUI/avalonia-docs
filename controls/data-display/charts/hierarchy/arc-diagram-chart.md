@@ -1,6 +1,6 @@
 ---
 id: arc-diagram-chart
-title: Arc Diagram
+title: Arc diagram
 description: Network visualization where nodes are placed linearly and connections are drawn as curved arcs, useful for showing relationships in ordered datasets.
 doc_type: reference
 tags:
@@ -17,12 +17,12 @@ Arc diagrams are network visualizations where nodes are placed linearly along an
 
 <Image light={chartsFlowArc} maxWidth={400} position="center" cornerRadius="true" alt="Arc diagram with nodes arranged on a horizontal axis connected by curved arcs representing relationships between items." />
 
-## When to Use
+## When to use
 - **Sequence Analysis**: Showing relationships between items in a fixed order (e.g., chapters in a book).
 - **Dependency Mapping**: Visualizing call stacks or structural relationships on a single line.
 - **Categorical Proximity**: Highlighting clusters of interactions within a linear dataset.
 
-## Code Example
+## Code example
 
 ### XAML
 ```xml
@@ -36,7 +36,7 @@ Arc diagrams are network visualizations where nodes are placed linearly along an
                           LinkValuePath="Value" />
 ```
 
-### Data Model (C#)
+### Data model (C#)
 ```csharp
 public record ArcNode(string Id, string Label);
 public record ArcLink(string Source, string Target, double Value);
@@ -52,7 +52,7 @@ public ObservableCollection<ArcLink> ArcLinks { get; } = new()
 };
 ```
 
-## Common Properties
+## Common properties
 
 | Property | Description | Default |
 | :--- | :--- | :--- |

@@ -1,6 +1,6 @@
 ---
 id: radar-chart
-title: Radar Chart
+title: Radar chart
 description: Compares multiple quantitative variables across categories on a radial axis, used to visualize profiles and multi-dimensional performance comparisons.
 doc_type: reference
 tags:
@@ -17,12 +17,12 @@ Radar charts compare multiple qualitative variables across several categories. T
 
 <Image light={chartsRadialRadar} maxWidth={400} position="center" cornerRadius="true" alt="Radar chart with two overlapping polygons comparing multi-dimensional skill scores across radial axes." />
 
-## When to Use
+## When to use
 - **Skill Assessment**: Comparing the strengths/weaknesses of employees or athletes.
 - **Product Benchmarking**: Comparing different products across price, quality, and features.
 - **Performance Profiles**: Displaying multifaceted metrics (e.g., SEO, Speed, Security for a website).
 
-## Code Example
+## Code example
 
 ### XAML
 ```xml
@@ -35,7 +35,7 @@ Radar charts compare multiple qualitative variables across several categories. T
 </controls:RadarChart>
 ```
 
-### Data Model (C#)
+### Data model (C#)
 ```csharp
 // Axis labels mapped to categories
 public ObservableCollection<string> RadarLabels { get; } = new()
@@ -48,7 +48,7 @@ public ObservableCollection<double> RadarSeries1 { get; } = new() { 80, 90, 70, 
 public ObservableCollection<double> RadarSeries2 { get; } = new() { 60, 75, 95, 90, 80 };
 ```
 
-## Common Properties (RadarSeries)
+## Common properties (RadarSeries)
 
 | Property | Description | Default |
 | :--- | :--- | :--- |

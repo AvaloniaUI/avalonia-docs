@@ -1,6 +1,6 @@
 ---
 id: point-and-figure-chart
-title: Point and Figure
+title: Point and figure
 description: Uses columns of Xs and Os to represent price movements, filtering out time and focusing on trend reversals.
 doc_type: reference
 tags:
@@ -17,12 +17,12 @@ Point and Figure (P&F) charts use columns of Xs and Os to represent rising and f
 
 <Image light={chartsFinancialPointandfigure} maxWidth={400} position="center" cornerRadius="true" alt="Point and figure chart with columns of X marks for rising prices and O marks for falling prices filtering out time." />
 
-## When to Use
+## When to use
 - **Long-term Trends**: Visualizing macro-economic or multi-year market shifts.
 - **Support/Resistance**: Identifying clear supply and demand zones.
 - **Price Targets**: Using traditional P&F counting methods for price projections.
 
-## Code Example
+## Code example
 
 ### XAML
 ```xml
@@ -36,7 +36,7 @@ Point and Figure (P&F) charts use columns of Xs and Os to represent rising and f
 </controls:CartesianChart>
 ```
 
-### Data Model (C#)
+### Data model (C#)
 ```csharp
 public record Trade(double Price);
 
@@ -46,7 +46,7 @@ public ObservableCollection<Trade> Quotes { get; } = new()
 };
 ```
 
-## Common Properties
+## Common properties
 
 | Property | Description | Default |
 | :--- | :--- | :--- |

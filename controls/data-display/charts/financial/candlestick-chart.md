@@ -1,6 +1,6 @@
 ---
 id: candlestick-chart
-title: Candlestick Chart
+title: Candlestick chart
 description: Displays open, high, low, and close prices per period using candle-shaped symbols, used for financial market price analysis.
 doc_type: reference
 tags:
@@ -17,12 +17,12 @@ Candlestick charts are used to describe price movements of a security, derivativ
 
 <Image light={chartsFinancialCandlestick} maxWidth={400} position="center" cornerRadius="true" alt="Candlestick chart showing OHLC price data with green bullish and red bearish candles over several trading periods." />
 
-## When to Use
+## When to use
 - **Market Analysis**: Visualizing price volatility and market sentiment.
 - **Technical Analysis**: Identifying patterns like hammers, dojis, or engulfing candles.
 - **High-Low Tracking**: Showing the full range of price action within a period.
 
-## Code Example
+## Code example
 
 ### XAML
 ```xml
@@ -36,7 +36,7 @@ Candlestick charts are used to describe price movements of a security, derivativ
 </controls:FinancialChart>
 ```
 
-### Data Model (C#)
+### Data model (C#)
 ```csharp
 public record StockData(DateTime Date, double Open, double High, double Low, double Close);
 
@@ -48,7 +48,7 @@ public ObservableCollection<StockData> CandlestickData { get; } = new()
 };
 ```
 
-## Common Properties
+## Common properties
 
 | Property | Description | Default |
 | :--- | :--- | :--- |

@@ -1,6 +1,6 @@
 ---
 id: radial-tree-chart
-title: Radial Tree Chart
+title: Radial tree chart
 description: Hierarchical layout where the root node is at the center and child nodes radiate outward in concentric rings, space-efficient for large trees.
 doc_type: reference
 tags:
@@ -17,12 +17,12 @@ Radial tree charts represent hierarchical data where the root is at the center a
 
 <Image light={chartsHierarchicalRadialtree} maxWidth={400} position="center" cornerRadius="true" alt="Radial tree chart with a root node at the center and child nodes radiating outward in concentric rings." />
 
-## When to Use
+## When to use
 - **Directory Visualizers**: Showing many levels of folders in a compact circular form.
 - **Genomic Maps**: Visualizing relationships between many biological entities.
 - **Network Topology**: Mapping devices in a network radiating from a central hub.
 
-## Code Example
+## Code example
 
 ### XAML
 ```xml
@@ -32,7 +32,7 @@ Radial tree charts represent hierarchical data where the root is at the center a
                           ChildrenPath="SubItems" />
 ```
 
-### Data Model (C#)
+### Data model (C#)
 ```csharp
 public class RadialItem
 {
@@ -49,7 +49,7 @@ public ObservableCollection<RadialItem> RadialNodes { get; } = new()
 };
 ```
 
-## Common Properties
+## Common properties
 
 | Property | Description | Default |
 | :--- | :--- | :--- |

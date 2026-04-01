@@ -1,6 +1,6 @@
 ---
 id: alluvial-chart
-title: Alluvial Chart
+title: Alluvial chart
 description: Represents structural changes across sequential stages using flowing bands between vertical node columns, similar to a Sankey diagram.
 doc_type: reference
 tags:
@@ -17,12 +17,12 @@ Alluvial charts represent changes in structure over time or across categories. T
 
 <Image light={chartsFlowAlluvial} maxWidth={400} position="center" cornerRadius="true" alt="Alluvial chart with vertical node columns connected by flowing bands representing categorical transitions between stages." />
 
-## When to Use
+## When to use
 - **Workflow Analysis**: Tracking how items move through sequential process stages.
 - **Categorical Flow**: Visualizing how members of one category belong to others (e.g., voters' changing affiliations).
 - **Structural Shifts**: Showing how a population's grouping changes between two points in time.
 
-## Code Example
+## Code example
 
 ### XAML
 ```xml
@@ -31,7 +31,7 @@ Alluvial charts represent changes in structure over time or across categories. T
                         Links="{Binding AlluvialLinks}" />
 ```
 
-### Data Model (C#)
+### Data model (C#)
 ```csharp
 public record AlluvialNode(string Id, string Label, int Column);
 public record AlluvialLink(string Source, string Target, double Value);
@@ -49,7 +49,7 @@ public ObservableCollection<AlluvialLink> AlluvialLinks { get; } = new()
 };
 ```
 
-## Common Properties
+## Common properties
 
 | Property | Description | Default |
 | :--- | :--- | :--- |

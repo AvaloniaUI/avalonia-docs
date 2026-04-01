@@ -1,6 +1,6 @@
 ---
 id: violin-plot-chart
-title: Violin Plot
+title: Violin plot
 description: Combines a box plot with a kernel density estimate to show both the statistical summary and the probability distribution shape of data across categories.
 doc_type: reference
 tags:
@@ -13,12 +13,12 @@ tags:
 
 Violin plots combine a box plot with a kernel density plot, showing both the statistical summary and the probability density of the data at different values.
 
-## When to Use
+## When to use
 - **Deep Distribution**: When you need to see where data points are most frequent (density).
 - **Comparison**: Comparing both the ranges (box plot) and the shapes (density) of multiple groups.
 - **Multi-modal Data**: Identifying data with multiple peaks (modes) which a box plot might hide.
 
-## Code Example
+## Code example
 
 ### XAML
 ```xml
@@ -30,7 +30,7 @@ Violin plots combine a box plot with a kernel density plot, showing both the sta
                            ItemsSource="{Binding ViolinSeries}" />
 ```
 
-### Data Model (C#)
+### Data model (C#)
 ```csharp
 public record ViolinGroup(string Group, ObservableCollection<double> DataPoints);
 
@@ -41,7 +41,7 @@ public ObservableCollection<ViolinGroup> ViolinSeries { get; } = new()
 };
 ```
 
-## Common Properties
+## Common properties
 
 | Property | Description | Default |
 | :--- | :--- | :--- |

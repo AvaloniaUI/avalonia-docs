@@ -1,6 +1,6 @@
 ---
 id: linear-gauge-chart
-title: Linear Gauge Chart
+title: Linear gauge chart
 description: Visualizes a value along a horizontal or vertical bar for comparing metrics or showing progress.
 doc_type: reference
 tags:
@@ -17,25 +17,25 @@ Linear gauge charts visualize a value along a horizontal or vertical bar. They a
 
 <Image light={chartsGaugesLinear} maxWidth={400} position="center" cornerRadius="true" alt="Linear gauge chart with a horizontal progress bar and scale ticks showing the current value along a numeric range." />
 
-## When to Use
+## When to use
 - **Performance Bars**: Comparing multiple metrics in a condensed dashboard.
 - **Volume Indicators**: Showing storage levels, audio levels, or tank capacity.
 - **Progress Tracking**: Visualizing a sequence of targets in a straight line.
 
-## Code Example
+## Code example
 
 ### XAML
 ```xml
 <controls:LinearGaugeChart Value="{Binding ProgressValue}" Title="Download Progress" Height="60" ScaleVisibility="Visible" />
 ```
 
-### Data Model (C#)
+### Data model (C#)
 ```csharp
 // Simple numeric binding
 public double ProgressValue { get; set; } = 65.5;
 ```
 
-## Common Properties
+## Common properties
 
 | Property | Description | Default |
 | :--- | :--- | :--- |

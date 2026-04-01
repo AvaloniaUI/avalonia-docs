@@ -1,6 +1,6 @@
 ---
 id: heikin-ashi-chart
-title: Heikin-Ashi Chart
+title: Heikin-Ashi chart
 description: Modified candlestick chart that uses averaged OHLC values to filter market noise and display trends more clearly than standard candlesticks.
 doc_type: reference
 tags:
@@ -17,12 +17,12 @@ Heikin-Ashi charts are a variation of Japanese candlestick charts. They use a mo
 
 <Image light={chartsFinancialHeikinashi} maxWidth={400} position="center" cornerRadius="true" alt="Heikin-Ashi chart with smoothed candlesticks using averaged OHLC values to show market trends more clearly." />
 
-## When to Use
+## When to use
 - **Trend Identification**: Finding the beginning and end of a market trend with less volatility.
 - **Swing Trading**: Identifying pullbacks and reversals in volatile markets.
 - **Long-term Analysis**: Smoothing out day-to-day price fluctuations for a broader view.
 
-## Code Example
+## Code example
 
 ### XAML
 ```xml
@@ -35,7 +35,7 @@ Heikin-Ashi charts are a variation of Japanese candlestick charts. They use a mo
 </controls:CartesianChart>
 ```
 
-### Data Model (C#)
+### Data model (C#)
 ```csharp
 public record StockQuote(DateTime Date, double Open, double High, double Low, double Close);
 
@@ -46,7 +46,7 @@ public ObservableCollection<StockQuote> StockData { get; } = new()
 };
 ```
 
-## Common Properties
+## Common properties
 
 | Property | Description | Default |
 | :--- | :--- | :--- |

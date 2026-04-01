@@ -1,6 +1,6 @@
 ---
 id: radial-bar-chart
-title: Radial Bar Chart
+title: Radial bar chart
 description: Bar chart plotted on a circular (polar) grid, offering a space-efficient and distinctive way to compare categories on a radial axis.
 doc_type: reference
 tags:
@@ -17,12 +17,12 @@ Radial bar charts use a polar coordinate system. They are essentially bar charts
 
 <Image light={chartsRadialBar} maxWidth={400} position="center" cornerRadius="true" alt="Radial bar chart with concentric circular bars of varying arc lengths comparing category progress values." />
 
-## When to Use
+## When to use
 - **Circular Comparisons**: Showing data that has a cyclical nature (e.g., hours in a day).
 - **Dashboard Infographics**: Creating high-impact visual summaries for ranked categories.
 - **Progress Tracking**: Visualizing multiple goal tracks in a consolidated radial form.
 
-## Code Example
+## Code example
 
 ### XAML
 ```xml
@@ -32,7 +32,7 @@ Radial bar charts use a polar coordinate system. They are essentially bar charts
                          LabelPath="Label" />
 ```
 
-### Data Model (C#)
+### Data model (C#)
 ```csharp
 public record RadialMetric(string Label, double Value);
 
@@ -44,7 +44,7 @@ public ObservableCollection<RadialMetric> RadialBarData { get; } = new()
 };
 ```
 
-## Common Properties
+## Common properties
 
 | Property | Description | Default |
 | :--- | :--- | :--- |

@@ -1,6 +1,6 @@
 ---
 id: donut-chart
-title: Donut Chart
+title: Donut chart
 description: A variation of the pie chart with a blank center, often used to display a total value or label in the middle for improved readability.
 doc_type: reference
 tags:
@@ -17,12 +17,12 @@ A donut chart is a variations of a pie chart with a blank center. This design is
 
 <Image light={chartsPieDonut} maxWidth={400} position="center" cornerRadius="true" alt="Donut chart with a blank center hole showing proportional segments of revenue distribution by source." />
 
-## When to Use
+## When to use
 - **Proportional Comparison**: Similar to a pie chart, but with a cleaner, more modern aesthetic.
 - **Summary Views**: Where the central space can be used to display the total sum or a key metric.
 - **Minimalist Dashboards**: Highly effective for simple part-to-whole visualizations with few categories.
 
-## Code Example
+## Code example
 
 ### XAML
 ```xml
@@ -33,7 +33,7 @@ A donut chart is a variations of a pie chart with a blank center. This design is
 </controls:PieChart>
 ```
 
-### Data Model (C#)
+### Data model (C#)
 ```csharp
 public record RevenueSource(string Label, double Value);
 
@@ -45,7 +45,7 @@ public ObservableCollection<RevenueSource> DonutData { get; } = new()
 };
 ```
 
-## Common Properties
+## Common properties
 
 | Property | Description | Default |
 | :--- | :--- | :--- |

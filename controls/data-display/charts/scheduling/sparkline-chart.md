@@ -1,6 +1,6 @@
 ---
 id: sparkline-chart
-title: Sparkline Charts
+title: Sparkline charts
 description: Small, minimalist charts without axes designed to show data trends in a compact space, suitable for embedding in tables, dashboards, or inline text.
 doc_type: reference
 tags:
@@ -17,12 +17,12 @@ Sparklines are small, minimalist intense charts without axes or coordinates, des
 
 <Image light={chartsAnalyticsSparkline} maxWidth={400} position="center" cornerRadius="true" alt="Sparkline charts showing compact line, area, and bar trend visualizations without axes for embedding in dashboards." />
 
-## When to Use
+## When to use
 - **In-line Trends**: Showing data trends inside data grids or text paragraphs.
 - **Dashboard Summaries**: Providing high-density visual context for many metrics on one screen.
 - **Compact Visualizations**: When the general shape of a trend is more important than specific values.
 
-## Code Example
+## Code example
 
 ### XAML
 ```xml
@@ -32,13 +32,13 @@ Sparklines are small, minimalist intense charts without axes or coordinates, des
 <controls:SparklineChart Height="40" SparklineType="Bar" ItemsSource="{Binding SparkData}"/>
 ```
 
-### Data Model (C#)
+### Data model (C#)
 ```csharp
 // Sparklines typically take a collection of doubles or simple values
 public ObservableCollection<double> SparkData { get; } = new() { 10, 15, 8, 12, 20, 18, 25 };
 ```
 
-## Common Properties
+## Common properties
 
 | Property | Description | Default |
 | :--- | :--- | :--- |

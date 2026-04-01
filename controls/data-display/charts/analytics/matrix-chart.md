@@ -1,6 +1,6 @@
 ---
 id: matrix-chart
-title: Matrix Chart
+title: Matrix chart
 description: Uses a grid to visualize relationships between two categorical sets, showing density or value magnitude at row/column intersections.
 doc_type: reference
 tags:
@@ -17,12 +17,12 @@ Matrix charts use a grid to visualize the relationship between two categorical s
 
 <Image light={chartsAnalyticsMatrix} maxWidth={400} position="center" cornerRadius="true" alt="Matrix chart showing a grid of dots sized or colored by value at row and column intersections." />
 
-## When to Use
+## When to use
 - **Correlation Tables**: Showing the relationship between many different variables.
 - **Schedule Overviews**: Mapping availability or events across people and days.
 - **Attribute Comparison**: Visualizing which features (columns) apply to which products (rows).
 
-## Code Example
+## Code example
 
 ### XAML
 ```xml
@@ -33,7 +33,7 @@ Matrix charts use a grid to visualize the relationship between two categorical s
                       CellSize="28" CellSpacing="25"/>
 ```
 
-### Data Model (C#)
+### Data model (C#)
 ```csharp
 public record MatrixRow(string Attribute, ObservableCollection<double> Values);
 
@@ -47,7 +47,7 @@ public ObservableCollection<MatrixRow> MatrixData { get; } = new()
 };
 ```
 
-## Common Properties
+## Common properties
 
 | Property | Description | Default |
 | :--- | :--- | :--- |

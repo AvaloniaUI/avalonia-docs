@@ -17,12 +17,12 @@ Markers are symbols drawn at each data point in a series. They help users locate
 
 <Image light={chartsFeaturesMarkers} maxWidth={400} position="center" cornerRadius="true" alt="Line chart with markers of different shapes drawn at each data point to highlight exact coordinate positions." />
 
-## When to Use
+## When to use
 - **Discrete Data**: Emphasizing that lines represent individual measured points.
 - **Low-Density Charts**: Making points more clickable for tooltips or selection.
 - **Categorical Distinction**: Using different shapes (Circle, Square, Diamond) to distinguish series.
 
-## Code Example
+## Code example
 
 ### XAML
 ```xml
@@ -38,7 +38,7 @@ Markers are symbols drawn at each data point in a series. They help users locate
 </controls:CartesianChart>
 ```
 
-### Data Model (C#)
+### Data model (C#)
 ```csharp
 public record Point(double X, double Y);
 
@@ -48,7 +48,7 @@ public ObservableCollection<Point> MarkerData { get; } = new()
 };
 ```
 
-## Common Properties (on Series)
+## Common properties (on Series)
 
 | Property | Description | Default |
 | :--- | :--- | :--- |

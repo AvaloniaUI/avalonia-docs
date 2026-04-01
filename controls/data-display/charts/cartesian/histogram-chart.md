@@ -1,6 +1,6 @@
 ---
 id: histogram-chart
-title: Histogram Chart
+title: Histogram chart
 description: Groups continuous data into bins and shows the frequency of data points within each bin to reveal distribution of a single variable.
 doc_type: reference
 tags:
@@ -17,12 +17,12 @@ Histograms group continuous data into "bins" and show the frequency of data poin
 
 <Image light={chartsStatisticalHistogram} maxWidth={400} position="center" cornerRadius="true" alt="Histogram chart grouping continuous data into bins showing the frequency distribution of values." />
 
-## When to Use
+## When to use
 - **Age Distribution**: Visualizing how many users fall into specific age ranges.
 - **Performance Logs**: Analyzing the frequency of response times in a system.
 - **Quality Assurance**: Evaluating the spread of product dimensions or weights.
 
-## Code Example
+## Code example
 
 ### XAML
 ```xml
@@ -31,7 +31,7 @@ Histograms group continuous data into "bins" and show the frequency of data poin
                          BinCount="10" />
 ```
 
-### Data Model (C#)
+### Data model (C#)
 ```csharp
 // Histograms take a raw collection and group them automatically
 public ObservableCollection<double> RawValues { get; } = new()
@@ -40,7 +40,7 @@ public ObservableCollection<double> RawValues { get; } = new()
 };
 ```
 
-## Common Properties
+## Common properties
 
 | Property | Description | Default |
 | :--- | :--- | :--- |

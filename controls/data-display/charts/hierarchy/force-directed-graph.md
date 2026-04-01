@@ -17,12 +17,12 @@ Force-directed graphs use physical simulations to lay out network nodes graceful
 
 <Image light={chartsFlowForceDirected} maxWidth={400} position="center" cornerRadius="true" alt="Force-directed graph with nodes and connecting edges arranged by physics simulation to reveal clusters." />
 
-## When to Use
+## When to use
 - **Social Networks**: Visualizing friendships, followers, or community structures.
 - **Knowledge Graphs**: Showing relationships between concepts, entities, or research papers.
 - **System Architecture**: Mapping microservices and their communication links.
 
-## Code Example
+## Code example
 
 ### XAML
 ```xml
@@ -35,7 +35,7 @@ Force-directed graphs use physical simulations to lay out network nodes graceful
                              EdgeTargetPath="To" />
 ```
 
-### Data Model (C#)
+### Data model (C#)
 ```csharp
 public record GraphNode(string Id, string Label);
 public record GraphEdge(string From, string To);
@@ -51,7 +51,7 @@ public ObservableCollection<GraphEdge> ForceEdges { get; } = new()
 };
 ```
 
-## Common Properties
+## Common properties
 
 | Property | Description | Default |
 | :--- | :--- | :--- |

@@ -1,6 +1,6 @@
 ---
 id: interactions-chart
-title: Zoom and Pan
+title: Zoom and pan
 description: Enables users to interactively zoom and pan across chart areas, suitable for exploring high-density or large datasets with mouse, touch, or selection zoom.
 doc_type: reference
 tags:
@@ -17,12 +17,12 @@ Zoom and pan allow users to explore multi-dimensional or high-resolution dataset
 
 <Image light={chartsFeaturesZoom} maxWidth={400} position="center" cornerRadius="true" alt="Chart with interactive zoom and pan controls allowing users to focus on specific regions of a dense dataset." />
 
-## When to Use
+## When to use
 - **Big Data Visualization**: Exploring line charts with thousands of points.
 - **Deep-dive Analysis**: Zooming into a specific time window for detailed study.
 - **Interactive Reports**: Giving users agency to focus on areas of interest.
 
-## Code Example
+## Code example
 
 ### XAML
 ```xml
@@ -38,7 +38,7 @@ Zoom and pan allow users to explore multi-dimensional or high-resolution dataset
 </controls:CartesianChart>
 ```
 
-### Data Model (C#)
+### Data model (C#)
 ```csharp
 // Zoom/Pan typically used with large datasets
 public ObservableCollection<double> ZoomPanData { get; } = new();
@@ -49,7 +49,7 @@ public void LoadData()
 }
 ```
 
-## Common Properties
+## Common properties
 
 | Property | Description | Default |
 | :--- | :--- | :--- |
@@ -58,7 +58,7 @@ public void LoadData()
 | `ZoomMode` | `X`, `Y`, or `XY` axis zooming. | `XY` |
 | `SelectionZoom` | Enable zooming by drawing a rectangle. | `true` |
 
-## Interaction Controls
+## Interaction controls
 - **Mouse Wheel**: Zoom in/out at the cursor position.
 - **Ctrl + Drag**: Pan across the chart area.
 - **Shift + Drag**: Draw a rectangle to zoom into a specific region.

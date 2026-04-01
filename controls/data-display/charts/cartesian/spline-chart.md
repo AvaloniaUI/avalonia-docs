@@ -1,6 +1,6 @@
 ---
 id: spline-chart
-title: Spline Chart
+title: Spline chart
 description: Similar to a line chart but uses smooth polynomial curves to connect data points, giving a more organic appearance to trends.
 doc_type: reference
 tags:
@@ -17,12 +17,12 @@ Spline charts are similar to line charts but use smooth polynomial curves to con
 
 <Image light={chartsCartesianSpline} maxWidth={400} position="center" cornerRadius="true" alt="Spline chart with smooth curved lines connecting temperature data points across time intervals." />
 
-## When to Use
+## When to use
 - **Smooth Data**: When visualizing data that changes continuously and smoothly (e.g., temperature).
 - **Aesthetics**: When a professional, rounded look is preferred over sharp angles.
 - **Trend Smoothing**: Helping to visualize the general trend without the harshness of linear segments.
 
-## Code Example
+## Code example
 
 ### XAML
 ```xml
@@ -39,7 +39,7 @@ Spline charts are similar to line charts but use smooth polynomial curves to con
 </controls:CartesianChart>
 ```
 
-### Data Model (C#)
+### Data model (C#)
 ```csharp
 public record TemperatureData(string Time, double Temp);
 
@@ -53,7 +53,7 @@ public ObservableCollection<TemperatureData> SplineTemperature { get; } = new()
 };
 ```
 
-## Common Properties
+## Common properties
 
 | Property | Description | Default |
 | :--- | :--- | :--- |

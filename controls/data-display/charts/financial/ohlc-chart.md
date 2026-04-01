@@ -1,6 +1,6 @@
 ---
 id: ohlc-chart
-title: OHLC Chart
+title: OHLC chart
 description: Shows open, high, low, and close prices using vertical lines with horizontal ticks, a standard professional visualization for price data.
 doc_type: reference
 tags:
@@ -17,12 +17,12 @@ OHLC charts show the Open, High, Low, and Close prices for a given period. They 
 
 <Image light={chartsFinancialOhlc} maxWidth={400} position="center" cornerRadius="true" alt="OHLC chart showing open, high, low, and close prices as vertical lines with horizontal tick marks per period." />
 
-## When to Use
+## When to use
 - **Trading Analysis**: Visualizing price action without the "weight" of candlestick bodies.
 - **Market Trends**: Spotting trends and price ranges over specific time intervals.
 - **Commodity/Stock Tracking**: Standard professional visualization for price data.
 
-## Code Example
+## Code example
 
 ### XAML
 ```xml
@@ -36,7 +36,7 @@ OHLC charts show the Open, High, Low, and Close prices for a given period. They 
 </controls:FinancialChart>
 ```
 
-### Data Model (C#)
+### Data model (C#)
 ```csharp
 public record FinancialPoint(DateTime Date, double Open, double High, double Low, double Close);
 
@@ -48,7 +48,7 @@ public ObservableCollection<FinancialPoint> OhlcData { get; } = new()
 };
 ```
 
-## Common Properties
+## Common properties
 
 | Property | Description | Default |
 | :--- | :--- | :--- |

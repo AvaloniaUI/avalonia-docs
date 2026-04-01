@@ -1,6 +1,6 @@
 ---
 id: polar-area-chart
-title: Polar Area Chart
+title: Polar area chart
 description: Similar to a pie chart but uses segment radius rather than angle to encode values, giving equal angular space to each category on a circular axis.
 doc_type: reference
 tags:
@@ -17,12 +17,12 @@ Polar area charts (or coxcomb charts) are similar to pie charts but represent va
 
 <Image light={chartsRadialPolararea} maxWidth={400} position="center" cornerRadius="true" alt="Polar area chart with equal-angle segments of varying radius representing seasonal magnitude values in a circular layout." />
 
-## When to Use
+## When to use
 - **Cyclical Trends**: Visualizing seasonal data or wind patterns.
 - **Ranking Categories**: Comparing the magnitude of many categories in a circular layout.
 - **Historical Analysis**: The classic chart type for visualizing causes of mortality over time.
 
-## Code Example
+## Code example
 
 ### XAML
 ```xml
@@ -32,7 +32,7 @@ Polar area charts (or coxcomb charts) are similar to pie charts but represent va
                          LabelPath="Season" />
 ```
 
-### Data Model (C#)
+### Data model (C#)
 ```csharp
 public record SeasonalPoint(string Season, double Magnitude);
 
@@ -43,7 +43,7 @@ public ObservableCollection<SeasonalPoint> PolarData { get; } = new()
 };
 ```
 
-## Common Properties
+## Common properties
 
 | Property | Description | Default |
 | :--- | :--- | :--- |

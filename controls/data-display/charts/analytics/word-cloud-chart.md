@@ -1,6 +1,6 @@
 ---
 id: word-cloud-chart
-title: Word Cloud
+title: Word cloud
 description: Represents text data by varying word size based on frequency or importance, providing a visual summary of qualitative content.
 doc_type: reference
 tags:
@@ -17,12 +17,12 @@ Word clouds represent text data by varying word size based on frequency or impor
 
 <Image light={chartsAnalyticsWordCloud} maxWidth={400} position="center" cornerRadius="true" alt="Word cloud displaying words at varying font sizes based on frequency, with more prominent words appearing larger." />
 
-## When to Use
+## When to use
 - **Search Trends**: Visualizing the most common keywords in a query log.
 - **Sentiment Analysis**: Highlighting prominent words in customer reviews.
 - **Content Summarization**: Showing the main themes of a long article or document.
 
-## Code Example
+## Code example
 
 ### XAML
 ```xml
@@ -31,7 +31,7 @@ Word clouds represent text data by varying word size based on frequency or impor
                          WordPath="Word" WeightPath="Count"/>
 ```
 
-### Data Model (C#)
+### Data model (C#)
 ```csharp
 public record WordWeight(string Word, double Count);
 
@@ -45,7 +45,7 @@ public ObservableCollection<WordWeight> WordCloudData { get; } = new()
 };
 ```
 
-## Common Properties
+## Common properties
 
 | Property | Description | Default |
 | :--- | :--- | :--- |

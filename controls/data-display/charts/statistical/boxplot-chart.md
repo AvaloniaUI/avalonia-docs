@@ -1,6 +1,6 @@
 ---
 id: boxplot-chart
-title: Box Plot Chart
+title: Box plot chart
 description: Graphical summary of data distribution showing the median, quartiles, and outliers using a box-and-whisker layout, useful for statistical comparisons.
 doc_type: reference
 tags:
@@ -17,12 +17,12 @@ A box plot (or box-and-whisker plot) provides a graphical summary of the distrib
 
 <Image light={chartsCartesianBoxplot} maxWidth={400} position="center" cornerRadius="true" alt="Box plot chart with box-and-whisker symbols per category showing median, quartiles, and outlier data points." />
 
-## When to Use
+## When to use
 - **Statistical Analysis**: Comparing the distribution of several datasets (e.g., test scores across different classes).
 - **Outlier Detection**: Identifying extreme data points that fall outside the "whiskers."
 - **Range Visualization**: Showing the minimum, maximum, median, and interquartile range at a glance.
 
-## Code Example
+## Code example
 
 ### XAML
 ```xml
@@ -43,7 +43,7 @@ A box plot (or box-and-whisker plot) provides a graphical summary of the distrib
 </controls:CartesianChart>
 ```
 
-### Data Model (C#)
+### Data model (C#)
 ```csharp
 public record BoxStats(string Category, double Min, double Q1, double Median, double Q3, double Max);
 
@@ -54,7 +54,7 @@ public ObservableCollection<BoxStats> StatsData { get; } = new()
 };
 ```
 
-## Common Properties
+## Common properties
 
 | Property | Description | Default |
 | :--- | :--- | :--- |

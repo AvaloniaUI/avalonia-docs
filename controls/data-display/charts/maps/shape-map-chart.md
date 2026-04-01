@@ -1,6 +1,6 @@
 ---
 id: shape-map-chart
-title: Shape Map
+title: Shape map
 description: Renders arbitrary geographic or custom shapes from GeoJSON, serving as the base for specialized maps and interactive custom region visualizations.
 doc_type: reference
 tags:
@@ -13,12 +13,12 @@ tags:
 
 The Shape Map control allows for arbitrary geographic or custom shape visualization. It serves as the base for specialized maps, allowing developers to define custom regions and interactions.
 
-## When to Use
+## When to use
 - **Custom Regions**: Visualizing regions not covered by standard map sets (e.g., specific postal zones).
 - **Physical Layouts**: Mapping data onto a schematic (e.g., a hardware board or factory floor).
 - **Interactive Diagrams**: Creating high-performance interactive shape systems.
 
-## Code Example
+## Code example
 
 ### XAML
 ```xml
@@ -31,7 +31,7 @@ The Shape Map control allows for arbitrary geographic or custom shape visualizat
 </controls:ShapeMap>
 ```
 
-### Data Model (C#)
+### Data model (C#)
 ```csharp
 public record AreaInfo(string AreaId, string Status);
 
@@ -41,7 +41,7 @@ public ObservableCollection<AreaInfo> AreaData { get; } = new()
 };
 ```
 
-## Common Properties (ShapeLayer)
+## Common properties (ShapeLayer)
 
 | Property | Description | Default |
 | :--- | :--- | :--- |

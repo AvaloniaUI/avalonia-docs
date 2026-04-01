@@ -1,6 +1,6 @@
 ---
 id: choropleth-map-chart
-title: Choropleth Map
+title: Choropleth map
 description: Shades geographic regions in proportion to a statistical variable, used to visualize data density, demographics, or market performance across territories.
 doc_type: reference
 tags:
@@ -17,12 +17,12 @@ Choropleth maps shade geographical areas in proportion to a statistical variable
 
 <Image light={chartsMapsChoropleth} maxWidth={400} position="center" cornerRadius="true" alt="Choropleth map shading geographic regions in varying color intensities to represent population density." />
 
-## When to Use
+## When to use
 - **Demographics**: Showing population density, income levels, or voting patterns.
 - **Market Penetration**: Visualizing sales performance across different territories.
 - **Environmental Data**: Showing climate data or resource distribution by region.
 
-## Code Example
+## Code example
 
 ### XAML
 ```xml
@@ -35,7 +35,7 @@ Choropleth maps shade geographical areas in proportion to a statistical variable
                         ItemsSource="{Binding MapPoints}" />
 ```
 
-### Data Model (C#)
+### Data model (C#)
 ```csharp
 public record MapDataPoint(string Code, double Density);
 
@@ -49,7 +49,7 @@ public ObservableCollection<MapDataPoint> MapPoints { get; } = new()
 };
 ```
 
-## Common Properties
+## Common properties
 
 | Property | Description | Default |
 | :--- | :--- | :--- |

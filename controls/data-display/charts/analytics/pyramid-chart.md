@@ -1,6 +1,6 @@
 ---
 id: pyramid-chart
-title: Pyramid Chart
+title: Pyramid chart
 description: Emphasizes both hierarchy and volume in a stacked triangular layout, commonly used for population and pipeline visualization.
 doc_type: reference
 tags:
@@ -17,12 +17,12 @@ Pyramid charts are a type of stacked area or bar graph that emphasizes both hier
 
 <Image light={chartsAnalyticsPyramid} maxWidth={400} position="center" cornerRadius="true" alt="Pyramid chart with stacked triangular segments representing hierarchical population or pipeline data." />
 
-## When to Use
+## When to use
 - **Population Pyramids**: Showing age and gender distribution in a region.
 - **Sales Pipelines**: Visualizing the funnel from leads to closed deals.
 - **Biological Hierarchies**: Showing energy flow or species distribution in an ecosystem.
 
-## Code Example
+## Code example
 
 ### XAML
 ```xml
@@ -31,7 +31,7 @@ Pyramid charts are a type of stacked area or bar graph that emphasizes both hier
                        LabelPath="Age" ValuePath="Value"/>
 ```
 
-### Data Model (C#)
+### Data model (C#)
 ```csharp
 public record PyramidLevel(string Age, double Value);
 
@@ -43,7 +43,7 @@ public ObservableCollection<PyramidLevel> PyramidData { get; } = new()
 };
 ```
 
-## Common Properties
+## Common properties
 
 | Property | Description | Default |
 | :--- | :--- | :--- |

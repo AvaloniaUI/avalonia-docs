@@ -1,6 +1,6 @@
 ---
 id: heatmap-map-chart
-title: Heatmap Map
+title: Heatmap map
 description: Visualizes data density across geographic coordinates using a color gradient, ideal for showing activity hot spots and concentration areas on a map.
 doc_type: reference
 tags:
@@ -17,12 +17,12 @@ Heatmap maps (Heat maps) visualize data density across geographic coordinates us
 
 <Image light={chartsMapsHeatmap} maxWidth={400} position="center" cornerRadius="true" alt="Geographic heatmap using a color gradient to show data density hot spots and concentration areas across regions." />
 
-## When to Use
+## When to use
 - **User Activity**: Visualizing where mobile app users are most active geographically.
 - **Incident Reporting**: Mapping hotspots for crimes, traffic accidents, or outages.
 - **Environmental Density**: Showing concentrations of species or pollution.
 
-## Code Example
+## Code example
 
 ### XAML
 ```xml
@@ -33,7 +33,7 @@ Heatmap maps (Heat maps) visualize data density across geographic coordinates us
                      ItemsSource="{Binding IntensityData}" />
 ```
 
-### Data Model (C#)
+### Data model (C#)
 ```csharp
 public record SpotIntensity(string LocCode, double Intensity);
 
@@ -43,7 +43,7 @@ public ObservableCollection<SpotIntensity> IntensityData { get; } = new()
 };
 ```
 
-## Common Properties
+## Common properties
 
 | Property | Description | Default |
 | :--- | :--- | :--- |

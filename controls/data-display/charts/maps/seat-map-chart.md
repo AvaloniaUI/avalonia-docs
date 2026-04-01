@@ -1,6 +1,6 @@
 ---
 id: seat-map-chart
-title: Non-Geographic Map (Seat Map)
+title: Non-geographic map (seat map)
 description: Uses the ShapeMap control with custom GeoJSON for non-geographic layouts such as seating plans, floor plans, or interactive venue arrangements.
 doc_type: reference
 tags:
@@ -13,12 +13,12 @@ tags:
 
 The ShapeMap control can handle non-geographic coordinate systems, making it perfect for custom layouts like aircraft seating, floor plans, or theater arrangements.
 
-## When to Use
+## When to use
 - **Seat Reservations**: Interactive seating plans for transportation or venues.
 - **Facility Management**: Visualizing data on top of a building floor plan.
 - **Interactive UI**: Creating clickable, data-driven custom shape layouts.
 
-## Code Example
+## Code example
 
 ### XAML
 ```xml
@@ -34,7 +34,7 @@ The ShapeMap control can handle non-geographic coordinate systems, making it per
 </controls:ShapeMap>
 ```
 
-### Data Model (C#)
+### Data model (C#)
 ```csharp
 public record SeatInfo(string SeatNumber, string Class, bool IsAvailable);
 
@@ -47,7 +47,7 @@ public ObservableCollection<SeatInfo> SeatingData { get; } = new()
 public ObservableCollection<SeatInfo> SelectedSeats { get; } = new();
 ```
 
-## Common Properties
+## Common properties
 
 | Property | Description | Default |
 | :--- | :--- | :--- |

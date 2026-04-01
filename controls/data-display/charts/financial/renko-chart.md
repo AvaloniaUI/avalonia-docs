@@ -1,6 +1,6 @@
 ---
 id: renko-chart
-title: Renko Chart
+title: Renko chart
 description: Uses fixed-size bricks to represent price movements, filtering out time and minor volatility to clarify trends and support/resistance levels.
 doc_type: reference
 tags:
@@ -17,12 +17,12 @@ Renko charts are made of "bricks" that represent a fixed price movement. A new b
 
 <Image light={chartsFinancialRenko} maxWidth={400} position="center" cornerRadius="true" alt="Renko chart displaying fixed-size green and red bricks representing price movements above a set threshold." />
 
-## When to Use
+## When to use
 - **Support & Resistance**: Identifying clear levels where bricks frequently reverse.
 - **Trend Confirmation**: Spotting persistent bullish/bearish brick sequences.
 - **Clean Visualization**: Simplifying complex, noisy price data into uniform blocks.
 
-## Code Example
+## Code example
 
 ### XAML
 ```xml
@@ -35,7 +35,7 @@ Renko charts are made of "bricks" that represent a fixed price movement. A new b
 </controls:CartesianChart>
 ```
 
-### Data Model (C#)
+### Data model (C#)
 ```csharp
 public record PriceRecord(double Close);
 
@@ -45,7 +45,7 @@ public ObservableCollection<PriceRecord> StockPoints { get; } = new()
 };
 ```
 
-## Common Properties
+## Common properties
 
 | Property | Description | Default |
 | :--- | :--- | :--- |

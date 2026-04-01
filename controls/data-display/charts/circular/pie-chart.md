@@ -1,6 +1,6 @@
 ---
 id: pie-chart
-title: Pie Chart
+title: Pie chart
 description: A circular chart divided into sectors to illustrate numerical proportions, most effective for showing part-to-whole relationships with few categories.
 doc_type: reference
 tags:
@@ -17,12 +17,12 @@ Pie charts are circular charts divided into sectors to illustrate numerical prop
 
 <Image light={chartsPie} maxWidth={400} position="center" cornerRadius="true" alt="Pie chart divided into colored sectors showing proportional market share across a small number of categories." />
 
-## When to Use
+## When to use
 - **Proportions**: Visualizing the relative size of categories compared to the total.
 - **Limited Categories**: Best used with 2-6 categories to maintain readability.
 - **Composition**: Showing how a total amount is divided among different segments.
 
-## Code Example
+## Code example
 
 ### XAML
 ```xml
@@ -33,7 +33,7 @@ Pie charts are circular charts divided into sectors to illustrate numerical prop
 </controls:PieChart>
 ```
 
-### Data Model (C#)
+### Data model (C#)
 ```csharp
 public record SegmentData(string Label, double Value);
 
@@ -45,7 +45,7 @@ public ObservableCollection<SegmentData> PieData { get; } = new()
 };
 ```
 
-## Common Properties
+## Common properties
 
 | Property | Description | Default |
 | :--- | :--- | :--- |

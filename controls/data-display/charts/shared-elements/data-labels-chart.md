@@ -1,6 +1,6 @@
 ---
 id: data-labels-chart
-title: Data Labels
+title: Data labels
 description: Displays actual data values directly on chart series elements, removing the need for users to estimate values from axis positions.
 doc_type: reference
 tags:
@@ -17,12 +17,12 @@ Data labels place the actual values directly on the chart series. This removes t
 
 <Image light={chartsFeaturesLabels} maxWidth={400} position="center" cornerRadius="true" alt="Bar chart with data labels displayed at a 45-degree angle." />
 
-## When to Use
+## When to use
 - **Presentation Graphics**: Where clear, immediate values are prioritized.
 - **Small Multiples**: When axes are omitted to save space.
 - **Key Milestones**: Highlighting specific values that require attention.
 
-## Code Example
+## Code example
 
 ### XAML
 ```xml
@@ -38,7 +38,7 @@ Data labels place the actual values directly on the chart series. This removes t
 </controls:CartesianChart>
 ```
 
-### Data Model (C#)
+### Data model (C#)
 ```csharp
 public record LabelDataPoint(string Category, double Value);
 
@@ -50,7 +50,7 @@ public ObservableCollection<LabelDataPoint> LabelData { get; } = new()
 };
 ```
 
-## Common Properties (on Series)
+## Common properties (on Series)
 
 | Property | Description | Default |
 | :--- | :--- | :--- |

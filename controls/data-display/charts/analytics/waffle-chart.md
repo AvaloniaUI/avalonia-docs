@@ -1,6 +1,6 @@
 ---
 id: waffle-chart
-title: Waffle Chart
+title: Waffle chart
 description: Visualizes percentages or proportions as a grid of squares, clearly showing part-to-whole relationships and goal completion.
 doc_type: reference
 tags:
@@ -17,25 +17,25 @@ Waffle charts (square pie charts) visualize percentages or proportions using a g
 
 <Image light={chartsAnalyticsWaffle} maxWidth={400} position="center" cornerRadius="true" alt="Waffle chart showing a 10x10 grid of squares where filled squares represent a percentage of the total." />
 
-## When to Use
+## When to use
 - **Goal Completion**: Visualizing how close a project is to its 100% target.
 - **Demographic Proportions**: Showing the distribution of different groups in a population.
 - **Project Tracking**: Displaying the percentage of completed tasks in a sprint.
 
-## Code Example
+## Code example
 
 ### XAML
 ```xml
 <controls:WaffleChart Title="Completion" Value="72" Width="150" Height="150" Rows="10" Columns="10" />
 ```
 
-### Data Model (C#)
+### Data model (C#)
 ```csharp
 // WaffleChart usually takes a simple numeric Value
 public double CompletionPercentage { get; set; } = 72;
 ```
 
-## Common Properties
+## Common properties
 
 | Property | Description | Default |
 | :--- | :--- | :--- |

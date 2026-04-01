@@ -1,6 +1,6 @@
 ---
 id: treemap-chart
-title: TreeMap Chart
+title: Treemap chart
 description: Visualizes hierarchical data as nested rectangles sized by value, useful for comparing proportions within categories such as disk usage or budgets.
 doc_type: reference
 tags:
@@ -17,12 +17,12 @@ TreeMap charts visualize hierarchical data as a set of nested rectangles. Each b
 
 <Image light={chartsHierarchicalTreemap} maxWidth={400} position="center" cornerRadius="true" alt="Treemap chart showing nested rectangles sized proportionally to disk usage values for different folders." />
 
-## When to Use
+## When to use
 - **Resource Usage**: Visualizing disk space or memory consumption by file/process.
-- **Proportional Analysis**: Comparing the weight of items within Categories.
+- **Proportional Analysis**: Comparing the weight of items within categories.
 - **Complex Hierarchies**: When you need to show many hierarchical items in a single view.
 
-## Code Example
+## Code example
 
 ### XAML
 ```xml
@@ -30,7 +30,7 @@ TreeMap charts visualize hierarchical data as a set of nested rectangles. Each b
                        ItemsSource="{Binding TreeMapData}" ValuePath="Size" LabelPath="Name" />
 ```
 
-### Data Model (C#)
+### Data model (C#)
 ```csharp
 public record FileSystemItem(string Name, long Size);
 
@@ -44,7 +44,7 @@ public ObservableCollection<FileSystemItem> TreeMapData { get; } = new()
 };
 ```
 
-## Common Properties
+## Common properties
 
 | Property | Description | Default |
 | :--- | :--- | :--- |

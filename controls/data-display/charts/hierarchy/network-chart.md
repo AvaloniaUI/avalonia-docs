@@ -1,6 +1,6 @@
 ---
 id: network-chart
-title: Network Chart
+title: Network chart
 description: Displays nodes and edges in a static layout, suitable for infrastructure diagrams, dependency trees, and fixed structural visualizations.
 doc_type: reference
 tags:
@@ -17,12 +17,12 @@ Network charts provide a high-level view of nodes and edges. They are simpler an
 
 <Image light={chartsFlowNetwork} maxWidth={400} position="center" cornerRadius="true" alt="Network chart with labeled nodes connected by edges showing static relationships in a structural diagram." />
 
-## When to Use
+## When to use
 - **Infrastructure Diagrams**: Showing servers and their connections.
 - **Routing Tables**: Mapping paths between network points.
 - **Dependency Trees**: Visualizing module relationships in a system.
 
-## Code Example
+## Code example
 
 ### XAML
 ```xml
@@ -31,7 +31,7 @@ Network charts provide a high-level view of nodes and edges. They are simpler an
                        Edges="{Binding NetworkEdges}" />
 ```
 
-### Data Model (C#)
+### Data model (C#)
 ```csharp
 public record GraphNode(string Id, string Label);
 public record GraphEdge(string Source, string Target);
@@ -47,7 +47,7 @@ public ObservableCollection<GraphEdge> NetworkEdges { get; } = new()
 };
 ```
 
-## Common Properties
+## Common properties
 
 | Property | Description | Default |
 | :--- | :--- | :--- |

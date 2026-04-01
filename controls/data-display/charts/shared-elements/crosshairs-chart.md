@@ -17,12 +17,12 @@ Crosshairs are interactive guide-lines that follow the user's cursor. They are e
 
 <Image light={chartsFeaturesCrosshairs} maxWidth={400} position="center" cornerRadius="true" alt="Line chart with interactive crosshair guide lines following the cursor to align data points with axis coordinates." />
 
-## When to Use
+## When to use
 - **Financial Charts**: Pinpointing exact price and time on a candlestick chart.
 - **Engineering Data**: Measuring values on high-density line charts.
 - **Scientific Graphs**: Aligning specific peaks or valleys with coordinates.
 
-## Code Example
+## Code example
 
 ### XAML
 ```xml
@@ -37,7 +37,7 @@ Crosshairs are interactive guide-lines that follow the user's cursor. They are e
 </controls:CartesianChart>
 ```
 
-### Data Model (C#)
+### Data model (C#)
 ```csharp
 public record Point(double X, double Y);
 
@@ -47,7 +47,7 @@ public ObservableCollection<Point> ChartPoints { get; } = new()
 };
 ```
 
-## Common Properties
+## Common properties
 
 | Property | Description | Default |
 | :--- | :--- | :--- |

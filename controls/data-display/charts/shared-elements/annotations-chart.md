@@ -17,12 +17,12 @@ Annotations allow you to add context to your charts using lines, bands, shapes, 
 
 <Image light={chartsFeaturesAnnotation} maxWidth={400} position="center" cornerRadius="true" alt="Chart with annotation overlays including a horizontal threshold line, a shaded comfort zone band, and a custom text label." />
 
-## When to Use
+## When to use
 - **Thresholds**: Showing a "target" or "limit" line on a performance chart.
 - **Milestones**: Marking specific dates of interest on a timeline.
 - **Region Highlighting**: Shading a "danger zone" or "comfort zone" across a set of values.
 
-## Code Example
+## Code example
 
 ### XAML
 ```xml
@@ -42,14 +42,14 @@ Annotations allow you to add context to your charts using lines, bands, shapes, 
 </controls:CartesianChart>
 ```
 
-### Data Model (C#)
+### Data model (C#)
 ```csharp
 // Annotations are typically defined in XAML,
 // but can be bound to properties for dynamic values.
 public double AlertThreshold { get; set; } = 75.0;
 ```
 
-## Common Properties (LineAnnotation)
+## Common properties (LineAnnotation)
 
 | Property | Description | Default |
 | :--- | :--- | :--- |
@@ -59,7 +59,7 @@ public double AlertThreshold { get; set; } = 75.0;
 | `StrokeThickness` | Width of the annotation line. | `1` |
 | `Label` | Text displayed next to the line. | `null` |
 
-## Common Properties (BandAnnotation)
+## Common properties (BandAnnotation)
 
 | Property | Description | Default |
 | :--- | :--- | :--- |

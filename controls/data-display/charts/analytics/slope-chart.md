@@ -1,6 +1,6 @@
 ---
 id: slope-chart
-title: Slope Chart
+title: Slope chart
 description: Compares values for multiple entities between exactly two points in time or categories, highlighting which entities increased, decreased, or stayed the same.
 doc_type: reference
 tags:
@@ -17,12 +17,12 @@ Slope charts compare two points in time (or two categories) for multiple entitie
 
 <Image light={chartsAnalyticsSlope} maxWidth={400} position="center" cornerRadius="true" alt="Slope chart comparing entity values between two time points with labeled lines showing which increased or decreased." />
 
-## When to Use
+## When to use
 - **Before/After Analysis**: Showing the impact of a policy or event across different groups.
 - **Rank Shifts**: Visualizing how product popularity changed between two quarters.
 - **Comparison of Two States**: Highlighting which entities improved and which declined.
 
-## Code Example
+## Code example
 
 ### XAML
 ```xml
@@ -32,7 +32,7 @@ Slope charts compare two points in time (or two categories) for multiple entitie
                      LabelPath="EntityName" />
 ```
 
-### Data Model (C#)
+### Data model (C#)
 ```csharp
 public record SlopeEntity(string EntityName, double[] Values);
 
@@ -44,7 +44,7 @@ public ObservableCollection<SlopeEntity> SlopeData { get; } = new()
 };
 ```
 
-## Common Properties
+## Common properties
 
 | Property | Description | Default |
 | :--- | :--- | :--- |

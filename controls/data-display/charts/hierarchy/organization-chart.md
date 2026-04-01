@@ -1,6 +1,6 @@
 ---
 id: organization-chart
-title: Organization Chart
+title: Organization chart
 description: Represents organizational structure and reporting relationships in a hierarchical layout, showing positions, roles, and rank levels.
 doc_type: reference
 tags:
@@ -17,12 +17,12 @@ Organization charts represent the structure of an organization, clarifying repor
 
 <Image light={chartsHierarchicalOrganization} maxWidth={400} position="center" cornerRadius="true" alt="Organization chart with a top-level CEO node branching down to department heads showing reporting relationships." />
 
-## When to Use
+## When to use
 - **Company Directory**: Visualizing the reporting structure of a business.
 - **Project Hierarchy**: Mapping out product owners, developers, and stakeholders.
 - **Family Trees**: Displaying genealogical relationships and lineages.
 
-## Code Example
+## Code example
 
 ### XAML
 ```xml
@@ -30,7 +30,7 @@ Organization charts represent the structure of an organization, clarifying repor
                             ItemsSource="{Binding OrgChartData}" LabelPath="Name" ChildrenPath="Reports" />
 ```
 
-### Data Model (C#)
+### Data model (C#)
 ```csharp
 public class Employee
 {
@@ -48,7 +48,7 @@ public ObservableCollection<Employee> OrgChartData { get; } = new()
 };
 ```
 
-## Common Properties
+## Common properties
 
 | Property | Description | Default |
 | :--- | :--- | :--- |

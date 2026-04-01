@@ -1,6 +1,6 @@
 ---
 id: icicle-chart
-title: Icicle Chart
+title: Icicle chart
 description: Visualizes hierarchical data as adjacent rectangles per level, making parent-child relationships easy to trace for taxonomy and structural analysis.
 doc_type: reference
 tags:
@@ -17,12 +17,12 @@ Icicle charts visualize hierarchical data using rectangles placed side by side. 
 
 <Image light={chartsHierarchicalIcicle} maxWidth={400} position="center" cornerRadius="true" alt="Icicle chart showing hierarchical levels as adjacent rectangular rows where width represents relative value." />
 
-## When to Use
+## When to use
 - **Structural Analysis**: Inspecting codebases, directory structures, or large taxonomies.
 - **Performance Profiling**: Visualizing call stacks or execution paths.
 - **Relationship Discovery**: Finding the root cause of leaf-node values within a large tree.
 
-## Code Example
+## Code example
 
 ### XAML
 ```xml
@@ -33,7 +33,7 @@ Icicle charts visualize hierarchical data using rectangles placed side by side. 
                       ChildrenPath="SubItems" />
 ```
 
-### Data Model (C#)
+### Data model (C#)
 ```csharp
 public class IcicleItem
 {
@@ -51,7 +51,7 @@ public ObservableCollection<IcicleItem> IcicleData { get; } = new()
 };
 ```
 
-## Common Properties
+## Common properties
 
 | Property | Description | Default |
 | :--- | :--- | :--- |

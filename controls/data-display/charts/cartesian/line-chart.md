@@ -1,6 +1,6 @@
 ---
 id: line-chart
-title: Line Chart
+title: Line chart
 description: Connects data points with straight line segments on X and Y axes, ideal for showing trends over time or across categories.
 doc_type: reference
 tags:
@@ -17,12 +17,12 @@ Line charts use X and Y axes to visualize data points connected by straight line
 
 <Image light={chartsCartesianLines} maxWidth={400} position="center" cornerRadius="true" alt="Line chart connecting data points with straight segments to show monthly sales trends over time." />
 
-## When to Use
+## When to use
 - **Time Series**: Visualizing changes in data over continuous time intervals.
 - **Trend Analysis**: Identifying upward, downward, or fluctuating patterns.
 - **Multiple Series**: Comparing trends across different categories using multiple lines.
 
-## Code Example
+## Code example
 
 ### XAML
 ```xml
@@ -39,7 +39,7 @@ Line charts use X and Y axes to visualize data points connected by straight line
 </controls:CartesianChart>
 ```
 
-### Data Model (C#)
+### Data model (C#)
 ```csharp
 public record SalesData(string Month, double Value);
 
@@ -53,7 +53,7 @@ public ObservableCollection<SalesData> LineData { get; } = new()
 };
 ```
 
-## Common Properties
+## Common properties
 
 | Property | Description | Default |
 | :--- | :--- | :--- |

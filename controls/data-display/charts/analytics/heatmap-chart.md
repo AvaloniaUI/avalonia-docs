@@ -17,12 +17,12 @@ Heatmaps use color-coded cells to represent data values in a 2D matrix, making i
 
 <Image light={chartsAnalyticsHeatmap} maxWidth={400} position="center" cornerRadius="true" alt="Heatmap chart showing a 2D matrix of color-coded cells representing data values across rows and columns." />
 
-## When to Use
+## When to use
 - **Correlation Matrices**: Visualizing the relationship between variables.
 - **Density Mapping**: Showing frequency or intensity across two categories.
 - **Matrix Data**: When visualizing numerical values at the intersection of rows and columns.
 
-## Code Example
+## Code example
 
 ### XAML
 ```xml
@@ -31,7 +31,7 @@ Heatmaps use color-coded cells to represent data values in a 2D matrix, making i
                        RowPath="Row" ColumnPath="Col" ValuePath="Val"/>
 ```
 
-### Data Model (C#)
+### Data model (C#)
 ```csharp
 public record HeatmapPoint(string Row, string Col, double Val);
 
@@ -43,7 +43,7 @@ public ObservableCollection<HeatmapPoint> HeatmapData { get; } = new()
 };
 ```
 
-## Common Properties
+## Common properties
 
 | Property | Description | Default |
 | :--- | :--- | :--- |

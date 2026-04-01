@@ -17,12 +17,12 @@ The Legend component helps users identify different data series within a chart. 
 
 <Image light={chartsFeaturesLegend} maxWidth={400} position="center" cornerRadius="true" alt="Chart with a legend panel showing color-coded series names positioned beside the chart area." />
 
-## When to Use
+## When to use
 - **Multi-series Charts**: Indispensable when more than one series is displayed.
 - **Interactive Toggling**: When users need to show/hide series by clicking legend items.
 - **Complex Visuals**: Helping to explain color or pattern coding (e.g., in a Pie or Map chart).
 
-## Code Example
+## Code example
 
 ### XAML
 ```xml
@@ -37,13 +37,13 @@ The Legend component helps users identify different data series within a chart. 
 </controls:CartesianChart>
 ```
 
-### Data Model (C#)
+### Data model (C#)
 ```csharp
 public ObservableCollection<double> DataA { get; } = new() { 10, 20, 15 };
 public ObservableCollection<double> DataB { get; } = new() { 5, 25, 30 };
 ```
 
-## Common Properties
+## Common properties
 
 | Property | Description | Default |
 | :--- | :--- | :--- |

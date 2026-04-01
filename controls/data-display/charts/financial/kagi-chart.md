@@ -1,6 +1,6 @@
 ---
 id: kagi-chart
-title: Kagi Chart
+title: Kagi chart
 description: Time-independent chart that tracks price movements using vertical lines, changing direction only when price exceeds a set reversal amount.
 doc_type: reference
 tags:
@@ -17,12 +17,12 @@ Kagi charts are time-independent charts that track price movements using vertica
 
 <Image light={chartsFinancialKagi} maxWidth={400} position="center" cornerRadius="true" alt="Kagi chart with thick and thin vertical lines changing direction only when price reverses by a set amount." />
 
-## When to Use
+## When to use
 - **Pure Price Action**: Focusing on price changes regardless of time or volume.
 - **Breakout Identification**: Using the "Yang" (thick) and "Yin" (thin) lines to spot reversals.
 - **Trend following**: Filtering out small fluctuations that don't meet the reversal threshold.
 
-## Code Example
+## Code example
 
 ### XAML
 ```xml
@@ -35,7 +35,7 @@ Kagi charts are time-independent charts that track price movements using vertica
 </controls:CartesianChart>
 ```
 
-### Data Model (C#)
+### Data model (C#)
 ```csharp
 public record PricePoint(double Price);
 
@@ -45,7 +45,7 @@ public ObservableCollection<PricePoint> PriceData { get; } = new()
 };
 ```
 
-## Common Properties
+## Common properties
 
 | Property | Description | Default |
 | :--- | :--- | :--- |

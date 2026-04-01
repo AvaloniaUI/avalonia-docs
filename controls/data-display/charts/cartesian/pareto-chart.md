@@ -1,6 +1,6 @@
 ---
 id: pareto-chart
-title: Pareto Chart
+title: Pareto chart
 description: Combines descending bars with a cumulative line to highlight the most significant factors, based on the 80/20 principle.
 doc_type: reference
 tags:
@@ -17,12 +17,12 @@ A Pareto chart contains both bars and a line graph, where individual values are 
 
 <Image light={chartsStatisticalPareto} maxWidth={400} position="center" cornerRadius="true" alt="Pareto chart with descending bars and a cumulative percentage line highlighting the most significant factors." />
 
-## When to Use
+## When to use
 - **Quality Control**: Identifying the "vital few" causes of defects (80/20 rule).
 - **Resource Management**: Pinpointing which categories account for most costs.
 - **Customer Service**: Analyzing which complaints are most frequent.
 
-## Code Example
+## Code example
 
 ### XAML
 ```xml
@@ -32,7 +32,7 @@ A Pareto chart contains both bars and a line graph, where individual values are 
                       LabelPath="Category" />
 ```
 
-### Data Model (C#)
+### Data model (C#)
 ```csharp
 public record Complaint(string Category, double Count);
 
@@ -45,7 +45,7 @@ public ObservableCollection<Complaint> ComplaintData { get; } = new()
 };
 ```
 
-## Common Properties
+## Common properties
 
 | Property | Description | Default |
 | :--- | :--- | :--- |

@@ -1,6 +1,6 @@
 ---
 id: table-chart
-title: Table Chart
+title: Table chart
 description: Combines tabular data with embedded visual cues such as color and icons, suitable for dense reports requiring exact values.
 doc_type: reference
 tags:
@@ -17,12 +17,12 @@ Table charts combine traditional tabular data with embedded visual cues. They ar
 
 <Image light={chartsAnalyticsTable} maxWidth={400} position="center" cornerRadius="true" alt="Table chart displaying rows of data with embedded color-coded indicators and icons for visual context." />
 
-## When to Use
+## When to use
 - **Product Comparisons**: Showing features across many items in a grid.
 - **Financial Status**: Displaying accounts with color-coded "health" indicators.
 - **Multi-metric Reports**: When users need to sort and filter raw data.
 
-## Code Example
+## Code example
 
 ### XAML
 ```xml
@@ -31,7 +31,7 @@ Table charts combine traditional tabular data with embedded visual cues. They ar
                      RowLabelPath="Product" />
 ```
 
-### Data Model (C#)
+### Data model (C#)
 ```csharp
 public record ProductMetric(string Product, double Rating, double Price, bool InStock);
 
@@ -43,7 +43,7 @@ public ObservableCollection<ProductMetric> TableData { get; } = new()
 };
 ```
 
-## Common Properties
+## Common properties
 
 | Property | Description | Default |
 | :--- | :--- | :--- |

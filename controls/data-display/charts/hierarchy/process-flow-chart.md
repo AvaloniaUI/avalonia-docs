@@ -1,6 +1,6 @@
 ---
 id: process-flow-chart
-title: Process Flow Chart
+title: Process flow chart
 description: Visualizes sequences of steps, decisions, and logical outcomes using standard flowchart symbols, suitable for business workflows and decision trees.
 doc_type: reference
 tags:
@@ -17,12 +17,12 @@ Process flow charts (or Flowcharts) are used to visualize sequences of steps, de
 
 <Image light={chartsFlowProcess} maxWidth={400} position="center" cornerRadius="true" alt="Process flow chart with start, decision, and action nodes connected by directional arrows showing a workflow sequence." />
 
-## When to Use
+## When to use
 - **Workflow Mapping**: Visualizing business processes or approval chains.
 - **Decision Trees**: Showing the logic path for troubleshooting or user journeys.
 - **System Architecture**: Mapping connections between different modules or services.
 
-## Code Example
+## Code example
 
 ### XAML
 ```xml
@@ -31,7 +31,7 @@ Process flow charts (or Flowcharts) are used to visualize sequences of steps, de
                     Edges="{Binding FlowEdges}" />
 ```
 
-### Data Model (C#)
+### Data model (C#)
 ```csharp
 public record FlowNode(string Id, string Label, string Type);
 public record FlowEdge(string Source, string Target, string Label);
@@ -50,7 +50,7 @@ public ObservableCollection<FlowEdge> FlowEdges { get; } = new()
 };
 ```
 
-## Common Properties
+## Common properties
 
 | Property | Description | Default |
 | :--- | :--- | :--- |

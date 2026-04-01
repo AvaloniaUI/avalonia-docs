@@ -1,6 +1,6 @@
 ---
 id: hilo-chart
-title: Hilo Chart
+title: Hilo chart
 description: Displays the high and low prices per period as vertical lines, providing a focused view of price volatility without open or close values.
 doc_type: reference
 tags:
@@ -17,12 +17,12 @@ Hilo charts show the High and Low prices for a given period. By omitting the ope
 
 <Image light={chartsFinancialHilo} maxWidth={400} position="center" cornerRadius="true" alt="Hilo chart showing daily price ranges as vertical lines connecting high and low values over a date range." />
 
-## When to Use
+## When to use
 - **Volatility Analysis**: Emphasizing the spread between the highest and lowest prices.
 - **Support and Resistance**: Identifying key price levels where the market struggled to move further.
 - **Simplified Trading**: When a cleaner alternative to OHLC or Candlestick charts is preferred.
 
-## Code Example
+## Code example
 
 ### XAML
 ```xml
@@ -42,7 +42,7 @@ Hilo charts show the High and Low prices for a given period. By omitting the ope
 </controls:CartesianChart>
 ```
 
-### Data Model (C#)
+### Data model (C#)
 ```csharp
 public record RangePoint(DateTime Date, double High, double Low);
 
@@ -54,7 +54,7 @@ public ObservableCollection<RangePoint> HiloData { get; } = new()
 };
 ```
 
-## Common Properties
+## Common properties
 
 | Property | Description | Default |
 | :--- | :--- | :--- |

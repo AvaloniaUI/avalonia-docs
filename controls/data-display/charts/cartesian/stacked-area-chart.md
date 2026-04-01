@@ -1,6 +1,6 @@
 ---
 id: stacked-area-chart
-title: Stacked Area Chart
+title: Stacked area chart
 description: Stacks multiple area series on top of each other to show how several variables contribute to a cumulative total over time.
 doc_type: reference
 tags:
@@ -17,12 +17,12 @@ Stacked area charts display multiple area series stacked on top of each other. T
 
 <Image light={chartsCartesianStackedarea} maxWidth={400} position="center" cornerRadius="true" alt="Stacked area chart with multiple colored layers representing traffic sources stacked to show cumulative total." />
 
-## When to Use
+## When to use
 - **Accumulation**: Visualizing the sum of multiple categories over a period.
 - **Temporal Composition**: Showing how the makeup of a total value changes chronologically.
 - **Trend Comparison**: Comparing the relative growth of different layers.
 
-## Code Example
+## Code example
 
 ### XAML
 ```xml
@@ -41,7 +41,7 @@ Stacked area charts display multiple area series stacked on top of each other. T
 </controls:CartesianChart>
 ```
 
-### Data Model (C#)
+### Data model (C#)
 ```csharp
 public record TrafficPoint(string Day, double Volume);
 
@@ -61,7 +61,7 @@ public ObservableCollection<TrafficPoint> StackedAreaOrganic { get; } = new()
 };
 ```
 
-## Common Properties (StackedAreaSeries)
+## Common properties (StackedAreaSeries)
 
 | Property | Description | Default |
 | :--- | :--- | :--- |

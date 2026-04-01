@@ -1,6 +1,6 @@
 ---
 id: spiral-timeline-chart
-title: Spiral Timeline
+title: Spiral timeline
 description: Wraps a chronological sequence into a spiral to reveal both long-term trends and recurring cyclical patterns within the same visualization.
 doc_type: reference
 tags:
@@ -17,12 +17,12 @@ Spiral timelines visualize data that has both a strong sequential component and 
 
 <Image light={chartsTimelineSpiral} maxWidth={400} position="center" cornerRadius="true" alt="Spiral timeline chart wrapping chronological data into an outward spiral to show both long-term trends and cyclical patterns." />
 
-## When to Use
+## When to use
 - **Long-term Cyclical Data**: Visualizing annual climate changes over several decades.
 - **System Logs**: Detecting patterns in server activity across weeks or months.
 - **Biological Rhythms**: Showing sleep patterns or activity cycles over time.
 
-## Code Example
+## Code example
 
 ### XAML
 ```xml
@@ -32,7 +32,7 @@ Spiral timelines visualize data that has both a strong sequential component and 
                               DatePath="Timestamp" />
 ```
 
-### Data Model (C#)
+### Data model (C#)
 ```csharp
 public record SpiralData(DateTime Timestamp, double Reading);
 
@@ -44,7 +44,7 @@ public ObservableCollection<SpiralData> SpiralPoints { get; } = new()
 };
 ```
 
-## Common Properties
+## Common properties
 
 | Property | Description | Default |
 | :--- | :--- | :--- |

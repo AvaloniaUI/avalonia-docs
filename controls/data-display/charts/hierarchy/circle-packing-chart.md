@@ -1,6 +1,6 @@
 ---
 id: circle-packing-chart
-title: Circle Packing
+title: Circle packing
 description: Represents hierarchical data as nested circles, where larger circles contain smaller child circles, showing grouping and relative size at each level.
 doc_type: reference
 tags:
@@ -17,12 +17,12 @@ Circle packing is a variation of a treemap where nodes are represented as circle
 
 <Image light={chartsHierarchicalCirclepacking} maxWidth={400} position="center" cornerRadius="true" alt="Circle packing chart with nested circles where parent categories contain proportionally-sized child circles." />
 
-## When to Use
+## When to use
 - **Clustering**: Visualizing groups and sub-groups in a visually appealing, organic way.
 - **Aesthetic Overviews**: Dashboards where a "bubble" visual is preferred over rigid grids.
 - **Relationship Proximity**: Showing how closely related different items are within a category.
 
-## Code Example
+## Code example
 
 ### XAML
 ```xml
@@ -33,7 +33,7 @@ Circle packing is a variation of a treemap where nodes are represented as circle
                              ChildrenPath="Nodes" />
 ```
 
-### Data Model (C#)
+### Data model (C#)
 ```csharp
 public class PackingNode
 {
@@ -51,7 +51,7 @@ public ObservableCollection<PackingNode> PackingData { get; } = new()
 };
 ```
 
-## Common Properties
+## Common properties
 
 | Property | Description | Default |
 | :--- | :--- | :--- |

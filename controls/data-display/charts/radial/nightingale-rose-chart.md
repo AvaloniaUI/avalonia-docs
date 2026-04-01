@@ -1,6 +1,6 @@
 ---
 id: nightingale-rose-chart
-title: Nightingale Rose Chart
+title: Nightingale rose chart
 description: Multi-layered polar area chart that stacks multiple variables within each circular segment, allowing comparison of composition across cyclical categories.
 doc_type: reference
 tags:
@@ -17,12 +17,12 @@ The Nightingale Rose chart is a multi-layered polar area chart. It allows for co
 
 <Image light={chartsRadialRose} maxWidth={400} position="center" cornerRadius="true" alt="Nightingale rose chart with stacked sub-segments in each circular slice comparing composition across cyclical categories." />
 
-## When to Use
+## When to use
 - **Comparative Decomposition**: Breaking down a total category value into parts in a circular form.
 - **Multi-variate Cycles**: Comparing different data series across a cyclical timeframe.
 - **Complex Proportions**: When a standard polar area chart needs to show internal composition.
 
-## Code Example
+## Code example
 
 ### XAML
 ```xml
@@ -33,7 +33,7 @@ The Nightingale Rose chart is a multi-layered polar area chart. It allows for co
                                GroupPath="Period" />
 ```
 
-### Data Model (C#)
+### Data model (C#)
 ```csharp
 public record RoseSegment(string Period, string Source, double Value);
 
@@ -44,7 +44,7 @@ public ObservableCollection<RoseSegment> RoseData { get; } = new()
 };
 ```
 
-## Common Properties
+## Common properties
 
 | Property | Description | Default |
 | :--- | :--- | :--- |

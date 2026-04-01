@@ -1,6 +1,6 @@
 ---
 id: bar-chart
-title: Bar Chart
+title: Bar chart
 description: Represents data using rectangular bars with lengths proportional to values, for comparing discrete quantities across categories.
 doc_type: reference
 tags:
@@ -17,12 +17,12 @@ Bar charts represent data using rectangular bars with lengths proportional to th
 
 <Image light={chartsCartesianBar} maxWidth={400} position="center" cornerRadius="true" alt="Bar chart with vertical rectangular bars of varying heights comparing quarterly revenue across categories." />
 
-## When to Use
+## When to use
 - **Comparisons**: Comparing discrete quantities across different categories.
 - **Ranking**: Showing which categories have the highest or lowest values.
 - **Categorical Data**: When data is grouped into distinct, non-continuous groups.
 
-## Code Example
+## Code example
 
 ### XAML
 ```xml
@@ -39,7 +39,7 @@ Bar charts represent data using rectangular bars with lengths proportional to th
 </controls:CartesianChart>
 ```
 
-### Data Model (C#)
+### Data model (C#)
 ```csharp
 public record CategoryData(string Category, double Amount);
 
@@ -52,7 +52,7 @@ public ObservableCollection<CategoryData> BarData { get; } = new()
 };
 ```
 
-## Common Properties
+## Common properties
 
 | Property | Description | Default |
 | :--- | :--- | :--- |

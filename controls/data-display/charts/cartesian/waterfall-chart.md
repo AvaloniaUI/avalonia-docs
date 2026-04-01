@@ -1,6 +1,6 @@
 ---
 id: waterfall-chart
-title: Waterfall Chart
+title: Waterfall chart
 description: Shows a running total as values are added or subtracted, useful for visualizing how sequential positive or negative changes affect an initial value.
 doc_type: reference
 tags:
@@ -17,12 +17,12 @@ A waterfall chart shows a running total as values are added or subtracted. It's 
 
 <Image light={chartsCartesianWaterfall} maxWidth={400} position="center" cornerRadius="true" alt="Waterfall chart with floating bars showing sequential positive and negative changes to a running total." />
 
-## When to Use
+## When to use
 - **Financial Analysis**: Visualizing P&L (Profit and Loss) statements over time.
 - **Inventory Tracking**: Showing how stock levels change with additions and removals.
 - **Process Steps**: Modeling the cumulative effect of sequential variables.
 
-## Code Example
+## Code example
 
 ### XAML
 ```xml
@@ -39,7 +39,7 @@ A waterfall chart shows a running total as values are added or subtracted. It's 
 </controls:CartesianChart>
 ```
 
-### Data Model (C#)
+### Data model (C#)
 ```csharp
 public record WaterfallItem(string Label, double Change);
 
@@ -53,7 +53,7 @@ public ObservableCollection<WaterfallItem> WaterfallChanges { get; } = new()
 };
 ```
 
-## Common Properties
+## Common properties
 
 | Property | Description | Default |
 | :--- | :--- | :--- |

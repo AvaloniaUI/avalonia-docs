@@ -1,6 +1,6 @@
 ---
 id: chord-diagram
-title: Chord Diagram
+title: Chord diagram
 description: Visualizes inter-relationships between entities in a circular layout, ideal for showing complex directional flows such as trade or migration patterns.
 doc_type: reference
 tags:
@@ -17,12 +17,12 @@ Chord diagrams visualize the inter-relationships between entities in a circular 
 
 <Image light={chartsFlowChord} maxWidth={400} position="center" cornerRadius="true" alt="Chord diagram showing directional flows between entities arranged in a circle with connecting chords of varying widths." />
 
-## When to Use
+## When to use
 - **Trade Relations**: Visualizing import/export relationships between countries.
 - **Migration Patterns**: Showing movement of people between different geographic areas.
 - **System Interactions**: Visualizing call dependencies between modules in a software system.
 
-## Code Example
+## Code example
 
 ### XAML
 ```xml
@@ -33,7 +33,7 @@ Chord diagrams visualize the inter-relationships between entities in a circular 
                             ValuePath="Value" />
 ```
 
-### Data Model (C#)
+### Data model (C#)
 ```csharp
 public record TradeLink(string Source, string Target, double Value);
 
@@ -45,7 +45,7 @@ public ObservableCollection<TradeLink> ChordData { get; } = new()
 };
 ```
 
-## Common Properties
+## Common properties
 
 | Property | Description | Default |
 | :--- | :--- | :--- |

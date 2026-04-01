@@ -1,6 +1,6 @@
 ---
 id: timeline-chart
-title: Event Timeline Chart
+title: Event timeline chart
 description: Visualizes a series of events chronologically along a time axis, providing a clear representation of historical or planned occurrences.
 doc_type: reference
 tags:
@@ -17,12 +17,12 @@ Event timeline charts visualize a series of events chronologically. They provide
 
 <Image light={chartsTimelineHorizontal} maxWidth={400} position="center" cornerRadius="true" alt="Event timeline chart displaying chronological milestones as labeled markers along a horizontal time axis." />
 
-## When to Use
+## When to use
 - **Historical Records**: Visualizing milestones, product launches, or life events.
 - **Audit Trails**: Showing system logs or user activities in sequence.
 - **Vertical Timelines**: Ideal for mobile-friendly or column-based layouts.
 
-## Code Example
+## Code example
 
 ### XAML
 ```xml
@@ -34,7 +34,7 @@ Event timeline charts visualize a series of events chronologically. They provide
                              LabelPath="Event" />
 ```
 
-### Data Model (C#)
+### Data model (C#)
 ```csharp
 public record TimelineEvent(DateTime Date, string Event);
 
@@ -46,7 +46,7 @@ public ObservableCollection<TimelineEvent> TimelineEvents { get; } = new()
 };
 ```
 
-## Common Properties
+## Common properties
 
 | Property | Description | Default |
 | :--- | :--- | :--- |

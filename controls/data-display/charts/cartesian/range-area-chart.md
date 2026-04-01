@@ -1,6 +1,6 @@
 ---
 id: range-area-chart
-title: Range Area Chart
+title: Range area chart
 description: Displays a filled area connecting high and low values per category, suitable for visualizing uncertainty, price bands, or temperature ranges.
 doc_type: reference
 tags:
@@ -17,12 +17,12 @@ Range area charts display a filled area connecting two values (high and low) for
 
 <Image light={chartsCartesianRangearea} maxWidth={400} position="center" cornerRadius="true" alt="Range area chart with a filled band between high and low temperature values across days of the week." />
 
-## When to Use
+## When to use
 - **Error Margins**: Showing the confidence interval or error range around a mean value.
 - **Price Envelopes**: Visualizing daily highs and lows in a single series.
 - **Temperature Ranges**: Showing the minimum and maximum temperature over a period.
 
-## Code Example
+## Code example
 
 ### XAML
 ```xml
@@ -37,7 +37,7 @@ Range area charts display a filled area connecting two values (high and low) for
 </controls:CartesianChart>
 ```
 
-### Data Model (C#)
+### Data model (C#)
 ```csharp
 public record TempRange(string Day, double Min, double Max);
 
@@ -50,7 +50,7 @@ public ObservableCollection<TempRange> TempRanges { get; } = new()
 };
 ```
 
-## Common Properties
+## Common properties
 
 | Property | Description | Default |
 | :--- | :--- | :--- |

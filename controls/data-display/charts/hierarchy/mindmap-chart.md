@@ -1,6 +1,6 @@
 ---
 id: mindmap-chart
-title: Mindmap / Brainstorming
+title: Mindmap / brainstorming
 description: Divergent diagram that radiates topics outward from a central node, used for brainstorming, project scoping, and knowledge representation.
 doc_type: reference
 tags:
@@ -17,12 +17,12 @@ Mindmaps are divergent diagrams used for brainstorming and project planning, rad
 
 <Image light={chartsFlowMindmap} maxWidth={400} position="center" cornerRadius="true" alt="Mindmap diagram radiating outward from a central topic node to connected sub-topics and ideas." />
 
-## When to Use
+## When to use
 - **Idea Generation**: Capturing and organizing thoughts during a meeting.
 - **Project Scope**: Mapping out different modules and their requirements.
 - **Knowledge Representation**: Visualizing complex concepts and their interconnectedness.
 
-## Code Example
+## Code example
 
 ### XAML
 ```xml
@@ -32,7 +32,7 @@ Mindmaps are divergent diagrams used for brainstorming and project planning, rad
                     CornerRadius="20" />
 ```
 
-### Data Model (C#)
+### Data model (C#)
 ```csharp
 public record MindmapItem(string Id, string Label);
 public record MindmapLink(string Source, string Target);
@@ -51,7 +51,7 @@ public ObservableCollection<MindmapLink> MindmapEdges { get; } = new()
 };
 ```
 
-## Common Properties
+## Common properties
 
 | Property | Description | Default |
 | :--- | :--- | :--- |

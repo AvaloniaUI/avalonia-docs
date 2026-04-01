@@ -1,6 +1,6 @@
 ---
 id: bump-chart
-title: Bump Chart
+title: Bump chart
 description: Visualizes changes in rank over time, focusing on relative position of categories rather than absolute values.
 doc_type: reference
 tags:
@@ -17,12 +17,12 @@ Bump charts are a variation of line charts designed to visualize changes in rank
 
 <Image light={chartsAnalyticsBump} maxWidth={400} position="center" cornerRadius="true" alt="Bump chart showing rank changes over time with smooth curved lines connecting each entity's position across periods." />
 
-## When to Use
+## When to use
 - **Popularity Rankings**: Showing how songs or movies move up and down a top-10 list.
 - **Market Share**: Visualizing the competition between brands for the top spot.
 - **Tournament Standings**: Tracking the relative performance of teams across stages.
 
-## Code Example
+## Code example
 
 ### XAML
 ```xml
@@ -33,7 +33,7 @@ Bump charts are a variation of line charts designed to visualize changes in rank
                     GroupPath="Brand" />
 ```
 
-### Data Model (C#)
+### Data model (C#)
 ```csharp
 public record MarketRank(string Period, string Brand, int Rank);
 
@@ -44,7 +44,7 @@ public ObservableCollection<MarketRank> RankingData { get; } = new()
 };
 ```
 
-## Common Properties
+## Common properties
 
 | Property | Description | Default |
 | :--- | :--- | :--- |

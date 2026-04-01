@@ -1,6 +1,6 @@
 ---
 id: area-chart
-title: Area Chart
+title: Area chart
 description: Extends the line chart by filling the area under the line with color or gradients, emphasizing magnitude of change over time.
 doc_type: reference
 tags:
@@ -17,12 +17,12 @@ Area charts are based on the line chart. The area between the axis and the line 
 
 <Image light={chartsCartesianArea} maxWidth={400} position="center" cornerRadius="true" alt="Area chart showing website traffic data with a gradient fill between the line and the horizontal axis." />
 
-## When to Use
+## When to use
 - **Cumulative Totals**: Visualizing how different components contribute to a whole over time.
 - **Volume**: Emphasizing the total volume or magnitude of data points.
 - **Visual Contrast**: Providing a more distinct visual representation than a simple line chart.
 
-## Code Example
+## Code example
 
 ### XAML
 ```xml
@@ -50,7 +50,7 @@ Area charts are based on the line chart. The area between the axis and the line 
 </controls:CartesianChart>
 ```
 
-### Data Model (C#)
+### Data model (C#)
 ```csharp
 public record TrafficData(string Period, double Count);
 
@@ -64,7 +64,7 @@ public ObservableCollection<TrafficData> AreaVisitors { get; } = new()
 };
 ```
 
-## Common Properties
+## Common properties
 
 | Property | Description | Default |
 | :--- | :--- | :--- |

@@ -1,6 +1,6 @@
 ---
 id: error-bar-chart
-title: Error Bar Chart
+title: Error bar chart
 description: Represents data variability by adding error indicators to data points, showing standard deviation, confidence intervals, or measurement uncertainty.
 doc_type: reference
 tags:
@@ -17,12 +17,12 @@ Error bar charts represent the variability of data and are used on graphs to ind
 
 <Image light={chartsStatisticalErrorbar} maxWidth={400} position="center" cornerRadius="true" alt="Chart with data points and vertical error indicators showing standard deviation ranges for each sample." />
 
-## When to Use
+## When to use
 - **Scientific Research**: Visualizing standard deviation or confidence intervals.
 - **Quality Control**: Showing the range of tolerance in manufacturing.
 - **Survey Data**: Indicating the margin of error in statistical polls.
 
-## Code Example
+## Code example
 
 ### XAML
 ```xml
@@ -33,7 +33,7 @@ Error bar charts represent the variability of data and are used on graphs to ind
                         LabelPath="SampleID" />
 ```
 
-### Data Model (C#)
+### Data model (C#)
 ```csharp
 public record LabResult(string SampleID, double Mean, double StandardError);
 
@@ -45,7 +45,7 @@ public ObservableCollection<LabResult> LabResults { get; } = new()
 };
 ```
 
-## Common Properties
+## Common properties
 
 | Property | Description | Default |
 | :--- | :--- | :--- |

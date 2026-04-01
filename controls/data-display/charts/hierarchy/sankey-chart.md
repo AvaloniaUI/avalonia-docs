@@ -1,6 +1,6 @@
 ---
 id: sankey-chart
-title: Sankey Chart
+title: Sankey chart
 description: Visualizes the flow of data, energy, or materials between stages using proportional-width links to represent quantity through each connection.
 doc_type: reference
 tags:
@@ -17,12 +17,12 @@ Sankey charts visualize the flow of data, energy, or materials between stages. T
 
 <Image light={chartsFlowSankey} maxWidth={400} position="center" cornerRadius="true" alt="Sankey chart showing energy flow between stages with link widths proportional to the quantity transferred." />
 
-## When to Use
+## When to use
 - **Energy Audit**: Showing how energy is distributed from source to consumption.
 - **Web Analytics**: Visualizing the path users take through a website (user journey).
 - **Budgeting**: Tracking how funds flow from income sources to various expenses.
 
-## Code Example
+## Code example
 
 ### XAML
 ```xml
@@ -33,7 +33,7 @@ Sankey charts visualize the flow of data, energy, or materials between stages. T
                       ValuePath="Value" />
 ```
 
-### Data Model (C#)
+### Data model (C#)
 ```csharp
 public record FlowItem(string Source, string Target, double Value);
 
@@ -46,7 +46,7 @@ public ObservableCollection<FlowItem> SankeyData { get; } = new()
 };
 ```
 
-## Common Properties
+## Common properties
 
 | Property | Description | Default |
 | :--- | :--- | :--- |

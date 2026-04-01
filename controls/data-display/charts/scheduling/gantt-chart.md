@@ -1,6 +1,6 @@
 ---
 id: gantt-chart
-title: Gantt Chart
+title: Gantt chart
 description: Specialized timeline chart for project management, showing task durations, start and end dates, and dependencies on a horizontal time axis.
 doc_type: reference
 tags:
@@ -17,12 +17,12 @@ Gantt charts are specialized timeline charts used for project management. They i
 
 <Image light={chartsTimelineGantt} maxWidth={400} position="center" cornerRadius="true" alt="Gantt chart showing project tasks as horizontal bars on a time axis with start dates, durations, and dependencies." />
 
-## When to Use
+## When to use
 - **Project Planning**: Identifying the critical path and task overlaps.
 - **Resource Management**: Tracking when team members are allocated to specific activities.
 - **Release Tracking**: Visualizing milestones and deadlines for a software release.
 
-## Code Example
+## Code example
 
 ### XAML
 ```xml
@@ -33,7 +33,7 @@ Gantt charts are specialized timeline charts used for project management. They i
                      EndPath="EndDate" />
 ```
 
-### Data Model (C#)
+### Data model (C#)
 ```csharp
 public record ProjectTask(string Title, DateTime BeginDate, DateTime EndDate);
 
@@ -44,7 +44,7 @@ public ObservableCollection<ProjectTask> ProjectTasks { get; } = new()
 };
 ```
 
-## Common Properties
+## Common properties
 
 | Property | Description | Default |
 | :--- | :--- | :--- |

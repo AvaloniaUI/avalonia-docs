@@ -1,6 +1,6 @@
 ---
 id: stacked-bar-chart
-title: Stacked Bar Chart
+title: Stacked bar chart
 description: Stacks multiple data series in a single bar to compare both total values and internal component distribution across categories.
 doc_type: reference
 tags:
@@ -17,12 +17,12 @@ Stacked bar charts represent multiple series of data stacked on top of each othe
 
 <Image light={chartsCartesianStackedbar} maxWidth={400} position="center" cornerRadius="true" alt="Stacked bar chart with colored segments stacked in each bar showing regional sales contributions per quarter." />
 
-## When to Use
+## When to use
 - **Part-to-Whole**: Visualizing how many smaller parts make up a larger total category.
 - **Categorical Comparison**: Comparing totals across different groups while seeing internal distribution.
 - **Space Optimization**: Showing multiple data series without needing separate bars for each.
 
-## Code Example
+## Code example
 
 ### XAML
 ```xml
@@ -41,7 +41,7 @@ Stacked bar charts represent multiple series of data stacked on top of each othe
 </controls:CartesianChart>
 ```
 
-### Data Model (C#)
+### Data model (C#)
 ```csharp
 public record RegionalSales(string Period, double Amount);
 
@@ -61,7 +61,7 @@ public ObservableCollection<RegionalSales> StackedBarEast { get; } = new()
 };
 ```
 
-## Common Properties (StackedBarSeries)
+## Common properties (StackedBarSeries)
 
 | Property | Description | Default |
 | :--- | :--- | :--- |

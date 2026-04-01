@@ -1,6 +1,6 @@
 ---
 id: theme-river-chart
-title: Theme River Chart
+title: Theme river chart
 description: Visualizes changes in multiple categories over time using a stacked streamgraph layout, emphasizing flow and relative proportions in an organic river-like shape.
 doc_type: reference
 tags:
@@ -17,12 +17,12 @@ Theme river charts (or Streamgraphs) visualize changes in categories over time. 
 
 <Image light={chartsAnalyticsThemeriver} maxWidth={400} position="center" cornerRadius="true" alt="Theme river chart with stacked organic stream bands showing how category volumes flow and change over time." />
 
-## When to Use
+## When to use
 - **Topic Trends**: Visualizing the popularity of themes in news or social media over time.
 - **Resource Allocation**: Showing how budget or manpower shifts between projects.
 - **Usage Patterns**: Tracking the volume of different types of network traffic.
 
-## Code Example
+## Code example
 
 ### XAML
 ```xml
@@ -33,7 +33,7 @@ Theme river charts (or Streamgraphs) visualize changes in categories over time. 
                           GroupPath="Topic" />
 ```
 
-### Data Model (C#)
+### Data model (C#)
 ```csharp
 public record TopicFlow(DateTime Timestamp, string Topic, double Volume);
 
@@ -45,7 +45,7 @@ public ObservableCollection<TopicFlow> RiverData { get; } = new()
 };
 ```
 
-## Common Properties
+## Common properties
 
 | Property | Description | Default |
 | :--- | :--- | :--- |

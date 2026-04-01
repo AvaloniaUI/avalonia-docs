@@ -1,6 +1,6 @@
 ---
 id: liquid-fill-gauge
-title: Liquid Fill Gauge
+title: Liquid fill gauge
 description: Represents a percentage as an animated liquid level within a circular shape, suited for thematic dashboards showing fill or capacity metrics.
 doc_type: reference
 tags:
@@ -17,25 +17,25 @@ Liquid fill gauges are decorative circular gauges that represent a percentage as
 
 <Image light={chartsGaugesLiquid} maxWidth={400} position="center" cornerRadius="true" alt="Liquid fill gauge showing a circular container filled with animated liquid to represent a percentage value." />
 
-## When to Use
+## When to use
 - **Thematic Dashboards**: Visualizing "filling" concepts like fundraising or capacity.
 - **Environmental Apps**: Showing water levels or liquid container status.
 - **Engaging UI**: Adding a playful, animated metric indicator to a modern application.
 
-## Code Example
+## Code example
 
 ### XAML
 ```xml
 <controls:LiquidFillGauge Value="{Binding WaterLevel}" Width="150" Height="150" TextColor="White" />
 ```
 
-### Data Model (C#)
+### Data model (C#)
 ```csharp
 // Percentage binding (0 to 100)
 public double WaterLevel { get; set; } = 42.0;
 ```
 
-## Common Properties
+## Common properties
 
 | Property | Description | Default |
 | :--- | :--- | :--- |

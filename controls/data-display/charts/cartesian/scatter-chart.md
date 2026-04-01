@@ -1,6 +1,6 @@
 ---
 id: scatter-chart
-title: Scatter Chart
+title: Scatter chart
 description: Plots data points as dots using two numeric variables to reveal correlations, distributions, and outliers in datasets.
 doc_type: reference
 tags:
@@ -17,12 +17,12 @@ Scatter charts use dots to represent values for two different numeric variables.
 
 <Image light={chartsCartesianScatter} maxWidth={400} position="center" cornerRadius="true" alt="Scatter chart plotting individual data points as dots across two numeric axes to reveal correlations." />
 
-## When to Use
+## When to use
 - **Correlation**: Identifying relationships between two variables (e.g., height vs weight).
 - **Distribution**: Visualizing the spread and clustering of data points.
 - **Outlier Detection**: Easily spotting data points that fall far from the norm.
 
-## Code Example
+## Code example
 
 ### XAML
 ```xml
@@ -39,7 +39,7 @@ Scatter charts use dots to represent values for two different numeric variables.
 </controls:CartesianChart>
 ```
 
-### Data Model (C#)
+### Data model (C#)
 ```csharp
 public record PointData(double X, double Y);
 
@@ -53,7 +53,7 @@ public ObservableCollection<PointData> ScatterPoints { get; } = new()
 };
 ```
 
-## Common Properties
+## Common properties
 
 | Property | Description | Default |
 | :--- | :--- | :--- |

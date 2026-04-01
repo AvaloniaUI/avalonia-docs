@@ -1,6 +1,6 @@
 ---
 id: circular-gauge-chart
-title: Circular Gauge Chart
+title: Circular gauge chart
 description: Visualizes a single value on a radial scale in a speedometer-style layout, suitable for real-time monitoring and goal tracking dashboards.
 doc_type: reference
 tags:
@@ -17,25 +17,25 @@ Circular gauge charts visualize a single value on a radial scale. They are the s
 
 <Image light={chartsGaugesCircular} maxWidth={400} position="center" cornerRadius="true" alt="Circular gauge chart in a speedometer style with a needle pointing to the current value on a radial scale." />
 
-## When to Use
+## When to use
 - **Real-time Monitoring**: Showing CPU, memory, or network usage.
 - **Goal Tracking**: Visualizing progress toward a target (e.g., sales quota).
 - **Physical Simulation**: Representing values from physical sensors like speed or pressure.
 
-## Code Example
+## Code example
 
 ### XAML
 ```xml
 <controls:CircularGaugeChart Value="{Binding CpuUsage}" Width="220" Height="220" Title="CPU" Margin="10" />
 ```
 
-### Data Model (C#)
+### Data model (C#)
 ```csharp
 // Gauges typically bind to a single numeric property
 public double CpuUsage { get; set; } = 72;
 ```
 
-## Common Properties
+## Common properties
 
 | Property | Description | Default |
 | :--- | :--- | :--- |

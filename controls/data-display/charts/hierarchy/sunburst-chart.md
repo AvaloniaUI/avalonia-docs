@@ -1,6 +1,6 @@
 ---
 id: sunburst-chart
-title: Sunburst Chart
+title: Sunburst chart
 description: Visualizes hierarchical data as concentric rings, where each ring represents a level and segments show the proportion of each node within its parent.
 doc_type: reference
 tags:
@@ -17,12 +17,12 @@ Sunburst charts are used to visualize hierarchical data through a series of conc
 
 <Image light={chartsHierarchicalSunburst} maxWidth={400} position="center" cornerRadius="true" alt="Sunburst chart with concentric rings where each ring represents a hierarchy level and segments show proportions." />
 
-## When to Use
+## When to use
 - **Nested Data**: Visualizing complex hierarchies with multiple levels.
 - **Space-Efficient**: When you need a compact alternative to a tree diagram.
 - **Drill-down**: Effectively showing the breakdown of segments at each level.
 
-## Code Example
+## Code example
 
 ### XAML
 ```xml
@@ -33,7 +33,7 @@ Sunburst charts are used to visualize hierarchical data through a series of conc
                         ChildrenPath="Children" />
 ```
 
-### Data Model (C#)
+### Data model (C#)
 ```csharp
 public class HierarchicalNode
 {
@@ -64,7 +64,7 @@ public ObservableCollection<HierarchicalNode> SunburstData { get; } = new()
 };
 ```
 
-## Common Properties
+## Common properties
 
 | Property | Description | Default |
 | :--- | :--- | :--- |

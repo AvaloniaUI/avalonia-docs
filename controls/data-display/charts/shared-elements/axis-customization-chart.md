@@ -1,6 +1,6 @@
 ---
 id: axis-customization-chart
-title: Axis Customization
+title: Axis customization
 description: Provides options to customize axis appearance including label rotation, gridline styling, multiple axes, and support for numerical, category, date, and logarithmic types.
 doc_type: reference
 tags:
@@ -17,12 +17,12 @@ Avalonia Charts provides extensive options to customize axis appearance, includi
 
 <Image light={chartsFeaturesGridlines} maxWidth={400} position="center" cornerRadius="true" alt="Cartesian chart with customized axes showing gridlines." />
 
-## When to Use
+## When to use
 - **Multiple Scales**: When displaying two different metrics (e.g., Temperature and Humidity) on the same chart.
 - **Categorical Data**: When axes represent discrete groups rather than continuous numbers.
 - **Time-Series Analysis**: Customizing date formats and intervals for historical data.
 
-## Code Example
+## Code example
 
 ### XAML
 ```xml
@@ -43,7 +43,7 @@ Avalonia Charts provides extensive options to customize axis appearance, includi
 </controls:CartesianChart>
 ```
 
-### Data Model (C#)
+### Data model (C#)
 ```csharp
 public record MonthlyMetric(string Month, double Value);
 
@@ -51,7 +51,7 @@ public ObservableCollection<MonthlyMetric> RevenueData { get; } = new() { new("J
 public ObservableCollection<MonthlyMetric> GrowthData { get; } = new() { new("Jan", 5), new("Feb", 8) };
 ```
 
-## Common Axis Properties (NumericalAxis / CategoryAxis)
+## Common axis properties (NumericalAxis / CategoryAxis)
 
 | Property | Description | Default |
 | :--- | :--- | :--- |
@@ -63,7 +63,7 @@ public ObservableCollection<MonthlyMetric> GrowthData { get; } = new() { new("Ja
 | `LabelAngle` | Rotation angle of the labels (0 to 360). | `0` |
 | `Position` | `Top`, `Bottom`, `Left`, `Right`. | Side dependent |
 
-## Axis Types
+## Axis types
 - **NumericalAxis**: For continuous numeric data. Supports `Minimum`, `Maximum`, and `Interval`.
 - **CategoryAxis**: For discrete categories. Labels are derived from the data.
 - **DateTimeAxis**: For date and time data. Supports automatic interval calculation and formatting.

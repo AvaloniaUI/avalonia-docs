@@ -1,6 +1,6 @@
 ---
 id: indented-tree-chart
-title: Indented Tree Chart
+title: Indented tree chart
 description: Represents hierarchies using a file-explorer-style indented layout within a charting container, supporting advanced styling and interactions.
 doc_type: reference
 tags:
@@ -17,12 +17,12 @@ Indented tree charts represent hierarchies using a layout similar to a standard 
 
 <Image light={chartsHierarchicalIndentedtree} maxWidth={400} position="center" cornerRadius="true" alt="Indented tree chart showing a file-explorer-style hierarchy with parent and child nodes offset by indentation." />
 
-## When to Use
+## When to use
 - **File System Explorer**: Building custom navigators for local or cloud storage.
 - **Bill of Materials (BOM)**: Showing a multi-level product structure in manufacturing.
 - **Settings/Config**: Grouping complex nested configuration options visually.
 
-## Code Example
+## Code example
 
 ### XAML
 ```xml
@@ -32,7 +32,7 @@ Indented tree charts represent hierarchies using a layout similar to a standard 
                             ChildrenPath="Children" />
 ```
 
-### Data Model (C#)
+### Data model (C#)
 ```csharp
 public class TreeItem
 {
@@ -50,7 +50,7 @@ public ObservableCollection<TreeItem> TreeItems { get; } = new()
 };
 ```
 
-## Common Properties
+## Common properties
 
 | Property | Description | Default |
 | :--- | :--- | :--- |

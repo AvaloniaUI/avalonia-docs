@@ -1,6 +1,6 @@
 ---
 id: mosaic-chart
-title: Mosaic Chart
+title: Mosaic chart
 description: Visualizes relationships between two categorical variables by scaling both the width and height of segments to represent their proportions of the total.
 doc_type: reference
 tags:
@@ -17,12 +17,12 @@ Mosaic charts (Marimekko) visualize relationships between categories using area.
 
 <Image light={chartsAnalyticsMosaic} maxWidth={400} position="center" cornerRadius="true" alt="Mosaic chart with rectangular tiles scaled by both width and height to show proportions across two categorical variables." />
 
-## When to Use
+## When to use
 - **Market Segmentation**: Showing sales by region (width) and by product category (height).
 - **Resource Expenditure**: Visualizing budget allocation across departments and cost types.
 - **Multi-factor Analysis**: Understanding how two different qualitative variables interact.
 
-## Code Example
+## Code example
 
 ### XAML
 ```xml
@@ -33,7 +33,7 @@ Mosaic charts (Marimekko) visualize relationships between categories using area.
                       ValuePath="Sales" />
 ```
 
-### Data Model (C#)
+### Data model (C#)
 ```csharp
 public record MarketSegment(string Region, string Category, double Sales);
 
@@ -45,7 +45,7 @@ public ObservableCollection<MarketSegment> MosaicData { get; } = new()
 };
 ```
 
-## Common Properties
+## Common properties
 
 | Property | Description | Default |
 | :--- | :--- | :--- |

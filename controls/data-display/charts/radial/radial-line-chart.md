@@ -1,6 +1,6 @@
 ---
 id: radial-line-chart
-title: Radial Line Chart
+title: Radial line chart
 description: Plots data points on a polar coordinate system connected by lines, suitable for showing how a variable fluctuates across cyclical or directional categories.
 doc_type: reference
 tags:
@@ -13,12 +13,12 @@ tags:
 
 Radial line charts plot data points on a polar coordinate system and connect them with lines. They are ideal for showing how a single variable fluctuates across cyclical categories.
 
-## When to Use
+## When to use
 - **Daily Activity**: Mapping heart rate or energy levels across 24 hours.
 - **Directional Data**: Visualizing readings from a 360-degree sensor.
 - **Symmetry Analysis**: Checking for patterns and balance in multi-variate profiles.
 
-## Code Example
+## Code example
 
 ### XAML
 ```xml
@@ -27,7 +27,7 @@ Radial line charts plot data points on a polar coordinate system and connect the
                           ValuePath="Intensity" />
 ```
 
-### Data Model (C#)
+### Data model (C#)
 ```csharp
 public record ActivityPoint(double Intensity);
 
@@ -37,7 +37,7 @@ public ObservableCollection<ActivityPoint> RadialPoints { get; } = new()
 };
 ```
 
-## Common Properties
+## Common properties
 
 | Property | Description | Default |
 | :--- | :--- | :--- |

@@ -1,6 +1,6 @@
 ---
 id: pictorial-bar-chart
-title: Pictorial Bar Chart
+title: Pictorial bar chart
 description: Uses icons or symbols instead of plain bars, reinforcing the subject matter visually for infographics and thematic reports.
 doc_type: reference
 tags:
@@ -17,12 +17,12 @@ Pictorial bar charts use recognizable icons or symbols instead of plain bars. Th
 
 <Image light={chartsCartesianPictorial} maxWidth={400} position="center" cornerRadius="true" alt="Pictorial bar chart using repeated icon symbols instead of plain bars to represent category values." />
 
-## When to Use
+## When to use
 - **Infographics**: Creating high-engagement, thematic reports.
 - **Demographic Reports**: Using gender or professional icons to represent counts.
 - **Public Data Presentation**: Making dry statistics more accessible through familiar symbols.
 
-## Code Example
+## Code example
 
 ### XAML
 ```xml
@@ -47,7 +47,7 @@ Pictorial bar charts use recognizable icons or symbols instead of plain bars. Th
 </controls:CartesianChart>
 ```
 
-### Data Model (C#)
+### Data model (C#)
 ```csharp
 public record PictorialData(string Category, double Count);
 
@@ -60,7 +60,7 @@ public ObservableCollection<PictorialData> PictorialBarData { get; } = new()
 };
 ```
 
-## Common Properties (PictorialBarSeries)
+## Common properties (PictorialBarSeries)
 
 | Property | Description | Default |
 | :--- | :--- | :--- |

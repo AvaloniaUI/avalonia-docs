@@ -1,6 +1,6 @@
 ---
 id: trendline-chart
-title: Trendline Chart
+title: Trendline chart
 description: Overlays a calculated trend line on a Cartesian chart series to highlight the general direction or pattern, with support for linear, exponential, and moving average types.
 doc_type: reference
 tags:
@@ -17,12 +17,12 @@ Trendlines are used in Cartesian charts to show the general direction or pattern
 
 <Image light={chartsFeaturesTrendlines} maxWidth={400} position="center" cornerRadius="true" alt="Line chart with an overlaid trendline showing a line of best fit." />
 
-## When to Use
+## When to use
 - **Sales Forecasting**: Projecting future sales based on historical trends.
 - **Data Smoothing**: Identifying patterns in volatile stock or sensor data.
 - **Performance Evaluation**: Visualizing if throughput is generally increasing or decreasing.
 
-## Code Example
+## Code example
 
 ### XAML
 ```xml
@@ -38,12 +38,12 @@ Trendlines are used in Cartesian charts to show the general direction or pattern
 </controls:CartesianChart>
 ```
 
-### Data Model (C#)
+### Data model (C#)
 ```csharp
 public ObservableCollection<double> SalesData { get; } = new() { 10, 15, 8, 25, 30, 22 };
 ```
 
-## Common Properties (Trendline)
+## Common properties (Trendline)
 
 | Property | Description | Default |
 | :--- | :--- | :--- |

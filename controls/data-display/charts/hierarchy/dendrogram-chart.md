@@ -1,6 +1,6 @@
 ---
 id: dendrogram-chart
-title: Dendrogram Chart
+title: Dendrogram chart
 description: Tree diagram that illustrates hierarchical clustering by showing how items are progressively merged into branches, used in statistical and biological analysis.
 doc_type: reference
 tags:
@@ -17,12 +17,12 @@ Dendrograms are tree diagrams frequently used to illustrate the arrangement of t
 
 <Image light={chartsHierarchicalDendrogram} maxWidth={400} position="center" cornerRadius="true" alt="Dendrogram tree diagram showing hierarchical clustering with branches merging from leaf nodes toward the root." />
 
-## When to Use
+## When to use
 - **Cluster Analysis**: Visualizing the results of statistical clustering algorithms.
 - **Phylogenetic Trees**: Showing evolutionary relationships between different species.
 - **Structural Merges**: Representing data that stems from many parts but converges into a few groups.
 
-## Code Example
+## Code example
 
 ### XAML
 ```xml
@@ -32,7 +32,7 @@ Dendrograms are tree diagrams frequently used to illustrate the arrangement of t
                           ChildrenPath="SubClusters" />
 ```
 
-### Data Model (C#)
+### Data model (C#)
 ```csharp
 public class ClusterNode
 {
@@ -49,7 +49,7 @@ public ObservableCollection<ClusterNode> ClusterData { get; } = new()
 };
 ```
 
-## Common Properties
+## Common properties
 
 | Property | Description | Default |
 | :--- | :--- | :--- |
