@@ -406,7 +406,9 @@ PR: [#20859](https://github.com/AvaloniaUI/Avalonia/pull/20859), [#18647](https:
 
 ## Animations are stopped on invisible controls
 
-For efficiency, animations no longer tick when their corresponding control is hidden, resulting in improved CPU usage in several situations.
+For efficiency, animations triggered by styles no longer tick when their corresponding control is hidden, resulting in improved CPU usage in several situations.
+
+You can restore the previous behavior by setting the new `Animation.PlaybackBehavior` to `Always` if needed.
 
 PR: [#20820](https://github.com/AvaloniaUI/Avalonia/pull/20820)
 
