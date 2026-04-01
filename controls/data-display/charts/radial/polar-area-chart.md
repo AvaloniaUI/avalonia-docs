@@ -18,9 +18,9 @@ Polar area charts (or coxcomb charts) are similar to pie charts but represent va
 <Image light={chartsRadialPolararea} maxWidth={400} position="center" cornerRadius="true" alt="Polar area chart with equal-angle segments of varying radius representing seasonal magnitude values in a circular layout." />
 
 ## When to use
-- **Cyclical Trends**: Visualizing seasonal data or wind patterns.
-- **Ranking Categories**: Comparing the magnitude of many categories in a circular layout.
-- **Historical Analysis**: The classic chart type for visualizing causes of mortality over time.
+- **Cyclical trends**: Visualizing seasonal data or wind patterns.
+- **Ranking categories**: Comparing the magnitude of many categories in a circular layout.
+- **Historical analysis**: The classic chart type for visualizing causes of mortality over time.
 
 ## Code example
 

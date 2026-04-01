@@ -18,9 +18,9 @@ Heatmaps use color-coded cells to represent data values in a 2D matrix, making i
 <Image light={chartsAnalyticsHeatmap} maxWidth={400} position="center" cornerRadius="true" alt="Heatmap chart showing a 2D matrix of color-coded cells representing data values across rows and columns." />
 
 ## When to use
-- **Correlation Matrices**: Visualizing the relationship between variables.
-- **Density Mapping**: Showing frequency or intensity across two categories.
-- **Matrix Data**: When visualizing numerical values at the intersection of rows and columns.
+- **Correlation matrices**: Visualizing the relationship between variables.
+- **Density mapping**: Showing frequency or intensity across two categories.
+- **Matrix data**: When visualizing numerical values at the intersection of rows and columns.
 
 ## Code example
 

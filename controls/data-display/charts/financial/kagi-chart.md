@@ -18,9 +18,9 @@ Kagi charts are time-independent charts that track price movements using vertica
 <Image light={chartsFinancialKagi} maxWidth={400} position="center" cornerRadius="true" alt="Kagi chart with thick and thin vertical lines changing direction only when price reverses by a set amount." />
 
 ## When to use
-- **Pure Price Action**: Focusing on price changes regardless of time or volume.
-- **Breakout Identification**: Using the "Yang" (thick) and "Yin" (thin) lines to spot reversals.
-- **Trend following**: Filtering out small fluctuations that don't meet the reversal threshold.
+- **Pure price action**: Focusing on price changes regardless of time or volume.
+- **Breakout identification**: Using the "Yang" (thick) and "Yin" (thin) lines to spot reversals.
+- **Following trends**: Filtering out small fluctuations that don't meet the reversal threshold.
 
 ## Code example
 

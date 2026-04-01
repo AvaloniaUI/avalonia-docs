@@ -18,9 +18,9 @@ Renko charts are made of "bricks" that represent a fixed price movement. A new b
 <Image light={chartsFinancialRenko} maxWidth={400} position="center" cornerRadius="true" alt="Renko chart displaying fixed-size green and red bricks representing price movements above a set threshold." />
 
 ## When to use
-- **Support & Resistance**: Identifying clear levels where bricks frequently reverse.
-- **Trend Confirmation**: Spotting persistent bullish/bearish brick sequences.
-- **Clean Visualization**: Simplifying complex, noisy price data into uniform blocks.
+- **Support and resistance**: Identifying clear levels where bricks frequently reverse.
+- **Trend confirmation**: Spotting persistent bullish/bearish brick sequences.
+- **Clean visualization**: Simplifying complex, noisy price data into uniform blocks.
 
 ## Code example
 

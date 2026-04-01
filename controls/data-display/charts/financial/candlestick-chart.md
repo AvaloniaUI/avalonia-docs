@@ -18,9 +18,9 @@ Candlestick charts are used to describe price movements of a security, derivativ
 <Image light={chartsFinancialCandlestick} maxWidth={400} position="center" cornerRadius="true" alt="Candlestick chart showing OHLC price data with green bullish and red bearish candles over several trading periods." />
 
 ## When to use
-- **Market Analysis**: Visualizing price volatility and market sentiment.
-- **Technical Analysis**: Identifying patterns like hammers, dojis, or engulfing candles.
-- **High-Low Tracking**: Showing the full range of price action within a period.
+- **Market analysis**: Visualizing price volatility and market sentiment.
+- **Technical analysis**: Identifying patterns like hammers, dojis, or engulfing candles.
+- **High-low tracking**: Showing the full range of price action within a period.
 
 ## Code example
 

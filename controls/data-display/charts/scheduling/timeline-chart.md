@@ -18,9 +18,9 @@ Event timeline charts visualize a series of events chronologically. They provide
 <Image light={chartsTimelineHorizontal} maxWidth={400} position="center" cornerRadius="true" alt="Event timeline chart displaying chronological milestones as labeled markers along a horizontal time axis." />
 
 ## When to use
-- **Historical Records**: Visualizing milestones, product launches, or life events.
-- **Audit Trails**: Showing system logs or user activities in sequence.
-- **Vertical Timelines**: Ideal for mobile-friendly or column-based layouts.
+- **Historical records**: Visualizing milestones, product launches, or life events.
+- **Audit trails**: Showing system logs or user activities in sequence.
+- **Vertical timelines**: Ideal for mobile-friendly or column-based layouts.
 
 ## Code example
 

@@ -14,8 +14,8 @@ tags:
 The ShapeMap control can handle non-geographic coordinate systems, making it perfect for custom layouts like aircraft seating, floor plans, or theater arrangements.
 
 ## When to use
-- **Seat Reservations**: Interactive seating plans for transportation or venues.
-- **Facility Management**: Visualizing data on top of a building floor plan.
+- **Seat reservations**: Interactive seating plans for transportation or venues.
+- **Facility management**: Visualizing data on top of a building floor plan.
 - **Interactive UI**: Creating clickable, data-driven custom shape layouts.
 
 ## Code example

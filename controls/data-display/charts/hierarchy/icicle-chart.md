@@ -18,9 +18,9 @@ Icicle charts visualize hierarchical data using rectangles placed side by side. 
 <Image light={chartsHierarchicalIcicle} maxWidth={400} position="center" cornerRadius="true" alt="Icicle chart showing hierarchical levels as adjacent rectangular rows where width represents relative value." />
 
 ## When to use
-- **Structural Analysis**: Inspecting codebases, directory structures, or large taxonomies.
-- **Performance Profiling**: Visualizing call stacks or execution paths.
-- **Relationship Discovery**: Finding the root cause of leaf-node values within a large tree.
+- **Structural analysis**: Inspecting codebases, directory structures, or large taxonomies.
+- **Performance profiling**: Visualizing call stacks or execution paths.
+- **Relationship discovery**: Finding the root cause of leaf-node values within a large tree.
 
 ## Code example
 

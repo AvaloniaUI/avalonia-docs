@@ -19,8 +19,8 @@ Pictorial bar charts use recognizable icons or symbols instead of plain bars. Th
 
 ## When to use
 - **Infographics**: Creating high-engagement, thematic reports.
-- **Demographic Reports**: Using gender or professional icons to represent counts.
-- **Public Data Presentation**: Making dry statistics more accessible through familiar symbols.
+- **Demographic reports**: Using gender or professional icons to represent counts.
+- **Public data presentation**: Making dry statistics more accessible through familiar symbols.
 
 ## Code example
 

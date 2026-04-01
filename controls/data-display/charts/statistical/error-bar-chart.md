@@ -18,9 +18,9 @@ Error bar charts represent the variability of data and are used on graphs to ind
 <Image light={chartsStatisticalErrorbar} maxWidth={400} position="center" cornerRadius="true" alt="Chart with data points and vertical error indicators showing standard deviation ranges for each sample." />
 
 ## When to use
-- **Scientific Research**: Visualizing standard deviation or confidence intervals.
-- **Quality Control**: Showing the range of tolerance in manufacturing.
-- **Survey Data**: Indicating the margin of error in statistical polls.
+- **Scientific research**: Visualizing standard deviation or confidence intervals.
+- **Quality control**: Showing the range of tolerance in manufacturing.
+- **Survey data**: Indicating the margin of error in statistical polls.
 
 ## Code example
 

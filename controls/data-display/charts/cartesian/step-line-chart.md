@@ -18,9 +18,9 @@ Step line charts use horizontal and vertical lines to connect data points, creat
 <Image light={chartsCartesianStepline} maxWidth={400} position="center" cornerRadius="true" alt="Step line chart connecting data points with horizontal and vertical segments showing discrete pricing tier changes." />
 
 ## When to use
-- **Price Changes**: Visualizing interest rates, price tiers, or inventory levels.
-- **Discrete Transitions**: When the value remains constant between data points.
-- **Digital Signals**: Representing binary or state-based data.
+- **Price changes**: Visualizing interest rates, price tiers, or inventory levels.
+- **Discrete transitions**: When the value remains constant between data points.
+- **Digital signals**: Representing binary or state-based data.
 
 ## Code example
 

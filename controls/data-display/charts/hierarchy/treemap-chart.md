@@ -18,9 +18,9 @@ TreeMap charts visualize hierarchical data as a set of nested rectangles. Each b
 <Image light={chartsHierarchicalTreemap} maxWidth={400} position="center" cornerRadius="true" alt="Treemap chart showing nested rectangles sized proportionally to disk usage values for different folders." />
 
 ## When to use
-- **Resource Usage**: Visualizing disk space or memory consumption by file/process.
-- **Proportional Analysis**: Comparing the weight of items within categories.
-- **Complex Hierarchies**: When you need to show many hierarchical items in a single view.
+- **Resource usage**: Visualizing disk space or memory consumption by file/process.
+- **Proportional analysis**: Comparing the weight of items within categories.
+- **Complex hierarchies**: When you need to show many hierarchical items in a single view.
 
 ## Code example
 

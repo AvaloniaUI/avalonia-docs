@@ -18,9 +18,9 @@ Line charts use X and Y axes to visualize data points connected by straight line
 <Image light={chartsCartesianLines} maxWidth={400} position="center" cornerRadius="true" alt="Line chart connecting data points with straight segments to show monthly sales trends over time." />
 
 ## When to use
-- **Time Series**: Visualizing changes in data over continuous time intervals.
-- **Trend Analysis**: Identifying upward, downward, or fluctuating patterns.
-- **Multiple Series**: Comparing trends across different categories using multiple lines.
+- **Time series**: Visualizing changes in data over continuous time intervals.
+- **Trend analysis**: Identifying upward, downward, or fluctuating patterns.
+- **Multiple series**: Comparing trends across different categories using multiple lines.
 
 ## Code example
 

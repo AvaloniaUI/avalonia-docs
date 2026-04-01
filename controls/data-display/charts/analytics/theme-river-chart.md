@@ -18,9 +18,9 @@ Theme river charts (or Streamgraphs) visualize changes in categories over time. 
 <Image light={chartsAnalyticsThemeriver} maxWidth={400} position="center" cornerRadius="true" alt="Theme river chart with stacked organic stream bands showing how category volumes flow and change over time." />
 
 ## When to use
-- **Topic Trends**: Visualizing the popularity of themes in news or social media over time.
-- **Resource Allocation**: Showing how budget or manpower shifts between projects.
-- **Usage Patterns**: Tracking the volume of different types of network traffic.
+- **Topic trends**: Visualizing the popularity of themes in news or social media over time.
+- **Resource allocation**: Showing how budget or manpower shifts between projects.
+- **Usage patterns**: Tracking the volume of different types of network traffic.
 
 ## Code example
 

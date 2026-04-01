@@ -18,9 +18,9 @@ Data labels place the actual values directly on the chart series. This removes t
 <Image light={chartsFeaturesLabels} maxWidth={400} position="center" cornerRadius="true" alt="Bar chart with data labels displayed at a 45-degree angle." />
 
 ## When to use
-- **Presentation Graphics**: Where clear, immediate values are prioritized.
-- **Small Multiples**: When axes are omitted to save space.
-- **Key Milestones**: Highlighting specific values that require attention.
+- **Presentation graphics**: Where clear, immediate values are prioritized.
+- **Small multiples**: When axes are omitted to save space.
+- **Key milestones**: Highlighting specific values that require attention.
 
 ## Code example
 

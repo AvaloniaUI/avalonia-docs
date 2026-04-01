@@ -18,8 +18,8 @@ Sunburst charts are used to visualize hierarchical data through a series of conc
 <Image light={chartsHierarchicalSunburst} maxWidth={400} position="center" cornerRadius="true" alt="Sunburst chart with concentric rings where each ring represents a hierarchy level and segments show proportions." />
 
 ## When to use
-- **Nested Data**: Visualizing complex hierarchies with multiple levels.
-- **Space-Efficient**: When you need a compact alternative to a tree diagram.
+- **Nested data**: Visualizing complex hierarchies with multiple levels.
+- **Space-efficiency**: When you need a compact alternative to a tree diagram.
 - **Drill-down**: Effectively showing the breakdown of segments at each level.
 
 ## Code example

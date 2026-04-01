@@ -18,9 +18,9 @@ Bump charts are a variation of line charts designed to visualize changes in rank
 <Image light={chartsAnalyticsBump} maxWidth={400} position="center" cornerRadius="true" alt="Bump chart showing rank changes over time with smooth curved lines connecting each entity's position across periods." />
 
 ## When to use
-- **Popularity Rankings**: Showing how songs or movies move up and down a top-10 list.
-- **Market Share**: Visualizing the competition between brands for the top spot.
-- **Tournament Standings**: Tracking the relative performance of teams across stages.
+- **Popularity rankings**: Showing how songs or movies move up and down a top-10 list.
+- **Market share**: Visualizing the competition between brands for the top spot.
+- **Tournament standings**: Tracking the relative performance of teams across stages.
 
 ## Code example
 

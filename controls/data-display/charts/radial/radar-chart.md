@@ -18,9 +18,9 @@ Radar charts compare multiple qualitative variables across several categories. T
 <Image light={chartsRadialRadar} maxWidth={400} position="center" cornerRadius="true" alt="Radar chart with two overlapping polygons comparing multi-dimensional skill scores across radial axes." />
 
 ## When to use
-- **Skill Assessment**: Comparing the strengths/weaknesses of employees or athletes.
-- **Product Benchmarking**: Comparing different products across price, quality, and features.
-- **Performance Profiles**: Displaying multifaceted metrics (e.g., SEO, Speed, Security for a website).
+- **Skill assessment**: Comparing the strengths/weaknesses of employees or athletes.
+- **Product benchmarking**: Comparing different products across price, quality, and features.
+- **Performance profiles**: Displaying multifaceted metrics (e.g., SEO, Speed, Security for a website).
 
 ## Code example
 

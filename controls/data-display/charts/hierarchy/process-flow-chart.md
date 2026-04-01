@@ -18,9 +18,9 @@ Process flow charts (or Flowcharts) are used to visualize sequences of steps, de
 <Image light={chartsFlowProcess} maxWidth={400} position="center" cornerRadius="true" alt="Process flow chart with start, decision, and action nodes connected by directional arrows showing a workflow sequence." />
 
 ## When to use
-- **Workflow Mapping**: Visualizing business processes or approval chains.
-- **Decision Trees**: Showing the logic path for troubleshooting or user journeys.
-- **System Architecture**: Mapping connections between different modules or services.
+- **Workflow mapping**: Visualizing business processes or approval chains.
+- **Decision trees**: Showing the logic path for troubleshooting or user journeys.
+- **System architecture**: Mapping connections between different modules or services.
 
 ## Code example
 

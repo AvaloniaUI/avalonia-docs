@@ -18,9 +18,9 @@ Heatmap maps (Heat maps) visualize data density across geographic coordinates us
 <Image light={chartsMapsHeatmap} maxWidth={400} position="center" cornerRadius="true" alt="Geographic heatmap using a color gradient to show data density hot spots and concentration areas across regions." />
 
 ## When to use
-- **User Activity**: Visualizing where mobile app users are most active geographically.
-- **Incident Reporting**: Mapping hotspots for crimes, traffic accidents, or outages.
-- **Environmental Density**: Showing concentrations of species or pollution.
+- **User activity**: Visualizing where mobile app users are most active geographically.
+- **Incident reporting**: Mapping hotspots for crimes, traffic accidents, or outages.
+- **Environmental density**: Showing concentrations of species or pollution.
 
 ## Code example
 

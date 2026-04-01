@@ -18,9 +18,9 @@ Avalonia Charts provides extensive options to customize axis appearance, includi
 <Image light={chartsFeaturesGridlines} maxWidth={400} position="center" cornerRadius="true" alt="Cartesian chart with customized axes showing gridlines." />
 
 ## When to use
-- **Multiple Scales**: When displaying two different metrics (e.g., Temperature and Humidity) on the same chart.
-- **Categorical Data**: When axes represent discrete groups rather than continuous numbers.
-- **Time-Series Analysis**: Customizing date formats and intervals for historical data.
+- **Multiple scales**: When displaying two different metrics (e.g., Temperature and Humidity) on the same chart.
+- **Categorical data**: When axes represent discrete groups rather than continuous numbers.
+- **Time-Series analysis**: Customizing date formats and intervals for historical data.
 
 ## Code example
 

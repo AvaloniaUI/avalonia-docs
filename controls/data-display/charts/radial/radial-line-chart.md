@@ -14,9 +14,9 @@ tags:
 Radial line charts plot data points on a polar coordinate system and connect them with lines. They are ideal for showing how a single variable fluctuates across cyclical categories.
 
 ## When to use
-- **Daily Activity**: Mapping heart rate or energy levels across 24 hours.
-- **Directional Data**: Visualizing readings from a 360-degree sensor.
-- **Symmetry Analysis**: Checking for patterns and balance in multi-variate profiles.
+- **Daily activity**: Mapping heart rate or energy levels across 24 hours.
+- **Directional data**: Visualizing readings from a 360-degree sensor.
+- **Symmetry analysis**: Checking for patterns and balance in multi-variate profiles.
 
 ## Code example
 

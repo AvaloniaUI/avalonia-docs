@@ -18,9 +18,9 @@ Table charts combine traditional tabular data with embedded visual cues. They ar
 <Image light={chartsAnalyticsTable} maxWidth={400} position="center" cornerRadius="true" alt="Table chart displaying rows of data with embedded color-coded indicators and icons for visual context." />
 
 ## When to use
-- **Product Comparisons**: Showing features across many items in a grid.
-- **Financial Status**: Displaying accounts with color-coded "health" indicators.
-- **Multi-metric Reports**: When users need to sort and filter raw data.
+- **Product comparisons**: Showing features across many items in a grid.
+- **Financial status**: Displaying accounts with color-coded "health" indicators.
+- **Multi-metric reports**: When users need to sort and filter raw data.
 
 ## Code example
 

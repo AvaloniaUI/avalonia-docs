@@ -18,9 +18,9 @@ Markers are symbols drawn at each data point in a series. They help users locate
 <Image light={chartsFeaturesMarkers} maxWidth={400} position="center" cornerRadius="true" alt="Line chart with markers of different shapes drawn at each data point to highlight exact coordinate positions." />
 
 ## When to use
-- **Discrete Data**: Emphasizing that lines represent individual measured points.
-- **Low-Density Charts**: Making points more clickable for tooltips or selection.
-- **Categorical Distinction**: Using different shapes (Circle, Square, Diamond) to distinguish series.
+- **Discrete data**: Emphasizing that lines represent individual measured points.
+- **Low-density charts**: Making points more clickable for tooltips or selection.
+- **Categorical distinction**: Using different shapes (Circle, Square, Diamond) to distinguish series.
 
 ## Code example
 

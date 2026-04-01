@@ -18,9 +18,9 @@ Swimlane charts organize tasks or processes into distinct horizontal or vertical
 <Image light={chartsTimelineSwimlane} maxWidth={400} position="center" cornerRadius="true" alt="Swimlane chart organizing tasks into horizontal lanes by department or role showing ownership and time overlap." />
 
 ## When to use
-- **Process Mapping**: Showing how a request moves between Sales, Engineering, and Support.
-- **Project Scheduling**: Visualizing task ownership across team members.
-- **Cross-functional Flows**: Clarifying responsibilities in a complex business process.
+- **Process mapping**: Showing how a request moves between Sales, Engineering, and Support.
+- **Project scheduling**: Visualizing task ownership across team members.
+- **Cross-functional flows**: Clarifying responsibilities in a complex business process.
 
 ## Code example
 

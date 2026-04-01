@@ -18,9 +18,9 @@ Alluvial charts represent changes in structure over time or across categories. T
 <Image light={chartsFlowAlluvial} maxWidth={400} position="center" cornerRadius="true" alt="Alluvial chart with vertical node columns connected by flowing bands representing categorical transitions between stages." />
 
 ## When to use
-- **Workflow Analysis**: Tracking how items move through sequential process stages.
-- **Categorical Flow**: Visualizing how members of one category belong to others (e.g., voters' changing affiliations).
-- **Structural Shifts**: Showing how a population's grouping changes between two points in time.
+- **Workflow analysis**: Tracking how items move through sequential process stages.
+- **Categorical flow**: Visualizing how members of one category belong to others (e.g., voters' changing affiliations).
+- **Structural shifts**: Showing how a population's grouping changes between two points in time.
 
 ## Code example
 

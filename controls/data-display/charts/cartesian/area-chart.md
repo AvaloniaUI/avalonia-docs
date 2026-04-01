@@ -18,9 +18,9 @@ Area charts are based on the line chart. The area between the axis and the line 
 <Image light={chartsCartesianArea} maxWidth={400} position="center" cornerRadius="true" alt="Area chart showing website traffic data with a gradient fill between the line and the horizontal axis." />
 
 ## When to use
-- **Cumulative Totals**: Visualizing how different components contribute to a whole over time.
+- **Cumulative totals**: Visualizing how different components contribute to a whole over time.
 - **Volume**: Emphasizing the total volume or magnitude of data points.
-- **Visual Contrast**: Providing a more distinct visual representation than a simple line chart.
+- **Visual contrast**: Providing a more distinct visual representation than a simple line chart.
 
 ## Code example
 

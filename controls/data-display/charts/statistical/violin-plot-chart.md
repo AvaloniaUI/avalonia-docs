@@ -14,9 +14,9 @@ tags:
 Violin plots combine a box plot with a kernel density plot, showing both the statistical summary and the probability density of the data at different values.
 
 ## When to use
-- **Deep Distribution**: When you need to see where data points are most frequent (density).
+- **Deep distribution**: When you need to see where data points are most frequent (density).
 - **Comparison**: Comparing both the ranges (box plot) and the shapes (density) of multiple groups.
-- **Multi-modal Data**: Identifying data with multiple peaks (modes) which a box plot might hide.
+- **Multi-modal data**: Identifying data with multiple peaks (modes) which a box plot might hide.
 
 ## Code example
 

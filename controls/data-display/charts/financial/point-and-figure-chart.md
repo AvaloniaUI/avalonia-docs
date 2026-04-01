@@ -18,9 +18,9 @@ Point and Figure (P&F) charts use columns of Xs and Os to represent rising and f
 <Image light={chartsFinancialPointandfigure} maxWidth={400} position="center" cornerRadius="true" alt="Point and figure chart with columns of X marks for rising prices and O marks for falling prices filtering out time." />
 
 ## When to use
-- **Long-term Trends**: Visualizing macro-economic or multi-year market shifts.
-- **Support/Resistance**: Identifying clear supply and demand zones.
-- **Price Targets**: Using traditional P&F counting methods for price projections.
+- **Long-term trends**: Visualizing macro-economic or multi-year market shifts.
+- **Support/resistance**: Identifying clear supply and demand zones.
+- **Price targets**: Using traditional P&F counting methods for price projections.
 
 ## Code example
 

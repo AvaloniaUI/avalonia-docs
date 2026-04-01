@@ -18,9 +18,9 @@ Trendlines are used in Cartesian charts to show the general direction or pattern
 <Image light={chartsFeaturesTrendlines} maxWidth={400} position="center" cornerRadius="true" alt="Line chart with an overlaid trendline showing a line of best fit." />
 
 ## When to use
-- **Sales Forecasting**: Projecting future sales based on historical trends.
-- **Data Smoothing**: Identifying patterns in volatile stock or sensor data.
-- **Performance Evaluation**: Visualizing if throughput is generally increasing or decreasing.
+- **Sales forecasting**: Projecting future sales based on historical trends.
+- **Data smoothing**: Identifying patterns in volatile stock or sensor data.
+- **Performance evaluation**: Visualizing if throughput is generally increasing or decreasing.
 
 ## Code example
 

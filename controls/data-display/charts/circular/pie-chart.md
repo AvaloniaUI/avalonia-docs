@@ -19,7 +19,7 @@ Pie charts are circular charts divided into sectors to illustrate numerical prop
 
 ## When to use
 - **Proportions**: Visualizing the relative size of categories compared to the total.
-- **Limited Categories**: Best used with 2-6 categories to maintain readability.
+- **Limited categories**: Best used with 2-6 categories to maintain readability.
 - **Composition**: Showing how a total amount is divided among different segments.
 
 ## Code example

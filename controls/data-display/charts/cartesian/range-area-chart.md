@@ -18,9 +18,9 @@ Range area charts display a filled area connecting two values (high and low) for
 <Image light={chartsCartesianRangearea} maxWidth={400} position="center" cornerRadius="true" alt="Range area chart with a filled band between high and low temperature values across days of the week." />
 
 ## When to use
-- **Error Margins**: Showing the confidence interval or error range around a mean value.
-- **Price Envelopes**: Visualizing daily highs and lows in a single series.
-- **Temperature Ranges**: Showing the minimum and maximum temperature over a period.
+- **Error margins**: Showing the confidence interval or error range around a mean value.
+- **Price envelopes**: Visualizing daily highs and lows in a single series.
+- **Temperature ranges**: Showing the minimum and maximum temperature over a period.
 
 ## Code example
 

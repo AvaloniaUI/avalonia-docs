@@ -18,9 +18,9 @@ A box plot (or box-and-whisker plot) provides a graphical summary of the distrib
 <Image light={chartsCartesianBoxplot} maxWidth={400} position="center" cornerRadius="true" alt="Box plot chart with box-and-whisker symbols per category showing median, quartiles, and outlier data points." />
 
 ## When to use
-- **Statistical Analysis**: Comparing the distribution of several datasets (e.g., test scores across different classes).
-- **Outlier Detection**: Identifying extreme data points that fall outside the "whiskers."
-- **Range Visualization**: Showing the minimum, maximum, median, and interquartile range at a glance.
+- **Statistical analysis**: Comparing the distribution of several datasets (e.g., test scores across different classes).
+- **Outlier detection**: Identifying extreme data points that fall outside the "whiskers."
+- **Range visualization**: Showing the minimum, maximum, median, and interquartile range at a glance.
 
 ## Code example
 

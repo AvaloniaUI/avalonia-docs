@@ -18,9 +18,9 @@ Sparklines are small, minimalist intense charts without axes or coordinates, des
 <Image light={chartsAnalyticsSparkline} maxWidth={400} position="center" cornerRadius="true" alt="Sparkline charts showing compact line, area, and bar trend visualizations without axes for embedding in dashboards." />
 
 ## When to use
-- **In-line Trends**: Showing data trends inside data grids or text paragraphs.
-- **Dashboard Summaries**: Providing high-density visual context for many metrics on one screen.
-- **Compact Visualizations**: When the general shape of a trend is more important than specific values.
+- **In-line trends**: Showing data trends inside data grids or text paragraphs.
+- **Dashboard summaries**: Providing high-density visual context for many metrics on one screen.
+- **Compact visualizations**: When the general shape of a trend is more important than specific values.
 
 ## Code example
 

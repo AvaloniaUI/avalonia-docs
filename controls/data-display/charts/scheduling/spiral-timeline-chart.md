@@ -18,9 +18,9 @@ Spiral timelines visualize data that has both a strong sequential component and 
 <Image light={chartsTimelineSpiral} maxWidth={400} position="center" cornerRadius="true" alt="Spiral timeline chart wrapping chronological data into an outward spiral to show both long-term trends and cyclical patterns." />
 
 ## When to use
-- **Long-term Cyclical Data**: Visualizing annual climate changes over several decades.
-- **System Logs**: Detecting patterns in server activity across weeks or months.
-- **Biological Rhythms**: Showing sleep patterns or activity cycles over time.
+- **Long-term cyclical data**: Visualizing annual climate changes over several decades.
+- **System logs**: Detecting patterns in server activity across weeks or months.
+- **Biological rhythms**: Showing sleep patterns or activity cycles over time.
 
 ## Code example
 

@@ -18,9 +18,9 @@ Network charts provide a high-level view of nodes and edges. They are simpler an
 <Image light={chartsFlowNetwork} maxWidth={400} position="center" cornerRadius="true" alt="Network chart with labeled nodes connected by edges showing static relationships in a structural diagram." />
 
 ## When to use
-- **Infrastructure Diagrams**: Showing servers and their connections.
-- **Routing Tables**: Mapping paths between network points.
-- **Dependency Trees**: Visualizing module relationships in a system.
+- **Infrastructure diagrams**: Showing servers and their connections.
+- **Routing tables**: Mapping paths between network points.
+- **Dependency trees**: Visualizing module relationships in a system.
 
 ## Code example
 

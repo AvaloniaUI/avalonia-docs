@@ -20,7 +20,7 @@ Annotations allow you to add context to your charts using lines, bands, shapes, 
 ## When to use
 - **Thresholds**: Showing a "target" or "limit" line on a performance chart.
 - **Milestones**: Marking specific dates of interest on a timeline.
-- **Region Highlighting**: Shading a "danger zone" or "comfort zone" across a set of values.
+- **Region highlighting**: Shading a "danger zone" or "comfort zone" across a set of values.
 
 ## Code example
 

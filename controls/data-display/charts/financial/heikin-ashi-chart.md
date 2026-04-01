@@ -18,9 +18,9 @@ Heikin-Ashi charts are a variation of Japanese candlestick charts. They use a mo
 <Image light={chartsFinancialHeikinashi} maxWidth={400} position="center" cornerRadius="true" alt="Heikin-Ashi chart with smoothed candlesticks using averaged OHLC values to show market trends more clearly." />
 
 ## When to use
-- **Trend Identification**: Finding the beginning and end of a market trend with less volatility.
-- **Swing Trading**: Identifying pullbacks and reversals in volatile markets.
-- **Long-term Analysis**: Smoothing out day-to-day price fluctuations for a broader view.
+- **Trend identification**: Finding the beginning and end of a market trend with less volatility.
+- **Swing trading**: Identifying pullbacks and reversals in volatile markets.
+- **Long-term analysis**: Smoothing out day-to-day price fluctuations for a broader view.
 
 ## Code example
 

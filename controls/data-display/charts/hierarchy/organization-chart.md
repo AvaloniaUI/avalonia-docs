@@ -18,9 +18,9 @@ Organization charts represent the structure of an organization, clarifying repor
 <Image light={chartsHierarchicalOrganization} maxWidth={400} position="center" cornerRadius="true" alt="Organization chart with a top-level CEO node branching down to department heads showing reporting relationships." />
 
 ## When to use
-- **Company Directory**: Visualizing the reporting structure of a business.
-- **Project Hierarchy**: Mapping out product owners, developers, and stakeholders.
-- **Family Trees**: Displaying genealogical relationships and lineages.
+- **Company directory**: Visualizing the reporting structure of a business.
+- **Project hierarchy**: Mapping out product owners, developers, and stakeholders.
+- **Family trees**: Displaying genealogical relationships and lineages.
 
 ## Code example
 

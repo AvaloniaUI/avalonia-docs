@@ -18,9 +18,9 @@ KPI cards display critical business metrics in a high-impact, focused format. Th
 <Image light={chartsAnalyticsKpi} maxWidth={400} position="center" cornerRadius="true" alt="KPI card displaying a large metric value with a trend indicator and a mini sparkline chart for context." />
 
 ## When to use
-- **Executive Dashboards**: Providing at-a-glance status of main business goals.
-- **Performance Monitoring**: Tracking real-time metrics like active users or server load.
-- **Financial Overviews**: Showing revenue, expenses, and growth at the top of a report.
+- **Executive dashboards**: Providing at-a-glance status of main business goals.
+- **Performance monitoring**: Tracking real-time metrics like active users or server load.
+- **Financial overviews**: Showing revenue, expenses, and growth at the top of a report.
 
 ## Code example
 

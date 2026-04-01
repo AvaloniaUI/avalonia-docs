@@ -18,9 +18,9 @@ Gantt charts are specialized timeline charts used for project management. They i
 <Image light={chartsTimelineGantt} maxWidth={400} position="center" cornerRadius="true" alt="Gantt chart showing project tasks as horizontal bars on a time axis with start dates, durations, and dependencies." />
 
 ## When to use
-- **Project Planning**: Identifying the critical path and task overlaps.
-- **Resource Management**: Tracking when team members are allocated to specific activities.
-- **Release Tracking**: Visualizing milestones and deadlines for a software release.
+- **Project planning**: Identifying the critical path and task overlaps.
+- **Resource management**: Tracking when team members are allocated to specific activities.
+- **Release tracking**: Visualizing milestones and deadlines for a software release.
 
 ## Code example
 

@@ -19,8 +19,8 @@ Choropleth maps shade geographical areas in proportion to a statistical variable
 
 ## When to use
 - **Demographics**: Showing population density, income levels, or voting patterns.
-- **Market Penetration**: Visualizing sales performance across different territories.
-- **Environmental Data**: Showing climate data or resource distribution by region.
+- **Market penetration**: Visualizing sales performance across different territories.
+- **Environmental data**: Showing climate data or resource distribution by region.
 
 ## Code example
 

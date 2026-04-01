@@ -18,9 +18,9 @@ Zoom and pan allow users to explore multi-dimensional or high-resolution dataset
 <Image light={chartsFeaturesZoom} maxWidth={400} position="center" cornerRadius="true" alt="Chart with interactive zoom and pan controls allowing users to focus on specific regions of a dense dataset." />
 
 ## When to use
-- **Big Data Visualization**: Exploring line charts with thousands of points.
-- **Deep-dive Analysis**: Zooming into a specific time window for detailed study.
-- **Interactive Reports**: Giving users agency to focus on areas of interest.
+- **Big data visualization**: Exploring line charts with thousands of points.
+- **Deep-dive analysis**: Zooming into a specific time window for detailed study.
+- **Interactive reports**: Giving users agency to focus on areas of interest.
 
 ## Code example
 

@@ -18,9 +18,9 @@ Pyramid charts are a type of stacked area or bar graph that emphasizes both hier
 <Image light={chartsAnalyticsPyramid} maxWidth={400} position="center" cornerRadius="true" alt="Pyramid chart with stacked triangular segments representing hierarchical population or pipeline data." />
 
 ## When to use
-- **Population Pyramids**: Showing age and gender distribution in a region.
-- **Sales Pipelines**: Visualizing the funnel from leads to closed deals.
-- **Biological Hierarchies**: Showing energy flow or species distribution in an ecosystem.
+- **Population pyramids**: Showing age and gender distribution in a region.
+- **Sales pipelines**: Visualizing the funnel from leads to closed deals.
+- **Biological hierarchies**: Showing energy flow or species distribution in an ecosystem.
 
 ## Code example
 

@@ -18,9 +18,9 @@ Linear gauge charts visualize a value along a horizontal or vertical bar. They a
 <Image light={chartsGaugesLinear} maxWidth={400} position="center" cornerRadius="true" alt="Linear gauge chart with a horizontal progress bar and scale ticks showing the current value along a numeric range." />
 
 ## When to use
-- **Performance Bars**: Comparing multiple metrics in a condensed dashboard.
-- **Volume Indicators**: Showing storage levels, audio levels, or tank capacity.
-- **Progress Tracking**: Visualizing a sequence of targets in a straight line.
+- **Performance bars**: Comparing multiple metrics in a condensed dashboard.
+- **Volume indicators**: Showing storage levels, audio levels, or tank capacity.
+- **Progress tracking**: Visualizing a sequence of targets in a straight line.
 
 ## Code example
 

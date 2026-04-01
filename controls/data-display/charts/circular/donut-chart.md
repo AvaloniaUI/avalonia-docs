@@ -18,9 +18,9 @@ A donut chart is a variations of a pie chart with a blank center. This design is
 <Image light={chartsPieDonut} maxWidth={400} position="center" cornerRadius="true" alt="Donut chart with a blank center hole showing proportional segments of revenue distribution by source." />
 
 ## When to use
-- **Proportional Comparison**: Similar to a pie chart, but with a cleaner, more modern aesthetic.
-- **Summary Views**: Where the central space can be used to display the total sum or a key metric.
-- **Minimalist Dashboards**: Highly effective for simple part-to-whole visualizations with few categories.
+- **Proportional comparison**: Similar to a pie chart, but with a cleaner, more modern aesthetic.
+- **Summary views**: Where the central space can be used to display the total sum or a key metric.
+- **Minimalist dashboards**: Highly effective for simple part-to-whole visualizations with few categories.
 
 ## Code example
 

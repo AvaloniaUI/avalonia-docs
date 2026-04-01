@@ -14,9 +14,9 @@ tags:
 The Shape Map control allows for arbitrary geographic or custom shape visualization. It serves as the base for specialized maps, allowing developers to define custom regions and interactions.
 
 ## When to use
-- **Custom Regions**: Visualizing regions not covered by standard map sets (e.g., specific postal zones).
-- **Physical Layouts**: Mapping data onto a schematic (e.g., a hardware board or factory floor).
-- **Interactive Diagrams**: Creating high-performance interactive shape systems.
+- **Custom regions**: Visualizing regions not covered by standard map sets (e.g., specific postal zones).
+- **Physical layouts**: Mapping data onto a schematic (e.g., a hardware board or factory floor).
+- **Interactive diagrams**: Creating high-performance interactive shape systems.
 
 ## Code example
 

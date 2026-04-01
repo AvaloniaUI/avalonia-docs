@@ -18,8 +18,8 @@ Funnel charts visualize the progressive reduction of data as it passes from one 
 <Image light={chartsAnalyticsFunnel} maxWidth={400} position="center" cornerRadius="true" alt="Funnel chart showing progressive reduction of data through sales pipeline stages from leads to closed sales." />
 
 ## When to use
-- **Sales Pipelines**: Tracking potential customers from lead to closed sale.
-- **Conversion Rates**: Monitoring website visitors through a checkout process.
+- **Sales pipelines**: Tracking potential customers from lead to closed sale.
+- **Conversion rates**: Monitoring website visitors through a checkout process.
 - **Recruitment**: Visualizing candidates at each stage of the hiring process.
 
 ## Code example

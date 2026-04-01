@@ -20,7 +20,7 @@ Bar charts represent data using rectangular bars with lengths proportional to th
 ## When to use
 - **Comparisons**: Comparing discrete quantities across different categories.
 - **Ranking**: Showing which categories have the highest or lowest values.
-- **Categorical Data**: When data is grouped into distinct, non-continuous groups.
+- **Categorical data**: When data is grouped into distinct, non-continuous groups.
 
 ## Code example
 

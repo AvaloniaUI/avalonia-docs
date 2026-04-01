@@ -18,9 +18,9 @@ The Legend component helps users identify different data series within a chart. 
 <Image light={chartsFeaturesLegend} maxWidth={400} position="center" cornerRadius="true" alt="Chart with a legend panel showing color-coded series names positioned beside the chart area." />
 
 ## When to use
-- **Multi-series Charts**: Indispensable when more than one series is displayed.
-- **Interactive Toggling**: When users need to show/hide series by clicking legend items.
-- **Complex Visuals**: Helping to explain color or pattern coding (e.g., in a Pie or Map chart).
+- **Multi-series charts**: Indispensable when more than one series is displayed.
+- **Interactive toggling**: When users need to show/hide series by clicking legend items.
+- **Complex visuals**: Helping to explain color or pattern coding (e.g., in a Pie or Map chart).
 
 ## Code example
 

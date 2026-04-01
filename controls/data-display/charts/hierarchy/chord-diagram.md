@@ -18,9 +18,9 @@ Chord diagrams visualize the inter-relationships between entities in a circular 
 <Image light={chartsFlowChord} maxWidth={400} position="center" cornerRadius="true" alt="Chord diagram showing directional flows between entities arranged in a circle with connecting chords of varying widths." />
 
 ## When to use
-- **Trade Relations**: Visualizing import/export relationships between countries.
-- **Migration Patterns**: Showing movement of people between different geographic areas.
-- **System Interactions**: Visualizing call dependencies between modules in a software system.
+- **Trade relations**: Visualizing import/export relationships between countries.
+- **Migration patterns**: Showing movement of people between different geographic areas.
+- **System interactions**: Visualizing call dependencies between modules in a software system.
 
 ## Code example
 

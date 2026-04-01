@@ -18,9 +18,9 @@ OHLC charts show the Open, High, Low, and Close prices for a given period. They 
 <Image light={chartsFinancialOhlc} maxWidth={400} position="center" cornerRadius="true" alt="OHLC chart showing open, high, low, and close prices as vertical lines with horizontal tick marks per period." />
 
 ## When to use
-- **Trading Analysis**: Visualizing price action without the "weight" of candlestick bodies.
-- **Market Trends**: Spotting trends and price ranges over specific time intervals.
-- **Commodity/Stock Tracking**: Standard professional visualization for price data.
+- **Trading analysis**: Visualizing price action without the "weight" of candlestick bodies.
+- **Market trends**: Spotting trends and price ranges over specific time intervals.
+- **Commodity/stock tracking**: Standard professional visualization for price data.
 
 ## Code example
 

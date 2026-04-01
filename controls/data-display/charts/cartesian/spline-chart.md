@@ -18,9 +18,9 @@ Spline charts are similar to line charts but use smooth polynomial curves to con
 <Image light={chartsCartesianSpline} maxWidth={400} position="center" cornerRadius="true" alt="Spline chart with smooth curved lines connecting temperature data points across time intervals." />
 
 ## When to use
-- **Smooth Data**: When visualizing data that changes continuously and smoothly (e.g., temperature).
+- **Smooth data**: When visualizing data that changes continuously and smoothly (e.g., temperature).
 - **Aesthetics**: When a professional, rounded look is preferred over sharp angles.
-- **Trend Smoothing**: Helping to visualize the general trend without the harshness of linear segments.
+- **Trend smoothing**: Helping to visualize the general trend without the harshness of linear segments.
 
 ## Code example
 

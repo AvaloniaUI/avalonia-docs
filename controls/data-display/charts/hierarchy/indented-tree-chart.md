@@ -18,9 +18,9 @@ Indented tree charts represent hierarchies using a layout similar to a standard 
 <Image light={chartsHierarchicalIndentedtree} maxWidth={400} position="center" cornerRadius="true" alt="Indented tree chart showing a file-explorer-style hierarchy with parent and child nodes offset by indentation." />
 
 ## When to use
-- **File System Explorer**: Building custom navigators for local or cloud storage.
-- **Bill of Materials (BOM)**: Showing a multi-level product structure in manufacturing.
-- **Settings/Config**: Grouping complex nested configuration options visually.
+- **File system explorer**: Building custom navigators for local or cloud storage.
+- **Bill of materials (BOM)**: Showing a multi-level product structure in manufacturing.
+- **Settings/config**: Grouping complex nested configuration options visually.
 
 ## Code example
 

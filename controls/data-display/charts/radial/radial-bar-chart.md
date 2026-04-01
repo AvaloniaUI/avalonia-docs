@@ -18,9 +18,9 @@ Radial bar charts use a polar coordinate system. They are essentially bar charts
 <Image light={chartsRadialBar} maxWidth={400} position="center" cornerRadius="true" alt="Radial bar chart with concentric circular bars of varying arc lengths comparing category progress on a polar grid." />
 
 ## When to use
-- **Circular Comparisons**: Showing data that has a cyclical nature (e.g., hours in a day).
-- **Dashboard Infographics**: Creating high-impact visual summaries for ranked categories.
-- **Progress Tracking**: Visualizing multiple goal tracks in a consolidated radial form.
+- **Circular comparisons**: Showing data that has a cyclical nature (e.g., hours in a day).
+- **Dashboard infographics**: Creating high-impact visual summaries for ranked categories.
+- **Progress tracking**: Visualizing multiple goal tracks in a consolidated radial form.
 
 ## Code example
 

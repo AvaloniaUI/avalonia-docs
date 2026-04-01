@@ -19,8 +19,8 @@ Stacked bar charts represent multiple series of data stacked on top of each othe
 
 ## When to use
 - **Part-to-Whole**: Visualizing how many smaller parts make up a larger total category.
-- **Categorical Comparison**: Comparing totals across different groups while seeing internal distribution.
-- **Space Optimization**: Showing multiple data series without needing separate bars for each.
+- **Categorical comparison**: Comparing totals across different groups while seeing internal distribution.
+- **Space optimization**: Showing multiple data series without needing separate bars for each.
 
 ## Code example
 

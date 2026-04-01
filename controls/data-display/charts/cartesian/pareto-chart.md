@@ -18,9 +18,9 @@ A Pareto chart contains both bars and a line graph, where individual values are 
 <Image light={chartsStatisticalPareto} maxWidth={400} position="center" cornerRadius="true" alt="Pareto chart with descending bars and a cumulative percentage line highlighting the most significant factors." />
 
 ## When to use
-- **Quality Control**: Identifying the "vital few" causes of defects (80/20 rule).
-- **Resource Management**: Pinpointing which categories account for most costs.
-- **Customer Service**: Analyzing which complaints are most frequent.
+- **Quality control**: Identifying the "vital few" causes of defects (80/20 rule).
+- **Resource management**: Pinpointing which categories account for most costs.
+- **Customer service**: Analyzing which complaints are most frequent.
 
 ## Code example
 

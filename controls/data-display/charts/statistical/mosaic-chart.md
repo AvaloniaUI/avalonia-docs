@@ -18,9 +18,9 @@ Mosaic charts (Marimekko) visualize relationships between categories using area.
 <Image light={chartsAnalyticsMosaic} maxWidth={400} position="center" cornerRadius="true" alt="Mosaic chart with rectangular tiles scaled by both width and height to show proportions across two categorical variables." />
 
 ## When to use
-- **Market Segmentation**: Showing sales by region (width) and by product category (height).
-- **Resource Expenditure**: Visualizing budget allocation across departments and cost types.
-- **Multi-factor Analysis**: Understanding how two different qualitative variables interact.
+- **Market segmentation**: Showing sales by region (width) and by product category (height).
+- **Resource expenditure**: Visualizing budget allocation across departments and cost types.
+- **Multi-factor analysis**: Understanding how two different qualitative variables interact.
 
 ## Code example
 

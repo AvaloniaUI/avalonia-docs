@@ -18,9 +18,9 @@ Mindmaps are divergent diagrams used for brainstorming and project planning, rad
 <Image light={chartsFlowMindmap} maxWidth={400} position="center" cornerRadius="true" alt="Mindmap diagram radiating outward from a central topic node to connected sub-topics and ideas." />
 
 ## When to use
-- **Idea Generation**: Capturing and organizing thoughts during a meeting.
-- **Project Scope**: Mapping out different modules and their requirements.
-- **Knowledge Representation**: Visualizing complex concepts and their interconnectedness.
+- **Idea generation**: Capturing and organizing thoughts during a meeting.
+- **Project scope**: Mapping out different modules and their requirements.
+- **Knowledge representation**: Visualizing complex concepts and their interconnectedness.
 
 ## Code example
 

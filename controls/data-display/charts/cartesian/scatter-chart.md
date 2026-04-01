@@ -20,7 +20,7 @@ Scatter charts use dots to represent values for two different numeric variables.
 ## When to use
 - **Correlation**: Identifying relationships between two variables (e.g., height vs weight).
 - **Distribution**: Visualizing the spread and clustering of data points.
-- **Outlier Detection**: Easily spotting data points that fall far from the norm.
+- **Outlier detection**: Easily spotting data points that fall far from the norm.
 
 ## Code example
 

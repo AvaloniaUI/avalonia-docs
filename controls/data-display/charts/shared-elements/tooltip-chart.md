@@ -18,9 +18,9 @@ Tooltips provide detailed information about data points when the user hovers ove
 <Image light={chartsFeaturesTooltip} maxWidth={400} position="center" cornerRadius="true" alt="Chart with an interactive tooltip popup appearing on hover showing the exact value and category of a data point." />
 
 ## When to use
-- **High-Density Data**: Pinpointing values in a crowded line or scatter chart.
-- **Additional Context**: Showing metadata (e.g., "Update Date") that isn't mapped to an axis.
-- **Web-Style Interactions**: Creating a modern, interactive experience for end-users.
+- **High-density data**: Pinpointing values in a crowded line or scatter chart.
+- **Additional context**: Showing metadata (e.g., "Update Date") that isn't mapped to an axis.
+- **Web-Style interactions**: Creating a modern, interactive experience for end-users.
 
 ## Code example
 

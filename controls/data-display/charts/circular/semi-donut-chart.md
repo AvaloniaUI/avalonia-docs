@@ -18,9 +18,9 @@ Semi-donut charts display data in a 180-degree arc. They are particularly popula
 <Image light={chartsPieSemidonut} maxWidth={400} position="center" cornerRadius="true" alt="Semi-donut chart displayed as a 180-degree arc with colored segments and a center label showing a summary metric." />
 
 ## When to use
-- **KPI Gauges**: Visualizing a single metric against a target or total.
-- **Dashboard Headers**: Providing a quick summary of a category at the top of a page.
-- **Angular Comparison**: Comparing parts of a whole where a full circle isn't needed or desired.
+- **KPI gauges**: Visualizing a single metric against a target or total.
+- **Dashboard headers**: Providing a quick summary of a category at the top of a page.
+- **Angular comparison**: Comparing parts of a whole where a full circle isn't needed or desired.
 
 ## Code example
 

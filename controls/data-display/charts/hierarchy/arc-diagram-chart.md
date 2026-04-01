@@ -18,9 +18,9 @@ Arc diagrams are network visualizations where nodes are placed linearly along an
 <Image light={chartsFlowArc} maxWidth={400} position="center" cornerRadius="true" alt="Arc diagram with nodes arranged on a horizontal axis connected by curved arcs representing relationships between items." />
 
 ## When to use
-- **Sequence Analysis**: Showing relationships between items in a fixed order (e.g., chapters in a book).
-- **Dependency Mapping**: Visualizing call stacks or structural relationships on a single line.
-- **Categorical Proximity**: Highlighting clusters of interactions within a linear dataset.
+- **Sequence analysis**: Showing relationships between items in a fixed order (e.g., chapters in a book).
+- **Dependency mapping**: Visualizing call stacks or structural relationships on a single line.
+- **Categorical proximity**: Highlighting clusters of interactions within a linear dataset.
 
 ## Code example
 

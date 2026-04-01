@@ -18,8 +18,8 @@ Sankey charts visualize the flow of data, energy, or materials between stages. T
 <Image light={chartsFlowSankey} maxWidth={400} position="center" cornerRadius="true" alt="Sankey chart showing energy flow between stages with link widths proportional to the quantity transferred." />
 
 ## When to use
-- **Energy Audit**: Showing how energy is distributed from source to consumption.
-- **Web Analytics**: Visualizing the path users take through a website (user journey).
+- **Energy audit**: Showing how energy is distributed from source to consumption.
+- **Web analytics**: Visualizing the path users take through a website (user journey).
 - **Budgeting**: Tracking how funds flow from income sources to various expenses.
 
 ## Code example

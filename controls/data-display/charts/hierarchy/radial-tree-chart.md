@@ -18,9 +18,9 @@ Radial tree charts represent hierarchical data where the root is at the center a
 <Image light={chartsHierarchicalRadialtree} maxWidth={400} position="center" cornerRadius="true" alt="Radial tree chart with a root node at the center and child nodes radiating outward in concentric rings." />
 
 ## When to use
-- **Directory Visualizers**: Showing many levels of folders in a compact circular form.
-- **Genomic Maps**: Visualizing relationships between many biological entities.
-- **Network Topology**: Mapping devices in a network radiating from a central hub.
+- **Directory visualizers**: Showing many levels of folders in a compact circular form.
+- **Genomic maps**: Visualizing relationships between many biological entities.
+- **Network topology**: Mapping devices in a network radiating from a central hub.
 
 ## Code example
 

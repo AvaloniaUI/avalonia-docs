@@ -18,9 +18,9 @@ Matrix charts use a grid to visualize the relationship between two categorical s
 <Image light={chartsAnalyticsMatrix} maxWidth={400} position="center" cornerRadius="true" alt="Matrix chart showing a grid of dots sized or colored by value at row and column intersections." />
 
 ## When to use
-- **Correlation Tables**: Showing the relationship between many different variables.
-- **Schedule Overviews**: Mapping availability or events across people and days.
-- **Attribute Comparison**: Visualizing which features (columns) apply to which products (rows).
+- **Correlation tables**: Showing the relationship between many different variables.
+- **Schedule overviews**: Mapping availability or events across people and days.
+- **Attribute comparison**: Visualizing which features (columns) apply to which products (rows).
 
 ## Code example
 

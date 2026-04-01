@@ -18,9 +18,9 @@ The Nightingale Rose chart is a multi-layered polar area chart. It allows for co
 <Image light={chartsRadialRose} maxWidth={400} position="center" cornerRadius="true" alt="Nightingale rose chart with stacked sub-segments in each circular slice comparing composition across cyclical categories." />
 
 ## When to use
-- **Comparative Decomposition**: Breaking down a total category value into parts in a circular form.
-- **Multi-variate Cycles**: Comparing different data series across a cyclical timeframe.
-- **Complex Proportions**: When a standard polar area chart needs to show internal composition.
+- **Comparative decomposition**: Breaking down a total category value into parts in a circular form.
+- **Multi-variate cycles**: Comparing different data series across a cyclical timeframe.
+- **Complex proportions**: When a standard polar area chart needs to show internal composition.
 
 ## Code example
 

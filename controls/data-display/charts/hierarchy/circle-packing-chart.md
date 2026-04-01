@@ -19,8 +19,8 @@ Circle packing is a variation of a treemap where nodes are represented as circle
 
 ## When to use
 - **Clustering**: Visualizing groups and sub-groups in a visually appealing, organic way.
-- **Aesthetic Overviews**: Dashboards where a "bubble" visual is preferred over rigid grids.
-- **Relationship Proximity**: Showing how closely related different items are within a category.
+- **Aesthetic overviews**: Dashboards where a "bubble" visual is preferred over rigid grids.
+- **Relationship proximity**: Showing how closely related different items are within a category.
 
 ## Code example
 

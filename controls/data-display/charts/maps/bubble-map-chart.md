@@ -18,9 +18,9 @@ Bubble maps use circles of different sizes to represent data values over geograp
 <Image light={chartsMapsBubble} maxWidth={400} position="center" cornerRadius="true" alt="Bubble map overlaying circles of varying sizes on geographic regions to represent city activity levels." />
 
 ## When to use
-- **Event Distribution**: Mapping the location and scale of occurrences (e.g., earthquakes, sales events).
-- **Urban Statistics**: Comparing populations or activity levels across specific cities.
-- **Global Indicators**: Visualizing country-level data where the size of the bubble represents the value.
+- **Event distribution**: Mapping the location and scale of occurrences (e.g., earthquakes, sales events).
+- **Urban statistics**: Comparing populations or activity levels across specific cities.
+- **Global indicators**: Visualizing country-level data where the size of the bubble represents the value.
 
 ## Code example
 

@@ -18,9 +18,9 @@ Slope charts compare two points in time (or two categories) for multiple entitie
 <Image light={chartsAnalyticsSlope} maxWidth={400} position="center" cornerRadius="true" alt="Slope chart comparing entity values between two time points with labeled lines showing which increased or decreased." />
 
 ## When to use
-- **Before/After Analysis**: Showing the impact of a policy or event across different groups.
-- **Rank Shifts**: Visualizing how product popularity changed between two quarters.
-- **Comparison of Two States**: Highlighting which entities improved and which declined.
+- **Before/after analysis**: Showing the impact of a policy or event across different groups.
+- **Rank shifts**: Visualizing how product popularity changed between two quarters.
+- **Comparison of two states**: Highlighting which entities improved and which declined.
 
 ## Code example
 

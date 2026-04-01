@@ -18,9 +18,9 @@ Progress donut charts are a specialized variation of donut charts designed to sh
 <Image light={chartsGaugesProgressDonut} maxWidth={400} position="center" cornerRadius="true" alt="Progress donut chart showing a circular arc filling proportionally to represent completion toward a 100% goal." />
 
 ## When to use
-- **Goal Completion**: Showing how close a user is to a target.
-- **Metric Summaries**: Visualizing percentage-based data (e.g., Disk Space used).
-- **KPI Dashboards**: Providing a quick visual check for key performance indicators.
+- **Goal completion**: Showing how close a user is to a target.
+- **Metric summaries**: Visualizing percentage-based data (e.g., Disk Space used).
+- **KPI dashboards**: Providing a quick visual check for key performance indicators.
 
 ## Code example
 
