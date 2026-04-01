@@ -7,7 +7,7 @@ tags:
   - accelerate
 ---
 
-import chartsFeaturesTooltip from '/img/controls/charts/charts-features-tooltip.png';
+import chartsFeaturesTooltip from '/img/controls/charts/charts-tooltips.png';
 
 :::info
 [Charts](/controls/data-display/charts/index) are available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Enterprise.
@@ -15,7 +15,7 @@ import chartsFeaturesTooltip from '/img/controls/charts/charts-features-tooltip.
 
 Tooltips provide detailed information about data points when the user hovers over them. They are essential for precision and for providing context without cluttering the main chart area.
 
-<Image light={chartsFeaturesTooltip} maxWidth={400} position="center" cornerRadius="true" alt="Area chart with an interactive tooltip popup appearing on hover showing the exact value and category of a data point." />
+<Image light={chartsFeaturesTooltip} maxWidth={400} position="center" cornerRadius="true" alt="Chart with an interactive tooltip popup appearing on hover showing the exact value and category of a data point." />
 
 ## When to Use
 - **High-Density Data**: Pinpointing values in a crowded line or scatter chart.

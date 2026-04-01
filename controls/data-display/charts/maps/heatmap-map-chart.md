@@ -7,7 +7,7 @@ tags:
   - accelerate
 ---
 
-import chartsMapsHeatmap from '/img/controls/charts/charts-maps-heatmap.png';
+import chartsMapsHeatmap from '/img/controls/charts/charts-maps-gradient.png';
 
 :::info
 [Charts](/controls/data-display/charts/index) are available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Enterprise.

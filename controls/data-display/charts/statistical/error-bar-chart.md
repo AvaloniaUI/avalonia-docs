@@ -7,7 +7,7 @@ tags:
   - accelerate
 ---
 
-import chartsStatisticalErrorbar from '/img/controls/charts/charts-statistical-errorbar.png';
+import chartsStatisticalErrorbar from '/img/controls/charts/charts-statistical-error.png';
 
 :::info
 [Charts](/controls/data-display/charts/index) are available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Enterprise.
@@ -15,7 +15,7 @@ import chartsStatisticalErrorbar from '/img/controls/charts/charts-statistical-e
 
 Error bar charts represent the variability of data and are used on graphs to indicate the error or uncertainty in a reported measurement.
 
-<Image light={chartsStatisticalErrorbar} maxWidth={400} position="center" cornerRadius="true" alt="Error bar chart with data points and vertical error indicators showing standard deviation ranges for each sample." />
+<Image light={chartsStatisticalErrorbar} maxWidth={400} position="center" cornerRadius="true" alt="Chart with data points and vertical error indicators showing standard deviation ranges for each sample." />
 
 ## When to Use
 - **Scientific Research**: Visualizing standard deviation or confidence intervals.

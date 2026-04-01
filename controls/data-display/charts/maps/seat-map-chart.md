@@ -7,15 +7,11 @@ tags:
   - accelerate
 ---
 
-import chartsMapsGeo from '/img/controls/charts/charts-maps-geo.png';
-
 :::info
 [Charts](/controls/data-display/charts/index) are available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Enterprise.
 :::
 
 The ShapeMap control can handle non-geographic coordinate systems, making it perfect for custom layouts like aircraft seating, floor plans, or theater arrangements.
-
-<Image light={chartsMapsGeo} maxWidth={400} position="center" cornerRadius="true" alt="Seat map chart showing an aircraft cabin layout with color-coded seats indicating availability by class." />
 
 ## When to Use
 - **Seat Reservations**: Interactive seating plans for transportation or venues.

@@ -7,7 +7,7 @@ tags:
   - accelerate
 ---
 
-import chartsFeaturesGridlines from '/img/controls/charts/charts-features-gridlines.png';
+import chartsFeaturesGridlines from '/img/controls/charts/charts-gridlines-customization.png';
 
 :::info
 [Charts](/controls/data-display/charts/index) are available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Enterprise.
@@ -15,7 +15,7 @@ import chartsFeaturesGridlines from '/img/controls/charts/charts-features-gridli
 
 Avalonia Charts provides extensive options to customize axis appearance, including label rotation, styling, gridline configuration, and multi-axis support.
 
-<Image light={chartsFeaturesGridlines} maxWidth={400} position="center" cornerRadius="true" alt="Cartesian chart with customized axes showing gridlines, rotated labels, dual Y axes, and named axis titles." />
+<Image light={chartsFeaturesGridlines} maxWidth={400} position="center" cornerRadius="true" alt="Cartesian chart with customized axes showing gridlines." />
 
 ## When to Use
 - **Multiple Scales**: When displaying two different metrics (e.g., Temperature and Humidity) on the same chart.
@@ -68,4 +68,3 @@ public ObservableCollection<MonthlyMetric> GrowthData { get; } = new() { new("Ja
 - **CategoryAxis**: For discrete categories. Labels are derived from the data.
 - **DateTimeAxis**: For date and time data. Supports automatic interval calculation and formatting.
 - **LogarithmicAxis**: For data with a large range. Supports `Base` (default 10).
-![Multi-Axis](../charts-features-multiaxis.png)

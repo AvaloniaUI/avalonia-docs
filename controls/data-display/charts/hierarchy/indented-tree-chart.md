@@ -7,7 +7,7 @@ tags:
   - accelerate
 ---
 
-import chartsHierarchicalIndentedtree from '/img/controls/charts/charts-hierarchical-indentedtree.png';
+import chartsHierarchicalIndentedtree from '/img/controls/charts/charts-hierarchical-tree.png';
 
 :::info
 [Charts](/controls/data-display/charts/index) are available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Enterprise.

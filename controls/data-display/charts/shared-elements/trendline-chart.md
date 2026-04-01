@@ -7,7 +7,7 @@ tags:
   - accelerate
 ---
 
-import chartsFeaturesTrendlines from '/img/controls/charts/charts-features-trendlines.png';
+import chartsFeaturesTrendlines from '/img/controls/charts/charts-trendline-1.png';
 
 :::info
 [Charts](/controls/data-display/charts/index) are available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Enterprise.
@@ -15,7 +15,7 @@ import chartsFeaturesTrendlines from '/img/controls/charts/charts-features-trend
 
 Trendlines are used in Cartesian charts to show the general direction or pattern of data. They filter out noise to highlight underlying trends (e.g., linear, moving average).
 
-<Image light={chartsFeaturesTrendlines} maxWidth={400} position="center" cornerRadius="true" alt="Line chart with overlaid trendlines showing a linear regression and a moving average to highlight data direction." />
+<Image light={chartsFeaturesTrendlines} maxWidth={400} position="center" cornerRadius="true" alt="Line chart with an overlaid trendline showing a line of best fit." />
 
 ## When to Use
 - **Sales Forecasting**: Projecting future sales based on historical trends.

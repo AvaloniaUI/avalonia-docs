@@ -7,7 +7,7 @@ tags:
   - accelerate
 ---
 
-import chartsFeaturesCrosshairs from '/img/controls/charts/charts-features-crosshairs.png';
+import chartsFeaturesCrosshairs from '/img/controls/charts/charts-custom-crosshairs.png';
 
 :::info
 [Charts](/controls/data-display/charts/index) are available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Enterprise.

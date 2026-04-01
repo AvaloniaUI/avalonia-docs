@@ -7,7 +7,7 @@ tags:
   - accelerate
 ---
 
-import chartsAnalyticsSparkline from '/img/controls/charts/charts-analytics-sparkline.png';
+import chartsAnalyticsSparkline from '/img/controls/charts/charts-analytics-matrix-sparkline.png';
 
 :::info
 [Charts](/controls/data-display/charts/index) are available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Enterprise.
@@ -46,4 +46,3 @@ public ObservableCollection<double> SparkData { get; } = new() { 10, 15, 8, 12, 
 | `SparklineType` | `Line`, `Area`, or `Bar`. | `Line` |
 | `Fill` / `Stroke` | Brushes used for the visualization. | Theme-dependent |
 | `Points` | Toggles rendering of individual data points. | `false` |
-![Matrix Sparkline](../charts-analytics-matrix-sparkline.png)

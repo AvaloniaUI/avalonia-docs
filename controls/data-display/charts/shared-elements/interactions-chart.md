@@ -7,7 +7,7 @@ tags:
   - accelerate
 ---
 
-import chartsFeaturesZoom from '/img/controls/charts/charts-features-zoom.png';
+import chartsFeaturesZoom from '/img/controls/charts/charts-zoom.png';
 
 :::info
 [Charts](/controls/data-display/charts/index) are available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Enterprise.
@@ -15,7 +15,7 @@ import chartsFeaturesZoom from '/img/controls/charts/charts-features-zoom.png';
 
 Zoom and pan allow users to explore multi-dimensional or high-resolution datasets by navigating the chart area dynamically.
 
-<Image light={chartsFeaturesZoom} maxWidth={400} position="center" cornerRadius="true" alt="Interactive chart demonstrating zoom and pan controls allowing users to focus on specific regions of a dense dataset." />
+<Image light={chartsFeaturesZoom} maxWidth={400} position="center" cornerRadius="true" alt="Chart with interactive zoom and pan controls allowing users to focus on specific regions of a dense dataset." />
 
 ## When to Use
 - **Big Data Visualization**: Exploring line charts with thousands of points.

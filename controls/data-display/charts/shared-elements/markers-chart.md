@@ -7,7 +7,7 @@ tags:
   - accelerate
 ---
 
-import chartsFeaturesMarkers from '/img/controls/charts/charts-features-markers.png';
+import chartsFeaturesMarkers from '/img/controls/charts/charts-markers.png';
 
 :::info
 [Charts](/controls/data-display/charts/index) are available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Enterprise.
@@ -15,7 +15,7 @@ import chartsFeaturesMarkers from '/img/controls/charts/charts-features-markers.
 
 Markers are symbols drawn at each data point in a series. They help users locate the exact coordinates of points, especially on line or spline charts where paths might be dense.
 
-<Image light={chartsFeaturesMarkers} maxWidth={400} position="center" cornerRadius="true" alt="Line chart with diamond-shaped markers drawn at each data point to highlight exact coordinate positions." />
+<Image light={chartsFeaturesMarkers} maxWidth={400} position="center" cornerRadius="true" alt="Line chart with markers of different shapes drawn at each data point to highlight exact coordinate positions." />
 
 ## When to Use
 - **Discrete Data**: Emphasizing that lines represent individual measured points.

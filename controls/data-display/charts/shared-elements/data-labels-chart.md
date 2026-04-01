@@ -7,7 +7,7 @@ tags:
   - accelerate
 ---
 
-import chartsFeaturesLabels from '/img/controls/charts/charts-features-labels.png';
+import chartsFeaturesLabels from '/img/controls/charts/charts-axis-45-labels.png';
 
 :::info
 [Charts](/controls/data-display/charts/index) are available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Enterprise.
@@ -15,7 +15,7 @@ import chartsFeaturesLabels from '/img/controls/charts/charts-features-labels.pn
 
 Data labels place the actual values directly on the chart series. This removes the need for users to eye-ball coordinates, making the chart much easier to read at a glance.
 
-<Image light={chartsFeaturesLabels} maxWidth={400} position="center" cornerRadius="true" alt="Bar chart with data labels displayed directly on each bar showing the exact numeric value for each category." />
+<Image light={chartsFeaturesLabels} maxWidth={400} position="center" cornerRadius="true" alt="Bar chart with data labels displayed at a 45-degree angle." />
 
 ## When to Use
 - **Presentation Graphics**: Where clear, immediate values are prioritized.
@@ -55,6 +55,6 @@ public ObservableCollection<LabelDataPoint> LabelData { get; } = new()
 | Property | Description | Default |
 | :--- | :--- | :--- |
 | `ShowLabels` | Toggles values on the series points. | `false` |
-| `LabelFormat` | String format (e.g., "{0:N2}", "C0"). | `null` |
+| `LabelFormat` | String format (e.g., `"{0:N2}", "C0"`). | `null` |
 | `LabelFontSize` | Size of the text in pixels. | `11` |
 | `LabelForeground` | Brush used for the text color. | Theme-dependent |

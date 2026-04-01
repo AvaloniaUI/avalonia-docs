@@ -7,7 +7,7 @@ tags:
   - accelerate
 ---
 
-import chartsMapsChoropleth from '/img/controls/charts/charts-maps-choropleth.png';
+import chartsMapsChoropleth from '/img/controls/charts/charts-maps.png';
 
 :::info
 [Charts](/controls/data-display/charts/index) are available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Enterprise.

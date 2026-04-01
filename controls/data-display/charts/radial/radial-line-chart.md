@@ -7,15 +7,11 @@ tags:
   - accelerate
 ---
 
-import chartsRadialLine from '/img/controls/charts/charts-radial-line.png';
-
 :::info
 [Charts](/controls/data-display/charts/index) are available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Enterprise.
 :::
 
 Radial line charts plot data points on a polar coordinate system and connect them with lines. They are ideal for showing how a single variable fluctuates across cyclical categories.
-
-<Image light={chartsRadialLine} maxWidth={400} position="center" cornerRadius="true" alt="Radial line chart with data points plotted on a polar axis and connected by a line radiating from the center." />
 
 ## When to Use
 - **Daily Activity**: Mapping heart rate or energy levels across 24 hours.

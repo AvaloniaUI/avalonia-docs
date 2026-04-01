@@ -7,7 +7,7 @@ tags:
   - accelerate
 ---
 
-import chartsFeaturesLegend from '/img/controls/charts/charts-features-legend.png';
+import chartsFeaturesLegend from '/img/controls/charts/charts-legend-right.png';
 
 :::info
 [Charts](/controls/data-display/charts/index) are available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Enterprise.

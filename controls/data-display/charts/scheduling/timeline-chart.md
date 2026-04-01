@@ -7,7 +7,7 @@ tags:
   - accelerate
 ---
 
-import chartsTimelineHorizontal from '/img/controls/charts/charts-timeline-horizontal.png';
+import chartsTimelineHorizontal from '/img/controls/charts/charts-timeline-event.png';
 
 :::info
 [Charts](/controls/data-display/charts/index) are available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Enterprise.
@@ -55,4 +55,3 @@ public ObservableCollection<TimelineEvent> TimelineEvents { get; } = new()
 | `LabelPath` | Path to the event description. | `null` |
 | `Orientation` | `Horizontal` or `Vertical`. | `Horizontal` |
 | `MarkerBrush` | Color of the points on the timeline. | Theme-dependent |
-![Vertical Timeline](../charts-timeline-vertical.png)

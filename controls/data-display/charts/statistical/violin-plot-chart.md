@@ -7,15 +7,11 @@ tags:
   - accelerate
 ---
 
-import chartsStatisticalViolin from '/img/controls/charts/charts-statistical-violin.png';
-
 :::info
 [Charts](/controls/data-display/charts/index) are available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Enterprise.
 :::
 
 Violin plots combine a box plot with a kernel density plot, showing both the statistical summary and the probability density of the data at different values.
-
-<Image light={chartsStatisticalViolin} maxWidth={400} position="center" cornerRadius="true" alt="Violin plot combining a mirrored density shape and embedded box plot to show distribution and spread per category." />
 
 ## When to Use
 - **Deep Distribution**: When you need to see where data points are most frequent (density).

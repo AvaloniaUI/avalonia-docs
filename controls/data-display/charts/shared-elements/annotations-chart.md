@@ -7,7 +7,7 @@ tags:
   - accelerate
 ---
 
-import chartsFeaturesAnnotation from '/img/controls/charts/charts-features-annotation.png';
+import chartsFeaturesAnnotation from '/img/controls/charts/charts-annotations.png';
 
 :::info
 [Charts](/controls/data-display/charts/index) are available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Enterprise.

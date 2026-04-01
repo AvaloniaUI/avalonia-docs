@@ -7,7 +7,7 @@ tags:
   - accelerate
 ---
 
-import chartsHierarchicalCirclepacking from '/img/controls/charts/charts-hierarchical-circlepacking.png';
+import chartsHierarchicalCirclepacking from '/img/controls/charts/charts-hierarchical-circle-packing.png';
 
 :::info
 [Charts](/controls/data-display/charts/index) are available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Enterprise.

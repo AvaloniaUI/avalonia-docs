@@ -7,7 +7,7 @@ tags:
   - accelerate
 ---
 
-import chartsHierarchicalRadialtree from '/img/controls/charts/charts-hierarchical-radialtree.png';
+import chartsHierarchicalRadialtree from '/img/controls/charts/charts-hierarchical-radial-tree.png';
 
 :::info
 [Charts](/controls/data-display/charts/index) are available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Enterprise.
