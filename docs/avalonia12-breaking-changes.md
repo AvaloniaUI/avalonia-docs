@@ -262,6 +262,13 @@ The converter function parameter changed from `IEnumerable<TIn>` to `IReadOnlyLi
 PR: [#19936](https://github.com/AvaloniaUI/Avalonia/pull/19936)
 
 
+## `Window.WindowState` is a direct property
+
+`Window.WindowState` was previously a styled property. However, it caused various problems in window state management, so it has been changed to a direct property.
+
+As a consequence, it is no longer valid to set `WindowState` from a style.
+
+
 ## Data validation enabled by default in custom controls
 
 Before v12, Avalonia properties with `enableDataValidation: true` required overriding the `UpdateDataValidation` method for data validation errors to be reported for that property. Now it happens automatically.
