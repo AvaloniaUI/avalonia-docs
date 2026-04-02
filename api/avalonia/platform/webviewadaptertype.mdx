@@ -11,7 +11,7 @@ apiKind: 'Enum'
 generatedBy: 'dotnet-apiref'
 namespace: 'Avalonia.Platform'
 tfms:
-  - 'net10.0-android36.0'
+  - 'net10.0-browser1.0'
 ---
 
 import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
@@ -32,6 +32,10 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.WebView</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/3111696698e2c3d6fe9aace8cb954153ee16b3e4/src/Avalonia.Controls.WebView/Platform/WebViewAdapterType.cs">WebViewAdapterType.cs</a>
+</div>
+
 </div>
 
 <div className="apiref-page__signature">
@@ -53,12 +57,14 @@ public enum WebViewAdapterType
 | Name | Description |
 | --- | --- |
 | [AndroidWebView](#uid-d02ef64e38) | No summary available. |
+| [BrowserIFrame](#uid-5adedb95fc) | No summary available. |
 | [Headless](#uid-77906b1a36) | No summary available. |
 | [Unknown](#uid-8c1a5e4fa5) | No summary available. |
 | [WebKitGtk](#uid-ebab4f8296) | No summary available. |
 | [WebView1](#uid-7b042eae9a) | No summary available. |
 | [WebView2](#uid-3c65c8d5af) | No summary available. |
 | [WkWebView](#uid-871da94601) | No summary available. |
+| [WpeWebKit](#uid-eb719b0e99) | No summary available. |
 
 <section className="apiref-page__member-entry">
 
@@ -68,6 +74,18 @@ public enum WebViewAdapterType
 
 ```csharp
 public Avalonia.Platform.WebViewAdapterType AndroidWebView
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5adedb95fc"></span>
+
+### BrowserIFrame Field
+
+```csharp
+public Avalonia.Platform.WebViewAdapterType BrowserIFrame
 ```
 
 </section>
@@ -140,6 +158,18 @@ public Avalonia.Platform.WebViewAdapterType WebView2
 
 ```csharp
 public Avalonia.Platform.WebViewAdapterType WkWebView
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-eb719b0e99"></span>
+
+### WpeWebKit Field
+
+```csharp
+public Avalonia.Platform.WebViewAdapterType WpeWebKit
 ```
 
 </section>

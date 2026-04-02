@@ -32,6 +32,10 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/3111696698e2c3d6fe9aace8cb954153ee16b3e4/src/Avalonia.Controls/INavigation.cs">INavigation.cs</a>
+</div>
+
 </div>
 
 <div className="apiref-page__lead">
@@ -61,7 +65,7 @@ public interface INavigation
 | [PopToRootAsync (2 overloads)](#uid-a047944b32) | Pops all pages above the root using the host's default transition. |
 | [PushAsync (2 overloads)](#uid-efed8dca8f) | Pushes `page` using the host's default transition. |
 | [PushModalAsync (2 overloads)](#uid-9e90393b6e) | Pushes `page` as a modal using the host's modal transition. |
-| [RemovePage](#uid-9985148e2b) | Removes `page` from the navigation stack without animation. |
+| [RemovePage](#uid-9985148e2b) | Removes `page` from the navigation stack without animation. If `page` is not in the stack the call is a no-op. |
 | [ReplaceAsync (2 overloads)](#uid-eb81155046) | Replaces the current top page with `page` using the host's default transition. |
 
 <section className="apiref-page__member-entry">
@@ -84,6 +88,11 @@ public void InsertPage(Avalonia.Controls.Page page, Avalonia.Controls.Page befor
 
 `before` [Avalonia.Controls.Page](xref:Avalonia.Controls.Page)
 
+
+#### Exceptions
+
+- [\`page\` or \`before\` is .](xref:System.ArgumentNullException)
+- [\`before\` is not in the navigation stack, or \`page\` is already hosted by this navigation page.](xref:System.InvalidOperationException)
 
 </section>
 
@@ -447,6 +456,7 @@ System.Threading.Tasks.Task
 ### RemovePage Method
 
 Removes `page` from the navigation stack without animation.
+If `page` is not in the stack the call is a no-op.
 
 ```csharp
 public void RemovePage(Avalonia.Controls.Page page)
@@ -456,6 +466,10 @@ public void RemovePage(Avalonia.Controls.Page page)
 
 `page` [Avalonia.Controls.Page](xref:Avalonia.Controls.Page)
 
+
+#### Exceptions
+
+- [\`page\` is .](xref:System.ArgumentNullException)
 
 </section>
 
