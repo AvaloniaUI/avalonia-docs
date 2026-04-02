@@ -33,11 +33,11 @@ For a general introduction to MCP, see [AI Tools](/tools/ai-tools/).
 Before setting up the MCP server, ensure you have:
 
 1. **DevTools .NET tool** installed. Follow the [Getting Started](/tools/developer-tools/installation) guide.
-2. **Valid Accelerate license key.** You can get one from the [Avalonia portal](https://my.avalonia.dev/).
+2. **Valid Accelerate license key.** You can get one from the [Avalonia portal](https://portal.avaloniaui.net/).
 
 ### Setting your license key
 
-The MCP server reads your license from the `ACCELERATE_LICENSE_KEY` environment variable. You can find your license key in the [Avalonia Customer Portal](https://my.avalonia.dev/). MCP is a paid feature and is not included with the Community edition.
+The MCP server reads your license from the `ACCELERATE_LICENSE_KEY` environment variable. You can find your license key in the [Avalonia Customer Portal](https://portal.avaloniaui.net/). MCP is a paid feature and is not included with the Community edition.
 
 Set the key in your shell profile so it persists across sessions:
 

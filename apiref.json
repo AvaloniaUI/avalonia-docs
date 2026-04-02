@@ -1,5 +1,5 @@
 {
-  "docsetVersion": "12.0.0-preview2",
+  "docsetVersion": "12.0.0-rc1",
   "docsetId": "avalonia",
   "feeds": [
     "https://api.nuget.org/v3/index.json"
@@ -7,71 +7,71 @@
   "packages": [
     {
       "id": "Avalonia",
-      "version": "12.0.0-preview2"
+      "version": "12.0.0-rc1"
     },
     {
       "id": "Avalonia.Controls.ColorPicker",
-      "version": "12.0.0-preview2"
+      "version": "12.0.0-rc1"
     },
     {
       "id": "Avalonia.Desktop",
-      "version": "12.0.0-preview2"
+      "version": "12.0.0-rc1"
     },
     {
       "id": "Avalonia.Themes.Fluent",
-      "version": "12.0.0-preview2"
+      "version": "12.0.0-rc1"
     },
     {
       "id": "Avalonia.Fonts.Inter",
-      "version": "12.0.0-preview2"
+      "version": "12.0.0-rc1"
     },
     {
       "id": "Avalonia.Skia",
-      "version": "12.0.0-preview2"
+      "version": "12.0.0-rc1"
     },
     {
       "id": "Avalonia.Native",
-      "version": "12.0.0-preview2"
+      "version": "12.0.0-rc1"
     },
     {
       "id": "Avalonia.X11",
-      "version": "12.0.0-preview2"
+      "version": "12.0.0-rc1"
     },
     {
       "id": "Avalonia.FreeDesktop",
-      "version": "12.0.0-preview2"
+      "version": "12.0.0-rc1"
     },
     {
       "id": "Avalonia.Markup.Xaml.Loader",
-      "version": "12.0.0-preview2"
+      "version": "12.0.0-rc1"
     },
      {
       "id": "Avalonia.Browser",
-      "version": "12.0.0-preview2"
+      "version": "12.0.0-rc1"
     },
      {
       "id": "Avalonia.Android",
-      "version": "12.0.0-preview2"
+      "version": "12.0.0-rc1"
     },
      {
       "id": "Avalonia.Headless.XUnit",
-      "version": "12.0.0-preview2"
+      "version": "12.0.0-rc1"
     },
     {
       "id": "Avalonia.LinuxFramebuffer",
-      "version": "12.0.0-preview2"
+      "version": "12.0.0-rc1"
     },
      {
       "id": "Avalonia.Headless.NUnit",
-      "version": "12.0.0-preview2"
+      "version": "12.0.0-rc1"
     },
      {
       "id": "Avalonia.Win32.Interoperability",
-      "version": "12.0.0-preview2"
+      "version": "12.0.0-rc1"
     },
      {
       "id": "Avalonia.Headless.Vnc",
-      "version": "12.0.0-preview2"
+      "version": "12.0.0-rc1"
     },
     {
       "id": "AvaloniaUI.DiagnosticsSupport",
@@ -79,7 +79,7 @@
     },
     {
       "id": "Avalonia.Controls.WebView",
-      "version": "12.0.0-preview1"
+      "version": "12.0.0-rc1"
     },
     {
       "id": "Avalonia.Controls.MediaPlayer",

@@ -268,8 +268,6 @@ const redirects: Redirect[] = [
         "from": [
             "/docs/guides/basics/accessing-the-ui-thread",
             "/docs/guides/development-guides/accessing-the-ui-thread",
-            "/docs/app-development/accessing-the-ui-thread",
-            "/docs/development-optimization/accessing-the-ui-thread"
         ],
         "to": "/docs/app-development/threading"
     },

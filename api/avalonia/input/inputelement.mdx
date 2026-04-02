@@ -33,8 +33,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Input/InputElement.Gestures.cs">InputElement.Gestures.cs</a>, <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Input/InputElement.cs">InputElement.cs</a>
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/3111696698e2c3d6fe9aace8cb954153ee16b3e4/src/Avalonia.Base/Input/InputElement.cs">InputElement.cs</a>
 </div>
+
 </div>
 
 <div className="apiref-page__lead">
@@ -508,6 +509,7 @@ public int TabIndex { get; set; }
 | [ScrollGestureEndedEvent](#uid-5f3e85c372) | Defines the [Avalonia.Input.InputElement.ScrollGestureEnded](xref:Avalonia.Input.InputElement.ScrollGestureEnded) event. |
 | [ScrollGestureEvent](#uid-d098469113) | Defines the [Avalonia.Input.InputElement.ScrollGesture](xref:Avalonia.Input.InputElement.ScrollGesture) event. |
 | [ScrollGestureInertiaStartingEvent](#uid-02f504d2ea) | Defines the [Avalonia.Input.InputElement.ScrollGestureInertiaStarting](xref:Avalonia.Input.InputElement.ScrollGestureInertiaStarting) event. |
+| [SwipeGestureEndedEvent](#uid-8492058651) | Defines the [Avalonia.Input.InputElement.SwipeGestureEnded](xref:Avalonia.Input.InputElement.SwipeGestureEnded) event. |
 | [SwipeGestureEvent](#uid-e431c01e95) | Defines the [Avalonia.Input.InputElement.SwipeGesture](xref:Avalonia.Input.InputElement.SwipeGesture) event. |
 | [TabIndexProperty](#uid-3708b5bfca) | Defines the [Avalonia.Input.InputElement.TabIndex](xref:Avalonia.Input.InputElement.TabIndex) property. |
 | [TappedEvent](#uid-15efc26145) | Defines the [Avalonia.Input.InputElement.Tapped](xref:Avalonia.Input.InputElement.Tapped) event. |
@@ -638,7 +640,7 @@ public Avalonia.Interactivity.RoutedEvent<TEventArgs><Avalonia.Input.FocusChangi
 Defines the [Avalonia.Input.InputElement.GotFocus](xref:Avalonia.Input.InputElement.GotFocus) event.
 
 ```csharp
-public Avalonia.Interactivity.RoutedEvent<TEventArgs><Avalonia.Input.GotFocusEventArgs> GotFocusEvent
+public Avalonia.Interactivity.RoutedEvent<TEventArgs><Avalonia.Input.FocusChangedEventArgs> GotFocusEvent
 ```
 
 </section>
@@ -834,7 +836,7 @@ public Avalonia.Interactivity.RoutedEvent<TEventArgs><Avalonia.Input.FocusChangi
 Defines the [Avalonia.Input.InputElement.LostFocus](xref:Avalonia.Input.InputElement.LostFocus) event.
 
 ```csharp
-public Avalonia.Interactivity.RoutedEvent<TEventArgs><Avalonia.Interactivity.RoutedEventArgs> LostFocusEvent
+public Avalonia.Interactivity.RoutedEvent<TEventArgs><Avalonia.Input.FocusChangedEventArgs> LostFocusEvent
 ```
 
 </section>
@@ -1093,6 +1095,20 @@ public Avalonia.Interactivity.RoutedEvent<TEventArgs><Avalonia.Input.ScrollGestu
 
 <section className="apiref-page__member-entry">
 
+<span id="uid-8492058651"></span>
+
+### SwipeGestureEndedEvent Field
+
+Defines the [Avalonia.Input.InputElement.SwipeGestureEnded](xref:Avalonia.Input.InputElement.SwipeGestureEnded) event.
+
+```csharp
+public Avalonia.Interactivity.RoutedEvent<TEventArgs><Avalonia.Input.SwipeGestureEndedEventArgs> SwipeGestureEndedEvent
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-e431c01e95"></span>
 
 ### SwipeGestureEvent Field
@@ -1167,34 +1183,35 @@ public Avalonia.Interactivity.RoutedEvent<TEventArgs><Avalonia.Input.TextInput.T
 | --- | --- |
 | [ContextCanceled](#uid-0132e74ca9) | Occurs when the context input gesture continues into another gesture, to notify the element that the context flyout should not be opened. |
 | [ContextRequested](#uid-9067484d6e) | Occurs when the user has completed a context input gesture, such as a right-click. |
-| [DoubleTapped](#uid-ad13083e0c) | Occurs when a double-tap gesture occurs on the control. |
+| [DoubleTapped](#uid-ad13083e0c) | Occurs when the user briefly contacts and releases twice on a single point, without significant movement. |
 | [GettingFocus](#uid-4d054164ee) | Occurs before the control receives focus. |
 | [GotFocus](#uid-d41d7ad59c) | Occurs when the control receives focus. |
-| [Holding](#uid-8cda030fe2) | Occurs when a hold gesture occurs on the control. |
+| [Holding](#uid-8cda030fe2) | Occurs when the user makes a single contact, then maintains contact beyond a given time threshold without releasing or making another contact. |
 | [KeyDown](#uid-ee9d987ed5) | Occurs when a key is pressed while the control has focus. |
 | [KeyUp](#uid-1131e95f55) | Occurs when a key is released while the control has focus. |
 | [LosingFocus](#uid-425fe24716) | Occurs before the control loses focus. |
 | [LostFocus](#uid-2061fc85a1) | Occurs when the control loses focus. |
-| [Pinch](#uid-96b68421dc) | Occurs when a pinch gesture occurs on the control. |
-| [PinchEnded](#uid-50614bd917) | Occurs when a pinch gesture ends on the control. |
+| [Pinch](#uid-96b68421dc) | Occurs when the user moves two contact points closer together. |
+| [PinchEnded](#uid-50614bd917) | Occurs when the user releases both contact points used in a pinch gesture. |
 | [PointerCaptureLost](#uid-2121c500a4) | Occurs when the control or its child control loses the pointer capture for any reason, event will not be triggered for a parent control if capture was transferred to another child of that parent control. |
 | [PointerEntered](#uid-a81f2c5c9a) | Occurs when the pointer enters the control. |
 | [PointerExited](#uid-522e8d0a47) | Occurs when the pointer leaves the control. |
 | [PointerMoved](#uid-0990295ea3) | Occurs when the pointer moves over the control. |
 | [PointerPressed](#uid-913cdc0df1) | Occurs when the pointer is pressed over the control. |
 | [PointerReleased](#uid-5b59b21d5e) | Occurs when the pointer is released over the control. |
-| [PointerTouchPadGestureMagnify](#uid-8f1fe6dc4a) | Occurs when a touchpad magnify gesture occurs on the control. |
-| [PointerTouchPadGestureRotate](#uid-d966c43661) | Occurs when a touchpad rotate gesture occurs on the control. |
-| [PointerTouchPadGestureSwipe](#uid-9011c6de89) | Occurs when a touchpad swipe gesture occurs on the control. |
+| [PointerTouchPadGestureMagnify](#uid-8f1fe6dc4a) | Occurs when the user moves two contact points away from each other on a touchpad. |
+| [PointerTouchPadGestureRotate](#uid-d966c43661) | Occurs when the user places two contact points and moves them in a circular motion on a touchpad. |
+| [PointerTouchPadGestureSwipe](#uid-9011c6de89) | Occurs when the user performs a rapid dragging motion in a single direction on a touchpad. |
 | [PointerWheelChanged](#uid-6687ab6f2e) | Occurs when the mouse is scrolled over the control. |
-| [PullGesture](#uid-d85f52cac5) | Occurs when a pull gesture occurs on the control. |
-| [PullGestureEnded](#uid-a37f51b846) | Occurs when a pull gesture ends on the control. |
-| [RightTapped](#uid-11a576692d) | Occurs when a right tap gesture occurs on the control. |
-| [ScrollGesture](#uid-b571ab3acc) | Occurs when a scroll gesture occurs on the control. |
-| [ScrollGestureEnded](#uid-eb3914c3a8) | Occurs when a scroll gesture ends on the control. |
-| [ScrollGestureInertiaStarting](#uid-c8cd2731a5) | Occurs when a scroll gesture inertia starts on the control. |
-| [SwipeGesture](#uid-0f4fc613ec) | Occurs when a swipe gesture occurs on the control. |
-| [Tapped](#uid-6df36c079d) | Occurs when a tap gesture occurs on the control. |
+| [PullGesture](#uid-d85f52cac5) | Occurs when the user drags from the edge of a control. |
+| [PullGestureEnded](#uid-a37f51b846) | Occurs when the user releases the pointer after a pull gesture. |
+| [RightTapped](#uid-11a576692d) | Occurs when the user briefly contacts and releases a single point, without significant movement, using a mechanism on the input device recognized as a right button or equivalent. |
+| [ScrollGesture](#uid-b571ab3acc) | Occurs when the user continuously moves the pointer in the same direction within the control’s boundaries. |
+| [ScrollGestureEnded](#uid-eb3914c3a8) | Occurs when a scroll gesture has fully stopped, taking into account any inertial movement that continues the scroll after the user has released the pointer. |
+| [ScrollGestureInertiaStarting](#uid-c8cd2731a5) | Occurs within a scroll gesture, when the user releases the pointer, and scrolling continues by transitioning to momentum-based gliding movement. |
+| [SwipeGesture](#uid-0f4fc613ec) | Occurs when the user rapidly drags the pointer in a single direction across the control. |
+| [SwipeGestureEnded](#uid-137ae2fd9d) | Occurs when a swipe gesture ends on the control. |
+| [Tapped](#uid-6df36c079d) | Occurs when the user briefly contacts and releases a single point, without significant movement. |
 | [TextInput](#uid-6dcb8fae07) | Occurs when a user typed some text while the control has focus. |
 | [TextInputMethodClientRequested](#uid-5d96b89080) | Occurs when an input element gains input focus and input method is looking for the corresponding client |
 | [EffectiveViewportChanged](../layout/layoutable.mdx#uid-1922b89fa5) | Occurs when the element's effective viewport changes. Inherited from [Layoutable](../layout/layoutable.mdx). |
@@ -1243,7 +1260,7 @@ public event EventHandler<Avalonia.Input.ContextRequestedEventArgs> ContextReque
 
 ### DoubleTapped Event
 
-Occurs when a double-tap gesture occurs on the control.
+Occurs when the user briefly contacts and releases twice on a single point, without significant movement.
 
 ```csharp
 public event EventHandler<Avalonia.Input.TappedEventArgs> DoubleTapped
@@ -1274,7 +1291,7 @@ public event EventHandler<Avalonia.Input.FocusChangingEventArgs> GettingFocus
 Occurs when the control receives focus.
 
 ```csharp
-public event EventHandler<Avalonia.Input.GotFocusEventArgs> GotFocus
+public event EventHandler<Avalonia.Input.FocusChangedEventArgs> GotFocus
 ```
 
 </section>
@@ -1285,7 +1302,7 @@ public event EventHandler<Avalonia.Input.GotFocusEventArgs> GotFocus
 
 ### Holding Event
 
-Occurs when a hold gesture occurs on the control.
+Occurs when the user makes a single contact, then maintains contact beyond a given time threshold without releasing or making another contact.
 
 ```csharp
 public event EventHandler<Avalonia.Input.HoldingRoutedEventArgs> Holding
@@ -1344,7 +1361,7 @@ public event EventHandler<Avalonia.Input.FocusChangingEventArgs> LosingFocus
 Occurs when the control loses focus.
 
 ```csharp
-public event EventHandler<Avalonia.Interactivity.RoutedEventArgs> LostFocus
+public event EventHandler<Avalonia.Input.FocusChangedEventArgs> LostFocus
 ```
 
 </section>
@@ -1355,7 +1372,7 @@ public event EventHandler<Avalonia.Interactivity.RoutedEventArgs> LostFocus
 
 ### Pinch Event
 
-Occurs when a pinch gesture occurs on the control.
+Occurs when the user moves two contact points closer together.
 
 ```csharp
 public event EventHandler<Avalonia.Input.PinchEventArgs> Pinch
@@ -1369,7 +1386,7 @@ public event EventHandler<Avalonia.Input.PinchEventArgs> Pinch
 
 ### PinchEnded Event
 
-Occurs when a pinch gesture ends on the control.
+Occurs when the user releases both contact points used in a pinch gesture.
 
 ```csharp
 public event EventHandler<Avalonia.Input.PinchEndedEventArgs> PinchEnded
@@ -1468,7 +1485,7 @@ public event EventHandler<Avalonia.Input.PointerReleasedEventArgs> PointerReleas
 
 ### PointerTouchPadGestureMagnify Event
 
-Occurs when a touchpad magnify gesture occurs on the control.
+Occurs when the user moves two contact points away from each other on a touchpad.
 
 ```csharp
 public event EventHandler<Avalonia.Input.PointerDeltaEventArgs> PointerTouchPadGestureMagnify
@@ -1482,7 +1499,7 @@ public event EventHandler<Avalonia.Input.PointerDeltaEventArgs> PointerTouchPadG
 
 ### PointerTouchPadGestureRotate Event
 
-Occurs when a touchpad rotate gesture occurs on the control.
+Occurs when the user places two contact points and moves them in a circular motion on a touchpad.
 
 ```csharp
 public event EventHandler<Avalonia.Input.PointerDeltaEventArgs> PointerTouchPadGestureRotate
@@ -1496,7 +1513,7 @@ public event EventHandler<Avalonia.Input.PointerDeltaEventArgs> PointerTouchPadG
 
 ### PointerTouchPadGestureSwipe Event
 
-Occurs when a touchpad swipe gesture occurs on the control.
+Occurs when the user performs a rapid dragging motion in a single direction on a touchpad.
 
 ```csharp
 public event EventHandler<Avalonia.Input.PointerDeltaEventArgs> PointerTouchPadGestureSwipe
@@ -1524,7 +1541,7 @@ public event EventHandler<Avalonia.Input.PointerWheelEventArgs> PointerWheelChan
 
 ### PullGesture Event
 
-Occurs when a pull gesture occurs on the control.
+Occurs when the user drags from the edge of a control.
 
 ```csharp
 public event EventHandler<Avalonia.Input.PullGestureEventArgs> PullGesture
@@ -1538,7 +1555,7 @@ public event EventHandler<Avalonia.Input.PullGestureEventArgs> PullGesture
 
 ### PullGestureEnded Event
 
-Occurs when a pull gesture ends on the control.
+Occurs when the user releases the pointer after a pull gesture.
 
 ```csharp
 public event EventHandler<Avalonia.Input.PullGestureEndedEventArgs> PullGestureEnded
@@ -1552,7 +1569,7 @@ public event EventHandler<Avalonia.Input.PullGestureEndedEventArgs> PullGestureE
 
 ### RightTapped Event
 
-Occurs when a right tap gesture occurs on the control.
+Occurs when the user briefly contacts and releases a single point, without significant movement, using a mechanism on the input device recognized as a right button or equivalent.
 
 ```csharp
 public event EventHandler<Avalonia.Input.TappedEventArgs> RightTapped
@@ -1566,7 +1583,7 @@ public event EventHandler<Avalonia.Input.TappedEventArgs> RightTapped
 
 ### ScrollGesture Event
 
-Occurs when a scroll gesture occurs on the control.
+Occurs when the user continuously moves the pointer in the same direction within the control’s boundaries.
 
 ```csharp
 public event EventHandler<Avalonia.Input.ScrollGestureEventArgs> ScrollGesture
@@ -1580,7 +1597,7 @@ public event EventHandler<Avalonia.Input.ScrollGestureEventArgs> ScrollGesture
 
 ### ScrollGestureEnded Event
 
-Occurs when a scroll gesture ends on the control.
+Occurs when a scroll gesture has fully stopped, taking into account any inertial movement that continues the scroll after the user has released the pointer.
 
 ```csharp
 public event EventHandler<Avalonia.Input.ScrollGestureEndedEventArgs> ScrollGestureEnded
@@ -1594,7 +1611,7 @@ public event EventHandler<Avalonia.Input.ScrollGestureEndedEventArgs> ScrollGest
 
 ### ScrollGestureInertiaStarting Event
 
-Occurs when a scroll gesture inertia starts on the control.
+Occurs within a scroll gesture, when the user releases the pointer, and scrolling continues by transitioning to momentum-based gliding movement.
 
 ```csharp
 public event EventHandler<Avalonia.Input.ScrollGestureInertiaStartingEventArgs> ScrollGestureInertiaStarting
@@ -1608,10 +1625,24 @@ public event EventHandler<Avalonia.Input.ScrollGestureInertiaStartingEventArgs> 
 
 ### SwipeGesture Event
 
-Occurs when a swipe gesture occurs on the control.
+Occurs when the user rapidly drags the pointer in a single direction across the control.
 
 ```csharp
 public event EventHandler<Avalonia.Input.SwipeGestureEventArgs> SwipeGesture
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-137ae2fd9d"></span>
+
+### SwipeGestureEnded Event
+
+Occurs when a swipe gesture ends on the control.
+
+```csharp
+public event EventHandler<Avalonia.Input.SwipeGestureEndedEventArgs> SwipeGestureEnded
 ```
 
 </section>
@@ -1622,7 +1653,7 @@ public event EventHandler<Avalonia.Input.SwipeGestureEventArgs> SwipeGesture
 
 ### Tapped Event
 
-Occurs when a tap gesture occurs on the control.
+Occurs when the user briefly contacts and releases a single point, without significant movement.
 
 ```csharp
 public event EventHandler<Avalonia.Input.TappedEventArgs> Tapped

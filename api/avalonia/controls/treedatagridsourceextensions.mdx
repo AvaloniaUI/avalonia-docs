@@ -1,0 +1,1155 @@
+---
+title: 'TreeDataGridSourceExtensions'
+hide_title: true
+slug: '/avalonia/controls/treedatagridsourceextensions'
+uid: 'Avalonia.Controls.TreeDataGridSourceExtensions'
+commentId: 'T:Avalonia.Controls.TreeDataGridSourceExtensions'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.TreeDataGrid'
+assembly: 'Avalonia.Controls.TreeDataGrid'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net8.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">TreeDataGridSourceExtensions Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Provides fluent extension methods for adding columns to [Avalonia.Controls.FlatTreeDataGridSource&lt;T&gt;](xref:Avalonia.Controls.FlatTreeDataGridSource%601)
+and [Avalonia.Controls.HierarchicalTreeDataGridSource&lt;T&gt;](xref:Avalonia.Controls.HierarchicalTreeDataGridSource%601) instances.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class TreeDataGridSourceExtensions
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> TreeDataGridSourceExtensions
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [WithCheckBoxColumn (6 overloads)](#uid-f113848cf7) | No summary available. |
+| [WithColumn (2 overloads)](#uid-df87822a69) | No summary available. |
+| [WithHierarchicalExpanderColumn](#uid-514eabb9c1) | No summary available. |
+| [WithHierarchicalExpanderTextColumn (3 overloads)](#uid-bb97156473) | No summary available. |
+| [WithRowHeaderColumn (2 overloads)](#uid-b6e65a8f0c) | No summary available. |
+| [WithTemplateColumn (2 overloads)](#uid-a1ed9e24da) | No summary available. |
+| [WithTemplateColumnFromResourceKeys (2 overloads)](#uid-a49cb78e72) | No summary available. |
+| [WithTextColumn (6 overloads)](#uid-2263f1d1cf) | No summary available. |
+| [WithThreeStateCheckBoxColumn (6 overloads)](#uid-b575a36696) | No summary available. |
+
+<span id="uid-f113848cf7"></span>
+
+### WithCheckBoxColumn overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6fdb4fa4f2"></span>
+
+#### WithCheckBoxColumn Method
+
+```csharp
+public Avalonia.Controls.FlatTreeDataGridSource<TModel><TModel> WithCheckBoxColumn<TModel>(Avalonia.Controls.FlatTreeDataGridSource<TModel><TModel> source, System.Linq.Expressions.Expression<Func<TModel,bool>> expression)
+```
+
+##### Parameters
+
+`source` Avalonia.Controls.FlatTreeDataGridSource&lt;TModel&gt;&lt;TModel&gt;
+
+
+`expression` System.Linq.Expressions.Expression&lt;Func&lt;TModel,bool&gt;&gt;
+
+
+##### Type Parameters
+
+`TModel`
+
+
+##### Returns
+
+Avalonia.Controls.FlatTreeDataGridSource&lt;TModel&gt;&lt;TModel&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-26f7338cbf"></span>
+
+#### WithCheckBoxColumn Method
+
+```csharp
+public Avalonia.Controls.FlatTreeDataGridSource<TModel><TModel> WithCheckBoxColumn<TModel>(Avalonia.Controls.FlatTreeDataGridSource<TModel><TModel> source, System.Linq.Expressions.Expression<Func<TModel,bool>> expression, Action<Avalonia.Controls.CheckBoxColumnCreateOptions> options)
+```
+
+##### Parameters
+
+`source` Avalonia.Controls.FlatTreeDataGridSource&lt;TModel&gt;&lt;TModel&gt;
+
+
+`expression` System.Linq.Expressions.Expression&lt;Func&lt;TModel,bool&gt;&gt;
+
+
+`options` Action&lt;[Avalonia.Controls.CheckBoxColumnCreateOptions](xref:Avalonia.Controls.CheckBoxColumnCreateOptions)&gt;
+
+
+##### Type Parameters
+
+`TModel`
+
+
+##### Returns
+
+Avalonia.Controls.FlatTreeDataGridSource&lt;TModel&gt;&lt;TModel&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7e56572532"></span>
+
+#### WithCheckBoxColumn Method
+
+```csharp
+public Avalonia.Controls.FlatTreeDataGridSource<TModel><TModel> WithCheckBoxColumn<TModel>(Avalonia.Controls.FlatTreeDataGridSource<TModel><TModel> source, object header, System.Linq.Expressions.Expression<Func<TModel,bool>> expression, Action<Avalonia.Controls.CheckBoxColumnCreateOptions> options)
+```
+
+##### Parameters
+
+`source` Avalonia.Controls.FlatTreeDataGridSource&lt;TModel&gt;&lt;TModel&gt;
+
+
+`header` object
+
+
+`expression` System.Linq.Expressions.Expression&lt;Func&lt;TModel,bool&gt;&gt;
+
+
+`options` Action&lt;[Avalonia.Controls.CheckBoxColumnCreateOptions](xref:Avalonia.Controls.CheckBoxColumnCreateOptions)&gt;
+
+
+##### Type Parameters
+
+`TModel`
+
+
+##### Returns
+
+Avalonia.Controls.FlatTreeDataGridSource&lt;TModel&gt;&lt;TModel&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3966f5062e"></span>
+
+#### WithCheckBoxColumn Method
+
+```csharp
+public Avalonia.Controls.HierarchicalTreeDataGridSource<TModel><TModel> WithCheckBoxColumn<TModel>(Avalonia.Controls.HierarchicalTreeDataGridSource<TModel><TModel> source, System.Linq.Expressions.Expression<Func<TModel,bool>> expression)
+```
+
+##### Parameters
+
+`source` Avalonia.Controls.HierarchicalTreeDataGridSource&lt;TModel&gt;&lt;TModel&gt;
+
+
+`expression` System.Linq.Expressions.Expression&lt;Func&lt;TModel,bool&gt;&gt;
+
+
+##### Type Parameters
+
+`TModel`
+
+
+##### Returns
+
+Avalonia.Controls.HierarchicalTreeDataGridSource&lt;TModel&gt;&lt;TModel&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a7327e069c"></span>
+
+#### WithCheckBoxColumn Method
+
+```csharp
+public Avalonia.Controls.HierarchicalTreeDataGridSource<TModel><TModel> WithCheckBoxColumn<TModel>(Avalonia.Controls.HierarchicalTreeDataGridSource<TModel><TModel> source, System.Linq.Expressions.Expression<Func<TModel,bool>> expression, Action<Avalonia.Controls.CheckBoxColumnCreateOptions> options)
+```
+
+##### Parameters
+
+`source` Avalonia.Controls.HierarchicalTreeDataGridSource&lt;TModel&gt;&lt;TModel&gt;
+
+
+`expression` System.Linq.Expressions.Expression&lt;Func&lt;TModel,bool&gt;&gt;
+
+
+`options` Action&lt;[Avalonia.Controls.CheckBoxColumnCreateOptions](xref:Avalonia.Controls.CheckBoxColumnCreateOptions)&gt;
+
+
+##### Type Parameters
+
+`TModel`
+
+
+##### Returns
+
+Avalonia.Controls.HierarchicalTreeDataGridSource&lt;TModel&gt;&lt;TModel&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9df4726399"></span>
+
+#### WithCheckBoxColumn Method
+
+```csharp
+public Avalonia.Controls.HierarchicalTreeDataGridSource<TModel><TModel> WithCheckBoxColumn<TModel>(Avalonia.Controls.HierarchicalTreeDataGridSource<TModel><TModel> source, object header, System.Linq.Expressions.Expression<Func<TModel,bool>> expression, Action<Avalonia.Controls.CheckBoxColumnCreateOptions> options)
+```
+
+##### Parameters
+
+`source` Avalonia.Controls.HierarchicalTreeDataGridSource&lt;TModel&gt;&lt;TModel&gt;
+
+
+`header` object
+
+
+`expression` System.Linq.Expressions.Expression&lt;Func&lt;TModel,bool&gt;&gt;
+
+
+`options` Action&lt;[Avalonia.Controls.CheckBoxColumnCreateOptions](xref:Avalonia.Controls.CheckBoxColumnCreateOptions)&gt;
+
+
+##### Type Parameters
+
+`TModel`
+
+
+##### Returns
+
+Avalonia.Controls.HierarchicalTreeDataGridSource&lt;TModel&gt;&lt;TModel&gt;
+
+
+</section>
+
+<span id="uid-df87822a69"></span>
+
+### WithColumn overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7bbb5da880"></span>
+
+#### WithColumn Method
+
+```csharp
+public Avalonia.Controls.FlatTreeDataGridSource<TModel><TModel> WithColumn<TModel>(Avalonia.Controls.FlatTreeDataGridSource<TModel><TModel> source, Avalonia.Controls.TreeDataGridColumn column)
+```
+
+##### Parameters
+
+`source` Avalonia.Controls.FlatTreeDataGridSource&lt;TModel&gt;&lt;TModel&gt;
+
+
+`column` [Avalonia.Controls.TreeDataGridColumn](xref:Avalonia.Controls.TreeDataGridColumn)
+
+
+##### Type Parameters
+
+`TModel`
+
+
+##### Returns
+
+Avalonia.Controls.FlatTreeDataGridSource&lt;TModel&gt;&lt;TModel&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4ac94bb03e"></span>
+
+#### WithColumn Method
+
+```csharp
+public Avalonia.Controls.HierarchicalTreeDataGridSource<TModel><TModel> WithColumn<TModel>(Avalonia.Controls.HierarchicalTreeDataGridSource<TModel><TModel> source, Avalonia.Controls.TreeDataGridColumn column)
+```
+
+##### Parameters
+
+`source` Avalonia.Controls.HierarchicalTreeDataGridSource&lt;TModel&gt;&lt;TModel&gt;
+
+
+`column` [Avalonia.Controls.TreeDataGridColumn](xref:Avalonia.Controls.TreeDataGridColumn)
+
+
+##### Type Parameters
+
+`TModel`
+
+
+##### Returns
+
+Avalonia.Controls.HierarchicalTreeDataGridSource&lt;TModel&gt;&lt;TModel&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-514eabb9c1"></span>
+
+### WithHierarchicalExpanderColumn Method
+
+```csharp
+public Avalonia.Controls.HierarchicalTreeDataGridSource<TModel><TModel> WithHierarchicalExpanderColumn<TModel>(Avalonia.Controls.HierarchicalTreeDataGridSource<TModel><TModel> source, object header, Avalonia.Controls.TreeDataGridColumn inner, System.Linq.Expressions.Expression<Func<TModel,System.Collections.Generic.IEnumerable<TModel>>> children, Action<Avalonia.Controls.HierarchicalExpanderColumnCreateOptions<TModel><TModel>> options)
+```
+
+#### Parameters
+
+`source` Avalonia.Controls.HierarchicalTreeDataGridSource&lt;TModel&gt;&lt;TModel&gt;
+
+
+`header` object
+
+
+`inner` [Avalonia.Controls.TreeDataGridColumn](xref:Avalonia.Controls.TreeDataGridColumn)
+
+
+`children` System.Linq.Expressions.Expression&lt;Func&lt;TModel,System.Collections.Generic.IEnumerable&lt;TModel&gt;&gt;&gt;
+
+
+`options` Action&lt;Avalonia.Controls.HierarchicalExpanderColumnCreateOptions&lt;TModel&gt;&lt;TModel&gt;&gt;
+
+
+#### Type Parameters
+
+`TModel`
+
+
+#### Returns
+
+Avalonia.Controls.HierarchicalTreeDataGridSource&lt;TModel&gt;&lt;TModel&gt;
+
+
+</section>
+
+<span id="uid-bb97156473"></span>
+
+### WithHierarchicalExpanderTextColumn overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-23aeb87db9"></span>
+
+#### WithHierarchicalExpanderTextColumn Method
+
+```csharp
+public Avalonia.Controls.HierarchicalTreeDataGridSource<TModel><TModel> WithHierarchicalExpanderTextColumn<TModel, TValue>(Avalonia.Controls.HierarchicalTreeDataGridSource<TModel><TModel> source, System.Linq.Expressions.Expression<Func<TModel,TValue>> expression, System.Linq.Expressions.Expression<Func<TModel,System.Collections.Generic.IEnumerable<TModel>>> children)
+```
+
+##### Parameters
+
+`source` Avalonia.Controls.HierarchicalTreeDataGridSource&lt;TModel&gt;&lt;TModel&gt;
+
+
+`expression` System.Linq.Expressions.Expression&lt;Func&lt;TModel,TValue&gt;&gt;
+
+
+`children` System.Linq.Expressions.Expression&lt;Func&lt;TModel,System.Collections.Generic.IEnumerable&lt;TModel&gt;&gt;&gt;
+
+
+##### Type Parameters
+
+`TModel`
+
+
+`TValue`
+
+
+##### Returns
+
+Avalonia.Controls.HierarchicalTreeDataGridSource&lt;TModel&gt;&lt;TModel&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0caffc1789"></span>
+
+#### WithHierarchicalExpanderTextColumn Method
+
+```csharp
+public Avalonia.Controls.HierarchicalTreeDataGridSource<TModel><TModel> WithHierarchicalExpanderTextColumn<TModel, TValue>(Avalonia.Controls.HierarchicalTreeDataGridSource<TModel><TModel> source, System.Linq.Expressions.Expression<Func<TModel,TValue>> expression, System.Linq.Expressions.Expression<Func<TModel,System.Collections.Generic.IEnumerable<TModel>>> children, Action<Avalonia.Controls.HierarchicalExpanderTextColumnCreateOptions<TModel><TModel>> options)
+```
+
+##### Parameters
+
+`source` Avalonia.Controls.HierarchicalTreeDataGridSource&lt;TModel&gt;&lt;TModel&gt;
+
+
+`expression` System.Linq.Expressions.Expression&lt;Func&lt;TModel,TValue&gt;&gt;
+
+
+`children` System.Linq.Expressions.Expression&lt;Func&lt;TModel,System.Collections.Generic.IEnumerable&lt;TModel&gt;&gt;&gt;
+
+
+`options` Action&lt;Avalonia.Controls.HierarchicalExpanderTextColumnCreateOptions&lt;TModel&gt;&lt;TModel&gt;&gt;
+
+
+##### Type Parameters
+
+`TModel`
+
+
+`TValue`
+
+
+##### Returns
+
+Avalonia.Controls.HierarchicalTreeDataGridSource&lt;TModel&gt;&lt;TModel&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8b31cc4b3a"></span>
+
+#### WithHierarchicalExpanderTextColumn Method
+
+```csharp
+public Avalonia.Controls.HierarchicalTreeDataGridSource<TModel><TModel> WithHierarchicalExpanderTextColumn<TModel, TValue>(Avalonia.Controls.HierarchicalTreeDataGridSource<TModel><TModel> source, object header, System.Linq.Expressions.Expression<Func<TModel,TValue>> expression, System.Linq.Expressions.Expression<Func<TModel,System.Collections.Generic.IEnumerable<TModel>>> children, Action<Avalonia.Controls.HierarchicalExpanderTextColumnCreateOptions<TModel><TModel>> options)
+```
+
+##### Parameters
+
+`source` Avalonia.Controls.HierarchicalTreeDataGridSource&lt;TModel&gt;&lt;TModel&gt;
+
+
+`header` object
+
+
+`expression` System.Linq.Expressions.Expression&lt;Func&lt;TModel,TValue&gt;&gt;
+
+
+`children` System.Linq.Expressions.Expression&lt;Func&lt;TModel,System.Collections.Generic.IEnumerable&lt;TModel&gt;&gt;&gt;
+
+
+`options` Action&lt;Avalonia.Controls.HierarchicalExpanderTextColumnCreateOptions&lt;TModel&gt;&lt;TModel&gt;&gt;
+
+
+##### Type Parameters
+
+`TModel`
+
+
+`TValue`
+
+
+##### Returns
+
+Avalonia.Controls.HierarchicalTreeDataGridSource&lt;TModel&gt;&lt;TModel&gt;
+
+
+</section>
+
+<span id="uid-b6e65a8f0c"></span>
+
+### WithRowHeaderColumn overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-fe24b8c370"></span>
+
+#### WithRowHeaderColumn Method
+
+```csharp
+public Avalonia.Controls.FlatTreeDataGridSource<TModel><TModel> WithRowHeaderColumn<TModel>(Avalonia.Controls.FlatTreeDataGridSource<TModel><TModel> source, object header, Nullable<Avalonia.Controls.GridLength> width)
+```
+
+##### Parameters
+
+`source` Avalonia.Controls.FlatTreeDataGridSource&lt;TModel&gt;&lt;TModel&gt;
+
+
+`header` object
+
+
+`width` Nullable&lt;Avalonia.Controls.GridLength&gt;
+
+
+##### Type Parameters
+
+`TModel`
+
+
+##### Returns
+
+Avalonia.Controls.FlatTreeDataGridSource&lt;TModel&gt;&lt;TModel&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9adeff320f"></span>
+
+#### WithRowHeaderColumn Method
+
+```csharp
+public Avalonia.Controls.HierarchicalTreeDataGridSource<TModel><TModel> WithRowHeaderColumn<TModel>(Avalonia.Controls.HierarchicalTreeDataGridSource<TModel><TModel> source, object header, Nullable<Avalonia.Controls.GridLength> width)
+```
+
+##### Parameters
+
+`source` Avalonia.Controls.HierarchicalTreeDataGridSource&lt;TModel&gt;&lt;TModel&gt;
+
+
+`header` object
+
+
+`width` Nullable&lt;Avalonia.Controls.GridLength&gt;
+
+
+##### Type Parameters
+
+`TModel`
+
+
+##### Returns
+
+Avalonia.Controls.HierarchicalTreeDataGridSource&lt;TModel&gt;&lt;TModel&gt;
+
+
+</section>
+
+<span id="uid-a1ed9e24da"></span>
+
+### WithTemplateColumn overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5bba6512c8"></span>
+
+#### WithTemplateColumn Method
+
+```csharp
+public Avalonia.Controls.FlatTreeDataGridSource<TModel><TModel> WithTemplateColumn<TModel>(Avalonia.Controls.FlatTreeDataGridSource<TModel><TModel> source, object header, Avalonia.Controls.Templates.IDataTemplate cellTemplate, Avalonia.Controls.Templates.IDataTemplate cellEditingTemplate, Action<Avalonia.Controls.TemplateColumnCreateOptions> options)
+```
+
+##### Parameters
+
+`source` Avalonia.Controls.FlatTreeDataGridSource&lt;TModel&gt;&lt;TModel&gt;
+
+
+`header` object
+
+
+`cellTemplate` Avalonia.Controls.Templates.IDataTemplate
+
+
+`cellEditingTemplate` Avalonia.Controls.Templates.IDataTemplate
+
+
+`options` Action&lt;[Avalonia.Controls.TemplateColumnCreateOptions](xref:Avalonia.Controls.TemplateColumnCreateOptions)&gt;
+
+
+##### Type Parameters
+
+`TModel`
+
+
+##### Returns
+
+Avalonia.Controls.FlatTreeDataGridSource&lt;TModel&gt;&lt;TModel&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4b33eebf4f"></span>
+
+#### WithTemplateColumn Method
+
+```csharp
+public Avalonia.Controls.HierarchicalTreeDataGridSource<TModel><TModel> WithTemplateColumn<TModel>(Avalonia.Controls.HierarchicalTreeDataGridSource<TModel><TModel> source, object header, Avalonia.Controls.Templates.IDataTemplate cellTemplate, Avalonia.Controls.Templates.IDataTemplate cellEditingTemplate, Action<Avalonia.Controls.TemplateColumnCreateOptions> options)
+```
+
+##### Parameters
+
+`source` Avalonia.Controls.HierarchicalTreeDataGridSource&lt;TModel&gt;&lt;TModel&gt;
+
+
+`header` object
+
+
+`cellTemplate` Avalonia.Controls.Templates.IDataTemplate
+
+
+`cellEditingTemplate` Avalonia.Controls.Templates.IDataTemplate
+
+
+`options` Action&lt;[Avalonia.Controls.TemplateColumnCreateOptions](xref:Avalonia.Controls.TemplateColumnCreateOptions)&gt;
+
+
+##### Type Parameters
+
+`TModel`
+
+
+##### Returns
+
+Avalonia.Controls.HierarchicalTreeDataGridSource&lt;TModel&gt;&lt;TModel&gt;
+
+
+</section>
+
+<span id="uid-a49cb78e72"></span>
+
+### WithTemplateColumnFromResourceKeys overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-494d7241af"></span>
+
+#### WithTemplateColumnFromResourceKeys Method
+
+```csharp
+public Avalonia.Controls.FlatTreeDataGridSource<TModel><TModel> WithTemplateColumnFromResourceKeys<TModel>(Avalonia.Controls.FlatTreeDataGridSource<TModel><TModel> source, object header, object cellTemplateResourceKey, object cellEditingTemplateResourceKey, Action<Avalonia.Controls.TemplateColumnCreateOptions> options)
+```
+
+##### Parameters
+
+`source` Avalonia.Controls.FlatTreeDataGridSource&lt;TModel&gt;&lt;TModel&gt;
+
+
+`header` object
+
+
+`cellTemplateResourceKey` object
+
+
+`cellEditingTemplateResourceKey` object
+
+
+`options` Action&lt;[Avalonia.Controls.TemplateColumnCreateOptions](xref:Avalonia.Controls.TemplateColumnCreateOptions)&gt;
+
+
+##### Type Parameters
+
+`TModel`
+
+
+##### Returns
+
+Avalonia.Controls.FlatTreeDataGridSource&lt;TModel&gt;&lt;TModel&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-38a5ac5ed9"></span>
+
+#### WithTemplateColumnFromResourceKeys Method
+
+```csharp
+public Avalonia.Controls.HierarchicalTreeDataGridSource<TModel><TModel> WithTemplateColumnFromResourceKeys<TModel>(Avalonia.Controls.HierarchicalTreeDataGridSource<TModel><TModel> source, object header, object cellTemplateResourceKey, object cellEditingTemplateResourceKey, Action<Avalonia.Controls.TemplateColumnCreateOptions> options)
+```
+
+##### Parameters
+
+`source` Avalonia.Controls.HierarchicalTreeDataGridSource&lt;TModel&gt;&lt;TModel&gt;
+
+
+`header` object
+
+
+`cellTemplateResourceKey` object
+
+
+`cellEditingTemplateResourceKey` object
+
+
+`options` Action&lt;[Avalonia.Controls.TemplateColumnCreateOptions](xref:Avalonia.Controls.TemplateColumnCreateOptions)&gt;
+
+
+##### Type Parameters
+
+`TModel`
+
+
+##### Returns
+
+Avalonia.Controls.HierarchicalTreeDataGridSource&lt;TModel&gt;&lt;TModel&gt;
+
+
+</section>
+
+<span id="uid-2263f1d1cf"></span>
+
+### WithTextColumn overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-227ea7946b"></span>
+
+#### WithTextColumn Method
+
+```csharp
+public Avalonia.Controls.FlatTreeDataGridSource<TModel><TModel> WithTextColumn<TModel, TValue>(Avalonia.Controls.FlatTreeDataGridSource<TModel><TModel> source, System.Linq.Expressions.Expression<Func<TModel,TValue>> expression)
+```
+
+##### Parameters
+
+`source` Avalonia.Controls.FlatTreeDataGridSource&lt;TModel&gt;&lt;TModel&gt;
+
+
+`expression` System.Linq.Expressions.Expression&lt;Func&lt;TModel,TValue&gt;&gt;
+
+
+##### Type Parameters
+
+`TModel`
+
+
+`TValue`
+
+
+##### Returns
+
+Avalonia.Controls.FlatTreeDataGridSource&lt;TModel&gt;&lt;TModel&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9b8ea26d28"></span>
+
+#### WithTextColumn Method
+
+```csharp
+public Avalonia.Controls.FlatTreeDataGridSource<TModel><TModel> WithTextColumn<TModel, TValue>(Avalonia.Controls.FlatTreeDataGridSource<TModel><TModel> source, System.Linq.Expressions.Expression<Func<TModel,TValue>> expression, Action<Avalonia.Controls.TextColumnCreateOptions> options)
+```
+
+##### Parameters
+
+`source` Avalonia.Controls.FlatTreeDataGridSource&lt;TModel&gt;&lt;TModel&gt;
+
+
+`expression` System.Linq.Expressions.Expression&lt;Func&lt;TModel,TValue&gt;&gt;
+
+
+`options` Action&lt;[Avalonia.Controls.TextColumnCreateOptions](xref:Avalonia.Controls.TextColumnCreateOptions)&gt;
+
+
+##### Type Parameters
+
+`TModel`
+
+
+`TValue`
+
+
+##### Returns
+
+Avalonia.Controls.FlatTreeDataGridSource&lt;TModel&gt;&lt;TModel&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-769e42b5c1"></span>
+
+#### WithTextColumn Method
+
+```csharp
+public Avalonia.Controls.FlatTreeDataGridSource<TModel><TModel> WithTextColumn<TModel, TValue>(Avalonia.Controls.FlatTreeDataGridSource<TModel><TModel> source, object header, System.Linq.Expressions.Expression<Func<TModel,TValue>> expression, Action<Avalonia.Controls.TextColumnCreateOptions> options)
+```
+
+##### Parameters
+
+`source` Avalonia.Controls.FlatTreeDataGridSource&lt;TModel&gt;&lt;TModel&gt;
+
+
+`header` object
+
+
+`expression` System.Linq.Expressions.Expression&lt;Func&lt;TModel,TValue&gt;&gt;
+
+
+`options` Action&lt;[Avalonia.Controls.TextColumnCreateOptions](xref:Avalonia.Controls.TextColumnCreateOptions)&gt;
+
+
+##### Type Parameters
+
+`TModel`
+
+
+`TValue`
+
+
+##### Returns
+
+Avalonia.Controls.FlatTreeDataGridSource&lt;TModel&gt;&lt;TModel&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-16ec2f8761"></span>
+
+#### WithTextColumn Method
+
+```csharp
+public Avalonia.Controls.HierarchicalTreeDataGridSource<TModel><TModel> WithTextColumn<TModel, TValue>(Avalonia.Controls.HierarchicalTreeDataGridSource<TModel><TModel> source, System.Linq.Expressions.Expression<Func<TModel,TValue>> expression)
+```
+
+##### Parameters
+
+`source` Avalonia.Controls.HierarchicalTreeDataGridSource&lt;TModel&gt;&lt;TModel&gt;
+
+
+`expression` System.Linq.Expressions.Expression&lt;Func&lt;TModel,TValue&gt;&gt;
+
+
+##### Type Parameters
+
+`TModel`
+
+
+`TValue`
+
+
+##### Returns
+
+Avalonia.Controls.HierarchicalTreeDataGridSource&lt;TModel&gt;&lt;TModel&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-bee5da31f9"></span>
+
+#### WithTextColumn Method
+
+```csharp
+public Avalonia.Controls.HierarchicalTreeDataGridSource<TModel><TModel> WithTextColumn<TModel, TValue>(Avalonia.Controls.HierarchicalTreeDataGridSource<TModel><TModel> source, System.Linq.Expressions.Expression<Func<TModel,TValue>> expression, Action<Avalonia.Controls.TextColumnCreateOptions> options)
+```
+
+##### Parameters
+
+`source` Avalonia.Controls.HierarchicalTreeDataGridSource&lt;TModel&gt;&lt;TModel&gt;
+
+
+`expression` System.Linq.Expressions.Expression&lt;Func&lt;TModel,TValue&gt;&gt;
+
+
+`options` Action&lt;[Avalonia.Controls.TextColumnCreateOptions](xref:Avalonia.Controls.TextColumnCreateOptions)&gt;
+
+
+##### Type Parameters
+
+`TModel`
+
+
+`TValue`
+
+
+##### Returns
+
+Avalonia.Controls.HierarchicalTreeDataGridSource&lt;TModel&gt;&lt;TModel&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ead50d40f0"></span>
+
+#### WithTextColumn Method
+
+```csharp
+public Avalonia.Controls.HierarchicalTreeDataGridSource<TModel><TModel> WithTextColumn<TModel, TValue>(Avalonia.Controls.HierarchicalTreeDataGridSource<TModel><TModel> source, object header, System.Linq.Expressions.Expression<Func<TModel,TValue>> expression, Action<Avalonia.Controls.TextColumnCreateOptions> options)
+```
+
+##### Parameters
+
+`source` Avalonia.Controls.HierarchicalTreeDataGridSource&lt;TModel&gt;&lt;TModel&gt;
+
+
+`header` object
+
+
+`expression` System.Linq.Expressions.Expression&lt;Func&lt;TModel,TValue&gt;&gt;
+
+
+`options` Action&lt;[Avalonia.Controls.TextColumnCreateOptions](xref:Avalonia.Controls.TextColumnCreateOptions)&gt;
+
+
+##### Type Parameters
+
+`TModel`
+
+
+`TValue`
+
+
+##### Returns
+
+Avalonia.Controls.HierarchicalTreeDataGridSource&lt;TModel&gt;&lt;TModel&gt;
+
+
+</section>
+
+<span id="uid-b575a36696"></span>
+
+### WithThreeStateCheckBoxColumn overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f6bf30a011"></span>
+
+#### WithThreeStateCheckBoxColumn Method
+
+```csharp
+public Avalonia.Controls.FlatTreeDataGridSource<TModel><TModel> WithThreeStateCheckBoxColumn<TModel>(Avalonia.Controls.FlatTreeDataGridSource<TModel><TModel> source, System.Linq.Expressions.Expression<Func<TModel,Nullable<bool>>> expression)
+```
+
+##### Parameters
+
+`source` Avalonia.Controls.FlatTreeDataGridSource&lt;TModel&gt;&lt;TModel&gt;
+
+
+`expression` System.Linq.Expressions.Expression&lt;Func&lt;TModel,Nullable&lt;bool&gt;&gt;&gt;
+
+
+##### Type Parameters
+
+`TModel`
+
+
+##### Returns
+
+Avalonia.Controls.FlatTreeDataGridSource&lt;TModel&gt;&lt;TModel&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f6616d3e68"></span>
+
+#### WithThreeStateCheckBoxColumn Method
+
+```csharp
+public Avalonia.Controls.FlatTreeDataGridSource<TModel><TModel> WithThreeStateCheckBoxColumn<TModel>(Avalonia.Controls.FlatTreeDataGridSource<TModel><TModel> source, System.Linq.Expressions.Expression<Func<TModel,Nullable<bool>>> expression, Action<Avalonia.Controls.CheckBoxColumnCreateOptions> options)
+```
+
+##### Parameters
+
+`source` Avalonia.Controls.FlatTreeDataGridSource&lt;TModel&gt;&lt;TModel&gt;
+
+
+`expression` System.Linq.Expressions.Expression&lt;Func&lt;TModel,Nullable&lt;bool&gt;&gt;&gt;
+
+
+`options` Action&lt;[Avalonia.Controls.CheckBoxColumnCreateOptions](xref:Avalonia.Controls.CheckBoxColumnCreateOptions)&gt;
+
+
+##### Type Parameters
+
+`TModel`
+
+
+##### Returns
+
+Avalonia.Controls.FlatTreeDataGridSource&lt;TModel&gt;&lt;TModel&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3a6969fd7c"></span>
+
+#### WithThreeStateCheckBoxColumn Method
+
+```csharp
+public Avalonia.Controls.FlatTreeDataGridSource<TModel><TModel> WithThreeStateCheckBoxColumn<TModel>(Avalonia.Controls.FlatTreeDataGridSource<TModel><TModel> source, object header, System.Linq.Expressions.Expression<Func<TModel,Nullable<bool>>> expression, Action<Avalonia.Controls.CheckBoxColumnCreateOptions> options)
+```
+
+##### Parameters
+
+`source` Avalonia.Controls.FlatTreeDataGridSource&lt;TModel&gt;&lt;TModel&gt;
+
+
+`header` object
+
+
+`expression` System.Linq.Expressions.Expression&lt;Func&lt;TModel,Nullable&lt;bool&gt;&gt;&gt;
+
+
+`options` Action&lt;[Avalonia.Controls.CheckBoxColumnCreateOptions](xref:Avalonia.Controls.CheckBoxColumnCreateOptions)&gt;
+
+
+##### Type Parameters
+
+`TModel`
+
+
+##### Returns
+
+Avalonia.Controls.FlatTreeDataGridSource&lt;TModel&gt;&lt;TModel&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-55b8d09d75"></span>
+
+#### WithThreeStateCheckBoxColumn Method
+
+```csharp
+public Avalonia.Controls.HierarchicalTreeDataGridSource<TModel><TModel> WithThreeStateCheckBoxColumn<TModel>(Avalonia.Controls.HierarchicalTreeDataGridSource<TModel><TModel> source, System.Linq.Expressions.Expression<Func<TModel,Nullable<bool>>> expression)
+```
+
+##### Parameters
+
+`source` Avalonia.Controls.HierarchicalTreeDataGridSource&lt;TModel&gt;&lt;TModel&gt;
+
+
+`expression` System.Linq.Expressions.Expression&lt;Func&lt;TModel,Nullable&lt;bool&gt;&gt;&gt;
+
+
+##### Type Parameters
+
+`TModel`
+
+
+##### Returns
+
+Avalonia.Controls.HierarchicalTreeDataGridSource&lt;TModel&gt;&lt;TModel&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d2012e9cc8"></span>
+
+#### WithThreeStateCheckBoxColumn Method
+
+```csharp
+public Avalonia.Controls.HierarchicalTreeDataGridSource<TModel><TModel> WithThreeStateCheckBoxColumn<TModel>(Avalonia.Controls.HierarchicalTreeDataGridSource<TModel><TModel> source, System.Linq.Expressions.Expression<Func<TModel,Nullable<bool>>> expression, Action<Avalonia.Controls.CheckBoxColumnCreateOptions> options)
+```
+
+##### Parameters
+
+`source` Avalonia.Controls.HierarchicalTreeDataGridSource&lt;TModel&gt;&lt;TModel&gt;
+
+
+`expression` System.Linq.Expressions.Expression&lt;Func&lt;TModel,Nullable&lt;bool&gt;&gt;&gt;
+
+
+`options` Action&lt;[Avalonia.Controls.CheckBoxColumnCreateOptions](xref:Avalonia.Controls.CheckBoxColumnCreateOptions)&gt;
+
+
+##### Type Parameters
+
+`TModel`
+
+
+##### Returns
+
+Avalonia.Controls.HierarchicalTreeDataGridSource&lt;TModel&gt;&lt;TModel&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b662ffc3fd"></span>
+
+#### WithThreeStateCheckBoxColumn Method
+
+```csharp
+public Avalonia.Controls.HierarchicalTreeDataGridSource<TModel><TModel> WithThreeStateCheckBoxColumn<TModel>(Avalonia.Controls.HierarchicalTreeDataGridSource<TModel><TModel> source, object header, System.Linq.Expressions.Expression<Func<TModel,Nullable<bool>>> expression, Action<Avalonia.Controls.CheckBoxColumnCreateOptions> options)
+```
+
+##### Parameters
+
+`source` Avalonia.Controls.HierarchicalTreeDataGridSource&lt;TModel&gt;&lt;TModel&gt;
+
+
+`header` object
+
+
+`expression` System.Linq.Expressions.Expression&lt;Func&lt;TModel,Nullable&lt;bool&gt;&gt;&gt;
+
+
+`options` Action&lt;[Avalonia.Controls.CheckBoxColumnCreateOptions](xref:Avalonia.Controls.CheckBoxColumnCreateOptions)&gt;
+
+
+##### Type Parameters
+
+`TModel`
+
+
+##### Returns
+
+Avalonia.Controls.HierarchicalTreeDataGridSource&lt;TModel&gt;&lt;TModel&gt;
+
+
+</section>
+
+</ApiRefPage>
+

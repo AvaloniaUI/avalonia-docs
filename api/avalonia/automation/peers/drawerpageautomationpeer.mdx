@@ -33,8 +33,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Controls/Automation/Peers/DrawerPageAutomationPeer.cs">DrawerPageAutomationPeer.cs</a>
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/3111696698e2c3d6fe9aace8cb954153ee16b3e4/src/Avalonia.Controls/Automation/Peers/DrawerPageAutomationPeer.cs">DrawerPageAutomationPeer.cs</a>
 </div>
+
 </div>
 
 <div className="apiref-page__signature">
@@ -48,6 +49,9 @@ public class DrawerPageAutomationPeer
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="automationpeer">AutomationPeer</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="controlautomationpeer">ControlAutomationPeer</a> <span className="apiref-page__relation-separator">-&gt;</span> DrawerPageAutomationPeer
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="../provider/iexpandcollapseprovider">IExpandCollapseProvider</a>
 </div>
 </div>
 
@@ -78,6 +82,8 @@ public DrawerPageAutomationPeer(Avalonia.Controls.DrawerPage owner)
 
 | Name | Description |
 | --- | --- |
+| [Collapse](#uid-49bf4534b1) | No summary available. |
+| [Expand](#uid-7b5bced812) | No summary available. |
 | [CreatePeerForElement](controlautomationpeer.mdx#uid-01e76040e7) | Gets the [Avalonia.Automation.Peers.AutomationPeer](xref:Avalonia.Automation.Peers.AutomationPeer) for a [Avalonia.Controls.Control](xref:Avalonia.Controls.Control), creating it if necessary. Inherited from [ControlAutomationPeer](controlautomationpeer.mdx). |
 | [FromElement](controlautomationpeer.mdx#uid-f0c358c33d) | Gets an existing [Avalonia.Automation.Peers.AutomationPeer](xref:Avalonia.Automation.Peers.AutomationPeer) for a [Avalonia.Controls.Control](xref:Avalonia.Controls.Control). Inherited from [ControlAutomationPeer](controlautomationpeer.mdx). |
 | [GetOrCreate](controlautomationpeer.mdx#uid-d5fc666c05) | Inherited from [ControlAutomationPeer](controlautomationpeer.mdx). |
@@ -111,11 +117,49 @@ public DrawerPageAutomationPeer(Avalonia.Controls.DrawerPage owner)
 | [SetFocus](automationpeer.mdx#uid-6a8d233e48) | Sets the keyboard focus on the element that is associated with this automation peer. Inherited from [AutomationPeer](automationpeer.mdx). |
 | [ShowContextMenu](automationpeer.mdx#uid-8bfe04d25b) | Shows the context menu for the element that is associated with this automation peer. Inherited from [AutomationPeer](automationpeer.mdx). |
 
+<section className="apiref-page__member-entry">
+
+<span id="uid-49bf4534b1"></span>
+
+### Collapse Method
+
+```csharp
+public void Collapse()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7b5bced812"></span>
+
+### Expand Method
+
+```csharp
+public void Expand()
+```
+
+</section>
+
 ## Properties
 
 | Name | Description |
 | --- | --- |
+| [ExpandCollapseState](#uid-137532ad6d) | No summary available. |
 | [Owner](#uid-83cd162f5d) | No summary available. |
+| [ShowsMenu](#uid-349f5fdf2a) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-137532ad6d"></span>
+
+### ExpandCollapseState Property
+
+```csharp
+public Avalonia.Automation.ExpandCollapseState ExpandCollapseState { get; set; }
+```
+
+</section>
 
 <section className="apiref-page__member-entry">
 
@@ -125,6 +169,18 @@ public DrawerPageAutomationPeer(Avalonia.Controls.DrawerPage owner)
 
 ```csharp
 public Avalonia.Controls.DrawerPage Owner { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-349f5fdf2a"></span>
+
+### ShowsMenu Property
+
+```csharp
+public bool ShowsMenu { get; set; }
 ```
 
 </section>

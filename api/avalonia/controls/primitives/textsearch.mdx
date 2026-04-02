@@ -33,8 +33,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Controls/Primitives/TextSearch.cs">TextSearch.cs</a>
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/3111696698e2c3d6fe9aace8cb954153ee16b3e4/src/Avalonia.Controls/Primitives/TextSearch.cs">TextSearch.cs</a>
 </div>
+
 </div>
 
 <div className="apiref-page__lead">
@@ -61,26 +62,26 @@ public class TextSearch
 
 | Name | Description |
 | --- | --- |
-| [GetText](#uid-afcb354f98) | Gets the value of the [Avalonia.Controls.Primitives.TextSearch.TextProperty](xref:Avalonia.Controls.Primitives.TextSearch.TextProperty) attached property from a given [Avalonia.Controls.Control](xref:Avalonia.Controls.Control). |
-| [GetTextBinding](#uid-5ffd8b4a45) | Gets the value of the [Avalonia.Controls.Primitives.TextSearch.TextBindingProperty](xref:Avalonia.Controls.Primitives.TextSearch.TextBindingProperty) attached property from a given [Avalonia.Interactivity.Interactive](xref:Avalonia.Interactivity.Interactive). |
-| [SetText](#uid-f018a77546) | Sets the value of the [Avalonia.Controls.Primitives.TextSearch.TextProperty](xref:Avalonia.Controls.Primitives.TextSearch.TextProperty) attached property to a given [Avalonia.Controls.Control](xref:Avalonia.Controls.Control). |
-| [SetTextBinding](#uid-a4597dd4a8) | Sets the value of the [Avalonia.Controls.Primitives.TextSearch.TextBindingProperty](xref:Avalonia.Controls.Primitives.TextSearch.TextBindingProperty) attached property to a given [Avalonia.Interactivity.Interactive](xref:Avalonia.Interactivity.Interactive). |
+| [GetText](#uid-fa4ebbc592) | Gets the value of the [Avalonia.Controls.Primitives.TextSearch.TextProperty](xref:Avalonia.Controls.Primitives.TextSearch.TextProperty) attached property from a given [Avalonia.Controls.Control](xref:Avalonia.Controls.Control). |
+| [GetTextBinding](#uid-64a919bae8) | Gets the value of the [Avalonia.Controls.Primitives.TextSearch.TextBindingProperty](xref:Avalonia.Controls.Primitives.TextSearch.TextBindingProperty) attached property from a given element. |
+| [SetText](#uid-f3d98b9ddd) | Sets the value of the [Avalonia.Controls.Primitives.TextSearch.TextProperty](xref:Avalonia.Controls.Primitives.TextSearch.TextProperty) attached property to a given [Avalonia.Controls.Control](xref:Avalonia.Controls.Control). |
+| [SetTextBinding](#uid-7a365d1025) | Sets the value of the [Avalonia.Controls.Primitives.TextSearch.TextBindingProperty](xref:Avalonia.Controls.Primitives.TextSearch.TextBindingProperty) attached property to a given element. |
 
 <section className="apiref-page__member-entry">
 
-<span id="uid-afcb354f98"></span>
+<span id="uid-fa4ebbc592"></span>
 
 ### GetText Method
 
 Gets the value of the [Avalonia.Controls.Primitives.TextSearch.TextProperty](xref:Avalonia.Controls.Primitives.TextSearch.TextProperty) attached property from a given [Avalonia.Controls.Control](xref:Avalonia.Controls.Control).
 
 ```csharp
-public string GetText(Avalonia.Interactivity.Interactive control)
+public string GetText(Avalonia.AvaloniaObject element)
 ```
 
 #### Parameters
 
-`control` [Avalonia.Interactivity.Interactive](xref:Avalonia.Interactivity.Interactive)
+`element` [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject)
 
 The control.
 
@@ -96,21 +97,21 @@ The search text.
 
 <section className="apiref-page__member-entry">
 
-<span id="uid-5ffd8b4a45"></span>
+<span id="uid-64a919bae8"></span>
 
 ### GetTextBinding Method
 
-Gets the value of the [Avalonia.Controls.Primitives.TextSearch.TextBindingProperty](xref:Avalonia.Controls.Primitives.TextSearch.TextBindingProperty) attached property from a given [Avalonia.Interactivity.Interactive](xref:Avalonia.Interactivity.Interactive).
+Gets the value of the [Avalonia.Controls.Primitives.TextSearch.TextBindingProperty](xref:Avalonia.Controls.Primitives.TextSearch.TextBindingProperty) attached property from a given element.
 
 ```csharp
-public Avalonia.Data.BindingBase GetTextBinding(Avalonia.Interactivity.Interactive interactive)
+public Avalonia.Data.BindingBase GetTextBinding(Avalonia.AvaloniaObject element)
 ```
 
 #### Parameters
 
-`interactive` [Avalonia.Interactivity.Interactive](xref:Avalonia.Interactivity.Interactive)
+`element` [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject)
 
-The interactive element.
+The element.
 
 
 #### Returns
@@ -124,19 +125,19 @@ The search text binding.
 
 <section className="apiref-page__member-entry">
 
-<span id="uid-f018a77546"></span>
+<span id="uid-f3d98b9ddd"></span>
 
 ### SetText Method
 
 Sets the value of the [Avalonia.Controls.Primitives.TextSearch.TextProperty](xref:Avalonia.Controls.Primitives.TextSearch.TextProperty) attached property to a given [Avalonia.Controls.Control](xref:Avalonia.Controls.Control).
 
 ```csharp
-public void SetText(Avalonia.Interactivity.Interactive control, string text)
+public void SetText(Avalonia.AvaloniaObject element, string text)
 ```
 
 #### Parameters
 
-`control` [Avalonia.Interactivity.Interactive](xref:Avalonia.Interactivity.Interactive)
+`element` [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject)
 
 The control.
 
@@ -150,21 +151,21 @@ The search text to set.
 
 <section className="apiref-page__member-entry">
 
-<span id="uid-a4597dd4a8"></span>
+<span id="uid-7a365d1025"></span>
 
 ### SetTextBinding Method
 
-Sets the value of the [Avalonia.Controls.Primitives.TextSearch.TextBindingProperty](xref:Avalonia.Controls.Primitives.TextSearch.TextBindingProperty) attached property to a given [Avalonia.Interactivity.Interactive](xref:Avalonia.Interactivity.Interactive).
+Sets the value of the [Avalonia.Controls.Primitives.TextSearch.TextBindingProperty](xref:Avalonia.Controls.Primitives.TextSearch.TextBindingProperty) attached property to a given element.
 
 ```csharp
-public void SetTextBinding(Avalonia.Interactivity.Interactive interactive, Avalonia.Data.BindingBase value)
+public void SetTextBinding(Avalonia.AvaloniaObject element, Avalonia.Data.BindingBase value)
 ```
 
 #### Parameters
 
-`interactive` [Avalonia.Interactivity.Interactive](xref:Avalonia.Interactivity.Interactive)
+`element` [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject)
 
-The interactive element.
+The element.
 
 
 `value` [Avalonia.Data.BindingBase](xref:Avalonia.Data.BindingBase)
