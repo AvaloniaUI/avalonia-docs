@@ -303,7 +303,7 @@ You can combine these techniques. For example, use `OnFormFactor` for a top-leve
 
 - [Container queries](/docs/styling/container-queries): Full query syntax, container sizing modes, and restrictions.
 - [How to: Build responsive layouts](/docs/how-to/responsive-layout-how-to): Step-by-step recipes for common responsive patterns.
-- [Layout](/docs/layout/layout): How the Avalonia measure and arrange system works.
+- [Layout](/docs/layout): How the Avalonia measure and arrange system works.
 - [Choosing a layout panel](/docs/layout/choosing-a-layout-panel): Picking the right panel for your scenario.
 - [`OnFormFactorExtension` API reference](/api/avalonia/markup/xaml/markupextensions/onformfactorextension)
 - [`OnPlatformExtension` API reference](/api/avalonia/markup/xaml/markupextensions/onplatformextension)

@@ -195,6 +195,6 @@ public class StatusMonitor : Control
 
 ## See also
 
-- [Events Overview](index): How the routed event system works.
+- [Events Overview](/docs/events): How the routed event system works.
 - [Application Lifetimes](/docs/fundamentals/application-lifetimes): Application-level lifecycle events.
 - [UI Composition](/docs/fundamentals/ui-composition): How controls are composed in the visual tree.

@@ -211,6 +211,6 @@ The main differences are:
 
 ## See also
 
-- [Routed Events Overview](/docs/events/index)
+- [Routed Events Overview](/docs/events)
 - [Input Events](/docs/events/input-events)
 - [Routed Events Deep Dive](/docs/input-interaction/routed-events)

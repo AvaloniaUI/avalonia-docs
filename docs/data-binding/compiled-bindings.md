@@ -154,5 +154,5 @@ You can also create compiled bindings in C# code using the `CompiledBinding.Crea
 
 ## See also
 
-- [Compiled bindings from code](/docs/data-binding/binding-from-code#compiled-bindings-from-code)
+- [Compiled bindings from code](/docs/data-binding/binding-from-code#creating-compiled-bindings-from-code)
 - [Data binding syntax](/docs/data-binding/data-binding-syntax)

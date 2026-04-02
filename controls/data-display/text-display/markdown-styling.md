@@ -161,4 +161,3 @@ To customize, define these resources in your application theme or resource dicti
 ## See also
 
 - [Markdown control](/controls/data-display/text-display/markdown)
-- [Rendering markdown](/docs/app-development/rendering-markdown)

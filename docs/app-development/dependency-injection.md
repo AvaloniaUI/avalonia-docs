@@ -147,4 +147,4 @@ Run your application. If the DI container is configured correctly, the `MainWind
 ## See also
 
 - [Data Binding](/docs/data-binding/introduction-to-data-binding): Binding view models to views.
-- [MVVM Architecture](/docs/concepts/the-mvvm-pattern): Using the MVVM pattern with Avalonia.
+- [MVVM Architecture](/docs/fundamentals/the-mvvm-pattern): Using the MVVM pattern with Avalonia.

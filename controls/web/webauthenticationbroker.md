@@ -110,6 +110,6 @@ Similarly it can be done with [Microsoft identity](https://learn.microsoft.com/e
 
 - [NativeWebView](/controls/web/nativewebview)
 - [NativeWebDialog](/controls/web/nativewebdialog)
-- [WebView environment options](/docs/webview/webview-environment)
+- [WebView environment options](/controls/web/webview-environment)
 - [Embedding web content](/docs/app-development/embedding-web-content)
 - [FAQ](/tools/faq#webview)

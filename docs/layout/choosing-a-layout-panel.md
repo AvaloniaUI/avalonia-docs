@@ -24,14 +24,14 @@ Ask yourself these questions in order:
 
 | Panel | Arrangement | Adapts to window size | Best for |
 |---|---|---|---|
-| [Grid](../controls/layout/panels/grid) | Rows and columns | Yes | Most general-purpose layouts, forms, dashboards |
-| [DockPanel](../controls/layout/panels/dockpanel) | Edges (top, bottom, left, right) + fill | Yes | App shells with header, sidebar, and content area |
-| [StackPanel](../controls/layout/panels/stackpanel) | Single line (vertical or horizontal) | Partially (stretches perpendicular, scrolls along) | Toolbars, menus, simple lists of controls |
-| [WrapPanel](../controls/layout/panels/wrappanel) | Sequential with line wrapping | Yes | Tag clouds, icon grids, responsive item collections |
-| [UniformGrid](../controls/layout/panels/uniformgrid) | Equal-sized cells | Yes | Calculator keypads, image galleries, dashboards with equal tiles |
-| [RelativePanel](../controls/layout/panels/relativepanel) | Relative to siblings or panel edges | Yes | Adaptive layouts that rearrange based on available space |
-| [Canvas](../controls/layout/panels/canvas) | Absolute coordinates | No | Drawing surfaces, diagrams, custom overlays |
-| [Panel](../controls/layout/panels/panel) | Layered on top of each other | Yes | Overlays, stacking visuals at the same position |
+| [Grid](/controls/layout/panels/grid) | Rows and columns | Yes | Most general-purpose layouts, forms, dashboards |
+| [DockPanel](/controls/layout/panels/dockpanel) | Edges (top, bottom, left, right) + fill | Yes | App shells with header, sidebar, and content area |
+| [StackPanel](/controls/layout/panels/stackpanel) | Single line (vertical or horizontal) | Partially (stretches perpendicular, scrolls along) | Toolbars, menus, simple lists of controls |
+| [WrapPanel](/controls/layout/panels/wrappanel) | Sequential with line wrapping | Yes | Tag clouds, icon grids, responsive item collections |
+| [UniformGrid](/controls/layout/panels/uniformgrid) | Equal-sized cells | Yes | Calculator keypads, image galleries, dashboards with equal tiles |
+| [RelativePanel](/controls/layout/panels/relativepanel) | Relative to siblings or panel edges | Yes | Adaptive layouts that rearrange based on available space |
+| [Canvas](/controls/layout/panels/canvas) | Absolute coordinates | No | Drawing surfaces, diagrams, custom overlays |
+| [Panel](/controls/layout/panels/panel) | Layered on top of each other | Yes | Overlays, stacking visuals at the same position |
 
 ## Panel details
 
@@ -215,7 +215,7 @@ Complex layouts typically combine multiple panels. Use the simplest panel at eac
 
 ## See also
 
-- [Layout](layout) for how the measure and arrange system works.
+- [Layout](/docs/layout) for how the measure and arrange system works.
 - [Positioning Controls](positioning-controls) for alignment, margin, and padding.
 - [Responsive Layout How-To](/docs/how-to/responsive-layout-how-to) for adaptive layout techniques.
 - Individual panel references: [Grid](/controls/layout/panels/grid), [DockPanel](/controls/layout/panels/dockpanel), [StackPanel](/controls/layout/panels/stackpanel), [WrapPanel](/controls/layout/panels/wrappanel), [Canvas](/controls/layout/panels/canvas), [RelativePanel](/controls/layout/panels/relativepanel), [UniformGrid](/controls/layout/panels/uniformgrid), [Panel](/controls/layout/panels/panel).

@@ -309,7 +309,7 @@ For Linux support, please use [NativeWebDialog](/controls/web/nativewebdialog)
 ## See also
 
 - [NativeWebDialog](/controls/web/nativewebdialog)
-- [WebAuthenticationBroker](/docs/webview/webauthenticationbroker)
-- [WebView environment options](/docs/webview/webview-environment)
+- [WebAuthenticationBroker](/controls/web/webauthenticationbroker)
+- [WebView environment options](/controls/web/webview-environment)
 - [Embedding web content](/docs/app-development/embedding-web-content)
 - [FAQ](/tools/faq#webview)

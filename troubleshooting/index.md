@@ -76,11 +76,3 @@ Find help diagnosing and resolving common issues when building Avalonia apps. Wh
     <p>Common issues with control themes, including theme lookup and unintended side effects.</p>
   </DocsCard>
 </DocsCards>
-
-## XPF
-
-<DocsCards>
-  <DocsCard header="Troubleshooting Avalonia XPF" href="/troubleshooting/xpf">
-    <p>Issues when using Avalonia XPF for WPF compatibility.</p>
-  </DocsCard>
-</DocsCards>

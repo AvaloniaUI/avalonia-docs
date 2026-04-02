@@ -100,6 +100,6 @@ With this code-behind, the text block displays the current value of the scroll b
 
 ## See also
 
-- [ScrollViewer](../scrollviewer)
+- [ScrollViewer](/controls/layout/containers/scrollviewer)
 - [ScrollBar API reference](/api/avalonia/controls/primitives/scrollbar)
 - [`ScrollBar.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Primitives/ScrollBar.cs)

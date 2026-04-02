@@ -352,6 +352,6 @@ To streamline code migration, you can also use the `NativeWebView` control with 
 
 - [NativeWebView](/controls/web/nativewebview)
 - [NativeWebDialog](/controls/web/nativewebdialog)
-- [WebAuthenticationBroker](/docs/webview/webauthenticationbroker)
-- [WebView environment options](/docs/webview/webview-environment)
+- [WebAuthenticationBroker](/controls/web/webauthenticationbroker)
+- [WebView environment options](/controls/web/webview-environment)
 - [FAQ](/tools/faq#webview)

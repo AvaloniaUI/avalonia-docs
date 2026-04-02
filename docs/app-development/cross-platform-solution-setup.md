@@ -14,7 +14,7 @@ The first step to creating a new cross platform application is to create a solut
 The `Avalonia Cross Platform Application` template creates a solution structure that includes the following projects to allow sharing and reuse of code across multiple platforms:
 
 :::info
-[Ensure you've installed the Avalonia Templates.](/docs/get-started/#installing-avalonia-templates)
+[Ensure you've installed the Avalonia Templates.](/docs/get-started/install-avalonia)
 :::
 
 ### Core project

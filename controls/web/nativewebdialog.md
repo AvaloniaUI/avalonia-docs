@@ -172,7 +172,7 @@ See [WebView environment options](/docs/webview/webview-environment) for details
 ## See also
 
 - [NativeWebView](/controls/web/nativewebview): Embeddable WebView control for use inside your layout.
-- [WebAuthenticationBroker](/docs/webview/webauthenticationbroker): OAuth and web-based authentication flows.
-- [WebView environment options](/docs/webview/webview-environment): Configuring the WebView environment.
+- [WebAuthenticationBroker](/controls/web/webauthenticationbroker): OAuth and web-based authentication flows.
+- [WebView environment options](/controls/web/webview-environment): Configuring the WebView environment.
 - [Embedding web content](/docs/app-development/embedding-web-content): Hosting web content inside Avalonia apps.
 - [FAQ](/tools/faq#webview): Common WebView questions.

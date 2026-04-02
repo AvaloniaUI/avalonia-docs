@@ -329,6 +329,6 @@ Remember to remove `ShowGridLines` before shipping your application, as it is in
 
 ## See also
 
-- [Grid control reference](../../controls/layout/panels/grid)
-- [Layout overview](../layout/layout)
-- [Positioning controls](../layout/positioning-controls)
+- [Grid control reference](/controls/layout/panels/grid)
+- [Layout overview](/docs/layout)
+- [Positioning controls](/docs/layout/positioning-controls)

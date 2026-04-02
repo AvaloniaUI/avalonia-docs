@@ -224,7 +224,7 @@ For declarative keyboard shortcuts, consider using [KeyBindings and HotKeys](/do
 
 ## See also
 
-- [Events Overview](index): How routed events work in Avalonia.
+- [Events Overview](/docs/events): How routed events work in Avalonia.
 - [Pointer Input](/docs/input-interaction/pointer): Detailed pointer input reference.
 - [Keyboard and Hotkeys](/docs/input-interaction/keyboard-and-hotkeys): Keyboard shortcuts and key bindings.
 - [Gestures](/docs/input-interaction/gestures): Touch and multi-pointer gesture recognition.
