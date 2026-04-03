@@ -84,4 +84,4 @@ If the issue persists with a third-party theme, contact the theme's maintainers 
 - [Styles](/docs/styling/styles)
 - [Troubleshooting styles](styles.md)
 - [How to use control themes](/docs/styling/control-themes)
-- [Developer tools](/docs/guides/developer-guides/developer-tools)
+- [Developer tools](/tools/developer-tools/installation)

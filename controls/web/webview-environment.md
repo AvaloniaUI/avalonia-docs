@@ -121,6 +121,6 @@ webView.EnvironmentRequested += (sender, args) =>
 
 - [NativeWebView](/controls/web/nativewebview)
 - [NativeWebDialog](/controls/web/nativewebdialog)
-- [WebAuthenticationBroker](/docs/webview/webauthenticationbroker)
+- [WebAuthenticationBroker](/controls/web/webauthenticationbroker)
 - [Embedding web content](/docs/app-development/embedding-web-content)
 - [FAQ](/tools/faq#webview)

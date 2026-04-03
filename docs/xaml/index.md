@@ -110,5 +110,5 @@ Set attached properties using the `OwnerType.PropertyName` syntax:
 ## See also
 
 - [Avalonia XAML](/docs/fundamentals/avalonia-xaml): XAML basics and file structure.
-- [Data Binding](/docs/data-binding): Data binding reference.
+- [Data Binding](/docs/data-binding/introduction-to-data-binding): Data binding reference.
 - [Styling](/docs/styling/styles): CSS-like styling in Avalonia.

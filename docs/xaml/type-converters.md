@@ -172,6 +172,6 @@ Now you can use the type in XAML:
 
 ## See also
 
-- [XAML Reference](index): Overview of XAML syntax.
+- [XAML Reference](/docs/xaml): Overview of XAML syntax.
 - [Data Binding Converters](/docs/data-binding/how-to-create-a-custom-data-binding-converter): Value converters for data binding (different from type converters).
 - [Built-in Data Binding Converters](/docs/data-binding/built-in-data-binding-converters): Converters available for binding transformations.

@@ -222,7 +222,7 @@ Moving from WinUI to Avalonia is not only about cross-platform. There are a few 
 
 ## See also
 
-- [Get Started with Avalonia](/docs/get-started/first-app): Create your first Avalonia application.
+- [Get Started with Avalonia](/docs/get-started/create-your-first-project): Create your first Avalonia application.
 - [Styles](/docs/styling/styles): How Avalonia's CSS-like styling works.
 - [Container queries](/docs/styling/container-queries): Size-based styling, replacing WinUI's AdaptiveTrigger.
 - [Responsive layouts](/docs/layout/responsive-layouts): Building adaptive layouts with container queries and reflowing panels.

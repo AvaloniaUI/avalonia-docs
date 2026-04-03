@@ -140,4 +140,3 @@ You should implement a custom `MarkdownImageLoader` whenever the default image r
 
 ## See also
 - [Markdown control](/controls/data-display/text-display/markdown)
-- [Rendering markdown](/docs/app-development/rendering-markdown)

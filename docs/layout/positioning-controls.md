@@ -235,5 +235,5 @@ When compiled, the preceding application yields a UI that looks like the followi
 
 ## See also
 
-- [Layout](layout): How the measure and arrange system works.
+- [Layout](/docs/layout): How the measure and arrange system works.
 - [Choosing a Layout Panel](choosing-a-layout-panel): Picking the right panel for your scenario.

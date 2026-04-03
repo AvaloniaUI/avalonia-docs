@@ -109,5 +109,5 @@ After releasing, you can set a new `Source` and attempt playback again.
 ## See also
 
 - [MediaPlayer control](/controls/media/mediaplayercontrol)
-- [MediaPlayer class](/docs/media/mediaplayer)
-- [MediaSource class](/docs/media/mediasource)
+- [MediaPlayer class](/controls/media/mediaplayer)
+- [MediaSource class](/controls/media/mediasource)

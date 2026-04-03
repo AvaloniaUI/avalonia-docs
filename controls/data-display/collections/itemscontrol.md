@@ -124,7 +124,7 @@ public class Crockery
 - [Carousel](carousel)
 - [DataGrid](/controls/data-display/structured-data/datagrid)
 - [Custom ItemsPanel](/docs/custom-controls/custom-itemspanel)
-- [Data templates](/docs/data-binding/data-templates)
+- [Data templates](/docs/data-templates/introduction-to-data-templates)
 - [ItemsControl API reference](/api/avalonia/controls/itemscontrol)
 - [`ItemsControl.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/ItemsControl.cs)
 

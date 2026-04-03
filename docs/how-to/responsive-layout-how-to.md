@@ -210,6 +210,6 @@ This technique keeps your typography responsive without relying on window-level 
 ## See also
 
 - [Container queries](/docs/styling/container-queries): Responsive styling based on container size.
-- [Layout](/docs/layout/layout): Avalonia layout system overview.
+- [Layout](/docs/layout): Avalonia layout system overview.
 - [Grid how-to](/docs/how-to/grid-how-to): Grid layout patterns.
 - [Cross-platform architecture](/docs/fundamentals/cross-platform-architecture): Platform detection and branching.

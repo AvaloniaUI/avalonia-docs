@@ -140,15 +140,15 @@ var markdown = new Markdown
 
 ## Custom image loader
 
-See the [Image Loader](/docs/markdown/imageloader) page for a detailed example how to customize image loading.
+See the [Image Loader](/controls/data-display/text-display/imageloader) page for a detailed example how to customize image loading.
 
 ## Code highlighter
 
-See the [Code Highlighter](/docs/markdown/codehighlighter) page for information on enabling syntax highlighting for code blocks, installation packages, and usage examples for the included highlighters.
+See the [Code Highlighter](/controls/data-display/text-display/codehighlighter) page for information on enabling syntax highlighting for code blocks, installation packages, and usage examples for the included highlighters.
 
 ## Styling
 
-See the [Markdown styling](/docs/markdown/markdown-styling) page for a full list of resources you can override.
+See the [Markdown styling](/controls/data-display/text-display/markdown-styling) page for a full list of resources you can override.
 
 ## Installation
 
@@ -174,4 +174,3 @@ Add the resources by referencing the shipped `Default.axaml` theme via a `StyleI
 - [Markdown styling](/controls/data-display/text-display/markdown-styling)
 - [Image loader](/controls/data-display/text-display/imageloader)
 - [Code highlighter](/controls/data-display/text-display/codehighlighter)
-- [Rendering markdown](/docs/app-development/rendering-markdown)

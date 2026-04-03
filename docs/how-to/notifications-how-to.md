@@ -239,8 +239,8 @@ Consider adding a `warning` style (for example, `#F59E0B`) alongside `info`, `su
 ## See also
 
 - [Threading](/docs/app-development/threading): Understand UI thread marshalling with `Dispatcher.UIThread`.
-- [TrayIcon](/docs/controls/navigation/trayicon): System tray integration for desktop platforms.
-- [Flyout](/docs/controls/layout/containers/flyout): Popup content attached to controls.
-- [ToolTip](/docs/controls/feedback/tooltip): Hover tooltips for controls.
+- [TrayIcon](/controls/navigation/trayicon): System tray integration for desktop platforms.
+- [Flyout](/controls/layout/containers/flyout): Popup content attached to controls.
+- [ToolTip](/controls/feedback/tooltip): Hover tooltips for controls.
 - [ItemsControl](/docs/how-to/itemscontrol-how-to): Working with `ItemsControl` for dynamic lists.
 - [Data templates](/docs/data-templates/introduction-to-data-templates): Customize how notification items render.

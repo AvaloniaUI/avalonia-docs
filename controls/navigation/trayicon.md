@@ -121,5 +121,5 @@ You can toggle tray icon visibility at runtime by binding the `IsVisible` proper
 ## See also
 
 - [NativeMenu](/controls/menus/nativemenu)
-- [Window](/controls/windowing/window)
+- [Window](/controls/primitives/window)
 - [`TrayIcon` source code (GitHub)](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/TrayIcon.cs)

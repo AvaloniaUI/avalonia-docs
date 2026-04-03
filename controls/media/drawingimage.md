@@ -113,8 +113,7 @@ Use bitmap images (`Image.Source` with an asset path) when you have photographic
 
 - [Image](/controls/media/image)
 - [PathIcon](/controls/media/pathicon)
-- [Geometry](/docs/guides/graphics-and-animation/geometries)
-- [Drawing and brushes](/docs/guides/graphics-and-animation/drawing-and-brushes)
+- [Brushes](/docs/graphics-animation/brushes)
 - [DrawingImage API reference](/api/avalonia/media/drawingimage)
 - [GeometryDrawing API reference](/api/avalonia/media/geometrydrawing)
 - [DrawingGroup API reference](/api/avalonia/media/drawinggroup)

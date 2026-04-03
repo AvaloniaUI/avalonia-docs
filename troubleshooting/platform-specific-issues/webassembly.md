@@ -115,5 +115,5 @@ WebAssembly is a sandboxed environment with some inherent limitations:
 
 ## See also
 
-- [Avalonia WebAssembly overview](../../guides/platforms/browser)
-- [App performance issues](../app-performance-issues.md)
+- [Avalonia WebAssembly overview](/docs/platform-specific-guides/webassembly)
+- [App performance issues](/docs/app-development/performance)
