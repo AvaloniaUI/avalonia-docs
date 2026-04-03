@@ -1,0 +1,133 @@
+---
+title: 'SwipeGestureEndedEventArgs'
+hide_title: true
+slug: '/avalonia/input/swipegestureendedeventargs'
+uid: 'Avalonia.Input.SwipeGestureEndedEventArgs'
+commentId: 'T:Avalonia.Input.SwipeGestureEndedEventArgs'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Input'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">SwipeGestureEndedEventArgs Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Input</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/3111696698e2c3d6fe9aace8cb954153ee16b3e4/src/Avalonia.Base/Input/SwipeGestureEndedEventArgs.cs">SwipeGestureEndedEventArgs.cs</a>
+</div>
+
+</div>
+
+<div className="apiref-page__lead">
+
+Provides data for the swipe gesture ended event.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class SwipeGestureEndedEventArgs
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> EventArgs <span className="apiref-page__relation-separator">-&gt;</span> <a href="../interactivity/routedeventargs">RoutedEventArgs</a> <span className="apiref-page__relation-separator">-&gt;</span> SwipeGestureEndedEventArgs
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [SwipeGestureEndedEventArgs](#uid-1a2794df72) | Initializes a new instance of the [Avalonia.Input.SwipeGestureEndedEventArgs](xref:Avalonia.Input.SwipeGestureEndedEventArgs) class. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1a2794df72"></span>
+
+### SwipeGestureEndedEventArgs Constructor
+
+Initializes a new instance of the [Avalonia.Input.SwipeGestureEndedEventArgs](xref:Avalonia.Input.SwipeGestureEndedEventArgs) class.
+
+```csharp
+public SwipeGestureEndedEventArgs(int id, Avalonia.Vector velocity)
+```
+
+#### Parameters
+
+`id` int
+
+The unique identifier for this gesture.
+
+
+`velocity` [Avalonia.Vector](xref:Avalonia.Vector)
+
+The swipe velocity at release in pixels per second.
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Id](#uid-445398308b) | Gets the unique identifier for this gesture sequence. |
+| [Velocity](#uid-49bb3168ea) | Gets the swipe velocity at release in pixels per second. |
+| [Handled](../interactivity/routedeventargs.mdx#uid-204d2af354) | Gets or sets a value indicating whether the routed event has already been handled. Inherited from [RoutedEventArgs](../interactivity/routedeventargs.mdx). |
+| [Route](../interactivity/routedeventargs.mdx#uid-751be73db9) | Gets or sets the routing strategy (direct, bubbling, or tunneling) of the routed event. Inherited from [RoutedEventArgs](../interactivity/routedeventargs.mdx). |
+| [RoutedEvent](../interactivity/routedeventargs.mdx#uid-4e102999d9) | Gets or sets the routed event associated with these event args. Inherited from [RoutedEventArgs](../interactivity/routedeventargs.mdx). |
+| [Source](../interactivity/routedeventargs.mdx#uid-4385b523d5) | Gets or sets the source object that raised the routed event. Inherited from [RoutedEventArgs](../interactivity/routedeventargs.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-445398308b"></span>
+
+### Id Property
+
+Gets the unique identifier for this gesture sequence.
+
+```csharp
+public int Id { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-49bb3168ea"></span>
+
+### Velocity Property
+
+Gets the swipe velocity at release in pixels per second.
+
+```csharp
+public Avalonia.Vector Velocity { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

@@ -116,6 +116,6 @@ If you want styles to be able to override a property, avoid setting it directly 
 
 ## See also
 
-- [Property System Overview](index): Overview of Avalonia property types.
+- [Property system overview](/docs/properties): Overview of Avalonia property types.
 - [Styles](/docs/styling/styles): How to define and apply styles.
 - [Animations](/docs/graphics-animation/animations): How animations interact with properties.

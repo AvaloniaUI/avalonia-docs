@@ -37,7 +37,7 @@ After April 13th 2026, if you haven't registered for a Community License or purc
 
 #### I have another question. Where can I ask?
 
-Feel free to leave your questions or feedback on [Community Hub](https://avaloniaui.community/dev-tools-hvq32ub8) and [Avalonia Support](https://support.avaloniaui.net/).
+Feel free to leave your questions or feedback on [Community Hub](https://github.com/AvaloniaCommunity) and [Avalonia Support](https://support.avaloniaui.net/).
 
 ## Developer tools
 

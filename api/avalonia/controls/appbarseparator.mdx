@@ -33,8 +33,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Controls/CommandBar/AppBarSeparator.cs">AppBarSeparator.cs</a>
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/3111696698e2c3d6fe9aace8cb954153ee16b3e4/src/Avalonia.Controls/AppBarSeparator.cs">AppBarSeparator.cs</a>
 </div>
+
 </div>
 
 <div className="apiref-page__lead">
@@ -300,6 +301,7 @@ public bool IsInOverflow { get; set; }
 | [ScrollGestureEndedEvent](../input/inputelement.mdx#uid-5f3e85c372) | Defines the [Avalonia.Input.InputElement.ScrollGestureEnded](xref:Avalonia.Input.InputElement.ScrollGestureEnded) event. Inherited from [InputElement](../input/inputelement.mdx). |
 | [ScrollGestureEvent](../input/inputelement.mdx#uid-d098469113) | Defines the [Avalonia.Input.InputElement.ScrollGesture](xref:Avalonia.Input.InputElement.ScrollGesture) event. Inherited from [InputElement](../input/inputelement.mdx). |
 | [ScrollGestureInertiaStartingEvent](../input/inputelement.mdx#uid-02f504d2ea) | Defines the [Avalonia.Input.InputElement.ScrollGestureInertiaStarting](xref:Avalonia.Input.InputElement.ScrollGestureInertiaStarting) event. Inherited from [InputElement](../input/inputelement.mdx). |
+| [SwipeGestureEndedEvent](../input/inputelement.mdx#uid-8492058651) | Defines the [Avalonia.Input.InputElement.SwipeGestureEnded](xref:Avalonia.Input.InputElement.SwipeGestureEnded) event. Inherited from [InputElement](../input/inputelement.mdx). |
 | [SwipeGestureEvent](../input/inputelement.mdx#uid-e431c01e95) | Defines the [Avalonia.Input.InputElement.SwipeGesture](xref:Avalonia.Input.InputElement.SwipeGesture) event. Inherited from [InputElement](../input/inputelement.mdx). |
 | [TabIndexProperty](../input/inputelement.mdx#uid-3708b5bfca) | Defines the [Avalonia.Input.InputElement.TabIndex](xref:Avalonia.Input.InputElement.TabIndex) property. Inherited from [InputElement](../input/inputelement.mdx). |
 | [TappedEvent](../input/inputelement.mdx#uid-15efc26145) | Defines the [Avalonia.Input.InputElement.Tapped](xref:Avalonia.Input.InputElement.Tapped) event. Inherited from [InputElement](../input/inputelement.mdx). |
@@ -375,34 +377,35 @@ public Avalonia.StyledProperty<bool> IsInOverflowProperty
 | [Unloaded](control.mdx#uid-fdfd878e56) | Occurs when the control is removed from the visual tree. Inherited from [Control](control.mdx). |
 | [ContextCanceled](../input/inputelement.mdx#uid-0132e74ca9) | Occurs when the context input gesture continues into another gesture, to notify the element that the context flyout should not be opened. Inherited from [InputElement](../input/inputelement.mdx). |
 | [ContextRequested](../input/inputelement.mdx#uid-9067484d6e) | Occurs when the user has completed a context input gesture, such as a right-click. Inherited from [InputElement](../input/inputelement.mdx). |
-| [DoubleTapped](../input/inputelement.mdx#uid-ad13083e0c) | Occurs when a double-tap gesture occurs on the control. Inherited from [InputElement](../input/inputelement.mdx). |
+| [DoubleTapped](../input/inputelement.mdx#uid-ad13083e0c) | Occurs when the user briefly contacts and releases twice on a single point, without significant movement. Inherited from [InputElement](../input/inputelement.mdx). |
 | [GettingFocus](../input/inputelement.mdx#uid-4d054164ee) | Occurs before the control receives focus. Inherited from [InputElement](../input/inputelement.mdx). |
 | [GotFocus](../input/inputelement.mdx#uid-d41d7ad59c) | Occurs when the control receives focus. Inherited from [InputElement](../input/inputelement.mdx). |
-| [Holding](../input/inputelement.mdx#uid-8cda030fe2) | Occurs when a hold gesture occurs on the control. Inherited from [InputElement](../input/inputelement.mdx). |
+| [Holding](../input/inputelement.mdx#uid-8cda030fe2) | Occurs when the user makes a single contact, then maintains contact beyond a given time threshold without releasing or making another contact. Inherited from [InputElement](../input/inputelement.mdx). |
 | [KeyDown](../input/inputelement.mdx#uid-ee9d987ed5) | Occurs when a key is pressed while the control has focus. Inherited from [InputElement](../input/inputelement.mdx). |
 | [KeyUp](../input/inputelement.mdx#uid-1131e95f55) | Occurs when a key is released while the control has focus. Inherited from [InputElement](../input/inputelement.mdx). |
 | [LosingFocus](../input/inputelement.mdx#uid-425fe24716) | Occurs before the control loses focus. Inherited from [InputElement](../input/inputelement.mdx). |
 | [LostFocus](../input/inputelement.mdx#uid-2061fc85a1) | Occurs when the control loses focus. Inherited from [InputElement](../input/inputelement.mdx). |
-| [Pinch](../input/inputelement.mdx#uid-96b68421dc) | Occurs when a pinch gesture occurs on the control. Inherited from [InputElement](../input/inputelement.mdx). |
-| [PinchEnded](../input/inputelement.mdx#uid-50614bd917) | Occurs when a pinch gesture ends on the control. Inherited from [InputElement](../input/inputelement.mdx). |
+| [Pinch](../input/inputelement.mdx#uid-96b68421dc) | Occurs when the user moves two contact points closer together. Inherited from [InputElement](../input/inputelement.mdx). |
+| [PinchEnded](../input/inputelement.mdx#uid-50614bd917) | Occurs when the user releases both contact points used in a pinch gesture. Inherited from [InputElement](../input/inputelement.mdx). |
 | [PointerCaptureLost](../input/inputelement.mdx#uid-2121c500a4) | Occurs when the control or its child control loses the pointer capture for any reason, event will not be triggered for a parent control if capture was transferred to another child of that parent control. Inherited from [InputElement](../input/inputelement.mdx). |
 | [PointerEntered](../input/inputelement.mdx#uid-a81f2c5c9a) | Occurs when the pointer enters the control. Inherited from [InputElement](../input/inputelement.mdx). |
 | [PointerExited](../input/inputelement.mdx#uid-522e8d0a47) | Occurs when the pointer leaves the control. Inherited from [InputElement](../input/inputelement.mdx). |
 | [PointerMoved](../input/inputelement.mdx#uid-0990295ea3) | Occurs when the pointer moves over the control. Inherited from [InputElement](../input/inputelement.mdx). |
 | [PointerPressed](../input/inputelement.mdx#uid-913cdc0df1) | Occurs when the pointer is pressed over the control. Inherited from [InputElement](../input/inputelement.mdx). |
 | [PointerReleased](../input/inputelement.mdx#uid-5b59b21d5e) | Occurs when the pointer is released over the control. Inherited from [InputElement](../input/inputelement.mdx). |
-| [PointerTouchPadGestureMagnify](../input/inputelement.mdx#uid-8f1fe6dc4a) | Occurs when a touchpad magnify gesture occurs on the control. Inherited from [InputElement](../input/inputelement.mdx). |
-| [PointerTouchPadGestureRotate](../input/inputelement.mdx#uid-d966c43661) | Occurs when a touchpad rotate gesture occurs on the control. Inherited from [InputElement](../input/inputelement.mdx). |
-| [PointerTouchPadGestureSwipe](../input/inputelement.mdx#uid-9011c6de89) | Occurs when a touchpad swipe gesture occurs on the control. Inherited from [InputElement](../input/inputelement.mdx). |
+| [PointerTouchPadGestureMagnify](../input/inputelement.mdx#uid-8f1fe6dc4a) | Occurs when the user moves two contact points away from each other on a touchpad. Inherited from [InputElement](../input/inputelement.mdx). |
+| [PointerTouchPadGestureRotate](../input/inputelement.mdx#uid-d966c43661) | Occurs when the user places two contact points and moves them in a circular motion on a touchpad. Inherited from [InputElement](../input/inputelement.mdx). |
+| [PointerTouchPadGestureSwipe](../input/inputelement.mdx#uid-9011c6de89) | Occurs when the user performs a rapid dragging motion in a single direction on a touchpad. Inherited from [InputElement](../input/inputelement.mdx). |
 | [PointerWheelChanged](../input/inputelement.mdx#uid-6687ab6f2e) | Occurs when the mouse is scrolled over the control. Inherited from [InputElement](../input/inputelement.mdx). |
-| [PullGesture](../input/inputelement.mdx#uid-d85f52cac5) | Occurs when a pull gesture occurs on the control. Inherited from [InputElement](../input/inputelement.mdx). |
-| [PullGestureEnded](../input/inputelement.mdx#uid-a37f51b846) | Occurs when a pull gesture ends on the control. Inherited from [InputElement](../input/inputelement.mdx). |
-| [RightTapped](../input/inputelement.mdx#uid-11a576692d) | Occurs when a right tap gesture occurs on the control. Inherited from [InputElement](../input/inputelement.mdx). |
-| [ScrollGesture](../input/inputelement.mdx#uid-b571ab3acc) | Occurs when a scroll gesture occurs on the control. Inherited from [InputElement](../input/inputelement.mdx). |
-| [ScrollGestureEnded](../input/inputelement.mdx#uid-eb3914c3a8) | Occurs when a scroll gesture ends on the control. Inherited from [InputElement](../input/inputelement.mdx). |
-| [ScrollGestureInertiaStarting](../input/inputelement.mdx#uid-c8cd2731a5) | Occurs when a scroll gesture inertia starts on the control. Inherited from [InputElement](../input/inputelement.mdx). |
-| [SwipeGesture](../input/inputelement.mdx#uid-0f4fc613ec) | Occurs when a swipe gesture occurs on the control. Inherited from [InputElement](../input/inputelement.mdx). |
-| [Tapped](../input/inputelement.mdx#uid-6df36c079d) | Occurs when a tap gesture occurs on the control. Inherited from [InputElement](../input/inputelement.mdx). |
+| [PullGesture](../input/inputelement.mdx#uid-d85f52cac5) | Occurs when the user drags from the edge of a control. Inherited from [InputElement](../input/inputelement.mdx). |
+| [PullGestureEnded](../input/inputelement.mdx#uid-a37f51b846) | Occurs when the user releases the pointer after a pull gesture. Inherited from [InputElement](../input/inputelement.mdx). |
+| [RightTapped](../input/inputelement.mdx#uid-11a576692d) | Occurs when the user briefly contacts and releases a single point, without significant movement, using a mechanism on the input device recognized as a right button or equivalent. Inherited from [InputElement](../input/inputelement.mdx). |
+| [ScrollGesture](../input/inputelement.mdx#uid-b571ab3acc) | Occurs when the user continuously moves the pointer in the same direction within the control’s boundaries. Inherited from [InputElement](../input/inputelement.mdx). |
+| [ScrollGestureEnded](../input/inputelement.mdx#uid-eb3914c3a8) | Occurs when a scroll gesture has fully stopped, taking into account any inertial movement that continues the scroll after the user has released the pointer. Inherited from [InputElement](../input/inputelement.mdx). |
+| [ScrollGestureInertiaStarting](../input/inputelement.mdx#uid-c8cd2731a5) | Occurs within a scroll gesture, when the user releases the pointer, and scrolling continues by transitioning to momentum-based gliding movement. Inherited from [InputElement](../input/inputelement.mdx). |
+| [SwipeGesture](../input/inputelement.mdx#uid-0f4fc613ec) | Occurs when the user rapidly drags the pointer in a single direction across the control. Inherited from [InputElement](../input/inputelement.mdx). |
+| [SwipeGestureEnded](../input/inputelement.mdx#uid-137ae2fd9d) | Occurs when a swipe gesture ends on the control. Inherited from [InputElement](../input/inputelement.mdx). |
+| [Tapped](../input/inputelement.mdx#uid-6df36c079d) | Occurs when the user briefly contacts and releases a single point, without significant movement. Inherited from [InputElement](../input/inputelement.mdx). |
 | [TextInput](../input/inputelement.mdx#uid-6dcb8fae07) | Occurs when a user typed some text while the control has focus. Inherited from [InputElement](../input/inputelement.mdx). |
 | [TextInputMethodClientRequested](../input/inputelement.mdx#uid-5d96b89080) | Occurs when an input element gains input focus and input method is looking for the corresponding client Inherited from [InputElement](../input/inputelement.mdx). |
 | [EffectiveViewportChanged](../layout/layoutable.mdx#uid-1922b89fa5) | Occurs when the element's effective viewport changes. Inherited from [Layoutable](../layout/layoutable.mdx). |

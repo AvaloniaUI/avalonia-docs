@@ -91,5 +91,5 @@ Avalonia uses `UseLayoutRounding` (same as WPF) to snap layout measurements to p
 
 ## See also
 
-- [Layout](/docs/layout/layout): Avalonia layout system overview.
+- [Layout](/docs/layout): Avalonia layout system overview.
 - [Positioning Controls](/docs/layout/positioning-controls): Margins, alignment, and positioning.

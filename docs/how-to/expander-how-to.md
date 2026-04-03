@@ -257,6 +257,6 @@ When you set `IsEnabled="False"` on an `Expander`, the header is no longer inter
 
 ## See also
 
-- [Expander control reference](../../controls/layout/containers/expander.md): Full property and event tables.
-- [Page transitions](../graphics-animation/page-transitions.md): Transition types you can use for content animation.
-- [Introduction to data binding](../data-binding/introduction-to-data-binding.md): Fundamentals of binding properties like `IsExpanded` to your view model.
+- [Expander control reference](/controls/layout/containers/expander): Full property and event tables.
+- [Page transitions](/docs/graphics-animation/page-transitions): Transition types you can use for content animation.
+- [Introduction to data binding](/docs/data-binding/introduction-to-data-binding): Fundamentals of binding properties like `IsExpanded` to your view model.

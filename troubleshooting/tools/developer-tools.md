@@ -124,8 +124,7 @@ application.AttachDeveloperTools(o =>
 
 ## See also
 
-- [Developer Tools installation](../../tools/developer-tools/installation.md)
-- [Attaching applications](../../tools/developer-tools/attaching-applications.md)
-- [Developer Tools options](../../tools/developer-tools/options.md)
-- [Elements tool](../../tools/developer-tools/elements-tool.md)
-- [Debugging data bindings](../../docs/data-binding/binding-debugging.md)
+- [Developer Tools installation](/tools/developer-tools/installation)
+- [Attaching applications](/tools/developer-tools/attaching-applications)
+- [Developer Tools options](/tools/developer-tools/options)
+- [Elements tool](/tools/developer-tools/elements-tool)

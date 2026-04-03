@@ -85,5 +85,4 @@ The Resources tool offers several options to help you find specific resources:
 
 - [Elements tool](/tools/developer-tools/elements-tool)
 - [Assets tool](/tools/developer-tools/assets-tool)
-- [Styles tool](/tools/developer-tools/styles-tool)
 - [How to use resources](https://docs.avaloniaui.net/docs/guides/styles-and-resources/resources)

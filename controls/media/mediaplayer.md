@@ -260,7 +260,7 @@ catch (Exception ex) {
 ## See also
 
 - [MediaPlayer control](/controls/media/mediaplayercontrol)
-- [MediaSource class](/docs/media/mediasource)
-- [Implementing MediaPlayer](/docs/media/media-playback)
+- [MediaSource class](/controls/media/mediasource)
+- [Implementing MediaPlayer](/controls/media/media-playback)
 - [Installing Avalonia Accelerate](/tools/installing-accelerate)
 - [Troubleshooting](/troubleshooting/controls/mediaplayer)

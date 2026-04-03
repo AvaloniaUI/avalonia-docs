@@ -33,8 +33,16 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Input/FindNextElementOptions.cs">FindNextElementOptions.cs</a>
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/3111696698e2c3d6fe9aace8cb954153ee16b3e4/src/Avalonia.Base/Input/FindNextElementOptions.cs">FindNextElementOptions.cs</a>
 </div>
+
+</div>
+
+<div className="apiref-page__lead">
+
+Provides options to customize the behavior when identifying the next element to focus
+during a navigation operation.
+
 </div>
 
 <div className="apiref-page__signature">
@@ -73,11 +81,12 @@ public FindNextElementOptions()
 
 | Name | Description |
 | --- | --- |
-| [ExclusionRect](#uid-3a4c2b6c54) | No summary available. |
-| [FocusHintRectangle](#uid-28eca81f0b) | No summary available. |
-| [IgnoreOcclusivity](#uid-62c57e17c8) | No summary available. |
-| [NavigationStrategyOverride](#uid-8ff3182955) | No summary available. |
-| [SearchRoot](#uid-3e2457956f) | No summary available. |
+| [ExclusionRect](#uid-3a4c2b6c54) | Gets or sets the rectangular region within the visual hierarchy that will be excluded from consideration during focus navigation. |
+| [FocusHintRectangle](#uid-28eca81f0b) | Gets or sets a rectangular region that serves as a hint for focus navigation. This property specifies a rectangle, relative to the coordinate system of the search root, which can be used as a preferred or prioritized target when navigating focus. It can be null if no specific hint region is provided. |
+| [FocusedElement](#uid-35ed88d64d) | Gets or sets the element that will be treated as the starting point of the search for the next focusable element. This does not need to be the element that is currently focused. If null, [Avalonia.Input.FocusManager.GetFocusedElement](xref:Avalonia.Input.FocusManager.GetFocusedElement) is used. |
+| [IgnoreOcclusivity](#uid-62c57e17c8) | Specifies whether occlusivity (overlapping of elements or obstructions) should be ignored during focus navigation. When set to `true`, the navigation logic disregards obstructions that may block a potential focus target, allowing elements behind such obstructions to be considered. |
+| [NavigationStrategyOverride](#uid-8ff3182955) | Specifies an optional override for the navigation strategy used in XY focus navigation. This property allows customizing the focus movement behavior when navigating between UI elements. |
+| [SearchRoot](#uid-3e2457956f) | Gets or sets the root [Avalonia.Input.InputElement](xref:Avalonia.Input.InputElement) within which the search for the next focusable element will be conducted. |
 
 <section className="apiref-page__member-entry">
 
@@ -85,9 +94,18 @@ public FindNextElementOptions()
 
 ### ExclusionRect Property
 
+Gets or sets the rectangular region within the visual hierarchy that will be excluded
+from consideration during focus navigation.
+
 ```csharp
 public Avalonia.Rect ExclusionRect { get; set; }
 ```
+
+#### Remarks
+
+This option is only used with [Avalonia.Input.NavigationDirection.Up](xref:Avalonia.Input.NavigationDirection.Up), [Avalonia.Input.NavigationDirection.Down](xref:Avalonia.Input.NavigationDirection.Down),
+[Avalonia.Input.NavigationDirection.Left](xref:Avalonia.Input.NavigationDirection.Left), and [Avalonia.Input.NavigationDirection.Right](xref:Avalonia.Input.NavigationDirection.Right). It is ignored for other
+directions.
 
 </section>
 
@@ -97,8 +115,35 @@ public Avalonia.Rect ExclusionRect { get; set; }
 
 ### FocusHintRectangle Property
 
+Gets or sets a rectangular region that serves as a hint for focus navigation.
+This property specifies a rectangle, relative to the coordinate system of the search root,
+which can be used as a preferred or prioritized target when navigating focus.
+It can be null if no specific hint region is provided.
+
 ```csharp
 public Nullable<Avalonia.Rect> FocusHintRectangle { get; set; }
+```
+
+#### Remarks
+
+This option is only used with [Avalonia.Input.NavigationDirection.Up](xref:Avalonia.Input.NavigationDirection.Up), [Avalonia.Input.NavigationDirection.Down](xref:Avalonia.Input.NavigationDirection.Down),
+[Avalonia.Input.NavigationDirection.Left](xref:Avalonia.Input.NavigationDirection.Left), and [Avalonia.Input.NavigationDirection.Right](xref:Avalonia.Input.NavigationDirection.Right). It is ignored for other
+directions.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-35ed88d64d"></span>
+
+### FocusedElement Property
+
+Gets or sets the element that will be treated as the starting point of the search
+for the next focusable element. This does not need to be the element that is
+currently focused. If null, [Avalonia.Input.FocusManager.GetFocusedElement](xref:Avalonia.Input.FocusManager.GetFocusedElement) is used.
+
+```csharp
+public Avalonia.Input.IInputElement FocusedElement { get; set; }
 ```
 
 </section>
@@ -109,9 +154,20 @@ public Nullable<Avalonia.Rect> FocusHintRectangle { get; set; }
 
 ### IgnoreOcclusivity Property
 
+Specifies whether occlusivity (overlapping of elements or obstructions)
+should be ignored during focus navigation. When set to `true`,
+the navigation logic disregards obstructions that may block a potential
+focus target, allowing elements behind such obstructions to be considered.
+
 ```csharp
 public bool IgnoreOcclusivity { get; set; }
 ```
+
+#### Remarks
+
+This option is only used with [Avalonia.Input.NavigationDirection.Up](xref:Avalonia.Input.NavigationDirection.Up), [Avalonia.Input.NavigationDirection.Down](xref:Avalonia.Input.NavigationDirection.Down),
+[Avalonia.Input.NavigationDirection.Left](xref:Avalonia.Input.NavigationDirection.Left), and [Avalonia.Input.NavigationDirection.Right](xref:Avalonia.Input.NavigationDirection.Right). It is ignored for other
+directions.
 
 </section>
 
@@ -121,9 +177,18 @@ public bool IgnoreOcclusivity { get; set; }
 
 ### NavigationStrategyOverride Property
 
+Specifies an optional override for the navigation strategy used in XY focus navigation.
+This property allows customizing the focus movement behavior when navigating between UI elements.
+
 ```csharp
 public Nullable<Avalonia.Input.XYFocusNavigationStrategy> NavigationStrategyOverride { get; set; }
 ```
+
+#### Remarks
+
+This option is only used with [Avalonia.Input.NavigationDirection.Up](xref:Avalonia.Input.NavigationDirection.Up), [Avalonia.Input.NavigationDirection.Down](xref:Avalonia.Input.NavigationDirection.Down),
+[Avalonia.Input.NavigationDirection.Left](xref:Avalonia.Input.NavigationDirection.Left), and [Avalonia.Input.NavigationDirection.Right](xref:Avalonia.Input.NavigationDirection.Right). It is ignored for other
+directions.
 
 </section>
 
@@ -133,9 +198,22 @@ public Nullable<Avalonia.Input.XYFocusNavigationStrategy> NavigationStrategyOver
 
 ### SearchRoot Property
 
+Gets or sets the root [Avalonia.Input.InputElement](xref:Avalonia.Input.InputElement) within which the search for the next
+focusable element will be conducted.
+
 ```csharp
 public Avalonia.Input.InputElement SearchRoot { get; set; }
 ```
+
+#### Remarks
+
+This property defines the boundary for focus navigation operations. It determines the root element
+in the visual tree under which the focusable item search is performed. If not specified, the search
+will default to the current scope.
+
+This option is only used with [Avalonia.Input.NavigationDirection.Up](xref:Avalonia.Input.NavigationDirection.Up), [Avalonia.Input.NavigationDirection.Down](xref:Avalonia.Input.NavigationDirection.Down),
+[Avalonia.Input.NavigationDirection.Left](xref:Avalonia.Input.NavigationDirection.Left), and [Avalonia.Input.NavigationDirection.Right](xref:Avalonia.Input.NavigationDirection.Right). It is ignored for other
+directions.
 
 </section>
 

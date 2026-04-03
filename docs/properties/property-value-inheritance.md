@@ -117,6 +117,6 @@ public partial class MainWindow : Window
 
 ## See also
 
-- [Property System Overview](index): Overview of property types and registration.
-- [Value Precedence](value-precedence): How inherited values fit into the priority order.
-- [Data Context](/docs/data-binding/data-context): How the DataContext inherited property works with data binding.
+- [Property system overview](/docs/properties): Overview of property types and registration.
+- [Value precedence](/docs/properties/value-precedence): How inherited values fit into the priority order.
+- [Data context](/docs/data-binding/data-context): How the DataContext inherited property works with data binding.

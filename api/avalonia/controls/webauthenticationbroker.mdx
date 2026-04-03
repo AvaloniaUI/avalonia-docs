@@ -11,7 +11,7 @@ apiKind: 'Class'
 generatedBy: 'dotnet-apiref'
 namespace: 'Avalonia.Controls'
 tfms:
-  - 'net10.0-android36.0'
+  - 'net10.0-browser1.0'
 ---
 
 import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
@@ -32,11 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.WebView</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/3111696698e2c3d6fe9aace8cb954153ee16b3e4/src/Avalonia.Controls.WebView/WebAuthenticationBroker.cs">WebAuthenticationBroker.cs</a>
 </div>
-
-<div className="apiref-page__lead">
-
-[Avalonia.Controls.WebAuthenticationBroker](xref:Avalonia.Controls.WebAuthenticationBroker) is a utility class that facilitates OAuth and other web-based authentication flows by providing a secure way to handle web authentication in applications.
 
 </div>
 
@@ -58,15 +56,13 @@ public class WebAuthenticationBroker
 
 | Name | Description |
 | --- | --- |
-| [AuthenticateAsync](#uid-4172e6d360) | Starts an authentication flow by navigating to the specified start URI and monitoring for navigation to the end URI. |
+| [AuthenticateAsync](#uid-4172e6d360) | No summary available. |
 
 <section className="apiref-page__member-entry">
 
 <span id="uid-4172e6d360"></span>
 
 ### AuthenticateAsync Method
-
-Starts an authentication flow by navigating to the specified start URI and monitoring for navigation to the end URI.
 
 ```csharp
 public System.Threading.Tasks.Task<Avalonia.Controls.WebAuthenticationResult> AuthenticateAsync(Avalonia.Controls.TopLevel topLevel, Avalonia.Controls.WebAuthenticatorOptions options)
@@ -84,11 +80,6 @@ public System.Threading.Tasks.Task<Avalonia.Controls.WebAuthenticationResult> Au
 
 System.Threading.Tasks.Task&lt;[Avalonia.Controls.WebAuthenticationResult](xref:Avalonia.Controls.WebAuthenticationResult)&gt;
 
-
-#### Exceptions
-
-- [Platform is not supported.](xref:System.PlatformNotSupportedException)
-- [Operation was cancelled programmatically or by user.](xref:System.OperationCanceledException)
 
 </section>
 

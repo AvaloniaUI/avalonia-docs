@@ -147,5 +147,5 @@ Class handlers are invoked before instance handlers and are registered in the st
 ## See also
 
 - [Routed Events](/docs/input-interaction/routed-events): Full routed events reference.
-- [Events System](/docs/events/index): Overview of the events system.
+- [Events System](/docs/events): Overview of the events system.
 - [Input Events](/docs/events/input-events): Built-in input events.

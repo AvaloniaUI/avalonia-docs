@@ -38,7 +38,7 @@ A WinForms-to-Avalonia migration is not a find-and-replace exercise. The most su
 
 Create a new Avalonia project and rebuild screens one at a time, starting with the simplest. This is the cleanest approach and produces the best result, but it requires the most upfront effort.
 
-1. Create a new Avalonia project using the [getting started guide](/docs/get-started/first-app).
+1. Create a new Avalonia project using the [getting started guide](/docs/get-started/create-your-first-project).
 2. Set up your view models and data layer (these can often be shared directly from your WinForms project).
 3. Rebuild each screen as an Avalonia `Window` or `UserControl`.
 4. Once all screens are migrated, retire the WinForms project.
@@ -56,13 +56,13 @@ For setup instructions, see [Embedding Avalonia in Windows Forms](/docs/platform
 If you are coming from WinForms with no XAML experience, these are the areas that will require the most adjustment:
 
 - **[XAML basics](/docs/xaml):** Avalonia uses XAML to declare UI layout and structure. This replaces the WinForms designer.
-- **[Data binding](/docs/data-binding):** Instead of setting control properties in event handlers, you bind controls to properties on a view model. Changes flow automatically.
-- **[MVVM pattern](/docs/concepts/the-mvvm-pattern):** Avalonia is designed around separating your UI (Views) from your application logic (ViewModels). This is the biggest mindset shift from WinForms.
+- **[Data binding](/docs/data-binding/introduction-to-data-binding):** Instead of setting control properties in event handlers, you bind controls to properties on a view model. Changes flow automatically.
+- **[MVVM pattern](/docs/fundamentals/the-mvvm-pattern):** Avalonia is designed around separating your UI (Views) from your application logic (ViewModels). This is the biggest mindset shift from WinForms.
 - **[Styling](/docs/styling/styles):** Avalonia uses a CSS-like styling system with selectors and style classes, rather than setting properties on individual controls.
-- **[Layout panels](/docs/layout/layout):** Instead of absolute positioning or dock/anchor, Avalonia uses panels like `Grid`, `StackPanel`, and `DockPanel` to arrange controls.
+- **[Layout panels](/docs/layout):** Instead of absolute positioning or dock/anchor, Avalonia uses panels like `Grid`, `StackPanel`, and `DockPanel` to arrange controls.
 
 ## See also
 
-- [Get Started with Avalonia](/docs/get-started/first-app): Create your first Avalonia application.
+- [Get Started with Avalonia](/docs/get-started/create-your-first-project): Create your first Avalonia application.
 - [Embedding Avalonia in Windows Forms](/docs/platform-specific-guides/windows#embedding-avalonia-in-windows-forms): Host Avalonia controls inside an existing WinForms app.
 - [Controls Reference](/controls): Full Avalonia controls documentation.

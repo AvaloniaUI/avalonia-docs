@@ -290,8 +290,8 @@ Moving from MAUI to Avalonia changes how you work day to day:
 
 ## See also
 
-- [Get Started with Avalonia](/docs/get-started/first-app): Create your first Avalonia application.
+- [Get started with Avalonia](/docs/get-started/create-your-first-project): Create your first Avalonia application.
 - [Styles](/docs/styling/styles): How Avalonia's CSS-like styling works.
-- [Data Binding Syntax](/docs/data-binding/data-binding-syntax): Avalonia binding syntax reference.
-- [Controls Reference](/controls): Full Avalonia controls documentation.
+- [Data binding syntax](/docs/data-binding/data-binding-syntax): Avalonia binding syntax reference.
+- [Controls reference](/controls): Full Avalonia controls documentation.
 - [NavigationPage](/controls/navigation/navigationpage): Stack-based page navigation in Avalonia.

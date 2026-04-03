@@ -156,6 +156,6 @@ public class SettingsViewModel : ViewModelBase
 ## See also
 
 - [TabStrip](/controls/navigation/tabstrip)
-- [Carousel](/controls/navigation/carousel)
+- [Carousel](/controls/data-display/collections/carousel)
 - [TabControl API reference](/api/avalonia/controls/tabcontrol)
 - [`TabControl.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/TabControl.cs)

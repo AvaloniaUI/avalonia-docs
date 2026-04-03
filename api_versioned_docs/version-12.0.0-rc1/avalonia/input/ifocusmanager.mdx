@@ -1,0 +1,242 @@
+---
+title: 'IFocusManager'
+hide_title: true
+slug: '/avalonia/input/ifocusmanager'
+uid: 'Avalonia.Input.IFocusManager'
+commentId: 'T:Avalonia.Input.IFocusManager'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Input'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IFocusManager Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Input</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Manages focus for the application.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface IFocusManager
+```
+
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [FindFirstFocusableElement](#uid-2421936cd0) | Retrieves the first element that can receive focus. |
+| [FindLastFocusableElement](#uid-be6613a4e6) | Retrieves the last element that can receive focus. |
+| [FindNextElement](#uid-a0ee3bab13) | Retrieves the element that should receive focus based on the specified navigation direction. |
+| [Focus](#uid-b26213438c) | Focuses a control. |
+| [GetFocusedElement](#uid-545fef5b56) | Gets the currently focused [Avalonia.Input.IInputElement](xref:Avalonia.Input.IInputElement). |
+| [TryMoveFocus](#uid-13ddb00a08) | Attempts to change focus from the element with focus to the next focusable element in the specified direction. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2421936cd0"></span>
+
+### FindFirstFocusableElement Method
+
+Retrieves the first element that can receive focus.
+
+```csharp
+public Avalonia.Input.IInputElement FindFirstFocusableElement()
+```
+
+#### Returns
+
+[Avalonia.Input.IInputElement](xref:Avalonia.Input.IInputElement)
+
+The first focusable element.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-be6613a4e6"></span>
+
+### FindLastFocusableElement Method
+
+Retrieves the last element that can receive focus.
+
+```csharp
+public Avalonia.Input.IInputElement FindLastFocusableElement()
+```
+
+#### Returns
+
+[Avalonia.Input.IInputElement](xref:Avalonia.Input.IInputElement)
+
+The last focusable element.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a0ee3bab13"></span>
+
+### FindNextElement Method
+
+Retrieves the element that should receive focus based on the specified navigation direction.
+
+```csharp
+public Avalonia.Input.IInputElement FindNextElement(Avalonia.Input.NavigationDirection direction, Avalonia.Input.FindNextElementOptions options)
+```
+
+#### Parameters
+
+`direction` [Avalonia.Input.NavigationDirection](xref:Avalonia.Input.NavigationDirection)
+
+The direction that focus moves from element to element.
+Must be one of [Avalonia.Input.NavigationDirection.Next](xref:Avalonia.Input.NavigationDirection.Next), [Avalonia.Input.NavigationDirection.Previous](xref:Avalonia.Input.NavigationDirection.Previous),
+[Avalonia.Input.NavigationDirection.Left](xref:Avalonia.Input.NavigationDirection.Left), [Avalonia.Input.NavigationDirection.Right](xref:Avalonia.Input.NavigationDirection.Right),
+[Avalonia.Input.NavigationDirection.Up](xref:Avalonia.Input.NavigationDirection.Up) and [Avalonia.Input.NavigationDirection.Down](xref:Avalonia.Input.NavigationDirection.Down).
+
+
+`options` [Avalonia.Input.FindNextElementOptions](xref:Avalonia.Input.FindNextElementOptions)
+
+The options to help identify the next element to receive focus.
+
+
+#### Returns
+
+[Avalonia.Input.IInputElement](xref:Avalonia.Input.IInputElement)
+
+The next element to receive focus, if any.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b26213438c"></span>
+
+### Focus Method
+
+Focuses a control.
+
+```csharp
+public bool Focus(Avalonia.Input.IInputElement element, Avalonia.Input.NavigationMethod method, Avalonia.Input.KeyModifiers keyModifiers)
+```
+
+#### Parameters
+
+`element` [Avalonia.Input.IInputElement](xref:Avalonia.Input.IInputElement)
+
+The control to focus.
+
+
+`method` [Avalonia.Input.NavigationMethod](xref:Avalonia.Input.NavigationMethod)
+
+The method by which focus was changed.
+
+
+`keyModifiers` [Avalonia.Input.KeyModifiers](xref:Avalonia.Input.KeyModifiers)
+
+Any key modifiers active at the time of focus.
+
+
+#### Returns
+
+bool
+
+`true` if the focus moved to a control; otherwise, `false`.
+
+
+#### Remarks
+
+If `element` is null, this method tries to clear the focus. However, it is not advised.
+For a better user experience, focus should be moved to another element when possible.
+
+When this method return `true`, it is not guaranteed that the focus has been moved
+to `element`. The focus might have been redirected to another element.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-545fef5b56"></span>
+
+### GetFocusedElement Method
+
+Gets the currently focused [Avalonia.Input.IInputElement](xref:Avalonia.Input.IInputElement).
+
+```csharp
+public Avalonia.Input.IInputElement GetFocusedElement()
+```
+
+#### Returns
+
+[Avalonia.Input.IInputElement](xref:Avalonia.Input.IInputElement)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-13ddb00a08"></span>
+
+### TryMoveFocus Method
+
+Attempts to change focus from the element with focus to the next focusable element in the specified direction.
+
+```csharp
+public bool TryMoveFocus(Avalonia.Input.NavigationDirection direction, Avalonia.Input.FindNextElementOptions options)
+```
+
+#### Parameters
+
+`direction` [Avalonia.Input.NavigationDirection](xref:Avalonia.Input.NavigationDirection)
+
+The direction that focus moves from element to element.
+Must be one of [Avalonia.Input.NavigationDirection.Next](xref:Avalonia.Input.NavigationDirection.Next), [Avalonia.Input.NavigationDirection.Previous](xref:Avalonia.Input.NavigationDirection.Previous),
+[Avalonia.Input.NavigationDirection.Left](xref:Avalonia.Input.NavigationDirection.Left), [Avalonia.Input.NavigationDirection.Right](xref:Avalonia.Input.NavigationDirection.Right),
+[Avalonia.Input.NavigationDirection.Up](xref:Avalonia.Input.NavigationDirection.Up) and [Avalonia.Input.NavigationDirection.Down](xref:Avalonia.Input.NavigationDirection.Down).
+
+
+`options` [Avalonia.Input.FindNextElementOptions](xref:Avalonia.Input.FindNextElementOptions)
+
+The options to help identify the next element to receive focus.
+
+
+#### Returns
+
+bool
+
+true if focus moved; otherwise, false.
+
+
+</section>
+
+</ApiRefPage>
+

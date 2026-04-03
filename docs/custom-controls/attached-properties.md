@@ -173,5 +173,5 @@ public class TestViewModel : ReactiveObject
 ## See also
 
 - [Defining Properties](defining-properties)
-- [Creating Custom Controls](index)
+- [Creating Custom Controls](/docs/custom-controls)
 - [Routed Events](/docs/input-interaction/routed-events)
