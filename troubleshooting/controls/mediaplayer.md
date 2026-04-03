@@ -97,7 +97,7 @@ When the player encounters a problem (such as an unsupported codec or a network 
 mediaPlayer.ErrorOccurred += (sender, args) =>
 {
     // Log or display the error
-    Console.WriteLine($"Playback error: {args.ErrorMessage}");
+    Console.WriteLine($"Playback error: {args.Message}");
 };
 
 // Reset the player after an error
