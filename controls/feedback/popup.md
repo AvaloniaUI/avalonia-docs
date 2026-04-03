@@ -25,7 +25,7 @@ For most scenarios, prefer `Flyout`, `ToolTip`, or `ContextMenu` instead of `Pop
 | `Topmost` | `bool` | Whether the popup appears above all other windows. Default: `false`. |
 | `WindowManagerAddShadowHint` | `bool` | Whether a drop shadow is applied (platform-dependent). Default: `true`. |
 | `OverlayDismissEventPassThrough` | `bool` | When `true`, pointer events that dismiss the popup also pass through to the underlying control. Default: `false`. |
-| `CustomPopupPlacementCallback` | `Action<CustomPopupPlacement>` | A callback for fully custom popup positioning. When set, overrides the `Placement` property. |
+| `CustomPopupPlacementCallback` | `CustomPopupPlacementCallback` | A callback for fully custom popup positioning. When set, overrides the `Placement` property. |
 
 ## Events
 

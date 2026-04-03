@@ -24,7 +24,7 @@ You do not usually create instances of `Window` directly. Instead, you subclass 
 | `CanResize` | `bool` | Gets or sets whether the user can resize the window. |
 | `ShowInTaskbar` | `bool` | Gets or sets whether the window appears in the operating-system taskbar. |
 | `Topmost` | `bool` | Gets or sets whether the window stays above all other windows. |
-| `SystemDecorations` | `SystemDecorations` | Controls the window chrome (title bar and borders). Set to `None` for a borderless window. |
+| `WindowDecorations` | `WindowDecorations` | Controls the window chrome (title bar and borders). Set to `None` for a borderless window. |
 | `ExtendClientAreaToDecorationsHint` | `bool` | When `true`, your content extends into the title bar area, allowing custom chrome. |
 
 ## Show, hide, and close a window

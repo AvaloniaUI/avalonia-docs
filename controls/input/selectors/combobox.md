@@ -21,7 +21,7 @@ You will probably use these properties most often:
 
 | Property                   | Type       | Description                                                                                                              |
 | -------------------------- | ---------- | ------------------------------------------------------------------------------------------------------------------------ |
-| `Items`                    | `IEnumerable` | The list items collection.                                                                                            |
+| `Items`                    | `ItemCollection` | The list items collection.                                                                                            |
 | `SelectedIndex`            | `int`      | The index (zero-based) of the selected item.                                                                             |
 | `SelectedItem`             | `object?`  | The selected item itself.                                                                                                |
 | `SelectedValue`            | `object?`  | The value of the selected item, determined by `SelectedValueBinding`.                                                    |
@@ -31,7 +31,7 @@ You will probably use these properties most often:
 | `AutoScrollToSelectedItem` | `bool`     | Indicates whether to automatically scroll to newly selected items.                                                       |
 | `IsDropDownOpen`           | `bool`     | Indicates whether the dropdown is currently open.                                                                        |
 | `MaxDropDownHeight`        | `double`   | The maximum height for the dropdown list. This is the actual height of the list part, not the number of items that show.  |
-| `ItemPanel`                | `ITemplate<Panel>` | The container panel to place items in. By default, this is a `StackPanel`. See [this page](/docs/custom-controls/custom-itemspanel) to customise the `ItemPanel`. |
+| `ItemsPanel`               | `ITemplate<Panel>` | The container panel to place items in. By default, this is a `StackPanel`. See [this page](/docs/custom-controls/custom-itemspanel) to customise the `ItemsPanel`. |
 
 ## Practical notes
 

@@ -30,7 +30,7 @@ The scaling settings for an image are the same as for the [Viewbox](/controls/la
 | `Source` | `IImage` | The image to display. Can be set from an asset URI string, a `Bitmap`, or a `DrawingImage`. |
 | `Stretch` | `Stretch` | How the image is resized to fill its bounds. See table below. |
 | `StretchDirection` | `StretchDirection` | Controls whether the image can scale up, down, or both. |
-| `BlendMode` | `BitmapBlendMode?` | The blend mode used when compositing the image. |
+| `BlendMode` | `BitmapBlendingMode` | The blend mode used when compositing the image. |
 
 ### Stretch modes
 

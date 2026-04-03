@@ -27,10 +27,8 @@ You will probably use these properties most often:
 | `TextAlignment` | `TextAlignment` | Horizontal alignment of the text: `Left`, `Center`, `Right`. |
 | `InnerLeftContent` | `object` | Content displayed inside the `TextBox` on the left side (for icons or labels). |
 | `InnerRightContent` | `object` | Content displayed inside the `TextBox` on the right side (for buttons or indicators). |
-| `LineCount` | `int` | Returns the number of lines in the text content (read-only). Useful for multi-line `TextBox` scenarios. |
 | `MinLines` | `int` | Minimum number of visible lines. The `TextBox` sizes itself to show at least this many lines when `AcceptsReturn` is `true`. |
 | `CaretBlinkInterval` | `TimeSpan` | The interval at which the caret blinks. Set to `TimeSpan.Zero` to disable blinking. |
-| `HideSuggestions` | `bool` | When `true`, suppresses platform text input suggestions (autocomplete/autocorrect). Useful for password-adjacent fields or code editors. |
 
 ## Example
 

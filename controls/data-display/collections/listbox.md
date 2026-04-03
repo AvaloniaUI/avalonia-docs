@@ -61,7 +61,7 @@ You will probably use these properties most often:
       <td>The vertical scrollbar visibility for the built-in scroll viewer. Options are 'Disabled', 'Auto' (default), 'Hidden' and 'Visible'. When disabled, overflow is hidden. </td>
     </tr>
     <tr>
-      <td><code>ItemPanel</code></td>
+      <td><code>ItemsPanel</code></td>
       <td>The container panel to place items in. See [this page](/docs/custom-controls/custom-itemspanel) to customise the ItemsPanel.</td>
     </tr>
     <tr>
