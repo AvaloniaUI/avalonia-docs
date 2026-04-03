@@ -170,13 +170,10 @@ A single `Grid` with rows and columns is more efficient than multiple nested `St
 Property changes that affect layout (e.g., Width, Height, Margin, Padding) trigger layout recalculations. Batch property changes when possible:
 
 ```csharp
-// Batch visual updates
-using (myPanel.BeginBatchUpdate())
-{
-    // Multiple changes, single layout pass
-    myControl1.Width = 100;
-    myControl2.Height = 200;
-}
+// Set multiple properties together; Avalonia batches layout
+// passes within a single dispatcher operation automatically.
+myControl1.Width = 100;
+myControl2.Height = 200;
 ```
 
 ## Rendering performance

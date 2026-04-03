@@ -85,7 +85,7 @@ Avalonia does not have `DataTemplateSelector`. Instead, you implement the `IData
 // Avalonia
 public class MyDataTemplate : IDataTemplate
 {
-    public IControl Build(object? data)
+    public Control? Build(object? data)
     {
         if (data is SpecialItem)
             return new Border { Background = Brushes.Gold, Child = new TextBlock { Text = "Special" } };

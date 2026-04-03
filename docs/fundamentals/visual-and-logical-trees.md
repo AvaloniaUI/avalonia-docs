@@ -52,7 +52,7 @@ foreach (var child in myPanel.Children)
 }
 
 // Find an ancestor of a specific type
-var window = myControl.FindAncestorOfType<Window>();
+var window = myControl.FindLogicalAncestorOfType<Window>();
 
 // Get all logical descendants
 var allTextBlocks = myPanel.GetLogicalDescendants().OfType<TextBlock>();
@@ -176,7 +176,7 @@ Avalonia manages several special layers above the normal control content within 
 |---|---|---|
 | `AdornerLayer` | Focus indicators, drag adorners, and visual decorations attached to controls. | `AdornerLayer.GetAdornerLayer(visual)` |
 | `OverlayLayer` | Custom overlay content you add on top of normal controls but beneath popups. | `OverlayLayer.GetOverlayLayer(visual)` |
-| `PopupOverlayLayer` | Internal layer for hosting popups (menus, tooltips, combo box dropdowns). Managed by the framework. | `PopupOverlayLayer.GetPopupOverlayLayer(visual)` |
+| Popup layer | Internal layer for hosting popups (menus, tooltips, combo box dropdowns). Managed by the framework. | Managed internally by the popup system. |
 
 ### Adding custom overlay content
 

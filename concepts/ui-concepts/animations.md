@@ -95,8 +95,8 @@ var compositor = visual.Compositor;
 
 var animation = compositor.CreateVector3KeyFrameAnimation();
 animation.Duration = TimeSpan.FromMilliseconds(400);
-animation.InsertKeyFrame(0f, new Vector3D(-200, 0, 0));
-animation.InsertKeyFrame(1f, new Vector3D(0, 0, 0));
+animation.InsertKeyFrame(0f, new Vector3(-200, 0, 0));
+animation.InsertKeyFrame(1f, new Vector3(0, 0, 0));
 
 visual.StartAnimation("Offset", animation);
 ```

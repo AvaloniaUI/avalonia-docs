@@ -86,7 +86,7 @@ You must also include the DataGrid theme in `App.axaml`:
 ```xml
 <Application.Styles>
     <FluentTheme />
-    <StyleInclude Source="avares://Avalonia.Controls.DataGrid/Themes/Fluent.xaml" />
+    <StyleInclude Source="avares://Avalonia.Controls.DataGrid/Themes/Fluent.axaml" />
 </Application.Styles>
 ```
 

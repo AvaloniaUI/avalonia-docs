@@ -192,7 +192,6 @@ public class MainViewModel
 |---|---|---|
 | `Button` | `Command` | On click |
 | `MenuItem` | `Command` | On click |
-| `ListBox` | `SelectionChangedCommand` | On selection change |
 | [`KeyBinding`](/api/avalonia/input/keybinding) | `Command` | On key gesture |
 | `ToggleButton` | `Command` | On toggle |
 | `SplitButton` | `Command` | On primary button click |

@@ -199,7 +199,7 @@ public class AnyTrueConverter : IMultiValueConverter
 ```
 
 ```xml
-<Border IsVisible="{MultiBinding Converter={x:Static local:AnyTrueConverter.Instance}}">
+<Border>
     <!-- Shown when any condition is true -->
     <Border.IsVisible>
         <MultiBinding Converter="{x:Static local:AnyTrueConverter.Instance}">

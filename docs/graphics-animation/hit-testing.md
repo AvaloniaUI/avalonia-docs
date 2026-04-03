@@ -106,12 +106,12 @@ public class CircleControl : Control
         context.DrawEllipse(Brushes.Blue, null, center, radius, radius);
     }
 
-    protected override bool HitTestCore(HitTestCoreArgs args)
+    protected override bool HitTest(Point point)
     {
         // Only hit test within the circle, not the full bounding box
         var radius = Math.Min(Bounds.Width, Bounds.Height) / 2;
         var center = new Point(Bounds.Width / 2, Bounds.Height / 2);
-        var distance = Point.Distance(args.HitPoint, center);
+        var distance = Point.Distance(point, center);
         return distance <= radius;
     }
 }

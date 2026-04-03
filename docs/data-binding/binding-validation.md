@@ -44,7 +44,7 @@ Bind the properties with `TwoWay` mode:
 <StackPanel Spacing="8">
     <TextBox Text="{Binding Name}" PlaceholderText="Name" />
     <TextBox Text="{Binding Email}" PlaceholderText="Email" />
-    <NumericUpDown Value="{Binding Age}" PlaceholderText="Age" />
+    <NumericUpDown Value="{Binding Age}" Watermark="Age" />
 </StackPanel>
 ```
 

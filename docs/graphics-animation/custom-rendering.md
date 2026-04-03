@@ -130,7 +130,6 @@ private IImage? _image;
 protected override void OnLoaded(RoutedEventArgs e)
 {
     base.OnLoaded(e);
-    var assets = AvaloniaLocator.Current.GetService<IAssetLoader>();
     var uri = new Uri("avares://MyApp/Assets/photo.png");
     _image = new Bitmap(AssetLoader.Open(uri));
     InvalidateVisual();

@@ -54,7 +54,7 @@ However, it is more common to reference a styles file in the `App.axaml` file li
 ```xml
 <Application... > 
     <Application.Styles>
-        <FluentTheme Mode="Light"/>
+        <FluentTheme />
         <StyleInclude Source="/AppStyles.axaml"/>
     </Application.Styles>
 </Application>
@@ -67,7 +67,7 @@ You can also include styles from another assembly by using the `avares://` prefi
 ```xml
 <Application... > 
     <Application.Styles>
-        <FluentTheme Mode="Light"/>
+        <FluentTheme />
         <StyleInclude Source="avares://MyApp.Shared/Styles/CommonAppStyles.axaml"/>
     </Application.Styles>
 </Application>

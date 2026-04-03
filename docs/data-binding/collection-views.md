@@ -94,12 +94,12 @@ public class MainViewModel : ObservableObject
             new Person("Charlie", 35),
         });
 
-        var filterPredicate = this.WhenAnyValue(x => x.SearchText)
-            .Select(CreateFilter);
+        var filterPredicate = this.WhenPropertyChanged(x => x.SearchText)
+            .Select(x => CreateFilter(x.Value));
 
         _source.Connect()
             .Filter(filterPredicate)
-            .SortBy(p => p.Name)
+            .Sort(SortExpressionComparer<Person>.Ascending(p => p.Name))
             .Bind(out _filtered)
             .Subscribe();
     }

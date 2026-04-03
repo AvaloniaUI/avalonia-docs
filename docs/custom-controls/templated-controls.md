@@ -104,10 +104,10 @@ Although the two syntaxes shown here are equivalent in most cases, there are som
     ```xml
     {Binding RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay}
     ```
-3. `TemplateBinding` can only be used on `IStyledElement`.
+3. `TemplateBinding` can only be used on `StyledElement`.
 
 ```xml
-<!-- This WON'T work as GeometryDrawing is not a IStyledElement. -->
+<!-- This WON'T work as GeometryDrawing is not a StyledElement. -->
 <GeometryDrawing Brush="{TemplateBinding Foreground}"/>
 
 <!-- Instead this syntax must be used in this case. -->

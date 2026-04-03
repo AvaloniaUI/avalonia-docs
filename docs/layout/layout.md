@@ -37,7 +37,7 @@ At its simplest, layout is a recursive system that leads to an element being siz
 
 Each time that a child control changes its position, it has the potential to trigger a new pass by the layout system. Therefore, it is important to understand the events that can invoke the layout system, as unnecessary invocation can lead to poor application performance. The following describes the process that occurs when the layout system is invoked.
 
-1. A child UIElement begins the layout process by first having its core properties measured.
+1. A child `Control` begins the layout process by first having its core properties measured.
 2. Sizing properties defined on `Control` are evaluated, such as `Width`, `Height`, and `Margin`.
 3. `Panel`-specific logic is applied, such as `Dock` direction or stacking `Orientation`.
 4. Content is arranged after all children have been measured.
