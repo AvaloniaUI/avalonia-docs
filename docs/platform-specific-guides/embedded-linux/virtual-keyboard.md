@@ -10,7 +10,7 @@ tags:
 The Virtual Keyboard component provides an on-screen keyboard for Avalonia applications. It is designed for touch-based or kiosk scenarios where physical keyboards may not be available, enabling text input through touchscreens or mouse clicks.
 
 :::info
-This component is available as part of [Avalonia Pro](http://avaloniaui.net/pricing) or higher.
+This component is available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
 
 The Virtual Keyboard component includes two main controls:
