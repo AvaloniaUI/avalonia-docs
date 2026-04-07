@@ -5,11 +5,11 @@ sidebar_label: Community edition
 doc-type: reference
 ---
 
-The Accelerate Community Edition provides free access to professional development tools for individual developers, small organizations, and educational institutions. The aim of this license is to allow the majority of Avalonia developers to benefit from significantly improved tooling at no cost while ensuring the sustainable development of the Avalonia ecosystem.
+Avalonia Community Edition provides free access to professional development tools for non-commercial use. The aim of this license is to allow the majority of Avalonia developers to benefit from significantly improved tooling at no cost while ensuring the sustainable development of the Avalonia ecosystem.
 
 ## What's included
 
-The Community License provides free access to three professional tools in the Avalonia Accelerate suite:
+The Community license provides free access to three professional tools normally available with an Avalonia Plus license:
 
 #### Visual Studio Extension
 
@@ -66,12 +66,13 @@ In addition, community-license Parcel allows packaging for the current platform 
 
 ## What's not included
 
-- Accelerate UI components:
-  - WebView
-  - Media Player
+- Avalonia Pro UI components:
+  - Media player
   - Markdown viewer
   - TreeDataGrid
-  - On-Screen Keyboard
+  - On-screen keyboard
+  - Rich text editor
+  - Charts
 - Technical support
 
 ## Eligibility
@@ -79,32 +80,22 @@ In addition, community-license Parcel allows packaging for the current platform 
 The Community Edition is free for:
 
 #### Individual Developers
-Individual developers working on their own equipment, including commercial projects.
-
-#### Small Organizations
-Non-Enterprise organizations where **up to five people** can use the software concurrently.
-
-An "Enterprise" is defined as an organization with:
-- More than 250 users/PCs, **OR**
-- Annual revenues exceeding €1,000,000
+Individual developers working on their own equipment, for non-commercial projects.
 
 #### Educational Institutions
 Educational and research institutions with **unlimited users** for teaching and academic research.
 
-Based on Avalonia's telemetry, **67% of current users** qualify for the Community License at no cost.
+Based on Avalonia's telemetry, **67% of current users** qualify for the Community license at no cost.
 
 ## Free Trial
-A 30-day free trial is available that includes all functionality of paid tools as well as all pro UI components, including the On-Screen Keyboard.
-
-#### Grace Period for Visual Studio Users
-A 6-month grace period is provided for Visual Studio users. When you open Visual Studio, you can click **"Skip until April 13th 2026"** to continue using the new Visual Studio extension with full Community Edition access without requiring signups or license keys.
+A 30-day free trial is available that includes all functionality of paid tools as well as all pro UI components.
 
 ## Registration
-Community License registration is available at the [Avalonia portal](https://portal.avaloniaui.net).
+Community license registration is available at the [Avalonia portal](https://portal.avaloniaui.net).
 
 ## Telemetry and Data Collection
 
-To improve Avalonia and ensure continued support for free community tools, Avalonia Accelerate collects usage telemetry and crash reports. This data helps the team understand tool usage and identify issues.
+To improve Avalonia and ensure continued support for free community tools, we collect usage telemetry and crash reports. This data helps us understand tool usage and identify issues.
 
 #### Build Telemetry
 
@@ -133,7 +124,7 @@ The following information is collected during builds:
 
 #### How Telemetry Works
 
-The telemetry system looks for license keys in the `LicenseTickets` directory to determine your license tier and telemetry settings. Uninstalling Accelerate tools is not sufficient to restore pre-Accelerate telemetry behavior (see "Uninstalling the Community Edition" below).
+The telemetry system looks for license keys in the `LicenseTickets` directory to determine your license tier and telemetry settings. Uninstalling Avalonia Plus tools is not sufficient to restore pre-Plus telemetry behavior (see "Uninstalling the Community Edition" below).
 
 #### Verifying Telemetry Data
 
@@ -144,7 +135,7 @@ For complete transparency, the telemetry collection code is open source:
 
 ## Crash Reporting (Parcel and Dev Tools Only)
 
-Avalonia Parcel and Dev Tools use Sentry for crash reporting. This is separate from usage telemetry and **only applies to crashes in the Avalonia Accelerate tools themselves**, not your applications built with Avalonia.
+Avalonia Parcel and Dev Tools use Sentry for crash reporting. This is separate from usage telemetry and **only applies to crashes in the Avalonia Plus tools themselves**, not your applications built with Avalonia.
 
 #### What's Collected
 
@@ -175,11 +166,11 @@ While telemetry helps improve Avalonia and justify the resources invested in fre
 
 ## Uninstalling the Community Edition
 
-If you wish to remove the Accelerate tools and restore telemetry behavior, please follow these steps carefully.
+If you wish to remove the Avalonia Plus tools and restore telemetry behavior, please follow these steps carefully.
 
 #### Step 1: Uninstall the Tools
 
-First, uninstall the Avalonia Accelerate tools using standard uninstallation methods:
+First, uninstall the Avalonia Plus tools using standard uninstallation methods:
 
 **For .NET Tools (Parcel, Dev Tools):**
 ```bash
@@ -195,7 +186,7 @@ dotnet tool uninstall -g Avalonia.DevTools
 
 #### Step 2: Remove License Data (CRITICAL)
 
-**⚠️ IMPORTANT**: Simply uninstalling the tools is **NOT sufficient** to restore pre-Accelerate telemetry settings. 
+**⚠️ IMPORTANT**: Simply uninstalling the tools is **NOT sufficient** to restore pre-Plus telemetry settings. 
 
 Due to a general limitation of .NET tools, license data is not automatically removed during uninstallation. You must manually delete the license data directory to completely restore previous telemetry behavior.
 
@@ -243,12 +234,7 @@ When you uninstall .NET tools, this directory is not automatically removed due t
 
 By manually removing this directory, you ensure that:
 - License information is completely cleared from your system.
-- Telemetry reverts to pre-Accelerate behavior.
-
-## Startup Program for Growing Companies
-
-For privately held companies **less than 5 years old** with annual revenue or total institutional funding below **€10M**, Avalonia offers a **50% discount** on Accelerate Enterprise through the [Startup Program](https://avaloniaui.net/startups).
-
+- Telemetry reverts to pre-Plus behavior.
 
 ## License Compliance
 
@@ -263,5 +249,5 @@ For complete legal terms, refer to the [Accelerate Community License Agreement](
 ## See also
 
 - [FAQ](/tools/faq)
-- [Installing Avalonia Accelerate](/tools/installing-accelerate)
+- [Installing Avalonia Pro](/tools/installing-avalonia-pro)
 - [Avalonia Tools overview](/tools/)
