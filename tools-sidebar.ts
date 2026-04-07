@@ -77,7 +77,6 @@ const sidebars: SidebarsConfig = {
       ],
     },
     'installing-avalonia-pro',
-    'community-edition',
     'faq',
   ],
 };
