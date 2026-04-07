@@ -4,15 +4,13 @@ title: Packaging apps for macOS
 sidebar_label: macOS
 doc-type: reference
 tags:
-  - accelerate
+  - avalonia plus
+  - avalonia pro
+  - avalonia enterprise
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import Pill from '/src/components/global/Pill';
-
-<Pill variant="primary" href="/tools">Accelerate</Pill>
-<br/><br/>
 
 ## Packaging
 

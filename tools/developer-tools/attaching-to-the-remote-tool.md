@@ -4,13 +4,10 @@ title: Attaching DevTools to the remote tool
 sidebar_label: Attaching to the remote tool
 doc-type: how-to
 tags:
-  - accelerate
+  - avalonia plus
+  - avalonia pro
+  - avalonia enterprise
 ---
-
-import Pill from '/src/components/global/Pill';
-
-<Pill variant="primary" href="/tools">Accelerate</Pill>
-<br/><br/>
 
 `Developer Tools` can be connected to applications running on different machines. This guide covers two scenarios:
 1. Local network access (e.g., Virtual Machines or devices on same Wi-Fi)

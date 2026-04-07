@@ -16,7 +16,9 @@ keywords:
 tags:
   - mcp
   - ai
-  - accelerate
+  - avalonia plus
+  - avalonia pro
+  - avalonia enterprise
 ---
 
 import Tabs from '@theme/Tabs';
@@ -33,7 +35,7 @@ For a general introduction to MCP, see [AI Tools](/tools/ai-tools/).
 Before setting up the MCP server, ensure you have:
 
 1. **DevTools .NET tool** installed. Follow the [Getting Started](/tools/developer-tools/installation) guide.
-2. **Valid Accelerate license key.** You can get one from the [Avalonia portal](https://portal.avaloniaui.net/).
+2. **Valid Avalonia Plus license key.** You can get one from the [Avalonia portal](https://portal.avaloniaui.net/).
 
 ### Setting your license key
 
@@ -94,7 +96,7 @@ See the editor-specific setup instructions below for where to place this block.
 :::
 
 :::note
-DevTools MCP is only available with a full Accelerate license.
+DevTools MCP is only available with an Avalonia Plus license or higher.
 :::
 
 ## Prepare your application
@@ -142,7 +144,7 @@ public override void Initialize()
 </TabItem>
 </Tabs>
 
-For the full installation walkthrough, including platform-specific requirements and activation, see [Installing the Accelerate developer tools](/tools/developer-tools/installation).
+For the full installation walkthrough, including platform-specific requirements and activation, see [Installing the Avalonia Plus developer tools](/tools/developer-tools/installation).
 
 ## Setting up the MCP server
 

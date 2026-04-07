@@ -15,7 +15,7 @@ Before using Parcel, ensure you have:
 2. **Valid license key** - Set the `PARCEL_LICENSE_KEY` environment variable or use the `--license-key` option with a valid license key from the portal.
 
 :::note
-Parcel CLI is only available with a full Accelerate license.
+Parcel CLI is only available with a [Avalonia Plus](https://avaloniaui.net/pricing) license.
 :::
 
 ## Overview

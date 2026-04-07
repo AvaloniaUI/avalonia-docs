@@ -5,13 +5,10 @@ description: Package Avalonia applications for Linux using Parcel, with support 
 sidebar_label: Linux
 doc-type: reference
 tags:
-  - accelerate
+  - avalonia plus
+  - avalonia pro
+  - avalonia enterprise
 ---
-
-import Pill from '/src/components/global/Pill';
-
-<Pill variant="primary" href="/tools">Accelerate</Pill>
-<br/><br/>
 
 Parcel packages Linux applications into multiple distribution formats optimized for different Linux package managers and use cases.
 

@@ -5,13 +5,10 @@ sidebar_label: Developer tools
 description: Troubleshoot common Developer Tools problems including connection failures, missing logs, and diagnostic configuration.
 doc-type: troubleshooting
 tags:
-  - accelerate
+  - avalonia plus
+  - avalonia pro
+  - avalonia enterprise
 ---
-
-import Pill from '/src/components/global/Pill';
-
-<Pill variant="primary" href="/tools">Accelerate</Pill>
-<br/><br/>
 
 ## Reporting issues
 

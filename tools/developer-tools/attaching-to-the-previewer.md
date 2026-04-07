@@ -5,18 +5,13 @@ sidebar_label: Attaching to the previewer
 description: Learn how to attach Avalonia Developer Tools to a XAML previewer process for visual tree inspection and diagnostics.
 doc-type: how-to
 tags:
-  - accelerate
+  - avalonia plus
+  - avalonia pro
+  - avalonia enterprise
 ---
 
-import Pill from '/src/components/global/Pill';
-
-<Pill variant="primary" href="/tools">Accelerate</Pill>
-<br/><br/>
-
 :::caution
-
 This feature is experimental and may change in future releases.
-
 :::
 
 The [AvaloniaVS](https://marketplace.visualstudio.com/items?itemName=AvaloniaTeam.AvaloniaVS) and [AvaloniaRider](https://plugins.jetbrains.com/plugin/14839-avaloniarider) extensions run the previewer window in a full application process, but without a real windowing subsystem. This limits the diagnostic features available to you, making it harder to analyze visual trees and inspect actual control placements.

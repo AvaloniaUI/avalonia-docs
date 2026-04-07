@@ -37,7 +37,7 @@ Find help diagnosing and resolving common issues when building Avalonia apps. Wh
 
 <DocsCards>
   <DocsCard header="MediaPlayer" href="/troubleshooting/controls/mediaplayer">
-    <p>Common issues with the Avalonia Accelerate MediaPlayer control.</p>
+    <p>Common issues with the Avalonia Pro MediaPlayer control.</p>
   </DocsCard>
   <DocsCard header="MessageBox" href="/troubleshooting/controls/messagebox">
     <p>Options for displaying message dialogs, including third-party alternatives.</p>

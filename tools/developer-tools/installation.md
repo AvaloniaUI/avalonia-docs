@@ -1,19 +1,16 @@
 ---
 id: installation
-title: Installing the Accelerate developer tools
+title: Installing the Avalonia Plus developer tools
 sidebar_label: Installation
 sidebar_position: 1
 doc-type: tutorial
 tags:
-  - accelerate
+  - avalonia plus
+  - avalonia pro
+  - avalonia enterprise
 ---
 
-import Pill from '/src/components/global/Pill';
-
-<Pill variant="primary" href="/tools">Accelerate</Pill>
-<br/><br/>
-
-In this tutorial, you install the Avalonia Developer Tools, add the diagnostics support package to your project, and verify the connection between your app and the tool.
+In this tutorial, you install the Avalonia Plus Developer Tools, add the diagnostics support package to your project, and verify the connection between your app and the tool.
 
 ## Prerequisites
 
