@@ -24,7 +24,7 @@ TreeDataGrid v12 introduces significant API changes including renamed column typ
 
 ## Installation
 
-See the [Installation Guide](/tools/installing-avalonia pro) for full instructions on installing Avalonia Pro components.
+See the [Installation Guide](/tools/installing-avalonia-pro) for full instructions on installing Avalonia Pro components.
 
 Add the `TreeDataGrid` package to your project. Ahead of the full release of Avalonia v12, you need to include the `--prerelease` flag:
 
