@@ -2,7 +2,8 @@
 id: selection-modes
 title: Selection modes
 tags:
-  - accelerate
+  - avalonia pro
+  - avalonia enterprise
 ---
 
 Two selection modes are supported:
@@ -14,7 +15,7 @@ Both selection types support either single or multiple selection. The default se
 
 
 :::info
-This control is available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Business or higher.
+This control is available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
 
 ## Setting the selection mode in XAML

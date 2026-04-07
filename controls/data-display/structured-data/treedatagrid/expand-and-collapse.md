@@ -4,11 +4,12 @@ title: Expand and collapse operations
 description: Learn how to programmatically expand and collapse rows in a hierarchical TreeDataGrid, respond to expand/collapse events, and implement lazy loading on demand.
 doc-type: reference
 tags:
-  - accelerate
+  - avalonia pro
+  - avalonia enterprise
 ---
 
 :::info
-This control is available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Business or higher.
+This control is available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
 
 When you use a hierarchical `TreeDataGrid`, your users can expand and collapse rows to navigate parent-child relationships. Avalonia provides methods on `HierarchicalTreeDataGridSource<T>` that let you control this behavior programmatically, whether you need to expand a single node, expand all nodes at once, or conditionally expand rows that match a filter. You can also subscribe to events that fire before and after each expand or collapse operation.

@@ -4,13 +4,10 @@ title: Packaging apps for Windows
 sidebar_label: Windows
 doc-type: reference
 tags:
-  - accelerate
+  - avalonia plus
+  - avalonia pro
+  - avalonia enterprise
 ---
-
-import Pill from '/src/components/global/Pill';
-
-<Pill variant="primary" href="/tools">Accelerate</Pill>
-<br/><br/>
 
 ## Packaging
 

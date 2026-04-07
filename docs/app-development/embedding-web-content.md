@@ -4,15 +4,8 @@ title: Embedding web content
 description: Embed web content in Avalonia apps using NativeWebView, NativeWebDialog, and WebAuthenticationBroker.
 doc-type: how-to
 tags:
-  - accelerate
   - xpf
 ---
-
-import Pill from '/src/components/global/Pill';
-
-<Pill variant="primary" href="/tools">Accelerate</Pill>
-<Pill variant="primary" href="/xpf">XPF</Pill>
-<br/><br/>
 
 ## Overview
 
@@ -24,11 +17,9 @@ The WebView component includes three main APIs:
 - [`NativeWebDialog`](/controls/web/nativewebdialog) - A separate dialog window that hosts web content
 - [`WebAuthenticationBroker`](/docs/webview/webauthenticationbroker) - A utility for handling OAuth and web-based authentication flows
 
-The WebView component is available with both [Avalonia Accelerate](/tools) and [Avalonia XPF](/xpf). For XPF-specific installation and usage, see the [XPF section](#xpf) below.
+The WebView component is available with both Avalonia and [Avalonia XPF](/xpf). For XPF-specific installation and usage, see the [XPF section](#xpf) below.
 
 ## Installation
-
-See the [Installation Guide](/tools/installing-accelerate) for step-by-step instructions on how to install Accelerate components.
 
 Add the WebView package to your project:
 

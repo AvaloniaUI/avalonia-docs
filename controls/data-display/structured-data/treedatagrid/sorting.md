@@ -4,11 +4,12 @@ title: Sorting
 description: How to enable, disable, and customize column sorting in the Avalonia TreeDataGrid control.
 doc-type: reference
 tags:
-  - accelerate
+  - avalonia pro
+  - avalonia enterprise
 ---
 
 :::info
-This control is available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Business or higher.
+This control is available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
 
 The `TreeDataGrid` control supports sorting rows by clicking column headers. You can enable or disable sorting per column, provide custom comparison logic, and trigger sorting programmatically. This page covers each of these scenarios.

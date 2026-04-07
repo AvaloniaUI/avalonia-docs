@@ -5,13 +5,9 @@ description: Troubleshoot common MediaPlayer problems in Avalonia, including pla
 doc-type: troubleshooting
 sidebar_label: MediaPlayer
 tags:
-  - accelerate
+  - avalonia pro
+  - avalonia enterprise
 ---
-
-import Pill from '/src/components/global/Pill';
-
-<Pill variant="primary" href="/tools">Accelerate</Pill>
-<br/><br/>
 
 ## No playback when setting `Source` in the constructor
 

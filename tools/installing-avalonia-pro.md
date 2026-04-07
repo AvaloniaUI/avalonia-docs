@@ -1,18 +1,14 @@
 ---
-id: installing-accelerate
-title: Installing Avalonia Accelerate
-description: Configure your project to use Avalonia Accelerate NuGet packages and add your license key.
+id: installing-avalonia-pro
+title: Installing Avalonia Pro
+description: Configure your project to use Avalonia Pro NuGet packages and add your license key.
 doc-type: how-to
 tags:
-  - accelerate
+  - avalonia pro
+  - avalonia enterprise
 ---
 
-import Pill from '/src/components/global/Pill';
-
-<Pill variant="primary" href="/tools">Accelerate</Pill>
-<br/><br/>
-
-This guide explains how to configure your project to use Avalonia Accelerate packages.
+This guide explains how to configure your project to use Avalonia Pro packages. These packages are available as part of [Avalonia Pro or Enterprise](https://avaloniaui.net/pricing).
 
 ## Prerequisites
 
@@ -23,21 +19,21 @@ Before you begin, make sure you have:
 
 ## NuGet package source
 
-Avalonia Accelerate packages are distributed via [nuget.org](https://www.nuget.org/). No additional NuGet feed configuration is required.
+Avalonia Pro packages are distributed via [nuget.org](https://www.nuget.org/). No additional NuGet feed configuration is required.
 
 :::note
-Prior to October 13 2025, installing Avalonia Accelerate components required setting up a dedicated NuGet feed. That feed is no longer required. Use [nuget.org](https://www.nuget.org/) instead.
+Prior to October 13 2025, installing Avalonia Pro components required setting up a dedicated NuGet feed. That feed is no longer required. Use [nuget.org](https://www.nuget.org/) instead.
 :::
 
 ## Add the NuGet package
 
-Install the Avalonia Accelerate package you need by running the `dotnet add package` command. For example, to add the media player control:
+Install the Avalonia Pro package you need by running the `dotnet add package` command. For example, to add the media player control:
 
 ```bash
 dotnet add package Avalonia.Controls.MediaPlayer
 ```
 
-Replace the package name with the one you need. The following Accelerate packages are available:
+Replace the package name with the one you need. The following Avalonia Pro packages are available:
 
 | Package | Description |
 |---------|-------------|

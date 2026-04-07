@@ -19,7 +19,7 @@ For a general introduction to MCP, see [AI Tools](/tools/ai-tools/).
 Before setting up the MCP server, ensure you have:
 
 1. **Parcel .NET tool installed.** Follow the [Setup guide](/tools/parcel/setup).
-2. **Valid Accelerate license key.** You can get one from the [Avalonia portal](https://my.avalonia.dev/).
+2. **Valid Avalonia Plus license key.** You can get one from the [Avalonia portal](https://portal.avaloniaui.net/).
 
 ### Setting your license key
 
@@ -80,7 +80,7 @@ See the editor-specific setup instructions below for where to place this block.
 :::
 
 :::note
-Parcel MCP is only available with a full Accelerate license.
+Parcel MCP is only available with a full [Avalonia Plus](https://avaloniaui.net/pricing) license.
 :::
 
 ## Setting up the MCP server

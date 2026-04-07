@@ -4,14 +4,15 @@ title: Markdown
 description: Render Markdown-formatted text using the Avalonia.Controls.Markdown control with support for theming, selection, and custom image loading.
 doc-type: reference
 tags:
-  - accelerate
+  - avalonia pro
+  - avalonia enterprise
 ---
 
 The Avalonia.Controls.Markdown control renders Markdown-formatted text in Avalonia applications, supporting common Markdown features and theming.
 
 
 :::info
-This control is available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Business or higher.
+This control is available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
 
 ## Usage examples
@@ -152,7 +153,7 @@ See the [Markdown styling](/controls/data-display/text-display/markdown-styling)
 
 ## Installation
 
-See the [Installation Guide](/tools/installing-accelerate) for step-by-step instructions on how to install Accelerate components.
+See the [Installation Guide](/tools/installing-avalonia-pro) for step-by-step instructions on how to install Avalonia Pro components.
 
 Add the Markdown package to your project:
 

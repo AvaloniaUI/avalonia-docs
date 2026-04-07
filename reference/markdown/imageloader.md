@@ -4,17 +4,17 @@ title: ImageLoader
 description: Learn how to create a custom ImageLoader for the Avalonia Markdown control to handle SVG, remote, and authenticated image sources.
 doc-type: reference
 tags:
-  - accelerate
+  - avalonia pro
+  - avalonia enterprise
 ---
-
-import Pill from '/src/components/global/Pill';
-
-<Pill variant="primary" href="/tools">Accelerate</Pill>
-<br/><br/>
 
 The `Markdown` control supports custom image loading through the `ImageLoader` property. By subclassing `MarkdownImageLoader` and overriding `LoadImageAsync`, you can handle image formats such as SVG, load images from remote servers, apply authentication headers, or add caching logic.
 
 The default image loader resolves standard bitmap formats from absolute URIs. When you need behavior beyond that, create your own loader and assign it to `ImageLoader`.
+
+:::info
+The `Markdown` control is available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
+:::
 
 ## Example: loading SVG images
 

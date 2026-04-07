@@ -2,7 +2,8 @@
 id: breaking-changes-v12
 title: TreeDataGrid v12 breaking changes
 tags:
-  - accelerate
+  - avalonia pro
+  - avalonia enterprise
 ---
 
 This document describes the breaking changes between TreeDataGrid 11.x and 12.x and
