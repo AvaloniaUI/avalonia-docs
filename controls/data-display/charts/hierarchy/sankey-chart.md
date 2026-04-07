@@ -55,5 +55,5 @@ public ObservableCollection<FlowItem> SankeyData { get; } = new()
 | `SourcePath` | Property name for the starting node. | `null` |
 | `TargetPath` | Property name for the ending node. | `null` |
 | `ValuePath` | Property name for the flow magnitude. | `null` |
+| `NodeWidth` | The width of each node column. | `20` |
 | `NodePadding` | The vertical space between nodes in a column. | `10` |
-| `LinkOpacity` | Transparency of the connecting paths. | `0.5` |

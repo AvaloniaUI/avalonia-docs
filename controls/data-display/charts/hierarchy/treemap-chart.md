@@ -14,7 +14,7 @@ import chartsHierarchicalTreemap from '/img/controls/charts/charts-hierarchical-
 [Charts](/controls/data-display/charts/index) are available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
 
-TreeMap charts visualize hierarchical data as a set of nested rectangles. Each branch is given a rectangle, sized according to its value, and tiled with smaller sub-rectangles.
+TreeMap charts visualize hierarchical or flat data as a set of nested rectangles. Each branch is given a rectangle, sized according to its value, and tiled with smaller sub-rectangles.
 
 <Image light={chartsHierarchicalTreemap} maxWidth={400} position="center" cornerRadius="true" alt="Treemap chart showing nested rectangles sized proportionally to disk usage values for different folders." />
 
@@ -55,3 +55,10 @@ public ObservableCollection<FileSystemItem> TreeMapData { get; } = new()
 | `LabelPath` | Path to the property for the labels. | `null` |
 | `LeafFill` | Brush used for the leaf nodes. | Auto-generated |
 | `BorderBrush` | Color of the borders between rectangles. | `White` |
+| `Gap` | Gap between rectangles. | 1 |
+| `IsSelectionEnabled` | Enables node selection. | false |
+| `SelectionType` | The selection mode, e.g. `Single`, `Multiple` | `Single` |
+| `SelectionBrush` | Color used to highlight selected segments. | `FromRgb(49, 74, 110)` (Navy) |
+| `SelectionStroke` | Color used to outline selected segments. | Uses theme default. |
+| `SelectionStrokeThickness` | Thickness of the outline of selected segments. | 2.0 |
+| `SelectedIndex` | Index of the primary selected node. | -1 |

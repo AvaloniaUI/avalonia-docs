@@ -27,11 +27,15 @@ Sunburst charts are used to visualize hierarchical data through a series of conc
 
 ### XAML
 ```xml
-<controls:SunburstChart Name="SunburstChartSample" Title="Organization Structure" Height="400"
+<controls:SunburstChart Title="Organization Structure"
+                        Height="400"
                         ItemsSource="{Binding SunburstData}"
                         ValuePath="Size"
                         LabelPath="Name"
-                        ChildrenPath="Children" />
+                        ChildrenPath="Children"
+                        InnerRadius="30"
+                        RingThickness="40"
+                        GapAngle="1" />
 ```
 
 ### Data model (C#)
@@ -69,10 +73,17 @@ public ObservableCollection<HierarchicalNode> SunburstData { get; } = new()
 
 | Property | Description | Default |
 | :--- | :--- | :--- |
-| `Title` | The name shown at the top of the chart. | `null` |
+| `Title` | The chart title. | `null` |
 | `ItemsSource` | The collection of root-level data items. | `null` |
 | `ValuePath` | Path to the property representing segment size. | `null` |
 | `LabelPath` | Path to the property for segment labels. | `null` |
 | `ChildrenPath` | Path to the collection of child items. | `null` |
-| `InnerRadiusFactor`| Size of the center hole (0.0 to 1.0). | `0.4` |
-| `Palette` | Custom brushes for hierarchical segments. | Auto-generated |
+| `InnerRadius`| Size of the center hole. | 30.0 |
+| `RingThickness` | Thickness of each ring. | 40.0 |
+| `GapAngle` | Gap angle between segments. | 1.0 |
+| `IsSelectionEnabled` | Whether data point selection is enabled. | `false` |
+| `SelectionType` | The selection mode, e.g. `Single`, `Multiple` | `Single` |
+| `SelectionBrush` | Color used to highlight selected segments. | `FromRgb(49, 74, 110)` (Navy) |
+| `SelectionStroke` | Color used to outline selected segments. | Uses theme default. |
+| `SelectionStrokeThickness` | Thickness of the outline of selected segments. | 2.0 |
+| `SelectedIndex` | Index of the selected data point. | -1 |
