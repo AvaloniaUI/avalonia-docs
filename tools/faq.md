@@ -210,7 +210,7 @@ Yes, both authentication providers are supported. You can either:
 - Build request and redirect `Uri`s manually
 - Integrate with `Google.Apis.Auth` and `Microsoft.Identity.Client` NuGet packages
 
-Integration samples are available in our [sample repository](https://github.com/AvaloniaUI/Accelerate.Samples/tree/main/WebAuthenticationBrokerSample/WebAuthenticationBrokerSample).
+Integration samples are available in our [sample repository](https://github.com/AvaloniaUI/Accelerate.Samples/tree/main/WebAuthenticationBrokerSample).
 
 #### Why use WebAuthenticationBroker over other options?
 
