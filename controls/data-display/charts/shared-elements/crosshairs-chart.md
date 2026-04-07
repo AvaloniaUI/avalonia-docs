@@ -4,13 +4,14 @@ title: Crosshairs
 description: Interactive guide lines that follow the cursor across a chart, enabling precise alignment of data points with axis labels for high-precision reading.
 doc_type: reference
 tags:
-  - accelerate
+  - avalonia pro
+  - avalonia enterprise
 ---
 
 import chartsFeaturesCrosshairs from '/img/controls/charts/charts-custom-crosshairs.png';
 
 :::info
-[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Enterprise.
+[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
 
 Crosshairs are interactive guide-lines that follow the user's cursor. They are essential for high-precision charts where users need to align data points with axis labels accurately.

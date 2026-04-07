@@ -4,13 +4,14 @@ title: Dendrogram chart
 description: Tree diagram that illustrates hierarchical clustering by showing how items are progressively merged into branches, used in statistical and biological analysis.
 doc_type: reference
 tags:
-  - accelerate
+  - avalonia pro
+  - avalonia enterprise
 ---
 
 import chartsHierarchicalDendrogram from '/img/controls/charts/charts-hierarchical-dendrogram.png';
 
 :::info
-[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Enterprise.
+[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
 
 Dendrograms are tree diagrams frequently used to illustrate the arrangement of the clusters produced by hierarchical clustering. They show how items are merged into a single branch.

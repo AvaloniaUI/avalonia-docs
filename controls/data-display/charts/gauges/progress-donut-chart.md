@@ -4,13 +4,14 @@ title: Progress donut chart
 description: Donut chart variant for showing progress toward a single 100% goal, used in dashboards and fitness apps.
 doc_type: reference
 tags:
-  - accelerate
+  - avalonia pro
+  - avalonia enterprise
 ---
 
 import chartsGaugesProgressDonut from '/img/controls/charts/charts-pie-progressdonut.png';
 
 :::info
-[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Enterprise.
+[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
 
 Progress donut charts are a specialized variation of donut charts designed to show progress toward a single 100% goal. They are often used in fitness apps or system dashboards.

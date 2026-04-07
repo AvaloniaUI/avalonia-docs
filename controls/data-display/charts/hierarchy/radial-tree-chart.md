@@ -4,13 +4,14 @@ title: Radial tree chart
 description: Hierarchical layout where the root node is at the center and child nodes radiate outward in concentric rings, space-efficient for large trees.
 doc_type: reference
 tags:
-  - accelerate
+  - avalonia pro
+  - avalonia enterprise
 ---
 
 import chartsHierarchicalRadialtree from '/img/controls/charts/charts-hierarchical-radial-tree.png';
 
 :::info
-[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Enterprise.
+[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
 
 Radial tree charts represent hierarchical data where the root is at the center and child nodes radiate outward in concentric circles. This layout is highly space-efficient for large trees.

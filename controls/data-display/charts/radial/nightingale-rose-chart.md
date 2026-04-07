@@ -4,13 +4,14 @@ title: Nightingale rose chart
 description: Multi-layered polar area chart that stacks multiple variables within each circular segment, allowing comparison of composition across cyclical categories.
 doc_type: reference
 tags:
-  - accelerate
+  - avalonia pro
+  - avalonia enterprise
 ---
 
 import chartsRadialRose from '/img/controls/charts/charts-radial-rose.png';
 
 :::info
-[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Enterprise.
+[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
 
 The Nightingale Rose chart is a multi-layered polar area chart. It allows for comparing multiple variables across categories by stacking them within each circular segment.

@@ -4,13 +4,14 @@ title: Waffle chart
 description: Visualizes percentages or proportions as a grid of squares, clearly showing part-to-whole relationships and goal completion.
 doc_type: reference
 tags:
-  - accelerate
+  - avalonia pro
+  - avalonia enterprise
 ---
 
 import chartsAnalyticsWaffle from '/img/controls/charts/charts-analytics-waffle.png';
 
 :::info
-[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Enterprise.
+[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
 
 Waffle charts (square pie charts) visualize percentages or proportions using a grid of squares. They are highly effective for showing part-to-whole relationships in a clear, grid-based format.

@@ -4,13 +4,14 @@ title: Area range chart
 description: Displays a filled area connecting high and low values per category, suitable for visualizing uncertainty, price bands, or temperature ranges.
 doc_type: reference
 tags:
-  - accelerate
+  - avalonia pro
+  - avalonia enterprise
 ---
 
 import chartsCartesianRangearea from '/img/controls/charts/charts-cartesian-rangearea.png';
 
 :::info
-[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Enterprise.
+[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
 
 Area range charts display a filled area connecting two values, high and low, for each category. They can be used for visualizing uncertainty, price envelopes, temperature variations, etc.

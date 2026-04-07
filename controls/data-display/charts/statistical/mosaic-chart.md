@@ -4,13 +4,14 @@ title: Mosaic chart
 description: Visualizes relationships between two categorical variables by scaling both the width and height of segments to represent their proportions of the total.
 doc_type: reference
 tags:
-  - accelerate
+  - avalonia pro
+  - avalonia enterprise
 ---
 
 import chartsAnalyticsMosaic from '/img/controls/charts/charts-analytics-mosaic.png';
 
 :::info
-[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Enterprise.
+[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
 
 Mosaic charts (Marimekko) visualize relationships between categories using area. Both the width and height of segments are scaled to represent percentages of the total.

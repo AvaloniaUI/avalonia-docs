@@ -4,13 +4,14 @@ title: Organization chart
 description: Represents organizational structure and reporting relationships in a hierarchical layout, showing positions, roles, and rank levels.
 doc_type: reference
 tags:
-  - accelerate
+  - avalonia pro
+  - avalonia enterprise
 ---
 
 import chartsHierarchicalOrganization from '/img/controls/charts/charts-hierarchical-organization.png';
 
 :::info
-[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Enterprise.
+[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
 
 Organization charts represent the structure of an organization, clarifying reporting relationships, relative ranks, and positions/job roles.

@@ -4,13 +4,14 @@ title: Liquid fill gauge
 description: Represents a percentage as an animated liquid level within a circular shape, suited for thematic dashboards showing fill or capacity metrics.
 doc_type: reference
 tags:
-  - accelerate
+  - avalonia pro
+  - avalonia enterprise
 ---
 
 import chartsGaugesLiquid from '/img/controls/charts/charts-gauges-liquid.png';
 
 :::info
-[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Enterprise.
+[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
 
 Liquid fill gauges are decorative circular gauges that represent a percentage as 'liquid' at a certain level. They are popular for visualizing tank levels, water usage, or thematic progress.

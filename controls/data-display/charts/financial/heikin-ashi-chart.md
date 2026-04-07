@@ -4,13 +4,14 @@ title: Heikin-Ashi chart
 description: Modified candlestick chart that uses averaged OHLC values to filter market noise and display trends more clearly than standard candlesticks.
 doc_type: reference
 tags:
-  - accelerate
+  - avalonia pro
+  - avalonia enterprise
 ---
 
 import chartsFinancialHeikinashi from '/img/controls/charts/charts-financial-heikin.png';
 
 :::info
-[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Enterprise.
+[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
 
 Heikin-Ashi charts are a variation of Japanese candlestick charts. They use a modified formula for open, high, low, and close values to filter out market noise and show trends more clearly.

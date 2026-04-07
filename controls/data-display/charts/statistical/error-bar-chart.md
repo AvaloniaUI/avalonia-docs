@@ -4,13 +4,14 @@ title: Error bar chart
 description: Represents data variability by adding error indicators to data points, showing standard deviation, confidence intervals, or measurement uncertainty.
 doc_type: reference
 tags:
-  - accelerate
+  - avalonia pro
+  - avalonia enterprise
 ---
 
 import chartsStatisticalErrorbar from '/img/controls/charts/charts-statistical-error.png';
 
 :::info
-[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Enterprise.
+[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
 
 Error bar charts represent the variability of data and are used on graphs to indicate the error or uncertainty in a reported measurement.

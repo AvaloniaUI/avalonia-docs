@@ -4,13 +4,14 @@ title: Step line chart
 description: Connects data points using horizontal and vertical lines in a step pattern, representing values that remain constant between intervals.
 doc_type: reference
 tags:
-  - accelerate
+  - avalonia pro
+  - avalonia enterprise
 ---
 
 import chartsCartesianStepline from '/img/controls/charts/charts-cartesian-stepline.png';
 
 :::info
-[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Enterprise.
+[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
 
 Step line charts use horizontal and vertical lines to connect data points, creating a step-like pattern. They are useful for showing changes that occur at discrete intervals.

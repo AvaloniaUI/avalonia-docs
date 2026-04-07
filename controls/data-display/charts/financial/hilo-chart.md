@@ -4,13 +4,14 @@ title: Hilo chart
 description: Displays the high and low prices per period as vertical lines, providing a focused view of price volatility without open or close values.
 doc_type: reference
 tags:
-  - accelerate
+  - avalonia pro
+  - avalonia enterprise
 ---
 
 import chartsFinancialHilo from '/img/controls/charts/charts-financial-hilo.png';
 
 :::info
-[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Enterprise.
+[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
 
 Hilo charts show the High and Low prices for a given period. By omitting the open and close values, they provide a focused view of the total price volatility and range.

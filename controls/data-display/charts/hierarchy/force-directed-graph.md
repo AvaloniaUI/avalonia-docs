@@ -4,13 +4,14 @@ title: Force-Directed Graph
 description: Lays out network nodes using physical simulations to reveal clusters and structural relationships in complex interconnected data.
 doc_type: reference
 tags:
-  - accelerate
+  - avalonia pro
+  - avalonia enterprise
 ---
 
 import chartsFlowForceDirected from '/img/controls/charts/charts-flow-force-directed.png';
 
 :::info
-[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Enterprise.
+[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
 
 Force-directed graphs use physical simulations to lay out network nodes gracefully. They are the best choice for discovering clusters and structural relationships in complex interconnected data.

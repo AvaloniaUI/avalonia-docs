@@ -4,13 +4,14 @@ title: Radar chart
 description: Compares multiple quantitative variables across categories on a radial axis, used to visualize profiles and multi-dimensional performance comparisons.
 doc_type: reference
 tags:
-  - accelerate
+  - avalonia pro
+  - avalonia enterprise
 ---
 
 import chartsRadialRadar from '/img/controls/charts/charts-radial-radar.png';
 
 :::info
-[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Enterprise.
+[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
 
 Radar charts compare multiple qualitative variables across several categories. They are widely used to visualize "profiles" or signatures of different entities across common metrics.

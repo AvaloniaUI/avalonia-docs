@@ -4,13 +4,14 @@ title: Polar area chart
 description: Similar to a pie chart but uses segment radius rather than angle to encode values, giving equal angular space to each category on a circular axis.
 doc_type: reference
 tags:
-  - accelerate
+  - avalonia pro
+  - avalonia enterprise
 ---
 
 import chartsRadialPolararea from '/img/controls/charts/charts-radial-polar.png';
 
 :::info
-[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Enterprise.
+[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
 
 Polar area charts (or coxcomb charts) are similar to pie charts but represent values using the radius of segments instead of the angle. Each segment has an equal angle.

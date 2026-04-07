@@ -4,13 +4,14 @@ title: Event timeline chart
 description: Visualizes a series of events chronologically along a time axis, providing a clear representation of historical or planned occurrences.
 doc_type: reference
 tags:
-  - accelerate
+  - avalonia pro
+  - avalonia enterprise
 ---
 
 import chartsTimelineHorizontal from '/img/controls/charts/charts-timeline-event.png';
 
 :::info
-[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Enterprise.
+[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
 
 Event timeline charts visualize a series of events chronologically. They provide a clear representation of historical or planned occurrences along a fixed time axis.

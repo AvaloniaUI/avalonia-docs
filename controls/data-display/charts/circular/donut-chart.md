@@ -4,13 +4,14 @@ title: Donut chart
 description: A variation of the pie chart with a blank center, often used to display a total value or label in the middle for improved readability.
 doc_type: reference
 tags:
-  - accelerate
+  - avalonia pro
+  - avalonia enterprise
 ---
 
 import chartsPieDonut from '/img/controls/charts/charts-pie-donut.png';
 
 :::info
-[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Enterprise.
+[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
 
 A donut chart is a variations of a pie chart with a blank center. This design is often used to place a total value or a label in the middle, improving readability and space efficiency.

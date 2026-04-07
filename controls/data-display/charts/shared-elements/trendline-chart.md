@@ -4,13 +4,14 @@ title: Trendline chart
 description: Overlays a calculated trend line on a Cartesian chart series to highlight the general direction or pattern, with support for linear, exponential, and moving average types.
 doc_type: reference
 tags:
-  - accelerate
+  - avalonia pro
+  - avalonia enterprise
 ---
 
 import chartsFeaturesTrendlines from '/img/controls/charts/charts-trendline-1.png';
 
 :::info
-[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Enterprise.
+[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
 
 Trendlines are used in Cartesian charts to show the general direction or pattern of data. They filter out noise to highlight underlying trends (e.g., linear, moving average).

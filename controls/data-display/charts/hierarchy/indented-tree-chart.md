@@ -4,13 +4,14 @@ title: Indented tree chart
 description: Represents hierarchies using a file-explorer-style indented layout within a charting container, supporting advanced styling and interactions.
 doc_type: reference
 tags:
-  - accelerate
+  - avalonia pro
+  - avalonia enterprise
 ---
 
 import chartsHierarchicalIndentedtree from '/img/controls/charts/charts-hierarchical-tree.png';
 
 :::info
-[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Enterprise.
+[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
 
 Indented tree charts represent hierarchies using a layout similar to a standard file explorer or tree view, but within a charting container for advanced styling and interactions.

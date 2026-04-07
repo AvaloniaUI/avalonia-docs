@@ -4,13 +4,14 @@ title: Bump chart
 description: Visualizes changes in rank over time, focusing on relative position of categories rather than absolute values.
 doc_type: reference
 tags:
-  - accelerate
+  - avalonia pro
+  - avalonia enterprise
 ---
 
 import chartsAnalyticsBump from '/img/controls/charts/charts-statistical-bump.png';
 
 :::info
-[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Enterprise.
+[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
 
 Bump charts are a variation of line charts designed to visualize changes in rank over time. They focus on the relative position of categories rather than their absolute values.

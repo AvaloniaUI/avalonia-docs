@@ -4,13 +4,14 @@ title: Bubble map
 description: Overlays proportionally-sized circles on geographic regions to represent data values, showing both location and value magnitude simultaneously.
 doc_type: reference
 tags:
-  - accelerate
+  - avalonia pro
+  - avalonia enterprise
 ---
 
 import chartsMapsBubble from '/img/controls/charts/charts-maps-bubble.png';
 
 :::info
-[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Enterprise.
+[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
 
 Bubble maps use circles of different sizes to represent data values over geographic regions. They are effective for showing both locality and value magnitude simultaneously.

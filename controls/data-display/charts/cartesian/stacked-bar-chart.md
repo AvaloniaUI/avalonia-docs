@@ -4,13 +4,14 @@ title: Stacked bar chart
 description: Stacks multiple data series in a single bar to compare both total values and internal component distribution across categories.
 doc_type: reference
 tags:
-  - accelerate
+  - avalonia pro
+  - avalonia enterprise
 ---
 
 import chartsCartesianStackedbar from '/img/controls/charts/charts-cartesian-stackedbar.png';
 
 :::info
-[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Enterprise.
+[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
 
 Stacked bar charts represent multiple series of data stacked on top of each other, allowing for comparison of both the total and the individual components.

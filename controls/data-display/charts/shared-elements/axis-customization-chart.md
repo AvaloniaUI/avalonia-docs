@@ -4,13 +4,14 @@ title: Axis customization
 description: Provides options to customize axis appearance including label rotation, gridline styling, multiple axes, and support for numerical, category, date, and logarithmic types.
 doc_type: reference
 tags:
-  - accelerate
+  - avalonia pro
+  - avalonia enterprise
 ---
 
 import chartsFeaturesGridlines from '/img/controls/charts/charts-gridlines-customization.png';
 
 :::info
-[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Enterprise.
+[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
 
 Avalonia Charts provides extensive options to customize axis appearance, including label rotation, styling, gridline configuration, and multi-axis support.

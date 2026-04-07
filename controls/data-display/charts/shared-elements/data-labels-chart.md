@@ -4,13 +4,14 @@ title: Data labels
 description: Displays actual data values directly on chart series elements, removing the need for users to estimate values from axis positions.
 doc_type: reference
 tags:
-  - accelerate
+  - avalonia pro
+  - avalonia enterprise
 ---
 
 import chartsFeaturesLabels from '/img/controls/charts/charts-axis-45-labels.png';
 
 :::info
-[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Enterprise.
+[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
 
 Data labels place the actual values directly on the chart series. This removes the need for users to eye-ball coordinates, making the chart much easier to read at a glance.

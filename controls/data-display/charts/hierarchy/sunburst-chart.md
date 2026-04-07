@@ -4,13 +4,14 @@ title: Sunburst chart
 description: Visualizes hierarchical data as concentric rings, where each ring represents a level and segments show the proportion of each node within its parent.
 doc_type: reference
 tags:
-  - accelerate
+  - avalonia pro
+  - avalonia enterprise
 ---
 
 import chartsHierarchicalSunburst from '/img/controls/charts/charts-hierarchical-sunburst.png';
 
 :::info
-[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Enterprise.
+[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
 
 Sunburst charts are used to visualize hierarchical data through a series of concentric rings. Each ring represents a level in the hierarchy, with the inner circle being the root level.

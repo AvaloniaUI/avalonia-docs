@@ -4,13 +4,14 @@ title: Process flow chart
 description: Visualizes sequences of steps, decisions, and logical outcomes using standard flowchart symbols, suitable for business workflows and decision trees.
 doc_type: reference
 tags:
-  - accelerate
+  - avalonia pro
+  - avalonia enterprise
 ---
 
 import chartsFlowProcess from '/img/controls/charts/charts-flow-process.png';
 
 :::info
-[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Enterprise.
+[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
 
 Process flow charts (or Flowcharts) are used to visualize sequences of steps, decisions, and logical outcomes in a system. They are the standard for mapping business logic or troubleshooting paths.

@@ -4,13 +4,14 @@ title: Funnel chart
 description: Visualizes the progressive reduction of data through a linear process, useful for identifying bottlenecks in pipelines.
 doc_type: reference
 tags:
-  - accelerate
+  - avalonia pro
+  - avalonia enterprise
 ---
 
 import chartsAnalyticsFunnel from '/img/controls/charts/charts-analytics-funnel.png';
 
 :::info
-[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Enterprise.
+[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
 
 Funnel charts visualize the progressive reduction of data as it passes from one phase to another. They are essential for identifying bottlenecks in a linear process.

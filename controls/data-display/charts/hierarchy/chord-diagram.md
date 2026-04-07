@@ -4,13 +4,14 @@ title: Chord diagram
 description: Visualizes inter-relationships between entities in a circular layout, ideal for showing complex directional flows such as trade or migration patterns.
 doc_type: reference
 tags:
-  - accelerate
+  - avalonia pro
+  - avalonia enterprise
 ---
 
 import chartsFlowChord from '/img/controls/charts/charts-flow-chord.png';
 
 :::info
-[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Enterprise.
+[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
 
 Chord diagrams visualize the inter-relationships between entities in a circular layout. They are perfect for showing complex directional flows between a set of items.

@@ -4,13 +4,14 @@ title: Linear gauge chart
 description: Visualizes a value along a horizontal or vertical bar for comparing metrics or showing progress.
 doc_type: reference
 tags:
-  - accelerate
+  - avalonia pro
+  - avalonia enterprise
 ---
 
 import chartsGaugesLinear from '/img/controls/charts/charts-gauges-linear-1.png';
 
 :::info
-[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Enterprise.
+[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
 
 Linear gauge charts visualize a value along a horizontal or vertical bar. They are excellent for comparing metrics side-by-side or showing progress in a linear, space-efficient format.

@@ -4,13 +4,14 @@ title: Tooltips
 description: Displays detailed information about data points on hover, providing context without cluttering the chart area; fully customizable via DataTemplates.
 doc_type: reference
 tags:
-  - accelerate
+  - avalonia pro
+  - avalonia enterprise
 ---
 
 import chartsFeaturesTooltip from '/img/controls/charts/charts-tooltips.png';
 
 :::info
-[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Enterprise.
+[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
 
 Tooltips provide detailed information about data points when the user hovers over them. They are essential for precision and for providing context without cluttering the main chart area.

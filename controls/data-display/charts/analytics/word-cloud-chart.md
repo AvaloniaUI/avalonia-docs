@@ -4,13 +4,14 @@ title: Word cloud
 description: Represents text data by varying word size based on frequency or importance, providing a visual summary of qualitative content.
 doc_type: reference
 tags:
-  - accelerate
+  - avalonia pro
+  - avalonia enterprise
 ---
 
 import chartsAnalyticsWordCloud from '/img/controls/charts/charts-analytics-word-cloud.png';
 
 :::info
-[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Enterprise.
+[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
 
 Word clouds represent text data by varying word size based on frequency or importance. They provide an immediate visual summary of qualitative content or popular topics.

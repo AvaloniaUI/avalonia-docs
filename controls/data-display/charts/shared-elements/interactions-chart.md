@@ -4,13 +4,14 @@ title: Zoom and pan
 description: Enables users to interactively zoom and pan across chart areas, suitable for exploring high-density or large datasets with mouse, touch, or selection zoom.
 doc_type: reference
 tags:
-  - accelerate
+  - avalonia pro
+  - avalonia enterprise
 ---
 
 import chartsFeaturesZoom from '/img/controls/charts/charts-zoom.png';
 
 :::info
-[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Enterprise.
+[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
 
 Zoom and pan allow users to explore multi-dimensional or high-resolution datasets by navigating the chart area dynamically.

@@ -4,13 +4,14 @@ title: Legend
 description: Identifies data series within a chart by label and color, supporting multiple positions, orientations, and optional interactive series toggling.
 doc_type: reference
 tags:
-  - accelerate
+  - avalonia pro
+  - avalonia enterprise
 ---
 
 import chartsFeaturesLegend from '/img/controls/charts/charts-legend-right.png';
 
 :::info
-[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Enterprise.
+[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
 
 The Legend component helps users identify different data series within a chart. It can be positioned around the chart area and styled to match your application's theme.

@@ -4,13 +4,14 @@ title: Spline chart
 description: Similar to a line chart but uses smooth polynomial curves to connect data points, giving a more organic appearance to trends.
 doc_type: reference
 tags:
-  - accelerate
+  - avalonia pro
+  - avalonia enterprise
 ---
 
 import chartsCartesianSpline from '/img/controls/charts/charts-cartesian-spline.png';
 
 :::info
-[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Enterprise.
+[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
 
 Spline charts are similar to line charts but use smooth polynomial curves to connect data points, providing a more "organic" feel to data trends.

@@ -4,13 +4,14 @@ title: Scatter chart
 description: Plots data points as dots using two numeric variables to reveal correlations, distributions, and outliers in datasets.
 doc_type: reference
 tags:
-  - accelerate
+  - avalonia pro
+  - avalonia enterprise
 ---
 
 import chartsCartesianScatter from '/img/controls/charts/charts-cartesian-scatter.png';
 
 :::info
-[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Enterprise.
+[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
 
 Scatter charts use dots to represent values for two different numeric variables. They are essential for displaying and comparing numeric values, such as scientific, statistical, and engineering data.

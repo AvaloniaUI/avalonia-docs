@@ -4,13 +4,14 @@ title: Pictorial bar chart
 description: Uses icons or symbols instead of plain bars, reinforcing the subject matter visually for infographics and thematic reports.
 doc_type: reference
 tags:
-  - accelerate
+  - avalonia pro
+  - avalonia enterprise
 ---
 
 import chartsCartesianPictorial from '/img/controls/charts/charts-cartesian-pictorial.png';
 
 :::info
-[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Enterprise.
+[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
 
 Pictorial bar charts use recognizable icons or symbols instead of plain bars. They are excellent for infographics where the subject matter (e.g., people, cars, buildings) can be visually reinforced.

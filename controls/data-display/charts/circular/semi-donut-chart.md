@@ -4,13 +4,14 @@ title: Semi-donut chart
 description: Displays proportional data in a 180-degree arc, popular for dashboard gauges and summary metrics where a full circle is not required.
 doc_type: reference
 tags:
-  - accelerate
+  - avalonia pro
+  - avalonia enterprise
 ---
 
 import chartsPieSemidonut from '/img/controls/charts/charts-pie-semidonut.png';
 
 :::info
-[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Enterprise.
+[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
 
 Semi-donut charts display data in a 180-degree arc. They are particularly popular in dashboard designs for gauging progress or displaying summary metrics in a space-constrained area.

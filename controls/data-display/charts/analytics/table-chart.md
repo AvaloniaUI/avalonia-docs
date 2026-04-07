@@ -4,13 +4,14 @@ title: Table chart
 description: Combines tabular data with embedded visual cues such as color and icons, suitable for dense reports requiring exact values.
 doc_type: reference
 tags:
-  - accelerate
+  - avalonia pro
+  - avalonia enterprise
 ---
 
 import chartsAnalyticsTable from '/img/controls/charts/charts-analytics-table.png';
 
 :::info
-[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Enterprise.
+[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
 
 Table charts combine traditional tabular data with embedded visual cues. They are ideal for dense data reports where both exact values and visual "weight" (color, icons) are needed.

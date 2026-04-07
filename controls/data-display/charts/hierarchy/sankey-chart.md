@@ -4,13 +4,14 @@ title: Sankey chart
 description: Visualizes the flow of data, energy, or materials between stages using proportional-width links to represent quantity through each connection.
 doc_type: reference
 tags:
-  - accelerate
+  - avalonia pro
+  - avalonia enterprise
 ---
 
 import chartsFlowSankey from '/img/controls/charts/charts-flow-sankey.png';
 
 :::info
-[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Enterprise.
+[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
 
 Sankey charts visualize the flow of data, energy, or materials between stages. The width of the connecting links is proportional to the quantity of the flow.

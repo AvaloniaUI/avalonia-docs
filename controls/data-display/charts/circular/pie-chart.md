@@ -4,13 +4,14 @@ title: Pie chart
 description: A circular chart divided into sectors to illustrate numerical proportions, most effective for showing part-to-whole relationships with few categories.
 doc_type: reference
 tags:
-  - accelerate
+  - avalonia pro
+  - avalonia enterprise
 ---
 
 import chartsPie from '/img/controls/charts/charts-pie.png';
 
 :::info
-[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Enterprise.
+[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
 
 Pie charts are circular charts divided into sectors to illustrate numerical proportion. They are most effective when showing part-to-whole relationships.

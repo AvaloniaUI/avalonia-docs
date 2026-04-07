@@ -4,11 +4,12 @@ title: Violin plot
 description: Combines a box plot with a kernel density estimate to show both the statistical summary and the probability distribution shape of data across categories.
 doc_type: reference
 tags:
-  - accelerate
+  - avalonia pro
+  - avalonia enterprise
 ---
 
 :::info
-[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Enterprise.
+[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
 
 Violin plots combine a box plot with a kernel density plot, showing both the statistical summary and the probability density of the data at different values.

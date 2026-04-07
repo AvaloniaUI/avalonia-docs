@@ -4,13 +4,14 @@ title: Slope chart
 description: Compares values for multiple entities between exactly two points in time or categories, highlighting which entities increased, decreased, or stayed the same.
 doc_type: reference
 tags:
-  - accelerate
+  - avalonia pro
+  - avalonia enterprise
 ---
 
 import chartsAnalyticsSlope from '/img/controls/charts/charts-statistical-slope.png';
 
 :::info
-[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Enterprise.
+[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
 
 Slope charts compare two points in time (or two categories) for multiple entities. They are ideal for visualizing the change in rank or value between two states.

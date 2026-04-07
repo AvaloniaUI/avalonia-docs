@@ -4,13 +4,14 @@ title: Candlestick chart
 description: Displays open, high, low, and close prices per period using candle-shaped symbols, used for financial market price analysis.
 doc_type: reference
 tags:
-  - accelerate
+  - avalonia pro
+  - avalonia enterprise
 ---
 
 import chartsFinancialCandlestick from '/img/controls/charts/charts-financial-candlestick.png';
 
 :::info
-[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Enterprise.
+[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
 
 Candlestick charts are used to describe price movements of a security, derivative, or currency over time. Each candle shows the open, high, low, and close prices for a specific period.

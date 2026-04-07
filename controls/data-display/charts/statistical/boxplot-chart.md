@@ -4,13 +4,14 @@ title: Box plot chart
 description: Graphical summary of data distribution showing the median, quartiles, and outliers using a box-and-whisker layout, useful for statistical comparisons.
 doc_type: reference
 tags:
-  - accelerate
+  - avalonia pro
+  - avalonia enterprise
 ---
 
 import chartsCartesianBoxplot from '/img/controls/charts/charts-cartesian-boxplot.png';
 
 :::info
-[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Enterprise.
+[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
 
 A box plot (or box-and-whisker plot) provides a graphical summary of the distribution, central tendency, and variability of data, making it easy to see quartiles and outliers.

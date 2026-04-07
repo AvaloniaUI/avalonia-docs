@@ -4,13 +4,14 @@ title: Area chart
 description: Extends the line chart by filling the area under the line with color or gradients, emphasizing magnitude of change over time.
 doc_type: reference
 tags:
-  - accelerate
+  - avalonia pro
+  - avalonia enterprise
 ---
 
 import chartsCartesianArea from '/img/controls/charts/charts-cartesian-area.png';
 
 :::info
-[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Enterprise.
+[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
 
 Area charts are based on the line chart. The area between the axis and the line is filled with color or gradients, emphasizing the magnitude of change over time.

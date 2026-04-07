@@ -4,13 +4,14 @@ title: KPI cards
 description: Displays critical business metrics in a focused format, combining a large value with a trend indicator and mini sparkline.
 doc_type: reference
 tags:
-  - accelerate
+  - avalonia pro
+  - avalonia enterprise
 ---
 
 import chartsAnalyticsKpi from '/img/controls/charts/charts-analytics-kpi.png';
 
 :::info
-[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Enterprise.
+[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
 
 KPI cards display critical business metrics in a high-impact, focused format. They typically combine a large value with a trend indicator and a mini sparkline for context.

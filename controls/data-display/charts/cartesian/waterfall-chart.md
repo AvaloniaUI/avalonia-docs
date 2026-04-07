@@ -4,13 +4,14 @@ title: Waterfall chart
 description: Shows a running total as values are added or subtracted, useful for visualizing how sequential positive or negative changes affect an initial value.
 doc_type: reference
 tags:
-  - accelerate
+  - avalonia pro
+  - avalonia enterprise
 ---
 
 import chartsCartesianWaterfall from '/img/controls/charts/charts-cartesian-waterfall.png';
 
 :::info
-[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Enterprise.
+[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
 
 A waterfall chart shows a running total as values are added or subtracted. It's useful for understanding how an initial value is affected by a series of intermediate positive or negative values.

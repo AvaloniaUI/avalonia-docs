@@ -4,13 +4,14 @@ title: Annotations
 description: Adds contextual lines, bands, shapes, and text to charts for highlighting thresholds, milestones, or regions of interest.
 doc_type: reference
 tags:
-  - accelerate
+  - avalonia pro
+  - avalonia enterprise
 ---
 
 import chartsFeaturesAnnotation from '/img/controls/charts/charts-annotations.png';
 
 :::info
-[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Enterprise.
+[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
 
 Annotations allow you to add context to your charts using lines, bands, shapes, and custom text. They are useful for highlighting thresholds, milestones, or specific regions of interest.

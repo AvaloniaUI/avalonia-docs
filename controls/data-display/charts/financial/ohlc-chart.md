@@ -4,13 +4,14 @@ title: OHLC chart
 description: Shows open, high, low, and close prices using vertical lines with horizontal ticks, a standard professional visualization for price data.
 doc_type: reference
 tags:
-  - accelerate
+  - avalonia pro
+  - avalonia enterprise
 ---
 
 import chartsFinancialOhlc from '/img/controls/charts/charts-financial-ohlc.png';
 
 :::info
-[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Enterprise.
+[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
 
 OHLC charts show the Open, High, Low, and Close prices for a given period. They are similar to candlestick charts but use vertical lines with horizontal ticks to represent the range and opening/closing prices.

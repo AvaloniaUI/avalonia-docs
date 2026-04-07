@@ -4,13 +4,14 @@ title: Circle packing
 description: Represents hierarchical data as nested circles, where larger circles contain smaller child circles, showing grouping and relative size at each level.
 doc_type: reference
 tags:
-  - accelerate
+  - avalonia pro
+  - avalonia enterprise
 ---
 
 import chartsHierarchicalCirclepacking from '/img/controls/charts/charts-hierarchical-circle-packing.png';
 
 :::info
-[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Enterprise.
+[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
 
 Circle packing is a variation of a treemap where nodes are represented as circles. Larger circles represent parent categories, with child categories nested as smaller circles inside them.

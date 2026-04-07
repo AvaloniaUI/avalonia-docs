@@ -4,13 +4,14 @@ title: Swimlane chart
 description: Organizes tasks or processes into distinct horizontal lanes, showing ownership and sequence across departments, roles, or team members over time.
 doc_type: reference
 tags:
-  - accelerate
+  - avalonia pro
+  - avalonia enterprise
 ---
 
 import chartsTimelineSwimlane from '/img/controls/charts/charts-timeline-swimlane.png';
 
 :::info
-[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Enterprise.
+[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
 
 Swimlane charts organize tasks or processes into distinct horizontal or vertical "lanes." They are the gold standard for visualizing workflows across different departments or roles.

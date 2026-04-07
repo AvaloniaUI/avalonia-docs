@@ -4,13 +4,14 @@ title: Heatmap
 description: Uses color-coded cells in a 2D matrix to represent data values, making patterns, correlations, and outliers easy to identify.
 doc_type: reference
 tags:
-  - accelerate
+  - avalonia pro
+  - avalonia enterprise
 ---
 
 import chartsAnalyticsHeatmap from '/img/controls/charts/charts-analytics-heatmap.png';
 
 :::info
-[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Enterprise.
+[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
 
 Heatmaps use color-coded cells to represent data values in a 2D matrix, making it easy to identify patterns, correlations, and outliers across two dimensions.

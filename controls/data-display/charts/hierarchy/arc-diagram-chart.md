@@ -4,13 +4,14 @@ title: Arc diagram
 description: Network visualization where nodes are placed linearly and connections are drawn as curved arcs, useful for showing relationships in ordered datasets.
 doc_type: reference
 tags:
-  - accelerate
+  - avalonia pro
+  - avalonia enterprise
 ---
 
 import chartsFlowArc from '/img/controls/charts/charts-flow-arc.png';
 
 :::info
-[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Enterprise.
+[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
 
 Arc diagrams are network visualizations where nodes are placed linearly along an axis. Connections are drawn as curved arcs, with the thickness or color representing link strength.

@@ -4,13 +4,14 @@ title: Matrix chart
 description: Uses a grid to visualize relationships between two categorical sets, showing density or value magnitude at row/column intersections.
 doc_type: reference
 tags:
-  - accelerate
+  - avalonia pro
+  - avalonia enterprise
 ---
 
 import chartsAnalyticsMatrix from '/img/controls/charts/charts-analytics-matrix.png';
 
 :::info
-[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Enterprise.
+[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
 
 Matrix charts use a grid to visualize the relationship between two categorical sets. They are perfect for showing density, presence, or value magnitude at the intersection of rows and columns.

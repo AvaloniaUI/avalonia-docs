@@ -4,13 +4,14 @@ title: Sparkline charts
 description: Small, minimalist charts without axes designed to show data trends in a compact space, suitable for embedding in tables, dashboards, or inline text.
 doc_type: reference
 tags:
-  - accelerate
+  - avalonia pro
+  - avalonia enterprise
 ---
 
 import chartsAnalyticsSparkline from '/img/controls/charts/charts-analytics-matrix-sparkline.png';
 
 :::info
-[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Enterprise.
+[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
 
 Sparklines are small, minimalist intense charts without axes or coordinates, designed to show trends in a series of values in a space-efficient way (e.g., inside a table).

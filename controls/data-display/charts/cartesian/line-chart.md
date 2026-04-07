@@ -4,13 +4,14 @@ title: Line chart
 description: Connects data points with straight line segments on X and Y axes, ideal for showing trends over time or across categories.
 doc_type: reference
 tags:
-  - accelerate
+  - avalonia pro
+  - avalonia enterprise
 ---
 
 import chartsCartesianLines from '/img/controls/charts/charts-cartesian-lines.png';
 
 :::info
-[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Enterprise.
+[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
 
 Line charts use X and Y axes to visualize data points connected by straight line segments. They are ideal for showing trends over time or categories.

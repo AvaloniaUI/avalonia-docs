@@ -4,13 +4,14 @@ title: Choropleth map
 description: Shades geographic regions in proportion to a statistical variable, used to visualize data density, demographics, or market performance across territories.
 doc_type: reference
 tags:
-  - accelerate
+  - avalonia pro
+  - avalonia enterprise
 ---
 
 import chartsMapsChoropleth from '/img/controls/charts/charts-maps.png';
 
 :::info
-[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Enterprise.
+[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
 
 Choropleth maps shade geographical areas in proportion to a statistical variable. They are excellent for visualizing data density or trends across discrete regions.

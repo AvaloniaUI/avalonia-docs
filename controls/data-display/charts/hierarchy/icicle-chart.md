@@ -4,13 +4,14 @@ title: Icicle chart
 description: Visualizes hierarchical data as adjacent rectangles per level, making parent-child relationships easy to trace for taxonomy and structural analysis.
 doc_type: reference
 tags:
-  - accelerate
+  - avalonia pro
+  - avalonia enterprise
 ---
 
 import chartsHierarchicalIcicle from '/img/controls/charts/charts-hierarchical-icicle.png';
 
 :::info
-[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Enterprise.
+[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
 
 Icicle charts visualize hierarchical data using rectangles placed side by side. Each level in the hierarchy's depth is represented by a row or column, making parent-child relationships easy to trace.

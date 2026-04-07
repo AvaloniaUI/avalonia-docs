@@ -4,13 +4,14 @@ title: Pyramid chart
 description: Emphasizes both hierarchy and volume in a stacked triangular layout, commonly used for population and pipeline visualization.
 doc_type: reference
 tags:
-  - accelerate
+  - avalonia pro
+  - avalonia enterprise
 ---
 
 import chartsAnalyticsPyramid from '/img/controls/charts/charts-analytics-pyramid.png';
 
 :::info
-[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Enterprise.
+[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
 
 Pyramid charts are a type of stacked area or bar graph that emphasizes both hierarchy and volume. They are the classic choice for population and sales pipeline visualization.

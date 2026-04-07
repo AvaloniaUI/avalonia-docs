@@ -4,13 +4,14 @@ title: Heatmap map
 description: Visualizes data density across geographic coordinates using a color gradient, ideal for showing activity hot spots and concentration areas on a map.
 doc_type: reference
 tags:
-  - accelerate
+  - avalonia pro
+  - avalonia enterprise
 ---
 
 import chartsMapsHeatmap from '/img/controls/charts/charts-maps-gradient.png';
 
 :::info
-[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Enterprise.
+[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
 
 Heatmap maps (Heat maps) visualize data density across geographic coordinates using a color gradient. They are the ideal choice for showing "hot spots" where activity is concentrated.

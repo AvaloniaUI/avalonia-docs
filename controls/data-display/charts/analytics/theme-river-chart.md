@@ -4,13 +4,14 @@ title: Theme river chart
 description: Visualizes changes in multiple categories over time using a stacked streamgraph layout, emphasizing flow and relative proportions in an organic river-like shape.
 doc_type: reference
 tags:
-  - accelerate
+  - avalonia pro
+  - avalonia enterprise
 ---
 
 import chartsAnalyticsThemeriver from '/img/controls/charts/charts-flow-themeriver.png';
 
 :::info
-[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Enterprise.
+[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
 
 Theme river charts (or Streamgraphs) visualize changes in categories over time. They emphasize the flow and relative proportions of multiple series, creating an organic, river-like shape.

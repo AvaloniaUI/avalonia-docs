@@ -4,13 +4,14 @@ title: Network chart
 description: Displays nodes and edges in a static layout, suitable for infrastructure diagrams, dependency trees, and fixed structural visualizations.
 doc_type: reference
 tags:
-  - accelerate
+  - avalonia pro
+  - avalonia enterprise
 ---
 
 import chartsFlowNetwork from '/img/controls/charts/charts-flow-network.png';
 
 :::info
-[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Enterprise.
+[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
 
 Network charts provide a high-level view of nodes and edges. They are simpler and more static than force-directed graphs, suitable for fixed structural diagrams.

@@ -4,13 +4,14 @@ title: Stacked area chart
 description: Stacks multiple area series on top of each other to show how several variables contribute to a cumulative total over time.
 doc_type: reference
 tags:
-  - accelerate
+  - avalonia pro
+  - avalonia enterprise
 ---
 
 import chartsCartesianStackedarea from '/img/controls/charts/charts-cartesian-stackedarea.png';
 
 :::info
-[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Enterprise.
+[Charts](/controls/data-display/charts/index) are available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
 
 Stacked area charts display multiple area series stacked on top of each other. They are ideal for showing how several variables contribute to a total over time.
