@@ -1139,14 +1139,6 @@ const redirects: Redirect[] = [
         "to": "/tools"
     },
     {
-        "from": "/accelerate/installation",
-        "to": "/tools/installing-accelerate"
-    },
-    {
-        "from": "/accelerate/community",
-        "to": "/tools/community-edition"
-    },
-    {
         "from": "/accelerate/components/media-player/quickstart",
         "to": "/controls/media/media-playback"
     },

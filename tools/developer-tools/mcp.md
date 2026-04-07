@@ -39,7 +39,11 @@ Before setting up the MCP server, ensure you have:
 
 ### Setting your license key
 
-The MCP server reads your license from the `ACCELERATE_LICENSE_KEY` environment variable. You can find your license key in the [Avalonia Customer Portal](https://portal.avaloniaui.net/). MCP is a paid feature and is not included with the Community edition.
+The MCP server reads your license from the `AVALONIA_TOOLS_LICENSE_KEY` environment variable. You can find your license key in the [Avalonia customer portal](https://portal.avaloniaui.net/). MCP is a paid feature and is not included with the Community license.
+
+:::note
+The `AVALONIA_TOOLS_LICENSE_KEY` variable is used from Avalonia 12.0.0. If you are on Avalonia 11.x.x or earlier versions, please use `ACCELERATE_LICENSE_KEY` instead.
+:::
 
 Set the key in your shell profile so it persists across sessions:
 
@@ -49,7 +53,7 @@ Set the key in your shell profile so it persists across sessions:
 Add this line to your shell profile (`~/.zshrc`, `~/.bashrc`, or equivalent):
 
 ```bash
-export ACCELERATE_LICENSE_KEY="your-license-key"
+export AVALONIA_TOOLS_LICENSE_KEY="your-license-key"
 ```
 
 Then reload the profile or open a new terminal:
@@ -64,7 +68,7 @@ source ~/.zshrc
 Set a persistent environment variable for your user account:
 
 ```powershell
-[System.Environment]::SetEnvironmentVariable('ACCELERATE_LICENSE_KEY', 'your-license-key', 'User')
+[System.Environment]::SetEnvironmentVariable('AVALONIA_TOOLS_LICENSE_KEY', 'your-license-key', 'User')
 ```
 
 Restart any open terminals and editors to pick up the change.
@@ -73,7 +77,7 @@ Restart any open terminals and editors to pick up the change.
 <TabItem value="windows-cmd" label="Windows (Command Prompt)">
 
 ```cmd
-setx ACCELERATE_LICENSE_KEY "your-license-key"
+setx AVALONIA_TOOLS_LICENSE_KEY "your-license-key"
 ```
 
 Restart any open terminals and editors to pick up the change.
@@ -87,7 +91,7 @@ If you launch your editor from a desktop shortcut or application menu (rather th
 ```json
 {
     "env": {
-        "ACCELERATE_LICENSE_KEY": "your-license-key"
+        "AVALONIA_TOOLS_LICENSE_KEY": "your-license-key"
     }
 }
 ```
@@ -149,6 +153,10 @@ For the full installation walkthrough, including platform-specific requirements 
 ## Setting up the MCP server
 
 DevTools provides an MCP server that runs as a local process. The underlying command is `avdt mcp`, but you do not need to run it manually. Your editor starts it automatically once configured.
+
+:::note
+The `AVALONIA_TOOLS_LICENSE_KEY` variable is used from Avalonia 12.0.0. If you are on Avalonia 11.x.x or earlier versions, please use `ACCELERATE_LICENSE_KEY` instead.
+:::
 
 Choose your editor below:
 
@@ -285,7 +293,7 @@ claude mcp list
             "command": "avdt",
             "args": ["mcp"],
             "env": {
-                "ACCELERATE_LICENSE_KEY": "your-license-key"
+                "AVALONIA_TOOLS_LICENSE_KEY": "your-license-key"
             }
         }
     }
@@ -331,7 +339,7 @@ dotnet tool list -g
 
 If the MCP server starts but reports a missing or invalid license key:
 
-- **Confirm the variable is set** by running `echo $ACCELERATE_LICENSE_KEY` (macOS/Linux) or `echo %ACCELERATE_LICENSE_KEY%` (Windows) in the same terminal where you launch your editor.
+- **Confirm the variable is set** by running `echo $AVALONIA_TOOLS_LICENSE_KEY` (macOS/Linux) or `echo %AVALONIA_TOOLS_LICENSE_KEY%` (Windows) in the same terminal where you launch your editor.
 - **If your editor is launched from a GUI shortcut**, it may not inherit shell environment variables. Add an `env` block to your MCP configuration as shown in the [license key setup](#setting-your-license-key) section above.
 
 ### MCP server does not appear in the editor
