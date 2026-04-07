@@ -26,13 +26,13 @@ Heikin-Ashi charts are a variation of Japanese candlestick charts. They use a mo
 
 ### XAML
 ```xml
-<controls:CartesianChart Name="HeikinAshiChart" Title="Trend Analysis" Height="300">
-    <controls:CartesianChart.Series>
-        <controls:HeikinAshiSeries ItemsSource="{Binding StockData}"
-                                  OpenPath="Open" HighPath="High"
-                                  LowPath="Low" ClosePath="Close" />
-    </controls:CartesianChart.Series>
-</controls:CartesianChart>
+<chartsEnterprise:HeikinAshiChart Title="Trend Analysis"
+                                  Height="300"
+                                  ItemsSource="{Binding StockData}"
+                                  OpenPath="Open"
+                                  HighPath="High"
+                                  LowPath="Low"
+                                  ClosePath="Close" />
 ```
 
 ### Data model (C#)
@@ -50,8 +50,12 @@ public ObservableCollection<StockQuote> StockData { get; } = new()
 
 | Property | Description | Default |
 | :--- | :--- | :--- |
-| `ItemsSource` | The collection of price data. | `null` |
-| `OpenPath` / `ClosePath` | Paths to the price values. | `null` |
-| `HighPath` / `LowPath` | Paths to the extent values. | `null` |
-| `RisingBrush` | Color for upward "smoothed" candles. | `Green` |
-| `FallingBrush` | Color for downward "smoothed" candles. | `Red` |
+| `ItemsSource` | The data source of price data. | `null` |
+| `OpenPath` | Paths of the opening price. | `null` |
+| `ClosePath` | Path of the closing price. | `null` |
+| `HighPath` | Path of the highest price. | `null` |
+| `LowPath` | Path of the lowest price. | `null` |
+| `DatePath` | Path of the date or time. | `null` |
+| `BullishBrush` | Color for bullish candles. | `0x4C, 0xAF, 0x50` (Green) |
+| `BearishBrush` | Color for bearish candles. | `0xF4, 0x43, 0x36` (Red) |
+| `CandleWidth` | Width of candles as a proportion of the available slot width. (0 to 1) | 0.7 |

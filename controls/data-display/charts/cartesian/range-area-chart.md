@@ -1,6 +1,6 @@
 ---
 id: range-area-chart
-title: Range area chart
+title: Area range chart
 description: Displays a filled area connecting high and low values per category, suitable for visualizing uncertainty, price bands, or temperature ranges.
 doc_type: reference
 tags:
@@ -13,7 +13,7 @@ import chartsCartesianRangearea from '/img/controls/charts/charts-cartesian-rang
 [Charts](/controls/data-display/charts/index) are available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Enterprise.
 :::
 
-Range area charts display a filled area connecting two values (high and low) for each category. They are perfect for visualizing uncertainty, price envelopes, or temperature variations.
+Area range charts display a filled area connecting two values, high and low, for each category. They can be used for visualizing uncertainty, price envelopes, temperature variations, etc.
 
 <Image light={chartsCartesianRangearea} maxWidth={400} position="center" cornerRadius="true" alt="Range area chart with a filled band between high and low temperature values across days of the week." />
 
@@ -26,13 +26,19 @@ Range area charts display a filled area connecting two values (high and low) for
 
 ### XAML
 ```xml
-<controls:CartesianChart Title="Temperature Forecast" Height="250">
-     <controls:CartesianChart.Series>
-        <controls:RangeAreaSeries Title="Range"
-                                ItemsSource="{Binding TempRanges}"
-                                HighValuePath="Max"
-                                LowValuePath="Min"
-                                Fill="#B46495ED" />
+<controls:CartesianChart Title="Temperature Range" Height="250">
+    <controls:CartesianChart.HorizontalAxis>
+        <controls:CategoryAxis />
+    </controls:CartesianChart.HorizontalAxis>
+    <controls:CartesianChart.VerticalAxis>
+        <controls:NumericalAxis />
+    </controls:CartesianChart.VerticalAxis>
+    <controls:CartesianChart.Series>
+        <controls:AreaRangeSeries Title="Range"
+                                  ItemsSource="{Binding RangeData}"
+                                  CategoryPath="Category"
+                                  LowPath="Low"
+                                  HighPath="High" />
     </controls:CartesianChart.Series>
 </controls:CartesianChart>
 ```

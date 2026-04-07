@@ -26,13 +26,11 @@ Kagi charts are time-independent charts that track price movements using vertica
 
 ### XAML
 ```xml
-<controls:CartesianChart Title="Price Reversals" Height="300">
-    <controls:CartesianChart.Series>
-        <controls:KagiSeries ItemsSource="{Binding PriceData}"
-                             ValuePath="Price"
-                             ReversalAmount="2.5" />
-    </controls:CartesianChart.Series>
-</controls:CartesianChart>
+<controls:KagiChart Title="Trend Reversal"
+                    Height="300"
+                    ItemsSource="{Binding PriceData}"
+                    ValuePath="Close"
+                    ReversalAmount="2" />
 ```
 
 ### Data model (C#)
@@ -52,5 +50,6 @@ public ObservableCollection<PricePoint> PriceData { get; } = new()
 | `ItemsSource` | The collection of raw price points. | `null` |
 | `ValuePath` | Property representing the price. | `null` |
 | `ReversalAmount`| Minimum price change required to flip direction. | `1.0` |
-| `YangStroke` | Brush for the upward/bullish segments. | `Green` |
-| `YinStroke` | Brush for the downward/bearish segments. | `Red` |
+| `YangStroke` | Brush for the yang segments. (Rising above previous high) | `Green` |
+| `YinStroke` | Brush for the yin segments. (Falling below previous low) | `Red` |
+| `StrokeThickness` | Base stroke thickness. | `2.0` |

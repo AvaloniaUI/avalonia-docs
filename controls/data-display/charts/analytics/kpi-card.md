@@ -27,10 +27,12 @@ KPI cards display critical business metrics in a high-impact, focused format. Th
 ### XAML
 ```xml
 <controls:KpiCard Title="Revenue" Width="180" Height="160" Margin="10"
-                  Value="{Binding Kpi1.Value}" Unit="{Binding Kpi1.Unit}"
-                  Delta="{Binding Kpi1.Delta}" Subtitle="{Binding Kpi1.Subtitle}"
-                  Trend="{Binding Kpi1.Trend}"
-                  SparklineData="{Binding Kpi1.SparklineData}"/>
+                  Value="{Binding Kpi1.Value}"
+                  Unit="{Binding Kpi1.Unit}"
+                  Delta="{Binding Kpi1.Delta}"
+                  DeltaType="{Binding Kpi1.DeltaType}"
+                  Subtitle="{Binding Kpi1.Subtitle}"
+                  SparklineData="{Binding Kpi1.SparklineData}" />
 ```
 
 ### Data model (C#)

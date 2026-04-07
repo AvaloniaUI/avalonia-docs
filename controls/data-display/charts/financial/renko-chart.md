@@ -26,13 +26,11 @@ Renko charts are made of "bricks" that represent a fixed price movement. A new b
 
 ### XAML
 ```xml
-<controls:CartesianChart Title="Fixed-Size Bricks" Height="300">
-    <controls:CartesianChart.Series>
-        <controls:RenkoSeries ItemsSource="{Binding StockPoints}"
-                             ValuePath="Close"
-                             BrickSize="5.0" />
-    </controls:CartesianChart.Series>
-</controls:CartesianChart>
+<controls:RenkoChart Title="Price Movement"
+                     Height="300"
+                     ItemsSource="{Binding StockPoints}"
+                     ValuePath="Close"
+                     BrickSize="5" />
 ```
 
 ### Data model (C#)
@@ -52,5 +50,5 @@ public ObservableCollection<PriceRecord> StockPoints { get; } = new()
 | `ItemsSource` | The collection of price data. | `null` |
 | `BrickSize` | The price movement required for a new brick. | `1.0` |
 | `ValuePath` | Property name for the price value. | `null` |
-| `UpBrush` | Color for bullish bricks. | `Green` |
-| `DownBrush` | Color for bearish bricks. | `Red` |
+| `UpBrush` | Color for up trends. | `Green` |
+| `DownBrush` | Color for down trends. | `Red` |

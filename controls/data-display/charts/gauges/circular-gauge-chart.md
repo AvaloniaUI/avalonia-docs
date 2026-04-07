@@ -26,7 +26,13 @@ Circular gauge charts visualize a single value on a radial scale. They are the s
 
 ### XAML
 ```xml
-<controls:CircularGaugeChart Value="{Binding CpuUsage}" Width="220" Height="220" Title="CPU" Margin="10" />
+<controls:CircularGaugeChart Value="{Binding CpuUsage}"
+                             Width="220"
+                             Height="220"
+                             Title="CPU"
+                             NeedleBrush="#F44336"
+                             ScaleBrush="#D0D0D0"
+                             ShowValue="True" />
 ```
 
 ### Data model (C#)
@@ -39,7 +45,13 @@ public double CpuUsage { get; set; } = 72;
 
 | Property | Description | Default |
 | :--- | :--- | :--- |
-| `Value` | The current value to display. | `0` |
-| `MinValue` / `MaxValue`| The range of the scale. | `0` to `100` |
-| `Title` | Label displayed in the center/bottom. | `null` |
-| `Stroke` | Color of the gauge needle or arc. | Theme-dependent |
+| `Value` | The current value to display. | 0.0 |
+| `MinValue` | Minimum value of the scale. | 0.0 |
+| `MaxValue` | Maximum value of the scale. | 100.0 |
+| `ShowValue` | Whether to display the numeric value. | `true` |
+| `StartAngle` | The starting angle of the gauge arc, in degrees. | 135.0 |
+| `SweepAngle` | The sweep angle of the gauge arc, in degrees. | 270.0 |
+| `ScaleBrush` | Color of the scale track. | Uses theme default. |
+| `NeedleBrush` | Color of the needle. | Uses theme default. |
+| `ScaleThickness` | Thickness of the scale arc. | 10.0 |
+| `MajorTickCount` | The number of major tick marks. | 5 |

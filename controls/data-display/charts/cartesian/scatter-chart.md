@@ -26,16 +26,20 @@ Scatter charts use dots to represent values for two different numeric variables.
 
 ### XAML
 ```xml
-<controls:CartesianChart Name="ScatterChartSample" IsTooltipEnabled="True" Title="Correlation Data" Height="250">
+<controls:CartesianChart Title="Correlation Data" Height="250">
+    <controls:CartesianChart.Series>
+        <controls:ScatterSeries Title="Points"
+                                ItemsSource="{Binding ScatterPoints}"
+                                CategoryPath="X"
+                                ValuePath="Y"
+                                MarkerSize="8" />
+    </controls:CartesianChart.Series>
     <controls:CartesianChart.HorizontalAxis>
-        <controls:CategoryAxis />
+        <controls:NumericalAxis />
     </controls:CartesianChart.HorizontalAxis>
     <controls:CartesianChart.VerticalAxis>
         <controls:NumericalAxis />
     </controls:CartesianChart.VerticalAxis>
-    <controls:CartesianChart.Series>
-        <controls:ScatterSeries Title="Points" ItemsSource="{Binding ScatterPoints}" XValuePath="X" YValuePath="Y" />
-    </controls:CartesianChart.Series>
 </controls:CartesianChart>
 ```
 
@@ -59,8 +63,8 @@ public ObservableCollection<PointData> ScatterPoints { get; } = new()
 | :--- | :--- | :--- |
 | `Title` | The name of the series. | `null` |
 | `ItemsSource` | The collection of data points. | `null` |
-| `XValuePath` | Path to the X-axis value. | `null` |
-| `YValuePath` | Path to the Y-axis value. | `null` |
+| `CategoryPath` | Value of the category path (X-axis). | `null` |
+| `ValuePath` | Value of the value path (Y-axis). | `null` |
 | `MarkerSize` | Size of the dots in pixels. | `6` |
 | `MarkerShape` | Shape of the dots (Circle, Square, etc.). | `Circle` |
 | `Fill` | The color of the scatter dots. | Theme-dependent |

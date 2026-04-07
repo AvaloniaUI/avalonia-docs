@@ -44,11 +44,11 @@ const sidebars: SidebarsConfig = {
               collapsed: true,
               items: [
                 'data-display/charts/cartesian/area-chart',
+                'data-display/charts/cartesian/range-area-chart',
                 'data-display/charts/cartesian/bar-chart',
                 'data-display/charts/cartesian/histogram-chart',
                 'data-display/charts/cartesian/line-chart',
                 'data-display/charts/cartesian/pareto-chart',
-                'data-display/charts/cartesian/range-area-chart',
                 'data-display/charts/cartesian/scatter-chart',
                 'data-display/charts/cartesian/spline-chart',
                 'data-display/charts/cartesian/stacked-area-chart',

@@ -26,7 +26,10 @@ Linear gauge charts visualize a value along a horizontal or vertical bar. They a
 
 ### XAML
 ```xml
-<controls:LinearGaugeChart Value="{Binding ProgressValue}" Title="Download Progress" Height="60" ScaleVisibility="Visible" />
+<controls:LinearGaugeChart Value="{Binding ProgressValue}"
+                           Title="Download Progress"
+                           Height="60"
+                           ShowScale="True" />
 ```
 
 ### Data model (C#)
@@ -39,7 +42,16 @@ public double ProgressValue { get; set; } = 65.5;
 
 | Property | Description | Default |
 | :--- | :--- | :--- |
-| `Value` | The numeric value to represent. | `0` |
-| `Orientation` | `Horizontal` or `Vertical`. | `Horizontal` |
-| `ScaleVisibility`| Toggles the numeric scale/ticks. | `Hidden` |
-| `Fill` | Brush used for the progress bar. | Theme-dependent |
+| `Value` | The current value to display. | 50.0 |
+| `MinValue` | Minimum value of the scale. | 0.0 |
+| `MaxValue` | Maximum value of the scale. | 100.0 |
+| `Orientation` | Orientation of the gauge, `Horizontal` or `Vertical`. | `Horizontal` |
+| `ShowScale`| Whether to display the scale. | `true` |
+| `TrackBrush` | Color of the track. | Uses theme default. |
+| `IndicatorBrush` | Color of the indicator. | Uses theme default. |
+| `ValueBrush` | Color of the value. | Uses theme default. |
+| `TrackThickness` | Thickness of the track. | 20.0 |
+| `ShowMajorTicks` | Whether to display major ticks. | `false` |
+| `ShowMinorTicks` | Whether to display minor ticks. | `false` |
+| `MajorTickInterval` | Interval between major ticks. | 20.0 |
+| `MinorTickCount` | Number of minor ticks between two major ticks. | 4 |
