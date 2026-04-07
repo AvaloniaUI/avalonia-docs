@@ -2,14 +2,15 @@
 id: mediasource
 title: MediaSource
 tags:
-  - accelerate
+  - avalonia pro
+  - avalonia enterprise
 ---
 
-The `MediaSource` class hierarchy provides an abstraction for different types of media content sources in Avalonia Accelerate MediaControls. This allows the media playback system to handle various content sources (files, URLs, streams) through a unified interface.
+The `MediaSource` class hierarchy provides an abstraction for different types of media content sources in Avalonia Pro MediaControls. This allows the media playback system to handle various content sources (files, URLs, streams) through a unified interface.
 
 
 :::info
-This control is available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Business or higher.
+This control is available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
 
 ## MediaSource (abstract base class)

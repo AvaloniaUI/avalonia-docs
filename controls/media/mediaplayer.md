@@ -2,7 +2,8 @@
 id: mediaplayer
 title: MediaPlayer
 tags:
-  - accelerate
+  - avalonia pro
+  - avalonia enterprise
 ---
 
 The `MediaPlayer` class provides the core functionality for media playback in Avalonia applications. It handles media
@@ -11,7 +12,7 @@ the `MediaPlayerControl`.
 
 
 :::info
-This control is available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Business or higher.
+This control is available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
 
 ## Properties

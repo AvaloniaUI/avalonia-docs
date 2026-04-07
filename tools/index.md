@@ -49,13 +49,13 @@ Accelerate also includes UI controls such as [TreeDataGrid](/controls/data-displ
 
 If you work at a company with fewer than five developers and less than $1M USD in annual revenue, the [Community Edition](/tools/community-edition) gives you free access to all Accelerate tools and components. No trial period, no feature gates.
 
-For larger teams and organisations, paid subscriptions are available in Business and Enterprise tiers. Business includes everything most teams need. Enterprise adds specialised components like VirtualKeyboard for kiosk and embedded scenarios.
+For larger teams and organizations, paid subscriptions are available in Business and Enterprise tiers. Business includes everything most teams need. Enterprise adds specialized components like VirtualKeyboard for kiosk and embedded scenarios.
 
 Subscriptions fund continued development of the open-source framework.
 
 <br />
 <div style={{ display: 'flex', justifyContent: 'center', gap: '10px' }}>
-  <Button label="Purchase Accelerate" link="https://avaloniaui.net/accelerate" variant="secondary" outline />
+  <Button label="Purchase Avalonia Enterprise" link="https://avaloniaui.net/pricing" variant="secondary" outline />
   <Button label="Community Edition" link="/tools/community-edition" variant="secondary" outline />
 </div>
 

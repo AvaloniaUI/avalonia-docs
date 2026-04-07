@@ -16,7 +16,7 @@ import DevToolsChangeLayoutScreenshot from '/img/guides/development-optimization
 
 :::note
 
-This documentation covers the Legacy Developer Tools. A new [AvaloniaUI Developer Tools](https://avaloniaui.net/accelerate) is now available, offering enhanced features and improved debugging capabilities. The Legacy Developer Tools remain supported with stability updates.
+This documentation covers the Legacy Developer Tools. A new [AvaloniaUI Developer Tools](/tools/developer-tools/installation) is now available, offering enhanced features and improved debugging capabilities. The Legacy Developer Tools remain supported with stability updates.
 
 :::
 

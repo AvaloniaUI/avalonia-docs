@@ -2,11 +2,12 @@
 id: column-types
 title: Column types
 tags:
-  - accelerate
+  - avalonia pro
+  - avalonia enterprise
 ---
 
 :::info
-This control is available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Business or higher.
+This control is available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
 
 ## TreeDataGridTextColumn

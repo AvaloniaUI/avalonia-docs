@@ -4,11 +4,12 @@ title: Filtering
 description: Learn how to filter rows in the Avalonia TreeDataGrid control using predicate functions, including multi-criteria, enum, null-safe, and hierarchical filtering patterns.
 doc-type: reference
 tags:
-  - accelerate
+  - avalonia pro
+  - avalonia enterprise
 ---
 
 :::info
-This control is available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Business or higher.
+This control is available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
 
 Filtering lets you display only the rows that match specific criteria in your `TreeDataGrid`. Both `FlatTreeDataGridSource` and `HierarchicalTreeDataGridSource` support filtering through predicate functions.

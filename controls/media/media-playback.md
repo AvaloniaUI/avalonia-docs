@@ -3,14 +3,15 @@ id: media-playback
 title: Implementing media playback with MediaPlayer
 sidebar_label: Implementing media playback
 tags:
-  - accelerate
+  - avalonia pro
+  - avalonia enterprise
 ---
 
 This guide provides a practical introduction to implementing media playback in Avalonia applications using the Avalonia Accelerate [`MediaPlayer`](/controls/media/mediaplayercontrol).
 
 
 :::info
-This control is available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Business or higher.
+This control is available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
 
 ## Installation

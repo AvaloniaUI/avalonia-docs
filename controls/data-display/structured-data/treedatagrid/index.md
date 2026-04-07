@@ -2,7 +2,8 @@
 id: index
 title: TreeDataGrid
 tags:
-  - accelerate
+  - avalonia pro
+  - avalonia enterprise
 ---
 
 import FlatTreeDataGrid from '/img/accelerate/treedatagrid/quickstart-flat-1.png';
@@ -14,7 +15,7 @@ The `TreeDataGrid` combines tree view and data grid functionality in a single co
 * _Hierarchical_ displays data in an expandable tree with optional columns.
 
 :::info
-This control is available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Business or higher.
+This control is available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
 
 :::tip[Upgrading from v11?]
