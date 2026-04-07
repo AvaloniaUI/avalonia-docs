@@ -55,3 +55,6 @@ public ObservableCollection<HeatmapPoint> HeatmapData { get; } = new()
 | `LowColor` | Color used for the lowest values. | `Blue` / Theme-dependent |
 | `HighColor` | Color used for the highest values. | `Red` / Theme-dependent |
 | `LabelFormat` | Format string for the values displayed in cells. | `null` |
+| `ShowLabels` | Whether to display the value inside each cell. | `true` |
+| `CellGap` | Size of gap between cells. | 2 |
+| `CellCornerRadius` | Corner radius of each cell. | 4 |

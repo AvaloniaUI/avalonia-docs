@@ -4,13 +4,14 @@ title: Chart controls
 description: Avalonia Charts is a library of over 80 data visualization controls for dashboards, financial tools, analytics, and more.
 doc_type: overview
 tags:
-  - accelerate
+  - avalonia pro
+  - avalonia enterprise
 ---
 
 Charts provide a library of data visualization controls for building dashboards, analytics, financial tools, scientific reports, and more. Common charting features, such as tooltips, legends, interactivity, etc. are supported out of the box, integrating with Avalonia's theming system to allow deep customization.
 
 :::info
-Charts are available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Enterprise.
+Charts are available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
 
 ## Example use cases
@@ -189,4 +190,4 @@ Most chart types share the following configurable elements:
 
 ## See also
 
-- [Accelerate installation guide](/tools/installing-accelerate)
+- [Avalonia Pro installation guide](/tools/installing-avalonia-pro)
