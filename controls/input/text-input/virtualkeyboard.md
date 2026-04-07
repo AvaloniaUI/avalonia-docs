@@ -6,7 +6,7 @@ tags:
   - avalonia enterprise
 ---
 
-import VirtualKeyboardStyles from '/img/accelerate/virtual-keyboard/styles.png';
+import VirtualKeyboardStyles from '/img/avalonia-pro/virtual-keyboard/styles.png';
 
 The `VirtualKeyboard` is a standalone control that provides an on-screen keyboard that can be manually placed in your application's layout. Unlike `VirtualKeyboardScope`, which automatically manages keyboard visibility based on focus, `VirtualKeyboard` is explicitly directed at a specific target input element.
 

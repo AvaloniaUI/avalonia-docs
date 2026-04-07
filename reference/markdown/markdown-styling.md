@@ -2,15 +2,15 @@
 id: markdown-styling
 title: Markdown styling
 tags:
-  - accelerate
+  - avalonia pro
+  - avalonia enterprise
 ---
 
-import Pill from '/src/components/global/Pill';
-
-<Pill variant="primary" href="/tools">Accelerate</Pill>
-<br/><br/>
-
 The `Markdown` control in Avalonia supports custom styling via named resources. You can override these resources in your application to customize the appearance of Markdown elements.
+
+:::info
+The `Markdown` control is available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
+:::
 
 ## Customizable Resources
 

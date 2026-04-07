@@ -348,8 +348,8 @@ function createRedirects(existingPath: string): string[] | undefined {
       }
     }
 
-    // Accelerate install
-    if (existingPath === '/tools/installing-accelerate') {
+    // Avalonia Pro install
+    if (existingPath === '/tools/installing-avalonia-pro') {
       redirects.push('/docs/development-optimization/installing-accelerate');
     }
 

@@ -169,5 +169,5 @@ The `MediaPlayer` manages the lifecycle automatically:
 - [MediaPlayer control](/controls/media/mediaplayercontrol)
 - [MediaPlayer class](/controls/media/mediaplayer)
 - [Implementing MediaPlayer](/controls/media/media-playback)
-- [Installing Avalonia Accelerate](/tools/installing-accelerate)
+- [Installing Avalonia Pro](/tools/installing-avalonia-pro)
 - [Troubleshooting](/troubleshooting/controls/mediaplayer)

@@ -2,17 +2,15 @@
 id: mediaplayer
 title: MediaPlayer
 tags:
-  - accelerate
+  - avalonia pro
+  - avalonia enterprise
 ---
 
-import Pill from '/src/components/global/Pill';
+The `MediaPlayer` class provides the core functionality for media playback in Avalonia applications. It handles media loading, playback control, and platform-specific backend management, serving as the engine behind `MediaPlayerControl`.
 
-<Pill variant="primary" href="/tools">Accelerate</Pill>
-<br/><br/>
-
-The `MediaPlayer` class provides the core functionality for media playback in Avalonia applications. It handles media
-loading, playback control, and platform-specific backend management, serving as the engine behind
-the `MediaPlayerControl`.
+:::info
+`MediaPlayer` is available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
+:::
 
 ## Properties
 
@@ -263,5 +261,5 @@ catch (Exception ex) {
 - [MediaPlayer control](/controls/media/mediaplayercontrol)
 - [MediaSource class](/docs/media/mediasource)
 - [Implementing MediaPlayer](/docs/media/media-playback)
-- [Installing Avalonia Accelerate](/tools/installing-accelerate)
+- [Installing Avalonia Pro](/tools/installing-avalonia-pro)
 - [Troubleshooting](/troubleshooting/controls/mediaplayer)

@@ -4,15 +4,15 @@ title: CodeHighlighter
 description: Reference for the CodeHighlighter property on the Avalonia Markdown control, covering the ColorCode and TextMate highlighter implementations.
 doc-type: reference
 tags:
-  - accelerate
+  - avalonia pro
+  - avalonia enterprise
 ---
 
-import Pill from '/src/components/global/Pill';
-
-<Pill variant="primary" href="/tools">Accelerate</Pill>
-<br/><br/>
-
 The `CodeHighlighter` property on the `Markdown` control enables syntax highlighting for fenced code blocks. Avalonia provides two highlighter implementations as separate NuGet packages: `ColorCodeHighlighter` (lightweight, limited language support) and `TextMateHighlighter` (full TextMate grammar support with themes).
+
+:::info
+The `Markdown` control is available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
+:::
 
 ## Installation
 

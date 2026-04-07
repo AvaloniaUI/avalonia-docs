@@ -263,5 +263,5 @@ catch (Exception ex) {
 - [MediaPlayer control](/controls/media/mediaplayercontrol)
 - [MediaSource class](/controls/media/mediasource)
 - [Implementing MediaPlayer](/controls/media/media-playback)
-- [Installing Avalonia Accelerate](/tools/installing-accelerate)
+- [Installing Avalonia Pro](/tools/installing-avalonia-pro)
 - [Troubleshooting](/troubleshooting/controls/mediaplayer)

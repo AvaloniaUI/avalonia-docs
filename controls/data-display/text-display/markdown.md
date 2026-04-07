@@ -153,7 +153,7 @@ See the [Markdown styling](/controls/data-display/text-display/markdown-styling)
 
 ## Installation
 
-See the [Installation Guide](/tools/installing-accelerate) for step-by-step instructions on how to install Accelerate components.
+See the [Installation Guide](/tools/installing-avalonia-pro) for step-by-step instructions on how to install Avalonia Pro components.
 
 Add the Markdown package to your project:
 

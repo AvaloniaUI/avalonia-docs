@@ -6,8 +6,8 @@ tags:
   - avalonia enterprise
 ---
 
-import FlatTreeDataGrid from '/img/accelerate/treedatagrid/quickstart-flat-1.png';
-import HierarchicalTreeDataGrid from '/img/accelerate/treedatagrid/quickstart-hierarchical-1.png';
+import FlatTreeDataGrid from '/img/avalonia-pro/treedatagrid/quickstart-flat-1.png';
+import HierarchicalTreeDataGrid from '/img/avalonia-pro/treedatagrid/quickstart-hierarchical-1.png';
 
 The `TreeDataGrid` combines tree view and data grid functionality in a single control, displaying hierarchical and tabular data together. It supports two modes:
 
@@ -24,7 +24,7 @@ TreeDataGrid v12 introduces significant API changes including renamed column typ
 
 ## Installation
 
-See the [Installation Guide](/tools/installing-accelerate) for full instructions on installing Accelerate components.
+See the [Installation Guide](/tools/installing-avalonia pro) for full instructions on installing Avalonia Pro components.
 
 Add the `TreeDataGrid` package to your project. Ahead of the full release of Avalonia v12, you need to include the `--prerelease` flag:
 

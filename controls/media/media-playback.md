@@ -7,7 +7,7 @@ tags:
   - avalonia enterprise
 ---
 
-This guide provides a practical introduction to implementing media playback in Avalonia applications using the Avalonia Accelerate [`MediaPlayer`](/controls/media/mediaplayercontrol).
+This guide provides a practical introduction to implementing media playback in Avalonia applications using the Avalonia Pro [`MediaPlayer`](/controls/media/mediaplayercontrol).
 
 
 :::info
@@ -16,7 +16,7 @@ This control is available as part of [Avalonia Pro](https://avaloniaui.net/prici
 
 ## Installation
 
-See the [Installation Guide](/tools/developer-tools/installation) for step-by-step instructions on how to install Accelerate components.
+See the [Installation Guide](/tools/installing-avalonia-pro) for step-by-step instructions on how to install Avalonia Pro components.
 
 Add the MediaPlayer package to your project:
 
@@ -401,5 +401,5 @@ As for platform-specific resources on which codecs are supported, please check t
 - [MediaPlayer control](/controls/media/mediaplayercontrol)
 - [MediaPlayer class](/controls/media/mediaplayer)
 - [MediaSource class](/controls/media/mediasource)
-- [Installing Avalonia Accelerate](/tools/installing-accelerate)
+- [Installing Avalonia Pro](/tools/installing-avalonia-pro)
 - [Troubleshooting](/troubleshooting/controls/mediaplayer)

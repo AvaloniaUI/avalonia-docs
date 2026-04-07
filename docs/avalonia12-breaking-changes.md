@@ -51,7 +51,7 @@ The `Avalonia.Diagnostics` package has been removed.
 The Dev Tools included with [Avalonia Plus](https://avaloniaui.net/pricing) or higher should be used instead.
 
 Remove the `Avalonia.Diagnostics` package from your projects and replace it with `AvaloniaUI.DiagnosticsSupport`.  
-To install the Accelerate Dev Tools, see the [Dev Tools documentation](https://docs.avaloniaui.net/accelerate/tools/dev-tools/getting-started).
+To install the Avalonia Plus Dev Tools, see the [Dev Tools documentation](/tools/developer-tools/installation).
 
 **Example:**
 
