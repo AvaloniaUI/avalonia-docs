@@ -1,25 +1,27 @@
 ---
 id: data-validation
 title: Data validation
-description: Validate user input in Avalonia using DataAnnotations, INotifyDataErrorInfo, and exception-based validation.
-doc-type: how-to
+description: Validate user input in Avalonia using DataAnnotationsValidationPlugin.
+doc-type: overview
 ---
 
-Avalonia offers different data validation options. This section explains how you can validate the `Properties` of your `ViewModel` and how you can style the displayed error message.
+This page explains how to use Avalonia to validate data input by users.
 
-## Validating a property
+## Data annotations validation plugin
 
-Avalonia uses [`DataValidationPlugins`](https://api-docs.avaloniaui.net/docs/T_Avalonia_Data_Core_Plugins_IDataValidationPlugin) to validate the `Properties` you bound to. Out of the box Avalonia provide these three validation plugins:
+Avalonia's `DataAnnotationsValidationPlugin` allows you to validate any [`Validation-Attributes`](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute) associated with the `Properties` of your `ViewModel`.
 
-* [DataAnnotations - ValidationPlugin](data-validation.md#dataannotations---validationplugin)
-* [INotifyDataErrorInfo - ValidationPlugin](data-validation.md#inotifydataerrorinfo---validationplugin)
-* [Exception - ValidationPlugin](data-validation.md#exception---validationplugin)
+You can validate built-in validation attributes, [`CustomValidationAttribute`](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.customvalidationattribute), or your own attributes derived from `ValidationAttribute`.
 
-### DataAnnotations - ValidationPlugin
+### Enable `DataAnnotationsValidationPlugin`
 
-You can decorate the `Properties` of your `ViewModel` with different [`Validation-Attributes`](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute). You can use the build-in ones, use the [`CustomValidationAttribute`](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.customvalidationattribute) or create your own by derive from `ValidationAttribute`.
+Since Avalonia v12, the data annotations validation plugin is disabled by default. To enable the plugin, you must add the following line to the `AppBuilder` in the `Program.cs` file of your app.
 
-**Sample: The property EMail is required and must be a valid e-mail-address**
+```csharp
+.WithDataAnnotationsValidation()
+```
+
+### Example: The property `EMail` is required and must be a valid e-mail-address
 
 ```csharp
 [Required]
@@ -31,51 +33,13 @@ public string? EMail
 }
 ```
 
-### INotifyDataErrorInfo - ValidationPlugin
-
-Avalonia also supports validation of classes that implement [`INotifyDataErrorInfo`](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifydataerrorinfo). Several MVVM libraries use this interface for their data validation, for example the [CommunityToolkit.Mvvm](https://learn.microsoft.com/en-us/windows/communitytoolkit/mvvm/observablevalidator) package. For usage instructions please visit the documentation of the MVVM package of your choice.
-
-:::info
-Some libraries like the `CommunityToolkit.Mvvm` use `DataAnnotations` for their validation. This may result in conflicts with the [DataAnnotations - ValidationPlugin](data-validation.md#dataannotations---validationplugin). Please see [Manage ValidationPlugins](data-validation.md#manage-validationplugins) how to solve this issue.
-:::
-
-### Exception - ValidationPlugin
-
-One more option to validate a property is to raise an [`Exception`](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/exceptions/creating-and-throwing-exceptions) inside the setter of your property.
-
-**Sample: Validate the property EMail using `Exceptions`**
-
-```csharp
-public string? EMail
-{
-    get { return _EMail; }
-    set
-    {
-        if (string.IsNullOrEmpty(value))
-        {
-            throw new ArgumentNullException(nameof(EMail), "This field is required");
-        }
-        else if (!value.Contains('@'))
-        {
-            throw new ArgumentException(nameof(EMail), "Not a valid E-Mail-Address");
-        }
-        else
-        { 
-            this.RaiseAndSetIfChanged(ref _EMail, value); 
-        } 
-    }
-}
-```
-
-:::danger
-Exceptions inside the getter of your property are not allowed and will result in a crash of your application.
-:::
-
 ## Customize the appearance of the validation message
 
-To display the validation messages, Avalonia has a control called [`DataValidationErrors`](/api/avalonia/controls/datavalidationerrors). This control is typically placed inside the `ControlTemplate` of all `Controls` that supports data validation, like `TextBox`, `Slider` and other. You can create your own `Style` of the `DataValidationErrors`-control to customize the representation of the error messages.
+The [`DataValidationErrors class`](/api/avalonia/controls/datavalidationerrors) is used to display validation error messages. It can be placed as a control inside the `ControlTemplate` of any control that supports data validation, such as a `TextBox`.
 
-**Example Style for DataValidationErrors**
+Set a `Style` in your .axaml file to customize the appearance of the error message.
+
+### Example: Custom data validation error message
 
 ```xml
 <Style Selector="DataValidationErrors">
@@ -118,42 +82,6 @@ To display the validation messages, Avalonia has a control called [`DataValidati
     </DataTemplate>
   </Setter>
 </Style>
-```
-
-<!-- ![custom validation style](broken-reference) -->
-
-**Custom validation style**
-
-## Manage ValidationPlugins
-
-If needed, you can enable or disable a specific `ValidationPlugin` in your app. This can be useful if for example your MVVM-framework uses `DataAnnotations` to validate the property via `INotifyDataErrorInfo`. In that case you would see the message twice. Use the `BindingPlugins.DataValidators`-collection to add or remove a specific `ValidationPlugin`.
-
-**Example: Remove the DataAnnotations validator**
-
-```csharp
-public override void OnFrameworkInitializationCompleted()
-{
-    // Get an array of plugins to remove
-    var dataValidationPluginsToRemove =
-        BindingPlugins.DataValidators.OfType<DataAnnotationsValidationPlugin>().ToArray();
-
-    // remove each entry found
-    foreach (var plugin in dataValidationPluginsToRemove)
-    {
-        BindingPlugins.DataValidators.Remove(plugin);
-    }
-
-    // Continue with normal startup
-    if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
-    {
-        desktop.MainWindow = new MainWindow()
-        {
-            DataContext = MainWindowViewModel.Instance
-        };
-    }
-
-    base.OnFrameworkInitializationCompleted();
-}
 ```
 
 ## See also
