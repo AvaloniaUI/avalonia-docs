@@ -24,7 +24,7 @@ Since Avalonia v12, the data annotations validation plugin is disabled by defaul
 .WithDataAnnotationsValidation()
 ```
 
-If you are migrating an earlier project that manually specified the removal of the data annotations validation plugin with `BindingPlugins.DataValidators.Remove(plugin);`, you can now delete this configuration from your initialization completion method. It is no longer needed.
+If you are migrating an earlier project that manually specified the removal of the data annotations validation plugin with `BindingPlugins.DataValidators.Remove(plugin);` or similar, you can now delete it. It is no longer needed.
 
 ### Example: The property `EMail` is required and must be a valid e-mail-address
 
