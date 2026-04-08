@@ -168,6 +168,52 @@ The streaming engine runs Markdown parsing on a background thread, diffs the AST
 | CopyingToClipboard   | Raised before selection is copied to the clipboard. Can be handled to prevent the copy. |
 | SelectionChanged     | Raised when the text selection changes.              |
 
+## Customizing the Markdown pipeline
+
+The `Markdown` control uses [Markdig](https://github.com/xoofx/markdig) for parsing. By default the following extensions are enabled: auto-links, alert blocks, emoji, footnotes, grid tables, pipe tables, emphasis extras (strikethrough, superscript, subscript), task lists, and a built-in symbol extension.
+
+To add or remove Markdig extensions, subclass `Markdown` and override `ConfigurePipeline`. The builder already has the default extensions applied, so your override is cumulative:
+
+```csharp
+public class CustomMarkdown : Markdown
+{
+    protected override void ConfigurePipeline(MarkdownPipelineBuilder builder)
+    {
+        // Add the Markdig mathematics extension (LaTeX-style math blocks)
+        builder.UseMathematics();
+    }
+}
+```
+
+The pipeline is built once and cached for the lifetime of the control instance. It is used for both static rendering and streaming sessions.
+
+### Removing a default extension
+
+Markdig does not provide a built-in `Remove` helper, but you can remove an extension by type before the pipeline is built:
+
+```csharp
+public class NoEmojiMarkdown : Markdown
+{
+    protected override void ConfigurePipeline(MarkdownPipelineBuilder builder)
+    {
+        // Remove the emoji extension that was added by the default configuration
+        var emoji = builder.Extensions.OfType<Markdig.Extensions.Emoji.EmojiExtension>().FirstOrDefault();
+        if (emoji != null)
+            builder.Extensions.Remove(emoji);
+    }
+}
+```
+
+### Using the subclass in XAML
+
+Register a namespace for your subclass and use it in place of `Markdown`:
+
+```xml
+<Window xmlns:local="using:MyApp">
+    <local:CustomMarkdown Text="{Binding MarkdownText}" />
+</Window>
+```
+
 ## Custom image loader
 
 Image loading is handled by the `MarkdownImage` document element, not the `Markdown` control itself. You assign a loader via a style that targets `MarkdownImage`:

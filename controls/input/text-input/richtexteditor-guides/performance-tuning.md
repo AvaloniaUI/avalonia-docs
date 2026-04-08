@@ -32,6 +32,17 @@ This control is available as part of [Avalonia Accelerate](https://avaloniaui.ne
 - **Undo stack**: ~10% with structural undo (vs 100x traditional)
 - **Snapshots**: Shared structure, minimal overhead
 
+## Performance checklist
+
+- Batch all multi-edit operations
+- Use `UpdateFinished` instead of `Changed` for expensive operations
+- Debounce user-triggered updates
+- Set appropriate `UndoLimit` on the editor
+- Disable undo during bulk loads
+- Use background threads for serialization
+- Minimize pointer allocations
+- Profile before optimizing
+
 ## Batch edit optimization
 
 ### Always batch multiple operations
@@ -293,17 +304,6 @@ public class CustomBenchmark
 
 BenchmarkRunner.Run<CustomBenchmark>();
 ```
-
-## Performance checklist
-
-- Batch all multi-edit operations
-- Use `UpdateFinished` instead of `Changed` for expensive operations
-- Debounce user-triggered updates
-- Set appropriate `UndoLimit` on the editor
-- Disable undo during bulk loads
-- Use background threads for serialization
-- Minimize pointer allocations
-- Profile before optimizing
 
 ## Anti-patterns
 

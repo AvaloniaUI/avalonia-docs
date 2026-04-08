@@ -353,11 +353,6 @@ The Avalonia rich text editor separates functions into an eight-layer architectu
 | 7 | Serialization | Import and export documents in multiple formats (RTF, DOCX, XAML, plain text). | `IDocumentSerializer`, `DocumentSnapshot`, `FlowDocumentBuilder` |
 | 8 | User-facing control | Integration of all layers into a templated Avalonia control. | `RichTextEditor`, `FlowDocument`, `Block` elements, `Inline` elements |
 
-## Sample projects
-
-- [Sandbox](https://github.com/AvaloniaUI/Avalonia.Controls.RichTextEditor/tree/main/samples/Sandbox)
-- [Debugger](https://github.com/AvaloniaUI/Avalonia.Controls.RichTextEditor/tree/main/samples/RichTextEditor.Debugger)
-
 ## See also
 
 - [Troubleshooting](/troubleshooting/controls/richtexteditor)

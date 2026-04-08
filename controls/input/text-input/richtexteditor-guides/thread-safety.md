@@ -348,27 +348,6 @@ else
 4. **Don't assume snapshots auto-update** — they're immutable
 5. **Don't hold long-lived references to UI elements** — use weak refs
 
-## Debugging threading issues
-
-### Enable thread assertions
-
-Avalonia has built-in thread checking:
-
-```csharp
-// Throws if not on UI thread
-Dispatcher.UIThread.VerifyAccess();
-```
-
-### Common exceptions
-
-**InvalidOperationException**: "The calling thread cannot access this object because a different thread owns it."
-- **Cause**: Accessing UI thread object from background thread
-- **Fix**: Use `Dispatcher.UIThread.InvokeAsync()`
-
-**NullReferenceException** when accessing `Element`
-- **Cause**: Weak reference collected or background thread access
-- **Fix**: Check null and ensure UI thread
-
 ## Performance considerations
 
 ### Snapshot creation cost

@@ -152,9 +152,9 @@ In addition to style selectors, you can override named resources in your theme o
 ### Code blocks
 | Key | Type | Default (Light) | Default (Dark) | Notes |
 |---|---|---|---|---|
-| `MarkdownCodeBlockParagraphPadding` | Thickness | `16` | — | Inner padding |
-| `MarkdownCodeBlockParagraphBorderThickness` | Thickness | `1` | — | Border thickness |
-| `MarkdownCodeBlockParagraphCornerRadius` | CornerRadius | `6` | — | Corner radius |
+| `MarkdownCodeBlockParagraphPadding` | Thickness | `16` | `16` | Inner padding |
+| `MarkdownCodeBlockParagraphBorderThickness` | Thickness | `1` | `1` | Border thickness |
+| `MarkdownCodeBlockParagraphCornerRadius` | CornerRadius | `6` | `6` | Corner radius |
 | `MarkdownCodeBlockParagraphBackground` | Brush | `#1f818b98` | `#20484f58` | Background |
 | `MarkdownCodeBlockParagraphBorderBrush` | Brush | `#e3ebf6` | `#30363d` | Border brush |
 
@@ -201,22 +201,22 @@ Each header exposes `FontSize`, `BorderThickness`, `Padding`, `Margin`.
 ### Quote blocks
 | Key | Type | Default (Light) | Default (Dark) | Notes |
 |---|---|---|---|---|
-| `MarkdownQuoteBlockSectionBorderThickness` | Thickness | `4,0,0,0` | — | Quote block left border thickness |
+| `MarkdownQuoteBlockSectionBorderThickness` | Thickness | `4,0,0,0` | `4,0,0,0` | Quote block left border thickness |
 | `MarkdownQuoteBlockSectionBorderBrush` | Brush | `#DDDDDD` | `#3b434b` | Quote block border brush |
 | `MarkdownQuoteBlockSectionForeground` | Brush | `#777777` | `#8b949e` | Quote block foreground color |
-| `MarkdownQuoteBlockSectionPadding` | Thickness | `15,0` | — | Quote block inner padding |
-| `MarkdownQuoteBlockFirstChildSectionMargin` | Thickness | `0,0,0,14` | — | Margin for first child in quote |
-| `MarkdownQuoteBlockLastChildSectionMargin` | Thickness | `0` | — | Margin for last child in quote |
+| `MarkdownQuoteBlockSectionPadding` | Thickness | `15,0` | `15,0` | Quote block inner padding |
+| `MarkdownQuoteBlockFirstChildSectionMargin` | Thickness | `0,0,0,14` | `0,0,0,14` | Margin for first child in quote |
+| `MarkdownQuoteBlockLastChildSectionMargin` | Thickness | `0` | `0` | Margin for last child in quote |
 
 ### Tables
 | Key | Type | Default (Light) | Default (Dark) | Notes |
 |---|---|---|---|---|
 | `MarkdownTableCellBorderBrush` | Brush | `Black` | `#30363d` | Table cell border brush |
 | `MarkdownTableBorderBrush` | Brush | `Black` | `#30363d` | Table border brush |
-| `MarkdownTableBorderThickness` | Thickness | `0,0,1,1` | — | Table outer border thickness |
+| `MarkdownTableBorderThickness` | Thickness | `0,0,1,1` | `0,0,1,1` | Table outer border thickness |
 | `MarkdownTableCellSpacing` | Double | `0` | — | Cell spacing |
-| `MarkdownTableCellBorderThickness` | Thickness | `1,1,0,0` | — | Cell border thickness |
-| `MarkdownTableCellParagraphPadding` | Thickness | `12,5` | — | Cell paragraph padding |
+| `MarkdownTableCellBorderThickness` | Thickness | `1,1,0,0` | `1,1,0,0` | Cell border thickness |
+| `MarkdownTableCellParagraphPadding` | Thickness | `12,5` | `12,5` | Cell paragraph padding |
 
 ### Inline styles
 | Key | Type | Default (Light) | Default (Dark) | Notes |
