@@ -143,7 +143,7 @@ Many input events have different names in Avalonia compared to WPF. The followin
 
 | WPF Event | Avalonia Equivalent | Notes |
 |---|---|---|
-| `MouseLeftButtonDown` | `PointerPressed` | Check `PointerUpdateKind` for button type |
+| `MouseLeftButtonDown` | `PointerPressed` | Check [`PointerUpdateKind`](/api/avalonia/input/pointerupdatekind) for button type |
 | `MouseLeftButtonUp` | `PointerReleased` | Check `PointerUpdateKind` for button type |
 | `MouseRightButtonDown` | `PointerPressed` | Check `PointerUpdateKind` for button type |
 | `MouseRightButtonUp` | `PointerReleased` | Check `PointerUpdateKind` for button type |
@@ -211,6 +211,6 @@ The main differences are:
 
 ## See also
 
-- [Routed Events Overview](/docs/events/index)
+- [Routed Events Overview](/docs/events)
 - [Input Events](/docs/events/input-events)
 - [Routed Events Deep Dive](/docs/input-interaction/routed-events)

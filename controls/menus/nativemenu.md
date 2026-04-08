@@ -179,6 +179,6 @@ This example defines a dock menu that appears when right-clicking the applicatio
 
 ## See also
 
-- [NativeMenu API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_NativeMenu)
+- [NativeMenu API reference](/api/avalonia/controls/nativemenu)
 - [`NativeMenu.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/NativeMenu.cs)
 - [macOS platform guide](/docs/platform-specific-guides/macos#dock-menu)

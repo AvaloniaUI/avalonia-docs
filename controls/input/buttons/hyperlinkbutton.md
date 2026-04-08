@@ -5,7 +5,7 @@ description: A button styled as a text hyperlink that opens a URI using the plat
 doc-type: reference
 ---
 
-The `HyperlinkButton` is a button that appears as a text hyperlink and opens a URI when you click it. It uses the platform's default mechanism to launch URIs (opening a browser, email client, and so on).
+The [`HyperlinkButton`](/api/avalonia/controls/hyperlinkbutton) is a button that appears as a text hyperlink and opens a URI when you click it. It uses the platform's default mechanism to launch URIs (opening a browser, email client, and so on).
 
 ## Useful properties
 

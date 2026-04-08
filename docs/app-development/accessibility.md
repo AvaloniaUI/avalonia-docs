@@ -249,7 +249,7 @@ public class RatingControlAutomationPeer : ControlAutomationPeer
 
 Validation errors are automatically exposed to assistive technologies. When a control such as a `TextBox` has validation errors (from data annotations, `INotifyDataErrorInfo`, or exceptions), the `DataValidationErrors` control reports them as help text through its automation peer. Screen readers announce these errors when the control receives focus, with validation error text taking priority over tooltip text.
 
-No additional configuration is required. As long as your controls use Avalonia's [data validation](/docs/data-binding/data-validation) system, the errors are accessible by default.
+No additional configuration is required. As long as your controls use Avalonia's [data validation](/docs/data-binding/binding-validation) system, the errors are accessible by default.
 
 ## Accessibility checklist
 

@@ -212,5 +212,5 @@ Explore tutorials, sample apps, and quick guides to accelerate your Avalonia lea
 
 ## See also
 
-- [Get Started](/docs/get-started/first-app): Create your first Avalonia application.
+- [Get Started](/docs/get-started/create-your-first-project): Create your first Avalonia application.
 - [Controls Reference](/controls): Full Avalonia controls documentation.

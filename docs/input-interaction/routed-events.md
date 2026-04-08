@@ -15,7 +15,7 @@ A typical Avalonia application contains many elements. Whether created in code o
 
 The following is a brief summary of the scenarios that motivated the routed event concept, and why a typical CLR event was not adequate for these scenarios:
 
-**Control composition and encapsulation:** Many controls in Avalonia have a rich content model. For example, you can place an image inside of a `Button`, which effectively extends the visual tree of the button. However, the added image must not break the hit-testing behavior that causes a button to respond to a `Click` of its content, even if the user clicks on pixels that are technically part of the image.
+**Control composition and encapsulation:** Many controls in Avalonia have a rich content model. For example, you can place an image inside of a [`Button`](/api/avalonia/controls/button), which effectively extends the visual tree of the button. However, the added image must not break the hit-testing behavior that causes a button to respond to a `Click` of its content, even if the user clicks on pixels that are technically part of the image.
 
 **Singular handler attachment points:** In Windows Forms, you would have to attach the same handler multiple times to process events that could be raised from multiple elements. Routed events enable you to attach a handler only once, as shown in this example:
 
@@ -51,7 +51,7 @@ private void CommonClickHandler(object sender, RoutedEventArgs e)
 
 **Class handling:** Routed events permit a static handler that is defined by the class. This class handler has the opportunity to handle an event before any attached instance handlers can.
 
-**Referencing an event without reflection:** Certain code and markup techniques require a way to identify a specific event. A routed event creates a `RoutedEvent` field as an identifier, which provides a robust event identification technique that does not require static or run-time reflection.
+**Referencing an event without reflection:** Certain code and markup techniques require a way to identify a specific event. A routed event creates a [`RoutedEvent`](/api/avalonia/interactivity/routedevent) field as an identifier, which provides a robust event identification technique that does not require static or run-time reflection.
 
 ### How routed events are implemented
 

@@ -10,14 +10,14 @@ import ColorPaletteMaterial from '/img/controls/colorpicker/color-palette-materi
 import ColorPaletteMaterialHalf from '/img/controls/colorpicker/color-palette-material-half.png';
 import ColorPaletteSixteen from '/img/controls/colorpicker/color-palette-sixteen.png';
 
-The `ColorPicker` provides a highly customizable, general-purpose control that users can use to select colors in RGB or HSV color space. This implementation is just as much about providing primitive controls that developers can use to build their own color pickers as it is about providing a ready-to-use picker. 
+The [`ColorPicker`](/api/avalonia/controls/colorpicker) provides a highly customizable, general-purpose control that users can use to select colors in RGB or HSV color space. This implementation is just as much about providing primitive controls that developers can use to build their own color pickers as it is about providing a ready-to-use picker. 
 
 The `ColorPicker` includes a family of controls (components):
 
- * `ColorSpectrum` (primitive) : A two dimensional spectrum for color selection.
- * `ColorSlider` (primitive) : A slider with a background that represents a single color component.
- * `ColorPreviewer` (primitive) : Shows a preview color with optional accent colors.
- * `ColorView` : Presents a color for user editing using a spectrum, palette and component sliders.
+ * [`ColorSpectrum`](/api/avalonia/controls/primitives/colorspectrum) (primitive) : A two dimensional spectrum for color selection.
+ * [`ColorSlider`](/api/avalonia/controls/primitives/colorslider) (primitive) : A slider with a background that represents a single color component.
+ * [`ColorPreviewer`](/api/avalonia/controls/primitives/colorpreviewer) (primitive) : Shows a preview color with optional accent colors.
+ * [`ColorView`](/api/avalonia/controls/colorview) : Presents a color for user editing using a spectrum, palette and component sliders.
  * `ColorPicker` : Presents a color for user editing using a spectrum, palette and component sliders within a drop down. Editing is available when the drop down flyout is opened; otherwise, only the preview color is shown.
 
 Each primitive component can be used on its own and mixed/matched with others. This allows significant composability that isn't possible with other color picker implementations. For example, you can quickly bind together the `ColorSpectrum`, `ColorSlider` and `ColorPreviewer` primitives to create your own color picker with a brand-new design.
@@ -124,5 +124,5 @@ Several pre-defined color palettes implementing the `IColorPalette` interface ar
 
 ## See also
 
-- [ColorPicker API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_ColorPicker)
+- [ColorPicker API reference](/api/avalonia/controls/colorpicker)
 - [`ColorPicker.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls.ColorPicker/ColorPicker/ColorPicker.cs)

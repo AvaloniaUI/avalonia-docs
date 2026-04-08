@@ -15,18 +15,18 @@ html[data-theme='light'] {
 }
 
 html[data-theme='dark'] {
-  // Obsidian dark sidebar colors
-  --sidebar-category-c: #C1BBB8;
-  --sidebar-border-c: rgba(255, 255, 255, 0.12);
+  // Neutral dark sidebar colors
+  --sidebar-category-c: #a1a1aa;
+  --sidebar-border-c: rgba(255, 255, 255, 0.08);
 
-  --ifm-menu-color: #C1BBB8;
+  --ifm-menu-color: #a1a1aa;
 
   --sidebar-item-bg-active: rgba(255, 255, 255, 0.06);
-  --sidebar-item-text-active: #fff;
-  --sidebar-item-text-inactive: #C1BBB8;
+  --sidebar-item-text-active: #ededef;
+  --sidebar-item-text-inactive: #a1a1aa;
   --sidebar-item-hover-bg: rgba(255, 255, 255, 0.06);
   --sidebar-item-icon-active: var(--color-brand-400);
-  --sidebar-item-icon-inactive: #686770;
+  --sidebar-item-icon-inactive: #71717a;
 }
 
 :root {
@@ -100,14 +100,17 @@ html[data-theme='dark'] {
   }
 
     .menu__list {
-    display: flex !important;
-    flex-direction: column;
-    // Customer Portal uses gap-1 (4px) between menu items
-    gap: 0.25rem;
-    transition: height 0.35s cubic-bezier(0.36, 0.66, 0.04, 1) 25ms !important;
-    will-change: initial !important;
-
+    // DO NOT override display or transition here. Docusaurus' Collapsible component
+    // toggles inline display (none/block) and uses transitionend events on height.
+    // Using `display: flex !important` or `transition: none !important` breaks
+    // expand/collapse for sidebar categories at depth 3+.
     margin-top: 0;
+
+    // Customer Portal uses gap-1 (4px) between menu items.
+    // Cannot use CSS gap without flex, so use child margins instead.
+    > .menu__list-item + .menu__list-item {
+      margin-top: 0.25rem;
+    }
 
     // Nested menu lists - Customer Portal style (NO left border, just indentation)
     .menu__list {
@@ -221,6 +224,7 @@ html[data-theme='dark'] {
     &::after {
       background: var(--ifm-menu-link-sublist-icon) center / var(--dropdown-icon-width) var(--dropdown-icon-height);
       background-repeat: no-repeat;
+      filter: var(--ifm-menu-link-sublist-icon-filter, none);
 
       min-width: auto;
 
@@ -277,6 +281,7 @@ html[data-theme='dark'] {
         background: var(--ifm-menu-link-sublist-icon)
           center / var(--dropdown-icon-width) var(--dropdown-icon-height)
           no-repeat;
+        filter: var(--ifm-menu-link-sublist-icon-filter, none);
 
         min-width: auto;
 

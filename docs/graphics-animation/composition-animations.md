@@ -30,13 +30,13 @@ For style-driven scenarios, [Keyframe Animations](keyframe-animations) and [Cont
 
 ### CompositionVisual and Compositor
 
-Every Avalonia control has a corresponding `CompositionVisual` on the render thread. You obtain it with `ElementComposition.GetElementVisual()`:
+Every Avalonia control has a corresponding [`CompositionVisual`](/api/avalonia/rendering/composition/compositionvisual) on the render thread. You obtain it with `ElementComposition.GetElementVisual()`:
 
 ```csharp
 var visual = ElementComposition.GetElementVisual(myControl);
 ```
 
-The `Compositor` is the factory object that creates animations and animation collections. Access it from any `CompositionVisual`:
+The [`Compositor`](/api/avalonia/rendering/composition/compositor) is the factory object that creates animations and animation collections. Access it from any `CompositionVisual`:
 
 ```csharp
 var compositor = visual.Compositor;

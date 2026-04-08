@@ -11,7 +11,7 @@ import LayoutHorizontalAlignmentScreenshot from '/img/reference/layout/positioni
 import LayoutVerticalAlignmentScreenshot from '/img/reference/layout/positioning/layout-vertical-alignment-graphic.png';
 import LayoutMarginsPaddingAlignmentComplexAnnotatedScreenshot from '/img/reference/layout/positioning/layout-margins-padding-alignment-graphic3.png';
 
-An Avalonia control exposes several properties that are used to precisely position child elements. This topic discusses four of the most important properties: `HorizontalAlignment`, `Margin`, `Padding`, and `VerticalAlignment`. The effects of these properties are important to understand, because they provide the basis for controlling the position of elements in Avalonia applications.
+An Avalonia control exposes several properties that are used to precisely position child elements. This topic discusses four of the most important properties: [`HorizontalAlignment`](/api/avalonia/layout/horizontalalignment), `Margin`, `Padding`, and [`VerticalAlignment`](/api/avalonia/layout/verticalalignment). The effects of these properties are important to understand, because they provide the basis for controlling the position of elements in Avalonia applications.
 
 ## Introduction to element positioning
 
@@ -21,9 +21,9 @@ The following illustration shows a layout scenario that utilizes several positio
 
 <img src={LayoutMarginsPaddingAlignmentBasicScreenshot} alt="Positioning Example"/>
 
-At first glance, the `Button` elements in this illustration may appear to be placed randomly. However, their positions are actually precisely controlled by using a combination of margins, alignments, and padding.
+At first glance, the [`Button`](/api/avalonia/controls/button) elements in this illustration may appear to be placed randomly. However, their positions are actually precisely controlled by using a combination of margins, alignments, and padding.
 
-The following example describes how to create the layout in the preceding illustration. A `Border` element encapsulates a parent `StackPanel`, with a `Padding` value of 15 device independent pixels. This accounts for the narrow `LightBlue` band that surrounds the child `StackPanel`. Child elements of the `StackPanel` are used to illustrate each of the various positioning properties that are detailed in this topic. Three `Button` elements are used to demonstrate both the `Margin` and `HorizontalAlignment` properties.
+The following example describes how to create the layout in the preceding illustration. A [`Border`](/api/avalonia/controls/border) element encapsulates a parent [`StackPanel`](/api/avalonia/controls/stackpanel), with a `Padding` value of 15 device independent pixels. This accounts for the narrow `LightBlue` band that surrounds the child `StackPanel`. Child elements of the `StackPanel` are used to illustrate each of the various positioning properties that are detailed in this topic. Three `Button` elements are used to demonstrate both the `Margin` and `HorizontalAlignment` properties.
 
 ```xml
 <Window xmlns="https://github.com/avaloniaui"
@@ -57,7 +57,7 @@ The following diagram provides a close-up view of the various positioning proper
 
 ## Understanding alignment properties
 
-The `HorizontalAlignment` and `VerticalAlignment` properties describe how a child element should be positioned within a parent element's allocated layout space. By using these properties together, you can position child elements precisely. For example, child elements of a `DockPanel` can specify four different horizontal alignments: `Left`, `Right`, `Center`, or to `Stretch` to fill available space. Similar values are available for vertical positioning.
+The `HorizontalAlignment` and `VerticalAlignment` properties describe how a child element should be positioned within a parent element's allocated layout space. By using these properties together, you can position child elements precisely. For example, child elements of a `DockPanel` can specify four different horizontal alignments: `Left`, `Right`, `Center`, or to [`Stretch`](/api/avalonia/media/stretch) to fill available space. Similar values are available for vertical positioning.
 
 Explicitly set `Height` and `Width` properties on an element take precedence over the `Stretch` property value. Attempting to set `Height`, `Width`, and a `HorizontalAlignment` value of `Stretch` results in the `Stretch` request being ignored.
 
@@ -96,7 +96,7 @@ The `VerticalAlignment` property describes the vertical alignment characteristic
 | `Bottom` | Child elements are aligned to the bottom of the parent element's allocated layout space. |
 | `Stretch` \(Default\) | Child elements are stretched to fill the parent element's allocated layout space. Explicit `Width` and `Height` values take precedence. |
 
-The following example shows how to apply the `VerticalAlignment` property to `Button` elements. Each attribute value is shown, to better illustrate the various rendering behaviors. For purposes of this sample, a `Grid` element with visible gridlines is used as the parent, to better illustrate the layout behavior of each property value.
+The following example shows how to apply the `VerticalAlignment` property to `Button` elements. Each attribute value is shown, to better illustrate the various rendering behaviors. For purposes of this sample, a [`Grid`](/api/avalonia/controls/grid) element with visible gridlines is used as the parent, to better illustrate the layout behavior of each property value.
 
 ```xml
 <Border Background="LightBlue" BorderBrush="Black" BorderThickness="2" Padding="15">
@@ -149,7 +149,7 @@ In many instances, a uniform margin is not appropriate. In these cases, non-unif
 
 ### Understanding the padding property
 
-Padding is similar to `Margin` in most respects. The Padding property is exposed on only on a few classes, primarily as a convenience: `Border`, `TemplatedControl`, and `TextBlock` are samples of classes that expose a Padding property. The `Padding` property enlarges the effective size of a child element by the specified `Thickness` value.
+Padding is similar to `Margin` in most respects. The Padding property is exposed on only on a few classes, primarily as a convenience: `Border`, `TemplatedControl`, and [`TextBlock`](/api/avalonia/controls/textblock) are samples of classes that expose a Padding property. The `Padding` property enlarges the effective size of a child element by the specified `Thickness` value.
 
 The following example shows how to apply `Padding` to a parent `Border` element.
 
@@ -235,5 +235,5 @@ When compiled, the preceding application yields a UI that looks like the followi
 
 ## See also
 
-- [Layout](layout): How the measure and arrange system works.
+- [Layout](/docs/layout): How the measure and arrange system works.
 - [Choosing a Layout Panel](choosing-a-layout-panel): Picking the right panel for your scenario.

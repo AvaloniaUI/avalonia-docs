@@ -5,7 +5,7 @@ description: Bind collections, create custom templates, use editable combo boxes
 doc-type: how-to
 ---
 
-This guide covers common `ComboBox` scenarios including binding to collections, creating custom item templates, working with enums, and using `AutoCompleteBox` for type-to-search functionality.
+This guide covers common [`ComboBox`](/api/avalonia/controls/combobox) scenarios including binding to collections, creating custom item templates, working with enums, and using [`AutoCompleteBox`](/api/avalonia/controls/autocompletebox) for type-to-search functionality.
 
 ## Basic binding
 

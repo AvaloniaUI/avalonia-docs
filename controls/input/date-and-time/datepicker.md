@@ -122,5 +122,5 @@ public partial class MyViewModel : ObservableObject
 - [Calendar](calendar.md)
 - [CalendarDatePicker](calendardatepicker.md)
 - [TimePicker](timepicker.md)
-- [DatePicker API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_DatePicker)
+- [DatePicker API reference](/api/avalonia/controls/datepicker)
 - [`DatePicker.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/DateTimePickers/DatePicker.cs)

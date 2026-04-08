@@ -27,7 +27,7 @@ HotKeyManager.SetHotKey(saveMenuItem, new KeyGesture(Key.S, KeyModifiers.Control
 
 ## Keys and modifiers
 
-A hotkey must have one [`Key`](https://api-docs.avaloniaui.net/docs/T_Avalonia_Input_Key) and zero or more [`KeyModifiers`](https://api-docs.avaloniaui.net/docs/T_Avalonia_Input_KeyModifiers). When you set a hotkey in XAML using the `HotKey` property, the string is parsed as a [`KeyGesture`](https://api-docs.avaloniaui.net/docs/T_Avalonia_Input_KeyGesture). Avalonia uses `Enum.Parse` to parse the key and modifiers, but you can also use common synonyms such as `Ctrl` instead of `Control`, or `Win` instead of `Meta`.
+A hotkey must have one [`Key`](/api/avalonia/input/key) and zero or more [`KeyModifiers`](/api/avalonia/input/keymodifiers). When you set a hotkey in XAML using the `HotKey` property, the string is parsed as a [`KeyGesture`](/api/avalonia/input/keygesture). Avalonia uses `Enum.Parse` to parse the key and modifiers, but you can also use common synonyms such as `Ctrl` instead of `Control`, or `Win` instead of `Meta`.
 
 ### Gesture string format
 
@@ -42,7 +42,7 @@ A gesture string consists of zero or more modifiers followed by a key name, sepa
 
 ## Assigning number keys to hotkeys
 
-When you need to bind number keys, use `D0` through `D9` for the main keyboard row, or `NumPad0` through `NumPad9` for the numeric keypad. See the full [`Key`](https://api-docs.avaloniaui.net/docs/T_Avalonia_Input_Key) enumeration for all available values.
+When you need to bind number keys, use `D0` through `D9` for the main keyboard row, or `NumPad0` through `NumPad9` for the numeric keypad. See the full [`Key`](/api/avalonia/input/key) enumeration for all available values.
 
 You can differentiate between the numpad and the main keyboard by binding the same command to two controls and hiding one:
 
@@ -61,7 +61,7 @@ You can differentiate between the numpad and the main keyboard by binding the sa
 ```
 
 :::note
-Access-key syntax such as `Content="_1"` does not register a hotkey. Use the `HotKey` property or a `KeyBinding` instead.
+Access-key syntax such as `Content="_1"` does not register a hotkey. Use the `HotKey` property or a [`KeyBinding`](/api/avalonia/input/keybinding) instead.
 :::
 
 ## KeyBindings
@@ -130,10 +130,10 @@ The following example shows typical undo, redo, and find shortcuts:
 
 ## Reference
 
-* [`HotKeyManager`](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_HotKeyManager)
-* [`KeyGesture`](https://api-docs.avaloniaui.net/docs/T_Avalonia_Input_KeyGesture)
-* [`KeyModifiers`](https://api-docs.avaloniaui.net/docs/T_Avalonia_Input_KeyModifiers)
-* [`Key`](https://api-docs.avaloniaui.net/docs/T_Avalonia_Input_Key)
+* [`HotKeyManager`](/api/avalonia/controls/hotkeymanager)
+* [`KeyGesture`](/api/avalonia/input/keygesture)
+* [`KeyModifiers`](/api/avalonia/input/keymodifiers)
+* [`Key`](/api/avalonia/input/key)
 
 ## Source code
 

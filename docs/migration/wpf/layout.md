@@ -11,8 +11,8 @@ The layout system in Avalonia is very similar to WPF. If you are familiar with W
 
 | WPF | Avalonia | Notes |
 |---|---|---|
-| `StackPanel` | `StackPanel` | Same. Avalonia adds a `Spacing` property. |
-| `Grid` | `Grid` | Same. Supports shorthand `ColumnDefinitions="Auto,*"`. |
+| [`StackPanel`](/api/avalonia/controls/stackpanel) | `StackPanel` | Same. Avalonia adds a `Spacing` property. |
+| [`Grid`](/api/avalonia/controls/grid) | `Grid` | Same. Supports shorthand `ColumnDefinitions="Auto,*"`. |
 | `DockPanel` | `DockPanel` | Same. `LastChildFill` defaults to `true`. |
 | `WrapPanel` | `WrapPanel` | Same. |
 | `Canvas` | `Canvas` | Same. |
@@ -91,5 +91,5 @@ Avalonia uses `UseLayoutRounding` (same as WPF) to snap layout measurements to p
 
 ## See also
 
-- [Layout](/docs/layout/layout): Avalonia layout system overview.
+- [Layout](/docs/layout): Avalonia layout system overview.
 - [Positioning Controls](/docs/layout/positioning-controls): Margins, alignment, and positioning.

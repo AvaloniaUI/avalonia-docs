@@ -101,5 +101,5 @@ You can react to changes by subscribing to the `SelectedTimeChanged` event or by
 
 - [DatePicker](datepicker)
 - [CalendarDatePicker](calendardatepicker)
-- [TimePicker API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_TimePicker)
+- [TimePicker API reference](/api/avalonia/controls/timepicker)
 - [`TimePicker.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/DateTimePickers/TimePicker.cs)

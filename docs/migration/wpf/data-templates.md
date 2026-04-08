@@ -20,7 +20,7 @@ In WPF, data templates are typically stored in a `ResourceDictionary`, either on
 </Window.Resources>
 ```
 
-In Avalonia, data templates are not stored in resources. Instead, they are placed in a `DataTemplates` collection that exists on every `Control` and on `Application`:
+In Avalonia, data templates are not stored in resources. Instead, they are placed in a [`DataTemplates`](/api/avalonia/controls/templates/datatemplates) collection that exists on every `Control` and on `Application`:
 
 ```xml
 <!-- Avalonia -->
@@ -85,7 +85,7 @@ Avalonia does not have `DataTemplateSelector`. Instead, you implement the `IData
 // Avalonia
 public class MyDataTemplate : IDataTemplate
 {
-    public IControl Build(object? data)
+    public Control? Build(object? data)
     {
         if (data is SpecialItem)
             return new Border { Background = Brushes.Gold, Child = new TextBlock { Text = "Special" } };

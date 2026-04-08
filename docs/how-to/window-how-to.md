@@ -243,6 +243,40 @@ Check which transparency levels are supported at runtime:
 var supported = this.ActualTransparencyLevel;
 ```
 
+### Transparent click-through window
+
+To create a transparent overlay window where mouse clicks pass through empty areas to applications underneath, set `TransparencyLevelHint="Transparent"` and remove the window's `Background` by setting it to `{x:Null}`. Interactive controls placed in the window remain clickable.
+
+```xml
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        TransparencyLevelHint="Transparent"
+        Background="{x:Null}"
+        SystemDecorations="None"
+        Topmost="True"
+        WindowState="Maximized">
+    <Grid>
+        <!-- This button is clickable; empty areas pass input through -->
+        <Button Content="Click Me"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center" />
+    </Grid>
+</Window>
+```
+
+The key difference is between `Background="{x:Null}"` and `Background="Transparent"`:
+
+| Background value | Visual result | Hit testing |
+|---|---|---|
+| `{x:Null}` | Transparent | Empty areas pass clicks through to windows behind |
+| `Transparent` | Transparent | Empty areas block clicks (the window captures all input) |
+
+This distinction applies at every level in Avalonia, from individual panels to the window itself. For more details, see [Background and hit testing](/docs/graphics-animation/hit-testing#background-and-hit-testing).
+
+:::tip[Migrating from WPF]
+In WPF, setting `AllowsTransparency="True"` with `Background="Transparent"` on a `Window` allows clicks to pass through transparent areas by default. Avalonia behaves differently: `Background="Transparent"` still captures input. Set `Background="{x:Null}"` instead to get the WPF-like click-through behavior.
+:::
+
 ## Window Icon
 
 ```xml

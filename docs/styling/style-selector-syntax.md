@@ -99,7 +99,7 @@ This allows you to write very general class-based selectors. As controls are all
 
 ```xml
 <Style Selector=":is(Control).margin2">
-<Style Selector=":is(local|Control.margin2)">
+<Style Selector=":is(local|Control).margin2">
 ```
 
 ```csharp title='C#'

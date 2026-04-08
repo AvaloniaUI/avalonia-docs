@@ -5,7 +5,7 @@ description: Access windowing, clipboard, storage, and other services through th
 doc-type: reference
 ---
 
-The `TopLevel` acts as the visual root, and is the base class for all top level controls, for example `Window`. It handles scheduling layout, styling and rendering as well as keeping track of the client size. Most services are accessed through the `TopLevel`.
+The [`TopLevel`](/api/avalonia/controls/toplevel) acts as the visual root, and is the base class for all top level controls, for example [`Window`](/api/avalonia/controls/window). It handles scheduling layout, styling and rendering as well as keeping track of the client size. Most services are accessed through the `TopLevel`.
 
 ## Getting the TopLevel
 
@@ -109,6 +109,16 @@ Gets the scaling factor to use in rendering.
 ```csharp
 double RenderScaling { get; }
 ```
+
+### Screens
+
+Gets the [`Screens`](/api/avalonia/controls/screens) instance that provides information about connected monitors, including resolution, working area, scaling, and orientation.
+
+```csharp
+Screens Screens { get; }
+```
+
+Use `Screens` to query the primary display, enumerate all displays, or find the screen containing a specific window or point. See [Working with screens](/docs/app-development/window-management#working-with-screens) for usage examples.
 
 ### RequestedThemeVariant
 
@@ -244,6 +254,7 @@ IPlatformHandle? TryGetPlatformHandle()
 
 - [Main window](/docs/fundamentals/main-window)
 - [Application lifetimes](/docs/fundamentals/application-lifetimes)
+- [Working with screens](/docs/app-development/window-management#working-with-screens): Query monitor resolution, bounds, and scaling.
 - [Custom rendering](/docs/graphics-animation/custom-rendering): Custom drawing and render-thread callbacks.
 - [Composition animations](/docs/graphics-animation/composition-animations): Render-thread property animations.
 - [`TopLevel.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/TopLevel.cs)

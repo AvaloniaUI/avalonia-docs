@@ -70,9 +70,9 @@ html[data-theme='light'] {
   --token-primary-bg-c: #FFFFFF;
   --token-secondary-bg-c: #F3F1F0;
 
-  // Links: neutral (matching marketing website)
-  --ifm-link-color: var(--color-neutral-70);
-  --ifm-link-hover-color: var(--color-obsidian);
+  // Links: blue (matching avaloniaui.net)
+  --ifm-link-color: #0d6efd;
+  --ifm-link-hover-color: #0a58ca;
 
   --ifm-background-surface-color: var(--token-primary-bg-c);
   --ifm-background-color: var(--token-primary-bg-c);
@@ -90,9 +90,9 @@ html[data-theme='light'] {
 }
 
 html[data-theme='dark'] {
-  // Marketing website obsidian dark theme
-  --token-primary-bg-c: #05051E;
-  --token-secondary-bg-c: #05051E;
+  // Neutral dark theme (Mintlify-inspired)
+  --token-primary-bg-c: #111113;
+  --token-secondary-bg-c: #111113;
 
   // Brand colors (lighter for dark mode)
   --ifm-link-color: var(--color-brand-400);
@@ -101,15 +101,15 @@ html[data-theme='dark'] {
   --ifm-background-surface-color: var(--token-primary-bg-c);
   --ifm-background-color: var(--token-primary-bg-c);
 
-  --ifm-navbar-background-color: rgb(1, 11, 20);
-  --ifm-navbar-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.12);
+  --ifm-navbar-background-color: #111113;
+  --ifm-navbar-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.08);
 
-  --ifm-heading-color: #fff;
-  --ifm-secondary-heading-color: #F3F1F0;
+  --ifm-heading-color: #ededef;
+  --ifm-secondary-heading-color: #d4d4d8;
 
-  --ifm-font-color-base: #C1BBB8;
-  --ifm-dropdown-background-color: #0B2A54;
-  --ifm-info-color-bg: #C1BBB8;
+  --ifm-font-color-base: #a1a1aa;
+  --ifm-dropdown-background-color: #18181b;
+  --ifm-info-color-bg: #a1a1aa;
 
   --ifm-menu-link-sublist-icon-filter: invert(100%);
 }
@@ -198,6 +198,11 @@ iframe {
   padding: 16px;
   padding-left: 32px;
   padding-right: 32px;
+}
+
+.header-github-link {
+  padding-left: 0 !important;
+  margin-left: 4px;
 }
 
 .header-github-link::before {

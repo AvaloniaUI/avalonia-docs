@@ -98,7 +98,7 @@ Or with a binding converter:
 | `CheckBox` | `CheckBox` | Same |
 | `RadioButton` | `RadioButton` | Same |
 | `ComboBox` | `ComboBox` | Same |
-| `ListBox` | `ListBox` | Same |
+| [`ListBox`](/api/avalonia/controls/listbox) | `ListBox` | Same |
 | `ListView` | `ListBox` | Use ListBox with ItemTemplate |
 | `TreeView` | `TreeView` | Same |
 | `DataGrid` | `DataGrid` (NuGet package) | Separate package |
@@ -113,7 +113,7 @@ Or with a binding converter:
 | `Popup` | `Popup` | Same |
 | `ScrollViewer` | `ScrollViewer` | Same |
 | `Image` | `Image` | Same |
-| `Border` | `Border` | Same; supports `BoxShadow` |
+| [`Border`](/api/avalonia/controls/border) | `Border` | Same; supports `BoxShadow` |
 | `Viewbox` | `Viewbox` | Same |
 | `ContentControl` | `ContentControl` | Same |
 | `ItemsControl` | `ItemsControl` | Same |
@@ -152,7 +152,7 @@ Or with a binding converter:
 
 | WPF | Avalonia | Notes |
 |---|---|---|
-| `RoutedEvent` (Bubble) | `RoutedEvent` (Bubble) | Same |
+| [`RoutedEvent`](/api/avalonia/interactivity/routedevent) (Bubble) | `RoutedEvent` (Bubble) | Same |
 | `RoutedEvent` (Tunnel) | `RoutedEvent` (Tunnel) | Same |
 | `Preview*` events | Tunnel routing strategy | Use `AddHandler` with `RoutingStrategies.Tunnel` |
 | `EventManager.RegisterRoutedEvent` | `RoutedEvent.Register<T, TArgs>` | Generic registration |
@@ -174,7 +174,7 @@ Or with a binding converter:
 
 | WPF | Avalonia | Notes |
 |---|---|---|
-| `DataTemplate` | `DataTemplate` | Same |
+| [`DataTemplate`](/api/avalonia/markup/xaml/templates/datatemplate) | `DataTemplate` | Same |
 | `HierarchicalDataTemplate` | `TreeDataTemplate` | Different name |
 | `ControlTemplate` | `ControlTemplate` | Same |
 | `DataTemplateSelector` | `DataTemplate` with `DataType` | Use DataType matching |
@@ -206,6 +206,14 @@ Or with a binding converter:
 | `Transitions` (UWP) | `Transitions` | Property change animations |
 | `CompositionTarget.Rendering` | `TopLevel.RequestAnimationFrame()` | Per-frame callback on UI thread; see also `CompositionCustomVisualHandler` for render-thread callbacks |
 
+## Window
+
+| WPF | Avalonia | Notes |
+|---|---|---|
+| `AllowsTransparency="True"` | `TransparencyLevelHint="Transparent"` | Set `Background="{x:Null}"` (not `Transparent`) for [click-through behavior](/docs/how-to/window-how-to#transparent-click-through-window) |
+| `WindowStyle="None"` | `SystemDecorations="None"` | Removes title bar and border |
+| `ResizeMode` | `CanResize` | Boolean instead of enum |
+
 ## Graphics
 
 | WPF | Avalonia | Notes |
@@ -214,7 +222,7 @@ Or with a binding converter:
 | `LinearGradientBrush` | `LinearGradientBrush` | Same |
 | `RadialGradientBrush` | `RadialGradientBrush` | Same |
 | `ImageBrush` | `ImageBrush` | Same |
-| `VisualBrush` | `VisualBrush` | Same |
+| [`VisualBrush`](/api/avalonia/media/visualbrush) | `VisualBrush` | Same |
 | `DrawingBrush` | Not available | Use `VisualBrush` |
 | `BitmapEffect` | `Effect` property | `BlurEffect`, `DropShadowEffect` |
 | `DropShadowEffect` | `BoxShadow` on `Border` | Different API, CSS-like |
@@ -223,6 +231,17 @@ Or with a binding converter:
 | `Clip` | `Clip` | Same |
 | `OpacityMask` | `OpacityMask` | Same |
 | `Path` | `Path` | Same; same mini-language |
+
+## Platform services
+
+| WPF | Avalonia | Notes |
+|---|---|---|
+| `SystemParameters.PrimaryScreenWidth` | `TopLevel.GetTopLevel(this).Screens.Primary.Bounds.Width` | Access via [`Screens`](/api/avalonia/controls/screens) on any `TopLevel` |
+| `System.Windows.Forms.Screen.AllScreens` | `TopLevel.GetTopLevel(this).Screens.All` | Returns all connected monitors |
+| `System.Windows.Forms.Screen.PrimaryScreen.WorkingArea` | `TopLevel.GetTopLevel(this).Screens.Primary.WorkingArea` | Excludes taskbar/dock |
+| `PresentationSource.FromVisual().CompositionTarget.TransformToDevice` | `TopLevel.GetTopLevel(this).Screens.Primary.Scaling` | DPI scaling factor |
+
+See [Working with screens](/docs/app-development/window-management#working-with-screens) for full usage details.
 
 ## File structure
 

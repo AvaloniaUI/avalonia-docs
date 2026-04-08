@@ -7,7 +7,7 @@ doc-type: reference
 
 import ToggleButtonMuteScreenshot from '/img/controls/buttons/togglebutton/togglebutton-mute.gif';
 
-The `ToggleButton` control presents a Boolean value by using styles and a pseudo class that is either present (true) or absent (false). This allows you to create a wide range of graphical presentations for the control in each of the pseudo class states.
+The [`ToggleButton`](/api/avalonia/controls/primitives/togglebutton) control presents a Boolean value by using styles and a pseudo class that is either present (true) or absent (false). This allows you to create a wide range of graphical presentations for the control in each of the pseudo class states.
 
 `ToggleButton` is found in the `Avalonia.Controls.Primitives` namespace and serves as the base class for `CheckBox` and other toggle-style controls.
 
@@ -150,5 +150,5 @@ public class MyViewModel : ViewModelBase
 - [CheckBox](/controls/input/selectors/checkbox)
 - [ToggleSplitButton](togglesplitbutton)
 - [RadioButton](radiobutton)
-- [ToggleButton API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_Primitives_ToggleButton)
+- [ToggleButton API reference](/api/avalonia/controls/primitives/togglebutton)
 - [`ToggleButton.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Primitives/ToggleButton.cs)

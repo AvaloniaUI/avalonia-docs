@@ -5,7 +5,7 @@ description: Bind a TabControl to a collection of view models to create dynamic 
 doc-type: how-to
 ---
 
-When your application needs to display a variable number of tabs, you can data-bind a `TabControl` to a collection of view models instead of declaring each tab statically in XAML. This approach is useful when the number of tabs is determined at runtime, for example by user actions, loaded data, or plugin systems.
+When your application needs to display a variable number of tabs, you can data-bind a [`TabControl`](/api/avalonia/controls/tabcontrol) to a collection of view models instead of declaring each tab statically in XAML. This approach is useful when the number of tabs is determined at runtime, for example by user actions, loaded data, or plugin systems.
 
 The general pattern is:
 

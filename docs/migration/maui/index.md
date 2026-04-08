@@ -25,7 +25,7 @@ Because Avalonia draws every control itself, your MAUI application looks and beh
 
 ### How it works
 
-At its core, the Avalonia MAUI Backend builds a single set of handlers that map MAUI controls to Avalonia controls. When you create a `Button` in MAUI, it renders as an Avalonia `Button` on every platform, rather than a platform-specific native control.
+At its core, the Avalonia MAUI Backend builds a single set of handlers that map MAUI controls to Avalonia controls. When you create a [`Button`](/api/avalonia/controls/button) in MAUI, it renders as an Avalonia `Button` on every platform, rather than a platform-specific native control.
 
 MAUI's layout system works similarly. MAUI handles the positioning and constraint calculations itself, and the Avalonia backend positions controls exactly as MAUI specifies. In practice, this means many standard MAUI layout controls work without modification.
 
@@ -107,7 +107,7 @@ MAUI and Avalonia both use panels for layout, but the names and behaviour differ
 
 | .NET MAUI | Avalonia | Notes |
 |---|---|---|
-| `Entry` | `TextBox` | |
+| `Entry` | [`TextBox`](/api/avalonia/controls/textbox) | |
 | `Editor` | `TextBox` with `AcceptsReturn="True"` | |
 | `Label` | `TextBlock` | |
 | `Button` | `Button` | Same |
@@ -130,7 +130,7 @@ MAUI and Avalonia both use panels for layout, but the names and behaviour differ
 | `Shell` | No equivalent | Avalonia does not impose a navigation framework |
 | `FlyoutPage` | `SplitView` | |
 | `TabbedPage` | `TabControl` | |
-| `NavigationPage` | `NavigationPage` | See [NavigationPage](/controls/navigation/navigationpage) |
+| [`NavigationPage`](/api/avalonia/controls/navigationpage) | `NavigationPage` | See [NavigationPage](/controls/navigation/navigationpage) |
 | `ContentPage` | `ContentPage` | Used within `NavigationPage` |
 | `BoxView` | `Border` or `Rectangle` | |
 
@@ -290,8 +290,8 @@ Moving from MAUI to Avalonia changes how you work day to day:
 
 ## See also
 
-- [Get Started with Avalonia](/docs/get-started/first-app): Create your first Avalonia application.
+- [Get started with Avalonia](/docs/get-started/create-your-first-project): Create your first Avalonia application.
 - [Styles](/docs/styling/styles): How Avalonia's CSS-like styling works.
-- [Data Binding Syntax](/docs/data-binding/data-binding-syntax): Avalonia binding syntax reference.
-- [Controls Reference](/controls): Full Avalonia controls documentation.
+- [Data binding syntax](/docs/data-binding/data-binding-syntax): Avalonia binding syntax reference.
+- [Controls reference](/controls): Full Avalonia controls documentation.
 - [NavigationPage](/controls/navigation/navigationpage): Stack-based page navigation in Avalonia.

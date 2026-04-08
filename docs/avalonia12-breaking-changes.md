@@ -48,10 +48,10 @@ Choose the latest release from the official [GitHub Releases page](https://githu
 ## `Avalonia.Diagnostics` package removed
 
 The `Avalonia.Diagnostics` package has been removed.
-The Dev Tools included with [Avalonia Accelerate](https://avaloniaui.net/accelerate) should be used instead.
+The Dev Tools included with [Avalonia Plus](https://avaloniaui.net/pricing) or higher should be used instead.
 
 Remove the `Avalonia.Diagnostics` package from your projects and replace it with `AvaloniaUI.DiagnosticsSupport`.  
-To install the Accelerate Dev Tools, see the [Dev Tools documentation](https://docs.avaloniaui.net/accelerate/tools/dev-tools/getting-started).
+To install the Avalonia Plus Dev Tools, see the [Dev Tools documentation](/tools/developer-tools/installation).
 
 **Example:**
 
@@ -76,9 +76,9 @@ PR: [#20332](https://github.com/AvaloniaUI/Avalonia/pull/20332)
 
 The binding class hierarchy has changed. Bindings defined in XAML files (e.g., `{Binding}`) are unaffected. However, you must update binding usages in C# code.
 
-The `IBinding` interface has been removed. Its replacement is the `BindingBase` class.
+The `IBinding` interface has been removed. Its replacement is the [`BindingBase`](/api/avalonia/data/bindingbase) class.
 
-All types of bindings now inherit from `BindingBase`: `ReflectionBinding`, `CompiledBinding`, `TemplateBinding`, and `IndexerBinding`. Adjust your usage accordingly; don't assume that a `BindingBase` instance represents only a "standard" binding.
+All types of bindings now inherit from `BindingBase`: [`ReflectionBinding`](/api/avalonia/data/reflectionbinding), [`CompiledBinding`](/api/avalonia/data/compiledbinding), `TemplateBinding`, and `IndexerBinding`. Adjust your usage accordingly; don't assume that a `BindingBase` instance represents only a "standard" binding.
 
 The `Binding` class is kept for compatibility and always corresponds to `ReflectionBinding`. To create bindings in code, use the `CompiledBinding` and `ReflectionBinding` classes directly.
 
@@ -147,7 +147,7 @@ PR: [#19852](https://github.com/AvaloniaUI/Avalonia/pull/19852)
 
 ## Improved touch/pen focus and selection behavior
 
-Selection handling in `SelectingItemsControl` (and derived controls such as `ListBox`, `ComboBox`, `TabControl`) and `TreeView` has been unified to provide consistent, platform-appropriate behavior across input devices:
+Selection handling in [`SelectingItemsControl`](/api/avalonia/controls/primitives/selectingitemscontrol) (and derived controls such as `ListBox`, `ComboBox`, `TabControl`) and [`TreeView`](/api/avalonia/controls/treeview) has been unified to provide consistent, platform-appropriate behavior across input devices:
 
 - **Touch and pen input** now triggers selection on pointer release (not press), matching native platform conventions. This allows swipe and scroll gestures to start on a selectable item without accidentally changing the selection.
 - **Container types** (e.g., `ListBoxItem`, `TreeViewItem`) now handle selection input directly instead of letting events bubble up to their parent `ItemsControl`. Custom logic that relied on intercepting selection events at the `ItemsControl` level must be moved to the container or to an override of `UpdateSelectionFromEvent`.
@@ -178,7 +178,7 @@ The static `ItemSelectionEventTriggers` class provides helper methods for checki
 PR: [#19203](https://github.com/AvaloniaUI/Avalonia/pull/19203), [#19753](https://github.com/AvaloniaUI/Avalonia/pull/19753)
 
 
-## `TopLevel` changes
+## [`TopLevel`](/api/avalonia/controls/toplevel) changes
 
 To prepare the groundwork for advanced windowing features, notably templated drawn window decorations and virtual window scenarios, several changes happened in Avalonia v12:
 
@@ -194,16 +194,16 @@ PR: [#20624](https://github.com/AvaloniaUI/Avalonia/pull/20624)
 
 Avalonia v12 overhauls how the decorations (title bar, caption buttons, resize grips, and similar elements) of a window are drawn when the system chrome is not used:
 
-- A new `WindowDrawnDecorations` class is added. Its role is to provide all the window decorations through a single control.
+- A new [`WindowDrawnDecorations`](/api/avalonia/controls/chrome/windowdrawndecorations) class is added. Its role is to provide all the window decorations through a single control.
 - Thanks to this new type, the `TitleBar`, `CaptionButtons` and `ChromeOverlayLayer` types are not necessary anymore and have been removed.
-- The `Window.ExtendClientAreaChromeHints` property consisted of several flags that were not always behaving as expected. This property has been removed, as the `WindowDecorations` property in conjunction with `ExtendClientAreaToDecorationsHint` should be used instead.
+- The `Window.ExtendClientAreaChromeHints` property consisted of several flags that were not always behaving as expected. This property has been removed, as the [`WindowDecorations`](/api/avalonia/controls/windowdecorations) property in conjunction with `ExtendClientAreaToDecorationsHint` should be used instead.
 
 PR: [#20770](https://github.com/AvaloniaUI/Avalonia/pull/20770), [#20732](https://github.com/AvaloniaUI/Avalonia/pull/20732), [#20796](https://github.com/AvaloniaUI/Avalonia/pull/20796)
 
 
 ## Clipboard changes
 
-In a previous version, clipboard support was rewritten to use a new `IAsyncDataTransfer` interface and related types. To avoid breaking compatibility, the old `IDataObject` interface was kept (and made obsolete) as a shim for the new system.
+In a previous version, clipboard support was rewritten to use a new [`IAsyncDataTransfer`](/api/avalonia/input/iasyncdatatransfer) interface and related types. To avoid breaking compatibility, the old `IDataObject` interface was kept (and made obsolete) as a shim for the new system.
 
 The `IDataObject` interface has been removed in Avalonia v12, along with all methods that accept that type. Its implementation, `DataObject`, no longer does anything.
 
@@ -241,6 +241,8 @@ While not technically a breaking change, Avalonia v12 now supports multiple disp
 
 Using `Dispatcher.UIThread` is still perfectly acceptable for applications. However, library and control authors should start using the `AvaloniaObject.Dispatcher` and `Dispatcher.CurrentDispatcher` properties to support multiple dispatchers properly.
 
+`DispatcherTimer` and `AvaloniaSynchronizationContext` use the current dispatcher by default, rather than the UI thread as in previous versions. Make sure that instantiations of those types are made from the correct thread. Alternatively, pass the target dispatcher to the appropriate constructor.
+
 Multiple UI threads are currently still unsupported.
 
 PR: [#18686](https://github.com/AvaloniaUI/Avalonia/pull/18686)
@@ -258,6 +260,13 @@ PR: [#19163](https://github.com/AvaloniaUI/Avalonia/pull/19163)
 The converter function parameter changed from `IEnumerable<TIn>` to `IReadOnlyList<TIn>`, allowing you to access values by index (e.g., `values[0]`) without converting to an intermediate collection. Since `IReadOnlyList<T>` extends `IEnumerable<T>`, most existing usages that iterate or use LINQ are unaffected. Code that explicitly declares the lambda parameter type as `IEnumerable<TIn>` will need to be updated.
 
 PR: [#19936](https://github.com/AvaloniaUI/Avalonia/pull/19936)
+
+
+## `Window.WindowState` is a direct property
+
+`Window.WindowState` was previously a styled property. However, it caused various problems in window state management, so it has been changed to a direct property.
+
+As a consequence, it is no longer valid to set `WindowState` from a style.
 
 
 ## Data validation enabled by default in custom controls
@@ -308,7 +317,7 @@ Several versioned and split interfaces have been merged into their base types:
 
 Additionally, alpha format handling has been consolidated:
 
-- `ILockedFramebuffer` now includes an `AlphaFormat` property.
+- `ILockedFramebuffer` now includes an [`AlphaFormat`](/api/avalonia/platform/alphaformat) property.
 - `IReadableBitmapImpl` now includes an `AlphaFormat?` property, replacing the separate `IReadableBitmapWithAlphaImpl` interface.
 - `Bitmap.CopyPixels()` no longer accepts an `AlphaFormat` parameter. The alpha format is now read from the `ILockedFramebuffer` directly.
 - The `LockedFramebuffer` constructor requires an `AlphaFormat` parameter.
@@ -349,7 +358,7 @@ Some legacy fonts that are not TrueType (.ttf) or OpenType (.otf) are no longer 
 PR: [#19852](https://github.com/AvaloniaUI/Avalonia/pull/19852)
 
 
-## `Screen` is abstract
+## [`Screen`](/api/avalonia/platform/screen) is abstract
 
 The `Screen` class has several internal implementations, and the base class was constructible only for legacy reasons.
 
@@ -358,7 +367,7 @@ In Avalonia v12, it is now abstract. Do not construct a `Screen` class. Instead,
 PR: [#20529](https://github.com/AvaloniaUI/Avalonia/pull/20529)
 
 
-## `ResourcesChangedEventArgs` is a struct
+## [`ResourcesChangedEventArgs`](/api/avalonia/controls/resourceschangedeventargs) is a struct
 
 For performance purposes, `ResourcesChangedEventArgs` is now a struct.
 
@@ -382,6 +391,36 @@ Example:
 ```
 
 PR: [#20789](https://github.com/AvaloniaUI/Avalonia/pull/20789)
+
+
+## Focus improvements
+
+The type of the event arguments for the `InputElement.GotFocus` and `InputElement.LostFocus` events has been changed to the new `FocusChangedEventArgs` class. This type provides more information about the previous and currently focused elements.
+
+Update your event handlers accordingly.
+
+Example:
+```diff
+-private void TextBox_GotFocus(object? sender, GotFocusEventArgs e)
++private void TextBox_GotFocus(object? sender, FocusChangedEventArgs e)
+
+-private void TextBox_LostFocus(object? sender, RoutedEventArgs e)
++private void TextBox_LostFocus(object? sender, FocusChangedEventArgs e)
+```
+
+All focus handling is now managed by the `FocusManager` class and `IFocusManager` interface. Usages of `KeyboardNavigationHandler.GetNext` need to be replaced with `FocusManager.GetNextElement`.
+
+PR: [#20859](https://github.com/AvaloniaUI/Avalonia/pull/20859), [#18647](https://github.com/AvaloniaUI/Avalonia/pull/18647), [#20930](https://github.com/AvaloniaUI/Avalonia/pull/20930)
+
+
+## Animations are stopped on invisible controls
+
+For efficiency, animations triggered by styles no longer tick when their corresponding control is hidden, resulting in improved CPU usage in several situations.
+
+You can restore the previous behavior by setting the new `Animation.PlaybackBehavior` to `Always` if needed.
+
+PR: [#20820](https://github.com/AvaloniaUI/Avalonia/pull/20820)
+
 
 ## Windows
 
@@ -431,7 +470,7 @@ PR: [#20217](https://github.com/AvaloniaUI/Avalonia/pull/20217)
 
 In Avalonia 12, the way an Android application and its activities are initialized has changed, allowing subsequent activities to properly use the `Application` class defined in your project.
 
-1. Change your main activity to inherit from `AvaloniaMainActivity` (non-generic) instead of `AvaloniaMainActivity<TApp>` (generic).
+1. Change your main activity to inherit from [`AvaloniaMainActivity`](/api/avalonia/android/avaloniamainactivity) (non-generic) instead of `AvaloniaMainActivity<TApp>` (generic).
 2. Add a new class deriving from `AvaloniaAndroidApplication<TApp>` and apply the `[Android.App.Application]` attribute to it.
 
 **Example:**
@@ -456,7 +495,7 @@ public class MainActivity :
 
 PR: [#18756](https://github.com/AvaloniaUI/Avalonia/pull/18756)
 
-### `IActivityApplicationLifetime` replaces `ISingleViewApplicationLifetime`
+### [`IActivityApplicationLifetime`](/api/avalonia/controls/applicationlifetimes/iactivityapplicationlifetime) replaces [`ISingleViewApplicationLifetime`](/api/avalonia/controls/applicationlifetimes/isingleviewapplicationlifetime)
 
 Android now uses `IActivityApplicationLifetime` instead of `ISingleViewApplicationLifetime`. This new interface provides a `MainViewFactory` property (a `Func<Control>`) instead of a single `MainView` instance, because Android can create multiple activity instances during the app's lifetime.
 
@@ -594,7 +633,7 @@ See [`TopLevel` changes](#toplevel-changes) for context.
 | `LayoutManager` class | `ILayoutManager` | [#20624](https://github.com/AvaloniaUI/Avalonia/pull/20624) |
 | `TopLevel.PlatformSettings` property | `VisualExtensions.GetPlatformSettings` | [#20624](https://github.com/AvaloniaUI/Avalonia/pull/20624) |
 | `TopLevel.PointerOverElement` property | Remove usages | [#20624](https://github.com/AvaloniaUI/Avalonia/pull/20624) |
-| `TopLevel.StartRendering/StopRendering` | `Embedding.StartRendering/StopRendering` | [#20624](https://github.com/AvaloniaUI/Avalonia/pull/20624) |
+| `TopLevel.StartRendering/StopRendering` | `EmbeddableControlRoot.StartRendering/StopRendering` | [#20624](https://github.com/AvaloniaUI/Avalonia/pull/20624) |
 | `VisualExtensions.GetVisualRoot` method | `GetPresentationSource` + `IPresentationSource.RootVisual` | [#20624](https://github.com/AvaloniaUI/Avalonia/pull/20624) |
 
 ### Window decorations
@@ -613,7 +652,7 @@ See [Window decoration changes](#window-decoration-changes) for context.
 | `Window.ExtendClientAreaChromeHints` property | `Window.WindowDecorations` | [#20770](https://github.com/AvaloniaUI/Avalonia/pull/20770) |
 | `SystemDecorations` enum | `WindowDecorations` | [#20796](https://github.com/AvaloniaUI/Avalonia/pull/20796) |
 | `ExtendClientAreaChromeHints` enum | `WindowDecorations` | [#20770](https://github.com/AvaloniaUI/Avalonia/pull/20770) |
-| `IPopupHostProvider` interface | `Popup` | [#20732](https://github.com/AvaloniaUI/Avalonia/pull/20732) |
+| `IPopupHostProvider` interface | [`Popup`](/api/avalonia/controls/primitives/popup) | [#20732](https://github.com/AvaloniaUI/Avalonia/pull/20732) |
 | `IPopupHost` interface | `Popup` | [#20597](https://github.com/AvaloniaUI/Avalonia/pull/20597) |
 | `LightDismissOverlayLayer` class | `VisualLayerManager` | [#20732](https://github.com/AvaloniaUI/Avalonia/pull/20732) |
 | `OverlayPopupHost.CreatePopupHost` method | `Popup` | [#20597](https://github.com/AvaloniaUI/Avalonia/pull/20597) |
@@ -625,6 +664,15 @@ See [Gesture events moved](#gesture-events-moved) for context.
 | Removed member | Replacement | PR |
 |---|---|---|
 | `Gestures` class (all attached events) | Events on `InputElement` | [#20789](https://github.com/AvaloniaUI/Avalonia/pull/20789) |
+
+### Focus handling
+
+See [Focus improvements](#focus-improvements) for context.
+
+| Removed member | Replacement | PR |
+|---|---|---|
+| `GotFocusEventArgs` class | `FocusChangedEventArgs` | [#20859](https://github.com/AvaloniaUI/Avalonia/pull/20859) |
+| `KeyboardNavigationHandler` class | `FocusManager` | [#18647](https://github.com/AvaloniaUI/Avalonia/pull/18647) |
 
 ### Other specific removals
 

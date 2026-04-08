@@ -5,7 +5,7 @@ description: Learn how to use the Avalonia Expander control for collapsible cont
 doc-type: how-to
 ---
 
-This guide covers common `Expander` scenarios including basic usage, accordion patterns, animated expansion, binding state, and custom headers.
+This guide covers common [`Expander`](/api/avalonia/controls/expander) scenarios including basic usage, accordion patterns, animated expansion, binding state, and custom headers.
 
 ## Basic expander
 
@@ -57,7 +57,7 @@ This two-way binding keeps the view model property in sync whenever the user ope
 
 ## Expand direction
 
-The `ExpandDirection` property controls which direction the content expands relative to the header:
+The [`ExpandDirection`](/api/avalonia/controls/expanddirection) property controls which direction the content expands relative to the header:
 
 ```xml
 <!-- Expands upward -->
@@ -257,6 +257,6 @@ When you set `IsEnabled="False"` on an `Expander`, the header is no longer inter
 
 ## See also
 
-- [Expander control reference](../../controls/layout/containers/expander.md): Full property and event tables.
-- [Page transitions](../graphics-animation/page-transitions.md): Transition types you can use for content animation.
-- [Introduction to data binding](../data-binding/introduction-to-data-binding.md): Fundamentals of binding properties like `IsExpanded` to your view model.
+- [Expander control reference](/controls/layout/containers/expander): Full property and event tables.
+- [Page transitions](/docs/graphics-animation/page-transitions): Transition types you can use for content animation.
+- [Introduction to data binding](/docs/data-binding/introduction-to-data-binding): Fundamentals of binding properties like `IsExpanded` to your view model.

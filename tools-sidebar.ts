@@ -71,12 +71,12 @@ const sidebars: SidebarsConfig = {
       collapsed: true,
       items: [
         'ai-tools/index',
+        'ai-tools/build-mcp',
         'developer-tools/mcp',
         'parcel/mcp',
       ],
     },
-    'installing-accelerate',
-    'community-edition',
+    'installing-avalonia-pro',
     'faq',
   ],
 };

@@ -1,0 +1,381 @@
+---
+title: 'HierarchicalRow<TModel>'
+hide_title: true
+slug: '/avalonia/controls/models/treedatagrid/hierarchicalrow-1'
+uid: 'Avalonia.Controls.Models.TreeDataGrid.HierarchicalRow`1'
+commentId: 'T:Avalonia.Controls.Models.TreeDataGrid.HierarchicalRow`1'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.TreeDataGrid'
+assembly: 'Avalonia.Controls.TreeDataGrid'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Models.TreeDataGrid'
+tfms:
+  - 'net8.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">HierarchicalRow&lt;TModel&gt; Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Models.TreeDataGrid</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A row in a [Avalonia.Controls.HierarchicalTreeDataGridSource&lt;T&gt;](xref:Avalonia.Controls.HierarchicalTreeDataGridSource%601) that represents an item in
+a hierarchical data structure.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class HierarchicalRow<TModel>
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../notifyingbase">NotifyingBase</a> <span className="apiref-page__relation-separator">-&gt;</span> HierarchicalRow&lt;TModel&gt;
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="iexpander">IExpander</a>, IExpanderRow&lt;&gt;, <a href="iindentedrow">IIndentedRow</a>, <a href="imodelindexablerow">IModelIndexableRow</a>, <a href="irow">IRow</a>, IRow&lt;&gt;, INotifyPropertyChanged, IDisposable
+</div>
+</div>
+
+## Remarks
+
+The [Avalonia.Controls.Models.TreeDataGrid.HierarchicalRow&lt;T&gt;](xref:Avalonia.Controls.Models.TreeDataGrid.HierarchicalRow%601) class represents a row in a hierarchical data
+structure within a [TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid). It manages the expanded/collapsed state of a row, its
+position within the hierarchy, and its relationship to its child rows.
+
+This class coordinates with an [Avalonia.Controls.Models.TreeDataGrid.IExpanderColumn&lt;T&gt;](xref:Avalonia.Controls.Models.TreeDataGrid.IExpanderColumn%601) to handle the tree
+structure visualization, and an [Avalonia.Controls.Models.TreeDataGrid.IExpanderRowController&lt;T&gt;](xref:Avalonia.Controls.Models.TreeDataGrid.IExpanderRowController%601) to communicate
+row state changes back to the data source.
+
+Each row maintains its position within the tree using an [Avalonia.Controls.IndexPath](xref:Avalonia.Controls.IndexPath), which
+represents the path from the root to this row in the hierarchy. This path is used for
+selection, sorting, and navigation operations.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [HierarchicalRow&lt;TModel&gt;](#uid-7c5e4363ad) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7c5e4363ad"></span>
+
+### HierarchicalRow&lt;TModel&gt; Constructor
+
+```csharp
+public HierarchicalRow<TModel>(Avalonia.Controls.Models.TreeDataGrid.IExpanderRowController<TModel><TModel> controller, Avalonia.Controls.Models.TreeDataGrid.IExpanderColumn<TModel><TModel> expanderColumn, Avalonia.Controls.IndexPath modelIndex, TModel model, Comparison<TModel> comparison)
+```
+
+#### Parameters
+
+`controller` Avalonia.Controls.Models.TreeDataGrid.IExpanderRowController&lt;TModel&gt;&lt;TModel&gt;
+
+
+`expanderColumn` Avalonia.Controls.Models.TreeDataGrid.IExpanderColumn&lt;TModel&gt;&lt;TModel&gt;
+
+
+`modelIndex` [Avalonia.Controls.IndexPath](xref:Avalonia.Controls.IndexPath)
+
+
+`model` TModel
+
+
+`comparison` Comparison&lt;TModel&gt;
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Dispose](#uid-9f66cdb773) | Disposes resources used by this row, including any child rows. |
+| [UpdateModelIndex](#uid-4d90441eb6) | Updates the model index of this row by adding a delta to the last component of the model index path. |
+| [UpdateParentModelIndex](#uid-c183882704) | Updates this row's model index path when its parent's index path has changed. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9f66cdb773"></span>
+
+### Dispose Method
+
+Disposes resources used by this row, including any child rows.
+
+```csharp
+public void Dispose()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4d90441eb6"></span>
+
+### UpdateModelIndex Method
+
+Updates the model index of this row by adding a delta to the last component of the
+model index path.
+
+```csharp
+public void UpdateModelIndex(int delta)
+```
+
+#### Parameters
+
+`delta` int
+
+The amount to add to the model index.
+
+
+#### Remarks
+
+This method is used when items are inserted or removed from the data source, causing
+the indices of subsequent items to shift. After updating this row's index, it
+recursively updates the indices of all child rows.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c183882704"></span>
+
+### UpdateParentModelIndex Method
+
+Updates this row's model index path when its parent's index path has changed.
+
+```csharp
+public void UpdateParentModelIndex(Avalonia.Controls.IndexPath parentIndex)
+```
+
+#### Parameters
+
+`parentIndex` [Avalonia.Controls.IndexPath](xref:Avalonia.Controls.IndexPath)
+
+The new parent index path.
+
+
+#### Remarks
+
+This method is called when a parent row's index path changes, requiring all child rows
+to update their paths accordingly. After updating this row's path, it recursively
+updates the paths of all child rows.
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Children](#uid-f744a1fe69) | Gets the row's visible child rows. |
+| [Header](#uid-23c5b4e338) | Gets the row header. |
+| [Height](#uid-98bb9cbc85) | Gets or sets the height of the row. |
+| [Indent](#uid-156dd160c9) | Gets the indentation level of the row. |
+| [IsExpanded](#uid-60a57c03c4) | Gets or sets a value indicating whether the row is expanded to show its child rows. |
+| [Model](#uid-bba42de094) | Gets the model object associated with this row. |
+| [ModelIndex](#uid-ec92d8d0e5) | Gets the index of the model relative to its parent. |
+| [ModelIndexPath](#uid-329514fbe2) | Gets the index path of the model in the data source. |
+| [ShowExpander](#uid-adfa4c3b6c) | Gets a value indicating whether the expander button should be shown for this row. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f744a1fe69"></span>
+
+### Children Property
+
+Gets the row's visible child rows.
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<Avalonia.Controls.Models.TreeDataGrid.HierarchicalRow<TModel><TModel>> Children { get; set; }
+```
+
+#### Remarks
+
+Returns the collection of child rows when the row is expanded, or null when the row
+is collapsed. Child rows are created on-demand when the row is first expanded.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-23c5b4e338"></span>
+
+### Header Property
+
+Gets the row header.
+
+```csharp
+public object Header { get; set; }
+```
+
+#### Remarks
+
+Returns the row's [Avalonia.Controls.Models.TreeDataGrid.HierarchicalRow&lt;T&gt;.ModelIndexPath](xref:Avalonia.Controls.Models.TreeDataGrid.HierarchicalRow%601.ModelIndexPath), which can be used to identify the row
+within the hierarchy.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-98bb9cbc85"></span>
+
+### Height Property
+
+Gets or sets the height of the row.
+
+```csharp
+public Avalonia.Controls.GridLength Height { get; set; }
+```
+
+#### Remarks
+
+Currently, row height is always auto-sized and setting this property has no effect.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-156dd160c9"></span>
+
+### Indent Property
+
+Gets the indentation level of the row.
+
+```csharp
+public int Indent { get; set; }
+```
+
+#### Remarks
+
+The indentation level is determined by the depth of the row in the hierarchical
+structure. Root items have an indent of 0, their children have an indent of 1, and so
+on.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-60a57c03c4"></span>
+
+### IsExpanded Property
+
+Gets or sets a value indicating whether the row is expanded to show its child rows.
+
+```csharp
+public bool IsExpanded { get; set; }
+```
+
+#### Remarks
+
+When set to true, the row will attempt to expand and show its child rows.
+If the row has no children, the expander will be hidden.
+
+Setting this property will notify the controller of the state change, which
+will update the visual representation in the UI.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-bba42de094"></span>
+
+### Model Property
+
+Gets the model object associated with this row.
+
+```csharp
+public TModel Model { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ec92d8d0e5"></span>
+
+### ModelIndex Property
+
+Gets the index of the model relative to its parent.
+
+```csharp
+public int ModelIndex { get; set; }
+```
+
+#### Remarks
+
+To retrieve the index path to the model from the root data source, see
+[Avalonia.Controls.Models.TreeDataGrid.HierarchicalRow&lt;T&gt;.ModelIndexPath](xref:Avalonia.Controls.Models.TreeDataGrid.HierarchicalRow%601.ModelIndexPath).
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-329514fbe2"></span>
+
+### ModelIndexPath Property
+
+Gets the index path of the model in the data source.
+
+```csharp
+public Avalonia.Controls.IndexPath ModelIndexPath { get; set; }
+```
+
+#### Remarks
+
+This index path uniquely identifies the row within the hierarchical structure, starting
+from the root. It represents the sequence of child indices needed to navigate to this
+row.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-adfa4c3b6c"></span>
+
+### ShowExpander Property
+
+Gets a value indicating whether the expander button should be shown for this row.
+
+```csharp
+public bool ShowExpander { get; set; }
+```
+
+#### Remarks
+
+The expander button is shown when the row has children that can be expanded. This
+property's initial value is determined by querying the expander column's
+[Avalonia.Controls.Models.TreeDataGrid.IExpanderColumn&lt;T&gt;.HasChildren(\`0)](xref:Avalonia.Controls.Models.TreeDataGrid.IExpanderColumn%601.HasChildren%28%600%29) method.
+
+If a row is expanded but turns out to have no children, the expander will be hidden.
+
+</section>
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [PropertyChanged](../notifyingbase.mdx#uid-cfba2a29fd) | Occurs when a property value changes. Inherited from [NotifyingBase](../notifyingbase.mdx). |
+
+</ApiRefPage>
+

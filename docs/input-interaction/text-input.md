@@ -13,7 +13,7 @@ Text input in Avalonia flows through several stages:
 2. The platform's input method processes key combinations into characters.
 3. **TextInput events** fire with the final composed text.
 
-For most applications, you do not need to handle text input directly. Controls like `TextBox` and `AutoCompleteBox` handle all text input automatically. This page covers scenarios where you need custom text input behavior.
+For most applications, you do not need to handle text input directly. Controls like [`TextBox`](/api/avalonia/controls/textbox) and `AutoCompleteBox` handle all text input automatically. This page covers scenarios where you need custom text input behavior.
 
 ## TextInput event
 

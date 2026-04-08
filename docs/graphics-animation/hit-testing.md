@@ -55,6 +55,8 @@ To make the entire area of a panel respond to pointer events, set `Background="T
 </StackPanel>
 ```
 
+This rule applies at every level, including the `Window` itself. Setting `Background="{x:Null}"` with `TransparencyLevelHint="Transparent"` lets pointer events pass through empty areas to OS windows underneath. Setting `Background="Transparent"` looks the same but captures all input. See [Transparent click-through window](/docs/how-to/window-how-to#transparent-click-through-window) for a complete example.
+
 ## Programmatic hit testing
 
 ### InputHitTest
@@ -104,12 +106,12 @@ public class CircleControl : Control
         context.DrawEllipse(Brushes.Blue, null, center, radius, radius);
     }
 
-    protected override bool HitTestCore(HitTestCoreArgs args)
+    protected override bool HitTest(Point point)
     {
         // Only hit test within the circle, not the full bounding box
         var radius = Math.Min(Bounds.Width, Bounds.Height) / 2;
         var center = new Point(Bounds.Width / 2, Bounds.Height / 2);
-        var distance = Point.Distance(args.HitPoint, center);
+        var distance = Point.Distance(point, center);
         return distance <= radius;
     }
 }

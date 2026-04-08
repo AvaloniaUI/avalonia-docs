@@ -8,7 +8,7 @@ doc-type: how-to
 Bindings defined in XAML use reflection to find and access the requested property in your `ViewModel`. In Avalonia, you can also use compiled bindings, which have some benefits:
 
 * If you use compiled bindings and the property you bind to is not found, you get a compile-time error. This gives you a much better debugging experience.
-* Reflection is known to be slow ([see this article on codeproject.com](https://www.codeproject.com/articles/Why-is-Reflection-Slow)). Using compiled bindings can therefore improve the performance of your application.
+* Reflection is known to be slow. Using compiled bindings can therefore improve the performance of your application.
 
 ## Enable and disable compiled bindings
 
@@ -154,5 +154,5 @@ You can also create compiled bindings in C# code using the `CompiledBinding.Crea
 
 ## See also
 
-- [Compiled bindings from code](/docs/data-binding/binding-from-code#compiled-bindings-from-code)
+- [Compiled bindings from code](/docs/data-binding/binding-from-code#creating-compiled-bindings-from-code)
 - [Data binding syntax](/docs/data-binding/data-binding-syntax)

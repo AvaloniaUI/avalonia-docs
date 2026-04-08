@@ -7,7 +7,7 @@ doc-type: reference
 
 import PathIconHouseScreenshot from '/img/controls/pathicon/pathicon-house.png';
 
-The `PathIcon` control renders a vector icon from stream geometry data. You can use it to display scalable, resolution-independent icons in your application. The [Avalonia Fluent icons library](https://avaloniaui.github.io/icons.html) provides a large collection of ready-to-use geometry strings.
+The [`PathIcon`](/api/avalonia/controls/pathicon) control renders a vector icon from stream geometry data. You can use it to display scalable, resolution-independent icons in your application. The [Avalonia Fluent icons library](https://avaloniaui.github.io/icons.html) provides a large collection of ready-to-use geometry strings.
 
 Because `PathIcon` uses vector paths rather than raster images, your icons scale cleanly at any size and you can re-color them by changing the `Foreground` brush.
 

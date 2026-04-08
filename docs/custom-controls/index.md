@@ -231,18 +231,7 @@ public static readonly DirectProperty<TextBox, string?> TextProperty =
         enableDataValidation: true);
 ```
 
-To suppress or customize validation handling for a specific property, override `UpdateDataValidation` and handle (or skip) that property without calling the base method:
-
-```csharp
-protected override void UpdateDataValidation(
-    AvaloniaProperty property, BindingValueType state, Exception? error)
-{
-    if (property == MySpecialProperty)
-        return; // Suppress validation for this property
-
-    base.UpdateDataValidation(property, state, error);
-}
-```
+In Avalonia 12, data validation is handled automatically when `enableDataValidation` is set to `true`. The framework detects validation errors from `INotifyDataErrorInfo` and displays them without requiring additional overrides in your control.
 
 ## See also
 

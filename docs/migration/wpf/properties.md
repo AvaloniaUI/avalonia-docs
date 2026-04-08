@@ -294,6 +294,6 @@ public static readonly StyledProperty<IBrush> BackgroundProperty =
 
 ## See also
 
-- [Avalonia Properties Overview](/docs/properties/index)
-- [Value Precedence](/docs/properties/value-precedence)
-- [Defining Properties on Custom Controls](/docs/custom-controls/defining-properties)
+- [Avalonia property system](/docs/properties)
+- [Value precedence](/docs/properties/value-precedence)
+- [Defining properties on custom controls](/docs/custom-controls/defining-properties)

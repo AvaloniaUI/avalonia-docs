@@ -13,7 +13,7 @@ Flyouts can be declared as a resource and shared between two or more host contro
 
 ## Examples
 
-A flyout is attached to a host control using the host's `Flyout` property. For example:
+A flyout is attached to a host control using the host's [`Flyout`](/api/avalonia/controls/flyout) property. For example:
 
 <XamlPreview>
 
@@ -117,5 +117,5 @@ Although flyouts are not themselves controls, their general appearance can be cu
 
 ## See also
 
-- [Flyout API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_Flyout)
+- [Flyout API reference](/api/avalonia/controls/flyout)
 - [`Flyout.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Flyouts/Flyout.cs)

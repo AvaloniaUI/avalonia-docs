@@ -2,14 +2,15 @@
 id: mediaplayercontrol
 title: MediaPlayerControl
 tags:
-  - accelerate
+  - avalonia pro
+  - avalonia enterprise
 ---
 
 The `MediaPlayerControl` is a fully-featured UI control for media playback that provides transport controls, progress display, volume control, and video rendering. It encapsulates a `MediaPlayer` instance and provides a rich user interface for media playback.
 
 
 :::info
-This control is available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Business or higher.
+This control is available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
 
 ## Properties
@@ -273,8 +274,8 @@ flowchart LR
 
 ## See also
 
-- [MediaPlayer class](/docs/media/mediaplayer)
-- [MediaSource class](/docs/media/mediasource)
-- [Implementing MediaPlayer](/docs/media/media-playback)
-- [Installing Avalonia Accelerate](/tools/installing-accelerate)
+- [MediaPlayer class](/controls/media/mediaplayer)
+- [MediaSource class](/controls/media/mediasource)
+- [Implementing MediaPlayer](/controls/media/media-playback)
+- [Installing Avalonia Pro](/tools/installing-avalonia-pro)
 - [Troubleshooting](/troubleshooting/controls/mediaplayer)

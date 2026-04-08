@@ -1,0 +1,140 @@
+---
+title: 'DragInfo'
+hide_title: true
+slug: '/avalonia/controls/models/treedatagrid/draginfo'
+uid: 'Avalonia.Controls.Models.TreeDataGrid.DragInfo'
+commentId: 'T:Avalonia.Controls.Models.TreeDataGrid.DragInfo'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.TreeDataGrid'
+assembly: 'Avalonia.Controls.TreeDataGrid'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Models.TreeDataGrid'
+tfms:
+  - 'net8.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">DragInfo Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Models.TreeDataGrid</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Holds information about an automatic row drag/drop operation carried out
+by [Avalonia.Controls.TreeDataGrid.AutoDragDropRows](xref:Avalonia.Controls.TreeDataGrid.AutoDragDropRows).
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class DragInfo
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> DragInfo
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [DragInfo](#uid-732480e5eb) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-732480e5eb"></span>
+
+### DragInfo Constructor
+
+```csharp
+public DragInfo(Avalonia.Controls.ITreeDataGridSource source, System.Collections.Generic.IEnumerable<Avalonia.Controls.IndexPath> indexes)
+```
+
+#### Parameters
+
+`source` [Avalonia.Controls.ITreeDataGridSource](xref:Avalonia.Controls.ITreeDataGridSource)
+
+
+`indexes` System.Collections.Generic.IEnumerable&lt;[Avalonia.Controls.IndexPath](xref:Avalonia.Controls.IndexPath)&gt;
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Indexes](#uid-024d721687) | Gets or sets the model indexes of the rows being dragged. |
+| [Source](#uid-6ff9ad15c7) | Gets the [Avalonia.Controls.ITreeDataGridSource](xref:Avalonia.Controls.ITreeDataGridSource) that rows are being dragged from. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-024d721687"></span>
+
+### Indexes Property
+
+Gets or sets the model indexes of the rows being dragged.
+
+```csharp
+public System.Collections.Generic.IEnumerable<Avalonia.Controls.IndexPath> Indexes { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6ff9ad15c7"></span>
+
+### Source Property
+
+Gets the [Avalonia.Controls.ITreeDataGridSource](xref:Avalonia.Controls.ITreeDataGridSource) that rows are being dragged from.
+
+```csharp
+public Avalonia.Controls.ITreeDataGridSource Source { get; set; }
+```
+
+</section>
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [DataFormat](#uid-a16c4b7519) | Defines the data format in an [Avalonia.Input.IDataObject](xref:Avalonia.Input.IDataObject). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a16c4b7519"></span>
+
+### DataFormat Field
+
+Defines the data format in an [Avalonia.Input.IDataObject](xref:Avalonia.Input.IDataObject).
+
+```csharp
+public string DataFormat
+```
+
+</section>
+
+</ApiRefPage>
+

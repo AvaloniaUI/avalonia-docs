@@ -3,6 +3,30 @@ id: release-notes
 title: Release notes
 ---
 
+## XPF 1.6.2 (2026-03-20)
+
+* Fixed crash on macOS when right-clicking TextBox while clipboard is empty
+* Fixed extra click required when closing popup from its button (macOS, Linux)
+* Fixed clicking on scrollbar inside ComboBox 
+* Fixed clicking on a menu item that has opened submenu
+* Fixed opening ComboBox inside Menu
+* Fixed menus with a lot of items taking too much space, covering the parent element
+
+## XPF 1.6.1 (2026-02-19)
+
+* Avalonia version updated from 11.3.11 to 11.3.12
+* Support for macOS bitmap formats pasted from clipboard
+* Fixed AvaloniaHost taking all input
+* Fixed switching tabs in TabControl taking all input
+* Fixed WinForms dialogs crash without FilterIndex
+* [Accessibility] Support for ItemType and ItemStatus properties
+* [Accessibility] Fixed lack of notification when children added
+* Implemented BringWindowToTop, DestroyWindow, IsChild, SetActiveWindow, SetFocus API shims
+
+Known issues:
+
+* Closing popup from its button might require an extra click (macOS, Linux)
+
 ## XPF 1.6.0 (2026-01-19)
 
 * Avalonia version updated from 11.3.1 to 11.3.11

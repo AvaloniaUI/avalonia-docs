@@ -52,7 +52,7 @@ Pixel Blend modes on the other hand, specifies how the new colors will interact 
 See the [Wikipedia page](https://en.wikipedia.org/wiki/Blend_modes) on blend modes for examples of how they work and the math behind them.
 
 :::info
-Currently Avalonia only supports Blend Modes when using the Skia renderer. Trying to use these modes with the D2D renderer will result in the same behavior as the default mode.
+Blend mode support depends on the rendering backend. The Skia renderer supports all blend modes listed below.
 :::
 
 ## Default behavior

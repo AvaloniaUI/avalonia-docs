@@ -265,10 +265,6 @@ function createRedirects(existingPath: string): string[] | undefined {
     if (existingPath === '/docs/app-development/data-validation') {
       redirects.push('/docs/data/data-validation');
     }
-    if (existingPath === '/docs/app-development/threading') {
-      redirects.push('/docs/development-optimization/accessing-the-ui-thread');
-      redirects.push('/docs/app-development/accessing-the-ui-thread');
-    }
 
     // Media from reference
     const mediaFromRef: Record<string, string> = {
@@ -352,8 +348,8 @@ function createRedirects(existingPath: string): string[] | undefined {
       }
     }
 
-    // Accelerate install
-    if (existingPath === '/tools/installing-accelerate') {
+    // Avalonia Pro install
+    if (existingPath === '/tools/installing-avalonia-pro') {
       redirects.push('/docs/development-optimization/installing-accelerate');
     }
 

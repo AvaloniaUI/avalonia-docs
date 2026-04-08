@@ -5,7 +5,7 @@ description: A decorator control that applies layout-aware transforms such as ro
 doc-type: reference
 ---
 
-The [`LayoutTransformControl`](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_LayoutTransformControl) applies a transform (rotation, scale, skew) to its child that participates in layout. Unlike `RenderTransform`, which only changes how a control is drawn without affecting surrounding layout, `LayoutTransformControl` causes parent panels to measure and arrange around the transformed bounds.
+The [`LayoutTransformControl`](/api/avalonia/controls/layouttransformcontrol) applies a transform (rotation, scale, skew) to its child that participates in layout. Unlike `RenderTransform`, which only changes how a control is drawn without affecting surrounding layout, [`LayoutTransformControl`](/api/avalonia/controls/layouttransformcontrol) causes parent panels to measure and arrange around the transformed bounds.
 
 This means a rotated control will correctly push adjacent controls aside, and a scaled control will take up the appropriate amount of space in a `StackPanel` or `Grid`.
 
@@ -107,8 +107,8 @@ You can bind the rotation angle to a slider for interactive control:
 ## See also
 
 - [Decorator](/controls/layout/decorator)
-- [Border](/controls/layout/border)
-- [Viewbox](/controls/layout/viewbox)
-- [Transforms](/concepts/transforms)
-- [LayoutTransformControl API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_LayoutTransformControl)
+- [Border](/controls/layout/containers/border)
+- [Viewbox](/controls/layout/containers/viewbox)
+- [Transforms](/docs/graphics-animation/transforms)
+- [LayoutTransformControl API reference](/api/avalonia/controls/layouttransformcontrol)
 - [`LayoutTransformControl.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/LayoutTransformControl.cs)

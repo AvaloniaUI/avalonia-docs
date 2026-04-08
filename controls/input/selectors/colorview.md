@@ -55,5 +55,5 @@ None
 
 ## See also
 
-- [ColorView API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_ColorView)
+- [ColorView API reference](/api/avalonia/controls/colorview)
 - [`ColorView.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls.ColorPicker/ColorView/ColorView.cs)

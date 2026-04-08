@@ -31,7 +31,7 @@ You will probably use these properties most often:
       <td>The item template, contains a DataTemplate which will be applied to individual items and can be used to change how items look.</td>
     </tr>
     <tr>
-      <td><code>ItemsControl.ItemPanel</code></td>
+      <td><code>ItemsControl.ItemsPanel</code></td>
       <td>The container panel to place items in. By default, this is a StackPanel. See [this page](/docs/custom-controls/custom-itemspanel) to customise the ItemsPanel.</td>
     </tr>
     <tr>
@@ -220,5 +220,5 @@ treeView.AddHandler(TreeViewItem.CollapsedEvent, (sender, args) =>
 
 ## See also
 
-- [TreeView API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_TreeView)
+- [TreeView API reference](/api/avalonia/controls/treeview)
 - [`TreeView.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/TreeView.cs)

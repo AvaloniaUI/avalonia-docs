@@ -5,7 +5,7 @@ description: Configure transitions that animate property changes on Avalonia con
 doc-type: how-to
 ---
 
-Transitions in Avalonia are also heavily inspired by CSS Animations. They listen to any changes in target property's value and subsequently animates the change according to its parameters. They can be defined on any `Control` via the `Transitions` property:
+Transitions in Avalonia are also heavily inspired by CSS Animations. They listen to any changes in target property's value and subsequently animates the change according to its parameters. They can be defined on any `Control` via the [`Transitions`](/api/avalonia/animation/transitions) property:
 
 ## Basic usage
 

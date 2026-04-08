@@ -119,12 +119,14 @@ const config: Config = {
             './node_modules/modern-normalize/modern-normalize.css',
             './node_modules/@ionic-internal/ionic-ds/dist/tokens/tokens.css',
             './src/styles/custom.scss',
+            './src/styles/docsearch.scss',
           ],
         },
       } satisfies Preset.Options,
     ],
   ],
   plugins: [
+    '@docsearch/docusaurus-adapter',
     'docusaurus-plugin-sass',
     tailwindPlugin,
     function cioPlugin() {
@@ -172,6 +174,54 @@ const config: Config = {
     [
       "@gracefullight/docusaurus-plugin-microsoft-clarity",
       { projectId: "hqhy3ac3l1" },
+    ],
+    function gtmConsentPlugin() {
+      return {
+        name: 'docusaurus-plugin-gtm-consent',
+        injectHtmlTags() {
+          return {
+            headTags: [
+              {
+                tagName: 'script',
+                innerHTML: `
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('consent', 'default', {
+  ad_storage: 'denied',
+  ad_user_data: 'denied',
+  ad_personalization: 'denied',
+  analytics_storage: 'denied',
+  functionality_storage: 'granted',
+  personalization_storage: 'denied',
+  security_storage: 'granted',
+  wait_for_update: 500
+});
+
+// Read shared consent cookie from .avaloniaui.net
+(function() {
+  var match = document.cookie.match(/(?:^|; )av_cookie_consent=([^;]*)/);
+  if (!match) return;
+  try {
+    var prefs = JSON.parse(decodeURIComponent(match[1]));
+    gtag('consent', 'update', {
+      analytics_storage: prefs.analytics ? 'granted' : 'denied',
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      personalization_storage: prefs.messaging ? 'granted' : 'denied'
+    });
+  } catch(e) {}
+})();
+                `,
+              },
+            ],
+          };
+        },
+      };
+    },
+    [
+      '@docusaurus/plugin-google-tag-manager',
+      { containerId: 'GTM-P3B9LZDZ' },
     ],
     [
       '@docusaurus/plugin-content-docs',
@@ -242,19 +292,31 @@ const config: Config = {
         },
       } satisfies LlmsTxtPluginOptions,
     ],
+  
+    [
+      "@docusaurus/plugin-content-docs",
+      {
+        id: "api",
+        path: "api",
+        routeBasePath: "api",
+        disableVersioning: true,
+        sidebarPath: require.resolve("./api-sidebars.ts"),
+        remarkPlugins: [[require("./plugins/apiref-xref"), { indexPath: "./.apiref/generated/xref-index.json" }]],
+      },
+    ]
   ],
-  themeConfig: {
+ themeConfig: {
     image: 'img/social-card.png',
     colorMode: {
       defaultMode: 'light',
-      disableSwitch: true,
-      respectPrefersColorScheme: false,
+      disableSwitch: false,
+      respectPrefersColorScheme: true,
     },
     zoom: {
       selector: '.markdown :not(em) > img:not(.Card-icon)',
       background: {
         light: 'rgb(196, 196, 196)',
-        dark: 'rgb(22, 28, 45)'
+        dark: 'rgb(17, 17, 19)'
       },
       config: {
         margin: 50,
@@ -287,13 +349,18 @@ const config: Config = {
           activeBasePath: '/tools'
         },
         {
-          label: 'Troubleshooting',
-          to: '/troubleshooting',
-          activeBasePath: '/troubleshooting'
+          label: 'APIs',
+          to: '/api',
+          activeBasePath: '/api'
         },
         {
           label: 'More',
           items: [
+            {
+              label: 'Troubleshooting',
+              to: '/troubleshooting',
+              activeBasePath: '/troubleshooting'
+            },
             {
               label: 'Enhanced Support',
               href: 'https://avaloniaui.net/support?utm_source=docs&utm_medium=referral&utm_content=nav_link',
@@ -303,12 +370,6 @@ const config: Config = {
             {
               label: 'Professional Services',
               href: 'https://avaloniaui.net/services',
-              target: '_blank',
-              rel: null
-            },
-            {
-              href: 'https://api-docs.avaloniaui.net/docs/category/avalonia',
-              label: 'API Reference',
               target: '_blank',
               rel: null
             },
@@ -341,11 +402,6 @@ const config: Config = {
           position: 'right',
         },
         {
-          type: 'html',
-          position: 'right',
-          value: '<div class="separator" aria-hidden></div>',
-        },
-        {
           href: "https://github.com/avaloniaui/",
           position: "right",
           className: "header-github-link",
@@ -362,16 +418,37 @@ const config: Config = {
       },
       darkTheme: {
         ...prismThemes.vsDark,
-        plain: { ...prismThemes.vsDark.plain, backgroundColor: '#05051E' },
+        plain: { ...prismThemes.vsDark.plain, backgroundColor: '#18181b' },
       },
       additionalLanguages: ['csharp', 'bash', 'shell-session', 'diff'],
     },
-    algolia: {
+    docsearch: {
       appId: 'V9UF6750GH',
       apiKey: '028e3dad834905a2a2c2a7ad9da9e666',
       indexName: 'avaloniaui_docs',
+      contextualSearch: true,
+      translations: {
+        button: {
+          buttonText: 'Search',
+          buttonAriaLabel: 'Search',
+        },
+        modal: {
+          startScreen: {
+            recentSearchesTitle: 'Recent',
+            noRecentSearchesText: 'No recent searches',
+            saveRecentSearchButtonTitle: 'Save to recent',
+            removeRecentSearchButtonTitle: 'Remove from recent',
+            favoriteSearchesTitle: 'Favourites',
+            removeFavoriteSearchButtonTitle: 'Remove from favourites',
+          },
+        },
+      },
+      askAi: {
+        assistantId: 'ILptDNvSVJ1v',
+        sidePanel: true,
+      },
     },
-  } satisfies Preset.ThemeConfig,
+  },
 };
 
 export default config;

@@ -1,0 +1,193 @@
+---
+title: 'TreeDataGridTemplateCell'
+hide_title: true
+slug: '/avalonia/controls/primitives/treedatagridtemplatecell'
+uid: 'Avalonia.Controls.Primitives.TreeDataGridTemplateCell'
+commentId: 'T:Avalonia.Controls.Primitives.TreeDataGridTemplateCell'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.TreeDataGrid'
+assembly: 'Avalonia.Controls.TreeDataGrid'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Primitives'
+tfms:
+  - 'net8.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">TreeDataGridTemplateCell Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Primitives</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A control in a [Avalonia.Controls.TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid) that displays cell content using a data template.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class TreeDataGridTemplateCell
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> TemplatedControl <span className="apiref-page__relation-separator">-&gt;</span> <a href="treedatagridcell">TreeDataGridCell</a> <span className="apiref-page__relation-separator">-&gt;</span> TreeDataGridTemplateCell
+</div>
+</div>
+
+## Remarks
+
+[TreeDataGridTemplateCell](xref:Avalonia.Controls.Primitives.TreeDataGridTemplateCell) provides a flexible way to display and edit cell content using
+data templates.
+
+This cell type allows for rich content presentation and custom editing experiences beyond
+simple text or checkbox cells. The content displayed in the cell is determined by the
+[Avalonia.Controls.Primitives.TreeDataGridTemplateCell.ContentTemplate](xref:Avalonia.Controls.Primitives.TreeDataGridTemplateCell.ContentTemplate) during normal viewing, and the [Avalonia.Controls.Primitives.TreeDataGridTemplateCell.EditingTemplate](xref:Avalonia.Controls.Primitives.TreeDataGridTemplateCell.EditingTemplate)
+when the cell is in edit mode.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [TreeDataGridTemplateCell](#uid-ddb78138c8) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ddb78138c8"></span>
+
+### TreeDataGridTemplateCell Constructor
+
+```csharp
+public TreeDataGridTemplateCell()
+```
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Content](#uid-4672164813) | Gets the content to display in the cell. |
+| [ContentTemplate](#uid-5040c0d214) | Gets or sets the template used to display the cell's content when not in edit mode. |
+| [EditingTemplate](#uid-97fc89ffb3) | Gets or sets the template used to display the cell's content when in edit mode. |
+| [ColumnIndex](treedatagridcell.mdx#uid-6d0d40f6a8) | Gets the index of the column that this cell belongs to. Inherited from [TreeDataGridCell](treedatagridcell.mdx). |
+| [IsEditing](treedatagridcell.mdx#uid-66586fe73f) | Gets a value indicating whether the cell is in edit mode. Inherited from [TreeDataGridCell](treedatagridcell.mdx). |
+| [IsEffectivelySelected](treedatagridcell.mdx#uid-8ce8f3cd79) | Gets a value indicating whether the cell is effectively selected, either directly or because its containing row is selected. Inherited from [TreeDataGridCell](treedatagridcell.mdx). |
+| [IsSelected](treedatagridcell.mdx#uid-91d5f305c8) | Gets a value indicating whether the cell is selected. Inherited from [TreeDataGridCell](treedatagridcell.mdx). |
+| [Model](treedatagridcell.mdx#uid-6720862544) | Gets the data model for the cell. Inherited from [TreeDataGridCell](treedatagridcell.mdx). |
+| [RowIndex](treedatagridcell.mdx#uid-c4d45a681c) | Gets the index of the row that this cell belongs to. Inherited from [TreeDataGridCell](treedatagridcell.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4672164813"></span>
+
+### Content Property
+
+Gets the content to display in the cell.
+
+```csharp
+public object Content { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5040c0d214"></span>
+
+### ContentTemplate Property
+
+Gets or sets the template used to display the cell's content when not in edit mode.
+
+```csharp
+public Avalonia.Controls.Templates.IDataTemplate ContentTemplate { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-97fc89ffb3"></span>
+
+### EditingTemplate Property
+
+Gets or sets the template used to display the cell's content when in edit mode.
+
+```csharp
+public Avalonia.Controls.Templates.IDataTemplate EditingTemplate { get; set; }
+```
+
+</section>
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [ContentProperty](#uid-1e66cd3468) | Defines the [Avalonia.Controls.Primitives.TreeDataGridTemplateCell.Content](xref:Avalonia.Controls.Primitives.TreeDataGridTemplateCell.Content) property. |
+| [ContentTemplateProperty](#uid-39dd35e2a9) | Defines the [Avalonia.Controls.Primitives.TreeDataGridTemplateCell.ContentTemplate](xref:Avalonia.Controls.Primitives.TreeDataGridTemplateCell.ContentTemplate) property. |
+| [EditingTemplateProperty](#uid-45604db60b) | Defines the [Avalonia.Controls.Primitives.TreeDataGridTemplateCell.EditingTemplate](xref:Avalonia.Controls.Primitives.TreeDataGridTemplateCell.EditingTemplate) property. |
+| [IsSelectedProperty](treedatagridcell.mdx#uid-8249e3bb68) | Defines the [Avalonia.Controls.Primitives.TreeDataGridCell.IsSelected](xref:Avalonia.Controls.Primitives.TreeDataGridCell.IsSelected) property. Inherited from [TreeDataGridCell](treedatagridcell.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1e66cd3468"></span>
+
+### ContentProperty Field
+
+Defines the [Avalonia.Controls.Primitives.TreeDataGridTemplateCell.Content](xref:Avalonia.Controls.Primitives.TreeDataGridTemplateCell.Content) property.
+
+```csharp
+public Avalonia.DirectProperty<Avalonia.Controls.Primitives.TreeDataGridTemplateCell, object> ContentProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-39dd35e2a9"></span>
+
+### ContentTemplateProperty Field
+
+Defines the [Avalonia.Controls.Primitives.TreeDataGridTemplateCell.ContentTemplate](xref:Avalonia.Controls.Primitives.TreeDataGridTemplateCell.ContentTemplate) property.
+
+```csharp
+public Avalonia.DirectProperty<Avalonia.Controls.Primitives.TreeDataGridTemplateCell, Avalonia.Controls.Templates.IDataTemplate> ContentTemplateProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-45604db60b"></span>
+
+### EditingTemplateProperty Field
+
+Defines the [Avalonia.Controls.Primitives.TreeDataGridTemplateCell.EditingTemplate](xref:Avalonia.Controls.Primitives.TreeDataGridTemplateCell.EditingTemplate) property.
+
+```csharp
+public Avalonia.DirectProperty<Avalonia.Controls.Primitives.TreeDataGridTemplateCell, Avalonia.Controls.Templates.IDataTemplate> EditingTemplateProperty
+```
+
+</section>
+
+</ApiRefPage>
+

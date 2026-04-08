@@ -125,5 +125,5 @@ To provide a richer presentation for a tooltip, use a `<ToolTip.Tip>` element. H
 
 ## See also
 
-- [ToolTip API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_ToolTip)
+- [ToolTip API reference](/api/avalonia/controls/tooltip)
 - [`ToolTip.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/ToolTip.cs)

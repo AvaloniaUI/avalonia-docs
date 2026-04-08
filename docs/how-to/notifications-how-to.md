@@ -5,7 +5,7 @@ description: Learn how to show overlay notifications, toast messages, status bar
 doc-type: how-to
 ---
 
-This guide covers patterns for showing notifications, toast messages, and status bars in your Avalonia application. Because Avalonia does not include a built-in notification control, you build your own using standard layout controls such as `ItemsControl`, `Panel`, and `Border`.
+This guide covers patterns for showing notifications, toast messages, and status bars in your Avalonia application. Because Avalonia does not include a built-in notification control, you build your own using standard layout controls such as [`ItemsControl`](/api/avalonia/controls/itemscontrol), `Panel`, and `Border`.
 
 ## Overlay notification panel
 
@@ -239,8 +239,8 @@ Consider adding a `warning` style (for example, `#F59E0B`) alongside `info`, `su
 ## See also
 
 - [Threading](/docs/app-development/threading): Understand UI thread marshalling with `Dispatcher.UIThread`.
-- [TrayIcon](/docs/controls/navigation/trayicon): System tray integration for desktop platforms.
-- [Flyout](/docs/controls/layout/containers/flyout): Popup content attached to controls.
-- [ToolTip](/docs/controls/feedback/tooltip): Hover tooltips for controls.
+- [TrayIcon](/controls/navigation/trayicon): System tray integration for desktop platforms.
+- [Flyout](/controls/layout/containers/flyout): Popup content attached to controls.
+- [ToolTip](/controls/feedback/tooltip): Hover tooltips for controls.
 - [ItemsControl](/docs/how-to/itemscontrol-how-to): Working with `ItemsControl` for dynamic lists.
 - [Data templates](/docs/data-templates/introduction-to-data-templates): Customize how notification items render.

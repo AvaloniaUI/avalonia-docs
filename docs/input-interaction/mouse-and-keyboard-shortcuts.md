@@ -14,7 +14,7 @@ Avalonia lets you wire up keyboard shortcuts and mouse actions so your users can
 
 ## Key bindings
 
-You can attach one or more `KeyBinding` elements to any control's `KeyBindings` collection. Each `KeyBinding` maps a `Gesture` (a key, optionally combined with modifiers) to a command on your view model.
+You can attach one or more [`KeyBinding`](/api/avalonia/input/keybinding) elements to any control's `KeyBindings` collection. Each `KeyBinding` maps a `Gesture` (a key, optionally combined with modifiers) to a command on your view model.
 
 ```xml
 <ListBox.KeyBindings>

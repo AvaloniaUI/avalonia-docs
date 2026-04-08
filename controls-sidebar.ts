@@ -44,6 +44,7 @@ const sidebars: SidebarsConfig = {
                   'data-display/structured-data/treedatagrid/expand-and-collapse',
                   'data-display/structured-data/treedatagrid/sorting',
                   'data-display/structured-data/treedatagrid/filtering',
+                  'data-display/structured-data/treedatagrid/breaking-changes-v12',
                 ],
               },
               'data-display/structured-data/treeview',
@@ -283,6 +284,7 @@ const sidebars: SidebarsConfig = {
       items:[
         'navigation/trayicon',
         'primitives/window',
+        'primitives/windowdrawndecorations',
       ],
     },
     {

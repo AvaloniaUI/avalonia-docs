@@ -1,0 +1,131 @@
+---
+title: 'TextRenderingMode'
+hide_title: true
+slug: '/avalonia/media/textrenderingmode'
+uid: 'Avalonia.Media.TextRenderingMode'
+commentId: 'T:Avalonia.Media.TextRenderingMode'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Enum'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Media'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">TextRenderingMode Enum</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Media</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Specifies how text glyphs are rendered in Avalonia.
+Controls the smoothing and antialiasing applied during text rasterization.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public enum TextRenderingMode
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Enum <span className="apiref-page__relation-separator">-&gt;</span> TextRenderingMode
+</div>
+</div>
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [Alias](#uid-2351e60d79) | Glyphs are rendered without antialiasing. This produces sharp, aliased edges and may be useful for pixel-art aesthetics or low-DPI environments. |
+| [Antialias](#uid-25b2689c08) | Glyphs are rendered with standard grayscale antialiasing. This smooths edges without using subpixel information, preserving shape fidelity across different display types. |
+| [SubpixelAntialias](#uid-d6857f560e) | Glyphs are rendered with subpixel antialiasing. This provides higher apparent resolution on LCD screens by using the individual red, green, and blue subpixels. |
+| [Unspecified](#uid-ff902e9a4f) | Rendering mode is not explicitly specified. The system or platform default will be used. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2351e60d79"></span>
+
+### Alias Field
+
+Glyphs are rendered without antialiasing.
+This produces sharp, aliased edges and may be useful
+for pixel-art aesthetics or low-DPI environments.
+
+```csharp
+public Avalonia.Media.TextRenderingMode Alias
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-25b2689c08"></span>
+
+### Antialias Field
+
+Glyphs are rendered with standard grayscale antialiasing.
+This smooths edges without using subpixel information,
+preserving shape fidelity across different display types.
+
+```csharp
+public Avalonia.Media.TextRenderingMode Antialias
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d6857f560e"></span>
+
+### SubpixelAntialias Field
+
+Glyphs are rendered with subpixel antialiasing.
+This provides higher apparent resolution on LCD screens
+by using the individual red, green, and blue subpixels.
+
+```csharp
+public Avalonia.Media.TextRenderingMode SubpixelAntialias
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ff902e9a4f"></span>
+
+### Unspecified Field
+
+Rendering mode is not explicitly specified.
+The system or platform default will be used.
+
+```csharp
+public Avalonia.Media.TextRenderingMode Unspecified
+```
+
+</section>
+
+</ApiRefPage>
+

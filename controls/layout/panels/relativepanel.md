@@ -78,7 +78,7 @@ Here are some notes about the above example:
 
 ## See also
 
-- [RelativePanel API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_RelativePanel)
+- [RelativePanel API reference](/api/avalonia/controls/relativepanel)
 - [`RelativePanel.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/RelativePanel.cs)
 - [Canvas](canvas)
 - [DockPanel](dockpanel)

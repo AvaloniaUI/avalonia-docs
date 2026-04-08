@@ -47,7 +47,7 @@ This is useful for scenarios like:
 
 ## Embedding native views
 
-Avalonia supports embedding native UI controls within the Avalonia visual tree using `NativeControlHost`. This lets you use platform-specific controls (e.g., a native web browser, media player, or map view) inside an Avalonia layout.
+Avalonia supports embedding native UI controls within the Avalonia visual tree using [`NativeControlHost`](/api/avalonia/controls/nativecontrolhost). This lets you use platform-specific controls (e.g., a native web browser, media player, or map view) inside an Avalonia layout.
 
 ### NativeControlHost
 
@@ -266,7 +266,6 @@ public class SkiaCanvas : Control
 Add the SkiaSharp NuGet package:
 
 ```xml
-<PackageReference Include="Avalonia.Skia" Version="12.0.*" />
 <PackageReference Include="SkiaSharp" Version="2.88.*" />
 ```
 

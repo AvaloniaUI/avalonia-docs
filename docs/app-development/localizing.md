@@ -114,7 +114,7 @@ Note that `x:Static` bindings do not automatically update when the culture chang
 
 ## Right-to-left (RTL) support
 
-Avalonia supports right-to-left layouts through the `FlowDirection` property. Setting `FlowDirection` to `RightToLeft` mirrors the layout of child controls, which is essential for languages such as Arabic, Hebrew, and Persian.
+Avalonia supports right-to-left layouts through the [`FlowDirection`](/api/avalonia/media/flowdirection) property. Setting `FlowDirection` to `RightToLeft` mirrors the layout of child controls, which is essential for languages such as Arabic, Hebrew, and Persian.
 
 ```xml
 <Window FlowDirection="RightToLeft">

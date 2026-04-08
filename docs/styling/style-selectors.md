@@ -11,7 +11,7 @@ Avalonia uses style selectors to match controls using a custom XAML syntax that 
 
 | Selector | Description |
 |---|---|
-| `Button` | Selects all `Button` controls. |
+| [`Button`](/api/avalonia/controls/button) | Selects all `Button` controls. |
 | `Button.red` | Selects all `Button` controls with the `red` style class. |
 | `Button.red.large` | Selects all `Button` controls with both `red` and `large` style classes. |
 | `Button:focus` | Selects all `Button` controls with the `:focus` pseudo-class active. |

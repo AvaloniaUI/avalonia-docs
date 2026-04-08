@@ -9,7 +9,7 @@ This guide covers common TreeView scenarios: hierarchical data binding, lazy loa
 
 ## Basic Hierarchical Binding
 
-Bind a `TreeView` to a tree of view model objects using `HierarchicalDataTemplate`:
+Bind a [`TreeView`](/api/avalonia/controls/treeview) to a tree of view model objects using `HierarchicalDataTemplate`:
 
 ```csharp
 public class FolderItem
@@ -29,7 +29,7 @@ public class FolderItem
 </TreeView>
 ```
 
-`TreeDataTemplate` is the key: its `ItemsSource` property tells the `TreeView` where to find child items for each node. The same template is applied recursively at every level.
+[`TreeDataTemplate`](/api/avalonia/markup/xaml/templates/treedatatemplate) is the key: its `ItemsSource` property tells the `TreeView` where to find child items for each node. The same template is applied recursively at every level.
 
 ### Multiple node types
 

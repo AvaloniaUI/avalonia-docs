@@ -9,7 +9,7 @@ This guide walks you through common `TabControl` scenarios, including static tab
 
 ## Static tabs
 
-The simplest approach is to define your tabs directly in XAML using `TabItem` elements. Each `TabItem` has a `Header` (the tab label) and child content (what displays when the tab is selected).
+The simplest approach is to define your tabs directly in XAML using [`TabItem`](/api/avalonia/controls/tabitem) elements. Each `TabItem` has a `Header` (the tab label) and child content (what displays when the tab is selected).
 
 ```xml
 <TabControl>

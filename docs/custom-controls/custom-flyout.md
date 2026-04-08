@@ -1,7 +1,7 @@
 ---
 id: custom-flyout
 title: How to create a custom flyout
-description: Create a custom flyout control by extending PopupFlyoutBase in Avalonia.
+description: Create a custom flyout control by extending FlyoutBase in Avalonia.
 doc-type: how-to
 ---
 
@@ -9,7 +9,7 @@ Custom flyouts let you display rich, self-contained UI that appears on demand an
 
 ## Creating a basic custom flyout
 
-To create a custom flyout type, derive from FlyoutBase. You'll have to override the abstract method `CreatePresenter()` to specify the presenter the `Flyout` should use to display its content. This can be any type of control, but note that this is the root content for the inner popup and should be styled with background, border, corner radius, and similar styling to match other popups. You can still use a normal `FlyoutPresenter` if you wish.
+To create a custom flyout type, derive from FlyoutBase. You'll have to override the abstract method `CreatePresenter()` to specify the presenter the [`Flyout`](/api/avalonia/controls/flyout) should use to display its content. This can be any type of control, but note that this is the root content for the inner popup and should be styled with background, border, corner radius, and similar styling to match other popups. You can still use a normal `FlyoutPresenter` if you wish.
 
 The following example creates a simple `Flyout` that hosts an image.
 

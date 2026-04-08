@@ -4,14 +4,15 @@ title: ImageLoader
 description: Customize how the Markdown control loads and resolves images by implementing a custom MarkdownImageLoader and assigning it via a style on MarkdownImage.
 doc-type: reference
 tags:
-  - accelerate
+  - avalonia pro
+  - avalonia enterprise
 ---
 
 The `Markdown` control supports custom image loading via the `ImageLoader` property on `MarkdownImage`. Because the Markdown control is built on the shared document model, each image is a `MarkdownImage` element (a `StyledElement`), and you assign a loader using a standard Avalonia style selector.
 
 
 :::info
-This control is available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Business or higher.
+This control is available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
 
 ## Default behavior
@@ -163,4 +164,3 @@ You should implement a custom `MarkdownImageLoader` whenever the default image r
 
 ## See also
 - [Markdown control](/controls/data-display/text-display/markdown)
-- [Rendering markdown](/docs/app-development/rendering-markdown)

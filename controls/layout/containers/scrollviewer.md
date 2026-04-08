@@ -5,7 +5,7 @@ description: A container control that provides scrollbars when its content excee
 doc-type: reference
 ---
 
-The `ScrollViewer` control can have content that is bigger than its content zone. It provides scroll bars so your users can move hidden content into view.
+The [`ScrollViewer`](/api/avalonia/controls/scrollviewer) control can have content that is bigger than its content zone. It provides scroll bars so your users can move hidden content into view.
 
 :::warning
 You cannot place a `ScrollViewer` inside a control that has infinite height or width (depending on the scrolling direction), such as a `StackPanel`. To avoid this problem, set a fixed `Height`/`Width` or `MaxHeight`/`MaxWidth` on the `ScrollViewer`, or choose a different container panel.
@@ -17,7 +17,7 @@ You will probably use these properties most often:
 
 | Property | Type | Description |
 |---|---|---|
-| `HorizontalScrollBarVisibility` | `ScrollBarVisibility` | Controls the horizontal scrollbar: `Auto`, `Visible`, `Hidden`, `Disabled`. |
+| `HorizontalScrollBarVisibility` | [`ScrollBarVisibility`](/api/avalonia/controls/primitives/scrollbarvisibility) | Controls the horizontal scrollbar: `Auto`, `Visible`, `Hidden`, `Disabled`. |
 | `VerticalScrollBarVisibility` | `ScrollBarVisibility` | Controls the vertical scrollbar: `Auto`, `Visible`, `Hidden`, `Disabled`. |
 | `AllowAutoHide` | `bool` | Default `true`. Sets whether scrollbars hide automatically when the pointer is not over the control. |
 | `Offset` | `Vector` | The current scroll position (X, Y). |
@@ -139,6 +139,6 @@ To enable horizontal scrolling, set `HorizontalScrollBarVisibility` to `Auto` or
 
 ## See also
 
-- [ScrollViewer API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_ScrollViewer)
+- [ScrollViewer API reference](/api/avalonia/controls/scrollviewer)
 - [`ScrollViewer.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/ScrollViewer.cs)
 

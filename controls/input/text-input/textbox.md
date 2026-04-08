@@ -6,7 +6,7 @@ doc-type: reference
 
 import TextBoxEntryScreenshot from '/img/controls/textbox/textbox-entry.gif';
 
-The `TextBox` presents an area for typed (keyboard) input. You can use it for single-line fields such as a username, or enable multi-line editing for longer-form content like notes or comments.
+The [`TextBox`](/api/avalonia/controls/textbox) presents an area for typed (keyboard) input. You can use it for single-line fields such as a username, or enable multi-line editing for longer-form content like notes or comments.
 
 ## Useful properties
 
@@ -27,10 +27,8 @@ You will probably use these properties most often:
 | `TextAlignment` | `TextAlignment` | Horizontal alignment of the text: `Left`, `Center`, `Right`. |
 | `InnerLeftContent` | `object` | Content displayed inside the `TextBox` on the left side (for icons or labels). |
 | `InnerRightContent` | `object` | Content displayed inside the `TextBox` on the right side (for buttons or indicators). |
-| `LineCount` | `int` | Returns the number of lines in the text content (read-only). Useful for multi-line `TextBox` scenarios. |
 | `MinLines` | `int` | Minimum number of visible lines. The `TextBox` sizes itself to show at least this many lines when `AcceptsReturn` is `true`. |
 | `CaretBlinkInterval` | `TimeSpan` | The interval at which the caret blinks. Set to `TimeSpan.Zero` to disable blinking. |
-| `HideSuggestions` | `bool` | When `true`, suppresses platform text input suggestions (autocomplete/autocorrect). Useful for password-adjacent fields or code editors. |
 
 ## Example
 
@@ -135,7 +133,7 @@ You can add icons or buttons inside the `TextBox` using `InnerLeftContent` and `
 
 ## See also
 
-- [TextBox API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_TextBox)
+- [TextBox API reference](/api/avalonia/controls/textbox)
 - [`TextBox.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/TextBox.cs)
 - [MaskedTextBox](maskedtextbox.md)
 - [AutoCompleteBox](autocompletebox.md)

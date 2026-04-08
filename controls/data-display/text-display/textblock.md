@@ -8,7 +8,7 @@ doc-type: reference
 import TextBlockRunScreenshot from '/img/controls/textblock/textblock-run.png';
 import TextBlockUIContainerScreenshot from '/img/controls/textblock/textblock-uicontainer.png';
 
-The `TextBlock` is a read-only label for displaying text. It can display multiple lines and gives you full control over the font used. For text that your users need to select and copy, use `SelectableTextBlock` instead.
+The [`TextBlock`](/api/avalonia/controls/textblock) is a read-only label for displaying text. It can display multiple lines and gives you full control over the font used. For text that your users need to select and copy, use `SelectableTextBlock` instead.
 
 ## Common properties
 
@@ -21,9 +21,9 @@ The `TextBlock` is a read-only label for displaying text. It can display multipl
 | `FontFamily`      | `FontFamily`               | The font family used to render text. You can specify fallback fonts as a comma-separated list.                                                                                                                        |
 | `Foreground`      | `IBrush`                   | The brush used to paint the text.                                                                                                                                                                                     |
 | `Background`      | `IBrush`                   | The brush used to paint the area behind the text.                                                                                                                                                                     |
-| `TextAlignment`   | `TextAlignment`            | Controls horizontal alignment of text within the control. Options are `Left`, `Center`, `Right`, `Justify`, and `DetectFromContent`.                                                                                  |
-| `TextWrapping`    | `TextWrapping`             | Controls whether text wraps when it reaches the edge of the control. Options are `NoWrap` (default), `Wrap`, and `WrapWithOverflow`.                                                                                  |
-| `TextTrimming`    | `TextTrimming`             | Controls how text is trimmed when it overflows. Options include `None` (default), `CharacterEllipsis`, `WordEllipsis`, and others. See [TextTrimming](texttrimming) for full details.                                  |
+| [`TextAlignment`](/api/avalonia/media/textalignment)   | `TextAlignment`            | Controls horizontal alignment of text within the control. Options are `Left`, `Center`, `Right`, `Justify`, and `DetectFromContent`.                                                                                  |
+| [`TextWrapping`](/api/avalonia/media/textwrapping)    | `TextWrapping`             | Controls whether text wraps when it reaches the edge of the control. Options are `NoWrap` (default), `Wrap`, and `WrapWithOverflow`.                                                                                  |
+| [`TextTrimming`](/api/avalonia/media/texttrimming)    | `TextTrimming`             | Controls how text is trimmed when it overflows. Options include `None` (default), `CharacterEllipsis`, `WordEllipsis`, and others. See [TextTrimming](texttrimming) for full details.                                  |
 | `MaxLines`        | `int`                      | Limits the number of visible lines. When combined with `TextWrapping` and `TextTrimming`, overflow is trimmed after this many lines.                                                                                   |
 | `LineHeight`      | `double`                   | The height of each line of text. Set to `NaN` (the default) to let the font metrics determine line height.                                                                                                            |
 | `TextDecorations` | `TextDecorationCollection` | A line decoration to apply to the lettering. Default is none, options include `Underline`, `Strikethrough`, `Baseline`, and `Overline`. To apply more than one at the same time, list the options with spaces between. |
@@ -147,7 +147,7 @@ The `LineBreak` inline forces a line break within the text flow.
 
 ### Span
 
-The `Span` inline groups other inlines together and can apply its own formatting. Avalonia also provides predefined formatting inlines derived from `Span`: `Bold`, `Italic`, and `Underline`. You can derive from `Span` to create your own formatting instead of using styles.
+The [`Span`](/api/avalonia/controls/documents/span) inline groups other inlines together and can apply its own formatting. Avalonia also provides predefined formatting inlines derived from `Span`: `Bold`, `Italic`, and `Underline`. You can derive from `Span` to create your own formatting instead of using styles.
 
 <XamlPreview>
 
@@ -195,5 +195,5 @@ The `InlineUIContainer` allows you to embed any `Control` as an inline element w
 - [SelectableTextBlock](selectabletextblock)
 - [Label](label)
 - [TextTrimming](texttrimming)
-- [TextBlock API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_TextBlock)
+- [TextBlock API reference](/api/avalonia/controls/textblock)
 - [`TextBlock.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/TextBlock.cs)

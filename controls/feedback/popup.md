@@ -3,7 +3,7 @@ id: popup
 title: Popup
 ---
 
-The `Popup` is a low-level control that displays content in a floating window above other content. It serves as the foundation for higher-level controls like `Flyout`, `ToolTip`, `ComboBox` dropdowns, and context menus. Use `Popup` directly when you need custom positioning or dismissal behavior that those controls do not provide.
+The [`Popup`](/api/avalonia/controls/primitives/popup) is a low-level control that displays content in a floating window above other content. It serves as the foundation for higher-level controls like `Flyout`, [`ToolTip`](/api/avalonia/controls/tooltip), `ComboBox` dropdowns, and context menus. Use `Popup` directly when you need custom positioning or dismissal behavior that those controls do not provide.
 
 :::info
 For most scenarios, prefer `Flyout`, `ToolTip`, or `ContextMenu` instead of `Popup`. These higher-level controls handle accessibility, keyboard navigation, and light-dismiss behavior automatically.
@@ -25,7 +25,7 @@ For most scenarios, prefer `Flyout`, `ToolTip`, or `ContextMenu` instead of `Pop
 | `Topmost` | `bool` | Whether the popup appears above all other windows. Default: `false`. |
 | `WindowManagerAddShadowHint` | `bool` | Whether a drop shadow is applied (platform-dependent). Default: `true`. |
 | `OverlayDismissEventPassThrough` | `bool` | When `true`, pointer events that dismiss the popup also pass through to the underlying control. Default: `false`. |
-| `CustomPopupPlacementCallback` | `Action<CustomPopupPlacement>` | A callback for fully custom popup positioning. When set, overrides the `Placement` property. |
+| `CustomPopupPlacementCallback` | `CustomPopupPlacementCallback` | A callback for fully custom popup positioning. When set, overrides the `Placement` property. |
 
 ## Events
 

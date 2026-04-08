@@ -5,7 +5,7 @@ description: A popup menu that appears when the user right-clicks a control, pro
 doc-type: reference
 ---
 
-A `ContextMenu` is a popup menu that appears when you right-click a control. It provides contextual actions relevant to the control or its content. You attach a `ContextMenu` to any host control using an attached property, so any visual element in your application can have its own right-click menu.
+A [`ContextMenu`](/api/avalonia/controls/contextmenu) is a popup menu that appears when you right-click a control. It provides contextual actions relevant to the control or its content. You attach a `ContextMenu` to any host control using an attached property, so any visual element in your application can have its own right-click menu.
 
 :::info
 To learn more about how attached properties work, see [Attached properties](/docs/custom-controls/attached-properties).
@@ -140,12 +140,12 @@ A control cannot have both a `ContextFlyout` and a `ContextMenu` attached at the
 | `ItemsSource` | `IEnumerable` | Binds menu items to a collection so you can generate them dynamically. |
 | `Opening` | `event` | Raised before the context menu opens. Set `Cancel` to `true` to prevent it. |
 | `Closing` | `event` | Raised when the context menu closes. |
-| `PlacementMode` | `PlacementMode` | Controls where the context menu appears relative to the pointer. |
+| `Placement` | `PlacementMode` | Controls where the context menu appears relative to the pointer. |
 
 ## See also
 
 - [Menu](/controls/menus/menu)
 - [MenuFlyout](/controls/menus/menuflyout)
 - [Flyout](/controls/layout/containers/flyout)
-- [ContextMenu API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_ContextMenu)
+- [ContextMenu API reference](/api/avalonia/controls/contextmenu)
 - [`ContextMenu.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/ContextMenu.cs)

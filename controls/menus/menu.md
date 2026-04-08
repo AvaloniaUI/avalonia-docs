@@ -69,7 +69,7 @@ You will probably use these properties most often:
     </tr>
     <tr>
       <td></td>
-      <td><code>ItemPanel</code></td>
+      <td><code>ItemsPanel</code></td>
       <td>The container panel to place items in. By default, this is a StackPanel. See [this page](/docs/custom-controls/custom-itemspanel) to customise the ItemsPanel.</td>
     </tr>
     <tr>
@@ -186,5 +186,5 @@ For more detailed guidance on how to add icons to your menus, see [Adding icons]
 
 ## See also
 
-- [Menu API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_Menu)
+- [Menu API reference](/api/avalonia/controls/menu)
 - [`Menu.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Menu.cs)

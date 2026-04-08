@@ -4,14 +4,19 @@ title: Filtering
 description: Learn how to filter rows in the Avalonia TreeDataGrid control using predicate functions, including multi-criteria, enum, null-safe, and hierarchical filtering patterns.
 doc-type: reference
 tags:
-  - accelerate
+  - avalonia pro
+  - avalonia enterprise
 ---
 
 :::info
-This control is available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Business or higher.
+This control is available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
 
 Filtering lets you display only the rows that match specific criteria in your `TreeDataGrid`. Both `FlatTreeDataGridSource` and `HierarchicalTreeDataGridSource` support filtering through predicate functions.
+
+:::note
+Filtering requires the code-behind `Source` approach. There is currently no XAML equivalent for filtering. You must create a `FlatTreeDataGridSource` or `HierarchicalTreeDataGridSource` in your view model.
+:::
 
 ## Enabling filtering
 
@@ -156,7 +161,7 @@ Source.Filter(x => matchingIds.Contains(x.Id));
 
 Filter operations run on the UI thread and re-evaluate every item in the source. For large datasets, keep these guidelines in mind:
 
-- **Throttle user input.** When filtering is driven by a `TextBox`, use `Observable.Throttle` or a delay timer so the predicate does not run on every keystroke.
+- **Throttle user input.** When filtering is driven by a [`TextBox`](/api/avalonia/controls/textbox), use `Observable.Throttle` or a delay timer so the predicate does not run on every keystroke.
 - **Keep predicates fast.** Avoid allocations, regular expressions, or database calls inside the predicate.
 - **Pre-compute expensive values.** Store searchable text in a dedicated property so the predicate only needs a simple string comparison.
 - **Filter upstream for very large collections.** If your dataset has tens of thousands of rows, consider filtering the underlying collection before binding it to the grid.
@@ -210,14 +215,9 @@ public class PersonListViewModel : ViewModelBase
         };
 
         Source = new FlatTreeDataGridSource<Person>(_allPeople)
-        {
-            Columns =
-            {
-                new TextColumn<Person, string>("Name", x => x.Name),
-                new TextColumn<Person, int>("Age", x => x.Age),
-                new TextColumn<Person, string>("Department", x => x.Department),
-            }
-        };
+            .WithTextColumn(x => x.Name)
+            .WithTextColumn(x => x.Age)
+            .WithTextColumn(x => x.Department);
     }
 
     private void ApplyFilter()
@@ -241,7 +241,7 @@ public class PersonListViewModel : ViewModelBase
 ```xml
 <StackPanel>
     <TextBox Text="{Binding SearchText}"
-             Watermark="Search..."
+             PlaceholderText="Search..."
              Margin="0,0,0,10" />
     <TreeDataGrid Source="{Binding Source}"
                   Height="400" />

@@ -2,7 +2,8 @@
 id: markdown-styling
 title: Markdown styling
 tags:
-  - accelerate
+  - avalonia pro
+  - avalonia enterprise
 ---
 
 The `Markdown` control is built on the shared FlowDocument model, where every rendered element (`Paragraph`, `Section`, `Table`, `RichSpan`, `RichHyperlink`, etc.) is a full Avalonia `StyledElement`. This means you can style Markdown output using two complementary approaches:
@@ -11,7 +12,7 @@ The `Markdown` control is built on the shared FlowDocument model, where every re
 2. **Named resources** — override theme values such as font sizes, margins, and brush colors.
 
 :::info
-This control is available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Business or higher.
+This control is available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
 
 ## DocumentNode style selectors
@@ -301,4 +302,3 @@ Combined with style selectors for a dark code theme:
 ## See also
 
 - [Markdown control](/controls/data-display/text-display/markdown)
-- [Rendering markdown](/docs/app-development/rendering-markdown)

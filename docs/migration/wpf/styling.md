@@ -9,7 +9,7 @@ Avalonia's styling system is one of the biggest conceptual shifts when migrating
 
 ## Style declaration
 
-In WPF, styles are defined as resources and referenced by type or key. In Avalonia, styles live in a dedicated `Styles` collection and use CSS-like selectors to target controls.
+In WPF, styles are defined as resources and referenced by type or key. In Avalonia, styles live in a dedicated [`Styles`](/api/avalonia/styling/styles) collection and use CSS-like selectors to target controls.
 
 **WPF:**
 
@@ -189,16 +189,18 @@ For the full list, see [Pseudo-Classes](/docs/styling/pseudoclasses).
 
 ### DataTrigger migration
 
-WPF `DataTrigger` elements apply setters based on data binding values. In Avalonia, there is no direct equivalent. Instead, use one of these approaches:
+WPF `DataTrigger` elements apply setters based on data binding values. In Avalonia, there is no direct equivalent. Instead, use one of these approaches depending on the scenario.
 
 **Option 1: Bind directly with a converter.**
+
+Use this when a single property needs to change based on a bound value:
 
 ```xml
 <TextBlock Text="{Binding Status}"
            Foreground="{Binding Status, Converter={StaticResource StatusToColorConverter}}"/>
 ```
 
-**Option 2: Use a style selector with a data binding property.**
+**Option 2: Use a style selector with a style class.**
 
 If your ViewModel exposes a property that maps to a visual state, set a style class from code-behind or use a behavior, then target it with a selector:
 
@@ -208,6 +210,50 @@ If your ViewModel exposes a property that maps to a visual state, set a style cl
     <Setter Property="BorderThickness" Value="2"/>
 </Style>
 ```
+
+**Option 3: Use container queries for size-based triggers.**
+
+In WPF, a common pattern is binding `DataTrigger` to `ActualWidth` or `ActualHeight` (often through a converter) to adapt layout at different sizes. Avalonia provides container queries as a purpose-built replacement for this pattern.
+
+**WPF (DataTrigger on ActualWidth):**
+
+```xml
+<Style TargetType="UniformGrid">
+    <Setter Property="Columns" Value="3"/>
+    <Style.Triggers>
+        <DataTrigger Binding="{Binding ActualWidth,
+                     RelativeSource={RelativeSource AncestorType=Border},
+                     Converter={StaticResource LessThanConverter},
+                     ConverterParameter=600}"
+                     Value="True">
+            <Setter Property="Columns" Value="1"/>
+        </DataTrigger>
+    </Style.Triggers>
+</Style>
+```
+
+**Avalonia (container query):**
+
+```xml
+<Border Container.Name="main" Container.Sizing="Width">
+    <Border.Styles>
+        <Style Selector="UniformGrid#cards">
+            <Setter Property="Columns" Value="3"/>
+        </Style>
+        <ContainerQuery Name="main" Query="max-width:600">
+            <Style Selector="UniformGrid#cards">
+                <Setter Property="Columns" Value="1"/>
+            </Style>
+        </ContainerQuery>
+    </Border.Styles>
+
+    <UniformGrid x:Name="cards">
+        <!-- content -->
+    </UniformGrid>
+</Border>
+```
+
+Container queries eliminate the need for converters and `RelativeSource` bindings. They can also target multiple properties at once and combine width and height conditions. See [Container queries](/docs/styling/container-queries) for the full syntax and [Responsive layouts](/docs/layout/responsive-layouts) for guidance on building adaptive UIs.
 
 ### EventTrigger to animations on pseudo-classes
 
@@ -250,7 +296,7 @@ Avalonia uses a `Transitions` system where you declare which properties should a
 
 ## ControlTheme vs implicit styles
 
-In WPF, an implicit style (a `Style` with `TargetType` but no `x:Key`) defines the default look for a control, including its `ControlTemplate`. In Avalonia, this role is filled by `ControlTheme`.
+In WPF, an implicit style (a `Style` with `TargetType` but no `x:Key`) defines the default look for a control, including its `ControlTemplate`. In Avalonia, this role is filled by [`ControlTheme`](/api/avalonia/styling/controltheme).
 
 A `ControlTheme` is the mechanism for creating "lookless" control templates. It is stored in the `Resources` dictionary (not in the `Styles` collection) and is looked up by type.
 
@@ -335,3 +381,5 @@ with:
 - [Control Themes](/docs/styling/control-themes)
 - [Pseudo-Classes](/docs/styling/pseudoclasses)
 - [Style Selectors](/docs/styling/style-selectors)
+- [Container queries](/docs/styling/container-queries): Size-based styling, replacing WPF DataTrigger patterns on ActualWidth/ActualHeight.
+- [Responsive layouts](/docs/layout/responsive-layouts): Building adaptive layouts with container queries and reflowing panels.

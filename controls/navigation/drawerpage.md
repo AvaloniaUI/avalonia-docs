@@ -12,7 +12,7 @@ import DrawerPageSplitScreenshot from '/img/controls/drawerpage/drawerpage-split
 import DrawerPageRightScreenshot from '/img/controls/drawerpage/drawerpage-right.png';
 import DrawerPageRtlScreenshot from '/img/controls/drawerpage/drawerpage-rtl.png';
 
-The `DrawerPage` combines a sliding drawer pane with a main content area, providing a common navigation pattern for applications. It is built on top of `SplitView` and adds page-based navigation features such as lifecycle events, safe area support, and automatic integration with `NavigationPage`.
+The [`DrawerPage`](/api/avalonia/controls/drawerpage) combines a sliding drawer pane with a main content area, providing a common navigation pattern for applications. It is built on top of `SplitView` and adds page-based navigation features such as lifecycle events, safe area support, and automatic integration with [`NavigationPage`](/api/avalonia/controls/navigationpage).
 
 When nested inside a `NavigationPage`, the drawer icon automatically switches to a back button when the navigation stack has more than one page.
 
@@ -43,7 +43,7 @@ When nested inside a `NavigationPage`, the drawer icon automatically switches to
 | `DrawerHeader` | `object` | `null` | Content displayed at the top of the drawer. |
 | `DrawerFooter` | `object` | `null` | Content displayed at the bottom of the drawer. |
 | `DrawerIcon` | `object` | `null` | An icon shown in the drawer toggle button. |
-| `DrawerBackground` | `IBrush` | `null` | The brush used for the drawer background. |
+| `DrawerBackground` | [`IBrush`](/api/avalonia/media/ibrush) | `null` | The brush used for the drawer background. |
 | `DrawerHeaderBackground` | `IBrush` | `null` | The brush used for the drawer header background. |
 | `DrawerHeaderForeground` | `IBrush` | `null` | The brush used for the drawer header foreground. |
 | `DrawerFooterBackground` | `IBrush` | `null` | The brush used for the drawer footer background. |
@@ -467,5 +467,5 @@ When wrapped in a `NavigationPage`, the hamburger menu icon automatically become
 - [ContentPage](contentpage)
 - [NavigationPage](navigationpage)
 - [SplitView](/controls/layout/containers/splitview)
-- [DrawerPage API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_DrawerPage)
+- [DrawerPage API reference](/api/avalonia/controls/drawerpage)
 - [`DrawerPage.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Page/DrawerPage.cs)

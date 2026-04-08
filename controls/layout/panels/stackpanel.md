@@ -8,7 +8,7 @@ doc-type: reference
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-The `StackPanel` arranges its child controls by stacking them horizontally or vertically. You will often use a stack panel to arrange a small subsection of your UI on a page.
+The [`StackPanel`](/api/avalonia/controls/stackpanel) arranges its child controls by stacking them horizontally or vertically. You will often use a stack panel to arrange a small subsection of your UI on a page.
 
 Inside a `StackPanel`, if you do not set the size property perpendicular to the stack direction on a child control, the child control stretches to fill the available space. For example, in a horizontal orientation, child controls stretch to fill the available height when no explicit `Height` is set.
 
@@ -24,7 +24,7 @@ You will probably use these properties most often:
 
 | Property      | Description                                                                     |
 | ------------- | ------------------------------------------------------------------------------- |
-| `Orientation` | Sets the direction of the stack. Choose from `Horizontal` or `Vertical` (default). |
+| [`Orientation`](/api/avalonia/layout/orientation) | Sets the direction of the stack. Choose from `Horizontal` or `Vertical` (default). |
 | `Spacing`     | Creates an even gap between consecutive child controls.                         |
 | `HorizontalAlignment` | Controls how the panel itself is positioned horizontally within its parent. |
 | `VerticalAlignment`   | Controls how the panel itself is positioned vertically within its parent.   |
@@ -129,7 +129,7 @@ You can create a horizontal button bar by setting `Orientation` to `Horizontal` 
 
 ## See also
 
-- [StackPanel API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_StackPanel)
+- [StackPanel API reference](/api/avalonia/controls/stackpanel)
 - [`StackPanel.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/StackPanel.cs)
 - [DockPanel](dockpanel)
 - [Grid](grid)

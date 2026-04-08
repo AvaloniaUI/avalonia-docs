@@ -5,7 +5,7 @@ description: How XAML type converters transform string attribute values into .NE
 doc-type: concept
 ---
 
-Type converters allow XAML attribute values (which are always strings) to be converted into the appropriate .NET types. When you write `Background="Red"` in XAML, a type converter turns the string `"Red"` into a `SolidColorBrush` object.
+Type converters allow XAML attribute values (which are always strings) to be converted into the appropriate .NET types. When you write `Background="Red"` in XAML, a type converter turns the string `"Red"` into a [`SolidColorBrush`](/api/avalonia/media/solidcolorbrush) object.
 
 ## How type converters work
 
@@ -172,6 +172,6 @@ Now you can use the type in XAML:
 
 ## See also
 
-- [XAML Reference](index): Overview of XAML syntax.
+- [XAML Reference](/docs/xaml): Overview of XAML syntax.
 - [Data Binding Converters](/docs/data-binding/how-to-create-a-custom-data-binding-converter): Value converters for data binding (different from type converters).
 - [Built-in Data Binding Converters](/docs/data-binding/built-in-data-binding-converters): Converters available for binding transformations.

@@ -1,0 +1,174 @@
+---
+title: 'TextColumn<TModel, TValue>'
+hide_title: true
+slug: '/avalonia/controls/models/treedatagrid/textcolumn-2'
+uid: 'Avalonia.Controls.Models.TreeDataGrid.TextColumn`2'
+commentId: 'T:Avalonia.Controls.Models.TreeDataGrid.TextColumn`2'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.TreeDataGrid'
+assembly: 'Avalonia.Controls.TreeDataGrid'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Models.TreeDataGrid'
+tfms:
+  - 'net8.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">TextColumn&lt;TModel, TValue&gt; Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Models.TreeDataGrid</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A column in an [Avalonia.Controls.ITreeDataGridSource](xref:Avalonia.Controls.ITreeDataGridSource) which displays its values as text.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class TextColumn<TModel, TValue>
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ColumnBase&lt;,&lt;T&gt;&gt; <span className="apiref-page__relation-separator">-&gt;</span> TextColumn&lt;TModel, TValue&gt;
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> ITextSearchableColumn&lt;&gt;
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [TextColumn&lt;TModel, TValue&gt; (2 overloads)](#uid-081b5c3fd4) | No summary available. |
+
+<span id="uid-081b5c3fd4"></span>
+
+### TextColumn&lt;TModel, TValue&gt; overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8a274bc612"></span>
+
+#### TextColumn&lt;TModel, TValue&gt; Constructor
+
+```csharp
+public TextColumn<TModel, TValue>(object header, System.Linq.Expressions.Expression<Func<TModel,TValue>> getter, Action<TModel, TValue> setter, Nullable<Avalonia.Controls.GridLength> width, Avalonia.Controls.Models.TreeDataGrid.TextColumnOptions<TModel><TModel> options)
+```
+
+##### Parameters
+
+`header` object
+
+
+`getter` System.Linq.Expressions.Expression&lt;Func&lt;TModel,TValue&gt;&gt;
+
+
+`setter` Action&lt;TModel, TValue&gt;
+
+
+`width` Nullable&lt;[Avalonia.Controls.GridLength](xref:Avalonia.Controls.GridLength)&gt;
+
+
+`options` Avalonia.Controls.Models.TreeDataGrid.TextColumnOptions&lt;TModel&gt;&lt;TModel&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b4299f10ef"></span>
+
+#### TextColumn&lt;TModel, TValue&gt; Constructor
+
+```csharp
+public TextColumn<TModel, TValue>(object header, System.Linq.Expressions.Expression<Func<TModel,TValue>> getter, Nullable<Avalonia.Controls.GridLength> width, Avalonia.Controls.Models.TreeDataGrid.TextColumnOptions<TModel><TModel> options)
+```
+
+##### Parameters
+
+`header` object
+
+
+`getter` System.Linq.Expressions.Expression&lt;Func&lt;TModel,TValue&gt;&gt;
+
+
+`width` Nullable&lt;[Avalonia.Controls.GridLength](xref:Avalonia.Controls.GridLength)&gt;
+
+
+`options` Avalonia.Controls.Models.TreeDataGrid.TextColumnOptions&lt;TModel&gt;&lt;TModel&gt;
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [CreateCell](#uid-8bb49402bd) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8bb49402bd"></span>
+
+### CreateCell Method
+
+```csharp
+public Avalonia.Controls.Models.TreeDataGrid.ICell CreateCell(Avalonia.Controls.Models.TreeDataGrid.IRow<TModel><TModel> row)
+```
+
+#### Parameters
+
+`row` [Avalonia.Controls.Models.TreeDataGrid.IRow](xref:Avalonia.Controls.Models.TreeDataGrid.IRow)&lt;TModel&gt;&lt;TModel&gt;
+
+
+#### Returns
+
+[Avalonia.Controls.Models.TreeDataGrid.ICell](xref:Avalonia.Controls.Models.TreeDataGrid.ICell)
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Options](#uid-ce1275cb3a) | Gets the column options. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ce1275cb3a"></span>
+
+### Options Property
+
+Gets the column options.
+
+```csharp
+public Avalonia.Controls.Models.TreeDataGrid.TextColumnOptions<TModel><TModel> Options { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

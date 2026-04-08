@@ -3,13 +3,10 @@ id: attaching-applications
 title: Attaching applications
 doc-type: how-to
 tags:
-  - accelerate
+  - avalonia plus
+  - avalonia pro
+  - avalonia enterprise
 ---
-
-import Pill from '/src/components/global/Pill';
-
-<Pill variant="primary" href="/tools">Accelerate</Pill>
-<br/><br/>
 
 ## Attaching browser or mobile applications
 

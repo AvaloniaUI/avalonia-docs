@@ -15,6 +15,12 @@ doc-type: overview
 
 Welcome to the Avalonia documentation. Whether you are building your first app or migrating an existing project, these docs cover everything from installation to deployment.
 
+:::info
+
+These docs cover Avalonia 12. For Avalonia 11 documentation, visit [v11.docs.avaloniaui.net](https://v11.docs.avaloniaui.net/).
+
+:::
+
 ## What is Avalonia?
 
 Avalonia is an open-source, cross-platform UI framework for building applications with .NET. It uses its own rendering engine to draw controls, so your app looks and behaves the same on every platform. Write your UI once in C# or F# with XAML, and deploy to:
@@ -79,5 +85,3 @@ To report a bug, open an issue on [GitHub](https://github.com/AvaloniaUI/Avaloni
 - [Supported platforms](supported-platforms)
 - [Samples and tutorials](samples-tutorials/index.md)
 - [Avalonia GitHub repository](https://github.com/AvaloniaUI/Avalonia)
-
-<XpfAd/>

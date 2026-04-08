@@ -5,7 +5,7 @@ description: A toast-style notification popup system that displays temporary mes
 doc-type: reference
 ---
 
-The `WindowNotificationManager` provides a built-in notification popup system. It displays toast-style messages at a configurable position within a window. You can use it to inform users about completed operations, warnings, errors, or other events without blocking interaction with the rest of the UI.
+The [`WindowNotificationManager`](/api/avalonia/controls/notifications/windownotificationmanager) provides a built-in notification popup system. It displays toast-style messages at a configurable position within a window. You can use it to inform users about completed operations, warnings, errors, or other events without blocking interaction with the rest of the UI.
 
 ## Useful properties
 
@@ -127,7 +127,7 @@ _notificationManager.Show(notification);
 _notificationManager.Close(notification);
 
 // Clear all active notifications
-_notificationManager.ClearAll();
+_notificationManager.CloseAll();
 ```
 
 This is useful when a long-running operation completes and you want to replace a progress notification with a result notification:
@@ -164,15 +164,8 @@ public class CustomNotification : INotification
     public string ActionText { get; set; }
     public Action OnAction { get; set; }
 
-    public void OnClose()
-    {
-        // Clean up when dismissed
-    }
-
-    public void OnClick()
-    {
-        OnAction?.Invoke();
-    }
+    public Action? OnClose { get; set; }
+    public Action? OnClick { get; set; }
 }
 ```
 

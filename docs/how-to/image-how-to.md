@@ -74,7 +74,7 @@ private async Task LoadFromUrl(string url)
 
 ## Stretch Modes
 
-The `Stretch` property controls how the image fills its bounds:
+The [`Stretch`](/api/avalonia/media/stretch) property controls how the image fills its bounds:
 
 ```xml
 <!-- Preserves aspect ratio, fits within bounds -->
@@ -183,6 +183,8 @@ var renderTarget = new RenderTargetBitmap(new PixelSize(800, 600));
 renderTarget.Render(myControl);
 renderTarget.Save("screenshot.png");
 ```
+
+The target control must be attached to a visible window. To render without displaying a window, use the [headless platform](/docs/testing/setting-up-the-headless-platform#visual-regression-testing) with the Skia renderer enabled.
 
 ## Key Properties
 

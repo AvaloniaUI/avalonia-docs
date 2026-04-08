@@ -5,7 +5,7 @@ description: A top-level content control that represents an operating-system win
 doc-type: reference
 ---
 
-`Window` is a top-level [`ContentControl`](/controls/data-display/contentcontrol) that represents an operating-system window. It provides the title bar, icon, and system chrome (close, minimize, maximize buttons) that your users expect from a desktop application.
+[`Window`](/api/avalonia/controls/window) is a top-level [`ContentControl`](/controls/data-display/contentcontrol) that represents an operating-system window. It provides the title bar, icon, and system chrome (close, minimize, maximize buttons) that your users expect from a desktop application.
 
 You do not usually create instances of `Window` directly. Instead, you subclass `Window` for each type of window your application needs.
 
@@ -24,7 +24,7 @@ You do not usually create instances of `Window` directly. Instead, you subclass 
 | `CanResize` | `bool` | Gets or sets whether the user can resize the window. |
 | `ShowInTaskbar` | `bool` | Gets or sets whether the window appears in the operating-system taskbar. |
 | `Topmost` | `bool` | Gets or sets whether the window stays above all other windows. |
-| `SystemDecorations` | `SystemDecorations` | Controls the window chrome (title bar and borders). Set to `None` for a borderless window. |
+| `WindowDecorations` | `WindowDecorations` | Controls the window chrome (title bar and borders). Set to `None` for a borderless window. |
 | `ExtendClientAreaToDecorationsHint` | `bool` | When `true`, your content extends into the title bar area, allowing custom chrome. |
 
 ## Show, hide, and close a window
@@ -137,4 +137,4 @@ window.Closing += (s, e) =>
 - [`ContentControl`](/controls/data-display/contentcontrol)
 - [`UserControl`](/controls/primitives/usercontrol)
 - [`Window` source code (GitHub)](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Window.cs)
-- [`Window` API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_Window)
+- [`Window` API reference](/api/avalonia/controls/window)

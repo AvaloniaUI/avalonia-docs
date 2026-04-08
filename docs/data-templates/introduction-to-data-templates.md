@@ -9,7 +9,7 @@ Data templates in Avalonia define the visual representation of your data. They s
 
 ## What is a data template?
 
-At its core, a Data Template is a reusable definition that specifies how to present data of a particular type. It defines the visual structure and appearance of the data when displayed in the user interface. In Avalonia, a Data Template is often associated with a list control, such as a `ListBox` or `ItemsControl`, and is responsible for rendering individual items of data within that control.
+At its core, a Data Template is a reusable definition that specifies how to present data of a particular type. It defines the visual structure and appearance of the data when displayed in the user interface. In Avalonia, a Data Template is often associated with a list control, such as a [`ListBox`](/api/avalonia/controls/listbox) or `ItemsControl`, and is responsible for rendering individual items of data within that control.
 
 ## Applying a data template to a ListBox
 

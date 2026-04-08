@@ -1,13 +1,7 @@
 ---
 id: webview-environment
 title: WebView environment
-tags:
-  - accelerate
 ---
-
-:::info
-This control is available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Business or higher.
-:::
 
 ## Overview
 
@@ -127,6 +121,6 @@ webView.EnvironmentRequested += (sender, args) =>
 
 - [NativeWebView](/controls/web/nativewebview)
 - [NativeWebDialog](/controls/web/nativewebdialog)
-- [WebAuthenticationBroker](/docs/webview/webauthenticationbroker)
+- [WebAuthenticationBroker](/controls/web/webauthenticationbroker)
 - [Embedding web content](/docs/app-development/embedding-web-content)
 - [FAQ](/tools/faq#webview)

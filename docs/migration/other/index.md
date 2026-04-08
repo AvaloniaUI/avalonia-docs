@@ -26,7 +26,7 @@ Avalonia gives you a path to .NET, which has a vastly larger developer pool, an 
 | `TFrame` | `UserControl` | Reusable UI component |
 | `TPanel` | `Border` or `Panel` | |
 | `TButton` | `Button` | |
-| `TEdit` | `TextBox` | |
+| `TEdit` | [`TextBox`](/api/avalonia/controls/textbox) | |
 | `TMemo` | `TextBox` with `AcceptsReturn="True"` | |
 | `TLabel` | `TextBlock` | |
 | `TCheckBox` | `CheckBox` | |
@@ -130,13 +130,13 @@ If you have a web application built with ASP.NET MVC or Blazor and want to offer
 
 Regardless of which framework you are coming from, the best place to start is the same:
 
-1. **[Create your first Avalonia app](/docs/get-started/first-app):** Get a running application in minutes.
+1. **[Create your first Avalonia app](/docs/get-started/create-your-first-project):** Get a running application in minutes.
 2. **[Learn XAML basics](/docs/xaml):** Understand how Avalonia declares UI.
-3. **[Learn data binding](/docs/data-binding):** The foundation of how Avalonia connects UI to data.
+3. **[Learn data binding](/docs/data-binding/introduction-to-data-binding):** The foundation of how Avalonia connects UI to data.
 4. **[Explore the controls](/controls):** See what is available out of the box.
 
 ## See also
 
 - [Styles](/docs/styling/styles): How Avalonia's CSS-like styling works.
-- [The MVVM Pattern](/docs/concepts/the-mvvm-pattern): Separating UI from logic.
+- [The MVVM Pattern](/docs/fundamentals/the-mvvm-pattern): Separating UI from logic.
 - [Controls Reference](/controls): Full Avalonia controls documentation.

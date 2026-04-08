@@ -8,7 +8,7 @@ doc-type: reference
 import ItemsRepeaterVerticalScreenshot from '/img/controls/itemsrepeater/itemsrepeater-vertical.png';
 import ItemsRepeaterHorizontalScreenshot from '/img/controls/itemsrepeater/itemsrepeater-horizontal.gif';
 
-The `ItemsRepeater` displays repeating data from a bound collection. Unlike `ListBox`, it provides no built-in selection, scrolling, or chrome. Instead, it gives you full control over how items are laid out and rendered, while still supporting UI virtualization for large data sets.
+The `ItemsRepeater` displays repeating data from a bound collection. Unlike [`ListBox`](/api/avalonia/controls/listbox), it provides no built-in selection, scrolling, or chrome. Instead, it gives you full control over how items are laid out and rendered, while still supporting UI virtualization for large data sets.
 
 You supply two things to an `ItemsRepeater`:
 
@@ -111,7 +111,7 @@ public class Crockery
 
 ## Horizontal list example
 
-You can display items horizontally by setting the `Layout` property to a horizontal `StackLayout`. Wrap the `ItemsRepeater` in a `ScrollViewer` so that items that overflow to the right remain accessible:
+You can display items horizontally by setting the `Layout` property to a horizontal `StackLayout`. Wrap the `ItemsRepeater` in a [`ScrollViewer`](/api/avalonia/controls/scrollviewer) so that items that overflow to the right remain accessible:
 
 ```xml
 <StackPanel Margin="20">

@@ -8,7 +8,7 @@
     --docs-card-border-c: rgba(255, 255, 255, 0.02);
     --docs-card-shadow: 0px 1px 2px rgba(255, 255, 255, 0.05), 0px 2px 8px rgba(255, 255, 255, 0.1),
       0px -1px 2px rgba(255, 255, 255, 0.05), 0px -2px 8px rgba(255, 255, 255, 0.1);
-    --docs-card-bg-c: #0B2A54;
+    --docs-card-bg-c: #18181b;
   }
 
   :root {
@@ -160,7 +160,7 @@ docs-card[disabled]::after {
   }
 
   html[data-theme='dark'] .Card-content p {
-    --docs-card-desc-c: #C1BBB8;
+    --docs-card-desc-c: #a1a1aa;
   }
 
   .Card-header {

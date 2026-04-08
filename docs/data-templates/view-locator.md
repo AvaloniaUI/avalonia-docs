@@ -13,7 +13,7 @@ ViewLocator is optional. You can achieve the same result using [DataTemplates](/
 
 ## How it works
 
-ViewLocator implements the `IDataTemplate` interface, which means it participates in Avalonia's standard data template resolution. When a `ContentControl` or similar presenter needs to display an object that is not a control, it searches for a matching `IDataTemplate`. A registered ViewLocator matches view model objects and builds the corresponding view.
+ViewLocator implements the [`IDataTemplate`](/api/avalonia/controls/templates/idatatemplate) interface, which means it participates in Avalonia's standard data template resolution. When a [`ContentControl`](/api/avalonia/controls/contentcontrol) or similar presenter needs to display an object that is not a control, it searches for a matching `IDataTemplate`. A registered ViewLocator matches view model objects and builds the corresponding view.
 
 The `IDataTemplate` interface has two members:
 

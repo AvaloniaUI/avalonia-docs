@@ -5,7 +5,7 @@ description: Learn how to control scroll behavior, scroll programmatically, resp
 doc-type: how-to
 ---
 
-This guide covers common `ScrollViewer` scenarios including controlling scroll behavior, programmatic scrolling, responding to scroll events, and handling nested scroll regions.
+This guide covers common [`ScrollViewer`](/api/avalonia/controls/scrollviewer) scenarios including controlling scroll behavior, programmatic scrolling, responding to scroll events, and handling nested scroll regions.
 
 ## Basic usage
 
@@ -268,7 +268,7 @@ This pattern keeps the header visible at all times. The `ZIndex` on the header `
 
 ## See also
 
-- [ScrollViewer reference](../../controls/layout/containers/scrollviewer.md)
-- [Choosing a layout panel](../layout/choosing-a-layout-panel.md)
-- [Performance optimization](../app-development/performance.md)
-- [ItemsControl how-to](itemscontrol-how-to.md)
+- [ScrollViewer reference](/controls/layout/containers/scrollviewer)
+- [Choosing a layout panel](/docs/layout/choosing-a-layout-panel)
+- [Performance optimization](/docs/app-development/performance)
+- [ItemsControl how-to](/docs/how-to/itemscontrol-how-to)

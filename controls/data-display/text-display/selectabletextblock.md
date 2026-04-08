@@ -26,9 +26,9 @@ The `SelectableTextBlock` is a read-only label for displaying text that your use
 
 ## Events
 
-| Event              | Description                                                        |
-| ------------------ | ------------------------------------------------------------------ |
-| `SelectionChanged` | Raised when the text selection changes, either by user interaction or programmatically. |
+| Event                | Description                                                        |
+| -------------------- | ------------------------------------------------------------------ |
+| `CopyingToClipboard` | Raised when the selected text is being copied to the clipboard. Can be used to modify or cancel the copy operation. |
 
 ## Basic example
 
@@ -82,24 +82,6 @@ MyTextBlock.SelectionStart = 0;
 MyTextBlock.SelectionEnd = MyTextBlock.Text?.Length ?? 0;
 ```
 
-## Handling selection changes
-
-Use the `SelectionChanged` event to respond when your user selects text. This is useful for displaying the selected text elsewhere or performing actions based on the selection.
-
-```xml
-<SelectableTextBlock x:Name="SourceText"
-                     Text="Try selecting some of this text to see it echoed below."
-                     SelectionChanged="OnSelectionChanged" />
-<TextBlock x:Name="SelectionEcho" Foreground="Gray" />
-```
-
-```csharp
-private void OnSelectionChanged(object? sender, EventArgs e)
-{
-    SelectionEcho.Text = $"Selected: \"{SourceText.SelectedText}\"";
-}
-```
-
 ## Customizing selection appearance
 
 You can customize how selected text looks by setting `SelectionBrush` and `SelectionForegroundBrush`.
@@ -114,5 +96,5 @@ You can customize how selected text looks by setting `SelectionBrush` and `Selec
 
 - [TextBlock](textblock)
 - [Label](label)
-- [SelectableTextBlock API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_SelectableTextBlock)
+- [SelectableTextBlock API reference](/api/avalonia/controls/selectabletextblock)
 - [`SelectableTextBlock.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/SelectableTextBlock.cs)

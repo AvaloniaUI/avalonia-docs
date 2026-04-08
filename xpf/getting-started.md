@@ -3,6 +3,10 @@ id: getting-started
 title: Getting started
 ---
 
+:::tip[Use AI to help with migration]
+If you use an AI coding assistant that supports MCP (VS Code, Cursor, Rider, Claude Code, and others), the [Build MCP](/tools/ai-tools/build-mcp) server can walk you through this process step by step. Ask your assistant to migrate your WPF project and it will analyze your dependencies, configure the NuGet feed, switch the SDK, and troubleshoot issues interactively. See [Build MCP setup](/tools/ai-tools/build-mcp#setting-up-the-mcp-server) for configuration instructions.
+:::
+
 ## Step 1: Prepare your WPF project
 
 :::note

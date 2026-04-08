@@ -5,9 +5,9 @@ description: Manage keyboard focus in your Avalonia application using the FocusM
 doc-type: reference
 ---
 
-The `FocusManager` service is responsible for managing keyboard focus in your application. It keeps track of the currently focused element and the current focus scope.
+The [`FocusManager`](/api/avalonia/input/focusmanager) service is responsible for managing keyboard focus in your application. It keeps track of the currently focused element and the current focus scope.
 
-You can access `FocusManager` through an instance of `TopLevel` or `Window`. For more details on accessing `TopLevel`, visit the [TopLevel](/docs/fundamentals/top-level) page.
+You can access `FocusManager` through an instance of [`TopLevel`](/api/avalonia/controls/toplevel) or `Window`. For more details on accessing `TopLevel`, visit the [TopLevel](/docs/fundamentals/top-level) page.
 
 ```csharp
 var focusManager = window.FocusManager;

@@ -1,6 +1,6 @@
 ---
 id: clipboard-how-to
-title: "How to: Use the Clipboard"
+title: "How to: Use the clipboard"
 description: Copy and paste text, images, and custom data using the Avalonia clipboard API.
 doc-type: how-to
 ---
@@ -196,4 +196,4 @@ On **Linux**, file clipboard support depends on the desktop environment and its 
 
 - [Clipboard service](/docs/services/clipboard)
 - [Drag and drop how-to](/docs/how-to/drag-and-drop-how-to)
-- [Hotkeys](/docs/input-interaction/hotkeys)
+- [Hotkeys](/docs/input-interaction/keyboard-and-hotkeys)

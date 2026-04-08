@@ -1,6 +1,8 @@
 ---
 id: property-setters
 title: Property setters
+description: Define property values in styles using setters, bindings, templates, and understand setter precedence rules.
+doc-type: reference
 ---
 
 import SetterPrecedenceAnimationWrongScreenshot from '/img/reference/styles/setter-precedence-animation-wrong.gif';
@@ -37,6 +39,12 @@ A style can also set properties using bindings. After the usual selection proces
 <Setter Property="FontSize" Value="{Binding SelectedFontSize}"/>
 ```
 
+:::caution
+Bindings in setters resolve against the **target control's** `DataContext`. Styles declared inside `<Application.Styles>` still bind against the matched control's `DataContext`, not a `DataContext` set on `Application` itself. `Application` is not part of the visual or logical tree, so setting `DataContext` on it has no effect on setter bindings.
+
+If you need to apply configurable values (such as user-chosen colors) at the application level, use `DynamicResource` references together with runtime resource updates instead of data bindings. See [Resources overview](/docs/app-development/resources) and [How to switch themes](/docs/how-to/theme-switching-how-to) for details.
+:::
+
 ## Style priority
 
 There are two rules that govern which property setter has precedence when a selector matches multiple styles:
@@ -61,7 +69,7 @@ Whenever a style is matched with a control, all of the setters will be applied t
 
 ## Mutable values
 
-The `Setter` creates a single instance of `Value` which will be applied to all controls that the style matches. If the object is mutable, changes will be reflected on all controls.
+The [`Setter`](/api/avalonia/styling/setter) creates a single instance of `Value` which will be applied to all controls that the style matches. If the object is mutable, changes will be reflected on all controls.
 
 Bindings on an object defined in a setter value will not have access to the target control's data context because there may be multiple target controls. This scenario may arise with a style defined like this:
 
@@ -99,7 +107,7 @@ As previously described here, when you use a setter without a **data template**,
 
 ## Setter precedence
 
-Avalonia `Setters` are applied in order of `BindingPriority`, then visual tree locality, and finally the `Styles` collection 
+Avalonia `Setters` are applied in order of [`BindingPriority`](/api/avalonia/data/bindingpriority), then visual tree locality, and finally the `Styles` collection 
 order. Precedence applies individually to each `StyledProperty` so that styling can benefit from composition. `DirectProperty` 
 and CLR properties cannot be styled and therefore do not participate in this precedence.
 
@@ -146,7 +154,7 @@ Transitions system.
 
 ### LocalValue
 
-Assigned when a XAML property is directly set outside of a `ControlTemplate`. Both `Background` `Setter`s below will 
+Assigned when a XAML property is directly set outside of a [`ControlTemplate`](/api/avalonia/markup/xaml/templates/controltemplate). Both `Background` `Setter`s below will 
 have `LocalValue` priority.
 
 ```xml
@@ -279,7 +287,7 @@ Recall the `Animation` example above. If you hover, the animated background is r
 despite `BindingPriority.Animation` having the highest priority. This is because the `Selector` targets the wrong 
 `Control`. Examining the `ControlTheme` is necessary to diagnose the cause.
 
-<img src={SetterPrecedenceAnimationWrongScreenshot} alt="" />
+<img src={SetterPrecedenceAnimationWrongScreenshot} alt="Button animation overridden by pointer-over style due to incorrect selector target" />
 
 ```xml title='ControlTheme for Button, Trimmed'
 <ControlTheme x:Key="{x:Type Button}" TargetType="Button">
@@ -297,7 +305,7 @@ despite `BindingPriority.Animation` having the highest priority. This is because
 </ControlTheme>
 ```
 
-The top `Setter` applies the `ButtonBackground` to the `Button` with `Style` priority. The `Background` rendering is 
+The top `Setter` applies the `ButtonBackground` to the [`Button`](/api/avalonia/controls/button) with `Style` priority. The `Background` rendering is 
 handled by the `ContentPresenter` which has a `Template` priority. It fetches the `ButtonBackground` which has been 
 applied to `Button`.
 
@@ -335,7 +343,7 @@ on priority alone is insufficient to effectively style an application.
 </Button>
 ```
 
-<img src={SetterPrecedenceAnimationCorrectScreenshot} alt="" />
+<img src={SetterPrecedenceAnimationCorrectScreenshot} alt="Button animation working correctly after targeting the ContentPresenter directly" />
 
 ## See also
 

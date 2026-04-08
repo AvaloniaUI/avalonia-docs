@@ -5,7 +5,7 @@ description: A container control with an always-visible header and a collapsible
 doc-type: reference
 ---
 
-The `Expander` control has a header area that is always visible and a collapsible content section that can contain a single child control. Users click the header to toggle the content visibility. This is useful when you want to let users reveal or hide supplementary information, such as search filters, advanced settings, or optional form fields, without navigating away from the current view.
+The [`Expander`](/api/avalonia/controls/expander) control has a header area that is always visible and a collapsible content section that can contain a single child control. Users click the header to toggle the content visibility. This is useful when you want to let users reveal or hide supplementary information, such as search filters, advanced settings, or optional form fields, without navigating away from the current view.
 
 ## Useful properties
 
@@ -15,7 +15,7 @@ You will probably use these properties most often:
 |---|---|---|
 | `Header` | `object` | Content displayed in the always-visible header area. Accepts strings, controls, or data templates. |
 | `IsExpanded` | `bool` | Whether the content section is currently visible. Default is `false`. |
-| `ExpandDirection` | `ExpandDirection` | Direction the content expands: `Down` (default), `Up`, `Left`, or `Right`. |
+| [`ExpandDirection`](/api/avalonia/controls/expanddirection) | `ExpandDirection` | Direction the content expands: `Down` (default), `Up`, `Left`, or `Right`. |
 | `ContentTransition` | `IPageTransition` | Transition animation played when the content expands or collapses. |
 
 ## Events
@@ -158,7 +158,7 @@ To improve accessibility in your application, set the `Header` to a meaningful l
 
 ## See also
 
-- [Expander API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_Expander)
+- [Expander API reference](/api/avalonia/controls/expander)
 - [`Expander.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Expander.cs)
 - [SplitView](splitview.md)
 - [GroupBox](groupbox.md)

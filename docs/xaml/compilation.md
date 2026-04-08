@@ -51,7 +51,7 @@ Add this property to your `.csproj` file to make compiled bindings the default:
 </PropertyGroup>
 ```
 
-With this setting, all bindings require an `x:DataType` declaration. To opt out for specific bindings that need runtime resolution, use `ReflectionBinding`:
+With this setting, all bindings require an `x:DataType` declaration. To opt out for specific bindings that need runtime resolution, use [`ReflectionBinding`](/api/avalonia/data/reflectionbinding):
 
 ```xml
 <TextBlock Text="{ReflectionBinding DynamicProperty}" />

@@ -80,6 +80,7 @@ const sidebars: SidebarsConfig = {
       items: [
         'layout/choosing-a-layout-panel',
         'layout/positioning-controls',
+        'layout/responsive-layouts',
       ],
     },
     {
@@ -93,6 +94,7 @@ const sidebars: SidebarsConfig = {
         'styling/themes',
         'styling/container-queries',
         'styling/custom-fonts',
+        'styling/typography',
         'styling/sharing-styles',
         'styling/theme-variants',
         'styling/style-selectors',
@@ -209,7 +211,7 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
-      label: 'Graphics & Animation',
+      label: 'Graphics and Animation',
       collapsed: true,
       items: [
         'graphics-animation/brushes',
@@ -239,11 +241,8 @@ const sidebars: SidebarsConfig = {
       type: 'category',
       label: 'Custom Controls',
       collapsed: true,
-      link: {
-        type: 'doc',
-        id: 'custom-controls/index',
-      },
       items: [
+        'custom-controls/index',
         'custom-controls/choosing-a-custom-control-type',
         'custom-controls/custom-control-class',
         'custom-controls/templated-controls',
@@ -374,6 +373,7 @@ const sidebars: SidebarsConfig = {
       items: [
         'deployment/macos',
         'deployment/linux',
+        'deployment/docker',
         'deployment/embedded-linux/embedded-linux',
         'deployment/android',
         'deployment/ios',

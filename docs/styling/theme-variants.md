@@ -30,7 +30,7 @@ This property is available on each control and is inherited down the tree. Its v
 
 ### `RequestedThemeVariant` property
 
-The `RequestedThemeVariant` property allows you to override the theme variant and specify a desired variant for an `Application`, `Window` (`TopLevel`), or `ThemeVariantScope`.
+The `RequestedThemeVariant` property allows you to override the theme variant and specify a desired variant for an `Application`, `Window` (`TopLevel`), or [`ThemeVariantScope`](/api/avalonia/controls/themevariantscope).
 
 To override global application variant instead of using system default:
 ```xml title="App.axaml"

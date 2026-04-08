@@ -10,9 +10,9 @@ import ContentPageBottomCommandBarScreenshot from '/img/controls/contentpage/con
 import ContentPageSafeAreaDisabledScreenshot from '/img/controls/contentpage/contentpage-safe-area-disabled.png';
 import ContentPageAsTabScreenshot from '/img/controls/contentpage/contentpage-as-tab.png';
 
-`ContentPage` is the foundational building block for screen-based UI in Avalonia. It represents a single page of content and provides built-in support for headers, icons, safe area padding, and command bars. Every screen the user sees is typically a `ContentPage` (or a subclass of one).
+[`ContentPage`](/api/avalonia/controls/contentpage) is the foundational building block for screen-based UI in Avalonia. It represents a single page of content and provides built-in support for headers, icons, safe area padding, and command bars. Every screen the user sees is typically a `ContentPage` (or a subclass of one).
 
-`ContentPage` is most commonly used as a child of [`NavigationPage`](navigationpage), [`TabbedPage`](tabbedpage), or [`DrawerPage`](drawerpage), but it can also be placed directly inside a `Window` for single-page apps.
+`ContentPage` is most commonly used as a child of [`NavigationPage`](navigationpage), [`TabbedPage`](tabbedpage), or [`DrawerPage`](drawerpage), but it can also be placed directly inside a [`Window`](/api/avalonia/controls/window) for single-page apps.
 
 ## How the header displays
 
@@ -20,8 +20,8 @@ The `Header` property serves different purposes depending on which container hos
 
 | Host control | Where the header appears |
 | --- | --- |
-| `NavigationPage` | Displayed in the navigation bar at the top of the screen. |
-| `TabbedPage` | Used as the tab label. |
+| [`NavigationPage`](/api/avalonia/controls/navigationpage) | Displayed in the navigation bar at the top of the screen. |
+| [`TabbedPage`](/api/avalonia/controls/tabbedpage) | Used as the tab label. |
 | `DrawerPage` | Used as the drawer menu item label. |
 | Standalone (in a `Window`) | Not displayed automatically. You must render it yourself if needed. |
 
@@ -325,5 +325,5 @@ When used inside a `TabbedPage`, the `Header` and `Icon` properties control the 
 - [NavigationPage](navigationpage)
 - [TabbedPage](tabbedpage)
 - [DrawerPage](drawerpage)
-- [ContentPage API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_ContentPage)
+- [ContentPage API reference](/api/avalonia/controls/contentpage)
 - [`ContentPage.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Page/ContentPage.cs)

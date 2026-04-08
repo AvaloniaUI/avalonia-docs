@@ -82,9 +82,8 @@ const FOOTER_COLUMNS = [
   {
     title: 'Products',
     links: [
-      { label: 'Avalonia', href: 'https://avaloniaui.net/platforms' },
+      { label: 'Avalonia', href: 'https://avaloniaui.net/avalonia' },
       { label: 'Avalonia XPF', href: 'https://avaloniaui.net/xpf' },
-      { label: 'Avalonia Accelerate', href: 'https://avaloniaui.net/accelerate' },
       { label: 'Enhanced support', href: 'https://avaloniaui.net/support' },
       { label: 'Development services', href: 'https://avaloniaui.net/services' },
       { label: 'Orgs using Avalonia', href: 'https://avaloniaui.net/organisations' },

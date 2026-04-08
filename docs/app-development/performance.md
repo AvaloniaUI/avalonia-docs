@@ -82,7 +82,7 @@ A `BufferFactor` of `1` realizes items across one extra viewport height above an
 
 ### Reduce control template complexity
 
-Complex controls like `TextBox` contain a deep visual tree (borders, scroll viewers, watermark layers). When you create thousands of them, template instantiation and measurement dominate startup time.
+Complex controls like [`TextBox`](/api/avalonia/controls/textbox) contain a deep visual tree (borders, scroll viewers, watermark layers). When you create thousands of them, template instantiation and measurement dominate startup time.
 
 **Use lightweight controls for display, swap on interaction.** Show values with `TextBlock` (which has a minimal visual tree) and replace with a `TextBox` only when the user clicks to edit:
 
@@ -170,13 +170,10 @@ A single `Grid` with rows and columns is more efficient than multiple nested `St
 Property changes that affect layout (e.g., Width, Height, Margin, Padding) trigger layout recalculations. Batch property changes when possible:
 
 ```csharp
-// Batch visual updates
-using (myPanel.BeginBatchUpdate())
-{
-    // Multiple changes, single layout pass
-    myControl1.Width = 100;
-    myControl2.Height = 200;
-}
+// Set multiple properties together; Avalonia batches layout
+// passes within a single dispatcher operation automatically.
+myControl1.Width = 100;
+myControl2.Height = 200;
 ```
 
 ## Rendering performance

@@ -7,7 +7,7 @@ doc-type: how-to
 
 ## `FuncDataTemplate`
 
-_Avalonia UI_ supports creating a data template in code. You can do this by using the `FuncDataTemplate<T>` class that supports the `IDataTemplate` interface.
+_Avalonia UI_ supports creating a data template in code. You can do this by using the `FuncDataTemplate<T>` class that supports the [`IDataTemplate`](/api/avalonia/controls/templates/idatatemplate) interface.
 
 At its simplest you can create a data template by passing a lambda function that creates a control to the `FuncDataTemplate<T>` constructor, like this:
 

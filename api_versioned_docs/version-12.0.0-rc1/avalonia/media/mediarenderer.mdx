@@ -1,0 +1,156 @@
+---
+title: 'MediaRenderer'
+hide_title: true
+slug: '/avalonia/media/mediarenderer'
+uid: 'Avalonia.Media.MediaRenderer'
+commentId: 'T:Avalonia.Media.MediaRenderer'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.MediaPlayer.Abstractions'
+assembly: 'Avalonia.Controls.MediaPlayer.Abstractions'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Media'
+tfms:
+  - 'netstandard2.1'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">MediaRenderer Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Media</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.MediaPlayer.Abstractions</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.MediaPlayer.Abstractions</code>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class MediaRenderer
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> MediaRenderer
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [OnMessage](#uid-4a77784012) | No summary available. |
+| [Render](#uid-4e54fddc77) | No summary available. |
+| [SetCompositorTimeProvider](#uid-8d39d9d62b) | No summary available. |
+| [SetRendererCallbacks](#uid-a76540557b) | No summary available. |
+| [Update](#uid-7d2fff534e) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4a77784012"></span>
+
+### OnMessage Method
+
+```csharp
+public void OnMessage(object command)
+```
+
+#### Parameters
+
+`command` object
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4e54fddc77"></span>
+
+### Render Method
+
+```csharp
+public void Render(Avalonia.Media.ImmediateDrawingContext ctx, Avalonia.Rect renderBounds, TimeSpan renderTime)
+```
+
+#### Parameters
+
+`ctx` [Avalonia.Media.ImmediateDrawingContext](xref:Avalonia.Media.ImmediateDrawingContext)
+
+
+`renderBounds` [Avalonia.Rect](xref:Avalonia.Rect)
+
+
+`renderTime` TimeSpan
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8d39d9d62b"></span>
+
+### SetCompositorTimeProvider Method
+
+```csharp
+public void SetCompositorTimeProvider(Func<TimeSpan> timeProvider)
+```
+
+#### Parameters
+
+`timeProvider` Func&lt;TimeSpan&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a76540557b"></span>
+
+### SetRendererCallbacks Method
+
+```csharp
+public void SetRendererCallbacks(Action doInvalidate, Action doRegisterNextUpdate)
+```
+
+#### Parameters
+
+`doInvalidate` Action
+
+
+`doRegisterNextUpdate` Action
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7d2fff534e"></span>
+
+### Update Method
+
+```csharp
+public void Update(TimeSpan compositorTime)
+```
+
+#### Parameters
+
+`compositorTime` TimeSpan
+
+
+</section>
+
+</ApiRefPage>
+

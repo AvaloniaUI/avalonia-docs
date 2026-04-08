@@ -5,7 +5,7 @@ description: A primitive control that overrides the active theme variant (light 
 doc-type: reference
 ---
 
-The `ThemeVariantScope` control overrides the active theme variant (light or dark) for a section of your visual tree. All controls placed inside a `ThemeVariantScope` use the specified variant, regardless of the application or window setting. This is useful when you need part of your UI to display in a different theme from the rest of the application.
+The [`ThemeVariantScope`](/api/avalonia/controls/themevariantscope) control overrides the active theme variant (light or dark) for a section of your visual tree. All controls placed inside a `ThemeVariantScope` use the specified variant, regardless of the application or window setting. This is useful when you need part of your UI to display in a different theme from the rest of the application.
 
 ## Common use cases
 

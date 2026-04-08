@@ -5,7 +5,7 @@ description: API reference for IActivatableLifetime, the service that exposes ap
 doc-type: reference
 ---
 
-The `IActivatableLifetime` service defines a set of methods and events related to the activation and deactivation lifecycle of an app. `IActivatableLifetime` is a global app-level service that is accessed from the application instance using the `TryGetFeature` method:
+The [`IActivatableLifetime`](/api/avalonia/controls/applicationlifetimes/iactivatablelifetime) service defines a set of methods and events related to the activation and deactivation lifecycle of an app. `IActivatableLifetime` is a global app-level service that is accessed from the application instance using the `TryGetFeature` method:
 
 ```csharp
 Application.Current.TryGetFeature<IActivatableLifetime>();

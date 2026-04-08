@@ -5,7 +5,7 @@ description: Build lookless templated controls with control themes, template par
 doc-type: how-to
 ---
 
-Templated controls are controls whose appearance is defined entirely by a `ControlTemplate`. This separates the control's visual structure from its behavior, allowing developers and designers to restyle the control without modifying its logic. If you are familiar with WPF, these are sometimes called "lookless" controls because the control class itself contains no rendering code.
+Templated controls are controls whose appearance is defined entirely by a [`ControlTemplate`](/api/avalonia/markup/xaml/templates/controltemplate). This separates the control's visual structure from its behavior, allowing developers and designers to restyle the control without modifying its logic. If you are familiar with WPF, these are sometimes called "lookless" controls because the control class itself contains no rendering code.
 
 Avalonia's built-in controls (such as `Button`, `TextBox`, and `ListBox`) are all templated controls. You can follow the same pattern to build your own.
 
@@ -29,6 +29,12 @@ public class ToggleLabel : TemplatedControl
 
 This gives you a control with a `LabelText` property but no visual representation yet. The visuals come from a control theme.
 
+:::caution Do not set DataContext = this
+Never assign `DataContext = this` in a custom control's constructor. This overrides the `DataContext` that consumers of your control expect to inherit from the parent visual tree. Bindings set on your control from the outside (for example, `<MyControl Items="{Binding SelectedItems}" />`) will resolve against your control type instead of the parent's ViewModel, causing silent binding failures.
+
+Templated controls do not need self-referencing `DataContext`. Use [`TemplateBinding`](#templatebinding-details) inside your control template to access your control's own properties, and let the `DataContext` flow naturally from the parent.
+:::
+
 ## Defining the control theme
 
 Every templated control needs a default `ControlTheme` that contains its `ControlTemplate`. This is typically placed in a resource dictionary such as `Themes/Generic.axaml` and included in your application's resources.
@@ -49,7 +55,7 @@ Key points:
 
 - `x:Key="{x:Type local:ToggleLabel}"` ensures Avalonia automatically applies this theme to all instances of `ToggleLabel`.
 - `TargetType` scopes the theme so that property setters and template bindings resolve against the correct type.
-- Inside the `ControlTemplate`, use `TemplateBinding` to bind to properties on the templated control.
+- Inside the `ControlTemplate`, use [`TemplateBinding`](/api/avalonia/data/templatebinding) to bind to properties on the templated control.
 
 ## Template parts
 
@@ -98,10 +104,10 @@ Although the two syntaxes shown here are equivalent in most cases, there are som
     ```xml
     {Binding RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay}
     ```
-3. `TemplateBinding` can only be used on `IStyledElement`.
+3. `TemplateBinding` can only be used on `StyledElement`.
 
 ```xml
-<!-- This WON'T work as GeometryDrawing is not a IStyledElement. -->
+<!-- This WON'T work as GeometryDrawing is not a StyledElement. -->
 <GeometryDrawing Brush="{TemplateBinding Foreground}"/>
 
 <!-- Instead this syntax must be used in this case. -->

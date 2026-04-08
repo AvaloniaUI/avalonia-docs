@@ -60,6 +60,7 @@ You can see the full list of value priorities in the `BindingPriority` enum, whe
 | `StyleTrigger`  | 1          | This is triggered when a style becomes active.       |
 | `Template`      | 2          |                                                      |
 | `Style`         | 3          |                                                      |
+| `Inherited`     | 4          | Value inherited from a parent control.               |
 | `Unset`         | 2147483647 |                                                      |
 
 :::caution

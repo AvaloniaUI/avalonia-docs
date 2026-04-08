@@ -63,9 +63,9 @@ To switch back to determinate mode, set `IsIndeterminate` to `False` and update 
 ## Customizing progress text with `ProgressTextFormat`
 
 By default, `ShowProgressText` displays the percentage completion calculated from
-[`Value`](https://api-docs.avaloniaui.net/docs/P_Avalonia_Controls_Primitives_RangeBase_Value),
-[`Minimum`](https://api-docs.avaloniaui.net/docs/P_Avalonia_Controls_Primitives_RangeBase_Minimum), and
-[`Maximum`](https://api-docs.avaloniaui.net/docs/P_Avalonia_Controls_Primitives_RangeBase_Maximum). You can customize the displayed text by setting `ProgressTextFormat` to a format string. The string is passed to [`string.Format`](https://docs.microsoft.com/en-us/dotnet/api/system.string.format#system-string-format(system-string-system-object())) with the following format items:
+[`Value`](/api/avalonia/controls/primitives/rangebase#value-property),
+[`Minimum`](/api/avalonia/controls/primitives/rangebase#minimum-property), and
+[`Maximum`](/api/avalonia/controls/primitives/rangebase#maximum-property). You can customize the displayed text by setting `ProgressTextFormat` to a format string. The string is passed to [`string.Format`](https://docs.microsoft.com/en-us/dotnet/api/system.string.format#system-string-format(system-string-system-object())) with the following format items:
 
 | Index | Description                                                                                                    |
 |-------|----------------------------------------------------------------------------------------------------------------|
@@ -146,6 +146,6 @@ For more advanced customization, you can provide a complete `ControlTheme`:
 
 ## See also
 
-- [Slider](../value-selectors/slider.md)
-- [ProgressBar API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_ProgressBar)
+- [Slider](/controls/input/selectors/slider)
+- [ProgressBar API reference](/api/avalonia/controls/progressbar)
 - [`ProgressBar.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/ProgressBar.cs)

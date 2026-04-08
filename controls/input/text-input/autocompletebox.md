@@ -266,5 +266,5 @@ namespace YourNamespace.Converters
 ```
 ## See also
 
-- [AutoCompleteBox API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_AutoCompleteBox)
+- [AutoCompleteBox API reference](/api/avalonia/controls/autocompletebox)
 - [`AutoCompleteBox.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/AutoCompleteBox/AutoCompleteBox.cs)

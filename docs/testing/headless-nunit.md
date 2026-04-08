@@ -109,7 +109,7 @@ public void Should_Type_Text_Into_TextBox()
 }
 ```
 
-Instead of the typical `[Test]` attribute, use `[AvaloniaTest]` as it sets up the UI thread. Similarly, instead of `[Theory]`, there is a `[AvaloniaTheory]` attribute.
+Instead of the typical `[Test]` attribute, use `[AvaloniaTest]` as it sets up the UI thread.
 
 ## See also
 

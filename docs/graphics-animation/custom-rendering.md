@@ -83,7 +83,7 @@ public override void Render(DrawingContext context)
 
 ### Drawing text
 
-Use `FormattedText` to measure and render a single run of text:
+Use [`FormattedText`](/api/avalonia/media/formattedtext) to measure and render a single run of text:
 
 ```csharp
 public override void Render(DrawingContext context)
@@ -130,7 +130,6 @@ private IImage? _image;
 protected override void OnLoaded(RoutedEventArgs e)
 {
     base.OnLoaded(e);
-    var assets = AvaloniaLocator.Current.GetService<IAssetLoader>();
     var uri = new Uri("avares://MyApp/Assets/photo.png");
     _image = new Bitmap(AssetLoader.Open(uri));
     InvalidateVisual();
@@ -185,6 +184,14 @@ renderTarget.Render(myControl);
 // Save to file
 renderTarget.Save("output.png");
 ```
+
+:::note
+`RenderTargetBitmap` uses software rendering. Controls that rely on GPU-specific rendering paths (such as `OpenGlControlBase` or custom GPU interop) may not render correctly when captured this way.
+:::
+
+:::tip[Offscreen rendering]
+`RenderTargetBitmap.Render` requires the target control to be attached to a visible window. If you need to render controls without displaying a window (for example, server-side image generation or batch export), use the [headless platform](/docs/testing/setting-up-the-headless-platform) with the Skia renderer enabled. The headless platform provides a full layout and rendering pipeline in memory without opening a visible window.
+:::
 
 ## ICustomDrawOperation for SkiaSharp
 
@@ -295,7 +302,7 @@ Check `CompositionGpuImportedImageSynchronizationCapabilities` on an imported im
 
 ## CompositionCustomVisualHandler
 
-`CompositionCustomVisualHandler` provides per-frame callbacks that run directly on the render thread, without blocking the UI thread. This is useful for smooth, continuous animations or real-time visualizations where UI-thread overhead is a concern.
+[`CompositionCustomVisualHandler`](/api/avalonia/rendering/composition/compositioncustomvisualhandler) provides per-frame callbacks that run directly on the render thread, without blocking the UI thread. This is useful for smooth, continuous animations or real-time visualizations where UI-thread overhead is a concern.
 
 For simpler scenarios where UI-thread callbacks are acceptable, use [`TopLevel.RequestAnimationFrame`](/docs/fundamentals/top-level#requestanimationframe) instead.
 

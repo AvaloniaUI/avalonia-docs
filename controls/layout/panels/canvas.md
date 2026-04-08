@@ -17,7 +17,7 @@ The position of each child control is defined as two distances between the edge 
 
 If elements occupy the same coordinates, the order in which they appear in markup determines the order in which the elements are drawn.
 
-`Canvas` provides the most flexible layout support of any `Panel`. Height and Width properties are used to define the area of the canvas, and elements inside are assigned absolute coordinates relative to the area of the parent `Canvas`. Four attached properties, `Canvas.Left`, `Canvas.Top`, `Canvas.Right` and `Canvas.Bottom`, allow fine control of object placement within a `Canvas`, allowing the developer to position and arrange elements precisely on the screen.
+[`Canvas`](/api/avalonia/controls/canvas) provides the most flexible layout support of any `Panel`. Height and Width properties are used to define the area of the canvas, and elements inside are assigned absolute coordinates relative to the area of the parent `Canvas`. Four attached properties, `Canvas.Left`, `Canvas.Top`, `Canvas.Right` and `Canvas.Bottom`, allow fine control of object placement within a `Canvas`, allowing the developer to position and arrange elements precisely on the screen.
 
 :::info
 To review the concept of layout zones, see [Layout](/docs/layout/).
@@ -27,7 +27,7 @@ To review the concept of layout zones, see [Layout](/docs/layout/).
 
 You will probably use these properties most often:
 
-<table><thead><tr><th width="205">Property</th><th>Description</th></tr></thead><tbody><tr><td><code>Canvas.Left</code></td><td>Attached to a child control - gives the distance between the inner left edge of the canvas content zone to the outer left edge of the child (margin zone).</td></tr><tr><td><code>Canvas.Top</code></td><td>Attached to a child control - gives the distance between the inner top edge of the canvas content zone to the outer top edge of the child (margin zone).</td></tr><tr><td><code>Canvas.Right</code></td><td>Attached to a child control - gives the distance between the inner right edge of the canvas content zone to the outer right edge of the child (margin zone).</td></tr><tr><td><code>Canvas.Bottom</code></td><td>Attached to a child control - gives the distance between the inner bottom edge of the canvas content zone to the outer bottom edge of the child (margin zone).</td></tr><tr><td><code>Canvas.ZIndex</code></td><td>Attached to a child control - this can override the default drawing sequence (see below).</td></tr></tbody></table>
+<table><thead><tr><th width="205">Property</th><th>Description</th></tr></thead><tbody><tr><td><code>Canvas.Left</code></td><td>Attached to a child control - gives the distance between the inner left edge of the canvas content zone to the outer left edge of the child (margin zone).</td></tr><tr><td><code>Canvas.Top</code></td><td>Attached to a child control - gives the distance between the inner top edge of the canvas content zone to the outer top edge of the child (margin zone).</td></tr><tr><td><code>Canvas.Right</code></td><td>Attached to a child control - gives the distance between the inner right edge of the canvas content zone to the outer right edge of the child (margin zone).</td></tr><tr><td><code>Canvas.Bottom</code></td><td>Attached to a child control - gives the distance between the inner bottom edge of the canvas content zone to the outer bottom edge of the child (margin zone).</td></tr><tr><td><code>ZIndex</code></td><td>A property inherited from <code>Visual</code> that can override the default drawing sequence (see below).</td></tr></tbody></table>
 
 Child controls in a canvas are drawn in the sequence that they are defined. This can cause them to overlap.
 
@@ -37,7 +37,7 @@ The canvas does not size any of its child controls. You must set width and heigh
 
 ## Z-index
 
-By default each child has a z-index of zero. However, the canvas supports the `Canvas.ZIndex` attached property that you can set any of the child controls. This will override the drawing sequence (highest number is drawn last) and may therefore change how the child controls overlap.
+By default each child has a z-index of zero. However, you can set the `ZIndex` property on any of the child controls. This property is inherited from `Visual` and will override the drawing sequence (highest number is drawn last), which may change how the child controls overlap.
 
 ## Opacity
 
@@ -131,7 +131,7 @@ myParentCanvas.Children.Add(myCanvas3);
 
 ## See also
 
-- [Canvas API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_Canvas)
+- [Canvas API reference](/api/avalonia/controls/canvas)
 - [`Canvas.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Canvas.cs)
 - [DockPanel](dockpanel)
 - [Grid](grid)
