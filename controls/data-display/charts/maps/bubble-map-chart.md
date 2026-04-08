@@ -84,4 +84,13 @@ public ObservableCollection<CityMetric> CityData { get; } = new()
 
 | Property | Description | Default |
 | :--- | :--- | :--- |
-| `Fill` | Color used for the bubbles. | Semi-transparent |
+| `ItemsSource` | Data source for bubbles. | `null` |
+| `Latitude` | Latitude coordinates of bubbles. | `null` |
+| `Longitude` | Longitude coordinates of bubbles. | `null` |
+| `SizePath` | Size of bubbles. | `null` |
+| `ShowLabels` | Whether to display labels over bubbles. | `null` |
+| `LabelPath` | Content of labels. | `null` |
+| `MinBubbleSize` | Minimum bubble radius. | 8.0 |
+| `MaxBubbleSize` | Maximum bubble radius. | 40.0 |
+| `Fill` | Color of bubbles. | `null` |
+| `Stroke` | Color of bubble outlines. | `null` |
