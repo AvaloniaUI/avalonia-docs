@@ -15,25 +15,16 @@ You can validate built-in validation attributes, [`CustomValidationAttribute`](h
 
 ### Enable `DataAnnotationsValidationPlugin`
 
-Since Avalonia v12, the data annotations validation plugin is disabled by default. To enable the plugin, perform the following steps:
+Since Avalonia v12, the data annotations validation plugin is disabled by default. To enable the plugin:
 
-1. In the `App.axaml.cs` file of your project, delete `DisableAvaloniaDataAnnotationValidation();` from the initialization completion method.
-2. In the same file, delete the entirety of the `DisableAvaloniaDataAnnotationValidation()` method, as displayed below.
+1. Go to the `Program.cs` file of your project.
+2. Within the `AppBuilder`, add this line:
 
 ```csharp
-    private void DisableAvaloniaDataAnnotationValidation()
-    {
-        // Get an array of plugins to remove
-        var dataValidationPluginsToRemove =
-            BindingPlugins.DataValidators.OfType<DataAnnotationsValidationPlugin>().ToArray();
-
-        // remove each entry found
-        foreach (var plugin in dataValidationPluginsToRemove)
-        {
-            BindingPlugins.DataValidators.Remove(plugin);
-        }
-    }
+.WithDataAnnotationsValidation()
 ```
+
+If you are migrating an earlier project that manually specified the removal of the data annotations validation plugin with `BindingPlugins.DataValidators.Remove(plugin);`, you can now delete this configuration from your initialization completion method. It is no longer needed.
 
 ### Example: The property `EMail` is required and must be a valid e-mail-address
 
