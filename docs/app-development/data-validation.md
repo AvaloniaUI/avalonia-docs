@@ -15,13 +15,31 @@ You can validate built-in validation attributes, [`CustomValidationAttribute`](h
 
 ### Enable `DataAnnotationsValidationPlugin`
 
-Since Avalonia v12, the data annotations validation plugin is disabled by default. To enable the plugin, you must add the following line to the `AppBuilder` in the `Program.cs` file of your app.
+Since Avalonia v12, the data annotations validation plugin is disabled by default. To enable the plugin, perform the following steps:
+
+1. In the `App.axaml.cs` file of your project, delete `DisableAvaloniaDataAnnotationValidation();` from the initialization completion method.
+2. In the same file, delete the entirety of the `DisableAvaloniaDataAnnotationValidation()` method, as displayed below.
 
 ```csharp
-.WithDataAnnotationsValidation()
+    private void DisableAvaloniaDataAnnotationValidation()
+    {
+        // Get an array of plugins to remove
+        var dataValidationPluginsToRemove =
+            BindingPlugins.DataValidators.OfType<DataAnnotationsValidationPlugin>().ToArray();
+
+        // remove each entry found
+        foreach (var plugin in dataValidationPluginsToRemove)
+        {
+            BindingPlugins.DataValidators.Remove(plugin);
+        }
+    }
 ```
 
 ### Example: The property `EMail` is required and must be a valid e-mail-address
+
+:::note
+`RaiseAndSetIfChanged` is a ReactiveUI method. This example requires ReactiveUI to work.
+:::
 
 ```csharp
 [Required]
