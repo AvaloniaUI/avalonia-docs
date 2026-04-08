@@ -27,7 +27,7 @@ Liquid fill gauges are decorative circular gauges that represent a percentage as
 
 ### XAML
 ```xml
-<controls:LiquidFillGauge Value="{Binding WaterLevel}" Width="150" Height="150" TextColor="White" />
+<controls:LiquidFillGauge Value="{Binding WaterLevel}" Width="150" Height="150" />
 ```
 
 ### Data model (C#)
@@ -40,7 +40,11 @@ public double WaterLevel { get; set; } = 42.0;
 
 | Property | Description | Default |
 | :--- | :--- | :--- |
-| `Value` | The percentage filled (0 to 100). | `0` |
-| `Fill` | Color of the "liquid". | `Blue` / Theme-dependent |
-| `TextColor` | Color of the percentage label. | Theme-dependent |
-| `WaveFrequency` | Controls the speed/intensity of the animation. | `2.0` |
+| `Value` | The current value. | `50.0` |
+| `MinValue` | The minimum value. | `0.0` |
+| `MaxValue` | The maximum value. | `100.0` |
+| `LiquidBrush` | Brush for the "liquid". | Gradient / Theme-dependent |
+| `WaveAmplitude` | Amplitude of the wave effect. | `5.0` |
+| `WaveFrequency` | Frequency of the wave effect. | `2.0` |
+| `ShowPercentage` | Whether to display the percentage text. | `true` |
+| `IsWaveAnimationEnabled` | Whether to animate the wave. | `true` |

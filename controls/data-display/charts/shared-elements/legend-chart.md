@@ -30,7 +30,7 @@ The Legend component helps users identify different data series within a chart. 
 <controls:CartesianChart Title="Market Trends" Height="300"
                         ShowLegend="True"
                         LegendPosition="Right"
-                        LegendOrientation="Vertical">
+                        LegendAlignment="Center">
     <controls:CartesianChart.Series>
         <controls:LineSeries Title="Segment A" ItemsSource="{Binding DataA}" />
         <controls:LineSeries Title="Segment B" ItemsSource="{Binding DataB}" />
@@ -49,6 +49,6 @@ public ObservableCollection<double> DataB { get; } = new() { 5, 25, 30 };
 | Property | Description | Default |
 | :--- | :--- | :--- |
 | `ShowLegend` | Toggles the visibility of the legend. | `false` |
-| `LegendPosition` | `Top`, `Bottom`, `Left`, `Right`, or `Floating`. | `Bottom` |
-| `LegendOrientation`| `Horizontal` or `Vertical`. | `Horizontal` |
-| `IsInteractive` | Allows toggling series visibility via clicks. | `true` |
+| `LegendPosition` | `None`, `Top`, `Bottom`, `Left`, `Right`, or `Floating`. | `None` |
+| `LegendAlignment` | `Near`, `Center`, or `Far`. | `Center` |
+| `ToggleSeriesVisibility` | Allows toggling series visibility via clicks. | `true` |

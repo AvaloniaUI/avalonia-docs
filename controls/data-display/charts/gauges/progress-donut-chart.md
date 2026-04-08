@@ -29,8 +29,8 @@ Progress donut charts are a specialized variation of donut charts designed to sh
 ```xml
 <controls:ProgressDonutChart Value="{Binding CompletedPercent}"
                              Width="150" Height="150"
-                             StrokeThickness="10"
-                             Stroke="Blue" />
+                             RingThickness="10"
+                             ValueBrush="Blue" />
 ```
 
 ### Data model (C#)
@@ -43,7 +43,11 @@ public double CompletedPercent { get; set; } = 85.0;
 
 | Property | Description | Default |
 | :--- | :--- | :--- |
-| `Value` | The percentage (0 to 100) to display. | `0` |
-| `Stroke` | Color of the progress arc. | Theme-dependent |
-| `BackgroundStroke`| Color of the empty part of the ring. | `LightGray` |
-| `StrokeThickness`| Width of the ring. | `8` |
+| `Value` | The current value (0 to MaxValue). | `0` |
+| `MaxValue` | The maximum value. | `100.0` |
+| `ValueBrush` | Brush for the progress arc. | Theme-dependent |
+| `TrackBrush` | Brush for the empty part of the ring. | Theme-dependent |
+| `RingThickness` | Width of the ring. | `20.0` |
+| `StartAngle` | Start angle in degrees (-90 = top). | `-90.0` |
+| `ShowPercentage` | Whether to show percentage in center. | `true` |
+| `CenterLabel` | Custom center label (overrides percentage). | `null` |

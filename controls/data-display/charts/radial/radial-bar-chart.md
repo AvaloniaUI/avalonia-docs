@@ -30,7 +30,7 @@ Radial bar charts use a polar coordinate system. They are essentially bar charts
 <controls:RadialBarChart Title="Category Progress" Height="350"
                          ItemsSource="{Binding RadialBarData}"
                          ValuePath="Value"
-                         LabelPath="Label" />
+                         CategoryPath="Label" />
 ```
 
 ### Data model (C#)
@@ -51,6 +51,9 @@ public ObservableCollection<RadialMetric> RadialBarData { get; } = new()
 | :--- | :--- | :--- |
 | `ItemsSource` | The collection of categorical items. | `null` |
 | `ValuePath` | Numerical property for bar length. | `null` |
-| `LabelPath` | Property name for category labels. | `null` |
-| `BarWidth` | The thickness of each circular bar. | `15` |
-| `Gap` | Spacing between concentric bars. | `5` |
+| `CategoryPath` | Property name for category labels. | `null` |
+| `InnerRadiusFactor` | Relative size of the center hole from `0.0` to `1.0`. | `0.2` |
+| `StartAngle` | The start angle in degrees. | `-90.0` |
+| `GapAngle` | Angle gap between bars. | `2.0` |
+| `ShowLabels` | Whether labels are visible. | `true` |
+| `ShowValues` | Whether values are visible. | `true` |

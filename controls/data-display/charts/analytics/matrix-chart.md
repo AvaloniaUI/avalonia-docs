@@ -1,7 +1,7 @@
 ---
 id: matrix-chart
 title: Matrix chart
-description: Uses a grid to visualize relationships between two categorical sets, showing density or value magnitude at row/column intersections.
+description: Uses a grid to visualize boolean relationships between two categorical sets, showing whether a feature or state is present at each row/column intersection.
 doc_type: reference
 tags:
   - avalonia pro
@@ -14,7 +14,7 @@ import chartsAnalyticsMatrix from '/img/controls/charts/charts-analytics-matrix.
 [Charts](/controls/data-display/charts/index) are available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
 
-Matrix charts use a grid to visualize the relationship between two categorical sets. They are perfect for showing density, presence, or value magnitude at the intersection of rows and columns.
+Matrix charts use a grid to visualize boolean relationships between two categorical sets. They are a good fit for showing whether a feature, status, or permission is present at the intersection of rows and columns.
 
 <Image light={chartsAnalyticsMatrix} maxWidth={400} position="center" cornerRadius="true" alt="Matrix chart showing a grid of dots sized or colored by value at row and column intersections." />
 
@@ -31,20 +31,22 @@ Matrix charts use a grid to visualize the relationship between two categorical s
                       ItemsSource="{Binding MatrixData}"
                       ColumnLabels="{Binding MatrixColumns}"
                       RowLabelPath="Attribute" ValuesPath="Values"
-                      CellSize="28" CellSpacing="25"/>
+                      CellSize="28" CellGap="25"
+                      TrueBrush="#4CAF50"
+                      FalseBrush="#E0E0E0"/>
 ```
 
 ### Data model (C#)
 ```csharp
-public record MatrixRow(string Attribute, ObservableCollection<double> Values);
+public record MatrixRow(string Attribute, bool[] Values);
 
 public ObservableCollection<string> MatrixColumns { get; } = new() { "Apple", "Banana", "Cherry" };
 
 public ObservableCollection<MatrixRow> MatrixData { get; } = new()
 {
-    new("Sweetness", new() { 8, 9, 7 }),
-    new("Acidity", new() { 5, 2, 6 }),
-    new("Crunchiness", new() { 9, 1, 4 })
+    new("Sweetness", new[] { true, true, true }),
+    new("Acidity", new[] { true, false, true }),
+    new("Crunchiness", new[] { true, false, false })
 };
 ```
 
@@ -53,7 +55,11 @@ public ObservableCollection<MatrixRow> MatrixData { get; } = new()
 | Property | Description | Default |
 | :--- | :--- | :--- |
 | `ItemsSource` | The collection of row data. | `null` |
-| `ValuesPath` | Path to the numeric values for the row's cells. | `null` |
-| `CellSize` | The diameter/width of each intersection point. | `20` |
-| `CellSpacing` | The distance between the center of cells. | `25` |
-| `Palette` | Brushes used to color-code values. | Theme-dependent |
+| `RowLabelPath` | Path to the row label property. | `null` |
+| `ColumnLabels` | The list of column labels shown across the top. | `null` |
+| `ValuesPath` | Path to the boolean values for the row's cells. | `null` |
+| `CellSize` | The diameter of each matrix cell. | `30.0` |
+| `CellGap` | The gap between cells. | `2.0` |
+| `TrueBrush` | Brush used for `true` values. | `null` |
+| `FalseBrush` | Brush used for `false` values. | `null` |
+| `ShowFilledCircles` | Whether `true` values are filled instead of outlined. | `true` |

@@ -14,7 +14,7 @@ import chartsMapsHeatmap from '/img/controls/charts/charts-maps-gradient.png';
 [Charts](/controls/data-display/charts/index) are available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
 
-Heatmap maps (Heat maps) visualize data density across geographic coordinates using a color gradient. They are the ideal choice for showing "hot spots" where activity is concentrated.
+Heatmap maps visualize data density across geographic coordinates using a `ShapeMap` with a `HeatmapLayer`. They are the ideal choice for showing "hot spots" where activity is concentrated.
 
 <Image light={chartsMapsHeatmap} maxWidth={400} position="center" cornerRadius="true" alt="Geographic heatmap using a color gradient to show data density hot spots and concentration areas across regions." />
 
@@ -27,29 +27,49 @@ Heatmap maps (Heat maps) visualize data density across geographic coordinates us
 
 ### XAML
 ```xml
-<controls:HeatmapMap Name="GeoHeatmap" Title="Population Density Hotspots" Height="400"
-                     GeoJson="{Binding MapBase}"
-                     RegionPath="LocCode"
-                     ValuePath="Intensity"
-                     ItemsSource="{Binding IntensityData}" />
+<controls:ShapeMap Title="Population Density Hotspots" Height="400">
+    <controls:ShapeMap.Layers>
+        <controls:ShapeLayer GeoJson="{Binding WorldGeoJson}"
+                             LowBrush="#F5F5F5"
+                             HighBrush="#F5F5F5"
+                             Stroke="#E0E0E0"
+                             StrokeThickness="0.3" />
+        <controls:HeatmapLayer ItemsSource="{Binding IntensityData}"
+                               LatitudePath="Lat"
+                               LongitudePath="Lon"
+                               IntensityPath="Magnitude"
+                               Radius="50"
+                               MaxIntensity="100"
+                               LowBrush="#4000FF00"
+                               MediumBrush="#CCFFFF00"
+                               HighBrush="#FFFF0000" />
+    </controls:ShapeMap.Layers>
+</controls:ShapeMap>
 ```
 
 ### Data model (C#)
 ```csharp
-public record SpotIntensity(string LocCode, double Intensity);
+public record SpotIntensity(double Lat, double Lon, double Magnitude);
 
 public ObservableCollection<SpotIntensity> IntensityData { get; } = new()
 {
-    new("Z1", 95), new("Z2", 45), new("Z3", 78), new("Z4", 12)
+    new(40.41, -3.70, 95),
+    new(48.85, 2.35, 45),
+    new(51.50, -0.12, 78),
+    new(52.52, 13.40, 12)
 };
 ```
 
-## Common properties
+## Common properties (`HeatmapLayer`)
 
 | Property | Description | Default |
 | :--- | :--- | :--- |
-| `GeoJson` | Base geography for context. | `null` |
-| `ValuePath` | The property representing intensity. | `null` |
-| `LowColor` / `HighColor` | Gradient bounds for the heatmap. | `Blue` to `Red` |
-| `Blur` | Controls the smoothness of the heat spots. | `15` |
-| `Radius` | The effective size of each data point's "heat". | `20` |
+| `ItemsSource` | The collection of geographic points to render. | `null` |
+| `LatitudePath` | Property name for latitude values. | `Latitude` |
+| `LongitudePath` | Property name for longitude values. | `Longitude` |
+| `IntensityPath` | Property name for the intensity value. | `Intensity` |
+| `Radius` | Base radius of each heat spot in pixels. | `40.0` |
+| `MaxIntensity` | Maximum intensity used for normalization. | `100.0` |
+| `LowBrush` | Brush used for low intensity values. | `#0000FF00` |
+| `MediumBrush` | Brush used for medium intensity values. | `#FFFF00` |
+| `HighBrush` | Brush used for high intensity values. | `#FF0000` |

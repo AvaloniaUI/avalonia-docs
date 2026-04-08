@@ -32,7 +32,7 @@ Circular gauge charts visualize a single value on a radial scale. They are the s
                              Height="220"
                              Title="CPU"
                              NeedleBrush="#F44336"
-                             ScaleBrush="#D0D0D0"
+                             TrackBrush="#D0D0D0"
                              ShowValue="True" />
 ```
 
@@ -52,7 +52,7 @@ public double CpuUsage { get; set; } = 72;
 | `ShowValue` | Whether to display the numeric value. | `true` |
 | `StartAngle` | The starting angle of the gauge arc, in degrees. | 135.0 |
 | `SweepAngle` | The sweep angle of the gauge arc, in degrees. | 270.0 |
-| `ScaleBrush` | Color of the scale track. | Uses theme default. |
-| `NeedleBrush` | Color of the needle. | Uses theme default. |
-| `ScaleThickness` | Thickness of the scale arc. | 10.0 |
+| `TrackBrush` | Brush used for the gauge track. | `#E0E0E0` |
+| `NeedleBrush` | Brush used for the needle or value arc. | `#F44336` |
+| `TrackThickness` | Thickness of the track arc. | 10.0 |
 | `MajorTickCount` | The number of major tick marks. | 5 |

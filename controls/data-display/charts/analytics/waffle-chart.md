@@ -40,8 +40,13 @@ public double CompletionPercentage { get; set; } = 72;
 
 | Property | Description | Default |
 | :--- | :--- | :--- |
-| `Value` | The percentage value to fill (0 to 100). | `0` |
-| `Rows` / `Columns` | The grid dimensions (usually 10x10). | `10` |
-| `Fill` | Color used for the active squares. | Theme-dependent |
-| `BackgroundFill` | Color used for the inactive squares. | Semi-transparent |
+| `Value` | The current value to display. | `0` |
+| `MaxValue` | The maximum value for percentage calculation. | `100` |
+| `Rows` | Number of rows in the waffle grid. | `10` |
+| `Columns` | Number of columns in the waffle grid. | `10` |
+| `FilledBrush` | Brush used for the active squares. | Theme-dependent |
+| `EmptyBrush` | Brush used for the inactive squares. | Theme-dependent |
+| `CellGap` | Gap between waffle cells. | `2.0` |
+| `CellCornerRadius` | Corner radius of waffle cells. | `2.0` |
+| `ShowPercentage` | Whether to display the percentage text. | `true` |
 | `Title` | Label displayed above the grid. | `null` |

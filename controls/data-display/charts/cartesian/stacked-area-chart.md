@@ -69,4 +69,4 @@ public ObservableCollection<TrafficPoint> StackedAreaOrganic { get; } = new()
 | `Title` | The series name. | `null` |
 | `ItemsSource` | The data collection for this layer. | `null` |
 | `Fill` | Brush used for this specific area layer. | Auto-generated |
-| `FillOpacity` | Transparency level (0.0 to 1.0). | `1.0` |
+| `FillOpacity` | Transparency level (0.0 to 1.0). | `0.7` |
