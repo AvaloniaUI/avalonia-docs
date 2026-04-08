@@ -75,7 +75,6 @@ Charts that represent data as segments of a circle.
 | [Pie chart](circular/pie-chart) | Divides a circle into proportional slices to show part-to-whole relationships. |
 | [Donut chart](circular/donut-chart) | A pie chart with a hollow center, often used to display a total in the middle. |
 | [Semi-donut chart](circular/semi-donut-chart) | A half-circle donut for compact part-to-whole views. |
-| [Radial bar chart](circular/radial-bar-chart) | Displays multiple series as arcs at different radii for circular comparison. |
 
 ### Financial charts
 
