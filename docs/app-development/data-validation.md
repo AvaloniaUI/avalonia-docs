@@ -9,7 +9,7 @@ This page explains how to use Avalonia to validate data input by users.
 
 ## Data annotations validation plugin
 
-Avalonia's `DataAnnotationsValidationPlugin` allows you to validate any [`Validation-Attributes`](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute) associated with the `Properties` of your `ViewModel`.
+Avalonia's data annotations validation support allows you to validate any [`Validation-Attributes`](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute) associated with the `Properties` of your `ViewModel`.
 
 You can validate built-in validation attributes, [`CustomValidationAttribute`](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.customvalidationattribute), or your own attributes derived from `ValidationAttribute`.
 
