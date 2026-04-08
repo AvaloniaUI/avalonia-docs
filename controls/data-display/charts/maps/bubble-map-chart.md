@@ -14,7 +14,7 @@ import chartsMapsBubble from '/img/controls/charts/charts-maps-bubble.png';
 [Charts](/controls/data-display/charts/index) are available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
 
-Bubble maps use circles of different sizes to represent data values over geographic regions. They are effective for showing both locality and value magnitude simultaneously.
+Bubble maps use circles of different sizes to represent data values over geographic regions, using `ShapeMap` as a basis to display a `ShapeLayer` with a superimposed `BubbleLayer`. They are effective for showing both locality and value magnitude simultaneously.
 
 <Image light={chartsMapsBubble} maxWidth={400} position="center" cornerRadius="true" alt="Bubble map overlaying circles of varying sizes on geographic regions to represent city activity levels." />
 
@@ -24,8 +24,6 @@ Bubble maps use circles of different sizes to represent data values over geograp
 - **Global indicators**: Visualizing country-level data where the size of the bubble represents the value.
 
 ## Code example
-
-Bubble maps use `ShapeMap` as a basis to display a `ShapeLayer` with a superimposed `BubbleLayer`.
 
 ### XAML
 ```xml

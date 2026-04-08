@@ -12,7 +12,7 @@ tags:
 [Charts](/controls/data-display/charts/index) are available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
 
-Radial line charts plot data points on a polar coordinate system and connect them with lines. They are ideal for showing how a single variable fluctuates across cyclical categories.
+Radial line charts plot data points on a `PolarChart` and connect them with lines, as defined by a `PolarLineSeries`. They are ideal for showing how a single variable fluctuates across cyclical categories.
 
 ## When to use
 - **Daily activity**: Mapping heart rate or energy levels across 24 hours.
@@ -20,8 +20,6 @@ Radial line charts plot data points on a polar coordinate system and connect the
 - **Symmetry analysis**: Checking for patterns and balance in multi-variate profiles.
 
 ## Code example
-
-Radial line charts use `PolarChart` as a basis to display a `PolarLineSeries`.
 
 ### XAML
 ```xml
@@ -45,7 +43,7 @@ public ObservableCollection<ActivityPoint> RadialPoints { get; } = new()
 };
 ```
 
-## Common properties
+## Common properties: `PolarLineSeries`
 
 | Property | Description | Default |
 | :--- | :--- | :--- |
