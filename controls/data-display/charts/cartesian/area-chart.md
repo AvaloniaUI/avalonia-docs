@@ -73,5 +73,5 @@ public ObservableCollection<TrafficData> AreaVisitors { get; } = new()
 | `ItemsSource` | The collection of data items. | `null` |
 | `Stroke` | Color of the top line. | Theme-dependent |
 | `Fill` | Brush used to fill the area under the line. | Theme-dependent |
-| `FillOpacity` | Transparency of the fill (0.0 to 1.0). | `0.4` |
+| `FillOpacity` | Transparency of the fill (0.0 to 1.0). | `0.5` |
 | `StrokeThickness`| Width of the line. | `2` |

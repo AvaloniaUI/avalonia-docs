@@ -61,7 +61,7 @@ public ObservableCollection<WaterfallItem> WaterfallChanges { get; } = new()
 | `ItemsSource` | The collection of changes. | `null` |
 | `CategoryPath` | Path to the label/category. | `null` |
 | `ValuePath` | Path to the change value (positive or negative). | `null` |
-| `PositiveBrush` | Color for positive changes. | `Green` |
-| `NegativeBrush` | Color for negative changes. | `Red` |
-| `TotalBrush` | Color for the total (final) bar. | Theme-dependent |
+| `PositiveBrush` | Brush for positive changes. | Theme-dependent |
+| `NegativeBrush` | Brush for negative changes. | Theme-dependent |
+| `TotalBrush` | Brush for the total (final) bar. | Theme-dependent |
 | `TotalCategory` | The category name that represents the final total. | `null` |

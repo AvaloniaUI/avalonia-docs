@@ -53,12 +53,10 @@ public ObservableCollection<FileSystemItem> TreeMapData { get; } = new()
 | `ItemsSource` | The collection of data items. | `null` |
 | `ValuePath` | Path to the property representing area size. | `null` |
 | `LabelPath` | Path to the property for the labels. | `null` |
-| `LeafFill` | Brush used for the leaf nodes. | Auto-generated |
-| `BorderBrush` | Color of the borders between rectangles. | `White` |
-| `Gap` | Gap between rectangles. | 1 |
+| `Gap` | Gap between rectangles. | `1.0` |
 | `IsSelectionEnabled` | Enables node selection. | false |
-| `SelectionType` | The selection mode, e.g. `Single`, `Multiple` | `Single` |
-| `SelectionBrush` | Color used to highlight selected segments. | `FromRgb(49, 74, 110)` (Navy) |
-| `SelectionStroke` | Color used to outline selected segments. | Uses theme default. |
+| `SelectionMode` | The selection mode, e.g. `None`, `Single`, `SingleDeselect`, or `Multiple`. | `SingleDeselect` |
+| `SelectionBrush` | Brush used to highlight selected segments. | `FromRgb(49, 74, 110)` |
+| `SelectionStroke` | Brush used to outline selected segments. | Uses theme default. |
 | `SelectionStrokeThickness` | Thickness of the outline of selected segments. | 2.0 |
 | `SelectedIndex` | Index of the primary selected node. | -1 |

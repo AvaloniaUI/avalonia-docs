@@ -30,7 +30,7 @@ Kagi charts are time-independent charts that track price movements using vertica
 <controls:KagiChart Title="Trend Reversal"
                     Height="300"
                     ItemsSource="{Binding PriceData}"
-                    ValuePath="Close"
+                    ValuePath="Price"
                     ReversalAmount="2" />
 ```
 
@@ -51,6 +51,6 @@ public ObservableCollection<PricePoint> PriceData { get; } = new()
 | `ItemsSource` | The collection of raw price points. | `null` |
 | `ValuePath` | Property representing the price. | `null` |
 | `ReversalAmount`| Minimum price change required to flip direction. | `1.0` |
-| `YangStroke` | Brush for the yang segments. (Rising above previous high) | `Green` |
-| `YinStroke` | Brush for the yin segments. (Falling below previous low) | `Red` |
+| `YangBrush` | Brush for the yang segments. (Rising above previous high) | `Green` |
+| `YinBrush` | Brush for the yin segments. (Falling below previous low) | `Red` |
 | `StrokeThickness` | Base stroke thickness. | `2.0` |

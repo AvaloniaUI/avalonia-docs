@@ -29,19 +29,20 @@ Gantt charts are specialized timeline charts used for project management. They i
 ```xml
 <controls:GanttChart Name="GanttSample" Title="Q1 Roadmap" Height="400"
                      ItemsSource="{Binding ProjectTasks}"
-                     TaskPath="Title"
+                     TaskNamePath="Title"
                      StartPath="BeginDate"
-                     EndPath="EndDate" />
+                     EndPath="EndDate"
+                     ProgressPath="Progress" />
 ```
 
 ### Data model (C#)
 ```csharp
-public record ProjectTask(string Title, DateTime BeginDate, DateTime EndDate);
+public record ProjectTask(string Title, DateTime BeginDate, DateTime EndDate, double Progress);
 
 public ObservableCollection<ProjectTask> ProjectTasks { get; } = new()
 {
-    new("Research", DateTime.Parse("2023-01-01"), DateTime.Parse("2023-01-15")),
-    new("Development", DateTime.Parse("2023-01-16"), DateTime.Parse("2023-03-01"))
+    new("Research", DateTime.Parse("2023-01-01"), DateTime.Parse("2023-01-15"), 100),
+    new("Development", DateTime.Parse("2023-01-16"), DateTime.Parse("2023-03-01"), 60)
 };
 ```
 
@@ -52,5 +53,9 @@ public ObservableCollection<ProjectTask> ProjectTasks { get; } = new()
 | `ItemsSource` | The collection of project tasks. | `null` |
 | `StartPath` | Property name for the task start time. | `null` |
 | `EndPath` | Property name for the task end time. | `null` |
-| `TaskPath` | Property name for the task label. | `null` |
-| `ShowGrid` | Toggles the background time grid. | `true` |
+| `TaskNamePath` | Property name for the task label. | `null` |
+| `ProgressPath` | Property name for the task progress value from `0` to `100`. | `null` |
+| `BarHeight` | Height of each task bar as a fraction of row height. | `0.6` |
+| `RowHeight` | Height of each task row in pixels. | `40.0` |
+| `BarBrush` | Brush used for the task bars. | `#2196F3` |
+| `ProgressBrush` | Brush used for the progress overlay. | `#1565C0` |

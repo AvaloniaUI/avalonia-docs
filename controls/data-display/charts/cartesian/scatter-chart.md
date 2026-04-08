@@ -66,6 +66,6 @@ public ObservableCollection<PointData> ScatterPoints { get; } = new()
 | `ItemsSource` | The collection of data points. | `null` |
 | `CategoryPath` | Value of the category path (X-axis). | `null` |
 | `ValuePath` | Value of the value path (Y-axis). | `null` |
-| `MarkerSize` | Size of the dots in pixels. | `6` |
+| `MarkerSize` | Size of the dots in pixels. | `8` |
 | `MarkerShape` | Shape of the dots (Circle, Square, etc.). | `Circle` |
 | `Fill` | The color of the scatter dots. | Theme-dependent |

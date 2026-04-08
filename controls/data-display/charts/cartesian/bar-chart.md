@@ -35,7 +35,10 @@ Bar charts represent data using rectangular bars with lengths proportional to th
         <controls:NumericalAxis />
     </controls:CartesianChart.VerticalAxis>
     <controls:CartesianChart.Series>
-        <controls:BarSeries Title="Revenue" ItemsSource="{Binding BarData}" />
+        <controls:BarSeries Title="Revenue"
+                            ItemsSource="{Binding BarData}"
+                            CategoryPath="Category"
+                            ValuePath="Amount" />
     </controls:CartesianChart.Series>
 </controls:CartesianChart>
 ```
@@ -63,5 +66,5 @@ public ObservableCollection<CategoryData> BarData { get; } = new()
 | `ValuePath` | Path to the property used for the Y-axis. | `null` |
 | `Fill` | The color/brush used to fill the bars. | Theme-dependent |
 | `Stroke` | The outline color of the bars. | `Transparent` |
-| `CornerRadius` | The rounding of the bar corners. | `0` |
-| `Spacing` | The gap between bars (0.0 to 1.0). | `0.1` |
+| `BarCornerRadius` | The rounding of the bar corners. | `2` |
+| `BarWidth` | The width of each bar as a fraction of the category band (0.0 to 1.0). | `0.7` |

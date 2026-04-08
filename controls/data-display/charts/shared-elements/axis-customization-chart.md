@@ -58,10 +58,10 @@ public ObservableCollection<MonthlyMetric> GrowthData { get; } = new() { new("Ja
 | :--- | :--- | :--- |
 | `Title` | The text label for the axis. | `null` |
 | `IsVisible` | Toggle the visibility of the entire axis. | `true` |
-| `ShowMajorGridlines`| Show/hide major grid lines. | `true` |
-| `ShowMinorGridlines`| Show/hide minor grid lines. | `false` |
+| `ShowGridLines` | Show/hide major grid lines. | `true` |
+| `ShowMinorGridLines`| Show/hide minor grid lines. | `false` |
 | `LabelFormat` | Format string for labels (e.g., "C0", "N2", "yyyy"). | `null` |
-| `LabelAngle` | Rotation angle of the labels (0 to 360). | `0` |
+| `LabelRotation` | Rotation angle of the labels (0 to 360). | `0` |
 | `Position` | `Top`, `Bottom`, `Left`, `Right`. | Side dependent |
 
 ## Axis types

@@ -57,7 +57,8 @@ public void LoadData()
 | `IsZoomEnabled` | Enables the ability to zoom into the chart. | `false` |
 | `IsPanEnabled` | Enables the ability to pan (scroll) the chart view. | `false` |
 | `ZoomMode` | `X`, `Y`, or `XY` axis zooming. | `XY` |
-| `SelectionZoom` | Enable zooming by drawing a rectangle. | `true` |
+| `ZoomSensitivity` | Sensitivity of the zoom (0.0 to 1.0). | `0.1` |
+| `ShowRangeSelector` | Show a range selector control for zooming. | `true` |
 
 ## Interaction controls
 - **Mouse Wheel**: Zoom in/out at the cursor position.

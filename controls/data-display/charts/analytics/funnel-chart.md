@@ -53,5 +53,7 @@ public ObservableCollection<FunnelStage> FunnelData { get; } = new()
 | `ItemsSource` | The collection of process stages. | `null` |
 | `ValuePath` | Path to the property representing the quantity at each stage. | `null` |
 | `LabelPath` | Path to the property for the stage names. | `null` |
-| `NeckWidth` | The width of the funnel "neck" (bottom). | `0.2` |
-| `NeckHeight` | The height of the funnel "neck". | `0.4` |
+| `NeckWidth` | The width of the funnel "neck" as a ratio (0-1). | `0.3` |
+| `Gap` | The gap between funnel segments. | `2.0` |
+| `ShowLabels` | Whether to display labels on segments. | `true` |
+| `ShowValues` | Whether to display numeric values on the chart. | `true` |

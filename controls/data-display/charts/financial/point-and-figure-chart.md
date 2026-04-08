@@ -54,5 +54,5 @@ public ObservableCollection<Trade> Quotes { get; } = new()
 | `ItemsSource` | The collection of price data. | `null` |
 | `BoxSize` | The price movement represented by one X or O. | `1.0` |
 | `ReversalAmount`| Number of boxes required to start a new column. | `3` |
-| `PositiveStroke`| Color for the X marks. | `Green` |
-| `NegativeStroke`| Color for the O marks. | `Red` |
+| `XBrush` | Brush for the X marks. | `Green` |
+| `OBrush` | Brush for the O marks. | `Red` |

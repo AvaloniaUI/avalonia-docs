@@ -52,7 +52,9 @@ public ObservableCollection<MetricItem> SemiDonutData { get; } = new()
 | Property | Description | Default |
 | :--- | :--- | :--- |
 | `ItemsSource` | The data source for the segments. | `null` |
-| `InnerRadiusFactor`| The thickness of the arc (0.0 to 1.0). | `0.6` |
-| `CenterLabel` | Primary text displayed in the center of the arc. | `null` |
-| `CenterValue` | Secondary value text displayed below the label. | `null` |
-| `StartAngle` / `EndAngle`| Customizes the arc span (in degrees). | `180` to `360` |
+| `ValuePath` | Property path for values. | `null` |
+| `LabelPath` | Property path for labels. | `null` |
+| `InnerRadiusFactor`| The ratio of the inner radius (hole size) to the outer radius (0.0 to 1.0). | `0.6` |
+| `CenterLabel` | Label text displayed in the center of the arc. | `null` |
+| `CenterValue` | Value text displayed in the center. | `null` |
+| `GapAngle` | Gap angle between segments in degrees. | `2.0` |

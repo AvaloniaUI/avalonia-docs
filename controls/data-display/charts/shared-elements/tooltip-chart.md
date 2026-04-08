@@ -48,8 +48,6 @@ public ObservableCollection<UsagePoint> UsageData { get; } = new()
 
 | Property | Description | Default |
 | :--- | :--- | :--- |
-| `IsTooltipEnabled` | Global toggle for tooltip visibility. | `false` |
-| `TooltipTemplate` | Custom XAML template for the tooltip UI. | System default |
-| `TooltipBrush` | Background color for the tooltip box. | Theme-dependent |
-| `TooltipPlacement` | Anchor point for the tooltip (e.g., Cursor, NearestPoint). | `Cursor` |
-*(Note: Tooltips are fully customizable via DataTemplates)*
+| `IsTooltipEnabled` | Global toggle for tooltip visibility. | `true` |
+| `TooltipTemplate` | Custom DataTemplate for the tooltip UI (on series). | System default |
+*(Note: Tooltips are fully customizable via DataTemplates on individual series)*

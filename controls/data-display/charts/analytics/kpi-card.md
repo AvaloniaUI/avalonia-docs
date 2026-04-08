@@ -42,10 +42,10 @@ public class KpiViewModel
 {
     public double Value { get; set; } = 12500;
     public string Unit { get; set; } = "$";
-    public string Delta { get; set; } = "+12.5%";
+    public double Delta { get; set; } = 12.5;
+    public KpiDeltaType DeltaType { get; set; } = KpiDeltaType.Percentage;
     public string Subtitle { get; set; } = "vs last month";
-    public KpiTrend Trend { get; set; } = KpiTrend.Positive;
-    public ObservableCollection<double> SparklineData { get; } = new() { 10, 15, 8, 12, 20, 18, 25 };
+    public double[] SparklineData { get; set; } = [10, 15, 8, 12, 20, 18, 25];
 }
 ```
 
@@ -54,7 +54,9 @@ public class KpiViewModel
 | Property | Description | Default |
 | :--- | :--- | :--- |
 | `Value` | The main numerical value to display. | `0` |
-| `Delta` | The change percentage (usually with + or -). | `null` |
-| `SparklineData` | Collection of values for the mini-chart. | `null` |
+| `Delta` | The change value (positive or negative) from the previous period. | `0` |
+| `DeltaType` | How the delta is displayed: `Percentage` or `Absolute`. | `Percentage` |
+| `SparklineData` | Array of values for the mini-chart. | `null` |
 | `Unit` | Suffix for the value (e.g., "$", "%", "pts"). | `null` |
-| `Trend` | `Positive`, `Negative`, or `Neutral`. | `Neutral` |
+| `Subtitle` | Text displayed below the delta. | `null` |
+| `ShowSparkline` | Whether to display the sparkline mini-chart. | `true` |

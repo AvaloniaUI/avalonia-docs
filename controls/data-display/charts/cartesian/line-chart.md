@@ -65,5 +65,5 @@ public ObservableCollection<SalesData> LineData { get; } = new()
 | `Stroke` | The color of the line. | Theme-dependent |
 | `StrokeThickness`| The thickness of the line. | `2` |
 | `ShowMarkers` | Whether to display individual data point markers. | `true` |
-| `MarkerSize` | The size of the markers in pixels. | `6` |
+| `MarkerSize` | The size of the markers in pixels. | `8` |
 | `MarkerShape` | The shape of the markers (Circle, Square, etc.). | `Circle` |

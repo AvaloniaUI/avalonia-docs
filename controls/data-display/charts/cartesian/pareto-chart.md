@@ -53,5 +53,7 @@ public ObservableCollection<Complaint> ComplaintData { get; } = new()
 | `ItemsSource` | The collection of categories. | `null` |
 | `ValuePath` | Property determining bar height. | `null` |
 | `LabelPath` | Property for the category names. | `null` |
-| `LineStroke` | Color of the cumulative percentage line. | `Red` |
-| `ShowLabels` | Toggles values on bars/line points. | `true` |
+| `BarBrush` | Brush for the descending bars. | `#1976D2` |
+| `LineBrush` | Brush for the cumulative percentage line. | `#F44336` |
+| `BarWidth` | Width of each bar as a fraction of the category width. | `0.7` |
+| `ShowCumulativeLine` | Toggles the cumulative percentage line and markers. | `true` |

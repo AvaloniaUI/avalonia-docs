@@ -36,10 +36,10 @@ Area range charts display a filled area connecting two values, high and low, for
     </controls:CartesianChart.VerticalAxis>
     <controls:CartesianChart.Series>
         <controls:AreaRangeSeries Title="Range"
-                                  ItemsSource="{Binding RangeData}"
-                                  CategoryPath="Category"
-                                  LowPath="Low"
-                                  HighPath="High" />
+                                  ItemsSource="{Binding TempRanges}"
+                                  CategoryPath="Day"
+                                  LowPath="Min"
+                                  HighPath="Max" />
     </controls:CartesianChart.Series>
 </controls:CartesianChart>
 ```
@@ -63,7 +63,10 @@ public ObservableCollection<TempRange> TempRanges { get; } = new()
 | :--- | :--- | :--- |
 | `Title` | The name of the series. | `null` |
 | `ItemsSource` | The collection of range data points. | `null` |
-| `HighValuePath` | Path to the maximum value property. | `null` |
-| `LowValuePath` | Path to the minimum value property. | `null` |
+| `CategoryPath` | Path to the category property on the X-axis. | `null` |
+| `HighPath` | Path to the maximum value property. | `null` |
+| `LowPath` | Path to the minimum value property. | `null` |
 | `Fill` | Brush used to fill the area between points. | Theme-dependent |
-| `Stroke` | Color of the boundary lines. | `Transparent` |
+| `Stroke` | Brush used for the boundary lines. | Theme-dependent |
+| `ShowLines` | Whether to render the upper and lower boundary lines. | `true` |
+| `FillOpacity` | Opacity of the filled band between high and low values. | `0.3` |

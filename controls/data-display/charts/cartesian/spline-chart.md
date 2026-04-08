@@ -63,3 +63,5 @@ public ObservableCollection<TemperatureData> SplineTemperature { get; } = new()
 | `Stroke` | Color of the spline curve. | Theme-dependent |
 | `StrokeThickness`| Width of the curve. | `2` |
 | `ShowMarkers` | Whether to display markers at data points. | `true` |
+| `MarkerSize` | The size of the markers in pixels. | `8` |
+| `SplineTension` | Controls smoothness of the curve. | `0.25` |

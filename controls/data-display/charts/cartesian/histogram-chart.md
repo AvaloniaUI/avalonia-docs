@@ -27,17 +27,29 @@ Histograms group continuous data into "bins" and show the frequency of data poin
 
 ### XAML
 ```xml
-<controls:HistogramChart Title="Server Response Times" Height="300"
-                         ItemsSource="{Binding RawValues}"
-                         BinCount="10" />
+<controls:CartesianChart Title="Server Response Times" Height="300">
+    <controls:CartesianChart.HorizontalAxis>
+        <controls:CategoryAxis />
+    </controls:CartesianChart.HorizontalAxis>
+    <controls:CartesianChart.VerticalAxis>
+        <controls:NumericalAxis />
+    </controls:CartesianChart.VerticalAxis>
+    <controls:CartesianChart.Series>
+        <controls:HistogramSeries ItemsSource="{Binding RawValues}"
+                                  ValuePath="ResponseTimeMs"
+                                  BinCount="10" />
+    </controls:CartesianChart.Series>
+</controls:CartesianChart>
 ```
 
 ### Data model (C#)
 ```csharp
-// Histograms take a raw collection and group them automatically
-public ObservableCollection<double> RawValues { get; } = new()
+public record ResponseTimeSample(double ResponseTimeMs);
+
+public ObservableCollection<ResponseTimeSample> RawValues { get; } = new()
 {
-    12.5, 15.0, 12.8, 45.2, 50.1, 14.2, 15.5, 12.1
+    new(12.5), new(15.0), new(12.8), new(45.2),
+    new(50.1), new(14.2), new(15.5), new(12.1)
 };
 ```
 
@@ -46,7 +58,9 @@ public ObservableCollection<double> RawValues { get; } = new()
 | Property | Description | Default |
 | :--- | :--- | :--- |
 | `ItemsSource` | The collection of raw data points. | `null` |
-| `BinCount` | The number of bars (ranges) to create. | `Auto` |
-| `BinWidth` | (Optional) Explicit width for each range. | `null` |
+| `ValuePath` | Path to the numeric property to bin. | `null` |
+| `BinCount` | The number of bars (ranges) to create. | `10` |
+| `BinWidth` | (Optional) Explicit width for each range; overrides BinCount when set. | `null` |
 | `Fill` | Brush used for the frequency bars. | Theme-dependent |
-| `Gap` | Spacing between the bars. | `0` (Standard) |
+| `BarWidth` | Width of each histogram bar as a fraction of the bin width. | `0.9` |
+| `BarCornerRadius` | Corner radius for histogram bars. | `CornerRadius(2,2,0,0)` |

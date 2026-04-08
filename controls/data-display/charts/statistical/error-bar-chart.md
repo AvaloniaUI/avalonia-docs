@@ -27,11 +27,21 @@ Error bar charts represent the variability of data and are used on graphs to ind
 
 ### XAML
 ```xml
-<controls:ErrorBarChart Name="ErrorBarSample" Title="Measurement Precision" Height="300"
-                        ItemsSource="{Binding LabResults}"
-                        ValuePath="Mean"
-                        ErrorPath="StandardError"
-                        LabelPath="SampleID" />
+<controls:CartesianChart Title="Measurement Precision" Height="300">
+    <controls:CartesianChart.HorizontalAxis>
+        <controls:CategoryAxis />
+    </controls:CartesianChart.HorizontalAxis>
+    <controls:CartesianChart.VerticalAxis>
+        <controls:NumericalAxis />
+    </controls:CartesianChart.VerticalAxis>
+    <controls:CartesianChart.Series>
+        <controls:ErrorBarSeries Title="Results"
+                                 ItemsSource="{Binding LabResults}"
+                                 ValuePath="Mean"
+                                 ErrorPath="StandardError"
+                                 CategoryPath="SampleID" />
+    </controls:CartesianChart.Series>
+</controls:CartesianChart>
 ```
 
 ### Data model (C#)
@@ -53,5 +63,5 @@ public ObservableCollection<LabResult> LabResults { get; } = new()
 | `ItemsSource` | The collection of measured data. | `null` |
 | `ValuePath` | The central value (Mean/Median). | `null` |
 | `ErrorPath` | The amount of error (up and down). | `null` |
-| `CapSize` | The width of the horizontal caps on the error bars. | `8` |
+| `CapWidth` | The width of the horizontal caps on the error bars. | `8` |
 | `Stroke` | Color of the error indicator lines. | Theme-dependent |

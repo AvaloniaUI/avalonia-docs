@@ -61,4 +61,4 @@ public ObservableCollection<PriceTier> StepLinePrice { get; } = new()
 | `ItemsSource` | The collection of data items. | `null` |
 | `Stroke` | Color of the step line. | Theme-dependent |
 | `StrokeThickness`| Width of the line. | `2` |
-| `StepPosition` | `Start`, `Center`, or `End` point of the step. | `Center` |
+| `StepMode` | `HorizontalFirst`, `VerticalFirst`, or `Center`. | `HorizontalFirst` |

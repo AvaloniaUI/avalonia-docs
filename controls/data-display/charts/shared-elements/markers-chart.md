@@ -54,7 +54,7 @@ public ObservableCollection<Point> MarkerData { get; } = new()
 | Property | Description | Default |
 | :--- | :--- | :--- |
 | `ShowMarkers` | Global toggle for data point symbols. | `true` / `false` |
-| `MarkerSize` | Diameter of the marker in pixels. | `6` |
+| `MarkerSize` | Diameter of the marker in pixels. | `8` |
 | `MarkerShape` | `Circle`, `Square`, `Diamond`, `Triangle`, `Star`. | `Circle` |
 | `MarkerFill` | Brush used to fill the marker interior. | Series color |
 | `MarkerStroke` | Color of the marker outline. | `Transparent` |

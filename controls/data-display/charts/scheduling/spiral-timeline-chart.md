@@ -27,7 +27,7 @@ Spiral timelines visualize data that has both a strong sequential component and 
 
 ### XAML
 ```xml
-<controls:SpiralTimelineChart Title="Yearly Variations" Height="500"
+<controls:SpiralTimeline Title="Yearly Variations" Height="500"
                               ItemsSource="{Binding SpiralPoints}"
                               ValuePath="Reading"
                               DatePath="Timestamp" />
@@ -52,5 +52,7 @@ public ObservableCollection<SpiralData> SpiralPoints { get; } = new()
 | `ItemsSource` | The collection of points on the spiral. | `null` |
 | `DatePath` | Path to the chronological property. | `null` |
 | `ValuePath` | Numerical property determining point size/color. | `null` |
-| `Rotations` | Number of turns in the spiral. | `3` |
+| `Turns` | Number of turns in the spiral. | `3.0` |
+| `InnerRadius` | Inner radius of the spiral. | `30.0` |
+| `MarkerSize` | Size of the data point markers. | `8.0` |
 | `Stroke` | Color of the spiral path line. | Theme-dependent |

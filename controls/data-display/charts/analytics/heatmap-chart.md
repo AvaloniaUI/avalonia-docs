@@ -53,9 +53,8 @@ public ObservableCollection<HeatmapPoint> HeatmapData { get; } = new()
 | `RowPath` | Path to the property for the row identifier. | `null` |
 | `ColumnPath` | Path to the property for the column identifier. | `null` |
 | `ValuePath` | Path to the property for cell values. | `null` |
-| `LowColor` | Color used for the lowest values. | `Blue` / Theme-dependent |
-| `HighColor` | Color used for the highest values. | `Red` / Theme-dependent |
-| `LabelFormat` | Format string for the values displayed in cells. | `null` |
+| `LowBrush` | Brush used for the lowest values. | `#E3F2FD` |
+| `HighBrush` | Brush used for the highest values. | `#1565C0` |
 | `ShowLabels` | Whether to display the value inside each cell. | `true` |
-| `CellGap` | Size of gap between cells. | 2 |
-| `CellCornerRadius` | Corner radius of each cell. | 4 |
+| `CellGap` | Size of gap between cells. | `2.0` |
+| `CellCornerRadius` | Corner radius of each cell. | `CornerRadius(4)` |
