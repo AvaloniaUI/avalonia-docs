@@ -21,11 +21,18 @@ Radial line charts plot data points on a polar coordinate system and connect the
 
 ## Code example
 
+Radial line charts use `PolarChart` as a basis to display a `PolarLineSeries`.
+
 ### XAML
 ```xml
-<controls:RadialLineChart Title="Hourly Activity" Height="350"
-                          ItemsSource="{Binding RadialPoints}"
-                          ValuePath="Intensity" />
+<controls:PolarChart Title="Hourly Activity" Height="350">
+    <controls:PolarChart.Series>
+        <controls:PolarLineSeries ItemsSource="{Binding ActivityData}"
+                                  AnglePath="Angle"
+                                  RadiusPath="Radius"
+                                  ShowMarkers="True" />
+    </controls:PolarChart.Series>
+</controls:PolarChart>
 ```
 
 ### Data model (C#)
@@ -43,7 +50,8 @@ public ObservableCollection<ActivityPoint> RadialPoints { get; } = new()
 | Property | Description | Default |
 | :--- | :--- | :--- |
 | `ItemsSource` | The collection of points to connect. | `null` |
-| `ValuePath` | Property determining the distance from center. | `null` |
-| `Stroke` | Color of the connecting line. | Theme-dependent |
-| `StrokeThickness`| Width of the line. | `2` |
-| `Fill` | (Optional) Fill color for the inner area. | `Transparent` |
+| `AnglePath` | Path of the angle (X). | `null` |
+| `RadiusPath ` | Path of the radius (Y). | `null` |
+| `ShowMarkers` | Whether to show markers at each data point. | `false` |
+| `MarkerSize` | Size of the markers. | 6.0 |
+| `IsClosed` | Whether the first and last data points are connected. | `false` |

@@ -25,34 +25,63 @@ Bubble maps use circles of different sizes to represent data values over geograp
 
 ## Code example
 
+Bubble maps use `ShapeMap` as a basis to display a `ShapeLayer` with a superimposed `BubbleLayer`.
+
 ### XAML
 ```xml
-<controls:BubbleMap Name="BubbleMapSample" Title="City Activity" Height="400"
-                    GeoJson="{Binding MapGeoJson}"
-                    RegionPath="CityID"
-                    ValuePath="ActivityLevel"
-                    ItemsSource="{Binding CityData}" />
+<chartsEnterprise:ShapeMap Title="City Activity" Height="400">
+    <chartsEnterprise:ShapeMap.Layers>
+        <charts:ShapeLayer GeoJson="{Binding MapGeoJson}" />
+        <charts:BubbleLayer ItemsSource="{Binding CityData}"
+                            LatitudePath="Lat"
+                            LongitudePath="Lon"
+                            SizePath="ActivityLevel"
+                            LabelPath="City" />
+    </chartsEnterprise:ShapeMap.Layers>
+</chartsEnterprise:ShapeMap>
 ```
 
 ### Data model (C#)
 ```csharp
-public record CityMetric(string CityID, double ActivityLevel);
+public record CityMetric(double Lat, double Lon, double ActivityLevel, string City);
 
 public ObservableCollection<CityMetric> CityData { get; } = new()
 {
-    new("NYC", 1500),
-    new("LDN", 1200),
-    new("TKY", 1800),
-    new("PAR", 950)
+    new(-74.006, 40.7128, 1500, "New York"),
+    new(-0.1278, 51.5074, 1200, "London"),
+    new(139.6503, 35.6762, 1800, "Tokyo"),
+    new(2.3522, 48.8566, 950, "Paris")
 };
 ```
 
-## Common properties
+## Common properties: `ShapeLayer`
 
 | Property | Description | Default |
 | :--- | :--- | :--- |
-| `GeoJson` | The base map geometry. | `null` |
-| `RegionPath` | Property linking data to map coordinates. | `null` |
-| `ValuePath` | Numerical property determining bubble size. | `null` |
-| `MinSize` / `MaxSize` | Diameter range for the bubbles in pixels. | `5` to `30` |
+| `GeoJson` | GeoJSON data. | `null` |
+| `Source` | URI for the source of the GeoJSON data. | `null` |
+| `GeoJsonIdPath` | Unique ID of the GeoJSON data. | `null` |
+| `ItemsSource` | Data collection containing map regions. | `null` |
+| `RegionPath` | Property linking data to GeoJSON coordinates. | `null` |
+| `ValuePath` | Property linking data to region values. | `null` |
+| `MinValue` | Minimum value for color normalization. | 0.0 |
+| `MaxValue` | Maximum value for color normalization. | 100.0 |
+| `LowBrush` | Color representing the lowest data value. | `#E3F2FD` |
+| `HighBrush` | Color representing the highest data value. | `#1565C0` |
+| `Stroke` | Color of region outlines. | `null` |
+| `StrokeThickness` | Thickness of region outlines. | 0.5 |
+| `ShowDataLabels` | Whether to display data labels on regions. | `false` |
+| `DataLabelPath` | Path of the data label text. | `null` |
+| `DataLabelForeground` | Color of the data label foreground. | `null`  |
+| `SelectionMode` | Selection mode for selecting regions. | `null` |
+| `SelectionBrush` | Color of selected regions. | `#FFC107` |
+| `SelectionStroke` | Color of the outline of selected regions. | `null` |
+| `SelectionStrokeThickness` | Thickness of the outline of selected regions. | 2.0 |
+| `SelectedItem` | The currently selected region. | `null` |
+| `HoverBrush` | Color of a region when it is hovered over. | `White` |
+
+## Common properties: `BubbleLayer`
+
+| Property | Description | Default |
+| :--- | :--- | :--- |
 | `Fill` | Color used for the bubbles. | Semi-transparent |
