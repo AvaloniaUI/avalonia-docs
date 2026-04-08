@@ -64,7 +64,6 @@ const sidebars: SidebarsConfig = {
               items: [
                 'data-display/charts/circular/donut-chart',
                 'data-display/charts/circular/pie-chart',
-                'data-display/charts/circular/radial-bar-chart',
                 'data-display/charts/circular/semi-donut-chart',
               ],
             },
