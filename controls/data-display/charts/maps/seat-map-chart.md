@@ -28,7 +28,7 @@ The ShapeMap control can handle non-geographic coordinate systems, making it per
         <controls:ShapeLayer GeoJson="{Binding SeatMapGeoJson}"
                              RegionPath="SeatNumber"
                              ValuePath="Class"
-                             DataSource="{Binding SeatingData}"
+                             ItemsSource="{Binding SeatingData}"
                              SelectionMode="Multiple"
                              SelectedItems="{Binding SelectedSeats}" />
     </controls:ShapeMap.Layers>
@@ -55,6 +55,6 @@ public ObservableCollection<SeatInfo> SelectedSeats { get; } = new();
 | `GeoJson` | Custom GeoJSON representing the layout. | `null` |
 | `RegionPath` | Property used to match data to shapes. | `null` |
 | `ValuePath` | Property used to color-code shapes based on state. | `null` |
-| `SelectionMode` | `Single`, `Multiple`, or `None`. | `None` |
+| `SelectionMode` | `None`, `Single`, `SingleDeselect`, or `Multiple`. | `None` |
 | `SelectedItems` | Binding to the selected data items. | `null` |
 *(Note: Seat map uses custom GeoJSON to render non-geographical shapes)*

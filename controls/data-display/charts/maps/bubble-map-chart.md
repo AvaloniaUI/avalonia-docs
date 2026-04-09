@@ -68,15 +68,15 @@ public ObservableCollection<CityMetric> CityData { get; } = new()
 | `HighBrush` | Color representing the highest data value. | `#1565C0` |
 | `Stroke` | Color of region outlines. | `null` |
 | `StrokeThickness` | Thickness of region outlines. | 0.5 |
-| `ShowDataLabels` | Whether to display data labels on regions. | `false` |
-| `DataLabelPath` | Path of the data label text. | `null` |
-| `DataLabelForeground` | Color of the data label foreground. | `null`  |
-| `SelectionMode` | Selection mode for selecting regions. | `null` |
+| `ShowLabels` | Whether to display labels on regions. | `false` |
+| `LabelPath` | Path of the label text. | `null` |
+| `LabelForeground` | Brush used for region labels. | `null` |
+| `SelectionMode` | Selection mode for selecting regions. Use `None`, `Single`, `SingleDeselect`, or `Multiple`. | `None` |
 | `SelectionBrush` | Color of selected regions. | `#FFC107` |
 | `SelectionStroke` | Color of the outline of selected regions. | `null` |
 | `SelectionStrokeThickness` | Thickness of the outline of selected regions. | 2.0 |
 | `SelectedItem` | The currently selected region. | `null` |
-| `HoverBrush` | Color of a region when it is hovered over. | `White` |
+| `HoverBrush` | Brush used when a region is hovered. | `White` at 30% opacity |
 
 ## Common properties: `BubbleLayer`
 
