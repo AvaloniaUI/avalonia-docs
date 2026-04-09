@@ -115,6 +115,7 @@ const sidebars = {
             "avalonia/animation/pageslide-slideaxis",
             "avalonia/animation/pagetransitionitem",
             "avalonia/animation/playstate",
+            "avalonia/animation/playbackbehavior",
             "avalonia/animation/playbackdirection",
             "avalonia/animation/pointtransition",
             "avalonia/animation/relativepointtransition",
@@ -447,6 +448,7 @@ const sidebars = {
             "avalonia/controls/pipspager",
             "avalonia/controls/pixelpointeventargs",
             "avalonia/controls/placementmode",
+            "avalonia/controls/platform/platformallowedwindowactions",
             "avalonia/controls/platforminhibitiontype",
             "avalonia/controls/populatedeventargs",
             "avalonia/controls/populatingeventargs",
@@ -2175,6 +2177,7 @@ const sidebars = {
             "avalonia/platform/platformgraphicsexternalimageformat",
             "avalonia/platform/platformgraphicsexternalimageproperties",
             "avalonia/platform/platformhandle",
+            "avalonia/platform/platformrendertargetstate",
             "avalonia/platform/platformscreen",
             "avalonia/platform/platformthemevariant",
             "avalonia/platform/rendertargetdrawingcontextproperties",
@@ -2705,6 +2708,7 @@ const sidebars = {
           "label": "Avalonia.Controls",
           "items": [
             "avalonia/controls/alphacomponentposition",
+            "avalonia/controls/cellrenderer",
             "avalonia/controls/colorchangedeventargs",
             "avalonia/controls/colorcomponent",
             "avalonia/controls/colormodel",
@@ -3747,6 +3751,41 @@ const sidebars = {
           "link": {
             "type": "doc",
             "id": "avaloniaui/diagnosticsprotocol/application/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "AvaloniaUI.DiagnosticsProtocol.Protocol",
+          "items": [
+            "avaloniaui/diagnosticsprotocol/protocol/diagnosticsconsts-args",
+            "avaloniaui/diagnosticsprotocol/protocol/diagnosticsconsts-env",
+            "avaloniaui/diagnosticsprotocol/protocol/diagnosticsprotocolkind"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avaloniaui/diagnosticsprotocol/protocol/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "AvaloniaUI.DiagnosticsProtocol.Serialization",
+          "items": [
+            "avaloniaui/diagnosticsprotocol/serialization/systemtextjsonmethodcallserializer-remoteexceptioncontext"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avaloniaui/diagnosticsprotocol/serialization/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "AvaloniaUI.DiagnosticsProtocol.Tree",
+          "items": [
+            "avaloniaui/diagnosticsprotocol/tree/elementstreesearchresponse-searchitem"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avaloniaui/diagnosticsprotocol/tree/index"
           }
         },
         {
