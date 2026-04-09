@@ -57,13 +57,9 @@ public class TreeDataGridCheckBoxCell
 
 ## Remarks
 
-[TreeDataGridCheckBoxCell](xref:Avalonia.Controls.Primitives.TreeDataGridCheckBoxCell) displays boolean values as checkboxes in a [TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid). It supports
-two-state (checked/unchecked) or three-state (checked/unchecked/indeterminate) behavior, and
-can be configured as read-only to prevent user modification.
-
-This cell type is designed to work with the [Avalonia.Controls.Models.TreeDataGrid.CheckBoxCell](xref:Avalonia.Controls.Models.TreeDataGrid.CheckBoxCell) data model, which provides
-the underlying value and state management. Changes to the checkbox state are reflected in the
-underlying model, and changes to the model are automatically reflected in the UI.
+[TreeDataGridCheckBoxCell](xref:Avalonia.Controls.Primitives.TreeDataGridCheckBoxCell) displays boolean values as checkboxes in a [TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid).
+It supports two-state (checked/unchecked) or three-state
+(checked/unchecked/indeterminate) behavior, and can be configured as read-only.
 
 ## Constructors
 
@@ -87,8 +83,6 @@ public TreeDataGridCheckBoxCell()
 
 | Name | Description |
 | --- | --- |
-| [Realize](#uid-b3d32d0936) | Prepares the cell for display with the specified data. |
-| [Unrealize](#uid-de3aef6c82) | Releases resources used by the cell and prepares it for reuse. |
 | [ApplyTemplate](templatedcontrol.mdx#uid-cc70dd4d2f) | Creates the visual children of the control, if necessary Inherited from [TemplatedControl](templatedcontrol.mdx). |
 | [GetIsTemplateFocusTarget](templatedcontrol.mdx#uid-75a788f38f) | Gets the value of the IsTemplateFocusTargetProperty attached property on a control. Inherited from [TemplatedControl](templatedcontrol.mdx). |
 | [SetIsTemplateFocusTarget](templatedcontrol.mdx#uid-281801c25f) | Sets the value of the IsTemplateFocusTargetProperty attached property on a control. Inherited from [TemplatedControl](templatedcontrol.mdx). |
@@ -126,77 +120,6 @@ public TreeDataGridCheckBoxCell()
 | [SetCurrentValue (2 overloads)](../../avaloniaobject.mdx#uid-38759fd088) | Sets the value of a dependency property without changing its value source. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
 | [SetValue (3 overloads)](../../avaloniaobject.mdx#uid-47d14e19d7) | Sets a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
 | [VerifyAccess](../../avaloniaobject.mdx#uid-3b9d3c9793) | Checks that the current thread is the UI thread and throws if not. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
-
-<section className="apiref-page__member-entry">
-
-<span id="uid-b3d32d0936"></span>
-
-### Realize Method
-
-Prepares the cell for display with the specified data.
-
-```csharp
-public void Realize(Avalonia.Controls.Primitives.TreeDataGridElementFactory factory, Avalonia.Controls.Selection.ITreeDataGridSelectionInteraction selection, Avalonia.Controls.Models.TreeDataGrid.ICell model, int columnIndex, int rowIndex)
-```
-
-#### Parameters
-
-`factory` [Avalonia.Controls.Primitives.TreeDataGridElementFactory](xref:Avalonia.Controls.Primitives.TreeDataGridElementFactory)
-
-The element factory used to create child elements.
-
-
-`selection` [Avalonia.Controls.Selection.ITreeDataGridSelectionInteraction](xref:Avalonia.Controls.Selection.ITreeDataGridSelectionInteraction)
-
-The selection interaction model.
-
-
-`model` [Avalonia.Controls.Models.TreeDataGrid.ICell](xref:Avalonia.Controls.Models.TreeDataGrid.ICell)
-
-The cell's data model.
-
-
-`columnIndex` int
-
-The index of the cell's column.
-
-
-`rowIndex` int
-
-The index of the cell's row.
-
-
-#### Remarks
-
-This method is called by the [TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid) when a cell needs to be prepared for display.
-Derived classes should call the base implementation and then initialize any cell-specific
-content based on the provided model.
-
-#### Exceptions
-
-- [Thrown when the model is not a \[Avalonia.Controls.Models.TreeDataGrid.CheckBoxCell\](xref:Avalonia.Controls.Models.TreeDataGrid.CheckBoxCell).](xref:System.InvalidOperationException)
-
-</section>
-
-<section className="apiref-page__member-entry">
-
-<span id="uid-de3aef6c82"></span>
-
-### Unrealize Method
-
-Releases resources used by the cell and prepares it for reuse.
-
-```csharp
-public void Unrealize()
-```
-
-#### Remarks
-
-This method is called by the [TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid) when a cell is no longer needed for display.
-Derived classes should call the base implementation after performing any cell-specific
-cleanup.
-
-</section>
 
 ## Properties
 
@@ -298,10 +221,6 @@ Gets or sets a value indicating whether the checkbox is read-only.
 public bool IsReadOnly { get; set; }
 ```
 
-#### Remarks
-
-When set to true, the checkbox will display its state but will not respond to user input.
-
 </section>
 
 <section className="apiref-page__member-entry">
@@ -316,11 +235,6 @@ Gets or sets a value indicating whether the checkbox supports three states.
 public bool IsThreeState { get; set; }
 ```
 
-#### Remarks
-
-When set to true, the checkbox can display three states: checked (true), unchecked (false),
-and indeterminate (null). When set to false, the checkbox only supports checked and unchecked states.
-
 </section>
 
 <section className="apiref-page__member-entry">
@@ -334,17 +248,6 @@ Gets or sets the current value of the checkbox.
 ```csharp
 public Nullable<bool> Value { get; set; }
 ```
-
-#### Value
-
-true if the checkbox is checked, false if it is unchecked, or null if it is in the
-indeterminate state (requires [Avalonia.Controls.Primitives.TreeDataGridCheckBoxCell.IsThreeState](xref:Avalonia.Controls.Primitives.TreeDataGridCheckBoxCell.IsThreeState) to be true).
-
-
-#### Remarks
-
-Setting this property updates the visual state of the checkbox and propagates the
-change to the underlying data model.
 
 </section>
 

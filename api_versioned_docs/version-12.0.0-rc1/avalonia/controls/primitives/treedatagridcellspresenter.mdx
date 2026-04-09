@@ -50,7 +50,7 @@ public class TreeDataGridCellsPresenter
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> TreeDataGridColumnarPresenterBase&lt;IColumn&gt; <span className="apiref-page__relation-separator">-&gt;</span> TreeDataGridCellsPresenter
+<span className="apiref-page__meta-label">Inheritance:</span> TreeDataGridColumnarPresenterBase&lt;TreeDataGridColumn&gt; <span className="apiref-page__relation-separator">-&gt;</span> TreeDataGridCellsPresenter
 </div>
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Implements:</span> <a href="../../logicaltree/ichildindexprovider">IChildIndexProvider</a>
@@ -90,10 +90,7 @@ public TreeDataGridCellsPresenter()
 | Name | Description |
 | --- | --- |
 | [GetChildIndex](#uid-4ed80c1342) | Gets child's actual index in order of the original source. |
-| [Realize](#uid-38e6a32204) | Prepares the presenter to display cells for the specified row index. |
 | [TryGetTotalCount](#uid-09f75ca547) | No summary available. |
-| [Unrealize](#uid-36ee437a25) | Releases resources used by the presenter and prepares it for reuse. |
-| [UpdateRowIndex](#uid-65ae81a589) | Updates the row index of this presenter and all its cells. |
 
 <section className="apiref-page__member-entry">
 
@@ -125,37 +122,6 @@ Index or -1 if child was not found.
 
 <section className="apiref-page__member-entry">
 
-<span id="uid-38e6a32204"></span>
-
-### Realize Method
-
-Prepares the presenter to display cells for the specified row index.
-
-```csharp
-public void Realize(int index)
-```
-
-#### Parameters
-
-`index` int
-
-The index of the row to realize.
-
-
-#### Remarks
-
-This method is called by the [TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid) when a row needs to be prepared for display.
-It initializes the presenter with the specified row index and triggers a measure pass
-to create and arrange the cells.
-
-#### Exceptions
-
-- [The presenter is already realized.](xref:System.InvalidOperationException)
-
-</section>
-
-<section className="apiref-page__member-entry">
-
 <span id="uid-09f75ca547"></span>
 
 ### TryGetTotalCount Method
@@ -173,60 +139,6 @@ public bool TryGetTotalCount(int& count)
 
 bool
 
-
-</section>
-
-<section className="apiref-page__member-entry">
-
-<span id="uid-36ee437a25"></span>
-
-### Unrealize Method
-
-Releases resources used by the presenter and prepares it for reuse.
-
-```csharp
-public void Unrealize()
-```
-
-#### Remarks
-
-This method is called by the [TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid) when a row is no longer needed for display.
-It clears the presenter's row index and recycles all cell elements.
-
-#### Exceptions
-
-- [The presenter is not realized.](xref:System.InvalidOperationException)
-
-</section>
-
-<section className="apiref-page__member-entry">
-
-<span id="uid-65ae81a589"></span>
-
-### UpdateRowIndex Method
-
-Updates the row index of this presenter and all its cells.
-
-```csharp
-public void UpdateRowIndex(int index)
-```
-
-#### Parameters
-
-`index` int
-
-The new row index.
-
-
-#### Remarks
-
-This method is called when the index of the row changes, such as when rows are inserted or removed above it.
-It updates the presenter's row index and updates the row index of all realized cells.
-
-#### Exceptions
-
-- [The index is out of range.](xref:System.ArgumentOutOfRangeException)
-- [The presenter is not realized.](xref:System.InvalidOperationException)
 
 </section>
 
@@ -284,7 +196,7 @@ The zero-based row index, or -1 if the presenter is not realized.
 Gets or sets the rows collection from which to obtain cell data.
 
 ```csharp
-public Avalonia.Controls.Models.TreeDataGrid.IRows Rows { get; set; }
+public Avalonia.Controls.TreeDataGridRows Rows { get; set; }
 ```
 
 #### Value
@@ -324,7 +236,7 @@ public Avalonia.StyledProperty<int> FrozenColumnCountProperty
 Defines the [Avalonia.Controls.Primitives.TreeDataGridCellsPresenter.Rows](xref:Avalonia.Controls.Primitives.TreeDataGridCellsPresenter.Rows) property.
 
 ```csharp
-public Avalonia.DirectProperty<Avalonia.Controls.Primitives.TreeDataGridCellsPresenter, Avalonia.Controls.Models.TreeDataGrid.IRows> RowsProperty
+public Avalonia.DirectProperty<Avalonia.Controls.Primitives.TreeDataGridCellsPresenter, Avalonia.Controls.TreeDataGridRows> RowsProperty
 ```
 
 </section>

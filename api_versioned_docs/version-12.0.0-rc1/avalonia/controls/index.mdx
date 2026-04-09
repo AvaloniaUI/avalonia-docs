@@ -51,6 +51,7 @@ determine whether an item is a possible match for the specified text.
 [Avalonia.Controls.AutoCompleteBox](xref:Avalonia.Controls.AutoCompleteBox) control to
 determine how the specified text should be modified with an item.
 - [BarLayoutBehavior](barlayoutbehavior.mdx) - Controls how the navigation bar interacts with the page content area.
+- [BeginEditGestures](begineditgestures.mdx) - Defines the gestures that can be used to begin editing a cell.
 - [Border](border.mdx) - A control which decorates a child with a border and background.
 - [Button](button.mdx) - A standard button control.
 - [ButtonSpinner](buttonspinner.mdx) - Represents a spinner control that includes two Buttons.
@@ -80,6 +81,7 @@ using [Avalonia.Controls.Carousel.ViewportFraction](xref:Avalonia.Controls.Carou
 with optional animated page transitions.
 - [CellIndex](cellindex.mdx) - Represents a cell in a [Avalonia.Controls.TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid).
 - [CheckBox](checkbox.mdx) - A check box control.
+- [CheckBoxColumnCreateOptions](checkboxcolumncreateoptions.mdx) - Holds options for configuring a [Avalonia.Controls.TreeDataGridCheckBoxColumn](xref:Avalonia.Controls.TreeDataGridCheckBoxColumn) via the fluent API.
 - [Classes](classes.mdx) - Holds a collection of style classes for an [Avalonia.StyledElement](xref:Avalonia.StyledElement).
 - [ClickMode](clickmode.mdx) - Defines how a [Avalonia.Controls.Button](xref:Avalonia.Controls.Button) reacts to clicks.
 - [CodeHighlighter](codehighlighter.mdx)
@@ -92,6 +94,7 @@ Editing is available when the drop down flyout is opened; otherwise, only the pr
 - [ColorSpectrumShape](colorspectrumshape.mdx) - Defines the shape of a [Avalonia.Controls.Primitives.ColorSpectrum](xref:Avalonia.Controls.Primitives.ColorSpectrum).
 - [ColorView](colorview.mdx) - Presents a color for user editing using a spectrum, palette and component sliders.
 - [ColorViewTab](colorviewtab.mdx) - Defines a specific tab/page (subview) within the [Avalonia.Controls.ColorView](xref:Avalonia.Controls.ColorView).
+- [ColumnCreateOptions](columncreateoptions.mdx) - Holds options for configuring a [Avalonia.Controls.TreeDataGridColumn](xref:Avalonia.Controls.TreeDataGridColumn) via the fluent API.
 - [ColumnDefinition](columndefinition.mdx) - Holds a column definitions for a [Avalonia.Controls.Grid](xref:Avalonia.Controls.Grid).
 - [ColumnDefinitions](columndefinitions.mdx) - A collection of [Avalonia.Controls.ColumnDefinition](xref:Avalonia.Controls.ColumnDefinition)s.
 - [ComboBox](combobox.mdx) - A drop-down list control.
@@ -148,6 +151,10 @@ and ColumnDefinitionCollection / RowDefinitionCollection
 - [GridSplitter](gridsplitter.mdx) - Represents the control that redistributes space between columns or rows of a [Avalonia.Controls.Grid](xref:Avalonia.Controls.Grid) control.
 - [GridUnitType](gridunittype.mdx) - Defines the valid units for a [Avalonia.Controls.GridLength](xref:Avalonia.Controls.GridLength).
 - [GroupBox](groupbox.mdx)
+- [HierarchicalExpanderColumnCreateOptions&lt;TModel&gt;](hierarchicalexpandercolumncreateoptions-1.mdx) - Holds options for a hierarchical expander column created via
+[Avalonia.Controls.TreeDataGridSourceExtensions.WithHierarchicalExpanderColumn&lt;T&gt;(Avalonia.Controls.HierarchicalTreeDataGridSource&#123;&lt;&gt;&#125;,object,Avalonia.Controls.TreeDataGridColumn,System.Linq.Expressions.Expression&#123;Func&#123;&lt;&gt;,System.Collections.Generic.IEnumerable&#123;&lt;&gt;&#125;&#125;&#125;,Action&#123;Avalonia.Controls.HierarchicalExpanderColumnCreateOptions&#123;&lt;&gt;&#125;&#125;)](xref:Avalonia.Controls.TreeDataGridSourceExtensions.WithHierarchicalExpanderColumn%60%601%28Avalonia.Controls.HierarchicalTreeDataGridSource%7B%60%600%7D%2CSystem.Object%2CAvalonia.Controls.TreeDataGridColumn%2CSystem.Linq.Expressions.Expression%7BSystem.Func%7B%60%600%2CSystem.Collections.Generic.IEnumerable%7B%60%600%7D%7D%7D%2CSystem.Action%7BAvalonia.Controls.HierarchicalExpanderColumnCreateOptions%7B%60%600%7D%7D%29).
+- [HierarchicalExpanderTextColumnCreateOptions&lt;TModel&gt;](hierarchicalexpandertextcolumncreateoptions-1.mdx) - Holds options for a hierarchical expander column with an inner text column created via
+the WithHierarchicalExpanderTextColumn extension methods on [Avalonia.Controls.TreeDataGridSourceExtensions](xref:Avalonia.Controls.TreeDataGridSourceExtensions).
 - [HierarchicalTreeDataGridSource&lt;TModel&gt;](hierarchicaltreedatagridsource-1.mdx) - A data source for a [Avalonia.Controls.TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid) which displays a hierarchial tree where each
 row may have multiple columns.
 - [HotKeyManager](hotkeymanager.mdx)
@@ -175,8 +182,6 @@ boolean [Avalonia.Controls.ISelectable.IsSelected](xref:Avalonia.Controls.ISelec
 - [ITemplate&lt;TControl&gt;](itemplate-1.mdx) - Creates a control.
 - [IThemeVariantProvider](ithemevariantprovider.mdx) - Resource provider with theme variant awareness.
 Can be used with [Avalonia.Controls.IResourceDictionary.ThemeDictionaries](xref:Avalonia.Controls.IResourceDictionary.ThemeDictionaries).
-- [ITreeDataGridSource](itreedatagridsource.mdx) - Represents a data source for a [Avalonia.Controls.TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid) control.
-- [ITreeDataGridSource&lt;TModel&gt;](itreedatagridsource-1.mdx) - Represents a typed data source for a [Avalonia.Controls.TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid) control.
 - [IWebViewAdapterWithFocus.LostFocusDirection](iwebviewadapterwithfocus-lostfocusdirection.mdx)
 - [IconElement](iconelement.mdx)
 - [Image](image.mdx) - Displays a [Avalonia.Media.Imaging.Bitmap](xref:Avalonia.Media.Imaging.Bitmap) image.
@@ -305,10 +310,12 @@ The primary part behaves like a [Avalonia.Controls.Button](xref:Avalonia.Control
 - [TabItem](tabitem.mdx) - An item in a [Avalonia.Controls.TabControl](xref:Avalonia.Controls.TabControl).
 - [TabPlacement](tabplacement.mdx) - Specifies the position of the tab strip within a [Avalonia.Controls.TabbedPage](xref:Avalonia.Controls.TabbedPage) layout.
 - [TabbedPage](tabbedpage.mdx) - A page that displays its child pages through a tab strip.
+- [TemplateColumnCreateOptions](templatecolumncreateoptions.mdx) - Holds options for configuring a [Avalonia.Controls.TreeDataGridTemplateColumn](xref:Avalonia.Controls.TreeDataGridTemplateColumn) via the fluent API.
 - [TextBlock](textblock.mdx) - A control that displays a block of text.
 - [TextBox](textbox.mdx) - Represents a control that can be used to display or edit unformatted text.
 - [TextChangedEventArgs](textchangedeventargs.mdx) - Provides data specific to a [Avalonia.Controls.TextBox.TextChanged](xref:Avalonia.Controls.TextBox.TextChanged) event.
 - [TextChangingEventArgs](textchangingeventargs.mdx) - Provides data specific to a [Avalonia.Controls.TextBox.TextChanging](xref:Avalonia.Controls.TextBox.TextChanging) event.
+- [TextColumnCreateOptions](textcolumncreateoptions.mdx) - Holds options for configuring a [Avalonia.Controls.TreeDataGridTextColumn](xref:Avalonia.Controls.TreeDataGridTextColumn) via the fluent API.
 - [ThemeVariantScope](themevariantscope.mdx) - Decorator control that isolates controls subtree with locally defined [Avalonia.Styling.ThemeVariant](xref:Avalonia.Styling.ThemeVariant).
 - [TickBar](tickbar.mdx) - An element that is used for drawing [Avalonia.Controls.Slider](xref:Avalonia.Controls.Slider)'s Ticks.
 - [TickBarPlacement](tickbarplacement.mdx) - Enum which describes how to position the [TickBar](xref:Avalonia.Controls.TickBar).
@@ -330,16 +337,29 @@ using a [Avalonia.Controls.TransitioningContentControl.PageTransition](xref:Aval
 - [TrayIcons](trayicons.mdx)
 - [TreeDataGrid](treedatagrid.mdx) - Represents a control that displays hierarchical and tabular data together in a single view.
 It is a combination of a [TreeView](xref:Avalonia.Controls.TreeView) and DataGrid control.
+- [TreeDataGridBoundColumn](treedatagridboundcolumn.mdx) - Base class for columns which select cell values from a model using a binding.
 - [TreeDataGridCellEventArgs](treedatagridcelleventargs.mdx) - Provides data for events related to cell operations in a [Avalonia.Controls.TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid)
 control.
-- [TreeDataGridItemsSourceView](treedatagriditemssourceview.mdx) - Represents a standardized view of the supported interactions between a given ItemsSource
-object and a [Avalonia.Controls.TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid) control.
-- [TreeDataGridItemsSourceView&lt;T&gt;](treedatagriditemssourceview-1.mdx) - A strongly-typed view over a collection for use with [Avalonia.Controls.TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid).
+- [TreeDataGridCheckBoxColumn](treedatagridcheckboxcolumn.mdx) - A column in an [Avalonia.Controls.TreeDataGridSource](xref:Avalonia.Controls.TreeDataGridSource) which displays a check box.
+- [TreeDataGridColumn](treedatagridcolumn.mdx) - Base class for columns in a [Avalonia.Controls.TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid).
+- [TreeDataGridColumns](treedatagridcolumns.mdx) - Represents a collection of columns in a [Avalonia.Controls.TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid).
+- [TreeDataGridHierarchicalExpanderColumn](treedatagridhierarchicalexpandercolumn.mdx) - A column in an [Avalonia.Controls.HierarchicalTreeDataGridSource&lt;T&gt;](xref:Avalonia.Controls.HierarchicalTreeDataGridSource%601) whose cells show an
+expander to reveal nested data.
 - [TreeDataGridRowDragEventArgs](treedatagridrowdrageventargs.mdx) - Provides data for the [Avalonia.Controls.TreeDataGrid.RowDragOver](xref:Avalonia.Controls.TreeDataGrid.RowDragOver) and
 [Avalonia.Controls.TreeDataGrid.RowDrop](xref:Avalonia.Controls.TreeDataGrid.RowDrop) events.
 - [TreeDataGridRowDragStartedEventArgs](treedatagridrowdragstartedeventargs.mdx) - Provides data for the [Avalonia.Controls.TreeDataGrid.RowDragStarted](xref:Avalonia.Controls.TreeDataGrid.RowDragStarted) event.
 - [TreeDataGridRowDropPosition](treedatagridrowdropposition.mdx) - Specifies the position where a dragged row should be dropped relative to the target row.
 - [TreeDataGridRowEventArgs](treedatagridroweventargs.mdx) - Provides data for events related to row operations in a [Avalonia.Controls.TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid) control.
+- [TreeDataGridRowHeaderColumn](treedatagridrowheadercolumn.mdx) - A column that displays visual row numbers (0, 1, 2...).
+- [TreeDataGridRows](treedatagridrows.mdx) - Represents a collection of rows in a [Avalonia.Controls.TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid).
+- [TreeDataGridSelectionMode](treedatagridselectionmode.mdx) - Defines the selection mode for a [Avalonia.Controls.TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid).
+- [TreeDataGridSource](treedatagridsource.mdx) - Represents a data source for a [Avalonia.Controls.TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid) control.
+- [TreeDataGridSourceExtensions](treedatagridsourceextensions.mdx) - Provides fluent extension methods for adding columns to [Avalonia.Controls.FlatTreeDataGridSource&lt;T&gt;](xref:Avalonia.Controls.FlatTreeDataGridSource%601)
+and [Avalonia.Controls.HierarchicalTreeDataGridSource&lt;T&gt;](xref:Avalonia.Controls.HierarchicalTreeDataGridSource%601) instances.
+- [TreeDataGridSource&lt;TModel&gt;](treedatagridsource-1.mdx) - Represents a typed data source for a [Avalonia.Controls.TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid) control.
+- [TreeDataGridTemplateColumn](treedatagridtemplatecolumn.mdx) - A column in an [Avalonia.Controls.TreeDataGridSource](xref:Avalonia.Controls.TreeDataGridSource) which displays its values using a data
+template.
+- [TreeDataGridTextColumn](treedatagridtextcolumn.mdx) - A column in an [Avalonia.Controls.TreeDataGridSource](xref:Avalonia.Controls.TreeDataGridSource) which displays its values as text.
 - [TreeView](treeview.mdx) - Displays a hierarchical tree of data.
 - [TreeViewItem](treeviewitem.mdx) - An item in a [Avalonia.Controls.TreeView](xref:Avalonia.Controls.TreeView).
 - [UserControl](usercontrol.mdx) - Provides the base class for defining a new control that encapsulates related existing controls and provides its own logic.

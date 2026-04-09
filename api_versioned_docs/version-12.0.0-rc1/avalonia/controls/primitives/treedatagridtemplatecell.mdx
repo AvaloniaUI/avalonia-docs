@@ -86,8 +86,6 @@ public TreeDataGridTemplateCell()
 
 | Name | Description |
 | --- | --- |
-| [Realize](#uid-cb28e0d4e4) | Prepares the cell for display with the specified data. |
-| [Unrealize](#uid-9d6c08878b) | Releases resources used by the cell and prepares it for reuse. |
 | [ApplyTemplate](templatedcontrol.mdx#uid-cc70dd4d2f) | Creates the visual children of the control, if necessary Inherited from [TemplatedControl](templatedcontrol.mdx). |
 | [GetIsTemplateFocusTarget](templatedcontrol.mdx#uid-75a788f38f) | Gets the value of the IsTemplateFocusTargetProperty attached property on a control. Inherited from [TemplatedControl](templatedcontrol.mdx). |
 | [SetIsTemplateFocusTarget](templatedcontrol.mdx#uid-281801c25f) | Sets the value of the IsTemplateFocusTargetProperty attached property on a control. Inherited from [TemplatedControl](templatedcontrol.mdx). |
@@ -125,78 +123,6 @@ public TreeDataGridTemplateCell()
 | [SetCurrentValue (2 overloads)](../../avaloniaobject.mdx#uid-38759fd088) | Sets the value of a dependency property without changing its value source. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
 | [SetValue (3 overloads)](../../avaloniaobject.mdx#uid-47d14e19d7) | Sets a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
 | [VerifyAccess](../../avaloniaobject.mdx#uid-3b9d3c9793) | Checks that the current thread is the UI thread and throws if not. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
-
-<section className="apiref-page__member-entry">
-
-<span id="uid-cb28e0d4e4"></span>
-
-### Realize Method
-
-Prepares the cell for display with the specified data.
-
-```csharp
-public void Realize(Avalonia.Controls.Primitives.TreeDataGridElementFactory factory, Avalonia.Controls.Selection.ITreeDataGridSelectionInteraction selection, Avalonia.Controls.Models.TreeDataGrid.ICell model, int columnIndex, int rowIndex)
-```
-
-#### Parameters
-
-`factory` [Avalonia.Controls.Primitives.TreeDataGridElementFactory](xref:Avalonia.Controls.Primitives.TreeDataGridElementFactory)
-
-The element factory used to create child elements.
-
-
-`selection` [Avalonia.Controls.Selection.ITreeDataGridSelectionInteraction](xref:Avalonia.Controls.Selection.ITreeDataGridSelectionInteraction)
-
-The selection interaction model.
-
-
-`model` [Avalonia.Controls.Models.TreeDataGrid.ICell](xref:Avalonia.Controls.Models.TreeDataGrid.ICell)
-
-The cell's data model.
-
-
-`columnIndex` int
-
-The index of the cell's column.
-
-
-`rowIndex` int
-
-The index of the cell's row.
-
-
-#### Remarks
-
-This method is called by the [TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid) when a cell needs to be prepared for display.
-Derived classes should call the base implementation and then initialize any cell-specific
-content based on the provided model.
-
-#### Exceptions
-
-- [The cell is already realized.](xref:System.InvalidOperationException)
-- [The column or row index is invalid.](xref:System.IndexOutOfRangeException)
-
-</section>
-
-<section className="apiref-page__member-entry">
-
-<span id="uid-9d6c08878b"></span>
-
-### Unrealize Method
-
-Releases resources used by the cell and prepares it for reuse.
-
-```csharp
-public void Unrealize()
-```
-
-#### Remarks
-
-This method is called by the [TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid) when a cell is no longer needed for display.
-Derived classes should call the base implementation after performing any cell-specific
-cleanup.
-
-</section>
 
 ## Properties
 
