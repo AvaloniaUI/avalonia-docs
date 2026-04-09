@@ -88,9 +88,6 @@ public TreeDataGridColumnHeader()
 
 | Name | Description |
 | --- | --- |
-| [Realize](#uid-09a3fa003d) | Prepares the column header for display with the specified data. |
-| [Unrealize](#uid-031bc62835) | Releases resources used by the column header and prepares it for reuse. |
-| [UpdateColumnIndex](#uid-c779ddd7b0) | Updates the column index of this header. |
 | [ApplyTemplate](templatedcontrol.mdx#uid-cc70dd4d2f) | Creates the visual children of the control, if necessary Inherited from [TemplatedControl](templatedcontrol.mdx). |
 | [GetIsTemplateFocusTarget](templatedcontrol.mdx#uid-75a788f38f) | Gets the value of the IsTemplateFocusTargetProperty attached property on a control. Inherited from [TemplatedControl](templatedcontrol.mdx). |
 | [SetIsTemplateFocusTarget](templatedcontrol.mdx#uid-281801c25f) | Sets the value of the IsTemplateFocusTargetProperty attached property on a control. Inherited from [TemplatedControl](templatedcontrol.mdx). |
@@ -128,88 +125,6 @@ public TreeDataGridColumnHeader()
 | [SetCurrentValue (2 overloads)](../../avaloniaobject.mdx#uid-38759fd088) | Sets the value of a dependency property without changing its value source. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
 | [SetValue (3 overloads)](../../avaloniaobject.mdx#uid-47d14e19d7) | Sets a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
 | [VerifyAccess](../../avaloniaobject.mdx#uid-3b9d3c9793) | Checks that the current thread is the UI thread and throws if not. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
-
-<section className="apiref-page__member-entry">
-
-<span id="uid-09a3fa003d"></span>
-
-### Realize Method
-
-Prepares the column header for display with the specified data.
-
-```csharp
-public void Realize(Avalonia.Controls.Models.TreeDataGrid.IColumns columns, int columnIndex)
-```
-
-#### Parameters
-
-`columns` [Avalonia.Controls.Models.TreeDataGrid.IColumns](xref:Avalonia.Controls.Models.TreeDataGrid.IColumns)
-
-The columns collection.
-
-
-`columnIndex` int
-
-The index of the column.
-
-
-#### Remarks
-
-This method is called by the [Avalonia.Controls.Primitives.TreeDataGridColumnHeadersPresenter](xref:Avalonia.Controls.Primitives.TreeDataGridColumnHeadersPresenter) when a
-column header needs to be prepared for display. It initializes the header with the
-column data and subscribes to property change notifications from the column model.
-
-#### Exceptions
-
-- [The column header is already realized.](xref:System.InvalidOperationException)
-
-</section>
-
-<section className="apiref-page__member-entry">
-
-<span id="uid-031bc62835"></span>
-
-### Unrealize Method
-
-Releases resources used by the column header and prepares it for reuse.
-
-```csharp
-public void Unrealize()
-```
-
-#### Remarks
-
-This method is called by the [Avalonia.Controls.Primitives.TreeDataGridColumnHeadersPresenter](xref:Avalonia.Controls.Primitives.TreeDataGridColumnHeadersPresenter) when a
-column header is no longer needed for display. It unsubscribes from property change
-notifications from the column model and clears the header's state.
-
-</section>
-
-<section className="apiref-page__member-entry">
-
-<span id="uid-c779ddd7b0"></span>
-
-### UpdateColumnIndex Method
-
-Updates the column index of this header.
-
-```csharp
-public void UpdateColumnIndex(int columnIndex)
-```
-
-#### Parameters
-
-`columnIndex` int
-
-The new column index.
-
-
-#### Remarks
-
-This method is called when the index of the column changes, such as when columns are
-inserted or removed to the left of this column.
-
-</section>
 
 ## Properties
 
@@ -326,7 +241,7 @@ true if the column can be resized by the user; otherwise, false.
 
 #### Remarks
 
-This value is derived from the column model's [Avalonia.Controls.Models.TreeDataGrid.IColumn.CanUserResize](xref:Avalonia.Controls.Models.TreeDataGrid.IColumn.CanUserResize)
+This value is derived from the column model's [Avalonia.Controls.TreeDataGridColumn.CanUserResize](xref:Avalonia.Controls.TreeDataGridColumn.CanUserResize)
 property and the owning [Avalonia.Controls.TreeDataGrid.CanUserResizeColumns](xref:Avalonia.Controls.TreeDataGrid.CanUserResizeColumns) property.
 
 </section>
@@ -369,7 +284,7 @@ The header content, which can be a string, a data template, or any other object.
 
 #### Remarks
 
-This value is obtained from the [Avalonia.Controls.Models.TreeDataGrid.IColumn.Header](xref:Avalonia.Controls.Models.TreeDataGrid.IColumn.Header) property of the column
+This value is obtained from the [Avalonia.Controls.TreeDataGridColumn.Header](xref:Avalonia.Controls.TreeDataGridColumn.Header) property of the column
 model.
 
 </section>
@@ -393,7 +308,7 @@ The sort direction (ascending or descending), or null if the column is not sorte
 
 #### Remarks
 
-This value is obtained from the [Avalonia.Controls.Models.TreeDataGrid.IColumn.SortDirection](xref:Avalonia.Controls.Models.TreeDataGrid.IColumn.SortDirection) property of the
+This value is obtained from the [Avalonia.Controls.TreeDataGridColumn.SortDirection](xref:Avalonia.Controls.TreeDataGridColumn.SortDirection) property of the
 column model. The sort direction is updated when the user clicks on the column header
 and sorting is enabled.
 

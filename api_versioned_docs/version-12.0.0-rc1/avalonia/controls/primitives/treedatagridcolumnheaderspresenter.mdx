@@ -50,7 +50,7 @@ public class TreeDataGridColumnHeadersPresenter
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> TreeDataGridColumnarPresenterBase&lt;IColumn&gt; <span className="apiref-page__relation-separator">-&gt;</span> TreeDataGridColumnHeadersPresenter
+<span className="apiref-page__meta-label">Inheritance:</span> TreeDataGridColumnarPresenterBase&lt;TreeDataGridColumn&gt; <span className="apiref-page__relation-separator">-&gt;</span> TreeDataGridColumnHeadersPresenter
 </div>
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Implements:</span> <a href="../../logicaltree/ichildindexprovider">IChildIndexProvider</a>
@@ -64,7 +64,7 @@ column headers horizontally at the top of a [TreeDataGrid](xref:Avalonia.Control
 column headers, ensuring that only visible headers are realized in the visual tree to
 improve performance.
 
-This presenter coordinates with the [Avalonia.Controls.Models.TreeDataGrid.IColumns](xref:Avalonia.Controls.Models.TreeDataGrid.IColumns) collection to manage column
+This presenter coordinates with the [Avalonia.Controls.TreeDataGridColumns](xref:Avalonia.Controls.TreeDataGridColumns) collection to manage column
 widths, measurement, and layout. It also handles column resizing by committing the actual
 column widths during arrangement.
 

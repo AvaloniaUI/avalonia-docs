@@ -50,7 +50,7 @@ public class TreeDataGridRowsPresenter
 
 <div className="apiref-page__relations">
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Inheritance:</span> TreeDataGridPresenterBase&lt;IRow&gt; <span className="apiref-page__relation-separator">-&gt;</span> TreeDataGridRowsPresenter
+<span className="apiref-page__meta-label">Inheritance:</span> TreeDataGridPresenterBase&lt;ITreeDataGridRowModel&gt; <span className="apiref-page__relation-separator">-&gt;</span> TreeDataGridRowsPresenter
 </div>
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Implements:</span> <a href="../../logicaltree/ichildindexprovider">IChildIndexProvider</a>
@@ -99,7 +99,7 @@ public TreeDataGridRowsPresenter()
 Gets or sets the columns collection used to define the structure of rows.
 
 ```csharp
-public Avalonia.Controls.Models.TreeDataGrid.IColumns Columns { get; set; }
+public Avalonia.Controls.TreeDataGridColumns Columns { get; set; }
 ```
 
 </section>
@@ -119,7 +119,7 @@ public Avalonia.Controls.Models.TreeDataGrid.IColumns Columns { get; set; }
 Defines the [Avalonia.Controls.Primitives.TreeDataGridRowsPresenter.Columns](xref:Avalonia.Controls.Primitives.TreeDataGridRowsPresenter.Columns) property.
 
 ```csharp
-public Avalonia.DirectProperty<Avalonia.Controls.Primitives.TreeDataGridRowsPresenter, Avalonia.Controls.Models.TreeDataGrid.IColumns> ColumnsProperty
+public Avalonia.DirectProperty<Avalonia.Controls.Primitives.TreeDataGridRowsPresenter, Avalonia.Controls.TreeDataGridColumns> ColumnsProperty
 ```
 
 </section>

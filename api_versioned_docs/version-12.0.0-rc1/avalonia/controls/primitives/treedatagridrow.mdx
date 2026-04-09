@@ -91,10 +91,7 @@ public TreeDataGridRow()
 
 | Name | Description |
 | --- | --- |
-| [Realize](#uid-2ae42c1972) | Prepares the row for display with the specified data. |
 | [TryGetCell](#uid-ed3ed04d79) | Attempts to retrieve a realized cell at the specified column index. |
-| [Unrealize](#uid-76836aca6f) | Releases resources used by the row and prepares it for reuse. |
-| [UpdateIndex](#uid-5c317dc201) | Updates the index of this row. |
 | [ApplyTemplate](templatedcontrol.mdx#uid-cc70dd4d2f) | Creates the visual children of the control, if necessary Inherited from [TemplatedControl](templatedcontrol.mdx). |
 | [GetIsTemplateFocusTarget](templatedcontrol.mdx#uid-75a788f38f) | Gets the value of the IsTemplateFocusTargetProperty attached property on a control. Inherited from [TemplatedControl](templatedcontrol.mdx). |
 | [SetIsTemplateFocusTarget](templatedcontrol.mdx#uid-281801c25f) | Sets the value of the IsTemplateFocusTargetProperty attached property on a control. Inherited from [TemplatedControl](templatedcontrol.mdx). |
@@ -135,53 +132,6 @@ public TreeDataGridRow()
 
 <section className="apiref-page__member-entry">
 
-<span id="uid-2ae42c1972"></span>
-
-### Realize Method
-
-Prepares the row for display with the specified data.
-
-```csharp
-public void Realize(Avalonia.Controls.Primitives.TreeDataGridElementFactory elementFactory, Avalonia.Controls.Selection.ITreeDataGridSelectionInteraction selection, Avalonia.Controls.Models.TreeDataGrid.IColumns columns, Avalonia.Controls.Models.TreeDataGrid.IRows rows, int rowIndex)
-```
-
-#### Parameters
-
-`elementFactory` [Avalonia.Controls.Primitives.TreeDataGridElementFactory](xref:Avalonia.Controls.Primitives.TreeDataGridElementFactory)
-
-The element factory used to create child elements.
-
-
-`selection` [Avalonia.Controls.Selection.ITreeDataGridSelectionInteraction](xref:Avalonia.Controls.Selection.ITreeDataGridSelectionInteraction)
-
-The selection interaction model.
-
-
-`columns` [Avalonia.Controls.Models.TreeDataGrid.IColumns](xref:Avalonia.Controls.Models.TreeDataGrid.IColumns)
-
-The columns collection.
-
-
-`rows` [Avalonia.Controls.Models.TreeDataGrid.IRows](xref:Avalonia.Controls.Models.TreeDataGrid.IRows)
-
-The rows collection.
-
-
-`rowIndex` int
-
-The index of the row.
-
-
-#### Remarks
-
-This method is called by the [Avalonia.Controls.Primitives.TreeDataGridRowsPresenter](xref:Avalonia.Controls.Primitives.TreeDataGridRowsPresenter) when a row
-needs to be prepared for display. It initializes the row with the data and
-updates its selection state.
-
-</section>
-
-<section className="apiref-page__member-entry">
-
 <span id="uid-ed3ed04d79"></span>
 
 ### TryGetCell Method
@@ -211,56 +161,6 @@ The cell at the specified column index, or null if no cell exists at that positi
 This method delegates to the [Avalonia.Controls.Primitives.TreeDataGridRow.CellsPresenter](xref:Avalonia.Controls.Primitives.TreeDataGridRow.CellsPresenter) to retrieve the cell.
 If the specified cell is not currently realized (e.g., scrolled out of view),
 this method will return null.
-
-</section>
-
-<section className="apiref-page__member-entry">
-
-<span id="uid-76836aca6f"></span>
-
-### Unrealize Method
-
-Releases resources used by the row and prepares it for reuse.
-
-```csharp
-public void Unrealize()
-```
-
-#### Remarks
-
-This method is called by the [Avalonia.Controls.Primitives.TreeDataGridRowsPresenter](xref:Avalonia.Controls.Primitives.TreeDataGridRowsPresenter) when a row
-is no longer needed for display. It clears the row's state and raises the
-[Avalonia.Controls.TreeDataGrid.RowClearing](xref:Avalonia.Controls.TreeDataGrid.RowClearing) event.
-
-</section>
-
-<section className="apiref-page__member-entry">
-
-<span id="uid-5c317dc201"></span>
-
-### UpdateIndex Method
-
-Updates the index of this row.
-
-```csharp
-public void UpdateIndex(int index)
-```
-
-#### Parameters
-
-`index` int
-
-The new row index.
-
-
-#### Remarks
-
-This method is called when the index of the row changes, such as when rows are
-inserted or removed above it.
-
-#### Exceptions
-
-- [The row is not realized.](xref:System.InvalidOperationException)
 
 </section>
 
@@ -378,7 +278,7 @@ in [Avalonia.Controls.Primitives.TreeDataGridRow.OnApplyTemplate(Avalonia.Contro
 Gets the columns collection from the owning [Avalonia.Controls.TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid).
 
 ```csharp
-public Avalonia.Controls.Models.TreeDataGrid.IColumns Columns { get; set; }
+public Avalonia.Controls.TreeDataGridColumns Columns { get; set; }
 ```
 
 </section>
@@ -426,7 +326,7 @@ public object Model { get; set; }
 #### Remarks
 
 When the row is realized, returns the underlying model of the row. Will be of the type
-`TModel` as specified in the [Avalonia.Controls.ITreeDataGridSource&lt;T&gt;](xref:Avalonia.Controls.ITreeDataGridSource%601).
+`TModel` as specified in the [Avalonia.Controls.TreeDataGridSource&lt;T&gt;](xref:Avalonia.Controls.TreeDataGridSource%601).
 
 </section>
 
@@ -464,7 +364,7 @@ expanded hierarchical rows, the indices may not correspond directly to the data 
 Gets the rows collection from the owning [Avalonia.Controls.TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid).
 
 ```csharp
-public Avalonia.Controls.Models.TreeDataGrid.IRows Rows { get; set; }
+public Avalonia.Controls.TreeDataGridRows Rows { get; set; }
 ```
 
 </section>
@@ -588,7 +488,7 @@ public Avalonia.Controls.Models.TreeDataGrid.IRows Rows { get; set; }
 Defines the [Avalonia.Controls.Primitives.TreeDataGridRow.Columns](xref:Avalonia.Controls.Primitives.TreeDataGridRow.Columns) property.
 
 ```csharp
-public Avalonia.DirectProperty<Avalonia.Controls.Primitives.TreeDataGridRow, Avalonia.Controls.Models.TreeDataGrid.IColumns> ColumnsProperty
+public Avalonia.DirectProperty<Avalonia.Controls.Primitives.TreeDataGridRow, Avalonia.Controls.TreeDataGridColumns> ColumnsProperty
 ```
 
 </section>
@@ -630,7 +530,7 @@ public Avalonia.DirectProperty<Avalonia.Controls.Primitives.TreeDataGridRow, boo
 Defines the [Avalonia.Controls.Primitives.TreeDataGridRow.Rows](xref:Avalonia.Controls.Primitives.TreeDataGridRow.Rows) property.
 
 ```csharp
-public Avalonia.DirectProperty<Avalonia.Controls.Primitives.TreeDataGridRow, Avalonia.Controls.Models.TreeDataGrid.IRows> RowsProperty
+public Avalonia.DirectProperty<Avalonia.Controls.Primitives.TreeDataGridRow, Avalonia.Controls.TreeDataGridRows> RowsProperty
 ```
 
 </section>

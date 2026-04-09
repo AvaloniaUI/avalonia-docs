@@ -307,15 +307,16 @@ bool
 | [CanUserSortColumns](#uid-6de5243999) | Gets or sets a value indicating whether users can sort columns. |
 | [ColumnHeaderTheme](#uid-4c61af28b7) | Gets or sets the theme applied to all column headers. |
 | [ColumnHeadersPresenter](#uid-8cb051b956) | Gets the presenter that displays the column headers. |
-| [ColumnSelection](#uid-08b102fab0) | Gets the column selection model when the [TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid) is in cell selection mode. |
-| [Columns](#uid-8c2d3632de) | Gets the columns collection of the [TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid). |
-| [ElementFactory](#uid-db718a58f6) | Gets or sets the element factory used to create UI elements for the [TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid). |
+| [Columns](#uid-8c2d3632de) | Gets the columns defined on the [Avalonia.Controls.TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid). |
+| [ElementFactory](#uid-db718a58f6) | Gets the element factory used to create UI elements for the [TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid). |
 | [FrozenColumnCount](#uid-f954232d45) | Gets or sets the number of columns that are frozen on the left side. |
-| [RowSelection](#uid-dd5badaacd) | Gets the row selection model when the [TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid) is in row selection mode. |
+| [ItemsSource](#uid-6c70efb9b0) | Gets or sets the items source for the [TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid). |
 | [RowTheme](#uid-a3a91166dc) | Gets or sets the theme applied to all rows. |
 | [Rows](#uid-bef5e0069e) | Gets the rows collection of the [TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid). |
 | [RowsPresenter](#uid-6578864b79) | Gets the presenter that displays the rows. |
 | [Scroll](#uid-e55c35ca5a) | Gets the scroll viewer that enables scrolling through the [TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid) content. |
+| [Selection](#uid-82f771f39e) | Gets the selection model for the [TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid). |
+| [SelectionMode](#uid-aee8748a0d) | Gets or sets the selection mode for the [TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid). |
 | [ShowColumnHeaders](#uid-20c05bbd03) | Gets or sets a value indicating whether column headers should be displayed. |
 | [Source](#uid-1fb6b501cb) | Gets or sets the data source for the [TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid). |
 | [Background](primitives/templatedcontrol.mdx#uid-50dbd38ef5) | Gets or sets the brush used to draw the control's background. Inherited from [TemplatedControl](primitives/templatedcontrol.mdx). |
@@ -415,7 +416,7 @@ order through ascending and descending only.
 
 This behavior only applies if [Avalonia.Controls.TreeDataGrid.CanUserSortColumns](xref:Avalonia.Controls.TreeDataGrid.CanUserSortColumns) is true.
 Individual columns can override this behavior via their
-[Avalonia.Controls.Models.TreeDataGrid.ColumnOptions&lt;T&gt;.AllowTriStateSorting](xref:Avalonia.Controls.Models.TreeDataGrid.ColumnOptions%601.AllowTriStateSorting) property.
+[Avalonia.Controls.TreeDataGridColumn.AllowTriStateSorting](xref:Avalonia.Controls.TreeDataGridColumn.AllowTriStateSorting) property.
 
 </section>
 
@@ -516,37 +517,19 @@ for rendering the column headers at the top of the [TreeDataGrid](xref:Avalonia.
 
 <section className="apiref-page__member-entry">
 
-<span id="uid-08b102fab0"></span>
-
-### ColumnSelection Property
-
-Gets the column selection model when the [TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid) is in cell selection mode.
-
-```csharp
-public Avalonia.Controls.Selection.ITreeDataGridCellSelectionModel ColumnSelection { get; set; }
-```
-
-#### Remarks
-
-Returns null if the [TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid) is not in cell selection mode.
-
-</section>
-
-<section className="apiref-page__member-entry">
-
 <span id="uid-8c2d3632de"></span>
 
 ### Columns Property
 
-Gets the columns collection of the [TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid).
+Gets the columns defined on the [Avalonia.Controls.TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid).
 
 ```csharp
-public Avalonia.Controls.Models.TreeDataGrid.IColumns Columns { get; set; }
+public Avalonia.Controls.TreeDataGridColumns Columns { get; set; }
 ```
 
 #### Remarks
 
-This property is automatically populated from the [Avalonia.Controls.TreeDataGrid.Source](xref:Avalonia.Controls.TreeDataGrid.Source).
+This property can be populated in XAML or read from the [Avalonia.Controls.TreeDataGrid.Source](xref:Avalonia.Controls.TreeDataGrid.Source).
 
 </section>
 
@@ -556,7 +539,7 @@ This property is automatically populated from the [Avalonia.Controls.TreeDataGri
 
 ### ElementFactory Property
 
-Gets or sets the element factory used to create UI elements for the [TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid).
+Gets the element factory used to create UI elements for the [TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid).
 
 ```csharp
 public Avalonia.Controls.Primitives.TreeDataGridElementFactory ElementFactory { get; set; }
@@ -592,19 +575,24 @@ the total column count will freeze all columns.
 
 <section className="apiref-page__member-entry">
 
-<span id="uid-dd5badaacd"></span>
+<span id="uid-6c70efb9b0"></span>
 
-### RowSelection Property
+### ItemsSource Property
 
-Gets the row selection model when the [TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid) is in row selection mode.
+Gets or sets the items source for the [TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid).
 
 ```csharp
-public Avalonia.Controls.Selection.ITreeDataGridRowSelectionModel RowSelection { get; set; }
+public System.Collections.IEnumerable ItemsSource { get; set; }
 ```
 
 #### Remarks
 
-Returns null if the [TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid) is not in row selection mode.
+When set, a [Avalonia.Controls.FlatTreeDataGridSource&lt;T&gt;](xref:Avalonia.Controls.FlatTreeDataGridSource%601)
+is automatically created using the XAML-defined
+[Avalonia.Controls.TreeDataGrid.Columns](xref:Avalonia.Controls.TreeDataGrid.Columns) and assigned to [Avalonia.Controls.TreeDataGrid.Source](xref:Avalonia.Controls.TreeDataGrid.Source).
+
+This property is mutually exclusive with setting
+[Avalonia.Controls.TreeDataGrid.Source](xref:Avalonia.Controls.TreeDataGrid.Source) directly.
 
 </section>
 
@@ -635,7 +623,7 @@ This theme controls the appearance of row elements in the [TreeDataGrid](xref:Av
 Gets the rows collection of the [TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid).
 
 ```csharp
-public Avalonia.Controls.Models.TreeDataGrid.IRows Rows { get; set; }
+public Avalonia.Controls.TreeDataGridRows Rows { get; set; }
 ```
 
 #### Remarks
@@ -684,6 +672,48 @@ horizontal scrolling capabilities for the [TreeDataGrid](xref:Avalonia.Controls.
 
 <section className="apiref-page__member-entry">
 
+<span id="uid-82f771f39e"></span>
+
+### Selection Property
+
+Gets the selection model for the [TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid).
+
+```csharp
+public Avalonia.Controls.Selection.TreeDataGridSelectionModel Selection { get; set; }
+```
+
+#### Remarks
+
+To access the strongly-typed selection model, cast to the appropriate type. In the case
+where [Avalonia.Controls.TreeDataGrid.Source](xref:Avalonia.Controls.TreeDataGrid.Source) is set, the selection model type is determined by the source.
+When [Avalonia.Controls.TreeDataGrid.ItemsSource](xref:Avalonia.Controls.TreeDataGrid.ItemsSource) is set, the selection object will be a
+`TreeDataGridRowSelectionModel<object>` or a
+`TreeDataGridCellSelectionModel<object>` depending on
+[Avalonia.Controls.TreeDataGrid.SelectionMode](xref:Avalonia.Controls.TreeDataGrid.SelectionMode).
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-aee8748a0d"></span>
+
+### SelectionMode Property
+
+Gets or sets the selection mode for the [TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid).
+
+```csharp
+public Avalonia.Controls.TreeDataGridSelectionMode SelectionMode { get; set; }
+```
+
+#### Remarks
+
+Note that this property cannot be set when [Avalonia.Controls.TreeDataGrid.Source](xref:Avalonia.Controls.TreeDataGrid.Source) is set directly; the
+selection must be configured on the source itself in this case.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-20c05bbd03"></span>
 
 ### ShowColumnHeaders Property
@@ -709,7 +739,7 @@ The default value is true.
 Gets or sets the data source for the [TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid).
 
 ```csharp
-public Avalonia.Controls.ITreeDataGridSource Source { get; set; }
+public Avalonia.Controls.TreeDataGridSource Source { get; set; }
 ```
 
 #### Remarks
@@ -733,12 +763,14 @@ Use [Avalonia.Controls.FlatTreeDataGridSource&lt;T&gt;](xref:Avalonia.Controls.F
 | [ColumnsProperty](#uid-fd37c352e3) | Defines the [Avalonia.Controls.TreeDataGrid.Columns](xref:Avalonia.Controls.TreeDataGrid.Columns) property. |
 | [ElementFactoryProperty](#uid-8b3689e9f4) | Defines the [Avalonia.Controls.TreeDataGrid.ElementFactory](xref:Avalonia.Controls.TreeDataGrid.ElementFactory) property. |
 | [FrozenColumnCountProperty](#uid-fed18432d2) | Defines the [Avalonia.Controls.TreeDataGrid.FrozenColumnCount](xref:Avalonia.Controls.TreeDataGrid.FrozenColumnCount) property. |
+| [ItemsSourceProperty](#uid-3ea6fd37c9) | Defines the [Avalonia.Controls.TreeDataGrid.ItemsSource](xref:Avalonia.Controls.TreeDataGrid.ItemsSource) property. |
 | [RowDragOverEvent](#uid-72916572e8) | Defines the [Avalonia.Controls.TreeDataGrid.RowDragOver](xref:Avalonia.Controls.TreeDataGrid.RowDragOver) event. |
 | [RowDragStartedEvent](#uid-c209c5ad1b) | Defines the [Avalonia.Controls.TreeDataGrid.RowDragStarted](xref:Avalonia.Controls.TreeDataGrid.RowDragStarted) event. |
 | [RowDropEvent](#uid-8fc7fd2958) | Defines the [Avalonia.Controls.TreeDataGrid.RowDrop](xref:Avalonia.Controls.TreeDataGrid.RowDrop) event. |
 | [RowThemeProperty](#uid-c5d4ac0415) | Defines the [Avalonia.Controls.TreeDataGrid.RowTheme](xref:Avalonia.Controls.TreeDataGrid.RowTheme) property. |
 | [RowsProperty](#uid-5509310c09) | Defines the [Avalonia.Controls.TreeDataGrid.Rows](xref:Avalonia.Controls.TreeDataGrid.Rows) property. |
 | [ScrollProperty](#uid-08cc70c372) | Defines the [Avalonia.Controls.TreeDataGrid.Scroll](xref:Avalonia.Controls.TreeDataGrid.Scroll) property. |
+| [SelectionModeProperty](#uid-65bed0bf35) | Defines the [Avalonia.Controls.TreeDataGrid.SelectionMode](xref:Avalonia.Controls.TreeDataGrid.SelectionMode) property. |
 | [ShowColumnHeadersProperty](#uid-9f04ca0697) | Defines the [Avalonia.Controls.TreeDataGrid.ShowColumnHeaders](xref:Avalonia.Controls.TreeDataGrid.ShowColumnHeaders) property. |
 | [SourceProperty](#uid-9674443eba) | Defines the [Avalonia.Controls.TreeDataGrid.Source](xref:Avalonia.Controls.TreeDataGrid.Source) property. |
 | [BackgroundProperty](primitives/templatedcontrol.mdx#uid-dbbd1ffb9b) | Defines the [Avalonia.Controls.Primitives.TemplatedControl.Background](xref:Avalonia.Controls.Primitives.TemplatedControl.Background) property. Inherited from [TemplatedControl](primitives/templatedcontrol.mdx). |
@@ -922,7 +954,7 @@ public Avalonia.StyledProperty<Avalonia.Styling.ControlTheme> ColumnHeaderThemeP
 Defines the [Avalonia.Controls.TreeDataGrid.Columns](xref:Avalonia.Controls.TreeDataGrid.Columns) property.
 
 ```csharp
-public Avalonia.DirectProperty<Avalonia.Controls.TreeDataGrid, Avalonia.Controls.Models.TreeDataGrid.IColumns> ColumnsProperty
+public Avalonia.DirectProperty<Avalonia.Controls.TreeDataGrid, Avalonia.Controls.TreeDataGridColumns> ColumnsProperty
 ```
 
 </section>
@@ -951,6 +983,20 @@ Defines the [Avalonia.Controls.TreeDataGrid.FrozenColumnCount](xref:Avalonia.Con
 
 ```csharp
 public Avalonia.StyledProperty<int> FrozenColumnCountProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3ea6fd37c9"></span>
+
+### ItemsSourceProperty Field
+
+Defines the [Avalonia.Controls.TreeDataGrid.ItemsSource](xref:Avalonia.Controls.TreeDataGrid.ItemsSource) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Collections.IEnumerable> ItemsSourceProperty
 ```
 
 </section>
@@ -1020,7 +1066,7 @@ public Avalonia.StyledProperty<Avalonia.Styling.ControlTheme> RowThemeProperty
 Defines the [Avalonia.Controls.TreeDataGrid.Rows](xref:Avalonia.Controls.TreeDataGrid.Rows) property.
 
 ```csharp
-public Avalonia.DirectProperty<Avalonia.Controls.TreeDataGrid, Avalonia.Controls.Models.TreeDataGrid.IRows> RowsProperty
+public Avalonia.DirectProperty<Avalonia.Controls.TreeDataGrid, Avalonia.Controls.TreeDataGridRows> RowsProperty
 ```
 
 </section>
@@ -1035,6 +1081,20 @@ Defines the [Avalonia.Controls.TreeDataGrid.Scroll](xref:Avalonia.Controls.TreeD
 
 ```csharp
 public Avalonia.DirectProperty<Avalonia.Controls.TreeDataGrid, Avalonia.Controls.Primitives.IScrollable> ScrollProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-65bed0bf35"></span>
+
+### SelectionModeProperty Field
+
+Defines the [Avalonia.Controls.TreeDataGrid.SelectionMode](xref:Avalonia.Controls.TreeDataGrid.SelectionMode) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.TreeDataGridSelectionMode> SelectionModeProperty
 ```
 
 </section>
@@ -1062,7 +1122,7 @@ public Avalonia.StyledProperty<bool> ShowColumnHeadersProperty
 Defines the [Avalonia.Controls.TreeDataGrid.Source](xref:Avalonia.Controls.TreeDataGrid.Source) property.
 
 ```csharp
-public Avalonia.DirectProperty<Avalonia.Controls.TreeDataGrid, Avalonia.Controls.ITreeDataGridSource> SourceProperty
+public Avalonia.DirectProperty<Avalonia.Controls.TreeDataGrid, Avalonia.Controls.TreeDataGridSource> SourceProperty
 ```
 
 </section>
@@ -1079,6 +1139,7 @@ public Avalonia.DirectProperty<Avalonia.Controls.TreeDataGrid, Avalonia.Controls
 | [RowDragStarted](#uid-4880d72c4a) | Occurs when the user starts to drag a row. |
 | [RowDrop](#uid-b8ba31b02a) | Occurs when a drop operation is performed on a row. |
 | [RowPrepared](#uid-e14eb7a566) | Occurs when a row has been prepared for display. |
+| [SelectionChanged](#uid-0cf9d27844) | Occurs when the selection in the [TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid) changes. |
 | [SelectionChanging](#uid-bc093c88e1) | Occurs before the selection in the [TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid) changes. |
 | [TemplateApplied](primitives/templatedcontrol.mdx#uid-d353f79b7c) | Raised when the control's template is applied. Inherited from [TemplatedControl](primitives/templatedcontrol.mdx). |
 | [Loaded](control.mdx#uid-c0a1ac2bc3) | Occurs when the control has been fully constructed in the visual tree and both layout and render are complete. Inherited from [Control](control.mdx). |
@@ -1268,6 +1329,26 @@ public event EventHandler<Avalonia.Controls.TreeDataGridRowEventArgs> RowPrepare
 
 A row is prepared when it is created and bound to data for display. This event can be
 used to customize the appearance or behavior of the row before it is rendered.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0cf9d27844"></span>
+
+### SelectionChanged Event
+
+Occurs when the selection in the [TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid) changes.
+
+```csharp
+public event EventHandler<Avalonia.Controls.Selection.TreeDataGridSelectionChangedEventArgs> SelectionChanged
+```
+
+#### Remarks
+
+This event is forwarded from the underlying selection model's
+[Avalonia.Controls.Selection.TreeDataGridSelectionModel.SelectionChanged](xref:Avalonia.Controls.Selection.TreeDataGridSelectionModel.SelectionChanged) event, providing unified
+event args with row and cell index information.
 
 </section>
 
