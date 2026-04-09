@@ -308,9 +308,6 @@ const sidebars = {
           "label": "Avalonia.Controls",
           "items": [
             "avalonia/controls/acrylicplatformcompensationlevels",
-            "avalonia/controls/appbarbutton",
-            "avalonia/controls/appbarseparator",
-            "avalonia/controls/appbartogglebutton",
             "avalonia/controls/autocompletebox",
             "avalonia/controls/autocompletefiltermode",
             "avalonia/controls/autocompletefilterpredicate-1",
@@ -3743,18 +3740,6 @@ const sidebars = {
         },
         {
           "type": "category",
-          "label": "AvaloniaUI.DiagnosticsProtocol",
-          "items": [
-            "avaloniaui/diagnosticsprotocol/79d49280-9f55-4197-89a8-9ff9b45290e2-observerslist-2-observerslistperparam",
-            "avaloniaui/diagnosticsprotocol/diagnosticlogger"
-          ],
-          "link": {
-            "type": "doc",
-            "id": "avaloniaui/diagnosticsprotocol/index"
-          }
-        },
-        {
-          "type": "category",
           "label": "AvaloniaUI.DiagnosticsProtocol.Application",
           "items": [
             "avaloniaui/diagnosticsprotocol/application/logentryverbosity"
@@ -3762,40 +3747,6 @@ const sidebars = {
           "link": {
             "type": "doc",
             "id": "avaloniaui/diagnosticsprotocol/application/index"
-          }
-        },
-        {
-          "type": "category",
-          "label": "AvaloniaUI.DiagnosticsProtocol.Protocol",
-          "items": [
-            "avaloniaui/diagnosticsprotocol/protocol/79d49280-9f55-4197-89a8-9ff9b45290e2-diagnosticsconsts-args",
-            "avaloniaui/diagnosticsprotocol/protocol/79d49280-9f55-4197-89a8-9ff9b45290e2-diagnosticsconsts-env"
-          ],
-          "link": {
-            "type": "doc",
-            "id": "avaloniaui/diagnosticsprotocol/protocol/index"
-          }
-        },
-        {
-          "type": "category",
-          "label": "AvaloniaUI.DiagnosticsProtocol.Serialization",
-          "items": [
-            "avaloniaui/diagnosticsprotocol/serialization/79d49280-9f55-4197-89a8-9ff9b45290e2-systemtextjsonmethodcallserializer-remoteexceptioncontext"
-          ],
-          "link": {
-            "type": "doc",
-            "id": "avaloniaui/diagnosticsprotocol/serialization/index"
-          }
-        },
-        {
-          "type": "category",
-          "label": "AvaloniaUI.DiagnosticsProtocol.Tree",
-          "items": [
-            "avaloniaui/diagnosticsprotocol/tree/79d49280-9f55-4197-89a8-9ff9b45290e2-elementstreesearchresponse-searchitem"
-          ],
-          "link": {
-            "type": "doc",
-            "id": "avaloniaui/diagnosticsprotocol/tree/index"
           }
         },
         {
@@ -3825,17 +3776,6 @@ const sidebars = {
           }
         },
         "compiledavaloniaxaml/index",
-        {
-          "type": "category",
-          "label": "CoreRPC.Utility",
-          "items": [
-            "corerpc/utility/79d49280-9f55-4197-89a8-9ff9b45290e2-concurentbulkreadoptimizedcache-2-cachecontext"
-          ],
-          "link": {
-            "type": "doc",
-            "id": "corerpc/utility/index"
-          }
-        }
       ],
       "link": {
         "type": "doc",
