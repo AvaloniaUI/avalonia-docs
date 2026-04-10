@@ -11,8 +11,6 @@ import CommandBarSecondaryCommandsScreenshot from '/img/controls/commandbar/comm
 import CommandBarContentScreenshot from '/img/controls/commandbar/commandbar-content.png';
 import CommandBarToggleButtonScreenshot from '/img/controls/commandbar/commandbar-toggle-button.png';
 
-# CommandBar
-
 `CommandBar` is a toolbar that displays a row of primary command buttons with an optional overflow menu for secondary commands. Primary commands are always visible in the bar. Secondary commands appear in a popup revealed by the overflow button (`...`). When `IsDynamicOverflowEnabled` is `true`, primary commands that do not fit in the available width are automatically moved to the overflow.
 
 The items in a `CommandBar` implement the `ICommandBarElement` interface. The built-in implementations are `AppBarButton`, `AppBarToggleButton`, and `AppBarSeparator`.
@@ -236,9 +234,6 @@ Enable `IsDynamicOverflowEnabled` so commands automatically move to overflow whe
 ```
 
 ### Controlling overflow programmatically
-
-<!-- Always visible -->
-<CommandBar OverflowButtonVisibility="Visible" />
 
 ```xml
 <CommandBar IsOpen="{Binding IsOverflowOpen}">
