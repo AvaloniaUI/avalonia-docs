@@ -1,6 +1,7 @@
 ---
-id: commandbar
 title: CommandBar
+description: '`CommandBar` is a toolbar that displays a row of command buttons.'
+doc-type: reference
 ---
 
 import CommandBarLabelBottomScreenshot from '/img/controls/commandbar/commandbar-label-bottom.png';
@@ -10,92 +11,86 @@ import CommandBarSecondaryCommandsScreenshot from '/img/controls/commandbar/comm
 import CommandBarContentScreenshot from '/img/controls/commandbar/commandbar-content.png';
 import CommandBarToggleButtonScreenshot from '/img/controls/commandbar/commandbar-toggle-button.png';
 
-A [`CommandBar`](/api/avalonia/controls/commandbar) is a toolbar-style control that displays a row of primary commands and an overflow menu for secondary commands. It is commonly used to surface the most relevant actions for the current context, while keeping less frequently used commands accessible through the overflow ("more") button.
+`CommandBar` is a toolbar that displays a row of primary command buttons with an optional overflow menu for secondary commands. Primary commands are always visible in the bar. Secondary commands appear in a popup revealed by the overflow button (`...`). When `IsDynamicOverflowEnabled` is `true`, primary commands that do not fit in the available width are automatically moved to the overflow.
 
-Primary commands appear directly in the bar. When space is limited, commands can automatically move into the overflow area. Secondary commands always appear in the overflow menu.
+The items in a `CommandBar` implement the `ICommandBarElement` interface. The built-in implementations are `AppBarButton`, `AppBarToggleButton`, and `AppBarSeparator`.
 
-## ICommandBarElement
-
-Items placed in a `CommandBar` must implement the `ICommandBarElement` interface. Avalonia provides three built-in implementations:
-
-- **`CommandBarButton`**: A button with an icon, a label, or both. Supports commands via the `Command` property.
-- **`CommandBarToggleButton`**: A toggle button that maintains a checked/unchecked state. Useful for toggling options such as bold or italic formatting.
-- **[`CommandBarSeparator`](/api/avalonia/controls/commandbarseparator)**: A visual divider used to group related commands within the bar or the overflow menu.
-
-## CommandBar properties
+## CommandBar Properties
 
 | Property | Type | Default | Description |
-| --- | --- | --- | --- |
-| `PrimaryCommands` | `IList<ICommandBarElement>` | Empty | The collection of primary commands displayed directly in the bar. |
-| `SecondaryCommands` | `IList<ICommandBarElement>` | Empty | The collection of secondary commands displayed in the overflow menu. |
-| `Content` | `object` | `null` | Custom content displayed in the area between primary commands and the overflow button. |
-| `DefaultLabelPosition` | `CommandBarDefaultLabelPosition` | `Bottom` | Controls where labels appear relative to icons for all commands in the bar. |
-| `IsDynamicOverflowEnabled` | `bool` | `true` | When `true`, primary commands automatically move to the overflow menu if the bar is too narrow to display them all. |
-| `OverflowButtonVisibility` | `CommandBarOverflowButtonVisibility` | `Auto` | Controls when the overflow ("more") button is visible. |
-| `IsOpen` | `bool` | `false` | Whether the overflow menu is currently open. |
-| `IsSticky` | `bool` | `false` | When `true`, the overflow menu stays open until the user explicitly closes it, rather than closing on light dismiss. |
-| `HasSecondaryCommands` | `bool` | Read-only | Indicates whether the `SecondaryCommands` collection contains any items. |
-| `IsOverflowButtonVisible` | `bool` | Read-only | Indicates whether the overflow button is currently visible, based on `OverflowButtonVisibility` and available commands. |
-| `VisiblePrimaryCommands` | `IReadOnlyList<ICommandBarElement>` | Read-only | The subset of primary commands that are currently visible in the bar (not overflowed). |
-| `OverflowItems` | `IReadOnlyList<ICommandBarElement>` | Read-only | The combined list of overflowed primary commands and secondary commands shown in the overflow menu. |
+| -------- | ---- | ------- | ----------- |
+| `PrimaryCommands` | `IList<ICommandBarElement>?` | `null` | Commands displayed directly in the bar. |
+| `SecondaryCommands` | `IList<ICommandBarElement>?` | `null` | Commands displayed in the overflow popup. |
+| `Content` | `object?` | `null` | Custom content displayed at the leading edge of the bar, before the commands. |
+| `DefaultLabelPosition` | `CommandBarDefaultLabelPosition` | `Bottom` | How labels are positioned on all command buttons. See the values table below. |
+| `IsDynamicOverflowEnabled` | `bool` | `false` | When `true`, primary commands that do not fit are automatically moved to the overflow popup. |
+| `OverflowButtonVisibility` | `CommandBarOverflowButtonVisibility` | `Auto` | Controls when the overflow button is shown. See the values table below. |
+| `IsOpen` | `bool` | `false` | Whether the overflow popup is currently open. Bindable. |
+| `IsSticky` | `bool` | `false` | When `true`, the overflow popup stays open after a command is invoked. |
+| `HasSecondaryCommands` | `bool` | computed | Read-only. `true` when the overflow popup contains at least one command. |
+| `IsOverflowButtonVisible` | `bool` | computed | Read-only. `true` when the overflow button is currently rendered. |
+| `VisiblePrimaryCommands` | `ReadOnlyObservableCollection<ICommandBarElement>` | computed | Read-only. Primary commands currently visible in the bar (not moved to overflow). |
+| `OverflowItems` | `ReadOnlyObservableCollection<ICommandBarElement>` | computed | Read-only. Items currently shown in the overflow popup (secondary commands plus any dynamic overflow items). |
 
-## CommandBar events
+## CommandBar Events
 
 | Event | Description |
-| --- | --- |
-| `Opened` | Raised when the overflow menu is opened. |
-| `Closed` | Raised when the overflow menu is closed. |
-| `Opening` | Raised just before the overflow menu opens. |
-| `Closing` | Raised just before the overflow menu closes. Supports cancellation. |
+| ----- | ----------- |
+| `Opening` | Raised when the overflow popup is about to open. |
+| `Opened` | Raised when the overflow popup has opened. |
+| `Closing` | Raised when the overflow popup is about to close. |
+| `Closed` | Raised when the overflow popup has closed. |
 
-## DefaultLabelPosition values
-
-| Value | Description |
-| --- | --- |
-| `Bottom` | Labels appear below the icon. This is the default. |
-| `Right` | Labels appear to the right of the icon. |
-| `Collapsed` | Labels are hidden; only icons are shown. |
-
-## OverflowButtonVisibility values
+## DefaultLabelPosition Values
 
 | Value | Description |
-| --- | --- |
-| `Auto` | The overflow button is shown automatically when there are secondary commands or overflowed primary commands. |
-| `Visible` | The overflow button is always shown. |
-| `Collapsed` | The overflow button is always hidden. |
+| ----- | ----------- |
+| `Bottom` | Default. Label is displayed below the icon. |
+| `Right` | Label is displayed to the right of the icon. Useful for wider bars where horizontal space is available. |
+| `Collapsed` | No label is shown. Icon only. Add a `ToolTip.Tip` for accessibility. |
+
+## OverflowButtonVisibility Values
+
+| Value | Description |
+| ----- | ----------- |
+| `Auto` | Default. The overflow button appears only when `SecondaryCommands` is non-empty or dynamic overflow is active. |
+| `Visible` | The overflow button is always shown, even when there are no secondary commands. |
+| `Collapsed` | The overflow button is never shown. |
 
 ## CommandBarButton properties
 
 | Property | Type | Default | Description |
-| --- | --- | --- | --- |
-| `Icon` | `IconElement` | `null` | The icon displayed on the button. Typically a `PathIcon`, `SymbolIcon`, or `BitmapIcon`. |
-| `Label` | `string` | `null` | The text label for the button. |
-| `Command` | `ICommand` | `null` | The command to invoke when the button is clicked. |
-| `CommandParameter` | `object` | `null` | The parameter passed to the command. |
-| `IsInOverflow` | `bool` | Read-only | Indicates whether the button is currently displayed in the overflow menu. |
-| `DynamicOverflowOrder` | `int` | `0` | Controls the order in which primary commands move to overflow when space is limited. Lower values overflow first. |
+| -------- | ---- | ------- | ----------- |
+| `Label` | `string?` | `null` | Text label shown below or beside the icon, depending on `DefaultLabelPosition`. |
+| `Icon` | `object?` | `null` | Icon content. Typically a `PathIcon`. |
+| `IsCompact` | `bool` | `false` | When `true`, the label is hidden and the button takes less space. Set automatically by `CommandBar`. |
+| `LabelPosition` | `CommandBarDefaultLabelPosition` | `Bottom` | Per-button label position override. Set automatically by `CommandBar` from `DefaultLabelPosition`, but can be set manually to override a single button. |
+| `DynamicOverflowOrder` | `int` | `0` | Priority for dynamic overflow. Items with a higher value move to overflow first. Items with the same value overflow together. |
+| `IsInOverflow` | `bool` | `false` | Read-only. `true` when the button is currently shown in the overflow popup. |
+
+`AppBarButton` also supports `Command`, `CommandParameter`, and the standard `Click` event inherited from `Button`.
 
 ## CommandBarToggleButton properties
 
 | Property | Type | Default | Description |
-| --- | --- | --- | --- |
-| `Icon` | `IconElement` | `null` | The icon displayed on the toggle button. |
-| `Label` | `string` | `null` | The text label for the toggle button. |
-| `IsChecked` | `bool` | `false` | Whether the toggle button is currently in the checked state. |
-| `Command` | `ICommand` | `null` | The command to invoke when the toggle button is clicked. |
-| `CommandParameter` | `object` | `null` | The parameter passed to the command. |
-| `IsInOverflow` | `bool` | Read-only | Indicates whether the toggle button is currently displayed in the overflow menu. |
-| `DynamicOverflowOrder` | `int` | `0` | Controls the order in which this button moves to overflow. Lower values overflow first. |
+| -------- | ---- | ------- | ----------- |
+| `Label` | `string?` | `null` | Text label. |
+| `Icon` | `object?` | `null` | Icon content. Typically a `PathIcon`. |
+| `IsChecked` | `bool?` | `false` | Whether the button is in the checked state. Nullable for three-state support. |
+| `IsCompact` | `bool` | `false` | When `true`, the label is hidden. |
+| `LabelPosition` | `CommandBarDefaultLabelPosition` | `Bottom` | Per-button label position override. Set automatically by `CommandBar` from `DefaultLabelPosition`, but can be set manually to override a single button. |
+| `DynamicOverflowOrder` | `int` | `0` | Priority for dynamic overflow. |
+| `IsInOverflow` | `bool` | `false` | Read-only. `true` when shown in overflow. |
+
+`AppBarToggleButton` raises `IsCheckedChanged` when its state changes.
 
 ## CommandBarSeparator
 
-`CommandBarSeparator` renders a vertical line (in the primary command area) or a horizontal line (in the overflow menu) to visually group related commands. It has no configurable properties beyond those inherited from `ICommandBarElement`.
+`CommandBarSeparator` draws a visual divider between groups of commands. It has no label or icon. It implements `ICommandBarElement` so it can be placed in `PrimaryCommands` or `SecondaryCommands`.
 
 ## Examples
 
-### Basic CommandBar
-
-A simple command bar with icon buttons:
+### Basic CommandBar in XAML
 
 ```xml
 <CommandBar>
@@ -104,6 +99,10 @@ A simple command bar with icon buttons:
         <CommandBarButton Label="Edit" Icon="{StaticResource EditIcon}" />
         <CommandBarButton Label="Delete" Icon="{StaticResource DeleteIcon}" />
     </CommandBar.PrimaryCommands>
+    <CommandBar.SecondaryCommands>
+        <AppBarButton Label="Export" Click="OnExportClick" />
+        <AppBarButton Label="Print"  Click="OnPrintClick" />
+    </CommandBar.SecondaryCommands>
 </CommandBar>
 ```
 
@@ -130,11 +129,11 @@ Use `CommandBarSeparator` to group commands, and place less common actions in `S
 </CommandBar>
 ```
 
-<img src={CommandBarSecondaryCommandsScreenshot} alt="CommandBar with secondary commands in the overflow menu" />
+<img src={CommandBarSecondaryCommandsScreenshot} alt="" />
 
-### Custom content area
+### Custom Content Area
 
-The `Content` property lets you place custom content between the primary commands and the overflow button:
+The `Content` property places custom content at the leading edge of the bar, before the commands:
 
 ```xml
 <CommandBar>
@@ -143,47 +142,40 @@ The `Content` property lets you place custom content between the primary command
         <CommandBarButton Label="Forward" Icon="{StaticResource ForwardIcon}" />
     </CommandBar.PrimaryCommands>
     <CommandBar.Content>
-        <TextBox Watermark="Search..." Width="200" Margin="8,0" />
+        <TextBlock Text="Document Editor"
+                   VerticalAlignment="Center"
+                   Margin="8,0" />
     </CommandBar.Content>
+    <CommandBar.PrimaryCommands>
+        <AppBarButton Label="Save"  Click="OnSaveClick" />
+        <AppBarButton Label="Undo"  Click="OnUndoClick" />
+    </CommandBar.PrimaryCommands>
 </CommandBar>
 ```
 
-<img src={CommandBarContentScreenshot} alt="CommandBar with custom content area" />
+<img src={CommandBarContentScreenshot} alt="" />
 
-### Label positions
-
-Control where labels appear relative to icons using the `DefaultLabelPosition` property.
-
-**Bottom (default):**
+### Label Positions
 
 ```xml
+<!-- Default: label below icon -->
 <CommandBar DefaultLabelPosition="Bottom">
     <CommandBar.PrimaryCommands>
         <CommandBarButton Label="Add" Icon="{StaticResource AddIcon}" />
         <CommandBarButton Label="Edit" Icon="{StaticResource EditIcon}" />
     </CommandBar.PrimaryCommands>
 </CommandBar>
-```
 
-<img src={CommandBarLabelBottomScreenshot} alt="CommandBar with labels below icons" />
-
-**Right:**
-
-```xml
+<!-- Label to the right of the icon -->
 <CommandBar DefaultLabelPosition="Right">
     <CommandBar.PrimaryCommands>
         <CommandBarButton Label="Add" Icon="{StaticResource AddIcon}" />
         <CommandBarButton Label="Edit" Icon="{StaticResource EditIcon}" />
     </CommandBar.PrimaryCommands>
 </CommandBar>
-```
 
-<img src={CommandBarLabelRightScreenshot} alt="CommandBar with labels to the right of icons" />
-
-**Collapsed:**
-
-```xml
-<CommandBar DefaultLabelPosition="Collapsed">
+<!-- Icon only, no label -->
+<CommandBar DefaultLabelPosition="Collapsed" OverflowButtonVisibility="Collapsed">
     <CommandBar.PrimaryCommands>
         <CommandBarButton Label="Add" Icon="{StaticResource AddIcon}" />
         <CommandBarButton Label="Edit" Icon="{StaticResource EditIcon}" />
@@ -191,11 +183,11 @@ Control where labels appear relative to icons using the `DefaultLabelPosition` p
 </CommandBar>
 ```
 
-<img src={CommandBarLabelCollapsedScreenshot} alt="CommandBar with labels hidden" />
+When using `Collapsed`, always add `ToolTip.Tip` to preserve accessibility.
 
-### Dynamic overflow
+<img src={CommandBarLabelBottomScreenshot} alt="" />
 
-When `IsDynamicOverflowEnabled` is `true` (the default), primary commands that do not fit in the available space automatically move into the overflow menu. Use `DynamicOverflowOrder` to control which commands overflow first:
+<img src={CommandBarLabelRightScreenshot} alt="" />
 
 ```xml
 <CommandBar IsDynamicOverflowEnabled="True">
@@ -209,9 +201,9 @@ When `IsDynamicOverflowEnabled` is `true` (the default), primary commands that d
 
 In this example, "Less Important" overflows first (order 0), then "Moderate" (order 1), and "Important" overflows last (order 2).
 
-### Overflow button visibility
+### Dynamic Overflow
 
-Control when the overflow button appears:
+Enable `IsDynamicOverflowEnabled` so commands automatically move to overflow when the bar is too narrow. Use `DynamicOverflowOrder` to control which commands move first. Higher values overflow first:
 
 ```xml
 <!-- Always show the overflow button -->
@@ -229,9 +221,7 @@ Control when the overflow button appears:
 </CommandBar>
 ```
 
-### Sticky overflow
-
-When `IsSticky` is `true`, the overflow menu remains open until the user explicitly dismisses it. This is useful when multiple selections or interactions within the overflow menu are expected:
+### Overflow Button Visibility
 
 ```xml
 <CommandBar IsSticky="True">
@@ -245,8 +235,6 @@ When `IsSticky` is `true`, the overflow menu remains open until the user explici
 
 ### Controlling overflow programmatically
 
-You can open or close the overflow menu from code by binding to the `IsOpen` property:
-
 ```xml
 <CommandBar IsOpen="{Binding IsOverflowOpen}">
     <CommandBar.SecondaryCommands>
@@ -256,31 +244,22 @@ You can open or close the overflow menu from code by binding to the `IsOpen` pro
 </CommandBar>
 ```
 
-```csharp
-[ObservableProperty]
-private bool _isOverflowOpen;
+### Sticky Overflow Menu
 
-[RelayCommand]
-private void ShowOverflow() => IsOverflowOpen = true;
+Keep the overflow popup open after the user invokes a command:
+
+```csharp
+commandBar.IsSticky = true;
 ```
 
-### Responding to events
-
-Handle the `Opened` and `Closed` events to react when the overflow menu state changes:
+### Controlling Overflow Programmatically
 
 ```csharp
-public class MyPageViewModel
-{
-    public void OnCommandBarOpened(object sender, EventArgs e)
-    {
-        // The overflow menu was opened
-    }
+// Open the overflow popup
+commandBar.IsOpen = true;
 
-    public void OnCommandBarClosed(object sender, EventArgs e)
-    {
-        // The overflow menu was closed
-    }
-}
+// Close it
+commandBar.IsOpen = false;
 ```
 
 ```xml
@@ -291,29 +270,37 @@ public class MyPageViewModel
 </CommandBar>
 ```
 
-### CommandBar in ContentPage
+### CommandBar in a ContentPage
 
-Use the `TopCommandBar` or `BottomCommandBar` properties of `ContentPage` to attach a `CommandBar` to a page:
+Place the bar in `ContentPage.TopCommandBar` so it sits above the page content:
 
 ```xml
 <ContentPage xmlns="https://github.com/avaloniaui"
-             Header="My Page">
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyApp.EditorPage"
+             Header="Editor">
+
     <ContentPage.TopCommandBar>
         <CommandBar>
             <CommandBar.PrimaryCommands>
                 <CommandBarButton Label="Refresh" Icon="{StaticResource RefreshIcon}" />
                 <CommandBarButton Label="Filter" Icon="{StaticResource FilterIcon}" />
             </CommandBar.PrimaryCommands>
+            <CommandBar.SecondaryCommands>
+                <AppBarButton Label="Find and Replace" Click="OnFindClick" />
+                <AppBarButton Label="Export"           Click="OnExportClick" />
+            </CommandBar.SecondaryCommands>
         </CommandBar>
     </ContentPage.TopCommandBar>
 
-    <TextBlock Text="Page content here" Margin="16" />
+    <TextBox AcceptsReturn="True" Text="{Binding Content}" />
+
 </ContentPage>
 ```
 
-### CommandBar via NavigationPage attached property
+### CommandBar via NavigationPage Attached Property
 
-You can set a `CommandBar` on a page using the `NavigationPage` attached property, which places the bar within the navigation chrome:
+When the page is inside a `NavigationPage`, use `NavigationPage.TopCommandBar` to place the bar inside the navigation bar area:
 
 ```xml
 <ContentPage xmlns="https://github.com/avaloniaui"
@@ -327,7 +314,6 @@ You can set a `CommandBar` on a page using the `NavigationPage` attached propert
         </CommandBar>
     </NavigationPage.CommandBar>
 
-    <TextBlock Text="Detail content" Margin="16" />
 </ContentPage>
 ```
 
@@ -344,22 +330,25 @@ Bind `CommandBarButton` commands to your view model:
         <CommandBarButton Label="Delete"
                       Icon="{StaticResource DeleteIcon}"
                       Command="{Binding DeleteCommand}"
-                      CommandParameter="{Binding SelectedItem}" />
+                      IsEnabled="{Binding HasSelection}">
+            <AppBarButton.Icon>
+                <PathIcon Data="M19,4H15.5L14.5..." />
+            </AppBarButton.Icon>
+        </AppBarButton>
     </CommandBar.PrimaryCommands>
 </CommandBar>
 ```
 
-```csharp
-[RelayCommand]
-private async Task Save()
-{
-    await _dataService.SaveAsync();
-}
+### Toggle Button State Handling
 
-[RelayCommand]
-private async Task Delete(object item)
+```csharp
+private void OnBoldChanged(object? sender, RoutedEventArgs e)
 {
-    await _dataService.DeleteAsync(item);
+    if (sender is AppBarToggleButton btn)
+    {
+        bool isBold = btn.IsChecked == true;
+        ApplyBold(isBold);
+    }
 }
 ```
 
@@ -398,7 +387,5 @@ private bool _isUnderline;
 
 ## See also
 
-- [ContentPage](contentpage)
-- [NavigationPage](navigationpage)
-- [CommandBar API reference](/api/avalonia/controls/commandbar)
-- [`CommandBar.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/CommandBar/CommandBar.cs)
+- [API reference](/api/avalonia/controls/commandbar)
+- [Source code](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/CommandBar/CommandBar.cs)
