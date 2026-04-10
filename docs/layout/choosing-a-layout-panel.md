@@ -1,79 +1,106 @@
 ---
 id: choosing-a-layout-panel
 title: Choosing a layout panel
-description: Compare Avalonia panel controls and choose the right one for your layout scenario.
+description: Compare Avalonia panel controls and choose the right one for your layout strategy.
 doc-type: how-to
 ---
 
-Avalonia provides several panel controls, each designed for a different layout strategy. Choosing the right panel simplifies your XAML, improves performance, and makes your UI easier to maintain. This guide helps you pick the best panel for common scenarios.
+Choosing the right Avalonia panel simplifies your XAML, improves performance, and makes your UI easier to maintain. This guide helps you pick the best panel control for your desired layout strategy.
 
 ## Decision flowchart
 
-Ask yourself these questions in order:
-
-1. **Do you need rows and columns with different sizes?** Use [Grid](#grid).
-2. **Do you need a header, footer, or sidebar around a content area?** Use [DockPanel](#dockpanel).
-3. **Do you need items stacked in a single direction?** Use [StackPanel](#stackpanel).
-4. **Do you need items to wrap to the next line when space runs out?** Use [WrapPanel](#wrappanel).
-5. **Do you need items in a uniform grid of equal-sized cells?** Use [UniformGrid](#uniformgrid).
-6. **Do you need to position items relative to each other?** Use [RelativePanel](#relativepanel).
-7. **Do you need pixel-precise absolute positioning?** Use [Canvas](#canvas).
-8. **Do you need to layer children on top of each other?** Use [Panel](#panel).
+1. Do you need rows and columns with different sizes? **Use [Grid](#grid)**.
+2. Do you need a header, footer, or sidebar around the content area? **Use [DockPanel](#dockpanel)**.
+3. Do you need items stacked in a single direction? **Use [StackPanel](#stackpanel)**.
+4. Do you need items to wrap to the next line when space runs out? **Use [WrapPanel](#wrappanel)**.
+5. Do you need items in a uniform grid of equal-sized cells? **Use [UniformGrid](#uniformgrid)**.
+6. Do you need to position items relative to each other? **Use [RelativePanel](#relativepanel)**.
+7. Do you need pixel-precise absolute positioning? **Use [Canvas](#canvas)**.
+8. Do you need to layer children on top of each other? **Use [Panel](#panel)**.
 
 ## Quick comparison
 
 | Panel | Arrangement | Adapts to window size | Best for |
 |---|---|---|---|
 | [Grid](/controls/layout/panels/grid) | Rows and columns | Yes | Most general-purpose layouts, forms, dashboards |
-| [DockPanel](/controls/layout/panels/dockpanel) | Edges (top, bottom, left, right) + fill | Yes | App shells with header, sidebar, and content area |
-| [StackPanel](/controls/layout/panels/stackpanel) | Single line (vertical or horizontal) | Partially (stretches perpendicular, scrolls along) | Toolbars, menus, simple lists of controls |
+| [DockPanel](/controls/layout/panels/dockpanel) | Edges (top, bottom, left, right) and fill | Yes | App shells with header, sidebar, and content area |
+| [StackPanel](/controls/layout/panels/stackpanel) | Single line (vertical or horizontal) | Partial (stretches perpendicular, scrolls along) | Toolbars, menus, simple series of controls |
 | [WrapPanel](/controls/layout/panels/wrappanel) | Sequential with line wrapping | Yes | Tag clouds, icon grids, responsive item collections |
 | [UniformGrid](/controls/layout/panels/uniformgrid) | Equal-sized cells | Yes | Calculator keypads, image galleries, dashboards with equal tiles |
 | [RelativePanel](/controls/layout/panels/relativepanel) | Relative to siblings or panel edges | Yes | Adaptive layouts that rearrange based on available space |
 | [Canvas](/controls/layout/panels/canvas) | Absolute coordinates | No | Drawing surfaces, diagrams, custom overlays |
 | [Panel](/controls/layout/panels/panel) | Layered on top of each other | Yes | Overlays, stacking visuals at the same position |
 
-## Panel details
+## Grid
 
-### Grid
+The most versatile panel. Define rows and columns with fixed, proportional (`*`), or automatic (`Auto`) sizing. Place children in specified target cells.
 
-The most versatile panel. Define rows and columns with fixed, proportional (`*`), or automatic (`Auto`) sizing, then place children in specific cells.
+<XamlPreview>
 
 ```xml
-<Grid ColumnDefinitions="200,*" RowDefinitions="Auto,*">
+<Grid xmlns="https://github.com/avaloniaui"
+      ColumnDefinitions="100,*"
+      RowDefinitions="Auto,*"
+      ShowGridLines="true">
     <TextBlock Grid.Row="0" Grid.Column="0" Text="Label" />
     <TextBox Grid.Row="0" Grid.Column="1" />
-    <ListBox Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" />
+    <Button Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center">
+      Button spanning two columns
+    </Button>
 </Grid>
 ```
 
-**Use when:** You need a structured layout with rows and columns of varying sizes, such as a form, a dashboard, or any layout that mixes fixed and flexible regions.
+</XamlPreview>
 
-**Avoid when:** All children are stacked in one direction (use StackPanel) or all cells are the same size (use UniformGrid). Grid is heavier than simpler panels, so prefer a lighter alternative when it fits.
+**Use when:** You need a structured layout with rows and columns of varying sizes, such as a form, dashboard, or any layout that mixes fixed and flexible regions.
 
-### DockPanel
+**Avoid when:** You need all children to be stacked in one direction (use [`StackPanel`](#stackpanel) instead). You need all cells to be the same size (use [`UniformGrid`](#uniformgrid) instead). Also, `Grid` is heavier than simpler panels, so we recommend a lighter panel type if the complexity of `Grid` isn't needed.
+
+For more information, see the [Grid](/controls/layout/panels/grid) page.
+
+## DockPanel
 
 Docks children to the edges of the panel. The last child fills the remaining space.
 
+<XamlPreview>
+
 ```xml
-<DockPanel>
-    <Menu DockPanel.Dock="Top" />
-    <StatusBar DockPanel.Dock="Bottom" />
-    <TreeView DockPanel.Dock="Left" Width="200" />
-    <ContentControl />  <!-- fills remaining space -->
+<DockPanel xmlns="https://github.com/avaloniaui">
+
+    <Menu DockPanel.Dock="Top" Background="Gray">
+      <MenuItem Header="_File" />
+      <MenuItem Header="_Edit" />
+    </Menu>
+
+    <TextBlock DockPanel.Dock="Bottom" Background="Lime" Text="Ready" />
+
+    <StackPanel DockPanel.Dock="Right" Width="100">
+      <Button Content="Zoom in" />
+      <Button Content="Zoom out" />
+    </StackPanel>
+
+    <ContentControl Background="Beige" />  <!-- fills remaining space -->
+
 </DockPanel>
 ```
 
-**Use when:** You are building an app shell with a fixed header, footer, or sidebar around a central content area.
+</XamlPreview>
 
-**Avoid when:** You need children to share space proportionally. DockPanel allocates edge space in declaration order, so earlier children take priority. For proportional splitting, use a Grid.
+**Use when:** You are building an app shell with a fixed header, footer, and/or sidebar around a central content area.
 
-### StackPanel
+**Avoid when:** You need children to share space proportionally (use [`Grid`](#grid) instead). `DockPanel` gives priority to children declared earlier.
 
-Arranges children in a single line, either vertically (default) or horizontally. Children stretch to fill the perpendicular direction.
+For more information, see the [DockPanel](/controls/layout/panels/dockpanel) page.
+
+## StackPanel
+
+Arranges children in a single line, either vertical (default) or horizontal. Children stretch to fill the perpendicular direction.
+
+<XamlPreview>
 
 ```xml
-<StackPanel Spacing="8">
+<StackPanel xmlns="https://github.com/avaloniaui"
+            Spacing="8">
     <TextBlock Text="Name" />
     <TextBox />
     <TextBlock Text="Email" />
@@ -82,16 +109,23 @@ Arranges children in a single line, either vertically (default) or horizontally.
 </StackPanel>
 ```
 
-**Use when:** You have a short, linear list of controls: a toolbar, a settings form, a group of buttons, or a menu.
+</XamlPreview>
 
-**Avoid when:** The list of items might exceed the available space. StackPanel gives children unlimited space in the stacking direction, so it will never trigger scrolling on its own. Wrap it in a `ScrollViewer` if scrolling is needed, or consider an `ItemsControl` with virtualization for large collections.
+**Use when:** You want a short, linear series of controls, such as a toolbar, settings form, or menu.
 
-### WrapPanel
+**Avoid when:** You want a long series of items that exceeds the available space. `StackPanel` gives children unlimited space, and does not trigger scrolling. Consider wrapping in a `ScrollViewer`, or using an `ItemsControl` with virtualization instead.
 
-Lays out children left to right (or top to bottom), wrapping to a new line when the edge is reached.
+For more information, see the [StackPanel](/controls/layout/panels/stackpanel) page.
+
+## WrapPanel
+
+Lays out children left to right (or top to bottom), wrapping to a new line on reaching the edge.
+
+<XamlPreview>
 
 ```xml
-<WrapPanel ItemSpacing="8" LineSpacing="8">
+<WrapPanel xmlns="https://github.com/avaloniaui" 
+           ItemSpacing="8" LineSpacing="8">
     <Button Content="One" />
     <Button Content="Two" />
     <Button Content="Three" />
@@ -100,41 +134,55 @@ Lays out children left to right (or top to bottom), wrapping to a new line when 
 </WrapPanel>
 ```
 
-**Use when:** You want items to flow and reflow based on available space, like a set of tags, a gallery of thumbnails, or a responsive button bar.
+</XamlPreview>
 
-**Avoid when:** You need items to align in a strict row-and-column grid. WrapPanel items on different lines are independent, so columns will not align unless you set a fixed `ItemWidth`.
+**Use when:** You want items to flow based on available space, like tags, thumbnails, or a responsive button bar.
 
-### UniformGrid
+**Avoid when:** You need items to align in a strict pattern. `WrapPanel` items on different lines are spaced independently and will not form neat columns.
 
-Divides the available space into equal-sized cells. Children fill cells sequentially.
+For more information, see the [WrapPanel](/controls/layout/panels/wrappanel) page.
+
+## UniformGrid
+
+Divides the available space into equal cells. Children fill cells sequentially.
+
+<XamlPreview>
 
 ```xml
-<UniformGrid Columns="4" ColumnSpacing="4" ItemSpacing="4">
+<UniformGrid xmlns="https://github.com/avaloniaui" 
+             Columns="3">
     <Button Content="7" />
     <Button Content="8" />
     <Button Content="9" />
-    <Button Content="/" />
     <Button Content="4" />
     <Button Content="5" />
     <Button Content="6" />
-    <Button Content="*" />
+    <Button Content="1" />
+    <Button Content="2" />
+    <Button Content="3" />
 </UniformGrid>
 ```
 
-**Use when:** Every item should be the same size, such as a calculator keypad, a color palette, or a dashboard of equal tiles.
+</XamlPreview>
 
-**Avoid when:** Items need different sizes. UniformGrid forces all cells to be identical. Use Grid for variable-sized rows and columns.
+**Use when:** Every item should be the same size, such as a calculator keypad, color palette, or dashboard with equal tiles.
 
-### RelativePanel
+**Avoid when:** You need items of different sizes (use [`Grid`](#grid) instead).
 
-Positions children relative to sibling controls or the panel edges using attached properties.
+For more information, see the [UniformGrid](/controls/layout/panels/uniformgrid) page.
+
+## RelativePanel
+
+Positions children relative to sibling controls or panel edges using attached properties.
+
+<XamlPreview>
 
 ```xml
-<RelativePanel>
-    <TextBlock x:Name="TitleText" Text="Title"
+<RelativePanel xmlns="https://github.com/avaloniaui">
+    <TextBlock Name="TitleText" Text="Title"
                RelativePanel.AlignTopWithPanel="True"
                RelativePanel.AlignLeftWithPanel="True" />
-    <TextBox x:Name="SearchBox"
+    <TextBox Name="SearchBox"
              RelativePanel.Below="TitleText"
              RelativePanel.AlignLeftWith="TitleText"
              RelativePanel.AlignRightWithPanel="True"
@@ -146,16 +194,22 @@ Positions children relative to sibling controls or the panel edges using attache
 </RelativePanel>
 ```
 
-**Use when:** You need to describe layout relationships between controls (for example, "place this button below that text box and align it to the right edge"). This is especially useful for adaptive layouts where you change relationships based on available space.
+</XamlPreview>
 
-**Avoid when:** A simpler panel handles the job. RelativePanel is flexible but verbose. If your layout fits a Grid or StackPanel, use those instead.
+**Use when:** You need to describe layout relationships between controls, e.g., "place this button below that text box and align it to the right edge". This is especially useful for adaptive layouts where you can change relationships based on available space.
 
-### Canvas
+**Avoid when:** A simpler panel can create your layout. `RelativePanel` is flexible but verbose. If your layout fits a [`Grid`](#grid) or [`StackPanel`](#stackpanel), use those instead.
 
-Places children at exact pixel coordinates using `Canvas.Left`, `Canvas.Top`, `Canvas.Right`, and `Canvas.Bottom` attached properties.
+For more information, see the [RelativePanel](/controls/layout/panels/relativepanel) page.
+
+## Canvas
+
+Places children at exact pixel coordinates using `Canvas.Left`, `Canvas.Top`, `Canvas.Right`, and `Canvas.Bottom`.
+
+<XamlPreview>
 
 ```xml
-<Canvas>
+<Canvas xmlns="https://github.com/avaloniaui">
     <Ellipse Canvas.Left="50" Canvas.Top="30"
              Width="80" Height="80" Fill="Blue" />
     <Rectangle Canvas.Left="150" Canvas.Top="60"
@@ -163,37 +217,57 @@ Places children at exact pixel coordinates using `Canvas.Left`, `Canvas.Top`, `C
 </Canvas>
 ```
 
-**Use when:** You need absolute positioning for drawing surfaces, diagrams, or drag-and-drop scenarios where controls are placed at specific coordinates.
+</XamlPreview>
 
-**Avoid when:** You are building a standard application UI. Canvas layouts do not adapt to window resizing, so content can be clipped or leave empty space when the window size changes.
+**Use when:** You need absolute positioning for a drawing surface or a diagram. You want a drag-and-drop interface that places objects at specific coordinates.
 
-### Panel
+**Avoid when:** You are building a standard application UI. `Canvas` does not adapt to window resizing, so content can be clipped or leave empty space if the window size changes.
 
-The simplest container. All children are layered on top of each other, drawn in declaration order. Use `ZIndex` to control which child appears on top.
+For more information, see the [Canvas](/controls/layout/panels/canvas) page.
+
+## Panel
+
+The simplest container. All children are layered on top of each other, in declaration order. Use `ZIndex` to control which child appears on top.
+
+<XamlPreview>
 
 ```xml
-<Panel>
-    <Image Source="/bg.png" />
+<Panel xmlns="https://github.com/avaloniaui">
+    <ContentControl Name="BG" Background="Gray" />
     <TextBlock Text="Overlay text"
-               HorizontalAlignment="Center"
-               VerticalAlignment="Center" />
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center" />
 </Panel>
 ```
 
+</XamlPreview>
+
 **Use when:** You want to overlay one control on top of another, such as a watermark over an image or a loading indicator over content.
 
-**Avoid when:** You actually want children side by side or in a sequence. Panel stacks everything at the same position.
+**Avoid when:** You want children side-by-side or in a sequence.
+
+For more information, see the [Panel](/controls/layout/panels/panel) page.
 
 ## Nesting panels
 
-Complex layouts typically combine multiple panels. Use the simplest panel at each level:
+For complex layouts, you can combine multiple panels. Nest panels within one another, and use the simplest panel at each level.
+
+<XamlPreview>
 
 ```xml
-<DockPanel>
-    <!-- App shell: header + sidebar + content -->
-    <Menu DockPanel.Dock="Top" />
+<DockPanel xmlns="https://github.com/avaloniaui">
 
-    <StackPanel DockPanel.Dock="Left" Width="200" Spacing="4">
+    <!-- App shell: header + sidebar + content -->
+    <Menu DockPanel.Dock="Top"
+          Background="Gray">
+      <MenuItem Header="_File" />
+      <MenuItem Header="_Edit" />
+    </Menu>
+
+    <StackPanel DockPanel.Dock="Left"
+                Width="100"
+                Spacing="4"
+                Background="Navy">
         <!-- Sidebar: vertical list of navigation items -->
         <Button Content="Home" />
         <Button Content="Settings" />
@@ -202,20 +276,31 @@ Complex layouts typically combine multiple panels. Use the simplest panel at eac
     <Grid RowDefinitions="*,Auto">
         <!-- Content area: main content + status bar -->
         <ContentControl Grid.Row="0" />
-        <TextBlock Grid.Row="1" Text="Ready" />
+        <TextBlock Grid.Row="1" Background="Lime" Text="Ready" />
     </Grid>
+
 </DockPanel>
 ```
 
+</XamlPreview>
+
 ### Performance tips
 
-- Prefer simpler panels when possible. `StackPanel` and `Panel` are lighter than `Grid`.
-- Avoid deeply nested panels. If you find yourself nesting more than three levels deep, consider whether a single `Grid` with the right row and column definitions could replace the entire tree.
-- For large scrollable lists, use `ItemsRepeater` or `ListBox` with virtualization instead of putting hundreds of controls in a StackPanel inside a ScrollViewer.
+- Prefer simpler panels when possible. [`StackPanel`](#stackpanel) and [`Panel`](#panel) are lighter than [`Grid`](#grid).
+- Avoid deeply nested panels. If you find yourself nesting more than three levels deep, consider whether a single [`Grid`](#grid) with the right row and column definitions could replace the entire tree.
+- For large scrollable lists, use [`ItemsRepeater`](/controls/data-display/collections/itemsrepeater) or [`ListBox`](/controls/data-display/collections/listbox) with virtualization instead of putting hundreds of controls in a `StackPanel` inside a `ScrollViewer`.
 
 ## See also
 
-- [Layout](/docs/layout) for how the measure and arrange system works.
-- [Positioning Controls](positioning-controls) for alignment, margin, and padding.
-- [Responsive Layout How-To](/docs/how-to/responsive-layout-how-to) for adaptive layout techniques.
-- Individual panel references: [Grid](/controls/layout/panels/grid), [DockPanel](/controls/layout/panels/dockpanel), [StackPanel](/controls/layout/panels/stackpanel), [WrapPanel](/controls/layout/panels/wrappanel), [Canvas](/controls/layout/panels/canvas), [RelativePanel](/controls/layout/panels/relativepanel), [UniformGrid](/controls/layout/panels/uniformgrid), [Panel](/controls/layout/panels/panel).
+- [Layout](/docs/layout) for how the measure-and-arrange system works.
+- [Positioning controls](positioning-controls) for alignment, margin, and padding.
+- [Responsive layout how-to](/docs/how-to/responsive-layout-how-to) for adaptive layout techniques.
+- Individual panel references:
+  - [Grid](/controls/layout/panels/grid)
+  - [DockPanel](/controls/layout/panels/dockpanel)
+  - [StackPanel](/controls/layout/panels/stackpanel)
+  - [WrapPanel](/controls/layout/panels/wrappanel)
+  - [Canvas](/controls/layout/panels/canvas)
+  - [RelativePanel](/controls/layout/panels/relativepanel)
+  - [UniformGrid](/controls/layout/panels/uniformgrid)
+  - [Panel](/controls/layout/panels/panel).
