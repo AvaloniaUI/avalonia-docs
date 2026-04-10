@@ -5,7 +5,7 @@ description: Compare Avalonia panel controls and choose the right one for your l
 doc-type: how-to
 ---
 
-Choosing the right Avalonia panel simplifies your XAML, improves performance, and makes your UI easier to maintain. This guide helps you pick the best panel control for your desired layout strategy.
+Avalonia offers a variety of layout panels that fulfil different UI roles. This guide helps you pick the best panel control for your desired layout strategy.
 
 ## Decision flowchart
 
@@ -33,7 +33,7 @@ Choosing the right Avalonia panel simplifies your XAML, improves performance, an
 
 ## Grid
 
-The most versatile panel. Define rows and columns with fixed, proportional (`*`), or automatic (`Auto`) sizing. Place children in specified target cells.
+A versatile panel suitable for many common layouts. Define rows and columns with fixed, proportional (`*`), or automatic (`Auto`) sizing. Place children in specified target cells.
 
 <XamlPreview>
 
@@ -54,7 +54,7 @@ The most versatile panel. Define rows and columns with fixed, proportional (`*`)
 
 **Use when:** You need a structured layout with rows and columns of varying sizes, such as a form, dashboard, or any layout that mixes fixed and flexible regions.
 
-**Avoid when:** You need all children to be stacked in one direction (use [`StackPanel`](#stackpanel) instead). You need all cells to be the same size (use [`UniformGrid`](#uniformgrid) instead). Also, `Grid` is heavier than simpler panels, so we recommend a lighter panel type if the complexity of `Grid` isn't needed.
+**Avoid when:** You need all children to be stacked in one direction (use [`StackPanel`](#stackpanel) instead). You need all cells to be the same size (use [`UniformGrid`](#uniformgrid) instead). Also, `Grid` is heavier than simpler panels, so use a lighter panel type if the complexity of `Grid` isn't needed.
 
 For more information, see the [Grid](/controls/layout/panels/grid) page.
 
@@ -227,7 +227,7 @@ For more information, see the [Canvas](/controls/layout/panels/canvas) page.
 
 ## Panel
 
-The simplest container. All children are layered on top of each other, in declaration order. Use `ZIndex` to control which child appears on top.
+A minimal container that layers children on top of each other, in declaration order. Use `ZIndex` to control which child appears on top.
 
 <XamlPreview>
 
