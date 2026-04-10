@@ -325,7 +325,7 @@ The following example shows a search TextBox that waits 300ms after the user sto
 
 ```xml
 <StackPanel Spacing="8">
-    <TextBox Watermark="Search..."
+    <TextBox PlaceholderText="Search..."
              Text="{Binding SearchText, Delay=300}" />
     <TextBlock Text="{Binding SearchResults}" />
 </StackPanel>

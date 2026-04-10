@@ -3,14 +3,7 @@ id: webauthenticationbroker
 title: WebAuthenticationBroker
 description: "API reference for WebAuthenticationBroker, a utility for handling OAuth and web-based authentication flows in Avalonia applications."
 doc-type: reference
-tags:
-  - accelerate
 ---
-
-import Pill from '/src/components/global/Pill';
-
-<Pill variant="primary" href="/tools">Accelerate</Pill>
-<br/><br/>
 
 ## Overview
 

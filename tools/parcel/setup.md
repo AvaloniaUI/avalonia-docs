@@ -6,13 +6,10 @@ sidebar_label: Setup
 sidebar_position: 1
 doc-type: tutorial
 tags:
-  - accelerate
+  - avalonia plus
+  - avalonia pro
+  - avalonia enterprise
 ---
-
-import Pill from '/src/components/global/Pill';
-
-<Pill variant="primary" href="/tools">Accelerate</Pill>
-<br/><br/>
 
 Avalonia Parcel is a packaging tool for Avalonia applications. It's designed as a two-app solution (GUI and console tool) that handles building, signing and packaging applications across Windows, macOS, and Linux platforms.
 

@@ -59,7 +59,7 @@ The items in a `CommandBar` implement the `ICommandBarElement` interface. The bu
 | `Visible` | The overflow button is always shown, even when there are no secondary commands. |
 | `Collapsed` | The overflow button is never shown. |
 
-## AppBarButton Properties
+## CommandBarButton properties
 
 | Property | Type | Default | Description |
 | -------- | ---- | ------- | ----------- |
@@ -72,7 +72,7 @@ The items in a `CommandBar` implement the `ICommandBarElement` interface. The bu
 
 `AppBarButton` also supports `Command`, `CommandParameter`, and the standard `Click` event inherited from `Button`.
 
-## AppBarToggleButton Properties
+## CommandBarToggleButton properties
 
 | Property | Type | Default | Description |
 | -------- | ---- | ------- | ----------- |
@@ -86,9 +86,9 @@ The items in a `CommandBar` implement the `ICommandBarElement` interface. The bu
 
 `AppBarToggleButton` raises `IsCheckedChanged` when its state changes.
 
-## AppBarSeparator
+## CommandBarSeparator
 
-`AppBarSeparator` draws a visual divider between groups of commands. It has no label or icon. It implements `ICommandBarElement` so it can be placed in `PrimaryCommands` or `SecondaryCommands`.
+`CommandBarSeparator` draws a visual divider between groups of commands. It has no label or icon. It implements `ICommandBarElement` so it can be placed in `PrimaryCommands` or `SecondaryCommands`.
 
 ## Examples
 
@@ -97,16 +97,9 @@ The items in a `CommandBar` implement the `ICommandBarElement` interface. The bu
 ```xml
 <CommandBar>
     <CommandBar.PrimaryCommands>
-        <AppBarButton Label="Save" Click="OnSaveClick">
-            <AppBarButton.Icon>
-                <PathIcon Data="M15,9H5V5H15M12,19A3,3 0 0,1 9,16A3,3 0 0,1 12,13A3,3 0 0,1 15,16A3,3 0 0,1 12,19M17,3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V7L17,3Z" />
-            </AppBarButton.Icon>
-        </AppBarButton>
-        <AppBarButton Label="Share" Click="OnShareClick">
-            <AppBarButton.Icon>
-                <PathIcon Data="M18,16.08C17.24,16.08 16.56,16.38 16.04,16.85L8.91,12.7C8.96,12.47 9,12.24 9,12C9,11.76 8.96,11.53 8.91,11.3L15.96,7.19C16.5,7.69 17.21,8 18,8A3,3 0 0,0 21,5A3,3 0 0,0 18,2A3,3 0 0,0 15,5C15,5.24 15.04,5.47 15.09,5.7L8.04,9.81C7.5,9.31 6.79,9 6,9A3,3 0 0,0 3,12A3,3 0 0,0 6,15C6.79,15 7.5,14.69 8.04,14.19L15.16,18.34C15.11,18.55 15.08,18.77 15.08,19C15.08,20.61 16.39,21.91 18,21.91C19.61,21.91 20.92,20.61 20.92,19C20.92,17.39 19.61,16.08 18,16.08Z" />
-            </AppBarButton.Icon>
-        </AppBarButton>
+        <CommandBarButton Label="Add" Icon="{StaticResource AddIcon}" />
+        <CommandBarButton Label="Edit" Icon="{StaticResource EditIcon}" />
+        <CommandBarButton Label="Delete" Icon="{StaticResource DeleteIcon}" />
     </CommandBar.PrimaryCommands>
     <CommandBar.SecondaryCommands>
         <AppBarButton Label="Export" Click="OnExportClick" />
@@ -115,44 +108,25 @@ The items in a `CommandBar` implement the `ICommandBarElement` interface. The bu
 </CommandBar>
 ```
 
-### Primary and Secondary Commands with Separators
+### Primary and secondary commands with separators
+
+Use `CommandBarSeparator` to group commands, and place less common actions in `SecondaryCommands`:
 
 ```xml
 <CommandBar>
     <CommandBar.PrimaryCommands>
-        <AppBarButton Label="New">
-            <AppBarButton.Icon>
-                <PathIcon Data="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" />
-            </AppBarButton.Icon>
-        </AppBarButton>
-        <AppBarButton Label="Save">
-            <AppBarButton.Icon>
-                <PathIcon Data="M15,9H5V5H15M12,19A3..." />
-            </AppBarButton.Icon>
-        </AppBarButton>
-        <AppBarSeparator />
-        <AppBarToggleButton Label="Bold" IsCheckedChanged="OnBoldChanged">
-            <AppBarToggleButton.Icon>
-                <PathIcon Data="M15.6,10.79C17.04,10.07..." />
-            </AppBarToggleButton.Icon>
-        </AppBarToggleButton>
-        <AppBarToggleButton Label="Italic" IsCheckedChanged="OnItalicChanged">
-            <AppBarToggleButton.Icon>
-                <PathIcon Data="M10,4V7H12.21L8.79,15H6V18H14V15H11.79L15.21,7H18V4H10Z" />
-            </AppBarToggleButton.Icon>
-        </AppBarToggleButton>
-        <AppBarSeparator />
-        <AppBarButton Label="Share">
-            <AppBarButton.Icon>
-                <PathIcon Data="M18,16.08C17.24,16.08..." />
-            </AppBarButton.Icon>
-        </AppBarButton>
+        <CommandBarButton Label="Cut" Icon="{StaticResource CutIcon}" />
+        <CommandBarButton Label="Copy" Icon="{StaticResource CopyIcon}" />
+        <CommandBarButton Label="Paste" Icon="{StaticResource PasteIcon}" />
+        <CommandBarSeparator />
+        <CommandBarButton Label="Undo" Icon="{StaticResource UndoIcon}" />
+        <CommandBarButton Label="Redo" Icon="{StaticResource RedoIcon}" />
     </CommandBar.PrimaryCommands>
     <CommandBar.SecondaryCommands>
-        <AppBarButton Label="Export" Click="OnExportClick" />
-        <AppBarButton Label="Print"  Click="OnPrintClick" />
-        <AppBarSeparator />
-        <AppBarButton Label="Delete" Click="OnDeleteClick" />
+        <CommandBarButton Label="Select All" />
+        <CommandBarButton Label="Find and Replace" />
+        <CommandBarSeparator />
+        <CommandBarButton Label="Settings" />
     </CommandBar.SecondaryCommands>
 </CommandBar>
 ```
@@ -165,6 +139,10 @@ The `Content` property places custom content at the leading edge of the bar, bef
 
 ```xml
 <CommandBar>
+    <CommandBar.PrimaryCommands>
+        <CommandBarButton Label="Back" Icon="{StaticResource BackIcon}" />
+        <CommandBarButton Label="Forward" Icon="{StaticResource ForwardIcon}" />
+    </CommandBar.PrimaryCommands>
     <CommandBar.Content>
         <TextBlock Text="Document Editor"
                    VerticalAlignment="Center"
@@ -185,24 +163,24 @@ The `Content` property places custom content at the leading edge of the bar, bef
 <!-- Default: label below icon -->
 <CommandBar DefaultLabelPosition="Bottom">
     <CommandBar.PrimaryCommands>
-        <AppBarButton Label="Save" />
-        <AppBarButton Label="Share" />
+        <CommandBarButton Label="Add" Icon="{StaticResource AddIcon}" />
+        <CommandBarButton Label="Edit" Icon="{StaticResource EditIcon}" />
     </CommandBar.PrimaryCommands>
 </CommandBar>
 
 <!-- Label to the right of the icon -->
 <CommandBar DefaultLabelPosition="Right">
     <CommandBar.PrimaryCommands>
-        <AppBarButton Label="Save" />
-        <AppBarButton Label="Share" />
+        <CommandBarButton Label="Add" Icon="{StaticResource AddIcon}" />
+        <CommandBarButton Label="Edit" Icon="{StaticResource EditIcon}" />
     </CommandBar.PrimaryCommands>
 </CommandBar>
 
 <!-- Icon only, no label -->
 <CommandBar DefaultLabelPosition="Collapsed" OverflowButtonVisibility="Collapsed">
     <CommandBar.PrimaryCommands>
-        <AppBarButton ToolTip.Tip="Save" />
-        <AppBarButton ToolTip.Tip="Share" />
+        <CommandBarButton Label="Add" Icon="{StaticResource AddIcon}" />
+        <CommandBarButton Label="Edit" Icon="{StaticResource EditIcon}" />
     </CommandBar.PrimaryCommands>
 </CommandBar>
 ```
@@ -213,23 +191,34 @@ When using `Collapsed`, always add `ToolTip.Tip` to preserve accessibility.
 
 <img src={CommandBarLabelRightScreenshot} alt="" />
 
-<img src={CommandBarLabelCollapsedScreenshot} alt="" />
+```xml
+<CommandBar IsDynamicOverflowEnabled="True">
+    <CommandBar.PrimaryCommands>
+        <CommandBarButton Label="Important" Icon="{StaticResource StarIcon}" DynamicOverflowOrder="2" />
+        <CommandBarButton Label="Less Important" Icon="{StaticResource InfoIcon}" DynamicOverflowOrder="0" />
+        <CommandBarButton Label="Moderate" Icon="{StaticResource EditIcon}" DynamicOverflowOrder="1" />
+    </CommandBar.PrimaryCommands>
+</CommandBar>
+```
+
+In this example, "Less Important" overflows first (order 0), then "Moderate" (order 1), and "Important" overflows last (order 2).
 
 ### Dynamic Overflow
 
 Enable `IsDynamicOverflowEnabled` so commands automatically move to overflow when the bar is too narrow. Use `DynamicOverflowOrder` to control which commands move first. Higher values overflow first:
 
 ```xml
-<CommandBar IsDynamicOverflowEnabled="True">
+<!-- Always show the overflow button -->
+<CommandBar OverflowButtonVisibility="Visible">
     <CommandBar.PrimaryCommands>
-        <!-- DynamicOverflowOrder 0: stays visible the longest -->
-        <AppBarButton Label="New"    DynamicOverflowOrder="0" />
-        <AppBarButton Label="Save"   DynamicOverflowOrder="0" />
-        <!-- DynamicOverflowOrder 1: moves to overflow next -->
-        <AppBarButton Label="Share"  DynamicOverflowOrder="1" />
-        <!-- DynamicOverflowOrder 2: moves to overflow first -->
-        <AppBarButton Label="Bold"   DynamicOverflowOrder="2" />
-        <AppBarButton Label="Italic" DynamicOverflowOrder="2" />
+        <CommandBarButton Label="Save" Icon="{StaticResource SaveIcon}" />
+    </CommandBar.PrimaryCommands>
+</CommandBar>
+
+<!-- Never show the overflow button -->
+<CommandBar OverflowButtonVisibility="Collapsed">
+    <CommandBar.PrimaryCommands>
+        <CommandBarButton Label="Save" Icon="{StaticResource SaveIcon}" />
     </CommandBar.PrimaryCommands>
 </CommandBar>
 ```
@@ -237,14 +226,27 @@ Enable `IsDynamicOverflowEnabled` so commands automatically move to overflow whe
 ### Overflow Button Visibility
 
 ```xml
-<!-- Auto: shown only when needed (default) -->
-<CommandBar OverflowButtonVisibility="Auto" />
+<CommandBar IsSticky="True">
+    <CommandBar.SecondaryCommands>
+        <CommandBarToggleButton Label="Bold" Icon="{StaticResource BoldIcon}" />
+        <CommandBarToggleButton Label="Italic" Icon="{StaticResource ItalicIcon}" />
+        <CommandBarToggleButton Label="Underline" Icon="{StaticResource UnderlineIcon}" />
+    </CommandBar.SecondaryCommands>
+</CommandBar>
+```
+
+### Controlling overflow programmatically
 
 <!-- Always visible -->
 <CommandBar OverflowButtonVisibility="Visible" />
 
-<!-- Never visible -->
-<CommandBar OverflowButtonVisibility="Collapsed" />
+```xml
+<CommandBar IsOpen="{Binding IsOverflowOpen}">
+    <CommandBar.SecondaryCommands>
+        <CommandBarButton Label="Option A" />
+        <CommandBarButton Label="Option B" />
+    </CommandBar.SecondaryCommands>
+</CommandBar>
 ```
 
 ### Sticky Overflow Menu
@@ -265,11 +267,12 @@ commandBar.IsOpen = true;
 commandBar.IsOpen = false;
 ```
 
-### Responding to Overflow Events
-
-```csharp
-commandBar.Opened  += (s, e) => Console.WriteLine("Overflow opened");
-commandBar.Closed  += (s, e) => Console.WriteLine("Overflow closed");
+```xml
+<CommandBar Opened="OnCommandBarOpened" Closed="OnCommandBarClosed">
+    <CommandBar.SecondaryCommands>
+        <CommandBarButton Label="Help" />
+    </CommandBar.SecondaryCommands>
+</CommandBar>
 ```
 
 ### CommandBar in a ContentPage
@@ -285,8 +288,8 @@ Place the bar in `ContentPage.TopCommandBar` so it sits above the page content:
     <ContentPage.TopCommandBar>
         <CommandBar>
             <CommandBar.PrimaryCommands>
-                <AppBarButton Label="Undo" Click="OnUndoClick" />
-                <AppBarButton Label="Redo" Click="OnRedoClick" />
+                <CommandBarButton Label="Refresh" Icon="{StaticResource RefreshIcon}" />
+                <CommandBarButton Label="Filter" Icon="{StaticResource FilterIcon}" />
             </CommandBar.PrimaryCommands>
             <CommandBar.SecondaryCommands>
                 <AppBarButton Label="Find and Replace" Click="OnFindClick" />
@@ -306,39 +309,31 @@ When the page is inside a `NavigationPage`, use `NavigationPage.TopCommandBar` t
 
 ```xml
 <ContentPage xmlns="https://github.com/avaloniaui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MyApp.ListPage"
-             Header="Items"
-             NavigationPage.TopCommandBar="{x:Reference Bar}">
-
-    <CommandBar x:Name="Bar">
-        <CommandBar.PrimaryCommands>
-            <AppBarButton Label="Add"    Click="OnAddClick" />
-            <AppBarButton Label="Search" Click="OnSearchClick" />
-        </CommandBar.PrimaryCommands>
-        <CommandBar.SecondaryCommands>
-            <AppBarButton Label="Sort by Name" Click="OnSortByNameClick" />
-            <AppBarButton Label="Sort by Date" Click="OnSortByDateClick" />
-        </CommandBar.SecondaryCommands>
-    </CommandBar>
-
-    <ListBox ItemsSource="{Binding Items}" />
+             Header="Details">
+    <NavigationPage.CommandBar>
+        <CommandBar>
+            <CommandBar.PrimaryCommands>
+                <CommandBarButton Label="Share" Icon="{StaticResource ShareIcon}" />
+                <CommandBarButton Label="Favorite" Icon="{StaticResource HeartIcon}" />
+            </CommandBar.PrimaryCommands>
+        </CommandBar>
+    </NavigationPage.CommandBar>
 
 </ContentPage>
 ```
 
-### MVVM Command Binding
+### MVVM command binding
+
+Bind `CommandBarButton` commands to your view model:
 
 ```xml
 <CommandBar>
     <CommandBar.PrimaryCommands>
-        <AppBarButton Label="Save"
-                      Command="{Binding SaveCommand}">
-            <AppBarButton.Icon>
-                <PathIcon Data="M15,9H5V5H15M12,19..." />
-            </AppBarButton.Icon>
-        </AppBarButton>
-        <AppBarButton Label="Delete"
+        <CommandBarButton Label="Save"
+                      Icon="{StaticResource SaveIcon}"
+                      Command="{Binding SaveCommand}" />
+        <CommandBarButton Label="Delete"
+                      Icon="{StaticResource DeleteIcon}"
                       Command="{Binding DeleteCommand}"
                       IsEnabled="{Binding HasSelection}">
             <AppBarButton.Icon>
@@ -362,7 +357,38 @@ private void OnBoldChanged(object? sender, RoutedEventArgs e)
 }
 ```
 
-<img src={CommandBarToggleButtonScreenshot} alt="" />
+### Toggle button state handling
+
+Use `CommandBarToggleButton` to create togglable options. Bind the `IsChecked` property to track state:
+
+```xml
+<CommandBar>
+    <CommandBar.PrimaryCommands>
+        <CommandBarToggleButton Label="Bold"
+                            Icon="{StaticResource BoldIcon}"
+                            IsChecked="{Binding IsBold}" />
+        <CommandBarToggleButton Label="Italic"
+                            Icon="{StaticResource ItalicIcon}"
+                            IsChecked="{Binding IsItalic}" />
+        <CommandBarToggleButton Label="Underline"
+                            Icon="{StaticResource UnderlineIcon}"
+                            IsChecked="{Binding IsUnderline}" />
+    </CommandBar.PrimaryCommands>
+</CommandBar>
+```
+
+<img src={CommandBarToggleButtonScreenshot} alt="CommandBar with toggle buttons" />
+
+```csharp
+[ObservableProperty]
+private bool _isBold;
+
+[ObservableProperty]
+private bool _isItalic;
+
+[ObservableProperty]
+private bool _isUnderline;
+```
 
 ## See also
 

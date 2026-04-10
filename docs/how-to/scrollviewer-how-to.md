@@ -268,7 +268,7 @@ This pattern keeps the header visible at all times. The `ZIndex` on the header `
 
 ## See also
 
-- [ScrollViewer reference](../../controls/layout/containers/scrollviewer.md)
-- [Choosing a layout panel](../layout/choosing-a-layout-panel.md)
-- [Performance optimization](../app-development/performance.md)
-- [ItemsControl how-to](itemscontrol-how-to.md)
+- [ScrollViewer reference](/controls/layout/containers/scrollviewer)
+- [Choosing a layout panel](/docs/layout/choosing-a-layout-panel)
+- [Performance optimization](/docs/app-development/performance)
+- [ItemsControl how-to](/docs/how-to/itemscontrol-how-to)

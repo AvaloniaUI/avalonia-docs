@@ -201,6 +201,6 @@ public int RetryCount
 
 ## See also
 
-- [Property System Overview](index): Overview of property types and registration.
-- [Value Precedence](value-precedence): How the property system resolves values from multiple sources.
-- [Property Value Inheritance](property-value-inheritance): How values propagate down the tree.
+- [Property system overview](/docs/properties): Overview of property types and registration.
+- [Value precedence](/docs/properties/value-precedence): How the property system resolves values from multiple sources.
+- [Property value inheritance](/docs/properties/property-value-inheritance): How values propagate down the tree.

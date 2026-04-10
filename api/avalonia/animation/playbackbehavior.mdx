@@ -1,0 +1,118 @@
+---
+title: 'PlaybackBehavior'
+hide_title: true
+slug: '/avalonia/animation/playbackbehavior'
+uid: 'Avalonia.Animation.PlaybackBehavior'
+commentId: 'T:Avalonia.Animation.PlaybackBehavior'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Enum'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Animation'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">PlaybackBehavior Enum</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Animation</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/5cde1a53438e46c96f328e38946fb8506e4645a9/src/Avalonia.Base/Animation/PlaybackBehavior.cs">PlaybackBehavior.cs</a>
+</div>
+
+</div>
+
+<div className="apiref-page__lead">
+
+Determines whether an animation pauses when its target control is not effectively visible
+(see [Avalonia.Visual.IsEffectivelyVisible](xref:Avalonia.Visual.IsEffectivelyVisible)).
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public enum PlaybackBehavior
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Enum <span className="apiref-page__relation-separator">-&gt;</span> PlaybackBehavior
+</div>
+</div>
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [Always](#uid-95bde3d723) | The animation always plays regardless of the control's effective visibility state. |
+| [Auto](#uid-b85e6650e0) | The system decides based on context. Manually started animations (via [Avalonia.Animation.Animation.RunAsync(Avalonia.Animation.Animatable,System.Threading.CancellationToken)](xref:Avalonia.Animation.Animation.RunAsync%28Avalonia.Animation.Animatable%2CSystem.Threading.CancellationToken%29)) and animations that target [Avalonia.Visual.IsVisibleProperty](xref:Avalonia.Visual.IsVisibleProperty) always play. Style-applied animations pause when the control is not effectively visible (see [Avalonia.Visual.IsEffectivelyVisible](xref:Avalonia.Visual.IsEffectivelyVisible)). |
+| [OnlyIfVisible](#uid-b74c2e6ab1) | The animation pauses when the control is not effectively visible (see [Avalonia.Visual.IsEffectivelyVisible](xref:Avalonia.Visual.IsEffectivelyVisible)). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-95bde3d723"></span>
+
+### Always Field
+
+The animation always plays regardless of the control's effective visibility state.
+
+```csharp
+public Avalonia.Animation.PlaybackBehavior Always
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b85e6650e0"></span>
+
+### Auto Field
+
+The system decides based on context. Manually started animations
+(via [Avalonia.Animation.Animation.RunAsync(Avalonia.Animation.Animatable,System.Threading.CancellationToken)](xref:Avalonia.Animation.Animation.RunAsync%28Avalonia.Animation.Animatable%2CSystem.Threading.CancellationToken%29))
+and animations that target [Avalonia.Visual.IsVisibleProperty](xref:Avalonia.Visual.IsVisibleProperty) always play.
+Style-applied animations pause when the control is not effectively visible
+(see [Avalonia.Visual.IsEffectivelyVisible](xref:Avalonia.Visual.IsEffectivelyVisible)).
+
+```csharp
+public Avalonia.Animation.PlaybackBehavior Auto
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b74c2e6ab1"></span>
+
+### OnlyIfVisible Field
+
+The animation pauses when the control is not effectively visible
+(see [Avalonia.Visual.IsEffectivelyVisible](xref:Avalonia.Visual.IsEffectivelyVisible)).
+
+```csharp
+public Avalonia.Animation.PlaybackBehavior OnlyIfVisible
+```
+
+</section>
+
+</ApiRefPage>
+

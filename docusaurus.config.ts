@@ -175,6 +175,54 @@ const config: Config = {
       "@gracefullight/docusaurus-plugin-microsoft-clarity",
       { projectId: "hqhy3ac3l1" },
     ],
+    function gtmConsentPlugin() {
+      return {
+        name: 'docusaurus-plugin-gtm-consent',
+        injectHtmlTags() {
+          return {
+            headTags: [
+              {
+                tagName: 'script',
+                innerHTML: `
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('consent', 'default', {
+  ad_storage: 'denied',
+  ad_user_data: 'denied',
+  ad_personalization: 'denied',
+  analytics_storage: 'denied',
+  functionality_storage: 'granted',
+  personalization_storage: 'denied',
+  security_storage: 'granted',
+  wait_for_update: 500
+});
+
+// Read shared consent cookie from .avaloniaui.net
+(function() {
+  var match = document.cookie.match(/(?:^|; )av_cookie_consent=([^;]*)/);
+  if (!match) return;
+  try {
+    var prefs = JSON.parse(decodeURIComponent(match[1]));
+    gtag('consent', 'update', {
+      analytics_storage: prefs.analytics ? 'granted' : 'denied',
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      personalization_storage: prefs.messaging ? 'granted' : 'denied'
+    });
+  } catch(e) {}
+})();
+                `,
+              },
+            ],
+          };
+        },
+      };
+    },
+    [
+      '@docusaurus/plugin-google-tag-manager',
+      { containerId: 'GTM-P3B9LZDZ' },
+    ],
     [
       '@docusaurus/plugin-content-docs',
       {

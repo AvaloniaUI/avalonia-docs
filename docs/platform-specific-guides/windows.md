@@ -49,7 +49,7 @@ Windows supports extending the client area into the title bar region for custom 
 
 ```xml
 <Window ExtendClientAreaToDecorationsHint="True"
-        SystemDecorations="None">
+        WindowDecorations="None">
     <Grid RowDefinitions="32,*">
         <Border Grid.Row="0" Background="#2D2D2D"
                 WindowDecorations.ElementRole="TitleBar">
@@ -65,7 +65,7 @@ Windows supports extending the client area into the title bar region for custom 
 
 The marked region supports native window dragging and double-click-to-maximize. Interactive controls placed inside the title bar region still receive input normally.
 
-Setting `SystemDecorations="None"` removes all system chrome, giving you complete control over the window frame. With `SystemDecorations="Full"`, the system minimize, maximize, and close buttons remain visible alongside your custom title bar content. On Windows, disabled caption buttons are hidden rather than greyed out.
+Setting `WindowDecorations="None"` removes all system chrome, giving you complete control over the window frame. With `WindowDecorations="Full"`, the system minimize, maximize, and close buttons remain visible alongside your custom title bar content. On Windows, disabled caption buttons are hidden rather than greyed out.
 
 For more details, see [Window Management](/docs/app-development/window-management#custom-title-bar).
 

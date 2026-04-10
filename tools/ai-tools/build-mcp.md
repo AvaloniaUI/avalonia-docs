@@ -66,7 +66,7 @@ Prompt support varies by client. Claude Desktop, Claude Code, and Cursor support
 |--------|-------------|
 | `init` | Initializes an Avalonia expert session for an existing project. Loads development rules, sets up concise response behavior, and configures the assistant to use the documentation tools for every technical question. |
 | `new` | Guides you through creating a new Avalonia application. Covers template selection (`avalonia.mvvm` for desktop, `avalonia.xplat` for cross-platform), project creation with CommunityToolkit.Mvvm, compiled bindings setup, and developer tools installation. Accepts an optional `app_name` parameter. |
-| `recreate-ui` | Sets up an iterative design workflow for recreating a UI from a screenshot or image. The assistant writes AXAML, previews it using the [DevTools MCP](/tools/developer-tools/mcp) `attach-to-file` tool, takes screenshots to compare against the target, and keeps refining until the result matches. Accepts an optional `theme` parameter (`light` or `dark`). Requires a paid [Accelerate license](https://my.avalonia.dev/) for the DevTools MCP integration. |
+| `recreate-ui` | Sets up an iterative design workflow for recreating a UI from a screenshot or image. The assistant writes AXAML, previews it using the [DevTools MCP](/tools/developer-tools/mcp) `attach-to-file` tool, takes screenshots to compare against the target, and keeps refining until the result matches. Accepts an optional `theme` parameter (`light` or `dark`). Requires an [Avalonia license](https://avaloniaui.net/pricing) for the DevTools MCP integration. |
 | `wpf-migration` | Analyzes a WPF project and recommends the best migration path to Avalonia. The assistant scans for third-party control dependencies (Telerik, DevExpress, Syncfusion, and others) and recommends either Avalonia XPF (preserves existing WPF code and controls) or native Avalonia (full migration with modern controls). Calls the appropriate migration tool automatically based on the recommendation. |
 
 ## Setting up the MCP server
@@ -199,21 +199,12 @@ claude mcp list
 </TabItem>
 <TabItem value="claude-desktop" label="Claude Desktop">
 
-1. Open **Settings** > **Developer** and click **Edit Config**.
-2. Add the Build MCP server to `claude_desktop_config.json`:
-
-```json
-{
-    "mcpServers": {
-        "avalonia-docs": {
-            "type": "url",
-            "url": "https://docs-mcp.avaloniaui.net/mcp"
-        }
-    }
-}
-```
-
-3. Save the file and restart Claude Desktop.
+1. Go to **Customize** → **Connectors**.
+2. Click the **+** button at the top of the window, then **Add custom connector**.
+3. In the "Name" field, input "avalonia-docs".
+4. In the "Remote MCP server URL" field, input "https://docs-mcp.avaloniaui.net/mcp".
+5. Click **Add**.
+6. You may need to restart Claude Desktop.
 
 </TabItem>
 <TabItem value="gemini-cli" label="Gemini CLI">
@@ -297,7 +288,7 @@ Describe what you want to accomplish in natural language. The AI assistant calls
 "Recreate this UI in Avalonia. Use the light theme."
 ```
 
-This prompt works best when combined with the [DevTools MCP](/tools/developer-tools/mcp), which provides the `attach-to-file` tool for live XAML previewing. The assistant writes AXAML, previews it, takes screenshots, and iterates until the result matches your target design. DevTools MCP requires a paid [Accelerate license](https://my.avalonia.dev/).
+This prompt works best when combined with the [DevTools MCP](/tools/developer-tools/mcp), which provides the `attach-to-file` tool for live XAML previewing. The assistant writes AXAML, previews it, takes screenshots, and iterates until the result matches your target design. DevTools MCP requires an [Avalonia license](https://avaloniaui.net/pricing).
 
 **Migrating a WPF application (using the `wpf-migration` prompt):**
 

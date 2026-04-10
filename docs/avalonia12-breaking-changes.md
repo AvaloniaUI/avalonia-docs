@@ -48,10 +48,10 @@ Choose the latest release from the official [GitHub Releases page](https://githu
 ## `Avalonia.Diagnostics` package removed
 
 The `Avalonia.Diagnostics` package has been removed.
-The Dev Tools included with [Avalonia Accelerate](https://avaloniaui.net/accelerate) should be used instead.
+The Dev Tools included with [Avalonia Plus](https://avaloniaui.net/pricing) or higher should be used instead.
 
 Remove the `Avalonia.Diagnostics` package from your projects and replace it with `AvaloniaUI.DiagnosticsSupport`.  
-To install the Accelerate Dev Tools, see the [Dev Tools documentation](https://docs.avaloniaui.net/accelerate/tools/dev-tools/getting-started).
+To install the Avalonia Plus Dev Tools, see the [Dev Tools documentation](/tools/developer-tools/installation).
 
 **Example:**
 
@@ -241,6 +241,8 @@ While not technically a breaking change, Avalonia v12 now supports multiple disp
 
 Using `Dispatcher.UIThread` is still perfectly acceptable for applications. However, library and control authors should start using the `AvaloniaObject.Dispatcher` and `Dispatcher.CurrentDispatcher` properties to support multiple dispatchers properly.
 
+`DispatcherTimer` and `AvaloniaSynchronizationContext` use the current dispatcher by default, rather than the UI thread as in previous versions. Make sure that instantiations of those types are made from the correct thread. Alternatively, pass the target dispatcher to the appropriate constructor.
+
 Multiple UI threads are currently still unsupported.
 
 PR: [#18686](https://github.com/AvaloniaUI/Avalonia/pull/18686)
@@ -258,6 +260,13 @@ PR: [#19163](https://github.com/AvaloniaUI/Avalonia/pull/19163)
 The converter function parameter changed from `IEnumerable<TIn>` to `IReadOnlyList<TIn>`, allowing you to access values by index (e.g., `values[0]`) without converting to an intermediate collection. Since `IReadOnlyList<T>` extends `IEnumerable<T>`, most existing usages that iterate or use LINQ are unaffected. Code that explicitly declares the lambda parameter type as `IEnumerable<TIn>` will need to be updated.
 
 PR: [#19936](https://github.com/AvaloniaUI/Avalonia/pull/19936)
+
+
+## `Window.WindowState` is a direct property
+
+`Window.WindowState` was previously a styled property. However, it caused various problems in window state management, so it has been changed to a direct property.
+
+As a consequence, it is no longer valid to set `WindowState` from a style.
 
 
 ## Data validation enabled by default in custom controls
@@ -406,7 +415,9 @@ PR: [#20859](https://github.com/AvaloniaUI/Avalonia/pull/20859), [#18647](https:
 
 ## Animations are stopped on invisible controls
 
-For efficiency, animations no longer tick when their corresponding control is hidden, resulting in improved CPU usage in several situations.
+For efficiency, animations triggered by styles no longer tick when their corresponding control is hidden, resulting in improved CPU usage in several situations.
+
+You can restore the previous behavior by setting the new `Animation.PlaybackBehavior` to `Always` if needed.
 
 PR: [#20820](https://github.com/AvaloniaUI/Avalonia/pull/20820)
 

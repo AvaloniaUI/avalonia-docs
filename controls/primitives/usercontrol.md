@@ -40,7 +40,7 @@ You can then use your `UserControl` in a `Window` or any other container by refe
 
 ## When to use `UserControl`
 
-`UserControl` is the standard approach for creating views in MVVM applications. Each view in your application is typically a `UserControl` subclass paired with a corresponding view model. If you need a control that supports custom templates and theme styling, consider creating a [`TemplatedControl`](/controls/primitives/templatedcontrol) instead.
+`UserControl` is the standard approach for creating views in MVVM applications. Each view in your application is typically a `UserControl` subclass paired with a corresponding view model. If you need a control that supports custom templates and theme styling, consider creating a [`TemplatedControl`](/docs/custom-controls/templated-controls) instead.
 
 ## See also
 

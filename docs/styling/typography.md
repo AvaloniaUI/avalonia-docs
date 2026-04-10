@@ -400,7 +400,7 @@ myTextBlock.TextDecorations = TextDecorations.Underline;
 - [Custom fonts](custom-fonts): Embedding and loading custom font files.
 - [Text options](../graphics-animation/text-options): Controlling text rendering, hinting, and baseline alignment.
 - [TextBlock](/controls/data-display/text-display/textblock): The primary control for displaying formatted text.
-- [TextTrimming](/reference/text/texttrimming): How text is truncated when it overflows.
+- [TextTrimming](/controls/data-display/text-display/texttrimming): How text is truncated when it overflows.
 - [Property value inheritance](../properties/property-value-inheritance): How font properties propagate through the visual tree.
 - [`TextElement` API reference](/api/avalonia/controls/documents/textelement)
 - [Style classes](style-classes): Applying named style classes to controls.

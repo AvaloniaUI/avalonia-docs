@@ -13,6 +13,18 @@ Diataxis is an editorial QA layer, not a navigation structure. The visible site 
 
 Diataxis defines exactly four canonical types (tutorial, how-to, reference, explanation) derived from two dimensions: action/cognition and acquisition/application. The Avalonia docs also use four project-specific types (overview, troubleshooting, release-notes, migration) that are specializations of the canonical four, not additional Diataxis categories.
 
+## Technical accuracy (non-negotiable)
+
+This skill must NEVER fabricate, invent, or guess technical details. Every API name, property, method, event, enum value, parameter, and behavioral claim in documentation must be verified against the actual Avalonia API reference before it can appear in output. When in doubt, look it up; never assume.
+
+**Three hard rules:**
+
+1. **ACCU-001 (blocker)**: Never fabricate technical details. All API names, property names, method signatures, event names, enum values, and behavioral claims must be verified. Do not invent, guess, or hallucinate any technical detail. If you cannot verify a technical claim, flag it as unverified rather than asserting it.
+
+2. **ACCU-002 (blocker)**: Never modify existing code snippets unless the user has expressly asked for code changes. When linting or reviewing documentation, flag prose issues but leave all code blocks (```` ``` ```` fenced blocks and `` ` `` inline code) exactly as they are. Code changes require explicit user authorization.
+
+3. **ACCU-003 (blocker)**: Validate all API mentions against the Avalonia API reference. Use the `lookup_avalonia_api` tool from the Avalonia Docs MCP server to confirm that every class, property, method, event, or enum value referenced in the documentation actually exists. Any API reference that cannot be validated must be flagged in the lint report as `ACCU-003: Unverified API reference`. See [Avalonia Build MCP](https://docs.avaloniaui.net/tools/ai-tools/build-mcp) for MCP tool documentation.
+
 ## When to use
 
 - Reviewing a documentation page before publishing
@@ -65,28 +77,31 @@ Apply rules from [house-rules.yaml](references/house-rules.yaml) that match the 
 4. **LINK-001**: No generic link labels (`click here`, `here`, `this link`)
 5. **QUAL-001**: Tutorials include an outcome verification section
 6. **MIC-006**: No em dashes or en dashes anywhere in the text
+7. **ACCU-001**: No fabricated technical details (all API names, properties, methods, events, and behavioral claims must be real)
+8. **ACCU-002**: No modifications to existing code snippets unless expressly requested by the user
+9. **ACCU-003**: All API references validated against the Avalonia API reference via `lookup_avalonia_api` MCP tool
 
 **Major-level checks (should pass; justify exceptions):**
 
-7. **STR-002**: Headings use sentence case (>= 80% for new/edited pages)
-8. **STR-005**: Page ends with `## See also` or `## Related content` or similar navigation handoff
-9. **VOI-001**: Task pages use direct `you`/`your` address
-10. **VOI-002**: Minimal `we`/`our`/`us` usage (< 1 per 1,000 words). **Exception**: tutorials use `we` to establish the instructor-learner bond (per Diataxis). VOI-002 does not apply to tutorials.
-11. **MIC-001**: UI labels and menu paths in **bold**
-12. **MIC-002**: Code identifiers and API literals in `backticks`
-13. **MIC-004**: Admonitions use approved Docusaurus types only: `:::note`, `:::tip`, `:::info`, `:::caution`, `:::danger`
-14. **TERM-002**: Use `control` not `widget` for UI components
+10. **STR-002**: Headings use sentence case (>= 80% for new/edited pages)
+11. **STR-005**: Page ends with `## See also` or `## Related content` or similar navigation handoff
+12. **VOI-001**: Task pages use direct `you`/`your` address
+13. **VOI-002**: Minimal `we`/`our`/`us` usage (< 1 per 1,000 words). **Exception**: tutorials use `we` to establish the instructor-learner bond (per Diataxis). VOI-002 does not apply to tutorials.
+14. **MIC-001**: UI labels and menu paths in **bold**
+15. **MIC-002**: Code identifiers and API literals in `backticks`
+16. **MIC-004**: Admonitions use approved Docusaurus types only: `:::note`, `:::tip`, `:::info`, `:::caution`, `:::danger`
+17. **TERM-002**: Use `control` not `widget` for UI components
 
 **Minor-level checks (style drift warnings):**
 
-15. **VOI-003**: Intensifiers (`simply`, `obviously`, `just`) are rare (< 1 per 1,000 words)
-16. **MIC-005**: Keyboard shortcuts use `<kbd>` tags with platform-native symbols (e.g., `<kbd>⌘</kbd> <kbd>S</kbd>` not plain text "Cmd+S")
-17. **STR-009**: Intro before first H2 is <= 150 words
-18. **ACC-001**: All images have non-empty alt text (`![description](path)`, not `![](path)`)
-19. **SEO-001**: Frontmatter `description` present, 50-160 characters, no marketing buzzwords
-20. **SEO-002**: Frontmatter `title` is <= 60 characters
-21. **QUAL-003**: On task pages (tutorial, how-to, troubleshooting, migration), average sentence length <= 25 words; flag individual sentences over 40 words
-22. **QUAL-004**: ARI (Automated Readability Index) score <= 14 across all prose. Calculate using `4.71 × (characters ÷ words) + 0.5 × (words ÷ sentences) − 21.43`. Strip all fenced code blocks, inline code spans, frontmatter, and admonition markers before counting — measure prose only. Report score to one decimal place with the grade-level label (≤ 8 = high-school, 9–12 = standard adult, 13–14 = college, > 14 = graduate). Scores above 14 are a warning to simplify sentence structure and word choice.
+18. **VOI-003**: Intensifiers (`simply`, `obviously`, `just`) are rare (< 1 per 1,000 words)
+19. **MIC-005**: Keyboard shortcuts use `<kbd>` tags with platform-native symbols (e.g., `<kbd>⌘</kbd> <kbd>S</kbd>` not plain text "Cmd+S")
+20. **STR-009**: Intro before first H2 is <= 150 words
+21. **ACC-001**: All images have non-empty alt text (`![description](path)`, not `![](path)`)
+22. **SEO-001**: Frontmatter `description` present, 50-160 characters, no marketing buzzwords
+23. **SEO-002**: Frontmatter `title` is <= 60 characters
+24. **QUAL-003**: On task pages (tutorial, how-to, troubleshooting, migration), average sentence length <= 25 words; flag individual sentences over 40 words
+25. **QUAL-004**: ARI (Automated Readability Index) score <= 14 across all prose. Calculate using `4.71 × (characters ÷ words) + 0.5 × (words ÷ sentences) - 21.43`. Strip all fenced code blocks, inline code spans, frontmatter, and admonition markers before counting, measure prose only. Report score to one decimal place with the grade-level label (8 or below = high-school, 9-12 = standard adult, 13-14 = college, above 14 = graduate). Scores above 14 are a warning to simplify sentence structure and word choice.
 
 ### Step 3: Run anti-marketing checks
 
@@ -112,7 +127,26 @@ Cross-reference against [terminology-map.yaml](references/terminology-map.yaml):
 - Check for forbidden marketing terms and suggest replacements
 - **TERM-004**: On introductory pages (tutorials, overviews), verify that Avalonia-specific jargon (visual tree, logical tree, data template, control theme, style selector, binding expression, value converter, content presenter, items presenter, template part, pseudo-class) is explained inline or linked on first use. See `framework_jargon` in [terminology-map.yaml](references/terminology-map.yaml) for definitions and link targets.
 
-### Step 5: Run content boundary checks
+### Step 5: Validate API references (ACCU-003)
+
+Extract all Avalonia API mentions from the page: class names, property names, method names, event names, enum values, and any other identifiers presented as part of the Avalonia API surface.
+
+For each API mention:
+
+1. Call `lookup_avalonia_api` (from the Avalonia Docs MCP server) with the API identifier (e.g., `TextBlock`, `Window.Show`, `StyledProperty`, `Control.PointerPressed`).
+2. If the tool confirms the API exists, mark it as verified.
+3. If the tool returns no match or an error, flag it as **ACCU-003: Unverified API reference** at blocker severity.
+
+**Important constraints:**
+- Do NOT skip this step. Every API reference in documentation must be validated.
+- Do NOT assume an API exists because the name sounds plausible. LLMs frequently generate plausible-but-incorrect API names.
+- If the page contains code snippets, validate API identifiers used in the code but do NOT modify the code (ACCU-002).
+- Group related lookups where possible (e.g., look up a class once, then check its members) to minimize tool calls.
+- When a page references many APIs, prioritize validating: (a) APIs central to the page's purpose, (b) APIs that appear only once (higher risk of error), (c) recently added or changed APIs.
+
+**MCP tool reference:** The `lookup_avalonia_api` tool is part of the Avalonia Docs MCP server. It accepts queries for classes, properties, methods, and events using dot notation (e.g., `TextBlock`, `Window.Show`). See [Build MCP documentation](https://docs.avaloniaui.net/tools/ai-tools/build-mcp).
+
+### Step 6: Run content boundary checks
 
 Apply content boundary rules using the page's declared (or inferred) doc-type and the `forbidden_content` and `content_boundaries` fields in [page-templates.yaml](references/page-templates.yaml).
 
@@ -122,7 +156,7 @@ Apply content boundary rules using the page's declared (or inferred) doc-type an
 4. **BOUND-004**: For explanation pages, flag any numbered procedural sequence longer than 3 steps. Recommend linking to a how-to or tutorial instead.
 5. **BOUND-005**: Verify frontmatter includes a `doc-type` field with a valid value (`tutorial`, `how-to`, `explanation`, `overview`, `reference`, `troubleshooting`, `release-notes`, `migration`).
 
-### Step 6: Run template compliance
+### Step 7: Run template compliance
 
 Compare page structure against the expected archetype from [page-templates.yaml](references/page-templates.yaml):
 
@@ -130,7 +164,7 @@ Compare page structure against the expected archetype from [page-templates.yaml]
 - Flag missing optional sections that would improve the page
 - Verify ordering rules (e.g., prerequisites before procedure)
 
-### Step 7: Check banned phrases
+### Step 8: Check banned phrases
 
 Flag any use of:
 
@@ -155,7 +189,7 @@ Flag any use of:
 | "Robust" | Describe the specific reliability characteristic |
 | "Game-changing" / "Revolutionary" | Describe the concrete improvement |
 
-### Step 8: Run inclusive language checks
+### Step 9: Run inclusive language checks
 
 Apply inclusive language rules from [house-rules.yaml](references/house-rules.yaml).
 
@@ -164,7 +198,7 @@ Apply inclusive language rules from [house-rules.yaml](references/house-rules.ya
 1. **INC-001**: Scan for gendered pronouns used generically (`he`/`she`/`him`/`her`/`his`/`hers` referring to an unspecified person or the reader) and gendered nouns (`guys` as a group address, `mankind`, `manmade`, `man-hours`). Suggest `they`/`them`/`their`, `everyone`, `humankind`, `human-made`, `person-hours`. Flag singular pronoun uses as candidates — distinguish generic use from a named individual (manual review).
 2. **INC-002**: Scan for legacy technical terms with exclusionary connotations: `blacklist`/`whitelist` → `blocklist`/`allowlist`; `master`/`slave` in role contexts → `primary`/`replica`; `sanity check` → `verify` or `check`; `dummy` as placeholder data → `placeholder`/`sample`/`stub`. Context-sensitive uses (e.g. `master` in a git command literal, established API names like `MasterDetail`) require human review before flagging.
 
-### Step 9: Generate report
+### Step 10: Generate report
 
 Output a structured lint report:
 
@@ -183,6 +217,13 @@ Output a structured lint report:
 
 ### Minor issues (consider fixing)
 - [rule-id]: [description] (line X)
+
+### Technical accuracy
+- ACCU-001 (no fabricated details): [pass / N findings]
+- ACCU-002 (code snippets preserved): [pass / N unauthorized modifications]
+- ACCU-003 (API validation): [N APIs checked, N verified, N unverified]
+  - Verified: [list of confirmed API references]
+  - Unverified: [list of API references that could not be confirmed — BLOCKER]
 
 ### Anti-marketing compliance
 - [TONE rule findings or "Clean"]

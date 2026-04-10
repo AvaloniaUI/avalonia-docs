@@ -60,7 +60,6 @@ Scales an element horizontally, vertically, or both.
 |---|---|
 | `ScaleX` | The horizontal scale factor. 1.0 is normal size, 2.0 is double, 0.5 is half. |
 | `ScaleY` | The vertical scale factor. |
-| `CenterX`, `CenterY` | An additional offset from `RenderTransformOrigin` for the center of scaling, in device-independent pixels. Defaults to 0. |
 
 ```xml
 <!-- Double the width, keep the height -->
@@ -86,7 +85,6 @@ Shears an element along the X or Y axis.
 |---|---|
 | `AngleX` | The horizontal skew angle in degrees. |
 | `AngleY` | The vertical skew angle in degrees. |
-| `CenterX`, `CenterY` | An additional offset from `RenderTransformOrigin` for the center of the skew, in device-independent pixels. Defaults to 0. |
 
 ```xml
 <Border Width="100" Height="60" Background="Orange"

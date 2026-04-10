@@ -5,13 +5,10 @@ sidebar_label: Developer tools
 description: Troubleshoot common Developer Tools problems including connection failures, missing logs, and diagnostic configuration.
 doc-type: troubleshooting
 tags:
-  - accelerate
+  - avalonia plus
+  - avalonia pro
+  - avalonia enterprise
 ---
-
-import Pill from '/src/components/global/Pill';
-
-<Pill variant="primary" href="/tools">Accelerate</Pill>
-<br/><br/>
 
 ## Reporting issues
 
@@ -74,9 +71,8 @@ By default, it does not write any logs. To enable logging, configure `DeveloperT
 ```csharp
 application.AttachDeveloperTools(o =>
 {
-    // DiagnosticLogger is a public abstract class that you can implement in your own code.
     // CreateConsole returns a built-in implementation that writes to Console.Out and Console.Error.
-    o.DiagnosticLogger = DiagnosticLogger.CreateConsole();
+    o.DiagnosticLogger = DiagnosticLogger.CreateConsole(LogEntryVerbosity.Verbose);
 });
 ```
 
@@ -84,32 +80,18 @@ Once enabled, diagnostic messages appear in your application's standard output. 
 
 ### Custom logger implementations
 
-If console output is not practical (for example, in a production diagnostic scenario), you can subclass `DiagnosticLogger` and route messages to a file or logging framework:
+If console output is not practical (for example, in a production diagnostic scenario), you can create a `DiagnosticLogger` that writes to a file using the `CreateTextWriter` factory method:
 
 ```csharp
-public class FileDiagnosticLogger : DiagnosticLogger
-{
-    private readonly StreamWriter _writer;
-
-    public FileDiagnosticLogger(string path)
-    {
-        _writer = new StreamWriter(path, append: true);
-    }
-
-    protected override void Log(string message)
-    {
-        _writer.WriteLine($"{DateTime.UtcNow:O} {message}");
-        _writer.Flush();
-    }
-}
+var writer = new StreamWriter("diagnostics.log", append: true);
 ```
 
-Then pass your custom logger in the options:
+Then pass it in the options:
 
 ```csharp
 application.AttachDeveloperTools(o =>
 {
-    o.DiagnosticLogger = new FileDiagnosticLogger("/tmp/avalonia-diag.log");
+    o.DiagnosticLogger = DiagnosticLogger.CreateTextWriter(writer, LogEntryVerbosity.Verbose);
 });
 ```
 
@@ -124,8 +106,7 @@ application.AttachDeveloperTools(o =>
 
 ## See also
 
-- [Developer Tools installation](../../tools/developer-tools/installation.md)
-- [Attaching applications](../../tools/developer-tools/attaching-applications.md)
-- [Developer Tools options](../../tools/developer-tools/options.md)
-- [Elements tool](../../tools/developer-tools/elements-tool.md)
-- [Debugging data bindings](../../docs/data-binding/binding-debugging.md)
+- [Developer Tools installation](/tools/developer-tools/installation)
+- [Attaching applications](/tools/developer-tools/attaching-applications)
+- [Developer Tools options](/tools/developer-tools/options)
+- [Elements tool](/tools/developer-tools/elements-tool)

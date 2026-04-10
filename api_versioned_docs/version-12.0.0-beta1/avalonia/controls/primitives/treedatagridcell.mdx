@@ -1,0 +1,202 @@
+---
+title: 'TreeDataGridCell'
+hide_title: true
+slug: '/avalonia/controls/primitives/treedatagridcell'
+uid: 'Avalonia.Controls.Primitives.TreeDataGridCell'
+commentId: 'T:Avalonia.Controls.Primitives.TreeDataGridCell'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.TreeDataGrid'
+assembly: 'Avalonia.Controls.TreeDataGrid'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Primitives'
+tfms:
+  - 'net8.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">TreeDataGridCell Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Primitives</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Base class for controls which display cells in a [Avalonia.Controls.TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid) control.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class TreeDataGridCell
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> TemplatedControl <span className="apiref-page__relation-separator">-&gt;</span> TreeDataGridCell
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Derived types:</span> <a href="treedatagridcheckboxcell">TreeDataGridCheckBoxCell</a>, <a href="treedatagridexpandercell">TreeDataGridExpanderCell</a>, <a href="treedatagridrowheadercell">TreeDataGridRowHeaderCell</a>, <a href="treedatagridtemplatecell">TreeDataGridTemplateCell</a>, <a href="treedatagridtextcell">TreeDataGridTextCell</a>
+</div>
+</div>
+
+## Remarks
+
+[TreeDataGridCell](xref:Avalonia.Controls.Primitives.TreeDataGridCell) is the base class for cells in a [TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid) control. It provides core
+functionality for cell realization, selection, and editing. Cells are created by the
+[Avalonia.Controls.Primitives.TreeDataGridElementFactory](xref:Avalonia.Controls.Primitives.TreeDataGridElementFactory) and are reused as the user scrolls through the
+grid.
+
+This class implements the following pseudo-classes:
+
+- :editing - Set when the cell is in edit mode
+- :selected - Set when the cell is selected
+
+Cell editing can be triggered through various gestures including double-tap, F2, or single
+tap, depending on the [Avalonia.Controls.BeginEditGestures](xref:Avalonia.Controls.BeginEditGestures) settings of the cell's model.
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [ColumnIndex](#uid-6d0d40f6a8) | Gets the index of the column that this cell belongs to. |
+| [IsEditing](#uid-66586fe73f) | Gets a value indicating whether the cell is in edit mode. |
+| [IsEffectivelySelected](#uid-8ce8f3cd79) | Gets a value indicating whether the cell is effectively selected, either directly or because its containing row is selected. |
+| [IsSelected](#uid-91d5f305c8) | Gets a value indicating whether the cell is selected. |
+| [Model](#uid-6720862544) | Gets the data model for the cell. |
+| [RowIndex](#uid-c4d45a681c) | Gets the index of the row that this cell belongs to. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6d0d40f6a8"></span>
+
+### ColumnIndex Property
+
+Gets the index of the column that this cell belongs to.
+
+```csharp
+public int ColumnIndex { get; set; }
+```
+
+#### Value
+
+The zero-based column index, or -1 if the cell is not realized.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-66586fe73f"></span>
+
+### IsEditing Property
+
+Gets a value indicating whether the cell is in edit mode.
+
+```csharp
+public bool IsEditing { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8ce8f3cd79"></span>
+
+### IsEffectivelySelected Property
+
+Gets a value indicating whether the cell is effectively selected, either directly
+or because its containing row is selected.
+
+```csharp
+public bool IsEffectivelySelected { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-91d5f305c8"></span>
+
+### IsSelected Property
+
+Gets a value indicating whether the cell is selected.
+
+```csharp
+public bool IsSelected { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6720862544"></span>
+
+### Model Property
+
+Gets the data model for the cell.
+
+```csharp
+public Avalonia.Controls.Models.ITreeDataGridCellModel Model { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c4d45a681c"></span>
+
+### RowIndex Property
+
+Gets the index of the row that this cell belongs to.
+
+```csharp
+public int RowIndex { get; set; }
+```
+
+#### Value
+
+The zero-based row index, or -1 if the cell is not realized.
+
+
+</section>
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [IsSelectedProperty](#uid-8249e3bb68) | Defines the [Avalonia.Controls.Primitives.TreeDataGridCell.IsSelected](xref:Avalonia.Controls.Primitives.TreeDataGridCell.IsSelected) property. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8249e3bb68"></span>
+
+### IsSelectedProperty Field
+
+Defines the [Avalonia.Controls.Primitives.TreeDataGridCell.IsSelected](xref:Avalonia.Controls.Primitives.TreeDataGridCell.IsSelected) property.
+
+```csharp
+public Avalonia.DirectProperty<Avalonia.Controls.Primitives.TreeDataGridCell, bool> IsSelectedProperty
+```
+
+</section>
+
+</ApiRefPage>
+

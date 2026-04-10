@@ -70,7 +70,7 @@ The MVVM Toolkit provides a range of tools to help simplify the implementation o
 ## See also
 
 - [The MVVM Pattern](/docs/fundamentals/the-mvvm-pattern): Introduction to the MVVM architectural pattern.
-- [Data Validation](/docs/data-binding/data-validation): Validation in data binding with INotifyDataErrorInfo.
+- [Data Validation](/docs/data-binding/binding-validation): Validation in data binding with INotifyDataErrorInfo.
 - [Introduction to Data Binding](/docs/data-binding/introduction-to-data-binding): Data binding overview.
 
 

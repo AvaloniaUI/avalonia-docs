@@ -72,11 +72,11 @@ The `FocusAdorner` property shows a default focus visual, typically a `Border`, 
 The `FocusManager` provides global access to focus functionality, such as retrieving the currently focused element or clearing focus. For additional information, see the [FocusManager docs](/docs/services/focus-manager).
 
 ```csharp
-// Get the currently focused element
-var focused = FocusManager.Instance?.GetFocusedElement();
+// Get the focus manager from a TopLevel
+var focusManager = TopLevel.GetTopLevel(myControl)?.FocusManager;
 
-// Clear focus from the current element
-FocusManager.Instance?.ClearFocus();
+// Get the currently focused element
+var focused = focusManager?.GetFocusedElement();
 ```
 
 ## Tab focus navigation

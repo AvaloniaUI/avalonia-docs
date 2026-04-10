@@ -135,7 +135,7 @@ return builder.StartLinuxDrm(args, card: null, options: new DrmOutputOptions
 });
 ```
 
-For the sharpest results, choose a scaling value that divides your display's physical resolution into whole numbers. For a 1920x1080 display, values like `1.25` (1536x864) and `1.5` (1280x720) work well. Non-integer results (e.g., `1.3`) still work, but edges may appear less crisp because `SnapToDevicePixels` cannot align precisely at all boundaries.
+For the sharpest results, choose a scaling value that divides your display's physical resolution into whole numbers. For a 1920x1080 display, values like `1.25` (1536x864) and `1.5` (1280x720) work well. Non-integer results (e.g., `1.3`) still work, but edges may appear less crisp because `UseLayoutRounding` cannot align precisely at all boundaries.
 
 ## Screen orientation
 

@@ -20,8 +20,7 @@ When you set the `Orientation` property to `Vertical`, the arrangement flows fro
 | `LineSpacing` | Vertical gap between rows (or horizontal gap between columns in vertical mode). |
 | `ItemWidth` | Fixed width for all items. If not set, items use their natural width. |
 | `ItemHeight` | Fixed height for all items. If not set, items use their natural height. |
-| `HorizontalItemAlignment` | Controls how items are aligned horizontally within their allocated cell. Values: `Left`, `Center`, `Right`, `Stretch`. |
-| `VerticalItemAlignment` | Controls how items are aligned vertically within their allocated cell. Values: `Top`, `Center`, `Bottom`, `Stretch`. |
+| `ItemsAlignment` | Controls how items are aligned within their allocated cell. Type: `WrapPanelItemsAlignment`. Values: `Start`, `Center`, `End`. |
 
 ## Common usage
 
@@ -40,12 +39,11 @@ If you want every child to occupy the same amount of space, set `ItemWidth` and 
 
 ### Alignment within cells
 
-When you use `ItemWidth` or `ItemHeight`, child controls may be smaller than their allocated cell. Use `HorizontalItemAlignment` and `VerticalItemAlignment` to control positioning within each cell.
+When you use `ItemWidth` or `ItemHeight`, child controls may be smaller than their allocated cell. Use `ItemsAlignment` to control positioning within each cell.
 
 ```xml
 <WrapPanel ItemWidth="100" ItemHeight="100"
-           HorizontalItemAlignment="Center"
-           VerticalItemAlignment="Center">
+           ItemsAlignment="Center">
     <Button Content="A" />
     <Button Content="B" />
     <Button Content="C" />
@@ -93,8 +91,7 @@ When you use `ItemWidth` or `ItemHeight`, child controls may be smaller than the
 
 ## See also
 
-- [StackPanel](stackpanel)
-- [DockPanel](dockpanel)
-- [Panels overview](../panels-overview)
+- [StackPanel](/controls/layout/panels/stackpanel)
+- [DockPanel](/controls/layout/panels/dockpanel)
 - [WrapPanel API reference](/api/avalonia/controls/wrappanel)
 - [`WrapPanel.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/WrapPanel.cs)

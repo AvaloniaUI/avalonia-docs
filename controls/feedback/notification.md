@@ -127,7 +127,7 @@ _notificationManager.Show(notification);
 _notificationManager.Close(notification);
 
 // Clear all active notifications
-_notificationManager.ClearAll();
+_notificationManager.CloseAll();
 ```
 
 This is useful when a long-running operation completes and you want to replace a progress notification with a result notification:
@@ -164,15 +164,8 @@ public class CustomNotification : INotification
     public string ActionText { get; set; }
     public Action OnAction { get; set; }
 
-    public void OnClose()
-    {
-        // Clean up when dismissed
-    }
-
-    public void OnClick()
-    {
-        OnAction?.Invoke();
-    }
+    public Action? OnClose { get; set; }
+    public Action? OnClick { get; set; }
 }
 ```
 

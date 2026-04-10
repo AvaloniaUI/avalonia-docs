@@ -1,0 +1,481 @@
+---
+title: 'BitmapBlendingMode'
+hide_title: true
+slug: '/avalonia/media/imaging/bitmapblendingmode'
+uid: 'Avalonia.Media.Imaging.BitmapBlendingMode'
+commentId: 'T:Avalonia.Media.Imaging.BitmapBlendingMode'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Enum'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Media.Imaging'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">BitmapBlendingMode Enum</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Media.Imaging</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Controls the way the bitmaps are drawn together.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public enum BitmapBlendingMode
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Enum <span className="apiref-page__relation-separator">-&gt;</span> BitmapBlendingMode
+</div>
+</div>
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [Color](#uid-b1b78b7c3c) | Creates a color with the hue and saturation of the source color and the luminosity of the backdrop color. |
+| [ColorBurn](#uid-0257b1ae21) | Multiplies or screens the colors, depending on the source color value. |
+| [ColorDodge](#uid-32e4f07d1b) | Darkens the backdrop color to reflect the source color. |
+| [Darken](#uid-aa64490829) | Selects the darker of the backdrop and source colors. |
+| [Destination](#uid-036ccef292) | Only the destination will be present. |
+| [DestinationAtop](#uid-5a465af4b4) | Destination which overlaps the source replaces the source. |
+| [DestinationIn](#uid-6fda88e9dc) | Destination which overlaps the source, replaces the source. |
+| [DestinationOut](#uid-0a99a9dbd2) | Destination is placed, where it falls outside of the source. |
+| [DestinationOver](#uid-867ce1e5f8) | Destination is placed over the source. |
+| [Difference](#uid-e6c0d26f4b) | Produces an effect similar to that of the Difference mode but lower in contrast. |
+| [Exclusion](#uid-2603b9403e) | The source color is multiplied by the destination color and replaces the destination |
+| [HardLight](#uid-9a3680a691) | Darkens or lightens the colors, depending on the source color value. |
+| [Hue](#uid-c4f43ead4f) | Creates a color with the hue of the source color and the saturation and luminosity of the backdrop color. |
+| [Lighten](#uid-1868734de0) | Selects the lighter of the backdrop and source colors. |
+| [Luminosity](#uid-c8f3d919b7) | Creates a color with the luminosity of the source color and the hue and saturation of the backdrop color. |
+| [Multiply](#uid-48e9195200) | Creates a color with the hue of the source color and the saturation and luminosity of the backdrop color. |
+| [Overlay](#uid-740309ccc9) | Multiplies or screens the colors, depending on the backdrop color value. |
+| [Plus](#uid-0f88edadb2) | Display the sum of the source image and destination image. |
+| [Saturation](#uid-505c4c36ac) | Creates a color with the saturation of the source color and the hue and luminosity of the backdrop color. |
+| [Screen](#uid-4fbc97ae36) | Multiplies the complements of the backdrop and source color values, then complements the result. |
+| [SoftLight](#uid-5fe5d770f8) | Subtracts the darker of the two constituent colors from the lighter color. |
+| [Source](#uid-96157a2b3a) | Only the source will be present. |
+| [SourceAtop](#uid-5451bfcdf1) | Source which overlaps the destination, replaces the destination. |
+| [SourceIn](#uid-682507b703) | The source that overlaps the destination, replaces the destination. |
+| [SourceOut](#uid-408da12281) | Source is placed, where it falls outside of the destination. |
+| [SourceOver](#uid-79be6a022c) | Source is placed over the destination. |
+| [Unspecified](#uid-1adc3c04fc) | No summary available. |
+| [Xor](#uid-a088525682) | The non-overlapping regions of source and destination are combined. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b1b78b7c3c"></span>
+
+### Color Field
+
+Creates a color with the hue and saturation of the source color and the luminosity of the backdrop color.
+
+```csharp
+public Avalonia.Media.Imaging.BitmapBlendingMode Color
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0257b1ae21"></span>
+
+### ColorBurn Field
+
+Multiplies or screens the colors, depending on the source color value.
+
+```csharp
+public Avalonia.Media.Imaging.BitmapBlendingMode ColorBurn
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-32e4f07d1b"></span>
+
+### ColorDodge Field
+
+Darkens the backdrop color to reflect the source color.
+
+```csharp
+public Avalonia.Media.Imaging.BitmapBlendingMode ColorDodge
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-aa64490829"></span>
+
+### Darken Field
+
+Selects the darker of the backdrop and source colors.
+
+```csharp
+public Avalonia.Media.Imaging.BitmapBlendingMode Darken
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-036ccef292"></span>
+
+### Destination Field
+
+Only the destination will be present.
+
+```csharp
+public Avalonia.Media.Imaging.BitmapBlendingMode Destination
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5a465af4b4"></span>
+
+### DestinationAtop Field
+
+Destination which overlaps the source replaces the source.
+
+```csharp
+public Avalonia.Media.Imaging.BitmapBlendingMode DestinationAtop
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6fda88e9dc"></span>
+
+### DestinationIn Field
+
+Destination which overlaps the source, replaces the source.
+
+```csharp
+public Avalonia.Media.Imaging.BitmapBlendingMode DestinationIn
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0a99a9dbd2"></span>
+
+### DestinationOut Field
+
+Destination is placed, where it falls outside of the source.
+
+```csharp
+public Avalonia.Media.Imaging.BitmapBlendingMode DestinationOut
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-867ce1e5f8"></span>
+
+### DestinationOver Field
+
+Destination is placed over the source.
+
+```csharp
+public Avalonia.Media.Imaging.BitmapBlendingMode DestinationOver
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e6c0d26f4b"></span>
+
+### Difference Field
+
+Produces an effect similar to that of the Difference mode but lower in contrast.
+
+```csharp
+public Avalonia.Media.Imaging.BitmapBlendingMode Difference
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2603b9403e"></span>
+
+### Exclusion Field
+
+The source color is multiplied by the destination color and replaces the destination
+
+```csharp
+public Avalonia.Media.Imaging.BitmapBlendingMode Exclusion
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9a3680a691"></span>
+
+### HardLight Field
+
+Darkens or lightens the colors, depending on the source color value.
+
+```csharp
+public Avalonia.Media.Imaging.BitmapBlendingMode HardLight
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c4f43ead4f"></span>
+
+### Hue Field
+
+Creates a color with the hue of the source color and the saturation and luminosity of the backdrop color.
+
+```csharp
+public Avalonia.Media.Imaging.BitmapBlendingMode Hue
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1868734de0"></span>
+
+### Lighten Field
+
+Selects the lighter of the backdrop and source colors.
+
+```csharp
+public Avalonia.Media.Imaging.BitmapBlendingMode Lighten
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c8f3d919b7"></span>
+
+### Luminosity Field
+
+Creates a color with the luminosity of the source color and the hue and saturation of the backdrop color.
+
+```csharp
+public Avalonia.Media.Imaging.BitmapBlendingMode Luminosity
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-48e9195200"></span>
+
+### Multiply Field
+
+Creates a color with the hue of the source color and the saturation and luminosity of the backdrop color.
+
+```csharp
+public Avalonia.Media.Imaging.BitmapBlendingMode Multiply
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-740309ccc9"></span>
+
+### Overlay Field
+
+Multiplies or screens the colors, depending on the backdrop color value.
+
+```csharp
+public Avalonia.Media.Imaging.BitmapBlendingMode Overlay
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0f88edadb2"></span>
+
+### Plus Field
+
+Display the sum of the source image and destination image.
+
+```csharp
+public Avalonia.Media.Imaging.BitmapBlendingMode Plus
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-505c4c36ac"></span>
+
+### Saturation Field
+
+Creates a color with the saturation of the source color and the hue and luminosity of the backdrop color.
+
+```csharp
+public Avalonia.Media.Imaging.BitmapBlendingMode Saturation
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4fbc97ae36"></span>
+
+### Screen Field
+
+Multiplies the complements of the backdrop and source color values, then complements the result.
+
+```csharp
+public Avalonia.Media.Imaging.BitmapBlendingMode Screen
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5fe5d770f8"></span>
+
+### SoftLight Field
+
+Subtracts the darker of the two constituent colors from the lighter color.
+
+```csharp
+public Avalonia.Media.Imaging.BitmapBlendingMode SoftLight
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-96157a2b3a"></span>
+
+### Source Field
+
+Only the source will be present.
+
+```csharp
+public Avalonia.Media.Imaging.BitmapBlendingMode Source
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5451bfcdf1"></span>
+
+### SourceAtop Field
+
+Source which overlaps the destination, replaces the destination.
+
+```csharp
+public Avalonia.Media.Imaging.BitmapBlendingMode SourceAtop
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-682507b703"></span>
+
+### SourceIn Field
+
+The source that overlaps the destination, replaces the destination.
+
+```csharp
+public Avalonia.Media.Imaging.BitmapBlendingMode SourceIn
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-408da12281"></span>
+
+### SourceOut Field
+
+Source is placed, where it falls outside of the destination.
+
+```csharp
+public Avalonia.Media.Imaging.BitmapBlendingMode SourceOut
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-79be6a022c"></span>
+
+### SourceOver Field
+
+Source is placed over the destination.
+
+```csharp
+public Avalonia.Media.Imaging.BitmapBlendingMode SourceOver
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1adc3c04fc"></span>
+
+### Unspecified Field
+
+```csharp
+public Avalonia.Media.Imaging.BitmapBlendingMode Unspecified
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a088525682"></span>
+
+### Xor Field
+
+The non-overlapping regions of source and destination are combined.
+
+```csharp
+public Avalonia.Media.Imaging.BitmapBlendingMode Xor
+```
+
+</section>
+
+</ApiRefPage>
+

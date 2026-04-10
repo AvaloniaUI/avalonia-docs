@@ -2,15 +2,15 @@
 id: mediasource
 title: MediaSource
 tags:
-  - accelerate
+  - avalonia pro
+  - avalonia enterprise
 ---
 
-import Pill from '/src/components/global/Pill';
+The `MediaSource` class hierarchy provides an abstraction for different types of media content sources in Avalonia Pro MediaControls. This allows the media playback system to handle various content sources (files, URLs, streams) through a unified interface.
 
-<Pill variant="primary" href="/tools">Accelerate</Pill>
-<br/><br/>
-
-The `MediaSource` class hierarchy provides an abstraction for different types of media content sources in Avalonia Accelerate MediaControls. This allows the media playback system to handle various content sources (files, URLs, streams) through a unified interface.
+:::info
+`MediaPlayer` is available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
+:::
 
 ## MediaSource (Abstract Base Class)
 
@@ -168,5 +168,5 @@ The `MediaPlayer` manages the lifecycle automatically:
 - [MediaPlayer control](/controls/media/mediaplayercontrol)
 - [MediaPlayer class](/docs/media/mediaplayer)
 - [Implementing MediaPlayer](/docs/media/media-playback)
-- [Installing Avalonia Accelerate](/tools/installing-accelerate)
+- [Installing Avalonia Pro](/tools/installing-avalonia-pro)
 - [Troubleshooting](/troubleshooting/controls/mediaplayer)

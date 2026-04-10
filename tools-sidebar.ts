@@ -76,8 +76,7 @@ const sidebars: SidebarsConfig = {
         'parcel/mcp',
       ],
     },
-    'installing-accelerate',
-    'community-edition',
+    'installing-avalonia-pro',
     'faq',
   ],
 };

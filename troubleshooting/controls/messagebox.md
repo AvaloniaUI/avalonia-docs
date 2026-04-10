@@ -129,6 +129,6 @@ This approach only works in desktop applications that use `ClassicDesktopStyleAp
 
 ## See also
 
-- [Window control](../../reference/controls/window)
-- [Dialog documentation](../../guides/building-cross-platform-applications/dealing-with-platforms#dialogs)
+- [Window control](/controls/primitives/window)
+- [How to work with dialogs](/docs/how-to/dialogs-how-to)
 - [MessageBox feature request (GitHub)](https://github.com/AvaloniaUI/Avalonia/issues/670)

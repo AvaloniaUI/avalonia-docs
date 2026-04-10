@@ -140,7 +140,7 @@ A control cannot have both a `ContextFlyout` and a `ContextMenu` attached at the
 | `ItemsSource` | `IEnumerable` | Binds menu items to a collection so you can generate them dynamically. |
 | `Opening` | `event` | Raised before the context menu opens. Set `Cancel` to `true` to prevent it. |
 | `Closing` | `event` | Raised when the context menu closes. |
-| `PlacementMode` | `PlacementMode` | Controls where the context menu appears relative to the pointer. |
+| `Placement` | `PlacementMode` | Controls where the context menu appears relative to the pointer. |
 
 ## See also
 

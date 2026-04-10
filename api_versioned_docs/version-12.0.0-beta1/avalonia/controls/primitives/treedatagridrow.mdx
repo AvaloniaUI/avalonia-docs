@@ -1,0 +1,327 @@
+---
+title: 'TreeDataGridRow'
+hide_title: true
+slug: '/avalonia/controls/primitives/treedatagridrow'
+uid: 'Avalonia.Controls.Primitives.TreeDataGridRow'
+commentId: 'T:Avalonia.Controls.Primitives.TreeDataGridRow'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.TreeDataGrid'
+assembly: 'Avalonia.Controls.TreeDataGrid'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Primitives'
+tfms:
+  - 'net8.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">TreeDataGridRow Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Primitives</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A control which displays a row in a [Avalonia.Controls.TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid) control.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class TreeDataGridRow
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> TemplatedControl <span className="apiref-page__relation-separator">-&gt;</span> TreeDataGridRow
+</div>
+</div>
+
+## Remarks
+
+[TreeDataGridRow](xref:Avalonia.Controls.Primitives.TreeDataGridRow) is responsible for displaying a single row of data in a [TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid).
+It hosts a [Avalonia.Controls.Primitives.TreeDataGridCellsPresenter](xref:Avalonia.Controls.Primitives.TreeDataGridCellsPresenter) that displays the individual cells for
+each column.
+
+This class handles row selection, provides access to the row's cells, and supports drag
+and drop operations when [Avalonia.Controls.TreeDataGrid.AutoDragDropRows](xref:Avalonia.Controls.TreeDataGrid.AutoDragDropRows) is enabled.
+
+This class implements the following pseudo-classes:
+
+- :selected - Set when the row is selected
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [TreeDataGridRow](#uid-cb73fbfa1b) | Initializes a new instance of the [TreeDataGridRow](xref:Avalonia.Controls.Primitives.TreeDataGridRow) class. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-cb73fbfa1b"></span>
+
+### TreeDataGridRow Constructor
+
+Initializes a new instance of the [TreeDataGridRow](xref:Avalonia.Controls.Primitives.TreeDataGridRow) class.
+
+```csharp
+public TreeDataGridRow()
+```
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [TryGetCell](#uid-ed3ed04d79) | Attempts to retrieve a realized cell at the specified column index. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ed3ed04d79"></span>
+
+### TryGetCell Method
+
+Attempts to retrieve a realized cell at the specified column index.
+
+```csharp
+public Avalonia.Controls.Control TryGetCell(int columnIndex)
+```
+
+#### Parameters
+
+`columnIndex` int
+
+The index of the column.
+
+
+#### Returns
+
+Avalonia.Controls.Control
+
+The cell at the specified column index, or null if no cell exists at that position.
+
+
+#### Remarks
+
+This method delegates to the [Avalonia.Controls.Primitives.TreeDataGridRow.CellsPresenter](xref:Avalonia.Controls.Primitives.TreeDataGridRow.CellsPresenter) to retrieve the cell.
+If the specified cell is not currently realized (e.g., scrolled out of view),
+this method will return null.
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [CellsPresenter](#uid-efcee4d25b) | Gets the cells presenter that displays the cells in this row. |
+| [Columns](#uid-e5df3c615b) | Gets the columns collection from the owning [Avalonia.Controls.TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid). |
+| [ElementFactory](#uid-895a705bba) | Gets or sets the element factory used to create cells. |
+| [IsSelected](#uid-3f70e72ef1) | Gets a value indicating whether the row is selected. |
+| [Model](#uid-162f5ba8ad) | Gets the data model associated with this row. |
+| [RowIndex](#uid-0cd5d8e172) | Gets the index of this row in the [TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid). |
+| [Rows](#uid-168c06a36c) | Gets the rows collection from the owning [Avalonia.Controls.TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-efcee4d25b"></span>
+
+### CellsPresenter Property
+
+Gets the cells presenter that displays the cells in this row.
+
+```csharp
+public Avalonia.Controls.Primitives.TreeDataGridCellsPresenter CellsPresenter { get; set; }
+```
+
+#### Remarks
+
+The cells presenter is defined in the control template and is looked up
+in [Avalonia.Controls.Primitives.TreeDataGridRow.OnApplyTemplate(Avalonia.Controls.Primitives.TemplateAppliedEventArgs)](xref:Avalonia.Controls.Primitives.TreeDataGridRow.OnApplyTemplate%28Avalonia.Controls.Primitives.TemplateAppliedEventArgs%29).
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e5df3c615b"></span>
+
+### Columns Property
+
+Gets the columns collection from the owning [Avalonia.Controls.TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid).
+
+```csharp
+public Avalonia.Controls.TreeDataGridColumns Columns { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-895a705bba"></span>
+
+### ElementFactory Property
+
+Gets or sets the element factory used to create cells.
+
+```csharp
+public Avalonia.Controls.Primitives.TreeDataGridElementFactory ElementFactory { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3f70e72ef1"></span>
+
+### IsSelected Property
+
+Gets a value indicating whether the row is selected.
+
+```csharp
+public bool IsSelected { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-162f5ba8ad"></span>
+
+### Model Property
+
+Gets the data model associated with this row.
+
+```csharp
+public object Model { get; set; }
+```
+
+#### Remarks
+
+When the row is realized, returns the underlying model of the row. Will be of the type
+`TModel` as specified in the [Avalonia.Controls.TreeDataGridSource&lt;T&gt;](xref:Avalonia.Controls.TreeDataGridSource%601).
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0cd5d8e172"></span>
+
+### RowIndex Property
+
+Gets the index of this row in the [TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid).
+
+```csharp
+public int RowIndex { get; set; }
+```
+
+#### Value
+
+The zero-based row index, or -1 if the row is not realized.
+
+
+#### Remarks
+
+The row index is based upon the data currently displayed in the [TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid), and not
+the underlying data source. For example, if the data is sorted, filtered or contains
+expanded hierarchical rows, the indices may not correspond directly to the data source.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-168c06a36c"></span>
+
+### Rows Property
+
+Gets the rows collection from the owning [Avalonia.Controls.TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid).
+
+```csharp
+public Avalonia.Controls.TreeDataGridRows Rows { get; set; }
+```
+
+</section>
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [ColumnsProperty](#uid-394285a991) | Defines the [Avalonia.Controls.Primitives.TreeDataGridRow.Columns](xref:Avalonia.Controls.Primitives.TreeDataGridRow.Columns) property. |
+| [ElementFactoryProperty](#uid-d9d7402080) | Defines the [Avalonia.Controls.Primitives.TreeDataGridRow.ElementFactory](xref:Avalonia.Controls.Primitives.TreeDataGridRow.ElementFactory) property. |
+| [IsSelectedProperty](#uid-2f9f2b1716) | Defines the [Avalonia.Controls.Primitives.TreeDataGridRow.IsSelected](xref:Avalonia.Controls.Primitives.TreeDataGridRow.IsSelected) property. |
+| [RowsProperty](#uid-d919c25888) | Defines the [Avalonia.Controls.Primitives.TreeDataGridRow.Rows](xref:Avalonia.Controls.Primitives.TreeDataGridRow.Rows) property. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-394285a991"></span>
+
+### ColumnsProperty Field
+
+Defines the [Avalonia.Controls.Primitives.TreeDataGridRow.Columns](xref:Avalonia.Controls.Primitives.TreeDataGridRow.Columns) property.
+
+```csharp
+public Avalonia.DirectProperty<Avalonia.Controls.Primitives.TreeDataGridRow, Avalonia.Controls.TreeDataGridColumns> ColumnsProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d9d7402080"></span>
+
+### ElementFactoryProperty Field
+
+Defines the [Avalonia.Controls.Primitives.TreeDataGridRow.ElementFactory](xref:Avalonia.Controls.Primitives.TreeDataGridRow.ElementFactory) property.
+
+```csharp
+public Avalonia.DirectProperty<Avalonia.Controls.Primitives.TreeDataGridRow, Avalonia.Controls.Primitives.TreeDataGridElementFactory> ElementFactoryProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2f9f2b1716"></span>
+
+### IsSelectedProperty Field
+
+Defines the [Avalonia.Controls.Primitives.TreeDataGridRow.IsSelected](xref:Avalonia.Controls.Primitives.TreeDataGridRow.IsSelected) property.
+
+```csharp
+public Avalonia.DirectProperty<Avalonia.Controls.Primitives.TreeDataGridRow, bool> IsSelectedProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d919c25888"></span>
+
+### RowsProperty Field
+
+Defines the [Avalonia.Controls.Primitives.TreeDataGridRow.Rows](xref:Avalonia.Controls.Primitives.TreeDataGridRow.Rows) property.
+
+```csharp
+public Avalonia.DirectProperty<Avalonia.Controls.Primitives.TreeDataGridRow, Avalonia.Controls.TreeDataGridRows> RowsProperty
+```
+
+</section>
+
+</ApiRefPage>
+

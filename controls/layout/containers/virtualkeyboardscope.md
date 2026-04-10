@@ -4,14 +4,15 @@ title: VirtualKeyboardScope
 description: A container control that automatically shows and hides the virtual keyboard based on input focus.
 doc-type: reference
 tags:
-  - accelerate
+  - avalonia pro
+  - avalonia enterprise
 ---
 
 The `VirtualKeyboardScope` control is a container that automatically manages [virtual keyboard](/controls/input/text-input/virtualkeyboard) visibility based on input focus. When a text input control inside the scope receives focus, the keyboard appears. When focus moves to a non-text control or is lost entirely, the keyboard hides.
 
 
 :::info
-This control is available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Enterprise.
+This control is available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
 
 ## Overview

@@ -27,7 +27,7 @@ The default panel works well for linear lists, but there are scenarios where you
 - **Custom arrangements**: Use a [custom panel](custom-panel) with your own `ArrangeOverride` logic for radial layouts, dashboards, or other non-linear designs.
 
 :::warning[Performance consideration]
-When you replace the default panel with a non-virtualizing panel such as `Canvas` or `WrapPanel`, the control creates a UI element for every item in the collection. For large collections (hundreds or thousands of items), this can significantly increase memory usage and degrade rendering performance. If you need custom layout with large data sets, consider building a custom panel that implements `IVirtualizingPanel` to retain virtualization support.
+When you replace the default panel with a non-virtualizing panel such as `Canvas` or `WrapPanel`, the control creates a UI element for every item in the collection. For large collections (hundreds or thousands of items), this can significantly increase memory usage and degrade rendering performance. If you need custom layout with large data sets, consider building a custom panel that extends `VirtualizingPanel` to retain virtualization support.
 :::
 
 ## Example

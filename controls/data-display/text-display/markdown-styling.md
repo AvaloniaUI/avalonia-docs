@@ -2,14 +2,15 @@
 id: markdown-styling
 title: Markdown styling
 tags:
-  - accelerate
+  - avalonia pro
+  - avalonia enterprise
 ---
 
 The `Markdown` control in Avalonia supports custom styling via named resources. You can override these resources in your application to customize the appearance of Markdown elements.
 
 
 :::info
-This control is available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Business or higher.
+This control is available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
 
 ## Customizable resources
@@ -161,4 +162,3 @@ To customize, define these resources in your application theme or resource dicti
 ## See also
 
 - [Markdown control](/controls/data-display/text-display/markdown)
-- [Rendering markdown](/docs/app-development/rendering-markdown)

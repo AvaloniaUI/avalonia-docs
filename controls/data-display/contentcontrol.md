@@ -22,7 +22,7 @@ You will probably use these properties most often:
 
 ## Displaying content
 
-At its simplest, a `ContentControl` displays the data you assign to its [`Content`](/api/avalonia/controls/contentcontrol/content) property.
+At its simplest, a `ContentControl` displays the data you assign to its [`Content`](/api/avalonia/controls/contentcontrol#content-property) property.
 
 For example:
 

@@ -193,8 +193,26 @@ if (expression is not null)
 
 This is useful for diagnostics or for calling `UpdateSource()` when using `UpdateSourceTrigger.Explicit`.
 
+## Clearing bindings
+
+If you retained the `IDisposable` returned by `Bind`, dispose it to terminate the binding:
+
+```csharp
+var subscription = textBlock.Bind(TextBlock.TextProperty, source);
+
+// Later, remove the binding
+subscription.Dispose();
+```
+
+If you do not have the `IDisposable` (for example, when the binding was set through an object initializer or XAML), call `ClearValue` to remove the binding and revert the property to its next value in the [priority order](/docs/properties/value-precedence):
+
+```csharp
+textBlock.ClearValue(TextBlock.TextProperty);
+```
+
 ## See also
 
 - [Data Binding Syntax](/docs/data-binding/data-binding-syntax): XAML binding syntax reference.
 - [Compiled Bindings](/docs/data-binding/compiled-bindings): Compile-time validated bindings.
 - [Binding Debugging](/docs/data-binding/binding-debugging): Diagnosing binding issues.
+- [Value Precedence](/docs/properties/value-precedence): How Avalonia resolves property values from multiple sources.

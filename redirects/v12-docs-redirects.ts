@@ -268,7 +268,6 @@ const redirects: Redirect[] = [
         "from": [
             "/docs/guides/basics/accessing-the-ui-thread",
             "/docs/guides/development-guides/accessing-the-ui-thread",
-            "/docs/app-development/accessing-the-ui-thread",
         ],
         "to": "/docs/app-development/threading"
     },
@@ -303,10 +302,7 @@ const redirects: Redirect[] = [
         "to": "/docs/platform-specific-guides/webassembly"
     },
     {
-        "from": [
-            "/docs/guides/platforms/macos-development",
-            "/docs/deployment/macOS"
-        ],
+        "from": "/docs/guides/platforms/macos-development",
         "to": "/docs/deployment/macos"
     },
     {
@@ -836,7 +832,6 @@ const redirects: Redirect[] = [
     },
     {
         "from": [
-            "/docs/layout/",
             "/docs/basics/user-interface/building-layouts/",
             "/docs/concepts/layout/layout-zones"
         ],
@@ -1144,14 +1139,6 @@ const redirects: Redirect[] = [
         "to": "/tools"
     },
     {
-        "from": "/accelerate/installation",
-        "to": "/tools/installing-accelerate"
-    },
-    {
-        "from": "/accelerate/community",
-        "to": "/tools/community-edition"
-    },
-    {
         "from": "/accelerate/components/media-player/quickstart",
         "to": "/controls/media/media-playback"
     },
@@ -1402,10 +1389,6 @@ const redirects: Redirect[] = [
     {
         "from": "/xpf/release-notes",
         "to": "/xpf/version-info/release-notes"
-    },
-    {
-        "from": "/xpf/troubleshooting",
-        "to": "/xpf/troubleshooting"
     },
     {
         "from": [

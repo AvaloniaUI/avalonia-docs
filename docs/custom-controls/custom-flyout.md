@@ -1,7 +1,7 @@
 ---
 id: custom-flyout
 title: How to create a custom flyout
-description: Create a custom flyout control by extending PopupFlyoutBase in Avalonia.
+description: Create a custom flyout control by extending FlyoutBase in Avalonia.
 doc-type: how-to
 ---
 

@@ -266,7 +266,6 @@ public class SkiaCanvas : Control
 Add the SkiaSharp NuGet package:
 
 ```xml
-<PackageReference Include="Avalonia.Skia" Version="12.0.*" />
 <PackageReference Include="SkiaSharp" Version="2.88.*" />
 ```
 

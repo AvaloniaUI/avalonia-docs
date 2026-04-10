@@ -5,13 +5,9 @@ description: Troubleshoot common MediaPlayer problems in Avalonia, including pla
 doc-type: troubleshooting
 sidebar_label: MediaPlayer
 tags:
-  - accelerate
+  - avalonia pro
+  - avalonia enterprise
 ---
-
-import Pill from '/src/components/global/Pill';
-
-<Pill variant="primary" href="/tools">Accelerate</Pill>
-<br/><br/>
 
 ## No playback when setting `Source` in the constructor
 
@@ -97,7 +93,7 @@ When the player encounters a problem (such as an unsupported codec or a network 
 mediaPlayer.ErrorOccurred += (sender, args) =>
 {
     // Log or display the error
-    Console.WriteLine($"Playback error: {args.ErrorMessage}");
+    Console.WriteLine($"Playback error: {args.Message}");
 };
 
 // Reset the player after an error
@@ -109,5 +105,5 @@ After releasing, you can set a new `Source` and attempt playback again.
 ## See also
 
 - [MediaPlayer control](/controls/media/mediaplayercontrol)
-- [MediaPlayer class](/docs/media/mediaplayer)
-- [MediaSource class](/docs/media/mediasource)
+- [MediaPlayer class](/controls/media/mediaplayer)
+- [MediaSource class](/controls/media/mediasource)

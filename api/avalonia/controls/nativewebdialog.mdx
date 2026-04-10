@@ -11,7 +11,7 @@ apiKind: 'Class'
 generatedBy: 'dotnet-apiref'
 namespace: 'Avalonia.Controls'
 tfms:
-  - 'net10.0-android36.0'
+  - 'net10.0-browser1.0'
 ---
 
 import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
@@ -32,12 +32,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.WebView</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/3111696698e2c3d6fe9aace8cb954153ee16b3e4/src/Avalonia.Controls.WebView/NativeWebDialog.cs">NativeWebDialog.cs</a>
 </div>
-
-<div className="apiref-page__lead">
-
-[Avalonia.Controls.NativeWebDialog](xref:Avalonia.Controls.NativeWebDialog) is a dialog window that hosts a native web browser implementation.
-It provides a way to display web content in a separate window, particularly useful for platforms like Linux where embedded WebView controls might not be available.
 
 </div>
 
@@ -54,7 +51,7 @@ public class NativeWebDialog
 <span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> NativeWebDialog
 </div>
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Implements:</span> IDisposable, ne, nf
+<span className="apiref-page__meta-label">Implements:</span> IWebView, IWebViewHolder, IDisposable
 </div>
 </div>
 
@@ -87,7 +84,7 @@ public NativeWebDialog()
 | [InvokeScript](#uid-b7cc3f254e) | No summary available. |
 | [Move](#uid-e6cc8a96fc) | No summary available. |
 | [Navigate](#uid-51c4494217) | No summary available. |
-| [NavigateToString](#uid-6efe8bb206) | No summary available. |
+| [NavigateToString](#uid-5c65517ddf) | No summary available. |
 | [PrintToPdfStreamAsync (2 overloads)](#uid-2f7986f3bd) | No summary available. |
 | [Refresh](#uid-5cd7f02391) | No summary available. |
 | [Resize](#uid-692b89559c) | No summary available. |
@@ -97,8 +94,8 @@ public NativeWebDialog()
 | [TryGetCommandManager](#uid-566b2a7332) | No summary available. |
 | [TryGetCookieManager](#uid-fa0f118892) | No summary available. |
 | [TryGetPlatformHandle](#uid-d37c9ff9fd) | No summary available. |
-| [TryGetWebViewPlatformHandle](#uid-7cc0522c58) | Gets platform handle of the webview hosted inside the dialog. |
-| [TryGetWindow](#uid-43355e2807) | If dialog is based on a [Avalonia.Controls.Window](xref:Avalonia.Controls.Window), returns its instance to allow full control. |
+| [TryGetWebViewPlatformHandle](#uid-7cc0522c58) | No summary available. |
+| [TryGetWindow](#uid-43355e2807) | No summary available. |
 
 <section className="apiref-page__member-entry">
 
@@ -224,17 +221,20 @@ public void Navigate(Uri url)
 
 <section className="apiref-page__member-entry">
 
-<span id="uid-6efe8bb206"></span>
+<span id="uid-5c65517ddf"></span>
 
 ### NavigateToString Method
 
 ```csharp
-public void NavigateToString(string text)
+public void NavigateToString(string text, Uri baseUri)
 ```
 
 #### Parameters
 
 `text` string
+
+
+`baseUri` Uri
 
 
 </section>
@@ -346,8 +346,6 @@ public void Show()
 
 #### Show Method
 
-Opens the WebView dialog with [Avalonia.Controls.TopLevel](xref:Avalonia.Controls.TopLevel) owner.
-
 ```csharp
 public void Show(Avalonia.Controls.TopLevel owner)
 ```
@@ -445,8 +443,6 @@ public Avalonia.Platform.IPlatformHandle TryGetPlatformHandle()
 
 ### TryGetWebViewPlatformHandle Method
 
-Gets platform handle of the webview hosted inside the dialog.
-
 ```csharp
 public Avalonia.Platform.IPlatformHandle TryGetWebViewPlatformHandle()
 ```
@@ -463,8 +459,6 @@ public Avalonia.Platform.IPlatformHandle TryGetWebViewPlatformHandle()
 <span id="uid-43355e2807"></span>
 
 ### TryGetWindow Method
-
-If dialog is based on a [Avalonia.Controls.Window](xref:Avalonia.Controls.Window), returns its instance to allow full control.
 
 ```csharp
 public Avalonia.Controls.Window TryGetWindow()
@@ -486,6 +480,7 @@ public Avalonia.Controls.Window TryGetWindow()
 | [CanUserResize](#uid-74aa486fb3) | No summary available. |
 | [Source](#uid-69e6d8451a) | No summary available. |
 | [Title](#uid-ead2a18dd9) | No summary available. |
+| [UserAgent](#uid-cf3ecb2705) | No summary available. |
 
 <section className="apiref-page__member-entry">
 
@@ -543,6 +538,18 @@ public Uri Source { get; set; }
 
 ```csharp
 public string Title { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-cf3ecb2705"></span>
+
+### UserAgent Property
+
+```csharp
+public string UserAgent { get; set; }
 ```
 
 </section>

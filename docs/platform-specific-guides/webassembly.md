@@ -164,4 +164,4 @@ You can pass `Action`/`Func` callbacks as parameters (marshalled as callable JS 
 ## See also
 
 - [Deploying WebAssembly](../deployment/webassembly.mdx)
-- [WebAssembly troubleshooting](../../troubleshooting/platform-specific-issues/webassembly.md)
+- [WebAssembly troubleshooting](/troubleshooting/platform-specific-issues/webassembly)

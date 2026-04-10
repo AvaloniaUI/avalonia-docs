@@ -374,6 +374,44 @@ rules:
     dont_example: "---\ntitle: Custom controls\n--- (no doc-type field)"
     automated: true
 
+  # --- Technical accuracy rules (ACCU) ---
+
+  - id: ACCU-001
+    category: accuracy
+    severity: blocker
+    scope: [all]
+    pattern: "no fabricated technical details"
+    pass_criteria: "all API names, property names, method signatures, event names, enum values, and behavioral claims are verified against actual Avalonia source code or documentation"
+    rationale: "LLMs frequently generate plausible-sounding but incorrect API names, properties, or method signatures. Documentation must only reference APIs and behaviors that actually exist."
+    do_example: "Set `IsVisible` to `true` to show the control. (verified: Control.IsVisible exists)"
+    dont_example: "Set `ShowControl` to `true` to show the control. (fabricated: ShowControl does not exist)"
+    automated: false
+    note: "This rule applies to all output from the skill. When writing or suggesting documentation content, every technical detail must be verified. When in doubt, use lookup_avalonia_api to confirm."
+
+  - id: ACCU-002
+    category: accuracy
+    severity: blocker
+    scope: [all]
+    pattern: "preserve existing code snippets"
+    pass_criteria: "existing code snippets in fenced code blocks and inline code are not modified unless the user has expressly asked for code changes"
+    rationale: "Code snippets in documentation represent tested, working examples. Modifying them without explicit authorization risks introducing errors, breaking examples, or subtly changing API usage patterns."
+    do_example: "Flag a prose issue around a code block but leave the code block untouched."
+    dont_example: "Silently rewrite a code snippet to use a different API or change parameter names while fixing prose issues."
+    automated: false
+    note: "When linting, flag code issues as observations (e.g., 'code block on line 42 may reference a deprecated API') but never modify the code. Only the user can authorize code changes."
+
+  - id: ACCU-003
+    category: accuracy
+    severity: blocker
+    scope: [all]
+    pattern: "API references validated via MCP"
+    pass_criteria: "all class names, property names, method names, event names, and enum values referenced in the page are confirmed to exist using the lookup_avalonia_api MCP tool"
+    rationale: "The Avalonia Docs MCP server provides authoritative API lookups. Using it prevents documentation from referencing non-existent or renamed APIs."
+    do_example: "Checked TextBlock via lookup_avalonia_api: confirmed. Checked TextBlock.Text: confirmed."
+    dont_example: "Assumed TextBlock.DisplayText exists because the name sounds reasonable. (fabricated)"
+    automated: true
+    note: "Use the lookup_avalonia_api tool from the Avalonia Docs MCP server. See https://docs.avaloniaui.net/tools/ai-tools/build-mcp for tool documentation. Group related lookups to minimize calls."
+
   # --- Accessibility rules (ACC) ---
 
   - id: ACC-001

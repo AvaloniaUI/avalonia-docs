@@ -4,14 +4,15 @@ title: Markdown
 description: Render Markdown-formatted text using the Avalonia.Controls.Markdown control with support for theming, selection, and custom image loading.
 doc-type: reference
 tags:
-  - accelerate
+  - avalonia pro
+  - avalonia enterprise
 ---
 
 The Avalonia.Controls.Markdown control renders Markdown-formatted text in Avalonia applications, supporting common Markdown features and theming.
 
 
 :::info
-This control is available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Business or higher.
+This control is available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
 
 ## Usage examples
@@ -140,19 +141,19 @@ var markdown = new Markdown
 
 ## Custom image loader
 
-See the [Image Loader](/docs/markdown/imageloader) page for a detailed example how to customize image loading.
+See the [Image Loader](/controls/data-display/text-display/imageloader) page for a detailed example how to customize image loading.
 
 ## Code highlighter
 
-See the [Code Highlighter](/docs/markdown/codehighlighter) page for information on enabling syntax highlighting for code blocks, installation packages, and usage examples for the included highlighters.
+See the [Code Highlighter](/controls/data-display/text-display/codehighlighter) page for information on enabling syntax highlighting for code blocks, installation packages, and usage examples for the included highlighters.
 
 ## Styling
 
-See the [Markdown styling](/docs/markdown/markdown-styling) page for a full list of resources you can override.
+See the [Markdown styling](/controls/data-display/text-display/markdown-styling) page for a full list of resources you can override.
 
 ## Installation
 
-See the [Installation Guide](/tools/installing-accelerate) for step-by-step instructions on how to install Accelerate components.
+See the [Installation Guide](/tools/installing-avalonia-pro) for step-by-step instructions on how to install Avalonia Pro components.
 
 Add the Markdown package to your project:
 
@@ -174,4 +175,3 @@ Add the resources by referencing the shipped `Default.axaml` theme via a `StyleI
 - [Markdown styling](/controls/data-display/text-display/markdown-styling)
 - [Image loader](/controls/data-display/text-display/imageloader)
 - [Code highlighter](/controls/data-display/text-display/codehighlighter)
-- [Rendering markdown](/docs/app-development/rendering-markdown)

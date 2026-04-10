@@ -124,6 +124,6 @@ For a full guide on defining attached properties, see [Attached Properties](atta
 
 ## See also
 
-- [Custom ItemsPanel](custom-itemspanel)
-- [Attached Properties](attached-properties)
-- [Layout](../layout/layout)
+- [Custom ItemsPanel](/docs/custom-controls/custom-itemspanel)
+- [Attached Properties](/docs/custom-controls/attached-properties)
+- [Layout](/docs/layout)

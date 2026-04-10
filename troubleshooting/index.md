@@ -37,7 +37,7 @@ Find help diagnosing and resolving common issues when building Avalonia apps. Wh
 
 <DocsCards>
   <DocsCard header="MediaPlayer" href="/troubleshooting/controls/mediaplayer">
-    <p>Common issues with the Avalonia Accelerate MediaPlayer control.</p>
+    <p>Common issues with the Avalonia Pro MediaPlayer control.</p>
   </DocsCard>
   <DocsCard header="MessageBox" href="/troubleshooting/controls/messagebox">
     <p>Options for displaying message dialogs, including third-party alternatives.</p>
@@ -74,13 +74,5 @@ Find help diagnosing and resolving common issues when building Avalonia apps. Wh
   </DocsCard>
   <DocsCard header="Themes" href="/troubleshooting/ui-development/themes">
     <p>Common issues with control themes, including theme lookup and unintended side effects.</p>
-  </DocsCard>
-</DocsCards>
-
-## XPF
-
-<DocsCards>
-  <DocsCard header="Troubleshooting Avalonia XPF" href="/troubleshooting/xpf">
-    <p>Issues when using Avalonia XPF for WPF compatibility.</p>
   </DocsCard>
 </DocsCards>

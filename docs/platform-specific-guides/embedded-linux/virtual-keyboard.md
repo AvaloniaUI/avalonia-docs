@@ -3,15 +3,15 @@ id: virtual-keyboard
 title: Adding a virtual keyboard
 sidebar_label: Virtual keyboard
 tags:
-  - accelerate
+  - avalonia pro
+  - avalonia enterprise
 ---
 
-import Pill from '/src/components/global/Pill';
-
-<Pill variant="primary" href="/tooling">Accelerate</Pill>
-<br/><br/>
-
 The Virtual Keyboard component provides an on-screen keyboard for Avalonia applications. It is designed for touch-based or kiosk scenarios where physical keyboards may not be available, enabling text input through touchscreens or mouse clicks.
+
+:::info
+This component is available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
+:::
 
 The Virtual Keyboard component includes two main controls:
 
@@ -20,7 +20,7 @@ The Virtual Keyboard component includes two main controls:
 
 ## Installation
 
-See the [Installation Guide](/tools/installing-accelerate) for step-by-step instructions on how to install Accelerate components.
+See the [Installation Guide](/tools/installing-avalonia-pro) for step-by-step instructions on how to install Avalonia Pro components.
 
 Add the Virtual Keyboard package to your project:
 

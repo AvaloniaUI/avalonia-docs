@@ -160,4 +160,4 @@ namespace AvaloniaGuides.ViewModels
 
 - [Binding to commands](/docs/data-binding/binding-to-commands)
 - [Commanding](/docs/input-interaction/commanding)
-- [Data binding overview](/docs/data-binding/)
+- [Data binding overview](/docs/data-binding/introduction-to-data-binding)

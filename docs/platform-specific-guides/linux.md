@@ -31,7 +31,7 @@ AT-SPI2 support is enabled automatically when a D-Bus session bus is available a
 
 ### Testing with Orca
 
-[Orca](https://wiki.gnome.org/Projects/Orca) is the default screen reader on most GNOME-based distributions. To verify your application's accessibility:
+[Orca](https://orca.gnome.org/) is the default screen reader on most GNOME-based distributions. To verify your application's accessibility:
 
 1. Install Orca if not already present:
    ```bash

@@ -2,234 +2,289 @@
 id: column-types
 title: Column types
 tags:
-  - accelerate
+  - avalonia pro
+  - avalonia enterprise
 ---
 
 :::info
-This control is available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Business or higher.
+This control is available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
 
-## TextColumn
+## TreeDataGridTextColumn
 
-`TextColumn` displays property values as text. Values are converted to strings using `ToString()` for display. For editable columns, text input is converted back to the property type using `Convert.ChangeType()`.
+`TreeDataGridTextColumn` displays property values as text. Values are converted to strings using `ToString()` for display. For editable columns, text input is converted back to the property type using `Convert.ChangeType()`.
 
-**Generic parameters:**
-- `TModel` (`Person`): Your model type
-- `TValue` (`string`, `int`, `DateTime`, etc.): The property type
+### XAML usage
 
-**Constructor parameters:**
-- `header`: The column header text
-- `getter`: An expression that returns the property value
-- `setter` (optional): An action to update the property value. If omitted, the column is read-only.
-- `width` (optional): The column width (defaults to `GridLength.Auto` if omitted)
-- `options` (optional): A `TextColumnOptions<TModel>` instance for additional configuration
+```xml
+<!-- Read-only column -->
+<TreeDataGridTextColumn Header="First Name" Binding="{Binding FirstName}" />
 
-**Examples:**
+<!-- Column width -->
+<TreeDataGridTextColumn Header="First Name" Binding="{Binding FirstName}" Width="200" />
 
-```csharp
-// Read-only columns
-new TextColumn<Person, string>("First Name", x => x.FirstName)
-new TextColumn<Person, int>("Age", x => x.Age)
-new TextColumn<Person, DateTime>("Birth Date", x => x.BirthDate)
+<!-- Formatting -->
+<TreeDataGridTextColumn Header="Birth Date" Binding="{Binding BirthDate, StringFormat='{}{0:yyyy-MM-dd}'}" />
 
-// Editable column
-new TextColumn<Person, int>("Age", x => x.Age, (person, value) => person.Age = value)
+<!-- Alignment and trimming -->
+<TreeDataGridTextColumn Header="GDP" Binding="{Binding GDP}"
+                        TextAlignment="Right"
+                        MaxWidth="150" />
 ```
 
-**TextColumnOptions:**
+Columns bound to a writable property are editable by default. To make a column read-only, set `IsReadOnly="True"`.
+
+### Code-behind usage
+
+Use the `WithTextColumn` fluent method. The getter expression is used for two-way binding automatically when the expression is writable. When the header matches the property name, you can omit it:
 
 ```csharp
-new TextColumn<Person, DateTime>(
-    "Birth Date",
-    x => x.BirthDate,
-    width: new GridLength(150),
-    options: new TextColumnOptions<Person>
-    {
-        StringFormat = "{0:yyyy-MM-dd}",
-        TextAlignment = TextAlignment.Center,
-        TextTrimming = TextTrimming.CharacterEllipsis,
-        TextWrapping = TextWrapping.NoWrap,
-        IsTextSearchEnabled = true,
-        CanUserResizeColumn = true,
-        CanUserSortColumn = true,
-        MinWidth = new GridLength(100),
-        MaxWidth = new GridLength(300),
-        BeginEditGestures = BeginEditGestures.F2 | BeginEditGestures.DoubleTap
-    })
+// Header inferred from property name
+source.WithTextColumn(x => x.FirstName)
+
+// Explicit header
+source.WithTextColumn("First Name", x => x.FirstName)
+
+// With options
+source.WithTextColumn("First Name", x => x.FirstName, o =>
+{
+    o.Width = new GridLength(200);
+    o.IsReadOnly = true;
+})
 ```
 
-Available options:
-- `StringFormat`: Format string for displaying values (e.g., `"{0:C}"` for currency)
-- `Culture`: Culture for formatting (defaults to `CultureInfo.CurrentCulture`)
-- `TextAlignment`: Horizontal text alignment (`Left`, `Center`, `Right`)
-- `TextTrimming`: How text is trimmed when too long
-- `TextWrapping`: How text wraps within the cell
-- `IsTextSearchEnabled`: Whether the column participates in text searches
-- `CanUserResizeColumn`: Whether the user can resize the column
-- `CanUserSortColumn`: Whether the user can sort by clicking the header
-- `AllowTriStateSorting`: Whether to allow ascending/descending/unsorted states
-- `MinWidth`/`MaxWidth`: Minimum and maximum column widths
-- `CompareAscending`/`CompareDescending`: Custom comparison functions for sorting
-- `BeginEditGestures`: Gestures that trigger edit mode (`None`, `F2`, `Tap`, `DoubleTap`, `WhenSelected`)
+### Options
 
-## CheckBoxColumn
+Options can be set as attributes in XAML or configured via the `TextColumnCreateOptions` lambda in code-behind:
 
-`CheckBoxColumn` displays boolean values as checkboxes.
+| Option | XAML attribute | Default | Description |
+|---|---|---|---|
+| `Width` | `Width` | `Auto` | Column width |
+| `IsReadOnly` | `IsReadOnly` | `false` | Whether the column is read-only |
+| `StringFormat` | Use binding `StringFormat` | N/A | Format string for display (e.g. `"{0:C}"` for currency) |
+| `Culture` | N/A | `CurrentCulture` | Culture for formatting |
+| `TextAlignment` | `TextAlignment` | `Left` | Horizontal text alignment |
+| `TextTrimming` | `TextTrimming` | N/A | How text is trimmed when too long |
+| `TextWrapping` | `TextWrapping` | `NoWrap` | How text wraps within the cell |
+| `IsTextSearchEnabled` | `IsTextSearchEnabled` | `true` | Whether the column participates in text search |
+| `CanUserResize` | `CanUserResize` | `true` | Whether the user can resize the column |
+| `CanUserSortColumn` | `CanUserSortColumn` | `true` | Whether the user can sort by clicking the header |
+| `AllowTriStateSorting` | `AllowTriStateSorting` | `false` | Allow ascending/descending/unsorted states |
+| `MinWidth` / `MaxWidth` | `MinWidth` / `MaxWidth` | N/A | Minimum and maximum column widths |
+| `CompareAscending` / `CompareDescending` | N/A | N/A | Custom comparison functions for sorting |
+| `BeginEditGestures` | `BeginEditGestures` | N/A | Gestures that trigger edit mode (`None`, `F2`, `Tap`, `DoubleTap`, `WhenSelected`) |
 
-**Generic parameter:**
-- `TModel` (`Person`): Your model type
+:::note
+`IsTextSearchEnabled` defaults to `true` for text columns. Set it to `false` explicitly if you don't want a column to participate in text search.
+:::
 
-**Constructor parameters:**
-- `header`: The column header text
-- `getter`: An expression that gets the boolean property value from the model
-- `setter` (optional): An action that sets the property value in the model. If omitted, the column is read-only.
-- `width` (optional): The column width (defaults to `GridLength.Auto` if omitted)
-- `options` (optional): A `CheckBoxColumnOptions<TModel>` instance for additional configuration
+## TreeDataGridCheckBoxColumn
 
-**Examples:**
+`TreeDataGridCheckBoxColumn` displays Boolean values as checkboxes.
 
-```csharp
-// Read-only checkbox
-new CheckBoxColumn<Person>("Firstborn", x => x.IsFirstborn)
+### XAML usage
 
-// Editable checkbox
-new CheckBoxColumn<Person>("Firstborn", x => x.IsFirstborn, (o, v) => o.IsFirstborn = v)
+```xml
+<!-- Basic checkbox -->
+<TreeDataGridCheckBoxColumn Header="Active" Binding="{Binding IsActive}" />
+
+<!-- Read-only, non-resizable -->
+<TreeDataGridCheckBoxColumn Binding="{Binding IsChecked}"
+                            CanUserResize="False"
+                            IsReadOnly="True" />
 ```
 
-**CheckBoxColumnOptions:**
+### Code-behind usage
+
+Use `WithCheckBoxColumn` for `bool` properties, or `WithThreeStateCheckBoxColumn` for `bool?` (nullable) properties:
 
 ```csharp
-new CheckBoxColumn<Person>(
-    "Firstborn",
-    x => x.IsFirstborn,
-    (o, v) => o.IsFirstborn = v,
-    width: new GridLength(80),
-    options: new CheckBoxColumnOptions<Person>
-    {
-        CanUserResizeColumn = false,
-        CanUserSortColumn = true,
-        MinWidth = new GridLength(50),
-        MaxWidth = new GridLength(100),
-        BeginEditGestures = BeginEditGestures.Tap
-    })
+// Basic checkbox
+source.WithCheckBoxColumn(x => x.IsActive)
+
+// With explicit header
+source.WithCheckBoxColumn("Active", x => x.IsActive)
+
+// Three-state checkbox for nullable bool
+source.WithThreeStateCheckBoxColumn(x => x.IsChecked)
+
+// With options
+source.WithCheckBoxColumn(x => x.IsActive, o =>
+{
+    o.CanUserResize = false;
+    o.Width = new GridLength(80);
+})
 ```
 
-Available options:
-- `CanUserResizeColumn`: Whether the user can resize the column
-- `CanUserSortColumn`: Whether the user can sort by clicking the header
-- `AllowTriStateSorting`: Whether to allow ascending/descending/unsorted states
-- `MinWidth`/`MaxWidth`: Minimum and maximum column widths
-- `CompareAscending`/`CompareDescending`: Custom comparison functions for sorting
-- `BeginEditGestures`: Gestures that trigger edit mode (`None`, `F2`, `Tap`, `DoubleTap`, `WhenSelected`)
+### Options
 
-## HierarchicalExpanderColumn
+| Option | XAML attribute | Default | Description |
+|---|---|---|---|
+| `Width` | `Width` | `Auto` | Column width |
+| `IsReadOnly` | `IsReadOnly` | `false` | Whether the column is read-only |
+| `CanUserResize` | `CanUserResize` | `true` | Whether the user can resize the column |
+| `CanUserSortColumn` | `CanUserSortColumn` | `true` | Whether the user can sort by clicking the header |
+| `AllowTriStateSorting` | `AllowTriStateSorting` | `false` | Allow ascending/descending/unsorted states |
+| `MinWidth` / `MaxWidth` | `MinWidth` / `MaxWidth` | N/A | Minimum and maximum column widths |
+| `CompareAscending` / `CompareDescending` | N/A | N/A | Custom comparison functions for sorting |
+| `BeginEditGestures` | `BeginEditGestures` | N/A | Gestures that trigger edit mode |
 
-`HierarchicalExpanderColumn` displays hierarchical tree data with an expander control to show/hide child items. This column type can only be used with `HierarchicalTreeDataGridSource` (use `FlatTreeDataGridSource` for non-hierarchical data).
+## TreeDataGridHierarchicalExpanderColumn
 
-The expander column wraps another column (the "inner" column) which defines what content appears next to the expander icon. Typically this is a `TextColumn`, but it can be any column type.
+`TreeDataGridHierarchicalExpanderColumn` displays hierarchical tree data with an expander control to show/hide child items. This column type can only be used with hierarchical data.
 
-**Generic parameter:**
-- `TModel` (`Person`): Your model type
+The expander column wraps an inner column (typically a `TreeDataGridTextColumn` or `TreeDataGridTemplateColumn`) which defines what content appears next to the expander icon.
 
-**Constructor parameters:**
-- `inner`: The column that defines the content displayed next to the expander (e.g., `TextColumn` to show text). The expander column uses the width and options from this inner column.
-- `childSelector`: An expression that returns the child items for a row (e.g., `x => x.Children`)
-- `hasChildrenSelector` (optional): An expression to check if a row has children without loading them (useful for lazy loading)
-- `isExpandedSelector` (optional): An expression to bind the expanded state to a property in your model
+### XAML usage
 
-**Examples:**
+Define the expander column in XAML with bindings for children, and nest the inner column as content:
+
+```xml
+<TreeDataGridHierarchicalExpanderColumn Header="Name" Width="*"
+                                        ChildrenBinding="{Binding Children}"
+                                        HasChildrenBinding="{Binding HasChildren}"
+                                        IsExpandedBinding="{Binding IsExpanded}">
+  <TreeDataGridTextColumn Binding="{Binding Name}" />
+</TreeDataGridHierarchicalExpanderColumn>
+```
+
+| Attribute | Description |
+|---|---|
+| `ChildrenBinding` | Binding to the children collection for each row (required) |
+| `HasChildrenBinding` | Binding to check if a row has children without loading them (useful for lazy loading) |
+| `IsExpandedBinding` | Binding to persist the expanded state to a property in the model |
+
+### Code-behind usage
+
+For a text column inside the expander, use `WithHierarchicalExpanderTextColumn`:
 
 ```csharp
-// Basic usage
-new HierarchicalExpanderColumn<Person>(
-    new TextColumn<Person, string>("First Name", x => x.FirstName),
-    x => x.Children
-)
+source.WithHierarchicalExpanderTextColumn(x => x.Name, x => x.Children)
 
-// With all parameters
-new HierarchicalExpanderColumn<FileNode>(
-    new TextColumn<FileNode, string>("Name", x => x.Name),
+// With options
+source.WithHierarchicalExpanderTextColumn(x => x.Name, x => x.Children, o =>
+{
+    o.Width = GridLength.Star;
+    o.HasChildren = x => x.HasChildren;
+    o.IsExpanded = x => x.IsExpanded;
+})
+```
+
+For a custom inner column (e.g. a template column), use `WithHierarchicalExpanderColumn`:
+
+```csharp
+source.WithHierarchicalExpanderColumn(
+    "Name",
+    new TreeDataGridTemplateColumn(null, "FileNameCell", "FileNameEditCell"),
     x => x.Children,
-    x => x.HasChildren,  // Check without loading children
-    x => x.IsExpanded    // Bind to model property
-)
+    o =>
+    {
+        o.Width = GridLength.Star;
+        o.HasChildren = x => x.HasChildren;
+        o.IsExpanded = x => x.IsExpanded;
+    })
 ```
 
-## TemplateColumn
+## TreeDataGridTemplateColumn
 
-`TemplateColumn` uses data templates to render cell content, allowing complete control over appearance and behavior.
+`TreeDataGridTemplateColumn` uses data templates to render cell content, allowing complete control over appearance and behavior.
 
-**Generic parameter:**
-- `TModel` (`Person`): Your model type
+### XAML usage
 
-**Constructor parameters:**
-- `header`: The column header
-- `cellTemplate`: Data template for displaying cells
-- `cellEditingTemplate`: Data template for editing cells (optional - if not provided, the display template is used)
-- `width`: Column width (optional)
-- `options`: Additional column options (optional)
+Define the cell template (and optional editing template) inline:
 
-**Two ways to specify templates:**
+```xml
+<TreeDataGridTemplateColumn Header="Region">
+  <TreeDataGridTemplateColumn.CellTemplate>
+    <DataTemplate DataType="m:Country">
+      <TextBlock Text="{Binding Region}" />
+    </DataTemplate>
+  </TreeDataGridTemplateColumn.CellTemplate>
+  <TreeDataGridTemplateColumn.CellEditingTemplate>
+    <DataTemplate DataType="m:Country">
+      <ComboBox ItemsSource="{x:Static m:Countries.Regions}"
+                SelectedItem="{Binding Region}" />
+    </DataTemplate>
+  </TreeDataGridTemplateColumn.CellEditingTemplate>
+</TreeDataGridTemplateColumn>
+```
 
-**1. Using a `FuncDataTemplate` in code:**
+### Code-behind usage
+
+#### Using `IDataTemplate` instances:
 
 ```csharp
-new TemplateColumn<Person>(
+source.WithTemplateColumn(
     "Selected",
     new FuncDataTemplate<Person>((_, _) => new CheckBox
     {
-        [!CheckBox.IsCheckedProperty] = new ReflectionBinding("IsSelected"),
+        [!CheckBox.IsCheckedProperty] = new Binding("IsSelected"),
     }))
 ```
 
-**2. Using a XAML resource:**
+#### Using XAML resource keys:
+
+Define a template in your `TreeDataGrid.Resources`:
 
 ```xml
-<TreeDataGrid Name="fileViewer" Source="{Binding Files.Source}">
-    <TreeDataGrid.Resources>
-           
-        <!-- Defines a named template for the column -->
-        <DataTemplate x:Key="CheckBoxCell">
-            <CheckBox IsChecked="{Binding IsSelected}"/>
-        </DataTemplate>
-        
-    </TreeDataGrid.Resources>
+<TreeDataGrid Source="{Binding Source}">
+  <TreeDataGrid.Resources>
+    <DataTemplate x:Key="CheckBoxCell">
+      <CheckBox IsChecked="{Binding IsSelected}" />
+    </DataTemplate>
+  </TreeDataGrid.Resources>
 </TreeDataGrid>
 ```
 
+Then reference it by key:
+
 ```csharp
-// CheckBoxCell is the key of the template defined in XAML.
-new TemplateColumn<Person>("Selected", "CheckBoxCell");
+source.WithTemplateColumnFromResourceKeys("Selected", "CheckBoxCell")
 
 // With separate edit template
-new TemplateColumn<Person>("Selected", "CheckBoxCell", "CheckBoxCellEdit");
+source.WithTemplateColumnFromResourceKeys("Selected", "CheckBoxCell", "CheckBoxCellEdit")
 ```
 
-**TemplateColumnOptions:**
+### Options
+
+| Option | XAML attribute | Default | Description |
+|---|---|---|---|
+| `Width` | `Width` | `Auto` | Column width |
+| `TextSearchBinding` | N/A | N/A | Binding to extract searchable text from the model |
+| `CanUserResize` | `CanUserResize` | `true` | Whether the user can resize the column |
+| `CanUserSortColumn` | `CanUserSortColumn` | `true` | Whether the user can sort by clicking the header |
+| `AllowTriStateSorting` | `AllowTriStateSorting` | `false` | Allow ascending/descending/unsorted states |
+| `MinWidth` / `MaxWidth` | `MinWidth` / `MaxWidth` | N/A | Minimum and maximum column widths |
+| `CompareAscending` / `CompareDescending` | N/A | N/A | Custom comparison functions for sorting |
+| `BeginEditGestures` | `BeginEditGestures` | N/A | Gestures that trigger edit mode |
+
+To enable text search on a template column, set `TextSearchBinding` using `CompiledBinding.Create`:
 
 ```csharp
-new TemplateColumn<Person>(
-    "Custom",
-    "CustomTemplate",
-    width: new GridLength(150),
-    options: new TemplateColumnOptions<Person>
-    {
-        IsTextSearchEnabled = true,
-        TextSearchValueSelector = person => person.DisplayName,
-        CanUserResizeColumn = true,
-        MinWidth = new GridLength(100)
-    })
+source.WithTemplateColumnFromResourceKeys("Name", "FileNameCell", "FileNameEditCell", o =>
+{
+    o.TextSearchBinding = CompiledBinding.Create<FileTreeNodeModel, string>(x => x.Name);
+})
 ```
 
-Available options:
-- `IsTextSearchEnabled`: Whether the column participates in text searches
-- `TextSearchValueSelector`: Function to extract searchable text from the model
-- `CanUserResizeColumn`: Whether the user can resize the column
-- `CanUserSortColumn`: Whether the user can sort by clicking the header
-- `AllowTriStateSorting`: Whether to allow ascending/descending/unsorted states
-- `MinWidth`/`MaxWidth`: Minimum and maximum column widths
-- `CompareAscending`/`CompareDescending`: Custom comparison functions for sorting
-- `BeginEditGestures`: Gestures that trigger edit mode (`None`, `F2`, `Tap`, `DoubleTap`, `WhenSelected`)
+## TreeDataGridRowHeaderColumn
+
+`TreeDataGridRowHeaderColumn` displays row headers (typically row numbers) in the leftmost column.
+
+### XAML usage
+
+```xml
+<TreeDataGrid ItemsSource="{Binding Data}">
+  <TreeDataGridRowHeaderColumn />
+  <TreeDataGridTextColumn Header="Name" Binding="{Binding Name}" />
+</TreeDataGrid>
+```
+
+### Code-behind usage
+
+```csharp
+source.WithRowHeaderColumn()
+```
 
 ## See also
 

@@ -47,6 +47,9 @@ Severity levels:
 | `QUAL-004` | minor | all pages | ARI score <= 14 (college senior level) calculated over prose only, excluding code blocks and inline code. | ARI score > 14 indicates excessively dense prose. |
 | `INC-001` | major | all pages | Text uses gender-neutral pronouns (they/them/their) and nouns; avoids gendered generic references and terms like "guys", "mankind", "man-hours". | Gendered pronouns (he/she/him/her) as generic references; "guys" as group address; "mankind", "manmade", "man-hours". |
 | `INC-002` | major | all pages | Text uses inclusive technical terminology: "blocklist"/"allowlist", "primary"/"replica", "verify"/"check", "placeholder"/"sample". | Legacy terms: "blacklist"/"whitelist", "master"/"slave" in role context, "sanity check", "dummy" as example data. |
+| `ACCU-001` | blocker | all pages | All API names, property names, method signatures, event names, enum values, and behavioral claims are verified against actual Avalonia source or documentation. No fabricated technical details. | Any technical detail that cannot be verified, or that is invented/guessed/hallucinated. |
+| `ACCU-002` | blocker | all pages | Existing code snippets (fenced and inline) are preserved exactly as-is unless the user expressly asked for code changes. | Code snippets silently modified during lint/review without explicit user authorization. |
+| `ACCU-003` | blocker | all pages | All API references validated against the Avalonia API reference using `lookup_avalonia_api` MCP tool. Every class, property, method, event, or enum value mentioned must be confirmed to exist. | API reference that cannot be validated via `lookup_avalonia_api`, or assumed to exist without verification. |
 
 ## Automation notes
 
@@ -76,7 +79,12 @@ Partial automatable checks (term scan is fast; context judgment is manual):
 - Gendered pronoun and gendered noun scan (`INC-001`)
 - Legacy technical term scan (`INC-002`)
 
+MCP-assisted checks (require Avalonia Docs MCP server):
+- API reference validation (`ACCU-003`: use `lookup_avalonia_api` to verify every class, property, method, event, and enum value referenced in the page)
+
 Manual/semantic checks:
+- No fabricated technical details (`ACCU-001`: verify all API and behavioral claims against source or documentation)
+- Code snippet preservation (`ACCU-002`: ensure no code blocks are modified without explicit user request)
 - UI label bolding (`MIC-001`)
 - Code identifier backticks (`MIC-002`)
 - Acronym expansion context (`TERM-001`)

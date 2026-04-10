@@ -37,7 +37,7 @@ After April 13th 2026, if you haven't registered for a Community License or purc
 
 #### I have another question. Where can I ask?
 
-Feel free to leave your questions or feedback on [Community Hub](https://avaloniaui.community/dev-tools-hvq32ub8) and [Avalonia Support](https://support.avaloniaui.net/).
+Feel free to leave your questions or feedback on [Community Hub](https://github.com/AvaloniaCommunity) and [Avalonia Support](https://support.avaloniaui.net/).
 
 ## Developer tools
 
@@ -210,7 +210,7 @@ Yes, both authentication providers are supported. You can either:
 - Build request and redirect `Uri`s manually
 - Integrate with `Google.Apis.Auth` and `Microsoft.Identity.Client` NuGet packages
 
-Integration samples are available in our [sample repository](https://github.com/AvaloniaUI/Accelerate.Samples/tree/main/WebAuthenticationBrokerSample/WebAuthenticationBrokerSample).
+Integration samples are available in our [sample repository](https://github.com/AvaloniaUI/Accelerate.Samples/tree/main/WebAuthenticationBrokerSample).
 
 #### Why use WebAuthenticationBroker over other options?
 

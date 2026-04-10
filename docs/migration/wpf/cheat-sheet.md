@@ -206,6 +206,14 @@ Or with a binding converter:
 | `Transitions` (UWP) | `Transitions` | Property change animations |
 | `CompositionTarget.Rendering` | `TopLevel.RequestAnimationFrame()` | Per-frame callback on UI thread; see also `CompositionCustomVisualHandler` for render-thread callbacks |
 
+## Window
+
+| WPF | Avalonia | Notes |
+|---|---|---|
+| `AllowsTransparency="True"` | `TransparencyLevelHint="Transparent"` | Set `Background="{x:Null}"` (not `Transparent`) for [click-through behavior](/docs/how-to/window-how-to#transparent-click-through-window) |
+| `WindowStyle="None"` | `SystemDecorations="None"` | Removes title bar and border |
+| `ResizeMode` | `CanResize` | Boolean instead of enum |
+
 ## Graphics
 
 | WPF | Avalonia | Notes |

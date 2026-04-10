@@ -107,8 +107,8 @@ You can bind the rotation angle to a slider for interactive control:
 ## See also
 
 - [Decorator](/controls/layout/decorator)
-- [Border](/controls/layout/border)
-- [Viewbox](/controls/layout/viewbox)
-- [Transforms](/concepts/transforms)
+- [Border](/controls/layout/containers/border)
+- [Viewbox](/controls/layout/containers/viewbox)
+- [Transforms](/docs/graphics-animation/transforms)
 - [LayoutTransformControl API reference](/api/avalonia/controls/layouttransformcontrol)
 - [`LayoutTransformControl.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/LayoutTransformControl.cs)

@@ -33,8 +33,9 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/649891b3481c6e1581f42efc8f5f106f86ef6119/src/Avalonia.Base/Animation/Transitions/Rotate3DTransition.cs">Rotate3DTransition.cs</a>
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/3111696698e2c3d6fe9aace8cb954153ee16b3e4/src/Avalonia.Base/Animation/Rotate3DTransition.cs">Rotate3DTransition.cs</a>
 </div>
+
 </div>
 
 <div className="apiref-page__signature">
@@ -55,7 +56,7 @@ public class Rotate3DTransition
 
 | Name | Description |
 | --- | --- |
-| [Rotate3DTransition (2 overloads)](#uid-48c684395a) | Creates a new instance of the [Avalonia.Animation.Rotate3DTransition](xref:Avalonia.Animation.Rotate3DTransition) |
+| [Rotate3DTransition (2 overloads)](#uid-48c684395a) | Initializes a new instance of the [Avalonia.Animation.Rotate3DTransition](xref:Avalonia.Animation.Rotate3DTransition) class. |
 
 <span id="uid-48c684395a"></span>
 
@@ -67,7 +68,7 @@ public class Rotate3DTransition
 
 #### Rotate3DTransition Constructor
 
-Creates a new instance of the [Avalonia.Animation.Rotate3DTransition](xref:Avalonia.Animation.Rotate3DTransition)
+Initializes a new instance of the [Avalonia.Animation.Rotate3DTransition](xref:Avalonia.Animation.Rotate3DTransition) class.
 
 ```csharp
 public Rotate3DTransition()
@@ -102,7 +103,26 @@ public Rotate3DTransition(TimeSpan duration, Avalonia.Animation.PageSlide.SlideA
 
 | Name | Description |
 | --- | --- |
+| [Reset](#uid-0c1405bda2) | No summary available. |
 | [Start](#uid-4c710e1054) | No summary available. |
+| [Update](#uid-a47a87d2d1) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0c1405bda2"></span>
+
+### Reset Method
+
+```csharp
+public void Reset(Avalonia.Visual visual)
+```
+
+#### Parameters
+
+`visual` [Avalonia.Visual](xref:Avalonia.Visual)
+
+
+</section>
 
 <section className="apiref-page__member-entry">
 
@@ -131,6 +151,38 @@ public System.Threading.Tasks.Task Start(Avalonia.Visual from, Avalonia.Visual t
 #### Returns
 
 System.Threading.Tasks.Task
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a47a87d2d1"></span>
+
+### Update Method
+
+```csharp
+public void Update(double progress, Avalonia.Visual from, Avalonia.Visual to, bool forward, double pageLength, System.Collections.Generic.IReadOnlyList<Avalonia.Animation.PageTransitionItem> visibleItems)
+```
+
+#### Parameters
+
+`progress` double
+
+
+`from` [Avalonia.Visual](xref:Avalonia.Visual)
+
+
+`to` [Avalonia.Visual](xref:Avalonia.Visual)
+
+
+`forward` bool
+
+
+`pageLength` double
+
+
+`visibleItems` System.Collections.Generic.IReadOnlyList&lt;[Avalonia.Animation.PageTransitionItem](xref:Avalonia.Animation.PageTransitionItem)&gt;
 
 
 </section>

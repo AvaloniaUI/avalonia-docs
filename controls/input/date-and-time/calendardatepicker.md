@@ -21,7 +21,7 @@ You will probably use these properties most often:
 
 | Property | Type | Description |
 |---|---|---|
-| `SelectedDate` | `DateTimeOffset?` | The currently selected date, or `null` if no date is selected. |
+| `SelectedDate` | `DateTime?` | The currently selected date, or `null` if no date is selected. |
 | `DisplayDate` | `DateTime` | The month to display when the calendar opens. |
 | `DisplayDateStart` | `DateTime?` | The earliest date that can be selected. |
 | `DisplayDateEnd` | `DateTime?` | The latest date that can be selected. |
