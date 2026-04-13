@@ -24,7 +24,7 @@ You will probably use these properties most often:
 | `SelectedItem` | `object?` | `null` | The currently displayed item from the bound collection. |
 | `ItemsSource` | `IEnumerable?` | `null` | The bound collection used as the data source. |
 | `ItemTemplate` | `IDataTemplate?` | `null` | A `DataTemplate` applied to each item, allowing you to control how items look. |
-| `ItemsPanel` | `ITemplate<Panel?>` | `VirtualizingCarouselPanel` | The container panel used to arrange items. See [ItemsControl](/controls/data-display/collections/itemscontrol) for details on customising the items panel. |
+| `ItemsPanel` | `ITemplate<Panel?>` | `VirtualizingCarouselPanel` | The container panel used to arrange items. See [ItemsControl](/controls/data-display/collections/itemscontrol) for details on customizing the items panel. |
 | `AutoScrollToSelectedItem` | `bool` | `true` | Automatically scrolls to bring the selected item into view. |
 
 ## Examples
