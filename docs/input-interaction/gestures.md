@@ -26,6 +26,7 @@ Avalonia provides two kinds of gestures:
 | [`PinchGestureRecognizer`](/docs/input-interaction/gestures/pinch-gesture-recognizer) | Two pointers moving towards or away from each other. Used for pinch-to-zoom. |
 | [`PullGestureRecognizer`](/docs/input-interaction/gestures/pull-gesture-recognizer) | A pointer dragged from the edge of a control in a specific direction. Used for pull-to-refresh. |
 | [`ScrollGestureRecognizer`](/docs/input-interaction/gestures/scroll-gesture-recognizer) | A pointer dragged to scroll content horizontally, vertically, or both. |
+| [`SwipeGestureRecognizer`](/docs/input-interaction/gestures/swipe-gesture-recognizer) | A rapid directional pointer drag for discrete paging interactions. Provides velocity data for speed-sensitive transitions. |
 
 ## Attaching a gesture recognizer
 

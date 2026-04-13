@@ -198,6 +198,7 @@ const sidebars: SidebarsConfig = {
             'input-interaction/gestures/pinch-gesture-recognizer',
             'input-interaction/gestures/pull-gesture-recognizer',
             'input-interaction/gestures/scroll-gesture-recognizer',
+            'input-interaction/gestures/swipe-gesture-recognizer',
           ],
         },
         'input-interaction/keyboard-and-hotkeys',
