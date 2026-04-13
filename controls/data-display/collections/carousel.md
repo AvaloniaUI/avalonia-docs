@@ -227,7 +227,7 @@ Enable swipe and pointer-drag navigation by setting `IsSwipeEnabled`:
 </Carousel>
 ```
 
-When enabled, users can drag between pages with visual feedback. Flick gestures are supported where the swipe velocity determines whether the transition completes. The `IsSwiping` property is `true` while a gesture is in progress.
+When enabled, users can drag between pages with visual feedback. Flick gestures are supported, requiring a threshold swipe velocity to determine whether the transition completes. The `IsSwiping` property is `true` while a gesture is in progress.
 
 ## Wrap selection (looping)
 
