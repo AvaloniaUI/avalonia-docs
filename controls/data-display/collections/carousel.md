@@ -13,16 +13,21 @@ The `Carousel` has an items collection and displays each item as a page, in sequ
 
 You will probably use these properties most often:
 
-| Property | Description |
-|---|---|
-| `ItemsSource` | The bound collection that is used as the data source for the control. |
-| `ItemTemplate` | A `DataTemplate` applied to each item, allowing you to control how items look. |
-| `PageTransition` | The transition animation played when the displayed item changes. |
-| `SelectedIndex` | The zero-based index of the currently displayed item. |
-| `SelectedItem` | The currently displayed item from the bound collection. |
-| `ItemsPanel` | The container panel used to arrange items. See [ItemsControl](/controls/data-display/collections/itemscontrol) for details on customising the items panel. |
+| Property | Type | Default | Description |
+|---|---|---|---|
+| `PageTransition` | `IPageTransition?` | `null` | Transition animation played when the selected item changes. Built-in options include `PageSlide`, `CrossFade`, `Rotate3DTransition`, and `CompositePageTransition`. |
+| `IsSwipeEnabled` | `bool` | `false` | Enables swipe and pointer-drag gestures to navigate between pages. |
+| `ViewportFraction` | `double` | `1.0` | Fraction of the viewport occupied by each page. Values below `1.0` reveal adjacent pages (e.g., `0.8` peeks at neighbors, `0.33` shows three items). |
+| `IsSwiping` | `bool` | `false` | Read-only. `true` while a swipe gesture is in progress. |
+| `WrapSelection` | `bool` | `false` | When `true`, `Next()` wraps from the last item to the first, and `Previous()` wraps from the first to the last. |
+| `SelectedIndex` | `int` | `-1` | Zero-based index of the currently displayed item. |
+| `SelectedItem` | `object?` | `null` | The currently displayed item from the bound collection. |
+| `ItemsSource` | `IEnumerable?` | `null` | The bound collection used as the data source. |
+| `ItemTemplate` | `IDataTemplate?` | `null` | A `DataTemplate` applied to each item, allowing you to control how items look. |
+| `ItemsPanel` | `ITemplate<Panel?>` | `VirtualizingCarouselPanel` | The container panel used to arrange items. See [ItemsControl](/controls/data-display/collections/itemscontrol) for details on customizing the items panel. |
+| `AutoScrollToSelectedItem` | `bool` | `true` | Automatically scrolls to bring the selected item into view. |
 
-## Example
+## Examples
 
 This example has three images in the items collection, with buttons to move the display forwards and back. The buttons have click event handlers in the C# code-behind.
 
@@ -127,6 +132,7 @@ You set the animation that plays between items by assigning a transition to the 
 |---|---|
 | `PageSlide` | Slides content in from a specified direction. You can set `Orientation` to `Horizontal` (default) or `Vertical`. |
 | `CrossFade` | Fades out the current item and fades in the new item by animating opacity. |
+| `Rotate3DTransition` | Rotates the current and incoming items in 3D space. Supports horizontal and vertical axes. |
 | `CompositePageTransition` | Combines multiple transitions so they run together. |
 
 ### `PageSlide` example
@@ -211,8 +217,55 @@ public void GoToPrevious()
 }
 ```
 
+## Swipe gestures
+
+Enable swipe and pointer-drag navigation by setting `IsSwipeEnabled`:
+
+```xml title='XAML'
+<Carousel IsSwipeEnabled="True">
+    <!-- items -->
+</Carousel>
+```
+
+When enabled, users can drag between pages with visual feedback. Flick gestures are supported, requiring a threshold swipe velocity to determine whether the transition completes. The `IsSwiping` property is `true` while a gesture is in progress.
+
+## Wrap selection (looping)
+
+Enable looping so `Next()` on the last item wraps to the first and `Previous()` on the first wraps to the last:
+
+```xml title='XAML'
+<Carousel WrapSelection="True">
+    <!-- items -->
+</Carousel>
+```
+
+## Viewport fraction
+
+Set `ViewportFraction` below `1.0` to reveal adjacent pages alongside the selected page:
+
+```xml title='XAML'
+<Carousel ViewportFraction="0.8">
+    <!-- items -->
+</Carousel>
+```
+
+A value of `1.0` (default) shows a single full page. Values like `0.8` create a "peeking" effect where edges of adjacent pages are visible. A value of `0.33` fits roughly three items in view.
+
+## Keyboard navigation
+
+The `Carousel` supports keyboard navigation when focused:
+
+| Key | Action |
+|---|---|
+| Left / Up arrow | Moves to the previous item. |
+| Right / Down arrow | Moves to the next item. |
+| Home | Jumps to the first item. |
+| End | Jumps to the last item. |
+
 ## See also
 
+- [PipsPager](/controls/layout/containers/pipspager) for dot-based page indicators
+- [CarouselPage](/controls/navigation/carouselpage) for page-based carousel navigation
 - [Setting page transitions](/docs/graphics-animation/page-transitions)
 - [TransitioningContentControl](/controls/data-display/transitioningcontentcontrol)
 - [ItemsControl](/controls/data-display/collections/itemscontrol)
