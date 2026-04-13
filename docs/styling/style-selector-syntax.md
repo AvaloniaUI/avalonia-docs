@@ -194,9 +194,9 @@ When you use a property match, the property type must support the component mode
 new Style(x => x.OfType<Button>().Template().OfType<ContentPresenter>());
 ```
 
-You can match a control in a control template using the above syntax. All the other selectors listed here work on the logical tree, but this selector can step into a template.
+The above syntax selects a control in a control template. In the example above, the selector matches [`ContentPresenter`](/api/avalonia/controls/presenters/contentpresenter) controls that are inside a `Button` with a control template.
 
-In the example above, if a button has a template, then the selector matches selects content presenter controls (class `ContentPresenter`) inside the template.
+This selector is unique because it can select within a template, rather than working on the logical tree like the other selectors described on this page.
 
 ## Not function
 

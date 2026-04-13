@@ -1,6 +1,6 @@
 ---
 id: style-selectors
-title: Style Selectors
+title: Style selectors
 description: Learn how Avalonia style selectors match controls by type, class, name, and state using a CSS-like syntax.
 doc-type: concept
 ---
@@ -19,7 +19,7 @@ Avalonia uses style selectors to match controls using a custom XAML syntax that 
 | `Button#myButton` | Selects the `Button` with `Name="myButton"`. |
 | `StackPanel Button.xl` | Selects `Button.xl` controls that are descendants (any depth) of a `StackPanel`. |
 | `StackPanel > Button.xl` | Selects `Button.xl` controls that are direct children of a `StackPanel`. |
-| `Button /template/ ContentPresenter` | Selects `ContentPresenter` controls inside a `Button` control template. |
+| `Button /template/ ContentPresenter` | Selects a specified control inside a `Button` control template. ([`ContentPresenter`](/api/avalonia/controls/presenters/contentpresenter) in this example.) |
 | `:is(Button)` | Selects controls that are `Button` or derive from `Button`. |
 | `:not(Button.red)` | Selects controls that do not match `Button.red`. |
 | `Button:nth-child(2n+1)` | Selects odd-numbered `Button` controls among their siblings. |
