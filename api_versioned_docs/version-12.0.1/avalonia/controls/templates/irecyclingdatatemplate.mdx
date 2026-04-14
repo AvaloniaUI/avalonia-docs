@@ -1,0 +1,103 @@
+---
+title: 'IRecyclingDataTemplate'
+hide_title: true
+slug: '/avalonia/controls/templates/irecyclingdatatemplate'
+uid: 'Avalonia.Controls.Templates.IRecyclingDataTemplate'
+commentId: 'T:Avalonia.Controls.Templates.IRecyclingDataTemplate'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Templates'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IRecyclingDataTemplate Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Templates</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+An [Avalonia.Controls.Templates.IDataTemplate](xref:Avalonia.Controls.Templates.IDataTemplate) that supports recycling existing elements.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface IRecyclingDataTemplate
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="idatatemplate">IDataTemplate</a>, ITemplate&lt;object,Control&gt;
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Build](#uid-b7a424bae2) | Creates or recycles a control to display the specified data. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b7a424bae2"></span>
+
+### Build Method
+
+Creates or recycles a control to display the specified data.
+
+```csharp
+public Avalonia.Controls.Control Build(object data, Avalonia.Controls.Control existing)
+```
+
+#### Parameters
+
+`data` object
+
+The data to display.
+
+
+`existing` [Avalonia.Controls.Control](xref:Avalonia.Controls.Control)
+
+An optional control to recycle.
+
+
+#### Returns
+
+[Avalonia.Controls.Control](xref:Avalonia.Controls.Control)
+
+The `existing` control if supplied and applicable to
+`data`, otherwise a new control or null.
+
+
+#### Remarks
+
+The caller should ensure that any control passed to `existing`
+originated from the same data template.
+
+</section>
+
+</ApiRefPage>
+

@@ -1,0 +1,190 @@
+---
+title: 'IScrollSnapPointsInfo'
+hide_title: true
+slug: '/avalonia/controls/primitives/iscrollsnappointsinfo'
+uid: 'Avalonia.Controls.Primitives.IScrollSnapPointsInfo'
+commentId: 'T:Avalonia.Controls.Primitives.IScrollSnapPointsInfo'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Primitives'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IScrollSnapPointsInfo Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Primitives</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Describes snap point behavior for objects that contain and present items.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface IScrollSnapPointsInfo
+```
+
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [GetIrregularSnapPoints](#uid-293f2953f2) | Returns the set of distances between irregular snap points for a specified orientation and alignment. |
+| [GetRegularSnapPoints](#uid-86f0de3bae) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-293f2953f2"></span>
+
+### GetIrregularSnapPoints Method
+
+Returns the set of distances between irregular snap points for a specified orientation and alignment.
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<double> GetIrregularSnapPoints(Avalonia.Layout.Orientation orientation, Avalonia.Controls.Primitives.SnapPointsAlignment snapPointsAlignment)
+```
+
+#### Parameters
+
+`orientation` [Avalonia.Layout.Orientation](xref:Avalonia.Layout.Orientation)
+
+The orientation for the desired snap point set.
+
+
+`snapPointsAlignment` [Avalonia.Controls.Primitives.SnapPointsAlignment](xref:Avalonia.Controls.Primitives.SnapPointsAlignment)
+
+The alignment to use when applying the snap points.
+
+
+#### Returns
+
+System.Collections.Generic.IReadOnlyList&lt;double&gt;
+
+The read-only collection of snap point distances. Returns an empty collection when no snap points are present.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-86f0de3bae"></span>
+
+### GetRegularSnapPoints Method
+
+```csharp
+public double GetRegularSnapPoints(Avalonia.Layout.Orientation orientation, Avalonia.Controls.Primitives.SnapPointsAlignment snapPointsAlignment, double& offset)
+```
+
+#### Parameters
+
+`orientation` [Avalonia.Layout.Orientation](xref:Avalonia.Layout.Orientation)
+
+
+`snapPointsAlignment` [Avalonia.Controls.Primitives.SnapPointsAlignment](xref:Avalonia.Controls.Primitives.SnapPointsAlignment)
+
+
+`offset` double&amp;
+
+
+#### Returns
+
+double
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [AreHorizontalSnapPointsRegular](#uid-6862389a6e) | Gets or sets a value that indicates whether the horizontal snap points for the container are equidistant from each other. |
+| [AreVerticalSnapPointsRegular](#uid-ec49211826) | Gets or sets a value that indicates whether the vertical snap points for the container are equidistant from each other. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6862389a6e"></span>
+
+### AreHorizontalSnapPointsRegular Property
+
+Gets or sets a value that indicates whether the horizontal snap points for the container are equidistant from each other.
+
+```csharp
+public bool AreHorizontalSnapPointsRegular { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ec49211826"></span>
+
+### AreVerticalSnapPointsRegular Property
+
+Gets or sets a value that indicates whether the vertical snap points for the container are equidistant from each other.
+
+```csharp
+public bool AreVerticalSnapPointsRegular { get; set; }
+```
+
+</section>
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [HorizontalSnapPointsChanged](#uid-1915b35dc7) | Occurs when the measurements for horizontal snap points change. |
+| [VerticalSnapPointsChanged](#uid-c925cfc981) | Occurs when the measurements for vertical snap points change. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1915b35dc7"></span>
+
+### HorizontalSnapPointsChanged Event
+
+Occurs when the measurements for horizontal snap points change.
+
+```csharp
+public event EventHandler<Avalonia.Interactivity.RoutedEventArgs> HorizontalSnapPointsChanged
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c925cfc981"></span>
+
+### VerticalSnapPointsChanged Event
+
+Occurs when the measurements for vertical snap points change.
+
+```csharp
+public event EventHandler<Avalonia.Interactivity.RoutedEventArgs> VerticalSnapPointsChanged
+```
+
+</section>
+
+</ApiRefPage>
+
