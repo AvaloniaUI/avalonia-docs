@@ -187,7 +187,7 @@ You can change the displayed item in several ways:
 
 ### Navigating with buttons (code-behind)
 
-The simplest approach is to call `Next()` and `Previous()` from button click handlers, as shown in the [example](#example) above.
+The simplest approach is to call `Next()` and `Previous()` from button click handlers, as shown in the [example](#examples) above.
 
 ### Navigating with data binding
 

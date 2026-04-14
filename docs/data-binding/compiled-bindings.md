@@ -150,7 +150,7 @@ If you have compiled bindings enabled in the root node (via `x:CompileBindings="
 
 ## Compiled bindings from code
 
-You can also create compiled bindings in C# code using the `CompiledBinding.Create` factory method. This gives you the same compile-time safety and performance benefits as XAML compiled bindings, using LINQ expressions instead of string property paths. See [Compiled bindings from code](/docs/data-binding/binding-from-code#compiled-bindings-from-code) for examples.
+You can also create compiled bindings in C# code using the `CompiledBinding.Create` factory method. This gives you the same compile-time safety and performance benefits as XAML compiled bindings, using LINQ expressions instead of string property paths. See [Compiled bindings from code](/docs/data-binding/binding-from-code#creating-compiled-bindings-from-code) for examples.
 
 ## See also
 
