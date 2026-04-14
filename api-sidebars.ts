@@ -337,8 +337,11 @@ const sidebars = {
             "avalonia/controls/combobox",
             "avalonia/controls/comboboxitem",
             "avalonia/controls/commandbar",
+            "avalonia/controls/commandbarbutton",
             "avalonia/controls/commandbardefaultlabelposition",
             "avalonia/controls/commandbaroverflowbuttonvisibility",
+            "avalonia/controls/commandbarseparator",
+            "avalonia/controls/commandbartogglebutton",
             "avalonia/controls/containerclearingeventargs",
             "avalonia/controls/containerindexchangedeventargs",
             "avalonia/controls/containerpreparedeventargs",
@@ -353,6 +356,7 @@ const sidebars = {
             "avalonia/controls/datepickerpresenter",
             "avalonia/controls/datepickerselectedvaluechangedeventargs",
             "avalonia/controls/decorator",
+            "avalonia/controls/deferralmanager-deferral",
             "avalonia/controls/definitionbase",
             "avalonia/controls/definitionlist-1",
             "avalonia/controls/design",
@@ -398,6 +402,7 @@ const sidebars = {
             "avalonia/controls/isetlogicalparent",
             "avalonia/controls/itemplate-1",
             "avalonia/controls/ithemevariantprovider",
+            "avalonia/controls/iwebviewadapterwithfocus-lostfocusdirection",
             "avalonia/controls/iconelement",
             "avalonia/controls/image",
             "avalonia/controls/itemcollection",
@@ -446,6 +451,7 @@ const sidebars = {
             "avalonia/controls/panel",
             "avalonia/controls/pathicon",
             "avalonia/controls/pipspager",
+            "avalonia/controls/pipspagerselectedindexchangedeventargs",
             "avalonia/controls/pixelpointeventargs",
             "avalonia/controls/placementmode",
             "avalonia/controls/platform/platformallowedwindowactions",
@@ -696,6 +702,18 @@ const sidebars = {
         },
         {
           "type": "category",
+          "label": "Avalonia.Controls.Gtk",
+          "items": [
+            "avalonia/controls/gtk/gtkinterop-gconnectflags",
+            "avalonia/controls/gtk/gtkinterop-gdkrectangle"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/controls/gtk/index"
+          }
+        },
+        {
+          "type": "category",
           "label": "Avalonia.Controls.Metadata",
           "items": [
             "avalonia/controls/metadata/pseudoclassesattribute",
@@ -704,6 +722,31 @@ const sidebars = {
           "link": {
             "type": "doc",
             "id": "avalonia/controls/metadata/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Controls.MacIos.Interop",
+          "items": [
+            "avalonia/controls/macios/interop/appleview-performkeyequivalenteventargs",
+            "avalonia/controls/macios/interop/nsevent-nseventmodifiermask",
+            "avalonia/controls/macios/interop/nsprintoperation-avnnsprintoperationcallback",
+            {
+              "type": "category",
+              "label": "Avalonia.Controls.MacIos.Interop.WebKit",
+              "items": [
+                "avalonia/controls/macios/interop/webkit/wknavigationdelegate-decidepolicynavigationeventargs",
+                "avalonia/controls/macios/interop/webkit/wkscriptmessagehandler-scriptmessageeventargs"
+              ],
+              "link": {
+                "type": "doc",
+                "id": "avalonia/controls/macios/interop/webkit/index"
+              }
+            }
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/controls/macios/interop/index"
           }
         },
         {
@@ -877,6 +920,18 @@ const sidebars = {
         },
         {
           "type": "category",
+          "label": "Avalonia.Controls.Rendering",
+          "items": [
+            "avalonia/controls/rendering/framechainbase-2-iconsumer",
+            "avalonia/controls/rendering/framechainbase-2-iproducer"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/controls/rendering/index"
+          }
+        },
+        {
+          "type": "category",
           "label": "Avalonia.Controls.Selection",
           "items": [
             "avalonia/controls/selection/iselectionmodel",
@@ -950,6 +1005,7 @@ const sidebars = {
           "label": "Avalonia.Controls.Utils",
           "items": [
             "avalonia/controls/utils/ancestorfinder",
+            "avalonia/controls/utils/dictionarynativehttprequestheaders-iterator",
             "avalonia/controls/utils/iselectionadapter",
             "avalonia/controls/utils/selectingitemscontrolselectionadapter",
             "avalonia/controls/utils/undoredohelper-1-iundoredohost"
@@ -3082,6 +3138,12 @@ const sidebars = {
             "avalonia/controls/webauthenticatoroptions",
             "avalonia/controls/webmessagereceivedeventargs",
             "avalonia/controls/webresourcerequestedeventargs",
+            "avalonia/controls/webviewadapter-adapterfactory",
+            "avalonia/controls/webviewadapter-adapterwrapper",
+            "avalonia/controls/webviewadapter-compositorhostadapterfactory",
+            "avalonia/controls/webviewadapter-nativehostadapterfactory",
+            "avalonia/controls/webviewadapter-nativewebviewadapterbuilder",
+            "avalonia/controls/webviewadapter-offscreenwebviewadapterbuilder",
             "avalonia/controls/webviewadaptereventargs",
             "avalonia/controls/webviewenvironmentrequestedeventargs",
             "avalonia/controls/webviewnavigationcompletedeventargs",
@@ -3104,6 +3166,9 @@ const sidebars = {
             "avalonia/platform/applewkwebviewenvironmentrequestedeventargs",
             "avalonia/platform/detailedwebviewadapterinfo",
             "avalonia/platform/gtkwebviewenvironmentrequestedeventargs",
+            "avalonia/platform/headlesswebviewenvironmentrequestedeventargs-httpresult",
+            "avalonia/platform/headlesswebviewenvironmentrequestedeventargs-scriptresult",
+            "avalonia/platform/headlesswebviewenvironmentrequestedeventargs-scriptresultcommand",
             "avalonia/platform/iandroidwebviewplatformhandle",
             "avalonia/platform/iapplewkwebviewplatformhandle",
             "avalonia/platform/igtkwebviewplatformhandle",
@@ -3744,6 +3809,18 @@ const sidebars = {
         },
         {
           "type": "category",
+          "label": "AvaloniaUI.DiagnosticsProtocol",
+          "items": [
+            "avaloniaui/diagnosticsprotocol/diagnosticlogger",
+            "avaloniaui/diagnosticsprotocol/observerslist-2-observerslistperparam"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avaloniaui/diagnosticsprotocol/index"
+          }
+        },
+        {
+          "type": "category",
           "label": "AvaloniaUI.DiagnosticsProtocol.Application",
           "items": [
             "avaloniaui/diagnosticsprotocol/application/logentryverbosity"
@@ -3812,6 +3889,17 @@ const sidebars = {
           "link": {
             "type": "doc",
             "id": "avaloniaui/diagnosticssupport/avalonia/handlers/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "CoreRPC.Utility",
+          "items": [
+            "corerpc/utility/concurentbulkreadoptimizedcache-2-cachecontext"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "corerpc/utility/index"
           }
         },
         "compiledavaloniaxaml/index",
