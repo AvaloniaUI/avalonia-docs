@@ -24,6 +24,7 @@ jobs:
                 --max-retries 3
                 --cache
                 --max-cache-age 1d
+                --exclude-path 'api'
                 --accept 200..=206,429
                 --base-url https://docs.avaloniaui.net
                 --root-dir '${{ github.workspace }}'
