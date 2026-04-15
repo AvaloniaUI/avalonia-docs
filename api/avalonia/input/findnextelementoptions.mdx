@@ -83,7 +83,7 @@ public FindNextElementOptions()
 | --- | --- |
 | [ExclusionRect](#uid-3a4c2b6c54) | Gets or sets the rectangular region within the visual hierarchy that will be excluded from consideration during focus navigation. |
 | [FocusHintRectangle](#uid-28eca81f0b) | Gets or sets a rectangular region that serves as a hint for focus navigation. This property specifies a rectangle, relative to the coordinate system of the search root, which can be used as a preferred or prioritized target when navigating focus. It can be null if no specific hint region is provided. |
-| [FocusedElement](#uid-35ed88d64d) | Gets or sets the element that will be treated as the starting point of the search for the next focusable element. This does not need to be the element that is currently focused. If null, [Avalonia.Input.FocusManager.GetFocusedElement](xref:Avalonia.Input.FocusManager.GetFocusedElement) is used. |
+| [FocusedElement](#uid-35ed88d64d) | Gets or sets the element that will be treated as the starting point of the search for the next focusable element. This does not need to be the element that is currently focused. If null, [Avalonia.Input.FocusManager.GetFocusedElement](xref:Avalonia.Input.FocusManager.GetFocusedElement%28%29) is used. |
 | [IgnoreOcclusivity](#uid-62c57e17c8) | Specifies whether occlusivity (overlapping of elements or obstructions) should be ignored during focus navigation. When set to `true`, the navigation logic disregards obstructions that may block a potential focus target, allowing elements behind such obstructions to be considered. |
 | [NavigationStrategyOverride](#uid-8ff3182955) | Specifies an optional override for the navigation strategy used in XY focus navigation. This property allows customizing the focus movement behavior when navigating between UI elements. |
 | [SearchRoot](#uid-3e2457956f) | Gets or sets the root [Avalonia.Input.InputElement](xref:Avalonia.Input.InputElement) within which the search for the next focusable element will be conducted. |
@@ -140,7 +140,7 @@ directions.
 
 Gets or sets the element that will be treated as the starting point of the search
 for the next focusable element. This does not need to be the element that is
-currently focused. If null, [Avalonia.Input.FocusManager.GetFocusedElement](xref:Avalonia.Input.FocusManager.GetFocusedElement) is used.
+currently focused. If null, [Avalonia.Input.FocusManager.GetFocusedElement](xref:Avalonia.Input.FocusManager.GetFocusedElement%28%29) is used.
 
 ```csharp
 public Avalonia.Input.IInputElement FocusedElement { get; set; }

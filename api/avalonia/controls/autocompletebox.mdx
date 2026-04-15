@@ -85,7 +85,7 @@ public AutoCompleteBox()
 
 | Name | Description |
 | --- | --- |
-| [PopulateComplete](#uid-26f2d2c8e0) | Notifies the [Avalonia.Controls.AutoCompleteBox](xref:Avalonia.Controls.AutoCompleteBox) that the [Avalonia.Controls.AutoCompleteBox.Items](xref:Avalonia.Controls.AutoCompleteBox.Items) property has been set and the data can be filtered to provide possible matches in the drop-down. |
+| [PopulateComplete](#uid-26f2d2c8e0) | Notifies the [Avalonia.Controls.AutoCompleteBox](xref:Avalonia.Controls.AutoCompleteBox) that the [Avalonia.Controls.AutoCompleteBox.Items](xref:Avalonia.Controls.AutoCompleteBox.ItemsSource) property has been set and the data can be filtered to provide possible matches in the drop-down. |
 | [ApplyTemplate](primitives/templatedcontrol.mdx#uid-cc70dd4d2f) | Creates the visual children of the control, if necessary Inherited from [TemplatedControl](primitives/templatedcontrol.mdx). |
 | [GetIsTemplateFocusTarget](primitives/templatedcontrol.mdx#uid-75a788f38f) | Gets the value of the IsTemplateFocusTargetProperty attached property on a control. Inherited from [TemplatedControl](primitives/templatedcontrol.mdx). |
 | [SetIsTemplateFocusTarget](primitives/templatedcontrol.mdx#uid-281801c25f) | Sets the value of the IsTemplateFocusTargetProperty attached property on a control. Inherited from [TemplatedControl](primitives/templatedcontrol.mdx). |
@@ -132,7 +132,7 @@ public AutoCompleteBox()
 
 Notifies the
 [Avalonia.Controls.AutoCompleteBox](xref:Avalonia.Controls.AutoCompleteBox) that the
-[Avalonia.Controls.AutoCompleteBox.Items](xref:Avalonia.Controls.AutoCompleteBox.Items)
+[Avalonia.Controls.AutoCompleteBox.Items](xref:Avalonia.Controls.AutoCompleteBox.ItemsSource)
 property has been set and the data can be filtered to provide
 possible matches in the drop-down.
 
@@ -168,7 +168,7 @@ PopulateComplete to indicate the drop-down is populated.
 | [IsTextCompletionEnabled](#uid-0061228bd2) | Gets or sets a value indicating whether the first possible match found during the filtering process will be displayed automatically in the text box. |
 | [ItemFilter](#uid-e56150b50a) | Gets or sets the custom method that uses user-entered text to filter the items specified by the [Avalonia.Controls.AutoCompleteBox.ItemsSource](xref:Avalonia.Controls.AutoCompleteBox.ItemsSource) property for display in the drop-down. |
 | [ItemSelector](#uid-fae1716297) | Gets or sets the custom method that combines the user-entered text and one of the items specified by the [Avalonia.Controls.AutoCompleteBox.ItemsSource](xref:Avalonia.Controls.AutoCompleteBox.ItemsSource). |
-| [ItemTemplate](#uid-4e7e4b5331) | Gets or sets the [Avalonia.DataTemplate](xref:Avalonia.DataTemplate) used to display each item in the drop-down portion of the control. |
+| [ItemTemplate](#uid-4e7e4b5331) | Gets or sets the [Avalonia.DataTemplate](xref:Avalonia.Markup.Xaml.Templates.DataTemplate) used to display each item in the drop-down portion of the control. |
 | [ItemsSource](#uid-e913179fef) | Gets or sets a collection that is used to generate the items for the drop-down portion of the [Avalonia.Controls.AutoCompleteBox](xref:Avalonia.Controls.AutoCompleteBox) control. |
 | [MaxDropDownHeight](#uid-99b704dad6) | Gets or sets the maximum height of the drop-down portion of the [Avalonia.Controls.AutoCompleteBox](xref:Avalonia.Controls.AutoCompleteBox) control. |
 | [MaxLength](#uid-0fa621de60) | Gets or sets the maximum number of characters that the [Avalonia.Controls.AutoCompleteBox](xref:Avalonia.Controls.AutoCompleteBox) can accept. This constraint only applies for manually entered (user-inputted) text. |
@@ -329,7 +329,7 @@ Custom if you set the ItemFilter property.
 #### Exceptions
 
 - [The specified value is not a valid
-\[Avalonia.Controls.AutoCompleteFilterMode\](xref:Avalonia.Controls.AutoCompleteFilterMode).](xref:System.ArgumentException)
+\Avalonia.Controls.AutoCompleteFilterMode\](xref:Avalonia.Controls.AutoCompleteFilterMode).
 
 </section>
 
@@ -460,7 +460,7 @@ text and one of the items specified by the [Avalonia.Controls.AutoCompleteBox.It
 
 ### ItemTemplate Property
 
-Gets or sets the [Avalonia.DataTemplate](xref:Avalonia.DataTemplate) used
+Gets or sets the [Avalonia.DataTemplate](xref:Avalonia.Markup.Xaml.Templates.DataTemplate) used
 to display each item in the drop-down portion of the control.
 
 ```csharp
@@ -469,7 +469,7 @@ public Avalonia.Controls.Templates.IDataTemplate ItemTemplate { get; set; }
 
 #### Value
 
-The [Avalonia.DataTemplate](xref:Avalonia.DataTemplate) used to
+The [Avalonia.DataTemplate](xref:Avalonia.Markup.Xaml.Templates.DataTemplate) used to
 display each item in the drop-down. The default is null.
 
 
@@ -522,12 +522,12 @@ public double MaxDropDownHeight { get; set; }
 
 The maximum height of the drop-down portion of the
 [Avalonia.Controls.AutoCompleteBox](xref:Avalonia.Controls.AutoCompleteBox) control.
-The default is [double.PositiveInfinity](xref:System.Double.PositiveInfinity).
+The default is double.PositiveInfinity.
 
 
 #### Exceptions
 
-- [The specified value is less than 0.](xref:System.ArgumentException)
+- The specified value is less than 0.
 
 </section>
 
@@ -926,7 +926,7 @@ public Avalonia.Media.IBrush WatermarkForeground { get; set; }
 | [OpacityProperty](../visual.mdx#uid-2a53e27b1f) | Defines the [Avalonia.Visual.Opacity](xref:Avalonia.Visual.Opacity) property. Inherited from [Visual](../visual.mdx). |
 | [RenderTransformOriginProperty](../visual.mdx#uid-963d266cdd) | Defines the [Avalonia.Visual.RenderTransformOrigin](xref:Avalonia.Visual.RenderTransformOrigin) property. Inherited from [Visual](../visual.mdx). |
 | [RenderTransformProperty](../visual.mdx#uid-31d20942c2) | Defines the [Avalonia.Visual.RenderTransform](xref:Avalonia.Visual.RenderTransform) property. Inherited from [Visual](../visual.mdx). |
-| [VisualParentProperty](../visual.mdx#uid-12214f81b9) | Defines the [Avalonia.Visual.VisualParent](xref:Avalonia.Visual.VisualParent) property. Inherited from [Visual](../visual.mdx). |
+| [VisualParentProperty](../visual.mdx#uid-12214f81b9) | Defines the [Avalonia.Visual.VisualParent](xref:Avalonia.Visual.VisualParentProperty) property. Inherited from [Visual](../visual.mdx). |
 | [ZIndexProperty](../visual.mdx#uid-1dc9376c1e) | Defines the [Avalonia.Visual.ZIndex](xref:Avalonia.Visual.ZIndex) property. Inherited from [Visual](../visual.mdx). |
 | [DataContextProperty](../styledelement.mdx#uid-7eefabb929) | Defines the [Avalonia.StyledElement.DataContext](xref:Avalonia.StyledElement.DataContext) property. Inherited from [StyledElement](../styledelement.mdx). |
 | [NameProperty](../styledelement.mdx#uid-bcdbb9de56) | Defines the [Avalonia.StyledElement.Name](xref:Avalonia.StyledElement.Name) property. Inherited from [StyledElement](../styledelement.mdx). |
@@ -1411,7 +1411,7 @@ public Avalonia.StyledProperty<string> WatermarkProperty
 | [Populated](#uid-90a3658f3c) | Occurs when the [Avalonia.Controls.AutoCompleteBox](xref:Avalonia.Controls.AutoCompleteBox) has populated the drop-down with possible matches based on the [Avalonia.Controls.AutoCompleteBox.Text](xref:Avalonia.Controls.AutoCompleteBox.Text) property. |
 | [Populating](#uid-139a98dfd3) | Occurs when the [Avalonia.Controls.AutoCompleteBox](xref:Avalonia.Controls.AutoCompleteBox) is populating the drop-down with possible matches based on the [Avalonia.Controls.AutoCompleteBox.Text](xref:Avalonia.Controls.AutoCompleteBox.Text) property. |
 | [SelectionChanged](#uid-518baeb376) | Occurs when the selected item in the drop-down portion of the [Avalonia.Controls.AutoCompleteBox](xref:Avalonia.Controls.AutoCompleteBox) has changed. |
-| [TextChanged](#uid-52f7699eb8) | Occurs asynchronously when the text in the [Avalonia.Controls.AutoCompleteBox.TextBox](xref:Avalonia.Controls.AutoCompleteBox.TextBox) portion of the [Avalonia.Controls.AutoCompleteBox](xref:Avalonia.Controls.AutoCompleteBox) changes. |
+| TextChanged](#uid-52f7699eb8) | Occurs asynchronously when the text in the [Avalonia.Controls.AutoCompleteBox.TextBox portion of the [Avalonia.Controls.AutoCompleteBox](xref:Avalonia.Controls.AutoCompleteBox) changes. |
 | [TemplateApplied](primitives/templatedcontrol.mdx#uid-d353f79b7c) | Raised when the control's template is applied. Inherited from [TemplatedControl](primitives/templatedcontrol.mdx). |
 | [Loaded](control.mdx#uid-c0a1ac2bc3) | Occurs when the control has been fully constructed in the visual tree and both layout and render are complete. Inherited from [Control](control.mdx). |
 | [SizeChanged](control.mdx#uid-6cfea6b6c5) | Occurs when the bounds (actual size) of the control have changed. Inherited from [Control](control.mdx). |
@@ -1591,7 +1591,7 @@ public event EventHandler<Avalonia.Controls.SelectionChangedEventArgs> Selection
 
 ### TextChanged Event
 
-Occurs asynchronously when the text in the [Avalonia.Controls.AutoCompleteBox.TextBox](xref:Avalonia.Controls.AutoCompleteBox.TextBox) portion of the
+Occurs asynchronously when the text in the Avalonia.Controls.AutoCompleteBox.TextBox portion of the
 [Avalonia.Controls.AutoCompleteBox](xref:Avalonia.Controls.AutoCompleteBox) changes.
 
 ```csharp

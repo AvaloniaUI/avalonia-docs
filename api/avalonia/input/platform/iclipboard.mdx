@@ -132,7 +132,7 @@ System.Threading.Tasks.Task
 #### Remarks
 
 If `dataTransfer` is null, nothing will get placed on the clipboard and this method
-will be equivalent to [Avalonia.Input.Platform.IClipboard.ClearAsync](xref:Avalonia.Input.Platform.IClipboard.ClearAsync).
+will be equivalent to [Avalonia.Input.Platform.IClipboard.ClearAsync](xref:Avalonia.Input.Platform.IClipboard.ClearAsync%28%29).
 
 The [Avalonia.Input.IAsyncDataTransfer](xref:Avalonia.Input.IAsyncDataTransfer) must NOT be disposed by the caller after this call.
 The clipboard will dispose of it automatically when it becomes unused.
@@ -191,7 +191,7 @@ This method cannot be used to retrieve a [Avalonia.Input.IAsyncDataTransfer](xre
 
 This method is only supported on Windows, macOS and X11 platforms. Other platforms will always return null.
 
-Contrary to [Avalonia.Input.Platform.IClipboard.TryGetDataAsync](xref:Avalonia.Input.Platform.IClipboard.TryGetDataAsync), the returned [Avalonia.Input.IAsyncDataTransfer](xref:Avalonia.Input.IAsyncDataTransfer) must NOT be disposed
+Contrary to [Avalonia.Input.Platform.IClipboard.TryGetDataAsync](xref:Avalonia.Input.Platform.IClipboard.TryGetDataAsync%28%29), the returned [Avalonia.Input.IAsyncDataTransfer](xref:Avalonia.Input.IAsyncDataTransfer) must NOT be disposed
 by the caller since it's still owned by the clipboard.
 
 </section>

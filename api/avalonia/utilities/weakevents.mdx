@@ -75,9 +75,9 @@ public WeakEvents()
 | Name | Description |
 | --- | --- |
 | [AvaloniaPropertyChanged](#uid-6a6d501159) | Represents PropertyChanged event from [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject) |
-| [CollectionChanged](#uid-bde14cac3c) | Represents CollectionChanged event from [System.Collections.Specialized.INotifyCollectionChanged](xref:System.Collections.Specialized.INotifyCollectionChanged) |
-| [CommandCanExecuteChanged](#uid-69e6eb8413) | Represents CanExecuteChanged event from [System.Windows.Input.ICommand](xref:System.Windows.Input.ICommand) |
-| [ThreadSafePropertyChanged](#uid-58cce5e149) | Represents PropertyChanged event from [System.ComponentModel.INotifyPropertyChanged](xref:System.ComponentModel.INotifyPropertyChanged) with auto-dispatching to the UI thread |
+| [CollectionChanged](#uid-bde14cac3c) | Represents CollectionChanged event from System.Collections.Specialized.INotifyCollectionChanged |
+| [CommandCanExecuteChanged](#uid-69e6eb8413) | Represents CanExecuteChanged event from System.Windows.Input.ICommand |
+| [ThreadSafePropertyChanged](#uid-58cce5e149) | Represents PropertyChanged event from System.ComponentModel.INotifyPropertyChanged with auto-dispatching to the UI thread |
 
 <section className="apiref-page__member-entry">
 
@@ -99,7 +99,7 @@ public Avalonia.Utilities.WeakEvent<TSender,TEventArgs><Avalonia.AvaloniaObject,
 
 ### CollectionChanged Field
 
-Represents CollectionChanged event from [System.Collections.Specialized.INotifyCollectionChanged](xref:System.Collections.Specialized.INotifyCollectionChanged)
+Represents CollectionChanged event from System.Collections.Specialized.INotifyCollectionChanged
 
 ```csharp
 public Avalonia.Utilities.WeakEvent<TSender,TEventArgs><System.Collections.Specialized.INotifyCollectionChanged, System.Collections.Specialized.NotifyCollectionChangedEventArgs> CollectionChanged
@@ -113,7 +113,7 @@ public Avalonia.Utilities.WeakEvent<TSender,TEventArgs><System.Collections.Speci
 
 ### CommandCanExecuteChanged Field
 
-Represents CanExecuteChanged event from [System.Windows.Input.ICommand](xref:System.Windows.Input.ICommand)
+Represents CanExecuteChanged event from System.Windows.Input.ICommand
 
 ```csharp
 public Avalonia.Utilities.WeakEvent<TSender,TEventArgs><System.Windows.Input.ICommand, EventArgs> CommandCanExecuteChanged
@@ -127,7 +127,7 @@ public Avalonia.Utilities.WeakEvent<TSender,TEventArgs><System.Windows.Input.ICo
 
 ### ThreadSafePropertyChanged Field
 
-Represents PropertyChanged event from [System.ComponentModel.INotifyPropertyChanged](xref:System.ComponentModel.INotifyPropertyChanged) with auto-dispatching to the UI thread
+Represents PropertyChanged event from System.ComponentModel.INotifyPropertyChanged with auto-dispatching to the UI thread
 
 ```csharp
 public Avalonia.Utilities.WeakEvent<TSender,TEventArgs><System.ComponentModel.INotifyPropertyChanged, System.ComponentModel.PropertyChangedEventArgs> ThreadSafePropertyChanged

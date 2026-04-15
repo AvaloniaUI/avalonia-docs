@@ -56,7 +56,7 @@ public interface INotification
 
 | Name | Description |
 | --- | --- |
-| [Expiration](#uid-0d99d5ab69) | Gets the expiration time of the notification after which it will automatically close. If the value is [TimeSpan.Zero](xref:System.TimeSpan.Zero) then the notification will remain open until the user closes it. |
+| [Expiration](#uid-0d99d5ab69) | Gets the expiration time of the notification after which it will automatically close. If the value is TimeSpan.Zero then the notification will remain open until the user closes it. |
 | [Message](#uid-4cc56a4040) | Gets the notification message. |
 | [OnClick](#uid-79c34b575c) | Gets an Action to be run when the notification is clicked. |
 | [OnClose](#uid-a9aca8b2a7) | Gets an Action to be run when the notification is closed. |
@@ -70,7 +70,7 @@ public interface INotification
 ### Expiration Property
 
 Gets the expiration time of the notification after which it will automatically close.
-If the value is [TimeSpan.Zero](xref:System.TimeSpan.Zero) then the notification will remain open until the user closes it.
+If the value is TimeSpan.Zero then the notification will remain open until the user closes it.
 
 ```csharp
 public TimeSpan Expiration { get; set; }
