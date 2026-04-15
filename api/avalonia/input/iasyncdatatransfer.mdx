@@ -32,10 +32,6 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
-<div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/3111696698e2c3d6fe9aace8cb954153ee16b3e4/src/Avalonia.Base/Input/IAsyncDataTransfer.cs">IAsyncDataTransfer.cs</a>
-</div>
-
 </div>
 
 <div className="apiref-page__lead">
@@ -61,7 +57,7 @@ public interface IAsyncDataTransfer
 ## Remarks
 
 - When an implementation of this interface is put into the clipboard using [Avalonia.Input.Platform.IClipboard.SetDataAsync(Avalonia.Input.IAsyncDataTransfer)](xref:Avalonia.Input.Platform.IClipboard.SetDataAsync%28Avalonia.Input.IAsyncDataTransfer%29), it must NOT be disposed by the caller. The system will dispose of it automatically when it becomes unused.
-- When an implementation of this interface is returned from the clipboard via [Avalonia.Input.Platform.IClipboard.TryGetDataAsync](xref:Avalonia.Input.Platform.IClipboard.TryGetDataAsync), it MUST be disposed the caller.
+- When an implementation of this interface is returned from the clipboard via [Avalonia.Input.Platform.IClipboard.TryGetDataAsync](xref:Avalonia.Input.Platform.IClipboard.TryGetDataAsync%28%29), it MUST be disposed the caller.
 - This interface is mostly used during clipboard operations. However, several platforms only support synchronous clipboard manipulation and will try to use [Avalonia.Input.IDataTransfer](xref:Avalonia.Input.IDataTransfer) if the underlying type also implements it. For this reason, custom implementations should ideally implement both [Avalonia.Input.IAsyncDataTransfer](xref:Avalonia.Input.IAsyncDataTransfer) and [Avalonia.Input.IDataTransfer](xref:Avalonia.Input.IDataTransfer).
 
 ## See also

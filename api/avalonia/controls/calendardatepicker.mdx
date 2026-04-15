@@ -32,10 +32,6 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
-<div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/3111696698e2c3d6fe9aace8cb954153ee16b3e4/src/Avalonia.Controls/CalendarDatePicker.cs">CalendarDatePicker.cs</a>
-</div>
-
 </div>
 
 <div className="apiref-page__lead">
@@ -285,7 +281,7 @@ public DateTime DisplayDate { get; set; }
 
 #### Value
 
-The date to display. The default is [DateTime.Today](xref:System.DateTime.Today).
+The date to display. The default is DateTime.Today.
 
 
 #### Exceptions
@@ -293,7 +289,7 @@ The date to display. The default is [DateTime.Today](xref:System.DateTime.Today)
 - [The specified date is not in the range defined by
 \[Avalonia.Controls.CalendarDatePicker.DisplayDateStart\](xref:Avalonia.Controls.CalendarDatePicker.DisplayDateStart)
 and
-\[Avalonia.Controls.CalendarDatePicker.DisplayDateEnd\](xref:Avalonia.Controls.CalendarDatePicker.DisplayDateEnd).](xref:System.ArgumentOutOfRangeException)
+\Avalonia.Controls.CalendarDatePicker.DisplayDateEnd\](xref:Avalonia.Controls.CalendarDatePicker.DisplayDateEnd).
 
 </section>
 
@@ -349,8 +345,8 @@ public DayOfWeek FirstDayOfWeek { get; set; }
 
 #### Value
 
-A [DayOfWeek](xref:System.DayOfWeek) representing the beginning of
-the week. The default is [DayOfWeek.Sunday](xref:System.DayOfWeek.Sunday).
+A DayOfWeek representing the beginning of
+the week. The default is DayOfWeek.Sunday.
 
 
 </section>
@@ -459,13 +455,13 @@ The date currently selected. The default is null.
 
 #### Exceptions
 
-- [The specified date is not in the range defined by
+- The specified date is not in the range defined by
 \[Avalonia.Controls.CalendarDatePicker.DisplayDateStart\](xref:Avalonia.Controls.CalendarDatePicker.DisplayDateStart)
 and
 \[Avalonia.Controls.CalendarDatePicker.DisplayDateEnd\](xref:Avalonia.Controls.CalendarDatePicker.DisplayDateEnd),
 or the specified date is in the
 \[Avalonia.Controls.CalendarDatePicker.BlackoutDates\](xref:Avalonia.Controls.CalendarDatePicker.BlackoutDates)
-collection.](xref:System.ArgumentOutOfRangeException)
+collection.
 
 </section>
 
@@ -489,7 +485,7 @@ The format that is used to display the selected date. The default is
 
 #### Exceptions
 
-- [An specified format is not valid.](xref:System.ArgumentOutOfRangeException)
+- An specified format is not valid.
 
 </section>
 
@@ -512,9 +508,9 @@ The text displayed by the [Avalonia.Controls.CalendarDatePicker](xref:Avalonia.C
 
 #### Exceptions
 
-- [The text entered cannot be parsed to a valid date, and the exception
-is not suppressed.](xref:System.FormatException)
-- [The text entered parses to a date that is not selectable.](xref:System.ArgumentOutOfRangeException)
+- The text entered cannot be parsed to a valid date, and the exception
+is not suppressed.
+- The text entered parses to a date that is not selectable.
 
 </section>
 
@@ -706,7 +702,7 @@ public Avalonia.Media.IBrush WatermarkForeground { get; set; }
 | [OpacityProperty](../visual.mdx#uid-2a53e27b1f) | Defines the [Avalonia.Visual.Opacity](xref:Avalonia.Visual.Opacity) property. Inherited from [Visual](../visual.mdx). |
 | [RenderTransformOriginProperty](../visual.mdx#uid-963d266cdd) | Defines the [Avalonia.Visual.RenderTransformOrigin](xref:Avalonia.Visual.RenderTransformOrigin) property. Inherited from [Visual](../visual.mdx). |
 | [RenderTransformProperty](../visual.mdx#uid-31d20942c2) | Defines the [Avalonia.Visual.RenderTransform](xref:Avalonia.Visual.RenderTransform) property. Inherited from [Visual](../visual.mdx). |
-| [VisualParentProperty](../visual.mdx#uid-12214f81b9) | Defines the [Avalonia.Visual.VisualParent](xref:Avalonia.Visual.VisualParent) property. Inherited from [Visual](../visual.mdx). |
+| [VisualParentProperty](../visual.mdx#uid-12214f81b9) | Defines the [Avalonia.Visual.VisualParent](xref:Avalonia.Visual.VisualParentProperty) property. Inherited from [Visual](../visual.mdx). |
 | [ZIndexProperty](../visual.mdx#uid-1dc9376c1e) | Defines the [Avalonia.Visual.ZIndex](xref:Avalonia.Visual.ZIndex) property. Inherited from [Visual](../visual.mdx). |
 | [DataContextProperty](../styledelement.mdx#uid-7eefabb929) | Defines the [Avalonia.StyledElement.DataContext](xref:Avalonia.StyledElement.DataContext) property. Inherited from [StyledElement](../styledelement.mdx). |
 | [NameProperty](../styledelement.mdx#uid-bcdbb9de56) | Defines the [Avalonia.StyledElement.Name](xref:Avalonia.StyledElement.Name) property. Inherited from [StyledElement](../styledelement.mdx). |
@@ -973,7 +969,7 @@ public Avalonia.StyledProperty<string> WatermarkProperty
 | --- | --- |
 | [CalendarClosed](#uid-e10248f5f0) | Occurs when the drop-down [Avalonia.Controls.Calendar](xref:Avalonia.Controls.Calendar) is closed. |
 | [CalendarOpened](#uid-884f9572bc) | Occurs when the drop-down [Avalonia.Controls.Calendar](xref:Avalonia.Controls.Calendar) is opened. |
-| [DateValidationError](#uid-bc72eb238a) | Occurs when [Avalonia.Controls.DatePicker.Text](xref:Avalonia.Controls.DatePicker.Text) is assigned a value that cannot be interpreted as a date. |
+| DateValidationError](#uid-bc72eb238a) | Occurs when [Avalonia.Controls.DatePicker.Text is assigned a value that cannot be interpreted as a date. |
 | [SelectedDateChanged](#uid-08160c759e) | Occurs when the [Avalonia.Controls.CalendarDatePicker.SelectedDate](xref:Avalonia.Controls.CalendarDatePicker.SelectedDate) property is changed. |
 | [TemplateApplied](primitives/templatedcontrol.mdx#uid-d353f79b7c) | Raised when the control's template is applied. Inherited from [TemplatedControl](primitives/templatedcontrol.mdx). |
 | [Loaded](control.mdx#uid-c0a1ac2bc3) | Occurs when the control has been fully constructed in the visual tree and both layout and render are complete. Inherited from [Control](control.mdx). |
@@ -1060,7 +1056,7 @@ public event EventHandler CalendarOpened
 
 ### DateValidationError Event
 
-Occurs when [Avalonia.Controls.DatePicker.Text](xref:Avalonia.Controls.DatePicker.Text)
+Occurs when Avalonia.Controls.DatePicker.Text
 is assigned a value that cannot be interpreted as a date.
 
 ```csharp

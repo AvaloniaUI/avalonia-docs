@@ -32,10 +32,6 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
-<div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/3111696698e2c3d6fe9aace8cb954153ee16b3e4/src/Avalonia.Controls/Application.cs">Application.cs</a>
-</div>
-
 </div>
 
 <div className="apiref-page__lead">
@@ -68,8 +64,8 @@ functionality, including:
 - A global set of [Avalonia.Application.DataTemplates](xref:Avalonia.Application.DataTemplates).
 - A global set of [Avalonia.Application.Styles](xref:Avalonia.Application.Styles).
 - A [Avalonia.Input.FocusManager](xref:Avalonia.Input.FocusManager).
-- An [Avalonia.Application.InputManager](xref:Avalonia.Application.InputManager).
-- Registers services needed by the rest of Avalonia in the [Avalonia.Application.RegisterServices](xref:Avalonia.Application.RegisterServices)
+- An Avalonia.Application.InputManager.
+- Registers services needed by the rest of Avalonia in the [Avalonia.Application.RegisterServices](xref:Avalonia.Application.RegisterServices%28%29)
 method.
 - Tracks the lifetime of the application.
 
@@ -359,7 +355,7 @@ public Avalonia.Platform.IPlatformSettings PlatformSettings { get; set; }
 #### Remarks
 
 PlatformSettings can be null only if application wasn't initialized yet.
-[Avalonia.Controls.TopLevel](xref:Avalonia.Controls.TopLevel)'s [Avalonia.Controls.TopLevel.PlatformSettings](xref:Avalonia.Controls.TopLevel.PlatformSettings) is an equivalent API
+[Avalonia.Controls.TopLevel](xref:Avalonia.Controls.TopLevel)'s [Avalonia.Controls.TopLevel.PlatformSettings](xref:Avalonia.Controls.TopLevel.PlatformImpl) is an equivalent API
 which should always be preferred over a global one,
 as specific top levels might have different settings set-up.
 

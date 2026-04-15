@@ -32,10 +32,6 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
-<div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/3111696698e2c3d6fe9aace8cb954153ee16b3e4/src/Avalonia.Base/Data/ReflectionBinding.cs">ReflectionBinding.cs</a>
-</div>
-
 </div>
 
 <div className="apiref-page__lead">
@@ -159,7 +155,7 @@ The default value is null.
 
 #### Remarks
 
-If this property is not set then [System.Globalization.CultureInfo.CurrentCulture](xref:System.Globalization.CultureInfo.CurrentCulture) will be used.
+If this property is not set then System.Globalization.CultureInfo.CurrentCulture will be used.
 
 </section>
 
@@ -193,7 +189,7 @@ public int Delay { get; set; }
 #### Remarks
 
 There is no delay when the source is updated via [Avalonia.Data.UpdateSourceTrigger.LostFocus](xref:Avalonia.Data.UpdateSourceTrigger.LostFocus)
-or [Avalonia.Data.BindingExpressionBase.UpdateSource](xref:Avalonia.Data.BindingExpressionBase.UpdateSource). Nor is there a delay when
+or [Avalonia.Data.BindingExpressionBase.UpdateSource](xref:Avalonia.Data.BindingExpressionBase.UpdateSource%28%29). Nor is there a delay when
 [Avalonia.Data.BindingMode.OneWayToSource](xref:Avalonia.Data.BindingMode.OneWayToSource) is active and a new source object is provided.
 
 </section>

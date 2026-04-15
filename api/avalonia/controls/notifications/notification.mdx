@@ -32,10 +32,6 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
-<div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/3111696698e2c3d6fe9aace8cb954153ee16b3e4/src/Avalonia.Controls/Notifications/Notification.cs">Notification.cs</a>
-</div>
-
 </div>
 
 <div className="apiref-page__lead">
@@ -126,7 +122,7 @@ public Notification(string title, string message, Avalonia.Controls.Notification
 
 | Name | Description |
 | --- | --- |
-| [Expiration](#uid-6fa56101ad) | Gets the expiration time of the notification after which it will automatically close. If the value is [TimeSpan.Zero](xref:System.TimeSpan.Zero) then the notification will remain open until the user closes it. |
+| [Expiration](#uid-6fa56101ad) | Gets the expiration time of the notification after which it will automatically close. If the value is TimeSpan.Zero then the notification will remain open until the user closes it. |
 | [Message](#uid-e0a025cb3b) | Gets the notification message. |
 | [OnClick](#uid-e4001bd734) | Gets an Action to be run when the notification is clicked. |
 | [OnClose](#uid-2e72068dd2) | Gets an Action to be run when the notification is closed. |
@@ -140,7 +136,7 @@ public Notification(string title, string message, Avalonia.Controls.Notification
 ### Expiration Property
 
 Gets the expiration time of the notification after which it will automatically close.
-If the value is [TimeSpan.Zero](xref:System.TimeSpan.Zero) then the notification will remain open until the user closes it.
+If the value is TimeSpan.Zero then the notification will remain open until the user closes it.
 
 ```csharp
 public TimeSpan Expiration { get; set; }
