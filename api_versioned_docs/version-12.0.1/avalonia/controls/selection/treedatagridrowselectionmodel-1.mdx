@@ -102,7 +102,7 @@ public TreeDataGridRowSelectionModel<TModel>(Avalonia.Controls.TreeDataGridSourc
 | [BeginBatchUpdate](#uid-ed5f30f702) | Begins a batch update of the selection. |
 | [Clear](#uid-2f92e71c89) | Clears the selection. |
 | [Deselect](#uid-faf9452a6f) | Deselects an item by its index in the source data. |
-| [EndBatchUpdate](#uid-0bfd82da33) | Ends a batch update started by [Avalonia.Controls.Selection.TreeDataGridRowSelectionModel&lt;T&gt;.BeginBatchUpdate](xref:Avalonia.Controls.Selection.TreeDataGridRowSelectionModel%601.BeginBatchUpdate). |
+| [EndBatchUpdate](#uid-0bfd82da33) | Ends a batch update started by [Avalonia.Controls.Selection.TreeDataGridRowSelectionModel&lt;T&gt;.BeginBatchUpdate](xref:Avalonia.Controls.Selection.TreeDataGridRowSelectionModel%601.BeginBatchUpdate%28%29). |
 | [IsSelected](#uid-8bfc2b06d0) | Queries whether an item is currently selected. |
 | [Select](#uid-f5c53b35ba) | Selects an item by its index in the source data. |
 
@@ -131,7 +131,7 @@ appropriate events.
 
 Use this method with a using statement to group multiple selection operations together and
 raise only a single set of change events when the batch is complete. This is equivalent to
-calling [Avalonia.Controls.Selection.TreeDataGridRowSelectionModel&lt;T&gt;.BeginBatchUpdate](xref:Avalonia.Controls.Selection.TreeDataGridRowSelectionModel%601.BeginBatchUpdate) and [Avalonia.Controls.Selection.TreeDataGridRowSelectionModel&lt;T&gt;.EndBatchUpdate](xref:Avalonia.Controls.Selection.TreeDataGridRowSelectionModel%601.EndBatchUpdate).
+calling [Avalonia.Controls.Selection.TreeDataGridRowSelectionModel&lt;T&gt;.BeginBatchUpdate](xref:Avalonia.Controls.Selection.TreeDataGridRowSelectionModel%601.BeginBatchUpdate%28%29) and [Avalonia.Controls.Selection.TreeDataGridRowSelectionModel&lt;T&gt;.EndBatchUpdate](xref:Avalonia.Controls.Selection.TreeDataGridRowSelectionModel%601.EndBatchUpdate%28%29).
 
 </section>
 
@@ -190,7 +190,7 @@ The index into the source data.
 
 ### EndBatchUpdate Method
 
-Ends a batch update started by [Avalonia.Controls.Selection.TreeDataGridRowSelectionModel&lt;T&gt;.BeginBatchUpdate](xref:Avalonia.Controls.Selection.TreeDataGridRowSelectionModel%601.BeginBatchUpdate).
+Ends a batch update started by [Avalonia.Controls.Selection.TreeDataGridRowSelectionModel&lt;T&gt;.BeginBatchUpdate](xref:Avalonia.Controls.Selection.TreeDataGridRowSelectionModel%601.BeginBatchUpdate%28%29).
 
 ```csharp
 public void EndBatchUpdate()
