@@ -28,7 +28,6 @@ jobs:
                 --exclude-path '.claude'
                 --accept 200..=206,429
                 --base-url https://docs.avaloniaui.net
-                --root-dir '${{ github.workspace }}'
                 './**/*.md'
                 './**/*.mdx'
             format: markdown
