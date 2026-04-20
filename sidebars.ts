@@ -201,7 +201,7 @@ const sidebars: SidebarsConfig = {
             'input-interaction/gestures/swipe-gesture-recognizer',
           ],
         },
-        'input-interaction/keyboard-and-hotkeys',
+        'input-interaction/hotkeys',
         'input-interaction/commanding',
         'input-interaction/drag-and-drop',
         'input-interaction/routed-events',

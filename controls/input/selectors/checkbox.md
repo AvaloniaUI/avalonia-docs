@@ -139,6 +139,6 @@ partial void OnSelectAllChanged(bool? value)
 ## See also
 
 - [ToggleSwitch](/controls/input/selectors/toggleswitch)
-- [RadioButton](../buttons/radiobutton)
+- [RadioButton](/controls/input/buttons/radiobutton)
 - [CheckBox API reference](/api/avalonia/controls/checkbox)
 - [`CheckBox.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/CheckBox.cs)

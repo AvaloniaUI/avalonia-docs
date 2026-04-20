@@ -134,7 +134,7 @@ Continuing previous example, let's add `BackgroundBrush` and `ForegroundBrush` w
 Resources defined in `ThemeDictionaries` are only available when using the `DynamicResource` markup extension. `StaticResource` will not find these resources and will produce an exception at runtime unless a resource with an identical key exists in a non-`ThemeDictionaries` portion of a `ResourceDictionary`.
 :::
 
-For more details about using resources, see the [resources](../app-development/resource-dictionary) page.
+For more details about using resources, see the [resources](/docs/app-development/resource-dictionary) page.
 
 ## See also
 

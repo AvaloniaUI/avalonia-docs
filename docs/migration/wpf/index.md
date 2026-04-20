@@ -17,13 +17,13 @@ If your goal is to run an existing WPF application on macOS, Linux, or the web, 
 
 **Data templates** work similarly, but are stored in a `DataTemplates` collection rather than in resources, and support interface and derived-type matching. See [Data Templates](/docs/data-templates/introduction-to-data-templates).
 
-**The property system** uses strongly-typed generics (`StyledProperty`, `DirectProperty`, `AttachedProperty`) instead of a single `DependencyProperty` class. See [Properties](/docs/properties/index).
+**The property system** uses strongly-typed generics (`StyledProperty`, `DirectProperty`, `AttachedProperty`) instead of a single `DependencyProperty` class. See [Properties](/docs/properties).
 
 **Events** follow the same routed event model, but use pointer-based names (`PointerPressed` instead of `MouseLeftButtonDown`) and handle tunnelling through routing strategy flags rather than separate `Preview*` events. See [Events](/docs/events).
 
 **Controls** are largely the same. A few have different names or require separate NuGet packages. See [Controls](controls).
 
-**Layout** panels (`Grid`, `StackPanel`, `DockPanel`, etc.) are the same, with small additions like `Spacing` on `StackPanel` and shorthand `ColumnDefinitions` syntax. See [Layout](/docs/layout/layout).
+**Layout** panels (`Grid`, `StackPanel`, `DockPanel`, etc.) are the same, with small additions like `Spacing` on `StackPanel` and shorthand `ColumnDefinitions` syntax. See [Layout](/docs/layout).
 
 ## Where to start
 

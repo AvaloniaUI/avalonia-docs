@@ -5,7 +5,7 @@ description: Font size, weight, style, stretch, letter spacing, line height, tex
 doc-type: reference
 ---
 
-Avalonia provides a set of properties for controlling how text appears in your application. These properties are defined on [`TextElement`](/api/avalonia/controls/documents/textelement) as inherited attached properties, so you can set them on any control to affect all text within its visual tree through [property value inheritance](../properties/property-value-inheritance).
+Avalonia provides a set of properties for controlling how text appears in your application. These properties are defined on [`TextElement`](/api/avalonia/controls/documents/textelement) as inherited attached properties, so you can set them on any control to affect all text within its visual tree through [property value inheritance](/docs/properties/property-value-inheritance).
 
 ## TextElement attached properties
 
