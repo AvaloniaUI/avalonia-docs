@@ -2,7 +2,7 @@
 id: keyboard-and-hotkeys
 title: Keyboard and hotkeys
 description: Learn how to define hotkeys and key bindings in Avalonia using HotKey properties, KeyBindings, KeyGesture, and HotKeyManager for keyboard-driven commands.
-doc-type: concept
+doc-type: reference
 ---
 
 Controls that implement `ICommandSource` have a `HotKey` property that you can set or bind to. When the user presses the hotkey, Avalonia executes the command [bound](/docs/input-interaction/adding-interactivity) to that control.
