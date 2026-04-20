@@ -26,7 +26,7 @@ jobs:
                 --max-cache-age 1d
                 --exclude-path 'api','.claude' # Don't check links in API docs and Claude skills
                 --accept 200..=206,429
-                --base-url https://docs.avaloniaui.net
+                --base-url 'https://docs.avaloniaui.net'
                 --root-dir .
                 './**/*.md'
                 './**/*.mdx'
