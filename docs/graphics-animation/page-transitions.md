@@ -188,4 +188,4 @@ public class CustomTransition : IPageTransition
 - [Animations](/docs/graphics-animation/animations): Overview of animation types in Avalonia.
 - [Keyframe animations](/docs/graphics-animation/keyframe-animations): Multi-step keyframe animations.
 - [Control transitions](/docs/graphics-animation/control-transitions): Animating property changes.
-- [Navigate between views](../how-to/navigation-how-to): Common patterns for switching between views.
+- [Navigate between views](/docs/how-to/navigation-how-to): Common patterns for switching between views.

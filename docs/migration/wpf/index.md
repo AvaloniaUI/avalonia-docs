@@ -19,7 +19,7 @@ If your goal is to run an existing WPF application on macOS, Linux, or the web, 
 
 **The property system** uses strongly-typed generics (`StyledProperty`, `DirectProperty`, `AttachedProperty`) instead of a single `DependencyProperty` class. See [Properties](/docs/properties/index).
 
-**Events** follow the same routed event model, but use pointer-based names (`PointerPressed` instead of `MouseLeftButtonDown`) and handle tunnelling through routing strategy flags rather than separate `Preview*` events. See [Events](/docs/events/index).
+**Events** follow the same routed event model, but use pointer-based names (`PointerPressed` instead of `MouseLeftButtonDown`) and handle tunnelling through routing strategy flags rather than separate `Preview*` events. See [Events](/docs/events).
 
 **Controls** are largely the same. A few have different names or require separate NuGet packages. See [Controls](controls).
 
@@ -36,4 +36,4 @@ For deeper explanations of each topic, use the guides linked above.
 - [WPF to Avalonia Cheat Sheet](/docs/migration/wpf/cheat-sheet): Quick side-by-side reference.
 - [Styling](/docs/styling/styles): CSS-like styling system migration guide.
 - [Controls](controls): Control name mappings.
-- [Properties](/docs/properties/index): Property system differences.
+- [Properties](/docs/properties): Property system differences.

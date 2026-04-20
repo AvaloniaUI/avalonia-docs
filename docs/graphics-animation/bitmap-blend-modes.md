@@ -93,29 +93,29 @@ These are the images used in the examples:
 
 | Cute Cat base image (destination) | Color Wheel overlay image (source) |
 |:---:|:---:|
-| <img src={BlendModeCat} alt="Cat photo used as destination image" width="180"/> | <img src={BlendModeOverlayColor} alt="Color wheel overlay used as source image" width="180"/> |
+| <img src="/img/reference/animations-and-graphics/bitmap-blend-modes/Cat.jpg" alt="Cat photo used as destination image" width="180"/> | <img src="/img/reference/animations-and-graphics/bitmap-blend-modes/Overlay-Color.png" alt="Color wheel overlay used as source image" width="180"/> |
 
 Below are all the values currently supported by Avalonia
 
 | Preview | Enum | Description |
 |---|---|---|
-| <img src={BlendModeNothing} alt="Preview of Unspecified blend mode" width="180"/> | `Unspecified` | or `SourceOver` - Default Behavior. |
-| <img src={BlendModePlus} alt="Preview of Plus blend mode" width="180"/> | `Plus` | Display the sum of the source image and destination image. |
-| <img src={BlendModeScreen} alt="Preview of Screen blend mode" width="180"/> | `Screen` | Multiplies the complements of the destination and source color values, then complements the result. |
-| <img src={BlendModeOverlay} alt="Preview of Overlay blend mode" width="180"/> | `Overlay` | Multiplies or screens the colors, depending on the destination color value. |
-| <img src={BlendModeDarken} alt="Preview of Darken blend mode" width="180"/> | `Darken` | Selects the darker of the destination and source colors. |
-| <img src={BlendModeLighten} alt="Preview of Lighten blend mode" width="180"/> | `Lighten` | Selects the lighter of the destination and source colors. |
-| <img src={BlendModeColorDodge} alt="Preview of ColorDodge blend mode" width="180"/> | `ColorDodge` | Darkens the destination color to reflect the source color. |
-| <img src={BlendModeColorBurn} alt="Preview of ColorBurn blend mode" width="180"/> | `ColorBurn` | Multiplies or screens the colors, depending on the source color value. |
-| <img src={BlendModeHardLight} alt="Preview of HardLight blend mode" width="180"/> | `HardLight` | Darkens or lightens the colors, depending on the source color value. |
-| <img src={BlendModeSoftLight} alt="Preview of SoftLight blend mode" width="180"/> | `SoftLight` | Subtracts the darker of the two constituent colors from the lighter color. |
-| <img src={BlendModeDifference} alt="Preview of Difference blend mode" width="180"/> | `Difference` | Produces an effect similar to that of the Difference mode but lower in contrast. |
-| <img src={BlendModeExclusion} alt="Preview of Exclusion blend mode" width="180"/> | `Exclusion` | The source color is multiplied by the destination color and replaces the destination|
-| <img src={BlendModeMultiply} alt="Preview of Multiply blend mode" width="180"/> | `Multiply` | Creates a color with the hue of the source color and the saturation and luminosity of the destination color. |
-| <img src={BlendModeHue} alt="Preview of Hue blend mode" width="180"/> | `Hue` | Creates a color with the hue of the source color and the saturation and luminosity of the destination color. |
-| <img src={BlendModeSaturation} alt="Preview of Saturation blend mode" width="180"/> | `Saturation` | Creates a color with the saturation of the source color and the hue and luminosity of the destination color. |
-| <img src={BlendModeColor} alt="Preview of Color blend mode" width="180"/> | `Color` | Creates a color with the hue and saturation of the source color and the luminosity of the destination color. |
-| <img src={BlendModeLuminosity} alt="Preview of Luminosity blend mode" width="180"/> | `Luminosity` | Creates a color with the luminosity of the source color and the hue and saturation of the destination color. |
+| <img src="/img/reference/animations-and-graphics/bitmap-blend-modes/Nothing.png" alt="Preview of Unspecified blend mode" width="180"/> | `Unspecified` | or `SourceOver` - Default Behavior. |
+| <img src="/img/reference/animations-and-graphics/bitmap-blend-modes/Plus.png" alt="Preview of Plus blend mode" width="180"/> | `Plus` | Display the sum of the source image and destination image. |
+| <img src="/img/reference/animations-and-graphics/bitmap-blend-modes/Screen.png" alt="Preview of Screen blend mode" width="180"/> | `Screen` | Multiplies the complements of the destination and source color values, then complements the result. |
+| <img src="/img/reference/animations-and-graphics/bitmap-blend-modes/Overlay.png" alt="Preview of Overlay blend mode" width="180"/> | `Overlay` | Multiplies or screens the colors, depending on the destination color value. |
+| <img src="/img/reference/animations-and-graphics/bitmap-blend-modes/Darken.png" alt="Preview of Darken blend mode" width="180"/> | `Darken` | Selects the darker of the destination and source colors. |
+| <img src="/img/reference/animations-and-graphics/bitmap-blend-modes/HardLight.png" alt="Preview of Lighten blend mode" width="180"/> | `Lighten` | Selects the lighter of the destination and source colors. |
+| <img src="/img/reference/animations-and-graphics/bitmap-blend-modes/ColorDodge.png" alt="Preview of ColorDodge blend mode" width="180"/> | `ColorDodge` | Darkens the destination color to reflect the source color. |
+| <img src="/img/reference/animations-and-graphics/bitmap-blend-modes/ColorBurn.png" alt="Preview of ColorBurn blend mode" width="180"/> | `ColorBurn` | Multiplies or screens the colors, depending on the source color value. |
+| <img src="/img/reference/animations-and-graphics/bitmap-blend-modes/HardLight.png" alt="Preview of HardLight blend mode" width="180"/> | `HardLight` | Darkens or lightens the colors, depending on the source color value. |
+| <img src="/img/reference/animations-and-graphics/bitmap-blend-modes/SoftLight.png" alt="Preview of SoftLight blend mode" width="180"/> | `SoftLight` | Subtracts the darker of the two constituent colors from the lighter color. |
+| <img src="/img/reference/animations-and-graphics/bitmap-blend-modes/Difference.png" alt="Preview of Difference blend mode" width="180"/> | `Difference` | Produces an effect similar to that of the Difference mode but lower in contrast. |
+| <img src="/img/reference/animations-and-graphics/bitmap-blend-modes/Exclusion.png" alt="Preview of Exclusion blend mode" width="180"/> | `Exclusion` | The source color is multiplied by the destination color and replaces the destination|
+| <img src="/img/reference/animations-and-graphics/bitmap-blend-modes/Multiply.png" alt="Preview of Multiply blend mode" width="180"/> | `Multiply` | Creates a color with the hue of the source color and the saturation and luminosity of the destination color. |
+| <img src="/img/reference/animations-and-graphics/bitmap-blend-modes/Hue.png" alt="Preview of Hue blend mode" width="180"/> | `Hue` | Creates a color with the hue of the source color and the saturation and luminosity of the destination color. |
+| <img src="/img/reference/animations-and-graphics/bitmap-blend-modes/Saturation.png" alt="Preview of Saturation blend mode" width="180"/> | `Saturation` | Creates a color with the saturation of the source color and the hue and luminosity of the destination color. |
+| <img src="/img/reference/animations-and-graphics/bitmap-blend-modes/Color.png" alt="Preview of Color blend mode" width="180"/> | `Color` | Creates a color with the hue and saturation of the source color and the luminosity of the destination color. |
+| <img src="/img/reference/animations-and-graphics/bitmap-blend-modes/Luminosity.png" alt="Preview of Luminosity blend mode" width="180"/> | `Luminosity` | Creates a color with the luminosity of the source color and the hue and saturation of the destination color. |
 
 ### Composition blend modes
 
@@ -125,23 +125,23 @@ These are the images used in the examples:
 
 | "A" base image (destination) | "B" overlay image (source) |
 |:---:|:---:|
-| <img src={BlendModeA} alt="Image A used as destination for composition examples" width="180"/> | <img src={BlendModeB} alt="Image B used as source for composition examples" width="180"/> |
+| <img src="/img/reference/animations-and-graphics/bitmap-blend-modes/A.png" alt="Image A used as destination for composition examples" width="180"/> | <img src="/img/reference/animations-and-graphics/bitmap-blend-modes/B.png" alt="Image B used as source for composition examples" width="180"/> |
 
 Below are all the values currently supported by Avalonia. Please note that this demo is sensitive to the alpha channel and therefore the website background bleed through the images.
 
 | Preview | Enum | Description |
 |---|---|---|
-| <img src={BlendModeSource} alt="Preview of Source composition mode" width="180"/> | `Source` | Only the source will be present. |
-| <img src={BlendModeSourceOver} alt="Preview of SourceOver composition mode" width="180"/> | `SourceOver` | or `Unspecified` - Default behavior, Source is placed over the destination. |
-| <img src={BlendModeSourceIn} alt="Preview of SourceIn composition mode" width="180"/> | `SourceIn` | The source that overlaps the destination, replaces the destination. |
-| <img src={BlendModeSourceOut} alt="Preview of SourceOut composition mode" width="180"/> | `SourceOut` | Source is placed, where it falls outside of the destination. |
-| <img src={BlendModeSourceAtop} alt="Preview of SourceAtop composition mode" width="180"/> | `SourceAtop` | Source which overlaps the destination, replaces the destination. |
-| <img src={BlendModeXor} alt="Preview of Xor composition mode" width="180"/> | `Xor` | The non-overlapping regions of source and destination are combined. |
-| <img src={BlendModeDestination} alt="Preview of Destination composition mode" width="180"/> | `Destination` | Only the destination will be present. |
-| <img src={BlendModeDestinationOver} alt="Preview of DestinationOver composition mode" width="180"/> | `DestinationOver` | Destination is placed over the source. |
-| <img src={BlendModeDestinationIn} alt="Preview of DestinationIn composition mode" width="180"/> | `DestinationIn` | Destination which overlaps the source, replaces the source. |
-| <img src={BlendModeDestinationOut} alt="Preview of DestinationOut composition mode" width="180"/> | `DestinationOut` | Destination is placed, where it falls outside of the source. |
-| <img src={BlendModeDestinationAtop} alt="Preview of DestinationAtop composition mode" width="180"/> | `DestinationAtop` | Destination which overlaps the source replaces the source. |
+| <img src="/img/reference/animations-and-graphics/bitmap-blend-modes/Source.png" alt="Preview of Source composition mode" width="180"/> | `Source` | Only the source will be present. |
+| <img src="/img/reference/animations-and-graphics/bitmap-blend-modes/SourceOver.png" alt="Preview of SourceOver composition mode" width="180"/> | `SourceOver` | or `Unspecified` - Default behavior, Source is placed over the destination. |
+| <img src="/img/reference/animations-and-graphics/bitmap-blend-modes/SourceIn.png" alt="Preview of SourceIn composition mode" width="180"/> | `SourceIn` | The source that overlaps the destination, replaces the destination. |
+| <img src="/img/reference/animations-and-graphics/bitmap-blend-modes/SourceOut.png'" alt="Preview of SourceOut composition mode" width="180"/> | `SourceOut` | Source is placed, where it falls outside of the destination. |
+| <img src="/img/reference/animations-and-graphics/bitmap-blend-modes/SourceAtop.png" alt="Preview of SourceAtop composition mode" width="180"/> | `SourceAtop` | Source which overlaps the destination, replaces the destination. |
+| <img src="/img/reference/animations-and-graphics/bitmap-blend-modes/Xor.png" alt="Preview of Xor composition mode" width="180"/> | `Xor` | The non-overlapping regions of source and destination are combined. |
+| <img src="/img/reference/animations-and-graphics/bitmap-blend-modes/Destination.png" alt="Preview of Destination composition mode" width="180"/> | `Destination` | Only the destination will be present. |
+| <img src="/img/reference/animations-and-graphics/bitmap-blend-modes/DestinationOver.png" alt="Preview of DestinationOver composition mode" width="180"/> | `DestinationOver` | Destination is placed over the source. |
+| <img src="/img/reference/animations-and-graphics/bitmap-blend-modes/DestinationIn.png" alt="Preview of DestinationIn composition mode" width="180"/> | `DestinationIn` | Destination which overlaps the source, replaces the source. |
+| <img src="/img/reference/animations-and-graphics/bitmap-blend-modes/DestinationOut.png" alt="Preview of DestinationOut composition mode" width="180"/> | `DestinationOut` | Destination is placed, where it falls outside of the source. |
+| <img src="/img/reference/animations-and-graphics/bitmap-blend-modes/DestinationAtop.png" alt="Preview of DestinationAtop composition mode" width="180"/> | `DestinationAtop` | Destination which overlaps the source replaces the source. |
 
 ## See also
 

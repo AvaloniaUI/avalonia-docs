@@ -1,5 +1,5 @@
 ---
-id: keyboard-and-hotkeys
+id: hotkeys
 title: Keyboard and hotkeys
 description: Learn how to define hotkeys and key bindings in Avalonia using HotKey properties, KeyBindings, KeyGesture, and HotKeyManager for keyboard-driven commands.
 doc-type: concept
@@ -138,7 +138,7 @@ The following example shows typical undo, redo, and find shortcuts:
 ## Source code
 
 * [HotkeyManager.cs](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/HotkeyManager.cs)
-* [KeyGesture.cs](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Input/KeyGesture.cs)
+* [KeyGesture.cs](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Base/Input/KeyGesture.cs)
 
 ## See also
 

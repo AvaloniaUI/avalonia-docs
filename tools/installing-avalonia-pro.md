@@ -15,7 +15,7 @@ This guide explains how to configure your project to use Avalonia Pro packages. 
 Before you begin, make sure you have:
 
 - An Avalonia project targeting .NET 8 or later.
-- A valid Avalonia license key. You can obtain one from the [Avalonia portal](https://portal.avaloniaui.net), including a free [Community Edition](/tools/community-edition) key if you qualify.
+- A valid Avalonia license key. You can obtain one from the [Avalonia portal](https://portal.avaloniaui.net).
 
 ## NuGet package source
 
@@ -72,6 +72,5 @@ If the license key is missing or invalid, you will see a build warning. Check th
 
 ## See also
 
-- [Community edition](/tools/community-edition)
 - [Avalonia Tools overview](/tools/)
 - [FAQ](/tools/faq)

@@ -120,7 +120,7 @@ new Style(x => x.OfType<StackPanel>().Child().OfType<Button>());
 A child selector is defined by separating two selectors with a `>` character. This selector matches only direct children in the **logical controls tree**.
 
 :::info
-For the concept behind the logical controls tree, see [Control trees](../custom-controls/control-trees).
+For the concept behind the logical controls tree, see [Control trees](/docs/custom-controls/control-trees).
 :::
 
 For example, applying the above selector to this XAML:

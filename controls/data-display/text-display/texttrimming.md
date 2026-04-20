@@ -42,9 +42,7 @@ No trimming is applied. Text is cut off when it reaches the boundary of the cont
            Width="200" />
 ```
 
-<div className="center" style={{maxWidth:400}}>
-<img className="center" src={NoTrimming} alt="A screenshot of an IDE, displaying a long line of text in a box that is abruptly cut off." />
-</div>
+<Image light={NoTrimming} alt="A screenshot of an IDE, displaying a long line of text in a box that is abruptly cut off." position="center" maxWidth={400} cornerRadius="true" />
 
 ### CharacterEllipsis
 
@@ -58,9 +56,7 @@ Intended for general-purposes trimming, when your UI design requires precise spa
            Width="200" />
 ```
 
-<div className="center" style={{maxWidth:400}}>
-<img className="center" src={CharacterEllipsis} alt="A screenshot of an IDE, displaying a long line of text in a box that is cut off after a character, with an ellipsis added." />
-</div>
+<Image light={CharacterEllipsis} alt="A screenshot of an IDE, displaying a long line of text in a box that is cut off after a character, with an ellipsis added." position="center" maxWidth={400} cornerRadius="true" />
 
 ### WordEllipsis
 
@@ -74,9 +70,7 @@ Intended to maximize readability by preventing incomplete words from appearing.
            Width="200" />
 ```
 
-<div className="center" style={{maxWidth:400}}>
-<img className="center" src={WordEllipsis} alt="A screenshot of an IDE, displaying a long line of text in a box that is cut off after a complete word, with an ellipsis added." />
-</div>
+<Image light={WordEllipsis} alt="A screenshot of an IDE, displaying a long line of text in a box that is cut off after a complete word, with an ellipsis added." position="center" maxWidth={400} cornerRadius="true" />
 
 ### PrefixCharacterEllipsis
 
@@ -92,9 +86,7 @@ Intended for file paths, URLs, or any other text where both the beginning and en
            Width="200" />
 ```
 
-<div className="center" style={{maxWidth:400}}>
-<img className="center" src={PrefixCharacterEllipsis} alt="A screenshot of an IDE, displaying a long line of text in a box that is cut off in the middle, with an ellipsis placed between the starting and ending characters." />
-</div>
+<Image light={PrefixCharacterEllipsis} alt="A screenshot of an IDE, displaying a long line of text in a box that is cut off in the middle, with an ellipsis placed between the starting and ending characters." position="center" maxWidth={400} cornerRadius="true" />
 
 ### LeadingCharacterEllipsis
 
@@ -108,9 +100,7 @@ Intended for file paths or any other text where only the end is important.
            Width="200" />
 ```
 
-<div className="center" style={{maxWidth:400}}>
-<img className="center" src={LeadingCharacterEllipsis} alt="A screenshot of an IDE, displaying a long line of text in a box that is cut off at the start, with an ellipsis replacing the starting characters and the ending characters visible." />
-</div>
+<Image light={LeadingCharacterEllipsis} alt="A screenshot of an IDE, displaying a long line of text in a box that is cut off at the start, with an ellipsis replacing the starting characters and the ending characters visible." position="center" maxWidth={400} cornerRadius="true" />
 
 ### PathSegmentEllipsis
 
@@ -150,9 +140,7 @@ Combine `TextTrimming` and `TextWrapping` to apply trimming to the last visible 
            TextTrimming="WordEllipsis" />
 ```
 
-<div className="center" style={{maxWidth:400}}>
-<img className="center" src={TextWrappingWithTextTrimming} alt="A screenshot of an IDE, displaying a long line of text in a box that wraps within the box for three lines, before being cut off with an ellipsis added." />
-</div>
+<Image light={TextWrappingWithTextTrimming} alt="A screenshot of an IDE, displaying a long line of text in a box that wraps within the box for three lines, before being cut off with an ellipsis added." position="center" maxWidth={400} cornerRadius="true" />
 
 ## See also
 

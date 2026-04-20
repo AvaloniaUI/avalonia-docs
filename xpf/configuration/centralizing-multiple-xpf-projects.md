@@ -73,7 +73,7 @@ Edit the `RuntimeHostConfigurationOption` entry in each `.csproj` file to read t
 
 ## See also
 
-- [Getting started with XPF](../getting-started.md)
+- [Getting started with XPF](/xpf/getting-started)
 - [Customizing initialization](/xpf/configuration/customizing-initialization)
-- [Performance configuration](/xpf/performance)
-- [Versioning](../version-info/versioning.md)
+- [Performance configuration](/xpf/configuration/performance)
+- [Versioning](/xpf/version-info/versioning)

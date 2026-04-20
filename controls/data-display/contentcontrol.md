@@ -110,7 +110,7 @@ You can display the student's first and last name in a `ContentControl` using th
 </Window>
 ```
 
-<img className="center" src={ControlContentStudentScreenshot} alt="Student first and last name" />
+<Image light={ControlContentStudentScreenshot} alt="Student first and last name" position="center" maxWidth={400} cornerRadius="true" />
 
 For more information, see the [data templates](/docs/data-templates/introduction-to-data-templates) page.
 

@@ -49,7 +49,7 @@ Avalonia Pro includes all professional tools in Avalonia Plus, and additionally 
 
 ## Who gets access
 
-For non-commercial use, the [Community Edition](/tools/community-edition) gives you free access to Avalonia Plus tools and components. No trial period, no feature gates.
+For non-commercial use, the [Community license](https://avaloniaui.net/pricing) gives you free access to Avalonia Plus tools and components. No trial period, no feature gates.
 
 For larger teams and organizations, paid subscriptions are available. See our [pricing page](https://avaloniaui.net/pricing) for details.
 
@@ -58,7 +58,6 @@ Subscriptions fund continued development of the open-source framework.
 <br />
 <div style={{ display: 'flex', justifyContent: 'center', gap: '10px' }}>
   <Button label="Purchase Avalonia Enterprise" link="https://avaloniaui.net/pricing" variant="secondary" outline />
-  <Button label="Community Edition" link="/tools/community-edition" variant="secondary" outline />
 </div>
 
 ## See also

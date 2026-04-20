@@ -255,11 +255,3 @@ catch (Exception ex) {
 
 5. **Platform Considerations**:
     - Test media playback on all target platforms.
-
-## See also
-
-- [MediaPlayer control](/controls/media/mediaplayercontrol)
-- [MediaSource class](/docs/media/mediasource)
-- [Implementing MediaPlayer](/docs/media/media-playback)
-- [Installing Avalonia Pro](/tools/installing-avalonia-pro)
-- [Troubleshooting](/troubleshooting/controls/mediaplayer)

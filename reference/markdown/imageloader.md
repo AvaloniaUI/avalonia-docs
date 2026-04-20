@@ -149,8 +149,3 @@ You can also set `ImageLoader` in AXAML by declaring your loader as a static res
 - Your images require authentication headers or custom HTTP handling.
 - You want to cache downloaded images to avoid repeated network requests.
 - You need to resolve images from application resources or embedded assets rather than file or HTTP URIs.
-
-## See also
-
-- [Markdown control](/controls/data-display/text-display/markdown)
-- [Rendering markdown](/docs/app-development/rendering-markdown)

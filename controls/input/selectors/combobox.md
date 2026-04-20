@@ -211,9 +211,9 @@ Show placeholder text when no item is selected:
 
 ## See also
 
-- [ListBox](../../data-display/collections/listbox)
-- [AutoCompleteBox](../text-input/autocompletebox)
-- [RadioButton](../buttons/radiobutton)
+- [ListBox](/controls/data-display/collections/listbox)
+- [AutoCompleteBox](/controls/input/text-input/autocompletebox)
+- [RadioButton](/controls/input/buttons/radiobutton)
 - [Data templates](/docs/data-templates/introduction-to-data-templates)
 - [ComboBox API reference](/api/avalonia/controls/combobox)
 - [`ComboBox.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/ComboBox.cs)

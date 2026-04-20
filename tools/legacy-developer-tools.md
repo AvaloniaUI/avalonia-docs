@@ -63,7 +63,7 @@ dotnet add package Avalonia.Diagnostics
 But by default, it is already installed.
 :::
 
-<img className="center" src={DevToolsOverviewScreenshot} alt="" />
+<Image light={DevToolsOverviewScreenshot} alt="DevTools overview window" position="center" maxWidth={400} cornerRadius="true" />
 
 There is a known issue when running under .NET core 2.1 that pressing <kbd>F12</kbd> will cause the program to quit. In this case, either switch to .NET core 2.0 or 3.0+ or change the open gesture to something different, such as <kbd>Ctrl</kbd>+<kbd>F12</kbd>.
 
@@ -82,7 +82,7 @@ Allows for quickly checking and editing properties of the control. One can also 
 | Type     | Type of the current value     |
 | Priority | Priority of the value         |
 
-<img className="center" src={DevToolsPropertiesScreenshot} alt="" />
+<Image light={DevToolsPropertiesScreenshot} alt="DevTools properties panel" position="center" maxWidth={400} cornerRadius="true" />
 
 ### Layout
 
@@ -93,7 +93,7 @@ Control size and size constraints are also shown.
 If `Width` or `Height` are underlined that means there is an active constraint. Hover over the value to see a tooltip containing relevant information.
 :::
 
-<img className="center" src={DevToolsLayoutScreenshot} alt="" />
+<Image light={DevToolsLayoutScreenshot} alt="DevTools layout panel" position="center" maxWidth={400} cornerRadius="true" />
 
 ### Styles
 
@@ -108,18 +108,18 @@ If setter value is bound to a resource it will be indicated by a circle followed
 :::
 
 
-<img className="center" src={DevToolsStylesScreenshot} alt="" />
+<Image light={DevToolsStylesScreenshot} alt="DevTools styles panel" position="center" maxWidth={400} cornerRadius="true" />
 
 :::info
 If given value has a strikethrough it means that it is being overridden by a value in style with higher priority.
 :::
 
-<img className="center" src={DevToolsOverriddenStylesScreenshot} alt="" />
+<Image light={DevToolsOverriddenStylesScreenshot} alt="DevTools styles panel showing overridden values with strikethrough" position="center" maxWidth={400} cornerRadius="true" />
 
 Setters have a context menu that allows for quickly copying names and values to the clipboard.
 
 
-<img className="center" src={DevToolsSetterContextMenuScreenshot} alt="" />
+<Image light={DevToolsSetterContextMenuScreenshot} alt="DevTools setter context menu" position="center" maxWidth={400} cornerRadius="true" />
 
 ## Events
 
@@ -132,7 +132,7 @@ Dotted underline under event name or control type indicates that quick navigatio
 * Double clicking a control type (and/or name) will navigate to the visual tree tab and select said control.
 :::
 
-<img className="center" src={DevToolsEventsScreenshot} alt="" />
+<Image light={DevToolsEventsScreenshot} alt="DevTools events tab" position="center" maxWidth={400} cornerRadius="true" />
 
 ## Hotkeys
 
@@ -148,11 +148,11 @@ Dotted underline under event name or control type indicates that quick navigatio
 
 ### Changing a property value
 
-<img className="center" src={DevToolsChangePropertyScreenshot} alt="" />
+<Image light={DevToolsChangePropertyScreenshot} alt="Animation showing a property value being changed in DevTools" position="center" maxWidth={400} cornerRadius="true" />
 
 ### Changing layout properties
 
-<img className="center" src={DevToolsChangeLayoutScreenshot} alt="" />
+<Image light={DevToolsChangeLayoutScreenshot} alt="Animation showing layout properties being changed in DevTools" position="center" maxWidth={400} cornerRadius="true" />
 
 ## See also
 

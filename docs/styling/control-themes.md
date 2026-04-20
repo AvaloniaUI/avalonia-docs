@@ -18,7 +18,7 @@ Because control themes are based on styles, it is important to understand the Av
 :::
 
 :::info
-Control themes are typically applied to [templated (lookless)](../custom-controls) controls, but they can actually be applied to any control. However, for non-templated controls, it is often more convenient to use standard styles instead.
+Control themes are typically applied to [templated (lookless)](/docs/custom-controls) controls, but they can actually be applied to any control. However, for non-templated controls, it is often more convenient to use standard styles instead.
 :::
 
 ## Example: round button
@@ -71,7 +71,7 @@ The following example shows a simple `Button` theme which displays a button with
 </Window>
 ```
 
-<p><img className="medium-image-zoom" src={StylingEllipseButtonScreenshot} alt="Ellipse Button" /></p>
+<Image light={StylingEllipseButtonScreenshot} alt="Ellipse button" position="center" maxWidth={400} cornerRadius="true" />
 
 ## Interaction in control themes
 

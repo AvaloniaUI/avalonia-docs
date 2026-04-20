@@ -79,6 +79,8 @@ The following example shows a simple `Button` theme which displays a button with
 
 <p><img className="medium-image-zoom" src={StylingEllipseButtonScreenshot} alt="Ellipse Button" /></p>
 
+<Image light={StylingEllipseButtonScreenshot} alt="Ellipse button" position="center" maxWidth={400} cornerRadius="true" />
+
 ## Interaction in Control Themes
 
 Like standard styles, control themes support [nested styles](/docs/styling/styles) which can be used to add interactions such as pointer-over and pressed states.

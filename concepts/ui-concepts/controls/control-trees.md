@@ -85,7 +85,7 @@ The **Events** tab in DevTools logs the source and propagation of events as you 
 
 ## See also
 
-- [Routed events](../user-input/routed-events)
+- [Routed events](/docs/input-interaction/routed-events)
 - [Attached properties](/docs/custom-controls/attached-properties)
-- [Layout](../layout)
-- [DevTools keyboard shortcuts](../../../tools/developer-tools/shortcuts)
+- [Layout](/docs/layout/layout)
+- [DevTools keyboard shortcuts](/tools/developer-tools/shortcuts)

@@ -282,7 +282,7 @@ by the `ListBox` content, and the third takes the remaining space.
 
 The following example demonstrates how to build a UI similar to that found on the Run dialog available on the Windows Start menu.
 
-<img className="center" src={GridSampleScreenshot} alt="Grid Example App" />
+<Image light={GridSampleScreenshot} alt="Grid example app" position="center" maxWidth={400} cornerRadius="true" />
 
 <Tabs
   defaultValue="xaml"

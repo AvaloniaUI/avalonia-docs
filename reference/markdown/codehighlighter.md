@@ -103,10 +103,3 @@ If you omit the language identifier, the highlighter renders the block as plain 
 
 - The `Markdown` control listens for property changes on the highlighter and re-renders code blocks automatically when you update properties such as `Theme`.
 - Each `Markdown` control accepts a single `CodeHighlighter` instance. If you have multiple `Markdown` controls, you can share the same highlighter resource across all of them.
-
-## See also
-
-- [Markdown control](/controls/data-display/text-display/markdown)
-- [Markdown styling](/reference/markdown/markdown-styling)
-- [ImageLoader](/reference/markdown/imageloader)
-- [Rendering markdown](/docs/app-development/rendering-markdown)

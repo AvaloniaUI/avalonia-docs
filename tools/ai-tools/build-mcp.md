@@ -202,7 +202,7 @@ claude mcp list
 1. Go to **Customize** → **Connectors**.
 2. Click the **+** button at the top of the window, then **Add custom connector**.
 3. In the "Name" field, input "avalonia-docs".
-4. In the "Remote MCP server URL" field, input "https://docs-mcp.avaloniaui.net/mcp".
+4. In the "Remote MCP server URL" field, input `https://docs-mcp.avaloniaui.net/mcp`.
 5. Click **Add**.
 6. You may need to restart Claude Desktop.
 

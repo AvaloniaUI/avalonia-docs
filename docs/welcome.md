@@ -52,14 +52,14 @@ For exact version and architecture details, see [Supported platforms](/docs/supp
 
 1. [Install Avalonia](/docs/get-started/install-avalonia) and [set up your IDE](/docs/get-started/set-up-your-ide)
 2. [Create your first project](/docs/get-started/create-your-first-project)
-3. [Follow the starter tutorial](/docs/get-started/starter-tutorial/index) to build a temperature converter app
+3. [Follow the starter tutorial](/docs/get-started/starter-tutorial) to build a temperature converter app
 4. [Learn the fundamentals](/docs/fundamentals/avalonia-xaml): XAML, controls, layout, and the visual tree
 
 ### Coming from WPF?
 
 Avalonia's API is intentionally close to WPF, but there are important differences in styling, templates, and the property system.
 
-- [WPF migration guide](/docs/migration/wpf/index): a section-by-section comparison
+- [WPF migration guide](/docs/migration/wpf): a section-by-section comparison
 - [WPF cheat sheet](/docs/migration/wpf/cheat-sheet): quick mapping of WPF concepts to Avalonia equivalents
 
 If you need to run an existing WPF application cross-platform without rewriting it, [Avalonia XPF](/xpf) provides binary-compatible WPF support on top of Avalonia's rendering engine.
@@ -72,7 +72,7 @@ Avalonia 12 includes compiled bindings by default, a new clipboard API, updated 
 
 ### Looking for samples?
 
-- [Samples and tutorials](/docs/samples-tutorials/index): starter apps, real-world examples, and video walkthroughs
+- [Samples and tutorials](/docs/samples-tutorials): starter apps, real-world examples, and video walkthroughs
 
 ## Need help?
 
@@ -83,5 +83,5 @@ To report a bug, open an issue on [GitHub](https://github.com/AvaloniaUI/Avaloni
 ## See also
 
 - [Supported platforms](/docs/supported-platforms)
-- [Samples and tutorials](/docs/samples-tutorials/index)
+- [Samples and tutorials](/docs/samples-tutorials)
 - [Avalonia GitHub repository](https://github.com/AvaloniaUI/Avalonia)

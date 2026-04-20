@@ -285,7 +285,7 @@ You can combine multiple style selectors to target hover and pressed states as w
 
 ## See also
 
-- [TabControl reference](../../controls/navigation/tabcontrol): Full property tables and additional examples.
-- [How to bind tabs](../data-binding/how-to-bind-tabs): Detailed walkthrough for binding tab content to collections.
+- [TabControl reference](/controls/navigation/tabcontrol): Full property tables and additional examples.
+- [How to bind tabs](/docs/data-binding/how-to-bind-tabs): Detailed walkthrough for binding tab content to collections.
 - [Navigation how-to](/docs/how-to/navigation-how-to): Other navigation patterns such as `Carousel` and page-based navigation.
-- [Data binding introduction](../data-binding/introduction-to-data-binding): Core concepts for binding your UI to view models.
+- [Data binding introduction](/docs/data-binding/introduction-to-data-binding): Core concepts for binding your UI to view models.

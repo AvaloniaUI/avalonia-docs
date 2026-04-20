@@ -8,7 +8,7 @@ This walkthrough builds a complete control template from scratch, explaining eac
 ## Prerequisites
 
 - An Avalonia project with a `Window` where you can add styles and controls.
-- Familiarity with [styles](/docs/styling/styles) and [XAML](../fundamentals/avalonia-xaml.md) basics.
+- Familiarity with [styles](/docs/styling/styles) and [XAML](/docs/fundamentals/avalonia-xaml) basics.
 
 ## What is a control template?
 

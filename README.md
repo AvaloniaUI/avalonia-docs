@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="Avalonia UI logo" src="static/img/purple-border-gradient-icon.png" width="75px" />
+  <img alt="Avalonia UI logo" src="/img/purple-border-gradient-icon.png" width="75px" />
   <h1 align="center">Avalonia UI Documentation</h1>
 </p>
 

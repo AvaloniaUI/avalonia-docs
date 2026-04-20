@@ -2,7 +2,7 @@
 id: assets
 title: Assets
 description: Include and reference bitmap, style, and resource dictionary assets in Avalonia applications.
-doc-type: explanation
+doc-type: reference
 ---
 
 import AssetFileDiagram from '/img/concepts/ui-concepts/assets/asset-file.png';
