@@ -24,10 +24,14 @@ jobs:
                 --max-retries 3
                 --cache
                 --max-cache-age 1d
-                --exclude-path 'api'
-                --exclude-path '.claude'
                 --accept 200..=206,429
                 --base-url https://docs.avaloniaui.net
+                --exclude-path 'api'
+                --exclude-path '.claude'
+                --exclude https://vscode.dev/redirect/mcp/install?name=avalonia_devtools&config=%7b%22type%22%3a%22stdio%22%2c%22command%22%3a%22avdt%22%2c%22args%22%3a%5b%22mcp%22%5d%7d
+                --exclude https://xpf-nuget-feed.avaloniaui.net/
+                --exclude https://xpf-nuget-feed.avaloniaui.net/packages/xpf.sdk
+                --exclude https://xpf-nuget-feed.avaloniaui.net/v3/index.json
                 './**/*.md'
                 './**/*.mdx'
             format: markdown
