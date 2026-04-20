@@ -136,6 +136,6 @@ Avalonia UI has animation support lets you make controls grow, shake, spin, and 
 
 ## See also
 
-- [Shapes and Geometries](shapes-and-geometries): Shape controls and geometry types.
-- [Brushes](brushes): Brush types for fills and strokes.
-- [Animations](animations): Overview of animation types.
+- [Shapes and Geometries](/docs/graphics-animation/shapes-and-geometries): Shape controls and geometry types.
+- [Brushes](/docs/graphics-animation/brushes): Brush types for fills and strokes.
+- [Animations](/docs/graphics-animation/animations): Overview of animation types.

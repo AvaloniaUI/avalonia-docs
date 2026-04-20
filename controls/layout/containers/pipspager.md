@@ -74,7 +74,7 @@ Override these resource keys on the `PipsPager` or an ancestor to customize pip 
 <PipsPager NumberOfPages="5" />
 ```
 
-<img src={PipsPagerDefaultScreenshot} alt="" />
+<Image light={PipsPagerDefaultScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
 
 ### PipsPager in Code
 
@@ -133,7 +133,7 @@ Bind `SelectedPageIndex` to a `Carousel.SelectedIndex` for synchronized navigati
 </Grid>
 ```
 
-<img src={PipsPagerCarouselScreenshot} alt="" />
+<Image light={PipsPagerCarouselScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
 
 ### Two-Way Binding with a CarouselPage
 
@@ -173,7 +173,7 @@ When `NumberOfPages` exceeds `MaxVisiblePips`, the pip strip scrolls automatical
            SelectedPageIndex="25" />
 ```
 
-<img src={PipsPagerLargeCollectionScreenshot} alt="" />
+<Image light={PipsPagerLargeCollectionScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
 
 ### Responding to Selection Changes
 
@@ -198,7 +198,7 @@ Override the indicator resource keys on the `PipsPager` to change pip colors:
 </PipsPager>
 ```
 
-<img src={PipsPagerCustomColorsScreenshot} alt="" />
+<Image light={PipsPagerCustomColorsScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
 
 ### Custom Button Themes
 
@@ -247,7 +247,7 @@ Replace the default chevron buttons with custom themed buttons using `PreviousBu
 </PipsPager>
 ```
 
-<img src={PipsPagerCustomButtonsScreenshot} alt="" />
+<Image light={PipsPagerCustomButtonsScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
 
 ### Custom Pip Templates (Pill-Shaped Indicator)
 
@@ -308,7 +308,7 @@ Use Style selectors targeting the inner `ListBoxItem` to replace the default dot
 </PipsPager>
 ```
 
-<img src={PipsPagerPillTemplateScreenshot} alt="" />
+<Image light={PipsPagerPillTemplateScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
 
 ### Programmatic Control
 

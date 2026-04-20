@@ -77,6 +77,6 @@ You can now use the class `MyDataTemplate` in your view, like this:
 
 ## See also
 
-- [Introduction to Data Templates](introduction-to-data-templates): Overview of data templates in Avalonia.
-- [Data Template Collection](data-template-collection): Defining multiple templates by type.
-- [View Locator](view-locator): Automatically resolving views for view models.
+- [Introduction to Data Templates](/docs/data-templates/introduction-to-data-templates): Overview of data templates in Avalonia.
+- [Data Template Collection](/docs/data-templates/data-template-collection): Defining multiple templates by type.
+- [View Locator](/docs/data-templates/view-locator): Automatically resolving views for view models.

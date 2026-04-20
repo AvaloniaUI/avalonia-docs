@@ -126,6 +126,6 @@ Use DevTools (press <kbd>F12</kbd> at runtime) to inspect property values. The *
 ## See also
 
 - [Property value precedence](../properties/value-precedence)
-- [Styles](styles)
-- [Pseudoclasses](pseudoclasses)
-- [Styling best practices](style-best-practices)
+- [Styles](/docs/styling/styles)
+- [Pseudoclasses](/docs/styling/pseudoclasses)
+- [Styling best practices](/docs/styling/style-best-practices)

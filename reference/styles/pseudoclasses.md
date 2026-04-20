@@ -137,7 +137,7 @@ public class AreaButton : Button
 </TabItem>
 </Tabs>
 
-<img src={CustomPseudoclassScreenshot} alt="" />
+<Image light={CustomPseudoclassScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
 
 :::warning
 `StyleKeyOverride` is used when creating simple, derived controls with the `ControlTheme` defined by their parent. In this 

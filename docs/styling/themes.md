@@ -7,7 +7,7 @@ import FluentThemeNormalScreenshot from '/img/concepts/ui-concepts/styling/fluen
 import FluentThemeForestScreenshot from '/img/concepts/ui-concepts/styling/fluent-theme-forest.png';
 import SimpleThemeScreenshot from '/img/concepts/ui-concepts/styling/simple-theme.png';
 
-In Avalonia, themes are complete sets of [control themes](control-themes) and [theme resources](theme-variants) for built-in controls.
+In Avalonia, themes are complete sets of [control themes](/docs/styling/control-themes) and [theme resources](/docs/styling/theme-variants) for built-in controls.
 
 ## Official themes
 
@@ -66,7 +66,7 @@ Then include the theme in the `Application` class:
 ```
 
 :::note
-If you need to specify a dark or light theme variant, see [Theme variants](theme-variants).
+If you need to specify a dark or light theme variant, see [Theme variants](/docs/styling/theme-variants).
 :::
 
 ### Changing theme density
@@ -169,11 +169,11 @@ Then include the theme in the `Application` class:
 ```
 
 :::note
-If you need to specify a dark or light theme variant, see [Theme variants](theme-variants).
+If you need to specify a dark or light theme variant, see [Theme variants](/docs/styling/theme-variants).
 :::
 
 ## See also
 
-- [Control themes](control-themes)
-- [Theme variants](theme-variants)
-- [Styles](styles)
+- [Control themes](/docs/styling/control-themes)
+- [Theme variants](/docs/styling/theme-variants)
+- [Styles](/docs/styling/styles)

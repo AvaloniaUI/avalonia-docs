@@ -13,7 +13,7 @@ import BounceEaseInScreenshot from '/img/guides/ui-development/graphics/bounce-e
 
 You can use a keyframe animation to change one or more control properties following a timeline. The keyframes are defined in _Avalonia UI_ styles with **cue** points along the **duration** of the animation, and set the intermediate values of the properties at a point in time.
 
-<img src={AnimationKeyframeDiagram} alt="Diagram showing keyframe animation timeline with cue points"/>
+<Image light={AnimationKeyframeDiagram} alt="Diagram showing keyframe animation timeline with cue points" position="center" maxWidth={400} cornerRadius="true"/>
 
 The property values between keyframes are set following the profile of an **easing function**. The default easing function is a straight-line interpolation.
 
@@ -67,7 +67,7 @@ The finished code will look like this:
 
 The resulting animation looks like this:
 
-<img src={KeyframeFadeScreenshot} alt="Animation showing a red rectangle fading in"/>
+<Image light={KeyframeFadeScreenshot} alt="Animation showing a red rectangle fading in" position="center" maxWidth={400} cornerRadius="true"/>
 
 The animation runs as soon as the rectangle control is loaded and can be selected by the style. In fact it runs in the preview pane as well!
 
@@ -97,7 +97,7 @@ This example shows you how to animate two properties on the same timeline.
 
 The red rectangle is faded-in and rotated at the same time.
 
-<img src={KeyframeCompositeAnimationScreenshot} alt="Animation showing a red rectangle fading in and rotating simultaneously"/>
+<Image light={KeyframeCompositeAnimationScreenshot} alt="Animation showing a red rectangle fading in and rotating simultaneously" position="center" maxWidth={400} cornerRadius="true"/>
 
 ## Configuring animation
 
@@ -164,9 +164,9 @@ An easing function defines how a property is varied over time during an animatio
 
 <div>
 
-<img src={LinearEasingScreenshot} alt="Graph showing linear easing function"/>
+<Image light={LinearEasingScreenshot} alt="Graph showing linear easing function" position="center" maxWidth={400} cornerRadius="true"/>
 
-<img src={BounceEaseInScreenshot} alt="Graph showing bounce ease-in easing function"/>
+<Image light={BounceEaseInScreenshot} alt="Graph showing bounce ease-in easing function" position="center" maxWidth={400} cornerRadius="true"/>
 
 </div>
 
@@ -237,6 +237,6 @@ While it's easier to define animations in XAML, it's also possible to do complet
 
 ## See also
 
-- [Animation Settings](animation-settings): Duration, delay, iteration count, and playback direction.
-- [Easing Functions](easing-functions): All available easing functions.
-- [Control Transitions](control-transitions): Animating property changes with transitions.
+- [Animation Settings](/docs/graphics-animation/animation-settings): Duration, delay, iteration count, and playback direction.
+- [Easing Functions](/docs/graphics-animation/easing-functions): All available easing functions.
+- [Control Transitions](/docs/graphics-animation/control-transitions): Animating property changes with transitions.

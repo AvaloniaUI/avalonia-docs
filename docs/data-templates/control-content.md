@@ -31,7 +31,7 @@ For example:
 
 The window displays the button - in this case centred both horizontally (specified) and vertically (by default). It looks like this:
 
-<img src={ControlContentButtonScreenshot} alt="Window displaying a centered Hello World button"/>
+<Image light={ControlContentButtonScreenshot} alt="Window displaying a centered Hello World button" position="center" maxWidth={400} cornerRadius="true"/>
 
 And if you put a string into the window content zone, for example:
 
@@ -49,7 +49,7 @@ And if you put a string into the window content zone, for example:
 
 The window will display the string:
 
-<img src={ControlContentStringScreenshot} alt="Window displaying a Hello World string"/>
+<Image light={ControlContentStringScreenshot} alt="Window displaying a Hello World string" position="center" maxWidth={400} cornerRadius="true"/>
 
 But what happens if you try to display an object from a class that you have defined in the window?
 
@@ -79,12 +79,12 @@ And the XML namespace `local` defined as the `MySample` namespace (from above), 
 
 But you will see only the fully-qualified class name for the student object:
 
-<img src={ControlContentTypeScreenshot} alt="Window displaying the fully-qualified class name of a Student object"/>
+<Image light={ControlContentTypeScreenshot} alt="Window displaying the fully-qualified class name of a Student object" position="center" maxWidth={400} cornerRadius="true"/>
 
 This is not very helpful! It happens because _Avalonia UI_ has no definition of how to display an object of class `Student` - and it is not a control - so it falls back on the `.ToString()` method, and all you see is the fully-qualified class name.
 
 ## See also
 
-- [Content Templates](content-templates): Using `ContentTemplate` to define how data is displayed.
-- [Data Template Collection](data-template-collection): Defining multiple templates by type.
-- [Introduction to Data Templates](introduction-to-data-templates): Overview of data templates in Avalonia.
+- [Content Templates](/docs/data-templates/content-templates): Using `ContentTemplate` to define how data is displayed.
+- [Data Template Collection](/docs/data-templates/data-template-collection): Defining multiple templates by type.
+- [Introduction to Data Templates](/docs/data-templates/introduction-to-data-templates): Overview of data templates in Avalonia.

@@ -10,7 +10,7 @@ Many applications need to include assets such as bitmaps, styles and resource di
 
 ## Including assets
 
-<img src={AssetFileDiagram} alt=''/>
+<Image light={AssetFileDiagram} alt="" position="center" maxWidth={400} cornerRadius="true"/>
 
 You include assets in an application by using the `<AvaloniaResource>` element in your project file.
 
@@ -47,7 +47,7 @@ As an alternative, you can use the rooted path:
 
 ## Library assets
 
-<img src={AssetLibraryDiagram} alt=''/>
+<Image light={AssetLibraryDiagram} alt="" position="center" maxWidth={400} cornerRadius="true"/>
 
 If the asset is included in a different assembly from the XAML file, then you use the `avares:` URI scheme. For example, if the asset is contained in an assembly called `MyAssembly.dll` in a `Assets` folder, then you use:
 

@@ -273,7 +273,7 @@ public partial class MainWindowViewModel : ViewModelBase
 </TabItem>
 </Tabs>
 
-<img src={GridSharedSizeGroupScreenshot} alt="" />
+<Image light={GridSharedSizeGroupScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
 
 Notice how each column is sized: the first column is sized by the `Button`, the second and fourth are sized 
 by the `ListBox` content, and the third takes the remaining space.
@@ -424,11 +424,11 @@ grid1.Children.Add(button3);
 
 - [Grid API reference](/api/avalonia/controls/grid)
 - [`Grid.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Grid.cs)
-- [GridSplitter](gridsplitter)
-- [Canvas](canvas)
-- [DockPanel](dockpanel)
-- [Panel](panel)
-- [RelativePanel](relativepanel)
-- [StackPanel](stackpanel)
-- [UniformGrid](uniformgrid)
-- [WrapPanel](wrappanel)
+- [GridSplitter](/controls/layout/panels/gridsplitter)
+- [Canvas](/controls/layout/panels/canvas)
+- [DockPanel](/controls/layout/panels/dockpanel)
+- [Panel](/controls/layout/panels/panel)
+- [RelativePanel](/controls/layout/panels/relativepanel)
+- [StackPanel](/controls/layout/panels/stackpanel)
+- [UniformGrid](/controls/layout/panels/uniformgrid)
+- [WrapPanel](/controls/layout/panels/wrappanel)

@@ -149,7 +149,7 @@ Classes you add in code are not removed when a style sets the `Classes` attribut
 
 ## See also
 
-- [Styles](styles)
+- [Styles](/docs/styling/styles)
 - [Pseudo-classes reference](/docs/styling/pseudoclasses)
 - [Style selectors](/docs/styling/style-selectors)
-- [Control themes](control-themes)
+- [Control themes](/docs/styling/control-themes)

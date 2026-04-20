@@ -151,6 +151,6 @@ Choose `ToggleSwitch` when the change takes effect immediately. Choose `CheckBox
 
 ## See also
 
-- [CheckBox](checkbox)
+- [CheckBox](/controls/input/selectors/checkbox)
 - [ToggleButton](/controls/input/buttons/togglebutton)
 - [RadioButton](/controls/input/buttons/radiobutton)

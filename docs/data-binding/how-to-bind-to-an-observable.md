@@ -91,7 +91,7 @@ Since observables may not have emitted a value yet, use `FallbackValue` to displ
 
 ## Combining with task binding
 
-The `^` operator also works with `Task<T>` properties. See [How to bind to a task result](how-to-bind-to-a-task-result) for details.
+The `^` operator also works with `Task<T>` properties. See [How to bind to a task result](/docs/data-binding/how-to-bind-to-a-task-result) for details.
 
 ## Cleanup and disposal
 
@@ -105,5 +105,5 @@ Keep the following points in mind:
 
 ## See also
 
-- [How to bind to a task result](how-to-bind-to-a-task-result)
-- [Data binding syntax](data-binding-syntax)
+- [How to bind to a task result](/docs/data-binding/how-to-bind-to-a-task-result)
+- [Data binding syntax](/docs/data-binding/data-binding-syntax)

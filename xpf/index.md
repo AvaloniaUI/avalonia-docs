@@ -73,4 +73,4 @@ Enterprise trials are available by contacting sales. For pricing, see the [Avalo
 
 ## Get started
 
-The [getting started guide](getting-started) walks you through running your WPF application on a new platform. Most teams are up and running in minutes, not months.
+The [getting started guide](/xpf/getting-started) walks you through running your WPF application on a new platform. Most teams are up and running in minutes, not months.

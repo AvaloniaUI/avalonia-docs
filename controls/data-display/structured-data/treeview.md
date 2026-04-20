@@ -108,7 +108,7 @@ namespace AvaloniaControls.Models
 
 By default the root node (or nodes) is shown. The user can expand or contract each node by clicking on the adjacent arrow. Clicking on the node title selects the item. On touch and pen devices, selection occurs on pointer release rather than press, allowing scroll gestures to start on a node without changing the selection.
 
-<img src={TreeViewAnimalHierarchyScreenshot} alt="" />
+<Image light={TreeViewAnimalHierarchyScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
 
 This is a development of the previous example with multiple root nodes, a revised item template, and an initial selection made in the view model code:
 
@@ -198,7 +198,7 @@ namespace AvaloniaControls.Models
 
 The tree view adds a scroll bar when it is needed. The selection can be extended by holding down the Ctrl key.
 
-<img src={TreeViewEnhancedAnimalHierarchyScreenshot} alt="" />
+<Image light={TreeViewEnhancedAnimalHierarchyScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
 
 ## Expansion events
 

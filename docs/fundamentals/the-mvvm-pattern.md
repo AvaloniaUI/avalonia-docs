@@ -10,7 +10,7 @@ import MvvmDataBindingDiagram from '/img/concepts/architecture/mvvm/mvvm.png';
 
 The Model-View-ViewModel (MVVM) pattern separates an application's user interface from its logic. Instead of mixing display code and behavior in the same file, MVVM splits them into three distinct parts that communicate through data binding.
 
-<img src={MvvmPatternDiagram} alt="Diagram showing the three components of the MVVM pattern: Model, View, and View Model."/>
+<Image light={MvvmPatternDiagram} alt="Diagram showing the three components of the MVVM pattern: Model, View, and View Model." position="center" maxWidth={400} cornerRadius="true"/>
 
 - **View**: The structure, layout, and appearance of what the user sees. In Avalonia, views are defined in AXAML files with minimal code-behind. The view gets its data from the view model through bindings.
 - **View model**: The intermediary between the view and the model. It exposes data and commands that the view binds to, handles user interaction logic, and raises `PropertyChanged` events to notify the view when data changes.
@@ -49,7 +49,7 @@ Views are compositions of Avalonia [built-in controls](/controls), [user control
 
 Data binding is the key technology connecting views to view models. You can think of the relationship as two layers joined by bindings:
 
-<img src={MvvmDataBindingDiagram} alt="Diagram showing data bindings connecting a view layer to a view model layer."/>
+<Image light={MvvmDataBindingDiagram} alt="Diagram showing data bindings connecting a view layer to a view model layer." position="center" maxWidth={400} cornerRadius="true"/>
 
 Some bindings are two-way. For example, a text input binds in both directions so that changes in the view model update the control, and user input flows back to the view model. Other bindings are one-way. A button's command binding only flows from the view to the view model.
 

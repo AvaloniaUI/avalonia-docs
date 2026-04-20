@@ -18,7 +18,7 @@ A typical Avalonia XAML file starts with two namespace declarations:
 | Declaration | Purpose |
 |---|---|
 | `xmlns="https://github.com/avaloniaui"` | The default Avalonia namespace. Maps to all core Avalonia CLR namespaces (`Avalonia`, `Avalonia.Controls`, `Avalonia.Media`, `Avalonia.Animation`, and others). Required in every Avalonia XAML file. |
-| `xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"` | The XAML language namespace. Provides access to [x: directives](directives) like `x:Name`, `x:Key`, and `x:Class`. |
+| `xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"` | The XAML language namespace. Provides access to [x: directives](/docs/xaml/directives) like `x:Name`, `x:Key`, and `x:Class`. |
 
 ## CLR namespaces mapped to the default Avalonia namespace
 
@@ -131,5 +131,5 @@ The `d:` and `mc:` namespaces enable design-time features:
 ## See also
 
 - [Avalonia XAML](/docs/fundamentals/avalonia-xaml): XAML basics and file structure.
-- [x: Directives](directives): XAML language directives.
+- [x: Directives](/docs/xaml/directives): XAML language directives.
 - [Custom Control Library](/docs/custom-controls/custom-control-library): How to package controls with namespace mappings.

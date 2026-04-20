@@ -106,4 +106,4 @@ You can assign custom flyouts directly in XAML using the `Flyout` attached prope
 
 ## See also
 
-- [Custom Controls](index.md)
+- [Custom Controls](/docs/custom-controls/index)

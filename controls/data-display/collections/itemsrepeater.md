@@ -107,7 +107,7 @@ public class Crockery
 }
 ```
 
-<img src={ItemsRepeaterVerticalScreenshot} alt="ItemsRepeater showing a vertical list of crockery items" />
+<Image light={ItemsRepeaterVerticalScreenshot} alt="ItemsRepeater showing a vertical list of crockery items" position="center" maxWidth={400} cornerRadius="true"/>
 
 ## Horizontal list example
 
@@ -141,7 +141,7 @@ You can display items horizontally by setting the `Layout` property to a horizon
 </StackPanel>
 ```
 
-<img src={ItemsRepeaterHorizontalScreenshot} alt="ItemsRepeater showing a horizontal list of crockery items with a scroll bar" />
+<Image light={ItemsRepeaterHorizontalScreenshot} alt="ItemsRepeater showing a horizontal list of crockery items with a scroll bar" position="center" maxWidth={400} cornerRadius="true"/>
 
 ## Layout options
 
@@ -233,8 +233,8 @@ When you place an `ItemsRepeater` inside a `ScrollViewer`, virtualization is ena
 
 ## See also
 
-- [ItemsControl](itemscontrol)
-- [ListBox](listbox)
+- [ItemsControl](/controls/data-display/collections/itemscontrol)
+- [ListBox](/controls/data-display/collections/listbox)
 - [How to: Work with ItemsControl and ItemsRepeater](/docs/how-to/itemscontrol-how-to)
 - [Choosing a layout panel](/docs/layout/choosing-a-layout-panel)
 - [Responsive layout](/docs/how-to/responsive-layout-how-to)

@@ -204,5 +204,5 @@ public static class MyConverters
 ## More information
 
 :::info
-For further guidance about how to bind images, see [How To Bind Image Files](how-to-bind-image-files.md).
+For further guidance about how to bind images, see [How To Bind Image Files](/docs/data-binding/how-to-bind-image-files).
 :::

@@ -83,7 +83,7 @@ Use a local definition of a teacher in the window content zone:
 
 Although there is no data template for a teacher in the window; Avalonia UI will find the template you defined in the application, and the display works as planned:
 
-<img src={DataTemplatesScopeScreenshot} alt="Window displaying a teacher name and subject using an application-level data template"/>
+<Image light={DataTemplatesScopeScreenshot} alt="Window displaying a teacher name and subject using an application-level data template" position="center" maxWidth={400} cornerRadius="true"/>
 
 :::caution
 Remember to specify a `DataType` in every data template, wherever it is defined, because if _Avalonia UI_ fails to find a data template match for your data; then nothing will be displayed!
@@ -91,6 +91,6 @@ Remember to specify a `DataType` in every data template, wherever it is defined,
 
 ## See also
 
-- [Introduction to Data Templates](introduction-to-data-templates): Overview of data templates in Avalonia.
-- [Data Template Collection](data-template-collection): Defining multiple templates by type.
-- [Creating Data Templates in Code](creating-data-templates-in-code): Implementing `IDataTemplate` and using `FuncDataTemplate<T>`.
+- [Introduction to Data Templates](/docs/data-templates/introduction-to-data-templates): Overview of data templates in Avalonia.
+- [Data Template Collection](/docs/data-templates/data-template-collection): Defining multiple templates by type.
+- [Creating Data Templates in Code](/docs/data-templates/creating-data-templates-in-code): Implementing `IDataTemplate` and using `FuncDataTemplate<T>`.

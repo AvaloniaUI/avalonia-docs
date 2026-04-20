@@ -96,5 +96,5 @@ The system bar has a dark background and a light foreground.
 
 ## See also
 
-- [Input Pane](input-pane): Software keyboard state and boundaries.
+- [Input Pane](/docs/services/input-pane): Software keyboard state and boundaries.
 - [TopLevel](/docs/fundamentals/top-level): Accessing platform services from controls.

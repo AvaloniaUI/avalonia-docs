@@ -235,8 +235,8 @@ In Avalonia 12, data validation is handled automatically when `enableDataValidat
 
 ## See also
 
-- [Choosing a Custom Control Type](choosing-a-custom-control-type)
-- [Defining Properties](defining-properties)
-- [Defining Events](defining-events)
-- [Templated Controls](templated-controls)
-- [Drawing Custom Controls](drawing-custom-controls)
+- [Choosing a Custom Control Type](/docs/custom-controls/choosing-a-custom-control-type)
+- [Defining Properties](/docs/custom-controls/defining-properties)
+- [Defining Events](/docs/custom-controls/defining-events)
+- [Templated Controls](/docs/custom-controls/templated-controls)
+- [Drawing Custom Controls](/docs/custom-controls/drawing-custom-controls)

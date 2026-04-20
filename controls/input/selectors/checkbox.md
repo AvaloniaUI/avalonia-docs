@@ -40,7 +40,7 @@ In the default two-state mode, `IsChecked` alternates between `true` and `false`
 
 </XamlPreview>
 
-<img src={CheckBoxTwoStateScreenshot} alt="Two-state CheckBox" />
+<Image light={CheckBoxTwoStateScreenshot} alt="Two-state CheckBox" position="center" maxWidth={400} cornerRadius="true"/>
 
 ## Three-state example
 
@@ -61,7 +61,7 @@ When you set `IsThreeState` to `true`, the control adds an indeterminate state. 
 
 </XamlPreview>
 
-<img src={CheckBoxThreeStateScreenshot} alt="Three-state CheckBox" />
+<Image light={CheckBoxThreeStateScreenshot} alt="Three-state CheckBox" position="center" maxWidth={400} cornerRadius="true"/>
 
 When binding a three-state `CheckBox` to a view model, use a nullable `bool?` property so the indeterminate state can round-trip correctly.
 
@@ -138,7 +138,7 @@ partial void OnSelectAllChanged(bool? value)
 
 ## See also
 
-- [ToggleSwitch](toggleswitch)
+- [ToggleSwitch](/controls/input/selectors/toggleswitch)
 - [RadioButton](../buttons/radiobutton)
 - [CheckBox API reference](/api/avalonia/controls/checkbox)
 - [`CheckBox.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/CheckBox.cs)

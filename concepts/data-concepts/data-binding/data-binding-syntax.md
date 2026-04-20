@@ -76,7 +76,7 @@ is defined). These two syntaxes are equivalent:
 
 You can change the direction(s) data is synchronized by specifying the `Mode`.
 
-<img src={DataBindingModeDiagram} alt=''/>
+<Image light={DataBindingModeDiagram} alt="" position="center" maxWidth={400} cornerRadius="true"/>
 <br/><br/>
 
 For example:

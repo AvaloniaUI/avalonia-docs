@@ -46,7 +46,7 @@ You can define a data template (for no particular class) using the `DataTemplate
 
 In the above, the bindings refer to the properties of any class present in the content zone of the window. Here the window content is the same student object as you used before; but when you run this code, _Avalonia UI_ now displays:
 
-<img src={ContentTemplateStudentScreenshot} alt="Window displaying student first and last name using a content template"/>
+<Image light={ContentTemplateStudentScreenshot} alt="Window displaying student first and last name using a content template" position="center" maxWidth={400} cornerRadius="true"/>
 
 Using a data template in this way, you have both defined and chosen the data template for the content in the same place - by setting the `ContentTemplate` property of the window directly.
 
@@ -56,6 +56,6 @@ On the next page, you will see how to define multiple data templates, and choose
 
 ## See also
 
-- [Control Content](control-content): How controls display non-control content.
-- [Data Template Collection](data-template-collection): Defining multiple templates by type.
-- [Creating Data Templates in Code](creating-data-templates-in-code): Implementing `IDataTemplate` and using `FuncDataTemplate<T>`.
+- [Control Content](/docs/data-templates/control-content): How controls display non-control content.
+- [Data Template Collection](/docs/data-templates/data-template-collection): Defining multiple templates by type.
+- [Creating Data Templates in Code](/docs/data-templates/creating-data-templates-in-code): Implementing `IDataTemplate` and using `FuncDataTemplate<T>`.

@@ -102,7 +102,7 @@ private double _damage;
 private double _maxDamage = 9999;
 ```
 
-<img src={SliderMaxValueScreenshot} alt="" />
+<Image light={SliderMaxValueScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
 
 ## All properties
 
@@ -121,8 +121,8 @@ private double _maxDamage = 9999;
 
 ## See also
 
-- [NumericUpDown](numericupdown.md)
-- [ToggleSwitch](toggleswitch.md)
+- [NumericUpDown](/controls/input/selectors/numericupdown)
+- [ToggleSwitch](/controls/input/selectors/toggleswitch)
 - [Binding to Controls](/docs/data-binding/binding-to-controls)
 - [Slider API Reference](/api/avalonia/controls/slider)
 - [`Slider.cs` Source on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Slider.cs)

@@ -131,7 +131,7 @@ var carousel = new CarouselPage
 window.Page = carousel;
 ```
 
-<img src={CarouselPageBasicScreenshot} alt="" />
+<Image light={CarouselPageBasicScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
 
 ### Page Transitions
 
@@ -290,7 +290,7 @@ var carousel = new CarouselPage
 items.Add(new PhotoViewModel { Title = "New Photo", ImageSource = newBitmap });
 ```
 
-<img src={CarouselPageDataTemplateScreenshot} alt="" />
+<Image light={CarouselPageDataTemplateScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
 
 ### CarouselPage Inside a NavigationPage
 

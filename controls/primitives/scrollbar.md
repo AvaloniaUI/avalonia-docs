@@ -96,7 +96,7 @@ namespace AvaloniaControls.Views
 
 With this code-behind, the text block displays the current value of the scroll bar as you drag it.
 
-<img src={ScrollBarScreenshot} alt="ScrollBar example showing value tracking" />
+<Image light={ScrollBarScreenshot} alt="ScrollBar example showing value tracking" position="center" maxWidth={400} cornerRadius="true"/>
 
 ## See also
 

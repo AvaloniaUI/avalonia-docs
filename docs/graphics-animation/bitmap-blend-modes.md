@@ -145,6 +145,6 @@ Below are all the values currently supported by Avalonia. Please note that this 
 
 ## See also
 
-- [Brushes](brushes): Brush types for fills and strokes.
-- [Drawing Graphics](drawing-graphics): Shapes, geometries, and the graphics system.
-- [Custom Rendering](custom-rendering): Drawing with `DrawingContext`.
+- [Brushes](/docs/graphics-animation/brushes): Brush types for fills and strokes.
+- [Drawing Graphics](/docs/graphics-animation/drawing-graphics): Shapes, geometries, and the graphics system.
+- [Custom Rendering](/docs/graphics-animation/custom-rendering): Drawing with `DrawingContext`.

@@ -133,12 +133,12 @@ Because `Content` is a bindable property, you can swap what a `ContentControl` d
 
 When your view model changes `CurrentPage` from a `HomeViewModel` to a `SettingsViewModel`, the `ContentControl` automatically renders the matching view.
 
-If you want an animated transition when the content changes, consider using [`TransitioningContentControl`](transitioningcontentcontrol) instead.
+If you want an animated transition when the content changes, consider using [`TransitioningContentControl`](/controls/data-display/transitioningcontentcontrol) instead.
 
 ## See also
 
 - [ContentControl API reference](/api/avalonia/controls/contentcontrol)
 - [`ContentControl.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/ContentControl.cs)
 - [Data templates](/docs/data-templates/introduction-to-data-templates)
-- [`TransitioningContentControl`](transitioningcontentcontrol)
+- [`TransitioningContentControl`](/controls/data-display/transitioningcontentcontrol)
 - [Data binding](/docs/data-binding/data-context)

@@ -137,7 +137,7 @@ namespace AvaloniaGuides.ViewModels
 }
 ```
 
-<img src={BindCanExecuteScreenshot} alt="App showing a button enabled and disabled based on CanExecute binding"/>
+<Image light={BindCanExecuteScreenshot} alt="App showing a button enabled and disabled based on CanExecute binding" position="center" maxWidth={400} cornerRadius="true"/>
 
 ## How it works
 

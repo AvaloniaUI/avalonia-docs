@@ -53,7 +53,7 @@ dotnet run
 
 ## Deployment
 
-For information on publishing and deploying your WebAssembly app, see [Deploying WebAssembly](../deployment/webassembly.mdx).
+For information on publishing and deploying your WebAssembly app, see [Deploying WebAssembly](/docs/deployment/webassembly).
 
 ## JavaScript interop
 
@@ -163,5 +163,5 @@ You can pass `Action`/`Func` callbacks as parameters (marshalled as callable JS 
 
 ## See also
 
-- [Deploying WebAssembly](../deployment/webassembly.mdx)
+- [Deploying WebAssembly](/docs/deployment/webassembly)
 - [WebAssembly troubleshooting](/troubleshooting/platform-specific-issues/webassembly)

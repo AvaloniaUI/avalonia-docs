@@ -41,7 +41,7 @@ So you can modify the previous sample to use the `DataTemplates` collection, as 
 
 This results in exactly the same display as on the previous page:
 
-<img src={DataTemplatesCollectionStudentScreenshot} alt="Window displaying student first and last name using a data template from the DataTemplates collection"/>
+<Image light={DataTemplatesCollectionStudentScreenshot} alt="Window displaying student first and last name using a data template from the DataTemplates collection" position="center" maxWidth={400} cornerRadius="true"/>
 
 ## Multiple data templates by type
 
@@ -86,6 +86,6 @@ The first matching template is used. This lets you override application-wide tem
 
 ## See also
 
-- [Introduction to Data Templates](introduction-to-data-templates): Overview of data templates in Avalonia.
-- [Content Templates](content-templates): Using `ContentTemplate` directly.
-- [Reusing Data Templates](reusing-data-templates): Sharing templates across your application.
+- [Introduction to Data Templates](/docs/data-templates/introduction-to-data-templates): Overview of data templates in Avalonia.
+- [Content Templates](/docs/data-templates/content-templates): Using `ContentTemplate` directly.
+- [Reusing Data Templates](/docs/data-templates/reusing-data-templates): Sharing templates across your application.

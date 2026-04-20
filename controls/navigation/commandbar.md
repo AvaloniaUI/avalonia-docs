@@ -129,7 +129,7 @@ Use `CommandBarSeparator` to group commands, and place less common actions in `S
 </CommandBar>
 ```
 
-<img src={CommandBarSecondaryCommandsScreenshot} alt="" />
+<Image light={CommandBarSecondaryCommandsScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
 
 ### Custom Content Area
 
@@ -153,7 +153,7 @@ The `Content` property places custom content at the leading edge of the bar, bef
 </CommandBar>
 ```
 
-<img src={CommandBarContentScreenshot} alt="" />
+<Image light={CommandBarContentScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
 
 ### Label Positions
 
@@ -185,9 +185,9 @@ The `Content` property places custom content at the leading edge of the bar, bef
 
 When using `Collapsed`, always add `ToolTip.Tip` to preserve accessibility.
 
-<img src={CommandBarLabelBottomScreenshot} alt="" />
+<Image light={CommandBarLabelBottomScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
 
-<img src={CommandBarLabelRightScreenshot} alt="" />
+<Image light={CommandBarLabelRightScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
 
 ```xml
 <CommandBar IsDynamicOverflowEnabled="True">
@@ -372,7 +372,7 @@ Use `CommandBarToggleButton` to create togglable options. Bind the `IsChecked` p
 </CommandBar>
 ```
 
-<img src={CommandBarToggleButtonScreenshot} alt="CommandBar with toggle buttons" />
+<Image light={CommandBarToggleButtonScreenshot} alt="CommandBar with toggle buttons" position="center" maxWidth={400} cornerRadius="true"/>
 
 ```csharp
 [ObservableProperty]

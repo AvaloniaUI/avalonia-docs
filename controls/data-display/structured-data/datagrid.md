@@ -29,7 +29,7 @@ The `DataGrid` is in an additional _Avalonia_ package. To use the `DataGrid` in 
 
 You must install the _NuGet_ package for the `DataGrid`. You can do this using one of the following methods. You can use **Manage NuGet Packages** from the project menu of your IDE:
 
-<img src={DataGridNuGetScreenshot} alt="" />
+<Image light={DataGridNuGetScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
 
 Alternatively, you can run this instruction from the command line:
 
@@ -129,7 +129,7 @@ public class Person
 }
 ```
 
-<img src={DataGridSortColumnScreenshot} alt="" />
+<Image light={DataGridSortColumnScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
 
 :::info
 These examples use the MVVM pattern with data binding to an `ObservableCollection`. For more information on the concepts behind data binding, see [Introduction to data binding](/docs/data-binding/introduction-to-data-binding).
@@ -152,7 +152,7 @@ Property names from the item class will generally not make good column names. Th
 </DataGrid>
 ```
 
-<img src={DataGridReorderColumnScreenshot} alt="" />
+<Image light={DataGridReorderColumnScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
 
 This example shows how the `DataGrid` can accept changes and update the underlying collection, and use different column types to edit the data:
 
@@ -209,7 +209,7 @@ public class Person
 }
 ```
 
-<img src={DataGridColumnTypesScreenshot} alt="" />
+<Image light={DataGridColumnTypesScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
 
 ## DataGridTemplateColumn
 
@@ -306,7 +306,7 @@ public class Person
 }
 ```
 
-<img src={DataGridTemplateColumn} alt=''/>
+<Image light={DataGridTemplateColumn} alt="" position="center" maxWidth={400} cornerRadius="true"/>
 
 ## DataGridColumn
 
@@ -426,7 +426,7 @@ public class Person
 
 It works in the preview pane because the `<Design.DataContext>` element creates a view model to bind to:
 
-<img src={DataGridColumnPreviewScreenshot} alt="" />
+<Image light={DataGridColumnPreviewScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
 
 ## See also
 

@@ -131,7 +131,7 @@ You can create a horizontal button bar by setting `Orientation` to `Horizontal` 
 
 - [StackPanel API reference](/api/avalonia/controls/stackpanel)
 - [`StackPanel.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/StackPanel.cs)
-- [DockPanel](dockpanel)
-- [Grid](grid)
-- [WrapPanel](wrappanel)
-- [Panel](panel)
+- [DockPanel](/controls/layout/panels/dockpanel)
+- [Grid](/controls/layout/panels/grid)
+- [WrapPanel](/controls/layout/panels/wrappanel)
+- [Panel](/controls/layout/panels/panel)

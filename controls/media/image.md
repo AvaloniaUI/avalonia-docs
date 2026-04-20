@@ -55,7 +55,7 @@ This example shows a bitmap asset loaded into an image control where the height 
 </Panel>
 ```
 
-<img src={ImageUnscaledScreenshot} alt="" />
+<Image light={ImageUnscaledScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
 
 ### Stretch
 
@@ -70,7 +70,7 @@ In this next example, introducing the stretch setting `UniformToFill` fits in al
 </Panel>
 ```
 
-<img src={ImageUniformToFillScreenshot} alt="" />
+<Image light={ImageUniformToFillScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
 
 ### BlendMode
 
@@ -83,7 +83,7 @@ This example is using two images, where the second image is using the `Multiply`
 </Panel>
 ```
 
-<img src={BlendModeMultiply} alt="" width="350"/>
+<Image light={BlendModeMultiply} alt="" position="center" maxWidth={400} cornerRadius="true"/>
 
 ## See also
 

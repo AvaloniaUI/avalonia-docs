@@ -5,7 +5,7 @@ title: Control themes
 
 import StylingEllipseButtonScreenshot from '/img/concepts/ui-concepts/styling/ellipse-button.png';
 
-Control themes build upon [styles](styles) to create switchable themes for controls. Unlike regular styles, which accumulate and cannot be removed once applied, a control theme can be replaced entirely. This makes control themes the right choice when you need to swap out a control's complete look for a specific instance or section of your UI.
+Control themes build upon [styles](/docs/styling/styles) to create switchable themes for controls. Unlike regular styles, which accumulate and cannot be removed once applied, a control theme can be replaced entirely. This makes control themes the right choice when you need to swap out a control's complete look for a specific instance or section of your UI.
 
 Control themes are themselves styles, but with some important differences:
 
@@ -14,7 +14,7 @@ Control themes are themselves styles, but with some important differences:
 - Control themes are assigned to a control by setting the `Theme` property, usually using the `{StaticResource}` markup extension
 
 :::tip
-Because control themes are based on styles, it is important to understand the Avalonia [styling system](styles) first.
+Because control themes are based on styles, it is important to understand the Avalonia [styling system](/docs/styling/styles) first.
 :::
 
 :::info
@@ -75,7 +75,7 @@ The following example shows a simple `Button` theme which displays a button with
 
 ## Interaction in control themes
 
-Like standard styles, control themes support [nested styles](styles) which can be used to add interactions such as pointer-over and pressed states.
+Like standard styles, control themes support [nested styles](/docs/styling/styles) which can be used to add interactions such as pointer-over and pressed states.
 
 ## Example: round button hover state
 
@@ -123,10 +123,10 @@ Using nested styles we can make our button change color when the pointer is hove
 There are two ways in which a control theme can be found:
 
 - If the control's `Theme` property is set, then that control theme will be used; otherwise
-- Avalonia will search upwards through the logical tree for a `ControlTheme` resource with an `x:Key` which matches the control's [style key](styles)
+- Avalonia will search upwards through the logical tree for a `ControlTheme` resource with an `x:Key` which matches the control's [style key](/docs/styling/styles)
 
 :::tip
-If you're having trouble getting Avalonia to find your theme, make sure it's returning a [style key](styles) which matches the `x:Key` and `TargetType` of your control theme.
+If you're having trouble getting Avalonia to find your theme, make sure it's returning a [style key](/docs/styling/styles) which matches the `x:Key` and `TargetType` of your control theme.
 :::
 
 In effect this means that you have two choices for how to define your control theme:
@@ -189,5 +189,5 @@ The `ControlTheme.TargetType` property specifies the type to which setter proper
 - Control themes for built-in Avalonia controls:
   - [Simple Theme](https://github.com/AvaloniaUI/Avalonia/tree/master/src/Avalonia.Themes.Simple/Controls)
   - [Fluent Theme](https://github.com/AvaloniaUI/Avalonia/tree/master/src/Avalonia.Themes.Fluent/Controls)
-- [Styles](styles)
-- [Control template walkthrough](control-template-walkthrough)
+- [Styles](/docs/styling/styles)
+- [Control template walkthrough](/docs/styling/control-template-walkthrough)

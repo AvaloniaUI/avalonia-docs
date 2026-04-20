@@ -30,9 +30,9 @@ public void ViewModel_Increments_Count()
 
 ### Headless tests
 
-The [headless platform](setting-up-the-headless-platform) runs Avalonia's full control tree, layout engine, styling, and data binding in memory without opening a window. You simulate keyboard and mouse input through helper methods. This is the right choice for testing control behavior, data binding, focus management, and command execution.
+The [headless platform](/docs/testing/setting-up-the-headless-platform) runs Avalonia's full control tree, layout engine, styling, and data binding in memory without opening a window. You simulate keyboard and mouse input through helper methods. This is the right choice for testing control behavior, data binding, focus management, and command execution.
 
-Avalonia provides integration packages for [xUnit](headless-xunit) and [NUnit](headless-nunit) that handle setup automatically.
+Avalonia provides integration packages for [xUnit](/docs/testing/headless-xunit) and [NUnit](/docs/testing/headless-nunit) that handle setup automatically.
 
 ```csharp
 [AvaloniaFact]
@@ -51,11 +51,11 @@ public void TextBox_Accepts_Input()
 
 ### Visual regression tests
 
-By enabling the Skia renderer in headless mode, you can capture rendered frames as bitmaps and compare them against baseline images. This catches unintended visual changes in control rendering, theming, and layout. See [Capturing the last rendered frame](setting-up-the-headless-platform#visual-regression-testing) for setup details.
+By enabling the Skia renderer in headless mode, you can capture rendered frames as bitmaps and compare them against baseline images. This catches unintended visual changes in control rendering, theming, and layout. See [Capturing the last rendered frame](/docs/testing/setting-up-the-headless-platform#visual-regression-testing) for setup details.
 
 ### Appium UI tests
 
-[Appium](ui-testing-with-appium) launches your compiled application in a real window and drives it through the platform accessibility tree. This tests the full stack: native windowing, menus, focus, platform-specific behavior, and accessibility. Appium tests are slower but verify that your application works as a user would experience it.
+[Appium](/docs/testing/ui-testing-with-appium) launches your compiled application in a real window and drives it through the platform accessibility tree. This tests the full stack: native windowing, menus, focus, platform-specific behavior, and accessibility. Appium tests are slower but verify that your application works as a user would experience it.
 
 Avalonia uses Appium internally to test the framework across Windows and macOS.
 
@@ -68,7 +68,7 @@ Avalonia uses Appium internally to test the framework across Windows and macOS.
 
 ## See also
 
-- [Headless Testing Platform](setting-up-the-headless-platform): Input simulation, frame capture, and async handling.
-- [Headless Testing with XUnit](headless-xunit): XUnit integration setup.
-- [Headless Testing with NUnit](headless-nunit): NUnit integration setup.
-- [UI Testing with Appium](ui-testing-with-appium): End-to-end testing with a real window.
+- [Headless Testing Platform](/docs/testing/setting-up-the-headless-platform): Input simulation, frame capture, and async handling.
+- [Headless Testing with XUnit](/docs/testing/headless-xunit): XUnit integration setup.
+- [Headless Testing with NUnit](/docs/testing/headless-nunit): NUnit integration setup.
+- [UI Testing with Appium](/docs/testing/ui-testing-with-appium): End-to-end testing with a real window.

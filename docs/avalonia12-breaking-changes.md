@@ -209,7 +209,7 @@ The `IDataObject` interface has been removed in Avalonia v12, along with all met
 
 The `IClipboard` interface has been simplified, with methods for reading specific formats implemented as extension methods (such as `TryGetTextAsync` and `TryGetFile`).
 
-Read the official [clipboard documentation](services/clipboard) for details on using `IAsyncDataTransfer`.
+Read the official [clipboard documentation](/docs/services/clipboard) for details on using `IAsyncDataTransfer`.
 
 **Example:**
 ```diff
@@ -740,7 +740,7 @@ The following members were marked obsolete in Avalonia 11 and have now been remo
 | `TextBox.Watermark` | `TextBox.PlaceholderText` | Old property kept as obsolete. | [#20303](https://github.com/AvaloniaUI/Avalonia/pull/20303) |
 | `TextBox.UseFloatingWatermark` | `TextBox.UseFloatingPlaceholder` | Old property kept as obsolete. | [#20303](https://github.com/AvaloniaUI/Avalonia/pull/20303) |
 | `Window.SystemDecorations` | `Window.WindowDecorations` | Old property kept as obsolete. See [Window decoration changes](#window-decoration-changes). | [#20796](https://github.com/AvaloniaUI/Avalonia/pull/20796) |
-| `RenderOptions.TextRenderingMode` | `TextOptions.TextRenderingMode` | `TextOptions` also includes `TextHintingMode` and `BaselinePixelAlignment`. See [Text options](graphics-animation/text-options). | [#20107](https://github.com/AvaloniaUI/Avalonia/pull/20107) |
+| `RenderOptions.TextRenderingMode` | `TextOptions.TextRenderingMode` | `TextOptions` also includes `TextHintingMode` and `BaselinePixelAlignment`. See [Text options](/docs/graphics-animation/text-options). | [#20107](https://github.com/AvaloniaUI/Avalonia/pull/20107) |
 | `TextBlock.LetterSpacing` | `TextElement.LetterSpacing` | Now an inherited attached property available on all templated controls. XAML on `TextBlock` is source-compatible; update code referencing `TextBlock.LetterSpacingProperty` to `TextElement.LetterSpacingProperty`. | [#20141](https://github.com/AvaloniaUI/Avalonia/pull/20141) |
 
 ## See also

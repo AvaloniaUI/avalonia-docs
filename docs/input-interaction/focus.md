@@ -168,7 +168,7 @@ The `Slider` provides an example of mixing navigation with control interaction. 
 </Window>
 ```
 
-<img src={DirectionalNavigationScreenshot} alt="Directional Navigation Example"/>
+<Image light={DirectionalNavigationScreenshot} alt="Directional Navigation Example" position="center" maxWidth={400} cornerRadius="true"/>
 
 ## See also
 

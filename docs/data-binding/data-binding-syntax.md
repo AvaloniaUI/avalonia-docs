@@ -88,7 +88,7 @@ You can specify data bindings without a `Path`. This binds to the `DataContext` 
 
 You can change the direction(s) data is synchronized by specifying the `Mode`.
 
-<img src={DataBindingModeDiagram} alt="Diagram showing data binding mode directions between source and target"/>
+<Image light={DataBindingModeDiagram} alt="Diagram showing data binding mode directions between source and target" position="center" maxWidth={400} cornerRadius="true"/>
 <br/><br/>
 
 For example:

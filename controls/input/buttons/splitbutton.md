@@ -63,7 +63,7 @@ The user-selection action should be invoked immediately when pressing either the
 
 A common use case of a `SplitButton` is for coloring text within an editor. Pressing the primary part of the `SplitButton` will apply the current color to the selected text. Pressing the secondary part will open a `Flyout` and allow another color to be specified and applied. Again note that when another color is specified in the `Flyout`, the selected text color will immediately change and the current color will be updated as well.
 
-<img src={SplitButtonPaletteFlyoutScreenshot} alt=""/>
+<Image light={SplitButtonPaletteFlyoutScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
 
 ```xml
 <!-- We have the following DataTemplate defined -->

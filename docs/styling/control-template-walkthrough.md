@@ -8,7 +8,7 @@ This walkthrough builds a complete control template from scratch, explaining eac
 ## Prerequisites
 
 - An Avalonia project with a `Window` where you can add styles and controls.
-- Familiarity with [styles](styles) and [XAML](../fundamentals/avalonia-xaml.md) basics.
+- Familiarity with [styles](/docs/styling/styles) and [XAML](../fundamentals/avalonia-xaml.md) basics.
 
 ## What is a control template?
 
@@ -249,6 +249,6 @@ Run your application. You should see a pill-shaped button with a purple backgrou
 
 ## See also
 
-- [Control themes](control-themes): How themes use templates for all controls.
-- [Style selectors](style-selectors): Selector syntax for targeting controls and states.
-- [Pseudo-classes](pseudoclasses): All available pseudo-classes.
+- [Control themes](/docs/styling/control-themes): How themes use templates for all controls.
+- [Style selectors](/docs/styling/style-selectors): Selector syntax for targeting controls and states.
+- [Pseudo-classes](/docs/styling/pseudoclasses): All available pseudo-classes.

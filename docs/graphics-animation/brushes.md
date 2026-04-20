@@ -61,7 +61,7 @@ myBorder.Background = brush;
 
 ## LinearGradientBrush
 
-Fills an area with a gradient that transitions between colors along a line. For a focused guide on linear gradients, see [Gradients](gradients).
+Fills an area with a gradient that transitions between colors along a line. For a focused guide on linear gradients, see [Gradients](/docs/graphics-animation/gradients).
 
 ```xml
 <Border Height="80" CornerRadius="8">
@@ -301,6 +301,6 @@ myBorder.Background = linear;
 
 ## See also
 
-- [Gradients](gradients): Focused guide on linear gradient usage.
-- [Drawing Graphics](drawing-graphics): Shapes and geometries.
-- [Image Interpolation](image-interpolation): Bitmap rendering quality settings.
+- [Gradients](/docs/graphics-animation/gradients): Focused guide on linear gradient usage.
+- [Drawing Graphics](/docs/graphics-animation/drawing-graphics): Shapes and geometries.
+- [Image Interpolation](/docs/graphics-animation/image-interpolation): Bitmap rendering quality settings.

@@ -341,12 +341,12 @@ public partial class RegisterViewModel : ObservableValidator
 
 The `[NotifyDataErrorInfo]` attribute tells the source generator to trigger validation automatically when the property changes. Avalonia's data binding system picks up these validation errors and can display them in the UI using `DataValidationErrors`.
 
-For more information about displaying validation errors in your views, see [Data validation](../data-binding/data-validation.md).
+For more information about displaying validation errors in your views, see [Data validation](/docs/data-binding/data-validation).
 
 ## See also
 
-- [The MVVM pattern](../fundamentals/the-mvvm-pattern.md)
-- [Binding to commands](../data-binding/binding-to-commands.md)
-- [INotifyPropertyChanged](../data-binding/inotifypropertychanged.md)
-- [Dependency injection](../app-development/dependency-injection.md)
-- [Data validation](../data-binding/data-validation.md)
+- [The MVVM pattern](/docs/fundamentals/the-mvvm-pattern)
+- [Binding to commands](/docs/data-binding/binding-to-commands)
+- [INotifyPropertyChanged](/docs/data-binding/inotifypropertychanged)
+- [Dependency injection](/docs/app-development/dependency-injection)
+- [Data validation](/docs/data-binding/data-validation)

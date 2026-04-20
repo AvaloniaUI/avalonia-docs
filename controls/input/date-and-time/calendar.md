@@ -30,7 +30,7 @@ This is a basic calendar allowing a single date selection. The calendar's select
 </StackPanel>
 ```
 
-<img src={CalendarSingleSelectionScreenshot} alt=""/>
+<Image light={CalendarSingleSelectionScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
 
 This example allows multiple range selections:
 
@@ -40,7 +40,7 @@ This example allows multiple range selections:
   </StackPanel>
 ```
 
-<img src={CalendarMultipleSelectionScreenshot} alt=""/>
+<Image light={CalendarMultipleSelectionScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
 
 To select a range, tap or click a start date and then tap or click on the end date. This tap-to-select behavior is controlled by the `AllowTapRangeSelection` property, which is enabled by default. Alternatively, hold the Shift key and click on the end date to extend a range. You can add extra dates and ranges by holding the Ctrl key and clicking on other dates.
 
@@ -71,7 +71,7 @@ public partial class MainWindow : Window
 ```
 
 
-<img src={CalendarCustomRangeScreenshot} alt=""/>
+<Image light={CalendarCustomRangeScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
 
 ## See also
 

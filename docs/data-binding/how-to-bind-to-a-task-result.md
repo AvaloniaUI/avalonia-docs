@@ -129,6 +129,6 @@ Avoid defining the task property as a method call on a getter that creates a new
 
 ## See also
 
-- [How to bind to an observable](how-to-bind-to-an-observable)
-- [Data binding syntax](data-binding-syntax)
-- [Compiled bindings](compiled-bindings)
+- [How to bind to an observable](/docs/data-binding/how-to-bind-to-an-observable)
+- [Data binding syntax](/docs/data-binding/data-binding-syntax)
+- [Compiled bindings](/docs/data-binding/compiled-bindings)

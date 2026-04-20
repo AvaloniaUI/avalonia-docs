@@ -54,11 +54,11 @@ If two selectors have equal specificity, the one declared later wins.
 
 ## Full reference
 
-For a complete description of all selector formats, operators, and combinators, see the [style selector syntax](style-selector-syntax) reference.
+For a complete description of all selector formats, operators, and combinators, see the [style selector syntax](/docs/styling/style-selector-syntax) reference.
 
 ## See also
 
-- [Style selector syntax](style-selector-syntax)
-- [Styles](styles)
-- [Style classes](style-classes)
-- [Pseudoclasses](pseudoclasses)
+- [Style selector syntax](/docs/styling/style-selector-syntax)
+- [Styles](/docs/styling/styles)
+- [Style classes](/docs/styling/style-classes)
+- [Pseudoclasses](/docs/styling/pseudoclasses)

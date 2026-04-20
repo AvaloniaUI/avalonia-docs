@@ -63,5 +63,5 @@ In this example, the `MenuItem.Icon` property is set to an `Image` control that 
 
 ## See also
 
-- [Shapes and Geometries](shapes-and-geometries): Geometry types for path icons.
-- [Drawing Graphics](drawing-graphics): Overview of the Avalonia graphics system.
+- [Shapes and Geometries](/docs/graphics-animation/shapes-and-geometries): Geometry types for path icons.
+- [Drawing Graphics](/docs/graphics-animation/drawing-graphics): Overview of the Avalonia graphics system.

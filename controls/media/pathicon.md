@@ -39,7 +39,7 @@ The following example displays a shop icon at 200 x 200 pixels with a blue fill.
 
 The result in the preview pane:
 
-<img src={PathIconHouseScreenshot} alt="PathIcon showing a shop building icon" />
+<Image light={PathIconHouseScreenshot} alt="PathIcon showing a shop building icon" position="center" maxWidth={400} cornerRadius="true"/>
 
 ## Using in buttons and menus
 
@@ -96,5 +96,5 @@ To override the inherited color on a specific icon, set `Foreground` directly.
 ## See also
 
 - [PathIcon API reference](https://reference.avaloniaui.net/api/Avalonia.Controls/PathIcon/)
-- [Image](image)
+- [Image](/controls/media/image)
 - [Fluent icons gallery](https://avaloniaui.github.io/icons.html)

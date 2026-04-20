@@ -84,7 +84,7 @@ You will probably use these properties most often:
 
 This example creates a menu docked at the top edge of a window.
 
-<img src={MenuTopDockScreenshot} alt="" />
+<Image light={MenuTopDockScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
 
 ```xml
 <Window ...>
@@ -163,7 +163,7 @@ Set the `ToggleType` property on a `MenuItem` to create checkable or radio-style
 
 A menu icon can be displayed by placing an image or a path icon in the `<MenuItem.Icon>` attached property.
 
-<img src={MenuIconScreenshot} alt="" />
+<Image light={MenuIconScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
 
 ```xml
 <MenuItem Header="_Edit">

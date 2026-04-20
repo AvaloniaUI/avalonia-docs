@@ -15,7 +15,7 @@ When Avalonia loads your XAML, it builds two parallel tree structures: a **logic
 
 The logical tree represents the controls in your application (including the main window) in the hierarchy in which you defined them in XAML. For example, placing a `Button` inside a `StackPanel` inside a `Window` produces a three-level logical tree:
 
-<img src={ControlTreesLogicalScreenshot} alt="The Avalonia DevTools window showing a three-level logical tree: Window, StackPanel, Button."/>
+<Image light={ControlTreesLogicalScreenshot} alt="The Avalonia DevTools window showing a three-level logical tree: Window, StackPanel, Button." position="center" maxWidth={400} cornerRadius="true"/>
 
 ### Why the logical tree matters
 
@@ -44,7 +44,7 @@ While your application is running, you can open the DevTools window by pressing 
 
 The visual tree contains every element that Avalonia actually renders. It includes the controls you declared plus additional parts added by each control's template (borders, content presenters, scroll viewers, and so on). Because a single logical control can expand into many visual elements, the visual tree is always deeper than the logical tree.
 
-<img src={ControlTreesVisualScreenshot} alt="The Avalonia DevTools window showing the visual tree, which is deeper than the logical tree because it includes template parts."/>
+<Image light={ControlTreesVisualScreenshot} alt="The Avalonia DevTools window showing the visual tree, which is deeper than the logical tree because it includes template parts." position="center" maxWidth={400} cornerRadius="true"/>
 
 ### When to use the visual tree
 
@@ -75,7 +75,7 @@ Avalonia uses a routed-event system in which events travel through the control t
 
 The **Events** tab in DevTools logs the source and propagation of events as you interact with your running application, making it straightforward to trace the path an event takes.
 
-<img src={ControlTreesEventScreenshot} alt="The Avalonia DevTools Events tab showing a log of routed events and their propagation paths."/>
+<Image light={ControlTreesEventScreenshot} alt="The Avalonia DevTools Events tab showing a log of routed events and their propagation paths." position="center" maxWidth={400} cornerRadius="true"/>
 
 ### Practical tips for events
 
@@ -86,6 +86,6 @@ The **Events** tab in DevTools logs the source and propagation of events as you 
 ## See also
 
 - [Routed events](../user-input/routed-events)
-- [Attached properties](attached-properties)
+- [Attached properties](/docs/custom-controls/attached-properties)
 - [Layout](../layout)
 - [DevTools keyboard shortcuts](../../../tools/developer-tools/shortcuts)

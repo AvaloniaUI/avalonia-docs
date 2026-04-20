@@ -23,7 +23,7 @@ Additionally, [page transitions](/docs/graphics-animation/page-transitions) anim
 
 Keyframe animations change one or more property values over a specified duration. You define keyframes at cue points along a timeline, and Avalonia interpolates between them using an easing function (linear by default).
 
-<img src={KeyframeDiagram} alt="Diagram showing a keyframe animation timeline with start and end cue points"/>
+<Image light={KeyframeDiagram} alt="Diagram showing a keyframe animation timeline with start and end cue points" position="center" maxWidth={400} cornerRadius="true"/>
 
 The simplest keyframe animation uses two cue points: 0% (start) and 100% (end). You can add intermediate cue points to create more complex motion sequences.
 

@@ -9,7 +9,7 @@ In addition to a XAML file, most Avalonia controls have a _code-behind_ file tha
 
 For instance, in the Visual Studio solution explorer, you can see a `MainWindow.axaml` file along with its code-behind file `MainWindow.axaml.cs`:
 
-<p><img src={VsSolutionExplorerScreenshot} className="medium-zoom-image" /></p>
+<Image light={VsSolutionExplorerScreenshot} position="center" maxWidth={400} cornerRadius="true"/>
 
 The code-behind file contains a class that shares the same name as the XAML file. For example:
 

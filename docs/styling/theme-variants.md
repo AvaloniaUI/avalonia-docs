@@ -139,5 +139,5 @@ For more details about using resources, see the [resources](../app-development/r
 ## See also
 
 - [Resource dictionaries](../app-development/resource-dictionary)
-- [Styles](styles)
-- [Control themes](control-themes)
+- [Styles](/docs/styling/styles)
+- [Control themes](/docs/styling/control-themes)

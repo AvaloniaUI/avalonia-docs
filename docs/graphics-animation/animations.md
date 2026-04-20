@@ -11,17 +11,17 @@ Avalonia provides three types of animations:
 
 | Type | Description | Use case |
 |---|---|---|
-| [Keyframe Animations](keyframe-animations) | Change one or more properties over a timeline with multiple keyframes. | Complex, multi-step animations triggered by style selectors. |
-| [Control Transitions](control-transitions) | Animate a single property when its value changes. | Smooth visual feedback for property changes (opacity, color, size). |
-| [Composition Animations](composition-animations) | Code-driven animations that run on the render thread. | Performance-sensitive or programmatic animations controlled from C#. |
+| [Keyframe Animations](/docs/graphics-animation/keyframe-animations) | Change one or more properties over a timeline with multiple keyframes. | Complex, multi-step animations triggered by style selectors. |
+| [Control Transitions](/docs/graphics-animation/control-transitions) | Animate a single property when its value changes. | Smooth visual feedback for property changes (opacity, color, size). |
+| [Composition Animations](/docs/graphics-animation/composition-animations) | Code-driven animations that run on the render thread. | Performance-sensitive or programmatic animations controlled from C#. |
 
-Additionally, [Page Transitions](page-transitions) animate content switching in controls like `TransitioningContentControl` and `Carousel`.
+Additionally, [Page Transitions](/docs/graphics-animation/page-transitions) animate content switching in controls like `TransitioningContentControl` and `Carousel`.
 
 ## Keyframe animations
 
 The simplest keyframe animation changes one property value over a specified duration by defining two keyframes: one at the start (0%) and one at the end (100%).
 
-<img src={KeyframeDiagram} alt="Diagram showing a keyframe animation timeline with start and end cue points"/>
+<Image light={KeyframeDiagram} alt="Diagram showing a keyframe animation timeline with start and end cue points" position="center" maxWidth={400} cornerRadius="true"/>
 
 The property value is interpolated between keyframes using an easing function. The default is linear interpolation.
 
@@ -49,7 +49,7 @@ The property value is interpolated between keyframes using an easing function. T
 
 This creates a pulsing opacity animation that runs forever, alternating between full and partial opacity.
 
-See [Keyframe Animations](keyframe-animations) for the full syntax and more examples.
+See [Keyframe Animations](/docs/graphics-animation/keyframe-animations) for the full syntax and more examples.
 
 ## Control transitions
 
@@ -66,7 +66,7 @@ Transitions animate a property whenever its value changes, providing smooth visu
 </Button>
 ```
 
-See [Control Transitions](control-transitions) for transition types and configuration.
+See [Control Transitions](/docs/graphics-animation/control-transitions) for transition types and configuration.
 
 ## Composition animations
 
@@ -84,7 +84,7 @@ animation.InsertKeyFrame(1f, new Vector3D(0, 0, 0));
 visual.StartAnimation("Offset", animation);
 ```
 
-See [Composition Animations](composition-animations) for the full API, implicit animations, and integration patterns.
+See [Composition Animations](/docs/graphics-animation/composition-animations) for the full API, implicit animations, and integration patterns.
 
 ## Triggering animations
 
@@ -119,11 +119,11 @@ Keyframe animations support these configuration options:
 | `FillMode` | What happens when the animation ends. | `Forward`, `Backward`, `Both`, `None` |
 | `Easing` | The interpolation curve between keyframes. | `CubicEaseInOut` |
 
-See [Animation Settings](animation-settings) for details on each option and [Easing Functions](easing-functions) for all available easing types.
+See [Animation Settings](/docs/graphics-animation/animation-settings) for details on each option and [Easing Functions](/docs/graphics-animation/easing-functions) for all available easing types.
 
 ## See also
 
-- [Keyframe Animations](keyframe-animations): Full keyframe animation syntax and examples.
-- [Control Transitions](control-transitions): Animating property changes.
-- [Composition Animations](composition-animations): Code-driven render-thread animations.
-- [Page Transitions](page-transitions): Animating content switching.
+- [Keyframe Animations](/docs/graphics-animation/keyframe-animations): Full keyframe animation syntax and examples.
+- [Control Transitions](/docs/graphics-animation/control-transitions): Animating property changes.
+- [Composition Animations](/docs/graphics-animation/composition-animations): Code-driven render-thread animations.
+- [Page Transitions](/docs/graphics-animation/page-transitions): Animating content switching.

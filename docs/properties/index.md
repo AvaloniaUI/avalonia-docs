@@ -44,7 +44,7 @@ The `Register` method accepts the following parameters:
 | `inherits` | Whether the property value inherits down the visual tree. |
 | `defaultBindingMode` | The default binding mode (`OneWay`, `TwoWay`, `OneTime`, `OneWayToSource`). |
 | `validate` | A function that returns `false` for values that are never valid. |
-| `coerce` | A function that adjusts the value before it is applied (see [Metadata and Callbacks](metadata-and-callbacks)). |
+| `coerce` | A function that adjusts the value before it is applied (see [Metadata and Callbacks](/docs/properties/metadata-and-callbacks)). |
 
 ### Reusing an existing property
 
@@ -190,8 +190,8 @@ protected override void OnPropertyChanged(AvaloniaPropertyChangedEventArgs chang
 
 ## See also
 
-- [Value precedence](value-precedence): Learn how Avalonia resolves competing property values from styles, animations, and local values.
-- [Metadata and callbacks](metadata-and-callbacks): Learn about default values, coercion, and validation.
-- [Property value inheritance](property-value-inheritance): Learn how properties can inherit values from ancestor controls.
+- [Value precedence](/docs/properties/value-precedence): Learn how Avalonia resolves competing property values from styles, animations, and local values.
+- [Metadata and callbacks](/docs/properties/metadata-and-callbacks): Learn about default values, coercion, and validation.
+- [Property value inheritance](/docs/properties/property-value-inheritance): Learn how properties can inherit values from ancestor controls.
 - [Defining properties](/docs/custom-controls/defining-properties): A practical guide to adding properties to custom controls.
 - [Attached properties](/docs/custom-controls/attached-properties): A practical guide to creating attached properties.

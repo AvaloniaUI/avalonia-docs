@@ -10,7 +10,7 @@ import exampleScreenshot from '/img/controls/itemscontrol/itemscontrol-with-cust
 The [`ItemsControl`](/api/avalonia/controls/itemscontrol) is the base class for controls that display repeating data (for example, [`ListBox`](/api/avalonia/controls/listbox) and `ComboBox`). It has no built-in formatting, selection, or scroll behavior. You can use it with data binding, styling, and data templates to create a completely custom repeating data control.
 
 :::tip
-If you need built-in selection support, use [`ListBox`](listbox) instead. If you need scrolling, wrap your `ItemsControl` in a `ScrollViewer`, or consider `ListBox` which includes one by default.
+If you need built-in selection support, use [`ListBox`](/controls/data-display/collections/listbox) instead. If you need scrolling, wrap your `ItemsControl` in a `ScrollViewer`, or consider `ListBox` which includes one by default.
 :::
 
 ## Useful properties
@@ -28,7 +28,7 @@ You will probably use these properties most often:
 ## Practical notes
 
 - **Use `ObservableCollection<T>`** for your `ItemsSource` so the UI updates automatically when you add or remove items at runtime. A plain `List<T>` will not notify the control of changes.
-- **`ItemsControl` does not virtualize** its children. If you are working with a large number of items, consider using [`ItemsRepeater`](itemsrepeater) with a virtualizing layout, or a `ListBox` which virtualizes by default.
+- **`ItemsControl` does not virtualize** its children. If you are working with a large number of items, consider using [`ItemsRepeater`](/controls/data-display/collections/itemsrepeater) with a virtualizing layout, or a `ListBox` which virtualizes by default.
 - To arrange items horizontally instead of vertically, replace the default `ItemsPanel`:
 
 ```xml
@@ -51,7 +51,7 @@ You will probably use these properties most often:
 
 This example binds an observable collection of crockery items to an `ItemsControl`. A `DataTemplate` provides custom layout and formatting for each item:
 
-<img src={exampleScreenshot} alt="ItemsControl displaying a formatted list of crockery items" />
+<Image light={exampleScreenshot} alt="ItemsControl displaying a formatted list of crockery items" position="center" maxWidth={400} cornerRadius="true"/>
 
 ```xml title="XAML"
 <StackPanel Margin="20">
@@ -119,9 +119,9 @@ public class Crockery
 
 ## See also
 
-- [ListBox](listbox)
-- [ItemsRepeater](itemsrepeater)
-- [Carousel](carousel)
+- [ListBox](/controls/data-display/collections/listbox)
+- [ItemsRepeater](/controls/data-display/collections/itemsrepeater)
+- [Carousel](/controls/data-display/collections/carousel)
 - [DataGrid](/controls/data-display/structured-data/datagrid)
 - [Custom ItemsPanel](/docs/custom-controls/custom-itemspanel)
 - [Data templates](/docs/data-templates/introduction-to-data-templates)

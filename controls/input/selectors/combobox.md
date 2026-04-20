@@ -145,7 +145,7 @@ public partial class MainWindow : Window
 }
 ```
 
-<img src={ComboBoxDataTemplateScreenshot} alt="ComboBox with data template showing font families" />
+<Image light={ComboBoxDataTemplateScreenshot} alt="ComboBox with data template showing font families" position="center" maxWidth={400} cornerRadius="true"/>
 
 ## Binding to a view model
 
