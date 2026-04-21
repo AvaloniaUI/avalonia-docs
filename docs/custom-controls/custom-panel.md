@@ -113,7 +113,7 @@ public static void SetSlot(Control element, int value) => element.SetValue(SlotP
 
 The panel can then read `GetSlot(child)` inside `ArrangeOverride` to determine where each child should be placed.
 
-For a full guide on defining attached properties, see [Attached Properties](attached-properties).
+For a full guide on defining attached properties, see [Attached Properties](/docs/custom-controls/attached-properties).
 
 ## Tips
 

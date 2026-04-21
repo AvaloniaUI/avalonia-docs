@@ -160,5 +160,5 @@ To improve accessibility in your application, set the `Header` to a meaningful l
 
 - [Expander API reference](/api/avalonia/controls/expander)
 - [`Expander.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Expander.cs)
-- [SplitView](splitview.md)
-- [GroupBox](groupbox.md)
+- [SplitView](/controls/layout/containers/splitview)
+- [GroupBox](/controls/layout/containers/groupbox)

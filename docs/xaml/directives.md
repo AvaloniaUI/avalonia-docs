@@ -213,6 +213,6 @@ These are useful for defining resources:
 ## See also
 
 - [XAML Reference](/docs/xaml): Overview of XAML syntax.
-- [Namespaces](namespaces): How XAML namespaces work.
-- [Markup Extensions](markup-extensions): `{Binding}`, `{StaticResource}`, and other extensions.
+- [Namespaces](/docs/xaml/namespaces): How XAML namespaces work.
+- [Markup Extensions](/docs/xaml/markup-extensions): `{Binding}`, `{StaticResource}`, and other extensions.
 - [Compiled Bindings](/docs/data-binding/compiled-bindings): How compiled bindings work.

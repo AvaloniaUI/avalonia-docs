@@ -16,7 +16,7 @@ This guide shows you how to bind a [`Button`](/api/avalonia/controls/button) to 
 ## Prerequisites
 
 - A basic Avalonia application with an MVVM structure (a view and a corresponding view model).
-- Familiarity with [data binding](/docs/data-binding/) and `ICommand`.
+- Familiarity with [data binding](/docs/data-binding/introduction-to-data-binding) and `ICommand`.
 
 ## Example
 
@@ -137,7 +137,7 @@ namespace AvaloniaGuides.ViewModels
 }
 ```
 
-<img src={BindCanExecuteScreenshot} alt="App showing a button enabled and disabled based on CanExecute binding"/>
+<Image light={BindCanExecuteScreenshot} alt="App showing a button enabled and disabled based on CanExecute binding" position="center" maxWidth={400} cornerRadius="true"/>
 
 ## How it works
 

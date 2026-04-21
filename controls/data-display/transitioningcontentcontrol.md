@@ -8,7 +8,7 @@ doc-type: reference
 import TransitioningContentControlFadeScreenshot from '/img/controls/transitioningcontentcontrol/transitioningcontentcontrol-fade.webp';
 import TransitioningContentControlSlideScreenshot from '/img/controls/transitioningcontentcontrol/transitioningcontentcontrol-slide.webp';
 
-The [`TransitioningContentControl`](/api/avalonia/controls/transitioningcontentcontrol) displays a single piece of content at a time and plays an animated page transition whenever that content changes. It extends [`ContentControl`](contentcontrol), so you can use it anywhere you would use a regular content control.
+The [`TransitioningContentControl`](/api/avalonia/controls/transitioningcontentcontrol) displays a single piece of content at a time and plays an animated page transition whenever that content changes. It extends [`ContentControl`](/controls/data-display/contentcontrol), so you can use it anywhere you would use a regular content control.
 
 A common use case is building an image slideshow, but `TransitioningContentControl` is equally useful for switching between views in a navigation scenario.
 
@@ -51,7 +51,7 @@ In this example, the view model contains a collection of images. The following X
 </TransitioningContentControl>
 ```
 
-<img src={TransitioningContentControlFadeScreenshot} alt="TransitioningContentControl with default cross-fade transition" />
+<Image light={TransitioningContentControlFadeScreenshot} alt="TransitioningContentControl with default cross-fade transition" position="center" maxWidth={400} cornerRadius="true"/>
 
 ### Horizontal slide transition
 
@@ -70,7 +70,7 @@ You can replace the default transition by setting `PageTransition`. Here a `Page
 </TransitioningContentControl>
 ```
 
-<img src={TransitioningContentControlSlideScreenshot} alt="TransitioningContentControl with horizontal page-slide transition" />
+<Image light={TransitioningContentControlSlideScreenshot} alt="TransitioningContentControl with horizontal page-slide transition" position="center" maxWidth={400} cornerRadius="true"/>
 
 ### Cross-fade with a custom duration
 
@@ -115,9 +115,9 @@ For a complete walkthrough, see [How to set up basic navigation](../../docs/how-
 
 ## See also
 
-- [ContentControl](contentcontrol)
+- [ContentControl](/controls/data-display/contentcontrol)
 - [Setting page transitions](../../docs/graphics-animation/page-transitions)
 - [How to set up basic navigation](../../docs/how-to/navigation-how-to)
-- [Carousel](collections/carousel)
+- [Carousel](/controls/data-display/collections/carousel)
 - [`TransitioningContentControl` API reference](https://reference.avaloniaui.net/api/Avalonia.ReactiveUI/TransitioningContentControl/)
 - [`TransitioningContentControl` source code](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/TransitioningContentControl.cs)

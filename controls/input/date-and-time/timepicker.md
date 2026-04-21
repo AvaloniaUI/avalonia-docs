@@ -99,7 +99,7 @@ You can react to changes by subscribing to the `SelectedTimeChanged` event or by
 
 ## See also
 
-- [DatePicker](datepicker)
-- [CalendarDatePicker](calendardatepicker)
+- [DatePicker](/controls/input/date-and-time/datepicker)
+- [CalendarDatePicker](/controls/input/date-and-time/calendardatepicker)
 - [TimePicker API reference](/api/avalonia/controls/timepicker)
 - [`TimePicker.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/DateTimePickers/TimePicker.cs)

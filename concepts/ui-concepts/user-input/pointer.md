@@ -51,7 +51,7 @@ private void PointerPressedHandler (object sender, PointerPressedEventArgs args)
 </StackPanel>
 ```
 
-<img src={PointerPressedSampleScreenshot} alt=""/>
+<Image light={PointerPressedSampleScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
 
 ## Pointer Position
 

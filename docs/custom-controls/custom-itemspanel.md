@@ -24,7 +24,7 @@ The default panel works well for linear lists, but there are scenarios where you
 
 - **Absolute positioning**: Use a [`Canvas`](/api/avalonia/controls/canvas) to place items at specific coordinates.
 - **Wrapping layouts**: Use a `WrapPanel` to flow items across rows or columns.
-- **Custom arrangements**: Use a [custom panel](custom-panel) with your own `ArrangeOverride` logic for radial layouts, dashboards, or other non-linear designs.
+- **Custom arrangements**: Use a [custom panel](/docs/custom-controls/custom-panel) with your own `ArrangeOverride` logic for radial layouts, dashboards, or other non-linear designs.
 
 :::warning[Performance consideration]
 When you replace the default panel with a non-virtualizing panel such as `Canvas` or `WrapPanel`, the control creates a UI element for every item in the collection. For large collections (hundreds or thousands of items), this can significantly increase memory usage and degrade rendering performance. If you need custom layout with large data sets, consider building a custom panel that extends `VirtualizingPanel` to retain virtualization support.
@@ -83,10 +83,10 @@ namespace AvaloniaControls.ViewModels
 public record Tile(int Size, int TopX, int TopY);
 ```
 
-<img src={ItemsControlCanvasScreenshot} alt="ItemsControl with a Canvas panel displaying positioned rectangles" />
+<Image light={ItemsControlCanvasScreenshot} alt="ItemsControl with a Canvas panel displaying positioned rectangles" position="center" maxWidth={400} cornerRadius="true"/>
 
 ## See also
 
-- [Creating a custom panel](custom-panel)
-- [Attached properties](attached-properties)
+- [Creating a custom panel](/docs/custom-controls/custom-panel)
+- [Attached properties](/docs/custom-controls/attached-properties)
 - [`ItemsControl`](/controls/data-display/collections/itemscontrol)

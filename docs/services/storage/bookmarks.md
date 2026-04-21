@@ -231,6 +231,6 @@ It's not recommended to store bookmark IDs in a remote database, as bookmarks mi
 
 ## See also
 
-- [Storage Provider](storage-provider): Full storage provider API reference.
-- [Storage Items](storage-item): Working with files and folders.
+- [Storage Provider](/docs/services/storage/storage-provider): Full storage provider API reference.
+- [Storage Items](/docs/services/storage/storage-item): Working with files and folders.
 - [File Dialogs](/docs/services/file-dialogs): Using file open, save, and folder picker dialogs.

@@ -189,6 +189,6 @@ Class handlers are useful for control implementations that need to intercept inp
 ## Next steps
 
 - [Routed Events](/docs/input-interaction/routed-events): Detailed reference on the routed event system.
-- [Lifecycle Events](lifecycle-events): Events that fire during control creation, loading, and teardown.
-- [Input Events](input-events): Pointer, keyboard, and gesture events.
+- [Lifecycle Events](/docs/events/lifecycle-events): Events that fire during control creation, loading, and teardown.
+- [Input Events](/docs/events/input-events): Pointer, keyboard, and gesture events.
 - [Adding Interactivity](/docs/input-interaction/adding-interactivity): Practical guide to handling user interaction.

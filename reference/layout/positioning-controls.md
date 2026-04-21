@@ -17,7 +17,7 @@ There are numerous ways to position elements using Avalonia. However, achieving 
 
 The following illustration shows a layout scenario that utilizes several positioning properties.
 
-<img src={LayoutMarginsPaddingAlignmentBasicScreenshot} alt="Positioning Example"/>
+<Image light={LayoutMarginsPaddingAlignmentBasicScreenshot} alt="Positioning Example" position="center" maxWidth={400} cornerRadius="true"/>
 
 At first glance, the `Button` elements in this illustration may appear to be placed randomly. However, their positions are actually precisely controlled by using a combination of margins, alignments, and padding.
 
@@ -51,7 +51,7 @@ The following example describes how to create the layout in the preceding illust
 
 The following diagram provides a close-up view of the various positioning properties that are used in the preceding sample. Subsequent sections in this topic describe in greater detail how to use each positioning property.
 
-<img src={LayoutMarginsPaddingAlignmentBasicAnnotatedScreenshot} alt="Positioning Properties"/>
+<Image light={LayoutMarginsPaddingAlignmentBasicAnnotatedScreenshot} alt="Positioning Properties" position="center" maxWidth={400} cornerRadius="true"/>
 
 ### Understanding Alignment Properties
 
@@ -81,7 +81,7 @@ The following example shows how to apply the `HorizontalAlignment` property to `
 
 The preceding code yields a layout similar to the following image. The positioning effects of each `HorizontalAlignment` value are visible in the illustration.
 
-<img src={LayoutHorizontalAlignmentScreenshot} alt='HorizontalAlignment Sample'/>
+<Image light={LayoutHorizontalAlignmentScreenshot} alt="HorizontalAlignment Sample" position="center" maxWidth={400} cornerRadius="true"/>
 
 #### VerticalAlignment Property
 
@@ -121,7 +121,7 @@ The following example shows how to apply the `VerticalAlignment` property to `Bu
 
 The preceding code yields a layout similar to the following image. The positioning effects of each `VerticalAlignment` value are visible in the illustration.
 
-<img src={LayoutVerticalAlignmentScreenshot} alt='VerticalAlignment property sample'/>
+<Image light={LayoutVerticalAlignmentScreenshot} alt="VerticalAlignment property sample" position="center" maxWidth={400} cornerRadius="true"/>
 
 ### Understanding Margin Properties
 
@@ -229,5 +229,5 @@ The following example demonstrates each of the concepts that are detailed in thi
 
 When compiled, the preceding application yields a UI that looks like the following illustration. The effects of the various property values are evident in the spacing between elements, and significant property values for elements in each column are shown within `TextBlock` elements.
 
-<img src={LayoutMarginsPaddingAlignmentComplexAnnotatedScreenshot} alt="Several positioning properties in one application"/>
+<Image light={LayoutMarginsPaddingAlignmentComplexAnnotatedScreenshot} alt="Several positioning properties in one application" position="center" maxWidth={400} cornerRadius="true"/>
 

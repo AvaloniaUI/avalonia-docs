@@ -130,5 +130,5 @@ If your window uses `SystemDecorations="None"` or a custom titlebar and does not
 ## See also
 
 - [Windows platform guide](/docs/platform-specific-guides/windows) for transparency, Mica, and Win32 integration details
-- [macOS issues](macos.md) and [WebAssembly issues](webassembly.md) for other platform-specific troubleshooting
+- [macOS issues](/troubleshooting/platform-specific-issues/macos) and [WebAssembly issues](/troubleshooting/platform-specific-issues/webassembly) for other platform-specific troubleshooting
 - [Logging errors and warnings](/docs/app-development/logging-errors-and-warnings) for capturing diagnostic output from your application

@@ -102,6 +102,6 @@ This is a row splitter. Drag the border between the rows to resize them.
 
 ## See also
 
-- [Grid](grid.md)
+- [Grid](/controls/layout/panels/grid)
 - [GridSplitter API reference](/api/avalonia/controls/gridsplitter)
 - [`GridSplitter.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/GridSplitter.cs)

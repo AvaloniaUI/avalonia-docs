@@ -2,7 +2,7 @@
 id: assets
 title: Assets
 description: Include and reference bitmap, style, and resource dictionary assets in Avalonia applications.
-doc-type: explanation
+doc-type: reference
 ---
 
 import AssetFileDiagram from '/img/concepts/ui-concepts/assets/asset-file.png';
@@ -12,7 +12,7 @@ Many applications need to include assets such as bitmaps, styles and resource di
 
 ## Including assets
 
-<img src={AssetFileDiagram} alt="Diagram showing how asset files are included in an Avalonia project"/>
+<Image light={AssetFileDiagram} alt="Diagram showing how asset files are included in an Avalonia project" position="center" maxWidth={400} cornerRadius="true"/>
 
 You include assets in an application by using the `<AvaloniaResource>` element in your project file.
 
@@ -49,7 +49,7 @@ As an alternative, you can use the rooted path:
 
 ## Library assets
 
-<img src={AssetLibraryDiagram} alt="Diagram showing how to reference assets from a library assembly"/>
+<Image light={AssetLibraryDiagram} alt="Diagram showing how to reference assets from a library assembly" position="center" maxWidth={400} cornerRadius="true"/>
 
 If the asset is included in a different assembly from the XAML file, then you use the `avares:` URI scheme. For example, if the asset is contained in an assembly called `MyAssembly.dll` in a `Assets` folder, then you use:
 

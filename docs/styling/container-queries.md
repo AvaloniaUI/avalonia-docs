@@ -167,5 +167,5 @@ This way, you can make queries for size ranges.
 
 - [Responsive layouts](/docs/layout/responsive-layouts): Using container queries to build adaptive layouts.
 - [How to: Build responsive layouts](/docs/how-to/responsive-layout-how-to): Step-by-step recipes for common responsive patterns.
-- [Styles](styles)
-- [Control themes](control-themes)
+- [Styles](/docs/styling/styles)
+- [Control themes](/docs/styling/control-themes)

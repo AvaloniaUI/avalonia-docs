@@ -108,10 +108,3 @@ Similarly it can be done with [Microsoft identity](https://learn.microsoft.com/e
 \** Android uses CustomTabsIntent implementation, but support is experimental and might be changed.  
 \*** Browser solution requires CORS to be configured to allow access to the redirected page. .NET 10 is also necessary to run this library in browser.
 
-## See also
-
-- [NativeWebView](/controls/web/nativewebview)
-- [NativeWebDialog](/controls/web/nativewebdialog)
-- [WebView environment options](/docs/webview/webview-environment)
-- [Embedding web content](/docs/app-development/embedding-web-content)
-- [FAQ](/tools/faq#webview)

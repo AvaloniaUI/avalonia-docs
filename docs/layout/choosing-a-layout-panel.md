@@ -293,7 +293,7 @@ For complex layouts, you can combine multiple panels. Nest panels within one ano
 ## See also
 
 - [Layout](/docs/layout) for how the measure-and-arrange system works.
-- [Positioning controls](positioning-controls) for alignment, margin, and padding.
+- [Positioning controls](/docs/layout/positioning-controls) for alignment, margin, and padding.
 - [Responsive layout how-to](/docs/how-to/responsive-layout-how-to) for adaptive layout techniques.
 - Individual panel references:
   - [Grid](/controls/layout/panels/grid)

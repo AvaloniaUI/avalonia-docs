@@ -99,7 +99,7 @@ public class ItemClass
 }
 ```
 
-<img src={BindStyleClassSampleScreenshot} alt="Sample app showing style classes toggled by data binding"/>
+<Image light={BindStyleClassSampleScreenshot} alt="Sample app showing style classes toggled by data binding" position="center" maxWidth={400} cornerRadius="true"/>
 
 ## See also
 

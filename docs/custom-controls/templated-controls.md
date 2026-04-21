@@ -134,7 +134,7 @@ Then target it in your control theme:
 
 ## See also
 
-- [Defining Properties](defining-properties)
-- [Defining Events](defining-events)
+- [Defining Properties](/docs/custom-controls/defining-properties)
+- [Defining Events](/docs/custom-controls/defining-events)
 - [Control Themes](/docs/styling/control-themes)
 - [Control Template Walkthrough](/docs/styling/control-template-walkthrough)

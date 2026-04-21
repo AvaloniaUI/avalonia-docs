@@ -65,7 +65,7 @@ Creating a custom-drawn control involves the following steps:
 
 ## See also
 
-- [Custom Control Class](custom-control-class)
-- [Templated Controls](templated-controls)
-- [Drawing Custom Controls](drawing-custom-controls)
-- [Defining Properties](defining-properties)
+- [Custom Control Class](/docs/custom-controls/custom-control-class)
+- [Templated Controls](/docs/custom-controls/templated-controls)
+- [Drawing Custom Controls](/docs/custom-controls/drawing-custom-controls)
+- [Defining Properties](/docs/custom-controls/defining-properties)

@@ -116,5 +116,5 @@ Each of these methods returns a `bool` result indicating whether the operating s
 ## See also
 
 - [TopLevel](../../docs/fundamentals/top-level)
-- [Storage provider](storage/storage-provider)
-- [Clipboard](clipboard)
+- [Storage provider](/docs/services/storage/storage-provider)
+- [Clipboard](/docs/services/clipboard)

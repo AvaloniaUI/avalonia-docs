@@ -234,6 +234,6 @@ public class RectangleAreaConverter : IMultiValueConverter
 
 ## See also
 
-- [Data Binding Syntax](data-binding-syntax): Binding parameters including StringFormat.
-- [How to Create a Custom Converter](how-to-create-a-custom-data-binding-converter): Single-value converters.
-- [Built-in Data Binding Converters](built-in-data-binding-converters): Converters shipped with Avalonia.
+- [Data Binding Syntax](/docs/data-binding/data-binding-syntax): Binding parameters including StringFormat.
+- [How to Create a Custom Converter](/docs/data-binding/how-to-create-a-custom-data-binding-converter): Single-value converters.
+- [Built-in Data Binding Converters](/docs/data-binding/built-in-data-binding-converters): Converters shipped with Avalonia.

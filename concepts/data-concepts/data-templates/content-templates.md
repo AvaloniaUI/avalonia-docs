@@ -54,7 +54,7 @@ In this markup, the `DataType` attribute tells the template which type it is des
 
 When you run this code, Avalonia UI displays the student data using your template layout:
 
-<img src={ContentTemplateStudentScreenshot} alt="A window displaying a Student object rendered through a ContentTemplate with first and last name labels."/>
+<Image light={ContentTemplateStudentScreenshot} alt="A window displaying a Student object rendered through a ContentTemplate with first and last name labels." position="center" maxWidth={400} cornerRadius="true"/>
 
 ## How the template and content relate
 
@@ -74,8 +74,8 @@ When you need to support multiple data types or share templates across controls,
 
 ## See also
 
-- [Control content](control-content)
-- [Data template collection](data-template-collection)
-- [Introduction to data templates](introduction-to-data-templates)
+- [Control content](/docs/data-templates/control-content)
+- [Data template collection](/docs/data-templates/data-template-collection)
+- [Introduction to data templates](/docs/data-templates/introduction-to-data-templates)
 - [Reusing data templates](/docs/data-templates/reusing-data-templates)
 - [Creating data templates in code](/docs/data-templates/creating-data-templates-in-code)

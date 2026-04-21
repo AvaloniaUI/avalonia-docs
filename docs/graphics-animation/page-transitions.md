@@ -181,11 +181,11 @@ public class CustomTransition : IPageTransition
 }
 ```
 
-<img src={CustomPageTransitionScreenshot} alt="Animation showing a custom page transition that shrinks and expands views vertically"/>
+<Image light={CustomPageTransitionScreenshot} alt="Animation showing a custom page transition that shrinks and expands views vertically" position="center" maxWidth={400} cornerRadius="true"/>
 
 ## See also
 
-- [Animations](animations): Overview of animation types in Avalonia.
-- [Keyframe animations](keyframe-animations): Multi-step keyframe animations.
-- [Control transitions](control-transitions): Animating property changes.
-- [Navigate between views](../how-to/navigation-how-to): Common patterns for switching between views.
+- [Animations](/docs/graphics-animation/animations): Overview of animation types in Avalonia.
+- [Keyframe animations](/docs/graphics-animation/keyframe-animations): Multi-step keyframe animations.
+- [Control transitions](/docs/graphics-animation/control-transitions): Animating property changes.
+- [Navigate between views](/docs/how-to/navigation-how-to): Common patterns for switching between views.

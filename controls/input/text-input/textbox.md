@@ -45,7 +45,7 @@ This example has a basic one-line text box, a password box, and a text-wrapping 
 </StackPanel>
 ```
 
-<img src={TextBoxEntryScreenshot} alt="" />
+<Image light={TextBoxEntryScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
 
 ## Watermark (placeholder text)
 
@@ -135,5 +135,5 @@ You can add icons or buttons inside the `TextBox` using `InnerLeftContent` and `
 
 - [TextBox API reference](/api/avalonia/controls/textbox)
 - [`TextBox.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/TextBox.cs)
-- [MaskedTextBox](maskedtextbox.md)
-- [AutoCompleteBox](autocompletebox.md)
+- [MaskedTextBox](/controls/input/text-input/maskedtextbox)
+- [AutoCompleteBox](/controls/input/text-input/autocompletebox)

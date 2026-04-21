@@ -68,7 +68,7 @@ Include the `.ico` file in your `.csproj` file as an `AvaloniaResource`:
 </Project>
 ```
 
-<img src={TrayIconScreenshot} alt="TrayIcon with a context menu shown in the system tray" />
+<Image light={TrayIconScreenshot} alt="TrayIcon with a context menu shown in the system tray" position="center" maxWidth={400} cornerRadius="true"/>
 
 ## Binding menu commands
 

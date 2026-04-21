@@ -62,7 +62,7 @@ In this example, the pseudo class selector changes properties inside a control t
 Other pseudo classes include `:focus`, `:disabled`, `:pressed` for buttons, and `:checked` for checkboxes.
 
 :::info
-For more detail about pseudo classes, see [Pseudoclasses](pseudoclasses).
+For more detail about pseudo classes, see [Pseudoclasses](/docs/styling/pseudoclasses).
 :::
 
 ## Conditional classes
@@ -180,6 +180,6 @@ if (control.Classes.Contains("blue"))
 
 ## See also
 
-- [Styles](styles)
-- [Pseudoclasses](pseudoclasses)
-- [Style selectors](style-selectors)
+- [Styles](/docs/styling/styles)
+- [Pseudoclasses](/docs/styling/pseudoclasses)
+- [Style selectors](/docs/styling/style-selectors)

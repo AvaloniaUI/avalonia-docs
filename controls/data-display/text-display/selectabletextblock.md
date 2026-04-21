@@ -94,7 +94,7 @@ You can customize how selected text looks by setting `SelectionBrush` and `Selec
 
 ## See also
 
-- [TextBlock](textblock)
-- [Label](label)
+- [TextBlock](/controls/data-display/text-display/textblock)
+- [Label](/controls/data-display/text-display/label)
 - [SelectableTextBlock API reference](/api/avalonia/controls/selectabletextblock)
 - [`SelectableTextBlock.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/SelectableTextBlock.cs)

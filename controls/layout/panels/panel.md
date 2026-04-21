@@ -96,13 +96,13 @@ For a complete walkthrough, see [Custom panel](/docs/custom-controls/custom-pane
 
 If you need more control over how child elements are positioned, consider one of these specialized panels:
 
-- [Stack panel](stackpanel): arranges children in a single horizontal or vertical line.
-- [Dock panel](dockpanel): docks children to the edges of the panel.
-- [Grid](grid): arranges children in rows and columns.
-- [Wrap panel](wrappanel): arranges children in a line that wraps when it reaches the panel edge.
-- [Canvas](canvas): positions children at explicit coordinates.
-- [Relative panel](relativepanel): positions children relative to each other or to the panel itself.
-- [Uniform grid](uniformgrid): arranges children in a grid with equally sized cells.
+- [Stack panel](/controls/layout/panels/stackpanel): arranges children in a single horizontal or vertical line.
+- [Dock panel](/controls/layout/panels/dockpanel): docks children to the edges of the panel.
+- [Grid](/controls/layout/panels/grid): arranges children in rows and columns.
+- [Wrap panel](/controls/layout/panels/wrappanel): arranges children in a line that wraps when it reaches the panel edge.
+- [Canvas](/controls/layout/panels/canvas): positions children at explicit coordinates.
+- [Relative panel](/controls/layout/panels/relativepanel): positions children relative to each other or to the panel itself.
+- [Uniform grid](/controls/layout/panels/uniformgrid): arranges children in a grid with equally sized cells.
 
 ## See also
 

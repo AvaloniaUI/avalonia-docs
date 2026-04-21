@@ -9,9 +9,9 @@ description: Create and manage data bindings from C# code rather than XAML.
 
 The [`CompiledBinding.Create`](/api/avalonia/data/compiledbinding#create-method) method lets you create type-safe bindings using LINQ expressions. The expression is validated at compile time, so errors in property names produce compiler errors rather than silent runtime failures.
 
-The method takes two generic parameters: the type of the [`DataContext`](data-context) and the type of the property being selected. It then accepts a lambda expression to select the property to bind.
+The method takes two generic parameters: the type of the [`DataContext`](/docs/data-binding/data-context) and the type of the property being selected. It then accepts a lambda expression to select the property to bind.
 
-For example, if you have a control whose [`DataContext`](data-context) is an instance of `MyViewModel`, and you want to select a `string Title { get; set; }` property from it, you would write:
+For example, if you have a control whose [`DataContext`](/docs/data-binding/data-context) is an instance of `MyViewModel`, and you want to select a `string Title { get; set; }` property from it, you would write:
 
 ```csharp
 var binding = CompiledBinding.Create<MyViewModel, string>(x => x.Title);

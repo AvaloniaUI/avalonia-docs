@@ -179,11 +179,11 @@ If a spinning cube appears on the display, DRM is functioning correctly and Aval
 
 Embedded devices frequently use touchscreens as the primary input method. Avalonia reads touch events through `libinput`, which is included in the required libraries listed above. Touch input works automatically when running via DRM.
 
-For applications that need an on-screen keyboard (kiosks, point-of-sale systems, or any device without a physical keyboard), see the [Virtual Keyboard](virtual-keyboard) guide.
+For applications that need an on-screen keyboard (kiosks, point-of-sale systems, or any device without a physical keyboard), see the [Virtual Keyboard](/docs/platform-specific-guides/embedded-linux/virtual-keyboard) guide.
 
 ## See also
 
-- [Running on Raspberry Pi](raspberry-pi) for a step-by-step hardware tutorial
-- [Virtual Keyboard](virtual-keyboard) for on-screen keyboard support
+- [Running on Raspberry Pi](/docs/platform-specific-guides/embedded-linux/raspberry-pi) for a step-by-step hardware tutorial
+- [Virtual Keyboard](/docs/platform-specific-guides/embedded-linux/virtual-keyboard) for on-screen keyboard support
 - [Deploying to Embedded Linux](/docs/deployment/embedded-linux)
 - [Desktop Linux](/docs/platform-specific-guides/linux) for X11 and Wayland environments

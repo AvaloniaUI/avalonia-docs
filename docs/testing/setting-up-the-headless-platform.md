@@ -268,7 +268,7 @@ public void ViewModel_Increments_Count()
 ## Manual setup
 
 :::caution
-This is an advanced usage scenario. For most cases, use the [XUnit](headless-xunit) or [NUnit](headless-nunit) integration, which handles setup automatically.
+This is an advanced usage scenario. For most cases, use the [XUnit](/docs/testing/headless-xunit) or [NUnit](/docs/testing/headless-nunit) integration, which handles setup automatically.
 :::
 
 ### Install packages
@@ -330,7 +330,7 @@ await session.Dispatch(() =>
 
 ## See also
 
-- [Headless Testing with XUnit](headless-xunit): XUnit integration with `[AvaloniaFact]`.
-- [Headless Testing with NUnit](headless-nunit): NUnit integration with `[AvaloniaTest]`.
-- [UI Testing with Appium](ui-testing-with-appium): End-to-end testing with a real application window.
+- [Headless Testing with XUnit](/docs/testing/headless-xunit): XUnit integration with `[AvaloniaFact]`.
+- [Headless Testing with NUnit](/docs/testing/headless-nunit): NUnit integration with `[AvaloniaTest]`.
+- [UI Testing with Appium](/docs/testing/ui-testing-with-appium): End-to-end testing with a real application window.
 - [Avalonia's test suite](https://github.com/AvaloniaUI/Avalonia/tree/master/tests): How Avalonia tests itself.

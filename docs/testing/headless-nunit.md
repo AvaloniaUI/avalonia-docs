@@ -114,6 +114,6 @@ Instead of the typical `[Test]` attribute, use `[AvaloniaTest]` as it sets up th
 ## See also
 
 - [Testable sample app for NUnit](https://github.com/AvaloniaUI/Avalonia.Samples/tree/main/src/Avalonia.Samples/Testing/TestableApp.Headless.NUnit)
-- [Headless Testing Platform](setting-up-the-headless-platform)
-- [Headless Testing with XUnit](headless-xunit)
-- [UI Testing with Appium](ui-testing-with-appium)
+- [Headless Testing Platform](/docs/testing/setting-up-the-headless-platform)
+- [Headless Testing with XUnit](/docs/testing/headless-xunit)
+- [UI Testing with Appium](/docs/testing/ui-testing-with-appium)

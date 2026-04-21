@@ -162,11 +162,3 @@ The `MediaPlayer` manages the lifecycle automatically:
 4. **Seeking Considerations**:
     - Check `StreamSource.IsSeekable` to determine if seeking is supported.
     - If seeking is required, ensure the stream supports it (`CanSeek` = true).
-
-## See also
-
-- [MediaPlayer control](/controls/media/mediaplayercontrol)
-- [MediaPlayer class](/docs/media/mediaplayer)
-- [Implementing MediaPlayer](/docs/media/media-playback)
-- [Installing Avalonia Pro](/tools/installing-avalonia-pro)
-- [Troubleshooting](/troubleshooting/controls/mediaplayer)

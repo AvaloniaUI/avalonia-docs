@@ -58,7 +58,7 @@ namespace AvaloniaControls.Views
 }
 ```
 
-<img src={AutoCompleteBoxScreenshot} alt="" />
+<Image light={AutoCompleteBoxScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
 
 ### Using AutoCompleteBox with objects
 When working with complex objects instead of simple strings, specify which property should be shown and how the control should filter the underlying data. The sections below cover display binding, custom filtering, and formatting the presented text.

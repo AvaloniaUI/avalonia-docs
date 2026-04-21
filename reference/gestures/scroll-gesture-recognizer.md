@@ -90,5 +90,5 @@ View the source code on GitHub: [`ScrollGestureRecognizer.cs`](https://github.co
 
 ## See also
 
-- [PullGestureRecognizer](pull-gesture-recognizer)
-- [PinchGestureRecognizer](pinch-gesture-recognizer)
+- [PullGestureRecognizer](/reference/gestures/pull-gesture-recognizer)
+- [PinchGestureRecognizer](/reference/gestures/pinch-gesture-recognizer)

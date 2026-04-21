@@ -23,7 +23,7 @@ Before setting up the MCP server, ensure you have:
 
 ### Setting your license key
 
-The MCP server reads your license from the `PARCEL_LICENSE_KEY` environment variable. You can find your license key in the [Avalonia Customer Portal](https://my.avalonia.dev/). MCP is a paid feature and is not included with the Community edition.
+The MCP server reads your license from the `PARCEL_LICENSE_KEY` environment variable. You can find your license key in the [Avalonia Customer Portal](https://portal.avaloniaui.net/). MCP is a paid feature and is not included with the Community edition.
 
 Set the key in your shell profile so it persists across sessions:
 

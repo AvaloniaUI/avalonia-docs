@@ -302,7 +302,7 @@ The same pattern applies to `RadialGradientBrush` and `ConicGradientBrush`.
 
 ## See also
 
-- [Brushes](brushes): Overview of all brush types, including `SolidColorBrush` and tile brushes.
-- [Effects](effects): Box shadows, clipping, and opacity masks.
-- [Shapes and geometries](shapes-and-geometries): Drawing shapes that you can fill with gradient brushes.
-- [Custom rendering](custom-rendering): Low-level drawing with `DrawingContext` where you can use gradient brushes directly.
+- [Brushes](/docs/graphics-animation/brushes): Overview of all brush types, including `SolidColorBrush` and tile brushes.
+- [Effects](/docs/graphics-animation/effects): Box shadows, clipping, and opacity masks.
+- [Shapes and geometries](/docs/graphics-animation/shapes-and-geometries): Drawing shapes that you can fill with gradient brushes.
+- [Custom rendering](/docs/graphics-animation/custom-rendering): Low-level drawing with `DrawingContext` where you can use gradient brushes directly.

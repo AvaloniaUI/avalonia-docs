@@ -192,7 +192,7 @@ To set a property to a literal string that starts with `{`, use an empty set of 
 ## See also
 
 - [XAML Reference](/docs/xaml): Overview of XAML syntax.
-- [x: Directives](directives): XAML language directives.
+- [x: Directives](/docs/xaml/directives): XAML language directives.
 - [Data Binding Syntax](/docs/data-binding/data-binding-syntax): Comprehensive binding syntax reference.
 - [Compiled Bindings](/docs/data-binding/compiled-bindings): Compile-time validated bindings.
 - [Markup Extensions (Data Binding)](/docs/data-binding/markup-extensions): Binding-specific markup extension details.

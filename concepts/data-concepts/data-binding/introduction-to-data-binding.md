@@ -55,6 +55,6 @@ For background information on the origins and development of the MVVM pattern at
 
 ## See also
 
-- [Data context](data-context)
-- [Data binding syntax](data-binding-syntax)
-- [Compiled bindings](compiled-bindings)
+- [Data context](/docs/data-binding/data-context)
+- [Data binding syntax](/docs/data-binding/data-binding-syntax)
+- [Compiled bindings](/docs/data-binding/compiled-bindings)

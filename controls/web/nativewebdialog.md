@@ -123,7 +123,7 @@ dialog.EnvironmentRequested += (sender, e) =>
 };
 ```
 
-See [WebView environment options](/docs/webview/webview-environment) for details. The event argument type depends on the platform.
+See [WebView environment options](/controls/web/webview-environment) for details. The event argument type depends on the platform.
 
 ## Window sizing and position
 

@@ -17,7 +17,7 @@ When multiple styles, local values, and animations target the same property on a
 | 6 | **Inherited** | A value inherited from an ancestor in the visual tree |
 | 7 | **Default** | The property's registered default value |
 
-The property system checks each level in order and returns the first value it finds. For the full API details, see [Property value precedence](../properties/value-precedence).
+The property system checks each level in order and returns the first value it finds. For the full API details, see [Property value precedence](/docs/properties/value-precedence).
 
 ## Why your style might not apply
 
@@ -125,7 +125,7 @@ Use DevTools (press <kbd>F12</kbd> at runtime) to inspect property values. The *
 
 ## See also
 
-- [Property value precedence](../properties/value-precedence)
-- [Styles](styles)
-- [Pseudoclasses](pseudoclasses)
-- [Styling best practices](style-best-practices)
+- [Property value precedence](/docs/properties/value-precedence)
+- [Styles](/docs/styling/styles)
+- [Pseudoclasses](/docs/styling/pseudoclasses)
+- [Styling best practices](/docs/styling/style-best-practices)

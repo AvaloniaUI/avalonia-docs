@@ -6,7 +6,7 @@ title: The MVVM Pattern
 import MvvmPatternDiagram from '/img/concepts/architecture/mvvm/mvvm-architecture.png';
 import MvvmDataBindingDiagram from '/img/concepts/architecture/mvvm/mvvm.png';
 
-<img src={MvvmPatternDiagram} alt=""/>
+<Image light={MvvmPatternDiagram} alt="" position="center" maxWidth={400} cornerRadius="true"/>
 
 The Model-View-View Model (MVVM) pattern is a common way of structuring a UI application. It uses a data binding system that helps move data between its view and view model parts. This means it achieves separation of application logic (view model) from the display of the UI (view).
 
@@ -68,7 +68,7 @@ To learn how to design and implement your own controls, see the [custom controls
 
 Data binding is the key technology that allows an _Avalonia UI_ MVVM application to separate views from view models. You can visualise the view to view model relationship as two layers connected by the data bindings:
 
-<img src={MvvmDataBindingDiagram} alt=""/>
+<Image light={MvvmDataBindingDiagram} alt="" position="center" maxWidth={400} cornerRadius="true"/>
 
 Notice how some of the data bindings are represented by a two way arrow and others by a single-headed arrow. For example, the name and address inputs are two ways - you want both changes in the view model to be notified to the view, and for inputs to the view to be updated on the view model.
 

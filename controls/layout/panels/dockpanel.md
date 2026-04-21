@@ -13,7 +13,7 @@ The [`DockPanel`](/api/avalonia/controls/dockpanel) control arranges its child c
 
 For example, if the docking edge on a child control is defined as 'top' and it has a height defined, but no width, it will draw like this:
 
-<img src={DockPanelTopScreenshot} alt=""/>
+<Image light={DockPanelTopScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
 
 :::caution
 You must define the child control dimension perpendicular to the docking edge, or it will not show.
@@ -170,10 +170,10 @@ myDockPanel.Children.Add(myBorder5);
 
 - [DockPanel API reference](/api/avalonia/controls/dockpanel)
 - [`DockPanel.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/DockPanel.cs)
-- [Canvas](canvas)
-- [Grid](grid)
-- [Panel](panel)
-- [RelativePanel](relativepanel)
-- [StackPanel](stackpanel)
-- [UniformGrid](uniformgrid)
-- [WrapPanel](wrappanel)
+- [Canvas](/controls/layout/panels/canvas)
+- [Grid](/controls/layout/panels/grid)
+- [Panel](/controls/layout/panels/panel)
+- [RelativePanel](/controls/layout/panels/relativepanel)
+- [StackPanel](/controls/layout/panels/stackpanel)
+- [UniformGrid](/controls/layout/panels/uniformgrid)
+- [WrapPanel](/controls/layout/panels/wrappanel)

@@ -29,7 +29,7 @@ A window in _Avalonia UI_ is a basic unit of layout (for a windowing platform).
 
 _Avalonia UI_ contains a large number of built-in controls that will cover most of your UI requirements.   
 
-<img src={CompositionBasicLayoutDiagram} alt=""/>
+<Image light={CompositionBasicLayoutDiagram} alt="" position="center" maxWidth={400} cornerRadius="true"/>
 
 When you first meet _Avalonia UI_, you might place a single built-in control in the content zone of a window (above, left). This is the simplest form of UI composition: the window has the title of the app and usually some window state controls (depending on the target platform). The built-in control allows your app to receive some user input, or to present some output with layout and styling.
 
@@ -43,7 +43,7 @@ To see the full range of Avalonia UI built-in controls, see the [controls refere
 
 Whatever arrangement of controls you use, _Avalonia UI_ represents their relationships as a a tree structure, with the 'outermost' control as the root. So for example, the previous UI composition can be represented as the tree shown here:
 
-<img src={CompositionTreesDiagram} alt=""/>
+<Image light={CompositionTreesDiagram} alt="" position="center" maxWidth={400} cornerRadius="true"/>
 
 This is the **logical control tree**, and it represents the application controls (including the main window) in the hierarchy in which they are defined in the XAML. There are many systems in _Avalonia UI_ that process the logical control tree and its companion the **visual control tree**.
 
@@ -55,7 +55,7 @@ For more information on the concept of control trees, see [Control trees](/docs/
 
 User controls are the mainstay of UI composition in _Avalonia UI_.
 
-<img src={CompositionUserControlsDiagram} alt=""/>
+<Image light={CompositionUserControlsDiagram} alt="" position="center" maxWidth={400} cornerRadius="true"/>
 
 You can add a user control to the content zone of a main window, to represent a 'page view' (above, left).  This allows you to implement a more complex app with multiple pages; where the layout and function of each page is in its own user control (XAML and code) files.   
 
@@ -71,7 +71,7 @@ For tutorials about `DataTemplates` see [Avalonia.Samples](https://github.com/Av
 
 Another variation of UI composition is where you need to present a collection of items.
 
-<img src={CompositionCollectionControlsDiagram} alt=""/>
+<Image light={CompositionCollectionControlsDiagram} alt="" position="center" maxWidth={400} cornerRadius="true"/>
 
 This scenario will use one of the built-in repeating controls, bound to a collection; together with a data template to represent the items in the collection.
 

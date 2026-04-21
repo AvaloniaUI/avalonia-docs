@@ -277,7 +277,7 @@ Recall the `Animation` example above. If you hover, the animated background is r
 despite `BindingPriority.Animation` having the highest priority. This is because the `Selector` targets the wrong 
 `Control`. Examining the `ControlTheme` is necessary to diagnose the cause.
 
-<img src={SetterPrecedenceAnimationWrongScreenshot} alt="" />
+<Image light={SetterPrecedenceAnimationWrongScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
 
 ```xml title='ControlTheme for Button, Trimmed'
 <ControlTheme x:Key="{x:Type Button}" TargetType="Button">
@@ -333,4 +333,4 @@ on priority alone is insufficient to effectively style an application.
 </Button>
 ```
 
-<img src={SetterPrecedenceAnimationCorrectScreenshot} alt="" />
+<Image light={SetterPrecedenceAnimationCorrectScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>

@@ -159,7 +159,7 @@ public class MainViewModel : ViewModelBase
 </TabItem>
 </Tabs>
 
-<img src={KeyMouseScreenshot} alt="Demo showing keyboard and mouse shortcut interactions with a ListBox" />
+<Image light={KeyMouseScreenshot} alt="Demo showing keyboard and mouse shortcut interactions with a ListBox" position="center" maxWidth={400} cornerRadius="true"/>
 
 ## Platform-specific notes
 

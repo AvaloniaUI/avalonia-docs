@@ -181,8 +181,8 @@ For a full list of button events, see the [Button events API reference](/api/ava
 
 - [Button API reference](/api/avalonia/controls/button)
 - [`Button.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Button.cs)
-- [RepeatButton](repeatbutton)
-- [ToggleButton](togglebutton)
-- [SplitButton](splitbutton)
-- [HyperlinkButton](hyperlinkbutton)
+- [RepeatButton](/controls/input/buttons/repeatbutton)
+- [ToggleButton](/controls/input/buttons/togglebutton)
+- [SplitButton](/controls/input/buttons/splitbutton)
+- [HyperlinkButton](/controls/input/buttons/hyperlinkbutton)
 - [Adding interactivity](/docs/input-interaction/adding-interactivity)

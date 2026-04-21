@@ -7,7 +7,7 @@ import FluentThemeNormalScreenshot from '/img/concepts/ui-concepts/styling/fluen
 import FluentThemeForestScreenshot from '/img/concepts/ui-concepts/styling/fluent-theme-forest.png';
 import SimpleThemeScreenshot from '/img/concepts/ui-concepts/styling/simple-theme.png';
 
-In Avalonia, themes are complete sets of [control themes](control-themes) and [theme resources](theme-variants) for built-in controls.
+In Avalonia, themes are complete sets of [control themes](/docs/styling/control-themes) and [theme resources](/docs/styling/theme-variants) for built-in controls.
 
 ## Official themes
 
@@ -41,7 +41,7 @@ Community-developed themes in varying stages of development are also available.
 
 The Avalonia Fluent theme is inspired by Microsoft's Fluent Design System, a set of design guidelines and components for creating visually appealing and interactive user interfaces. The Fluent Design System emphasizes modern, clean aesthetics, smooth animations, and intuitive interactions. It provides a consistent and polished look-and-feel across different platforms, while giving developers flexibility with the Avalonia styling system.
 
-<p><img className="medium-image-zoom" src={FluentThemeNormalScreenshot} alt="Fluent Theme" /></p>
+<Image light={FluentThemeNormalScreenshot} alt="Fluent theme" position="center" maxWidth={400} cornerRadius="true" />
 
 ### How to use
 
@@ -66,7 +66,7 @@ Then include the theme in the `Application` class:
 ```
 
 :::note
-If you need to specify a dark or light theme variant, see [Theme variants](theme-variants).
+If you need to specify a dark or light theme variant, see [Theme variants](/docs/styling/theme-variants).
 :::
 
 ### Changing theme density
@@ -137,7 +137,7 @@ The [Avalonia Theme Editor](https://theme.xaml.live/) supports the following fea
 
 Example of FluentTheme with a Forest palette preset available on the web app:
 
-<p><img className="medium-image-zoom" src={FluentThemeForestScreenshot} alt="Fluent Theme Forest Palette" /></p>
+<Image light={FluentThemeForestScreenshot} alt="Fluent theme forest palette" position="center" maxWidth={400} cornerRadius="true" />
 
 ## Simple
 
@@ -169,11 +169,11 @@ Then include the theme in the `Application` class:
 ```
 
 :::note
-If you need to specify a dark or light theme variant, see [Theme variants](theme-variants).
+If you need to specify a dark or light theme variant, see [Theme variants](/docs/styling/theme-variants).
 :::
 
 ## See also
 
-- [Control themes](control-themes)
-- [Theme variants](theme-variants)
-- [Styles](styles)
+- [Control themes](/docs/styling/control-themes)
+- [Theme variants](/docs/styling/theme-variants)
+- [Styles](/docs/styling/styles)

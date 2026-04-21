@@ -65,7 +65,7 @@ This section contains pages that will help you understand more abstract concepts
     <p>Avalonia uses compiled bindings by default to improve the performance of your app.</p>
   </DocsCard>
 
-  <DocsCard header="Assets" href="/concepts/ui-concepts/assets">
+  <DocsCard header="Assets">
     <p>How to include assets such as images in your app.</p>
   </DocsCard>
 

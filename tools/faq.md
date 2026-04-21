@@ -227,6 +227,5 @@ Some platforms also require developer to configure permissions on the applicatio
 
 ## See also
 
-- [Community edition](/tools/community-edition)
 - [Developer tools installation](/tools/developer-tools/installation)
 - [Avalonia Tools overview](/tools/)

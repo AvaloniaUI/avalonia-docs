@@ -60,7 +60,7 @@ Attached properties appear in two main scenarios in Avalonia.
 
 An additional control is attached to a host control for a specific purpose. You can use this pattern when a control allows only a single child in its content zone. The attached control is not counted as part of the content; the container uses it separately. Common examples include context menus, tooltips, and flyouts.
 
-<img src={AttachedControlDiagram} alt="Diagram showing an attached control relationship where a tooltip is attached to a host button"/>
+<Image light={AttachedControlDiagram} alt="Diagram showing an attached control relationship where a tooltip is attached to a host button" position="center" maxWidth={400} cornerRadius="true"/>
 
 For example, you can attach a `ToolTip` to any control:
 
@@ -76,7 +76,7 @@ For example, you can attach a `ToolTip` to any control:
 
 Layout containers use attached properties to learn how they should arrange each child. The child sets the property value, and the parent reads it during its layout pass. Common examples include `Grid` (row and column positioning), `DockPanel` (dock direction), and `Canvas` (absolute positioning).
 
-<img src={AttachedLayoutPropertyDiagram} alt="Diagram showing attached layout properties where child controls provide positioning information to a parent layout container"/>
+<Image light={AttachedLayoutPropertyDiagram} alt="Diagram showing attached layout properties where child controls provide positioning information to a parent layout container" position="center" maxWidth={400} cornerRadius="true"/>
 
 For example, `DockPanel.Dock` tells a `DockPanel` where to place each child:
 

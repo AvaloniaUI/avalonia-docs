@@ -13,7 +13,7 @@ The canvas control displays its child controls at specified positions (given as 
 
 The position of each child control is defined as two distances between the edge of the canvas content zone, and the outer edge of the child margin zone. For example, this might be the top-left corner of the child to the top-left of canvas, as shown here:
 
-<img src={CanvasContentZoneScreenshot} alt="" />
+<Image light={CanvasContentZoneScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
 
 If elements occupy the same coordinates, the order in which they appear in markup determines the order in which the elements are drawn.
 
@@ -133,10 +133,10 @@ myParentCanvas.Children.Add(myCanvas3);
 
 - [Canvas API reference](/api/avalonia/controls/canvas)
 - [`Canvas.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Canvas.cs)
-- [DockPanel](dockpanel)
-- [Grid](grid)
-- [Panel](panel)
-- [RelativePanel](relativepanel)
-- [StackPanel](stackpanel)
-- [UniformGrid](uniformgrid)
-- [WrapPanel](wrappanel)
+- [DockPanel](/controls/layout/panels/dockpanel)
+- [Grid](/controls/layout/panels/grid)
+- [Panel](/controls/layout/panels/panel)
+- [RelativePanel](/controls/layout/panels/relativepanel)
+- [StackPanel](/controls/layout/panels/stackpanel)
+- [UniformGrid](/controls/layout/panels/uniformgrid)
+- [WrapPanel](/controls/layout/panels/wrappanel)

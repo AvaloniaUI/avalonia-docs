@@ -120,10 +120,3 @@ webView.EnvironmentRequested += (sender, args) =>
 };
 ```
 
-## See also
-
-- [NativeWebView](/controls/web/nativewebview)
-- [NativeWebDialog](/controls/web/nativewebdialog)
-- [WebAuthenticationBroker](/docs/webview/webauthenticationbroker)
-- [Embedding web content](/docs/app-development/embedding-web-content)
-- [FAQ](/tools/faq#webview)

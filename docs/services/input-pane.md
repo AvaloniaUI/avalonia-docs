@@ -76,5 +76,5 @@ Having `AnimationDuration` and `Easing` allows developer to create a transition 
 
 ## See also
 
-- [Insets Manager](insets-manager): System bar visibility and safe area management.
+- [Insets Manager](/docs/services/insets-manager): System bar visibility and safe area management.
 - [TopLevel](/docs/fundamentals/top-level): Accessing platform services from controls.

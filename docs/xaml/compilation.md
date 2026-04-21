@@ -153,5 +153,5 @@ For the XAML previewer and IntelliSense, ensure `x:DataType` is set. This also e
 
 - [Compiled Bindings](/docs/data-binding/compiled-bindings): Detailed compiled binding reference.
 - [Avalonia XAML](/docs/fundamentals/avalonia-xaml): XAML fundamentals.
-- [x: Directives](directives): Full reference for x:CompileBindings, x:DataType, and other directives.
+- [x: Directives](/docs/xaml/directives): Full reference for x:CompileBindings, x:DataType, and other directives.
 - [Native AOT](/docs/deployment/native-aot): AOT deployment guide.

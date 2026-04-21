@@ -69,7 +69,7 @@ Pressing a configuration in the `Flyout` should either (1) turn on the feature w
 
 ### Text editor with numbered or bulleted list
 
-<img src={ToggleSplitButtonTextListScreenshot} alt=""/>
+<Image light={ToggleSplitButtonTextListScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
 
 Continuing the text editor example from `SplitButton`, a common use case of the `ToggleSplitButton` is to add bulleted/numbered lists to text. In this example the primary part will toggle the list on/off while the secondary part will open a `Flyout` and allow selecting the bullet or number style.
 
