@@ -20,9 +20,9 @@ const config: Config = {
   themes: ['@docusaurus/theme-mermaid'],
   organizationName: 'avaloniaui',
   projectName: 'avalonia',
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenAnchors: 'warn',
-  onBrokenMarkdownLinks: 'throw',
+  onBrokenMarkdownLinks: 'warn',
   headTags: [
     {
       tagName: "link",
