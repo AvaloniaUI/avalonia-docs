@@ -24,7 +24,7 @@ jobs:
                 --max-retries 3
                 --cache
                 --max-cache-age 1d
-                --accept 200..=206,302,403,429
+                --accept 200..=206,302,304,403,429
                 --base-url https://docs.avaloniaui.net
                 --exclude-path 'api'
                 --exclude-path '.claude'

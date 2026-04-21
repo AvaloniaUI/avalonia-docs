@@ -16,7 +16,7 @@ This guide shows you how to bind a [`Button`](/api/avalonia/controls/button) to 
 ## Prerequisites
 
 - A basic Avalonia application with an MVVM structure (a view and a corresponding view model).
-- Familiarity with [data binding](/docs/data-binding/) and `ICommand`.
+- Familiarity with [data binding](/docs/data-binding/introduction-to-data-binding) and `ICommand`.
 
 ## Example
 
