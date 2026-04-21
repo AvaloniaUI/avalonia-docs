@@ -201,4 +201,4 @@ The target control must be attached to a visible window. To render without displ
 - [DrawingImage Control Reference](/controls/media/drawingimage): Vector image source.
 - [How to Bind Image Files](/docs/data-binding/how-to-bind-image-files): Binding images in data templates.
 - [Image Interpolation](/docs/graphics-animation/image-interpolation): Bitmap rendering quality.
-- [Assets](/docs/fundamentals/assets): Asset loading and URI schemes.
+- [Assets](/docs/fundamentals/including-assets): Asset loading and URI schemes.

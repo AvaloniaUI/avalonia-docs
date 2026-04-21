@@ -892,8 +892,9 @@ const redirects: Redirect[] = [
         "from": [
             "/docs/getting-started/assets",
             "/docs/basics/user-interface/assets",
+            "/docs/fundamentals/assets"
         ],
-        "to": "/docs/fundamentals/assets"
+        "to": "/docs/fundamentals/including-assets"
     },
     {
         "from": [

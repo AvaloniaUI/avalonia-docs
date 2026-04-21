@@ -280,5 +280,5 @@ This ensures Avalonia resolves the font from the embedded collection rather than
 
 - [Typography](typography): Font size, weight, style, letter spacing, line height, and text decorations.
 - [How to add a custom font](../how-to/custom-font-how-to)
-- [Assets](../fundamentals/assets)
+- [Assets](/docs/fundamentals/including-assets)
 - [Styles](styles)

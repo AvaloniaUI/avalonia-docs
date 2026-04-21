@@ -49,7 +49,7 @@ const sidebars: SidebarsConfig = {
         'fundamentals/architecture',
         'fundamentals/cross-platform-architecture',
         'fundamentals/application-lifetimes',
-        'fundamentals/assets',
+        'fundamentals/including-assets',
       ],
     },
     {

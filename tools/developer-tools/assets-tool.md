@@ -51,6 +51,6 @@ Any asset larger than 100mb cannot be previewed, and currently it's not configur
 
 ## See also
 
-- [Assets fundamentals](/docs/fundamentals/assets)
+- [Assets fundamentals](/docs/fundamentals/including-assets)
 - [Resources tool](/tools/developer-tools/resources-tool)
 - [Elements tool](/tools/developer-tools/elements-tool)

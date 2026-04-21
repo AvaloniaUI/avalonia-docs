@@ -17,7 +17,7 @@ function createRedirects(existingPath: string): string[] | undefined {
       '/docs/fundamentals/cross-platform-architecture': '/concepts/architecture/cross-platform-architecture',
       '/docs/fundamentals/the-mvvm-pattern': '/concepts/architecture/the-mvvm-pattern',
       '/docs/fundamentals/application-lifetimes': '/concepts/platform-concepts/application-lifetimes',
-      '/docs/fundamentals/assets': '/concepts/ui-concepts/assets',
+      '/docs/fundamentals/including-assets': '/concepts/ui-concepts/assets',
     };
     for (const [newPath, oldPath] of Object.entries(fundamentalsMap)) {
       if (existingPath === newPath) {
