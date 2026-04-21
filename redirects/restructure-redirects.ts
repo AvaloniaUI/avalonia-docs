@@ -142,7 +142,7 @@ function createRedirects(existingPath: string): string[] | undefined {
       '/docs/input-interaction/pointer': '/concepts/ui-concepts/user-input/pointer',
       '/docs/input-interaction/focus': '/concepts/ui-concepts/user-input/focus',
       '/docs/input-interaction/gestures': '/concepts/ui-concepts/user-input/gestures',
-      '/docs/input-interaction/hotkeys': '/concepts/ui-concepts/user-input/keyboard-and-hotkeys',
+      '/docs/input-interaction/keyboard-and-hotkeys': '/concepts/ui-concepts/user-input/keyboard-and-hotkeys',
       '/docs/input-interaction/routed-events': '/concepts/ui-concepts/user-input/routed-events',
     };
     for (const [newPath, oldPath] of Object.entries(inputFromConcepts)) {

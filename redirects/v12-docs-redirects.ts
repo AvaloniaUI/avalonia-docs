@@ -1033,7 +1033,7 @@ const redirects: Redirect[] = [
             "/docs/input/hotkeys",
             "/docs/concepts/input/hotkeys"
         ],
-        "to": "/docs/input-interaction/hotkeys"
+        "to": "/docs/input-interaction/keyboard-and-hotkeys"
     },
     {
         "from": "/docs/concepts/input/focus",

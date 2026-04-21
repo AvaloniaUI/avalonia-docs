@@ -353,6 +353,6 @@ On macOS, use `NativeMenu` to integrate with the system menu bar that appears at
 
 ## See also
 
-- [Hotkeys](/docs/input-interaction/hotkeys): Registering keyboard shortcuts and key bindings.
+- [Hotkeys](/docs/input-interaction/keyboard-and-hotkeys): Registering keyboard shortcuts and key bindings.
 - [Commanding](/docs/input-interaction/commanding): Using commands with controls.
 - [Data binding to commands](/docs/data-binding/binding-to-commands): Binding commands in MVVM patterns.
