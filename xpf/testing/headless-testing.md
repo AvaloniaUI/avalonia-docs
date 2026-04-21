@@ -11,7 +11,7 @@ Instead of automation testing, try Headless testing first as it's fast and porta
 Since XPF is based on the same core as Avalonia, headless testing is available for WPF apps too.
 
 :::tip
-A complete [CalculatorDemo sample](https://github.com/AvaloniaUIOU/CalculatorDemo/tree/headless-testing) with headless tests is available. Ask the support team for access to this repository if needed.
+A complete [CalculatorDemo sample](https://github.com/AvaloniaUIOU/CalculatorDemo) with headless tests is available. Ask the support team for access to this repository if needed.
 :::
 
 :::note

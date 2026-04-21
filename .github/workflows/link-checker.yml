@@ -24,13 +24,14 @@ jobs:
                 --max-retries 3
                 --cache
                 --max-cache-age 1d
-                --accept 200..=206,302,429
+                --accept 200..=206,302,403,429
                 --base-url https://docs.avaloniaui.net
                 --exclude-path 'api'
                 --exclude-path '.claude'
                 --exclude 'https://xpf-nuget-feed.avaloniaui.net/'
                 --exclude 'https://xpf-nuget-feed.avaloniaui.net/packages/xpf.sdk'
                 --exclude 'https://xpf-nuget-feed.avaloniaui.net/v3/index.json'
+                --exclude 'https://github.com/AvaloniaUIOU/CalculatorDemo'
                 './**/*.md'
                 './**/*.mdx'
             format: markdown

@@ -138,6 +138,6 @@ For more details about using resources, see the [resources](/docs/app-developmen
 
 ## See also
 
-- [Resource dictionaries](../app-development/resource-dictionary)
+- [Resource dictionaries](/docs/app-development/resource-dictionary)
 - [Styles](/docs/styling/styles)
 - [Control themes](/docs/styling/control-themes)
