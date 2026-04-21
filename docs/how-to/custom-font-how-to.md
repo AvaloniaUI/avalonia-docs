@@ -133,4 +133,4 @@ To use a different font from the same collection, change the name after `#`. For
 ## See also
 
 - [Custom fonts](/docs/styling/custom-fonts)
-- [Assets](/docs/fundamentals/assets)
+- [Assets](/docs/fundamentals/including-assets)
