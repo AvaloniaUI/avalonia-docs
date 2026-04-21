@@ -1,5 +1,5 @@
 ---
-id: hotkeys
+id: keyboard-and-hotkeys
 title: Keyboard and hotkeys
 description: Learn how to define hotkeys and key bindings in Avalonia using HotKey properties, KeyBindings, KeyGesture, and HotKeyManager for keyboard-driven commands.
 doc-type: reference

@@ -100,7 +100,7 @@ Any of these steps can be replaced with your scripts allowing for higher flexibi
 <TabItem value="win" label="Windows" default>
 
 ```bash
-# `parcel step publish ./ ./publish -r win-x64 -p project.parcel` can be used instead
+# `parcel step publish ./publish -r win-x64 -p project.parcel` can be used instead
 dotnet publish -r win-x64 -o ./publish
 
 # signing, with parameters populated from .parcel config file
