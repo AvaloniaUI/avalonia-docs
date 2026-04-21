@@ -30,7 +30,7 @@ This approach declares the font as a named XAML resource.
 ### Declare the font resource
 
 1. Open **App.axaml**.
-2. Add a [`FontFamily`](/api/avalonia/media/fontfamily) resource inside `<Application.Resources>`, using the [font URI format](../styling/custom-fonts#font-uri-format):
+2. Add a [`FontFamily`](/api/avalonia/media/fontfamily) resource inside `<Application.Resources>`, using the [font URI format](/docs/styling/custom-fonts#font-uri-format):
 
 ```xml title="App.axaml"
 <Application xmlns="https://github.com/avaloniaui"
@@ -132,5 +132,5 @@ To use a different font from the same collection, change the name after `#`. For
 
 ## See also
 
-- [Custom fonts](../styling/custom-fonts)
-- [Assets](/docs/fundamentals/including-assets)
+- [Custom fonts](/docs/styling/custom-fonts)
+- [Assets](/docs/fundamentals/assets)

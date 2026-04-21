@@ -15,7 +15,7 @@ Avalonia creates control trees from the XAML files in an application so that it 
 
 The logical control tree represents the application controls (including the main window) in the hierarchy in which they are defined in the XAML. For example, a control (button) inside another control (stack panel) in a window will have the 3-layer logical tree shown here:
 
-<img src={ControlTreesLogicalScreenshot} alt="Logical tree structure of an Avalonia window"/>
+<Image light={ControlTreesLogicalScreenshot} alt="Logical tree structure of an Avalonia window" position="center" maxWidth={400} cornerRadius="true"/>
 
 While your application is running, you can show the _Avalonia Dev Tools_ window (press <kbd>F12</kbd>). This displays the logical tree on its **Logical Tree** tab.
 
@@ -23,7 +23,7 @@ While your application is running, you can show the _Avalonia Dev Tools_ window 
 
 The visual control tree contains everything that is actually being run by Avalonia. It shows all the properties set on the controls, and all the additional parts that have been added by Avalonia to present the UI and manage the application functionality.
 
-<img src={ControlTreesVisualScreenshot} alt="Visual tree structure showing template-expanded controls"/>
+<Image light={ControlTreesVisualScreenshot} alt="Visual tree structure showing template-expanded controls" position="center" maxWidth={400} cornerRadius="true"/>
 
 You can see the visual control tree on the **Visual Tree** tab of the _Avalonia Dev Tools_ window.
 
@@ -31,7 +31,7 @@ You can see the visual control tree on the **Visual Tree** tab of the _Avalonia 
 
 An essential part of application functionality management performed by Avalonia, is the generation and propagation of events. The **Events** tab logs the source and propagation of events as you move around, and otherwise interact with the running application.
 
-<img src={ControlTreesEventScreenshot} alt="Event routing through the control tree"/>
+<Image light={ControlTreesEventScreenshot} alt="Event routing through the control tree" position="center" maxWidth={400} cornerRadius="true"/>
 
 ## Logical tree vs visual tree
 

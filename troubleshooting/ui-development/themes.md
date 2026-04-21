@@ -15,7 +15,7 @@ Common causes include:
 - **Wrong `TargetType`**: The `TargetType` on your `ControlTheme` does not match the control you are trying to style.
 - **Theme not included**: You have not added a `StyleInclude` or `ResourceInclude` pointing to the file that contains your control theme.
 
-To diagnose the problem, open the [Avalonia DevTools](/docs/guides/developer-guides/developer-tools) at runtime and inspect the `Styles` panel. This shows you which styles and themes are active on the selected control, helping you confirm whether your theme has been loaded and applied.
+To diagnose the problem, open the [Avalonia DevTools](/tools/developer-tools/installation) at runtime and inspect the `Styles` panel. This shows you which styles and themes are active on the selected control, helping you confirm whether your theme has been loaded and applied.
 
 ```xml title="Example: defining and referencing a control theme"
 <!-- In your theme file (e.g., MyButtonTheme.axaml) -->
@@ -82,6 +82,6 @@ If the issue persists with a third-party theme, contact the theme's maintainers 
 
 - [Themes overview](/docs/styling/themes)
 - [Styles](/docs/styling/styles)
-- [Troubleshooting styles](styles.md)
+- [Troubleshooting styles](/docs/styling/styles)
 - [How to use control themes](/docs/styling/control-themes)
 - [Developer tools](/tools/developer-tools/installation)

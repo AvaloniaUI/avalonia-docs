@@ -124,7 +124,7 @@ public sealed class RgbToBrushMultiConverter : IMultiValueConverter
 
 Drag any of the three sliders and the text color updates immediately:
 
-<img src={MultiBindingRgbScreenshot} alt="App showing RGB sliders bound to multiple properties producing a combined color"/>
+<Image light={MultiBindingRgbScreenshot} alt="App showing RGB sliders bound to multiple properties producing a combined color" position="center" maxWidth={400} cornerRadius="true"/>
 
 ## Simplify with `FuncMultiValueConverter`
 

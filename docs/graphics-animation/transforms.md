@@ -206,7 +206,7 @@ Transforms are commonly animated using keyframe animations or transitions. Bind 
 </Border>
 ```
 
-For more information on animations, see [Keyframe Animations](keyframe-animations) and [Control Transitions](control-transitions).
+For more information on animations, see [Keyframe Animations](/docs/graphics-animation/keyframe-animations) and [Control Transitions](/docs/graphics-animation/control-transitions).
 
 ## Transforms in code
 
@@ -227,6 +227,6 @@ rotateTransform.Angle = 90; // Immediate change
 
 ## See also
 
-- [Keyframe Animations](keyframe-animations): Animate transforms over time.
-- [Control Transitions](control-transitions): Apply transitions when property values change.
-- [Drawing Graphics](drawing-graphics): Shapes and geometries.
+- [Keyframe Animations](/docs/graphics-animation/keyframe-animations): Animate transforms over time.
+- [Control Transitions](/docs/graphics-animation/control-transitions): Apply transitions when property values change.
+- [Drawing Graphics](/docs/graphics-animation/drawing-graphics): Shapes and geometries.

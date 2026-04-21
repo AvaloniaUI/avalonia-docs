@@ -46,15 +46,15 @@ You need to create an Xcode app project that has the same `bundle identifier` th
 
 1. Open Xcode
 
-<img src={IOSOpenXcodeScreenshot} alt=''/>
+<Image light={IOSOpenXcodeScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
 
 2. Select Create a new Xcode project
 
-<img src={IOSCreateXcodeProjectScreenshot} alt=''/>
+<Image light={IOSCreateXcodeProjectScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
 
 3. Select iOS and App and click Next.
 
-<img src={IOSSelectProjectOptionsScreenshot} alt=''/>
+<Image light={IOSSelectProjectOptionsScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
 
 4. Type in a name for your project and Organisation. Keep all the rest of the information the same.
 
@@ -62,25 +62,25 @@ You need to create an Xcode app project that has the same `bundle identifier` th
 
 6. In the status bar at the top click on the "Any device (arm64)"
 
-<img src={IOSSelectAnyDeviceScreenshot} alt=''/>
+<Image light={IOSSelectAnyDeviceScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
 
 7. At the bottom of the list click "Add Additional Simulators..."
 
-<img src={IOSAddAdditionalSimulatorsScreenshot} alt=''/>
+<Image light={IOSAddAdditionalSimulatorsScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
 
 8. Click on devices and connect your iPhone or iPad with the USB cable. Xcode will start to provision your phone for development.
 
-<img src={IOSProvisionPhoneScreenshot} alt=''/>
+<Image light={IOSProvisionPhoneScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
 
 9. Select your iPhone or iPad from the device list.
 
-<img src={IOSSelectDeviceScreenshot} alt=''/>
+<Image light={IOSSelectDeviceScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
 
 10. Click the play button and the app will be installed and run on your phone.
 
 If successful, your device is now provisioned for development. To find your code signing key, open the **Keychain Access** application and search for "development".
 
-<img src={IOSCertScreenshot} alt=''/>
+<Image light={IOSCertScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
 
 The bold text at the top of the window on your selected development certificate is your signing key value (e.g., `Apple Development: dan@walms.co.uk (3L323F7VSS)`).
 

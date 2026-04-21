@@ -63,7 +63,7 @@ Fired before the underlying webview adapter is created, allowing customization o
 Use this event to modify environment options (such as enabling private mode or dev tools) before the webview is initialized.
 The event argument type depends on the platform.
 
-See the page on [environment options](/docs/webview/webview-environment) for details.
+See the page on [environment options](/controls/web/webview-environment) for details.
 
 ### NavigationCompleted
 

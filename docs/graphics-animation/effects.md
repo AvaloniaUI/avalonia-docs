@@ -267,7 +267,7 @@ Box shadows and opacity can be animated with transitions:
 
 ## See also
 
-- [Brushes](brushes): All brush types including gradient and image brushes.
-- [Drawing Graphics](drawing-graphics): Shapes, geometries, and path data.
-- [Transforms](transforms): Rotate, scale, skew, and translate elements.
-- [Control Transitions](control-transitions): Animate property changes.
+- [Brushes](/docs/graphics-animation/brushes): All brush types including gradient and image brushes.
+- [Drawing Graphics](/docs/graphics-animation/drawing-graphics): Shapes, geometries, and path data.
+- [Transforms](/docs/graphics-animation/transforms): Rotate, scale, skew, and translate elements.
+- [Control Transitions](/docs/graphics-animation/control-transitions): Animate property changes.

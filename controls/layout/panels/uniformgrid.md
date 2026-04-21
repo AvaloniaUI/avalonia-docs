@@ -127,8 +127,8 @@ In this example, the first cell in the first row is empty. Button "A" appears in
 
 ## See also
 
-- [Grid](grid)
-- [WrapPanel](wrappanel)
-- [StackPanel](stackpanel)
+- [Grid](/controls/layout/panels/grid)
+- [WrapPanel](/controls/layout/panels/wrappanel)
+- [StackPanel](/controls/layout/panels/stackpanel)
 - [UniformGrid API reference](https://reference.avaloniaui.net/api/Avalonia.Controls.Primitives/UniformGrid/)
 

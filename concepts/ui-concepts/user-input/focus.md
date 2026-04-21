@@ -148,4 +148,4 @@ navigation. Pressing Enter a second time will end the interaction and resume Dir
 </Window>
 ```
 
-<img src={DirectionalNavigationScreenshot} alt="Directional Navigation Example"/>
+<Image light={DirectionalNavigationScreenshot} alt="Directional Navigation Example" position="center" maxWidth={400} cornerRadius="true"/>

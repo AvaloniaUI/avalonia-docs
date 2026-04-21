@@ -45,7 +45,7 @@ AT-SPI2 support is enabled automatically when a D-Bus session bus is available a
 
 ### Testing with Accerciser
 
-[Accerciser](https://wiki.gnome.org/Projects/Accerciser) is an interactive accessibility explorer that displays the AT-SPI2 tree. It is useful for verifying that your controls expose the correct roles, names, and states:
+[Accerciser](https://gitlab.gnome.org/GNOME/accerciser) is an interactive accessibility explorer that displays the AT-SPI2 tree. It is useful for verifying that your controls expose the correct roles, names, and states:
 
 ```bash
 sudo apt install accerciser

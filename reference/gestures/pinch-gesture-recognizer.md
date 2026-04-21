@@ -87,5 +87,5 @@ View the source code on GitHub:
 
 ## See also
 
-- [ScrollGestureRecognizer](scroll-gesture-recognizer.md)
-- [PullGestureRecognizer](pull-gesture-recognizer.md)
+- [ScrollGestureRecognizer](/reference/gestures/scroll-gesture-recognizer)
+- [PullGestureRecognizer](/reference/gestures/pull-gesture-recognizer)

@@ -99,7 +99,7 @@ This is a simple text-based tooltip, using default values for the placement and 
 
 </XamlPreview>
 
-<img src={ToolTipTextHoverScreenshot} alt="" />
+<Image light={ToolTipTextHoverScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
 
 To provide a richer presentation for a tooltip, use a `<ToolTip.Tip>` element. Hover over the rectangle in the preview to see the tooltip.
 
@@ -121,7 +121,7 @@ To provide a richer presentation for a tooltip, use a `<ToolTip.Tip>` element. H
 
 </XamlPreview>
 
-<img src={ToolTipContentScreenshot} alt="" />
+<Image light={ToolTipContentScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
 
 ## See also
 

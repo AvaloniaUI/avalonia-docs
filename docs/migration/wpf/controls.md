@@ -28,10 +28,10 @@ So to recap:
 RenderTransformOrigins are different in WPF and Avalonia: If you apply a `RenderTransform`, keep in mind that default value for the RenderTransformOrigin in Avalonia is `RelativePoint.Center`. In WPF the default value is `RelativePoint.TopLeft` \(0, 0\). In controls like Viewbox the same code will lead to a different rendering behavior:
 
 **In WPF:**
-<img src={RenderTransformOriginWpfScreenshot} alt="WPF" />
+<Image light={RenderTransformOriginWpfScreenshot} alt="WPF" position="center" maxWidth={400} cornerRadius="true"/>
 
 **In Avalonia:**
-<img src={RenderTransformOriginAvaloniaScreenshot} alt="Avalonia" />
+<Image light={RenderTransformOriginAvaloniaScreenshot} alt="Avalonia" position="center" maxWidth={400} cornerRadius="true"/>
 
 In AvaloniaUI, to get the same scale transform we should indicate that the RenderTransformOrigin is the TopLeft part of the Visual.
 
@@ -109,5 +109,5 @@ Avalonia does not include a built-in `RichTextBox`. For rich text editing, use a
 
 ## See also
 
-- [WPF to Avalonia Cheat Sheet](cheat-sheet): Quick reference for all control mappings.
+- [WPF to Avalonia Cheat Sheet](/docs/migration/wpf/cheat-sheet): Quick reference for all control mappings.
 - [Controls Reference](/controls): Full Avalonia controls documentation.

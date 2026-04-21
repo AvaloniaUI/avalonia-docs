@@ -39,7 +39,7 @@ You can style each state independently using pseudo classes in your AXAML styles
 
 This example shows a toggle button containing a speaker icon, or a muted speaker icon, depending on whether the button has the checked pseudo class or not.
 
-<img src={ToggleButtonMuteScreenshot} alt="" />
+<Image light={ToggleButtonMuteScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
 
 ```xml
 <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
@@ -146,9 +146,9 @@ public class MyViewModel : ViewModelBase
 
 ## See also
 
-- [Button](button)
+- [Button](/controls/input/buttons/button)
 - [CheckBox](/controls/input/selectors/checkbox)
-- [ToggleSplitButton](togglesplitbutton)
-- [RadioButton](radiobutton)
+- [ToggleSplitButton](/controls/input/buttons/togglesplitbutton)
+- [RadioButton](/controls/input/buttons/radiobutton)
 - [ToggleButton API reference](/api/avalonia/controls/primitives/togglebutton)
 - [`ToggleButton.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Primitives/ToggleButton.cs)

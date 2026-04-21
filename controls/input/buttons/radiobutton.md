@@ -133,7 +133,7 @@ You can arrange radio buttons horizontally by placing them inside a horizontal `
 
 ## See also
 
-- [CheckBox](../selectors/checkbox.md)
-- [ToggleButton](togglebutton.md)
-- [Button](button.md)
-- [RadioButton API Reference](https://reference.avaloniaui.net/api/Avalonia.Controls/RadioButton/)
+- [CheckBox](/controls/input/selectors/checkbox)
+- [ToggleButton](/controls/input/buttons/togglebutton)
+- [Button](/controls/input/buttons/button)
+- [RadioButton API Reference](/api/avalonia/controls/radiobutton)

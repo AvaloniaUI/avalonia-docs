@@ -143,6 +143,6 @@ And if you want to include WebP as one of the file types you consider to be an i
 
 ## See also
 
-- [Storage Provider](storage-provider): Full storage provider API reference.
+- [Storage Provider](/docs/services/storage/storage-provider): Full storage provider API reference.
 - [File Dialogs](/docs/services/file-dialogs): Using file open, save, and folder picker dialogs.
-- [Bookmarks](bookmarks): Persisting access to picked files and folders.
+- [Bookmarks](/docs/services/storage/bookmarks): Persisting access to picked files and folders.

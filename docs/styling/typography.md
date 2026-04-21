@@ -5,7 +5,7 @@ description: Font size, weight, style, stretch, letter spacing, line height, tex
 doc-type: reference
 ---
 
-Avalonia provides a set of properties for controlling how text appears in your application. These properties are defined on [`TextElement`](/api/avalonia/controls/documents/textelement) as inherited attached properties, so you can set them on any control to affect all text within its visual tree through [property value inheritance](../properties/property-value-inheritance).
+Avalonia provides a set of properties for controlling how text appears in your application. These properties are defined on [`TextElement`](/api/avalonia/controls/documents/textelement) as inherited attached properties, so you can set them on any control to affect all text within its visual tree through [property value inheritance](/docs/properties/property-value-inheritance).
 
 ## TextElement attached properties
 
@@ -311,11 +311,11 @@ The `FontFeatures` property enables or disables OpenType features such as ligatu
 <TextBlock Text="Small Caps" FontFeatures="+smcp" />
 ```
 
-For a full list of common tags and usage examples, see [Custom fonts: OpenType font features](custom-fonts#opentype-font-features).
+For a full list of common tags and usage examples, see [Custom fonts: OpenType font features](/docs/styling/custom-fonts#opentype-font-features).
 
 ## Creating a type scale with style classes
 
-Avalonia does not include built-in heading styles like HTML's `<h1>` through `<h6>`. You can create your own type scale using [style classes](style-classes), giving you full control over the sizes, weights, and spacing that match your application's design.
+Avalonia does not include built-in heading styles like HTML's `<h1>` through `<h6>`. You can create your own type scale using [style classes](/docs/styling/style-classes), giving you full control over the sizes, weights, and spacing that match your application's design.
 
 Define the styles in your `App.axaml` (or any shared resource file) so they are available throughout your application:
 
@@ -373,7 +373,7 @@ You can combine style classes with inline overrides when a specific instance nee
 <TextBlock Classes="h1" Foreground="DodgerBlue" Text="Colored heading" />
 ```
 
-This approach works well with [sharing styles](sharing-styles) across your application. Define the type scale once, then use it consistently everywhere.
+This approach works well with [sharing styles](/docs/styling/sharing-styles) across your application. Define the type scale once, then use it consistently everywhere.
 
 ## Setting typography from code
 
@@ -397,11 +397,11 @@ myTextBlock.TextDecorations = TextDecorations.Underline;
 
 ## See also
 
-- [Custom fonts](custom-fonts): Embedding and loading custom font files.
-- [Text options](../graphics-animation/text-options): Controlling text rendering, hinting, and baseline alignment.
+- [Custom fonts](/docs/styling/custom-fonts): Embedding and loading custom font files.
+- [Text options](/docs/graphics-animation/text-options): Controlling text rendering, hinting, and baseline alignment.
 - [TextBlock](/controls/data-display/text-display/textblock): The primary control for displaying formatted text.
 - [TextTrimming](/controls/data-display/text-display/texttrimming): How text is truncated when it overflows.
-- [Property value inheritance](../properties/property-value-inheritance): How font properties propagate through the visual tree.
+- [Property value inheritance](/docs/properties/property-value-inheritance): How font properties propagate through the visual tree.
 - [`TextElement` API reference](/api/avalonia/controls/documents/textelement)
-- [Style classes](style-classes): Applying named style classes to controls.
+- [Style classes](/docs/styling/style-classes): Applying named style classes to controls.
 - [`FontWeight` API reference](/api/avalonia/media/fontweight)

@@ -153,6 +153,6 @@ Only supported on the OS, with physical file paths, primarily only desktop.
 ## See also
 
 - [File Dialogs](/docs/services/file-dialogs): Common file dialog usage examples.
-- [File Picker Options](file-picker-options): Configuring file type filters and dialog options.
-- [Bookmarks](bookmarks): Persisting access to picked files and folders.
-- [Storage Items](storage-item): Working with files and folders returned by the storage provider.
+- [File Picker Options](/docs/services/storage/file-picker-options): Configuring file type filters and dialog options.
+- [Bookmarks](/docs/services/storage/bookmarks): Persisting access to picked files and folders.
+- [Storage Items](/docs/services/storage/storage-item): Working with files and folders returned by the storage provider.

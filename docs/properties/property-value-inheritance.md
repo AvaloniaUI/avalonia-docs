@@ -11,7 +11,7 @@ Property value inheritance allows a property value set on a parent element to pr
 
 When an Avalonia property is registered with `inherits: true`, the property system checks ancestor elements in the visual tree if no local, styled, or animated value is set on the current element. The first ancestor that has a value for the property provides the inherited value.
 
-Inherited values have the lowest priority in the [value precedence](value-precedence) system (just above `Unset`). A local value, style, or animation on a child will always override an inherited value.
+Inherited values have the lowest priority in the [value precedence](/docs/properties/value-precedence) system (just above `Unset`). A local value, style, or animation on a child will always override an inherited value.
 
 ## Built-in inherited properties
 

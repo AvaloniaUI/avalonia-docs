@@ -114,6 +114,6 @@ Instead of the typical `[Fact]` attribute, use `[AvaloniaFact]` as it sets up th
 ## See also
 
 - [Testable sample app for XUnit](https://github.com/AvaloniaUI/Avalonia.Samples/tree/main/src/Avalonia.Samples/Testing/TestableApp.Headless.XUnit)
-- [Headless Testing Platform](setting-up-the-headless-platform)
-- [Headless Testing with NUnit](headless-nunit)
-- [UI Testing with Appium](ui-testing-with-appium)
+- [Headless Testing Platform](/docs/testing/setting-up-the-headless-platform)
+- [Headless Testing with NUnit](/docs/testing/headless-nunit)
+- [UI Testing with Appium](/docs/testing/ui-testing-with-appium)

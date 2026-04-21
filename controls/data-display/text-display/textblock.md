@@ -23,7 +23,7 @@ The [`TextBlock`](/api/avalonia/controls/textblock) is a read-only label for dis
 | `Background`      | `IBrush`                   | The brush used to paint the area behind the text.                                                                                                                                                                     |
 | [`TextAlignment`](/api/avalonia/media/textalignment)   | `TextAlignment`            | Controls horizontal alignment of text within the control. Options are `Left`, `Center`, `Right`, `Justify`, and `DetectFromContent`.                                                                                  |
 | [`TextWrapping`](/api/avalonia/media/textwrapping)    | `TextWrapping`             | Controls whether text wraps when it reaches the edge of the control. Options are `NoWrap` (default), `Wrap`, and `WrapWithOverflow`.                                                                                  |
-| [`TextTrimming`](/api/avalonia/media/texttrimming)    | `TextTrimming`             | Controls how text is trimmed when it overflows. Options include `None` (default), `CharacterEllipsis`, `WordEllipsis`, and others. See [TextTrimming](texttrimming) for full details.                                  |
+| [`TextTrimming`](/api/avalonia/media/texttrimming)    | `TextTrimming`             | Controls how text is trimmed when it overflows. Options include `None` (default), `CharacterEllipsis`, `WordEllipsis`, and others. See [TextTrimming](/controls/data-display/text-display/texttrimming) for full details.                                  |
 | `MaxLines`        | `int`                      | Limits the number of visible lines. When combined with `TextWrapping` and `TextTrimming`, overflow is trimmed after this many lines.                                                                                   |
 | `LineHeight`      | `double`                   | The height of each line of text. Set to `NaN` (the default) to let the font metrics determine line height.                                                                                                            |
 | `TextDecorations` | `TextDecorationCollection` | A line decoration to apply to the lettering. Default is none, options include `Underline`, `Strikethrough`, `Baseline`, and `Overline`. To apply more than one at the same time, list the options with spaces between. |
@@ -88,7 +88,7 @@ You can combine `TextWrapping`, `TextTrimming`, and `MaxLines` to wrap text for 
            Text="This is a long paragraph that wraps for up to three lines, then trims any remaining overflow with an ellipsis." />
 ```
 
-For a full list of trimming modes and visual examples, see [TextTrimming](texttrimming).
+For a full list of trimming modes and visual examples, see [TextTrimming](/controls/data-display/text-display/texttrimming).
 
 ## Text alignment
 
@@ -129,7 +129,7 @@ The `Run` inline represents a contiguous run of uniformly formatted text. You ca
 </TextBlock>
 ```
 
-<img src={TextBlockRunScreenshot} alt="A TextBlock using Run inlines with mixed formatting and data binding" />
+<Image light={TextBlockRunScreenshot} alt="A TextBlock using Run inlines with mixed formatting and data binding" position="center" maxWidth={400} cornerRadius="true"/>
 
 ### LineBreak
 
@@ -188,12 +188,12 @@ The `InlineUIContainer` allows you to embed any `Control` as an inline element w
 </TextBlock>
 ```
 
-<img src={TextBlockUIContainerScreenshot} alt="A TextBlock with inline UI containers including an image and a button" />
+<Image light={TextBlockUIContainerScreenshot} alt="A TextBlock with inline UI containers including an image and a button" position="center" maxWidth={400} cornerRadius="true"/>
 
 ## See also
 
-- [SelectableTextBlock](selectabletextblock)
-- [Label](label)
-- [TextTrimming](texttrimming)
+- [SelectableTextBlock](/controls/data-display/text-display/selectabletextblock)
+- [Label](/controls/data-display/text-display/label)
+- [TextTrimming](/controls/data-display/text-display/texttrimming)
 - [TextBlock API reference](/api/avalonia/controls/textblock)
 - [`TextBlock.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/TextBlock.cs)

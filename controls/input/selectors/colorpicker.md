@@ -86,37 +86,37 @@ Several pre-defined color palettes implementing the `IColorPalette` interface ar
   </tr>
   <tr>
     <td>
-      <img src={ColorPaletteFluent} alt="Fluent Color Palette" width="300" />
+      <Image light={ColorPaletteFluent} alt="Fluent Color Palette" position="center" maxWidth={400} cornerRadius="true"/>
     </td>
     <td>Contains the Fluent color palette found in Windows 10 and later. This is the default color palette.</td>
   </tr>
   <tr>
     <td>
-      <img src={ColorPaletteFlat} alt="Flat UI Color Palette" width="300" />
+      <Image light={ColorPaletteFlat} alt="Flat UI Color Palette" position="center" maxWidth={400} cornerRadius="true"/>
     </td>
     <td>Contains the full <a href="https://github.com/designmodo/Flat-UI">Flat UI color palette</a>.</td>
   </tr>
   <tr>
     <td>
-      <img src={ColorPaletteFlatHalf} alt="Flat UI Half Color Palette" width="300" />
+      <Image light={ColorPaletteFlatHalf} alt="Flat UI Half Color Palette" position="center" maxWidth={400} cornerRadius="true"/>
     </td>
     <td>Contains half of <a href="https://github.com/designmodo/Flat-UI">Flat UI color palette</a> for improved usability especially on mobile devices.</td>
   </tr>
   <tr>
     <td>
-      <img src={ColorPaletteMaterial} alt="Material Color Palette" width="300" />
+      <Image light={ColorPaletteMaterial} alt="Material Color Palette" position="center" maxWidth={400} cornerRadius="true"/>
     </td>
     <td>Contains most of the <a href="https://material.io/design/color/the-color-system.html#tools-for-picking-colors">Material design color palette</a>. To make the palette uniform and rectangular the following alterations were made 1. The A100-A700 shades of each color are excluded. These shades do not exist for all colors (Brown/Gray). 2. Black/White are stand-alone colors and are also excluded.</td>
   </tr>
   <tr>
     <td>
-      <img src={ColorPaletteMaterialHalf} alt="Material Half Color Palette" width="300" />
+      <Image light={ColorPaletteMaterialHalf} alt="Material Half Color Palette" position="center" maxWidth={400} cornerRadius="true"/>
     </td>
     <td>Contains half of the <a href="https://material.io/design/color/the-color-system.html#tools-for-picking-colors">Material design color palette</a> shown above for improved usability especially on mobile devices.</td>
   </tr>
   <tr>
     <td>
-      <img src={ColorPaletteSixteen} alt="Sixteen Color Palette" width="300" />
+      <Image light={ColorPaletteSixteen} alt="Sixteen Color Palette" position="center" maxWidth={400} cornerRadius="true"/>
     </td>
     <td>Contains the standard <a href="https://en.wikipedia.org/wiki/Web_colors#HTML_color_names">sixteen color palette</a> from the HTML 4.01 specification.</td>
   </tr>

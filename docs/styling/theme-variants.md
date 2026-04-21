@@ -7,7 +7,7 @@ import OverriddenThemeVariant from '/img/guides/ui-development/overridden-theme-
 import CustomThemeDictionaries from '/img/guides/ui-development/custom-theme-dictionaries.png';
 
 :::tip
-Because theme variants are deeply integrated into the resource system, it is important to understand Avalonia [resources](../app-development/resource-dictionary).
+Because theme variants are deeply integrated into the resource system, it is important to understand Avalonia [resources](/docs/app-development/resource-dictionary).
 :::
 
 ## Introduction
@@ -134,10 +134,10 @@ Continuing previous example, let's add `BackgroundBrush` and `ForegroundBrush` w
 Resources defined in `ThemeDictionaries` are only available when using the `DynamicResource` markup extension. `StaticResource` will not find these resources and will produce an exception at runtime unless a resource with an identical key exists in a non-`ThemeDictionaries` portion of a `ResourceDictionary`.
 :::
 
-For more details about using resources, see the [resources](../app-development/resource-dictionary) page.
+For more details about using resources, see the [resources](/docs/app-development/resource-dictionary) page.
 
 ## See also
 
-- [Resource dictionaries](../app-development/resource-dictionary)
-- [Styles](styles)
-- [Control themes](control-themes)
+- [Resource dictionaries](/docs/app-development/resource-dictionary)
+- [Styles](/docs/styling/styles)
+- [Control themes](/docs/styling/control-themes)

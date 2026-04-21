@@ -58,4 +58,4 @@ A Hotkey must have one [Key](https://api-docs.avaloniaui.net/docs/T_Avalonia_Inp
 ### Source code
 
 * [HotkeyManager.cs](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/HotkeyManager.cs)
-* [KeyGesture.cs](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Input/KeyGesture.cs)
+* [KeyGesture.cs](hhttps://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Base/Input/KeyGesture.cs)

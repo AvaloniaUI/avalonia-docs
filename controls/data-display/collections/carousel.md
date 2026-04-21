@@ -79,7 +79,7 @@ namespace AvaloniaControls.Views
 }
 ```
 
-<img src={CarouselScreenshot} alt="Carousel control cycling through slides" />
+<Image light={CarouselScreenshot} alt="Carousel control cycling through slides" position="center" maxWidth={400} cornerRadius="true"/>
 
 ## Binding to a collection
 

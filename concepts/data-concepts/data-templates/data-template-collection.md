@@ -45,7 +45,7 @@ You can modify the previous sample to use the `DataTemplates` collection as foll
 
 This results in exactly the same display as on the previous page:
 
-<img src={DataTemplatesCollectionStudentScreenshot} alt=""/>
+<Image light={DataTemplatesCollectionStudentScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
 
 ## When to use `DataTemplates` vs a single `DataTemplate`
 
@@ -69,7 +69,7 @@ The first template whose `DataType` matches the object's type is used. This mean
 
 ## See also
 
-- [Introduction to data templates](introduction-to-data-templates)
-- [Control content](control-content)
-- [Content templates](content-templates)
+- [Introduction to data templates](/docs/data-templates/introduction-to-data-templates)
+- [Control content](/docs/data-templates/control-content)
+- [Content templates](/docs/data-templates/content-templates)
 

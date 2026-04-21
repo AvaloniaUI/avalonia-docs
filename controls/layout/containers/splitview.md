@@ -67,7 +67,7 @@ The display mode property controls how the pane is drawn in its open and closed 
 
 You can use the MVVM pattern with the split view control and one of the compact display mode settings to implement a 'tool pane' style UI. There is enough room on the pane when it is closed to display an icon button that opens the pane.
 
-<img src={SplitViewCompactScreenshot} alt="" />
+<Image light={SplitViewCompactScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
 
 ## Navigation sidebar pattern
 

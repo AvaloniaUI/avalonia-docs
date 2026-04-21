@@ -24,7 +24,7 @@ Choose composition animations when you need to:
 - Run animations on the render thread for maximum smoothness
 - Use expression-based or physics-based animation logic
 
-For style-driven scenarios, [Keyframe Animations](keyframe-animations) and [Control Transitions](control-transitions) are simpler and more appropriate.
+For style-driven scenarios, [Keyframe Animations](/docs/graphics-animation/keyframe-animations) and [Control Transitions](/docs/graphics-animation/control-transitions) are simpler and more appropriate.
 
 ## Core concepts
 
@@ -199,6 +199,6 @@ Every `ListBoxItem` now smoothly animates to its new position whenever the list 
 
 ## See also
 
-- [Keyframe Animations](keyframe-animations)
-- [Control Transitions](control-transitions)
-- [Custom Rendering](custom-rendering)
+- [Keyframe Animations](/docs/graphics-animation/keyframe-animations)
+- [Control Transitions](/docs/graphics-animation/control-transitions)
+- [Custom Rendering](/docs/graphics-animation/custom-rendering)

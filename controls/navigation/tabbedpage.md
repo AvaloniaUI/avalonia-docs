@@ -157,7 +157,7 @@ var tabbedPage = new TabbedPage
 window.Page = tabbedPage;
 ```
 
-<img src={TabbedPageBottomScreenshot} alt="" />
+<Image light={TabbedPageBottomScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
 
 ### Tab Icons
 
@@ -188,7 +188,7 @@ var homePage = new ContentPage
 };
 ```
 
-<img src={TabbedPageIconsScreenshot} alt="" />
+<Image light={TabbedPageIconsScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
 
 ### Controlling TabPlacement
 
@@ -208,11 +208,11 @@ In XAML:
 </TabbedPage>
 ```
 
-<img src={TabbedPageTopScreenshot} alt="" />
+<Image light={TabbedPageTopScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
 
-<img src={TabbedPageLeftScreenshot} alt="" />
+<Image light={TabbedPageLeftScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
 
-<img src={TabbedPageRightScreenshot} alt="" />
+<Image light={TabbedPageRightScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
 
 ### Dynamic Tab Management
 
@@ -379,7 +379,7 @@ Combine a drawer navigation menu with tabbed content in the detail area:
 </DrawerPage>
 ```
 
-<img src={TabbedPageInDrawerPageScreenshot} alt="" />
+<Image light={TabbedPageInDrawerPageScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
 
 ## See also
 

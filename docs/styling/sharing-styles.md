@@ -30,7 +30,7 @@ The Avalonia solution templates provide a quick way of adding a styles file to y
 -  From the Avalonia Items, click **Styles (Avalonia)**
 -  Type a name for your styles file
 
-<img src={VsStylesTemplateScreenshot} alt="Visual Studio Add New Item dialog showing the Styles (Avalonia) template"/>
+<Image light={VsStylesTemplateScreenshot} alt="Visual Studio Add New Item dialog showing the Styles (Avalonia) template" position="center" maxWidth={400} cornerRadius="true"/>
 
 To use the styles defined in a separate file, you must reference it using a [`StyleInclude`](/api/avalonia/markup/xaml/styling/styleinclude) element. The source attribute defines the location of the styles file. You can choose the level at which to add this element.
 
@@ -99,5 +99,5 @@ You have two options to resolve this:
 
 ## See also
 
-- [Styles](styles)
-- [Style precedence](style-precedence)
+- [Styles](/docs/styling/styles)
+- [Style precedence](/docs/styling/style-precedence)

@@ -147,11 +147,11 @@ var page = new ContentPage
 
 The page looks like this when hosted inside a `NavigationPage`:
 
-<img src={ContentPageInNavigationScreenshot} alt="" />
+<Image light={ContentPageInNavigationScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
 
 Without a navigation container, only the page content is shown:
 
-<img src={ContentPageStandaloneScreenshot} alt="" />
+<Image light={ContentPageStandaloneScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
 
 ### ContentPage as a Window Root
 
@@ -256,7 +256,7 @@ Place a `CommandBar` or any other control in the `TopCommandBar` slot. The slot 
 </ContentPage>
 ```
 
-<img src={ContentPageTopCommandBarScreenshot} alt="" />
+<Image light={ContentPageTopCommandBarScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
 
 ### BottomCommandBar
 
@@ -283,7 +283,7 @@ Place a `CommandBar` or any other control in the `TopCommandBar` slot. The slot 
 </ContentPage>
 ```
 
-<img src={ContentPageBottomCommandBarScreenshot} alt="" />
+<Image light={ContentPageBottomCommandBarScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
 
 ### Cancelling Navigation with Unsaved Changes
 
@@ -380,7 +380,7 @@ Use this for pages with hero images, maps, or other content that should extend u
 </ContentPage>
 ```
 
-<img src={ContentPageSafeAreaDisabledScreenshot} alt="" />
+<Image light={ContentPageSafeAreaDisabledScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
 
 ### ContentPage as a Tab with an Icon
 
@@ -393,7 +393,7 @@ var homePage = new ContentPage
 };
 ```
 
-<img src={ContentPageAsTabScreenshot} alt="" />
+<Image light={ContentPageAsTabScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
 
 ## See also
 

@@ -35,7 +35,7 @@ This example uses the `DayFormat` attribute to display the name of the day as we
 </StackPanel>
 ```
 
-<img src={DatePickerScreenshot} alt="" />
+<Image light={DatePickerScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
 
 ## Hiding date parts
 
@@ -119,8 +119,8 @@ public partial class MyViewModel : ObservableObject
 
 ## See also
 
-- [Calendar](calendar.md)
-- [CalendarDatePicker](calendardatepicker.md)
-- [TimePicker](timepicker.md)
+- [Calendar](/controls/input/date-and-time/calendar)
+- [CalendarDatePicker](/controls/input/date-and-time/calendardatepicker)
+- [TimePicker](/controls/input/date-and-time/timepicker)
 - [DatePicker API reference](/api/avalonia/controls/datepicker)
 - [`DatePicker.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/DateTimePickers/DatePicker.cs)

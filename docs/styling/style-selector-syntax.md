@@ -74,7 +74,7 @@ new Style(x => x.OfType<Button>().Class("large").Class(":focus"));
 Selects a control using its current pseudo class. The colon character defines the start of the pseudo class name in the selector. Multiple pseudo classes may be applied to the same Control.
 
 :::info
-For more detail about pseudo classes, see [Pseudoclasses](pseudoclasses).
+For more detail about pseudo classes, see [Pseudoclasses](/docs/styling/pseudoclasses).
 :::
 
 ## Include derived classes
@@ -120,7 +120,7 @@ new Style(x => x.OfType<StackPanel>().Child().OfType<Button>());
 A child selector is defined by separating two selectors with a `>` character. This selector matches only direct children in the **logical controls tree**.
 
 :::info
-For the concept behind the logical controls tree, see [Control trees](../custom-controls/control-trees).
+For the concept behind the logical controls tree, see [Control trees](/docs/custom-controls/control-trees).
 :::
 
 For example, applying the above selector to this XAML:
@@ -331,6 +331,6 @@ new Style(x => x.OfType<TextBlock>())
 
 ## See also
 
-- [Style selectors](style-selectors)
-- [Pseudoclasses](pseudoclasses)
-- [Styles](styles)
+- [Style selectors](/docs/styling/style-selectors)
+- [Pseudoclasses](/docs/styling/pseudoclasses)
+- [Styles](/docs/styling/styles)

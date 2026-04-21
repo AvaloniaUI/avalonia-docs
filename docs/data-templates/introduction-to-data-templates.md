@@ -87,7 +87,7 @@ Then reference it:
 
 ## See also
 
-- [Control Content](control-content): How controls display non-control content.
-- [Content Templates](content-templates): Using `ContentTemplate` directly.
-- [Data Template Collection](data-template-collection): Defining multiple templates by type.
-- [Reusing Data Templates](reusing-data-templates): Sharing templates across your application.
+- [Control Content](/docs/data-templates/control-content): How controls display non-control content.
+- [Content Templates](/docs/data-templates/content-templates): Using `ContentTemplate` directly.
+- [Data Template Collection](/docs/data-templates/data-template-collection): Defining multiple templates by type.
+- [Reusing Data Templates](/docs/data-templates/reusing-data-templates): Sharing templates across your application.

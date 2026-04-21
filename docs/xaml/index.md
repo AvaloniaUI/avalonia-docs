@@ -31,7 +31,7 @@ Set properties using XML attributes:
 <Button Content="Click me" Width="200" Background="Blue" />
 ```
 
-The XAML engine uses [type converters](type-converters) to convert the string attribute values to the appropriate .NET types (e.g., `"Blue"` becomes a `SolidColorBrush`).
+The XAML engine uses [type converters](/docs/xaml/type-converters) to convert the string attribute values to the appropriate .NET types (e.g., `"Blue"` becomes a `SolidColorBrush`).
 
 ### Property element syntax
 
@@ -102,10 +102,10 @@ Set attached properties using the `OwnerType.PropertyName` syntax:
 
 ## Topics
 
-- [Namespaces](namespaces): How XAML namespaces work and how to reference your own types.
-- [x: Directives](directives): Reference for `x:Name`, `x:Key`, `x:Class`, `x:DataType`, and other directives.
-- [Markup Extensions](markup-extensions): Reference for `{Binding}`, `{StaticResource}`, `{DynamicResource}`, `{TemplateBinding}`, and others.
-- [Type Converters](type-converters): How string values in XAML are converted to .NET types.
+- [Namespaces](/docs/xaml/namespaces): How XAML namespaces work and how to reference your own types.
+- [x: Directives](/docs/xaml/directives): Reference for `x:Name`, `x:Key`, `x:Class`, `x:DataType`, and other directives.
+- [Markup Extensions](/docs/xaml/markup-extensions): Reference for `{Binding}`, `{StaticResource}`, `{DynamicResource}`, `{TemplateBinding}`, and others.
+- [Type Converters](/docs/xaml/type-converters): How string values in XAML are converted to .NET types.
 
 ## See also
 

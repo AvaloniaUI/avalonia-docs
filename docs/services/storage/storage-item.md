@@ -111,6 +111,6 @@ If you want to save file path to reuse it later (in combination with TryGetFileF
 
 ## See also
 
-- [Storage Provider](storage-provider): Full storage provider API reference.
-- [Bookmarks](bookmarks): Persisting access to picked files and folders.
+- [Storage Provider](/docs/services/storage/storage-provider): Full storage provider API reference.
+- [Bookmarks](/docs/services/storage/bookmarks): Persisting access to picked files and folders.
 - [File Dialogs](/docs/services/file-dialogs): Using file open, save, and folder picker dialogs.

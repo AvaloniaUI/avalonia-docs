@@ -47,11 +47,11 @@ This simple example shows a `Viewbox` scaling up a circle uniformly (both stretc
 
 The following demonstrations show the different combinations of stretch and stretch direction property settings. This first set shows the effect of the stretch property:
 
-<table><thead><tr><th width="275">Stretch Value</th><th>Demonstration</th></tr></thead><tbody><tr><td><code>Uniform</code></td><td><img src={ViewboxScaleUniformBothScreenshot} alt="" data-size="original"/></td></tr><tr><td><code>UniformToFill</code></td><td><img src={ViewboxScaleUniformFillBothScreenshot} alt="" data-size="original"/></td></tr><tr><td><code>Fill</code></td><td><img src={ViewboxScaleFillBothScreenshot} alt="" data-size="original"/></td></tr><tr><td><code>None</code></td><td><img src={ViewboxScaleNoneBothScreenshot} alt="" data-size="original"/></td></tr></tbody></table>
+<table><thead><tr><th width="275">Stretch Value</th><th>Demonstration</th></tr></thead><tbody><tr><td><code>Uniform</code></td><td><Image light={ViewboxScaleUniformBothScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/></td></tr><tr><td><code>UniformToFill</code></td><td><Image light={ViewboxScaleUniformFillBothScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/></td></tr><tr><td><code>Fill</code></td><td><Image light={ViewboxScaleFillBothScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/></td></tr><tr><td><code>None</code></td><td><Image light={ViewboxScaleNoneBothScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/></td></tr></tbody></table>
 
 This set of demonstrations shows the effect of the stretch direction property:
 
-<table><thead><tr><th width="276">Stretch Direction</th><th>Demonstration</th></tr></thead><tbody><tr><td><code>UpOnly</code></td><td><img src={ViewboxScaleUniformUpOnlyScreenshot} alt="" /></td></tr><tr><td><code>DownOnly</code></td><td><img src={ViewboxScaleUniformDownOnlyScreenshot} alt="" /></td></tr></tbody></table>
+<table><thead><tr><th width="276">Stretch Direction</th><th>Demonstration</th></tr></thead><tbody><tr><td><code>UpOnly</code></td><td><Image light={ViewboxScaleUniformUpOnlyScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/></td></tr><tr><td><code>DownOnly</code></td><td><Image light={ViewboxScaleUniformDownOnlyScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/></td></tr></tbody></table>
 
 ## See also
 

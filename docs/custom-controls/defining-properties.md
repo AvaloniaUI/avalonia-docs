@@ -145,7 +145,7 @@ namespace AvaloniaCCExample.CustomControls
 
 The styled property works both at run-time and in the preview panel.
 
-<img src={DefiningPropertyPreviewScreenshot} alt="Preview of a custom control with a defined property"/>
+<Image light={DefiningPropertyPreviewScreenshot} alt="Preview of a custom control with a defined property" position="center" maxWidth={400} cornerRadius="true"/>
 
 ## Direct properties
 
@@ -247,6 +247,6 @@ This approach works for both styled and direct properties.
 - [Avalonia property system](/docs/properties): Full reference for styled, direct, and attached properties.
 - [Value precedence](/docs/properties/value-precedence): How Avalonia resolves competing property values.
 - [Metadata and callbacks](/docs/properties/metadata-and-callbacks): Default values, coercion, and validation.
-- [Defining events](defining-events): Add routed events to your custom controls.
-- [Attached properties](attached-properties): Create properties that can be set on other controls.
-- [Custom control class](custom-control-class): Base class overview for custom controls.
+- [Defining events](/docs/custom-controls/defining-events): Add routed events to your custom controls.
+- [Attached properties](/docs/custom-controls/attached-properties): Create properties that can be set on other controls.
+- [Custom control class](/docs/custom-controls/custom-control-class): Base class overview for custom controls.

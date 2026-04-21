@@ -53,16 +53,16 @@ This section contains detailed technical reference material for Avalonia. Use it
 ## Markdown
 
 <DocsCards>
-  <DocsCard header="CodeHighlighter" href="/reference/markdown/codehighlighter" />
-  <DocsCard header="ImageLoader" href="/reference/markdown/imageloader" />
-  <DocsCard header="Markdown styling" href="/reference/markdown/markdown-styling" />
+  <DocsCard header="CodeHighlighter" />
+  <DocsCard header="ImageLoader" />
+  <DocsCard header="Markdown styling" />
 </DocsCards>
 
 ## Media player
 
 <DocsCards>
-  <DocsCard header="MediaPlayer" href="/reference/media-player/mediaplayer" />
-  <DocsCard header="MediaSource" href="/reference/media-player/mediasource" />
+  <DocsCard header="MediaPlayer" />
+  <DocsCard header="MediaSource" />
 </DocsCards>
 
 ## Services
@@ -93,12 +93,12 @@ This section contains detailed technical reference material for Avalonia. Use it
 ## Text
 
 <DocsCards>
-  <DocsCard header="TextTrimming" href="/reference/text/texttrimming" />
+  <DocsCard header="TextTrimming" />
 </DocsCards>
 
 ## WebView
 
 <DocsCards>
-  <DocsCard header="WebAuthenticationBroker" href="/reference/webview/webauthenticationbroker" />
-  <DocsCard header="WebView environment" href="/reference/webview/webview-environment" />
+  <DocsCard header="WebAuthenticationBroker" />
+  <DocsCard header="WebView environment" />
 </DocsCards>

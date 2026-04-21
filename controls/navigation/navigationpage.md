@@ -135,11 +135,11 @@ window.Page = new NavigationPage { Content = new HomePage() };
 
 The root page shows the `Header` in the navigation bar with no back button:
 
-<img src={NavigationPageRootScreenshot} alt="" />
+<Image light={NavigationPageRootScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
 
 When a page is pushed, the back button appears automatically:
 
-<img src={NavigationPagePushedScreenshot} alt="" />
+<Image light={NavigationPagePushedScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
 
 ### Pushing and Popping Pages
 
@@ -189,7 +189,7 @@ private void UpdateStatus()
 NavigationPage.SetHasNavigationBar(page, false);
 ```
 
-<img src={NavigationPageNoNavbarScreenshot} alt="" />
+<Image light={NavigationPageNoNavbarScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
 
 ### Hiding the Back Button
 
@@ -211,7 +211,7 @@ Replace the default back arrow with custom text or a control:
 NavigationPage.SetBackButtonContent(page, new TextBlock { Text = "Home" });
 ```
 
-<img src={NavigationPageCustomBackScreenshot} alt="" />
+<Image light={NavigationPageCustomBackScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
 
 ### Per-Page TopCommandBar
 
@@ -236,7 +236,7 @@ Assign a command bar to a child page. It is rendered in the navigation bar area 
 </ContentPage>
 ```
 
-<img src={NavigationPageTopCommandBarScreenshot} alt="" />
+<Image light={NavigationPageTopCommandBarScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
 
 ### Page Transitions
 
@@ -275,7 +275,7 @@ await Navigation.PopAllModalsAsync();
 int modalCount = Navigation.ModalStack.Count;
 ```
 
-<img src={NavigationPageModalScreenshot} alt="" />
+<Image light={NavigationPageModalScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
 
 ### Modal Transitions
 
@@ -301,7 +301,7 @@ var navPage = new NavigationPage
 NavigationPage.SetBarHeightOverride(page, 56);
 ```
 
-<img src={NavigationPageAppearanceScreenshot} alt="" />
+<Image light={NavigationPageAppearanceScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
 
 ### Navigation Bar Shadow
 
@@ -321,7 +321,7 @@ Use `BarLayoutBehavior.Overlay` so the bar floats above a hero image or map:
 </ContentPage>
 ```
 
-<img src={NavigationPageOverlayBarScreenshot} alt="" />
+<Image light={NavigationPageOverlayBarScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
 
 ### Replacing the Login Screen After Sign-In
 
@@ -355,7 +355,7 @@ var shell = new DrawerPage
 window.Page = shell;
 ```
 
-<img src={NavigationPageDrawerIntegrationScreenshot} alt="" />
+<Image light={NavigationPageDrawerIntegrationScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
 
 ### Disabling Back-Swipe Gesture
 

@@ -1,0 +1,41 @@
+name: Link checker
+
+on:
+  schedule:
+    - cron: '0 8 * * 1' # Runs every Monday at 8:00 AM UTC
+  workflow_dispatch:
+  pull_request:
+    branches: [main]
+
+jobs:
+  linkChecker:
+    runs-on: ubuntu-latest
+    steps:
+        - uses: actions/checkout@v4
+
+        - name: Check links with lychee
+          id: lychee
+          uses: lycheeverse/lychee-action@v2
+          with:
+            args: >-
+                --verbose
+                --no-progress
+                --timeout 30
+                --max-retries 3
+                --cache
+                --max-cache-age 1d
+                --accept 200..=206,302,304,403,429
+                --base-url https://docs.avaloniaui.net
+                --exclude-path 'api'
+                --exclude-path '.claude'
+                --exclude 'https://xpf-nuget-feed.avaloniaui.net/'
+                --exclude 'https://xpf-nuget-feed.avaloniaui.net/packages/xpf.sdk'
+                --exclude 'https://xpf-nuget-feed.avaloniaui.net/v3/index.json'
+                --exclude 'https://github.com/AvaloniaUIOU/CalculatorDemo'
+                './**/*.md'
+                './**/*.mdx'
+            format: markdown
+            output: lychee/results.md
+            token: ${{ secrets.GITHUB_TOKEN }}
+            fail: true
+            jobSummary: true

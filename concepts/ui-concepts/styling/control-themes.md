@@ -3,8 +3,6 @@ id: control-themes
 title: Control themes
 ---
 
-import StylingEllipseButtonScreenshot from '/img/concepts/ui-concepts/styling/ellipse-button.png';
-
 Control themes build upon [Styles](/docs/styling/styles) to create switchable themes for controls. Control themes are analogous to Styles in WPF/UWP, though their mechanism is slightly different.
 
 :::tip
@@ -76,8 +74,6 @@ The following example shows a simple `Button` theme which displays a button with
   // highlight-end
 </Window>
 ```
-
-<p><img className="medium-image-zoom" src={StylingEllipseButtonScreenshot} alt="Ellipse Button" /></p>
 
 ## Interaction in Control Themes
 

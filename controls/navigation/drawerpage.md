@@ -153,9 +153,9 @@ var drawerPage = new DrawerPage
 window.Page = drawerPage;
 ```
 
-<img src={DrawerPageClosedScreenshot} alt="" />
+<Image light={DrawerPageClosedScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
 
-<img src={DrawerPageOpenScreenshot} alt="" />
+<Image light={DrawerPageOpenScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
 
 ### Toggling the Drawer
 
@@ -247,7 +247,7 @@ private void OnProfileClick(object? sender, RoutedEventArgs e)
 </DrawerPage>
 ```
 
-<img src={DrawerPageHeaderFooterScreenshot} alt="" />
+<Image light={DrawerPageHeaderFooterScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
 
 ### Persistent Sidebar (Split Layout)
 
@@ -263,7 +263,7 @@ var drawerPage = new DrawerPage
 };
 ```
 
-<img src={DrawerPageSplitScreenshot} alt="" />
+<Image light={DrawerPageSplitScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
 
 ### Compact Navigation Rail
 
@@ -313,9 +313,9 @@ var drawerPage = new DrawerPage
 };
 ```
 
-<img src={DrawerPageCompactCollapsedScreenshot} alt="" />
+<Image light={DrawerPageCompactCollapsedScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
 
-<img src={DrawerPageCompactExpandedScreenshot} alt="" />
+<Image light={DrawerPageCompactExpandedScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
 
 ### Responsive Layout with DrawerBreakpointLength
 
@@ -352,7 +352,7 @@ var drawerPage = new DrawerPage
 </DrawerPage>
 ```
 
-<img src={DrawerPageRtlScreenshot} alt="" />
+<Image light={DrawerPageRtlScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
 
 ### Right-Side Drawer
 
@@ -373,7 +373,7 @@ Useful for filter panels, detail inspectors, or contextual sidebars:
 </DrawerPage>
 ```
 
-<img src={DrawerPageRightScreenshot} alt="" />
+<Image light={DrawerPageRightScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
 
 ### Backdrop Scrim
 

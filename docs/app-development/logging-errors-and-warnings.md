@@ -42,7 +42,7 @@ For the full API documentation, see the [`LogEventLevel` enum reference](/api/av
 
 Log messages are then shown in the **Debug** view of the **Output** window of your IDE. For example, with verbose logging enabled:
 
-<img src={LogToTraceOutputScreenshot} alt="Verbose log output in the IDE Debug Output window"/>
+<Image light={LogToTraceOutputScreenshot} alt="Verbose log output in the IDE Debug Output window" position="center" maxWidth={400} cornerRadius="true"/>
 
 If you want to re-route these messages to different location, you can use the methods on the `System.Diagnostics.Trace` component.
 

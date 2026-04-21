@@ -157,8 +157,3 @@ To customize, define these resources in your application theme or resource dicti
   <!-- Add more overrides as needed -->
 </ResourceDictionary>
 ```
-
-## See also
-
-- [Markdown control](/controls/data-display/text-display/markdown)
-- [Rendering markdown](/docs/app-development/rendering-markdown)

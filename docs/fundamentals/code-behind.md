@@ -11,7 +11,7 @@ In addition to a XAML file, most Avalonia controls have a _code-behind_ file tha
 
 For instance, in the Visual Studio solution explorer, you can see a `MainWindow.axaml` file along with its code-behind file `MainWindow.axaml.cs`:
 
-<p><img src={VsSolutionExplorerScreenshot} className="medium-zoom-image" alt="Visual Studio solution explorer showing a XAML file with its nested code-behind file" /></p>
+<Image light={VsSolutionExplorerScreenshot} alt="Visual Studio solution explorer showing a XAML file with its nested code-behind file" position="center" maxWidth={400} cornerRadius="true"/>
 
 Your code-behind file contains a `partial` class that shares the same name as the XAML file. The `partial` keyword is important because it allows the Avalonia build tooling to generate a companion file that wires up your named controls and calls into the XAML loader. For example:
 

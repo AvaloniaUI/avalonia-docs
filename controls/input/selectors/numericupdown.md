@@ -109,7 +109,7 @@ private decimal? _maxQuantity = 100;
 
 ## See also
 
-- [Slider](slider.md)
+- [Slider](/controls/input/selectors/slider)
 - [TextBox](/controls/input/text-input/textbox)
 - [Binding to Controls](/docs/data-binding/binding-to-controls)
 - [NumericUpDown API Reference](/api/avalonia/controls/numericupdown)

@@ -88,7 +88,7 @@ Use `Label` when you need accessibility and keyboard navigation in forms. Use `T
 
 ## See also
 
-- [TextBlock](textblock)
-- [SelectableTextBlock](selectabletextblock)
+- [TextBlock](/controls/data-display/text-display/textblock)
+- [SelectableTextBlock](/controls/data-display/text-display/selectabletextblock)
 - [Label API reference](/api/avalonia/controls/label)
 - [`Label.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Label.cs)

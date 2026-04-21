@@ -58,7 +58,7 @@ public void Border_PointerPressed(object sender, PointerPressedEventArgs args)
 }
 ```
 
-<img src={FlyoutShowAttachedScreenshot} alt="" />
+<Image light={FlyoutShowAttachedScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
 
 ## Useful properties
 

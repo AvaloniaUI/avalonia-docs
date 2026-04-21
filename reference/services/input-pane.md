@@ -84,5 +84,5 @@ You can use `AnimationDuration` and `Easing` to create a smooth transition in yo
 ## See also
 
 - [TopLevel](/docs/fundamentals/top-level)
-- [TextBox](../controls/detailed-reference/textbox.md)
-- [AutoCompleteBox](../controls/detailed-reference/autocompletebox.md)
+- [TextBox](/controls/input/text-input/textbox)
+- [AutoCompleteBox](/controls/input/text-input/autocompletebox)

@@ -35,7 +35,7 @@ You have probably seen what happens if you put a button control into the content
 
 The window displays the button, in this case centred both horizontally (specified) and vertically (by default). It looks like this:
 
-<img src={ControlContentButtonScreenshot} alt="A window displaying a centred button with the text Hello World."/>
+<Image light={ControlContentButtonScreenshot} alt="A window displaying a centred button with the text Hello World." position="center" maxWidth={400} cornerRadius="true"/>
 
 ## Displaying a string
 
@@ -55,7 +55,7 @@ If you put a string into the window content zone, for example:
 
 The window displays the string:
 
-<img src={ControlContentStringScreenshot} alt="A window displaying the text Hello World as a string."/>
+<Image light={ControlContentStringScreenshot} alt="A window displaying the text Hello World as a string." position="center" maxWidth={400} cornerRadius="true"/>
 
 ## Displaying a custom object
 
@@ -85,12 +85,12 @@ With the XML namespace `local` defined as the `MySample` namespace, you can plac
 
 However, you will see only the fully-qualified class name for the student object:
 
-<img src={ControlContentTypeScreenshot} alt="A window displaying the fully-qualified class name MySample.Student instead of meaningful content."/>
+<Image light={ControlContentTypeScreenshot} alt="A window displaying the fully-qualified class name MySample.Student instead of meaningful content." position="center" maxWidth={400} cornerRadius="true"/>
 
 This is not very helpful. It happens because Avalonia UI has no definition of how to display an object of class `Student`, and it is not a control, so it falls back to the `.ToString()` method and all you see is the fully-qualified class name. To solve this problem, you need to define a data template that tells Avalonia how to render your custom type.
 
 ## See also
 
-- [Content templates](content-templates.md)
-- [Data template collection](data-template-collection.md)
-- [Introduction to data templates](introduction-to-data-templates.md)
+- [Content templates](/docs/data-templates/content-templates)
+- [Data template collection](/docs/data-templates/data-template-collection)
+- [Introduction to data templates](/docs/data-templates/introduction-to-data-templates)

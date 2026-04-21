@@ -265,5 +265,5 @@ public class MyViewModel
 ## See also
 
 - [How to show notifications and toasts](/docs/how-to/notifications-how-to)
-- [Popup](popup)
-- [ToolTip](tooltip)
+- [Popup](/controls/feedback/popup)
+- [ToolTip](/controls/feedback/tooltip)

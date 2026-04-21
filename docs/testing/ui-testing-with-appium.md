@@ -3,7 +3,7 @@ id: ui-testing-with-appium
 title: UI Testing with Appium
 ---
 
-Appium is an open-source automation framework that drives your application through its accessibility tree, simulating real user interactions such as clicking buttons, typing text, and verifying control states. Unlike [headless tests](setting-up-the-headless-platform), which run without a visible window and simulate input programmatically, Appium tests launch your compiled application in a real window and interact with it the same way a user would.
+Appium is an open-source automation framework that drives your application through its accessibility tree, simulating real user interactions such as clicking buttons, typing text, and verifying control states. Unlike [headless tests](/docs/testing/setting-up-the-headless-platform), which run without a visible window and simulate input programmatically, Appium tests launch your compiled application in a real window and interact with it the same way a user would.
 
 This makes Appium tests well suited for end-to-end validation, accessibility verification, and testing platform-specific behaviors. Avalonia uses Appium internally to test the framework itself across Windows and macOS.
 
@@ -284,12 +284,12 @@ dotnet test
 
 - **Windows**: WinAppDriver must be running before tests start. In CI, add a setup step to launch it.
 - **macOS**: Appium and the mac2 driver must be installed. Grant accessibility permissions to the CI agent.
-- **Linux**: Appium does not have a stable Linux desktop driver. For Linux CI, use [headless tests](setting-up-the-headless-platform) instead.
+- **Linux**: Appium does not have a stable Linux desktop driver. For Linux CI, use [headless tests](/docs/testing/setting-up-the-headless-platform) instead.
 
 ## See also
 
-- [Headless Testing with XUnit](headless-xunit): Fast, in-process unit testing.
-- [Headless Testing with NUnit](headless-nunit): NUnit integration for headless tests.
-- [Headless Platform Setup](setting-up-the-headless-platform): Simulating input and capturing frames.
+- [Headless Testing with XUnit](/docs/testing/headless-xunit): Fast, in-process unit testing.
+- [Headless Testing with NUnit](/docs/testing/headless-nunit): NUnit integration for headless tests.
+- [Headless Platform Setup](/docs/testing/setting-up-the-headless-platform): Simulating input and capturing frames.
 - [Avalonia's own Appium tests](https://github.com/AvaloniaUI/Avalonia/tree/master/tests/Avalonia.IntegrationTests.Appium): The test suite Avalonia uses internally.
 - [Appium documentation](https://appium.io/docs/en/latest/): Official Appium guides.
