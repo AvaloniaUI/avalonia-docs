@@ -1,5 +1,5 @@
 ---
-id: assets
+id: including-assets
 title: Assets
 description: Include and reference bitmap, style, and resource dictionary assets in Avalonia applications.
 doc-type: reference
