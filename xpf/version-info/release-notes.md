@@ -3,6 +3,16 @@ id: release-notes
 title: Release notes
 ---
 
+## XPF 1.6.3 (2026-04-22)
+
+* Avalonia version updated from 11.3.12 to 11.3.14
+* Added support for sections in flow documents
+* Fixed PNG decoder using wrong pixel format in some cases
+* Fixed swapped red and blue channels when copying bitmaps on macOS
+* The following dependencies were updated:
+  * System.Security.Cryptography.Xml 8.0.0 to 8.0.3 (fixes security vulnerability)
+  * SixLabors.ImageSharp from 3.1.9 to 3.1.12 (fixes security vulnerability)
+
 ## XPF 1.6.2 (2026-03-20)
 
 * Fixed crash on macOS when right-clicking TextBox while clipboard is empty
