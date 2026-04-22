@@ -141,13 +141,13 @@ Create a borderless window by disabling system decorations:
 
 ### Custom title bar with drag region
 
-Mark an element as a title bar drag region using the `WindowDecorations.ElementRole` attached property. The operating system handles drag and double-click-to-maximize behavior automatically:
+Mark an element as a title bar drag region using the `WindowDecorationProperties.ElementRole` attached property. The operating system handles drag and double-click-to-maximize behavior automatically:
 
 ```xml
 <Grid RowDefinitions="32,*">
     <!-- Custom title bar -->
     <Border Grid.Row="0" Background="#1E1E2E"
-            WindowDecorations.ElementRole="TitleBar">
+            WindowDecorationProperties.ElementRole="TitleBar">
         <DockPanel Margin="8,0">
             <TextBlock Text="My App" VerticalAlignment="Center" Foreground="White" />
             <StackPanel DockPanel.Dock="Right" Orientation="Horizontal"

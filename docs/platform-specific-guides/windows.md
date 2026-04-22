@@ -45,14 +45,14 @@ For more details, see [Window Management](/docs/app-development/window-managemen
 
 ## Custom title bars
 
-Windows supports extending the client area into the title bar region for custom chrome. Set `ExtendClientAreaToDecorationsHint` to push your content into the title bar area, and use `WindowDecorations.ElementRole` to mark a region as the draggable title bar:
+Windows supports extending the client area into the title bar region for custom chrome. Set `ExtendClientAreaToDecorationsHint` to push your content into the title bar area, and use `WindowDecorationProperties.ElementRole` to mark a region as the draggable title bar:
 
 ```xml
 <Window ExtendClientAreaToDecorationsHint="True"
         WindowDecorations="None">
     <Grid RowDefinitions="32,*">
         <Border Grid.Row="0" Background="#2D2D2D"
-                WindowDecorations.ElementRole="TitleBar">
+                WindowDecorationProperties.ElementRole="TitleBar">
             <TextBlock Text="My App" Foreground="White"
                        VerticalAlignment="Center" Margin="12,0" />
         </Border>

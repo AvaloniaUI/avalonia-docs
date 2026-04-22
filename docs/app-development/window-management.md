@@ -193,7 +193,7 @@ protected override void OnClosing(WindowClosingEventArgs e)
 
 ## Custom title bar
 
-To create a custom title bar, extend the client area into the decorations and use `WindowDecorations.ElementRole` to mark a region as the title bar:
+To create a custom title bar, extend the client area into the decorations and use `WindowDecorationProperties.ElementRole` to mark a region as the title bar:
 
 ```xml
 <Window ExtendClientAreaToDecorationsHint="True"
@@ -201,7 +201,7 @@ To create a custom title bar, extend the client area into the decorations and us
     <Grid RowDefinitions="32,*">
         <!-- Custom title bar -->
         <Border Grid.Row="0" Background="#2D2D2D"
-                WindowDecorations.ElementRole="TitleBar">
+                WindowDecorationProperties.ElementRole="TitleBar">
             <TextBlock Text="My App" Foreground="White"
                        VerticalAlignment="Center" Margin="12,0" />
         </Border>
@@ -213,7 +213,7 @@ To create a custom title bar, extend the client area into the decorations and us
 </Window>
 ```
 
-Elements marked with `WindowDecorations.ElementRole="TitleBar"` support native window dragging and double-click-to-maximize. Interactive controls placed inside a title bar region (buttons, text boxes) receive input normally without triggering drag behavior.
+Elements marked with `WindowDecorationProperties.ElementRole="TitleBar"` support native window dragging and double-click-to-maximize. Interactive controls placed inside a title bar region (buttons, text boxes) receive input normally without triggering drag behavior.
 
 For more details on the `ElementRole` values, see the [custom title bar how-to](/docs/how-to/window-how-to#custom-title-bar-with-drag-region).
 

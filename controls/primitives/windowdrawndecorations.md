@@ -162,7 +162,7 @@ In the [example below](#example), an element role is marked for a `TextBlock` ac
                         <TextBlock Text="{Binding Title}"
                                    VerticalAlignment="Center"
                                    Margin="12,0"
-                                   chrome:WindowDecorations.ElementRole="TitleBar"/>
+                                   WindowDecorationProperties.ElementRole="TitleBar"/>
                     </DockPanel>
                 </WindowDrawnDecorationsContent.Overlay>
 
