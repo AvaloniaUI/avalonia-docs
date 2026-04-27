@@ -224,14 +224,16 @@ Assign a command bar to a child page. It is rendered in the navigation bar area 
              Header="Items"
              NavigationPage.TopCommandBar="{x:Reference TopBar}">
 
+  <StackPanel>
     <CommandBar x:Name="TopBar">
         <CommandBar.PrimaryCommands>
-            <AppBarButton Label="Add"    Click="OnAddClick" />
-            <AppBarButton Label="Filter" Click="OnFilterClick" />
+            <CommandBarButton Label="Add"    Click="OnAddClick" />
+            <CommandBarButton Label="Filter" Click="OnFilterClick" />
         </CommandBar.PrimaryCommands>
     </CommandBar>
 
     <ListBox ItemsSource="{Binding Items}" />
+  </StackPanel>
 
 </ContentPage>
 ```
