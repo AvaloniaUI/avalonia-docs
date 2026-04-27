@@ -4,23 +4,22 @@ description: '`NavigationPage` provides stack-based page navigation. It includes
 doc-type: reference
 ---
 
-import NavigationPageRootScreenshot from '/img/controls/navigationpage/navigationpage-root.png';
+import NavigationBasicExample from '/img/controls/navigationpage/navigation-basic-example.gif';
 import NavigationPagePushedScreenshot from '/img/controls/navigationpage/navigationpage-pushed.png';
 import NavigationPageCustomBackScreenshot from '/img/controls/navigationpage/navigationpage-custom-back-button.png';
 import NavigationPageNoNavbarScreenshot from '/img/controls/navigationpage/navigationpage-no-navbar.png';
+import NavigationPageNoBackButtonScreenshot from '/img/controls/navigationpage/navigationpage-no-back-button.png';
 import NavigationPageOverlayBarScreenshot from '/img/controls/navigationpage/navigationpage-overlay-bar.png';
 import NavigationPageTopCommandBarScreenshot from '/img/controls/navigationpage/navigationpage-top-commandbar.png';
 import NavigationPageAppearanceScreenshot from '/img/controls/navigationpage/navigationpage-appearance.png';
 import NavigationPageModalScreenshot from '/img/controls/navigationpage/navigationpage-modal.png';
 import NavigationPageDrawerIntegrationScreenshot from '/img/controls/navigationpage/navigationpage-drawer-integration.png';
 
-# NavigationPage
-
-`NavigationPage` provides stack-based navigation. Pages are pushed onto and popped off the stack through the `INavigation` interface. A navigation bar is rendered at the top of the page by default, showing the current page title, a back button when the stack depth is greater than 1, and optional command bars contributed by child pages.
+`NavigationPage` provides stack-based navigation. Pages, built as individual instances of [`ContentPage`](/controls/navigation/contentpage), are pushed onto and popped off the stack through the `INavigation` interface. A navigation bar is rendered at the top of the page by default, showing the current page title and a back button when the stack depth is greater than 1. Optional command bars can be rendered on child pages.
 
 `NavigationPage` implements `INavigation` directly. The navigation API is available either through `Page.Navigation` on child pages, or through a direct reference to the `NavigationPage` instance.
 
-## Navigation Bar Layout
+## Navigation bar layout
 
 The navigation bar contains:
 
@@ -30,7 +29,7 @@ The navigation bar contains:
 | Center | Page title from the active page's `Header` property. |
 | Right | `TopCommandBar` control set via the `NavigationPage.TopCommandBar` attached property. |
 
-## Useful Properties
+## Useful properties
 
 You will probably use these properties most often:
 
@@ -49,8 +48,9 @@ You will probably use these properties most often:
 | `ModalStack` | `IReadOnlyList<Page>` | computed | Read-only. Currently presented modal pages, oldest at index 0 and topmost last. |
 | `NavigationStack` | `IReadOnlyList<Page>` | computed | Read-only. Ordered list of pages on the stack, root first and top last. |
 | `IsNavigating` | `bool` | computed | Read-only. `true` while a navigation operation (push, pop, replace, or modal) is in progress. |
+| `StackDepth` | `int` | computed | Read-only. Number of pages currently on the navigation stack. |
 
-## Attached Properties
+## Attached properties
 
 Set these on individual child `Page` instances to control per-page navigation bar behavior.
 
@@ -65,14 +65,14 @@ Set these on individual child `Page` instances to control per-page navigation ba
 | `NavigationPage.BarLayoutBehavior` | `BarLayoutBehavior?` | `null` | Overrides how the navigation bar is laid out for a specific page. |
 | `NavigationPage.BarHeightOverride` | `double?` | `null` | Overrides `BarHeight` for a specific page. |
 
-## BarLayoutBehavior Values
+## BarLayoutBehavior values
 
 | Value | Description |
 | ----- | ----------- |
 | `Inset` | Default. The navigation bar occupies layout space. Page content is laid out below it. |
 | `Overlay` | The navigation bar floats above the page content. Content extends behind the bar and should handle the inset via `SafeAreaPadding`. |
 
-## Navigation Methods
+## Navigation methods
 
 Navigation is performed through the `INavigation` interface, accessible via `Page.Navigation` on any child page, or directly on the `NavigationPage` instance.
 
@@ -96,10 +96,6 @@ Navigation is performed through the `INavigation` interface, accessible via `Pag
 | `PopModalAsync(transition)` | Dismisses the top modal with a specific transition. |
 | `PopAllModalsAsync()` | Dismisses all modal pages. |
 | `PopAllModalsAsync(transition)` | Dismisses all modals with a specific transition. |
-| `NavigationStack` | Read-only list of pages on the stack, root at index 0. |
-| `ModalStack` | Read-only list of currently presented modal pages. |
-| `StackDepth` | Number of pages currently on the navigation stack. |
-| `CanGoBack` | `true` when the stack has more than one entry. |
 
 The system back button automatically calls `PopAsync()` when `StackDepth > 1`.
 
@@ -117,33 +113,97 @@ The system back button automatically calls `PopAsync()` when `StackDepth > 1`.
 
 ## Examples
 
-### Basic NavigationPage in XAML
+### Basic NavigationPage
 
-```xml
-<NavigationPage xmlns="https://github.com/avaloniaui"
-                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                x:Class="MyApp.AppShell">
-    <local:HomePage />
-</NavigationPage>
-```
+<Image light={NavigationBasicExample} position="center" maxWidth={400} cornerRadius="true" />
+<br />
 
-### Basic NavigationPage in Code
+A basic implementation of `NavigationPage` with two-page navigation between a home page and detail page, plus a top command bar that appears on the detail page only.
 
-```csharp
-window.Page = new NavigationPage { Content = new HomePage() };
-```
+<Tabs groupId="basicExample">
 
-The root page shows the `Header` in the navigation bar with no back button:
+  <TabItem label="MainWindow.axaml" value="mainWindowXaml">
+    ```xml
+    <NavigationPage>
+        <views:HomePage/>
+    </NavigationPage>
+    ```
+  </TabItem>
 
-<Image light={NavigationPageRootScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
+  <TabItem label="HomePage.axaml" value="homePageXaml">
+    ```xml
+    <ContentPage xmlns="https://github.com/avaloniaui"
+               xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+               x:Class="TestApp1.Views.HomePage"
+               Header="Home">
+      <StackPanel HorizontalAlignment="Center"
+                  VerticalAlignment="Center"
+                  Spacing="12">
+          <TextBlock Text="Welcome to the Home Page"
+                     FontSize="22"
+                     FontWeight="SemiBold"
+                     HorizontalAlignment="Center"/>
+          <TextBlock Text="Click the button to open the detail page."
+                     HorizontalAlignment="Center"/>
+          <Button Content="Go to Details"
+                  Click="OnGoToDetailsClick"
+                  HorizontalAlignment="Center"/>
+      </StackPanel>
+    </ContentPage>
+    ```
+  </TabItem>
 
-When a page is pushed, the back button appears automatically:
+  <TabItem label="HomePage.axaml.cs" value="homePageCs">
+    ```csharp
+    public partial class HomePage : ContentPage
+    {
+        public HomePage()
+        {
+            InitializeComponent();
+        }
 
-<Image light={NavigationPagePushedScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
+        private async void OnGoToDetailsClick(object? sender, RoutedEventArgs e)
+        {
+            if (Navigation is not null)
+                await Navigation.PushAsync(new DetailPage());
+        }
+    }
+    ```
+  </TabItem>
 
-### Pushing and Popping Pages
+  <TabItem label="DetailPage.axaml" value="detailPageXaml">
+    ```xml
+    <ContentPage xmlns="https://github.com/avaloniaui"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                 x:Class="TestApp1.Views.DetailPage"
+                 Header="Details">
 
-Access `Navigation` from within any child `ContentPage`:
+      <ContentPage.TopCommandBar>
+          <StackPanel Orientation="Horizontal" Spacing="8">
+              <Button Content="Refresh" Click="OnRefreshClick"/>
+              <Button Content="Share" Click="OnShareClick"/>
+          </StackPanel>
+      </ContentPage.TopCommandBar>
+
+      <StackPanel HorizontalAlignment="Center"
+                  VerticalAlignment="Center"
+                  Spacing="12">
+          <TextBlock Text="Detail Page"
+                     FontSize="22"
+                     FontWeight="SemiBold"
+                     HorizontalAlignment="Center"/>
+          <TextBlock Text="Use the back button to return to Home."
+                     HorizontalAlignment="Center"/>
+      </StackPanel>
+    </ContentPage>
+    ```
+  </TabItem>
+
+</Tabs>
+
+### Pushing and popping pages
+
+Access `Navigation` from any child `ContentPage`:
 
 ```csharp
 // Push a new page
@@ -165,7 +225,7 @@ private async void OnGoHomeClick(object? sender, RoutedEventArgs e)
 }
 ```
 
-### Tracking Stack Depth and Current Page
+### Tracking stack depth and current page
 
 ```csharp
 private void UpdateStatus()
@@ -176,12 +236,13 @@ private void UpdateStatus()
 }
 ```
 
-### Hiding the Navigation Bar for a Page
+### Hiding the navigation bar on a page
+
+<Image light={NavigationPageNoNavbarScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
 
 ```xml
-<ContentPage NavigationPage.HasNavigationBar="False"
-             Header="Full Screen">
-    <!-- content fills the entire NavigationPage area -->
+<ContentPage NavigationPage.HasNavigationBar="False">
+    <!-- content -->
 </ContentPage>
 ```
 
@@ -189,12 +250,12 @@ private void UpdateStatus()
 NavigationPage.SetHasNavigationBar(page, false);
 ```
 
-<Image light={NavigationPageNoNavbarScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
+### Hiding the back button
 
-### Hiding the Back Button
+<Image light={NavigationPageNoBackButtonScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
 
 ```xml
-<ContentPage NavigationPage.HasBackButton="False" Header="Start">
+<ContentPage NavigationPage.HasBackButton="False">
     <!-- user cannot navigate back from here -->
 </ContentPage>
 ```
@@ -203,42 +264,81 @@ NavigationPage.SetHasNavigationBar(page, false);
 NavigationPage.SetHasBackButton(page, false);
 ```
 
-### Custom Back Button Content
+### Custom back button
 
-Replace the default back arrow with custom text or a control:
+Replace the default back arrow with custom text or a control.
 
-```csharp
-NavigationPage.SetBackButtonContent(page, new TextBlock { Text = "Home" });
-```
+In this example, the back arrow is replaced with the text "Go Home" on the detail page by adding this line to the **DetailPage.axaml.cs** code-behind.
 
 <Image light={NavigationPageCustomBackScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
 
-### Per-Page TopCommandBar
-
-Assign a command bar to a child page. It is rendered in the navigation bar area when that page is at the top of the stack.
-
-```xml
-<ContentPage xmlns="https://github.com/avaloniaui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MyApp.ItemsPage"
-             Header="Items"
-             NavigationPage.TopCommandBar="{x:Reference TopBar}">
-
-  <StackPanel>
-    <CommandBar x:Name="TopBar">
-        <CommandBar.PrimaryCommands>
-            <CommandBarButton Label="Add"    Click="OnAddClick" />
-            <CommandBarButton Label="Filter" Click="OnFilterClick" />
-        </CommandBar.PrimaryCommands>
-    </CommandBar>
-
-    <ListBox ItemsSource="{Binding Items}" />
-  </StackPanel>
-
-</ContentPage>
+```csharp
+NavigationPage.SetBackButtonContent(this, new TextBlock { Text = "Go Home" });
 ```
 
+### Per-page custom TopCommandBar
+
+Create a custom command bar and assign it to a target page. It is rendered within the navigation bar area when the target page is at the top of the stack.
+
+In this example, we add a row of custom buttons that are displayed when viewing the detail page. This involves creating a custom [`UserControl`](/controls/primitives/usercontrol) with its own .axaml and .axaml.cs files, then referencing it in the **DetailPage.axaml.cs** code-behind file.
+
 <Image light={NavigationPageTopCommandBarScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
+
+<Tabs>
+
+  <TabItem label="TopBar.axaml" value="topBarXaml">
+    ```xml
+    <UserControl xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="TestApp1.Views.TopBar">
+    
+      <CommandBar>
+          <CommandBar.PrimaryCommands>
+              <CommandBarButton Label="Refresh"/>
+              <CommandBarButton Label="Share"/>
+              <CommandBarButton Label="Filter"/>
+              <CommandBarButton Label="Add New"/>
+          </CommandBar.PrimaryCommands>
+      </CommandBar>
+    
+    </UserControl>
+    ```
+  </TabItem>
+
+  <TabItem label="TopBar.axaml.cs" value="topBarCs">
+    ```csharp
+    using Avalonia.Controls;
+
+    namespace TestApp1.Views;
+
+    public partial class TopBar : UserControl
+    {
+        public TopBar()
+        {
+            InitializeComponent();
+        }
+    }
+    ```
+  </TabItem>
+
+  <TabItem label="DetailPage.axaml.cs" value="detailPageCs">
+    ```csharp
+    using Avalonia.Controls;
+
+    namespace TestApp1.Views;
+
+    public partial class DetailPage : ContentPage
+    {
+        public DetailPage()
+        {
+            InitializeComponent();
+            NavigationPage.SetTopCommandBar(this, new TopBar());
+        }
+    }
+    ```
+  </TabItem>
+
+</Tabs>
 
 ### Page Transitions
 
