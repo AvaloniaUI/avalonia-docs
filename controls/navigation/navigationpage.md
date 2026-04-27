@@ -342,26 +342,35 @@ In this example, we add a row of custom buttons that are displayed when viewing 
 
 ### Page Transitions
 
-Set a transition on the `NavigationPage` to animate pushes and pops:
+To animate page pushes and pops, go into **MainWindow.axaml.cs**, then set the `PageTransition` property on the `NavigationPage` control.
 
 ```csharp
-// Horizontal slide (default direction)
-var navPage = new NavigationPage
+using Avalonia.Animation; // Add this "using" statement to use Avalonia's built-in animations
+
+public partial class MainWindow : Window
 {
-    Content = new HomePage(),
-    PageTransition = new PageSlide(TimeSpan.FromMilliseconds(300))
-};
+    public MainWindow()
+    {
+        InitializeComponent();
 
-// Cross-fade
-navPage.PageTransition = new CrossFade(TimeSpan.FromMilliseconds(250));
+        // Select the NavigationPage control named "Nav"
+        var nav = this.FindControl<NavigationPage>("Nav");                                         
 
-// No animation
-await Navigation.PushAsync(new DetailPage(), transition: null);
+        // Horizontal slide (default)
+        nav.PageTransition = new PageSlide(TimeSpan.FromMilliseconds(300))
+
+        // Cross-fade                          
+        nav.PageTransition = new CrossFade(TimeSpan.FromMilliseconds(300));
+
+        // No animation
+        nav.PageTransition = null;
+    }
+}
 ```
 
-### Modal Pages
+### Modal pages
 
-Present a page that covers the full `NavigationPage` area. Useful for login flows, pickers, or any full-screen dialog:
+Present a page that covers the full `NavigationPage` area. Useful for login flows, pickers, or any full-screen dialog.
 
 ```csharp
 // Present modally
@@ -377,9 +386,7 @@ await Navigation.PopAllModalsAsync();
 int modalCount = Navigation.ModalStack.Count;
 ```
 
-<Image light={NavigationPageModalScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
-
-### Modal Transitions
+### Modal transitions
 
 ```csharp
 var navPage = new NavigationPage
@@ -389,7 +396,7 @@ var navPage = new NavigationPage
 };
 ```
 
-### Customizing the Bar Height
+### Customizing the bar height
 
 ```csharp
 // Global default
