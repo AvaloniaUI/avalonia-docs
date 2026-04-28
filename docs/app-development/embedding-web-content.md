@@ -302,7 +302,7 @@ public interface IAppleWKWebViewPlatformHandle : IPlatformHandle
 
 #### Linux (WPE WebKit)
 
-On Linux, `NativeWebView` is backed by WPE WebKit. The platform handle exposes both the `WebKitWebView` GObject and the underlying `wpe_view_backend` struct, allowing direct P/Invoke against the [WPE WebKit API](https://webkitgtk.org/reference/wpe-webkit/stable/index.html).
+On Linux, `NativeWebView` is backed by WPE WebKit. The platform handle exposes both the `WebKitWebView` GObject and the underlying `wpe_view_backend` struct, allowing direct P/Invoke against the [WPEWebKit API](https://github.com/WebPlatformForEmbedded/WPEWebKit).
 
 ```csharp
 public interface ILinuxWpePlatformHandle : IPlatformHandle
