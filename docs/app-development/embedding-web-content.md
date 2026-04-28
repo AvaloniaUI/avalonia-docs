@@ -32,7 +32,7 @@ dotnet add package Avalonia.Controls.WebView
 ### NativeWebView
 
 :::note
-Embeddable `NativeWebView` is not supported on Linux. Please use `NativeWebDialog` instead.
+On Linux, `NativeWebView` uses [WPE WebKit](https://wpewebkit.org) and renders offscreen. Make sure the WPE runtime libraries are installed — see [Linux prerequisites](#linux). If WPE is not available on the target system, use [`NativeWebDialog`](/controls/web/nativewebdialog) instead.
 :::
 
 ```xml
@@ -129,11 +129,11 @@ The WebView component relies on native web rendering implementations that must b
 
 | Component | Windows | macOS | Linux | iOS | Android | Browser |
 |-----------|---------|-------|-------|-----|---------|---------|
-| NativeWebView | ✓ | ✓ | ✗* | ✓ | ✓ | ✗ |
+| NativeWebView | ✓ | ✓ | ✓* | ✓ | ✓ | ✗ |
 | NativeWebDialog | ✓ | ✓ | ✓ | ✗ | ✗ | ✗ |
 | WebAuthenticationBroker | ✓** | ✓ | ✓** | ✓ | ✓*** | ✓**** |
 
-\* For Linux, use NativeWebDialog instead of NativeWebView
+\* On Linux, `NativeWebView` uses WPE WebKit. If WPE is unavailable on the target system, fall back to `NativeWebDialog` (which uses WebKitGTK).
 \** Uses NativeWebDialog implementation
 \*** Android support is experimental
 \**** Requires CORS configuration for the redirect page. .NET 10 is also necessary to run this library in browser.
@@ -159,7 +159,34 @@ Uses `WKWebView` which is pre-installed on all modern macOS/iOS devices.
 
 #### Linux
 
-Requires GTK 3.0 and WebKitGTK 4.1:
+Linux uses two different backends depending on the API you use:
+
+- **`NativeWebView`** is rendered with [WPE WebKit](https://wpewebkit.org) using offscreen (SHM) rendering. WPE has no hard dependency on GTK, so the embedded control works on both X11 and Wayland sessions and can be composed inside the Avalonia visual tree. 
+- **`NativeWebDialog`** uses WebKitGTK in a dedicated GTK window. Use it as a fallback when WPE is not available, or when you prefer a separate browser window.
+
+For `NativeWebView`, install the WPE runtime libraries:
+
+Debian/Ubuntu (24.04+):
+
+```bash
+sudo apt install libwpewebkit-2.0-1
+```
+
+Fedora:
+
+```bash
+sudo dnf install dnf-plugins-core
+sudo dnf copr enable philn/wpewebkit
+sudo dnf install wpewebkit
+```
+
+Arch:
+
+```bash
+sudo pacman -S wpewebkit
+```
+
+For `NativeWebDialog`, install GTK 3.0 and WebKitGTK 4.1:
 
 Debian/Ubuntu:
 
@@ -174,7 +201,11 @@ dnf install gtk3 webkit2gtk4.1
 ```
 
 :::note
-NativeWebDialog also supports libwebkit2gtk-4.0 and soup-2.4 for older Ubuntu distributives. But it is recommended to use libwebkit2gtk-4.1.
+`NativeWebDialog` also supports `libwebkit2gtk-4.0` and `soup-2.4` for older Ubuntu distributions. `libwebkit2gtk-4.1` is recommended.
+:::
+
+:::note
+On systems where WPE is not packaged, use `NativeWebDialog` instead, or set [`LinuxWpeWebViewEnvironmentRequestedEventArgs.PreferWebKitGtkInstead`](/controls/web/webview-environment#linux-wpe-webkit) to fall back to the WebKitGTK adapter.
 :::
 
 #### Android
@@ -269,28 +300,30 @@ public interface IAppleWKWebViewPlatformHandle : IPlatformHandle
 }
 ```
 
-#### GTK Linux
+#### Linux (WPE WebKit)
 
-GTK interop provides direct access to WebKitWebView but requires careful thread synchronization.
+On Linux, `NativeWebView` is backed by WPE WebKit. The platform handle exposes both the `WebKitWebView` GObject and the underlying `wpe_view_backend` struct, allowing direct P/Invoke against the [WPEWebKit API](https://github.com/WebPlatformForEmbedded/WPEWebKit).
 
-**Important**: All GTK calls must be executed on the GTK thread. Use [`GtkInteropHelper.RunOnGlibThread`](https://api-docs.avaloniaui.net/docs/M_Avalonia_X11_Interop_GtkInteropHelper_RunOnGlibThread__1) from the `Avalonia.X11` assembly (included with `Avalonia.Desktop`).
+```csharp
+public interface ILinuxWpePlatformHandle : IPlatformHandle
+{
+    /// Pointer to the WebKitWebView GObject instance.
+    IntPtr WebKitWebView { get; }
 
-The provided `WebKitWebView` IntPtr can be used directly with WebKit P/Invokes from the [official WebKit reference](https://webkitgtk.org/reference/webkit2gtk/2.5.1/WebKitWebView.html).
+    /// Pointer to the wpe_view_backend native struct.
+    IntPtr WpeViewBackend { get; }
+}
+```
+
+#### Linux (WebKitGTK)
+
+`NativeWebDialog` (and `NativeWebView` when configured to prefer WebKitGTK) exposes a WebKitGTK handle. The provided `WebKitWebView` IntPtr can be used directly with WebKit P/Invokes from the [official WebKitGTK reference](https://webkitgtk.org/reference/webkit2gtk/stable/index.html).
 
 ```csharp
 public interface IGtkWebViewPlatformHandle : IPlatformHandle
 {
     IntPtr WebKitWebView { get; }
 }
-```
-
-**Example Usage**:
-
-```csharp
-GtkInteropHelper.RunOnGlibThread(() =>
-{
-    // Your WebKit P/Invoke calls here
-});
 ```
 
 #### Android
