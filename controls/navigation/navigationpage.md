@@ -5,13 +5,13 @@ doc-type: reference
 ---
 
 import NavigationBasicExample from '/img/controls/navigationpage/navigation-basic-example.gif';
+import NavigationLoginModal from '/img/controls/navigationpage/navigation-login-modal.gif';
 import NavigationPagePushedScreenshot from '/img/controls/navigationpage/navigationpage-pushed.png';
 import NavigationPageCustomBackScreenshot from '/img/controls/navigationpage/navigationpage-custom-back-button.png';
 import NavigationPageNoNavbarScreenshot from '/img/controls/navigationpage/navigationpage-no-navbar.png';
 import NavigationPageNoBackButtonScreenshot from '/img/controls/navigationpage/navigationpage-no-back-button.png';
 import NavigationPageOverlayBarScreenshot from '/img/controls/navigationpage/navigationpage-overlay-bar.png';
 import NavigationPageTopCommandBarScreenshot from '/img/controls/navigationpage/navigationpage-top-commandbar.png';
-import NavigationPageAppearanceScreenshot from '/img/controls/navigationpage/navigationpage-appearance.png';
 import NavigationPageModalScreenshot from '/img/controls/navigationpage/navigationpage-modal.png';
 import NavigationPageDrawerIntegrationScreenshot from '/img/controls/navigationpage/navigationpage-drawer-integration.png';
 
@@ -236,33 +236,51 @@ private void UpdateStatus()
 }
 ```
 
-### Hiding the navigation bar on a page
+### Hiding the navigation bar
 
 <Image light={NavigationPageNoNavbarScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
+<br />
 
-```xml
-<ContentPage NavigationPage.HasNavigationBar="False">
-    <!-- content -->
-</ContentPage>
-```
+<Tabs>
 
-```csharp
-NavigationPage.SetHasNavigationBar(page, false);
-```
+  <TabItem label="XAML" value="xaml">
+  ```xml
+  <ContentPage NavigationPage.HasNavigationBar="False">
+      <!-- content -->
+  </ContentPage>
+  ```
+  </TabItem>
+
+  <TabItem label="C#" value="cs">
+  ```csharp
+  NavigationPage.SetHasNavigationBar(page, false);
+  ```
+  </TabItem>
+
+</Tabs>
 
 ### Hiding the back button
 
 <Image light={NavigationPageNoBackButtonScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
+<br />
 
-```xml
-<ContentPage NavigationPage.HasBackButton="False">
-    <!-- user cannot navigate back from here -->
-</ContentPage>
-```
+<Tabs>
 
-```csharp
-NavigationPage.SetHasBackButton(page, false);
-```
+  <TabItem label="XAML" value="xaml">
+  ```xml
+  <ContentPage NavigationPage.HasBackButton="False">
+      <!-- user cannot navigate back from here -->
+  </ContentPage>
+  ```
+  </TabItem>
+
+  <TabItem label="C#" value="cs">
+  ```csharp
+  NavigationPage.SetHasBackButton(page, false);
+  ```
+  </TabItem>
+
+</Tabs>
 
 ### Custom back button
 
@@ -271,6 +289,7 @@ Replace the default back arrow with custom text or a control.
 In this example, the back arrow is replaced with the text "Go Home" on the detail page by adding this line to the **DetailPage.axaml.cs** code-behind.
 
 <Image light={NavigationPageCustomBackScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
+<br />
 
 ```csharp
 NavigationPage.SetBackButtonContent(this, new TextBlock { Text = "Go Home" });
@@ -280,9 +299,10 @@ NavigationPage.SetBackButtonContent(this, new TextBlock { Text = "Go Home" });
 
 Create a custom command bar and assign it to a target page. It is rendered within the navigation bar area when the target page is at the top of the stack.
 
-In this example, we add a row of custom buttons that are displayed when viewing the detail page. This involves creating a custom [`UserControl`](/controls/primitives/usercontrol) with its own .axaml and .axaml.cs files, then referencing it in the **DetailPage.axaml.cs** code-behind file.
+In this example, we add a row of custom buttons that are displayed when viewing the detail page. This involves creating a custom [`UserControl`](/controls/primitives/usercontrol) named `TopBar`, with its own .axaml and .axaml.cs files. `TopBar` can then be referenced in the **DetailPage.axaml.cs** code-behind file.
 
 <Image light={NavigationPageTopCommandBarScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
+<br />
 
 <Tabs>
 
@@ -340,9 +360,9 @@ In this example, we add a row of custom buttons that are displayed when viewing 
 
 </Tabs>
 
-### Page Transitions
+### Page transitions
 
-To animate page pushes and pops, go into **MainWindow.axaml.cs**, then set the `PageTransition` property on the `NavigationPage` control.
+To animate page pushes and pops, go into the code-behind file of where the `NavigationPage` control appears (**MainWindow.axaml.cs**, in this example). Then, set the `PageTransition` property on the `NavigationPage`.
 
 ```csharp
 using Avalonia.Animation; // Add this "using" statement to use Avalonia's built-in animations
@@ -370,57 +390,178 @@ public partial class MainWindow : Window
 
 ### Modal pages
 
-Present a page that covers the full `NavigationPage` area. Useful for login flows, pickers, or any full-screen dialog.
+Present a modal page that covers the full `NavigationPage` area.
+
+In this example, we create a mock login page. It is called by `PushModalAsync` from the home page. Clicking Login dismisses the modal with `PopModalAsync`, whereas clicking Cancel dismisses all open modals with `PopAllModalsAsync`.
+
+<Image light={NavigationLoginModal} position="center" maxWidth={400} cornerRadius="true" />
+<br />
+
+<Tabs>
+
+  <TabItem label="HomePage.axaml" value="homePageXaml">
+  ```xml
+  <ContentPage xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="TestApp1.Views.HomePage"
+             Header="Home">
+    <StackPanel HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Spacing="12">
+        <TextBlock Text="Welcome to the Home Page"
+                   FontSize="22"
+                   FontWeight="SemiBold"
+                   HorizontalAlignment="Center"/>
+        <Button Content="Login"
+                Click="OnLoginClick"
+                HorizontalAlignment="Center"/>
+    </StackPanel>
+  </ContentPage>
+  ```
+  </TabItem>
+
+  <TabItem label="HomePage.axaml.cs" value="homePageCs">
+  ```csharp
+  using Avalonia.Controls;
+  using Avalonia.Interactivity;
+
+  namespace TestApp1.Views;
+
+  public partial class HomePage : ContentPage
+  {
+      public HomePage()
+      {
+          InitializeComponent();
+      }
+
+      private async void OnLoginClick(object? sender, RoutedEventArgs e)
+      {
+          if (Navigation is not null)
+              await Navigation.PushModalAsync(new LoginPage());
+      }
+  }
+  ```
+  </TabItem>
+
+  <TabItem label="LoginPage.axaml" value="loginPageXaml">
+  ```xml
+  <ContentPage xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="TestApp1.Views.LoginPage"
+             Header="Login">
+
+    <StackPanel HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Spacing="20">
+
+        <TextBlock Text="Sign In"
+                   FontSize="24"
+                   HorizontalAlignment="Center"/>
+
+        <StackPanel Spacing="4">
+            <TextBlock Text="Email"/>
+            <TextBox Name="EmailBox"
+                     Watermark="Enter your email"/>
+        </StackPanel>
+
+        <StackPanel Spacing="4">
+            <TextBlock Text="Password"/>
+            <TextBox Name="PasswordBox"
+                     Watermark="Enter your password"
+                     PasswordChar="•"/>
+        </StackPanel>
+
+        <Button Content="Login"
+                Click="OnLoginClick"/>
+
+        <Button Content="Cancel"
+                Click="OnCancelClick"/>
+
+    </StackPanel>
+  </ContentPage>
+  ```
+  </TabItem>
+
+  <TabItem label="LoginPage.axaml.cs" value="loginPageCs">
+  ```csharp
+  using Avalonia.Controls;
+  using Avalonia.Interactivity;
+
+  namespace TestApp1.Views;
+
+  public partial class LoginPage : ContentPage
+  {
+      public LoginPage()
+      {
+          InitializeComponent();
+      }
+
+      private async void OnLoginClick(object? sender, RoutedEventArgs e)
+      {
+          // This is where you specify your actual login auth logic
+          if (Navigation is not null)
+              await Navigation.PopModalAsync();
+      }
+
+      private async void OnCancelClick(object? sender, RoutedEventArgs e)
+      {
+          // Cancel button dismisses all open modals
+          if (Navigation is not null)
+              await Navigation.PopAllModalsAsync();
+      }
+  }
+  ```
+  </TabItem>
+
+</Tabs>
+
+### Count number of modals open
 
 ```csharp
-// Present modally
-await Navigation.PushModalAsync(new LoginPage());
-
-// Dismiss
-await Navigation.PopModalAsync();
-
-// Dismiss all modals at once
-await Navigation.PopAllModalsAsync();
-
-// Check how many modals are open
 int modalCount = Navigation.ModalStack.Count;
 ```
 
 ### Modal transitions
 
-```csharp
-var navPage = new NavigationPage
-{
-    Content = new HomePage(),
-    ModalTransition = new CrossFade(TimeSpan.FromMilliseconds(300))
-};
-```
+To animate modal pushes and pops, set the `ModalTransition` property on the `NavigationPage` control. This works similarly as [`PageTransition`](#page-transitions).
 
-### Customizing the bar height
+<Tabs>
 
-```csharp
-// Global default
-var navPage = new NavigationPage
-{
-    Content = new HomePage(),
-    BarHeight = 64
-};
+  <TabItem label="XAML" value="xaml">
+  ```xml
+  <NavigationPage>
+    <NavigationPage.ModalTransition>
+        <CrossFade Duration="0:0:0.30"/>
+    </NavigationPage.ModalTransition>
+  </NavigationPage>
+  ```
+  </TabItem>
 
-// Override for a single page
-NavigationPage.SetBarHeightOverride(page, 56);
-```
+  <TabItem label="C#" value="cs">
+  ```csharp
+  using Avalonia.Animation; // Add this "using" statement to use Avalonia's built-in animations
 
-<Image light={NavigationPageAppearanceScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
+  public partial class MainWindow : Window
+  {
+      public MainWindow()
+      {
+          InitializeComponent();
 
-### Navigation Bar Shadow
+          // Select the NavigationPage control named "Nav"
+          var nav = this.FindControl<NavigationPage>("Nav");
 
-```csharp
-navPage.HasShadow = true;
-```
+          // Set a cross-fade modal transition
+          nav.ModalTransition = new CrossFade(TimeSpan.FromMilliseconds(300));
+      }
+  }
+  ```
+  </TabItem>
 
-### Overlay Navigation Bar
+</Tabs>
 
-Use `BarLayoutBehavior.Overlay` so the bar floats above a hero image or map:
+### Overlay navigation bar
+
+Use `BarLayoutBehavior.Overlay` to make the bar floats above a hero image or map.
 
 ```xml
 <ContentPage NavigationPage.BarLayoutBehavior="Overlay"
@@ -430,11 +571,11 @@ Use `BarLayoutBehavior.Overlay` so the bar floats above a hero image or map:
 </ContentPage>
 ```
 
-<Image light={NavigationPageOverlayBarScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
+<Image light={NavigationPageOverlayBarScreenshot} alt="" position="center" maxWidth={250} cornerRadius="true"/>
 
-### Replacing the Login Screen After Sign-In
+### Replacing the login screen after sign-in
 
-After a successful login, replace the root page so the user cannot navigate back to the login screen:
+After a successful login, replace the root page so the user cannot navigate back to the login screen.
 
 ```csharp
 private async void OnLoginSuccess()
@@ -451,9 +592,9 @@ Or use `ReplaceAsync` to swap the top page:
 await Navigation.ReplaceAsync(new HomePage());
 ```
 
-### DrawerPage Integration
+### DrawerPage integration
 
-When `NavigationPage` is the `Content` of a `DrawerPage`, a hamburger toggle appears in the navigation bar at the root of the stack. It disappears when the user navigates deeper.
+When `NavigationPage` is the `Content` of a [`DrawerPage`](/controls/navigation/drawerpage), a hamburger toggle appears in the navigation bar at the root of the stack. It disappears when the user navigates deeper.
 
 ```csharp
 var shell = new DrawerPage
@@ -464,9 +605,9 @@ var shell = new DrawerPage
 window.Page = shell;
 ```
 
-<Image light={NavigationPageDrawerIntegrationScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
+<Image light={NavigationPageDrawerIntegrationScreenshot} alt="" position="center" maxWidth={250} cornerRadius="true"/>
 
-### Disabling Back-Swipe Gesture
+### Disabling the go-back swipe gesture
 
 ```csharp
 navPage.IsGestureEnabled = false;
