@@ -288,13 +288,13 @@ Asynchronously delays destruction of the native control during parent changes.
 
 ## Platform support
 
-| Feature                | Windows WebView2-Edge | macOS/iOS WKWebView | Linux | Android | Browser |
-|------------------------|-----------------------|-------|---------------------|---------|---------|
-| `NativeWebView`        | ✓                     | ✓                   | ✗     | ✓      | ✗*      |
-| `TryGetCommandManager` | ✓                    | ✓                   | ✗     | ✓       | ✗*       |
-| `TryGetCookieManager`  | ✓                    | ✓                   | ✗     | ✓      | ✗*       |
-| `ShowPrintUI` | ✓                    | ✓                   | ✗      | ✗*     | ✗*       |
-| `PrintToPdfStreamAsync`  | ✓                    |  ✓**                   | ✗     | ✗*      | ✗*       |
+| Feature                | Windows WebView2-Edge | macOS/iOS WKWebView | Linux WPE WebKit | Android | Browser |
+|------------------------|-----------------------|---------------------|------------------|---------|---------|
+| `NativeWebView`        | ✓                     | ✓                   | ✓                | ✓       | ✗*      |
+| `TryGetCommandManager` | ✓                     | ✓                   | ✗*               | ✓       | ✗*      |
+| `TryGetCookieManager`  | ✓                     | ✓                   | ✓                | ✓       | ✗*      |
+| `ShowPrintUI`          | ✓                     | ✓                   | ✗*               | ✗*      | ✗*      |
+| `PrintToPdfStreamAsync`| ✓                     | ✓**                 | ✗*               | ✗*      | ✗*      |
 
 \* Not yet implemented while possible. If this is a blocker for your project, please open an issue.
 
@@ -302,7 +302,7 @@ Asynchronously delays destruction of the native control during parent changes.
 
 :::note
 
-For Linux support, please use [NativeWebDialog](/controls/web/nativewebdialog)
+On Linux, `NativeWebView` is rendered through [WPE WebKit](https://wpewebkit.org) using offscreen (SHM) rendering. Install the `libwpewebkit-2.0`, `libwpe-1.0`, and `libWPEBackend-fdo-1.0` runtime libraries — see the [Linux prerequisites](/docs/app-development/embedding-web-content#linux). If WPE is unavailable, you can opt in to the WebKitGTK adapter via [`LinuxWpeWebViewEnvironmentRequestedEventArgs.PreferWebKitGtkInstead`](/controls/web/webview-environment#linux-wpe-webkit), or fall back to [`NativeWebDialog`](/controls/web/nativewebdialog).
 
 :::
 

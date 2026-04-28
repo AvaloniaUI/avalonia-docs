@@ -92,7 +92,33 @@ webView.EnvironmentRequested += (sender, args) =>
 };
 ```
 
+### Linux (WPE WebKit)
+
+The default Linux backend for `NativeWebView` is [WPE WebKit](https://wpewebkit.org), which renders offscreen and composites into the Avalonia visual tree.
+
+**Key Properties:**
+
+- `DataDirectory`: Directory used for persistent website data. When `null`, the default WPE data directory is used.
+- `CacheDirectory`: Directory used for the website cache. When `null`, the default WPE cache directory is used.
+- `RenderingMode`: Selects the WPE rendering backend (`WpeRenderingMode`). The default `Auto` currently maps to `Shm` (software rendering, no GPU required). `Egl` and `DmaBuf` are reserved for future use and will throw `NotImplementedException` if selected. The choice is process-global and affects all `NativeWebView` instances.
+- `PreferWebKitGtkInstead`: When `true`, falls back to the WebKitGTK adapter even if WPE is available.
+
+**Example:**
+
+```csharp
+webView.EnvironmentRequested += (sender, args) =>
+{
+    if (args is LinuxWpeWebViewEnvironmentRequestedEventArgs wpeArgs)
+    {
+        wpeArgs.DataDirectory = Path.Combine(AppContext.BaseDirectory, "wpe-data");
+        wpeArgs.CacheDirectory = Path.Combine(AppContext.BaseDirectory, "wpe-cache");
+    }
+};
+```
+
 ### Linux (GTK WebKit)
+
+Used by `NativeWebDialog`, and by `NativeWebView` when `PreferWebKitGtkInstead` is set or WPE is unavailable.
 
 **Key Properties:**
 
