@@ -315,18 +315,6 @@ public interface ILinuxWpePlatformHandle : IPlatformHandle
 }
 ```
 
-**Important**: All WPE/GLib calls must be made on the GLib main thread. Use [`GtkInteropHelper.RunOnGlibThread`](https://api-docs.avaloniaui.net/docs/M_Avalonia_X11_Interop_GtkInteropHelper_RunOnGlibThread__1) from the `Avalonia.X11` assembly (included with `Avalonia.Desktop`) to marshal calls onto it.
-
-```csharp
-if (myWebView.TryGetPlatformHandle() is ILinuxWpePlatformHandle handle)
-{
-    GtkInteropHelper.RunOnGlibThread(() =>
-    {
-        // Your WPE WebKit P/Invoke calls here using handle.WebKitWebView
-    });
-}
-```
-
 #### Linux (WebKitGTK)
 
 `NativeWebDialog` (and `NativeWebView` when configured to prefer WebKitGTK) exposes a WebKitGTK handle. The provided `WebKitWebView` IntPtr can be used directly with WebKit P/Invokes from the [official WebKitGTK reference](https://webkitgtk.org/reference/webkit2gtk/stable/index.html).
@@ -337,8 +325,6 @@ public interface IGtkWebViewPlatformHandle : IPlatformHandle
     IntPtr WebKitWebView { get; }
 }
 ```
-
-The same threading rule applies — wrap calls in `GtkInteropHelper.RunOnGlibThread`.
 
 #### Android
 
