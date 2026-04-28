@@ -15,7 +15,7 @@ import NavigationPageTopCommandBarScreenshot from '/img/controls/navigationpage/
 import NavigationPageModalScreenshot from '/img/controls/navigationpage/navigationpage-modal.png';
 import NavigationPageDrawerIntegrationScreenshot from '/img/controls/navigationpage/navigationpage-drawer-integration.png';
 
-`NavigationPage` provides stack-based navigation. Pages, built as individual instances of [`ContentPage`](/controls/navigation/contentpage), are pushed onto and popped off the stack through the `INavigation` interface. A navigation bar is rendered at the top of the page by default, showing the current page title and a back button when the stack depth is greater than 1. Optional command bars can be rendered on child pages.
+`NavigationPage` provides stack-based navigation. Pages are built as individual instances of [`ContentPage`](/controls/navigation/contentpage), and are pushed onto and popped off the stack through `INavigation`. A navigation bar is rendered at the top of the page by default, showing the current page title and a back button. Optional command bars can be rendered on child pages.
 
 `NavigationPage` implements `INavigation` directly. The navigation API is available either through `Page.Navigation` on child pages, or through a direct reference to the `NavigationPage` instance.
 
@@ -70,7 +70,7 @@ Set these on individual child `Page` instances to control per-page navigation ba
 | Value | Description |
 | ----- | ----------- |
 | `Inset` | Default. The navigation bar occupies layout space. Page content is laid out below it. |
-| `Overlay` | The navigation bar floats above the page content. Content extends behind the bar and should handle the inset via `SafeAreaPadding`. |
+| `Overlay` | The navigation bar floats above the page content. Content extends behind the bar. Handle the inset via [`SafeAreaPadding`](/docs/services/insets-manager). |
 
 ## Navigation methods
 
@@ -115,7 +115,7 @@ The system back button automatically calls `PopAsync()` when `StackDepth > 1`.
 
 ### Basic NavigationPage
 
-<Image light={NavigationBasicExample} position="center" maxWidth={400} cornerRadius="true" />
+<Image light={NavigationBasicExample} alt="Animation showing a home page with a navigation bar; clicking 'Go to Details' slides to a detail page with Refresh and Share command buttons in the navigation bar" position="center" maxWidth={400} cornerRadius="true" />
 <br />
 
 A basic implementation of `NavigationPage` with two-page navigation between a home page and detail page, plus a top command bar that appears on the detail page only.
@@ -238,7 +238,7 @@ private void UpdateStatus()
 
 ### Hiding the navigation bar
 
-<Image light={NavigationPageNoNavbarScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
+<Image light={NavigationPageNoNavbarScreenshot} alt="A detail page with the navigation bar hidden, showing command buttons at the top without a title or back button" position="center" maxWidth={400} cornerRadius="true"/>
 <br />
 
 <Tabs>
@@ -261,7 +261,7 @@ private void UpdateStatus()
 
 ### Hiding the back button
 
-<Image light={NavigationPageNoBackButtonScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
+<Image light={NavigationPageNoBackButtonScreenshot} alt="A navigation bar showing the 'Details' page title without a back button" position="center" maxWidth={400} cornerRadius="true"/>
 <br />
 
 <Tabs>
@@ -286,9 +286,9 @@ private void UpdateStatus()
 
 Replace the default back arrow with custom text or a control.
 
-In this example, the back arrow is replaced with the text "Go Home" on the detail page by adding this line to the **DetailPage.axaml.cs** code-behind.
+In this example, the back arrow is replaced with the text "Go Home" on the detail page by adding this line to the `DetailPage.axaml.cs` code-behind.
 
-<Image light={NavigationPageCustomBackScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
+<Image light={NavigationPageCustomBackScreenshot} alt="A navigation bar showing 'Go Home' as a custom back button label next to the Details page title" position="center" maxWidth={400} cornerRadius="true"/>
 <br />
 
 ```csharp
@@ -299,9 +299,9 @@ NavigationPage.SetBackButtonContent(this, new TextBlock { Text = "Go Home" });
 
 Create a custom command bar and assign it to a target page. It is rendered within the navigation bar area when the target page is at the top of the stack.
 
-In this example, we add a row of custom buttons that are displayed when viewing the detail page. This involves creating a custom [`UserControl`](/controls/primitives/usercontrol) named `TopBar`, with its own .axaml and .axaml.cs files. `TopBar` can then be referenced in the **DetailPage.axaml.cs** code-behind file.
+This example shows a row of custom buttons that are displayed when viewing the detail page. They are placed in a custom [`UserControl`](/controls/primitives/usercontrol) named `TopBar`, defined in independent .axaml and .axaml.cs files. `TopBar` can then be referenced in the `DetailPage.axaml.cs` code-behind file.
 
-<Image light={NavigationPageTopCommandBarScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
+<Image light={NavigationPageTopCommandBarScreenshot} alt="A navigation bar with a back button, 'Details' title, and a top command bar containing Refresh, Share, Filter, and Add New buttons on the right" position="center" maxWidth={400} cornerRadius="true"/>
 <br />
 
 <Tabs>
@@ -362,7 +362,7 @@ In this example, we add a row of custom buttons that are displayed when viewing 
 
 ### Page transitions
 
-To animate page pushes and pops, go into the code-behind file of where the `NavigationPage` control appears (**MainWindow.axaml.cs**, in this example). Then, set the `PageTransition` property on the `NavigationPage`.
+To animate page pushes and pops, go into the code-behind file of where the `NavigationPage` control appears (`MainWindow.axaml.cs`, in this example). Then, set the `PageTransition` property on the `NavigationPage`.
 
 ```csharp
 using Avalonia.Animation; // Add this "using" statement to use Avalonia's built-in animations
@@ -392,9 +392,9 @@ public partial class MainWindow : Window
 
 Present a modal page that covers the full `NavigationPage` area.
 
-In this example, we create a mock login page. It is called by `PushModalAsync` from the home page. Clicking Login dismisses the modal with `PopModalAsync`, whereas clicking Cancel dismisses all open modals with `PopAllModalsAsync`.
+This example shows a mock login page. It is called by `PushModalAsync` from the home page. Clicking Login dismisses the modal with `PopModalAsync`, whereas clicking Cancel dismisses all open modals with `PopAllModalsAsync`.
 
-<Image light={NavigationLoginModal} position="center" maxWidth={400} cornerRadius="true" />
+<Image light={NavigationLoginModal} alt="Animation showing a modal login page with email and password fields being presented over the home page and dismissed" position="center" maxWidth={400} cornerRadius="true" />
 <br />
 
 <Tabs>
@@ -561,7 +561,7 @@ To animate modal pushes and pops, set the `ModalTransition` property on the `Nav
 
 ### Overlay navigation bar
 
-Use `BarLayoutBehavior.Overlay` to make the bar floats above a hero image or map.
+Use `BarLayoutBehavior.Overlay` to make the bar float above a hero image or map.
 
 ```xml
 <ContentPage NavigationPage.BarLayoutBehavior="Overlay"
@@ -571,7 +571,7 @@ Use `BarLayoutBehavior.Overlay` to make the bar floats above a hero image or map
 </ContentPage>
 ```
 
-<Image light={NavigationPageOverlayBarScreenshot} alt="" position="center" maxWidth={250} cornerRadius="true"/>
+<Image light={NavigationPageOverlayBarScreenshot} alt="A page with the navigation bar overlaid on top of content, with a back button and share icon floating above a game app header image" position="center" maxWidth={250} cornerRadius="true"/>
 
 ### Replacing the login screen after sign-in
 
@@ -605,7 +605,7 @@ var shell = new DrawerPage
 window.Page = shell;
 ```
 
-<Image light={NavigationPageDrawerIntegrationScreenshot} alt="" position="center" maxWidth={250} cornerRadius="true"/>
+<Image light={NavigationPageDrawerIntegrationScreenshot} alt="A navigation bar at the root page showing a hamburger toggle button on the left to open the drawer" position="center" maxWidth={250} cornerRadius="true"/>
 
 ### Disabling the go-back swipe gesture
 
