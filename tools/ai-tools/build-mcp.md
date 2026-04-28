@@ -31,13 +31,13 @@ The Build MCP server gives your AI coding assistant direct access to the Avaloni
 
 Build MCP is **free to use** and requires no license key or local installation. It runs as a remote server, so setup takes only a few seconds in any MCP-compatible editor or CLI tool.
 
-The server also provides migration tools that guide your assistant through upgrading to the latest Avalonia Developer Tools package and migrating WPF applications to Avalonia using XPF.
+The server also provides migration tools that guide your assistant through upgrading to the latest Avalonia Developer Tools package and migrating WPF applications to Avalonia — either as a full native port or as a drop-in cross-platform deployment using Avalonia XPF.
 
 For a general introduction to MCP, see [AI Tools](/tools/ai-tools/).
 
 ## Available tools
 
-The Build MCP server exposes five tools to your AI assistant:
+The Build MCP server exposes eight tools to your AI assistant:
 
 ### Documentation and rules
 
@@ -52,7 +52,10 @@ The Build MCP server exposes five tools to your AI assistant:
 | Tool | Description |
 |------|-------------|
 | `migrate_diagnostics` | Provides step-by-step guidance for setting up or migrating to the current Avalonia Developer Tools package. Covers removing the deprecated `Avalonia.Diagnostics` package, installing `AvaloniaUI.DiagnosticsSupport`, updating `Program.cs` and `App.axaml.cs`, and replacing old API calls. |
-| `migrate_to_xpf` | Provides step-by-step guidance for migrating a WPF application to Avalonia using XPF. Covers NuGet feed configuration, SDK switching, license key setup, handling version conflicts, and troubleshooting common issues. |
+| `analyze_wpf_project` | Entry point for migrating a WPF application to Avalonia. Scans the project for target framework, WPF references, third-party control suites (Telerik, DevExpress, Syncfusion, Infragistics, Actipro, SciChart, Xceed, ComponentOne), MVVM frameworks, and P/Invoke usage, then recommends either Avalonia XPF or a native Avalonia migration. Hands off to `migrate_to_xpf` or `migrate_to_avalonia` based on the recommendation. |
+| `migrate_to_xpf` | Step-by-step guidance for migrating a WPF application to Avalonia using XPF (drop-in cross-platform with existing WPF code, XAML, and third-party controls preserved). Covers NuGet feed configuration, SDK switching, license key setup, handling version conflicts, and troubleshooting. |
+| `migrate_to_avalonia` | Phased playbook for a full native Avalonia migration. Returns guiding principles (port-not-refactor, runnable baseline, vertical slices), Phase 0 validation, project setup, file migration, build/test/iterate guidance, and post-migration steps. Pulls focused mapping tables on demand via `lookup_wpf_to_avalonia_mapping` rather than dumping the full reference up-front. |
+| `lookup_wpf_to_avalonia_mapping` | Returns a focused WPF→Avalonia mapping for a single topic, so the assistant only loads the table it needs while porting. Topics: `namespaces`, `controls`, `custom-controls`, `properties`, `styling`, `bindings`, `templates`, `events`, `resources`, `layout`, `threading`, `windows`, `animations`, `mvvm`, `navigation`, `gotchas`. |
 
 ## Available prompts
 
@@ -67,7 +70,6 @@ Prompt support varies by client. Claude Desktop, Claude Code, and Cursor support
 | `init` | Initializes an Avalonia expert session for an existing project. Loads development rules, sets up concise response behavior, and configures the assistant to use the documentation tools for every technical question. |
 | `new` | Guides you through creating a new Avalonia application. Covers template selection (`avalonia.mvvm` for desktop, `avalonia.xplat` for cross-platform), project creation with CommunityToolkit.Mvvm, compiled bindings setup, and developer tools installation. Accepts an optional `app_name` parameter. |
 | `recreate-ui` | Sets up an iterative design workflow for recreating a UI from a screenshot or image. The assistant writes AXAML, previews it using the [DevTools MCP](/tools/developer-tools/mcp) `attach-to-file` tool, takes screenshots to compare against the target, and keeps refining until the result matches. Accepts an optional `theme` parameter (`light` or `dark`). Requires an [Avalonia license](https://avaloniaui.net/pricing) for the DevTools MCP integration. |
-| `wpf-migration` | Analyzes a WPF project and recommends the best migration path to Avalonia. The assistant scans for third-party control dependencies (Telerik, DevExpress, Syncfusion, and others) and recommends either Avalonia XPF (preserves existing WPF code and controls) or native Avalonia (full migration with modern controls). Calls the appropriate migration tool automatically based on the recommendation. |
 
 ## Setting up the MCP server
 
@@ -290,13 +292,16 @@ Describe what you want to accomplish in natural language. The AI assistant calls
 
 This prompt works best when combined with the [DevTools MCP](/tools/developer-tools/mcp), which provides the `attach-to-file` tool for live XAML previewing. The assistant writes AXAML, previews it, takes screenshots, and iterates until the result matches your target design. DevTools MCP requires an [Avalonia license](https://avaloniaui.net/pricing).
 
-**Migrating a WPF application (using the `wpf-migration` prompt):**
+**Migrating a WPF application:**
 
 ```text
 "Analyze my WPF project and recommend the best migration path to Avalonia."
 ```
 
-The assistant scans your project for third-party control suites and other dependencies, then recommends either Avalonia XPF or native Avalonia migration. It calls the `migrate_to_xpf` or documentation search tools as needed to walk you through the process.
+The assistant calls `analyze_wpf_project` to scan your project for target framework, WPF references, third-party control suites (Telerik, DevExpress, Syncfusion, Infragistics, Actipro, SciChart, Xceed, ComponentOne), MVVM frameworks, and platform-specific code. Based on what it finds, it recommends one of two paths and hands off to the matching tool:
+
+- **Avalonia XPF** — drop-in cross-platform with your existing WPF code, XAML, and third-party controls preserved. The assistant calls `migrate_to_xpf` to walk you through NuGet config, SDK switching, and license setup.
+- **Native Avalonia** — full migration to modern Avalonia controls and themes. The assistant calls `migrate_to_avalonia` for the phased playbook, then pulls focused per-topic mapping tables (controls, properties, styling, bindings, events, templates, gotchas, etc.) via `lookup_wpf_to_avalonia_mapping` as it ports each file. This keeps context focused — the assistant only loads the mapping it needs for the section it's working on.
 
 **Setting up Avalonia Developer Tools:**
 
