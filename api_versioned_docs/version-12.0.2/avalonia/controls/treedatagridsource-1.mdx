@@ -1,0 +1,143 @@
+---
+title: 'TreeDataGridSource<TModel>'
+hide_title: true
+slug: '/avalonia/controls/treedatagridsource-1'
+uid: 'Avalonia.Controls.TreeDataGridSource`1'
+commentId: 'T:Avalonia.Controls.TreeDataGridSource`1'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.TreeDataGrid'
+assembly: 'Avalonia.Controls.TreeDataGrid'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net8.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">TreeDataGridSource&lt;TModel&gt; Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Represents a typed data source for a [Avalonia.Controls.TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid) control.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class TreeDataGridSource<TModel>
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="treedatagridsource">TreeDataGridSource</a> <span className="apiref-page__relation-separator">-&gt;</span> TreeDataGridSource&lt;TModel&gt;
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [ClearSort](treedatagridsource.mdx#uid-73580c67ae) | Clears any sorting applied to the specified column. Inherited from [TreeDataGridSource](treedatagridsource.mdx). |
+| [SortBy](treedatagridsource.mdx#uid-903693cc11) | Requests to sort the source by the specified column. Inherited from [TreeDataGridSource](treedatagridsource.mdx). |
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [CellSelection](#uid-f842817489) | Gets the cell selection model if cell selection is being used. |
+| [Items](#uid-38a02252c8) | Gets or sets the items in the data source. |
+| [RowSelection](#uid-8f5de8f2d3) | Gets the row selection model if row selection is being used. |
+| [AllowTriStateSorting](treedatagridsource.mdx#uid-0ef74541df) | Gets or sets a value indicating whether tri-state sorting (ascending, descending, unsorted) is allowed when clicking column headers. Inherited from [TreeDataGridSource](treedatagridsource.mdx). |
+| [AutoDragDropRows](treedatagridsource.mdx#uid-2e14fdd621) | Gets or sets a value indicating whether rows can be automatically dragged and dropped within the [TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid). Inherited from [TreeDataGridSource](treedatagridsource.mdx). |
+| [CanUserResizeColumns](treedatagridsource.mdx#uid-083b508cda) | Gets or sets a value indicating whether users can resize columns. Inherited from [TreeDataGridSource](treedatagridsource.mdx). |
+| [CanUserSortColumns](treedatagridsource.mdx#uid-f1d0ed4a92) | Gets or sets a value indicating whether users can sort columns by clicking column headers. Inherited from [TreeDataGridSource](treedatagridsource.mdx). |
+| [Columns](treedatagridsource.mdx#uid-2c5a69e525) | Gets the columns to be displayed. Inherited from [TreeDataGridSource](treedatagridsource.mdx). |
+| [FrozenColumnCount](treedatagridsource.mdx#uid-054e878da2) | Gets or sets the number of columns that are frozen at the start of the grid. Inherited from [TreeDataGridSource](treedatagridsource.mdx). |
+| [IsFiltered](treedatagridsource.mdx#uid-933895739e) | Gets a value indicating whether the data source is filtered. Inherited from [TreeDataGridSource](treedatagridsource.mdx). |
+| [IsHierarchical](treedatagridsource.mdx#uid-bbc43b1d92) | Gets a value indicating whether the data source is hierarchical. Inherited from [TreeDataGridSource](treedatagridsource.mdx). |
+| [IsSorted](treedatagridsource.mdx#uid-9b1ff08d8b) | Gets a value indicating whether the data source is currently sorted. Inherited from [TreeDataGridSource](treedatagridsource.mdx). |
+| [Rows](treedatagridsource.mdx#uid-8fb1b1429e) | Gets the rows to be displayed. Inherited from [TreeDataGridSource](treedatagridsource.mdx). |
+| [Selection](treedatagridsource.mdx#uid-2528b656d1) | Gets or sets the selection model. Inherited from [TreeDataGridSource](treedatagridsource.mdx). |
+| [ShowColumnHeaders](treedatagridsource.mdx#uid-dbc7f6507a) | Gets or sets a value indicating whether column headers are shown. Inherited from [TreeDataGridSource](treedatagridsource.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f842817489"></span>
+
+### CellSelection Property
+
+Gets the cell selection model if cell selection is being used.
+
+```csharp
+public Avalonia.Controls.Selection.TreeDataGridCellSelectionModel<TModel><TModel> CellSelection { get; set; }
+```
+
+#### Remarks
+
+This property is equivalent to casting the [Avalonia.Controls.Selection](xref:Avalonia.Controls.Selection) property to
+[Avalonia.Controls.Selection.TreeDataGridCellSelectionModel&lt;T&gt;](xref:Avalonia.Controls.Selection.TreeDataGridCellSelectionModel%601).
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-38a02252c8"></span>
+
+### Items Property
+
+Gets or sets the items in the data source.
+
+```csharp
+public System.Collections.Generic.IEnumerable<TModel> Items { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8f5de8f2d3"></span>
+
+### RowSelection Property
+
+Gets the row selection model if row selection is being used.
+
+```csharp
+public Avalonia.Controls.Selection.TreeDataGridRowSelectionModel<TModel><TModel> RowSelection { get; set; }
+```
+
+#### Remarks
+
+This property is equivalent to casting the [Avalonia.Controls.Selection](xref:Avalonia.Controls.Selection) property to
+[Avalonia.Controls.Selection.TreeDataGridRowSelectionModel&lt;T&gt;](xref:Avalonia.Controls.Selection.TreeDataGridRowSelectionModel%601).
+
+</section>
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [PropertyChanged](treedatagridsource.mdx#uid-dc42cb3af6) | Occurs when a property value changes. Inherited from [TreeDataGridSource](treedatagridsource.mdx). |
+
+</ApiRefPage>
+

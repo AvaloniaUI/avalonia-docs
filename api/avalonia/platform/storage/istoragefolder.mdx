@@ -62,8 +62,8 @@ public interface IStorageFolder
 
 | Name | Description |
 | --- | --- |
-| [CreateFileAsync](#uid-62e9f74535) | Creates a file with specified name as a child of the current storage folder |
-| [CreateFolderAsync](#uid-78abc588e4) | Creates a folder with specified name as a child of the current storage folder |
+| [CreateFileAsync](#uid-62e9f74535) | Creates, or truncates and overwrites, a file with specified name as a child of the current storage folder. |
+| [CreateFolderAsync](#uid-78abc588e4) | Creates a folder with specified name as a child of the current storage folder unless they already exist. |
 | [GetFileAsync](#uid-8327cd9e13) | Gets the file with the specified name from the current folder. |
 | [GetFolderAsync](#uid-99a0212bbc) | Gets the folder with the specified name from the current folder. |
 | [GetItemsAsync](#uid-edd3ed2278) | Gets the files and subfolders in the current folder. |
@@ -74,7 +74,7 @@ public interface IStorageFolder
 
 ### CreateFileAsync Method
 
-Creates a file with specified name as a child of the current storage folder
+Creates, or truncates and overwrites, a file with specified name as a child of the current storage folder.
 
 ```csharp
 public System.Threading.Tasks.Task<Avalonia.Platform.Storage.IStorageFile> CreateFileAsync(string name)
@@ -91,7 +91,7 @@ The display name
 
 System.Threading.Tasks.Task&lt;[Avalonia.Platform.Storage.IStorageFile](xref:Avalonia.Platform.Storage.IStorageFile)&gt;
 
-A new [Avalonia.Platform.Storage.IStorageFile](xref:Avalonia.Platform.Storage.IStorageFile) pointing to the moved file. If not null, the current storage item becomes invalid
+A [Avalonia.Platform.Storage.IStorageFile](xref:Avalonia.Platform.Storage.IStorageFile) that provides read/write access to the file specified in `name`.
 
 
 </section>
@@ -102,7 +102,7 @@ A new [Avalonia.Platform.Storage.IStorageFile](xref:Avalonia.Platform.Storage.IS
 
 ### CreateFolderAsync Method
 
-Creates a folder with specified name as a child of the current storage folder
+Creates a folder with specified name as a child of the current storage folder unless they already exist.
 
 ```csharp
 public System.Threading.Tasks.Task<Avalonia.Platform.Storage.IStorageFolder> CreateFolderAsync(string name)
@@ -119,7 +119,7 @@ The display name
 
 System.Threading.Tasks.Task&lt;[Avalonia.Platform.Storage.IStorageFolder](xref:Avalonia.Platform.Storage.IStorageFolder)&gt;
 
-A new [Avalonia.Platform.Storage.IStorageFolder](xref:Avalonia.Platform.Storage.IStorageFolder) pointing to the moved file. If not null, the current storage item becomes invalid
+A [Avalonia.Platform.Storage.IStorageFolder](xref:Avalonia.Platform.Storage.IStorageFolder) that represents the directory at the specified `name`. This object is returned regardless of whether a directory at the specified `name` already exists.
 
 
 </section>

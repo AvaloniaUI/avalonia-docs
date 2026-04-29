@@ -1,5 +1,5 @@
 {
-  "docsetVersion": "12.0.1",
+  "docsetVersion": "12.0.2",
   "docsetId": "avalonia",
   "feeds": [
     "https://api.nuget.org/v3/index.json"
@@ -7,71 +7,71 @@
   "packages": [
     {
       "id": "Avalonia",
-      "version": "12.0.1"
+      "version": "12.0.2"
     },
     {
       "id": "Avalonia.Controls.ColorPicker",
-      "version": "12.0.1"
+      "version": "12.0.2"
     },
     {
       "id": "Avalonia.Desktop",
-      "version": "12.0.1"
+      "version": "12.0.2"
     },
     {
       "id": "Avalonia.Themes.Fluent",
-      "version": "12.0.1"
+      "version": "12.0.2"
     },
     {
       "id": "Avalonia.Fonts.Inter",
-      "version": "12.0.1"
+      "version": "12.0.2"
     },
     {
       "id": "Avalonia.Skia",
-      "version": "12.0.1"
+      "version": "12.0.2"
     },
     {
       "id": "Avalonia.Native",
-      "version": "12.0.1"
+      "version": "12.0.2"
     },
     {
       "id": "Avalonia.X11",
-      "version": "12.0.1"
+      "version": "12.0.2"
     },
     {
       "id": "Avalonia.FreeDesktop",
-      "version": "12.0.1"
+      "version": "12.0.2"
     },
     {
       "id": "Avalonia.Markup.Xaml.Loader",
-      "version": "12.0.1"
+      "version": "12.0.2"
     },
      {
       "id": "Avalonia.Browser",
-      "version": "12.0.1"
+      "version": "12.0.2"
     },
      {
       "id": "Avalonia.Android",
-      "version": "12.0.1"
+      "version": "12.0.2"
     },
      {
       "id": "Avalonia.Headless.XUnit",
-      "version": "12.0.1"
+      "version": "12.0.2"
     },
     {
       "id": "Avalonia.LinuxFramebuffer",
-      "version": "12.0.1"
+      "version": "12.0.2"
     },
      {
       "id": "Avalonia.Headless.NUnit",
-      "version": "12.0.1"
+      "version": "12.0.2"
     },
      {
       "id": "Avalonia.Win32.Interoperability",
-      "version": "12.0.1"
+      "version": "12.0.2"
     },
      {
       "id": "Avalonia.Headless.Vnc",
-      "version": "12.0.1"
+      "version": "12.0.2"
     },
     {
       "id": "AvaloniaUI.DiagnosticsSupport",
@@ -83,11 +83,11 @@
     },
     {
       "id": "Avalonia.Controls.MediaPlayer",
-      "version": "12.0.0"
+      "version": "12.0.1"
     },
     {
       "id": "Avalonia.Controls.MediaPlayer.Abstractions",
-      "version": "12.0.0"
+      "version": "12.0.1"
     },
     {
       "id": "Avalonia.Controls.Markdown",

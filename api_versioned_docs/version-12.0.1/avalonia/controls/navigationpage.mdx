@@ -415,7 +415,7 @@ System.Threading.Tasks.Task
 ##### Remarks
 
 All modals are dismissed in a single transition rather than one-by-one, so lifecycle
-events differ from calling [Avalonia.Controls.NavigationPage.PopModalAsync](xref:Avalonia.Controls.NavigationPage.PopModalAsync%28%29) in a loop:
+events differ from calling [Avalonia.Controls.NavigationPage.PopModalAsync](xref:Avalonia.Controls.NavigationPage.PopModalAsync) in a loop:
 
 - [Avalonia.Controls.Page.Navigating](xref:Avalonia.Controls.Page.Navigating) is consulted only on the topmost modal. Intermediate modals do not receive a cancellation opportunity. If the top modal cancels, the entire dismiss is aborted and no modals are popped.
 - [Avalonia.Controls.Page.NavigatedFrom](xref:Avalonia.Controls.Page.NavigatedFrom) fires on every dismissed modal in LIFO order.
@@ -448,7 +448,7 @@ System.Threading.Tasks.Task
 ##### Remarks
 
 All modals are dismissed in a single transition rather than one-by-one, so lifecycle
-events differ from calling [Avalonia.Controls.NavigationPage.PopModalAsync](xref:Avalonia.Controls.NavigationPage.PopModalAsync%28%29) in a loop:
+events differ from calling [Avalonia.Controls.NavigationPage.PopModalAsync](xref:Avalonia.Controls.NavigationPage.PopModalAsync) in a loop:
 
 - [Avalonia.Controls.Page.Navigating](xref:Avalonia.Controls.Page.Navigating) is consulted only on the topmost modal. Intermediate modals do not receive a cancellation opportunity. If the top modal cancels, the entire dismiss is aborted and no modals are popped.
 - [Avalonia.Controls.Page.NavigatedFrom](xref:Avalonia.Controls.Page.NavigatedFrom) fires on every dismissed modal in LIFO order.
@@ -1510,7 +1510,7 @@ public int StackDepth { get; set; }
 | [OpacityProperty](../visual.mdx#uid-2a53e27b1f) | Defines the [Avalonia.Visual.Opacity](xref:Avalonia.Visual.Opacity) property. Inherited from [Visual](../visual.mdx). |
 | [RenderTransformOriginProperty](../visual.mdx#uid-963d266cdd) | Defines the [Avalonia.Visual.RenderTransformOrigin](xref:Avalonia.Visual.RenderTransformOrigin) property. Inherited from [Visual](../visual.mdx). |
 | [RenderTransformProperty](../visual.mdx#uid-31d20942c2) | Defines the [Avalonia.Visual.RenderTransform](xref:Avalonia.Visual.RenderTransform) property. Inherited from [Visual](../visual.mdx). |
-| [VisualParentProperty](../visual.mdx#uid-12214f81b9) | Defines the [Avalonia.Visual.VisualParent](xref:Avalonia.Visual.VisualParentProperty) property. Inherited from [Visual](../visual.mdx). |
+| [VisualParentProperty](../visual.mdx#uid-12214f81b9) | Defines the [Avalonia.Visual.VisualParent](xref:Avalonia.Visual.VisualParent) property. Inherited from [Visual](../visual.mdx). |
 | [ZIndexProperty](../visual.mdx#uid-1dc9376c1e) | Defines the [Avalonia.Visual.ZIndex](xref:Avalonia.Visual.ZIndex) property. Inherited from [Visual](../visual.mdx). |
 | [DataContextProperty](../styledelement.mdx#uid-7eefabb929) | Defines the [Avalonia.StyledElement.DataContext](xref:Avalonia.StyledElement.DataContext) property. Inherited from [StyledElement](../styledelement.mdx). |
 | [NameProperty](../styledelement.mdx#uid-bcdbb9de56) | Defines the [Avalonia.StyledElement.Name](xref:Avalonia.StyledElement.Name) property. Inherited from [StyledElement](../styledelement.mdx). |

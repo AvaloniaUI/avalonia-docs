@@ -349,7 +349,7 @@ public Type StyleKey { get; set; }
 Usually controls are styled by their own type, but there are instances where you want
 an element to be styled by its base type, e.g. creating SpecialButton that
 derives from Button and adds extra functionality but is still styled as a regular
-Button. To change the style for a control class, override the [Avalonia.StyledElement.StyleKeyOverride](xref:Avalonia.StyledElement.StyleKey)
+Button. To change the style for a control class, override the [Avalonia.StyledElement.StyleKeyOverride](xref:Avalonia.StyledElement.StyleKeyOverride)
 property
 
 </section>
@@ -572,9 +572,9 @@ public event EventHandler Initialized
 
 The Initialized event indicates that all property values on the styled element have been set.
 When loading the styled element from markup, it occurs when
-System.ComponentModel.ISupportInitialize.EndInit is called *and* the styled element
+[System.ComponentModel.ISupportInitialize.EndInit](xref:System.ComponentModel.ISupportInitialize.EndInit) is called *and* the styled element
 is attached to a rooted logical tree. When the styled element is created by code and
-System.ComponentModel.ISupportInitialize is not used, it is called when the styled element is attached
+[System.ComponentModel.ISupportInitialize](xref:System.ComponentModel.ISupportInitialize) is not used, it is called when the styled element is attached
 to the visual tree.
 
 </section>

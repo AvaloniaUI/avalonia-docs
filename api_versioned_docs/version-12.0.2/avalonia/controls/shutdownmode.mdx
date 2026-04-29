@@ -1,0 +1,108 @@
+---
+title: 'ShutdownMode'
+hide_title: true
+slug: '/avalonia/controls/shutdownmode'
+uid: 'Avalonia.Controls.ShutdownMode'
+commentId: 'T:Avalonia.Controls.ShutdownMode'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Enum'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ShutdownMode Enum</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Describes the possible values for [Avalonia.Controls.ApplicationLifetimes.IClassicDesktopStyleApplicationLifetime.ShutdownMode](xref:Avalonia.Controls.ApplicationLifetimes.IClassicDesktopStyleApplicationLifetime.ShutdownMode).
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public enum ShutdownMode
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Enum <span className="apiref-page__relation-separator">-&gt;</span> ShutdownMode
+</div>
+</div>
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [OnExplicitShutdown](#uid-8cbd006433) | Indicates that the application only exits on an explicit call to Application.Shutdown. |
+| [OnLastWindowClose](#uid-813f45d3b6) | Indicates an implicit call to Application.Shutdown when the last window closes. |
+| [OnMainWindowClose](#uid-356ffb4b4c) | Indicates an implicit call to Application.Shutdown when the main window closes. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8cbd006433"></span>
+
+### OnExplicitShutdown Field
+
+Indicates that the application only exits on an explicit call to Application.Shutdown.
+
+```csharp
+public Avalonia.Controls.ShutdownMode OnExplicitShutdown
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-813f45d3b6"></span>
+
+### OnLastWindowClose Field
+
+Indicates an implicit call to Application.Shutdown when the last window closes.
+
+```csharp
+public Avalonia.Controls.ShutdownMode OnLastWindowClose
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-356ffb4b4c"></span>
+
+### OnMainWindowClose Field
+
+Indicates an implicit call to Application.Shutdown when the main window closes.
+
+```csharp
+public Avalonia.Controls.ShutdownMode OnMainWindowClose
+```
+
+</section>
+
+</ApiRefPage>
+

@@ -63,7 +63,7 @@ public enum UpdateSourceTrigger
 | Name | Description |
 | --- | --- |
 | [Default](#uid-06aed589ee) | The default [Avalonia.Data.UpdateSourceTrigger](xref:Avalonia.Data.UpdateSourceTrigger) value of the binding target property. This currently defaults to [Avalonia.Data.UpdateSourceTrigger.PropertyChanged](xref:Avalonia.Data.UpdateSourceTrigger.PropertyChanged). |
-| [Explicit](#uid-ebbc6f7463) | Updates the binding source only when you call the [Avalonia.Data.BindingExpressionBase.UpdateSource](xref:Avalonia.Data.BindingExpressionBase.UpdateSource%28%29) method. |
+| [Explicit](#uid-ebbc6f7463) | Updates the binding source only when you call the [Avalonia.Data.BindingExpressionBase.UpdateSource](xref:Avalonia.Data.BindingExpressionBase.UpdateSource) method. |
 | [LostFocus](#uid-f97bb78415) | Updates the binding source whenever the binding target element loses focus. |
 | [PropertyChanged](#uid-cd9510bdb3) | Updates the binding source immediately whenever the binding target property changes. |
 
@@ -89,7 +89,7 @@ public Avalonia.Data.UpdateSourceTrigger Default
 ### Explicit Field
 
 Updates the binding source only when you call the
-[Avalonia.Data.BindingExpressionBase.UpdateSource](xref:Avalonia.Data.BindingExpressionBase.UpdateSource%28%29) method.
+[Avalonia.Data.BindingExpressionBase.UpdateSource](xref:Avalonia.Data.BindingExpressionBase.UpdateSource) method.
 
 ```csharp
 public Avalonia.Data.UpdateSourceTrigger Explicit
