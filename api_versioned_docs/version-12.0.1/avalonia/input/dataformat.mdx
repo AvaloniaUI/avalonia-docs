@@ -64,11 +64,11 @@ public class DataFormat
 
 | Name | Description |
 | --- | --- |
-| [CreateBytesApplicationFormat](#uid-3fbe38b6ba) | Creates a new format specific to the application that returns an array of byte. |
-| [CreateBytesPlatformFormat](#uid-1efc4cf482) | Creates a new format for the current platform that returns an array of byte. |
+| [CreateBytesApplicationFormat](#uid-3fbe38b6ba) | Creates a new format specific to the application that returns an array of [byte](xref:System.Byte). |
+| [CreateBytesPlatformFormat](#uid-1efc4cf482) | Creates a new format for the current platform that returns an array of [byte](xref:System.Byte). |
 | [CreateInProcessFormat](#uid-9584d61758) | No summary available. |
-| [CreateStringApplicationFormat](#uid-7587d5d188) | Creates a new format specific to the application that returns a string. |
-| [CreateStringPlatformFormat](#uid-5b39021fd9) | Creates a new format for the current platform that returns a string. |
+| [CreateStringApplicationFormat](#uid-7587d5d188) | Creates a new format specific to the application that returns a [string](xref:System.String). |
+| [CreateStringPlatformFormat](#uid-5b39021fd9) | Creates a new format for the current platform that returns a [string](xref:System.String). |
 | [Equals (2 overloads)](#uid-78ddc432ce) | No summary available. |
 | [GetHashCode](#uid-f95a08c254) | No summary available. |
 | [ToString](#uid-fd15320886) | No summary available. |
@@ -80,7 +80,7 @@ public class DataFormat
 
 ### CreateBytesApplicationFormat Method
 
-Creates a new format specific to the application that returns an array of byte.
+Creates a new format specific to the application that returns an array of [byte](xref:System.Byte).
 
 ```csharp
 public Avalonia.Input.DataFormat<T><byte[]> CreateBytesApplicationFormat(string identifier)
@@ -113,7 +113,7 @@ A new [Avalonia.Input.DataFormat](xref:Avalonia.Input.DataFormat).
 
 ### CreateBytesPlatformFormat Method
 
-Creates a new format for the current platform that returns an array of byte.
+Creates a new format for the current platform that returns an array of [byte](xref:System.Byte).
 
 ```csharp
 public Avalonia.Input.DataFormat<T><byte[]> CreateBytesPlatformFormat(string identifier)
@@ -169,7 +169,7 @@ public Avalonia.Input.DataFormat<T><T> CreateInProcessFormat<T>(string identifie
 
 ### CreateStringApplicationFormat Method
 
-Creates a new format specific to the application that returns a string.
+Creates a new format specific to the application that returns a [string](xref:System.String).
 
 ```csharp
 public Avalonia.Input.DataFormat<T><string> CreateStringApplicationFormat(string identifier)
@@ -202,7 +202,7 @@ A new [Avalonia.Input.DataFormat](xref:Avalonia.Input.DataFormat).
 
 ### CreateStringPlatformFormat Method
 
-Creates a new format for the current platform that returns a string.
+Creates a new format for the current platform that returns a [string](xref:System.String).
 
 ```csharp
 public Avalonia.Input.DataFormat<T><string> CreateStringPlatformFormat(string identifier)
@@ -348,7 +348,7 @@ This method can only be called if [Avalonia.Input.DataFormat.Kind](xref:Avalonia
 | [File](#uid-4c6a2805bf) | Gets a data format representing a single file. Its data type is [Avalonia.Platform.Storage.IStorageItem](xref:Avalonia.Platform.Storage.IStorageItem). |
 | [Identifier](#uid-397db05437) | Gets the identifier of the data format. |
 | [Kind](#uid-65f1b1de50) | Gets the kind of the data format. |
-| [Text](#uid-a2e19e2523) | Gets a data format representing plain text. Its data type is string. |
+| [Text](#uid-a2e19e2523) | Gets a data format representing plain text. Its data type is [string](xref:System.String). |
 
 <section className="apiref-page__member-entry">
 
@@ -415,7 +415,7 @@ public Avalonia.Input.DataFormatKind Kind { get; set; }
 ### Text Property
 
 Gets a data format representing plain text.
-Its data type is string.
+Its data type is [string](xref:System.String).
 
 ```csharp
 public Avalonia.Input.DataFormat<T><string> Text { get; set; }

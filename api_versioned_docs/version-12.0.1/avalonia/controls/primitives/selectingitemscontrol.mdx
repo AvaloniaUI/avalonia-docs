@@ -62,12 +62,12 @@ public class SelectingItemsControl
 [Avalonia.Controls.Primitives.SelectingItemsControl](xref:Avalonia.Controls.Primitives.SelectingItemsControl) provides a base class for [Avalonia.Controls.ItemsControl](xref:Avalonia.Controls.ItemsControl)s
 that maintain a selection (single or multiple). By default only its
 [Avalonia.Controls.Primitives.SelectingItemsControl.SelectedIndex](xref:Avalonia.Controls.Primitives.SelectingItemsControl.SelectedIndex) and [Avalonia.Controls.Primitives.SelectingItemsControl.SelectedItem](xref:Avalonia.Controls.Primitives.SelectingItemsControl.SelectedItem) properties are visible; the
-current multiple [Avalonia.Controls.Primitives.SelectingItemsControl.Selection](xref:Avalonia.Controls.Primitives.SelectingItemsControl.SelectionChanged) and [Avalonia.Controls.Primitives.SelectingItemsControl.SelectedItems](xref:Avalonia.Controls.Primitives.SelectingItemsControl.SelectedItem) together with the
-Avalonia.Controls.Primitives.SelectingItemsControl.SelectionMode properties are protected, however a derived class can expose
+current multiple [Avalonia.Controls.Primitives.SelectingItemsControl.Selection](xref:Avalonia.Controls.Primitives.SelectingItemsControl.Selection) and [Avalonia.Controls.Primitives.SelectingItemsControl.SelectedItems](xref:Avalonia.Controls.Primitives.SelectingItemsControl.SelectedItems) together with the
+[Avalonia.Controls.Primitives.SelectingItemsControl.SelectionMode](xref:Avalonia.Controls.Primitives.SelectingItemsControl.SelectionMode) properties are protected, however a derived class can expose
 these if it wishes to support multiple selection.
 
 [Avalonia.Controls.Primitives.SelectingItemsControl](xref:Avalonia.Controls.Primitives.SelectingItemsControl) maintains a selection respecting the current
-Avalonia.Controls.Primitives.SelectingItemsControl.SelectionMode but it does not react to user input; this must be handled in a
+[Avalonia.Controls.Primitives.SelectingItemsControl.SelectionMode](xref:Avalonia.Controls.Primitives.SelectingItemsControl.SelectionMode) but it does not react to user input; this must be handled in a
 derived class. It does, however, respond to [Avalonia.Controls.Primitives.SelectingItemsControl.IsSelectedChangedEvent](xref:Avalonia.Controls.Primitives.SelectingItemsControl.IsSelectedChangedEvent) events
 from items and updates the selection accordingly.
 
@@ -282,8 +282,8 @@ True if the event was accepted and handled, otherwise false.
 
 #### See also
 
-- Avalonia.Controls.Primitives.SelectingItemsControl.ShouldTriggerSelection(Avalonia.Visual,Avalonia.Input.PointerEventArgs)
-- Avalonia.Controls.Primitives.SelectingItemsControl.ShouldTriggerSelection(Avalonia.Visual,Avalonia.Input.KeyEventArgs)
+- [Avalonia.Controls.Primitives.SelectingItemsControl.ShouldTriggerSelection(Avalonia.Visual,Avalonia.Input.PointerEventArgs)](xref:Avalonia.Controls.Primitives.SelectingItemsControl.ShouldTriggerSelection%28Avalonia.Visual%2CAvalonia.Input.PointerEventArgs%29)
+- [Avalonia.Controls.Primitives.SelectingItemsControl.ShouldTriggerSelection(Avalonia.Visual,Avalonia.Input.KeyEventArgs)](xref:Avalonia.Controls.Primitives.SelectingItemsControl.ShouldTriggerSelection%28Avalonia.Visual%2CAvalonia.Input.KeyEventArgs%29)
 
 </section>
 
@@ -498,7 +498,7 @@ public bool WrapSelection { get; set; }
 | [SelectedValueBindingProperty](#uid-ba2eea4b27) | Defines the [Avalonia.Controls.Primitives.SelectingItemsControl.SelectedValueBinding](xref:Avalonia.Controls.Primitives.SelectingItemsControl.SelectedValueBinding) property |
 | [SelectedValueProperty](#uid-4112553e6e) | Defines the [Avalonia.Controls.Primitives.SelectingItemsControl.SelectedValue](xref:Avalonia.Controls.Primitives.SelectingItemsControl.SelectedValue) property |
 | [SelectionChangedEvent](#uid-dc49886a72) | Defines the [Avalonia.Controls.Primitives.SelectingItemsControl.SelectionChanged](xref:Avalonia.Controls.Primitives.SelectingItemsControl.SelectionChanged) event. |
-| WrapSelectionProperty](#uid-4434334f78) | Defines the [Avalonia.Controls.Primitives.SelectingItemsControl.WrapSelection property. |
+| [WrapSelectionProperty](#uid-4434334f78) | Defines the [Avalonia.Controls.Primitives.SelectingItemsControl.WrapSelection](xref:Avalonia.Controls.Primitives.SelectingItemsControl.WrapSelection) property. |
 | [DisplayMemberBindingProperty](../itemscontrol.mdx#uid-3d89afc85e) | Defines the [Avalonia.Controls.ItemsControl.DisplayMemberBinding](xref:Avalonia.Controls.ItemsControl.DisplayMemberBinding) property Inherited from [ItemsControl](../itemscontrol.mdx). |
 | [ItemContainerThemeProperty](../itemscontrol.mdx#uid-8d58e07e7e) | Defines the [Avalonia.Controls.ItemsControl.ItemContainerTheme](xref:Avalonia.Controls.ItemsControl.ItemContainerTheme) property. Inherited from [ItemsControl](../itemscontrol.mdx). |
 | [ItemCountProperty](../itemscontrol.mdx#uid-1a60490484) | Defines the [Avalonia.Controls.ItemsControl.ItemCount](xref:Avalonia.Controls.ItemsControl.ItemCount) property. Inherited from [ItemsControl](../itemscontrol.mdx). |
@@ -598,7 +598,7 @@ public bool WrapSelection { get; set; }
 | [OpacityProperty](../../visual.mdx#uid-2a53e27b1f) | Defines the [Avalonia.Visual.Opacity](xref:Avalonia.Visual.Opacity) property. Inherited from [Visual](../../visual.mdx). |
 | [RenderTransformOriginProperty](../../visual.mdx#uid-963d266cdd) | Defines the [Avalonia.Visual.RenderTransformOrigin](xref:Avalonia.Visual.RenderTransformOrigin) property. Inherited from [Visual](../../visual.mdx). |
 | [RenderTransformProperty](../../visual.mdx#uid-31d20942c2) | Defines the [Avalonia.Visual.RenderTransform](xref:Avalonia.Visual.RenderTransform) property. Inherited from [Visual](../../visual.mdx). |
-| [VisualParentProperty](../../visual.mdx#uid-12214f81b9) | Defines the [Avalonia.Visual.VisualParent](xref:Avalonia.Visual.VisualParentProperty) property. Inherited from [Visual](../../visual.mdx). |
+| [VisualParentProperty](../../visual.mdx#uid-12214f81b9) | Defines the [Avalonia.Visual.VisualParent](xref:Avalonia.Visual.VisualParent) property. Inherited from [Visual](../../visual.mdx). |
 | [ZIndexProperty](../../visual.mdx#uid-1dc9376c1e) | Defines the [Avalonia.Visual.ZIndex](xref:Avalonia.Visual.ZIndex) property. Inherited from [Visual](../../visual.mdx). |
 | [DataContextProperty](../../styledelement.mdx#uid-7eefabb929) | Defines the [Avalonia.StyledElement.DataContext](xref:Avalonia.StyledElement.DataContext) property. Inherited from [StyledElement](../../styledelement.mdx). |
 | [NameProperty](../../styledelement.mdx#uid-bcdbb9de56) | Defines the [Avalonia.StyledElement.Name](xref:Avalonia.StyledElement.Name) property. Inherited from [StyledElement](../../styledelement.mdx). |
@@ -740,7 +740,7 @@ public Avalonia.Interactivity.RoutedEvent<Avalonia.Controls.SelectionChangedEven
 
 ### WrapSelectionProperty Field
 
-Defines the Avalonia.Controls.Primitives.SelectingItemsControl.WrapSelection property.
+Defines the [Avalonia.Controls.Primitives.SelectingItemsControl.WrapSelection](xref:Avalonia.Controls.Primitives.SelectingItemsControl.WrapSelection) property.
 
 ```csharp
 public Avalonia.StyledProperty<bool> WrapSelectionProperty

@@ -59,7 +59,7 @@ public struct Optional<T>
 
 ## Remarks
 
-This struct is similar to Nullable&lt;T&gt; except it also accepts reference types:
+This struct is similar to [Nullable&lt;T&gt;](xref:System.Nullable%601) except it also accepts reference types:
 note that null is a valid value for reference types. It is also similar to
 [Avalonia.Data.BindingValue&lt;T&gt;](xref:Avalonia.Data.BindingValue%601) but has only two states: "value present" and "value missing".
 
@@ -103,7 +103,7 @@ The value.
 | [Equals (2 overloads)](#uid-daec08aaea) | No summary available. |
 | [GetHashCode](#uid-d44c766616) | No summary available. |
 | [GetValueOrDefault (3 overloads)](#uid-318fde8c7e) | Gets the value if present, otherwise the default value. |
-| [ToObject](#uid-425d9af8f7) | Casts the value (if any) to an object. |
+| [ToObject](#uid-425d9af8f7) | Casts the value (if any) to an [object](xref:System.Object). |
 | [ToString](#uid-b1080f8c8b) | No summary available. |
 
 <span id="uid-daec08aaea"></span>
@@ -257,7 +257,7 @@ TResult
 
 ### ToObject Method
 
-Casts the value (if any) to an object.
+Casts the value (if any) to an [object](xref:System.Object).
 
 ```csharp
 public Avalonia.Data.Optional<T><object> ToObject()
@@ -339,7 +339,7 @@ public T Value { get; set; }
 
 #### Exceptions
 
-- \[Avalonia.Data.Optional&amp;lt;T&amp;gt;.HasValue\](xref:Avalonia.Data.Optional%601.HasValue) is false.
+- [\[Avalonia.Data.Optional&amp;lt;T&amp;gt;.HasValue\](xref:Avalonia.Data.Optional%601.HasValue) is false.](xref:System.InvalidOperationException)
 
 </section>
 

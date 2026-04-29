@@ -244,9 +244,9 @@ The dialog result.
 
 ##### Remarks
 
-When the window is shown with the [Avalonia.Controls.Window.ShowDialog&lt;T&gt;(Avalonia.Controls.Window)](xref:Avalonia.Controls.Window.ShowDialog%28Avalonia.Controls.Window%29)
-or [Avalonia.Controls.Window.ShowDialog&lt;T&gt;(Avalonia.Controls.Window)](xref:Avalonia.Controls.Window.ShowDialog%28Avalonia.Controls.Window%29) method, the
-resulting task will produce the Avalonia.Controls.Window._dialogResult value when the window
+When the window is shown with the [Avalonia.Controls.Window.ShowDialog&lt;T&gt;(Avalonia.Controls.Window)](xref:Avalonia.Controls.Window.ShowDialog%60%601%28Avalonia.Controls.Window%29)
+or [Avalonia.Controls.Window.ShowDialog&lt;T&gt;(Avalonia.Controls.Window)](xref:Avalonia.Controls.Window.ShowDialog%60%601%28Avalonia.Controls.Window%29) method, the
+resulting task will produce the [Avalonia.Controls.Window._dialogResult](xref:Avalonia.Controls.Window._dialogResult) value when the window
 is closed.
 
 </section>
@@ -283,7 +283,7 @@ public void Show()
 
 ##### Exceptions
 
-- The window has already been closed.
+- [The window has already been closed.](xref:System.InvalidOperationException)
 
 </section>
 
@@ -308,7 +308,7 @@ Window that will be the owner of the shown window.
 
 ##### Exceptions
 
-- The window has already been closed.
+- [The window has already been closed.](xref:System.InvalidOperationException)
 
 </section>
 
@@ -340,7 +340,7 @@ A task that can be used to track the lifetime of the dialog.
 
 #### Exceptions
 
-- The window has already been closed.
+- [The window has already been closed.](xref:System.InvalidOperationException)
 
 </section>
 
@@ -956,7 +956,7 @@ public Avalonia.Controls.WindowState WindowState { get; set; }
 | [OpacityProperty](../visual.mdx#uid-2a53e27b1f) | Defines the [Avalonia.Visual.Opacity](xref:Avalonia.Visual.Opacity) property. Inherited from [Visual](../visual.mdx). |
 | [RenderTransformOriginProperty](../visual.mdx#uid-963d266cdd) | Defines the [Avalonia.Visual.RenderTransformOrigin](xref:Avalonia.Visual.RenderTransformOrigin) property. Inherited from [Visual](../visual.mdx). |
 | [RenderTransformProperty](../visual.mdx#uid-31d20942c2) | Defines the [Avalonia.Visual.RenderTransform](xref:Avalonia.Visual.RenderTransform) property. Inherited from [Visual](../visual.mdx). |
-| [VisualParentProperty](../visual.mdx#uid-12214f81b9) | Defines the [Avalonia.Visual.VisualParent](xref:Avalonia.Visual.VisualParentProperty) property. Inherited from [Visual](../visual.mdx). |
+| [VisualParentProperty](../visual.mdx#uid-12214f81b9) | Defines the [Avalonia.Visual.VisualParent](xref:Avalonia.Visual.VisualParent) property. Inherited from [Visual](../visual.mdx). |
 | [ZIndexProperty](../visual.mdx#uid-1dc9376c1e) | Defines the [Avalonia.Visual.ZIndex](xref:Avalonia.Visual.ZIndex) property. Inherited from [Visual](../visual.mdx). |
 | [DataContextProperty](../styledelement.mdx#uid-7eefabb929) | Defines the [Avalonia.StyledElement.DataContext](xref:Avalonia.StyledElement.DataContext) property. Inherited from [StyledElement](../styledelement.mdx). |
 | [NameProperty](../styledelement.mdx#uid-bcdbb9de56) | Defines the [Avalonia.StyledElement.Name](xref:Avalonia.StyledElement.Name) property. Inherited from [StyledElement](../styledelement.mdx). |

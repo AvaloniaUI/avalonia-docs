@@ -65,15 +65,15 @@ public enum AutoCompleteFilterMode
 | [ContainsOrdinal](#uid-5510a05293) | Specifies an ordinal, case-insensitive filter where the returned items contain the specified text. |
 | [ContainsOrdinalCaseSensitive](#uid-f610952423) | Specifies an ordinal, case-sensitive filter where the returned items contain the specified text. |
 | [Custom](#uid-382d28989d) | Specifies that a custom filter is used. This mode is used when the [Avalonia.Controls.AutoCompleteBox.TextFilter](xref:Avalonia.Controls.AutoCompleteBox.TextFilter) or [Avalonia.Controls.AutoCompleteBox.ItemFilter](xref:Avalonia.Controls.AutoCompleteBox.ItemFilter) properties are set. |
-| [Equals](#uid-cb0e603473) | Specifies a culture-sensitive, case-insensitive filter where the returned items equal the specified text. The filter uses the string.Equals(string,StringComparison) method, specifying StringComparer.CurrentCultureIgnoreCase as the search comparison criteria. |
-| [EqualsCaseSensitive](#uid-b1473d7f1a) | Specifies a culture-sensitive, case-sensitive filter where the returned items equal the specified text. The filter uses the string.Equals(string,StringComparison) method, specifying StringComparer.CurrentCulture as the string comparison criteria. |
-| [EqualsOrdinal](#uid-c976f46117) | Specifies an ordinal, case-insensitive filter where the returned items equal the specified text. The filter uses the string.Equals(string,StringComparison) method, specifying StringComparer.OrdinalIgnoreCase as the string comparison criteria. |
-| [EqualsOrdinalCaseSensitive](#uid-68bac69866) | Specifies an ordinal, case-sensitive filter where the returned items equal the specified text. The filter uses the string.Equals(string,StringComparison) method, specifying StringComparer.Ordinal as the string comparison criteria. |
+| [Equals](#uid-cb0e603473) | Specifies a culture-sensitive, case-insensitive filter where the returned items equal the specified text. The filter uses the [string.Equals(string,StringComparison)](xref:System.String.Equals%28System.String%2CSystem.StringComparison%29) method, specifying [StringComparer.CurrentCultureIgnoreCase](xref:System.StringComparer.CurrentCultureIgnoreCase) as the search comparison criteria. |
+| [EqualsCaseSensitive](#uid-b1473d7f1a) | Specifies a culture-sensitive, case-sensitive filter where the returned items equal the specified text. The filter uses the [string.Equals(string,StringComparison)](xref:System.String.Equals%28System.String%2CSystem.StringComparison%29) method, specifying [StringComparer.CurrentCulture](xref:System.StringComparer.CurrentCulture) as the string comparison criteria. |
+| [EqualsOrdinal](#uid-c976f46117) | Specifies an ordinal, case-insensitive filter where the returned items equal the specified text. The filter uses the [string.Equals(string,StringComparison)](xref:System.String.Equals%28System.String%2CSystem.StringComparison%29) method, specifying [StringComparer.OrdinalIgnoreCase](xref:System.StringComparer.OrdinalIgnoreCase) as the string comparison criteria. |
+| [EqualsOrdinalCaseSensitive](#uid-68bac69866) | Specifies an ordinal, case-sensitive filter where the returned items equal the specified text. The filter uses the [string.Equals(string,StringComparison)](xref:System.String.Equals%28System.String%2CSystem.StringComparison%29) method, specifying [StringComparer.Ordinal](xref:System.StringComparer.Ordinal) as the string comparison criteria. |
 | [None](#uid-fc81838c3d) | Specifies that no filter is used. All items are returned. |
-| [StartsWith](#uid-e5ca991c19) | Specifies a culture-sensitive, case-insensitive filter where the returned items start with the specified text. The filter uses the string.StartsWith(string,StringComparison) method, specifying StringComparer.CurrentCultureIgnoreCase as the string comparison criteria. |
-| [StartsWithCaseSensitive](#uid-246b119019) | Specifies a culture-sensitive, case-sensitive filter where the returned items start with the specified text. The filter uses the string.StartsWith(string,StringComparison) method, specifying StringComparer.CurrentCulture as the string comparison criteria. |
-| [StartsWithOrdinal](#uid-7c744ddecb) | Specifies an ordinal, case-insensitive filter where the returned items start with the specified text. The filter uses the string.StartsWith(string,StringComparison) method, specifying StringComparer.OrdinalIgnoreCase as the string comparison criteria. |
-| [StartsWithOrdinalCaseSensitive](#uid-8194c4b82f) | Specifies an ordinal, case-sensitive filter where the returned items start with the specified text. The filter uses the string.StartsWith(string,StringComparison) method, specifying StringComparer.Ordinal as the string comparison criteria. |
+| [StartsWith](#uid-e5ca991c19) | Specifies a culture-sensitive, case-insensitive filter where the returned items start with the specified text. The filter uses the [string.StartsWith(string,StringComparison)](xref:System.String.StartsWith%28System.String%2CSystem.StringComparison%29) method, specifying [StringComparer.CurrentCultureIgnoreCase](xref:System.StringComparer.CurrentCultureIgnoreCase) as the string comparison criteria. |
+| [StartsWithCaseSensitive](#uid-246b119019) | Specifies a culture-sensitive, case-sensitive filter where the returned items start with the specified text. The filter uses the [string.StartsWith(string,StringComparison)](xref:System.String.StartsWith%28System.String%2CSystem.StringComparison%29) method, specifying [StringComparer.CurrentCulture](xref:System.StringComparer.CurrentCulture) as the string comparison criteria. |
+| [StartsWithOrdinal](#uid-7c744ddecb) | Specifies an ordinal, case-insensitive filter where the returned items start with the specified text. The filter uses the [string.StartsWith(string,StringComparison)](xref:System.String.StartsWith%28System.String%2CSystem.StringComparison%29) method, specifying [StringComparer.OrdinalIgnoreCase](xref:System.StringComparer.OrdinalIgnoreCase) as the string comparison criteria. |
+| [StartsWithOrdinalCaseSensitive](#uid-8194c4b82f) | Specifies an ordinal, case-sensitive filter where the returned items start with the specified text. The filter uses the [string.StartsWith(string,StringComparison)](xref:System.String.StartsWith%28System.String%2CSystem.StringComparison%29) method, specifying [StringComparer.Ordinal](xref:System.StringComparer.Ordinal) as the string comparison criteria. |
 
 <section className="apiref-page__member-entry">
 
@@ -159,9 +159,9 @@ public Avalonia.Controls.AutoCompleteFilterMode Custom
 
 Specifies a culture-sensitive, case-insensitive filter where the
 returned items equal the specified text. The filter uses the
-string.Equals(string,StringComparison)
+[string.Equals(string,StringComparison)](xref:System.String.Equals%28System.String%2CSystem.StringComparison%29)
 method, specifying
-StringComparer.CurrentCultureIgnoreCase as
+[StringComparer.CurrentCultureIgnoreCase](xref:System.StringComparer.CurrentCultureIgnoreCase) as
 the search comparison criteria.
 
 ```csharp
@@ -178,9 +178,9 @@ public Avalonia.Controls.AutoCompleteFilterMode Equals
 
 Specifies a culture-sensitive, case-sensitive filter where the
 returned items equal the specified text. The filter uses the
-string.Equals(string,StringComparison)
+[string.Equals(string,StringComparison)](xref:System.String.Equals%28System.String%2CSystem.StringComparison%29)
 method, specifying
-StringComparer.CurrentCulture as the string
+[StringComparer.CurrentCulture](xref:System.StringComparer.CurrentCulture) as the string
 comparison criteria.
 
 ```csharp
@@ -197,9 +197,9 @@ public Avalonia.Controls.AutoCompleteFilterMode EqualsCaseSensitive
 
 Specifies an ordinal, case-insensitive filter where the returned
 items equal the specified text. The filter uses the
-string.Equals(string,StringComparison)
+[string.Equals(string,StringComparison)](xref:System.String.Equals%28System.String%2CSystem.StringComparison%29)
 method, specifying
-StringComparer.OrdinalIgnoreCase as the
+[StringComparer.OrdinalIgnoreCase](xref:System.StringComparer.OrdinalIgnoreCase) as the
 string comparison criteria.
 
 ```csharp
@@ -216,8 +216,8 @@ public Avalonia.Controls.AutoCompleteFilterMode EqualsOrdinal
 
 Specifies an ordinal, case-sensitive filter where the returned items
 equal the specified text. The filter uses the
-string.Equals(string,StringComparison)
-method, specifying StringComparer.Ordinal as
+[string.Equals(string,StringComparison)](xref:System.String.Equals%28System.String%2CSystem.StringComparison%29)
+method, specifying [StringComparer.Ordinal](xref:System.StringComparer.Ordinal) as
 the string comparison criteria.
 
 ```csharp
@@ -248,9 +248,9 @@ public Avalonia.Controls.AutoCompleteFilterMode None
 
 Specifies a culture-sensitive, case-insensitive filter where the
 returned items start with the specified text. The filter uses the
-string.StartsWith(string,StringComparison)
+[string.StartsWith(string,StringComparison)](xref:System.String.StartsWith%28System.String%2CSystem.StringComparison%29)
 method, specifying
-StringComparer.CurrentCultureIgnoreCase as
+[StringComparer.CurrentCultureIgnoreCase](xref:System.StringComparer.CurrentCultureIgnoreCase) as
 the string comparison criteria.
 
 ```csharp
@@ -267,9 +267,9 @@ public Avalonia.Controls.AutoCompleteFilterMode StartsWith
 
 Specifies a culture-sensitive, case-sensitive filter where the
 returned items start with the specified text. The filter uses the
-string.StartsWith(string,StringComparison)
+[string.StartsWith(string,StringComparison)](xref:System.String.StartsWith%28System.String%2CSystem.StringComparison%29)
 method, specifying
-StringComparer.CurrentCulture as the string
+[StringComparer.CurrentCulture](xref:System.StringComparer.CurrentCulture) as the string
 comparison criteria.
 
 ```csharp
@@ -286,9 +286,9 @@ public Avalonia.Controls.AutoCompleteFilterMode StartsWithCaseSensitive
 
 Specifies an ordinal, case-insensitive filter where the returned
 items start with the specified text. The filter uses the
-string.StartsWith(string,StringComparison)
+[string.StartsWith(string,StringComparison)](xref:System.String.StartsWith%28System.String%2CSystem.StringComparison%29)
 method, specifying
-StringComparer.OrdinalIgnoreCase as the
+[StringComparer.OrdinalIgnoreCase](xref:System.StringComparer.OrdinalIgnoreCase) as the
 string comparison criteria.
 
 ```csharp
@@ -305,8 +305,8 @@ public Avalonia.Controls.AutoCompleteFilterMode StartsWithOrdinal
 
 Specifies an ordinal, case-sensitive filter where the returned items
 start with the specified text. The filter uses the
-string.StartsWith(string,StringComparison)
-method, specifying StringComparer.Ordinal as
+[string.StartsWith(string,StringComparison)](xref:System.String.StartsWith%28System.String%2CSystem.StringComparison%29)
+method, specifying [StringComparer.Ordinal](xref:System.StringComparer.Ordinal) as
 the string comparison criteria.
 
 ```csharp
