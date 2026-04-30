@@ -232,6 +232,8 @@ gtag('consent', 'default', {
         sidebarPath: './controls-sidebar.ts',
         editUrl: 'https://github.com/AvaloniaUI/avalonia-docs/tree/main',
         editLocalizedFiles: true,
+        showLastUpdateAuthor: true,
+        showLastUpdateTime: true,
       },
     ],
     [
@@ -243,6 +245,8 @@ gtag('consent', 'default', {
         sidebarPath: './xpf-sidebar.ts',
         editUrl: 'https://github.com/AvaloniaUI/avalonia-docs/tree/main',
         editLocalizedFiles: true,
+        showLastUpdateAuthor: true,
+        showLastUpdateTime: true,
       },
     ],
     [
@@ -254,6 +258,8 @@ gtag('consent', 'default', {
         sidebarPath: './tools-sidebar.ts',
         editUrl: 'https://github.com/AvaloniaUI/avalonia-docs/tree/main',
         editLocalizedFiles: true,
+        showLastUpdateAuthor: true,
+        showLastUpdateTime: true,
       },
     ],
     [
@@ -265,6 +271,8 @@ gtag('consent', 'default', {
         sidebarPath: './troubleshooting-sidebar.ts',
         editUrl: 'https://github.com/AvaloniaUI/avalonia-docs/tree/main',
         editLocalizedFiles: true,
+        showLastUpdateAuthor: true,
+        showLastUpdateTime: true,
       },
     ],
     [
