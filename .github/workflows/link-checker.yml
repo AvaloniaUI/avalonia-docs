@@ -28,6 +28,7 @@ jobs:
                 --base-url https://docs.avaloniaui.net
                 --exclude-path 'api'
                 --exclude-path '.claude'
+                --exclude-path 'README.md'
                 --exclude 'https://xpf-nuget-feed.avaloniaui.net/'
                 --exclude 'https://xpf-nuget-feed.avaloniaui.net/packages/xpf.sdk'
                 --exclude 'https://xpf-nuget-feed.avaloniaui.net/v3/index.json'
