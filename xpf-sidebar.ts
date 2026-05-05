@@ -68,6 +68,7 @@ const sidebars: SidebarsConfig = {
         'deployment/windows',
         'deployment/macos',
         'deployment/linux',
+        'deployment/native-aot',
       ]
     },
     'troubleshooting',
