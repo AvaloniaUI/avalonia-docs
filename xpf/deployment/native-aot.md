@@ -57,11 +57,11 @@ For ARM64 devices:
 dotnet publish -r linux-arm64 -c Release
 ```
 
-## Trimming by NativeAOT linker
+## Trimming by the Native AOT linker
 
-To use AOT with XPF, trimming and linking must be conservative. `Xpf.Sdk` ships with an `rd.xml` root descriptor that force-includes runtime libraries. Any third-party WPF-consuming libraries your application references must have equivalent trimmer configurations. Otherwise, the NativeAOT linker may remove types that are only referenced from XAML, as it is unable to detect them as being in use.
+To use AOT with XPF, trimming and linking must be conservative. `Xpf.Sdk` ships with an `rd.xml` root descriptor that force-includes XPF runtime libraries. If your application references third-party WPF libraries, they must have equivalent trimming configurations. Otherwise, the Native AOT linker may remove types that are only referenced from XAML, because it cannot detect them as being in use.
 
-If you are experiencing runtime errors due to missing types, consider adding a trimmer root descriptor to your project to ensure they are preserved.
+If you are experiencing runtime errors due to missing types, add a trimmer root descriptor to your project so that application types, or third-party library types referenced only from XAML, are preserved.
 
 ```xml
 <ItemGroup>
@@ -80,7 +80,7 @@ If you are experiencing runtime errors due to missing types, consider adding a t
 </linker>
 ```
 
-Adjust the type patterns to match the namespaces your XAML references. Some third-party libraries may require similar entries to preserve their types.
+Adjust the type patterns to match the namespaces your XAML references. Some third-party libraries may require comprehensive entries if they do not ship with a root descriptor.
 
 ## See also
 
