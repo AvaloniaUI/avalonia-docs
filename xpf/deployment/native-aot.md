@@ -37,7 +37,7 @@ By default, the XPF SDK ships with an `rd.xml` root descriptor that force-includ
 
 However, if your application references third-party WPF libraries, they must have equivalent trimming configurations. Otherwise, the Native AOT linker may remove types that are only referenced from XAML, which it cannot detect as being in use.
 
-If you are experiencing runtime errors due to missing types, add a trimmer root descriptor to your `.csproj` file. Some third-party libraries may require comprehensive entries if they do not ship with a root descriptor and reference types in XAML only.
+If you are experiencing runtime errors due to missing types, check if you are using any third-party libraries that do not ship with a root descriptor. Add a root descriptor for these to your `.csproj` file.
 
 ```xml title=".csproj"
 <ItemGroup>
