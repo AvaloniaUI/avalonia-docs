@@ -102,6 +102,16 @@ public partial class OrderViewModel : ObservableObject
 }
 ```
 
+Avalonia includes a built-in [`EnumToBoolConverter`](/api/avalonia/controls/converters/enumtoboolconverter) for this purpose. Before using it in a binding, register it as a resource in your window or application:
+
+```xml
+<Window.Resources>
+    <EnumToBoolConverter x:Key="EnumToBoolConverter"/>
+</Window.Resources>
+```
+
+Then reference the converter in your radio button bindings:
+
 ```xml
 <StackPanel Spacing="4">
     <RadioButton Content="Standard (5-7 days)"
