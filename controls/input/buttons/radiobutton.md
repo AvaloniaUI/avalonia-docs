@@ -102,15 +102,19 @@ public partial class OrderViewModel : ObservableObject
 }
 ```
 
-Avalonia includes a built-in [`EnumToBoolConverter`](/api/avalonia/controls/converters/enumtoboolconverter) for this purpose. Before using it in a binding, register it as an application resource in `App.axaml` so it's available throughout your app. You'll also need to declare the converter namespace in the `<Application>` tag:
+Avalonia includes a built-in [`EnumToBoolConverter`](/api/avalonia/controls/converters/enumtoboolconverter) for this purpose. Before using it in a binding, register it as an application resource in `App.axaml` so it's available throughout your app:
 
 ```xml
-<!-- In App.axaml -->
-<!-- Add to Application tag: xmlns:converters="clr-namespace:Avalonia.Controls.Converters;assembly=Avalonia.Controls" -->
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:converters="clr-namespace:Avalonia.Controls.Converters;assembly=Avalonia.Controls"
+             x:Class="YourApp.App">
 
-<Application.Resources>
-    <converters:EnumToBoolConverter x:Key="EnumToBoolConverter"/>
-</Application.Resources>
+    <Application.Resources>
+        <converters:EnumToBoolConverter x:Key="EnumToBoolConverter"/>
+    </Application.Resources>
+
+</Application>
 ```
 
 Then reference the converter in your radio button bindings:
