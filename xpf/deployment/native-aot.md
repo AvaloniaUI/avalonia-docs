@@ -22,12 +22,12 @@ Add `PublishAot` to your `.csproj`.
 To publish your app, run `dotnet publish` in the command line:
 
 ```
-dotnet publish -r <current platform> -c Release
+dotnet publish -r <runtime> -c Release
 ```
 
 As an example, `dotnet publish -r osx-arm64 -c Release` would publish the app for Apple Silicon devices.
 
-For more information, please see [Native AOT deployment on the .NET documentation site](https://learn.microsoft.com/en-us/dotnet/core/deploying/native-aot/?tabs=windows%2Cnet8#publish-native-aot-using-the-cli).
+For more information, please see [Native AOT deployment](https://learn.microsoft.com/en-us/dotnet/core/deploying/native-aot/?tabs=windows%2Cnet8#publish-native-aot-using-the-cli) and [dotnet publish](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-publish) on the .NET documentation site.
 
 ## Trimming by the Native AOT linker
 
@@ -41,12 +41,12 @@ If you are experiencing runtime errors due to missing types, add a trimmer root 
 
 ```xml title=".csproj"
 <ItemGroup>
-    <ProjectReference Include="..\YourApp\YourApp.csproj" />
+    <ProjectReference Include="..\YourAssembly\YourAssembly.csproj" />
     <TrimmerRootAssembly Include="YourAssembly" />
 </ItemGroup>
 ```
 
-For information, please see [Trimming on the .NET documentation site](https://learn.microsoft.com/en-us/dotnet/core/deploying/trimming/prepare-libraries-for-trimming#csproj-file).
+For information, please see [Trimming](https://learn.microsoft.com/en-us/dotnet/core/deploying/trimming/prepare-libraries-for-trimming#csproj-file) on the .NET documentation site.
 
 ## See also
 

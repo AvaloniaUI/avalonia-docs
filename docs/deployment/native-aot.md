@@ -21,15 +21,22 @@ Native AOT compilation provides the following advantages for Avalonia applicatio
 
 ### Project configuration
 
-Add the following to your csproj file:
+Add the following to your `.csproj` file(s).
 
 ```xml
 <PropertyGroup>
+    <!-- Only needed for the main executable project -->
     <PublishAot>true</PublishAot>
+
+    <!-- Add to all projects/libraries in use, to ensure AOT compatibility -->
+    <IsAotCompatible>true</IsAotCompatible>
+
     <!-- Necessary before Avalonia 12.0, was used for accessiblity APIs -->
     <BuiltInComInteropSupport>false</BuiltInComInteropSupport>
 </PropertyGroup>
 ```
+
+For information, please see [Native AOT deployment](https://learn.microsoft.com/en-us/dotnet/core/deploying/native-aot/) on the .NET documentation site.
 
 ## Avalonia-specific considerations
 
@@ -54,12 +61,12 @@ When using Native AOT, XAML is compiled into the application at build time. Ensu
 To publish your app, run `dotnet publish` in the command line:
 
 ```
-dotnet publish -r <current platform> -c Release
+dotnet publish -r <runtime> -c Release
 ```
 
 As an example, `dotnet publish -r osx-arm64 -c Release` would publish the app for Apple Silicon devices.
 
-For more information, please see [Native AOT deployment on the .NET documentation site](https://learn.microsoft.com/en-us/dotnet/core/deploying/native-aot/?tabs=windows%2Cnet8#publish-native-aot-using-the-cli).
+For more information, please see [Native AOT deployment](https://learn.microsoft.com/en-us/dotnet/core/deploying/native-aot/?tabs=windows%2Cnet8#publish-native-aot-using-the-cli) and [dotnet publish](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-publish) on the .NET documentation site.
 
 :::tip
 You can then use Apple's [lipo tool](https://developer.apple.com/documentation/apple-silicon/building-a-universal-macos-binary) to combine both Intel and Apple Silicon binaries, enabling you to ship  Universal binaries.
@@ -71,10 +78,12 @@ Add a trimmer root descriptor to your `.csproj` file.
 
 ```xml title=".csproj"
 <ItemGroup>
-    <ProjectReference Include="..\YourApp\YourApp.csproj" />
+    <ProjectReference Include="..\YourAssembly\YourAssembly.csproj" />
     <TrimmerRootAssembly Include="YourAssembly" />
 </ItemGroup>
 ```
+
+For information, please see [Trimming](https://learn.microsoft.com/en-us/dotnet/core/deploying/trimming/prepare-libraries-for-trimming#csproj-file) on the .NET documentation site.
 
 ## Known limitations
 
