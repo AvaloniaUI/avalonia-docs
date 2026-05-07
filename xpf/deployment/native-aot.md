@@ -19,68 +19,34 @@ Add `PublishAot` to your `.csproj`.
 
 ## Publishing
 
-### Windows
+To publish your app, run `dotnet publish` in the command line:
 
-```bash
-dotnet publish -r win-x64 -c Release
+```
+dotnet publish -r <current platform> -c Release
 ```
 
-For ARM64 Windows devices:
+As an example, `dotnet publish -r osx-arm64 -c Release` would publish the app for Apple Silicon devices.
 
-```bash
-dotnet publish -r win-arm64 -c Release
-```
-
-### macOS
-
-Apple Silicon:
-
-```bash
-dotnet publish -r osx-arm64 -c Release
-```
-
-Intel:
-
-```bash
-dotnet publish -r osx-x64 -c Release
-```
-
-### Linux
-
-```bash
-dotnet publish -r linux-x64 -c Release
-```
-
-For ARM64 devices:
-
-```bash
-dotnet publish -r linux-arm64 -c Release
-```
+For more information, please see [Native AOT deployment on the .NET documentation site](https://learn.microsoft.com/en-us/dotnet/core/deploying/native-aot/?tabs=windows%2Cnet8#publish-native-aot-using-the-cli).
 
 ## Trimming by the Native AOT linker
 
-To use AOT with XPF, trimming and linking must be conservative. `Xpf.Sdk` ships with an `rd.xml` root descriptor that force-includes XPF runtime libraries. If your application references third-party WPF libraries, they must have equivalent trimming configurations. Otherwise, the Native AOT linker may remove types that are only referenced from XAML, because it cannot detect them as being in use.
+To use AOT with XPF, trimming and linking must be conservative.
 
-If you are experiencing runtime errors due to missing types, add a trimmer root descriptor to your project so that application types, or third-party library types referenced only from XAML, are preserved.
+By default, the XPF SDK ships with an `rd.xml` root descriptor that force-includes XPF runtime libraries, including all built-in WPF assemblies and any user-executable assemblies on which `Xpf.Sdk` is set.
 
-```xml
+However, if your application references third-party WPF libraries, they must have equivalent trimming configurations. Otherwise, the Native AOT linker may remove types that are only referenced from XAML, which it cannot detect as being in use.
+
+If you are experiencing runtime errors due to missing types, add a trimmer root descriptor to your `.csproj` file. Some third-party libraries may require comprehensive entries if they do not ship with a root descriptor and reference types in XAML only.
+
+```xml title=".csproj"
 <ItemGroup>
-    <TrimmerRootDescriptor Include="TrimmerRoots.xml" />
+    <ProjectReference Include="..\YourApp\YourApp.csproj" />
+    <TrimmerRootAssembly Include="YourAssembly" />
 </ItemGroup>
 ```
 
-`TrimmerRoots.xml`:
-
-```xml
-<linker>
-    <assembly fullname="YourAssembly">
-        <type fullname="YourAssembly.ViewModels*" preserve="all"/>
-        <type fullname="YourAssembly.Views*" preserve="all"/>
-    </assembly>
-</linker>
-```
-
-Adjust the type patterns to match the namespaces your XAML references. Some third-party libraries may require comprehensive entries if they do not ship with a root descriptor.
+For information, please see [Trimming on the .NET documentation site](https://learn.microsoft.com/en-us/dotnet/core/deploying/trimming/prepare-libraries-for-trimming#csproj-file).
 
 ## See also
 

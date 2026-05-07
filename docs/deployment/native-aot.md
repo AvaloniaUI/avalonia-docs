@@ -51,48 +51,29 @@ When using Native AOT, XAML is compiled into the application at build time. Ensu
 
 ## Publishing Avalonia Native AOT applications
 
-### Windows
-```bash
-dotnet publish -r win-x64 -c Release
+To publish your app, run `dotnet publish` in the command line:
+
+```
+dotnet publish -r <current platform> -c Release
 ```
 
-### Linux
-```bash
-dotnet publish -r linux-x64 -c Release
-```
+As an example, `dotnet publish -r osx-arm64 -c Release` would publish the app for Apple Silicon devices.
 
-### macOS
-Intel based macOS 
-```bash
-dotnet publish -r osx-x64 -c Release
-```
-
-Apple silicon based macOS 
-```bash
-dotnet publish -r osx-arm64 -c Release
-```
+For more information, please see [Native AOT deployment on the .NET documentation site](https://learn.microsoft.com/en-us/dotnet/core/deploying/native-aot/?tabs=windows%2Cnet8#publish-native-aot-using-the-cli).
 
 :::tip
 You can then use Apple's [lipo tool](https://developer.apple.com/documentation/apple-silicon/building-a-universal-macos-binary) to combine both Intel and Apple Silicon binaries, enabling you to ship  Universal binaries.
 :::
 
-## Troubleshooting common issues
+## Resolving reflection-related errors
 
-### 1. Reflection-related errors
-For view models or services using reflection:
-```xml
+Add a trimmer root descriptor to your `.csproj` file.
+
+```xml title=".csproj"
 <ItemGroup>
-    <TrimmerRootDescriptor Include="TrimmerRoots.xml" />
+    <ProjectReference Include="..\YourApp\YourApp.csproj" />
+    <TrimmerRootAssembly Include="YourAssembly" />
 </ItemGroup>
-```
-
-Create a `TrimmerRoots.xml`:
-```xml
-<linker>
-    <assembly fullname="YourApplication">
-        <type fullname="YourApplication.ViewModels*" preserve="all"/>
-    </assembly>
-</linker>
 ```
 
 ## Known limitations
