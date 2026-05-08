@@ -86,6 +86,14 @@ All XPF licenses support Tier 1 Linux distributions (the latest versions of Ubun
 
 Yes. RHEL 8 and later are supported. Some additional setup is required compared to Ubuntu. See [Linux: Other Dependencies](/xpf/platforms/linux#other-dependencies) for RHEL-specific package installation instructions.
 
+## Native AOT
+
+**Does XPF support Native AOT?**
+
+Yes. Unlike WPF, which cannot be compiled with Native AOT due to its COM marshalling dependency, XPF includes support for AOT compilation.
+
+See the [Native AOT deployment guide](/xpf/deployment/native-aot) for setup and usage instructions.
+
 ## Common issues
 
 **My application works on Windows but crashes on macOS/Linux. Where do I start?**

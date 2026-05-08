@@ -21,15 +21,22 @@ Native AOT compilation provides the following advantages for Avalonia applicatio
 
 ### Project configuration
 
-Add the following to your csproj file:
+Add the following to your `.csproj` file(s).
 
 ```xml
 <PropertyGroup>
+    <!-- Only needed for the main executable project -->
     <PublishAot>true</PublishAot>
+
+    <!-- Add to all projects/libraries in use, to ensure AOT compatibility -->
+    <IsAotCompatible>true</IsAotCompatible>
+
     <!-- Necessary before Avalonia 12.0, was used for accessiblity APIs -->
     <BuiltInComInteropSupport>false</BuiltInComInteropSupport>
 </PropertyGroup>
 ```
+
+For information, please see [Native AOT deployment](https://learn.microsoft.com/en-us/dotnet/core/deploying/native-aot/) on the .NET documentation site.
 
 ## Avalonia-specific considerations
 
@@ -51,49 +58,32 @@ When using Native AOT, XAML is compiled into the application at build time. Ensu
 
 ## Publishing Avalonia Native AOT applications
 
-### Windows
-```bash
-dotnet publish -r win-x64 -c Release
+To publish your app, run `dotnet publish` in the command line:
+
+```
+dotnet publish -r <runtime> -c Release
 ```
 
-### Linux
-```bash
-dotnet publish -r linux-x64 -c Release
-```
+As an example, `dotnet publish -r osx-arm64 -c Release` would publish the app for Apple Silicon devices.
 
-### macOS
-Intel based macOS 
-```bash
-dotnet publish -r osx-x64 -c Release
-```
-
-Apple silicon based macOS 
-```bash
-dotnet publish -r osx-arm64 -c Release
-```
+For more information, please see [Native AOT deployment](https://learn.microsoft.com/en-us/dotnet/core/deploying/native-aot/?tabs=windows%2Cnet8#publish-native-aot-using-the-cli) and [dotnet publish](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-publish) on the .NET documentation site.
 
 :::tip
 You can then use Apple's [lipo tool](https://developer.apple.com/documentation/apple-silicon/building-a-universal-macos-binary) to combine both Intel and Apple Silicon binaries, enabling you to ship  Universal binaries.
 :::
 
-## Troubleshooting common issues
+## Resolving reflection-related errors
 
-### 1. Reflection-related errors
-For view models or services using reflection:
-```xml
+Add a trimmer root descriptor to your `.csproj` file.
+
+```xml title=".csproj"
 <ItemGroup>
-    <TrimmerRootDescriptor Include="TrimmerRoots.xml" />
+    <ProjectReference Include="..\YourAssembly\YourAssembly.csproj" />
+    <TrimmerRootAssembly Include="YourAssembly" />
 </ItemGroup>
 ```
 
-Create a `TrimmerRoots.xml`:
-```xml
-<linker>
-    <assembly fullname="YourApplication">
-        <type fullname="YourApplication.ViewModels*" preserve="all"/>
-    </assembly>
-</linker>
-```
+For information, please see [Trimming](https://learn.microsoft.com/en-us/dotnet/core/deploying/trimming/prepare-libraries-for-trimming#csproj-file) on the .NET documentation site.
 
 ## Known limitations
 
@@ -106,6 +96,10 @@ When using Native AOT with Avalonia, be aware of these limitations:
 ## Platform support
 
 For platform support, refer to [Platform/architecture restrictions](https://learn.microsoft.com/en-us/dotnet/core/deploying/native-aot/#platformarchitecture-restrictions).
+
+## Avalonia XPF
+
+If you are using [Avalonia XPF](/xpf), Native AOT is also supported. See [XPF: Native AOT](/xpf/deployment/native-aot) for XPF-specific setup and usage.
 
 ## See also
 
