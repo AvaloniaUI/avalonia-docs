@@ -92,7 +92,7 @@ To initiate a drag-and-drop operation from your control, call `DragDrop.DoDragDr
 private async void OnPointerPressed(object? sender, PointerPressedEventArgs e)
 {
     var dragData = new DataTransfer();
-    dragData.Set(DataFormat.Text, "Hello from drag!");
+    dragData.Add(DataTransferItem.CreateText("Hello from drag!"));
 
     var result = await DragDrop.DoDragDropAsync(
         e,
