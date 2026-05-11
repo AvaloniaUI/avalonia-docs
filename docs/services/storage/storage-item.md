@@ -76,11 +76,11 @@ This method is lazily evaluate and is async.
 
 ### CreateFileAsync
 
-Creates a file with specified name as a child of the current storage folder
+Creates, or truncates and overwrites, a file with the specified name as a child of the current storage folder.
 
 ### CreateFolderAsync
 
-Creates a folder with specified name as a child of the current storage folder
+Creates a folder with the specified name as a child of the current storage folder, unless they already exist.
 
 ### TryGetSingleFileAsync
 
