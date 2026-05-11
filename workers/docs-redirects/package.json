@@ -1,0 +1,13 @@
+{
+  "name": "avalonia-docs-redirects",
+  "private": true,
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^4.76.0",
+    "@cloudflare/workers-types": "^4.20241230.0",
+    "typescript": "^5.7.0"
+  }
+}

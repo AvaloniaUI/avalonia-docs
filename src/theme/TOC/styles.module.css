@@ -1,0 +1,64 @@
+.tableOfContentsWrapper {
+  max-height: calc(100vh - (var(--ifm-navbar-height) + 2rem));
+  position: sticky;
+  top: calc(var(--ifm-navbar-height) + 1rem);
+  overflow: visible;
+  min-height: 240px;
+}
+
+.tableOfContents {
+  overflow-y: auto;
+  overflow-x: visible;
+}
+
+.tocDropdownButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 570;
+  letter-spacing: 0.03em;
+  border-radius: 9999px;
+  transition: background-color 0.15s ease-out, color 0.15s ease-out;
+  background: transparent;
+  color: var(--color-body-text, #686770);
+  border: none;
+  cursor: pointer;
+}
+
+.tocDropdownButton:hover {
+  background: var(--navbar-link-hover-bg, rgba(0, 0, 0, 0.05));
+  color: var(--color-brand-500, #1a90ff);
+}
+
+.tocDropdownButton:focus {
+  outline: none;
+}
+
+@media (max-width: 1359px) {
+  .tocDropdownButton {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+:global(html[data-theme='dark']) .tocDropdownButton {
+  background: transparent;
+  color: #a1a1aa;
+}
+
+:global(html[data-theme='dark']) .tocDropdownButton:hover {
+  background: var(--navbar-link-hover-bg, rgba(255, 255, 255, 0.06));
+  color: #f4f4f5;
+}
+
+@media (max-width: 996px) {
+  .tableOfContents {
+    display: none;
+  }
+
+  .docItemContainer {
+    padding: 0 0.3rem;
+  }
+}

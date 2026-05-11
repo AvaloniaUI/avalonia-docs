@@ -1,0 +1,171 @@
+---
+title: 'TreeDataGridRowHeaderCell'
+hide_title: true
+slug: '/avalonia/controls/primitives/treedatagridrowheadercell'
+uid: 'Avalonia.Controls.Primitives.TreeDataGridRowHeaderCell'
+commentId: 'T:Avalonia.Controls.Primitives.TreeDataGridRowHeaderCell'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.TreeDataGrid'
+assembly: 'Avalonia.Controls.TreeDataGrid'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Primitives'
+tfms:
+  - 'net8.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">TreeDataGridRowHeaderCell Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Primitives</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A control in a [Avalonia.Controls.TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid) that displays row header cells.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class TreeDataGridRowHeaderCell
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> TemplatedControl <span className="apiref-page__relation-separator">-&gt;</span> <a href="treedatagridcell">TreeDataGridCell</a> <span className="apiref-page__relation-separator">-&gt;</span> TreeDataGridRowHeaderCell
+</div>
+</div>
+
+## Remarks
+
+[TreeDataGridRowHeaderCell](xref:Avalonia.Controls.Primitives.TreeDataGridRowHeaderCell) displays the visual row number (0, 1, 2...) in a [TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid).
+The number always represents the visual position of the row, remaining sequential
+regardless of sorting or whether the data source is flat or hierarchical.
+
+This cell type is read-only and does not support editing.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [TreeDataGridRowHeaderCell](#uid-4f57e582a0) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4f57e582a0"></span>
+
+### TreeDataGridRowHeaderCell Constructor
+
+```csharp
+public TreeDataGridRowHeaderCell()
+```
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [TextAlignment](#uid-963f8c266a) | Gets or sets the text alignment for the cell's text. |
+| [Value](#uid-5fa09a8282) | Gets or sets the text value displayed in the cell. |
+| [ColumnIndex](treedatagridcell.mdx#uid-6d0d40f6a8) | Gets the index of the column that this cell belongs to. Inherited from [TreeDataGridCell](treedatagridcell.mdx). |
+| [IsEditing](treedatagridcell.mdx#uid-66586fe73f) | Gets a value indicating whether the cell is in edit mode. Inherited from [TreeDataGridCell](treedatagridcell.mdx). |
+| [IsEffectivelySelected](treedatagridcell.mdx#uid-8ce8f3cd79) | Gets a value indicating whether the cell is effectively selected, either directly or because its containing row is selected. Inherited from [TreeDataGridCell](treedatagridcell.mdx). |
+| [IsSelected](treedatagridcell.mdx#uid-91d5f305c8) | Gets a value indicating whether the cell is selected. Inherited from [TreeDataGridCell](treedatagridcell.mdx). |
+| [Model](treedatagridcell.mdx#uid-6720862544) | Gets the data model for the cell. Inherited from [TreeDataGridCell](treedatagridcell.mdx). |
+| [RowIndex](treedatagridcell.mdx#uid-c4d45a681c) | Gets the index of the row that this cell belongs to. Inherited from [TreeDataGridCell](treedatagridcell.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-963f8c266a"></span>
+
+### TextAlignment Property
+
+Gets or sets the text alignment for the cell's text.
+
+```csharp
+public Avalonia.Media.TextAlignment TextAlignment { get; set; }
+```
+
+#### Value
+
+The text alignment to apply to the cell's text.
+The default is [Avalonia.Media.TextAlignment.Right](xref:Avalonia.Media.TextAlignment.Right).
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5fa09a8282"></span>
+
+### Value Property
+
+Gets or sets the text value displayed in the cell.
+
+```csharp
+public string Value { get; set; }
+```
+
+#### Remarks
+
+This value represents the visual row number as a string.
+
+</section>
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [TextAlignmentProperty](#uid-1e73432a86) | Defines the [Avalonia.Controls.Primitives.TreeDataGridRowHeaderCell.TextAlignment](xref:Avalonia.Controls.Primitives.TreeDataGridRowHeaderCell.TextAlignment) property. |
+| [ValueProperty](#uid-6200cabe6d) | Defines the [Avalonia.Controls.Primitives.TreeDataGridRowHeaderCell.Value](xref:Avalonia.Controls.Primitives.TreeDataGridRowHeaderCell.Value) property. |
+| [IsSelectedProperty](treedatagridcell.mdx#uid-8249e3bb68) | Defines the [Avalonia.Controls.Primitives.TreeDataGridCell.IsSelected](xref:Avalonia.Controls.Primitives.TreeDataGridCell.IsSelected) property. Inherited from [TreeDataGridCell](treedatagridcell.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1e73432a86"></span>
+
+### TextAlignmentProperty Field
+
+Defines the [Avalonia.Controls.Primitives.TreeDataGridRowHeaderCell.TextAlignment](xref:Avalonia.Controls.Primitives.TreeDataGridRowHeaderCell.TextAlignment) property.
+
+```csharp
+public Avalonia.DirectProperty<Avalonia.Controls.Primitives.TreeDataGridRowHeaderCell, Avalonia.Media.TextAlignment> TextAlignmentProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6200cabe6d"></span>
+
+### ValueProperty Field
+
+Defines the [Avalonia.Controls.Primitives.TreeDataGridRowHeaderCell.Value](xref:Avalonia.Controls.Primitives.TreeDataGridRowHeaderCell.Value) property.
+
+```csharp
+public Avalonia.DirectProperty<Avalonia.Controls.Primitives.TreeDataGridRowHeaderCell, string> ValueProperty
+```
+
+</section>
+
+</ApiRefPage>
+

@@ -1,0 +1,114 @@
+---
+title: 'IManagedNotificationManager'
+hide_title: true
+slug: '/avalonia/controls/notifications/imanagednotificationmanager'
+uid: 'Avalonia.Controls.Notifications.IManagedNotificationManager'
+commentId: 'T:Avalonia.Controls.Notifications.IManagedNotificationManager'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Notifications'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IManagedNotificationManager Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Notifications</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Represents a notification manager that can show arbitrary content.
+Managed notification managers can show any content.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface IManagedNotificationManager
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="inotificationmanager">INotificationManager</a>
+</div>
+</div>
+
+## Remarks
+
+Because notification managers of this type are implemented purely in managed code, they
+can display arbitrary content, as opposed to notification managers which display notifications
+using the host operating system's notification mechanism.
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Close](#uid-74a9176a6c) | Closes a notification. |
+| [Show](#uid-5233c4c7bf) | Shows a notification. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-74a9176a6c"></span>
+
+### Close Method
+
+Closes a notification.
+
+```csharp
+public void Close(object content)
+```
+
+#### Parameters
+
+`content` object
+
+The content to be closed.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5233c4c7bf"></span>
+
+### Show Method
+
+Shows a notification.
+
+```csharp
+public void Show(object content)
+```
+
+#### Parameters
+
+`content` object
+
+The content to be displayed.
+
+
+</section>
+
+</ApiRefPage>
+

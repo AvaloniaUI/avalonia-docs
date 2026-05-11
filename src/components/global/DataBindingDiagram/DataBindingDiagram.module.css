@@ -1,0 +1,302 @@
+.container {
+  --color-control: #2563eb;
+  --color-object: #7c3aed;
+  --color-update: #059669;
+  --color-notify: #d97706;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  padding: 32px;
+  margin: 24px 0;
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+}
+
+[data-theme='dark'] .container {
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  border-color: #334155;
+}
+
+/* Diagram wrapper */
+.diagramWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* Main row with boxes and Update arrow */
+.mainRow {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+/* Box styling - matching BoxModelDiagram */
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 60px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.controlBox {
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.15) 0%, rgba(37, 99, 235, 0.08) 100%);
+  border: 2px solid rgba(37, 99, 235, 0.3);
+}
+
+.objectBox {
+  background: linear-gradient(135deg, rgba(124, 58, 237, 0.15) 0%, rgba(124, 58, 237, 0.08) 100%);
+  border: 2px solid rgba(124, 58, 237, 0.3);
+}
+
+.boxLabel {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.controlBox .boxLabel {
+  color: #2563eb;
+}
+
+[data-theme='dark'] .controlBox .boxLabel {
+  color: #60a5fa;
+}
+
+.objectBox .boxLabel {
+  color: #7c3aed;
+}
+
+[data-theme='dark'] .objectBox .boxLabel {
+  color: #a78bfa;
+}
+
+/* Active states for boxes */
+.controlBox.active {
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.35) 0%, rgba(37, 99, 235, 0.2) 100%);
+  border-color: rgba(37, 99, 235, 0.8);
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.2), 0 8px 32px rgba(37, 99, 235, 0.3);
+}
+
+.objectBox.active {
+  background: linear-gradient(135deg, rgba(124, 58, 237, 0.35) 0%, rgba(124, 58, 237, 0.2) 100%);
+  border-color: rgba(124, 58, 237, 0.8);
+  box-shadow: 0 0 0 4px rgba(124, 58, 237, 0.2), 0 8px 32px rgba(124, 58, 237, 0.3);
+}
+
+/* Update arrow container */
+.updateArrow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8px 0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 0 -1px;
+}
+
+.updateArrow:hover {
+  background: rgba(5, 150, 105, 0.08);
+}
+
+.updateArrow.active {
+  background: rgba(5, 150, 105, 0.12);
+}
+
+.arrowLabel {
+  font-size: 12px;
+  font-weight: 600;
+  color: #64748b;
+  margin-bottom: 4px;
+  transition: color 0.3s ease;
+}
+
+[data-theme='dark'] .arrowLabel {
+  color: #94a3b8;
+}
+
+.updateArrow.active .arrowLabel {
+  color: var(--color-update);
+}
+
+[data-theme='dark'] .updateArrow.active .arrowLabel {
+  color: #34d399;
+}
+
+.horizontalArrow {
+  width: 100px;
+  height: 20px;
+  display: block;
+}
+
+/* Arrow lines */
+.arrowLine {
+  stroke: #94a3b8;
+  stroke-width: 1.5;
+  fill: none;
+  transition: all 0.3s ease;
+}
+
+[data-theme='dark'] .arrowLine {
+  stroke: #64748b;
+}
+
+.arrowLine.dashed {
+  stroke-dasharray: 6, 4;
+}
+
+.arrowHead {
+  fill: #94a3b8;
+  transition: fill 0.3s ease;
+}
+
+[data-theme='dark'] .arrowHead {
+  fill: #64748b;
+}
+
+/* Active arrow states */
+.updateArrow.active .arrowLine {
+  stroke: var(--color-update);
+  stroke-width: 2;
+}
+
+[data-theme='dark'] .updateArrow.active .arrowLine {
+  stroke: #34d399;
+}
+
+.updateArrow.active .arrowHead {
+  fill: var(--color-update);
+}
+
+[data-theme='dark'] .updateArrow.active .arrowHead {
+  fill: #34d399;
+}
+
+/* Notify arrow (L-shaped path) */
+.notifyArrow {
+  width: 340px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  margin-top: -2px;
+}
+
+.notifyArrow:hover {
+  background: rgba(217, 119, 6, 0.08);
+}
+
+.notifyArrow.active {
+  background: rgba(217, 119, 6, 0.12);
+}
+
+.notifyPath {
+  width: 100%;
+  height: 50px;
+}
+
+.notifyLabel {
+  font-size: 12px;
+  font-weight: 600;
+  fill: #64748b;
+  transition: fill 0.3s ease;
+}
+
+[data-theme='dark'] .notifyLabel {
+  fill: #94a3b8;
+}
+
+.notifyArrow.active .arrowLine {
+  stroke: var(--color-notify);
+  stroke-width: 2;
+}
+
+[data-theme='dark'] .notifyArrow.active .arrowLine {
+  stroke: #fbbf24;
+}
+
+.notifyArrow.active .arrowHead {
+  fill: var(--color-notify);
+}
+
+[data-theme='dark'] .notifyArrow.active .arrowHead {
+  fill: #fbbf24;
+}
+
+.notifyArrow.active .notifyLabel {
+  fill: var(--color-notify);
+}
+
+[data-theme='dark'] .notifyArrow.active .notifyLabel {
+  fill: #fbbf24;
+}
+
+/* Dimmed state */
+.dimmed {
+  opacity: 0.35;
+}
+
+/* Description area */
+.description {
+  text-align: center;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #475569;
+  max-width: 500px;
+  min-height: 48px;
+}
+
+[data-theme='dark'] .description {
+  color: #94a3b8;
+}
+
+.description strong {
+  color: #1e293b;
+  margin-right: 4px;
+}
+
+[data-theme='dark'] .description strong {
+  color: #f1f5f9;
+}
+
+.hint {
+  font-style: italic;
+  opacity: 0.7;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .container {
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .box {
+    width: 80px;
+    height: 50px;
+  }
+
+  .boxLabel {
+    font-size: 12px;
+  }
+
+  .horizontalArrow {
+    width: 70px;
+  }
+
+  .notifyArrow {
+    width: 270px;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+}

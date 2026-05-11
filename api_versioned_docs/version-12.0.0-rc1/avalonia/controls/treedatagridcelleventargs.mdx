@@ -1,0 +1,168 @@
+---
+title: 'TreeDataGridCellEventArgs'
+hide_title: true
+slug: '/avalonia/controls/treedatagridcelleventargs'
+uid: 'Avalonia.Controls.TreeDataGridCellEventArgs'
+commentId: 'T:Avalonia.Controls.TreeDataGridCellEventArgs'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.TreeDataGrid'
+assembly: 'Avalonia.Controls.TreeDataGrid'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net8.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">TreeDataGridCellEventArgs Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Provides data for events related to cell operations in a [Avalonia.Controls.TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid)
+control.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class TreeDataGridCellEventArgs
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> TreeDataGridCellEventArgs
+</div>
+</div>
+
+## Remarks
+
+This class is used in events such as [Avalonia.Controls.TreeDataGrid.CellPrepared](xref:Avalonia.Controls.TreeDataGrid.CellPrepared),
+[Avalonia.Controls.TreeDataGrid.CellClearing](xref:Avalonia.Controls.TreeDataGrid.CellClearing), and [Avalonia.Controls.TreeDataGrid.CellValueChanged](xref:Avalonia.Controls.TreeDataGrid.CellValueChanged)
+to provide information about the cell that triggered the event.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [TreeDataGridCellEventArgs](#uid-98dd6b7785) | Initializes a new instance of the [Avalonia.Controls.TreeDataGridCellEventArgs](xref:Avalonia.Controls.TreeDataGridCellEventArgs) class with the specified cell, column index, and row index. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-98dd6b7785"></span>
+
+### TreeDataGridCellEventArgs Constructor
+
+Initializes a new instance of the [Avalonia.Controls.TreeDataGridCellEventArgs](xref:Avalonia.Controls.TreeDataGridCellEventArgs) class with
+the specified cell, column index, and row index.
+
+```csharp
+public TreeDataGridCellEventArgs(Avalonia.Controls.Control cell, int columnIndex, int rowIndex)
+```
+
+#### Parameters
+
+`cell` [Avalonia.Controls.Control](xref:Avalonia.Controls.Control)
+
+The cell control that triggered the event.
+
+
+`columnIndex` int
+
+The index of the column that contains the cell.
+
+
+`rowIndex` int
+
+The index of the row that contains the cell.
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Cell](#uid-1ded97f73e) | Gets the cell control that triggered the event. |
+| [ColumnIndex](#uid-db9ee70afc) | Gets the index of the column that contains the cell. |
+| [RowIndex](#uid-07bc13d918) | Gets the index of the row that contains the cell. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1ded97f73e"></span>
+
+### Cell Property
+
+Gets the cell control that triggered the event.
+
+```csharp
+public Avalonia.Controls.Control Cell { get; set; }
+```
+
+#### Value
+
+A [Avalonia.Controls.Control](xref:Avalonia.Controls.Control) that represents the cell in the [TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid).
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-db9ee70afc"></span>
+
+### ColumnIndex Property
+
+Gets the index of the column that contains the cell.
+
+```csharp
+public int ColumnIndex { get; set; }
+```
+
+#### Value
+
+The zero-based index of the column.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-07bc13d918"></span>
+
+### RowIndex Property
+
+Gets the index of the row that contains the cell.
+
+```csharp
+public int RowIndex { get; set; }
+```
+
+#### Value
+
+The zero-based index of the row.
+
+
+</section>
+
+</ApiRefPage>
+

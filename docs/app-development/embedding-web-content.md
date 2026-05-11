@@ -1,0 +1,381 @@
+---
+id: embedding-web-content
+title: Embedding web content
+description: Embed web content in Avalonia apps using NativeWebView, NativeWebDialog, and WebAuthenticationBroker.
+doc-type: how-to
+tags:
+  - xpf
+---
+
+## Overview
+
+The Avalonia WebView component provides native web browser functionality for your Avalonia applications. Unlike embedded WebView solutions that require bundling Chromium, this implementation leverages the platform's native web rendering capabilities, resulting in smaller application size and better performance.
+
+The WebView component includes three main APIs:
+
+- [`NativeWebView`](/controls/web/nativewebview) - A control for embedding web content directly in your application UI
+- [`NativeWebDialog`](/controls/web/nativewebdialog) - A separate dialog window that hosts web content
+- [`WebAuthenticationBroker`](/controls/web/webauthenticationbroker) - A utility for handling OAuth and web-based authentication flows
+
+The WebView component is available with both Avalonia and [Avalonia XPF](/xpf). For XPF-specific installation and usage, see the [XPF section](#xpf) below.
+
+## Installation
+
+Add the WebView package to your project:
+
+```bash
+dotnet add package Avalonia.Controls.WebView
+```
+
+## Basic usage
+
+### NativeWebView
+
+:::note
+On Linux, `NativeWebView` uses [WPE WebKit](https://wpewebkit.org) and renders offscreen. Make sure the WPE runtime libraries are installed — see [Linux prerequisites](#linux). If WPE is not available on the target system, use [`NativeWebDialog`](/controls/web/nativewebdialog) instead.
+:::
+
+```xml
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <NativeWebView Source="https://avaloniaui.net/"
+                   NavigationCompleted="WebView_NavigationCompleted" />
+</Window>
+```
+
+```csharp
+private void WebView_NavigationCompleted(object? sender, WebViewNavigationCompletedEventArgs args)
+{
+    if (args.IsSuccess)
+    {
+        // Navigation completed successfully
+    }
+}
+```
+
+#### Bidirectional JavaScript execution
+
+In some situations it's necessary to execute arbitrary JavaScript code from the web view control.
+`NativeWebView` provides [`InvokeScript` async method](/controls/web/nativewebview#invokescript):
+
+```csharp
+webView.InvokeScript("console.log('Hello World')");
+```
+
+When it's required to receive data from the JavaScript (web page) and process it on the C# side, you can use the `NativeWebView.WebMessageReceived` event combined with the `invokeCSharpAction` helper JS method.
+
+Complete bi-directional example:
+```csharp
+private async void NativeWebView_OnNavigationCompleted(object? sender, WebViewNavigationCompletedEventArgs e)
+{
+    await ((NativeWebView)sender!).InvokeScript(""" invokeCSharpAction("{'key': 10}") """);
+}
+
+private void NativeWebView_OnWebMessageReceived(object? sender, WebMessageReceivedEventArgs e)
+{
+    var message = e.Body;
+    // message == "{'key': 10}"
+}
+```
+
+![NativeWebView control displaying web content in an Avalonia window](/img/webview.png)
+
+### NativeWebDialog
+
+```csharp
+var dialog = new NativeWebDialog
+{
+    Title = "Avalonia Docs",
+    CanUserResize = true,
+    Source = new Uri("https://docs.avaloniaui.net/")
+};
+
+dialog.NavigationCompleted += (s, e) =>
+{
+    if (e.IsSuccess)
+    {
+        // Navigation completed successfully
+    }
+};
+
+dialog.Show();
+```
+
+### WebAuthenticationBroker
+
+```csharp
+var authOptions = new WebAuthenticatorOptions(
+    RequestUri: new Uri("https://accounts.google.com/o/oauth2/auth?response_type=code&client_id=YOUR_CLIENT_ID&redirect_uri=http://localhost&scope=openid"),
+    RedirectUri: new Uri("http://localhost")
+);
+
+var result = await WebAuthenticationBroker.AuthenticateAsync(mainWindow, authOptions);
+
+if (result.CallbackUri != null)
+{
+    // Process authentication result
+    var code = HttpUtility.ParseQueryString(result.CallbackUri.Query)["code"];
+}
+```
+
+Replace `YOUR_CLIENT_ID` with the client ID for your application.
+
+## Platform prerequisites
+
+The WebView component relies on native web rendering implementations that must be available on the user's machine.
+
+#### Summary
+
+| Component | Windows | macOS | Linux | iOS | Android | Browser |
+|-----------|---------|-------|-------|-----|---------|---------|
+| NativeWebView | ✓ | ✓ | ✓* | ✓ | ✓ | ✗ |
+| NativeWebDialog | ✓ | ✓ | ✓ | ✗ | ✗ | ✗ |
+| WebAuthenticationBroker | ✓** | ✓ | ✓** | ✓ | ✓*** | ✓**** |
+
+\* On Linux, `NativeWebView` uses WPE WebKit. If WPE is unavailable on the target system, fall back to `NativeWebDialog` (which uses WebKitGTK).
+\** Uses NativeWebDialog implementation
+\*** Android support is experimental
+\**** Requires CORS configuration for the redirect page. .NET 10 is also necessary to run this library in browser.
+
+#### Windows
+
+Uses Microsoft Edge WebView2, which is:
+
+- Pre-installed on Windows 11
+- May need installation on Windows 10
+
+For Windows 10 users, you can include the WebView2 runtime with your installer:
+
+- [WebView2 Runtime Download](https://developer.microsoft.com/en-us/microsoft-edge/webview2?form=MA13LH#download)
+- [Distribution Guide](https://learn.microsoft.com/en-us/microsoft-edge/webview2/concepts/distribution?tabs=dotnetcsharp)
+
+#### macOS/iOS
+
+Uses `WKWebView` which is pre-installed on all modern macOS/iOS devices.
+
+- No additional setup required
+- For WebAuthenticationBroker: macOS 10.15+ or iOS 12.0+ required
+
+#### Linux
+
+Linux uses two different backends depending on the API you use:
+
+- **`NativeWebView`** is rendered with [WPE WebKit](https://wpewebkit.org) using offscreen (SHM) rendering. WPE has no hard dependency on GTK, so the embedded control works on both X11 and Wayland sessions and can be composed inside the Avalonia visual tree. 
+- **`NativeWebDialog`** uses WebKitGTK in a dedicated GTK window. Use it as a fallback when WPE is not available, or when you prefer a separate browser window.
+
+For `NativeWebView`, install the WPE runtime libraries:
+
+Debian/Ubuntu (24.04+):
+
+```bash
+sudo apt install libwpewebkit-2.0-1
+```
+
+Fedora:
+
+```bash
+sudo dnf install dnf-plugins-core
+sudo dnf copr enable philn/wpewebkit
+sudo dnf install wpewebkit
+```
+
+Arch:
+
+```bash
+sudo pacman -S wpewebkit
+```
+
+For `NativeWebDialog`, install GTK 3.0 and WebKitGTK 4.1:
+
+Debian/Ubuntu:
+
+```bash
+apt install libgtk-3-0 libwebkit2gtk-4.1-0
+```
+
+Fedora:
+
+```bash
+dnf install gtk3 webkit2gtk4.1
+```
+
+:::note
+`NativeWebDialog` also supports `libwebkit2gtk-4.0` and `soup-2.4` for older Ubuntu distributions. `libwebkit2gtk-4.1` is recommended.
+:::
+
+:::note
+On systems where WPE is not packaged, use `NativeWebDialog` instead, or set [`LinuxWpeWebViewEnvironmentRequestedEventArgs.PreferWebKitGtkInstead`](/controls/web/webview-environment#linux-wpe-webkit) to fall back to the WebKitGTK adapter.
+:::
+
+#### Android
+
+Requires Android API 21 or higher.
+
+## Native browser interop
+
+The Avalonia WebView component provides cross-platform web content rendering capabilities by utilizing native platform web view.
+However, sometimes you need to access platform-specific APIs that aren't exposed through the Avalonia WebView abstraction layer.
+
+This document explains how to obtain native handles and perform interop with the underlying browser implementations on each supported platform.
+
+### Getting handle
+
+To access native browser functionality, you first need to obtain the platform-specific handle from your WebView control.
+
+#### For WebView controls
+
+Use the `TryGetPlatformHandle()` method on your WebView instance:
+
+```csharp
+if (myWebView.TryGetPlatformHandle() is IWindowsWebView2PlatformHandle handle)
+{
+    // Cast to platform-specific interface and use
+}
+```
+
+#### For WebView dialogs
+
+Use the `TryGetWebViewPlatformHandle()` method on your WebView dialog instance:
+
+```csharp
+if (myWebViewDialog.TryGetWebViewPlatformHandle() is IWindowsWebView2PlatformHandle handle)
+{
+    // Cast to platform-specific interface and use
+}
+```
+
+### Interop
+
+#### Windows
+
+Avalonia's WebView on Windows supports two adapters:
+
+- **WebView2**: Modern Chromium-based Edge (recommended)
+- **WebView1**: Legacy Edge (fallback for older Windows 10 installations without WebView2)
+
+Both adapters operate with classic COM interop.
+*IDL* definition files can be found in the `Microsoft.Web.WebView2` nuget package (in case of WebView2), Windows SDK (in case of WebView1) or on the internet.
+
+**Recommended Approach**: Use the new [`[GeneratedComInterface]`](https://learn.microsoft.com/en-us/dotnet/standard/native-interop/comwrappers-source-generation) attribute for fast, trimmer/AOT-friendly COM interop.
+
+**Alternative Solutions**:
+
+- [CsWin32 generators](https://github.com/microsoft/CsWin32)
+- [Legacy `[ComImport]`](https://learn.microsoft.com/en-us/dotnet/standard/native-interop/cominterop)
+
+```csharp
+public interface IWindowsWebView2PlatformHandle : IPlatformHandle
+{
+    /// Returns COM handle to the ICoreWebView2 [76ECEACB-0462-4D94-AC83-423A6793775E] COM interface
+    IntPtr CoreWebView2 { get; }
+    /// Returns COM handle to the ICoreWebView2 [4D00C0D1-9434-4EB6-8078-8697A560334F] COM interface
+    IntPtr CoreWebView2Controller { get; }
+}
+```
+
+```csharp
+public interface IWindowsWebView1PlatformHandle : IPlatformHandle
+{
+    /// Returns COM handle to the IWebViewControl [3F921316-BC70-4BDA-9136-C94370899FAB] COM interface.
+    IntPtr WebViewControl { get; }
+}
+```
+
+#### MacOS/iOS
+
+**Recommended Approach**: Use official .NET Xamarin.Native macOS/iOS bindings for strongly-typed wrappers. Typically using [NSObject.GetNSObject\<WKWebView\>(IntPtr, false)](https://learn.microsoft.com/en-us/dotnet/api/objcruntime.runtime.getnsobject?view=xamarin-ios-sdk-12#objcruntime-runtime-getnsobject-1(system-intptr-system-boolean)).
+
+```csharp
+var wkWebView = NSObject.GetNSObject<WKWebView>(handle.WKWebView, false);
+```
+
+**Alternative**: Use `objc_msgSend` P/Invokes for direct native API access (more control but harder to maintain).
+
+```csharp
+public interface IAppleWKWebViewPlatformHandle : IPlatformHandle
+{
+    IntPtr WKWebView { get; }
+    IntPtr GetWKWebViewRetained();
+}
+```
+
+#### Linux (WPE WebKit)
+
+On Linux, `NativeWebView` is backed by WPE WebKit. The platform handle exposes both the `WebKitWebView` GObject and the underlying `wpe_view_backend` struct, allowing direct P/Invoke against the [WPEWebKit API](https://github.com/WebPlatformForEmbedded/WPEWebKit).
+
+```csharp
+public interface ILinuxWpePlatformHandle : IPlatformHandle
+{
+    /// Pointer to the WebKitWebView GObject instance.
+    IntPtr WebKitWebView { get; }
+
+    /// Pointer to the wpe_view_backend native struct.
+    IntPtr WpeViewBackend { get; }
+}
+```
+
+#### Linux (WebKitGTK)
+
+`NativeWebDialog` (and `NativeWebView` when configured to prefer WebKitGTK) exposes a WebKitGTK handle. The provided `WebKitWebView` IntPtr can be used directly with WebKit P/Invokes from the [official WebKitGTK reference](https://webkitgtk.org/reference/webkit2gtk/stable/index.html).
+
+```csharp
+public interface IGtkWebViewPlatformHandle : IPlatformHandle
+{
+    IntPtr WebKitWebView { get; }
+}
+```
+
+#### Android
+
+Use official .NET Xamarin.Android bindings for the easiest managed wrapper access.
+
+Refer to the [Android.Webkit.WebView documentation](https://learn.microsoft.com/en-us/dotnet/api/android.webkit.webview.-ctor?view=net-android-35.0#android-webkit-webview-ctor(system-intptr-android-runtime-jnihandleownership)) for usage details.
+
+```csharp
+public interface IAndroidWebViewPlatformHandle : IPlatformHandle
+{
+    IntPtr WebKitWebView { get; }
+}
+```
+
+## XPF
+
+The WebView component is also available for [Avalonia XPF](/xpf) applications. All WebView functionality, APIs, and platform prerequisites described above apply to XPF as well, with the differences noted below.
+
+### Installation
+
+First, make sure you have installed the XPF NuGet feed as per the [instructions](/xpf/version-info/versioning).
+
+With the NuGet feed configured, install the `Avalonia.Xpf.Controls.WebView` package:
+
+```xml
+<PackageReference Include="Avalonia.Xpf.Controls.WebView" Version="11.3.9" />
+```
+
+:::note
+Use the latest version if available. You can check for newer versions in the IDE NuGet Packages window.
+
+On Windows, when WebView2 is not available, legacy Internet Explorer is embedded. This is useful when targeting older Windows versions.
+:::
+
+### Usage
+
+Add the XPF namespace to your XAML file and use `NativeWebView`:
+
+```xml
+<wpf:NativeWebView xmlns:wpf="clr-namespace:Avalonia.Xpf.Controls;assembly=Avalonia.Xpf.Controls.WebView"
+                   Source="https://avaloniaui.net/" />
+```
+
+The `Source` property is bindable. All other APIs (`NativeWebDialog`, `WebAuthenticationBroker`, JavaScript interop) work the same as described in the sections above.
+
+To streamline code migration, you can also use the `NativeWebView` control with native WPF on Windows without XPF. In this scenario, all API members and underlying browsers are the same, and the same package can be used.
+
+## See also
+
+- [NativeWebView](/controls/web/nativewebview)
+- [NativeWebDialog](/controls/web/nativewebdialog)
+- [WebAuthenticationBroker](/controls/web/webauthenticationbroker)
+- [WebView environment options](/controls/web/webview-environment)
+- [FAQ](/tools/faq#webview)

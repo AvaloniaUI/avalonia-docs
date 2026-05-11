@@ -1,0 +1,289 @@
+---
+title: 'TreeDataGridPresenterBase<TItem>'
+hide_title: true
+slug: '/avalonia/controls/primitives/treedatagridpresenterbase-1'
+uid: 'Avalonia.Controls.Primitives.TreeDataGridPresenterBase`1'
+commentId: 'T:Avalonia.Controls.Primitives.TreeDataGridPresenterBase`1'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.TreeDataGrid'
+assembly: 'Avalonia.Controls.TreeDataGrid'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Primitives'
+tfms:
+  - 'net8.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">TreeDataGridPresenterBase&lt;TItem&gt; Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Primitives</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Base class for virtualized presenters used in [Avalonia.Controls.TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid) to display rows
+and columns.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class TreeDataGridPresenterBase<TItem>
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Border <span className="apiref-page__relation-separator">-&gt;</span> TreeDataGridPresenterBase&lt;TItem&gt;
+</div>
+</div>
+
+## Remarks
+
+TreeDataGridPresenterBase implements virtualization, for [TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid)'s column and row
+presenters.
+
+This class handles:
+
+- Element creation and recycling using a [Avalonia.Controls.Primitives.TreeDataGridElementFactory](xref:Avalonia.Controls.Primitives.TreeDataGridElementFactory)
+- Viewport tracking and efficient scrolling
+- Item change notifications
+- Focused element tracking
+- Bringing items into view
+
+Derived classes must implement abstract methods to handle item-specific realization,
+un-realization, and element index updates. They must also specify the orientation
+in which items are laid out.
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [BringIntoView](#uid-816c5fe38e) | No summary available. |
+| [GetRealizedElements](#uid-9fcf53e185) | Gets all currently realized elements. |
+| [TryGetElement](#uid-a4d6877d2e) | Attempts to get the element at the specified index. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-816c5fe38e"></span>
+
+### BringIntoView Method
+
+```csharp
+public Avalonia.Controls.Control BringIntoView(int index, Nullable<Avalonia.Rect> rect)
+```
+
+#### Parameters
+
+`index` int
+
+
+`rect` Nullable&lt;Avalonia.Rect&gt;
+
+
+#### Returns
+
+Avalonia.Controls.Control
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9fcf53e185"></span>
+
+### GetRealizedElements Method
+
+Gets all currently realized elements.
+
+```csharp
+public System.Collections.Generic.IEnumerable<Avalonia.Controls.Control> GetRealizedElements()
+```
+
+#### Returns
+
+System.Collections.Generic.IEnumerable&lt;Avalonia.Controls.Control&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a4d6877d2e"></span>
+
+### TryGetElement Method
+
+Attempts to get the element at the specified index.
+
+```csharp
+public Avalonia.Controls.Control TryGetElement(int index)
+```
+
+#### Parameters
+
+`index` int
+
+The index of the item.
+
+
+#### Returns
+
+Avalonia.Controls.Control
+
+
+#### Remarks
+
+This method returns the element only if it is currently realized. If the item
+at the specified index is not currently visible, this method returns null.
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [ElementFactory](#uid-71f5fb6640) | Gets or sets the factory used to create and recycle UI elements. |
+| [ItemContainerTheme](#uid-0fbe76541f) | Gets or sets the theme applied to item containers. |
+| [Items](#uid-cfebed8725) | Gets or sets the items to be presented. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-71f5fb6640"></span>
+
+### ElementFactory Property
+
+Gets or sets the factory used to create and recycle UI elements.
+
+```csharp
+public Avalonia.Controls.Primitives.TreeDataGridElementFactory ElementFactory { get; set; }
+```
+
+#### Value
+
+The element factory used by this presenter.
+
+
+#### Remarks
+
+The element factory is responsible for creating visual elements to represent data items,
+and for recycling those elements when they are no longer needed.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0fbe76541f"></span>
+
+### ItemContainerTheme Property
+
+Gets or sets the theme applied to item containers.
+
+```csharp
+public Avalonia.Styling.ControlTheme ItemContainerTheme { get; set; }
+```
+
+#### Value
+
+The theme to apply to item containers, or null to use the default theme.
+
+
+#### Remarks
+
+This theme is applied to the UI elements created by the presenter to represent items.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-cfebed8725"></span>
+
+### Items Property
+
+Gets or sets the items to be presented.
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<TItem> Items { get; set; }
+```
+
+#### Value
+
+A read-only list of items.
+
+
+#### Remarks
+
+When this property is set, the presenter will update its visual representation
+and start listening for changes in the collection if it implements
+[System.Collections.Specialized.INotifyCollectionChanged](xref:System.Collections.Specialized.INotifyCollectionChanged).
+
+</section>
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [ElementFactoryProperty](#uid-a7ba31a7c4) | Defines the [Avalonia.Controls.Primitives.TreeDataGridPresenterBase&lt;T&gt;.ElementFactory](xref:Avalonia.Controls.Primitives.TreeDataGridPresenterBase%601.ElementFactory) property. |
+| [ItemContainerThemeProperty](#uid-394ee41308) | Defines the [Avalonia.Controls.Primitives.TreeDataGridPresenterBase&lt;T&gt;.ItemContainerTheme](xref:Avalonia.Controls.Primitives.TreeDataGridPresenterBase%601.ItemContainerTheme) property. |
+| [ItemsProperty](#uid-1c2dd524aa) | Defines the [Avalonia.Controls.Primitives.TreeDataGridPresenterBase&lt;T&gt;.Items](xref:Avalonia.Controls.Primitives.TreeDataGridPresenterBase%601.Items) property. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a7ba31a7c4"></span>
+
+### ElementFactoryProperty Field
+
+Defines the [Avalonia.Controls.Primitives.TreeDataGridPresenterBase&lt;T&gt;.ElementFactory](xref:Avalonia.Controls.Primitives.TreeDataGridPresenterBase%601.ElementFactory) property.
+
+```csharp
+public Avalonia.DirectProperty<Avalonia.Controls.Primitives.TreeDataGridPresenterBase<TItem><TItem>, Avalonia.Controls.Primitives.TreeDataGridElementFactory> ElementFactoryProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-394ee41308"></span>
+
+### ItemContainerThemeProperty Field
+
+Defines the [Avalonia.Controls.Primitives.TreeDataGridPresenterBase&lt;T&gt;.ItemContainerTheme](xref:Avalonia.Controls.Primitives.TreeDataGridPresenterBase%601.ItemContainerTheme) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Styling.ControlTheme> ItemContainerThemeProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1c2dd524aa"></span>
+
+### ItemsProperty Field
+
+Defines the [Avalonia.Controls.Primitives.TreeDataGridPresenterBase&lt;T&gt;.Items](xref:Avalonia.Controls.Primitives.TreeDataGridPresenterBase%601.Items) property.
+
+```csharp
+public Avalonia.DirectProperty<Avalonia.Controls.Primitives.TreeDataGridPresenterBase<TItem><TItem>, System.Collections.Generic.IReadOnlyList<TItem>> ItemsProperty
+```
+
+</section>
+
+</ApiRefPage>
+

@@ -1,0 +1,131 @@
+.fileTree {
+  font-family: var(--ifm-font-family-base);
+  font-size: 0.875rem;
+  line-height: 1.5;
+  background-color: var(--docs-color-code-background);
+  border: 1px solid var(--docs-color-border);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  margin: 1rem 0;
+  overflow-x: auto;
+}
+
+.nodeWrapper {
+  // Container for each node and its children
+}
+
+.node {
+  display: flex;
+  align-items: center;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  margin: 1px 0;
+  user-select: text;
+  cursor: default;
+
+  &:hover {
+    background-color: var(--docusaurus-highlighted-code-line-bg);
+  }
+}
+
+.nodeClickable {
+  cursor: pointer;
+}
+
+.toggleButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0;
+  margin: 0;
+  margin-right: 0.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--ifm-color-primary);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+}
+
+.iconWrapper {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 0.5rem;
+  margin-left: 20px; // Align with items that have chevrons
+}
+
+.icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  color: var(--color-brand-400);
+}
+
+// File icons are slightly muted
+.iconWrapper .icon {
+  color: var(--color-gray-400);
+}
+
+.chevron {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  color: var(--color-gray-400);
+  transition: transform 0.15s ease-out;
+}
+
+.chevronExpanded {
+  transform: rotate(90deg);
+}
+
+.name {
+  color: var(--ifm-font-color-base);
+  font-weight: 500;
+}
+
+.comment {
+  color: var(--color-gray-400);
+  margin-left: 0.75rem;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 0.8125rem;
+}
+
+.children {
+  // Children are indented via padding-left on nodes
+}
+
+// Dark mode adjustments
+html[data-theme='dark'] {
+  .name {
+    color: var(--ifm-font-color-base);
+  }
+
+  .comment {
+    color: var(--color-gray-500);
+  }
+
+  .iconWrapper .icon {
+    color: var(--color-gray-500);
+  }
+
+  .icon {
+    color: var(--color-brand-300);
+  }
+
+  .chevron {
+    color: var(--color-gray-500);
+  }
+}

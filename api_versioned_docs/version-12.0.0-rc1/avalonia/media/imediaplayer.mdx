@@ -1,0 +1,484 @@
+---
+title: 'IMediaPlayer'
+hide_title: true
+slug: '/avalonia/media/imediaplayer'
+uid: 'Avalonia.Media.IMediaPlayer'
+commentId: 'T:Avalonia.Media.IMediaPlayer'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.MediaPlayer.Abstractions'
+assembly: 'Avalonia.Controls.MediaPlayer.Abstractions'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Media'
+tfms:
+  - 'netstandard2.1'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IMediaPlayer Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Media</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.MediaPlayer.Abstractions</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.MediaPlayer.Abstractions</code>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface IMediaPlayer
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="imediarendererprovider">IMediaRendererProvider</a>, INotifyPropertyChanged
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [InitializeAsync](#uid-a1495afaf3) | No summary available. |
+| [PauseAsync](#uid-d7a87c28b3) | No summary available. |
+| [PlayAsync](#uid-ee967297e7) | No summary available. |
+| [PrepareAsync](#uid-ea9d69ae29) | No summary available. |
+| [ReleaseAsync](#uid-92c1fe1101) | No summary available. |
+| [StopAsync](#uid-38080e42a8) | No summary available. |
+| [UnInitialize](#uid-12927378f6) | No summary available. |
+| [UpdateTargetVisual](#uid-81fa650b19) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a1495afaf3"></span>
+
+### InitializeAsync Method
+
+```csharp
+public System.Threading.Tasks.Task InitializeAsync()
+```
+
+#### Returns
+
+System.Threading.Tasks.Task
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d7a87c28b3"></span>
+
+### PauseAsync Method
+
+```csharp
+public System.Threading.Tasks.Task PauseAsync()
+```
+
+#### Returns
+
+System.Threading.Tasks.Task
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ee967297e7"></span>
+
+### PlayAsync Method
+
+```csharp
+public System.Threading.Tasks.Task PlayAsync()
+```
+
+#### Returns
+
+System.Threading.Tasks.Task
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ea9d69ae29"></span>
+
+### PrepareAsync Method
+
+```csharp
+public System.Threading.Tasks.Task PrepareAsync()
+```
+
+#### Returns
+
+System.Threading.Tasks.Task
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-92c1fe1101"></span>
+
+### ReleaseAsync Method
+
+```csharp
+public System.Threading.Tasks.Task ReleaseAsync()
+```
+
+#### Returns
+
+System.Threading.Tasks.Task
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-38080e42a8"></span>
+
+### StopAsync Method
+
+```csharp
+public System.Threading.Tasks.Task StopAsync()
+```
+
+#### Returns
+
+System.Threading.Tasks.Task
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-12927378f6"></span>
+
+### UnInitialize Method
+
+```csharp
+public System.Threading.Tasks.Task UnInitialize()
+```
+
+#### Returns
+
+System.Threading.Tasks.Task
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-81fa650b19"></span>
+
+### UpdateTargetVisual Method
+
+```csharp
+public void UpdateTargetVisual(Avalonia.Visual elemVisual)
+```
+
+#### Parameters
+
+`elemVisual` [Avalonia.Visual](xref:Avalonia.Visual)
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [BufferProgress](#uid-c286286c11) | No summary available. |
+| [Duration](#uid-585e4ef97f) | No summary available. |
+| [HasVideo](#uid-a2d58c4388) | No summary available. |
+| [IsBuffering](#uid-b8cb00e78c) | No summary available. |
+| [IsLoopingEnabled](#uid-3bbad382c0) | No summary available. |
+| [IsMuted](#uid-f85d776bef) | No summary available. |
+| [IsSeekable](#uid-0413eec4c9) | No summary available. |
+| [LastErrorMessage](#uid-9cd7e1a622) | No summary available. |
+| [LoadedBehavior](#uid-94b25f88ab) | No summary available. |
+| [Position](#uid-6ed7183a50) | No summary available. |
+| [Source](#uid-d4cc6ba83e) | No summary available. |
+| [StandaloneRendererMode](#uid-083acd5704) | No summary available. |
+| [Statistics](#uid-771b3aa7f5) | No summary available. |
+| [Volume](#uid-df7f113c1d) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c286286c11"></span>
+
+### BufferProgress Property
+
+```csharp
+public Nullable<double> BufferProgress { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-585e4ef97f"></span>
+
+### Duration Property
+
+```csharp
+public Nullable<TimeSpan> Duration { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a2d58c4388"></span>
+
+### HasVideo Property
+
+```csharp
+public bool HasVideo { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b8cb00e78c"></span>
+
+### IsBuffering Property
+
+```csharp
+public bool IsBuffering { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3bbad382c0"></span>
+
+### IsLoopingEnabled Property
+
+```csharp
+public bool IsLoopingEnabled { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f85d776bef"></span>
+
+### IsMuted Property
+
+```csharp
+public bool IsMuted { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0413eec4c9"></span>
+
+### IsSeekable Property
+
+```csharp
+public bool IsSeekable { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9cd7e1a622"></span>
+
+### LastErrorMessage Property
+
+```csharp
+public string LastErrorMessage { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-94b25f88ab"></span>
+
+### LoadedBehavior Property
+
+```csharp
+public Avalonia.Media.MediaPlayerLoadedBehavior LoadedBehavior { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6ed7183a50"></span>
+
+### Position Property
+
+```csharp
+public TimeSpan Position { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d4cc6ba83e"></span>
+
+### Source Property
+
+```csharp
+public Avalonia.Media.MediaSource Source { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-083acd5704"></span>
+
+### StandaloneRendererMode Property
+
+```csharp
+public bool StandaloneRendererMode { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-771b3aa7f5"></span>
+
+### Statistics Property
+
+```csharp
+public Avalonia.Media.MediaStatistics Statistics { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-df7f113c1d"></span>
+
+### Volume Property
+
+```csharp
+public double Volume { get; set; }
+```
+
+</section>
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [ErrorOccurred](#uid-1f86f3dfbf) | No summary available. |
+| [MediaPaused](#uid-2e3080951a) | No summary available. |
+| [MediaPlaybackCompleted](#uid-9ec85edec8) | No summary available. |
+| [MediaPrepared](#uid-54648279ed) | No summary available. |
+| [MediaStarted](#uid-6e02b48b90) | No summary available. |
+| [MediaStopped](#uid-57c17f1a63) | No summary available. |
+| [NaturalSizeChanged](#uid-1dbf7b55fb) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1f86f3dfbf"></span>
+
+### ErrorOccurred Event
+
+```csharp
+public event EventHandler<Avalonia.Media.MediaPlayerErrorEventArgs> ErrorOccurred
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2e3080951a"></span>
+
+### MediaPaused Event
+
+```csharp
+public event EventHandler MediaPaused
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9ec85edec8"></span>
+
+### MediaPlaybackCompleted Event
+
+```csharp
+public event EventHandler MediaPlaybackCompleted
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-54648279ed"></span>
+
+### MediaPrepared Event
+
+```csharp
+public event EventHandler MediaPrepared
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6e02b48b90"></span>
+
+### MediaStarted Event
+
+```csharp
+public event EventHandler MediaStarted
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-57c17f1a63"></span>
+
+### MediaStopped Event
+
+```csharp
+public event EventHandler MediaStopped
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1dbf7b55fb"></span>
+
+### NaturalSizeChanged Event
+
+```csharp
+public event EventHandler<Avalonia.Media.NaturalSizeChangedEventArgs> NaturalSizeChanged
+```
+
+</section>
+
+</ApiRefPage>
+

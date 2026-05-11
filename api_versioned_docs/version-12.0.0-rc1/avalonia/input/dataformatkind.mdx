@@ -1,0 +1,129 @@
+---
+title: 'DataFormatKind'
+hide_title: true
+slug: '/avalonia/input/dataformatkind'
+uid: 'Avalonia.Input.DataFormatKind'
+commentId: 'T:Avalonia.Input.DataFormatKind'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Enum'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Input'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">DataFormatKind Enum</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Input</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Represents the kind of a [Avalonia.Input.DataFormat](xref:Avalonia.Input.DataFormat).
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public enum DataFormatKind
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Enum <span className="apiref-page__relation-separator">-&gt;</span> DataFormatKind
+</div>
+</div>
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [Application](#uid-b535b0454c) | The data format is specific to the application. The exact format name used internally by Avalonia will vary depending on the platform. |
+| [Platform](#uid-1eb8dd10d3) | The data format is specific to the current platform. Any other application using the same identifier will be able to access it. |
+| [Universal](#uid-da214f0421) | The data format is cross-platform and supported directly by Avalonia. Such formats include [Avalonia.Input.DataFormat.Text](xref:Avalonia.Input.DataFormat.Text) and [Avalonia.Input.DataFormat.File](xref:Avalonia.Input.DataFormat.File). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b535b0454c"></span>
+
+### Application Field
+
+The data format is specific to the application.
+The exact format name used internally by Avalonia will vary depending on the platform.
+
+Such a format is created using [Avalonia.Input.DataFormat.CreateBytesApplicationFormat(string)](xref:Avalonia.Input.DataFormat.CreateBytesApplicationFormat%28System.String%29)
+or [Avalonia.Input.DataFormat.CreateStringApplicationFormat(string)](xref:Avalonia.Input.DataFormat.CreateStringApplicationFormat%28System.String%29).
+
+```csharp
+public Avalonia.Input.DataFormatKind Application
+```
+
+#### See also
+
+- [Avalonia.Input.DataFormat.CreateBytesApplicationFormat(string)](xref:Avalonia.Input.DataFormat.CreateBytesApplicationFormat%28System.String%29)
+- [Avalonia.Input.DataFormat.CreateStringApplicationFormat(string)](xref:Avalonia.Input.DataFormat.CreateStringApplicationFormat%28System.String%29)
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1eb8dd10d3"></span>
+
+### Platform Field
+
+The data format is specific to the current platform.
+Any other application using the same identifier will be able to access it.
+
+Such a format is created using [Avalonia.Input.DataFormat.CreateBytesPlatformFormat(string)](xref:Avalonia.Input.DataFormat.CreateBytesPlatformFormat%28System.String%29)
+or [Avalonia.Input.DataFormat.CreateStringPlatformFormat(string)](xref:Avalonia.Input.DataFormat.CreateStringPlatformFormat%28System.String%29).
+
+```csharp
+public Avalonia.Input.DataFormatKind Platform
+```
+
+#### See also
+
+- [Avalonia.Input.DataFormat.CreateBytesPlatformFormat(string)](xref:Avalonia.Input.DataFormat.CreateBytesPlatformFormat%28System.String%29)
+- [Avalonia.Input.DataFormat.CreateStringPlatformFormat(string)](xref:Avalonia.Input.DataFormat.CreateStringPlatformFormat%28System.String%29)
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-da214f0421"></span>
+
+### Universal Field
+
+The data format is cross-platform and supported directly by Avalonia.
+Such formats include [Avalonia.Input.DataFormat.Text](xref:Avalonia.Input.DataFormat.Text) and [Avalonia.Input.DataFormat.File](xref:Avalonia.Input.DataFormat.File).
+
+It is not possible to create such a format directly.
+
+```csharp
+public Avalonia.Input.DataFormatKind Universal
+```
+
+</section>
+
+</ApiRefPage>
+

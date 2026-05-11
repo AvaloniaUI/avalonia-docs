@@ -1,0 +1,571 @@
+version: 1
+target: avalonia-docs
+
+rules:
+  - id: STR-001
+    category: structure
+    severity: blocker
+    scope: [tutorial, how-to, explanation, overview, reference, troubleshooting, release-notes, migration]
+    pattern: "exactly one H1 per page"
+    pass_criteria: "count(H1) + count(frontmatter title) == 1; frontmatter title counts as the H1 because Docusaurus renders it as the page H1"
+    rationale: "Each page uses one title anchor. Docusaurus auto-generates the H1 from frontmatter title, so an explicit # heading in the body is not needed and would create a duplicate."
+    do_example: "---\ntitle: How to create a custom control\n---\n\n(body starts with H2 sections)"
+    dont_example: "---\ntitle: Custom controls\n---\n\n# Custom controls  ← duplicate H1"
+    automated: true
+
+  - id: STR-002
+    category: structure
+    severity: major
+    scope: [all]
+    pattern: "sentence-case heading system"
+    pass_criteria: "sentence_case_heading_ratio >= 0.80 for new or edited pages"
+    rationale: "Sentence case is the dominant heading style."
+    do_example: "## Add a custom control"
+    dont_example: "## Add A Custom Control"
+    automated: true
+
+  - id: STR-003
+    category: structure
+    severity: blocker
+    scope: [tutorial]
+    pattern: "tutorial scaffold"
+    pass_criteria: "has_section('Prerequisites') and has_ordered_steps and has_verification_section"
+    rationale: "Tutorials include setup, procedure, and verification."
+    do_example: "## Prerequisites ... ## Run the app"
+    dont_example: "Tutorial with no setup or validation section"
+    automated: true
+
+  - id: STR-004
+    category: structure
+    severity: major
+    scope: [reference]
+    pattern: "reference section order"
+    pass_criteria: "section_order includes Syntax -> Return/value semantics -> Remarks"
+    rationale: "Reference pages rely on stable section ordering for scanability."
+    do_example: "## Syntax / ## Return value / ## Remarks"
+    dont_example: "Walkthrough narrative replacing syntax-first reference"
+    automated: true
+
+  - id: STR-005
+    category: structure
+    severity: major
+    scope: [all]
+    pattern: "navigation handoff at end"
+    pass_criteria: "has_section('See also') or has_section('Related content') or has_section('Next steps')"
+    rationale: "Pages end with onward navigation links."
+    do_example: "## See also"
+    dont_example: "Page ends with no follow-up links"
+    automated: true
+
+  - id: STR-009
+    category: structure
+    severity: minor
+    scope: [all]
+    pattern: "short intro"
+    pass_criteria: "intro_words_before_first_h2 <= 150"
+    rationale: "Pages should get to actionable content quickly."
+    do_example: "A one-paragraph orientation then first section."
+    dont_example: "Long preamble before first section."
+    automated: true
+
+  - id: VOI-001
+    category: voice
+    severity: major
+    scope: [tutorial, how-to, troubleshooting, migration]
+    pattern: "direct reader address"
+    pass_criteria: "contains 'you' or 'your' in task instructions"
+    rationale: "Task pages are user-addressed."
+    do_example: "In this tutorial, you learn..."
+    dont_example: "Detached passive-only task prose"
+    automated: true
+
+  - id: VOI-002
+    category: voice
+    severity: major
+    scope: [how-to, explanation, overview, reference, troubleshooting, release-notes, migration]
+    pattern: "minimal team-first narration"
+    pass_criteria: "(we+our+us)/words <= 0.001"
+    rationale: "House voice avoids author-team centric narration. Exception: tutorials use first-person plural ('we') to establish the instructor-learner bond, per Diataxis guidance."
+    do_example: "You can..."
+    dont_example: "We will now..."
+    note: "Tutorials are excluded. Diataxis prescribes 'we' in tutorials to affirm the tutor-learner relationship: 'In this tutorial, we will create...'"
+    automated: true
+
+  - id: VOI-003
+    category: voice
+    severity: minor
+    scope: [all]
+    pattern: "avoid intensifier drift"
+    pass_criteria: "count(simply|obviously|just) <= 1 per 1000 words"
+    rationale: "Intensifiers are rare and should be replaced with precise language."
+    do_example: "State exact condition."
+    dont_example: "Simply click this and it obviously works."
+    automated: true
+
+  - id: VOI-004
+    category: voice
+    severity: major
+    scope: [release-notes, migration, how-to]
+    pattern: "roadmap language with context"
+    pass_criteria: "if terms(currently|in progress|plan) exist, include concrete status statement"
+    rationale: "Roadmap references must be explicit and bounded."
+    do_example: "Fluent theme support is still in progress."
+    dont_example: "We plan many future improvements."
+    automated: false
+
+  - id: MIC-001
+    category: micro-style
+    severity: major
+    scope: [tutorial, how-to, migration, troubleshooting]
+    pattern: "UI labels in bold"
+    pass_criteria: "menu labels and click targets rendered in **bold**"
+    rationale: "Task docs visually distinguish UI strings."
+    do_example: "Select **Create a new project**."
+    dont_example: "Select Create a new project."
+    automated: false
+
+  - id: MIC-002
+    category: micro-style
+    severity: major
+    scope: [all]
+    pattern: "identifiers in code font"
+    pass_criteria: "API literals and symbols use backticks"
+    rationale: "Code-like tokens are monospaced."
+    do_example: "Set `IsVisible` to `true`."
+    dont_example: "Set IsVisible to true."
+    automated: false
+
+  - id: MIC-003
+    category: micro-style
+    severity: blocker
+    scope: [all]
+    pattern: "code block language attribution"
+    pass_criteria: "all fenced blocks specify language"
+    rationale: "Language tags enable syntax highlighting."
+    do_example: "```xml"
+    dont_example: "``` (no language tag)"
+    automated: true
+
+  - id: MIC-004
+    category: micro-style
+    severity: major
+    scope: [all]
+    pattern: "approved admonitions only"
+    pass_criteria: "admonition type in {note, tip, info, caution, danger}"
+    rationale: "Docusaurus supports these five admonition types."
+    do_example: ":::note"
+    dont_example: ":::alert or > [!NOTE]"
+    automated: true
+
+  - id: MIC-005
+    category: micro-style
+    severity: minor
+    scope: [tutorial, how-to]
+    pattern: "keyboard shortcut markup"
+    pass_criteria: "keyboard shortcuts use <kbd> tags with platform-native symbols"
+    rationale: "Styled <kbd> tags with symbols (⌘⇧⌥⌃) render as distinct key caps and are universally recognisable."
+    do_example: "Press <kbd>⌘</kbd> <kbd>S</kbd> to save."
+    dont_example: "Press Cmd+S to save."
+    automated: true
+
+  - id: TERM-001
+    category: terminology
+    severity: major
+    scope: [tutorial, explanation, overview, release-notes]
+    pattern: "acronym first-use expansion"
+    pass_criteria: "first use of acronym includes expanded term"
+    rationale: "Introductory sections expand acronyms before short form."
+    do_example: "Model-View-ViewModel (MVVM)"
+    dont_example: "MVVM" on first use without expansion
+    automated: false
+
+  - id: TERM-002
+    category: terminology
+    severity: major
+    scope: [all]
+    pattern: "canonical UI object noun"
+    pass_criteria: "uses 'control'; does not use 'widget'"
+    rationale: "Corpus standard term is 'control'; 'widget' is absent."
+    do_example: "Add controls to a window."
+    dont_example: "Add widgets to a window."
+    automated: true
+
+  - id: TERM-003
+    category: terminology
+    severity: major
+    scope: [all]
+    pattern: "normative language strength"
+    pass_criteria: "'must' reserved for hard requirements; 'should' for guidance"
+    rationale: "Distinguish hard constraints from recommendations."
+    do_example: "Properties must be registered before use."
+    dont_example: "You must optionally consider..."
+    automated: false
+
+  - id: MIC-006
+    category: micro-style
+    severity: blocker
+    scope: [all]
+    pattern: "no em or en dashes"
+    pass_criteria: "text contains no em dashes (—) or en dashes (–)"
+    rationale: "House style forbids em and en dashes. Use commas, parentheses, colons, or separate sentences instead."
+    do_example: "Use the Click event, not PointerPressed."
+    dont_example: "Use the Click event — not PointerPressed."
+    automated: true
+
+  - id: LINK-001
+    category: links
+    severity: blocker
+    scope: [all]
+    pattern: "descriptive link labels"
+    pass_criteria: "no link label matches /^here$|^click here$|^this link$/i"
+    rationale: "Link text is destination-specific and descriptive."
+    do_example: "[Data binding overview](../data-binding/introduction-to-data-binding.md)"
+    dont_example: "[click here](../data-binding/introduction-to-data-binding.md)"
+    automated: true
+
+  - id: QUAL-001
+    category: quality
+    severity: blocker
+    scope: [tutorial]
+    pattern: "outcome verification"
+    pass_criteria: "contains explicit run/verify/result section"
+    rationale: "Tutorials include expected outcome validation."
+    do_example: "## Run the app"
+    dont_example: "Tutorial ends after setup without result check"
+    automated: true
+
+  - id: QUAL-002
+    category: quality
+    severity: major
+    scope: [troubleshooting, migration]
+    pattern: "actionable remediation"
+    pass_criteria: "contains at least one concrete remediation and one next-action pointer"
+    rationale: "Problem docs pair diagnosis with practical next steps."
+    do_example: "Try upgrading the NuGet package..."
+    dont_example: "Only root-cause explanation with no action"
+    automated: false
+
+  # --- Anti-marketing rules (TONE) ---
+
+  - id: TONE-001
+    category: tone
+    severity: blocker
+    scope: [all]
+    pattern: "banned marketing buzzwords"
+    pass_criteria: "text contains none of the banned marketing terms"
+    rationale: "Documentation states facts. Marketing buzzwords erode trust and add no information."
+    banned_terms:
+      - powerful
+      - seamless
+      - elegant
+      - best-in-class
+      - world-class
+      - cutting-edge
+      - game-changing
+      - leverage (vague/promotional)
+      - unlock (vague/promotional)
+      - empower
+      - delightful
+      - blazing fast
+      - robust (vague/promotional)
+      - state-of-the-art
+      - next-generation
+      - revolutionary
+      - groundbreaking
+      - innovative (vague/promotional)
+    do_example: "Avalonia renders UI on all supported platforms using Skia."
+    dont_example: "Avalonia is a powerful, cutting-edge framework that delivers a seamless experience."
+    automated: true
+
+  - id: TONE-002
+    category: tone
+    severity: blocker
+    scope: [all]
+    pattern: "unsupported superlatives"
+    pass_criteria: "no superlatives without measurable evidence in the same sentence or paragraph"
+    rationale: "Superlatives require proof. Without evidence they are marketing claims."
+    flagged_terms:
+      - the fastest
+      - the most
+      - the best
+      - the only
+      - unmatched
+      - unparalleled
+    do_example: "Avalonia supports Windows, macOS, Linux, iOS, Android, and browser targets."
+    dont_example: "Avalonia is the best cross-platform framework available."
+    automated: partial
+
+  - id: TONE-003
+    category: tone
+    severity: major
+    scope: [all]
+    pattern: "promotional framing"
+    pass_criteria: "page describes what the feature does, not why the reader should be excited"
+    rationale: "Docs inform; they do not sell. Feature descriptions state behavior and usage."
+    do_example: "The `CompositionAnimator` runs animations on a dedicated render thread."
+    dont_example: "You'll love how smooth animations feel thanks to our dedicated render thread!"
+    automated: false
+
+  - id: TONE-004
+    category: tone
+    severity: major
+    scope: [all]
+    pattern: "vague future promises"
+    pass_criteria: "future-tense claims include a version number, issue link, or timeline"
+    rationale: "Undated promises become stale and mislead readers."
+    do_example: "Fluent theme v2 is tracked in issue #12345, targeting v12.0."
+    dont_example: "Exciting improvements are coming soon!"
+    automated: false
+
+  # --- Content boundary rules (BOUND) ---
+
+  - id: BOUND-001
+    category: content-boundary
+    severity: major
+    scope: [all]
+    pattern: "single Diataxis responsibility"
+    pass_criteria: "page content aligns with one declared doc-type; does not substantially overlap another type"
+    rationale: "Mixed-purpose pages cause duplication and confuse maintenance. Each page serves one Diataxis role."
+    do_example: "A how-to page that solves one task and links to reference for property details."
+    dont_example: "A how-to page that includes a full property table and a conceptual architecture section."
+    automated: false
+
+  - id: BOUND-002
+    category: content-boundary
+    severity: major
+    scope: [all]
+    pattern: "no forbidden content for declared type"
+    pass_criteria: "page does not contain content listed in its template's forbidden_content"
+    rationale: "Each doc-type has explicit content that belongs elsewhere. Forbidden content should be linked, not duplicated."
+    do_example: "Tutorial links to reference for full property list instead of embedding a table."
+    dont_example: "Tutorial includes a 30-row property table mid-procedure."
+    automated: false
+
+  - id: BOUND-003
+    category: content-boundary
+    severity: major
+    scope: [tutorial, how-to, explanation, overview, troubleshooting, migration]
+    pattern: "link to reference for property lists"
+    pass_criteria: "inline property/API listings limited to 3 items; larger sets link to reference page"
+    rationale: "Reference content belongs on reference pages. Duplicating property lists causes maintenance drift."
+    do_example: "Set `IsVisible`, `Opacity`, and `RenderTransform`. For all appearance properties, see [Control reference](...)."
+    dont_example: "A how-to page listing 15 properties with descriptions inline."
+    automated: false
+
+  - id: BOUND-004
+    category: content-boundary
+    severity: major
+    scope: [explanation]
+    pattern: "explanation pages limit procedural steps"
+    pass_criteria: "explanation pages contain no numbered procedural sequences longer than 3 steps"
+    rationale: "Extended procedures belong in how-to or tutorial pages. Explanation pages explain why, not how."
+    do_example: "Explanation mentions a brief 2-step illustration, then links to a how-to for full procedure."
+    dont_example: "Explanation page contains a 10-step numbered procedure."
+    automated: false
+
+  - id: BOUND-005
+    category: content-boundary
+    severity: major
+    scope: [all]
+    pattern: "doc-type frontmatter present"
+    pass_criteria: "frontmatter includes doc-type field with a valid value from the allowed list"
+    rationale: "Declaring doc-type enables content boundary enforcement. Major (not blocker) to allow incremental adoption."
+    do_example: "---\nid: custom-controls\ntitle: How to create a custom control\ndoc-type: how-to\n---"
+    dont_example: "---\ntitle: Custom controls\n--- (no doc-type field)"
+    automated: true
+
+  # --- Technical accuracy rules (ACCU) ---
+
+  - id: ACCU-001
+    category: accuracy
+    severity: blocker
+    scope: [all]
+    pattern: "no fabricated technical details"
+    pass_criteria: "all API names, property names, method signatures, event names, enum values, and behavioral claims are verified against actual Avalonia source code or documentation"
+    rationale: "LLMs frequently generate plausible-sounding but incorrect API names, properties, or method signatures. Documentation must only reference APIs and behaviors that actually exist."
+    do_example: "Set `IsVisible` to `true` to show the control. (verified: Control.IsVisible exists)"
+    dont_example: "Set `ShowControl` to `true` to show the control. (fabricated: ShowControl does not exist)"
+    automated: false
+    note: "This rule applies to all output from the skill. When writing or suggesting documentation content, every technical detail must be verified. When in doubt, use lookup_avalonia_api to confirm."
+
+  - id: ACCU-002
+    category: accuracy
+    severity: blocker
+    scope: [all]
+    pattern: "preserve existing code snippets"
+    pass_criteria: "existing code snippets in fenced code blocks and inline code are not modified unless the user has expressly asked for code changes"
+    rationale: "Code snippets in documentation represent tested, working examples. Modifying them without explicit authorization risks introducing errors, breaking examples, or subtly changing API usage patterns."
+    do_example: "Flag a prose issue around a code block but leave the code block untouched."
+    dont_example: "Silently rewrite a code snippet to use a different API or change parameter names while fixing prose issues."
+    automated: false
+    note: "When linting, flag code issues as observations (e.g., 'code block on line 42 may reference a deprecated API') but never modify the code. Only the user can authorize code changes."
+
+  - id: ACCU-003
+    category: accuracy
+    severity: blocker
+    scope: [all]
+    pattern: "API references validated via MCP"
+    pass_criteria: "all class names, property names, method names, event names, and enum values referenced in the page are confirmed to exist using the lookup_avalonia_api MCP tool"
+    rationale: "The Avalonia Docs MCP server provides authoritative API lookups. Using it prevents documentation from referencing non-existent or renamed APIs."
+    do_example: "Checked TextBlock via lookup_avalonia_api: confirmed. Checked TextBlock.Text: confirmed."
+    dont_example: "Assumed TextBlock.DisplayText exists because the name sounds reasonable. (fabricated)"
+    automated: true
+    note: "Use the lookup_avalonia_api tool from the Avalonia Docs MCP server. See https://docs.avaloniaui.net/tools/ai-tools/build-mcp for tool documentation. Group related lookups to minimize calls."
+
+  # --- Accessibility rules (ACC) ---
+
+  - id: ACC-001
+    category: accessibility
+    severity: major
+    scope: [all]
+    pattern: "image alt text required"
+    pass_criteria: "all Markdown images have non-empty alt text: ![description](path)"
+    rationale: "Empty alt text fails accessibility standards and reduces SEO value. Every image must describe its content for screen readers."
+    do_example: "![Dialog showing the property editor with IsVisible selected](images/property-editor.png)"
+    dont_example: "![](images/property-editor.png)"
+    automated: true
+
+  # --- SEO rules (SEO) ---
+
+  - id: SEO-001
+    category: seo
+    severity: major
+    scope: [all]
+    pattern: "frontmatter description present and well-formed"
+    pass_criteria: "frontmatter includes description field; length is 50-160 characters; no marketing buzzwords (TONE-001 terms)"
+    rationale: "Docusaurus uses frontmatter description for the meta description tag. Missing or poor descriptions hurt search discoverability."
+    do_example: "---\ntitle: How to create a custom control\ndescription: Create a reusable custom control with styled properties and a control theme.\n---"
+    dont_example: "---\ntitle: Custom controls\n--- (no description field)"
+    automated: true
+
+  - id: SEO-002
+    category: seo
+    severity: minor
+    scope: [all]
+    pattern: "title length for SEO"
+    pass_criteria: "frontmatter title is <= 60 characters"
+    rationale: "Search engines truncate titles longer than ~60 characters. Shorter titles display fully in search results."
+    do_example: "title: How to create a custom control"
+    dont_example: "title: How to create a custom control with styled properties and a control theme in Avalonia"
+    automated: true
+
+  # --- Extended terminology rules (TERM) ---
+
+  - id: TERM-004
+    category: terminology
+    severity: major
+    scope: [tutorial, overview]
+    pattern: "framework jargon explained on introductory pages"
+    pass_criteria: "Avalonia-specific jargon (visual tree, logical tree, data template, control theme, style selector, binding expression, attached property, styled property, direct property) on tutorial and overview pages is explained inline or linked to a glossary/explanation page on first use"
+    rationale: "Introductory pages serve newcomers. Framework-specific terms that are not standard .NET vocabulary need inline explanation or a link. Inspired by Twilio docs-ai-buddy jargon simplification approach."
+    flagged_terms:
+      - visual tree
+      - logical tree
+      - data template
+      - control theme
+      - style selector
+      - binding expression
+      - attached property
+      - styled property
+      - direct property
+      - value converter
+      - avalonia property
+      - content presenter
+      - items presenter
+      - template part
+      - pseudo-class
+    do_example: "The *visual tree* is the rendered hierarchy of controls that Avalonia draws on screen. For details, see [Visual tree explained](...)."
+    dont_example: "Walk the visual tree to find the parent ContentPresenter."
+    automated: false
+
+  # --- Inclusive language rules (INC) ---
+
+  - id: INC-001
+    category: inclusive-language
+    severity: major
+    scope: [all]
+    pattern: "gender-neutral pronouns and nouns"
+    pass_criteria: "text avoids gendered pronouns (he/she/him/her/his/hers) as generic references; avoids 'guys' as a group address; avoids 'mankind', 'manmade', 'man-hours'"
+    rationale: "Documentation addresses a diverse global audience. Gender-neutral language is inclusive and avoids assumptions about the reader or developer."
+    flagged_terms:
+      - "he or she"
+      - "his or her"
+      - "him or her"
+      - "s/he"
+      - "guys (as group address)"
+      - mankind
+      - manmade
+      - man-hours
+    replacements:
+      "he or she": "they"
+      "his or her": "their"
+      "him or her": "them"
+      guys: "everyone, team, developers, users"
+      mankind: "humanity, people, humankind"
+      manmade: "artificial, synthetic, human-made"
+      man-hours: "person-hours, hours"
+    do_example: "When a developer adds a binding, they must provide a valid path."
+    dont_example: "When a developer adds a binding, he must provide a valid path."
+    automated: partial
+    note: "Singular gendered pronouns require context to distinguish generic use from a named individual. Flag as candidates for human review."
+
+  - id: INC-002
+    category: inclusive-language
+    severity: major
+    scope: [all]
+    pattern: "inclusive technical terminology"
+    pass_criteria: "text avoids legacy technical terms with exclusionary connotations; uses modern inclusive alternatives"
+    rationale: "Technical communities have broadly adopted inclusive terminology. Using modern alternatives improves accessibility and aligns with industry standards."
+    flagged_terms:
+      - blacklist
+      - whitelist
+      - master (as role or primary node in technical context)
+      - slave (as subordinate or secondary node in technical context)
+      - sanity check
+      - dummy (as placeholder or example data)
+    replacements:
+      blacklist: "blocklist, denylist"
+      whitelist: "allowlist, passlist"
+      master: "primary, main, leader"
+      slave: "replica, secondary, follower, worker"
+      "sanity check": "check, verify, validate"
+      dummy: "placeholder, sample, example, stub"
+    do_example: "Add the IP address to the allowlist."
+    dont_example: "Add the IP address to the whitelist."
+    automated: partial
+    note: "Context-sensitive: 'master' in git branch names or established API/property names (e.g. MasterDetail) and 'dummy' in idiomatic phrases require human review before flagging."
+
+  # --- Extended quality rules (QUAL) ---
+
+  - id: QUAL-004
+    category: quality
+    severity: minor
+    scope: [all]
+    pattern: "ARI readability target"
+    pass_criteria: "Automated Readability Index (ARI) score <= 14 for prose content (code blocks excluded)"
+    rationale: "ARI grade 14 corresponds to a college senior reading level, which is the recommended ceiling for technical documentation targeting a broad developer audience. Scores above 14 indicate prose that is unnecessarily dense and should be simplified."
+    formula: "ARI = 4.71 × (characters ÷ words) + 0.5 × (words ÷ sentences) − 21.43"
+    formula_notes:
+      - "characters: alphanumeric characters only, prose text only (strip fenced code blocks, inline code, frontmatter)"
+      - "words: whitespace-delimited tokens in prose"
+      - "sentences: count of sentence-ending punctuation (. ! ?)"
+    grade_reference:
+      "≤ 8": "High-school level — most accessible"
+      "9–12": "Standard adult / technical audience"
+      "13–14": "College level — acceptable for developer docs"
+      "> 14": "Graduate level — flag for simplification"
+    do_example: "Set `IsVisible` to `true`. The control appears in the visual tree."
+    dont_example: "In order to ensure that the control is rendered within the visual tree during the subsequent layout pass, it is necessary to assign the boolean value `true` to the `IsVisible` property."
+    automated: true
+    note: "Calculate ARI over prose only. Strip all fenced code blocks (``` ... ```), inline code spans, frontmatter, and admonition syntax markers before counting. Report score to one decimal place alongside the grade-level label."
+
+  - id: QUAL-003
+    category: quality
+    severity: minor
+    scope: [tutorial, how-to, troubleshooting, migration]
+    pattern: "sentence complexity on task pages"
+    pass_criteria: "average sentence length <= 25 words; sentences over 40 words are flagged individually"
+    rationale: "Task-oriented pages (action side of Diataxis) target readers who are doing, not studying. Short, direct sentences reduce cognitive load. Explanation and reference pages are excluded because denser prose is acceptable for cognition-oriented content."
+    do_example: "Set the property to true. The control becomes visible."
+    dont_example: "In order to make the control visible, you need to set the IsVisible property to the boolean value true, which will cause the control to be rendered in the visual tree when the next layout pass occurs."
+    automated: partial

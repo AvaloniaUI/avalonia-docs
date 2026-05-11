@@ -1,0 +1,45 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
+/* Tier 1 — green (matches :::tip admonition) */
+.tier1 {
+  background-color: var(--color-success-50, #ecfdf3);
+  color: var(--color-success-700, #027a48);
+}
+
+/* Tier 2 — blue (matches :::info admonition) */
+.tier2 {
+  background-color: var(--color-blue-light-50, #E3F4FC);
+  color: var(--color-blue-light-700, #007AB2);
+}
+
+/* Tier 3 — orange/amber (matches :::caution admonition) */
+.tier3 {
+  background-color: var(--color-orange-50, #fff6ed);
+  color: var(--color-orange-700, #c4320a);
+}
+
+/* Dark mode */
+[data-theme='dark'] .tier1 {
+  background-color: rgba(18, 183, 106, 0.15);
+  color: #6ce9a6;
+}
+
+[data-theme='dark'] .tier2 {
+  background-color: rgba(0, 173, 254, 0.15);
+  color: #60C9FB;
+}
+
+[data-theme='dark'] .tier3 {
+  background-color: rgba(251, 101, 20, 0.15);
+  color: #feb273;
+}

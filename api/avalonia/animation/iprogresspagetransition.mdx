@@ -1,0 +1,128 @@
+---
+title: 'IProgressPageTransition'
+hide_title: true
+slug: '/avalonia/animation/iprogresspagetransition'
+uid: 'Avalonia.Animation.IProgressPageTransition'
+commentId: 'T:Avalonia.Animation.IProgressPageTransition'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Animation'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IProgressPageTransition Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Animation</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/3111696698e2c3d6fe9aace8cb954153ee16b3e4/src/Avalonia.Base/Animation/IProgressPageTransition.cs">IProgressPageTransition.cs</a>
+</div>
+
+</div>
+
+<div className="apiref-page__lead">
+
+An [Avalonia.Animation.IPageTransition](xref:Avalonia.Animation.IPageTransition) that supports progress-driven updates.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface IProgressPageTransition
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="ipagetransition">IPageTransition</a>
+</div>
+</div>
+
+## Remarks
+
+Transitions implementing this interface can be driven by a normalized progress value
+(0.0 to 1.0) during swipe gestures or programmatic animations, rather than running
+as a timed animation via [Avalonia.Animation.IPageTransition.Start(Avalonia.Visual,Avalonia.Visual,bool,System.Threading.CancellationToken)](xref:Avalonia.Animation.IPageTransition.Start%28Avalonia.Visual%2CAvalonia.Visual%2CSystem.Boolean%2CSystem.Threading.CancellationToken%29).
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Reset](#uid-5b5ec7c7e5) | Resets any visual state applied to the given visual by this transition. |
+| [Update](#uid-b5cb97fcbe) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5b5ec7c7e5"></span>
+
+### Reset Method
+
+Resets any visual state applied to the given visual by this transition.
+
+```csharp
+public void Reset(Avalonia.Visual visual)
+```
+
+#### Parameters
+
+`visual` [Avalonia.Visual](xref:Avalonia.Visual)
+
+The visual to reset.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b5cb97fcbe"></span>
+
+### Update Method
+
+```csharp
+public void Update(double progress, Avalonia.Visual from, Avalonia.Visual to, bool forward, double pageLength, System.Collections.Generic.IReadOnlyList<Avalonia.Animation.PageTransitionItem> visibleItems)
+```
+
+#### Parameters
+
+`progress` double
+
+
+`from` [Avalonia.Visual](xref:Avalonia.Visual)
+
+
+`to` [Avalonia.Visual](xref:Avalonia.Visual)
+
+
+`forward` bool
+
+
+`pageLength` double
+
+
+`visibleItems` System.Collections.Generic.IReadOnlyList&lt;[Avalonia.Animation.PageTransitionItem](xref:Avalonia.Animation.PageTransitionItem)&gt;
+
+
+</section>
+
+</ApiRefPage>
+

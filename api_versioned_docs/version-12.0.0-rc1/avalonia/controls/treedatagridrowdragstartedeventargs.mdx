@@ -1,0 +1,138 @@
+---
+title: 'TreeDataGridRowDragStartedEventArgs'
+hide_title: true
+slug: '/avalonia/controls/treedatagridrowdragstartedeventargs'
+uid: 'Avalonia.Controls.TreeDataGridRowDragStartedEventArgs'
+commentId: 'T:Avalonia.Controls.TreeDataGridRowDragStartedEventArgs'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.TreeDataGrid'
+assembly: 'Avalonia.Controls.TreeDataGrid'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net8.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">TreeDataGridRowDragStartedEventArgs Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Provides data for the [Avalonia.Controls.TreeDataGrid.RowDragStarted](xref:Avalonia.Controls.TreeDataGrid.RowDragStarted) event.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class TreeDataGridRowDragStartedEventArgs
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> EventArgs <span className="apiref-page__relation-separator">-&gt;</span> <a href="../interactivity/routedeventargs">RoutedEventArgs</a> <span className="apiref-page__relation-separator">-&gt;</span> TreeDataGridRowDragStartedEventArgs
+</div>
+</div>
+
+## Remarks
+
+This event is raised when a drag operation in a [Avalonia.Controls.TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid) control begins.
+It contains information about the models being dragged and allows for configuring the
+permitted drag effects.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [TreeDataGridRowDragStartedEventArgs](#uid-8189b9cf83) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8189b9cf83"></span>
+
+### TreeDataGridRowDragStartedEventArgs Constructor
+
+```csharp
+public TreeDataGridRowDragStartedEventArgs(System.Collections.Generic.IEnumerable<object> models)
+```
+
+#### Parameters
+
+`models` System.Collections.Generic.IEnumerable&lt;object&gt;
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [AllowedEffects](#uid-5db59ae402) | Gets or sets the allowed effects for the drag operation. |
+| [Models](#uid-bb1373a9dc) | Gets the collection of model objects that represent the rows being dragged. |
+| [Handled](../interactivity/routedeventargs.mdx#uid-204d2af354) | Gets or sets a value indicating whether the routed event has already been handled. Inherited from [RoutedEventArgs](../interactivity/routedeventargs.mdx). |
+| [Route](../interactivity/routedeventargs.mdx#uid-751be73db9) | Gets or sets the routing strategy (direct, bubbling, or tunneling) of the routed event. Inherited from [RoutedEventArgs](../interactivity/routedeventargs.mdx). |
+| [RoutedEvent](../interactivity/routedeventargs.mdx#uid-4e102999d9) | Gets or sets the routed event associated with these event args. Inherited from [RoutedEventArgs](../interactivity/routedeventargs.mdx). |
+| [Source](../interactivity/routedeventargs.mdx#uid-4385b523d5) | Gets or sets the source object that raised the routed event. Inherited from [RoutedEventArgs](../interactivity/routedeventargs.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5db59ae402"></span>
+
+### AllowedEffects Property
+
+Gets or sets the allowed effects for the drag operation.
+
+```csharp
+public Avalonia.Input.DragDropEffects AllowedEffects { get; set; }
+```
+
+#### Remarks
+
+This property can be used to control what operations (move, copy, etc.) are permitted
+during the drag operation. By default, when [Avalonia.Controls.TreeDataGrid.AutoDragDropRows](xref:Avalonia.Controls.TreeDataGrid.AutoDragDropRows)
+is enabled, this is set to [Avalonia.Input.DragDropEffects.Move](xref:Avalonia.Input.DragDropEffects.Move). Setting this to
+[Avalonia.Input.DragDropEffects.None](xref:Avalonia.Input.DragDropEffects.None) will cancel the drag operation.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-bb1373a9dc"></span>
+
+### Models Property
+
+Gets the collection of model objects that represent the rows being dragged.
+
+```csharp
+public System.Collections.Generic.IEnumerable<object> Models { get; set; }
+```
+
+#### Remarks
+
+These are the underlying data models for the selected rows, not the visual row
+elements.
+
+</section>
+
+</ApiRefPage>
+

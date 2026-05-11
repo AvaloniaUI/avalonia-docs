@@ -1,5 +1,5 @@
 # Dependencies
-/node_modules
+node_modules
 
 # Production
 /build
@@ -8,7 +8,9 @@
 # Generated files
 .docusaurus
 .cache-loader
+redirects/cloudflare_worker_kv_redirects/kv-redirects.json
 .idea
+.apiref
 
 # Misc
 .DS_Store

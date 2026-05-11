@@ -1,0 +1,258 @@
+// Utility Classes
+
+// Links
+.no-underline-links {
+  --ifm-link-hover-decoration: none;
+}
+
+// Layout utilities
+.main-wrapper {
+  display: flex !important;
+  flex-direction: column !important;
+  min-height: 100vh !important;
+}
+
+.pad {
+  padding: 0 1rem;
+}
+
+.center {
+  width: 100%;
+  max-width: 1080px;
+  margin: 1rem auto;
+  min-height: unset !important;
+}
+
+// Mobile visibility
+.mobile-hidden {
+  @media (max-width: 600px) {
+    display: none;
+  }
+}
+
+// Community background
+.community-bg {
+  background-color: var(--ifm-footer-background-color);
+}
+
+// Background color utilities
+.bg-gray-200 {
+  background-color: rgb(241, 244, 248);
+}
+
+.text-gray-700 {
+  color: rgb(80, 102, 144);
+}
+
+// Wave card
+.wavesCard {
+  background-color: #335EEA;
+}
+
+// Emoji list
+ul.emoji-list {
+  list-style-type: none;
+  padding-left: 12px;
+
+  li {
+    display: flex;
+    align-items: flex-start;
+    line-height: 32px;
+  }
+
+  span {
+    display: inline-block;
+    margin-right: 12px;
+    font-size: 28px;
+  }
+}
+
+// Ping indicator
+.ping::after {
+  display: inline-block;
+  content: '';
+  background: theme('colors.primary.200');
+  width: 4px;
+  height: 4px;
+  border-radius: 4px;
+  margin-left: 4px;
+}
+
+// Loading container
+.loading-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  place-items: center;
+  justify-content: center;
+
+  avalonia-spinner {
+    width: 48px;
+    height: 48px;
+    color: theme('colors.primary.100');
+  }
+}
+
+// Video showcase
+.avalonia-video-showcase {
+  margin: 3rem auto;
+  display: block;
+  width: 100%;
+  max-width: 80%;
+  border-radius: 8px;
+
+  &.mobile {
+    max-width: 240px;
+    border-radius: 1.5rem;
+  }
+}
+
+// Animations
+.fade-in {
+  animation: fade-in 1.4s linear;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 30%;
+  }
+  to {
+    transform: scale(1);
+    opacity: 100%;
+  }
+}
+
+// Accordion
+.accordion-content *:last-child {
+  margin-bottom: 0;
+}
+
+.avalonia-accordion img {
+  border-radius: 0.5rem;
+}
+
+// Details element — styled to match marketing FAQ accordion
+details {
+  --details-icon: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 4V16' stroke='%23686770' stroke-width='1.5' stroke-linecap='round'/%3E%3Cpath d='M4 10H16' stroke='%23686770' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");
+  --docusaurus-details-decoration-color: transparent !important;
+
+  background: var(--docs-color-background-100) !important;
+  border: none !important;
+  border-radius: 0.75rem !important;
+  overflow: hidden;
+  margin: 0 0 0.625rem !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+
+  // Code blocks inside details: use white bg for contrast
+  [class*='codeBlockContainer_'] {
+    --prism-background-color: var(--color-snow);
+    background: var(--color-snow);
+    border-color: var(--docs-color-border);
+  }
+
+  > summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.25rem 1.5rem !important;
+    padding-left: 1.5rem !important;
+    margin: 0 !important;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    color: var(--color-obsidian) !important;
+    cursor: pointer;
+    list-style: none !important;
+
+    // Hide default triangle marker
+    &::-webkit-details-marker,
+    &::marker {
+      display: none;
+      content: '';
+    }
+
+    // Plus icon from marketing SVG
+    &::after {
+      content: '';
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      background-image: var(--details-icon);
+      background-size: 20px 20px;
+      background-repeat: no-repeat;
+      background-position: center;
+      transition: transform 0.2s ease;
+    }
+
+    // Hide the Docusaurus arrow
+    &::before {
+      display: none !important;
+    }
+  }
+
+  &[open] > summary::after {
+    transform: rotate(45deg);
+  }
+
+  // Kill the blue border-top from Docusaurus collapsibleContent
+  [class*='collapsibleContent_'] {
+    border-top: none !important;
+    margin-top: 0 !important;
+    padding: 0 1.5rem 1.25rem !important;
+  }
+
+  // Collapsible body content
+  > div,
+  > p {
+    padding: 0 1.5rem 1.25rem !important;
+    border-top: none !important;
+    font-size: 15px;
+    font-weight: 380;
+    line-height: 24px;
+    letter-spacing: 0.3px;
+    color: var(--docs-color-text-100) !important;
+  }
+
+  p {
+    font-weight: 380;
+  }
+}
+
+html[data-theme='dark'] details {
+  --details-icon: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 4V16' stroke='%23C1BBB8' stroke-width='1.5' stroke-linecap='round'/%3E%3Cpath d='M4 10H16' stroke='%23C1BBB8' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");
+
+  > summary {
+    color: #fff !important;
+  }
+
+  // Code blocks inside details in dark mode
+  [class*='codeBlockContainer_'] {
+    --prism-background-color: var(--docs-color-background);
+    background: var(--docs-color-background);
+  }
+}
+
+// Override Docusaurus Details component arrow (catch-all)
+[class*='details_'] > summary::before {
+  display: none !important;
+}
+
+// Lists in articles
+article {
+  ol {
+    list-style-type: decimal !important;
+  }
+
+  ul {
+    list-style-type: disc;
+  }
+}
+
+// Pseudo icon
+@media screen and (max-width: 1160px) {
+  .pseudo-icon {
+    display: none;
+  }
+}

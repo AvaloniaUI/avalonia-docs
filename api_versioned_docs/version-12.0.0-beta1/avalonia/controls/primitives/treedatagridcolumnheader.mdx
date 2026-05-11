@@ -1,0 +1,239 @@
+---
+title: 'TreeDataGridColumnHeader'
+hide_title: true
+slug: '/avalonia/controls/primitives/treedatagridcolumnheader'
+uid: 'Avalonia.Controls.Primitives.TreeDataGridColumnHeader'
+commentId: 'T:Avalonia.Controls.Primitives.TreeDataGridColumnHeader'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.TreeDataGrid'
+assembly: 'Avalonia.Controls.TreeDataGrid'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Primitives'
+tfms:
+  - 'net8.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">TreeDataGridColumnHeader Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Primitives</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A control which displays a column header in a [Avalonia.Controls.TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid) control.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class TreeDataGridColumnHeader
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Button <span className="apiref-page__relation-separator">-&gt;</span> TreeDataGridColumnHeader
+</div>
+</div>
+
+## Remarks
+
+[TreeDataGridColumnHeader](xref:Avalonia.Controls.Primitives.TreeDataGridColumnHeader) is responsible for displaying column headers in a [TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid) and
+provides functionality for column resizing and sorting.
+
+Column headers can be clicked to sort the data in the [TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid), and if resizing is
+enabled, they can be resized by dragging the edge of the header.
+
+This class supports the following pseudo-classes:
+
+- :resizable - Set when the column can be resized by the user
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [TreeDataGridColumnHeader](#uid-8a760dfd7c) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8a760dfd7c"></span>
+
+### TreeDataGridColumnHeader Constructor
+
+```csharp
+public TreeDataGridColumnHeader()
+```
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [CanUserResize](#uid-065d804a9f) | Gets a value indicating whether the column can be resized by the user. |
+| [ColumnIndex](#uid-d84e239cd3) | Gets the index of the column in the [Avalonia.Controls.TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid). |
+| [Header](#uid-cc7984b0a0) | Gets the content to display in the column header. |
+| [SortDirection](#uid-e2f11e25b7) | Gets the current sort direction of the column. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-065d804a9f"></span>
+
+### CanUserResize Property
+
+Gets a value indicating whether the column can be resized by the user.
+
+```csharp
+public bool CanUserResize { get; set; }
+```
+
+#### Value
+
+true if the column can be resized by the user; otherwise, false.
+
+
+#### Remarks
+
+This value is derived from the column model's [Avalonia.Controls.TreeDataGridColumn.CanUserResize](xref:Avalonia.Controls.TreeDataGridColumn.CanUserResize)
+property and the owning [Avalonia.Controls.TreeDataGrid.CanUserResizeColumns](xref:Avalonia.Controls.TreeDataGrid.CanUserResizeColumns) property.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d84e239cd3"></span>
+
+### ColumnIndex Property
+
+Gets the index of the column in the [Avalonia.Controls.TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid).
+
+```csharp
+public int ColumnIndex { get; set; }
+```
+
+#### Value
+
+The zero-based index of the column, or -1 if the column header is not realized.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-cc7984b0a0"></span>
+
+### Header Property
+
+Gets the content to display in the column header.
+
+```csharp
+public object Header { get; set; }
+```
+
+#### Value
+
+The header content, which can be a string, a data template, or any other object.
+
+
+#### Remarks
+
+This value is obtained from the [Avalonia.Controls.TreeDataGridColumn.Header](xref:Avalonia.Controls.TreeDataGridColumn.Header) property of the column
+model.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e2f11e25b7"></span>
+
+### SortDirection Property
+
+Gets the current sort direction of the column.
+
+```csharp
+public Nullable<System.ComponentModel.ListSortDirection> SortDirection { get; set; }
+```
+
+#### Value
+
+The sort direction (ascending or descending), or null if the column is not sorted.
+
+
+#### Remarks
+
+This value is obtained from the [Avalonia.Controls.TreeDataGridColumn.SortDirection](xref:Avalonia.Controls.TreeDataGridColumn.SortDirection) property of the
+column model. The sort direction is updated when the user clicks on the column header
+and sorting is enabled.
+
+</section>
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [CanUserResizeProperty](#uid-1288533a01) | Defines the [Avalonia.Controls.Primitives.TreeDataGridColumnHeader.CanUserResize](xref:Avalonia.Controls.Primitives.TreeDataGridColumnHeader.CanUserResize) property. |
+| [HeaderProperty](#uid-24586b7510) | Defines the [Avalonia.Controls.Primitives.TreeDataGridColumnHeader.Header](xref:Avalonia.Controls.Primitives.TreeDataGridColumnHeader.Header) property. |
+| [SortDirectionProperty](#uid-392d04eb3b) | Defines the [Avalonia.Controls.Primitives.TreeDataGridColumnHeader.SortDirection](xref:Avalonia.Controls.Primitives.TreeDataGridColumnHeader.SortDirection) property. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1288533a01"></span>
+
+### CanUserResizeProperty Field
+
+Defines the [Avalonia.Controls.Primitives.TreeDataGridColumnHeader.CanUserResize](xref:Avalonia.Controls.Primitives.TreeDataGridColumnHeader.CanUserResize) property.
+
+```csharp
+public Avalonia.DirectProperty<Avalonia.Controls.Primitives.TreeDataGridColumnHeader, bool> CanUserResizeProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-24586b7510"></span>
+
+### HeaderProperty Field
+
+Defines the [Avalonia.Controls.Primitives.TreeDataGridColumnHeader.Header](xref:Avalonia.Controls.Primitives.TreeDataGridColumnHeader.Header) property.
+
+```csharp
+public Avalonia.DirectProperty<Avalonia.Controls.Primitives.TreeDataGridColumnHeader, object> HeaderProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-392d04eb3b"></span>
+
+### SortDirectionProperty Field
+
+Defines the [Avalonia.Controls.Primitives.TreeDataGridColumnHeader.SortDirection](xref:Avalonia.Controls.Primitives.TreeDataGridColumnHeader.SortDirection) property.
+
+```csharp
+public Avalonia.DirectProperty<Avalonia.Controls.Primitives.TreeDataGridColumnHeader, Nullable<System.ComponentModel.ListSortDirection>> SortDirectionProperty
+```
+
+</section>
+
+</ApiRefPage>
+

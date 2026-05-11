@@ -1,0 +1,116 @@
+---
+title: 'IResourceHost'
+hide_title: true
+slug: '/avalonia/controls/iresourcehost'
+uid: 'Avalonia.Controls.IResourceHost'
+commentId: 'T:Avalonia.Controls.IResourceHost'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IResourceHost Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Represents an element which hosts resources.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface IResourceHost
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="iresourcenode">IResourceNode</a>
+</div>
+</div>
+
+## Remarks
+
+This interface is implemented by [Avalonia.StyledElement](xref:Avalonia.StyledElement) and `Application`.
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [NotifyHostedResourcesChanged](#uid-e60a587c09) | Notifies the resource host that one or more of its hosted resources has changed. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e60a587c09"></span>
+
+### NotifyHostedResourcesChanged Method
+
+Notifies the resource host that one or more of its hosted resources has changed.
+
+```csharp
+public void NotifyHostedResourcesChanged(Avalonia.Controls.ResourcesChangedEventArgs e)
+```
+
+#### Parameters
+
+`e` [Avalonia.Controls.ResourcesChangedEventArgs](xref:Avalonia.Controls.ResourcesChangedEventArgs)
+
+The event args.
+
+
+#### Remarks
+
+This method will be called automatically by the framework, you should not need to call
+this method yourself. It is called when the resources hosted by this element have
+changed, and is usually called by a resource dictionary or style hosted by the element
+in response to a resource being added or removed.
+
+</section>
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [ResourcesChanged](#uid-b07a533b55) | Raised when the resources change on the element or an ancestor of the element. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b07a533b55"></span>
+
+### ResourcesChanged Event
+
+Raised when the resources change on the element or an ancestor of the element.
+
+```csharp
+public event EventHandler<Avalonia.Controls.ResourcesChangedEventArgs> ResourcesChanged
+```
+
+</section>
+
+</ApiRefPage>
+

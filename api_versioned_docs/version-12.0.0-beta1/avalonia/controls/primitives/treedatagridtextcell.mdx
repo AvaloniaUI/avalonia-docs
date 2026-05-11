@@ -1,0 +1,221 @@
+---
+title: 'TreeDataGridTextCell'
+hide_title: true
+slug: '/avalonia/controls/primitives/treedatagridtextcell'
+uid: 'Avalonia.Controls.Primitives.TreeDataGridTextCell'
+commentId: 'T:Avalonia.Controls.Primitives.TreeDataGridTextCell'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.TreeDataGrid'
+assembly: 'Avalonia.Controls.TreeDataGrid'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Primitives'
+tfms:
+  - 'net8.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">TreeDataGridTextCell Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Primitives</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A control in a [Avalonia.Controls.TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid) that displays cells as text.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class TreeDataGridTextCell
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> TemplatedControl <span className="apiref-page__relation-separator">-&gt;</span> <a href="treedatagridcell">TreeDataGridCell</a> <span className="apiref-page__relation-separator">-&gt;</span> TreeDataGridTextCell
+</div>
+</div>
+
+## Remarks
+
+[TreeDataGridTextCell](xref:Avalonia.Controls.Primitives.TreeDataGridTextCell) is used for displaying and editing text values in a [TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid).
+
+This cell type provides properties to control text appearance, such as text trimming,
+wrapping, and alignment. When in edit mode, it displays a [Avalonia.Controls.TextBox](xref:Avalonia.Controls.TextBox) that
+allows the user to modify the text value.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [TreeDataGridTextCell](#uid-18296481ce) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-18296481ce"></span>
+
+### TreeDataGridTextCell Constructor
+
+```csharp
+public TreeDataGridTextCell()
+```
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [TextAlignment](#uid-ffc7a68a9d) | Gets or sets the text alignment for the cell's text. |
+| [TextTrimming](#uid-a9b8cdc692) | Gets or sets the text trimming mode for the cell's text. |
+| [TextWrapping](#uid-5934ad8cbe) | Gets or sets the text wrapping mode for the cell's text. |
+| [Value](#uid-af5d698b1b) | Gets or sets the text value displayed in the cell. |
+| [ColumnIndex](treedatagridcell.mdx#uid-6d0d40f6a8) | Gets the index of the column that this cell belongs to. Inherited from [TreeDataGridCell](treedatagridcell.mdx). |
+| [IsEditing](treedatagridcell.mdx#uid-66586fe73f) | Gets a value indicating whether the cell is in edit mode. Inherited from [TreeDataGridCell](treedatagridcell.mdx). |
+| [IsEffectivelySelected](treedatagridcell.mdx#uid-8ce8f3cd79) | Gets a value indicating whether the cell is effectively selected, either directly or because its containing row is selected. Inherited from [TreeDataGridCell](treedatagridcell.mdx). |
+| [IsSelected](treedatagridcell.mdx#uid-91d5f305c8) | Gets a value indicating whether the cell is selected. Inherited from [TreeDataGridCell](treedatagridcell.mdx). |
+| [Model](treedatagridcell.mdx#uid-6720862544) | Gets the data model for the cell. Inherited from [TreeDataGridCell](treedatagridcell.mdx). |
+| [RowIndex](treedatagridcell.mdx#uid-c4d45a681c) | Gets the index of the row that this cell belongs to. Inherited from [TreeDataGridCell](treedatagridcell.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ffc7a68a9d"></span>
+
+### TextAlignment Property
+
+Gets or sets the text alignment for the cell's text.
+
+```csharp
+public Avalonia.Media.TextAlignment TextAlignment { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a9b8cdc692"></span>
+
+### TextTrimming Property
+
+Gets or sets the text trimming mode for the cell's text.
+
+```csharp
+public Avalonia.Media.TextTrimming TextTrimming { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5934ad8cbe"></span>
+
+### TextWrapping Property
+
+Gets or sets the text wrapping mode for the cell's text.
+
+```csharp
+public Avalonia.Media.TextWrapping TextWrapping { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-af5d698b1b"></span>
+
+### Value Property
+
+Gets or sets the text value displayed in the cell.
+
+```csharp
+public string Value { get; set; }
+```
+
+</section>
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [TextAlignmentProperty](#uid-1218373a54) | Defines the [Avalonia.Controls.Primitives.TreeDataGridTextCell.TextAlignment](xref:Avalonia.Controls.Primitives.TreeDataGridTextCell.TextAlignment) property. |
+| [TextTrimmingProperty](#uid-0508d34c1c) | Defines the [Avalonia.Controls.Primitives.TreeDataGridTextCell.TextTrimming](xref:Avalonia.Controls.Primitives.TreeDataGridTextCell.TextTrimming) property. |
+| [TextWrappingProperty](#uid-84108e1727) | Defines the [Avalonia.Controls.Primitives.TreeDataGridTextCell.TextWrapping](xref:Avalonia.Controls.Primitives.TreeDataGridTextCell.TextWrapping) property. |
+| [ValueProperty](#uid-5e3432f502) | Defines the [Avalonia.Controls.Primitives.TreeDataGridTextCell.Value](xref:Avalonia.Controls.Primitives.TreeDataGridTextCell.Value) property. |
+| [IsSelectedProperty](treedatagridcell.mdx#uid-8249e3bb68) | Defines the [Avalonia.Controls.Primitives.TreeDataGridCell.IsSelected](xref:Avalonia.Controls.Primitives.TreeDataGridCell.IsSelected) property. Inherited from [TreeDataGridCell](treedatagridcell.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1218373a54"></span>
+
+### TextAlignmentProperty Field
+
+Defines the [Avalonia.Controls.Primitives.TreeDataGridTextCell.TextAlignment](xref:Avalonia.Controls.Primitives.TreeDataGridTextCell.TextAlignment) property.
+
+```csharp
+public Avalonia.DirectProperty<Avalonia.Controls.Primitives.TreeDataGridTextCell, Avalonia.Media.TextAlignment> TextAlignmentProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0508d34c1c"></span>
+
+### TextTrimmingProperty Field
+
+Defines the [Avalonia.Controls.Primitives.TreeDataGridTextCell.TextTrimming](xref:Avalonia.Controls.Primitives.TreeDataGridTextCell.TextTrimming) property.
+
+```csharp
+public Avalonia.DirectProperty<Avalonia.Controls.Primitives.TreeDataGridTextCell, Avalonia.Media.TextTrimming> TextTrimmingProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-84108e1727"></span>
+
+### TextWrappingProperty Field
+
+Defines the [Avalonia.Controls.Primitives.TreeDataGridTextCell.TextWrapping](xref:Avalonia.Controls.Primitives.TreeDataGridTextCell.TextWrapping) property.
+
+```csharp
+public Avalonia.DirectProperty<Avalonia.Controls.Primitives.TreeDataGridTextCell, Avalonia.Media.TextWrapping> TextWrappingProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5e3432f502"></span>
+
+### ValueProperty Field
+
+Defines the [Avalonia.Controls.Primitives.TreeDataGridTextCell.Value](xref:Avalonia.Controls.Primitives.TreeDataGridTextCell.Value) property.
+
+```csharp
+public Avalonia.DirectProperty<Avalonia.Controls.Primitives.TreeDataGridTextCell, string> ValueProperty
+```
+
+</section>
+
+</ApiRefPage>
+

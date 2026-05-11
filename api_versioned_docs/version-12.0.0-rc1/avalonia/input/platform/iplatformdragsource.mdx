@@ -1,0 +1,80 @@
+---
+title: 'IPlatformDragSource'
+hide_title: true
+slug: '/avalonia/input/platform/iplatformdragsource'
+uid: 'Avalonia.Input.Platform.IPlatformDragSource'
+commentId: 'T:Avalonia.Input.Platform.IPlatformDragSource'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Input.Platform'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IPlatformDragSource Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Input.Platform</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface IPlatformDragSource
+```
+
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [DoDragDropAsync](#uid-940a25c59f) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-940a25c59f"></span>
+
+### DoDragDropAsync Method
+
+```csharp
+public System.Threading.Tasks.Task<Avalonia.Input.DragDropEffects> DoDragDropAsync(Avalonia.Input.PointerEventArgs triggerEvent, Avalonia.Input.IDataTransfer dataTransfer, Avalonia.Input.DragDropEffects allowedEffects)
+```
+
+#### Parameters
+
+`triggerEvent` [Avalonia.Input.PointerEventArgs](xref:Avalonia.Input.PointerEventArgs)
+
+
+`dataTransfer` [Avalonia.Input.IDataTransfer](xref:Avalonia.Input.IDataTransfer)
+
+
+`allowedEffects` [Avalonia.Input.DragDropEffects](xref:Avalonia.Input.DragDropEffects)
+
+
+#### Returns
+
+System.Threading.Tasks.Task&lt;[Avalonia.Input.DragDropEffects](xref:Avalonia.Input.DragDropEffects)&gt;
+
+
+</section>
+
+</ApiRefPage>
+

@@ -1,0 +1,271 @@
+---
+title: 'ICompositionGpuInterop'
+hide_title: true
+slug: '/avalonia/rendering/composition/icompositiongpuinterop'
+uid: 'Avalonia.Rendering.Composition.ICompositionGpuInterop'
+commentId: 'T:Avalonia.Rendering.Composition.ICompositionGpuInterop'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Rendering.Composition'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ICompositionGpuInterop Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Rendering.Composition</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface ICompositionGpuInterop
+```
+
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [GetSynchronizationCapabilities](#uid-241da52c21) | Returns the supported ways to synchronize access to the imported GPU image |
+| [ImportImage (2 overloads)](#uid-b77d6038f0) | Asynchronously imports a texture. The returned object is immediately usable. |
+| [ImportSemaphore (2 overloads)](#uid-a817b0ba4a) | Asynchronously imports a semaphore object. The returned object is immediately usable. If import operation fails, the caller is responsible for destroying the handle |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-241da52c21"></span>
+
+### GetSynchronizationCapabilities Method
+
+Returns the supported ways to synchronize access to the imported GPU image
+
+```csharp
+public Avalonia.Rendering.Composition.CompositionGpuImportedImageSynchronizationCapabilities GetSynchronizationCapabilities(string imageHandleType)
+```
+
+#### Parameters
+
+`imageHandleType` string
+
+
+#### Returns
+
+[Avalonia.Rendering.Composition.CompositionGpuImportedImageSynchronizationCapabilities](xref:Avalonia.Rendering.Composition.CompositionGpuImportedImageSynchronizationCapabilities)
+
+
+</section>
+
+<span id="uid-b77d6038f0"></span>
+
+### ImportImage overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ddef37683f"></span>
+
+#### ImportImage Method
+
+Asynchronously imports a texture. The returned object is immediately usable.
+
+```csharp
+public Avalonia.Rendering.Composition.ICompositionImportedGpuImage ImportImage(Avalonia.Platform.IPlatformHandle handle, Avalonia.Platform.PlatformGraphicsExternalImageProperties properties)
+```
+
+##### Parameters
+
+`handle` [Avalonia.Platform.IPlatformHandle](xref:Avalonia.Platform.IPlatformHandle)
+
+
+`properties` [Avalonia.Platform.PlatformGraphicsExternalImageProperties](xref:Avalonia.Platform.PlatformGraphicsExternalImageProperties)
+
+
+##### Returns
+
+[Avalonia.Rendering.Composition.ICompositionImportedGpuImage](xref:Avalonia.Rendering.Composition.ICompositionImportedGpuImage)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a294ce5585"></span>
+
+#### ImportImage Method
+
+Asynchronously imports a texture. The returned object is immediately usable.
+If import operation fails, the caller is responsible for destroying the handle
+
+```csharp
+public Avalonia.Rendering.Composition.ICompositionImportedGpuImage ImportImage(Avalonia.Rendering.Composition.ICompositionImportableSharedGpuContextImage image)
+```
+
+##### Parameters
+
+`image` [Avalonia.Rendering.Composition.ICompositionImportableSharedGpuContextImage](xref:Avalonia.Rendering.Composition.ICompositionImportableSharedGpuContextImage)
+
+An image that belongs to the same GPU context or the same GPU context sharing group as one used by compositor
+
+
+##### Returns
+
+[Avalonia.Rendering.Composition.ICompositionImportedGpuImage](xref:Avalonia.Rendering.Composition.ICompositionImportedGpuImage)
+
+
+</section>
+
+<span id="uid-a817b0ba4a"></span>
+
+### ImportSemaphore overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2cfb7465ad"></span>
+
+#### ImportSemaphore Method
+
+Asynchronously imports a semaphore object. The returned object is immediately usable.
+If import operation fails, the caller is responsible for destroying the handle
+
+```csharp
+public Avalonia.Rendering.Composition.ICompositionImportedGpuSemaphore ImportSemaphore(Avalonia.Platform.IPlatformHandle handle)
+```
+
+##### Parameters
+
+`handle` [Avalonia.Platform.IPlatformHandle](xref:Avalonia.Platform.IPlatformHandle)
+
+
+##### Returns
+
+[Avalonia.Rendering.Composition.ICompositionImportedGpuSemaphore](xref:Avalonia.Rendering.Composition.ICompositionImportedGpuSemaphore)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-058ff9e009"></span>
+
+#### ImportSemaphore Method
+
+Asynchronously imports a semaphore object. The returned object is immediately usable.
+
+```csharp
+public Avalonia.Rendering.Composition.ICompositionImportedGpuImage ImportSemaphore(Avalonia.Rendering.Composition.ICompositionImportableSharedGpuContextSemaphore image)
+```
+
+##### Parameters
+
+`image` [Avalonia.Rendering.Composition.ICompositionImportableSharedGpuContextSemaphore](xref:Avalonia.Rendering.Composition.ICompositionImportableSharedGpuContextSemaphore)
+
+A semaphore that belongs to the same GPU context or the same GPU context sharing group as one used by compositor
+
+
+##### Returns
+
+[Avalonia.Rendering.Composition.ICompositionImportedGpuImage](xref:Avalonia.Rendering.Composition.ICompositionImportedGpuImage)
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [DeviceLuid](#uid-f066fdfc57) | The LUID of the graphics adapter used by the compositor |
+| [DeviceUuid](#uid-204c32b69b) | The UUID of the graphics adapter used by the compositor |
+| [IsLost](#uid-f2b8219cb6) | Indicates if the device context this instance is associated with is no longer available |
+| [SupportedImageHandleTypes](#uid-7233179774) | Returns the list of image handle types supported by the current GPU backend, see [Avalonia.Platform.KnownPlatformGraphicsExternalImageHandleTypes](xref:Avalonia.Platform.KnownPlatformGraphicsExternalImageHandleTypes) |
+| [SupportedSemaphoreTypes](#uid-44a8fa91dd) | Returns the list of semaphore types supported by the current GPU backend, see [Avalonia.Platform.KnownPlatformGraphicsExternalSemaphoreHandleTypes](xref:Avalonia.Platform.KnownPlatformGraphicsExternalSemaphoreHandleTypes) |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f066fdfc57"></span>
+
+### DeviceLuid Property
+
+The LUID of the graphics adapter used by the compositor
+
+```csharp
+public byte[] DeviceLuid { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-204c32b69b"></span>
+
+### DeviceUuid Property
+
+The UUID of the graphics adapter used by the compositor
+
+```csharp
+public byte[] DeviceUuid { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f2b8219cb6"></span>
+
+### IsLost Property
+
+Indicates if the device context this instance is associated with is no longer available
+
+```csharp
+public bool IsLost { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7233179774"></span>
+
+### SupportedImageHandleTypes Property
+
+Returns the list of image handle types supported by the current GPU backend, see [Avalonia.Platform.KnownPlatformGraphicsExternalImageHandleTypes](xref:Avalonia.Platform.KnownPlatformGraphicsExternalImageHandleTypes)
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<string> SupportedImageHandleTypes { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-44a8fa91dd"></span>
+
+### SupportedSemaphoreTypes Property
+
+Returns the list of semaphore types supported by the current GPU backend, see [Avalonia.Platform.KnownPlatformGraphicsExternalSemaphoreHandleTypes](xref:Avalonia.Platform.KnownPlatformGraphicsExternalSemaphoreHandleTypes)
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<string> SupportedSemaphoreTypes { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

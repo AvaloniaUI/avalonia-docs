@@ -1,0 +1,218 @@
+version: 1
+target: avalonia-docs
+
+terms:
+  - canonical: Avalonia
+    definition: "Open-source, cross-platform UI framework for .NET."
+    capitalization: "Avalonia"
+    synonyms_used: ["Avalonia UI"]
+    forbidden_synonyms: ["avalonia", "AvaloniaUI"]
+    notes: "Use 'Avalonia' in body text. 'Avalonia UI' only in trademark/legal contexts."
+
+  - canonical: XAML
+    definition: "Markup language used to declare Avalonia UI and object graphs."
+    capitalization: "XAML"
+    synonyms_used: ["XAML"]
+    forbidden_synonyms: ["xaml", "Xaml", "xml ui markup"]
+    notes: "Keep uppercase. Use code font for XAML tokens and elements."
+
+  - canonical: AXAML
+    definition: "Avalonia's XAML file extension (.axaml)."
+    capitalization: "AXAML"
+    synonyms_used: [".axaml"]
+    forbidden_synonyms: ["axaml", "Axaml"]
+    notes: "Use when referring specifically to the file extension. Use XAML when referring to the language."
+
+  - canonical: control
+    definition: "An Avalonia UI component hosted in a window, panel, or page."
+    capitalization: "control"
+    synonyms_used: ["controls"]
+    forbidden_synonyms: ["widget", "widgets"]
+    notes: "'widget' is not used in Avalonia documentation."
+
+  - canonical: styled property
+    short_form: StyledProperty
+    definition: "An Avalonia property that supports styling and data binding."
+    capitalization: "styled property"
+    synonyms_used: ["StyledProperty"]
+    forbidden_synonyms: ["dependency property"]
+    notes: "Use 'styled property' in prose; `StyledProperty` in code context. Not a WPF dependency property."
+
+  - canonical: direct property
+    short_form: DirectProperty
+    definition: "An Avalonia property that maps directly to a CLR property."
+    capitalization: "direct property"
+    synonyms_used: ["DirectProperty"]
+    forbidden_synonyms: []
+    notes: "Use 'direct property' in prose; `DirectProperty` in code context."
+
+  - canonical: attached property
+    short_form: AttachedProperty
+    definition: "A property defined by one type that can be set on instances of other types."
+    capitalization: "attached property"
+    synonyms_used: ["AttachedProperty"]
+    forbidden_synonyms: []
+    notes: "Concept is shared with WPF but implementation differs."
+
+  - canonical: app
+    definition: "Runnable end-user application in task/tutorial context."
+    capitalization: "app"
+    synonyms_used: ["application"]
+    forbidden_synonyms: []
+    notes: "Both app/application are valid; prefer 'app' in procedures and headings."
+
+  - canonical: application
+    definition: "Formal or conceptual reference to software system and runtime behavior."
+    capitalization: "application"
+    synonyms_used: ["app"]
+    forbidden_synonyms: []
+    notes: "Prefer 'application' in conceptual/reference prose."
+
+  - canonical: view model
+    definition: "The intermediary object between model and view in MVVM pattern."
+    capitalization: "view model"
+    synonyms_used: ["ViewModel"]
+    forbidden_synonyms: ["viewmodel"]
+    notes: "Two words in prose. PascalCase `ViewModel` in code/class names only."
+
+  - canonical: data context
+    definition: "The object that serves as the binding source for a control."
+    capitalization: "data context"
+    synonyms_used: ["DataContext"]
+    forbidden_synonyms: []
+    notes: "Two words in prose. `DataContext` in code context."
+
+  - canonical: project
+    definition: "A buildable unit (for example, .csproj)."
+    capitalization: "project"
+    synonyms_used: ["app project", "library project"]
+    forbidden_synonyms: []
+    notes: "Use with IDE actions and target framework changes."
+
+  - canonical: window
+    definition: "A top-level container in desktop Avalonia applications."
+    capitalization: "window"
+    synonyms_used: ["Window"]
+    forbidden_synonyms: ["form"]
+    notes: "'form' is WinForms terminology, not Avalonia."
+
+  - canonical: user control
+    definition: "A reusable composite control defined in AXAML."
+    capitalization: "user control"
+    synonyms_used: ["UserControl"]
+    forbidden_synonyms: []
+    notes: "Two words in prose. PascalCase in code."
+
+forbidden_marketing_terms:
+  - term: powerful
+    replacement: "State the specific capability."
+    rule: TONE-001
+  - term: seamless
+    replacement: "Describe the integration or behavior concretely."
+    rule: TONE-001
+  - term: elegant
+    replacement: "Remove, or describe the design pattern specifically."
+    rule: TONE-001
+  - term: best-in-class
+    replacement: "Remove. Provide benchmarks or comparisons if relevant."
+    rule: TONE-001
+  - term: world-class
+    replacement: "Remove."
+    rule: TONE-001
+  - term: cutting-edge
+    replacement: "Remove, or name the specific technology."
+    rule: TONE-001
+  - term: game-changing
+    replacement: "Remove. Describe the concrete improvement."
+    rule: TONE-001
+  - term: leverage
+    replacement: "Use 'use' or 'apply'."
+    rule: TONE-001
+    context_dependent: true
+  - term: unlock
+    replacement: "Use 'enable' or 'allow'."
+    rule: TONE-001
+    context_dependent: true
+  - term: empower
+    replacement: "Use 'enable' or 'allow'."
+    rule: TONE-001
+  - term: delightful
+    replacement: "Remove."
+    rule: TONE-001
+  - term: blazing fast
+    replacement: "State measured performance or remove."
+    rule: TONE-001
+  - term: robust
+    replacement: "Describe the specific reliability characteristic."
+    rule: TONE-001
+    context_dependent: true
+  - term: state-of-the-art
+    replacement: "Remove, or name the specific technique."
+    rule: TONE-001
+  - term: next-generation
+    replacement: "Remove, or describe what changed."
+    rule: TONE-001
+  - term: revolutionary
+    replacement: "Remove. Describe the concrete change."
+    rule: TONE-001
+  - term: groundbreaking
+    replacement: "Remove. Describe the concrete change."
+    rule: TONE-001
+  - term: innovative
+    replacement: "Remove, or describe the specific approach."
+    rule: TONE-001
+    context_dependent: true
+
+framework_jargon:
+  description: >
+    Avalonia-specific terms that newcomers may not know. On introductory pages
+    (tutorials, overviews), these must be explained inline or linked to an
+    explanation page on first use. On reference and explanation pages, they
+    may be used without introduction. Rule: TERM-004.
+  terms:
+    - term: visual tree
+      definition: "The rendered hierarchy of controls that Avalonia draws on screen."
+      link_target: concepts/the-visual-tree
+    - term: logical tree
+      definition: "The declared hierarchy of controls as written in XAML."
+      link_target: concepts/the-logical-tree
+    - term: data template
+      definition: "A reusable XAML fragment that defines how a data object is displayed."
+      link_target: concepts/data-templates
+    - term: control theme
+      definition: "A set of styles that define the default appearance and behavior of a control."
+      link_target: styling/control-themes
+    - term: style selector
+      definition: "A pattern that matches controls for applying styles, similar to CSS selectors."
+      link_target: styling/style-selectors
+    - term: binding expression
+      definition: "A XAML expression that connects a control property to a data source."
+      link_target: data-binding/bindings
+    - term: value converter
+      definition: "An object that transforms data between source and target during binding."
+      link_target: data-binding/value-converters
+    - term: content presenter
+      definition: "A control that displays the content of a templated parent."
+      link_target: controls/contentpresenter
+    - term: items presenter
+      definition: "A control that generates and displays items from a collection."
+      link_target: controls/itemspresenter
+    - term: template part
+      definition: "A named element inside a control template that the control logic references."
+      link_target: styling/control-themes
+    - term: pseudo-class
+      definition: "A state-based selector (like :pointerover or :pressed) used in styles."
+      link_target: styling/pseudo-classes
+
+strength_of_language:
+  must:
+    meaning: "hard requirement or correctness/security constraint"
+    lint_rule: TERM-003
+    example: "Controls must be registered before they can be used in XAML."
+  should:
+    meaning: "strong guidance or expected approach"
+    lint_rule: TERM-003
+    example: "You should implement `INotifyPropertyChanged` on your view models."
+  may_might_can:
+    meaning: "conditional behavior, optional path, or environment variability"
+    example: "You might need to install the Avalonia templates first."

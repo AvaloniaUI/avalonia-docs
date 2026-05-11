@@ -1,0 +1,519 @@
+---
+title: 'TreeDataGridColumn'
+hide_title: true
+slug: '/avalonia/controls/treedatagridcolumn'
+uid: 'Avalonia.Controls.TreeDataGridColumn'
+commentId: 'T:Avalonia.Controls.TreeDataGridColumn'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.TreeDataGrid'
+assembly: 'Avalonia.Controls.TreeDataGrid'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net8.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">TreeDataGridColumn Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Base class for columns in a [Avalonia.Controls.TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid).
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class TreeDataGridColumn
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> AvaloniaObject <span className="apiref-page__relation-separator">-&gt;</span> TreeDataGridColumn
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Derived types:</span> <a href="treedatagridboundcolumn">TreeDataGridBoundColumn</a>, <a href="treedatagridhierarchicalexpandercolumn">TreeDataGridHierarchicalExpanderColumn</a>, <a href="treedatagridrowheadercolumn">TreeDataGridRowHeaderColumn</a>, <a href="treedatagridtemplatecolumn">TreeDataGridTemplateColumn</a>
+</div>
+</div>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [ActualWidth](#uid-f6a5b4a5e1) | Gets the actual width of the column after measurement. |
+| [AllowTriStateSorting](#uid-96d4d7c2ac) | Gets or sets whether the user can cycle through ascending, descending, and unsorted states when clicking the column header. |
+| [BeginEditGestures](#uid-8bbe396a27) | Gets or sets the gesture(s) that will cause a cell to enter edit mode. |
+| [CanUserResize](#uid-f144900437) | Gets or sets a value indicating whether the user can resize the column by dragging. |
+| [CanUserSortColumn](#uid-5736d9e2bb) | Gets or sets a value indicating whether the user can sort the column by clicking. |
+| [CompareAscending](#uid-c7f2a2dd78) | Gets or sets a custom comparison for ascending sort order. |
+| [CompareDescending](#uid-5452b638ce) | Gets or sets a custom comparison for descending sort order. |
+| [Header](#uid-e8ac01fc32) | Gets or sets the column header. |
+| [IsVisible](#uid-56b3ceb8c9) | Gets or sets a value indicating whether the column is visible. |
+| [MaxWidth](#uid-86cf116775) | Gets or sets the maximum width for the column. |
+| [MinWidth](#uid-02e431a650) | Gets or sets the minimum width for the column. |
+| [SortDirection](#uid-2ec9c41915) | Gets or sets the sort direction indicator that will be displayed on the column. |
+| [Tag](#uid-1da1891e70) | Gets or sets a user-defined object attached to the column. |
+| [Width](#uid-e2a65dc530) | Gets or sets the width of the column. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f6a5b4a5e1"></span>
+
+### ActualWidth Property
+
+Gets the actual width of the column after measurement.
+
+```csharp
+public double ActualWidth { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-96d4d7c2ac"></span>
+
+### AllowTriStateSorting Property
+
+Gets or sets whether the user can cycle through ascending, descending, and unsorted
+states when clicking the column header.
+
+```csharp
+public Nullable<bool> AllowTriStateSorting { get; set; }
+```
+
+#### Remarks
+
+Only applies if [Avalonia.Controls.TreeDataGridColumn.CanUserSortColumn](xref:Avalonia.Controls.TreeDataGridColumn.CanUserSortColumn) is true. If null, the owner
+[Avalonia.Controls.TreeDataGrid.AllowTriStateSorting](xref:Avalonia.Controls.TreeDataGrid.AllowTriStateSorting)
+property value will apply.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8bbe396a27"></span>
+
+### BeginEditGestures Property
+
+Gets or sets the gesture(s) that will cause a cell to enter edit mode.
+
+```csharp
+public Avalonia.Controls.BeginEditGestures BeginEditGestures { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f144900437"></span>
+
+### CanUserResize Property
+
+Gets or sets a value indicating whether the user can resize the column by dragging.
+
+```csharp
+public Nullable<bool> CanUserResize { get; set; }
+```
+
+#### Remarks
+
+If null, the owner [Avalonia.Controls.TreeDataGrid.CanUserResizeColumns](xref:Avalonia.Controls.TreeDataGrid.CanUserResizeColumns)
+property value will apply.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5736d9e2bb"></span>
+
+### CanUserSortColumn Property
+
+Gets or sets a value indicating whether the user can sort the column by clicking.
+
+```csharp
+public Nullable<bool> CanUserSortColumn { get; set; }
+```
+
+#### Remarks
+
+If null, the owner [Avalonia.Controls.TreeDataGrid.CanUserSortColumns](xref:Avalonia.Controls.TreeDataGrid.CanUserSortColumns)
+property value will apply.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c7f2a2dd78"></span>
+
+### CompareAscending Property
+
+Gets or sets a custom comparison for ascending sort order.
+
+```csharp
+public Comparison<object> CompareAscending { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5452b638ce"></span>
+
+### CompareDescending Property
+
+Gets or sets a custom comparison for descending sort order.
+
+```csharp
+public Comparison<object> CompareDescending { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e8ac01fc32"></span>
+
+### Header Property
+
+Gets or sets the column header.
+
+```csharp
+public object Header { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-56b3ceb8c9"></span>
+
+### IsVisible Property
+
+Gets or sets a value indicating whether the column is visible.
+
+```csharp
+public bool IsVisible { get; set; }
+```
+
+#### Remarks
+
+When set to false, the column header and cells will not be rendered and the column
+will not contribute to layout calculations.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-86cf116775"></span>
+
+### MaxWidth Property
+
+Gets or sets the maximum width for the column.
+
+```csharp
+public Nullable<Avalonia.Controls.GridLength> MaxWidth { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-02e431a650"></span>
+
+### MinWidth Property
+
+Gets or sets the minimum width for the column.
+
+```csharp
+public Avalonia.Controls.GridLength MinWidth { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2ec9c41915"></span>
+
+### SortDirection Property
+
+Gets or sets the sort direction indicator that will be displayed on the column.
+
+```csharp
+public Nullable<System.ComponentModel.ListSortDirection> SortDirection { get; set; }
+```
+
+#### Remarks
+
+Note that changing this property does not change the sorting of the data, it is only
+used to display a sort direction indicator. To sort data according to a column use
+[Avalonia.Controls.TreeDataGridSource.SortBy(Avalonia.Controls.TreeDataGridColumn,System.ComponentModel.ListSortDirection)](xref:Avalonia.Controls.TreeDataGridSource.SortBy%28Avalonia.Controls.TreeDataGridColumn%2CSystem.ComponentModel.ListSortDirection%29).
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1da1891e70"></span>
+
+### Tag Property
+
+Gets or sets a user-defined object attached to the column.
+
+```csharp
+public object Tag { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e2a65dc530"></span>
+
+### Width Property
+
+Gets or sets the width of the column.
+
+```csharp
+public Avalonia.Controls.GridLength Width { get; set; }
+```
+
+</section>
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [ActualWidthProperty](#uid-e364c8be18) | Defines the [Avalonia.Controls.TreeDataGridColumn.ActualWidth](xref:Avalonia.Controls.TreeDataGridColumn.ActualWidth) property. |
+| [AllowTriStateSortingProperty](#uid-6ae1bb0dd4) | Defines the [Avalonia.Controls.TreeDataGridColumn.AllowTriStateSorting](xref:Avalonia.Controls.TreeDataGridColumn.AllowTriStateSorting) property. |
+| [BeginEditGesturesProperty](#uid-dc2ed09efd) | Defines the [Avalonia.Controls.TreeDataGridColumn.BeginEditGestures](xref:Avalonia.Controls.TreeDataGridColumn.BeginEditGestures) property. |
+| [CanUserResizeProperty](#uid-571bbcdf1a) | Defines the [Avalonia.Controls.TreeDataGridColumn.CanUserResize](xref:Avalonia.Controls.TreeDataGridColumn.CanUserResize) property. |
+| [CanUserSortColumnProperty](#uid-7b60725c11) | Defines the [Avalonia.Controls.TreeDataGridColumn.CanUserSortColumn](xref:Avalonia.Controls.TreeDataGridColumn.CanUserSortColumn) property. |
+| [CompareAscendingProperty](#uid-b64fb913c3) | Defines the [Avalonia.Controls.TreeDataGridColumn.CompareAscending](xref:Avalonia.Controls.TreeDataGridColumn.CompareAscending) property. |
+| [CompareDescendingProperty](#uid-8793ea737f) | Defines the [Avalonia.Controls.TreeDataGridColumn.CompareDescending](xref:Avalonia.Controls.TreeDataGridColumn.CompareDescending) property. |
+| [HeaderProperty](#uid-6bf85e990c) | Defines the [Avalonia.Controls.TreeDataGridColumn.Header](xref:Avalonia.Controls.TreeDataGridColumn.Header) property. |
+| [IsVisibleProperty](#uid-3b84d0d8ca) | Defines the [Avalonia.Controls.TreeDataGridColumn.IsVisible](xref:Avalonia.Controls.TreeDataGridColumn.IsVisible) property. |
+| [MaxWidthProperty](#uid-dc42964fc0) | Defines the [Avalonia.Controls.TreeDataGridColumn.MaxWidth](xref:Avalonia.Controls.TreeDataGridColumn.MaxWidth) property. |
+| [MinWidthProperty](#uid-1ded2efd51) | Defines the [Avalonia.Controls.TreeDataGridColumn.MinWidth](xref:Avalonia.Controls.TreeDataGridColumn.MinWidth) property. |
+| [SortDirectionProperty](#uid-0a0a137fb0) | Defines the [Avalonia.Controls.TreeDataGridColumn.SortDirection](xref:Avalonia.Controls.TreeDataGridColumn.SortDirection) property. |
+| [TagProperty](#uid-c2056b364a) | Defines the [Avalonia.Controls.TreeDataGridColumn.Tag](xref:Avalonia.Controls.TreeDataGridColumn.Tag) property. |
+| [WidthProperty](#uid-b2aa823419) | Defines the [Avalonia.Controls.TreeDataGridColumn.Width](xref:Avalonia.Controls.TreeDataGridColumn.Width) property. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e364c8be18"></span>
+
+### ActualWidthProperty Field
+
+Defines the [Avalonia.Controls.TreeDataGridColumn.ActualWidth](xref:Avalonia.Controls.TreeDataGridColumn.ActualWidth) property.
+
+```csharp
+public Avalonia.DirectProperty<Avalonia.Controls.TreeDataGridColumn, double> ActualWidthProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6ae1bb0dd4"></span>
+
+### AllowTriStateSortingProperty Field
+
+Defines the [Avalonia.Controls.TreeDataGridColumn.AllowTriStateSorting](xref:Avalonia.Controls.TreeDataGridColumn.AllowTriStateSorting) property.
+
+```csharp
+public Avalonia.StyledProperty<Nullable<bool>> AllowTriStateSortingProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-dc2ed09efd"></span>
+
+### BeginEditGesturesProperty Field
+
+Defines the [Avalonia.Controls.TreeDataGridColumn.BeginEditGestures](xref:Avalonia.Controls.TreeDataGridColumn.BeginEditGestures) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.BeginEditGestures> BeginEditGesturesProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-571bbcdf1a"></span>
+
+### CanUserResizeProperty Field
+
+Defines the [Avalonia.Controls.TreeDataGridColumn.CanUserResize](xref:Avalonia.Controls.TreeDataGridColumn.CanUserResize) property.
+
+```csharp
+public Avalonia.StyledProperty<Nullable<bool>> CanUserResizeProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7b60725c11"></span>
+
+### CanUserSortColumnProperty Field
+
+Defines the [Avalonia.Controls.TreeDataGridColumn.CanUserSortColumn](xref:Avalonia.Controls.TreeDataGridColumn.CanUserSortColumn) property.
+
+```csharp
+public Avalonia.StyledProperty<Nullable<bool>> CanUserSortColumnProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b64fb913c3"></span>
+
+### CompareAscendingProperty Field
+
+Defines the [Avalonia.Controls.TreeDataGridColumn.CompareAscending](xref:Avalonia.Controls.TreeDataGridColumn.CompareAscending) property.
+
+```csharp
+public Avalonia.StyledProperty<Comparison<object>> CompareAscendingProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8793ea737f"></span>
+
+### CompareDescendingProperty Field
+
+Defines the [Avalonia.Controls.TreeDataGridColumn.CompareDescending](xref:Avalonia.Controls.TreeDataGridColumn.CompareDescending) property.
+
+```csharp
+public Avalonia.StyledProperty<Comparison<object>> CompareDescendingProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6bf85e990c"></span>
+
+### HeaderProperty Field
+
+Defines the [Avalonia.Controls.TreeDataGridColumn.Header](xref:Avalonia.Controls.TreeDataGridColumn.Header) property.
+
+```csharp
+public Avalonia.StyledProperty<object> HeaderProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3b84d0d8ca"></span>
+
+### IsVisibleProperty Field
+
+Defines the [Avalonia.Controls.TreeDataGridColumn.IsVisible](xref:Avalonia.Controls.TreeDataGridColumn.IsVisible) property.
+
+```csharp
+public Avalonia.StyledProperty<bool> IsVisibleProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-dc42964fc0"></span>
+
+### MaxWidthProperty Field
+
+Defines the [Avalonia.Controls.TreeDataGridColumn.MaxWidth](xref:Avalonia.Controls.TreeDataGridColumn.MaxWidth) property.
+
+```csharp
+public Avalonia.StyledProperty<Nullable<Avalonia.Controls.GridLength>> MaxWidthProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1ded2efd51"></span>
+
+### MinWidthProperty Field
+
+Defines the [Avalonia.Controls.TreeDataGridColumn.MinWidth](xref:Avalonia.Controls.TreeDataGridColumn.MinWidth) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.GridLength> MinWidthProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0a0a137fb0"></span>
+
+### SortDirectionProperty Field
+
+Defines the [Avalonia.Controls.TreeDataGridColumn.SortDirection](xref:Avalonia.Controls.TreeDataGridColumn.SortDirection) property.
+
+```csharp
+public Avalonia.StyledProperty<Nullable<System.ComponentModel.ListSortDirection>> SortDirectionProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c2056b364a"></span>
+
+### TagProperty Field
+
+Defines the [Avalonia.Controls.TreeDataGridColumn.Tag](xref:Avalonia.Controls.TreeDataGridColumn.Tag) property.
+
+```csharp
+public Avalonia.StyledProperty<object> TagProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b2aa823419"></span>
+
+### WidthProperty Field
+
+Defines the [Avalonia.Controls.TreeDataGridColumn.Width](xref:Avalonia.Controls.TreeDataGridColumn.Width) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.GridLength> WidthProperty
+```
+
+</section>
+
+</ApiRefPage>
+

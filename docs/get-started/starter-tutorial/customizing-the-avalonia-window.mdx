@@ -2,12 +2,11 @@
 id: customizing-the-avalonia-window
 title: Customizing the Avalonia window
 description: How to adjust the attributes of the Avalonia window. Part 4 of 7 the Avalonia starter tutorial.
+doc-type: tutorial
 ---
 
-import AvaloniaWindowLayout from '/img/get-started/avalonia-window-layout.png';
 import TemperatureConverterPortraitOrientation from '/img/get-started/temperature-converter-portrait-orientation.png';
-
-# Customizing the Avalonia window
+import BoxModelDiagram from '@site/src/components/global/BoxModelDiagram';
 
 As [mentioned earlier](/docs/get-started/starter-tutorial), the Avalonia window is where your app will run on the target platform. In a .axaml file, the `<Window>...</Window>` tag defines what goes in the window.
 
@@ -21,7 +20,7 @@ Some layout controls, like `StackPanel` which you used earlier, create smaller s
 Each Avalonia window only accepts one control in its content zone.
 :::
 
-<Image light={AvaloniaWindowLayout} alt="A diagram displaying four overlapping, rectangular areas, representing the Avalonia window." position="center" maxWidth={400} cornerRadius="true" margin="0,0,30,0"/>
+<BoxModelDiagram />
 
 ## Default window attributes
 
@@ -43,7 +42,7 @@ Scroll to the top of the file **MainWindow.axaml** and examine the `<Window>` op
 ```
 
 :::note
-The first few lines of the `<Window>` tag declare the XML namespaces used by Avalonia. We use the namespace aliases `x`, `vm`, `d` and `mc`.
+The first few lines of the `<Window>` tag declare the XML namespaces used by Avalonia. The namespace aliases used are `x`, `vm`, `d`, and `mc`.
 :::
 
 ## Setting the window's attributes
@@ -62,6 +61,8 @@ mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
 
 2. Set `d:DesignWidth` to 400.
 3. Observe the previewer. You should see that the preview now resembles a mobile display.
+
+For more information, see the page on [previewing your UI design](/docs/app-development/xaml-preview-and-design-settings).
 
 <Image light={TemperatureConverterPortraitOrientation} alt="A screenshot of an app running in a window in portrait orientation." position="center" maxWidth={400} cornerRadius="true"/>
 

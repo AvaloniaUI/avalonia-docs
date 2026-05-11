@@ -1,0 +1,148 @@
+---
+title: 'IPen'
+hide_title: true
+slug: '/avalonia/media/ipen'
+uid: 'Avalonia.Media.IPen'
+commentId: 'T:Avalonia.Media.IPen'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Media'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IPen Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Media</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Describes how a stroke is drawn.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface IPen
+```
+
+</div>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Brush](#uid-ec0a343574) | Gets the brush used to draw the stroke. |
+| [DashStyle](#uid-1cd47a5667) | Gets the style of dashed lines drawn with a [Avalonia.Media.Pen](xref:Avalonia.Media.Pen) object. |
+| [LineCap](#uid-797d03c434) | Gets the type of shape to use on both ends of a line. |
+| [LineJoin](#uid-8612ac83fe) | Gets a value describing how to join consecutive line or curve segments in a [Avalonia.Media.PathFigure](xref:Avalonia.Media.PathFigure) contained in a [Avalonia.Media.PathGeometry](xref:Avalonia.Media.PathGeometry) object. |
+| [MiterLimit](#uid-556d0e09fc) | Gets the limit of the thickness of the join on a mitered corner. |
+| [Thickness](#uid-ef243419a4) | Gets the stroke thickness. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ec0a343574"></span>
+
+### Brush Property
+
+Gets the brush used to draw the stroke.
+
+```csharp
+public Avalonia.Media.IBrush Brush { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1cd47a5667"></span>
+
+### DashStyle Property
+
+Gets the style of dashed lines drawn with a [Avalonia.Media.Pen](xref:Avalonia.Media.Pen) object.
+
+```csharp
+public Avalonia.Media.IDashStyle DashStyle { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-797d03c434"></span>
+
+### LineCap Property
+
+Gets the type of shape to use on both ends of a line.
+
+```csharp
+public Avalonia.Media.PenLineCap LineCap { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8612ac83fe"></span>
+
+### LineJoin Property
+
+Gets a value describing how to join consecutive line or curve segments in a
+[Avalonia.Media.PathFigure](xref:Avalonia.Media.PathFigure) contained in a [Avalonia.Media.PathGeometry](xref:Avalonia.Media.PathGeometry) object.
+
+```csharp
+public Avalonia.Media.PenLineJoin LineJoin { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-556d0e09fc"></span>
+
+### MiterLimit Property
+
+Gets the limit of the thickness of the join on a mitered corner.
+
+```csharp
+public double MiterLimit { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ef243419a4"></span>
+
+### Thickness Property
+
+Gets the stroke thickness.
+
+```csharp
+public double Thickness { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

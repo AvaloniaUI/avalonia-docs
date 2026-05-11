@@ -1,0 +1,254 @@
+---
+title: 'PageTransitionItem'
+hide_title: true
+slug: '/avalonia/animation/pagetransitionitem'
+uid: 'Avalonia.Animation.PageTransitionItem'
+commentId: 'T:Avalonia.Animation.PageTransitionItem'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Animation'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">PageTransitionItem Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Animation</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/3111696698e2c3d6fe9aace8cb954153ee16b3e4/src/Avalonia.Base/Animation/PageTransitionItem.cs">PageTransitionItem.cs</a>
+</div>
+
+</div>
+
+<div className="apiref-page__lead">
+
+Describes a single visible page within a carousel viewport.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct PageTransitionItem
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> PageTransitionItem
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;PageTransitionItem&gt;
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [PageTransitionItem](#uid-fc0ef32712) | Describes a single visible page within a carousel viewport. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-fc0ef32712"></span>
+
+### PageTransitionItem Constructor
+
+Describes a single visible page within a carousel viewport.
+
+```csharp
+public PageTransitionItem(int Index, Avalonia.Visual Visual, double ViewportCenterOffset)
+```
+
+#### Parameters
+
+`Index` int
+
+
+`Visual` [Avalonia.Visual](xref:Avalonia.Visual)
+
+
+`ViewportCenterOffset` double
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Deconstruct](#uid-6ff2cb0220) | No summary available. |
+| [Equals (2 overloads)](#uid-e63f0d251f) | No summary available. |
+| [GetHashCode](#uid-972c29e7ce) | No summary available. |
+| [ToString](#uid-ddba61b28b) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6ff2cb0220"></span>
+
+### Deconstruct Method
+
+```csharp
+public void Deconstruct(int& Index, Avalonia.Visual& Visual, double& ViewportCenterOffset)
+```
+
+#### Parameters
+
+`Index` int&amp;
+
+
+`Visual` [Avalonia.Visual](xref:Avalonia.Visual)&amp;
+
+
+`ViewportCenterOffset` double&amp;
+
+
+</section>
+
+<span id="uid-e63f0d251f"></span>
+
+### Equals overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c5274a0729"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(Avalonia.Animation.PageTransitionItem other)
+```
+
+##### Parameters
+
+`other` [Avalonia.Animation.PageTransitionItem](xref:Avalonia.Animation.PageTransitionItem)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6d5c0dff96"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(object obj)
+```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-972c29e7ce"></span>
+
+### GetHashCode Method
+
+```csharp
+public int GetHashCode()
+```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ddba61b28b"></span>
+
+### ToString Method
+
+```csharp
+public string ToString()
+```
+
+#### Returns
+
+string
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Index](#uid-54e1970952) | No summary available. |
+| [ViewportCenterOffset](#uid-ddba67315b) | No summary available. |
+| [Visual](#uid-f99b270adf) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-54e1970952"></span>
+
+### Index Property
+
+```csharp
+public int Index { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ddba67315b"></span>
+
+### ViewportCenterOffset Property
+
+```csharp
+public double ViewportCenterOffset { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f99b270adf"></span>
+
+### Visual Property
+
+```csharp
+public Avalonia.Visual Visual { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

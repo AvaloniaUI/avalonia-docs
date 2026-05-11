@@ -1,0 +1,108 @@
+---
+id: create-your-first-project
+title: Create your first project
+description: Create and run your first Avalonia application using the MVVM template in your preferred IDE or from the command line.
+doc-type: tutorial
+---
+
+import WelcomeToAvalonia from '/img/get-started/welcome-to-avalonia.png';
+
+<p><small>{frontMatter.description}</small></p>
+<br/>
+
+This guide walks you through creating a new Avalonia app from a template and running it. By the end, you will have a working Avalonia window on screen.
+
+## Create the project
+
+For your first project, use the Model-View-ViewModel (MVVM) template. This template sets up a project with the MVVM pattern, which is the recommended way to structure Avalonia applications.
+
+<Tabs groupId="ide">
+  <TabItem value="vs" label="Visual Studio" default>
+1. In Visual Studio, click **File → New → Project/Solution**.
+2. In the search box, input "Avalonia".
+3. Select **Avalonia .NET MVVM App** from the search results. If Visual Studio offers multiple options, select the one for **C#**. Then, click **Next**.
+4. Name your project "GetStartedApp".
+5. Change the target directory if desired. Then, click **Next**.
+6. Select your preferred version of **.NET** as the framework.
+7. If given the option to choose target platforms, select **Desktop**.
+8. Click **Create**.
+  </TabItem>
+  <TabItem value="vsc" label="Visual Studio Code">
+1. In Visual Studio Code, bring up the command palette. This is <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> on Windows, or <kbd>⌘</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> on macOS.
+2. Input ".NET" into the search.
+3. From the search results, select **.NET: New Project...**
+4. From the list of project templates, select **Avalonia MVVM App**.
+5. Specify a directory on your device for the project.
+6. Name your project "GetStartedApp".
+7. Click **Create project**.
+  </TabItem>
+  <TabItem value="rider" label="Rider">
+1. On the Rider startup screen, select **New Solution**.
+2. In the sidebar, scroll down to "Custom Templates". Select **Avalonia .NET MVVM App**.
+3. Name your solution "GetStartedApp".
+4. Click **Create**.
+  </TabItem>
+  <TabItem value="cli" label="Command line">
+Run this command:
+
+```bash
+dotnet new avalonia.mvvm -o GetStartedApp
+```
+
+Check your device for a new folder named **GetStartedApp**, containing the new project files.
+  </TabItem>
+</Tabs>
+
+## Run the project
+
+<Tabs groupId="ide">
+  <TabItem value="vs" label="Visual Studio" default>
+In the top toolbar, select "GetStartedApp" next to the **Run** button. Then, click **Run**.
+
+The solution builds and runs your app in a new window. By default, this displays the string, "Welcome to Avalonia!"
+  </TabItem>
+  <TabItem value="vsc" label="Visual Studio Code">
+1. Select **Run and Debug** in the side navigation bar.
+2. If prompted to select a debugger, choose **C#**.
+3. Click **Run and Debug.**
+
+The solution builds and runs your app in a new window. By default, this displays the string, "Welcome to Avalonia!"
+  </TabItem>
+  <TabItem value="rider" label="Rider">
+Click **Run** in the top toolbar.
+
+The solution builds and runs your app in a new window. By default, this displays the string, "Welcome to Avalonia!"
+  </TabItem>
+  <TabItem value="cli" label="Command line">
+Navigate to the directory containing your **GetStartedApp** project and run:
+
+```bash
+dotnet run
+```
+
+The solution builds and runs your app in a new window. By default, this displays the string, "Welcome to Avalonia!"
+  </TabItem>
+</Tabs>
+
+<Image light={WelcomeToAvalonia} alt="A screenshot of the default Avalonia app running in a window." position="center" maxWidth={400} cornerRadius="true" margin={10}/>
+
+## What's in the project?
+
+The MVVM template creates a project with the following structure:
+
+| File/Folder | Purpose |
+|---|---|
+| **App.axaml** | Application-level resources and styles. The `.axaml` extension is short for Avalonia XAML. |
+| **ViewModels/** | Contains `MainWindowViewModel`, which holds data and logic for the main window. |
+| **Views/MainWindow.axaml** | The XAML markup that defines the main window's appearance. |
+| **Views/MainWindow.axaml.cs** | The code-behind file for the main window. |
+| **Program.cs** | The application entry point that configures and launches Avalonia. |
+
+## Next steps
+
+You have a working Avalonia app. Continue with the starter tutorial to build a temperature converter and learn core Avalonia concepts:
+
+<br />
+<div style={{ display: 'flex', justifyContent: 'center', gap: '10px' }}>
+  <Button label="Starter tutorial: Build a temperature converter →" link="/docs/get-started/starter-tutorial" variant="primary" outline />
+</div>

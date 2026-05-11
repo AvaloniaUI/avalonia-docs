@@ -1,0 +1,120 @@
+---
+id: install-avalonia
+title: Install Avalonia
+description: Install the .NET SDK and Avalonia project templates so you can create Avalonia applications from the command line or your IDE.
+doc-type: how-to
+---
+
+<p><small>{frontMatter.description}</small></p>
+<br/>
+
+## Prerequisites
+
+Before you install Avalonia, make sure you have:
+
+- **.NET 8.0 or later** (as of October 2025)
+
+If you do not have .NET installed, download it from the [.NET website](https://dotnet.microsoft.com/en-us/download/dotnet) and follow the installation instructions for your operating system.
+
+Verify your installation by running:
+
+```bash
+dotnet --version
+```
+
+The output should show version `8.0` or higher. If the command is not recognized, make sure the .NET SDK directory is on your system `PATH`.
+
+:::tip[Multiple .NET versions]
+You can have several .NET SDK versions installed side by side. Avalonia requires .NET 8.0 or later, but your project can still target earlier frameworks through multi-targeting if needed. Run `dotnet --list-sdks` to see every SDK version on your machine.
+:::
+
+## Install the Avalonia templates
+
+Avalonia uses standard .NET templates to create new projects. Install them by running:
+
+```bash
+dotnet new install Avalonia.Templates
+```
+
+You should see output confirming the templates were installed:
+
+```text
+Template Name                                 Short Name                  Language    Tags
+--------------------------------------------  --------------------------  ----------  ---------------------------------------------------------
+Avalonia .NET App                             avalonia.app                [C#],F#     Desktop/Xaml/Avalonia/Windows/Linux/macOS
+Avalonia .NET MVVM App                        avalonia.mvvm               [C#],F#     Desktop/Xaml/Avalonia/Windows/Linux/macOS
+Avalonia Cross Platform Application           avalonia.xplat              [C#],F#     Desktop/Xaml/Avalonia/Browser/Mobile
+Avalonia Resource Dictionary                  avalonia.resource                       Desktop/Xaml/Avalonia/Windows/Linux/macOS
+Avalonia Styles                               avalonia.styles                         Desktop/Xaml/Avalonia/Windows/Linux/macOS
+Avalonia TemplatedControl                     avalonia.templatedcontrol   [C#],F#     Desktop/Xaml/Avalonia/Windows/Linux/macOS
+Avalonia UserControl                          avalonia.usercontrol        [C#],F#     Desktop/Xaml/Avalonia/Windows/Linux/macOS
+Avalonia Window                               avalonia.window             [C#],F#     Desktop/Xaml/Avalonia/Windows/Linux/macOS
+```
+
+:::tip
+You can check which templates are already installed at any time by running:
+
+```bash
+dotnet new list
+```
+
+Look for entries with "Avalonia" in the name.
+:::
+
+### Update existing templates
+
+If you installed the templates previously, you can update them to the latest version:
+
+```bash
+dotnet new update
+```
+
+This updates all installed template packages, including `Avalonia.Templates`. To install a specific template version (for example, to match a particular Avalonia release), specify the version explicitly:
+
+```bash
+dotnet new install Avalonia.Templates::11.2.0
+```
+
+### Uninstall templates
+
+If you need to remove the Avalonia templates and start fresh, run:
+
+```bash
+dotnet new uninstall Avalonia.Templates
+```
+
+Then reinstall them with the `dotnet new install` command shown above.
+
+:::note
+If you install the Avalonia for Visual Studio extension, the templates are included automatically. You only need to run `dotnet new install` if you use a different IDE or want to use the command line.
+:::
+
+## Verify the installation
+
+Create a quick test project to confirm everything is working:
+
+```bash
+dotnet new avalonia.app -o TestApp
+cd TestApp
+dotnet build
+```
+
+If the build succeeds, your installation is ready. You can delete the `TestApp` folder when you are done.
+
+### Common issues
+
+- **`dotnet new` does not list the Avalonia templates.** Make sure you ran `dotnet new install Avalonia.Templates` and that the command completed without errors. Restart your terminal and try again.
+- **Build errors referencing missing SDKs.** Confirm that `dotnet --version` reports 8.0 or later. If you have an older SDK set as the default by a `global.json` file in a parent directory, either remove that file or update it to require a compatible SDK version.
+- **Permission errors on macOS or Linux.** If the install command fails with a permission error, make sure you are not running it with `sudo`. The .NET template engine installs templates into your user profile directory and does not require elevated privileges.
+
+## Next steps
+
+<div style={{ display: 'flex', justifyContent: 'center', gap: '10px' }}>
+  <Button label="Set up your IDE →" link="/docs/get-started/set-up-your-ide" variant="primary" outline />
+</div>
+
+## See also
+
+- [Set up your IDE](/docs/get-started/set-up-your-ide)
+- [Create your first project](/docs/get-started/create-your-first-project)
+- [Supported platforms](/docs/supported-platforms)

@@ -1,0 +1,190 @@
+---
+title: 'TreeDataGridCheckBoxCell'
+hide_title: true
+slug: '/avalonia/controls/primitives/treedatagridcheckboxcell'
+uid: 'Avalonia.Controls.Primitives.TreeDataGridCheckBoxCell'
+commentId: 'T:Avalonia.Controls.Primitives.TreeDataGridCheckBoxCell'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.TreeDataGrid'
+assembly: 'Avalonia.Controls.TreeDataGrid'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Primitives'
+tfms:
+  - 'net8.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">TreeDataGridCheckBoxCell Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Primitives</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A control in a [Avalonia.Controls.TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid) that displays a cell which allows editing of
+boolean values using a checkbox.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class TreeDataGridCheckBoxCell
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> TemplatedControl <span className="apiref-page__relation-separator">-&gt;</span> <a href="treedatagridcell">TreeDataGridCell</a> <span className="apiref-page__relation-separator">-&gt;</span> TreeDataGridCheckBoxCell
+</div>
+</div>
+
+## Remarks
+
+[TreeDataGridCheckBoxCell](xref:Avalonia.Controls.Primitives.TreeDataGridCheckBoxCell) displays boolean values as checkboxes in a [TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid).
+It supports two-state (checked/unchecked) or three-state
+(checked/unchecked/indeterminate) behavior, and can be configured as read-only.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [TreeDataGridCheckBoxCell](#uid-b1b7a01f9b) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b1b7a01f9b"></span>
+
+### TreeDataGridCheckBoxCell Constructor
+
+```csharp
+public TreeDataGridCheckBoxCell()
+```
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [IsReadOnly](#uid-c2cf099150) | Gets or sets a value indicating whether the checkbox is read-only. |
+| [IsThreeState](#uid-a653da962f) | Gets or sets a value indicating whether the checkbox supports three states. |
+| [Value](#uid-efdc6ef06d) | Gets or sets the current value of the checkbox. |
+| [ColumnIndex](treedatagridcell.mdx#uid-6d0d40f6a8) | Gets the index of the column that this cell belongs to. Inherited from [TreeDataGridCell](treedatagridcell.mdx). |
+| [IsEditing](treedatagridcell.mdx#uid-66586fe73f) | Gets a value indicating whether the cell is in edit mode. Inherited from [TreeDataGridCell](treedatagridcell.mdx). |
+| [IsEffectivelySelected](treedatagridcell.mdx#uid-8ce8f3cd79) | Gets a value indicating whether the cell is effectively selected, either directly or because its containing row is selected. Inherited from [TreeDataGridCell](treedatagridcell.mdx). |
+| [IsSelected](treedatagridcell.mdx#uid-91d5f305c8) | Gets a value indicating whether the cell is selected. Inherited from [TreeDataGridCell](treedatagridcell.mdx). |
+| [Model](treedatagridcell.mdx#uid-6720862544) | Gets the data model for the cell. Inherited from [TreeDataGridCell](treedatagridcell.mdx). |
+| [RowIndex](treedatagridcell.mdx#uid-c4d45a681c) | Gets the index of the row that this cell belongs to. Inherited from [TreeDataGridCell](treedatagridcell.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c2cf099150"></span>
+
+### IsReadOnly Property
+
+Gets or sets a value indicating whether the checkbox is read-only.
+
+```csharp
+public bool IsReadOnly { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a653da962f"></span>
+
+### IsThreeState Property
+
+Gets or sets a value indicating whether the checkbox supports three states.
+
+```csharp
+public bool IsThreeState { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-efdc6ef06d"></span>
+
+### Value Property
+
+Gets or sets the current value of the checkbox.
+
+```csharp
+public Nullable<bool> Value { get; set; }
+```
+
+</section>
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [IsReadOnlyProperty](#uid-e716d2a4c2) | Defines the [Avalonia.Controls.Primitives.TreeDataGridCheckBoxCell.IsReadOnly](xref:Avalonia.Controls.Primitives.TreeDataGridCheckBoxCell.IsReadOnly) property. |
+| [IsThreeStateProperty](#uid-dc1d95016d) | Defines the [Avalonia.Controls.Primitives.TreeDataGridCheckBoxCell.IsThreeState](xref:Avalonia.Controls.Primitives.TreeDataGridCheckBoxCell.IsThreeState) property. |
+| [ValueProperty](#uid-7b8e183058) | Defines the [Avalonia.Controls.Primitives.TreeDataGridCheckBoxCell.Value](xref:Avalonia.Controls.Primitives.TreeDataGridCheckBoxCell.Value) property. |
+| [IsSelectedProperty](treedatagridcell.mdx#uid-8249e3bb68) | Defines the [Avalonia.Controls.Primitives.TreeDataGridCell.IsSelected](xref:Avalonia.Controls.Primitives.TreeDataGridCell.IsSelected) property. Inherited from [TreeDataGridCell](treedatagridcell.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e716d2a4c2"></span>
+
+### IsReadOnlyProperty Field
+
+Defines the [Avalonia.Controls.Primitives.TreeDataGridCheckBoxCell.IsReadOnly](xref:Avalonia.Controls.Primitives.TreeDataGridCheckBoxCell.IsReadOnly) property.
+
+```csharp
+public Avalonia.DirectProperty<Avalonia.Controls.Primitives.TreeDataGridCheckBoxCell, bool> IsReadOnlyProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-dc1d95016d"></span>
+
+### IsThreeStateProperty Field
+
+Defines the [Avalonia.Controls.Primitives.TreeDataGridCheckBoxCell.IsThreeState](xref:Avalonia.Controls.Primitives.TreeDataGridCheckBoxCell.IsThreeState) property.
+
+```csharp
+public Avalonia.DirectProperty<Avalonia.Controls.Primitives.TreeDataGridCheckBoxCell, bool> IsThreeStateProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7b8e183058"></span>
+
+### ValueProperty Field
+
+Defines the [Avalonia.Controls.Primitives.TreeDataGridCheckBoxCell.Value](xref:Avalonia.Controls.Primitives.TreeDataGridCheckBoxCell.Value) property.
+
+```csharp
+public Avalonia.DirectProperty<Avalonia.Controls.Primitives.TreeDataGridCheckBoxCell, Nullable<bool>> ValueProperty
+```
+
+</section>
+
+</ApiRefPage>
+

@@ -7,7 +7,7 @@ import NotFoundContent from '@theme/NotFound/Content';
 export default function Index(): ReactNode {
   const title = translate({
     id: 'theme.NotFound.title',
-    message: 'Page Not Found',
+    message: 'Page not found',
   });
   return (
     <>
