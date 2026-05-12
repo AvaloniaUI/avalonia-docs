@@ -167,12 +167,12 @@ Explore tutorials, sample apps, and quick guides to accelerate your Avalonia lea
 :::
 
 <DocsCards>
-  <DocsCard header="Sandbox" href="https://github.com/AvaloniaUI/Avalonia.Controls.RichTextEditor/blob/main/samples/Sandbox">
-    <p>A wide-open playground to experiment with the rich text editor's features.</p>
+  <DocsCard header="RichTextEditor demo" href="https://github.com/AvaloniaUI/AvaloniaPro.Samples/tree/main/RichTextEditorSample/RichTextEditor.Demo">
+    <p>Sample project demonstrating common features of RichTextEditor.</p>
   </DocsCard>
 
-  <DocsCard header="Debugger" href="https://github.com/AvaloniaUI/Avalonia.Controls.RichTextEditor/blob/main/samples/RichTextEditor.Debugger">
-    <p>Implement a debugging and diagnostic tool to understand the internal status of the rich text editor.</p>
+  <DocsCard header="Document viewer" href="https://github.com/AvaloniaUI/AvaloniaPro.Samples/tree/main/RichTextEditorSample/DocumentViewer.Demo">
+    <p>Sample project demonstrating the use of RichTextEditor as a document viewer.</p>
   </DocsCard>
 </DocsCards>
 
