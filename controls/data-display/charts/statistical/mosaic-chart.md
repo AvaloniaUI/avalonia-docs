@@ -1,0 +1,63 @@
+---
+id: mosaic-chart
+title: Mosaic chart
+description: Visualizes relationships between two categorical variables by scaling both the width and height of segments to represent their proportions of the total.
+doc-type: reference
+tags:
+  - avalonia pro
+---
+
+import chartsAnalyticsMosaic from '/img/controls/charts/charts-analytics-mosaic.png';
+
+:::info
+[Charts](/controls/data-display/charts) are available with [Avalonia Pro](https://avaloniaui.net/pricing).
+:::
+
+Mosaic charts (Marimekko) visualize relationships between categories using area. Both the width and height of segments are scaled to represent percentages of the total.
+
+<Image light={chartsAnalyticsMosaic} maxWidth={400} position="center" cornerRadius="true" alt="Mosaic chart with rectangular tiles scaled by both width and height to show proportions across two categorical variables." />
+
+## When to use
+- **Market segmentation**: Showing sales by region (width) and by product category (height).
+- **Resource expenditure**: Visualizing budget allocation across departments and cost types.
+- **Multi-factor analysis**: Understanding how two different qualitative variables interact.
+
+## Code example
+
+### XAML
+```xml
+<charts:MosaicChart Title="Sales by Region" Height="300"
+                      ItemsSource="{Binding MosaicData}"
+                      GroupPath="Region"
+                      SubGroupPath="Category"
+                      ValuePath="Sales" />
+```
+
+### Data model (C#)
+```csharp
+public record MosaicItem(string Region, string Category, double Sales);
+
+public ObservableCollection<MosaicItem> MosaicData { get; } = new()
+{
+    new("North", "Electronics", 450),
+    new("North", "Clothing", 320),
+    new("North", "Home", 210),
+    new("South", "Electronics", 380),
+    new("South", "Clothing", 410),
+    new("South", "Home", 180),
+    new("East", "Electronics", 290),
+    new("East", "Clothing", 250),
+    new("East", "Home", 350),
+    new("West", "Clothing", 280),
+    new("West", "Home", 150)
+};
+```
+
+## Common properties
+
+| Property | Description | Default |
+| :--- | :--- | :--- |
+| `ItemsSource` | The collection of data segments. | `null` |
+| `GroupPath` | Primary category (determines width). | `null` |
+| `SubGroupPath` | Secondary category (determines height). | `null` |
+| `ValuePath` | Numerical value for scaling. | `null` |
