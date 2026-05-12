@@ -163,7 +163,7 @@ Explore tutorials, sample apps, and quick guides to accelerate your Avalonia lea
 ## RichTextEditor
 
 :::info
-[`RichTextEditor`](/controls/input/text-input/richtexteditor) is available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate) Enterprise.
+[`RichTextEditor`](/controls/input/text-input/richtexteditor) is available as part of [Avalonia Pro](https://avaloniaui.net/pricing) Enterprise.
 :::
 
 <DocsCards>

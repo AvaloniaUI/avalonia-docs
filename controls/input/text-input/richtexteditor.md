@@ -3,7 +3,8 @@ id: richtexteditor
 title: RichTextEditor
 doc-type: reference
 tags:
- - accelerate
+ - avalonia pro
+ - avalonia enterprise
 ---
 
 import Tabs from '@theme/Tabs';

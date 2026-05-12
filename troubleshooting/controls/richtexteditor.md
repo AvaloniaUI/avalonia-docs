@@ -5,7 +5,8 @@ description: Troubleshoot common RichTextEditor problems.
 doc-type: troubleshooting
 sidebar_label: RichTextEditor
 tags:
-  - accelerate
+  - avalonia pro
+  - avalonia enterprise
 ---
 
 :::info
