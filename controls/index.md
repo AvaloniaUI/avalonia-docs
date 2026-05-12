@@ -37,6 +37,10 @@ Avalonia apps are made of high-level building blocks called controls, which allo
   <p>A full calendar view that lets users browse and select dates visually.</p>
 </DocsCard>
 
+<DocsCard header="Charts" href="/controls/data-display/charts" icon="/icons/charts-icon@2x.png">
+  <p>Data visualization controls to build dashboards, financial tools, scientific reports, and more.</p>
+</DocsCard>
+
 <DocsCard header="Checkbox" href="/controls/input/selectors/checkbox" icon="/icons/checkbox-icon@2x.png">
   <p>Use a checkbox for binary user decisions, such as feature toggles, survey questions or task lists.</p>
 </DocsCard>

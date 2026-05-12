@@ -1,0 +1,302 @@
+---
+id: shape-map-chart
+title: Shape map
+description: Renders arbitrary geographic or custom shapes from GeoJSON, serving as the base for specialized maps and interactive custom region visualizations.
+doc-type: reference
+tags:
+  - avalonia pro
+---
+
+:::info
+[Charts](/controls/data-display/charts) are available with [Avalonia Pro](https://avaloniaui.net/pricing).
+:::
+
+The Shape Map control allows for arbitrary geographic or custom shape visualization. It serves as the base for specialized maps, allowing developers to define custom regions and interactions.
+
+## When to use
+- **Custom regions**: Visualizing regions not covered by standard map sets (e.g., specific postal zones).
+- **Physical layouts**: Mapping data onto a schematic (e.g., a hardware board or factory floor).
+- **Interactive diagrams**: Creating high-performance interactive shape systems.
+
+## Code example
+
+### XAML
+
+```xml
+<charts:ShapeMap Title="Regional Analysis" Height="400">
+    <charts:ShapeMap.Layers>
+        <charts:ShapeLayer GeoJson="{Binding AreaGeoJson}"
+                             ItemsSource="{Binding AreaData}"
+                             RegionPath="AreaId" />
+    </charts:ShapeMap.Layers>
+</charts:ShapeMap>
+```
+
+### Data model (C#)
+
+Ensure the GeoJSON files are included in your project and available at the specified relative paths at runtime.
+
+```csharp
+using System.IO;
+
+public record AreaInfo(string AreaId, string Status);
+
+public string AreaGeoJson { get; } =
+    File.ReadAllText("Resources/custom-areas.geojson");
+
+public string WorldGeoJson { get; } =
+    File.ReadAllText("Resources/ne_110m_world.geojson");
+
+public ObservableCollection<AreaInfo> AreaData { get; } = new()
+{
+    new("A1", "Active"), new("A2", "Maintenance"), new("B1", "Active")
+};
+
+public record OfficeLocation(double Lat, double Lon, string Name);
+
+public ObservableCollection<OfficeLocation> Offices { get; } = new()
+{
+    new(40.7128, -74.0060, "New York"),
+    new(51.5074, -0.1278, "London"),
+    new(35.6762, 139.6503, "Tokyo")
+};
+
+public record Route(double FromLat, double FromLon, double ToLat, double ToLon, double Passengers);
+
+public ObservableCollection<Route> Routes { get; } = new()
+{
+    new(40.7128, -74.0060, 51.5074, -0.1278, 95),
+    new(34.0522, -118.2437, 35.6762, 139.6503, 85)
+};
+
+public record Segment(string Category, double Amount);
+
+public record RegionalPoint(double Lat, double Lon, ObservableCollection<Segment> Segments);
+
+public ObservableCollection<RegionalPoint> RegionalData { get; } = new()
+{
+    new(40.7128, -74.0060, new ObservableCollection<Segment>
+    {
+        new("Tech", 45),
+        new("Finance", 30),
+        new("Retail", 25)
+    }),
+    new(51.5074, -0.1278, new ObservableCollection<Segment>
+    {
+        new("Tech", 30),
+        new("Finance", 50),
+        new("Retail", 20)
+    })
+};
+```
+
+## Common properties (ShapeMap)
+
+| Property | Description | Default |
+| :--- | :--- | :--- |
+| `Layers` | Collection of `MapLayer` instances rendered in order. | Empty collection |
+
+## Common properties (ShapeLayer)
+
+| Property | Description | Default |
+| :--- | :--- | :--- |
+| `GeoJson` | The geometry data for the shapes. | `null` |
+| `Source` | URI source used to load GeoJSON data. | `null` |
+| `GeoJsonIdPath` | Property name in the GeoJSON used as the region identifier. | `null` |
+| `ItemsSource` | The data items representing the shapes. | `null` |
+| `RegionPath` | Key property to match data to Shape IDs. | `null` |
+| `ValuePath` | Property name for the numeric value bound to each shape. | `null` |
+| `MinValue` | Minimum value used for normalization. | `0.0` |
+| `MaxValue` | Maximum value used for normalization. | `100.0` |
+| `LowBrush` | Brush used for the lowest data values. | `#E3F2FD` |
+| `HighBrush` | Brush used for the highest data values. | `#1565C0` |
+| `Stroke` | Brush used for shape outlines. | `null` |
+| `StrokeThickness` | Thickness of the shape outlines. | `0.5` |
+| `ShowLabels` | Whether to draw labels for shapes. | `false` |
+| `LabelPath` | Property name used for shape labels. | `null` |
+| `LabelForeground` | Brush used for shape labels. | `null` |
+| `IsSelectionEnabled` | Whether shape selection is enabled. | `true` |
+| `SelectedItem` | Currently selected item in single-selection scenarios. | `null` |
+| `SelectedItems` | Collection of selected items in multi-selection scenarios. | `null` |
+| `SelectionMode` | Selection behavior for the layer. | `None` |
+| `SelectionBrush` | Brush used for selected shapes. | `#FFC107` |
+| `SelectionStroke` | Outline brush used for selected shapes. | `null` |
+| `SelectionStrokeThickness` | Outline thickness used for selected shapes. | `2.0` |
+| `HoverBrush` | Brush applied while a shape is hovered. | `White @ 30% opacity` |
+| `ColorMappings` | Optional explicit color-mapping rules for shapes. | Empty collection |
+| `Legend` | Optional legend associated with the layer. | `null` |
+
+## Common properties (MapLegend)
+
+`MapLegend` displays legend items generated by a map layer, such as explicit `ShapeLayer.ColorMappings`.
+
+| Property | Description | Default |
+| :--- | :--- | :--- |
+| `Source` | Map layer used to generate legend items. | `null` |
+| `Orientation` | Layout orientation for legend entries, `Horizontal` or `Vertical`. | `Vertical` |
+| `ItemTemplate` | Optional template used to render each legend item. | `null` |
+| `Items` | Read-only `AvaloniaList<LegendItem>` generated from the source layer. | Empty collection |
+
+## Map layers
+
+In addition to `ShapeLayer`, the Shape Map supports several specialized layer types that can be added to the `Layers` collection. Each layer renders a different kind of overlay on the map.
+
+`ShapeMap.Layers` can be bound to an `IList<MapLayer>`. If the list implements `INotifyCollectionChanged`, adding or removing layers at runtime updates rendering, hit testing, and generated legends.
+
+Layer collection properties such as `MarkerLayer.Markers`, `VectorLayer.Arcs`, and `HeatmapLayer.ItemsSource` also update the map when their collection source implements `INotifyCollectionChanged`. Replacing a layer collection property with a new list rebinds that layer to the new source.
+
+### MarkerLayer
+
+Renders individual point markers at geographic coordinates. Markers can be defined manually or bound to a data source.
+
+#### Common properties (`MarkerLayer`)
+
+| Property | Description | Default |
+| :--- | :--- | :--- |
+| `Markers` | Collection of `MapMarker` objects defined manually. | Empty collection |
+| `ItemsSource` | Data source for generating markers automatically. | `null` |
+| `LatitudePath` | Property path to the latitude value in the data source items. | `null` |
+| `LongitudePath` | Property path to the longitude value in the data source items. | `null` |
+| `LabelPath` | Property path to the label value in the data source items. | `null` |
+| `MarkerSize` | Default size of each marker in pixels. | `10.0` |
+| `MarkerType` | Default marker shape: `Circle`, `Diamond`, `Triangle`, `Rectangle`, or `Pin`. | `Circle` |
+| `Fill` | Default fill brush for markers. | `Red` |
+| `Stroke` | Default stroke brush for markers. | `White` |
+| `IsVisible` | Whether the layer is visible. | `true` |
+| `Opacity` | Opacity of the layer. | `1.0` |
+| `TooltipTemplate` | Data template used for tooltips. | `null` |
+
+#### XAML
+
+```xml
+<charts:ShapeMap Title="Office Locations" Height="400">
+    <charts:ShapeMap.Layers>
+        <charts:ShapeLayer GeoJson="{Binding WorldGeoJson}" />
+        <charts:MarkerLayer ItemsSource="{Binding Offices}"
+                              LatitudePath="Lat" LongitudePath="Lon"
+                              LabelPath="Name" MarkerSize="12"
+                              MarkerType="Pin" Fill="DodgerBlue" />
+    </charts:ShapeMap.Layers>
+</charts:ShapeMap>
+```
+
+### LineLayer
+
+Renders connection lines between pairs of geographic points. Line thickness can vary based on a data value. Lines can be drawn as straight or curved.
+
+#### Common properties (`LineLayer`)
+
+| Property | Description | Default |
+| :--- | :--- | :--- |
+| `ItemsSource` | Data source containing connection items. | `null` |
+| `FromLatitudePath` | Property path for the source latitude. | `null` |
+| `FromLongitudePath` | Property path for the source longitude. | `null` |
+| `ToLatitudePath` | Property path for the destination latitude. | `null` |
+| `ToLongitudePath` | Property path for the destination longitude. | `null` |
+| `ValuePath` | Property path for the line value (affects thickness). | `null` |
+| `Stroke` | Brush used for the connection lines. | `#2196F3` |
+| `MinLineThickness` | Minimum line thickness. | `1.0` |
+| `MaxLineThickness` | Maximum line thickness. | `6.0` |
+| `IsCurved` | Whether to draw curved (Bezier) lines instead of straight lines. | `true` |
+| `ShowEndpoints` | Whether to show circles at each endpoint. | `true` |
+| `IsVisible` | Whether the layer is visible. | `true` |
+| `Opacity` | Opacity of the layer. | `1.0` |
+| `TooltipTemplate` | Data template used for tooltips. | `null` |
+
+#### XAML
+
+```xml
+<charts:ShapeMap Title="Flight Routes" Height="400">
+    <charts:ShapeMap.Layers>
+        <charts:ShapeLayer GeoJson="{Binding WorldGeoJson}" />
+        <charts:LineLayer ItemsSource="{Binding Routes}"
+                            FromLatitudePath="FromLat" FromLongitudePath="FromLon"
+                            ToLatitudePath="ToLat" ToLongitudePath="ToLon"
+                            ValuePath="Passengers" IsCurved="True"
+                            MinLineThickness="1" MaxLineThickness="5" />
+    </charts:ShapeMap.Layers>
+</charts:ShapeMap>
+```
+
+### VectorLayer
+
+Renders geometric shapes (lines, arcs, circles, polygons, and polylines) on the map using geographic coordinates. Shapes are defined via layer collections.
+
+#### Common properties (`VectorLayer`)
+
+| Property | Description | Default |
+| :--- | :--- | :--- |
+| `Lines` | Collection of `MapLine` objects. | Empty collection |
+| `Arcs` | Collection of `MapArc` objects. | Empty collection |
+| `Circles` | Collection of `MapCircle` objects. | Empty collection |
+| `Polygons` | Collection of `MapPolygon` objects. | Empty collection |
+| `Polylines` | Collection of `MapPolyline` objects. | Empty collection |
+| `IsLineAnimationEnabled` | Whether to animate line drawing. | `true` |
+| `IsVisible` | Whether the layer is visible. | `true` |
+| `Opacity` | Opacity of the layer. | `1.0` |
+| `TooltipTemplate` | Data template used for tooltips. | `null` |
+
+#### XAML
+
+```xml
+<charts:ShapeMap Title="Territory Boundaries" Height="400">
+    <charts:ShapeMap.Layers>
+        <charts:ShapeLayer GeoJson="{Binding WorldGeoJson}" />
+        <charts:VectorLayer IsLineAnimationEnabled="True">
+            <charts:VectorLayer.Circles>
+                <charts:MapCircle Latitude="48.8566" Longitude="2.3522"
+                                    Radius="20" StrokeThickness="2">
+                    <charts:MapCircle.Fill>
+                        <SolidColorBrush Color="#402196F3" />
+                    </charts:MapCircle.Fill>
+                </charts:MapCircle>
+            </charts:VectorLayer.Circles>
+            <charts:VectorLayer.Lines>
+                <charts:MapLine FromLatitude="40.7128" FromLongitude="-74.006"
+                                  ToLatitude="51.5074" ToLongitude="-0.1278"
+                                  StrokeThickness="2" />
+            </charts:VectorLayer.Lines>
+        </charts:VectorLayer>
+    </charts:ShapeMap.Layers>
+</charts:ShapeMap>
+```
+
+### PieChartMapLayer
+
+Draws pie charts at specific geographic coordinates. Each pie chart visualizes a breakdown of values for that location.
+
+#### Common properties (`PieChartMapLayer`)
+
+| Property | Description | Default |
+| :--- | :--- | :--- |
+| `ItemsSource` | Data source containing items with geographic coordinates and value segments. | `null` |
+| `LatitudePath` | Property path for the latitude coordinate. | `null` |
+| `LongitudePath` | Property path for the longitude coordinate. | `null` |
+| `ValuesPath` | Property path to the collection of segment objects within each data item. | `null` |
+| `ValuePath` | Property path to the numeric value within each segment object. | `null` |
+| `LabelPath` | Property path to the label within each segment object. | `null` |
+| `PieSize` | Diameter of the pie charts in pixels. | `30.0` |
+| `Palette` | Color palette used for pie slices. | Built-in 8-color palette |
+| `IsVisible` | Whether the layer is visible. | `true` |
+| `Opacity` | Opacity of the layer. | `1.0` |
+| `TooltipTemplate` | Data template used for tooltips. | `null` |
+
+#### XAML
+
+```xml
+<charts:ShapeMap Title="Regional Sales Breakdown" Height="400">
+    <charts:ShapeMap.Layers>
+        <charts:ShapeLayer GeoJson="{Binding WorldGeoJson}" />
+        <charts:PieChartMapLayer ItemsSource="{Binding RegionalData}"
+                                   LatitudePath="Lat" LongitudePath="Lon"
+                                   ValuesPath="Segments" ValuePath="Amount"
+                                   LabelPath="Category" PieSize="40" />
+    </charts:ShapeMap.Layers>
+</charts:ShapeMap>
+```
+
+## See also
+
+- [Choropleth map](/controls/data-display/charts/maps/choropleth-map-chart)
+- [Bubble map](/controls/data-display/charts/maps/bubble-map-chart)
+- [Heatmap](/controls/data-display/charts/maps/heatmap-map-chart)
