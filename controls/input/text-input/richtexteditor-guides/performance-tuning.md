@@ -3,7 +3,8 @@ id: performance-tuning
 title: Performance Tuning
 doc-type: guide
 tags:
- - accelerate
+ - avalonia pro
+ - avalonia enterprise
 ---
 
 Performance tuning guide for `RichTextEditor`. Covers batch edits, event optimization, memory management, serialization, and profiling strategies.
@@ -372,6 +373,6 @@ editor.UndoLimit = 100;
 
 ## See also
 
-- [RichTextEditor reference](../richtexteditor)
-- [Thread safety](thread-safety)
-- [Extension patterns](extension-patterns)
+- [RichTextEditor reference](/controls/input/text-input/richtexteditor)
+- [Thread safety](/controls/input/text-input/richtexteditor-guides/thread-safety)
+- [Extension patterns](/controls/input/text-input/richtexteditor-guides/extension-patterns)

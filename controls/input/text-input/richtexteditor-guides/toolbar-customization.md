@@ -28,7 +28,7 @@ This control is available as part of [Avalonia Pro](https://avaloniaui.net/prici
 :::
 
 :::note
-**Migrating from earlier releases?** `EditorToolbar` and `ToolbarGroup` no longer derive from `ItemsControl`. Use the `Tools` property (typed `AvaloniaList<EditorTool>` and marked as the `[Content]` property) instead of `Items`/`ItemsSource`/`ItemsPanel`, and re-template with a `Panel` named `PART_ItemsHost` to change the layout. Action-bearing properties (`Action`, `Icon`, `ToolTipText`) moved from `EditorTool` to a new abstract `ActionTool` base — concrete tools like `ButtonTool`/`ToggleTool` still expose them. See the migration table at the end of [Toolbar and Selection Flyout](toolbar.md#migration-from-earlier-editortoolbar-api).
+**Migrating from earlier releases?** `EditorToolbar` and `ToolbarGroup` no longer derive from `ItemsControl`. Use the `Tools` property (typed `AvaloniaList<EditorTool>` and marked as the `[Content]` property) instead of `Items`/`ItemsSource`/`ItemsPanel`, and re-template with a `Panel` named `PART_ItemsHost` to change the layout. Action-bearing properties (`Action`, `Icon`, `ToolTipText`) moved from `EditorTool` to a new abstract `ActionTool` base — concrete tools like `ButtonTool`/`ToggleTool` still expose them. See the migration table at the end of [Toolbar and Selection Flyout](/controls/input/text-input/richtexteditor-guides/toolbar#migration-from-earlier-editortoolbar-api).
 :::
 
 ## How the toolbar is assembled
@@ -877,6 +877,6 @@ For precise control, write a style selector that targets a specific element with
 ## See also
 
 - [RichTextEditor reference](/controls/input/text-input/richtexteditor)
-- [Extension Patterns](/controls/input/text-input/richtexteditor-guides/extension-patterns.md)
-- [Performance Tuning](/controls/input/text-input/richtexteditor-guides/performance-tuning.md)
-- [Troubleshooting: RichTextEditor](/troubleshooting/controls/richtexteditor)
+- [Extension Patterns](/controls/input/text-input/richtexteditor-guides/extension-patterns)
+- [Performance Tuning](/controls/input/text-input/richtexteditor-guides/performance-tuning)
+- [Troubleshooting RichTextEditor](/troubleshooting/controls/richtexteditor)

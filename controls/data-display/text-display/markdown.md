@@ -4,7 +4,8 @@ title: Markdown
 description: Render Markdown-formatted text using the Avalonia.Controls.Markdown control, built on the shared FlowDocument model with full DocumentNode styling, selection, streaming, and custom image loading.
 doc-type: reference
 tags:
-  - accelerate
+  - avalonia pro
+  - avalonia enterprise
 ---
 
 The `Markdown` control renders Markdown-formatted text in Avalonia applications. It is built on the same FlowDocument model used by the [RichTextEditor](/controls/input/text-input/richtexteditor), giving it full support for DocumentNode-based styling, text selection, and high-performance streaming updates.
@@ -260,7 +261,7 @@ See the [Markdown styling](/controls/data-display/text-display/markdown-styling)
 
 ## Installation
 
-See the [Installation Guide](/tools/installing-accelerate) for step-by-step instructions on how to install Accelerate components.
+See the [Installation Guide](/tools/installing-avalonia-pro) for step-by-step instructions on how to install Avalonia Pro components.
 
 Add the Markdown package to your project:
 
@@ -282,4 +283,3 @@ Add the resources by referencing the shipped `Default.axaml` theme via a `StyleI
 - [Markdown styling](/controls/data-display/text-display/markdown-styling)
 - [Image loader](/controls/data-display/text-display/imageloader)
 - [Code highlighter](/controls/data-display/text-display/codehighlighter)
-- [Rendering markdown](/docs/app-development/rendering-markdown)

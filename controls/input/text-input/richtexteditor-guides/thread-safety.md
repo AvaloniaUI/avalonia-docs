@@ -3,7 +3,8 @@ id: thread-safety
 title: Thread Safety
 doc-type: guide
 tags:
- - accelerate
+ - avalonia pro
+ - avalonia enterprise
 ---
 
 The RichTextEditor architecture uses immutable snapshots for background-safe serialization while requiring UI thread access for live document operations. This guide explains the threading model and safe patterns.
@@ -387,6 +388,6 @@ await Dispatcher.UIThread.InvokeAsync(() =>
 
 ## See also
 
-- [RichTextEditor reference](../richtexteditor)
-- [Performance tuning](performance-tuning)
-- [Extension patterns](extension-patterns)
+- [RichTextEditor reference](/controls/input/text-input/richtexteditor)
+- [Performance tuning](/controls/input/text-input/richtexteditor-guides/performance-tuning)
+- [Extension patterns](/controls/input/text-input/richtexteditor-guides/extension-patterns)

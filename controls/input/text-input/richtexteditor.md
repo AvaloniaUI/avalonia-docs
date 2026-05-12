@@ -353,8 +353,8 @@ The Avalonia rich text editor separates functions into an eight-layer architectu
 
 ## See also
 
-- [Document Viewer](richtexteditor-guides/document-viewer.md) — read-only `FlowDocumentScrollViewer` setup
-- [Toolbar and Selection Flyout](richtexteditor-guides/toolbar.md) — customizing the toolbar, mini-bar, and context menu
-- [Extension Patterns](richtexteditor-guides/extension-patterns.md) — custom nodes, highlight layers, serializers, components
-- [Performance Tuning](richtexteditor-guides/performance-tuning.md)
+- [Document Viewer](/controls/input/text-input/richtexteditor-guides/document-viewer) — read-only `FlowDocumentScrollViewer` setup
+- [Toolbar and Selection Flyout](/controls/input/text-input/richtexteditor-guides/toolbar) — customizing the toolbar, mini-bar, and context menu
+- [Extension Patterns](/controls/input/text-input/richtexteditor-guides/extension-patterns) — custom nodes, highlight layers, serializers, components
+- [Performance Tuning](/controls/input/text-input/richtexteditor-guides/performance-tuning)
 - [Troubleshooting](/troubleshooting/controls/richtexteditor)

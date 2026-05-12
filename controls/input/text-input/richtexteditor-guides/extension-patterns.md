@@ -3,7 +3,8 @@ id: extension-patterns
 title: Extension Patterns
 doc-type: guide
 tags:
- - accelerate
+ - avalonia pro
+ - avalonia enterprise
 ---
 
 import Tabs from '@theme/Tabs';
@@ -892,6 +893,6 @@ public class MentionInlineTests
 
 ## See also
 
-- [RichTextEditor reference](../richtexteditor)
-- [Performance tuning](performance-tuning)
-- [Thread safety](thread-safety)
+- [RichTextEditor reference](/controls/input/text-input/richtexteditor)
+- [Performance tuning](/controls/input/text-input/richtexteditor-guides/performance-tuning)
+- [Thread safety](/controls/input/text-input/richtexteditor-guides/thread-safety)

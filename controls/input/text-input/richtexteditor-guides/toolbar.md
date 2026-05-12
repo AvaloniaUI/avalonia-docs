@@ -3,7 +3,8 @@ id: toolbar
 title: Toolbar and Selection Flyout
 doc-type: guide
 tags:
- - accelerate
+ - avalonia pro
+ - avalonia enterprise
 ---
 
 import Tabs from '@theme/Tabs';
@@ -336,7 +337,7 @@ Subclass `EditorTool` for a passive widget (status display, decorative chip, etc
 
 `EditorHost` is the resolved `IInteractiveTextHost` (set automatically by the attach logic). For tools that need to react to selection/document changes continuously, derive from `ActionTool` and override `UpdateState()` — the base class subscribes you to the relevant editor events automatically.
 
-For a full worked example, see [Customizing the toolbar — Creating a custom tool](toolbar-customization.md#creating-a-custom-tool).
+For a full worked example, see [Customizing the toolbar — Creating a custom tool](/controls/input/text-input/richtexteditor-guides/toolbar-customization#creating-a-custom-tool).
 
 ---
 
@@ -357,5 +358,5 @@ Implicit XAML child syntax (`<EditorToolbar><ToolbarGroup>…</ToolbarGroup></Ed
 
 ## See also
 
-- [Extension Patterns](extension-patterns.md) — custom document nodes, highlight layers, serializers, components
-- [Getting Started](getting-started.md) — installation and basic usage
+- [RichTextEditor reference](/controls/input/text-input/richtexteditor)
+- [Extension Patterns](/controls/input/text-input/richtexteditor-guides/extension-patterns) — custom document nodes, highlight layers, serializers, components
