@@ -93,6 +93,10 @@ Avalonia apps are made of high-level building blocks called controls, which allo
   <p>A basic shape primitive for drawing rectangles and squares in your UI.</p>
 </DocsCard>
 
+<DocsCard header="RichTextEditor" href="/controls/input/text-input/richtexteditor" icon="/icons/rte-icon@2x.png">
+  <p>A rich text solution with common operations such as formatting, aligning, or undo/redo.</p>
+</DocsCard>
+
 <DocsCard header="ScrollViewer" href="/controls/layout/containers/scrollviewer" icon="/icons/scrollviewer-icon@2x.png">
   <p>A container that provides scrollable content when its child exceeds the available space.</p>
 </DocsCard>
