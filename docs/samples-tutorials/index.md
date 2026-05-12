@@ -160,6 +160,22 @@ Explore tutorials, sample apps, and quick guides to accelerate your Avalonia lea
 
 </DocsCards>
 
+## RichTextEditor
+
+:::info
+[`RichTextEditor`](/controls/input/text-input/richtexteditor) is available as part of [Avalonia Pro](https://avaloniaui.net/pricing) Enterprise.
+:::
+
+<DocsCards>
+  <DocsCard header="RichTextEditor demo" href="https://github.com/AvaloniaUI/AvaloniaPro.Samples/tree/main/RichTextEditorSample/RichTextEditor.Demo">
+    <p>Sample project demonstrating common features of RichTextEditor.</p>
+  </DocsCard>
+
+  <DocsCard header="Document viewer" href="https://github.com/AvaloniaUI/AvaloniaPro.Samples/tree/main/RichTextEditorSample/DocumentViewer.Demo">
+    <p>Sample project demonstrating the use of RichTextEditor as a document viewer.</p>
+  </DocsCard>
+</DocsCards>
+
 ## Other samples
 
 <DocsCards>
