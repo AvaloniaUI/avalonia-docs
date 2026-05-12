@@ -12,7 +12,8 @@ const sidebars: SidebarsConfig = {
       collapsed: true,
       items: [
         'controls/mediaplayer',
-        'controls/messagebox'
+        'controls/messagebox',
+        'controls/richtexteditor',
       ],
     },
     {
