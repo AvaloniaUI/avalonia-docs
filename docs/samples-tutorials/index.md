@@ -160,10 +160,22 @@ Explore tutorials, sample apps, and quick guides to accelerate your Avalonia lea
 
 </DocsCards>
 
+## Charts
+
+:::info
+[`Charts`](/controls/data-display/charts) are available as part of [Avalonia Pro](https://avaloniaui.net/pricing).
+:::
+
+<DocsCards>
+  <DocsCard header="Charts samples" href="https://github.com/AvaloniaUI/AvaloniaPro.Samples/tree/main/ChartsSample">
+    <p>How to implement Charts on various platforms—browser, desktop, Android and iOS.</p>
+  </DocsCard>
+</DocsCards>
+
 ## RichTextEditor
 
 :::info
-[`RichTextEditor`](/controls/input/text-input/richtexteditor) is available as part of [Avalonia Pro](https://avaloniaui.net/pricing) Enterprise.
+[`RichTextEditor`](/controls/input/text-input/richtexteditor) is available as part of [Avalonia Pro](https://avaloniaui.net/pricing).
 :::
 
 <DocsCards>
