@@ -118,7 +118,9 @@ webView.EnvironmentRequested += (sender, args) =>
 
 ### Linux (GTK WebKit)
 
-Used by `NativeWebDialog`, and by `NativeWebView` when `PreferWebKitGtkInstead` is set or WPE is unavailable.
+Used by `NativeWebDialog`. Not supported by `NativeWebView`.
+
+You can attempt to use `NativeWebView` with the GTK WebKit by setting `PreferWebKitGtkInstead` to `true`.
 
 **Key Properties:**
 
