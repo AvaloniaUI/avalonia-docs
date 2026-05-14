@@ -1154,10 +1154,7 @@ const redirects: Redirect[] = [
         "to": "/controls/media/mediaplayer"
     },
     {
-        "from": [
-            "/accelerate/components/media-player/mediaplayer",
-            "/controls/media/mediaplayer",
-        ],
+        "from": "/accelerate/components/media-player/mediaplayer",
         "to": "/controls/media/mediaplayer/mediaplayer-class"
     },
     {

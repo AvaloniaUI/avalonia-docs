@@ -1,6 +1,6 @@
 ---
-id: toolbar-customization
-title: Customizing the toolbar
+id: toolbar
+title: Toolbar and Selection Flyouts
 doc-type: guide
 tags:
  - avalonia pro
@@ -27,21 +27,53 @@ By default, `RichTextEditor` includes a primary toolbar, a selection mini-bar, a
 This control is available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
 
-:::note
-**Migrating from earlier releases?** `EditorToolbar` and `ToolbarGroup` no longer derive from `ItemsControl`. Use the `Tools` property (typed `AvaloniaList<EditorTool>` and marked as the `[Content]` property) instead of `Items`/`ItemsSource`/`ItemsPanel`, and re-template with a `Panel` named `PART_ItemsHost` to change the layout. Action-bearing properties (`Action`, `Icon`, `ToolTipText`) moved from `EditorTool` to a new abstract `ActionTool` base — concrete tools like `ButtonTool`/`ToggleTool` still expose them. See the migration table at the end of [Toolbar and Selection Flyout](/controls/input/text-input/richtexteditor-guides/toolbar#migration-from-earlier-editortoolbar-api).
-:::
+## Toolbar architecture
 
-## How the toolbar is assembled
+The toolbar system separates UI presentation from behavioral logic. `EditorToolbar` is a `TemplatedControl` with a strongly-typed `Tools` collection (`AvaloniaList<EditorTool>`) marked as the `[Content]` property — XAML children are added to `Tools` automatically and can only be `EditorTool` instances. Action-bearing tools derive from `ActionTool` (which adds `Action`/`Icon`/`ToolTipText`); separators and groups derive from `EditorTool` directly.
 
 - **`EditorTool`**: the abstract base for any item hosted inside an `EditorToolbar` or `ToolbarGroup`. It carries target-area visibility, overflow metadata, and editor-host discovery.
 - **`ActionTool`**: the abstract base for tools that bind to an `IEditorAction`. Adds `Action`, `Icon`, and `ToolTipText`, and synchronizes `IsEnabled` with `Action.CanExecute(host)`. Most concrete tools (button, toggle, combobox, flyout) derive from this.
 - **`ToolbarGroup`**: itself an `EditorTool`. Hosts its own strongly-typed `Tools` collection of child tools. Groups share visibility status, i.e., they collapse together into the overflow menu if there is insufficient space. Nested `ToolbarGroup` instances are not supported.
 - **`EditorToolbar`**: a `TemplatedControl` that exposes a strongly-typed `Tools` collection (`AvaloniaList<EditorTool>`) marked as the `[Content]` property. Wires items to the editor, propagates `ActiveTargetAreas`, and runs the overflow-collapse layout pass. Items are inserted into a `Panel` named `PART_ItemsHost` in the control template.
 
-The primary toolbar lives inside `RichTextEditor`'s control template as a `Border` named `PART_ToolbarContainer` that hosts an `EditorToolbar`; visibility is controlled by `RichTextEditor.ShowToolbar`. The selection mini-bar (`EditorSelectionFlyout`) and the context menu (`EditorContextMenu`) are hosted by flyout controls and are configured separately.
+Both `EditorToolbar` and `ToolbarGroup` use a `Panel` template part named `PART_ItemsHost`. The default theme uses a `WrapPanel`; the toolbar embedded inside `RichTextEditor` uses a horizontal `StackPanel`. Re-template either control with any panel type to change the layout.
+
+```
+RichTextEditor
+  └─ EditorToolbar            (TemplatedControl with [Content] Tools : AvaloniaList<EditorTool>)
+       ├─ ToolbarGroup        (EditorTool with [Content] Tools — collective visibility)
+       │    ├─ ButtonTool     (ActionTool)
+       │    ├─ ToggleTool     (ActionTool)
+       │    └─ ...
+       ├─ SeparatorTool       (EditorTool, no action surface)
+       └─ OverflowTool        (ActionTool — "..." button, hosts collapsed tools)
+```
+
+### Namespaces
+
+```csharp
+using Avalonia.Controls.Documents.Primitives.Toolbar; // EditorToolbar, tools, groups
+using Avalonia.Controls.Documents.Primitives.Actions; // EditorActions, IEditorAction
+using Avalonia.Controls.Documents.Primitives.Adorners; // ToolbarTargetAreas
+using Avalonia.Controls.Documents.Primitives; // EditorSelectionFlyout, EditorContextMenu
+```
+
+All of these types are available in XAML under the default Avalonia namespace (`https://github.com/avaloniaui`).
+
+## Migration from earlier `EditorToolbar` API
+
+If you have existing code that uses the legacy `ItemsControl`-based surface, update it as follows:
+
+| Before | After |
+|---|---|
+| `EditorToolbar.Items` / `ToolbarGroup.Items` | `Tools` (typed `AvaloniaList<EditorTool>`, `[Content]`) |
+| `EditorToolbar.ItemsPanel` / `ItemsSource` | Removed. Re-template the toolbar with a `Panel` named `PART_ItemsHost`. |
+| `EditorToolbar`/`ToolbarGroup` derived from `ItemsControl` | Both are now `TemplatedControl`. `ToolbarGroup` derives from `EditorTool`. |
+| `EditorTool.Action` / `Icon` / `ToolTipText` | Moved to `ActionTool`. Custom action-bound tools should derive from `ActionTool` (passive tools stay on `EditorTool`). |
+
+Implicit XAML child syntax (`<EditorToolbar><ToolbarGroup>…</ToolbarGroup></EditorToolbar>`) is unchanged — children are added to `Tools` via the `[Content]` attribute. Only explicit `<EditorToolbar.Items>` / `<EditorToolbar.ItemsPanel>` element-form usages need renaming. In code, replace `toolbar.Items.Add(...)` with `toolbar.Tools.Add(...)`.
 
 ## Default toolbar
-
 
 The built-in `EditorToolbar`, populated via `RichTextEditor.Toolbar` in the editor's default control theme, contains the following tools, appearing in this order and sorted into these groups.
 
@@ -877,6 +909,6 @@ For precise control, write a style selector that targets a specific element with
 ## See also
 
 - [RichTextEditor reference](/controls/input/text-input/richtexteditor)
-- [Extension Patterns](/controls/input/text-input/richtexteditor-guides/extension-patterns)
-- [Performance Tuning](/controls/input/text-input/richtexteditor-guides/performance-tuning)
+- [Extension Patterns](/controls/input/text-input/richtexteditor/extension-patterns)
+- [Performance Tuning](/controls/input/text-input/richtexteditor/performance-tuning)
 - [Troubleshooting RichTextEditor](/troubleshooting/controls/richtexteditor)

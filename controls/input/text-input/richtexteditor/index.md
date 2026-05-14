@@ -1,6 +1,6 @@
 ---
-id: richtexteditor
-title: RichTextEditor
+id: index
+title: RichTextEditor control
 doc-type: reference
 tags:
  - avalonia pro
@@ -19,6 +19,47 @@ This control is available as part of [Avalonia Pro](https://avaloniaui.net/prici
 ## When to use
 
 Use `RichTextEditor` to create an area where users can edit text content and perform common text operations, such as formatting, aligning, highlighting, or undo/redo.
+
+## Getting started
+
+1. Install the `Avalonia.Controls.RichTextEditor` NuGet package by running the `dotnet add package` command. Optionally, install serializers for specific file formats you need.
+
+```bash
+# Core editor control and document model, includes plain text serialization
+dotnet add package Avalonia.Controls.RichTextEditor
+
+# Serializers (add only what you need)
+dotnet add package Avalonia.Controls.Documents.Serialization.Rtf     # RTF support
+dotnet add package Avalonia.Controls.Documents.Serialization.Docx    # DOCX (Open XML) support
+dotnet add package Avalonia.Controls.Documents.Serialization.Xaml    # XAML serialization
+```
+
+2. Include your Avalonia license key in the executable project file (`.csproj`).
+
+```xml
+<ItemGroup>
+  <AvaloniaUILicenseKey Include="YOUR_LICENSE_KEY" />
+</ItemGroup>
+```
+
+3. Include a `PackageReference` for `Avalonia.Controls.RichTextEditor` in your `.csproj` file, if there isn't one yet.
+
+```xml
+<ItemGroup>
+  <PackageReference Include="Avalonia.Controls.RichTextEditor" Version="VERSION_NUMBER"/>
+</ItemGroup>
+```
+
+4. Reference `Default.axaml` via a `StyleInclude` in your `App.axaml` file.
+
+```xml
+<Application.Styles>
+   <StyleInclude Source="avares://Avalonia.Controls.RichTextEditor/Themes/Default.axaml" />
+   <!-- other styles -->
+</Application.Styles>
+```
+
+For more information on installing Avalonia Pro controls, see [Installing Avalonia Pro](/tools/installing-avalonia-pro).
 
 ## Basic usage
 
@@ -354,8 +395,8 @@ The Avalonia rich text editor separates functions into an eight-layer architectu
 
 ## See also
 
-- [Document Viewer](/controls/input/text-input/richtexteditor-guides/document-viewer) — read-only `FlowDocumentScrollViewer` setup
-- [Toolbar and Selection Flyout](/controls/input/text-input/richtexteditor-guides/toolbar) — customizing the toolbar, mini-bar, and context menu
-- [Extension Patterns](/controls/input/text-input/richtexteditor-guides/extension-patterns) — custom nodes, highlight layers, serializers, components
-- [Performance Tuning](/controls/input/text-input/richtexteditor-guides/performance-tuning)
+- [Document Viewer](/controls/input/text-input/richtexteditor/document-viewer) — read-only `FlowDocumentScrollViewer` setup
+- [Toolbar and Selection Flyouts](/controls/input/text-input/richtexteditor/toolbar) — customizing the toolbar, mini-bar, and context menu
+- [Extension Patterns](/controls/input/text-input/richtexteditor/extension-patterns) — custom nodes, highlight layers, serializers, components
+- [Performance Tuning](/controls/input/text-input/richtexteditor/performance-tuning)
 - [Troubleshooting](/troubleshooting/controls/richtexteditor)

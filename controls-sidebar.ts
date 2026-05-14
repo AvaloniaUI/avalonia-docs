@@ -378,16 +378,14 @@ const sidebars: SidebarsConfig = {
               {
                 type: 'category',
                 label: 'RichTextEditor',
-                link: {
-                  type: 'doc',
-                  id: 'input/text-input/richtexteditor'
-                },
+                collapsed: true,
                 items: [
-                  'input/text-input/richtexteditor-guides/document-viewer',
-                  'input/text-input/richtexteditor-guides/toolbar',
-                  'input/text-input/richtexteditor-guides/extension-patterns',
-                  'input/text-input/richtexteditor-guides/performance-tuning',
-                  'input/text-input/richtexteditor-guides/thread-safety',
+                  'input/text-input/richtexteditor/index',
+                  'input/text-input/richtexteditor/document-viewer',
+                  'input/text-input/richtexteditor/toolbar',
+                  'input/text-input/richtexteditor/extension-patterns',
+                  'input/text-input/richtexteditor/performance-tuning',
+                  'input/text-input/richtexteditor/thread-safety',
                 ],
               },
           ],
