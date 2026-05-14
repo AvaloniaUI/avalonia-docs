@@ -14,9 +14,31 @@ Charts provide a library of data visualization controls and documented compositi
 Charts are available with [Avalonia Pro](https://avaloniaui.net/pricing).
 :::
 
-## Installation and licensing
+## Getting started
 
-Install the `Avalonia.Controls.Charts` package in your Avalonia project. All chart types are in this package and use the `https://avaloniaui.net/controls/charts` XML namespace.
+1. Install the `Avalonia.Controls.Charts` NuGet package by running the `dotnet add package` command.
+
+```
+dotnet add package Avalonia.Controls.Charts
+```
+
+2. Include your Avalonia license key in the executable project file (`.csproj`).
+
+```xml
+<ItemGroup>
+  <AvaloniaUILicenseKey Include="YOUR_LICENSE_KEY" />
+</ItemGroup>
+```
+
+3. Include a `PackageReference` for `Avalonia.Controls.Charts` in your `.csproj` file, if there isn't one yet.
+
+```xml
+<ItemGroup>
+  <PackageReference Include="Avalonia.Controls.Charts" Version="VERSION_NUMBER"/>
+</ItemGroup>
+```
+
+4. Use the `https://avaloniaui.net/controls/charts` XML namespace in your XAML. All chart types share the same namespace.
 
 ```xml
 <UserControl xmlns="https://github.com/avaloniaui"
@@ -29,15 +51,7 @@ Install the `Avalonia.Controls.Charts` package in your Avalonia project. All cha
 </UserControl>
 ```
 
-Add your license key to the executable project:
-
-```xml
-<ItemGroup>
-  <AvaloniaUILicenseKey Include="YOUR_LICENSE_KEY" />
-</ItemGroup>
-```
-
-Use the single Charts package and XML namespace for all chart types.
+For more information on installing Avalonia Pro controls, see [Installing Avalonia Pro](/tools/installing-avalonia-pro).
 
 ## Example use cases
 
