@@ -302,7 +302,7 @@ public interface IAppleWKWebViewPlatformHandle : IPlatformHandle
 
 #### Linux (WPE WebKit)
 
-On Linux, `NativeWebView` is backed by WPE WebKit. The platform handle exposes both the `WebKitWebView` GObject and the underlying `wpe_view_backend` struct, allowing direct P/Invoke against the [WPEWebKit API](https://github.com/WebPlatformForEmbedded/WPEWebKit).
+On Linux, [`NativeWebView`](/controls/web/nativewebview) is backed by the WPE WebKit. The platform handle exposes both the `WebKitWebView` GObject and the underlying `wpe_view_backend` struct, allowing direct P/Invoke against the [WPEWebKit API](https://github.com/WebPlatformForEmbedded/WPEWebKit).
 
 ```csharp
 public interface ILinuxWpePlatformHandle : IPlatformHandle
@@ -317,7 +317,9 @@ public interface ILinuxWpePlatformHandle : IPlatformHandle
 
 #### Linux (WebKitGTK)
 
-`NativeWebDialog` (and `NativeWebView` when configured to prefer WebKitGTK) exposes a WebKitGTK handle. The provided `WebKitWebView` IntPtr can be used directly with WebKit P/Invokes from the [official WebKitGTK reference](https://webkitgtk.org/reference/webkit2gtk/stable/index.html).
+[`NativeWebDialog`](/controls/web/nativewebdialog) exposes a WebKitGTK handle. The provided `WebKitWebView` IntPtr can be used directly with WebKit P/Invokes from the [official WebKitGTK reference](https://webkitgtk.org/reference/webkit2gtk/stable/index.html).
+
+[`NativeWebView`](/controls/web/nativewebview) does not support WebKitGTK.
 
 ```csharp
 public interface IGtkWebViewPlatformHandle : IPlatformHandle
