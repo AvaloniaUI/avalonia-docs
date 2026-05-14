@@ -1165,16 +1165,25 @@ const redirects: Redirect[] = [
         "to": "/controls/data-display/text-display/markdown"
     },
     {
-        "from": "/accelerate/components/markdown/custom-image-loader",
-        "to": "/controls/data-display/text-display/imageloader"
+        "from": [
+            "/accelerate/components/markdown/custom-image-loader",
+            "/controls/data-display/text-display/imageloader",
+        ],
+        "to": "/controls/data-display/text-display/markdown/imageloader"
     },
     {
-        "from": "/accelerate/components/markdown/code-highlighter",
-        "to": "/controls/data-display/text-display/codehighlighter"
+        "from": [
+            "/accelerate/components/markdown/code-highlighter",
+            "/controls/data-display/text-display/codehighlighter",
+        ],
+        "to": "/controls/data-display/text-display/markdown/codehighlighter"
     },
     {
-        "from": "/accelerate/components/markdown/styling",
-        "to": "/controls/data-display/text-display/markdown-styling"
+        "from": [
+            "/accelerate/components/markdown/styling",
+            "/controls/data-display/text-display/markdown-styling",
+        ],
+        "to": "/controls/data-display/text-display/markdown/markdown-styling"
     },
     {
         "from": "/accelerate/components/virtual-keyboard/getting-started",

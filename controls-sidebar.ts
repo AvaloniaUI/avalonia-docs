@@ -286,14 +286,12 @@ const sidebars: SidebarsConfig = {
               {
                 type: 'category',
                 label: 'Markdown',
-                link: {
-                  type: 'doc',
-                  id: 'data-display/text-display/markdown',
-                },
+                collapsed: true,
                 items: [
-                  'data-display/text-display/markdown-styling',
-                  'data-display/text-display/codehighlighter',
-                  'data-display/text-display/imageloader',
+                  'data-display/text-display/markdown/index',
+                  'data-display/text-display/markdown/markdown-styling',
+                  'data-display/text-display/markdown/codehighlighter',
+                  'data-display/text-display/markdown/imageloader',
                 ],
               },
               'data-display/text-display/selectabletextblock',
