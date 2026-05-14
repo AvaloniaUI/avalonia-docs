@@ -39,7 +39,7 @@ Replace the package name with the one you need. The following Avalonia Pro packa
 |---------|-------------|
 | [`Avalonia.Controls.Charts`](/controls/data-display/charts/#getting-started) | Library of graphs, dashboards, analytics |
 | [`Avalonia.Controls.Markdown`](/controls/data-display/text-display/markdown/#getting-started) | Markdown text rendering |
-| `Avalonia.Controls.MediaPlayer` | Audio and video playback control |
+| [`Avalonia.Controls.MediaPlayer`](/controls/media/mediaplayer/#getting-started) | Audio and video playback control |
 | `Avalonia.Controls.RichTextEditor` | Document editing and processing |
 | `Avalonia.Controls.TreeDataGrid` | Hierarchical and flat data grid |
 | `Avalonia.Controls.VirtualKeyboard` | On-screen keyboard |

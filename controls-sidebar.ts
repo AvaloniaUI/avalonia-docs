@@ -454,15 +454,13 @@ const sidebars: SidebarsConfig = {
         'media/image',
         {
           type: 'category',
-          label: 'MediaPlayerControl',
-          link: {
-            type: 'doc',
-            id: 'media/mediaplayercontrol',
-          },
+          label: 'MediaPlayer',
+          collapsed: true,
           items: [
-            'media/mediaplayer',
-            'media/mediasource',
-            'media/media-playback',
+            'media/mediaplayer/index',
+            'media/mediaplayer/mediasource',
+            'media/mediaplayer/mediaplayer-class',
+            'media/mediaplayer/media-playback',
           ],
         },
         'media/pathicon',

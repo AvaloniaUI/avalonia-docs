@@ -1140,20 +1140,32 @@ const redirects: Redirect[] = [
         "to": "/tools"
     },
     {
-        "from": "/accelerate/components/media-player/quickstart",
-        "to": "/controls/media/media-playback"
+        "from": [
+            "/accelerate/components/media-player/quickstart",
+            "/controls/media/media-playback",
+        ],
+        "to": "/controls/media/mediaplayer/media-playback"
     },
     {
-        "from": "/accelerate/components/media-player/mediaplayercontrol",
-        "to": "/controls/media/mediaplayercontrol"
-    },
-    {
-        "from": "/accelerate/components/media-player/mediaplayer",
+        "from": [
+            "/accelerate/components/media-player/mediaplayercontrol",
+            "/controls/media/mediaplayercontrol",
+        ],
         "to": "/controls/media/mediaplayer"
     },
     {
-        "from": "/accelerate/components/media-player/mediasource",
-        "to": "/controls/media/mediasource"
+        "from": [
+            "/accelerate/components/media-player/mediaplayer",
+            "/controls/media/mediaplayer",
+        ],
+        "to": "/controls/media/mediaplayer/mediaplayer-class"
+    },
+    {
+        "from": [
+            "/accelerate/components/media-player/mediasource",
+            "/controls/media/mediasource",
+        ],
+        "to": "/controls/media/mediaplayer/mediasource"
     },
     {
         "from": [

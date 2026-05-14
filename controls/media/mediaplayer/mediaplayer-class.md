@@ -1,19 +1,40 @@
 ---
-id: mediaplayer
-title: MediaPlayer
+id: mediaplayer-class
+title: MediaPlayer class
 tags:
   - avalonia pro
   - avalonia enterprise
 ---
 
 The `MediaPlayer` class provides the core functionality for media playback in Avalonia applications. It handles media
-loading, playback control, and platform-specific backend management, serving as the engine behind
-the `MediaPlayerControl`.
+loading, playback control, and platform-specific backend management, serving as the engine behind [`MediaPlayerControl`](/controls/media/mediaplayer/mediaplayer-class).
 
 
 :::info
 This control is available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
+
+## Using MediaPlayer without MediaPlayerControl
+
+When using `MediaPlayer` without `MediaPlayerControl`, you must call `InitializeAsync()` first and ensure the source is set only after the control is loaded:
+
+```csharp
+private MediaPlayer _player = new MediaPlayer();
+
+protected override async void OnLoaded(RoutedEventArgs e)
+{
+    base.OnLoaded(e);
+
+    await _player.InitializeAsync();
+
+    _player.Volume = 0.8;
+    _player.LoadedBehavior = MediaPlayerState.AutoPlay;
+
+    _player.Source = new UriSource("file:///C:/Videos/sample.mp4");
+    await _player.PrepareAsync();
+    await _player.PlayAsync();
+}
+```
 
 ## Properties
 
@@ -106,7 +127,7 @@ graph TD
 ### Basic playback
 
 :::caution
-`MediaPlayer` is not ready to accept a media source until the Avalonia UI has fully loaded. Always set the `Source` property after the `Loaded` event has fired. See [Initialization Timing](/controls/media/media-playback#initialization-timing) for details.
+`MediaPlayer` is not ready to accept a media source until the Avalonia UI has fully loaded. Always set the `Source` property after the `Loaded` event has fired. See [Initialization Timing](/controls/media/mediaplayer/media-playback#initialization-timing) for details.
 :::
 
 ```csharp
@@ -241,7 +262,7 @@ catch (Exception ex) {
 1. **Initialization Timing**:
     - Never set `Source` in a constructor. The player is not ready until the UI has loaded.
     - Set `Source` in an `OnLoaded` override or use `Dispatcher.UIThread.Post` to defer the call.
-    - See [Initialization Timing](/controls/media/media-playback#initialization-timing) for full guidance.
+    - See [Initialization Timing](/controls/media/mediaplayer/media-playback#initialization-timing) for full guidance.
 
 2. **Initialization and Cleanup**:
     - Always call `InitializeAsync()` before using `MediaPlayer`.
@@ -260,8 +281,8 @@ catch (Exception ex) {
 
 ## See also
 
-- [MediaPlayer control](/controls/media/mediaplayercontrol)
-- [MediaSource class](/controls/media/mediasource)
-- [Implementing MediaPlayer](/controls/media/media-playback)
+- [MediaPlayer control](/controls/media/mediaplayer)
+- [MediaSource class](/controls/media/mediaplayer/mediasource)
+- [Implementing MediaPlayer](/controls/media/mediaplayer/media-playback)
 - [Installing Avalonia Pro](/tools/installing-avalonia-pro)
 - [Troubleshooting](/troubleshooting/controls/mediaplayer)
