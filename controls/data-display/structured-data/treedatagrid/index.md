@@ -30,7 +30,7 @@ TreeDataGrid v12 introduces significant API changes including renamed column typ
 dotnet add package Avalonia.Controls.TreeDataGrid
 ```
 
-2. Include your Avalonia license key in the executable project file (`.csproj`).
+2. Include your Avalonia license key in the executable project file (`.csproj`). Your license key is available from the [Avalonia portal](https://portal.avaloniaui.net).
 
 ```xml
 <ItemGroup>

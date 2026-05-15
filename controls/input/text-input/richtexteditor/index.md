@@ -34,7 +34,7 @@ dotnet add package Avalonia.Controls.Documents.Serialization.Docx    # DOCX (Ope
 dotnet add package Avalonia.Controls.Documents.Serialization.Xaml    # XAML serialization
 ```
 
-2. Include your Avalonia license key in the executable project file (`.csproj`).
+2. Include your Avalonia license key in the executable project file (`.csproj`). Your license key is available from the [Avalonia portal](https://portal.avaloniaui.net).
 
 ```xml
 <ItemGroup>

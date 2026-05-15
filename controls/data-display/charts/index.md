@@ -22,7 +22,7 @@ Charts are available with [Avalonia Pro](https://avaloniaui.net/pricing).
 dotnet add package Avalonia.Controls.Charts
 ```
 
-2. Include your Avalonia license key in the executable project file (`.csproj`).
+2. Include your Avalonia license key in the executable project file (`.csproj`). Your license key is available from the [Avalonia portal](https://portal.avaloniaui.net).
 
 ```xml
 <ItemGroup>
