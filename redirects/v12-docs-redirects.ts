@@ -1195,27 +1195,22 @@ const redirects: Redirect[] = [
         "to": "/controls/data-display/text-display/markdown/markdown-styling"
     },
     {
-        "from": "/accelerate/components/virtual-keyboard/getting-started",
-        "to": "/docs/platform-specific-guides/embedded-linux/virtual-keyboard"
-    },
-    {
-        "from": "/docs/platform-specific-guides/virtual-keyboard",
-        "to": "/docs/platform-specific-guides/embedded-linux/virtual-keyboard"
-    },
-    {
         "from": "/docs/platform-specific-guides/raspberry-pi",
         "to": "/docs/platform-specific-guides/embedded-linux/raspberry-pi"
     },
     {
         "from": "/accelerate/components/virtual-keyboard/virtual-keyboard-scope",
-        "to": "/controls/layout/containers/virtualkeyboardscope"
+        "to": "/controls/input/text-input/virtualkeyboard/virtualkeyboardscope"
     },
     {
         "from": [
             "/accelerate/components/virtual-keyboard/",
             "/accelerate/components/virtual-keyboard/virtual-keyboard",
             "/accelerate/components/virtual-keyboard/styling",
-            "/accelerate/components/virtual-keyboard/input-method-identifiers"
+            "/accelerate/components/virtual-keyboard/input-method-identifiers",
+            "/accelerate/components/virtual-keyboard/getting-started",
+            "/docs/platform-specific-guides/embedded-linux/virtual-keyboard",
+            "/docs/platform-specific-guides/virtual-keyboard",
         ],
         "to": "/controls/input/text-input/virtualkeyboard"
     },

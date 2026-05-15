@@ -410,13 +410,12 @@ const sidebars: SidebarsConfig = {
               'layout/containers/viewbox',
               {
                 type: 'category',
-                label: 'VirtualKeyboardScope',
-                link: {
-                  type: 'doc',
-                  id: 'layout/containers/virtualkeyboardscope',
-                },
+                label: 'Virtual keyboard',
+                collapsed: true,
                 items: [
-                  'input/text-input/virtualkeyboard',
+                  'input/text-input/virtualkeyboard/index',
+                  'input/text-input/virtualkeyboard/virtualkeyboard-control',
+                  'input/text-input/virtualkeyboard/virtualkeyboardscope',
                 ],
               },
           ],

@@ -41,7 +41,7 @@ Replace the package name with the one you need. The following Avalonia Pro packa
 | [`Avalonia.Controls.Markdown`](/controls/data-display/text-display/markdown/#getting-started) | Markdown text rendering |
 | [`Avalonia.Controls.MediaPlayer`](/controls/media/mediaplayer/#getting-started) | Audio and video playback control |
 | [`Avalonia.Controls.RichTextEditor`](/controls/input/text-input/richtexteditor/#getting-started) | Document editing and processing |
-| `Avalonia.Controls.TreeDataGrid` | Hierarchical and flat data grid |
+| [`Avalonia.Controls.TreeDataGrid`](/controls/data-display/structured-data/treedatagrid/index) | Hierarchical and flat data grid |
 | `Avalonia.Controls.VirtualKeyboard` | On-screen keyboard |
 
 ## Add your license key

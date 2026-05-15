@@ -1,36 +1,32 @@
 ---
-id: virtual-keyboard
-title: Adding a virtual keyboard
-sidebar_label: Virtual keyboard
+id: index
+title: Virtual keyboard overview
 tags:
   - avalonia pro
   - avalonia enterprise
 ---
 
-The Virtual Keyboard component provides an on-screen keyboard for Avalonia applications. It is designed for touch-based or kiosk scenarios where physical keyboards may not be available, enabling text input through touchscreens or mouse clicks.
+The virtual keyboard component provides an on-screen keyboard for Avalonia applications. It is designed for touch-based or kiosk scenarios where physical keyboards may not be available, enabling text input through touchscreens or mouse clicks.
 
 :::info
 This component is available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
 
-The Virtual Keyboard component includes two main controls:
+The virtual keyboard component includes the following classes:
 
-- [`VirtualKeyboardScope`](/controls/layout/containers/virtualkeyboardscope) - A container that manages keyboard visibility and input methods
-- [`VirtualKeyboard`](/controls/input/text-input/virtualkeyboard) - The actual keyboard control that can be placed manually
+- [`VirtualKeyboardScope`](/controls/input/text-input/virtualkeyboard/virtualkeyboardscope): A container control that manages keyboard visibility and input methods.
+- [`VirtualKeyboard`](/controls/input/text-input/virtualkeyboard/virtualkeyboard-control): The actual keyboard control that can be placed manually.
+- `VirtualKeyboardInputMethod`: Represents a particular input method or keyboard layout.
 
-## Installation
+## Getting started
 
-See the [Installation Guide](/tools/installing-avalonia-pro) for step-by-step instructions on how to install Avalonia Pro components.
+1. Install the `Avalonia.Controls.VirtualKeyboard` NuGet package by running the `dotnet add package` command.
 
-Add the Virtual Keyboard package to your project:
-
-```bash
+```
 dotnet add package Avalonia.Controls.VirtualKeyboard
 ```
 
-### Add the license key
-
-Include your Avalonia license key in the executable project file (`.csproj`):
+2. Include your Avalonia license key in the executable project file (`.csproj`).
 
 ```xml
 <ItemGroup>
@@ -42,25 +38,16 @@ Include your Avalonia license key in the executable project file (`.csproj`):
 For multi-project solutions, you can store your license key in an [environment variable](https://learn.microsoft.com/en-us/visualstudio/msbuild/how-to-use-environment-variables-in-a-build) or a [shared props file](https://learn.microsoft.com/en-us/visualstudio/msbuild/customize-by-directory?view=vs-2022#directorybuildprops-example) to avoid duplication.
 :::
 
-### Include the control theme
-
-To ensure the virtual keyboard is properly styled, add the keyboard theme to your application. Open your `App.axaml` file and include the following within the `Application.Styles` section:
+3. Reference the `VirtualKeyboard` fluent theme via a `StyleInclude` in your `App.axaml` file. This adds the resources needed to properly style the virtual keyboard.
 
 ```xml
-<Application xmlns="https://github.com/avaloniaui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             x:Class="YourNamespace.App">
-    <Application.Styles>
-        <FluentTheme />
-        <!-- Include the Virtual Keyboard theme -->
-        <StyleInclude Source="avares://Avalonia.Controls.VirtualKeyboard/Themes/Fluent.axaml"/>
-    </Application.Styles>
-</Application>
+<Application.Styles>
+   <StyleInclude Source="avares://Avalonia.Controls.VirtualKeyboard/Themes/Fluent.axaml"/>
+   <!-- other styles -->
+</Application.Styles>
 ```
 
-## Requirements
-
-- Avalonia 11.3.7 or newer
+For more information on installing Avalonia Pro controls, see [Installing Avalonia Pro](/tools/installing-avalonia-pro).
 
 ## Basic usage
 
@@ -88,7 +75,9 @@ The simplest way to add a virtual keyboard to your application is to use the `Vi
 
 ### Using VirtualKeyboard Directly
 
-For more control, you can also use the `VirtualKeyboard` control directly and specify the target input element:
+For more control, you can use the `VirtualKeyboard` control directly and specify the target input element.
+
+Input will be directed to the specified `Target` element regardless of the current input focus.
 
 ```xml
 <Window xmlns="https://github.com/avaloniaui"
@@ -104,13 +93,11 @@ For more control, you can also use the `VirtualKeyboard` control directly and sp
 </Window>
 ```
 
-Note, that input will be directed to the specified `Target` element regardless of the current input focus.
-
 ## Managing input methods
 
-The virtual keyboard supports a wide range of input methods and keyboard layouts. You can specify which input methods to include:
+The virtual keyboard supports a wide range of input methods and keyboard layouts. Here's how to specify which input methods to include:
 
-### In XAML
+### XAML
 
 ```xml
 <VirtualKeyboardScope InputMethods="en-US:kbd:standard, de:kbd:standard, ja:ime:kana">
@@ -118,22 +105,22 @@ The virtual keyboard supports a wide range of input methods and keyboard layouts
 </VirtualKeyboardScope>
 ```
 
-### In C#
+### C#
 
 ```csharp
 // Get all available input methods for specific languages
 var inputMethods = new List<VirtualKeyboardInputMethod>
 {
     VirtualKeyboardInputMethod.GetInputMethodsForLanguage("en-US").First(),
-    VirtualKeyboardInputMethod.GetInputMethodsForLanguage("ja").First(),
-    VirtualKeyboardInputMethod.GetInputMethodsForLanguage("de").First()
+    VirtualKeyboardInputMethod.GetInputMethodsForLanguage("de").First(),
+    VirtualKeyboardInputMethod.GetInputMethodsForLanguage("ja").First()
 };
 
 // Assign to the VirtualKeyboardScope
 myKeyboardScope.InputMethods = inputMethods;
 ```
 
-### Retrieving available input methods
+### Retrieving input methods
 
 ```csharp
 // Get all supported languages
@@ -148,15 +135,15 @@ var japaneseKana = VirtualKeyboardInputMethod.GetInputMethodById("ja:ime:kana");
 
 ## Input method identifiers
 
-The virtual keyboard component supports a wide range of input method identifiers for different languages. See the [virtual keyboard control](/controls/input/text-input/virtualkeyboard) page for a list of supported identifiers.
+See the [virtual keyboard control](/controls/input/text-input/virtualkeyboard/virtualkeyboard-control#input-methods) page for a table of supported input methods and their identifiers.
 
-## RIME Input Method Engine
+## RIME input method engine
 
-The Virtual Keyboard supports the [RIME](https://rime.im/) input method engine for Chinese text input. RIME support is provided as a separate plugin package.
+The virtual keyboard supports the [RIME](https://rime.im/) input method engine for Chinese text input. RIME support is provided as a separate plugin package.
 
-See the [VirtualKeyboard control reference](/controls/input/text-input/virtualkeyboard#rime-input-method-engine) for installation and configuration instructions.
+See the [`VirtualKeyboard` control reference](/controls/input/text-input/virtualkeyboad/virtualkeyboard-control#rime-input-method-engine) for installation and configuration instructions.
 
-## TextInputOptions
+## Text input options
 
 You can customize how the virtual keyboard behaves with different input fields using the `TextInputOptions` attached properties:
 
@@ -165,33 +152,21 @@ You can customize how the virtual keyboard behaves with different input fields u
          TextInputOptions.ReturnKeyType="Search" />
 ```
 
-Available ContentType values:
-- Normal
-- Email
-- Url
-- Digits
+Available `ContentType` values:
+- `Normal`
+- `Email`
+- `Url`
+- `Digits`
 
-Available ReturnKeyType values:
-- Default
-- Done
-- Go
-- Next
-- Previous
-- Return
-- Search
-- Send
-
-## API reference
-
-For more detailed information about the Virtual Keyboard API, refer to the following classes:
-
-- `VirtualKeyboardScope`: A container control that manages keyboard visibility
-- `VirtualKeyboard`: The actual keyboard control for manual placement
-- `VirtualKeyboardInputMethod`: Represents a particular input method/keyboard layout
-
-## Platform support
-
-The Virtual Keyboard is a managed component and works on all platforms supported by Avalonia.
+Available `ReturnKeyType` values:
+- `Default`
+- `Done`
+- `Go`
+- `Next`
+- `Previous`
+- `Return`
+- `Search`
+- `Send`
 
 ## See also
 
