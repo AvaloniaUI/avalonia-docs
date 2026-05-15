@@ -79,7 +79,7 @@ The `ScatterLineSeries` extends scatter charts by drawing connecting lines betwe
                             <charts:NumericalAxis />
                         </charts:CartesianChart.VerticalAxis>
                         <charts:CartesianChart.Series>
-                            <charts:ScatterSeries Title="Data Points" ItemsSource="{Binding ScatterSeriesData}" Fill="Purple" MarkerSize="10" MarkerShape="Circle" />
+                            <charts:ScatterLineSeries Title="Data Points" ItemsSource="{Binding ScatterSeriesData}" Fill="Purple" MarkerSize="10" MarkerShape="Circle" />
                         </charts:CartesianChart.Series>
                     </charts:CartesianChart>
 ```
