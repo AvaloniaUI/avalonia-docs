@@ -16,9 +16,9 @@ Charts are available with [Avalonia Pro](https://avaloniaui.net/pricing).
 
 ## Getting started
 
-1. Install the `Avalonia.Controls.Charts` NuGet package by running the `dotnet add package` command.
+1. Install the `Avalonia.Controls.Charts` NuGet package by running `dotnet add package`.
 
-```
+```bash
 dotnet add package Avalonia.Controls.Charts
 ```
 
@@ -30,15 +30,11 @@ dotnet add package Avalonia.Controls.Charts
 </ItemGroup>
 ```
 
-3. Include a `PackageReference` for `Avalonia.Controls.Charts` in your `.csproj` file, if there isn't one yet.
+:::tip
+For multi-project solutions, you can store your licence key in an [environment variable](https://learn.microsoft.com/en-us/visualstudio/msbuild/how-to-use-environment-variables-in-a-build) or a [shared props file](https://learn.microsoft.com/en-us/visualstudio/msbuild/customize-by-directory?view=vs-2022#directorybuildprops-example) to avoid duplication.
+:::
 
-```xml
-<ItemGroup>
-  <PackageReference Include="Avalonia.Controls.Charts" Version="VERSION_NUMBER"/>
-</ItemGroup>
-```
-
-4. Use the `https://avaloniaui.net/controls/charts` XML namespace in your XAML. All chart types share the same namespace.
+3. Use the `https://avaloniaui.net/controls/charts` XML namespace in your XAML. All chart types share the same namespace.
 
 ```xml
 <UserControl xmlns="https://github.com/avaloniaui"

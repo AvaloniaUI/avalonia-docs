@@ -16,9 +16,9 @@ This control is available as part of [Avalonia Pro](https://avaloniaui.net/prici
 
 ## Getting started
 
-1. Install the `Avalonia.Controls.Markdown` NuGet package by running the `dotnet add package` command.
+1. Install the `Avalonia.Controls.Markdown` NuGet package by running `dotnet add package`.
 
-```
+```bash
 dotnet add package Avalonia.Controls.Markdown
 ```
 
@@ -30,15 +30,11 @@ dotnet add package Avalonia.Controls.Markdown
 </ItemGroup>
 ```
 
-3. Include a `PackageReference` for `Avalonia.Controls.Markdown` in your `.csproj` file, if there isn't one yet.
+:::tip
+For multi-project solutions, you can store your licence key in an [environment variable](https://learn.microsoft.com/en-us/visualstudio/msbuild/how-to-use-environment-variables-in-a-build) or a [shared props file](https://learn.microsoft.com/en-us/visualstudio/msbuild/customize-by-directory?view=vs-2022#directorybuildprops-example) to avoid duplication.
+:::
 
-```xml
-<ItemGroup>
-  <PackageReference Include="Avalonia.Controls.Markdown" Version="VERSION_NUMBER"/>
-</ItemGroup>
-```
-
-4. Reference `Default.axaml` via a `StyleInclude` in your `App.axaml` file. This adds the Markdown resources to your project.
+3. Reference the default theme via a `StyleInclude` in your `App.axaml` file. This adds the resources needed by the Markdown control.
 
 ```xml
 <Application.Styles>

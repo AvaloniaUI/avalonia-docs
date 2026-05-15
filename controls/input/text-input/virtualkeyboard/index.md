@@ -20,9 +20,9 @@ The virtual keyboard component includes the following classes:
 
 ## Getting started
 
-1. Install the `Avalonia.Controls.VirtualKeyboard` NuGet package by running the `dotnet add package` command.
+1. Install the `Avalonia.Controls.VirtualKeyboard` NuGet package by running `dotnet add package`.
 
-```
+```bash
 dotnet add package Avalonia.Controls.VirtualKeyboard
 ```
 
@@ -35,7 +35,7 @@ dotnet add package Avalonia.Controls.VirtualKeyboard
 ```
 
 :::tip
-For multi-project solutions, you can store your license key in an [environment variable](https://learn.microsoft.com/en-us/visualstudio/msbuild/how-to-use-environment-variables-in-a-build) or a [shared props file](https://learn.microsoft.com/en-us/visualstudio/msbuild/customize-by-directory?view=vs-2022#directorybuildprops-example) to avoid duplication.
+For multi-project solutions, you can store your licence key in an [environment variable](https://learn.microsoft.com/en-us/visualstudio/msbuild/how-to-use-environment-variables-in-a-build) or a [shared props file](https://learn.microsoft.com/en-us/visualstudio/msbuild/customize-by-directory?view=vs-2022#directorybuildprops-example) to avoid duplication.
 :::
 
 3. Reference the `VirtualKeyboard` fluent theme via a `StyleInclude` in your `App.axaml` file. This adds the resources needed to properly style the virtual keyboard.

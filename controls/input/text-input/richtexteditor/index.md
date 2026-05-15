@@ -22,7 +22,7 @@ Use `RichTextEditor` to create an area where users can edit text content and per
 
 ## Getting started
 
-1. Install the `Avalonia.Controls.RichTextEditor` NuGet package by running the `dotnet add package` command. Optionally, install serializers for specific file formats you need.
+1. Install the `Avalonia.Controls.RichTextEditor` NuGet package by running `dotnet add package`. Optionally, install serializers for specific file formats you need.
 
 ```bash
 # Core editor control and document model, includes plain text serialization
@@ -42,15 +42,11 @@ dotnet add package Avalonia.Controls.Documents.Serialization.Xaml    # XAML seri
 </ItemGroup>
 ```
 
-3. Include a `PackageReference` for `Avalonia.Controls.RichTextEditor` in your `.csproj` file, if there isn't one yet.
+:::tip
+For multi-project solutions, you can store your licence key in an [environment variable](https://learn.microsoft.com/en-us/visualstudio/msbuild/how-to-use-environment-variables-in-a-build) or a [shared props file](https://learn.microsoft.com/en-us/visualstudio/msbuild/customize-by-directory?view=vs-2022#directorybuildprops-example) to avoid duplication.
+:::
 
-```xml
-<ItemGroup>
-  <PackageReference Include="Avalonia.Controls.RichTextEditor" Version="VERSION_NUMBER"/>
-</ItemGroup>
-```
-
-4. Reference `Default.axaml` via a `StyleInclude` in your `App.axaml` file.
+3. Reference the `RichTextEditor` default theme via a `StyleInclude` in your `App.axaml` file. This adds the resources needed to render the control.
 
 ```xml
 <Application.Styles>
