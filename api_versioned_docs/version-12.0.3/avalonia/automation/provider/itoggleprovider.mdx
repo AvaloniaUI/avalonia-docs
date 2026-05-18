@@ -1,0 +1,103 @@
+---
+title: 'IToggleProvider'
+hide_title: true
+slug: '/avalonia/automation/provider/itoggleprovider'
+uid: 'Avalonia.Automation.Provider.IToggleProvider'
+commentId: 'T:Avalonia.Automation.Provider.IToggleProvider'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Automation.Provider'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IToggleProvider Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Automation.Provider</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Exposes methods and properties to support UI Automation client access to controls that can
+cycle through a set of states and maintain a particular state.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface IToggleProvider
+```
+
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Toggle](#uid-25c07d8b77) | Cycles through the toggle states of a control. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-25c07d8b77"></span>
+
+### Toggle Method
+
+Cycles through the toggle states of a control.
+
+```csharp
+public void Toggle()
+```
+
+#### Remarks
+
+- Windows`IToggleProvider.Toggle`
+- macOS`NSAccessibilityProtocol.accessibilityPerformPress`
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [ToggleState](#uid-808ed47c14) | Gets the toggle state of the control. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-808ed47c14"></span>
+
+### ToggleState Property
+
+Gets the toggle state of the control.
+
+```csharp
+public Avalonia.Automation.Provider.ToggleState ToggleState { get; set; }
+```
+
+#### Remarks
+
+- Windows`IToggleProvider.ToggleState`
+- macOS`NSAccessibilityProtocol.accessibilityValue`
+
+</section>
+
+</ApiRefPage>
+

@@ -2757,6 +2757,301 @@ const sidebars = {
     },
     {
       "type": "category",
+      "label": "Avalonia.Controls.Charts",
+      "items": [
+        {
+          "type": "category",
+          "label": "Avalonia.Controls.Charts",
+          "items": [
+            "avalonia/controls/charts/alluvialchart",
+            "avalonia/controls/charts/alluviallink",
+            "avalonia/controls/charts/alluvialnode",
+            "avalonia/controls/charts/arcdiagramchart",
+            "avalonia/controls/charts/arearangeseries",
+            "avalonia/controls/charts/areaseries",
+            "avalonia/controls/charts/arrowlineannotation",
+            "avalonia/controls/charts/axischartbase",
+            "avalonia/controls/charts/axisgridchartbase",
+            "avalonia/controls/charts/axisgridplotareachartbase",
+            "avalonia/controls/charts/bandannotation",
+            "avalonia/controls/charts/barseries",
+            "avalonia/controls/charts/beeswarmplotchart",
+            "avalonia/controls/charts/bollingerbandsindicator",
+            "avalonia/controls/charts/boxplotdatapoint",
+            "avalonia/controls/charts/boxplotseries",
+            "avalonia/controls/charts/brick",
+            "avalonia/controls/charts/bubblecloud",
+            "avalonia/controls/charts/bubblelayer",
+            "avalonia/controls/charts/bubbleseries",
+            "avalonia/controls/charts/bulletchart",
+            "avalonia/controls/charts/bumpchart",
+            "avalonia/controls/charts/calendarheatmapchart",
+            "avalonia/controls/charts/candlestickseries",
+            "avalonia/controls/charts/carpetplot",
+            "avalonia/controls/charts/cartesianannotationrendercontext",
+            "avalonia/controls/charts/cartesianchart",
+            "avalonia/controls/charts/cartesiandatapoint",
+            "avalonia/controls/charts/cartesiandatapointwithitem",
+            "avalonia/controls/charts/cartesianseries",
+            "avalonia/controls/charts/categoryaxis",
+            "avalonia/controls/charts/categoryplotmode",
+            "avalonia/controls/charts/chartannotation",
+            "avalonia/controls/charts/chartaxis",
+            "avalonia/controls/charts/chartbase",
+            "avalonia/controls/charts/chartexportcompletedeventargs",
+            "avalonia/controls/charts/chartexportfailedeventargs",
+            "avalonia/controls/charts/chartexportresult",
+            "avalonia/controls/charts/chartlegend",
+            "avalonia/controls/charts/chartlegenditem",
+            "avalonia/controls/charts/chartlegenditemactivatedeventargs",
+            "avalonia/controls/charts/chartpalette",
+            "avalonia/controls/charts/chartpatternpalette",
+            "avalonia/controls/charts/chartplotband",
+            "avalonia/controls/charts/chartrangeselector",
+            "avalonia/controls/charts/chartselectionchangedeventargs",
+            "avalonia/controls/charts/chartselectionchangingeventargs",
+            "avalonia/controls/charts/chartselectionmode",
+            "avalonia/controls/charts/chartseries",
+            "avalonia/controls/charts/charttechnicalindicator",
+            "avalonia/controls/charts/charttooltip",
+            "avalonia/controls/charts/charttrackball",
+            "avalonia/controls/charts/charttrendlineseries",
+            "avalonia/controls/charts/chartzoomeventargs",
+            "avalonia/controls/charts/chartzoomreseteventargs",
+            "avalonia/controls/charts/chorddiagramchart",
+            "avalonia/controls/charts/choroplethmap",
+            "avalonia/controls/charts/circlepackingchart",
+            "avalonia/controls/charts/circulargaugechart",
+            "avalonia/controls/charts/colormapping",
+            "avalonia/controls/charts/combochart",
+            "avalonia/controls/charts/contourplot",
+            "avalonia/controls/charts/crosshairmode",
+            "avalonia/controls/charts/datapointclickedeventargs",
+            "avalonia/controls/charts/datapointhitregion",
+            "avalonia/controls/charts/datapointhoveredeventargs",
+            "avalonia/controls/charts/datetimeaxis",
+            "avalonia/controls/charts/datetimeunit",
+            "avalonia/controls/charts/defaultpalette",
+            "avalonia/controls/charts/dendrogramchart",
+            "avalonia/controls/charts/dendrogramlinkstyle",
+            "avalonia/controls/charts/densityplotchart",
+            "avalonia/controls/charts/divergingbarchart",
+            "avalonia/controls/charts/dotplotseries",
+            "avalonia/controls/charts/dumbbellchart",
+            "avalonia/controls/charts/ellipseannotation",
+            "avalonia/controls/charts/emaindicator",
+            "avalonia/controls/charts/emptypointmode",
+            "avalonia/controls/charts/equalcolormapping",
+            "avalonia/controls/charts/errorbardatapoint",
+            "avalonia/controls/charts/errorbarmode",
+            "avalonia/controls/charts/errorbarseries",
+            "avalonia/controls/charts/eventtimelinechart",
+            "avalonia/controls/charts/financialchart",
+            "avalonia/controls/charts/financialoverlayrendercontext",
+            "avalonia/controls/charts/financialpoint",
+            "avalonia/controls/charts/financialseries",
+            "avalonia/controls/charts/flamegraph",
+            "avalonia/controls/charts/flameitem",
+            "avalonia/controls/charts/flowchart",
+            "avalonia/controls/charts/flowedge",
+            "avalonia/controls/charts/flowgroup",
+            "avalonia/controls/charts/flownode",
+            "avalonia/controls/charts/flowshape",
+            "avalonia/controls/charts/forcedirectedgraph",
+            "avalonia/controls/charts/forceedge",
+            "avalonia/controls/charts/forcenode",
+            "avalonia/controls/charts/funnelchart",
+            "avalonia/controls/charts/ganttchart",
+            "avalonia/controls/charts/gaugechart",
+            "avalonia/controls/charts/geojsonfeature",
+            "avalonia/controls/charts/gradientringchart",
+            "avalonia/controls/charts/gridlinechartbase",
+            "avalonia/controls/charts/heatmapchart",
+            "avalonia/controls/charts/heatmaplayer",
+            "avalonia/controls/charts/heikinashichart",
+            "avalonia/controls/charts/hexbinchart",
+            "avalonia/controls/charts/hexbincolorscale",
+            "avalonia/controls/charts/highlightableaxisgridchartbase",
+            "avalonia/controls/charts/highlightableaxisgridplotareachartbase",
+            "avalonia/controls/charts/highlightablechartbase",
+            "avalonia/controls/charts/highlightablegridlinechartbase",
+            "avalonia/controls/charts/highlightableselectablechartbase",
+            "avalonia/controls/charts/hilodatapoint",
+            "avalonia/controls/charts/hiloseries",
+            "avalonia/controls/charts/histogrambin",
+            "avalonia/controls/charts/histogramseries",
+            "avalonia/controls/charts/iaxisbrushchart",
+            "avalonia/controls/charts/iciclechart",
+            "avalonia/controls/charts/icicleitem",
+            "avalonia/controls/charts/ifinancialchartoverlayboundsprovider",
+            "avalonia/controls/charts/ifinancialchartoverlayseries",
+            "avalonia/controls/charts/igridlinebrushchart",
+            "avalonia/controls/charts/ihighlightablechart",
+            "avalonia/controls/charts/iindexselectablechart",
+            "avalonia/controls/charts/iitemselectablechart",
+            "avalonia/controls/charts/indentedtreechart",
+            "avalonia/controls/charts/iplotareabackgroundchart",
+            "avalonia/controls/charts/iselectablechart",
+            "avalonia/controls/charts/iserieschart",
+            "avalonia/controls/charts/itemschartbase",
+            "avalonia/controls/charts/kagichart",
+            "avalonia/controls/charts/kagisegment",
+            "avalonia/controls/charts/kpicard",
+            "avalonia/controls/charts/kpideltatype",
+            "avalonia/controls/charts/labelfitmode",
+            "avalonia/controls/charts/legendalignment",
+            "avalonia/controls/charts/legenditem",
+            "avalonia/controls/charts/legenditemclickedeventargs",
+            "avalonia/controls/charts/legendmarkershape",
+            "avalonia/controls/charts/legendposition",
+            "avalonia/controls/charts/lineannotation",
+            "avalonia/controls/charts/lineargaugechart",
+            "avalonia/controls/charts/lineargaugerange",
+            "avalonia/controls/charts/linelayer",
+            "avalonia/controls/charts/lineseries",
+            "avalonia/controls/charts/liquidfillgauge",
+            "avalonia/controls/charts/logarithmicaxis",
+            "avalonia/controls/charts/lollipopseries",
+            "avalonia/controls/charts/maparc",
+            "avalonia/controls/charts/mapcircle",
+            "avalonia/controls/charts/mapicontype",
+            "avalonia/controls/charts/maplatlng",
+            "avalonia/controls/charts/maplayer",
+            "avalonia/controls/charts/maplayerinvalidationkind",
+            "avalonia/controls/charts/maplegend",
+            "avalonia/controls/charts/mapline",
+            "avalonia/controls/charts/mapmarker",
+            "avalonia/controls/charts/mappolygon",
+            "avalonia/controls/charts/mappolyline",
+            "avalonia/controls/charts/mapprojection",
+            "avalonia/controls/charts/markerbrushes",
+            "avalonia/controls/charts/markerlayer",
+            "avalonia/controls/charts/markershape",
+            "avalonia/controls/charts/matrixchart",
+            "avalonia/controls/charts/matrixrowdata",
+            "avalonia/controls/charts/mekkochart",
+            "avalonia/controls/charts/mirrorbarchart",
+            "avalonia/controls/charts/mosaicchart",
+            "avalonia/controls/charts/movingaverageindicatorbase",
+            "avalonia/controls/charts/movingaverageseries",
+            "avalonia/controls/charts/movingaveragetype",
+            "avalonia/controls/charts/networkchart",
+            "avalonia/controls/charts/networkedge",
+            "avalonia/controls/charts/networknode",
+            "avalonia/controls/charts/nightingalerosechart",
+            "avalonia/controls/charts/numericalaxis",
+            "avalonia/controls/charts/ohlcseries",
+            "avalonia/controls/charts/organizationchart",
+            "avalonia/controls/charts/packedbubblechart",
+            "avalonia/controls/charts/parallelaxis",
+            "avalonia/controls/charts/parallelcoordinateschart",
+            "avalonia/controls/charts/paretochart",
+            "avalonia/controls/charts/parliamentchart",
+            "avalonia/controls/charts/parliamentparty",
+            "avalonia/controls/charts/patternstyle",
+            "avalonia/controls/charts/pictorialbarseries",
+            "avalonia/controls/charts/pictorialrendermode",
+            "avalonia/controls/charts/piechart",
+            "avalonia/controls/charts/piechartmaplayer",
+            "avalonia/controls/charts/pielabelformat",
+            "avalonia/controls/charts/pielabelposition",
+            "avalonia/controls/charts/pieseries",
+            "avalonia/controls/charts/plotareabackgroundchartbase",
+            "avalonia/controls/charts/plotbandtextalignment",
+            "avalonia/controls/charts/pointandfigureseries",
+            "avalonia/controls/charts/polarareachart",
+            "avalonia/controls/charts/polarchart",
+            "avalonia/controls/charts/polardatapointwithitem",
+            "avalonia/controls/charts/polarlineseries",
+            "avalonia/controls/charts/populationpyramidchart",
+            "avalonia/controls/charts/progressdonutchart",
+            "avalonia/controls/charts/pyramidchart",
+            "avalonia/controls/charts/pyramiddataitem",
+            "avalonia/controls/charts/radarchart",
+            "avalonia/controls/charts/radarseries",
+            "avalonia/controls/charts/radarvaluewithitem",
+            "avalonia/controls/charts/radialbarchart",
+            "avalonia/controls/charts/radialtreechart",
+            "avalonia/controls/charts/rangebarseries",
+            "avalonia/controls/charts/rangecolormapping",
+            "avalonia/controls/charts/rangedatapoint",
+            "avalonia/controls/charts/rangedatapointwithitem",
+            "avalonia/controls/charts/rectangleannotation",
+            "avalonia/controls/charts/renkochart",
+            "avalonia/controls/charts/ridgelinechart",
+            "avalonia/controls/charts/ridgelinecurvetype",
+            "avalonia/controls/charts/sankeychart",
+            "avalonia/controls/charts/sankeylink",
+            "avalonia/controls/charts/sankeynode",
+            "avalonia/controls/charts/scalebreak",
+            "avalonia/controls/charts/scatterlineseries",
+            "avalonia/controls/charts/scatterseries",
+            "avalonia/controls/charts/selectablechartbase",
+            "avalonia/controls/charts/selectableitemschartbase",
+            "avalonia/controls/charts/selectableplotareabackgroundchartbase",
+            "avalonia/controls/charts/semidonutchart",
+            "avalonia/controls/charts/serieschangedeventargs",
+            "avalonia/controls/charts/seriesrendercontext",
+            "avalonia/controls/charts/shapelayer",
+            "avalonia/controls/charts/shapemap",
+            "avalonia/controls/charts/sliceclickedeventargs",
+            "avalonia/controls/charts/slopechart",
+            "avalonia/controls/charts/smaindicator",
+            "avalonia/controls/charts/smithchart",
+            "avalonia/controls/charts/sparklinechart",
+            "avalonia/controls/charts/sparklinetype",
+            "avalonia/controls/charts/spiraltimeline",
+            "avalonia/controls/charts/splineareaseries",
+            "avalonia/controls/charts/splineseries",
+            "avalonia/controls/charts/stacked100percentbarseries",
+            "avalonia/controls/charts/stackedareaseries",
+            "avalonia/controls/charts/stackedbarseries",
+            "avalonia/controls/charts/steplinemode",
+            "avalonia/controls/charts/steplineseries",
+            "avalonia/controls/charts/streamgraphseries",
+            "avalonia/controls/charts/stripplotchart",
+            "avalonia/controls/charts/sunburstchart",
+            "avalonia/controls/charts/sunburstitem",
+            "avalonia/controls/charts/swimlanechart",
+            "avalonia/controls/charts/swimlanedata",
+            "avalonia/controls/charts/swimlanetask",
+            "avalonia/controls/charts/tablechart",
+            "avalonia/controls/charts/tablechartcolumn",
+            "avalonia/controls/charts/ternarychart",
+            "avalonia/controls/charts/textannotation",
+            "avalonia/controls/charts/tooltipdatacontext",
+            "avalonia/controls/charts/tornadochart",
+            "avalonia/controls/charts/trackballdisplaymode",
+            "avalonia/controls/charts/trackballmode",
+            "avalonia/controls/charts/treemapchart",
+            "avalonia/controls/charts/trendline",
+            "avalonia/controls/charts/trendlinetype",
+            "avalonia/controls/charts/varianceseries",
+            "avalonia/controls/charts/vectorlayer",
+            "avalonia/controls/charts/venndiagramchart",
+            "avalonia/controls/charts/vennitem",
+            "avalonia/controls/charts/violinplotchart",
+            "avalonia/controls/charts/wafflechart",
+            "avalonia/controls/charts/waterfallseries",
+            "avalonia/controls/charts/windrosechart",
+            "avalonia/controls/charts/wmaindicator",
+            "avalonia/controls/charts/wordcloudchart",
+            "avalonia/controls/charts/yaxisposition",
+            "avalonia/controls/charts/zoommode"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/controls/charts/index"
+          }
+        }
+      ],
+      "link": {
+        "type": "doc",
+        "id": "packages/avalonia-controls-charts"
+      }
+    },
+    {
+      "type": "category",
       "label": "Avalonia.Controls.ColorPicker",
       "items": [
         {
@@ -2840,6 +3135,74 @@ const sidebars = {
     },
     {
       "type": "category",
+      "label": "Avalonia.Controls.Documents.Serialization.Docx",
+      "items": [
+        {
+          "type": "category",
+          "label": "Avalonia.Controls.Documents.Serialization.Docx",
+          "items": [
+            "avalonia/controls/documents/serialization/docx/docxleveloverride",
+            "avalonia/controls/documents/serialization/docx/docxnumberingleveldefinition",
+            "avalonia/controls/documents/serialization/docx/docxserializer",
+            "avalonia/controls/documents/serialization/docx/docxtabstop"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/controls/documents/serialization/docx/index"
+          }
+        }
+      ],
+      "link": {
+        "type": "doc",
+        "id": "packages/avalonia-controls-documents-serialization-docx"
+      }
+    },
+    {
+      "type": "category",
+      "label": "Avalonia.Controls.Documents.Serialization.Rtf",
+      "items": [
+        {
+          "type": "category",
+          "label": "Avalonia.Controls.Documents.Serialization.Rtf",
+          "items": [
+            "avalonia/controls/documents/serialization/rtf/rtfbordermetadata",
+            "avalonia/controls/documents/serialization/rtf/rtfserializer",
+            "avalonia/controls/documents/serialization/rtf/rtftabstopmetadata"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/controls/documents/serialization/rtf/index"
+          }
+        }
+      ],
+      "link": {
+        "type": "doc",
+        "id": "packages/avalonia-controls-documents-serialization-rtf"
+      }
+    },
+    {
+      "type": "category",
+      "label": "Avalonia.Controls.Documents.Serialization.Xaml",
+      "items": [
+        {
+          "type": "category",
+          "label": "Avalonia.Controls.Documents.Serialization.Xaml",
+          "items": [
+            "avalonia/controls/documents/serialization/xaml/xamlserializer"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/controls/documents/serialization/xaml/index"
+          }
+        }
+      ],
+      "link": {
+        "type": "doc",
+        "id": "packages/avalonia-controls-documents-serialization-xaml"
+      }
+    },
+    {
+      "type": "category",
       "label": "Avalonia.Controls.Markdown",
       "items": [
         {
@@ -2849,11 +3212,47 @@ const sidebars = {
             "avalonia/controls/codehighlighter",
             "avalonia/controls/markdown",
             "avalonia/controls/markdownextensions",
-            "avalonia/controls/markdownimageloader"
+            "avalonia/controls/markdownimageloader",
+            "avalonia/controls/markdownstreamingsession"
           ],
           "link": {
             "type": "doc",
             "id": "avalonia/controls/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Controls.Documents",
+          "items": [
+            "avalonia/controls/documents/markdowncodeblock",
+            "avalonia/controls/documents/markdownimage",
+            "avalonia/controls/documents/markdowntasklistitem"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/controls/documents/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Controls.Documents.Serialization.Markdown",
+          "items": [
+            "avalonia/controls/documents/serialization/markdown/markdownserializer"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/controls/documents/serialization/markdown/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Controls.Documents.TextModel",
+          "items": [
+            "avalonia/controls/documents/textmodel/markdownnodekinds"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/controls/documents/textmodel/index"
           }
         },
         "compiledavaloniaxaml/index"
@@ -2988,6 +3387,145 @@ const sidebars = {
       "link": {
         "type": "doc",
         "id": "packages/avalonia-controls-mediaplayer-abstractions"
+      }
+    },
+    {
+      "type": "category",
+      "label": "Avalonia.Controls.RichTextEditor",
+      "items": [
+        {
+          "type": "category",
+          "label": "Avalonia.Controls",
+          "items": [
+            "avalonia/controls/richtexteditor"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/controls/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Controls.Documents.Primitives",
+          "items": [
+            "avalonia/controls/documents/primitives/editorcontextmenu",
+            "avalonia/controls/documents/primitives/editorselectionflyout",
+            "avalonia/controls/documents/primitives/itexteditorhost"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/controls/documents/primitives/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Controls.Documents.Primitives.Actions",
+          "items": [
+            "avalonia/controls/documents/primitives/actions/backgroundcoloraction",
+            "avalonia/controls/documents/primitives/actions/blockbackgroundaction",
+            "avalonia/controls/documents/primitives/actions/blockbordertoggleaction",
+            "avalonia/controls/documents/primitives/actions/blockpropertyaction-1",
+            "avalonia/controls/documents/primitives/actions/boldaction",
+            "avalonia/controls/documents/primitives/actions/borderbrushaction",
+            "avalonia/controls/documents/primitives/actions/borderthicknessaction",
+            "avalonia/controls/documents/primitives/actions/bulletmarkerstyleaction",
+            "avalonia/controls/documents/primitives/actions/copyaction",
+            "avalonia/controls/documents/primitives/actions/cutaction",
+            "avalonia/controls/documents/primitives/actions/deletetableaction",
+            "avalonia/controls/documents/primitives/actions/deletetablecolumnaction",
+            "avalonia/controls/documents/primitives/actions/deletetablerowaction",
+            "avalonia/controls/documents/primitives/actions/editoraction",
+            "avalonia/controls/documents/primitives/actions/editoractions",
+            "avalonia/controls/documents/primitives/actions/fontfamilyaction",
+            "avalonia/controls/documents/primitives/actions/fontsizeaction",
+            "avalonia/controls/documents/primitives/actions/foregroundcoloraction",
+            "avalonia/controls/documents/primitives/actions/formattingtoggleaction-1",
+            "avalonia/controls/documents/primitives/actions/iblockpropertyaction",
+            "avalonia/controls/documents/primitives/actions/iblockpropertyaction-1",
+            "avalonia/controls/documents/primitives/actions/ieditoraction",
+            "avalonia/controls/documents/primitives/actions/inserttableaction",
+            "avalonia/controls/documents/primitives/actions/inserttablecolumnaction",
+            "avalonia/controls/documents/primitives/actions/inserttablerowaction",
+            "avalonia/controls/documents/primitives/actions/ipropertyaction",
+            "avalonia/controls/documents/primitives/actions/ipropertyaction-1",
+            "avalonia/controls/documents/primitives/actions/italicaction",
+            "avalonia/controls/documents/primitives/actions/itoggleaction",
+            "avalonia/controls/documents/primitives/actions/lineheightaction",
+            "avalonia/controls/documents/primitives/actions/listtoggleaction",
+            "avalonia/controls/documents/primitives/actions/marginaction",
+            "avalonia/controls/documents/primitives/actions/numberedmarkerstyleaction",
+            "avalonia/controls/documents/primitives/actions/paddingaction",
+            "avalonia/controls/documents/primitives/actions/pasteaction",
+            "avalonia/controls/documents/primitives/actions/pasteunformattedaction",
+            "avalonia/controls/documents/primitives/actions/propertyaction-1",
+            "avalonia/controls/documents/primitives/actions/redoaction",
+            "avalonia/controls/documents/primitives/actions/selectallaction",
+            "avalonia/controls/documents/primitives/actions/strikethroughaction",
+            "avalonia/controls/documents/primitives/actions/subscriptaction",
+            "avalonia/controls/documents/primitives/actions/superscriptaction",
+            "avalonia/controls/documents/primitives/actions/textalignmentaction",
+            "avalonia/controls/documents/primitives/actions/textalignmenttoggleaction",
+            "avalonia/controls/documents/primitives/actions/underlineaction",
+            "avalonia/controls/documents/primitives/actions/undoaction"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/controls/documents/primitives/actions/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Controls.Documents.Primitives.Components",
+          "items": [
+            "avalonia/controls/documents/primitives/components/texteditorkeyboard",
+            "avalonia/controls/documents/primitives/components/texteditorselectionflyout",
+            "avalonia/controls/documents/primitives/components/texteditortyping"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/controls/documents/primitives/components/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Controls.Documents.Primitives.Toolbar",
+          "items": [
+            "avalonia/controls/documents/primitives/toolbar/actiontool",
+            "avalonia/controls/documents/primitives/toolbar/alignmentflyouttool",
+            "avalonia/controls/documents/primitives/toolbar/borderflyouttool",
+            "avalonia/controls/documents/primitives/toolbar/buttontool",
+            "avalonia/controls/documents/primitives/toolbar/colormenuitem",
+            "avalonia/controls/documents/primitives/toolbar/colorpickertool",
+            "avalonia/controls/documents/primitives/toolbar/colorswatchpalette",
+            "avalonia/controls/documents/primitives/toolbar/colorswatchselectedeventargs",
+            "avalonia/controls/documents/primitives/toolbar/colorswatchtool",
+            "avalonia/controls/documents/primitives/toolbar/colortool",
+            "avalonia/controls/documents/primitives/toolbar/comboboxtool",
+            "avalonia/controls/documents/primitives/toolbar/editorbordersides",
+            "avalonia/controls/documents/primitives/toolbar/editormenuitem",
+            "avalonia/controls/documents/primitives/toolbar/editortool",
+            "avalonia/controls/documents/primitives/toolbar/editortoolbar",
+            "avalonia/controls/documents/primitives/toolbar/editortooltip",
+            "avalonia/controls/documents/primitives/toolbar/fontfamilymenuitem",
+            "avalonia/controls/documents/primitives/toolbar/hyperlinkflyouttool",
+            "avalonia/controls/documents/primitives/toolbar/listtoggletool",
+            "avalonia/controls/documents/primitives/toolbar/overflowtool",
+            "avalonia/controls/documents/primitives/toolbar/propertymenuitem",
+            "avalonia/controls/documents/primitives/toolbar/separatortool",
+            "avalonia/controls/documents/primitives/toolbar/tablepickertool",
+            "avalonia/controls/documents/primitives/toolbar/textalignmentmenuitem",
+            "avalonia/controls/documents/primitives/toolbar/toggletool",
+            "avalonia/controls/documents/primitives/toolbar/toolbargroup"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/controls/documents/primitives/toolbar/index"
+          }
+        }
+      ],
+      "link": {
+        "type": "doc",
+        "id": "packages/avalonia-controls-richtexteditor"
       }
     },
     {

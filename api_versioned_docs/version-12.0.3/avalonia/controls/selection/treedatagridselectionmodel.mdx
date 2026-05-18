@@ -1,0 +1,198 @@
+---
+title: 'TreeDataGridSelectionModel'
+hide_title: true
+slug: '/avalonia/controls/selection/treedatagridselectionmodel'
+uid: 'Avalonia.Controls.Selection.TreeDataGridSelectionModel'
+commentId: 'T:Avalonia.Controls.Selection.TreeDataGridSelectionModel'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.TreeDataGrid'
+assembly: 'Avalonia.Controls.TreeDataGrid'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Selection'
+tfms:
+  - 'net8.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">TreeDataGridSelectionModel Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Selection</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Base class for selection models in [TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid).
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class TreeDataGridSelectionModel
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> TreeDataGridSelectionModel
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Derived types:</span> <a href="treedatagridcellselectionmodel-1">TreeDataGridCellSelectionModel&lt;TModel&gt;</a>, <a href="treedatagridrowselectionmodel-1">TreeDataGridRowSelectionModel&lt;TModel&gt;</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> INotifyPropertyChanged
+</div>
+</div>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [IsCellSelectionModel](#uid-2670c4f5e9) | Gets a value indicating whether this is a cell selection model. |
+| [SingleSelect](#uid-3e8fff3b7c) | Gets or sets a value indicating whether only a single item can be selected at a time. |
+| [Source](#uid-b4d4637677) | Gets the data source for the selection model. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2670c4f5e9"></span>
+
+### IsCellSelectionModel Property
+
+Gets a value indicating whether this is a cell selection model.
+
+```csharp
+public bool IsCellSelectionModel { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3e8fff3b7c"></span>
+
+### SingleSelect Property
+
+Gets or sets a value indicating whether only a single item can be selected at a time.
+
+```csharp
+public bool SingleSelect { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b4d4637677"></span>
+
+### Source Property
+
+Gets the data source for the selection model.
+
+```csharp
+public System.Collections.IEnumerable Source { get; set; }
+```
+
+</section>
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [IndexesChanged](#uid-c5c2106a08) | Occurs when item indexes change due to insertions or removals in the data source. |
+| [PropertyChanged](#uid-c2ee82eef9) | No summary available. |
+| [SelectionChanged](#uid-b83b9267ac) | Occurs when the selection changes, providing unified event args with row and cell index information. |
+| [SourceReset](#uid-eac05c7ba6) | Occurs when the data source is reset. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c5c2106a08"></span>
+
+### IndexesChanged Event
+
+Occurs when item indexes change due to insertions or removals in the data source.
+
+```csharp
+public event EventHandler<Avalonia.Controls.Selection.TreeDataGridIndexesChangedEventArgs> IndexesChanged
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c2ee82eef9"></span>
+
+### PropertyChanged Event
+
+```csharp
+public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b83b9267ac"></span>
+
+### SelectionChanged Event
+
+Occurs when the selection changes, providing unified event args with row and cell
+index information.
+
+```csharp
+public event EventHandler<Avalonia.Controls.Selection.TreeDataGridSelectionChangedEventArgs> SelectionChanged
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-eac05c7ba6"></span>
+
+### SourceReset Event
+
+Occurs when the data source is reset.
+
+```csharp
+public event EventHandler<Avalonia.Controls.Selection.TreeDataGridItemsResetEventArgs> SourceReset
+```
+
+#### Remarks
+
+This event is raised when a collection in the hierarchical data structure is reset,
+such as when a collection is cleared or replaced with a new collection.
+
+Due to design limitations of collection reset events, the selection model cannot
+automatically preserve selection state when a collection is reset. The reset event
+doesn't provide information about which items were removed or how they map to new
+items.
+
+Applications that need to maintain selection across collection resets must handle
+this event and manually restore the selection based on their knowledge of the data
+model. For example, you might store the IDs or unique identifiers of selected items
+before the reset, and then re-select them after the reset by finding the new indices
+of those items.
+
+The [Avalonia.Controls.Selection.TreeDataGridItemsResetEventArgs.ParentIndex](xref:Avalonia.Controls.Selection.TreeDataGridItemsResetEventArgs.ParentIndex) property indicates
+which part of the hierarchical structure was reset, allowing you to determine whether
+to restore selection for the entire collection or just a subtree.
+
+</section>
+
+</ApiRefPage>
+
