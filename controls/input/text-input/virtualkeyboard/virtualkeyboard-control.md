@@ -105,7 +105,7 @@ myContainer.Children.Add(keyboard);
 
 2. **Place the keyboard with care.**
    - Position the keyboard where it won't obscure important content, typically at the bottom of the screen.
-   - `VirtualKeyboard` doesn't automatically manage content scrolling, unlike `VirtualKeyboardScope`, 
+   - `VirtualKeyboard` doesn't automatically manage content scrolling, unlike `VirtualKeyboardScope`, so you may need to handle scrolling or layout adjustments yourself.
 
 3. **Choose relevant input methods.**
    - Choose input methods appropriate for your target audience.
