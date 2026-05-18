@@ -26,7 +26,7 @@ Dendrograms are tree diagrams frequently used to illustrate the arrangement of t
 
 ### XAML
 ```xml
-<charts:DendrogramChart Name="DendrogramChartSample" Title="Clustering" Height="300"
+<DendrogramChart xmlns="https://github.com/avaloniaui" Name="DendrogramChartSample" Title="Clustering" Height="300"
                           ItemsSource="{Binding DendrogramData}"
                           LabelPath="Name"
                           ChildrenPath="Children" />

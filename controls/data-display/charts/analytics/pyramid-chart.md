@@ -26,7 +26,7 @@ Pyramid charts are a type of stacked area or bar graph that emphasizes both hier
 
 ### XAML
 ```xml
-<charts:PyramidChart Title="Population Distribution" Height="300"
+<PyramidChart xmlns="https://github.com/avaloniaui" Title="Population Distribution" Height="300"
                        ItemsSource="{Binding PyramidData}"
                        LabelPath="Age" ValuePath="Value"/>
 ```

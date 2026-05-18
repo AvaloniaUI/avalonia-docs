@@ -23,13 +23,13 @@ The Shape Map control allows for arbitrary geographic or custom shape visualizat
 ### XAML
 
 ```xml
-<charts:ShapeMap Title="Regional Analysis" Height="400">
-    <charts:ShapeMap.Layers>
-        <charts:ShapeLayer GeoJson="{Binding AreaGeoJson}"
+<ShapeMap xmlns="https://github.com/avaloniaui" Title="Regional Analysis" Height="400">
+    <ShapeMap.Layers>
+        <ShapeLayer GeoJson="{Binding AreaGeoJson}"
                              ItemsSource="{Binding AreaData}"
                              RegionPath="AreaId" />
-    </charts:ShapeMap.Layers>
-</charts:ShapeMap>
+    </ShapeMap.Layers>
+</ShapeMap>
 ```
 
 ### Data model (C#)
@@ -169,15 +169,15 @@ Renders individual point markers at geographic coordinates. Markers can be defin
 #### XAML
 
 ```xml
-<charts:ShapeMap Title="Office Locations" Height="400">
-    <charts:ShapeMap.Layers>
-        <charts:ShapeLayer GeoJson="{Binding WorldGeoJson}" />
-        <charts:MarkerLayer ItemsSource="{Binding Offices}"
+<ShapeMap xmlns="https://github.com/avaloniaui" Title="Office Locations" Height="400">
+    <ShapeMap.Layers>
+        <ShapeLayer GeoJson="{Binding WorldGeoJson}" />
+        <MarkerLayer ItemsSource="{Binding Offices}"
                               LatitudePath="Lat" LongitudePath="Lon"
                               LabelPath="Name" MarkerSize="12"
                               MarkerType="Pin" Fill="DodgerBlue" />
-    </charts:ShapeMap.Layers>
-</charts:ShapeMap>
+    </ShapeMap.Layers>
+</ShapeMap>
 ```
 
 ### LineLayer
@@ -206,16 +206,16 @@ Renders connection lines between pairs of geographic points. Line thickness can 
 #### XAML
 
 ```xml
-<charts:ShapeMap Title="Flight Routes" Height="400">
-    <charts:ShapeMap.Layers>
-        <charts:ShapeLayer GeoJson="{Binding WorldGeoJson}" />
-        <charts:LineLayer ItemsSource="{Binding Routes}"
+<ShapeMap xmlns="https://github.com/avaloniaui" Title="Flight Routes" Height="400">
+    <ShapeMap.Layers>
+        <ShapeLayer GeoJson="{Binding WorldGeoJson}" />
+        <LineLayer ItemsSource="{Binding Routes}"
                             FromLatitudePath="FromLat" FromLongitudePath="FromLon"
                             ToLatitudePath="ToLat" ToLongitudePath="ToLon"
                             ValuePath="Passengers" IsCurved="True"
                             MinLineThickness="1" MaxLineThickness="5" />
-    </charts:ShapeMap.Layers>
-</charts:ShapeMap>
+    </ShapeMap.Layers>
+</ShapeMap>
 ```
 
 ### VectorLayer
@@ -239,26 +239,26 @@ Renders geometric shapes (lines, arcs, circles, polygons, and polylines) on the 
 #### XAML
 
 ```xml
-<charts:ShapeMap Title="Territory Boundaries" Height="400">
-    <charts:ShapeMap.Layers>
-        <charts:ShapeLayer GeoJson="{Binding WorldGeoJson}" />
-        <charts:VectorLayer IsLineAnimationEnabled="True">
-            <charts:VectorLayer.Circles>
-                <charts:MapCircle Latitude="48.8566" Longitude="2.3522"
+<ShapeMap xmlns="https://github.com/avaloniaui" Title="Territory Boundaries" Height="400">
+    <ShapeMap.Layers>
+        <ShapeLayer GeoJson="{Binding WorldGeoJson}" />
+        <VectorLayer IsLineAnimationEnabled="True">
+            <VectorLayer.Circles>
+                <MapCircle Latitude="48.8566" Longitude="2.3522"
                                     Radius="20" StrokeThickness="2">
-                    <charts:MapCircle.Fill>
+                    <MapCircle.Fill>
                         <SolidColorBrush Color="#402196F3" />
-                    </charts:MapCircle.Fill>
-                </charts:MapCircle>
-            </charts:VectorLayer.Circles>
-            <charts:VectorLayer.Lines>
-                <charts:MapLine FromLatitude="40.7128" FromLongitude="-74.006"
+                    </MapCircle.Fill>
+                </MapCircle>
+            </VectorLayer.Circles>
+            <VectorLayer.Lines>
+                <MapLine FromLatitude="40.7128" FromLongitude="-74.006"
                                   ToLatitude="51.5074" ToLongitude="-0.1278"
                                   StrokeThickness="2" />
-            </charts:VectorLayer.Lines>
-        </charts:VectorLayer>
-    </charts:ShapeMap.Layers>
-</charts:ShapeMap>
+            </VectorLayer.Lines>
+        </VectorLayer>
+    </ShapeMap.Layers>
+</ShapeMap>
 ```
 
 ### PieChartMapLayer
@@ -284,15 +284,15 @@ Draws pie charts at specific geographic coordinates. Each pie chart visualizes a
 #### XAML
 
 ```xml
-<charts:ShapeMap Title="Regional Sales Breakdown" Height="400">
-    <charts:ShapeMap.Layers>
-        <charts:ShapeLayer GeoJson="{Binding WorldGeoJson}" />
-        <charts:PieChartMapLayer ItemsSource="{Binding RegionalData}"
+<ShapeMap xmlns="https://github.com/avaloniaui" Title="Regional Sales Breakdown" Height="400">
+    <ShapeMap.Layers>
+        <ShapeLayer GeoJson="{Binding WorldGeoJson}" />
+        <PieChartMapLayer ItemsSource="{Binding RegionalData}"
                                    LatitudePath="Lat" LongitudePath="Lon"
                                    ValuesPath="Segments" ValuePath="Amount"
                                    LabelPath="Category" PieSize="40" />
-    </charts:ShapeMap.Layers>
-</charts:ShapeMap>
+    </ShapeMap.Layers>
+</ShapeMap>
 ```
 
 ## See also

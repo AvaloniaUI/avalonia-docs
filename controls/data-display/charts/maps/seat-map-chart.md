@@ -22,17 +22,17 @@ The ShapeMap control can handle non-geographic coordinate systems, making it per
 
 ### XAML
 ```xml
-<charts:ShapeMap Name="SeatMapSample" Title="Aircraft Seating Layout">
-    <charts:ShapeMap.Layers>
-        <charts:ShapeLayer GeoJson="{Binding SeatMapGeoJson}"
+<ShapeMap xmlns="https://github.com/avaloniaui" Name="SeatMapSample" Title="Aircraft Seating Layout">
+    <ShapeMap.Layers>
+        <ShapeLayer GeoJson="{Binding SeatMapGeoJson}"
                              GeoJsonIdPath="id"
                              RegionPath="SeatNumber"
                              ValuePath="Class"
                              ItemsSource="{Binding SeatMapData}"
                              SelectionMode="Multiple"
                              SelectedItems="{Binding SelectedSeats}" />
-    </charts:ShapeMap.Layers>
-</charts:ShapeMap>
+    </ShapeMap.Layers>
+</ShapeMap>
 ```
 
 ### Data model (C#)

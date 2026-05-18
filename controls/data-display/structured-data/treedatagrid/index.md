@@ -1,6 +1,6 @@
 ---
 id: index
-title: TreeDataGrid
+title: TreeDataGrid control
 tags:
   - avalonia pro
   - avalonia enterprise
@@ -22,19 +22,15 @@ This control is available as part of [Avalonia Pro](https://avaloniaui.net/prici
 TreeDataGrid v12 introduces significant API changes including renamed column types, a new XAML-first workflow, and a fluent code-behind API. See the [breaking changes document](/controls/data-display/structured-data/treedatagrid/breaking-changes-v12) for full migration guidance.
 :::
 
-## Installation
+## Getting started
 
-See the [Installation Guide](/tools/installing-avalonia-pro) for full instructions on installing Avalonia Pro components.
-
-Add the `TreeDataGrid` package to your project. Ahead of the full release of Avalonia v12, you need to include the `--prerelease` flag:
+1. Install the `Avalonia.Controls.TreeDataGrid` NuGet package by running `dotnet add package`.
 
 ```bash
-dotnet add package Avalonia.Controls.TreeDataGrid --prerelease
+dotnet add package Avalonia.Controls.TreeDataGrid
 ```
 
-### Add the licence key
-
-Include your Avalonia licence key in the executable project file (`.csproj`):
+2. Include your Avalonia license key in the executable project file (`.csproj`). Your license key is available from the [Avalonia portal](https://portal.avaloniaui.net).
 
 ```xml
 <ItemGroup>
@@ -46,22 +42,16 @@ Include your Avalonia licence key in the executable project file (`.csproj`):
 For multi-project solutions, you can store your licence key in an [environment variable](https://learn.microsoft.com/en-us/visualstudio/msbuild/how-to-use-environment-variables-in-a-build) or a [shared props file](https://learn.microsoft.com/en-us/visualstudio/msbuild/customize-by-directory?view=vs-2022#directorybuildprops-example) to avoid duplication.
 :::
 
-### Install the theme
-
-The `TreeDataGrid` theme must be added to your `App.axaml`, otherwise the control won't render.
+3. Reference the `TreeDataGrid` fluent theme via a `StyleInclude` in your `App.axaml` file. This adds the resources needed to render the control.
 
 ```xml
-<Application xmlns="https://github.com/avaloniaui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             x:Class="MyApp"
-             RequestedThemeVariant="Default">
-    <Application.Styles>
-        <FluentTheme />
-        // highlight-next-line
-        <StyleInclude Source="avares://Avalonia.Controls.TreeDataGrid/Themes/Fluent.axaml"/>
-    </Application.Styles>
-</Application>
+<Application.Styles>
+    <StyleInclude Source="avares://Avalonia.Controls.TreeDataGrid/Themes/Fluent.axaml"/>
+    <!-- other styles -->
+</Application.Styles>
 ```
+
+For more information on installing Avalonia Pro controls, see [Installing Avalonia Pro](/tools/installing-avalonia-pro).
 
 ## Useful properties
 

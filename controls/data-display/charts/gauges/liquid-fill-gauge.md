@@ -27,9 +27,9 @@ Liquid fill gauges are decorative circular gauges that represent a percentage as
 ### XAML
 ```xml
 <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center">
-    <charts:LiquidFillGauge Value="35" Width="140" Height="180" Title="CPU Usage" Margin="15" />
-    <charts:LiquidFillGauge Value="68" Width="140" Height="180" Title="Memory" Margin="15" />
-    <charts:LiquidFillGauge Value="85" Width="140" Height="180" Title="Storage" Margin="15" />
+    <LiquidFillGauge xmlns="https://github.com/avaloniaui" Value="35" Width="140" Height="180" Title="CPU Usage" Margin="15" />
+    <LiquidFillGauge Value="68" Width="140" Height="180" Title="Memory" Margin="15" />
+    <LiquidFillGauge Value="85" Width="140" Height="180" Title="Storage" Margin="15" />
 </WrapPanel>
 ```
 

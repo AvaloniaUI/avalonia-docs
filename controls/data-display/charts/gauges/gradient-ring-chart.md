@@ -24,7 +24,7 @@ Gradient ring charts render several concentric progress rings with one ring per 
 ### XAML
 
 ```xml
-<charts:GradientRingChart Title="Release readiness"
+<GradientRingChart xmlns="https://github.com/avaloniaui" Title="Release readiness"
                             Width="280"
                             Height="280"
                             ItemsSource="{Binding RingMetrics}"

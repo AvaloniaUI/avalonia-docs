@@ -24,31 +24,31 @@ tags:
 ### XAML
 
 ```xml
-<charts:ComboChart Title="Revenue and margin"
+<ComboChart xmlns="https://github.com/avaloniaui" Title="Revenue and margin"
                      Height="320"
                      ShowLegend="True"
                      ShowSecondaryAxis="True">
-    <charts:ComboChart.HorizontalAxis>
-        <charts:CategoryAxis Title="Month" />
-    </charts:ComboChart.HorizontalAxis>
-    <charts:ComboChart.VerticalAxis>
-        <charts:NumericalAxis Title="Revenue ($K)" />
-    </charts:ComboChart.VerticalAxis>
-    <charts:ComboChart.SecondaryVerticalAxis>
-        <charts:NumericalAxis Title="Margin (%)" />
-    </charts:ComboChart.SecondaryVerticalAxis>
-    <charts:ComboChart.Series>
-        <charts:BarSeries Title="Revenue"
+    <ComboChart.HorizontalAxis>
+        <CategoryAxis Title="Month" />
+    </ComboChart.HorizontalAxis>
+    <ComboChart.VerticalAxis>
+        <NumericalAxis Title="Revenue ($K)" />
+    </ComboChart.VerticalAxis>
+    <ComboChart.SecondaryVerticalAxis>
+        <NumericalAxis Title="Margin (%)" />
+    </ComboChart.SecondaryVerticalAxis>
+    <ComboChart.Series>
+        <BarSeries Title="Revenue"
                             ItemsSource="{Binding MonthlyMetrics}"
                             CategoryPath="Month"
                             ValuePath="Revenue" />
-        <charts:LineSeries Title="Margin"
+        <LineSeries Title="Margin"
                              ItemsSource="{Binding MonthlyMetrics}"
                              CategoryPath="Month"
                              ValuePath="MarginPercent"
                              YAxisPosition="Secondary" />
-    </charts:ComboChart.Series>
-</charts:ComboChart>
+    </ComboChart.Series>
+</ComboChart>
 ```
 
 ### Data model (C#)

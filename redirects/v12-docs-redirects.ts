@@ -1140,20 +1140,29 @@ const redirects: Redirect[] = [
         "to": "/tools"
     },
     {
-        "from": "/accelerate/components/media-player/quickstart",
-        "to": "/controls/media/media-playback"
+        "from": [
+            "/accelerate/components/media-player/quickstart",
+            "/controls/media/media-playback",
+        ],
+        "to": "/controls/media/mediaplayer/media-playback"
     },
     {
-        "from": "/accelerate/components/media-player/mediaplayercontrol",
-        "to": "/controls/media/mediaplayercontrol"
-    },
-    {
-        "from": "/accelerate/components/media-player/mediaplayer",
+        "from": [
+            "/accelerate/components/media-player/mediaplayercontrol",
+            "/controls/media/mediaplayercontrol",
+        ],
         "to": "/controls/media/mediaplayer"
     },
     {
-        "from": "/accelerate/components/media-player/mediasource",
-        "to": "/controls/media/mediasource"
+        "from": "/accelerate/components/media-player/mediaplayer",
+        "to": "/controls/media/mediaplayer/mediaplayer-class"
+    },
+    {
+        "from": [
+            "/accelerate/components/media-player/mediasource",
+            "/controls/media/mediasource",
+        ],
+        "to": "/controls/media/mediaplayer/mediasource"
     },
     {
         "from": [
@@ -1165,24 +1174,25 @@ const redirects: Redirect[] = [
         "to": "/controls/data-display/text-display/markdown"
     },
     {
-        "from": "/accelerate/components/markdown/custom-image-loader",
-        "to": "/controls/data-display/text-display/imageloader"
+        "from": [
+            "/accelerate/components/markdown/custom-image-loader",
+            "/controls/data-display/text-display/imageloader",
+        ],
+        "to": "/controls/data-display/text-display/markdown/imageloader"
     },
     {
-        "from": "/accelerate/components/markdown/code-highlighter",
-        "to": "/controls/data-display/text-display/codehighlighter"
+        "from": [
+            "/accelerate/components/markdown/code-highlighter",
+            "/controls/data-display/text-display/codehighlighter",
+        ],
+        "to": "/controls/data-display/text-display/markdown/codehighlighter"
     },
     {
-        "from": "/accelerate/components/markdown/styling",
-        "to": "/controls/data-display/text-display/markdown-styling"
-    },
-    {
-        "from": "/accelerate/components/virtual-keyboard/getting-started",
-        "to": "/docs/platform-specific-guides/embedded-linux/virtual-keyboard"
-    },
-    {
-        "from": "/docs/platform-specific-guides/virtual-keyboard",
-        "to": "/docs/platform-specific-guides/embedded-linux/virtual-keyboard"
+        "from": [
+            "/accelerate/components/markdown/styling",
+            "/controls/data-display/text-display/markdown-styling",
+        ],
+        "to": "/controls/data-display/text-display/markdown/markdown-styling"
     },
     {
         "from": "/docs/platform-specific-guides/raspberry-pi",
@@ -1190,14 +1200,17 @@ const redirects: Redirect[] = [
     },
     {
         "from": "/accelerate/components/virtual-keyboard/virtual-keyboard-scope",
-        "to": "/controls/layout/containers/virtualkeyboardscope"
+        "to": "/controls/input/text-input/virtualkeyboard/virtualkeyboardscope"
     },
     {
         "from": [
             "/accelerate/components/virtual-keyboard/",
             "/accelerate/components/virtual-keyboard/virtual-keyboard",
             "/accelerate/components/virtual-keyboard/styling",
-            "/accelerate/components/virtual-keyboard/input-method-identifiers"
+            "/accelerate/components/virtual-keyboard/input-method-identifiers",
+            "/accelerate/components/virtual-keyboard/getting-started",
+            "/docs/platform-specific-guides/embedded-linux/virtual-keyboard",
+            "/docs/platform-specific-guides/virtual-keyboard",
         ],
         "to": "/controls/input/text-input/virtualkeyboard"
     },

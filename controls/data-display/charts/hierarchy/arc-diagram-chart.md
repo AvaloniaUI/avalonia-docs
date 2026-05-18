@@ -26,7 +26,7 @@ Arc diagrams are network visualizations where nodes are placed linearly along an
 
 ### XAML
 ```xml
-<charts:ArcDiagramChart Name="ArcDiagramSample" Title="Connections" Height="300"
+<ArcDiagramChart xmlns="https://github.com/avaloniaui" Name="ArcDiagramSample" Title="Connections" Height="300"
                           Nodes="{Binding ArcNodes}"
                           Links="{Binding ArcLinks}"
                           NodeIdPath="Id"

@@ -24,7 +24,7 @@ Hexbin charts group nearby points into hexagons so dense scatter data remains re
 ### XAML
 
 ```xml
-<charts:HexbinChart Title="Request concentration"
+<HexbinChart xmlns="https://github.com/avaloniaui" Title="Request concentration"
                               Height="320"
                               ItemsSource="{Binding HexbinData}"
                               XPath="X"

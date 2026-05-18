@@ -26,7 +26,7 @@ Icicle charts visualize hierarchical data using rectangles placed side by side. 
 
 ### XAML
 ```xml
-<charts:IcicleChart Name="IcicleChartSample" Title="File System" Height="300"
+<IcicleChart xmlns="https://github.com/avaloniaui" Name="IcicleChartSample" Title="File System" Height="300"
                       ItemsSource="{Binding IcicleData}"
                       ValuePath="Size"
                       LabelPath="Name" />

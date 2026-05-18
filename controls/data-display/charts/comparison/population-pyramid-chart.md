@@ -24,7 +24,7 @@ Population pyramid charts visualize two opposing distributions, most often male 
 ### XAML
 
 ```xml
-<charts:PopulationPyramidChart Title="Age distribution"
+<PopulationPyramidChart xmlns="https://github.com/avaloniaui" Title="Age distribution"
                                  Height="350"
                                  ItemsSource="{Binding PopulationData}"
                                  AgeLabelPath="AgeGroup"

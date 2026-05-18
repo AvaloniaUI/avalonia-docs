@@ -24,7 +24,7 @@ Dumbbell charts connect two markers per category so you can compare the gap betw
 ### XAML
 
 ```xml
-<charts:DumbbellChart Title="Planned vs actual"
+<DumbbellChart xmlns="https://github.com/avaloniaui" Title="Planned vs actual"
                         Height="300"
                         ItemsSource="{Binding PlannedVsActual}"
                         LabelPath="Label"

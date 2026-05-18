@@ -28,29 +28,29 @@ Trendlines are used in Cartesian charts to show the general direction or pattern
 ### XAML
 
 ```xml
-<charts:CartesianChart Title="Revenue Growth" Height="300">
-    <charts:CartesianChart.HorizontalAxis>
-        <charts:CategoryAxis Title="Year" />
-    </charts:CartesianChart.HorizontalAxis>
-    <charts:CartesianChart.VerticalAxis>
-        <charts:NumericalAxis Title="Revenue (M)" Minimum="0" />
-    </charts:CartesianChart.VerticalAxis>
-    <charts:CartesianChart.Series>
-        <charts:LineSeries Title="Revenue"
+<CartesianChart xmlns="https://github.com/avaloniaui" Title="Revenue Growth" Height="300">
+    <CartesianChart.HorizontalAxis>
+        <CategoryAxis Title="Year" />
+    </CartesianChart.HorizontalAxis>
+    <CartesianChart.VerticalAxis>
+        <NumericalAxis Title="Revenue (M)" Minimum="0" />
+    </CartesianChart.VerticalAxis>
+    <CartesianChart.Series>
+        <LineSeries Title="Revenue"
                            ItemsSource="{Binding LinearData}"
                            CategoryPath="Category"
                            ValuePath="Value"
                            StrokeThickness="2"
                            ShowMarkers="True">
-            <charts:LineSeries.Trendlines>
-                <charts:Trendline Type="Linear"
+            <LineSeries.Trendlines>
+                <Trendline Type="Linear"
                                   Stroke="#E53935"
                                   StrokeThickness="2"
                                   ForwardForecast="1" />
-            </charts:LineSeries.Trendlines>
-        </charts:LineSeries>
-    </charts:CartesianChart.Series>
-</charts:CartesianChart>
+            </LineSeries.Trendlines>
+        </LineSeries>
+    </CartesianChart.Series>
+</CartesianChart>
 ```
 
 ### Data model (C#)
@@ -91,31 +91,31 @@ public ObservableCollection<ChartDataPoint> LinearData { get; } = new()
 ### XAML
 
 ```xml
-<charts:CartesianChart Title="Explicit Overlay Series" Height="320" ShowLegend="True">
-    <charts:CartesianChart.HorizontalAxis>
-        <charts:CategoryAxis Title="Index" />
-    </charts:CartesianChart.HorizontalAxis>
-    <charts:CartesianChart.VerticalAxis>
-        <charts:NumericalAxis Title="Value" Minimum="0" />
-    </charts:CartesianChart.VerticalAxis>
+<CartesianChart xmlns="https://github.com/avaloniaui" Title="Explicit Overlay Series" Height="320" ShowLegend="True">
+    <CartesianChart.HorizontalAxis>
+        <CategoryAxis Title="Index" />
+    </CartesianChart.HorizontalAxis>
+    <CartesianChart.VerticalAxis>
+        <NumericalAxis Title="Value" Minimum="0" />
+    </CartesianChart.VerticalAxis>
 
-    <charts:CartesianChart.Series>
-        <charts:ScatterSeries x:Name="StandaloneTrendlineSource"
+    <CartesianChart.Series>
+        <ScatterSeries x:Name="StandaloneTrendlineSource"
                               Title="Observed Data"
                               ItemsSource="{Binding StandaloneTrendlineData}"
                               CategoryPath="Category"
                               ValuePath="Value"
                               Fill="#455A64"
                               MarkerSize="8" />
-        <charts:ChartTrendlineSeries Title="Polynomial Overlay"
+        <ChartTrendlineSeries Title="Polynomial Overlay"
                                      SourceSeries="{Binding #StandaloneTrendlineSource}"
                                      TrendlineType="Polynomial"
                                      PolynomialOrder="3"
                                      Stroke="#D32F2F"
                                      StrokeThickness="2.5"
                                      Extend="0.15" />
-    </charts:CartesianChart.Series>
-</charts:CartesianChart>
+    </CartesianChart.Series>
+</CartesianChart>
 ```
 
 ### Data model (C#)
@@ -153,20 +153,20 @@ public ObservableCollection<ChartDataPoint> StandaloneTrendlineData { get; } = n
 ### XAML
 
 ```xml
-<charts:CartesianChart Title="Price with Moving Average" Height="300">
-    <charts:CartesianChart.Series>
-        <charts:LineSeries x:Name="PriceSeries"
+<CartesianChart xmlns="https://github.com/avaloniaui" Title="Price with Moving Average" Height="300">
+    <CartesianChart.Series>
+        <LineSeries x:Name="PriceSeries"
                              ItemsSource="{Binding PriceData}"
                              CategoryPath="Date"
                              ValuePath="Close" />
-        <charts:MovingAverageSeries Title="SMA (14)"
+        <MovingAverageSeries Title="SMA (14)"
                                       SourceSeries="{Binding #PriceSeries}"
                                       MovingAverageType="Simple"
                                       Period="14"
                                       Stroke="Orange"
                                       StrokeThickness="2" />
-    </charts:CartesianChart.Series>
-</charts:CartesianChart>
+    </CartesianChart.Series>
+</CartesianChart>
 ```
 
 ### Data model (C#)

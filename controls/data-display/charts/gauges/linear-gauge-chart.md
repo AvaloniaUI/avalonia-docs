@@ -27,36 +27,36 @@ Linear gauge charts visualize a value along a horizontal or vertical bar. They a
 ### XAML
 ```xml
 <StackPanel Spacing="15" Margin="10">
-    <charts:LinearGaugeChart Title="Temperature" Value="72" MinValue="0" MaxValue="100" Height="60"
+    <LinearGaugeChart xmlns="https://github.com/avaloniaui" Title="Temperature" Value="72" MinValue="0" MaxValue="100" Height="60"
                              NeedleBrush="#F44336">
-        <charts:LinearGaugeChart.ValueBrush>
+        <LinearGaugeChart.ValueBrush>
             <LinearGradientBrush StartPoint="0%,0%" EndPoint="100%,0%">
                 <GradientStop Offset="0" Color="#4CAF50" />
                 <GradientStop Offset="0.5" Color="#FFEB3B" />
                 <GradientStop Offset="1" Color="#F44336" />
             </LinearGradientBrush>
-        </charts:LinearGaugeChart.ValueBrush>
-    </charts:LinearGaugeChart>
+        </LinearGaugeChart.ValueBrush>
+    </LinearGaugeChart>
 
-    <charts:LinearGaugeChart Title="Humidity" Value="45" MinValue="0" MaxValue="100" Height="60"
+    <LinearGaugeChart Title="Humidity" Value="45" MinValue="0" MaxValue="100" Height="60"
                              NeedleBrush="#00BCD4">
-        <charts:LinearGaugeChart.ValueBrush>
+        <LinearGaugeChart.ValueBrush>
             <LinearGradientBrush StartPoint="0%,0%" EndPoint="100%,0%">
                 <GradientStop Offset="0" Color="#2196F3" />
                 <GradientStop Offset="1" Color="#00BCD4" />
             </LinearGradientBrush>
-        </charts:LinearGaugeChart.ValueBrush>
-    </charts:LinearGaugeChart>
+        </LinearGaugeChart.ValueBrush>
+    </LinearGaugeChart>
 
-    <charts:LinearGaugeChart Title="Pressure" Value="88" MinValue="0" MaxValue="100" Height="60"
+    <LinearGaugeChart Title="Pressure" Value="88" MinValue="0" MaxValue="100" Height="60"
                              NeedleBrush="#E91E63">
-        <charts:LinearGaugeChart.ValueBrush>
+        <LinearGaugeChart.ValueBrush>
             <LinearGradientBrush StartPoint="0%,0%" EndPoint="100%,0%">
                 <GradientStop Offset="0" Color="#9C27B0" />
                 <GradientStop Offset="1" Color="#E91E63" />
             </LinearGradientBrush>
-        </charts:LinearGaugeChart.ValueBrush>
-    </charts:LinearGaugeChart>
+        </LinearGaugeChart.ValueBrush>
+    </LinearGaugeChart>
 </StackPanel>
 ```
 

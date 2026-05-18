@@ -24,7 +24,7 @@ Contour plots interpolate values across two spatial dimensions and render the re
 ### XAML
 
 ```xml
-<charts:ContourPlot Title="Temperature field"
+<ContourPlot xmlns="https://github.com/avaloniaui" Title="Temperature field"
                               Height="320"
                               ItemsSource="{Binding ContourData}"
                               XPath="X"

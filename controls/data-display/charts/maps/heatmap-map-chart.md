@@ -26,15 +26,15 @@ Heatmap maps visualize data density across geographic coordinates using a `Shape
 
 ### XAML
 ```xml
-<charts:ShapeMap Name="HeatmapSample" Title="Global Earthquake Activity" Height="400" ShowLegend="False">
-                        <charts:ShapeMap.Layers>
-                            <charts:ShapeLayer GeoJson="{Binding WorldGeoJson}"
+<ShapeMap xmlns="https://github.com/avaloniaui" Name="HeatmapSample" Title="Global Earthquake Activity" Height="400" ShowLegend="False">
+                        <ShapeMap.Layers>
+                            <ShapeLayer GeoJson="{Binding WorldGeoJson}"
                                                  GeoJsonIdPath="ISO_A2"
                                                  LowBrush="#F5F5F5"
                                                  HighBrush="#F5F5F5"
                                                  Stroke="#E0E0E0"
                                                  StrokeThickness="0.3" />
-                            <charts:HeatmapLayer LatitudePath="Lat"
+                            <HeatmapLayer LatitudePath="Lat"
                                                    LongitudePath="Lon"
                                                    IntensityPath="Magnitude"
                                                    MaxIntensity="9.0"
@@ -43,17 +43,17 @@ Heatmap maps visualize data density across geographic coordinates using a `Shape
                                                    MediumBrush="#CCFFFF00"
                                                    HighBrush="#FFFF0000"
                                                    ItemsSource="{Binding EarthquakeData}">
-                                <charts:HeatmapLayer.TooltipTemplate>
+                                <HeatmapLayer.TooltipTemplate>
                                     <DataTemplate>
                                         <StackPanel Spacing="4">
                                             <TextBlock Text="Earthquake" FontWeight="Bold"/>
                                             <TextBlock Text="{Binding Magnitude, StringFormat='Magnitude: {0:N1}'}"/>
                                         </StackPanel>
                                     </DataTemplate>
-                                </charts:HeatmapLayer.TooltipTemplate>
-                            </charts:HeatmapLayer>
-                        </charts:ShapeMap.Layers>
-                    </charts:ShapeMap>
+                                </HeatmapLayer.TooltipTemplate>
+                            </HeatmapLayer>
+                        </ShapeMap.Layers>
+                    </ShapeMap>
 ```
 
 ### Data model (C#)

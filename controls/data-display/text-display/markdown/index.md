@@ -1,6 +1,6 @@
 ---
-id: markdown
-title: Markdown
+id: index
+title: Markdown control
 description: Render Markdown-formatted text using the Avalonia.Controls.Markdown control, built on the shared FlowDocument model with full DocumentNode styling, selection, streaming, and custom image loading.
 doc-type: reference
 tags:
@@ -13,6 +13,37 @@ The `Markdown` control renders Markdown-formatted text in Avalonia applications.
 :::info
 This control is available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
+
+## Getting started
+
+1. Install the `Avalonia.Controls.Markdown` NuGet package by running `dotnet add package`.
+
+```bash
+dotnet add package Avalonia.Controls.Markdown
+```
+
+2. Include your Avalonia license key in the executable project file (`.csproj`). Your license key is available from the [Avalonia portal](https://portal.avaloniaui.net).
+
+```xml
+<ItemGroup>
+  <AvaloniaUILicenseKey Include="YOUR_LICENSE_KEY" />
+</ItemGroup>
+```
+
+:::tip
+For multi-project solutions, you can store your licence key in an [environment variable](https://learn.microsoft.com/en-us/visualstudio/msbuild/how-to-use-environment-variables-in-a-build) or a [shared props file](https://learn.microsoft.com/en-us/visualstudio/msbuild/customize-by-directory?view=vs-2022#directorybuildprops-example) to avoid duplication.
+:::
+
+3. Reference the default theme via a `StyleInclude` in your `App.axaml` file. This adds the resources needed by the Markdown control.
+
+```xml
+<Application.Styles>
+   <StyleInclude Source="avares://Avalonia.Controls.Markdown/Themes/Default.axaml" />
+   <!-- other styles -->
+</Application.Styles>
+```
+
+For more information on installing Avalonia Pro controls, see [Installing Avalonia Pro](/tools/installing-avalonia-pro).
 
 ## Architecture
 
@@ -225,7 +256,7 @@ Image loading is handled by the `MarkdownImage` document element, not the `Markd
 </Style>
 ```
 
-See the [Image Loader](/controls/data-display/text-display/imageloader) page for a detailed example of how to implement a custom `MarkdownImageLoader`.
+See the [Image Loader](/controls/data-display/text-display/markdown/imageloader) page for a detailed example of how to implement a custom `MarkdownImageLoader`.
 
 ## Code highlighter
 
@@ -237,7 +268,7 @@ Syntax highlighting is handled by the `MarkdownCodeBlock` document element. You 
 </Style>
 ```
 
-See the [Code Highlighter](/controls/data-display/text-display/codehighlighter) page for installation packages and usage examples.
+See the [Code Highlighter](/controls/data-display/text-display/markdown/codehighlighter) page for installation packages and usage examples.
 
 ## Styling
 
@@ -257,7 +288,7 @@ Because the `Markdown` control is built on the shared document model, all render
 
 Named resources are also available for common values such as font sizes, margins, and theme-variant colors.
 
-See the [Markdown styling](/controls/data-display/text-display/markdown-styling) page for the full list of style selectors and resources.
+See the [Markdown styling](/controls/data-display/text-display/markdown/markdown-styling) page for the full list of style selectors and resources.
 
 ## Installation
 
@@ -280,6 +311,6 @@ Add the resources by referencing the shipped `Default.axaml` theme via a `StyleI
 
 ## See also
 
-- [Markdown styling](/controls/data-display/text-display/markdown-styling)
-- [Image loader](/controls/data-display/text-display/imageloader)
-- [Code highlighter](/controls/data-display/text-display/codehighlighter)
+- [Markdown styling](/controls/data-display/text-display/markdown/markdown-styling)
+- [Image loader](/controls/data-display/text-display/markdown/imageloader)
+- [Code highlighter](/controls/data-display/text-display/markdown/codehighlighter)

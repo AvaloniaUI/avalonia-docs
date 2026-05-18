@@ -30,13 +30,13 @@ Sparklines are compact charts without axes or coordinates, designed to show tren
 ```xml
 <Grid ColumnDefinitions="Auto,*" RowDefinitions="Auto,Auto,Auto,Auto" Margin="10">
     <TextBlock Text="Line:" VerticalAlignment="Center" Margin="0,0,10,5" />
-    <charts:SparklineChart Grid.Column="1" Height="40" SparklineType="Line" ItemsSource="{Binding SparklineData}"/>
+    <SparklineChart xmlns="https://github.com/avaloniaui" Grid.Column="1" Height="40" SparklineType="Line" ItemsSource="{Binding SparklineData}"/>
     <TextBlock Grid.Row="1" Text="Area:" VerticalAlignment="Center" Margin="0,0,10,5" />
-    <charts:SparklineChart Grid.Row="1" Grid.Column="1" Height="40" SparklineType="Area" ItemsSource="{Binding SparklineData}"/>
+    <SparklineChart Grid.Row="1" Grid.Column="1" Height="40" SparklineType="Area" ItemsSource="{Binding SparklineData}"/>
     <TextBlock Grid.Row="2" Text="Bar:" VerticalAlignment="Center" Margin="0,0,10,5" />
-    <charts:SparklineChart Grid.Row="2" Grid.Column="1" Height="40" SparklineType="Bar" ItemsSource="{Binding SparklineData}"/>
+    <SparklineChart Grid.Row="2" Grid.Column="1" Height="40" SparklineType="Bar" ItemsSource="{Binding SparklineData}"/>
     <TextBlock Grid.Row="3" Text="Win/Loss:" VerticalAlignment="Center" Margin="0,0,10,5" />
-    <charts:SparklineChart Grid.Row="3" Grid.Column="1" Height="40" SparklineType="WinLoss" ItemsSource="{Binding SparklineWinLossData}"/>
+    <SparklineChart Grid.Row="3" Grid.Column="1" Height="40" SparklineType="WinLoss" ItemsSource="{Binding SparklineWinLossData}"/>
 </Grid>
 ```
 

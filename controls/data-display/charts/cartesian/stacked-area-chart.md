@@ -26,28 +26,28 @@ Stacked area charts display multiple area series stacked on top of each other. T
 
 ### XAML
 ```xml
-<charts:CartesianChart Name="StackedAreaChart" Title="Stacked Area Chart" Height="250" ShowLegend="True">
-    <charts:CartesianChart.HorizontalAxis>
-        <charts:CategoryAxis />
-    </charts:CartesianChart.HorizontalAxis>
-    <charts:CartesianChart.VerticalAxis>
-        <charts:NumericalAxis />
-    </charts:CartesianChart.VerticalAxis>
-    <charts:CartesianChart.Series>
-        <charts:StackedAreaSeries Title="Desktop"
+<CartesianChart xmlns="https://github.com/avaloniaui" Name="StackedAreaChart" Title="Stacked Area Chart" Height="250" ShowLegend="True">
+    <CartesianChart.HorizontalAxis>
+        <CategoryAxis />
+    </CartesianChart.HorizontalAxis>
+    <CartesianChart.VerticalAxis>
+        <NumericalAxis />
+    </CartesianChart.VerticalAxis>
+    <CartesianChart.Series>
+        <StackedAreaSeries Title="Desktop"
                                   ItemsSource="{Binding StackedAreaDesktop}"
                                   Fill="#7E2196F3"
                                   Stroke="DodgerBlue" />
-        <charts:StackedAreaSeries Title="Mobile"
+        <StackedAreaSeries Title="Mobile"
                                   ItemsSource="{Binding StackedAreaMobile}"
                                   Fill="#7E4CAF50"
                                   Stroke="Green" />
-        <charts:StackedAreaSeries Title="Tablet"
+        <StackedAreaSeries Title="Tablet"
                                   ItemsSource="{Binding StackedAreaTablet}"
                                   Fill="#7EFF9800"
                                   Stroke="Orange" />
-    </charts:CartesianChart.Series>
-</charts:CartesianChart>
+    </CartesianChart.Series>
+</CartesianChart>
 ```
 
 ### Data model (C#)

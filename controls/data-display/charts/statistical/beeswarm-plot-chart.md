@@ -24,7 +24,7 @@ Beeswarm plots arrange points within each category to avoid overlap while preser
 ### XAML
 
 ```xml
-<charts:BeeswarmPlotChart Title="Test scores by group"
+<BeeswarmPlotChart xmlns="https://github.com/avaloniaui" Title="Test scores by group"
                                     Height="300"
                                     ItemsSource="{Binding BeeswarmData}"
                                     CategoryPath="Category"

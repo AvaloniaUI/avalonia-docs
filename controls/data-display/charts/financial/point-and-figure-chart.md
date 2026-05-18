@@ -26,9 +26,9 @@ Point and Figure (P&F) charts use columns of Xs and Os to represent rising and f
 
 ### XAML
 ```xml
-<charts:FinancialChart Name="PointAndFigureChartSample" Title="Trend Analysis" Height="300">
-    <charts:FinancialChart.Series>
-        <charts:PointAndFigureSeries ItemsSource="{Binding PointAndFigureData}"
+<FinancialChart xmlns="https://github.com/avaloniaui" Name="PointAndFigureChartSample" Title="Trend Analysis" Height="300">
+    <FinancialChart.Series>
+        <PointAndFigureSeries ItemsSource="{Binding PointAndFigureData}"
                                        HighPath="High"
                                        LowPath="Low"
                                        OpenPath="Open"
@@ -36,8 +36,8 @@ Point and Figure (P&F) charts use columns of Xs and Os to represent rising and f
                                        DatePath="Date"
                                        BoxSize="2.0"
                                        ReversalAmount="3" />
-    </charts:FinancialChart.Series>
-</charts:FinancialChart>
+    </FinancialChart.Series>
+</FinancialChart>
 ```
 
 ### Data model (C#)

@@ -22,23 +22,23 @@ Range bar charts display floating rectangular bars that span from a low value to
 
 ### XAML
 ```xml
-<charts:CartesianChart Title="Weekly Temperature Range" Height="250">
-    <charts:CartesianChart.HorizontalAxis>
-        <charts:CategoryAxis />
-    </charts:CartesianChart.HorizontalAxis>
-    <charts:CartesianChart.VerticalAxis>
-        <charts:NumericalAxis />
-    </charts:CartesianChart.VerticalAxis>
-    <charts:CartesianChart.Series>
-        <charts:RangeBarSeries Title="Temperature"
+<CartesianChart xmlns="https://github.com/avaloniaui" Title="Weekly Temperature Range" Height="250">
+    <CartesianChart.HorizontalAxis>
+        <CategoryAxis />
+    </CartesianChart.HorizontalAxis>
+    <CartesianChart.VerticalAxis>
+        <NumericalAxis />
+    </CartesianChart.VerticalAxis>
+    <CartesianChart.Series>
+        <RangeBarSeries Title="Temperature"
                                  ItemsSource="{Binding TemperatureData}"
                                  CategoryPath="Day"
                                  LowPath="Min"
                                  HighPath="Max"
                                  BarWidth="0.6"
                                  BarCornerRadius="4" />
-    </charts:CartesianChart.Series>
-</charts:CartesianChart>
+    </CartesianChart.Series>
+</CartesianChart>
 ```
 
 ### Data model (C#)

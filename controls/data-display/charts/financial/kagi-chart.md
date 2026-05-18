@@ -26,7 +26,7 @@ Kagi charts are time-independent charts that track price movements using vertica
 
 ### XAML
 ```xml
-<charts:KagiChart Name="KagiChartSample" Title="Trend Reversal" Height="300"
+<KagiChart xmlns="https://github.com/avaloniaui" Name="KagiChartSample" Title="Trend Reversal" Height="300"
                                         ReversalAmount="4"
                                         ItemsSource="{Binding KagiData}"
                                         ValuePath="Value" />

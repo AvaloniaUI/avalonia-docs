@@ -24,7 +24,7 @@ Diverging bar charts use a centered baseline so values can extend in opposite di
 ### XAML
 
 ```xml
-<charts:DivergingBarChart Title="Net sentiment"
+<DivergingBarChart xmlns="https://github.com/avaloniaui" Title="Net sentiment"
                             Height="300"
                             ItemsSource="{Binding SentimentData}"
                             LabelPath="Label"

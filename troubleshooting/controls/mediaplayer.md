@@ -34,7 +34,7 @@ protected override void OnLoaded(RoutedEventArgs e)
 }
 ```
 
-See [Initialization Timing](/controls/media/media-playback#initialization-timing) for more details.
+See [Initialization Timing](/controls/media/mediaplayer/media-playback#initialization-timing) for more details.
 
 ## Black screen with no visible output
 
@@ -104,6 +104,6 @@ After releasing, you can set a new `Source` and attempt playback again.
 
 ## See also
 
-- [MediaPlayer control](/controls/media/mediaplayercontrol)
-- [MediaPlayer class](/controls/media/mediaplayer)
-- [MediaSource class](/controls/media/mediasource)
+- [MediaPlayer control](/controls/media/mediaplayer)
+- [MediaPlayer class](/controls/media/mediaplayer/mediaplayer-class)
+- [MediaSource class](/controls/media/mediaplayer/mediasource)

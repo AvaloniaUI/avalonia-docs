@@ -24,7 +24,7 @@ Parliament charts arrange seats in a semicircle so party representation can be r
 ### XAML
 
 ```xml
-<charts:ParliamentChart Title="Parliament seats"
+<ParliamentChart xmlns="https://github.com/avaloniaui" Title="Parliament seats"
                                   Height="320"
                                   TotalSeats="120"
                                   Parties="{Binding Parties}" />

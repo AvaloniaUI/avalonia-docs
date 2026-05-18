@@ -26,16 +26,16 @@ A waterfall chart shows a running total as values are added or subtracted. It's 
 
 ### XAML
 ```xml
-<charts:CartesianChart Name="WaterfallChartSample" Title="Quarterly P&amp;L Analysis" Height="300" ShowLegend="False">
-                        <charts:CartesianChart.HorizontalAxis><charts:CategoryAxis /></charts:CartesianChart.HorizontalAxis>
-                        <charts:CartesianChart.VerticalAxis><charts:NumericalAxis /></charts:CartesianChart.VerticalAxis>
-                        <charts:CartesianChart.Series>
-                            <charts:WaterfallSeries Title="P&amp;L"
+<CartesianChart xmlns="https://github.com/avaloniaui" Name="WaterfallChartSample" Title="Quarterly P&amp;L Analysis" Height="300" ShowLegend="False">
+                        <CartesianChart.HorizontalAxis><CategoryAxis /></CartesianChart.HorizontalAxis>
+                        <CartesianChart.VerticalAxis><NumericalAxis /></CartesianChart.VerticalAxis>
+                        <CartesianChart.Series>
+                            <WaterfallSeries Title="P&amp;L"
                                                       ItemsSource="{Binding WaterfallData}"
                                                       CategoryPath="Category" ValuePath="Value"
                                                       TotalCategory="Net Income" />
-                        </charts:CartesianChart.Series>
-                    </charts:CartesianChart>
+                        </CartesianChart.Series>
+                    </CartesianChart>
 ```
 
 ### Data model (C#)

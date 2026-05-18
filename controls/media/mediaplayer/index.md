@@ -1,5 +1,5 @@
 ---
-id: mediaplayercontrol
+id: index
 title: MediaPlayerControl
 tags:
   - avalonia pro
@@ -12,6 +12,94 @@ The `MediaPlayerControl` is a fully-featured UI control for media playback that 
 :::info
 This control is available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
+
+## Getting started
+
+1. Install the `Avalonia.Controls.MediaPlayer` NuGet package by running `dotnet add package`.
+
+```bash
+dotnet add package Avalonia.Controls.MediaPlayer
+```
+
+2. Include your Avalonia license key in the executable project file (`.csproj`). Your license key is available from the [Avalonia portal](https://portal.avaloniaui.net).
+
+```xml
+<ItemGroup>
+  <AvaloniaUILicenseKey Include="YOUR_LICENSE_KEY" />
+</ItemGroup>
+```
+
+:::tip
+For multi-project solutions, you can store your licence key in an [environment variable](https://learn.microsoft.com/en-us/visualstudio/msbuild/how-to-use-environment-variables-in-a-build) or a [shared props file](https://learn.microsoft.com/en-us/visualstudio/msbuild/customize-by-directory?view=vs-2022#directorybuildprops-example) to avoid duplication.
+:::
+
+3. Reference the default `MediaFluentTheme` in the `Application.Styles` of your `App.axaml` file. This adds the resources needed by the media player control.
+
+```xml
+<Application.Styles>
+    <!-- Add this declaration for the default theme. -->
+    <MediaFluentTheme/>
+</Application.Styles>
+```
+
+For more information on installing Avalonia Pro controls, see [Installing Avalonia Pro](/tools/installing-avalonia-pro).
+
+## Usage examples
+
+### Basic usage
+
+The default `MediaPlayerControl` comes with a full-featured UI. For more advanced usage and deeper customization, you can also [use the `MediaPlayer` class without `MediaPlayerControl`](/controls/media/mediaplayer/mediaplayer-class#using-mediaplayer-without-mediaplayercontrol).
+
+```xml
+<MediaPlayerControl Name="mediaPlayerControl"
+                    Source="{Binding MediaSource}"
+                    Volume="0.8"
+                    LoadedBehavior="AutoPlay" />
+```
+
+### Setting Source in code-behind
+
+When setting `Source` in code-behind rather than through a binding, you must wait until the control has loaded. Setting the source in a constructor will fail silently because the underlying player backend has not been initialized yet.
+
+```csharp
+// Do NOT set Source in the constructor:
+// public MainWindow()
+// {
+//     InitializeComponent();
+//     mediaPlayerControl.Source = new UriSource("file:///C:/video.mp4"); // Too early!
+// }
+
+// Instead, use OnLoaded:
+protected override void OnLoaded(RoutedEventArgs e)
+{
+    base.OnLoaded(e);
+    mediaPlayerControl.Source = new UriSource("file:///C:/Videos/sample.mp4");
+}
+```
+
+See [Initialization Timing](/controls/media/mediaplayer/media-playback#initialization-timing) for details.
+
+### Binding to commands
+
+```xml
+<Button Command="{Binding #mediaPlayerControl.PlayPauseCommand}" 
+        Content="Play/Pause" />
+        
+<Button Command="{Binding #mediaPlayerControl.StopCommand}" 
+        Content="Stop" />
+```
+
+### Error handling
+
+```csharp
+mediaPlayerControl.ErrorOccurred += (sender, args) =>
+{
+    Console.WriteLine($"Media error: {args.Message}");
+    args.Handled = true; // Prevents the exception from being thrown.
+};
+```
+
+**Note**: This callback gives you the opportunity to reset the state of the `MediaPlayerControl` gracefully.
 
 ## Properties
 
@@ -65,60 +153,6 @@ This control is available as part of [Avalonia Pro](https://avaloniaui.net/prici
 | Event           | Description                                                  |
 |-----------------|--------------------------------------------------------------|
 | ErrorOccurred | Occurs when an error is encountered during media operations. |
-
-## Usage examples
-
-### Basic usage
-
-```xml
-<MediaPlayerControl Name="mediaPlayerControl" Source="{Binding MediaSource}"
-                    Volume="0.8"
-                    LoadedBehavior="AutoPlay" />
-```
-
-### Setting Source in code-behind
-
-When setting `Source` in code-behind rather than through a binding, you must wait until the control has loaded. Setting the source in a constructor will fail silently because the underlying player backend has not been initialized yet.
-
-```csharp
-// Do NOT set Source in the constructor:
-// public MainWindow()
-// {
-//     InitializeComponent();
-//     mediaPlayerControl.Source = new UriSource("file:///C:/video.mp4"); // Too early!
-// }
-
-// Instead, use OnLoaded:
-protected override void OnLoaded(RoutedEventArgs e)
-{
-    base.OnLoaded(e);
-    mediaPlayerControl.Source = new UriSource("file:///C:/Videos/sample.mp4");
-}
-```
-
-See [Initialization Timing](/controls/media/media-playback#initialization-timing) for more details.
-
-### Binding to commands
-
-```xml
-<Button Command="{Binding #mediaPlayerControl.PlayPauseCommand}" 
-        Content="Play/Pause" />
-        
-<Button Command="{Binding #mediaPlayerControl.StopCommand}" 
-        Content="Stop" />
-```
-
-### Error handling
-
-```csharp
-mediaPlayerControl.ErrorOccurred += (sender, args) =>
-{
-    Console.WriteLine($"Media error: {args.Message}");
-    args.Handled = true; // Prevents the exception from being thrown.
-};
-```
-
-**Note**: This callback gives you the opportunity to reset the state of the `MediaPlayerControl` gracefully.
 
 ## Template parts and customization
 
@@ -274,8 +308,8 @@ flowchart LR
 
 ## See also
 
-- [MediaPlayer class](/controls/media/mediaplayer)
-- [MediaSource class](/controls/media/mediasource)
-- [Implementing MediaPlayer](/controls/media/media-playback)
+- [MediaPlayer class](/controls/media/mediaplayer/mediaplayer-class)
+- [MediaSource class](/controls/media/mediaplayer/mediasource)
+- [Implementing MediaPlayer](/controls/media/mediaplayer/media-playback)
 - [Installing Avalonia Pro](/tools/installing-avalonia-pro)
 - [Troubleshooting](/troubleshooting/controls/mediaplayer)

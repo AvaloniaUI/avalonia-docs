@@ -24,7 +24,7 @@ tags:
 ### XAML
 
 ```xml
-<charts:FlowChart Title="Troubleshooting"
+<FlowChart xmlns="https://github.com/avaloniaui" Title="Troubleshooting"
                             Height="360"
                             Nodes="{Binding FlowNodes}"
                             Edges="{Binding FlowEdges}" />

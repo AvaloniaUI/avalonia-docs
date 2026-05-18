@@ -1,6 +1,6 @@
 ---
 id: mediasource
-title: MediaSource
+title: MediaSource class
 tags:
   - avalonia pro
   - avalonia enterprise
@@ -166,8 +166,8 @@ The `MediaPlayer` manages the lifecycle automatically:
 
 ## See also
 
-- [MediaPlayer control](/controls/media/mediaplayercontrol)
-- [MediaPlayer class](/controls/media/mediaplayer)
-- [Implementing MediaPlayer](/controls/media/media-playback)
+- [MediaPlayer control](/controls/media/mediaplayer)
+- [MediaPlayer class](/controls/media/mediaplayer/mediaplayer-class)
+- [Implementing MediaPlayer](/controls/media/mediaplayer/media-playback)
 - [Installing Avalonia Pro](/tools/installing-avalonia-pro)
 - [Troubleshooting](/troubleshooting/controls/mediaplayer)

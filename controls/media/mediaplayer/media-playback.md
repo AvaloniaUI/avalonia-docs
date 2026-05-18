@@ -1,93 +1,18 @@
 ---
 id: media-playback
-title: Implementing media playback with MediaPlayer
+title: Implementing media playback
 sidebar_label: Implementing media playback
 tags:
   - avalonia pro
   - avalonia enterprise
 ---
 
-This guide provides a practical introduction to implementing media playback in Avalonia applications using the Avalonia Pro [`MediaPlayer`](/controls/media/mediaplayercontrol).
+This is a practical guide to implementing media playback in Avalonia applications using the Avalonia Pro [`MediaPlayer`](/controls/media/mediaplayer).
 
 
 :::info
 This control is available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
-
-## Installation
-
-See the [Installation Guide](/tools/installing-avalonia-pro) for step-by-step instructions on how to install Avalonia Pro components.
-
-Add the MediaPlayer package to your project:
-
-```bash
-dotnet add package Avalonia.Controls.MediaPlayer
-```
-
-Add the default theme to your App.axaml:
-
-```xml
-<Application.Styles>
-    <FluentTheme/>
-
-    <!-- Add this declaration for the default theme. -->
-    <MediaFluentTheme/>
-</Application.Styles>
-```
-
-### Add the license key
-
-Include your Avalonia UI license key in the executable project file (`.csproj`):
-
-```xml
-<ItemGroup>
-  <AvaloniaUILicenseKey Include="YOUR_LICENSE_KEY" />
-</ItemGroup>
-```
-
-:::tip
-For multi-project solutions, you can store your license key in an [environment variable](https://learn.microsoft.com/en-us/visualstudio/msbuild/how-to-use-environment-variables-in-a-build) or a [shared props file](https://learn.microsoft.com/en-us/visualstudio/msbuild/customize-by-directory?view=vs-2022#directorybuildprops-example) to avoid duplication.
-:::
-
-## Basic usage
-
-### Using MediaPlayerControl (recommended)
-
-The easiest way to add media playback to your Avalonia app is using the `MediaPlayerControl`, which provides a full-featured UI by default:
-
-```xml
-
-<Window xmlns="https://github.com/avaloniaui"
-        Width="800" Height="450">
-
-    <MediaPlayerControl Name="mediaPlayer"
-                        Source="{Binding MediaSource}"
-                        Volume="0.8"/>
-
-</Window>
-```
-
-### Using MediaPlayer directly
-
-For more control, you can use the `MediaPlayer` class directly. When using `MediaPlayer` without `MediaPlayerControl`, you must call `InitializeAsync()` first and ensure the source is set only after the control is loaded:
-
-```csharp
-private MediaPlayer _player = new MediaPlayer();
-
-protected override async void OnLoaded(RoutedEventArgs e)
-{
-    base.OnLoaded(e);
-
-    await _player.InitializeAsync();
-
-    _player.Volume = 0.8;
-    _player.LoadedBehavior = MediaPlayerState.AutoPlay;
-
-    _player.Source = new UriSource("file:///C:/Videos/sample.mp4");
-    await _player.PrepareAsync();
-    await _player.PlayAsync();
-}
-```
 
 ## Initialization timing
 
@@ -398,8 +323,8 @@ As for platform-specific resources on which codecs are supported, please check t
 
 ## See also
 
-- [MediaPlayer control](/controls/media/mediaplayercontrol)
-- [MediaPlayer class](/controls/media/mediaplayer)
-- [MediaSource class](/controls/media/mediasource)
+- [MediaPlayer control](/controls/media/mediaplayer)
+- [MediaPlayer class](/controls/media/mediaplayer/mediaplayer-class)
+- [MediaSource class](/controls/media/mediaplayer/mediasource)
 - [Installing Avalonia Pro](/tools/installing-avalonia-pro)
 - [Troubleshooting](/troubleshooting/controls/mediaplayer)

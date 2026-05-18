@@ -26,7 +26,7 @@ Heikin-Ashi charts are a variation of Japanese candlestick charts. They use a mo
 
 ### XAML
 ```xml
-<charts:HeikinAshiChart Name="HeikinAshiChartSample" Title="Smoothed Price Trend" Height="300"
+<HeikinAshiChart xmlns="https://github.com/avaloniaui" Name="HeikinAshiChartSample" Title="Smoothed Price Trend" Height="300"
                                               ItemsSource="{Binding HeikinAshiData}"
                                               HighPath="High" LowPath="Low"
                                               OpenPath="Open" ClosePath="Close"

@@ -894,5 +894,5 @@ public class MentionInlineTests
 ## See also
 
 - [RichTextEditor reference](/controls/input/text-input/richtexteditor)
-- [Performance tuning](/controls/input/text-input/richtexteditor-guides/performance-tuning)
-- [Thread safety](/controls/input/text-input/richtexteditor-guides/thread-safety)
+- [Performance tuning](/controls/input/text-input/richtexteditor/performance-tuning)
+- [Thread safety](/controls/input/text-input/richtexteditor/thread-safety)

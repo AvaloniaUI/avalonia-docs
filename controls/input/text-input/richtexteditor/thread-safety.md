@@ -389,5 +389,5 @@ await Dispatcher.UIThread.InvokeAsync(() =>
 ## See also
 
 - [RichTextEditor reference](/controls/input/text-input/richtexteditor)
-- [Performance tuning](/controls/input/text-input/richtexteditor-guides/performance-tuning)
-- [Extension patterns](/controls/input/text-input/richtexteditor-guides/extension-patterns)
+- [Performance tuning](/controls/input/text-input/richtexteditor/performance-tuning)
+- [Extension patterns](/controls/input/text-input/richtexteditor/extension-patterns)

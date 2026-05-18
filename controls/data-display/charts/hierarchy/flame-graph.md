@@ -24,7 +24,7 @@ Flame graphs display hierarchical cost, duration, or sample data as stacked rect
 ### XAML
 
 ```xml
-<charts:FlameGraph Title="CPU profile"
+<FlameGraph xmlns="https://github.com/avaloniaui" Title="CPU profile"
                              Height="320"
                              ItemsSource="{Binding StackTraceData}"
                              ValuePath="Duration"

@@ -327,13 +327,9 @@ const sidebars: SidebarsConfig = {
           type: 'category',
           label: 'Embedded Linux',
           collapsed: true,
-          link: {
-            type: 'doc',
-            id: 'platform-specific-guides/embedded-linux/embedded-linux',
-          },
           items: [
+            'platform-specific-guides/embedded-linux/embedded-linux',
             'platform-specific-guides/embedded-linux/raspberry-pi',
-            'platform-specific-guides/embedded-linux/virtual-keyboard',
           ],
         },
         {

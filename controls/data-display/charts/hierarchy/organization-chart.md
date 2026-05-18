@@ -26,7 +26,7 @@ Organization charts represent the structure of an organization, clarifying repor
 
 ### XAML
 ```xml
-<charts:OrganizationChart Name="OrganizationChartSample" Title="Company Structure" Height="350"
+<OrganizationChart xmlns="https://github.com/avaloniaui" Name="OrganizationChartSample" Title="Company Structure" Height="350"
                                                ItemsSource="{Binding OrgChartData}" LabelPath="Name" ChildrenPath="Reports" />
 ```
 

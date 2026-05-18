@@ -24,7 +24,7 @@ Mekko charts, also called Marimekko charts, use variable column widths and stack
 ### XAML
 
 ```xml
-<charts:MekkoChart Title="Market mix"
+<MekkoChart xmlns="https://github.com/avaloniaui" Title="Market mix"
                              Height="320"
                              ItemsSource="{Binding MekkoData}"
                              CategoryPath="Category"

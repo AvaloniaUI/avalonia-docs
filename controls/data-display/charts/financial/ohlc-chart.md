@@ -26,14 +26,14 @@ OHLC charts show the Open, High, Low, and Close prices for a given period. They 
 
 ### XAML
 ```xml
-<charts:FinancialChart Name="OhlcChartSample" Title="Commodity Futures" Height="300">
-    <charts:FinancialChart.Series>
-        <charts:OhlcSeries ItemsSource="{Binding OhlcData}"
+<FinancialChart xmlns="https://github.com/avaloniaui" Name="OhlcChartSample" Title="Commodity Futures" Height="300">
+    <FinancialChart.Series>
+        <OhlcSeries ItemsSource="{Binding OhlcData}"
                              HighPath="High" LowPath="Low"
                              OpenPath="Open" ClosePath="Close"
                              DatePath="Date" />
-    </charts:FinancialChart.Series>
-</charts:FinancialChart>
+    </FinancialChart.Series>
+</FinancialChart>
 ```
 
 ### Data model (C#)

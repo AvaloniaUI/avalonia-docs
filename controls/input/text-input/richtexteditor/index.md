@@ -1,6 +1,6 @@
 ---
-id: richtexteditor
-title: RichTextEditor
+id: index
+title: RichTextEditor control
 doc-type: reference
 tags:
  - avalonia pro
@@ -19,6 +19,43 @@ This control is available as part of [Avalonia Pro](https://avaloniaui.net/prici
 ## When to use
 
 Use `RichTextEditor` to create an area where users can edit text content and perform common text operations, such as formatting, aligning, highlighting, or undo/redo.
+
+## Getting started
+
+1. Install the `Avalonia.Controls.RichTextEditor` NuGet package by running `dotnet add package`. Optionally, install serializers for specific file formats you need.
+
+```bash
+# Core editor control and document model, includes plain text serialization
+dotnet add package Avalonia.Controls.RichTextEditor
+
+# Serializers (add only what you need)
+dotnet add package Avalonia.Controls.Documents.Serialization.Rtf     # RTF support
+dotnet add package Avalonia.Controls.Documents.Serialization.Docx    # DOCX (Open XML) support
+dotnet add package Avalonia.Controls.Documents.Serialization.Xaml    # XAML serialization
+```
+
+2. Include your Avalonia license key in the executable project file (`.csproj`). Your license key is available from the [Avalonia portal](https://portal.avaloniaui.net).
+
+```xml
+<ItemGroup>
+  <AvaloniaUILicenseKey Include="YOUR_LICENSE_KEY" />
+</ItemGroup>
+```
+
+:::tip
+For multi-project solutions, you can store your licence key in an [environment variable](https://learn.microsoft.com/en-us/visualstudio/msbuild/how-to-use-environment-variables-in-a-build) or a [shared props file](https://learn.microsoft.com/en-us/visualstudio/msbuild/customize-by-directory?view=vs-2022#directorybuildprops-example) to avoid duplication.
+:::
+
+3. Reference the `RichTextEditor` default theme via a `StyleInclude` in your `App.axaml` file. This adds the resources needed to render the control.
+
+```xml
+<Application.Styles>
+   <StyleInclude Source="avares://Avalonia.Controls.RichTextEditor/Themes/Default.axaml" />
+   <!-- other styles -->
+</Application.Styles>
+```
+
+For more information on installing Avalonia Pro controls, see [Installing Avalonia Pro](/tools/installing-avalonia-pro).
 
 ## Basic usage
 
@@ -354,8 +391,8 @@ The Avalonia rich text editor separates functions into an eight-layer architectu
 
 ## See also
 
-- [Document Viewer](/controls/input/text-input/richtexteditor-guides/document-viewer) — read-only `FlowDocumentScrollViewer` setup
-- [Toolbar and Selection Flyout](/controls/input/text-input/richtexteditor-guides/toolbar) — customizing the toolbar, mini-bar, and context menu
-- [Extension Patterns](/controls/input/text-input/richtexteditor-guides/extension-patterns) — custom nodes, highlight layers, serializers, components
-- [Performance Tuning](/controls/input/text-input/richtexteditor-guides/performance-tuning)
+- [Document Viewer](/controls/input/text-input/richtexteditor/document-viewer) — read-only `FlowDocumentScrollViewer` setup
+- [Toolbar and Selection Flyouts](/controls/input/text-input/richtexteditor/toolbar) — customizing the toolbar, mini-bar, and context menu
+- [Extension Patterns](/controls/input/text-input/richtexteditor/extension-patterns) — custom nodes, highlight layers, serializers, components
+- [Performance Tuning](/controls/input/text-input/richtexteditor/performance-tuning)
 - [Troubleshooting](/troubleshooting/controls/richtexteditor)

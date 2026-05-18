@@ -24,7 +24,7 @@ Calendar heatmaps render daily values in a week-by-week grid, similar to contrib
 ### XAML
 
 ```xml
-<charts:CalendarHeatmapChart Title="Repository activity"
+<CalendarHeatmapChart xmlns="https://github.com/avaloniaui" Title="Repository activity"
                                Height="180"
                                ItemsSource="{Binding DailyActivity}"
                                DatePath="Date"

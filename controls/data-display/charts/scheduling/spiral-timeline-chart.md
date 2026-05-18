@@ -28,7 +28,7 @@ Spiral timelines visualize data that has both a strong sequential component and 
 ### XAML
 
 ```xml
-<charts:SpiralTimeline Name="SpiralTimelineSample"
+<SpiralTimeline xmlns="https://github.com/avaloniaui" Name="SpiralTimelineSample"
                                              Title="Annual Events"
                                              Height="400"
                                              ItemsSource="{Binding SpiralEvents}"

@@ -26,7 +26,7 @@ Word clouds represent text data by varying word size based on frequency or impor
 
 ### XAML
 ```xml
-<charts:WordCloudChart Title="Popular Topics" Height="300"
+<WordCloudChart xmlns="https://github.com/avaloniaui" Title="Popular Topics" Height="300"
                                              ItemsSource="{Binding WordCloudData}"
                                              WordPath="Word" WeightPath="Count"/>
 ```

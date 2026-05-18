@@ -24,7 +24,7 @@ Gauge charts render a single value on a dial-style arc, with optional needle and
 ### XAML
 
 ```xml
-<charts:GaugeChart Title="CPU load"
+<GaugeChart xmlns="https://github.com/avaloniaui" Title="CPU load"
                      Width="220"
                      Height="160"
                      Value="{Binding CpuLoad}"

@@ -22,20 +22,20 @@ Spline area charts display a filled area under a smooth interpolated curve. They
 
 ### XAML
 ```xml
-<charts:CartesianChart Title="Website Traffic" Height="250">
-    <charts:CartesianChart.HorizontalAxis>
-        <charts:CategoryAxis />
-    </charts:CartesianChart.HorizontalAxis>
-    <charts:CartesianChart.VerticalAxis>
-        <charts:NumericalAxis />
-    </charts:CartesianChart.VerticalAxis>
-    <charts:CartesianChart.Series>
-        <charts:SplineAreaSeries Title="Visitors"
+<CartesianChart xmlns="https://github.com/avaloniaui" Title="Website Traffic" Height="250">
+    <CartesianChart.HorizontalAxis>
+        <CategoryAxis />
+    </CartesianChart.HorizontalAxis>
+    <CartesianChart.VerticalAxis>
+        <NumericalAxis />
+    </CartesianChart.VerticalAxis>
+    <CartesianChart.Series>
+        <SplineAreaSeries Title="Visitors"
                                    ItemsSource="{Binding SplineAreaSeriesData}"
                                    FillOpacity="0.4"
                                    SplineTension="0.3" />
-    </charts:CartesianChart.Series>
-</charts:CartesianChart>
+    </CartesianChart.Series>
+</CartesianChart>
 ```
 
 ### Data model (C#)

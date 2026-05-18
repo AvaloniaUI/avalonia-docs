@@ -26,7 +26,7 @@ Mosaic charts (Marimekko) visualize relationships between categories using area.
 
 ### XAML
 ```xml
-<charts:MosaicChart Title="Sales by Region" Height="300"
+<MosaicChart xmlns="https://github.com/avaloniaui" Title="Sales by Region" Height="300"
                       ItemsSource="{Binding MosaicData}"
                       GroupPath="Region"
                       SubGroupPath="Category"

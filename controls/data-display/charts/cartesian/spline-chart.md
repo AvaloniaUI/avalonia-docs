@@ -26,17 +26,17 @@ Spline charts are similar to line charts but use smooth polynomial curves to con
 
 ### XAML
 ```xml
-<charts:CartesianChart Name="SplineChart" Title="Spline Chart" Height="250">
-                        <charts:CartesianChart.HorizontalAxis>
-                            <charts:CategoryAxis />
-                        </charts:CartesianChart.HorizontalAxis>
-                        <charts:CartesianChart.VerticalAxis>
-                            <charts:NumericalAxis />
-                        </charts:CartesianChart.VerticalAxis>
-                        <charts:CartesianChart.Series>
-                            <charts:SplineSeries Title="Temperature" ItemsSource="{Binding SplineSeriesData}" Stroke="Crimson" StrokeThickness="3" MarkerSize="6" MarkerFill="White"  ShowMarkers="True"/>
-                        </charts:CartesianChart.Series>
-                    </charts:CartesianChart>
+<CartesianChart xmlns="https://github.com/avaloniaui" Name="SplineChart" Title="Spline Chart" Height="250">
+                        <CartesianChart.HorizontalAxis>
+                            <CategoryAxis />
+                        </CartesianChart.HorizontalAxis>
+                        <CartesianChart.VerticalAxis>
+                            <NumericalAxis />
+                        </CartesianChart.VerticalAxis>
+                        <CartesianChart.Series>
+                            <SplineSeries Title="Temperature" ItemsSource="{Binding SplineSeriesData}" Stroke="Crimson" StrokeThickness="3" MarkerSize="6" MarkerFill="White"  ShowMarkers="True"/>
+                        </CartesianChart.Series>
+                    </CartesianChart>
 ```
 
 ### Data model (C#)

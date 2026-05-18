@@ -24,7 +24,7 @@ Bullet charts compare a primary value to a target and one or more qualitative ra
 ### XAML
 
 ```xml
-<charts:BulletChart Title="Revenue attainment"
+<BulletChart xmlns="https://github.com/avaloniaui" Title="Revenue attainment"
                       Width="320"
                       Height="80"
                       Value="{Binding ActualRevenue}"

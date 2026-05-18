@@ -26,7 +26,7 @@ Semi-donut charts display data in a 180-degree arc. They are particularly popula
 
 ### XAML
 ```xml
-<charts:SemiDonutChart Name="SemiDonutChartSample" Height="200"
+<SemiDonutChart xmlns="https://github.com/avaloniaui" Name="SemiDonutChartSample" Height="200"
                          ItemsSource="{Binding SemiDonutChartData}"
                          ValuePath="Value"
                          LabelPath="Label"

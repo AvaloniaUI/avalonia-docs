@@ -28,22 +28,22 @@ Default Cartesian and financial chart tooltips format category and date values t
 
 ### XAML
 ```xml
-<charts:CartesianChart Name="PerSeriesTooltipsChart" Height="250" IsTooltipEnabled="True">
-    <charts:CartesianChart.HorizontalAxis>
-        <charts:CategoryAxis Title="Quarter" />
-    </charts:CartesianChart.HorizontalAxis>
-    <charts:CartesianChart.VerticalAxis>
-        <charts:NumericalAxis Title="Revenue" />
-    </charts:CartesianChart.VerticalAxis>
-    <charts:CartesianChart.Series>
-        <charts:BarSeries Title="2023 (Tooltip ON)"
+<CartesianChart xmlns="https://github.com/avaloniaui" Name="PerSeriesTooltipsChart" Height="250" IsTooltipEnabled="True">
+    <CartesianChart.HorizontalAxis>
+        <CategoryAxis Title="Quarter" />
+    </CartesianChart.HorizontalAxis>
+    <CartesianChart.VerticalAxis>
+        <NumericalAxis Title="Revenue" />
+    </CartesianChart.VerticalAxis>
+    <CartesianChart.Series>
+        <BarSeries Title="2023 (Tooltip ON)"
                           ItemsSource="{Binding Series1Data}"
                           IsTooltipEnabled="True" />
-        <charts:BarSeries Title="2024 (Tooltip OFF)"
+        <BarSeries Title="2024 (Tooltip OFF)"
                           ItemsSource="{Binding Series2Data}"
                           IsTooltipEnabled="False" />
-    </charts:CartesianChart.Series>
-</charts:CartesianChart>
+    </CartesianChart.Series>
+</CartesianChart>
 ```
 
 ### Data model (C#)

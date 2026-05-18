@@ -26,14 +26,14 @@ Bubble maps use circles of different sizes to represent data values over geograp
 
 ### XAML
 ```xml
-<charts:ShapeMap Name="BubbleSample" Title="Major Cities by Population" Height="400" ShowLegend="True" LegendPosition="Bottom">
-                        <charts:ShapeMap.Layers>
-                            <charts:ShapeLayer GeoJson="{Binding WorldGeoJson}"
+<ShapeMap xmlns="https://github.com/avaloniaui" Name="BubbleSample" Title="Major Cities by Population" Height="400" ShowLegend="True" LegendPosition="Bottom">
+                        <ShapeMap.Layers>
+                            <ShapeLayer GeoJson="{Binding WorldGeoJson}"
                                                  GeoJsonIdPath="ISO_A2"
                                                  LowBrush="#E3F2FD"
                                                  HighBrush="#E3F2FD"
                                                  StrokeThickness="0.3" />
-                            <charts:BubbleLayer LatitudePath="Lat"
+                            <BubbleLayer LatitudePath="Lat"
                                                   LongitudePath="Lon"
                                                   SizePath="Population"
                                                   LabelPath="City"
@@ -42,17 +42,17 @@ Bubble maps use circles of different sizes to represent data values over geograp
                                                   Fill="#B4F44336"
                                                   ShowLabels="True"
                                                   ItemsSource="{Binding CityBubbles}">
-                                <charts:BubbleLayer.TooltipTemplate>
+                                <BubbleLayer.TooltipTemplate>
                                     <DataTemplate>
                                         <StackPanel Spacing="4">
                                             <TextBlock Text="{Binding City}" FontWeight="Bold"/>
                                             <TextBlock Text="{Binding Population, StringFormat='Pop: {0:N1}M'}"/>
                                         </StackPanel>
                                     </DataTemplate>
-                                </charts:BubbleLayer.TooltipTemplate>
-                            </charts:BubbleLayer>
-                        </charts:ShapeMap.Layers>
-                    </charts:ShapeMap>
+                                </BubbleLayer.TooltipTemplate>
+                            </BubbleLayer>
+                        </ShapeMap.Layers>
+                    </ShapeMap>
 ```
 
 ### Data model (C#)

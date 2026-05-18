@@ -24,16 +24,16 @@ tags:
 ### XAML
 
 ```xml
-<charts:FinancialChart Title="Commodity futures" Height="300">
-    <charts:FinancialChart.Series>
-        <charts:OhlcSeries ItemsSource="{Binding OhlcData}"
+<FinancialChart xmlns="https://github.com/avaloniaui" Title="Commodity futures" Height="300">
+    <FinancialChart.Series>
+        <OhlcSeries ItemsSource="{Binding OhlcData}"
                              DatePath="Date"
                              OpenPath="Open"
                              HighPath="High"
                              LowPath="Low"
                              ClosePath="Close" />
-    </charts:FinancialChart.Series>
-</charts:FinancialChart>
+    </FinancialChart.Series>
+</FinancialChart>
 ```
 
 ### Data model (C#)

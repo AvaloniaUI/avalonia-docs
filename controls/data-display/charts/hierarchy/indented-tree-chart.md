@@ -26,7 +26,7 @@ Indented tree charts represent hierarchies using a layout similar to a standard 
 
 ### XAML
 ```xml
-<charts:IndentedTreeChart Name="IndentedTreeChartSample" Height="320"
+<IndentedTreeChart xmlns="https://github.com/avaloniaui" Name="IndentedTreeChartSample" Height="320"
                             ItemsSource="{Binding IndentedTreeData}"
                             LabelPath="Name"
                             ChildrenPath="Children" />

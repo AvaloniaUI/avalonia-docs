@@ -27,9 +27,9 @@ Progress donut charts are a specialized variation of donut charts designed to sh
 ### XAML
 ```xml
 <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center">
-    <charts:ProgressDonutChart Value="75" Width="180" Height="180" IsTooltipEnabled="True" Title="Downloads" Margin="10" />
-    <charts:ProgressDonutChart Value="42" Width="180" Height="180" IsTooltipEnabled="True" Title="Uploads" Margin="10" />
-    <charts:ProgressDonutChart Value="90" Width="180" Height="180" IsTooltipEnabled="True" Title="Active" Margin="10" />
+    <ProgressDonutChart xmlns="https://github.com/avaloniaui" Value="75" Width="180" Height="180" IsTooltipEnabled="True" Title="Downloads" Margin="10" />
+    <ProgressDonutChart Value="42" Width="180" Height="180" IsTooltipEnabled="True" Title="Uploads" Margin="10" />
+    <ProgressDonutChart Value="90" Width="180" Height="180" IsTooltipEnabled="True" Title="Active" Margin="10" />
 </WrapPanel>
 ```
 

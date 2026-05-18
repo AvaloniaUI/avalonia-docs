@@ -26,7 +26,7 @@ Chord diagrams visualize the inter-relationships between entities in a circular 
 
 ### XAML
 ```xml
-<charts:ChordDiagramChart Name="ChordDiagramSample" Title="Trade Relations" Height="350"
+<ChordDiagramChart xmlns="https://github.com/avaloniaui" Name="ChordDiagramSample" Title="Trade Relations" Height="350"
                             ItemsSource="{Binding ChordData}"
                             SourcePath="Source"
                             TargetPath="Target"

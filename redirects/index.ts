@@ -28,6 +28,13 @@ const config: RedirectConfig = {
 
     // Redirect release notes to Releases page on GitHub
     { from: '/docs/stay-up-to-date/release-notes', to: 'https://github.com/AvaloniaUI/Avalonia/releases' },
+
+    // richtexteditor-guides folder renamed to richtexteditor
+    { from: '/controls/input/text-input/richtexteditor-guides/document-viewer', to: '/controls/input/text-input/richtexteditor/document-viewer' },
+    { from: '/controls/input/text-input/richtexteditor-guides/extension-patterns', to: '/controls/input/text-input/richtexteditor/extension-patterns' },
+    { from: '/controls/input/text-input/richtexteditor-guides/performance-tuning', to: '/controls/input/text-input/richtexteditor/performance-tuning' },
+    { from: '/controls/input/text-input/richtexteditor-guides/thread-safety', to: '/controls/input/text-input/richtexteditor/thread-safety' },
+    { from: ['/controls/input/text-input/richtexteditor-guides/toolbar', '/controls/input/text-input/richtexteditor-guides/toolbar-customization'], to: '/controls/input/text-input/richtexteditor/toolbar' },
   ],
   createRedirects(existingPath: string): string[] | undefined {
     const redirects = [
