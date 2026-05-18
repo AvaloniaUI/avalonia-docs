@@ -26,21 +26,21 @@ Scatter charts use dots to represent values for two different numeric variables.
 
 ### XAML
 ```xml
-<charts:CartesianChart Name="ScatterChart" Title="Scatter Plot" Height="250">
-    <charts:CartesianChart.HorizontalAxis>
-        <charts:NumericalAxis />
-    </charts:CartesianChart.HorizontalAxis>
-    <charts:CartesianChart.VerticalAxis>
-        <charts:NumericalAxis />
-    </charts:CartesianChart.VerticalAxis>
-    <charts:CartesianChart.Series>
-        <charts:ScatterSeries Title="Data Points"
+<CartesianChart xmlns="https://github.com/avaloniaui" Name="ScatterChart" Title="Scatter Plot" Height="250">
+    <CartesianChart.HorizontalAxis>
+        <NumericalAxis />
+    </CartesianChart.HorizontalAxis>
+    <CartesianChart.VerticalAxis>
+        <NumericalAxis />
+    </CartesianChart.VerticalAxis>
+    <CartesianChart.Series>
+        <ScatterSeries Title="Data Points"
                               ItemsSource="{Binding ScatterSeriesData}"
                               Fill="Purple"
                               MarkerSize="10"
                               MarkerShape="Circle" />
-    </charts:CartesianChart.Series>
-</charts:CartesianChart>
+    </CartesianChart.Series>
+</CartesianChart>
 ```
 
 ### Data model (C#)
@@ -71,17 +71,17 @@ The `ScatterLineSeries` extends scatter charts by drawing connecting lines betwe
 
 ### XAML
 ```xml
-<charts:CartesianChart Name="ScatterChart" Title="Scatter Plot" Height="250">
-                        <charts:CartesianChart.HorizontalAxis>
-                            <charts:NumericalAxis />
-                        </charts:CartesianChart.HorizontalAxis>
-                        <charts:CartesianChart.VerticalAxis>
-                            <charts:NumericalAxis />
-                        </charts:CartesianChart.VerticalAxis>
-                        <charts:CartesianChart.Series>
-                            <charts:ScatterSeries Title="Data Points" ItemsSource="{Binding ScatterSeriesData}" Fill="Purple" MarkerSize="10" MarkerShape="Circle" />
-                        </charts:CartesianChart.Series>
-                    </charts:CartesianChart>
+<CartesianChart xmlns="https://github.com/avaloniaui" Name="ScatterChart" Title="Scatter Plot" Height="250">
+                        <CartesianChart.HorizontalAxis>
+                            <NumericalAxis />
+                        </CartesianChart.HorizontalAxis>
+                        <CartesianChart.VerticalAxis>
+                            <NumericalAxis />
+                        </CartesianChart.VerticalAxis>
+                        <CartesianChart.Series>
+                            <ScatterSeries Title="Data Points" ItemsSource="{Binding ScatterSeriesData}" Fill="Purple" MarkerSize="10" MarkerShape="Circle" />
+                        </CartesianChart.Series>
+                    </CartesianChart>
 ```
 
 ### ScatterLineSeries properties

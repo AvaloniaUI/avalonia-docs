@@ -28,7 +28,7 @@ Crosshair labels use the configured axis formatting. Continuous horizontal axes,
 
 ### XAML
 ```xml
-<charts:CartesianChart Name="CustomCrosshairChart" Height="300"
+<CartesianChart xmlns="https://github.com/avaloniaui" Name="CustomCrosshairChart" Height="300"
                                              CrosshairMode="Both"
                                              ShowCrosshairLabels="True"
                                              CrosshairStroke="DodgerBlue"
@@ -36,22 +36,22 @@ Crosshair labels use the configured axis formatting. Continuous horizontal axes,
                                              CrosshairLabelBackground="DodgerBlue"
                                              CrosshairLabelForeground="White"
                                              CrosshairLabelFontSize="14">
-                        <charts:CartesianChart.CrosshairDashStyle>
+                        <CartesianChart.CrosshairDashStyle>
                             <DashStyle Dashes="10, 5" Offset="0" />
-                        </charts:CartesianChart.CrosshairDashStyle>
-                        <charts:CartesianChart.Series>
-                            <charts:LineSeries Title="Series 2" ItemsSource="{Binding CrosshairData}"
+                        </CartesianChart.CrosshairDashStyle>
+                        <CartesianChart.Series>
+                            <LineSeries Title="Series 2" ItemsSource="{Binding CrosshairData}"
                                                  Stroke="DodgerBlue" StrokeThickness="2"
                                                  MarkerSize="6" MarkerFill="DodgerBlue"
-                                                 MarkerShape="{x:Static charts:MarkerShape.Square}"  ShowMarkers="True"/>
-                        </charts:CartesianChart.Series>
-                        <charts:CartesianChart.HorizontalAxis>
-                            <charts:CategoryAxis Title="Category" />
-                        </charts:CartesianChart.HorizontalAxis>
-                        <charts:CartesianChart.VerticalAxis>
-                            <charts:NumericalAxis Title="Value" />
-                        </charts:CartesianChart.VerticalAxis>
-                    </charts:CartesianChart>
+                                                 MarkerShape="Square"  ShowMarkers="True"/>
+                        </CartesianChart.Series>
+                        <CartesianChart.HorizontalAxis>
+                            <CategoryAxis Title="Category" />
+                        </CartesianChart.HorizontalAxis>
+                        <CartesianChart.VerticalAxis>
+                            <NumericalAxis Title="Value" />
+                        </CartesianChart.VerticalAxis>
+                    </CartesianChart>
 ```
 
 ### Data model (C#)

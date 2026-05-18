@@ -24,7 +24,7 @@ Density plots smooth a numeric distribution into a continuous curve so peaks and
 ### XAML
 
 ```xml
-<charts:DensityPlotChart Title="Response time density"
+<DensityPlotChart xmlns="https://github.com/avaloniaui" Title="Response time density"
                                    Height="300"
                                    ItemsSource="{Binding DensityData}"
                                    ValuePath="Value" />

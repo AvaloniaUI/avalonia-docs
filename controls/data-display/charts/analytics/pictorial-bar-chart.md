@@ -26,15 +26,15 @@ Pictorial bar charts use recognizable icons or symbols instead of plain bars. Th
 
 ### XAML
 ```xml
-<charts:CartesianChart Name="PictorialBarChart" Title="Vehicles in X City" Height="300" ShowLegend="True" LegendPosition="Right">
-    <charts:CartesianChart.HorizontalAxis>
-        <charts:CategoryAxis />
-    </charts:CartesianChart.HorizontalAxis>
-    <charts:CartesianChart.VerticalAxis>
-        <charts:NumericalAxis />
-    </charts:CartesianChart.VerticalAxis>
-    <charts:CartesianChart.Series>
-        <charts:PictorialBarSeries Title="2023"
+<CartesianChart xmlns="https://github.com/avaloniaui" Name="PictorialBarChart" Title="Vehicles in X City" Height="300" ShowLegend="True" LegendPosition="Right">
+    <CartesianChart.HorizontalAxis>
+        <CategoryAxis />
+    </CartesianChart.HorizontalAxis>
+    <CartesianChart.VerticalAxis>
+        <NumericalAxis />
+    </CartesianChart.VerticalAxis>
+    <CartesianChart.Series>
+        <PictorialBarSeries Title="2023"
                                    ItemsSource="{Binding PictorialBarData}"
                                    ValuePath="Value2023"
                                    CategoryPath="Category"
@@ -43,7 +43,7 @@ Pictorial bar charts use recognizable icons or symbols instead of plain bars. Th
                                    SymbolSize="20"
                                    SymbolSpacing="5"
                                    Fill="#6495ED" />
-        <charts:PictorialBarSeries Title="2024"
+        <PictorialBarSeries Title="2024"
                                    ItemsSource="{Binding PictorialBarData}"
                                    ValuePath="Value2024"
                                    CategoryPath="Category"
@@ -52,8 +52,8 @@ Pictorial bar charts use recognizable icons or symbols instead of plain bars. Th
                                    SymbolSize="20"
                                    SymbolSpacing="5"
                                    Fill="#9ACD32" />
-    </charts:CartesianChart.Series>
-</charts:CartesianChart>
+    </CartesianChart.Series>
+</CartesianChart>
 ```
 
 ### Data model (C#)

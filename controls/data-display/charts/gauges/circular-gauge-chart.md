@@ -27,9 +27,9 @@ Circular gauge charts visualize a single value on a radial scale. They are the s
 ### XAML
 ```xml
 <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center">
-    <charts:CircularGaugeChart Value="72" Width="220" Height="220" Title="CPU" Margin="10" />
-    <charts:CircularGaugeChart Value="45" Width="220" Height="220" Title="Memory" Margin="10" />
-    <charts:CircularGaugeChart Value="88" Width="220" Height="220" Title="Disk" Margin="10" />
+    <CircularGaugeChart xmlns="https://github.com/avaloniaui" Value="72" Width="220" Height="220" Title="CPU" Margin="10" />
+    <CircularGaugeChart Value="45" Width="220" Height="220" Title="Memory" Margin="10" />
+    <CircularGaugeChart Value="88" Width="220" Height="220" Title="Disk" Margin="10" />
 </WrapPanel>
 ```
 

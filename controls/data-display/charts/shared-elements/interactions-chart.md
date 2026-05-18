@@ -41,26 +41,26 @@ Chart interactions allow users to explore data dynamically with zooming, panning
                   Margin="0,0,0,10" />
     </WrapPanel>
 
-    <charts:CartesianChart Name="ChartXY"
+    <CartesianChart xmlns="https://github.com/avaloniaui" Name="ChartXY"
                            Height="350"
                            ZoomMode="XY"
                            IsZoomEnabled="True"
                            IsPanEnabled="True"
                            ShowRangeSelector="{Binding #ShowRangeSelectorCheckBox.IsChecked}">
-        <charts:CartesianChart.HorizontalAxis>
-            <charts:DateTimeAxis LabelFormat="MMM dd" ShowGridLines="True" />
-        </charts:CartesianChart.HorizontalAxis>
-        <charts:CartesianChart.VerticalAxis>
-            <charts:NumericalAxis LabelFormat="N0" ShowGridLines="True" />
-        </charts:CartesianChart.VerticalAxis>
-        <charts:CartesianChart.Series>
-            <charts:LineSeries ItemsSource="{Binding ZoomData}"
+        <CartesianChart.HorizontalAxis>
+            <DateTimeAxis LabelFormat="MMM dd" ShowGridLines="True" />
+        </CartesianChart.HorizontalAxis>
+        <CartesianChart.VerticalAxis>
+            <NumericalAxis LabelFormat="N0" ShowGridLines="True" />
+        </CartesianChart.VerticalAxis>
+        <CartesianChart.Series>
+            <LineSeries ItemsSource="{Binding ZoomData}"
                                CategoryPath="Date"
                                ValuePath="Value"
                                Stroke="#FF9800"
                                StrokeThickness="2" />
-        </charts:CartesianChart.Series>
-    </charts:CartesianChart>
+        </CartesianChart.Series>
+    </CartesianChart>
 
     <Border BorderBrush="{DynamicResource CardBorderBrush}"
             BorderThickness="1"

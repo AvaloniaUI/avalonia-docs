@@ -26,9 +26,9 @@ Choropleth maps shade geographical areas in proportion to a statistical variable
 
 ### XAML
 ```xml
-<charts:ChoroplethMap Name="ChoroplethSample" Title="Population Density (Wrapper)" Height="400">
-                        <charts:ChoroplethMap.DataLayer>
-                            <charts:ShapeLayer GeoJson="{Binding WorldGeoJson}"
+<ChoroplethMap xmlns="https://github.com/avaloniaui" Name="ChoroplethSample" Title="Population Density (Wrapper)" Height="400">
+                        <ChoroplethMap.DataLayer>
+                            <ShapeLayer GeoJson="{Binding WorldGeoJson}"
                                                  GeoJsonIdPath="ISO_A2"
                                                  MinValue="0"
                                                  MaxValue="500"
@@ -38,17 +38,17 @@ Choropleth maps shade geographical areas in proportion to a statistical variable
                                                  HighBrush="#1565C0"
                                                  Stroke="#90A4AE"
                                                  ItemsSource="{Binding ShapeLayerData}">
-                                <charts:ShapeLayer.TooltipTemplate>
+                                <ShapeLayer.TooltipTemplate>
                                     <DataTemplate>
                                         <StackPanel Spacing="4">
                                             <TextBlock Text="{Binding Name}" FontWeight="Bold"/>
                                             <TextBlock Text="{Binding Density, StringFormat='Density: {0:N1} people/km²'}"/>
                                         </StackPanel>
                                     </DataTemplate>
-                                </charts:ShapeLayer.TooltipTemplate>
-                            </charts:ShapeLayer>
-                        </charts:ChoroplethMap.DataLayer>
-                    </charts:ChoroplethMap>
+                                </ShapeLayer.TooltipTemplate>
+                            </ShapeLayer>
+                        </ChoroplethMap.DataLayer>
+                    </ChoroplethMap>
 ```
 
 ### Data model (C#)

@@ -22,14 +22,14 @@ Radial line charts plot data points on a `PolarChart` and connect them with line
 
 ### XAML
 ```xml
-<charts:PolarChart Title="Hourly Activity" Height="350">
-    <charts:PolarChart.Series>
-        <charts:PolarLineSeries ItemsSource="{Binding RadialPoints}"
+<PolarChart xmlns="https://github.com/avaloniaui" Title="Hourly Activity" Height="350">
+    <PolarChart.Series>
+        <PolarLineSeries ItemsSource="{Binding RadialPoints}"
                                   AnglePath="Angle"
                                   RadiusPath="Radius"
                                   ShowMarkers="True" />
-    </charts:PolarChart.Series>
-</charts:PolarChart>
+    </PolarChart.Series>
+</PolarChart>
 ```
 
 ### Data model (C#)

@@ -26,7 +26,7 @@ Sunburst charts are used to visualize hierarchical data through a series of conc
 
 ### XAML
 ```xml
-<charts:SunburstChart Name="SunburstChartSample"
+<SunburstChart xmlns="https://github.com/avaloniaui" Name="SunburstChartSample"
                         Title="Organization Structure"
                         Height="350"
                         ItemsSource="{Binding SunburstData}"

@@ -26,17 +26,17 @@ Bar charts represent data using rectangular bars with lengths proportional to th
 
 ### XAML
 ```xml
-<charts:CartesianChart Name="BarChart" Title="Bar Chart" Height="250">
-                        <charts:CartesianChart.HorizontalAxis>
-                            <charts:CategoryAxis />
-                        </charts:CartesianChart.HorizontalAxis>
-                        <charts:CartesianChart.VerticalAxis>
-                            <charts:NumericalAxis />
-                        </charts:CartesianChart.VerticalAxis>
-                        <charts:CartesianChart.Series>
-                            <charts:BarSeries Title="Sales" ItemsSource="{Binding BarSeriesData}" Fill="DodgerBlue" />
-                        </charts:CartesianChart.Series>
-                    </charts:CartesianChart>
+<CartesianChart xmlns="https://github.com/avaloniaui" Name="BarChart" Title="Bar Chart" Height="250">
+                        <CartesianChart.HorizontalAxis>
+                            <CategoryAxis />
+                        </CartesianChart.HorizontalAxis>
+                        <CartesianChart.VerticalAxis>
+                            <NumericalAxis />
+                        </CartesianChart.VerticalAxis>
+                        <CartesianChart.Series>
+                            <BarSeries Title="Sales" ItemsSource="{Binding BarSeriesData}" Fill="DodgerBlue" />
+                        </CartesianChart.Series>
+                    </CartesianChart>
 ```
 
 ### Data model (C#)

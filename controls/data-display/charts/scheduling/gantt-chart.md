@@ -26,7 +26,7 @@ Gantt charts are specialized timeline charts used for project management. They i
 
 ### XAML
 ```xml
-<charts:GanttChart Name="GanttChartSample" Title="Project Timeline" Height="300"
+<GanttChart xmlns="https://github.com/avaloniaui" Name="GanttChartSample" Title="Project Timeline" Height="300"
                      ItemsSource="{Binding GanttTasks}"
                      TaskNamePath="Name"
                      StartPath="Start"

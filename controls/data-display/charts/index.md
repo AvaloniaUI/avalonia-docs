@@ -34,7 +34,7 @@ dotnet add package Avalonia.Controls.Charts
 For multi-project solutions, you can store your licence key in an [environment variable](https://learn.microsoft.com/en-us/visualstudio/msbuild/how-to-use-environment-variables-in-a-build) or a [shared props file](https://learn.microsoft.com/en-us/visualstudio/msbuild/customize-by-directory?view=vs-2022#directorybuildprops-example) to avoid duplication.
 :::
 
-3. Use the `https://avaloniaui.net/controls/charts` XML namespace in your XAML. All chart types share the same namespace.
+3. (Optional) If you wish to use Charts in a separate XML namespace, you can use `https://avaloniaui.net/controls/charts`. This is not required—the default `https://github.com/avaloniaui` namespace also contains `Avalonia.Controls.Charts`.
 
 ```xml
 <UserControl xmlns="https://github.com/avaloniaui"

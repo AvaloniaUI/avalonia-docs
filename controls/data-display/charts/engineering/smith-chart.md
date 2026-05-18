@@ -24,7 +24,7 @@ Smith charts plot normalized resistance and reactance on a specialized circular 
 ### XAML
 
 ```xml
-<charts:SmithChart Title="Impedance trace"
+<SmithChart xmlns="https://github.com/avaloniaui" Title="Impedance trace"
                              Height="320"
                              ItemsSource="{Binding ImpedanceData}"
                              ResistancePath="Resistance"

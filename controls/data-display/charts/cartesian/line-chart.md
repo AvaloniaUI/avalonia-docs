@@ -26,18 +26,18 @@ Line charts use X and Y axes to visualize data points connected by straight line
 
 ### XAML
 ```xml
-<charts:CartesianChart Name="LineChart" Title="Line Chart" Height="250" ShowLegend="True">
-                        <charts:CartesianChart.HorizontalAxis>
-                            <charts:CategoryAxis />
-                        </charts:CartesianChart.HorizontalAxis>
-                        <charts:CartesianChart.VerticalAxis>
-                            <charts:NumericalAxis />
-                        </charts:CartesianChart.VerticalAxis>
-                        <charts:CartesianChart.Series>
-                            <charts:LineSeries Title="2023" ItemsSource="{Binding LineSeries2023}" Stroke="DodgerBlue" StrokeThickness="2" MarkerSize="6" MarkerFill="DodgerBlue"  ShowMarkers="True"/>
-                            <charts:LineSeries Title="2024" ItemsSource="{Binding LineSeries2024}" Stroke="Orange" StrokeThickness="2" MarkerSize="6" MarkerFill="Orange"  ShowMarkers="True"/>
-                        </charts:CartesianChart.Series>
-                    </charts:CartesianChart>
+<CartesianChart xmlns="https://github.com/avaloniaui" Name="LineChart" Title="Line Chart" Height="250" ShowLegend="True">
+                        <CartesianChart.HorizontalAxis>
+                            <CategoryAxis />
+                        </CartesianChart.HorizontalAxis>
+                        <CartesianChart.VerticalAxis>
+                            <NumericalAxis />
+                        </CartesianChart.VerticalAxis>
+                        <CartesianChart.Series>
+                            <LineSeries Title="2023" ItemsSource="{Binding LineSeries2023}" Stroke="DodgerBlue" StrokeThickness="2" MarkerSize="6" MarkerFill="DodgerBlue"  ShowMarkers="True"/>
+                            <LineSeries Title="2024" ItemsSource="{Binding LineSeries2024}" Stroke="Orange" StrokeThickness="2" MarkerSize="6" MarkerFill="Orange"  ShowMarkers="True"/>
+                        </CartesianChart.Series>
+                    </CartesianChart>
 ```
 
 ### Data model (C#)

@@ -22,15 +22,15 @@ Variance charts display bars extending above and below a baseline value, using d
 
 ### XAML
 ```xml
-<charts:CartesianChart Title="Monthly Profit/Loss" Height="250">
-    <charts:CartesianChart.HorizontalAxis>
-        <charts:CategoryAxis />
-    </charts:CartesianChart.HorizontalAxis>
-    <charts:CartesianChart.VerticalAxis>
-        <charts:NumericalAxis />
-    </charts:CartesianChart.VerticalAxis>
-    <charts:CartesianChart.Series>
-        <charts:VarianceSeries Title="Profit/Loss"
+<CartesianChart xmlns="https://github.com/avaloniaui" Title="Monthly Profit/Loss" Height="250">
+    <CartesianChart.HorizontalAxis>
+        <CategoryAxis />
+    </CartesianChart.HorizontalAxis>
+    <CartesianChart.VerticalAxis>
+        <NumericalAxis />
+    </CartesianChart.VerticalAxis>
+    <CartesianChart.Series>
+        <VarianceSeries Title="Profit/Loss"
                                  ItemsSource="{Binding ProfitData}"
                                  CategoryPath="Month"
                                  ValuePath="Amount"
@@ -38,8 +38,8 @@ Variance charts display bars extending above and below a baseline value, using d
                                  PositiveBrush="Green"
                                  NegativeBrush="Red"
                                  BarWidth="0.6" />
-    </charts:CartesianChart.Series>
-</charts:CartesianChart>
+    </CartesianChart.Series>
+</CartesianChart>
 ```
 
 ### Data model (C#)

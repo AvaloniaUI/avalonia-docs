@@ -22,31 +22,31 @@ Stacked 100% bar charts display bars that always extend to the same height, show
 
 ### XAML
 ```xml
-<charts:CartesianChart Title="Browser Market Share" Height="250">
-    <charts:CartesianChart.HorizontalAxis>
-        <charts:CategoryAxis />
-    </charts:CartesianChart.HorizontalAxis>
-    <charts:CartesianChart.VerticalAxis>
-        <charts:NumericalAxis />
-    </charts:CartesianChart.VerticalAxis>
-    <charts:CartesianChart.Series>
-        <charts:Stacked100PercentBarSeries Title="Chrome"
+<CartesianChart xmlns="https://github.com/avaloniaui" Title="Browser Market Share" Height="250">
+    <CartesianChart.HorizontalAxis>
+        <CategoryAxis />
+    </CartesianChart.HorizontalAxis>
+    <CartesianChart.VerticalAxis>
+        <NumericalAxis />
+    </CartesianChart.VerticalAxis>
+    <CartesianChart.Series>
+        <Stacked100PercentBarSeries Title="Chrome"
                                               ItemsSource="{Binding ChromeData}"
                                               CategoryPath="Year"
                                               ValuePath="Share"
                                               StackGroup="browsers" />
-        <charts:Stacked100PercentBarSeries Title="Firefox"
+        <Stacked100PercentBarSeries Title="Firefox"
                                               ItemsSource="{Binding FirefoxData}"
                                               CategoryPath="Year"
                                               ValuePath="Share"
                                               StackGroup="browsers" />
-        <charts:Stacked100PercentBarSeries Title="Safari"
+        <Stacked100PercentBarSeries Title="Safari"
                                               ItemsSource="{Binding SafariData}"
                                               CategoryPath="Year"
                                               ValuePath="Share"
                                               StackGroup="browsers" />
-    </charts:CartesianChart.Series>
-</charts:CartesianChart>
+    </CartesianChart.Series>
+</CartesianChart>
 ```
 
 ### Data model (C#)

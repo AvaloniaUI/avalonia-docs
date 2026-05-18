@@ -24,15 +24,15 @@ Parallel coordinate charts map each record across a sequence of vertical axes so
 ### XAML
 
 ```xml
-<charts:ParallelCoordinatesChart Title="Vehicle comparison"
+<ParallelCoordinatesChart xmlns="https://github.com/avaloniaui" Title="Vehicle comparison"
                                            Height="320"
                                            ItemsSource="{Binding Vehicles}">
-    <charts:ParallelCoordinatesChart.Axes>
-        <charts:ParallelAxis Header="Power" ValuePath="Power" Minimum="0" Maximum="400" />
-        <charts:ParallelAxis Header="Range" ValuePath="Range" Minimum="0" Maximum="600" />
-        <charts:ParallelAxis Header="Efficiency" ValuePath="Efficiency" Minimum="0" Maximum="100" />
-    </charts:ParallelCoordinatesChart.Axes>
-</charts:ParallelCoordinatesChart>
+    <ParallelCoordinatesChart.Axes>
+        <ParallelAxis Header="Power" ValuePath="Power" Minimum="0" Maximum="400" />
+        <ParallelAxis Header="Range" ValuePath="Range" Minimum="0" Maximum="600" />
+        <ParallelAxis Header="Efficiency" ValuePath="Efficiency" Minimum="0" Maximum="100" />
+    </ParallelCoordinatesChart.Axes>
+</ParallelCoordinatesChart>
 ```
 
 ### Data model (C#)

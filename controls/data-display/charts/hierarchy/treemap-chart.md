@@ -26,7 +26,7 @@ TreeMap charts visualize hierarchical or flat data as a set of nested rectangles
 
 ### XAML
 ```xml
-<charts:TreeMapChart Name="TreeMapSample" Title="Disk Usage" Height="300"
+<TreeMapChart xmlns="https://github.com/avaloniaui" Name="TreeMapSample" Title="Disk Usage" Height="300"
                        ItemsSource="{Binding TreeMapData}" ValuePath="Size" LabelPath="Name" />
 ```
 

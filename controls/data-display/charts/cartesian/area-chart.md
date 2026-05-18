@@ -26,17 +26,17 @@ Area charts are based on the line chart. The area between the axis and the line 
 
 ### XAML
 ```xml
-<charts:CartesianChart Name="AreaChart" Title="Area Chart" Height="250">
-                        <charts:CartesianChart.HorizontalAxis>
-                            <charts:CategoryAxis />
-                        </charts:CartesianChart.HorizontalAxis>
-                        <charts:CartesianChart.VerticalAxis>
-                            <charts:NumericalAxis />
-                        </charts:CartesianChart.VerticalAxis>
-                        <charts:CartesianChart.Series>
-                            <charts:AreaSeries Title="Revenue" ItemsSource="{Binding AreaSeriesData}" Fill="#7E4CAF50" Stroke="Green" StrokeThickness="2" />
-                        </charts:CartesianChart.Series>
-                    </charts:CartesianChart>
+<CartesianChart xmlns="https://github.com/avaloniaui" Name="AreaChart" Title="Area Chart" Height="250">
+                        <CartesianChart.HorizontalAxis>
+                            <CategoryAxis />
+                        </CartesianChart.HorizontalAxis>
+                        <CartesianChart.VerticalAxis>
+                            <NumericalAxis />
+                        </CartesianChart.VerticalAxis>
+                        <CartesianChart.Series>
+                            <AreaSeries Title="Revenue" ItemsSource="{Binding AreaSeriesData}" Fill="#7E4CAF50" Stroke="Green" StrokeThickness="2" />
+                        </CartesianChart.Series>
+                    </CartesianChart>
 ```
 
 ### Data model (C#)

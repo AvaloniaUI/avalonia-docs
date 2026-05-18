@@ -24,7 +24,7 @@ Strip plots show every observation in a category while applying jitter to reduce
 ### XAML
 
 ```xml
-<charts:StripPlotChart Title="Response times"
+<StripPlotChart xmlns="https://github.com/avaloniaui" Title="Response times"
                                  Height="300"
                                  ItemsSource="{Binding StripData}"
                                  CategoryPath="Category"

@@ -26,7 +26,7 @@ Process flow charts are used to visualize sequences of steps, decisions, and log
 
 ### XAML
 ```xml
-<charts:FlowChart Name="FlowChartSample"
+<FlowChart xmlns="https://github.com/avaloniaui" Name="FlowChartSample"
                   Title="Troubleshooting Lamp"
                   Height="400"
                   Nodes="{Binding FlowNodes}"

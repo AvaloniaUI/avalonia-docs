@@ -26,7 +26,7 @@ Matrix charts use a grid to visualize boolean relationships between two categori
 
 ### XAML
 ```xml
-<charts:MatrixChart Title="Fruit Attributes" Height="300"
+<MatrixChart xmlns="https://github.com/avaloniaui" Title="Fruit Attributes" Height="300"
                                           ItemsSource="{Binding MatrixData}"
                                           ColumnLabels="{Binding MatrixColumns}"
                                           RowLabelPath="Attribute" ValuesPath="Values"

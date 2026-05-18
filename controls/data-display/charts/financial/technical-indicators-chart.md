@@ -24,27 +24,27 @@ Indicators follow the target series axis context. This includes continuous horiz
 
 ### XAML
 ```xml
-<charts:CartesianChart Title="Stock Analysis" Height="400">
-    <charts:CartesianChart.Series>
-        <charts:CandlestickSeries x:Name="PriceSeries"
+<CartesianChart xmlns="https://github.com/avaloniaui" Title="Stock Analysis" Height="400">
+    <CartesianChart.Series>
+        <CandlestickSeries x:Name="PriceSeries"
                                      ItemsSource="{Binding StockData}"
                                      DatePath="Date"
                                      OpenPath="Open" HighPath="High"
                                      LowPath="Low" ClosePath="Close" />
-    </charts:CartesianChart.Series>
-    <charts:CartesianChart.TechnicalIndicators>
-        <charts:SMAIndicator TargetSeries="{Binding #PriceSeries}"
+    </CartesianChart.Series>
+    <CartesianChart.TechnicalIndicators>
+        <SMAIndicator TargetSeries="{Binding #PriceSeries}"
                                Period="20" Stroke="Orange" StrokeThickness="2" />
-        <charts:BollingerBandsIndicator TargetSeries="{Binding #PriceSeries}"
+        <BollingerBandsIndicator TargetSeries="{Binding #PriceSeries}"
                                           Period="20" StandardDeviations="2"
                                           Stroke="Blue" StrokeThickness="1"
                                           UpperBandStroke="Gray" LowerBandStroke="Gray">
-            <charts:BollingerBandsIndicator.BandFill>
+            <BollingerBandsIndicator.BandFill>
                 <SolidColorBrush Color="#33808080" />
-            </charts:BollingerBandsIndicator.BandFill>
-        </charts:BollingerBandsIndicator>
-    </charts:CartesianChart.TechnicalIndicators>
-</charts:CartesianChart>
+            </BollingerBandsIndicator.BandFill>
+        </BollingerBandsIndicator>
+    </CartesianChart.TechnicalIndicators>
+</CartesianChart>
 ```
 
 ### Data model (C#)
@@ -87,17 +87,17 @@ The simple moving average (SMA) calculates the unweighted mean of the previous *
 ### XAML
 
 ```xml
-<charts:CartesianChart Height="250">
-    <charts:CartesianChart.Series>
-        <charts:LineSeries x:Name="PriceSeries"
+<CartesianChart xmlns="https://github.com/avaloniaui" Height="250">
+    <CartesianChart.Series>
+        <LineSeries x:Name="PriceSeries"
                            ItemsSource="{Binding StockData}"
                            ValuePath="Close" />
-    </charts:CartesianChart.Series>
-    <charts:CartesianChart.TechnicalIndicators>
-        <charts:SMAIndicator TargetSeries="{Binding #PriceSeries}"
+    </CartesianChart.Series>
+    <CartesianChart.TechnicalIndicators>
+        <SMAIndicator TargetSeries="{Binding #PriceSeries}"
                              Period="20" Stroke="Orange" StrokeThickness="2" />
-    </charts:CartesianChart.TechnicalIndicators>
-</charts:CartesianChart>
+    </CartesianChart.TechnicalIndicators>
+</CartesianChart>
 ```
 
 ## Common properties (`EMAIndicator`)
@@ -112,17 +112,17 @@ The exponential moving average (EMA) gives more weight to recent data points, ma
 ### XAML
 
 ```xml
-<charts:CartesianChart Height="250">
-    <charts:CartesianChart.Series>
-        <charts:LineSeries x:Name="PriceSeries"
+<CartesianChart xmlns="https://github.com/avaloniaui" Height="250">
+    <CartesianChart.Series>
+        <LineSeries x:Name="PriceSeries"
                            ItemsSource="{Binding StockData}"
                            ValuePath="Close" />
-    </charts:CartesianChart.Series>
-    <charts:CartesianChart.TechnicalIndicators>
-        <charts:EMAIndicator TargetSeries="{Binding #PriceSeries}"
+    </CartesianChart.Series>
+    <CartesianChart.TechnicalIndicators>
+        <EMAIndicator TargetSeries="{Binding #PriceSeries}"
                              Period="12" Stroke="Green" StrokeThickness="2" />
-    </charts:CartesianChart.TechnicalIndicators>
-</charts:CartesianChart>
+    </CartesianChart.TechnicalIndicators>
+</CartesianChart>
 ```
 
 ## Common properties (`WMAIndicator`)
@@ -137,17 +137,17 @@ The weighted moving average (WMA) assigns linearly increasing weights to data po
 ### XAML
 
 ```xml
-<charts:CartesianChart Height="250">
-    <charts:CartesianChart.Series>
-        <charts:LineSeries x:Name="PriceSeries"
+<CartesianChart xmlns="https://github.com/avaloniaui" Height="250">
+    <CartesianChart.Series>
+        <LineSeries x:Name="PriceSeries"
                            ItemsSource="{Binding StockData}"
                            ValuePath="Close" />
-    </charts:CartesianChart.Series>
-    <charts:CartesianChart.TechnicalIndicators>
-        <charts:WMAIndicator TargetSeries="{Binding #PriceSeries}"
+    </CartesianChart.Series>
+    <CartesianChart.TechnicalIndicators>
+        <WMAIndicator TargetSeries="{Binding #PriceSeries}"
                              Period="14" Stroke="Purple" StrokeThickness="2" />
-    </charts:CartesianChart.TechnicalIndicators>
-</charts:CartesianChart>
+    </CartesianChart.TechnicalIndicators>
+</CartesianChart>
 ```
 
 ## Common properties (`BollingerBandsIndicator`)
@@ -167,24 +167,24 @@ When shown in a chart legend, `BollingerBandsIndicator` creates a line item for 
 
 ### XAML
 ```xml
-<charts:CartesianChart Height="250">
-    <charts:CartesianChart.Series>
-        <charts:LineSeries x:Name="PriceSeries"
+<CartesianChart xmlns="https://github.com/avaloniaui" Height="250">
+    <CartesianChart.Series>
+        <LineSeries x:Name="PriceSeries"
                            ItemsSource="{Binding StockData}"
                            ValuePath="Close" />
-    </charts:CartesianChart.Series>
-    <charts:CartesianChart.TechnicalIndicators>
-        <charts:BollingerBandsIndicator TargetSeries="{Binding #PriceSeries}"
+    </CartesianChart.Series>
+    <CartesianChart.TechnicalIndicators>
+        <BollingerBandsIndicator TargetSeries="{Binding #PriceSeries}"
                                         Period="20" StandardDeviations="2"
                                         Stroke="Blue" StrokeThickness="1"
                                         UpperBandStroke="LightGray"
                                         LowerBandStroke="LightGray">
-            <charts:BollingerBandsIndicator.BandFill>
+            <BollingerBandsIndicator.BandFill>
                 <SolidColorBrush Color="#20808080" />
-            </charts:BollingerBandsIndicator.BandFill>
-        </charts:BollingerBandsIndicator>
-    </charts:CartesianChart.TechnicalIndicators>
-</charts:CartesianChart>
+            </BollingerBandsIndicator.BandFill>
+        </BollingerBandsIndicator>
+    </CartesianChart.TechnicalIndicators>
+</CartesianChart>
 ```
 
 ## See also

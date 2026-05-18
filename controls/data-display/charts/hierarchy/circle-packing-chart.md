@@ -26,7 +26,7 @@ Circle packing is a variation of a treemap where nodes are represented as circle
 
 ### XAML
 ```xml
-<charts:CirclePackingChart Name="CirclePackingChartSample" Title="Package Sizes" Height="350"
+<CirclePackingChart xmlns="https://github.com/avaloniaui" Name="CirclePackingChartSample" Title="Package Sizes" Height="350"
                              ItemsSource="{Binding CirclePackingData}"
                              ValuePath="Size"
                              LabelPath="Name" />

@@ -26,11 +26,11 @@ Pie charts are circular charts divided into sectors to illustrate numerical prop
 
 ### XAML
 ```xml
-<charts:PieChart Name="PieChartSample" IsTooltipEnabled="True" Title="Market Share" Height="300">
-                        <charts:PieChart.Series>
-                            <charts:PieSeries ItemsSource="{Binding PieChartData}" LabelPath="Value" />
-                        </charts:PieChart.Series>
-                    </charts:PieChart>
+<PieChart xmlns="https://github.com/avaloniaui" Name="PieChartSample" IsTooltipEnabled="True" Title="Market Share" Height="300">
+                        <PieChart.Series>
+                            <PieSeries ItemsSource="{Binding PieChartData}" LabelPath="Value" />
+                        </PieChart.Series>
+                    </PieChart>
 ```
 
 ### Data model (C#)

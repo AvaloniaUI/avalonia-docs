@@ -26,15 +26,15 @@ Area range charts display a filled area connecting two values, high and low, for
 
 ### XAML
 ```xml
-<charts:CartesianChart Name="RangeAreaChart" Title="Range Area Chart" Height="250">
-    <charts:CartesianChart.HorizontalAxis>
-        <charts:CategoryAxis />
-    </charts:CartesianChart.HorizontalAxis>
-    <charts:CartesianChart.VerticalAxis>
-        <charts:NumericalAxis />
-    </charts:CartesianChart.VerticalAxis>
-    <charts:CartesianChart.Series>
-        <charts:AreaRangeSeries Title="Temperature Range"
+<CartesianChart xmlns="https://github.com/avaloniaui" Name="RangeAreaChart" Title="Range Area Chart" Height="250">
+    <CartesianChart.HorizontalAxis>
+        <CategoryAxis />
+    </CartesianChart.HorizontalAxis>
+    <CartesianChart.VerticalAxis>
+        <NumericalAxis />
+    </CartesianChart.VerticalAxis>
+    <CartesianChart.Series>
+        <AreaRangeSeries Title="Temperature Range"
                                 ItemsSource="{Binding RangeAreaData}"
                                 LowPath="Low"
                                 HighPath="High"
@@ -42,8 +42,8 @@ Area range charts display a filled area connecting two values, high and low, for
                                 Fill="#7EE91E63"
                                 Stroke="DeepPink"
                                 StrokeThickness="2" />
-    </charts:CartesianChart.Series>
-</charts:CartesianChart>
+    </CartesianChart.Series>
+</CartesianChart>
 ```
 
 ### Data model (C#)

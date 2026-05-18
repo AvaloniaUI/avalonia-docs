@@ -26,11 +26,11 @@ Error bar charts represent the variability of data and are used on graphs to ind
 
 ### XAML
 ```xml
-<charts:CartesianChart Name="ErrorBarChartSample" Title="Measurement Uncertainty" Height="250">
-    <charts:CartesianChart.HorizontalAxis><charts:CategoryAxis /></charts:CartesianChart.HorizontalAxis>
-    <charts:CartesianChart.VerticalAxis><charts:NumericalAxis /></charts:CartesianChart.VerticalAxis>
-    <charts:CartesianChart.Series>
-        <charts:ErrorBarSeries Title="Measurements"
+<CartesianChart xmlns="https://github.com/avaloniaui" Name="ErrorBarChartSample" Title="Measurement Uncertainty" Height="250">
+    <CartesianChart.HorizontalAxis><CategoryAxis /></CartesianChart.HorizontalAxis>
+    <CartesianChart.VerticalAxis><NumericalAxis /></CartesianChart.VerticalAxis>
+    <CartesianChart.Series>
+        <ErrorBarSeries Title="Measurements"
                                  CategoryPath="Sample"
                                  ValuePath="Value"
                                  ErrorPath="Error"
@@ -38,8 +38,8 @@ Error bar charts represent the variability of data and are used on graphs to ind
                                  ShowMarkers="True"
                                  MarkerSize="8"
                                  ItemsSource="{Binding ErrorBarData}" />
-    </charts:CartesianChart.Series>
-</charts:CartesianChart>
+    </CartesianChart.Series>
+</CartesianChart>
 ```
 
 ### Data model (C#)

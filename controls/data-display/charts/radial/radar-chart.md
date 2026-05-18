@@ -27,13 +27,13 @@ Radar charts compare multiple qualitative variables across several categories. T
 ### XAML
 
 ```xml
-<charts:RadarChart Name="RadarChartSample" Title="Team Skills" Height="350" IsTooltipEnabled="True"
+<RadarChart xmlns="https://github.com/avaloniaui" Name="RadarChartSample" Title="Team Skills" Height="350" IsTooltipEnabled="True"
                                          AxisLabels="{Binding RadarLabels}">
-                        <charts:RadarChart.Series>
-                            <charts:RadarSeries Title="Player A" ItemsSource="{Binding RadarSeries1}" FillOpacity="0.3" ShowMarkers="True" />
-                            <charts:RadarSeries Title="Player B" ItemsSource="{Binding RadarSeries2}" FillOpacity="0.3" ShowMarkers="True" />
-                        </charts:RadarChart.Series>
-                     </charts:RadarChart>
+                        <RadarChart.Series>
+                            <RadarSeries Title="Player A" ItemsSource="{Binding RadarSeries1}" FillOpacity="0.3" ShowMarkers="True" />
+                            <RadarSeries Title="Player B" ItemsSource="{Binding RadarSeries2}" FillOpacity="0.3" ShowMarkers="True" />
+                        </RadarChart.Series>
+                     </RadarChart>
 ```
 
 ### Data model (C#)

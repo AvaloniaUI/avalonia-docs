@@ -27,15 +27,15 @@ KPI cards display critical business metrics in a focused format. They typically 
 ### XAML
 ```xml
 <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center">
-    <charts:KpiCard Title="Revenue" Width="180" Height="160" Margin="10"
+    <KpiCard xmlns="https://github.com/avaloniaui" Title="Revenue" Width="180" Height="160" Margin="10"
                     Value="{Binding Kpi1.Value}" Unit="{Binding Kpi1.Unit}"
                     Delta="{Binding Kpi1.Delta}" Subtitle="{Binding Kpi1.Subtitle}"
                     SparklineData="{Binding Kpi1.SparklineData}" />
-    <charts:KpiCard Title="Users" Width="180" Height="160" Margin="10"
+    <KpiCard Title="Users" Width="180" Height="160" Margin="10"
                     Value="{Binding Kpi2.Value}" Unit="{Binding Kpi2.Unit}"
                     Delta="{Binding Kpi2.Delta}" Subtitle="{Binding Kpi2.Subtitle}"
                     SparklineData="{Binding Kpi2.SparklineData}" />
-    <charts:KpiCard Title="Bounce Rate" Width="180" Height="160" Margin="10"
+    <KpiCard Title="Bounce Rate" Width="180" Height="160" Margin="10"
                     Value="{Binding Kpi3.Value}" Unit="{Binding Kpi3.Unit}"
                     Delta="{Binding Kpi3.Delta}" Subtitle="{Binding Kpi3.Subtitle}"
                     SparklineData="{Binding Kpi3.SparklineData}"

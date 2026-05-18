@@ -26,7 +26,7 @@ Heatmaps use color-coded cells to represent data values in a 2D matrix, highligh
 
 ### XAML
 ```xml
-<charts:HeatmapChart Title="Correlation Matrix" Height="300"
+<HeatmapChart xmlns="https://github.com/avaloniaui" Title="Correlation Matrix" Height="300"
                        ItemsSource="{Binding HeatmapData}"
                        RowPath="Row" ColumnPath="Col" ValuePath="Val"/>
 ```

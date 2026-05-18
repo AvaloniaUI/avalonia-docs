@@ -24,7 +24,7 @@ Violin plots combine a box plot with a kernel density plot, showing both the sta
 ### XAML
 
 ```xml
-<charts:ViolinPlotChart Name="ViolinPlotSample"
+<ViolinPlotChart xmlns="https://github.com/avaloniaui" Name="ViolinPlotSample"
                            Title="Response Times"
                            Height="300"
                            CategoryPath="Group"

@@ -22,22 +22,22 @@ Dot plot charts display individual data points as simple dots, so values can be 
 
 ### XAML
 ```xml
-<charts:CartesianChart Title="Employee Ratings" Height="250">
-    <charts:CartesianChart.HorizontalAxis>
-        <charts:CategoryAxis />
-    </charts:CartesianChart.HorizontalAxis>
-    <charts:CartesianChart.VerticalAxis>
-        <charts:NumericalAxis />
-    </charts:CartesianChart.VerticalAxis>
-    <charts:CartesianChart.Series>
-        <charts:DotPlotSeries Title="Ratings"
+<CartesianChart xmlns="https://github.com/avaloniaui" Title="Employee Ratings" Height="250">
+    <CartesianChart.HorizontalAxis>
+        <CategoryAxis />
+    </CartesianChart.HorizontalAxis>
+    <CartesianChart.VerticalAxis>
+        <NumericalAxis />
+    </CartesianChart.VerticalAxis>
+    <CartesianChart.Series>
+        <DotPlotSeries Title="Ratings"
                                 ItemsSource="{Binding RatingData}"
                                 CategoryPath="Department"
                                 ValuePath="Score"
                                 DotSize="12"
                                 ShowConnectorLines="True" />
-    </charts:CartesianChart.Series>
-</charts:CartesianChart>
+    </CartesianChart.Series>
+</CartesianChart>
 ```
 
 ### Data model (C#)

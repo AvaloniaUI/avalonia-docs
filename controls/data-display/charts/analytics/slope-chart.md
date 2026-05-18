@@ -26,7 +26,7 @@ Slope charts compare two points in time (or two categories) for multiple entitie
 
 ### XAML
 ```xml
-<charts:SlopeChart Name="SlopeChartSample"
+<SlopeChart xmlns="https://github.com/avaloniaui" Name="SlopeChartSample"
                                          Title="Before vs After"
                                          Height="300"
                                          LabelPath="Label"

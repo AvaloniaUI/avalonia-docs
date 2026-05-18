@@ -28,7 +28,7 @@ Event timeline charts visualize a series of events chronologically. They provide
 ### XAML
 
 ```xml
-<charts:EventTimelineChart Name="EventTimelineSample"
+<EventTimelineChart xmlns="https://github.com/avaloniaui" Name="EventTimelineSample"
                                                  Title="Product Launches"
                                                  Height="300"
                                                  ItemsSource="{Binding TimelineEvents}"

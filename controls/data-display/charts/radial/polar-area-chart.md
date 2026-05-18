@@ -26,7 +26,7 @@ Polar area charts (or coxcomb charts) are similar to pie charts but represent va
 
 ### XAML
 ```xml
-<charts:PolarAreaChart Name="PolarAreaChartSample" Title="Skill Levels" Height="300"
+<PolarAreaChart xmlns="https://github.com/avaloniaui" Name="PolarAreaChartSample" Title="Skill Levels" Height="300"
                                              ItemsSource="{Binding PolarChartData}"
                                              LabelPath="Label" ValuePath="Value" />
 ```

@@ -24,21 +24,21 @@ Bubble charts use a `BubbleSeries` inside a `CartesianChart` to plot two numeric
 ### XAML
 
 ```xml
-<charts:CartesianChart Title="Product portfolio" Height="300">
-    <charts:CartesianChart.HorizontalAxis>
-        <charts:NumericalAxis Title="Price" />
-    </charts:CartesianChart.HorizontalAxis>
-    <charts:CartesianChart.VerticalAxis>
-        <charts:NumericalAxis Title="Revenue" />
-    </charts:CartesianChart.VerticalAxis>
-    <charts:CartesianChart.Series>
-        <charts:BubbleSeries ItemsSource="{Binding BubbleData}"
+<CartesianChart xmlns="https://github.com/avaloniaui" Title="Product portfolio" Height="300">
+    <CartesianChart.HorizontalAxis>
+        <NumericalAxis Title="Price" />
+    </CartesianChart.HorizontalAxis>
+    <CartesianChart.VerticalAxis>
+        <NumericalAxis Title="Revenue" />
+    </CartesianChart.VerticalAxis>
+    <CartesianChart.Series>
+        <BubbleSeries ItemsSource="{Binding BubbleData}"
                                CategoryPath="Price"
                                ValuePath="Revenue"
                                SizePath="Units"
                                Title="Products" />
-    </charts:CartesianChart.Series>
-</charts:CartesianChart>
+    </CartesianChart.Series>
+</CartesianChart>
 ```
 
 ### Data model (C#)

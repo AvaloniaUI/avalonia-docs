@@ -24,7 +24,7 @@ Wind rose charts group values by direction and stack subcategories such as speed
 ### XAML
 
 ```xml
-<charts:WindRoseChart Title="Wind distribution"
+<WindRoseChart xmlns="https://github.com/avaloniaui" Title="Wind distribution"
                                 Height="320"
                                 ItemsSource="{Binding WindData}"
                                 DirectionPath="Direction"

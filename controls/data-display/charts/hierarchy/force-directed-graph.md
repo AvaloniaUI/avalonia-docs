@@ -26,7 +26,7 @@ Force-directed graphs use physical simulations to lay out network nodes. They he
 
 ### XAML
 ```xml
-<charts:ForceDirectedGraph Name="ForceGraphSample" Title="Network Graph" Height="400"
+<ForceDirectedGraph xmlns="https://github.com/avaloniaui" Name="ForceGraphSample" Title="Network Graph" Height="400"
                              NodesSource="{Binding ForceNodes}"
                              EdgesSource="{Binding ForceEdges}"
                              NodeIdPath="Id"

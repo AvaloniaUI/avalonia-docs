@@ -24,7 +24,7 @@ Ternary charts visualize three-component mixtures where each point represents th
 ### XAML
 
 ```xml
-<charts:TernaryChart Title="Mixture composition"
+<TernaryChart xmlns="https://github.com/avaloniaui" Title="Mixture composition"
                                Height="320"
                                ItemsSource="{Binding TernaryData}"
                                APath="Sand"
