@@ -1,0 +1,584 @@
+---
+title: 'LineLayer'
+hide_title: true
+slug: '/avalonia/controls/charts/linelayer'
+uid: 'Avalonia.Controls.Charts.LineLayer'
+commentId: 'T:Avalonia.Controls.Charts.LineLayer'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Charts'
+assembly: 'Avalonia.Controls.Charts'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Charts'
+tfms:
+  - 'net9.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">LineLayer Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Charts</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Charts</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Charts</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A line layer that renders connection lines between geographic points.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class LineLayer
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="maplayer">MapLayer</a> <span className="apiref-page__relation-separator">-&gt;</span> LineLayer
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [LineLayer](#uid-79759a1d66) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-79759a1d66"></span>
+
+### LineLayer Constructor
+
+```csharp
+public LineLayer()
+```
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [GetLayerBounds](#uid-7eb9c048b0) | Gets the geographic bounds (in 0-200, 0-100 viewport units) of the content in this layer. Used for auto-scaling the map to fit content. |
+| [GetPointData](#uid-c3d037c7a6) | Gets the data item at the specified screen point. |
+| [OnPointerExited](#uid-566c919cdf) | Handles pointer exited events. Override this method to handle interactions (e.g. clearing hover effects). |
+| [OnPointerMoved](#uid-b200b9f5ee) | Handles pointer moved events. Override this method to handle interactions (e.g. hover effects). |
+| [Render](#uid-b8b7f6f532) | Renders this layer to the drawing context. |
+| [OnPointerPressed](maplayer.mdx#uid-61476cbbf9) | Handles pointer pressed events. Override this method to handle interactions (e.g. selection). Inherited from [MapLayer](maplayer.mdx). |
+| [Bind (8 overloads)](../../avaloniaobject.mdx#uid-1c60c7bda3) | Binds a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) to an [Avalonia.Data.BindingBase](xref:Avalonia.Data.BindingBase). Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [CheckAccess](../../avaloniaobject.mdx#uid-260ff7a68d) | Returns a value indicating whether the current thread is the UI thread. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [ClearValue (4 overloads)](../../avaloniaobject.mdx#uid-41de208fbe) | Clears a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty)'s local value. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [CoerceValue](../../avaloniaobject.mdx#uid-3bec32f39e) | Coerces the specified [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty). Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [Equals](../../avaloniaobject.mdx#uid-a8a8e94305) | Compares two objects using reference equality. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [GetBaseValue](../../avaloniaobject.mdx#uid-9c615efbba) | Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [GetHashCode](../../avaloniaobject.mdx#uid-7f7db1e7a2) | Gets the hash code for the object. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [GetValue (3 overloads)](../../avaloniaobject.mdx#uid-5142cd4792) | Gets a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [IsAnimating](../../avaloniaobject.mdx#uid-8cbfc7521a) | Checks whether a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) is animating. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [IsSet](../../avaloniaobject.mdx#uid-f8bf0bbdcc) | Checks whether a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) is set on this object. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [SetCurrentValue (2 overloads)](../../avaloniaobject.mdx#uid-38759fd088) | Sets the value of a dependency property without changing its value source. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [SetValue (3 overloads)](../../avaloniaobject.mdx#uid-47d14e19d7) | Sets a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [VerifyAccess](../../avaloniaobject.mdx#uid-3b9d3c9793) | Checks that the current thread is the UI thread and throws if not. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7eb9c048b0"></span>
+
+### GetLayerBounds Method
+
+Gets the geographic bounds (in 0-200, 0-100 viewport units) of the content in this layer.
+Used for auto-scaling the map to fit content.
+
+```csharp
+public Nullable<Avalonia.Rect> GetLayerBounds()
+```
+
+#### Returns
+
+Nullable&lt;[Avalonia.Rect](xref:Avalonia.Rect)&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c3d037c7a6"></span>
+
+### GetPointData Method
+
+Gets the data item at the specified screen point.
+
+```csharp
+public object GetPointData(Avalonia.Point point, Avalonia.Rect chartArea)
+```
+
+#### Parameters
+
+`point` [Avalonia.Point](xref:Avalonia.Point)
+
+The screen point to test.
+
+
+`chartArea` [Avalonia.Rect](xref:Avalonia.Rect)
+
+The chart area rectangle.
+
+
+#### Returns
+
+object
+
+The data item if hit; otherwise, null.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-566c919cdf"></span>
+
+### OnPointerExited Method
+
+Handles pointer exited events.
+Override this method to handle interactions (e.g. clearing hover effects).
+
+```csharp
+public void OnPointerExited()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b200b9f5ee"></span>
+
+### OnPointerMoved Method
+
+Handles pointer moved events.
+Override this method to handle interactions (e.g. hover effects).
+
+```csharp
+public bool OnPointerMoved(Avalonia.Point point, Avalonia.Rect chartArea)
+```
+
+#### Parameters
+
+`point` [Avalonia.Point](xref:Avalonia.Point)
+
+
+`chartArea` [Avalonia.Rect](xref:Avalonia.Rect)
+
+
+#### Returns
+
+bool
+
+True if handled.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b8b7f6f532"></span>
+
+### Render Method
+
+Renders this layer to the drawing context.
+
+```csharp
+public void Render(Avalonia.Media.DrawingContext context, Avalonia.Rect chartArea, double animationProgress)
+```
+
+#### Parameters
+
+`context` [Avalonia.Media.DrawingContext](xref:Avalonia.Media.DrawingContext)
+
+The drawing context.
+
+
+`chartArea` [Avalonia.Rect](xref:Avalonia.Rect)
+
+The chart area rectangle.
+
+
+`animationProgress` double
+
+Animation progress from 0 to 1.
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [FromLatitudePath](#uid-3485755b4e) | Gets or sets the property path for source latitude. |
+| [FromLongitudePath](#uid-94d3b5da57) | Gets or sets the property path for source longitude. |
+| [IsCurved](#uid-11998b7810) | Gets or sets whether to use curved lines. |
+| [ItemsSource](#uid-298e9024eb) | Gets or sets the data source. |
+| [MaxLineThickness](#uid-35ff4070d1) | Gets or sets the maximum line thickness. |
+| [MinLineThickness](#uid-4f2fded945) | Gets or sets the minimum line thickness. |
+| [ShowEndpoints](#uid-2a7340fbae) | Gets or sets whether to show endpoint circles. |
+| [Stroke](#uid-8a1562edfb) | Gets or sets the stroke brush. |
+| [ToLatitudePath](#uid-7818584279) | Gets or sets the property path for destination latitude. |
+| [ToLongitudePath](#uid-a001ac0e56) | Gets or sets the property path for destination longitude. |
+| [ValuePath](#uid-38fa87e01d) | Gets or sets the property path for line value (affects thickness). |
+| [IsVisible](maplayer.mdx#uid-93a23c42b6) | Gets or sets whether this layer is visible. Inherited from [MapLayer](maplayer.mdx). |
+| [Opacity](maplayer.mdx#uid-7b32d6b968) | Gets or sets the opacity of this layer. Inherited from [MapLayer](maplayer.mdx). |
+| [TooltipTemplate](maplayer.mdx#uid-f880527475) | Gets or sets the data template used for tooltips. Inherited from [MapLayer](maplayer.mdx). |
+| [Dispatcher](../../avaloniaobject.mdx#uid-b25fa51632) | Returns the [Avalonia.AvaloniaObject.Dispatcher](xref:Avalonia.AvaloniaObject.Dispatcher) that this [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject) is associated with. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [Item](../../avaloniaobject.mdx#uid-c1d1f1bc0f) | Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3485755b4e"></span>
+
+### FromLatitudePath Property
+
+Gets or sets the property path for source latitude.
+
+```csharp
+public string FromLatitudePath { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-94d3b5da57"></span>
+
+### FromLongitudePath Property
+
+Gets or sets the property path for source longitude.
+
+```csharp
+public string FromLongitudePath { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-11998b7810"></span>
+
+### IsCurved Property
+
+Gets or sets whether to use curved lines.
+
+```csharp
+public bool IsCurved { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-298e9024eb"></span>
+
+### ItemsSource Property
+
+Gets or sets the data source.
+
+```csharp
+public System.Collections.IEnumerable ItemsSource { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-35ff4070d1"></span>
+
+### MaxLineThickness Property
+
+Gets or sets the maximum line thickness.
+
+```csharp
+public double MaxLineThickness { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4f2fded945"></span>
+
+### MinLineThickness Property
+
+Gets or sets the minimum line thickness.
+
+```csharp
+public double MinLineThickness { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2a7340fbae"></span>
+
+### ShowEndpoints Property
+
+Gets or sets whether to show endpoint circles.
+
+```csharp
+public bool ShowEndpoints { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8a1562edfb"></span>
+
+### Stroke Property
+
+Gets or sets the stroke brush.
+
+```csharp
+public Avalonia.Media.IBrush Stroke { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7818584279"></span>
+
+### ToLatitudePath Property
+
+Gets or sets the property path for destination latitude.
+
+```csharp
+public string ToLatitudePath { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a001ac0e56"></span>
+
+### ToLongitudePath Property
+
+Gets or sets the property path for destination longitude.
+
+```csharp
+public string ToLongitudePath { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-38fa87e01d"></span>
+
+### ValuePath Property
+
+Gets or sets the property path for line value (affects thickness).
+
+```csharp
+public string ValuePath { get; set; }
+```
+
+</section>
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [FromLatitudePathProperty](#uid-8a97b90253) | Identifies the [Avalonia.Controls.Charts.LineLayer.FromLatitudePath](xref:Avalonia.Controls.Charts.LineLayer.FromLatitudePath) Avalonia property. |
+| [FromLongitudePathProperty](#uid-fb1ee15785) | Identifies the [Avalonia.Controls.Charts.LineLayer.FromLongitudePath](xref:Avalonia.Controls.Charts.LineLayer.FromLongitudePath) Avalonia property. |
+| [IsCurvedProperty](#uid-89c33ec153) | Identifies the [Avalonia.Controls.Charts.LineLayer.IsCurved](xref:Avalonia.Controls.Charts.LineLayer.IsCurved) Avalonia property. |
+| [ItemsSourceProperty](#uid-0606d53747) | Identifies the [Avalonia.Controls.Charts.LineLayer.ItemsSource](xref:Avalonia.Controls.Charts.LineLayer.ItemsSource) Avalonia property. |
+| [MaxLineThicknessProperty](#uid-8a43fa3dfb) | Identifies the [Avalonia.Controls.Charts.LineLayer.MaxLineThickness](xref:Avalonia.Controls.Charts.LineLayer.MaxLineThickness) Avalonia property. |
+| [MinLineThicknessProperty](#uid-1d0b57454e) | Identifies the [Avalonia.Controls.Charts.LineLayer.MinLineThickness](xref:Avalonia.Controls.Charts.LineLayer.MinLineThickness) Avalonia property. |
+| [ShowEndpointsProperty](#uid-493be64c02) | Identifies the [Avalonia.Controls.Charts.LineLayer.ShowEndpoints](xref:Avalonia.Controls.Charts.LineLayer.ShowEndpoints) Avalonia property. |
+| [StrokeProperty](#uid-8f3dc07dd9) | Identifies the [Avalonia.Controls.Charts.LineLayer.Stroke](xref:Avalonia.Controls.Charts.LineLayer.Stroke) Avalonia property. |
+| [ToLatitudePathProperty](#uid-a90cb8ffeb) | Identifies the [Avalonia.Controls.Charts.LineLayer.ToLatitudePath](xref:Avalonia.Controls.Charts.LineLayer.ToLatitudePath) Avalonia property. |
+| [ToLongitudePathProperty](#uid-0060da7c9c) | Identifies the [Avalonia.Controls.Charts.LineLayer.ToLongitudePath](xref:Avalonia.Controls.Charts.LineLayer.ToLongitudePath) Avalonia property. |
+| [ValuePathProperty](#uid-35b7f2b394) | Identifies the [Avalonia.Controls.Charts.LineLayer.ValuePath](xref:Avalonia.Controls.Charts.LineLayer.ValuePath) Avalonia property. |
+| [IsVisibleProperty](maplayer.mdx#uid-74f0177084) | Identifies the [Avalonia.Controls.Charts.MapLayer.IsVisible](xref:Avalonia.Controls.Charts.MapLayer.IsVisible) Avalonia property. Inherited from [MapLayer](maplayer.mdx). |
+| [OpacityProperty](maplayer.mdx#uid-7b17fad341) | Identifies the [Avalonia.Controls.Charts.MapLayer.Opacity](xref:Avalonia.Controls.Charts.MapLayer.Opacity) Avalonia property. Inherited from [MapLayer](maplayer.mdx). |
+| [TooltipTemplateProperty](maplayer.mdx#uid-10362b19e1) | Identifies the [Avalonia.Controls.Charts.MapLayer.TooltipTemplate](xref:Avalonia.Controls.Charts.MapLayer.TooltipTemplate) Avalonia property. Inherited from [MapLayer](maplayer.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8a97b90253"></span>
+
+### FromLatitudePathProperty Field
+
+Identifies the [Avalonia.Controls.Charts.LineLayer.FromLatitudePath](xref:Avalonia.Controls.Charts.LineLayer.FromLatitudePath) Avalonia property.
+
+```csharp
+public Avalonia.StyledProperty<string> FromLatitudePathProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-fb1ee15785"></span>
+
+### FromLongitudePathProperty Field
+
+Identifies the [Avalonia.Controls.Charts.LineLayer.FromLongitudePath](xref:Avalonia.Controls.Charts.LineLayer.FromLongitudePath) Avalonia property.
+
+```csharp
+public Avalonia.StyledProperty<string> FromLongitudePathProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-89c33ec153"></span>
+
+### IsCurvedProperty Field
+
+Identifies the [Avalonia.Controls.Charts.LineLayer.IsCurved](xref:Avalonia.Controls.Charts.LineLayer.IsCurved) Avalonia property.
+
+```csharp
+public Avalonia.StyledProperty<bool> IsCurvedProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0606d53747"></span>
+
+### ItemsSourceProperty Field
+
+Identifies the [Avalonia.Controls.Charts.LineLayer.ItemsSource](xref:Avalonia.Controls.Charts.LineLayer.ItemsSource) Avalonia property.
+
+```csharp
+public Avalonia.StyledProperty<System.Collections.IEnumerable> ItemsSourceProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8a43fa3dfb"></span>
+
+### MaxLineThicknessProperty Field
+
+Identifies the [Avalonia.Controls.Charts.LineLayer.MaxLineThickness](xref:Avalonia.Controls.Charts.LineLayer.MaxLineThickness) Avalonia property.
+
+```csharp
+public Avalonia.StyledProperty<double> MaxLineThicknessProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1d0b57454e"></span>
+
+### MinLineThicknessProperty Field
+
+Identifies the [Avalonia.Controls.Charts.LineLayer.MinLineThickness](xref:Avalonia.Controls.Charts.LineLayer.MinLineThickness) Avalonia property.
+
+```csharp
+public Avalonia.StyledProperty<double> MinLineThicknessProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-493be64c02"></span>
+
+### ShowEndpointsProperty Field
+
+Identifies the [Avalonia.Controls.Charts.LineLayer.ShowEndpoints](xref:Avalonia.Controls.Charts.LineLayer.ShowEndpoints) Avalonia property.
+
+```csharp
+public Avalonia.StyledProperty<bool> ShowEndpointsProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8f3dc07dd9"></span>
+
+### StrokeProperty Field
+
+Identifies the [Avalonia.Controls.Charts.LineLayer.Stroke](xref:Avalonia.Controls.Charts.LineLayer.Stroke) Avalonia property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Media.IBrush> StrokeProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a90cb8ffeb"></span>
+
+### ToLatitudePathProperty Field
+
+Identifies the [Avalonia.Controls.Charts.LineLayer.ToLatitudePath](xref:Avalonia.Controls.Charts.LineLayer.ToLatitudePath) Avalonia property.
+
+```csharp
+public Avalonia.StyledProperty<string> ToLatitudePathProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0060da7c9c"></span>
+
+### ToLongitudePathProperty Field
+
+Identifies the [Avalonia.Controls.Charts.LineLayer.ToLongitudePath](xref:Avalonia.Controls.Charts.LineLayer.ToLongitudePath) Avalonia property.
+
+```csharp
+public Avalonia.StyledProperty<string> ToLongitudePathProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-35b7f2b394"></span>
+
+### ValuePathProperty Field
+
+Identifies the [Avalonia.Controls.Charts.LineLayer.ValuePath](xref:Avalonia.Controls.Charts.LineLayer.ValuePath) Avalonia property.
+
+```csharp
+public Avalonia.StyledProperty<string> ValuePathProperty
+```
+
+</section>
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [Invalidated](maplayer.mdx#uid-995465c2b4) | Event raised when the layer needs to be redrawn. Inherited from [MapLayer](maplayer.mdx). |
+| [PropertyChanged](../../avaloniaobject.mdx#uid-d758e26fae) | Raised when a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value changes on this object. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+
+</ApiRefPage>
+

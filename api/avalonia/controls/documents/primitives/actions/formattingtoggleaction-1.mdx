@@ -1,0 +1,210 @@
+---
+title: 'FormattingToggleAction<T>'
+hide_title: true
+slug: '/avalonia/controls/documents/primitives/actions/formattingtoggleaction-1'
+uid: 'Avalonia.Controls.Documents.Primitives.Actions.FormattingToggleAction`1'
+commentId: 'T:Avalonia.Controls.Documents.Primitives.Actions.FormattingToggleAction`1'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.RichTextEditor'
+assembly: 'Avalonia.Controls.RichTextEditor'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.Primitives.Actions'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">FormattingToggleAction&lt;T&gt; Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.Primitives.Actions</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.RichTextEditor</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.RichTextEditor</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Base class for toggle formatting actions like RichBold, RichItalic, and RichUnderline.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class FormattingToggleAction<T>
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="editoraction">EditorAction</a> <span className="apiref-page__relation-separator">-&gt;</span> FormattingToggleAction&lt;T&gt;
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="ieditoraction">IEditorAction</a>, <a href="itoggleaction">IToggleAction</a>
+</div>
+</div>
+
+## Remarks
+
+Toggle formatting actions apply or remove a formatting property from the
+current selection. When the selection is empty, the property is "springloaded"
+and applied to the next typed character.
+
+Derived classes should specify the [Avalonia.Controls.Documents.Primitives.Actions.FormattingToggleAction&lt;T&gt;.Property](xref:Avalonia.Controls.Documents.Primitives.Actions.FormattingToggleAction%601.Property), [Avalonia.Controls.Documents.Primitives.Actions.FormattingToggleAction&lt;T&gt;.OnValue](xref:Avalonia.Controls.Documents.Primitives.Actions.FormattingToggleAction%601.OnValue),
+and [Avalonia.Controls.Documents.Primitives.Actions.FormattingToggleAction&lt;T&gt;.OffValue](xref:Avalonia.Controls.Documents.Primitives.Actions.FormattingToggleAction%601.OffValue) to define the formatting behavior.
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [CanExecute](#uid-6e9a219254) | Gets whether the action can currently execute. |
+| [Execute](#uid-a96560e647) | Executes the action synchronously. |
+| [GetState](#uid-a5f59cdceb) | Gets the current state of the action. |
+| [IsChecked](#uid-8184f94ef5) | Gets whether the action is currently "on" for the selection. |
+| [ExecuteAsync](editoraction.mdx#uid-6a0258eff0) | Executes the action asynchronously. Inherited from [EditorAction](editoraction.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6e9a219254"></span>
+
+### CanExecute Method
+
+Gets whether the action can currently execute.
+
+```csharp
+public bool CanExecute(Avalonia.Controls.Documents.Primitives.ITextEditorHost host)
+```
+
+#### Parameters
+
+`host` [Avalonia.Controls.Documents.Primitives.ITextEditorHost](xref:Avalonia.Controls.Documents.Primitives.ITextEditorHost)
+
+The editor host to check against.
+
+
+#### Returns
+
+bool
+
+True if the action can execute; otherwise, false.
+
+
+#### Remarks
+
+This is called frequently to update UI state (button enabled/disabled).
+Implementations should be fast and avoid heavy computation.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a96560e647"></span>
+
+### Execute Method
+
+Executes the action synchronously.
+
+```csharp
+public void Execute(Avalonia.Controls.Documents.Primitives.ITextEditorHost host)
+```
+
+#### Parameters
+
+`host` [Avalonia.Controls.Documents.Primitives.ITextEditorHost](xref:Avalonia.Controls.Documents.Primitives.ITextEditorHost)
+
+The editor host to execute on.
+
+
+#### Remarks
+
+For actions that require async operations (like file dialogs),
+use [Avalonia.Controls.Documents.Primitives.Actions.IEditorAction.ExecuteAsync(Avalonia.Controls.Documents.Primitives.ITextEditorHost)](xref:Avalonia.Controls.Documents.Primitives.Actions.IEditorAction.ExecuteAsync%28Avalonia.Controls.Documents.Primitives.ITextEditorHost%29) instead.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a5f59cdceb"></span>
+
+### GetState Method
+
+Gets the current state of the action.
+
+```csharp
+public object GetState(Avalonia.Controls.Documents.Primitives.ITextEditorHost host)
+```
+
+#### Parameters
+
+`host` [Avalonia.Controls.Documents.Primitives.ITextEditorHost](xref:Avalonia.Controls.Documents.Primitives.ITextEditorHost)
+
+The editor host to query.
+
+
+#### Returns
+
+object
+
+The current state, or null if the action has no state.
+For toggle actions, this returns a boolean.
+For property actions, this returns the current property value.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8184f94ef5"></span>
+
+### IsChecked Method
+
+Gets whether the action is currently "on" for the selection.
+
+```csharp
+public bool IsChecked(Avalonia.Controls.Documents.Primitives.ITextEditorHost host)
+```
+
+#### Parameters
+
+`host` [Avalonia.Controls.Documents.Primitives.ITextEditorHost](xref:Avalonia.Controls.Documents.Primitives.ITextEditorHost)
+
+The editor host to query.
+
+
+#### Returns
+
+bool
+
+True if the toggle state is on; otherwise, false.
+
+
+#### Remarks
+
+For formatting actions, this returns true if all text in the selection
+has the formatting applied.
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [DisplayName](editoraction.mdx#uid-f07298f749) | Gets the display name for UI purposes. Inherited from [EditorAction](editoraction.mdx). |
+| [Gesture](editoraction.mdx#uid-557e9af400) | Gets the optional keyboard gesture for this action. Inherited from [EditorAction](editoraction.mdx). |
+| [Id](editoraction.mdx#uid-80cef2dbb8) | Gets the unique identifier for this action. Inherited from [EditorAction](editoraction.mdx). |
+
+</ApiRefPage>
+

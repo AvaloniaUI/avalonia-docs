@@ -1,0 +1,177 @@
+---
+title: 'ChartPalette'
+hide_title: true
+slug: '/avalonia/controls/charts/chartpalette'
+uid: 'Avalonia.Controls.Charts.ChartPalette'
+commentId: 'T:Avalonia.Controls.Charts.ChartPalette'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Charts'
+assembly: 'Avalonia.Controls.Charts'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Charts'
+tfms:
+  - 'net9.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ChartPalette Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Charts</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Charts</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Charts</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Represents a color palette for chart series.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class ChartPalette
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> ChartPalette
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Derived types:</span> <a href="chartpatternpalette">ChartPatternPalette</a>
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [ChartPalette](#uid-a044f74ab7) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a044f74ab7"></span>
+
+### ChartPalette Constructor
+
+```csharp
+public ChartPalette()
+```
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [FromBrushes](#uid-64905fa70e) | Creates a palette from a set of brushes. |
+| [FromColors](#uid-af0b5c9058) | Creates a palette from a set of colors. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-64905fa70e"></span>
+
+### FromBrushes Method
+
+Creates a palette from a set of brushes.
+
+```csharp
+public Avalonia.Controls.Charts.ChartPalette FromBrushes(Avalonia.Media.IBrush[] brushes)
+```
+
+#### Parameters
+
+`brushes` [Avalonia.Media.IBrush](xref:Avalonia.Media.IBrush)[]
+
+The brushes to include in the palette.
+
+
+#### Returns
+
+[Avalonia.Controls.Charts.ChartPalette](xref:Avalonia.Controls.Charts.ChartPalette)
+
+A new [Avalonia.Controls.Charts.ChartPalette](xref:Avalonia.Controls.Charts.ChartPalette) instance.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-af0b5c9058"></span>
+
+### FromColors Method
+
+Creates a palette from a set of colors.
+
+```csharp
+public Avalonia.Controls.Charts.ChartPalette FromColors(Avalonia.Media.Color[] colors)
+```
+
+#### Parameters
+
+`colors` [Avalonia.Media.Color](xref:Avalonia.Media.Color)[]
+
+The colors to include in the palette.
+
+
+#### Returns
+
+[Avalonia.Controls.Charts.ChartPalette](xref:Avalonia.Controls.Charts.ChartPalette)
+
+A new [Avalonia.Controls.Charts.ChartPalette](xref:Avalonia.Controls.Charts.ChartPalette) instance.
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Brushes](#uid-596e707da8) | Gets the list of brushes in this palette. |
+| [Colors](#uid-b689d1e86a) | Gets the list of colors in this palette. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-596e707da8"></span>
+
+### Brushes Property
+
+Gets the list of brushes in this palette.
+
+```csharp
+public Avalonia.Collections.AvaloniaList<Avalonia.Media.IBrush> Brushes { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b689d1e86a"></span>
+
+### Colors Property
+
+Gets the list of colors in this palette.
+
+```csharp
+public Avalonia.Collections.AvaloniaList<Avalonia.Media.Color> Colors { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+
