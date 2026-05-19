@@ -58,6 +58,23 @@ var window = myControl.FindLogicalAncestorOfType<Window>();
 var allTextBlocks = myPanel.GetLogicalDescendants().OfType<TextBlock>();
 ```
 
+### Mutating the logical tree
+
+It is only safe to add or remove `LogicalChildren` when the framework is not already walking the tree. Several common operations trigger such walks, most notably propagation of inherited properties (`DataContext`, `FontSize`, `FlowDirection`, etc). Mutating `LogicalChildren` while one of these walks is in flight can corrupt the iteration and surface as binding errors.
+
+**Safe places to add or remove logical children:**
+
+- The control's constructor, before it is attached to any tree.
+- `OnApplyTemplate`, after calling `base.OnApplyTemplate(e)`.
+- `OnAttachedToLogicalTree`, `OnDetachedFromLogicalTree`, and their visual-tree counterparts.
+- Routed input or command handlers (for example, a `Click` or `Tapped` handler).
+- The `Loaded` event handler.
+
+**Avoid mutating `LogicalChildren` from:**
+
+- `OnPropertyChanged` or `PropertyChanged` callbacks. The framework may be partway through propagating an inherited property to the children you are about to modify.
+- `DataContextChanged`, for the same reason.
+
 ## Visual tree
 
 The visual tree includes every visual element that participates in rendering, including the internal template parts of controls. A `Button` in the logical tree expands in the visual tree to include its `ContentPresenter`, `Border`, and other template elements.

@@ -142,6 +142,14 @@ This event fires when:
 - The inherited `DataContext` changes because a parent's `DataContext` changed.
 - The control moves to a different part of the visual tree with a different inherited `DataContext`.
 
+:::warning
+Do not mutate the logical tree from `DataContextChanged` or `OnPropertyChanged`!
+
+`DataContext` is an inherited property, so changes trigger a walk down the logical tree to propagate new values to descendants. If `LogicalChildren` are modified while the walk is in progress, binding errors can result.
+
+For more information, see [Mutating the logical tree](/docs/fundamentals/visual-and-logical-trees#mutating-the-logical-tree).
+:::
+
 ## Typical initialization patterns
 
 ### Loading data in a view
