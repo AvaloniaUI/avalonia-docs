@@ -24,7 +24,7 @@ Tornado charts place left and right bars around a shared center line, which keep
 ### XAML
 
 ```xml
-<charts:TornadoChart Title="Sensitivity drivers"
+<TornadoChart xmlns="https://github.com/avaloniaui" Title="Sensitivity drivers"
                        Height="320"
                        ItemsSource="{Binding TornadoData}"
                        LabelPath="Factor"

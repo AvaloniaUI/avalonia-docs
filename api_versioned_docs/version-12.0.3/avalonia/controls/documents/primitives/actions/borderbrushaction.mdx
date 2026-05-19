@@ -1,0 +1,171 @@
+---
+title: 'BorderBrushAction'
+hide_title: true
+slug: '/avalonia/controls/documents/primitives/actions/borderbrushaction'
+uid: 'Avalonia.Controls.Documents.Primitives.Actions.BorderBrushAction'
+commentId: 'T:Avalonia.Controls.Documents.Primitives.Actions.BorderBrushAction'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.RichTextEditor'
+assembly: 'Avalonia.Controls.RichTextEditor'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.Primitives.Actions'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">BorderBrushAction Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.Primitives.Actions</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.RichTextEditor</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.RichTextEditor</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Action for setting border color on block elements (Paragraph, Section, etc.).
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class BorderBrushAction
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> BlockPropertyAction&lt;IBrush&gt; <span className="apiref-page__relation-separator">-&gt;</span> BorderBrushAction
+</div>
+</div>
+
+## Remarks
+
+Border brush (color) defines the color of the border drawn around a block element.
+The border is drawn between the margin (outside) and padding (inside) of a block.
+
+Note: The border won't be visible unless you also set
+[Avalonia.Controls.Documents.Primitives.Actions.BorderThicknessAction](xref:Avalonia.Controls.Documents.Primitives.Actions.BorderThicknessAction) to a non-zero value. The border brush
+defines the color, while border thickness defines the width.
+
+This action is designed to work with [Avalonia.Controls.Documents.Primitives.Toolbar.ColorPickerTool](xref:Avalonia.Controls.Documents.Primitives.Toolbar.ColorPickerTool).
+It returns null for available values, indicating the UI should use a color picker
+instead of a dropdown with predefined values.
+
+When applied to a selection spanning multiple paragraphs, all affected paragraphs
+will have their border color set to the specified brush.
+
+Common Use Cases:
+- Creating outlined callout boxes
+- Highlighting important quotes with colored borders
+- Framing code blocks or examples
+- Building color-coded sections
+
+Tip: For a complete bordered block, combine with:
+
+- [Avalonia.Controls.Documents.Primitives.Actions.BorderThicknessAction](xref:Avalonia.Controls.Documents.Primitives.Actions.BorderThicknessAction) - Define border width
+- [Avalonia.Controls.Documents.Primitives.Actions.BlockBackgroundAction](xref:Avalonia.Controls.Documents.Primitives.Actions.BlockBackgroundAction) - Add background color
+- [Avalonia.Controls.Documents.Primitives.Actions.PaddingAction](xref:Avalonia.Controls.Documents.Primitives.Actions.PaddingAction) - Add internal spacing
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [BorderBrushAction](#uid-6c2a6ff271) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6c2a6ff271"></span>
+
+### BorderBrushAction Constructor
+
+```csharp
+public BorderBrushAction()
+```
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [GetAvailableValues](#uid-4e802cf5b1) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4e802cf5b1"></span>
+
+### GetAvailableValues Method
+
+```csharp
+public System.Collections.Generic.IEnumerable<Avalonia.Media.IBrush> GetAvailableValues()
+```
+
+#### Returns
+
+System.Collections.Generic.IEnumerable&lt;[Avalonia.Media.IBrush](xref:Avalonia.Media.IBrush)&gt;
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [DisplayName](#uid-16cf56130b) | No summary available. |
+| [Gesture](#uid-929dac1a91) | No summary available. |
+| [Id](#uid-23220e1f53) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-16cf56130b"></span>
+
+### DisplayName Property
+
+```csharp
+public string DisplayName { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-929dac1a91"></span>
+
+### Gesture Property
+
+```csharp
+public Avalonia.Input.KeyGesture Gesture { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-23220e1f53"></span>
+
+### Id Property
+
+```csharp
+public string Id { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

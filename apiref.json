@@ -1,5 +1,5 @@
 {
-  "docsetVersion": "12.0.2",
+  "docsetVersion": "12.0.3",
   "docsetId": "avalonia",
   "feeds": [
     "https://api.nuget.org/v3/index.json"
@@ -7,71 +7,71 @@
   "packages": [
     {
       "id": "Avalonia",
-      "version": "12.0.2"
+      "version": "12.0.3"
     },
     {
       "id": "Avalonia.Controls.ColorPicker",
-      "version": "12.0.2"
+      "version": "12.0.3"
     },
     {
       "id": "Avalonia.Desktop",
-      "version": "12.0.2"
+      "version": "12.0.3"
     },
     {
       "id": "Avalonia.Themes.Fluent",
-      "version": "12.0.2"
+      "version": "12.0.3"
     },
     {
       "id": "Avalonia.Fonts.Inter",
-      "version": "12.0.2"
+      "version": "12.0.3"
     },
     {
       "id": "Avalonia.Skia",
-      "version": "12.0.2"
+      "version": "12.0.3"
     },
     {
       "id": "Avalonia.Native",
-      "version": "12.0.2"
+      "version": "12.0.3"
     },
     {
       "id": "Avalonia.X11",
-      "version": "12.0.2"
+      "version": "12.0.3"
     },
     {
       "id": "Avalonia.FreeDesktop",
-      "version": "12.0.2"
+      "version": "12.0.3"
     },
     {
       "id": "Avalonia.Markup.Xaml.Loader",
-      "version": "12.0.2"
+      "version": "12.0.3"
     },
-     {
+    {
       "id": "Avalonia.Browser",
-      "version": "12.0.2"
+      "version": "12.0.3"
     },
-     {
+    {
       "id": "Avalonia.Android",
-      "version": "12.0.2"
+      "version": "12.0.3"
     },
-     {
+    {
       "id": "Avalonia.Headless.XUnit",
-      "version": "12.0.2"
+      "version": "12.0.3"
     },
     {
       "id": "Avalonia.LinuxFramebuffer",
-      "version": "12.0.2"
+      "version": "12.0.3"
     },
      {
       "id": "Avalonia.Headless.NUnit",
-      "version": "12.0.2"
+      "version": "12.0.3"
     },
-     {
+    {
       "id": "Avalonia.Win32.Interoperability",
-      "version": "12.0.2"
+      "version": "12.0.3"
     },
-     {
+    {
       "id": "Avalonia.Headless.Vnc",
-      "version": "12.0.2"
+      "version": "12.0.3"
     },
     {
       "id": "AvaloniaUI.DiagnosticsSupport",
@@ -79,7 +79,7 @@
     },
     {
       "id": "Avalonia.Controls.WebView",
-      "version": "12.0.0"
+      "version": "12.0.1"
     },
     {
       "id": "Avalonia.Controls.MediaPlayer",
@@ -91,11 +91,35 @@
     },
     {
       "id": "Avalonia.Controls.Markdown",
+      "version": "12.1.1"
+    },
+    {
+      "id": "Avalonia.Controls.TreeDataGrid",
       "version": "12.0.0"
     },
-     {
-      "id": "Avalonia.Controls.TreeDataGrid",
-      "version": "12.0.0-beta3"
+    {
+      "id": "Avalonia.Controls.RichTextEditor",
+      "version": "12.1.1"
+    },
+    {
+      "id": "Avalonia.Controls.Documents.Serialization.Rtf",
+      "version": "12.1.1"
+    },
+    {
+      "id": "Avalonia.Controls.Documents.Serialization.Html",
+      "version": "12.1.1"
+    },
+    {
+      "id": "Avalonia.Controls.Documents.Serialization.Xaml",
+      "version": "12.1.1"
+    },
+    {
+      "id": "Avalonia.Controls.Documents.Serialization.Docx",
+      "version": "12.1.1"
+    },
+    {
+      "id": "Avalonia.Controls.Charts",
+      "version": "12.0.0"
     }
   ],
   "resolveSourceLinks": true,

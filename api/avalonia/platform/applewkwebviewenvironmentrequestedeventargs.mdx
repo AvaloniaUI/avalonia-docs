@@ -66,6 +66,7 @@ public class AppleWKWebViewEnvironmentRequestedEventArgs
 | [DataStoreIdentifier](#uid-6b4fc518fd) | No summary available. |
 | [LimitsNavigationsToAppBoundDomains](#uid-6e4aa162ca) | No summary available. |
 | [NonPersistentDataStore](#uid-291acbc2af) | No summary available. |
+| [ScriptHandlerMessageName](#uid-b3e04d38bd) | No summary available. |
 | [UpgradeKnownHostsToHTTPS](#uid-f9c03c5c58) | No summary available. |
 | [EnableDevTools](../controls/webviewenvironmentrequestedeventargs.mdx#uid-aeed4f7a28) | Inherited from [WebViewEnvironmentRequestedEventArgs](../controls/webviewenvironmentrequestedeventargs.mdx). |
 
@@ -88,7 +89,7 @@ public string ApplicationNameForUserAgent { get; set; }
 ### DataStoreIdentifier Property
 
 ```csharp
-public string DataStoreIdentifier { get; set; }
+public Guid DataStoreIdentifier { get; set; }
 ```
 
 </section>
@@ -113,6 +114,18 @@ public bool LimitsNavigationsToAppBoundDomains { get; set; }
 
 ```csharp
 public bool NonPersistentDataStore { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b3e04d38bd"></span>
+
+### ScriptHandlerMessageName Property
+
+```csharp
+public string ScriptHandlerMessageName { get; set; }
 ```
 
 </section>

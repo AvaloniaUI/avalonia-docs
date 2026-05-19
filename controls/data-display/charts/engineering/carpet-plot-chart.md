@@ -24,7 +24,7 @@ Carpet plots visualize how two independent variables relate to a third value by 
 ### XAML
 
 ```xml
-<charts:CarpetPlot Title="Performance map"
+<CarpetPlot xmlns="https://github.com/avaloniaui" Title="Performance map"
                              Height="320"
                              ItemsSource="{Binding CarpetData}"
                              AAxisPath="Speed"

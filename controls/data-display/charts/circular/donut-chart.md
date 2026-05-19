@@ -26,11 +26,11 @@ A donut chart is a variation of the [pie chart](/controls/data-display/charts/ci
 
 ### XAML
 ```xml
-<charts:PieChart Name="DonutChartSample" IsTooltipEnabled="True" Title="Revenue Distribution" Height="300" InnerRadiusFactor="0.6">
-                         <charts:PieChart.Series>
-                            <charts:PieSeries ItemsSource="{Binding DonutChartData}" LabelPath="Value" />
-                        </charts:PieChart.Series>
-                    </charts:PieChart>
+<PieChart xmlns="https://github.com/avaloniaui" Name="DonutChartSample" IsTooltipEnabled="True" Title="Revenue Distribution" Height="300" InnerRadiusFactor="0.6">
+                         <PieChart.Series>
+                            <PieSeries ItemsSource="{Binding DonutChartData}" LabelPath="Value" />
+                        </PieChart.Series>
+                    </PieChart>
 ```
 
 ### Data model (C#)

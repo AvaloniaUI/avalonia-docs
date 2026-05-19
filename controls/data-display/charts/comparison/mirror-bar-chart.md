@@ -24,7 +24,7 @@ Mirror bar charts draw two bar series on opposite sides of a center line, so eac
 ### XAML
 
 ```xml
-<charts:MirrorBarChart Title="Regional comparison"
+<MirrorBarChart xmlns="https://github.com/avaloniaui" Title="Regional comparison"
                          Height="320"
                          ItemsSource="{Binding MirrorData}"
                          LabelPath="Category"

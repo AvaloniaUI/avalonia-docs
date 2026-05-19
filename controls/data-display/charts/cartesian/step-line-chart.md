@@ -26,17 +26,17 @@ Step line charts use horizontal and vertical lines to connect data points, creat
 
 ### XAML
 ```xml
-<charts:CartesianChart Name="StepLineChart" Title="Step Line Chart" Height="250">
-                        <charts:CartesianChart.HorizontalAxis>
-                            <charts:CategoryAxis />
-                        </charts:CartesianChart.HorizontalAxis>
-                        <charts:CartesianChart.VerticalAxis>
-                            <charts:NumericalAxis />
-                        </charts:CartesianChart.VerticalAxis>
-                        <charts:CartesianChart.Series>
-                            <charts:StepLineSeries Title="Price" ItemsSource="{Binding StepLineSeriesData}" Stroke="Teal" StrokeThickness="2" MarkerSize="6"  ShowMarkers="True"/>
-                        </charts:CartesianChart.Series>
-                    </charts:CartesianChart>
+<CartesianChart xmlns="https://github.com/avaloniaui" Name="StepLineChart" Title="Step Line Chart" Height="250">
+                        <CartesianChart.HorizontalAxis>
+                            <CategoryAxis />
+                        </CartesianChart.HorizontalAxis>
+                        <CartesianChart.VerticalAxis>
+                            <NumericalAxis />
+                        </CartesianChart.VerticalAxis>
+                        <CartesianChart.Series>
+                            <StepLineSeries Title="Price" ItemsSource="{Binding StepLineSeriesData}" Stroke="Teal" StrokeThickness="2" MarkerSize="6"  ShowMarkers="True"/>
+                        </CartesianChart.Series>
+                    </CartesianChart>
 ```
 
 ### Data model (C#)

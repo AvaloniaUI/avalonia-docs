@@ -24,7 +24,7 @@ Packed bubble charts show category magnitude through bubble size while packing c
 ### XAML
 
 ```xml
-<charts:PackedBubbleChart Title="Segment size"
+<PackedBubbleChart xmlns="https://github.com/avaloniaui" Title="Segment size"
                             Height="320"
                             ItemsSource="{Binding Segments}"
                             LabelPath="Name"

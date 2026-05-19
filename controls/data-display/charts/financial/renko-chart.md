@@ -26,7 +26,7 @@ Renko charts are made of "bricks" that represent a fixed price movement. A new b
 
 ### XAML
 ```xml
-<charts:RenkoChart Name="RenkoChartSample" Title="Price Movement" Height="300" BrickSize="5"
+<RenkoChart xmlns="https://github.com/avaloniaui" Name="RenkoChartSample" Title="Price Movement" Height="300" BrickSize="5"
                                          ItemsSource="{Binding RenkoData}"
                                          ValuePath="Value" />
 ```

@@ -26,7 +26,7 @@ Table charts combine traditional tabular data with embedded visual cues. They ar
 
 ### XAML
 ```xml
-<charts:TableChart Title="Product Comparison" Height="400"
+<TableChart xmlns="https://github.com/avaloniaui" Title="Product Comparison" Height="400"
                                          ItemsSource="{Binding TableData}"
                                          Columns="{Binding TableColumns}"
                                          RowLabelPath="Product" />

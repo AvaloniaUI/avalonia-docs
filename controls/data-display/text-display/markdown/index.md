@@ -1,0 +1,316 @@
+---
+id: index
+title: Markdown control
+description: Render Markdown-formatted text using the Avalonia.Controls.Markdown control, built on the shared FlowDocument model with full DocumentNode styling, selection, streaming, and custom image loading.
+doc-type: reference
+tags:
+  - avalonia pro
+  - avalonia enterprise
+---
+
+The `Markdown` control renders Markdown-formatted text in Avalonia applications. It is built on the same FlowDocument model used by the [RichTextEditor](/controls/input/text-input/richtexteditor), giving it full support for DocumentNode-based styling, text selection, and high-performance streaming updates.
+
+:::info
+This control is available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
+:::
+
+## Getting started
+
+1. Install the `Avalonia.Controls.Markdown` NuGet package by running `dotnet add package`.
+
+```bash
+dotnet add package Avalonia.Controls.Markdown
+```
+
+2. Include your Avalonia license key in the executable project file (`.csproj`). Your license key is available from the [Avalonia portal](https://portal.avaloniaui.net).
+
+```xml
+<ItemGroup>
+  <AvaloniaUILicenseKey Include="YOUR_LICENSE_KEY" />
+</ItemGroup>
+```
+
+:::tip
+For multi-project solutions, you can store your licence key in an [environment variable](https://learn.microsoft.com/en-us/visualstudio/msbuild/how-to-use-environment-variables-in-a-build) or a [shared props file](https://learn.microsoft.com/en-us/visualstudio/msbuild/customize-by-directory?view=vs-2022#directorybuildprops-example) to avoid duplication.
+:::
+
+3. Reference the default theme via a `StyleInclude` in your `App.axaml` file. This adds the resources needed by the Markdown control.
+
+```xml
+<Application.Styles>
+   <StyleInclude Source="avares://Avalonia.Controls.Markdown/Themes/Default.axaml" />
+   <!-- other styles -->
+</Application.Styles>
+```
+
+For more information on installing Avalonia Pro controls, see [Installing Avalonia Pro](/tools/installing-avalonia-pro).
+
+## Architecture
+
+The `Markdown` control converts Markdown text into a live `FlowDocument` using the following pipeline:
+
+1. **Markdown text** is parsed into a Markdig AST.
+2. The AST is rendered into a `DocumentSnapshot` (an immutable, thread-safe representation).
+3. The snapshot is applied to a `FlowDocument`, which owns the live document tree.
+4. An `EditorTextView` (the same renderer used by `RichTextEditor`) renders the document.
+
+Because the control shares the document model with `RichTextEditor`, all document elements (`Paragraph`, `Section`, `Table`, `RichSpan`, `RichHyperlink`, etc.) are full `StyledElement` instances. This means you can target them with Avalonia style selectors and CSS-like classes, not just named resources.
+
+## Usage examples
+
+### XAML usage
+
+```xml
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="using:MarkdownSample"
+        mc:Ignorable="d"
+        x:Class="MarkdownSample.MainWindow">
+ <Markdown xml:space="preserve">
+  # Markdown
+  ## Headings
+  ### Heading 3
+  #### Heading 4
+  ##### Heading 5
+  ###### Heading 6
+
+  **Bold Text**
+  *Italic Text*
+  ~~Strikethrough~~
+  __Bold__ and _Italic_
+
+  [Link to Avalonia](https://avaloniaui.net)
+
+  `Inline code`
+
+  - Unordered list item 1
+  - Unordered list item 2
+    - Nested item 2a
+    - Nested item 2b
+  ---
+  1. Ordered list item 1
+  2. Ordered list item 2
+     1. Nested ordered 2a
+     2. Nested ordered 2b
+  ---  
+  > Blockquote example
+  >> Nested blockquote
+  ---
+  | Header 1 | Header 2 |
+  |----------|----------|
+  | Cell 1   | Cell 2   |
+  | Cell 3   | Cell 4   |
+
+  ![Sample Image](https://private-user-images.githubusercontent.com/552074/446176752-21950b56-cd28-4574-9a0a-73bb17b89d31.png)
+ </Markdown>
+</Window>
+```
+> **Note:** The `xml:space="preserve"` attribute in the XAML example is important. It ensures that whitespace and line breaks inside the Markdown text are preserved and not normalized by the XAML compiler. Always include this attribute when embedding Markdown directly in XAML.
+
+### XAML usage (with view model binding)
+
+```xml
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="using:MarkdownSample"
+        mc:Ignorable="d"
+        x:Class="MarkdownSample.MainWindow">
+    <Window.DataContext>
+        <local:MarkdownViewModel/>
+    </Window.DataContext>
+    <Markdown Text="{Binding MarkdownText}" />
+</Window>
+```
+
+### View model example (load from file)
+
+```csharp
+namespace MarkdownSample;
+
+public class MarkdownViewModel
+{
+    public string MarkdownText { get; }
+
+    public MarkdownViewModel()
+    {
+        MarkdownText = File.ReadAllText("Example.md");
+    }
+}
+```
+
+### C# usage
+
+```csharp
+var markdown = new Markdown
+{
+    Text = "# Hello, Markdown!"
+};
+```
+
+### Streaming usage
+
+The `Markdown` control supports incremental text appending, which is useful for rendering content from an LLM or other streaming source:
+
+```csharp
+// Simple convenience method with automatic session management
+markdown.AppendText("# Streaming\n\nContent arrives ");
+markdown.AppendText("incrementally...");
+
+// Full control via a streaming session
+using var session = markdown.BeginStreaming();
+session.Append("# Response\n\n");
+session.Append("Paragraph text...");
+await session.CompleteAsync();
+```
+
+The streaming engine runs Markdown parsing on a background thread, diffs the AST against the previous version, and applies only the changed blocks to the live document. Set `AutoScrollToEnd="True"` to keep the viewport pinned to the bottom during streaming.
+
+## API overview
+
+### Properties
+
+| Property           | Type                        | Description                                              |
+|--------------------|-----------------------------|----------------------------------------------------------|
+| Text               | string?                     | Markdown text to render.                                 |
+| SelectionBrush     | IBrush?                     | Brush for selection highlight.                           |
+| CaretBrush         | IBrush?                     | Brush for the caret cursor.                              |
+| SelectedText       | string                      | Read-only. Content of the current selection.             |
+| CanCopy            | bool                        | Read-only. Whether the Copy command can be executed.     |
+| AutoScrollToEnd    | bool                        | Keeps the viewport scrolled to the bottom during streaming. |
+
+### Methods
+
+| Method                            | Description                                                        |
+|-----------------------------------|--------------------------------------------------------------------|
+| Copy()                            | Copies the current selection to the clipboard.                     |
+| SelectAll()                       | Selects all content.                                               |
+| ClearSelection()                  | Clears the current selection.                                      |
+| ScrollToEnd()                     | Scrolls the viewport to the end of the document.                   |
+| BeginStreaming()                   | Starts a `MarkdownStreamingSession` for incremental appending.     |
+| AppendText(string, TimeSpan?)     | Convenience method that creates or reuses a streaming session.     |
+
+### Events
+
+| Event                | Description                                          |
+|----------------------|------------------------------------------------------|
+| CopyingToClipboard   | Raised before selection is copied to the clipboard. Can be handled to prevent the copy. |
+| SelectionChanged     | Raised when the text selection changes.              |
+
+## Customizing the Markdown pipeline
+
+The `Markdown` control uses [Markdig](https://github.com/xoofx/markdig) for parsing. By default the following extensions are enabled: auto-links, alert blocks, emoji, footnotes, grid tables, pipe tables, emphasis extras (strikethrough, superscript, subscript), task lists, and a built-in symbol extension.
+
+To add or remove Markdig extensions, subclass `Markdown` and override `ConfigurePipeline`. The builder already has the default extensions applied, so your override is cumulative:
+
+```csharp
+public class CustomMarkdown : Markdown
+{
+    protected override void ConfigurePipeline(MarkdownPipelineBuilder builder)
+    {
+        // Add the Markdig mathematics extension (LaTeX-style math blocks)
+        builder.UseMathematics();
+    }
+}
+```
+
+The pipeline is built once and cached for the lifetime of the control instance. It is used for both static rendering and streaming sessions.
+
+### Removing a default extension
+
+Markdig does not provide a built-in `Remove` helper, but you can remove an extension by type before the pipeline is built:
+
+```csharp
+public class NoEmojiMarkdown : Markdown
+{
+    protected override void ConfigurePipeline(MarkdownPipelineBuilder builder)
+    {
+        // Remove the emoji extension that was added by the default configuration
+        var emoji = builder.Extensions.OfType<Markdig.Extensions.Emoji.EmojiExtension>().FirstOrDefault();
+        if (emoji != null)
+            builder.Extensions.Remove(emoji);
+    }
+}
+```
+
+### Using the subclass in XAML
+
+Register a namespace for your subclass and use it in place of `Markdown`:
+
+```xml
+<Window xmlns:local="using:MyApp">
+    <local:CustomMarkdown Text="{Binding MarkdownText}" />
+</Window>
+```
+
+## Custom image loader
+
+Image loading is handled by the `MarkdownImage` document element, not the `Markdown` control itself. You assign a loader via a style that targets `MarkdownImage`:
+
+```xml
+<Style Selector="MarkdownImage">
+    <Setter Property="ImageLoader" Value="{StaticResource MyCustomLoader}" />
+</Style>
+```
+
+See the [Image Loader](/controls/data-display/text-display/markdown/imageloader) page for a detailed example of how to implement a custom `MarkdownImageLoader`.
+
+## Code highlighter
+
+Syntax highlighting is handled by the `MarkdownCodeBlock` document element. You assign a highlighter via a style:
+
+```xml
+<Style Selector="MarkdownCodeBlock">
+    <Setter Property="Highlighter" Value="{StaticResource TextMateHighlighter}" />
+</Style>
+```
+
+See the [Code Highlighter](/controls/data-display/text-display/markdown/codehighlighter) page for installation packages and usage examples.
+
+## Styling
+
+Because the `Markdown` control is built on the shared document model, all rendered elements (`Paragraph`, `Section`, `Table`, `RichSpan`, `RichHyperlink`, etc.) are full Avalonia `StyledElement` instances with CSS-like classes. You can style them with standard Avalonia style selectors:
+
+```xml
+<!-- Make all H1 headings red -->
+<Style Selector="Paragraph.h1">
+    <Setter Property="Foreground" Value="Red" />
+</Style>
+
+<!-- Custom quote block background -->
+<Style Selector="Section.quoteBlock">
+    <Setter Property="Background" Value="#f0f0f0" />
+</Style>
+```
+
+Named resources are also available for common values such as font sizes, margins, and theme-variant colors.
+
+See the [Markdown styling](/controls/data-display/text-display/markdown/markdown-styling) page for the full list of style selectors and resources.
+
+## Installation
+
+See the [Installation Guide](/tools/installing-avalonia-pro) for step-by-step instructions on how to install Avalonia Pro components.
+
+Add the Markdown package to your project:
+
+```bash
+dotnet add package Avalonia.Controls.Markdown
+```
+
+Add the resources by referencing the shipped `Default.axaml` theme via a `StyleInclude` in `App.axaml`:
+
+```xml
+<Application.Styles>
+   <StyleInclude Source="avares://Avalonia.Controls.Markdown/Themes/Default.axaml" />
+   <!-- other styles -->
+</Application.Styles>
+```
+
+## See also
+
+- [Markdown styling](/controls/data-display/text-display/markdown/markdown-styling)
+- [Image loader](/controls/data-display/text-display/markdown/imageloader)
+- [Code highlighter](/controls/data-display/text-display/markdown/codehighlighter)

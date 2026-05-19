@@ -26,7 +26,7 @@ Alluvial charts represent changes in structure over time or across categories. T
 
 ### XAML
 ```xml
-<charts:AlluvialChart Name="AlluvialChartSample" Title="Category Flow" Height="350"
+<AlluvialChart xmlns="https://github.com/avaloniaui" Name="AlluvialChartSample" Title="Category Flow" Height="350"
                         Nodes="{Binding AlluvialNodes}"
                         Links="{Binding AlluvialLinks}" />
 ```

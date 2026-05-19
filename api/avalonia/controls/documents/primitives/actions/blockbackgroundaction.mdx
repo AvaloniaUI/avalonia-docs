@@ -1,0 +1,163 @@
+---
+title: 'BlockBackgroundAction'
+hide_title: true
+slug: '/avalonia/controls/documents/primitives/actions/blockbackgroundaction'
+uid: 'Avalonia.Controls.Documents.Primitives.Actions.BlockBackgroundAction'
+commentId: 'T:Avalonia.Controls.Documents.Primitives.Actions.BlockBackgroundAction'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.RichTextEditor'
+assembly: 'Avalonia.Controls.RichTextEditor'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.Primitives.Actions'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">BlockBackgroundAction Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.Primitives.Actions</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.RichTextEditor</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.RichTextEditor</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Action for setting background color on block elements (Paragraph, Section, etc.).
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class BlockBackgroundAction
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> BlockPropertyAction&lt;IBrush&gt; <span className="apiref-page__relation-separator">-&gt;</span> BlockBackgroundAction
+</div>
+</div>
+
+## Remarks
+
+Block background is different from inline text background (RichRun.Background).
+It fills the entire block area including padding, making it useful for:
+
+- Highlighting important paragraphs
+- Creating visual separation between sections
+- Building callout boxes and notes
+- Color-coding content
+
+This action is designed to work with [Avalonia.Controls.Documents.Primitives.Toolbar.ColorPickerTool](xref:Avalonia.Controls.Documents.Primitives.Toolbar.ColorPickerTool).
+It returns null for available values, indicating the UI should use a color picker
+instead of a dropdown with predefined values.
+
+When applied to a selection spanning multiple paragraphs, all affected paragraphs
+will have their background set to the specified color.
+
+Tip: Combine with [Avalonia.Controls.Documents.Primitives.Actions.PaddingAction](xref:Avalonia.Controls.Documents.Primitives.Actions.PaddingAction) and [Avalonia.Controls.Documents.Primitives.Actions.BorderBrushAction](xref:Avalonia.Controls.Documents.Primitives.Actions.BorderBrushAction)
+to create visually distinct content blocks.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [BlockBackgroundAction](#uid-1cc4940dfe) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1cc4940dfe"></span>
+
+### BlockBackgroundAction Constructor
+
+```csharp
+public BlockBackgroundAction()
+```
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [GetAvailableValues](#uid-f06f3a4461) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f06f3a4461"></span>
+
+### GetAvailableValues Method
+
+```csharp
+public System.Collections.Generic.IEnumerable<Avalonia.Media.IBrush> GetAvailableValues()
+```
+
+#### Returns
+
+System.Collections.Generic.IEnumerable&lt;[Avalonia.Media.IBrush](xref:Avalonia.Media.IBrush)&gt;
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [DisplayName](#uid-4ddda2fde7) | No summary available. |
+| [Gesture](#uid-46f4a33edf) | No summary available. |
+| [Id](#uid-8cf1b6ce8b) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4ddda2fde7"></span>
+
+### DisplayName Property
+
+```csharp
+public string DisplayName { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-46f4a33edf"></span>
+
+### Gesture Property
+
+```csharp
+public Avalonia.Input.KeyGesture Gesture { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8cf1b6ce8b"></span>
+
+### Id Property
+
+```csharp
+public string Id { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

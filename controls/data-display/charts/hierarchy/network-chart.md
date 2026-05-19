@@ -26,7 +26,7 @@ Network charts provide a high-level view of nodes and edges. They are simpler an
 
 ### XAML
 ```xml
-<charts:NetworkChart Name="NetworkChartSample" Title="Social Network" Height="350"
+<NetworkChart xmlns="https://github.com/avaloniaui" Name="NetworkChartSample" Title="Social Network" Height="350"
                        Nodes="{Binding NetworkNodes}"
                        Edges="{Binding NetworkEdges}" />
 ```

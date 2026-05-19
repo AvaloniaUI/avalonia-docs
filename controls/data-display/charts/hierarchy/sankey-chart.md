@@ -26,7 +26,7 @@ Sankey charts visualize the flow of data, energy, or materials between stages. T
 
 ### XAML
 ```xml
-<charts:SankeyChart Name="SankeySample" Title="Energy Flow" Height="350"
+<SankeyChart xmlns="https://github.com/avaloniaui" Name="SankeySample" Title="Energy Flow" Height="350"
                       ItemsSource="{Binding SankeyData}"
                       SourcePath="Source"
                       TargetPath="Target"

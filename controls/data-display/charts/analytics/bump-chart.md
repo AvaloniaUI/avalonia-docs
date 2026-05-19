@@ -26,7 +26,7 @@ Bump charts are a variation of line charts designed to visualize changes in rank
 
 ### XAML
 ```xml
-<charts:BumpChart Name="BumpChartSample"
+<BumpChart xmlns="https://github.com/avaloniaui" Name="BumpChartSample"
                                         Title="Ranking Changes"
                                         Height="300"
                                         NamePath="Name"

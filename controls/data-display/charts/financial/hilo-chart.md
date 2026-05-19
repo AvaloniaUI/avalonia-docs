@@ -26,20 +26,20 @@ Hilo charts show the High and Low prices for a given period. By omitting the ope
 
 ### XAML
 ```xml
-<charts:CartesianChart Name="HiloChartSample" Title="Price Range" Height="300">
-    <charts:CartesianChart.HorizontalAxis>
-        <charts:DateTimeAxis LabelFormat="MM/dd" Title="Date" />
-    </charts:CartesianChart.HorizontalAxis>
-    <charts:CartesianChart.VerticalAxis>
-        <charts:NumericalAxis LabelFormat="N0" Title="Price" />
-    </charts:CartesianChart.VerticalAxis>
-    <charts:CartesianChart.Series>
-        <charts:HiloSeries ItemsSource="{Binding HiloData}"
+<CartesianChart xmlns="https://github.com/avaloniaui" Name="HiloChartSample" Title="Price Range" Height="300">
+    <CartesianChart.HorizontalAxis>
+        <DateTimeAxis LabelFormat="MM/dd" Title="Date" />
+    </CartesianChart.HorizontalAxis>
+    <CartesianChart.VerticalAxis>
+        <NumericalAxis LabelFormat="N0" Title="Price" />
+    </CartesianChart.VerticalAxis>
+    <CartesianChart.Series>
+        <HiloSeries ItemsSource="{Binding HiloData}"
                              HighPath="High" LowPath="Low"
                              CategoryPath="Date"
                              Stroke="#2196F3" StrokeThickness="3" />
-    </charts:CartesianChart.Series>
-</charts:CartesianChart>
+    </CartesianChart.Series>
+</CartesianChart>
 ```
 
 ### Data model (C#)

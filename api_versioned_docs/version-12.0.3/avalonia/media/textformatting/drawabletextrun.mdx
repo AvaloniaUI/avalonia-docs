@@ -1,0 +1,137 @@
+---
+title: 'DrawableTextRun'
+hide_title: true
+slug: '/avalonia/media/textformatting/drawabletextrun'
+uid: 'Avalonia.Media.TextFormatting.DrawableTextRun'
+commentId: 'T:Avalonia.Media.TextFormatting.DrawableTextRun'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Media.TextFormatting'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">DrawableTextRun Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Media.TextFormatting</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A text run that supports drawing content.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class DrawableTextRun
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="textrun">TextRun</a> <span className="apiref-page__relation-separator">-&gt;</span> DrawableTextRun
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Derived types:</span> <a href="shapedtextrun">ShapedTextRun</a>
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Draw](#uid-c853b04f35) | Draws the [Avalonia.Media.TextFormatting.DrawableTextRun](xref:Avalonia.Media.TextFormatting.DrawableTextRun) at the given origin. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c853b04f35"></span>
+
+### Draw Method
+
+Draws the [Avalonia.Media.TextFormatting.DrawableTextRun](xref:Avalonia.Media.TextFormatting.DrawableTextRun) at the given origin.
+
+```csharp
+public void Draw(Avalonia.Media.DrawingContext drawingContext, Avalonia.Point origin)
+```
+
+#### Parameters
+
+`drawingContext` [Avalonia.Media.DrawingContext](xref:Avalonia.Media.DrawingContext)
+
+The drawing context.
+
+
+`origin` [Avalonia.Point](xref:Avalonia.Point)
+
+The origin.
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Baseline](#uid-80eddb0afa) | Run baseline in ratio relative to run height |
+| [Size](#uid-913842b854) | Gets the size. |
+| [Length](textrun.mdx#uid-d32ddedc42) | Gets the text source length. Inherited from [TextRun](textrun.mdx). |
+| [Properties](textrun.mdx#uid-f4da24c6cf) | A set of properties shared by every characters in the run Inherited from [TextRun](textrun.mdx). |
+| [Text](textrun.mdx#uid-d2d945f661) | Gets the text run's text. Inherited from [TextRun](textrun.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-80eddb0afa"></span>
+
+### Baseline Property
+
+Run baseline in ratio relative to run height
+
+```csharp
+public double Baseline { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-913842b854"></span>
+
+### Size Property
+
+Gets the size.
+
+```csharp
+public Avalonia.Size Size { get; set; }
+```
+
+</section>
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [DefaultTextSourceLength](textrun.mdx#uid-f86dc003de) | Inherited from [TextRun](textrun.mdx). |
+
+</ApiRefPage>
+

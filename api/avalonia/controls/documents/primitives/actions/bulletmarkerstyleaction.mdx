@@ -1,0 +1,336 @@
+---
+title: 'BulletMarkerStyleAction'
+hide_title: true
+slug: '/avalonia/controls/documents/primitives/actions/bulletmarkerstyleaction'
+uid: 'Avalonia.Controls.Documents.Primitives.Actions.BulletMarkerStyleAction'
+commentId: 'T:Avalonia.Controls.Documents.Primitives.Actions.BulletMarkerStyleAction'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.RichTextEditor'
+assembly: 'Avalonia.Controls.RichTextEditor'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.Primitives.Actions'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">BulletMarkerStyleAction Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.Primitives.Actions</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.RichTextEditor</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.RichTextEditor</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Action for changing the [Avalonia.Controls.Documents.Primitives.DocumentNodes.TextMarkerStyle](xref:Avalonia.Controls.Documents.Primitives.DocumentNodes.TextMarkerStyle) of bullet (unordered) lists.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class BulletMarkerStyleAction
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="editoraction">EditorAction</a> <span className="apiref-page__relation-separator">-&gt;</span> BulletMarkerStyleAction
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="iblockpropertyaction">IBlockPropertyAction</a>, IBlockPropertyAction&lt;TextMarkerStyle&gt;, <a href="ieditoraction">IEditorAction</a>, <a href="ipropertyaction">IPropertyAction</a>
+</div>
+</div>
+
+## Remarks
+
+[Avalonia.Controls.Documents.Primitives.Actions.BulletMarkerStyleAction.CanExecute(Avalonia.Controls.Documents.Primitives.ITextEditorHost)](xref:Avalonia.Controls.Documents.Primitives.Actions.BulletMarkerStyleAction.CanExecute%28Avalonia.Controls.Documents.Primitives.ITextEditorHost%29) returns true only when the caret is inside a bullet
+[Avalonia.Controls.Documents.List](xref:Avalonia.Controls.Documents.List) (Disc, Circle, Square, Box, or None).
+[Avalonia.Controls.Documents.Primitives.Actions.BulletMarkerStyleAction.GetAvailableValues](xref:Avalonia.Controls.Documents.Primitives.Actions.BulletMarkerStyleAction.GetAvailableValues) returns only the bullet marker styles.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [BulletMarkerStyleAction](#uid-cd8ac2fe6e) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-cd8ac2fe6e"></span>
+
+### BulletMarkerStyleAction Constructor
+
+```csharp
+public BulletMarkerStyleAction()
+```
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [CanExecute](#uid-25e18877b9) | Gets whether the action can currently execute. |
+| [Execute](#uid-f6c058eaaf) | Executes the action synchronously. |
+| [GetAvailableValues](#uid-4b619dbff9) | Returns bullet [Avalonia.Controls.Documents.Primitives.DocumentNodes.TextMarkerStyle](xref:Avalonia.Controls.Documents.Primitives.DocumentNodes.TextMarkerStyle) values. |
+| [GetState](#uid-fda447b072) | Gets the current state of the action. |
+| [GetValue](#uid-4e5bc56f9b) | Gets the current marker style of the first bullet list containing the caret/selection. |
+| [HasConsistentValue](#uid-7abac97d0d) | Gets whether all affected blocks have the same value for this property. |
+| [SetValue](#uid-bb30eac2d0) | Sets the marker style on all bullet lists covering the selection. |
+| [ExecuteAsync](editoraction.mdx#uid-6a0258eff0) | Executes the action asynchronously. Inherited from [EditorAction](editoraction.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-25e18877b9"></span>
+
+### CanExecute Method
+
+Gets whether the action can currently execute.
+
+```csharp
+public bool CanExecute(Avalonia.Controls.Documents.Primitives.ITextEditorHost host)
+```
+
+#### Parameters
+
+`host` [Avalonia.Controls.Documents.Primitives.ITextEditorHost](xref:Avalonia.Controls.Documents.Primitives.ITextEditorHost)
+
+The editor host to check against.
+
+
+#### Returns
+
+bool
+
+True if the action can execute; otherwise, false.
+
+
+#### Remarks
+
+This is called frequently to update UI state (button enabled/disabled).
+Implementations should be fast and avoid heavy computation.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f6c058eaaf"></span>
+
+### Execute Method
+
+Executes the action synchronously.
+
+```csharp
+public void Execute(Avalonia.Controls.Documents.Primitives.ITextEditorHost host)
+```
+
+#### Parameters
+
+`host` [Avalonia.Controls.Documents.Primitives.ITextEditorHost](xref:Avalonia.Controls.Documents.Primitives.ITextEditorHost)
+
+The editor host to execute on.
+
+
+#### Remarks
+
+For actions that require async operations (like file dialogs),
+use [Avalonia.Controls.Documents.Primitives.Actions.IEditorAction.ExecuteAsync(Avalonia.Controls.Documents.Primitives.ITextEditorHost)](xref:Avalonia.Controls.Documents.Primitives.Actions.IEditorAction.ExecuteAsync%28Avalonia.Controls.Documents.Primitives.ITextEditorHost%29) instead.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4b619dbff9"></span>
+
+### GetAvailableValues Method
+
+Returns bullet [Avalonia.Controls.Documents.Primitives.DocumentNodes.TextMarkerStyle](xref:Avalonia.Controls.Documents.Primitives.DocumentNodes.TextMarkerStyle) values.
+
+```csharp
+public System.Collections.Generic.IEnumerable<Avalonia.Controls.Documents.Primitives.DocumentNodes.TextMarkerStyle> GetAvailableValues()
+```
+
+#### Returns
+
+System.Collections.Generic.IEnumerable&lt;Avalonia.Controls.Documents.Primitives.DocumentNodes.TextMarkerStyle&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-fda447b072"></span>
+
+### GetState Method
+
+Gets the current state of the action.
+
+```csharp
+public object GetState(Avalonia.Controls.Documents.Primitives.ITextEditorHost host)
+```
+
+#### Parameters
+
+`host` [Avalonia.Controls.Documents.Primitives.ITextEditorHost](xref:Avalonia.Controls.Documents.Primitives.ITextEditorHost)
+
+The editor host to query.
+
+
+#### Returns
+
+object
+
+The current state, or null if the action has no state.
+For toggle actions, this returns a boolean.
+For property actions, this returns the current property value.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4e5bc56f9b"></span>
+
+### GetValue Method
+
+Gets the current marker style of the first bullet list containing the caret/selection.
+
+```csharp
+public Avalonia.Controls.Documents.Primitives.DocumentNodes.TextMarkerStyle GetValue(Avalonia.Controls.Documents.Primitives.ITextEditorHost host)
+```
+
+#### Parameters
+
+`host` [Avalonia.Controls.Documents.Primitives.ITextEditorHost](xref:Avalonia.Controls.Documents.Primitives.ITextEditorHost)
+
+
+#### Returns
+
+Avalonia.Controls.Documents.Primitives.DocumentNodes.TextMarkerStyle
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7abac97d0d"></span>
+
+### HasConsistentValue Method
+
+Gets whether all affected blocks have the same value for this property.
+
+```csharp
+public bool HasConsistentValue(Avalonia.Controls.Documents.Primitives.ITextEditorHost host)
+```
+
+#### Parameters
+
+`host` [Avalonia.Controls.Documents.Primitives.ITextEditorHost](xref:Avalonia.Controls.Documents.Primitives.ITextEditorHost)
+
+The editor host.
+
+
+#### Returns
+
+bool
+
+True if all affected blocks have the same property value.
+False if blocks have different values (mixed state).
+
+
+#### Remarks
+
+UI controls should show a mixed/indeterminate state when this returns false.
+For example, a [ComboBox](xref:Avalonia.Controls.ComboBox) might show "Mixed" placeholder text.
+
+For collapsed selections, this always returns true (single block).
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-bb30eac2d0"></span>
+
+### SetValue Method
+
+Sets the marker style on all bullet lists covering the selection.
+
+```csharp
+public void SetValue(Avalonia.Controls.Documents.Primitives.ITextEditorHost host, Avalonia.Controls.Documents.Primitives.DocumentNodes.TextMarkerStyle value)
+```
+
+#### Parameters
+
+`host` [Avalonia.Controls.Documents.Primitives.ITextEditorHost](xref:Avalonia.Controls.Documents.Primitives.ITextEditorHost)
+
+
+`value` Avalonia.Controls.Documents.Primitives.DocumentNodes.TextMarkerStyle
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [DisplayName](#uid-7d66aad706) | Gets the display name for UI purposes. |
+| [Id](#uid-c623b25271) | Gets the unique identifier for this action. |
+| [Gesture](editoraction.mdx#uid-557e9af400) | Gets the optional keyboard gesture for this action. Inherited from [EditorAction](editoraction.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7d66aad706"></span>
+
+### DisplayName Property
+
+Gets the display name for UI purposes.
+
+```csharp
+public string DisplayName { get; set; }
+```
+
+#### Remarks
+
+This is used for tooltips, menu items, and accessibility.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c623b25271"></span>
+
+### Id Property
+
+Gets the unique identifier for this action.
+
+```csharp
+public string Id { get; set; }
+```
+
+#### Remarks
+
+IDs follow a hierarchical naming convention:
+
+- Edit.Undo, Edit.Redo, Edit.Cut, etc.
+- Format.RichBold, Format.RichItalic, etc.
+- Paragraph.AlignLeft, Paragraph.BulletList, etc.
+
+</section>
+
+</ApiRefPage>
+

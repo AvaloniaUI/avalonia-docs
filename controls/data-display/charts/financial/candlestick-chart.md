@@ -26,14 +26,14 @@ Candlestick charts are used to describe price movements of a security, derivativ
 
 ### XAML
 ```xml
-<charts:FinancialChart Name="CandlestickChartSample" Title="Stock Price (ACME)" Height="300">
-    <charts:FinancialChart.Series>
-        <charts:CandlestickSeries ItemsSource="{Binding CandlestickData}"
+<FinancialChart xmlns="https://github.com/avaloniaui" Name="CandlestickChartSample" Title="Stock Price (ACME)" Height="300">
+    <FinancialChart.Series>
+        <CandlestickSeries ItemsSource="{Binding CandlestickData}"
                                     HighPath="High" LowPath="Low"
                                     OpenPath="Open" ClosePath="Close"
                                     DatePath="Date" />
-    </charts:FinancialChart.Series>
-</charts:FinancialChart>
+    </FinancialChart.Series>
+</FinancialChart>
 ```
 
 ### Data model (C#)

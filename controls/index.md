@@ -73,7 +73,7 @@ Avalonia apps are made of high-level building blocks called controls, which allo
   <p>Render and display Markdown-formatted text content directly in your app.</p>
 </DocsCard>
 
-<DocsCard header="Media Player" href="/controls/media/mediaplayercontrol" icon="/icons/mediaplayer-icon@2x.png">
+<DocsCard header="Media Player" href="/controls/media/mediaplayer" icon="/icons/mediaplayer-icon@2x.png">
   <p>A full-featured media player control for playing audio and video content.</p>
 </DocsCard>
 

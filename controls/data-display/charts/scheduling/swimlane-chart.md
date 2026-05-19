@@ -28,7 +28,7 @@ Swimlane charts organize tasks or processes into distinct horizontal or vertical
 ### XAML
 
 ```xml
-<charts:SwimlaneChart Name="SwimlaneSample"
+<SwimlaneChart xmlns="https://github.com/avaloniaui" Name="SwimlaneSample"
                                             Title="Process Flow"
                                             Height="350"
                                             ItemsSource="{Binding SwimlaneTasks}"

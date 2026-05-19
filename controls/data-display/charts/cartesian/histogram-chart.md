@@ -26,13 +26,13 @@ Histograms group continuous data into "bins" and show the frequency of data poin
 
 ### XAML
 ```xml
-<charts:CartesianChart Name="HistogramSample" Title="Score Distribution" Height="250">
-                        <charts:CartesianChart.HorizontalAxis><charts:CategoryAxis /></charts:CartesianChart.HorizontalAxis>
-                        <charts:CartesianChart.VerticalAxis><charts:NumericalAxis /></charts:CartesianChart.VerticalAxis>
-                        <charts:CartesianChart.Series>
-                            <charts:HistogramSeries ItemsSource="{Binding HistogramData}" ValuePath="Score" BinCount="10" />
-                        </charts:CartesianChart.Series>
-                    </charts:CartesianChart>
+<CartesianChart xmlns="https://github.com/avaloniaui" Name="HistogramSample" Title="Score Distribution" Height="250">
+                        <CartesianChart.HorizontalAxis><CategoryAxis /></CartesianChart.HorizontalAxis>
+                        <CartesianChart.VerticalAxis><NumericalAxis /></CartesianChart.VerticalAxis>
+                        <CartesianChart.Series>
+                            <HistogramSeries ItemsSource="{Binding HistogramData}" ValuePath="Score" BinCount="10" />
+                        </CartesianChart.Series>
+                    </CartesianChart>
 ```
 
 ### Data model (C#)

@@ -26,7 +26,7 @@ Mindmaps are divergent diagrams used for brainstorming and project planning, rad
 
 ### XAML
 ```xml
-<charts:FlowChart Name="MindmapSample"
+<FlowChart xmlns="https://github.com/avaloniaui" Name="MindmapSample"
                   Title="Project Alpha Brainstorm"
                   Height="600"
                   Nodes="{Binding MindmapNodes}"

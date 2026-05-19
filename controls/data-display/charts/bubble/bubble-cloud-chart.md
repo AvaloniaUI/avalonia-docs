@@ -24,7 +24,7 @@ Bubble cloud charts place bubbles in a clustered, non-axis layout where size car
 ### XAML
 
 ```xml
-<charts:BubbleCloud Title="Topic volume"
+<BubbleCloud xmlns="https://github.com/avaloniaui" Title="Topic volume"
                       Height="320"
                       ItemsSource="{Binding Topics}"
                       LabelPath="Name"

@@ -26,7 +26,7 @@ Funnel charts visualize the progressive reduction of data as it passes from one 
 
 ### XAML
 ```xml
-<charts:FunnelChart Title="Sales Pipeline" Height="300"
+<FunnelChart xmlns="https://github.com/avaloniaui" Title="Sales Pipeline" Height="300"
                       ItemsSource="{Binding FunnelData}"
                       LabelPath="Stage" ValuePath="Value"/>
 ```

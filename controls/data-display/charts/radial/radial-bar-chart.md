@@ -26,7 +26,7 @@ Radial bar charts use a polar coordinate system. They are essentially bar charts
 
 ### XAML
 ```xml
-<charts:RadialBarChart Name="RadialBarChartSample" Title="Performance Metrics" Height="350"
+<RadialBarChart xmlns="https://github.com/avaloniaui" Name="RadialBarChartSample" Title="Performance Metrics" Height="350"
                                              ItemsSource="{Binding RadialBarData}"
                                              CategoryPath="Label" ValuePath="Value" />
 ```

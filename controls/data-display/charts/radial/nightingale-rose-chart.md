@@ -26,7 +26,7 @@ The Nightingale rose chart is a polar area chart with equal angles and variable 
 
 ### XAML
 ```xml
-<charts:NightingaleRoseChart Name="NightingaleRoseSample"
+<NightingaleRoseChart xmlns="https://github.com/avaloniaui" Name="NightingaleRoseSample"
                                Title="Monthly Sales"
                                Height="350"
                                ShowLabels="True"

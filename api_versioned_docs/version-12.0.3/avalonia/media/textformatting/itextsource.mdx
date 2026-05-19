@@ -1,0 +1,86 @@
+---
+title: 'ITextSource'
+hide_title: true
+slug: '/avalonia/media/textformatting/itextsource'
+uid: 'Avalonia.Media.TextFormatting.ITextSource'
+commentId: 'T:Avalonia.Media.TextFormatting.ITextSource'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Media.TextFormatting'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ITextSource Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Media.TextFormatting</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Produces [Avalonia.Media.TextFormatting.TextRun](xref:Avalonia.Media.TextFormatting.TextRun) objects that are used by the [Avalonia.Media.TextFormatting.TextFormatter](xref:Avalonia.Media.TextFormatting.TextFormatter).
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface ITextSource
+```
+
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [GetTextRun](#uid-c72ad8f2b9) | Gets a [Avalonia.Media.TextFormatting.TextRun](xref:Avalonia.Media.TextFormatting.TextRun) for specified text source index. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c72ad8f2b9"></span>
+
+### GetTextRun Method
+
+Gets a [Avalonia.Media.TextFormatting.TextRun](xref:Avalonia.Media.TextFormatting.TextRun) for specified text source index.
+
+```csharp
+public Avalonia.Media.TextFormatting.TextRun GetTextRun(int textSourceIndex)
+```
+
+#### Parameters
+
+`textSourceIndex` int
+
+The text source index.
+
+
+#### Returns
+
+[Avalonia.Media.TextFormatting.TextRun](xref:Avalonia.Media.TextFormatting.TextRun)
+
+The text run.
+
+
+</section>
+
+</ApiRefPage>
+

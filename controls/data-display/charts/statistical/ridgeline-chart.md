@@ -24,12 +24,12 @@ Ridgeline charts stack multiple area distributions with vertical overlap so you 
 ### XAML
 
 ```xml
-<charts:RidgelineChart Title="Distribution over time" Height="360">
-    <charts:RidgelineChart.Series>
-        <charts:AreaSeries Title="2023" ItemsSource="{Binding Series2023}" CategoryPath="X" ValuePath="Y" />
-        <charts:AreaSeries Title="2024" ItemsSource="{Binding Series2024}" CategoryPath="X" ValuePath="Y" />
-    </charts:RidgelineChart.Series>
-</charts:RidgelineChart>
+<RidgelineChart xmlns="https://github.com/avaloniaui" Title="Distribution over time" Height="360">
+    <RidgelineChart.Series>
+        <AreaSeries Title="2023" ItemsSource="{Binding Series2023}" CategoryPath="X" ValuePath="Y" />
+        <AreaSeries Title="2024" ItemsSource="{Binding Series2024}" CategoryPath="X" ValuePath="Y" />
+    </RidgelineChart.Series>
+</RidgelineChart>
 ```
 
 ### Data model (C#)

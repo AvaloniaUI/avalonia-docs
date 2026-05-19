@@ -26,7 +26,7 @@ The Legend component helps users identify different data series within a chart. 
 
 ### XAML
 ```xml
-<charts:CartesianChart Name="RightLegendSample"
+<CartesianChart xmlns="https://github.com/avaloniaui" Name="RightLegendSample"
                         IsTooltipEnabled="True"
                         Title="Right Aligned"
                         Height="250"
@@ -34,19 +34,19 @@ The Legend component helps users identify different data series within a chart. 
                         LegendPosition="Right"
                         LegendAlignment="Center"
                         ToggleSeriesVisibility="True">
-    <charts:CartesianChart.HorizontalAxis>
-        <charts:CategoryAxis />
-    </charts:CartesianChart.HorizontalAxis>
-    <charts:CartesianChart.VerticalAxis>
-        <charts:NumericalAxis />
-    </charts:CartesianChart.VerticalAxis>
-    <charts:CartesianChart.Series>
-        <charts:AreaSeries Title="Revenue"
+    <CartesianChart.HorizontalAxis>
+        <CategoryAxis />
+    </CartesianChart.HorizontalAxis>
+    <CartesianChart.VerticalAxis>
+        <NumericalAxis />
+    </CartesianChart.VerticalAxis>
+    <CartesianChart.Series>
+        <AreaSeries Title="Revenue"
                            ItemsSource="{Binding Data1}" />
-        <charts:AreaSeries Title="Profit"
+        <AreaSeries Title="Profit"
                            ItemsSource="{Binding Data3}" />
-    </charts:CartesianChart.Series>
-</charts:CartesianChart>
+    </CartesianChart.Series>
+</CartesianChart>
 ```
 
 ### Data model (C#)

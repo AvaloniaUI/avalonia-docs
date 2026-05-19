@@ -26,21 +26,21 @@ A box plot (or box-and-whisker plot) provides a graphical summary of the distrib
 
 ### XAML
 ```xml
-<charts:CartesianChart Name="BoxPlotSample" Title="Box Plot (Box and Whisker)" Height="250">
-    <charts:CartesianChart.HorizontalAxis>
-        <charts:CategoryAxis />
-    </charts:CartesianChart.HorizontalAxis>
-    <charts:CartesianChart.VerticalAxis>
-        <charts:NumericalAxis />
-    </charts:CartesianChart.VerticalAxis>
-    <charts:CartesianChart.Series>
-        <charts:BoxPlotSeries Title="Distribution"
+<CartesianChart xmlns="https://github.com/avaloniaui" Name="BoxPlotSample" Title="Box Plot (Box and Whisker)" Height="250">
+    <CartesianChart.HorizontalAxis>
+        <CategoryAxis />
+    </CartesianChart.HorizontalAxis>
+    <CartesianChart.VerticalAxis>
+        <NumericalAxis />
+    </CartesianChart.VerticalAxis>
+    <CartesianChart.Series>
+        <BoxPlotSeries Title="Distribution"
                                 ItemsSource="{Binding BoxPlotData}"
                                 CategoryPath="Category"
                                 MinPath="Min" Q1Path="Q1" MedianPath="Median" Q3Path="Q3" MaxPath="Max"
                                 Fill="#7E9C27B0" />
-    </charts:CartesianChart.Series>
-</charts:CartesianChart>
+    </CartesianChart.Series>
+</CartesianChart>
 ```
 
 ### Data model (C#)

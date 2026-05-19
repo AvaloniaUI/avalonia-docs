@@ -26,41 +26,41 @@ Theme river charts visualize changes in categories over time. In `Avalonia.Contr
 
 ### XAML
 ```xml
-<charts:CartesianChart Name="ThemeRiverSample" Title="Data Stream" Height="400"
+<CartesianChart xmlns="https://github.com/avaloniaui" Name="ThemeRiverSample" Title="Data Stream" Height="400"
                                            ShowLegend="True" LegendPosition="Bottom">
-                        <charts:CartesianChart.Series>
+                        <CartesianChart.Series>
                             <!-- Dummy Series (Transparent Spacer for Wiggle/Centering) -->
-                            <charts:StackedAreaSeries Title="" ItemsSource="{Binding ThemeRiverDummy}"
+                            <StackedAreaSeries Title="" ItemsSource="{Binding ThemeRiverDummy}"
                                                       CategoryPath="Category" ValuePath="Value"
                                                       StackGroup="River"
                                                       Fill="Transparent"
                                                       StrokeThickness="0" />
 
                             <!-- Visible Data Series -->
-                            <charts:StackedAreaSeries Title="Stream A" ItemsSource="{Binding ThemeRiverSeriesA}"
+                            <StackedAreaSeries Title="Stream A" ItemsSource="{Binding ThemeRiverSeriesA}"
                                                       CategoryPath="Category" ValuePath="Value"
                                                       StackGroup="River"
                                                       Fill="#FF6B6B" Stroke="#E05555" StrokeThickness="1" />
 
-                            <charts:StackedAreaSeries Title="Stream B" ItemsSource="{Binding ThemeRiverSeriesB}"
+                            <StackedAreaSeries Title="Stream B" ItemsSource="{Binding ThemeRiverSeriesB}"
                                                       CategoryPath="Category" ValuePath="Value"
                                                       StackGroup="River"
                                                       Fill="#4ECDC4" Stroke="#3EBDB4" StrokeThickness="1" />
 
-                            <charts:StackedAreaSeries Title="Stream C" ItemsSource="{Binding ThemeRiverSeriesC}"
+                            <StackedAreaSeries Title="Stream C" ItemsSource="{Binding ThemeRiverSeriesC}"
                                                       CategoryPath="Category" ValuePath="Value"
                                                       StackGroup="River"
                                                       Fill="#FFE66D" Stroke="#EED55D" StrokeThickness="1" />
-                        </charts:CartesianChart.Series>
+                        </CartesianChart.Series>
 
-                        <charts:CartesianChart.HorizontalAxis>
-                             <charts:CategoryAxis ShowGridLines="False" />
-                        </charts:CartesianChart.HorizontalAxis>
+                        <CartesianChart.HorizontalAxis>
+                             <CategoryAxis ShowGridLines="False" />
+                        </CartesianChart.HorizontalAxis>
 
-                        <charts:CartesianChart.VerticalAxis>
-                             <charts:NumericalAxis ShowGridLines="False" IsVisible="False" />
-                        </charts:CartesianChart.VerticalAxis>
-                    </charts:CartesianChart>
+                        <CartesianChart.VerticalAxis>
+                             <NumericalAxis ShowGridLines="False" IsVisible="False" />
+                        </CartesianChart.VerticalAxis>
+                    </CartesianChart>
 ```
 
 ### Data model (C#)

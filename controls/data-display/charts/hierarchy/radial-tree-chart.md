@@ -26,7 +26,7 @@ Radial tree charts represent hierarchical data where the root is at the center a
 
 ### XAML
 ```xml
-<charts:RadialTreeChart Name="RadialTreeChartSample" Title="Taxonomy" Height="400"
+<RadialTreeChart xmlns="https://github.com/avaloniaui" Name="RadialTreeChartSample" Title="Taxonomy" Height="400"
                           ItemsSource="{Binding RadialTreeData}"
                           LabelPath="Name"
                           ChildrenPath="Children" />

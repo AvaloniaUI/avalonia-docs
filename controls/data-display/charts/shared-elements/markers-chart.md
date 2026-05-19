@@ -30,31 +30,31 @@ For Cartesian line-family series such as `LineSeries`, `SplineSeries`, and `Step
 ### XAML
 
 ```xml
-<charts:CartesianChart Name="AllMarkersChart" Title="Marker Shape Comparison" Height="320" ShowLegend="True" LegendPosition="Bottom" HorizontalAlignment="Stretch">
-                        <charts:CartesianChart.Series>
-                            <charts:LineSeries Title="Circle" ItemsSource="{Binding CircleMarkerData}"
+<CartesianChart xmlns="https://github.com/avaloniaui" Name="AllMarkersChart" Title="Marker Shape Comparison" Height="320" ShowLegend="True" LegendPosition="Bottom" HorizontalAlignment="Stretch">
+                        <CartesianChart.Series>
+                            <LineSeries Title="Circle" ItemsSource="{Binding CircleMarkerData}"
                                                MarkerShape="Circle" MarkerSize="10"
                                                Stroke="DodgerBlue" MarkerFill="DodgerBlue" StrokeThickness="2"  ShowMarkers="True"/>
-                            <charts:LineSeries Title="Square" ItemsSource="{Binding SquareMarkerData}"
+                            <LineSeries Title="Square" ItemsSource="{Binding SquareMarkerData}"
                                                MarkerShape="Square" MarkerSize="10"
                                                Stroke="Green" MarkerFill="Green" StrokeThickness="2"  ShowMarkers="True"/>
-                            <charts:LineSeries Title="Diamond" ItemsSource="{Binding DiamondMarkerData}"
+                            <LineSeries Title="Diamond" ItemsSource="{Binding DiamondMarkerData}"
                                                MarkerShape="Diamond" MarkerSize="12"
                                                Stroke="Orange" MarkerFill="Orange" StrokeThickness="2"  ShowMarkers="True"/>
-                            <charts:LineSeries Title="Triangle" ItemsSource="{Binding TriangleMarkerData}"
+                            <LineSeries Title="Triangle" ItemsSource="{Binding TriangleMarkerData}"
                                                MarkerShape="Triangle" MarkerSize="10"
                                                Stroke="Purple" MarkerFill="Purple" StrokeThickness="2"  ShowMarkers="True"/>
-                            <charts:LineSeries Title="Pentagon" ItemsSource="{Binding PentagonMarkerData}"
+                            <LineSeries Title="Pentagon" ItemsSource="{Binding PentagonMarkerData}"
                                                MarkerShape="Pentagon" MarkerSize="10"
                                                Stroke="Crimson" MarkerFill="Crimson" StrokeThickness="2"  ShowMarkers="True"/>
-                        </charts:CartesianChart.Series>
-                        <charts:CartesianChart.HorizontalAxis>
-                            <charts:CategoryAxis />
-                        </charts:CartesianChart.HorizontalAxis>
-                        <charts:CartesianChart.VerticalAxis>
-                            <charts:NumericalAxis />
-                        </charts:CartesianChart.VerticalAxis>
-                    </charts:CartesianChart>
+                        </CartesianChart.Series>
+                        <CartesianChart.HorizontalAxis>
+                            <CategoryAxis />
+                        </CartesianChart.HorizontalAxis>
+                        <CartesianChart.VerticalAxis>
+                            <NumericalAxis />
+                        </CartesianChart.VerticalAxis>
+                    </CartesianChart>
 ```
 
 ### Data model (C#)

@@ -27,8 +27,8 @@ Waffle charts (square pie charts) visualize percentages or proportions using a g
 ### XAML
 ```xml
 <WrapPanel HorizontalAlignment="Center">
-    <charts:WaffleChart Title="Completion" Value="72" Width="150" Height="150" Rows="10" Columns="10" Margin="0,0,20,8" />
-    <charts:WaffleChart Title="Progress" Value="45" Width="150" Height="150" Rows="10" Columns="10" Margin="0,0,0,8" />
+    <WaffleChart xmlns="https://github.com/avaloniaui" Title="Completion" Value="72" Width="150" Height="150" Rows="10" Columns="10" Margin="0,0,20,8" />
+    <WaffleChart Title="Progress" Value="45" Width="150" Height="150" Rows="10" Columns="10" Margin="0,0,0,8" />
 </WrapPanel>
 ```
 

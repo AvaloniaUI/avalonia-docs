@@ -37,13 +37,12 @@ Replace the package name with the one you need. The following Avalonia Pro packa
 
 | Package | Description |
 |---------|-------------|
-| `Avalonia.Controls.MediaPlayer` | Audio and video playback control |
-| `Avalonia.Controls.WebView` | Native web content embedding |
-| `Avalonia.Controls.Markdown` | Markdown text rendering |
-| `Avalonia.Controls.MediaPlayer` | Audio and video playback |
-| `Avalonia.Controls.RichTextEditor` | Document editing and processing |
-| `Avalonia.Controls.TreeDataGrid` | Hierarchical and flat data grid |
-| `Avalonia.Controls.WebView` | Native web content embedding |
+| [`Avalonia.Controls.Charts`](/controls/data-display/charts/#getting-started) | Library of graphs, dashboards, analytics |
+| [`Avalonia.Controls.Markdown`](/controls/data-display/text-display/markdown/#getting-started) | Markdown text rendering |
+| [`Avalonia.Controls.MediaPlayer`](/controls/media/mediaplayer/#getting-started) | Audio and video playback control |
+| [`Avalonia.Controls.RichTextEditor`](/controls/input/text-input/richtexteditor/#getting-started) | Document editing and processing |
+| [`Avalonia.Controls.TreeDataGrid`](/controls/data-display/structured-data/treedatagrid/#getting-started) | Hierarchical and flat data grids |
+| [`Avalonia.Controls.VirtualKeyboard`](/controls/input/text-input/virtualkeyboard/#getting-started) | On-screen keyboard |
 
 ## Add your license key
 

@@ -26,19 +26,19 @@ Data labels place the actual values directly on the chart series. This lets read
 
 ### XAML
 ```xml
-<charts:CartesianChart Name="BasicLabelsChart" Height="250">
-                        <charts:CartesianChart.Series>
-                            <charts:BarSeries Title="Sales" ItemsSource="{Binding SalesData}"
+<CartesianChart xmlns="https://github.com/avaloniaui" Name="BasicLabelsChart" Height="250">
+                        <CartesianChart.Series>
+                            <BarSeries Title="Sales" ItemsSource="{Binding SalesData}"
                                                 CategoryPath="Category" ValuePath="Value"
                                                 ShowLabels="True" LabelOffset="5"/>
-                        </charts:CartesianChart.Series>
-                        <charts:CartesianChart.HorizontalAxis>
-                            <charts:CategoryAxis Title="Quarter" />
-                        </charts:CartesianChart.HorizontalAxis>
-                        <charts:CartesianChart.VerticalAxis>
-                            <charts:NumericalAxis Title="Revenue" />
-                        </charts:CartesianChart.VerticalAxis>
-                    </charts:CartesianChart>
+                        </CartesianChart.Series>
+                        <CartesianChart.HorizontalAxis>
+                            <CategoryAxis Title="Quarter" />
+                        </CartesianChart.HorizontalAxis>
+                        <CartesianChart.VerticalAxis>
+                            <NumericalAxis Title="Revenue" />
+                        </CartesianChart.VerticalAxis>
+                    </CartesianChart>
 ```
 
 ### Data model (C#)

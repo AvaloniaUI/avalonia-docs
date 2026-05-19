@@ -24,7 +24,7 @@ Venn diagram charts show how sets overlap, which regions are unique, and how muc
 ### XAML
 
 ```xml
-<charts:VennDiagramChart Title="Audience overlap"
+<VennDiagramChart xmlns="https://github.com/avaloniaui" Title="Audience overlap"
                                    Height="320"
                                    ItemsSource="{Binding VennItems}"
                                    IsSelectionEnabled="True" />

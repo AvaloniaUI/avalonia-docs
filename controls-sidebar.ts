@@ -261,11 +261,9 @@ const sidebars: SidebarsConfig = {
               {
                 type: 'category',
                 label: 'TreeDataGrid',
-                link: {
-                  type: 'doc',
-                  id: 'data-display/structured-data/treedatagrid/index'
-                },
+                collapsed: true,
                 items: [
+                  'data-display/structured-data/treedatagrid/index',
                   'data-display/structured-data/treedatagrid/column-types',
                   'data-display/structured-data/treedatagrid/selection-modes',
                   'data-display/structured-data/treedatagrid/expand-and-collapse',
@@ -286,14 +284,12 @@ const sidebars: SidebarsConfig = {
               {
                 type: 'category',
                 label: 'Markdown',
-                link: {
-                  type: 'doc',
-                  id: 'data-display/text-display/markdown',
-                },
+                collapsed: true,
                 items: [
-                  'data-display/text-display/markdown-styling',
-                  'data-display/text-display/codehighlighter',
-                  'data-display/text-display/imageloader',
+                  'data-display/text-display/markdown/index',
+                  'data-display/text-display/markdown/markdown-styling',
+                  'data-display/text-display/markdown/codehighlighter',
+                  'data-display/text-display/markdown/imageloader',
                 ],
               },
               'data-display/text-display/selectabletextblock',
@@ -380,16 +376,14 @@ const sidebars: SidebarsConfig = {
               {
                 type: 'category',
                 label: 'RichTextEditor',
-                link: {
-                  type: 'doc',
-                  id: 'input/text-input/richtexteditor'
-                },
+                collapsed: true,
                 items: [
-                  'input/text-input/richtexteditor-guides/document-viewer',
-                  'input/text-input/richtexteditor-guides/toolbar',
-                  'input/text-input/richtexteditor-guides/extension-patterns',
-                  'input/text-input/richtexteditor-guides/performance-tuning',
-                  'input/text-input/richtexteditor-guides/thread-safety',
+                  'input/text-input/richtexteditor/index',
+                  'input/text-input/richtexteditor/document-viewer',
+                  'input/text-input/richtexteditor/toolbar',
+                  'input/text-input/richtexteditor/extension-patterns',
+                  'input/text-input/richtexteditor/performance-tuning',
+                  'input/text-input/richtexteditor/thread-safety',
                 ],
               },
           ],
@@ -416,13 +410,12 @@ const sidebars: SidebarsConfig = {
               'layout/containers/viewbox',
               {
                 type: 'category',
-                label: 'VirtualKeyboardScope',
-                link: {
-                  type: 'doc',
-                  id: 'layout/containers/virtualkeyboardscope',
-                },
+                label: 'Virtual keyboard',
+                collapsed: true,
                 items: [
-                  'input/text-input/virtualkeyboard',
+                  'input/text-input/virtualkeyboard/index',
+                  'input/text-input/virtualkeyboard/virtualkeyboard-control',
+                  'input/text-input/virtualkeyboard/virtualkeyboardscope',
                 ],
               },
           ],
@@ -456,15 +449,13 @@ const sidebars: SidebarsConfig = {
         'media/image',
         {
           type: 'category',
-          label: 'MediaPlayerControl',
-          link: {
-            type: 'doc',
-            id: 'media/mediaplayercontrol',
-          },
+          label: 'MediaPlayer',
+          collapsed: true,
           items: [
-            'media/mediaplayer',
-            'media/mediasource',
-            'media/media-playback',
+            'media/mediaplayer/index',
+            'media/mediaplayer/mediasource',
+            'media/mediaplayer/mediaplayer-class',
+            'media/mediaplayer/media-playback',
           ],
         },
         'media/pathicon',

@@ -22,22 +22,22 @@ Lollipop charts display data points as dots with thin stems extending to the bas
 
 ### XAML
 ```xml
-<charts:CartesianChart Title="Monthly Sales" Height="250">
-    <charts:CartesianChart.HorizontalAxis>
-        <charts:CategoryAxis />
-    </charts:CartesianChart.HorizontalAxis>
-    <charts:CartesianChart.VerticalAxis>
-        <charts:NumericalAxis />
-    </charts:CartesianChart.VerticalAxis>
-    <charts:CartesianChart.Series>
-        <charts:LollipopSeries Title="Sales"
+<CartesianChart xmlns="https://github.com/avaloniaui" Title="Monthly Sales" Height="250">
+    <CartesianChart.HorizontalAxis>
+        <CategoryAxis />
+    </CartesianChart.HorizontalAxis>
+    <CartesianChart.VerticalAxis>
+        <NumericalAxis />
+    </CartesianChart.VerticalAxis>
+    <CartesianChart.Series>
+        <LollipopSeries Title="Sales"
                                  ItemsSource="{Binding MonthlySales}"
                                  CategoryPath="Month"
                                  ValuePath="Amount"
                                  StemThickness="2"
                                  Orientation="Vertical" />
-    </charts:CartesianChart.Series>
-</charts:CartesianChart>
+    </CartesianChart.Series>
+</CartesianChart>
 ```
 
 ### Data model (C#)

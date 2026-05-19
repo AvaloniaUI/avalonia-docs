@@ -26,7 +26,7 @@ A Pareto chart contains both bars and a line graph, where individual values are 
 
 ### XAML
 ```xml
-<charts:ParetoChart Name="ParetoChartSample"
+<ParetoChart xmlns="https://github.com/avaloniaui" Name="ParetoChartSample"
                                           Title="Defect Analysis"
                                           Height="250"
                                           ValuePath="Count"

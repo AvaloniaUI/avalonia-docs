@@ -28,25 +28,25 @@ Avalonia Charts lets you customize axis appearance, including label fitting, axi
 ### XAML
 
 ```xml
-<charts:CartesianChart Name="GridLinesChart" Title="Dashed Major Grid Lines" Height="300">
-                        <charts:CartesianChart.HorizontalAxis>
-                            <charts:CategoryAxis ShowGridLines="True" GridLineBrush="#BBDEFB" GridLineStrokeThickness="2">
-                                <charts:CategoryAxis.GridLineDashStyle>
+<CartesianChart xmlns="https://github.com/avaloniaui" Name="GridLinesChart" Title="Dashed Major Grid Lines" Height="300">
+                        <CartesianChart.HorizontalAxis>
+                            <CategoryAxis ShowGridLines="True" GridLineBrush="#BBDEFB" GridLineStrokeThickness="2">
+                                <CategoryAxis.GridLineDashStyle>
                                     <DashStyle Dashes="5,5"/>
-                                </charts:CategoryAxis.GridLineDashStyle>
-                            </charts:CategoryAxis>
-                        </charts:CartesianChart.HorizontalAxis>
-                        <charts:CartesianChart.VerticalAxis>
-                            <charts:NumericalAxis ShowGridLines="True" GridLineBrush="#C8E6C9" GridLineStrokeThickness="2">
-                                <charts:NumericalAxis.GridLineDashStyle>
+                                </CategoryAxis.GridLineDashStyle>
+                            </CategoryAxis>
+                        </CartesianChart.HorizontalAxis>
+                        <CartesianChart.VerticalAxis>
+                            <NumericalAxis ShowGridLines="True" GridLineBrush="#C8E6C9" GridLineStrokeThickness="2">
+                                <NumericalAxis.GridLineDashStyle>
                                     <DashStyle Dashes="10,5"/>
-                                </charts:NumericalAxis.GridLineDashStyle>
-                            </charts:NumericalAxis>
-                        </charts:CartesianChart.VerticalAxis>
-                        <charts:CartesianChart.Series>
-                            <charts:AreaSeries Title="Data" ItemsSource="{Binding SalesData}" Fill="#7E2196F3" Stroke="#2196F3" />
-                        </charts:CartesianChart.Series>
-                    </charts:CartesianChart>
+                                </NumericalAxis.GridLineDashStyle>
+                            </NumericalAxis>
+                        </CartesianChart.VerticalAxis>
+                        <CartesianChart.Series>
+                            <AreaSeries Title="Data" ItemsSource="{Binding SalesData}" Fill="#7E2196F3" Stroke="#2196F3" />
+                        </CartesianChart.Series>
+                    </CartesianChart>
 ```
 
 ### Data model (C#)

@@ -24,14 +24,14 @@ tags:
 ### XAML
 
 ```xml
-<charts:PolarChart Title="Archimedean spiral" Height="300">
-    <charts:PolarChart.Series>
-        <charts:PolarLineSeries ItemsSource="{Binding SpiralData}"
+<PolarChart xmlns="https://github.com/avaloniaui" Title="Archimedean spiral" Height="300">
+    <PolarChart.Series>
+        <PolarLineSeries ItemsSource="{Binding SpiralData}"
                                   AnglePath="Angle"
                                   RadiusPath="Radius"
                                   StrokeThickness="2" />
-    </charts:PolarChart.Series>
-</charts:PolarChart>
+    </PolarChart.Series>
+</PolarChart>
 ```
 
 ### Data model (C#)

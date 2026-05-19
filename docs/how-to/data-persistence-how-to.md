@@ -170,7 +170,7 @@ public class RecentFilesService
     public RecentFilesService()
     {
         _path = Path.Combine(
-            Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
+            Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
             "MyApp", "recent.json");
         Load();
     }
@@ -223,36 +223,44 @@ When displaying a recent files list, check that each file still exists before sh
 
 ## Platform-specific storage paths
 
-Use the appropriate directory for each platform. The following table shows the conventional locations:
+Each operating system has its own convention, where application config should be stored.
+It's typically a dedicated mutable folder, specific to the current user (not global).
 
-| Platform | Typical path |
-|---|---|
-| Windows | `%APPDATA%\MyApp\` |
-| macOS | `~/Library/Application Support/MyApp/` |
-| Linux | `~/.config/MyApp/` |
+Modern .NET abstracts these differences, allowing to resolve a config path with a single `Environment.GetFolderPath` call:
 
 ```csharp
 public static string GetAppDataPath()
 {
-    if (OperatingSystem.IsMacOS())
-        return Path.Combine(
-            Environment.GetFolderPath(Environment.SpecialFolder.UserProfile),
-            "Library", "Application Support", "MyApp");
+    // Resolve path to the per-user app data folder.
+    // `SpecialFolderOption.Create` is important on Linux, where this folder might not be created by default.
+    var localAppData = Environment.GetFolderPath(
+        Environment.SpecialFolder.LocalApplicationData,
+        Environment.SpecialFolderOption.Create);
 
-    if (OperatingSystem.IsLinux())
-        return Path.Combine(
-            Environment.GetFolderPath(Environment.SpecialFolder.UserProfile),
-            ".config", "MyApp");
+    // Define app-specific sub-folder, isolated from other apps. Optionally, you can add company specific subfolder as well.
+    var myAppData = Path.Combine(localAppData, "MyApp");
 
-    // Windows and others
-    return Path.Combine(
-        Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
-        "MyApp");
+    // Optionally, ensure folder is created before returning path from this method.
+    if (!Directory.Exists(myAppData))
+        Directory.CreateDirectory(myAppData);
+
+    return myAppData;
 }
 ```
 
+The following table shows locations to which `SpecialFolder.LocalApplicationData` is resolved in .NET 8:
+
+| Platform | Typical path |
+|---|---|
+| Windows | `%LOCALAPPDATA%\MyApp\` |
+| macOS | `~/Library/Application Support/MyApp/` |
+| Linux* | `~/.local/share/MyApp/` |
+
+\* Linux paths can vary depending if `XDG_DATA_HOME` is set.
+
 :::note
-On Linux, you can respect the `XDG_CONFIG_HOME` environment variable if it is set. When defined, your application should store configuration files in `$XDG_CONFIG_HOME/MyApp/` instead of `~/.config/MyApp/`. You can check for this with `Environment.GetEnvironmentVariable("XDG_CONFIG_HOME")`.
+Application installation directories should be treated as read-only at runtime. Use them for bundled defaults and static assets, not mutable user data.
+In addition, system-wide shared directories may require elevated privileges for writes.
 :::
 
 ## Bookmarked storage (mobile and sandbox)

@@ -28,37 +28,37 @@ Annotations allow you to add context to your charts using lines, bands, shapes, 
 ### XAML
 
 ```xml
-<charts:CartesianChart Name="ShapesChart" Height="250">
-                        <charts:CartesianChart.HorizontalAxis>
-                            <charts:NumericalAxis Title="X" Minimum="0" Maximum="10" />
-                        </charts:CartesianChart.HorizontalAxis>
-                        <charts:CartesianChart.VerticalAxis>
-                            <charts:NumericalAxis Title="Y" Minimum="0" Maximum="100" />
-                        </charts:CartesianChart.VerticalAxis>
-                        <charts:CartesianChart.Series>
-                            <charts:ScatterSeries Title="Points" ItemsSource="{Binding ShapeData}"
+<CartesianChart xmlns="https://github.com/avaloniaui" Name="ShapesChart" Height="250">
+                        <CartesianChart.HorizontalAxis>
+                            <NumericalAxis Title="X" Minimum="0" Maximum="10" />
+                        </CartesianChart.HorizontalAxis>
+                        <CartesianChart.VerticalAxis>
+                            <NumericalAxis Title="Y" Minimum="0" Maximum="100" />
+                        </CartesianChart.VerticalAxis>
+                        <CartesianChart.Series>
+                            <ScatterSeries Title="Points" ItemsSource="{Binding ShapeData}"
                                                     CategoryPath="X" ValuePath="Y" MarkerSize="8" />
-                        </charts:CartesianChart.Series>
-                        <charts:CartesianChart.Annotations>
+                        </CartesianChart.Series>
+                        <CartesianChart.Annotations>
                             <!-- Highlight Region -->
-                            <charts:RectangleAnnotation X="0.6" Y="60" Width="0.2" Height="20"
+                            <RectangleAnnotation X="0.6" Y="60" Width="0.2" Height="20"
                                                           Stroke="Blue" Label="Region A">
-                                <charts:RectangleAnnotation.Fill>
+                                <RectangleAnnotation.Fill>
                                     <SolidColorBrush Color="#280000FF" />
-                                </charts:RectangleAnnotation.Fill>
-                            </charts:RectangleAnnotation>
+                                </RectangleAnnotation.Fill>
+                            </RectangleAnnotation>
                             <!-- Circle of Interest -->
-                            <charts:EllipseAnnotation X="0.3" Y="30" RadiusX="0.05" RadiusY="5"
+                            <EllipseAnnotation X="0.3" Y="30" RadiusX="0.05" RadiusY="5"
                                                         Stroke="Orange" Label="Cluster">
-                                <charts:EllipseAnnotation.Fill>
+                                <EllipseAnnotation.Fill>
                                     <SolidColorBrush Color="#28FFA500" />
-                                </charts:EllipseAnnotation.Fill>
-                            </charts:EllipseAnnotation>
+                                </EllipseAnnotation.Fill>
+                            </EllipseAnnotation>
                             <!-- Trend Arrow -->
-                            <charts:ArrowLineAnnotation X1="0.3" Y1="35" X2="0.7" Y2="65"
+                            <ArrowLineAnnotation X1="0.3" Y1="35" X2="0.7" Y2="65"
                                                           Stroke="Purple" StrokeThickness="2" ShowEndArrow="True" Label="Growth" />
-                        </charts:CartesianChart.Annotations>
-                    </charts:CartesianChart>
+                        </CartesianChart.Annotations>
+                    </CartesianChart>
 ```
 
 ### Data model (C#)
@@ -141,17 +141,17 @@ A rectangle annotation placed at specific coordinates on the chart area.
 ### XAML
 
 ```xml
-<charts:CartesianChart Height="250">
-    <charts:CartesianChart.Annotations>
-        <charts:RectangleAnnotation X="0.2" Y="50" Width="0.3" Height="20"
+<CartesianChart xmlns="https://github.com/avaloniaui" Height="250">
+    <CartesianChart.Annotations>
+        <RectangleAnnotation X="0.2" Y="50" Width="0.3" Height="20"
                                     Stroke="DarkGreen" StrokeThickness="2"
                                     CornerRadius="4" Label="Target Zone">
-            <charts:RectangleAnnotation.Fill>
+            <RectangleAnnotation.Fill>
                 <SolidColorBrush Color="#3200FF00" />
-            </charts:RectangleAnnotation.Fill>
-        </charts:RectangleAnnotation>
-    </charts:CartesianChart.Annotations>
-</charts:CartesianChart>
+            </RectangleAnnotation.Fill>
+        </RectangleAnnotation>
+    </CartesianChart.Annotations>
+</CartesianChart>
 ```
 
 ## Common properties (`EllipseAnnotation`)
@@ -175,17 +175,17 @@ An ellipse annotation placed at specific coordinates on the chart area.
 ### XAML
 
 ```xml
-<charts:CartesianChart Height="250">
-    <charts:CartesianChart.Annotations>
-        <charts:EllipseAnnotation X="0.5" Y="60" RadiusX="0.15" RadiusY="15"
+<CartesianChart xmlns="https://github.com/avaloniaui" Height="250">
+    <CartesianChart.Annotations>
+        <EllipseAnnotation X="0.5" Y="60" RadiusX="0.15" RadiusY="15"
                                   Stroke="Purple" StrokeThickness="2"
                                   Label="Anomaly">
-            <charts:EllipseAnnotation.Fill>
+            <EllipseAnnotation.Fill>
                 <SolidColorBrush Color="#32800080" />
-            </charts:EllipseAnnotation.Fill>
-        </charts:EllipseAnnotation>
-    </charts:CartesianChart.Annotations>
-</charts:CartesianChart>
+            </EllipseAnnotation.Fill>
+        </EllipseAnnotation>
+    </CartesianChart.Annotations>
+</CartesianChart>
 ```
 
 ## Common properties (`ArrowLineAnnotation`)
@@ -211,12 +211,12 @@ A line annotation with optional arrowheads at either or both ends, useful for in
 ### XAML
 
 ```xml
-<charts:CartesianChart Height="250">
-    <charts:CartesianChart.Annotations>
-        <charts:ArrowLineAnnotation X1="0.1" Y1="30" X2="0.6" Y2="80"
+<CartesianChart xmlns="https://github.com/avaloniaui" Height="250">
+    <CartesianChart.Annotations>
+        <ArrowLineAnnotation X1="0.1" Y1="30" X2="0.6" Y2="80"
                                     Stroke="OrangeRed" StrokeThickness="2"
                                     ShowEndArrow="True" ArrowSize="10"
                                     Label="Upward trend" />
-    </charts:CartesianChart.Annotations>
-</charts:CartesianChart>
+    </CartesianChart.Annotations>
+</CartesianChart>
 ```

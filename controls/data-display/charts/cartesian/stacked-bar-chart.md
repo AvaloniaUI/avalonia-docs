@@ -26,19 +26,19 @@ Stacked bar charts represent multiple series of data stacked on top of each othe
 
 ### XAML
 ```xml
-<charts:CartesianChart Name="StackedBarChart" Title="Stacked Bar Chart" Height="250" ShowLegend="True">
-                        <charts:CartesianChart.HorizontalAxis>
-                            <charts:CategoryAxis />
-                        </charts:CartesianChart.HorizontalAxis>
-                        <charts:CartesianChart.VerticalAxis>
-                            <charts:NumericalAxis />
-                        </charts:CartesianChart.VerticalAxis>
-                        <charts:CartesianChart.Series>
-                            <charts:StackedBarSeries Title="Product A" ItemsSource="{Binding StackedBarProductA}" Fill="DodgerBlue" />
-                            <charts:StackedBarSeries Title="Product B" ItemsSource="{Binding StackedBarProductB}" Fill="Orange" />
-                            <charts:StackedBarSeries Title="Product C" ItemsSource="{Binding StackedBarProductC}" Fill="Green" />
-                        </charts:CartesianChart.Series>
-                    </charts:CartesianChart>
+<CartesianChart xmlns="https://github.com/avaloniaui" Name="StackedBarChart" Title="Stacked Bar Chart" Height="250" ShowLegend="True">
+                        <CartesianChart.HorizontalAxis>
+                            <CategoryAxis />
+                        </CartesianChart.HorizontalAxis>
+                        <CartesianChart.VerticalAxis>
+                            <NumericalAxis />
+                        </CartesianChart.VerticalAxis>
+                        <CartesianChart.Series>
+                            <StackedBarSeries Title="Product A" ItemsSource="{Binding StackedBarProductA}" Fill="DodgerBlue" />
+                            <StackedBarSeries Title="Product B" ItemsSource="{Binding StackedBarProductB}" Fill="Orange" />
+                            <StackedBarSeries Title="Product C" ItemsSource="{Binding StackedBarProductC}" Fill="Green" />
+                        </CartesianChart.Series>
+                    </CartesianChart>
 ```
 
 ### Data model (C#)
