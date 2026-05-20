@@ -10,6 +10,7 @@ jobs:
   linkChecker:
     runs-on: ubuntu-latest
     permissions:
+      contents: read # required for actions/checkout
       issues: write # required for peter-evans/create-issue-from-file
     steps:
         - uses: actions/checkout@v4
