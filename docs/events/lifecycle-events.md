@@ -9,6 +9,8 @@ Avalonia controls raise several events during their creation, attachment to the 
 
 ## Lifecycle event order
 
+### Control creation
+
 When a control is created and added to the visual tree, events fire in the following order:
 
 | Order | Event / Method | Defined On | Description |
@@ -17,12 +19,26 @@ When a control is created and added to the visual tree, events fire in the follo
 | 2 | `AttachedToVisualTree` | `Visual` | The control has been added to a rooted visual tree. Layout has not yet occurred. |
 | 3 | `Loaded` | `Control` | The control is fully attached and ready for interaction. This fires after the visual tree attachment is complete. |
 
+### Control removal
+
 When a control is removed:
 
 | Order | Event / Method | Defined On | Description |
 |---|---|---|---|
 | 1 | `Unloaded` | `Control` | The control is about to be removed from the visual tree. |
 | 2 | `DetachedFromVisualTree` | `Visual` | The control has been removed from the visual tree. |
+
+### Child control creation
+
+In addition, when a layout control containing children controls adds them to the visual tree, the following events occur in the stated order.
+
+These events happen after the control is added to the visual tree, and they must complete before the control can be fully attached, i.e., this sequence takes place between the `AttachedToVisualTree` and `Loaded` events [detailed above](#control-created).
+
+| Order | Event / Method | Defined On | Description |
+|---|---|---|---|
+| 1 | `ApplyTemplate` | `Control` | Applies values specified by the [control template](/docs/styling/control-template-walkthrough). |
+| 2 | `MeasureOverride` | `Control` | The [measure pass](/docs/layout/#measuring-and-arranging-children) of the layout system. Determines the desired size of each child control. |
+| 3 | `ArrangeOverride` | `Control` | The [arrange pass](/docs/layout/#measuring-and-arranging-children) of the layout system. Assigns the final size of each child control. |
 
 ## Initialized
 
@@ -124,6 +140,41 @@ Both events indicate the control is part of the visual tree. The key difference:
 - `Loaded` fires after the attachment is fully complete. It is a `RoutedEvent` on `Control`.
 
 For most scenarios, `Loaded` is the right choice. Use `AttachedToVisualTree` when you need access to the `Root` reference or when working with non-`Control` visuals.
+
+## ApplyTemplate
+
+The event fires when creating the visual children of a layout control.
+
+```csharp
+public class MyControl : Control
+{
+    protected override void OnApplyTemplate(TemplateAppliedEventArgs e)
+    {
+        base.OnApplyTemplate(e);
+    }
+}
+```
+
+## MeasureOverride / ArrangeOverride
+
+These events fire when a layout control performs the [two-pass layout process](/docs/layout/#measuring-and-arranging-children) to position children controls.
+
+```csharp
+public class MyControl : Control
+{
+    protected override Size MeasureOverride(Size availableSize)
+    {
+        return base.MeasureOverride(availableSize);
+        // Calculates the desired size of each child control
+    }
+
+    protected override Size ArrangeOverride(Size finalSize)
+    {
+        return base.ArrangeOverride(finalSize);
+        // Allocates the final size of each child control
+    }
+}
+```
 
 ## DataContextChanged
 
