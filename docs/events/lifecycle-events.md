@@ -143,7 +143,7 @@ For most scenarios, `Loaded` is the right choice. Use `AttachedToVisualTree` whe
 
 ## ApplyTemplate
 
-The event fires when applying the control template of a control.
+This method applies the control template of a control.
 
 ```csharp
 public class MyControl : Control
@@ -157,21 +157,21 @@ public class MyControl : Control
 
 ## MeasureOverride / ArrangeOverride
 
-These events fire whenever a control undergoes the [two-pass layout process](/docs/layout/#measuring-and-arranging-children) to size and position it within the layout.
+These override methods are called by the layout system whenever a control needs to undergo the [two-pass layout process](/docs/layout/#measuring-and-arranging-children) to size and position it within the layout.
 
 ```csharp
 public class MyControl : Control
 {
     protected override Size MeasureOverride(Size availableSize)
     {
-        return base.MeasureOverride(availableSize);
         // Calculates the desired size
+        return base.MeasureOverride(availableSize);
     }
 
     protected override Size ArrangeOverride(Size finalSize)
     {
-        return base.ArrangeOverride(finalSize);
         // Allocates the final size
+        return base.ArrangeOverride(finalSize);
     }
 }
 ```
