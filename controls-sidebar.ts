@@ -386,6 +386,16 @@ const sidebars: SidebarsConfig = {
                   'input/text-input/richtexteditor/thread-safety',
                 ],
               },
+              {
+                type: 'category',
+                label: 'Virtual keyboard',
+                collapsed: true,
+                items: [
+                  'input/text-input/virtualkeyboard/index',
+                  'input/text-input/virtualkeyboard/virtualkeyboard-control',
+                  'input/text-input/virtualkeyboard/virtualkeyboardscope',
+                ],
+              },
           ],
         },
       ],
@@ -408,16 +418,6 @@ const sidebars: SidebarsConfig = {
               'layout/containers/scrollviewer',
               'layout/containers/splitview',
               'layout/containers/viewbox',
-              {
-                type: 'category',
-                label: 'Virtual keyboard',
-                collapsed: true,
-                items: [
-                  'input/text-input/virtualkeyboard/index',
-                  'input/text-input/virtualkeyboard/virtualkeyboard-control',
-                  'input/text-input/virtualkeyboard/virtualkeyboardscope',
-                ],
-              },
           ],
         },
         'layout/decorator',
