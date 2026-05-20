@@ -60,17 +60,17 @@ var allTextBlocks = myPanel.GetLogicalDescendants().OfType<TextBlock>();
 
 ### Mutating the logical tree
 
-It is only safe to add or remove `LogicalChildren` when the framework is not already walking the tree. Several common operations trigger such walks, most notably propagation of inherited properties (`DataContext`, `FontSize`, `FlowDirection`, etc). Mutating `LogicalChildren` while one of these walks is in flight can corrupt the iteration and surface as binding errors.
+It is only safe to add or remove `LogicalChildren` when the framework is not already walking the tree. Several common operations trigger such walks, most notably propagation of inherited properties such as `DataContext`. Mutating `LogicalChildren` while one of these walks is in progress can corrupt the iteration and surface as binding errors.
 
 **Safe places to add or remove logical children:**
 
 - The control's constructor, before it is attached to any tree.
 - `OnApplyTemplate`, after calling `base.OnApplyTemplate(e)`.
-- `OnAttachedToLogicalTree`, `OnDetachedFromLogicalTree`, and their visual-tree counterparts.
+- `OnAttachedToLogicalTree`, `OnDetachedFromLogicalTree`, and their visual tree counterparts.
 - Routed input or command handlers (for example, a `Click` or `Tapped` handler).
 - The `Loaded` event handler.
 
-**Avoid mutating `LogicalChildren` from:**
+**Avoid mutating logical children from:**
 
 - `OnPropertyChanged` or `PropertyChanged` callbacks. The framework may be partway through propagating an inherited property to the children you are about to modify.
 - `DataContextChanged`, for the same reason.

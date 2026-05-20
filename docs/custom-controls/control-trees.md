@@ -94,7 +94,7 @@ protected override void OnDetachedFromVisualTree(VisualTreeAttachmentEventArgs e
 
 ### Where to mutate `LogicalChildren`
 
-When a custom container needs to add or remove logical children programmatically (for example, inserting separators between items), do this inside a structured lifecycle hook—e.g.,`OnApplyTemplate`, `OnAttachedToLogicalTree`, `OnAttachedToVisualTree`—rather than a property-change callback. The framework walks the tree to propagate inherited properties such as `DataContext`, and mutating `LogicalChildren` while a walk is in progress can result in binding errors.
+When a custom container needs to add or remove logical children programmatically (for example, inserting separators between items), do this inside a structured lifecycle hook—e.g.,`OnApplyTemplate`, `OnAttachedToLogicalTree`, `OnAttachedToVisualTree`—rather than a property-change callback like `DataContextChanged` or `OnPropertyChanged`. Mutating `LogicalChildren` while the logical tree is being walked can result in binding errors.
 
 See [Mutating the logical tree](/docs/fundamentals/visual-and-logical-trees#mutating-the-logical-tree) for more information on safe and unsafe contexts.
 
