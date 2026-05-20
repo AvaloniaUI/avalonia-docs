@@ -141,7 +141,7 @@ See the [virtual keyboard control](/controls/input/text-input/virtualkeyboard/vi
 
 The virtual keyboard supports the [RIME](https://rime.im/) input method engine for Chinese text input. RIME support is provided as a separate plugin package.
 
-See the [`VirtualKeyboard` control reference](/controls/input/text-input/virtualkeyboad/virtualkeyboard-control#rime-input-method-engine) for installation and configuration instructions.
+See the [`VirtualKeyboard` control reference](/controls/input/text-input/virtualkeyboard/virtualkeyboard-control#rime-input-method-engine) for installation and configuration instructions.
 
 ## Text input options
 
@@ -171,4 +171,4 @@ Available `ReturnKeyType` values:
 ## See also
 
 - [VirtualKeyboard control](/controls/input/text-input/virtualkeyboard)
-- [VirtualKeyboardScope control](/controls/layout/containers/virtualkeyboardscope)
+- [VirtualKeyboardScope control](/controls/input/text-input/virtualkeyboard/virtualkeyboardscope)
