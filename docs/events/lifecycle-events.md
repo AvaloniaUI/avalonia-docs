@@ -28,17 +28,17 @@ When a control is removed:
 | 1 | `Unloaded` | `Control` | The control is about to be removed from the visual tree. |
 | 2 | `DetachedFromVisualTree` | `Visual` | The control has been removed from the visual tree. |
 
-### Child control creation
+### Layout application
 
-In addition, when a layout control containing children controls adds them to the visual tree, the following events occur in the stated order.
+In addition to the events described above, layout controls can also participate in altering the visual tree through the following methods.
 
-These events happen after the control is added to the visual tree, and they must complete before the control can be fully attached, i.e., this sequence takes place between the `AttachedToVisualTree` and `Loaded` events [detailed above](#control-created).
+During the initial run (i.e., when the control is first attached to the visual tree), these events occur in the stated sequence between the `AttachedToVisualTree` and `Loaded` events [detailed above](#control-creation). However, `MeasureOverride` and `ArrangeOverride` can run multiple times during a control's lifetime, as they are triggered whenever the layout is updated, e.g., when the window size is adjusted.
 
 | Order | Event / Method | Defined On | Description |
 |---|---|---|---|
-| 1 | `ApplyTemplate` | `Control` | Applies values specified by the [control template](/docs/styling/control-template-walkthrough). |
-| 2 | `MeasureOverride` | `Control` | The [measure pass](/docs/layout/#measuring-and-arranging-children) of the layout system. Determines the desired size of each child control. |
-| 3 | `ArrangeOverride` | `Control` | The [arrange pass](/docs/layout/#measuring-and-arranging-children) of the layout system. Assigns the final size of each child control. |
+| 1 | `ApplyTemplate` | `Control` | Applies the [control template](/docs/styling/control-template-walkthrough) and creates the required templated visual parts. |
+| 2 | `MeasureOverride` | `Control` | Called during the [measure pass](/docs/layout/#measuring-and-arranging-children) of layout. Determines the desired size of a control. |
+| 3 | `ArrangeOverride` | `Control` | Called during the [arrange pass](/docs/layout/#measuring-and-arranging-children) of layout. Assigns the final size of a control. |
 
 ## Initialized
 
@@ -143,7 +143,7 @@ For most scenarios, `Loaded` is the right choice. Use `AttachedToVisualTree` whe
 
 ## ApplyTemplate
 
-The event fires when creating the visual children of a layout control.
+The event fires when applying the control template of a control.
 
 ```csharp
 public class MyControl : Control
@@ -157,7 +157,7 @@ public class MyControl : Control
 
 ## MeasureOverride / ArrangeOverride
 
-These events fire when a layout control performs the [two-pass layout process](/docs/layout/#measuring-and-arranging-children) to position children controls.
+These events fire whenever a control undergoes the [two-pass layout process](/docs/layout/#measuring-and-arranging-children) to size and position it within the layout.
 
 ```csharp
 public class MyControl : Control
@@ -165,13 +165,13 @@ public class MyControl : Control
     protected override Size MeasureOverride(Size availableSize)
     {
         return base.MeasureOverride(availableSize);
-        // Calculates the desired size of each child control
+        // Calculates the desired size
     }
 
     protected override Size ArrangeOverride(Size finalSize)
     {
         return base.ArrangeOverride(finalSize);
-        // Allocates the final size of each child control
+        // Allocates the final size
     }
 }
 ```
