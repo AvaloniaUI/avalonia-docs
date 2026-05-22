@@ -77,7 +77,11 @@ export default function TOC({ className, ...props }: Props): ReactNode {
   const encodedPageUrl = encodeURIComponent(pageUrl);
 
   const editUrl = metadata?.editUrl;
-  const markdown = editUrl?.replace("github", "raw.githubusercontent").replace("/blob", "").replace("/tree", "");
+  // Derive the raw Markdown source URL from the document's source path rather
+  // than from editUrl. editUrl is absent for generated API pages (the `api`
+  // docs plugin has no editUrl configured), whereas `source` is always set.
+  const RAW_BASE = 'https://raw.githubusercontent.com/AvaloniaUI/avalonia-docs/main/';
+  const markdown = metadata?.source?.replace('@site/', RAW_BASE);
 
   const toggleDropdown = () => setIsOpen(!isOpen);
   const closeDropdown = () => setIsOpen(false);
@@ -117,16 +121,21 @@ export default function TOC({ className, ...props }: Props): ReactNode {
           onClose={closeDropdown}
         >
           <ul className="flex flex-col gap-1 list-none m-0 p-0">
-            <li>
-              <DropdownItem tag="div" onClick={getMDX}>
-                <MarkdownIcon />
-                Copy as Markdown
-              </DropdownItem>
-            </li>
-            {/* Divider */}
-            <li>
-              <span className="my-1.5 block h-px w-full bg-gray-200 dark:bg-white/[0.08]"></span>
-            </li>
+            {/* Copy as Markdown — only shown when a source file is resolvable */}
+            {markdown && (
+              <>
+                <li>
+                  <DropdownItem tag="div" onClick={getMDX}>
+                    <MarkdownIcon />
+                    Copy as Markdown
+                  </DropdownItem>
+                </li>
+                {/* Divider */}
+                <li>
+                  <span className="my-1.5 block h-px w-full bg-gray-200 dark:bg-white/[0.08]"></span>
+                </li>
+              </>
+            )}
             <li>
               <DropdownItem
                 tag="a"
