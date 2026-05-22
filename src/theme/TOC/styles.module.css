@@ -1,4 +1,6 @@
 .tableOfContentsWrapper {
+  display: flex;
+  flex-direction: column;
   max-height: calc(100vh - (var(--ifm-navbar-height) + 2rem));
   position: sticky;
   top: calc(var(--ifm-navbar-height) + 1rem);
@@ -7,6 +9,12 @@
 }
 
 .tableOfContents {
+  /* As a flex child, min-height:0 lets this shrink below its content height
+     so overflow-y can engage; flex:1 caps its height at the space the
+     wrapper's max-height leaves after the header. Without both, the list
+     grows unbounded and the scrollbar never appears. */
+  flex: 1 1 auto;
+  min-height: 0;
   overflow-y: auto;
   overflow-x: visible;
 }

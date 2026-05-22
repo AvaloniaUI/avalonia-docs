@@ -19,13 +19,12 @@ html[data-theme='dark'] {
 
 //overrides
 #__docusaurus {
+  // Layout (sticky positioning, overflow, max-height) is owned by the
+  // swizzled TOC component's CSS module — see src/theme/TOC/styles.module.css.
+  // Only typographic/spacing tweaks belong here. Do NOT reintroduce
+  // `overflow` or `max-height`: this selector matches the component's inner
+  // scroll container (`tableOfContents_<hash>`) and would break its scrollbar.
   [class^='tableOfContents_'] {
-    position: static;
-    top: initial;
-    overflow: hidden;
-
-    max-height: initial;
-
     padding-block-end: 1.25rem;
 
     line-height: 1.4;
