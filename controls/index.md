@@ -129,7 +129,7 @@ Avalonia apps are made of high-level building blocks called controls, which allo
   <p>Text boxes create an area for text input, a staple of almost any type of app.</p>
 </DocsCard>
 
-<DocsCard header="Toggle Switch" href="/controls/input/buttons/togglebutton" icon="/icons/toggleswitch-icon@2x.png">
+<DocsCard header="Toggle Switch" href="/controls/input/selectors/toggleswitch" icon="/icons/toggleswitch-icon@2x.png">
   <p>Toggle switches let users flip between on and off states for binary options like settings.</p>
 </DocsCard>
 
