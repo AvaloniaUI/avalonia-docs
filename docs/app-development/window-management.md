@@ -76,7 +76,7 @@ The value is returned from the `ShowDialog<T>` call in the parent.
 | `ShowInTaskbar` | Whether the window appears in the OS taskbar. |
 | `Topmost` | Whether the window stays on top of other windows. |
 | `WindowState` | Current state: `Normal`, `Minimized`, `Maximized`, `FullScreen`. |
-| `SystemDecorations` | Title bar and border style: `Full`, `BorderOnly`, `None`. |
+| `WindowDecorations` | Title bar and border style: `Full`, `BorderOnly`, `None`. |
 | `ExtendClientAreaToDecorationsHint` | Extends the client area into the title bar area for custom chrome. Uses `WindowDrawnDecorations` for application-drawn decorations. |
 | `Icon` | The window icon displayed in the title bar and taskbar. |
 | `TransparencyLevelHint` | Enables window transparency: `None`, `Transparent`, `AcrylicBlur`, `Mica`. See [Transparent click-through window](/docs/how-to/window-how-to#transparent-click-through-window) for overlay patterns. |
@@ -197,7 +197,7 @@ To create a custom title bar, extend the client area into the decorations and us
 
 ```xml
 <Window ExtendClientAreaToDecorationsHint="True"
-        SystemDecorations="None">
+        WindowDecorations="None">
     <Grid RowDefinitions="32,*">
         <!-- Custom title bar -->
         <Border Grid.Row="0" Background="#2D2D2D"
@@ -284,7 +284,7 @@ screens.Changed += (sender, args) =>
 |---|---|---|---|
 | `Topmost` | Supported | Supported | Supported |
 | `TransparencyLevelHint` | All levels | `Transparent` only | Depends on compositor |
-| `SystemDecorations.None` | Supported | Supported | Supported |
+| `WindowDecorations.None` | Supported | Supported | Supported |
 | `ExtendClientAreaToDecorationsHint` | Supported | Supported | Limited support |
 | Modal dialogs | Blocks parent window | Sheet-style on macOS | Blocks parent window |
 

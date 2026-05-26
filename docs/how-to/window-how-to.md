@@ -133,7 +133,7 @@ Platform behavior varies. On Windows, disabled buttons are hidden. On macOS, the
 Create a borderless window by disabling system decorations:
 
 ```xml
-<Window SystemDecorations="None"
+<Window WindowDecorations="None"
         ExtendClientAreaToDecorationsHint="True"
         Background="Transparent"
         TransparencyLevelHint="AcrylicBlur">
@@ -145,6 +145,7 @@ Mark an element as a title bar drag region using the `WindowDecorationProperties
 
 ```xml
 <Grid RowDefinitions="32,*">
+
     <!-- Custom title bar -->
     <Border Grid.Row="0" Background="#1E1E2E"
             WindowDecorationProperties.ElementRole="TitleBar">
@@ -152,15 +153,17 @@ Mark an element as a title bar drag region using the `WindowDecorationProperties
             <TextBlock Text="My App" VerticalAlignment="Center" Foreground="White" />
             <StackPanel DockPanel.Dock="Right" Orientation="Horizontal"
                         HorizontalAlignment="Right">
-                <Button Content="_" Command="{Binding MinimizeCommand}" />
-                <Button Content="□" Command="{Binding MaximizeCommand}" />
-                <Button Content="✕" Command="{Binding CloseCommand}" />
+                <!-- ElementRole must be set per button for some platforms -->
+                <Button WindowDecorationProperties.ElementRole="MinimizeButton" Content="_" Click="OnMinimize" />
+                <Button WindowDecorationProperties.ElementRole="MaximizeButton" Content="□" Click="OnMaximize" />
+                <Button WindowDecorationProperties.ElementRole="CloseButton" Content="✕" Click="OnClose" />
             </StackPanel>
         </DockPanel>
     </Border>
 
     <!-- Content -->
-    <ContentControl Grid.Row="1" Content="{Binding CurrentView}" />
+    <ContentControl Grid.Row="1" Content="Hello world!" />
+
 </Grid>
 ```
 
@@ -252,7 +255,7 @@ To create a transparent overlay window where mouse clicks pass through empty are
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         TransparencyLevelHint="Transparent"
         Background="{x:Null}"
-        SystemDecorations="None"
+        WindowDecorations="None"
         Topmost="True"
         WindowState="Maximized">
     <Grid>
@@ -296,7 +299,7 @@ Icon = new WindowIcon(AssetLoader.Open(new Uri("avares://MyApp/Assets/app-icon.i
 | `Title` | `string` | Window title bar text. |
 | `WindowState` | `WindowState` | `Normal`, `Minimized`, `Maximized`, `FullScreen`. |
 | `WindowStartupLocation` | `WindowStartupLocation` | `Manual`, `CenterScreen`, `CenterOwner`. |
-| `SystemDecorations` | `SystemDecorations` | `Full`, `BorderOnly`, `None`. |
+| `WindowDecorations` | `WindowDecorations` | `Full`, `BorderOnly`, `None`. |
 | `CanResize` | `bool` | Whether the user can resize the window. |
 | `CanMinimize` | `bool` | Whether the minimize button is enabled. Defaults to `true`. |
 | `CanMaximize` | `bool` | Whether the maximize button is enabled. Defaults to `true`. Automatically `false` when `CanResize` is `false`. |
