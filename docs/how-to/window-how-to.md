@@ -154,9 +154,9 @@ Mark an element as a title bar drag region using the `WindowDecorationProperties
             <StackPanel DockPanel.Dock="Right" Orientation="Horizontal"
                         HorizontalAlignment="Right">
                 <!-- ElementRole must be set per button for some platforms -->
-                <Button WindowDecorationProperties.ElementRole="MinimizeButton" Content="_" Command="{Binding MinimizeCommand}" />
-                <Button WindowDecorationProperties.ElementRole="MaximizeButton" Content="□" Command="{Binding MaximizeCommand}" />
-                <Button WindowDecorationProperties.ElementRole="CloseButton" Content="✕" Command="{Binding CloseCommand}" />
+                <Button WindowDecorationProperties.ElementRole="MinimizeButton" Content="_" Click="OnMinimize" />
+                <Button WindowDecorationProperties.ElementRole="MaximizeButton" Content="□" Click="OnMaximize" />
+                <Button WindowDecorationProperties.ElementRole="CloseButton" Content="✕" Click="OnClose" />
             </StackPanel>
         </DockPanel>
     </Border>
