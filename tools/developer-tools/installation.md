@@ -112,7 +112,7 @@ On macOS or Linux, the installation location may not be automatically added to t
 
 To resolve this issue, you must append the tool location to the PATH environment variable. The default location is usually `$HOME/.dotnet/tools`.
 
-For more information, see [Troubleshooting .NET tool usage issues](https://learn.microsoft.com/en-us/dotnet/core/tools/troubleshoot-usage-issues#executable-file-not-found).
+For more information, see [Troubleshooting .NET tool usage issues](https://learn.microsoft.com/en-us/dotnet/core/tools/troubleshoot-usage-issues#global-tools).
 :::
 
 ## Step 2: Installing Diagnostics Support package
