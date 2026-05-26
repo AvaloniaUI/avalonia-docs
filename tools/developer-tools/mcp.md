@@ -327,13 +327,9 @@ If the assistant returns the tree structure, setup is complete.
 
 ### "avdt" command not found
 
-The `avdt` command must be on your system PATH. If you installed it as a global .NET tool, ensure `~/.dotnet/tools` (macOS/Linux) or `%USERPROFILE%\.dotnet\tools` (Windows) is in your PATH.
+The `avdt` command must be on your system PATH. If you installed it as a global .NET tool, check if `$HOME/.dotnet/tools` (macOS/Linux) or `%USERPROFILE%\.dotnet\tools` (Windows) is in your PATH. If not, add the directory to your PATH.
 
-You can verify the tool is installed by running:
-
-```bash
-dotnet tool list -g
-```
+For more information, see [Troubleshooting .NET tool usage issues](https://learn.microsoft.com/en-us/dotnet/core/tools/troubleshoot-usage-issues#executable-file-not-found).
 
 ### License key not detected
 

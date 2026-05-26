@@ -245,13 +245,9 @@ If the assistant returns a list of capabilities, setup is complete.
 
 ### "parcel" command not found
 
-The `parcel` command must be on your system PATH. If you installed it as a global .NET tool, ensure `~/.dotnet/tools` (macOS/Linux) or `%USERPROFILE%\.dotnet\tools` (Windows) is in your PATH.
+The `parcel` command must be on your system PATH. If you installed it as a global .NET tool, check if `$HOME/.dotnet/tools` (macOS/Linux) or `%USERPROFILE%\.dotnet\tools` (Windows) is in your PATH. If not, add the directory to your PATH.
 
-You can verify the tool is installed by running:
-
-```bash
-dotnet tool list -g
-```
+For more information, see [Troubleshooting .NET tool usage issues](https://learn.microsoft.com/en-us/dotnet/core/tools/troubleshoot-usage-issues#executable-file-not-found).
 
 ### License key not detected
 

@@ -38,20 +38,17 @@ If you are upgrading app from .NET 8/9 installation, you should first uninstall 
 
 Parcel can then be updated by running the `dotnet tool update` command.
 
-<details>
-<summary>Parcel update command</summary>
-
 ```bash
 dotnet tool update --global AvaloniaUI.Parcel
 ```
-
-</details>
-
 
 </TabItem>
 <TabItem value="net8" label=".NET 8/9">
 
 If you're using .NET SDK older than 10, you must install a specific package depending on the running platform.
+
+<details>
+<summary>Installation commands</summary>
 
 **Windows:**
 
@@ -71,10 +68,12 @@ dotnet tool install --global AvaloniaUI.Parcel.macOS
 dotnet tool install --global AvaloniaUI.Parcel.Linux
 ```
 
+</details>
+
 Parcel can then be updated by running the `dotnet tool update` command.
 
 <details>
-<summary>Parcel update commands</summary>
+<summary>Update commands</summary>
 
 **Windows:**
 
@@ -98,6 +97,14 @@ dotnet tool update --global AvaloniaUI.Parcel.Linux
 
 </TabItem>
 </Tabs>
+
+:::warning
+On macOS or Linux, the installation location may not be automatically added to the PATH environment variable. This surfaces as a "command not found" error when trying to run `parcel`.
+
+To resolve this issue, you must append the tool location to the PATH environment variable. The default location is usually `$HOME/.dotnet/tools`.
+
+For more information, see [Troubleshooting .NET tool usage issues](https://learn.microsoft.com/en-us/dotnet/core/tools/troubleshoot-usage-issues#executable-file-not-found).
+:::
 
 ## Step 2: Run the tool
 
