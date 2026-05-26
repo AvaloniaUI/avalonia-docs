@@ -211,7 +211,7 @@ Or with a binding converter:
 | WPF | Avalonia | Notes |
 |---|---|---|
 | `AllowsTransparency="True"` | `TransparencyLevelHint="Transparent"` | Set `Background="{x:Null}"` (not `Transparent`) for [click-through behavior](/docs/how-to/window-how-to#transparent-click-through-window) |
-| `WindowStyle="None"` | `SystemDecorations="None"` | Removes title bar and border |
+| `WindowStyle="None"` | `WindowDecorations="None"` | Removes title bar and border |
 | `ResizeMode` | `CanResize` | Boolean instead of enum |
 
 ## Graphics
