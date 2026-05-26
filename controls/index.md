@@ -49,7 +49,7 @@ Avalonia apps are made of high-level building blocks called controls, which allo
   <p>ComboBox shows a selected item and displays a list of options when clicked.</p>
 </DocsCard>
 
-<DocsCard header="Date Picker" href="/controls/input/date-and-time/datepicker" icon="/icons/datepicker-icon@2x.png">
+<DocsCard header="DatePicker" href="/controls/input/date-and-time/datepicker" icon="/icons/datepicker-icon@2x.png">
   <p>Date pickers present a compact interface for users to select dates.</p>
 </DocsCard>
 
@@ -73,7 +73,7 @@ Avalonia apps are made of high-level building blocks called controls, which allo
   <p>Render and display Markdown-formatted text content directly in your app.</p>
 </DocsCard>
 
-<DocsCard header="Media Player" href="/controls/media/mediaplayer" icon="/icons/mediaplayer-icon@2x.png">
+<DocsCard header="MediaPlayer" href="/controls/media/mediaplayer" icon="/icons/mediaplayer-icon@2x.png">
   <p>A full-featured media player control for playing audio and video content.</p>
 </DocsCard>
 
@@ -89,7 +89,7 @@ Avalonia apps are made of high-level building blocks called controls, which allo
   <p>The base class for all panel elements used to position and arrange child controls.</p>
 </DocsCard>
 
-<DocsCard header="Radio Button" href="/controls/input/buttons/radiobutton" icon="/icons/radiobutton-icon@2x.png">
+<DocsCard header="RadioButton" href="/controls/input/buttons/radiobutton" icon="/icons/radiobutton-icon@2x.png">
   <p>Radio buttons allow you to present a set of mutually exclusive options.</p>
 </DocsCard>
 
@@ -117,7 +117,7 @@ Avalonia apps are made of high-level building blocks called controls, which allo
   <p>Arranges child controls in a single line, stacked horizontally or vertically.</p>
 </DocsCard>
 
-<DocsCard header="Tab Control" href="/controls/navigation/tabcontrol" icon="/icons/tabcontrol-icon@2x.png">
+<DocsCard header="Tab" href="/controls/navigation/tabcontrol" icon="/icons/tabcontrol-icon@2x.png">
   <p>Tabs enable tabbed navigation, a standard navigation pattern in modern apps.</p>
 </DocsCard>
 
@@ -129,7 +129,7 @@ Avalonia apps are made of high-level building blocks called controls, which allo
   <p>Text boxes create an area for text input, a staple of almost any type of app.</p>
 </DocsCard>
 
-<DocsCard header="Toggle Switch" href="/controls/input/selectors/toggleswitch" icon="/icons/toggleswitch-icon@2x.png">
+<DocsCard header="ToggleSwitch" href="/controls/input/selectors/toggleswitch" icon="/icons/toggleswitch-icon@2x.png">
   <p>Toggle switches let users flip between on and off states for binary options like settings.</p>
 </DocsCard>
 
