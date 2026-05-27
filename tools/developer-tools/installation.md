@@ -31,12 +31,6 @@ Support package requires **Avalonia 11.2.0** or newer, and built on **.NET Stand
 
 This package is compatible with Browser and Android/iOS projects.
 
-:::note
-
-Demo project with Developer Tools preconfigured can be found at [AvaloniaUI/AvaloniaUI.DeveloperTools/samples/SimpleToDoList](https://github.com/AvaloniaUI/AvaloniaUI.DeveloperTools/tree/main/samples/SimpleToDoList#simpletodolist).
-
-:::
-
 ## Step 1: Installing AvaloniaUI Developer Tools
 
 AvaloniaUI Developer Tools is currently a native [.NET tool](https://learn.microsoft.com/en-us/dotnet/core/tools/global-tools), with update mechanism provided by the SDK.
@@ -53,20 +47,17 @@ If you are upgrading app from .NET 8/9 installation, you should first uninstall 
 
 Developer Tools can be then updated by running `dotnet tool update` command.
 
-<details>
-<summary>Developer tools update command</summary>
-
 ```bash
 dotnet tool update --global AvaloniaUI.DeveloperTools
 ```
-
-</details>
-
 
 </TabItem>
 <TabItem value="net8" label=".NET 8/9">
 
 If you're using .NET SDK older than 10, you must install a specific package depending on the running platform.
+
+<details>
+<summary>Installation commands</summary>
 
 **Windows:**
 
@@ -86,10 +77,12 @@ dotnet tool install --global AvaloniaUI.DeveloperTools.macOS
 dotnet tool install --global AvaloniaUI.DeveloperTools.Linux
 ```
 
+</details>
+
 Developer Tools can be then updated by running `dotnet tool update` command.
 
 <details>
-<summary>Developer tools update commands</summary>
+<summary>Update commands</summary>
 
 **Windows:**
 
@@ -113,6 +106,14 @@ dotnet tool update --global AvaloniaUI.DeveloperTools.Linux
 
 </TabItem>
 </Tabs>
+
+:::warning
+On macOS or Linux, the installation location may not be automatically added to the PATH environment variable. This surfaces as a "command not found" error when trying to run `avdt`.
+
+To resolve this issue, you must append the tool location to the PATH environment variable. The default location is usually `$HOME/.dotnet/tools`.
+
+For more information, see [Troubleshooting .NET tool usage issues](https://learn.microsoft.com/en-us/dotnet/core/tools/troubleshoot-usage-issues#global-tools).
+:::
 
 ## Step 2: Installing Diagnostics Support package
 
