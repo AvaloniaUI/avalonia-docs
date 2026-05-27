@@ -3,6 +3,15 @@ id: release-notes
 title: Release notes
 ---
 
+## XPF 1.6.4 (2026-05-27)
+
+* Avalonia version updated from 11.3.14 to 11.3.16
+* Fixed too sensitive touchpad scrolling (especially on macOS)
+  * This can be disabled using `AvaloniaUI.Xpf.DisablePreciseMouseWheelScrolling` compatibility flag
+* Fixed VisualBrush with off-screen descendants rendering
+* Fixed scRGB to sRGB color conversion resulting in slight color differences
+* Fixed an issue with NativeControlHost in TabControl showing incorrect content
+I
 ## XPF 1.6.3 (2026-04-22)
 
 * Avalonia version updated from 11.3.12 to 11.3.14
