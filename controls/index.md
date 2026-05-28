@@ -139,6 +139,10 @@ Avalonia apps are made of high-level building blocks called controls, which allo
   <p>Toggle switches let users flip between on and off states for binary options like settings.</p>
 </DocsCard>
 
+<DocsCard header="TreeDataGrid" href="/controls/data-display/structured-data/treedatagrid">
+  <p>Combines tree view and data grid functionalities to display complex flat or hierarchical data.</p>
+</DocsCard>
+
 <DocsCard header="TreeView" href="/controls/data-display/structured-data/treeview" icon="/icons/treeview-icon@2x.png">
   <p>Displays hierarchical data in an expandable tree structure.</p>
 </DocsCard>
