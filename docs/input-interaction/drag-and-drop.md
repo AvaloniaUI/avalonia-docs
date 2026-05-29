@@ -208,7 +208,11 @@ private void OnDragLeave(object? sender, DragEventArgs e)
 
 This example creates a drop zone that accepts text and files:
 
-```xml title="XAML"
+<Tabs>
+
+<TabItem value="xaml" label="XAML">
+
+```xml
 <Border x:Name="DropZone"
         DragDrop.AllowDrop="True"
         Background="#F5F5F5" CornerRadius="8"
@@ -223,7 +227,18 @@ This example creates a drop zone that accepts text and files:
 </Border>
 ```
 
-```csharp title="Code-behind"
+</TabItem>
+
+<TabItem value="cs" label="Code-behind">
+
+```csharp
+using System.Linq;
+using Avalonia.Controls;
+using Avalonia.Input;
+using Avalonia.Media;
+
+namespace MyApp.Views;
+
 public partial class MainWindow : Window
 {
     public MainWindow()
@@ -264,7 +279,7 @@ public partial class MainWindow : Window
         }
         else if (e.DataTransfer.Formats.Contains(DataFormat.File))
         {
-            var files = e.DataTransfer.GetFiles();
+            var files = e.DataTransfer.TryGetFiles();
             if (files != null)
             {
                 StatusText.Text = $"Dropped {files.Count()} file(s)";
@@ -273,6 +288,10 @@ public partial class MainWindow : Window
     }
 }
 ```
+
+</TabItem>
+
+</Tabs>
 
 ## Handling events in XAML vs code
 
