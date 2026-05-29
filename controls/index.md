@@ -7,6 +7,7 @@ hide_table_of_contents: true
 
 import DocsCard from '@site/src/components/global/DocsCard';
 import DocsCards from '@site/src/components/global/DocsCards';
+import Pill from '@site/src/components/global/Pill';
 
 <head>
   <title>Avalonia documentation: Controls library</title>
@@ -39,6 +40,7 @@ Avalonia apps are made of high-level building blocks called controls, which allo
 
 <DocsCard header="Charts" href="/controls/data-display/charts" icon="/icons/charts-icon@2x.png">
   <p>Data visualization controls to build dashboards, financial tools, scientific reports, and more.</p>
+  <Pill>Avalonia Pro</Pill>
 </DocsCard>
 
 <DocsCard header="Checkbox" href="/controls/input/selectors/checkbox" icon="/icons/checkbox-icon@2x.png">
@@ -71,10 +73,12 @@ Avalonia apps are made of high-level building blocks called controls, which allo
 
 <DocsCard header="Markdown" href="/controls/data-display/text-display/markdown" icon="/icons/markdownrenderer-icon@2x.png">
   <p>Render and display Markdown-formatted text content directly in your app.</p>
+  <Pill>Avalonia Pro</Pill>
 </DocsCard>
 
 <DocsCard header="MediaPlayer" href="/controls/media/mediaplayer" icon="/icons/mediaplayer-icon@2x.png">
   <p>A full-featured media player control for playing audio and video content.</p>
+  <Pill>Avalonia Pro</Pill>
 </DocsCard>
 
 <DocsCard header="Menu" href="/controls/menus/menu" icon="/icons/menu-icon@2x.png">
@@ -83,6 +87,7 @@ Avalonia apps are made of high-level building blocks called controls, which allo
 
 <DocsCard header="On-Screen Keyboard" href="/controls/input/text-input/virtualkeyboard" icon="/icons/onscreenkeyboard-icon@2x.png">
   <p>A virtual keyboard for touch-based text input on devices without physical keyboards.</p>
+  <Pill>Avalonia Pro</Pill>
 </DocsCard>
 
 <DocsCard header="Panel" href="/controls/layout/panels/panel" icon="/icons/panel-icon@2x.png">
@@ -99,6 +104,7 @@ Avalonia apps are made of high-level building blocks called controls, which allo
 
 <DocsCard header="RichTextEditor" href="/controls/input/text-input/richtexteditor" icon="/icons/rte-icon@2x.png">
   <p>A rich text solution with common operations such as formatting, aligning, or undo/redo.</p>
+  <Pill>Avalonia Pro</Pill>
 </DocsCard>
 
 <DocsCard header="ScrollViewer" href="/controls/layout/containers/scrollviewer" icon="/icons/scrollviewer-icon@2x.png">
@@ -133,8 +139,9 @@ Avalonia apps are made of high-level building blocks called controls, which allo
   <p>Toggle switches let users flip between on and off states for binary options like settings.</p>
 </DocsCard>
 
-<DocsCard header="TreeView" href="/controls/data-display/structured-data/treeview" icon="/icons/treeview-icon@2x.png">
-  <p>Displays hierarchical data in an expandable tree structure.</p>
+<DocsCard header="TreeDataGrid" href="/controls/data-display/structured-data/treedatagrid" icon="/icons/treeview-icon@2x.png">
+  <p>Combines tree view and data grid functionalities to display complex flat or hierarchical data.</p>
+  <Pill>Avalonia Pro</Pill>
 </DocsCard>
 
 <DocsCard header="UniformGrid" href="/controls/layout/panels/uniformgrid" icon="/icons/uniformgrid-icon@2x.png">
