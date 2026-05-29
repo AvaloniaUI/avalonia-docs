@@ -89,7 +89,7 @@ private void OnDrop(object? sender, DragEventArgs e)
 {
     if (e.DataTransfer.Formats.Contains(DataFormat.File))
     {
-        var files = e.DataTransfer.GetFiles();
+        var files = e.DataTransfer.TryGetFiles();
         if (files != null)
         {
             foreach (var file in files)
@@ -176,7 +176,7 @@ if (e.DataTransfer.Formats.Contains(DataFormat.Text))
 
 if (e.DataTransfer.Formats.Contains(DataFormat.File))
 {
-    var files = e.DataTransfer.GetFiles();
+    var files = e.DataTransfer.TryGetFiles();
 }
 ```
 
