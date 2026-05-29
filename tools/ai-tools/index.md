@@ -31,6 +31,14 @@ Build MCP is **free to use** and requires no license key or local installation. 
 
 [Set up Build MCP](/tools/ai-tools/build-mcp)
 
+## Charts MCP
+
+The Charts MCP server lets your AI assistant generate Avalonia chart previews and code. It can choose from a range of chart generation tools, such as Cartesian, circular, gauge, or financial, then return a rendered PNG preview with generated C# and XAML code snippets.
+
+Use Charts MCP when you want to explore chart types, validate a data shape, pick a palette, or produce starter code for an Avalonia charts implementation.
+
+[Set up Charts MCP](/tools/ai-tools/charts-mcp)
+
 ## DevTools MCP
 
 The DevTools MCP server gives your AI assistant direct access to your running Avalonia application. It can connect to a live app or the XAML previewer, inspect the visual tree, search for elements by type or name, read and modify properties, capture screenshots, and send input events.
@@ -50,6 +58,7 @@ With the Parcel MCP server, you describe what you want in plain English and the 
 ## See also
 
 - [Build MCP](/tools/ai-tools/build-mcp)
+- [Charts MCP](/tools/ai-tools/charts-mcp)
 - [DevTools MCP](/tools/developer-tools/mcp)
 - [Parcel MCP](/tools/parcel/mcp)
 - [Avalonia Tools overview](/tools/)
