@@ -1,0 +1,193 @@
+---
+title: 'MarkdownImage'
+hide_title: true
+slug: '/avalonia/controls/documents/markdownimage'
+uid: 'Avalonia.Controls.Documents.MarkdownImage'
+commentId: 'T:Avalonia.Controls.Documents.MarkdownImage'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Markdown'
+assembly: 'Avalonia.Controls.Markdown'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">MarkdownImage Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Markdown</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Markdown</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A [Avalonia.Controls.Documents.RichInlineUIContainer](xref:Avalonia.Controls.Documents.RichInlineUIContainer) that represents an image in a Markdown document.
+Carries the image URL and title so the render layer can load the image
+when an [Avalonia.Controls.Documents.MarkdownImage.ImageLoader](xref:Avalonia.Controls.Documents.MarkdownImage.ImageLoader) is available.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class MarkdownImage
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> RichInlineUIContainer <span className="apiref-page__relation-separator">-&gt;</span> MarkdownImage
+</div>
+</div>
+
+## Remarks
+
+The [Avalonia.Controls.Documents.MarkdownImage.ImageLoader](xref:Avalonia.Controls.Documents.MarkdownImage.ImageLoader) is typically set via an Avalonia style,
+mirroring how [Avalonia.Controls.Documents.MarkdownCodeBlock.Highlighter](xref:Avalonia.Controls.Documents.MarkdownCodeBlock.Highlighter) is configured:
+
+```csharp
+<Style Selector="MarkdownImage">
+<Setter Property="ImageLoader" Value="{StaticResource myLoader}"/>
+</Style>
+```
+
+Image loading is deferred until both [Avalonia.Controls.Documents.MarkdownImage.ImageSource](xref:Avalonia.Controls.Documents.MarkdownImage.ImageSource) and
+[Avalonia.Controls.Documents.MarkdownImage.ImageLoader](xref:Avalonia.Controls.Documents.MarkdownImage.ImageLoader) are available. This avoids coupling the
+snapshot renderer to the image loader.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [MarkdownImage](#uid-7ab5a55271) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7ab5a55271"></span>
+
+### MarkdownImage Constructor
+
+```csharp
+public MarkdownImage()
+```
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [ImageLoader](#uid-0fde56b99e) | Gets or sets the image loader used to resolve the image URL. |
+| [ImageSource](#uid-49735161df) | Gets or sets the image URL. |
+| [ImageTitle](#uid-5da66e5005) | Gets or sets the image title (used as tooltip). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0fde56b99e"></span>
+
+### ImageLoader Property
+
+Gets or sets the image loader used to resolve the image URL.
+
+```csharp
+public Avalonia.Controls.MarkdownImageLoader ImageLoader { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-49735161df"></span>
+
+### ImageSource Property
+
+Gets or sets the image URL.
+
+```csharp
+public string ImageSource { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5da66e5005"></span>
+
+### ImageTitle Property
+
+Gets or sets the image title (used as tooltip).
+
+```csharp
+public string ImageTitle { get; set; }
+```
+
+</section>
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [ImageLoaderProperty](#uid-ced0c6819f) | Defines the [Avalonia.Controls.Documents.MarkdownImage.ImageLoader](xref:Avalonia.Controls.Documents.MarkdownImage.ImageLoader) property. |
+| [ImageSourceProperty](#uid-a9af7708a4) | Defines the [Avalonia.Controls.Documents.MarkdownImage.ImageSource](xref:Avalonia.Controls.Documents.MarkdownImage.ImageSource) property. |
+| [ImageTitleProperty](#uid-c64bde17dd) | Defines the [Avalonia.Controls.Documents.MarkdownImage.ImageTitle](xref:Avalonia.Controls.Documents.MarkdownImage.ImageTitle) property. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ced0c6819f"></span>
+
+### ImageLoaderProperty Field
+
+Defines the [Avalonia.Controls.Documents.MarkdownImage.ImageLoader](xref:Avalonia.Controls.Documents.MarkdownImage.ImageLoader) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.MarkdownImageLoader> ImageLoaderProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a9af7708a4"></span>
+
+### ImageSourceProperty Field
+
+Defines the [Avalonia.Controls.Documents.MarkdownImage.ImageSource](xref:Avalonia.Controls.Documents.MarkdownImage.ImageSource) property.
+
+```csharp
+public Avalonia.StyledProperty<string> ImageSourceProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c64bde17dd"></span>
+
+### ImageTitleProperty Field
+
+Defines the [Avalonia.Controls.Documents.MarkdownImage.ImageTitle](xref:Avalonia.Controls.Documents.MarkdownImage.ImageTitle) property.
+
+```csharp
+public Avalonia.StyledProperty<string> ImageTitleProperty
+```
+
+</section>
+
+</ApiRefPage>
+

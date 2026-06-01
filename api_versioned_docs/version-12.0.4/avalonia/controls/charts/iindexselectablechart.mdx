@@ -1,0 +1,156 @@
+---
+title: 'IIndexSelectableChart'
+hide_title: true
+slug: '/avalonia/controls/charts/iindexselectablechart'
+uid: 'Avalonia.Controls.Charts.IIndexSelectableChart'
+commentId: 'T:Avalonia.Controls.Charts.IIndexSelectableChart'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Charts'
+assembly: 'Avalonia.Controls.Charts'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Charts'
+tfms:
+  - 'net9.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IIndexSelectableChart Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Charts</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Charts</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Charts</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Selection contract for chart components that select data points by index.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface IIndexSelectableChart
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="iselectablechart">ISelectableChart</a>
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [IsDataPointSelected](#uid-5f135b52de) | Checks if the data point at the given index is currently selected. |
+| [TrySelectDataPoint](#uid-ee635c36c3) | Attempts to select a data point at the given index. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5f135b52de"></span>
+
+### IsDataPointSelected Method
+
+Checks if the data point at the given index is currently selected.
+
+```csharp
+public bool IsDataPointSelected(int index)
+```
+
+#### Parameters
+
+`index` int
+
+The index to check.
+
+
+#### Returns
+
+bool
+
+True if selected.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ee635c36c3"></span>
+
+### TrySelectDataPoint Method
+
+Attempts to select a data point at the given index.
+
+```csharp
+public bool TrySelectDataPoint(int index)
+```
+
+#### Parameters
+
+`index` int
+
+The index of the data point.
+
+
+#### Returns
+
+bool
+
+True if the selection state changed.
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [SelectedIndex](#uid-ad41a17b14) | Gets the index of the currently selected data point (-1 if none). |
+| [SelectedIndexes](#uid-ec2993b5d5) | Gets the collection of all currently selected indexes. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ad41a17b14"></span>
+
+### SelectedIndex Property
+
+Gets the index of the currently selected data point (-1 if none).
+
+```csharp
+public int SelectedIndex { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ec2993b5d5"></span>
+
+### SelectedIndexes Property
+
+Gets the collection of all currently selected indexes.
+
+```csharp
+public System.Collections.Generic.IReadOnlyCollection<int> SelectedIndexes { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+
