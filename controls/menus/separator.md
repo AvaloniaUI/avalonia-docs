@@ -42,6 +42,20 @@ In the example above, the separator visually divides the file operations from th
 </TextBox>
 ```
 
+## Vertical variant
+
+A `Height` of `NaN` and `Width` of `1` can be used to create a vertical separator:
+
+```
+<StackPanel Orientation="Horizontal">
+  <RadioButton GroupName="ViewMode" Content="List" />
+  <RadioButton GroupName="ViewMode" Content="Small Icons" />
+  <RadioButton GroupName="ViewMode" Content="Image Preview" />
+  <Separator Height="NaN" Width="1" />
+  <Button Content="Save" />
+</StackPanel>
+```
+
 ## Shorthand syntax
 
 You can produce the same separator line by setting a `MenuItem` header to `"-"`:
