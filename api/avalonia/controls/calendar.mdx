@@ -122,7 +122,7 @@ element in XAML.
 
 | Name | Description |
 | --- | --- |
-| [Calendar](#uid-90673b0226) | Initializes a new instance of the [System.Windows.Controls.Calendar](xref:System.Windows.Controls.Calendar) class. |
+| [Calendar](#uid-90673b0226) | Initializes a new instance of the [Avalonia.Controls.Calendar](xref:Avalonia.Controls.Calendar) class. |
 
 <section className="apiref-page__member-entry">
 
@@ -131,7 +131,7 @@ element in XAML.
 ### Calendar Constructor
 
 Initializes a new instance of the
-[System.Windows.Controls.Calendar](xref:System.Windows.Controls.Calendar) class.
+[Avalonia.Controls.Calendar](xref:Avalonia.Controls.Calendar) class.
 
 ```csharp
 public Calendar()
@@ -383,9 +383,9 @@ month of May should be specified as 05.
 #### Exceptions
 
 - [The given date is not in the range specified by
-\[System.Windows.Controls.Calendar.DisplayDateStart\](xref:System.Windows.Controls.Calendar.DisplayDateStart)
+\[Avalonia.Controls.Calendar.DisplayDateStart\](xref:Avalonia.Controls.Calendar.DisplayDateStart)
 and
-\[System.Windows.Controls.Calendar.DisplayDateEnd\](xref:System.Windows.Controls.Calendar.DisplayDateEnd).](xref:System.ArgumentOutOfRangeException)
+\[Avalonia.Controls.Calendar.DisplayDateEnd\](xref:Avalonia.Controls.Calendar.DisplayDateEnd).](xref:System.ArgumentOutOfRangeException)
 
 </section>
 
@@ -457,7 +457,7 @@ public Avalonia.Controls.CalendarMode DisplayMode { get; set; }
 #### Value
 
 A value indicating what length of time the
-[System.Windows.Controls.Calendar](xref:System.Windows.Controls.Calendar) should display.
+[Avalonia.Controls.Calendar](xref:Avalonia.Controls.Calendar) should display.
 
 
 </section>
@@ -540,16 +540,16 @@ modes, this property will always be the first date in SelectedDates.
 #### Exceptions
 
 - [The given date is outside the range specified by
-\[System.Windows.Controls.Calendar.DisplayDateStart\](xref:System.Windows.Controls.Calendar.DisplayDateStart)
-and \[System.Windows.Controls.Calendar.DisplayDateEnd\](xref:System.Windows.Controls.Calendar.DisplayDateEnd)
+\[Avalonia.Controls.Calendar.DisplayDateStart\](xref:Avalonia.Controls.Calendar.DisplayDateStart)
+and \[Avalonia.Controls.Calendar.DisplayDateEnd\](xref:Avalonia.Controls.Calendar.DisplayDateEnd)
 -or-
 The given date is in the
-\[System.Windows.Controls.Calendar.BlackoutDates\](xref:System.Windows.Controls.Calendar.BlackoutDates)
+\[Avalonia.Controls.Calendar.BlackoutDates\](xref:Avalonia.Controls.Calendar.BlackoutDates)
 collection.](xref:System.ArgumentOutOfRangeException)
 - [If set to anything other than null when
-\[System.Windows.Controls.Calendar.SelectionMode\](xref:System.Windows.Controls.Calendar.SelectionMode) is
+\[Avalonia.Controls.Calendar.SelectionMode\](xref:Avalonia.Controls.Calendar.SelectionMode) is
 set to
-\[System.Windows.Controls.CalendarSelectionMode.None\](xref:System.Windows.Controls.CalendarSelectionMode.None).](xref:System.InvalidOperationException)
+\[Avalonia.Controls.CalendarSelectionMode.None\](xref:Avalonia.Controls.CalendarSelectionMode.None).](xref:System.InvalidOperationException)
 
 </section>
 
@@ -567,7 +567,7 @@ public Avalonia.Controls.Primitives.SelectedDatesCollection SelectedDates { get;
 
 #### Value
 
-A [System.Windows.Controls.SelectedDatesCollection](xref:System.Windows.Controls.SelectedDatesCollection)
+A [Avalonia.Controls.Primitives.SelectedDatesCollection](xref:Avalonia.Controls.Primitives.SelectedDatesCollection)
 object that contains the currently selected dates. The default is an
 empty collection.
 
@@ -626,7 +626,7 @@ public Avalonia.Controls.CalendarSelectionMode SelectionMode { get; set; }
 #### Value
 
 A value that indicates the current selection mode. The default is
-[System.Windows.Controls.CalendarSelectionMode.SingleDate](xref:System.Windows.Controls.CalendarSelectionMode.SingleDate).
+[Avalonia.Controls.CalendarSelectionMode.SingleDate](xref:Avalonia.Controls.CalendarSelectionMode.SingleDate).
 
 
 #### Remarks
@@ -880,8 +880,8 @@ public Avalonia.StyledProperty<Avalonia.Controls.CalendarSelectionMode> Selectio
 
 | Name | Description |
 | --- | --- |
-| [DisplayDateChanged](#uid-ba93b82678) | Occurs when the [System.Windows.Controls.Calendar.DisplayDate](xref:System.Windows.Controls.Calendar.DisplayDate) property is changed. |
-| [DisplayModeChanged](#uid-9f911ccd3b) | Occurs when the [System.Windows.Controls.Calendar.DisplayMode](xref:System.Windows.Controls.Calendar.DisplayMode) property is changed. |
+| [DisplayDateChanged](#uid-ba93b82678) | Occurs when the [Avalonia.Controls.Calendar.DisplayDate](xref:Avalonia.Controls.Calendar.DisplayDate) property is changed. |
+| [DisplayModeChanged](#uid-9f911ccd3b) | Occurs when the [Avalonia.Controls.Calendar.DisplayMode](xref:Avalonia.Controls.Calendar.DisplayMode) property is changed. |
 | [SelectedDatesChanged](#uid-893ff72632) | No summary available. |
 | [TemplateApplied](primitives/templatedcontrol.mdx#uid-d353f79b7c) | Raised when the control's template is applied. Inherited from [TemplatedControl](primitives/templatedcontrol.mdx). |
 | [Loaded](control.mdx#uid-c0a1ac2bc3) | Occurs when the control has been fully constructed in the visual tree and both layout and render are complete. Inherited from [Control](control.mdx). |
@@ -939,7 +939,7 @@ public Avalonia.StyledProperty<Avalonia.Controls.CalendarSelectionMode> Selectio
 ### DisplayDateChanged Event
 
 Occurs when the
-[System.Windows.Controls.Calendar.DisplayDate](xref:System.Windows.Controls.Calendar.DisplayDate)
+[Avalonia.Controls.Calendar.DisplayDate](xref:Avalonia.Controls.Calendar.DisplayDate)
 property is changed.
 
 ```csharp
@@ -959,7 +959,7 @@ This event occurs after DisplayDate is assigned its new value.
 ### DisplayModeChanged Event
 
 Occurs when the
-[System.Windows.Controls.Calendar.DisplayMode](xref:System.Windows.Controls.Calendar.DisplayMode)
+[Avalonia.Controls.Calendar.DisplayMode](xref:Avalonia.Controls.Calendar.DisplayMode)
 property is changed.
 
 ```csharp

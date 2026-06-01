@@ -1,0 +1,291 @@
+---
+title: 'ListToggleAction'
+hide_title: true
+slug: '/avalonia/controls/documents/primitives/actions/listtoggleaction'
+uid: 'Avalonia.Controls.Documents.Primitives.Actions.ListToggleAction'
+commentId: 'T:Avalonia.Controls.Documents.Primitives.Actions.ListToggleAction'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.RichTextEditor'
+assembly: 'Avalonia.Controls.RichTextEditor'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.Primitives.Actions'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ListToggleAction Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.Primitives.Actions</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.RichTextEditor</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.RichTextEditor</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Toggles the current selection or block between a [Avalonia.Controls.Documents.List](xref:Avalonia.Controls.Documents.List) and plain paragraphs.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class ListToggleAction
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="editoraction">EditorAction</a> <span className="apiref-page__relation-separator">-&gt;</span> ListToggleAction
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="ieditoraction">IEditorAction</a>, <a href="itoggleaction">IToggleAction</a>
+</div>
+</div>
+
+## Remarks
+
+When toggled on, wraps all paragraphs in the selection into new [Avalonia.Controls.Documents.List](xref:Avalonia.Controls.Documents.List)
+elements with one [Avalonia.Controls.Documents.ListItem](xref:Avalonia.Controls.Documents.ListItem) per paragraph. Paragraphs in different
+parent containers (e.g. separate table cells) each get their own list.
+When toggled off, unwraps all lists covering the selection.
+
+Two instances are registered in [Avalonia.Controls.Documents.Primitives.Actions.EditorActions](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions): one for unordered
+lists (Disc) and one for ordered lists (Decimal). The [Avalonia.Controls.Documents.Primitives.Actions.ListToggleAction.IsChecked(Avalonia.Controls.Documents.Primitives.ITextEditorHost)](xref:Avalonia.Controls.Documents.Primitives.Actions.ListToggleAction.IsChecked%28Avalonia.Controls.Documents.Primitives.ITextEditorHost%29)
+method checks whether all paragraphs in the selection are inside a list whose
+marker style belongs to the same category.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [ListToggleAction](#uid-dbd63cba98) | Initializes a new instance of the [Avalonia.Controls.Documents.Primitives.Actions.ListToggleAction](xref:Avalonia.Controls.Documents.Primitives.Actions.ListToggleAction) class. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-dbd63cba98"></span>
+
+### ListToggleAction Constructor
+
+Initializes a new instance of the [Avalonia.Controls.Documents.Primitives.Actions.ListToggleAction](xref:Avalonia.Controls.Documents.Primitives.Actions.ListToggleAction) class.
+
+```csharp
+public ListToggleAction(Avalonia.Controls.Documents.Primitives.DocumentNodes.TextMarkerStyle defaultMarkerStyle, string id, string displayName)
+```
+
+#### Parameters
+
+`defaultMarkerStyle` Avalonia.Controls.Documents.Primitives.DocumentNodes.TextMarkerStyle
+
+The marker style to use when creating a new list (e.g., [Avalonia.Controls.Documents.Primitives.DocumentNodes.TextMarkerStyle.Disc](xref:Avalonia.Controls.Documents.Primitives.DocumentNodes.TextMarkerStyle.Disc)
+for bulleted or [Avalonia.Controls.Documents.Primitives.DocumentNodes.TextMarkerStyle.Decimal](xref:Avalonia.Controls.Documents.Primitives.DocumentNodes.TextMarkerStyle.Decimal) for numbered).
+
+
+`id` string
+
+The unique action identifier.
+
+
+`displayName` string
+
+The human-readable action name.
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [CanExecute](#uid-949d405fe7) | Gets whether the action can currently execute. |
+| [Execute](#uid-ca0edcb5bb) | Executes the action synchronously. |
+| [GetState](#uid-90667995df) | Gets the current state of the action. |
+| [IsChecked](#uid-640fb4bd8c) | Gets whether the action is currently "on" for the selection. |
+| [ExecuteAsync](editoraction.mdx#uid-6a0258eff0) | Executes the action asynchronously. Inherited from [EditorAction](editoraction.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-949d405fe7"></span>
+
+### CanExecute Method
+
+Gets whether the action can currently execute.
+
+```csharp
+public bool CanExecute(Avalonia.Controls.Documents.Primitives.ITextEditorHost host)
+```
+
+#### Parameters
+
+`host` [Avalonia.Controls.Documents.Primitives.ITextEditorHost](xref:Avalonia.Controls.Documents.Primitives.ITextEditorHost)
+
+The editor host to check against.
+
+
+#### Returns
+
+bool
+
+True if the action can execute; otherwise, false.
+
+
+#### Remarks
+
+This is called frequently to update UI state (button enabled/disabled).
+Implementations should be fast and avoid heavy computation.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ca0edcb5bb"></span>
+
+### Execute Method
+
+Executes the action synchronously.
+
+```csharp
+public void Execute(Avalonia.Controls.Documents.Primitives.ITextEditorHost host)
+```
+
+#### Parameters
+
+`host` [Avalonia.Controls.Documents.Primitives.ITextEditorHost](xref:Avalonia.Controls.Documents.Primitives.ITextEditorHost)
+
+The editor host to execute on.
+
+
+#### Remarks
+
+For actions that require async operations (like file dialogs),
+use [Avalonia.Controls.Documents.Primitives.Actions.IEditorAction.ExecuteAsync(Avalonia.Controls.Documents.Primitives.ITextEditorHost)](xref:Avalonia.Controls.Documents.Primitives.Actions.IEditorAction.ExecuteAsync%28Avalonia.Controls.Documents.Primitives.ITextEditorHost%29) instead.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-90667995df"></span>
+
+### GetState Method
+
+Gets the current state of the action.
+
+```csharp
+public object GetState(Avalonia.Controls.Documents.Primitives.ITextEditorHost host)
+```
+
+#### Parameters
+
+`host` [Avalonia.Controls.Documents.Primitives.ITextEditorHost](xref:Avalonia.Controls.Documents.Primitives.ITextEditorHost)
+
+The editor host to query.
+
+
+#### Returns
+
+object
+
+The current state, or null if the action has no state.
+For toggle actions, this returns a boolean.
+For property actions, this returns the current property value.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-640fb4bd8c"></span>
+
+### IsChecked Method
+
+Gets whether the action is currently "on" for the selection.
+
+```csharp
+public bool IsChecked(Avalonia.Controls.Documents.Primitives.ITextEditorHost host)
+```
+
+#### Parameters
+
+`host` [Avalonia.Controls.Documents.Primitives.ITextEditorHost](xref:Avalonia.Controls.Documents.Primitives.ITextEditorHost)
+
+The editor host to query.
+
+
+#### Returns
+
+bool
+
+True if the toggle state is on; otherwise, false.
+
+
+#### Remarks
+
+For formatting actions, this returns true if all text in the selection
+has the formatting applied.
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [DisplayName](#uid-90f5c74c1b) | Gets the display name for UI purposes. |
+| [Id](#uid-3a1830c0fd) | Gets the unique identifier for this action. |
+| [Gesture](editoraction.mdx#uid-557e9af400) | Gets the optional keyboard gesture for this action. Inherited from [EditorAction](editoraction.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-90f5c74c1b"></span>
+
+### DisplayName Property
+
+Gets the display name for UI purposes.
+
+```csharp
+public string DisplayName { get; set; }
+```
+
+#### Remarks
+
+This is used for tooltips, menu items, and accessibility.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3a1830c0fd"></span>
+
+### Id Property
+
+Gets the unique identifier for this action.
+
+```csharp
+public string Id { get; set; }
+```
+
+#### Remarks
+
+IDs follow a hierarchical naming convention:
+
+- Edit.Undo, Edit.Redo, Edit.Cut, etc.
+- Format.RichBold, Format.RichItalic, etc.
+- Paragraph.AlignLeft, Paragraph.BulletList, etc.
+
+</section>
+
+</ApiRefPage>
+

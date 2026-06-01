@@ -85,7 +85,7 @@ public AutoCompleteBox()
 
 | Name | Description |
 | --- | --- |
-| [PopulateComplete](#uid-26f2d2c8e0) | Notifies the [Avalonia.Controls.AutoCompleteBox](xref:Avalonia.Controls.AutoCompleteBox) that the [Avalonia.Controls.AutoCompleteBox.Items](xref:Avalonia.Controls.AutoCompleteBox.Items) property has been set and the data can be filtered to provide possible matches in the drop-down. |
+| [PopulateComplete](#uid-26f2d2c8e0) | Notifies the [Avalonia.Controls.AutoCompleteBox](xref:Avalonia.Controls.AutoCompleteBox) that the [Avalonia.Controls.AutoCompleteBox.ItemsSource](xref:Avalonia.Controls.AutoCompleteBox.ItemsSource) property has been set and the data can be filtered to provide possible matches in the drop-down. |
 | [ApplyTemplate](primitives/templatedcontrol.mdx#uid-cc70dd4d2f) | Creates the visual children of the control, if necessary Inherited from [TemplatedControl](primitives/templatedcontrol.mdx). |
 | [GetIsTemplateFocusTarget](primitives/templatedcontrol.mdx#uid-75a788f38f) | Gets the value of the IsTemplateFocusTargetProperty attached property on a control. Inherited from [TemplatedControl](primitives/templatedcontrol.mdx). |
 | [SetIsTemplateFocusTarget](primitives/templatedcontrol.mdx#uid-281801c25f) | Sets the value of the IsTemplateFocusTargetProperty attached property on a control. Inherited from [TemplatedControl](primitives/templatedcontrol.mdx). |
@@ -132,7 +132,7 @@ public AutoCompleteBox()
 
 Notifies the
 [Avalonia.Controls.AutoCompleteBox](xref:Avalonia.Controls.AutoCompleteBox) that the
-[Avalonia.Controls.AutoCompleteBox.Items](xref:Avalonia.Controls.AutoCompleteBox.Items)
+[Avalonia.Controls.AutoCompleteBox.ItemsSource](xref:Avalonia.Controls.AutoCompleteBox.ItemsSource)
 property has been set and the data can be filtered to provide
 possible matches in the drop-down.
 
@@ -168,7 +168,7 @@ PopulateComplete to indicate the drop-down is populated.
 | [IsTextCompletionEnabled](#uid-0061228bd2) | Gets or sets a value indicating whether the first possible match found during the filtering process will be displayed automatically in the text box. |
 | [ItemFilter](#uid-e56150b50a) | Gets or sets the custom method that uses user-entered text to filter the items specified by the [Avalonia.Controls.AutoCompleteBox.ItemsSource](xref:Avalonia.Controls.AutoCompleteBox.ItemsSource) property for display in the drop-down. |
 | [ItemSelector](#uid-fae1716297) | Gets or sets the custom method that combines the user-entered text and one of the items specified by the [Avalonia.Controls.AutoCompleteBox.ItemsSource](xref:Avalonia.Controls.AutoCompleteBox.ItemsSource). |
-| [ItemTemplate](#uid-4e7e4b5331) | Gets or sets the [Avalonia.DataTemplate](xref:Avalonia.DataTemplate) used to display each item in the drop-down portion of the control. |
+| [ItemTemplate](#uid-4e7e4b5331) | Gets or sets the [Avalonia.Controls.Templates.IDataTemplate](xref:Avalonia.Controls.Templates.IDataTemplate) used to display each item in the drop-down portion of the control. |
 | [ItemsSource](#uid-e913179fef) | Gets or sets a collection that is used to generate the items for the drop-down portion of the [Avalonia.Controls.AutoCompleteBox](xref:Avalonia.Controls.AutoCompleteBox) control. |
 | [MaxDropDownHeight](#uid-99b704dad6) | Gets or sets the maximum height of the drop-down portion of the [Avalonia.Controls.AutoCompleteBox](xref:Avalonia.Controls.AutoCompleteBox) control. |
 | [MaxLength](#uid-0fa621de60) | Gets or sets the maximum number of characters that the [Avalonia.Controls.AutoCompleteBox](xref:Avalonia.Controls.AutoCompleteBox) can accept. This constraint only applies for manually entered (user-inputted) text. |
@@ -460,7 +460,7 @@ text and one of the items specified by the [Avalonia.Controls.AutoCompleteBox.It
 
 ### ItemTemplate Property
 
-Gets or sets the [Avalonia.DataTemplate](xref:Avalonia.DataTemplate) used
+Gets or sets the [Avalonia.Controls.Templates.IDataTemplate](xref:Avalonia.Controls.Templates.IDataTemplate) used
 to display each item in the drop-down portion of the control.
 
 ```csharp
@@ -469,7 +469,7 @@ public Avalonia.Controls.Templates.IDataTemplate ItemTemplate { get; set; }
 
 #### Value
 
-The [Avalonia.DataTemplate](xref:Avalonia.DataTemplate) used to
+The [Avalonia.Controls.Templates.IDataTemplate](xref:Avalonia.Controls.Templates.IDataTemplate) used to
 display each item in the drop-down. The default is null.
 
 

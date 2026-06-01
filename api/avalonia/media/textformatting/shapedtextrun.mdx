@@ -61,6 +61,19 @@ public class ShapedTextRun
 </div>
 </div>
 
+## Remarks
+
+Glyph data in the underlying [Avalonia.Media.TextFormatting.ShapedTextRun.ShapedBuffer](xref:Avalonia.Media.TextFormatting.ShapedTextRun.ShapedBuffer) is immutable after shaping:
+LTR buffers are in ascending-cluster (logical) order, RTL buffers are in
+descending-cluster (visual) order. [Avalonia.Media.TextFormatting.BidiReorderer](xref:Avalonia.Media.TextFormatting.BidiReorderer) only reorders runs,
+it never mutates glyph order.
+
+Ref-counted: the initial constructor call establishes one reference. Call
+[Avalonia.Media.TextFormatting.ShapedTextRun.AddRef](xref:Avalonia.Media.TextFormatting.ShapedTextRun.AddRef) when taking an additional reference (e.g., when a
+[Avalonia.Media.TextFormatting.TextRunCache](xref:Avalonia.Media.TextFormatting.TextRunCache) stores a shaped run a formatter is also about to use),
+and [Avalonia.Media.TextFormatting.ShapedTextRun.Dispose](xref:Avalonia.Media.TextFormatting.ShapedTextRun.Dispose) to release. The underlying shaped buffer is disposed only
+when the last reference is released.
+
 ## Constructors
 
 | Name | Description |
@@ -165,7 +178,6 @@ bool
 | [Baseline](#uid-c1eb93ccaa) | No summary available. |
 | [BidiLevel](#uid-a55212ac10) | No summary available. |
 | [GlyphRun](#uid-b7d69aea23) | No summary available. |
-| [IsReversed](#uid-2879f9633a) | No summary available. |
 | [Length](#uid-f94822b621) | Gets the text source length. |
 | [Properties](#uid-7b21cc5c6b) | A set of properties shared by every characters in the run |
 | [ShapedBuffer](#uid-44e60a11fa) | No summary available. |
@@ -205,18 +217,6 @@ public sbyte BidiLevel { get; set; }
 
 ```csharp
 public Avalonia.Media.GlyphRun GlyphRun { get; set; }
-```
-
-</section>
-
-<section className="apiref-page__member-entry">
-
-<span id="uid-2879f9633a"></span>
-
-### IsReversed Property
-
-```csharp
-public bool IsReversed { get; set; }
 ```
 
 </section>

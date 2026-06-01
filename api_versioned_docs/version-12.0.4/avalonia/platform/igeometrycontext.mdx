@@ -1,0 +1,275 @@
+---
+title: 'IGeometryContext'
+hide_title: true
+slug: '/avalonia/platform/igeometrycontext'
+uid: 'Avalonia.Platform.IGeometryContext'
+commentId: 'T:Avalonia.Platform.IGeometryContext'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Platform'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IGeometryContext Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Platform</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Describes a geometry using drawing commands.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface IGeometryContext
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IDisposable
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [ArcTo](#uid-528688a318) | Draws an arc to the specified point. |
+| [BeginFigure](#uid-59fecc3071) | Begins a new figure. |
+| [CubicBezierTo](#uid-50f83ecbba) | Draws a Bezier curve to the specified point. |
+| [EndFigure](#uid-b37d0fd9b8) | Ends the figure started by [Avalonia.Platform.IGeometryContext.BeginFigure(Avalonia.Point,bool)](xref:Avalonia.Platform.IGeometryContext.BeginFigure%28Avalonia.Point%2CSystem.Boolean%29). |
+| [LineTo](#uid-9a46d29fe4) | Draws a line to the specified point. |
+| [QuadraticBezierTo](#uid-1eff7e8afa) | Draws a quadratic Bezier curve to the specified point |
+| [SetFillRule](#uid-f5a505acea) | Sets path's winding rule (default is EvenOdd). You should call this method before any calls to BeginFigure. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-528688a318"></span>
+
+### ArcTo Method
+
+Draws an arc to the specified point.
+
+```csharp
+public void ArcTo(Avalonia.Point point, Avalonia.Size size, double rotationAngle, bool isLargeArc, Avalonia.Media.SweepDirection sweepDirection, bool isStroked)
+```
+
+#### Parameters
+
+`point` [Avalonia.Point](xref:Avalonia.Point)
+
+The destination point.
+
+
+`size` [Avalonia.Size](xref:Avalonia.Size)
+
+The radii of an oval whose perimeter is used to draw the angle.
+
+
+`rotationAngle` double
+
+The rotation angle (in radians) of the oval that specifies the curve.
+
+
+`isLargeArc` bool
+
+true to draw the arc greater than 180 degrees; otherwise, false.
+
+
+`sweepDirection` [Avalonia.Media.SweepDirection](xref:Avalonia.Media.SweepDirection)
+
+A value that indicates whether the arc is drawn in the Clockwise or Counterclockwise direction.
+
+
+`isStroked` bool
+
+Whether the segment is stroked
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-59fecc3071"></span>
+
+### BeginFigure Method
+
+Begins a new figure.
+
+```csharp
+public void BeginFigure(Avalonia.Point startPoint, bool isFilled)
+```
+
+#### Parameters
+
+`startPoint` [Avalonia.Point](xref:Avalonia.Point)
+
+The starting point for the figure.
+
+
+`isFilled` bool
+
+Whether the figure is filled.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-50f83ecbba"></span>
+
+### CubicBezierTo Method
+
+Draws a Bezier curve to the specified point.
+
+```csharp
+public void CubicBezierTo(Avalonia.Point controlPoint1, Avalonia.Point controlPoint2, Avalonia.Point endPoint, bool isStroked)
+```
+
+#### Parameters
+
+`controlPoint1` [Avalonia.Point](xref:Avalonia.Point)
+
+The first control point used to specify the shape of the curve.
+
+
+`controlPoint2` [Avalonia.Point](xref:Avalonia.Point)
+
+The second control point used to specify the shape of the curve.
+
+
+`endPoint` [Avalonia.Point](xref:Avalonia.Point)
+
+The destination point for the end of the curve.
+
+
+`isStroked` bool
+
+Whether the segment is stroked
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b37d0fd9b8"></span>
+
+### EndFigure Method
+
+Ends the figure started by [Avalonia.Platform.IGeometryContext.BeginFigure(Avalonia.Point,bool)](xref:Avalonia.Platform.IGeometryContext.BeginFigure%28Avalonia.Point%2CSystem.Boolean%29).
+
+```csharp
+public void EndFigure(bool isClosed)
+```
+
+#### Parameters
+
+`isClosed` bool
+
+Whether the figure is closed.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9a46d29fe4"></span>
+
+### LineTo Method
+
+Draws a line to the specified point.
+
+```csharp
+public void LineTo(Avalonia.Point point, bool isStroked)
+```
+
+#### Parameters
+
+`point` [Avalonia.Point](xref:Avalonia.Point)
+
+The destination point.
+
+
+`isStroked` bool
+
+Whether the segment is stroked
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1eff7e8afa"></span>
+
+### QuadraticBezierTo Method
+
+Draws a quadratic Bezier curve to the specified point
+
+```csharp
+public void QuadraticBezierTo(Avalonia.Point controlPoint, Avalonia.Point endPoint, bool isStroked)
+```
+
+#### Parameters
+
+`controlPoint` [Avalonia.Point](xref:Avalonia.Point)
+
+The control point used to specify the shape of the curve.
+
+
+`endPoint` [Avalonia.Point](xref:Avalonia.Point)
+
+The destination point for the end of the curve.
+
+
+`isStroked` bool
+
+Whether the segment is stroked
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f5a505acea"></span>
+
+### SetFillRule Method
+
+Sets path's winding rule (default is EvenOdd). You should call this method before any calls to BeginFigure.
+
+```csharp
+public void SetFillRule(Avalonia.Media.FillRule fillRule)
+```
+
+#### Parameters
+
+`fillRule` [Avalonia.Media.FillRule](xref:Avalonia.Media.FillRule)
+
+
+</section>
+
+</ApiRefPage>
+

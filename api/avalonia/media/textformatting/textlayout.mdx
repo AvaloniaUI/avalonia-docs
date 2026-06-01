@@ -65,7 +65,7 @@ public class TextLayout
 
 | Name | Description |
 | --- | --- |
-| [TextLayout (2 overloads)](#uid-878bd1e583) | Initializes a new instance of the [Avalonia.Media.TextFormatting.TextLayout](xref:Avalonia.Media.TextFormatting.TextLayout) class. |
+| [TextLayout (4 overloads)](#uid-878bd1e583) | Initializes a new instance of the [Avalonia.Media.TextFormatting.TextLayout](xref:Avalonia.Media.TextFormatting.TextLayout) class. |
 
 <span id="uid-878bd1e583"></span>
 
@@ -81,6 +81,44 @@ Initializes a new instance of the [Avalonia.Media.TextFormatting.TextLayout](xre
 
 ```csharp
 public TextLayout(Avalonia.Media.TextFormatting.ITextSource textSource, Avalonia.Media.TextFormatting.TextParagraphProperties paragraphProperties, Avalonia.Media.TextTrimming textTrimming, double maxWidth, double maxHeight, int maxLines)
+```
+
+##### Parameters
+
+`textSource` [Avalonia.Media.TextFormatting.ITextSource](xref:Avalonia.Media.TextFormatting.ITextSource)
+
+
+`paragraphProperties` [Avalonia.Media.TextFormatting.TextParagraphProperties](xref:Avalonia.Media.TextFormatting.TextParagraphProperties)
+
+
+`textTrimming` [Avalonia.Media.TextTrimming](xref:Avalonia.Media.TextTrimming)
+
+
+`maxWidth` double
+
+
+`maxHeight` double
+
+
+`maxLines` int
+
+
+##### Remarks
+
+This overload is provided for binary compatibility. New code should use the overload that accepts a [Avalonia.Media.TextFormatting.TextRunCache](xref:Avalonia.Media.TextFormatting.TextRunCache).
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1173f3bcfb"></span>
+
+#### TextLayout Constructor
+
+Initializes a new instance of the [Avalonia.Media.TextFormatting.TextLayout](xref:Avalonia.Media.TextFormatting.TextLayout) class.
+
+```csharp
+public TextLayout(Avalonia.Media.TextFormatting.ITextSource textSource, Avalonia.Media.TextFormatting.TextParagraphProperties paragraphProperties, Avalonia.Media.TextTrimming textTrimming, double maxWidth, double maxHeight, int maxLines, Avalonia.Media.TextFormatting.TextRunCache textRunCache)
 ```
 
 ##### Parameters
@@ -113,6 +151,11 @@ The maximum height.
 `maxLines` int
 
 The maximum number of text lines.
+
+
+`textRunCache` [Avalonia.Media.TextFormatting.TextRunCache](xref:Avalonia.Media.TextFormatting.TextRunCache)
+
+An optional cache for shaped text runs to avoid redundant shaping.
 
 
 </section>
@@ -175,6 +218,71 @@ public TextLayout(string text, Avalonia.Media.Typeface typeface, double fontSize
 
 
 `textStyleOverrides` System.Collections.Generic.IReadOnlyList&lt;Avalonia.Utilities.ValueSpan&lt;T&gt;&lt;[Avalonia.Media.TextFormatting.TextRunProperties](xref:Avalonia.Media.TextFormatting.TextRunProperties)&gt;&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5882faea3b"></span>
+
+#### TextLayout Constructor
+
+```csharp
+public TextLayout(string text, Avalonia.Media.Typeface typeface, double fontSize, Avalonia.Media.IBrush foreground, Avalonia.Media.TextAlignment textAlignment, Avalonia.Media.TextWrapping textWrapping, Avalonia.Media.TextTrimming textTrimming, Avalonia.Media.TextDecorationCollection textDecorations, Avalonia.Media.FlowDirection flowDirection, double maxWidth, double maxHeight, double lineHeight, double letterSpacing, int maxLines, Avalonia.Media.FontFeatureCollection fontFeatures, System.Collections.Generic.IReadOnlyList<Avalonia.Utilities.ValueSpan<T><Avalonia.Media.TextFormatting.TextRunProperties>> textStyleOverrides, Avalonia.Media.TextFormatting.TextRunCache textRunCache)
+```
+
+##### Parameters
+
+`text` string
+
+
+`typeface` [Avalonia.Media.Typeface](xref:Avalonia.Media.Typeface)
+
+
+`fontSize` double
+
+
+`foreground` [Avalonia.Media.IBrush](xref:Avalonia.Media.IBrush)
+
+
+`textAlignment` [Avalonia.Media.TextAlignment](xref:Avalonia.Media.TextAlignment)
+
+
+`textWrapping` [Avalonia.Media.TextWrapping](xref:Avalonia.Media.TextWrapping)
+
+
+`textTrimming` [Avalonia.Media.TextTrimming](xref:Avalonia.Media.TextTrimming)
+
+
+`textDecorations` [Avalonia.Media.TextDecorationCollection](xref:Avalonia.Media.TextDecorationCollection)
+
+
+`flowDirection` [Avalonia.Media.FlowDirection](xref:Avalonia.Media.FlowDirection)
+
+
+`maxWidth` double
+
+
+`maxHeight` double
+
+
+`lineHeight` double
+
+
+`letterSpacing` double
+
+
+`maxLines` int
+
+
+`fontFeatures` [Avalonia.Media.FontFeatureCollection](xref:Avalonia.Media.FontFeatureCollection)
+
+
+`textStyleOverrides` System.Collections.Generic.IReadOnlyList&lt;Avalonia.Utilities.ValueSpan&lt;T&gt;&lt;[Avalonia.Media.TextFormatting.TextRunProperties](xref:Avalonia.Media.TextFormatting.TextRunProperties)&gt;&gt;
+
+
+`textRunCache` [Avalonia.Media.TextFormatting.TextRunCache](xref:Avalonia.Media.TextFormatting.TextRunCache)
 
 
 </section>

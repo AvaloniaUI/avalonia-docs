@@ -70,6 +70,7 @@ public class DrawingContext
 | [DrawText](#uid-9bbf20a539) | Draws text. |
 | [FillRectangle](#uid-3a2836cb4a) | Draws a filled rectangle. |
 | [PushClip (2 overloads)](#uid-581bbdf395) | Pushes a clip rectangle. |
+| [PushEffect](#uid-5cbe64db83) | Pushes an effect. |
 | [PushGeometryClip](#uid-54c8cd9487) | Pushes a clip geometry. |
 | [PushOpacity](#uid-b8823fb27f) | Pushes an opacity value. |
 | [PushOpacityMask](#uid-f50efb14c4) | Pushes an opacity mask. |
@@ -622,6 +623,41 @@ The clip rectangle.
 [Avalonia.Media.DrawingContext.PushedState](xref:Avalonia.Media.DrawingContext.PushedState)
 
 A disposable used to undo the clip rectangle.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5cbe64db83"></span>
+
+### PushEffect Method
+
+Pushes an effect.
+
+```csharp
+public Avalonia.Media.DrawingContext.PushedState PushEffect(Avalonia.Media.IEffect effect, Avalonia.Rect bounds)
+```
+
+#### Parameters
+
+`effect` [Avalonia.Media.IEffect](xref:Avalonia.Media.IEffect)
+
+The effect.
+
+
+`bounds` [Avalonia.Rect](xref:Avalonia.Rect)
+
+The content bounds of the area the effect is applied to (pre-inflation).
+The drawing context will internally inflate these by the effect's output padding
+to ensure the full effect output (e.g. blur/shadow) is not clipped.
+
+
+#### Returns
+
+[Avalonia.Media.DrawingContext.PushedState](xref:Avalonia.Media.DrawingContext.PushedState)
+
+A disposable used to undo the effect.
 
 
 </section>

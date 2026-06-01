@@ -131,6 +131,7 @@ public Avalonia.Media.DrawingContext Open()
 | --- | --- |
 | [Children](#uid-c1af282204) | Gets or sets the collection that contains the child geometries. |
 | [ClipGeometry](#uid-2a8954ac99) | No summary available. |
+| [Effect](#uid-e0e423457d) | Gets or sets the effect to apply to the drawing group. |
 | [Opacity](#uid-067da06ff5) | No summary available. |
 | [OpacityMask](#uid-833aa2512a) | No summary available. |
 | [Transform](#uid-6af7e42b93) | No summary available. |
@@ -159,6 +160,20 @@ public Avalonia.Media.DrawingCollection Children { get; set; }
 
 ```csharp
 public Avalonia.Media.Geometry ClipGeometry { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e0e423457d"></span>
+
+### Effect Property
+
+Gets or sets the effect to apply to the drawing group.
+
+```csharp
+public Avalonia.Media.IEffect Effect { get; set; }
 ```
 
 </section>
@@ -205,6 +220,7 @@ public Avalonia.Media.Transform Transform { get; set; }
 | --- | --- |
 | [ChildrenProperty](#uid-7f2e5850e5) | No summary available. |
 | [ClipGeometryProperty](#uid-c9e2fd4d23) | No summary available. |
+| [EffectProperty](#uid-ba132327b1) | Defines the [Avalonia.Media.DrawingGroup.Effect](xref:Avalonia.Media.DrawingGroup.Effect) property. |
 | [OpacityMaskProperty](#uid-003b975be6) | No summary available. |
 | [OpacityProperty](#uid-88d64f3aa9) | No summary available. |
 | [TransformProperty](#uid-a0fab94e4d) | No summary available. |
@@ -229,6 +245,20 @@ public Avalonia.DirectProperty<TOwner,TValue><Avalonia.Media.DrawingGroup, Avalo
 
 ```csharp
 public Avalonia.StyledProperty<TValue><Avalonia.Media.Geometry> ClipGeometryProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ba132327b1"></span>
+
+### EffectProperty Field
+
+Defines the [Avalonia.Media.DrawingGroup.Effect](xref:Avalonia.Media.DrawingGroup.Effect) property.
+
+```csharp
+public Avalonia.StyledProperty<TValue><Avalonia.Media.IEffect> EffectProperty
 ```
 
 </section>
