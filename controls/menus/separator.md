@@ -46,7 +46,7 @@ In the example above, the separator visually divides the file operations from th
 
 A `Height` of `NaN` and `Width` of `1` can be used to create a vertical separator:
 
-```
+```xml
 <StackPanel Orientation="Horizontal">
   <RadioButton GroupName="ViewMode" Content="List" />
   <RadioButton GroupName="ViewMode" Content="Small Icons" />
