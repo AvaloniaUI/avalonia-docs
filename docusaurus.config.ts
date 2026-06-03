@@ -321,7 +321,7 @@ gtag('consent', 'default', {
       respectPrefersColorScheme: true,
     },
     zoom: {
-      selector: '.markdown :not(em) > img:not(.Card-icon)',
+      selector: '.markdown :not(em) > img:not(.Card-icon):not(.Card-image)',
       background: {
         light: 'rgb(196, 196, 196)',
         dark: 'rgb(17, 17, 19)'
