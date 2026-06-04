@@ -138,7 +138,7 @@ IStorageProvider StorageProvider { get; }
 
 ### TransparencyBackgroundFallback
 
-Gets or sets the `IBrush` that transparency will blend with when transparency is not supported. By default this is a solid white brush.
+Gets or sets the `IBrush` that transparency will blend with when transparency is not supported or is restricted. By default this is a solid white brush.
 
 ```csharp
 IBrush TransparencyBackgroundFallback { get; set; }

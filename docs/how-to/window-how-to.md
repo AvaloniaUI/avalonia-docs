@@ -246,6 +246,8 @@ Check which transparency levels are supported at runtime:
 var supported = this.ActualTransparencyLevel;
 ```
 
+If `ActualTransparencyLevel` returns a lower level than requested, this may be due to an OS restriction rather than a configuration error. For example, macOS and Linux have more limited support for transparency, and Windows may suppress compositor effects when in battery saver mode. It is advisable to set a [`TransparencyBackgroundFallback`](/docs/fundamentals/top-level#transparencybackgroundfallback) with a solid color appropriate for your UI, in case transparency is unavailable on the user's device.
+
 ### Transparent click-through window
 
 To create a transparent overlay window where mouse clicks pass through empty areas to applications underneath, set `TransparencyLevelHint="Transparent"` and remove the window's `Background` by setting it to `{x:Null}`. Interactive controls placed in the window remain clickable.

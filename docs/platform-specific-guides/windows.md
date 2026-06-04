@@ -43,6 +43,10 @@ Set the window's `Background` to `Transparent` for any transparency level to tak
 
 For more details, see [Window Management](/docs/app-development/window-management).
 
+:::caution
+Windows may suppress transparency at the OS level regardless of your Avalonia configuration. Common causes are battery saver mode or remote/virtual sessions. It is advisable to set a non-transparent fallback that fits your UI, in case your users run your app under such conditions.
+:::
+
 ## Custom title bars
 
 Windows supports extending the client area into the title bar region for custom chrome. Set `ExtendClientAreaToDecorationsHint` to push your content into the title bar area, and use `WindowDecorationProperties.ElementRole` to mark a region as the draggable title bar:
