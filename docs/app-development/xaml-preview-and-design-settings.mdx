@@ -1,10 +1,13 @@
 ---
 id: xaml-preview-and-design-settings
-title: XAML live preview and design-time settings
+title: XAML live previewer and design-time settings
 sidebar_label: XAML live previewer
+doc-type: how-to
 description: How to use a live XAML previewer when developing with Avalonia. How to set design-time properties and data to simplify UI development.
 tags:
   - avalonia plus
+  - avalonia pro
+  - avalonia enterprise
 ---
 
 import Pill from '/src/components/global/Pill';
@@ -17,7 +20,7 @@ import DesignTimeMockPreview from '/img/guides/ui-development/xaml-preview-and-d
 
 ## Using the XAML previewer
 
-Live XAML previewers are available in JetBrains Rider with the third-party AvaloniaRider plugin, as well as Visual Studio with the Avalonia for Visual Studio plugin. With a XAML previewer, you can view changes to your XAML code as you work. We strongly recommend using one for the best development experience.
+Live XAML previewers are available in JetBrains Rider with the third-party AvaloniaRider plugin, as well as Visual Studio with the Avalonia for Visual Studio plugin. With a XAML previewer, you can view changes to your XAML code as you work. Using a previewer lets you see layout changes immediately, without rebuilding the project.
 
 ### Enabling the XAML previewer
 
@@ -47,7 +50,7 @@ To enable the XAML previewer in Rider and Visual Studio:
 
 ### Checking it works
 
-1. Open any **.axaml** file. For this example, we’re going to use **MainWindow.axaml** from the default Avalonia template.
+1. Open any **.axaml** file. This example uses **MainWindow.axaml** from the default Avalonia template.
 2. Locate the `<TextBlock>...</TextBlock>` XAML tag near the bottom.
 3. Remove `{Binding Greeting}`. Change it to any text, e.g., "Nice preview!"
 4. You should see your text appear in the preview pane as you type.
@@ -154,9 +157,9 @@ public MainWindow()
 
 ## Applying design-time data
 
-Design-time data applies mock data to your UI in the XAML previewer. Like design-time properties, this helps you perfect your UI design by displaying realistic-looking data and removing the need to build the app or call the data service layer repeatedly.
+Design-time data applies mock data to your UI in the XAML previewer. Like design-time properties, this helps you refine your UI without repeatedly building the app or calling the data service layer.
 
-In this example, we show you how to use design-time data with the MVVM pattern to create the UI of a appointment card. Here is the base functionality of the appointment system.
+This example shows you how to use design-time data with the MVVM pattern to create the UI of an appointment card. Here is the base functionality of the appointment system.
 
 ```csharp
     // Data Properties
@@ -185,7 +188,7 @@ In this example, we show you how to use design-time data with the MVVM pattern t
 
 ### Creating the design view model
 
-We now need to create a design version of the view model. This design version contains mock data, which can be referenced by a design [`DataContext`](#datacontext).
+The next step is to create a design version of the view model. This design version contains mock data, which can be referenced by a design [`DataContext`](#datacontext).
 
 ```csharp
 public class DesignAppointmentViewModel: AppointmentViewModel
@@ -277,3 +280,10 @@ You can now proceed with designing the UI for the appointment card. Here is an e
 With the design view model set up, the in-progress UI is displayed with mock data in the XAML previewer, like so:
 
 <Image light={DesignTimeMockPreview} alt="A screenshot of a mock haircut appointment card on a design canvas." maxWidth={400} cornerRadius="true"/>
+
+## See also
+
+
+- [Data context](/docs/data-binding/data-context) — how `DataContext` works at runtime and how controls inherit it
+- [Compiled bindings](/docs/data-binding/compiled-bindings) — using `x:DataType` for type-checked bindings
+- [The MVVM pattern](/docs/fundamentals/the-mvvm-pattern) — the design pattern used in the design-time data example

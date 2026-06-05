@@ -42,6 +42,7 @@ const sidebars: SidebarsConfig = {
         'fundamentals/avalonia-xaml',
         'fundamentals/coded-ui',
         'fundamentals/code-behind',
+        'fundamentals/the-mvvm-pattern',
         'fundamentals/main-window',
         'fundamentals/top-level',
         'fundamentals/ui-composition',
@@ -151,7 +152,6 @@ const sidebars: SidebarsConfig = {
         'data-templates/view-locator',
       ],
     },
-    'fundamentals/the-mvvm-pattern',
     {
       type: 'category',
       label: 'Property System',
