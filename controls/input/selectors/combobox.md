@@ -21,7 +21,7 @@ You will probably use these properties most often:
 
 | Property                   | Type       | Description                                                                                                              |
 | -------------------------- | ---------- | ------------------------------------------------------------------------------------------------------------------------ |
-| `Items`                    | `ItemCollection` | The list items collection.                                                                                            |
+| `ItemsSource`                    | `IDataTemplate?` | The bound collection that is used as the data source for the control.                                                                                           |
 | `SelectedIndex`            | `int`      | The index (zero-based) of the selected item.                                                                             |
 | `SelectedItem`             | `object?`  | The selected item itself.                                                                                                |
 | `SelectedValue`            | `object?`  | The value of the selected item, determined by `SelectedValueBinding`.                                                    |
