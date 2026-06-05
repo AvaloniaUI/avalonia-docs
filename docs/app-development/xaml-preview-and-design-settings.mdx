@@ -22,6 +22,10 @@ import DesignTimeMockPreview from '/img/guides/ui-development/xaml-preview-and-d
 
 Live XAML previewers are available in JetBrains Rider with the third-party AvaloniaRider plugin, as well as Visual Studio with the Avalonia for Visual Studio plugin. With a XAML previewer, you can view changes to your XAML code as you work. Using a previewer lets you see layout changes immediately, without rebuilding the project.
 
+:::note
+The XAML previewer requires a standalone Avalonia executable targeting desktop platforms. XAML files in a cross-platform class library or non-desktop project cannot render correctly. Any such files should be linked to the desktop project if you wish to preview them.
+:::
+
 ### Enabling the XAML previewer
 
 To enable the XAML previewer in Rider and Visual Studio:
@@ -282,7 +286,6 @@ With the design view model set up, the in-progress UI is displayed with mock dat
 <Image light={DesignTimeMockPreview} alt="A screenshot of a mock haircut appointment card on a design canvas." maxWidth={400} cornerRadius="true"/>
 
 ## See also
-
 
 - [Data context](/docs/data-binding/data-context) — how `DataContext` works at runtime and how controls inherit it
 - [Compiled bindings](/docs/data-binding/compiled-bindings) — using `x:DataType` for type-checked bindings
