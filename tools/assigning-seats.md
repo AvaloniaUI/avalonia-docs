@@ -18,11 +18,11 @@ import AssignModal from '/img/tools/assigning-seats/5-assign-modal.png';
 
 Your Avalonia subscription includes a certain number of seats, which must be assigned to members of your organization before they can use the advanced features of Avalonia Plus, Pro, Enterprise or XPF. This step-by-step guide shows you how to assign seats to your users.
 
+Seat assignment works identically for both [Avalonia](https://avaloniaui.net/pricing) and [XPF](/xpf) subscriptions.
+
 **You must be an Admin of your organization to assign seats.**
 
-## How to assign
-
-### Log into the Avalonia portal
+## Log into the Avalonia portal
 
 <table>
   <tbody>
@@ -36,7 +36,7 @@ Your Avalonia subscription includes a certain number of seats, which must be ass
   </tbody>
 </table>
 
-### Go to the subscription management page
+## Go to the subscription management page
 
 <table>
   <tbody>
@@ -51,7 +51,7 @@ Your Avalonia subscription includes a certain number of seats, which must be ass
   </tbody>
 </table>
 
-### Assign seats to users
+## Assign seats to users
 
 <table>
   <tbody>
