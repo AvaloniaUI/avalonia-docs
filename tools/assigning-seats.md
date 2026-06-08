@@ -71,3 +71,9 @@ Seat assignment works identically for both [Avalonia](https://avaloniaui.net/pri
     </tr>
   </tbody>
 </table>
+
+:::warning
+Once assigned, a seat cannot be unassigned or reassigned.
+
+If you believe you have assigned a seat to the wrong user by mistake, please open a ticket in the [portal](https://portal.avaloniaui.net/).
+:::
