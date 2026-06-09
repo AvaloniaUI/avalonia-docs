@@ -72,6 +72,7 @@ const sidebars: SidebarsConfig = {
       items: [
         'ai-tools/index',
         'ai-tools/build-mcp',
+        'ai-tools/charts-mcp',
         'developer-tools/mcp',
         'parcel/mcp',
       ],
