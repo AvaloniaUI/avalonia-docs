@@ -158,9 +158,9 @@ You can then create your `.app` folder structure as outlined at the top of this 
 ```bash
 #!/bin/bash
 APP_NAME="/path/to/your/output/MyApp.app"
-PUBLISH_OUTPUT_DIRECTORY="/path/to/your/publish/output/netcoreapp3.1/osx-64/publish/."
+PUBLISH_OUTPUT_DIRECTORY="/path/to/your/publish/output/net10.0/osx-x64/publish/."
 # PUBLISH_OUTPUT_DIRECTORY should point to the output directory of your dotnet publish command.
-# One example is /path/to/your/csproj/bin/Release/netcoreapp3.1/osx-x64/publish/.
+# One example is /path/to/your/csproj/bin/Release/net10.0/osx-x64/publish/.
 # If you want to change output directories, add `--output /my/directory/path` to your `dotnet publish` command.
 INFO_PLIST="/path/to/your/Info.plist"
 ICON_FILE="/path/to/your/myapp-logo.icns"
@@ -246,12 +246,31 @@ codesign --verify --verbose /path/to/MyApp.app
 
 Notarization is an automated process where you upload your signed app to Apple's servers for a security scan. Once approved, Apple issues a ticket that confirms your software has been checked for malicious content. When a user downloads your app, macOS verifies this ticket and allows the app to launch without showing an "unidentified developer" warning. Notarization is required for all apps distributed outside the Mac App Store since macOS 10.15 (Catalina).
 
-1. Make sure your `.app` is code signed properly
-2. Stick your `.app` in a `.zip` file, e.g. `MyApp.zip`. Note that using `zip` will make notarization fail, instead use `ditto` like so: `ditto -c -k --sequesterRsrc --keepParent MyApp.app MyApp.zip`
-3. Run `xcrun altool --notarize-app -f MyApp.zip --primary-bundle-id com.unique-identifier-for-this-upload -u username -p password`. You can use a password in your keychain by passing `-p "@keychain:AC_PASSWORD"`, where AC\_PASSWORD is the key. The account has to be registered as an Apple Developer.
-4. If the upload is successful, you'll get a UUID back for your request token like this: `28fad4c5-68b3-4dbf-a0d4-fbde8e6a078f`
-5. You can check notarization status using that token like this: `xcrun altool --notarization-info 28fad4c5-68b3-4dbf-a0d4-fbde8e6a078f -u username -p password`. This could take some time -- eventually it will succeed or fail.
-6. If it succeeds, you have to staple the notarization to the app: `xcrun stapler staple MyApp.app`. You can validate this by running `xcrun stapler validate MyApp.app`.
+Notarization uses the `notarytool` command line tool, which ships with Xcode 13 and later. (The older `altool --notarize-app` workflow was retired by Apple in November 2023 and no longer works.)
+
+Because Apple requires multi-factor authentication on developer accounts, `notarytool` authenticates with an app-specific password that you generate on the [Apple ID account page](https://account.apple.com/account/manage). Store it once in your keychain as a named profile so you don't have to pass credentials on every run:
+
+```bash
+xcrun notarytool store-credentials "AC_PASSWORD" \
+  --apple-id "you@example.com" \
+  --team-id "YOURTEAMID" \
+  --password "your-app-specific-password"
+```
+
+`AC_PASSWORD` is the profile name you choose, `--team-id` is the team ID from App Store Connect, and `--password` is the app-specific password you generated.
+
+With the profile stored, notarize your app:
+
+1. Make sure your `.app` is code signed properly.
+2. Put your `.app` in a `.zip` file. Note that using `zip` will make notarization fail, so use `ditto` instead: `ditto -c -k --sequesterRsrc --keepParent MyApp.app MyApp.zip`
+3. Submit the archive and wait for the result. The `--wait` flag polls automatically and returns once notarization succeeds or fails, so no separate status check is needed:
+
+   ```bash
+   xcrun notarytool submit MyApp.zip --keychain-profile "AC_PASSWORD" --wait
+   ```
+
+4. If a submission is rejected, fetch the detailed log using the submission ID from the output: `xcrun notarytool log <submission-id> --keychain-profile "AC_PASSWORD"`
+5. Once it succeeds, staple the notarization ticket to the app: `xcrun stapler staple MyApp.app`. You can validate this by running `xcrun stapler validate MyApp.app`.
 
 Once notarization is complete, you should be able to distribute your application!
 
@@ -259,9 +278,9 @@ Once notarization is complete, you should be able to distribute your application
 If you distribute your app in a `.dmg`, you will want to modify the steps slightly:
 :::
 
-1. Notarize your `.app` as normal \(in a `.zip` file\)
+1. Notarize your `.app` as normal \(in a `.zip` file\).
 2. Add your notarized and stapled \(`xcrun stapler`\) app into the DMG \(the DMG now has the notarized/stapled `.app` file inside of it\).
-3. Notarize your `.dmg` file \(same basic `xcrun altool` command, just with the `.dmg` file for the `-f` flag instead of the `.zip`\)
+3. Notarize your `.dmg` file \(the same `xcrun notarytool submit` command, just pointing at the `.dmg` file instead of the `.zip`\).
 4. Staple the notarization to the `.dmg` file: `xcrun stapler staple MyApp.dmg`
 
 ### App store packaging
@@ -299,9 +318,9 @@ The App Store requires apps to run inside a sandbox. Sandboxing is a security me
 
 Your app must be prepared for this restricted environment and must not crash if a folder or resource is inaccessible.
 
-.NET 6 apps will not crash inside a sandbox only if it's published with single file option enabled. Example:
+Apps will not crash inside a sandbox only if they're published with the single file option enabled. Example:
 
-`dotnet publish src/MyApp.csproj -c Release -f net6.0 -r osx-x64 --self-contained true -p:PublishSingleFile=true`
+`dotnet publish src/MyApp.csproj -c Release -f net10.0 -r osx-x64 --self-contained true -p:PublishSingleFile=true`
 
 Your app content must be bundled correctly. macOS expects specific file types in specific directories within the bundle.
 
@@ -393,12 +412,12 @@ mkdir -p "App/AppName.app/Contents/Frameworks/"
 mkdir -p "App/AppName.app/Contents/MacOS/"
 
 #Build app
-dotnet publish ../../ProjectFolder/AppName.csproj -c release -f net5.0 -r osx-x64 --self-contained true -p:PublishSingleFile=true
+dotnet publish ../../ProjectFolder/AppName.csproj -c release -f net10.0 -r osx-x64 --self-contained true -p:PublishSingleFile=true
 
 #Move app
 cd ..
 cd ..
-cp -R -f ProjectFolder/bin/release/net5.0/osx-x64/publish/* "build/osx/App/AppName.app/Contents/MacOS/"
+cp -R -f ProjectFolder/bin/release/net10.0/osx-x64/publish/* "build/osx/App/AppName.app/Contents/MacOS/"
 cd "build/osx/"
 
 APP_ENTITLEMENTS="AppEntitlements.entitlements"
@@ -493,7 +512,7 @@ To use these steps in your GitHub Actions workflow add them as a step to the job
 ```yaml
 jobs:
   build_osx:
-    runs_on: macos-11
+    runs-on: macos-latest
     env:
       TEAM_ID: MY_TEAM_ID
     steps:
