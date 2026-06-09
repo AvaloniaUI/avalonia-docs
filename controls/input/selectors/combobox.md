@@ -10,7 +10,7 @@ import ComboBoxBindingToViewModel from '/img/controls/combobox/combobox-binding-
 
 `ComboBox` presents a selected item with a dropdown button that displays a list of options. The length and height of the combo box are determined by the selected item, unless you define them explicitly.
 
-You can compose, bind, and template the items in the list. To review **data templates**, see [Introduction to data templates](/docs/data-templates/introduction-to-data-templates).
+You can compose, bind or template the items in the list. To review data templates, see [Introduction to data templates](/docs/data-templates/introduction-to-data-templates).
 
 ## Useful properties
 
@@ -18,7 +18,7 @@ You will probably use these properties most often:
 
 | Property                   | Type       | Description                                                                                                              |
 | -------------------------- | ---------- | ------------------------------------------------------------------------------------------------------------------------ |
-| `ItemsSource`                    | `IDataTemplate?` | The bound collection that is used as the data source for the control.                                                                                           |
+| `ItemsSource`                    | `IEnumerable?` | The bound collection that is used as the data source for the control. Inherited from [`ItemsControl`](/controls/data-display/collections/itemscontrol).                                                                                           |
 | `SelectedIndex`            | `int`      | The index (zero-based) of the selected item.                                                                             |
 | `SelectedItem`             | `object?`  | The selected item itself.                                                                                                |
 | `SelectedValue`            | `object?`  | The value of the selected item, determined by `SelectedValueBinding`.                                                    |
@@ -34,7 +34,7 @@ You will probably use these properties most often:
 
 - Always set `SelectedIndex` or `SelectedItem` to an initial value when you want the control to display a selection on load. If neither is set and you have not specified `PlaceholderText`, the control appears blank.
 - When you bind `ItemsSource` to a collection of complex objects, provide an `ItemTemplate` so the control knows how to render each item. Without a template, the control calls `ToString()` on each object.
-- Use `PlaceholderText` to give your users a hint when nothing is selected yet. (e.g., "Select a option...")
+- Use `PlaceholderText` to give your users a hint when nothing is selected yet. (e.g., "Select an option...")
 - If you need to clear the selection programmatically, set `SelectedIndex` to `-1` or `SelectedItem` to `null`.
 - The `SelectionChanged` event fires whenever the selected item changes. Use this to run side-effect logic outside the view model.
 
@@ -128,9 +128,10 @@ This example binds the items in the combo box using a data template. The C# code
 
 </TabItem>
 
-<TabItem value="c#" label="MainWindowViewModel.cs">
+<TabItem value="csharp" label="MainWindow.axaml.cs">
 
 ```csharp
+using Avalonia.Controls;
 using Avalonia.Media;
 using Avalonia.Media.Fonts;
 using System.Collections.Generic;
@@ -138,17 +139,21 @@ using System.Linq;
 
 namespace TmpAvaloniaApp;
 
-public partial class MainWindowViewModel : ViewModelBase
+public partial class MainWindow : Window
+    
 {
-    public MainWindowViewModel()
+    public MainWindow()
     {
+        InitializeComponent();
         IFontCollection fontCollection = FontManager.Current.SystemFonts;
         FontFamilies = new List<FontFamily>(fontCollection).OrderBy(x=>x.Name).ToList();
+        DataContext = this;
     }
     
     public FontFamily? SelectedFont { get; set; }
 
     public List<FontFamily> FontFamilies { get; set; }
+    
 }
 ```
 
@@ -178,7 +183,7 @@ Bind `ItemsSource`, `SelectedItem`, and use an `ItemTemplate`.
 
 </TabItem>
 
-<TabItem value="c#" label="MainWindowViewModel.cs">
+<TabItem value="csharp" label="MainWindowViewModel.cs">
 
 ```csharp
 using System.Collections.ObjectModel;
