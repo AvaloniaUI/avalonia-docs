@@ -6,14 +6,11 @@ doc-type: reference
 ---
 
 import ComboBoxDataTemplateScreenshot from '/img/controls/combobox/combobox-data-template.gif';
+import ComboBoxBindingToViewModel from '/img/controls/combobox/combobox-binding-to-viewmodel.png';
 
-The `ComboBox` presents a selected item and a drop-down button that displays a list of options. The length and height of the combo box are determined by the selected item, unless you define them explicitly.
+`ComboBox` presents a selected item with a dropdown button that displays a list of options. The length and height of the combo box are determined by the selected item, unless you define them explicitly.
 
-You can compose, bind, and template the items in the list.
-
-:::info
-To review the concept behind **data templates**, see [Introduction to data templates](/docs/data-templates/introduction-to-data-templates).
-:::
+You can compose, bind, and template the items in the list. To review **data templates**, see [Introduction to data templates](/docs/data-templates/introduction-to-data-templates).
 
 ## Useful properties
 
@@ -21,7 +18,7 @@ You will probably use these properties most often:
 
 | Property                   | Type       | Description                                                                                                              |
 | -------------------------- | ---------- | ------------------------------------------------------------------------------------------------------------------------ |
-| `Items`                    | `ItemCollection` | The list items collection.                                                                                            |
+| `ItemsSource`                    | `IDataTemplate?` | The bound collection that is used as the data source for the control.                                                                                           |
 | `SelectedIndex`            | `int`      | The index (zero-based) of the selected item.                                                                             |
 | `SelectedItem`             | `object?`  | The selected item itself.                                                                                                |
 | `SelectedValue`            | `object?`  | The value of the selected item, determined by `SelectedValueBinding`.                                                    |
@@ -35,93 +32,105 @@ You will probably use these properties most often:
 
 ## Practical notes
 
-- Always set `SelectedIndex` or `SelectedItem` to an initial value when you want the control to display a selection on load. If neither is set and you have not provided `PlaceholderText`, the control appears blank.
+- Always set `SelectedIndex` or `SelectedItem` to an initial value when you want the control to display a selection on load. If neither is set and you have not specified `PlaceholderText`, the control appears blank.
 - When you bind `ItemsSource` to a collection of complex objects, provide an `ItemTemplate` so the control knows how to render each item. Without a template, the control calls `ToString()` on each object.
-- Use `PlaceholderText` to give your users a hint (for example, "Select a category...") when nothing is selected yet.
+- Use `PlaceholderText` to give your users a hint when nothing is selected yet. (e.g., "Select a option...")
 - If you need to clear the selection programmatically, set `SelectedIndex` to `-1` or `SelectedItem` to `null`.
-- The `SelectionChanged` event fires whenever the selected item changes, which is useful for running side-effect logic outside the view model.
+- The `SelectionChanged` event fires whenever the selected item changes. Use this to run side-effect logic outside the view model.
 
 ## Examples
 
-This basic example with text items has a limit set on the drop-down list height.
+### Basic example
+
+A basic list of text items. The dropdown list is fixed at a limited height.
 
 <XamlPreview>
 
 ```xml
-<UserControl xmlns="https://github.com/avaloniaui">
-  <StackPanel Margin="20">
-    <ComboBox SelectedIndex="0" MaxDropDownHeight="100">
-      <ComboBoxItem>Text Item 1</ComboBoxItem>
-      <ComboBoxItem>Text Item 2</ComboBoxItem>
-      <ComboBoxItem>Text Item 3</ComboBoxItem>
-      <ComboBoxItem>Text Item 4</ComboBoxItem>
-      <ComboBoxItem>Text Item 5</ComboBoxItem>
-      <ComboBoxItem>Text Item 6</ComboBoxItem>
-      <ComboBoxItem>Text Item 7</ComboBoxItem>
-      <ComboBoxItem>Text Item 8</ComboBoxItem>
-      <ComboBoxItem>Text Item 9</ComboBoxItem>
-    </ComboBox>
-  </StackPanel>
-</UserControl>
-```
-
-</XamlPreview>
-
-This example uses a composed view for each item:
-
-<XamlPreview>
-
-```xml
-<UserControl xmlns="https://github.com/avaloniaui">
-  <StackPanel Margin="20">
-    <ComboBox SelectedIndex="0">
-      <ComboBoxItem>
-        <Panel>
-          <Ellipse Width="50" Height="50" Fill="Red"/>
-          <TextBlock VerticalAlignment="Center"
-                     HorizontalAlignment="Center">Red</TextBlock>
-        </Panel>
-      </ComboBoxItem>
-      <ComboBoxItem>
-          <Panel>
-            <Ellipse Width="50" Height="50" Fill="Orange"/>
-            <TextBlock VerticalAlignment="Center"
-                       HorizontalAlignment="Center">Amber</TextBlock>
-          </Panel>
-      </ComboBoxItem>
-      <ComboBoxItem>
-        <Panel>
-          <Ellipse Width="50" Height="50" Fill="Green"/>
-          <TextBlock VerticalAlignment="Center"
-                     HorizontalAlignment="Center">Green</TextBlock>
-        </Panel>
-      </ComboBoxItem>
-    </ComboBox>
-  </StackPanel>
-</UserControl>
-```
-
-</XamlPreview>
-
-This example binds the items in a combo box using a data template. The C# code-behind loads the installed font family names and binds them to the `ItemsSource` property.
-
-```xml
-<StackPanel Margin="20">
-  <ComboBox x:Name="fontComboBox" SelectedIndex="0"
-            Width="200" MaxDropDownHeight="300"
-            ItemsSource="{Binding FontFamilies}"
-            SelectedValue="{Binding SelectedFont}">
-    <ComboBox.ItemTemplate>
-      <DataTemplate>
-        <TextBlock Text="{Binding Name}" FontFamily="{Binding}" />
-      </DataTemplate>
-    </ComboBox.ItemTemplate>
+<StackPanel xmlns="https://github.com/avaloniaui"
+             Margin="20">
+  <ComboBox SelectedIndex="0" MaxDropDownHeight="100">
+    <ComboBoxItem>Text Item 1</ComboBoxItem>
+    <ComboBoxItem>Text Item 2</ComboBoxItem>
+    <ComboBoxItem>Text Item 3</ComboBoxItem>
+    <ComboBoxItem>Text Item 4</ComboBoxItem>
+    <ComboBoxItem>Text Item 5</ComboBoxItem>
+    <ComboBoxItem>Text Item 6</ComboBoxItem>
+    <ComboBoxItem>Text Item 7</ComboBoxItem>
+    <ComboBoxItem>Text Item 8</ComboBoxItem>
+    <ComboBoxItem>Text Item 9</ComboBoxItem>
   </ComboBox>
 </StackPanel>
 ```
 
-```csharp title='C#'
-using Avalonia.Controls;
+</XamlPreview>
+
+### Composed view
+
+This combo box has a dropdown list that displays text overlaid on colored discs.
+
+<XamlPreview>
+
+```xml
+<StackPanel xmlns="https://github.com/avaloniaui"
+            Margin="20">
+  <ComboBox SelectedIndex="0">
+    <ComboBoxItem>
+      <Panel>
+        <Ellipse Width="50" Height="50" Fill="Red"/>
+        <TextBlock VerticalAlignment="Center"
+                   HorizontalAlignment="Center">Red</TextBlock>
+      </Panel>
+    </ComboBoxItem>
+    <ComboBoxItem>
+        <Panel>
+          <Ellipse Width="50" Height="50" Fill="Orange"/>
+          <TextBlock VerticalAlignment="Center"
+                       HorizontalAlignment="Center">Amber</TextBlock>
+        </Panel>
+    </ComboBoxItem>
+    <ComboBoxItem>
+      <Panel>
+        <Ellipse Width="50" Height="50" Fill="Green"/>
+        <TextBlock VerticalAlignment="Center"
+                   HorizontalAlignment="Center">Green</TextBlock>
+        </Panel>
+    </ComboBoxItem>
+  </ComboBox>
+</StackPanel>
+```
+
+</XamlPreview>
+
+### Binding to a data template
+
+This example binds the items in the combo box using a data template. The C# code-behind loads the installed font family names and binds them to the `ItemsSource` property.
+
+<Tabs>
+
+<TabItem value="xml" label="MainWindow.axaml">
+
+```xml
+<StackPanel Margin="20">
+    <ComboBox x:Name="fontComboBox"
+              SelectedIndex="0"
+              Width="200" MaxDropDownHeight="300"
+              ItemsSource="{Binding FontFamilies}"
+              SelectedValue="{Binding SelectedFont}">
+        <ComboBox.ItemTemplate>
+            <DataTemplate x:DataType="FontFamily">
+                <TextBlock Text="{Binding Name}" FontFamily="{Binding}" />
+            </DataTemplate>
+        </ComboBox.ItemTemplate>
+    </ComboBox>
+</StackPanel>
+```
+
+</TabItem>
+
+<TabItem value="c#" label="MainWindowViewModel.cs">
+
+```csharp
 using Avalonia.Media;
 using Avalonia.Media.Fonts;
 using System.Collections.Generic;
@@ -129,30 +138,53 @@ using System.Linq;
 
 namespace TmpAvaloniaApp;
 
-public partial class MainWindow : Window
+public partial class MainWindowViewModel : ViewModelBase
 {
-    public MainWindow()
+    public MainWindowViewModel()
     {
-        InitializeComponent();
         IFontCollection fontCollection = FontManager.Current.SystemFonts;
         FontFamilies = new List<FontFamily>(fontCollection).OrderBy(x=>x.Name).ToList();
-        DataContext = this;
     }
-
+    
     public FontFamily? SelectedFont { get; set; }
 
     public List<FontFamily> FontFamilies { get; set; }
 }
 ```
 
-<Image light={ComboBoxDataTemplateScreenshot} alt="ComboBox with data template showing font families" position="center" maxWidth={400} cornerRadius="true"/>
+</TabItem>
 
-## Binding to a view model
+<TabItem value="image" label="Preview">
 
-Bind `ItemsSource`, `SelectedItem`, and use an `ItemTemplate`:
+<Image light={ComboBoxDataTemplateScreenshot} alt="ComboBox with data template showing font families." position="center" maxWidth={400} cornerRadius="true"/>
+
+</TabItem>
+
+</Tabs>
+
+### Binding to a view model
+
+Bind `ItemsSource`, `SelectedItem`, and use an `ItemTemplate`.
+
+<Tabs>
+
+<TabItem value="xaml" label="MainWindow.axaml">
+
+```xml
+<ComboBox ItemsSource="{Binding Categories}"
+          SelectedItem="{Binding SelectedCategory}"
+          PlaceholderText="Select a category" />
+```
+
+</TabItem>
+
+<TabItem value="c#" label="MainWindowViewModel.cs">
 
 ```csharp
-public partial class MainViewModel : ObservableObject
+using System.Collections.ObjectModel;
+using CommunityToolkit.Mvvm.ComponentModel;
+
+public partial class MainWindowViewModel : ViewModelBase
 {
     public ObservableCollection<string> Categories { get; } = new()
     {
@@ -164,15 +196,19 @@ public partial class MainViewModel : ObservableObject
 }
 ```
 
-```xml
-<ComboBox ItemsSource="{Binding Categories}"
-          SelectedItem="{Binding SelectedCategory}"
-          PlaceholderText="Select a category" />
-```
+</TabItem>
 
-## Editable ComboBox
+<TabItem value="image" label="Preview">
 
-Set `IsEditable` to `true` to allow you to type text directly into the combo box. As you type, the control searches the items for a match and updates `SelectedItem` accordingly. The `Text` property holds the current text value.
+<Image light={ComboBoxBindingToViewModel} alt="Open ComboBox showing a list of four items defined in the view model." position="center" maxWidth={400} cornerRadius="true"/>
+
+</TabItem>
+
+</Tabs>
+
+## Editable combo box
+
+Set `IsEditable` to `true` to allow text to be typed in the combo box. As you type, the control searches the items for a match and updates `SelectedItem` accordingly. The `Text` property holds the current text value.
 
 ```xml
 <ComboBox IsEditable="True"
@@ -182,9 +218,9 @@ Set `IsEditable` to `true` to allow you to type text directly into the combo box
           PlaceholderText="Type a country..." />
 ```
 
-### `TextSearch.TextBinding`
+### Searching for complex data objects
 
-When items are complex objects, use `TextSearch.TextBinding` to specify which property the editable text should match against:
+When items are complex objects, use `TextSearch.TextBinding` to specify which property the editable text should match against.
 
 ```xml
 <ComboBox IsEditable="True"
@@ -197,16 +233,6 @@ When items are complex objects, use `TextSearch.TextBinding` to specify which pr
         </DataTemplate>
     </ComboBox.ItemTemplate>
 </ComboBox>
-```
-
-## Placeholder text
-
-Show placeholder text when no item is selected:
-
-```xml
-<ComboBox PlaceholderText="Choose an option..."
-          ItemsSource="{Binding Options}"
-          SelectedItem="{Binding SelectedOption}" />
 ```
 
 ## See also
