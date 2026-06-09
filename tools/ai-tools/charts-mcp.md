@@ -530,7 +530,7 @@ dotnet tool list -g
 ### MCP server does not appear in the editor
 
 - **Restart your editor.** Most editors require a restart to detect new MCP servers, after the MCP configuration file is added or modified.
-- **Check the config file location.** Each editor expects configuration in a specific path. See the [setup instructions for your editor](#setting-up-the-mcp-server-in-your-editor).
+- **Check the config file location.** Each editor expects configuration in a specific path. See the [setup instructions for your editor](#set-up-the-mcp-server-in-your-editor).
 - **Validate your JSON.** A syntax error in the configuration file can prevent the server from loading.
 - **Use an absolute command path.** This may help the editor resolve `mcp-server-charts`.
 
