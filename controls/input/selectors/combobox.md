@@ -106,23 +106,31 @@ This combo box has a dropdown list that displays text overlaid on colored discs.
 
 This example binds the items in the combo box using a data template. The C# code-behind loads the installed font family names and binds them to the `ItemsSource` property.
 
+<Tabs>
+
+<TabItem value="xml" label="MainWindow.axaml">
+
 ```xml
 <StackPanel Margin="20">
-  <ComboBox x:Name="fontComboBox" SelectedIndex="0"
-            Width="200" MaxDropDownHeight="300"
-            ItemsSource="{Binding FontFamilies}"
-            SelectedValue="{Binding SelectedFont}">
-    <ComboBox.ItemTemplate>
-      <DataTemplate>
-        <TextBlock Text="{Binding Name}" FontFamily="{Binding}" />
-      </DataTemplate>
-    </ComboBox.ItemTemplate>
-  </ComboBox>
+    <ComboBox x:Name="fontComboBox"
+              SelectedIndex="0"
+              Width="200" MaxDropDownHeight="300"
+              ItemsSource="{Binding FontFamilies}"
+              SelectedValue="{Binding SelectedFont}">
+        <ComboBox.ItemTemplate>
+            <DataTemplate x:DataType="FontFamily">
+                <TextBlock Text="{Binding Name}" FontFamily="{Binding}" />
+            </DataTemplate>
+        </ComboBox.ItemTemplate>
+    </ComboBox>
 </StackPanel>
 ```
 
-```csharp title='C#'
-using Avalonia.Controls;
+</TabItem>
+
+<TabItem value="c#" label="MainWindowViewModel.cs">
+
+```csharp
 using Avalonia.Media;
 using Avalonia.Media.Fonts;
 using System.Collections.Generic;
@@ -130,27 +138,33 @@ using System.Linq;
 
 namespace TmpAvaloniaApp;
 
-public partial class MainWindow : Window
+public partial class MainWindowViewModel : ViewModelBase
 {
-    public MainWindow()
+    public MainWindowViewModel()
     {
-        InitializeComponent();
         IFontCollection fontCollection = FontManager.Current.SystemFonts;
         FontFamilies = new List<FontFamily>(fontCollection).OrderBy(x=>x.Name).ToList();
-        DataContext = this;
     }
-
+    
     public FontFamily? SelectedFont { get; set; }
 
     public List<FontFamily> FontFamilies { get; set; }
 }
 ```
 
-<Image light={ComboBoxDataTemplateScreenshot} alt="ComboBox with data template showing font families" position="center" maxWidth={400} cornerRadius="true"/>
+</TabItem>
 
-## Binding to a view model
+<TabItem value="image" label="Preview">
 
-Bind `ItemsSource`, `SelectedItem`, and use an `ItemTemplate`:
+<Image light={ComboBoxDataTemplateScreenshot} alt="ComboBox with data template showing font families." position="center" maxWidth={400} cornerRadius="true"/>
+
+</TabItem>
+
+</Tabs>
+
+### Binding to a view model
+
+Bind `ItemsSource`, `SelectedItem`, and use an `ItemTemplate`.
 
 <Tabs>
 
@@ -184,11 +198,17 @@ public partial class MainWindowViewModel : ViewModelBase
 
 </TabItem>
 
+<TabItem value="image" label="Preview">
+
+<Image light={ComboBoxBindingToViewModel} alt="Open ComboBox showing a list of four items defined in the view model." position="center" maxWidth={400} cornerRadius="true"/>
+
+</TabItem>
+
 </Tabs>
 
-## Editable ComboBox
+## Editable combo box
 
-Set `IsEditable` to `true` to allow you to type text directly into the combo box. As you type, the control searches the items for a match and updates `SelectedItem` accordingly. The `Text` property holds the current text value.
+Set `IsEditable` to `true` to allow text to be typed in the combo box. As you type, the control searches the items for a match and updates `SelectedItem` accordingly. The `Text` property holds the current text value.
 
 ```xml
 <ComboBox IsEditable="True"
@@ -198,9 +218,9 @@ Set `IsEditable` to `true` to allow you to type text directly into the combo box
           PlaceholderText="Type a country..." />
 ```
 
-### `TextSearch.TextBinding`
+### Searching for complex data objects
 
-When items are complex objects, use `TextSearch.TextBinding` to specify which property the editable text should match against:
+When items are complex objects, use `TextSearch.TextBinding` to specify which property the editable text should match against.
 
 ```xml
 <ComboBox IsEditable="True"
