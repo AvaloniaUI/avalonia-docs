@@ -248,7 +248,9 @@ Register a namespace for your subclass and use it in place of `Markdown`:
 
 ### Applying the default theme to a subclass
 
-Default themes and styles target the `Markdown` type directly, so they are not automatically applied to a subclass. As a result, a subclass (like `CustomMarkdown` in the above examples) renders unstyled, unless you redirect its style key back to the base type by overriding `StyleKeyOverride`:
+Default themes and styles target the base type directly and are not automatically applied to derived types. If you are using a subclass (like `CustomMarkdown` in the above examples), it is rendered unstyled.
+
+To apply the same styles targeting `Markdown` to `CustomMarkdown`, redirect the style key back to the base type by overriding `StyleKeyOverride`.
 
 ```csharp
 public class CustomMarkdown : Markdown
@@ -258,8 +260,6 @@ public class CustomMarkdown : Markdown
     // Your customizations
 }
 ```
-
-With this override in place, any styles you write that target `Markdown` apply to the subclass as well.
 
 ## Custom image loader
 
