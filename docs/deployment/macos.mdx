@@ -262,7 +262,7 @@ xcrun notarytool store-credentials "AC_PASSWORD" \
 With the profile stored, notarize your app:
 
 1. Make sure your `.app` is code signed properly.
-2. Put your `.app` in a `.zip` file. Note that using `zip` will make notarization fail, so use `ditto` instead: `ditto -c -k --sequesterRsrc --keepParent MyApp.app MyApp.zip`
+2. Put your `.app` in a `.zip` file. Note that using the `zip` command will make notarization fail, so use `ditto` instead: `ditto -c -k --sequesterRsrc --keepParent MyApp.app MyApp.zip`
 3. Submit the archive and wait for the result. The `--wait` flag polls automatically and returns once notarization succeeds or fails, so no separate status check is needed:
 
    ```bash
@@ -270,18 +270,18 @@ With the profile stored, notarize your app:
    ```
 
 4. If a submission is rejected, fetch the detailed log using the submission ID from the output: `xcrun notarytool log <submission-id> --keychain-profile "AC_PASSWORD"`
-5. Once it succeeds, staple the notarization ticket to the app: `xcrun stapler staple MyApp.app`. You can validate this by running `xcrun stapler validate MyApp.app`.
+5. If successful, staple the notarization ticket to the app with `xcrun stapler staple MyApp.app`. You can validate this by running `xcrun stapler validate MyApp.app`.
 
-Once notarization is complete, you should be able to distribute your application!
+Once notarization is complete, you should be able to distribute your application.
 
-:::info
-If you distribute your app in a `.dmg`, you will want to modify the steps slightly:
-:::
+#### Notarizing for .dmg distribution
 
-1. Notarize your `.app` as normal \(in a `.zip` file\).
-2. Add your notarized and stapled \(`xcrun stapler`\) app into the DMG \(the DMG now has the notarized/stapled `.app` file inside of it\).
-3. Notarize your `.dmg` file \(the same `xcrun notarytool submit` command, just pointing at the `.dmg` file instead of the `.zip`\).
-4. Staple the notarization to the `.dmg` file: `xcrun stapler staple MyApp.dmg`
+If you distribute your app as a `.dmg`, you must perform an additional notarization step on the `.dmg` itself.
+
+1. Notarize your `.app` as normal, in a `.zip` file.
+2. Add your notarized and stapled (`xcrun stapler`) app into the `.dmg`.
+3. Notarize your `.dmg` file using the same `xcrun notarytool submit` command. This time, point it at the `.dmg` file instead of the `.zip`.
+4. Staple the notarization to the `.dmg` file: `xcrun stapler staple MyApp.dmg`.
 
 ### App store packaging
 
