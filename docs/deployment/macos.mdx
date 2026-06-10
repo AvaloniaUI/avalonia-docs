@@ -246,7 +246,7 @@ codesign --verify --verbose /path/to/MyApp.app
 
 Notarization is an automated process where you upload your signed app to Apple's servers for a security scan. Once approved, Apple issues a ticket that confirms your software has been checked for malicious content. When a user downloads your app, macOS verifies this ticket and allows the app to launch without showing an "unidentified developer" warning. Notarization is required for all apps distributed outside the Mac App Store since macOS 10.15 (Catalina).
 
-Notarization uses the `notarytool` command line tool, which ships with Xcode 13 and later. (The older `altool --notarize-app` workflow was retired by Apple in November 2023 and no longer works.)
+Notarization uses the `notarytool` command line tool, which ships with Xcode 13 and later. (The older `altool --notarize-app` workflow has been retired by Apple and no longer works.)
 
 Because Apple requires multi-factor authentication on developer accounts, `notarytool` authenticates with an app-specific password that you generate on the [Apple ID account page](https://account.apple.com/account/manage). Store it once in your keychain as a named profile so you don't have to pass credentials on every run:
 
@@ -262,7 +262,7 @@ xcrun notarytool store-credentials "AC_PASSWORD" \
 With the profile stored, notarize your app:
 
 1. Make sure your `.app` is code signed properly.
-2. Put your `.app` in a `.zip` file. Note that using the `zip` command will make notarization fail, so use `ditto` instead: `ditto -c -k --sequesterRsrc --keepParent MyApp.app MyApp.zip`
+2. Put your `.app` in a `.zip` file. Apple recommends using `ditto` for this step because the `zip` command can cause notarization issues: `ditto -c -k --sequesterRsrc --keepParent MyApp.app MyApp.zip`
 3. Submit the archive and wait for the result. The `--wait` flag polls automatically and returns once notarization succeeds or fails, so no separate status check is needed:
 
    ```bash
@@ -318,7 +318,7 @@ The App Store requires apps to run inside a sandbox. Sandboxing is a security me
 
 Your app must be prepared for this restricted environment and must not crash if a folder or resource is inaccessible.
 
-Apps will not crash inside a sandbox only if they're published with the single file option enabled. Example:
+If your app crashes when running inside the sandbox, try publishing with the single file option enabled. Example:
 
 `dotnet publish src/MyApp.csproj -c Release -f net10.0 -r osx-x64 --self-contained true -p:PublishSingleFile=true`
 
