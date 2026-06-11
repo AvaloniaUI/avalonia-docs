@@ -1,6 +1,7 @@
 ---
 id: macos
 title: macOS
+description: Package, code sign, notarize, and distribute an Avalonia app as a macOS .app bundle, with App Store and GitHub Actions guidance.
 doc-type: how-to
 ---
 
@@ -606,3 +607,10 @@ When you run this workflow you will have an app bundle that is signed and notari
 To verify that code signing worked you will need to download it first to trigger the quarantine functionality of macOS. You can do this by e-mailing it to yourself or using a service like WeTransfer or similar.
 
 Once you've downloaded the app bundle and want to start it you should see the popup from macOS saying that the app was scanned and no malware was found.
+
+## See also
+
+- [Packaging for macOS with Parcel](/tools/parcel/packaging-for-macos) to automate bundling, signing, and notarization
+- [macOS platform integration](/docs/platform-specific-guides/macos) for URL schemes, file associations, and native APIs
+- [Deploying to iOS](/docs/deployment/ios) for iOS and Mac Catalyst builds from the same project
+- [Publishing with Native AOT](/docs/deployment/native-aot) for ahead-of-time compiled builds
