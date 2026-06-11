@@ -94,7 +94,7 @@ Add other runtime identifiers as necessary. Each one should be separated by a se
 
 #### Creating icon files
 
-This type of icon file can not only be created on Apple devices, but it is also possible on Linux devices.  
+This type of icon file can be created not only on Apple devices but also on Linux devices.  
 You can find more information about how you can achieve that in this blog post:  
 [Creating macOS Icons (icns) on Linux](https://dentrassi.de/2014/02/25/creating-mac-os-x-icons-icns-on-linux/)
 
@@ -114,7 +114,7 @@ The file that is actually executed by macOS when starting your `.app` bundle wil
 
 * Add `-p:UseAppHost=true` to your `dotnet publish` command.
 
-Additionally, you might want to add the '-p:PublishSingleFile=true' to your dotnet command, compiling most of the DLLs into a your single application, simplifying the signing and notarizing process. 
+Additionally, you might want to add the '-p:PublishSingleFile=true' to your dotnet command, compiling most of the DLLs into a single application, simplifying the signing and notarizing process. 
 
 ### Manual
 
@@ -331,10 +331,10 @@ You need a lot of things:
 * Latest Xcode installed with your Apple ID authorized into it.
 * Two certificates: `3rd Party Mac Developer Installer` for signing `.pkg` file and `3rd Party Mac Developer Application` for signing a bundle.
 * App Store Provision Profile. Get it for your app from the [Apple Developer provisioning profiles page](https://developer.apple.com/account/resources/profiles/list).
-* Two entitlements: One for signing `.app` and other for signing app helpers.
+* Two entitlements: One for signing `.app` and the other for signing app helpers.
 * Your app content is [bundled correctly](https://developer.apple.com/documentation/bundleresources/placing_content_in_a_bundle).
 * Your bundle is signed correctly.
-* Your `.dylib` files doesn't contain any non-ARM/x64 architectures. You can remove these by using `lipo` command line tool.
+* Your `.dylib` files don't contain any non-ARM/x64 architectures. You can remove these by using the `lipo` command line tool.
 * Your app is ready to run inside the macOS sandbox (see the Sandbox section below).
 
 ### Getting certificates
@@ -343,7 +343,7 @@ You need a lot of things:
 * Add them if they do not exist.
 * Export them with a password. 
 * Open them and import into KeyChain Access.
-* In KeyChain you should see this certificates `3rd Party Mac Developer Installer` and `Apple Distribution`. If cert names start with another string, you may have created a wrong certificate. Try again.
+* In KeyChain you should see these certificates: `3rd Party Mac Developer Installer` and `Apple Distribution`. If cert names start with another string, you may have created the wrong certificate. Try again.
 * Expand imported keys in KeyChain and double click on a private key inside.
 * Go to Access Control Tab.
 * Select `Allow all applications to access this item` in case you don't want to enter a Mac profile password for every file sign.
@@ -360,12 +360,12 @@ If your app crashes when running inside the sandbox, try publishing with the sin
 
 Your app content must be bundled correctly. macOS expects specific file types in specific directories within the bundle.
 
-Most important rules from the article: 
-* `.dll` files are not considered as a code by Apple. So it should be placed inside `/Resources` folder and can be not signed.
+The most important rules: 
+* `.dll` files are not considered code by Apple. So they should be placed inside the `/Resources` folder and do not need to be signed.
 * `/MacOS` files should contain only executable mach-o, i.e., your app executable and any other helper executables.
-* All other mach-o `.dylib` files should be inside `Frameworks/` folder.
+* All other mach-o `.dylib` files should be inside the `Frameworks/` folder.
 
-To satisfy this requirement without a lot of pain you can use relative symlinks from `MacOS/` folder to `Resources/` and `Frameworks/` folders. As an example:
+To satisfy this requirement, you can use relative symlinks from the `MacOS/` folder to `Resources/` and `Frameworks/` folders. As an example:
 
 `ln -s fromFile toFile`
 
@@ -375,7 +375,7 @@ Also it's better to rewrite your app's resources access scheme to directly acces
 
 Entitlements are key-value pairs that declare the specific capabilities your app needs, such as network access, file system access, or JIT compilation. You declare them in an entitlements `.plist` file, and macOS enforces them at runtime. Choose only the entitlements your app actually requires.
 
-First for the entitlements file is to sign all helper executables inside `.app/Content/MacOS/` folder. It should look like this.
+The first entitlements file is for signing all helper executables inside the `.app/Contents/MacOS/` folder. It should look like this.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -390,7 +390,7 @@ First for the entitlements file is to sign all helper executables inside `.app/C
 </plist>
 ```
 
-Second is to sign app executable and a whole app bundle. It should contain all app's permissions. Here is an example:
+The second is for signing the app executable and the whole app bundle. It should contain all of the app's permissions. Here is an example:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -436,7 +436,7 @@ Here are some optional permissions your app may need:
 
 ### Packaging script
 
-Here is example packaging script with comments
+Here is an example packaging script with comments.
 
 ```bash
 #cleanup folders
@@ -496,9 +496,9 @@ Copy your `.app` into the Applications folder and launch it. If it launches corr
 
 Open the Transporter app, sign in, select your \*.pkg package, and wait for validation and uploading to App Store Connect.
 
-If you will receive any errors - fix them, package app again, remove file in Transporter and select it again.
+If you receive any errors, fix them, package the app again, remove the file in Transporter, and select it again.
 
-When upload succeeds - you will see your package in App Store Connect.
+When the upload succeeds, you will see your package in App Store Connect.
 
 ### Packaging in GitHub Actions workflow
 
@@ -592,7 +592,7 @@ And then add these steps:
 
 > **Note:** `RUNNER_TEMP` is an environment variable provided by GitHub Actions
 
-After code signing the app bundle can now be notarized, by adding this step to the job:
+After code signing, the app bundle can now be notarized by adding this step to the job:
 
 ```yaml
     - name: Notarise app
@@ -604,9 +604,9 @@ After code signing the app bundle can now be notarized, by adding this step to t
 
 When you run this workflow you will have an app bundle that is signed and notarized, ready for packaging in a disk image or installer.
 
-To verify that code signing worked you will need to download it first to trigger the quarantine functionality of macOS. You can do this by e-mailing it to yourself or using a service like WeTransfer or similar.
+To verify that code signing worked, you will need to download it first to trigger the quarantine functionality of macOS. You can do this by e-mailing it to yourself or using a service like WeTransfer or similar.
 
-Once you've downloaded the app bundle and want to start it you should see the popup from macOS saying that the app was scanned and no malware was found.
+Once you've downloaded the app bundle and want to start it, you should see the popup from macOS saying that the app was scanned and no malware was found.
 
 ## See also
 
