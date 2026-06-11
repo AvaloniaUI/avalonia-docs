@@ -9,13 +9,13 @@ doc-type: overview
 
 Avalonia uses the Win32 API directly on Windows. No additional workloads or dependencies are needed beyond the .NET SDK. Your target framework is simply `net9.0` or `net10.0`, not a platform-specific one.
 
-Rendering uses Skia backed by Direct3D, with an automatic software fallback when GPU acceleration is unavailable (for example, in remote desktop sessions or virtual machines without GPU passthrough). Input, windowing, clipboard, file dialogs, drag-and-drop, and accessibility are all provided through standard Win32 APIs.
+Rendering uses Skia backed by Direct3D, with an automatic software fallback when GPU acceleration is unavailable. (For example, in remote desktop sessions or virtual machines without GPU passthrough.) Input, windowing, clipboard, file dialogs, drag-and-drop, and accessibility are all provided through standard Win32 APIs.
 
 Because there is no dependency on a Windows-specific .NET workload, you can cross-compile Windows builds from macOS or Linux. The resulting binary runs on any supported version of Windows with the .NET runtime installed.
 
 ## Window transparency and Mica
 
-Windows supports all `TransparencyLevelHint` values, making it the only platform with full transparency support. macOS supports only `Transparent`, and Linux support depends on the compositor.
+Windows supports all `TransparencyLevelHint` values. It ia the only platform with full transparency support. macOS supports only `Transparent`, and Linux support depends on the compositor.
 
 | Level | Effect | Minimum version |
 |---|---|---|
@@ -33,17 +33,17 @@ To enable a Mica backdrop:
 </Window>
 ```
 
-If Mica is unavailable (for example, on Windows 10), the window falls back through the list in order. You can check which level is actually active at runtime:
+If Mica is unavailable (for example, on Windows 10), the window falls back through the list in order. You can check which level is actually active at runtime by checking `ActualTransparencyLevel`:
 
 ```csharp
 var actual = myWindow.ActualTransparencyLevel;
 ```
 
-Set the window's `Background` to `Transparent` for any transparency level to take effect. An opaque background covers the transparency effect entirely.
+You must set the window's `Background` property to `Transparent` for any transparency level to take effect. An opaque background covers transparency effects entirely.
 
-For more details, see [Window Management](/docs/app-development/window-management).
+For details, see [Window Management](/docs/app-development/window-management).
 
-:::caution
+:::warning[Set a non-transparent fallback!]
 Windows may suppress transparency at the OS level regardless of your Avalonia configuration. Common causes are battery saver mode or remote/virtual sessions. It is advisable to set a non-transparent fallback that fits your UI, in case your users run your app under such conditions.
 :::
 
@@ -69,9 +69,11 @@ Windows supports extending the client area into the title bar region for custom 
 
 The marked region supports native window dragging and double-click-to-maximize. Interactive controls placed inside the title bar region still receive input normally.
 
-Setting `WindowDecorations="None"` removes all system chrome, giving you complete control over the window frame. With `WindowDecorations="Full"`, the system minimize, maximize, and close buttons remain visible alongside your custom title bar content. On Windows, disabled caption buttons are hidden rather than greyed out.
+Setting `WindowDecorations="None"` removes the system chrome entirely, giving you complete control over the window frame.
 
-For more details, see [Window Management](/docs/app-development/window-management#custom-title-bar).
+Setting `WindowDecorations="Full"` keeps the system's minimize, maximize, and close buttons visible. They will appear alongside your custom title bar, if you have made one. On Windows, disabled caption buttons are hidden rather than greyed out.
+
+For details, see [Window Management](/docs/app-development/window-management#custom-title-bar).
 
 ## Dark mode and system theme detection
 
@@ -105,7 +107,7 @@ This is useful for custom theming logic beyond what `FluentTheme` handles automa
 On Windows 11, Avalonia automatically updates the native title bar to match the application's `RequestedThemeVariant`. On Windows 10, the title bar does not darken because the platform does not provide an official API for this. If you need a dark title bar on Windows 10, use a [custom title bar](#custom-title-bars) or the undocumented `DwmSetWindowAttribute` workaround described in [Windows troubleshooting](/troubleshooting/platform-specific-issues/windows#title-bar-stays-light-when-switching-to-dark-theme-on-windows-10).
 :::
 
-For more details, see [Platform Settings](/docs/services/platform-settings).
+For details, see [Platform Settings](/docs/services/platform-settings).
 
 ## High DPI and per-monitor scaling
 
@@ -120,7 +122,7 @@ The `Screen.Scaling` property reports the DPI scale factor for each display:
 | `1.5` | 144 | 150% scaling |
 | `2.0` | 192 | HiDPI / 200% scaling |
 
-All layout in Avalonia uses device-independent pixels, so you do not need manual DPI conversion. To read the current screen's scaling factor:
+All layout in Avalonia uses device-independent pixels, so manual DPI conversion is not needed. To read the current screen's scaling factor, use `screen?.Scaling`:
 
 ```csharp
 var screen = myWindow.Screens.ScreenFromWindow(myWindow);
@@ -129,7 +131,7 @@ var scaling = screen?.Scaling ?? 1.0;
 
 For bitmap assets, Avalonia automatically selects `@2x` variants when the display scaling is 2.0 or higher.
 
-For more details, see [Window Management](/docs/app-development/window-management#working-with-screens).
+For details, see [Window Management](/docs/app-development/window-management#working-with-screens).
 
 ## Embedding native Win32 controls
 
@@ -184,13 +186,15 @@ A typical setup requires at least two projects:
 
 1. **YourApp**: A cross-platform class library containing your Avalonia controls and view models.
 2. **YourApp.WinForms**: Your existing Windows Forms application.
-3. **YourApp.Desktop** (optional): A standalone Avalonia executable, only needed if you want to use the Visual Studio XAML previewer.
+3. **YourApp.Desktop** (optional): A standalone Avalonia executable. Only needed if you want to use the Visual Studio XAML previewer.
 
-Since Windows Forms only runs on Windows, embedding Avalonia controls into a WinForms app does not make it cross-platform. For cross-platform support, migrate fully to an Avalonia desktop project.
+Since Windows Forms only runs on Windows, embedding Avalonia controls into a WinForms app does not make it cross-platform. For cross-platform support, you must migrate fully to an Avalonia desktop project.
 
 ### Setup
 
-These instructions assume Visual Studio 2022 with the Avalonia extension. If you use VS Code or Rider, you can skip the optional `YourApp.Desktop` project.
+:::note
+These instructions assume you use Visual Studio with the Avalonia for Visual Studio extension. If you use VS Code or Rider, you can skip the optional `YourApp.Desktop` project.
+:::
 
 1. Add a new project to your solution using the **Avalonia C# Project** template. Select at least **Desktop** as a target platform. This creates `YourApp` and `YourApp.Desktop`.
 
@@ -207,7 +211,7 @@ AppBuilder.Configure<App>()
     .SetupWithoutStarting();
 ```
 
-4. Add a `WinFormsAvaloniaControlHost` control to your form (available in the Toolbox after adding the package reference).
+4. Add a `WinFormsAvaloniaControlHost` control to your form. This control is available in the Toolbox when you have added the package reference.
 
 5. Set its content in your form's constructor, after `InitializeComponent()`:
 
@@ -247,11 +251,11 @@ Windows requires `.ico` format for tray icons. Include the icon file as an Avalo
 
 To minimize your application to the tray instead of the taskbar, set `ShowInTaskbar="False"` on the window when minimizing and restore it from the tray icon's click handler.
 
-For more details, see [TrayIcon](/controls/navigation/trayicon).
+For details, see [TrayIcon](/controls/navigation/trayicon).
 
 ## Accessibility
 
-Avalonia exposes UI elements to assistive technology on Windows through the UI Automation (UIA) framework. Screen readers such as Narrator and NVDA can read and interact with Avalonia applications.
+On Windows, Avalonia exposes UI elements to assistive technology through the UI Automation (UIA) framework. Screen readers such as Narrator or NVDA can read and interact with Avalonia applications.
 
 Built-in controls provide automation peers automatically, so standard controls like buttons, text boxes, and list items work with screen readers out of the box. For custom controls, set `AutomationProperties.Name` to provide a meaningful label:
 
@@ -263,22 +267,22 @@ For advanced scenarios, override `OnCreateAutomationPeer` in your control to ret
 
 For landmark navigation with Narrator, set `AutomationProperties.AccessibilityView` to at least `"Control"` to enable Narrator's landmark shortcuts.
 
-For more details, see [Accessibility](/docs/app-development/accessibility).
+For details, see [Accessibility](/docs/app-development/accessibility).
 
 ## Platform-specific services on Windows
 
-Avalonia's platform services use Win32 APIs on Windows. Here is a summary of how common services behave:
+On Windows, Avalonia's platform services use Win32 APIs. Here is a summary of the behavior of some common services:
 
 | Service | Windows behavior |
 |---|---|
 | Clipboard | Supports text, HTML, RTF, and file lists through the Win32 clipboard API. |
-| File dialogs | Uses the Win32 common file dialog (IFileDialog). Supports file type filters, initial directory, and multi-select. |
+| File dialogs | Uses the Win32 common file dialog (`IFileDialog`). Supports file type filters, initial directory, and multi-select. |
 | Drag and drop | Supports file drops from Explorer and data transfer between applications via OLE drag-and-drop. |
-| Launcher | `Launcher.LaunchUriAsync` opens URLs in the default browser. `Launcher.LaunchFileAsync` opens files with their associated application. |
+| Launcher | `Launcher.LaunchUriAsync` opens URLs in the default browser. `Launcher.LaunchFileAsync` opens files using the associated application. |
 
 ## See also
 
-- [Packaging for Windows](/tools/parcel/packaging-for-windows) (NSIS installer, code signing)
+- [Packaging for Windows](/tools/parcel/packaging-for-windows)
 - [WPF migration guide](/docs/migration/wpf)
 - [Native Platform Interop](/docs/app-development/native-interop)
 - [Window Management](/docs/app-development/window-management)
