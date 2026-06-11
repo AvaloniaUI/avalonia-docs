@@ -203,9 +203,9 @@ Note that Xcode defaults to cloud-managed signing certificates, which can be awk
 
 1. Open Xcode.
 2. Go to **Xcode → Settings → Accounts**.
-2. Add your Apple ID if it isn't already listed.
-3. Select your team and choose **Download Manual Profiles**. This downloads the certificate into your keychain.
-4. To share the certificate with another developer, find it in Keychain Access, right-click, and choose **Export**. This generates a password-protected `.p12` file.
+3. Add your Apple ID if it isn't already listed.
+4. Select your team and choose **Download Manual Profiles**. This downloads the certificate into your keychain.
+5. To share the certificate with another developer, find it in Keychain Access, right-click, and choose **Export**. This generates a password-protected `.p12` file.
 
 #### If you do not own the account
 
@@ -223,7 +223,7 @@ You should see a `Developer ID Application` identity listed. Its team ID appears
 
 ### Running codesign and enabling hardened runtime
 
-Enabling hardened runtime is done in the same step as codesigning. You have to codesign everything in the `.app` bundle under the `Contents/MacOS` folder, which is easiest to do with a script since there are a lot of files. To sign your files, you need an Apple developer account.
+Enabling hardened runtime is done in the same step as codesigning. You have to codesign everything in the `.app` bundle under the `Contents/MacOS` folder, which is typically done with a script since there are a lot of files. To sign your files, you need an Apple developer account.
 
 To notarize your app, you need a Developer ID certificate, which requires a paid Apple developer subscription. See [Obtaining a Developer ID certificate](#obtaining-a-developer-id-certificate) for instructions on how to install a certificate locally.
 
@@ -269,7 +269,7 @@ The `--options=runtime` part of the `codesign` line is what enables the hardened
 Note: Microsoft lists [some other hardened runtime exceptions](https://docs.microsoft.com/en-us/dotnet/core/install/macos-notarization-issues#default-entitlements) as being required for .NET Core. The only one that is actually needed to run an Avalonia app is `com.apple.security.cs.allow-jit`. The others may impose security risks with your application. Use with caution.
 
 :::caution[Don't use the `--deep` flag]
-Some guides suggest signing the whole bundle in a single pass with `codesign --deep`. Apple has deprecated `--deep` for signing, and it can leave nested binaries improperly signed. Sign each item explicitly instead, as the script above does, by walking the files first and signing the bundle last.
+Some guides suggest signing the whole bundle in a single pass with `codesign --deep`. Apple recommends avoiding `--deep` because it can leave nested binaries improperly signed. Sign each item explicitly instead, as the script above does, by walking the files first and signing the bundle last.
 :::
 
 Once your app is code signed, you can verify that it signed properly by making sure that the following command outputs no errors:
@@ -339,7 +339,7 @@ You need a lot of things:
 
 ### Getting certificates
 
-* Go to Xcode &gt; Preferences &gt; Account &gt; Manage Certificates... 
+* Go to **Xcode → Settings → Accounts → Manage Certificates...**
 * Add them if they do not exist.
 * Export them with a password. 
 * Open them and import into KeyChain Access.
@@ -490,11 +490,11 @@ productbuild --component App/AppName.app /Applications --sign "$INSTALLER_SIGNIN
 
 ### Testing a package
 
-Copy your `.app` into the Applications folder and launch it. If it launches correctly, you did everything right. If it crashes, open the Console and check the crash report.
+Copy your `.app` into the Applications folder and launch it. If it launches correctly, you did everything right. If it crashes, open `Console.app` and check the crash report.
 
 ### Uploading a package to the App Store
 
-Open a Transporter app, sign in, select your \*.pkg package and wait for validation and uploading to App Store.
+Open the Transporter app, sign in, select your \*.pkg package, and wait for validation and uploading to App Store Connect.
 
 If you will receive any errors - fix them, package app again, remove file in Transporter and select it again.
 
