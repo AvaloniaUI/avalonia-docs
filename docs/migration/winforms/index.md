@@ -45,9 +45,9 @@ Create a new Avalonia project and rebuild screens one at a time, starting with t
 
 ### Option 2: host Avalonia controls inside WinForms (Windows only)
 
-If you need to keep your WinForms application running while gradually introducing Avalonia, you can embed Avalonia controls directly inside WinForms windows using `WinFormsAvaloniaControlHost`. This lets you build new features in Avalonia without touching existing WinForms code.
+If you wish to keep your WinForms application running while gradually introducing Avalonia, you can embed Avalonia controls inside WinForms windows using `WinFormsAvaloniaControlHost`. You can also create entire new screens as standalone Avalonia windows within your WinForms application. This lets you build new features in Avalonia without touching your existing WinForms code.
 
-This approach only works on Windows since Windows Forms itself is Windows-only. However, if you structure your Avalonia controls in a separate class library, those same controls can later be used in a standalone cross-platform Avalonia application.
+This approach only works on Windows, since Windows Forms itself is Windows-only. However, if you structure your Avalonia controls in a separate class library, those same controls can later be used in a standalone cross-platform Avalonia application.
 
 For setup instructions, see [Using Avalonia in Windows Forms](/docs/platform-specific-guides/windows#using-avalonia-in-windows-forms).
 
