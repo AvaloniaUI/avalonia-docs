@@ -31,7 +31,13 @@ AppBuilder.Configure<App>()
     });
 ```
 
-Every option has a default, so set only the ones you need to change.
+The following options are available.
+
+- [Rendering mode](#rendering-mode)
+- [Rendering options](#rendering-options)
+- [Desktop integration options](#desktop-integration-options)
+- [Input options](#input-options)
+- [Event loop options](#event-loop-options)
 
 ### Rendering mode
 
