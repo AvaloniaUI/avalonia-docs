@@ -15,7 +15,7 @@ Wayland support is coming in Avalonia 12.0.
 
 ## Configuring X11 platform options
 
-`X11PlatformOptions` controls how Avalonia renders and integrates with the desktop on Linux. Pass an instance to `.With()` when you build the application in `Program.cs`:
+`X11PlatformOptions` controls how Avalonia renders and integrates with the desktop on Linux. Apply it by passing to `.With()` in the `AppBuilder` in `Program.cs`:
 
 ```csharp
 AppBuilder.Configure<App>()
