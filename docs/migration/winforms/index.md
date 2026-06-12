@@ -49,7 +49,7 @@ If you need to keep your WinForms application running while gradually introducin
 
 This approach only works on Windows since Windows Forms itself is Windows-only. However, if you structure your Avalonia controls in a separate class library, those same controls can later be used in a standalone cross-platform Avalonia application.
 
-For setup instructions, see [Embedding Avalonia in Windows Forms](/docs/platform-specific-guides/windows#embedding-avalonia-in-windows-forms).
+For setup instructions, see [Using Avalonia in Windows Forms](/docs/platform-specific-guides/windows#using-avalonia-in-windows-forms).
 
 ## Key concepts to learn
 
@@ -64,5 +64,5 @@ If you are coming from WinForms with no XAML experience, these are the areas tha
 ## See also
 
 - [Get Started with Avalonia](/docs/get-started/create-your-first-project): Create your first Avalonia application.
-- [Embedding Avalonia in Windows Forms](/docs/platform-specific-guides/windows#embedding-avalonia-in-windows-forms): Host Avalonia controls inside an existing WinForms app.
+- [Using Avalonia in Windows Forms](/docs/platform-specific-guides/windows#using-avalonia-in-windows-forms): Use Avalonia controls inside an existing WinForms app.
 - [Controls Reference](/controls): Full Avalonia controls documentation.

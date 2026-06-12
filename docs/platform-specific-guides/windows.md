@@ -178,7 +178,7 @@ Native controls rendered through `NativeControlHost` always appear above or belo
 
 For more details, see [Native Platform Interop](/docs/app-development/native-interop).
 
-## Embedding Avalonia in Windows Forms
+## Using Avalonia in Windows Forms
 
 Avalonia controls can be hosted inside Windows Forms applications using `WinFormsAvaloniaControlHost`. This enables incremental migration of existing Windows Forms applications to Avalonia without rewriting everything at once.
 
@@ -223,6 +223,57 @@ winFormsAvaloniaControlHost1.Content = new MainView
 ```
 
 You should now see Avalonia's default view rendered inside your Windows Forms application.
+
+### Opening standalone Avalonia windows
+
+Besides embedding Avalonia controls in a form, you can open a top-level Avalonia `Window` directly from a WinForms application. It appears as a separate native window, with its own decorations and taskbar, alongside your WinForms windows.
+
+Because both frameworks define similarly named types, such as `Button` or `TextBox`, alias the Avalonia namespaces to keep references unambiguous:
+
+```csharp
+using AvaloniaWindow = Avalonia.Controls.Window;
+using AvaloniaButton = Avalonia.Controls.Button;
+
+private void OpenWindowButton_Click(object sender, EventArgs e)
+{
+    var window = new AvaloniaWindow
+    {
+        Width = 300,
+        Height = 300,
+        Content = new MainView()
+    };
+    window.Show();
+}
+```
+
+### Routing keyboard input to Avalonia windows
+
+Standalone Avalonia windows run inside the WinForms message loop started by `Application.Run()`. WinForms intercepts keyboard messages before they reach windows it does not own, meaning the Avalonia window receives no typed characters or keyboard navigation without additional setup.
+
+To enable keyboard input, add an extra line to `Program.cs` to register a `WinFormsAvaloniaMessageFilter` during startup. This must occur before `Application.Run()`.
+
+```csharp title="Program.cs"
+[STAThread]
+static void Main()
+{
+    System.Windows.Forms.Application.EnableVisualStyles();
+    System.Windows.Forms.Application.SetCompatibleTextRenderingDefault(false);
+    // highlight-next-line
+    System.Windows.Forms.Application.AddMessageFilter(new WinFormsAvaloniaMessageFilter());
+
+    AppBuilder.Configure<App>()
+        .UsePlatformDetect()
+        .SetupWithoutStarting();
+
+    System.Windows.Forms.Application.Run(new MainForm());
+}
+```
+
+`WinFormsAvaloniaMessageFilter` is in the `Avalonia.Win32.Interoperability` namespace. It dispatches keyboard messages bound for top-level Avalonia windows, while leaving messages for embedded hosts and native WinForms controls untouched.
+
+:::note
+The message filter is only required for standalone Avalonia windows. Controls embedded with `WinFormsAvaloniaControlHost` don't need it.
+:::
 
 ## System tray integration
 
