@@ -2,7 +2,7 @@
 id: android
 title: Developing with Avalonia for Android
 description: Setting up the Android development environment for building Avalonia applications, including SDK and workload installation.
-doc-type: guide
+doc-type: overview
 ---
 
 ## Setting up your developer environment
@@ -72,6 +72,39 @@ maui-check
 ```
 
 With the above _Android_ development environment setup, you will be able to build _Android_ applications, and run them in a simulator on your platform.
+
+## Configuring Android platform options
+
+`AndroidPlatformOptions` controls how Avalonia renders on Android. Apply it by overriding `CustomizeAppBuilder` in your `AvaloniaAndroidApplication` subclass:
+
+```csharp
+protected override AppBuilder CustomizeAppBuilder(AppBuilder builder)
+{
+    return base.CustomizeAppBuilder(builder)
+        .With(new AndroidPlatformOptions
+        {
+            RenderingMode = new[]
+            {
+                AndroidRenderingMode.Egl,
+                AndroidRenderingMode.Software
+            }
+        });
+}
+```
+
+### Rendering mode
+
+`RenderingMode` is an ordered list of graphics backends. Avalonia tries each one in turn and uses the first that initializes successfully, so the first entry has the highest priority. The default is a two-item list of `Egl` first, `Software` second.
+
+| Mode | Description |
+|---|---|
+| `Egl` | GPU rendering through EGL (OpenGL ES). The default GPU backend. |
+| `Vulkan` | GPU rendering through Vulkan. |
+| `Software` | CPU rendering into a framebuffer. |
+
+To support the widest range of devices, include `Software` as a fallback.
+
+`RenderingMode` must contain at least one mode. If it is empty, or none of the listed modes initialize, Avalonia throws an `InvalidOperationException`.
 
 ## See also
 

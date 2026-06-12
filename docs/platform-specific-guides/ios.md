@@ -1,6 +1,8 @@
 ---
 id: ios
 title: iOS
+description: How to set up, provision, and configure Avalonia apps for iOS, including rendering options, Mac Catalyst, and deep linking.
+doc-type: overview
 ---
 
 import IOSOpenXcodeScreenshot from '/img/guides/platform-specific-guides/ios/ios-open-xcode.png';
@@ -83,6 +85,36 @@ If successful, your device is now provisioned for development. To find your code
 <Image light={IOSCertScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
 
 The bold text at the top of the window on your selected development certificate is your signing key value (e.g., `Apple Development: dan@walms.co.uk (3L323F7VSS)`).
+
+## Configuring iOS platform options
+
+`iOSPlatformOptions` controls how Avalonia renders on iOS. Apply it by overriding `CustomizeAppBuilder` in your `AppDelegate`, which inherits from `AvaloniaAppDelegate`:
+
+```csharp
+protected override AppBuilder CustomizeAppBuilder(AppBuilder builder)
+{
+    return base.CustomizeAppBuilder(builder)
+        .With(new iOSPlatformOptions
+        {
+            RenderingMode = new[]
+            {
+                iOSRenderingMode.Metal,
+                iOSRenderingMode.OpenGl
+            }
+        });
+}
+```
+
+### Rendering mode
+
+`RenderingMode` is an ordered list of graphics backends. Avalonia tries each one in turn and uses the first that initializes successfully, so the first entry has the highest priority. The default is a two-item list of `Metal` first, `OpenGl` second.
+
+| Mode | Description |
+|---|---|
+| `Metal` | GPU rendering through Metal. Currently works only on iOS, and is not yet stable. |
+| `OpenGl` | GPU rendering through EAGL on iOS and tvOS. Not supported on Mac Catalyst. |
+
+`RenderingMode` must contain at least one mode. If it is empty, or none of the listed modes initialize, Avalonia throws an `InvalidOperationException`.
 
 ## Mac Catalyst
 
