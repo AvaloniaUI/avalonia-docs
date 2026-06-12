@@ -107,7 +107,7 @@ protected override AppBuilder CustomizeAppBuilder(AppBuilder builder)
 
 ### Rendering mode
 
-`RenderingMode` is an ordered list of graphics backends. Avalonia tries each one in turn and uses the first that initializes successfully, so the first entry has the highest priority. The default is `Metal`, then `OpenGl`.
+`RenderingMode` is an ordered list of graphics backends. Avalonia tries each one in turn and uses the first that initializes successfully, so the first entry has the highest priority. The default is a two-item list of `Metal` first, `OpenGl` second.
 
 | Mode | Description |
 |---|---|
