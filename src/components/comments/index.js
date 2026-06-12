@@ -20,6 +20,7 @@ export default function Comments() {
         inputPosition="top"
         lang="en"
         loading="lazy"
+        theme={colorMode}
       />
     </div>
   );
