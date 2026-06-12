@@ -15,7 +15,7 @@ Because there is no dependency on a Windows-specific .NET workload, you can cros
 
 ## Window transparency and Mica
 
-Windows supports all `TransparencyLevelHint` values. It ia the only platform with full transparency support. macOS supports only `Transparent`, and Linux support depends on the compositor.
+Windows supports all `TransparencyLevelHint` values. It is the only platform with full transparency support. macOS supports only `Transparent`, and Linux support depends on the compositor.
 
 | Level | Effect | Minimum version |
 |---|---|---|
@@ -33,7 +33,7 @@ To enable a Mica backdrop:
 </Window>
 ```
 
-If Mica is unavailable (for example, on Windows 10), the window falls back through the list in order. You can check which level is actually active at runtime by checking `ActualTransparencyLevel`:
+If Mica is unavailable (for example, on Windows 10), the window falls back through the list in order. You can check which level is actually active at runtime by reading `ActualTransparencyLevel`:
 
 ```csharp
 var actual = myWindow.ActualTransparencyLevel;
