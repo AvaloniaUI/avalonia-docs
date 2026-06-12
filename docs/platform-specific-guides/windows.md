@@ -269,7 +269,7 @@ static void Main()
 }
 ```
 
-`WinFormsAvaloniaMessageFilter` is in the `Avalonia.Win32.Interoperability` namespace. It dispatches keyboard messages bound for top-level Avalonia windows, while leaving messages for embedded hosts and native WinForms controls untouched.
+`WinFormsAvaloniaMessageFilter` is in the `Avalonia.Win32.Interoperability` package. It dispatches keyboard messages bound for top-level Avalonia windows, while leaving messages for embedded hosts and native WinForms controls untouched.
 
 :::note
 The message filter is only required for standalone Avalonia windows. Controls embedded with `WinFormsAvaloniaControlHost` don't need it.
