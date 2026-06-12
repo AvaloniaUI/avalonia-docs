@@ -102,7 +102,9 @@ protected override AppBuilder CustomizeAppBuilder(AppBuilder builder)
 | `Vulkan` | GPU rendering through Vulkan. |
 | `Software` | CPU rendering into a framebuffer. |
 
-To support the widest range of devices, include `Software` as a fallback. If `RenderingMode` is empty, or none of the listed modes initialize, Avalonia throws an `InvalidOperationException`.
+To support the widest range of devices, include `Software` as a fallback.
+
+`RenderingMode` must contain at least one mode. If it is empty, or none of the listed modes initialize, Avalonia throws an `InvalidOperationException`.
 
 ## See also
 
