@@ -4,7 +4,7 @@ import {ThemeClassNames} from '@docusaurus/theme-common';
 import {useDoc} from '@docusaurus/plugin-content-docs/client';
 import TagsListInline from '@theme/TagsListInline';
 import EditMetaRow from '@theme/EditMetaRow';
-import Comments from "@site/src/components/comments";
+import Comments from '@site/src/components/comments';
 
 export default function DocItemFooter(): JSX.Element | null {
   const {metadata} = useDoc();
@@ -31,16 +31,16 @@ export default function DocItemFooter(): JSX.Element | null {
       )}
       {canDisplayEditMetaRow && (
         <>
-        <EditMetaRow
-          className={clsx(
-            'row margin-top--sm',
-            ThemeClassNames.docs.docFooterEditMetaRow,
-          )}
-          editUrl={editUrl}
-          lastUpdatedAt={lastUpdatedAt}
-          lastUpdatedBy={lastUpdatedBy}
-        />
-        <Comments />
+          <EditMetaRow
+            className={clsx(
+              'row margin-top--sm',
+              ThemeClassNames.docs.docFooterEditMetaRow,
+            )}
+            editUrl={editUrl}
+            lastUpdatedAt={lastUpdatedAt}
+            lastUpdatedBy={lastUpdatedBy}
+          />
+          <Comments />
         </>
       )}
     </footer>
