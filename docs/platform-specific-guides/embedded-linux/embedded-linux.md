@@ -1,6 +1,8 @@
 ---
 id: embedded-linux
 title: Embedded Linux
+description: Run Avalonia on embedded Linux devices using the framebuffer or DRM/KMS, with display scaling, screen rotation, and touch input.
+doc-type: how-to
 ---
 
 Avalonia supports running on embedded Linux devices without a desktop environment. This includes single-board computers like the Raspberry Pi, industrial panels, kiosks, and point-of-sale terminals. Instead of connecting through a windowing system like X11, Avalonia renders directly to the display hardware using either the Linux framebuffer or the Direct Rendering Manager (DRM).
@@ -172,7 +174,7 @@ Embedded devices often render in software through the framebuffer, or use GPUs t
 
 [`CompositionOptions.UseRegionDirtyRectClipping`](/api/avalonia/rendering/composition/compositionoptions) more precisely tracks regions using a dirty rect system. This shrinks the area to be repainted, at the cost of some CPU work to compute the clip.
 
-This option is **disabled by default** from Avalonia 12.1, because on a fast GPU the extra clipping work outweighs the saved overdraw. Embedded Linux is the case it benefits: with a weaker GPU, the reduction in painted pixels outweighs the clipping cost.
+This option is **disabled by default** from Avalonia 12.1, because on a fast GPU the extra clipping work outweighs the saved overdraw. Embedded Linux is one case where it helps: with a weaker GPU, the reduction in painted pixels outweighs the clipping cost.
 
 To enable region clipping, you must explicitly set `UseRegionDirtyRectClipping = true` in `CompositionOptions` at startup.
 
