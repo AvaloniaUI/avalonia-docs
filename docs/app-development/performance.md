@@ -274,6 +274,25 @@ AppBuilder.Configure<App>()
 
 Choose a value appropriate for your target hardware. Most integrated GPUs have at least 2 GB of shared memory, so values of 256 MB or 512 MB are safe for desktop apps. Mobile devices may require lower values.
 
+### Region dirty rect clipping
+
+When content changes, Avalonia repaints the affected, or "dirty", regions of the screen rather than the whole frame. [`CompositionOptions.UseRegionDirtyRectClipping`](/api/avalonia/rendering/composition/compositionoptions) tracks those regions more precisely using a dirty rect system, but adds additional CPU time to process the render pass.
+
+This option is **disabled by default** from Avalonia 12.1 to minimize loss of frame rate in complex scenes.
+
+To enable region clipping, you must explicitly set `UseRegionDirtyRectClipping = true` in `CompositionOptions` at startup. Enabling this option can be useful on some target platforms without GPU acceleration, such as embedded or software-rendered devices, where reducing the painted area matters more than the clipping cost.
+
+```csharp
+AppBuilder.Configure<App>()
+    .UsePlatformDetect()
+    .With(new CompositionOptions
+    {
+        UseRegionDirtyRectClipping = true
+    });
+```
+
+When region clipping is enabled, `MaxDirtyRects` caps how many dirty rects are tracked per frame. The default is `8`. Setting it to zero or a negative value bypasses Avalonia's tracking and uses the underlying drawing context's region support directly.
+
 ## Data binding performance
 
 ### Compiled bindings
