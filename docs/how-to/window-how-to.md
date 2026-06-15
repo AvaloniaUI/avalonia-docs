@@ -1,6 +1,6 @@
 ---
 id: window-how-to
-title: "How to: Work with Windows"
+title: "How to: Work with windows"
 description: Sizing, positioning, dialogs, multi-window apps, startup behavior, and system chrome options.
 doc-type: how-to
 ---
@@ -248,38 +248,10 @@ var supported = this.ActualTransparencyLevel;
 
 If `ActualTransparencyLevel` returns a lower level than requested, this may be due to an OS restriction rather than a configuration error. For example, macOS and Linux have more limited support for transparency, and Windows may suppress compositor effects when in battery saver mode. It is advisable to set a [`TransparencyBackgroundFallback`](/docs/fundamentals/top-level#transparencybackgroundfallback) with a solid color appropriate for your UI, in case transparency is unavailable on the user's device.
 
-### Transparent click-through window
+:::note
+Avalonia currently does not support WPF-like transparent click-through behavior.
 
-To create a transparent overlay window where mouse clicks pass through empty areas to applications underneath, set `TransparencyLevelHint="Transparent"` and remove the window's `Background` by setting it to `{x:Null}`. Interactive controls placed in the window remain clickable.
-
-```xml
-<Window xmlns="https://github.com/avaloniaui"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        TransparencyLevelHint="Transparent"
-        Background="{x:Null}"
-        WindowDecorations="None"
-        Topmost="True"
-        WindowState="Maximized">
-    <Grid>
-        <!-- This button is clickable; empty areas pass input through -->
-        <Button Content="Click Me"
-                HorizontalAlignment="Center"
-                VerticalAlignment="Center" />
-    </Grid>
-</Window>
-```
-
-The key difference is between `Background="{x:Null}"` and `Background="Transparent"`:
-
-| Background value | Visual result | Hit testing |
-|---|---|---|
-| `{x:Null}` | Transparent | Empty areas pass clicks through to windows behind |
-| `Transparent` | Transparent | Empty areas block clicks (the window captures all input) |
-
-This distinction applies at every level in Avalonia, from individual panels to the window itself. For more details, see [Background and hit testing](/docs/graphics-animation/hit-testing#background-and-hit-testing).
-
-:::tip[Migrating from WPF]
-In WPF, setting `AllowsTransparency="True"` with `Background="Transparent"` on a `Window` allows clicks to pass through transparent areas by default. Avalonia behaves differently: `Background="Transparent"` still captures input. Set `Background="{x:Null}"` instead to get the WPF-like click-through behavior.
+If you wish to create a transparent click-through window using native platform APIs, please see our guidance on [Native platform interop](/docs/app-development/native-interop).
 :::
 
 ## Window Icon
