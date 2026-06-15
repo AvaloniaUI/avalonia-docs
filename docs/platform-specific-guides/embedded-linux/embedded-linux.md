@@ -164,6 +164,30 @@ Touch input coordinates are automatically adjusted to match the configured orien
 Rotation uses an offscreen framebuffer and an OpenGL shader to transform the image. There is no performance cost when `Rotation0` is used.
 :::
 
+## Rendering performance
+
+Embedded devices often render in software through the framebuffer, or use GPUs that are weaker than a desktop's. On this kind of hardware, the cost of painting pixels dominates each frame, so reducing the screen area Avalonia repaints has a larger impact than on a desktop GPU.
+
+### Enabling region dirty rect clipping
+
+[`CompositionOptions.UseRegionDirtyRectClipping`](/api/avalonia/rendering/composition/compositionoptions) more precisely tracks regions using a dirty rect system. This shrinks the area to be repainted, at the cost of some CPU work to compute the clip.
+
+This option is **disabled by default** from Avalonia 12.1, because on a fast GPU the extra clipping work outweighs the saved overdraw. Embedded Linux is the case it benefits: with a weaker GPU, the reduction in painted pixels outweighs the clipping cost.
+
+To enable region clipping, you must explicitly set `UseRegionDirtyRectClipping = true` in `CompositionOptions` at startup.
+
+```csharp
+public static AppBuilder BuildAvaloniaApp()
+    => AppBuilder.Configure<App>()
+        .UsePlatformDetect()
+        .With(new CompositionOptions
+        {
+            UseRegionDirtyRectClipping = true
+        });
+```
+
+When region clipping is enabled, `MaxDirtyRects` caps how many dirty rects are tracked per frame. See [Region dirty rect clipping](/docs/app-development/performance#region-dirty-rect-clipping) in the performance optimization guide for more information.
+
 ## Verifying your DRM setup
 
 Before running an Avalonia application, you can verify that DRM is working with `kmscube`:
@@ -187,3 +211,4 @@ For applications that need an on-screen keyboard (kiosks, point-of-sale systems,
 - [Virtual Keyboard](/docs/platform-specific-guides/embedded-linux/virtual-keyboard) for on-screen keyboard support
 - [Deploying to Embedded Linux](/docs/deployment/embedded-linux)
 - [Desktop Linux](/docs/platform-specific-guides/linux) for X11 and Wayland environments
+- [Performance optimization](/docs/app-development/performance) for rendering, layout, and binding tuning
