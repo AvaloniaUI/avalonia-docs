@@ -58,7 +58,7 @@ Virtualization requires a constrained height. If the item is inside a control th
 
 ### Buffer factor for smooth scrolling
 
-`VirtualizingStackPanel` supports a `BufferFactor` property that keeps additional items from realizing beyond the visible viewport. This reduces recycling frequency during scrolling, which can eliminate stutter, particularly on mobile devices.
+`VirtualizingStackPanel` supports a `BufferFactor` property that keeps additional items beyond the visible viewport in a realized state. This reduces recycling frequency during scrolling, which can eliminate stutter, particularly on mobile devices.
 
 ```xml
 <ListBox ItemsSource="{Binding LargeCollection}">
@@ -214,7 +214,7 @@ Transparent elements also participate in hit testing. If a transparent control d
 
 - Minimize the number of `BoxShadow` effects, which add an individual render pass each.
 - Avoid overlapping semi-transparent elements.
-- Use `Opacity` on a parent element rather than on each child,
+- Use `Opacity` on a parent element rather than on each child.
 
 ### Bitmap cache
 
@@ -233,7 +233,7 @@ For visuals that are expensive to render but change infrequently, use `BitmapCac
 
 | Property | Type | Default | Description |
 |---|---|---|---|
-| `RenderAtScale` | `double` | `1` | Resolution multiplier for the cached bitmap. Values above 1 increase quality. Values below 1 reduce memory at the cost of quality. Value equal to 0 disables caching. |
+| `RenderAtScale` | `double` | `1` | Resolution multiplier for the cached bitmap. Values above 1 increase quality. Values below 1 reduce memory at the cost of quality. A value of 0 disables caching. |
 | `SnapsToDevicePixels` | `bool` | `false` | Aligns the cached bitmap to device pixel boundaries for sharper text and line rendering. |
 | `EnableClearType` | `bool` | `false` | Enables `ClearType` subpixel text rendering within the cached surface. Without this, text in the cache uses grayscale antialiasing. |
 
@@ -276,11 +276,11 @@ Choose a value appropriate for your target hardware. Most integrated GPUs have a
 
 ### Region dirty rect clipping
 
-When content changes, Avalonia repaints the affected, or "dirty", regions of the screen rather than the whole frame. [`CompositionOptions.UseRegionDirtyRectClipping`](/api/avalonia/rendering/composition/compositionoptions) tracks those regions more precisely using a dirty rect system, but adds extra CPU time to process the render pass.
+When content changes, Avalonia repaints the affected (or "dirty") regions of the screen rather than the whole frame. [`CompositionOptions.UseRegionDirtyRectClipping`](/api/avalonia/rendering/composition/compositionoptions) enables more accurate dirty-rect tracking by utilizing regions, but adds extra CPU time to process the render pass.
 
-This option is **disabled by default** from Avalonia 12.1 to minimize loss of frame rate in complex scenes.
+This option is **disabled by default** starting with Avalonia 12.1 to minimize loss of frame rate in complex scenes.
 
-To enable region clipping, you must explicitly set `UseRegionDirtyRectClipping = true` in `CompositionOptions` at startup. Enabling this option can be useful on some target platforms without GPU acceleration, such as [embedded](/docs/platform-specific-guides/embedded-linux/embedded-linux) or software-rendered devices, where reducing the painted area matters more than the clipping cost.
+To enable region clipping, you must explicitly set `UseRegionDirtyRectClipping = true` in `CompositionOptions` at startup. Enabling this option can be useful on some target platforms without GPU acceleration, such as [embedded Linux](/docs/platform-specific-guides/embedded-linux/embedded-linux) or other software-rendered devices, where reducing the painted area matters more than the clipping cost.
 
 ```csharp
 AppBuilder.Configure<App>()

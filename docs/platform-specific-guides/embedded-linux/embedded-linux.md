@@ -172,9 +172,9 @@ Embedded devices often render in software through the framebuffer, or use GPUs t
 
 ### Enabling region dirty rect clipping
 
-[`CompositionOptions.UseRegionDirtyRectClipping`](/api/avalonia/rendering/composition/compositionoptions) more precisely tracks regions using a dirty rect system. This shrinks the area to be repainted, at the cost of some CPU work to compute the clip.
+[`CompositionOptions.UseRegionDirtyRectClipping`](/api/avalonia/rendering/composition/compositionoptions) enables more accurate dirty-rect tracking by utilizing regions. This shrinks the area to be repainted, at the cost of some CPU work to compute the clip.
 
-This option is **disabled by default** from Avalonia 12.1, because on a fast GPU the extra clipping work outweighs the saved overdraw. Embedded Linux is one case where it helps: with a weaker GPU, the reduction in painted pixels outweighs the clipping cost.
+This option is **disabled by default** starting with Avalonia 12.1, because on a fast GPU the extra clipping work outweighs the saved overdraw. Embedded Linux is one case where it helps: with a weaker GPU, the reduction in painted pixels outweighs the clipping cost.
 
 To enable region clipping, you must explicitly set `UseRegionDirtyRectClipping = true` in `CompositionOptions` at startup.
 
