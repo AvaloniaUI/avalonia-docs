@@ -280,7 +280,7 @@ When content changes, Avalonia repaints the affected, or "dirty", regions of the
 
 This option is **disabled by default** from Avalonia 12.1 to minimize loss of frame rate in complex scenes.
 
-To enable region clipping, you must explicitly set `UseRegionDirtyRectClipping = true` in `CompositionOptions` at startup. Enabling this option can be useful on some target platforms without GPU acceleration, such as embedded or software-rendered devices, where reducing the painted area matters more than the clipping cost.
+To enable region clipping, you must explicitly set `UseRegionDirtyRectClipping = true` in `CompositionOptions` at startup. Enabling this option can be useful on some target platforms without GPU acceleration, such as [embedded](/docs/platform-specific-guides/embedded-linux/embedded-linux) or software-rendered devices, where reducing the painted area matters more than the clipping cost.
 
 ```csharp
 AppBuilder.Configure<App>()
