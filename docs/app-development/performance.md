@@ -278,7 +278,7 @@ Choose a value appropriate for your target hardware. Most integrated GPUs have a
 
 When content changes, Avalonia repaints the affected (or "dirty") regions of the screen rather than the whole frame. [`CompositionOptions.UseRegionDirtyRectClipping`](/api/avalonia/rendering/composition/compositionoptions) enables more accurate dirty-rect tracking by utilizing regions, but adds extra CPU time to process the render pass.
 
-This option is **disabled by default** starting with Avalonia 12.1 to minimize loss of frame rate in complex scenes.
+This option is **disabled by default** starting with Avalonia 12.1 to minimize loss of frame rate.
 
 To enable region clipping, you must explicitly set `UseRegionDirtyRectClipping = true` in `CompositionOptions` at startup. Enabling this option can be useful on some target platforms without GPU acceleration, such as [embedded Linux](/docs/platform-specific-guides/embedded-linux/embedded-linux) or other software-rendered devices, where reducing the painted area matters more than the clipping cost.
 
