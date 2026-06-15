@@ -179,13 +179,12 @@ This option is **disabled by default** from Avalonia 12.1, because on a fast GPU
 To enable region clipping, you must explicitly set `UseRegionDirtyRectClipping = true` in `CompositionOptions` at startup.
 
 ```csharp
-public static AppBuilder BuildAvaloniaApp()
-    => AppBuilder.Configure<App>()
-        .UsePlatformDetect()
-        .With(new CompositionOptions
-        {
-            UseRegionDirtyRectClipping = true
-        });
+AppBuilder.Configure<App>()
+    .UsePlatformDetect()
+    .With(new CompositionOptions
+    {
+        UseRegionDirtyRectClipping = true
+    });
 ```
 
 When region clipping is enabled, `MaxDirtyRects` caps how many dirty rects are tracked per frame. See [Region dirty rect clipping](/docs/app-development/performance#region-dirty-rect-clipping) in the performance optimization guide for more information.
