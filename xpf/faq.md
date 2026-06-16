@@ -94,6 +94,12 @@ Yes. Unlike WPF, which cannot be compiled with Native AOT due to its COM marshal
 
 See the [Native AOT deployment guide](/xpf/deployment/native-aot) for setup and usage instructions.
 
+## Seat assignment
+
+To assign subscription seats to members of your organization, go to the [Avalonia Portal](https://portal.avaloniaui.net/).
+
+See [Assigning seats](/tools/assigning-seats) for details.
+
 ## Common issues
 
 **My application works on Windows but crashes on macOS/Linux. Where do I start?**

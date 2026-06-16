@@ -43,6 +43,7 @@ const sidebars: SidebarsConfig = {
         'ui-development/themes'
       ],
     },
+    'login-issues',
   ],
 };
 

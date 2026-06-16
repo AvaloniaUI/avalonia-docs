@@ -78,6 +78,7 @@ const sidebars: SidebarsConfig = {
       ],
     },
     'installing-avalonia-pro',
+    'assigning-seats',
     'faq',
   ],
 };
