@@ -66,7 +66,6 @@ It is only safe to add or remove `LogicalChildren` when the framework is not alr
 
 - The control's constructor, before it is attached to any tree.
 - `OnApplyTemplate`, after calling `base.OnApplyTemplate(e)`.
-- `OnAttachedToLogicalTree`, `OnDetachedFromLogicalTree`, and their visual tree counterparts.
 - Routed input or command handlers (for example, a `Click` or `Tapped` handler).
 - The `Loaded` event handler.
 
