@@ -13,6 +13,7 @@ tags:
 import Pill from '/src/components/global/Pill';
 import RiderXamlPreviewer from '/img/guides/ui-development/xaml-preview-and-design-settings/rider-xaml-previewer.png';
 import VsXamlPreviewer from '/img/guides/ui-development/xaml-preview-and-design-settings/vs-xaml-previewer.png';
+import VsCodeXamlPreviewer from '/img/guides/ui-development/xaml-preview-and-design-settings/vscode-xaml-previewer.png';
 import TestXamlPreviewer from '/img/guides/ui-development/xaml-preview-and-design-settings/test-xaml-previewer.png';
 import DesignTimeMockPreview from '/img/guides/ui-development/xaml-preview-and-design-settings/design-time-mock-preview.png';
 
@@ -20,7 +21,13 @@ import DesignTimeMockPreview from '/img/guides/ui-development/xaml-preview-and-d
 
 ## Using the XAML previewer
 
-Live XAML previewers are available in JetBrains Rider with the third-party AvaloniaRider plugin, as well as Visual Studio with the Avalonia for Visual Studio plugin. With a XAML previewer, you can view changes to your XAML code as you work. Using a previewer lets you see layout changes immediately, without rebuilding the project.
+Live XAML previewers are available in:
+
+- Visual Studio, with the Avalonia for Visual Studio extension
+- Visual Studio Code, with the Avalonia for VSCode extension
+- JetBrains Rider, with the third-party AvaloniaRider plugin
+
+With a XAML previewer, you can view changes to your XAML code as you work. Using a previewer lets you see layout changes immediately, without rebuilding the project.
 
 :::note
 The XAML previewer requires a standalone Avalonia executable targeting desktop platforms. XAML files in a cross-platform class library or non-desktop project may not render correctly in the previewer. Any such files should be linked to the desktop project if you wish to preview them.
@@ -28,11 +35,11 @@ The XAML previewer requires a standalone Avalonia executable targeting desktop p
 
 ### Enabling the XAML previewer
 
-To enable the XAML previewer in Rider and Visual Studio:
+To enable the XAML previewer:
 
 <Tabs groupId="ide">  
   <TabItem value="rider" label="Rider">
-	  1. In Rider, select a **.axaml** file from the top ribbon.
+	1. In Rider, select a **.axaml** file from the top ribbon.
     2. On the right side of the top ribbon, click **Editor and Preview**.
     3. Build your project.
 
@@ -50,6 +57,15 @@ To enable the XAML previewer in Rider and Visual Studio:
 
     <Image light={VsXamlPreviewer} alt="A screenshot highlighting which button enables XAML preview in Visual Studio." position="center" maxWidth={400} cornerRadius="true"/>
   </TabItem>
+  <TabItem value="vscode" label="Visual Studio Code">
+    With the **Avalonia for VSCode** extension installed, you can open the XAML previewer alongside the editor.
+
+    1. In Visual Studio Code, open a **.axaml** file.
+    2. Build your project.
+    3. Open the previewer by running the **Avalonia: Show preview** command from the Command Palette (Ctrl+Shift+P), or by clicking the preview icon in the editor's top-right corner.
+
+    <Image light={VsCodeXamlPreviewer} alt="A screenshot highlighting which button enables XAML preview in Visual Studio Code." position="center" maxWidth={400} cornerRadius="true"/>
+  </TabItem>
 </Tabs>
 
 ### Checking it works
@@ -64,7 +80,7 @@ To enable the XAML previewer in Rider and Visual Studio:
 <br/><br/>
 
 :::tip
-If the previewer is unresponsive to your changes, try building the project again.
+If the previewer is unresponsive to your changes, try rebuilding the project.
 :::
 
 ## Setting design-time properties
