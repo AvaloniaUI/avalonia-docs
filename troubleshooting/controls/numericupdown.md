@@ -10,7 +10,7 @@ sidebar_label: NumericUpDown
 
 When the text box of `NumericUpDown` is entirely cleared of input, the control may throw an invalid cast exception, e.g., `Invalid cast from string to decimal?`
 
-To prevent these exceptions appearing, you can try the following:
+To prevent these exceptions appearing, try the following:
 
 - Set `Binding.TargetNullValue` and `Binding.FallbackValue` in your XAML, both to `0`, and explicitly typed as the same type as the source property (usually `decimal` or `int`) so that they are read as the correct numerical type instead of `string`. This stops the empty text box from logging as a binding failure.
 - (Optional) Set `UpdateSourceTrigger=LostFocus` to stop the view model updating during edit states. This can reduce occurrences, but doesn't prevent them entirely.

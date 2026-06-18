@@ -13,6 +13,7 @@ const sidebars: SidebarsConfig = {
       items: [
         'controls/mediaplayer',
         'controls/messagebox',
+        'controls/numericupdown',
         'controls/richtexteditor',
       ],
     },
