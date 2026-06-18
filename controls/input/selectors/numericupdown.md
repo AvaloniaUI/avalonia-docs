@@ -102,7 +102,7 @@ private decimal? _maxQuantity = 100;
 ```
 
 :::caution
-Clearing all input from the control's text box may return a binding exception. See the [troubleshooting page](/troubleshooting/controls/numericupdown) for how to avoid them.
+Clearing all input from the control's text box may cause a binding exception. See the [troubleshooting page](/troubleshooting/controls/numericupdown) for how to avoid them.
 :::
 
 ## Practical notes
