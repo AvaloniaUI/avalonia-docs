@@ -8,52 +8,63 @@ doc-type: overview
 
 ## Custom controls
 
-A custom control draws itself using the Avalonia graphics system, using basic methods for shapes, lines, fills, text, and many others. You can define your own properties, events and pseudo classes.
-
-Some of the Avalonia built-in controls are like this. For example, the text block control (`TextBlock` class) and the image control (`Image` class).
+A custom control draws itself using the Avalonia graphics system, using basic methods for shapes, lines, fills, text, and more. You can define your own properties, events and pseudo classes.
 
 ## Types of custom controls
 
-If you want to create your own controls, there are three main categories of control in Avalonia. The first thing to do is choose the category of control that best suits your use-case.
+There are three main control categories in Avalonia: user controls, templated controls and basic controls. Before creating a custom control, first choose the category that best suits your use case.
 
 ### User controls
 
-UserControls are the simplest way to author controls. This type of control is best for "views" or "pages" that are specific to an application. UserControls are authored in the same way as you would author a Window: by creating a new UserControl from a template and adding controls to it.
+User controls are authored the same way you would author a custom `Window`: by creating a new `UserControl` from a template and adding controls to it. This type of control is best for "views" or "pages" that are specific to an application.
 
 ### Templated controls
 
-TemplatedControls are best used for generic controls that can be shared among various applications. They are lookless controls, meaning that they can be restyled for different themes and applications. The majority of standard controls defined by Avalonia fit into this category.
+Templated controls are lookless, meaning they can be restyled for different themes and applications. They are best for generic controls that you wish to share across various applications. The majority of Avalonia's standard controls are templated controls.
+
+A `TemplatedControl` can have a style defined in a separate file. If using this approach, you must include that file in your `Application` via `StyleInclude`.
 
 :::info
-In WPF/UWP you would inherit from the Control class to create a new templated control, but in Avalonia you should inherit from TemplatedControl. 
-:::
-
-:::info
-If you want to provide a Style for your TemplatedControl in a separate file, remember to include this file in your Application via StyleInclude. 
+In Avalonia, a custom templated control inherits from `TemplatedControl`. This is unlike WPF or UWP, where you would inherit from the `Control` class.
 :::
 
 ### Basic controls
 
-BasicControls are the foundation of user interfaces - they draw themselves using geometry by overriding the Visual.Render method. Controls such as TextBlock and Image fall into this category.
+Basic controls draw themselves using geometry by overriding the `Visual.Render` method. Some Avalonia controls fall into this category, such as `TextBlock` and `Image`.
 
 :::info
-In WPF/UWP you would inherit from the FrameworkElement class to create a new basic control, but in Avalonia you should inherit from Control. 
+In Avalonia, a custom basic control inherits from `Control`. This is unlike WPF or UWP, where you would inherit from the `FrameworkElement` class.
 :::
 
-## Creating advanced custom controls
+## Registering properties
 
-Here's how the `Border` control defines its `Background` property:
+A custom control exposes its settable values as Avalonia properties. Doing so lets a value participate in styling, data binding, animation, value precedence, etc.
+
+The most common kind of property is a **styled property**, which stores its value inside the Avalonia property system instead of in a backing field. A styled property in Avalonia is analogous to a `DependencyProperty` in other XAML frameworks.
+
+Registering a styled property is a two-step process: declare a `static readonly` field using `AvaloniaProperty.Register`, then provide a CLR getter and setter that call `GetValue` and `SetValue` respectively.
+
+To illustrate the above, here's how the `Border` control defines its `Background` property:
+
+```csharp
+public static readonly StyledProperty<IBrush?> BackgroundProperty =
+    AvaloniaProperty.Register<Border, IBrush?>(nameof(Background));
+
+public IBrush? Background
+{
+    get => GetValue(BackgroundProperty);
+    set => SetValue(BackgroundProperty, value);
+}
+```
 
 The `AvaloniaProperty.Register` method also accepts a number of other parameters:
 
-* `defaultValue`: This gives the property a default value. Be sure to only pass value types and immutable types here as passing a reference type will cause the same object to be used on all instances on which the property is registered.
-* `inherits`: Specified that the property's default value should come from the parent control.
-* `defaultBindingMode`: The default binding mode for the property. Can be set to `OneWay`, `TwoWay`, `OneTime` or `OneWayToSource`.
-* `validate`: A validation/coercion function of type `Func<TOwner, TValue, TValue>`. The function accepts the instance of the class on which the property is being set and the value and returns the coerced value or throws an exception for an invalid value.
-
-:::info
-A styled property is analogous to a `DependencyProperty` in other XAML frameworks.
-:::
+| Parameter | Description |
+| --- | --- |
+| `defaultValue` | Gives the property a default value. Be sure to only pass value types and immutable types in this parameter, as passing a reference type will cause the same object to be used on all instances where the property is registered. |
+| `inherits` | Specifies that the property's default value should come from the parent control. |
+| `defaultBindingMode` | Default binding mode for the property. Can be set to `OneWay`, `TwoWay`, `OneTime` or `OneWayToSource`. |
+| `validate` | A validation/coercion function of type `Func<TOwner, TValue, TValue>`. The function accepts the instance of the class on which the property is being set and the value. It returns the coerced value or throws an exception for an invalid value. |
 
 :::info
 The naming convention of the property and its backing `AvaloniaProperty` field is important. The name of the field is always the name of the property, with the suffix `Property` appended.
