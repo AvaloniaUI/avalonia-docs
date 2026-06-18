@@ -101,6 +101,10 @@ private decimal? _quantity = 1;
 private decimal? _maxQuantity = 100;
 ```
 
+:::caution
+Clearing all input from the control's text box may cause a binding exception. See the [troubleshooting page](/troubleshooting/controls/numericupdown) for how to avoid them.
+:::
+
 ## Practical notes
 
 - If the user types a value outside the `Minimum`/`Maximum` range, the control clamps the value to the nearest boundary when it loses focus.
@@ -112,5 +116,6 @@ private decimal? _maxQuantity = 100;
 - [Slider](/controls/input/selectors/slider)
 - [TextBox](/controls/input/text-input/textbox)
 - [Binding to Controls](/docs/data-binding/binding-to-controls)
+- [NumericUpDown troubleshooting](/troubleshooting/controls/numericupdown)
 - [NumericUpDown API Reference](/api/avalonia/controls/numericupdown)
 - [`NumericUpDown.cs` Source on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/NumericUpDown/NumericUpDown.cs)
