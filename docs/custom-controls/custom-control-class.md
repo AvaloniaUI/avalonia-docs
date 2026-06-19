@@ -1,11 +1,11 @@
 ---
 id: custom-control-class
 title: Add a custom control class
-description: Create a new custom control class file in an Avalonia project using IDE tooling or manually.
+description: Create a new custom control class file in an Avalonia project by coding its 
 doc-type: how-to
 ---
 
-Custom controls in Avalonia are built by inheriting from an appropriate base class. If you need full control over rendering, inherit from `Control` and draw directly with a [`DrawingContext`](/api/avalonia/media/drawingcontext). If you want the control's appearance to be defined by a `ControlTemplate` (a lookless control), inherit from `TemplatedControl` instead.
+With the exception of customizing a `UserControl` (which can be done entirely in XAML), creating custom controls in Avalonia generally requires coding a new control class, usually in C#. This involves inheriting from an appropriate base class, then modifying it with your unique specifications.
 
 ## Choosing a base class
 
