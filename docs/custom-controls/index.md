@@ -2,23 +2,23 @@
 id: index
 title: Creating custom controls
 sidebar_position: 1
-description: Overview of approaches for building custom controls in Avalonia, from user controls to templated controls.
+description: Overview of various approaches for building custom controls in Avalonia.
 doc-type: overview
 ---
 
 ## Custom controls
 
-A custom control draws itself using the Avalonia graphics system, using basic methods for shapes, lines, fills, text, and more. You can define your own properties, events and pseudo classes.
+Avalonia allows you to customize your own controls, beyond what is available in our [built-in control library](/controls). Define your own properties, events and pseudoclasses. You can even override visual rendering to draw entirely unique custom controls.
 
 ## Types of custom controls
 
-There are three main control categories in Avalonia:
+Before creating a custom control, first choose the category of control that best suits your use case. There are three main control categories in Avalonia:
 
-1. [User controls](#user-controls),
-2. [Templated controls](#templated-controls), and
-3. [Basic controls](#basic-controls).
+1. [User controls](#user-controls)
+2. [Templated controls](#templated-controls)
+3. [Basic controls](#basic-controls)
 
-Before creating a custom control, first choose the category that best suits your use case.
+In addition to these three categories, you can also create custom derivatives of [content controls, headered content controls or items controls](#other-customizable-controls).
 
 ### User controls
 
@@ -63,6 +63,16 @@ To create a custom basic control:
 
 1. **Define the control class.** Create a new class that derives from `Control`. Decide the behavior and rendering of the control.
 2. **Override the `Render` method.** Override the `Render` method in the control class. Use `DrawingContext` to draw the control.
+
+### Other customizable controls
+
+In addition to the three options described above, you can also create custom control classes derived from the following:
+
+- `ContentControl`, a control hosting a single piece of content.
+- `HeaderedContentControl`, a control with a header and a content area.
+- `ItemsControl`, a control that displays a collection of items.
+
+Like [templated controls](#templated-controls) and [basic controls](#basic-controls), customizing these control types requires defining a new class in code. For more information, see [Adding a custom control class](/docs/custom-controls/custom-control-class).
 
 ## Registering properties
 
