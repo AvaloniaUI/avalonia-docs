@@ -2,12 +2,12 @@
 id: dependency-injection
 title: Implementing dependency injection
 description: Set up dependency injection in an Avalonia app using Microsoft.Extensions.DependencyInjection.
-doc-type: tutorial
+doc-type: how-to
 ---
 
 [Dependency injection (DI)](https://en.wikipedia.org/wiki/Dependency_injection) allows developers to write cleaner, more modular, and testable code. It accomplishes this by creating discrete services that are passed around/created as needed.
 
-This guide shows you step by step how to use DI with Avalonia and the MVVM pattern.
+This guide shows you step by step how to use DI with Avalonia and the [Model-View-ViewModel (MVVM) pattern](/docs/fundamentals/the-mvvm-pattern).
 
 ## Prerequisites
 
@@ -62,7 +62,7 @@ This works great for simple constructors that are not used very often and don't 
 - Similarly if the `MainViewModel` constructor itself creates its own dependencies, it also becomes directly coupled to the creation of the dependencies which can result in many of the same problems. 
 - Furthermore, if `MainViewModel` is instantiated in many places, _every_ instantiation of `MainViewModel` would also need to be updated should the dependencies of `MainViewModel` ever change (such as the addition of new dependencies, or changing which implementation of a dependency to use).
 
-Dependency injection solves these problem by abstracting away the creation of objects and their dependencies. This allows for well encapsulated services that will be automatically passed into any other service that is registered to use them.
+Dependency injection solves this problem by abstracting away the creation of objects and their dependencies. This allows for well encapsulated services that will be automatically passed into any other service that is registered to use them.
 
 ## Step 1: Install the NuGet package for DI
 There are many DI container providers available ([DryIoC](https://github.com/dadhi/DryIoc), [Autofac](https://github.com/autofac/Autofac), [Pure.DI](https://github.com/DevTeam/Pure.DI)) but this guide focuses on `Microsoft.Extensions.DependencyInjection`, a lightweight, extensible dependency injection container. It provides a convention-based way to add DI to .NET applications, including Avalonia-based desktop applications.
@@ -89,7 +89,7 @@ public static class ServiceCollectionExtensions
 ```
 
 ## Step 3: Modify App.axaml.cs
-Next, modify the `App.axaml.cs` class to use the DI container. This allows the view model registered in the previous step to be resolved via the dependency injection container. The fully realised view model can then be set to the data context of the `MainWindow`/`MainView`.
+Next, modify the `App.axaml.cs` class to use the DI container. This allows the view model registered in the previous step to be resolved via the dependency injection container. The fully realized view model can then be set to the data context of the `MainWindow`/`MainView`.
 
 ```csharp
 public class App : Application
