@@ -12,7 +12,7 @@ This guide shows you step by step how to use DI with Avalonia and the MVVM patte
 ## Prerequisites
 
 - An Avalonia project (created from the Avalonia template or an existing application)
-- .NET 8.0 SDK or later
+- .NET 8.0 SDK or later (.NET 10 is recommended)
 
 ## Step 0: Context and initial code
 
@@ -101,10 +101,6 @@ public class App : Application
 
     public override void OnFrameworkInitializationCompleted()
     {
-        // If you use CommunityToolkit, line below is needed to remove Avalonia data validation.
-        // Without this line you will get duplicate validations from both Avalonia and CT
-        BindingPlugins.DataValidators.RemoveAt(0);
-
         // Register all the services needed for the application to run
         var collection = new ServiceCollection();
         collection.AddCommonServices();
