@@ -64,6 +64,8 @@ To create a custom basic control:
 1. **Define the control class.** Create a new class that derives from `Control`. Decide the behavior and rendering of the control.
 2. **Override the `Render` method.** Override the `Render` method in the control class. Use `DrawingContext` to draw the control.
 
+More detailed guidance is documented in [Adding a custom control class](/docs/custom-controls/custom-control-class).
+
 ### Other customizable controls
 
 In addition to the three options described above, you can also create custom control classes derived from the following:
@@ -72,7 +74,7 @@ In addition to the three options described above, you can also create custom con
 - `HeaderedContentControl`, a control with a header and a content area.
 - `ItemsControl`, a control that displays a collection of items.
 
-Like [templated controls](#templated-controls) and [basic controls](#basic-controls), customizing these control types requires defining a new class in code. For more information, see [Adding a custom control class](/docs/custom-controls/custom-control-class).
+These controls all derive from `Control`, meaning properties like `Width`, `Height`, `Margin`, and `DataContext` are available by default.
 
 ## Registering properties
 
