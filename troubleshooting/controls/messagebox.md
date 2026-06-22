@@ -67,7 +67,7 @@ Keep the following edge cases in mind:
 | [Ursa.Avalonia](https://github.com/irihitech/Ursa.Avalonia) | Free / Open-source |
 | [AtomUI.Avalonia](https://github.com/chinware/AtomUI) | Free / Open-source |
 | [Actipro Avalonia UI Controls](https://www.actiprosoftware.com/products/controls/avalonia) | Commercial |
-| [Eremex Avalonia UI Controls](https://eremexcontrols.net/controls/windows-and-dialogs/messagebox/) | Commercial |
+| [Eremex Avalonia UI Controls](https://eremexcontrols.net/controls/windows-and-dialogs/messagebox.html) | Commercial |
 
 ## Building your own message box
 
