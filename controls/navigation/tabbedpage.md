@@ -39,7 +39,7 @@ If you need a simple tab strip without page-based navigation features (lifecycle
 
 | Value | Description |
 | --- | --- |
-| `Auto` | The platform determines the tab position. Bottom on mobile, top on desktop. |
+| `Auto` | Automatically determines the tab placement based on the target platform. Resolves to `Bottom` on iOS and Android, and `Top` on all other platforms. |
 | `Top` | Tabs are placed along the top edge. |
 | `Bottom` | Tabs are placed along the bottom edge. |
 | `Left` | Tabs are placed along the left edge. |
@@ -379,8 +379,8 @@ You can nest a `TabbedPage` inside a `DrawerPage` to combine a side drawer with 
 
 ## See also
 
-- [ContentPage](contentpage)
-- [NavigationPage](navigationpage)
+- [ContentPage](/controls/navigation/contentpage)
+- [NavigationPage](/controls/navigation/navigationpage)
 - [TabControl](/controls/navigation/tabcontrol)
 - [TabbedPage API reference](/api/avalonia/controls/tabbedpage)
 - [`TabbedPage.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Page/TabbedPage.cs)
