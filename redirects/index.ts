@@ -38,7 +38,7 @@ const config: RedirectConfig = {
 
     // Redirect retired pages from rewrite of Custom Controls collection in June 2026
     { from: '/docs/custom-controls/choosing-a-custom-control-type', to: '/docs/custom-controls/'},
-
+    { from: '/docs/custom-controls/custom-control-class', to: '/docs/custom-controls/custom-drawn-basic-controls'},
   ],
   createRedirects(existingPath: string): string[] | undefined {
     const redirects = [

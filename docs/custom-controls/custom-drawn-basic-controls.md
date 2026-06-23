@@ -1,29 +1,15 @@
 ---
-id: custom-control-class
-title: Adding a custom control class
-description: Create a new custom control class file in an Avalonia project by coding its 
+id: custom-drawn-basic-controls
+title: Custom drawn basic controls
+description: Create a new basic control class with custom rendering specified from code.
 doc-type: how-to
 ---
 
-With the exception of a custom `UserControl` (which can be done entirely in XAML), creating custom controls in Avalonia generally requires coding a new control class, usually in C#. This involves inheriting from an appropriate base class, then modifying it with your unique specifications.
-
-## Choosing a base class
-
-| Base class | Use When |
-|---|---|
-| `Control` | You want a complete control over how the control is drawn by rendering with `DrawingContext`. |
-| `TemplatedControl` | You want the appearance defined by a `ControlTemplate`. |
-| `ContentControl` | Your control hosts a single piece of content. |
-| `HeaderedContentControl` | Your control has a header and a content area. |
-| `ItemsControl` | Your control displays a collection of items. |
-
-All of these ultimately derive from `Control`, so properties like `Width`, `Height`, `Margin`, and `DataContext` are always available.
+If you need full control over the visual appearance of your custom control, create a new control class inheriting from `Control`. Override the `Render` method to draw the new class directly with a [`DrawingContext`](/api/avalonia/media/drawingcontext). You can even override `MeasureOverride` and `ArrangeOverride` to have the custom control participate in the layout pass.
 
 ## Creating a custom drawn control
 
-A custom drawn control inherits from `Control` and overrides the `Render` method to draw with a `DrawingContext`. You can also override `MeasureOverride` and `ArrangeOverride` to participate in layout and report your control's desired size.
-
-The following example creates a simple circle control with a configurable `Fill` property:
+The following example creates a simple circle control with a configurable `Fill` property.
 
 ```csharp
 using System;
@@ -59,22 +45,24 @@ namespace AvaloniaCCExample.CustomControls
 }
 ```
 
-Key points:
+Notes:
 
-- **`FillProperty`** is a styled property, so it can be set in XAML, bound to data, and targeted by styles.
+- `FillProperty` is a styled property, so it can be set in XAML, bound to data, and targeted by styles.
 - The static constructor calls `AffectsRender`, which tells Avalonia to redraw the control whenever `Fill` changes.
-- **`Render`** receives a `DrawingContext` that provides methods such as `DrawEllipse`, `DrawRectangle`, `DrawLine`, and `DrawText`.
+- `Render` receives a `DrawingContext` that provides methods such as `DrawEllipse`, `DrawRectangle`, `DrawLine`, and `DrawText`.
 
 ## Using in XAML
 
-To use a custom control in XAML, add an XML namespace that maps to the CLR namespace where your control lives. Then reference the control by its class name.
+To use a custom control in XAML, add an XML namespace that maps to the CLR namespace where your control lives. Then, reference the control by its class name.
 
 ```xml title='XAML'
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        // highlight-next-line
         xmlns:cc="using:AvaloniaCCExample.CustomControls"
         x:Class="AvaloniaCCExample.MainWindow"
         Title="Avalonia Custom Control">
+  // highlight-next-line
   <cc:CircleControl Height="200" Width="200" Fill="Red" />
 </Window>
 ```
@@ -87,11 +75,11 @@ If your control lives in a separate class library, see [Custom Control Library](
 
 ## Invalidating rendering
 
-Avalonia provides several mechanisms for telling the layout and rendering system that a control needs to be updated.
+Avalonia provides several mechanisms to tell the layout and rendering system that a control needs to be updated.
 
-### AffectsRender, AffectsMeasure, and AffectsArrange
+### `AffectsRender`, `AffectsMeasure`, and `AffectsArrange`
 
-Call these static helpers in your control's static constructor to declare which properties trigger which stage of the rendering pipeline:
+`AffectsRender`, `AffectsMeasure`, and `AffectsArrange` are static helpers. Call them in your control's static constructor to declare which properties trigger which stage of the rendering pipeline.
 
 ```csharp
 static CircleControl()
@@ -102,9 +90,9 @@ static CircleControl()
 }
 ```
 
-- **`AffectsRender`** causes a repaint (calls `Render` again) when the property changes.
-- **`AffectsMeasure`** triggers a new measure pass, which is appropriate when a property changes the control's desired size.
-- **`AffectsArrange`** triggers a new arrange pass, which is appropriate when a property changes how the control positions its content.
+- `AffectsRender` causes a repaint (i.e., calls `Render` again) when the property changes.
+- `AffectsMeasure` triggers a new measure pass, which is appropriate when a property changes the control's desired size.
+- `AffectsArrange` triggers a new arrange pass, which is appropriate when a property changes how the control positions its content.
 
 ### Manual invalidation
 
@@ -115,7 +103,9 @@ If you need to trigger a repaint in response to something other than a property 
 InvalidateVisual();
 ```
 
+:::tip
 Use manual invalidation sparingly. Declaring property dependencies with `AffectsRender` is preferred because it keeps invalidation automatic and predictable.
+:::
 
 ## See also
 
