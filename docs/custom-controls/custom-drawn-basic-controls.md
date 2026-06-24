@@ -1,6 +1,6 @@
 ---
 id: custom-drawn-basic-controls
-title: Custom drawn basic controls
+title: Creating custom-drawn basic controls
 description: Create a new basic control class with custom rendering specified from code.
 doc-type: how-to
 ---

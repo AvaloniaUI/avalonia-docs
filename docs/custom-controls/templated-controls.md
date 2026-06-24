@@ -1,13 +1,13 @@
 ---
 id: templated-controls
-title: How to create templated controls
+title: Creating templated controls
 description: Build lookless templated controls with control themes, template parts, and pseudo-classes.
 doc-type: how-to
 ---
 
-Templated controls are controls whose appearance is defined entirely by a [`ControlTemplate`](/api/avalonia/markup/xaml/templates/controltemplate). This separates the control's visual structure from its behavior, allowing developers and designers to restyle the control without modifying its logic. If you are familiar with WPF, these are sometimes called "lookless" controls because the control class itself contains no rendering code.
+Templated controls contain no rendering code in the control class. Instead, their appearance is defined by a [`ControlTemplate`](/api/avalonia/markup/xaml/templates/controltemplate). This separates the control's visual structure from its behavior, allowing developers and designers to restyle the control without modifying its logic. If you are familiar with WPF, these are sometimes called "lookless" controls.
 
-Avalonia's built-in controls (such as `Button`, `TextBox`, and `ListBox`) are all templated controls. You can follow the same pattern to build your own.
+Many of Avalonia's built-in controls are templated controls (e.g., `Button`, `TextBox`, and `ListBox`) . You can follow the same pattern to build your own.
 
 ## Creating a templated control
 

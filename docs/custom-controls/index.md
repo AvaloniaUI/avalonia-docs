@@ -51,7 +51,7 @@ To create a custom templated control:
 
 ### Basic controls
 
-Basic controls are foundational UI elements that draw themselves through the `Visual.Render` method. You can create a custom basic control by overriding `Render`, then applying the  `DrawingContext` API to specify the control's exact appearance. Some examples of basic controls from [Avalonia's built-in controls](/controls) are `TextBlock` and `Image`.
+Basic controls are foundational UI elements that draw themselves through the `Visual.Render` method. You can create a custom-drawn basic control by overriding `Render`, then applying the  `DrawingContext` API to specify the control's exact appearance. Some examples of basic controls from [Avalonia's built-in controls](/controls) are `TextBlock` and `Image`.
 
 This approach gives you fine-grained control over every aspect of the control's visual representation. Use custom basic controls for mostly non-interactive graphical elements that do not need to be themed.
 
@@ -64,7 +64,7 @@ To create a custom basic control:
 1. **Define the control class.** Create a new class that derives from `Control`. Decide the behavior and rendering of the control.
 2. **Override the `Render` method.** Override the `Render` method in the control class. Use `DrawingContext` to draw the control.
 
-More detailed guidance is documented in [Adding a custom control class](/docs/custom-controls/custom-control-class).
+More detailed guidance is documented in [Creating custom-drawn basic controls](/docs/custom-controls/custom-drawn-basic-controls).
 
 ### Other customizable controls
 
