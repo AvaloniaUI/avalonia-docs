@@ -1,17 +1,21 @@
 ---
 id: templated-controls
-title: Creating templated controls
+title: Custom templated controls
 description: Build lookless templated controls with control themes, template parts, and pseudo-classes.
 doc-type: how-to
 ---
 
-Templated controls contain no rendering code in the control class. Instead, their appearance is defined by a [`ControlTemplate`](/api/avalonia/markup/xaml/templates/controltemplate). This separates the control's visual structure from its behavior, allowing developers and designers to restyle the control without modifying its logic. If you are familiar with WPF, these are sometimes called "lookless" controls.
+Templated controls contain no rendering code in the control class. Instead, their appearance is defined by a [`ControlTemplate`](/api/avalonia/markup/xaml/templates/controltemplate). This separates the control's visual structure from its behavior, allowing developers and designers to restyle the control without modifying its logic.
+
+If you are familiar with WPF, these are sometimes called "lookless" controls.
 
 Many of Avalonia's built-in controls are templated controls (e.g., `Button`, `TextBox`, and `ListBox`) . You can follow the same pattern to build your own.
 
 ## Creating a templated control
 
-To create a templated control, define a class that inherits from `TemplatedControl` and register any custom properties using `StyledProperty`.
+To create a templated control, add a new control class that inherits from `TemplatedControl` and register your custom properties using `StyledProperty`.
+
+The following example is a templated control with a `LabelText` property, but no visual representation.
 
 ```csharp
 public class ToggleLabel : TemplatedControl
@@ -27,12 +31,10 @@ public class ToggleLabel : TemplatedControl
 }
 ```
 
-This gives you a control with a `LabelText` property but no visual representation yet. The visuals come from a control theme.
-
 :::caution Do not set DataContext = this
-Never assign `DataContext = this` in a custom control's constructor. This overrides the `DataContext` that consumers of your control expect to inherit from the parent visual tree. Bindings set on your control from the outside (for example, `<MyControl Items="{Binding SelectedItems}" />`) will resolve against your control type instead of the parent's ViewModel, causing silent binding failures.
+Never assign `DataContext = this` in a custom control's constructor. This overrides the `DataContext` that your users expect to inherit from the parent visual tree. Bindings set on your control, such as `<MyControl Items="{Binding SelectedItems}" />`, will resolve against the control type instead of the parent's `ViewModel`, causing silent binding failures.
 
-Templated controls do not need self-referencing `DataContext`. Use [`TemplateBinding`](#templatebinding-details) inside your control template to access your control's own properties, and let the `DataContext` flow naturally from the parent.
+Templated controls do not need a self-referencing `DataContext`. Use [`TemplateBinding`](#templatebinding-details) inside your control template to access your control's properties, and let the `DataContext` flow from the parent.
 :::
 
 ## Defining the control theme

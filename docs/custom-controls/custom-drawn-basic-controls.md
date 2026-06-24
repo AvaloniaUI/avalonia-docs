@@ -1,13 +1,13 @@
 ---
 id: custom-drawn-basic-controls
-title: Creating custom-drawn basic controls
+title: Custom-drawn basic controls
 description: Create a new basic control class with custom rendering specified from code.
 doc-type: how-to
 ---
 
 If you need full control over the visual appearance of your custom control, create a new control class inheriting from `Control`. Override the `Render` method to draw the new class directly with a [`DrawingContext`](/api/avalonia/media/drawingcontext). You can even override `MeasureOverride` and `ArrangeOverride` to have the custom control participate in the layout pass.
 
-## Creating a custom drawn control
+## Creating a custom-drawn control
 
 The following example creates a simple circle control with a configurable `Fill` property.
 
