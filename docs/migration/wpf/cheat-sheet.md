@@ -210,7 +210,7 @@ Or with a binding converter:
 
 | WPF | Avalonia | Notes |
 |---|---|---|
-| `AllowsTransparency="True"` | `TransparencyLevelHint="Transparent"` | Set `Background="{x:Null}"` (not `Transparent`) for [click-through behavior](/docs/how-to/window-how-to#transparent-click-through-window) |
+| `AllowsTransparency="True"` | `TransparencyLevelHint="Transparent"` | Avalonia does not support WPF-like transparent click-through behavior. |
 | `WindowStyle="None"` | `WindowDecorations="None"` | Removes title bar and border |
 | `ResizeMode` | `CanResize` | Boolean instead of enum |
 
