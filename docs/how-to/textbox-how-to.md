@@ -193,7 +193,7 @@ partial void OnSearchTextChanged(string value)
 }
 ```
 
-For debounced search (avoiding filtering on every keystroke), see [Performance](/docs/app-development/performance#debounce-rapid-input).
+For debounced search (avoiding filtering on every keystroke), see [Performance](/docs/app-development/performance#debouncing-rapid-input).
 
 ## Inner Content (Left/Right)
 
