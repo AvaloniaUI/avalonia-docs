@@ -216,6 +216,7 @@ const sidebars = {
             "avalonia/automation/peers/buttonautomationpeer",
             "avalonia/automation/peers/calendarautomationpeer",
             "avalonia/automation/peers/calendardatepickerautomationpeer",
+            "avalonia/automation/peers/calendardaybuttonautomationpeer",
             "avalonia/automation/peers/carouselpageautomationpeer",
             "avalonia/automation/peers/colorspectrumautomationpeer",
             "avalonia/automation/peers/comboboxautomationpeer",
@@ -225,6 +226,7 @@ const sidebars = {
             "avalonia/automation/peers/datepickerautomationpeer",
             "avalonia/automation/peers/drawerpageautomationpeer",
             "avalonia/automation/peers/itemscontrolautomationpeer",
+            "avalonia/automation/peers/listboxautomationpeer",
             "avalonia/automation/peers/listitemautomationpeer",
             "avalonia/automation/peers/menuitemautomationpeer",
             "avalonia/automation/peers/nativemenubarautomationpeer",
@@ -1838,6 +1840,7 @@ const sidebars = {
           "items": [
             "avalonia/media/fonts/embeddedfontcollection",
             "avalonia/media/fonts/familynamecollection",
+            "avalonia/media/fonts/fontcodepagecoverage",
             "avalonia/media/fonts/fontcollectionbase",
             "avalonia/media/fonts/fontcollectionkey",
             "avalonia/media/fonts/fontfamilykey",
@@ -1988,7 +1991,10 @@ const sidebars = {
             "avalonia/media/textformatting/unicode/linebreak",
             "avalonia/media/textformatting/unicode/linebreakclass",
             "avalonia/media/textformatting/unicode/linebreakenumerator",
-            "avalonia/media/textformatting/unicode/script"
+            "avalonia/media/textformatting/unicode/script",
+            "avalonia/media/textformatting/unicode/wordbreakclass",
+            "avalonia/media/textformatting/unicode/wordbreakenumerator",
+            "avalonia/media/textformatting/unicode/wordsegment"
           ],
           "link": {
             "type": "doc",
@@ -3379,6 +3385,7 @@ const sidebars = {
             "avalonia/media/imediarendererprovider",
             "avalonia/media/mediaplayererroreventargs",
             "avalonia/media/mediaplayerloadedbehavior",
+            "avalonia/media/mediaplayerlogentry",
             "avalonia/media/mediarenderer",
             "avalonia/media/mediasource",
             "avalonia/media/mediastatistics",
@@ -3667,6 +3674,79 @@ const sidebars = {
       "link": {
         "type": "doc",
         "id": "packages/avalonia-controls-treedatagrid"
+      }
+    },
+    {
+      "type": "category",
+      "label": "Avalonia.Controls.VirtualKeyboard",
+      "items": [
+        {
+          "type": "category",
+          "label": "Avalonia.Controls",
+          "items": [
+            "avalonia/controls/virtualkeyboard",
+            "avalonia/controls/virtualkeyboardappbuilderextensions",
+            "avalonia/controls/virtualkeyboardinputcandidate",
+            "avalonia/controls/virtualkeyboardinputmethod",
+            "avalonia/controls/virtualkeyboardoptions",
+            "avalonia/controls/virtualkeyboardscope"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/controls/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Controls.Converters",
+          "items": [
+            "avalonia/controls/converters/inputmethodstypeconverter"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/controls/converters/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Avalonia.Controls.Presenters",
+          "items": [
+            "avalonia/controls/presenters/virtualkeyboardlayoutpresenter",
+            "avalonia/controls/presenters/virtualkeyboardpresenter"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "avalonia/controls/presenters/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "global",
+          "items": [
+            "global/aq-a",
+            "global/n-a",
+            "global/n-b",
+            "global/n-c",
+            "global/n-d",
+            "global/n-e",
+            "global/n-f",
+            "global/n-g",
+            "global/n-h",
+            "global/n-i",
+            "global/n-j",
+            "global/n-k",
+            "global/n-l",
+            "global/p-a"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "global/index"
+          }
+        }
+      ],
+      "link": {
+        "type": "doc",
+        "id": "packages/avalonia-controls-virtualkeyboard"
       }
     },
     {
