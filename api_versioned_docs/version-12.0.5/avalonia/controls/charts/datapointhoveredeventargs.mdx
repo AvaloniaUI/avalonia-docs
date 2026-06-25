@@ -1,0 +1,122 @@
+---
+title: 'DataPointHoveredEventArgs'
+hide_title: true
+slug: '/avalonia/controls/charts/datapointhoveredeventargs'
+uid: 'Avalonia.Controls.Charts.DataPointHoveredEventArgs'
+commentId: 'T:Avalonia.Controls.Charts.DataPointHoveredEventArgs'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Charts'
+assembly: 'Avalonia.Controls.Charts'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Charts'
+tfms:
+  - 'net9.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">DataPointHoveredEventArgs Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Charts</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Charts</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Charts</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Provides data for the [Avalonia.Controls.Charts.ChartBase.DataPointHovered](xref:Avalonia.Controls.Charts.ChartBase.DataPointHovered) event.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class DataPointHoveredEventArgs
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> EventArgs <span className="apiref-page__relation-separator">-&gt;</span> DataPointHoveredEventArgs
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [DataPointHoveredEventArgs](#uid-60ce89329a) | Initializes a new instance of the [Avalonia.Controls.Charts.DataPointHoveredEventArgs](xref:Avalonia.Controls.Charts.DataPointHoveredEventArgs) class. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-60ce89329a"></span>
+
+### DataPointHoveredEventArgs Constructor
+
+Initializes a new instance of the [Avalonia.Controls.Charts.DataPointHoveredEventArgs](xref:Avalonia.Controls.Charts.DataPointHoveredEventArgs) class.
+
+```csharp
+public DataPointHoveredEventArgs(object source, int dataPointIndex)
+```
+
+#### Parameters
+
+`source` object
+
+
+`dataPointIndex` int
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [DataPointIndex](#uid-3c13e44f40) | Gets the index of the hovered data point, or -1 when unhovered. |
+| [Source](#uid-b71175798d) | Gets the source object (series or chart) that owns the hovered data point, or `null` when the pointer leaves all data points. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3c13e44f40"></span>
+
+### DataPointIndex Property
+
+Gets the index of the hovered data point, or -1 when unhovered.
+
+```csharp
+public int DataPointIndex { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b71175798d"></span>
+
+### Source Property
+
+Gets the source object (series or chart) that owns the hovered data point,
+or `null` when the pointer leaves all data points.
+
+```csharp
+public object Source { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+
