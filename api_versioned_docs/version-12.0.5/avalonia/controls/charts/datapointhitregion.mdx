@@ -1,0 +1,257 @@
+---
+title: 'DataPointHitRegion'
+hide_title: true
+slug: '/avalonia/controls/charts/datapointhitregion'
+uid: 'Avalonia.Controls.Charts.DataPointHitRegion'
+commentId: 'T:Avalonia.Controls.Charts.DataPointHitRegion'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Charts'
+assembly: 'Avalonia.Controls.Charts'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Charts'
+tfms:
+  - 'net9.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">DataPointHitRegion Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Charts</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Charts</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Charts</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Represents a hit test region for a data point on a chart.
+Used for detecting clicks on specific data points.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct DataPointHitRegion
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> DataPointHitRegion
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [DataPointHitRegion](#uid-566e22397e) | Creates a new instance of [DataPointHitRegion](xref:Avalonia.Controls.Charts.DataPointHitRegion). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-566e22397e"></span>
+
+### DataPointHitRegion Constructor
+
+Creates a new instance of [DataPointHitRegion](xref:Avalonia.Controls.Charts.DataPointHitRegion).
+
+```csharp
+public DataPointHitRegion(Avalonia.Rect bounds, object source, int index, object category, double value, object dataItem, Avalonia.Media.Geometry hitGeometry)
+```
+
+#### Parameters
+
+`bounds` [Avalonia.Rect](xref:Avalonia.Rect)
+
+
+`source` object
+
+
+`index` int
+
+
+`category` object
+
+
+`value` double
+
+
+`dataItem` object
+
+
+`hitGeometry` [Avalonia.Media.Geometry](xref:Avalonia.Media.Geometry)
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Contains](#uid-c65e1f20b8) | Determines whether the provided point is inside the hit region. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c65e1f20b8"></span>
+
+### Contains Method
+
+Determines whether the provided point is inside the hit region.
+
+```csharp
+public bool Contains(Avalonia.Point point)
+```
+
+#### Parameters
+
+`point` [Avalonia.Point](xref:Avalonia.Point)
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Bounds](#uid-c46753dd36) | Gets the bounding rectangle for hit testing. |
+| [Category](#uid-095f0f4df9) | Gets the category of the data point (if applicable). |
+| [DataItem](#uid-125d301ad4) | Gets the original data item from the source. |
+| [DataPointIndex](#uid-892b569581) | Gets the index of the data point. |
+| [HitGeometry](#uid-d809664185) | Gets the optional geometry for precise hit testing. |
+| [Selectable](#uid-c4928e949f) | Gets the series or selectable component that owns the data point. |
+| [Source](#uid-2921905d1f) | Gets the source object (Series or Indicator) that owns this region. |
+| [Value](#uid-c978de6e71) | Gets the value of the data point. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c46753dd36"></span>
+
+### Bounds Property
+
+Gets the bounding rectangle for hit testing.
+
+```csharp
+public Avalonia.Rect Bounds { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-095f0f4df9"></span>
+
+### Category Property
+
+Gets the category of the data point (if applicable).
+
+```csharp
+public object Category { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-125d301ad4"></span>
+
+### DataItem Property
+
+Gets the original data item from the source.
+
+```csharp
+public object DataItem { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-892b569581"></span>
+
+### DataPointIndex Property
+
+Gets the index of the data point.
+
+```csharp
+public int DataPointIndex { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d809664185"></span>
+
+### HitGeometry Property
+
+Gets the optional geometry for precise hit testing.
+
+```csharp
+public Avalonia.Media.Geometry HitGeometry { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c4928e949f"></span>
+
+### Selectable Property
+
+Gets the series or selectable component that owns the data point.
+
+```csharp
+public Avalonia.Controls.Charts.IIndexSelectableChart Selectable { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2921905d1f"></span>
+
+### Source Property
+
+Gets the source object (Series or Indicator) that owns this region.
+
+```csharp
+public object Source { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c978de6e71"></span>
+
+### Value Property
+
+Gets the value of the data point.
+
+```csharp
+public double Value { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

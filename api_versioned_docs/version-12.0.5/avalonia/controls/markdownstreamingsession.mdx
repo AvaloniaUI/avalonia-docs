@@ -1,0 +1,229 @@
+---
+title: 'MarkdownStreamingSession'
+hide_title: true
+slug: '/avalonia/controls/markdownstreamingsession'
+uid: 'Avalonia.Controls.MarkdownStreamingSession'
+commentId: 'T:Avalonia.Controls.MarkdownStreamingSession'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Markdown'
+assembly: 'Avalonia.Controls.Markdown'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">MarkdownStreamingSession Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Markdown</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Markdown</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Manages an active markdown streaming session. Text is appended via
+[Avalonia.Controls.MarkdownStreamingSession.Append(string)](xref:Avalonia.Controls.MarkdownStreamingSession.Append%28System.String%29) and coalesced into periodic render updates
+at display refresh rate to avoid redundant work.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class MarkdownStreamingSession
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> MarkdownStreamingSession
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IAsyncDisposable, IDisposable
+</div>
+</div>
+
+## Remarks
+
+Internally operates at the [Avalonia.Controls.Documents.TextModel.TextDocument](xref:Avalonia.Controls.Documents.TextModel.TextDocument)/[Avalonia.Controls.Documents.TextModel.TextDocumentNode](xref:Avalonia.Controls.Documents.TextModel.TextDocumentNode)
+level to avoid temporary [Avalonia.Controls.Documents.FlowDocument](xref:Avalonia.Controls.Documents.FlowDocument) allocations and eager element
+materialization. Changed Markdig blocks are rendered to a single
+[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot), and the resulting node sub-trees are grafted
+directly into the live document tree with deferred element realization.
+
+The parse, diff, and snapshot-build phases run on a background thread to keep
+the UI thread free for layout and input. Only the final tree-mutation step
+(apply delta) runs on the UI thread.
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Append (2 overloads)](#uid-e16fe04462) | No summary available. |
+| [Complete](#uid-62d5b107f4) | Signals that the LLM stream is finished. Performs a final parse and render pass, then cleans up resources. |
+| [CompleteAsync](#uid-fda89c74dc) | Async version of [Avalonia.Controls.MarkdownStreamingSession.Complete](xref:Avalonia.Controls.MarkdownStreamingSession.Complete) that awaits the final layout pass. |
+| [Dispose](#uid-20f3f75a7e) | No summary available. |
+| [DisposeAsync](#uid-13cc1baeb1) | No summary available. |
+
+<span id="uid-e16fe04462"></span>
+
+### Append overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f66bf7fa10"></span>
+
+#### Append Method
+
+```csharp
+public void Append(ReadOnlyMemory<char> text)
+```
+
+##### Parameters
+
+`text` ReadOnlyMemory&lt;char&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a2ffa85f9c"></span>
+
+#### Append Method
+
+Appends a text chunk to the streaming buffer.
+Safe to call from any thread.
+
+```csharp
+public void Append(string text)
+```
+
+##### Parameters
+
+`text` string
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-62d5b107f4"></span>
+
+### Complete Method
+
+Signals that the LLM stream is finished. Performs a final parse and
+render pass, then cleans up resources.
+
+```csharp
+public void Complete()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-fda89c74dc"></span>
+
+### CompleteAsync Method
+
+Async version of [Avalonia.Controls.MarkdownStreamingSession.Complete](xref:Avalonia.Controls.MarkdownStreamingSession.Complete) that awaits the final layout pass.
+
+```csharp
+public System.Threading.Tasks.ValueTask CompleteAsync()
+```
+
+#### Returns
+
+System.Threading.Tasks.ValueTask
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-20f3f75a7e"></span>
+
+### Dispose Method
+
+```csharp
+public void Dispose()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-13cc1baeb1"></span>
+
+### DisposeAsync Method
+
+```csharp
+public System.Threading.Tasks.ValueTask DisposeAsync()
+```
+
+#### Returns
+
+System.Threading.Tasks.ValueTask
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [IsCompleted](#uid-f24e73aee3) | Gets whether the session has been completed. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f24e73aee3"></span>
+
+### IsCompleted Property
+
+Gets whether the session has been completed.
+
+```csharp
+public bool IsCompleted { get; set; }
+```
+
+</section>
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [Updated](#uid-44b4b8d105) | Raised on the UI thread after each visible update is applied. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-44b4b8d105"></span>
+
+### Updated Event
+
+Raised on the UI thread after each visible update is applied.
+
+```csharp
+public event EventHandler Updated
+```
+
+</section>
+
+</ApiRefPage>
+

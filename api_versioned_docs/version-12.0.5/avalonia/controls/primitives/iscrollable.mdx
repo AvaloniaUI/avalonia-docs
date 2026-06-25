@@ -1,0 +1,132 @@
+---
+title: 'IScrollable'
+hide_title: true
+slug: '/avalonia/controls/primitives/iscrollable'
+uid: 'Avalonia.Controls.Primitives.IScrollable'
+commentId: 'T:Avalonia.Controls.Primitives.IScrollable'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Primitives'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IScrollable Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Primitives</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Interface implemented by scrollable controls.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface IScrollable
+```
+
+</div>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [CanHorizontallyScroll](#uid-f9220e62f0) | Gets a value indicating whether the content can be scrolled horizontally. |
+| [CanVerticallyScroll](#uid-1f7fef560a) | Gets a value indicating whether the content can be scrolled horizontally. |
+| [Extent](#uid-f932adf4b7) | Gets the extent of the scrollable content, in logical units |
+| [Offset](#uid-04da85e98c) | Gets or sets the current scroll offset, in logical units. |
+| [Viewport](#uid-99de58e253) | Gets the size of the viewport, in logical units. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f9220e62f0"></span>
+
+### CanHorizontallyScroll Property
+
+Gets a value indicating whether the content can be scrolled horizontally.
+
+```csharp
+public bool CanHorizontallyScroll { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1f7fef560a"></span>
+
+### CanVerticallyScroll Property
+
+Gets a value indicating whether the content can be scrolled horizontally.
+
+```csharp
+public bool CanVerticallyScroll { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f932adf4b7"></span>
+
+### Extent Property
+
+Gets the extent of the scrollable content, in logical units
+
+```csharp
+public Avalonia.Size Extent { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-04da85e98c"></span>
+
+### Offset Property
+
+Gets or sets the current scroll offset, in logical units.
+
+```csharp
+public Avalonia.Vector Offset { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-99de58e253"></span>
+
+### Viewport Property
+
+Gets the size of the viewport, in logical units.
+
+```csharp
+public Avalonia.Size Viewport { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

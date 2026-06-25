@@ -105,7 +105,7 @@ flow direction of the collapsed line.
 
 | Name | Description |
 | --- | --- |
-| [Collapse](#uid-16d7be557f) | Collapses given text line. |
+| [Collapse](#uid-16d7be557f) | Collapses the given text line and returns the resulting runs, or if no collapse is needed (the consumer then keeps the original line unchanged). |
 | [CreateCollapsedRuns](textcollapsingproperties.mdx#uid-3f1ae847f7) | Creates a list of runs for given collapsed length which includes specified symbol at the end. Inherited from [TextCollapsingProperties](textcollapsingproperties.mdx). |
 
 <section className="apiref-page__member-entry">
@@ -114,7 +114,9 @@ flow direction of the collapsed line.
 
 ### Collapse Method
 
-Collapses given text line.
+Collapses the given text line and returns the resulting runs, or
+if no collapse is needed (the consumer
+then keeps the original line unchanged).
 
 ```csharp
 public Avalonia.Media.TextFormatting.TextRun[] Collapse(Avalonia.Media.TextFormatting.TextLine textLine)
@@ -131,6 +133,21 @@ Text line to collapse.
 
 [Avalonia.Media.TextFormatting.TextRun](xref:Avalonia.Media.TextFormatting.TextRun)[]
 
+
+#### Remarks
+
+Implementations MUST return runs in logical order. The
+consumer (`TextLineImpl.Collapse`) wraps the returned array
+in a new [Avalonia.Media.TextFormatting.TextLine](xref:Avalonia.Media.TextFormatting.TextLine) and re-runs the BiDi reorderer
+via `FinalizeLine`, so pre-applying visual order here would
+be reordered a second time and produce garbled output on RTL or
+mixed-bidi lines.
+
+Iterate the source line's runs via
+`LogicalTextRunEnumerator`, not [Avalonia.Media.TextFormatting.TextLine.TextRuns](xref:Avalonia.Media.TextFormatting.TextLine.TextRuns)
+(which is post-bidi visual order). Use
+[Avalonia.Media.TextFormatting.TextCollapsingProperties.CreateCollapsedRuns(Avalonia.Media.TextFormatting.TextLine,int,Avalonia.Media.TextFormatting.TextRun)](xref:Avalonia.Media.TextFormatting.TextCollapsingProperties.CreateCollapsedRuns%28Avalonia.Media.TextFormatting.TextLine%2CSystem.Int32%2CAvalonia.Media.TextFormatting.TextRun%29) when an implementation only
+needs the standard "logical prefix + symbol" shape.
 
 </section>
 

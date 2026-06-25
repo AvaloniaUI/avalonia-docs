@@ -88,6 +88,7 @@ The codepoint value.
 | --- | --- |
 | [Equals (2 overloads)](#uid-6351ac6589) | No summary available. |
 | [GetHashCode](#uid-15974339b1) | No summary available. |
+| [HasScriptExtension](#uid-2153f9e094) | Determines whether the codepoint's Unicode Script_Extensions property contains `script`. |
 | [IsInRangeInclusive](#uid-674e3f72f7) | Returns if `cp` is between `lowerBound` and `upperBound`, inclusive. |
 | [ReadAt](#uid-660ce1483b) | No summary available. |
 | [ToString](#uid-36b555528f) | No summary available. |
@@ -155,6 +156,42 @@ public int GetHashCode()
 
 int
 
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2153f9e094"></span>
+
+### HasScriptExtension Method
+
+Determines whether the codepoint's Unicode Script_Extensions property contains
+`script`.
+
+```csharp
+public bool HasScriptExtension(Avalonia.Media.TextFormatting.Unicode.Script script)
+```
+
+#### Parameters
+
+`script` [Avalonia.Media.TextFormatting.Unicode.Script](xref:Avalonia.Media.TextFormatting.Unicode.Script)
+
+The script to test.
+
+
+#### Returns
+
+bool
+
+`true` when the codepoint participates in `script` per UAX #24
+(Script_Extensions); `false` otherwise.
+
+
+#### Remarks
+
+Backed by the UCD `ScriptExtensions.txt` data baked into [Avalonia.Media.TextFormatting.Unicode.UnicodeData](xref:Avalonia.Media.TextFormatting.Unicode.UnicodeData).
+Codepoints without an explicit Script_Extensions entry fall back to the singleton set
+of their primary [Avalonia.Media.TextFormatting.Unicode.Codepoint.Script](xref:Avalonia.Media.TextFormatting.Unicode.Codepoint.Script) property.
 
 </section>
 
@@ -272,6 +309,7 @@ bool
 | [ReplacementCodepoint](#uid-0aa9145d35) | The replacement codepoint that is used for non supported values. |
 | [Script](#uid-45250a99f7) | Gets the [Avalonia.Media.TextFormatting.Unicode.Script](xref:Avalonia.Media.TextFormatting.Unicode.Script). |
 | [Value](#uid-274c02ef02) | Get the codepoint's value. |
+| [WordBreakClass](#uid-072f63794a) | Gets the [Avalonia.Media.TextFormatting.Unicode.WordBreakClass](xref:Avalonia.Media.TextFormatting.Unicode.WordBreakClass). |
 
 <section className="apiref-page__member-entry">
 
@@ -452,6 +490,20 @@ Get the codepoint's value.
 
 ```csharp
 public uint Value { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-072f63794a"></span>
+
+### WordBreakClass Property
+
+Gets the [Avalonia.Media.TextFormatting.Unicode.WordBreakClass](xref:Avalonia.Media.TextFormatting.Unicode.WordBreakClass).
+
+```csharp
+public Avalonia.Media.TextFormatting.Unicode.WordBreakClass WordBreakClass { get; set; }
 ```
 
 </section>

@@ -115,10 +115,49 @@ font simulations.
 
 | Name | Description |
 | --- | --- |
+| [DeclaresLanguageCoverage](#uid-e6ee88bf43) | Determines whether this font self-declares coverage for the supplied culture via its OpenType `meta` table `dlng` or `slng` tag list. |
 | [Dispose](#uid-611d5d5c3c) | No summary available. |
+| [SupportsScript](#uid-bfbc66e215) | Determines whether the font advertises support for the supplied Unicode script. |
 | [TryGetGlyphMetrics (2 overloads)](#uid-224187e3e5) | No summary available. |
 | [TryGetHorizontalGlyphAdvance](#uid-327caa7a57) | No summary available. |
 | [TryGetHorizontalGlyphAdvances](#uid-fff209abba) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e6ee88bf43"></span>
+
+### DeclaresLanguageCoverage Method
+
+Determines whether this font self-declares coverage for the supplied culture via its
+OpenType `meta` table `dlng` or `slng` tag list.
+
+```csharp
+public bool DeclaresLanguageCoverage(System.Globalization.CultureInfo culture)
+```
+
+#### Parameters
+
+`culture` System.Globalization.CultureInfo
+
+The culture to check. If `null` the method returns `false`.
+
+
+#### Returns
+
+bool
+
+`true` when one of the declared language tags is a BCP-47 prefix of the culture's
+[System.Globalization.CultureInfo.Name](xref:System.Globalization.CultureInfo.Name) (or vice versa, when the font specifies a narrower tag).
+
+
+#### Remarks
+
+The match is case-insensitive and BCP-47-aware: the comparison succeeds when one tag is
+a prefix of the other up to a subtag boundary (e.g. `"ja"` matches `"ja-JP"`,
+and `"zh-Hans"` matches `"zh-Hans-CN"`). Returns `false` when the font
+declares no design or supported languages.
+
+</section>
 
 <section className="apiref-page__member-entry">
 
@@ -129,6 +168,38 @@ font simulations.
 ```csharp
 public void Dispose()
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-bfbc66e215"></span>
+
+### SupportsScript Method
+
+Determines whether the font advertises support for the supplied Unicode script.
+
+```csharp
+public bool SupportsScript(Avalonia.Media.TextFormatting.Unicode.Script script)
+```
+
+#### Parameters
+
+`script` [Avalonia.Media.TextFormatting.Unicode.Script](xref:Avalonia.Media.TextFormatting.Unicode.Script)
+
+
+#### Returns
+
+bool
+
+
+#### Remarks
+
+When the font ships an OS/2 table the answer is taken from the OS/2 ulUnicodeRange bitfield
+(the font's own self-declaration of script coverage). When OS/2 is absent or the bit is unset,
+this falls back to probing the cmap with a representative codepoint for the script. Returns
+`true` for scripts that don't have a meaningful per-script signal (for example
+[Avalonia.Media.TextFormatting.Unicode.Script.Common](xref:Avalonia.Media.TextFormatting.Unicode.Script.Common) or [Avalonia.Media.TextFormatting.Unicode.Script.Unknown](xref:Avalonia.Media.TextFormatting.Unicode.Script.Unknown)).
 
 </section>
 
@@ -241,6 +312,8 @@ bool
 | Name | Description |
 | --- | --- |
 | [CharacterToGlyphMap](#uid-820bb58c1b) | Gets a read-only mapping of Unicode character codes to glyph indices for the font. |
+| [CodePageCoverage](#uid-13288467e7) | Gets the codepage coverage advertised by the font via the OpenType `OS/2.ulCodePageRange1/2` bitfields. |
+| [DesignLanguages](#uid-891390f33f) | Gets the BCP-47 language tags the font's designer declared as the design target for the font (the `dlng` data tag in the OpenType `meta` table). |
 | [FaceNames](#uid-d5bea81105) | Gets a read-only mapping of culture-specific face names. |
 | [FamilyName](#uid-7117edd23d) | Gets the family name of the font. |
 | [FamilyNames](#uid-c2fc7a9ce5) | Gets a read-only mapping of localized culture-specific family names. |
@@ -251,6 +324,8 @@ bool
 | [Stretch](#uid-bef0dfc38f) | Gets the font stretch. |
 | [Style](#uid-d762ed5152) | Gets the font style. |
 | [SupportedFeatures](#uid-61839489bf) | Gets the list of OpenType feature tags supported by the font. |
+| [SupportedLanguages](#uid-039c8f5835) | Gets the BCP-47 language tags the font advertises as supported (the `slng` data tag in the OpenType `meta` table). |
+| [SupportedUnicodeRange](#uid-c0034604d7) | Gets the union of Unicode codepoint ranges covered by the font's character map. |
 | [TextShaperTypeface](#uid-df45934655) | Gets the typeface information used by the text shaper for this font. |
 | [TypographicFamilyName](#uid-5249100e36) | Gets the typographic family name of the font. |
 | [Weight](#uid-076de7204b) | Gets the font weight. |
@@ -273,6 +348,46 @@ This dictionary provides the correspondence between Unicode code points and the
 glyphs defined in the font. The mapping can be used to look up the glyph index for a given character when
 rendering or processing text. The set of mapped characters depends on the font's supported character
 set.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-13288467e7"></span>
+
+### CodePageCoverage Property
+
+Gets the codepage coverage advertised by the font via the OpenType
+`OS/2.ulCodePageRange1/2` bitfields.
+
+```csharp
+public Avalonia.Media.Fonts.FontCodePageCoverage CodePageCoverage { get; set; }
+```
+
+#### Remarks
+
+Returns [Avalonia.Media.Fonts.FontCodePageCoverage.None](xref:Avalonia.Media.Fonts.FontCodePageCoverage.None) when the font does not ship an OS/2 table
+or only supplies an OS/2 version &lt; 1 (where the codepage range fields are not present).
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-891390f33f"></span>
+
+### DesignLanguages Property
+
+Gets the BCP-47 language tags the font's designer declared as the design target for the
+font (the `dlng` data tag in the OpenType `meta` table).
+
+```csharp
+public ReadOnlySpan<string> DesignLanguages { get; set; }
+```
+
+#### Remarks
+
+Returns an empty span when the font does not ship a `meta` table or omits the
+`dlng` data tag.
 
 </section>
 
@@ -429,6 +544,47 @@ public System.Collections.Generic.IReadOnlyList<Avalonia.Media.Fonts.OpenTypeTag
 The returned list reflects the features available in the underlying font and is
 read-only. The order of features in the list is not guaranteed. This property does not return null; if the
 font does not support any features, the list will be empty.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-039c8f5835"></span>
+
+### SupportedLanguages Property
+
+Gets the BCP-47 language tags the font advertises as supported (the `slng` data tag
+in the OpenType `meta` table).
+
+```csharp
+public ReadOnlySpan<string> SupportedLanguages { get; set; }
+```
+
+#### Remarks
+
+Returns an empty span when the font does not ship a `meta` table or omits the
+`slng` data tag.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c0034604d7"></span>
+
+### SupportedUnicodeRange Property
+
+Gets the union of Unicode codepoint ranges covered by the font's character map.
+
+```csharp
+public Avalonia.Media.UnicodeRange SupportedUnicodeRange { get; set; }
+```
+
+#### Remarks
+
+The returned [Avalonia.Media.UnicodeRange](xref:Avalonia.Media.UnicodeRange) is derived from the cmap table and represents every
+codepoint for which the font defines a glyph. It is computed lazily on first access and cached
+for the lifetime of the [Avalonia.Media.GlyphTypeface](xref:Avalonia.Media.GlyphTypeface). Prefer this property over enumerating
+[Avalonia.Media.GlyphTypeface.CharacterToGlyphMap](xref:Avalonia.Media.GlyphTypeface.CharacterToGlyphMap) when only coverage information (not glyph IDs) is required.
 
 </section>
 
