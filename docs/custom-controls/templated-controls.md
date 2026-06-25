@@ -34,36 +34,38 @@ public class ToggleLabel : TemplatedControl
 :::caution Do not set DataContext = this
 Never assign `DataContext = this` in a custom control's constructor. This overrides the `DataContext` that your users expect to inherit from the parent visual tree. Bindings set on your control, such as `<MyControl Items="{Binding SelectedItems}" />`, will resolve against the control type instead of the parent's `ViewModel`, causing silent binding failures.
 
-Templated controls do not need a self-referencing `DataContext`. Use [`TemplateBinding`](#templatebinding-details) inside your control template to access your control's properties, and let the `DataContext` flow from the parent.
+Templated controls do not need a self-referencing `DataContext`. Use [`TemplateBinding`](#templatebinding) inside your control template to access your control's properties, and let the `DataContext` flow from the parent.
 :::
 
 ## Defining the control theme
 
-Every templated control needs a default `ControlTheme` that contains its `ControlTemplate`. This is typically placed in a resource dictionary such as `Themes/Generic.axaml` and included in your application's resources.
+Every templated control must have a default `ControlTheme` that contains its `ControlTemplate`. This control theme is typically placed in a resource dictionary, such as `Themes/Generic.axaml`, and included in your application resources in `App,axaml`.
 
-```xml
-<ControlTheme x:Key="{x:Type local:ToggleLabel}" TargetType="local:ToggleLabel">
-    <Setter Property="Template">
-        <ControlTemplate>
-            <Border Background="{TemplateBinding Background}" Padding="8">
-                <TextBlock Text="{TemplateBinding LabelText}" />
-            </Border>
-        </ControlTemplate>
-    </Setter>
-</ControlTheme>
+```xml title="App.axaml"
+<Application.Resources>
+  <ControlTheme x:Key="{x:Type local:ToggleLabel}" TargetType="local:ToggleLabel">
+      <Setter Property="Template">
+          <ControlTemplate>
+              <Border Background="{TemplateBinding Background}" Padding="8">
+                  <TextBlock Text="{TemplateBinding LabelText}" />
+              </Border>
+          </ControlTemplate>
+      </Setter>
+  </ControlTheme>
+</Application.Resources>
 ```
 
-Key points:
+Notes:
 
 - `x:Key="{x:Type local:ToggleLabel}"` ensures Avalonia automatically applies this theme to all instances of `ToggleLabel`.
-- `TargetType` scopes the theme so that property setters and template bindings resolve against the correct type.
+- `TargetType` scopes the theme, so that property setters and template bindings resolve against the correct type.
 - Inside the `ControlTemplate`, use [`TemplateBinding`](/api/avalonia/data/templatebinding) to bind to properties on the templated control.
 
 ## Template parts
 
-Sometimes a templated control needs to interact with specific elements inside its template. By convention, these elements are named with a `PART_` prefix.
+Sometimes, a templated control needs to interact with specific elements in its template. By convention, these elements are prefixed with `PART_`.
 
-Override `OnApplyTemplate` to locate named parts after the template has been applied:
+Override `OnApplyTemplate` to locate named parts after the template has been applied.
 
 ```csharp
 protected override void OnApplyTemplate(TemplateAppliedEventArgs e)
@@ -77,11 +79,13 @@ protected override void OnApplyTemplate(TemplateAppliedEventArgs e)
 }
 ```
 
+:::tip
 Because users can replace the control template, always check for `null` when looking up template parts. A custom template may omit parts that the default template provides.
+:::
 
-## TemplateBinding details
+## `TemplateBinding`
 
-When you are creating a control template and you want to bind to the templated parent you can use:
+Use `TemplateBinding` if you are creating a control template and you want to bind to the templated parent.
 
 ```xml
 <TextBlock Name="tb" Text="{TemplateBinding Caption}"/>
@@ -90,43 +94,45 @@ When you are creating a control template and you want to bind to the templated p
 <TextBlock Name="tb" Text="{Binding Caption, RelativeSource={RelativeSource TemplatedParent}}"/>
 ```
 
-Although the two syntaxes shown here are equivalent in most cases, there are some differences:
+Although the two syntaxes are equivalent in most cases, there are three differences:
 
-1.  `TemplateBinding` accepts only a single property rather than a property path, so if you want to bind using a property path you must use the second syntax:
+1.  `TemplateBinding` accepts only a single property, rather than a property path. If you want to bind using a property path, you must use the longer syntax:
 
     ```xml
-    <!-- This WON'T work as TemplateBinding only accepts single properties -->
+    <!-- This WON'T work -->
     <TextBlock Name="tb" Text="{TemplateBinding Caption.Length}"/>
 
-    <!-- Instead this syntax must be used in this case -->
+    <!-- Instead, use this syntax for the property path -->
     <TextBlock Name="tb" Text="{Binding Caption.Length, RelativeSource={RelativeSource TemplatedParent}}"/>
     ```
-2.  A `TemplateBinding` only supports `OneWay` mode for performance reasons (this is the [same as WPF](https://docs.microsoft.com/en-us/dotnet/desktop/wpf/advanced/templatebinding-markup-extension#remarks)). This means a `TemplateBinding` is actually equivalent to `{Binding RelativeSource={RelativeSource TemplatedParent}, Mode=OneWay}`. If `TwoWay` binding is required in a control template, the full syntax is needed as shown below. Note that `Binding` will also use the default binding mode unlike `TemplateBinding`.
+
+2.  A `TemplateBinding` only supports `OneWay` mode for performance reasons. This is the [same as WPF](https://docs.microsoft.com/en-us/dotnet/desktop/wpf/advanced/templatebinding-markup-extension#remarks). A`TemplateBinding` is therefore equivalent to `{Binding RelativeSource={RelativeSource TemplatedParent}, Mode=OneWay}`. If you require `TwoWay` binding in a control template, you must use the full syntax shown below.
 
     ```xml
-    {Binding RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay}
+    <YourControl YourProperty="{Binding Value, RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay}"/>
     ```
-3. `TemplateBinding` can only be used on `StyledElement`.
 
-```xml
-<!-- This WON'T work as GeometryDrawing is not a StyledElement. -->
-<GeometryDrawing Brush="{TemplateBinding Foreground}"/>
+3. `TemplateBinding` can only be used on a `StyledElement`.
 
-<!-- Instead this syntax must be used in this case. -->
-<GeometryDrawing Brush="{Binding Foreground, RelativeSource={RelativeSource TemplatedParent}}"/>
-```
+    ```xml
+    <!-- This WON'T work because GeometryDrawing is not a StyledElement -->
+    <GeometryDrawing Brush="{TemplateBinding Foreground}"/>
+    
+    <!-- Instead, use the longer syntax -->
+    <GeometryDrawing Brush="{Binding Foreground, RelativeSource={RelativeSource TemplatedParent}}"/>
+    ```
 
-## Pseudo-classes
+## Pseudoclasses
 
-Templated controls can expose visual states through pseudo-classes. This lets theme authors style the control differently based on its state without needing code-behind access.
+Templated controls can expose visual states through pseudoclasses. This lets theme authors style the control differently based on its state, without needing code-behind access.
 
-Set a pseudo-class from your control logic:
+Set a pseudoclass from your control logic.
 
 ```csharp
 PseudoClasses.Set(":active", isActive);
 ```
 
-Then target it in your control theme:
+Then, target it in your control theme.
 
 ```xml
 <Style Selector="^:active">
