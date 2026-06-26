@@ -1,83 +1,31 @@
 ---
 id: drawing-custom-controls
 title: Drawing custom controls
-description: Render custom visuals by overriding the Render method and using DrawingContext operations.
-doc-type: how-to
+description: A list of DrawingContext methods, with examples of how to use them to draw custom controls.
+doc-type: reference
 ---
 
-import DrawWithPropertyScreenshot from '/img/guides/ui-development/custom-controls/draw-property.png';
+When [creating a custom basic control](/docs/custom-controls/custom-drawn-basic-controls), you can override the `Render` method and use [`DrawingContext`](/api/avalonia/media/drawingcontext) to specify the exact visual appearance of the control.
 
-On this page you will see how to draw a custom control, using the value for a simple property that defines the background color. The code now looks like this:
+This page provides reference information on `DrawingContext` methods, along with examples of common drawing operations.
 
-```xml title='MainWindow.xaml'
-<Window xmlns="https://github.com/avaloniaui"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:cc="using:AvaloniaCCExample.CustomControls"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-        x:Class="AvaloniaCCExample.MainWindow"
-        Title="Avalonia Custom Control">
-  <cc:MyCustomControl Height="200" Width="300" Background="Red"/>
-</Window>
+## `DrawingContext` methods
 
-```
-
-```csharp title='MyCustomControl.cs'
-using Avalonia.Controls;
-
-namespace AvaloniaCCExample.CustomControls
-{
-    public class MyCustomControl : Control
-    {
-        public IBrush? Background { get; set; }
-
-        public sealed override void Render(DrawingContext context)
-        {
-            if (Background != null)
-            {
-                var renderSize = Bounds.Size;
-                context.FillRectangle(Background, new Rect(renderSize));
-            }
-            
-            base.Render(context);
-        }
-    }
-}
-```
-
-This example defines a simple brush property on the custom control for the background color. It then overrides the `Render` method to draw the control.
-
-The drawing code uses the Avalonia graphics context (that is passed to the render method), to draw a rectangle that is filled with the background color, and made the same size as the control (as supplied by the `Bounds.Size` object).
-
-<Image light={DrawWithPropertyScreenshot} alt="Custom-drawn control rendered with a bound property value" position="center" maxWidth={400} cornerRadius="true"/>
-
-Notice how the control now shows both at runtime (above) and in the preview pane.
-
-On the next page, you will see how to implement the background property so that it can be changed by the Avalonia styling system. 
-
-:::tip
-You can find a more advanced tutorial in [Avalonia.Samples](
-https://github.com/AvaloniaUI/Avalonia.Samples/tree/main/src/Avalonia.Samples/CustomControls/SnowflakesControlSample)
-:::
-
-## DrawingContext methods
-
-The `DrawingContext` provides several methods for rendering content in your custom control:
+[`DrawingContext`](/api/avalonia/media/drawingcontext) provides the following methods for rendering custom controls:
 
 | Method | Description |
 |---|---|
-| `DrawRectangle` | Draws a rectangle with optional fill and pen |
-| `DrawEllipse` | Draws an ellipse |
-| `DrawLine` | Draws a line between two points |
-| `DrawGeometry` | Draws an arbitrary geometry path |
-| `DrawText` | Draws formatted text |
-| `DrawImage` | Draws a bitmap image |
-| `FillRectangle` | Fills a rectangle (shorthand) |
+| `DrawRectangle` | Draws a rectangle. |
+| `DrawEllipse` | Draws an ellipse. |
+| `DrawLine` | Draws a line between two points. |
+| `DrawGeometry` | Draws an arbitrary geometry path. |
+| `DrawText` | Draws formatted text. |
+| `DrawImage` | Draws a bitmap image. |
+| `FillRectangle` | Fills a rectangle (shorthand). |
 
 ## Drawing shapes
 
-The following example demonstrates drawing multiple shapes within a single `Render` override:
+You can draw multiple shapes within a single `Render` override:
 
 ```csharp
 public override void Render(DrawingContext context)
@@ -114,9 +62,9 @@ public override void Render(DrawingContext context)
 }
 ```
 
-## Using clipping and transforms
+## Clipping and transforming
 
-The `DrawingContext` supports clipping regions and transforms. Both `PushClip` and `PushTransform` return disposable objects, so wrapping them in `using` blocks ensures the state is restored automatically:
+Use `PushClip` and `PushTransform` to clip and/or transform regions. Both return disposable objects, so wrap them in `using` blocks to ensure the state is restored automatically:
 
 ```csharp
 public override void Render(DrawingContext context)
@@ -136,21 +84,10 @@ public override void Render(DrawingContext context)
 }
 ```
 
-## Invalidating the visual
-
-To trigger a re-render when a property changes, register the property with `AffectsRender` in the static constructor, or call `InvalidateVisual()` manually:
-
-```csharp
-static MyCustomControl()
-{
-    AffectsRender<MyCustomControl>(BackgroundProperty);
-}
-```
-
-Calling `InvalidateVisual()` on a control instance marks it as needing a redraw. Avalonia will then call `Render` again on the next layout pass.
-
 ## See also
 
+- [Custom-drawn basic controls](/docs/custom-controls/custom-drawn-basic-controls): How to create a custom basic control
+- [Custom control sample project](https://github.com/AvaloniaUI/Avalonia.Samples/tree/main/src/Avalonia.Samples/CustomControls/SnowflakesControlSample): Practical sample showing how to override `Render` to draw a custom control. 
 - [Custom Rendering](/docs/graphics-animation/custom-rendering): Advanced rendering techniques.
 - [Brushes](/docs/graphics-animation/brushes): Available brush types.
 - [Shapes and Geometries](/docs/graphics-animation/shapes-and-geometries): Geometry types for drawing.

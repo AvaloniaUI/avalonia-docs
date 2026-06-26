@@ -49,7 +49,7 @@ Notes:
 
 - `FillProperty` is a styled property, so it can be set in XAML, bound to data, and targeted by styles.
 - The static constructor calls `AffectsRender`, which tells Avalonia to redraw the control whenever `Fill` changes.
-- `Render` receives a `DrawingContext` that provides methods such as `DrawEllipse`, `DrawRectangle`, `DrawLine`, and `DrawText`.
+- `Render` receives a `DrawingContext` that provides methods such as `DrawEllipse`, `DrawRectangle`, `DrawLine`, and `DrawText`. For more information on how to use `DrawingContext`, see [Drawing custom controls](/docs/custom-controls/drawing-custom-controls).
 
 ## Using in XAML
 
@@ -109,6 +109,7 @@ Use manual invalidation sparingly. Declaring property dependencies with `Affects
 
 ## See also
 
-- [Templated Controls](/docs/custom-controls/templated-controls)
-- [Drawing Custom Controls](/docs/custom-controls/drawing-custom-controls)
+- [Templated controls](/docs/custom-controls/templated-controls)
+- [Drawing custom controls](/docs/custom-controls/drawing-custom-controls)
 - [Defining Properties](/docs/custom-controls/defining-properties)
+- [Custom control sample project](https://github.com/AvaloniaUI/Avalonia.Samples/tree/main/src/Avalonia.Samples/CustomControls/SnowflakesControlSample)
