@@ -1,13 +1,12 @@
 ---
 id: defining-properties
-title: Defining properties
+title: Defining properties for custom controls
+sidebar_label: Defining properties
 description: Define styled, direct or attached properties on your custom Avalonia controls.
 doc-type: how-to
 ---
 
 import DefiningPropertyPreviewScreenshot from '/img/guides/ui-development/custom-controls/defining-property-preview.png';
-
-## Defining properties for custom controls
 
 When creating a custom control, you can give it the following types of properties. This page walks you through registering and using each type, so you can choose the right ones for your control.
 
