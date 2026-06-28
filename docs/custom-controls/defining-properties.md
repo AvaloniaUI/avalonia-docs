@@ -1,7 +1,7 @@
 ---
 id: defining-properties
 title: Defining properties
-description: Define styled, direct, and attached properties on custom Avalonia controls.
+description: Define styled, direct or attached properties on your custom Avalonia controls.
 doc-type: how-to
 ---
 
@@ -9,26 +9,28 @@ import DefiningPropertyPreviewScreenshot from '/img/guides/ui-development/custom
 
 ## Defining properties for custom controls
 
-If you are creating a custom control, you will usually want it to have properties that can be set by the Avalonia styling system, bound to data, or configured in XAML. Avalonia provides three property types for this purpose: styled properties, direct properties, and attached properties.
+When creating a custom control, you can give it the following types of properties. This page walks you through registering and using each type, so you can choose the right ones for your control.
 
-This page walks you through registering and using each type so you can choose the right one for your control.
-
-:::info
-For more information about how to use styles in Avalonia, see the [Styles guide](/docs/styling/styles).
-:::
+1. [Styled property](#styled-properties): Set by the Avalonia styling system.
+2. [Direct property](#direct-properties): Bound to data.
+3. [Attached property](/docs/custom-controls/attached-properties): Configured in XAML.
 
 ## Styled properties
 
-A styled property is the most common property type. It stores its value inside the Avalonia property system (not in a backing field), which means it participates in styling, animations, and value precedence. Use a styled property when you want users to be able to style or animate the property.
+A styled property stores its value inside the Avalonia property system, not a backing field. As a result, styled properties can participate in styling, animations and value precedence. Use a styled property when you want to allow users to style or animate the property.
 
-Registering a styled property is a two-step process:
+To register a styled property:
 
-1. Register the property as a `static readonly` field using `AvaloniaProperty.Register`.
-2. Provide a CLR getter and setter that call `GetValue` and `SetValue`.
+1. Add a `static readonly` field using `AvaloniaProperty.Register`.
+2. Provide a CLR getter and setter that call `GetValue` and `SetValue` respectively.
+
+:::info
+For more information on using styles in Avalonia, see the [Styles](/docs/styling/styles) guide.
+:::
 
 ### Naming convention
 
-The static field must follow the pattern `PropertyNameProperty`. Avalonia uses this convention to map XAML attributes to properties automatically:
+The static field must follow the pattern `[PropertyName]Property`, e.g., `BackgroundProperty`, `FontWeightProperty`. Avalonia uses this convention to map XAML attributes to properties automatically.
 
 ```csharp
 public static readonly StyledProperty<double> CornerRadiusProperty = ...
@@ -40,7 +42,7 @@ This lets you write the following in XAML:
 <local:MyControl CornerRadius="8" />
 ```
 
-### Registering a new styled property
+### Registering a styled property
 
 The following example registers a `CornerRadius` styled property with a default value of `0.0`:
 
@@ -58,20 +60,20 @@ public class MyControl : Control
 }
 ```
 
-The `Register` method accepts several optional parameters:
+The `Register` method accepts these optional parameters:
 
 | Parameter | Description |
 |---|---|
 | `name` | The property name. Must match the CLR property name. |
-| `defaultValue` | The default value for the property. |
+| `defaultValue` | The default value of the property. |
 | `inherits` | Whether the value inherits down the visual tree. |
-| `defaultBindingMode` | The default binding mode (`OneWay`, `TwoWay`, `OneTime`, `OneWayToSource`). |
+| `defaultBindingMode` | The default binding mode (`OneWay`, `TwoWay`, `OneTime`, or `OneWayToSource`). |
 | `validate` | A function that returns `false` for values that should be rejected. |
 | `coerce` | A function that adjusts the value before it is applied. |
 
 ### Reusing an existing styled property
 
-If another control already defines a property you need (for example, `Background` on `Border`), use `AddOwner` instead of registering a new one. This ensures a single property identity so that styles targeting the property work across all controls that share it:
+If another control already defines a property you wish to use (e.g., `Background` on `Border`), you can use `AddOwner` instead of registering a new property. By doing so, the properties share a single property identity, meaning styles targeting the property work on all controls that share it.
 
 ```csharp
 public class MyCustomControl : Control
@@ -89,9 +91,13 @@ public class MyCustomControl : Control
 
 ### Styling a custom property
 
-Once you register a styled property, users can target it in styles. The following example sets the `Background` of a custom control through a style:
+Once a styled property is registered, users can target it in XAML to set its style. The following example sets the `Background` of a custom control through a style:
 
-```xml title='MainWindow.axaml'
+<Tabs>
+
+<TabItem value="xaml" label="MainWindow.axaml">
+
+```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -112,7 +118,11 @@ Once you register a styled property, users can target it in styles. The followin
 </Window>
 ```
 
-```csharp title='MyCustomControl.cs'
+</TabItem>
+
+<TabItem value="csharp" label="MyCustomControl.cs">
+
+```csharp
 using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Media;
@@ -143,21 +153,23 @@ namespace AvaloniaCCExample.CustomControls
 }
 ```
 
-The styled property works both at run-time and in the preview panel.
+</TabItem>
+
+</Tabs>
 
 <Image light={DefiningPropertyPreviewScreenshot} alt="Preview of a custom control with a defined property" position="center" maxWidth={400} cornerRadius="true"/>
 
 ## Direct properties
 
-A `DirectProperty` is backed by a conventional C# field. It does not participate in styling or animation, but it supports data binding and change notification. Use a direct property when:
+A direct property is backed by a conventional C# field. It does not participate in styling or animation, but supports data binding and change notifications. Use a direct property when:
 
-- You need a **read-only** property (styled properties cannot be read-only).
-- You want **better performance** because the value is read directly from the field.
-- The property does **not need to be styled** (for example, `Items` on `ItemsControl`).
+- You need a **read-only** property. (Styled properties cannot be read-only.)
+- You want **better performance**. (Values of direct properties are read directly from the field.)
+- You want a property that **cannot be styled**.
 
 ### Registering a direct property
 
-Use `AvaloniaProperty.RegisterDirect` and provide getter and setter delegates that point to your backing field:
+Use `AvaloniaProperty.RegisterDirect`. Provide getter and setter delegates that point to your backing field:
 
 ```csharp
 public class MyControl : Control
@@ -204,7 +216,7 @@ public class MyControl : Control
 }
 ```
 
-### Styled vs. direct properties
+## Styled vs. direct properties
 
 | Behavior | Styled property | Direct property |
 |---|---|---|
@@ -218,7 +230,9 @@ public class MyControl : Control
 
 ## Responding to property changes
 
-You can react to property value changes by overriding `OnPropertyChanged` in your control:
+For styled and direct properties, you can react to property value changes by overriding `OnPropertyChanged` in your control.
+
+This example demonstrates reacting to a background change by invalidating the visual and thereby updating to the new background.
 
 ```csharp
 protected override void OnPropertyChanged(AvaloniaPropertyChangedEventArgs change)
@@ -233,13 +247,11 @@ protected override void OnPropertyChanged(AvaloniaPropertyChangedEventArgs chang
 }
 ```
 
-This approach works for both styled and direct properties.
-
 ## Common pitfalls
 
-- **Mismatched names.** The `name` argument you pass to `Register` must match the CLR property name exactly. A mismatch causes binding and XAML errors at run-time.
+- **Mismatched names.** The `name` argument you pass to `Register` must match the CLR property name exactly. A mismatch causes errors at run-time.
 - **Using `SetValue` with a direct property.** Direct properties require `SetAndRaise`. Calling `SetValue` throws an `InvalidOperationException`.
-- **Adding a backing field for a styled property.** Styled properties store values inside the Avalonia property system. If you read from a local field you will get stale data. Always use `GetValue` and `SetValue`.
+- **Adding a backing field for a styled property.** Styled properties store values inside the Avalonia property system. If you read from a local field, you will get stale data. Always use `GetValue` and `SetValue`.
 - **Forgetting to call `base.OnPropertyChanged`.** If you override `OnPropertyChanged`, always call the base implementation first so the framework can process the change.
 
 ## See also
