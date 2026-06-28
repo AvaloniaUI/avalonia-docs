@@ -13,7 +13,7 @@ When creating a custom control, you can give it the following types of propertie
 
 1. [Styled property](#styled-properties): Set by the Avalonia styling system.
 2. [Direct property](#direct-properties): Bound to data.
-3. [Attached property](/docs/custom-controls/attached-properties): Configured in XAML.
+3. [Attached property](#attached-properties): Configured in XAML.
 
 ## Styled properties
 
@@ -28,7 +28,7 @@ To register a styled property:
 For more information on using styles in Avalonia, see the [Styles](/docs/styling/styles) guide.
 :::
 
-### Naming convention
+### Naming conventions
 
 The static field must follow the pattern `[PropertyName]Property`, e.g., `BackgroundProperty`, `FontWeightProperty`. Avalonia uses this convention to map XAML attributes to properties automatically.
 
@@ -245,6 +245,67 @@ protected override void OnPropertyChanged(AvaloniaPropertyChangedEventArgs chang
         InvalidateVisual();
     }
 }
+```
+
+## Attached properties
+
+An attached property lives in its own container class and is configured on compatible controls in XAML. This allows you to have additional properties that are not part of your custom control's own control class.
+
+### Naming conventions
+
+- Like styled properties, the static field for the attached property follows the pattern `[PropertyName]Property`.
+- The name parameter is `[PropertyName]` alone (without the `Property` suffix).
+
+### Registering an attached property
+
+1. Add a new container class inheriting from `AvaloniaObject`.
+2. Use the `AvaloniaProperty.RegisterAttached` method to register the attached property.
+3. Provide a CLR getter and setter that call `GetValue` and `SetValue` respectively.
+4. Further define the behavior of the property, as necessary.
+
+The following example creates an attached property called `IsDimmed` in a standalone file `DimExtensions.cs`. It is a Boolean property that renders a control at 50% opacity when `True`.
+
+```csharp title="DimExtensions.cs"
+using Avalonia;
+using Avalonia.Controls;
+
+namespace MyApp;
+
+// Attached properties live in a container class that inherits from AvaloniaObject.
+public class DimExtensions : AvaloniaObject
+{
+    // Register the attached property. The type arguments are:
+    //    <owner class, type it can be set on, value type>.
+    public static readonly AttachedProperty<bool> IsDimmedProperty =
+        AvaloniaProperty.RegisterAttached<DimExtensions, Control, bool>("IsDimmed");
+
+    // Provide static getter and setter. The XAML system finds these by name.
+    public static void SetIsDimmed(Control element, bool value) =>
+        element.SetValue(IsDimmedProperty, value);
+
+    public static bool GetIsDimmed(Control element) =>
+        element.GetValue(IsDimmedProperty);
+
+    // React when the value changes.
+    static DimExtensions()
+    {
+        IsDimmedProperty.Changed.AddClassHandler<Control>((control, _) =>
+            control.Opacity = GetIsDimmed(control) ? 0.5 : 1.0);
+    }
+}
+```
+
+### Using the attached property in XAML
+
+Declare the namespace in XAML. Then, set the attached property using dot notation.
+
+The following example shows the `IsDimmed` attached property from the previous section applied to two buttons. The second button renders at half opacity because it is given `IsDimmed=True`.
+
+```xml title="MainWindow.axaml"
+<StackPanel>
+    <Button Content="Normal" />
+    <Button Content="Dimmed" local:DimExtensions.IsDimmed="True" />
+</StackPanel>
 ```
 
 ## Common pitfalls
