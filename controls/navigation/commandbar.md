@@ -534,7 +534,7 @@ private bool _isUnderline;
 
 ## See also
 
-- [ContentPage](contentpage)
-- [NavigationPage](navigationpage)
+- [ContentPage](/controls/navigation/contentpage)
+- [NavigationPage](/controls/navigation/navigationpage)
 - [CommandBar API reference](/api/avalonia/controls/commandbar)
 - [`CommandBar.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/CommandBar/CommandBar.cs)

@@ -517,8 +517,8 @@ When the main content is a `NavigationPage`, the hamburger menu icon automatical
 
 ## See also
 
-- [ContentPage](contentpage)
-- [NavigationPage](navigationpage)
+- [ContentPage](/controls/navigation/contentpage)
+- [NavigationPage](/controls/navigation/navigationpage)
 - [SplitView](/controls/layout/containers/splitview)
 - [DrawerPage API reference](/api/avalonia/controls/drawerpage)
 - [`DrawerPage.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Page/DrawerPage.cs)

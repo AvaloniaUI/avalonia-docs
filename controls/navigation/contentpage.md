@@ -349,8 +349,8 @@ When used inside a `TabbedPage`, the `Header` and `Icon` properties control the 
 
 ## See also
 
-- [NavigationPage](navigationpage)
-- [TabbedPage](tabbedpage)
-- [DrawerPage](drawerpage)
+- [NavigationPage](/controls/navigation/navigationpage)
+- [TabbedPage](/controls/navigation/tabbedpage)
+- [DrawerPage](/controls/navigation/drawerpage)
 - [ContentPage API reference](/api/avalonia/controls/contentpage)
 - [`ContentPage.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Page/ContentPage.cs)
