@@ -425,9 +425,9 @@ Disable the swipe-to-go-back gesture globally or check whether it is enabled:
 
 ## See also
 
-- [ContentPage](contentpage)
-- [TabbedPage](tabbedpage)
-- [DrawerPage](drawerpage)
+- [ContentPage](/controls/navigation/contentpage)
+- [TabbedPage](/controls/navigation/tabbedpage)
+- [DrawerPage](/controls/navigation/drawerpage)
 - [Page Transitions](/docs/graphics-animation/page-transitions)
 - [NavigationPage API reference](/api/avalonia/controls/navigationpage)
 - [`NavigationPage.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Page/NavigationPage.cs)
