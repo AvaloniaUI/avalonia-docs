@@ -11,8 +11,8 @@ import DefiningPropertyPreviewScreenshot from '/img/guides/ui-development/custom
 When creating a custom control, you can give it the following types of properties. This page walks you through registering and using each type, so you can choose the right ones for your control.
 
 1. [Styled property](#styled-properties): Set by the Avalonia styling system.
-2. [Direct property](#direct-properties): Bound to data.
-3. [Attached property](#attached-properties): Configured in XAML.
+2. [Direct property](#direct-properties): Has a backing C# field, supports data binding.
+3. [Attached property](#attached-properties): Hosted in a separate container class, then configured in XAML.
 
 ## Styled properties
 
@@ -320,5 +320,4 @@ The following example shows the `IsDimmed` attached property from the previous s
 - [Value precedence](/docs/properties/value-precedence): How Avalonia resolves competing property values.
 - [Metadata and callbacks](/docs/properties/metadata-and-callbacks): Default values, coercion, and validation.
 - [Defining events](/docs/custom-controls/defining-events): Add routed events to your custom controls.
-- [Attached properties](/docs/custom-controls/attached-properties): Create properties that can be set on other controls.
 - [Custom control class](/docs/custom-controls/custom-control-class): Base class overview for custom controls.
