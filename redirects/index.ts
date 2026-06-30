@@ -36,9 +36,10 @@ const config: RedirectConfig = {
     { from: '/controls/input/text-input/richtexteditor-guides/thread-safety', to: '/controls/input/text-input/richtexteditor/thread-safety' },
     { from: ['/controls/input/text-input/richtexteditor-guides/toolbar', '/controls/input/text-input/richtexteditor-guides/toolbar-customization'], to: '/controls/input/text-input/richtexteditor/toolbar' },
 
-    // Redirect retired pages from rewrite of Custom Controls collection in June 2026
+    // Redirect retired pages from rewrite of Custom Controls docs in June 2026
     { from: '/docs/custom-controls/choosing-a-custom-control-type', to: '/docs/custom-controls/'},
     { from: '/docs/custom-controls/custom-control-class', to: '/docs/custom-controls/custom-drawn-basic-controls'},
+    { from: '/docs/custom-controls/attached-properties', to: '/docs/custom-controls/defining-properties' },
   ],
   createRedirects(existingPath: string): string[] | undefined {
     const redirects = [

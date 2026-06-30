@@ -249,7 +249,6 @@ const sidebars: SidebarsConfig = {
         'custom-controls/drawing-custom-controls',
         'custom-controls/defining-properties',
         'custom-controls/defining-events',
-        'custom-controls/attached-properties',
         'custom-controls/control-trees',
         'custom-controls/custom-flyout',
         'custom-controls/custom-itemspanel',
