@@ -370,6 +370,11 @@ gtag('consent', 'default', {
               activeBasePath: '/troubleshooting'
             },
             {
+              label: 'Community Translations',
+              to: '/docs/community-translations',
+              activeBasePath: '/docs/community-translations',
+            },
+            {
               label: 'Enhanced Support',
               href: 'https://avaloniaui.net/support?utm_source=docs&utm_medium=referral&utm_content=nav_link',
               target: '_blank',
