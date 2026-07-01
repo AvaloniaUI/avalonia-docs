@@ -1,29 +1,22 @@
 ---
 id: defining-events
-title: Defining events
-description: Define and raise routed events on custom Avalonia controls with various strategies, such as tunneling or bubbling.
+title: Defining events for custom controls
+sidebar_label: Defining events
+description: Define and raise routed events on custom Avalonia controls.
 doc-type: how-to
 ---
 
-Events allow your custom controls to recognize and communicate specific actions or occurrences. By defining events, you provide a way for users of your controls to respond and react to these events.
+## Routed events: Recap
 
-In Avalonia, **routed events** offer a mechanism for handling events that can travel (or "route") through the control tree, allowing multiple controls to respond to the same event. They can be used to handle events occurring within nested controls, or to centralize event handling logic at a common shared level higher up the visual tree.
+Avalonia uses a routed event system, where events travel through the control tree and allow multiple controls to respond to the same event. There are a number of routing strategies, most notably tunneling (where the event travels down the control tree from the root) and bubbling (where the event travels up the control tree from the source).
 
-## Routed events
+This page provides guidance on defining custom events for your controls.
 
-Routed events provide the following key features:
+For more information on routed events, see [Events overview](/docs/events).
 
-- **Event routing:** Routed events can propagate up the tree (bubbling) or down the tree (tunneling), enabling controls at different levels to handle the same event. This allows for more flexible, centralized event handling.
+## Custom routed events
 
-- **Event handlers:** Routed events use event handlers to respond to events. Event handlers can be associated with specific controls, or attached at higher levels in the visual tree to handle events from multiple controls.
-
-- **Handled state:** Routed events have a `Handled` property that can be used to mark an event as handled, preventing further propagation. This allows fine-grained control over event handling.
-
-- **Routing strategies:** Avalonia supports different routing strategies for routed events, such as bubbling, tunneling, or direct routing. These strategies determine the order in which controls receive and handle events.
-
-### Example
-
-Here's an example of a routed event for a custom slider control. In this example, a custom routed event called `ValueChangedEvent` is defined for the control `MyCustomSlider`. The event is registered using the `RoutedEvent` system, allowing it to be subscribed by users of the control. A CLR event is also defined for convenience, which allows the event to be consumed by standard .NET APIs.
+Here's an example of a routed event for a custom slider control. In this example, a custom event called `ValueChangedEvent` is defined for the control `MyCustomSlider`. The event is registered using the `RoutedEvent` system, allowing it to be subscribed by users of the control. A CLR event is also defined for convenience, which allows the event to be consumed by standard .NET APIs.
 
 ```csharp
 public class MyCustomSlider : Control
@@ -92,26 +85,6 @@ Continuing with the example of `ValueChangedEvent` for `MyCustomSlider` from the
     }
     ```
 
-## Routing strategies
-
-Avalonia supports the following routing strategies. These control how events propagate through the visual tree.
-
-| Strategy | Behavior |
-|----------|----------|
-| `Direct` | Event fires only on the source control. |
-| `Bubble` | Event travels up from source to root. |
-| `Tunnel` | Event travels down from root to source. |
-| `Bubble \| Tunnel` | Event tunnels down, then bubbles up. |
-
-`Bubble | Tunnel` is an example of a combined strategy, which is defined using the bitwise OR operator like so:
-
-```csharp
-RoutedEvent.Register<MyControl, RoutedEventArgs>(
-    nameof(MyEvent), RoutingStrategies.Bubble | RoutingStrategies.Tunnel);
-```
-
-Using `Bubble | Tunnel` together can be useful when you want to give parent controls a chance to preview and intercept the event (during the tunnel phase) before the source control handles it (during the bubble phase).
-
 ## Handling events in XAML
 
 Users of your custom control can subscribe to the event directly in XAML, with the corresponding handler in code-behind.
@@ -141,7 +114,9 @@ private void OnSliderValueChanged(object? sender, ValueChangedEventArgs e)
 
 ## Class handlers
 
-Class handlers register event handling logic at the class level rather than on individual instances. They are invoked before instance handlers and are registered in the static constructor, meaning they apply automatically to every instance of the same control. They are intended to define default behaviors that should apply to all instances of a control.
+Class handlers register event handling logic at the class level rather than on individual instances. They are typically registered in the static constructor. They are invoked before instance handlers, meaning they apply automatically to every instance of the same type.
+
+Class handlers are used for control implementations that need to intercept input events before any instance-level handler can mark them as handled. A common use case is to define default behaviors that should apply to all instances of a control.
 
 ```csharp
 static MyCustomSlider()
@@ -151,7 +126,7 @@ static MyCustomSlider()
 
 private void OnValueChanged(ValueChangedEventArgs e)
 {
-    // Handle value change
+    // Handle value change for all instances of MyCustomSlider
 }
 ```
 

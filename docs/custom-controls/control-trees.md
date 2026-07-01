@@ -2,7 +2,7 @@
 id: control-trees
 title: Traversing control trees with custom controls
 sidebar_label: Traversing control trees
-description: Understand how Avalonia organizes controls into logical and visual trees for layout and rendering.
+description: Understand how to use lifecycle events of the logical and visual trees when building a custom control.
 doc-type: explanation
 ---
 
