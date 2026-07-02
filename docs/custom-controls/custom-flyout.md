@@ -1,17 +1,19 @@
 ---
 id: custom-flyout
-title: How to create a custom flyout
-description: Create a custom flyout control by extending FlyoutBase in Avalonia.
+title: Custom Flyout
+description: How to create a custom flyout control by extending FlyoutBase.
 doc-type: how-to
 ---
 
+This example demonstrates how to create a custom `Floyout` control.
+
 Custom flyouts let you display rich, self-contained UI that appears on demand and is attached to a target control. By deriving from `FlyoutBase`, you can build flyouts that host any content, from simple images to fully interactive forms.
 
-## Creating a basic custom flyout
+## Creating the custom `Flyout` class
 
-To create a custom flyout type, derive from FlyoutBase. You'll have to override the abstract method `CreatePresenter()` to specify the presenter the [`Flyout`](/api/avalonia/controls/flyout) should use to display its content. This can be any type of control, but note that this is the root content for the inner popup and should be styled with background, border, corner radius, and similar styling to match other popups. You can still use a normal `FlyoutPresenter` if you wish.
-
-The following example creates a simple `Flyout` that hosts an image.
+1. Add a new C# class to your project deriving from `FlyoutBase`.
+2. Override the abstract method `CreatePresenter()`. This allows you to replace the default presenter with whatever control you wish to use to display the content of your custom `Flyout`. For this example, the standard `FlyoutPresenter` is used.
+3. Specify the content the presenter should host. In this case, `Image` is chosen.
 
 ```csharp
 public class MyImageFlyout : FlyoutBase
@@ -23,7 +25,7 @@ public class MyImageFlyout : FlyoutBase
 
     protected override Control CreatePresenter()
     {
-        // In this example, we'll use the default FlyoutPresenter as the root content, and add an Image control to show our content
+        // Use FlyoutPresenter as the root content, then add an Image control to show our content
         return new FlyoutPresenter
         {
             Content = new Image
@@ -38,10 +40,11 @@ public class MyImageFlyout : FlyoutBase
 
 ## Showing and closing
 
-You can show a flyout programmatically by calling `ShowAt` and passing the control it should be anchored to. To dismiss it, call `Hide`.
+1. To show the `Flyout`, call `ShowAt` and pass the control to which it should be anchored.
+2. To close the `Flyout`, call `Hide`.
 
 ```csharp
-// Show the flyout attached to a control
+// Show the flyout and have it anchored to a button
 var flyout = new MyImageFlyout { Image = myBitmap };
 flyout.ShowAt(targetButton);
 
