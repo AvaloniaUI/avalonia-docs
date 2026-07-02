@@ -3,6 +3,16 @@ id: release-notes
 title: Release notes
 ---
 
+## XPF 1.6.5 (2026-07-02)
+
+* Avalonia version updated from 11.3.16 to 11.3.18
+* Added support for bitmaps with DPI other than 96
+* Fixed system font fallback taking over font family referenced using pack URI
+* Fixed `TextWrapping=Wrap` trimming each line when trimming enabled
+* Fixed extra click needed on context menu opened in inactive windows (macOS)
+* Fixed few pixels space around maximized windows (macOS, Linux)
+* Fixed an issue where some mouse cursor values would result in invisible cursor
+
 ## XPF 1.6.4 (2026-05-27)
 
 * Avalonia version updated from 11.3.14 to 11.3.16
