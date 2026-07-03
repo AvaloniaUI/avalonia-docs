@@ -1,15 +1,29 @@
 ---
 id: custom-itemspanel
 title: Custom ItemsPanel
-description: Replace the default items panel in an ItemsControl with a custom panel like Canvas.
+description: Replace the default items panel in an ItemsControl with a custom panel to achieve unique layouts not provided by the built-in controls.
 doc-type: how-to
 ---
 
-import ItemsControlCanvasScreenshot from '/img/guides/ui-development/custom-controls/itemscontrol-with-canvas.png';
+import ItemsControlCanvasScreenshot from '/img/custom-controls/itemscontrol-with-canvas.png';
 
-Every `ItemsControl` uses an items panel to arrange its child elements. By default, most controls use a `StackPanel` or `VirtualizingStackPanel` for simple vertical or horizontal lists. You can override this panel to achieve layouts that the built-in defaults do not support.
+Some controls, such as `ItemsControl`, use an `ItemsPanel` to arrange child elements. In most cases, the default panel is a `StackPanel` or `VirtualizingStackPanel`. which organize items as simple horizontal or vertical lists.
 
-The following controls all support a custom `ItemsPanel`:
+If you need more complex, non-linear layouts, you can override the default panel and replace it with a custom panel.
+
+## Example use cases
+
+- Use a [`Canvas`](/controls/layout/panels/canvas) for absolute positioning. Place items at specific coordinates.
+- Use a [`WrapPanel`](/controls/layout/panels/wrappanel) for wrapping layouts. Flow items across rows or columns.
+- For complex, fully custom layouts, use a [custom panel](/docs/custom-controls/custom-panel) with your own `ArrangeOverride` logic.
+
+:::warning[Performance]
+If you replace the default panel with a non-virtualizing panel such as `Canvas` or `WrapPanel`, the control creates a UI element for every item in the collection. For large collections (hundreds or thousands of items), this can significantly increase memory usage and degrade rendering performance. If you need a custom layout with large datasets, consider building a custom panel that extends `VirtualizingPanel` to retain virtualization.
+:::
+
+## Compatibility
+
+The following controls support a custom `ItemsPanel`:
 
 - [`ItemsControl`](/controls/data-display/collections/itemscontrol)
 - [`TreeView`](/controls/data-display/structured-data/treeview)
@@ -18,51 +32,32 @@ The following controls all support a custom `ItemsPanel`:
 - [`ComboBox`](/controls/input/selectors/combobox)
 - [`ListBox`](/controls/data-display/collections/listbox)
 
-## Why replace the default panel
+## Creating a custom `ItemsControl` with a `Canvas` panel
 
-The default panel works well for linear lists, but there are scenarios where you need a different arrangement:
+This example creates a display of rectangular tiles. The tiles are defined as an `ObservableCollection` in the view model, then bound to an `ItemsControl` in XAML. The `ItemsPanel` is a `Canvas` that uses a style to position the tiles within the canvas.
 
-- **Absolute positioning**: Use a [`Canvas`](/api/avalonia/controls/canvas) to place items at specific coordinates.
-- **Wrapping layouts**: Use a `WrapPanel` to flow items across rows or columns.
-- **Custom arrangements**: Use a [custom panel](/docs/custom-controls/custom-panel) with your own `ArrangeOverride` logic for radial layouts, dashboards, or other non-linear designs.
+<Image light={ItemsControlCanvasScreenshot} alt="ItemsControl with a Canvas panel displaying positioned rectangles" position="center" maxWidth={200} cornerRadius="true"/>
+<br />
 
-:::warning[Performance consideration]
-When you replace the default panel with a non-virtualizing panel such as `Canvas` or `WrapPanel`, the control creates a UI element for every item in the collection. For large collections (hundreds or thousands of items), this can significantly increase memory usage and degrade rendering performance. If you need custom layout with large data sets, consider building a custom panel that extends `VirtualizingPanel` to retain virtualization support.
-:::
+1. In your view model file, add a class for the tiles.
 
-## Example
+    ```csharp title="MainWindowViewModel.cs"
+    namespace MyApp.ViewModels;
 
-This example binds an `ObservableCollection` of rectangles to an `ItemsControl`. The `ItemsControl.ItemsPanel` is set to a `Canvas`, and a style positions each rectangle within the canvas using attached properties.
+    public record Tile (int Size, int TopX, int TopY);
+    ```
 
-```xml title="AXAML"
-<ItemsControl ItemsSource="{Binding TileList}">
-  <ItemsControl.ItemsPanel>
-    <ItemsPanelTemplate>
-      <Canvas Width="50" Height="50" Background="Yellow" Margin="3"/>
-    </ItemsPanelTemplate>
-  </ItemsControl.ItemsPanel>
-  <ItemsControl.ItemTemplate>
-    <DataTemplate>
-      <Rectangle Fill="Green" Height="{Binding Size}" Width="{Binding Size}"/>
-    </DataTemplate>
-  </ItemsControl.ItemTemplate>
-  <ItemsControl.Styles>
-    <Style Selector="ContentPresenter"  x:DataType="vm:Tile">
-      <Setter Property="Canvas.Left" Value="{Binding TopX}"/>
-      <Setter Property="Canvas.Top" Value="{Binding TopY}"/>
-    </Style>
-  </ItemsControl.Styles>
-</ItemsControl>
-```
+2. In your view model file, define an observable collection containing some tiles.
 
-```csharp title='C# View Model'
-using AvaloniaControls.Models;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
+    ```csharp title="MainWindowViewModel.cs"
+    using System.Collections.Generic;
+    using System.Collections.ObjectModel;
 
-namespace AvaloniaControls.ViewModels
-{
-    public class MainWindowViewModel
+    namespace MyApp.ViewModels;
+
+    public record Tile (int Size, int TopX, int TopY);
+
+    public partial class MainWindowViewModel : ViewModelBase
     {
         public ObservableCollection<Tile> TileList { get; set; }
         
@@ -76,14 +71,44 @@ namespace AvaloniaControls.ViewModels
             });    
         }
     }
-}
-```
+    ```
 
-```csharp title='C# Item Class'
-public record Tile(int Size, int TopX, int TopY);
-```
+3. In your XAML, add the `ItemsControl` and bind it to the observable collection of tiles.
 
-<Image light={ItemsControlCanvasScreenshot} alt="ItemsControl with a Canvas panel displaying positioned rectangles" position="center" maxWidth={400} cornerRadius="true"/>
+    ```xml title="MainWindow.axaml"
+    <ItemsControl ItemsSource="{Binding TileList}">
+    </ItemsControl>
+    ```
+  
+4. In your XAML, add an `ItemsPanel` inside the `ItemsControl` tags. Use `ItemsPanelTemplate` to override the default panel. Then, add the `Canvas` and give it the appropriate data bindings and styling.
+
+    ```xml title="MainWindow.axaml"
+    <ItemsControl ItemsSource="{Binding TileList}">
+            <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                            <Canvas Width="50" Height="50"
+                                    Background="Yellow"
+                                    Margin="3"/>
+                    </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+            <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                            <Rectangle Fill="Green"
+                                       Height="{Binding Size}"
+                                       Width="{Binding Size}"/>
+                    </DataTemplate>
+            </ItemsControl.ItemTemplate>
+            <ItemsControl.Styles>
+                    <Style Selector="ContentPresenter"
+                           x:DataType="vm:Tile">
+                            <Setter Property="Canvas.Left"
+                                    Value="{Binding TopX}"/>
+                            <Setter Property="Canvas.Top"
+                                    Value="{Binding TopY}"/>
+                    </Style>
+            </ItemsControl.Styles>
+    </ItemsControl>
+    ```
 
 ## See also
 

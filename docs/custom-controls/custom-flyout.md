@@ -11,7 +11,7 @@ This example demonstrates how to create a custom `Flyout` control deriving from 
 
 <Image light={CustomFlyoutDemo} alt="A minimal app in which a button labeled 'Show image' is clicked and displays a simple bitmap image." position="center" maxWidth={400} cornerRadius="true"/>
 
-## Creating the custom `Flyout` class
+## Creating a custom `Flyout` class
 
 1. Add a new C# class to your project deriving from [`PopupFlyoutBase`](/api/avalonia/controls/primitives/popupflyoutbase).
 2. Override the abstract method `CreatePresenter()`. This allows you to replace the default presenter with whatever control you wish to use to display the content of your custom `Flyout`. For this example, the standard `FlyoutPresenter` is used.
