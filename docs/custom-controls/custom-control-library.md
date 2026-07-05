@@ -12,7 +12,7 @@ import InstallAvaloniaInClassLibraryRider from '/img/guides/ui-development/custo
 import CustomControlSolution from '/img/guides/ui-development/custom-controls/custom-control-solution.png';
 import CustomControlPreview from '/img/guides/ui-development/custom-controls/custom-control-preview.png';
 
-This guide shows you how to create a custom control library and reference it for use in an _Avalonia UI_ app.
+This guide shows you how to create a custom control library and reference it for use in an Avalonia app.
 
 ## Creating a custom control library
 
