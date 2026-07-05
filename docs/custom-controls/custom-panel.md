@@ -1,25 +1,47 @@
 ---
 id: custom-panel
-title: Creating a custom panel
+title: Custom Panels
 description: Implement a custom layout panel by overriding MeasureOverride and ArrangeOverride.
 doc-type: how-to
 ---
 
-A custom panel lets you control exactly how child elements are measured and arranged. By subclassing `Panel` and overriding its layout methods, you can create layouts that go beyond what the built-in panels provide.
+If you need complex or unique layouts beyond what the [built-in panels](/controls) provide, you can create your own custom panel. A custom panel lets you control exactly how child elements are measured and arranged. This is done by subclassing `Panel` and overriding its layout methods.
 
-## Layout process
+## Layout process: Recap
 
-Avalonia uses a two-pass layout system. Every panel must participate in both passes:
+Avalonia uses a two-pass layout system:
 
 1. **Measure pass (`MeasureOverride`):** The panel receives an available size and determines how much space it needs. You must call `child.Measure()` on every child during this pass. Each child then sets its `DesiredSize` property, which you can use to calculate the panel's own desired size.
 
 2. **Arrange pass (`ArrangeOverride`):** The panel receives its final allocated size and positions each child within that space. You must call `child.Arrange()` on every child, passing a `Rect` that defines the child's position and size.
 
-## Basic example
+Every panel must participate in both passes.
 
-This simple `PlotPanel` positions all child elements at a hard-coded offset of (50, 50).
+For more information on Avalonia's layout system, see [The layout system](/docs/layout/#the-layout-system).
+
+## Creating a custom `PlotPanel` with a fixed offset
+
+This simple example highlights how to override `MeasureOverride` and `ArrangeOverride` when creating a custom panel. The custom `PlotPanel` positions child elements at a hard-coded offset of (50, 50).
+
+<XamlPreview>
+
+```xml
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:local="using:MyApp">
+        
+        <local:PlotPanel Background="Gray" Margin="10">
+                <TextBlock Background="Blue" Text="Hello world!" />
+        </local:PlotPanel>
+        
+</UserControl>
+```
 
 ```csharp
+using Avalonia;
+using Avalonia.Controls;
+
+namespace MyApp;
+
 public class PlotPanel : Panel
 {
     // Override the default Measure method of Panel
@@ -53,11 +75,36 @@ public class PlotPanel : Panel
 }
 ```
 
-## Practical example: radial panel
+</XamlPreview>
 
-A more useful custom panel arranges its children evenly around a circle. Each child is placed at an equal angular offset from the others.
+## Creating a custom `RadialPanel`
+
+This is a more advanced example of a custom radial panel that arranges child elements evenly around a circle. Each child is placed at an equal angular offset from the others.
+
+<XamlPreview>
+
+```xml
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:local="using:MyApp">
+
+    <local:RadialPanel Width="300" Height="300">
+        <Button Content="1" />
+        <Button Content="2" />
+        <Button Content="3" />
+        <Button Content="4" />
+        <Button Content="5" />
+    </local:RadialPanel>
+
+</UserControl>
+```
 
 ```csharp
+using System;
+using Avalonia;
+using Avalonia.Controls;
+
+namespace MyApp;
+
 public class RadialPanel : Panel
 {
     protected override Size MeasureOverride(Size availableSize)
@@ -77,7 +124,7 @@ public class RadialPanel : Panel
 
         for (int i = 0; i < Children.Count; i++)
         {
-            double angle = 2 * Math.PI * i / Children.Count - Math.PI / 2;
+            double angle = 2 * 3.14159 * i / Children.Count - 3.14159 / 2;
             double x = centerX + radius * Math.Cos(angle) - Children[i].DesiredSize.Width / 2;
             double y = centerY + radius * Math.Sin(angle) - Children[i].DesiredSize.Height / 2;
             Children[i].Arrange(new Rect(new Point(x, y), Children[i].DesiredSize));
@@ -87,21 +134,13 @@ public class RadialPanel : Panel
 }
 ```
 
-You can then use it in XAML like any other panel:
-
-```xml
-<local:RadialPanel Width="300" Height="300">
-    <Button Content="1" />
-    <Button Content="2" />
-    <Button Content="3" />
-    <Button Content="4" />
-    <Button Content="5" />
-</local:RadialPanel>
-```
+</XamlPreview>
 
 ## Using attached properties
 
-Panels often need per-child configuration. Attached properties let each child element carry data that the parent panel reads during layout. For example, you could add a `Slot` property to `RadialPanel` so that children can specify their position in the circle:
+Attached properties let child elements carry data that the parent panel reads during layout, allowing custom panels to support per-child configurations.
+
+For example, you can add a `Slot` property to `RadialPanel`, so that children can specify their position in the circle.
 
 ```csharp
 public static readonly AttachedProperty<int> SlotProperty =
@@ -113,13 +152,13 @@ public static void SetSlot(Control element, int value) => element.SetValue(SlotP
 
 The panel can then read `GetSlot(child)` inside `ArrangeOverride` to determine where each child should be placed.
 
-For a full guide on defining attached properties, see [Attached Properties](/docs/custom-controls/attached-properties).
+For further guidance on defining attached properties, see [Attached Properties](/docs/custom-controls/defining-properties#attached-properties).
 
 ## Tips
 
 - Always call `Measure` on every child in `MeasureOverride`. Children that are not measured will not render correctly.
 - Always call `Arrange` on every child in `ArrangeOverride`. Children that are not arranged will not appear.
-- Use `AffectsMeasure` or `AffectsArrange` when registering styled properties that influence layout. This ensures the panel re-layouts when those properties change.
+- Use `AffectsMeasure` or `AffectsArrange` when registering styled properties that influence layout. This ensures the panel adjusts its layout when those properties change.
 - Return the size your panel actually needs from `MeasureOverride`. Returning a size larger than necessary wastes space, while returning a size that is too small may clip children.
 
 ## See also
