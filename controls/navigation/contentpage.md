@@ -14,7 +14,7 @@ import ContentPageAsTabScreenshot from '/img/controls/contentpage/contentpage-as
 
 [`ContentPage`](/api/avalonia/controls/contentpage) is the foundational building block for screen-based UI in Avalonia. It represents a single page of content and provides built-in support for headers, icons, safe area padding, and command bars. Every screen the user sees is typically a `ContentPage` (or a subclass of one).
 
-`ContentPage` is most commonly used as a child of [`NavigationPage`](navigationpage), [`TabbedPage`](tabbedpage), or [`DrawerPage`](drawerpage), but it can also be placed directly inside a [`Window`](/api/avalonia/controls/window) for single-page apps.
+`ContentPage` is most commonly used as a child of [`NavigationPage`](/controls/navigation/navigationpage), [`TabbedPage`](/controls/navigation/tabbedpage), or [`DrawerPage`](/controls/navigation/drawerpage), but it can also be placed directly inside a [`Window`](/api/avalonia/controls/window) for single-page apps.
 
 ## How the header displays
 
