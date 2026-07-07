@@ -1,7 +1,6 @@
 ---
 id: index
-title: Hot reload for Avalonia
-sidebar_label: Getting started
+title: Hot reload
 description: Add the AvaloniaUI.DiagnosticsSupport.HotReload package to apply live XAML and C# edits to a running Avalonia app.
 doc-type: how-to
 tags:
@@ -14,16 +13,16 @@ tags:
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Hot reload applies edits to your `.axaml` and `.cs` files to a running Avalonia application without restarting it. The `AvaloniaUI.DiagnosticsSupport.HotReload` package plugs into the .NET Hot Reload pipeline: when you save a file, matching controls, styles, resources, and data templates are rebuilt in place.
+Hot reload applies edits to `.axaml` and `.cs` files in a running Avalonia application without restarting it. The `AvaloniaUI.DiagnosticsSupport.HotReload` package plugs into the .NET Hot Reload pipeline: when you save a file, matching controls, styles, resources and data templates are rebuilt in place.
 
 ## What hot reload updates
 
-When your application runs under .NET Hot Reload, the package applies these edits live:
+With the hot reload package, these edits are applied live to your running application:
 
 | Change | Behavior |
 | --- | --- |
-| Controls (files with `x:Class`) | Existing instances in the visual tree are rebuilt in place, keeping their position where possible. |
-| Styles | Application-level and control-level styles are re-applied, so selector and setter changes take effect at once. |
+| Controls (files with `x:Class`) | Existing instances in the visual tree are rebuilt in place, keeping their positions where possible. |
+| Styles | Application-level and control-level styles are reapplied. Selector and setter changes take effect at once. |
 | Resource dictionaries | Merged dictionaries are reloaded and dependents are refreshed. |
 | Data templates | Templates are regenerated and controls bound to them are refreshed. |
 | `{StaticResource}` references | Rewritten to `{DynamicResource}` during hot reload, so resource edits propagate without a restart. |
@@ -33,59 +32,28 @@ When your application runs under .NET Hot Reload, the package applies these edit
 Before you begin, make sure you have:
 
 1. **Avalonia 12.0 or newer.**
-2. **A valid Avalonia license key** that lists `AvaloniaUI.DiagnosticsSupport.HotReload` among its products. You can get a key from the [Avalonia customer portal](https://portal.avaloniaui.net/). The same key can cover other licensed AvaloniaUI libraries, such as Charts or TreeDataGrid.
+2. **A valid Avalonia license key** that includes access to `AvaloniaUI.DiagnosticsSupport.HotReload`. You can get a key from the [Avalonia customer portal](https://portal.avaloniaui.net/). The same key may cover other licensed Avalonia packages, such as `Charts` or `TreeDataGrid`.
 3. **A hot reload driver.** Either the `dotnet watch` command or an IDE that supports .NET Hot Reload (such as Visual Studio). See [Step 3](#step-3-run-with-hot-reload).
 
-## Step 1: Add the package
+## Getting started
 
-Add the package to your Avalonia application project with the .NET CLI:
+1. Install the `AvaloniaUI.DiagnosticsSupport.HotReload` NuGet package by running `dotnet add package`.
 
-```bash
-dotnet add package AvaloniaUI.DiagnosticsSupport.HotReload
-```
 
-The CLI adds an unconditional reference. To keep hot reload out of release builds, open the project and wrap the generated `<PackageReference>` in a `Debug` condition so it never ships:
+2. To keep hot reload out of release builds, go to your `.csproj` file and wrap the `<PackageReference>` for the hot reload package in a `Debug` condition. This ensures it never ships.
 
-```xml
-<ItemGroup Condition="'$(Configuration)' == 'Debug'">
-  <PackageReference Include="AvaloniaUI.DiagnosticsSupport.HotReload" Version="..." />
-</ItemGroup>
-```
 
-:::tip
-In a multi-project app (for example, a shared UI library with `.Desktop`, `.Android`, and `.iOS` heads), add the reference to the shared project so every head inherits it.
-:::
+3. Include your Avalonia license key in the executable project file (`.csproj`). Your license key is available from the [Avalonia portal](https://portal.avaloniaui.net).
 
-No startup code is required. The package registers itself through a source-generated module initializer and activates once your `Application` instance is available.
 
-## Step 2: Add your license key
+## Running with hot reload
 
-The package validates its license at runtime against the build timestamp embedded in your application. The key must be present at build time, or hot reload throws `AvaloniaLicensingException` the first time it activates.
-
-Declare the key in your application's `.csproj`:
-
-```xml
-<ItemGroup>
-  <AvaloniaUILicenseKey Include="$(AvaloniaUILicenseKey)" />
-</ItemGroup>
-```
-
-Then supply the key value as an MSBuild property, an environment variable, or through your CI secret store:
-
-```xml
-<PropertyGroup>
-  <AvaloniaUILicenseKey>your-license-key</AvaloniaUILicenseKey>
-</PropertyGroup>
-```
-
-## Step 3: Run with hot reload
-
-Start your application through a tool that drives .NET Hot Reload.
+Start your application through a tool that supports .NET Hot Reload.
 
 <Tabs>
 <TabItem value="watch" label="dotnet watch" default>
 
-Run `dotnet watch` on the platform head project. It rebuilds and applies changes as you save:
+Run `dotnet watch` on the platform head project. It rebuilds and applies changes when you save.
 
 ```bash
 dotnet watch --project YourApp.Desktop
@@ -94,36 +62,40 @@ dotnet watch --project YourApp.Desktop
 This is the most reliable driver and works the same across every editor and platform.
 
 :::note
-On the mobile platforms, `dotnet watch` requires .NET 11 or newer.
+On mobile platforms, `dotnet watch` requires .NET 11 or newer.
 :::
 
 </TabItem>
 <TabItem value="vs" label="Visual Studio">
 
-Start the app with the debugger (<kbd>F5</kbd>). After each edit, use **Apply Code Changes** (the hot reload button) on the toolbar, or turn on **Hot Reload on File Save** from the button's dropdown so changes apply automatically when you save.
+Start the app with the debugger (<kbd>F5</kbd>). After each edit, use **Apply Code Changes** (the hot reload button) on the toolbar, or turn on **Hot Reload on File Save** from the button's dropdown menu.
 
 </TabItem>
 <TabItem value="vscode" label="VS Code">
 
-Install the [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension, which brings .NET Hot Reload to VS Code. You can either:
+Install the [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension, which brings .NET Hot Reload to VS Code.
+
+Then, you can either:
 
 - Run the app with `dotnet watch` from the integrated terminal, or
-- Start a debug session (<kbd>F5</kbd>) and rely on Hot Reload when you save a file.
+- Start a debug session (<kbd>F5</kbd>) with hot reload applying when you save a file.
 
 </TabItem>
 <TabItem value="rider" label="Rider">
 
-JetBrains Rider's hot reload does not drive the .NET metadata updates that XAML reloading depends on. Use one of these instead:
+Although JetBrains Rider has a hot reload feature, it does not drive .NET metadata updates. Instead, you can either:
 
 - Run the app with `dotnet watch` from Rider's terminal, or
-- Enable the [file-system watcher](#enable-the-file-system-watcher) below and start the app normally.
+- Enable the [file-system watcher](#enabling-the-file-system-watcher) and start the app normally.
 
 </TabItem>
 </Tabs>
 
-### Enable the file-system watcher
+### Enabling the file-system watcher
 
-When the .NET Hot Reload agent is not attached, for example under Rider or when you run the app outside `dotnet watch`, the package can still pick up `.axaml` edits with a built-in file-system watcher. Enable it with an MSBuild property in your `.csproj`:
+Avalonia hot reload can still pick up `.axaml` edits with a built-in file-system watcher, even if .NET Hot Reload is not attached. This can occur if you run the app outside `dotnet watch`, or if you are using Rider.
+
+To enable the file-system watcher, add an MSBuild property in your `.csproj`:
 
 ```xml
 <PropertyGroup>
@@ -131,17 +103,23 @@ When the .NET Hot Reload agent is not attached, for example under Rider or when 
 </PropertyGroup>
 ```
 
-The watcher reloads `.axaml` files on save even without the .NET Hot Reload agent. C# hot reload still requires the agent, so pair the watcher with `dotnet watch` if you also want live code-behind edits.
+:::tip
+The file-system watcher can hot-reload `.axaml` files without .NET Hot Reload, but not `.cs` files. If you need hot reload for your C# code-behind, pair the watcher with `dotnet watch`.
+:::
 
-## Step 4: Edit a file and verify
+Verifying hot reload
 
 With the app running:
 
-1. Open an `.axaml` file, change a property (for example, a `Background` color or a piece of text), and save.
-2. Watch the running window update without losing its current view.
-3. Open the matching `.axaml.cs` file, adjust an event handler, and save. C# changes apply under the standard .NET Hot Reload rules.
+1. Open an `.axaml` file. Change a property, for example, a `Background` color or some text. Save the file.
+2. Watch the running window. It should update without losing its current view.
+3. Open the matching `.axaml.cs` file. Adjust an event handler. Save the file.
+4. Trigger the event.
+5. In the running window, confirm that the adjusted event reflects your edit. Diagnostic output is written to the trace log under the `HotReload` category.
 
-If the window reflects your edit, hot reload is working. Diagnostic output is written to the trace log under the `HotReload` category, which is useful when a change does not appear.
+:::info
+C# changes follow the standard .NET Hot Reload rules.
+:::
 
 ## What you can edit live
 
@@ -153,9 +131,9 @@ Once the app is running, these are common edits that apply without a restart:
 - **Styles.** Edit a selector or setter in an application-level or control-level style, and the new styling is re-applied at once.
 - **Code-behind.** Change an event handler or method body in an `.axaml.cs` file. C# edits apply under the standard .NET Hot Reload rules.
 
-## Advanced: initialize manually
+## Initializing manually
 
-Auto-setup covers almost every application. For a custom lifecycle, multiple `Application` instances, or deferred startup, call the initializer yourself:
+The auto-setup method described above covers most usages of hot reload. If you need a custom lifecycle, multiple `Application` instances, or deferred startup, you can instead call the initializer manually:
 
 ```csharp
 using AvaloniaUI.DiagnosticsSupport.HotReload;
@@ -166,13 +144,13 @@ HotReloadExtensions.InitializeHotReload(
     rewriteStaticResources: true);
 ```
 
-The engine initializes once per process, so later calls have no effect. To surface hot reload activity in your own logging, subscribe to `HotReloadDiagnostics.EntryLogged`.
+The engine initializes once per process, so later calls have no effect. To surface hot reload activity in your logging, subscribe to `HotReloadDiagnostics.EntryLogged`.
 
 ## Limitations
 
-- WebAssembly is not supported. Hot reload works on the desktop and mobile platforms only.
+- WebAssembly is not supported. Hot reload works on desktop and mobile platforms only.
 - C# edits follow the normal .NET Hot Reload rules. Adding fields or changing method signatures counts as a rude edit and needs a restart.
-- Control instances are rebuilt rather than mutated, so non-XAML state on a reloaded control is reset.
+- Controls are rebuilt rather than mutated, so non-XAML states are reset when a control reloads.
 
 ## See also
 

@@ -53,14 +53,7 @@ const sidebars: SidebarsConfig = {
         },
       ],
     },
-    {
-      type: 'category',
-      label: 'Hot Reload',
-      collapsed: true,
-      items: [
-        'hot-reload/index',
-      ],
-    },
+    'hot-reload/index',
     {
       type: 'category',
       label: 'Parcel',
