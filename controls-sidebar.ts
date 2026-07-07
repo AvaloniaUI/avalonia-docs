@@ -30,6 +30,7 @@ const sidebars: SidebarsConfig = {
           label: 'Structured data',
           collapsed: true,
           items:[
+              'data-display/structured-data/tableview',
               'data-display/structured-data/datagrid',
               {
                 type: 'category',
