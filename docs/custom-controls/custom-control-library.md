@@ -1,6 +1,8 @@
 ---
 id: custom-control-library
-title: How to Create and Reference a Custom Control Library
+title: Custom control library
+description: How to create a standalone class library project containing multiple custom controls, then reference it to use those custom controls in another Avalonia project.
+doc-type: how-to
 ---
 
 import Tabs from '@theme/Tabs';
@@ -20,11 +22,11 @@ This guide shows you how to create a custom control library and reference it for
 
 To start, you need a **class library** project in which to collect your custom control files.
 
-<Tabs>  
+<Tabs groupId="ide">  
   <TabItem value="rider" label="Rider">
     1. Go to **File → New Solution**. Alternatively, **Add → New Project** to add the class library as a new project within an existing solution.
     2. In the left panel, under the section "Project Type", select **Class Library**.
-    3. Name the project, e.g. "CCLibrary".
+    3. Name the project, e.g., "CCLibrary".
     4. For "Target framework", select the preferred .NET version.
     5. Click **Create**.
 
@@ -33,7 +35,7 @@ To start, you need a **class library** project in which to collect your custom c
   <TabItem value="vs" label="Visual Studio">
     1. Go to **File → New → Project/Solution**.
     2. Select **.NET Class Library** as the project template. Use the search bar to locate this template if it does not appear on the suggested list.
-    3. Name the project, e.g. "CCLibrary".
+    3. Name the project, e.g., "CCLibrary".
     4. For "Target framework", select the preferred .NET version.
     5. Click **Create**.
 
@@ -45,7 +47,7 @@ To start, you need a **class library** project in which to collect your custom c
 
 Next, you must install the Avalonia NuGet package in the class library.
 
-<Tabs>  
+<Tabs groupId="ide">  
   <TabItem value="rider" label="Rider">
     1. In the solution panel, select your class library project.
     2. Click **Tools → NuGet → Manage NuGet Packages**.
@@ -72,7 +74,7 @@ Next, you must install the Avalonia NuGet package in the class library.
 
 Now that your class library is set up, you can start adding custom controls to it.
 
-In this example, we'll create a simple custom control named `MyCustomControl`, a blank box that can be filled with a colour of your choice.
+This examples creates a simple custom control named `MyCustomControl`, a blank box that can be filled with a color of your choice.
 
 1. In the class library project, create a new `.cs` file.
 2. Create the custom control as shown below.
@@ -128,10 +130,10 @@ In this example, we have created a new project using the Avalonia MVVM template 
 
 ### Add a project reference
 
-1. Open the .csproj file of your Avalonia project.
-2. Within the `<Project>...</Project>` tags, add a `ProjectReference` tag pointing to the directory path of the .csproj file of the class library project.
+1. Open the `.csproj` file of your executable project. (`AvaloniaCCLib`, in this example.)
+2. Within the `<Project>...</Project>` tags, add a `ProjectReference` pointing to the directory path of the `.csproj` file of the class library project.
 
-```xml
+```xml title="AvaloniaCCLib.csproj"
 <ItemGroup>
   <ProjectReference Include="..\MyControlsLibrary\CCLibrary.csproj" />
 </ItemGroup>
@@ -139,7 +141,7 @@ In this example, we have created a new project using the Avalonia MVVM template 
 
 ### Add XML namespace declaration
 
-You can now make a namespace declaration in .axaml files of your Avalonia project to access your custom controls in XAML.
+You can now make a namespace declaration in `.axaml` files of your Avalonia project to access your custom controls in XAML.
 
 1. Add a line similar to this one to the opening `<Window>` tag: `xmlns:cc="using:CCLibrary"`. (Remember to change the name of the class library project if you used a different one.)
 
@@ -148,6 +150,7 @@ You can now make a namespace declaration in .axaml files of your Avalonia projec
 ```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        // highlight-next-line
         xmlns:cc="using:CCLibrary"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
@@ -160,6 +163,7 @@ You can now make a namespace declaration in .axaml files of your Avalonia projec
     </Style>
   </Window.Styles>
 
+  //highlight-next-line
   <cc:MyCustomControl Height="200" Width="300"/>
 
 </Window>
@@ -170,25 +174,25 @@ You can now make a namespace declaration in .axaml files of your Avalonia projec
 
 <Image light={CustomControlPreview} alt="A screenshot of an IDE, displaying XAML code in one window and a preview of a user interface in another." position="center" maxWidth={400} cornerRadius="true"/>
 
-## XML Namespace Definitions
+## XML namespace definitions
 
-When referencing a control library in a .axaml file, you can use the URL identification format. For example:
+When referencing a control library in a `.axaml` file, you can use the URL identification format. For example:
 
 ```xml
 xmlns:cc="https://my.controls.url"
 ```
 
-This is possible because of the presence of XML namespace definitions in a control library. These map URLs to the code namespaces, and are in the project's `Properties/AssemblyInfo.cs` file. (See this [source code](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Properties/AssemblyInfo.cs) for an example.)
+This is possible because control libraries contain XML namespace definitions. These map URLs to the code namespaces, and are in the project's `Properties/AssemblyInfo.cs` file. (See [our source code](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Properties/AssemblyInfo.cs) for an example.)
 
-```csharp
+```csharp title="AssemblyInfo.cs"
 [assembly: XmlnsDefinition("https://github.com/avaloniaui", "Avalonia")]
 ```
 
-### Common Namespace Definitions
+### Shared namespace definitions
 
-You can make one URL map several namespaces in your control library. To do this, simply add multiple XML namespace definitions that use the same URL, but which map to different code namespaces.
+One URL can map to multiple namespaces in your control library. In your project's `Properties/AssemblyInfo.cs` file, you can add multiple XML namespace definitions that use the same URL but map to different namespaces.
 
-```cs
+```csharp title="AssemblyInfo.cs"
 using Avalonia.Metadata;
 
 [assembly: XmlnsDefinition("https://my.controls.url", "My.NameSpace")]
