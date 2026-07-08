@@ -6,7 +6,7 @@ description: Understand how to use lifecycle events of the logical and visual tr
 doc-type: explanation
 ---
 
-## Control trees: Recap
+## Control trees: Summary
 
 Avalonia organizes controls into two parallel tree structures: the **logical tree** and the **visual tree**. The logical tree represents the hierarchy of the application's controls, whereas the visual tree represents all visual elements that are being rendered.
 

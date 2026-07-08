@@ -6,7 +6,7 @@ description: Define and raise routed events on custom Avalonia controls.
 doc-type: how-to
 ---
 
-## Routed events: Recap
+## Routed events: Summary
 
 Avalonia uses a routed event system, where events travel through the control tree and allow multiple controls to respond to the same event. There are a number of routing strategies, most notably tunneling (where the event travels down the control tree from the root) and bubbling (where the event travels up the control tree from the source).
 

@@ -7,7 +7,7 @@ doc-type: how-to
 
 If you need complex or unique layouts beyond what the [built-in panels](/controls) provide, you can create your own custom panel. A custom panel lets you control exactly how child elements are measured and arranged. This is done by subclassing `Panel` and overriding its layout methods.
 
-## Layout process: Recap
+## Layout process: Summary
 
 Avalonia uses a two-pass layout system:
 
