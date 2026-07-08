@@ -149,10 +149,11 @@ The engine initializes once per process, so later calls have no effect. To surfa
 ## Limitations
 
 - WebAssembly is not supported. Hot reload works on desktop and mobile platforms only.
-- C# edits follow the normal .NET Hot Reload rules. Adding fields or changing method signatures counts as a rude edit and needs a restart.
+- C# edits follow the normal [.NET Hot Reload rules](https://learn.microsoft.com/en-us/visualstudio/debugger/hot-reload). Adding fields or changing method signatures counts as a rude edit and needs a restart.
 - Controls are rebuilt rather than mutated, so non-XAML states are reset when a control reloads.
 
 ## See also
 
 - [Installing the Avalonia Plus developer tools](/tools/developer-tools/installation)
 - [Data templates](/docs/data-templates/introduction-to-data-templates)
+- [Write and debug running code with Hot Reload in Visual Studio (C#, Visual Basic, C++)](https://learn.microsoft.com/en-us/visualstudio/debugger/hot-reload)
