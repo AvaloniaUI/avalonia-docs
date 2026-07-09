@@ -29,7 +29,7 @@ This type of control is best for reusable "views" or "pages" that are specific t
 To create a custom user control:
 
 1. **Define the XAML.** Create a new `UserControl` XAML file. Decide the layout and appearance of the custom control by placing existing controls, setting properties and applying styles.
-2. **Add code-behind.** Optionally, define code-behind logic to handle events or modify the behavior of controls.
+2. **Add code-behind.** Optionally, define code-behind logic to handle events, modify behavior, or give the control [styled properties](/docs/custom-controls/defining-properties#registering-a-styled-property).
 
 [A sample of a custom `UserControl` is available to clone on GitHub.](https://github.com/AvaloniaUI/AvaloniaUI.QuickGuides/tree/main/CustomControl)
 
@@ -51,7 +51,7 @@ To create a custom templated control:
 
 ### Basic controls
 
-Basic controls are foundational UI elements that draw themselves through the `Visual.Render` method. You can create a custom-drawn basic control by overriding `Render`, then applying the  `DrawingContext` API to specify the control's exact appearance. Some examples of basic controls from [Avalonia's built-in controls](/controls) are `TextBlock` and `Image`.
+Basic controls are foundational UI elements that draw themselves using geometry and overriding the `Visual.Render` method. You can create a custom-drawn basic control by overriding `Render`, then applying the  `DrawingContext` API to specify the control's exact appearance. Some examples of basic controls from [Avalonia's built-in controls](/controls) are `TextBlock` and `Image`.
 
 This approach gives you fine-grained control over every aspect of the control's visual representation. Use custom basic controls for mostly non-interactive graphical elements that do not need to be themed.
 
