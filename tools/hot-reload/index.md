@@ -121,15 +121,6 @@ With the app running:
 C# changes follow the standard .NET Hot Reload rules.
 :::
 
-## What you can edit live
-
-Once the app is running, these are common edits that apply without a restart:
-
-- **Resource brushes and values.** Change a color, brush, or font size in a resource dictionary and every control that references it updates. Both `{DynamicResource}` and `{StaticResource}` references pick up the change, because static references are rewritten during hot reload.
-- **Data templates.** Change the icon, colors, spacing, or layout of a [data template](/docs/data-templates/introduction-to-data-templates), and every control that uses it, including list items and content presenters, rebuilds with the new template.
-- **Control markup.** Adjust the layout, add or remove elements, or edit text in a view (a file with `x:Class`). The live instance is rebuilt in place.
-- **Styles.** Edit a selector or setter in an application-level or control-level style, and the new styling is re-applied at once.
-- **Code-behind.** Change an event handler or method body in an `.axaml.cs` file. C# edits apply under the standard .NET Hot Reload rules.
 
 ## Initializing manually
 
