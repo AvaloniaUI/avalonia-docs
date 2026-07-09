@@ -18,11 +18,6 @@ When creating a custom control, you can give it the following types of propertie
 
 A styled property stores its value inside the Avalonia property system, not a backing field. As a result, styled properties can participate in styling, animations and value precedence. Use a styled property when you want to allow users to style or animate the property.
 
-To register a styled property:
-
-1. Add a `static readonly` field using `AvaloniaProperty.Register`.
-2. Provide a CLR getter and setter that call `GetValue` and `SetValue` respectively.
-
 :::info
 For more information on using styles in Avalonia, see the [Styles](/docs/styling/styles) guide.
 :::
@@ -31,17 +26,23 @@ For more information on using styles in Avalonia, see the [Styles](/docs/styling
 
 The static field must follow the pattern `[PropertyName]Property`, e.g., `BackgroundProperty`, `FontWeightProperty`. Avalonia uses this convention to map XAML attributes to properties automatically.
 
+Failure to follow this naming convention may result in "Unable to find suitable setter or adder for property" errors during compilation.
+
 ```csharp
 public static readonly StyledProperty<double> CornerRadiusProperty = ...
 ```
-
-This lets you write the following in XAML:
 
 ```xml
 <local:MyControl CornerRadius="8" />
 ```
 
 ### Registering a styled property
+
+To register a styled property:
+
+1. Add a `static readonly` field of type `StyledProperty<T>`.
+2. Use the method `AvaloniaProperty.Register` to register.
+3. Provide a CLR getter and setter that call `GetValue` and `SetValue` respectively.
 
 The following example registers a `CornerRadius` styled property with a default value of `0.0`:
 
