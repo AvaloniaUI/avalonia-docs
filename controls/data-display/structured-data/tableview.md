@@ -3,12 +3,12 @@ id: tableview
 title: TableView
 ---
 
-The `TableView` displays a collection of items in configurable columns. It is a read-only, tabular control: it presents data but does not provide in-place cell editing.
+The `TableView` displays a collection of items in configurable columns. It is a read-only, tabular control: it presents data, but does not provide in-place editing of cell contents.
 
-`TableView` derives from [`ListBox`](/controls/data-display/collections/listbox), so it reuses the same items source and selection model. Each row is a `TableViewRow`, and each column is defined by a `TableViewColumn`.
+`TableView` derives from [`ListBox`](/controls/data-display/collections/listbox), so it reuses the same `ItemsSource` and `SelectionModel`. Each row is a `TableViewRow`, and each column is a `TableViewColumn`.
 
 :::info
-`TableView` is part of the core **Avalonia.Controls** package, so no additional _NuGet_ package or style include is required. It is available from Avalonia 12.1.
+`TableView` is part of the core **Avalonia.Controls** package. No additional NuGet package or style include is required. It is available from Avalonia 12.1.
 :::
 
 
@@ -75,8 +75,8 @@ There are two ways to determine what a cell displays:
 
 | Property       | Description                                                                                                                                           |
 | -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Binding`      | A binding that retrieves the cell value from the row's data item. Use this for simple property display, e.g. `Binding="{Binding Name}"`.             |
-| `CellTemplate` | A data template used to build the cell content. The whole row data item is passed as the template's data context, so you can bind to any property.   |
+| `Binding`      | Retrieves the cell value from the row's data item through a binding. Intended for simple property displays, e.g., `Binding="{Binding Name}"`.             |
+| `CellTemplate` | Builds the cell content using a data template. The whole row data item is passed as the template's data context, so you can bind to any property.   |
 
 `CellTemplate` takes priority over `Binding`. Use `Binding` for plain text values and `CellTemplate` when you need richer content such as images, buttons, or several properties combined:
 
@@ -104,11 +104,11 @@ There are two ways to determine what a cell displays:
 | `Header`                     | The content displayed in the column header.                                                                                                                  |
 | `HeaderTemplate`             | A data template used to display the header content.                                                                                                          |
 | `HeaderTheme`                | A `ControlTheme` applied to the header. It must target `TableViewColumnHeader`.                                                                              |
-| `Binding`                    | A binding that reads the cell value from the row data item (see above).                                                                                      |
-| `CellTemplate`               | A data template for the cell content, receiving the row data item as its data context (see above).                                                          |
+| `Binding`                    | A binding that reads the cell value from the row data item ([see above](#displaying-cell-values)).                                                                                      |
+| `CellTemplate`               | A data template for the cell content, receiving the row data item as its data context ([see above](#displaying-cell-values)).                                                          |
 | `CellTheme`                  | A `ControlTheme` applied to the cells. It must target `TableViewCell`.                                                                                       |
-| `Width`                      | The column width, expressed as a `GridLength` (see below). The default is `1*`.                                                                              |
-| `CanUserResize`              | Whether this specific column can be resized. When left at its default (`null`), the value falls back to the table's `CanUserResizeColumns`.                  |
+| `Width`                      | The column width, expressed as a `GridLength` ([see below](#column-width)). The default is `1*`.                                                                              |
+| `CanUserResize`              | Whether this specific column can be resized. When left at its default (`null`), the value falls back to the `CanUserResizeColumns` property of the `TableView` ([see above](#useful-properties)).                  |
 | `HorizontalContentAlignment` | The horizontal alignment of the content inside both the header and the cells of the column. The default is `Left`.                                          |
 
 ### Column width
@@ -126,9 +126,9 @@ The `Width` property is a `GridLength`, so a column can be sized in absolute or 
 </TableView.Columns>
 ```
 
-### Column resizing
+### Resizing columns
 
-By default users can resize columns by dragging the separator between two column headers. You can turn this off for the whole table:
+By default, users can resize columns by dragging the separator between two column headers. To turn this off for the whole `TableView`, set `CanUserResizeColumns` to `False`.
 
 ```xml
 <TableView ItemsSource="{Binding Countries}"
@@ -137,7 +137,7 @@ By default users can resize columns by dragging the separator between two column
 </TableView>
 ```
 
-You can also override the behavior for individual columns with `CanUserResize`. When it is left at its default value of `null`, the column follows the table's `CanUserResizeColumns` setting; setting it to `true` or `false` overrides the table for that column:
+You can also override the behavior for individual columns with `CanUserResize`. When it is left at its default value of `null`, the column follows the `CanUserResizeColumns` setting of the overall `TableView`. Changing it to `True` or `False` overrides the setting for that column only:
 
 ```xml
 <TableView.Columns>
@@ -149,13 +149,15 @@ You can also override the behavior for individual columns with `CanUserResize`. 
 </TableView.Columns>
 ```
 
+:::info
 Dragging a resizer switches that column to a pixel width.
+:::
 
 
 ## Virtualization
 
 Similar to `ListBox`, rows are virtualized and recycled by default.  
-Cells are also recycled alongside their owning rows.
+Similar to `ListBox`, rows are virtualized and recycled by default. Cells are also recycled alongside their owning rows.
 
 :::warning
 The `TableView` virtualizes its rows but does **not** virtualize columns. Every column is always realized, so keep the number of columns reasonable.
