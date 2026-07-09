@@ -7,14 +7,14 @@ doc-type: how-to
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import NewClassLibraryVS from '/img/guides/ui-development/custom-controls/new-class-library-vs.png';
-import NewClassLibraryRider from '/img/guides/ui-development/custom-controls/new-class-library-rider.png';
+import NewClassLibraryVS from '/img/custom-controls/new-class-library-vs.png';
+import NewClassLibraryRider from '/img/custom-controls/new-class-library-rider.png';
 import NewClassLibraryVSCode from '/img/custom-controls/new-class-library-vscode.png';
-import InstallAvaloniaInClassLibraryVS from '/img/guides/ui-development/custom-controls/install-avalonia-in-class-library-vs.png';
-import InstallAvaloniaInClassLibraryRider from '/img/guides/ui-development/custom-controls/install-avalonia-in-class-library-rider.png';
+import InstallAvaloniaInClassLibraryVS from '/img/custom-controls/install-avalonia-in-class-library-vs.png';
+import InstallAvaloniaInClassLibraryRider from '/img/custom-controls/install-avalonia-in-class-library-rider.png';
 import InstallAvaloniaInClassLibraryVSCode from '/img/custom-controls/install-avalonia-in-class-library-vscode.png';
-import CustomControlSolution from '/img/guides/ui-development/custom-controls/custom-control-solution.png';
-import CustomControlPreview from '/img/guides/ui-development/custom-controls/custom-control-preview.png';
+import CustomControlSolution from '/img/custom-controls/custom-control-solution.png';
+import CustomControlPreview from '/img/custom-controls/custom-control-preview.png';
 
 This guide shows you how to create a custom control library and reference it for use in an Avalonia app.
 
