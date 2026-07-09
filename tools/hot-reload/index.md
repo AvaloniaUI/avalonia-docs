@@ -26,6 +26,13 @@ With the hot reload package, these edits are applied live to your running applic
 | Resource dictionaries | Merged dictionaries are reloaded and dependents are refreshed. |
 | Data templates | Templates are regenerated and controls bound to them are refreshed. |
 | `{StaticResource}` references | Rewritten to `{DynamicResource}` during hot reload, so resource edits propagate without a restart. |
+Some common uses of hot reload are:
+
+- **Resource brushes and values.** Change a color, brush, or font size in a resource dictionary and every control that references it updates. Both `{DynamicResource}` and `{StaticResource}` references pick up the change, because static references are rewritten during hot reload.
+- **Data templates.** Change the icon, colors, spacing, or layout of a [data template](/docs/data-templates/introduction-to-data-templates), and every control that uses it, including list items and content presenters, rebuilds with the new template.
+- **Control markup.** Adjust the layout, add or remove elements, or edit text in a view (a file with `x:Class`). The live instance is rebuilt in place.
+- **Styles.** Edit a selector or setter in an application-level or control-level style, and the new styling is re-applied at once.
+- **Code-behind.** Change an event handler or method body in an `.axaml.cs` file. C# edits apply under the standard .NET Hot Reload rules.
 
 ## Prerequisites
 
