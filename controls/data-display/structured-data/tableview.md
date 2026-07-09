@@ -3,6 +3,9 @@ id: tableview
 title: TableView
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 The `TableView` displays a collection of items in configurable columns. It is a read-only, tabular control: it presents data, but does not provide in-place editing of cell contents.
 
 `TableView` derives from [`ListBox`](/controls/data-display/collections/listbox), so it reuses the same `ItemsSource` and `SelectionModel`. Each row is a `TableViewRow`, and each column is a `TableViewColumn`.
@@ -16,7 +19,17 @@ The `TableView` displays a collection of items in configurable columns. It is a 
 
 Bind the `ItemsSource` property to a collection in your view model, then declare one `TableViewColumn` per column inside `TableView.Columns`. Use the column's `Binding` property to pick the value shown in each cell:
 
-```xml title='XAML View'
+<Tabs
+  defaultValue="xaml"
+  values={[
+      { label: 'XAML View', value: 'xaml', },
+      { label: 'C# View Model', value: 'viewmodel', },
+      { label: 'C# Item Class', value: 'item', },
+  ]}
+>
+
+<TabItem value="xaml">
+```xml
 <TableView ItemsSource="{Binding Countries}">
   <TableView.Columns>
     <TableViewColumn Header="Name" Binding="{Binding Name}" />
@@ -27,8 +40,10 @@ Bind the `ItemsSource` property to a collection in your view model, then declare
   </TableView.Columns>
 </TableView>
 ```
+</TabItem>
 
-```csharp title='C# View Model'
+<TabItem value="viewmodel">
+```csharp
 using System.Collections.ObjectModel;
 
 public class MainWindowViewModel
@@ -41,10 +56,15 @@ public class MainWindowViewModel
     ];
 }
 ```
+</TabItem>
 
-```csharp title='C# Item Class'
+<TabItem value="item">
+```csharp
 public record Country(string Name, string Region, int Population);
 ```
+</TabItem>
+
+</Tabs>
 
 :::info
 These examples use the MVVM pattern with data binding to an `ObservableCollection`. For more information on the concepts behind data binding, see [Introduction to data binding](/docs/data-binding/introduction-to-data-binding).
