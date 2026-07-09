@@ -29,6 +29,7 @@ Bind the `ItemsSource` property to a collection in your view model, then declare
 >
 
 <TabItem value="xaml">
+
 ```xml
 <TableView ItemsSource="{Binding Countries}">
   <TableView.Columns>
@@ -40,9 +41,11 @@ Bind the `ItemsSource` property to a collection in your view model, then declare
   </TableView.Columns>
 </TableView>
 ```
+
 </TabItem>
 
 <TabItem value="viewmodel">
+
 ```csharp
 using System.Collections.ObjectModel;
 
@@ -56,12 +59,15 @@ public class MainWindowViewModel
     ];
 }
 ```
+
 </TabItem>
 
 <TabItem value="item">
+
 ```csharp
 public record Country(string Name, string Region, int Population);
 ```
+
 </TabItem>
 
 </Tabs>
@@ -176,7 +182,6 @@ Dragging a resizer switches that column to a pixel width.
 
 ## Virtualization
 
-Similar to `ListBox`, rows are virtualized and recycled by default.  
 Similar to `ListBox`, rows are virtualized and recycled by default. Cells are also recycled alongside their owning rows.
 
 :::warning
