@@ -1,0 +1,408 @@
+---
+title: 'ChartTechnicalIndicator'
+hide_title: true
+slug: '/avalonia/controls/charts/charttechnicalindicator'
+uid: 'Avalonia.Controls.Charts.ChartTechnicalIndicator'
+commentId: 'T:Avalonia.Controls.Charts.ChartTechnicalIndicator'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Charts'
+assembly: 'Avalonia.Controls.Charts'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Charts'
+tfms:
+  - 'net9.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ChartTechnicalIndicator Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Charts</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Charts</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Charts</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Represents the base class for all technical indicators.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class ChartTechnicalIndicator
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> ChartTechnicalIndicator
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Derived types:</span> <a href="bollingerbandsindicator">BollingerBandsIndicator</a>, <a href="movingaverageindicatorbase">MovingAverageIndicatorBase</a>
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Compute](#uid-23c13c620f) | Called when the target series data updates to recalculate the indicator values. |
+| [GetLegendItems](#uid-9a55682a7d) | Gets the legend items that represent this indicator. |
+| [Render](#uid-d5b2d33501) | Renders the indicator into the specified plot area. |
+| [Bind (8 overloads)](../../avaloniaobject.mdx#uid-1c60c7bda3) | Binds a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) to an [Avalonia.Data.BindingBase](xref:Avalonia.Data.BindingBase). Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [CheckAccess](../../avaloniaobject.mdx#uid-260ff7a68d) | Returns a value indicating whether the current thread is the UI thread. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [ClearValue (4 overloads)](../../avaloniaobject.mdx#uid-41de208fbe) | Clears a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty)'s local value. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [CoerceValue](../../avaloniaobject.mdx#uid-3bec32f39e) | Coerces the specified [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty). Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [Equals](../../avaloniaobject.mdx#uid-a8a8e94305) | Compares two objects using reference equality. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [GetBaseValue](../../avaloniaobject.mdx#uid-9c615efbba) | Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [GetHashCode](../../avaloniaobject.mdx#uid-7f7db1e7a2) | Gets the hash code for the object. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [GetValue (3 overloads)](../../avaloniaobject.mdx#uid-5142cd4792) | Gets a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [IsAnimating](../../avaloniaobject.mdx#uid-8cbfc7521a) | Checks whether a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) is animating. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [IsSet](../../avaloniaobject.mdx#uid-f8bf0bbdcc) | Checks whether a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) is set on this object. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [SetCurrentValue (2 overloads)](../../avaloniaobject.mdx#uid-38759fd088) | Sets the value of a dependency property without changing its value source. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [SetValue (3 overloads)](../../avaloniaobject.mdx#uid-47d14e19d7) | Sets a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [VerifyAccess](../../avaloniaobject.mdx#uid-3b9d3c9793) | Checks that the current thread is the UI thread and throws if not. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-23c13c620f"></span>
+
+### Compute Method
+
+Called when the target series data updates to recalculate the indicator values.
+
+```csharp
+public void Compute()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9a55682a7d"></span>
+
+### GetLegendItems Method
+
+Gets the legend items that represent this indicator.
+
+```csharp
+public System.Collections.Generic.IEnumerable<Avalonia.Controls.Charts.ChartLegendItem> GetLegendItems(int indicatorIndex)
+```
+
+#### Parameters
+
+`indicatorIndex` int
+
+The indicator index within its owner chart legend.
+
+
+#### Returns
+
+System.Collections.Generic.IEnumerable&lt;[Avalonia.Controls.Charts.ChartLegendItem](xref:Avalonia.Controls.Charts.ChartLegendItem)&gt;
+
+The legend items for this indicator.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d5b2d33501"></span>
+
+### Render Method
+
+Renders the indicator into the specified plot area.
+
+```csharp
+public void Render(Avalonia.Media.DrawingContext context, Avalonia.Rect plotArea)
+```
+
+#### Parameters
+
+`context` [Avalonia.Media.DrawingContext](xref:Avalonia.Media.DrawingContext)
+
+The drawing context for the current render pass.
+
+
+`plotArea` [Avalonia.Rect](xref:Avalonia.Rect)
+
+The plot area in chart coordinates.
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [IsVisible](#uid-7b26aa00a1) | Gets or sets a value indicating whether this indicator is visible. |
+| [Stroke](#uid-12dd1e33ee) | Gets or sets the brush used for the main indicator line. |
+| [StrokeDashStyle](#uid-0595074efe) | Gets or sets the dash style for the indicator line. |
+| [StrokeLineCap](#uid-1b5b85f7e6) | Gets or sets the line cap style for the indicator line. |
+| [StrokeLineJoin](#uid-81dc3e276c) | Gets or sets the line join style for the indicator line. |
+| [StrokeThickness](#uid-5114b4b35b) | Gets or sets the thickness of the indicator stroke. |
+| [TargetSeries](#uid-b6a2df43aa) | Gets or sets the target series this indicator is based on. |
+| [Title](#uid-dc92aff1be) | Gets or sets the title shown in the legend and tooltips. |
+| [Dispatcher](../../avaloniaobject.mdx#uid-b25fa51632) | Returns the [Avalonia.AvaloniaObject.Dispatcher](xref:Avalonia.AvaloniaObject.Dispatcher) that this [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject) is associated with. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [Item](../../avaloniaobject.mdx#uid-c1d1f1bc0f) | Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7b26aa00a1"></span>
+
+### IsVisible Property
+
+Gets or sets a value indicating whether this indicator is visible.
+
+```csharp
+public bool IsVisible { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-12dd1e33ee"></span>
+
+### Stroke Property
+
+Gets or sets the brush used for the main indicator line.
+
+```csharp
+public Avalonia.Media.IBrush Stroke { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0595074efe"></span>
+
+### StrokeDashStyle Property
+
+Gets or sets the dash style for the indicator line.
+
+```csharp
+public Avalonia.Media.DashStyle StrokeDashStyle { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1b5b85f7e6"></span>
+
+### StrokeLineCap Property
+
+Gets or sets the line cap style for the indicator line.
+
+```csharp
+public Avalonia.Media.PenLineCap StrokeLineCap { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-81dc3e276c"></span>
+
+### StrokeLineJoin Property
+
+Gets or sets the line join style for the indicator line.
+
+```csharp
+public Avalonia.Media.PenLineJoin StrokeLineJoin { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5114b4b35b"></span>
+
+### StrokeThickness Property
+
+Gets or sets the thickness of the indicator stroke.
+
+```csharp
+public double StrokeThickness { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b6a2df43aa"></span>
+
+### TargetSeries Property
+
+Gets or sets the target series this indicator is based on.
+
+```csharp
+public Avalonia.Controls.Charts.CartesianSeries TargetSeries { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-dc92aff1be"></span>
+
+### Title Property
+
+Gets or sets the title shown in the legend and tooltips.
+
+```csharp
+public string Title { get; set; }
+```
+
+</section>
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [IsVisibleProperty](#uid-e4b6903e6f) | Identifies the [Avalonia.Controls.Charts.ChartTechnicalIndicator.IsVisible](xref:Avalonia.Controls.Charts.ChartTechnicalIndicator.IsVisible) Avalonia property. |
+| [StrokeDashStyleProperty](#uid-84c8e3c012) | Identifies the [Avalonia.Controls.Charts.ChartTechnicalIndicator.StrokeDashStyle](xref:Avalonia.Controls.Charts.ChartTechnicalIndicator.StrokeDashStyle) Avalonia property. |
+| [StrokeLineCapProperty](#uid-84dbabda41) | Identifies the [Avalonia.Controls.Charts.ChartTechnicalIndicator.StrokeLineCap](xref:Avalonia.Controls.Charts.ChartTechnicalIndicator.StrokeLineCap) Avalonia property. |
+| [StrokeLineJoinProperty](#uid-215ed86e0d) | Identifies the [Avalonia.Controls.Charts.ChartTechnicalIndicator.StrokeLineJoin](xref:Avalonia.Controls.Charts.ChartTechnicalIndicator.StrokeLineJoin) Avalonia property. |
+| [StrokeProperty](#uid-2865f1bfb6) | Identifies the [Avalonia.Controls.Charts.ChartTechnicalIndicator.Stroke](xref:Avalonia.Controls.Charts.ChartTechnicalIndicator.Stroke) Avalonia property. |
+| [StrokeThicknessProperty](#uid-803bd64efd) | Identifies the [Avalonia.Controls.Charts.ChartTechnicalIndicator.StrokeThickness](xref:Avalonia.Controls.Charts.ChartTechnicalIndicator.StrokeThickness) Avalonia property. |
+| [TargetSeriesProperty](#uid-28f6d94575) | Identifies the [Avalonia.Controls.Charts.ChartTechnicalIndicator.TargetSeries](xref:Avalonia.Controls.Charts.ChartTechnicalIndicator.TargetSeries) Avalonia property. |
+| [TitleProperty](#uid-7d0592bfed) | Identifies the [Avalonia.Controls.Charts.ChartTechnicalIndicator.Title](xref:Avalonia.Controls.Charts.ChartTechnicalIndicator.Title) Avalonia property. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e4b6903e6f"></span>
+
+### IsVisibleProperty Field
+
+Identifies the [Avalonia.Controls.Charts.ChartTechnicalIndicator.IsVisible](xref:Avalonia.Controls.Charts.ChartTechnicalIndicator.IsVisible) Avalonia property.
+
+```csharp
+public Avalonia.StyledProperty<bool> IsVisibleProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-84c8e3c012"></span>
+
+### StrokeDashStyleProperty Field
+
+Identifies the [Avalonia.Controls.Charts.ChartTechnicalIndicator.StrokeDashStyle](xref:Avalonia.Controls.Charts.ChartTechnicalIndicator.StrokeDashStyle) Avalonia property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Media.DashStyle> StrokeDashStyleProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-84dbabda41"></span>
+
+### StrokeLineCapProperty Field
+
+Identifies the [Avalonia.Controls.Charts.ChartTechnicalIndicator.StrokeLineCap](xref:Avalonia.Controls.Charts.ChartTechnicalIndicator.StrokeLineCap) Avalonia property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Media.PenLineCap> StrokeLineCapProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-215ed86e0d"></span>
+
+### StrokeLineJoinProperty Field
+
+Identifies the [Avalonia.Controls.Charts.ChartTechnicalIndicator.StrokeLineJoin](xref:Avalonia.Controls.Charts.ChartTechnicalIndicator.StrokeLineJoin) Avalonia property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Media.PenLineJoin> StrokeLineJoinProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2865f1bfb6"></span>
+
+### StrokeProperty Field
+
+Identifies the [Avalonia.Controls.Charts.ChartTechnicalIndicator.Stroke](xref:Avalonia.Controls.Charts.ChartTechnicalIndicator.Stroke) Avalonia property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Media.IBrush> StrokeProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-803bd64efd"></span>
+
+### StrokeThicknessProperty Field
+
+Identifies the [Avalonia.Controls.Charts.ChartTechnicalIndicator.StrokeThickness](xref:Avalonia.Controls.Charts.ChartTechnicalIndicator.StrokeThickness) Avalonia property.
+
+```csharp
+public Avalonia.StyledProperty<double> StrokeThicknessProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-28f6d94575"></span>
+
+### TargetSeriesProperty Field
+
+Identifies the [Avalonia.Controls.Charts.ChartTechnicalIndicator.TargetSeries](xref:Avalonia.Controls.Charts.ChartTechnicalIndicator.TargetSeries) Avalonia property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.Charts.CartesianSeries> TargetSeriesProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7d0592bfed"></span>
+
+### TitleProperty Field
+
+Identifies the [Avalonia.Controls.Charts.ChartTechnicalIndicator.Title](xref:Avalonia.Controls.Charts.ChartTechnicalIndicator.Title) Avalonia property.
+
+```csharp
+public Avalonia.StyledProperty<string> TitleProperty
+```
+
+</section>
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [PropertyChanged](../../avaloniaobject.mdx#uid-d758e26fae) | Raised when a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value changes on this object. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+
+</ApiRefPage>
+

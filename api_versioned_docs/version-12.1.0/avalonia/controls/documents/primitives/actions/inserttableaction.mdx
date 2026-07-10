@@ -1,0 +1,197 @@
+---
+title: 'InsertTableAction'
+hide_title: true
+slug: '/avalonia/controls/documents/primitives/actions/inserttableaction'
+uid: 'Avalonia.Controls.Documents.Primitives.Actions.InsertTableAction'
+commentId: 'T:Avalonia.Controls.Documents.Primitives.Actions.InsertTableAction'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.RichTextEditor'
+assembly: 'Avalonia.Controls.RichTextEditor'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.Primitives.Actions'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">InsertTableAction Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.Primitives.Actions</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.RichTextEditor</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.RichTextEditor</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Action for inserting a new [Avalonia.Controls.Documents.Table](xref:Avalonia.Controls.Documents.Table) after the current block.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class InsertTableAction
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="editoraction">EditorAction</a> <span className="apiref-page__relation-separator">-&gt;</span> InsertTableAction
+</div>
+</div>
+
+## Remarks
+
+This action is typically invoked through a grid-picker flyout that determines
+the row and column counts. Call [Avalonia.Controls.Documents.Primitives.Actions.InsertTableAction.ExecuteWithSize(Avalonia.Controls.Documents.Primitives.ITextEditorHost,int,int)](xref:Avalonia.Controls.Documents.Primitives.Actions.InsertTableAction.ExecuteWithSize%28Avalonia.Controls.Documents.Primitives.ITextEditorHost%2CSystem.Int32%2CSystem.Int32%29) to insert a table
+with specific dimensions.
+
+The default [Avalonia.Controls.Documents.Primitives.Actions.InsertTableAction.Execute(Avalonia.Controls.Documents.Primitives.ITextEditorHost)](xref:Avalonia.Controls.Documents.Primitives.Actions.InsertTableAction.Execute%28Avalonia.Controls.Documents.Primitives.ITextEditorHost%29) creates a 3x3 table as a fallback.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [InsertTableAction](#uid-f3b26e9a74) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f3b26e9a74"></span>
+
+### InsertTableAction Constructor
+
+```csharp
+public InsertTableAction()
+```
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [CanExecute](#uid-783498e938) | No summary available. |
+| [Execute](#uid-f04f98033b) | No summary available. |
+| [ExecuteWithSize](#uid-bdb771db2e) | Inserts a table with the specified dimensions after the current block, or at the document root when the document is empty. |
+| [ExecuteAsync](editoraction.mdx#uid-6a0258eff0) | Executes the action asynchronously. Inherited from [EditorAction](editoraction.mdx). |
+| [GetState](editoraction.mdx#uid-e9737aed90) | Gets the current state of the action. Inherited from [EditorAction](editoraction.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-783498e938"></span>
+
+### CanExecute Method
+
+```csharp
+public bool CanExecute(Avalonia.Controls.Documents.Primitives.ITextEditorHost host)
+```
+
+#### Parameters
+
+`host` [Avalonia.Controls.Documents.Primitives.ITextEditorHost](xref:Avalonia.Controls.Documents.Primitives.ITextEditorHost)
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f04f98033b"></span>
+
+### Execute Method
+
+```csharp
+public void Execute(Avalonia.Controls.Documents.Primitives.ITextEditorHost host)
+```
+
+#### Parameters
+
+`host` [Avalonia.Controls.Documents.Primitives.ITextEditorHost](xref:Avalonia.Controls.Documents.Primitives.ITextEditorHost)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-bdb771db2e"></span>
+
+### ExecuteWithSize Method
+
+Inserts a table with the specified dimensions after the current block,
+or at the document root when the document is empty.
+
+```csharp
+public void ExecuteWithSize(Avalonia.Controls.Documents.Primitives.ITextEditorHost host, int rowCount, int colCount)
+```
+
+#### Parameters
+
+`host` [Avalonia.Controls.Documents.Primitives.ITextEditorHost](xref:Avalonia.Controls.Documents.Primitives.ITextEditorHost)
+
+The editor host.
+
+
+`rowCount` int
+
+Number of rows (&gt;= 1).
+
+
+`colCount` int
+
+Number of columns (&gt;= 1).
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [DisplayName](#uid-3a615e8670) | No summary available. |
+| [Id](#uid-e1a5239271) | No summary available. |
+| [Gesture](editoraction.mdx#uid-557e9af400) | Gets the optional keyboard gesture for this action. Inherited from [EditorAction](editoraction.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3a615e8670"></span>
+
+### DisplayName Property
+
+```csharp
+public string DisplayName { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e1a5239271"></span>
+
+### Id Property
+
+```csharp
+public string Id { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

@@ -1,0 +1,94 @@
+---
+title: 'EglGlPlatformImageSurfaceBase'
+hide_title: true
+slug: '/avalonia/opengl/egl/eglglplatformimagesurfacebase'
+uid: 'Avalonia.OpenGL.Egl.EglGlPlatformImageSurfaceBase'
+commentId: 'T:Avalonia.OpenGL.Egl.EglGlPlatformImageSurfaceBase'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.OpenGL'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.OpenGL.Egl'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">EglGlPlatformImageSurfaceBase Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.OpenGL.Egl</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.OpenGL</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Base class for EGL-backed [Avalonia.OpenGL.Surfaces.IGlPlatformSurface](xref:Avalonia.OpenGL.Surfaces.IGlPlatformSurface) implementations that render into
+an EGLImage. Derived types create a concrete render target bound to a given GL context.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class EglGlPlatformImageSurfaceBase
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> EglGlPlatformImageSurfaceBase
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="../surfaces/iglplatformsurface">IGlPlatformSurface</a>, <a href="../../platform/surfaces/iplatformrendersurface">IPlatformRenderSurface</a>
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [CreateGlRenderTarget](#uid-a6dca7ce3c) | Creates a render target for the given GL context. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a6dca7ce3c"></span>
+
+### CreateGlRenderTarget Method
+
+Creates a render target for the given GL context.
+
+```csharp
+public Avalonia.OpenGL.Surfaces.IGlPlatformSurfaceRenderTarget CreateGlRenderTarget(Avalonia.OpenGL.IGlContext context)
+```
+
+#### Parameters
+
+`context` [Avalonia.OpenGL.IGlContext](xref:Avalonia.OpenGL.IGlContext)
+
+The GL context the render target will be used with.
+
+
+#### Returns
+
+[Avalonia.OpenGL.Surfaces.IGlPlatformSurfaceRenderTarget](xref:Avalonia.OpenGL.Surfaces.IGlPlatformSurfaceRenderTarget)
+
+
+</section>
+
+</ApiRefPage>
+
