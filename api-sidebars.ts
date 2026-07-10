@@ -383,6 +383,8 @@ const sidebars = {
             "avalonia/controls/expanddirection",
             "avalonia/controls/expander",
             "avalonia/controls/experimentalacrylicborder",
+            "avalonia/controls/feedbackaction",
+            "avalonia/controls/feedbacktype",
             "avalonia/controls/flyout",
             "avalonia/controls/flyoutpresenter",
             "avalonia/controls/flyoutshowmode",
@@ -402,6 +404,7 @@ const sidebars = {
             "avalonia/controls/inativemenuexportereventsimplbridge",
             "avalonia/controls/inativemenuitemexportereventsimplbridge",
             "avalonia/controls/inavigation",
+            "avalonia/controls/iplatformfeedback",
             "avalonia/controls/ipseudoclasses",
             "avalonia/controls/iresourcedictionary",
             "avalonia/controls/iresourcehost",
@@ -466,6 +469,8 @@ const sidebars = {
             "avalonia/controls/pixelpointeventargs",
             "avalonia/controls/placementmode",
             "avalonia/controls/platform/platformallowedwindowactions",
+            "avalonia/controls/platformfeedback",
+            "avalonia/controls/platformfeedbackextensions",
             "avalonia/controls/platforminhibitiontype",
             "avalonia/controls/populatedeventargs",
             "avalonia/controls/populatingeventargs",
@@ -514,6 +519,11 @@ const sidebars = {
             "avalonia/controls/tabitem",
             "avalonia/controls/tabplacement",
             "avalonia/controls/tabbedpage",
+            "avalonia/controls/tableview",
+            "avalonia/controls/tableviewcell",
+            "avalonia/controls/tableviewcolumn",
+            "avalonia/controls/tableviewcolumnheader",
+            "avalonia/controls/tableviewrow",
             "avalonia/controls/textblock",
             "avalonia/controls/textbox",
             "avalonia/controls/textchangedeventargs",
@@ -545,6 +555,7 @@ const sidebars = {
             "avalonia/controls/win32properties-customwindowstylescallback",
             "avalonia/controls/win32properties-customwndprochookcallback",
             "avalonia/controls/win32properties-win32hittestvalue",
+            "avalonia/controls/win32properties-windowcornerpreference",
             "avalonia/controls/window",
             "avalonia/controls/windowbase",
             "avalonia/controls/windowclosereason",
@@ -833,6 +844,8 @@ const sidebars = {
             "avalonia/controls/presenters/contentpresenter",
             "avalonia/controls/presenters/itemspresenter",
             "avalonia/controls/presenters/scrollcontentpresenter",
+            "avalonia/controls/presenters/tableviewcellspresenter",
+            "avalonia/controls/presenters/tableviewcolumnheaderspresenter",
             "avalonia/controls/presenters/textpresenter"
           ],
           "link": {
@@ -1871,8 +1884,10 @@ const sidebars = {
           "items": [
             "avalonia/media/imaging/bitmap",
             "avalonia/media/imaging/bitmapblendingmode",
+            "avalonia/media/imaging/bitmapencoderoptions",
             "avalonia/media/imaging/bitmapinterpolationmode",
             "avalonia/media/imaging/croppedbitmap",
+            "avalonia/media/imaging/jpegbitmapencoderoptions",
             "avalonia/media/imaging/pixelformatreader-bgr24pixelformatreader",
             "avalonia/media/imaging/pixelformatreader-bgr32pixelformatreader",
             "avalonia/media/imaging/pixelformatreader-bgr555pixelformatreader",
@@ -1904,6 +1919,7 @@ const sidebars = {
             "avalonia/media/imaging/pixelformatwriter-rgb32pixelformatwriter",
             "avalonia/media/imaging/pixelformatwriter-rgba64pixelformatwriter",
             "avalonia/media/imaging/pixelformatwriter-rgba8888pixelformatwriter",
+            "avalonia/media/imaging/pngbitmapencoderoptions",
             "avalonia/media/imaging/rendertargetbitmap",
             "avalonia/media/imaging/writeablebitmap"
           ],
@@ -2124,6 +2140,7 @@ const sidebars = {
           "type": "category",
           "label": "Avalonia.OpenGL.Egl",
           "items": [
+            "avalonia/opengl/egl/eglconfigprobecallback",
             "avalonia/opengl/egl/eglconsts",
             "avalonia/opengl/egl/eglcontext",
             "avalonia/opengl/egl/eglcontextoptions",
@@ -2131,12 +2148,15 @@ const sidebars = {
             "avalonia/opengl/egl/egldisplaycreationoptions",
             "avalonia/opengl/egl/egldisplayoptions",
             "avalonia/opengl/egl/eglerrors",
+            "avalonia/opengl/egl/eglglplatformimagesurfacebase",
             "avalonia/opengl/egl/eglglplatformsurface",
             "avalonia/opengl/egl/eglglplatformsurface-ieglwindowglplatformsurfaceinfo",
             "avalonia/opengl/egl/eglglplatformsurface-ieglwindowglplatformsurfaceinfowithwaitpolicy",
             "avalonia/opengl/egl/eglglplatformsurfacebase",
+            "avalonia/opengl/egl/eglimage",
             "avalonia/opengl/egl/eglinterface",
             "avalonia/opengl/egl/eglplatformgraphics",
+            "avalonia/opengl/egl/eglplatformimagesurfacerendertargetbase",
             "avalonia/opengl/egl/eglplatformsurfacerendertargetbase",
             "avalonia/opengl/egl/eglsurface"
           ],
@@ -2287,6 +2307,7 @@ const sidebars = {
             "avalonia/platform/storage/istorageitem",
             "avalonia/platform/storage/istorageprovider",
             "avalonia/platform/storage/launcherextensions",
+            "avalonia/platform/storage/openfilepickerresult",
             "avalonia/platform/storage/pickeroptions",
             "avalonia/platform/storage/savefilepickerresult",
             "avalonia/platform/storage/storageitemproperties",
@@ -2381,6 +2402,7 @@ const sidebars = {
             "avalonia/rendering/composition/compositionsurface",
             "avalonia/rendering/composition/compositionsurfacevisual",
             "avalonia/rendering/composition/compositiontilemode",
+            "avalonia/rendering/composition/compositiontransparencylevel",
             "avalonia/rendering/composition/compositionvisual",
             "avalonia/rendering/composition/compositionvisualcollection",
             "avalonia/rendering/composition/compositor",
@@ -2430,7 +2452,8 @@ const sidebars = {
           "type": "category",
           "label": "Avalonia.Rendering.Composition.Drawing",
           "items": [
-            "avalonia/rendering/composition/drawing/compositionrenderdatascenebrushcontent-properties"
+            "avalonia/rendering/composition/drawing/compositionrenderdatascenebrushcontent-properties",
+            "avalonia/rendering/composition/drawing/irenderdatageometry"
           ],
           "link": {
             "type": "doc",
@@ -3881,17 +3904,27 @@ const sidebars = {
       "items": [
         {
           "type": "category",
-          "label": "Tmds.DBus.SourceGenerator",
+          "label": "Avalonia.FreeDesktop.DBus",
           "items": [
-            "tmds/dbus/sourcegenerator/orgfreedesktopdbusproxy-orgfreedesktopdbusproperties",
-            "tmds/dbus/sourcegenerator/orgfreedesktopibusinputcontextproxy-orgfreedesktopibusinputcontextproperties",
-            "tmds/dbus/sourcegenerator/orgfreedesktopportalfilechooserproxy-orgfreedesktopportalfilechooserproperties",
-            "tmds/dbus/sourcegenerator/orgfreedesktopportalsettingsproxy-orgfreedesktopportalsettingsproperties",
-            "tmds/dbus/sourcegenerator/orgkdestatusnotifierwatcherproxy-orgkdestatusnotifierwatcherproperties"
+            "avalonia/freedesktop/dbus/istatusnotifieritemhandler-getallpropertiescontext",
+            "avalonia/freedesktop/dbus/istatusnotifieritemhandler-getpropertycontext",
+            "avalonia/freedesktop/dbus/idbusmenuhandler-getallpropertiescontext",
+            "avalonia/freedesktop/dbus/idbusmenuhandler-getpropertycontext"
           ],
           "link": {
             "type": "doc",
-            "id": "tmds/dbus/sourcegenerator/index"
+            "id": "avalonia/freedesktop/dbus/index"
+          }
+        },
+        {
+          "type": "category",
+          "label": "Tmds.DBus.Protocol",
+          "items": [
+            "tmds/dbus/protocol/dbushandler-dbusinterface"
+          ],
+          "link": {
+            "type": "doc",
+            "id": "tmds/dbus/protocol/index"
           }
         }
       ],
@@ -4358,6 +4391,7 @@ const sidebars = {
             "avalonia/x11/smlib-smcsaveyourselfproc",
             "avalonia/x11/smlib-smcshutdowncancelledproc",
             "avalonia/x11/x11eventdispatcher-eventhandler",
+            "avalonia/x11/x11eventdispatcher-ieventhook",
             "avalonia/x11/x11globals-windowactivationtrackingmode",
             "avalonia/x11/x11window-defaulttoplevelwindowmode",
             "avalonia/x11/x11window-inputproxywindowmode",
@@ -4366,6 +4400,7 @@ const sidebars = {
             "avalonia/x11/x11window-xembedclientwindowmode",
             "avalonia/x11/xembedplug",
             "avalonia/x11/xkeyboardstate-autorepeats",
+            "avalonia/x11/xlib-grabresult",
             "avalonia/x11/xlib-xclasshint",
             "avalonia/x11/xlib-xgeometry",
             "avalonia/x11/xlib-xlookupstatus",
@@ -4378,13 +4413,13 @@ const sidebars = {
         },
         {
           "type": "category",
-          "label": "Avalonia.X11.Clipboard",
+          "label": "Avalonia.X11.Selections",
           "items": [
-            "avalonia/x11/clipboard/clipboardreadsession-getdataresult"
+            "avalonia/x11/selections/selectionreadsession-getdataresult"
           ],
           "link": {
             "type": "doc",
-            "id": "avalonia/x11/clipboard/index"
+            "id": "avalonia/x11/selections/index"
           }
         },
         {

@@ -64,10 +64,12 @@ public class Win32Properties
 | --- | --- |
 | [AddWindowStylesCallback](#uid-b51911f72e) | Adds a callback to set the window's style. |
 | [AddWndProcHookCallback](#uid-ffbfdca626) | Adds a custom callback for the window's WndProc |
-| [GetNonClientHitTestResult](#uid-fb40e72aa0) | No summary available. |
+| [GetNonClientHitTestResult](#uid-fb40e72aa0) | Gets the value of the `NonClientHitTestResult` attached property on the specified visual. |
+| [GetWindowCornerPreference](#uid-40a77da673) | Gets the value of the `WindowCornerPreference` attached property on the specified window. |
 | [RemoveWindowStylesCallback](#uid-1fa69055d6) | Removes a callback to set the window's style. |
 | [RemoveWndProcHookCallback](#uid-e28e9d382c) | Removes a custom callback for the window's WndProc |
-| [SetNonClientHitTestResult](#uid-880349e197) | No summary available. |
+| [SetNonClientHitTestResult](#uid-880349e197) | Sets the value of the `NonClientHitTestResult` attached property on the specified visual. |
+| [SetWindowCornerPreference](#uid-fafd01f2b1) | Sets the value of the `WindowCornerPreference` attached property on the specified window. |
 
 <section className="apiref-page__member-entry">
 
@@ -127,6 +129,8 @@ The callback
 
 ### GetNonClientHitTestResult Method
 
+Gets the value of the `NonClientHitTestResult` attached property on the specified visual.
+
 ```csharp
 public Avalonia.Controls.Win32Properties.Win32HitTestValue GetNonClientHitTestResult(Avalonia.Visual obj)
 ```
@@ -135,10 +139,42 @@ public Avalonia.Controls.Win32Properties.Win32HitTestValue GetNonClientHitTestRe
 
 `obj` [Avalonia.Visual](xref:Avalonia.Visual)
 
+The visual.
+
 
 #### Returns
 
 [Avalonia.Controls.Win32Properties.Win32HitTestValue](xref:Avalonia.Controls.Win32Properties.Win32HitTestValue)
+
+The hit test value for `obj`.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-40a77da673"></span>
+
+### GetWindowCornerPreference Method
+
+Gets the value of the `WindowCornerPreference` attached property on the specified window.
+
+```csharp
+public Avalonia.Controls.Win32Properties.WindowCornerPreference GetWindowCornerPreference(Avalonia.Controls.Window window)
+```
+
+#### Parameters
+
+`window` [Avalonia.Controls.Window](xref:Avalonia.Controls.Window)
+
+The window.
+
+
+#### Returns
+
+[Avalonia.Controls.Win32Properties.WindowCornerPreference](xref:Avalonia.Controls.Win32Properties.WindowCornerPreference)
+
+The window corner preference for `window`.
 
 
 </section>
@@ -201,6 +237,8 @@ The callback
 
 ### SetNonClientHitTestResult Method
 
+Sets the value of the `NonClientHitTestResult` attached property on the specified visual.
+
 ```csharp
 public void SetNonClientHitTestResult(Avalonia.Visual obj, Avalonia.Controls.Win32Properties.Win32HitTestValue value)
 ```
@@ -209,9 +247,44 @@ public void SetNonClientHitTestResult(Avalonia.Visual obj, Avalonia.Controls.Win
 
 `obj` [Avalonia.Visual](xref:Avalonia.Visual)
 
+The visual.
+
 
 `value` [Avalonia.Controls.Win32Properties.Win32HitTestValue](xref:Avalonia.Controls.Win32Properties.Win32HitTestValue)
 
+The value to set.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-fafd01f2b1"></span>
+
+### SetWindowCornerPreference Method
+
+Sets the value of the `WindowCornerPreference` attached property on the specified window.
+
+```csharp
+public void SetWindowCornerPreference(Avalonia.Controls.Window window, Avalonia.Controls.Win32Properties.WindowCornerPreference value)
+```
+
+#### Parameters
+
+`window` [Avalonia.Controls.Window](xref:Avalonia.Controls.Window)
+
+The window.
+
+
+`value` [Avalonia.Controls.Win32Properties.WindowCornerPreference](xref:Avalonia.Controls.Win32Properties.WindowCornerPreference)
+
+The value to set.
+
+
+#### Remarks
+
+This value is supported starting with Windows 11 Build 22000.
+It is ignored on earlier Windows versions.
 
 </section>
 
@@ -219,7 +292,8 @@ public void SetNonClientHitTestResult(Avalonia.Visual obj, Avalonia.Controls.Win
 
 | Name | Description |
 | --- | --- |
-| [NonClientHitTestResultProperty](#uid-5912f2bb07) | No summary available. |
+| [NonClientHitTestResultProperty](#uid-5912f2bb07) | Defines the `NonClientHitTestResult` attached property. |
+| [WindowCornerPreferenceProperty](#uid-a9aa8feb84) | Defines the `WindowCornerPreferenceProperty` attached property. |
 
 <section className="apiref-page__member-entry">
 
@@ -227,8 +301,24 @@ public void SetNonClientHitTestResult(Avalonia.Visual obj, Avalonia.Controls.Win
 
 ### NonClientHitTestResultProperty Field
 
+Defines the `NonClientHitTestResult` attached property.
+
 ```csharp
 public Avalonia.AttachedProperty<Avalonia.Controls.Win32Properties.Win32HitTestValue> NonClientHitTestResultProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a9aa8feb84"></span>
+
+### WindowCornerPreferenceProperty Field
+
+Defines the `WindowCornerPreferenceProperty` attached property.
+
+```csharp
+public Avalonia.AttachedProperty<Avalonia.Controls.Win32Properties.WindowCornerPreference> WindowCornerPreferenceProperty
 ```
 
 </section>

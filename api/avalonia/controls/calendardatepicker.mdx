@@ -146,7 +146,7 @@ public void Clear()
 | Name | Description |
 | --- | --- |
 | [BlackoutDates](#uid-c878f55d97) | Gets a collection of dates that are marked as not selectable. |
-| [CustomDateFormatString](#uid-837d8e431c) | No summary available. |
+| [CustomDateFormatString](#uid-837d8e431c) | Gets or sets the custom date format used for display (and/or parsing) the date displayed to the user. Not used unless [Avalonia.Controls.CalendarDatePicker.SelectedDateFormat](xref:Avalonia.Controls.CalendarDatePicker.SelectedDateFormat) is [Avalonia.Controls.CalendarDatePickerFormat.Custom](xref:Avalonia.Controls.CalendarDatePickerFormat.Custom). |
 | [DisplayDate](#uid-ff8ded6cb0) | Gets or sets the date to display. |
 | [DisplayDateEnd](#uid-351eb68b35) | Gets or sets the last date to be displayed. |
 | [DisplayDateStart](#uid-232207b4eb) | Gets or sets the first date to be displayed. |
@@ -159,6 +159,7 @@ public void Clear()
 | [SelectedDate](#uid-5b951c08b2) | Gets or sets the currently selected date. |
 | [SelectedDateFormat](#uid-47724faebd) | Gets or sets the format that is used to display the selected date. |
 | [Text](#uid-1183a1cd31) | Gets or sets the text that is displayed by the [Avalonia.Controls.CalendarDatePicker](xref:Avalonia.Controls.CalendarDatePicker). |
+| [TextConverter](#uid-de14fbd1f9) | Gets or sets the custom bidirectional Text-Value converter for custom date string formatting (e.g. for converting user input formats to DateTime or displaying a DateTime in a custom string format). If set, has priority for formatting over [Avalonia.Controls.CalendarDatePicker.CustomDateFormatString](xref:Avalonia.Controls.CalendarDatePicker.CustomDateFormatString). Convert: DateTime -&gt; string ConvertBack: string -&gt; DateTIme |
 | [UseFloatingPlaceholder](#uid-1c6776d96f) | Gets or sets a value indicating whether the [Avalonia.Controls.TextBox.PlaceholderText](xref:Avalonia.Controls.TextBox.PlaceholderText) will still be shown above the [Avalonia.Controls.TextBox.Text](xref:Avalonia.Controls.TextBox.Text) even after a text value is set. |
 | [UseFloatingWatermark](#uid-c26e5cf786) | Gets or sets a value indicating whether the [Avalonia.Controls.TextBox.PlaceholderText](xref:Avalonia.Controls.TextBox.PlaceholderText) will still be shown above the [Avalonia.Controls.TextBox.Text](xref:Avalonia.Controls.TextBox.Text) even after a text value is set. |
 | [VerticalContentAlignment](#uid-9b2c01a1a6) | Gets or sets the vertical alignment of the content within the control. |
@@ -265,9 +266,18 @@ an empty collection.
 
 ### CustomDateFormatString Property
 
+Gets or sets the custom date format used for display (and/or parsing)
+the date displayed to the user. Not used unless
+[Avalonia.Controls.CalendarDatePicker.SelectedDateFormat](xref:Avalonia.Controls.CalendarDatePicker.SelectedDateFormat) is [Avalonia.Controls.CalendarDatePickerFormat.Custom](xref:Avalonia.Controls.CalendarDatePickerFormat.Custom).
+
 ```csharp
 public string CustomDateFormatString { get; set; }
 ```
+
+#### Value
+
+The default is "d".
+
 
 </section>
 
@@ -520,6 +530,25 @@ is not suppressed.](xref:System.FormatException)
 
 <section className="apiref-page__member-entry">
 
+<span id="uid-de14fbd1f9"></span>
+
+### TextConverter Property
+
+Gets or sets the custom bidirectional Text-Value converter for custom date
+string formatting (e.g. for converting user input formats to DateTime or
+displaying a DateTime in a custom string format).
+If set, has priority for formatting over [Avalonia.Controls.CalendarDatePicker.CustomDateFormatString](xref:Avalonia.Controls.CalendarDatePicker.CustomDateFormatString).
+Convert: DateTime -&gt; string
+ConvertBack: string -&gt; DateTIme
+
+```csharp
+public Avalonia.Data.Converters.IValueConverter TextConverter { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-1c6776d96f"></span>
 
 ### UseFloatingPlaceholder Property
@@ -607,6 +636,7 @@ public Avalonia.Media.IBrush WatermarkForeground { get; set; }
 | [PlaceholderTextProperty](#uid-0a0cf0ba0a) | Defines the [Avalonia.Controls.CalendarDatePicker.PlaceholderText](xref:Avalonia.Controls.CalendarDatePicker.PlaceholderText) property. |
 | [SelectedDateFormatProperty](#uid-62e5ec5485) | Defines the [Avalonia.Controls.CalendarDatePicker.SelectedDateFormat](xref:Avalonia.Controls.CalendarDatePicker.SelectedDateFormat) property. |
 | [SelectedDateProperty](#uid-0c206d92d3) | Defines the [Avalonia.Controls.CalendarDatePicker.SelectedDate](xref:Avalonia.Controls.CalendarDatePicker.SelectedDate) property. |
+| [TextConverterProperty](#uid-b8be599ae2) | Defines the [Avalonia.Controls.CalendarDatePicker.TextConverter](xref:Avalonia.Controls.CalendarDatePicker.TextConverter) property. |
 | [TextProperty](#uid-6a86402201) | Defines the [Avalonia.Controls.CalendarDatePicker.Text](xref:Avalonia.Controls.CalendarDatePicker.Text) property. |
 | [UseFloatingPlaceholderProperty](#uid-83f88b279e) | Defines the [Avalonia.Controls.CalendarDatePicker.UseFloatingPlaceholder](xref:Avalonia.Controls.CalendarDatePicker.UseFloatingPlaceholder) property. |
 | [UseFloatingWatermarkProperty](#uid-e817e5da65) | Defines the [Avalonia.Controls.CalendarDatePicker.UseFloatingWatermark](xref:Avalonia.Controls.CalendarDatePicker.UseFloatingWatermark) property. |
@@ -879,6 +909,20 @@ Defines the [Avalonia.Controls.CalendarDatePicker.SelectedDate](xref:Avalonia.Co
 
 ```csharp
 public Avalonia.StyledProperty<Nullable<DateTime>> SelectedDateProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b8be599ae2"></span>
+
+### TextConverterProperty Field
+
+Defines the [Avalonia.Controls.CalendarDatePicker.TextConverter](xref:Avalonia.Controls.CalendarDatePicker.TextConverter) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Data.Converters.IValueConverter> TextConverterProperty
 ```
 
 </section>

@@ -94,6 +94,7 @@ public class AutomationPeer
 | [RaisePropertyChangedEvent](#uid-ffcc0e3d63) | Raises an event to notify the automation client of a changed property value. |
 | [SetFocus](#uid-6a8d233e48) | Sets the keyboard focus on the element that is associated with this automation peer. |
 | [ShowContextMenu](#uid-8bfe04d25b) | Shows the context menu for the element that is associated with this automation peer. |
+| [ToScreen](#uid-51bb13f806) | Converts a rectangle in the peer's coordinate space, as returned by [Avalonia.Automation.Peers.AutomationPeer.GetBoundingRectangle](xref:Avalonia.Automation.Peers.AutomationPeer.GetBoundingRectangle), to screen coordinates; returns null if the peer is not currently hosted in a rendered visual tree. |
 
 <section className="apiref-page__member-entry">
 
@@ -796,6 +797,35 @@ public bool ShowContextMenu()
 bool
 
 true if a context menu is present for the element; otherwise false.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-51bb13f806"></span>
+
+### ToScreen Method
+
+Converts a rectangle in the peer's coordinate space, as returned by
+[Avalonia.Automation.Peers.AutomationPeer.GetBoundingRectangle](xref:Avalonia.Automation.Peers.AutomationPeer.GetBoundingRectangle), to screen coordinates; returns null if the peer is
+not currently hosted in a rendered visual tree.
+
+```csharp
+public Nullable<Avalonia.Rect> ToScreen(Avalonia.Rect rect)
+```
+
+#### Parameters
+
+`rect` [Avalonia.Rect](xref:Avalonia.Rect)
+
+A rectangle in the peer's own coordinate space, as returned by
+[Avalonia.Automation.Peers.AutomationPeer.GetBoundingRectangle](xref:Avalonia.Automation.Peers.AutomationPeer.GetBoundingRectangle).
+
+
+#### Returns
+
+Nullable&lt;[Avalonia.Rect](xref:Avalonia.Rect)&gt;
 
 
 </section>

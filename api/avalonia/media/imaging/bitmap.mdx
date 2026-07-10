@@ -171,7 +171,7 @@ The filename of the bitmap.
 | [DecodeToHeight](#uid-d4e2c90246) | Loads a Bitmap from a stream and decodes at the desired height. Aspect ratio is maintained. This is more efficient than loading and then resizing. |
 | [DecodeToWidth](#uid-16369c08f6) | Loads a Bitmap from a stream and decodes at the desired width. Aspect ratio is maintained. This is more efficient than loading and then resizing. |
 | [Dispose](#uid-104e904648) | No summary available. |
-| [Save (2 overloads)](#uid-2db10525bf) | No summary available. |
+| [Save (4 overloads)](#uid-2db10525bf) | No summary available. |
 
 <span id="uid-c2cad1a858"></span>
 
@@ -357,6 +357,26 @@ public void Dispose()
 
 <section className="apiref-page__member-entry">
 
+<span id="uid-6d7c09e157"></span>
+
+#### Save Method
+
+```csharp
+public void Save(System.IO.Stream stream, Avalonia.Media.Imaging.BitmapEncoderOptions options)
+```
+
+##### Parameters
+
+`stream` System.IO.Stream
+
+
+`options` [Avalonia.Media.Imaging.BitmapEncoderOptions](xref:Avalonia.Media.Imaging.BitmapEncoderOptions)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-848ab5dd51"></span>
 
 #### Save Method
@@ -371,6 +391,33 @@ public void Save(System.IO.Stream stream, Nullable<int> quality)
 
 
 `quality` Nullable&lt;int&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ebd0a0cf0f"></span>
+
+#### Save Method
+
+Saves the bitmap to a file with the specified options.
+
+```csharp
+public void Save(string fileName, Avalonia.Media.Imaging.BitmapEncoderOptions options)
+```
+
+##### Parameters
+
+`fileName` string
+
+The filename.
+
+
+`options` [Avalonia.Media.Imaging.BitmapEncoderOptions](xref:Avalonia.Media.Imaging.BitmapEncoderOptions)
+
+The options specifying the format and settings to use.
+Typical usages include [Avalonia.Media.Imaging.PngBitmapEncoderOptions](xref:Avalonia.Media.Imaging.PngBitmapEncoderOptions) and [Avalonia.Media.Imaging.JpegBitmapEncoderOptions](xref:Avalonia.Media.Imaging.JpegBitmapEncoderOptions).
 
 
 </section>

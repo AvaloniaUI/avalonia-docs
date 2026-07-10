@@ -115,12 +115,41 @@ font simulations.
 
 | Name | Description |
 | --- | --- |
+| [CanShapeScript](#uid-4a392458ef) | Determines whether this font can shape the specified script, not merely map its codepoints. Scripts that need OpenType complex shaping (e.g. Arabic joining, Indic conjuncts) require the font to declare the script in its GSUB/GPOS tables; scripts that render acceptably from cmap alone always return `true`. Used by the fallback itemizer to avoid selecting a font that has the glyphs but cannot form them correctly. |
 | [DeclaresLanguageCoverage](#uid-e6ee88bf43) | Determines whether this font self-declares coverage for the supplied culture via its OpenType `meta` table `dlng` or `slng` tag list. |
 | [Dispose](#uid-611d5d5c3c) | No summary available. |
 | [SupportsScript](#uid-bfbc66e215) | Determines whether the font advertises support for the supplied Unicode script. |
 | [TryGetGlyphMetrics (2 overloads)](#uid-224187e3e5) | No summary available. |
 | [TryGetHorizontalGlyphAdvance](#uid-327caa7a57) | No summary available. |
 | [TryGetHorizontalGlyphAdvances](#uid-fff209abba) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4a392458ef"></span>
+
+### CanShapeScript Method
+
+Determines whether this font can shape the specified script, not merely map its
+codepoints. Scripts that need OpenType complex shaping (e.g. Arabic joining, Indic
+conjuncts) require the font to declare the script in its GSUB/GPOS tables; scripts that
+render acceptably from cmap alone always return `true`. Used by the fallback itemizer
+to avoid selecting a font that has the glyphs but cannot form them correctly.
+
+```csharp
+public bool CanShapeScript(Avalonia.Media.TextFormatting.Unicode.Script script)
+```
+
+#### Parameters
+
+`script` [Avalonia.Media.TextFormatting.Unicode.Script](xref:Avalonia.Media.TextFormatting.Unicode.Script)
+
+
+#### Returns
+
+bool
+
+
+</section>
 
 <section className="apiref-page__member-entry">
 

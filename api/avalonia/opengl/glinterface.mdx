@@ -130,7 +130,9 @@ public GlInterface(Avalonia.OpenGL.GlVersion version, Func<string, IntPtr> getPr
 | [DepthMask](#uid-41d40e4c0b) | No summary available. |
 | [Disable](#uid-6b2cc85dd0) | No summary available. |
 | [DrawArrays](#uid-d3a884f043) | No summary available. |
+| [DrawBuffer](#uid-5b30f2075a) | No summary available. |
 | [DrawElements](#uid-ea6a2579e2) | No summary available. |
+| [EGLImageTargetTexture2DOES](#uid-e69b7519ac) | No summary available. |
 | [Enable](#uid-f10cec6e90) | No summary available. |
 | [EnableVertexAttribArray](#uid-0eb6735fad) | No summary available. |
 | [Finish](#uid-1838ef846d) | No summary available. |
@@ -160,6 +162,7 @@ public GlInterface(Avalonia.OpenGL.GlVersion version, Func<string, IntPtr> getPr
 | [GetUniformLocationString](#uid-269c0cbc80) | No summary available. |
 | [LinkProgram](#uid-a8294a5f2b) | No summary available. |
 | [LinkProgramAndGetError](#uid-5ac3785672) | No summary available. |
+| [ReadBuffer](#uid-f18e2d416c) | No summary available. |
 | [RenderbufferStorage](#uid-a543469bca) | No summary available. |
 | [ShaderSource](#uid-357d1c6697) | No summary available. |
 | [ShaderSourceString](#uid-2e04d5997d) | No summary available. |
@@ -171,6 +174,7 @@ public GlInterface(Avalonia.OpenGL.GlVersion version, Func<string, IntPtr> getPr
 | [UseProgram](#uid-c8518c48ae) | No summary available. |
 | [VertexAttribPointer](#uid-0674e7c6d3) | No summary available. |
 | [Viewport](#uid-ca1437e6df) | No summary available. |
+| [WriteBuffer](#uid-15371c9e56) | No summary available. |
 | [GetError](glbasicinfointerface.mdx#uid-335a3ecb4a) | Inherited from [GlBasicInfoInterface](glbasicinfointerface.mdx). |
 | [GetExtensions](glbasicinfointerface.mdx#uid-3dc9cf6f1d) | Inherited from [GlBasicInfoInterface](glbasicinfointerface.mdx). |
 | [GetFloatv](glbasicinfointerface.mdx#uid-37f2cd2bf2) | Inherited from [GlBasicInfoInterface](glbasicinfointerface.mdx). |
@@ -942,6 +946,23 @@ public void DrawArrays(int mode, int first, IntPtr count)
 
 <section className="apiref-page__member-entry">
 
+<span id="uid-5b30f2075a"></span>
+
+### DrawBuffer Method
+
+```csharp
+public void DrawBuffer(int buffer)
+```
+
+#### Parameters
+
+`buffer` int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-ea6a2579e2"></span>
 
 ### DrawElements Method
@@ -962,6 +983,26 @@ public void DrawElements(int mode, int count, int type, IntPtr indices)
 
 
 `indices` IntPtr
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e69b7519ac"></span>
+
+### EGLImageTargetTexture2DOES Method
+
+```csharp
+public void EGLImageTargetTexture2DOES(int target, IntPtr image)
+```
+
+#### Parameters
+
+`target` int
+
+
+`image` IntPtr
 
 
 </section>
@@ -1579,6 +1620,23 @@ string
 
 <section className="apiref-page__member-entry">
 
+<span id="uid-f18e2d416c"></span>
+
+### ReadBuffer Method
+
+```csharp
+public void ReadBuffer(int buffer)
+```
+
+#### Parameters
+
+`buffer` int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-a543469bca"></span>
 
 ### RenderbufferStorage Method
@@ -1854,6 +1912,23 @@ public void Viewport(int x, int y, int width, int height)
 
 </section>
 
+<section className="apiref-page__member-entry">
+
+<span id="uid-15371c9e56"></span>
+
+### WriteBuffer Method
+
+```csharp
+public void WriteBuffer(int buffer)
+```
+
+#### Parameters
+
+`buffer` int
+
+
+</section>
+
 ## Properties
 
 | Name | Description |
@@ -1862,7 +1937,11 @@ public void Viewport(int x, int y, int width, int height)
 | [IsBindVertexArrayAvailable](#uid-35d5d10cba) | No summary available. |
 | [IsBlitFramebufferAvailable](#uid-819722db71) | No summary available. |
 | [IsDeleteVertexArraysAvailable](#uid-26a96e8953) | No summary available. |
+| [IsDrawBufferAvailable](#uid-ae439ec1f1) | No summary available. |
+| [IsEGLImageTargetTexture2DOESAvailable](#uid-dbc8abc7da) | No summary available. |
 | [IsGenVertexArraysAvailable](#uid-31ec4cb68b) | No summary available. |
+| [IsReadBufferAvailable](#uid-8767069a1e) | No summary available. |
+| [IsWriteBufferAvailable](#uid-2111b1b34f) | No summary available. |
 | [Renderer](#uid-a4cbddaeb4) | No summary available. |
 | [Vendor](#uid-a0d1f59df7) | No summary available. |
 | [Version](#uid-499f67454c) | No summary available. |
@@ -1917,12 +1996,60 @@ public bool IsDeleteVertexArraysAvailable { get; set; }
 
 <section className="apiref-page__member-entry">
 
+<span id="uid-ae439ec1f1"></span>
+
+### IsDrawBufferAvailable Property
+
+```csharp
+public bool IsDrawBufferAvailable { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-dbc8abc7da"></span>
+
+### IsEGLImageTargetTexture2DOESAvailable Property
+
+```csharp
+public bool IsEGLImageTargetTexture2DOESAvailable { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-31ec4cb68b"></span>
 
 ### IsGenVertexArraysAvailable Property
 
 ```csharp
 public bool IsGenVertexArraysAvailable { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8767069a1e"></span>
+
+### IsReadBufferAvailable Property
+
+```csharp
+public bool IsReadBufferAvailable { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2111b1b34f"></span>
+
+### IsWriteBufferAvailable Property
+
+```csharp
+public bool IsWriteBufferAvailable { get; set; }
 ```
 
 </section>

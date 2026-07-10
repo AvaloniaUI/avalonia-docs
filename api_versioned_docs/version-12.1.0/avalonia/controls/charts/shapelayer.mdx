@@ -1,0 +1,1205 @@
+---
+title: 'ShapeLayer'
+hide_title: true
+slug: '/avalonia/controls/charts/shapelayer'
+uid: 'Avalonia.Controls.Charts.ShapeLayer'
+commentId: 'T:Avalonia.Controls.Charts.ShapeLayer'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Charts'
+assembly: 'Avalonia.Controls.Charts'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Charts'
+tfms:
+  - 'net9.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ShapeLayer Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Charts</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Charts</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Charts</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A shape layer that renders GeoJSON data as geographic shapes.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class ShapeLayer
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="maplayer">MapLayer</a> <span className="apiref-page__relation-separator">-&gt;</span> ShapeLayer
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="iitemselectablechart">IItemSelectableChart</a>, <a href="iselectablechart">ISelectableChart</a>
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [ShapeLayer](#uid-296a938c25) | Initializes a new instance of the [Avalonia.Controls.Charts.ShapeLayer](xref:Avalonia.Controls.Charts.ShapeLayer) class. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-296a938c25"></span>
+
+### ShapeLayer Constructor
+
+Initializes a new instance of the [Avalonia.Controls.Charts.ShapeLayer](xref:Avalonia.Controls.Charts.ShapeLayer) class.
+
+```csharp
+public ShapeLayer()
+```
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [ClearSelection](#uid-b18add5f0c) | Clears the current selection. |
+| [GetFeatureData](#uid-332947248f) | Resolves the backing data item or fallback property map for a feature. |
+| [GetFeaturesAt](#uid-ef7f906acf) | Returns the features hit by the specified chart-space point. |
+| [GetLayerBounds](#uid-847749a44c) | Gets the geographic bounds (in 0-200, 0-100 viewport units) of the content in this layer. Used for auto-scaling the map to fit content. |
+| [GetPointData](#uid-ed04ea1226) | Gets the data item at the specified screen point. |
+| [IsItemSelected](#uid-cf05ed7917) | Checks whether the specified item is selected. |
+| [OnPointerExited](#uid-8076268a94) | Handles pointer exited events. Override this method to handle interactions (e.g. clearing hover effects). |
+| [OnPointerMoved](#uid-c3c54fecea) | Handles pointer moved events. Override this method to handle interactions (e.g. hover effects). |
+| [OnPointerPressed](#uid-4a3d06e294) | Handles pointer pressed events. Override this method to handle interactions (e.g. selection). |
+| [Render](#uid-ce6be291f1) | Renders this layer to the drawing context. |
+| [TrySelectItem](#uid-35a95381f9) | Attempts to select the specified item. |
+| [Bind (8 overloads)](../../avaloniaobject.mdx#uid-1c60c7bda3) | Binds a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) to an [Avalonia.Data.BindingBase](xref:Avalonia.Data.BindingBase). Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [CheckAccess](../../avaloniaobject.mdx#uid-260ff7a68d) | Returns a value indicating whether the current thread is the UI thread. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [ClearValue (4 overloads)](../../avaloniaobject.mdx#uid-41de208fbe) | Clears a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty)'s local value. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [CoerceValue](../../avaloniaobject.mdx#uid-3bec32f39e) | Coerces the specified [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty). Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [Equals](../../avaloniaobject.mdx#uid-a8a8e94305) | Compares two objects using reference equality. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [GetBaseValue](../../avaloniaobject.mdx#uid-9c615efbba) | Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [GetHashCode](../../avaloniaobject.mdx#uid-7f7db1e7a2) | Gets the hash code for the object. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [GetValue (3 overloads)](../../avaloniaobject.mdx#uid-5142cd4792) | Gets a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [IsAnimating](../../avaloniaobject.mdx#uid-8cbfc7521a) | Checks whether a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) is animating. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [IsSet](../../avaloniaobject.mdx#uid-f8bf0bbdcc) | Checks whether a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) is set on this object. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [SetCurrentValue (2 overloads)](../../avaloniaobject.mdx#uid-38759fd088) | Sets the value of a dependency property without changing its value source. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [SetValue (3 overloads)](../../avaloniaobject.mdx#uid-47d14e19d7) | Sets a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [VerifyAccess](../../avaloniaobject.mdx#uid-3b9d3c9793) | Checks that the current thread is the UI thread and throws if not. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b18add5f0c"></span>
+
+### ClearSelection Method
+
+Clears the current selection.
+
+```csharp
+public void ClearSelection()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-332947248f"></span>
+
+### GetFeatureData Method
+
+Resolves the backing data item or fallback property map for a feature.
+
+```csharp
+public object GetFeatureData(Avalonia.Controls.Charts.GeoJsonFeature feature)
+```
+
+#### Parameters
+
+`feature` [Avalonia.Controls.Charts.GeoJsonFeature](xref:Avalonia.Controls.Charts.GeoJsonFeature)
+
+The feature whose data should be resolved.
+
+
+#### Returns
+
+object
+
+The matching source item when available; otherwise a feature property dictionary or null.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ef7f906acf"></span>
+
+### GetFeaturesAt Method
+
+Returns the features hit by the specified chart-space point.
+
+```csharp
+public System.Collections.Generic.IEnumerable<Avalonia.Controls.Charts.GeoJsonFeature> GetFeaturesAt(Avalonia.Point point, Avalonia.Rect chartArea)
+```
+
+#### Parameters
+
+`point` [Avalonia.Point](xref:Avalonia.Point)
+
+The chart-space point to test.
+
+
+`chartArea` [Avalonia.Rect](xref:Avalonia.Rect)
+
+The chart area used to transform screen coordinates into map coordinates.
+
+
+#### Returns
+
+System.Collections.Generic.IEnumerable&lt;[Avalonia.Controls.Charts.GeoJsonFeature](xref:Avalonia.Controls.Charts.GeoJsonFeature)&gt;
+
+The features that contain the supplied point.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-847749a44c"></span>
+
+### GetLayerBounds Method
+
+Gets the geographic bounds (in 0-200, 0-100 viewport units) of the content in this layer.
+Used for auto-scaling the map to fit content.
+
+```csharp
+public Nullable<Avalonia.Rect> GetLayerBounds()
+```
+
+#### Returns
+
+Nullable&lt;[Avalonia.Rect](xref:Avalonia.Rect)&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ed04ea1226"></span>
+
+### GetPointData Method
+
+Gets the data item at the specified screen point.
+
+```csharp
+public object GetPointData(Avalonia.Point point, Avalonia.Rect chartArea)
+```
+
+#### Parameters
+
+`point` [Avalonia.Point](xref:Avalonia.Point)
+
+The screen point to test.
+
+
+`chartArea` [Avalonia.Rect](xref:Avalonia.Rect)
+
+The chart area rectangle.
+
+
+#### Returns
+
+object
+
+The data item if hit; otherwise, null.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-cf05ed7917"></span>
+
+### IsItemSelected Method
+
+Checks whether the specified item is selected.
+
+```csharp
+public bool IsItemSelected(object item)
+```
+
+#### Parameters
+
+`item` object
+
+The item to check.
+
+
+#### Returns
+
+bool
+
+True if the item is selected.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8076268a94"></span>
+
+### OnPointerExited Method
+
+Handles pointer exited events.
+Override this method to handle interactions (e.g. clearing hover effects).
+
+```csharp
+public void OnPointerExited()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c3c54fecea"></span>
+
+### OnPointerMoved Method
+
+Handles pointer moved events.
+Override this method to handle interactions (e.g. hover effects).
+
+```csharp
+public bool OnPointerMoved(Avalonia.Point point, Avalonia.Rect chartArea)
+```
+
+#### Parameters
+
+`point` [Avalonia.Point](xref:Avalonia.Point)
+
+
+`chartArea` [Avalonia.Rect](xref:Avalonia.Rect)
+
+
+#### Returns
+
+bool
+
+True if handled.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4a3d06e294"></span>
+
+### OnPointerPressed Method
+
+Handles pointer pressed events.
+Override this method to handle interactions (e.g. selection).
+
+```csharp
+public bool OnPointerPressed(Avalonia.Point point, Avalonia.Rect chartArea)
+```
+
+#### Parameters
+
+`point` [Avalonia.Point](xref:Avalonia.Point)
+
+
+`chartArea` [Avalonia.Rect](xref:Avalonia.Rect)
+
+
+#### Returns
+
+bool
+
+True if handled.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ce6be291f1"></span>
+
+### Render Method
+
+Renders this layer to the drawing context.
+
+```csharp
+public void Render(Avalonia.Media.DrawingContext context, Avalonia.Rect chartArea, double animationProgress)
+```
+
+#### Parameters
+
+`context` [Avalonia.Media.DrawingContext](xref:Avalonia.Media.DrawingContext)
+
+The drawing context.
+
+
+`chartArea` [Avalonia.Rect](xref:Avalonia.Rect)
+
+The chart area rectangle.
+
+
+`animationProgress` double
+
+Animation progress from 0 to 1.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-35a95381f9"></span>
+
+### TrySelectItem Method
+
+Attempts to select the specified item.
+
+```csharp
+public bool TrySelectItem(object item)
+```
+
+#### Parameters
+
+`item` object
+
+The item to select.
+
+
+#### Returns
+
+bool
+
+True if the selection state changed.
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [ColorMappings](#uid-d82b0e9537) | Gets or sets the collection of color mappings for shapes. |
+| [GeoJson](#uid-f82439ee26) | Gets or sets the GeoJSON string data. |
+| [GeoJsonIdPath](#uid-8d096424f4) | Gets or sets the property name in GeoJSON to use as a unique identifier. |
+| [HighBrush](#uid-1e8f78003f) | Gets or sets the brush for the highest data values. |
+| [HoverBrush](#uid-f7f0a214d4) | Gets or sets the brush applied when hovering over a region. |
+| [IsSelectionEnabled](#uid-c91021eef6) | Gets or sets whether selection is enabled for map regions. |
+| [ItemsSource](#uid-fa394c6872) | Gets or sets the data collection to bind to map regions. |
+| [LabelForeground](#uid-8cd9dce39e) | Gets or sets the foreground brush for data labels. |
+| [LabelPath](#uid-cc88885080) | Gets or sets the property path for data label text. |
+| [Legend](#uid-de2a2ef170) | Gets or sets the legend associated with this layer. |
+| [LowBrush](#uid-91a46429e8) | Gets or sets the brush for the lowest data values. |
+| [MaxValue](#uid-3cdb774683) | Gets or sets the maximum value for color normalization. |
+| [MinValue](#uid-752d424163) | Gets or sets the minimum value for color normalization. |
+| [RegionPath](#uid-009eb27c03) | Gets or sets the property path in [Avalonia.Controls.Charts.ShapeLayer.ItemsSource](xref:Avalonia.Controls.Charts.ShapeLayer.ItemsSource) that matches GeoJSON identifiers. |
+| [SelectedItem](#uid-4585cf6cae) | Gets or sets the currently selected data item. |
+| [SelectedItems](#uid-28240511a9) | Gets or sets the collection of selected data items. |
+| [SelectionBrush](#uid-4a82f02a5e) | Gets or sets the brush used for selected regions. |
+| [SelectionMode](#uid-e091221e5c) | Gets or sets the selection mode. |
+| [SelectionStroke](#uid-ef1b1fcc7d) | Gets or sets the stroke brush used to outline selected regions. |
+| [SelectionStrokeThickness](#uid-5bedf1a0c5) | Gets or sets the stroke thickness for selected regions. |
+| [ShowLabels](#uid-b058cf2a47) | Gets or sets whether to display data labels on regions. |
+| [Source](#uid-0e37825776) | Gets or sets the URI source for GeoJSON data. |
+| [Stroke](#uid-088390b430) | Gets or sets the brush for shape outlines. |
+| [StrokeThickness](#uid-781efb3de2) | Gets or sets the thickness of shape outlines. |
+| [ValuePath](#uid-54d9261374) | Gets or sets the property path in [Avalonia.Controls.Charts.ShapeLayer.ItemsSource](xref:Avalonia.Controls.Charts.ShapeLayer.ItemsSource) for region values. |
+| [IsVisible](maplayer.mdx#uid-93a23c42b6) | Gets or sets whether this layer is visible. Inherited from [MapLayer](maplayer.mdx). |
+| [Opacity](maplayer.mdx#uid-7b32d6b968) | Gets or sets the opacity of this layer. Inherited from [MapLayer](maplayer.mdx). |
+| [TooltipTemplate](maplayer.mdx#uid-f880527475) | Gets or sets the data template used for tooltips. Inherited from [MapLayer](maplayer.mdx). |
+| [Dispatcher](../../avaloniaobject.mdx#uid-b25fa51632) | Returns the [Avalonia.AvaloniaObject.Dispatcher](xref:Avalonia.AvaloniaObject.Dispatcher) that this [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject) is associated with. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [Item](../../avaloniaobject.mdx#uid-c1d1f1bc0f) | Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d82b0e9537"></span>
+
+### ColorMappings Property
+
+Gets or sets the collection of color mappings for shapes.
+
+```csharp
+public System.Collections.Generic.IList<Avalonia.Controls.Charts.ColorMapping> ColorMappings { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f82439ee26"></span>
+
+### GeoJson Property
+
+Gets or sets the GeoJSON string data.
+
+```csharp
+public string GeoJson { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8d096424f4"></span>
+
+### GeoJsonIdPath Property
+
+Gets or sets the property name in GeoJSON to use as a unique identifier.
+
+```csharp
+public string GeoJsonIdPath { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1e8f78003f"></span>
+
+### HighBrush Property
+
+Gets or sets the brush for the highest data values.
+
+```csharp
+public Avalonia.Media.IBrush HighBrush { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f7f0a214d4"></span>
+
+### HoverBrush Property
+
+Gets or sets the brush applied when hovering over a region.
+
+```csharp
+public Avalonia.Media.IBrush HoverBrush { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c91021eef6"></span>
+
+### IsSelectionEnabled Property
+
+Gets or sets whether selection is enabled for map regions.
+
+```csharp
+public bool IsSelectionEnabled { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-fa394c6872"></span>
+
+### ItemsSource Property
+
+Gets or sets the data collection to bind to map regions.
+
+```csharp
+public System.Collections.IEnumerable ItemsSource { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8cd9dce39e"></span>
+
+### LabelForeground Property
+
+Gets or sets the foreground brush for data labels.
+
+```csharp
+public Avalonia.Media.IBrush LabelForeground { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-cc88885080"></span>
+
+### LabelPath Property
+
+Gets or sets the property path for data label text.
+
+```csharp
+public string LabelPath { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-de2a2ef170"></span>
+
+### Legend Property
+
+Gets or sets the legend associated with this layer.
+
+```csharp
+public Avalonia.Controls.Charts.MapLegend Legend { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-91a46429e8"></span>
+
+### LowBrush Property
+
+Gets or sets the brush for the lowest data values.
+
+```csharp
+public Avalonia.Media.IBrush LowBrush { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3cdb774683"></span>
+
+### MaxValue Property
+
+Gets or sets the maximum value for color normalization.
+
+```csharp
+public double MaxValue { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-752d424163"></span>
+
+### MinValue Property
+
+Gets or sets the minimum value for color normalization.
+
+```csharp
+public double MinValue { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-009eb27c03"></span>
+
+### RegionPath Property
+
+Gets or sets the property path in [Avalonia.Controls.Charts.ShapeLayer.ItemsSource](xref:Avalonia.Controls.Charts.ShapeLayer.ItemsSource) that matches GeoJSON identifiers.
+
+```csharp
+public string RegionPath { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4585cf6cae"></span>
+
+### SelectedItem Property
+
+Gets or sets the currently selected data item.
+
+```csharp
+public object SelectedItem { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-28240511a9"></span>
+
+### SelectedItems Property
+
+Gets or sets the collection of selected data items.
+
+```csharp
+public System.Collections.IList SelectedItems { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4a82f02a5e"></span>
+
+### SelectionBrush Property
+
+Gets or sets the brush used for selected regions.
+
+```csharp
+public Avalonia.Media.IBrush SelectionBrush { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e091221e5c"></span>
+
+### SelectionMode Property
+
+Gets or sets the selection mode.
+
+```csharp
+public Avalonia.Controls.Charts.ChartSelectionMode SelectionMode { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ef1b1fcc7d"></span>
+
+### SelectionStroke Property
+
+Gets or sets the stroke brush used to outline selected regions.
+
+```csharp
+public Avalonia.Media.IBrush SelectionStroke { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5bedf1a0c5"></span>
+
+### SelectionStrokeThickness Property
+
+Gets or sets the stroke thickness for selected regions.
+
+```csharp
+public double SelectionStrokeThickness { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b058cf2a47"></span>
+
+### ShowLabels Property
+
+Gets or sets whether to display data labels on regions.
+
+```csharp
+public bool ShowLabels { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0e37825776"></span>
+
+### Source Property
+
+Gets or sets the URI source for GeoJSON data.
+
+```csharp
+public Uri Source { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-088390b430"></span>
+
+### Stroke Property
+
+Gets or sets the brush for shape outlines.
+
+```csharp
+public Avalonia.Media.IBrush Stroke { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-781efb3de2"></span>
+
+### StrokeThickness Property
+
+Gets or sets the thickness of shape outlines.
+
+```csharp
+public double StrokeThickness { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-54d9261374"></span>
+
+### ValuePath Property
+
+Gets or sets the property path in [Avalonia.Controls.Charts.ShapeLayer.ItemsSource](xref:Avalonia.Controls.Charts.ShapeLayer.ItemsSource) for region values.
+
+```csharp
+public string ValuePath { get; set; }
+```
+
+</section>
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [ColorMappingsProperty](#uid-652dc7c68c) | Identifies the [Avalonia.Controls.Charts.ShapeLayer.ColorMappings](xref:Avalonia.Controls.Charts.ShapeLayer.ColorMappings) Avalonia property. |
+| [GeoJsonIdPathProperty](#uid-91340c9858) | Identifies the [Avalonia.Controls.Charts.ShapeLayer.GeoJsonIdPath](xref:Avalonia.Controls.Charts.ShapeLayer.GeoJsonIdPath) Avalonia property. |
+| [GeoJsonProperty](#uid-b9a0da650b) | Identifies the [Avalonia.Controls.Charts.ShapeLayer.GeoJson](xref:Avalonia.Controls.Charts.ShapeLayer.GeoJson) Avalonia property. |
+| [HighBrushProperty](#uid-1f6f3f689f) | Identifies the [Avalonia.Controls.Charts.ShapeLayer.HighBrush](xref:Avalonia.Controls.Charts.ShapeLayer.HighBrush) Avalonia property. |
+| [HoverBrushProperty](#uid-75ee492bc2) | Identifies the [Avalonia.Controls.Charts.ShapeLayer.HoverBrush](xref:Avalonia.Controls.Charts.ShapeLayer.HoverBrush) Avalonia property. |
+| [IsSelectionEnabledProperty](#uid-2c2f011948) | Identifies the [Avalonia.Controls.Charts.ShapeLayer.IsSelectionEnabled](xref:Avalonia.Controls.Charts.ShapeLayer.IsSelectionEnabled) Avalonia property. |
+| [ItemsSourceProperty](#uid-6d7285b57f) | Identifies the [Avalonia.Controls.Charts.ShapeLayer.ItemsSource](xref:Avalonia.Controls.Charts.ShapeLayer.ItemsSource) Avalonia property. |
+| [LabelForegroundProperty](#uid-b44b1204f9) | Identifies the [Avalonia.Controls.Charts.ShapeLayer.LabelForeground](xref:Avalonia.Controls.Charts.ShapeLayer.LabelForeground) Avalonia property. |
+| [LabelPathProperty](#uid-45d8449a26) | Identifies the [Avalonia.Controls.Charts.ShapeLayer.LabelPath](xref:Avalonia.Controls.Charts.ShapeLayer.LabelPath) Avalonia property. |
+| [LegendProperty](#uid-0c07311665) | Identifies the [Avalonia.Controls.Charts.ShapeLayer.Legend](xref:Avalonia.Controls.Charts.ShapeLayer.Legend) Avalonia property. |
+| [LowBrushProperty](#uid-02d57a6adc) | Identifies the [Avalonia.Controls.Charts.ShapeLayer.LowBrush](xref:Avalonia.Controls.Charts.ShapeLayer.LowBrush) Avalonia property. |
+| [MaxValueProperty](#uid-0ca28a06b9) | Identifies the [Avalonia.Controls.Charts.ShapeLayer.MaxValue](xref:Avalonia.Controls.Charts.ShapeLayer.MaxValue) Avalonia property. |
+| [MinValueProperty](#uid-152ddf93d7) | Identifies the [Avalonia.Controls.Charts.ShapeLayer.MinValue](xref:Avalonia.Controls.Charts.ShapeLayer.MinValue) Avalonia property. |
+| [RegionPathProperty](#uid-0ed1ad0567) | Identifies the [Avalonia.Controls.Charts.ShapeLayer.RegionPath](xref:Avalonia.Controls.Charts.ShapeLayer.RegionPath) Avalonia property. |
+| [SelectedItemProperty](#uid-254fd4cc60) | Identifies the [Avalonia.Controls.Charts.ShapeLayer.SelectedItem](xref:Avalonia.Controls.Charts.ShapeLayer.SelectedItem) Avalonia property. |
+| [SelectedItemsProperty](#uid-39a6c37d51) | Identifies the [Avalonia.Controls.Charts.ShapeLayer.SelectedItems](xref:Avalonia.Controls.Charts.ShapeLayer.SelectedItems) Avalonia property. |
+| [SelectionBrushProperty](#uid-c5245b66a2) | Identifies the [Avalonia.Controls.Charts.ShapeLayer.SelectionBrush](xref:Avalonia.Controls.Charts.ShapeLayer.SelectionBrush) Avalonia property. |
+| [SelectionModeProperty](#uid-d032494979) | Identifies the [Avalonia.Controls.Charts.ShapeLayer.SelectionMode](xref:Avalonia.Controls.Charts.ShapeLayer.SelectionMode) Avalonia property. |
+| [SelectionStrokeProperty](#uid-686478b742) | Identifies the [Avalonia.Controls.Charts.ShapeLayer.SelectionStroke](xref:Avalonia.Controls.Charts.ShapeLayer.SelectionStroke) Avalonia property. |
+| [SelectionStrokeThicknessProperty](#uid-b16d7714d6) | Identifies the [Avalonia.Controls.Charts.ShapeLayer.SelectionStrokeThickness](xref:Avalonia.Controls.Charts.ShapeLayer.SelectionStrokeThickness) Avalonia property. |
+| [ShowLabelsProperty](#uid-68ffddd728) | Identifies the [Avalonia.Controls.Charts.ShapeLayer.ShowLabels](xref:Avalonia.Controls.Charts.ShapeLayer.ShowLabels) Avalonia property. |
+| [SourceProperty](#uid-3c0258d875) | Identifies the [Avalonia.Controls.Charts.ShapeLayer.Source](xref:Avalonia.Controls.Charts.ShapeLayer.Source) Avalonia property. |
+| [StrokeProperty](#uid-aa89fef3b6) | Identifies the [Avalonia.Controls.Charts.ShapeLayer.Stroke](xref:Avalonia.Controls.Charts.ShapeLayer.Stroke) Avalonia property. |
+| [StrokeThicknessProperty](#uid-0e72cd2e2a) | Identifies the [Avalonia.Controls.Charts.ShapeLayer.StrokeThickness](xref:Avalonia.Controls.Charts.ShapeLayer.StrokeThickness) Avalonia property. |
+| [ValuePathProperty](#uid-53341ad8d4) | Identifies the [Avalonia.Controls.Charts.ShapeLayer.ValuePath](xref:Avalonia.Controls.Charts.ShapeLayer.ValuePath) Avalonia property. |
+| [IsVisibleProperty](maplayer.mdx#uid-74f0177084) | Identifies the [Avalonia.Controls.Charts.MapLayer.IsVisible](xref:Avalonia.Controls.Charts.MapLayer.IsVisible) Avalonia property. Inherited from [MapLayer](maplayer.mdx). |
+| [OpacityProperty](maplayer.mdx#uid-7b17fad341) | Identifies the [Avalonia.Controls.Charts.MapLayer.Opacity](xref:Avalonia.Controls.Charts.MapLayer.Opacity) Avalonia property. Inherited from [MapLayer](maplayer.mdx). |
+| [TooltipTemplateProperty](maplayer.mdx#uid-10362b19e1) | Identifies the [Avalonia.Controls.Charts.MapLayer.TooltipTemplate](xref:Avalonia.Controls.Charts.MapLayer.TooltipTemplate) Avalonia property. Inherited from [MapLayer](maplayer.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-652dc7c68c"></span>
+
+### ColorMappingsProperty Field
+
+Identifies the [Avalonia.Controls.Charts.ShapeLayer.ColorMappings](xref:Avalonia.Controls.Charts.ShapeLayer.ColorMappings) Avalonia property.
+
+```csharp
+public Avalonia.StyledProperty<System.Collections.Generic.IList<Avalonia.Controls.Charts.ColorMapping>> ColorMappingsProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-91340c9858"></span>
+
+### GeoJsonIdPathProperty Field
+
+Identifies the [Avalonia.Controls.Charts.ShapeLayer.GeoJsonIdPath](xref:Avalonia.Controls.Charts.ShapeLayer.GeoJsonIdPath) Avalonia property.
+
+```csharp
+public Avalonia.StyledProperty<string> GeoJsonIdPathProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b9a0da650b"></span>
+
+### GeoJsonProperty Field
+
+Identifies the [Avalonia.Controls.Charts.ShapeLayer.GeoJson](xref:Avalonia.Controls.Charts.ShapeLayer.GeoJson) Avalonia property.
+
+```csharp
+public Avalonia.StyledProperty<string> GeoJsonProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1f6f3f689f"></span>
+
+### HighBrushProperty Field
+
+Identifies the [Avalonia.Controls.Charts.ShapeLayer.HighBrush](xref:Avalonia.Controls.Charts.ShapeLayer.HighBrush) Avalonia property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Media.IBrush> HighBrushProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-75ee492bc2"></span>
+
+### HoverBrushProperty Field
+
+Identifies the [Avalonia.Controls.Charts.ShapeLayer.HoverBrush](xref:Avalonia.Controls.Charts.ShapeLayer.HoverBrush) Avalonia property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Media.IBrush> HoverBrushProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2c2f011948"></span>
+
+### IsSelectionEnabledProperty Field
+
+Identifies the [Avalonia.Controls.Charts.ShapeLayer.IsSelectionEnabled](xref:Avalonia.Controls.Charts.ShapeLayer.IsSelectionEnabled) Avalonia property.
+
+```csharp
+public Avalonia.StyledProperty<bool> IsSelectionEnabledProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6d7285b57f"></span>
+
+### ItemsSourceProperty Field
+
+Identifies the [Avalonia.Controls.Charts.ShapeLayer.ItemsSource](xref:Avalonia.Controls.Charts.ShapeLayer.ItemsSource) Avalonia property.
+
+```csharp
+public Avalonia.StyledProperty<System.Collections.IEnumerable> ItemsSourceProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b44b1204f9"></span>
+
+### LabelForegroundProperty Field
+
+Identifies the [Avalonia.Controls.Charts.ShapeLayer.LabelForeground](xref:Avalonia.Controls.Charts.ShapeLayer.LabelForeground) Avalonia property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Media.IBrush> LabelForegroundProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-45d8449a26"></span>
+
+### LabelPathProperty Field
+
+Identifies the [Avalonia.Controls.Charts.ShapeLayer.LabelPath](xref:Avalonia.Controls.Charts.ShapeLayer.LabelPath) Avalonia property.
+
+```csharp
+public Avalonia.StyledProperty<string> LabelPathProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0c07311665"></span>
+
+### LegendProperty Field
+
+Identifies the [Avalonia.Controls.Charts.ShapeLayer.Legend](xref:Avalonia.Controls.Charts.ShapeLayer.Legend) Avalonia property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.Charts.MapLegend> LegendProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-02d57a6adc"></span>
+
+### LowBrushProperty Field
+
+Identifies the [Avalonia.Controls.Charts.ShapeLayer.LowBrush](xref:Avalonia.Controls.Charts.ShapeLayer.LowBrush) Avalonia property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Media.IBrush> LowBrushProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0ca28a06b9"></span>
+
+### MaxValueProperty Field
+
+Identifies the [Avalonia.Controls.Charts.ShapeLayer.MaxValue](xref:Avalonia.Controls.Charts.ShapeLayer.MaxValue) Avalonia property.
+
+```csharp
+public Avalonia.StyledProperty<double> MaxValueProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-152ddf93d7"></span>
+
+### MinValueProperty Field
+
+Identifies the [Avalonia.Controls.Charts.ShapeLayer.MinValue](xref:Avalonia.Controls.Charts.ShapeLayer.MinValue) Avalonia property.
+
+```csharp
+public Avalonia.StyledProperty<double> MinValueProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0ed1ad0567"></span>
+
+### RegionPathProperty Field
+
+Identifies the [Avalonia.Controls.Charts.ShapeLayer.RegionPath](xref:Avalonia.Controls.Charts.ShapeLayer.RegionPath) Avalonia property.
+
+```csharp
+public Avalonia.StyledProperty<string> RegionPathProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-254fd4cc60"></span>
+
+### SelectedItemProperty Field
+
+Identifies the [Avalonia.Controls.Charts.ShapeLayer.SelectedItem](xref:Avalonia.Controls.Charts.ShapeLayer.SelectedItem) Avalonia property.
+
+```csharp
+public Avalonia.StyledProperty<object> SelectedItemProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-39a6c37d51"></span>
+
+### SelectedItemsProperty Field
+
+Identifies the [Avalonia.Controls.Charts.ShapeLayer.SelectedItems](xref:Avalonia.Controls.Charts.ShapeLayer.SelectedItems) Avalonia property.
+
+```csharp
+public Avalonia.StyledProperty<System.Collections.IList> SelectedItemsProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c5245b66a2"></span>
+
+### SelectionBrushProperty Field
+
+Identifies the [Avalonia.Controls.Charts.ShapeLayer.SelectionBrush](xref:Avalonia.Controls.Charts.ShapeLayer.SelectionBrush) Avalonia property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Media.IBrush> SelectionBrushProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d032494979"></span>
+
+### SelectionModeProperty Field
+
+Identifies the [Avalonia.Controls.Charts.ShapeLayer.SelectionMode](xref:Avalonia.Controls.Charts.ShapeLayer.SelectionMode) Avalonia property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.Charts.ChartSelectionMode> SelectionModeProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-686478b742"></span>
+
+### SelectionStrokeProperty Field
+
+Identifies the [Avalonia.Controls.Charts.ShapeLayer.SelectionStroke](xref:Avalonia.Controls.Charts.ShapeLayer.SelectionStroke) Avalonia property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Media.IBrush> SelectionStrokeProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b16d7714d6"></span>
+
+### SelectionStrokeThicknessProperty Field
+
+Identifies the [Avalonia.Controls.Charts.ShapeLayer.SelectionStrokeThickness](xref:Avalonia.Controls.Charts.ShapeLayer.SelectionStrokeThickness) Avalonia property.
+
+```csharp
+public Avalonia.StyledProperty<double> SelectionStrokeThicknessProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-68ffddd728"></span>
+
+### ShowLabelsProperty Field
+
+Identifies the [Avalonia.Controls.Charts.ShapeLayer.ShowLabels](xref:Avalonia.Controls.Charts.ShapeLayer.ShowLabels) Avalonia property.
+
+```csharp
+public Avalonia.StyledProperty<bool> ShowLabelsProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3c0258d875"></span>
+
+### SourceProperty Field
+
+Identifies the [Avalonia.Controls.Charts.ShapeLayer.Source](xref:Avalonia.Controls.Charts.ShapeLayer.Source) Avalonia property.
+
+```csharp
+public Avalonia.StyledProperty<Uri> SourceProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-aa89fef3b6"></span>
+
+### StrokeProperty Field
+
+Identifies the [Avalonia.Controls.Charts.ShapeLayer.Stroke](xref:Avalonia.Controls.Charts.ShapeLayer.Stroke) Avalonia property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Media.IBrush> StrokeProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0e72cd2e2a"></span>
+
+### StrokeThicknessProperty Field
+
+Identifies the [Avalonia.Controls.Charts.ShapeLayer.StrokeThickness](xref:Avalonia.Controls.Charts.ShapeLayer.StrokeThickness) Avalonia property.
+
+```csharp
+public Avalonia.StyledProperty<double> StrokeThicknessProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-53341ad8d4"></span>
+
+### ValuePathProperty Field
+
+Identifies the [Avalonia.Controls.Charts.ShapeLayer.ValuePath](xref:Avalonia.Controls.Charts.ShapeLayer.ValuePath) Avalonia property.
+
+```csharp
+public Avalonia.StyledProperty<string> ValuePathProperty
+```
+
+</section>
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [SelectionChanged](#uid-34c6516cbd) | Occurs when selection changes. |
+| [SelectionChanging](#uid-7303179825) | Occurs before selection changes. |
+| [Invalidated](maplayer.mdx#uid-995465c2b4) | Event raised when the layer needs to be redrawn. Inherited from [MapLayer](maplayer.mdx). |
+| [PropertyChanged](../../avaloniaobject.mdx#uid-d758e26fae) | Raised when a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value changes on this object. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-34c6516cbd"></span>
+
+### SelectionChanged Event
+
+Occurs when selection changes.
+
+```csharp
+public event EventHandler<Avalonia.Controls.Charts.ChartSelectionChangedEventArgs> SelectionChanged
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7303179825"></span>
+
+### SelectionChanging Event
+
+Occurs before selection changes.
+
+```csharp
+public event EventHandler<Avalonia.Controls.Charts.ChartSelectionChangingEventArgs> SelectionChanging
+```
+
+</section>
+
+</ApiRefPage>
+

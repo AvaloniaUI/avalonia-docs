@@ -1,0 +1,282 @@
+---
+title: 'BlockPropertyAction<T>'
+hide_title: true
+slug: '/avalonia/controls/documents/primitives/actions/blockpropertyaction-1'
+uid: 'Avalonia.Controls.Documents.Primitives.Actions.BlockPropertyAction`1'
+commentId: 'T:Avalonia.Controls.Documents.Primitives.Actions.BlockPropertyAction`1'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.RichTextEditor'
+assembly: 'Avalonia.Controls.RichTextEditor'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.Primitives.Actions'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">BlockPropertyAction&lt;T&gt; Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.Primitives.Actions</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.RichTextEditor</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.RichTextEditor</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Base class for block-level property actions.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class BlockPropertyAction<T>
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="editoraction">EditorAction</a> <span className="apiref-page__relation-separator">-&gt;</span> BlockPropertyAction&lt;T&gt;
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="iblockpropertyaction">IBlockPropertyAction</a>, IBlockPropertyAction&lt;&gt;, <a href="ieditoraction">IEditorAction</a>, <a href="ipropertyaction">IPropertyAction</a>
+</div>
+</div>
+
+## Remarks
+
+This base class provides common functionality for actions that modify
+properties on Block elements (Paragraph, Section, etc.).
+
+When the selection spans multiple blocks, all affected blocks have their
+property set. Override [Avalonia.Controls.Documents.Primitives.Actions.BlockPropertyAction&lt;T&gt;.ResolveTargetElements(Avalonia.Controls.Documents.Primitives.ITextEditorHost)](xref:Avalonia.Controls.Documents.Primitives.Actions.BlockPropertyAction%601.ResolveTargetElements%28Avalonia.Controls.Documents.Primitives.ITextEditorHost%29) to change the
+set of elements that are modified (e.g. target [Avalonia.Controls.Documents.TableCell](xref:Avalonia.Controls.Documents.TableCell)
+instead of [Avalonia.Controls.Documents.Paragraph](xref:Avalonia.Controls.Documents.Paragraph)).
+
+Derived classes only need to:
+
+- Specify the target StyledProperty
+- Provide metadata (Id, DisplayName, Gesture)
+- Return available values if applicable
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [CanExecute](#uid-333fea44db) | Gets whether the action can currently execute. |
+| [Execute](#uid-eabe4cfab7) | Executes the action synchronously. |
+| [GetAvailableValues](#uid-b8641a532d) | No summary available. |
+| [GetState](#uid-4dd39cbeb9) | Gets the current state of the action. |
+| [GetValue](#uid-205f04bd6d) | No summary available. |
+| [HasConsistentValue](#uid-2690022924) | Gets whether all affected blocks have the same value for this property. |
+| [SetValue](#uid-29d3de382e) | No summary available. |
+| [ExecuteAsync](editoraction.mdx#uid-6a0258eff0) | Executes the action asynchronously. Inherited from [EditorAction](editoraction.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-333fea44db"></span>
+
+### CanExecute Method
+
+Gets whether the action can currently execute.
+
+```csharp
+public bool CanExecute(Avalonia.Controls.Documents.Primitives.ITextEditorHost host)
+```
+
+#### Parameters
+
+`host` [Avalonia.Controls.Documents.Primitives.ITextEditorHost](xref:Avalonia.Controls.Documents.Primitives.ITextEditorHost)
+
+The editor host to check against.
+
+
+#### Returns
+
+bool
+
+True if the action can execute; otherwise, false.
+
+
+#### Remarks
+
+This is called frequently to update UI state (button enabled/disabled).
+Implementations should be fast and avoid heavy computation.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-eabe4cfab7"></span>
+
+### Execute Method
+
+Executes the action synchronously.
+
+```csharp
+public void Execute(Avalonia.Controls.Documents.Primitives.ITextEditorHost host)
+```
+
+#### Parameters
+
+`host` [Avalonia.Controls.Documents.Primitives.ITextEditorHost](xref:Avalonia.Controls.Documents.Primitives.ITextEditorHost)
+
+The editor host to execute on.
+
+
+#### Remarks
+
+For actions that require async operations (like file dialogs),
+use [Avalonia.Controls.Documents.Primitives.Actions.IEditorAction.ExecuteAsync(Avalonia.Controls.Documents.Primitives.ITextEditorHost)](xref:Avalonia.Controls.Documents.Primitives.Actions.IEditorAction.ExecuteAsync%28Avalonia.Controls.Documents.Primitives.ITextEditorHost%29) instead.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b8641a532d"></span>
+
+### GetAvailableValues Method
+
+```csharp
+public System.Collections.Generic.IEnumerable<T> GetAvailableValues()
+```
+
+#### Returns
+
+System.Collections.Generic.IEnumerable&lt;T&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4dd39cbeb9"></span>
+
+### GetState Method
+
+Gets the current state of the action.
+
+```csharp
+public object GetState(Avalonia.Controls.Documents.Primitives.ITextEditorHost host)
+```
+
+#### Parameters
+
+`host` [Avalonia.Controls.Documents.Primitives.ITextEditorHost](xref:Avalonia.Controls.Documents.Primitives.ITextEditorHost)
+
+The editor host to query.
+
+
+#### Returns
+
+object
+
+The current state, or null if the action has no state.
+For toggle actions, this returns a boolean.
+For property actions, this returns the current property value.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-205f04bd6d"></span>
+
+### GetValue Method
+
+```csharp
+public T GetValue(Avalonia.Controls.Documents.Primitives.ITextEditorHost host)
+```
+
+#### Parameters
+
+`host` [Avalonia.Controls.Documents.Primitives.ITextEditorHost](xref:Avalonia.Controls.Documents.Primitives.ITextEditorHost)
+
+
+#### Returns
+
+T
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2690022924"></span>
+
+### HasConsistentValue Method
+
+Gets whether all affected blocks have the same value for this property.
+
+```csharp
+public bool HasConsistentValue(Avalonia.Controls.Documents.Primitives.ITextEditorHost host)
+```
+
+#### Parameters
+
+`host` [Avalonia.Controls.Documents.Primitives.ITextEditorHost](xref:Avalonia.Controls.Documents.Primitives.ITextEditorHost)
+
+The editor host.
+
+
+#### Returns
+
+bool
+
+True if all affected blocks have the same property value.
+False if blocks have different values (mixed state).
+
+
+#### Remarks
+
+UI controls should show a mixed/indeterminate state when this returns false.
+For example, a [ComboBox](xref:Avalonia.Controls.ComboBox) might show "Mixed" placeholder text.
+
+For collapsed selections, this always returns true (single block).
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-29d3de382e"></span>
+
+### SetValue Method
+
+```csharp
+public void SetValue(Avalonia.Controls.Documents.Primitives.ITextEditorHost host, T value)
+```
+
+#### Parameters
+
+`host` [Avalonia.Controls.Documents.Primitives.ITextEditorHost](xref:Avalonia.Controls.Documents.Primitives.ITextEditorHost)
+
+
+`value` T
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [DisplayName](editoraction.mdx#uid-f07298f749) | Gets the display name for UI purposes. Inherited from [EditorAction](editoraction.mdx). |
+| [Gesture](editoraction.mdx#uid-557e9af400) | Gets the optional keyboard gesture for this action. Inherited from [EditorAction](editoraction.mdx). |
+| [Id](editoraction.mdx#uid-80cef2dbb8) | Gets the unique identifier for this action. Inherited from [EditorAction](editoraction.mdx). |
+
+</ApiRefPage>
+

@@ -98,8 +98,11 @@ public ScrollGestureRecognizer()
 | --- | --- |
 | [CanHorizontallyScroll](#uid-ae5de60c49) | Gets or sets a value indicating whether the content can be scrolled horizontally. |
 | [CanVerticallyScroll](#uid-5b5a26fdfa) | Gets or sets a value indicating whether the content can be scrolled vertically. |
+| [Extent](#uid-fd3ab94b1a) | Gets the extent of the scrollable content. |
 | [IsScrollInertiaEnabled](#uid-543f53394e) | Gets or sets whether the gesture should include inertia in it's behavior. |
+| [Offset](#uid-d72dbaa777) | Gets or sets the current scroll offset. |
 | [ScrollStartDistance](#uid-2fd9b73f38) | Gets or sets a value indicating the distance the pointer moves before scrolling is started |
+| [Viewport](#uid-106ad75105) | Gets the size of the viewport on the scrollable content. |
 | [ActualThemeVariant](../../styledelement.mdx#uid-776bcbe4bf) | Gets the UI theme that is currently used by the element, which might be different than the RequestedThemeVariantProperty. Inherited from [StyledElement](../../styledelement.mdx). |
 | [Classes](../../styledelement.mdx#uid-b7b7edea05) | Gets or sets the styled element's classes. Inherited from [StyledElement](../../styledelement.mdx). |
 | [DataContext](../../styledelement.mdx#uid-647f924a56) | Gets or sets the control's data context. Inherited from [StyledElement](../../styledelement.mdx). |
@@ -145,6 +148,20 @@ public bool CanVerticallyScroll { get; set; }
 
 <section className="apiref-page__member-entry">
 
+<span id="uid-fd3ab94b1a"></span>
+
+### Extent Property
+
+Gets the extent of the scrollable content.
+
+```csharp
+public Nullable<Avalonia.Size> Extent { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-543f53394e"></span>
 
 ### IsScrollInertiaEnabled Property
@@ -153,6 +170,20 @@ Gets or sets whether the gesture should include inertia in it's behavior.
 
 ```csharp
 public bool IsScrollInertiaEnabled { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d72dbaa777"></span>
+
+### Offset Property
+
+Gets or sets the current scroll offset.
+
+```csharp
+public Nullable<Avalonia.Vector> Offset { get; set; }
 ```
 
 </section>
@@ -171,15 +202,32 @@ public int ScrollStartDistance { get; set; }
 
 </section>
 
+<section className="apiref-page__member-entry">
+
+<span id="uid-106ad75105"></span>
+
+### Viewport Property
+
+Gets the size of the viewport on the scrollable content.
+
+```csharp
+public Nullable<Avalonia.Size> Viewport { get; set; }
+```
+
+</section>
+
 ## Fields
 
 | Name | Description |
 | --- | --- |
 | [CanHorizontallyScrollProperty](#uid-f27254627e) | Defines the [Avalonia.Input.GestureRecognizers.ScrollGestureRecognizer.CanHorizontallyScroll](xref:Avalonia.Input.GestureRecognizers.ScrollGestureRecognizer.CanHorizontallyScroll) property. |
 | [CanVerticallyScrollProperty](#uid-ef6b25aaf5) | Defines the [Avalonia.Input.GestureRecognizers.ScrollGestureRecognizer.CanVerticallyScroll](xref:Avalonia.Input.GestureRecognizers.ScrollGestureRecognizer.CanVerticallyScroll) property. |
+| [ExtentProperty](#uid-52c8639f8e) | Defines the [Avalonia.Input.GestureRecognizers.ScrollGestureRecognizer.Extent](xref:Avalonia.Input.GestureRecognizers.ScrollGestureRecognizer.Extent) property. |
 | [InertialResistance](#uid-2778e7614c) | No summary available. |
 | [IsScrollInertiaEnabledProperty](#uid-87e5d3d576) | Defines the [Avalonia.Input.GestureRecognizers.ScrollGestureRecognizer.IsScrollInertiaEnabled](xref:Avalonia.Input.GestureRecognizers.ScrollGestureRecognizer.IsScrollInertiaEnabled) property. |
+| [OffsetProperty](#uid-19155414a0) | Defines the [Avalonia.Input.GestureRecognizers.ScrollGestureRecognizer.Offset](xref:Avalonia.Input.GestureRecognizers.ScrollGestureRecognizer.Offset) property. |
 | [ScrollStartDistanceProperty](#uid-902ef056a3) | Defines the [Avalonia.Input.GestureRecognizers.ScrollGestureRecognizer.ScrollStartDistance](xref:Avalonia.Input.GestureRecognizers.ScrollGestureRecognizer.ScrollStartDistance) property. |
+| [ViewportProperty](#uid-cb54206933) | Defines the [Avalonia.Input.GestureRecognizers.ScrollGestureRecognizer.Viewport](xref:Avalonia.Input.GestureRecognizers.ScrollGestureRecognizer.Viewport) property. |
 | [DataContextProperty](../../styledelement.mdx#uid-7eefabb929) | Defines the [Avalonia.StyledElement.DataContext](xref:Avalonia.StyledElement.DataContext) property. Inherited from [StyledElement](../../styledelement.mdx). |
 | [NameProperty](../../styledelement.mdx#uid-bcdbb9de56) | Defines the [Avalonia.StyledElement.Name](xref:Avalonia.StyledElement.Name) property. Inherited from [StyledElement](../../styledelement.mdx). |
 | [ParentProperty](../../styledelement.mdx#uid-dc6481a488) | Defines the [Avalonia.StyledElement.Parent](xref:Avalonia.StyledElement.Parent) property. Inherited from [StyledElement](../../styledelement.mdx). |
@@ -217,6 +265,20 @@ public Avalonia.DirectProperty<TOwner,TValue><Avalonia.Input.GestureRecognizers.
 
 <section className="apiref-page__member-entry">
 
+<span id="uid-52c8639f8e"></span>
+
+### ExtentProperty Field
+
+Defines the [Avalonia.Input.GestureRecognizers.ScrollGestureRecognizer.Extent](xref:Avalonia.Input.GestureRecognizers.ScrollGestureRecognizer.Extent) property.
+
+```csharp
+public Avalonia.DirectProperty<TOwner,TValue><Avalonia.Input.GestureRecognizers.ScrollGestureRecognizer, Nullable<Avalonia.Size>> ExtentProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-2778e7614c"></span>
 
 ### InertialResistance Field
@@ -243,6 +305,20 @@ public Avalonia.DirectProperty<TOwner,TValue><Avalonia.Input.GestureRecognizers.
 
 <section className="apiref-page__member-entry">
 
+<span id="uid-19155414a0"></span>
+
+### OffsetProperty Field
+
+Defines the [Avalonia.Input.GestureRecognizers.ScrollGestureRecognizer.Offset](xref:Avalonia.Input.GestureRecognizers.ScrollGestureRecognizer.Offset) property.
+
+```csharp
+public Avalonia.DirectProperty<TOwner,TValue><Avalonia.Input.GestureRecognizers.ScrollGestureRecognizer, Nullable<Avalonia.Vector>> OffsetProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-902ef056a3"></span>
 
 ### ScrollStartDistanceProperty Field
@@ -251,6 +327,20 @@ Defines the [Avalonia.Input.GestureRecognizers.ScrollGestureRecognizer.ScrollSta
 
 ```csharp
 public Avalonia.DirectProperty<TOwner,TValue><Avalonia.Input.GestureRecognizers.ScrollGestureRecognizer, int> ScrollStartDistanceProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-cb54206933"></span>
+
+### ViewportProperty Field
+
+Defines the [Avalonia.Input.GestureRecognizers.ScrollGestureRecognizer.Viewport](xref:Avalonia.Input.GestureRecognizers.ScrollGestureRecognizer.Viewport) property.
+
+```csharp
+public Avalonia.DirectProperty<TOwner,TValue><Avalonia.Input.GestureRecognizers.ScrollGestureRecognizer, Nullable<Avalonia.Size>> ViewportProperty
 ```
 
 </section>

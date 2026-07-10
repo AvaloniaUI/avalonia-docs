@@ -82,6 +82,17 @@ public ScrollBar()
 
 | Name | Description |
 | --- | --- |
+| [LineDown](#uid-7553073033) | Scrolls down by one [Avalonia.Controls.Primitives.RangeBase.SmallChange](xref:Avalonia.Controls.Primitives.RangeBase.SmallChange) on a vertical scrollbar. |
+| [LineLeft](#uid-3dfd38a81c) | Scrolls left by one [Avalonia.Controls.Primitives.RangeBase.SmallChange](xref:Avalonia.Controls.Primitives.RangeBase.SmallChange) on a horizontal scrollbar. |
+| [LineRight](#uid-77655766b4) | Scrolls right by one [Avalonia.Controls.Primitives.RangeBase.SmallChange](xref:Avalonia.Controls.Primitives.RangeBase.SmallChange) on a horizontal scrollbar. |
+| [LineUp](#uid-431561b8f1) | Scrolls up by one [Avalonia.Controls.Primitives.RangeBase.SmallChange](xref:Avalonia.Controls.Primitives.RangeBase.SmallChange) on a vertical scrollbar. |
+| [PageDown](#uid-8a876f8216) | Scrolls down by one [Avalonia.Controls.Primitives.RangeBase.LargeChange](xref:Avalonia.Controls.Primitives.RangeBase.LargeChange) (a page) on a vertical scrollbar. |
+| [PageLeft](#uid-031d05c1ba) | Scrolls left by one [Avalonia.Controls.Primitives.RangeBase.LargeChange](xref:Avalonia.Controls.Primitives.RangeBase.LargeChange) (a page) on a horizontal scrollbar. |
+| [PageRight](#uid-7e46937ff9) | Scrolls right by one [Avalonia.Controls.Primitives.RangeBase.LargeChange](xref:Avalonia.Controls.Primitives.RangeBase.LargeChange) (a page) on a horizontal scrollbar. |
+| [PageUp](#uid-1dcdfa7b8b) | Scrolls up by one [Avalonia.Controls.Primitives.RangeBase.LargeChange](xref:Avalonia.Controls.Primitives.RangeBase.LargeChange) (a page) on a vertical scrollbar. |
+| [ScrollHere](#uid-376f37ef66) | Scrolls to the location at which the context menu was most recently requested. |
+| [ScrollToEnd](#uid-120a45cf34) | Scrolls to the bottom (or right edge) of the scrollbar by setting [Avalonia.Controls.Primitives.RangeBase.Value](xref:Avalonia.Controls.Primitives.RangeBase.Value) to [Avalonia.Controls.Primitives.RangeBase.Maximum](xref:Avalonia.Controls.Primitives.RangeBase.Maximum). |
+| [ScrollToHome](#uid-a7d62ab612) | Scrolls to the top (or left edge) of the scrollbar by setting [Avalonia.Controls.Primitives.RangeBase.Value](xref:Avalonia.Controls.Primitives.RangeBase.Value) to [Avalonia.Controls.Primitives.RangeBase.Minimum](xref:Avalonia.Controls.Primitives.RangeBase.Minimum). |
 | [ApplyTemplate](templatedcontrol.mdx#uid-cc70dd4d2f) | Creates the visual children of the control, if necessary Inherited from [TemplatedControl](templatedcontrol.mdx). |
 | [GetIsTemplateFocusTarget](templatedcontrol.mdx#uid-75a788f38f) | Gets the value of the IsTemplateFocusTargetProperty attached property on a control. Inherited from [TemplatedControl](templatedcontrol.mdx). |
 | [SetIsTemplateFocusTarget](templatedcontrol.mdx#uid-281801c25f) | Sets the value of the IsTemplateFocusTargetProperty attached property on a control. Inherited from [TemplatedControl](templatedcontrol.mdx). |
@@ -119,6 +130,160 @@ public ScrollBar()
 | [SetCurrentValue (2 overloads)](../../avaloniaobject.mdx#uid-38759fd088) | Sets the value of a dependency property without changing its value source. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
 | [SetValue (3 overloads)](../../avaloniaobject.mdx#uid-47d14e19d7) | Sets a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
 | [VerifyAccess](../../avaloniaobject.mdx#uid-3b9d3c9793) | Checks that the current thread is the UI thread and throws if not. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7553073033"></span>
+
+### LineDown Method
+
+Scrolls down by one [Avalonia.Controls.Primitives.RangeBase.SmallChange](xref:Avalonia.Controls.Primitives.RangeBase.SmallChange) on a vertical scrollbar.
+
+```csharp
+public void LineDown()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3dfd38a81c"></span>
+
+### LineLeft Method
+
+Scrolls left by one [Avalonia.Controls.Primitives.RangeBase.SmallChange](xref:Avalonia.Controls.Primitives.RangeBase.SmallChange) on a horizontal scrollbar.
+
+```csharp
+public void LineLeft()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-77655766b4"></span>
+
+### LineRight Method
+
+Scrolls right by one [Avalonia.Controls.Primitives.RangeBase.SmallChange](xref:Avalonia.Controls.Primitives.RangeBase.SmallChange) on a horizontal scrollbar.
+
+```csharp
+public void LineRight()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-431561b8f1"></span>
+
+### LineUp Method
+
+Scrolls up by one [Avalonia.Controls.Primitives.RangeBase.SmallChange](xref:Avalonia.Controls.Primitives.RangeBase.SmallChange) on a vertical scrollbar.
+
+```csharp
+public void LineUp()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8a876f8216"></span>
+
+### PageDown Method
+
+Scrolls down by one [Avalonia.Controls.Primitives.RangeBase.LargeChange](xref:Avalonia.Controls.Primitives.RangeBase.LargeChange) (a page) on a vertical scrollbar.
+
+```csharp
+public void PageDown()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-031d05c1ba"></span>
+
+### PageLeft Method
+
+Scrolls left by one [Avalonia.Controls.Primitives.RangeBase.LargeChange](xref:Avalonia.Controls.Primitives.RangeBase.LargeChange) (a page) on a horizontal scrollbar.
+
+```csharp
+public void PageLeft()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7e46937ff9"></span>
+
+### PageRight Method
+
+Scrolls right by one [Avalonia.Controls.Primitives.RangeBase.LargeChange](xref:Avalonia.Controls.Primitives.RangeBase.LargeChange) (a page) on a horizontal scrollbar.
+
+```csharp
+public void PageRight()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1dcdfa7b8b"></span>
+
+### PageUp Method
+
+Scrolls up by one [Avalonia.Controls.Primitives.RangeBase.LargeChange](xref:Avalonia.Controls.Primitives.RangeBase.LargeChange) (a page) on a vertical scrollbar.
+
+```csharp
+public void PageUp()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-376f37ef66"></span>
+
+### ScrollHere Method
+
+Scrolls to the location at which the context menu was most recently requested.
+
+```csharp
+public void ScrollHere()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-120a45cf34"></span>
+
+### ScrollToEnd Method
+
+Scrolls to the bottom (or right edge) of the scrollbar by setting [Avalonia.Controls.Primitives.RangeBase.Value](xref:Avalonia.Controls.Primitives.RangeBase.Value) to [Avalonia.Controls.Primitives.RangeBase.Maximum](xref:Avalonia.Controls.Primitives.RangeBase.Maximum).
+
+```csharp
+public void ScrollToEnd()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a7d62ab612"></span>
+
+### ScrollToHome Method
+
+Scrolls to the top (or left edge) of the scrollbar by setting [Avalonia.Controls.Primitives.RangeBase.Value](xref:Avalonia.Controls.Primitives.RangeBase.Value) to [Avalonia.Controls.Primitives.RangeBase.Minimum](xref:Avalonia.Controls.Primitives.RangeBase.Minimum).
+
+```csharp
+public void ScrollToHome()
+```
+
+</section>
 
 ## Properties
 

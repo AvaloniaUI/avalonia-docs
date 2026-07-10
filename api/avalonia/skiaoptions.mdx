@@ -82,6 +82,7 @@ public SkiaOptions()
 | --- | --- |
 | [MaxGpuResourceSizeBytes](#uid-4018646757) | The maximum number of bytes for video memory to store textures and resources. |
 | [UseOpacitySaveLayer](#uid-44688647b8) | Use Skia's SaveLayer API to handling opacity. |
+| [UseStencilBuffers](#uid-bd78c2ba9c) | Gets whether stencil buffers can be used for various draw operations, improving performance. If null (the default), Avalonia chooses whether to enable stencil buffers depending on the platform. |
 
 <section className="apiref-page__member-entry">
 
@@ -117,6 +118,21 @@ public bool UseOpacitySaveLayer { get; set; }
 #### Remarks
 
 Enabling this might have performance implications.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-bd78c2ba9c"></span>
+
+### UseStencilBuffers Property
+
+Gets whether stencil buffers can be used for various draw operations, improving performance.
+If null (the default), Avalonia chooses whether to enable stencil buffers depending on the platform.
+
+```csharp
+public Nullable<bool> UseStencilBuffers { get; set; }
+```
 
 </section>
 

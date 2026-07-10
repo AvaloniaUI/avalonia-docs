@@ -62,11 +62,43 @@ public class ImageSavingHelper
 
 | Name | Description |
 | --- | --- |
-| [SaveImage (2 overloads)](#uid-4441c5824b) | No summary available. |
+| [SaveImage (4 overloads)](#uid-4441c5824b) | Saves a Skia image to a stream in the specified format. |
 
 <span id="uid-4441c5824b"></span>
 
 ### SaveImage overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b71a169d4a"></span>
+
+#### SaveImage Method
+
+Saves a Skia image to a stream in the specified format.
+
+```csharp
+public void SaveImage(SkiaSharp.SKImage image, System.IO.Stream stream, Avalonia.Media.Imaging.BitmapEncoderOptions options)
+```
+
+##### Parameters
+
+`image` SkiaSharp.SKImage
+
+The image to save
+
+
+`stream` System.IO.Stream
+
+The output stream to save the image to.
+
+
+`options` [Avalonia.Media.Imaging.BitmapEncoderOptions](xref:Avalonia.Media.Imaging.BitmapEncoderOptions)
+
+The options specifying the format and settings to use.
+Typical usages include [Avalonia.Media.Imaging.PngBitmapEncoderOptions](xref:Avalonia.Media.Imaging.PngBitmapEncoderOptions) and [Avalonia.Media.Imaging.JpegBitmapEncoderOptions](xref:Avalonia.Media.Imaging.JpegBitmapEncoderOptions).
+
+
+</section>
 
 <section className="apiref-page__member-entry">
 
@@ -87,6 +119,38 @@ public void SaveImage(SkiaSharp.SKImage image, System.IO.Stream stream, Nullable
 
 
 `quality` Nullable&lt;int&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-eea29c3fc9"></span>
+
+#### SaveImage Method
+
+Saves a Skia image to a file in the specified format.
+
+```csharp
+public void SaveImage(SkiaSharp.SKImage image, string fileName, Avalonia.Media.Imaging.BitmapEncoderOptions options)
+```
+
+##### Parameters
+
+`image` SkiaSharp.SKImage
+
+The image to save
+
+
+`fileName` string
+
+The output file to save the image to.
+
+
+`options` [Avalonia.Media.Imaging.BitmapEncoderOptions](xref:Avalonia.Media.Imaging.BitmapEncoderOptions)
+
+The options specifying the format and settings to use.
+Typical usages include [Avalonia.Media.Imaging.PngBitmapEncoderOptions](xref:Avalonia.Media.Imaging.PngBitmapEncoderOptions) and [Avalonia.Media.Imaging.JpegBitmapEncoderOptions](xref:Avalonia.Media.Imaging.JpegBitmapEncoderOptions).
 
 
 </section>

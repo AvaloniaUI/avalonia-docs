@@ -137,6 +137,7 @@ public void RequestRefresh()
 
 | Name | Description |
 | --- | --- |
+| [IsMouseEnabled](#uid-3be794f544) | Gets or sets a value that indicates whether the pull-to-refresh gesture is enabled for desktop devices. Allows to enable the pull 2 refresh gesture for devices using a mouse. Disabled by default |
 | [PullDirection](#uid-efbfd1f02b) | Gets or sets a value that specifies the direction to pull to initiate a refresh. |
 | [Visualizer](#uid-0a67052627) | Gets or sets the [Avalonia.Controls.RefreshVisualizer](xref:Avalonia.Controls.RefreshVisualizer) for this container. |
 | [Content](contentcontrol.mdx#uid-eab6df2df3) | Gets or sets the content to display. Inherited from [ContentControl](contentcontrol.mdx). |
@@ -221,6 +222,21 @@ public void RequestRefresh()
 
 <section className="apiref-page__member-entry">
 
+<span id="uid-3be794f544"></span>
+
+### IsMouseEnabled Property
+
+Gets or sets a value that indicates whether the pull-to-refresh gesture is enabled for desktop devices.
+Allows to enable the pull 2 refresh gesture for devices using a mouse. Disabled by default
+
+```csharp
+public bool IsMouseEnabled { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-efbfd1f02b"></span>
 
 ### PullDirection Property
@@ -251,7 +267,8 @@ public Avalonia.Controls.RefreshVisualizer Visualizer { get; set; }
 
 | Name | Description |
 | --- | --- |
-| [PullDirectionProperty](#uid-a496e79b4e) | Defines the [Avalonia.Controls.RefreshContainer.PullDirection](xref:Avalonia.Controls.RefreshContainer.PullDirection) event. |
+| [IsMouseEnabledProperty](#uid-ef950399c6) | Defines the [Avalonia.Controls.RefreshContainer.IsMouseEnabled](xref:Avalonia.Controls.RefreshContainer.IsMouseEnabled) property. |
+| [PullDirectionProperty](#uid-a496e79b4e) | Defines the [Avalonia.Controls.RefreshContainer.PullDirection](xref:Avalonia.Controls.RefreshContainer.PullDirection) property. |
 | [RefreshRequestedEvent](#uid-737482b215) | Defines the [Avalonia.Controls.RefreshContainer.RefreshRequested](xref:Avalonia.Controls.RefreshContainer.RefreshRequested) event. |
 | [VisualizerProperty](#uid-e10a418a4c) | Defines the [Avalonia.Controls.RefreshContainer.Visualizer](xref:Avalonia.Controls.RefreshContainer.Visualizer) event. |
 | [ContentProperty](contentcontrol.mdx#uid-0e2122d666) | Defines the [Avalonia.Controls.ContentControl.Content](xref:Avalonia.Controls.ContentControl.Content) property. Inherited from [ContentControl](contentcontrol.mdx). |
@@ -362,11 +379,29 @@ public Avalonia.Controls.RefreshVisualizer Visualizer { get; set; }
 
 <section className="apiref-page__member-entry">
 
+<span id="uid-ef950399c6"></span>
+
+### IsMouseEnabledProperty Field
+
+Defines the [Avalonia.Controls.RefreshContainer.IsMouseEnabled](xref:Avalonia.Controls.RefreshContainer.IsMouseEnabled) property.
+
+```csharp
+public Avalonia.StyledProperty<bool> IsMouseEnabledProperty
+```
+
+#### Remarks
+
+Allows to enable the pull 2 refresh gesture for devices using a mouse. Disabled by default
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-a496e79b4e"></span>
 
 ### PullDirectionProperty Field
 
-Defines the [Avalonia.Controls.RefreshContainer.PullDirection](xref:Avalonia.Controls.RefreshContainer.PullDirection) event.
+Defines the [Avalonia.Controls.RefreshContainer.PullDirection](xref:Avalonia.Controls.RefreshContainer.PullDirection) property.
 
 ```csharp
 public Avalonia.StyledProperty<Avalonia.Input.PullDirection> PullDirectionProperty
