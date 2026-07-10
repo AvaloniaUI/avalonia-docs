@@ -114,7 +114,7 @@ To enable the file-system watcher, add an MSBuild property in your `.csproj`:
 The file-system watcher can hot-reload `.axaml` files without .NET Hot Reload, but not `.cs` files. If you need hot reload for your C# code-behind, pair the watcher with `dotnet watch`.
 :::
 
-Verifying hot reload
+## Verifying hot reload
 
 With the app running:
 
