@@ -127,6 +127,10 @@ Avalonia apps are made of high-level building blocks called controls, which allo
   <p>Tabs enable tabbed navigation, a standard navigation pattern in modern apps.</p>
 </DocsCard>
 
+<DocsCard header="TableView" href="/controls/data-display/structured-data/tableview" icon="/icons/grid-icon@2x.png">
+  <p>A read-only tabular control that presents items in configurable columns.</p>
+</DocsCard>
+
 <DocsCard header="TextBlock" href="/controls/data-display/text-display/textblock" icon="/icons/textblock-icon@2x.png">
   <p>A lightweight control for displaying small amounts of read-only text.</p>
 </DocsCard>
