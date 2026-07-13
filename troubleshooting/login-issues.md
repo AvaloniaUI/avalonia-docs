@@ -30,6 +30,8 @@ Consider adding `@avaloniaui.net` to your safe senders list, to avoid missing em
 
 Your organization has a subscription, but no seat has been assigned to you. Please contact your organization's Admin to request seat assignment. Instructions are available on the [Assigning seats](/tools/assigning-seats) page.
 
+You may also see this message if you have created an account but don't yet have a license, or are awaiting a community license to be approved.
+
 ## I need more help
 
 More information is available at the [portal](https://portal.avaloniaui.net/).
