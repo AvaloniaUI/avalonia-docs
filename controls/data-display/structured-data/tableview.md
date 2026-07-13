@@ -139,7 +139,7 @@ There are two ways to determine what a cell displays:
 
 ### Column width
 
-The `Width` property is a `GridLength`, so a column can be sized in absolute or relative units, just like a [Grid](/controls/layout/grid) column:
+The `Width` property is a `GridLength`, so a column can be sized in absolute or relative units, just like a [Grid](/controls/layout/panels/grid) column:
 
 - **Star** (`*`): the column takes a proportional share of the remaining space. This is the default (`1*`).
 - **Pixel**: an absolute width in device-independent pixels.
