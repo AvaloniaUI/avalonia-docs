@@ -1,0 +1,19 @@
+.breadcrumbsContainer {
+  --ifm-breadcrumb-size-multiplier: 0.8;
+  margin-bottom: 0.8rem;
+}
+
+/* The icon shares a crumb with the section label, rather than sitting alone in
+   its own crumb as it does upstream, so the crumb centres the two on a row.
+   Upstream's vertical-align/top nudge doesn't apply to a flex child. */
+.breadcrumbLink {
+  display: inline-flex;
+  align-items: center;
+}
+
+.breadcrumbHomeIcon {
+  flex-shrink: 0;
+  height: 1.1rem;
+  width: 1.1rem;
+  margin-right: 0.35rem;
+}
