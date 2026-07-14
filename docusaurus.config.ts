@@ -118,6 +118,7 @@ const config: Config = {
           customCss: [
             './node_modules/modern-normalize/modern-normalize.css',
             './node_modules/@ionic-internal/ionic-ds/dist/tokens/tokens.css',
+            './src/styles/tailwind.css',
             './src/styles/custom.scss',
             './src/styles/docsearch.scss',
           ],
