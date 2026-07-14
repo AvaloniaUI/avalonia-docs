@@ -110,15 +110,17 @@ function BreadcrumbsItemLink({
   isLast: boolean;
 }): JSX.Element {
   const className = clsx('breadcrumbs__link', styles.breadcrumbLink);
-  if (isLast) {
-    return <span className={className}>{children}</span>;
+   if (isLast || !href) {
+     return (
+       <span className={className} aria-current={isLast ? 'page' : undefined}>
+         {children}
+       </span>
+     );
   }
-  return href ? (
-    <Link className="breadcrumbs__link" href={href}>
-      <span className={styles.breadcrumbLink}>{children}</span>
+   return (
+     <Link className={className} to={href}>
+       {children}
     </Link>
-  ) : (
-    <span className={className}>{children}</span>
   );
 }
 
