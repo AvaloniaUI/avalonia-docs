@@ -92,7 +92,7 @@ Avalonia isolates all platform-specific code behind interfaces. The key abstract
 | `IPlatformSettings` | Theme detection, accent color, animation preferences |
 | `IRenderTarget` | GPU surface for rendering |
 
-Each platform backend (Win32, Cocoa, X11, Android, iOS, Browser) implements these interfaces. The application selects a backend at startup through the `AppBuilder`:
+Each platform backend (Win32, Cocoa, X11, Wayland, Android, iOS, Browser) implements these interfaces. The application selects a backend at startup through the `AppBuilder`:
 
 ```csharp
 AppBuilder.Configure<App>()
@@ -100,7 +100,7 @@ AppBuilder.Configure<App>()
     .StartWithClassicDesktopLifetime(args);
 ```
 
-`UsePlatformDetect()` chooses the correct backend automatically. You can also select a specific backend for testing or embedded scenarios.
+`UsePlatformDetect()` chooses the correct backend automatically. You can also select a specific backend for testing or embedded scenarios, or to opt into the experimental [Wayland backend](/docs/platform-specific-guides/linux#wayland) on Linux.
 
 ## The property system
 
