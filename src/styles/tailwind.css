@@ -1,0 +1,13 @@
+/*
+ * Keep Tailwind separate from the Sass bundle. Tailwind CSS v4 is a CSS
+ * build tool and is not designed to process Sass source directly.
+ */
+@config "../../tailwind.config.cjs";
+
+@layer theme, base, components, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities) source(none);
+
+/* Match the v3 content configuration and leave Infima's .container intact. */
+@source "../";
+@source not inline("container");
