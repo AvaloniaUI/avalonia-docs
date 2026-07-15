@@ -457,10 +457,10 @@ gtag('consent', 'default', {
           },
         },
       },
-      askAi: {
-        assistantId: 'ILptDNvSVJ1v',
-        sidePanel: true,
-      },
+      // askAi: {
+      //   assistantId: 'ILptDNvSVJ1v',
+      //   sidePanel: true,
+      // },
     },
   },
 };
