@@ -56,7 +56,7 @@ public static AppBuilder BuildAvaloniaApp()
 
 ### Configuration options
 
-To configure the backend, pass a `WaylandPlatformOptions` instance to the app builder:
+To configure the backend, pass a `WaylandPlatformOptions` instance to the `AppBuilder`:
 
 ```csharp
 public static AppBuilder BuildAvaloniaApp()
