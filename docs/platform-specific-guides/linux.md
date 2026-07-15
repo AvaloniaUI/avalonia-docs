@@ -37,7 +37,7 @@ The Wayland backend is experimental. `UsePlatformDetect()` does not select it au
            .UseWayland();
    ```
 
-`UseWayland()` always initializes the Wayland backend, and there is no automatic fallback: the application will not start in an environment without a Wayland compositor. For applications that also run on other operating systems or on X11 sessions, select the backend conditionally. For example, check the `WAYLAND_DISPLAY` environment variable that Wayland sessions set:
+`UseWayland()` always initializes the Wayland backend, and there is no automatic fallback: the application will not start in an environment without a Wayland compositor. For applications that must also run on other operating systems or on X11 sessions, select the backend conditionally. For example, check the `WAYLAND_DISPLAY` environment variable:
 
 ```csharp
 public static AppBuilder BuildAvaloniaApp()
