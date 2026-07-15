@@ -15,7 +15,7 @@ On Wayland desktops, Avalonia applications run through the XWayland compatibilit
 
 The [`Avalonia.Wayland`](https://www.nuget.org/packages/Avalonia.Wayland) package provides a native Wayland backend. It communicates with the compositor using the Wayland protocol directly, instead of going through XWayland.
 
-The backend supports mouse, touch, and keyboard input, the clipboard, and drag-and-drop. Rendering uses OpenGL or OpenGL ES through EGL, with an optional dmabuf swapchain path.
+The backend supports mouse, touch, and keyboard input. It also supports clipboard and drag-and-drop. Rendering uses OpenGL or OpenGL ES through EGL, with an optional [dma-buf swapchain](https://docs.kernel.org/userspace-api/dma-buf-alloc-exchange.html) path.
 
 :::info
 The Wayland backend is experimental. `UsePlatformDetect()` does not select it automatically; you must enable it explicitly.
