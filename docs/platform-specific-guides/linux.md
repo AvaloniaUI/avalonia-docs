@@ -72,7 +72,7 @@ public static AppBuilder BuildAvaloniaApp()
 |---|---|---|
 | `WlDisplayName` | `null` | The Wayland display to connect to (for example, `wayland-0`). When `null`, the `WAYLAND_DISPLAY` environment variable is used. |
 | `EnableReconnects` | `true` | Reconnects to the compositor automatically when the connection is lost. |
-| `UseDmabufSwapchain` | `null` | Uses a dmabuf-based swapchain for GPU rendering. When `null`, the backend decides based on compositor and driver capabilities. |
+| `UseDmabufSwapchain` | `null` | Uses a dma-buf-based swapchain for GPU rendering. When `null`, the backend decides based on compositor and driver capabilities. |
 | `GlProfiles` | OpenGL 4.0 down to OpenGL ES 2.0 | The OpenGL and OpenGL ES versions to try, in priority order, when creating the GL context. |
 | `UseGLibMainLoop` | `false` | Runs the UI thread on a GLib main loop. Enable this when your application uses GLib-based libraries on the main thread. |
 
