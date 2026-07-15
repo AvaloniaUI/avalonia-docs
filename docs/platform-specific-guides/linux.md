@@ -21,7 +21,7 @@ The backend supports mouse, touch, and keyboard input. It also supports clipboar
 The Wayland backend is experimental. `UsePlatformDetect()` does not select it automatically; you must enable it explicitly.
 :::
 
-### Enable the Wayland backend
+### Enabling the Wayland backend
 
 1. Add the `Avalonia.Wayland` package to your project:
 
