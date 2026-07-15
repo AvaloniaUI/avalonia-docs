@@ -1,17 +1,94 @@
 ---
 id: linux
 title: Desktop Linux
-description: How Avalonia runs on desktop Linux, including WSL 2 setup and accessibility support with AT-SPI2.
-doc-type: guide
+description: How Avalonia runs on desktop Linux, including the experimental Wayland backend, WSL 2 setup, and accessibility support with AT-SPI2.
+doc-type: overview
 ---
 
 ## How Avalonia runs on Linux
 
-Avalonia uses the Win32 API on Windows, its own native Objective-C++ backend on macOS, and on Linux it targets X11 directly. Most Linux distributions that support the .NET SDK and have X11 or framebuffer capabilities will run Avalonia applications.
+Avalonia uses the Win32 API on Windows, its own native Objective-C++ backend on macOS, and on Linux it targets X11 by default. Most Linux distributions that support the .NET SDK and have X11, Wayland, or framebuffer capabilities will run Avalonia applications.
 
-:::note
-Wayland support is coming in Avalonia 12.0.
+On Wayland desktops, Avalonia applications run through the XWayland compatibility layer by default. Starting with Avalonia 12.1.0, you can instead opt into the native [Wayland backend](#wayland).
+
+## Wayland
+
+The [`Avalonia.Wayland`](https://www.nuget.org/packages/Avalonia.Wayland) package provides a native Wayland backend. It communicates with the compositor using the Wayland protocol directly, instead of going through XWayland.
+
+The backend supports mouse, touch, and keyboard input. It also supports clipboard and drag-and-drop. Rendering uses OpenGL or OpenGL ES through EGL, with an optional [dma-buf swapchain](https://docs.kernel.org/userspace-api/dma-buf-alloc-exchange.html) path.
+
+:::caution
+The Wayland backend is experimental. `UsePlatformDetect()` does not select it automatically; you must enable it explicitly.
 :::
+
+### Enabling the Wayland backend
+
+1. Add the `Avalonia.Wayland` package to your project:
+
+   ```bash
+   dotnet add package Avalonia.Wayland
+   ```
+
+2. Call `UseWayland()` on your [`AppBuilder`](/api/avalonia/appbuilder) in `Program.cs`:
+
+   ```csharp
+   public static AppBuilder BuildAvaloniaApp()
+       => AppBuilder.Configure<App>()
+           .UseWayland();
+   ```
+
+`UseWayland()` always initializes the Wayland backend, and there is no automatic fallback: the application will not start in an environment without a Wayland compositor. For applications that must also run on other operating systems or on X11 sessions, select the backend conditionally. For example, check the `WAYLAND_DISPLAY` environment variable:
+
+```csharp
+public static AppBuilder BuildAvaloniaApp()
+{
+    var builder = AppBuilder.Configure<App>().UsePlatformDetect();
+
+    if (OperatingSystem.IsLinux()
+        && Environment.GetEnvironmentVariable("WAYLAND_DISPLAY") is not null)
+    {
+        builder = builder.UseWayland();
+    }
+
+    return builder;
+}
+```
+
+### Configuration options
+
+To configure the backend, pass a `WaylandPlatformOptions` instance to the `AppBuilder`:
+
+```csharp
+public static AppBuilder BuildAvaloniaApp()
+    => AppBuilder.Configure<App>()
+        .UseWayland()
+        .With(new WaylandPlatformOptions
+        {
+            UseDmabufSwapchain = true
+        });
+```
+
+| Option | Default | Description |
+|---|---|---|
+| `WlDisplayName` | `null` | The Wayland display to connect to (for example, `wayland-0`). When `null`, the `WAYLAND_DISPLAY` environment variable is used. |
+| `EnableReconnects` | `true` | Reconnects to the compositor automatically when the connection is lost. |
+| `UseDmabufSwapchain` | `null` | Uses a dma-buf-based swapchain for GPU rendering. When `null`, the backend decides based on compositor and driver capabilities. |
+| `GlProfiles` | OpenGL 4.0 down to OpenGL ES 2.0 | The OpenGL and OpenGL ES versions to try, in priority order, when creating the GL context. |
+| `UseGLibMainLoop` | `false` | Runs the UI thread on a GLib main loop. Enable this when your application uses GLib-based libraries on the main thread. |
+
+#### Advanced options
+
+The following options support specialized scenarios such as compositor integration and backend testing. Typical applications do not need to set them.
+
+| Option | Default | Description |
+|---|---|---|
+| `DisplayFd` | `null` | An already-opened file descriptor for the Wayland display socket, used instead of connecting to a named display. When set, `WlDisplayName` is ignored and automatic reconnects are disabled, because libwayland consumes the file descriptor. |
+| `ForceDrawnDecorations` | `false` | Makes windows behave as if the compositor never advertised server-side decoration support, so client-side decorations are always used. Intended primarily for testing on compositors that otherwise enforce server-side decorations, such as KWin. Marked `[Experimental]`: using it requires suppressing the `AVALONIA_WAYLAND_FORCE_CSD` compiler diagnostic. |
+| `ExternalGLibMainLoopExceptionLogger` | `null` | Receives exceptions that would otherwise be ignored because they occur outside an Avalonia-controlled run loop frame. Only used when `UseGLibMainLoop` is enabled. |
+
+### Current limitations
+
+Some KDE-specific integrations are not yet available on the Wayland backend: the global application menu, window icons, and blur-behind effects. Applications that depend on these features should continue to use the X11 backend.
 
 ## WSL 2 (Windows Subsystem for Linux)
 
