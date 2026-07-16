@@ -3,10 +3,12 @@ node_modules
 
 # Production
 /build
+/build-web-ds-compat
 
 
 # Generated files
 .docusaurus
+.docusaurus-web-ds-compat
 .cache-loader
 redirects/cloudflare_worker_kv_redirects/kv-redirects.json
 .idea
@@ -23,5 +25,4 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-.npmrc
 .vs

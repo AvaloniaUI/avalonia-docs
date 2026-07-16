@@ -5,6 +5,7 @@ import fs from 'fs';
 import redirects from './redirects/index';
 import tailwindPlugin from './plugins/tailwind-plugin';
 import plausiblePlugin from './plugins/plausible-plugin';
+import webDsCompatibilityPlugin from './plugins/web-ds-compatibility-plugin';
 import type { PluginOptions as LlmsTxtPluginOptions } from "@signalwire/docusaurus-plugin-llms-txt/public";
 
 const resourcesHTML = fs.readFileSync('./src/snippets/resources.html', 'utf-8');
@@ -13,7 +14,7 @@ const config: Config = {
   title: 'Avalonia Docs',
   tagline: 'Developer Documentation Portal',
   url: 'https://docs.avaloniaui.net',
-  baseUrl: '/',
+  baseUrl: process.env.WEB_DS_COMPATIBILITY_BASE_URL ?? '/',
   markdown: {
     mermaid: true,
   },
@@ -131,6 +132,7 @@ const config: Config = {
     '@docsearch/docusaurus-adapter',
     'docusaurus-plugin-sass',
     tailwindPlugin,
+    webDsCompatibilityPlugin,
     function cioPlugin() {
       return {
         name: 'docusaurus-plugin-cio',

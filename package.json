@@ -6,6 +6,7 @@
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
     "build": "NODE_OPTIONS='--max-old-space-size=16384' docusaurus build",
+    "build:web-ds-compat": "WEB_DS_COMPATIBILITY_FIXTURE=true WEB_DS_COMPATIBILITY_BASE_URL=/web-ds-compat/ DOCUSAURUS_GENERATED_FILES_DIR_NAME=.docusaurus-web-ds-compat DOCUSAURUS_NO_PERSISTENT_CACHE=true NODE_OPTIONS='--max-old-space-size=16384' docusaurus build --out-dir build-web-ds-compat",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",
@@ -17,6 +18,7 @@
     "apiref:materialise": "npm run apiref -- materialise --site ."
   },
   "dependencies": {
+    "@avaloniaui/web-ds": "1.0.0-rc.2",
     "@docsearch/docusaurus-adapter": "^4.6.0",
     "@docusaurus/core": "^3.8.1",
     "@docusaurus/plugin-client-redirects": "^3.8.1",

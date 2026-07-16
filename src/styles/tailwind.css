@@ -6,7 +6,9 @@
 
 @layer theme, base, components, utilities;
 @import "tailwindcss/theme.css" layer(theme);
+@import "@avaloniaui/web-ds/tailwind-namespaced.css";
 @import "tailwindcss/utilities.css" layer(utilities) source(none);
+@import "@avaloniaui/web-ds/styles.css";
 
 /* Match the v3 content configuration and leave Infima's .container intact. */
 @source "../";

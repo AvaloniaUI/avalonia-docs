@@ -1,20 +1,21 @@
 import React from 'react';
+import { Badge, type BadgeTone } from '@avaloniaui/web-ds';
 import styles from './TierBadge.module.css';
 
 interface TierBadgeProps {
   tier: 1 | 2 | 3;
 }
 
-const tierClasses: Record<number, string> = {
-  1: styles.tier1,
-  2: styles.tier2,
-  3: styles.tier3,
+const tierTones: Record<TierBadgeProps['tier'], BadgeTone> = {
+  1: 'success',
+  2: 'info',
+  3: 'warning',
 };
 
 export default function TierBadge({ tier }: TierBadgeProps) {
   return (
-    <span className={`${styles.badge} ${tierClasses[tier]}`}>
+    <Badge className={styles.badge} size="sm" tone={tierTones[tier]}>
       Tier {tier}
-    </span>
+    </Badge>
   );
 }

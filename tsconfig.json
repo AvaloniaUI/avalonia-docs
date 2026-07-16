@@ -3,5 +3,11 @@
   "extends": "@docusaurus/tsconfig",
   "compilerOptions": {
     "baseUrl": "."
-  }
+  },
+  "exclude": [
+    "node_modules",
+    "build",
+    "build-web-ds-compat",
+    "workers"
+  ]
 }
