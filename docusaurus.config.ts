@@ -288,6 +288,11 @@ gtag('consent', 'default', {
     [
       "@signalwire/docusaurus-plugin-llms-txt",
       {
+        // The WebDS fixture validates the complete Docusaurus build, SSR, CSS,
+        // hydration, and routing. Re-emitting those built routes as LLM text is
+        // unrelated to the package compatibility contract and is intentionally
+        // omitted only from that isolated evidence build.
+        runOnPostBuild: process.env.WEB_DS_COMPATIBILITY_FIXTURE !== 'true',
         markdown: {
           enableFiles: true,
           includeDocs: true,

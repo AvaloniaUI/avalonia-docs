@@ -6,7 +6,7 @@
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
     "build": "NODE_OPTIONS='--max-old-space-size=16384' docusaurus build",
-    "build:web-ds-compat": "WEB_DS_COMPATIBILITY_FIXTURE=true WEB_DS_COMPATIBILITY_BASE_URL=/web-ds-compat/ DOCUSAURUS_GENERATED_FILES_DIR_NAME=.docusaurus-web-ds-compat DOCUSAURUS_NO_PERSISTENT_CACHE=true NODE_OPTIONS='--max-old-space-size=16384' docusaurus build --out-dir build-web-ds-compat",
+    "build:web-ds-compat": "WEB_DS_COMPATIBILITY_FIXTURE=true WEB_DS_COMPATIBILITY_BASE_URL=/web-ds-compat/ DOCUSAURUS_GENERATED_FILES_DIR_NAME=.docusaurus-web-ds-compat DOCUSAURUS_NO_PERSISTENT_CACHE=true DOCUSAURUS_DISABLE_LAST_UPDATE=true NODE_OPTIONS='--max-old-space-size=16384' docusaurus build --out-dir build-web-ds-compat",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",

@@ -18,7 +18,11 @@ semantics.
 the non-root `/web-ds-compat/` base URL. Normal builds do not expose this
 route. Its generated files are isolated and persistent Webpack caching is
 disabled so the non-root public path cannot leak into a subsequent normal
-build. The fixture covers React 18.3 server rendering and hydration, the
+build. To keep this evidence build focused and bounded, it omits only the
+post-build LLM text export and replaces per-document Git last-update lookups
+with Docusaurus fallback metadata. Full document and API route compilation,
+static generation, SSR markup, styles, and client bundles remain enabled. The
+fixture covers React 18.3 server rendering and hydration, the
 Tailwind token adapter, distinct documentation and namespaced WebDS gray
 utilities, light/dark package tokens, and the Docusaurus link bridge. Browser
 verification should assert that internal and versioned paths
