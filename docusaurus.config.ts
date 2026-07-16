@@ -106,6 +106,7 @@ const config: Config = {
           showLastUpdateAuthor: true,
           showLastUpdateTime: true,
           lastVersion: 'current',
+          breadcrumbs: true,
           versions: {
             current: {
               label: "12.0.x",

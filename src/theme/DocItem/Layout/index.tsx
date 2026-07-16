@@ -6,7 +6,7 @@
  * @link https://github.com/facebook/docusaurus/blob/main/packages/docusaurus-theme-classic/src/theme/DocItem/Layout/index.tsx
  *
  * Reason for overriding:
- * - Add a phone demo to the right of the page, e.g. /docs
+ * - Move the version banner above the content row, so it spans the full width
  */
 
 import React from 'react';
@@ -20,54 +20,20 @@ import DocItemFooter from '@theme/DocItem/Footer';
 import DocItemTOCMobile from '@theme/DocItem/TOC/Mobile';
 import DocItemTOCDesktop from '@theme/DocItem/TOC/Desktop';
 import DocItemContent from '@theme/DocItem/Content';
+import DocBreadcrumbs from '@theme/DocBreadcrumbs';
 import ContentVisibility from '@theme/ContentVisibility';
 import type {Props} from '@theme/DocItem/Layout';
 import styles from '@docusaurus/theme-classic/lib/theme/DocItem/Layout/styles.module.css';
-
-// Extended frontMatter type for custom demo properties
-interface ExtendedFrontMatter {
-  hide_table_of_contents?: boolean;
-  demoUrl?: string;
-  demoSourceUrl?: string;
-  [key: string]: unknown;
-}
-
-// DocDemo component for rendering embedded demos
-interface DocDemoProps {
-  url: string;
-  source?: string;
-}
-
-function DocDemo({ url, source }: DocDemoProps): JSX.Element {
-  return (
-    <div className="doc-demo">
-      <iframe
-        src={url}
-        title="Demo"
-        style={{ width: '100%', height: '600px', border: 'none', borderRadius: '8px' }}
-      />
-      {source && (
-        <a href={source} target="_blank" rel="noopener noreferrer" className="doc-demo-source">
-          View Source
-        </a>
-      )}
-    </div>
-  );
-}
 
 /**
  * Decide if the toc should be rendered, on mobile or desktop viewports
  */
 function useDocTOC() {
-  const {frontMatter: rawFrontMatter, toc} = useDoc();
-  const frontMatter = rawFrontMatter as ExtendedFrontMatter;
+  const {frontMatter, toc} = useDoc();
   const windowSize = useWindowSize();
 
   const hidden = frontMatter.hide_table_of_contents;
-  // CUSTOM CODE
-  const demoUrl = frontMatter.demoUrl;
-  const canRender = !hidden && toc.length > 0 && !demoUrl;
-  // CUSTOM CODE END
+  const canRender = !hidden && toc.length > 0;
 
   const mobile = canRender ? <DocItemTOCMobile /> : undefined;
   const desktop =
@@ -82,25 +48,9 @@ function useDocTOC() {
   };
 }
 
-// CUSTOM CODE
-function useDocDemo() {
-  const {frontMatter: rawFrontMatter} = useDoc();
-  const frontMatter = rawFrontMatter as ExtendedFrontMatter;
-  const demoUrl = frontMatter.demoUrl;
-  const demoSourceUrl = frontMatter.demoSourceUrl;
-  return {
-    demoUrl,
-    demoSourceUrl,
-  };
-}
-// CUSTOM CODE END
-
-export default function DocItemLayout({children, ...props}: Props): JSX.Element {
+export default function DocItemLayout({children}: Props): JSX.Element {
   const docTOC = useDocTOC();
   const {metadata} = useDoc();
-  // CUSTOM CODE
-  const {demoUrl, demoSourceUrl} = useDocDemo();
-  // CUSTOM CODE END
   return (
     <>
       {/* ------- CUSTOM CODE -------- */}
@@ -113,25 +63,15 @@ export default function DocItemLayout({children, ...props}: Props): JSX.Element 
           <ContentVisibility metadata={metadata} />
           <div className={styles.docItemContainer}>
             <article>
+              <DocBreadcrumbs />
               <DocVersionBadge />
               {docTOC.mobile}
               <DocItemContent>{children}</DocItemContent>
               <DocItemFooter />
               <DocItemPaginator />
             </article>
-           
           </div>
         </div>
-        {/* ------- CUSTOM CODE -------- */}
-        {/* Ideally this would only render if there is a demoUrl and the it's a mobile device. However,the `windowSize` does not provide a tablet so we have to hide it through CSS. */}
-        {demoUrl && (
-          <div className='col col--4'>
-            <div className='doc-demo-wrapper'>
-              <DocDemo url={demoUrl} source={demoSourceUrl} />
-            </div>
-          </div>
-        )}
-        {/* ------- CUSTOM CODE END -------- */}
         {docTOC.desktop && <div className="col col--3">{docTOC.desktop}</div>}
       </div>
     </>
