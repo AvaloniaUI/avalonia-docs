@@ -45,5 +45,7 @@ See [Mutating the logical tree](/docs/fundamentals/visual-and-logical-trees#muta
 
 ## See also
 
-- [Visual and Logical Trees](/docs/fundamentals/visual-and-logical-trees): Fundamental concepts.
-- [Templated Controls](/docs/custom-controls/templated-controls): How templates expand into the visual tree.
+- [Visual and logical trees](/docs/fundamentals/visual-and-logical-trees): Fundamental concepts.
+- [Custom templated controls](/docs/custom-controls/templated-controls): How templates expand into the visual tree.
+- [Defining events](/docs/custom-controls/defining-events): Add routed events that travel through the control tree.
+- [Creating custom controls](/docs/custom-controls): Overview of the custom control types.

@@ -86,8 +86,8 @@ public override void Render(DrawingContext context)
 
 ## See also
 
-- [Custom-drawn basic controls](/docs/custom-controls/custom-drawn-basic-controls): How to create a custom basic control
-- [Custom control sample project](https://github.com/AvaloniaUI/Avalonia.Samples/tree/main/src/Avalonia.Samples/CustomControls/SnowflakesControlSample): Practical sample showing how to override `Render` to draw a custom control. 
-- [Custom Rendering](/docs/graphics-animation/custom-rendering): Advanced rendering techniques.
+- [Custom-drawn basic controls](/docs/custom-controls/custom-drawn-basic-controls): How to create a custom basic control.
+- [Custom control sample project](https://github.com/AvaloniaUI/Avalonia.Samples/tree/main/src/Avalonia.Samples/CustomControls/SnowflakesControlSample): Practical sample showing how to override `Render` to draw a custom control.
+- [Custom rendering](/docs/graphics-animation/custom-rendering): Advanced rendering techniques.
 - [Brushes](/docs/graphics-animation/brushes): Available brush types.
-- [Shapes and Geometries](/docs/graphics-animation/shapes-and-geometries): Geometry types for drawing.
+- [Shapes and geometries](/docs/graphics-animation/shapes-and-geometries): Geometry types for drawing.

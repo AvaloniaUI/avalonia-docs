@@ -2,13 +2,13 @@
 id: index
 title: Creating custom controls
 sidebar_position: 1
-description: Overview of various approaches for building custom controls in Avalonia.
+description: Overview of approaches for building custom controls in Avalonia.
 doc-type: overview
 ---
 
 ## Custom controls
 
-Avalonia allows you to customize your own controls, beyond what is available in our [built-in control library](/controls). Define your own properties, events and pseudoclasses. You can even override visual rendering to draw entirely unique custom controls.
+Avalonia allows you to customize your own controls, beyond what is available in the [built-in control library](/controls). Define your own properties, events and [pseudoclasses](/docs/styling/pseudoclasses). You can even override visual rendering to draw entirely unique custom controls.
 
 ## Types of custom controls
 
@@ -37,7 +37,7 @@ To create a custom user control:
 
 Templated controls are lookless, meaning the control's behavior and logic are separate from its appearance. This allows a templated control to be restyled for different themes or applications. The behavior and properties of a `TemplatedControl` are defined in code, while the visual representation is styled in XAML, then included in the `Application` via `StyleInclude`.
 
-This type of control is best for general-purpose UI elements that you wish to share across various applications. The majority of [Avalonia's standard controls](/controls) are templated controls.
+This type of control is best for general-purpose UI elements that you wish to share across multiple applications. The majority of [Avalonia's standard controls](/controls) are templated controls.
 
 :::info
 In Avalonia, a custom templated control inherits from `TemplatedControl`. This is unlike WPF or UWP, where you would inherit from the `Control` class.
@@ -46,7 +46,7 @@ In Avalonia, a custom templated control inherits from `TemplatedControl`. This i
 To create a custom templated control:
 
 1. **Define the control class.** Create a new class that derives from `TemplatedControl`. Decide the behavior, properties and events of the custom control.
-2. **Add a control template.** Create a control theme XAML file. Decide the visual appearance of the control.
+2. **Add a control template.** Create a [control theme](/docs/styling/control-themes) XAML file. Decide the visual appearance of the control.
 3. **Add further styling.** Further customize the look of the control by adjusting the control template or applying additional styles, if desired.
 
 ### Basic controls
@@ -78,8 +78,8 @@ These controls all derive from `Control`, meaning properties like `Width`, `Heig
 
 ## See also
 
-- [Choosing a Custom Control Type](/docs/custom-controls/choosing-a-custom-control-type)
-- [Defining Properties](/docs/custom-controls/defining-properties)
-- [Defining Events](/docs/custom-controls/defining-events)
-- [Templated Controls](/docs/custom-controls/templated-controls)
-- [Drawing Custom Controls](/docs/custom-controls/drawing-custom-controls)
+- [Custom templated controls](/docs/custom-controls/templated-controls): Build a lookless control whose appearance is defined by a control theme.
+- [Custom-drawn basic controls](/docs/custom-controls/custom-drawn-basic-controls): Create a control that draws itself by overriding `Render`.
+- [Defining properties](/docs/custom-controls/defining-properties): Add styled, direct, and attached properties to a custom control.
+- [Defining events](/docs/custom-controls/defining-events): Add routed events to a custom control.
+- [Custom control library](/docs/custom-controls/custom-control-library): Package custom controls in a class library and reference them from another project.

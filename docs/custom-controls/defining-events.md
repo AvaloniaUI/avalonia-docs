@@ -132,6 +132,8 @@ private void OnValueChanged(ValueChangedEventArgs e)
 
 ## See also
 
-- [Routed Events](/docs/input-interaction/routed-events): Full routed events reference.
-- [Events System](/docs/events): Overview of the events system.
-- [Input Events](/docs/events/input-events): Built-in input events.
+- [Routed events](/docs/input-interaction/routed-events): Full routed events reference.
+- [Events overview](/docs/events): How routed events travel through the control tree.
+- [Input events](/docs/events/input-events): Built-in input events.
+- [Defining properties](/docs/custom-controls/defining-properties): Add styled, direct, and attached properties to your custom controls.
+- [Creating custom controls](/docs/custom-controls): Overview of the custom control types you can add events to.

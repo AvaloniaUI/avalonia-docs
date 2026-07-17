@@ -1,7 +1,7 @@
 ---
 id: custom-control-library
 title: Custom control library
-description: How to create a standalone class library project containing multiple custom controls, then reference it to use those custom controls in another Avalonia project.
+description: How to create a standalone class library project containing multiple custom controls, then reference it to use those custom controls in another project.
 doc-type: how-to
 ---
 
@@ -101,7 +101,7 @@ Some examples of custom controls you might add to a class library are [custom fl
 
 Reference your custom control library in an Avalonia project to allow those custom controls to be used.
 
-In this example, we have created a new project using the Avalonia MVVM template titled `AvaloniaCCLib`.
+This example uses a new project built with the Avalonia MVVM template titled `AvaloniaCCLib`.
 
 <Image light={CustomControlSolution} alt="A screenshot of a solution containing two projects in Visual Studio." position="center" maxWidth={400} cornerRadius="true"/>
 
@@ -159,7 +159,7 @@ When referencing a control library in a `.axaml` file, you can use the URL ident
 xmlns:cc="https://my.controls.url"
 ```
 
-This is possible because control libraries contain XML namespace definitions. These map URLs to the code namespaces, and are in the project's `Properties/AssemblyInfo.cs` file. (See [our source code](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Properties/AssemblyInfo.cs) for an example.)
+This is possible because control libraries contain XML namespace definitions. These map URLs to the code namespaces, and are in the project's `Properties/AssemblyInfo.cs` file. (See [the Avalonia source code](https://github.com/AvaloniaUI/Avalonia/blob/main/src/Avalonia.Controls/Properties/AssemblyInfo.cs) for an example.)
 
 ```csharp title="AssemblyInfo.cs"
 [assembly: XmlnsDefinition("https://github.com/avaloniaui", "Avalonia")]
@@ -175,3 +175,10 @@ using Avalonia.Metadata;
 [assembly: XmlnsDefinition("https://my.controls.url", "My.NameSpace")]
 [assembly: XmlnsDefinition("https://my.controls.url", "My.NameSpace.Other")]
 ```
+
+## See also
+
+- [Creating custom controls](/docs/custom-controls): Overview of the custom control types you can package in a library.
+- [Custom templated controls](/docs/custom-controls/templated-controls): Build a lookless control whose appearance is defined by a control theme.
+- [Custom-drawn basic controls](/docs/custom-controls/custom-drawn-basic-controls): Create a control that draws itself by overriding `Render`.
+- [Defining properties](/docs/custom-controls/defining-properties): Add styled, direct, and attached properties to a custom control.

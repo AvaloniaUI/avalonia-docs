@@ -335,7 +335,7 @@ The following example shows the `IsDimmed` attached property from the previous s
 ## See also
 
 - [Avalonia property system](/docs/properties): Full reference for styled, direct, and attached properties.
-- [Value precedence](/docs/properties/value-precedence): How Avalonia resolves competing property values.
+- [Property value precedence](/docs/properties/value-precedence): How Avalonia resolves competing property values.
 - [Metadata and callbacks](/docs/properties/metadata-and-callbacks): Default values, coercion, and validation.
 - [Defining events](/docs/custom-controls/defining-events): Add routed events to your custom controls.
-- [Custom control class](/docs/custom-controls/custom-control-class): Base class overview for custom controls.
+- [Creating custom controls](/docs/custom-controls): Overview of the custom control types you can add properties to.

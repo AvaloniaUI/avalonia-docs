@@ -67,7 +67,7 @@ To use a custom control in XAML, add an XML namespace that maps to the CLR names
 </Window>
 ```
 
-The `cc` prefix is arbitrary. It simply maps `AvaloniaCCExample.CustomControls` so the XAML parser can resolve `CircleControl`.
+The `cc` prefix is arbitrary. Its purpose is to map `AvaloniaCCExample.CustomControls`, so the XAML parser can resolve `CircleControl`.
 
 :::info
 If your control lives in a separate class library, see [Custom Control Library](/docs/custom-controls/custom-control-library) for additional setup steps.
@@ -75,7 +75,7 @@ If your control lives in a separate class library, see [Custom Control Library](
 
 ## Invalidating rendering
 
-Avalonia provides several mechanisms to tell the layout and rendering system that a control needs to be updated.
+Avalonia provides two mechanisms to tell the layout and rendering system that a control needs to be updated: The [`Affects` helpers](#affectsrender-affectsmeasure-and-affectsarrange) and [manual invalidation](#manual-invalidation).
 
 ### `AffectsRender`, `AffectsMeasure`, and `AffectsArrange`
 
@@ -109,7 +109,8 @@ Use manual invalidation sparingly. Declaring property dependencies with `Affects
 
 ## See also
 
-- [Templated controls](/docs/custom-controls/templated-controls)
-- [Drawing custom controls](/docs/custom-controls/drawing-custom-controls)
-- [Defining Properties](/docs/custom-controls/defining-properties)
-- [Custom control sample project](https://github.com/AvaloniaUI/Avalonia.Samples/tree/main/src/Avalonia.Samples/CustomControls/SnowflakesControlSample)
+- [Drawing custom controls](/docs/custom-controls/drawing-custom-controls): Reference for the `DrawingContext` methods you call from `Render`.
+- [Defining properties](/docs/custom-controls/defining-properties): Add styled, direct, and attached properties to a custom control.
+- [Custom templated controls](/docs/custom-controls/templated-controls): The alternative approach, where a control theme defines the appearance.
+- [Creating custom controls](/docs/custom-controls): Overview of the custom control types.
+- [Custom control sample project](https://github.com/AvaloniaUI/Avalonia.Samples/tree/main/src/Avalonia.Samples/CustomControls/SnowflakesControlSample): Practical sample showing a custom-drawn control.

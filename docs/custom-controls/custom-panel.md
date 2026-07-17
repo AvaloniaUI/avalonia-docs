@@ -1,6 +1,6 @@
 ---
 id: custom-panel
-title: Custom Panels
+title: Custom Panel
 description: Implement a custom layout panel by overriding MeasureOverride and ArrangeOverride.
 doc-type: how-to
 ---
@@ -159,6 +159,7 @@ public static void SetSlot(Control element, int value) => element.SetValue(SlotP
 
 ## See also
 
-- [Custom ItemsPanel](/docs/custom-controls/custom-itemspanel)
-- [Attached Properties](/docs/custom-controls/attached-properties)
-- [Layout](/docs/layout)
+- [Custom ItemsPanel](/docs/custom-controls/custom-itemspanel): Use a custom panel to arrange the items of an `ItemsControl`.
+- [Attached properties](/docs/custom-controls/defining-properties#attached-properties): Let child controls carry per-child layout values for your panel.
+- [Layout](/docs/layout): How the measure and arrange system works.
+- [Choosing a layout panel](/docs/layout/choosing-a-layout-panel): Picking the right built-in panel before writing your own.

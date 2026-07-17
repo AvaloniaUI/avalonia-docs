@@ -56,7 +56,7 @@ public class MyImageFlyout : PopupFlyoutBase
 :::caution
 `PopupFlyoutBase` is the base class that provides the popup behavior and the `CreatePresenter()` method. It is the same base used by Avalonia's built-in [`Flyout` control](/controls/layout/containers/flyout).
 
-**Do not** use `FlyoutBase`—this is an abstract class and will block compilation if you derive from it.
+**Do not** use `FlyoutBase`. This is an abstract class and will block compilation if you derive from it.
 :::
 
 ## Showing and dismissing
@@ -147,4 +147,7 @@ public class ConfirmFlyout : PopupFlyoutBase
 
 ## See also
 
-- [Custom Controls](/docs/custom-controls)
+- [Flyout](/controls/layout/containers/flyout): Reference for the built-in flyout control.
+- [Defining properties](/docs/custom-controls/defining-properties): Add styled, direct, and attached properties to your flyout class.
+- [Defining events](/docs/custom-controls/defining-events): Add routed events to your flyout class.
+- [Creating custom controls](/docs/custom-controls): Overview of the custom control types.

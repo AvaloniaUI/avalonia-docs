@@ -112,6 +112,7 @@ This example creates a display of rectangular tiles. The tiles are defined as an
 
 ## See also
 
-- [Creating a custom panel](/docs/custom-controls/custom-panel)
-- [Attached properties](/docs/custom-controls/attached-properties)
-- [`ItemsControl`](/controls/data-display/collections/itemscontrol)
+- [Custom Panel](/docs/custom-controls/custom-panel): Write your own panel by overriding `MeasureOverride` and `ArrangeOverride`.
+- [Attached properties](/docs/custom-controls/defining-properties#attached-properties): Position items in a panel that reads per-child values.
+- [`ItemsControl`](/controls/data-display/collections/itemscontrol): Reference for the control whose items panel you are replacing.
+- [Layout](/docs/layout): How the measure and arrange system works.

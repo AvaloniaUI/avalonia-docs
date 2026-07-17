@@ -142,7 +142,9 @@ Then, target it in your control theme.
 
 ## See also
 
-- [Defining Properties](/docs/custom-controls/defining-properties)
-- [Defining Events](/docs/custom-controls/defining-events)
-- [Control Themes](/docs/styling/control-themes)
-- [Control Template Walkthrough](/docs/styling/control-template-walkthrough)
+- [Defining properties](/docs/custom-controls/defining-properties): Add styled, direct, and attached properties to a custom control.
+- [Defining events](/docs/custom-controls/defining-events): Add routed events to a custom control.
+- [Control themes](/docs/styling/control-themes): How control themes define the appearance of a templated control.
+- [Control template walkthrough](/docs/styling/control-template-walkthrough): A worked example of a control template.
+- [Pseudoclasses](/docs/styling/pseudoclasses): How pseudoclasses expose control state to styles.
+- [Creating custom controls](/docs/custom-controls): Overview of the custom control types.
