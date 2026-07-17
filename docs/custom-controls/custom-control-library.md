@@ -44,7 +44,7 @@ To start, you need a **class library** project in which to collect your custom c
     <Image light={NewClassLibraryVS} alt="A screenshot of the new project menu in Visual Studio." position="center" maxWidth={400} cornerRadius="true"/>
   </TabItem>
   <TabItem value="vscode" label="VS Code">
-    1. Bring up the command palette using Ctrl+Shift+P on Windows, or Cmd+Shift+P on macOS.
+    1. Bring up the command palette using <kbd>Ctrl</kbd> <kbd>⇧</kbd> <kbd>P</kbd> on Windows, or <kbd>Cmd</kbd> <kbd>⇧</kbd> <kbd>P</kbd> on macOS.
     2. Search for and select the command **.NET: New Project**.
     3. Search for and select the template **Class Library**.
     4. Select a location for the new project. Create a new folder for the project if desired.
@@ -81,7 +81,7 @@ Next, you must install the Avalonia NuGet package in the class library.
     <Image light={InstallAvaloniaInClassLibraryVS} alt="A screenshot demonstrating how to install the Avalonia NuGet package in Visual Studio." position="center" maxWidth={400} cornerRadius="true"/>
   </TabItem>
   <TabItem value="vscode" label="VS Code">
-    1. Bring up the command palette using Ctrl+Shift+P on Windows, or Cmd+Shift+P on macOS.
+    1. Bring up the command palette using <kbd>Ctrl</kbd> <kbd>⇧</kbd> <kbd>P</kbd> on Windows, or <kbd>Cmd</kbd> <kbd>⇧</kbd> <kbd>P</kbd> on macOS.
     2. Search for and select the command **NuGet: Add NuGet Package**.
     3. Type in the search term "Avalonia". Confirm the input.
     4. Select the package **Avalonia** from the search results.

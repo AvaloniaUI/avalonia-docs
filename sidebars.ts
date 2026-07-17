@@ -240,7 +240,7 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
-      label: 'Custom Controls',
+      label: 'Custom controls',
       collapsed: true,
       items: [
         'custom-controls/index',
