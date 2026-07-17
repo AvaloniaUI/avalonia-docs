@@ -254,7 +254,7 @@ const redirects: Redirect[] = [
     },
     {
         "from": "/docs/guides/custom-controls/how-to-create-attached-properties",
-        "to": "/docs/custom-controls/attached-properties"
+        "to": "/docs/custom-controls/defining-properties"
     },
     {
         "from": "/docs/guides/custom-controls/how-to-create-templated-controls",
@@ -262,7 +262,7 @@ const redirects: Redirect[] = [
     },
     {
         "from": "/docs/guides/custom-controls/add-custom-control-class",
-        "to": "/docs/custom-controls/custom-control-class"
+        "to": "/docs/custom-controls/custom-drawn-basic-controls"
     },
     {
         "from": [
@@ -967,7 +967,7 @@ const redirects: Redirect[] = [
             "/docs/data-binding/creating-and-binding-attached-properties",
             "/docs/concepts/attached-property",
         ],
-        "to": "/docs/custom-controls/attached-properties"
+        "to": "/docs/custom-controls/defining-properties"
     },
     {
         "from": "/docs/concepts/control-trees",

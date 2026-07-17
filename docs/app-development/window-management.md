@@ -79,7 +79,7 @@ The value is returned from the `ShowDialog<T>` call in the parent.
 | `WindowDecorations` | Title bar and border style: `Full`, `BorderOnly`, `None`. |
 | `ExtendClientAreaToDecorationsHint` | Extends the client area into the title bar area for custom chrome. Uses `WindowDrawnDecorations` for application-drawn decorations. |
 | `Icon` | The window icon displayed in the title bar and taskbar. |
-| `TransparencyLevelHint` | Enables window transparency: `None`, `Transparent`, `AcrylicBlur`, `Mica`. See [Transparent click-through window](/docs/how-to/window-how-to#transparent-click-through-window) for overlay patterns. |
+| `TransparencyLevelHint` | Enables window transparency: `None`, `Transparent`, `AcrylicBlur`, `Mica`. See [How to work with windows](/docs/how-to/window-how-to) for more information. |
 | `ClosingBehavior` | Controls how child windows behave when the owner closes: `OwnerAndChildWindows` (default, children close first and can cancel) or `OwnerWindowOnly` (only the owner's `Closing` event is checked). |
 
 ## Window sizing

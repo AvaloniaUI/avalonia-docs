@@ -194,4 +194,4 @@ protected override void OnPropertyChanged(AvaloniaPropertyChangedEventArgs chang
 - [Metadata and callbacks](/docs/properties/metadata-and-callbacks): Learn about default values, coercion, and validation.
 - [Property value inheritance](/docs/properties/property-value-inheritance): Learn how properties can inherit values from ancestor controls.
 - [Defining properties](/docs/custom-controls/defining-properties): A practical guide to adding properties to custom controls.
-- [Attached properties](/docs/custom-controls/attached-properties): A practical guide to creating attached properties.
+- [Attached properties](/docs/custom-controls/defining-properties#attached-properties): A practical guide to creating attached properties.
