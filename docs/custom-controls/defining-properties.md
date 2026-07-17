@@ -247,6 +247,23 @@ protected override void OnPropertyChanged(AvaloniaPropertyChangedEventArgs chang
 }
 ```
 
+## Data validation support
+
+Starting from Avalonia v12, data validation is handled automatically when `enableDataValidation` is set to `true`. The framework detects validation errors from `INotifyDataErrorInfo` and displays them without requiring additional overrides in your control.
+
+Data validation works with both `DirectProperty` and `StyledProperty` registrations. When a binding causes a validation error, the control displays it automatically.
+
+This is an example of a custom `TextBox.TextProperty` that reuses `TextBlock.TextProperty`, but adds data validation.
+
+```csharp
+public static readonly DirectProperty<TextBox, string?> TextProperty =
+    TextBlock.TextProperty.AddOwnerWithDataValidation<TextBox>(
+        o => o.Text,
+        (o, v) => o.Text = v,
+        defaultBindingMode: BindingMode.TwoWay,
+        enableDataValidation: true);
+```
+
 ## Attached properties
 
 An attached property lives in its own container class and is configured on compatible controls in XAML. This allows you to have additional properties that are not part of your custom control's own control class.
