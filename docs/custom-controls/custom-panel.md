@@ -136,11 +136,11 @@ public class RadialPanel : Panel
 
 </XamlPreview>
 
-## Using attached properties
+## Adding an attached property
 
-Attached properties let child elements carry data that the parent panel reads during layout, allowing custom panels to support per-child configurations.
+Add a `Slot` property to `RadialPanel`, so that children can specify their position in the circle. An attached property is chosen to allow data to be specified on a per-child basis.
 
-For example, you can add a `Slot` property to `RadialPanel`, so that children can specify their position in the circle.
+For further guidance on attached properties, see [Attached Properties](/docs/custom-controls/defining-properties#attached-properties).
 
 ```csharp
 public static readonly AttachedProperty<int> SlotProperty =
@@ -149,10 +149,6 @@ public static readonly AttachedProperty<int> SlotProperty =
 public static int GetSlot(Control element) => element.GetValue(SlotProperty);
 public static void SetSlot(Control element, int value) => element.SetValue(SlotProperty, value);
 ```
-
-The panel can then read `GetSlot(child)` inside `ArrangeOverride` to determine where each child should be placed.
-
-For further guidance on defining attached properties, see [Attached Properties](/docs/custom-controls/defining-properties#attached-properties).
 
 ## Tips
 

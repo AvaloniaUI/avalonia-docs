@@ -93,53 +93,9 @@ Next, you must install the Avalonia NuGet package in the class library.
 
 ### Adding a custom control to the class library
 
-Now that your class library is set up, you can start adding custom controls to it.
+Now that your class library is set up, you can start adding custom controls to it. The library can contain as many custom controls as you wish.
 
-This examples creates a simple custom control named `MyCustomControl`, a blank box that can be filled with a color of your choice.
-
-1. In the class library project, create a new `.cs` file.
-2. Create the custom control as shown below.
-
-```cs
-using Avalonia;
-using Avalonia.Controls;
-using Avalonia.Media;
-
-namespace CCLibrary
-{
-
-    /// <summary>A custom control that renders a coloured rectangle.</summary>
-    public class MyCustomControl : Control
-    {
-        /// <remarks>
-        /// Defines a styled property for the background colour, which can be set in XAML.<br/>
-        /// AddOwner reuses the existing BackgroundProperty from Border.<br/>
-        /// </remarks>
-        public static readonly StyledProperty<IBrush?> BackgroundProperty =
-            Border.BackgroundProperty.AddOwner<MyCustomControl>();
-
-        /// <summary>Gets and sets the colour used to fill the rectangle.</summary>
-        public IBrush? Background
-        {
-            get { return GetValue(BackgroundProperty); }
-            set { SetValue(BackgroundProperty, value); }
-        }
-
-        /// <summary>Renders the control.</summary>
-        public sealed override void Render(DrawingContext context)
-        {
-            if (Background != null) // Only render if a colour is set.
-            {
-                var renderSize = Bounds.Size; // Get the size of the control.
-                context.FillRectangle(Background, new Rect(renderSize)); // Fill the rectangle with the colour.
-            }
-            base.Render(context);
-        }
-    }
-}
-```
-
-You can continue adding as many custom controls to the library as you wish.
+Some examples of custom controls you might add to a class library are [custom flyouts](/docs/custom-controls/custom-flyout) or [custom panels](/docs/custom-controls/custom-panel). See the respective pages for more information on how to create these custom controls.
 
 ## Referencing a custom control library
 

@@ -232,7 +232,7 @@ public class MyControl : Control
 
 For styled and direct properties, you can react to property value changes by overriding `OnPropertyChanged` in your control.
 
-This example demonstrates reacting to a background change by invalidating the visual and thereby updating to the new background.
+This example demonstrates reacting to a background change by [invalidating the visual](/docs/custom-controls/custom-drawn-basic-controls#manual-invalidation) and thereby updating to the new background.
 
 ```csharp
 protected override void OnPropertyChanged(AvaloniaPropertyChangedEventArgs change)
