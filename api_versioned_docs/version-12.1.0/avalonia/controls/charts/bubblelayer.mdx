@@ -76,12 +76,6 @@ public BubbleLayer()
 
 | Name | Description |
 | --- | --- |
-| [GetLayerBounds](#uid-62929955dc) | Gets the geographic bounds (in 0-200, 0-100 viewport units) of the content in this layer. Used for auto-scaling the map to fit content. |
-| [GetPointData](#uid-47b6bc4c49) | Gets the data item at the specified screen point. |
-| [OnPointerExited](#uid-44ac32db53) | Handles pointer exited events. Override this method to handle interactions (e.g. clearing hover effects). |
-| [OnPointerMoved](#uid-05eb4e40df) | Handles pointer moved events. Override this method to handle interactions (e.g. hover effects). |
-| [Render](#uid-c1acc5f275) | Renders this layer to the drawing context. |
-| [OnPointerPressed](maplayer.mdx#uid-61476cbbf9) | Handles pointer pressed events. Override this method to handle interactions (e.g. selection). Inherited from [MapLayer](maplayer.mdx). |
 | [Bind (8 overloads)](../../avaloniaobject.mdx#uid-1c60c7bda3) | Binds a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) to an [Avalonia.Data.BindingBase](xref:Avalonia.Data.BindingBase). Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
 | [CheckAccess](../../avaloniaobject.mdx#uid-260ff7a68d) | Returns a value indicating whether the current thread is the UI thread. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
 | [ClearValue (4 overloads)](../../avaloniaobject.mdx#uid-41de208fbe) | Clears a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty)'s local value. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
@@ -89,9 +83,15 @@ public BubbleLayer()
 | [Equals](../../avaloniaobject.mdx#uid-a8a8e94305) | Compares two objects using reference equality. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
 | [GetBaseValue](../../avaloniaobject.mdx#uid-9c615efbba) | Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
 | [GetHashCode](../../avaloniaobject.mdx#uid-7f7db1e7a2) | Gets the hash code for the object. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [GetLayerBounds](#uid-62929955dc) | Gets the geographic bounds (in 0-200, 0-100 viewport units) of the content in this layer. Used for auto-scaling the map to fit content. |
+| [GetPointData](#uid-47b6bc4c49) | Gets the data item at the specified screen point. |
 | [GetValue (3 overloads)](../../avaloniaobject.mdx#uid-5142cd4792) | Gets a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
 | [IsAnimating](../../avaloniaobject.mdx#uid-8cbfc7521a) | Checks whether a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) is animating. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
 | [IsSet](../../avaloniaobject.mdx#uid-f8bf0bbdcc) | Checks whether a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) is set on this object. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [OnPointerExited](#uid-44ac32db53) | Handles pointer exited events. Override this method to handle interactions (e.g. clearing hover effects). |
+| [OnPointerMoved](#uid-05eb4e40df) | Handles pointer moved events. Override this method to handle interactions (e.g. hover effects). |
+| [OnPointerPressed](maplayer.mdx#uid-61476cbbf9) | Handles pointer pressed events. Override this method to handle interactions (e.g. selection). Inherited from [MapLayer](maplayer.mdx). |
+| [Render](#uid-c1acc5f275) | Renders this layer to the drawing context. |
 | [SetCurrentValue (2 overloads)](../../avaloniaobject.mdx#uid-38759fd088) | Sets the value of a dependency property without changing its value source. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
 | [SetValue (3 overloads)](../../avaloniaobject.mdx#uid-47d14e19d7) | Sets a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
 | [VerifyAccess](../../avaloniaobject.mdx#uid-3b9d3c9793) | Checks that the current thread is the UI thread and throws if not. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
@@ -229,22 +229,22 @@ Animation progress from 0 to 1.
 
 | Name | Description |
 | --- | --- |
+| [Dispatcher](../../avaloniaobject.mdx#uid-b25fa51632) | Returns the [Avalonia.AvaloniaObject.Dispatcher](xref:Avalonia.AvaloniaObject.Dispatcher) that this [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject) is associated with. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
 | [Fill](#uid-ef7265e234) | Gets or sets the fill brush for bubbles. |
+| [IsVisible](maplayer.mdx#uid-93a23c42b6) | Gets or sets whether this layer is visible. Inherited from [MapLayer](maplayer.mdx). |
+| [Item](../../avaloniaobject.mdx#uid-c1d1f1bc0f) | Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
 | [ItemsSource](#uid-f8359a34b0) | Gets or sets the data source. |
 | [LabelPath](#uid-c8aaa4af2a) | Gets or sets the property path for labels. |
 | [LatitudePath](#uid-23cd8971b5) | Gets or sets the property path for latitude. |
 | [LongitudePath](#uid-91909415fc) | Gets or sets the property path for longitude. |
 | [MaxBubbleSize](#uid-93cac2f6d2) | Gets or sets the maximum bubble radius. |
 | [MinBubbleSize](#uid-446d088c42) | Gets or sets the minimum bubble radius. |
+| [Opacity](maplayer.mdx#uid-7b32d6b968) | Gets or sets the opacity of this layer. Inherited from [MapLayer](maplayer.mdx). |
 | [PointBrushPath](#uid-a48da52054) | Gets or sets the property path for bubble color. |
 | [ShowLabels](#uid-d9a1382e72) | Gets or sets whether to show labels. |
 | [SizePath](#uid-aa76d9ac8c) | Gets or sets the property path for bubble size. |
 | [Stroke](#uid-196f7369ab) | Gets or sets the stroke brush for bubbles. |
-| [IsVisible](maplayer.mdx#uid-93a23c42b6) | Gets or sets whether this layer is visible. Inherited from [MapLayer](maplayer.mdx). |
-| [Opacity](maplayer.mdx#uid-7b32d6b968) | Gets or sets the opacity of this layer. Inherited from [MapLayer](maplayer.mdx). |
 | [TooltipTemplate](maplayer.mdx#uid-f880527475) | Gets or sets the data template used for tooltips. Inherited from [MapLayer](maplayer.mdx). |
-| [Dispatcher](../../avaloniaobject.mdx#uid-b25fa51632) | Returns the [Avalonia.AvaloniaObject.Dispatcher](xref:Avalonia.AvaloniaObject.Dispatcher) that this [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject) is associated with. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
-| [Item](../../avaloniaobject.mdx#uid-c1d1f1bc0f) | Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
 
 <section className="apiref-page__member-entry">
 
@@ -405,18 +405,18 @@ public Avalonia.Media.IBrush Stroke { get; set; }
 | Name | Description |
 | --- | --- |
 | [FillProperty](#uid-4243c815f2) | Identifies the [Avalonia.Controls.Charts.BubbleLayer.Fill](xref:Avalonia.Controls.Charts.BubbleLayer.Fill) Avalonia property. |
+| [IsVisibleProperty](maplayer.mdx#uid-74f0177084) | Identifies the [Avalonia.Controls.Charts.MapLayer.IsVisible](xref:Avalonia.Controls.Charts.MapLayer.IsVisible) Avalonia property. Inherited from [MapLayer](maplayer.mdx). |
 | [ItemsSourceProperty](#uid-8f22ac2d81) | Identifies the [Avalonia.Controls.Charts.BubbleLayer.ItemsSource](xref:Avalonia.Controls.Charts.BubbleLayer.ItemsSource) Avalonia property. |
 | [LabelPathProperty](#uid-eb3fac748d) | Identifies the [Avalonia.Controls.Charts.BubbleLayer.LabelPath](xref:Avalonia.Controls.Charts.BubbleLayer.LabelPath) Avalonia property. |
 | [LatitudePathProperty](#uid-b903699a1c) | Identifies the [Avalonia.Controls.Charts.BubbleLayer.LatitudePath](xref:Avalonia.Controls.Charts.BubbleLayer.LatitudePath) Avalonia property. |
 | [LongitudePathProperty](#uid-009092c4ff) | Identifies the [Avalonia.Controls.Charts.BubbleLayer.LongitudePath](xref:Avalonia.Controls.Charts.BubbleLayer.LongitudePath) Avalonia property. |
 | [MaxBubbleSizeProperty](#uid-88c30424ee) | Identifies the [Avalonia.Controls.Charts.BubbleLayer.MaxBubbleSize](xref:Avalonia.Controls.Charts.BubbleLayer.MaxBubbleSize) Avalonia property. |
 | [MinBubbleSizeProperty](#uid-b7b922d031) | Identifies the [Avalonia.Controls.Charts.BubbleLayer.MinBubbleSize](xref:Avalonia.Controls.Charts.BubbleLayer.MinBubbleSize) Avalonia property. |
+| [OpacityProperty](maplayer.mdx#uid-7b17fad341) | Identifies the [Avalonia.Controls.Charts.MapLayer.Opacity](xref:Avalonia.Controls.Charts.MapLayer.Opacity) Avalonia property. Inherited from [MapLayer](maplayer.mdx). |
 | [PointBrushPathProperty](#uid-2ae7f20521) | Identifies the [Avalonia.Controls.Charts.BubbleLayer.PointBrushPath](xref:Avalonia.Controls.Charts.BubbleLayer.PointBrushPath) Avalonia property. |
 | [ShowLabelsProperty](#uid-4a67b96420) | Identifies the [Avalonia.Controls.Charts.BubbleLayer.ShowLabels](xref:Avalonia.Controls.Charts.BubbleLayer.ShowLabels) Avalonia property. |
 | [SizePathProperty](#uid-43476c98ac) | Identifies the [Avalonia.Controls.Charts.BubbleLayer.SizePath](xref:Avalonia.Controls.Charts.BubbleLayer.SizePath) Avalonia property. |
 | [StrokeProperty](#uid-31b3755105) | Identifies the [Avalonia.Controls.Charts.BubbleLayer.Stroke](xref:Avalonia.Controls.Charts.BubbleLayer.Stroke) Avalonia property. |
-| [IsVisibleProperty](maplayer.mdx#uid-74f0177084) | Identifies the [Avalonia.Controls.Charts.MapLayer.IsVisible](xref:Avalonia.Controls.Charts.MapLayer.IsVisible) Avalonia property. Inherited from [MapLayer](maplayer.mdx). |
-| [OpacityProperty](maplayer.mdx#uid-7b17fad341) | Identifies the [Avalonia.Controls.Charts.MapLayer.Opacity](xref:Avalonia.Controls.Charts.MapLayer.Opacity) Avalonia property. Inherited from [MapLayer](maplayer.mdx). |
 | [TooltipTemplateProperty](maplayer.mdx#uid-10362b19e1) | Identifies the [Avalonia.Controls.Charts.MapLayer.TooltipTemplate](xref:Avalonia.Controls.Charts.MapLayer.TooltipTemplate) Avalonia property. Inherited from [MapLayer](maplayer.mdx). |
 
 <section className="apiref-page__member-entry">

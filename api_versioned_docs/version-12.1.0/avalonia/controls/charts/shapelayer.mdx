@@ -81,29 +81,29 @@ public ShapeLayer()
 
 | Name | Description |
 | --- | --- |
-| [ClearSelection](#uid-b18add5f0c) | Clears the current selection. |
-| [GetFeatureData](#uid-332947248f) | Resolves the backing data item or fallback property map for a feature. |
-| [GetFeaturesAt](#uid-ef7f906acf) | Returns the features hit by the specified chart-space point. |
-| [GetLayerBounds](#uid-847749a44c) | Gets the geographic bounds (in 0-200, 0-100 viewport units) of the content in this layer. Used for auto-scaling the map to fit content. |
-| [GetPointData](#uid-ed04ea1226) | Gets the data item at the specified screen point. |
-| [IsItemSelected](#uid-cf05ed7917) | Checks whether the specified item is selected. |
-| [OnPointerExited](#uid-8076268a94) | Handles pointer exited events. Override this method to handle interactions (e.g. clearing hover effects). |
-| [OnPointerMoved](#uid-c3c54fecea) | Handles pointer moved events. Override this method to handle interactions (e.g. hover effects). |
-| [OnPointerPressed](#uid-4a3d06e294) | Handles pointer pressed events. Override this method to handle interactions (e.g. selection). |
-| [Render](#uid-ce6be291f1) | Renders this layer to the drawing context. |
-| [TrySelectItem](#uid-35a95381f9) | Attempts to select the specified item. |
 | [Bind (8 overloads)](../../avaloniaobject.mdx#uid-1c60c7bda3) | Binds a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) to an [Avalonia.Data.BindingBase](xref:Avalonia.Data.BindingBase). Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
 | [CheckAccess](../../avaloniaobject.mdx#uid-260ff7a68d) | Returns a value indicating whether the current thread is the UI thread. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [ClearSelection](#uid-b18add5f0c) | Clears the current selection. |
 | [ClearValue (4 overloads)](../../avaloniaobject.mdx#uid-41de208fbe) | Clears a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty)'s local value. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
 | [CoerceValue](../../avaloniaobject.mdx#uid-3bec32f39e) | Coerces the specified [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty). Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
 | [Equals](../../avaloniaobject.mdx#uid-a8a8e94305) | Compares two objects using reference equality. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
 | [GetBaseValue](../../avaloniaobject.mdx#uid-9c615efbba) | Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [GetFeatureData](#uid-332947248f) | Resolves the backing data item or fallback property map for a feature. |
+| [GetFeaturesAt](#uid-ef7f906acf) | Returns the features hit by the specified chart-space point. |
 | [GetHashCode](../../avaloniaobject.mdx#uid-7f7db1e7a2) | Gets the hash code for the object. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [GetLayerBounds](#uid-847749a44c) | Gets the geographic bounds (in 0-200, 0-100 viewport units) of the content in this layer. Used for auto-scaling the map to fit content. |
+| [GetPointData](#uid-ed04ea1226) | Gets the data item at the specified screen point. |
 | [GetValue (3 overloads)](../../avaloniaobject.mdx#uid-5142cd4792) | Gets a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
 | [IsAnimating](../../avaloniaobject.mdx#uid-8cbfc7521a) | Checks whether a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) is animating. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [IsItemSelected](#uid-cf05ed7917) | Checks whether the specified item is selected. |
 | [IsSet](../../avaloniaobject.mdx#uid-f8bf0bbdcc) | Checks whether a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) is set on this object. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [OnPointerExited](#uid-8076268a94) | Handles pointer exited events. Override this method to handle interactions (e.g. clearing hover effects). |
+| [OnPointerMoved](#uid-c3c54fecea) | Handles pointer moved events. Override this method to handle interactions (e.g. hover effects). |
+| [OnPointerPressed](#uid-4a3d06e294) | Handles pointer pressed events. Override this method to handle interactions (e.g. selection). |
+| [Render](#uid-ce6be291f1) | Renders this layer to the drawing context. |
 | [SetCurrentValue (2 overloads)](../../avaloniaobject.mdx#uid-38759fd088) | Sets the value of a dependency property without changing its value source. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
 | [SetValue (3 overloads)](../../avaloniaobject.mdx#uid-47d14e19d7) | Sets a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [TrySelectItem](#uid-35a95381f9) | Attempts to select the specified item. |
 | [VerifyAccess](../../avaloniaobject.mdx#uid-3b9d3c9793) | Checks that the current thread is the UI thread and throws if not. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
 
 <section className="apiref-page__member-entry">
@@ -401,11 +401,14 @@ True if the selection state changed.
 | Name | Description |
 | --- | --- |
 | [ColorMappings](#uid-d82b0e9537) | Gets or sets the collection of color mappings for shapes. |
+| [Dispatcher](../../avaloniaobject.mdx#uid-b25fa51632) | Returns the [Avalonia.AvaloniaObject.Dispatcher](xref:Avalonia.AvaloniaObject.Dispatcher) that this [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject) is associated with. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
 | [GeoJson](#uid-f82439ee26) | Gets or sets the GeoJSON string data. |
 | [GeoJsonIdPath](#uid-8d096424f4) | Gets or sets the property name in GeoJSON to use as a unique identifier. |
 | [HighBrush](#uid-1e8f78003f) | Gets or sets the brush for the highest data values. |
 | [HoverBrush](#uid-f7f0a214d4) | Gets or sets the brush applied when hovering over a region. |
 | [IsSelectionEnabled](#uid-c91021eef6) | Gets or sets whether selection is enabled for map regions. |
+| [IsVisible](maplayer.mdx#uid-93a23c42b6) | Gets or sets whether this layer is visible. Inherited from [MapLayer](maplayer.mdx). |
+| [Item](../../avaloniaobject.mdx#uid-c1d1f1bc0f) | Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
 | [ItemsSource](#uid-fa394c6872) | Gets or sets the data collection to bind to map regions. |
 | [LabelForeground](#uid-8cd9dce39e) | Gets or sets the foreground brush for data labels. |
 | [LabelPath](#uid-cc88885080) | Gets or sets the property path for data label text. |
@@ -413,6 +416,7 @@ True if the selection state changed.
 | [LowBrush](#uid-91a46429e8) | Gets or sets the brush for the lowest data values. |
 | [MaxValue](#uid-3cdb774683) | Gets or sets the maximum value for color normalization. |
 | [MinValue](#uid-752d424163) | Gets or sets the minimum value for color normalization. |
+| [Opacity](maplayer.mdx#uid-7b32d6b968) | Gets or sets the opacity of this layer. Inherited from [MapLayer](maplayer.mdx). |
 | [RegionPath](#uid-009eb27c03) | Gets or sets the property path in [Avalonia.Controls.Charts.ShapeLayer.ItemsSource](xref:Avalonia.Controls.Charts.ShapeLayer.ItemsSource) that matches GeoJSON identifiers. |
 | [SelectedItem](#uid-4585cf6cae) | Gets or sets the currently selected data item. |
 | [SelectedItems](#uid-28240511a9) | Gets or sets the collection of selected data items. |
@@ -424,12 +428,8 @@ True if the selection state changed.
 | [Source](#uid-0e37825776) | Gets or sets the URI source for GeoJSON data. |
 | [Stroke](#uid-088390b430) | Gets or sets the brush for shape outlines. |
 | [StrokeThickness](#uid-781efb3de2) | Gets or sets the thickness of shape outlines. |
-| [ValuePath](#uid-54d9261374) | Gets or sets the property path in [Avalonia.Controls.Charts.ShapeLayer.ItemsSource](xref:Avalonia.Controls.Charts.ShapeLayer.ItemsSource) for region values. |
-| [IsVisible](maplayer.mdx#uid-93a23c42b6) | Gets or sets whether this layer is visible. Inherited from [MapLayer](maplayer.mdx). |
-| [Opacity](maplayer.mdx#uid-7b32d6b968) | Gets or sets the opacity of this layer. Inherited from [MapLayer](maplayer.mdx). |
 | [TooltipTemplate](maplayer.mdx#uid-f880527475) | Gets or sets the data template used for tooltips. Inherited from [MapLayer](maplayer.mdx). |
-| [Dispatcher](../../avaloniaobject.mdx#uid-b25fa51632) | Returns the [Avalonia.AvaloniaObject.Dispatcher](xref:Avalonia.AvaloniaObject.Dispatcher) that this [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject) is associated with. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
-| [Item](../../avaloniaobject.mdx#uid-c1d1f1bc0f) | Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [ValuePath](#uid-54d9261374) | Gets or sets the property path in [Avalonia.Controls.Charts.ShapeLayer.ItemsSource](xref:Avalonia.Controls.Charts.ShapeLayer.ItemsSource) for region values. |
 
 <section className="apiref-page__member-entry">
 
@@ -791,6 +791,7 @@ public string ValuePath { get; set; }
 | [HighBrushProperty](#uid-1f6f3f689f) | Identifies the [Avalonia.Controls.Charts.ShapeLayer.HighBrush](xref:Avalonia.Controls.Charts.ShapeLayer.HighBrush) Avalonia property. |
 | [HoverBrushProperty](#uid-75ee492bc2) | Identifies the [Avalonia.Controls.Charts.ShapeLayer.HoverBrush](xref:Avalonia.Controls.Charts.ShapeLayer.HoverBrush) Avalonia property. |
 | [IsSelectionEnabledProperty](#uid-2c2f011948) | Identifies the [Avalonia.Controls.Charts.ShapeLayer.IsSelectionEnabled](xref:Avalonia.Controls.Charts.ShapeLayer.IsSelectionEnabled) Avalonia property. |
+| [IsVisibleProperty](maplayer.mdx#uid-74f0177084) | Identifies the [Avalonia.Controls.Charts.MapLayer.IsVisible](xref:Avalonia.Controls.Charts.MapLayer.IsVisible) Avalonia property. Inherited from [MapLayer](maplayer.mdx). |
 | [ItemsSourceProperty](#uid-6d7285b57f) | Identifies the [Avalonia.Controls.Charts.ShapeLayer.ItemsSource](xref:Avalonia.Controls.Charts.ShapeLayer.ItemsSource) Avalonia property. |
 | [LabelForegroundProperty](#uid-b44b1204f9) | Identifies the [Avalonia.Controls.Charts.ShapeLayer.LabelForeground](xref:Avalonia.Controls.Charts.ShapeLayer.LabelForeground) Avalonia property. |
 | [LabelPathProperty](#uid-45d8449a26) | Identifies the [Avalonia.Controls.Charts.ShapeLayer.LabelPath](xref:Avalonia.Controls.Charts.ShapeLayer.LabelPath) Avalonia property. |
@@ -798,6 +799,7 @@ public string ValuePath { get; set; }
 | [LowBrushProperty](#uid-02d57a6adc) | Identifies the [Avalonia.Controls.Charts.ShapeLayer.LowBrush](xref:Avalonia.Controls.Charts.ShapeLayer.LowBrush) Avalonia property. |
 | [MaxValueProperty](#uid-0ca28a06b9) | Identifies the [Avalonia.Controls.Charts.ShapeLayer.MaxValue](xref:Avalonia.Controls.Charts.ShapeLayer.MaxValue) Avalonia property. |
 | [MinValueProperty](#uid-152ddf93d7) | Identifies the [Avalonia.Controls.Charts.ShapeLayer.MinValue](xref:Avalonia.Controls.Charts.ShapeLayer.MinValue) Avalonia property. |
+| [OpacityProperty](maplayer.mdx#uid-7b17fad341) | Identifies the [Avalonia.Controls.Charts.MapLayer.Opacity](xref:Avalonia.Controls.Charts.MapLayer.Opacity) Avalonia property. Inherited from [MapLayer](maplayer.mdx). |
 | [RegionPathProperty](#uid-0ed1ad0567) | Identifies the [Avalonia.Controls.Charts.ShapeLayer.RegionPath](xref:Avalonia.Controls.Charts.ShapeLayer.RegionPath) Avalonia property. |
 | [SelectedItemProperty](#uid-254fd4cc60) | Identifies the [Avalonia.Controls.Charts.ShapeLayer.SelectedItem](xref:Avalonia.Controls.Charts.ShapeLayer.SelectedItem) Avalonia property. |
 | [SelectedItemsProperty](#uid-39a6c37d51) | Identifies the [Avalonia.Controls.Charts.ShapeLayer.SelectedItems](xref:Avalonia.Controls.Charts.ShapeLayer.SelectedItems) Avalonia property. |
@@ -809,10 +811,8 @@ public string ValuePath { get; set; }
 | [SourceProperty](#uid-3c0258d875) | Identifies the [Avalonia.Controls.Charts.ShapeLayer.Source](xref:Avalonia.Controls.Charts.ShapeLayer.Source) Avalonia property. |
 | [StrokeProperty](#uid-aa89fef3b6) | Identifies the [Avalonia.Controls.Charts.ShapeLayer.Stroke](xref:Avalonia.Controls.Charts.ShapeLayer.Stroke) Avalonia property. |
 | [StrokeThicknessProperty](#uid-0e72cd2e2a) | Identifies the [Avalonia.Controls.Charts.ShapeLayer.StrokeThickness](xref:Avalonia.Controls.Charts.ShapeLayer.StrokeThickness) Avalonia property. |
-| [ValuePathProperty](#uid-53341ad8d4) | Identifies the [Avalonia.Controls.Charts.ShapeLayer.ValuePath](xref:Avalonia.Controls.Charts.ShapeLayer.ValuePath) Avalonia property. |
-| [IsVisibleProperty](maplayer.mdx#uid-74f0177084) | Identifies the [Avalonia.Controls.Charts.MapLayer.IsVisible](xref:Avalonia.Controls.Charts.MapLayer.IsVisible) Avalonia property. Inherited from [MapLayer](maplayer.mdx). |
-| [OpacityProperty](maplayer.mdx#uid-7b17fad341) | Identifies the [Avalonia.Controls.Charts.MapLayer.Opacity](xref:Avalonia.Controls.Charts.MapLayer.Opacity) Avalonia property. Inherited from [MapLayer](maplayer.mdx). |
 | [TooltipTemplateProperty](maplayer.mdx#uid-10362b19e1) | Identifies the [Avalonia.Controls.Charts.MapLayer.TooltipTemplate](xref:Avalonia.Controls.Charts.MapLayer.TooltipTemplate) Avalonia property. Inherited from [MapLayer](maplayer.mdx). |
+| [ValuePathProperty](#uid-53341ad8d4) | Identifies the [Avalonia.Controls.Charts.ShapeLayer.ValuePath](xref:Avalonia.Controls.Charts.ShapeLayer.ValuePath) Avalonia property. |
 
 <section className="apiref-page__member-entry">
 
@@ -1168,10 +1168,10 @@ public Avalonia.StyledProperty<string> ValuePathProperty
 
 | Name | Description |
 | --- | --- |
-| [SelectionChanged](#uid-34c6516cbd) | Occurs when selection changes. |
-| [SelectionChanging](#uid-7303179825) | Occurs before selection changes. |
 | [Invalidated](maplayer.mdx#uid-995465c2b4) | Event raised when the layer needs to be redrawn. Inherited from [MapLayer](maplayer.mdx). |
 | [PropertyChanged](../../avaloniaobject.mdx#uid-d758e26fae) | Raised when a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value changes on this object. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [SelectionChanged](#uid-34c6516cbd) | Occurs when selection changes. |
+| [SelectionChanging](#uid-7303179825) | Occurs before selection changes. |
 
 <section className="apiref-page__member-entry">
 

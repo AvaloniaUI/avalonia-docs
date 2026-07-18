@@ -78,12 +78,6 @@ public MarkerLayer()
 
 | Name | Description |
 | --- | --- |
-| [GetLayerBounds](#uid-e5749f9cf9) | Gets the geographic bounds (in 0-200, 0-100 viewport units) of the content in this layer. Used for auto-scaling the map to fit content. |
-| [GetPointData](#uid-13aab0fd9b) | Gets the data item at the specified screen point. |
-| [OnPointerExited](#uid-957a29b2e7) | Handles pointer exited events. Override this method to handle interactions (e.g. clearing hover effects). |
-| [OnPointerMoved](#uid-a090534be2) | Handles pointer moved events. Override this method to handle interactions (e.g. hover effects). |
-| [Render](#uid-7683e5f72b) | Renders this layer to the drawing context. |
-| [OnPointerPressed](maplayer.mdx#uid-61476cbbf9) | Handles pointer pressed events. Override this method to handle interactions (e.g. selection). Inherited from [MapLayer](maplayer.mdx). |
 | [Bind (8 overloads)](../../avaloniaobject.mdx#uid-1c60c7bda3) | Binds a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) to an [Avalonia.Data.BindingBase](xref:Avalonia.Data.BindingBase). Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
 | [CheckAccess](../../avaloniaobject.mdx#uid-260ff7a68d) | Returns a value indicating whether the current thread is the UI thread. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
 | [ClearValue (4 overloads)](../../avaloniaobject.mdx#uid-41de208fbe) | Clears a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty)'s local value. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
@@ -91,9 +85,15 @@ public MarkerLayer()
 | [Equals](../../avaloniaobject.mdx#uid-a8a8e94305) | Compares two objects using reference equality. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
 | [GetBaseValue](../../avaloniaobject.mdx#uid-9c615efbba) | Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
 | [GetHashCode](../../avaloniaobject.mdx#uid-7f7db1e7a2) | Gets the hash code for the object. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [GetLayerBounds](#uid-e5749f9cf9) | Gets the geographic bounds (in 0-200, 0-100 viewport units) of the content in this layer. Used for auto-scaling the map to fit content. |
+| [GetPointData](#uid-13aab0fd9b) | Gets the data item at the specified screen point. |
 | [GetValue (3 overloads)](../../avaloniaobject.mdx#uid-5142cd4792) | Gets a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
 | [IsAnimating](../../avaloniaobject.mdx#uid-8cbfc7521a) | Checks whether a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) is animating. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
 | [IsSet](../../avaloniaobject.mdx#uid-f8bf0bbdcc) | Checks whether a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) is set on this object. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [OnPointerExited](#uid-957a29b2e7) | Handles pointer exited events. Override this method to handle interactions (e.g. clearing hover effects). |
+| [OnPointerMoved](#uid-a090534be2) | Handles pointer moved events. Override this method to handle interactions (e.g. hover effects). |
+| [OnPointerPressed](maplayer.mdx#uid-61476cbbf9) | Handles pointer pressed events. Override this method to handle interactions (e.g. selection). Inherited from [MapLayer](maplayer.mdx). |
+| [Render](#uid-7683e5f72b) | Renders this layer to the drawing context. |
 | [SetCurrentValue (2 overloads)](../../avaloniaobject.mdx#uid-38759fd088) | Sets the value of a dependency property without changing its value source. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
 | [SetValue (3 overloads)](../../avaloniaobject.mdx#uid-47d14e19d7) | Sets a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
 | [VerifyAccess](../../avaloniaobject.mdx#uid-3b9d3c9793) | Checks that the current thread is the UI thread and throws if not. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
@@ -231,20 +231,20 @@ Animation progress from 0 to 1.
 
 | Name | Description |
 | --- | --- |
+| [Dispatcher](../../avaloniaobject.mdx#uid-b25fa51632) | Returns the [Avalonia.AvaloniaObject.Dispatcher](xref:Avalonia.AvaloniaObject.Dispatcher) that this [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject) is associated with. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
 | [Fill](#uid-537deb0f3a) | Gets or sets the default fill brush for markers from ItemsSource. |
+| [IsVisible](maplayer.mdx#uid-93a23c42b6) | Gets or sets whether this layer is visible. Inherited from [MapLayer](maplayer.mdx). |
+| [Item](../../avaloniaobject.mdx#uid-c1d1f1bc0f) | Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
 | [ItemsSource](#uid-7d8db69961) | Gets or sets the data source. |
 | [LabelPath](#uid-0c718e555c) | Gets or sets the path to the label property in the ItemsSource. |
 | [LatitudePath](#uid-c0b5ec337c) | Gets or sets the path to the latitude property in the ItemsSource. |
 | [LongitudePath](#uid-303741784e) | Gets or sets the path to the longitude property in the ItemsSource. |
+| [Markers](#uid-fcd44c9309) | Gets or sets the collection of markers. |
 | [MarkerSize](#uid-644c107a33) | Gets or sets the default size for markers from ItemsSource. |
 | [MarkerType](#uid-3af2bfe7c5) | Gets or sets the default marker type for markers from ItemsSource. |
-| [Markers](#uid-fcd44c9309) | Gets or sets the collection of markers. |
-| [Stroke](#uid-eb39880d42) | Gets or sets the default stroke brush for markers from ItemsSource. |
-| [IsVisible](maplayer.mdx#uid-93a23c42b6) | Gets or sets whether this layer is visible. Inherited from [MapLayer](maplayer.mdx). |
 | [Opacity](maplayer.mdx#uid-7b32d6b968) | Gets or sets the opacity of this layer. Inherited from [MapLayer](maplayer.mdx). |
+| [Stroke](#uid-eb39880d42) | Gets or sets the default stroke brush for markers from ItemsSource. |
 | [TooltipTemplate](maplayer.mdx#uid-f880527475) | Gets or sets the data template used for tooltips. Inherited from [MapLayer](maplayer.mdx). |
-| [Dispatcher](../../avaloniaobject.mdx#uid-b25fa51632) | Returns the [Avalonia.AvaloniaObject.Dispatcher](xref:Avalonia.AvaloniaObject.Dispatcher) that this [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject) is associated with. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
-| [Item](../../avaloniaobject.mdx#uid-c1d1f1bc0f) | Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
 
 <section className="apiref-page__member-entry">
 
@@ -318,6 +318,20 @@ public string LongitudePath { get; set; }
 
 <section className="apiref-page__member-entry">
 
+<span id="uid-fcd44c9309"></span>
+
+### Markers Property
+
+Gets or sets the collection of markers.
+
+```csharp
+public System.Collections.Generic.IList<Avalonia.Controls.Charts.MapMarker> Markers { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-644c107a33"></span>
 
 ### MarkerSize Property
@@ -346,20 +360,6 @@ public Avalonia.Controls.Charts.MapIconType MarkerType { get; set; }
 
 <section className="apiref-page__member-entry">
 
-<span id="uid-fcd44c9309"></span>
-
-### Markers Property
-
-Gets or sets the collection of markers.
-
-```csharp
-public System.Collections.Generic.IList<Avalonia.Controls.Charts.MapMarker> Markers { get; set; }
-```
-
-</section>
-
-<section className="apiref-page__member-entry">
-
 <span id="uid-eb39880d42"></span>
 
 ### Stroke Property
@@ -377,16 +377,16 @@ public Avalonia.Media.IBrush Stroke { get; set; }
 | Name | Description |
 | --- | --- |
 | [FillProperty](#uid-dea2a7706b) | Identifies the [Avalonia.Controls.Charts.MarkerLayer.Fill](xref:Avalonia.Controls.Charts.MarkerLayer.Fill) Avalonia property. |
+| [IsVisibleProperty](maplayer.mdx#uid-74f0177084) | Identifies the [Avalonia.Controls.Charts.MapLayer.IsVisible](xref:Avalonia.Controls.Charts.MapLayer.IsVisible) Avalonia property. Inherited from [MapLayer](maplayer.mdx). |
 | [ItemsSourceProperty](#uid-7e8e745364) | Identifies the [Avalonia.Controls.Charts.MarkerLayer.ItemsSource](xref:Avalonia.Controls.Charts.MarkerLayer.ItemsSource) Avalonia property. |
 | [LabelPathProperty](#uid-26c02e557c) | Identifies the [Avalonia.Controls.Charts.MarkerLayer.LabelPath](xref:Avalonia.Controls.Charts.MarkerLayer.LabelPath) Avalonia property. |
 | [LatitudePathProperty](#uid-067a82957e) | Identifies the [Avalonia.Controls.Charts.MarkerLayer.LatitudePath](xref:Avalonia.Controls.Charts.MarkerLayer.LatitudePath) Avalonia property. |
 | [LongitudePathProperty](#uid-b7afabf056) | Identifies the [Avalonia.Controls.Charts.MarkerLayer.LongitudePath](xref:Avalonia.Controls.Charts.MarkerLayer.LongitudePath) Avalonia property. |
 | [MarkerSizeProperty](#uid-12477be84a) | Identifies the [Avalonia.Controls.Charts.MarkerLayer.MarkerSize](xref:Avalonia.Controls.Charts.MarkerLayer.MarkerSize) Avalonia property. |
-| [MarkerTypeProperty](#uid-427f4b46a6) | Identifies the [Avalonia.Controls.Charts.MarkerLayer.MarkerType](xref:Avalonia.Controls.Charts.MarkerLayer.MarkerType) Avalonia property. |
 | [MarkersProperty](#uid-362d3d0acf) | Identifies the [Avalonia.Controls.Charts.MarkerLayer.Markers](xref:Avalonia.Controls.Charts.MarkerLayer.Markers) Avalonia property. |
-| [StrokeProperty](#uid-c3f861fcd4) | Identifies the [Avalonia.Controls.Charts.MarkerLayer.Stroke](xref:Avalonia.Controls.Charts.MarkerLayer.Stroke) Avalonia property. |
-| [IsVisibleProperty](maplayer.mdx#uid-74f0177084) | Identifies the [Avalonia.Controls.Charts.MapLayer.IsVisible](xref:Avalonia.Controls.Charts.MapLayer.IsVisible) Avalonia property. Inherited from [MapLayer](maplayer.mdx). |
+| [MarkerTypeProperty](#uid-427f4b46a6) | Identifies the [Avalonia.Controls.Charts.MarkerLayer.MarkerType](xref:Avalonia.Controls.Charts.MarkerLayer.MarkerType) Avalonia property. |
 | [OpacityProperty](maplayer.mdx#uid-7b17fad341) | Identifies the [Avalonia.Controls.Charts.MapLayer.Opacity](xref:Avalonia.Controls.Charts.MapLayer.Opacity) Avalonia property. Inherited from [MapLayer](maplayer.mdx). |
+| [StrokeProperty](#uid-c3f861fcd4) | Identifies the [Avalonia.Controls.Charts.MarkerLayer.Stroke](xref:Avalonia.Controls.Charts.MarkerLayer.Stroke) Avalonia property. |
 | [TooltipTemplateProperty](maplayer.mdx#uid-10362b19e1) | Identifies the [Avalonia.Controls.Charts.MapLayer.TooltipTemplate](xref:Avalonia.Controls.Charts.MapLayer.TooltipTemplate) Avalonia property. Inherited from [MapLayer](maplayer.mdx). |
 
 <section className="apiref-page__member-entry">
@@ -475,20 +475,6 @@ public Avalonia.StyledProperty<double> MarkerSizeProperty
 
 <section className="apiref-page__member-entry">
 
-<span id="uid-427f4b46a6"></span>
-
-### MarkerTypeProperty Field
-
-Identifies the [Avalonia.Controls.Charts.MarkerLayer.MarkerType](xref:Avalonia.Controls.Charts.MarkerLayer.MarkerType) Avalonia property.
-
-```csharp
-public Avalonia.StyledProperty<Avalonia.Controls.Charts.MapIconType> MarkerTypeProperty
-```
-
-</section>
-
-<section className="apiref-page__member-entry">
-
 <span id="uid-362d3d0acf"></span>
 
 ### MarkersProperty Field
@@ -497,6 +483,20 @@ Identifies the [Avalonia.Controls.Charts.MarkerLayer.Markers](xref:Avalonia.Cont
 
 ```csharp
 public Avalonia.StyledProperty<System.Collections.Generic.IList<Avalonia.Controls.Charts.MapMarker>> MarkersProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-427f4b46a6"></span>
+
+### MarkerTypeProperty Field
+
+Identifies the [Avalonia.Controls.Charts.MarkerLayer.MarkerType](xref:Avalonia.Controls.Charts.MarkerLayer.MarkerType) Avalonia property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.Charts.MapIconType> MarkerTypeProperty
 ```
 
 </section>

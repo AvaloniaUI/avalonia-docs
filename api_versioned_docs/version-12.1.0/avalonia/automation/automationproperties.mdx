@@ -53,8 +53,8 @@ public class AutomationProperties
 | Name | Description |
 | --- | --- |
 | [GetAcceleratorKey](#uid-6bb99765ed) | Helper for reading the value of the [Avalonia.Automation.AutomationProperties.AcceleratorKeyProperty](xref:Avalonia.Automation.AutomationProperties.AcceleratorKeyProperty) on a [StyledElement](xref:Avalonia.StyledElement). |
-| [GetAccessKey](#uid-26c8569f8f) | Helper for reading the value of the [Avalonia.Automation.AutomationProperties.AccessKeyProperty](xref:Avalonia.Automation.AutomationProperties.AccessKeyProperty) on a [StyledElement](xref:Avalonia.StyledElement). |
 | [GetAccessibilityView](#uid-c28782b68d) | Helper for reading the value of the [Avalonia.Automation.AutomationProperties.AccessibilityViewProperty](xref:Avalonia.Automation.AutomationProperties.AccessibilityViewProperty) on a [StyledElement](xref:Avalonia.StyledElement). |
+| [GetAccessKey](#uid-26c8569f8f) | Helper for reading the value of the [Avalonia.Automation.AutomationProperties.AccessKeyProperty](xref:Avalonia.Automation.AutomationProperties.AccessKeyProperty) on a [StyledElement](xref:Avalonia.StyledElement). |
 | [GetAutomationId](#uid-06aa62279e) | Helper for reading the value of the [Avalonia.Automation.AutomationProperties.AutomationIdProperty](xref:Avalonia.Automation.AutomationProperties.AutomationIdProperty) on a [StyledElement](xref:Avalonia.StyledElement). |
 | [GetClassNameOverride](#uid-e65a4635fd) | Helper for reading the value of the [Avalonia.Automation.AutomationProperties.ClassNameOverrideProperty](xref:Avalonia.Automation.AutomationProperties.ClassNameOverrideProperty) on a [StyledElement](xref:Avalonia.StyledElement). |
 | [GetControlTypeOverride](#uid-77471e006e) | Helper for reading the value of the [Avalonia.Automation.AutomationProperties.ControlTypeOverrideProperty](xref:Avalonia.Automation.AutomationProperties.ControlTypeOverrideProperty) on a [StyledElement](xref:Avalonia.StyledElement). |
@@ -74,8 +74,8 @@ public class AutomationProperties
 | [GetPositionInSet](#uid-602f7d2b8a) | Helper for reading the value of the [Avalonia.Automation.AutomationProperties.PositionInSetProperty](xref:Avalonia.Automation.AutomationProperties.PositionInSetProperty) on a [StyledElement](xref:Avalonia.StyledElement). |
 | [GetSizeOfSet](#uid-b36536a2ef) | Helper for reading the value of the [Avalonia.Automation.AutomationProperties.SizeOfSetProperty](xref:Avalonia.Automation.AutomationProperties.SizeOfSetProperty) on a [StyledElement](xref:Avalonia.StyledElement). |
 | [SetAcceleratorKey](#uid-a3e491a65f) | Helper for setting the value of the [Avalonia.Automation.AutomationProperties.AcceleratorKeyProperty](xref:Avalonia.Automation.AutomationProperties.AcceleratorKeyProperty) on a [StyledElement](xref:Avalonia.StyledElement). |
-| [SetAccessKey](#uid-0faff21684) | Helper for setting the value of the [Avalonia.Automation.AutomationProperties.AccessKeyProperty](xref:Avalonia.Automation.AutomationProperties.AccessKeyProperty) on a [StyledElement](xref:Avalonia.StyledElement). |
 | [SetAccessibilityView](#uid-d5037ef409) | Helper for setting the value of the [Avalonia.Automation.AutomationProperties.AccessibilityViewProperty](xref:Avalonia.Automation.AutomationProperties.AccessibilityViewProperty) on a [StyledElement](xref:Avalonia.StyledElement). |
+| [SetAccessKey](#uid-0faff21684) | Helper for setting the value of the [Avalonia.Automation.AutomationProperties.AccessKeyProperty](xref:Avalonia.Automation.AutomationProperties.AccessKeyProperty) on a [StyledElement](xref:Avalonia.StyledElement). |
 | [SetAutomationId](#uid-3f5008ecd2) | Helper for setting the value of the [Avalonia.Automation.AutomationProperties.AutomationIdProperty](xref:Avalonia.Automation.AutomationProperties.AutomationIdProperty) on a [StyledElement](xref:Avalonia.StyledElement). |
 | [SetClassNameOverride](#uid-641ef61a40) | Helper for setting the value of the [Avalonia.Automation.AutomationProperties.ClassNameOverrideProperty](xref:Avalonia.Automation.AutomationProperties.ClassNameOverrideProperty) on a [StyledElement](xref:Avalonia.StyledElement). |
 | [SetControlTypeOverride](#uid-1039b89a76) | No summary available. |
@@ -121,30 +121,6 @@ string
 
 <section className="apiref-page__member-entry">
 
-<span id="uid-26c8569f8f"></span>
-
-### GetAccessKey Method
-
-Helper for reading the value of the [Avalonia.Automation.AutomationProperties.AccessKeyProperty](xref:Avalonia.Automation.AutomationProperties.AccessKeyProperty) on a [StyledElement](xref:Avalonia.StyledElement).
-
-```csharp
-public string GetAccessKey(Avalonia.StyledElement element)
-```
-
-#### Parameters
-
-`element` [Avalonia.StyledElement](xref:Avalonia.StyledElement)
-
-
-#### Returns
-
-string
-
-
-</section>
-
-<section className="apiref-page__member-entry">
-
 <span id="uid-c28782b68d"></span>
 
 ### GetAccessibilityView Method
@@ -163,6 +139,30 @@ public Avalonia.Automation.AccessibilityView GetAccessibilityView(Avalonia.Style
 #### Returns
 
 [Avalonia.Automation.AccessibilityView](xref:Avalonia.Automation.AccessibilityView)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-26c8569f8f"></span>
+
+### GetAccessKey Method
+
+Helper for reading the value of the [Avalonia.Automation.AutomationProperties.AccessKeyProperty](xref:Avalonia.Automation.AutomationProperties.AccessKeyProperty) on a [StyledElement](xref:Avalonia.StyledElement).
+
+```csharp
+public string GetAccessKey(Avalonia.StyledElement element)
+```
+
+#### Parameters
+
+`element` [Avalonia.StyledElement](xref:Avalonia.StyledElement)
+
+
+#### Returns
+
+string
 
 
 </section>
@@ -623,28 +623,6 @@ public void SetAcceleratorKey(Avalonia.StyledElement element, string value)
 
 <section className="apiref-page__member-entry">
 
-<span id="uid-0faff21684"></span>
-
-### SetAccessKey Method
-
-Helper for setting the value of the [Avalonia.Automation.AutomationProperties.AccessKeyProperty](xref:Avalonia.Automation.AutomationProperties.AccessKeyProperty) on a [StyledElement](xref:Avalonia.StyledElement).
-
-```csharp
-public void SetAccessKey(Avalonia.StyledElement element, string value)
-```
-
-#### Parameters
-
-`element` [Avalonia.StyledElement](xref:Avalonia.StyledElement)
-
-
-`value` string
-
-
-</section>
-
-<section className="apiref-page__member-entry">
-
 <span id="uid-d5037ef409"></span>
 
 ### SetAccessibilityView Method
@@ -661,6 +639,28 @@ public void SetAccessibilityView(Avalonia.StyledElement element, Avalonia.Automa
 
 
 `value` [Avalonia.Automation.AccessibilityView](xref:Avalonia.Automation.AccessibilityView)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0faff21684"></span>
+
+### SetAccessKey Method
+
+Helper for setting the value of the [Avalonia.Automation.AutomationProperties.AccessKeyProperty](xref:Avalonia.Automation.AutomationProperties.AccessKeyProperty) on a [StyledElement](xref:Avalonia.StyledElement).
+
+```csharp
+public void SetAccessKey(Avalonia.StyledElement element, string value)
+```
+
+#### Parameters
+
+`element` [Avalonia.StyledElement](xref:Avalonia.StyledElement)
+
+
+`value` string
 
 
 </section>
@@ -1060,8 +1060,8 @@ public void SetSizeOfSet(Avalonia.StyledElement element, int value)
 | Name | Description |
 | --- | --- |
 | [AcceleratorKeyProperty](#uid-5375e8be01) | Defines the AutomationProperties.AcceleratorKey attached property. |
-| [AccessKeyProperty](#uid-91f8afe39a) | Defines the AutomationProperties.AccessKey attached property |
 | [AccessibilityViewProperty](#uid-84ed7706af) | Defines the AutomationProperties.[AccessibilityView](xref:Avalonia.Automation.AccessibilityView) attached property. |
+| [AccessKeyProperty](#uid-91f8afe39a) | Defines the AutomationProperties.AccessKey attached property |
 | [AutomationIdProperty](#uid-4618cbc31c) | Defines the AutomationProperties.AutomationId attached property. |
 | [ClassNameOverrideProperty](#uid-ec74a81553) | Defines the AutomationProperties.ClassNameOverride attached property. |
 | [ControlTypeOverrideProperty](#uid-3fabc9aa90) | Defines the AutomationProperties.ControlTypeOverride attached property. |
@@ -1101,24 +1101,6 @@ This property affects the default value for [Avalonia.Automation.Peers.Automatio
 
 <section className="apiref-page__member-entry">
 
-<span id="uid-91f8afe39a"></span>
-
-### AccessKeyProperty Field
-
-Defines the AutomationProperties.AccessKey attached property
-
-```csharp
-public Avalonia.AttachedProperty<string> AccessKeyProperty
-```
-
-#### Remarks
-
-This property affects the default value for [Avalonia.Automation.Peers.AutomationPeer.GetAccessKey](xref:Avalonia.Automation.Peers.AutomationPeer.GetAccessKey).
-
-</section>
-
-<section className="apiref-page__member-entry">
-
 <span id="uid-84ed7706af"></span>
 
 ### AccessibilityViewProperty Field
@@ -1134,6 +1116,24 @@ public Avalonia.AttachedProperty<Avalonia.Automation.AccessibilityView> Accessib
 The value of this property affects the default value of the
 [Avalonia.Automation.Peers.AutomationPeer.IsContentElement](xref:Avalonia.Automation.Peers.AutomationPeer.IsContentElement) and
 [Avalonia.Automation.Peers.AutomationPeer.IsControlElement](xref:Avalonia.Automation.Peers.AutomationPeer.IsControlElement) properties.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-91f8afe39a"></span>
+
+### AccessKeyProperty Field
+
+Defines the AutomationProperties.AccessKey attached property
+
+```csharp
+public Avalonia.AttachedProperty<string> AccessKeyProperty
+```
+
+#### Remarks
+
+This property affects the default value for [Avalonia.Automation.Peers.AutomationPeer.GetAccessKey](xref:Avalonia.Automation.Peers.AutomationPeer.GetAccessKey).
 
 </section>
 

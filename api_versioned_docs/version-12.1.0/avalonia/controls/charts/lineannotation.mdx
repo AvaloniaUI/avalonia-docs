@@ -95,18 +95,18 @@ public LineAnnotation()
 | Name | Description |
 | --- | --- |
 | [DashStyle](#uid-3bdbff5860) | Gets or sets the dash style for the line. |
-| [Label](#uid-9d1fb477f1) | Gets or sets the label text displayed near the line. [Avalonia.Controls.Charts.ChartAnnotation.Foreground](xref:Avalonia.Controls.Charts.ChartAnnotation.Foreground) controls label color and falls back to [Avalonia.Controls.Charts.ChartAnnotation.Stroke](xref:Avalonia.Controls.Charts.ChartAnnotation.Stroke) when unset. |
-| [Orientation](#uid-47f224a9c7) | Gets or sets the orientation (Horizontal or Vertical). |
-| [Value](#uid-6fbadeeaa2) | Gets or sets the axis-space value where the line is drawn. Horizontal lines use vertical-axis values; vertical lines use horizontal-axis values. |
+| [Dispatcher](../../avaloniaobject.mdx#uid-b25fa51632) | Returns the [Avalonia.AvaloniaObject.Dispatcher](xref:Avalonia.AvaloniaObject.Dispatcher) that this [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject) is associated with. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
 | [FontSize](chartannotation.mdx#uid-2bca046263) | Gets or sets the font size used for annotation text or labels. Inherited from [ChartAnnotation](chartannotation.mdx). |
 | [Foreground](chartannotation.mdx#uid-a5f9417de5) | Gets or sets the brush used for annotation text or labels. When unset, text-capable annotations fall back to their local defaults or to [Avalonia.Controls.Charts.ChartAnnotation.Stroke](xref:Avalonia.Controls.Charts.ChartAnnotation.Stroke) where appropriate. Inherited from [ChartAnnotation](chartannotation.mdx). |
 | [IsBandAnnotation](chartannotation.mdx#uid-1ddcc04903) | Gets whether this annotation is a band annotation. Used by the rendering pipeline to distinguish bands from line/text annotations without requiring a cross-assembly type check. Inherited from [ChartAnnotation](chartannotation.mdx). |
 | [IsVisible](chartannotation.mdx#uid-9cb7862105) | Gets or sets whether this annotation is visible. Inherited from [ChartAnnotation](chartannotation.mdx). |
+| [Item](../../avaloniaobject.mdx#uid-c1d1f1bc0f) | Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [Label](#uid-9d1fb477f1) | Gets or sets the label text displayed near the line. [Avalonia.Controls.Charts.ChartAnnotation.Foreground](xref:Avalonia.Controls.Charts.ChartAnnotation.Foreground) controls label color and falls back to [Avalonia.Controls.Charts.ChartAnnotation.Stroke](xref:Avalonia.Controls.Charts.ChartAnnotation.Stroke) when unset. |
 | [Opacity](chartannotation.mdx#uid-7268bb2a0c) | Gets or sets the opacity applied to the entire annotation. Inherited from [ChartAnnotation](chartannotation.mdx). |
+| [Orientation](#uid-47f224a9c7) | Gets or sets the orientation (Horizontal or Vertical). |
 | [Stroke](chartannotation.mdx#uid-bd5cf8b072) | Gets or sets the stroke brush for annotation geometry. Text-based annotations can also use this as an outline brush. Inherited from [ChartAnnotation](chartannotation.mdx). |
 | [StrokeThickness](chartannotation.mdx#uid-6c46f0e570) | Gets or sets the stroke thickness for annotation geometry or text outlines. Inherited from [ChartAnnotation](chartannotation.mdx). |
-| [Dispatcher](../../avaloniaobject.mdx#uid-b25fa51632) | Returns the [Avalonia.AvaloniaObject.Dispatcher](xref:Avalonia.AvaloniaObject.Dispatcher) that this [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject) is associated with. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
-| [Item](../../avaloniaobject.mdx#uid-c1d1f1bc0f) | Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [Value](#uid-6fbadeeaa2) | Gets or sets the axis-space value where the line is drawn. Horizontal lines use vertical-axis values; vertical lines use horizontal-axis values. |
 
 <section className="apiref-page__member-entry">
 
@@ -172,15 +172,15 @@ public double Value { get; set; }
 | Name | Description |
 | --- | --- |
 | [DashStyleProperty](#uid-12dc9dcde2) | Identifies the [Avalonia.Controls.Charts.LineAnnotation.DashStyle](xref:Avalonia.Controls.Charts.LineAnnotation.DashStyle) Avalonia property. |
-| [LabelProperty](#uid-67dff6429d) | Identifies the [Avalonia.Controls.Charts.LineAnnotation.Label](xref:Avalonia.Controls.Charts.LineAnnotation.Label) Avalonia property. |
-| [OrientationProperty](#uid-93e14d0d9f) | Identifies the [Avalonia.Controls.Charts.LineAnnotation.Orientation](xref:Avalonia.Controls.Charts.LineAnnotation.Orientation) Avalonia property. |
-| [ValueProperty](#uid-c03e2055c0) | Identifies the [Avalonia.Controls.Charts.LineAnnotation.Value](xref:Avalonia.Controls.Charts.LineAnnotation.Value) Avalonia property. |
 | [FontSizeProperty](chartannotation.mdx#uid-5e012c781b) | Identifies the [Avalonia.Controls.Charts.ChartAnnotation.FontSize](xref:Avalonia.Controls.Charts.ChartAnnotation.FontSize) Avalonia property. Inherited from [ChartAnnotation](chartannotation.mdx). |
 | [ForegroundProperty](chartannotation.mdx#uid-74e3f2b1e1) | Identifies the [Avalonia.Controls.Charts.ChartAnnotation.Foreground](xref:Avalonia.Controls.Charts.ChartAnnotation.Foreground) Avalonia property. Inherited from [ChartAnnotation](chartannotation.mdx). |
 | [IsVisibleProperty](chartannotation.mdx#uid-1c26c2a333) | Identifies the [Avalonia.Controls.Charts.ChartAnnotation.IsVisible](xref:Avalonia.Controls.Charts.ChartAnnotation.IsVisible) Avalonia property. Inherited from [ChartAnnotation](chartannotation.mdx). |
+| [LabelProperty](#uid-67dff6429d) | Identifies the [Avalonia.Controls.Charts.LineAnnotation.Label](xref:Avalonia.Controls.Charts.LineAnnotation.Label) Avalonia property. |
 | [OpacityProperty](chartannotation.mdx#uid-7c0e434cc3) | Identifies the [Avalonia.Controls.Charts.ChartAnnotation.Opacity](xref:Avalonia.Controls.Charts.ChartAnnotation.Opacity) Avalonia property. Inherited from [ChartAnnotation](chartannotation.mdx). |
+| [OrientationProperty](#uid-93e14d0d9f) | Identifies the [Avalonia.Controls.Charts.LineAnnotation.Orientation](xref:Avalonia.Controls.Charts.LineAnnotation.Orientation) Avalonia property. |
 | [StrokeProperty](chartannotation.mdx#uid-43ce9a58ca) | Identifies the [Avalonia.Controls.Charts.ChartAnnotation.Stroke](xref:Avalonia.Controls.Charts.ChartAnnotation.Stroke) Avalonia property. Inherited from [ChartAnnotation](chartannotation.mdx). |
 | [StrokeThicknessProperty](chartannotation.mdx#uid-d2f7496e4c) | Identifies the [Avalonia.Controls.Charts.ChartAnnotation.StrokeThickness](xref:Avalonia.Controls.Charts.ChartAnnotation.StrokeThickness) Avalonia property. Inherited from [ChartAnnotation](chartannotation.mdx). |
+| [ValueProperty](#uid-c03e2055c0) | Identifies the [Avalonia.Controls.Charts.LineAnnotation.Value](xref:Avalonia.Controls.Charts.LineAnnotation.Value) Avalonia property. |
 
 <section className="apiref-page__member-entry">
 

@@ -76,12 +76,6 @@ public PieChartMapLayer()
 
 | Name | Description |
 | --- | --- |
-| [GetLayerBounds](#uid-befdfac209) | Gets the geographic bounds (in 0-200, 0-100 viewport units) of the content in this layer. Used for auto-scaling the map to fit content. |
-| [GetPointData](#uid-cdd7dee03b) | Gets the data item at the specified screen point. |
-| [OnPointerExited](#uid-7e19255e17) | Handles pointer exited events. Override this method to handle interactions (e.g. clearing hover effects). |
-| [OnPointerMoved](#uid-307fe4d639) | Handles pointer moved events. Override this method to handle interactions (e.g. hover effects). |
-| [Render](#uid-5a9e8d4096) | Renders this layer to the drawing context. |
-| [OnPointerPressed](maplayer.mdx#uid-61476cbbf9) | Handles pointer pressed events. Override this method to handle interactions (e.g. selection). Inherited from [MapLayer](maplayer.mdx). |
 | [Bind (8 overloads)](../../avaloniaobject.mdx#uid-1c60c7bda3) | Binds a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) to an [Avalonia.Data.BindingBase](xref:Avalonia.Data.BindingBase). Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
 | [CheckAccess](../../avaloniaobject.mdx#uid-260ff7a68d) | Returns a value indicating whether the current thread is the UI thread. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
 | [ClearValue (4 overloads)](../../avaloniaobject.mdx#uid-41de208fbe) | Clears a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty)'s local value. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
@@ -89,9 +83,15 @@ public PieChartMapLayer()
 | [Equals](../../avaloniaobject.mdx#uid-a8a8e94305) | Compares two objects using reference equality. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
 | [GetBaseValue](../../avaloniaobject.mdx#uid-9c615efbba) | Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
 | [GetHashCode](../../avaloniaobject.mdx#uid-7f7db1e7a2) | Gets the hash code for the object. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [GetLayerBounds](#uid-befdfac209) | Gets the geographic bounds (in 0-200, 0-100 viewport units) of the content in this layer. Used for auto-scaling the map to fit content. |
+| [GetPointData](#uid-cdd7dee03b) | Gets the data item at the specified screen point. |
 | [GetValue (3 overloads)](../../avaloniaobject.mdx#uid-5142cd4792) | Gets a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
 | [IsAnimating](../../avaloniaobject.mdx#uid-8cbfc7521a) | Checks whether a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) is animating. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
 | [IsSet](../../avaloniaobject.mdx#uid-f8bf0bbdcc) | Checks whether a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) is set on this object. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [OnPointerExited](#uid-7e19255e17) | Handles pointer exited events. Override this method to handle interactions (e.g. clearing hover effects). |
+| [OnPointerMoved](#uid-307fe4d639) | Handles pointer moved events. Override this method to handle interactions (e.g. hover effects). |
+| [OnPointerPressed](maplayer.mdx#uid-61476cbbf9) | Handles pointer pressed events. Override this method to handle interactions (e.g. selection). Inherited from [MapLayer](maplayer.mdx). |
+| [Render](#uid-5a9e8d4096) | Renders this layer to the drawing context. |
 | [SetCurrentValue (2 overloads)](../../avaloniaobject.mdx#uid-38759fd088) | Sets the value of a dependency property without changing its value source. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
 | [SetValue (3 overloads)](../../avaloniaobject.mdx#uid-47d14e19d7) | Sets a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
 | [VerifyAccess](../../avaloniaobject.mdx#uid-3b9d3c9793) | Checks that the current thread is the UI thread and throws if not. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
@@ -229,19 +229,19 @@ Animation progress from 0 to 1.
 
 | Name | Description |
 | --- | --- |
+| [Dispatcher](../../avaloniaobject.mdx#uid-b25fa51632) | Returns the [Avalonia.AvaloniaObject.Dispatcher](xref:Avalonia.AvaloniaObject.Dispatcher) that this [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject) is associated with. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [IsVisible](maplayer.mdx#uid-93a23c42b6) | Gets or sets whether this layer is visible. Inherited from [MapLayer](maplayer.mdx). |
+| [Item](../../avaloniaobject.mdx#uid-c1d1f1bc0f) | Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
 | [ItemsSource](#uid-88df5ea29b) | Gets or sets the collection of items to draw pie charts for. |
 | [LabelPath](#uid-134b50ff49) | Path to the label property within the segment object. |
 | [LatitudePath](#uid-519755399a) | Gets or sets the property path for the latitude coordinate. |
 | [LongitudePath](#uid-98f5b1f6f6) | Gets or sets the property path for the longitude coordinate. |
+| [Opacity](maplayer.mdx#uid-7b32d6b968) | Gets or sets the opacity of this layer. Inherited from [MapLayer](maplayer.mdx). |
 | [Palette](#uid-d06d9f592b) | Gets or sets the color palette used for pie slices. |
 | [PieSize](#uid-08856f514b) | Gets or sets the size (diameter) of the pie charts. |
+| [TooltipTemplate](maplayer.mdx#uid-f880527475) | Gets or sets the data template used for tooltips. Inherited from [MapLayer](maplayer.mdx). |
 | [ValuePath](#uid-bd2bd37f3a) | Path to the numeric value property within the segment object. If null, assumes the segment object itself is a number. |
 | [ValuesPath](#uid-e6927d2acb) | Path to the collection of values/segments object within the data item. |
-| [IsVisible](maplayer.mdx#uid-93a23c42b6) | Gets or sets whether this layer is visible. Inherited from [MapLayer](maplayer.mdx). |
-| [Opacity](maplayer.mdx#uid-7b32d6b968) | Gets or sets the opacity of this layer. Inherited from [MapLayer](maplayer.mdx). |
-| [TooltipTemplate](maplayer.mdx#uid-f880527475) | Gets or sets the data template used for tooltips. Inherited from [MapLayer](maplayer.mdx). |
-| [Dispatcher](../../avaloniaobject.mdx#uid-b25fa51632) | Returns the [Avalonia.AvaloniaObject.Dispatcher](xref:Avalonia.AvaloniaObject.Dispatcher) that this [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject) is associated with. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
-| [Item](../../avaloniaobject.mdx#uid-c1d1f1bc0f) | Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
 
 <section className="apiref-page__member-entry">
 
@@ -360,17 +360,17 @@ public string ValuesPath { get; set; }
 
 | Name | Description |
 | --- | --- |
+| [IsVisibleProperty](maplayer.mdx#uid-74f0177084) | Identifies the [Avalonia.Controls.Charts.MapLayer.IsVisible](xref:Avalonia.Controls.Charts.MapLayer.IsVisible) Avalonia property. Inherited from [MapLayer](maplayer.mdx). |
 | [ItemsSourceProperty](#uid-7555d4eefa) | Identifies the [Avalonia.Controls.Charts.PieChartMapLayer.ItemsSource](xref:Avalonia.Controls.Charts.PieChartMapLayer.ItemsSource) Avalonia property. |
 | [LabelPathProperty](#uid-df7a9712b1) | Identifies the [Avalonia.Controls.Charts.PieChartMapLayer.LabelPath](xref:Avalonia.Controls.Charts.PieChartMapLayer.LabelPath) Avalonia property. |
 | [LatitudePathProperty](#uid-a77bb963b9) | Identifies the [Avalonia.Controls.Charts.PieChartMapLayer.LatitudePath](xref:Avalonia.Controls.Charts.PieChartMapLayer.LatitudePath) Avalonia property. |
 | [LongitudePathProperty](#uid-47495744d2) | Identifies the [Avalonia.Controls.Charts.PieChartMapLayer.LongitudePath](xref:Avalonia.Controls.Charts.PieChartMapLayer.LongitudePath) Avalonia property. |
+| [OpacityProperty](maplayer.mdx#uid-7b17fad341) | Identifies the [Avalonia.Controls.Charts.MapLayer.Opacity](xref:Avalonia.Controls.Charts.MapLayer.Opacity) Avalonia property. Inherited from [MapLayer](maplayer.mdx). |
 | [PaletteProperty](#uid-7aca603067) | Identifies the [Avalonia.Controls.Charts.PieChartMapLayer.Palette](xref:Avalonia.Controls.Charts.PieChartMapLayer.Palette) Avalonia property. |
 | [PieSizeProperty](#uid-70375f47d0) | Identifies the [Avalonia.Controls.Charts.PieChartMapLayer.PieSize](xref:Avalonia.Controls.Charts.PieChartMapLayer.PieSize) Avalonia property. |
+| [TooltipTemplateProperty](maplayer.mdx#uid-10362b19e1) | Identifies the [Avalonia.Controls.Charts.MapLayer.TooltipTemplate](xref:Avalonia.Controls.Charts.MapLayer.TooltipTemplate) Avalonia property. Inherited from [MapLayer](maplayer.mdx). |
 | [ValuePathProperty](#uid-b97bff3856) | Identifies the [Avalonia.Controls.Charts.PieChartMapLayer.ValuePath](xref:Avalonia.Controls.Charts.PieChartMapLayer.ValuePath) Avalonia property. |
 | [ValuesPathProperty](#uid-54bbbf530f) | Identifies the [Avalonia.Controls.Charts.PieChartMapLayer.ValuesPath](xref:Avalonia.Controls.Charts.PieChartMapLayer.ValuesPath) Avalonia property. |
-| [IsVisibleProperty](maplayer.mdx#uid-74f0177084) | Identifies the [Avalonia.Controls.Charts.MapLayer.IsVisible](xref:Avalonia.Controls.Charts.MapLayer.IsVisible) Avalonia property. Inherited from [MapLayer](maplayer.mdx). |
-| [OpacityProperty](maplayer.mdx#uid-7b17fad341) | Identifies the [Avalonia.Controls.Charts.MapLayer.Opacity](xref:Avalonia.Controls.Charts.MapLayer.Opacity) Avalonia property. Inherited from [MapLayer](maplayer.mdx). |
-| [TooltipTemplateProperty](maplayer.mdx#uid-10362b19e1) | Identifies the [Avalonia.Controls.Charts.MapLayer.TooltipTemplate](xref:Avalonia.Controls.Charts.MapLayer.TooltipTemplate) Avalonia property. Inherited from [MapLayer](maplayer.mdx). |
 
 <section className="apiref-page__member-entry">
 
