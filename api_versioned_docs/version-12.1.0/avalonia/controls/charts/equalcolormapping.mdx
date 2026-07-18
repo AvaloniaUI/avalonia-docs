@@ -76,7 +76,6 @@ public EqualColorMapping()
 
 | Name | Description |
 | --- | --- |
-| [Matches](#uid-aebfaedd0e) | Determines if the mapping matches the given data value. |
 | [Bind (8 overloads)](../../avaloniaobject.mdx#uid-1c60c7bda3) | Binds a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) to an [Avalonia.Data.BindingBase](xref:Avalonia.Data.BindingBase). Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
 | [CheckAccess](../../avaloniaobject.mdx#uid-260ff7a68d) | Returns a value indicating whether the current thread is the UI thread. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
 | [ClearValue (4 overloads)](../../avaloniaobject.mdx#uid-41de208fbe) | Clears a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty)'s local value. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
@@ -87,6 +86,7 @@ public EqualColorMapping()
 | [GetValue (3 overloads)](../../avaloniaobject.mdx#uid-5142cd4792) | Gets a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
 | [IsAnimating](../../avaloniaobject.mdx#uid-8cbfc7521a) | Checks whether a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) is animating. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
 | [IsSet](../../avaloniaobject.mdx#uid-f8bf0bbdcc) | Checks whether a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) is set on this object. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [Matches](#uid-aebfaedd0e) | Determines if the mapping matches the given data value. |
 | [SetCurrentValue (2 overloads)](../../avaloniaobject.mdx#uid-38759fd088) | Sets the value of a dependency property without changing its value source. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
 | [SetValue (3 overloads)](../../avaloniaobject.mdx#uid-47d14e19d7) | Sets a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
 | [VerifyAccess](../../avaloniaobject.mdx#uid-3b9d3c9793) | Checks that the current thread is the UI thread and throws if not. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
@@ -123,11 +123,11 @@ True if the value matches the mapping criteria.
 
 | Name | Description |
 | --- | --- |
-| [Value](#uid-bfbc22338d) | Gets or sets the specific value to match. |
 | [Brush](colormapping.mdx#uid-e81147636b) | Gets or sets the brush to apply when the mapping conditions are met. Inherited from [ColorMapping](colormapping.mdx). |
-| [Label](colormapping.mdx#uid-6a71edd94f) | Gets or sets the label to display in the legend for this mapping. Inherited from [ColorMapping](colormapping.mdx). |
 | [Dispatcher](../../avaloniaobject.mdx#uid-b25fa51632) | Returns the [Avalonia.AvaloniaObject.Dispatcher](xref:Avalonia.AvaloniaObject.Dispatcher) that this [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject) is associated with. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
 | [Item](../../avaloniaobject.mdx#uid-c1d1f1bc0f) | Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [Label](colormapping.mdx#uid-6a71edd94f) | Gets or sets the label to display in the legend for this mapping. Inherited from [ColorMapping](colormapping.mdx). |
+| [Value](#uid-bfbc22338d) | Gets or sets the specific value to match. |
 
 <section className="apiref-page__member-entry">
 
@@ -147,9 +147,9 @@ public object Value { get; set; }
 
 | Name | Description |
 | --- | --- |
-| [ValueProperty](#uid-1b113597c2) | Identifies the [Avalonia.Controls.Charts.EqualColorMapping.Value](xref:Avalonia.Controls.Charts.EqualColorMapping.Value) Avalonia property. |
 | [BrushProperty](colormapping.mdx#uid-e92132656c) | Identifies the [Avalonia.Controls.Charts.ColorMapping.Brush](xref:Avalonia.Controls.Charts.ColorMapping.Brush) Avalonia property. Inherited from [ColorMapping](colormapping.mdx). |
 | [LabelProperty](colormapping.mdx#uid-9eb2b0f16b) | Identifies the [Avalonia.Controls.Charts.ColorMapping.Label](xref:Avalonia.Controls.Charts.ColorMapping.Label) Avalonia property. Inherited from [ColorMapping](colormapping.mdx). |
+| [ValueProperty](#uid-1b113597c2) | Identifies the [Avalonia.Controls.Charts.EqualColorMapping.Value](xref:Avalonia.Controls.Charts.EqualColorMapping.Value) Avalonia property. |
 
 <section className="apiref-page__member-entry">
 

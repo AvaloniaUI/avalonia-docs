@@ -77,12 +77,6 @@ public HeatmapLayer()
 
 | Name | Description |
 | --- | --- |
-| [GetLayerBounds](#uid-c73ed793c5) | Gets the geographic bounds (in 0-200, 0-100 viewport units) of the content in this layer. Used for auto-scaling the map to fit content. |
-| [GetPointData](#uid-0a98addc6f) | Gets the data item at the specified screen point. |
-| [OnPointerExited](#uid-3e73a5138a) | Handles pointer exited events. Override this method to handle interactions (e.g. clearing hover effects). |
-| [OnPointerMoved](#uid-78bed441c0) | Handles pointer moved events. Override this method to handle interactions (e.g. hover effects). |
-| [Render](#uid-50f662f3e2) | Renders this layer to the drawing context. |
-| [OnPointerPressed](maplayer.mdx#uid-61476cbbf9) | Handles pointer pressed events. Override this method to handle interactions (e.g. selection). Inherited from [MapLayer](maplayer.mdx). |
 | [Bind (8 overloads)](../../avaloniaobject.mdx#uid-1c60c7bda3) | Binds a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) to an [Avalonia.Data.BindingBase](xref:Avalonia.Data.BindingBase). Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
 | [CheckAccess](../../avaloniaobject.mdx#uid-260ff7a68d) | Returns a value indicating whether the current thread is the UI thread. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
 | [ClearValue (4 overloads)](../../avaloniaobject.mdx#uid-41de208fbe) | Clears a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty)'s local value. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
@@ -90,9 +84,15 @@ public HeatmapLayer()
 | [Equals](../../avaloniaobject.mdx#uid-a8a8e94305) | Compares two objects using reference equality. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
 | [GetBaseValue](../../avaloniaobject.mdx#uid-9c615efbba) | Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
 | [GetHashCode](../../avaloniaobject.mdx#uid-7f7db1e7a2) | Gets the hash code for the object. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [GetLayerBounds](#uid-c73ed793c5) | Gets the geographic bounds (in 0-200, 0-100 viewport units) of the content in this layer. Used for auto-scaling the map to fit content. |
+| [GetPointData](#uid-0a98addc6f) | Gets the data item at the specified screen point. |
 | [GetValue (3 overloads)](../../avaloniaobject.mdx#uid-5142cd4792) | Gets a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
 | [IsAnimating](../../avaloniaobject.mdx#uid-8cbfc7521a) | Checks whether a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) is animating. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
 | [IsSet](../../avaloniaobject.mdx#uid-f8bf0bbdcc) | Checks whether a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) is set on this object. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [OnPointerExited](#uid-3e73a5138a) | Handles pointer exited events. Override this method to handle interactions (e.g. clearing hover effects). |
+| [OnPointerMoved](#uid-78bed441c0) | Handles pointer moved events. Override this method to handle interactions (e.g. hover effects). |
+| [OnPointerPressed](maplayer.mdx#uid-61476cbbf9) | Handles pointer pressed events. Override this method to handle interactions (e.g. selection). Inherited from [MapLayer](maplayer.mdx). |
+| [Render](#uid-50f662f3e2) | Renders this layer to the drawing context. |
 | [SetCurrentValue (2 overloads)](../../avaloniaobject.mdx#uid-38759fd088) | Sets the value of a dependency property without changing its value source. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
 | [SetValue (3 overloads)](../../avaloniaobject.mdx#uid-47d14e19d7) | Sets a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
 | [VerifyAccess](../../avaloniaobject.mdx#uid-3b9d3c9793) | Checks that the current thread is the UI thread and throws if not. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
@@ -230,20 +230,20 @@ Animation progress from 0 to 1.
 
 | Name | Description |
 | --- | --- |
+| [Dispatcher](../../avaloniaobject.mdx#uid-b25fa51632) | Returns the [Avalonia.AvaloniaObject.Dispatcher](xref:Avalonia.AvaloniaObject.Dispatcher) that this [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject) is associated with. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
 | [HighBrush](#uid-64e1e8bb86) | Gets or sets the brush for high intensity values. |
 | [IntensityPath](#uid-66a1a4b63a) | Gets or sets the property path for intensity values. |
+| [IsVisible](maplayer.mdx#uid-93a23c42b6) | Gets or sets whether this layer is visible. Inherited from [MapLayer](maplayer.mdx). |
+| [Item](../../avaloniaobject.mdx#uid-c1d1f1bc0f) | Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
 | [ItemsSource](#uid-b61f016316) | Gets or sets the data source for heatmap points. |
 | [LatitudePath](#uid-ce19369e61) | Gets or sets the property path for latitude values. |
 | [LongitudePath](#uid-2d2c09788f) | Gets or sets the property path for longitude values. |
 | [LowBrush](#uid-90302dcf1a) | Gets or sets the brush for low intensity values. |
 | [MaxIntensity](#uid-4797bc2f08) | Gets or sets the maximum intensity value for normalization. |
 | [MediumBrush](#uid-54758edebf) | Gets or sets the brush for medium intensity values. |
-| [Radius](#uid-8239a6467c) | Gets or sets the base radius for heatmap points (in pixels). |
-| [IsVisible](maplayer.mdx#uid-93a23c42b6) | Gets or sets whether this layer is visible. Inherited from [MapLayer](maplayer.mdx). |
 | [Opacity](maplayer.mdx#uid-7b32d6b968) | Gets or sets the opacity of this layer. Inherited from [MapLayer](maplayer.mdx). |
+| [Radius](#uid-8239a6467c) | Gets or sets the base radius for heatmap points (in pixels). |
 | [TooltipTemplate](maplayer.mdx#uid-f880527475) | Gets or sets the data template used for tooltips. Inherited from [MapLayer](maplayer.mdx). |
-| [Dispatcher](../../avaloniaobject.mdx#uid-b25fa51632) | Returns the [Avalonia.AvaloniaObject.Dispatcher](xref:Avalonia.AvaloniaObject.Dispatcher) that this [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject) is associated with. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
-| [Item](../../avaloniaobject.mdx#uid-c1d1f1bc0f) | Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
 
 <section className="apiref-page__member-entry">
 
@@ -377,15 +377,15 @@ public double Radius { get; set; }
 | --- | --- |
 | [HighBrushProperty](#uid-0b8eb59895) | Identifies the [Avalonia.Controls.Charts.HeatmapLayer.HighBrush](xref:Avalonia.Controls.Charts.HeatmapLayer.HighBrush) Avalonia property. |
 | [IntensityPathProperty](#uid-7151aaaa78) | Identifies the [Avalonia.Controls.Charts.HeatmapLayer.IntensityPath](xref:Avalonia.Controls.Charts.HeatmapLayer.IntensityPath) Avalonia property. |
+| [IsVisibleProperty](maplayer.mdx#uid-74f0177084) | Identifies the [Avalonia.Controls.Charts.MapLayer.IsVisible](xref:Avalonia.Controls.Charts.MapLayer.IsVisible) Avalonia property. Inherited from [MapLayer](maplayer.mdx). |
 | [ItemsSourceProperty](#uid-e8889bf9f3) | Identifies the [Avalonia.Controls.Charts.HeatmapLayer.ItemsSource](xref:Avalonia.Controls.Charts.HeatmapLayer.ItemsSource) Avalonia property. |
 | [LatitudePathProperty](#uid-f0f3165253) | Identifies the [Avalonia.Controls.Charts.HeatmapLayer.LatitudePath](xref:Avalonia.Controls.Charts.HeatmapLayer.LatitudePath) Avalonia property. |
 | [LongitudePathProperty](#uid-c2377ef85f) | Identifies the [Avalonia.Controls.Charts.HeatmapLayer.LongitudePath](xref:Avalonia.Controls.Charts.HeatmapLayer.LongitudePath) Avalonia property. |
 | [LowBrushProperty](#uid-49707ab52d) | Identifies the [Avalonia.Controls.Charts.HeatmapLayer.LowBrush](xref:Avalonia.Controls.Charts.HeatmapLayer.LowBrush) Avalonia property. |
 | [MaxIntensityProperty](#uid-f35ef3c9e5) | Identifies the [Avalonia.Controls.Charts.HeatmapLayer.MaxIntensity](xref:Avalonia.Controls.Charts.HeatmapLayer.MaxIntensity) Avalonia property. |
 | [MediumBrushProperty](#uid-6aeb357673) | Identifies the [Avalonia.Controls.Charts.HeatmapLayer.MediumBrush](xref:Avalonia.Controls.Charts.HeatmapLayer.MediumBrush) Avalonia property. |
-| [RadiusProperty](#uid-dfaf08bac2) | Identifies the [Avalonia.Controls.Charts.HeatmapLayer.Radius](xref:Avalonia.Controls.Charts.HeatmapLayer.Radius) Avalonia property. |
-| [IsVisibleProperty](maplayer.mdx#uid-74f0177084) | Identifies the [Avalonia.Controls.Charts.MapLayer.IsVisible](xref:Avalonia.Controls.Charts.MapLayer.IsVisible) Avalonia property. Inherited from [MapLayer](maplayer.mdx). |
 | [OpacityProperty](maplayer.mdx#uid-7b17fad341) | Identifies the [Avalonia.Controls.Charts.MapLayer.Opacity](xref:Avalonia.Controls.Charts.MapLayer.Opacity) Avalonia property. Inherited from [MapLayer](maplayer.mdx). |
+| [RadiusProperty](#uid-dfaf08bac2) | Identifies the [Avalonia.Controls.Charts.HeatmapLayer.Radius](xref:Avalonia.Controls.Charts.HeatmapLayer.Radius) Avalonia property. |
 | [TooltipTemplateProperty](maplayer.mdx#uid-10362b19e1) | Identifies the [Avalonia.Controls.Charts.MapLayer.TooltipTemplate](xref:Avalonia.Controls.Charts.MapLayer.TooltipTemplate) Avalonia property. Inherited from [MapLayer](maplayer.mdx). |
 
 <section className="apiref-page__member-entry">

@@ -77,19 +77,19 @@ public BollingerBandsIndicator()
 
 | Name | Description |
 | --- | --- |
-| [Compute](#uid-84703653fa) | Called when the target series data updates to recalculate the indicator values. |
-| [GetLegendItems](#uid-d45bc4aed0) | Gets the legend items that represent this indicator. |
-| [Render](#uid-7e2f9edded) | Renders the indicator into the specified plot area. |
 | [Bind (8 overloads)](../../avaloniaobject.mdx#uid-1c60c7bda3) | Binds a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) to an [Avalonia.Data.BindingBase](xref:Avalonia.Data.BindingBase). Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
 | [CheckAccess](../../avaloniaobject.mdx#uid-260ff7a68d) | Returns a value indicating whether the current thread is the UI thread. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
 | [ClearValue (4 overloads)](../../avaloniaobject.mdx#uid-41de208fbe) | Clears a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty)'s local value. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
 | [CoerceValue](../../avaloniaobject.mdx#uid-3bec32f39e) | Coerces the specified [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty). Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [Compute](#uid-84703653fa) | Called when the target series data updates to recalculate the indicator values. |
 | [Equals](../../avaloniaobject.mdx#uid-a8a8e94305) | Compares two objects using reference equality. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
 | [GetBaseValue](../../avaloniaobject.mdx#uid-9c615efbba) | Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
 | [GetHashCode](../../avaloniaobject.mdx#uid-7f7db1e7a2) | Gets the hash code for the object. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [GetLegendItems](#uid-d45bc4aed0) | Gets the legend items that represent this indicator. |
 | [GetValue (3 overloads)](../../avaloniaobject.mdx#uid-5142cd4792) | Gets a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
 | [IsAnimating](../../avaloniaobject.mdx#uid-8cbfc7521a) | Checks whether a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) is animating. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
 | [IsSet](../../avaloniaobject.mdx#uid-f8bf0bbdcc) | Checks whether a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) is set on this object. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [Render](#uid-7e2f9edded) | Renders the indicator into the specified plot area. |
 | [SetCurrentValue (2 overloads)](../../avaloniaobject.mdx#uid-38759fd088) | Sets the value of a dependency property without changing its value source. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
 | [SetValue (3 overloads)](../../avaloniaobject.mdx#uid-47d14e19d7) | Sets a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
 | [VerifyAccess](../../avaloniaobject.mdx#uid-3b9d3c9793) | Checks that the current thread is the UI thread and throws if not. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
@@ -167,11 +167,12 @@ The plot area in chart coordinates.
 | Name | Description |
 | --- | --- |
 | [BandFill](#uid-bdc935ad3a) | Gets or sets the fill brush between the upper and lower bands. |
+| [Dispatcher](../../avaloniaobject.mdx#uid-b25fa51632) | Returns the [Avalonia.AvaloniaObject.Dispatcher](xref:Avalonia.AvaloniaObject.Dispatcher) that this [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject) is associated with. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [IsVisible](charttechnicalindicator.mdx#uid-7b26aa00a1) | Gets or sets a value indicating whether this indicator is visible. Inherited from [ChartTechnicalIndicator](charttechnicalindicator.mdx). |
+| [Item](../../avaloniaobject.mdx#uid-c1d1f1bc0f) | Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
 | [LowerBandStroke](#uid-8c8f4a698d) | Gets or sets the stroke brush for the lower band. |
 | [Period](#uid-93c7ef9c37) | Gets or sets the period used for the moving average calculation. |
 | [StandardDeviations](#uid-fc183cff4d) | Gets or sets the number of standard deviations for the bands. |
-| [UpperBandStroke](#uid-746e768dca) | Gets or sets the stroke brush for the upper band. |
-| [IsVisible](charttechnicalindicator.mdx#uid-7b26aa00a1) | Gets or sets a value indicating whether this indicator is visible. Inherited from [ChartTechnicalIndicator](charttechnicalindicator.mdx). |
 | [Stroke](charttechnicalindicator.mdx#uid-12dd1e33ee) | Gets or sets the brush used for the main indicator line. Inherited from [ChartTechnicalIndicator](charttechnicalindicator.mdx). |
 | [StrokeDashStyle](charttechnicalindicator.mdx#uid-0595074efe) | Gets or sets the dash style for the indicator line. Inherited from [ChartTechnicalIndicator](charttechnicalindicator.mdx). |
 | [StrokeLineCap](charttechnicalindicator.mdx#uid-1b5b85f7e6) | Gets or sets the line cap style for the indicator line. Inherited from [ChartTechnicalIndicator](charttechnicalindicator.mdx). |
@@ -179,8 +180,7 @@ The plot area in chart coordinates.
 | [StrokeThickness](charttechnicalindicator.mdx#uid-5114b4b35b) | Gets or sets the thickness of the indicator stroke. Inherited from [ChartTechnicalIndicator](charttechnicalindicator.mdx). |
 | [TargetSeries](charttechnicalindicator.mdx#uid-b6a2df43aa) | Gets or sets the target series this indicator is based on. Inherited from [ChartTechnicalIndicator](charttechnicalindicator.mdx). |
 | [Title](charttechnicalindicator.mdx#uid-dc92aff1be) | Gets or sets the title shown in the legend and tooltips. Inherited from [ChartTechnicalIndicator](charttechnicalindicator.mdx). |
-| [Dispatcher](../../avaloniaobject.mdx#uid-b25fa51632) | Returns the [Avalonia.AvaloniaObject.Dispatcher](xref:Avalonia.AvaloniaObject.Dispatcher) that this [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject) is associated with. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
-| [Item](../../avaloniaobject.mdx#uid-c1d1f1bc0f) | Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [UpperBandStroke](#uid-746e768dca) | Gets or sets the stroke brush for the upper band. |
 
 <section className="apiref-page__member-entry">
 
@@ -257,11 +257,10 @@ public Avalonia.Media.IBrush UpperBandStroke { get; set; }
 | Name | Description |
 | --- | --- |
 | [BandFillProperty](#uid-20c5071b59) | Identifies the [Avalonia.Controls.Charts.BollingerBandsIndicator.BandFill](xref:Avalonia.Controls.Charts.BollingerBandsIndicator.BandFill) Avalonia property. |
+| [IsVisibleProperty](charttechnicalindicator.mdx#uid-e4b6903e6f) | Identifies the [Avalonia.Controls.Charts.ChartTechnicalIndicator.IsVisible](xref:Avalonia.Controls.Charts.ChartTechnicalIndicator.IsVisible) Avalonia property. Inherited from [ChartTechnicalIndicator](charttechnicalindicator.mdx). |
 | [LowerBandStrokeProperty](#uid-6b7b97009d) | Identifies the [Avalonia.Controls.Charts.BollingerBandsIndicator.LowerBandStroke](xref:Avalonia.Controls.Charts.BollingerBandsIndicator.LowerBandStroke) Avalonia property. |
 | [PeriodProperty](#uid-6ebaf5c7be) | Identifies the [Avalonia.Controls.Charts.BollingerBandsIndicator.Period](xref:Avalonia.Controls.Charts.BollingerBandsIndicator.Period) Avalonia property. |
 | [StandardDeviationsProperty](#uid-1b6e754fce) | Identifies the [Avalonia.Controls.Charts.BollingerBandsIndicator.StandardDeviations](xref:Avalonia.Controls.Charts.BollingerBandsIndicator.StandardDeviations) Avalonia property. |
-| [UpperBandStrokeProperty](#uid-519961b37f) | Identifies the [Avalonia.Controls.Charts.BollingerBandsIndicator.UpperBandStroke](xref:Avalonia.Controls.Charts.BollingerBandsIndicator.UpperBandStroke) Avalonia property. |
-| [IsVisibleProperty](charttechnicalindicator.mdx#uid-e4b6903e6f) | Identifies the [Avalonia.Controls.Charts.ChartTechnicalIndicator.IsVisible](xref:Avalonia.Controls.Charts.ChartTechnicalIndicator.IsVisible) Avalonia property. Inherited from [ChartTechnicalIndicator](charttechnicalindicator.mdx). |
 | [StrokeDashStyleProperty](charttechnicalindicator.mdx#uid-84c8e3c012) | Identifies the [Avalonia.Controls.Charts.ChartTechnicalIndicator.StrokeDashStyle](xref:Avalonia.Controls.Charts.ChartTechnicalIndicator.StrokeDashStyle) Avalonia property. Inherited from [ChartTechnicalIndicator](charttechnicalindicator.mdx). |
 | [StrokeLineCapProperty](charttechnicalindicator.mdx#uid-84dbabda41) | Identifies the [Avalonia.Controls.Charts.ChartTechnicalIndicator.StrokeLineCap](xref:Avalonia.Controls.Charts.ChartTechnicalIndicator.StrokeLineCap) Avalonia property. Inherited from [ChartTechnicalIndicator](charttechnicalindicator.mdx). |
 | [StrokeLineJoinProperty](charttechnicalindicator.mdx#uid-215ed86e0d) | Identifies the [Avalonia.Controls.Charts.ChartTechnicalIndicator.StrokeLineJoin](xref:Avalonia.Controls.Charts.ChartTechnicalIndicator.StrokeLineJoin) Avalonia property. Inherited from [ChartTechnicalIndicator](charttechnicalindicator.mdx). |
@@ -269,6 +268,7 @@ public Avalonia.Media.IBrush UpperBandStroke { get; set; }
 | [StrokeThicknessProperty](charttechnicalindicator.mdx#uid-803bd64efd) | Identifies the [Avalonia.Controls.Charts.ChartTechnicalIndicator.StrokeThickness](xref:Avalonia.Controls.Charts.ChartTechnicalIndicator.StrokeThickness) Avalonia property. Inherited from [ChartTechnicalIndicator](charttechnicalindicator.mdx). |
 | [TargetSeriesProperty](charttechnicalindicator.mdx#uid-28f6d94575) | Identifies the [Avalonia.Controls.Charts.ChartTechnicalIndicator.TargetSeries](xref:Avalonia.Controls.Charts.ChartTechnicalIndicator.TargetSeries) Avalonia property. Inherited from [ChartTechnicalIndicator](charttechnicalindicator.mdx). |
 | [TitleProperty](charttechnicalindicator.mdx#uid-7d0592bfed) | Identifies the [Avalonia.Controls.Charts.ChartTechnicalIndicator.Title](xref:Avalonia.Controls.Charts.ChartTechnicalIndicator.Title) Avalonia property. Inherited from [ChartTechnicalIndicator](charttechnicalindicator.mdx). |
+| [UpperBandStrokeProperty](#uid-519961b37f) | Identifies the [Avalonia.Controls.Charts.BollingerBandsIndicator.UpperBandStroke](xref:Avalonia.Controls.Charts.BollingerBandsIndicator.UpperBandStroke) Avalonia property. |
 
 <section className="apiref-page__member-entry">
 

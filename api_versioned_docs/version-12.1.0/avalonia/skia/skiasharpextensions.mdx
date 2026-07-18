@@ -58,8 +58,11 @@ public class SkiaSharpExtensions
 | [ToAvaloniaPixelRect](#uid-6c690e0079) | No summary available. |
 | [ToAvaloniaRect](#uid-4b2f67d1f5) | No summary available. |
 | [ToPixelFormat](#uid-bdb4249401) | No summary available. |
+| [ToSkAlphaType](#uid-01d89b5da8) | No summary available. |
 | [ToSKBlendMode](#uid-1ad65ae4ab) | No summary available. |
 | [ToSKColor](#uid-6957be2795) | No summary available. |
+| [ToSkColorType](#uid-dc9955dd12) | No summary available. |
+| [ToSkia](#uid-f32eeff86d) | No summary available. |
 | [ToSKMatrix](#uid-7fe6d1efba) | No summary available. |
 | [ToSKMatrix44](#uid-4862ffb743) | No summary available. |
 | [ToSKPoint (2 overloads)](#uid-1ff6b4ce65) | No summary available. |
@@ -71,9 +74,6 @@ public class SkiaSharpExtensions
 | [ToSKStrokeCap](#uid-e03bf5b80c) | No summary available. |
 | [ToSKStrokeJoin](#uid-52a75d0f33) | No summary available. |
 | [ToSKTextAlign](#uid-22000b48a9) | No summary available. |
-| [ToSkAlphaType](#uid-01d89b5da8) | No summary available. |
-| [ToSkColorType](#uid-dc9955dd12) | No summary available. |
-| [ToSkia](#uid-f32eeff86d) | No summary available. |
 
 <section className="apiref-page__member-entry">
 
@@ -257,6 +257,28 @@ public Avalonia.Platform.PixelFormat ToPixelFormat(SkiaSharp.SKColorType fmt)
 
 <section className="apiref-page__member-entry">
 
+<span id="uid-01d89b5da8"></span>
+
+### ToSkAlphaType Method
+
+```csharp
+public SkiaSharp.SKAlphaType ToSkAlphaType(Avalonia.Platform.AlphaFormat fmt)
+```
+
+#### Parameters
+
+`fmt` [Avalonia.Platform.AlphaFormat](xref:Avalonia.Platform.AlphaFormat)
+
+
+#### Returns
+
+SkiaSharp.SKAlphaType
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-1ad65ae4ab"></span>
 
 ### ToSKBlendMode Method
@@ -295,6 +317,50 @@ public SkiaSharp.SKColor ToSKColor(Avalonia.Media.Color c)
 #### Returns
 
 SkiaSharp.SKColor
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-dc9955dd12"></span>
+
+### ToSkColorType Method
+
+```csharp
+public SkiaSharp.SKColorType ToSkColorType(Avalonia.Platform.PixelFormat fmt)
+```
+
+#### Parameters
+
+`fmt` [Avalonia.Platform.PixelFormat](xref:Avalonia.Platform.PixelFormat)
+
+
+#### Returns
+
+SkiaSharp.SKColorType
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f32eeff86d"></span>
+
+### ToSkia Method
+
+```csharp
+public SkiaSharp.SKFontStyleSlant ToSkia(Avalonia.Media.FontStyle style)
+```
+
+#### Parameters
+
+`style` [Avalonia.Media.FontStyle](xref:Avalonia.Media.FontStyle)
+
+
+#### Returns
+
+SkiaSharp.SKFontStyleSlant
 
 
 </section>
@@ -563,72 +629,6 @@ public SkiaSharp.SKTextAlign ToSKTextAlign(Avalonia.Media.TextAlignment a)
 #### Returns
 
 SkiaSharp.SKTextAlign
-
-
-</section>
-
-<section className="apiref-page__member-entry">
-
-<span id="uid-01d89b5da8"></span>
-
-### ToSkAlphaType Method
-
-```csharp
-public SkiaSharp.SKAlphaType ToSkAlphaType(Avalonia.Platform.AlphaFormat fmt)
-```
-
-#### Parameters
-
-`fmt` [Avalonia.Platform.AlphaFormat](xref:Avalonia.Platform.AlphaFormat)
-
-
-#### Returns
-
-SkiaSharp.SKAlphaType
-
-
-</section>
-
-<section className="apiref-page__member-entry">
-
-<span id="uid-dc9955dd12"></span>
-
-### ToSkColorType Method
-
-```csharp
-public SkiaSharp.SKColorType ToSkColorType(Avalonia.Platform.PixelFormat fmt)
-```
-
-#### Parameters
-
-`fmt` [Avalonia.Platform.PixelFormat](xref:Avalonia.Platform.PixelFormat)
-
-
-#### Returns
-
-SkiaSharp.SKColorType
-
-
-</section>
-
-<section className="apiref-page__member-entry">
-
-<span id="uid-f32eeff86d"></span>
-
-### ToSkia Method
-
-```csharp
-public SkiaSharp.SKFontStyleSlant ToSkia(Avalonia.Media.FontStyle style)
-```
-
-#### Parameters
-
-`style` [Avalonia.Media.FontStyle](xref:Avalonia.Media.FontStyle)
-
-
-#### Returns
-
-SkiaSharp.SKFontStyleSlant
 
 
 </section>

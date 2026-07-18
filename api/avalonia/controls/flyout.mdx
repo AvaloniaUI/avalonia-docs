@@ -32,10 +32,6 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
-<div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/3111696698e2c3d6fe9aace8cb954153ee16b3e4/src/Avalonia.Controls/Flyout.cs">Flyout.cs</a>
-</div>
-
 </div>
 
 <div className="apiref-page__signature">
@@ -77,23 +73,23 @@ public Flyout()
 
 | Name | Description |
 | --- | --- |
-| [Hide](primitives/popupflyoutbase.mdx#uid-5a05c678d3) | Hides the Flyout Inherited from [PopupFlyoutBase](primitives/popupflyoutbase.mdx). |
-| [ShowAt (2 overloads)](primitives/popupflyoutbase.mdx#uid-26d1f07208) | Shows the Flyout at the given Control Inherited from [PopupFlyoutBase](primitives/popupflyoutbase.mdx). |
-| [GetAttachedFlyout](primitives/flyoutbase.mdx#uid-b1afcec4e1) | Inherited from [FlyoutBase](primitives/flyoutbase.mdx). |
-| [SetAttachedFlyout](primitives/flyoutbase.mdx#uid-fdff37b480) | Inherited from [FlyoutBase](primitives/flyoutbase.mdx). |
-| [ShowAttachedFlyout](primitives/flyoutbase.mdx#uid-a8d83c7237) | Inherited from [FlyoutBase](primitives/flyoutbase.mdx). |
 | [Bind (8 overloads)](../avaloniaobject.mdx#uid-1c60c7bda3) | Binds a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) to an [Avalonia.Data.BindingBase](xref:Avalonia.Data.BindingBase). Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
 | [CheckAccess](../avaloniaobject.mdx#uid-260ff7a68d) | Returns a value indicating whether the current thread is the UI thread. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
 | [ClearValue (4 overloads)](../avaloniaobject.mdx#uid-41de208fbe) | Clears a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty)'s local value. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
 | [CoerceValue](../avaloniaobject.mdx#uid-3bec32f39e) | Coerces the specified [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty). Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
 | [Equals](../avaloniaobject.mdx#uid-a8a8e94305) | Compares two objects using reference equality. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [GetAttachedFlyout](primitives/flyoutbase.mdx#uid-b1afcec4e1) | Inherited from [FlyoutBase](primitives/flyoutbase.mdx). |
 | [GetBaseValue](../avaloniaobject.mdx#uid-9c615efbba) | Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
 | [GetHashCode](../avaloniaobject.mdx#uid-7f7db1e7a2) | Gets the hash code for the object. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
 | [GetValue (3 overloads)](../avaloniaobject.mdx#uid-5142cd4792) | Gets a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [Hide](primitives/popupflyoutbase.mdx#uid-5a05c678d3) | Hides the Flyout Inherited from [PopupFlyoutBase](primitives/popupflyoutbase.mdx). |
 | [IsAnimating](../avaloniaobject.mdx#uid-8cbfc7521a) | Checks whether a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) is animating. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
 | [IsSet](../avaloniaobject.mdx#uid-f8bf0bbdcc) | Checks whether a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) is set on this object. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [SetAttachedFlyout](primitives/flyoutbase.mdx#uid-fdff37b480) | Inherited from [FlyoutBase](primitives/flyoutbase.mdx). |
 | [SetCurrentValue (2 overloads)](../avaloniaobject.mdx#uid-38759fd088) | Sets the value of a dependency property without changing its value source. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
 | [SetValue (3 overloads)](../avaloniaobject.mdx#uid-47d14e19d7) | Sets a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [ShowAt (2 overloads)](primitives/popupflyoutbase.mdx#uid-26d1f07208) | Shows the Flyout at the given Control Inherited from [PopupFlyoutBase](primitives/popupflyoutbase.mdx). |
+| [ShowAttachedFlyout](primitives/flyoutbase.mdx#uid-a8d83c7237) | Inherited from [FlyoutBase](primitives/flyoutbase.mdx). |
 | [VerifyAccess](../avaloniaobject.mdx#uid-3b9d3c9793) | Checks that the current thread is the UI thread and throws if not. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
 
 ## Properties
@@ -102,10 +98,13 @@ public Flyout()
 | --- | --- |
 | [Content](#uid-211f71e77a) | Gets or sets the content to display in this flyout |
 | [ContentTemplate](#uid-ce0052e836) | Gets or sets the data template used to display the content of the flyout. |
+| [CustomPopupPlacementCallback](primitives/popupflyoutbase.mdx#uid-5e55132438) | Gets or sets a delegate handler method that positions the Popup control, when [Avalonia.Controls.Primitives.Popup.Placement](xref:Avalonia.Controls.Primitives.Popup.Placement) is set to [Avalonia.Controls.PlacementMode.Custom](xref:Avalonia.Controls.PlacementMode.Custom). Inherited from [PopupFlyoutBase](primitives/popupflyoutbase.mdx). |
+| [Dispatcher](../avaloniaobject.mdx#uid-b25fa51632) | Returns the [Avalonia.AvaloniaObject.Dispatcher](xref:Avalonia.AvaloniaObject.Dispatcher) that this [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject) is associated with. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
 | [FlyoutPresenterClasses](#uid-a29a924253) | Gets the Classes collection to apply to the [FlyoutPresenter](xref:Avalonia.Controls.FlyoutPresenter) this Flyout is hosting |
 | [FlyoutPresenterTheme](#uid-dd16f283ab) | Gets or sets the [Avalonia.Styling.ControlTheme](xref:Avalonia.Styling.ControlTheme) that is applied to the container element generated for the flyout presenter. |
-| [CustomPopupPlacementCallback](primitives/popupflyoutbase.mdx#uid-5e55132438) | Gets or sets a delegate handler method that positions the Popup control, when [Avalonia.Controls.Primitives.Popup.Placement](xref:Avalonia.Controls.Primitives.Popup.Placement) is set to [Avalonia.Controls.PlacementMode.Custom](xref:Avalonia.Controls.PlacementMode.Custom). Inherited from [PopupFlyoutBase](primitives/popupflyoutbase.mdx). |
 | [HorizontalOffset](primitives/popupflyoutbase.mdx#uid-ceb07b8d2b) | Gets or sets the Horizontal offset of the popup in relation to the [Avalonia.Controls.Primitives.Popup.PlacementTarget](xref:Avalonia.Controls.Primitives.Popup.PlacementTarget). Inherited from [PopupFlyoutBase](primitives/popupflyoutbase.mdx). |
+| [IsOpen](primitives/flyoutbase.mdx#uid-fd374d2468) | Gets or sets whether this Flyout is currently open. Inherited from [FlyoutBase](primitives/flyoutbase.mdx). |
+| [Item](../avaloniaobject.mdx#uid-c1d1f1bc0f) | Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
 | [OverlayDismissEventPassThrough](primitives/popupflyoutbase.mdx#uid-9750f2448e) | Gets or sets a value indicating whether the event that closes the flyout is passed through to the parent window. Inherited from [PopupFlyoutBase](primitives/popupflyoutbase.mdx). |
 | [OverlayInputPassThroughElement](primitives/popupflyoutbase.mdx#uid-158b3b043a) | Gets or sets an element that should receive pointer input events even when underneath the flyout's overlay. Inherited from [PopupFlyoutBase](primitives/popupflyoutbase.mdx). |
 | [Placement](primitives/popupflyoutbase.mdx#uid-6cc5d900ca) | Gets or sets the desired placement of the popup in relation to the [Avalonia.Controls.Primitives.Popup.PlacementTarget](xref:Avalonia.Controls.Primitives.Popup.PlacementTarget). Inherited from [PopupFlyoutBase](primitives/popupflyoutbase.mdx). |
@@ -114,11 +113,8 @@ public Flyout()
 | [PlacementGravity](primitives/popupflyoutbase.mdx#uid-3e06cc8143) | Gets or sets a value which defines in what direction the popup should open when [Avalonia.Controls.Primitives.Popup.Placement](xref:Avalonia.Controls.Primitives.Popup.Placement) is [Avalonia.Controls.PlacementMode.AnchorAndGravity](xref:Avalonia.Controls.PlacementMode.AnchorAndGravity). Inherited from [PopupFlyoutBase](primitives/popupflyoutbase.mdx). |
 | [Popup](primitives/popupflyoutbase.mdx#uid-7deeda2b3c) | Inherited from [PopupFlyoutBase](primitives/popupflyoutbase.mdx). |
 | [ShowMode](primitives/popupflyoutbase.mdx#uid-ac3c5d7690) | Gets or sets the desired ShowMode Inherited from [PopupFlyoutBase](primitives/popupflyoutbase.mdx). |
-| [VerticalOffset](primitives/popupflyoutbase.mdx#uid-031c4efd37) | Gets or sets the Vertical offset of the popup in relation to the [Avalonia.Controls.Primitives.Popup.PlacementTarget](xref:Avalonia.Controls.Primitives.Popup.PlacementTarget). Inherited from [PopupFlyoutBase](primitives/popupflyoutbase.mdx). |
-| [IsOpen](primitives/flyoutbase.mdx#uid-fd374d2468) | Gets or sets whether this Flyout is currently open. Inherited from [FlyoutBase](primitives/flyoutbase.mdx). |
 | [Target](primitives/flyoutbase.mdx#uid-1555361c2e) | Gets the Target used for showing the Flyout Inherited from [FlyoutBase](primitives/flyoutbase.mdx). |
-| [Dispatcher](../avaloniaobject.mdx#uid-b25fa51632) | Returns the [Avalonia.AvaloniaObject.Dispatcher](xref:Avalonia.AvaloniaObject.Dispatcher) that this [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject) is associated with. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
-| [Item](../avaloniaobject.mdx#uid-c1d1f1bc0f) | Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [VerticalOffset](primitives/popupflyoutbase.mdx#uid-031c4efd37) | Gets or sets the Vertical offset of the popup in relation to the [Avalonia.Controls.Primitives.Popup.PlacementTarget](xref:Avalonia.Controls.Primitives.Popup.PlacementTarget). Inherited from [PopupFlyoutBase](primitives/popupflyoutbase.mdx). |
 
 <section className="apiref-page__member-entry">
 
@@ -180,11 +176,13 @@ public Avalonia.Styling.ControlTheme FlyoutPresenterTheme { get; set; }
 
 | Name | Description |
 | --- | --- |
+| [AttachedFlyoutProperty](primitives/flyoutbase.mdx#uid-c7d5b7f6f2) | Defines the AttachedFlyout property Inherited from [FlyoutBase](primitives/flyoutbase.mdx). |
 | [ContentProperty](#uid-3fb122baae) | Defines the [Avalonia.Controls.Flyout.Content](xref:Avalonia.Controls.Flyout.Content) property |
 | [ContentTemplateProperty](#uid-82b2cccfbb) | Defines the [Avalonia.Controls.Flyout.ContentTemplate](xref:Avalonia.Controls.Flyout.ContentTemplate) property. |
-| [FlyoutPresenterThemeProperty](#uid-dbaf2ba634) | Defines the [Avalonia.Controls.Flyout.FlyoutPresenterTheme](xref:Avalonia.Controls.Flyout.FlyoutPresenterTheme) property. |
 | [CustomPopupPlacementCallbackProperty](primitives/popupflyoutbase.mdx#uid-5c4d305049) | Defines the [Avalonia.Controls.Primitives.Popup.CustomPopupPlacementCallback](xref:Avalonia.Controls.Primitives.Popup.CustomPopupPlacementCallback) property. Inherited from [PopupFlyoutBase](primitives/popupflyoutbase.mdx). |
+| [FlyoutPresenterThemeProperty](#uid-dbaf2ba634) | Defines the [Avalonia.Controls.Flyout.FlyoutPresenterTheme](xref:Avalonia.Controls.Flyout.FlyoutPresenterTheme) property. |
 | [HorizontalOffsetProperty](primitives/popupflyoutbase.mdx#uid-5e9228ae03) | Defines the [Avalonia.Controls.Primitives.Popup.HorizontalOffset](xref:Avalonia.Controls.Primitives.Popup.HorizontalOffset) property. Inherited from [PopupFlyoutBase](primitives/popupflyoutbase.mdx). |
+| [IsOpenProperty](primitives/flyoutbase.mdx#uid-ab1657fb5e) | Defines the [Avalonia.Controls.Primitives.FlyoutBase.IsOpen](xref:Avalonia.Controls.Primitives.FlyoutBase.IsOpen) property Inherited from [FlyoutBase](primitives/flyoutbase.mdx). |
 | [OverlayDismissEventPassThroughProperty](primitives/popupflyoutbase.mdx#uid-06a0ccefca) | Defines the [Avalonia.Controls.Primitives.PopupFlyoutBase.OverlayDismissEventPassThrough](xref:Avalonia.Controls.Primitives.PopupFlyoutBase.OverlayDismissEventPassThrough) property Inherited from [PopupFlyoutBase](primitives/popupflyoutbase.mdx). |
 | [OverlayInputPassThroughElementProperty](primitives/popupflyoutbase.mdx#uid-fdce19a1bd) | Defines the [Avalonia.Controls.Primitives.PopupFlyoutBase.OverlayInputPassThroughElement](xref:Avalonia.Controls.Primitives.PopupFlyoutBase.OverlayInputPassThroughElement) property Inherited from [PopupFlyoutBase](primitives/popupflyoutbase.mdx). |
 | [PlacementAnchorProperty](primitives/popupflyoutbase.mdx#uid-08643c8aef) | Defines the [Avalonia.Controls.Primitives.Popup.PlacementAnchor](xref:Avalonia.Controls.Primitives.Popup.PlacementAnchor) property. Inherited from [PopupFlyoutBase](primitives/popupflyoutbase.mdx). |
@@ -192,10 +190,8 @@ public Avalonia.Styling.ControlTheme FlyoutPresenterTheme { get; set; }
 | [PlacementGravityProperty](primitives/popupflyoutbase.mdx#uid-0da608d8a7) | Defines the [Avalonia.Controls.Primitives.Popup.PlacementAnchor](xref:Avalonia.Controls.Primitives.Popup.PlacementAnchor) property. Inherited from [PopupFlyoutBase](primitives/popupflyoutbase.mdx). |
 | [PlacementProperty](primitives/popupflyoutbase.mdx#uid-9e138bf69c) | Defines the [Avalonia.Controls.Primitives.Popup.Placement](xref:Avalonia.Controls.Primitives.Popup.Placement) property. Inherited from [PopupFlyoutBase](primitives/popupflyoutbase.mdx). |
 | [ShowModeProperty](primitives/popupflyoutbase.mdx#uid-55b113088e) | Defines the [Avalonia.Controls.Primitives.PopupFlyoutBase.ShowMode](xref:Avalonia.Controls.Primitives.PopupFlyoutBase.ShowMode) property Inherited from [PopupFlyoutBase](primitives/popupflyoutbase.mdx). |
-| [VerticalOffsetProperty](primitives/popupflyoutbase.mdx#uid-25c4c8b25f) | Defines the [Avalonia.Controls.Primitives.Popup.VerticalOffset](xref:Avalonia.Controls.Primitives.Popup.VerticalOffset) property. Inherited from [PopupFlyoutBase](primitives/popupflyoutbase.mdx). |
-| [AttachedFlyoutProperty](primitives/flyoutbase.mdx#uid-c7d5b7f6f2) | Defines the AttachedFlyout property Inherited from [FlyoutBase](primitives/flyoutbase.mdx). |
-| [IsOpenProperty](primitives/flyoutbase.mdx#uid-ab1657fb5e) | Defines the [Avalonia.Controls.Primitives.FlyoutBase.IsOpen](xref:Avalonia.Controls.Primitives.FlyoutBase.IsOpen) property Inherited from [FlyoutBase](primitives/flyoutbase.mdx). |
 | [TargetProperty](primitives/flyoutbase.mdx#uid-8ef2929dfc) | Defines the [Avalonia.Controls.Primitives.FlyoutBase.Target](xref:Avalonia.Controls.Primitives.FlyoutBase.Target) property Inherited from [FlyoutBase](primitives/flyoutbase.mdx). |
+| [VerticalOffsetProperty](primitives/popupflyoutbase.mdx#uid-25c4c8b25f) | Defines the [Avalonia.Controls.Primitives.Popup.VerticalOffset](xref:Avalonia.Controls.Primitives.Popup.VerticalOffset) property. Inherited from [PopupFlyoutBase](primitives/popupflyoutbase.mdx). |
 
 <section className="apiref-page__member-entry">
 
@@ -243,10 +239,10 @@ public Avalonia.StyledProperty<Avalonia.Styling.ControlTheme> FlyoutPresenterThe
 
 | Name | Description |
 | --- | --- |
-| [Closing](primitives/popupflyoutbase.mdx#uid-f69c2f1ebb) | Inherited from [PopupFlyoutBase](primitives/popupflyoutbase.mdx). |
-| [Opening](primitives/popupflyoutbase.mdx#uid-132cd892df) | Inherited from [PopupFlyoutBase](primitives/popupflyoutbase.mdx). |
 | [Closed](primitives/flyoutbase.mdx#uid-8c33ee5ab6) | Inherited from [FlyoutBase](primitives/flyoutbase.mdx). |
+| [Closing](primitives/popupflyoutbase.mdx#uid-f69c2f1ebb) | Inherited from [PopupFlyoutBase](primitives/popupflyoutbase.mdx). |
 | [Opened](primitives/flyoutbase.mdx#uid-d841e66d42) | Inherited from [FlyoutBase](primitives/flyoutbase.mdx). |
+| [Opening](primitives/popupflyoutbase.mdx#uid-132cd892df) | Inherited from [PopupFlyoutBase](primitives/popupflyoutbase.mdx). |
 | [PropertyChanged](../avaloniaobject.mdx#uid-d758e26fae) | Raised when a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value changes on this object. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
 
 </ApiRefPage>

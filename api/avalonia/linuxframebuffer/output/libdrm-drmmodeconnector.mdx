@@ -32,10 +32,6 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia.LinuxFramebuffer</code>
 </div>
-<div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/3111696698e2c3d6fe9aace8cb954153ee16b3e4/src/Avalonia.LinuxFramebuffer/Output/LibDrm/LibDrm.drmModeConnector.cs">LibDrm.drmModeConnector.cs</a>
-</div>
-
 </div>
 
 <div className="apiref-page__signature">
@@ -63,13 +59,13 @@ public struct LibDrm.drmModeConnector
 | [count_encoders](#uid-c5d9bf1993) | No summary available. |
 | [count_modes](#uid-8129ef150e) | No summary available. |
 | [count_props](#uid-9bf37decd8) | No summary available. |
-| [encoder_id](#uid-3152377c60) | No summary available. |
 | [encoders](#uid-4247af4a50) | No summary available. |
+| [encoder_id](#uid-3152377c60) | No summary available. |
 | [mmHeight](#uid-5acb8746a2) | No summary available. |
 | [mmWidth](#uid-b2a05cb1ea) | No summary available. |
 | [modes](#uid-2ff5d1a2ad) | No summary available. |
-| [prop_values](#uid-401f4cdaf3) | No summary available. |
 | [props](#uid-db20c711d0) | No summary available. |
+| [prop_values](#uid-401f4cdaf3) | No summary available. |
 | [subpixel](#uid-b3cc0ffcb5) | No summary available. |
 
 <section className="apiref-page__member-entry">
@@ -158,24 +154,24 @@ public int count_props
 
 <section className="apiref-page__member-entry">
 
-<span id="uid-3152377c60"></span>
-
-### encoder_id Field
-
-```csharp
-public uint encoder_id
-```
-
-</section>
-
-<section className="apiref-page__member-entry">
-
 <span id="uid-4247af4a50"></span>
 
 ### encoders Field
 
 ```csharp
 public uint* encoders
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3152377c60"></span>
+
+### encoder_id Field
+
+```csharp
+public uint encoder_id
 ```
 
 </section>
@@ -218,24 +214,24 @@ public Avalonia.LinuxFramebuffer.Output.LibDrm.drmModeModeInfo* modes
 
 <section className="apiref-page__member-entry">
 
-<span id="uid-401f4cdaf3"></span>
-
-### prop_values Field
-
-```csharp
-public ulong* prop_values
-```
-
-</section>
-
-<section className="apiref-page__member-entry">
-
 <span id="uid-db20c711d0"></span>
 
 ### props Field
 
 ```csharp
 public uint* props
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-401f4cdaf3"></span>
+
+### prop_values Field
+
+```csharp
+public ulong* prop_values
 ```
 
 </section>

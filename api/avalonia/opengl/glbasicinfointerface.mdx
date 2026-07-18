@@ -32,10 +32,6 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
-<div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/3111696698e2c3d6fe9aace8cb954153ee16b3e4/src/Avalonia.OpenGL/GlBasicInfoInterface.cs">GlBasicInfoInterface.cs</a>
-</div>
-
 </div>
 
 <div className="apiref-page__signature">
@@ -87,8 +83,8 @@ public GlBasicInfoInterface(Func<string, IntPtr> getProcAddress)
 | [GetFloatv](#uid-37f2cd2bf2) | No summary available. |
 | [GetIntegerv](#uid-961400b97d) | No summary available. |
 | [GetString (2 overloads)](#uid-6438cbf0f4) | No summary available. |
-| [GetStringNative](#uid-f5216e7f4a) | No summary available. |
 | [GetStringiNative](#uid-3f7c8607ab) | No summary available. |
+| [GetStringNative](#uid-f5216e7f4a) | No summary available. |
 
 <section className="apiref-page__member-entry">
 
@@ -217,28 +213,6 @@ string
 
 <section className="apiref-page__member-entry">
 
-<span id="uid-f5216e7f4a"></span>
-
-### GetStringNative Method
-
-```csharp
-public IntPtr GetStringNative(int v)
-```
-
-#### Parameters
-
-`v` int
-
-
-#### Returns
-
-IntPtr
-
-
-</section>
-
-<section className="apiref-page__member-entry">
-
 <span id="uid-3f7c8607ab"></span>
 
 ### GetStringiNative Method
@@ -253,6 +227,28 @@ public IntPtr GetStringiNative(int v, int v1)
 
 
 `v1` int
+
+
+#### Returns
+
+IntPtr
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f5216e7f4a"></span>
+
+### GetStringNative Method
+
+```csharp
+public IntPtr GetStringNative(int v)
+```
+
+#### Parameters
+
+`v` int
 
 
 #### Returns

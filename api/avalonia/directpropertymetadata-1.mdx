@@ -32,10 +32,6 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
-<div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/edb89bd16651fd799ecce6d5bbd39c8b397f318d/src/Avalonia.Base/DirectPropertyMetadata%601.cs">DirectPropertyMetadata`1.cs</a>
-</div>
-
 </div>
 
 <div className="apiref-page__lead">
@@ -94,9 +90,9 @@ public DirectPropertyMetadata<TValue>(TValue unsetValue, Avalonia.Data.BindingMo
 
 | Name | Description |
 | --- | --- |
+| [Freeze](avaloniapropertymetadata.mdx#uid-db1cdb0cff) | Makes this instance read-only. No further modifications are allowed after this call. Inherited from [AvaloniaPropertyMetadata](avaloniapropertymetadata.mdx). |
 | [GenerateTypeSafeMetadata](#uid-8348d150cb) | Gets a copy of this object configured for use with any owner type. |
 | [Merge](#uid-0fbbcffba7) | Merges the metadata with the base metadata. |
-| [Freeze](avaloniapropertymetadata.mdx#uid-db1cdb0cff) | Makes this instance read-only. No further modifications are allowed after this call. Inherited from [AvaloniaPropertyMetadata](avaloniapropertymetadata.mdx). |
 
 <section className="apiref-page__member-entry">
 
@@ -151,10 +147,10 @@ The property to which the metadata is being applied.
 
 | Name | Description |
 | --- | --- |
-| [UnsetValue](#uid-76f34367f7) | Gets the value to use when the property is set to [Avalonia.AvaloniaProperty.UnsetValue](xref:Avalonia.AvaloniaProperty.UnsetValue). |
 | [DefaultBindingMode](avaloniapropertymetadata.mdx#uid-b6d03b8752) | Gets the default binding mode for the property. Inherited from [AvaloniaPropertyMetadata](avaloniapropertymetadata.mdx). |
 | [EnableDataValidation](avaloniapropertymetadata.mdx#uid-aa782b0da1) | Gets a value indicating whether the property is interested in data validation. Inherited from [AvaloniaPropertyMetadata](avaloniapropertymetadata.mdx). |
 | [IsReadOnly](avaloniapropertymetadata.mdx#uid-8222a9d293) | Gets whether this instance is read-only and can't be modified. Inherited from [AvaloniaPropertyMetadata](avaloniapropertymetadata.mdx). |
+| [UnsetValue](#uid-76f34367f7) | Gets the value to use when the property is set to [Avalonia.AvaloniaProperty.UnsetValue](xref:Avalonia.AvaloniaProperty.UnsetValue). |
 
 <section className="apiref-page__member-entry">
 

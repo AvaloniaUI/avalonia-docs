@@ -32,10 +32,6 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
-<div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/3111696698e2c3d6fe9aace8cb954153ee16b3e4/src/Avalonia.Controls/Automation/ScrollPatternIdentifiers.cs">ScrollPatternIdentifiers.cs</a>
-</div>
-
 </div>
 
 <div className="apiref-page__lead">
@@ -62,12 +58,26 @@ public class ScrollPatternIdentifiers
 
 | Name | Description |
 | --- | --- |
+| [HorizontallyScrollableProperty](#uid-b486351f9c) | Identifies [Avalonia.Automation.Provider.IScrollProvider.HorizontallyScrollable](xref:Avalonia.Automation.Provider.IScrollProvider.HorizontallyScrollable) automation property. |
 | [HorizontalScrollPercentProperty](#uid-dfdf0c76b1) | Identifies [Avalonia.Automation.Provider.IScrollProvider.HorizontalScrollPercent](xref:Avalonia.Automation.Provider.IScrollProvider.HorizontalScrollPercent) automation property. |
 | [HorizontalViewSizeProperty](#uid-8b472e0af1) | Identifies [Avalonia.Automation.Provider.IScrollProvider.HorizontalViewSize](xref:Avalonia.Automation.Provider.IScrollProvider.HorizontalViewSize) automation property. |
-| [HorizontallyScrollableProperty](#uid-b486351f9c) | Identifies [Avalonia.Automation.Provider.IScrollProvider.HorizontallyScrollable](xref:Avalonia.Automation.Provider.IScrollProvider.HorizontallyScrollable) automation property. |
+| [VerticallyScrollableProperty](#uid-2332b214d6) | Identifies [Avalonia.Automation.Provider.IScrollProvider.VerticallyScrollable](xref:Avalonia.Automation.Provider.IScrollProvider.VerticallyScrollable) automation property. |
 | [VerticalScrollPercentProperty](#uid-4d83e9f580) | Identifies [Avalonia.Automation.Provider.IScrollProvider.VerticalScrollPercent](xref:Avalonia.Automation.Provider.IScrollProvider.VerticalScrollPercent) automation property. |
 | [VerticalViewSizeProperty](#uid-7f6c429b5c) | Identifies [Avalonia.Automation.Provider.IScrollProvider.VerticalViewSize](xref:Avalonia.Automation.Provider.IScrollProvider.VerticalViewSize) automation property. |
-| [VerticallyScrollableProperty](#uid-2332b214d6) | Identifies [Avalonia.Automation.Provider.IScrollProvider.VerticallyScrollable](xref:Avalonia.Automation.Provider.IScrollProvider.VerticallyScrollable) automation property. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b486351f9c"></span>
+
+### HorizontallyScrollableProperty Property
+
+Identifies [Avalonia.Automation.Provider.IScrollProvider.HorizontallyScrollable](xref:Avalonia.Automation.Provider.IScrollProvider.HorizontallyScrollable) automation property.
+
+```csharp
+public Avalonia.Automation.AutomationProperty HorizontallyScrollableProperty { get; set; }
+```
+
+</section>
 
 <section className="apiref-page__member-entry">
 
@@ -99,14 +109,14 @@ public Avalonia.Automation.AutomationProperty HorizontalViewSizeProperty { get; 
 
 <section className="apiref-page__member-entry">
 
-<span id="uid-b486351f9c"></span>
+<span id="uid-2332b214d6"></span>
 
-### HorizontallyScrollableProperty Property
+### VerticallyScrollableProperty Property
 
-Identifies [Avalonia.Automation.Provider.IScrollProvider.HorizontallyScrollable](xref:Avalonia.Automation.Provider.IScrollProvider.HorizontallyScrollable) automation property.
+Identifies [Avalonia.Automation.Provider.IScrollProvider.VerticallyScrollable](xref:Avalonia.Automation.Provider.IScrollProvider.VerticallyScrollable) automation property.
 
 ```csharp
-public Avalonia.Automation.AutomationProperty HorizontallyScrollableProperty { get; set; }
+public Avalonia.Automation.AutomationProperty VerticallyScrollableProperty { get; set; }
 ```
 
 </section>
@@ -135,20 +145,6 @@ Identifies [Avalonia.Automation.Provider.IScrollProvider.VerticalViewSize](xref:
 
 ```csharp
 public Avalonia.Automation.AutomationProperty VerticalViewSizeProperty { get; set; }
-```
-
-</section>
-
-<section className="apiref-page__member-entry">
-
-<span id="uid-2332b214d6"></span>
-
-### VerticallyScrollableProperty Property
-
-Identifies [Avalonia.Automation.Provider.IScrollProvider.VerticallyScrollable](xref:Avalonia.Automation.Provider.IScrollProvider.VerticallyScrollable) automation property.
-
-```csharp
-public Avalonia.Automation.AutomationProperty VerticallyScrollableProperty { get; set; }
 ```
 
 </section>

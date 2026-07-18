@@ -32,10 +32,6 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
-<div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/3111696698e2c3d6fe9aace8cb954153ee16b3e4/src/Avalonia.OpenGL/Egl/EglInterface.cs">EglInterface.cs</a>
-</div>
-
 </div>
 
 <div className="apiref-page__signature">
@@ -118,9 +114,9 @@ public EglInterface(string library)
 | [ChooseConfigs](#uid-e42705f255) | No summary available. |
 | [CreateContext](#uid-19f85aec8e) | No summary available. |
 | [CreateImageKHR](#uid-c0cfa29c59) | No summary available. |
-| [CreatePBufferSurface](#uid-adb9f241be) | No summary available. |
 | [CreatePbufferFromClientBuffer](#uid-63f941ac31) | No summary available. |
 | [CreatePbufferFromClientBufferPtr](#uid-12de878bed) | No summary available. |
+| [CreatePBufferSurface](#uid-adb9f241be) | No summary available. |
 | [CreateWindowSurface](#uid-3a05611877) | No summary available. |
 | [DestroyContext](#uid-898aaba5f2) | No summary available. |
 | [DestroyImageKHR](#uid-1604f91eff) | No summary available. |
@@ -334,34 +330,6 @@ IntPtr
 
 <section className="apiref-page__member-entry">
 
-<span id="uid-adb9f241be"></span>
-
-### CreatePBufferSurface Method
-
-```csharp
-public IntPtr CreatePBufferSurface(IntPtr display, IntPtr config, int[] attrs)
-```
-
-#### Parameters
-
-`display` IntPtr
-
-
-`config` IntPtr
-
-
-`attrs` int[]
-
-
-#### Returns
-
-IntPtr
-
-
-</section>
-
-<section className="apiref-page__member-entry">
-
 <span id="uid-63f941ac31"></span>
 
 ### CreatePbufferFromClientBuffer Method
@@ -419,6 +387,34 @@ public IntPtr CreatePbufferFromClientBufferPtr(IntPtr display, int buftype, IntP
 
 
 `attrib_list` int*
+
+
+#### Returns
+
+IntPtr
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-adb9f241be"></span>
+
+### CreatePBufferSurface Method
+
+```csharp
+public IntPtr CreatePBufferSurface(IntPtr display, IntPtr config, int[] attrs)
+```
+
+#### Parameters
+
+`display` IntPtr
+
+
+`config` IntPtr
+
+
+`attrs` int[]
 
 
 #### Returns
