@@ -106,6 +106,7 @@ const config: Config = {
           showLastUpdateAuthor: true,
           showLastUpdateTime: true,
           lastVersion: 'current',
+          breadcrumbs: true,
           versions: {
             current: {
               label: "12.0.x",
@@ -118,6 +119,7 @@ const config: Config = {
           customCss: [
             './node_modules/modern-normalize/modern-normalize.css',
             './node_modules/@ionic-internal/ionic-ds/dist/tokens/tokens.css',
+            './src/styles/tailwind.css',
             './src/styles/custom.scss',
             './src/styles/docsearch.scss',
           ],
@@ -309,7 +311,7 @@ gtag('consent', 'default', {
         routeBasePath: "api",
         disableVersioning: true,
         sidebarPath: require.resolve("./api-sidebars.ts"),
-        remarkPlugins: [[require("./plugins/apiref-xref"), { indexPath: "./dist/xref/12.0.4.xrefmap.json" }]],
+        remarkPlugins: [[require("./plugins/apiref-xref"), { indexPath: "./dist/xref/12.1.0.xrefmap.json" }]],
       },
     ]
   ],
@@ -368,6 +370,11 @@ gtag('consent', 'default', {
               label: 'Troubleshooting',
               to: '/troubleshooting',
               activeBasePath: '/troubleshooting'
+            },
+            {
+              label: 'Community Translations',
+              to: '/docs/community-translations',
+              activeBasePath: '/docs/community-translations',
             },
             {
               label: 'Enhanced Support',
@@ -451,10 +458,10 @@ gtag('consent', 'default', {
           },
         },
       },
-      askAi: {
-        assistantId: 'ILptDNvSVJ1v',
-        sidePanel: true,
-      },
+      // askAi: {
+      //   assistantId: 'ILptDNvSVJ1v',
+      //   sidePanel: true,
+      // },
     },
   },
 };

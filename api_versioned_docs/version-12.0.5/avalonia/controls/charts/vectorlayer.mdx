@@ -1,0 +1,358 @@
+---
+title: 'VectorLayer'
+hide_title: true
+slug: '/avalonia/controls/charts/vectorlayer'
+uid: 'Avalonia.Controls.Charts.VectorLayer'
+commentId: 'T:Avalonia.Controls.Charts.VectorLayer'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Charts'
+assembly: 'Avalonia.Controls.Charts'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Charts'
+tfms:
+  - 'net9.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">VectorLayer Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Charts</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Charts</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Charts</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A vector layer for rendering lines, arcs, circles and polygons on the map.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class VectorLayer
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="maplayer">MapLayer</a> <span className="apiref-page__relation-separator">-&gt;</span> VectorLayer
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [VectorLayer](#uid-0d3bdebd5c) | Initializes a new instance of the [Avalonia.Controls.Charts.VectorLayer](xref:Avalonia.Controls.Charts.VectorLayer) class. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0d3bdebd5c"></span>
+
+### VectorLayer Constructor
+
+Initializes a new instance of the [Avalonia.Controls.Charts.VectorLayer](xref:Avalonia.Controls.Charts.VectorLayer) class.
+
+```csharp
+public VectorLayer()
+```
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [GetLayerBounds](#uid-1da2cd7fbc) | Gets the geographic bounds (in 0-200, 0-100 viewport units) of the content in this layer. Used for auto-scaling the map to fit content. |
+| [Render](#uid-f59b4bf6f1) | Renders this layer to the drawing context. |
+| [GetPointData](maplayer.mdx#uid-16963ec035) | Gets the data item at the specified screen point. Inherited from [MapLayer](maplayer.mdx). |
+| [OnPointerExited](maplayer.mdx#uid-c8b05fa21c) | Handles pointer exited events. Override this method to handle interactions (e.g. clearing hover effects). Inherited from [MapLayer](maplayer.mdx). |
+| [OnPointerMoved](maplayer.mdx#uid-d8bb8787d6) | Handles pointer moved events. Override this method to handle interactions (e.g. hover effects). Inherited from [MapLayer](maplayer.mdx). |
+| [OnPointerPressed](maplayer.mdx#uid-61476cbbf9) | Handles pointer pressed events. Override this method to handle interactions (e.g. selection). Inherited from [MapLayer](maplayer.mdx). |
+| [Bind (8 overloads)](../../avaloniaobject.mdx#uid-1c60c7bda3) | Binds a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) to an [Avalonia.Data.BindingBase](xref:Avalonia.Data.BindingBase). Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [CheckAccess](../../avaloniaobject.mdx#uid-260ff7a68d) | Returns a value indicating whether the current thread is the UI thread. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [ClearValue (4 overloads)](../../avaloniaobject.mdx#uid-41de208fbe) | Clears a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty)'s local value. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [CoerceValue](../../avaloniaobject.mdx#uid-3bec32f39e) | Coerces the specified [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty). Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [Equals](../../avaloniaobject.mdx#uid-a8a8e94305) | Compares two objects using reference equality. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [GetBaseValue](../../avaloniaobject.mdx#uid-9c615efbba) | Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [GetHashCode](../../avaloniaobject.mdx#uid-7f7db1e7a2) | Gets the hash code for the object. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [GetValue (3 overloads)](../../avaloniaobject.mdx#uid-5142cd4792) | Gets a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [IsAnimating](../../avaloniaobject.mdx#uid-8cbfc7521a) | Checks whether a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) is animating. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [IsSet](../../avaloniaobject.mdx#uid-f8bf0bbdcc) | Checks whether a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) is set on this object. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [SetCurrentValue (2 overloads)](../../avaloniaobject.mdx#uid-38759fd088) | Sets the value of a dependency property without changing its value source. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [SetValue (3 overloads)](../../avaloniaobject.mdx#uid-47d14e19d7) | Sets a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [VerifyAccess](../../avaloniaobject.mdx#uid-3b9d3c9793) | Checks that the current thread is the UI thread and throws if not. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1da2cd7fbc"></span>
+
+### GetLayerBounds Method
+
+Gets the geographic bounds (in 0-200, 0-100 viewport units) of the content in this layer.
+Used for auto-scaling the map to fit content.
+
+```csharp
+public Nullable<Avalonia.Rect> GetLayerBounds()
+```
+
+#### Returns
+
+Nullable&lt;[Avalonia.Rect](xref:Avalonia.Rect)&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f59b4bf6f1"></span>
+
+### Render Method
+
+Renders this layer to the drawing context.
+
+```csharp
+public void Render(Avalonia.Media.DrawingContext context, Avalonia.Rect chartArea, double animationProgress)
+```
+
+#### Parameters
+
+`context` [Avalonia.Media.DrawingContext](xref:Avalonia.Media.DrawingContext)
+
+The drawing context.
+
+
+`chartArea` [Avalonia.Rect](xref:Avalonia.Rect)
+
+The chart area rectangle.
+
+
+`animationProgress` double
+
+Animation progress from 0 to 1.
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Arcs](#uid-32583dd442) | Gets or sets the collection of arcs. |
+| [Circles](#uid-3d634954f3) | Gets or sets the collection of circles. |
+| [IsLineAnimationEnabled](#uid-9f4216345e) | Gets or sets whether to animate line drawing. |
+| [Lines](#uid-d1a88a913f) | Gets or sets the collection of lines. |
+| [Polygons](#uid-468de1660e) | Gets or sets the collection of polygons. |
+| [Polylines](#uid-d97cf7b862) | Gets or sets the collection of polylines. |
+| [IsVisible](maplayer.mdx#uid-93a23c42b6) | Gets or sets whether this layer is visible. Inherited from [MapLayer](maplayer.mdx). |
+| [Opacity](maplayer.mdx#uid-7b32d6b968) | Gets or sets the opacity of this layer. Inherited from [MapLayer](maplayer.mdx). |
+| [TooltipTemplate](maplayer.mdx#uid-f880527475) | Gets or sets the data template used for tooltips. Inherited from [MapLayer](maplayer.mdx). |
+| [Dispatcher](../../avaloniaobject.mdx#uid-b25fa51632) | Returns the [Avalonia.AvaloniaObject.Dispatcher](xref:Avalonia.AvaloniaObject.Dispatcher) that this [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject) is associated with. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [Item](../../avaloniaobject.mdx#uid-c1d1f1bc0f) | Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-32583dd442"></span>
+
+### Arcs Property
+
+Gets or sets the collection of arcs.
+
+```csharp
+public System.Collections.Generic.IList<Avalonia.Controls.Charts.MapArc> Arcs { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3d634954f3"></span>
+
+### Circles Property
+
+Gets or sets the collection of circles.
+
+```csharp
+public System.Collections.Generic.IList<Avalonia.Controls.Charts.MapCircle> Circles { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9f4216345e"></span>
+
+### IsLineAnimationEnabled Property
+
+Gets or sets whether to animate line drawing.
+
+```csharp
+public bool IsLineAnimationEnabled { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d1a88a913f"></span>
+
+### Lines Property
+
+Gets or sets the collection of lines.
+
+```csharp
+public System.Collections.Generic.IList<Avalonia.Controls.Charts.MapLine> Lines { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-468de1660e"></span>
+
+### Polygons Property
+
+Gets or sets the collection of polygons.
+
+```csharp
+public System.Collections.Generic.IList<Avalonia.Controls.Charts.MapPolygon> Polygons { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d97cf7b862"></span>
+
+### Polylines Property
+
+Gets or sets the collection of polylines.
+
+```csharp
+public System.Collections.Generic.IList<Avalonia.Controls.Charts.MapPolyline> Polylines { get; set; }
+```
+
+</section>
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [ArcsProperty](#uid-853eacfa2a) | Identifies the [Avalonia.Controls.Charts.VectorLayer.Arcs](xref:Avalonia.Controls.Charts.VectorLayer.Arcs) Avalonia property. |
+| [CirclesProperty](#uid-17f7e82b3b) | Identifies the [Avalonia.Controls.Charts.VectorLayer.Circles](xref:Avalonia.Controls.Charts.VectorLayer.Circles) Avalonia property. |
+| [IsLineAnimationEnabledProperty](#uid-84ecc369c4) | Identifies the [Avalonia.Controls.Charts.VectorLayer.IsLineAnimationEnabled](xref:Avalonia.Controls.Charts.VectorLayer.IsLineAnimationEnabled) Avalonia property. |
+| [LinesProperty](#uid-166f1c7ba0) | Identifies the [Avalonia.Controls.Charts.VectorLayer.Lines](xref:Avalonia.Controls.Charts.VectorLayer.Lines) Avalonia property. |
+| [PolygonsProperty](#uid-8d176c000f) | Identifies the [Avalonia.Controls.Charts.VectorLayer.Polygons](xref:Avalonia.Controls.Charts.VectorLayer.Polygons) Avalonia property. |
+| [PolylinesProperty](#uid-16516a3ecb) | Identifies the [Avalonia.Controls.Charts.VectorLayer.Polylines](xref:Avalonia.Controls.Charts.VectorLayer.Polylines) Avalonia property. |
+| [IsVisibleProperty](maplayer.mdx#uid-74f0177084) | Identifies the [Avalonia.Controls.Charts.MapLayer.IsVisible](xref:Avalonia.Controls.Charts.MapLayer.IsVisible) Avalonia property. Inherited from [MapLayer](maplayer.mdx). |
+| [OpacityProperty](maplayer.mdx#uid-7b17fad341) | Identifies the [Avalonia.Controls.Charts.MapLayer.Opacity](xref:Avalonia.Controls.Charts.MapLayer.Opacity) Avalonia property. Inherited from [MapLayer](maplayer.mdx). |
+| [TooltipTemplateProperty](maplayer.mdx#uid-10362b19e1) | Identifies the [Avalonia.Controls.Charts.MapLayer.TooltipTemplate](xref:Avalonia.Controls.Charts.MapLayer.TooltipTemplate) Avalonia property. Inherited from [MapLayer](maplayer.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-853eacfa2a"></span>
+
+### ArcsProperty Field
+
+Identifies the [Avalonia.Controls.Charts.VectorLayer.Arcs](xref:Avalonia.Controls.Charts.VectorLayer.Arcs) Avalonia property.
+
+```csharp
+public Avalonia.StyledProperty<System.Collections.Generic.IList<Avalonia.Controls.Charts.MapArc>> ArcsProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-17f7e82b3b"></span>
+
+### CirclesProperty Field
+
+Identifies the [Avalonia.Controls.Charts.VectorLayer.Circles](xref:Avalonia.Controls.Charts.VectorLayer.Circles) Avalonia property.
+
+```csharp
+public Avalonia.StyledProperty<System.Collections.Generic.IList<Avalonia.Controls.Charts.MapCircle>> CirclesProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-84ecc369c4"></span>
+
+### IsLineAnimationEnabledProperty Field
+
+Identifies the [Avalonia.Controls.Charts.VectorLayer.IsLineAnimationEnabled](xref:Avalonia.Controls.Charts.VectorLayer.IsLineAnimationEnabled) Avalonia property.
+
+```csharp
+public Avalonia.StyledProperty<bool> IsLineAnimationEnabledProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-166f1c7ba0"></span>
+
+### LinesProperty Field
+
+Identifies the [Avalonia.Controls.Charts.VectorLayer.Lines](xref:Avalonia.Controls.Charts.VectorLayer.Lines) Avalonia property.
+
+```csharp
+public Avalonia.StyledProperty<System.Collections.Generic.IList<Avalonia.Controls.Charts.MapLine>> LinesProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8d176c000f"></span>
+
+### PolygonsProperty Field
+
+Identifies the [Avalonia.Controls.Charts.VectorLayer.Polygons](xref:Avalonia.Controls.Charts.VectorLayer.Polygons) Avalonia property.
+
+```csharp
+public Avalonia.StyledProperty<System.Collections.Generic.IList<Avalonia.Controls.Charts.MapPolygon>> PolygonsProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-16516a3ecb"></span>
+
+### PolylinesProperty Field
+
+Identifies the [Avalonia.Controls.Charts.VectorLayer.Polylines](xref:Avalonia.Controls.Charts.VectorLayer.Polylines) Avalonia property.
+
+```csharp
+public Avalonia.StyledProperty<System.Collections.Generic.IList<Avalonia.Controls.Charts.MapPolyline>> PolylinesProperty
+```
+
+</section>
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [Invalidated](maplayer.mdx#uid-995465c2b4) | Event raised when the layer needs to be redrawn. Inherited from [MapLayer](maplayer.mdx). |
+| [PropertyChanged](../../avaloniaobject.mdx#uid-d758e26fae) | Raised when a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value changes on this object. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+
+</ApiRefPage>
+

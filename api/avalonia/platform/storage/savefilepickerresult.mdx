@@ -40,7 +40,7 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 
 <div className="apiref-page__lead">
 
-Extended result of the [Avalonia.Platform.Storage.IStorageProvider.SaveFilePickerWithResultAsync(Avalonia.Platform.Storage.FilePickerSaveOptions)](xref:Avalonia.Platform.Storage.IStorageProvider.SaveFilePickerWithResultAsync%28Avalonia.Platform.Storage.FilePickerSaveOptions%29) operation.
+Represents the result of the [Avalonia.Platform.Storage.IStorageProvider.SaveFilePickerWithResultAsync(Avalonia.Platform.Storage.FilePickerSaveOptions)](xref:Avalonia.Platform.Storage.IStorageProvider.SaveFilePickerWithResultAsync%28Avalonia.Platform.Storage.FilePickerSaveOptions%29) operation.
 
 </div>
 
@@ -155,8 +155,8 @@ string
 
 | Name | Description |
 | --- | --- |
-| [File](#uid-01a24bff25) | Saved [Avalonia.Platform.Storage.IStorageFile](xref:Avalonia.Platform.Storage.IStorageFile) or null if user canceled the dialog. |
-| [SelectedFileType](#uid-711f47a123) | Selected file type or null if not supported. |
+| [File](#uid-01a24bff25) | Gets the file selected by the user, or null if the user canceled the dialog. |
+| [SelectedFileType](#uid-711f47a123) | Gets the file type selected by the user, or null if the platform does not support this feature. |
 
 <section className="apiref-page__member-entry">
 
@@ -164,7 +164,7 @@ string
 
 ### File Property
 
-Saved [Avalonia.Platform.Storage.IStorageFile](xref:Avalonia.Platform.Storage.IStorageFile) or null if user canceled the dialog.
+Gets the file selected by the user, or null if the user canceled the dialog.
 
 ```csharp
 public Avalonia.Platform.Storage.IStorageFile File { get; set; }
@@ -178,7 +178,7 @@ public Avalonia.Platform.Storage.IStorageFile File { get; set; }
 
 ### SelectedFileType Property
 
-Selected file type or null if not supported.
+Gets the file type selected by the user, or null if the platform does not support this feature.
 
 ```csharp
 public Avalonia.Platform.Storage.FilePickerFileType SelectedFileType { get; set; }

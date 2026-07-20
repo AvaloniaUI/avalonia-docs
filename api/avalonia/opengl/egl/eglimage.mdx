@@ -1,0 +1,141 @@
+---
+title: 'EglImage'
+hide_title: true
+slug: '/avalonia/opengl/egl/eglimage'
+uid: 'Avalonia.OpenGL.Egl.EglImage'
+commentId: 'T:Avalonia.OpenGL.Egl.EglImage'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.OpenGL'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.OpenGL.Egl'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">EglImage Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.OpenGL.Egl</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.OpenGL</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/main/src/Avalonia.OpenGL/Egl/EglImage.cs">EglImage.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Wraps a native `EGLImageKHR` handle and destroys it via `eglDestroyImageKHR` on disposal.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class EglImage
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> EglImage
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IDisposable
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [EglImage](#uid-4c36141254) | Initializes a new [Avalonia.OpenGL.Egl.EglImage](xref:Avalonia.OpenGL.Egl.EglImage) wrapping an existing `EGLImageKHR` handle. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4c36141254"></span>
+
+### EglImage Constructor
+
+Initializes a new [Avalonia.OpenGL.Egl.EglImage](xref:Avalonia.OpenGL.Egl.EglImage) wrapping an existing `EGLImageKHR` handle.
+
+```csharp
+public EglImage(Avalonia.OpenGL.Egl.EglDisplay display, IntPtr handle)
+```
+
+#### Parameters
+
+`display` [Avalonia.OpenGL.Egl.EglDisplay](xref:Avalonia.OpenGL.Egl.EglDisplay)
+
+The EGL display that owns the image.
+
+
+`handle` IntPtr
+
+A valid (non-zero) `EGLImageKHR` handle.
+
+
+#### Exceptions
+
+- [\`display\` is \`null\`.](xref:System.ArgumentNullException)
+- [\`handle\` is \[IntPtr.Zero\](xref:System.IntPtr.Zero).](xref:System.ArgumentException)
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Dispose](#uid-883bde4c46) | Destroys the underlying `EGLImageKHR`. Safe to call more than once. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-883bde4c46"></span>
+
+### Dispose Method
+
+Destroys the underlying `EGLImageKHR`. Safe to call more than once.
+
+```csharp
+public void Dispose()
+```
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Handle](#uid-ce24c64b25) | Gets the native `EGLImageKHR` handle, or [IntPtr.Zero](xref:System.IntPtr.Zero) once disposed. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ce24c64b25"></span>
+
+### Handle Property
+
+Gets the native `EGLImageKHR` handle, or [IntPtr.Zero](xref:System.IntPtr.Zero) once disposed.
+
+```csharp
+public IntPtr Handle { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

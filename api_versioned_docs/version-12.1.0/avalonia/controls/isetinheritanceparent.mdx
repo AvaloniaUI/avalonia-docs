@@ -1,0 +1,85 @@
+---
+title: 'ISetInheritanceParent'
+hide_title: true
+slug: '/avalonia/controls/isetinheritanceparent'
+uid: 'Avalonia.Controls.ISetInheritanceParent'
+commentId: 'T:Avalonia.Controls.ISetInheritanceParent'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ISetInheritanceParent Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Defines an interface through which a [Avalonia.StyledElement](xref:Avalonia.StyledElement)'s inheritance parent can be set.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface ISetInheritanceParent
+```
+
+</div>
+
+## Remarks
+
+You should not usually need to use this interface - it is for advanced scenarios only.
+Additionally, [Avalonia.Controls.ISetLogicalParent](xref:Avalonia.Controls.ISetLogicalParent) also sets the inheritance parent; this
+interface is only needed where the logical and inheritance parents differ.
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [SetParent](#uid-4ad7554566) | Sets the control's inheritance parent. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4ad7554566"></span>
+
+### SetParent Method
+
+Sets the control's inheritance parent.
+
+```csharp
+public void SetParent(Avalonia.AvaloniaObject parent)
+```
+
+#### Parameters
+
+`parent` [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject)
+
+The parent.
+
+
+</section>
+
+</ApiRefPage>
+

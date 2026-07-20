@@ -51,11 +51,12 @@ public interface IStorageProvider
 | Name | Description |
 | --- | --- |
 | [OpenFileBookmarkAsync](#uid-0c31116322) | Open [Avalonia.Platform.Storage.IStorageBookmarkFile](xref:Avalonia.Platform.Storage.IStorageBookmarkFile) from the bookmark ID. |
-| [OpenFilePickerAsync](#uid-22907f4437) | Opens file picker dialog. |
+| [OpenFilePickerAsync](#uid-22907f4437) | Opens the file picker dialog. |
+| [OpenFilePickerWithResultAsync](#uid-726f9331ff) | Opens the file picker dialog and returns additional information about the result. |
 | [OpenFolderBookmarkAsync](#uid-2edc4c9105) | Open [Avalonia.Platform.Storage.IStorageBookmarkFolder](xref:Avalonia.Platform.Storage.IStorageBookmarkFolder) from the bookmark ID. |
-| [OpenFolderPickerAsync](#uid-6bb27fee7f) | Opens folder picker dialog. |
-| [SaveFilePickerAsync](#uid-4e68fc0b1f) | Opens save file picker dialog. |
-| [SaveFilePickerWithResultAsync](#uid-1a9bca9667) | Opens save file picker dialog and returns additional information about the result. |
+| [OpenFolderPickerAsync](#uid-6bb27fee7f) | Opens the folder picker dialog. |
+| [SaveFilePickerAsync](#uid-4e68fc0b1f) | Opens the save file picker dialog. |
+| [SaveFilePickerWithResultAsync](#uid-1a9bca9667) | Opens the save file picker dialog and returns additional information about the result. |
 | [TryGetFileFromPathAsync](#uid-9c134ae673) | Attempts to read file from the file-system by its path. |
 | [TryGetFolderFromPathAsync](#uid-8e5af1db8a) | Attempts to read folder from the file-system by its path. |
 | [TryGetWellKnownFolderAsync](#uid-fc02bb97a0) | Attempts to read folder from the file-system by its path |
@@ -94,7 +95,7 @@ Bookmarked file or null if OS denied request.
 
 ### OpenFilePickerAsync Method
 
-Opens file picker dialog.
+Opens the file picker dialog.
 
 ```csharp
 public System.Threading.Tasks.Task<System.Collections.Generic.IReadOnlyList<Avalonia.Platform.Storage.IStorageFile>> OpenFilePickerAsync(Avalonia.Platform.Storage.FilePickerOpenOptions options)
@@ -110,6 +111,32 @@ public System.Threading.Tasks.Task<System.Collections.Generic.IReadOnlyList<Aval
 System.Threading.Tasks.Task&lt;System.Collections.Generic.IReadOnlyList&lt;[Avalonia.Platform.Storage.IStorageFile](xref:Avalonia.Platform.Storage.IStorageFile)&gt;&gt;
 
 Array of selected [Avalonia.Platform.Storage.IStorageFile](xref:Avalonia.Platform.Storage.IStorageFile) or empty collection if user canceled the dialog.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-726f9331ff"></span>
+
+### OpenFilePickerWithResultAsync Method
+
+Opens the file picker dialog and returns additional information about the result.
+
+```csharp
+public System.Threading.Tasks.Task<Avalonia.Platform.Storage.OpenFilePickerResult> OpenFilePickerWithResultAsync(Avalonia.Platform.Storage.FilePickerOpenOptions options)
+```
+
+#### Parameters
+
+`options` [Avalonia.Platform.Storage.FilePickerOpenOptions](xref:Avalonia.Platform.Storage.FilePickerOpenOptions)
+
+
+#### Returns
+
+System.Threading.Tasks.Task&lt;[Avalonia.Platform.Storage.OpenFilePickerResult](xref:Avalonia.Platform.Storage.OpenFilePickerResult)&gt;
+
+[Avalonia.Platform.Storage.OpenFilePickerResult](xref:Avalonia.Platform.Storage.OpenFilePickerResult) with selected files and additional dialog information such as selected file type.
 
 
 </section>
@@ -148,7 +175,7 @@ Bookmarked folder or null if OS denied request.
 
 ### OpenFolderPickerAsync Method
 
-Opens folder picker dialog.
+Opens the folder picker dialog.
 
 ```csharp
 public System.Threading.Tasks.Task<System.Collections.Generic.IReadOnlyList<Avalonia.Platform.Storage.IStorageFolder>> OpenFolderPickerAsync(Avalonia.Platform.Storage.FolderPickerOpenOptions options)
@@ -174,7 +201,7 @@ Array of selected [Avalonia.Platform.Storage.IStorageFolder](xref:Avalonia.Platf
 
 ### SaveFilePickerAsync Method
 
-Opens save file picker dialog.
+Opens the save file picker dialog.
 
 ```csharp
 public System.Threading.Tasks.Task<Avalonia.Platform.Storage.IStorageFile> SaveFilePickerAsync(Avalonia.Platform.Storage.FilePickerSaveOptions options)
@@ -200,7 +227,7 @@ Saved [Avalonia.Platform.Storage.IStorageFile](xref:Avalonia.Platform.Storage.IS
 
 ### SaveFilePickerWithResultAsync Method
 
-Opens save file picker dialog and returns additional information about the result.
+Opens the save file picker dialog and returns additional information about the result.
 
 ```csharp
 public System.Threading.Tasks.Task<Avalonia.Platform.Storage.SaveFilePickerResult> SaveFilePickerWithResultAsync(Avalonia.Platform.Storage.FilePickerSaveOptions options)
@@ -320,9 +347,9 @@ Folder or null if it doesn't exist.
 
 | Name | Description |
 | --- | --- |
-| [CanOpen](#uid-821d88f63c) | Returns true if it's possible to open file picker on the current platform. |
-| [CanPickFolder](#uid-c5a5582867) | Returns true if it's possible to open folder picker on the current platform. |
-| [CanSave](#uid-15d3347cf3) | Returns true if it's possible to open save file picker on the current platform. |
+| [CanOpen](#uid-821d88f63c) | Returns true if it's possible to open the file picker on the current platform. |
+| [CanPickFolder](#uid-c5a5582867) | Returns true if it's possible to open the folder picker on the current platform. |
+| [CanSave](#uid-15d3347cf3) | Returns true if it's possible to open the save file picker on the current platform. |
 
 <section className="apiref-page__member-entry">
 
@@ -330,7 +357,7 @@ Folder or null if it doesn't exist.
 
 ### CanOpen Property
 
-Returns true if it's possible to open file picker on the current platform.
+Returns true if it's possible to open the file picker on the current platform.
 
 ```csharp
 public bool CanOpen { get; set; }
@@ -344,7 +371,7 @@ public bool CanOpen { get; set; }
 
 ### CanPickFolder Property
 
-Returns true if it's possible to open folder picker on the current platform.
+Returns true if it's possible to open the folder picker on the current platform.
 
 ```csharp
 public bool CanPickFolder { get; set; }
@@ -358,7 +385,7 @@ public bool CanPickFolder { get; set; }
 
 ### CanSave Property
 
-Returns true if it's possible to open save file picker on the current platform.
+Returns true if it's possible to open the save file picker on the current platform.
 
 ```csharp
 public bool CanSave { get; set; }

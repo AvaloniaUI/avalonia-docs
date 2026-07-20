@@ -1,0 +1,167 @@
+---
+title: 'EglPlatformImageSurfaceRenderTargetBase'
+hide_title: true
+slug: '/avalonia/opengl/egl/eglplatformimagesurfacerendertargetbase'
+uid: 'Avalonia.OpenGL.Egl.EglPlatformImageSurfaceRenderTargetBase'
+commentId: 'T:Avalonia.OpenGL.Egl.EglPlatformImageSurfaceRenderTargetBase'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.OpenGL'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.OpenGL.Egl'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">EglPlatformImageSurfaceRenderTargetBase Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.OpenGL.Egl</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.OpenGL</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/main/src/Avalonia.OpenGL/Egl/EglGlPlatformImageSurfaceBase.cs">EglGlPlatformImageSurfaceBase.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Base class for EGLImage render targets. Manages a reusable framebuffer/texture pair and
+binds an EGLImage as the color attachment for each draw.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class EglPlatformImageSurfaceRenderTargetBase
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> EglPlatformImageSurfaceRenderTargetBase
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="../surfaces/iglplatformsurfacerendertarget">IGlPlatformSurfaceRenderTarget</a>, <a href="../../platform/surfaces/iplatformrendersurfacerendertarget">IPlatformRenderSurfaceRenderTarget</a>, IDisposable
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [BeginDraw](#uid-7782dd1215) | No summary available. |
+| [BeginDrawCore](#uid-a5d6fa044a) | No summary available. |
+| [Dispose](#uid-96947caaf5) | Destroys the cached framebuffer and texture, if any. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7782dd1215"></span>
+
+### BeginDraw Method
+
+```csharp
+public Avalonia.OpenGL.Surfaces.IGlPlatformSurfaceRenderingSession BeginDraw(RenderTargetSceneInfo sceneInfo)
+```
+
+#### Parameters
+
+`sceneInfo` RenderTargetSceneInfo
+
+
+#### Returns
+
+[Avalonia.OpenGL.Surfaces.IGlPlatformSurfaceRenderingSession](xref:Avalonia.OpenGL.Surfaces.IGlPlatformSurfaceRenderingSession)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a5d6fa044a"></span>
+
+### BeginDrawCore Method
+
+```csharp
+public Avalonia.OpenGL.Surfaces.IGlPlatformSurfaceRenderingSession BeginDrawCore(RenderTargetSceneInfo sceneInfo)
+```
+
+#### Parameters
+
+`sceneInfo` RenderTargetSceneInfo
+
+
+#### Returns
+
+[Avalonia.OpenGL.Surfaces.IGlPlatformSurfaceRenderingSession](xref:Avalonia.OpenGL.Surfaces.IGlPlatformSurfaceRenderingSession)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-96947caaf5"></span>
+
+### Dispose Method
+
+Destroys the cached framebuffer and texture, if any.
+
+```csharp
+public void Dispose()
+```
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [IsCorrupted](#uid-b4bd614e19) | Gets a value indicating whether the underlying GL context has been lost. |
+| [State](#uid-ad4c559df0) | Gets the render target state: [Avalonia.Platform.PlatformRenderTargetState.Corrupted](xref:Avalonia.Platform.PlatformRenderTargetState.Corrupted) when [Avalonia.OpenGL.Egl.EglPlatformImageSurfaceRenderTargetBase.IsCorrupted](xref:Avalonia.OpenGL.Egl.EglPlatformImageSurfaceRenderTargetBase.IsCorrupted) is `true`, otherwise [Avalonia.Platform.PlatformRenderTargetState.Ready](xref:Avalonia.Platform.PlatformRenderTargetState.Ready). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b4bd614e19"></span>
+
+### IsCorrupted Property
+
+Gets a value indicating whether the underlying GL context has been lost.
+
+```csharp
+public bool IsCorrupted { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ad4c559df0"></span>
+
+### State Property
+
+Gets the render target state: [Avalonia.Platform.PlatformRenderTargetState.Corrupted](xref:Avalonia.Platform.PlatformRenderTargetState.Corrupted) when
+[Avalonia.OpenGL.Egl.EglPlatformImageSurfaceRenderTargetBase.IsCorrupted](xref:Avalonia.OpenGL.Egl.EglPlatformImageSurfaceRenderTargetBase.IsCorrupted) is `true`, otherwise [Avalonia.Platform.PlatformRenderTargetState.Ready](xref:Avalonia.Platform.PlatformRenderTargetState.Ready).
+
+```csharp
+public Avalonia.Platform.PlatformRenderTargetState State { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

@@ -210,7 +210,7 @@ Or with a binding converter:
 
 | WPF | Avalonia | Notes |
 |---|---|---|
-| `AllowsTransparency="True"` | `TransparencyLevelHint="Transparent"` | - |
+| `AllowsTransparency="True"` | `TransparencyLevelHint="Transparent"` | Avalonia does not support WPF-like transparent click-through behavior. |
 | `WindowStyle="None"` | `WindowDecorations="None"` | Removes title bar and border |
 | `ResizeMode` | `CanResize` | Boolean instead of enum |
 

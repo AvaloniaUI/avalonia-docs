@@ -83,12 +83,9 @@ public RadioButtonAutomationPeer(Avalonia.Controls.RadioButton owner)
 | Name | Description |
 | --- | --- |
 | [AddToSelection](#uid-7da36f16c7) | No summary available. |
-| [RemoveFromSelection](#uid-4de43732cb) | No summary available. |
-| [Select](#uid-7c1a4caac2) | No summary available. |
+| [BringIntoView](../../../automation/peers/automationpeer.mdx#uid-0ce0c26ad7) | Attempts to bring the element associated with the automation peer into view. Inherited from [AutomationPeer](../../../automation/peers/automationpeer.mdx). |
 | [CreatePeerForElement](../../../automation/peers/controlautomationpeer.mdx#uid-01e76040e7) | Gets the [Avalonia.Automation.Peers.AutomationPeer](xref:Avalonia.Automation.Peers.AutomationPeer) for a [Avalonia.Controls.Control](xref:Avalonia.Controls.Control), creating it if necessary. Inherited from [ControlAutomationPeer](../../../automation/peers/controlautomationpeer.mdx). |
 | [FromElement](../../../automation/peers/controlautomationpeer.mdx#uid-f0c358c33d) | Gets an existing [Avalonia.Automation.Peers.AutomationPeer](xref:Avalonia.Automation.Peers.AutomationPeer) for a [Avalonia.Controls.Control](xref:Avalonia.Controls.Control). Inherited from [ControlAutomationPeer](../../../automation/peers/controlautomationpeer.mdx). |
-| [GetOrCreate](../../../automation/peers/controlautomationpeer.mdx#uid-d5fc666c05) | Inherited from [ControlAutomationPeer](../../../automation/peers/controlautomationpeer.mdx). |
-| [BringIntoView](../../../automation/peers/automationpeer.mdx#uid-0ce0c26ad7) | Attempts to bring the element associated with the automation peer into view. Inherited from [AutomationPeer](../../../automation/peers/automationpeer.mdx). |
 | [GetAcceleratorKey](../../../automation/peers/automationpeer.mdx#uid-b27b870e23) | Gets the accelerator key combinations for the element that is associated with the UI Automation peer. Inherited from [AutomationPeer](../../../automation/peers/automationpeer.mdx). |
 | [GetAccessKey](../../../automation/peers/automationpeer.mdx#uid-0c0606dfaf) | Gets the access key for the element that is associated with the automation peer. Inherited from [AutomationPeer](../../../automation/peers/automationpeer.mdx). |
 | [GetAutomationControlType](../../../automation/peers/automationpeer.mdx#uid-f7daf3a583) | Gets the control type for the element that is associated with the UI Automation peer. Inherited from [AutomationPeer](../../../automation/peers/automationpeer.mdx). |
@@ -105,6 +102,7 @@ public RadioButtonAutomationPeer(Avalonia.Controls.RadioButton owner)
 | [GetLiveSetting](../../../automation/peers/automationpeer.mdx#uid-75007f578a) | Gets the current live setting that is associated with this this automation peer. Inherited from [AutomationPeer](../../../automation/peers/automationpeer.mdx). |
 | [GetLocalizedControlType](../../../automation/peers/automationpeer.mdx#uid-262763e857) | Gets a human-readable localized string that represents the type of the control that is associated with this automation peer. Inherited from [AutomationPeer](../../../automation/peers/automationpeer.mdx). |
 | [GetName](../../../automation/peers/automationpeer.mdx#uid-ac6dd5a547) | Gets text that describes the element that is associated with this automation peer. Inherited from [AutomationPeer](../../../automation/peers/automationpeer.mdx). |
+| [GetOrCreate](../../../automation/peers/controlautomationpeer.mdx#uid-d5fc666c05) | Inherited from [ControlAutomationPeer](../../../automation/peers/controlautomationpeer.mdx). |
 | [GetParent](../../../automation/peers/automationpeer.mdx#uid-947969c77f) | Gets the [Avalonia.Automation.Peers.AutomationPeer](xref:Avalonia.Automation.Peers.AutomationPeer) that is the parent of this [Avalonia.Automation.Peers.AutomationPeer](xref:Avalonia.Automation.Peers.AutomationPeer). Inherited from [AutomationPeer](../../../automation/peers/automationpeer.mdx). |
 | [GetPlaceholderText](../../../automation/peers/automationpeer.mdx#uid-1ced74e763) | Gets text that provides a placeholder for the element that is associated with this automation peer. Inherited from [AutomationPeer](../../../automation/peers/automationpeer.mdx). |
 | [GetProvider](../../../automation/peers/automationpeer.mdx#uid-ee05fc8d1e) | Inherited from [AutomationPeer](../../../automation/peers/automationpeer.mdx). |
@@ -115,8 +113,11 @@ public RadioButtonAutomationPeer(Avalonia.Controls.RadioButton owner)
 | [IsKeyboardFocusable](../../../automation/peers/automationpeer.mdx#uid-c9dfcdf842) | Gets a value that indicates whether the element can accept keyboard focus. Inherited from [AutomationPeer](../../../automation/peers/automationpeer.mdx). |
 | [IsOffscreen](../../../automation/peers/automationpeer.mdx#uid-72084dcbfb) | Gets a value that indicates whether an element is off the screen. Inherited from [AutomationPeer](../../../automation/peers/automationpeer.mdx). |
 | [RaisePropertyChangedEvent](../../../automation/peers/automationpeer.mdx#uid-ffcc0e3d63) | Raises an event to notify the automation client of a changed property value. Inherited from [AutomationPeer](../../../automation/peers/automationpeer.mdx). |
+| [RemoveFromSelection](#uid-4de43732cb) | No summary available. |
+| [Select](#uid-7c1a4caac2) | No summary available. |
 | [SetFocus](../../../automation/peers/automationpeer.mdx#uid-6a8d233e48) | Sets the keyboard focus on the element that is associated with this automation peer. Inherited from [AutomationPeer](../../../automation/peers/automationpeer.mdx). |
 | [ShowContextMenu](../../../automation/peers/automationpeer.mdx#uid-8bfe04d25b) | Shows the context menu for the element that is associated with this automation peer. Inherited from [AutomationPeer](../../../automation/peers/automationpeer.mdx). |
+| [ToScreen](../../../automation/peers/automationpeer.mdx#uid-51bb13f806) | Converts a rectangle in the peer's coordinate space, as returned by [Avalonia.Automation.Peers.AutomationPeer.GetBoundingRectangle](xref:Avalonia.Automation.Peers.AutomationPeer.GetBoundingRectangle), to screen coordinates; returns null if the peer is not currently hosted in a rendered visual tree. Inherited from [AutomationPeer](../../../automation/peers/automationpeer.mdx). |
 
 <section className="apiref-page__member-entry">
 
@@ -159,8 +160,8 @@ public void Select()
 | Name | Description |
 | --- | --- |
 | [IsSelected](#uid-4e821dd6b7) | No summary available. |
-| [SelectionContainer](#uid-870080267d) | No summary available. |
 | [Owner](../../../automation/peers/togglebuttonautomationpeer.mdx#uid-595e66bfde) | Inherited from [ToggleButtonAutomationPeer](../../../automation/peers/togglebuttonautomationpeer.mdx). |
+| [SelectionContainer](#uid-870080267d) | No summary available. |
 
 <section className="apiref-page__member-entry">
 

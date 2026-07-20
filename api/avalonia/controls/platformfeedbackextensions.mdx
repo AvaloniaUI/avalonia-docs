@@ -1,0 +1,94 @@
+---
+title: 'PlatformFeedbackExtensions'
+hide_title: true
+slug: '/avalonia/controls/platformfeedbackextensions'
+uid: 'Avalonia.Controls.PlatformFeedbackExtensions'
+commentId: 'T:Avalonia.Controls.PlatformFeedbackExtensions'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">PlatformFeedbackExtensions Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/main/src/Avalonia.Controls/Platform/PlatformFeedback.cs">PlatformFeedback.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class PlatformFeedbackExtensions
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> PlatformFeedbackExtensions
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [PerformFeedback](#uid-b6466351eb) | Performs the specified [Avalonia.Controls.FeedbackAction](xref:Avalonia.Controls.FeedbackAction) on this [Avalonia.Input.InputElement](xref:Avalonia.Input.InputElement). The type of feedback to perform is defined in the [Avalonia.Controls.PlatformFeedback.FeedbackTypeProperty](xref:Avalonia.Controls.PlatformFeedback.FeedbackTypeProperty) |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b6466351eb"></span>
+
+### PerformFeedback Method
+
+Performs the specified [Avalonia.Controls.FeedbackAction](xref:Avalonia.Controls.FeedbackAction) on this [Avalonia.Input.InputElement](xref:Avalonia.Input.InputElement). The type of feedback to perform is defined in the [Avalonia.Controls.PlatformFeedback.FeedbackTypeProperty](xref:Avalonia.Controls.PlatformFeedback.FeedbackTypeProperty)
+
+```csharp
+public bool PerformFeedback(Avalonia.Input.InputElement inputElement, Avalonia.Controls.FeedbackAction feedbackAction)
+```
+
+#### Parameters
+
+`inputElement` [Avalonia.Input.InputElement](xref:Avalonia.Input.InputElement)
+
+The element to trigger the feedback effect on
+
+
+`feedbackAction` [Avalonia.Controls.FeedbackAction](xref:Avalonia.Controls.FeedbackAction)
+
+The feedback action relating to the action that triggered it
+
+
+#### Returns
+
+bool
+
+true if the platform performed the requested feedback; false otherwise.
+
+
+</section>
+
+</ApiRefPage>
+

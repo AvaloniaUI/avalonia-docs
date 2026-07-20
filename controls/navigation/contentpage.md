@@ -1,4 +1,5 @@
 ---
+id: contentpage
 title: ContentPage
 description: '`ContentPage` is the foundational screen building block for Avalonia apps. It holds a single root view and integrates with the other page containers.'
 doc-type: reference
@@ -11,392 +12,345 @@ import ContentPageBottomCommandBarScreenshot from '/img/controls/contentpage/con
 import ContentPageSafeAreaDisabledScreenshot from '/img/controls/contentpage/contentpage-safe-area-disabled.png';
 import ContentPageAsTabScreenshot from '/img/controls/contentpage/contentpage-as-tab.png';
 
-# ContentPage
+[`ContentPage`](/api/avalonia/controls/contentpage) is the foundational building block for screen-based UI in Avalonia. It represents a single page of content and provides built-in support for headers, icons, safe area padding, and command bars. Every screen the user sees is typically a `ContentPage` (or a subclass of one).
 
-`ContentPage` is the foundational screen building block for Avalonia apps. It holds a single root view, typically a layout panel, and integrates with the other page containers: `NavigationPage`, `TabbedPage`, `DrawerPage`, and `CarouselPage`. Every screen in an app that uses the page navigation system is typically a `ContentPage` or a subclass of it.
+`ContentPage` is most commonly used as a child of [`NavigationPage`](/controls/navigation/navigationpage), [`TabbedPage`](/controls/navigation/tabbedpage), or [`DrawerPage`](/controls/navigation/drawerpage), but it can also be placed directly inside a [`Window`](/api/avalonia/controls/window) for single-page apps.
 
-The class hierarchy is `TemplatedControl -> Page -> ContentPage`, which means it benefits from full Avalonia styling, theming, and data binding.
+## How the header displays
 
-## How the Header Displays
+The `Header` property serves different purposes depending on which container hosts the page:
 
-The `Header` property from the `Page` base class controls the title text shown in context:
+| Host control | Where the header appears |
+| --- | --- |
+| [`NavigationPage`](/api/avalonia/controls/navigationpage) | Displayed in the navigation bar at the top of the screen. |
+| [`TabbedPage`](/api/avalonia/controls/tabbedpage) | Used as the tab label. |
+| [`DrawerPage`](/api/avalonia/controls/drawerpage) | Not displayed automatically for child `ContentPage` content. Use `DrawerPage.Header`, `DrawerHeader`, or render your own header content. |
+| Standalone (in a `Window`) | Not displayed automatically. You must render it yourself if needed. |
 
-| Host | How `Header` is used |
-| ---- | -------------------- |
-| `NavigationPage` | Displayed as the page title in the navigation bar. |
-| `TabbedPage` | Displayed as the tab label in the tab strip. |
-| `DrawerPage` | Not shown by the container directly. |
-| Standalone `Window` | Not shown. Set `Window.Title` instead. |
+## Useful properties
 
-## Useful Properties
-
-You will probably use these properties most often:
-
-`ContentPage` inherits from `Page`. The following properties are defined by `ContentPage` itself.
+### ContentPage properties
 
 | Property | Type | Default | Description |
-| -------- | ---- | ------- | ----------- |
-| `Content` | `object?` | `null` | The single root view displayed on the page. This is the XAML content property. Typically a layout panel such as `Grid` or `StackPanel`. |
-| `ContentTemplate` | `IDataTemplate?` | `null` | Data template used to display `Content` when it is a data object rather than a control. |
-| `AutomaticallyApplySafeAreaPadding` | `bool` | `true` | When `true`, platform safe-area insets (notch, status bar, home indicator) are automatically applied as padding to the content presenter. Set to `false` for full-bleed designs such as maps or splash screens. |
-| `TopCommandBar` | `object?` | `null` | Content rendered in a command bar slot above the page content. Typically a `CommandBar`. Hidden automatically when `null`. |
-| `BottomCommandBar` | `object?` | `null` | Content rendered in a command bar slot below the page content. Useful for a bottom toolbar on mobile. Hidden automatically when `null`. |
-| `HorizontalContentAlignment` | `HorizontalAlignment` | `Stretch` | Horizontal alignment of `Content` inside its presenter. |
-| `VerticalContentAlignment` | `VerticalAlignment` | `Stretch` | Vertical alignment of `Content` inside its presenter. |
+| --- | --- | --- | --- |
+| `Content` | `object?` | `null` | The main content to display on the page. This value cannot be another `Page`; use a `NavigationPage`, `TabbedPage`, `DrawerPage`, or another `MultiPage` control to host child pages. |
+| `ContentTemplate` | `IDataTemplate?` | `null` | A data template used to render the content. |
+| `Header` | `object?` | `null` | The page header, displayed in the navigation bar when hosted inside a `NavigationPage`. |
+| `HeaderTemplate` | `IDataTemplate?` | `null` | A data template used to render the header. |
+| `Icon` | `object?` | `null` | An icon for the page, displayed in tab bars when hosted inside a `TabbedPage`. |
+| `IconTemplate` | `IDataTemplate?` | `null` | A data template used to render the icon. |
+| `Background` | `IBrush?` | `null` | The page background brush. For image backgrounds, use an `ImageBrush` and set its `Stretch` property. |
+| `AutomaticallyApplySafeAreaPadding` | `bool` | `true` | Automatically adjusts padding for device safe areas (notches, status bars). |
+| `TopCommandBar` | `object?` | `null` | Content displayed in a command bar area above the page content. |
+| `BottomCommandBar` | `object?` | `null` | Content displayed in a command bar area below the page content. |
+| `HorizontalContentAlignment` | `HorizontalAlignment` | `Stretch` | Horizontal alignment of the page content. |
+| `VerticalContentAlignment` | `VerticalAlignment` | `Stretch` | Vertical alignment of the page content. |
+| `SafeAreaPadding` | `Thickness` | `0` | The current safe area padding assigned to the page. Page containers update this value when safe-area insets change. |
 
-## Page Base Properties
+### Page base properties
 
-Inherited from `Page` and available on all page types.
+These properties are inherited from `Page` and are available on all page types:
 
 | Property | Type | Default | Description |
-| -------- | ---- | ------- | ----------- |
-| `Header` | `object?` | `null` | Text or custom view shown in the navigation bar or tab strip. Accepts a string or any Avalonia control. |
-| `Icon` | `object?` | `null` | Icon shown in the tab strip when hosted in a `TabbedPage`. Accepts a `Geometry`, `PathIcon`, `IImage`, or SVG path string. |
-| `IconTemplate` | `IDataTemplate?` | `null` | Data template used to display the `Icon` property. When set, the icon is rendered through a `ContentPresenter` using this template rather than relying on built-in icon type handling. |
-| `SafeAreaPadding` | `Thickness` | `default` | The safe-area insets currently active for this page, propagated by the parent page or platform. |
-| `Navigation` | `INavigation?` | `null` | Navigation service injected by the parent `NavigationPage`. `null` when the page is not inside a `NavigationPage`. |
-| `IsInNavigationPage` | `bool` | `false` | `true` while this page is hosted inside a `NavigationPage`. Useful to conditionally show or hide in-page back navigation controls. |
+| --- | --- | --- | --- |
+| `Navigation` | `INavigation?` | `null` | Provides access to the hosting `NavigationPage` for push/pop operations. |
+| `CurrentPage` | `Page?` | `null` | The active child page for page-container controls. This is usually `null` for a `ContentPage`. |
+| `IsInNavigationPage` | `bool` | `false` | Indicates whether the page is currently hosted by a `NavigationPage`. |
 
-## Navigation Events
+## Navigation events
 
-`Page` defines three navigation lifecycle events. They fire in this order whenever the user navigates to or from the page.
+Every `Page` (including `ContentPage`) supports lifecycle events that fire during navigation. The events fire in a specific order when a navigation occurs:
 
-| Order | Event | Signature | Description |
-| ----- | ----- | --------- | ----------- |
-| 1 | `Navigating` | `Func<NavigatingFromEventArgs, Task>` | Fired asynchronously before leaving the current page. Each registered handler is awaited in order. Set `args.Cancel = true` to abort the navigation. |
-| 2 | `NavigatedFrom` | `EventHandler<NavigatedFromEventArgs>` | Fired after the page is no longer the active page. Use this to release resources or stop timers. |
-| 3 | `NavigatedTo` | `EventHandler<NavigatedToEventArgs>` | Fired when the page becomes the active page. Use this to load or refresh data. |
+| Event | Description | Order |
+| --- | --- | --- |
+| `Navigating` | Raised on the **current** page before navigating away from it. Uses `NavigatingFromEventArgs` and supports cancellation via `e.Cancel = true`. | 1 |
+| `NavigatedFrom` | Raised on the **old** page after the navigation has completed. | 2 |
+| `NavigatedTo` | Raised on the **new** page after the navigation has completed. | 3 |
 
-There is also a routed event for the platform back button:
+### Overriding lifecycle methods
 
-| Event | Description |
-| ----- | ----------- |
-| `PageNavigationSystemBackButtonPressed` | Bubbling routed event raised when the platform back button is pressed while this page is active. Handle it to intercept or customize back navigation. |
-
-### Overriding Lifecycle Methods
-
-Override the virtual methods in a subclass instead of subscribing to the events directly:
+You can also override the corresponding `protected` methods instead of subscribing to events:
 
 ```csharp
-public partial class FeedPage : ContentPage
+public class HomePage : ContentPage
 {
-    private CancellationTokenSource? _cts;
-
     protected override void OnNavigatedTo(NavigatedToEventArgs args)
     {
         base.OnNavigatedTo(args);
-        _cts = new CancellationTokenSource();
-        _ = LoadDataAsync(_cts.Token);
+        // Page is now visible, load or refresh data here
     }
 
     protected override void OnNavigatingFrom(NavigatingFromEventArgs args)
     {
-        // Synchronous pre-navigation hook.
-        // For async work, subscribe to the Navigating event instead.
+        base.OnNavigatingFrom(args);
+        if (HasUnsavedChanges)
+        {
+            args.Cancel = true; // Prevent navigation away
+        }
     }
 
     protected override void OnNavigatedFrom(NavigatedFromEventArgs args)
     {
         base.OnNavigatedFrom(args);
-        _cts?.Cancel();
-        _cts = null;
+        // Page is no longer visible, clean up resources
     }
-
-    private async Task LoadDataAsync(CancellationToken ct) { /* ... */ }
 }
 ```
 
-`NavigatedTo` and `NavigatedFrom` are different from Avalonia's `Loaded` and `Unloaded` events. `Loaded` fires once when the control joins the visual tree. `NavigatedTo` fires every time the page becomes the top page, including when the user navigates back to it after visiting a child page. Use `NavigatedTo` for data that must be refreshed on every visit.
+:::note
+`NavigatedTo` is not the same as the `Loaded` event. `Loaded` fires once when the control is first added to the visual tree, while `NavigatedTo` fires every time the page becomes the active page (for example, when returning to it via a back navigation).
+:::
 
 ## Examples
 
-### Minimal ContentPage in XAML
+### Minimal XAML page
+
+The simplest possible `ContentPage` with inline content:
 
 ```xml
 <ContentPage xmlns="https://github.com/avaloniaui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MyApp.HomePage"
              Header="Home">
-
-    <StackPanel Margin="20" Spacing="16">
-        <TextBlock Text="Hello, Avalonia!" FontSize="24" />
-        <Button Content="Go to Details" Click="OnGoToDetailsClick" />
-    </StackPanel>
-
+    <TextBlock Text="Hello, world!" Margin="16" />
 </ContentPage>
 ```
 
-### ContentPage in Code
+### Creating a ContentPage in code
 
 ```csharp
 var page = new ContentPage
 {
     Header = "Home",
-    Content = new StackPanel
+    Content = new TextBlock
     {
-        Spacing = 16,
-        Margin = new Thickness(20),
-        Children =
-        {
-            new TextBlock { Text = "Hello, Avalonia!", FontSize = 24 },
-            new Button { Content = "Go to Details" }
-        }
+        Text = "Hello from code!",
+        Margin = new Thickness(16)
     }
 };
 ```
 
-The page looks like this when hosted inside a `NavigationPage`:
+### ContentPage inside a NavigationPage
 
-<Image light={ContentPageInNavigationScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
+When hosted in a `NavigationPage`, the `Header` is displayed in the navigation bar:
 
-Without a navigation container, only the page content is shown:
-
-<Image light={ContentPageStandaloneScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
-
-### ContentPage as a Window Root
-
-Set the page directly on a window, optionally wrapped in a `NavigationPage` for stack navigation:
-
-```csharp
-// Without navigation
-window.Page = new MainPage();
-
-// With navigation support
-window.Page = new NavigationPage { Content = new MainPage() };
+```xml
+<NavigationPage xmlns="https://github.com/avaloniaui">
+    <ContentPage Header="Dashboard">
+        <StackPanel Margin="16" Spacing="8">
+            <TextBlock Text="Welcome back!" FontSize="24" FontWeight="Bold" />
+            <Button Content="Go to Details" Click="OnGoToDetails" />
+        </StackPanel>
+    </ContentPage>
+</NavigationPage>
 ```
 
-### ContentPage with a Scrollable Layout
+<Image light={ContentPageInNavigationScreenshot} position="center" maxWidth={400} cornerRadius="true" alt="ContentPage inside a NavigationPage"/>
 
-Wrap the layout in a `ScrollViewer` when the content may be taller than the screen:
+### ContentPage as a window root
+
+For single-page applications, you can place a `ContentPage` directly inside a `Window`:
+
+```xml
+<Window xmlns="https://github.com/avaloniaui"
+        Title="My App">
+    <ContentPage>
+        <StackPanel Margin="16" Spacing="8">
+            <TextBlock Text="Single-page app" FontSize="24" />
+            <TextBlock Text="No navigation container needed." />
+        </StackPanel>
+    </ContentPage>
+</Window>
+```
+
+<Image light={ContentPageStandaloneScreenshot} position="center" maxWidth={400} cornerRadius="true" alt="ContentPage standalone in a Window"/>
+
+### Scrollable layout
+
+`ContentPage` does not include a built-in scroll viewer. Wrap your content in a `ScrollViewer` if it may overflow:
 
 ```xml
 <ContentPage xmlns="https://github.com/avaloniaui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MyApp.ProfilePage"
-             Header="Profile">
-
+             Header="Long Content">
     <ScrollViewer>
-        <StackPanel Margin="20" Spacing="12">
-            <Image Source="avatar.png"
-                   Width="80" Height="80"
-                   HorizontalAlignment="Center" />
-            <TextBlock Text="{Binding FullName}"
-                       FontSize="20"
-                       HorizontalAlignment="Center" />
-            <TextBlock Text="{Binding Bio}"
-                       TextWrapping="Wrap" />
+        <StackPanel Margin="16" Spacing="8">
+            <TextBlock Text="Item 1" />
+            <TextBlock Text="Item 2" />
+            <TextBlock Text="Item 3" />
+            <!-- Many more items -->
         </StackPanel>
     </ScrollViewer>
-
 </ContentPage>
 ```
 
-### ContentPage with MVVM Binding
+### MVVM binding
+
+Bind the page content to a view model using `ContentTemplate`:
 
 ```xml
 <ContentPage xmlns="https://github.com/avaloniaui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:vm="clr-namespace:MyApp.ViewModels"
-             x:Class="MyApp.LoginPage"
-             Header="Sign In"
-             x:DataType="vm:LoginViewModel">
-
-    <StackPanel Margin="32" Spacing="16" VerticalAlignment="Center">
-        <TextBox Watermark="Email"
-                 Text="{Binding Email}" />
-        <TextBox Watermark="Password"
-                 PasswordChar="*"
-                 Text="{Binding Password}" />
-        <Button Content="Sign In"
-                Command="{Binding SignInCommand}"
-                HorizontalAlignment="Stretch" />
-        <TextBlock Text="{Binding ErrorMessage}"
-                   Foreground="Red"
-                   IsVisible="{Binding HasError}" />
-    </StackPanel>
-
+             Header="{Binding Title}"
+             Content="{Binding}">
+    <ContentPage.ContentTemplate>
+        <DataTemplate>
+            <StackPanel Margin="16" Spacing="8">
+                <TextBlock Text="{Binding Description}" FontSize="18" />
+                <TextBlock Text="{Binding Detail}" />
+            </StackPanel>
+        </DataTemplate>
+    </ContentPage.ContentTemplate>
 </ContentPage>
 ```
 
 ### TopCommandBar
 
-Place a `CommandBar` or any other control in the `TopCommandBar` slot. The slot is hidden automatically when the value is `null`.
+Display a toolbar above the page content:
 
 ```xml
 <ContentPage xmlns="https://github.com/avaloniaui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MyApp.DocumentPage"
-             Header="Document">
-
+             Header="Inbox">
     <ContentPage.TopCommandBar>
-        <CommandBar>
-            <CommandBar.PrimaryCommands>
-                <AppBarButton Label="Save"  Click="OnSaveClick">
-                    <AppBarButton.Icon>
-                        <PathIcon Data="M15,9H5V5H15M12,19A3,3 0 0,1..." />
-                    </AppBarButton.Icon>
-                </AppBarButton>
-                <AppBarButton Label="Share" Click="OnShareClick">
-                    <AppBarButton.Icon>
-                        <PathIcon Data="M18,16.08C17.24,16.08..." />
-                    </AppBarButton.Icon>
-                </AppBarButton>
-            </CommandBar.PrimaryCommands>
-            <CommandBar.SecondaryCommands>
-                <AppBarButton Label="Export as PDF" Click="OnExportClick" />
-                <AppBarButton Label="Print"         Click="OnPrintClick" />
-            </CommandBar.SecondaryCommands>
-        </CommandBar>
+        <StackPanel Orientation="Horizontal" Spacing="4" Margin="8">
+            <Button Content="Filter" />
+            <Button Content="Sort" />
+        </StackPanel>
     </ContentPage.TopCommandBar>
 
-    <ScrollViewer>
-        <TextBox AcceptsReturn="True" Text="{Binding DocumentText}" />
-    </ScrollViewer>
-
+    <TextBlock Text="Messages go here" Margin="16" />
 </ContentPage>
 ```
 
-<Image light={ContentPageTopCommandBarScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
+<Image light={ContentPageTopCommandBarScreenshot} position="center" maxWidth={400} cornerRadius="true" alt="ContentPage with a top command bar"/>
 
 ### BottomCommandBar
 
-`BottomCommandBar` works the same way and is placed below the page content. Useful for a mobile action bar:
+Display a toolbar below the page content:
 
 ```xml
 <ContentPage xmlns="https://github.com/avaloniaui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MyApp.PhotoPage"
-             Header="Photo">
-
+             Header="Settings">
     <ContentPage.BottomCommandBar>
-        <CommandBar>
-            <CommandBar.PrimaryCommands>
-                <AppBarButton Label="Like"    Click="OnLikeClick" />
-                <AppBarButton Label="Comment" Click="OnCommentClick" />
-                <AppBarButton Label="Share"   Click="OnShareClick" />
-            </CommandBar.PrimaryCommands>
-        </CommandBar>
+        <StackPanel Orientation="Horizontal" Spacing="8" Margin="8">
+            <Button Content="Save" />
+            <Button Content="Cancel" />
+        </StackPanel>
     </ContentPage.BottomCommandBar>
 
-    <Image Source="{Binding PhotoSource}" Stretch="UniformToFill" />
-
+    <TextBlock Text="Page content goes here" Margin="16" />
 </ContentPage>
 ```
 
-<Image light={ContentPageBottomCommandBarScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
+<Image light={ContentPageBottomCommandBarScreenshot} position="center" maxWidth={400} cornerRadius="true" alt="ContentPage with a bottom command bar"/>
 
-### Cancelling Navigation with Unsaved Changes
+### Cancelling navigation
 
-The `Navigating` event handler is async. You can await dialogs or async validation before deciding to cancel:
+Use the `Navigating` event or override `OnNavigatingFrom` to prevent the user from leaving a page with unsaved changes:
 
 ```csharp
-public partial class EditPage : ContentPage
+public class EditPage : ContentPage
 {
     public bool HasUnsavedChanges { get; set; }
 
-    public EditPage()
+    protected override void OnNavigatingFrom(NavigatingFromEventArgs args)
     {
-        InitializeComponent();
-        Navigating += OnNavigatingAsync;
-    }
+        base.OnNavigatingFrom(args);
 
-    private async Task OnNavigatingAsync(NavigatingFromEventArgs args)
-    {
-        if (!HasUnsavedChanges) return;
-
-        var dialog = new ConfirmDialog("You have unsaved changes. Discard them?");
-        bool confirmed = await dialog.ShowAsync();
-        if (!confirmed)
-            args.Cancel = true;
-    }
-}
-```
-
-### Intercepting the System Back Button
-
-Override `OnSystemBackButtonPressed` to handle hardware or OS-level back navigation:
-
-```csharp
-public partial class WizardPage : ContentPage
-{
-    private int _step;
-
-    protected override bool OnSystemBackButtonPressed()
-    {
-        if (_step > 0)
+        if (HasUnsavedChanges)
         {
-            _step--;
-            UpdateStep();
-            return true; // handled, do not navigate back
+            args.Cancel = true;
+            // Optionally show a confirmation dialog here
         }
-        return false; // let the NavigationPage handle it
     }
 }
 ```
 
-### Refreshing Data on Every Visit
+### Intercepting the system back button
+
+On platforms with a hardware or system back button (Android, browser), `Navigating` fires before the back action occurs. Cancelling it also cancels the system back navigation:
 
 ```csharp
-public partial class CartPage : ContentPage
+protected override void OnNavigatingFrom(NavigatingFromEventArgs args)
 {
-    private readonly CartViewModel _vm;
+    base.OnNavigatingFrom(args);
 
-    public CartPage(CartViewModel vm)
+    if (ShouldPreventBack())
     {
-        _vm = vm;
-        DataContext = vm;
-        InitializeComponent();
+        args.Cancel = true;
     }
+}
+```
 
-    protected override void OnNavigatedTo(NavigatedToEventArgs args)
+### Refreshing data when the page reappears
+
+`NavigatedTo` fires every time the page becomes active, making it the ideal place to refresh data:
+
+```csharp
+public class OrdersPage : ContentPage
+{
+    protected override async void OnNavigatedTo(NavigatedToEventArgs args)
     {
         base.OnNavigatedTo(args);
-        // Runs every time this page comes to the front,
-        // including when the user pops back from a child page.
-        _ = _vm.RefreshCartAsync();
+        await ViewModel.LoadOrdersAsync();
     }
 }
 ```
 
-### Full-Bleed Layout Without Safe-Area Padding
+### Full-bleed layout (disabling safe area padding)
 
-Use this for pages with hero images, maps, or other content that should extend under the status bar:
+Set `AutomaticallyApplySafeAreaPadding` to `false` to let your content extend behind the notch and status bar:
 
 ```xml
 <ContentPage xmlns="https://github.com/avaloniaui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MyApp.SplashPage"
              AutomaticallyApplySafeAreaPadding="False">
-
-    <Grid>
-        <Image Source="hero.jpg" Stretch="UniformToFill" />
-        <TextBlock Text="Welcome"
-                   VerticalAlignment="Bottom"
-                   Margin="20,0,20,40"
-                   FontSize="32"
-                   Foreground="White" />
-    </Grid>
-
+    <Image Source="avares://MyApp/Assets/hero.jpg"
+           Stretch="UniformToFill" />
 </ContentPage>
 ```
 
-<Image light={ContentPageSafeAreaDisabledScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
+<Image light={ContentPageSafeAreaDisabledScreenshot} position="center" maxWidth={400} cornerRadius="true" alt="ContentPage with safe area padding disabled"/>
 
-### ContentPage as a Tab with an Icon
+### Image background
 
-```csharp
-var homePage = new ContentPage
-{
-    Header = "Home",
-    Icon   = Geometry.Parse("M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"),
-    Content = homeView
-};
+`ContentPage` does not have `BackgroundImage` or `BackgroundImageStretch` properties. Use the inherited `Background` property with an `ImageBrush` instead:
+
+```xml
+<ContentPage xmlns="https://github.com/avaloniaui"
+             Header="Welcome">
+    <ContentPage.Background>
+        <ImageBrush Source="avares://MyApp/Assets/background.jpg"
+                    Stretch="UniformToFill" />
+    </ContentPage.Background>
+
+    <TextBlock Text="Page content" Margin="16" />
+</ContentPage>
 ```
 
-<Image light={ContentPageAsTabScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
+### Tab with icon
+
+When used inside a `TabbedPage`, the `Header` and `Icon` properties control the tab appearance:
+
+```xml
+<TabbedPage xmlns="https://github.com/avaloniaui"
+            TabPlacement="Bottom">
+    <ContentPage Header="Home">
+        <ContentPage.Icon>
+            <PathIcon Data="{StaticResource HomeIcon}" />
+        </ContentPage.Icon>
+        <TextBlock Text="Home content" Margin="16" />
+    </ContentPage>
+    <ContentPage Header="Settings">
+        <ContentPage.Icon>
+            <PathIcon Data="{StaticResource SettingsIcon}" />
+        </ContentPage.Icon>
+        <TextBlock Text="Settings content" Margin="16" />
+    </ContentPage>
+</TabbedPage>
+```
+
+<Image light={ContentPageAsTabScreenshot} position="center" maxWidth={400} cornerRadius="true" alt="ContentPage used as a tab in TabbedPage"/>
 
 ## See also
 
-- [API reference](/api/avalonia/controls/contentpage)
-- [`ContentPage.cs` source code](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Page/ContentPage.cs)
-- [`Page.cs` source code](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Page/Page.cs)
+- [NavigationPage](/controls/navigation/navigationpage)
+- [TabbedPage](/controls/navigation/tabbedpage)
+- [DrawerPage](/controls/navigation/drawerpage)
+- [ContentPage API reference](/api/avalonia/controls/contentpage)
+- [`ContentPage.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Page/ContentPage.cs)

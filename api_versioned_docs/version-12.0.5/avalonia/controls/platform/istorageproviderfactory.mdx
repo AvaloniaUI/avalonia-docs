@@ -1,0 +1,80 @@
+---
+title: 'IStorageProviderFactory'
+hide_title: true
+slug: '/avalonia/controls/platform/istorageproviderfactory'
+uid: 'Avalonia.Controls.Platform.IStorageProviderFactory'
+commentId: 'T:Avalonia.Controls.Platform.IStorageProviderFactory'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Platform'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IStorageProviderFactory Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Platform</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Factory allows to register custom storage provider instead of native implementation.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface IStorageProviderFactory
+```
+
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [CreateProvider](#uid-7756b513ff) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7756b513ff"></span>
+
+### CreateProvider Method
+
+```csharp
+public Avalonia.Platform.Storage.IStorageProvider CreateProvider(Avalonia.Controls.TopLevel topLevel)
+```
+
+#### Parameters
+
+`topLevel` [Avalonia.Controls.TopLevel](xref:Avalonia.Controls.TopLevel)
+
+
+#### Returns
+
+[Avalonia.Platform.Storage.IStorageProvider](xref:Avalonia.Platform.Storage.IStorageProvider)
+
+
+</section>
+
+</ApiRefPage>
+

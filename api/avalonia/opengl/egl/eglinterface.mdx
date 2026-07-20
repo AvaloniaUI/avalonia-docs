@@ -115,12 +115,15 @@ public EglInterface(string library)
 | [BindApi](#uid-805d0cb9e5) | No summary available. |
 | [BindTexImage](#uid-789bee844a) | No summary available. |
 | [ChooseConfig](#uid-54e6877cc1) | No summary available. |
+| [ChooseConfigs](#uid-e42705f255) | No summary available. |
 | [CreateContext](#uid-19f85aec8e) | No summary available. |
-| [CreatePBufferSurface](#uid-adb9f241be) | No summary available. |
+| [CreateImageKHR](#uid-c0cfa29c59) | No summary available. |
 | [CreatePbufferFromClientBuffer](#uid-63f941ac31) | No summary available. |
 | [CreatePbufferFromClientBufferPtr](#uid-12de878bed) | No summary available. |
+| [CreatePBufferSurface](#uid-adb9f241be) | No summary available. |
 | [CreateWindowSurface](#uid-3a05611877) | No summary available. |
 | [DestroyContext](#uid-898aaba5f2) | No summary available. |
+| [DestroyImageKHR](#uid-1604f91eff) | No summary available. |
 | [DestroySurface](#uid-2741d3836d) | No summary available. |
 | [GetConfigAttrib](#uid-77b209828a) | No summary available. |
 | [GetCurrentContext](#uid-b3b4666407) | No summary available. |
@@ -132,11 +135,15 @@ public EglInterface(string library)
 | [GetProcAddress](#uid-3fa890b826) | No summary available. |
 | [Initialize](#uid-4345d1d2e4) | No summary available. |
 | [MakeCurrent](#uid-d252dc33e3) | No summary available. |
+| [QueryApi](#uid-601c5153b6) | No summary available. |
 | [QueryDeviceAttribExt](#uid-9911ebf310) | No summary available. |
 | [QueryDisplayAttribExt](#uid-a90a4cd3e7) | No summary available. |
+| [QueryDmaBufFormatsEXT](#uid-51f4106204) | No summary available. |
+| [QueryDmaBufModifiersEXT](#uid-b0f0ddcdd1) | No summary available. |
 | [QueryString](#uid-a12928cbb0) | No summary available. |
 | [QueryStringNative](#uid-534df08fa9) | No summary available. |
 | [SwapBuffers](#uid-d6d3bd7210) | No summary available. |
+| [SwapInterval](#uid-c2b98245e2) | No summary available. |
 | [Terminate](#uid-ca4e4435c3) | No summary available. |
 | [WaitClient](#uid-f34c449522) | No summary available. |
 | [WaitGL](#uid-071917b6ea) | No summary available. |
@@ -228,6 +235,40 @@ bool
 
 <section className="apiref-page__member-entry">
 
+<span id="uid-e42705f255"></span>
+
+### ChooseConfigs Method
+
+```csharp
+public bool ChooseConfigs(IntPtr display, int[] attribs, IntPtr[] configs, int configSize, int& numConfigs)
+```
+
+#### Parameters
+
+`display` IntPtr
+
+
+`attribs` int[]
+
+
+`configs` IntPtr[]
+
+
+`configSize` int
+
+
+`numConfigs` int&amp;
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-19f85aec8e"></span>
 
 ### CreateContext Method
@@ -259,12 +300,12 @@ IntPtr
 
 <section className="apiref-page__member-entry">
 
-<span id="uid-adb9f241be"></span>
+<span id="uid-c0cfa29c59"></span>
 
-### CreatePBufferSurface Method
+### CreateImageKHR Method
 
 ```csharp
-public IntPtr CreatePBufferSurface(IntPtr display, IntPtr config, int[] attrs)
+public IntPtr CreateImageKHR(IntPtr display, IntPtr context, int target, IntPtr clientBuffer, int[] attribs)
 ```
 
 #### Parameters
@@ -272,10 +313,16 @@ public IntPtr CreatePBufferSurface(IntPtr display, IntPtr config, int[] attrs)
 `display` IntPtr
 
 
-`config` IntPtr
+`context` IntPtr
 
 
-`attrs` int[]
+`target` int
+
+
+`clientBuffer` IntPtr
+
+
+`attribs` int[]
 
 
 #### Returns
@@ -355,6 +402,34 @@ IntPtr
 
 <section className="apiref-page__member-entry">
 
+<span id="uid-adb9f241be"></span>
+
+### CreatePBufferSurface Method
+
+```csharp
+public IntPtr CreatePBufferSurface(IntPtr display, IntPtr config, int[] attrs)
+```
+
+#### Parameters
+
+`display` IntPtr
+
+
+`config` IntPtr
+
+
+`attrs` int[]
+
+
+#### Returns
+
+IntPtr
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-3a05611877"></span>
 
 ### CreateWindowSurface Method
@@ -400,6 +475,31 @@ public bool DestroyContext(IntPtr display, IntPtr context)
 
 
 `context` IntPtr
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1604f91eff"></span>
+
+### DestroyImageKHR Method
+
+```csharp
+public bool DestroyImageKHR(IntPtr display, IntPtr image)
+```
+
+#### Parameters
+
+`display` IntPtr
+
+
+`image` IntPtr
 
 
 #### Returns
@@ -666,6 +766,23 @@ bool
 
 <section className="apiref-page__member-entry">
 
+<span id="uid-601c5153b6"></span>
+
+### QueryApi Method
+
+```csharp
+public int QueryApi()
+```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-9911ebf310"></span>
 
 ### QueryDeviceAttribExt Method
@@ -711,6 +828,74 @@ public bool QueryDisplayAttribExt(IntPtr display, int attr, IntPtr& res)
 
 
 `res` IntPtr&amp;
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-51f4106204"></span>
+
+### QueryDmaBufFormatsEXT Method
+
+```csharp
+public bool QueryDmaBufFormatsEXT(IntPtr display, int maxFormats, int* formats, int& numFormats)
+```
+
+#### Parameters
+
+`display` IntPtr
+
+
+`maxFormats` int
+
+
+`formats` int*
+
+
+`numFormats` int&amp;
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b0f0ddcdd1"></span>
+
+### QueryDmaBufModifiersEXT Method
+
+```csharp
+public bool QueryDmaBufModifiersEXT(IntPtr display, int format, int maxModifiers, ulong* modifiers, bool* externalOnly, int& numModifiers)
+```
+
+#### Parameters
+
+`display` IntPtr
+
+
+`format` int
+
+
+`maxModifiers` int
+
+
+`modifiers` ulong*
+
+
+`externalOnly` bool*
+
+
+`numModifiers` int&amp;
 
 
 #### Returns
@@ -792,6 +977,31 @@ public void SwapBuffers(IntPtr display, IntPtr surface)
 
 <section className="apiref-page__member-entry">
 
+<span id="uid-c2b98245e2"></span>
+
+### SwapInterval Method
+
+```csharp
+public bool SwapInterval(IntPtr display, int interval)
+```
+
+#### Parameters
+
+`display` IntPtr
+
+
+`interval` int
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-ca4e4435c3"></span>
 
 ### Terminate Method
@@ -867,9 +1077,37 @@ bool
 
 | Name | Description |
 | --- | --- |
+| [IsCreateImageKHRAvailable](#uid-bd55bb9250) | No summary available. |
+| [IsDestroyImageKHRAvailable](#uid-c6962ba067) | No summary available. |
 | [IsGetPlatformDisplayExtAvailable](#uid-fb9d19de69) | No summary available. |
 | [IsQueryDeviceAttribExtAvailable](#uid-5f95b932cb) | No summary available. |
 | [IsQueryDisplayAttribExtAvailable](#uid-bfabc405c6) | No summary available. |
+| [IsQueryDmaBufFormatsEXTAvailable](#uid-3c1dd009e0) | No summary available. |
+| [IsQueryDmaBufModifiersEXTAvailable](#uid-838d2a2d00) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-bd55bb9250"></span>
+
+### IsCreateImageKHRAvailable Property
+
+```csharp
+public bool IsCreateImageKHRAvailable { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c6962ba067"></span>
+
+### IsDestroyImageKHRAvailable Property
+
+```csharp
+public bool IsDestroyImageKHRAvailable { get; set; }
+```
+
+</section>
 
 <section className="apiref-page__member-entry">
 
@@ -903,6 +1141,30 @@ public bool IsQueryDeviceAttribExtAvailable { get; set; }
 
 ```csharp
 public bool IsQueryDisplayAttribExtAvailable { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3c1dd009e0"></span>
+
+### IsQueryDmaBufFormatsEXTAvailable Property
+
+```csharp
+public bool IsQueryDmaBufFormatsEXTAvailable { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-838d2a2d00"></span>
+
+### IsQueryDmaBufModifiersEXTAvailable Property
+
+```csharp
+public bool IsQueryDmaBufModifiersEXTAvailable { get; set; }
 ```
 
 </section>

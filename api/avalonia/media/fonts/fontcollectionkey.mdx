@@ -57,14 +57,15 @@ public struct FontCollectionKey
 <span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> FontCollectionKey
 </div>
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;FontCollectionKey&gt;
+<span className="apiref-page__meta-label">Implements:</span> IComparable, IComparable&lt;FontCollectionKey&gt;, IEquatable&lt;FontCollectionKey&gt;
 </div>
 </div>
 
 ## Remarks
 
 Use this key to efficiently look up or group fonts in a collection by their style, weight,
-and stretch characteristics.
+and stretch characteristics. Keys are ordered lexicographically by [Avalonia.Media.Fonts.FontCollectionKey.Style](xref:Avalonia.Media.Fonts.FontCollectionKey.Style), then
+[Avalonia.Media.Fonts.FontCollectionKey.Weight](xref:Avalonia.Media.Fonts.FontCollectionKey.Weight), then [Avalonia.Media.Fonts.FontCollectionKey.Stretch](xref:Avalonia.Media.Fonts.FontCollectionKey.Stretch).
 
 ## Constructors
 
@@ -104,7 +105,8 @@ The font stretch to use when constructing the key.
 #### Remarks
 
 Use this key to efficiently look up or group fonts in a collection by their style, weight,
-and stretch characteristics.
+and stretch characteristics. Keys are ordered lexicographically by [Avalonia.Media.Fonts.FontCollectionKey.Style](xref:Avalonia.Media.Fonts.FontCollectionKey.Style), then
+[Avalonia.Media.Fonts.FontCollectionKey.Weight](xref:Avalonia.Media.Fonts.FontCollectionKey.Weight), then [Avalonia.Media.Fonts.FontCollectionKey.Stretch](xref:Avalonia.Media.Fonts.FontCollectionKey.Stretch).
 
 </section>
 
@@ -112,10 +114,59 @@ and stretch characteristics.
 
 | Name | Description |
 | --- | --- |
+| [CompareTo (2 overloads)](#uid-ac4a0057c2) | No summary available. |
 | [Deconstruct](#uid-6da6603b7d) | No summary available. |
 | [Equals (2 overloads)](#uid-5eef35641f) | No summary available. |
 | [GetHashCode](#uid-ef090fef6b) | No summary available. |
 | [ToString](#uid-bf73fe1e5b) | No summary available. |
+
+<span id="uid-ac4a0057c2"></span>
+
+### CompareTo overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ddd0e709cd"></span>
+
+#### CompareTo Method
+
+```csharp
+public int CompareTo(Avalonia.Media.Fonts.FontCollectionKey other)
+```
+
+##### Parameters
+
+`other` [Avalonia.Media.Fonts.FontCollectionKey](xref:Avalonia.Media.Fonts.FontCollectionKey)
+
+
+##### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5d54758fdd"></span>
+
+#### CompareTo Method
+
+```csharp
+public int CompareTo(object obj)
+```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+int
+
+
+</section>
 
 <section className="apiref-page__member-entry">
 

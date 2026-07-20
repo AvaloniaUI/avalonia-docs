@@ -118,8 +118,8 @@ public enum Key
 | [Enter](#uid-f2b3bb5263) | The Enter key. |
 | [EraseEof](#uid-83553740e1) | The ERASE EOF Key. |
 | [Escape](#uid-0c84d3f7d1) | The Escape key. |
-| [ExSel](#uid-f175e5046d) | The EXSEL key. |
 | [Execute](#uid-ebc8db6b9c) | The Execute key. |
+| [ExSel](#uid-f175e5046d) | The EXSEL key. |
 | [F](#uid-27eeb35b87) | The F key. |
 | [F1](#uid-e535a6636e) | The F1 key. |
 | [F10](#uid-37cecb99b2) | The F10 key. |
@@ -169,7 +169,6 @@ public enum Key
 | [KanaMode](#uid-24ee81f0d0) | The IME Kana mode key. |
 | [KanjiMode](#uid-eeef91a1c1) | The IME Kanji mode key. |
 | [L](#uid-300c5659eb) | The L key. |
-| [LWin](#uid-46771228db) | The left Windows key. |
 | [LaunchApplication1](#uid-3519916434) | The Launch Application 1 key. |
 | [LaunchApplication2](#uid-f4b330426c) | The Launch Application 2 key. |
 | [LaunchMail](#uid-36262ee082) | The Launch Mail key. |
@@ -178,6 +177,7 @@ public enum Key
 | [LeftCtrl](#uid-b16b256a6b) | The left Ctrl key. |
 | [LeftShift](#uid-f1d5374e32) | The left Shift key. |
 | [LineFeed](#uid-ab794972e6) | The Linefeed key. |
+| [LWin](#uid-46771228db) | The left Windows key. |
 | [M](#uid-15e66534a7) | The M key. |
 | [MediaBlue](#uid-6c62cab792) | Remote control Blue button |
 | [MediaChannelList](#uid-afdbc531d8) | TV Channel up |
@@ -228,8 +228,8 @@ public enum Key
 | [Oem8](#uid-2c6dab10e1) | The OEM 8 key. |
 | [OemAttn](#uid-08eedc5605) | The OEM ATTN key. |
 | [OemAuto](#uid-57af5e95c3) | The OEM Auto key. |
-| [OemBackTab](#uid-1b8c24c70e) | The OEM BackTab key. |
 | [OemBackslash](#uid-ce3dc4c67a) | The OEM Backslash key. |
+| [OemBackTab](#uid-1b8c24c70e) | The OEM BackTab key. |
 | [OemClear](#uid-c8fb2567ed) | The OEM Clear key. |
 | [OemCloseBrackets](#uid-cd12bf5b5a) | The OEM Close Brackets key. |
 | [OemComma](#uid-d3db14e631) | The OEM Comma key. |
@@ -256,12 +256,12 @@ public enum Key
 | [Prior](#uid-4b28a70fc9) | The Page Up key. |
 | [Q](#uid-186b5748b0) | The Q key. |
 | [R](#uid-fd790c12b5) | The R key. |
-| [RWin](#uid-0c54815b45) | The right Windows key. |
 | [Return](#uid-ac15d19495) | The Return key. |
 | [Right](#uid-f34dd2aa52) | The Right arrow key. |
 | [RightAlt](#uid-62689d2e58) | The right Alt key. |
 | [RightCtrl](#uid-fc24b9d0e3) | The right Ctrl key. |
 | [RightShift](#uid-1f4738a2c0) | The right Shift key. |
+| [RWin](#uid-0c54815b45) | The right Windows key. |
 | [S](#uid-b99bbef01c) | The S key. |
 | [Scroll](#uid-642cf962a9) | The Scroll key. |
 | [Select](#uid-65c476d060) | The Select key. |
@@ -1072,20 +1072,6 @@ public Avalonia.Input.Key Escape
 
 <section className="apiref-page__member-entry">
 
-<span id="uid-f175e5046d"></span>
-
-### ExSel Field
-
-The EXSEL key.
-
-```csharp
-public Avalonia.Input.Key ExSel
-```
-
-</section>
-
-<section className="apiref-page__member-entry">
-
 <span id="uid-ebc8db6b9c"></span>
 
 ### Execute Field
@@ -1094,6 +1080,20 @@ The Execute key.
 
 ```csharp
 public Avalonia.Input.Key Execute
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f175e5046d"></span>
+
+### ExSel Field
+
+The EXSEL key.
+
+```csharp
+public Avalonia.Input.Key ExSel
 ```
 
 </section>
@@ -1786,20 +1786,6 @@ public Avalonia.Input.Key L
 
 <section className="apiref-page__member-entry">
 
-<span id="uid-46771228db"></span>
-
-### LWin Field
-
-The left Windows key.
-
-```csharp
-public Avalonia.Input.Key LWin
-```
-
-</section>
-
-<section className="apiref-page__member-entry">
-
 <span id="uid-3519916434"></span>
 
 ### LaunchApplication1 Field
@@ -1906,6 +1892,20 @@ The Linefeed key.
 
 ```csharp
 public Avalonia.Input.Key LineFeed
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-46771228db"></span>
+
+### LWin Field
+
+The left Windows key.
+
+```csharp
+public Avalonia.Input.Key LWin
 ```
 
 </section>
@@ -2612,20 +2612,6 @@ public Avalonia.Input.Key OemAuto
 
 <section className="apiref-page__member-entry">
 
-<span id="uid-1b8c24c70e"></span>
-
-### OemBackTab Field
-
-The OEM BackTab key.
-
-```csharp
-public Avalonia.Input.Key OemBackTab
-```
-
-</section>
-
-<section className="apiref-page__member-entry">
-
 <span id="uid-ce3dc4c67a"></span>
 
 ### OemBackslash Field
@@ -2634,6 +2620,20 @@ The OEM Backslash key.
 
 ```csharp
 public Avalonia.Input.Key OemBackslash
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1b8c24c70e"></span>
+
+### OemBackTab Field
+
+The OEM BackTab key.
+
+```csharp
+public Avalonia.Input.Key OemBackTab
 ```
 
 </section>
@@ -3004,20 +3004,6 @@ public Avalonia.Input.Key R
 
 <section className="apiref-page__member-entry">
 
-<span id="uid-0c54815b45"></span>
-
-### RWin Field
-
-The right Windows key.
-
-```csharp
-public Avalonia.Input.Key RWin
-```
-
-</section>
-
-<section className="apiref-page__member-entry">
-
 <span id="uid-ac15d19495"></span>
 
 ### Return Field
@@ -3082,6 +3068,20 @@ The right Shift key.
 
 ```csharp
 public Avalonia.Input.Key RightShift
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0c54815b45"></span>
+
+### RWin Field
+
+The right Windows key.
+
+```csharp
+public Avalonia.Input.Key RWin
 ```
 
 </section>

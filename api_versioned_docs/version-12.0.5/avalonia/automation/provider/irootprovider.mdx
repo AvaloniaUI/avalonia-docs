@@ -1,0 +1,59 @@
+---
+title: 'IRootProvider'
+hide_title: true
+slug: '/avalonia/automation/provider/irootprovider'
+uid: 'Avalonia.Automation.Provider.IRootProvider'
+commentId: 'T:Avalonia.Automation.Provider.IRootProvider'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Automation.Provider'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IRootProvider Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Automation.Provider</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Exposes methods and properties to support UI Automation client access to the root of an
+automation tree.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface IRootProvider
+```
+
+</div>
+
+## Remarks
+
+This interface is implemented by the [Avalonia.Automation.Peers.AutomationPeer](xref:Avalonia.Automation.Peers.AutomationPeer) class, and should only
+be implemented on true root elements, such as Windows. To embed an automation tree, use
+[Avalonia.Automation.Provider.IEmbeddedRootProvider](xref:Avalonia.Automation.Provider.IEmbeddedRootProvider) instead.
+
+</ApiRefPage>
+

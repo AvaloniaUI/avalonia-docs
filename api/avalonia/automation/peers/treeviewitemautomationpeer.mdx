@@ -50,6 +50,9 @@ public class TreeViewItemAutomationPeer
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="automationpeer">AutomationPeer</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="controlautomationpeer">ControlAutomationPeer</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="itemscontrolautomationpeer">ItemsControlAutomationPeer</a> <span className="apiref-page__relation-separator">-&gt;</span> TreeViewItemAutomationPeer
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="../provider/iselectionitemprovider">ISelectionItemProvider</a>
+</div>
 </div>
 
 ## Constructors
@@ -79,12 +82,9 @@ public TreeViewItemAutomationPeer(Avalonia.Controls.TreeViewItem owner)
 
 | Name | Description |
 | --- | --- |
-| [Scroll](itemscontrolautomationpeer.mdx#uid-3daf9cffcf) | Inherited from [ItemsControlAutomationPeer](itemscontrolautomationpeer.mdx). |
-| [SetScrollPercent](itemscontrolautomationpeer.mdx#uid-f3b73103e1) | Inherited from [ItemsControlAutomationPeer](itemscontrolautomationpeer.mdx). |
+| [BringIntoView](automationpeer.mdx#uid-0ce0c26ad7) | Attempts to bring the element associated with the automation peer into view. Inherited from [AutomationPeer](automationpeer.mdx). |
 | [CreatePeerForElement](controlautomationpeer.mdx#uid-01e76040e7) | Gets the [Avalonia.Automation.Peers.AutomationPeer](xref:Avalonia.Automation.Peers.AutomationPeer) for a [Avalonia.Controls.Control](xref:Avalonia.Controls.Control), creating it if necessary. Inherited from [ControlAutomationPeer](controlautomationpeer.mdx). |
 | [FromElement](controlautomationpeer.mdx#uid-f0c358c33d) | Gets an existing [Avalonia.Automation.Peers.AutomationPeer](xref:Avalonia.Automation.Peers.AutomationPeer) for a [Avalonia.Controls.Control](xref:Avalonia.Controls.Control). Inherited from [ControlAutomationPeer](controlautomationpeer.mdx). |
-| [GetOrCreate](controlautomationpeer.mdx#uid-d5fc666c05) | Inherited from [ControlAutomationPeer](controlautomationpeer.mdx). |
-| [BringIntoView](automationpeer.mdx#uid-0ce0c26ad7) | Attempts to bring the element associated with the automation peer into view. Inherited from [AutomationPeer](automationpeer.mdx). |
 | [GetAcceleratorKey](automationpeer.mdx#uid-b27b870e23) | Gets the accelerator key combinations for the element that is associated with the UI Automation peer. Inherited from [AutomationPeer](automationpeer.mdx). |
 | [GetAccessKey](automationpeer.mdx#uid-0c0606dfaf) | Gets the access key for the element that is associated with the automation peer. Inherited from [AutomationPeer](automationpeer.mdx). |
 | [GetAutomationControlType](automationpeer.mdx#uid-f7daf3a583) | Gets the control type for the element that is associated with the UI Automation peer. Inherited from [AutomationPeer](automationpeer.mdx). |
@@ -101,6 +101,7 @@ public TreeViewItemAutomationPeer(Avalonia.Controls.TreeViewItem owner)
 | [GetLiveSetting](automationpeer.mdx#uid-75007f578a) | Gets the current live setting that is associated with this this automation peer. Inherited from [AutomationPeer](automationpeer.mdx). |
 | [GetLocalizedControlType](automationpeer.mdx#uid-262763e857) | Gets a human-readable localized string that represents the type of the control that is associated with this automation peer. Inherited from [AutomationPeer](automationpeer.mdx). |
 | [GetName](automationpeer.mdx#uid-ac6dd5a547) | Gets text that describes the element that is associated with this automation peer. Inherited from [AutomationPeer](automationpeer.mdx). |
+| [GetOrCreate](controlautomationpeer.mdx#uid-d5fc666c05) | Inherited from [ControlAutomationPeer](controlautomationpeer.mdx). |
 | [GetParent](automationpeer.mdx#uid-947969c77f) | Gets the [Avalonia.Automation.Peers.AutomationPeer](xref:Avalonia.Automation.Peers.AutomationPeer) that is the parent of this [Avalonia.Automation.Peers.AutomationPeer](xref:Avalonia.Automation.Peers.AutomationPeer). Inherited from [AutomationPeer](automationpeer.mdx). |
 | [GetPlaceholderText](automationpeer.mdx#uid-1ced74e763) | Gets text that provides a placeholder for the element that is associated with this automation peer. Inherited from [AutomationPeer](automationpeer.mdx). |
 | [GetProvider](automationpeer.mdx#uid-ee05fc8d1e) | Inherited from [AutomationPeer](automationpeer.mdx). |
@@ -111,20 +112,62 @@ public TreeViewItemAutomationPeer(Avalonia.Controls.TreeViewItem owner)
 | [IsKeyboardFocusable](automationpeer.mdx#uid-c9dfcdf842) | Gets a value that indicates whether the element can accept keyboard focus. Inherited from [AutomationPeer](automationpeer.mdx). |
 | [IsOffscreen](automationpeer.mdx#uid-72084dcbfb) | Gets a value that indicates whether an element is off the screen. Inherited from [AutomationPeer](automationpeer.mdx). |
 | [RaisePropertyChangedEvent](automationpeer.mdx#uid-ffcc0e3d63) | Raises an event to notify the automation client of a changed property value. Inherited from [AutomationPeer](automationpeer.mdx). |
+| [Scroll](itemscontrolautomationpeer.mdx#uid-3daf9cffcf) | Inherited from [ItemsControlAutomationPeer](itemscontrolautomationpeer.mdx). |
+| [Select](#uid-98e85a0afa) | No summary available. |
 | [SetFocus](automationpeer.mdx#uid-6a8d233e48) | Sets the keyboard focus on the element that is associated with this automation peer. Inherited from [AutomationPeer](automationpeer.mdx). |
+| [SetScrollPercent](itemscontrolautomationpeer.mdx#uid-f3b73103e1) | Inherited from [ItemsControlAutomationPeer](itemscontrolautomationpeer.mdx). |
 | [ShowContextMenu](automationpeer.mdx#uid-8bfe04d25b) | Shows the context menu for the element that is associated with this automation peer. Inherited from [AutomationPeer](automationpeer.mdx). |
+| [ToScreen](automationpeer.mdx#uid-51bb13f806) | Converts a rectangle in the peer's coordinate space, as returned by [Avalonia.Automation.Peers.AutomationPeer.GetBoundingRectangle](xref:Avalonia.Automation.Peers.AutomationPeer.GetBoundingRectangle), to screen coordinates; returns null if the peer is not currently hosted in a rendered visual tree. Inherited from [AutomationPeer](automationpeer.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-98e85a0afa"></span>
+
+### Select Method
+
+```csharp
+public void Select()
+```
+
+</section>
 
 ## Properties
 
 | Name | Description |
 | --- | --- |
+| [HorizontallyScrollable](itemscontrolautomationpeer.mdx#uid-403fdefb72) | Inherited from [ItemsControlAutomationPeer](itemscontrolautomationpeer.mdx). |
 | [HorizontalScrollPercent](itemscontrolautomationpeer.mdx#uid-1e829f5a03) | Inherited from [ItemsControlAutomationPeer](itemscontrolautomationpeer.mdx). |
 | [HorizontalViewSize](itemscontrolautomationpeer.mdx#uid-f21b32fa62) | Inherited from [ItemsControlAutomationPeer](itemscontrolautomationpeer.mdx). |
-| [HorizontallyScrollable](itemscontrolautomationpeer.mdx#uid-403fdefb72) | Inherited from [ItemsControlAutomationPeer](itemscontrolautomationpeer.mdx). |
+| [IsSelected](#uid-dc9511c253) | No summary available. |
 | [Owner](itemscontrolautomationpeer.mdx#uid-2fcb4ff7b1) | Inherited from [ItemsControlAutomationPeer](itemscontrolautomationpeer.mdx). |
+| [SelectionContainer](#uid-b92a6eee4f) | No summary available. |
+| [VerticallyScrollable](itemscontrolautomationpeer.mdx#uid-48e6351711) | Inherited from [ItemsControlAutomationPeer](itemscontrolautomationpeer.mdx). |
 | [VerticalScrollPercent](itemscontrolautomationpeer.mdx#uid-a77dc96d28) | Inherited from [ItemsControlAutomationPeer](itemscontrolautomationpeer.mdx). |
 | [VerticalViewSize](itemscontrolautomationpeer.mdx#uid-6da1a7bd7d) | Inherited from [ItemsControlAutomationPeer](itemscontrolautomationpeer.mdx). |
-| [VerticallyScrollable](itemscontrolautomationpeer.mdx#uid-48e6351711) | Inherited from [ItemsControlAutomationPeer](itemscontrolautomationpeer.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-dc9511c253"></span>
+
+### IsSelected Property
+
+```csharp
+public bool IsSelected { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b92a6eee4f"></span>
+
+### SelectionContainer Property
+
+```csharp
+public Avalonia.Automation.Provider.ISelectionProvider SelectionContainer { get; set; }
+```
+
+</section>
 
 ## Events
 

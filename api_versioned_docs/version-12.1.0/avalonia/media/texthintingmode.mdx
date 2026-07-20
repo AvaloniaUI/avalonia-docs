@@ -1,0 +1,126 @@
+---
+title: 'TextHintingMode'
+hide_title: true
+slug: '/avalonia/media/texthintingmode'
+uid: 'Avalonia.Media.TextHintingMode'
+commentId: 'T:Avalonia.Media.TextHintingMode'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Enum'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Media'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">TextHintingMode Enum</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Media</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Specifies the level of hinting applied to text glyphs during rendering.
+Text hinting adjusts glyph outlines to improve readability and crispness,
+especially at small font sizes or low DPI. This enum controls the amount
+of grid-fitting and outline adjustment performed.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public enum TextHintingMode
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Enum <span className="apiref-page__relation-separator">-&gt;</span> TextHintingMode
+</div>
+</div>
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [Light](#uid-8b5d4b51fd) | Minimal hinting, preserves glyph shape. |
+| [None](#uid-7394bb84cb) | No hinting, outlines are scaled only. |
+| [Strong](#uid-b5e156b5e1) | Aggressive grid-fitting, maximum crispness at low DPI. |
+| [Unspecified](#uid-68711dec19) | Hinting mode is not explicitly specified. The default will be used. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8b5d4b51fd"></span>
+
+### Light Field
+
+Minimal hinting, preserves glyph shape.
+
+```csharp
+public Avalonia.Media.TextHintingMode Light
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7394bb84cb"></span>
+
+### None Field
+
+No hinting, outlines are scaled only.
+
+```csharp
+public Avalonia.Media.TextHintingMode None
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b5e156b5e1"></span>
+
+### Strong Field
+
+Aggressive grid-fitting, maximum crispness at low DPI.
+
+```csharp
+public Avalonia.Media.TextHintingMode Strong
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-68711dec19"></span>
+
+### Unspecified Field
+
+Hinting mode is not explicitly specified. The default will be used.
+
+```csharp
+public Avalonia.Media.TextHintingMode Unspecified
+```
+
+</section>
+
+</ApiRefPage>
+

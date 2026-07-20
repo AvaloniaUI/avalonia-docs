@@ -1,11 +1,6 @@
 // Main SASS entry point that imports all component styles
 // This file orchestrates all SASS-specific features and component imports
 
-// Tailwind CSS directives must come first so utility layers load before overrides
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 // Core imports (order matters)
 @import 'components/variables';  // Variables and mixins must come first
 @import 'components/fonts';       // Font definitions

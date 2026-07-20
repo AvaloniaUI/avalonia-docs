@@ -1,0 +1,156 @@
+---
+title: 'IItemSelectableChart'
+hide_title: true
+slug: '/avalonia/controls/charts/iitemselectablechart'
+uid: 'Avalonia.Controls.Charts.IItemSelectableChart'
+commentId: 'T:Avalonia.Controls.Charts.IItemSelectableChart'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Charts'
+assembly: 'Avalonia.Controls.Charts'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Charts'
+tfms:
+  - 'net9.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IItemSelectableChart Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Charts</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Charts</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Charts</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Selection contract for chart components that select bound items directly.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface IItemSelectableChart
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="iselectablechart">ISelectableChart</a>
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [IsItemSelected](#uid-905e0076eb) | Checks whether the specified item is selected. |
+| [TrySelectItem](#uid-4140cb9ea4) | Attempts to select the specified item. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-905e0076eb"></span>
+
+### IsItemSelected Method
+
+Checks whether the specified item is selected.
+
+```csharp
+public bool IsItemSelected(object item)
+```
+
+#### Parameters
+
+`item` object
+
+The item to check.
+
+
+#### Returns
+
+bool
+
+True if the item is selected.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4140cb9ea4"></span>
+
+### TrySelectItem Method
+
+Attempts to select the specified item.
+
+```csharp
+public bool TrySelectItem(object item)
+```
+
+#### Parameters
+
+`item` object
+
+The item to select.
+
+
+#### Returns
+
+bool
+
+True if the selection state changed.
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [SelectedItem](#uid-7e4f8420ea) | Gets the primary selected item, if any. |
+| [SelectedItems](#uid-e6e0f47d76) | Gets the current collection of selected items, if any. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7e4f8420ea"></span>
+
+### SelectedItem Property
+
+Gets the primary selected item, if any.
+
+```csharp
+public object SelectedItem { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e6e0f47d76"></span>
+
+### SelectedItems Property
+
+Gets the current collection of selected items, if any.
+
+```csharp
+public System.Collections.IList SelectedItems { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

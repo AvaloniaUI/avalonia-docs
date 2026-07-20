@@ -1,0 +1,366 @@
+---
+title: 'FinancialOverlayRenderContext'
+hide_title: true
+slug: '/avalonia/controls/charts/financialoverlayrendercontext'
+uid: 'Avalonia.Controls.Charts.FinancialOverlayRenderContext'
+commentId: 'T:Avalonia.Controls.Charts.FinancialOverlayRenderContext'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Charts'
+assembly: 'Avalonia.Controls.Charts'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Charts'
+tfms:
+  - 'net9.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">FinancialOverlayRenderContext Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Charts</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Charts</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Charts</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Provides financial chart coordinates and brushes to overlay series.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct FinancialOverlayRenderContext
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> FinancialOverlayRenderContext
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [FinancialOverlayRenderContext](#uid-db627121d9) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-db627121d9"></span>
+
+### FinancialOverlayRenderContext Constructor
+
+```csharp
+public FinancialOverlayRenderContext(Avalonia.Controls.Charts.FinancialChart chart, Avalonia.Media.DrawingContext drawingContext, Avalonia.Rect plotArea, System.Collections.Generic.IReadOnlyList<Avalonia.Controls.Charts.FinancialPoint> data, System.Collections.Generic.IReadOnlyDictionary<DateTime, int> dateIndexMap, double minPrice, double maxPrice, Avalonia.Media.IBrush fillBrush, Avalonia.Media.IBrush strokeBrush, int seriesIndex, Func<double, double> valueToY)
+```
+
+#### Parameters
+
+`chart` [Avalonia.Controls.Charts.FinancialChart](xref:Avalonia.Controls.Charts.FinancialChart)
+
+
+`drawingContext` [Avalonia.Media.DrawingContext](xref:Avalonia.Media.DrawingContext)
+
+
+`plotArea` [Avalonia.Rect](xref:Avalonia.Rect)
+
+
+`data` System.Collections.Generic.IReadOnlyList&lt;[Avalonia.Controls.Charts.FinancialPoint](xref:Avalonia.Controls.Charts.FinancialPoint)&gt;
+
+
+`dateIndexMap` System.Collections.Generic.IReadOnlyDictionary&lt;DateTime, int&gt;
+
+
+`minPrice` double
+
+
+`maxPrice` double
+
+
+`fillBrush` [Avalonia.Media.IBrush](xref:Avalonia.Media.IBrush)
+
+
+`strokeBrush` [Avalonia.Media.IBrush](xref:Avalonia.Media.IBrush)
+
+
+`seriesIndex` int
+
+
+`valueToY` Func&lt;double, double&gt;
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [TryDateToX](#uid-5b14a85ece) | No summary available. |
+| [TryValueToPoint](#uid-64f2aae12b) | No summary available. |
+| [ValueToY](#uid-2e45286c8b) | Converts a price value to a Y coordinate. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5b14a85ece"></span>
+
+### TryDateToX Method
+
+```csharp
+public bool TryDateToX(DateTime date, double& x)
+```
+
+#### Parameters
+
+`date` DateTime
+
+
+`x` double&amp;
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-64f2aae12b"></span>
+
+### TryValueToPoint Method
+
+```csharp
+public bool TryValueToPoint(DateTime date, double value, Avalonia.Point& point)
+```
+
+#### Parameters
+
+`date` DateTime
+
+
+`value` double
+
+
+`point` [Avalonia.Point](xref:Avalonia.Point)&amp;
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2e45286c8b"></span>
+
+### ValueToY Method
+
+Converts a price value to a Y coordinate.
+
+```csharp
+public double ValueToY(double value)
+```
+
+#### Parameters
+
+`value` double
+
+
+#### Returns
+
+double
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Chart](#uid-2e7d618197) | Gets the chart that owns the overlay. |
+| [Data](#uid-980e09f2a6) | Gets the ordered financial data used by the chart. |
+| [DateIndexMap](#uid-9bc49f553a) | Gets the date-to-index map used by the financial chart. |
+| [DrawingContext](#uid-a42f913162) | Gets the drawing context for the current render pass. |
+| [FillBrush](#uid-1404092026) | Gets the resolved fill brush for the overlay series. |
+| [MaxPrice](#uid-6010441abd) | Gets the maximum price currently visible in the chart. |
+| [MinPrice](#uid-b2a299b53a) | Gets the minimum price currently visible in the chart. |
+| [PlotArea](#uid-3db91b1b84) | Gets the chart plot area. |
+| [SeriesIndex](#uid-3fec567c3a) | Gets the series index in the financial chart series collection. |
+| [SlotWidth](#uid-e476a63a35) | Gets the width of one financial data slot. |
+| [StrokeBrush](#uid-0afee01c5d) | Gets the resolved stroke brush for the overlay series. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2e7d618197"></span>
+
+### Chart Property
+
+Gets the chart that owns the overlay.
+
+```csharp
+public Avalonia.Controls.Charts.FinancialChart Chart { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-980e09f2a6"></span>
+
+### Data Property
+
+Gets the ordered financial data used by the chart.
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<Avalonia.Controls.Charts.FinancialPoint> Data { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9bc49f553a"></span>
+
+### DateIndexMap Property
+
+Gets the date-to-index map used by the financial chart.
+
+```csharp
+public System.Collections.Generic.IReadOnlyDictionary<DateTime, int> DateIndexMap { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a42f913162"></span>
+
+### DrawingContext Property
+
+Gets the drawing context for the current render pass.
+
+```csharp
+public Avalonia.Media.DrawingContext DrawingContext { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1404092026"></span>
+
+### FillBrush Property
+
+Gets the resolved fill brush for the overlay series.
+
+```csharp
+public Avalonia.Media.IBrush FillBrush { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6010441abd"></span>
+
+### MaxPrice Property
+
+Gets the maximum price currently visible in the chart.
+
+```csharp
+public double MaxPrice { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b2a299b53a"></span>
+
+### MinPrice Property
+
+Gets the minimum price currently visible in the chart.
+
+```csharp
+public double MinPrice { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3db91b1b84"></span>
+
+### PlotArea Property
+
+Gets the chart plot area.
+
+```csharp
+public Avalonia.Rect PlotArea { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3fec567c3a"></span>
+
+### SeriesIndex Property
+
+Gets the series index in the financial chart series collection.
+
+```csharp
+public int SeriesIndex { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e476a63a35"></span>
+
+### SlotWidth Property
+
+Gets the width of one financial data slot.
+
+```csharp
+public double SlotWidth { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0afee01c5d"></span>
+
+### StrokeBrush Property
+
+Gets the resolved stroke brush for the overlay series.
+
+```csharp
+public Avalonia.Media.IBrush StrokeBrush { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

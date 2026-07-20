@@ -1,0 +1,104 @@
+---
+title: 'SeriesChangedEventArgs'
+hide_title: true
+slug: '/avalonia/controls/charts/serieschangedeventargs'
+uid: 'Avalonia.Controls.Charts.SeriesChangedEventArgs'
+commentId: 'T:Avalonia.Controls.Charts.SeriesChangedEventArgs'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Charts'
+assembly: 'Avalonia.Controls.Charts'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Charts'
+tfms:
+  - 'net9.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">SeriesChangedEventArgs Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Charts</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Charts</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Charts</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Provides data for the [Avalonia.Controls.Charts.CartesianChart.SeriesAdded](xref:Avalonia.Controls.Charts.CartesianChart.SeriesAdded) and
+[Avalonia.Controls.Charts.CartesianChart.SeriesRemoved](xref:Avalonia.Controls.Charts.CartesianChart.SeriesRemoved) events.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class SeriesChangedEventArgs
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> EventArgs <span className="apiref-page__relation-separator">-&gt;</span> SeriesChangedEventArgs
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [SeriesChangedEventArgs](#uid-de70b1eb01) | Initializes a new instance of the [Avalonia.Controls.Charts.SeriesChangedEventArgs](xref:Avalonia.Controls.Charts.SeriesChangedEventArgs) class. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-de70b1eb01"></span>
+
+### SeriesChangedEventArgs Constructor
+
+Initializes a new instance of the [Avalonia.Controls.Charts.SeriesChangedEventArgs](xref:Avalonia.Controls.Charts.SeriesChangedEventArgs) class.
+
+```csharp
+public SeriesChangedEventArgs(Avalonia.Controls.Charts.CartesianSeries series)
+```
+
+#### Parameters
+
+`series` [Avalonia.Controls.Charts.CartesianSeries](xref:Avalonia.Controls.Charts.CartesianSeries)
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Series](#uid-42f4d35401) | Gets the series that was added or removed. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-42f4d35401"></span>
+
+### Series Property
+
+Gets the series that was added or removed.
+
+```csharp
+public Avalonia.Controls.Charts.CartesianSeries Series { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

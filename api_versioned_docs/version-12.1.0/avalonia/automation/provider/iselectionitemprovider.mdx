@@ -1,0 +1,164 @@
+---
+title: 'ISelectionItemProvider'
+hide_title: true
+slug: '/avalonia/automation/provider/iselectionitemprovider'
+uid: 'Avalonia.Automation.Provider.ISelectionItemProvider'
+commentId: 'T:Avalonia.Automation.Provider.ISelectionItemProvider'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Automation.Provider'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ISelectionItemProvider Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Automation.Provider</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Exposes methods and properties to support access by a UI Automation client to individual,
+selectable child controls of containers that implement [Avalonia.Automation.Provider.ISelectionProvider](xref:Avalonia.Automation.Provider.ISelectionProvider).
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface ISelectionItemProvider
+```
+
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [AddToSelection](#uid-f5d16c51fc) | Adds the current element to the collection of selected items. |
+| [RemoveFromSelection](#uid-9a753f219d) | Removes the current element from the collection of selected items. |
+| [Select](#uid-db41fba969) | Clears any existing selection and then selects the current element. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f5d16c51fc"></span>
+
+### AddToSelection Method
+
+Adds the current element to the collection of selected items.
+
+```csharp
+public void AddToSelection()
+```
+
+#### Remarks
+
+- Windows`ISelectionItemProvider.AddToSelection`
+- macOS`NSAccessibilityProtocol.accessibilityPerformPick` (not implemented). `NSAccessibilityProtocol.setAccessibilitySelected` (not implemented).
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9a753f219d"></span>
+
+### RemoveFromSelection Method
+
+Removes the current element from the collection of selected items.
+
+```csharp
+public void RemoveFromSelection()
+```
+
+#### Remarks
+
+- Windows`ISelectionItemProvider.RemoveFromSelection`
+- macOS`NSAccessibilityProtocol.setAccessibilitySelected` (not implemented).
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-db41fba969"></span>
+
+### Select Method
+
+Clears any existing selection and then selects the current element.
+
+```csharp
+public void Select()
+```
+
+#### Remarks
+
+- Windows`ISelectionItemProvider.Select`
+- macOSNo mapping.
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [IsSelected](#uid-5e4e696443) | Gets a value that indicates whether an item is selected. |
+| [SelectionContainer](#uid-67657a949b) | Gets the UI Automation provider that implements [Avalonia.Automation.Provider.ISelectionProvider](xref:Avalonia.Automation.Provider.ISelectionProvider) and acts as the container for the calling object. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5e4e696443"></span>
+
+### IsSelected Property
+
+Gets a value that indicates whether an item is selected.
+
+```csharp
+public bool IsSelected { get; set; }
+```
+
+#### Remarks
+
+- Windows`ISelectionItemProvider.IsSelected`
+- macOS`NSAccessibilityProtocol.isAccessibilitySelected`
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-67657a949b"></span>
+
+### SelectionContainer Property
+
+Gets the UI Automation provider that implements [Avalonia.Automation.Provider.ISelectionProvider](xref:Avalonia.Automation.Provider.ISelectionProvider) and
+acts as the container for the calling object.
+
+```csharp
+public Avalonia.Automation.Provider.ISelectionProvider SelectionContainer { get; set; }
+```
+
+#### Remarks
+
+- Windows`ISelectionItemProvider.SelectionContainer`
+- macOSNo mapping.
+
+</section>
+
+</ApiRefPage>
+
