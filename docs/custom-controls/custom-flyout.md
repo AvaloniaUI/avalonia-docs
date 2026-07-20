@@ -93,9 +93,8 @@ For more information on routed events, see [Events overview](/docs/events).
 ```xml title="MainWindow.axaml"
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:local="using:MinimalFlyoutDemo"
-        x:Class="MinimalFlyoutDemo.MainWindow">
-    
+        xmlns:local="using:CustomFlyoutDemo"
+        x:Class="CustomFlyoutDemo.MainWindow">
     <Button Content="Show image"
             HorizontalAlignment="Center"
             VerticalAlignment="Center">

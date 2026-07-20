@@ -7,7 +7,7 @@ doc-type: how-to
 
 import ItemsControlCanvasScreenshot from '/img/custom-controls/itemscontrol-with-canvas.png';
 
-Some controls, such as `ItemsControl`, use an `ItemsPanel` to arrange child elements. In most cases, the default panel is a `StackPanel` or `VirtualizingStackPanel`. which organize items as simple horizontal or vertical lists.
+Some controls, such as `ItemsControl`, use an `ItemsPanel` to arrange child elements. In most cases, the default panel is a `StackPanel` or `VirtualizingStackPanel`, which organize items as simple horizontal or vertical lists.
 
 If you need more complex, non-linear layouts, you can override the default panel and replace it with a custom panel.
 

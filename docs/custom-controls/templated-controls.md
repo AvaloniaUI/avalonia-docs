@@ -9,7 +9,7 @@ Templated controls contain no rendering code in the control class. Instead, thei
 
 If you are familiar with WPF, these are sometimes called "lookless" controls.
 
-Many of Avalonia's built-in controls are templated controls (e.g., `Button`, `TextBox`, and `ListBox`) . You can follow the same pattern to build your own.
+Many of Avalonia's built-in controls are templated controls (e.g., `Button`, `TextBox`, and `ListBox`). You can follow the same pattern to build your own.
 
 ## Creating a templated control
 
@@ -39,7 +39,7 @@ Templated controls do not need a self-referencing `DataContext`. Use [`TemplateB
 
 ## Defining the control theme
 
-Every templated control must have a default `ControlTheme` that contains its `ControlTemplate`. This control theme is typically placed in a resource dictionary, such as `Themes/Generic.axaml`, and included in your application resources in `App,axaml`.
+Every templated control must have a default `ControlTheme` that contains its `ControlTemplate`. This control theme is typically placed in a resource dictionary, such as `Themes/Generic.axaml`, and included in your application resources in `App.axaml`.
 
 ```xml title="App.axaml"
 <Application.Resources>
@@ -106,7 +106,7 @@ Although the two syntaxes are equivalent in most cases, there are three differen
     <TextBlock Name="tb" Text="{Binding Caption.Length, RelativeSource={RelativeSource TemplatedParent}}"/>
     ```
 
-2.  A `TemplateBinding` only supports `OneWay` mode for performance reasons. This is the [same as WPF](https://docs.microsoft.com/en-us/dotnet/desktop/wpf/advanced/templatebinding-markup-extension#remarks). A`TemplateBinding` is therefore equivalent to `{Binding RelativeSource={RelativeSource TemplatedParent}, Mode=OneWay}`. If you require `TwoWay` binding in a control template, you must use the full syntax shown below.
+2.  A `TemplateBinding` only supports `OneWay` mode for performance reasons. This is the [same as WPF](https://docs.microsoft.com/en-us/dotnet/desktop/wpf/advanced/templatebinding-markup-extension#remarks). A `TemplateBinding` is therefore equivalent to `{Binding RelativeSource={RelativeSource TemplatedParent}, Mode=OneWay}`. If you require `TwoWay` binding in a control template, you must use the full syntax shown below.
 
     ```xml
     <YourControl YourProperty="{Binding Value, RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay}"/>
