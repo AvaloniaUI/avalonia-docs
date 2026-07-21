@@ -39,7 +39,7 @@ Templated controls do not need a self-referencing `DataContext`. Use [`TemplateB
 
 ## Defining the control theme
 
-Every templated control must have a default `ControlTheme` that contains its `ControlTemplate`. This control theme is typically placed in a resource dictionary, such as `Themes/Generic.axaml`, and included in your application resources in `App.axaml`.
+Every templated control must have a default `ControlTheme` that contains its `ControlTemplate`. This control theme is typically placed in your application resources in `App.axaml`.
 
 ```xml title="App.axaml"
 <Application.Resources>
