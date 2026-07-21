@@ -90,6 +90,8 @@ For more information on routed events, see [Events overview](/docs/events).
 2. Assign the custom flyout (`MyImageFlyout`) as an attached property on a control that supports it, such as `Button`.
 3. Specify the content of the custom flyout. In this example, `MyPicture` is a static resource defined in `Application.Resources`.
 
+The flyout thus created follows the default behavior of `PopupFlyoutBase`. Clicking the "Show image" button displays the image. Clicking again anywhere in the window except the image dismisses it.
+
 ```xml title="MainWindow.axaml"
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"

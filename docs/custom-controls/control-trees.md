@@ -1,20 +1,17 @@
 ---
 id: control-trees
-title: Traversing control trees with custom controls
-sidebar_label: Traversing control trees
+title: Control trees and custom controls
 description: Understand how to use lifecycle events of the logical and visual trees when building a custom control.
 doc-type: explanation
 ---
 
-## Control trees: Summary
-
-Avalonia organizes controls into two parallel tree structures: the **logical tree** and the **visual tree**. The logical tree represents the hierarchy of the application's controls, whereas the visual tree represents all visual elements that are being rendered.
+Avalonia organizes controls into two related tree structures: the **logical tree** and the **visual tree**. The logical tree represents the hierarchy of the application's controls, whereas the visual tree represents all visual elements that are being rendered.
 
 This page provides guidance on working with the control trees when creating a custom control.
 
 For more information on control trees, see [Visual and logical trees](/docs/fundamentals/visual-and-logical-trees).
 
-## Tree traversal in custom controls
+## Attachment/detachment events for custom controls
 
 When building custom controls, you often need to respond to a control being added to or removed from a tree. Override these methods to hook into tree lifecycle events.
 

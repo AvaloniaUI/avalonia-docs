@@ -96,11 +96,17 @@ static CircleControl()
 
 ### Manual invalidation
 
-If you need to trigger a repaint in response to something other than a property change (for example, a timer tick), call `InvalidateVisual()` on the control instance. This queues a new render pass for that control.
+To trigger a visual update of the control in response to something other than a property change (for example, a timer tick), you can call a manual invalidation on the control instance.
 
 ```csharp
-// Force a repaint from code
+// Forces a repaint
 InvalidateVisual();
+
+// Forces a measure pass
+InvalidateMeasure();
+
+// Forces an arrange pass
+InvalidateArrange();
 ```
 
 :::tip

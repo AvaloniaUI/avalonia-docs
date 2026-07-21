@@ -7,7 +7,7 @@ doc-type: how-to
 
 If you need complex or unique layouts beyond what the [built-in panels](/controls) provide, you can create your own custom panel. A custom panel lets you control exactly how child elements are measured and arranged. This is done by subclassing `Panel` and overriding its layout methods.
 
-## Layout process: Summary
+## Layout process
 
 Avalonia uses a two-pass layout system:
 
@@ -154,7 +154,7 @@ public static void SetSlot(Control element, int value) => element.SetValue(SlotP
 
 - Always call `Measure` on every child in `MeasureOverride`. Children that are not measured will not render correctly.
 - Always call `Arrange` on every child in `ArrangeOverride`. Children that are not arranged will not appear.
-- Use `AffectsMeasure` or `AffectsArrange` when registering styled properties that influence layout. This ensures the panel adjusts its layout when those properties change.
+- Use [`AffectsMeasure` or `AffectsArrange`](/docs/custom-controls/custom-drawn-basic-controls#affectsrender-affectsmeasure-and-affectsarrange) when registering styled properties that influence layout. This ensures the panel adjusts its layout when those properties change.
 - Return the size your panel actually needs from `MeasureOverride`. Returning a size larger than necessary wastes space, while returning a size that is too small may clip children.
 
 ## See also
