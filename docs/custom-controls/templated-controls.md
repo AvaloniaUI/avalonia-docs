@@ -1,6 +1,6 @@
 ---
 id: templated-controls
-title: Custom templated controls
+title: Templated controls
 description: Build lookless templated controls with control themes, template parts, and pseudo-classes.
 doc-type: how-to
 ---

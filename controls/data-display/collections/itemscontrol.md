@@ -5,8 +5,6 @@ description: A reference for the ItemsControl in Avalonia, a base control for di
 doc-type: reference
 ---
 
-import exampleScreenshot from '/img/controls/itemscontrol/itemscontrol-with-custom-layout-and-formatting.gif';
-
 The [`ItemsControl`](/api/avalonia/controls/itemscontrol) is the base class for controls that display repeating data (for example, [`ListBox`](/api/avalonia/controls/listbox) and `ComboBox`). It has no built-in formatting, selection, or scroll behavior. You can use it with data binding, styling, and data templates to create a completely custom repeating data control.
 
 :::tip
@@ -47,63 +45,47 @@ You will probably use these properties most often:
 </ScrollViewer>
 ```
 
-## Example
+## Examples
+
+### Displaying an observable collection
 
 This example binds an observable collection of crockery items to an `ItemsControl`. A `DataTemplate` provides custom layout and formatting for each item:
 
-<Image light={exampleScreenshot} alt="ItemsControl displaying a formatted list of crockery items" position="center" maxWidth={400} cornerRadius="true"/>
+<XamlPreview>
 
-```xml title="XAML"
-<StackPanel Margin="20">
-  <TextBlock Margin="0 5">List of crockery:</TextBlock>
-  <ItemsControl ItemsSource="{Binding CrockeryList}">
-    <ItemsControl.ItemTemplate>
-      <DataTemplate>
-        <Border Margin="0,10,0,0"
-                CornerRadius="5"
-                BorderBrush="Gray" BorderThickness="1"
-                Padding="5">
-          <StackPanel Orientation="Horizontal">
-            <TextBlock Text="{Binding Title}" />
-            <TextBlock Margin="5 0" FontWeight="Bold"
-                       Text="{Binding Number}" />
-          </StackPanel>
-        </Border>
-      </DataTemplate>
-    </ItemsControl.ItemTemplate>
-  </ItemsControl>
-</StackPanel>
+```xml
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:vm="using:MyApp">
+  <UserControl.DataContext>
+    <vm:MainWindowViewModel/>
+  </UserControl.DataContext>
+  <StackPanel Margin="20">
+    <TextBlock Margin="0 5">List of crockery:</TextBlock>
+    <ItemsControl ItemsSource="{Binding CrockeryList}">
+      <ItemsControl.ItemTemplate>
+        <DataTemplate>
+          <Border Margin="0,10,0,0"
+                  CornerRadius="5"
+                  BorderBrush="Gray" BorderThickness="1"
+                  Padding="5">
+            <StackPanel Orientation="Horizontal">
+              <TextBlock Text="{Binding Title}" />
+              <TextBlock Margin="5 0" FontWeight="Bold"
+                         Text="{Binding Number}" />
+            </StackPanel>
+          </Border>
+        </DataTemplate>
+      </ItemsControl.ItemTemplate>
+    </ItemsControl>
+  </StackPanel>
+</UserControl>
 ```
 
-```csharp title="C# view model"
-using AvaloniaControls.Models;
-using System.Collections.Generic;
+```csharp
 using System.Collections.ObjectModel;
 
-namespace AvaloniaControls.ViewModels
-{
-    public class MainWindowViewModel : ViewModelBase
-    {
-        public ObservableCollection<Crockery> CrockeryList { get; set; }
+namespace MyApp;
 
-        public MainWindowViewModel()
-        {
-            CrockeryList = new ObservableCollection<Crockery>(new List<Crockery>
-            {
-                new Crockery("dinner plate", 12),
-                new Crockery("side plate", 12),
-                new Crockery("breakfast bowl", 6),
-                new Crockery("cup", 10),
-                new Crockery("saucer", 10),
-                new Crockery("mug", 6),
-                new Crockery("milk jug", 1)
-            });
-        }
-    }
-}
-```
-
-```csharp title="C# item class"
 public class Crockery
 {
     public string Title { get; set; }
@@ -115,7 +97,27 @@ public class Crockery
         Number = number;
     }
 }
+
+public class MainWindowViewModel
+{
+    public ObservableCollection<Crockery> CrockeryList { get; set; } = new()
+    {
+        new Crockery("dinner plate", 12),
+        new Crockery("side plate", 12),
+        new Crockery("breakfast bowl", 6),
+        new Crockery("cup", 10),
+        new Crockery("saucer", 10),
+        new Crockery("mug", 6),
+        new Crockery("milk jug", 1)
+    };
+}
 ```
+
+</XamlPreview>
+
+:::note
+This example sets `DataContext` on the `UserControl` to keep everything self-contained. Applications normally assign the view model in code-behind, or let a [ViewLocator](/docs/data-templates/view-locator) resolve it. See [Data context](/docs/data-binding/data-context) for more on how `DataContext` works.
+:::
 
 ## See also
 
