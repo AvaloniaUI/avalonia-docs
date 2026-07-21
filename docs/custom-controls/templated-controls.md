@@ -63,7 +63,7 @@ Notes:
 
 ## Template parts
 
-Sometimes, a templated control needs to interact with specific elements in its template. By convention, these elements are prefixed with `PART_`.
+Sometimes, a templated control needs to interact with specific elements in its template from code. By convention, these elements are prefixed with `PART_`.
 
 Override `OnApplyTemplate` to locate named parts after the template has been applied.
 
