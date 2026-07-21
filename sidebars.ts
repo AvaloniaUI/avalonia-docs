@@ -246,7 +246,6 @@ const sidebars: SidebarsConfig = {
         'custom-controls/index',
         'custom-controls/templated-controls',
         'custom-controls/custom-drawn-controls',
-        'custom-controls/drawing-custom-controls',
         'custom-controls/defining-properties',
         'custom-controls/defining-events',
         'custom-controls/control-trees',

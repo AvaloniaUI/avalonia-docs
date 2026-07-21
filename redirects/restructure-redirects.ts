@@ -211,7 +211,6 @@ function createRedirects(existingPath: string): string[] | undefined {
     const customControlsFromDocs: Record<string, string> = {
       '/docs/custom-controls/choosing-a-custom-control-type': '/docs/ui-development/custom-controls/choosing-a-custom-control-type',
       '/docs/custom-controls/templated-controls': '/docs/ui-development/custom-controls/templated-controls',
-      '/docs/custom-controls/drawing-custom-controls': '/docs/ui-development/custom-controls/drawing-custom-controls',
       '/docs/custom-controls/defining-properties': '/docs/ui-development/custom-controls/defining-properties',
       '/docs/custom-controls/defining-events': '/docs/ui-development/custom-controls/defining-events',
       '/docs/custom-controls/custom-flyout': '/docs/ui-development/custom-controls/custom-flyout',

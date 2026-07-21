@@ -49,7 +49,7 @@ Notes:
 
 - `FillProperty` is a styled property, so it can be set in XAML, bound to data, and targeted by styles.
 - The static constructor calls `AffectsRender`, which tells Avalonia to redraw the control whenever `Fill` changes.
-- `Render` receives a `DrawingContext` that provides methods such as `DrawEllipse`, `DrawRectangle`, `DrawLine`, and `DrawText`. For more information on how to use `DrawingContext`, see [Drawing custom controls](/docs/custom-controls/drawing-custom-controls).
+- `Render` receives a [`DrawingContext`](#drawingcontext-methods) that provides methods such as `DrawEllipse`, `DrawRectangle`, `DrawLine`, and `DrawText`.
 
 ## Using in XAML
 
@@ -113,10 +113,86 @@ InvalidateArrange();
 Use manual invalidation sparingly. Declaring property dependencies with `AffectsRender` is preferred because it keeps invalidation automatic and predictable.
 :::
 
+## `DrawingContext` methods
+
+[`DrawingContext`](/api/avalonia/media/drawingcontext) provides the following methods for rendering custom-drawn controls:
+
+| Method | Description |
+|---|---|
+| `DrawRectangle` | Draws a rectangle. |
+| `DrawEllipse` | Draws an ellipse. |
+| `DrawLine` | Draws a line between two points. |
+| `DrawGeometry` | Draws an arbitrary geometry path. |
+| `DrawText` | Draws formatted text. |
+| `DrawImage` | Draws a bitmap image. |
+| `FillRectangle` | Fills a rectangle (shorthand). |
+
+### Drawing shapes
+
+You can draw multiple shapes within a single `Render` override:
+
+```csharp
+public override void Render(DrawingContext context)
+{
+    var pen = new Pen(Brushes.Black, 2);
+
+    // Draw a filled rectangle
+    context.DrawRectangle(Brushes.LightBlue, pen, new Rect(10, 10, 100, 60));
+
+    // Draw an ellipse
+    context.DrawEllipse(Brushes.Orange, pen, new Point(200, 40), 50, 30);
+
+    // Draw a line
+    context.DrawLine(new Pen(Brushes.Red, 3), new Point(10, 100), new Point(290, 100));
+}
+```
+
+### Drawing text
+
+You can draw formatted text using `DrawText` with a `FormattedText` object:
+
+```csharp
+public override void Render(DrawingContext context)
+{
+    var text = new FormattedText(
+        "Hello, Avalonia!",
+        CultureInfo.CurrentCulture,
+        FlowDirection.LeftToRight,
+        new Typeface("Arial"),
+        24,
+        Brushes.Black);
+
+    context.DrawText(text, new Point(10, 10));
+}
+```
+
+### Clipping and transforming
+
+Use `PushClip` and `PushTransform` to clip and/or transform regions. Both return disposable objects, so wrap them in `using` blocks to ensure the state is restored automatically:
+
+```csharp
+public override void Render(DrawingContext context)
+{
+    // Save and restore state with PushClip
+    using (context.PushClip(new Rect(0, 0, 100, 100)))
+    {
+        context.FillRectangle(Brushes.Blue, new Rect(0, 0, 200, 200));
+        // Only the portion within 100x100 is visible
+    }
+
+    // Apply a transform
+    using (context.PushTransform(Matrix.CreateRotation(Math.PI / 4)))
+    {
+        context.FillRectangle(Brushes.Green, new Rect(150, 50, 40, 40));
+    }
+}
+```
+
 ## See also
 
-- [Drawing custom controls](/docs/custom-controls/drawing-custom-controls): Reference for the `DrawingContext` methods you call from `Render`.
 - [Defining properties](/docs/custom-controls/defining-properties): Add styled, direct, and attached properties to a custom control.
 - [Custom templated controls](/docs/custom-controls/templated-controls): The alternative approach, where a control theme defines the appearance.
 - [Creating custom controls](/docs/custom-controls): Overview of the custom control types.
 - [Custom control sample project](https://github.com/AvaloniaUI/Avalonia.Samples/tree/main/src/Avalonia.Samples/CustomControls/SnowflakesControlSample): Practical sample showing a custom-drawn control.
+- [Brushes](/docs/graphics-animation/brushes): Available brush types.
+- [Shapes and geometries](/docs/graphics-animation/shapes-and-geometries): Geometry types for drawing.

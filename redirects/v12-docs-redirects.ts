@@ -242,7 +242,7 @@ const redirects: Redirect[] = [
     },
     {
         "from": "/docs/guides/custom-controls/draw-with-a-property",
-        "to": "/docs/custom-controls/drawing-custom-controls"
+        "to": "/docs/custom-controls/custom-drawn-controls"
     },
     {
         "from": "/docs/guides/custom-controls/how-to-create-a-custom-controls-library",
