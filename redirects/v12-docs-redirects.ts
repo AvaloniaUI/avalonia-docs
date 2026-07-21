@@ -262,7 +262,7 @@ const redirects: Redirect[] = [
     },
     {
         "from": "/docs/guides/custom-controls/add-custom-control-class",
-        "to": "/docs/custom-controls/custom-drawn-basic-controls"
+        "to": "/docs/custom-controls/custom-drawn-controls"
     },
     {
         "from": [

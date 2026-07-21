@@ -60,6 +60,10 @@ public class MyControl : Control
 }
 ```
 
+:::warning
+The CLR property getter/setter must **only** call `GetValue` and `SetValue`. Avoid adding other methods, because some property changes do not use the CLR property.
+:::
+
 The `Register` method accepts these optional parameters:
 
 | Parameter | Description |
@@ -232,7 +236,7 @@ public class MyControl : Control
 
 For styled and direct properties, you can react to property value changes by overriding `OnPropertyChanged` in your control.
 
-This example demonstrates reacting to a background change by [invalidating the visual](/docs/custom-controls/custom-drawn-basic-controls#manual-invalidation) and thereby updating to the new background.
+This example demonstrates reacting to a background change by [invalidating the visual](/docs/custom-controls/custom-drawn-controls#manual-invalidation) and thereby updating to the new background.
 
 ```csharp
 protected override void OnPropertyChanged(AvaloniaPropertyChangedEventArgs change)
@@ -249,7 +253,7 @@ protected override void OnPropertyChanged(AvaloniaPropertyChangedEventArgs chang
 
 ## Data validation support
 
-Starting from Avalonia v12, data validation is handled automatically when `enableDataValidation` is set to `true`. The framework detects validation errors from `INotifyDataErrorInfo` and displays them without requiring additional overrides in your control.
+Starting from [Avalonia v12](/docs/avalonia12-breaking-changes), data validation is handled automatically when `enableDataValidation` is set to `true`. The framework detects validation errors from `INotifyDataErrorInfo` and displays them without requiring additional overrides in your control.
 
 Data validation works with both `DirectProperty` and `StyledProperty` registrations. When a binding causes a validation error, the control displays it automatically.
 
@@ -266,7 +270,7 @@ public static readonly DirectProperty<TextBox, string?> TextProperty =
 
 ## Attached properties
 
-An attached property lives in its own container class and is configured on compatible controls in XAML. This allows you to have additional properties that are not part of your custom control's own control class.
+An attached property lives in its own container class and is configured on compatible controls in XAML. This allows you to have additional properties that are not part of your custom control's own control class. For example, you may wish to use an attached property to allow child elements to specify their own layout positions within the parent custom control. (See [Custom Panel](/docs/custom-controls/custom-panel#adding-an-attached-property) for a practical example.)
 
 ### Naming conventions
 

@@ -244,8 +244,8 @@ const sidebars: SidebarsConfig = {
       collapsed: true,
       items: [
         'custom-controls/index',
-        'custom-controls/custom-drawn-basic-controls',
         'custom-controls/templated-controls',
+        'custom-controls/custom-drawn-controls',
         'custom-controls/drawing-custom-controls',
         'custom-controls/defining-properties',
         'custom-controls/defining-events',

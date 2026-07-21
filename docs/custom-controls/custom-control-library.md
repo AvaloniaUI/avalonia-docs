@@ -180,5 +180,5 @@ using Avalonia.Metadata;
 
 - [Creating custom controls](/docs/custom-controls): Overview of the custom control types you can package in a library.
 - [Custom templated controls](/docs/custom-controls/templated-controls): Build a lookless control whose appearance is defined by a control theme.
-- [Custom-drawn basic controls](/docs/custom-controls/custom-drawn-basic-controls): Create a control that draws itself by overriding `Render`.
+- [Custom-drawn controls](/docs/custom-controls/custom-drawn-controls): Create a control that draws itself by overriding `Render`.
 - [Defining properties](/docs/custom-controls/defining-properties): Add styled, direct, and attached properties to a custom control.
