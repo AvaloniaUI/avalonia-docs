@@ -439,7 +439,7 @@ gtag('consent', 'default', {
     },
     docsearch: {
       appId: 'V9UF6750GH',
-      apiKey: '028e3dad834905a2a2c2a7ad9da9e666',
+      apiKey: '53cdd2af7f6be2f44a2009a0e10a588f',
       indexName: 'avaloniaui_docs',
       contextualSearch: true,
       translations: {
@@ -453,17 +453,26 @@ gtag('consent', 'default', {
             noRecentSearchesText: 'No recent searches',
             saveRecentSearchButtonTitle: 'Save to recent',
             removeRecentSearchButtonTitle: 'Remove from recent',
-            favoriteSearchesTitle: 'Favourites',
-            removeFavoriteSearchButtonTitle: 'Remove from favourites',
+            favoriteSearchesTitle: 'Favorites',
+            removeFavoriteSearchButtonTitle: 'Remove from favorites',
           },
         },
       },
-      // askAi: {
-      //   assistantId: 'ILptDNvSVJ1v',
-      //   sidePanel: true,
-      // },
+      askAi: {
+        assistantId: '69bba5fa-0697-4b5c-a726-1352324370a3',
+        agentStudio: true,
+        sidePanel: true,
+        searchParameters: {
+          avaloniaui_docs: {
+            filters: 'type:content AND language:en',
+            attributesToRetrieve: ['title', 'content', 'url'],
+            restrictSearchableAttributes: ['title', 'content'],
+            distinct: 'url',
+        },
+      },
     },
   },
+},
 };
 
 export default config;
