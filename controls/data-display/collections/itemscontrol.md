@@ -116,7 +116,7 @@ public class MainWindowViewModel
 </XamlPreview>
 
 :::note
-This example sets `DataContext` on the `UserControl` to keep everything self-contained. Applications normally assign the view model in code-behind, or let a [ViewLocator](/docs/data-templates/view-locator) resolve it. See [Data context](/docs/data-binding/data-context) for more on how `DataContext` works.
+This example sets `DataContext` on the `UserControl` to keep the sample self-contained. You won't normally need to do this, because the Avalonia MVVM template sets `DataContext` in code in `App.axaml.cs`. See [Data context](/docs/data-binding/data-context) for details.
 :::
 
 ## See also
