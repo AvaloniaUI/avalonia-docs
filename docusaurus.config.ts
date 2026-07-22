@@ -468,11 +468,11 @@ gtag('consent', 'default', {
             attributesToRetrieve: ['title', 'content', 'url'],
             restrictSearchableAttributes: ['title', 'content'],
             distinct: 'url',
+          },
         },
       },
     },
   },
-},
 };
 
 export default config;
