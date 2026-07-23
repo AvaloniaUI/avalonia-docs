@@ -45,11 +45,9 @@ You will probably use these properties most often:
 </ScrollViewer>
 ```
 
-## Examples
+## Example
 
-### Displaying an observable collection
-
-This example binds an observable collection of crockery items to an `ItemsControl`. A `DataTemplate` provides custom layout and formatting for each item:
+This example binds an observable collection of crockery items to an `ItemsControl`. A `DataTemplate` provides custom layout and formatting for each item.
 
 <XamlPreview>
 
@@ -57,7 +55,7 @@ This example binds an observable collection of crockery items to an `ItemsContro
 <UserControl xmlns="https://github.com/avaloniaui"
              xmlns:vm="using:MyApp">
   <UserControl.DataContext>
-    <vm:MainWindowViewModel/>
+    <vm:MainViewModel/>
   </UserControl.DataContext>
   <StackPanel Margin="20">
     <TextBlock Margin="0 5">List of crockery:</TextBlock>
@@ -98,7 +96,7 @@ public class Crockery
     }
 }
 
-public class MainWindowViewModel
+public class MainViewModel
 {
     public ObservableCollection<Crockery> CrockeryList { get; set; } = new()
     {
@@ -115,9 +113,70 @@ public class MainWindowViewModel
 
 </XamlPreview>
 
-:::note
-This example sets `DataContext` on the `UserControl` to keep the sample self-contained. You won't normally need to do this, because the Avalonia MVVM template sets `DataContext` in code in `App.axaml.cs`. See [Data context](/docs/data-binding/data-context) for details.
-:::
+### Changing `ItemsPanel` to another control
+
+`ItemsControl` displays its content in an `ItemsPanel`, which is a `StackPanel` by default. For more complex, non-linear layouts, you can override the default and replace it with a different layout control.
+
+This example creates a display of tiles in a `Canvas`, which uses a style to position them diagonally.
+
+<XamlPreview>
+
+```xml
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:vm="using:MyApp">
+  <ItemsControl ItemsSource="{Binding TileList}">
+    <ItemsControl.ItemsPanel>
+      <ItemsPanelTemplate>
+        <Canvas Width="50" Height="50"
+                Background="Yellow"
+                Margin="3"/>
+      </ItemsPanelTemplate>
+    </ItemsControl.ItemsPanel>
+    <ItemsControl.ItemTemplate>
+      <DataTemplate>
+        <Rectangle Fill="Green"
+                   Height="{Binding Size}"
+                   Width="{Binding Size}"/>
+                    </DataTemplate>
+    </ItemsControl.ItemTemplate>
+    <ItemsControl.Styles>
+      <Style Selector="ContentPresenter"
+             x:DataType="vm:Tile">
+        <Setter Property="Canvas.Left"
+                Value="{Binding TopX}"/>
+        <Setter Property="Canvas.Top"
+                Value="{Binding TopY}"/>
+        </Style>
+    </ItemsControl.Styles>
+  </ItemsControl>
+</UserControl>
+```
+
+```csharp
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+
+namespace MyApp;
+
+public record Tile (int Size, int TopX, int TopY);
+
+public partial class MainWindowViewModel : ViewModelBase
+{
+    public ObservableCollection<Tile> TileList { get; set; }
+        
+    public MainWindowViewModel()
+    {
+        TileList = new ObservableCollection<Tile>(new List<Tile>
+        {
+            new Tile(10, 10, 10),
+            new Tile(10, 20, 20),
+            new Tile(10, 30, 30),
+        });    
+    }
+}
+```
+
+</XamlPreview>
 
 ## See also
 
