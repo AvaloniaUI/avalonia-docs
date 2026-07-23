@@ -214,7 +214,7 @@ function createRedirects(existingPath: string): string[] | undefined {
       '/docs/custom-controls/defining-properties': '/docs/ui-development/custom-controls/defining-properties',
       '/docs/custom-controls/defining-events': '/docs/ui-development/custom-controls/defining-events',
       '/docs/custom-controls/custom-flyout': '/docs/ui-development/custom-controls/custom-flyout',
-      '/docs/custom-controls/custom-itemspanel': '/docs/ui-development/custom-controls/custom-itemspanel',
+      '/docs/how-to/itemscontrol-how-to': '/docs/ui-development/custom-controls/custom-itemspanel',
       '/docs/custom-controls/custom-panel': '/docs/ui-development/custom-controls/custom-panel',
       '/docs/custom-controls/custom-control-library': '/docs/ui-development/custom-controls/custom-control-library',
     };

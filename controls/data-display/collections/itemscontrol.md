@@ -19,7 +19,7 @@ You will probably use these properties most often:
 |---|---|
 | `ItemsSource` | The bound collection that is used as the data source for the control. |
 | `ItemTemplate` | A `DataTemplate` applied to each item. Use this to control how individual items look. |
-| `ItemsPanel` | The panel that hosts generated items. Defaults to a `StackPanel`. See [custom ItemsPanel](/docs/custom-controls/custom-itemspanel) for details on replacing it. |
+| `ItemsPanel` | The panel that hosts generated items. Defaults to a `StackPanel`. See [Custom panel](/docs/how-to/itemscontrol-how-to#custom-panel) for details on replacing it. |
 | `Styles` | Styles applied to child elements of the `ItemsControl`. |
 | `DisplayMemberBinding` | A binding that selects the property to display when you do not supply an `ItemTemplate`. |
 
@@ -113,78 +113,13 @@ public class MainViewModel
 
 </XamlPreview>
 
-### Changing `ItemsPanel` to another control
-
-`ItemsControl` displays its content in an `ItemsPanel`, which is a `StackPanel` by default. For more complex, non-linear layouts, you can override the default and replace it with a different layout control.
-
-This example creates a display of tiles in a `Canvas`, which uses a style to position them diagonally.
-
-<XamlPreview>
-
-```xml
-<UserControl xmlns="https://github.com/avaloniaui"
-             xmlns:vm="using:MyApp">
-  <ItemsControl ItemsSource="{Binding TileList}">
-    <ItemsControl.ItemsPanel>
-      <ItemsPanelTemplate>
-        <Canvas Width="50" Height="50"
-                Background="Yellow"
-                Margin="3"/>
-      </ItemsPanelTemplate>
-    </ItemsControl.ItemsPanel>
-    <ItemsControl.ItemTemplate>
-      <DataTemplate>
-        <Rectangle Fill="Green"
-                   Height="{Binding Size}"
-                   Width="{Binding Size}"/>
-                    </DataTemplate>
-    </ItemsControl.ItemTemplate>
-    <ItemsControl.Styles>
-      <Style Selector="ContentPresenter"
-             x:DataType="vm:Tile">
-        <Setter Property="Canvas.Left"
-                Value="{Binding TopX}"/>
-        <Setter Property="Canvas.Top"
-                Value="{Binding TopY}"/>
-        </Style>
-    </ItemsControl.Styles>
-  </ItemsControl>
-</UserControl>
-```
-
-```csharp
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-
-namespace MyApp;
-
-public record Tile (int Size, int TopX, int TopY);
-
-public partial class MainWindowViewModel : ViewModelBase
-{
-    public ObservableCollection<Tile> TileList { get; set; }
-        
-    public MainWindowViewModel()
-    {
-        TileList = new ObservableCollection<Tile>(new List<Tile>
-        {
-            new Tile(10, 10, 10),
-            new Tile(10, 20, 20),
-            new Tile(10, 30, 30),
-        });    
-    }
-}
-```
-
-</XamlPreview>
-
 ## See also
 
+- [How to: Work with ItemsControl and ItemsRepeater](/docs/how-to/itemscontrol-how-to)
 - [ListBox](/controls/data-display/collections/listbox)
 - [ItemsRepeater](/controls/data-display/collections/itemsrepeater)
 - [Carousel](/controls/data-display/collections/carousel)
 - [DataGrid](/controls/data-display/structured-data/datagrid)
-- [Custom ItemsPanel](/docs/custom-controls/custom-itemspanel)
 - [Data templates](/docs/data-templates/introduction-to-data-templates)
 - [ItemsControl API reference](/api/avalonia/controls/itemscontrol)
 - [`ItemsControl.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/ItemsControl.cs)

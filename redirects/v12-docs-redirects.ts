@@ -975,7 +975,7 @@ const redirects: Redirect[] = [
     },
     {
         "from": "/docs/concepts/custom-itemspanel",
-        "to": "/docs/custom-controls/custom-itemspanel"
+        "to": "/docs/how-to/itemscontrol-how-to"
     },
     {
         "from": "/docs/concepts/templates/data-templates",

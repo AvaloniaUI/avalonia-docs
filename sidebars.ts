@@ -251,7 +251,6 @@ const sidebars: SidebarsConfig = {
         'custom-controls/control-trees',
         'custom-controls/custom-flyout',
         'custom-controls/custom-panel',
-        'custom-controls/custom-itemspanel',
         'custom-controls/custom-control-library',
       ],
     },
