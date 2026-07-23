@@ -210,14 +210,11 @@ function createRedirects(existingPath: string): string[] | undefined {
     // Custom controls from docs/ui-development
     const customControlsFromDocs: Record<string, string> = {
       '/docs/custom-controls/choosing-a-custom-control-type': '/docs/ui-development/custom-controls/choosing-a-custom-control-type',
-      '/docs/custom-controls/custom-control-class': '/docs/ui-development/custom-controls/custom-control-class',
       '/docs/custom-controls/templated-controls': '/docs/ui-development/custom-controls/templated-controls',
-      '/docs/custom-controls/drawing-custom-controls': '/docs/ui-development/custom-controls/drawing-custom-controls',
       '/docs/custom-controls/defining-properties': '/docs/ui-development/custom-controls/defining-properties',
       '/docs/custom-controls/defining-events': '/docs/ui-development/custom-controls/defining-events',
-      '/docs/custom-controls/attached-properties': '/docs/ui-development/custom-controls/attached-properties',
       '/docs/custom-controls/custom-flyout': '/docs/ui-development/custom-controls/custom-flyout',
-      '/docs/custom-controls/custom-itemspanel': '/docs/ui-development/custom-controls/custom-itemspanel',
+      '/docs/how-to/itemscontrol-how-to': '/docs/ui-development/custom-controls/custom-itemspanel',
       '/docs/custom-controls/custom-panel': '/docs/ui-development/custom-controls/custom-panel',
       '/docs/custom-controls/custom-control-library': '/docs/ui-development/custom-controls/custom-control-library',
     };

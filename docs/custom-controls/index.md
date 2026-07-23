@@ -2,241 +2,86 @@
 id: index
 title: Creating custom controls
 sidebar_position: 1
-description: Overview of approaches for building custom controls in Avalonia, from user controls to templated controls.
+description: Overview of approaches for building custom controls in Avalonia.
 doc-type: overview
 ---
 
 ## Custom controls
 
-A custom control draws itself using the Avalonia graphics system, using basic methods for shapes, lines, fills, text, and many others. You can define your own properties, events and pseudo classes.
-
-Some of the Avalonia built-in controls are like this. For example, the text block control (`TextBlock` class) and the image control (`Image` class).
+Avalonia allows you to create your own controls, beyond what is available in the [built-in control library](/controls). Define your own properties, events and [pseudoclasses](/docs/styling/pseudoclasses). You can even override visual rendering to draw entirely unique custom controls.
 
 ## Types of custom controls
 
-If you want to create your own controls, there are three main categories of control in Avalonia. The first thing to do is choose the category of control that best suits your use-case.
+Before creating a custom control, first choose the category of control that best suits your use case. There are three main control categories in Avalonia:
+
+1. [User controls](#user-controls)
+2. [Templated controls](#templated-controls)
+3. [Custom-drawn controls](#custom-drawn-controls)
+
+In addition to these three categories, you can also create custom derivatives of [content controls, headered content controls or items controls](#other-customizable-controls).
 
 ### User controls
 
-UserControls are the simplest way to author controls. This type of control is best for "views" or "pages" that are specific to an application. UserControls are authored in the same way as you would author a Window: by creating a new UserControl from a template and adding controls to it.
+User controls are authored the same way you would author a custom `Window`: by creating a new `UserControl` from a template and adding controls to it. The `UserControl` acts as a container that combines multiple existing controls into a single, cohesive element.
+
+This type of control is best for reusable "views" or "pages" that are specific to an application, for example, a "User Details View". It is less suited for general-purpose UI elements.
+
+To create a custom user control:
+
+1. **Define the XAML.** Create a new `UserControl` XAML file. Decide the layout and appearance of the custom control by placing existing controls, setting properties and applying styles.
+2. **Add code-behind.** Optionally, define code-behind logic to handle events, modify behavior, or give the control [styled properties](/docs/custom-controls/defining-properties#registering-a-styled-property).
+
+[A sample of a custom `UserControl` is available to clone on GitHub.](https://github.com/AvaloniaUI/AvaloniaUI.QuickGuides/tree/main/CustomControl)
 
 ### Templated controls
 
-TemplatedControls are best used for generic controls that can be shared among various applications. They are lookless controls, meaning that they can be restyled for different themes and applications. The majority of standard controls defined by Avalonia fit into this category.
+Templated controls are lookless, meaning the control's behavior and logic are separate from its appearance. This allows a templated control to be restyled for different themes or applications. The behavior and properties of a `TemplatedControl` are defined in code, while the visual representation is styled in XAML, then included in the `Application` via `StyleInclude`.
+
+This type of control is best for general-purpose UI elements that you wish to share across multiple applications. The majority of [Avalonia's standard controls](/controls) are templated controls.
 
 :::info
-In WPF/UWP you would inherit from the Control class to create a new templated control, but in Avalonia you should inherit from TemplatedControl. 
+In Avalonia, a custom templated control inherits from `TemplatedControl`. This is unlike WPF or UWP, where you would inherit from the `Control` class.
 :::
+
+To create a custom templated control:
+
+1. **Define the control class.** Create a new class that derives from `TemplatedControl`. Decide the behavior, properties and events of the custom control.
+2. **Add a control template.** Create a [control theme](/docs/styling/control-themes) XAML file. Decide the visual appearance of the control.
+3. **Add further styling.** Further customize the look of the control by adjusting the control template or applying additional styles, if desired.
+
+More detailed guidance is documented in [Templated controls](/docs/custom-controls/templated-controls).
+
+### Custom-drawn controls
+
+Custom-drawn controls draw themselves using geometry by overriding the `Visual.Render` method. By applying the  `DrawingContext` API, you can specify a control's exact appearance. Some controls from [Avalonia's built-in controls](/controls) are drawn this way, e.g., `TextBlock` or `Image`.
+
+This approach gives you fine-grained control over every aspect of the control's visual representation. Use custom-drawn controls for non-interactive graphical elements that do not need to be themed.
 
 :::info
-If you want to provide a Style for your TemplatedControl in a separate file, remember to include this file in your Application via StyleInclude. 
+In Avalonia, a custom-drawn control inherits from `Control`. This is unlike WPF or UWP, where you would inherit from the `FrameworkElement` class.
 :::
 
-### Basic controls
+To create a custom-drawn control:
 
-BasicControls are the foundation of user interfaces - they draw themselves using geometry by overriding the Visual.Render method. Controls such as TextBlock and Image fall into this category.
+1. **Define the control class.** Create a new class that derives from `Control`. Decide the behavior and rendering of the control.
+2. **Override the `Render` method.** Override the `Render` method in the control class. Use `DrawingContext` to draw the control.
 
-:::info
-In WPF/UWP you would inherit from the FrameworkElement class to create a new basic control, but in Avalonia you should inherit from Control. 
-:::
+More detailed guidance is documented in [Custom-drawn controls](/docs/custom-controls/custom-drawn-controls).
 
-## Creating advanced custom controls
+### Other customizable controls
 
-Here's how the `Border` control defines its `Background` property:
+In addition to the three options described above, you can also create custom control classes derived from the following:
 
-The `AvaloniaProperty.Register` method also accepts a number of other parameters:
+- `ContentControl`, a control hosting a single piece of content.
+- `HeaderedContentControl`, a control with a header and a content area.
+- `ItemsControl`, a control that displays a collection of items.
 
-* `defaultValue`: This gives the property a default value. Be sure to only pass value types and immutable types here as passing a reference type will cause the same object to be used on all instances on which the property is registered.
-* `inherits`: Specified that the property's default value should come from the parent control.
-* `defaultBindingMode`: The default binding mode for the property. Can be set to `OneWay`, `TwoWay`, `OneTime` or `OneWayToSource`.
-* `validate`: A validation/coercion function of type `Func<TOwner, TValue, TValue>`. The function accepts the instance of the class on which the property is being set and the value and returns the coerced value or throws an exception for an invalid value.
-
-:::info
-A styled property is analogous to a `DependencyProperty` in other XAML frameworks.
-:::
-
-:::info
-The naming convention of the property and its backing `AvaloniaProperty` field is important. The name of the field is always the name of the property, with the suffix `Property` appended.
-:::
-
-### Using a `StyledProperty` on another class
-
-Sometimes the property you want to add to your control already exists on another control, `Background` being a good example. To register a property defined on another control, you call `StyledProperty.AddOwner`:
-
-```csharp
-public static readonly StyledProperty<IBrush> BackgroundProperty =
-    Border.BackgroundProperty.AddOwner<Panel>();
-
-public Brush Background
-{
-    get { return GetValue(BackgroundProperty); }
-    set { SetValue(BackgroundProperty, value); }
-}
-```
-
-:::note
-Unlike WPF/UWP, a property must be registered on a class otherwise it cannot be set on an object of that class. This may change in future, however.
-:::
-
-### Readonly properties
-
-To create a readonly property you use the `AvaloniaProperty.RegisterDirect` method. Here is how `Visual` registers the readonly `Bounds` property:
-
-```csharp
-public static readonly DirectProperty<Visual, Rect> BoundsProperty =
-    AvaloniaProperty.RegisterDirect<Visual, Rect>(
-        nameof(Bounds),
-        o => o.Bounds);
-
-private Rect _bounds;
-
-public Rect Bounds
-{
-    get { return _bounds; }
-    private set { SetAndRaise(BoundsProperty, ref _bounds, value); }
-}
-```
-
-As can be seen, readonly properties are stored as a field on the object. When registering the property, a getter is passed which is used to access the property value through `GetValue` and then `SetAndRaise` is used to notify listeners to changes to the property.
-
-### Attached properties
-
-[Attached properties](/docs/custom-controls/attached-properties) are defined almost identically to styled properties except that they are registered using the `RegisterAttached` method and their accessors are defined as static methods.
-
-Here's how `Grid` defines its `Grid.Column` attached property:
-
-```csharp
-public static readonly AttachedProperty<int> ColumnProperty =
-    AvaloniaProperty.RegisterAttached<Grid, Control, int>("Column");
-
-public static int GetColumn(Control element)
-{
-    return element.GetValue(ColumnProperty);
-}
-
-public static void SetColumn(Control element, int value)
-{
-    element.SetValue(ColumnProperty, value);
-}
-```
-
-### Direct `AvaloniaProperty` registrations
-
-As its name suggests, `RegisterDirect` isn't just used for registering readonly properties. You can also pass a _setter_ to `RegisterDirect` to expose a standard C# property as an Avalonia property.
-
-A `StyledProperty` which is registered using `AvaloniaProperty.Register` maintains a prioritized list of values and bindings that allow styles to work. However, this is overkill for many properties, such as `ItemsControl.Items` - this will never be styled and the overhead involved with styled properties is unnecessary.
-
-Here is how `ItemsControl.Items` is registered:
-
-```csharp
-public static readonly DirectProperty<ItemsControl, IEnumerable> ItemsProperty =
-    AvaloniaProperty.RegisterDirect<ItemsControl, IEnumerable>(
-        nameof(Items),
-        o => o.Items,
-        (o, v) => o.Items = v);
-
-private IEnumerable _items = new AvaloniaList<object>();
-
-public IEnumerable Items
-{
-    get { return _items; }
-    set { SetAndRaise(ItemsProperty, ref _items, value); }
-}
-```
-
-Direct properties are a lightweight version of styled properties that support the following:
-
-* AvaloniaObject.GetValue
-* AvaloniaObject.SetValue for non-readonly properties
-* PropertyChanged
-* Binding (only with LocalValue priority)
-* GetObservable
-* AddOwner
-* Metadata
-
-They don't support the following:
-
-* Validation/Coercion (although this could be done in the property setter)
-* Overriding default values.
-* Inherited values
-
-### Using a `DirectProperty` on another class
-
-In the same way that you can call `AddOwner` on a styled property, you can also add an owner to a direct property. Because direct properties reference fields on the control, you must also add a field for the property:
-
-```csharp
-public static readonly DirectProperty<MyControl, IEnumerable> ItemsProperty =
-    ItemsControl.ItemsProperty.AddOwner<MyControl>(
-        o => o.Items,
-        (o, v) => o.Items = v);
-
-private IEnumerable _items = new AvaloniaList<object>();
-
-public IEnumerable Items
-{
-    get { return _items; }
-    set { SetAndRaise(ItemsProperty, ref _items, value); }
-}
-```
-
-### When to use direct vs styled properties
-
-In general you should declare your properties as styled properties. However, direct properties have advantages and disadvantages:
-
-Pros:
-
-* No additional object is allocated per-instance for the property
-* Property getter is a standard C# property getter
-* Property setter is a standard C# property setter that raises an event.
-* You can add [data validation](/docs/app-development/data-validation) support
-
-Cons:
-
-* Cannot inherit value from parent control
-* Cannot take advantage of Avalonia's styling system
-* Property value is a field and as such is allocated whether the property is set on the object or not
-
-So use direct properties when you have the following requirements:
-
-* Property will not need to be styled
-* Property will usually or always have a value
-
-### DataValidation support
-
-To allow a property to show validation error messages, register it with `enableDataValidation: true`. The base `Control` class automatically handles reporting validation errors to `DataValidationErrors`, so no additional overrides are needed.
-
-**Example of a property with DataValidation enabled**
-
-```csharp
-public static readonly DirectProperty<MyControl, int> ValueProperty =
-    AvaloniaProperty.RegisterDirect<MyControl, int>(
-        nameof(Value),
-        o => o.Value,
-        (o, v) => o.Value = v,
-        enableDataValidation: true);
-```
-
-This works with both `DirectProperty` and `StyledProperty` registrations. When a binding provides a validation error, the control displays it automatically.
-
-If you want to [re-use a direct property of another class](#using-a-directproperty-on-another-class) you can also enable data validation. In this case use `AddOwnerWithDataValidation`.
-
-**Example: TextBox.TextProperty property re-uses TextBlock.TextProperty but adds validation support**
-
-```csharp
-public static readonly DirectProperty<TextBox, string?> TextProperty =
-    TextBlock.TextProperty.AddOwnerWithDataValidation<TextBox>(
-        o => o.Text,
-        (o, v) => o.Text = v,
-        defaultBindingMode: BindingMode.TwoWay,
-        enableDataValidation: true);
-```
-
-In Avalonia 12, data validation is handled automatically when `enableDataValidation` is set to `true`. The framework detects validation errors from `INotifyDataErrorInfo` and displays them without requiring additional overrides in your control.
+These controls all derive from `Control`, meaning properties like `Width`, `Height`, `Margin`, and `DataContext` are available by default.
 
 ## See also
 
-- [Choosing a Custom Control Type](/docs/custom-controls/choosing-a-custom-control-type)
-- [Defining Properties](/docs/custom-controls/defining-properties)
-- [Defining Events](/docs/custom-controls/defining-events)
-- [Templated Controls](/docs/custom-controls/templated-controls)
-- [Drawing Custom Controls](/docs/custom-controls/drawing-custom-controls)
+- [Custom templated controls](/docs/custom-controls/templated-controls): Build a lookless control whose appearance is defined by a control theme.
+- [Custom-drawn controls](/docs/custom-controls/custom-drawn-controls): Create a control that draws itself by overriding `Render`.
+- [Defining properties](/docs/custom-controls/defining-properties): Add styled, direct, and attached properties to a custom control.
+- [Defining events](/docs/custom-controls/defining-events): Add routed events to a custom control.
+- [Custom control library](/docs/custom-controls/custom-control-library): Package custom controls in a class library and reference them from another project.

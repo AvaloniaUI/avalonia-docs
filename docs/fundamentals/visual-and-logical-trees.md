@@ -7,11 +7,22 @@ doc-type: explanation
 
 Avalonia organizes controls into two parallel tree structures: the logical tree and the visual tree. Understanding these trees is important for resource lookup, event routing, styling, and custom control development.
 
+If you wish to view the logical and visual trees of your application, use the [Elements tool](/tools/developer-tools/elements-tool) of the Avalonia Dev Tools.
+
 ## Logical tree
 
-The logical tree represents the structure of your UI as you define it in XAML. It contains the controls you explicitly declare, without the internal template structure.
+The logical tree represents the hierarchy of your UI as defined in XAML. It contains the controls you explicitly declare, without the internal template structure.
 
-For example, this XAML:
+The logical tree is used for:
+- **Resource lookup:** `StaticResource` and `DynamicResource` walk up the logical tree.
+- **Data context inheritance:** `DataContext` propagates down the logical tree.
+- **Property inheritance:** Inherited properties like `FontSize`, `Foreground` or `FlowDirection` flow down the logical tree.
+- **Named element lookup:** `x:Name` references resolve within the logical tree scope.
+
+For example, the following XAML of three controls inside a [`StackPanel`](/controls/layout/panels/stackpanel) inside a [`Window`](/controls/primitives/window) produces the corresponding logical tree.
+
+<Tabs>
+<TabItem value="xaml" label="XAML">
 
 ```xml
 <Window>
@@ -23,7 +34,9 @@ For example, this XAML:
 </Window>
 ```
 
-Produces a logical tree:
+</TabItem>
+
+<TabItem value="logical-tree" label="Logical tree">
 
 ```text
 Window
@@ -33,23 +46,17 @@ Window
        └─ Button
 ```
 
-The logical tree is used for:
-- **Resource lookup**: `StaticResource` and `DynamicResource` walk up the logical tree.
-- **Data context inheritance**: `DataContext` propagates down the logical tree.
-- **Property inheritance**: Inherited properties like `FontSize`, `Foreground`, and `FlowDirection` flow down the logical tree.
-- **Named element lookup**: `x:Name` references resolve within the logical tree scope.
+</TabItem>
+</Tabs>
 
 ### Navigating the logical tree
 
 ```csharp
 // Get the logical parent
-var parent = myControl.Parent;
+var parent = myControl.GetLogicalParent();
 
 // Get logical children
-foreach (var child in myPanel.Children)
-{
-    // Process child
-}
+var children = myControl.GetLogicalChildren();
 
 // Find an ancestor of a specific type
 var window = myControl.FindLogicalAncestorOfType<Window>();
@@ -76,23 +83,23 @@ It is only safe to add or remove `LogicalChildren` when the framework is not alr
 
 ## Visual tree
 
-The visual tree includes every visual element that participates in rendering, including the internal template parts of controls. A `Button` in the logical tree expands in the visual tree to include its `ContentPresenter`, `Border`, and other template elements.
+The visual tree represents everything that Avalonia is actually running. This means every visual element that participates in rendering, including the properties set on controls and the internal template parts of controls.
 
-The same `Button` from above might have this visual tree:
+The visual tree is used for:
+- **Rendering:** The renderer walks the visual tree to draw the UI.
+- **Hit testing:** Pointer events use the visual tree to determine which element is under the cursor.
+- **Layout:** Measure and arrange passes traverse the visual tree.
+- **Event routing:** Routed events tunnel down or bubble up the visual tree.
 
-```text
+For example, a single `Button` in the logical tree expands in the visual tree to include its `ContentPresenter`, `Border`, and other template elements. The same `Button` from [the previous example](#logical-tree) might have this visual tree:
+
+```text title="Visual tree"
 Button
   └─ ContentPresenter
        └─ Border
             └─ ContentPresenter
                  └─ TextBlock ("Save")
 ```
-
-The visual tree is used for:
-- **Rendering**: The renderer walks the visual tree to draw the UI.
-- **Hit testing**: Pointer events use the visual tree to determine which element is under the cursor.
-- **Layout**: Measure and arrange passes traverse the visual tree.
-- **Event tunneling and bubbling**: Routed events tunnel down and bubble up the visual tree.
 
 ### Navigating the visual tree
 
@@ -123,13 +130,15 @@ var allVisuals = myControl.GetVisualDescendants();
 
 ## Differences between the trees
 
-| Aspect | Logical tree | Visual tree |
+| &nbsp; | Logical tree | Visual tree |
 |---|---|---|
-| What it contains | Controls you declare in XAML | All visual elements including template internals |
+| Contains | Controls you declare in XAML | All visual elements including template internals |
 | Resource lookup | Yes | No |
 | Data context inheritance | Yes | No |
 | Property inheritance | Yes | No |
+| Template expansion | No (templates are single nodes) | Yes (templates are expanded into parts) |
 | Event routing | No | Yes (tunnel and bubble) |
+| Rendering | No | Yes |
 | Hit testing | No | Yes |
 | Layout | Partially | Yes |
 

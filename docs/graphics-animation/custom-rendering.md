@@ -393,6 +393,6 @@ The message arrives in the `OnMessage` callback, where you can store it for use 
 - [TopLevel.RequestAnimationFrame](/docs/fundamentals/top-level#requestanimationframe): Per-frame callbacks on the UI thread.
 - [Composition Animations](/docs/graphics-animation/composition-animations): Render-thread property animations using the composition API.
 - [Shapes and Geometries](/docs/graphics-animation/shapes-and-geometries): Built-in shape controls and geometry types.
-- [Drawing Controls](/docs/custom-controls/drawing-custom-controls): Creating custom controls that draw themselves.
+- [Custom-drawn controls](/docs/custom-controls/custom-drawn-controls): Creating custom controls that draw themselves.
 - [Brushes](/docs/graphics-animation/brushes): Available brush types for filling and stroking.
 - [Effects](/docs/graphics-animation/effects): Shadows, blur, and visual effects.
