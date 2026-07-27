@@ -21,9 +21,9 @@ The [`TextBlock`](/api/avalonia/controls/textblock) is a read-only label for dis
 | `FontFamily`      | `FontFamily`               | The font family used to render text. You can specify fallback fonts as a comma-separated list.                                                                                                                        |
 | `Foreground`      | `IBrush`                   | The brush used to paint the text.                                                                                                                                                                                     |
 | `Background`      | `IBrush`                   | The brush used to paint the area behind the text.                                                                                                                                                                     |
-| [`TextAlignment`](/api/avalonia/media/textalignment)   | `TextAlignment`            | Controls horizontal alignment of text within the control. Options are `Left`, `Center`, `Right`, `Justify`, and `DetectFromContent`.                                                                                  |
-| [`TextWrapping`](/api/avalonia/media/textwrapping)    | `TextWrapping`             | Controls whether text wraps when it reaches the edge of the control. Options are `NoWrap` (default), `Wrap`, and `WrapWithOverflow`.                                                                                  |
-| [`TextTrimming`](/api/avalonia/media/texttrimming)    | `TextTrimming`             | Controls how text is trimmed when it overflows. Options include `None` (default), `CharacterEllipsis`, `WordEllipsis`, and others. See [TextTrimming](/controls/data-display/text-display/texttrimming) for full details.                                  |
+| `TextAlignment`   | [`TextAlignment`](/api/avalonia/media/textalignment) | Controls horizontal alignment of text within the control. Options are `Left`, `Center`, `Right`, `Justify`, and `DetectFromContent`.                                                                                  |
+| `TextWrapping`    | [`TextWrapping`](/api/avalonia/media/textwrapping) | Controls whether text wraps when it reaches the edge of the control. Options are `NoWrap` (default), `Wrap`, and `WrapWithOverflow`.                                                                                  |
+| `TextTrimming`    | [`TextTrimming`](/api/avalonia/media/texttrimming) | Controls how text is trimmed when it overflows. Options include `None` (default), `CharacterEllipsis`, `WordEllipsis`, and others. See [TextTrimming](/controls/data-display/text-display/texttrimming) for full details.                                  |
 | `MaxLines`        | `int`                      | Limits the number of visible lines. When combined with `TextWrapping` and `TextTrimming`, overflow is trimmed after this many lines.                                                                                   |
 | `LineHeight`      | `double`                   | The height of each line of text. Set to `NaN` (the default) to let the font metrics determine line height.                                                                                                            |
 | `TextDecorations` | `TextDecorationCollection` | A line decoration to apply to the lettering. Default is none, options include `Underline`, `Strikethrough`, `Baseline`, and `Overline`. To apply more than one at the same time, list the options with spaces between. |
@@ -38,10 +38,10 @@ This example demonstrates using multiple `TextBlock` controls to show a heading,
 <XamlPreview>
 
 ```xml
-<StackPanel xmlns="https://github.com/avaloniaui" Margin="20">
-  <TextBlock Margin="0 5" FontSize="18" FontWeight="Bold">Heading</TextBlock>
-  <TextBlock Margin="0 5" FontStyle="Italic" xml:space="preserve">This is  a single line.</TextBlock>
-  <TextBlock Margin="0 5" xml:space="preserve">This is a multi-line
+<StackPanel xmlns="https://github.com/avaloniaui" Margin="20" Spacing="10">
+  <TextBlock FontSize="18" FontWeight="Bold">Heading</TextBlock>
+  <TextBlock FontStyle="Italic" xml:space="preserve">This is  a single line.</TextBlock>
+  <TextBlock xml:space="preserve">This is a multi-line
   display that has
   returns in it.
   The text block
