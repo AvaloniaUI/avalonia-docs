@@ -50,11 +50,15 @@ These can be accessed by selecting **Options** from the **Tools** menu inside Vi
 
 |  Setting              | Description | Options       |
 |-----------------------|-------------|---------------|
+| Color Scheme          | Controls how the AXAML file ccontents are colored<br/>Requires a paid account to change | Roslyn (Default) - Colors are based on equivalent C# classifications<br />XML - Colors are assigned as if a regular XML document. |
 | Default Document View | What is displayed when a document is opened | Split (Default) - Both the code and the previewer<br />Design - Just the previewer<br /> Source - Just the source code |
 | Split Orientation     | Whether to split the orientation horizontally or vertically | Horizontal (Default) - The editor and previewer are displayed side by side<br />Vertical - The editor and previewer are displayed one above the other |
 | Swapped               | Whether the default position of the editor and previewer should be inverted when opening a document in 'Split' mode | True if checked |
 | Default Zoom level    | How to size the content in the  | 100% (Default)<br />50%, 75%, 100%, 125%, 150%, 200%<br />Fit to Width - Allow the preview to take the full width of the available space<br />Fit All - Fill the entire previewer |
 | Minimum Log Verbosity | The minimum LogLevel for information output by the extension | Trace<br />Debug<br />Information (Default)<br />Warning<br />Error<br />Critical<br />None |
+| Telemetry Enabled     | If basic usage telemetry should be reported<br/>Requires a paid account to change | Checked (Default) if telemetry is reported |
+| Exxperimental Previewer | If the new previewer should be used to provide preview images. Recommended unless there are problems. | Checked (Default) if the new previewer is used<br />Unchecked - the older version is used |
+| Signed in status      | If signed in, shows the name of the account | Link to sign in or out |
 
 ## See also
 
