@@ -31,6 +31,8 @@ To create a custom user control:
 1. **Define the XAML.** Create a new `UserControl` XAML file. Decide the layout and appearance of the custom control by placing existing controls, setting properties and applying styles.
 2. **Add code-behind.** Optionally, define code-behind logic to handle events, modify behavior, or give the control [styled properties](/docs/custom-controls/defining-properties#registering-a-styled-property).
 
+More detailed guidance is documented in [User controls](/docs/custom-controls/user-controls).
+
 [A sample of a custom `UserControl` is available to clone on GitHub.](https://github.com/AvaloniaUI/AvaloniaUI.QuickGuides/tree/main/CustomControl)
 
 ### Templated controls
@@ -80,6 +82,7 @@ These controls all derive from `Control`, meaning properties like `Width`, `Heig
 
 ## See also
 
+- [User controls](/docs/custom-controls/user-controls): Compose existing controls into a reusable view with XAML and code-behind.
 - [Custom templated controls](/docs/custom-controls/templated-controls): Build a lookless control whose appearance is defined by a control theme.
 - [Custom-drawn controls](/docs/custom-controls/custom-drawn-controls): Create a control that draws itself by overriding `Render`.
 - [Defining properties](/docs/custom-controls/defining-properties): Add styled, direct, and attached properties to a custom control.
