@@ -1,0 +1,259 @@
+---
+title: 'MatrixRowData'
+hide_title: true
+slug: '/avalonia/controls/charts/matrixrowdata'
+uid: 'Avalonia.Controls.Charts.MatrixRowData'
+commentId: 'T:Avalonia.Controls.Charts.MatrixRowData'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Charts'
+assembly: 'Avalonia.Controls.Charts'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Charts'
+tfms:
+  - 'net9.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">MatrixRowData Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Charts</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Charts</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Charts</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Represents a single row of data in a matrix chart, containing a label and
+an array of boolean values indicating presence/absence or true/false states.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class MatrixRowData
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> MatrixRowData
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;MatrixRowData&gt;
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [MatrixRowData](#uid-6cb6ea18ae) | Represents a single row of data in a matrix chart, containing a label and an array of boolean values indicating presence/absence or true/false states. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6cb6ea18ae"></span>
+
+### MatrixRowData Constructor
+
+Represents a single row of data in a matrix chart, containing a label and
+an array of boolean values indicating presence/absence or true/false states.
+
+```csharp
+public MatrixRowData(string Label, bool[] Values)
+```
+
+#### Parameters
+
+`Label` string
+
+The row label or identifier.
+
+
+`Values` bool[]
+
+The array of boolean values representing the state for each column in the matrix.
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [&lt;Clone&gt;$](#uid-4ca3d9b9eb) | No summary available. |
+| [Deconstruct](#uid-7ea797cc0d) | No summary available. |
+| [Equals (2 overloads)](#uid-ff75c52413) | No summary available. |
+| [GetHashCode](#uid-b1075492fa) | No summary available. |
+| [ToString](#uid-55780c249f) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4ca3d9b9eb"></span>
+
+### &lt;Clone&gt;$ Method
+
+```csharp
+public Avalonia.Controls.Charts.MatrixRowData <Clone>$()
+```
+
+#### Returns
+
+[Avalonia.Controls.Charts.MatrixRowData](xref:Avalonia.Controls.Charts.MatrixRowData)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7ea797cc0d"></span>
+
+### Deconstruct Method
+
+```csharp
+public void Deconstruct(string& Label, bool[]& Values)
+```
+
+#### Parameters
+
+`Label` string&amp;
+
+
+`Values` bool[]&amp;
+
+
+</section>
+
+<span id="uid-ff75c52413"></span>
+
+### Equals overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a9b338d04f"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(Avalonia.Controls.Charts.MatrixRowData other)
+```
+
+##### Parameters
+
+`other` [Avalonia.Controls.Charts.MatrixRowData](xref:Avalonia.Controls.Charts.MatrixRowData)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b73efb5203"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(object obj)
+```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b1075492fa"></span>
+
+### GetHashCode Method
+
+```csharp
+public int GetHashCode()
+```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-55780c249f"></span>
+
+### ToString Method
+
+```csharp
+public string ToString()
+```
+
+#### Returns
+
+string
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Label](#uid-7eadc2def6) | The row label or identifier. |
+| [Values](#uid-68135f6c14) | The array of boolean values representing the state for each column in the matrix. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7eadc2def6"></span>
+
+### Label Property
+
+The row label or identifier.
+
+```csharp
+public string Label { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-68135f6c14"></span>
+
+### Values Property
+
+The array of boolean values representing the state for each column in the matrix.
+
+```csharp
+public bool[] Values { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

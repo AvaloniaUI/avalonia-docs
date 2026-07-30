@@ -1,0 +1,243 @@
+---
+title: 'ITextEditorHost'
+hide_title: true
+slug: '/avalonia/controls/documents/primitives/itexteditorhost'
+uid: 'Avalonia.Controls.Documents.Primitives.ITextEditorHost'
+commentId: 'T:Avalonia.Controls.Documents.Primitives.ITextEditorHost'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.RichTextEditor'
+assembly: 'Avalonia.Controls.RichTextEditor'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.Primitives'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ITextEditorHost Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.Primitives</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.RichTextEditor</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.RichTextEditor</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Host interface for text editor controls that support text mutation.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface ITextEditorHost
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IInteractiveTextHost, ITextViewHost
+</div>
+</div>
+
+## Remarks
+
+Extends [Avalonia.Controls.Documents.Primitives.IInteractiveTextHost](xref:Avalonia.Controls.Documents.Primitives.IInteractiveTextHost) with editing-specific members:
+read-only gating, return/tab acceptance. Components that perform text
+mutation (typing, delete, paste, undo) require this interface.
+
+Read-only interactive views should implement [Avalonia.Controls.Documents.Primitives.IInteractiveTextHost](xref:Avalonia.Controls.Documents.Primitives.IInteractiveTextHost)
+directly instead.
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Redo](#uid-a69c56af85) | Redoes the most recently undone editing operation and restores any caret/selection state captured with the undo unit. |
+| [Undo](#uid-380b4794da) | Undoes the most recent editing operation and restores any caret/selection state captured with the undo unit. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a69c56af85"></span>
+
+### Redo Method
+
+Redoes the most recently undone editing operation and restores
+any caret/selection state captured with the undo unit.
+
+```csharp
+public void Redo()
+```
+
+#### Remarks
+
+All callers should route through this method instead of calling
+[Avalonia.Controls.Documents.Undo.IUndoManager.Redo](xref:Avalonia.Controls.Documents.Undo.IUndoManager.Redo) directly. The
+default implementation forwards to the document's undo manager
+without restoring caret state; editor controls should override
+to add restoration.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-380b4794da"></span>
+
+### Undo Method
+
+Undoes the most recent editing operation and restores any
+caret/selection state captured with the undo unit.
+
+```csharp
+public void Undo()
+```
+
+#### Remarks
+
+All callers (keyboard shortcuts, editor actions, menu items)
+should route through this method instead of calling
+[Avalonia.Controls.Documents.Undo.IUndoManager.Undo](xref:Avalonia.Controls.Documents.Undo.IUndoManager.Undo) directly —
+direct calls skip caret restoration. The default implementation
+forwards to the document's undo manager without restoring caret
+state; editor controls should override to add restoration.
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [AcceptsReturn](#uid-1970f464e4) | Gets whether the editor accepts the Return/Enter key. |
+| [AcceptsTab](#uid-1b613eb02b) | Gets whether the editor accepts the Tab key. |
+| [IsReadOnly](#uid-74e9d3e0fd) | Gets whether the editor is in read-only mode. |
+| [SelectionFlyout](#uid-2bd5a03c53) | Gets the selection mini-bar flyout shown when text is selected. |
+| [ShowSelectionFlyout](#uid-87ef4b023d) | Gets whether the selection mini-bar flyout is enabled. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1970f464e4"></span>
+
+### AcceptsReturn Property
+
+Gets whether the editor accepts the Return/Enter key.
+
+```csharp
+public bool AcceptsReturn { get; set; }
+```
+
+#### Remarks
+
+When true, pressing Enter inserts a line break or paragraph.
+When false, Enter may trigger a command or be ignored.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1b613eb02b"></span>
+
+### AcceptsTab Property
+
+Gets whether the editor accepts the Tab key.
+
+```csharp
+public bool AcceptsTab { get; set; }
+```
+
+#### Remarks
+
+When true, pressing Tab inserts a tab character.
+When false, Tab moves focus to the next control.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-74e9d3e0fd"></span>
+
+### IsReadOnly Property
+
+Gets whether the editor is in read-only mode.
+
+```csharp
+public bool IsReadOnly { get; set; }
+```
+
+#### Remarks
+
+When true, editing operations are disabled but navigation
+and selection still work.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2bd5a03c53"></span>
+
+### SelectionFlyout Property
+
+Gets the selection mini-bar flyout shown when text is selected.
+
+```csharp
+public Avalonia.Controls.Documents.Primitives.EditorSelectionFlyout SelectionFlyout { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-87ef4b023d"></span>
+
+### ShowSelectionFlyout Property
+
+Gets whether the selection mini-bar flyout is enabled.
+
+```csharp
+public bool ShowSelectionFlyout { get; set; }
+```
+
+</section>
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [IsReadOnlyChanged](#uid-6ef3c8fae7) | Occurs when the [Avalonia.Controls.Documents.Primitives.ITextEditorHost.IsReadOnly](xref:Avalonia.Controls.Documents.Primitives.ITextEditorHost.IsReadOnly) state changes. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6ef3c8fae7"></span>
+
+### IsReadOnlyChanged Event
+
+Occurs when the [Avalonia.Controls.Documents.Primitives.ITextEditorHost.IsReadOnly](xref:Avalonia.Controls.Documents.Primitives.ITextEditorHost.IsReadOnly) state changes.
+
+```csharp
+public event EventHandler IsReadOnlyChanged
+```
+
+#### Remarks
+
+Toolbar tools and editor actions subscribe to this event to refresh
+their enabled state when read-only mode is toggled at runtime.
+The default implementation is a no-op, which is acceptable for
+hosts that never toggle [Avalonia.Controls.Documents.Primitives.ITextEditorHost.IsReadOnly](xref:Avalonia.Controls.Documents.Primitives.ITextEditorHost.IsReadOnly).
+
+</section>
+
+</ApiRefPage>
+

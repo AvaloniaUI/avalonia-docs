@@ -29,6 +29,7 @@ const sidebars = {
         "avalonia/avaloniapropertychangedextensions",
         "avalonia/avaloniapropertymetadata",
         "avalonia/avaloniapropertyregistry",
+        "avalonia/avaloniawaylandplatformextensions",
         "avalonia/avaloniax11platformextensions",
         "avalonia/classicdesktopstyleapplicationlifetimeextensions",
         "avalonia/cornerradius",
@@ -43,6 +44,9 @@ const sidebars = {
         "avalonia/idirectpropertymetadata",
         "avalonia/inamed",
         "avalonia/ioptionalfeatureprovider",
+        "avalonia/iosapplicationextensions",
+        "avalonia/iosplatformoptions",
+        "avalonia/iosrenderingmode",
         "avalonia/istyledpropertymetadata",
         "avalonia/locatorextensions",
         "avalonia/loggingextensions",
@@ -81,6 +85,7 @@ const sidebars = {
         "avalonia/visual",
         "avalonia/visualextensions",
         "avalonia/visualtreeattachmenteventargs",
+        "avalonia/waylandplatformoptions",
         "avalonia/x11platformoptions",
         "avalonia/x11renderingmode"
       ],
@@ -674,6 +679,7 @@ const sidebars = {
         "avalonia/controls/treedatagridcheckboxcolumn",
         "avalonia/controls/treedatagridcolumn",
         "avalonia/controls/treedatagridcolumns",
+        "avalonia/controls/treedatagridgridlinesvisibility",
         "avalonia/controls/treedatagridhierarchicalexpandercolumn",
         "avalonia/controls/treedatagridrowdrageventargs",
         "avalonia/controls/treedatagridrowdragstartedeventargs",
@@ -1180,6 +1186,7 @@ const sidebars = {
         "avalonia/controls/documents/primitives/actions/bulletmarkerstyleaction",
         "avalonia/controls/documents/primitives/actions/copyaction",
         "avalonia/controls/documents/primitives/actions/cutaction",
+        "avalonia/controls/documents/primitives/actions/deleteimageaction",
         "avalonia/controls/documents/primitives/actions/deletetableaction",
         "avalonia/controls/documents/primitives/actions/deletetablecolumnaction",
         "avalonia/controls/documents/primitives/actions/deletetablerowaction",
@@ -1192,6 +1199,7 @@ const sidebars = {
         "avalonia/controls/documents/primitives/actions/iblockpropertyaction",
         "avalonia/controls/documents/primitives/actions/iblockpropertyaction-1",
         "avalonia/controls/documents/primitives/actions/ieditoraction",
+        "avalonia/controls/documents/primitives/actions/insertimageaction",
         "avalonia/controls/documents/primitives/actions/inserttableaction",
         "avalonia/controls/documents/primitives/actions/inserttablecolumnaction",
         "avalonia/controls/documents/primitives/actions/inserttablerowaction",
@@ -1202,13 +1210,16 @@ const sidebars = {
         "avalonia/controls/documents/primitives/actions/lineheightaction",
         "avalonia/controls/documents/primitives/actions/listtoggleaction",
         "avalonia/controls/documents/primitives/actions/marginaction",
+        "avalonia/controls/documents/primitives/actions/mergetablecellsaction",
         "avalonia/controls/documents/primitives/actions/numberedmarkerstyleaction",
         "avalonia/controls/documents/primitives/actions/paddingaction",
         "avalonia/controls/documents/primitives/actions/pasteaction",
         "avalonia/controls/documents/primitives/actions/pasteunformattedaction",
         "avalonia/controls/documents/primitives/actions/propertyaction-1",
         "avalonia/controls/documents/primitives/actions/redoaction",
+        "avalonia/controls/documents/primitives/actions/replaceimageaction",
         "avalonia/controls/documents/primitives/actions/selectallaction",
+        "avalonia/controls/documents/primitives/actions/splittablecellaction",
         "avalonia/controls/documents/primitives/actions/strikethroughaction",
         "avalonia/controls/documents/primitives/actions/subscriptaction",
         "avalonia/controls/documents/primitives/actions/superscriptaction",
@@ -1257,6 +1268,8 @@ const sidebars = {
         "avalonia/controls/documents/primitives/toolbar/editortooltip",
         "avalonia/controls/documents/primitives/toolbar/fontfamilymenuitem",
         "avalonia/controls/documents/primitives/toolbar/hyperlinkflyouttool",
+        "avalonia/controls/documents/primitives/toolbar/imageflyouttool",
+        "avalonia/controls/documents/primitives/toolbar/imagelinkflyouttool",
         "avalonia/controls/documents/primitives/toolbar/listtoggletool",
         "avalonia/controls/documents/primitives/toolbar/overflowtool",
         "avalonia/controls/documents/primitives/toolbar/propertymenuitem",
@@ -2209,6 +2222,22 @@ const sidebars = {
       "link": {
         "type": "doc",
         "id": "avalonia/interactivity/index"
+      }
+    },
+    {
+      "type": "category",
+      "label": "Avalonia.iOS",
+      "items": [
+        "avalonia/ios/avaloniaappdelegate-1",
+        "avalonia/ios/avaloniaview",
+        "avalonia/ios/defaultavaloniaviewcontroller",
+        "avalonia/ios/iavaloniaappdelegate",
+        "avalonia/ios/iavaloniaviewcontroller",
+        "avalonia/ios/uiviewcontrolhandle"
+      ],
+      "link": {
+        "type": "doc",
+        "id": "avalonia/ios/index"
       }
     },
     {
@@ -3673,6 +3702,49 @@ const sidebars = {
     },
     {
       "type": "category",
+      "label": "Avalonia.Wayland",
+      "items": [
+        "avalonia/wayland/avaloniawaylandexception",
+        "avalonia/wayland/avaloniawaylandflushexception",
+        "avalonia/wayland/avaloniawaylandnetworkexception",
+        "avalonia/wayland/avaloniawaylandpollexception",
+        "avalonia/wayland/avaloniawaylandprotocolerrorexception",
+        "avalonia/wayland/avaloniawaylandreadexception"
+      ],
+      "link": {
+        "type": "doc",
+        "id": "avalonia/wayland/index"
+      }
+    },
+    {
+      "type": "category",
+      "label": "Avalonia.Wayland.Server",
+      "items": [
+        "avalonia/wayland/server/waylandplatformgraphics-iwaylandgraphics"
+      ],
+      "link": {
+        "type": "doc",
+        "id": "avalonia/wayland/server/index"
+      }
+    },
+    {
+      "type": "category",
+      "label": "Avalonia.Wayland.Server.Interop",
+      "items": [
+        "avalonia/wayland/server/interop/unsafenativemethods-errno",
+        "avalonia/wayland/server/interop/unsafenativemethods-pollevents",
+        "avalonia/wayland/server/interop/unsafenativemethods-pollfd",
+        "avalonia/wayland/server/interop/unsafenativemethods-wl-cursor",
+        "avalonia/wayland/server/interop/unsafenativemethods-wl-cursor-image",
+        "avalonia/wayland/server/interop/waylandconnection-dispatchresult"
+      ],
+      "link": {
+        "type": "doc",
+        "id": "avalonia/wayland/server/interop/index"
+      }
+    },
+    {
+      "type": "category",
       "label": "Avalonia.Win32.Interoperability",
       "items": [
         "avalonia/win32/interoperability/winformsavaloniacontrolhost",
@@ -3887,7 +3959,8 @@ const sidebars = {
         "global/n-l",
         "global/p-a",
         "global/r-2-b",
-        "global/r-2-c"
+        "global/r-2-c",
+        "global/x-a"
       ],
       "link": {
         "type": "doc",
@@ -3980,11 +4053,13 @@ const sidebars = {
         "packages/avalonia-headless-nunit",
         "packages/avalonia-headless-vnc",
         "packages/avalonia-headless-xunit",
+        "packages/avalonia-ios",
         "packages/avalonia-linuxframebuffer",
         "packages/avalonia-markup-xaml-loader",
         "packages/avalonia-native",
         "packages/avalonia-skia",
         "packages/avalonia-themes-fluent",
+        "packages/avalonia-wayland",
         "packages/avalonia-win32-interoperability",
         "packages/avalonia-x11",
         "packages/avaloniaui-diagnosticssupport"
