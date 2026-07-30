@@ -33,7 +33,7 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/3111696698e2c3d6fe9aace8cb954153ee16b3e4/src/Avalonia.Controls/ToolTip.cs">ToolTip.cs</a>
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/main/src/Avalonia.Controls/ToolTip.cs">ToolTip.cs</a>
 </div>
 
 </div>
@@ -116,6 +116,7 @@ public ToolTip()
 | [GetIsTemplateFocusTarget](primitives/templatedcontrol.mdx#uid-75a788f38f) | Gets the value of the IsTemplateFocusTargetProperty attached property on a control. Inherited from [TemplatedControl](primitives/templatedcontrol.mdx). |
 | [GetPlacement](#uid-15ef943c61) | Gets the value of the ToolTip.Placement attached property. |
 | [GetServiceEnabled](#uid-ff62ca3fc4) | Gets whether showing and hiding of a control's tooltip will be automatically controlled by Avalonia. |
+| [GetShouldUseOverlayLayer](#uid-13f2eff764) | Gets whether the tooltip popup for `element` is shown in the overlay layer. |
 | [GetShowDelay](#uid-5de4d71fb3) | Gets the value of the ToolTip.ShowDelay attached property. |
 | [GetShowOnDisabled](#uid-07977d17f4) | Gets whether a control will display a tooltip even if it disabled. |
 | [GetTip](#uid-951824cf1f) | Gets the value of the ToolTip.Tip attached property. |
@@ -143,6 +144,7 @@ public ToolTip()
 | [SetIsTemplateFocusTarget](primitives/templatedcontrol.mdx#uid-281801c25f) | Sets the value of the IsTemplateFocusTargetProperty attached property on a control. Inherited from [TemplatedControl](primitives/templatedcontrol.mdx). |
 | [SetPlacement](#uid-677306b137) | Sets the value of the ToolTip.Placement attached property. |
 | [SetServiceEnabled](#uid-9434bf0634) | Sets whether showing and hiding of a control's tooltip will be automatically controlled by Avalonia. |
+| [SetShouldUseOverlayLayer](#uid-4c6877d20c) | Sets whether the tooltip popup for `element` is shown in the overlay layer. |
 | [SetShowDelay](#uid-808db44e18) | Sets the value of the ToolTip.ShowDelay attached property. |
 | [SetShowOnDisabled](#uid-06108f491a) | Sets whether a control will display a tooltip even if it disabled. |
 | [SetTip](#uid-e8c7f2c758) | Sets the value of the ToolTip.Tip attached property. |
@@ -350,6 +352,36 @@ The control to get the property from.
 
 bool
 
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-13f2eff764"></span>
+
+### GetShouldUseOverlayLayer Method
+
+Gets whether the tooltip popup for `element` is shown in the overlay layer.
+
+```csharp
+public bool GetShouldUseOverlayLayer(Avalonia.Controls.Control element)
+```
+
+#### Parameters
+
+`element` [Avalonia.Controls.Control](xref:Avalonia.Controls.Control)
+
+The control to get the property from.
+
+
+#### Returns
+
+bool
+
+
+#### Remarks
+
+See [Avalonia.Controls.Primitives.Popup.ShouldUseOverlayLayer](xref:Avalonia.Controls.Primitives.Popup.ShouldUseOverlayLayer) for details.
 
 </section>
 
@@ -662,6 +694,36 @@ Whether the control is to display a tooltip even if it disabled.
 
 <section className="apiref-page__member-entry">
 
+<span id="uid-4c6877d20c"></span>
+
+### SetShouldUseOverlayLayer Method
+
+Sets whether the tooltip popup for `element` is shown in the overlay layer.
+
+```csharp
+public void SetShouldUseOverlayLayer(Avalonia.Controls.Control element, bool value)
+```
+
+#### Parameters
+
+`element` [Avalonia.Controls.Control](xref:Avalonia.Controls.Control)
+
+The control to set the property on.
+
+
+`value` bool
+
+Whether to show the tooltip popup in the overlay layer.
+
+
+#### Remarks
+
+See [Avalonia.Controls.Primitives.Popup.ShouldUseOverlayLayer](xref:Avalonia.Controls.Primitives.Popup.ShouldUseOverlayLayer) for details.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-808db44e18"></span>
 
 ### SetShowDelay Method
@@ -943,6 +1005,7 @@ A value indicating how the tool tip is positioned.
 | [ScrollGestureEvent](../input/inputelement.mdx#uid-d098469113) | Defines the [Avalonia.Input.InputElement.ScrollGesture](xref:Avalonia.Input.InputElement.ScrollGesture) event. Inherited from [InputElement](../input/inputelement.mdx). |
 | [ScrollGestureInertiaStartingEvent](../input/inputelement.mdx#uid-02f504d2ea) | Defines the [Avalonia.Input.InputElement.ScrollGestureInertiaStarting](xref:Avalonia.Input.InputElement.ScrollGestureInertiaStarting) event. Inherited from [InputElement](../input/inputelement.mdx). |
 | [ServiceEnabledProperty](#uid-61f5e729d5) | Defines the ToolTip.ServiceEnabled property. |
+| [ShouldUseOverlayLayerProperty](#uid-c8a06e0664) | Gets or sets a value that indicates whether the popup should be shown in the overlay layer of the parent window. |
 | [ShowDelayProperty](#uid-6eb4a09aef) | Defines the ToolTip.ShowDelay property. |
 | [ShowOnDisabledProperty](#uid-6060d80a54) | Defines the ToolTip.ShowOnDisabled property. |
 | [SizeChangedEvent](control.mdx#uid-7d071894f4) | Defines the [Avalonia.Controls.Control.SizeChanged](xref:Avalonia.Controls.Control.SizeChanged) event. Inherited from [Control](control.mdx). |
@@ -1051,6 +1114,26 @@ Defines the ToolTip.ServiceEnabled property.
 ```csharp
 public Avalonia.AttachedProperty<bool> ServiceEnabledProperty
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c8a06e0664"></span>
+
+### ShouldUseOverlayLayerProperty Field
+
+Gets or sets a value that indicates whether the popup should be shown in the overlay layer of the parent window.
+
+```csharp
+public Avalonia.AttachedProperty<bool> ShouldUseOverlayLayerProperty
+```
+
+#### Remarks
+
+When [Avalonia.Controls.Primitives.Popup.ShouldUseOverlayLayer](xref:Avalonia.Controls.Primitives.Popup.ShouldUseOverlayLayer) is "false" implementation depends on the platform.
+Use [Avalonia.Controls.Primitives.Popup.IsUsingOverlayLayer](xref:Avalonia.Controls.Primitives.Popup.IsUsingOverlayLayer) to get actual popup behavior.
+This is an equvalent of `OverlayPopups` property of the platform options, but settable independently per each popup.
 
 </section>
 

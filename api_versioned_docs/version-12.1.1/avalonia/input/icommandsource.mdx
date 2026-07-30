@@ -1,0 +1,137 @@
+---
+title: 'ICommandSource'
+hide_title: true
+slug: '/avalonia/input/icommandsource'
+uid: 'Avalonia.Input.ICommandSource'
+commentId: 'T:Avalonia.Input.ICommandSource'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Input'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ICommandSource Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Input</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+An interface for classes that know how to invoke a Command.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface ICommandSource
+```
+
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [CanExecuteChanged](#uid-0744a0d0dc) | Called for the CanExecuteChanged event when changes are detected. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0744a0d0dc"></span>
+
+### CanExecuteChanged Method
+
+Called for the CanExecuteChanged event when changes are detected.
+
+```csharp
+public void CanExecuteChanged(object sender, EventArgs e)
+```
+
+#### Parameters
+
+`sender` object
+
+The event sender.
+
+
+`e` EventArgs
+
+The event args.
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Command](#uid-8148535dad) | The command that will be executed when the class is "invoked." Classes that implement this interface should enable or disable based on the command's CanExecute return value. The property may be implemented as read-write if desired. |
+| [CommandParameter](#uid-6f613dbc61) | The parameter that will be passed to the command when executing the command. The property may be implemented as read-write if desired. |
+| [IsEffectivelyEnabled](#uid-09a2634b4d) | Gets a value indicating whether this control and all its parents are enabled. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8148535dad"></span>
+
+### Command Property
+
+The command that will be executed when the class is "invoked."
+Classes that implement this interface should enable or disable based on the command's CanExecute return value.
+The property may be implemented as read-write if desired.
+
+```csharp
+public System.Windows.Input.ICommand Command { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6f613dbc61"></span>
+
+### CommandParameter Property
+
+The parameter that will be passed to the command when executing the command.
+The property may be implemented as read-write if desired.
+
+```csharp
+public object CommandParameter { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-09a2634b4d"></span>
+
+### IsEffectivelyEnabled Property
+
+Gets a value indicating whether this control and all its parents are enabled.
+
+```csharp
+public bool IsEffectivelyEnabled { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

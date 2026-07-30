@@ -1,0 +1,239 @@
+---
+title: 'RadarValueWithItem'
+hide_title: true
+slug: '/avalonia/controls/charts/radarvaluewithitem'
+uid: 'Avalonia.Controls.Charts.RadarValueWithItem'
+commentId: 'T:Avalonia.Controls.Charts.RadarValueWithItem'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Charts'
+assembly: 'Avalonia.Controls.Charts'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Charts'
+tfms:
+  - 'net9.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">RadarValueWithItem Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Charts</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Charts</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Charts</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Represents a radar value together with the original source item.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct RadarValueWithItem
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> RadarValueWithItem
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;RadarValueWithItem&gt;
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [RadarValueWithItem](#uid-0b43e0e453) | Represents a radar value together with the original source item. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0b43e0e453"></span>
+
+### RadarValueWithItem Constructor
+
+Represents a radar value together with the original source item.
+
+```csharp
+public RadarValueWithItem(double Value, object DataItem)
+```
+
+#### Parameters
+
+`Value` double
+
+The resolved radar value.
+
+
+`DataItem` object
+
+The original item from the series data source.
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Deconstruct](#uid-ac2301e941) | No summary available. |
+| [Equals (2 overloads)](#uid-45a631a1ec) | No summary available. |
+| [GetHashCode](#uid-2e0675c481) | No summary available. |
+| [ToString](#uid-d096971943) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ac2301e941"></span>
+
+### Deconstruct Method
+
+```csharp
+public void Deconstruct(double& Value, object& DataItem)
+```
+
+#### Parameters
+
+`Value` double&amp;
+
+
+`DataItem` object&amp;
+
+
+</section>
+
+<span id="uid-45a631a1ec"></span>
+
+### Equals overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-240d09619c"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(Avalonia.Controls.Charts.RadarValueWithItem other)
+```
+
+##### Parameters
+
+`other` [Avalonia.Controls.Charts.RadarValueWithItem](xref:Avalonia.Controls.Charts.RadarValueWithItem)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8feb5d94be"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(object obj)
+```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2e0675c481"></span>
+
+### GetHashCode Method
+
+```csharp
+public int GetHashCode()
+```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d096971943"></span>
+
+### ToString Method
+
+```csharp
+public string ToString()
+```
+
+#### Returns
+
+string
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [DataItem](#uid-673ac41d9b) | The original item from the series data source. |
+| [Value](#uid-c506758f23) | The resolved radar value. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-673ac41d9b"></span>
+
+### DataItem Property
+
+The original item from the series data source.
+
+```csharp
+public object DataItem { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c506758f23"></span>
+
+### Value Property
+
+The resolved radar value.
+
+```csharp
+public double Value { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

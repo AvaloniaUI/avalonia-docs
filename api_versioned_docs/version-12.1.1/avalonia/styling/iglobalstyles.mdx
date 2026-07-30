@@ -1,0 +1,93 @@
+---
+title: 'IGlobalStyles'
+hide_title: true
+slug: '/avalonia/styling/iglobalstyles'
+uid: 'Avalonia.Styling.IGlobalStyles'
+commentId: 'T:Avalonia.Styling.IGlobalStyles'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Styling'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IGlobalStyles Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Styling</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Defines the style host that provides styles global to the application.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface IGlobalStyles
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="istylehost">IStyleHost</a>
+</div>
+</div>
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [GlobalStylesAdded](#uid-8ccccfa61c) | Raised when styles are added to [Avalonia.Styling.Styles](xref:Avalonia.Styling.Styles) or a nested styles collection. |
+| [GlobalStylesRemoved](#uid-c1382acfd7) | Raised when styles are removed from [Avalonia.Styling.Styles](xref:Avalonia.Styling.Styles) or a nested styles collection. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8ccccfa61c"></span>
+
+### GlobalStylesAdded Event
+
+Raised when styles are added to [Avalonia.Styling.Styles](xref:Avalonia.Styling.Styles) or a nested styles collection.
+
+```csharp
+public event Action<System.Collections.Generic.IReadOnlyList<Avalonia.Styling.IStyle>> GlobalStylesAdded
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c1382acfd7"></span>
+
+### GlobalStylesRemoved Event
+
+Raised when styles are removed from [Avalonia.Styling.Styles](xref:Avalonia.Styling.Styles) or a nested styles collection.
+
+```csharp
+public event Action<System.Collections.Generic.IReadOnlyList<Avalonia.Styling.IStyle>> GlobalStylesRemoved
+```
+
+</section>
+
+</ApiRefPage>
+

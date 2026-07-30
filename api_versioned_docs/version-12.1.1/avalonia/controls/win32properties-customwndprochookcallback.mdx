@@ -1,0 +1,185 @@
+---
+title: 'Win32Properties.CustomWndProcHookCallback'
+hide_title: true
+slug: '/avalonia/controls/win32properties-customwndprochookcallback'
+uid: 'Avalonia.Controls.Win32Properties.CustomWndProcHookCallback'
+commentId: 'T:Avalonia.Controls.Win32Properties.CustomWndProcHookCallback'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Delegate'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">Win32Properties.CustomWndProcHookCallback Delegate</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public delegate Win32Properties.CustomWndProcHookCallback
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> MulticastDelegate <span className="apiref-page__relation-separator">-&gt;</span> Win32Properties.CustomWndProcHookCallback
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [Win32Properties.CustomWndProcHookCallback](#uid-680aa5d7a5) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-680aa5d7a5"></span>
+
+### Win32Properties.CustomWndProcHookCallback Constructor
+
+```csharp
+public Win32Properties.CustomWndProcHookCallback(object object, IntPtr method)
+```
+
+#### Parameters
+
+`object` object
+
+
+`method` IntPtr
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [BeginInvoke](#uid-bbbc14cfb5) | No summary available. |
+| [EndInvoke](#uid-15ef5e85f7) | No summary available. |
+| [Invoke](#uid-aa55c79cf3) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-bbbc14cfb5"></span>
+
+### BeginInvoke Method
+
+```csharp
+public IAsyncResult BeginInvoke(IntPtr hWnd, uint msg, IntPtr wParam, IntPtr lParam, bool& handled, AsyncCallback callback, object object)
+```
+
+#### Parameters
+
+`hWnd` IntPtr
+
+
+`msg` uint
+
+
+`wParam` IntPtr
+
+
+`lParam` IntPtr
+
+
+`handled` bool&amp;
+
+
+`callback` AsyncCallback
+
+
+`object` object
+
+
+#### Returns
+
+IAsyncResult
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-15ef5e85f7"></span>
+
+### EndInvoke Method
+
+```csharp
+public IntPtr EndInvoke(bool& handled, IAsyncResult result)
+```
+
+#### Parameters
+
+`handled` bool&amp;
+
+
+`result` IAsyncResult
+
+
+#### Returns
+
+IntPtr
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-aa55c79cf3"></span>
+
+### Invoke Method
+
+```csharp
+public IntPtr Invoke(IntPtr hWnd, uint msg, IntPtr wParam, IntPtr lParam, bool& handled)
+```
+
+#### Parameters
+
+`hWnd` IntPtr
+
+
+`msg` uint
+
+
+`wParam` IntPtr
+
+
+`lParam` IntPtr
+
+
+`handled` bool&amp;
+
+
+#### Returns
+
+IntPtr
+
+
+</section>
+
+</ApiRefPage>
+

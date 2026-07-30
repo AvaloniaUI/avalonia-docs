@@ -1,0 +1,597 @@
+---
+title: 'FontCodePageCoverage'
+hide_title: true
+slug: '/avalonia/media/fonts/fontcodepagecoverage'
+uid: 'Avalonia.Media.Fonts.FontCodePageCoverage'
+commentId: 'T:Avalonia.Media.Fonts.FontCodePageCoverage'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Enum'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Media.Fonts'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">FontCodePageCoverage Enum</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Media.Fonts</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Codepage coverage flags advertised by a font through the OpenType
+`OS/2.ulCodePageRange1` and `ulCodePageRange2` bitfields.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public enum FontCodePageCoverage
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Enum <span className="apiref-page__relation-separator">-&gt;</span> FontCodePageCoverage
+</div>
+</div>
+
+## Remarks
+
+Bit positions match the OpenType specification verbatim. Bits 0..31 are
+sourced from `ulCodePageRange1` and bits 32..63 from
+`ulCodePageRange2`, so the full 64-bit value can be tested with a
+single mask. See
+[the OpenType OS/2 spec](https://learn.microsoft.com/typography/opentype/spec/os2#ulcodepagerange1-bits-031).
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [Arabic](#uid-b69677b359) | 1256 Arabic. |
+| [Arabic708](#uid-8478f64998) | 708 Arabic ASMO 708. |
+| [Arabic864](#uid-874dc45d79) | 864 Arabic. |
+| [ChineseSimplified](#uid-31f02a480d) | 936 Chinese: Simplified (PRC, Singapore). |
+| [ChineseTraditional](#uid-cd418f5ab6) | 950 Chinese: Traditional (Taiwan, Hong Kong SAR). |
+| [Cyrillic](#uid-e25458a9e8) | 1251 Cyrillic. |
+| [Greek](#uid-6bbd72a43e) | 1253 Greek. |
+| [Greek737](#uid-c56d7e721b) | 737 Greek (formerly 437G). |
+| [Hebrew](#uid-42aad7a1da) | 1255 Hebrew. |
+| [Hebrew862](#uid-210a0a83cc) | 862 Hebrew. |
+| [Ibm869](#uid-ca4e24e95d) | 869 IBM Greek. |
+| [IbmCyrillic855](#uid-bd12a58a86) | 855 IBM Cyrillic; primarily Russian. |
+| [IbmTurkish857](#uid-8ef95b401e) | 857 IBM Turkish. |
+| [JapaneseJis](#uid-48e44a51c0) | 932 JIS/Japan. |
+| [KoreanJohab](#uid-215fadcff6) | 1361 Korean Johab. |
+| [KoreanWansung](#uid-f1f7b74ba3) | 949 Korean Wansung. |
+| [Latin1](#uid-e7959a4338) | 1252 Latin 1. |
+| [Latin2EasternEurope](#uid-3b87c400ef) | 1250 Latin 2: Eastern Europe. |
+| [Latin2_852](#uid-2b6e5d15a5) | 852 Latin 2. |
+| [MacRoman](#uid-0d5fa00162) | Macintosh Character Set (US Roman). |
+| [Msdos775](#uid-6aea6e1f79) | 775 MS-DOS Baltic. |
+| [Msdos860](#uid-df4bba3e14) | 860 MS-DOS Portuguese. |
+| [Msdos861](#uid-dac3e87a9b) | 861 MS-DOS Icelandic. |
+| [Msdos863](#uid-9bafc7f018) | 863 MS-DOS Canadian French. |
+| [Msdos865](#uid-e8e28dae51) | 865 MS-DOS Nordic. |
+| [Msdos866](#uid-02205f8a20) | 866 MS-DOS Russian. |
+| [None](#uid-296a1bf820) | No codepage coverage information is advertised. |
+| [Oem](#uid-2ea117e68e) | OEM Character Set. |
+| [Symbol](#uid-d982f8b813) | Symbol Character Set. |
+| [Thai](#uid-1aedfb074b) | 874 Thai. |
+| [Turkish](#uid-e59e5eeb10) | 1254 Turkish. |
+| [Us437](#uid-1772fb79ed) | 437 US. |
+| [Vietnamese](#uid-da7cf6ef28) | 1258 Vietnamese. |
+| [WeLatin1_850](#uid-457e8bbbed) | 850 WE/Latin 1. |
+| [WindowsBaltic](#uid-1846a6e888) | 1257 Windows Baltic. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b69677b359"></span>
+
+### Arabic Field
+
+1256 Arabic.
+
+```csharp
+public Avalonia.Media.Fonts.FontCodePageCoverage Arabic
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8478f64998"></span>
+
+### Arabic708 Field
+
+708 Arabic ASMO 708.
+
+```csharp
+public Avalonia.Media.Fonts.FontCodePageCoverage Arabic708
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-874dc45d79"></span>
+
+### Arabic864 Field
+
+864 Arabic.
+
+```csharp
+public Avalonia.Media.Fonts.FontCodePageCoverage Arabic864
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-31f02a480d"></span>
+
+### ChineseSimplified Field
+
+936 Chinese: Simplified (PRC, Singapore).
+
+```csharp
+public Avalonia.Media.Fonts.FontCodePageCoverage ChineseSimplified
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-cd418f5ab6"></span>
+
+### ChineseTraditional Field
+
+950 Chinese: Traditional (Taiwan, Hong Kong SAR).
+
+```csharp
+public Avalonia.Media.Fonts.FontCodePageCoverage ChineseTraditional
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e25458a9e8"></span>
+
+### Cyrillic Field
+
+1251 Cyrillic.
+
+```csharp
+public Avalonia.Media.Fonts.FontCodePageCoverage Cyrillic
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6bbd72a43e"></span>
+
+### Greek Field
+
+1253 Greek.
+
+```csharp
+public Avalonia.Media.Fonts.FontCodePageCoverage Greek
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c56d7e721b"></span>
+
+### Greek737 Field
+
+737 Greek (formerly 437G).
+
+```csharp
+public Avalonia.Media.Fonts.FontCodePageCoverage Greek737
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-42aad7a1da"></span>
+
+### Hebrew Field
+
+1255 Hebrew.
+
+```csharp
+public Avalonia.Media.Fonts.FontCodePageCoverage Hebrew
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-210a0a83cc"></span>
+
+### Hebrew862 Field
+
+862 Hebrew.
+
+```csharp
+public Avalonia.Media.Fonts.FontCodePageCoverage Hebrew862
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ca4e24e95d"></span>
+
+### Ibm869 Field
+
+869 IBM Greek.
+
+```csharp
+public Avalonia.Media.Fonts.FontCodePageCoverage Ibm869
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-bd12a58a86"></span>
+
+### IbmCyrillic855 Field
+
+855 IBM Cyrillic; primarily Russian.
+
+```csharp
+public Avalonia.Media.Fonts.FontCodePageCoverage IbmCyrillic855
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8ef95b401e"></span>
+
+### IbmTurkish857 Field
+
+857 IBM Turkish.
+
+```csharp
+public Avalonia.Media.Fonts.FontCodePageCoverage IbmTurkish857
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-48e44a51c0"></span>
+
+### JapaneseJis Field
+
+932 JIS/Japan.
+
+```csharp
+public Avalonia.Media.Fonts.FontCodePageCoverage JapaneseJis
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-215fadcff6"></span>
+
+### KoreanJohab Field
+
+1361 Korean Johab.
+
+```csharp
+public Avalonia.Media.Fonts.FontCodePageCoverage KoreanJohab
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f1f7b74ba3"></span>
+
+### KoreanWansung Field
+
+949 Korean Wansung.
+
+```csharp
+public Avalonia.Media.Fonts.FontCodePageCoverage KoreanWansung
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e7959a4338"></span>
+
+### Latin1 Field
+
+1252 Latin 1.
+
+```csharp
+public Avalonia.Media.Fonts.FontCodePageCoverage Latin1
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3b87c400ef"></span>
+
+### Latin2EasternEurope Field
+
+1250 Latin 2: Eastern Europe.
+
+```csharp
+public Avalonia.Media.Fonts.FontCodePageCoverage Latin2EasternEurope
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2b6e5d15a5"></span>
+
+### Latin2_852 Field
+
+852 Latin 2.
+
+```csharp
+public Avalonia.Media.Fonts.FontCodePageCoverage Latin2_852
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0d5fa00162"></span>
+
+### MacRoman Field
+
+Macintosh Character Set (US Roman).
+
+```csharp
+public Avalonia.Media.Fonts.FontCodePageCoverage MacRoman
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6aea6e1f79"></span>
+
+### Msdos775 Field
+
+775 MS-DOS Baltic.
+
+```csharp
+public Avalonia.Media.Fonts.FontCodePageCoverage Msdos775
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-df4bba3e14"></span>
+
+### Msdos860 Field
+
+860 MS-DOS Portuguese.
+
+```csharp
+public Avalonia.Media.Fonts.FontCodePageCoverage Msdos860
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-dac3e87a9b"></span>
+
+### Msdos861 Field
+
+861 MS-DOS Icelandic.
+
+```csharp
+public Avalonia.Media.Fonts.FontCodePageCoverage Msdos861
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9bafc7f018"></span>
+
+### Msdos863 Field
+
+863 MS-DOS Canadian French.
+
+```csharp
+public Avalonia.Media.Fonts.FontCodePageCoverage Msdos863
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e8e28dae51"></span>
+
+### Msdos865 Field
+
+865 MS-DOS Nordic.
+
+```csharp
+public Avalonia.Media.Fonts.FontCodePageCoverage Msdos865
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-02205f8a20"></span>
+
+### Msdos866 Field
+
+866 MS-DOS Russian.
+
+```csharp
+public Avalonia.Media.Fonts.FontCodePageCoverage Msdos866
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-296a1bf820"></span>
+
+### None Field
+
+No codepage coverage information is advertised.
+
+```csharp
+public Avalonia.Media.Fonts.FontCodePageCoverage None
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2ea117e68e"></span>
+
+### Oem Field
+
+OEM Character Set.
+
+```csharp
+public Avalonia.Media.Fonts.FontCodePageCoverage Oem
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d982f8b813"></span>
+
+### Symbol Field
+
+Symbol Character Set.
+
+```csharp
+public Avalonia.Media.Fonts.FontCodePageCoverage Symbol
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1aedfb074b"></span>
+
+### Thai Field
+
+874 Thai.
+
+```csharp
+public Avalonia.Media.Fonts.FontCodePageCoverage Thai
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e59e5eeb10"></span>
+
+### Turkish Field
+
+1254 Turkish.
+
+```csharp
+public Avalonia.Media.Fonts.FontCodePageCoverage Turkish
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1772fb79ed"></span>
+
+### Us437 Field
+
+437 US.
+
+```csharp
+public Avalonia.Media.Fonts.FontCodePageCoverage Us437
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-da7cf6ef28"></span>
+
+### Vietnamese Field
+
+1258 Vietnamese.
+
+```csharp
+public Avalonia.Media.Fonts.FontCodePageCoverage Vietnamese
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-457e8bbbed"></span>
+
+### WeLatin1_850 Field
+
+850 WE/Latin 1.
+
+```csharp
+public Avalonia.Media.Fonts.FontCodePageCoverage WeLatin1_850
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1846a6e888"></span>
+
+### WindowsBaltic Field
+
+1257 Windows Baltic.
+
+```csharp
+public Avalonia.Media.Fonts.FontCodePageCoverage WindowsBaltic
+```
+
+</section>
+
+</ApiRefPage>
+

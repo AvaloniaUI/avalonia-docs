@@ -1,0 +1,84 @@
+---
+title: 'IThemeVariantProvider'
+hide_title: true
+slug: '/avalonia/controls/ithemevariantprovider'
+uid: 'Avalonia.Controls.IThemeVariantProvider'
+commentId: 'T:Avalonia.Controls.IThemeVariantProvider'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IThemeVariantProvider Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Resource provider with theme variant awareness.
+Can be used with [Avalonia.Controls.IResourceDictionary.ThemeDictionaries](xref:Avalonia.Controls.IResourceDictionary.ThemeDictionaries).
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface IThemeVariantProvider
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="iresourcenode">IResourceNode</a>, <a href="iresourceprovider">IResourceProvider</a>
+</div>
+</div>
+
+## Remarks
+
+This is a helper interface for the XAML compiler to make Key property accessibly by the markup extensions.
+Which means, it can only be used with ResourceDictionaries and markup extensions in the XAML code.
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Key](#uid-b4dd6cccaf) | Key property set by the compiler. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b4dd6cccaf"></span>
+
+### Key Property
+
+Key property set by the compiler.
+
+```csharp
+public Avalonia.Styling.ThemeVariant Key { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

@@ -1,0 +1,172 @@
+---
+title: 'AutoCompleteSelector<T>'
+hide_title: true
+slug: '/avalonia/controls/autocompleteselector-1'
+uid: 'Avalonia.Controls.AutoCompleteSelector`1'
+commentId: 'T:Avalonia.Controls.AutoCompleteSelector`1'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Delegate'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">AutoCompleteSelector&lt;T&gt; Delegate</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Represents the selector used by the
+[Avalonia.Controls.AutoCompleteBox](xref:Avalonia.Controls.AutoCompleteBox) control to
+determine how the specified text should be modified with an item.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public delegate AutoCompleteSelector<T>
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> MulticastDelegate <span className="apiref-page__relation-separator">-&gt;</span> AutoCompleteSelector&lt;T&gt;
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [AutoCompleteSelector&lt;T&gt;](#uid-be4dfc18e2) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-be4dfc18e2"></span>
+
+### AutoCompleteSelector&lt;T&gt; Constructor
+
+```csharp
+public AutoCompleteSelector<T>(object object, IntPtr method)
+```
+
+#### Parameters
+
+`object` object
+
+
+`method` IntPtr
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [BeginInvoke](#uid-a17d5a5cff) | No summary available. |
+| [EndInvoke](#uid-c30f4ffc30) | No summary available. |
+| [Invoke](#uid-ff76cdad75) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a17d5a5cff"></span>
+
+### BeginInvoke Method
+
+```csharp
+public IAsyncResult BeginInvoke(string search, T item, AsyncCallback callback, object object)
+```
+
+#### Parameters
+
+`search` string
+
+
+`item` T
+
+
+`callback` AsyncCallback
+
+
+`object` object
+
+
+#### Returns
+
+IAsyncResult
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c30f4ffc30"></span>
+
+### EndInvoke Method
+
+```csharp
+public string EndInvoke(IAsyncResult result)
+```
+
+#### Parameters
+
+`result` IAsyncResult
+
+
+#### Returns
+
+string
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ff76cdad75"></span>
+
+### Invoke Method
+
+```csharp
+public string Invoke(string search, T item)
+```
+
+#### Parameters
+
+`search` string
+
+
+`item` T
+
+
+#### Returns
+
+string
+
+
+</section>
+
+</ApiRefPage>
+
