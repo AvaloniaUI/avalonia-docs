@@ -244,7 +244,11 @@ const sidebars: SidebarsConfig = {
       collapsed: true,
       items: [
         'custom-controls/index',
-        'custom-controls/user-controls',
+        {
+          type: 'link',
+          label: 'User controls',
+          href: '/controls/primitives/usercontrol',
+        },
         'custom-controls/templated-controls',
         'custom-controls/custom-drawn-controls',
         'custom-controls/defining-properties',

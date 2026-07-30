@@ -28,11 +28,11 @@ The static field must follow the pattern `[PropertyName]Property`, e.g., `Backgr
 
 Failure to follow this naming convention may result in "Unable to find suitable setter or adder for property" errors during compilation.
 
-```csharp
+```csharp title="C#"
 public static readonly StyledProperty<double> CornerRadiusProperty = ...
 ```
 
-```xml
+```xml title="XAML"
 <local:MyControl CornerRadius="8" />
 ```
 

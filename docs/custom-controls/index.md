@@ -24,16 +24,16 @@ In addition to these three categories, you can also create custom derivatives of
 
 User controls are authored the same way you would author a custom `Window`: by creating a new `UserControl` from a template and adding controls to it. The `UserControl` acts as a container that combines multiple existing controls into a single, cohesive element.
 
-This type of control is best for reusable "views" or "pages" that are specific to an application, for example, a "User Details View". It is less suited for general-purpose UI elements.
+This type of control is best for reusable "views" or "pages" that are specific to an application, for example, a user profile view. It is less suited for general-purpose UI elements.
 
 To create a custom user control:
 
-1. **Define the XAML.** Create a new `UserControl` XAML file. Decide the layout and appearance of the custom control by placing existing controls, setting properties and applying styles.
-2. **Add code-behind.** Optionally, define code-behind logic to handle events, modify behavior, or give the control [styled properties](/docs/custom-controls/defining-properties#registering-a-styled-property).
+1. **Define the XAML.** Create a new `UserControl` in XAML. Decide the layout and appearance of the custom control by placing existing controls, setting properties and applying styles.
+2. **Add code-behind.** Optionally, define code-behind logic to handle events, modify behavior, or add styled properties.
 
-More detailed guidance is documented in [User controls](/docs/custom-controls/user-controls).
+More detailed guidance is documented in the [UserControl reference](/controls/primitives/usercontrol).
 
-[A sample of a custom `UserControl` is available to clone on GitHub.](https://github.com/AvaloniaUI/AvaloniaUI.QuickGuides/tree/main/CustomControl)
+A sample of a custom `UserControl` is [available to clone on GitHub](https://github.com/AvaloniaUI/AvaloniaUI.QuickGuides/tree/main/CustomControl).
 
 ### Templated controls
 
@@ -82,7 +82,7 @@ These controls all derive from `Control`, meaning properties like `Width`, `Heig
 
 ## See also
 
-- [User controls](/docs/custom-controls/user-controls): Compose existing controls into a reusable view with XAML and code-behind.
+- [User controls](/controls/primitives/usercontrol): Compose existing controls into a reusable view with XAML and code-behind.
 - [Custom templated controls](/docs/custom-controls/templated-controls): Build a lookless control whose appearance is defined by a control theme.
 - [Custom-drawn controls](/docs/custom-controls/custom-drawn-controls): Create a control that draws itself by overriding `Render`.
 - [Defining properties](/docs/custom-controls/defining-properties): Add styled, direct, and attached properties to a custom control.
