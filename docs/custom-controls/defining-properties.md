@@ -253,78 +253,82 @@ protected override void OnPropertyChanged(AvaloniaPropertyChangedEventArgs chang
 
 ## Data validation support
 
-Data validation lets your control surface errors that originate in the data it is bound to, such as a view model that implements `INotifyDataErrorInfo`.
+Data validation lets your control display an error when a bound property is detected as invalid.
 
-Starting from [Avalonia v12](/docs/avalonia12-breaking-changes), a property registered with `enableDataValidation: true` reports validation errors automatically. In earlier versions you also had to override `UpdateDataValidation` and call `DataValidationErrors.SetError`. That override is no longer needed, and you should remove it if your control has one.
+Starting from [Avalonia v12](/docs/avalonia12-breaking-changes), properties registered with `enableDataValidation: true` report validation errors automatically. In earlier versions, you would also have to override `UpdateDataValidation` and call `DataValidationErrors.SetError`. That override is no longer needed, and you should remove it if you used it in a custom control made with an earlier version of Avalonia.
 
-Adding validation to a custom control takes three steps:
+To add data validation to a custom control:
 
 1. Register the property with `enableDataValidation: true`.
 2. Place a [`DataValidationErrors`](/api/avalonia/controls/datavalidationerrors) control in the control template, so the errors have somewhere to appear.
-3. Optionally, style the `:error` pseudoclass to change the control's appearance while it has errors.
+3. Optionally, style the `:error` pseudoclass to change the control's appearance when there is a data validation error.
 
-### Enabling validation on a property
+For more information on data validation in Avalonia in general, see [Validation in data binding](/docs/data-binding/binding-validation).
 
-`enableDataValidation` works with both `StyledProperty` and `DirectProperty` registrations. The property also needs to bind `TwoWay`, because validation is triggered by writing the value back to the binding source.
+### Enabling data validation on a property
+
+`enableDataValidation` works with both [styled properties](#styled-properties) and [direct properties](#direct-properties). It is set the same way whether you are registering a new property with `Register` or reusing an existing property with `AddOWner`.
+
+:::warning
+You must set `BindingMode.TwoWay` on the property. Data validation works by returning the value to the binding source.
+:::
 
 ```csharp
 public static readonly StyledProperty<int> ValueProperty =
-    AvaloniaProperty.Register<QuantityStepper, int>(
-        nameof(Value),
+    AvaloniaProperty.Register<QuantityStepper, int>(nameof(Value),
         defaultValue: 1,
+        // highlight-next-line
         defaultBindingMode: BindingMode.TwoWay,
         enableDataValidation: true);
 ```
 
-To add validation to a property you are [reusing from another control](#reusing-an-existing-styled-property), pass metadata to `AddOwner`. This is how Avalonia's own `TextBox` adds validation to `TextBlock.TextProperty`:
-
-```csharp
-public static readonly StyledProperty<string?> TextProperty =
-    TextBlock.TextProperty.AddOwner<MyControl>(
-        new StyledPropertyMetadata<string?>(
-            defaultBindingMode: BindingMode.TwoWay,
-            enableDataValidation: true));
-```
-
 ### Displaying errors with `DataValidationErrors`
 
-Enabling validation makes the framework record errors against your control, but it does not make them visible. To display them, wrap your control template's content in a [`DataValidationErrors`](/api/avalonia/controls/datavalidationerrors) control:
+To display data validation errors to the user, wrap your custom control in a [`DataValidationErrors`](/api/avalonia/controls/datavalidationerrors) control. `DataValidationErrors` is a `ContentControl` that provides attached properties to handle error states.
+
+Use `DataValidationErrors` within `<UserControl>` for [user controls](/controls/primitives/usercontrol), or within `<ControlTemplate>` for [templated controls](/docs/custom-controls/templated-controls).
 
 ```xml
-<ControlTemplate>
+<ControlTemplate> / <UserControl>
   <DataValidationErrors>
     <!-- your control's visuals -->
   </DataValidationErrors>
-</ControlTemplate>
+</ControlTemplate> / </UserControl>
 ```
 
-`DataValidationErrors` is a `ContentControl` designed to be used inside a control template. It takes its `Owner` from the templated parent automatically, so no extra wiring is needed. Its default control theme lists the current error messages below the content. Avalonia's Fluent theme also ships a `TooltipDataValidationErrors` theme, which shows a warning icon with the messages in a tooltip instead.
+While a control has errors, `DataValidationErrors` sets the `:error` pseudoclass. Target the pseudoclass with a `Style` to customize how the control should look when in an error state.
 
-`DataValidationErrors` also exposes the following members:
+<Tabs>
 
-| Member | Description |
-|---|---|
-| `DataValidationErrors.Errors` | Attached property holding the current errors for a control. |
-| `DataValidationErrors.HasErrors` | Attached property that is `true` while the control has errors. |
-| `DataValidationErrors.ErrorConverter` | Attached `Func<object, object>` that transforms each error before it is displayed. |
-| `ErrorTemplate` | The `IDataTemplate` used to render the error collection. Set it on the `DataValidationErrors` instance. |
-| `SetErrors(control, errors)` | Sets the errors for a control directly. |
-| `SetError(control, exception)` | Sets errors from an exception, unwrapping `AggregateException` and `DataValidationException`. |
-| `ClearErrors(control)` | Removes all errors from a control. |
-
-### Styling the error state
-
-While a control has errors, `DataValidationErrors` sets the `:error` pseudoclass on it, so you can target it from your control theme:
+<TabItem value="usercontrol" label="User control example">
 
 ```xml
-<Style Selector="^:error /template/ Border#PART_Border">
-  <Setter Property="BorderBrush" Value="Red" />
-</Style>
+<UserControl.Styles>
+    <Style Selector="local|MyCustomControl:error Border#Frame">
+        <Setter Property="BorderBrush" Value="Red" />
+    </Style>
+</UserControl.Styles>
 ```
 
-### Complete example
+</TabItem>
 
-The following example is a `QuantityStepper` control with a `Value` property that participates in data validation. It is bound to a view model that rejects quantities outside the range 1–10. Pressing **+** past 10 pushes the invalid value to the view model, which reports an error; the control's border turns red and the message appears underneath it.
+<TabItem value="templatedcontrol" label="Templated control example">
+
+```xml
+<ControlTheme>
+    <Style Selector="^:error /template/ Border#PART_Border">
+        <Setter Property="BorderBrush" Value="Red" />
+    </Style>
+</ControlTheme>
+```
+
+</TabItem>
+
+</Tabs>
+
+### Data validation example
+
+The following example creates `QuantitySelector`, a control that sets a numeric value using **+** and **-** buttons. `Value` is a styled property with data validation enabled. It is bound to a view model that rejects quantities outside the range of 1–10. If a invalid value is set, the error state triggers. The control's border turns red, and an error message appears under the control.
 
 <Tabs>
 
@@ -457,6 +461,7 @@ public class OrderViewModel : INotifyPropertyChanged, INotifyDataErrorInfo
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:local="using:MyApp"
         x:Class="MyApp.MainWindow"
+        x:DataType="local:OrderViewModel"
         Title="Data validation">
 
   <Window.DataContext>
@@ -474,6 +479,26 @@ public class OrderViewModel : INotifyPropertyChanged, INotifyDataErrorInfo
 </TabItem>
 
 </Tabs>
+
+:::warning
+This window sets its own `DataContext` in XAML so the example is self-contained. The MVVM project template instead assigns one in `App.axaml.cs`:
+
+```csharp
+desktop.MainWindow = new MainWindow
+{
+    DataContext = new MainWindowViewModel(),
+};
+```
+
+That assignment runs after the XAML is loaded, so it replaces the `OrderViewModel` declared above. The compiled binding still expects `OrderViewModel`, and you get an `InvalidCastException` at run-time:
+
+```
+System.InvalidCastException: Unable to cast object of type
+'MyApp.ViewModels.MainWindowViewModel' to type 'MyApp.OrderViewModel'.
+```
+
+To use this example in a template-generated project, expose the validated property from your existing main view model and drop the `Window.DataContext` and `x:DataType` shown here.
+:::
 
 :::info
 This example reports errors through `INotifyDataErrorInfo`. Avalonia also picks up exceptions thrown by a binding source's setter. For the full set of validation approaches available to a view model, see [Validation in data binding](/docs/data-binding/binding-validation).

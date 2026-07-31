@@ -121,7 +121,7 @@ public partial class ConfirmationView : UserControl
 
 This example creates a styled property named `Title`, which displays a title at the top of `ConfirmationView`. Using a styled property means the title is variable and can be set to something different per instance of the `ConfirmationView`.
 
-:::warning[Important]
+:::warning
 You must explicitly name the root element in the `<UserControl>` tag, and then call it wherever you wish the styled property to apply. Doing so ensures the template can reference the control's properties. `root` is highlighted in the sample below to demonstrate how this is done.
 :::
 
