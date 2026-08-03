@@ -7,89 +7,24 @@ doc-type: how-to
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import NewClassLibraryVS from '/img/custom-controls/new-class-library-vs.png';
-import NewClassLibraryRider from '/img/custom-controls/new-class-library-rider.png';
-import NewClassLibraryVSCode from '/img/custom-controls/new-class-library-vscode.png';
-import InstallAvaloniaInClassLibraryVS from '/img/custom-controls/install-avalonia-in-class-library-vs.png';
-import InstallAvaloniaInClassLibraryRider from '/img/custom-controls/install-avalonia-in-class-library-rider.png';
-import InstallAvaloniaInClassLibraryVSCode from '/img/custom-controls/install-avalonia-in-class-library-vscode.png';
 import CustomControlSolution from '/img/custom-controls/custom-control-solution.png';
 import CustomControlPreview from '/img/custom-controls/custom-control-preview.png';
 
-This guide shows you how to create a custom control library and reference it for use in an Avalonia app.
+Create a custom control library as a standalone project storing multiple controls. You can then reference the library in any Avalonia app to reuse those custom controls.
 
 ## Creating a custom control library
+
+1. Start by creating a new **class libraty** project. All recommended IDEs (Visual Studio, Visual Studio Code, Jetbrains Rider) have templates for .NET class libraries.
+2. Install Avalonia in the class library project. [You can do this through the NuGet package management tab in your IDE](/docs/get-started/install-avalonia#installing-avalonia-in-an-existing-net-project).
 
 ### Creating a new class library project
 
 To start, you need a **class library** project in which to collect your custom control files.
 
-<Tabs groupId="ide">  
-  <TabItem value="rider" label="Rider">
-    1. Go to **File → New Solution**. Alternatively, **Add → New Project** to add the class library as a new project within an existing solution.
-    2. In the left panel, under the section "Project Type", select **Class Library**.
-    3. Name the project, e.g., "CCLibrary".
-    4. For "Target framework", select the preferred .NET version.
-    5. Click **Create**.
-
-    <Image light={NewClassLibraryRider} alt="A screenshot of the new project menu in Rider." position="center" maxWidth={400} cornerRadius="true"/>
-  </TabItem>
-  <TabItem value="vs" label="Visual Studio">
-    1. Go to **File → New → Project/Solution**.
-    2. Select **.NET Class Library** as the project template. Use the search bar to locate this template if it does not appear on the suggested list.
-    3. Name the project, e.g., "CCLibrary".
-    4. For "Target framework", select the preferred .NET version.
-    5. Click **Create**.
-
-    <Image light={NewClassLibraryVS} alt="A screenshot of the new project menu in Visual Studio." position="center" maxWidth={400} cornerRadius="true"/>
-  </TabItem>
-  <TabItem value="vscode" label="VS Code">
-    1. Bring up the command palette using <kbd>Ctrl</kbd> <kbd>⇧</kbd> <kbd>P</kbd> on Windows, or <kbd>Cmd</kbd> <kbd>⇧</kbd> <kbd>P</kbd> on macOS.
-    2. Search for and select the command **.NET: New Project**.
-    3. Search for and select the template **Class Library**.
-    4. Select a location for the new project. Create a new folder for the project if desired.
-    5. Name the project, e.g., "CCLibrary".
-    6. Confirm the input.
-
-    <Image light={NewClassLibraryVSCode} alt="A screenshot of the new project menu in Visual Studio Code." position="center" maxWidth={400} cornerRadius="true"/>
-  </TabItem>
-</Tabs>
-
 ### Installing Avalonia in the class library project
 
 Next, you must install the Avalonia NuGet package in the class library.
 
-<Tabs groupId="ide">  
-  <TabItem value="rider" label="Rider">
-    1. In the solution panel, select your class library project.
-    2. Click **Tools → NuGet → Manage NuGet Packages**.
-    3. Search for "Avalonia" in the search bar.
-    4. Select **Avalonia**.
-    5. Select the preferred version.
-    6. Click the name of your class library project at the bottom of the panel to install Avalonia to that project.
-
-    <Image light={InstallAvaloniaInClassLibraryRider} alt="A screenshot demonstrating how to install the Avalonia NuGet package in Rider." position="center" maxWidth={400} cornerRadius="true"/>
-  </TabItem>
-  <TabItem value="vs" label="Visual Studio">
-    1. In the solution explorer, select your class library project.
-    2. Click **Project → Manage NuGet Packages**.
-    3. Go to the **Browse** tab. Search for "Avalonia".
-    4. Select **Avalonia**.
-    5. Select the preferred version.
-    6. Click **Install**.
-
-    <Image light={InstallAvaloniaInClassLibraryVS} alt="A screenshot demonstrating how to install the Avalonia NuGet package in Visual Studio." position="center" maxWidth={400} cornerRadius="true"/>
-  </TabItem>
-  <TabItem value="vscode" label="VS Code">
-    1. Bring up the command palette using <kbd>Ctrl</kbd> <kbd>⇧</kbd> <kbd>P</kbd> on Windows, or <kbd>Cmd</kbd> <kbd>⇧</kbd> <kbd>P</kbd> on macOS.
-    2. Search for and select the command **NuGet: Add NuGet Package**.
-    3. Type in the search term "Avalonia". Confirm the input.
-    4. Select the package **Avalonia** from the search results.
-    5. Select the desired package version to install it.
-
-    <Image light={InstallAvaloniaInClassLibraryVSCode} alt="A screenshot demonstrating how to install the Avalonia NuGet package in Visual Studio Code." position="center" maxWidth={400} cornerRadius="true"/>
-  </TabItem>
-</Tabs>
 
 ### Adding a custom control to the class library
 
