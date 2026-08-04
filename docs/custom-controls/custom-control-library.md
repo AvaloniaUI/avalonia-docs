@@ -216,7 +216,7 @@ If you included a default control theme with your templated control, as shown in
 
 ### Using user controls and custom-drawn controls
 
-User controls and custom-drawn controls require no further configuration to use. Sp long as the control library is referenced in the project, and the appropriate namespace is declared, both can be directly used in XAML.
+User controls and custom-drawn controls require no further configuration to use. So long as the control library is referenced in the project, and the appropriate namespace is declared, both can be directly used in XAML.
 
 <Tabs>
 
@@ -254,7 +254,7 @@ User controls and custom-drawn controls require no further configuration to use.
         Title="AvaloniaCCLib">
 
     <!-- CircleControl from our example has no default width or height.
-         These must be set in XAML on usage. -->
+         These must be set in XAML when adding the control. -->
     // highlight-next-line
     <cc:CircleControl Width="100" Height="100" />
 
