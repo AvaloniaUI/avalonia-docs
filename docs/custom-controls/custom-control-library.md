@@ -7,9 +7,9 @@ doc-type: how-to
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import CustomControlLibraryUsage from '/img/custom-controls/custom-control-library-usage.png';
 import NewClassLibraryVS from '/img/custom-controls/new-class-library-vs.png';
 import CustomControlSolution from '/img/custom-controls/custom-control-solution.png';
-import CustomControlPreview from '/img/custom-controls/custom-control-preview.png';
 
 Create a custom control library as a standalone project storing multiple controls. You can then reference the library in any Avalonia app to reuse those custom controls.
 
@@ -27,10 +27,6 @@ A control library can contain as many controls as you wish and can mix all three
 
 The examples below show a class library named `CCLibrary`, to which we will add the custom controls [`ConfirmationView`](/controls/primitives/usercontrol#basic-example), [`ToggleLabel`](/docs/custom-controls/templated-controls) and [`CircleControl`](/docs/custom-controls/custom-drawn-controls).
 
-You do not need to edit the `.csproj` file to register control files. Once the Avalonia package is installed, every `.cs` and `.axaml` file in the project is compiled into the library.
-
-When finished, ``CCLibrary` is structured like this:
-
 ```text
 CCLibrary/
 ├── CCLibrary.csproj
@@ -38,7 +34,6 @@ CCLibrary/
     └── ConfirmationView.axaml.cs
 ├── ToggleLabel.cs
 ├── CircleControl.cs
-├── PlotPanel.cs
 └── Themes/
     └── Generic.axaml
 ```
@@ -47,9 +42,9 @@ CCLibrary/
 
 `ConfirmationView` is a user control designed to be a reusable confirmation dialog. See the [`UserControl` page](/controls/primitives/usercontrol#basic-example) to learn how to create this control.
 
-To add it to `CCLibrary`, place both the XAML file (`ConfirmationView.axaml`) and the code-behind file (`ConfirmationView.axaml.cs`) into the `CCLibrary` directory.
+To add it to `CCLibrary`, place both the XAML file (`ConfirmationView.axaml`) and the code-behind file (`ConfirmationView.axaml.cs`) into the directory of the control library.
 
-Ensure both files use the namespace of the library project (`CCLibrary` in this example), not the namespace of the executable project.
+Ensure both files use the namespace of the library project (`CCLibrary` in this case), not the namespace of the executable project.
 
 <Tabs>
 
@@ -62,19 +57,7 @@ Ensure both files use the namespace of the library project (`CCLibrary` in this 
              x:Class="CCLibrary.ConfirmationView"
              x:Name="root">
 
-  <<StackPanel Margin="20" Spacing="12">
-    <TextBlock Text="{Binding #root.Title}"
-               HorizontalAlignment="Center"
-               FontWeight="Bold" />
-    <TextBlock Text="Are you sure?"
-               HorizontalAlignment="Center" />
-    <StackPanel Orientation="Horizontal"
-                HorizontalAlignment="Center"
-                Spacing="12">
-      <Button Content="Yes" />
-      <Button Content="No" />
-    </StackPanel>
-  </StackPanel>>
+  <!-- Control's design and layout -->
 
 </UserControl>
 ```
@@ -97,14 +80,7 @@ public partial class ConfirmationView : UserControl
         InitializeComponent();
     }
 
-    public static readonly StyledProperty<string?> TitleProperty =
-        AvaloniaProperty.Register<ConfirmationView, string?>(nameof(Title));
-
-    public string? Title
-    {
-        get => GetValue(TitleProperty);
-        set => SetValue(TitleProperty, value);
-    }
+    // Control's events, logic, properties, etc.
 }
 ```
 
@@ -114,57 +90,118 @@ public partial class ConfirmationView : UserControl
 
 ### Adding a templated control
 
-`ToggleLabel` is a custom templated control that displays a text label when toggled. Because it is a templated control, it has no fixed appearance—this is set in a control theme which can vary between applications. For details on how to create this custom control, see the [Templated controls page](/docs/custom-controls/templated-controls).
+`ToggleLabel` is a custom control that displays a text label. Being a templated control, it has no fixed appearance—this is set in a control theme which can vary between applications. See the [Templated controls page](/docs/custom-controls/templated-controls) to learn how to create this control.
 
-Add the `ToggleLabel.cs` control class file to the control library.
+To add it to `CCLibrary`, place the `ToggleLabel.cs` class file into the directory of the control library.
 
-```csharp title="ToggleLabel.cs"
+You can also add a default control theme to allow the templated control to be used immediately in the executable project. Like in WPF, the usual convention is to collect control themes in a resource dictionary in `Themes/Generic.axaml`. If you are adding multiple templated controls, each will require a separate control theme.
+
+Like the previous example, both files must use the namespace of the class library project (`CCLibrary` in this case).
+
+<Tabs>
+
+<TabItem value="templated-control" label="ToggleLabel.cs">
+
+```csharp
 using Avalonia;
 using Avalonia.Controls.Primitives;
 
+// highlight-next-line
 namespace CCLibrary;
 
 public class ToggleLabel : TemplatedControl
 {
-    public static readonly StyledProperty<string> LabelTextProperty =
-        AvaloniaProperty.Register<ToggleLabel, string>(nameof(LabelText), "Default");
-
-    public string LabelText
-    {
-        get => GetValue(LabelTextProperty);
-        set => SetValue(LabelTextProperty, value);
-    }
+    // Control's events, logic, properties, etc.
 }
 ```
 
-Next, add a default control theme. By usual convention, default control themes included with a library are collected in a resource dictionary at `Themes/Generic.axaml`. If you are adding multiple templated controls, each will require a separate control theme.
+</TabItem>
 
-```xml title="Themes/Generic.axaml"
+<TabItem value="control-theme" label="Themes/Generic.axaml">
+
+```xml
 <ResourceDictionary xmlns="https://github.com/avaloniaui"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    // highlight-next-line
                     xmlns:cc="using:CCLibrary">
 
   <ControlTheme x:Key="{x:Type cc:ToggleLabel}" TargetType="cc:ToggleLabel">
-    <Setter Property="Background" Value="#3B82F6" />
-    <Setter Property="Template">
-      <ControlTemplate>
-        <Border Background="{TemplateBinding Background}" Padding="8" CornerRadius="4">
-          <TextBlock Text="{TemplateBinding LabelText}" />
-        </Border>
-      </ControlTemplate>
-    </Setter>
+    <!-- Control's default design and layout -->
   </ControlTheme>
 
 </ResourceDictionary>
 ```
 
-Add one `ControlTheme` per templated control to this dictionary.
+</TabItem>
 
-:::caution Generic.axaml is not loaded automatically
-Unlike WPF, Avalonia does not search referenced assemblies for a generic theme file. A `ControlTheme` defined in your library only takes effect once the consuming app merges the dictionary. Without that step, `ToggleLabel` resolves no template and renders nothing.
+</Tabs>
+
+:::caution
+Default control themes in a class library are not applied automatically. Without explicit inclusion of the resource dictionary, the templated control receives no template and does not render. See [Using templated controls](#using-templated-controls) for more information.
 :::
 
-To load the dictionary, merge it into the consuming app's `App.axaml` using the [`avares://` URI scheme](/docs/fundamentals/including-assets).
+### Adding a custom-drawn control
+
+`CircleControl` is a control that draws an ellipse that is colored with a configurable `Fill` property. See the [Custom-drawn controls page](/docs/custom-controls/custom-drawn-controls) to learn how to create this control. It is a custom-drawn control, meaning it paints itself and requires no control theme.
+
+To add it to `CCLibrary`, place the single `CircleControl.cs` class file into the directory of the control library. Like the previous examples, the class file must use the namespace of the class library project (`CCLibrary` in this case).
+
+```csharp title="CircleControl.cs"
+using System;
+using Avalonia;
+using Avalonia.Controls;
+using Avalonia.Media;
+
+// highlight-next-line
+namespace CCLibrary;
+
+public class CircleControl : Control
+{
+    // Control's specifications
+
+    public override void Render(DrawingContext context)
+    {
+        // Control's appearance as drawn by DrawingContext
+    }
+}
+```
+
+## Referencing a custom control library
+
+To use the custom controls in a control library, you must reference the class library project in the executable project.
+
+The example below demonstrates how this works using an Avalonia MVVM project named `AvaloniaCCLib`. This project and `CCLibrary`, [from the section above](#adding-custom-controls-to-the-class-library), are included together in a solution titled `MyControlsLibrary`.
+
+<Image light={CustomControlSolution} alt="A screenshot of a solution containing two projects in Visual Studio." position="center" maxWidth={400} cornerRadius="true"/>
+
+### Adding a project reference
+
+In the project file of the executable project (`AvaloniaCCLib.csproj`), add a `ProjectReference` pointing at the directory path of the control library's project file (`CCLibrary.csproj`).
+
+```xml title="AvaloniaCCLib.csproj"
+<ItemGroup>
+  <ProjectReference Include="..\MyControlsLibrary\CCLibrary.csproj" />
+</ItemGroup>
+```
+
+### Adding namespace declarations
+
+To access your custom controls in the executable project, make a namespace declaration in any relevant XAML files. In the example below, `cc` is chosen as the namespace reference, which allows custom controls from `CCLibrary` to be used by prefixing with `cc:`.
+
+```xml
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        // highlight-next-line
+        xmlns:cc="using:CCLibrary"
+        x:Class="AvaloniaCCLib.Views.MainWindow"
+        Title="AvaloniaCCLib">
+```
+
+### Using templated controls
+
+To use a templated control in the executable project, it must have a control template. If no template is available, the control will not render when you run the app.
+
+If you included a default control theme with your templated control, as shown in the [`ToggleLabel` example above](#adding-a-templated-control), be aware that the default control theme is not applied automatically. You must explicitly merge the resource dictionary containing the control theme into `App.axaml` of the executable project. This is done by using the [`avares://` URI scheme](/docs/fundamentals/including-assets), pointing at the resource dictionary file in the class library project. Here is an example using the `CCLibrary` class library from the sections above.
 
 ```xml title="App.axaml"
 <Application.Resources>
@@ -177,156 +214,60 @@ To load the dictionary, merge it into the consuming app's `App.axaml` using the 
 </Application.Resources>
 ```
 
-In the URI, `CCLibrary` is the assembly name of your class library, and `/Themes/Generic.axaml` is the path to the dictionary inside it.
+### Using user controls and custom-drawn controls
 
-:::tip
-Add a `Design.PreviewWith` block to `Generic.axaml` to render the control in the [XAML live previewer](/docs/app-development/xaml-preview-and-design-settings) while you edit its theme.
+User controls and custom-drawn controls require no further configuration to use. Sp long as the control library is referenced in the project, and the appropriate namespace is declared, both can be directly used in XAML.
 
-```xml
-<Design.PreviewWith>
-  <cc:ToggleLabel LabelText="Preview" />
-</Design.PreviewWith>
-```
-:::
+<Tabs>
 
-For more on control themes, template parts and pseudoclasses, see [Templated controls](/docs/custom-controls/templated-controls).
-
-### Adding a custom-drawn control
-
-A custom-drawn control paints itself by overriding `Render`, so it is a single `.cs` file with no accompanying XAML. This `CircleControl` draws an ellipse using a configurable `Fill` property.
-
-```csharp title="CircleControl.cs"
-using System;
-using Avalonia;
-using Avalonia.Controls;
-using Avalonia.Media;
-
-namespace CCLibrary;
-
-public class CircleControl : Control
-{
-    public static readonly StyledProperty<IBrush> FillProperty =
-        AvaloniaProperty.Register<CircleControl, IBrush>(nameof(Fill), Brushes.Blue);
-
-    public IBrush Fill
-    {
-        get => GetValue(FillProperty);
-        set => SetValue(FillProperty, value);
-    }
-
-    static CircleControl()
-    {
-        AffectsRender<CircleControl>(FillProperty);
-    }
-
-    public override void Render(DrawingContext context)
-    {
-        var radius = Math.Min(Bounds.Width, Bounds.Height) / 2;
-        var center = new Point(Bounds.Width / 2, Bounds.Height / 2);
-        context.DrawEllipse(Fill, null, center, radius, radius);
-    }
-}
-```
-
-Because the control carries its own drawing code, it needs no resource dictionary. Consuming apps can use it as soon as they reference the library.
-
-For more on the drawing API, see [Custom-drawn controls](/docs/custom-controls/custom-drawn-controls).
-
-### Adding a custom panel
-
-Layout panels also package as a single class file. This `PlotPanel` overrides `MeasureOverride` and `ArrangeOverride` to position its children at a fixed offset.
-
-```csharp title="PlotPanel.cs"
-using Avalonia;
-using Avalonia.Controls;
-
-namespace CCLibrary;
-
-public class PlotPanel : Panel
-{
-    protected override Size MeasureOverride(Size availableSize)
-    {
-        var panelDesiredSize = new Size();
-
-        foreach (var child in Children)
-        {
-            child.Measure(availableSize);
-            panelDesiredSize = child.DesiredSize;
-        }
-
-        return panelDesiredSize;
-    }
-
-    protected override Size ArrangeOverride(Size finalSize)
-    {
-        foreach (var child in Children)
-        {
-            double x = 50;
-            double y = 50;
-
-            child.Arrange(new Rect(new Point(x, y), child.DesiredSize));
-        }
-
-        return finalSize;
-    }
-}
-```
-
-For more on the measure and arrange passes, see [Custom panel](/docs/custom-controls/custom-panel).
-
-## Referencing a custom control library
-
-Reference your custom control library in an Avalonia project to allow those custom controls to be used.
-
-This example uses a new project built with the Avalonia MVVM template titled `AvaloniaCCLib`.
-
-<Image light={CustomControlSolution} alt="A screenshot of a solution containing two projects in Visual Studio." position="center" maxWidth={400} cornerRadius="true"/>
-
-### Add a project reference
-
-1. Open the `.csproj` file of your executable project. (`AvaloniaCCLib`, in this example.)
-2. Within the `<Project>...</Project>` tags, add a `ProjectReference` pointing to the directory path of the `.csproj` file of the class library project.
-
-```xml title="AvaloniaCCLib.csproj"
-<ItemGroup>
-  <ProjectReference Include="..\MyControlsLibrary\CCLibrary.csproj" />
-</ItemGroup>
-```
-
-### Add XML namespace declaration
-
-You can now make a namespace declaration in `.axaml` files of your Avalonia project to access your custom controls in XAML.
-
-1. Add a line similar to this one to the opening `<Window>` tag: `xmlns:cc="using:CCLibrary"`. (Remember to change the name of the class library project if you used a different one.)
-
-2. Add a custom control to the window's content zone by prefixing with `cc`.
+<TabItem value="user-control-usage" label="ConfirmationView">
 
 ```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:AvaloniaCCLib.ViewModels"
         // highlight-next-line
         xmlns:cc="using:CCLibrary"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="AvaloniaCCLib.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
         Title="AvaloniaCCLib">
-  <Window.Styles>
-    <Style Selector="cc|MyCustomControl">
-      <Setter Property="Background" Value="Yellow"/>
-    </Style>
-  </Window.Styles>
 
-  //highlight-next-line
-  <cc:MyCustomControl Height="200" Width="300"/>
+    // highlight-next-line
+    <cc:ConfirmationView />
 
 </Window>
 ```
 
-3. Build the solution.
-4. Verify you can see the custom control in the running window or preview.
+</TabItem>
 
-<Image light={CustomControlPreview} alt="A screenshot of an IDE, displaying XAML code in one window and a preview of a user interface in another." position="center" maxWidth={400} cornerRadius="true"/>
+<TabItem value="custom-drawn-control-usage" label="CircleControl">
+
+```xml
+
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:AvaloniaCCLib.ViewModels"
+        // highlight-next-line
+        xmlns:cc="using:CCLibrary"
+        x:Class="AvaloniaCCLib.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Title="AvaloniaCCLib">
+
+    <!-- CircleControl from our example has no default width or height.
+         These must be set in XAML on usage. -->
+    // highlight-next-line
+    <cc:CircleControl Width="100" Height="100" />
+
+</Window>
+
+```
+
+</TabItem>
+
+</Tabs>
+
+<Image light={CustomControlLibraryUsage} maxWidth={400} cornerRadius="true" position="center" alt="A screenshot showing all three custom controls from the examples in this section in use." caption="All three custom controls from the control library in use together." />
+<br />
 
 ## XML namespace definitions
 
