@@ -1,0 +1,71 @@
+.root {
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+  margin: 1.5rem 0;
+}
+
+/* Owns the width cap: fluid below it, fixed above it. */
+.figure {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+}
+
+.frame {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border: 0;
+}
+
+/*
+ * Neutralises the global `iframe` rule in src/styles/custom.scss, which applies
+ * an offset drop shadow to every iframe on the site. A class beats a bare
+ * element selector on specificity, so no !important is needed.
+ */
+.embed {
+  aspect-ratio: 16 / 9;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+/*
+ * `auto <ratio>` rather than a bare ratio: a <video> has no intrinsic ratio
+ * until metadata loads (it defaults to 300x150), so this reserves the right
+ * space up front and then switches to the file's real ratio, instead of
+ * permanently letterboxing anything that isn't 16:9.
+ */
+.video {
+  aspect-ratio: auto 16 / 9;
+  background-color: #000;
+  object-fit: contain;
+}
+
+.cornerRadius {
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.caption {
+  margin: 0;
+  color: var(--ifm-color-emphasis-700);
+  font-size: 0.875rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* Deliberately hard to miss: an unrecognised src should not ship unnoticed. */
+.fallback {
+  display: block;
+  padding: 1rem;
+  border: 1px dashed var(--ifm-color-danger);
+  border-radius: 8px;
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 0.875rem;
+  word-break: break-all;
+}
