@@ -290,7 +290,7 @@ using Avalonia.Metadata;
 
 The main reason to use the URL format is to share the same namespace identification across multiple assemblies, so that many separate namespaces can be referenced with a single prefix.
 
-In contrast, the `using:` or `clr-namespace:` formats work strictly on a one-to-one basis: one namespace, one prefix. However, they require no additional registration in the assembly info.
+In contrast, the `using:` or `clr-namespace:` formats work strictly on a one-to-one basis: one namespace, one prefix. However, they require no registration in the assembly info.
 
 For more information on referencing custom classes in XAML, see [Referencing your own types](/docs/xaml/namespaces#referencing-your-own-types).
 
