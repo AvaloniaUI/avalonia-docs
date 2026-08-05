@@ -90,11 +90,11 @@ public partial class ConfirmationView : UserControl
 
 ### Adding a templated control
 
-`ToggleLabel` is a custom control that displays a text label. Being a templated control, it has no fixed appearance—this is set in a control theme which can vary between applications. See the [Templated controls page](/docs/custom-controls/templated-controls) to learn how to create this control.
+`ToggleLabel` is a custom control that displays a text label. Being a templated control, it has no fixed appearance—this is set in a control theme, which can vary between applications. See the [Templated controls page](/docs/custom-controls/templated-controls) to learn how to create this control.
 
 To add it to `CCLibrary`, place the `ToggleLabel.cs` class file into the directory of the control library.
 
-You can also add a default control theme to allow the templated control to be used immediately in the executable project. Like in WPF, the usual convention is to collect control themes in a resource dictionary in `Themes/Generic.axaml`. If you are adding multiple templated controls, each will require a separate control theme.
+You can also add a default control theme to allow the templated control to be used immediately in the executable project. Like in WPF, the usual convention is to collect control themes in a resource dictionary under a `Themes` subdirectory. If you are adding multiple templated controls, each will require a separate control theme.
 
 Like the previous example, both files must use the namespace of the class library project (`CCLibrary` in this case).
 
@@ -126,7 +126,7 @@ public class ToggleLabel : TemplatedControl
                     xmlns:cc="using:CCLibrary">
 
   <ControlTheme x:Key="{x:Type cc:ToggleLabel}" TargetType="cc:ToggleLabel">
-    <!-- Control's default design and layout -->
+    <!-- Control's default visual appearance-->
   </ControlTheme>
 
 </ResourceDictionary>
@@ -201,7 +201,9 @@ To access your custom controls in the executable project, make a namespace decla
 
 To use a templated control in the executable project, it must have a control template. If no template is available, the control will not render when you run the app.
 
-If you included a default control theme with your templated control, as shown in the [`ToggleLabel` example above](#adding-a-templated-control), be aware that the default control theme is not applied automatically. You must explicitly merge the resource dictionary containing the control theme into `App.axaml` of the executable project. This is done by using the [`avares://` URI scheme](/docs/fundamentals/including-assets), pointing at the resource dictionary file in the class library project. Here is an example using the `CCLibrary` class library from the sections above.
+If you included a default control theme with your templated control, as shown in the [`ToggleLabel` example above](#adding-a-templated-control), be aware that the default control theme is not applied automatically. You must explicitly merge the resource dictionary containing the control theme into `App.axaml` of the executable project.
+
+This is done using `ResourceInclude`, which uses the [`avares://` URI scheme](/docs/fundamentals/including-assets) to locate the resource dictionary file in the class library project. Here is an example using `CCLibrary` from the sections above.
 
 ```xml title="App.axaml"
 <Application.Resources>
@@ -274,18 +276,10 @@ User controls and custom-drawn controls require no further configuration to use.
 When referencing a control library in a `.axaml` file, you can use the URL identification format. For example:
 
 ```xml
-xmlns:cc="https://my.controls.url"
+<Window xmlns:cc="https://my.controls.url" />
 ```
 
-This is possible because control libraries contain XML namespace definitions. These map URLs to the code namespaces, and are in the project's `Properties/AssemblyInfo.cs` file. (See [the Avalonia source code](https://github.com/AvaloniaUI/Avalonia/blob/main/src/Avalonia.Controls/Properties/AssemblyInfo.cs) for an example.)
-
-```csharp title="AssemblyInfo.cs"
-[assembly: XmlnsDefinition("https://github.com/avaloniaui", "Avalonia")]
-```
-
-### Shared namespace definitions
-
-One URL can map to multiple namespaces in your control library. In your project's `Properties/AssemblyInfo.cs` file, you can add multiple XML namespace definitions that use the same URL but map to different namespaces.
+This requires registration in the `AssemblyInfo.cs` file of the class library project. Multiple XML namespaces can share the same URL. ([Avalonia itself](https://github.com/AvaloniaUI/Avalonia/blob/main/src/Avalonia.Controls/Properties/AssemblyInfo.cs) shares the `https://github.com/avaloniaui` URL between most packages.)
 
 ```csharp title="AssemblyInfo.cs"
 using Avalonia.Metadata;
@@ -293,6 +287,12 @@ using Avalonia.Metadata;
 [assembly: XmlnsDefinition("https://my.controls.url", "My.NameSpace")]
 [assembly: XmlnsDefinition("https://my.controls.url", "My.NameSpace.Other")]
 ```
+
+The main reason to use the URL format is to share the same namespace identification across multiple assemblies, so that many separate namespaces can be referenced with a single prefix.
+
+In contrast, the `using:` or `clr-namespace:` formats work strictly on a one-to-one basis: one namespace, one prefix. However, they require no additional registration in the assembly info.
+
+For more information on referencing custom classes in XAML, see [Referencing your own types](/docs/xaml/namespaces#referencing-your-own-types).
 
 ## See also
 

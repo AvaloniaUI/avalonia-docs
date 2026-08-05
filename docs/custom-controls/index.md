@@ -37,7 +37,7 @@ A sample of a custom `UserControl` is [available to clone on GitHub](https://git
 
 ### Templated controls
 
-Templated controls are lookless, meaning the control's behavior and logic are separate from its appearance. This allows a templated control to be restyled for different themes or applications. The behavior and properties of a `TemplatedControl` are defined in code, while the visual representation is styled in XAML, then included in the `Application` via `StyleInclude`.
+Templated controls are lookless, meaning the control's behavior and logic are separate from its appearance. This allows a templated control to be restyled for different themes or applications. The behavior and properties of a `TemplatedControl` are defined in code, while the visual representation is designed in XAML as a `ControlTheme`.
 
 This type of control is best for general-purpose UI elements that you wish to share across multiple applications. The majority of [Avalonia's standard controls](/controls) are templated controls.
 
