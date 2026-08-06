@@ -57,6 +57,8 @@
   //#region ----------- Z Indices ------------
   --z-sidebar: 2000;
   --z-backdrop: 1100;
+  // Above the navbar (200), DocSearch (300) and the mobile sidebar (2000).
+  --z-lightbox: 2100;
   //#endregion
 }
 

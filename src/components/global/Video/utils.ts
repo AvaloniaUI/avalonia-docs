@@ -6,9 +6,22 @@
  * site build.
  */
 
+export type EmbedProvider = 'youtube' | 'vimeo';
+
 export type ParsedSource =
   | { kind: 'file'; src: string; type?: string }
-  | { kind: 'embed'; src: string }
+  | {
+      kind: 'embed';
+      src: string;
+      /**
+       * Provider metadata, all optional so existing callers that only read
+       * `kind`/`src`/`type` keep type-checking. <Video> ignores these; they
+       * exist so a poster URL can be derived without re-parsing `src`.
+       */
+      provider?: EmbedProvider;
+      videoId?: string;
+      playlistId?: string;
+    }
   | { kind: 'unknown'; src: string };
 
 const MIME_TYPES: Record<string, string> = {
@@ -69,6 +82,8 @@ function parseYouTube(url: URL): ParsedSource | undefined {
       return {
         kind: 'embed',
         src: `https://www.youtube-nocookie.com/embed/videoseries?list=${encodeURIComponent(list)}&rel=0`,
+        provider: 'youtube',
+        playlistId: list,
       };
     }
     return undefined;
@@ -79,7 +94,13 @@ function parseYouTube(url: URL): ParsedSource | undefined {
   if (start) params.set('start', String(start));
   if (list) params.set('list', list);
 
-  return {kind: 'embed', src: `https://www.youtube-nocookie.com/embed/${id}?${params}`};
+  return {
+    kind: 'embed',
+    src: `https://www.youtube-nocookie.com/embed/${id}?${params}`,
+    provider: 'youtube',
+    videoId: id,
+    ...(list ? {playlistId: list} : {}),
+  };
 }
 
 /** Handles vimeo.com/<id>, unlisted vimeo.com/<id>/<hash>, and player.vimeo.com URLs. */
@@ -101,6 +122,8 @@ function parseVimeo(url: URL): ParsedSource | undefined {
     src: hash
       ? `https://player.vimeo.com/video/${id}?h=${encodeURIComponent(hash)}`
       : `https://player.vimeo.com/video/${id}`,
+    provider: 'vimeo',
+    videoId: id,
   };
 }
 
@@ -146,6 +169,37 @@ export function toCssLength(value?: string | number): string | undefined {
 
   const trimmed = String(value).trim();
   return /^\d+(?:\.\d+)?$/.test(trimmed) ? `${trimmed}px` : trimmed;
+}
+
+/**
+ * `hqdefault.jpg` over `maxresdefault.jpg`: the latter 404s for any video that
+ * was never uploaded above 720p. This one always exists, but it is 480x360, so
+ * render it with `object-fit: cover` or the baked-in letterbox bars show.
+ */
+export function youTubeThumbnail(videoId: string): string {
+  return `https://i.ytimg.com/vi/${encodeURIComponent(videoId)}/hqdefault.jpg`;
+}
+
+/**
+ * Adds query parameters to an embed URL. Needed because parseYouTube always
+ * emits `?rel=0` while parseVimeo's no-hash branch emits no query string at
+ * all, so a hand-rolled `src + '&autoplay=1'` breaks on Vimeo.
+ */
+export function withEmbedParams(
+  src: string,
+  params: Record<string, string>,
+): string {
+  try {
+    const url = new URL(src);
+    for (const [key, value] of Object.entries(params)) {
+      url.searchParams.set(key, value);
+    }
+    return url.toString();
+  } catch {
+    const query = new URLSearchParams(params).toString();
+    if (!query) return src;
+    return `${src}${src.includes('?') ? '&' : '?'}${query}`;
+  }
 }
 
 /** MDX hands over strings for quoted props, and `"false"` must not read as true. */

@@ -10,6 +10,7 @@ import type { Props } from '@theme/TOC';
 
 import styles from './styles.module.css';
 import { anthropic, openai, t3 } from '../TOCItems/icons';
+import { CompanionVideoCard, useCompanionVideo } from '@site/src/components/global/CompanionVideo';
 
 // SVG Icons
 const MarkdownIcon = () => (
@@ -69,6 +70,8 @@ export default function TOC({ className, ...props }: Props): ReactNode {
 
   // Get doc metadata and current URL
   const { metadata } = useDoc();
+  // Optional companion video declared by the page's `video:` front matter.
+  const companionVideo = useCompanionVideo();
   const { siteConfig } = useDocusaurusContext();
   const location = useLocation();
 
@@ -102,7 +105,15 @@ export default function TOC({ className, ...props }: Props): ReactNode {
   };
 
   return (
-    <div className={styles.tableOfContentsWrapper}>
+    <div className={clsx(styles.tableOfContentsWrapper, companionVideo && styles.hasVideo)}>
+      {/* Companion video, when the page declares one. Rendered before the
+          header row on purpose: the "Open in" dropdown below is absolutely
+          positioned, so keeping this earlier in the DOM lets document order
+          paint the open dropdown on top without any z-index juggling. */}
+      {companionVideo && (
+        <CompanionVideoCard video={companionVideo} variant="toc" />
+      )}
+
       {/* Header with title and dropdown */}
       <div className="flex items-center justify-between mb-4 max-[1359px]:flex-col max-[1359px]:items-start max-[1359px]:gap-3">
         <h3 className="m-0 max-[1359px]:mr-0 mr-4 uppercase" style={{ fontSize: '13px', fontWeight: 600, letterSpacing: '0.08em', color: 'var(--color-muted)' }}>On this page</h3>

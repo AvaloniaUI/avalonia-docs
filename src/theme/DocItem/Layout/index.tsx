@@ -7,6 +7,8 @@
  *
  * Reason for overriding:
  * - Move the version banner above the content row, so it spans the full width
+ * - Render a page's companion video in the article when the TOC column that
+ *   normally hosts it is not there
  */
 
 import React from 'react';
@@ -24,6 +26,11 @@ import DocBreadcrumbs from '@theme/DocBreadcrumbs';
 import ContentVisibility from '@theme/ContentVisibility';
 import type {Props} from '@theme/DocItem/Layout';
 import styles from '@docusaurus/theme-classic/lib/theme/DocItem/Layout/styles.module.css';
+import {
+  CompanionVideoCard,
+  useCompanionVideo,
+} from '@site/src/components/global/CompanionVideo';
+import companionVideoStyles from './companionVideo.module.css';
 
 /**
  * Decide if the toc should be rendered, on mobile or desktop viewports
@@ -51,6 +58,15 @@ function useDocTOC() {
 export default function DocItemLayout({children}: Props): JSX.Element {
   const docTOC = useDocTOC();
   const {metadata} = useDoc();
+  const companionVideo = useCompanionVideo();
+
+  // The TOC column normally hosts the companion video. It is absent below
+  // 997px, and also on any page that sets `hide_table_of_contents` or simply
+  // has no headings — which is exactly the kind of landing page most likely to
+  // have a companion video. When it is absent the card belongs in the article,
+  // at every width, so a declared video is never silently dropped.
+  const hasDesktopTOC = Boolean(docTOC.desktop);
+
   return (
     <>
       {/* ------- CUSTOM CODE -------- */}
@@ -66,6 +82,15 @@ export default function DocItemLayout({children}: Props): JSX.Element {
               <DocBreadcrumbs />
               <DocVersionBadge />
               {docTOC.mobile}
+              {companionVideo && (
+                <CompanionVideoCard
+                  video={companionVideo}
+                  variant="article"
+                  className={clsx(
+                    hasDesktopTOC && companionVideoStyles.hiddenOnDesktop,
+                  )}
+                />
+              )}
               <DocItemContent>{children}</DocItemContent>
               <DocItemFooter />
               <DocItemPaginator />
