@@ -23,22 +23,27 @@ Parcel automatically generates a `.desktop` file for proper application launcher
 
 ## Dependencies
 
-Parcel includes following dependencies in DEB/RPM packages to ensure compatibility across Linux distributions:
+Parcel declares the following runtime dependencies in package metadata. Add any application- or distribution-specific libraries with the additional dependency settings.
 
-### Runtime Dependencies
-- `libc6` - GNU C Library
-- `libgcc1` or `libgcc-s1` - GCC runtime library
-- `libgssapi-krb5-2` - Kerberos authentication
-- `libstdc++6` - GNU Standard C++ Library
-- `zlib1g` - Compression library
-- `libssl1.0.0 | libssl1.0.2 | libssl1.1 | libssl3` - SSL/TLS library (multiple versions supported)
-- `libicu` - Unicode and internationalization support (multiple versions supported)
+### DEB dependencies
 
-### Avalonia-Specific Dependencies
-- `libx11-6` - X11 client library
-- `libice6` - Inter-Client Exchange library
-- `libsm6` - X11 Session Management library
-- `libfontconfig1` - Font configuration library
+- `libc6`
+- `libgcc1`
+- `libgssapi-krb5-2`
+- `libstdc++6`
+- `zlib1g`
+- One of `libssl1.0.0`, `libssl1.0.2`, `libssl1.1`, or `libssl3`
+- `libicu` or a versioned `libicu` package
+
+### RPM dependencies
+
+- `glibc`
+- `libgcc`
+- `krb5-libs`
+- `libstdc++`
+- `zlib`
+- `openssl-libs`
+- `libicu`
 
 ## Bundle Configuration
 
