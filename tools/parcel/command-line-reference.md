@@ -12,7 +12,7 @@ Parcel provides a command-line tool that packages Avalonia apps for Windows, mac
 Before using Parcel, ensure you have:
 
 1. **Parcel .NET tool installed** - Follow the [Setup guide](/tools/parcel/setup).
-2. **Valid license key** - Set the `PARCEL_LICENSE_KEY` environment variable or use the `--license-key` option with a valid license key from the portal.
+2. **Valid license key** - Set the `AVALONIA_TOOLS_LICENSE_KEY` environment variable or use the `--license-key` option with a valid license key from the portal.
 
 :::note
 Parcel CLI is only available with a [Avalonia Plus](https://avaloniaui.net/pricing) license.
@@ -30,7 +30,7 @@ parcel [command] [options]
 |--------|-------------|
 | `-?, -h, --help` | Show help and usage information |
 | `--version` | Show version information |
-| `--license-key` | License key necessary to run Parcel. If unset, falls back to the "PARCEL_LICENSE_KEY" environment variable, or existing app session |
+| `--license-key` | License key necessary to run Parcel. If unset, falls back to `AVALONIA_TOOLS_LICENSE_KEY`, then to an existing app session |
 | `--verbosity` | Set the verbosity level (quiet, minimal, normal, detailed, diagnostic) |
 
 ## Commands
@@ -53,17 +53,17 @@ parcel pack <project> [options]
 |--------|-------------|---------|
 | `-o, --output` | Output directory | `<project-dir>\bin\packages` |
 | `-r, --runtimes` | Runtime identifiers to pack application with (can specify multiple) | current platform runtime |
-| `-p, --packages` | Package formats to output: `deb`, `dmg`, `nsis`, `zip` (can specify multiple) | current platform package  |
+| `-p, --packages` | Package formats to output: `deb`, `dmg`, `msix`, `nsis`, `pkg`, `rpm`, `zip` (can specify multiple) | current platform package  |
 | `--no-build` | Skip recompiling input project | false |
 
 **Example:**
 
 ```bash
 # Pack for current platform
-parcel pack MyApp.parcel.xml
+parcel pack MyApp.parcel
 
 # Pack for multiple platforms and formats
-parcel pack MyApp.parcel.xml -r osx-x64 -r linux-x64 -p dmg -p deb
+parcel pack MyApp.parcel -r osx-x64 -r linux-x64 -p dmg -p deb
 ```
 
 ### step
@@ -86,8 +86,11 @@ parcel step [command] <input> <output> [options]
 | `sign-win` | Signs Windows executable | Application executable or installed | Signed executable or installer |
 | `create-zip` | Creates zip archive for distribution | Directory or file | Zip archive (.zip) |
 | `create-dmg` | Creates DMG disk image for macOS | App bundle (.app) | Unsigned DMG image file |
+| `create-pkg` | Creates a macOS installer package | App bundle (.app) | Unsigned PKG installer (.pkg) |
 | `create-deb` | Creates Debian package for Linux | Application directory | Debian package (.deb) |
+| `create-rpm` | Creates RPM package for Linux | Application directory | RPM package (.rpm) |
 | `create-nsis` | Creates Windows NSIS installer | Application directory | Unsigned NSIS installer (.exe) |
+| `create-msix` | Creates Windows MSIX package | Application directory | Unsigned MSIX package (.msix) |
 
 **Example:**
 
@@ -189,7 +192,7 @@ parcel install-tools [options]
 | Option | Description |
 |--------|-------------|
 | `-r, --runtimes` | Runtime identifiers (can specify multiple) |
-| `-p, --packages` | Package formats: `deb`, `dmg`, `nsis`, `zip` (can specify multiple) |
+| `-p, --packages` | Package formats: `deb`, `dmg`, `msix`, `nsis`, `pkg`, `rpm`, `zip` (can specify multiple) |
 
 **Example:**
 
@@ -212,7 +215,35 @@ See [Model Context Protocol](/tools/parcel/mcp) for more details on usage.
 
 ## Environment Variables
 
-- `PARCEL_LICENSE_KEY` - Default license key used when `--license-key` option is not provided
+### Parcel and console behavior
+
+| Variable | Description |
+|---|---|
+| `AVALONIA_TOOLS_LICENSE_KEY` | License key used when `--license-key` is not provided. |
+| `AVALONIA_TOOLS_LOG_LEVEL` | Parcel application and MCP log level, such as `Debug` or `Information`. |
+| `AVALONIA_TELEMETRY_OPTOUT` | Set to `true` or `1` to disable Avalonia tooling telemetry. |
+| `NO_COLOR` | Set to any non-empty value to disable colored console packaging output. |
+| `SOURCE_DATE_EPOCH` | Unix timestamp used for deterministic package timestamps. |
+
+### Tool discovery
+
+| Variable | Description |
+|---|---|
+| `PARCEL_JAVA_EXE` | Explicit path to the Java executable used by cross-platform Windows signing. `JAVA_HOME` is also respected. |
+| `PARCEL_SIGNTOOL_EXE` | Explicit path to SignTool on Windows. |
+| `PARCEL_WSL_DISTRIBUTION` | WSL2 distribution used by packaging steps that require WSL on Windows. |
+| `PARCEL_WSL_USER` | User account used when Parcel starts the selected WSL2 distribution. |
+
+### Cloud signing
+
+| Variable | Description |
+|---|---|
+| `AZURE_TENANT_ID` | Microsoft Entra tenant used by Azure Artifact Signing or Key Vault. |
+| `AZURE_CLIENT_ID` | Azure service principal client ID. |
+| `AZURE_CLIENT_SECRET` | Azure service principal secret. |
+| `AWS_ACCESS_KEY_ID` | AWS access key used by AWS KMS signing. |
+| `AWS_SECRET_ACCESS_KEY` | AWS secret key used by AWS KMS signing. |
+| `AWS_SESSION_TOKEN` | Optional AWS temporary-session token. |
 
 ## Notes
 

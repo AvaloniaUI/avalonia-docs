@@ -132,7 +132,7 @@ CLI is not available in the free community license.
 
 Once the Parcel has opened, you will be asked to input `AvaloniaUI Portal` credentials that were used to license the tool.
 
-For the CLI, you can set `--licenseKey` option or `PARCEL_LICENSE_KEY` env variable.
+For the CLI, use the `--license-key` option, set the `AVALONIA_TOOLS_LICENSE_KEY` environment variable, or sign in through the Parcel GUI and reuse that session.
 
 ## Further Reading
 

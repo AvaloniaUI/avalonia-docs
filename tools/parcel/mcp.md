@@ -23,7 +23,7 @@ Before setting up the MCP server, ensure you have:
 
 ### Setting your license key
 
-The MCP server reads your license from the `PARCEL_LICENSE_KEY` environment variable. You can find your license key in the [Avalonia Customer Portal](https://portal.avaloniaui.net/). MCP is a paid feature and is not included with the Community edition.
+The MCP server reads your license from the `AVALONIA_TOOLS_LICENSE_KEY` environment variable. You can find your license key in the [Avalonia Customer Portal](https://portal.avaloniaui.net/). MCP is a paid feature and is not included with the Community edition.
 
 Set the key in your shell profile so it persists across sessions:
 
@@ -33,7 +33,7 @@ Set the key in your shell profile so it persists across sessions:
 Add this line to your shell profile (`~/.zshrc`, `~/.bashrc`, or equivalent):
 
 ```bash
-export PARCEL_LICENSE_KEY="your-license-key"
+export AVALONIA_TOOLS_LICENSE_KEY="your-license-key"
 ```
 
 Then reload the profile or open a new terminal:
@@ -48,7 +48,7 @@ source ~/.zshrc
 Set a persistent environment variable for your user account:
 
 ```powershell
-[System.Environment]::SetEnvironmentVariable('PARCEL_LICENSE_KEY', 'your-license-key', 'User')
+[System.Environment]::SetEnvironmentVariable('AVALONIA_TOOLS_LICENSE_KEY', 'your-license-key', 'User')
 ```
 
 Restart any open terminals and editors to pick up the change.
@@ -57,7 +57,7 @@ Restart any open terminals and editors to pick up the change.
 <TabItem value="windows-cmd" label="Windows (Command Prompt)">
 
 ```cmd
-setx PARCEL_LICENSE_KEY "your-license-key"
+setx AVALONIA_TOOLS_LICENSE_KEY "your-license-key"
 ```
 
 Restart any open terminals and editors to pick up the change.
@@ -71,7 +71,7 @@ If you launch your editor from a desktop shortcut or application menu (rather th
 ```json
 {
     "env": {
-        "PARCEL_LICENSE_KEY": "your-license-key"
+        "AVALONIA_TOOLS_LICENSE_KEY": "your-license-key"
     }
 }
 ```
@@ -212,7 +212,7 @@ claude mcp list
             "command": "parcel",
             "args": ["mcp"],
             "env": {
-                "PARCEL_LICENSE_KEY": "your-license-key"
+                "AVALONIA_TOOLS_LICENSE_KEY": "your-license-key"
             }
         }
     }
@@ -253,7 +253,7 @@ For more information, see [Troubleshooting .NET tool usage issues](https://learn
 
 If the MCP server starts but reports a missing or invalid license key:
 
-- **Confirm the variable is set** by running `echo $PARCEL_LICENSE_KEY` (macOS/Linux) or `echo %PARCEL_LICENSE_KEY%` (Windows) in the same terminal where you launch your editor.
+- **Confirm the variable is set** by running `echo $AVALONIA_TOOLS_LICENSE_KEY` (macOS/Linux) or `echo %AVALONIA_TOOLS_LICENSE_KEY%` (Windows) in the same terminal where you launch your editor.
 - **If your editor is launched from a GUI shortcut**, it may not inherit shell environment variables. Add an `env` block to your MCP configuration as shown in the [license key setup](#setting-your-license-key) section above.
 
 ### MCP server does not appear in the editor
@@ -267,7 +267,7 @@ If the MCP server starts but reports a missing or invalid license key:
 If tools behave unexpectedly, ensure you are running the latest version:
 
 ```bash
-dotnet tool update -g parcel
+dotnet tool update --global AvaloniaUI.Parcel
 ```
 
 ## Capabilities
@@ -282,14 +282,14 @@ Once the MCP server is configured, your AI assistant can help with:
 
 ### Code signing setup
 
-- **Windows Azure Trusted Signing** - Configure certificates and signing parameters
+- **Windows Azure Artifact Signing** - Configure certificates and signing parameters
 - **macOS Code Signing** - Set up P12 certificates and provisioning profiles
 - **macOS Notarization** - Configure Apple ID and app-specific passwords
 
 ### Building and packaging
 
 - **Build and package** applications for multiple platforms (Windows, macOS, Linux)
-- **Generate installers** in various formats (DMG, DEB, NSIS, ZIP, etc.)
+- **Generate packages** in NSIS, MSIX, DMG, PKG, DEB, RPM, and ZIP formats
 - **Cross-platform packaging** with runtime-specific outputs
 
 ## Usage examples
@@ -322,4 +322,5 @@ Describe what you want to accomplish in natural language. The AI assistant calls
 
 - [AI Tools overview](/tools/ai-tools/)
 - [Parcel setup](/tools/parcel/setup)
+- [Parcel configuration reference](/tools/parcel/configuration-reference)
 - [DevTools MCP](/tools/developer-tools/mcp)
