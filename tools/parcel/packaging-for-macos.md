@@ -14,7 +14,13 @@ import TabItem from '@theme/TabItem';
 
 ## Packaging
 
-Parcel creates macOS application bundles (.app) that can be distributed via DMG images or ZIP archives. The tool handles bundle structure, Info.plist generation, and file permissions. Parcel can create macOS bundles on Windows and Linux platforms.
+Parcel creates macOS application bundles (`.app`) and packages on Windows, macOS, and Linux.
+
+| Format | CLI code | Best suited for |
+|---|---|---|
+| DMG image (`.dmg`) | `dmg` | Direct distribution with a branded drag-and-drop experience |
+| PKG installer (`.pkg`) | `pkg` | Managed installation, direct distribution, and Mac App Store submission |
+| ZIP archive (`.zip`) | `zip` | Direct distribution of an app bundle without an installer |
 
 ### Bundle Configuration
 
@@ -50,7 +56,7 @@ The application category for macOS and App Store classification. This maps to Ap
 
 **App Icon**:
 
-The application icon in **ICNS** or **SVG** format. ICNS files should include multiple resolutions from 16x16 to 1024x1024 pixels. Parcel generates the bundle icon structure from the source file.
+An optional macOS-specific icon in **ICNS** or **SVG** format. It overrides the shared Application Icon. ICNS files should include multiple resolutions from 16x16 to 1024x1024 pixels. Parcel generates the bundle icon structure from the source file.
 
 **Permissions**:
 
@@ -60,19 +66,19 @@ System permissions with custom usage descriptions. Each permission requires a us
 Usage descriptions are mandatory; otherwise, the OS may deny access to system resources.
 :::
 
-<!--- NOT YET AVAILABLE IN STABLE PARCEL
 **File Type Associations**:
 
 Associate the application with specific file types by specifying file extensions (e.g., `.myfile`) and optionally adding MIME types.
 
-To handle these files in Avalonia applications, see [Activatable Lifetime](https://docs.avaloniaui.net/docs/concepts/services/activatable-lifetime#handling-uri-activation) documentation.
+To handle these files in Avalonia applications, see [Activatable lifetime](/docs/services/activatable-lifetime#handling-uri-activation).
 
 **URL Scheme Handlers**:
 
 Register custom URL schemes for deep linking by defining custom schemes (e.g., `myapp://`, `myprotocol://`). This enables other applications to launch the app with specific parameters.
 
-To handle URL schemes in Avalonia applications, see [Activatable Lifetime](https://docs.avaloniaui.net/docs/concepts/services/activatable-lifetime#handling-uri-activation) documentation.
---->
+To handle URL schemes in Avalonia applications, see [Activatable lifetime](/docs/services/activatable-lifetime#handling-uri-activation).
+
+Associations are configured once under Basics and written to the app bundle's `Info.plist`. They are ignored when **Create Bundle** is disabled. See [File associations and URL schemes](/tools/parcel/configuration-reference#file-associations).
 
 #### Custom Info.plist Configuration
 
@@ -96,23 +102,34 @@ Parcel creates DMG installers with a drag-and-drop interface, custom backgrounds
 
 The background image for the DMG installer in TIFF format.
 
-Parcel uses a fixed DMG window size of **660x422** pixels with the following layout:
+Parcel includes a visual DMG layout editor. The default layout uses a **660x422** pixel window with the following values:
 
-- **App Bundle icon**: positioned at coordinates (180, 170) with 160px icon size
-- **Applications folder**: positioned at coordinates (480, 170) with 160px icon size  
-- **Text size**: 12px for icon labels
+- **App Bundle icon**: positioned at coordinates (173, 231)
+- **Applications folder**: positioned at coordinates (485, 231)
+- **Icon size**: 128px
+- **Text size**: 12px
 
 Icons are positioned from the top left corner to the icon center.
 
-Design background images to accommodate these fixed positions and the drag-and-drop workflow.
+Use the editor to change the window position and size, icon and label sizes, grid, background color, and the App Bundle and Applications folder positions. Design the background image around the selected layout and drag-and-drop workflow.
 
 :::note
-DMG customization is currently limited to background images. A more flexible editor is planned for a future release.
+The optional **DMG License File** is embedded at the root of the image. **Sign DMG** controls whether Parcel signs the completed image with the application-signing credentials.
 :::
 
 ### ZIP Creation
 
 Parcel maintains executable permissions during ZIP creation. The bundle structure remains intact when extracted on macOS, and applications remain executable without additional steps.
+
+### PKG installers
+
+:::note[New in Parcel 1.1]
+Parcel 1.1 adds PKG packaging for macOS applications.
+:::
+
+PKG packages use the native macOS Installer experience and can be created on every host supported by Parcel. They require **Create Bundle** and install the app into `/Applications` by default.
+
+An installer package uses a different certificate from the application inside it. For direct distribution, sign the app with a **Developer ID Application** certificate and the PKG with a **Developer ID Installer** certificate, then notarize the package. For Mac App Store distribution, use **Apple Distribution** for the app and **3rd Party Mac Developer Installer** for the PKG, enable App Sandbox, and submit the package to App Store Connect instead of notarizing it. See Apple's [Mac software packaging guidance](https://developer.apple.com/documentation/xcode/packaging-mac-software-for-distribution) and [Developer ID overview](https://developer.apple.com/support/developer-id/).
 
 ### Troubleshooting
 
@@ -145,6 +162,10 @@ Portable certificate format containing both the certificate and private key.
 Apple doesn't provide P12 certificates directly, but they can be exported from the Keychain or generated with OpenSSL.
 
 Parcel uses [rcodesign](https://github.com/indygreg/apple-platform-rs/tree/main/apple-codesign) to sign binaries and bundles on Windows and Linux machines.
+
+### Installer certificates for PKG
+
+PKG signing uses the **Installer Signing** group. Select a Keychain identity, P12 certificate, or PEM certificate that is authorized to sign installer packages. Application certificates cannot sign PKG installers, and installer certificates cannot sign the app bundle.
 
 ### Create Developer Certificate
 
@@ -231,6 +252,8 @@ See the [macOS troubleshooting page](/troubleshooting/platform-specific-issues/m
 Apple notarization verifies that applications have been checked by Apple for malicious software. Notarization is required for macOS 10.15 (Catalina) and later when distributing applications outside the Mac App Store.
 
 The process uploads an application to Apple's servers for scanning and associates the bundle hash with the developer account.
+
+Mac App Store packages are validated during submission and are not notarized separately. For direct distribution, Parcel can submit and staple DMG and PKG artifacts signed with Developer ID certificates. See Apple's [notarization documentation](https://developer.apple.com/documentation/security/notarizing-macos-software-before-distribution).
 
 ### Prerequisites
 
