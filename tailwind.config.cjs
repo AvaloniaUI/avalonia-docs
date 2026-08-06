@@ -139,8 +139,7 @@ module.exports = {
           200: 'rgb(var(--docs-color-primary-200, 0 125 249) / <alpha-value>)',
         },
         secondary: {
-          DEFAULT:
-            'rgb(var(--docs-color-secondary-1000, 0 0 0) / <alpha-value>)',
+          DEFAULT: 'var(--color-brand-25)',
           1000: 'rgb(var(--docs-color-secondary-1000, 0 0 0) / <alpha-value>)',
           900: 'rgb(var(--docs-color-secondary-900, 25 25 25) / <alpha-value>)',
           800: 'rgb(var(--docs-color-secondary-800, 38 38 38) / <alpha-value>)',
