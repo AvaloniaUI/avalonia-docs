@@ -13,7 +13,7 @@ export default function GitHubSampleLink({ title, link }: GitHubSampleLinkProps)
       {link && (
         <Link
           to={link}
-          className="flex items-center gap-1 rounded-lg py-1 px-3 border border-primary !text-primary hover:bg-primary hover:!text-white hover:!no-underline transition-colors"
+          className="flex items-center gap-1 rounded-lg py-1 px-3 border border-primary !text-primary hover:bg-primary hover:!text-secondary hover:!no-underline transition-colors"
         >
           <GitHub className="h-4 w-4" />
           <span className="font-semibold">Clone the {title} sample</span>
