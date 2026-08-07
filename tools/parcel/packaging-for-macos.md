@@ -245,34 +245,21 @@ The resulting `certificate.p12` and password can be used with Parcel on any plat
 
 </Tabs>
 
-## Troubleshooting
-
-See the [macOS troubleshooting page](/troubleshooting/platform-specific-issues/macos#code-signing).
-
 ## App Store Connect
 
 Submit a signed PKG to distribute an application through the Mac App Store. Do not submit a DMG or ZIP file. These formats are for direct distribution.
 
 ### Recommended configuration
 
-1. Create the macOS application record in App Store Connect. Register an explicit App ID. Its bundle ID must exactly match **Bundle Identifier** in Parcel. App Store Connect uses the bundle ID and version to associate an upload with the application record. Use a unique build string for each upload.
-2. Enable **Create Bundle** and select `pkg` as an output format.
-3. Sign the application with an **Apple Distribution** certificate. You can also use the legacy **3rd Party Mac Developer Application** identity from a Mac App Distribution certificate. Sign the PKG separately with a **Mac Installer Distribution** certificate. Parcel identifies this certificate as **3rd Party Mac Developer Installer**. Do not use Developer ID certificates for an App Store submission.
-4. Create and download a **Mac App Store Connect** provisioning profile for the same explicit App ID and application-signing certificate.
-5. Copy the provisioning profile to the directory that contains the Parcel project file. Rename the profile to match the configured .NET project. For example, use `MyApp.provisionprofile` when **.NET Project Path** points to `MyApp.csproj`. Parcel requires this exact file name. It copies the profile to `Contents/embedded.provisionprofile` in the application bundle.
-6. Enable **App Sandbox**. Configure only the permissions that the application needs. Before submission, test file access, network access, child processes, and bundled helper tools in the sandbox.
-7. Use the same Apple Developer team for **Team ID**, the provisioning profile, **Bundle Identifier**, and the selected certificate. Parcel checks these values during signing. It reports a mismatch before upload.
-8. Upload the PKG with Apple's Transporter application, Xcode tools, or another method that App Store Connect supports. Wait for processing to finish. Resolve all delivery warnings. Select the processed build for the macOS version, and submit it for review.
+1. Create the macOS application record in App Store Connect. Register an explicit App ID. Its bundle ID must exactly match **Bundle Identifier** in Parcel. App Store Connect uses the bundle ID and version to associate an upload with the application record.
+2. Configure signing with an **Apple Distribution** certificate. And configure PKG signing separately with a **Mac Installer Distribution** certificate. Do not use Developer ID certificates for an App Store submission, it will be rejected by Apple.
+3. Create and download a **Mac App Store Connect** provisioning profile for the same explicit App ID and application-signing certificate.
+4. Copy the provisioning profile to the directory that contains the Parcel project file. Rename the profile to match the configured .NET project. For example, use `MyApp.provisionprofile` when **.NET Project Path** points to `MyApp.csproj`. Parcel requires this exact file name.
+5. Make sure that **Create Bundle** and **Enable Sandbox** are enabled in MacOS settings. Notarization must be disabled for App Store Connect - it's only useful for sideloading.
+6. Optinally, configure custom `Entitlements.plist` file in the project directory, if the app requires custom permissions. Before submission, test file access, network access, child processes, and bundled helper tools in the sandbox.
+7. Upload the PKG with Apple's Transporter application, Xcode tools, or another method that App Store Connect supports. Wait for processing to finish. Resolve all delivery warnings. Select the processed build for the macOS version, and submit it for review.
 
 See Apple's documentation for [creating a Mac App Store Connect provisioning profile](https://developer.apple.com/help/account/provisioning-profiles/create-an-app-store-provisioning-profile), [certificate purposes](https://developer.apple.com/help/account/certificates/certificates-overview), and [uploading builds](https://developer.apple.com/help/app-store-connect/manage-builds/upload-builds/).
-
-:::warning[Entitlements take precedence]
-If the project contains an `Entitlements.plist` file, Parcel preserves its values. A `com.apple.security.app-sandbox` value of `false` overrides **Enable App Sandbox** and causes an App Store rejection. The provisioning profile must authorize the signing certificate and all restricted capabilities that the application uses. Create a new profile after you change certificates or App ID capabilities.
-:::
-
-:::warning[Confirm that the profile was embedded]
-When Parcel finds the expected file, it logs that it is copying the provisioning profile. Check for this message in the packaging output. Parcel does not find or embed a profile that has a different name.
-:::
 
 :::note[Do not notarize App Store builds with Parcel]
 Parcel notarizes software that uses a Developer ID identity for distribution outside the Mac App Store. Apple validates App Store packages during upload and submission. Disable Parcel notarization for an App Store build.
@@ -362,6 +349,10 @@ Code-sign applications with a Developer ID certificate when available, even with
 ### Troubleshooting notarization issues
 
 See the [macOS troubleshooting page](/troubleshooting/platform-specific-issues/macos#notarization).
+
+## Troubleshooting
+
+See the [macOS troubleshooting page](/troubleshooting/platform-specific-issues/macos#code-signing).
 
 ## See also
 

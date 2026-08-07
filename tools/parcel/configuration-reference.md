@@ -72,6 +72,10 @@ These settings control the `dotnet publish` operation Parcel runs before packagi
 | MSBuild Properties | `PublishSettings.ExtraBuildProperties` | String dictionary | Empty | — | Additional properties passed to `dotnet publish`. |
 | Exclude Files | `PublishSettings.ExcludeFilePatterns` | List of glob patterns | Empty | — | Removes matching files and directories from the published output before packaging. |
 
+:::note
+.NET publish properties defined in the *.csproj file are also respected, there is no need to duplicate them in the parcel config.
+:::
+
 ## Windows settings
 
 ### Installer and MSIX

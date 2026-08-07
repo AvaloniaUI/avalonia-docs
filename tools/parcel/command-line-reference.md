@@ -219,9 +219,6 @@ For setup and usage information, see [Parcel MCP](/tools/parcel/mcp).
 |---|---|
 | `AVALONIA_TOOLS_LICENSE_KEY` | License key used when `--license-key` is not provided. |
 | `AVALONIA_TOOLS_LOG_LEVEL` | Sets the Parcel application and MCP log level, such as `Debug` or `Information`. |
-| `AVALONIA_TELEMETRY_OPTOUT` | Set to `true` or `1` to disable Avalonia tooling telemetry. |
-| `NO_COLOR` | Set to any non-empty value to disable colored console packaging output. |
-| `SOURCE_DATE_EPOCH` | Sets the Unix timestamp for reproducible package timestamps. |
 
 ### Tool discovery
 
