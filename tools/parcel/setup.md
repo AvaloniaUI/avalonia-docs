@@ -137,6 +137,7 @@ For the CLI, use the `--license-key` option, set the `AVALONIA_TOOLS_LICENSE_KEY
 ## Further Reading
 
 - [Parcel command line reference](/tools/parcel/command-line-reference)
+- [Parcel configuration reference](/tools/parcel/configuration-reference)
 - [Model context protocol (MCP)](/tools/parcel/mcp)
 - [Windows packaging](/tools/parcel/packaging-for-windows)
 - [macOS packaging](/tools/parcel/packaging-for-macos)
