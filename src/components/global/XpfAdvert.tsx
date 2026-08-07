@@ -1,3 +1,6 @@
+// TODO: Verify/update this component's Tailwind v4 styling before using it.
+// It's currently registered in MDXComponents as `XpfAd`, but not referenced by any MDX content.
+
 import React from 'react';
 
 const XpfLogo = () => (

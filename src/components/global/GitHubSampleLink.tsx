@@ -11,12 +11,9 @@ export default function GitHubSampleLink({ title, link }: GitHubSampleLinkProps)
   return (
     <div className="flex items-center gap-2.5">
       {link && (
-        <Link
-          to={link}
-          className="flex items-center gap-1 rounded-lg py-1 px-3 border border-primary !text-primary"
-        >
-          <GitHub className="h-4 w-4" />
-          <span className="font-semibold">Clone the {title} sample</span>
+        <Link to={link} className="github-sample-link">
+          <GitHub />
+          <span>Clone the {title} sample</span>
         </Link>
       )}
     </div>
