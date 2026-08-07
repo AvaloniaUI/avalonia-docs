@@ -11,7 +11,7 @@ tags:
   - avalonia enterprise
 ---
 
-Avalonia Parcel is a packaging tool for Avalonia applications. It's designed as a two-app solution (GUI and console tool) that handles building, signing and packaging applications across Windows, macOS, and Linux platforms.
+Avalonia Parcel is a packaging tool for Avalonia applications. It provides a graphical user interface (GUI) and a command-line interface (CLI). You can use Parcel to build, sign, and package applications for Windows, macOS, and Linux.
 
 ## Prerequisites
 
@@ -22,10 +22,11 @@ Avalonia Parcel is a packaging tool for Avalonia applications. It's designed as 
 | macOS | 13 or newer |
 | Linux | X11 and glibc 2.27 or musl 1.22.2 compatible distros |
 
-## Step 1: Installing Avalonia Parcel
+## Step 1: Install Avalonia Parcel
 
-`Avalonia Parcel` is a native [.NET tool](https://learn.microsoft.com/en-us/dotnet/core/tools/global-tools), with an update mechanism provided by the SDK.
-This guide demonstrates global installation of the tool. Local installation is also possible but be aware: the tool will only work in the project that it's installed into.
+Avalonia Parcel is a [.NET tool](https://learn.microsoft.com/en-us/dotnet/core/tools/global-tools). Use the .NET SDK to install and update it.
+
+This guide shows how to install Parcel globally. You can install it locally, but a local installation works only in the project where you install it.
 
 <Tabs>
 <TabItem value="net10" label=".NET 10+" default>
@@ -34,9 +35,9 @@ This guide demonstrates global installation of the tool. Local installation is a
 dotnet tool install --global AvaloniaUI.Parcel
 ```
 
-If you are upgrading app from .NET 8/9 installation, you should first uninstall it with `dotnet tool uninstall --global AvaloniaUI.Parcel.Windows`  or `parcel uninstall`.
+If you installed Parcel for .NET 8 or .NET 9, first run `dotnet tool uninstall --global AvaloniaUI.Parcel.Windows` or `parcel uninstall`.
 
-Parcel can then be updated by running the `dotnet tool update` command.
+Use the following command to update Parcel:
 
 ```bash
 dotnet tool update --global AvaloniaUI.Parcel
@@ -45,7 +46,7 @@ dotnet tool update --global AvaloniaUI.Parcel
 </TabItem>
 <TabItem value="net8" label=".NET 8/9">
 
-If you're using .NET SDK older than 10, you must install a specific package depending on the running platform.
+If you use a .NET SDK version earlier than 10, install the package for your platform.
 
 <details>
 <summary>Installation commands</summary>
@@ -70,7 +71,7 @@ dotnet tool install --global AvaloniaUI.Parcel.Linux
 
 </details>
 
-Parcel can then be updated by running the `dotnet tool update` command.
+Use the command for your platform to update Parcel.
 
 <details>
 <summary>Update commands</summary>
@@ -99,30 +100,30 @@ dotnet tool update --global AvaloniaUI.Parcel.Linux
 </Tabs>
 
 :::warning
-On macOS or Linux, the installation location may not be automatically added to the PATH environment variable. This surfaces as a "command not found" error when trying to run `parcel`.
+On macOS or Linux, the installer might not add the installation directory to the `PATH` environment variable. In this case, the shell reports a "command not found" error when you run `parcel`.
 
-To resolve this issue, you must append the tool location to the PATH environment variable. The default location is usually `$HOME/.dotnet/tools`.
+Add the tool directory to `PATH`. The default directory is usually `$HOME/.dotnet/tools`.
 
 For more information, see [Troubleshooting .NET tool usage issues](https://learn.microsoft.com/en-us/dotnet/core/tools/troubleshoot-usage-issues#executable-file-not-found).
 :::
 
 ## Step 2: Run the tool
 
-After installation, you can launch it from terminal using:
+After installation, run Parcel from a terminal:
 
 ```bash
 parcel
 ```
 
-This command will run a GUI application where you can open or create parcel projects.
+This command opens the Parcel GUI. In the GUI, you can open or create Parcel projects.
 
-Alternatively, it's possible to run CLI commands from the terminal on an existing parcel project:
+You can also run CLI commands on an existing Parcel project:
 
 ```bash
 parcel pack ./SampleApp.parcel -r osx-x64 -p dmg -o ./artifacts
 ```
 
-This command will bundle, sign and package the application into a dmg file from the pre-configured parcel project.
+This command uses the Parcel project to bundle and sign the application. It then creates a DMG file.
 
 :::note
 CLI is not available in the free community license.
@@ -130,7 +131,7 @@ CLI is not available in the free community license.
 
 ## Step 3: Activate the tool
 
-Once the Parcel has opened, you will be asked to input `AvaloniaUI Portal` credentials that were used to license the tool.
+When Parcel opens, sign in with the Avalonia Portal account that has the tool license.
 
 For the CLI, use the `--license-key` option, set the `AVALONIA_TOOLS_LICENSE_KEY` environment variable, or sign in through the Parcel GUI and reuse that session.
 

@@ -10,20 +10,20 @@ import TabItem from '@theme/TabItem';
 
 ## What is Parcel MCP?
 
-The Parcel MCP server lets AI assistants interact directly with Parcel's packaging tools. Your assistant can create packaging configurations from your .NET projects, set up code signing and notarisation, and build installers for Windows, macOS, and Linux, all from a natural language conversation.
+The Parcel MCP server lets AI assistants use Parcel packaging tools. Your assistant can create packaging configurations from .NET projects. It can also configure code signing and notarization and build packages for Windows, macOS, and Linux.
 
 For a general introduction to MCP, see [AI Tools](/tools/ai-tools/).
 
 ## Prerequisites
 
-Before setting up the MCP server, ensure you have:
+Before you configure the MCP server, make sure that you have these items:
 
 1. **Parcel .NET tool installed.** Follow the [Setup guide](/tools/parcel/setup).
 2. **Valid Avalonia Plus license key.** You can get one from the [Avalonia portal](https://portal.avaloniaui.net/).
 
 ### Setting your license key
 
-The MCP server reads your license from the `AVALONIA_TOOLS_LICENSE_KEY` environment variable. You can find your license key in the [Avalonia Customer Portal](https://portal.avaloniaui.net/). MCP is a paid feature and is not included with the Community edition.
+The MCP server reads the license from the `AVALONIA_TOOLS_LICENSE_KEY` environment variable. Get your license key from the [Avalonia Customer Portal](https://portal.avaloniaui.net/). MCP is a paid feature and is not included with the Community edition.
 
 Set the key in your shell profile so it persists across sessions:
 
@@ -66,7 +66,7 @@ Restart any open terminals and editors to pick up the change.
 </Tabs>
 
 :::caution[Editors launched from GUI shortcuts]
-If you launch your editor from a desktop shortcut or application menu (rather than from a terminal), it may not inherit environment variables from your shell profile. If the MCP server reports a missing license key, you can set it directly in the MCP configuration by adding an `env` block:
+If you start your editor from a desktop shortcut or application menu, it might not read environment variables from your shell profile. If the MCP server reports a missing license key, add an `env` block to the MCP configuration:
 
 ```json
 {
@@ -85,7 +85,7 @@ Parcel MCP is only available with a full [Avalonia Plus](https://avaloniaui.net/
 
 ## Setting up the MCP server
 
-Parcel provides an MCP server that runs as a local process. The underlying command is `parcel mcp`, but you do not need to run it manually. Your editor starts it automatically once configured.
+The Parcel MCP server runs as a local process. Its command is `parcel mcp`. You do not need to run this command manually. After configuration, your editor starts the server automatically.
 
 Choose your editor below:
 
@@ -230,7 +230,7 @@ Claude Desktop does not inherit environment variables from your shell profile, s
 
 ## Verify the connection
 
-After configuring the MCP server, verify it is working:
+After you configure the MCP server, test the connection:
 
 1. **Check the server is running.** Open your editor's MCP panel or status indicator and confirm `parcel` appears as a connected server. In VS Code, run **MCP: List Servers** from the command palette.
 2. **Test with a prompt.** Ask your AI assistant:
@@ -239,13 +239,13 @@ After configuring the MCP server, verify it is working:
 "List the available Parcel packaging tools."
 ```
 
-If the assistant returns a list of capabilities, setup is complete.
+If the assistant returns a list of capabilities, the connection works.
 
 ## Troubleshooting
 
 ### "parcel" command not found
 
-The `parcel` command must be on your system PATH. If you installed it as a global .NET tool, check if `$HOME/.dotnet/tools` (macOS/Linux) or `%USERPROFILE%\.dotnet\tools` (Windows) is in your PATH. If not, add the directory to your PATH.
+The `parcel` command must be on the system `PATH`. For a global .NET tool installation, check for `$HOME/.dotnet/tools` on macOS and Linux. On Windows, check for `%USERPROFILE%\.dotnet\tools`. If the applicable directory is not in `PATH`, add it.
 
 For more information, see [Troubleshooting .NET tool usage issues](https://learn.microsoft.com/en-us/dotnet/core/tools/troubleshoot-usage-issues#executable-file-not-found).
 
@@ -264,7 +264,7 @@ If the MCP server starts but reports a missing or invalid license key:
 
 ### Updating Parcel
 
-If tools behave unexpectedly, ensure you are running the latest version:
+If the tools do not work as expected, make sure that you use the latest version:
 
 ```bash
 dotnet tool update --global AvaloniaUI.Parcel

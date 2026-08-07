@@ -10,7 +10,7 @@ tags:
   - avalonia enterprise
 ---
 
-Parcel packages Linux applications into multiple distribution formats optimized for different Linux package managers and use cases.
+Parcel creates packages for different Linux package managers and distribution methods.
 
 ## Supported Package Formats
 
@@ -18,14 +18,15 @@ Parcel packages Linux applications into multiple distribution formats optimized 
 |---|---|---|
 | DEB package (`.deb`) | `deb` | Debian, Ubuntu, and other Debian-based distributions |
 | RPM package (`.rpm`) | `rpm` | Fedora, RHEL, and other RPM-based distributions |
-| ZIP archive (`.zip`) | `zip` | Portable distribution without package-manager integration |
+| ZIP archive (`.zip`) | `zip` | Portable distribution without package manager integration |
 
-DEB and RPM packages include a `.desktop` entry and can register icons, file associations, URL schemes, package dependencies, and an optional `/usr/bin` symlink.
+DEB and RPM packages include a `.desktop` entry. They can also register icons, file associations, URL schemes, package dependencies, and an optional `/usr/bin` symlink.
 
+For the complete setting names, types, defaults, and environment variables, see the [Parcel configuration reference](/tools/parcel/configuration-reference#linux-settings).
 
 ## Dependencies
 
-Parcel declares the following runtime dependencies in package metadata. Add any application- or distribution-specific libraries with the additional dependency settings.
+Parcel declares the following runtime dependencies in the package metadata. Use the additional dependency settings to add libraries for your application or Linux distribution.
 
 ### DEB dependencies
 
@@ -49,13 +50,13 @@ Parcel declares the following runtime dependencies in package metadata. Add any 
 
 ## Bundle Configuration
 
-Parcel provides configuration options to customize your Linux application packages for proper desktop integration and branding.
+Use the Linux settings to configure desktop integration and branding.
 
 ### Common Properties
 
 **Application Name**:
 
-Display name shown in application launchers and desktop menus. This is used in the `.desktop` entry file.
+Display name in application launchers and desktop menus. Parcel adds this name to the `.desktop` entry.
 
 **Package Name**:
 
@@ -63,7 +64,7 @@ The package identifier used in package metadata and output filenames. Parcel nor
 
 **Install Directory Name**:
 
-Name of the application directory under `/usr/share`. It defaults to `app-{package-name}` and must contain only lowercase letters, numbers, dashes, underscores, or dots.
+Name of the application directory under `/usr/share`. The default is `app-{package-name}`. Use only lowercase letters, numbers, dashes, underscores, or periods. The name must start and end with a letter or number.
 
 ### DEB/RPM Specific Properties
 
@@ -71,39 +72,40 @@ Additional configuration properties for Debian and RPM packages.
 
 **Application Icon**:
 
-Optional Linux-specific icon that overrides the shared Application Icon. Parcel automatically:
+Optional Linux icon that overrides **Application Icon**. Parcel automatically does the following tasks:
+
 - Generates hicolor icon theme entries at appropriate resolutions
 - Links the icon in the `.desktop` file
 
 **Supported formats**: PNG, SVG
 
-**Company/Maintainer**:
+**Maintainer**:
 
-The package maintainer or company name. This appears in package metadata and is displayed by package managers.
+Package maintainer or company name. Parcel adds this value to the package metadata.
 
 :::note
-If not specified, defaults to the shared Company setting and then to the Package Name.
+If you do not set this value, Parcel uses **Company**. If **Company** is empty, Parcel uses **Package Name**.
 :::
 
 **Desktop Category**:
 
-Application category for desktop environment menus and launchers. Determines where the application appears in the application menu hierarchy. Parcel follows the [freedesktop.org category registry](https://specifications.freedesktop.org/menu-spec/latest/category-registry.html).
+Category for desktop menus and launchers. This value controls where the application appears in the menu. Parcel uses the [freedesktop.org category registry](https://specifications.freedesktop.org/menu-spec/latest/category-registry.html).
 
 **Copyright**:
 
-Path to a copyright or license file included in DEB and RPM package metadata.
+Path to a copyright or license file. Parcel includes this file in the DEB and RPM package metadata.
 
-**Create `/usr/bin` Symlink**:
+**Create `/usr/bin/` symlink**:
 
-Creates a symlink to the application executable so it can be started from a terminal. Enabled by default.
+Creates a symlink to the application executable. The symlink lets users start the application from a terminal. This setting is enabled by default.
 
-**Additional Dependencies**:
+**Additional DEB Dependencies** and **Additional RPM Dependencies**:
 
-Add dependencies beyond Parcel's runtime defaults separately for DEB and RPM. DEB entries accept alternative package names separated with `|`; RPM entries accept package names or capabilities.
+Add dependencies that are not in the Parcel defaults. Configure DEB and RPM dependencies separately. For DEB, separate alternative package names with `|`. For RPM, enter package names or capabilities.
 
 ### Desktop integration
 
-File associations and URL schemes are configured once under Basics. Parcel adds matching MIME metadata and launch information to DEB and RPM packages. See [File associations and URL schemes](/tools/parcel/configuration-reference#file-associations) and [Activatable lifetime](/docs/services/activatable-lifetime#handling-uri-activation) for handling activations in an Avalonia application.
+Configure file associations and URL schemes under **Basics**. Parcel adds the related MIME metadata and launch information to DEB and RPM packages. To handle activation in an Avalonia application, see [File associations and URL schemes](/tools/parcel/configuration-reference#file-associations) and [Activatable lifetime](/docs/services/activatable-lifetime#handling-uri-activation).
 
 ## Installation & Removal
 
@@ -147,4 +149,5 @@ cd my-app
 ## See also
 
 - [Parcel setup](/tools/parcel/setup)
+- [Parcel configuration reference](/tools/parcel/configuration-reference)
 - [Parcel command line reference](/tools/parcel/command-line-reference)

@@ -14,13 +14,15 @@ import TabItem from '@theme/TabItem';
 
 ## Packaging
 
-Parcel creates macOS application bundles (`.app`) and packages on Windows, macOS, and Linux.
+Parcel creates macOS application bundles (`.app`) and packages. You can run Parcel on Windows, macOS, or Linux.
 
 | Format | CLI code | Best suited for |
 |---|---|---|
 | DMG image (`.dmg`) | `dmg` | Direct distribution with a branded drag-and-drop experience |
 | PKG installer (`.pkg`) | `pkg` | Managed installation, direct distribution, and Mac App Store submission |
 | ZIP archive (`.zip`) | `zip` | Direct distribution of an app bundle without an installer |
+
+For the complete setting names, types, defaults, and environment variables, see the [Parcel configuration reference](/tools/parcel/configuration-reference#macos-settings).
 
 ### Bundle Configuration
 
@@ -54,9 +56,9 @@ A unique identifier for your Apple Developer account. Using during signing and n
 
 The application category for macOS and App Store classification. This maps to Apple's `public.app-category.*` identifiers.
 
-**App Icon**:
+**Application Icon**:
 
-An optional macOS-specific icon in **ICNS** or **SVG** format. It overrides the shared Application Icon. ICNS files should include multiple resolutions from 16x16 to 1024x1024 pixels. Parcel generates the bundle icon structure from the source file.
+An optional macOS icon in **ICNS** or **SVG** format. This icon overrides **Application Icon**. An ICNS file should contain resolutions from 16 x 16 through 1024 x 1024 pixels. Parcel creates the bundle icon structure from the source file.
 
 **Permissions**:
 
@@ -66,19 +68,19 @@ System permissions with custom usage descriptions. Each permission requires a us
 Usage descriptions are mandatory; otherwise, the OS may deny access to system resources.
 :::
 
-**File Type Associations**:
+**File Associations**:
 
 Associate the application with specific file types by specifying file extensions (e.g., `.myfile`) and optionally adding MIME types.
 
 To handle these files in Avalonia applications, see [Activatable lifetime](/docs/services/activatable-lifetime#handling-uri-activation).
 
-**URL Scheme Handlers**:
+**URL Schemes**:
 
 Register custom URL schemes for deep linking by defining custom schemes (e.g., `myapp://`, `myprotocol://`). This enables other applications to launch the app with specific parameters.
 
 To handle URL schemes in Avalonia applications, see [Activatable lifetime](/docs/services/activatable-lifetime#handling-uri-activation).
 
-Associations are configured once under Basics and written to the app bundle's `Info.plist`. They are ignored when **Create Bundle** is disabled. See [File associations and URL schemes](/tools/parcel/configuration-reference#file-associations).
+Configure associations under **Basics**. Parcel writes them to the application bundle's `Info.plist` file. Parcel ignores associations when **Create Bundle** is disabled. See [File associations and URL schemes](/tools/parcel/configuration-reference#file-associations).
 
 #### Custom Info.plist Configuration
 
@@ -98,11 +100,11 @@ Parcel creates DMG installers with a drag-and-drop interface, custom backgrounds
 [WSL2](https://learn.microsoft.com/en-us/windows/wsl/) is required for DMG creation on Windows. ZIP packages can be created without WSL2.
 :::
 
-**DMG Background**:
+**DMG Background Image**:
 
 The background image for the DMG installer in TIFF format.
 
-Parcel includes a visual DMG layout editor. The default layout uses a **660x422** pixel window with the following values:
+Parcel includes a visual DMG layout editor. The default layout uses a **660 x 422** pixel window with these values:
 
 - **App Bundle icon**: positioned at coordinates (173, 231)
 - **Applications folder**: positioned at coordinates (485, 231)
@@ -111,25 +113,21 @@ Parcel includes a visual DMG layout editor. The default layout uses a **660x422*
 
 Icons are positioned from the top left corner to the icon center.
 
-Use the editor to change the window position and size, icon and label sizes, grid, background color, and the App Bundle and Applications folder positions. Design the background image around the selected layout and drag-and-drop workflow.
+Use the editor to change the window position, window size, icon size, label size, grid, and background color. You can also change the positions of the application bundle and Applications folder. Design the background image for the selected layout.
 
 :::note
-The optional **DMG License File** is embedded at the root of the image. **Sign DMG** controls whether Parcel signs the completed image with the application-signing credentials.
+Parcel puts the optional **DMG License File** at the root of the image. Enable **Sign DMG** to sign the completed image with the application-signing credentials.
 :::
 
 ### ZIP Creation
 
 Parcel maintains executable permissions during ZIP creation. The bundle structure remains intact when extracted on macOS, and applications remain executable without additional steps.
 
-### PKG installers
+### PKG installers <MinVersion version="1.1" isNewVersion="true" />
 
-:::note[New in Parcel 1.1]
-Parcel 1.1 adds PKG packaging for macOS applications.
-:::
+PKG packages use the native macOS Installer. You can create them on every host that Parcel supports. PKG packages require **Create Bundle** and install the application in `/Applications` by default.
 
-PKG packages use the native macOS Installer experience and can be created on every host supported by Parcel. They require **Create Bundle** and install the app into `/Applications` by default.
-
-An installer package uses a different certificate from the application inside it. For direct distribution, sign the app with a **Developer ID Application** certificate and the PKG with a **Developer ID Installer** certificate, then notarize the package. For Mac App Store distribution, use **Apple Distribution** for the app and **3rd Party Mac Developer Installer** for the PKG, enable App Sandbox, and submit the package to App Store Connect instead of notarizing it. See Apple's [Mac software packaging guidance](https://developer.apple.com/documentation/xcode/packaging-mac-software-for-distribution) and [Developer ID overview](https://developer.apple.com/support/developer-id/).
+Use different certificates for the application and its installer package. For direct distribution, sign the application with a **Developer ID Application** certificate. Sign the PKG with a **Developer ID Installer** certificate. Then notarize the package. For Mac App Store distribution, see [App Store Connect](#app-store-connect). See also Apple's [Mac software packaging guidance](https://developer.apple.com/documentation/xcode/packaging-mac-software-for-distribution) and [Developer ID overview](https://developer.apple.com/support/developer-id/).
 
 ### Troubleshooting
 
@@ -141,7 +139,7 @@ Parcel signs macOS bundles using Apple Developer certificates. Cross-platform si
 
 ### Prerequisites
 
-Before signing macOS applications, ensure you have:
+Before you sign a macOS application, make sure that you have these items:
 
 - **Apple Developer Account**: Active [Apple Developer Program](https://developer.apple.com/programs/) membership ($99/year)
 - **Xcode Command Line Tools** (macOS only): Available on [Apple Developer Resources](https://developer.apple.com/xcode/resources/)
@@ -163,9 +161,13 @@ Apple doesn't provide P12 certificates directly, but they can be exported from t
 
 Parcel uses [rcodesign](https://github.com/indygreg/apple-platform-rs/tree/main/apple-codesign) to sign binaries and bundles on Windows and Linux machines.
 
+#### PEM Certificate (Cross-Platform)
+
+Uses a PEM certificate for cross-platform signing. For a PKG package, configure separate PEM certificate fields for the application and installer.
+
 ### Installer certificates for PKG
 
-PKG signing uses the **Installer Signing** group. Select a Keychain identity, P12 certificate, or PEM certificate that is authorized to sign installer packages. Application certificates cannot sign PKG installers, and installer certificates cannot sign the app bundle.
+Configure PKG signing in the **Installer Signing** group. Select a Keychain identity, P12 certificate, or PEM certificate that can sign installer packages. An application certificate cannot sign a PKG installer. An installer certificate cannot sign the application bundle.
 
 ### Create Developer Certificate
 
@@ -247,17 +249,46 @@ The resulting `certificate.p12` and password can be used with Parcel on any plat
 
 See the [macOS troubleshooting page](/troubleshooting/platform-specific-issues/macos#code-signing).
 
+## App Store Connect
+
+Submit a signed PKG to distribute an application through the Mac App Store. Do not submit a DMG or ZIP file. These formats are for direct distribution.
+
+### Recommended configuration
+
+1. Create the macOS application record in App Store Connect. Register an explicit App ID. Its bundle ID must exactly match **Bundle Identifier** in Parcel. App Store Connect uses the bundle ID and version to associate an upload with the application record. Use a unique build string for each upload.
+2. Enable **Create Bundle** and select `pkg` as an output format.
+3. Sign the application with an **Apple Distribution** certificate. You can also use the legacy **3rd Party Mac Developer Application** identity from a Mac App Distribution certificate. Sign the PKG separately with a **Mac Installer Distribution** certificate. Parcel identifies this certificate as **3rd Party Mac Developer Installer**. Do not use Developer ID certificates for an App Store submission.
+4. Create and download a **Mac App Store Connect** provisioning profile for the same explicit App ID and application-signing certificate.
+5. Copy the provisioning profile to the directory that contains the Parcel project file. Rename the profile to match the configured .NET project. For example, use `MyApp.provisionprofile` when **.NET Project Path** points to `MyApp.csproj`. Parcel requires this exact file name. It copies the profile to `Contents/embedded.provisionprofile` in the application bundle.
+6. Enable **App Sandbox**. Configure only the permissions that the application needs. Before submission, test file access, network access, child processes, and bundled helper tools in the sandbox.
+7. Use the same Apple Developer team for **Team ID**, the provisioning profile, **Bundle Identifier**, and the selected certificate. Parcel checks these values during signing. It reports a mismatch before upload.
+8. Upload the PKG with Apple's Transporter application, Xcode tools, or another method that App Store Connect supports. Wait for processing to finish. Resolve all delivery warnings. Select the processed build for the macOS version, and submit it for review.
+
+See Apple's documentation for [creating a Mac App Store Connect provisioning profile](https://developer.apple.com/help/account/provisioning-profiles/create-an-app-store-provisioning-profile), [certificate purposes](https://developer.apple.com/help/account/certificates/certificates-overview), and [uploading builds](https://developer.apple.com/help/app-store-connect/manage-builds/upload-builds/).
+
+:::warning[Entitlements take precedence]
+If the project contains an `Entitlements.plist` file, Parcel preserves its values. A `com.apple.security.app-sandbox` value of `false` overrides **Enable App Sandbox** and causes an App Store rejection. The provisioning profile must authorize the signing certificate and all restricted capabilities that the application uses. Create a new profile after you change certificates or App ID capabilities.
+:::
+
+:::warning[Confirm that the profile was embedded]
+When Parcel finds the expected file, it logs that it is copying the provisioning profile. Check for this message in the packaging output. Parcel does not find or embed a profile that has a different name.
+:::
+
+:::note[Do not notarize App Store builds with Parcel]
+Parcel notarizes software that uses a Developer ID identity for distribution outside the Mac App Store. Apple validates App Store packages during upload and submission. Disable Parcel notarization for an App Store build.
+:::
+
 ## Notarization
 
 Apple notarization verifies that applications have been checked by Apple for malicious software. Notarization is required for macOS 10.15 (Catalina) and later when distributing applications outside the Mac App Store.
 
 The process uploads an application to Apple's servers for scanning and associates the bundle hash with the developer account.
 
-Mac App Store packages are validated during submission and are not notarized separately. For direct distribution, Parcel can submit and staple DMG and PKG artifacts signed with Developer ID certificates. See Apple's [notarization documentation](https://developer.apple.com/documentation/security/notarizing-macos-software-before-distribution).
+Apple validates Mac App Store packages during submission. Do not notarize them separately. For direct distribution, Parcel can submit and staple DMG and PKG files that use Developer ID certificates. See Apple's [notarization documentation](https://developer.apple.com/documentation/security/notarizing-macos-software-before-distribution).
 
 ### Prerequisites
 
-Before notarizing applications, ensure you have:
+Before you notarize an application, make sure that you have these items:
 
 - **Apple Developer Account**: Paid Apple Developer Program membership ($99/year)
 - **Valid Developer ID Certificate**: For code signing applications distributed outside the Mac App Store
@@ -319,7 +350,7 @@ For testing, development, or personal use without an Apple Developer Account, no
 When macOS blocks a non-notarized app, users can bypass the warning:
 
 1. Go to **System Preferences** → **Security & Privacy** → **General** tab
-2. Try to run the app - it will be blocked
+2. Try to run the application. macOS blocks it.
 3. Within a few minutes, a message appears in Security & Privacy about the blocked app
 4. Click **"Open Anyway"** next to the blocked app message
 5. Confirm by clicking **"Open"** in the dialog
@@ -335,4 +366,5 @@ See the [macOS troubleshooting page](/troubleshooting/platform-specific-issues/m
 ## See also
 
 - [Parcel setup](/tools/parcel/setup)
+- [Parcel configuration reference](/tools/parcel/configuration-reference)
 - [Parcel command line reference](/tools/parcel/command-line-reference)
