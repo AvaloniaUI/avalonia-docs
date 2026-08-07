@@ -1,4 +1,5 @@
-// NEEDS UPDATING BEFORE USE — not tested since the update to Tailwind v4, which has broken styling on other components. This component is not currently used anywhere in the docs, so it can be updated when needed.
+// TODO: Verify/update this component's Tailwind v4 styling before using it.
+// It's currently registered in MDXComponents as `XpfAd`, but not referenced by any MDX content.
 
 import React from 'react';
 
