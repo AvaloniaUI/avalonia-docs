@@ -1,3 +1,5 @@
+// NEEDS UPDATING BEFORE USE — not tested since the update to Tailwind v4, which has broken styling on other components. This component is not currently used anywhere in the docs, so it can be updated when needed.
+
 import React from 'react';
 
 const XpfLogo = () => (
