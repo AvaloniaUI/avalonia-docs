@@ -12,7 +12,7 @@ tags:
 
 A `.parcel` file contains the settings that Parcel uses to publish, package, and sign an application. The file has five top-level sections: `GeneralSettings`, `PublishSettings`, `Win32Settings`, `MacOsSettings`, and `LinuxSettings`.
 
-Parcel resolves relative paths from the location of the `.parcel` file. When you use **Save As** or **Move To**, Parcel updates relative paths for the new project location.
+Parcel resolves relative paths from the location of the `.parcel` file. If you use **Save As** or **Move To**, Parcel updates relative paths for the new project location.
 
 ## Setting values
 
@@ -20,11 +20,11 @@ For most scalar settings, you can specify a literal value, an environment variab
 
 If the project does not define a supported setting, Parcel checks its automatic environment variable. The following tables give the exact variable names. Collection settings and structured-object settings do not have automatic environment-variable overrides.
 
-The defaults in this reference describe the resulting package behavior. Parcel writes some defaults when it creates a project. It applies other defaults during packaging when a setting is empty.
+The defaults in this reference describe the resulting package behavior. Parcel writes some defaults when it creates a project. It applies other defaults during packaging if a setting is empty.
 
 ## General settings
 
-These settings appear on the **Basics** page and apply to every target platform.
+These settings apply to every target platform. They appear on the **Basics** page.
 
 | Setting | `.parcel` property | Type or values | Default | Environment variable | Description |
 |---|---|---|---|---|---|
@@ -34,7 +34,7 @@ These settings appear on the **Basics** page and apply to every target platform.
 | Application Name | `GeneralSettings.ApplicationName` | String | Package name | `PARCEL_GENERAL_APPLICATION_NAME` | Display name used by installers, bundles, shortcuts, and desktop entries. |
 | Version | `GeneralSettings.Version` | Version string | `1.0.0` | `PARCEL_GENERAL_VERSION` | Application and package version. Parcel converts it to the format required by each platform. |
 | Application Icon | `GeneralSettings.Icon` | Path to an icon | Parcel default icon | `PARCEL_GENERAL_ICON` | Shared application icon. A platform icon overrides it when configured. |
-| Company | `GeneralSettings.Company` | String, maximum 255 characters | Package name where required | `PARCEL_GENERAL_COMPANY` | Sets the Windows publisher and Linux package maintainer unless a platform setting overrides it. |
+| Company | `GeneralSettings.Company` | String | Package name where required | `PARCEL_GENERAL_COMPANY` | Sets the Windows publisher and Linux package maintainer unless a platform setting overrides it. Maximum 255 characters. |
 | File Associations | `GeneralSettings.FileTypes` | Collection | None | — | File types registered by supported installers and bundles. |
 | URL Schemes | `GeneralSettings.UrlTypes` | Collection | None | — | URL schemes registered by supported installers and bundles. |
 
@@ -55,7 +55,11 @@ Each entry in `GeneralSettings.UrlTypes` has the following properties:
 | `GeneralSettings.UrlTypes[].Name` | String | Yes | Human-readable name for the URL type. |
 | `GeneralSettings.UrlTypes[].Schemes` | String | Yes | One or more RFC 3986 schemes without `://`, separated by commas, semicolons, or spaces. |
 
-Parcel adds associations to NSIS and MSIX packages on Windows, application bundles on macOS, and DEB and RPM desktop entries on Linux. A Windows file association requires an extension. Windows cannot register an entry that contains only a MIME type. On macOS, associations require `MacOsSettings.CreateBundle`.
+Parcel adds associations to NSIS and MSIX packages on Windows, application bundles on macOS, and DEB and RPM desktop entries on Linux.
+
+On Windows, file association requires an extension. Windows cannot register an entry that contains only a MIME type.
+
+On macOS, associations require `MacOsSettings.CreateBundle`.
 
 ## .NET publish settings
 
@@ -65,7 +69,7 @@ These settings control the `dotnet publish` operation Parcel runs before packagi
 |---|---|---|---|---|---|
 | Configuration | `PublishSettings.Configuration` | String | .NET project default | `PARCEL_NET_CONFIGURATION` | Build configuration. It must begin with a letter and contain only letters, digits, `_`, or `-`. |
 | Publish Single File | `PublishSettings.PublishSingleFile` | Boolean | Enabled for new Parcel projects | `PARCEL_NET_PUBLISH_SINGLE_FILE` | Publishes managed assemblies in a single executable. |
-| Publish Trimmed | `PublishSettings.PublishTrimmed` | Boolean | .NET project default | `PARCEL_NET_PUBLISH_TRIMMED` | Enables trimming to reduce the package size. Test the trimmed application. |
+| Publish Trimmed | `PublishSettings.PublishTrimmed` | Boolean | .NET project default | `PARCEL_NET_PUBLISH_TRIMMED` | Enables trimming to reduce the package size. Testing the trimmed application is recommended. |
 | Publish AOT | `PublishSettings.PublishAot` | Boolean | .NET project default | `PARCEL_NET_PUBLISH_AOT` | Enables Native AOT compilation. |
 | Publish ReadyToRun | `PublishSettings.PublishReadyToRun` | Boolean | .NET project default | `PARCEL_NET_PUBLISH_READY_TO_RUN` | Precompiles assemblies to improve startup performance. |
 | Publish Self-Contained | `PublishSettings.PublishSelfContained` | Boolean | `true` | `PARCEL_NET_PUBLISH_SELF_CONTAINED` | Includes the .NET runtime. This advanced field is not shown in the GUI. |
@@ -73,7 +77,7 @@ These settings control the `dotnet publish` operation Parcel runs before packagi
 | Exclude Files | `PublishSettings.ExcludeFilePatterns` | List of glob patterns | Empty | — | Removes matching files and directories from the published output before packaging. |
 
 :::note
-.NET publish properties defined in the *.csproj file are also respected, there is no need to duplicate them in the parcel config.
+Parcel respects .NET publish properties defined in the *.csproj file. There is no need to duplicate them in the Parcel config.
 :::
 
 ## Windows settings
@@ -85,7 +89,7 @@ These settings control the `dotnet publish` operation Parcel runs before packagi
 | Installer Icon | `Win32Settings.InstallerIcon` | Path to ICO or SVG | Application Icon | `PARCEL_WINDOWS_INSTALLER_ICON` | Overrides the shared icon for the NSIS installer and generated MSIX assets. |
 | Create Company Folder | `Win32Settings.CompanyFolder` | Boolean | `false` | `PARCEL_WINDOWS_COMPANY_FOLDER` | Adds a company directory to the NSIS installation and Start Menu paths. |
 | License File | `Win32Settings.InstallerLicense` | Path to TXT or RTF | None | `PARCEL_WINDOWS_INSTALLER_LICENSE` | Displays a license acceptance page in the NSIS installer. |
-| Requires Admin | `Win32Settings.InstallerRequiresAdmin` | Boolean | `true` | `PARCEL_WINDOWS_INSTALLER_REQUIRES_ADMIN` | Installs NSIS packages under Program Files with elevation; when disabled, installs for the current user. |
+| Requires Admin | `Win32Settings.InstallerRequiresAdmin` | Boolean | `true` | `PARCEL_WINDOWS_INSTALLER_REQUIRES_ADMIN` | Installs NSIS packages under Program Files with elevation. When disabled, installs for the current user. |
 | Include uninstaller with the app | `Win32Settings.IncludeUninstaller` | Boolean | `true` | `PARCEL_WINDOWS_INCLUDE_UNINSTALLER` | Includes an NSIS uninstaller and registers the application in Windows installed-app listings. |
 | Publisher | `Win32Settings.MsixPublisher` | Distinguished name | Company or application name | `PARCEL_WINDOWS_MSIX_PUBLISHER` | MSIX publisher identity. For signed packages, it must exactly match the certificate subject. |
 
@@ -136,7 +140,7 @@ These settings control the `dotnet publish` operation Parcel runs before packagi
 |---|---|---|---|---|---|
 | Create Bundle | `MacOsSettings.CreateBundle` | Boolean | `true` for new projects | `PARCEL_MACOS_CREATE_BUNDLE` | Creates a macOS `.app` bundle. DMG, PKG, permissions, and associations require a bundle. |
 | Bundle Identifier | `MacOsSettings.BundleIdentifier` | Reverse-DNS string | Derived from company and package name | `PARCEL_MACOS_BUNDLE_IDENTIFIER` | `CFBundleIdentifier` used for signing and distribution. |
-| Team ID | `MacOsSettings.TeamId` | 10 uppercase letters or digits | None | `PARCEL_MACOS_TEAM_ID` | Apple Developer team identifier used by signing and notarization. |
+| Team ID | `MacOsSettings.TeamId` | 10 uppercase letters or digits | None | `PARCEL_MACOS_TEAM_ID` | Apple Developer team identifier used for signing and notarization. |
 | App Category | `MacOsSettings.BundleCategory` | Apple bundle category | `Other` | `PARCEL_MACOS_BUNDLE_CATEGORY` | macOS and App Store application category. |
 | Application Icon | `MacOsSettings.AppIcon` | Path to ICNS or SVG | Application Icon | `PARCEL_MACOS_APP_ICON` | Overrides the shared icon for the app bundle. |
 | Permissions | `MacOsSettings.Permissions` | Permission-description dictionary | Empty | — | Adds macOS usage descriptions for Camera, Microphone, Location, Contacts, Calendars, Desktop, Documents, Downloads, and Network. |
@@ -189,7 +193,7 @@ The DMG layout object supports these advanced properties:
 
 ### Installer signing
 
-A PKG installer requires a separate installer certificate. `MacOsSettings.InstallerSigningCredentialsType` accepts the same credential types as application signing. Ad hoc signing cannot create a signed PKG.
+A PKG installer requires a separate installer certificate. `MacOsSettings.InstallerSigningCredentialsType` accepts the same credential types as [application signing](#application-signing). Ad hoc signing cannot create a signed PKG.
 
 | Setting | `.parcel` property | Type | Default | Environment variable | Description |
 |---|---|---|---|---|---|
@@ -216,14 +220,14 @@ A PKG installer requires a separate installer certificate. `MacOsSettings.Instal
 |---|---|---|---|---|---|
 | Install Directory Name | `LinuxSettings.InstallDirName` | Lowercase package-directory name | `app-{package-name}` | `PARCEL_LINUX_INSTALL_DIR_NAME` | Directory created under `/usr/share`. It must start and end with a letter or number. Maximum 100 characters. |
 | Application Icon | `LinuxSettings.AppIcon` | Path to PNG or SVG | Application Icon | `PARCEL_LINUX_APP_ICON` | Overrides the shared icon for DEB and RPM packages. |
-| Maintainer | `LinuxSettings.Maintainer` | String, maximum 255 characters | Company, then package name | `PARCEL_LINUX_MAINTAINER` | Package maintainer, preferably in `Name <email@example.com>` format. |
+| Maintainer | `LinuxSettings.Maintainer` | String | Company, then package name | `PARCEL_LINUX_MAINTAINER` | Package maintainer, preferably in `Name <email@example.com>` format. Maximum 255 characters. |
 | Copyright | `LinuxSettings.CopyrightFile` | Path | None | `PARCEL_LINUX_COPYRIGHT_FILE` | Copyright file included in DEB and RPM metadata. |
 | Desktop Category | `LinuxSettings.DesktopCategory` | Linux desktop category | `Application` | `PARCEL_LINUX_DESKTOP_CATEGORY` | Category used in desktop menus and mapped to package-manager metadata. |
 | Create `/usr/bin/` symlink | `LinuxSettings.CreateBinSymlink` | Boolean | `true` | `PARCEL_LINUX_CREATE_BIN_SYMLINK` | Creates a command-line symlink to the application executable. |
 | Additional DEB Dependencies | `LinuxSettings.AdditionalDebDependencies` | List | Empty | — | Adds Debian package dependencies. Separate alternatives with a vertical bar. |
 | Additional RPM Dependencies | `LinuxSettings.AdditionalRpmDependencies` | List | Empty | — | Adds RPM package names or capabilities. |
 
-You can use the main freedesktop categories and common additional categories. These include `Development`, `Education`, `Game`, `Graphics`, `Network`, `Office`, `Science`, `Settings`, `System`, `Utility`, `WebBrowser`, `TextEditor`, and `TerminalEmulator`.
+You can use the main [freedesktop categories](https://specifications.freedesktop.org/menu-spec/latest/category-registry.html) and common additional categories, e.g., `Development`, `Education`, `Game`, `Graphics`, `Network`, `Office`, `Science`, `Settings`, `System`, `Utility`, `WebBrowser`, `TextEditor`, `TerminalEmulator`.
 
 ## See also
 
