@@ -10,7 +10,7 @@ import TabItem from '@theme/TabItem';
 
 ## What is Parcel MCP?
 
-The Parcel MCP server lets AI assistants use Parcel packaging tools. Your assistant can create packaging configurations from .NET projects. It can also configure code signing and notarization and build packages for Windows, macOS, and Linux.
+The Parcel MCP server lets AI assistants use Parcel packaging tools. Your assistant can create packaging configurations from .NET projects. It can also configure code signing and notarization, and build packages for Windows, macOS, and Linux.
 
 For a general introduction to MCP, see [AI Tools](/tools/ai-tools/).
 
@@ -23,7 +23,7 @@ Before you configure the MCP server, make sure that you have these items:
 
 ### Setting your license key
 
-The MCP server reads the license from the `AVALONIA_TOOLS_LICENSE_KEY` environment variable. Get your license key from the [Avalonia Customer Portal](https://portal.avaloniaui.net/). MCP is a paid feature and is not included with the Community edition.
+The MCP server reads the license from the `AVALONIA_TOOLS_LICENSE_KEY` environment variable. Get your license key from the [Avalonia Portal](https://portal.avaloniaui.net/). Parcel MCP is a paid feature and is not included with the Community edition.
 
 Set the key in your shell profile so it persists across sessions:
 

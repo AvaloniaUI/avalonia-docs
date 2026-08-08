@@ -14,7 +14,7 @@ import TabItem from '@theme/TabItem';
 
 ## Packaging
 
-Parcel creates macOS application bundles (`.app`) and packages. You can run Parcel on Windows, macOS, or Linux.
+Parcel creates macOS application bundles (`.app`) and packages. Packaging via Parcel can be run on Windows, macOS, or Linux.
 
 | Format | CLI code | Best suited for |
 |---|---|---|
@@ -22,7 +22,7 @@ Parcel creates macOS application bundles (`.app`) and packages. You can run Parc
 | PKG installer (`.pkg`) | `pkg` | Managed installation, direct distribution, and Mac App Store submission |
 | ZIP archive (`.zip`) | `zip` | Direct distribution of an app bundle without an installer |
 
-For the complete setting names, types, defaults, and environment variables, see the [Parcel configuration reference](/tools/parcel/configuration-reference#macos-settings).
+For a complete list of setting names, types, defaults, and environment variables, see the [Parcel configuration reference](/tools/parcel/configuration-reference#macos-settings).
 
 ### Bundle Configuration
 
@@ -113,7 +113,7 @@ Parcel includes a visual DMG layout editor. The default layout uses a **660 x 42
 
 Icons are positioned from the top left corner to the icon center.
 
-Use the editor to change the window position, window size, icon size, label size, grid, and background color. You can also change the positions of the application bundle and Applications folder. Design the background image for the selected layout.
+Use the editor to change the window position, window size, icon size, label size, grid, and background color. You can also change the positions of the application bundle and Applications folder, and design the background image for the selected layout.
 
 :::note
 Parcel puts the optional **DMG License File** at the root of the image. Enable **Sign DMG** to sign the completed image with the application-signing credentials.
@@ -125,9 +125,14 @@ Parcel maintains executable permissions during ZIP creation. The bundle structur
 
 ### PKG installers <MinVersion version="1.1" isNewVersion="true" />
 
-PKG packages use the native macOS Installer. You can create them on every host that Parcel supports. PKG packages require **Create Bundle** and install the application in `/Applications` by default.
+PKG packages use the native macOS Installer. You can create them on every host that Parcel supports. PKG packages require **Create Bundle**. They install the application in `/Applications` by default.
 
-Use different certificates for the application and its installer package. For direct distribution, sign the application with a **Developer ID Application** certificate. Sign the PKG with a **Developer ID Installer** certificate. Then notarize the package. For Mac App Store distribution, see [App Store Connect](#app-store-connect). See also Apple's [Mac software packaging guidance](https://developer.apple.com/documentation/xcode/packaging-mac-software-for-distribution) and [Developer ID overview](https://developer.apple.com/support/developer-id/).
+You must use different certificates for the application and its installer package.
+
+- For direct distribution, sign the application with a **Developer ID Application** certificate. Sign the PKG with a **Developer ID Installer** certificate. Then, notarize the package.
+- For Mac App Store distribution, see [App Store Connect](#app-store-connect).
+
+See also Apple's [Mac software packaging guidance](https://developer.apple.com/documentation/xcode/packaging-mac-software-for-distribution) and [Developer ID overview](https://developer.apple.com/support/developer-id/).
 
 ### Troubleshooting
 
@@ -161,9 +166,9 @@ Apple doesn't provide P12 certificates directly, but they can be exported from t
 
 Parcel uses [rcodesign](https://github.com/indygreg/apple-platform-rs/tree/main/apple-codesign) to sign binaries and bundles on Windows and Linux machines.
 
-#### PEM Certificate (Cross-Platform)
+#### PEM Certificate (Cross-platform)
 
-Uses a PEM certificate for cross-platform signing. For a PKG package, configure separate PEM certificate fields for the application and installer.
+Use a PEM certificate for cross-platform signing. For a PKG package, you must configure separate PEM certificate fields for the application and installer.
 
 ### Installer certificates for PKG
 
@@ -252,17 +257,17 @@ Submit a signed PKG to distribute an application through the Mac App Store. Do n
 ### Recommended configuration
 
 1. Create the macOS application record in App Store Connect. Register an explicit App ID. Its bundle ID must exactly match **Bundle Identifier** in Parcel. App Store Connect uses the bundle ID and version to associate an upload with the application record.
-2. Configure signing with an **Apple Distribution** certificate. And configure PKG signing separately with a **Mac Installer Distribution** certificate. Do not use Developer ID certificates for an App Store submission, it will be rejected by Apple.
+2. Configure application signing with an **Apple Distribution** certificate. Configure PKG signing separately with a **Mac Installer Distribution** certificate. Do not use Developer ID certificates for an App Store submission, or it will be rejected by Apple.
 3. Create and download a **Mac App Store Connect** provisioning profile for the same explicit App ID and application-signing certificate.
-4. Copy the provisioning profile to the directory that contains the Parcel project file. Rename the profile to match the configured .NET project. For example, use `MyApp.provisionprofile` when **.NET Project Path** points to `MyApp.csproj`. Parcel requires this exact file name.
-5. Make sure that **Create Bundle** and **Enable Sandbox** are enabled in MacOS settings. Notarization must be disabled for App Store Connect - it's only useful for sideloading.
-6. Optinally, configure custom `Entitlements.plist` file in the project directory, if the app requires custom permissions. Before submission, test file access, network access, child processes, and bundled helper tools in the sandbox.
+4. Copy the provisioning profile to the directory that contains the Parcel project file. Rename the profile to match the configured .NET project. For example, use `MyApp.provisionprofile` if **.NET Project Path** points to `MyApp.csproj`. Parcel requires the file name to match exactly.
+5. Make sure that **Create Bundle** and **Enable Sandbox** are enabled in MacOS settings. Notarization must be disabled for App Store Connect. It is only useful for sideloading.
+6. Optionally, configure a custom `Entitlements.plist` file in the project directory if the app requires custom permissions. Before submission, test file access, network access, child processes, and bundled helper tools in the sandbox.
 7. Upload the PKG with Apple's Transporter application, Xcode tools, or another method that App Store Connect supports. Wait for processing to finish. Resolve all delivery warnings. Select the processed build for the macOS version, and submit it for review.
 
-See Apple's documentation for [creating a Mac App Store Connect provisioning profile](https://developer.apple.com/help/account/provisioning-profiles/create-an-app-store-provisioning-profile), [certificate purposes](https://developer.apple.com/help/account/certificates/certificates-overview), and [uploading builds](https://developer.apple.com/help/app-store-connect/manage-builds/upload-builds/).
+See Apple's documentation for [creating an App Store Connect provisioning profile](https://developer.apple.com/help/account/provisioning-profiles/create-an-app-store-provisioning-profile), [certificate purposes](https://developer.apple.com/help/account/certificates/certificates-overview), and [uploading builds](https://developer.apple.com/help/app-store-connect/manage-builds/upload-builds/).
 
 :::note[Do not notarize App Store builds with Parcel]
-Parcel notarizes software that uses a Developer ID identity for distribution outside the Mac App Store. Apple validates App Store packages during upload and submission. Disable Parcel notarization for an App Store build.
+Parcel notarizes software that uses a Developer ID for distribution outside the Mac App Store. Apple validates App Store packages during upload and submission. Disable Parcel notarization for an App Store build.
 :::
 
 ## Notarization

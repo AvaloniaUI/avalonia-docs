@@ -11,7 +11,7 @@ tags:
 
 ## Packaging
 
-Parcel creates Windows installers and archives. You can run Parcel on Windows, macOS, or Linux.
+Parcel creates Windows installers and archives. Packaging via Parcel can be run on Windows, macOS, or Linux.
 
 | Format | CLI code | Best suited for |
 |---|---|---|
@@ -19,7 +19,7 @@ Parcel creates Windows installers and archives. You can run Parcel on Windows, m
 | MSIX package (`.msix`) | `msix` | Modern Windows deployment, enterprise management, and Microsoft Store distribution |
 | ZIP archive (`.zip`) | `zip` | Portable distribution that does not require installation or registration |
 
-For the complete setting names, types, defaults, and environment variables, see the [Parcel configuration reference](/tools/parcel/configuration-reference#windows-settings).
+For a complete list of setting names, types, defaults, and environment variables, see the [Parcel configuration reference](/tools/parcel/configuration-reference#windows-settings).
 
 ### Package Configuration
 
@@ -162,12 +162,12 @@ Use certificates installed in the Windows Certificate Store, including hardware 
 **Documentation:**
 - [Windows Certificate Store Overview](https://learn.microsoft.com/en-us/windows-hardware/drivers/install/certificate-stores)
 
-#### Azure Artifact Signing (Cross-Platform)
+#### Azure Artifact Signing (Cross-platform)
 
 Azure Artifact Signing is a cloud signing service that was formerly named Trusted Signing. It removes the need to manage local certificates. Hardware security modules (HSMs) protect the signing keys.
 
 **Required Configuration:**
-- **Azure Artifact Signing Endpoint**: Service endpoint URL (format: `https://[region].codesigning.azure.net/`)
+- **Azure Artifact Signing Endpoint**: Service endpoint URL, in the format of `https://[region].codesigning.azure.net/`
 - **Azure Artifact Signing Certificate Profile Name**: Name of the certificate profile
 - **Azure Artifact Signing Account Name**: Name of the signing account
 
@@ -197,7 +197,7 @@ Store certificates and private keys securely in Azure Key Vault for centralized 
 
 **Required Configuration:**
 - **Azure Key Vault Name**: Name of the Azure Key Vault instance
-- **Azure Key Vault URL** (optional): Full vault URL for sovereign clouds or a non-default endpoint
+- **Azure Key Vault URL**: (optional) Full vault URL for sovereign clouds or a non-default endpoint
 - **Azure Key Vault Certificate Name**: Name of the certificate stored in the vault
 
 **Authentication:**
@@ -268,7 +268,7 @@ Use Google Cloud Key Management Service for secure private key storage. The cert
 
 **Required Configuration:**
 - **Google Access Token**: OAuth 2.0 access token for authentication
-- **Google Signing Keyring**: Keyring path in format: `projects/[PROJECT]/locations/[LOCATION]/keyRings/[KEYRING]`
+- **Google Signing Keyring**: Keyring path, in the format of `projects/[PROJECT]/locations/[LOCATION]/keyRings/[KEYRING]`
 - **Google Signing Certificate File**: Path to the certificate file
 - **Google Signing Certificate Version** (optional): Specific version of the key (uses most recent if omitted)
 

@@ -22,7 +22,7 @@ Parcel creates packages for different Linux package managers and distribution me
 
 DEB and RPM packages include a `.desktop` entry. They can also register icons, file associations, URL schemes, package dependencies, and an optional `/usr/bin` symlink.
 
-For the complete setting names, types, defaults, and environment variables, see the [Parcel configuration reference](/tools/parcel/configuration-reference#linux-settings).
+For a complete list of setting names, types, defaults, and environment variables, see the [Parcel configuration reference](/tools/parcel/configuration-reference#linux-settings).
 
 ## Dependencies
 
@@ -60,7 +60,7 @@ Display name in application launchers and desktop menus. Parcel adds this name t
 
 **Package Name**:
 
-The package identifier used in package metadata and output filenames. Parcel normalizes it to lower case for Linux packages.
+The package identifier used in package metadata and output filenames. Parcel normalizes this identifier to lowercase for Linux packages.
 
 **Install Directory Name**:
 

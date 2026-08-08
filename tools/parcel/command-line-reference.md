@@ -12,10 +12,10 @@ Use the Parcel command-line tool to package Avalonia applications for Windows, m
 Before you use Parcel, make sure that you have these items:
 
 1. **Parcel .NET tool** - Follow the [setup guide](/tools/parcel/setup) to install it.
-2. **Valid license key** - Set the `AVALONIA_TOOLS_LICENSE_KEY` environment variable or use the `--license-key` option. Get a license key from the Avalonia Portal.
+2. **Valid license key** - Set the `AVALONIA_TOOLS_LICENSE_KEY` environment variable or use the `--license-key` option. Get a license key from the [Avalonia Portal](https://portal.avaloniaui.net/).
 
 :::note
-Parcel CLI is only available with a [Avalonia Plus](https://avaloniaui.net/pricing) license.
+Parcel CLI is only available with an [Avalonia Plus](https://avaloniaui.net/pricing) license.
 :::
 
 ## Overview
@@ -52,9 +52,9 @@ parcel pack <project> [options]
 | Option | Description | Default |
 |--------|-------------|---------|
 | `-o, --output` | Output directory | `<project-dir>\bin\packages` |
-| `-r, --runtimes` | Runtime identifiers to package. You can specify this option more than once | Current platform runtime |
-| `-p, --packages` | Output formats: `deb`, `dmg`, `msix`, `nsis`, `pkg`, `rpm`, or `zip`. You can specify this option more than once | Current platform package |
-| `--no-build` | Do not rebuild the input project | `false` |
+| `-r, --runtimes` | Runtime identifiers to package. You can specify this option more than once. | Current platform runtime |
+| `-p, --packages` | Output formats: `deb`, `dmg`, `msix`, `nsis`, `pkg`, `rpm`, or `zip`. You can specify this option more than once. | Current platform package |
+| `--no-build` | Do not rebuild the input project. | `false` |
 
 **Example:**
 
@@ -78,7 +78,7 @@ parcel step [command] <input> <output> [options]
 
 | Command | Description | Input | Output |
 |---------|-------------|-------|--------|
-| `publish` | Publishes the .NET project for a target platform and runtime | No explicit input. Parcel reads the project from the `.parcel` file | Published application directory |
+| `publish` | Publishes the .NET project for a target platform and runtime | No explicit input. Parcel reads the project from the `.parcel` file. | Published application directory |
 | `merge-mac` | Merges architecture builds into a universal macOS application bundle | Directory with architecture-specific subdirectories (`osx-x64`, `osx-arm64`) | Universal application directory |
 | `bundle-mac` | Packages a macOS application and its dependencies into one bundle | Application directory | Application bundle (`.app`) |
 | `sign-mac` | Signs a macOS application bundle and its components with the credentials in the project settings | Application bundle or flat directory | Signed application bundle or directory |
@@ -90,7 +90,7 @@ parcel step [command] <input> <output> [options]
 | `create-deb` | Creates Debian package for Linux | Application directory | Debian package (.deb) |
 | `create-rpm` | Creates an RPM package for Linux | Application directory | RPM package (`.rpm`) |
 | `create-nsis` | Creates Windows NSIS installer | Application directory | Unsigned NSIS installer (.exe) |
-| `create-msix` | Creates a Windows MSIX package. Parcel generates the manifest or patches a project template | Application directory | MSIX package (`.msix`) |
+| `create-msix` | Creates a Windows MSIX package. Parcel generates the manifest or patches a project template. | Application directory | MSIX package (`.msix`) |
 
 **Example:**
 
@@ -240,7 +240,7 @@ For setup and usage information, see [Parcel MCP](/tools/parcel/mcp).
 | `AWS_SECRET_ACCESS_KEY` | AWS secret key used by AWS KMS signing. |
 | `AWS_SESSION_TOKEN` | Optional AWS temporary-session token. |
 
-You can override supported scalar settings with automatic `PARCEL_<SECTION>_<SETTING>` environment variables. The [Parcel configuration reference](/tools/parcel/configuration-reference) gives the exact name for each setting.
+You can override supported scalar settings with automatic `PARCEL_<SECTION>_<SETTING>` environment variables. See the [Parcel configuration reference](/tools/parcel/configuration-reference) for the exact name of each setting.
 
 ## Notes
 
