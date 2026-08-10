@@ -40,7 +40,7 @@ A quick reference for WPF developers transitioning to Avalonia. Each entry shows
 | `Style x:Key="..."` | Style classes: `<Style Selector="Button.primary">` | |
 | `Style="{StaticResource ButtonStyle}"` | `Classes="primary"` | |
 | `ControlTemplate.Triggers` | Pseudo-class selectors | |
-| `TemplateBinding` | `TemplateBinding` | Same concept (OneWay only) |
+| `TemplateBinding` | `TemplateBinding` | Same concept, but Avalonia supports `Mode=TwoWay` |
 | `{RelativeSource TemplatedParent}` | `{TemplateBinding}` or `$parent[ControlType]` | |
 
 ### DataTrigger equivalent
