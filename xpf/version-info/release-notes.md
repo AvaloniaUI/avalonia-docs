@@ -6,9 +6,9 @@ title: Release notes
 ## XPF 1.6.6 (2026-08-11)
 
 * Avalonia version updated from 11.3.18 to 11.3.20
-* Added support for MahApps.Metro
+* Added basic support for MahApps's windows
 * Fixed fail fast when `FontManagerOptions.DefaultFamilyName` does not point to a system font
-* Fixed `OutOfRangeException` on text input (macOS 27)
+* Fixed `OutOfRangeException` on text input, which appeared since macOS 27
 * Fixed `NullReferenceException` when `TextBox.TextView` is null
 * Fixed popups appearing on the wrong monitor for maximized windows without chrome
 * Fixed tooltips not disappearing when cursor moves out of the window
