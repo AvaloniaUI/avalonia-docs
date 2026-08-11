@@ -14,11 +14,11 @@ At this point, your temperature converter app has a single button in the center 
 
 To place multiple UI elements in the window, you must use a **layout control.**
 
-For more information on layout controls, see [Layout controls](/controls).
+For a full list of Avalonia layout controls, go to the Layout tab of the [Controls reference](/controls).
 
 ## Inserting a stack panel
 
-You can use the `StackPanel` layout control to place some text above the button.
+You can use the [`StackPanel`](/controls/layout/panels/stackpanel) layout control to place some text above the button.
 
 1. In the file **MainWindow.axaml**, enclose your `Button` with a `<StackPanel>...</StackPanel>` tag.
 
@@ -28,7 +28,7 @@ You can use the `StackPanel` layout control to place some text above the button.
 </StackPanel>
 ```
 
-2. Add a [`TextBlock`](/api/avalonia/controls/textblock) above the Button. (You may recall the `TextBlock` tag from the default **MainWindow.axaml**, which prints text in the window.) Set the attributes of the `TextBlock` as follows:
+2. Add a [`TextBlock`](/api/avalonia/controls/textblock) above the Button. (You may recall the `TextBlock` control from the default **MainWindow.axaml**, which prints text in the window.) Set the attributes of the `TextBlock` as follows:
 
 - `Margin="5"`
 - `FontSize="24"`
@@ -76,7 +76,7 @@ You can use the `StackPanel` layout control to place some text above the button.
 <Image light={TemperatureConverterBlueBorder} alt="A screenshot showing a work-in-progress app, with text enclosed inside a blue border above a button." position="center" maxWidth={400} cornerRadius="true" margin="0,0,30,0"/>
 
 :::note
-By default, `StackPanel` arranges elements in a vertical stack. You can change this to horizontal by setting the `Orientation` attribute to `Horizontal`.
+By default, [`StackPanel`](/controls/layout/panels/stackpanel) arranges elements in a vertical stack. You can change this to horizontal by setting the `Orientation` attribute to `Horizontal`.
 :::
 
 ## Inserting a grid
@@ -110,6 +110,10 @@ We have specified some attributes for the `Grid`:
 - Cell height automatically scales to match the content. Because the automatic height of an empty cell is zero, the `Grid` currently appears on your previewer as a horizontal straight line.
 
 <Image light={TemperatureConverterEmptyGrid} alt="A screenshot showing a work-in-progress app, with a title, a dotted line, and a button." position="center" maxWidth={400} cornerRadius="true"/>
+
+:::tip
+In this example, `Grid` goes inside `StackPanel` so that the entire grid's contents appear between the "Temperature Converter" text box and the **Calculate** button. There are many options for combining layout controls to get the exact UI design you need. See [Choosing a layout panel](/docs/layout/choosing-a-layout-panel) for more information on when to use different types of layout control.
+:::
 
 ## Inserting controls in the grid
 
