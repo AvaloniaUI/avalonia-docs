@@ -75,7 +75,7 @@ For the `{x:Static lang:Resources.GreetingText}` reference to work, the `Resourc
 
 You must ensure a `public` resource class is available. Otherwise, your `{x:Static}` references may fail to resolve at runtime without throwing an error. (Because an `internal` class still compiles.) How you generate the `Resources` class depends on the tooling you use: [Visual Studio](#visual-studio) or [other tools](#other-tools-rider-vs-code-cli).
 
-::caution
+:::caution
 Only the default resource file (`Resources.resx`) needs to generate the `Resources` class. Culture-specific files (e.g., `Resources.fil-PH.resx`, `Resources.ja-JP.resx`) supply the translated text only and do not need their own class.
 :::
 
@@ -102,7 +102,7 @@ In Visual Studio, you can change the generator tool from `ResXFileCodeGenerator`
 
 #### Other tools (Rider, VS Code, CLI)
 
-The `PublicResXFileCodeGenerator` tool only works in Visual Studio. If you attempt to use it with Rider, VS Code, or the CLI, nothing happens and and any reference to `Resources.Culture` fails to build with the error `CS0117: 'Resources' does not contain a definition for 'Culture'`.
+The `PublicResXFileCodeGenerator` tool only works in Visual Studio. If you attempt to use it with Rider, VS Code, or the CLI, nothing happens and any reference to `Resources.Culture` fails to build with the error `CS0117: 'Resources' does not contain a definition for 'Culture'`.
 
 In non-Visual Studio setups, use the MSBuild resource generator instead, which runs on every platform and every IDE. Add this to your `.csproj` file:
 
