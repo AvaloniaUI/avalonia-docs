@@ -10,7 +10,7 @@ import ComboBoxBindingToViewModel from '/img/controls/combobox/combobox-binding-
 
 `ComboBox` presents a selected item with a dropdown button that displays a list of options. The length and height of the combo box are determined by the selected item, unless you define them explicitly.
 
-You can compose, bind or template the items in the list. To review data templates, see [Introduction to data templates](/docs/data-templates/introduction-to-data-templates).
+You can compose, bind or template the items in the list. To review data templates, see [Introduction to data templates](/docs/data-templates/introduction-to-data-templates). For more guidance on using `ComboBox`, see [How to work with ComboBox](/docs/how-to/combobox-how-to).
 
 ## Useful properties
 
@@ -189,6 +189,8 @@ Bind `ItemsSource`, `SelectedItem`, and use an `ItemTemplate`.
 using System.Collections.ObjectModel;
 using CommunityToolkit.Mvvm.ComponentModel;
 
+namespace MyApp.ViewModels;
+
 public partial class MainWindowViewModel : ViewModelBase
 {
     public ObservableCollection<string> Categories { get; } = new()
@@ -242,6 +244,7 @@ When items are complex objects, use `TextSearch.TextBinding` to specify which pr
 
 ## See also
 
+- [How to: Work with ComboBox](/docs/how-to/combobox-how-to)
 - [ListBox](/controls/data-display/collections/listbox)
 - [AutoCompleteBox](/controls/input/text-input/autocompletebox)
 - [RadioButton](/controls/input/buttons/radiobutton)
