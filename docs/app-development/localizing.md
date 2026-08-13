@@ -102,7 +102,7 @@ In Visual Studio, you can change the generator tool from `ResXFileCodeGenerator`
 
 #### Other tools (Rider, VS Code, CLI)
 
-The `PublicResXFileCodeGenerator` tool only works in Visual Studio. If you attempt to use it with Rider, VS Code, or the CLI, nothing happens and any reference to `Resources.Culture` fails to build with the error `CS0117: 'Resources' does not contain a definition for 'Culture'`.
+The `PublicResXFileCodeGenerator` tool only works in Visual Studio. If you attempt to use it with Rider, VS Code, or the CLI, nothing happens and any reference to `Resources.Culture` fails to build.
 
 In non-Visual Studio setups, use the MSBuild resource generator instead, which runs on every platform and every IDE. Add this to your `.csproj` file:
 
