@@ -231,7 +231,7 @@ Keyboard input in the box, if it matches a list item, sets the `SelectedItem`. U
 
 ```xml
 <StackPanel>
-    <!-- You must define SelectedItem in XAML.
+    <!-- You must bind SelectedItem in XAML.
          Without SelectedItem, the list options display, but no selection can be made. -->
     <ComboBox ItemsSource="{Binding Countries}"
               // highlight-next-line
