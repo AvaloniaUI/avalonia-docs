@@ -48,7 +48,7 @@ By default, the width and height of the combo box scale to fit the selected item
 
 ### Basic example
 
-A basic list of text items. The dropdown list is fixed at a limited height and becomes scrollable as a result.
+A basic list of text items. These are defined in XAML, meaning they cannot change at runtime. `SelectedIndex` pre-selects an item from the list as the default selection, using its list position. The dropdown menu is fixed at a limited height and becomes scrollable as a result.
 
 <XamlPreview>
 
@@ -283,7 +283,7 @@ For type-to-search functionality, use [`AutoCompleteBox`](/controls/input/text-i
 
 ### Complex data objects
 
-When items are complex objects with multiple components (e.g., a user profile consisting of name, email, etc.), use `TextSearch.TextBinding` to specify which property the editable text should match against.
+When items are complex objects with multiple components (e.g., a user profile consisting of name, job, email, etc.), use `TextSearch.TextBinding` to specify which property the editable text should match against.
 
 ```xml
 <ComboBox IsEditable="True"
