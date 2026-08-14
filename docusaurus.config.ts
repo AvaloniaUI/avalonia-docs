@@ -23,6 +23,7 @@ const config: Config = {
   onBrokenLinks: 'warn',
   onBrokenAnchors: 'warn',
   onBrokenMarkdownLinks: 'warn',
+  clientModules: ['./src/clientModules/analyticsClient.ts'],
   headTags: [
     {
       tagName: "link",
