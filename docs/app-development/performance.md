@@ -80,6 +80,10 @@ A `BufferFactor` of `1` realizes items across one extra viewport height above an
 - **Flatten hierarchical data.** Instead of nesting expanders inside a virtualizing list, flatten the tree into a single list with indent levels. This lets the virtualizing panel manage rows directly. `TreeView` uses this approach internally.
 - **Limit realized items.** If virtualization is not feasible (for example, a complex property grid with expanders), limit how many controls exist at once. Load only the visible section and create additional items on demand as the user expands or scrolls.
 
+### Reusing item control trees
+
+Recycling a container normally discards the controls the item template built inside it and rebuilds them for the next item. For rows that contain many controls, a data template can opt into keeping that control tree as well. See [Container virtualization](/docs/app-development/container-virtualization), which also covers the lifecycle callbacks that stop firing per item once a template opts in.
+
 ### Reducing control template complexity
 
 Complex controls like [`TextBox`](/controls/input/text-input/textbox) contain a deep visual tree with borders, scroll viewers and watermark layers. When you create many of them, template instantiation and measurement dominate startup time.
