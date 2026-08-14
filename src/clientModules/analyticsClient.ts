@@ -3,6 +3,7 @@ import type { ClientModule } from '@docusaurus/types';
 const ATTRIBUTION_COOKIE = 'av_attribution';
 const ATTRIBUTION_STORAGE_KEY = 'av_attribution';
 const ATTRIBUTION_MAX_AGE_SECONDS = 60 * 60 * 24 * 90;
+const HANDOFF_STORAGE_KEY = 'av_handoff';
 
 interface AttributionTouch {
   source: string;
@@ -19,6 +20,18 @@ interface AttributionTouch {
 interface AttributionState {
   first: AttributionTouch;
   last: AttributionTouch;
+}
+
+/**
+ * Which internal link carried the visitor here, from the `av_*` parameters the
+ * marketing site mints. Kept separate from attribution on purpose: an internal
+ * hop must never overwrite the campaign that acquired the visitor, which is
+ * exactly what would happen if these links used `utm_*`.
+ */
+interface HandoffContext {
+  source?: string;
+  medium?: string;
+  content?: string;
 }
 
 declare global {
@@ -130,10 +143,47 @@ function captureAttribution(): AttributionState | null {
   return next;
 }
 
+/**
+ * Read the `av_*` handoff parameters and remember them for the session.
+ *
+ * They only exist on the landing URL — Docusaurus client-side navigation drops
+ * them — so without session storage the handoff would be lost after the first
+ * click, which is most of the docs journey.
+ */
+function handoffContext(): HandoffContext {
+  if (typeof window === 'undefined') return {};
+  const params = new URLSearchParams(window.location.search);
+  const current: HandoffContext = {
+    source: queryValue(params, 'av_source', 100),
+    medium: queryValue(params, 'av_medium', 100),
+    content: queryValue(params, 'av_content', 100),
+  };
+
+  if (current.source || current.medium || current.content) {
+    try {
+      window.sessionStorage.setItem(HANDOFF_STORAGE_KEY, JSON.stringify(current));
+    } catch {
+      // Private-mode storage failure just means the handoff is landing-page only.
+    }
+    return current;
+  }
+
+  try {
+    const raw = window.sessionStorage.getItem(HANDOFF_STORAGE_KEY);
+    return raw ? (JSON.parse(raw) as HandoffContext) : {};
+  } catch {
+    return {};
+  }
+}
+
 function attributionParams(): Record<string, unknown> {
   const state = captureAttribution();
   if (!state) return {};
+  const handoff = handoffContext();
   return {
+    handoff_source: handoff.source ?? '(not set)',
+    handoff_medium: handoff.medium ?? '(not set)',
+    handoff_content: handoff.content ?? '(not set)',
     first_source: state.first.source,
     first_medium: state.first.medium,
     first_campaign: state.first.campaign ?? '(not set)',
