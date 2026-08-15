@@ -54,7 +54,7 @@ A basic list of text items. These are defined in XAML, meaning they cannot chang
 
 ```xml
 <StackPanel xmlns="https://github.com/avaloniaui"
-             Margin="20">
+            Margin="20">
   <ComboBox SelectedIndex="0" MaxDropDownHeight="100">
     <ComboBoxItem>Text Item 1</ComboBoxItem>
     <ComboBoxItem>Text Item 2</ComboBoxItem>
@@ -251,7 +251,7 @@ Keyboard input in the box, if it matches a list item, sets the `SelectedItem`. U
 using System.Collections.ObjectModel;
 using CommunityToolkit.Mvvm.ComponentModel;
 
-namespace MyApp.ViewModels;
+namespace ComboBoxTest.ViewModels;
 
 public partial class MainWindowViewModel : ViewModelBase
 {

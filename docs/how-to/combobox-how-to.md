@@ -5,6 +5,10 @@ description: Bind collections, create custom templates, use editable combo boxes
 doc-type: how-to
 ---
 
+import ComboBoxBasicBinding from '/img/controls/combobox/combobox-basic-binding.png';
+import ComboBoxComplexObject from '/img/controls/combobox/combobox-complex-object.png';
+import AutoCompleteBoxScreenshot from '/img/controls/autocompletebox/autocompletebox.gif';
+
 This guide covers common usage scenarios with [`ComboBox`](/api/avalonia/controls/combobox), including binding to collections, creating custom item templates, and working with enums.
 
 ## Basic binding
@@ -13,7 +17,7 @@ To bind a `ComboBox` to a collection and track the selected item, set `ItemsSour
 
 <Tabs>
 
-<TabItem value="xaml" label="Window">
+<TabItem value="window" label="Window">
 
 ```xml
 <ComboBox ItemsSource="{Binding Countries}"
@@ -23,13 +27,13 @@ To bind a `ComboBox` to a collection and track the selected item, set `ItemsSour
 
 </TabItem>
 
-<TabItem value="csharp" label="View model">
+<TabItem value="viewmodel" label="View model">
 
 ```csharp
 using System.Collections.ObjectModel;
 using CommunityToolkit.Mvvm.ComponentModel;
 
-namespace MyApp.ViewModels;
+namespace ComboBoxTest.ViewModels;
 
 public partial class MainWindowViewModel : ViewModelBase
 {
@@ -45,6 +49,12 @@ public partial class MainWindowViewModel : ViewModelBase
 
 </TabItem>
 
+<TabItem value="preview" label="Preview">
+
+<Image light={ComboBoxBasicBinding} maxWidth={300} cornerRadius="true" position="center" alt="A screenshot of an app with an open dropdown menu, in which several country names are listed." />
+
+</TabItem>
+
 </Tabs>
 
 :::tip
@@ -55,10 +65,13 @@ Using `ObservableCollection<T>` instead of `List<T>` means the `ComboBox` can up
 
 When your items are complex objects with multiple components (e.g., a user profile consisting of name, job, email, etc.), use `ComboBox.ItemTemplate` to control how each item appears in the dropdown. This lets you display multiple properties, icons, or custom layout:
 
+<Tabs>
+
+<TabItem value="window" label="MainWindow.axaml">
+
 ```xml
 <ComboBox ItemsSource="{Binding Users}"
-          SelectedItem="{Binding SelectedUser}"
-          PlaceholderText="Select a user...">
+          SelectedItem="{Binding SelectedUser}">
     <ComboBox.ItemTemplate>
         <DataTemplate>
             <StackPanel Orientation="Horizontal" Spacing="8">
@@ -78,6 +91,63 @@ When your items are complex objects with multiple components (e.g., a user profi
 </ComboBox>
 ```
 
+</TabItem>
+
+<TabItem value="viewmodel" label="MainWindowViewModel.cs">
+
+```csharp
+using System.Collections.ObjectModel;
+using ComboBoxTest.Models;
+using CommunityToolkit.Mvvm.ComponentModel;
+
+namespace ComboBoxTest.ViewModels;
+
+public partial class MainWindowViewModel : ViewModelBase
+{
+    public ObservableCollection<User> Users { get; } =
+    [
+        new() { Name = "Ray Sin", Role = "CEO" },
+        new() { Name = "Scott Chegg", Role = "Manager" },
+        new() { Name = "Isabelle Ringing", Role = "Analyst" }
+    ];
+
+    [ObservableProperty]
+    private User? _selectedUser;
+}
+```
+
+</TabItem>
+
+<TabItem value="datamodel" label="User.cs">
+
+```csharp
+using System;
+using System.Linq;
+
+namespace ComboBoxTest.Models;
+
+public class User
+{
+    public required string Name { get; init; }
+
+    public required string Role { get; init; }
+
+    public string Initials => string.Concat(
+        Name.Split(' ', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries)
+            .Select(word => char.ToUpperInvariant(word[0])));
+}
+```
+
+</TabItem>
+
+<TabItem value="preview" label="Preview">
+
+<Image light={ComboBoxComplexObject} maxWidth={300} cornerRadius="true" position="center" alt="A screenshot of an app with an open dropdown menu, in which users are listed with their initials in a profile disc next to their names and job titles." />
+
+</TabItem>
+
+</Tabs>
+
 When you use a custom item template with complex objects, the `ComboBox` displays the selected item in the box using the same template as the items on the list. If you want different layouts for the selected item and the dropdown items, you can use a `DataTemplateSelector` or apply styles that target items inside the popup.
 
 ## Binding to an enum
@@ -86,7 +156,7 @@ You can populate a `ComboBox` with all values of an enum by calling `Enum.GetVal
 
 <Tabs>
 
-<TabItem value="xaml" label="Window">
+<TabItem value="window" label="Window">
 
 ```xml
 <ComboBox ItemsSource="{Binding PriorityOptions}"
@@ -95,7 +165,7 @@ You can populate a `ComboBox` with all values of an enum by calling `Enum.GetVal
 
 </TabItem>
 
-<TabItem value="csharp" label="View model">
+<TabItem value="viewmodel" label="View model">
 
 ```csharp
 public enum Priority { Low, Normal, High, Critical }
@@ -119,7 +189,7 @@ The method shown above displays the raw enum member names in the `ComboBox`. For
 
 <Tabs>
 
-<TabItem value="xaml" label="Window">
+<TabItem value="window" label="Window">
 
 ```xml
 <ComboBox ItemsSource="{Binding PriorityOptions}"
@@ -134,7 +204,7 @@ The method shown above displays the raw enum member names in the `ComboBox`. For
 
 </TabItem>
 
-<TabItem value="csharp" label="View model">
+<TabItem value="viewmodel" label="View model">
 
 ```csharp
 public record PriorityOption(Priority Value, string Label);
@@ -175,29 +245,41 @@ If you need just a single property of a complex item, rather than the whole obje
 
 For a small, fixed set of options that do not change at runtime, you can define items directly in XAML using `ComboBoxItem`. This may be an appropriate option for settings menus or input forms, where the dropdown options are already decided early in the design stage.
 
+<XamlPreview>
+
 ```xml
-<ComboBox SelectedIndex="0">
+<ComboBox xmlns="https://github.com/avaloniaui"
+          SelectedIndex="0"
+          Margin="10">
     <ComboBoxItem Content="Small" />
     <ComboBoxItem Content="Medium" />
     <ComboBoxItem Content="Large" />
 </ComboBox>
 ```
 
+</XamlPreview>
+
 ## Type-to-search with `AutoCompleteBox`
 
 Avalonia's `ComboBox` can accept text input by setting `IsEditable="True"`. However, this setting does not enable type-to-search functionality. If you require a type-to-search box, use [`AutoCompleteBox`](/controls/input/text-input/autocompletebox) instead.
 
+<Image light={AutoCompleteBoxScreenshot} maxWidth={400} cornerRadius="true" position="center" alt="A short animation demonstrating the type-to-search functionality of the auto-complete box using a list of animals." />
+<br />
+
 ```xml
-<AutoCompleteBox ItemsSource="{Binding Cities}"
+<!-- Basic AutoCompleteBox -->
+
+<AutoCompleteBox ItemsSource="{Binding Animals}"
                  Text="{Binding SearchText}"
-                 PlaceholderText="Search for a city..."
-                 FilterMode="Contains"
+                 FilterMode="StartsWith"
                  MinimumPrefixLength="1" />
 ```
 
 `AutoCompleteBox` filters the list as the user types. Choose from several built-in filter modes (`StartsWith`, `Contains`, `ContainsCaseSensitive`, and more), or provide a custom filter:
 
 ```xml
+<!-- AutoCompleteBox with custom filter and a DataTemplate to search complex objects. -->
+
 <AutoCompleteBox ItemsSource="{Binding Users}"
                  FilterMode="Custom"
                  TextFilter="{Binding UserFilter}"
@@ -214,13 +296,28 @@ Avalonia's `ComboBox` can accept text input by setting `IsEditable="True"`. Howe
 
 ### Custom dropdown width
 
-Set a minimum width that applies only to the `Popup` inside the `ComboBox` template to ensure the dropdown is wide enough for its contents:
+Set a width that applies only to the `Popup` inside the `ComboBox` template to ensure the dropdown is wide enough for its contents. As a demonstration, try adjusting `Width` in the preview below from `20` to `200`:
+
+<XamlPreview>
 
 ```xml
-<Style Selector="ComboBox /template/ Popup">
-    <Setter Property="MinWidth" Value="300" />
-</Style>
+<UserControl xmlns="https://github.com/avaloniaui">
+
+    <UserControl.Styles>
+        <Style Selector="ComboBox /template/ Popup">
+            <Setter Property="Width" Value="20" />
+        </Style>
+    </UserControl.Styles>
+
+<ComboBox>
+    <ComboBoxItem Content="Short string" />
+    <ComboBoxItem Content="Very long string" />
+    <ComboBoxItem Content="Very very long string" />
+</ComboBox>
+</UserControl>
 ```
+
+</XamlPreview>
 
 ### Custom placeholder style
 
