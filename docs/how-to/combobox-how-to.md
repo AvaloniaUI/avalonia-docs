@@ -309,11 +309,12 @@ Set a width that applies only to the `Popup` inside the `ComboBox` template to e
         </Style>
     </UserControl.Styles>
 
-<ComboBox>
-    <ComboBoxItem Content="Short string" />
-    <ComboBoxItem Content="Very long string" />
-    <ComboBoxItem Content="Very very long string" />
-</ComboBox>
+    <ComboBox Margin="10">
+        <ComboBoxItem Content="Short string" />
+        <ComboBoxItem Content="Very long string" />
+        <ComboBoxItem Content="Very very long string" />
+    </ComboBox>
+
 </UserControl>
 ```
 
@@ -321,13 +322,30 @@ Set a width that applies only to the `Popup` inside the `ComboBox` template to e
 
 ### Custom placeholder style
 
-Change the appearance of the placeholder text by targeting the [`:not(:selected)` pseudoclass](/docs/styling/pseudoclasses).
+Change the appearance of the placeholder text by targeting the [`:not(:disabled)` pseudoclass](/docs/styling/pseudoclasses) of the `PlaceholderTextBlock` element.
+
+<XamlPreview>
 
 ```xml
-<Style Selector="ComboBox:not(:selected) /template/ ContentControl#PlaceholderTextBlock">
-    <Setter Property="Foreground" Value="Gray" />
-</Style>
+<UserControl xmlns="https://github.com/avaloniaui">
+
+    <UserControl.Styles>
+        <Style Selector="ComboBox:not(:disabled) /template/ TextBlock#PlaceholderTextBlock">
+            <Setter Property="Foreground" Value="LimeGreen" />
+        </Style>
+    </UserControl.Styles>
+
+    <ComboBox Margin="10"
+              PlaceholderText="Select one...">
+        <ComboBoxItem Content="Option 1" />
+        <ComboBoxItem Content="Option 2" />
+        <ComboBoxItem Content="Option 3" />
+    </ComboBox>
+
+</UserControl>
 ```
+
+</XamlPreview>
 
 ## See also
 
