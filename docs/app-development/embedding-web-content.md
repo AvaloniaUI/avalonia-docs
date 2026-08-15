@@ -218,7 +218,7 @@ Ubuntu does not package WPE WebKit. It was removed in Ubuntu 22.10 ([LP #1981592
 
 ##### X11 and Wayland
 
-WPE requires neither X11 nor GTK. WebKitGTK does require the x11 GDK backend, which is available under a Wayland session through XWayland. A Wayland desktop usually pre-sets `GDK_BACKEND=wayland`, which would make GTK initialization fail, so the backend overrides `GDK_BACKEND` to `x11` for the duration of GTK initialization and restores it afterwards. This is on by default and needs no setup; it can be turned off with [`GtkWebViewEnvironmentRequestedEventArgs.ForceX11GdkBackend`](/controls/web/webview-environment#linux-gtk-webkit), in which case launch the app with `GDK_BACKEND=x11` yourself.
+WPE requires neither X11 nor GTK. WebKitGTK does require the x11 GDK backend, which is available under a Wayland session through XWayland.
 
 ##### Checking what is installed
 
