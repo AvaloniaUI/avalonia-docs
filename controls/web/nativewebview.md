@@ -250,6 +250,16 @@ public NativeWebViewCookieManager? TryGetCookieManager()
 
 Returns an instance of `NativeWebViewCookieManager` for managing cookies if supported by the platform.
 
+`NativeWebViewCookieManager` exposes:
+
+```csharp
+public Task<IReadOnlyList<Cookie>> GetCookiesAsync()
+public void AddOrUpdateCookie(Cookie cookie)
+public void DeleteCookie(Cookie cookie)
+```
+
+`DeleteCookie(string name, string domain, string path)` is obsolete and doesn't work on Linux; pass a `System.Net.Cookie` instead.
+
 #### Usage example
 
 ```csharp
@@ -258,6 +268,10 @@ if (cookieManager != null)
 {
     // Get all cookies
     var cookies = await cookieManager.GetCookiesAsync();
+
+    // Delete one of them
+    foreach (var cookie in cookies.Where(c => c.Name == "session"))
+        cookieManager.DeleteCookie(cookie);
 }
 ```
 
