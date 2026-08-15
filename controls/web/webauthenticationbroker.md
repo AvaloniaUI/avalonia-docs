@@ -9,6 +9,8 @@ title: WebAuthenticationBroker
 
 It navigates to a start URI, waits for the flow to reach a redirect URI, and hands the callback back to you. How the flow is displayed depends on the [mode](#webauthenticatormode).
 
+The broker only runs the browser part of the flow. To build the authorization request and exchange the code as well, see [OAuth 2.0 with PKCE](#oauth-20-with-pkce).
+
 ## Static methods
 
 ### AuthenticateAsync
@@ -164,7 +166,7 @@ The response URI containing authentication data.
 public IReadOnlyDictionary<string, string> Parameters { get; }
 ```
 
-The parameters of the `CallbackUri` query string. Names are matched case-sensitively. A name that appears more than once is left out, as OAuth 2.0 (RFC 6749, section 3.1) does not allow repeated parameters.
+The parameters of the `CallbackUri` query string. Names are matched case-sensitively. A name that appears more than once is left out, since OAuth 2.0 does not allow repeated parameters.
 
 ```csharp
 public string? Code { get; }
@@ -198,6 +200,28 @@ var result = await WebAuthenticationBroker.AuthenticateAsync(
 ```
 
 Similarly it can be done with [Microsoft identity](https://learn.microsoft.com/en-us/entra/identity-platform/v2-oauth2-auth-code-flow), [Facebook Login](https://developers.facebook.com/docs/facebook-login/) or other OAuth2 standard compatible options.
+
+## OAuth 2.0 with PKCE
+
+`AuthorizationCodePkceSession`, in the `Avalonia.Controls.OAuth2` namespace, covers the parts of the authorization code flow that happen outside the browser, so the request above does not have to be assembled by hand:
+
+```csharp
+var session = await AuthorizationCodePkceSession.CreateAsync(
+    "https://id.example.com", clientId, "http://127.0.0.1:5000/callback", "openid profile");
+
+var options = new WebAuthenticatorOptions(session.AuthorizationUri, session.RedirectUri)
+{
+    Mode = WebAuthenticatorMode.Browser,
+    BrowserOptions = new BrowserOptions { CallbackFilter = session.IsCallbackFor }
+};
+
+var result = await WebAuthenticationBroker.AuthenticateAsync(topLevel, options);
+var token = await session.ExchangeCodeAsync(result);
+```
+
+`CreateAsync` discovers the endpoints from the issuer, per [RFC 8414](https://www.rfc-editor.org/rfc/rfc8414), falling back to OpenID Connect discovery. Use `Create` with explicit endpoints when the server publishes no metadata.
+
+`ExchangeCodeAsync` checks `state` before it reads anything else from the callback, rejects an `error` response, and returns an `OAuth2TokenResponse`. Its `IdToken` is passed through as received and is not validated.
 
 ## Platform support
 
