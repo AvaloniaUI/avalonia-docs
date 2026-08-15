@@ -31,7 +31,7 @@ Starts an authentication flow by navigating to the specified start URI and monit
 
 A `Task<WebAuthenticationResult>` containing the authentication result.
 
-## WebAuthenticatorMode
+## WebAuthenticatorMode <MinVersion version="12.1" isNewVersion="true" />
 
 Selects which implementation runs the flow.
 
@@ -82,7 +82,7 @@ public Func<NativeWebDialog?> NativeWebDialogFactory { get; init; }
 
 Callback that can be used to override [NativeWebDialog](/controls/web/nativewebdialog) creation when WebAuthenticationBroker uses dialog implementation instead of system auth APIs.
 
-## Browser mode
+## Browser mode <MinVersion version="12.1" isNewVersion="true" />
 
 `WebAuthenticatorMode.Browser` launches the system browser and starts a listener on the loopback interface to receive the redirect. `RedirectUri` must be an `http` loopback address, such as `http://127.0.0.1:5000/callback`. When the URI specifies no port, the OS allocates a free one.
 
@@ -201,7 +201,7 @@ var result = await WebAuthenticationBroker.AuthenticateAsync(
 
 Similarly it can be done with [Microsoft identity](https://learn.microsoft.com/en-us/entra/identity-platform/v2-oauth2-auth-code-flow), [Facebook Login](https://developers.facebook.com/docs/facebook-login/) or other OAuth2 standard compatible options.
 
-## OAuth 2.0 with PKCE
+## OAuth 2.0 with PKCE <MinVersion version="12.1" isNewVersion="true" />
 
 `AuthorizationCodePkceSession`, in the `Avalonia.Controls.OAuth2` namespace, covers the parts of the authorization code flow that happen outside the browser, so the request above does not have to be assembled by hand:
 
