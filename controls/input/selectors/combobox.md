@@ -195,7 +195,7 @@ You can also bind the combo box's list items in a view model. In this example, t
 using System.Collections.ObjectModel;
 using CommunityToolkit.Mvvm.ComponentModel;
 
-namespace MyApp.ViewModels;
+namespace ComboBoxTest.ViewModels;
 
 public partial class MainWindowViewModel : ViewModelBase
 {
@@ -231,8 +231,8 @@ Keyboard input in the box, if it matches a list item, sets the `SelectedItem`. U
 
 ```xml
 <StackPanel>
-    <!-- You must bind SelectedItem in XAML.
-         Without SelectedItem, the list options display, but no selection can be made. -->
+    <!-- You must bind SelectedItem in XAML to persist the selection.
+         Otherwise, the selection just shows in the box but does nothing. -->
     <ComboBox ItemsSource="{Binding Countries}"
               // highlight-next-line
               SelectedItem="{Binding SelectedCountry}"

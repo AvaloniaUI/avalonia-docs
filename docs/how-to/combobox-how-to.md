@@ -296,7 +296,7 @@ Avalonia's `ComboBox` can accept text input by setting `IsEditable="True"`. Howe
 
 ### Custom dropdown width
 
-Set a width that applies only to the `Popup` inside the `ComboBox` template to ensure the dropdown is wide enough for its contents. As a demonstration, try adjusting `Width` in the preview below from `20` to `200`:
+Set a width that applies only to the `Popup` inside the `ComboBox` template to ensure the dropdown is wide enough for its contents. As a demonstration, try adjusting `Width` in the preview below to `MinWidth`:
 
 <XamlPreview>
 
@@ -322,7 +322,7 @@ Set a width that applies only to the `Popup` inside the `ComboBox` template to e
 
 ### Custom placeholder style
 
-Change the appearance of the placeholder text by targeting the [`:not(:disabled)` pseudoclass](/docs/styling/pseudoclasses) of the `PlaceholderTextBlock` element.
+Change the appearance of the placeholder text by targeting the `PlaceholderTextBlock` element with a style. In this example, [the `:not(:disabled)` pseudoclass](/docs/styling/pseudoclasses) is also specified so that the custom placeholder style always applies while the `ComboBox` is active.
 
 <XamlPreview>
 
