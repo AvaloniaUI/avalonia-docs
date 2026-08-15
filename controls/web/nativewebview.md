@@ -288,7 +288,7 @@ Asynchronously delays destruction of the native control during parent changes.
 
 ## Platform support
 
-| Feature                | Windows WebView2-Edge | macOS/iOS WKWebView | Linux WPE WebKit | Android | Browser |
+| Feature                | Windows WebView2-Edge | macOS/iOS WKWebView | Linux WPE / WebKitGTK | Android | Browser |
 |------------------------|-----------------------|---------------------|------------------|---------|---------|
 | `NativeWebView`        | ✓                     | ✓                   | ✓                | ✓       | ✗*      |
 | `TryGetCommandManager` | ✓                     | ✓                   | ✗*               | ✓       | ✗*      |
@@ -302,9 +302,9 @@ Asynchronously delays destruction of the native control during parent changes.
 
 :::note
 
-On Linux, `NativeWebView` is rendered through [WPE WebKit](https://wpewebkit.org) using offscreen (SHM) rendering. Install the `libwpewebkit-2.0`, `libwpe-1.0`, and `libWPEBackend-fdo-1.0` runtime libraries — see the [Linux prerequisites](/docs/app-development/embedding-web-content#linux).
+On Linux, `NativeWebView` picks its backend automatically. It prefers [WPE WebKit](https://wpewebkit.org), which renders offscreen using SHM, and uses WebKitGTK whenever WPE is not installed. Either way no configuration is needed — see the [Linux prerequisites](/docs/app-development/embedding-web-content#linux) for the packages each backend requires.
 
-If WPE is unavailable, you can opt in to the WebKitGTK adapter by setting [`LinuxWpeWebViewEnvironmentRequestedEventArgs.PreferWebKitGtkInstead`](/controls/web/webview-environment#linux-wpe-webkit) to `true`. Alternatively, use [`NativeWebDialog`](/controls/web/nativewebdialog) instead.
+To use WebKitGTK on a machine that does have WPE, set [`LinuxWpeWebViewEnvironmentRequestedEventArgs.PreferWebKitGtkInstead`](/controls/web/webview-environment#linux-wpe-webkit) to `true`.
 :::
 
 ## See also

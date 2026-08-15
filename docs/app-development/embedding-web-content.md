@@ -133,7 +133,7 @@ The WebView component relies on native web rendering implementations that must b
 | NativeWebDialog | ✓ | ✓ | ✓ | ✗ | ✗ | ✗ |
 | WebAuthenticationBroker | ✓** | ✓ | ✓** | ✓ | ✓*** | ✓**** |
 
-\* On Linux, `NativeWebView` uses WPE WebKit. If WPE is unavailable on the target system, fall back to `NativeWebDialog` (which uses WebKitGTK).
+\* On Linux, `NativeWebView` uses WPE WebKit when it is installed and WebKitGTK otherwise. See [Linux](#linux) for the packages each backend needs.
 \** Uses NativeWebDialog implementation
 \*** Android support is experimental
 \**** Requires CORS configuration for the redirect page. .NET 10 is also necessary to run this library in browser.
@@ -159,14 +159,40 @@ Uses `WKWebView` which is pre-installed on all modern macOS/iOS devices.
 
 #### Linux
 
-Linux uses two different backends depending on the API you use:
+Linux has two backends, and the backend is chosen automatically:
 
-- **`NativeWebView`** is rendered with [WPE WebKit](https://wpewebkit.org) using offscreen (SHM) rendering. WPE has no hard dependency on GTK, so the embedded control works on both X11 and Wayland sessions and can be composed inside the Avalonia visual tree. 
-- **`NativeWebDialog`** uses WebKitGTK in a dedicated GTK window. Use it as a fallback when WPE is not available, or when you prefer a separate browser window.
+- **WebKitGTK** is the baseline. `NativeWebDialog` always uses it, and `NativeWebView` uses it whenever WPE is not installed. No configuration is required.
+- **[WPE WebKit](https://wpewebkit.org)** is optional, and `NativeWebView` prefers it when its libraries are present. It renders offscreen (SHM) and has no hard dependency on GTK, so it composes into the Avalonia visual tree without native window embedding and works on both X11 and Wayland sessions.
 
-For `NativeWebView`, install the WPE runtime libraries:
+##### WebKitGTK
 
-Debian/Ubuntu (24.04+):
+Install GTK 3, WebKitGTK 4.1 and libsoup 3.
+
+Debian/Ubuntu:
+
+```bash
+sudo apt install libgtk-3-0 libwebkit2gtk-4.1-0 libsoup-3.0-0
+```
+
+Fedora:
+
+```bash
+sudo dnf install gtk3 webkit2gtk4.1 libsoup3
+```
+
+Arch:
+
+```bash
+sudo pacman -S gtk3 webkit2gtk-4.1 libsoup3
+```
+
+:::note
+`libwebkit2gtk-4.0` and `libsoup-2.4` are also accepted for older distributions, but `4.1` and `soup-3` are recommended. WebKitGTK 6.0, the GTK 4 build, is not supported.
+:::
+
+##### WPE WebKit (optional)
+
+Debian 13 (trixie) or newer:
 
 ```bash
 sudo apt install libwpewebkit-2.0-1
@@ -186,27 +212,25 @@ Arch:
 sudo pacman -S wpewebkit
 ```
 
-For `NativeWebDialog`, install GTK 3.0 and WebKitGTK 4.1:
-
-Debian/Ubuntu:
-
-```bash
-apt install libgtk-3-0 libwebkit2gtk-4.1-0
-```
-
-Fedora:
-
-```bash
-dnf install gtk3 webkit2gtk4.1
-```
-
 :::note
-`NativeWebDialog` also supports `libwebkit2gtk-4.0` and `soup-2.4` for older Ubuntu distributions. `libwebkit2gtk-4.1` is recommended.
+Ubuntu does not package WPE WebKit. It was removed in Ubuntu 22.10 ([LP #1981592](https://bugs.launchpad.net/ubuntu/+source/wpewebkit/+bug/1981592)) and has not returned, so `libwpewebkit-2.0-1` cannot be installed there. This needs no action: `NativeWebView` falls back to WebKitGTK on its own.
 :::
 
-:::note
-On systems where WPE is not packaged, use `NativeWebDialog` instead, or set [`LinuxWpeWebViewEnvironmentRequestedEventArgs.PreferWebKitGtkInstead`](/controls/web/webview-environment#linux-wpe-webkit) to fall back to the WebKitGTK adapter.
-:::
+##### X11 and Wayland
+
+WPE requires neither X11 nor GTK. WebKitGTK does require the x11 GDK backend, which is available under a Wayland session through XWayland. A Wayland desktop usually pre-sets `GDK_BACKEND=wayland`, which would make GTK initialization fail, so the backend overrides `GDK_BACKEND` to `x11` for the duration of GTK initialization and restores it afterwards. This is on by default and needs no setup; it can be turned off with [`GtkWebViewEnvironmentRequestedEventArgs.ForceX11GdkBackend`](/controls/web/webview-environment#linux-gtk-webkit), in which case launch the app with `GDK_BACKEND=x11` yourself.
+
+##### Checking what is installed
+
+`WebViewAdapterInfo.GetAdapterInfo` reports whether a backend's libraries were found, which separates a missing library from a backend that loaded but is not rendering:
+
+```csharp
+var gtk = WebViewAdapterInfo.GetAdapterInfo(WebViewAdapterType.WebKitGtk);
+var wpe = WebViewAdapterInfo.GetAdapterInfo(WebViewAdapterType.WpeWebKit);
+
+Console.WriteLine($"WebKitGTK: {gtk.IsInstalled} {gtk.Version} {gtk.UnavailableReason}");
+Console.WriteLine($"WPE WebKit: {wpe.IsInstalled} {wpe.Version} {wpe.UnavailableReason}");
+```
 
 #### Android
 
@@ -302,7 +326,7 @@ public interface IAppleWKWebViewPlatformHandle : IPlatformHandle
 
 #### Linux (WPE WebKit)
 
-On Linux, [`NativeWebView`](/controls/web/nativewebview) is backed by the WPE WebKit. The platform handle exposes both the `WebKitWebView` GObject and the underlying `wpe_view_backend` struct, allowing direct P/Invoke against the [WPEWebKit API](https://github.com/WebPlatformForEmbedded/WPEWebKit).
+When [`NativeWebView`](/controls/web/nativewebview) runs on the WPE backend, the platform handle exposes both the `WebKitWebView` GObject and the underlying `wpe_view_backend` struct, allowing direct P/Invoke against the [WPEWebKit API](https://github.com/WebPlatformForEmbedded/WPEWebKit).
 
 ```csharp
 public interface ILinuxWpePlatformHandle : IPlatformHandle
@@ -317,9 +341,7 @@ public interface ILinuxWpePlatformHandle : IPlatformHandle
 
 #### Linux (WebKitGTK)
 
-[`NativeWebDialog`](/controls/web/nativewebdialog) exposes a WebKitGTK handle. The provided `WebKitWebView` IntPtr can be used directly with WebKit P/Invokes from the [official WebKitGTK reference](https://webkitgtk.org/reference/webkit2gtk/stable/index.html).
-
-[`NativeWebView`](/controls/web/nativewebview) does not support WebKitGTK.
+[`NativeWebDialog`](/controls/web/nativewebdialog) always exposes a WebKitGTK handle, and [`NativeWebView`](/controls/web/nativewebview) exposes one whenever it runs on the WebKitGTK backend. The provided `WebKitWebView` IntPtr can be used directly with WebKit P/Invokes from the [official WebKitGTK reference](https://webkitgtk.org/reference/webkit2gtk/stable/index.html).
 
 ```csharp
 public interface IGtkWebViewPlatformHandle : IPlatformHandle

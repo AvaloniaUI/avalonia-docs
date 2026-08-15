@@ -3,7 +3,7 @@ id: nativewebdialog
 title: NativeWebDialog
 ---
 
-`NativeWebDialog` is a dialog window that hosts a native web browser. It is useful on platforms like Linux where an embedded `NativeWebView` control is not available, or when you want to show web content in a separate window without embedding it in your layout.
+`NativeWebDialog` is a dialog window that hosts a native web browser. Use it when you want to show web content in a separate window without embedding it in your layout, or on platforms where an embedded `NativeWebView` control is not available.
 
 ## Useful properties
 
