@@ -89,15 +89,17 @@ Callback that can be used to override [NativeWebDialog](/controls/web/nativewebd
 :::warning
 The listener accepts connections from any process on the machine, so the callback is untrusted input. Check [`State`](#webauthenticationresult) against the value you sent, and handle `Error` before using `Code`.
 
-PKCE is strongly recommended (RFC 8252, section 8.1). It is what makes an injected authorization code unusable at the token endpoint. Use `CallbackFilter` to keep the listener waiting when a request does not belong to the flow.
+PKCE is strongly recommended [(RFC 8252, section 8.1)](https://www.rfc-editor.org/info/rfc8252/#section-8.1). It is what makes an injected authorization code unusable at the token endpoint. Use [`CallbackFilter`](#callbackfilter) to keep the listener waiting when a request does not belong to the flow.
 :::
 
 ### BrowserOptions
 
+#### Timeout
 ```csharp
 public TimeSpan Timeout { get; init; }
 ```
 
+#### CallbackFilter
 How long to wait for the callback before the flow is canceled. Defaults to 5 minutes.
 
 ```csharp
@@ -110,6 +112,7 @@ Decides whether a request received on the redirect path belongs to this flow. Re
 public delegate bool BrowserCallbackFilter(WebAuthenticationResult result);
 ```
 
+#### ResponseHandler
 ```csharp
 public BrowserResponseHandler? ResponseHandler { get; init; }
 ```
@@ -156,12 +159,14 @@ var code = result.Code;
 
 ### Properties
 
+#### CallbackUri
 ```csharp
 public Uri CallbackUri { get; }
 ```
 
 The response URI containing authentication data.
 
+#### Query parameters
 ```csharp
 public IReadOnlyDictionary<string, string> Parameters { get; }
 ```
@@ -219,7 +224,7 @@ var result = await WebAuthenticationBroker.AuthenticateAsync(topLevel, options);
 var token = await session.ExchangeCodeAsync(result);
 ```
 
-`CreateAsync` discovers the endpoints from the issuer, per [RFC 8414](https://www.rfc-editor.org/rfc/rfc8414), falling back to OpenID Connect discovery. Use `Create` with explicit endpoints when the server publishes no metadata.
+`CreateAsync` discovers the endpoints from the issuer, per [RFC 8414](https://www.rfc-editor.org/rfc/rfc8414), falling back to OpenID Connect discovery. Use `Create` with explicit endpoints if the server publishes no metadata.
 
 `ExchangeCodeAsync` checks `state` before it reads anything else from the callback, rejects an `error` response, and returns an `OAuth2TokenResponse`. Its `IdToken` is passed through as received and is not validated.
 

@@ -124,7 +124,7 @@ WebKitGTK is the baseline Linux backend. `NativeWebDialog` always uses it, and `
 
 - `ApplicationNameForUserAgent`: Customize user agent application name
 - `ExperimentalOffscreen`: Render into an offscreen GTK window composited by Avalonia, instead of reparenting a native X11 child window. This lets the web view be hosted in the same Avalonia window without overlapping other controls.
-- `ForceX11GdkBackend`: Override `GDK_BACKEND` to `x11` while GTK is initialized, restoring the previous value afterwards. The GTK adapters require the x11 GDK backend, and a Wayland desktop usually pre-sets `GDK_BACKEND=wayland`, which makes `gtk_init` fail. Enabled by default, so Wayland sessions work without any setup; set it to `false` to opt out of the environment override.
+- `ForceX11GdkBackend`: Override `GDK_BACKEND` to `x11` while GTK is initialized, restoring the previous value afterwards. Enabled by default, so [Wayland](/docs/platform-specific-guides/linux#wayland) sessions work without any setup; set it to `false` to opt out of the environment override.
 - `EphemeralDataManager`: Use non-persistent data storage
 - `BaseDataDirectory`: Set base directory for website data
 - `BaseCacheDirectory`: Set base directory for cache
