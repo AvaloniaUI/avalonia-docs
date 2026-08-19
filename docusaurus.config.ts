@@ -23,6 +23,7 @@ const config: Config = {
   onBrokenLinks: 'warn',
   onBrokenAnchors: 'warn',
   onBrokenMarkdownLinks: 'warn',
+  clientModules: ['./src/clientModules/analyticsClient.ts'],
   headTags: [
     {
       tagName: "link",
@@ -378,7 +379,7 @@ gtag('consent', 'default', {
             },
             {
               label: 'Enhanced Support',
-              href: 'https://avaloniaui.net/support?utm_source=docs&utm_medium=referral&utm_content=nav_link',
+              href: 'https://avaloniaui.net/support?av_source=docs&av_medium=nav_link&av_content=support',
               target: '_blank',
               rel: null
             },

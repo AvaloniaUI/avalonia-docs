@@ -3,19 +3,21 @@ import styles from './MinVersion.module.css';
 
 interface MinVersionProps {
   version: string;
+  isNewVersion?: boolean;
+  isPreviewVersion?: boolean;
 }
 
-const newVersion = '11.2';
-const previewVersion = '11.3';
+const newVersion = '12.1';
+const previewVersion = '12.2';
 
-export default function MinVersion({ version }: MinVersionProps) {
+export default function MinVersion({ version, isNewVersion, isPreviewVersion }: MinVersionProps) {
     let variantClass: string;
     let description: string;
 
-    if (version === newVersion) {
+    if (isNewVersion || version === newVersion) {
         variantClass = styles.new;
         description = ' New!';
-    } else if (version === previewVersion) {
+    } else if (isPreviewVersion || version === previewVersion) {
         variantClass = styles.preview;
         description = ' Preview!';
     } else {
