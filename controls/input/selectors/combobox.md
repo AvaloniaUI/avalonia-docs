@@ -28,7 +28,7 @@ You will probably use these properties most often:
 | `AutoScrollToSelectedItem` | `bool`     | Indicates whether to automatically scroll to newly selected items.                                                       |
 | `IsDropDownOpen`           | `bool`     | Indicates whether the dropdown is currently open.                                                                        |
 | `MaxDropDownHeight`        | `double`   | The maximum height for the dropdown list. This is the actual height of the list part, not the number of items that show.  |
-| `ItemsPanel`               | `ITemplate<Panel>` | The container panel to place items in. By default, this is a `StackPanel`. See [this page](/docs/custom-controls/custom-itemspanel) to customise the `ItemsPanel`. |
+| `ItemsPanel`               | `ITemplate<Panel>` | The container panel to place items in. By default, this is a `StackPanel`. See [Custom panel](/docs/how-to/itemscontrol-how-to#custom-panel) for how to customize the `ItemsPanel`. |
 
 ## Practical notes
 
