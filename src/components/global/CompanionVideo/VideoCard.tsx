@@ -20,9 +20,9 @@ const PlayGlyph = () => (
  * The companion-video thumbnail. Lives in the TOC panel on desktop and at the
  * top of the article below 997px, where there is no TOC column.
  *
- * The card itself is `position: relative` with no z-index on purpose: the
- * "Open in" dropdown in the TOC header is `absolute z-40` and later in DOM
- * order, so leaving the stacking to document order keeps it on top.
+ * The card itself is `position: relative` with no z-index on purpose: the TOC's
+ * "Open in" dropdown panel is `absolute z-40` and sits later in DOM order, so
+ * leaving the stacking to document order keeps it on top.
  */
 export default function VideoCard({
   video,
@@ -63,6 +63,13 @@ export default function VideoCard({
         onClick={() => setIsOpen(true)}
         aria-haspopup="dialog"
       >
+        {/* Label and title before the thumbnail, in DOM order rather than with
+            `column-reverse`, so assistive tech reads what the card is before
+            reaching its decorative image. */}
+        <span className={styles.meta}>
+          <span className={styles.eyebrow}>{video.label}</span>
+          <span className={styles.title}>{video.title}</span>
+        </span>
         <span className={clsx(styles.thumb, !video.posterUrl && styles.thumbEmpty)}>
           {video.posterUrl && (
             <img
@@ -86,10 +93,6 @@ export default function VideoCard({
           {video.duration && (
             <span className={styles.duration}>{video.duration}</span>
           )}
-        </span>
-        <span className={styles.meta}>
-          <span className={styles.eyebrow}>{video.label}</span>
-          <span className={styles.title}>{video.title}</span>
         </span>
       </button>
 

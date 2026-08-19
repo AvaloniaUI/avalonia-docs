@@ -1,7 +1,7 @@
 /* ---------------------------------------------------------------- card --- */
 
 /*
- * `position: relative` with no z-index: the TOC's "Open in" dropdown is
+ * `position: relative` with no z-index: the TOC's "Open in" dropdown panel is
  * `absolute z-40` and comes later in the DOM, so document order alone keeps it
  * painted above this card. Adding a z-index here would break that.
  */

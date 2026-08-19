@@ -18,6 +18,27 @@
   width: 100%;
 }
 
+/* The wrapper is a height-capped flex column, so every child above the heading
+   list opts out of shrinking: only .tableOfContents should absorb the squeeze
+   (same reasoning as the `flex-shrink: 0` on the video card). */
+.tocHeading {
+  flex-shrink: 0;
+  margin: 0 0 0.75rem;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  /* Defined in both theme scopes in src/styles/components/_variables.scss. */
+  color: var(--color-muted);
+}
+
+/* Containing block for the absolutely positioned dropdown panel. */
+.tocDropdownRow {
+  position: relative;
+  flex-shrink: 0;
+  width: 100%;
+  margin-block-end: 1rem;
+}
+
 .tableOfContents {
   /* As a flex child, min-height:0 lets this shrink below its content height
      so overflow-y can engage; flex:1 caps its height at the space the
@@ -29,9 +50,13 @@
   overflow-x: visible;
 }
 
+/* Full width at every width: the button owns its own row under the heading, so
+   the chevron sits at the far edge and it reads like a select control. */
 .tocDropdownButton {
   display: inline-flex;
   align-items: center;
+  justify-content: space-between;
+  width: 100%;
   gap: 0.375rem;
   padding: 0.5rem 0.75rem;
   font-size: 0.875rem;
@@ -52,13 +77,6 @@
 
 .tocDropdownButton:focus {
   outline: none;
-}
-
-@media (max-width: 1359px) {
-  .tocDropdownButton {
-    width: 100%;
-    justify-content: space-between;
-  }
 }
 
 :global(html[data-theme='dark']) .tocDropdownButton {
