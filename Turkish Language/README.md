@@ -19,9 +19,9 @@
 | | |
 | - | - |
 | **Toplam konu** | 250 |
-| **Tamamlanan ders** | C01 |
+| **Tamamlanan ders** | 36 |
 | **Kalan ders** | 214 |
-| **İlerleme** | C01/250 (%14.4) |
+| **İlerleme** | 36/250 (%14.4) |
 | **Tamamlanan bölüm** | 5/23 |
 
 
