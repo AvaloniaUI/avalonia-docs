@@ -1,5 +1,5 @@
 
-# AVALONIA UI 12 Docs- TÜRKÇE ÇEVİRİ (Turkish Translate)
+# AVALONIA UI 12 Docs - TÜRKÇE ÇEVİRİ (Turkish Translate)
 
 > Kaynak: https://docs.avaloniaui.net/docs/welcome
 
