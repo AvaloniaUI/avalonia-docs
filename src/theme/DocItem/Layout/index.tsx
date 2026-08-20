@@ -51,6 +51,7 @@ function useDocTOC() {
 export default function DocItemLayout({children}: Props): JSX.Element {
   const docTOC = useDocTOC();
   const {metadata} = useDoc();
+
   return (
     <>
       {/* ------- CUSTOM CODE -------- */}

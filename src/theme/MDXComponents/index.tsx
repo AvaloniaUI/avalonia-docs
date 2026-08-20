@@ -20,6 +20,7 @@ import TabItem from '@theme/TabItem';
 import ThemedImage from '@theme/ThemedImage';
 import Shortcut from '../../components/global/Shortcut';
 import Image from '../../components/Image';
+import Video from '../../components/global/Video';
 // CUSTOM CODE END
 import type { MDXComponentsObject } from '@theme/MDXComponents';
 import XamlPreview from '../../components/global/XamlPreview';
@@ -41,6 +42,7 @@ const MDXComponents: MDXComponentsObject = {
     ThemedImage,
     Shortcut,
     Image,
+    Video,
     XamlPreview
   // CUSTOM CODE END
 };

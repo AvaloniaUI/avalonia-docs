@@ -1,0 +1,411 @@
+/* ------------------------------------------------------- TOC thumbnail --- */
+
+/*
+ * `position: relative` with no z-index: the TOC's "Open in" dropdown panel is
+ * `absolute z-40` and comes later in the DOM, so document order alone keeps it
+ * painted above this card. Adding a z-index here would break that.
+ */
+.card {
+  position: relative;
+  width: 100%;
+  /* The TOC wrapper is a flex column with a viewport-height cap; without this
+     the card would be squeezed instead of the heading list scrolling. */
+  flex-shrink: 0;
+  margin-block-end: 1.25rem;
+}
+
+.trigger {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0;
+  background: none;
+  border: none;
+  text-align: start;
+  cursor: pointer;
+  color: inherit;
+  font: inherit;
+}
+
+.trigger:focus-visible {
+  outline: 2px solid var(--color-brand-500, #1a90ff);
+  outline-offset: 3px;
+  border-radius: 0.5rem;
+}
+
+.thumb {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  background: rgba(0, 0, 0, 0.06);
+  /* Inset rather than a real border so it never affects the box size. */
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.08);
+  transition: transform 0.18s ease-out;
+}
+
+.thumbEmpty {
+  background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+}
+
+/*
+ * `cover` is not optional: hqdefault.jpg is 480x360, so a 16:9 box would show
+ * the letterbox bars YouTube bakes into it.
+ */
+.thumbImage {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Beats the global `img { display: block }` rule without fighting it. */
+  display: block;
+}
+
+.scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 45%,
+    rgba(0, 0, 0, 0.45) 100%
+  );
+}
+
+.playBadge {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  margin: -20px 0 0 -20px;
+  border-radius: 9999px;
+  /* Stays dark in both themes: it sits on photography, not on page chrome. */
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  /* Optically centres the triangle inside the circle. */
+  padding-inline-start: 2px;
+  transition: background-color 0.18s ease-out, transform 0.18s ease-out;
+}
+
+.trigger:hover .thumb {
+  transform: scale(1.015);
+}
+
+.trigger:hover .playBadge {
+  background: var(--color-brand-500, #1a90ff);
+  transform: scale(1.06);
+}
+
+.duration {
+  position: absolute;
+  right: 0.375rem;
+  bottom: 0.375rem;
+  padding: 0.0625rem 0.3125rem;
+  border-radius: 0.25rem;
+  background: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  font-size: 0.6875rem;
+  font-weight: 500;
+  line-height: 1.4;
+  font-variant-numeric: tabular-nums;
+}
+
+.meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+  min-width: 0;
+}
+
+/* Matches the "On this page" heading treatment, one step smaller. */
+.eyebrow {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-muted, #686770);
+}
+
+.title {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  overflow: hidden;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  line-height: 1.35;
+  color: var(--color-body-text, #686770);
+  /* At ~135px wide a single long word would otherwise blow out the column. */
+  overflow-wrap: anywhere;
+  transition: color 0.15s ease-out;
+}
+
+.trigger:hover .title {
+  color: var(--color-brand-500, #1a90ff);
+}
+
+:global(html[data-theme='dark']) .thumb {
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+
+:global(html[data-theme='dark']) .eyebrow {
+  color: #a1a1aa;
+}
+
+:global(html[data-theme='dark']) .title {
+  color: #d4d4d8;
+}
+
+:global(html[data-theme='dark']) .trigger:hover .title {
+  color: #f4f4f5;
+}
+
+/*
+ * Short viewports: drop to a one-line link rather than losing the feature, so
+ * the heading list keeps its scroll space. The card only ever renders in the
+ * TOC panel, so these need no variant scoping.
+ */
+@media (max-height: 620px) {
+  .thumb {
+    display: none;
+  }
+
+  .trigger {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.375rem;
+  }
+
+  .eyebrow {
+    display: none;
+  }
+
+  .title {
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+  }
+}
+
+/* --------------------------------------------------- in-article pill --- */
+
+/*
+ * Deliberately mirrors `.github-sample-link` (src/styles/components/
+ * _github-sample-link.scss) so the two in-article pills read as a set.
+ *
+ * That file's layer caveat does not apply here: it exists because Infima
+ * styles bare `a` elements unlayered, which a Tailwind utility can only beat
+ * with `!important`. This is a plain unlayered CSS-module class on a <button>.
+ */
+.pillWrapper {
+  /* Sits between the h1 and the first paragraph inside `div.markdown`, so it
+     sets its own rhythm instead of inheriting a markdown block's. */
+  margin-block: -0.25rem 1.5rem;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+
+  padding: 0.25rem 0.75rem;
+
+  /* `font: inherit` first, then the weight: the shorthand would reset it. */
+  font: inherit;
+  font-weight: 600;
+
+  color: var(--color-brand-500);
+  background: none;
+  border: 1px solid var(--color-brand-500);
+  border-radius: 0.75rem;
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease-out,
+    color 0.2s ease-out;
+}
+
+.pill svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.pill:hover {
+  color: #fff;
+  background-color: var(--color-brand-500);
+}
+
+.pill:focus-visible {
+  outline: 2px solid var(--color-brand-500, #1a90ff);
+  outline-offset: 3px;
+}
+
+@media print {
+  .card,
+  .pillWrapper {
+    display: none;
+  }
+}
+
+/* ------------------------------------------------------------ lightbox --- */
+
+/*
+ * Portalled to <body>, so it escapes the TOC wrapper's sticky stacking
+ * context. --z-lightbox clears the navbar (200), DocSearch (300) and the
+ * mobile sidebar drawer (2000).
+ */
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-lightbox, 2100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  background: rgba(23, 23, 26, 0.72);
+  backdrop-filter: blur(4px);
+  overscroll-behavior: contain;
+  animation: lightboxFadeIn 0.15s ease-out;
+}
+
+:global(html[data-theme='dark']) .backdrop {
+  background: rgba(17, 17, 19, 0.82);
+}
+
+.dialog {
+  display: flex;
+  flex-direction: column;
+  /* The third term keeps a 16:9 player inside the height budget on short, wide
+     viewports (the ~64px is the title bar). Without it the player would be
+     clipped by `overflow: hidden` at, say, 1440x700. */
+  width: min(1100px, 92vw, calc((88vh - 64px) * 16 / 9));
+  max-height: 88vh;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: var(--shadow-theme-xl, 0 24px 64px rgba(0, 0, 0, 0.28));
+  animation: lightboxSlideIn 0.2s ease-out;
+}
+
+:global(html[data-theme='dark']) .dialog {
+  background: #18181b;
+}
+
+.dialogHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 0.75rem 0.75rem 1.25rem;
+}
+
+.dialogTitle {
+  flex: 1 1 auto;
+  min-width: 0;
+  margin: 0;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--color-neutral-70, #161c2d);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+:global(html[data-theme='dark']) .dialogTitle {
+  color: #f4f4f5;
+}
+
+.closeButton {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 9999px;
+  background: transparent;
+  color: var(--color-body-text, #686770);
+  cursor: pointer;
+  transition: background-color 0.15s ease-out, color 0.15s ease-out;
+}
+
+.closeButton:hover {
+  background: rgba(0, 0, 0, 0.06);
+  color: var(--color-neutral-70, #161c2d);
+}
+
+.closeButton:focus-visible {
+  outline: 2px solid var(--color-brand-500, #1a90ff);
+  outline-offset: 2px;
+}
+
+:global(html[data-theme='dark']) .closeButton {
+  color: #a1a1aa;
+}
+
+:global(html[data-theme='dark']) .closeButton:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #f4f4f5;
+}
+
+.playerFrame {
+  aspect-ratio: 16 / 9;
+  min-height: 0;
+  background: #000;
+}
+
+/*
+ * `box-shadow: none` neutralises the global `iframe` rule in custom.scss,
+ * which would otherwise paint a 10px offset drop shadow inside the dialog.
+ * Same fix as ../Video/styles.module.css .embed.
+ */
+.player {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  object-fit: contain;
+}
+
+@keyframes lightboxFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes lightboxSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .backdrop,
+  .dialog {
+    animation: none;
+  }
+
+  .trigger:hover .thumb,
+  .trigger:hover .playBadge {
+    transform: none;
+  }
+}
