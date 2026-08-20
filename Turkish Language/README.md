@@ -6,7 +6,7 @@
 ## Rehber Kitapcık (Avalonia 12 - RehberKitapcik.html)
 
 > .html olarak üretilen dosya OnePage Yapısındadır.
-> Offline bir şekilde de cihazınızda indirip okuyabilirsiniz.
+> Dosyayı indirip Offline bir şekilde cihazınızda okuyabilirsiniz.
 > Konular sırayla türkçeye çevrilmektedir.
 
 ## C01. PROJE DURUMU VE KONU LİSTESİ
