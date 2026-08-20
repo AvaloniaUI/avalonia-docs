@@ -27,6 +27,8 @@
 
 ## C01.2. BÖLÜM BAZINDA DURUM
 
+**İşaretler:** ✅ tamamlandı · ⬜ yapılmadı · 🔄 Devam ediyor
+
 | # | Bölüm | İlerleme | Durum |
 | - | ----- | -------- | ----- |
 | 1 | Hoş Geldiniz | 1/1 | ✅ Tamamlandı |
@@ -54,8 +56,6 @@
 | 23 | Kırıcı Değişiklikler | 0/1 | ⬜ Başlanmadı |
 
 ## C01.3. TAM KONU LİSTESİ 
-
-**İşaretler:** ✅ tamamlandı · ⬜ yapılmadı · 🔄 Devam ediyor
 
 ### 1. Hoş Geldiniz — Welcome  `(1/1)`
 
