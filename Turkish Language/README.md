@@ -12,7 +12,7 @@
 ## C01. PROJE DURUMU VE KONU LİSTESİ
 
 > **Bu bölüm her ders tamamlandığında güncellenir.**
-> Son güncelleme: **C01. ders (Kontrolleri Konumlandırma / Positioning controls)** tamamlandığında.
+> Son güncelleme: **36. ders (Kontrolleri Konumlandırma / Positioning controls)** tamamlandığında.
 
 ## C01.1. ÖZET
 
