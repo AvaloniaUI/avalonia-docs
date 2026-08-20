@@ -27,7 +27,7 @@
 
 ## C01.2. BÖLÜM BAZINDA DURUM
 
-**İşaretler:** ✅ tamamlandı · ⬜ yapılmadı · 🔄 Devam ediyor
+**İşaretler:** ✅ tamamlandı · ⬜ Başlanmadı · 🔄 Devam ediyor
 
 | # | Bölüm | İlerleme | Durum |
 | - | ----- | -------- | ----- |
