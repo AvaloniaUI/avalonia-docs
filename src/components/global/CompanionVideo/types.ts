@@ -1,8 +1,5 @@
 import type {EmbedProvider} from '../Video/utils';
 
-/** Where the card is being rendered, which decides its size and chrome. */
-export type CompanionVideoVariant = 'toc' | 'article';
-
 /** A page's companion video, normalised from front matter. */
 export interface CompanionVideo {
   /** Ready-to-use embed URL, or a media file URL for `kind: 'file'`. */

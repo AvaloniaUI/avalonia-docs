@@ -116,7 +116,7 @@ export default function TOC({ className, ...props }: Props): ReactNode {
           order paints the open panel above both the card and the heading list
           without any z-index juggling. */}
       {companionVideo && (
-        <CompanionVideoCard video={companionVideo} variant="toc" />
+        <CompanionVideoCard video={companionVideo} />
       )}
 
       <div className={styles.tocDropdownRow}>

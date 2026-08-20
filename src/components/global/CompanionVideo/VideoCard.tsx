@@ -1,12 +1,12 @@
-import React, {useCallback, useEffect, useRef, useState} from 'react';
+import React from 'react';
 import clsx from 'clsx';
 import VideoLightbox from './VideoLightbox';
-import type {CompanionVideo, CompanionVideoVariant} from './types';
+import {useVideoLightbox} from './useVideoLightbox';
+import type {CompanionVideo} from './types';
 import styles from './styles.module.css';
 
 interface VideoCardProps {
   video: CompanionVideo;
-  variant: CompanionVideoVariant;
   className?: string;
 }
 
@@ -17,8 +17,9 @@ const PlayGlyph = () => (
 );
 
 /**
- * The companion-video thumbnail. Lives in the TOC panel on desktop and at the
- * top of the article below 997px, where there is no TOC column.
+ * The companion-video thumbnail, shown only in the desktop TOC panel. Wherever
+ * that column is absent — below 997px, or on a page with no TOC at all — the
+ * article renders ./VideoPillButton instead.
  *
  * The card itself is `position: relative` with no z-index on purpose: the TOC's
  * "Open in" dropdown panel is `absolute z-40` and sits later in DOM order, so
@@ -26,41 +27,17 @@ const PlayGlyph = () => (
  */
 export default function VideoCard({
   video,
-  variant,
   className,
 }: VideoCardProps): React.JSX.Element {
-  const [isOpen, setIsOpen] = useState(false);
-  const triggerRef = useRef<HTMLButtonElement>(null);
-  const shouldRestoreFocus = useRef(false);
-
-  const close = useCallback(() => {
-    shouldRestoreFocus.current = true;
-    setIsOpen(false);
-  }, []);
-
-  // Focus has to be restored from an effect rather than inside close(): while
-  // the dialog is open it marks #__docusaurus as `inert`, and focus() on an
-  // element inside an inert subtree is a no-op. By the time this runs the
-  // dialog has unmounted and its cleanup has lifted the attribute.
-  useEffect(() => {
-    if (isOpen || !shouldRestoreFocus.current) return;
-    shouldRestoreFocus.current = false;
-    triggerRef.current?.focus({preventScroll: true});
-  }, [isOpen]);
+  const {isOpen, open, close, triggerRef} = useVideoLightbox<HTMLButtonElement>();
 
   return (
-    <div
-      className={clsx(
-        styles.card,
-        variant === 'toc' ? styles.tocVariant : styles.articleVariant,
-        className,
-      )}
-    >
+    <div className={clsx(styles.card, className)}>
       <button
         ref={triggerRef}
         type="button"
         className={styles.trigger}
-        onClick={() => setIsOpen(true)}
+        onClick={open}
         aria-haspopup="dialog"
       >
         {/* Label and title before the thumbnail, in DOM order rather than with
