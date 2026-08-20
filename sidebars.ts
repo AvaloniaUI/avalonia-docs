@@ -311,6 +311,7 @@ const sidebars: SidebarsConfig = {
         'app-development/threading',
         'app-development/window-management',
         'app-development/performance',
+        'app-development/container-virtualization',
         'app-development/accessibility',
         'app-development/native-interop',
       ],
