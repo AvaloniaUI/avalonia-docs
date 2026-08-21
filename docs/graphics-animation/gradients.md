@@ -30,7 +30,7 @@ All gradient brushes share the `GradientStops` collection and `SpreadMethod` pro
 
 ### `StartPoint` and `EndPoint`
 
-These two properties control the direction of the gradient. You can specify values as percentages (for example, `"0%,50%"`) or as absolute points in the bounding box (for example, `"0,0.5"`).
+These two properties control the direction of the gradient. You can specify values as percentages (for example, `"0%,50%"`) or as absolute points in the bounding box (for example, `"10,15"`).
 
 Common direction patterns:
 
