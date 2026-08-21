@@ -1,23 +1,25 @@
 ---
 id: binding-to-commands
 title: Binding to commands
-description: Bind UI controls to ICommand implementations for handling user actions in the MVVM pattern.
+description: Bind UI controls to commands to handle user actions, using the MVVM pattern.
 doc-type: explanation
 ---
 
-Commands provide a clean way to connect user interactions (button clicks, menu selections, keyboard shortcuts) to logic in your view model. This page covers binding controls to commands using `ICommand`.
+Commands connect user interactions to logic in your code. This page covers how a binding reaches a command: the binding syntax, how a `Command` binding resolves a method, and how `CommandParameter` behaves.
 
-## Basic command binding
+For how to write the commands themselves—the `ICommand` interface, `CanExecute`, async commands, and keyboard shortcuts—see [Commanding](/docs/input-interaction/commanding).
 
-Any control that implements `ICommandSource` (such as `Button`, `MenuItem`, and `ToggleButton`) has a `Command` property:
+## Binding with `ICommand`
 
-```xml
+Any control that implements `ICommandSource` (such as `Button`, `MenuItem` or `ToggleButton`) has a `Command` property, which you can use in the view model.
+
+The example below uses the `[RelayCommand]` attribute from `CommunityToolkit.Mvvm` to generate a `SaveCommand` property of type `IRelayCommand`.
+
+```xml title="XAML"
 <Button Content="Save" Command="{Binding SaveCommand}" />
 ```
 
-The view model exposes a command property:
-
-```csharp
+```csharp title="View model"
 public partial class MainViewModel : ObservableObject
 {
     [RelayCommand]
@@ -28,20 +30,72 @@ public partial class MainViewModel : ObservableObject
 }
 ```
 
-The `[RelayCommand]` attribute from CommunityToolkit.Mvvm generates a `SaveCommand` property of type `IRelayCommand`. The naming convention appends "Command" to the method name.
+:::note
+The naming convention for commands is to append "Command" to the method name e.g., `SaveCommand`, `UndoCommand`.
+:::
 
-## CommandParameter
+## Binding directly to a method
 
-Pass data from the UI to the command using `CommandParameter`:
+As an alternative to `ICommand`, you can bind the `Command` property directly to a method in the data context.
 
-```xml
+```xml title="XAML"
+<Button Content="Save" Command="{Binding Save}" />
+```
+
+```csharp title="Data context"
+public void Save()
+{
+    // Save logic
+}
+```
+
+### How the overload is chosen
+
+If you [overload a method](https://learn.microsoft.com/en-us/dotnet/standard/design-guidelines/member-overloading), Avalonia resolves the overload using the following rules:
+
+| Same-name methods | Result |
+|---|---|
+| One overload taking one parameter | Chosen, whatever the parameter type |
+| Two or more one-parameter overloads, one taking `object` | `object` overload is chosen |
+| Two or more one-parameter overloads, none taking `object` | Build error |
+| One overload with no parameters | Chosen |
+| Two or more overloads taking more than one parameter | Build error |
+
+Overloads taking two or more parameters are always ignored.
+
+:::caution
+Compiled bindings do not convert `CommandParameter` to the parameter type. If the types do not match, the cast throws an exception when the command runs. Reflection bindings do convert the value.
+:::
+
+### Enabled state
+
+To determine the enabled state on the bound control when you use method binding, add a `bool` method with a name in the format of `Can` followed by the bound method:
+
+```csharp
+public void Save()
+{
+    // Save logic
+}
+
+public bool CanSave(object? parameter) => !string.IsNullOrWhiteSpace(Name);
+```
+
+:::note
+This convention applies to method binding only. With `ICommand`, the control uses the command's own `CanExecute` instead. See [Commanding](/docs/input-interaction/commanding#icommand-interface) to learn more about `CanExecute`.
+:::
+
+## Command parameter
+
+Pass data from the UI to the command using `CommandParameter`. In this example, the view model receives the parameter to delete an item.
+
+```xml title="XAML"
 <ListBox ItemsSource="{Binding Items}">
     <ListBox.ItemTemplate>
         <DataTemplate>
             <StackPanel Orientation="Horizontal" Spacing="8">
                 <TextBlock Text="{Binding Name}" />
                 <Button Content="Delete"
-                        Command="{Binding $parent[ListBox].((vm:MainViewModel)DataContext).DeleteCommand}"
+                        Command="{Binding $parent[ListBox].DataContext.DeleteCommand}"
                         CommandParameter="{Binding}" />
             </StackPanel>
         </DataTemplate>
@@ -49,9 +103,7 @@ Pass data from the UI to the command using `CommandParameter`:
 </ListBox>
 ```
 
-The view model receives the parameter:
-
-```csharp
+```csharp title="Data context"
 [RelayCommand]
 private void Delete(Item item)
 {
@@ -59,110 +111,9 @@ private void Delete(Item item)
 }
 ```
 
-## CanExecute
+## Binding commands from a different data context
 
-Commands can conditionally enable or disable the bound control. When `CanExecute` returns `false`, the control is automatically disabled.
-
-### With CommunityToolkit.Mvvm
-
-Use the `[RelayCommand(CanExecute = ...)]` attribute to specify a `CanExecute` method:
-
-```csharp
-[ObservableProperty]
-[NotifyCanExecuteChangedFor(nameof(SaveCommand))]
-private string _name = "";
-
-[RelayCommand(CanExecute = nameof(CanSave))]
-private void Save()
-{
-    // Save logic
-}
-
-private bool CanSave() => !string.IsNullOrWhiteSpace(Name);
-```
-
-The `[NotifyCanExecuteChangedFor]` attribute ensures the `SaveCommand` re-evaluates its `CanExecute` whenever `Name` changes.
-
-### Manual ICommand implementation
-
-```csharp
-public class RelayCommand : ICommand
-{
-    private readonly Action _execute;
-    private readonly Func<bool>? _canExecute;
-
-    public RelayCommand(Action execute, Func<bool>? canExecute = null)
-    {
-        _execute = execute;
-        _canExecute = canExecute;
-    }
-
-    public event EventHandler? CanExecuteChanged;
-
-    public bool CanExecute(object? parameter) => _canExecute?.Invoke() ?? true;
-    public void Execute(object? parameter) => _execute();
-
-    public void RaiseCanExecuteChanged()
-        => CanExecuteChanged?.Invoke(this, EventArgs.Empty);
-}
-```
-
-## Async commands
-
-Long-running operations should use async commands to avoid blocking the UI thread:
-
-```csharp
-[RelayCommand]
-private async Task SaveAsync(CancellationToken token)
-{
-    await _repository.SaveAsync(token);
-}
-```
-
-CommunityToolkit.Mvvm generates a `SaveCommand` of type `IAsyncRelayCommand`, which:
-- Executes the method asynchronously
-- Disables the control while the command is running (prevents double-clicks)
-- Provides a `CancellationToken` parameter for cancellation support
-- Exposes an `IsRunning` property for showing progress indicators
-
-```xml
-<Button Content="Save" Command="{Binding SaveCommand}" />
-<ProgressBar IsVisible="{Binding SaveCommand.IsRunning}" IsIndeterminate="True" />
-```
-
-## Keyboard shortcuts
-
-Bind commands to keyboard shortcuts using `HotKey` or `KeyBinding`:
-
-```xml
-<!-- HotKey on a Button -->
-<Button Content="_Save"
-        Command="{Binding SaveCommand}"
-        HotKey="Ctrl+S" />
-
-<!-- KeyBinding on a window or control -->
-<Window.KeyBindings>
-    <KeyBinding Gesture="Ctrl+Z" Command="{Binding UndoCommand}" />
-    <KeyBinding Gesture="Ctrl+Shift+Z" Command="{Binding RedoCommand}" />
-</Window.KeyBindings>
-```
-
-The underscore in `Content="_Save"` creates an access key (Alt+S on Windows/Linux).
-
-## Controls that support commands
-
-| Control | Command Property | When Invoked |
-|---|---|---|
-| `Button` | `Command` | Click |
-| `MenuItem` | `Command` | Click |
-| `ToggleButton` | `Command` | Toggle |
-| `RadioButton` | `Command` | Selection change |
-| `HyperlinkButton` | `Command` | Click |
-| `SplitButton` | `Command` | Primary click |
-
-## Binding commands from a different DataContext
-
-When the command is on a parent view model but the binding occurs inside a template:
+When the command is on a parent view model, but the binding occurs inside a template:
 
 ```xml
 <!-- Using $parent to reach an ancestor's DataContext -->
@@ -174,10 +125,13 @@ When the command is on a parent view model but the binding occurs inside a templ
         CommandParameter="{Binding}" />
 ```
 
-With compiled bindings, cast the DataContext explicitly using the `((Type)expression)` syntax.
+See [`DataContext` type inference](/docs/data-binding/compiled-bindings#datacontext-type-inference) for more information.
 
 ## See also
 
-- [Commanding](/docs/input-interaction/commanding): Full commanding reference including manual ICommand patterns.
+- [Commanding](/docs/input-interaction/commanding): Writing commands — `ICommand`, `CanExecute`, async commands, and manual implementations.
 - [Keyboard and Hotkeys](/docs/input-interaction/keyboard-and-hotkeys): Hotkey and keybinding setup.
+- [How to bind can execute](/docs/data-binding/how-to-bind-can-execute): Worked example of a button enabled by `CanExecute`.
 - [Data Binding Syntax](/docs/data-binding/data-binding-syntax): Binding paths, modes, and converters.
+- [Binding debugging](/docs/data-binding/binding-debugging#method-binding-overload-not-resolved): Diagnosing method binding failures.
+- [Adding interactivity](/docs/input-interaction/adding-interactivity): Choosing between events and commands.

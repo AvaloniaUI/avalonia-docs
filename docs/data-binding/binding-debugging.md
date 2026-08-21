@@ -5,11 +5,9 @@ description: Debug data binding errors in Avalonia using trace-level logging and
 doc-type: how-to
 ---
 
-When a data binding does not produce the expected result, Avalonia provides tools and techniques to diagnose the problem.
-
 ## Binding error logging
 
-Avalonia logs binding errors to the trace output. In a debug build, these messages appear in the IDE Output window or the console. A typical binding error looks like:
+Avalonia logs binding errors to the trace output. In a debug build, these messages appear in the IDE Output window or the console. Here is an example of a typical binding error:
 
 ```text
 [Binding] Error in binding to 'Avalonia.Controls.TextBlock'.'Text': 'Could not find a matching property accessor for 'UserNam' on 'MyApp.ViewModels.MainViewModel'
@@ -17,57 +15,55 @@ Avalonia logs binding errors to the trace output. In a debug build, these messag
 
 This message tells you:
 - The target control and property (`TextBlock.Text`)
-- What went wrong (property `UserNam` not found, likely a typo for `UserName`)
+- What went wrong (Property `UserNam` not found, likely a typo for `UserName`)
 - The source type being searched (`MainViewModel`)
 
 ### Enabling verbose binding logging
 
-To see all binding activity (not just errors), configure the logging level at startup:
+To see all binding activity (not just errors), configure the logging level in the `Program.cs` file of your project. With this configuration, logs record every binding resolution, value change, and fallback applied.
 
 ```csharp
 public static AppBuilder BuildAvaloniaApp()
     => AppBuilder.Configure<App>()
         .UsePlatformDetect()
         .LogToTrace(LogEventLevel.Warning)
-        // Add binding-specific verbose logging:
+        // highlight-next-line
         .LogToTrace(LogEventLevel.Verbose, LogArea.Binding);
 ```
-
-This produces output for every binding resolution, value change, and fallback applied.
 
 ## Common binding problems
 
 ### Property not found
 
-**Symptom**: The control shows nothing or a fallback value. The log shows "Could not find a matching property accessor."
+**Symptom:** The control shows nothing or a fallback value. The log shows "Could not find a matching property accessor."
 
-**Causes**:
-- Typo in the binding path
-- The DataContext is not the type you expect
-- The property is not public
+**Causes:**
+- Typo in the binding path.
+- The data context is not the type you expect.
+- The property is not public.
 
-**Fix**: Verify the property name and check the DataContext with DevTools (see below).
+**Fix:** Verify the property name. Check the `DataContext` with [DevTools](#using-avalonia-devtools).
 
-### DataContext is null
+### `DataContext` is null
 
-**Symptom**: All bindings on a control produce no value.
+**Symptom:** All bindings on a control produce no value.
 
-**Causes**:
-- The DataContext was never set
-- The DataContext was set on the wrong element
-- A parent control has `DataContext="{Binding SomeProperty}"` where `SomeProperty` is null
+**Causes:**
+- The data context was never set.
+- The data context was set on the wrong element.
+- A parent control has `DataContext="{Binding SomeProperty}"` where `SomeProperty` is null.
 
-**Fix**: Use DevTools to inspect the DataContext at the control level.
+**Fix:** Use [DevTools](#using-avalonia-devtools) to inspect the `DataContext` at the control level.
 
 ### Binding mode mismatch
 
-**Symptom**: Changes in the UI do not propagate to the view model (or vice versa).
+**Symptom:** Changes in the UI do not propagate to the view model, or vice versa.
 
-**Causes**:
-- The default binding mode for the property is `OneWay`, but you need `TwoWay`
-- The source property does not raise `PropertyChanged`
+**Causes:**
+- The default binding mode for the property is `OneWay`, but you need `TwoWay`.
+- The source property does not raise `PropertyChanged`.
 
-**Fix**: Set `Mode=TwoWay` explicitly, and verify the view model implements `INotifyPropertyChanged`.
+**Fix:** Set `Mode=TwoWay` explicitly. Verify the view model implements `INotifyPropertyChanged`.
 
 ```xml
 <TextBox Text="{Binding Name, Mode=TwoWay}" />
@@ -75,48 +71,49 @@ This produces output for every binding resolution, value change, and fallback ap
 
 ### Compiled binding type mismatch
 
-**Symptom**: Build error mentioning "Cannot resolve property" or "Binding path is not valid for type."
+**Symptom:** Build error "Cannot resolve property" or "Binding path is not valid for type."
 
-**Causes**:
-- The `x:DataType` does not match the actual DataContext type
-- The property does not exist on the declared data type
+**Causes:**
+- The `x:DataType` does not match the actual `DataContext` type.
+- The property does not exist on the declared data type.
 
-**Fix**: Verify `x:DataType` matches your view model. Use `ReflectionBinding` to bypass compile-time checking if needed:
+**Fix:** Verify `x:DataType` matches your view model. Use a reflection binding to bypass compile-time checking if needed.
 
 ```xml
 <TextBlock Text="{ReflectionBinding DynamicProperty}" />
 ```
 
-### Converter returning UnsetValue
+### Method binding overload not resolved
 
-**Symptom**: The binding applies the FallbackValue instead of the converted result.
+**Symptom:** A command bound to an overloaded method fails.
 
-**Cause**: Your `IValueConverter.Convert` method returns `AvaloniaProperty.UnsetValue` or `BindingOperations.DoNothing`.
+- Build error "Found 2 overloads accepting one parameter."
+- Runtime exception when the command runs.
 
-**Fix**: Return an actual value or `null` (which triggers `TargetNullValue` instead).
+**Causes:**
+- Two or more overloads take one parameter and none takes `object`, so the choice is ambiguous.
+- Every overload takes two or more parameters, which method binding does not support.
+- The command parameter does not match the method parameter type, when using a compiled binding. (Compiled bindings do not convert `CommandParameter`.)
+
+**Fix:** Give the method a single `object` parameter, or remove the competing overloads. Make sure `CommandParameter` supplies the exact type. See [Binding directly to a method](/docs/data-binding/binding-to-commands#binding-directly-to-a-method) for the full rules.
+
+### Converter returns `UnsetValue`
+
+**Symptom:** The binding applies the fallback value instead of the converted result.
+
+**Cause:** Your `IValueConverter.Convert` method returns `AvaloniaProperty.UnsetValue` or `BindingOperations.DoNothing`.
+
+**Fix:** Return an actual value or `null` (which triggers `TargetNullValue` instead).
 
 ## Using Avalonia DevTools
 
-Press **F12** in a debug build to open the Avalonia DevTools. The DevTools provide several views for debugging bindings:
-
-### Properties tab
-
-Select any control in the tree and examine its properties. For each property, DevTools shows:
-- The current value
-- The value source (Local, Style, Binding, and similar)
-- Whether a binding is active
-
-Look for properties showing their default value when you expect a bound value. This indicates the binding failed.
-
-### Logical tree tab
-
-Navigate the logical tree to find controls and verify their DataContext. Select a control and check the `DataContext` property to confirm it is the expected view model instance.
+Press <kbd>F12</kbd> in the running app to open Avalonia DevTools. Then, use the [Elements tool](/tools/developer-tools/elements-tool) to examine the control's properties, or navigate the logical tree to verify its data context.
 
 ## Debugging bindings in code
 
 ### Observing binding values
 
-Use `GetObservable` to watch a property's value changes in real time:
+Use `GetObservable` to watch value changes of a property in real time:
 
 ```csharp
 myTextBlock.GetObservable(TextBlock.TextProperty).Subscribe(value =>
@@ -133,7 +130,7 @@ Debug.WriteLine($"DataContext type: {myControl.DataContext?.GetType().Name}");
 Debug.WriteLine($"DataContext value: {myControl.DataContext}");
 ```
 
-### Using FallbackValue for diagnostics
+### Using `FallbackValue` for diagnostics
 
 Temporarily add a `FallbackValue` to identify whether the binding path is failing:
 
@@ -141,34 +138,29 @@ Temporarily add a `FallbackValue` to identify whether the binding path is failin
 <TextBlock Text="{Binding UserName, FallbackValue='BINDING FAILED'}" />
 ```
 
-If you see "BINDING FAILED" in the UI, the binding path is wrong or the DataContext is null.
+If you see "BINDING FAILED" in the UI, the binding path is wrong or the data context is null.
 
 ## Compiled bindings diagnostics
 
-Compiled bindings are validated at compile time when `x:CompileBindings="True"` is set. If a binding path is invalid, you get a build error instead of a silent runtime failure.
+Compiled bindings are validated at compile time. If a binding path is invalid, you get a build error instead of a silent runtime failure.
 
-To enable compiled bindings project-wide, add to your `.csproj`:
+You have two options to resolve an invalid compiled binding:
 
-```xml
-<AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
-```
-
-When compiled bindings encounter a property that cannot be resolved at compile time, you have two options:
-1. Fix the `x:DataType` declaration to match the actual data type
-2. Use `ReflectionBinding` for dynamic properties that cannot be statically resolved
+1. Fix the `x:DataType` declaration to match the actual data type.
+2. Use `ReflectionBinding` for dynamic properties that cannot be statically resolved.
 
 ## Diagnostic checklist
 
 When a binding does not work:
 
-1. Check the Output window for binding error messages
-2. Open DevTools (F12) and verify the control's DataContext
-3. Verify the property name matches exactly (case-sensitive)
-4. Verify the property is `public` with a `get` accessor
-5. For `TwoWay` bindings, verify the property has a `set` accessor and the source implements `INotifyPropertyChanged`
-6. Check that the DataContext is set before the binding is evaluated
-7. Add `FallbackValue` to confirm whether the path resolution is the problem
-8. For compiled bindings, verify `x:DataType` matches the actual runtime type
+1. Check the Output window for binding error messages.
+2. Open [DevTools](#using-avalonia-devtools) to verify the control's data context.
+3. Verify the property name matches exactly (case-sensitive).
+4. Verify the property is `public` with a `get` accessor.
+5. For `TwoWay` bindings, verify the property has a `set` accessor and the source implements `INotifyPropertyChanged`.
+6. Check that the `DataContext` is set before the binding is evaluated.
+7. Add a `FallbackValue` to confirm whether the path resolution is the problem.
+8. For compiled bindings, verify `x:DataType` matches the actual runtime type.
 
 ## See also
 
