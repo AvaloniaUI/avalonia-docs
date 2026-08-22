@@ -108,7 +108,7 @@ public partial class MainViewModel : ObservableObject
 
 ## See also
 
-- [Commanding](/docs/input-interaction/commanding): Writing commands — `ICommand`, `CanExecute`, and async commands.
+- [Commanding](/docs/input-interaction/commanding): Writing commands—`ICommand`, `CanExecute`, and async commands.
 - [Binding to commands](/docs/data-binding/binding-to-commands): Binding syntax, method binding, and `CommandParameter`.
 - [Routed events](/docs/input-interaction/routed-events): How events travel through the control tree.
 - [Keyboard and Hotkeys](/docs/input-interaction/keyboard-and-hotkeys): Key bindings for commands.

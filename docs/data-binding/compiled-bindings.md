@@ -16,7 +16,7 @@ Since version 12, Avalonia templates set `<AvaloniaUseCompiledBindingsByDefault>
 
 If you wish to disable compiled bindings, you can change the flag to `false` in the `.csproj` file of your project.
 
-Projects created with earlier versions of Avalonia may not have `<AvaloniaUseCompiledBindingsByDefault>` defined. If this is the case, compiled bindings are disabled.
+Projects created with earlier versions of Avalonia may not have `<AvaloniaUseCompiledBindingsByDefault>` defined. The undefined flag defaulted to disabled in versions before v12.
 
 ## Setting the data type
 

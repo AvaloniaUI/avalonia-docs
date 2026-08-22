@@ -57,9 +57,9 @@ If you [overload a method](https://learn.microsoft.com/en-us/dotnet/standard/des
 |---|---|
 | One overload taking one parameter | Chosen, whatever the parameter type |
 | Two or more one-parameter overloads, one taking `object` | `object` overload is chosen |
-| Two or more one-parameter overloads, none taking `object` | Build error |
+| Two or more one-parameter overloads, none taking `object` | Error |
 | One overload with no parameters | Chosen |
-| Two or more overloads taking more than one parameter | Build error |
+| Two or more overloads taking more than one parameter | Error |
 
 Overloads taking two or more parameters are always ignored.
 
@@ -129,9 +129,9 @@ See [`DataContext` type inference](/docs/data-binding/compiled-bindings#datacont
 
 ## See also
 
-- [Commanding](/docs/input-interaction/commanding): Writing commands — `ICommand`, `CanExecute`, async commands, and manual implementations.
+- [Commanding](/docs/input-interaction/commanding): Writing commands—`ICommand`, `CanExecute`, async commands, and manual implementations.
 - [Keyboard and Hotkeys](/docs/input-interaction/keyboard-and-hotkeys): Hotkey and keybinding setup.
-- [How to bind can execute](/docs/data-binding/how-to-bind-can-execute): Worked example of a button enabled by `CanExecute`.
+- [How to bind CanExecute](/docs/data-binding/how-to-bind-can-execute): Worked example of a button enabled by `CanExecute`.
 - [Data Binding Syntax](/docs/data-binding/data-binding-syntax): Binding paths, modes, and converters.
 - [Binding debugging](/docs/data-binding/binding-debugging#method-binding-overload-not-resolved): Diagnosing method binding failures.
 - [Adding interactivity](/docs/input-interaction/adding-interactivity): Choosing between events and commands.

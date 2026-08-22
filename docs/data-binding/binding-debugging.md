@@ -87,7 +87,8 @@ public static AppBuilder BuildAvaloniaApp()
 
 **Symptom:** A command bound to an overloaded method fails.
 
-- Build error "Found 2 overloads accepting one parameter."
+- Build error reports an unresolved overload when using compiled binding.
+- Runtime binding error reports an unresolved overload when using reflection binding.
 - Runtime exception when the command runs.
 
 **Causes:**
