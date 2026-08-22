@@ -13841,6 +13841,1433 @@ html: `
 <p>Kontrolleri bir panel içinde hassas biçimde konumlandırmayı öğrendiniz. Sıradaki derste, bu yerleşimin pencere boyutu değiştiğinde kendini nasıl yeniden düzenleyeceğini ele alıyoruz: <a class="internal-link" data-target="responsive-layouts">Duyarlı (Responsive) Yerleşimler</a>.</p>
 `};
 
+LESSONS["responsive-layouts"] = {
+lede: `Bir arayüzü doğru kurmak yetmez; pencere daraldığında, uygulama telefonda açıldığında veya aynı bileşen dar bir kenar çubuğuna yerleştirildiğinde de anlamlı kalması gerekir. Bu ders kaynağın dört duyarlı yerleşim tekniğini — konteyner sorguları, OnFormFactor, yeniden akan paneller ve kesme noktası görünüm modelleri — tüm tabloları ve kod örnekleriyle birebir aktarıyor; ardından konteyner sorgusunun hangi mekanizmayla çalıştığını, sorgu sözdizimindeki sınır değerlerinin nasıl davrandığını, dört tekniğin ne zaman çözüldüğünü ve pratikte en çok zaman kaybettiren hataları şemalarla ayrıntılı olarak açıklıyor.`,
+html: `
+<div class="part-head">
+  <span class="n">1</span>
+  <span class="t">Kaynağın Türkçe çevirisi
+    <span class="s">Özgün dokümantasyona dayalı içerik</span></span>
+</div>
+
+<div class="from-source">
+
+<p>Avalonia, kullanılabilir alan değiştiğinde kendini uyarlayan yerleşimler oluşturmak için teknikler sunar. Bir konteynerin boyutuna, cihaz türüne veya yeniden akan bir panelin ölçülerine tepki verebilirsiniz. Bu sayfa her bir yaklaşımı ve hangisinin ne zaman seçileceğini anlatır.</p>
+
+<h2>Yaklaşımlara genel bakış</h2>
+
+<div class="table-wrap"><table>
+<tr><th>Teknik</th><th>Neye tepki verir</th><th>Ne zaman çözülür</th><th>En uygun olduğu durum</th></tr>
+<tr><td>Konteyner sorguları (Container queries)</td><td>Bir ata kontrolün boyutu</td><td>Canlı olarak, kontrol yeniden boyutlandıkça</td><td>Farklı genişlikteki panellerde görünen, yeniden kullanılabilir bileşenler</td></tr>
+<tr><td><code>OnFormFactor</code></td><td>Cihaz türü (masaüstü, mobil)</td><td>Bir kez, başlangıçta</td><td>Platforma özgü yerleşim farklılıkları</td></tr>
+<tr><td>Yeniden akan paneller (Reflowing panels)</td><td>Kullanılabilir genişlik</td><td>Canlı olarak, panel yeniden boyutlandıkça</td><td>Kart ızgaraları ve akan içerik</td></tr>
+<tr><td>Kesme noktası görünüm modelleri (Breakpoint view models)</td><td>Pencere genişliği (veya ölçülen herhangi bir değer)</td><td>Canlı olarak, özellik değişimi yoluyla</td><td>Kod tarafından yürütülen, çok özellikli karmaşık geçişler</td></tr>
+</table></div>
+
+<h2>Konteyner sorguları</h2>
+
+<p>Konteyner sorguları, bir ata kontrol belirli bir boyuta ulaştığında stilleri etkinleştirmenizi sağlar. Sorgu pencereyi değil bir kontrolü hedef aldığı için, aynı bileşen ister tam genişlikte bir sayfada, ister dar bir kenar çubuğunda, ister bir iletişim kutusunda görünsün doğru biçimde uyum sağlar.</p>
+
+<h3>Konteyner bildirmek</h3>
+
+<p><code>Container.Name</code> ve <code>Container.Sizing</code> ekli özelliklerini (attached properties) ayarlayarak herhangi bir ata öğeyi konteyner olarak işaretleyin:</p>
+
+<pre><code>&lt;Border Container.Name="main"
+        Container.Sizing="Width"&gt;
+    &lt;!-- çocuk içerik buraya --&gt;
+&lt;/Border&gt;</code></pre>
+
+<p><code>Container.Sizing</code>, hangi boyutların izleneceğini belirler:</p>
+
+<div class="table-wrap"><table>
+<tr><th>Değer</th><th>İzlenen boyutlar</th></tr>
+<tr><td><code>Normal</code></td><td>Hiçbiri (varsayılan)</td></tr>
+<tr><td><code>Width</code></td><td>Yalnızca genişlik</td></tr>
+<tr><td><code>Height</code></td><td>Yalnızca yükseklik</td></tr>
+<tr><td><code>WidthAndHeight</code></td><td>Hem genişlik hem yükseklik</td></tr>
+</table></div>
+
+<h3>Konteyner sorgusu yazmak</h3>
+
+<p>Bir <code>ContainerQuery</code> öğesi, konteynerin bir atası olan kontrolün <code>Styles</code> koleksiyonu içinde yer alır. Sorgu koşulu sağlandığında kendi çocuk stillerini etkinleştirir:</p>
+
+<pre><code>&lt;Window&gt;
+    &lt;Window.Styles&gt;
+        &lt;ContainerQuery Name="main" Query="max-width:600"&gt;
+            &lt;Style Selector="StackPanel#sidebar"&gt;
+                &lt;Setter Property="IsVisible" Value="False" /&gt;
+            &lt;/Style&gt;
+        &lt;/ContainerQuery&gt;
+    &lt;/Window.Styles&gt;
+
+    &lt;Grid ColumnDefinitions="200,*"&gt;
+        &lt;StackPanel x:Name="sidebar" Grid.Column="0"&gt;
+            &lt;!-- kenar çubuğu içeriği --&gt;
+        &lt;/StackPanel&gt;
+        &lt;ContentControl Grid.Column="1"
+                        Content="{Binding CurrentPage}" /&gt;
+    &lt;/Grid&gt;
+&lt;/Window&gt;</code></pre>
+
+<p>Bu örnekte, <code>main</code> adlı konteyner 600 piksel genişliğinde veya daha darken kenar çubuğu gizlenir.</p>
+
+<h3>Kesme noktalarıyla yerleşim yapısını ayarlamak</h3>
+
+<p>Kesme noktası (breakpoint) katmanları tanımlamak için aynı konteyner üzerinde birden fazla konteyner sorgusu kullanabilirsiniz. Aşağıdaki örnek, konteyner büyüdükçe bir <code>UniformGrid</code> içindeki sütun sayısını değiştirir:</p>
+
+<pre><code>&lt;Panel Container.Name="content" Container.Sizing="Width"&gt;
+    &lt;Panel.Styles&gt;
+        &lt;ContainerQuery Name="content" Query="max-width:400"&gt;
+            &lt;Style Selector="UniformGrid#cards"&gt;
+                &lt;Setter Property="Columns" Value="1" /&gt;
+            &lt;/Style&gt;
+        &lt;/ContainerQuery&gt;
+        &lt;ContainerQuery Name="content" Query="min-width:400"&gt;
+            &lt;Style Selector="UniformGrid#cards"&gt;
+                &lt;Setter Property="Columns" Value="2" /&gt;
+            &lt;/Style&gt;
+        &lt;/ContainerQuery&gt;
+        &lt;ContainerQuery Name="content" Query="min-width:800"&gt;
+            &lt;Style Selector="UniformGrid#cards"&gt;
+                &lt;Setter Property="Columns" Value="3" /&gt;
+            &lt;/Style&gt;
+        &lt;/ContainerQuery&gt;
+    &lt;/Panel.Styles&gt;
+
+    &lt;UniformGrid x:Name="cards"&gt;
+        &lt;!-- kart öğeleri --&gt;
+    &lt;/UniformGrid&gt;
+&lt;/Panel&gt;</code></pre>
+
+<h3>Yerleşim dışı özellikleri özelleştirmek</h3>
+
+<p>Konteyner sorguları yalnızca yerleşim özellikleriyle sınırlı değildir. Bir <code>Style</code>'ın ayarlayabildiği her özelliği — yazı tipi boyutları, aralıklar, görünürlük ve renkler dâhil — ayarlayabilirsiniz:</p>
+
+<pre><code>&lt;Panel Container.Name="content" Container.Sizing="Width"&gt;
+    &lt;Panel.Styles&gt;
+        &lt;!-- Varsayılan başlık boyutu --&gt;
+        &lt;Style Selector="TextBlock.heading"&gt;
+            &lt;Setter Property="FontSize" Value="24" /&gt;
+        &lt;/Style&gt;
+
+        &lt;!-- Konteyner darken daha küçük başlık --&gt;
+        &lt;ContainerQuery Name="content" Query="max-width:500"&gt;
+            &lt;Style Selector="TextBlock.heading"&gt;
+                &lt;Setter Property="FontSize" Value="18" /&gt;
+            &lt;/Style&gt;
+            &lt;Style Selector="StackPanel.toolbar"&gt;
+                &lt;Setter Property="Orientation" Value="Vertical" /&gt;
+            &lt;/Style&gt;
+        &lt;/ContainerQuery&gt;
+    &lt;/Panel.Styles&gt;
+
+    &lt;StackPanel&gt;
+        &lt;TextBlock Classes="heading" Text="Dashboard" /&gt;
+        &lt;StackPanel Classes="toolbar" Orientation="Horizontal" Spacing="8"&gt;
+            &lt;Button Content="New" /&gt;
+            &lt;Button Content="Refresh" /&gt;
+        &lt;/StackPanel&gt;
+    &lt;/StackPanel&gt;
+&lt;/Panel&gt;</code></pre>
+
+<h3>Sorguları birleştirmek</h3>
+
+<p>Tek bir sorguda birden fazla koşulu <code>and</code> (tüm koşullar eşleşmelidir) veya <code>,</code> (koşullardan herhangi biri eşleşebilir) kullanarak birleştirin:</p>
+
+<pre><code>&lt;!-- Her iki koşul da doğru olmalıdır --&gt;
+&lt;ContainerQuery Name="main" Query="min-width:400 and max-width:800"&gt;
+    &lt;!-- orta genişlikler için stiller --&gt;
+&lt;/ContainerQuery&gt;
+
+&lt;!-- Koşullardan herhangi biri doğru olabilir --&gt;
+&lt;ContainerQuery Name="main" Query="max-width:300,min-height:600"&gt;
+    &lt;!-- dar VEYA uzun konteynerler için stiller --&gt;
+&lt;/ContainerQuery&gt;</code></pre>
+
+<p>Sorgu sözdiziminin tamamı, kullanılabilir sorgu türleri ve kısıtlamalar için <a class="internal-link" data-target="container-queries">Konteyner Sorguları</a> konusuna bakın.</p>
+
+<div class="callout tip">
+  <div class="h">İpucu</div>
+  <p><code>TopLevel</code> (pencereniz veya ana görünümünüz) konteyner olarak ayarlandığında, konteyner sorguları CSS medya sorguları (media queries) gibi davranır ve pencere boyutunun kendisine tepki verir.</p>
+</div>
+
+<h2>OnFormFactor</h2>
+
+<p><code>OnFormFactor</code> işaretleme uzantısı, cihaz türüne göre bir değer seçer. Başlangıçta bir kez çözülür; bu nedenle pencerenin yeniden boyutlandırılmasına tepki vermez.</p>
+
+<h3>Form faktörü değerleri</h3>
+
+<div class="table-wrap"><table>
+<tr><th>Parametre</th><th>Eşleştiği durum</th><th>Tipik platformlar</th></tr>
+<tr><td><code>Desktop</code></td><td>Masaüstü sistemler</td><td>Windows, macOS, Linux</td></tr>
+<tr><td><code>Mobile</code></td><td>Mobil sistemler</td><td>iOS, Android</td></tr>
+<tr><td><code>TV</code></td><td>Televizyon sistemleri</td><td>tvOS, Android TV</td></tr>
+<tr><td><code>Default</code></td><td>Geçerli form faktörü belirtilmediğinde kullanılan geri dönüş değeri</td><td>Herhangi biri</td></tr>
+</table></div>
+
+<p>Geçerli form faktörü, belirtilen parametrelerden hiçbiriyle eşleşmiyorsa <code>Default</code> değeri kullanılır. <code>Default</code> ayarlanmamışsa özellik, kendi türünün varsayılan değerini alır.</p>
+
+<pre><code>&lt;Grid ColumnDefinitions="{OnFormFactor Desktop='250,*', Mobile='*'}"&gt;
+    &lt;Border Grid.Column="0"
+            IsVisible="{OnFormFactor Desktop=True, Mobile=False}"&gt;
+        &lt;ListBox ItemsSource="{Binding MenuItems}" /&gt;
+    &lt;/Border&gt;
+    &lt;ContentControl Grid.Column="{OnFormFactor Desktop=1, Mobile=0}"
+                    Content="{Binding CurrentPage}" /&gt;
+&lt;/Grid&gt;</code></pre>
+
+<p>Masaüstü ve mobil yerleşimleriniz yapısal olarak farklıysa ve canlı yeniden boyutlandırmaya tepki vermeniz gerekmiyorsa <code>OnFormFactor</code> kullanın. Kullanıcı pencereyi yeniden boyutlandırdıkça uyum sağlaması gereken yerleşimler için bunun yerine konteyner sorgularını kullanın.</p>
+
+<h3>OnPlatform</h3>
+
+<p>İlgili <code>OnPlatform</code> işaretleme uzantısı, cihaz türü yerine işletim sistemine göre bir değer seçer. O da başlangıçta bir kez çözülür.</p>
+
+<div class="table-wrap"><table>
+<tr><th>Parametre</th><th>Eşleştiği durum</th></tr>
+<tr><td><code>Windows</code></td><td>Windows</td></tr>
+<tr><td><code>macOS</code></td><td>macOS</td></tr>
+<tr><td><code>Linux</code></td><td>Linux</td></tr>
+<tr><td><code>iOS</code></td><td>iOS</td></tr>
+<tr><td><code>Android</code></td><td>Android</td></tr>
+<tr><td><code>Browser</code></td><td>Tarayıcıda WebAssembly (WASM)</td></tr>
+<tr><td><code>Default</code></td><td>Geçerli platform belirtilmediğinde kullanılan geri dönüş değeri</td></tr>
+</table></div>
+
+<pre><code>&lt;TextBlock FontFamily="{OnPlatform macOS='San Francisco',
+                                   Windows='Segoe UI',
+                                   Default='Inter'}" /&gt;</code></pre>
+
+<p><code>OnFormFactor</code> ve <code>OnPlatform</code> farklı amaçlara hizmet eder. Cihaz kategorileri arasındaki yapısal yerleşim farklılıkları (masaüstüne karşı mobil) için <code>OnFormFactor</code> kullanın. Yerel yazı tipi aileleri veya işletim sistemine özgü stillendirme gibi platforma özgü ayarlamalar için <code>OnPlatform</code> kullanın.</p>
+
+<h2>Yeniden akan paneller</h2>
+
+<p>Bazı paneller, sorgu veya kod gerektirmeden çocuklarını kullanılabilir alana göre otomatik olarak yeniden akıtır.</p>
+
+<p><strong><code>WrapPanel</code></strong>, çocukları bir satır boyunca yerleştirir ve panelin kenarına ulaşıldığında bir sonraki satıra kaydırır:</p>
+
+<pre><code>&lt;WrapPanel Orientation="Horizontal"&gt;
+    &lt;Button Content="One" Margin="4" /&gt;
+    &lt;Button Content="Two" Margin="4" /&gt;
+    &lt;Button Content="Three" Margin="4" /&gt;
+    &lt;!-- panel çok darsa bir sonraki satıra kayar --&gt;
+&lt;/WrapPanel&gt;</code></pre>
+
+<p><strong><code>UniformGridLayout</code></strong> (<code>ItemsRepeater</code> ile birlikte kullanılır), sütun sayısını kullanılabilir genişlikten ve en küçük öğe boyutundan hesaplar:</p>
+
+<pre><code>&lt;ItemsRepeater ItemsSource="{Binding Cards}"&gt;
+    &lt;ItemsRepeater.Layout&gt;
+        &lt;UniformGridLayout MinItemWidth="280"
+                           MinItemHeight="200"
+                           MinColumnSpacing="12"
+                           MinRowSpacing="12" /&gt;
+    &lt;/ItemsRepeater.Layout&gt;
+    &lt;ItemsRepeater.ItemTemplate&gt;
+        &lt;DataTemplate&gt;
+            &lt;Border Padding="16" CornerRadius="8"
+                    Background="White"
+                    BorderBrush="#E5E7EB" BorderThickness="1"&gt;
+                &lt;TextBlock Text="{Binding Title}" /&gt;
+            &lt;/Border&gt;
+        &lt;/DataTemplate&gt;
+    &lt;/ItemsRepeater.ItemTemplate&gt;
+&lt;/ItemsRepeater&gt;</code></pre>
+
+<p>Açık kesme noktaları olmadan akan içeriğe ihtiyaç duyduğunuzda bu paneller iyi bir seçimdir.</p>
+
+<h2>Kesme noktası görünüm modelleri</h2>
+
+<p>Duyarlı mantığınız birden fazla eşgüdümlü özellik değişikliği veya boyutun ötesinde koşullar içeriyorsa (yön ve platform denetimlerini birleştirmek gibi), pencere genişliğini görünüm modelinizde (view model) izleyip her katman için boolean özellikler sunabilirsiniz:</p>
+
+<pre><code>public partial class MainViewModel : ObservableObject
+{
+    [ObservableProperty]
+    private bool _isCompact;
+
+    [ObservableProperty]
+    private bool _isWide;
+
+    public void UpdateLayout(double windowWidth)
+    {
+        IsCompact = windowWidth &lt; 640;
+        IsWide = windowWidth &gt;= 1024;
+    }
+}</code></pre>
+
+<p><code>UpdateLayout</code>'u pencerenin boyut değişikliği işleyicisinden çağırın:</p>
+
+<pre><code>protected override void OnSizeChanged(SizeChangedEventArgs e)
+{
+    base.OnSizeChanged(e);
+    if (DataContext is MainViewModel vm)
+        vm.UpdateLayout(e.NewSize.Width);
+}</code></pre>
+
+<p>Ardından yerleşim özelliklerini kesme noktası bayraklarına bağlayın:</p>
+
+<pre><code>&lt;StackPanel IsVisible="{Binding IsCompact}" Spacing="8"&gt;
+    &lt;views:SidebarView /&gt;
+    &lt;views:ContentView /&gt;
+&lt;/StackPanel&gt;
+
+&lt;Grid IsVisible="{Binding !IsCompact}" ColumnDefinitions="280,*"&gt;
+    &lt;views:SidebarView Grid.Column="0" /&gt;
+    &lt;views:ContentView Grid.Column="1" /&gt;
+&lt;/Grid&gt;</code></pre>
+
+<p>Bu yaklaşım tam programatik denetim sağlar; ancak arka plan kodu (code-behind) veya görünüm modeli bağlantısı kurmayı gerektirir. Geçişleriniz tamamen boyuta dayalıysa ve XAML içinde ifade edilebiliyorsa konteyner sorgularını tercih edin.</p>
+
+<h2>Bir yaklaşım seçmek</h2>
+
+<p>Doğru tekniği seçmek için aşağıdaki karar sürecini kullanın:</p>
+
+<ol>
+<li><strong>Bileşeninizin, pencerenin değil kendi boyutuna göre uyum sağlaması mı gerekiyor?</strong> Konteyner sorgularını kullanın. Bu, bileşeni kendi kendine yeterli ve yeniden kullanılabilir tutar.</li>
+<li><strong>Masaüstü ve mobil yerleşimleri yapısal olarak farklı mı ve canlı yeniden boyutlandırmaya ihtiyaç yok mu?</strong> <code>OnFormFactor</code> kullanın.</li>
+<li><strong>Satırlar hâlinde yeniden akması gereken bir öğe koleksiyonunuz mu var?</strong> <code>WrapPanel</code> veya <code>UniformGridLayout</code> kullanın.</li>
+<li><strong>Geçiş mantığınız birden fazla koşul, platform denetimi veya boyut dışı tetikleyiciler mi içeriyor?</strong> Kesme noktası görünüm modellerini kullanın.</li>
+</ol>
+
+<p>Bu teknikleri birleştirebilirsiniz. Örneğin üst düzey bir yapısal farklılık için (kenar çubuğuna karşı alt sekmeler) <code>OnFormFactor</code> kullanın, ardından tek tek panellerin içinde konteyner sorguları kullanarak bu panellerin gerçek çizim boyutlarına uyum sağlamasını sağlayın.</p>
+
+<h2>Ayrıca bakınız</h2>
+<ul>
+<li><a class="internal-link" data-target="container-queries">Konteyner Sorguları</a>: Sorgu sözdiziminin tamamı, konteyner boyutlandırma kipleri ve kısıtlamalar.</li>
+<li><a class="internal-link" data-target="how-to-responsive-layout">Nasıl Yapılır: Duyarlı Yerleşimler Oluşturma</a>: Yaygın duyarlı desenler için adım adım tarifler.</li>
+<li><a class="internal-link" data-target="layout">Yerleşim (Layout)</a>: Avalonia'nın ölçme ve yerleştirme sisteminin nasıl çalıştığı.</li>
+<li><a class="internal-link" data-target="choosing-a-layout-panel">Yerleşim Paneli Seçimi</a>: Senaryonuza uygun paneli seçmek.</li>
+<li><code>OnFormFactorExtension</code> API başvurusu.</li>
+<li><code>OnPlatformExtension</code> API başvurusu.</li>
+</ul>
+
+</div>
+
+<div class="part-head own">
+  <span class="n">2</span>
+  <span class="t">Ayrıntılı açıklama
+    <span class="s">Kaynakta açıklanmayan veya genişletilen konular</span></span>
+</div>
+
+<h2>Duyarlı yerleşim aslında hangi sorunu çözüyor?</h2>
+
+<p>Kaynak doğrudan tekniklerle başlıyor; ancak asıl soruyu sormuyor: <em>neden</em> duyarlı yerleşime ihtiyaç duyarız? Önceki iki derste öğrendiğiniz araçlar — panel seçimi, hizalama, kenar boşluğu — yerleşimi <strong>tek bir boyutta</strong> doğru kurar. Duyarlı yerleşim ise aynı içeriğin <strong>farklı boyutlarda farklı düzenlere</strong> geçmesini sağlar. Aradaki fark, "esneme" ile "yeniden yapılanma" arasındaki farktır.</p>
+
+<figure>
+<svg viewBox="0 0 700 250" xmlns="http://www.w3.org/2000/svg">
+  <text class="s-lbl" x="20" y="20">Aynı içerik, üç farklı genişlikte üç farklı düzen</text>
+
+  <rect class="s-box" x="20" y="34" width="200" height="150" rx="5"/>
+  <text class="s-sm" x="30" y="52">Dar — 360 birim</text>
+  <rect class="s-acc" x="30" y="60" width="180" height="26" rx="3"/>
+  <text class="s-mono" x="120" y="77" text-anchor="middle">Kart 1</text>
+  <rect class="s-acc" x="30" y="92" width="180" height="26" rx="3"/>
+  <text class="s-mono" x="120" y="109" text-anchor="middle">Kart 2</text>
+  <rect class="s-acc" x="30" y="124" width="180" height="26" rx="3"/>
+  <text class="s-mono" x="120" y="141" text-anchor="middle">Kart 3</text>
+  <text class="s-sm" x="30" y="172">1 sütun · kenar çubuğu gizli</text>
+
+  <rect class="s-box" x="240" y="34" width="200" height="150" rx="5"/>
+  <text class="s-sm" x="250" y="52">Orta — 700 birim</text>
+  <rect class="s-acc" x="250" y="60" width="86" height="52" rx="3"/>
+  <text class="s-mono" x="293" y="90" text-anchor="middle">Kart 1</text>
+  <rect class="s-acc" x="344" y="60" width="86" height="52" rx="3"/>
+  <text class="s-mono" x="387" y="90" text-anchor="middle">Kart 2</text>
+  <rect class="s-acc" x="250" y="118" width="86" height="52" rx="3"/>
+  <text class="s-mono" x="293" y="148" text-anchor="middle">Kart 3</text>
+  <text class="s-sm" x="250" y="180">2 sütun</text>
+
+  <rect class="s-box" x="460" y="34" width="220" height="150" rx="5"/>
+  <text class="s-sm" x="470" y="52">Geniş — 1200 birim</text>
+  <rect class="s-box" x="470" y="60" width="48" height="110" rx="3"/>
+  <text class="s-sm" x="494" y="118" text-anchor="middle">menü</text>
+  <rect class="s-acc" x="526" y="60" width="48" height="52" rx="3"/>
+  <text class="s-mono" x="550" y="90" text-anchor="middle">1</text>
+  <rect class="s-acc" x="580" y="60" width="48" height="52" rx="3"/>
+  <text class="s-mono" x="604" y="90" text-anchor="middle">2</text>
+  <rect class="s-acc" x="634" y="60" width="38" height="52" rx="3"/>
+  <text class="s-mono" x="653" y="90" text-anchor="middle">3</text>
+  <text class="s-sm" x="526" y="140">3 sütun + kenar çubuğu</text>
+
+  <text class="s-sm" x="20" y="212">Kartlar aynı, veri aynı, DataTemplate aynı. Değişen tek şey: kaç sütun ve kenar çubuğu görünür mü.</text>
+  <text class="s-sm" x="20" y="232">Bu dersin dört tekniği, bu üç görüntü arasındaki geçişi kimin kararlaştıracağını belirler.</text>
+</svg>
+<figcaption><span class="fig-own">Şema — kaynakta yoktur, anlatım için hazırlanmıştır.</span> Duyarlı yerleşimin amacı: içeriği değil, içeriğin düzenini uyarlamak.</figcaption>
+</figure>
+
+<h2>Konteyner sorgusu nasıl çalışır?</h2>
+
+<p>Kaynak, konteyner sorgusunu iki cümleyle tanımlıyor ve doğrudan koda geçiyor. Oysa burada birbiriyle konuşan <strong>üç ayrı parça</strong> var ve bu üçünün ilişkisi anlaşılmadan sorgular çalışmaz:</p>
+
+<figure>
+<svg viewBox="0 0 700 320" xmlns="http://www.w3.org/2000/svg">
+  <text class="s-lbl" x="20" y="20">Konteyner sorgusunun üç parçası</text>
+
+  <rect class="s-box" x="20" y="34" width="660" height="256" rx="6"/>
+  <text class="s-sm" x="34" y="54">Window (ata kontrol)</text>
+
+  <rect class="s-acc" x="34" y="62" width="300" height="86" rx="5"/>
+  <text class="s-lbl" x="48" y="82">2 · Window.Styles</text>
+  <text class="s-mono" x="48" y="102">ContainerQuery Name="main"</text>
+  <text class="s-mono" x="48" y="120">Query="max-width:600"</text>
+  <text class="s-sm" x="48" y="138">İçindeki Style'lar koşul sağlanınca devreye girer</text>
+
+  <rect class="s-box" x="360" y="62" width="306" height="86" rx="5"/>
+  <text class="s-lbl" x="374" y="82">1 · Border / Panel</text>
+  <text class="s-mono" x="374" y="102">Container.Name="main"</text>
+  <text class="s-mono" x="374" y="120">Container.Sizing="Width"</text>
+  <text class="s-sm" x="374" y="138">Ölçülen kontrol budur — pencere değil</text>
+
+  <rect class="s-acc" x="34" y="176" width="632" height="72" rx="5"/>
+  <text class="s-lbl" x="48" y="196">3 · Hedef kontrol</text>
+  <text class="s-mono" x="48" y="216">StackPanel x:Name="sidebar" · Style Selector="StackPanel#sidebar"</text>
+  <text class="s-sm" x="48" y="236">Konteynerin içinde yer alır; sorgu eşleşince Setter'lar buna uygulanır</text>
+
+  <text class="s-mono" x="34" y="272">Akış: Border yeniden ölçülür → genişlik 600 veya altına iner → "main" sorgusu eşleşir →</text>
+  <text class="s-mono" x="34" y="286">ContainerQuery içindeki Style'lar etkinleşir → sidebar.IsVisible = False</text>
+</svg>
+<figcaption><span class="fig-own">Şema — kaynakta yoktur, anlatım için hazırlanmıştır.</span> Üç parçayı birbirine bağlayan şey <strong>ad</strong>'dır: <code>Container.Name</code> ile <code>ContainerQuery.Name</code> aynı olmalıdır.</figcaption>
+</figure>
+
+<p>Bu şemadan çıkarılacak üç kural:</p>
+
+<ol>
+<li><strong>Ölçülen kontrol pencere değil, konteynerdir.</strong> Bu, konteyner sorgularını CSS medya sorgularından ayıran temel farktır. Aynı bileşen dar bir kenar çubuğuna konduğunda pencere hâlâ 1600 birim geniş olabilir; ama bileşen 280 birimlik bir alandadır ve doğru olan, o 280 birime tepki vermektir.</li>
+<li><strong><code>Container.Sizing</code> ayarlanmazsa hiçbir şey izlenmez.</strong> Varsayılan değer <code>Normal</code>'dır ve hiçbir boyutu takip etmez. Yalnızca <code>Container.Name</code> vermek yetmez.</li>
+<li><strong>Sorgu, konteynerin dışından yazılır.</strong> <code>ContainerQuery</code>, konteynere <em>ad üzerinden</em> ulaşır; bu yüzden aynı sorguyu üst düzeyde bir kez tanımlayıp aşağıdaki tüm hedefleri etkileyebilirsiniz.</li>
+</ol>
+
+<div class="callout warn">
+  <div class="h">Dikkat — Kaynağın iki örneği farklı yerleşim kullanıyor</div>
+  <p>Kaynak, <code>ContainerQuery</code>'nin "konteynerin <strong>bir atası olan</strong> kontrolün <code>Styles</code> koleksiyonunda" yer aldığını yazar. Ancak sonraki örneklerinde sorgu, <code>Container.Name</code>'i taşıyan <code>Panel</code>'in <strong>kendi</strong> <code>Panel.Styles</code> koleksiyonuna yerleştirilmiştir. İki kullanım da kaynakta doğru örnek olarak verildiğine göre, sorgunun konteynerin kendisinde ya da bir atasında bulunabildiği anlaşılmaktadır; ancak kaynak bu ayrımı açıkça belirtmez. Emin olmak isterseniz kaynağın kendi <a class="internal-link" data-target="container-queries">Konteyner Sorguları</a> sayfasındaki kısıtlamalar bölümünü esas alın ve kendi projenizde her iki yerleşimi de küçük bir örnekle doğrulayın.</p>
+</div>
+
+<h2>Kaynağın kod örneklerinin açıklaması</h2>
+
+<h3>Kodun açıklaması — konteyner bildirmek</h3>
+<div class="table-wrap"><table>
+<tr><th>Bölüm</th><th>Ne yapar</th></tr>
+<tr><td><code>Container.Name="main"</code></td><td>Bu <code>Border</code>'a bir kimlik verir. Sorgular bu adla ona ulaşır. Ad, <code>x:Name</code>'den bağımsızdır; ikisini karıştırmayın.</td></tr>
+<tr><td><code>Container.Sizing="Width"</code></td><td>Yalnızca genişliğin izlenmesini ister. Yükseklik değişimleri hiçbir sorguyu tetiklemez. Yükseklik de gerekiyorsa <code>WidthAndHeight</code> verilmelidir.</td></tr>
+<tr><td>Ekli özellik olması</td><td><code>Container.Name</code> ve <code>Container.Sizing</code> ekli özelliklerdir; yani <code>Border</code> sınıfının kendi özellikleri değildir. Bu sayede <em>herhangi bir</em> kontrol konteyner yapılabilir.</td></tr>
+</table></div>
+<p><strong>Sonuç:</strong> Bu iki satır tek başına görsel hiçbir şey değiştirmez. Yalnızca "bu kontrolün genişliğini izle ve <code>main</code> adıyla duyur" der.</p>
+
+<h3>Kodun açıklaması — kenar çubuğunu gizleyen sorgu</h3>
+<div class="table-wrap"><table>
+<tr><th>Satır</th><th>Ne yapar</th></tr>
+<tr><td><code>&lt;ContainerQuery Name="main" Query="max-width:600"&gt;</code></td><td><code>main</code> adlı konteynerin genişliği <strong>600 birim veya daha az</strong> olduğunda içindeki stilleri etkinleştirir. <code>max-width</code> "en fazla" demektir; yani üst sınırdır.</td></tr>
+<tr><td><code>&lt;Style Selector="StackPanel#sidebar"&gt;</code></td><td><code>#</code> işareti, ada göre seçim yapar. Yalnızca <code>x:Name="sidebar"</code> olan <code>StackPanel</code>'i hedefler; diğer panelleri etkilemez.</td></tr>
+<tr><td><code>&lt;Setter Property="IsVisible" Value="False" /&gt;</code></td><td>Kenar çubuğunu gizler. <code>IsVisible="False"</code> kontrolü yalnızca görünmez yapmaz; onu <strong>yerleşimden de çıkarır</strong>, yani kapladığı alanı serbest bırakır.</td></tr>
+<tr><td><code>&lt;Grid ColumnDefinitions="200,*"&gt;</code></td><td>İlk sütun 200 birim sabit, ikincisi kalanı alır.</td></tr>
+</table></div>
+<p><strong>Sonuç:</strong> Pencere daraldığında kenar çubuğu kaybolur ve içerik genişler. Ancak dikkat: <code>ColumnDefinitions="200,*"</code> ilk sütunu <strong>sabit 200 birim</strong> tutar. <code>StackPanel</code> gizlense bile sütunun kendisi hâlâ 200 birim yer kaplar. Bu örnekte kenar çubuğu gizlenir ama boşluğu kalır. Sütunu da kapatmak için sorguya <code>Grid</code>'in <code>ColumnDefinitions</code>'ını değiştiren ikinci bir <code>Setter</code> eklemeniz veya sabit sütun yerine <code>Auto</code> kullanmanız gerekir.</p>
+
+<div class="callout info">
+  <div class="h">Bilgi — <code>IsVisible</code> ile <code>Opacity</code> aynı şey değildir</div>
+  <p><code>IsVisible="False"</code> kontrolü ölçme ve yerleştirme adımlarının tamamen dışında bırakır; alan geri kazanılır ve kontrol girdi de almaz. <code>Opacity="0"</code> ise kontrolü görünmez yapar ama <strong>yerleşimdeki yerini korur</strong> ve tıklamaları almaya devam eder. Duyarlı yerleşimde neredeyse her zaman istediğiniz <code>IsVisible</code>'dır.</p>
+</div>
+
+<h3>Kodun açıklaması — kesme noktası katmanları</h3>
+<p>Üç sorgu, tek bir <code>UniformGrid</code>'in <code>Columns</code> değerini üç farklı genişlik aralığında farklı ayarlar:</p>
+<div class="table-wrap"><table>
+<tr><th>Sorgu</th><th>Eşleştiği genişlik</th><th>Sonuç</th></tr>
+<tr><td><code>max-width:400</code></td><td>0 – 400</td><td><code>Columns = 1</code></td></tr>
+<tr><td><code>min-width:400</code></td><td>400 ve üzeri</td><td><code>Columns = 2</code></td></tr>
+<tr><td><code>min-width:800</code></td><td>800 ve üzeri</td><td><code>Columns = 3</code></td></tr>
+</table></div>
+<p>Burada iki noktaya dikkat etmek gerekir. Birincisi: 800 biriminde hem <code>min-width:400</code> hem <code>min-width:800</code> eşleşir. İkisi de aynı özelliği ayarladığı için sonucu <strong>stil önceliği</strong> belirler — Avalonia'da eşit özgüllükteki stillerde sonradan tanımlanan kazanır; bu yüzden kaynağın sorguları dar aralıktan geniş aralığa doğru sıralaması rastlantı değildir. Sıralamayı değiştirirseniz sonuç değişir. İkincisi: tam <strong>400</strong> biriminde hem <code>max-width:400</code> hem <code>min-width:400</code> eşleşir; iki sınır da kapsayıcıdır. Bu sınır noktasında yine sonradan gelen kazanır, yani <code>Columns = 2</code> olur.</p>
+
+<div class="callout warn">
+  <div class="h">Dikkat — Sınır değerleri çakışır</div>
+  <p><code>max-width:400</code> ve <code>min-width:400</code> <strong>aynı anda</strong> 400 değerinde eşleşir. CSS'te de durum böyledir ve bu, kesme noktası tanımlarken en sık gözden kaçan ayrıntıdır. Belirsizlik istemiyorsanız katmanları çakışmayacak biçimde yazın (<code>max-width:399</code> / <code>min-width:400</code>) ya da orta katmanı <code>min-width:400 and max-width:799</code> gibi kapalı aralık olarak tanımlayın.</p>
+</div>
+
+<h3>Kodun açıklaması — yerleşim dışı özellikler</h3>
+<p>Bu örneğin asıl öğrettiği şey, sorgu bloğunun içinde <strong>birden fazla</strong> <code>Style</code> bulunabildiğidir. <code>max-width:500</code> eşleştiğinde iki şey birden olur: başlık 24'ten 18'e küçülür ve araç çubuğu yataydan dikeye döner. Blok dışındaki <code>TextBlock.heading</code> stili ise varsayılanı tanımlar — konteyner genişken geçerli olan değer odur.</p>
+<p>Buradaki desen önemlidir: <strong>önce varsayılanı yaz, sonra sorgu içinde farklı olanı ez.</strong> Sorgu eşleşmediğinde Avalonia eski değeri geri koymak zorunda değildir; varsayılan stil zaten oradadır ve sorgu stili devre dışı kalınca yeniden geçerli olur. Varsayılanı yazmayı unutursanız, konteyner bir kez daraldıktan sonra genişlediğinde başlığın 24'e geri dönmesini sağlayacak hiçbir kural kalmaz.</p>
+<p><code>Classes="heading"</code> ve <code>Classes="toolbar"</code> kullanımına da dikkat edin: kaynak burada <code>#ad</code> yerine <strong>stil sınıfı</strong> seçicisi kullanıyor. Böylece aynı kural, o sınıfa sahip <em>tüm</em> öğelere uygulanır; tek tek adlandırma gerekmez.</p>
+
+<h3>Kodun açıklaması — sorguları birleştirmek</h3>
+<div class="table-wrap"><table>
+<tr><th>Yazım</th><th>Anlamı</th><th>Mantıksal karşılığı</th></tr>
+<tr><td><code>min-width:400 and max-width:800</code></td><td>Genişlik 400 ile 800 arasındaysa</td><td>VE</td></tr>
+<tr><td><code>max-width:300,min-height:600</code></td><td>Genişlik 300'ün altındaysa <em>veya</em> yükseklik 600'ün üstündeyse</td><td>VEYA</td></tr>
+</table></div>
+<p>Virgülün "veya" anlamına gelmesi, alışılmışın dışındadır ve kolayca yanlış okunur. Aklınızda tutmanın kolay yolu: virgül, CSS seçicilerinde de "veya" anlamındadır (<code>h1, h2</code> hem <code>h1</code>'i hem <code>h2</code>'yi seçer). İkinci örnekte <code>min-height</code> kullanıldığına da dikkat edin — bu sorgunun çalışması için konteynerin <code>Container.Sizing</code> değerinin <code>Height</code> veya <code>WidthAndHeight</code> olması gerekir; yalnızca <code>Width</code> ayarlıysa yükseklik koşulu hiçbir zaman eşleşmez.</p>
+
+<h3>Kodun açıklaması — OnFormFactor örneği</h3>
+<div class="table-wrap"><table>
+<tr><th>Satır</th><th>Masaüstünde</th><th>Mobilde</th></tr>
+<tr><td><code>ColumnDefinitions="{OnFormFactor Desktop='250,*', Mobile='*'}"</code></td><td>İki sütun: 250 birimlik menü + kalan alan</td><td>Tek sütun</td></tr>
+<tr><td><code>IsVisible="{OnFormFactor Desktop=True, Mobile=False}"</code></td><td>Menü görünür</td><td>Menü tamamen kapalı</td></tr>
+<tr><td><code>Grid.Column="{OnFormFactor Desktop=1, Mobile=0}"</code></td><td>İçerik 2. sütunda</td><td>İçerik tek sütunun kendisinde</td></tr>
+</table></div>
+<p><strong>Sonuç:</strong> Üç ayrı <code>OnFormFactor</code> çağrısı birlikte çalışarak <em>yapıyı</em> değiştirir; yalnızca bir özelliği değil. Mobilde <code>Grid.Column="0"</code> verilmesinin nedeni budur: tek sütunlu bir <code>Grid</code>'de 1 numaralı sütun yoktur ve içerik yanlış hücreye düşerdi.</p>
+<p>Tırnak kullanımına dikkat edin: <code>Desktop='250,*'</code> içindeki tek tırnaklar zorunludur; çünkü değerin içinde virgül vardır ve virgül, işaretleme uzantısında parametre ayırıcıdır. Tırnak olmadan <code>250</code> ile <code>*</code> iki ayrı parametre sanılır.</p>
+
+<h3>Kodun açıklaması — OnPlatform ile yazı tipi</h3>
+<p>Üç platform için üç ayrı yazı tipi ailesi verilir; listede olmayan her platform (Linux, iOS, Android, tarayıcı) <code>Default</code> değerini alır. Bu, <code>OnPlatform</code>'un en tipik ve en güvenli kullanımıdır: <strong>görsel bir ince ayar</strong>, yapısal bir karar değil. Linux'ta "Segoe UI" bulunmadığı için sistem yedek bir yazı tipine düşerdi; <code>Default='Inter'</code> bu düşüşü sizin denetiminize alır.</p>
+
+<h3>Kodun açıklaması — WrapPanel</h3>
+<p><code>WrapPanel</code>, çocuklarını yatay olarak dizer ve satır dolduğunda alta geçer. Buradaki <code>Margin="4"</code> her düğmeyi her yönden 4 birim ittiği için düğmeler arasında toplam 8 birimlik boşluk oluşur. Alternatif olarak <code>WrapPanel</code>'in kendi aralık özellikleri varsa onları kullanmak, her çocuğa <code>Margin</code> yazmaktan daha bakımlıdır (bir önceki dersteki 4 numaralı yaygın hataya bakınız).</p>
+<p><strong>Kritik nokta:</strong> <code>WrapPanel</code> yalnızca <strong>sınırlı</strong> bir genişlik verildiğinde kaydırır. Yatay bir <code>StackPanel</code>'in veya <code>ScrollViewer</code>'ın yatay olarak sınırsız alan verdiği bir yere konursa, "kenara ulaşma" durumu hiç oluşmaz ve tüm çocuklar tek satırda kalır.</p>
+
+<h3>Kodun açıklaması — ItemsRepeater + UniformGridLayout</h3>
+<div class="table-wrap"><table>
+<tr><th>Özellik</th><th>Anlamı</th></tr>
+<tr><td><code>MinItemWidth="280"</code></td><td>Her öğe en az 280 birim genişliğinde olur. Sütun sayısı bu değerden hesaplanır: kullanılabilir genişlik 900 ise 3 sütun sığar.</td></tr>
+<tr><td><code>MinItemHeight="200"</code></td><td>Satır yüksekliği için alt sınır.</td></tr>
+<tr><td><code>MinColumnSpacing="12"</code> / <code>MinRowSpacing="12"</code></td><td>Sütunlar ve satırlar arasındaki en küçük boşluk. Artan alan bu boşluklara ve öğe genişliklerine dağıtılır.</td></tr>
+<tr><td><code>ItemTemplate</code></td><td>Her veri öğesinin nasıl çizileceğini tanımlar. <code>{Binding Title}</code>, koleksiyondaki tek bir öğenin özelliğine bağlanır.</td></tr>
+</table></div>
+<p><strong>Sonuç:</strong> Kesme noktası yazmadan duyarlı bir kart ızgarası elde edilir. Sütun sayısı bir sorgu tarafından değil, aritmetik olarak belirlenir. Bu yaklaşımın <code>WrapPanel</code>'e göre üstünlüğü, <code>ItemsRepeater</code>'ın sanallaştırma (virtualization) yapabilmesidir: yüzlerce kart olsa bile yalnızca görünenler oluşturulur.</p>
+
+<h3>Kodun açıklaması — kesme noktası görünüm modeli</h3>
+<div class="table-wrap"><table>
+<tr><th>Parça</th><th>Ne yapar</th></tr>
+<tr><td><code>[ObservableProperty] private bool _isCompact;</code></td><td>CommunityToolkit.Mvvm'in kaynak üreteci (source generator), bu alandan <code>IsCompact</code> adlı ortak bir özellik ve değişiklik bildirimi üretir. Bildirim olmadan bağlama güncellenmez.</td></tr>
+<tr><td><code>UpdateLayout(double windowWidth)</code></td><td>Ham genişliği alır ve iki mantıksal bayrağa çevirir. Eşikler (640 / 1024) tek bir yerde toplanmıştır.</td></tr>
+<tr><td><code>OnSizeChanged</code> geçersiz kılması</td><td>Boyut her değiştiğinde görünüm modelini haberdar eder. <code>base.OnSizeChanged(e)</code> çağrısı, temel sınıfın kendi işini yapmasını sağlar ve atlanmamalıdır.</td></tr>
+<tr><td><code>e.NewSize.Width</code></td><td>Yeni genişlik. Eski değere ihtiyaç duyulursa <code>e.PreviousSize</code> kullanılabilir.</td></tr>
+<tr><td><code>IsVisible="{Binding !IsCompact}"</code></td><td>Ünlem işareti, Avalonia bağlama sözdiziminde <strong>mantıksal değilleme</strong>dir. Ayrı bir dönüştürücü (converter) yazmaya gerek bırakmaz.</td></tr>
+</table></div>
+<p><strong>Sonuç:</strong> Dar pencerede dikey <code>StackPanel</code>, geniş pencerede iki sütunlu <code>Grid</code> görünür. İkisi de XAML'de aynı anda tanımlıdır; görünürlüğü bayraklar belirler.</p>
+
+<div class="callout warn">
+  <div class="h">Dikkat — Bu yaklaşım MVVM açısından tartışmalıdır</div>
+  <p>Görünüm modeline "genişlik 640'ın altında mı" bilgisini koymak, görünüm modelinin sunum katmanı hakkında bilgi sahibi olması demektir ve katı MVVM yorumlarında istenmez. Kaynak bu tartışmaya girmez. Pratik orta yol: görünüm modelinde <code>IsCompact</code> gibi <strong>anlamsal</strong> bayraklar tutun (piksel değerleri değil), eşik hesabını görünüm tarafında yapın. Böylece görünüm modeli "dar kip" kavramını bilir, "640 piksel" sayısını bilmez. Ayrıca §0.9 gereği MVVM'in ayrıntısı <a class="internal-link" data-target="the-mvvm-pattern">MVVM Deseni</a> dersinin konusudur.</p>
+</div>
+
+<div class="callout info">
+  <div class="h">Bilgi — Boyut değişimini yakalamanın tek yolu bu değildir</div>
+  <p>Kaynak, korumalı (protected) bir geçersiz kılma gösteriyor; bu yol arka plan kodu gerektirir. Aynı işi kontrolün <code>SizeChanged</code> olayına abone olarak da yapabilirsiniz. Hangi yolu seçerseniz seçin, işleyicinin içinde <strong>ağır iş yapmayın</strong>: pencere sürüklenirken bu kod saniyede onlarca kez çalışır.</p>
+</div>
+
+<h2>Dört teknik ne zaman çözülür?</h2>
+
+<p>Kaynağın genel bakış tablosundaki "ne zaman çözülür" sütunu, pratikte en belirleyici bilgidir; ama tablo bunu tek kelimeyle geçiyor. Aradaki fark şudur:</p>
+
+<figure>
+<svg viewBox="0 0 700 270" xmlns="http://www.w3.org/2000/svg">
+  <text class="s-lbl" x="20" y="20">Uygulama ömrü boyunca hangi teknik ne zaman devreye girer</text>
+
+  <line x1="120" y1="46" x2="680" y2="46" stroke="currentColor" stroke-width="1.5" opacity=".5"/>
+  <text class="s-sm" x="122" y="38">Başlangıç</text>
+  <text class="s-sm" x="600" y="38">Çalışma zamanı — kullanıcı pencereyi sürüklüyor</text>
+
+  <text class="s-mono" x="20" y="80">OnFormFactor</text>
+  <rect class="s-acc" x="120" y="66" width="70" height="22" rx="3"/>
+  <text class="s-sm" x="200" y="81">bir kez okunur, bir daha bakılmaz</text>
+
+  <text class="s-mono" x="20" y="116">OnPlatform</text>
+  <rect class="s-acc" x="120" y="102" width="70" height="22" rx="3"/>
+  <text class="s-sm" x="200" y="117">bir kez okunur, bir daha bakılmaz</text>
+
+  <text class="s-mono" x="20" y="152">Konteyner sorgusu</text>
+  <rect class="s-acc" x="120" y="138" width="556" height="22" rx="3"/>
+  <text class="s-sm" x="134" y="153">konteynerin her yeniden ölçülmesinde yeniden değerlendirilir</text>
+
+  <text class="s-mono" x="20" y="188">Yeniden akan panel</text>
+  <rect class="s-acc" x="120" y="174" width="556" height="22" rx="3"/>
+  <text class="s-sm" x="134" y="189">her ölçme geçişinde sütun sayısı yeniden hesaplanır</text>
+
+  <text class="s-mono" x="20" y="224">Kesme noktası VM</text>
+  <rect class="s-acc" x="120" y="210" width="556" height="22" rx="3"/>
+  <text class="s-sm" x="134" y="225">boyut olayı tetiklendikçe özellik değişir, bağlamalar güncellenir</text>
+
+  <text class="s-sm" x="20" y="258">Kural: pencereyi sürüklerken bir şeyin değişmesini istiyorsanız ilk iki satır işinize yaramaz.</text>
+</svg>
+<figcaption><span class="fig-own">Şema — kaynakta yoktur, anlatım için hazırlanmıştır.</span> Kaynağın "Bir kez, başlangıçta" ile "Canlı olarak" ayrımının zaman ekseni üzerindeki karşılığı.</figcaption>
+</figure>
+
+<h2>Karar akışı</h2>
+
+<p>Kaynağın dört maddelik karar listesini akış biçiminde okumak, seçimi hızlandırır:</p>
+
+<figure>
+<svg viewBox="0 0 700 350" xmlns="http://www.w3.org/2000/svg">
+  <rect class="s-box" x="230" y="10" width="240" height="38" rx="5"/>
+  <text class="s-lbl" x="350" y="34" text-anchor="middle">Neye göre uyum sağlayacak?</text>
+
+  <line x1="350" y1="48" x2="350" y2="72" stroke="currentColor" stroke-width="1.5"/>
+
+  <rect class="s-box" x="200" y="72" width="300" height="38" rx="5"/>
+  <text class="s-sm" x="350" y="96" text-anchor="middle">Bileşenin kendi boyutuna göre mi?</text>
+
+  <line x1="500" y1="91" x2="600" y2="91" stroke="currentColor" stroke-width="1.5"/>
+  <rect class="s-acc" x="600" y="72" width="90" height="38" rx="5"/>
+  <text class="s-sm" x="645" y="88" text-anchor="middle">EVET</text>
+  <text class="s-mono" x="645" y="103" text-anchor="middle">ContainerQuery</text>
+
+  <line x1="350" y1="110" x2="350" y2="134" stroke="currentColor" stroke-width="1.5"/>
+
+  <rect class="s-box" x="200" y="134" width="300" height="38" rx="5"/>
+  <text class="s-sm" x="350" y="158" text-anchor="middle">Masaüstü / mobil yapısal fark mı?</text>
+
+  <line x1="500" y1="153" x2="600" y2="153" stroke="currentColor" stroke-width="1.5"/>
+  <rect class="s-acc" x="600" y="134" width="90" height="38" rx="5"/>
+  <text class="s-sm" x="645" y="150" text-anchor="middle">EVET</text>
+  <text class="s-mono" x="645" y="165" text-anchor="middle">OnFormFactor</text>
+
+  <line x1="350" y1="172" x2="350" y2="196" stroke="currentColor" stroke-width="1.5"/>
+
+  <rect class="s-box" x="200" y="196" width="300" height="38" rx="5"/>
+  <text class="s-sm" x="350" y="220" text-anchor="middle">Akması gereken bir koleksiyon mu?</text>
+
+  <line x1="500" y1="215" x2="600" y2="215" stroke="currentColor" stroke-width="1.5"/>
+  <rect class="s-acc" x="600" y="196" width="90" height="38" rx="5"/>
+  <text class="s-sm" x="645" y="212" text-anchor="middle">EVET</text>
+  <text class="s-mono" x="645" y="227" text-anchor="middle">WrapPanel</text>
+
+  <line x1="350" y1="234" x2="350" y2="258" stroke="currentColor" stroke-width="1.5"/>
+
+  <rect class="s-box" x="200" y="258" width="300" height="38" rx="5"/>
+  <text class="s-sm" x="350" y="282" text-anchor="middle">Boyut dışı koşullar da var mı?</text>
+
+  <line x1="500" y1="277" x2="600" y2="277" stroke="currentColor" stroke-width="1.5"/>
+  <rect class="s-acc" x="600" y="258" width="90" height="38" rx="5"/>
+  <text class="s-sm" x="645" y="274" text-anchor="middle">EVET</text>
+  <text class="s-mono" x="645" y="289" text-anchor="middle">Kesme n. VM</text>
+
+  <text class="s-sm" x="20" y="322">Yukarıdan aşağıya ilerleyin; ilk EVET yanıtı tekniğinizi belirler.</text>
+  <text class="s-sm" x="20" y="340">Birden fazlası doğruysa teknikleri birleştirebilirsiniz — kaynağın son paragrafı bunu önerir.</text>
+</svg>
+<figcaption><span class="fig-own">Şema — kaynakta yoktur, anlatım için hazırlanmıştır.</span> Kaynağın "Bir yaklaşım seçmek" bölümündeki dört sorunun akış hâli.</figcaption>
+</figure>
+
+<h2>Sık yapılan hatalar</h2>
+
+<h3>1 · <code>Container.Sizing</code> ayarlanmadığı için hiçbir sorgu çalışmıyor</h3>
+<p><strong>Hata:</strong> <code>Container.Name="main"</code> yazılır, sorgu yazılır, hiçbir şey olmaz.</p>
+<p><strong>Neden oluşur:</strong> <code>Container.Sizing</code>'in varsayılan değeri <code>Normal</code>'dır ve <strong>hiçbir boyutu izlemez</strong>. Ad vermek konteyneri tanımlar, ölçmeyi başlatmaz.</p>
+<p><strong>Nasıl fark edilir:</strong> Hata mesajı alınmaz — sorgu sessizce hiç eşleşmez. Kenar çubuğu pencere ne kadar daralırsa daralsın kapanmaz.</p>
+<p><strong>Nasıl düzeltilir:</strong> İzlemek istediğiniz boyutu açıkça yazın:</p>
+<pre><code>&lt;!-- Yanlış: yalnızca ad var --&gt;
+&lt;Border Container.Name="main"&gt;
+
+&lt;!-- Doğru --&gt;
+&lt;Border Container.Name="main" Container.Sizing="Width"&gt;</code></pre>
+<h4>Kodun açıklaması</h4>
+<p>İkinci satır genişlik değişimlerini izlemeye başlar. Yükseklik tabanlı sorgular da yazacaksanız <code>WidthAndHeight</code> verin; ancak gereksiz yere iki boyutu birden izlemek, gerekmedikçe yapılmaması gereken fazladan bir iştir.</p>
+
+<h3>2 · <code>Container.Name</code> ile <code>x:Name</code>'i karıştırmak</h3>
+<p><strong>Hata:</strong> Konteynere <code>x:Name="main"</code> verilir, sorgu <code>Name="main"</code> ile arar, eşleşme olmaz.</p>
+<p><strong>Neden oluşur:</strong> İki ad alanı birbirinden bağımsızdır. <code>x:Name</code> arka plan kodundan erişim ve stil seçicileri (<code>#main</code>) içindir; <code>Container.Name</code> yalnızca konteyner sorgularının kullandığı ayrı bir kimliktir.</p>
+<p><strong>Nasıl fark edilir:</strong> Sorgu hiç tetiklenmez; <code>x:Name</code> tabanlı diğer stiller ise sorunsuz çalışır.</p>
+<p><strong>Nasıl düzeltilir:</strong> Konteyner olarak kullanacağınız kontrole <code>Container.Name</code>'i ayrıca yazın. İkisini aynı değerle vermek de mümkündür, ancak bu durumda hangisinin ne işe yaradığını yorumla belirtmek okunabilirliği artırır.</p>
+
+<h3>3 · Sorgunun konteynerin dışından hedefe ulaşamaması</h3>
+<p><strong>Hata:</strong> <code>ContainerQuery</code> yazılır, sorgu eşleşir ama hedef kontrol değişmez.</p>
+<p><strong>Neden oluşur:</strong> Sorgunun içindeki <code>Style</code>, normal stil kuralları gibi çalışır ve yalnızca <strong>stilin tanımlandığı kontrolün alt ağacındaki</strong> öğeleri etkiler. Hedef kontrol o alt ağacın dışındaysa seçici hiçbir şey bulamaz.</p>
+<p><strong>Nasıl fark edilir:</strong> <strong>F12</strong> geliştirici araçlarında hedef kontrolü seçip uygulanan stilleri inceleyin; <code>Setter</code> listede hiç görünmüyorsa seçici eşleşmemiştir.</p>
+<p><strong>Nasıl düzeltilir:</strong> Sorguyu, hem konteyneri hem hedefi kapsayan bir üst kontrolün <code>Styles</code> koleksiyonuna taşıyın. Kaynağın ilk örneğinde sorgunun <code>Window.Styles</code>'a konmasının nedeni budur.</p>
+
+<h3>4 · <code>OnFormFactor</code>'dan canlı tepki beklemek</h3>
+<p><strong>Hata:</strong> Masaüstünde pencere daraltılır, <code>OnFormFactor Mobile</code> değerinin devreye girmesi beklenir; hiçbir şey olmaz.</p>
+<p><strong>Neden oluşur:</strong> Kaynağın açıkça yazdığı gibi <code>OnFormFactor</code> <strong>başlangıçta bir kez</strong> çözülür ve cihaz <em>türüne</em> bakar, pencere boyutuna değil. Masaüstünde pencere ne kadar darsa dar, form faktörü <code>Desktop</code> olarak kalır.</p>
+<p><strong>Nasıl fark edilir:</strong> Değer, uygulama açıldıktan sonra hiç değişmiyorsa neden budur.</p>
+<p><strong>Nasıl düzeltilir:</strong> Canlı tepki gerekiyorsa konteyner sorgusu kullanın. İkisini birlikte de kullanabilirsiniz: yapısal ayrım için <code>OnFormFactor</code>, o yapının içindeki ince ayarlar için konteyner sorgusu.</p>
+
+<h3>5 · <code>WrapPanel</code>'i sınırsız genişlikte bir yere koymak</h3>
+<p><strong>Hata:</strong> <code>WrapPanel</code> kullanılır ama öğeler hiç alt satıra kaymaz.</p>
+<p><strong>Neden oluşur:</strong> Yatay yönlü bir <code>StackPanel</code> veya yatay kaydırması açık bir <code>ScrollViewer</code>, çocuklarına ölçme geçişinde <strong>sonsuz genişlik</strong> verir. Sonsuz genişlikte "kenara ulaşmak" mümkün olmadığı için kaydırma hiç gerçekleşmez.</p>
+<p><strong>Nasıl fark edilir:</strong> Panel tek satır hâlinde uzayıp gider; pencere daraldığında öğeler kırpılır ama alt satıra geçmez.</p>
+<p><strong>Nasıl düzeltilir:</strong> <code>WrapPanel</code>'i genişliği sınırlı bir kaba alın — örneğin bir <code>Grid</code> hücresine, bir <code>DockPanel</code>'in son çocuğuna ya da yalnızca <strong>dikey</strong> kaydırma yapan bir <code>ScrollViewer</code>'ın içine.</p>
+
+<h3>6 · Kesme noktası eşiklerini XAML'in içine dağıtmak</h3>
+<p><strong>Hata:</strong> 600, 640, 620 gibi birbirine yakın eşik değerleri farklı dosyalarda tekrarlanır; bir süre sonra hangi genişlikte neyin değiştiği anlaşılamaz olur.</p>
+<p><strong>Neden oluşur:</strong> Her sorgu ayrı ayrı, o an ekranda iyi görünen değere göre yazılmıştır; ortak bir ölçek belirlenmemiştir.</p>
+<p><strong>Nasıl fark edilir:</strong> Pencereyi yavaşça daralttığınızda arayüz tek seferde değil, birbirine yakın birkaç noktada sarsıntılı biçimde değişiyorsa.</p>
+<p><strong>Nasıl düzeltilir:</strong> Projenin tamamı için sınırlı sayıda kesme noktası belirleyin (örneğin 600 / 900 / 1200) ve her yerde yalnızca bunları kullanın. Az sayıda eşik, tahmin edilebilir bir arayüz üretir.</p>
+
+<h3>7 · Boyut olayı işleyicisinde ağır iş yapmak</h3>
+<p><strong>Hata:</strong> Kesme noktası görünüm modelinde, boyut her değiştiğinde koleksiyon yeniden oluşturulur veya veri yeniden yüklenir; pencere sürüklenirken uygulama takılır.</p>
+<p><strong>Neden oluşur:</strong> Boyut değişimi olayı sürükleme boyunca <strong>çok sayıda kez</strong> tetiklenir. İşleyicideki her işlem bu sıklıkla tekrarlanır.</p>
+<p><strong>Nasıl fark edilir:</strong> Yeniden boyutlandırma akıcı değildir; pencere fare imlecini gecikmeli takip eder.</p>
+<p><strong>Nasıl düzeltilir:</strong> İşleyicide yalnızca ucuz karşılaştırmalar yapın ve <strong>değer gerçekten katman değiştirdiyse</strong> iş üretin:</p>
+<pre><code>public void UpdateLayout(double windowWidth)
+{
+    var compact = windowWidth &lt; 640;
+    if (compact == IsCompact)
+        return; // katman değişmedi, hiçbir şey yapma
+
+    IsCompact = compact;
+}</code></pre>
+<h4>Kodun açıklaması</h4>
+<p>Erken çıkış (<code>return</code>) sayesinde, genişlik 640'ın aynı tarafında kaldığı sürece hiçbir özellik değişmez; dolayısıyla değişiklik bildirimi yayılmaz, bağlamalar güncellenmez ve yerleşim yeniden hesaplanmaz. Yalnızca sınır gerçekten geçildiğinde bir kez iş yapılır. Bu kalıp, sık tetiklenen tüm olay işleyicileri için geçerlidir.</p>
+
+<h3>8 · Aynı özelliği hem sorgu hem bağlama ile ayarlamak</h3>
+<p><strong>Hata:</strong> Bir kontrolün <code>IsVisible</code> değeri hem konteyner sorgusundaki bir <code>Setter</code>'la hem de <code>{Binding IsCompact}</code> ile ayarlanır; sonuç öngörülemez görünür.</p>
+<p><strong>Neden oluşur:</strong> İki farklı mekanizma aynı özelliğe yazar. Avalonia'nın özellik sisteminde yerel değerler stillerden önceliklidir; bu nedenle bağlama neredeyse her zaman kazanır ve sorgu etkisiz görünür.</p>
+<p><strong>Nasıl fark edilir:</strong> Sorgu doğru yazılmış, konteyner doğru işaretlenmiş olmasına rağmen özellik hiç değişmiyorsa aynı özelliğe yazan ikinci bir kaynak arayın.</p>
+<p><strong>Nasıl düzeltilir:</strong> Her özellik için <strong>tek bir denetim mekanizması</strong> seçin. Bir özellik ya sorgularla ya bağlamayla yönetilsin; ikisi birden kullanılmasın. Önceliğin ayrıntısı <a class="internal-link" data-target="style-precedence">Stil Önceliği</a> dersinin konusudur.</p>
+
+<h2>Karar rehberi: hangi durumda hangi teknik</h2>
+
+<div class="table-wrap"><table>
+<tr><th>Senaryo</th><th>Önerilen teknik</th><th>Neden</th></tr>
+<tr><td>Aynı kart bileşeni hem ana sayfada hem dar kenar çubuğunda kullanılacak</td><td>Konteyner sorgusu</td><td>Bileşen pencereyi değil, kendi kabını ölçer; her iki yerde de doğru davranır</td></tr>
+<tr><td>Masaüstünde kenar çubuğu, mobilde alt sekme çubuğu</td><td><code>OnFormFactor</code></td><td>Yapısal ve kalıcı bir farktır; çalışma zamanında değişmesi gerekmez</td></tr>
+<tr><td>Platformun yerel yazı tipini kullanmak</td><td><code>OnPlatform</code></td><td>Karar cihaz türüne değil işletim sistemine bağlıdır</td></tr>
+<tr><td>Değişken sayıda kartın alana göre dizilmesi</td><td><code>UniformGridLayout</code> + <code>ItemsRepeater</code></td><td>Kesme noktası gerektirmez, sütun sayısını kendi hesaplar, sanallaştırma sağlar</td></tr>
+<tr><td>Az sayıda düğmenin taşınca alta kayması</td><td><code>WrapPanel</code></td><td>En basit çözüm; sanallaştırmaya ihtiyaç yoktur</td></tr>
+<tr><td>Dar kipte hem düzen hem gezinme hem komut çubuğu değişecek</td><td>Kesme noktası görünüm modeli</td><td>Çok sayıda eşgüdümlü değişiklik tek bir bayrakla yönetilir</td></tr>
+<tr><td>Yön (dikey/yatay) ve platform birlikte değerlendirilecek</td><td>Kesme noktası görünüm modeli</td><td>Koşul yalnızca boyuta dayalı değildir; XAML sorgularıyla ifade edilemez</td></tr>
+<tr><td>Pencere boyutunun kendisine tepki verilecek</td><td><code>TopLevel</code>'i konteyner yapmak</td><td>Kaynağın ipucunda belirtildiği gibi, bu durumda sorgular medya sorgusu gibi davranır</td></tr>
+</table></div>
+
+<h2>İyi uygulama önerileri</h2>
+
+<div class="table-wrap"><table>
+<tr><th>Öneri</th><th>Gerekçe</th></tr>
+<tr><td>Önce varsayılan stili yazın, sorguyu üzerine ekleyin</td><td>Sorgu devre dışı kaldığında geri dönülecek bir değer bulunur; aksi hâlde arayüz tek yönlü değişir</td></tr>
+<tr><td>Kesme noktası sayısını üçte tutun</td><td>Her ek katman, test edilmesi gereken yeni bir görsel durum demektir</td></tr>
+<tr><td>Sınır değerlerini çakıştırmayın</td><td><code>max-width:400</code> ile <code>min-width:400</code> aynı noktada eşleşir; kapalı aralık kullanmak belirsizliği ortadan kaldırır</td></tr>
+<tr><td>Konteyner sorgularını bileşen dosyasının içinde tutun</td><td>Bileşen taşındığında duyarlı davranışı da birlikte taşınır; bu, yaklaşımın asıl kazancıdır</td></tr>
+<tr><td>Yapısal fark için <code>OnFormFactor</code>, ince ayar için sorgu kullanın</td><td>Kaynağın son paragrafında önerilen birleşim, her tekniği güçlü olduğu yerde kullanır</td></tr>
+<tr><td>Kartlar için <code>WrapPanel</code> yerine <code>ItemsRepeater</code> tercih edin</td><td>Öğe sayısı büyüdüğünde sanallaştırma performansı korur</td></tr>
+<tr><td>Duyarlı davranışı en dar ve en geniş uçta test edin</td><td>Hatalar genellikle orta genişliklerde değil, uçlarda ortaya çıkar</td></tr>
+<tr><td><strong>F12</strong> geliştirici araçlarıyla uygulanan stilleri doğrulayın</td><td>"Sorgu neden çalışmıyor" sorusunun yanıtı çoğu zaman seçicinin hiç eşleşmemesidir</td></tr>
+</table></div>
+
+<h2>Özet</h2>
+
+<div class="table-wrap"><table>
+<tr><th>Konu</th><th>Kilit bilgi</th></tr>
+<tr><td>Konteyner sorgusu</td><td>Ata kontrolün boyutuna tepki verir; <code>Container.Name</code> + <code>Container.Sizing</code> + <code>ContainerQuery</code> üçlüsü gerekir</td></tr>
+<tr><td><code>Container.Sizing</code></td><td><code>Normal</code> (varsayılan, izleme yok), <code>Width</code>, <code>Height</code>, <code>WidthAndHeight</code></td></tr>
+<tr><td>Sorgu sözdizimi</td><td><code>and</code> = VE, <code>,</code> = VEYA; <code>min-</code> ve <code>max-</code> sınırları kapsayıcıdır</td></tr>
+<tr><td><code>OnFormFactor</code></td><td><code>Desktop</code>, <code>Mobile</code>, <code>TV</code>, <code>Default</code>; başlangıçta bir kez çözülür</td></tr>
+<tr><td><code>OnPlatform</code></td><td><code>Windows</code>, <code>macOS</code>, <code>Linux</code>, <code>iOS</code>, <code>Android</code>, <code>Browser</code>, <code>Default</code>; başlangıçta bir kez çözülür</td></tr>
+<tr><td>Yeniden akan paneller</td><td><code>WrapPanel</code> basit akış, <code>UniformGridLayout</code> hesaplanan sütun sayısı ve sanallaştırma</td></tr>
+<tr><td>Kesme noktası VM</td><td>Boyut dışı koşullar ve çok özellikli geçişler için; kod gerektirir</td></tr>
+<tr><td>Birleştirme</td><td>Teknikler birbirini dışlamaz; üst düzeyde <code>OnFormFactor</code>, alt düzeyde sorgu yaygın bir desendir</td></tr>
+</table></div>
+
+<h2>Sırada ne var?</h2>
+<p>Bu ders ile <strong>Yerleşim (Layout)</strong> bölümü tamamlanıyor. Panellerin nasıl ölçüp yerleştirdiğini, hangi panelin hangi senaryoya uyduğunu, kontrollerin panel içinde nasıl konumlandırıldığını ve yerleşimin değişen alana nasıl uyum sağladığını öğrendiniz. Sıradaki bölümde arayüzün görünümünü belirleyen sistemi ele alıyoruz: <a class="internal-link" data-target="styling">Stillendirme</a>.</p>
+`};
+
+
+
+
+
+/* ============================================================
+   DERS 38 — Stillendirme (Styling)
+   ============================================================ */
+
+LESSONS["styling"] = {
+lede: `Avalonia'nın stil sistemi, özellik ayarlarını kontroller arasında paylaştıran bir mekanizmadır ve <strong>CSS ile WPF/UWP stillendirmesinin bir karışımı</strong> gibi düşünülebilir. Bu ders kaynağın üç stillendirme mekanizmasını, seçim/değiştirme adımlarını, stil yazım biçimini, kapsam kurallarını, iç içe stilleri ve <code>StyleKey</code> davranışını birebir aktarıyor; ardından sistemin neden bu şekilde tasarlandığını, CSS'e nerede benzeyip nerede benzemediğini ve yeni başlayanların en sık takıldığı noktaları ayrıntılı olarak açıklıyor.`,
+html: `
+<div class="part-head">
+  <span class="n">1</span>
+  <span class="t">Kaynağın Türkçe çevirisi
+    <span class="s">Özgün dokümantasyona dayalı içerik</span></span>
+</div>
+
+<div class="from-source">
+
+<p>Avalonia stil sistemi, özellik ayarlarını kontroller arasında paylaşan bir mekanizmadır. Avalonia, kontrolleri stillendirmek için <strong>üç temel mekanizma</strong> sağlar:</p>
+
+<h2>Stiller</h2>
+<ul>
+<li><strong>Stiller (Styles)</strong>, CSS stillerine benzer ve genellikle kontrolleri uygulama içindeki içeriklerine veya amaçlarına göre stillendirmek için kullanılır; örneğin başlık metin blokları için bir stil oluşturmak gibi.</li>
+</ul>
+
+<h2>Kontrol temaları</h2>
+<ul>
+<li><a class="internal-link" data-target="control-themes">Kontrol temaları (Control themes)</a>, WPF/UWP stillerine benzer ve genellikle kontrollere bir tema uygulamak için kullanılır.</li>
+</ul>
+
+<h2>Konteyner sorguları</h2>
+<ul>
+<li><a class="internal-link" data-target="container-queries">Konteyner sorguları (Container queries)</a>, bir konteynerin boyutuna göre uygulanan stil koleksiyonlarıdır.</li>
+</ul>
+
+<h2>Nasıl çalışır</h2>
+<p>Özünde stillendirme mekanizmasının iki adımı vardır: <strong>seçim (selection)</strong> ve <strong>değiştirme (substitution)</strong>. Her iki adımın nasıl çalışacağını XAML içinde tanımlayabilirsiniz; ancak çoğu zaman kontrol öğeleri üzerinde 'class' etiketleri tanımlayarak seçim adımına yardımcı olursunuz.</p>
+
+<div class="callout info">
+  <div class="h">Kaynaktaki bilgi notu</div>
+  <p>Avalonia stillendirme sisteminin kontrol öğeleri üzerinde 'class' etiketleri kullanması, CSS'in (cascading style sheets) HTML öğeleriyle çalışma biçimine benzerdir.</p>
+</div>
+
+<p>Stillendirme sistemi, seçim adımı sırasında bir kontrolden başlayarak <a class="internal-link" data-target="control-trees">mantıksal ağaçta</a> yukarı doğru arama yaparak basamaklı (cascading) stilleri gerçekler. Bu, uygulamanızın en üst seviyesinde (<code>App.axaml</code> dosyasında) tanımlanan stillerin her yerde kullanılabileceği, ancak bir kontrole daha yakın bir yerde (örneğin bir pencerede veya kullanıcı kontrolünde) yine de geçersiz kılınabileceği anlamına gelir.</p>
+
+<p>Seçim adımı tarafından bir eşleşme bulunduğunda, eşleşen kontrolün özellikleri stildeki setter'lara göre değiştirilir.</p>
+
+<h2>Stiller nasıl yazılır</h2>
+<p>XAML'de bir stilin iki parçası vardır: bir <strong>selector</strong> özniteliği ve bir veya daha fazla <strong>setter</strong> öğesi. Selector değeri, Avalonia <strong>stil seçici söz dizimini</strong> kullanan bir dize içerir. Her setter öğesi, değiştirilecek özelliği adıyla ve yerine konacak yeni değeri belirtir. Desen şöyle görünür:</p>
+
+<pre><code>&lt;Style Selector="selector syntax"&gt;
+     &lt;Setter Property="property name" Value="new value"/&gt;
+     ...
+&lt;/Style&gt;</code></pre>
+
+<div class="callout info">
+  <div class="h">Kaynaktaki bilgi notu</div>
+  <p>Avalonia <strong>stil seçici söz dizimi</strong>, CSS (cascading style sheets) tarafından kullanılana benzerdir. Ayrıntılı referans bilgisi için <a class="internal-link" data-target="style-selector-syntax">stil seçici söz dizimi</a> referansına bakın.</p>
+</div>
+
+<h2>Örnek</h2>
+<p>Aşağıda, bir stilin nasıl yazıldığına ve seçime yardımcı olmak üzere bir <a class="internal-link" data-target="style-classes">stil sınıfı</a> ile bir kontrol öğesine nasıl uygulandığına dair bir örnek verilmiştir:</p>
+
+<pre><code>&lt;Window ... &gt;
+    &lt;Window.Styles&gt;
+        &lt;Style Selector="TextBlock.h1"&gt;
+            &lt;Setter Property="FontSize" Value="24"/&gt;
+            &lt;Setter Property="FontWeight" Value="Bold"/&gt;
+        &lt;/Style&gt;
+    &lt;/Window.Styles&gt;
+    &lt;StackPanel Margin="20"&gt;
+       &lt;TextBlock Classes="h1"&gt;Heading 1&lt;/TextBlock&gt;
+    &lt;/StackPanel&gt;
+&lt;/Window&gt;</code></pre>
+
+<p>Bu örnekte, <code>h1</code> stil sınıfına sahip tüm <code>TextBlock</code> öğeleri, stilin ayarladığı yazı tipi boyutu ve kalınlığıyla görüntülenecektir.</p>
+
+<h2>Stiller nereye konur</h2>
+<p>Stilleri, bir <code>Control</code> üzerindeki veya <code>Application</code> üzerindeki bir <code>Styles</code> koleksiyon öğesinin içine yerleştirirsiniz. Örneğin bir pencere stil koleksiyonu şöyle görünür:</p>
+
+<pre><code>&lt;Window.Styles&gt;
+   &lt;Style&gt; ...  &lt;/Style&gt;
+&lt;/Window.Styles&gt;</code></pre>
+
+<p>Bir stil koleksiyonunun konumu, içerdiği stillerin <strong>kapsamını</strong> tanımlar. Yukarıdaki örnekte stiller, pencereye ve onun tüm içeriğine uygulanır. Bir stili <code>Application</code>'a eklerseniz, <strong>genel (global)</strong> olarak uygulanır.</p>
+
+<h2>Seçici</h2>
+<p>Stil seçici, stilin hangi kontroller üzerinde etkili olacağını tanımlar. Seçici çeşitli biçimler kullanır. En basitlerinden biri şudur:</p>
+
+<pre><code>&lt;Style Selector="TargetControlClass.styleClassName"&gt;</code></pre>
+
+<p>Bu seçici, <code>TargetControlClass</code> stil anahtarına sahip olan ve <code>styleClassName</code> stil sınıfına sahip tüm kontrollerle eşleşir.</p>
+
+<div class="callout info">
+  <div class="h">Kaynaktaki bilgi notu</div>
+  <p>Seçicilerin tam listesi <a class="internal-link" data-target="style-selector-syntax">stil seçici söz dizimi</a> referansında bulunabilir.</p>
+</div>
+
+<h2>Setter'lar</h2>
+<p>Setter'lar, seçici bir kontrolle eşleştiğinde ne olacağını tanımlar. Şu biçimde yazılan basit özellik/değer çiftleridir:</p>
+
+<pre><code>&lt;Setter Property="FontSize" Value="24"/&gt;
+&lt;Setter Property="Padding" Value="4 2 0 4"/&gt;</code></pre>
+
+<p>Bir stil bir kontrolle her eşleştiğinde, stilin içindeki <strong>tüm</strong> setter'lar o kontrole uygulanır.</p>
+
+<div class="callout info">
+  <div class="h">Kaynaktaki bilgi notu</div>
+  <p>Setter'lar hakkında daha fazla bilgi için <a class="internal-link" data-target="property-setters">özellik atayıcıları (property setters)</a> sayfasına bakın.</p>
+</div>
+
+<h2>İç içe stiller</h2>
+<p>Stiller başka stillerin içine yerleştirilebilir. Bir stili iç içe yerleştirmek için, çocuk stili üst <code>&lt;Style&gt;</code> öğesinin çocuğu olarak ekleyin ve seçiciye <a class="internal-link" data-target="style-selector-syntax">iç içe yerleştirme seçicisi (<code>^</code>)</a> ile başlayın:</p>
+
+<pre><code>&lt;Style Selector="TextBlock.h1"&gt;
+    &lt;Setter Property="FontSize" Value="24"/&gt;
+    &lt;Setter Property="FontWeight" Value="Bold"/&gt;
+
+    &lt;Style Selector="^:pointerover"&gt;
+        &lt;Setter Property="Foreground" Value="Red"/&gt;
+    &lt;/Style&gt;
+&lt;/Style&gt;</code></pre>
+
+<p>Stilleri iç içe yerleştirdiğinizde, üst stilin seçicisi otomatik olarak çocuk stile de uygulanır. Yukarıdaki örnekte iç içe stil, fiilen <code>TextBlock.h1:pointerover</code> seçicisine sahiptir; yani işaretçi kontrolün üzerindeyken kırmızı bir ön plan rengiyle görüntülenir.</p>
+
+<div class="callout info">
+  <div class="h">Kaynaktaki bilgi notu</div>
+  <p>İç içe yerleştirme seçicisi mutlaka bulunmalı ve çocuk seçicinin <strong>başında</strong> yer almalıdır.</p>
+</div>
+
+<h2>Stil anahtarı (Style key)</h2>
+<p>Bir stil seçicisi tarafından eşleştirilen nesnenin türü, kontrolün somut (concrete) türüyle değil, <code>StyleKey</code> özelliği incelenerek belirlenir.</p>
+
+<p>Varsayılan olarak <code>StyleKey</code> özelliği, geçerli örneğin türünü döndürür. Ancak <code>Button</code>'dan miras alan kontrolünüzün bir <code>Button</code> olarak stillendirilmesini istiyorsanız, sınıfınızda <code>StyleKeyOverride</code> özelliğini geçersiz kılıp <code>typeof(Button)</code> döndürmesini sağlayabilirsiniz.</p>
+
+<pre><code>public class MyButton : Button
+{
+    // \`MyButton\`, standart bir \`Button\` kontrolü olarak stillendirilecektir.
+    protected override Type StyleKeyOverride =&gt; typeof(Button);
+}</code></pre>
+
+<div class="callout info">
+  <div class="h">Kaynaktaki bilgi notu</div>
+  <p>Bu mantığın WPF/UWP ile <strong>ters</strong> olduğuna dikkat edin: o çatılarda yeni bir kontrol türettiğinizde, <code>DefaultStyleKey</code> özelliğini geçersiz kılmadığınız sürece kontrol temel kontrolü olarak stillendirilir. Avalonia'da ise, farklı bir stil anahtarı sağlamadığınız sürece kontrol <strong>kendi somut türü</strong> kullanılarak stillendirilir.</p>
+</div>
+
+<div class="callout info">
+  <div class="h">Kaynaktaki bilgi notu</div>
+  <p>Avalonia 11'den önce stil anahtarını, <code>IStyleable</code> arayüzünü gerçekleyip <code>IStyleable.StyleKey</code> özelliğinin yeni bir gerçeklemesini sağlayarak geçersiz kılıyordunuz. Bu mekanizma uyumluluk amacıyla Avalonia 11'de hâlâ desteklenmektedir, ancak gelecekteki bir sürümde kaldırılabilir.</p>
+</div>
+
+<h2>Stiller ve kaynaklar</h2>
+<p>Kaynaklar (resources), tutarlı bir sunum sağlamaya yardımcı olmak için sıklıkla stillerle birlikte kullanılır. Uygulamanızda standart renkleri ve simgeleri tanımlamak için ya da ayrı dosyalardan dahil edildiğinde birden fazla uygulama genelinde kaynakları kullanabilirsiniz.</p>
+
+<div class="callout info">
+  <div class="h">Kaynaktaki bilgi notu</div>
+  <p>Uygulamanızda kaynakların nasıl kullanılacağına dair rehberlik için <a class="internal-link" data-target="creating-a-resource-dictionary">kaynak sözlükleri (resource dictionaries)</a> sayfasına bakın.</p>
+</div>
+
+<h2>Ayrıca bakınız</h2>
+<ul>
+<li><a class="internal-link" data-target="sharing-styles">Stilleri Paylaşma</a></li>
+<li><a class="internal-link" data-target="style-classes">Stil Sınıfları</a></li>
+<li><a class="internal-link" data-target="style-selector-syntax">Stil Seçici Söz Dizimi</a></li>
+<li><a class="internal-link" data-target="property-setters">Özellik Atayıcıları (Property Setters)</a></li>
+<li><a class="internal-link" data-target="creating-a-resource-dictionary">Kaynak Sözlükleri</a></li>
+</ul>
+
+</div>
+
+<div class="part-head own">
+  <span class="n">2</span>
+  <span class="t">Ayrıntılı açıklama
+    <span class="s">Kaynakta açıklanmayan veya genişletilen konular</span></span>
+</div>
+
+<h2>Stil sistemi hangi problemi çözüyor?</h2>
+
+<p>Kaynak, sistemi "özellik ayarlarını paylaşan bir mekanizma" diye tanımlıyor ama çözülen problemi göstermiyor. Problem şudur: arayüz büyüdükçe <strong>aynı görsel ayar onlarca yerde tekrarlanır</strong>.</p>
+
+<p>Stiller olmadan bir uygulamanın başlıkları şöyle yazılır:</p>
+
+<pre><code>&lt;TextBlock FontSize="24" FontWeight="Bold" Margin="0 0 0 12"&gt;Siparişler&lt;/TextBlock&gt;
+&lt;TextBlock FontSize="24" FontWeight="Bold" Margin="0 0 0 12"&gt;Müşteriler&lt;/TextBlock&gt;
+&lt;TextBlock FontSize="24" FontWeight="Bold" Margin="0 0 0 12"&gt;Raporlar&lt;/TextBlock&gt;</code></pre>
+
+<h4>Kodun açıklaması</h4>
+<p>Üç satırın da görsel tanımı aynıdır ve doğrudan kontrolün üzerine yazılmıştır. Buna <strong>yerel değer (local value)</strong> denir. Tasarım kararı değiştiğinde — diyelim ki başlıklar 28 punto olacak — üç satırın üçünü de bulup düzeltmeniz gerekir. Otuz ekranlı bir uygulamada bu, yüzlerce satır demektir ve bir tanesini atlamanız kaçınılmazdır.</p>
+
+<p>Stil sistemiyle aynı kural <strong>tek bir yerde</strong> tanımlanır:</p>
+
+<pre><code>&lt;Application.Styles&gt;
+    &lt;Style Selector="TextBlock.h1"&gt;
+        &lt;Setter Property="FontSize" Value="24"/&gt;
+        &lt;Setter Property="FontWeight" Value="Bold"/&gt;
+        &lt;Setter Property="Margin" Value="0 0 0 12"/&gt;
+    &lt;/Style&gt;
+&lt;/Application.Styles&gt;
+
+&lt;TextBlock Classes="h1"&gt;Siparişler&lt;/TextBlock&gt;
+&lt;TextBlock Classes="h1"&gt;Müşteriler&lt;/TextBlock&gt;
+&lt;TextBlock Classes="h1"&gt;Raporlar&lt;/TextBlock&gt;</code></pre>
+
+<h4>Kodun açıklaması</h4>
+<p><code>Classes="h1"</code> yazan her <code>TextBlock</code>, artık <em>nasıl görüneceğini</em> değil <em>ne olduğunu</em> bildirir: "bu bir birinci düzey başlıktır". Görünümün ne anlama geldiğine karar veren tek yer, <code>App.axaml</code> içindeki stildir. Punto değişikliği tek satırda yapılır ve üç başlık da anında güncellenir. Bu ayrım — <strong>anlam ile görünümü ayırmak</strong> — stil sisteminin varlık nedenidir.</p>
+
+<h2>İki adım: seçim ve değiştirme</h2>
+
+<p>Kaynağın "selection and substitution" ifadesi tek cümlede geçiyor. Bu iki adım, stil sisteminin tamamının işleyişidir; ayrıntılandırmaya değer.</p>
+
+<figure>
+<svg viewBox="0 0 700 340" xmlns="http://www.w3.org/2000/svg">
+  <defs><marker id="st1" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto">
+    <path d="M0 0 L9 4.5 L0 9 Z" fill="currentColor" opacity=".55"/></marker></defs>
+
+  <text class="s-lbl" x="140" y="22" text-anchor="middle">Stil tanımı</text>
+
+  <rect class="s-acc" x="14" y="36" width="252" height="104" rx="7"/>
+  <text class="s-mono" x="28" y="58">Selector = "TextBlock.h1"</text>
+  <line x1="28" y1="70" x2="252" y2="70" stroke="var(--border-color)" stroke-width="1"/>
+  <text class="s-mono" x="28" y="90">Setter FontSize = 24</text>
+  <text class="s-mono" x="28" y="110">Setter FontWeight = Bold</text>
+  <text class="s-sm" x="28" y="130">Kural: kime + ne</text>
+
+  <text class="s-lbl" x="565" y="22" text-anchor="middle">Ağaçtaki kontroller</text>
+
+  <rect class="s-acc" x="440" y="36" width="250" height="34" rx="6"/>
+  <text class="s-mono" x="452" y="57">TextBlock Classes="h1"</text>
+  <text class="s-sm" x="662" y="57" text-anchor="end">eşleşti</text>
+
+  <rect class="s-box" x="440" y="78" width="250" height="34" rx="6"/>
+  <text class="s-mono" x="452" y="99">Button Classes="h1"</text>
+  <text class="s-sm" x="662" y="99" text-anchor="end">tür tutmadı</text>
+
+  <rect class="s-box" x="440" y="120" width="250" height="34" rx="6"/>
+  <text class="s-mono" x="452" y="141">TextBlock</text>
+  <text class="s-sm" x="662" y="141" text-anchor="end">sınıf yok</text>
+
+  <path class="s-ln" d="M266 88 L432 60" marker-end="url(#st1)"/>
+  <text class="s-lbl" x="350" y="66" text-anchor="middle">1 · Seçim</text>
+  <text class="s-sm" x="350" y="82" text-anchor="middle">seçici kimi tutuyor?</text>
+
+  <path class="s-ln" d="M565 154 L565 200" marker-end="url(#st1)"/>
+  <text class="s-lbl" x="600" y="180">2 · Değiştirme</text>
+
+  <rect class="s-acc" x="440" y="204" width="250" height="60" rx="7"/>
+  <text class="s-mono" x="452" y="226">FontSize: 11 -&gt; 24</text>
+  <text class="s-mono" x="452" y="246">FontWeight: Normal -&gt; Bold</text>
+  <text class="s-sm" x="452" y="260">yalnızca eşleşen kontrolde</text>
+
+  <text class="s-sm" x="14" y="300">Seçim adımı, kontrolden başlayıp mantıksal ağaçta yukarı doğru ilerler ve yolda</text>
+  <text class="s-sm" x="14" y="318">karşılaştığı her Styles koleksiyonunu değerlendirir. Eşleşme bulunursa setter'lar uygulanır.</text>
+</svg>
+<figcaption><span class="fig-own">Şema — kaynakta yoktur, anlatım için hazırlanmıştır.</span> Kaynağın "seçim ve değiştirme" olarak adlandırdığı iki adımın somut hâli. Seçici üç kontrolden yalnızca birini tutar; setter'lar da yalnızca o kontrole uygulanır.</figcaption>
+</figure>
+
+<p>Bu ayrımın pratik değeri şudur: bir stil beklediğiniz gibi çalışmıyorsa, hata <strong>ya seçimdedir ya değiştirmede</strong>. İkisini ayrı ayrı sınamak sorunu hızla daraltır:</p>
+
+<ul>
+<li><strong>Seçim hatası:</strong> Kontrolün üzerinde stilin hiçbir izi yoktur. Setter listede hiç görünmez. Neden: seçici eşleşmiyordur (yanlış tür, yanlış sınıf adı, kapsam dışı).</li>
+<li><strong>Değiştirme hatası:</strong> Setter uygulanmıştır ama başka bir değer onu ezmiştir. Neden: kontrolün üzerinde yerel değer vardır ya da daha sonra bildirilen bir stil aynı özelliği yeniden ayarlamıştır.</li>
+</ul>
+
+<div class="callout tip">
+  <div class="h">İpucu</div>
+  <p>Uygulama çalışırken <strong>F12</strong> ile açılan geliştirici araçlarında bir kontrolü seçtiğinizde, her özelliğin hangi kaynaktan (yerel değer, stil, kontrol teması, miras) geldiğini görebilirsiniz. "Stilim neden çalışmıyor" sorusunun yanıtı hemen hemen her zaman bu ekranda görünür.</p>
+</div>
+
+<h2>Üç mekanizma: hangisi ne zaman?</h2>
+
+<p>Kaynak üç mekanizmayı listeliyor ama aralarındaki iş bölümünü açıklamıyor. Yeni başlayanların en çok karıştırdığı nokta burasıdır; özellikle <code>Style</code> ile <code>ControlTheme</code> arasındaki fark.</p>
+
+<figure>
+<svg viewBox="0 0 700 260" xmlns="http://www.w3.org/2000/svg">
+  <rect class="s-acc" x="10" y="14" width="216" height="150" rx="8"/>
+  <text class="s-lbl" x="118" y="40" text-anchor="middle">Style</text>
+  <text class="s-sm" x="118" y="58" text-anchor="middle">Stil</text>
+  <line x1="26" y1="70" x2="210" y2="70" stroke="var(--border-color)" stroke-width="1"/>
+  <text class="s-sm" x="26" y="90">Birkaç özelliği değiştirir</text>
+  <text class="s-sm" x="26" y="108">Mevcut görünüme eklenir</text>
+  <text class="s-sm" x="26" y="126">Seçici ile hedef bulur</text>
+  <text class="s-sm" x="26" y="144">CSS mantığı</text>
+
+  <rect class="s-acc" x="242" y="14" width="216" height="150" rx="8"/>
+  <text class="s-lbl" x="350" y="40" text-anchor="middle">ControlTheme</text>
+  <text class="s-sm" x="350" y="58" text-anchor="middle">Kontrol teması</text>
+  <line x1="258" y1="70" x2="442" y2="70" stroke="var(--border-color)" stroke-width="1"/>
+  <text class="s-sm" x="258" y="90">Kontrolün tüm görünümü</text>
+  <text class="s-sm" x="258" y="108">Template dahil</text>
+  <text class="s-sm" x="258" y="126">Tek bir kontrol türü için</text>
+  <text class="s-sm" x="258" y="144">WPF/UWP Style mantığı</text>
+
+  <rect class="s-acc" x="474" y="14" width="216" height="150" rx="8"/>
+  <text class="s-lbl" x="582" y="40" text-anchor="middle">ContainerQuery</text>
+  <text class="s-sm" x="582" y="58" text-anchor="middle">Konteyner sorgusu</text>
+  <line x1="490" y1="70" x2="674" y2="70" stroke="var(--border-color)" stroke-width="1"/>
+  <text class="s-sm" x="490" y="90">Stilleri gruplar</text>
+  <text class="s-sm" x="490" y="108">Boyut koşuluna bağlar</text>
+  <text class="s-sm" x="490" y="126">İçinde Style barındırır</text>
+  <text class="s-sm" x="490" y="144">CSS media query mantığı</text>
+
+  <text class="s-sm" x="10" y="196">Katman ilişkisi: ControlTheme kontrolün taban görünümünü kurar; Style o görünümün üzerine</text>
+  <text class="s-sm" x="10" y="214">ince ayar yapar; ContainerQuery ise Style'ları belirli bir boyut aralığında devreye sokar.</text>
+  <text class="s-sm" x="10" y="240">Üçü birbirinin alternatifi değil, farklı ölçeklerde çalışan tamamlayıcı araçlardır.</text>
+</svg>
+<figcaption><span class="fig-own">Şema — kaynakta yoktur, anlatım için hazırlanmıştır.</span> Kaynağın listelediği üç mekanizmanın sorumluluk alanları.</figcaption>
+</figure>
+
+<div class="table-wrap"><table>
+<tr><th>Soru</th><th><code>Style</code></th><th><code>ControlTheme</code></th><th><code>ContainerQuery</code></th></tr>
+<tr><td>Ne kadarını değiştirir</td><td>Yalnızca yazdığınız özellikleri</td><td>Kontrolün varsayılan görünümünün tamamını</td><td>İçindeki stiller kadarını</td></tr>
+<tr><td>Şablonu (<code>Template</code>) değiştirir mi</td><td>Değiştirilebilir ama amacı bu değildir</td><td>Evet, asıl işi budur</td><td>Hayır, içindeki stillere bağlıdır</td></tr>
+<tr><td>Hedefi nasıl bulur</td><td>Seçici (<code>Selector</code>)</td><td>Kontrol türü (<code>TargetType</code>) veya <code>Theme</code> özelliği</td><td>Konteyner adı + boyut koşulu</td></tr>
+<tr><td>Aynı anda kaç tanesi etkili olur</td><td>Eşleşen tüm stiller</td><td>Kontrol başına bir tane</td><td>Koşulu sağlayan tüm sorgular</td></tr>
+<tr><td>Tipik kullanım</td><td>Başlık stili, birincil düğme, uyarı metni</td><td>Kurumsal tema, özel kontrolün varsayılan görünümü</td><td>Dar/geniş yerleşim uyarlaması</td></tr>
+<tr><td>Bu rehberdeki dersi</td><td>Bu ders ve sonrası</td><td><a class="internal-link" data-target="control-themes">Kontrol Temaları</a></td><td><a class="internal-link" data-target="container-queries">Konteyner Sorguları</a></td></tr>
+</table></div>
+
+<div class="callout warn">
+  <div class="h">Uyarı</div>
+  <p>WPF veya UWP'den geliyorsanız en kritik eşleme şudur: <strong>WPF'teki <code>Style</code>, Avalonia'da <code>ControlTheme</code>'dir.</strong> Avalonia'daki <code>Style</code> ise WPF'te karşılığı olmayan, CSS'e daha yakın bir yapıdır. WPF alışkanlığıyla her şeyi <code>Style</code> ile yapmaya çalışmak, özellikle şablon değiştirme senaryolarında beklenmedik sonuçlar üretir.</p>
+</div>
+
+<h2>Kapsam: stili nereye koyarsanız ne olur?</h2>
+
+<p>Kaynak, "koleksiyonun konumu kapsamı tanımlar" diyor ve tek bir örnek veriyor. Kapsam kararı, büyüyen projelerde stil karmaşasını önleyen en önemli karardır; bu yüzden seçenekleri tek tek görelim.</p>
+
+<figure>
+<svg viewBox="0 0 700 330" xmlns="http://www.w3.org/2000/svg">
+  <defs><marker id="st2" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto">
+    <path d="M0 0 L9 4.5 L0 9 Z" fill="currentColor" opacity=".6"/></marker></defs>
+
+  <rect x="14" y="14" width="460" height="290" rx="10" fill="none" stroke="var(--accent-blue)" stroke-width="2"/>
+  <text class="s-lbl" x="30" y="38">Application (App.axaml)</text>
+  <text class="s-sm" x="30" y="56">Application.Styles — tüm uygulama</text>
+
+  <rect x="42" y="70" width="404" height="220" rx="9" fill="none" stroke="var(--accent-blue)" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <text class="s-lbl" x="58" y="94">Window</text>
+  <text class="s-sm" x="58" y="112">Window.Styles — bu pencere ve içeriği</text>
+
+  <rect x="72" y="126" width="344" height="150" rx="8" fill="none" stroke="var(--accent-green)" stroke-width="1.5"/>
+  <text class="s-lbl" x="88" y="150">UserControl</text>
+  <text class="s-sm" x="88" y="168">UserControl.Styles — bu görünüm</text>
+
+  <rect x="102" y="182" width="284" height="80" rx="7" fill="none" stroke="var(--text-muted)" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <text class="s-lbl" x="118" y="206">StackPanel</text>
+  <text class="s-sm" x="118" y="224">StackPanel.Styles — bu panelin içi</text>
+
+  <rect class="s-acc" x="132" y="232" width="120" height="22" rx="5"/>
+  <text class="s-mono" x="192" y="248" text-anchor="middle">Button</text>
+
+  <path class="s-ln" d="M266 243 L470 243 L470 40 L300 40" marker-end="url(#st2)" stroke-dasharray="5 4"/>
+  <text class="s-sm" x="486" y="150">Seçim adımı</text>
+  <text class="s-sm" x="486" y="168">buradan başlar</text>
+  <text class="s-sm" x="486" y="186">ve yukarı doğru</text>
+  <text class="s-sm" x="486" y="204">her katmanı tarar.</text>
+
+  <text class="s-sm" x="486" y="240">Kontrole en yakın</text>
+  <text class="s-sm" x="486" y="258">katmanda tanımlanan</text>
+  <text class="s-sm" x="486" y="276">stil, üsttekini</text>
+  <text class="s-sm" x="486" y="294">geçersiz kılabilir.</text>
+</svg>
+<figcaption><span class="fig-own">Şema — kaynakta yoktur, anlatım için hazırlanmıştır.</span> Stil koleksiyonlarının iç içe kapsamları. Kaynağın "<code>App.axaml</code> stilleri her yerde kullanılabilir, ancak kontrole daha yakın bir yerde geçersiz kılınabilir" ifadesinin görsel karşılığı.</figcaption>
+</figure>
+
+<div class="table-wrap"><table>
+<tr><th>Konum</th><th>Kapsam</th><th>Ne zaman tercih edilir</th></tr>
+<tr><td><code>Application.Styles</code> (<code>App.axaml</code>)</td><td>Tüm uygulama</td><td>Tasarım dilinin temel kuralları: başlık düzeyleri, birincil/ikincil düğmeler, ortak boşluklar</td></tr>
+<tr><td><code>Window.Styles</code></td><td>Pencere ve içindeki her şey</td><td>Yalnızca o pencereye özgü görünüm; örneğin bir ayarlar penceresinin daha sıkışık yerleşimi</td></tr>
+<tr><td><code>UserControl.Styles</code></td><td>O görünüm ve alt ağacı</td><td>Bileşene ait, dışarı sızmaması gereken stiller. Bileşen taşındığında stilleri de birlikte taşınır</td></tr>
+<tr><td>Herhangi bir kontrolün <code>Styles</code>'ı</td><td>O kontrolün alt ağacı</td><td>Dar ve yerel istisnalar; örneğin tek bir panelin içindeki tüm <code>TextBlock</code>'ların rengi</td></tr>
+<tr><td>Ayrı <code>.axaml</code> dosyası + <code>StyleInclude</code></td><td>Dahil edildiği yerin kapsamı</td><td>Stil sayısı arttığında dosyaları bölmek için. Ayrıntısı <a class="internal-link" data-target="sharing-styles">Stilleri Paylaşma</a> dersindedir</td></tr>
+</table></div>
+
+<div class="callout tip">
+  <div class="h">İpucu</div>
+  <p>Pratik kural: <strong>bir stili, etkilemesi gereken en dar kapsamda tanımlayın.</strong> <code>App.axaml</code>'e konan her stil, uygulamadaki her kontrolde değerlendirilmek zorundadır ve ileride "bu rengi kim değiştirdi" sorusunu zorlaştırır. Genele ait olmayan bir kural genele konmamalıdır.</p>
+</div>
+
+<h2>CSS'e ne kadar benziyor, nerede ayrılıyor?</h2>
+
+<p>Kaynak iki ayrı bilgi kutusunda CSS benzetmesi yapıyor. Bu benzetme öğrenmeyi hızlandırır ama sınırlarını bilmezseniz yanıltır. Web tarafından gelenlerin dikkat etmesi gereken farklar şunlardır:</p>
+
+<div class="table-wrap"><table>
+<tr><th>Konu</th><th>CSS</th><th>Avalonia stilleri</th></tr>
+<tr><td>Sınıf etiketi</td><td><code>class="h1 blue"</code></td><td><code>Classes="h1 blue"</code> — aynı mantık, boşlukla ayrılır</td></tr>
+<tr><td>Seçici söz dizimi</td><td><code>.h1</code>, <code>div.h1</code>, <code>a:hover</code></td><td><code>.h1</code>, <code>TextBlock.h1</code>, <code>Button:pointerover</code> — çok benzer</td></tr>
+<tr><td>Basamaklama (cascade)</td><td>Belge ağacında yukarıdan aşağı</td><td>Mantıksal ağaçta kontrolden yukarı doğru arama</td></tr>
+<tr><td>Öncelik (specificity)</td><td>Seçicinin özgüllüğü hesaplanır</td><td><strong>Özgüllük hesabı yoktur</strong>; bildirim sırası ve değer kaynağı belirleyicidir</td></tr>
+<tr><td>Zorlama</td><td><code>!important</code> vardır</td><td><strong>Karşılığı yoktur</strong></td></tr>
+<tr><td>Değer türü</td><td>Metin; tarayıcı yorumlar</td><td>Güçlü türlü; <code>Value</code> hedef özelliğin türüne dönüştürülür</td></tr>
+<tr><td>Hata durumu</td><td>Geçersiz kural sessizce yok sayılır</td><td>Yanlış özellik adı derleme veya çalışma zamanı hatası verir</td></tr>
+<tr><td>Hedefleme birimi</td><td>HTML öğesi</td><td>Kontrol nesnesi; tür eşleşmesi <code>StyleKey</code> üzerinden yapılır</td></tr>
+</table></div>
+
+<p>En çok şaşırtan iki fark, tablonun ortasındaki iki satırdır. CSS'te <code>#id .btn.primary</code> gibi daha özgül bir seçici, daha genel bir seçiciyi kendiliğinden yener. Avalonia'da böyle bir hesap yoktur: <strong>aynı özelliği ayarlayan iki stil eşleşirse, sonra bildirilen kazanır.</strong> Bu yüzden Avalonia'da stil dosyalarının <em>sırası</em> CSS'tekinden daha belirleyicidir. Önceliğin tam kuralları <a class="internal-link" data-target="style-precedence">Stil Önceliği</a> dersinin konusudur.</p>
+
+<h2>Bir stilin anatomisi</h2>
+
+<p>Kaynağın desen gösterimini parçalarına ayıralım:</p>
+
+<pre><code>&lt;Style Selector="TextBlock.h1"&gt;
+    &lt;Setter Property="FontSize" Value="24"/&gt;
+&lt;/Style&gt;</code></pre>
+
+<h4>Kodun açıklaması</h4>
+<ul>
+<li><code>&lt;Style&gt;</code> — bir kuralın kabıdır. Tek başına hiçbir şey yapmaz; bir <code>Styles</code> koleksiyonunun içinde olmalıdır.</li>
+<li><code>Selector="TextBlock.h1"</code> — <strong>kime</strong> sorusunun yanıtı. Nokta bir stil sınıfını, noktadan önceki ad ise tür eşleşmesini belirtir. İkisi bitişik yazıldığı için koşul "hem <code>TextBlock</code> olacak <strong>hem de</strong> <code>h1</code> sınıfı taşıyacak" anlamına gelir.</li>
+<li><code>&lt;Setter Property="FontSize"&gt;</code> — <strong>neyi</strong> sorusunun yanıtı. Özellik adı, seçicinin hedeflediği tür üzerinde çözümlenir; bu yüzden <code>TextBlock</code>'ta olmayan bir özellik adı yazarsanız hata alırsınız.</li>
+<li><code>Value="24"</code> — <strong>ne yapacağı</strong>. Metin olarak yazılan bu değer, hedef özelliğin türüne (burada <code>double</code>) dönüştürülür. Dönüştürmenin nasıl çalıştığı <a class="internal-link" data-target="type-converters">Tür Dönüştürücüler</a> dersinde anlatılmıştı.</li>
+</ul>
+
+<p>Değer basit bir metinle ifade edilemeyecek kadar karmaşıksa, <code>Setter</code>'ın uzun biçimi kullanılır:</p>
+
+<pre><code>&lt;Style Selector="Button.primary"&gt;
+    &lt;Setter Property="Background"&gt;
+        &lt;Setter.Value&gt;
+            &lt;LinearGradientBrush StartPoint="0%,0%" EndPoint="0%,100%"&gt;
+                &lt;GradientStop Color="#6366F1" Offset="0"/&gt;
+                &lt;GradientStop Color="#4338CA" Offset="1"/&gt;
+            &lt;/LinearGradientBrush&gt;
+        &lt;/Setter.Value&gt;
+    &lt;/Setter&gt;
+&lt;/Style&gt;</code></pre>
+
+<h4>Kodun açıklaması</h4>
+<p><code>Value</code> bir öznitelik yerine iç öğe olarak yazıldığında, içine tam bir nesne ağacı kurulabilir. Burada arka plan için bir degrade fırça tanımlanıyor. Bu biçim, öznitelik söz dizimiyle ifade edilemeyen her değer için geçerlidir: fırçalar, dönüşümler, şablonlar, veri şablonları. Setter'ların ayrıntısı <a class="internal-link" data-target="property-setters">Özellik Atayıcıları</a> dersindedir.</p>
+
+<h2>İç içe stiller neden değerli?</h2>
+
+<p>Kaynak iç içe yerleştirmeyi bir söz dizimi olanağı olarak sunuyor. Asıl kazancı, düz yazımla karşılaştırınca görünür.</p>
+
+<p>İç içe yerleştirme <strong>olmadan</strong> bir düğmenin dört durumu şöyle yazılır:</p>
+
+<pre><code>&lt;Style Selector="Button.primary"&gt;
+    &lt;Setter Property="Background" Value="#6366F1"/&gt;
+&lt;/Style&gt;
+&lt;Style Selector="Button.primary:pointerover"&gt;
+    &lt;Setter Property="Background" Value="#4F46E5"/&gt;
+&lt;/Style&gt;
+&lt;Style Selector="Button.primary:pressed"&gt;
+    &lt;Setter Property="Background" Value="#4338CA"/&gt;
+&lt;/Style&gt;
+&lt;Style Selector="Button.primary:disabled"&gt;
+    &lt;Setter Property="Opacity" Value="0.5"/&gt;
+&lt;/Style&gt;</code></pre>
+
+<p>İç içe yerleştirme <strong>ile</strong>:</p>
+
+<pre><code>&lt;Style Selector="Button.primary"&gt;
+    &lt;Setter Property="Background" Value="#6366F1"/&gt;
+
+    &lt;Style Selector="^:pointerover"&gt;
+        &lt;Setter Property="Background" Value="#4F46E5"/&gt;
+    &lt;/Style&gt;
+    &lt;Style Selector="^:pressed"&gt;
+        &lt;Setter Property="Background" Value="#4338CA"/&gt;
+    &lt;/Style&gt;
+    &lt;Style Selector="^:disabled"&gt;
+        &lt;Setter Property="Opacity" Value="0.5"/&gt;
+    &lt;/Style&gt;
+&lt;/Style&gt;</code></pre>
+
+<h4>Kodun açıklaması</h4>
+<p><code>^</code> karakteri, üst stilin seçicisinin tamamının yerine geçer. <code>^:pointerover</code> yazmak <code>Button.primary:pointerover</code> yazmakla aynı sonucu verir. Kazanç üç yönlüdür: <strong>tekrar ortadan kalkar</strong> (sınıf adı bir kez yazılır), <strong>yeniden adlandırma güvenli hâle gelir</strong> (<code>primary</code> adını <code>accent</code> yapmak için tek satır değişir), ve <strong>ilgili kurallar bir arada durur</strong> (bir düğmenin tüm durumları tek blokta okunur). Büyük stil dosyalarında ikinci madde özellikle önemlidir; düz yazımda bir seçiciyi güncelleyip diğerini unutmak sık görülen bir hatadır.</p>
+
+<div class="callout warn">
+  <div class="h">Uyarı</div>
+  <p><code>^</code>'nin çocuk seçicinin <strong>başında</strong> olması zorunluluğu kaynağın bilgi kutusunda belirtilmiştir. <code>&lt;Style Selector=":pointerover"&gt;</code> gibi <code>^</code> olmayan bir iç içe seçici, üst seçiciyle ilişkilendirilmez ve beklediğiniz kuralı üretmez.</p>
+</div>
+
+<h2><code>StyleKey</code>: en çok yanlış anlaşılan davranış</h2>
+
+<p>Kaynak bu konuyu kısa geçiyor, ancak özel kontrol yazan herkesin er ya da geç karşılaştığı bir davranıştır ve ilk karşılaşmada tamamen anlamsız görünür.</p>
+
+<p>Senaryo: <code>Button</code>'dan türeyen bir kontrol yazdınız.</p>
+
+<pre><code>public class IconButton : Button
+{
+    public static readonly StyledProperty&lt;string&gt; IconProperty =
+        AvaloniaProperty.Register&lt;IconButton, string&gt;(nameof(Icon));
+
+    public string Icon
+    {
+        get =&gt; GetValue(IconProperty);
+        set =&gt; SetValue(IconProperty, value);
+    }
+}</code></pre>
+
+<h4>Kodun açıklaması</h4>
+<p>Kontrol, <code>Button</code>'ın tüm davranışını miras alır ve üzerine bir <code>Icon</code> özelliği ekler. Mantık açısından bir eksik yoktur. Ancak ekranda <strong>hiçbir görünümü olmayan</strong>, arka planı ve kenarlığı bulunmayan bir kontrol görürsünüz.</p>
+
+<p>Nedeni kaynağın anlattığı kuraldır: stil eşleşmesi somut türe değil <code>StyleKey</code>'e bakar ve <code>StyleKey</code> varsayılan olarak <em>o anki örneğin türünü</em> döndürür. Yani sisteme göre bu kontrol bir <code>Button</code> değil, bir <code>IconButton</code>'dır. Temada <code>IconButton</code> için tanımlanmış bir kontrol teması olmadığından, kontrol hiçbir görünüm almaz.</p>
+
+<figure>
+<svg viewBox="0 0 700 250" xmlns="http://www.w3.org/2000/svg">
+  <defs><marker id="st3" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto">
+    <path d="M0 0 L9 4.5 L0 9 Z" fill="currentColor" opacity=".6"/></marker></defs>
+
+  <text class="s-lbl" x="170" y="22" text-anchor="middle">Varsayılan davranış</text>
+
+  <rect class="s-box" x="46" y="36" width="248" height="34" rx="6"/>
+  <text class="s-mono" x="170" y="58" text-anchor="middle">IconButton : Button</text>
+  <path class="s-ln" d="M170 70 L170 96" marker-end="url(#st3)"/>
+  <rect class="s-acc" x="46" y="100" width="248" height="34" rx="6"/>
+  <text class="s-mono" x="170" y="122" text-anchor="middle">StyleKey = IconButton</text>
+  <path class="s-ln" d="M170 134 L170 160" marker-end="url(#st3)"/>
+  <rect class="s-box" x="46" y="164" width="248" height="48" rx="6"/>
+  <text class="s-sm" x="170" y="184" text-anchor="middle">Temada IconButton teması yok</text>
+  <text class="s-sm" x="170" y="202" text-anchor="middle">Sonuç: görünümsüz kontrol</text>
+
+  <line x1="350" y1="14" x2="350" y2="230" stroke="var(--border-color)" stroke-width="1.5"/>
+
+  <text class="s-lbl" x="530" y="22" text-anchor="middle">StyleKeyOverride ile</text>
+
+  <rect class="s-box" x="406" y="36" width="248" height="34" rx="6"/>
+  <text class="s-mono" x="530" y="58" text-anchor="middle">IconButton : Button</text>
+  <path class="s-ln" d="M530 70 L530 96" marker-end="url(#st3)"/>
+  <rect class="s-acc" x="406" y="100" width="248" height="34" rx="6"/>
+  <text class="s-mono" x="530" y="122" text-anchor="middle">StyleKey = Button</text>
+  <path class="s-ln" d="M530 134 L530 160" marker-end="url(#st3)"/>
+  <rect class="s-acc" x="406" y="164" width="248" height="48" rx="6"/>
+  <text class="s-sm" x="530" y="184" text-anchor="middle">Button teması ve Button stilleri</text>
+  <text class="s-sm" x="530" y="202" text-anchor="middle">Sonuç: normal düğme görünümü</text>
+</svg>
+<figcaption><span class="fig-own">Şema — kaynakta yoktur, anlatım için hazırlanmıştır.</span> Türetilmiş bir kontrolün stil eşleşmesi. Kaynağın "kontrol kendi somut türü kullanılarak stillendirilir" ifadesinin sonucu soldaki, <code>StyleKeyOverride</code> çözümü sağdaki sütundur.</figcaption>
+</figure>
+
+<p>Kaynağın verdiği çözüm, stil anahtarını temel türe sabitlemektir:</p>
+
+<pre><code>public class IconButton : Button
+{
+    protected override Type StyleKeyOverride =&gt; typeof(Button);
+}</code></pre>
+
+<h4>Kodun açıklaması</h4>
+<p>Bu satırdan sonra stil sistemi kontrolü bir <code>Button</code> olarak görür: temanın <code>Button</code> kontrol teması uygulanır, <code>Selector="Button"</code> yazan tüm stiller de eşleşmeye başlar. Kontrolün C# tarafındaki türü değişmez; değişen yalnızca <strong>stil sisteminin ona hangi adla baktığıdır</strong>.</p>
+
+<p>Kaynağın belirtmediği bir ayrıntı: bu tek yönlü bir karardır. <code>StyleKeyOverride</code> yazdıktan sonra <code>Selector="IconButton"</code> ile bu kontrolü ayrıca hedefleyemezsiniz, çünkü artık stil sistemi için o ad mevcut değildir. Kontrolü hem <code>Button</code> gibi stillendirip hem de ayırt etmek istiyorsanız iki yaygın yol vardır:</p>
+
+<ul>
+<li><strong>Stil sınıfı vermek:</strong> Kontrolü kullanırken <code>Classes="icon"</code> yazıp <code>Selector="Button.icon"</code> ile hedeflemek.</li>
+<li><strong>Kendi kontrol temanızı yazmak:</strong> <code>StyleKeyOverride</code> kullanmayıp <code>IconButton</code> için bir <code>ControlTheme</code> tanımlamak. Özel kontrol geliştiriyorsanız doğru yol genellikle budur ve <a class="internal-link" data-target="control-themes">Kontrol Temaları</a> dersinde ele alınır.</li>
+</ul>
+
+<div class="callout info">
+  <div class="h">Bilgi</div>
+  <p>Bir stilin, bir türü <em>ve ondan türeyen her şeyi</em> hedeflemesini istiyorsanız <code>:is()</code> seçicisi kullanılır: <code>Selector=":is(Button)"</code>. Bu seçici, <code>StyleKey</code>'i <code>Button</code> olan kontrollerin yanı sıra <code>Button</code>'dan türeyen kontrollerle de eşleşir. Söz diziminin ayrıntısı <a class="internal-link" data-target="style-selector-syntax">Stil Seçici Söz Dizimi</a> dersindedir.</p>
+</div>
+
+<h2>Stiller ve kaynakları birlikte kullanmak</h2>
+
+<p>Kaynak bu bölümde yalnızca "kaynaklar sıklıkla stillerle birlikte kullanılır" diyor. Bu birlikteliğin somut hâli şöyledir:</p>
+
+<pre><code>&lt;Application.Resources&gt;
+    &lt;SolidColorBrush x:Key="BrandBrush" Color="#6366F1"/&gt;
+    &lt;x:Double x:Key="HeadingSize"&gt;24&lt;/x:Double&gt;
+&lt;/Application.Resources&gt;
+
+&lt;Application.Styles&gt;
+    &lt;Style Selector="TextBlock.h1"&gt;
+        &lt;Setter Property="FontSize" Value="{StaticResource HeadingSize}"/&gt;
+        &lt;Setter Property="Foreground" Value="{DynamicResource BrandBrush}"/&gt;
+    &lt;/Style&gt;
+&lt;/Application.Styles&gt;</code></pre>
+
+<h4>Kodun açıklaması</h4>
+<p><code>Resources</code> ile <code>Styles</code> iki ayrı koleksiyondur ve karıştırılmamalıdır: <code>Resources</code> <strong>adlandırılmış değerleri</strong> tutar (renk, fırça, sayı, simge), <code>Styles</code> ise <strong>kuralları</strong> tutar. Stil, kaynağa adıyla başvurur.</p>
+<p>İki başvuru biçimi arasındaki fark şudur: <code>StaticResource</code> değeri <strong>bir kez</strong>, yükleme sırasında çözer; <code>DynamicResource</code> ise kaynağa <strong>bağlı kalır</strong> ve kaynak değişirse özelliği günceller. Bu yüzden açık/koyu tema geçişinde değişmesi gereken renkler <code>DynamicResource</code> ile, uygulama boyunca sabit kalacak ölçüler <code>StaticResource</code> ile yazılır. Kaynak sözlüklerinin tamamı <a class="internal-link" data-target="creating-a-resource-dictionary">Kaynak Sözlüğü Oluşturma</a>, tema varyantları ise <a class="internal-link" data-target="setting-theme-variants">Tema Varyantlarını Ayarlama</a> dersinin konusudur.</p>
+
+<h2>Temel seçici biçimleri</h2>
+
+<p>Kaynak yalnızca <code>TargetControlClass.styleClassName</code> biçimini gösterip ayrıntıyı başka bir sayfaya bırakıyor. Bu dersi okurken elinizin altında bulunması için en sık kullanılan birkaç biçim aşağıdadır; tam liste <a class="internal-link" data-target="style-selector-syntax">Stil Seçici Söz Dizimi</a> dersindedir.</p>
+
+<div class="table-wrap"><table>
+<tr><th>Seçici</th><th>Neyi eşleştirir</th></tr>
+<tr><td><code>TextBlock</code></td><td>Stil anahtarı tam olarak <code>TextBlock</code> olan kontroller</td></tr>
+<tr><td><code>:is(Button)</code></td><td><code>Button</code> ve ondan türeyen kontroller</td></tr>
+<tr><td><code>.h1</code></td><td>Türü ne olursa olsun <code>h1</code> sınıfını taşıyan kontroller</td></tr>
+<tr><td><code>TextBlock.h1</code></td><td><code>TextBlock</code> olan <strong>ve</strong> <code>h1</code> sınıfı taşıyanlar</td></tr>
+<tr><td><code>Button.primary.large</code></td><td>Her iki sınıfa da sahip düğmeler (VE mantığı)</td></tr>
+<tr><td><code>Button:pointerover</code></td><td>İşaretçi üzerindeyken düğmeler — sözde sınıf</td></tr>
+<tr><td><code>#saveButton</code></td><td><code>Name</code> değeri <code>saveButton</code> olan kontrol</td></tr>
+<tr><td><code>StackPanel &gt; Button</code></td><td>Bir <code>StackPanel</code>'in <strong>doğrudan</strong> çocuğu olan düğmeler</td></tr>
+<tr><td><code>Border Button</code></td><td>Bir <code>Border</code>'ın alt ağacındaki (herhangi bir derinlikte) düğmeler</td></tr>
+</table></div>
+
+<h2>Sık yapılan hatalar</h2>
+
+<h3>1 · Stili <code>Resources</code> içine koymak</h3>
+<p><strong>Hata:</strong> <code>&lt;Window.Resources&gt;</code> içine bir <code>&lt;Style&gt;</code> yazılır, hiçbir şey olmaz.</p>
+<p><strong>Neden oluşur:</strong> WPF alışkanlığıdır. WPF'te stiller <code>Resources</code> sözlüğüne konur ve <code>x:Key</code> ile ya da <code>TargetType</code> ile örtük olarak uygulanır. Avalonia'da stillerin yeri <strong><code>Styles</code> koleksiyonudur</strong>; <code>Resources</code> yalnızca adlandırılmış değerler içindir.</p>
+<p><strong>Nasıl fark edilir:</strong> Genellikle hata alınmaz; stil sessizce hiç uygulanmaz.</p>
+<p><strong>Nasıl düzeltilir:</strong> Stili doğru koleksiyona taşıyın:</p>
+<pre><code>&lt;!-- Yanlış --&gt;
+&lt;Window.Resources&gt;
+    &lt;Style Selector="TextBlock.h1"&gt;...&lt;/Style&gt;
+&lt;/Window.Resources&gt;
+
+&lt;!-- Doğru --&gt;
+&lt;Window.Styles&gt;
+    &lt;Style Selector="TextBlock.h1"&gt;...&lt;/Style&gt;
+&lt;/Window.Styles&gt;</code></pre>
+<h4>Kodun açıklaması</h4>
+<p>İki koleksiyonun türü farklıdır: <code>Resources</code> bir sözlüktür ve anahtarla erişilir, <code>Styles</code> ise sıralı bir kural listesidir ve seçiciyle eşleşir. Bu yüzden aynı öğeyi ikisine de koyabilseniz bile yalnızca <code>Styles</code> içindeki değerlendirilir.</p>
+
+<h3>2 · Türetilmiş kontrolü tip seçicisiyle hedeflemek</h3>
+<p><strong>Hata:</strong> <code>Selector="Button"</code> yazılır, ama <code>Button</code>'dan türeyen özel kontroller etkilenmez.</p>
+<p><strong>Neden oluşur:</strong> Kaynağın "Stil anahtarı" bölümünde anlatılan davranış: eşleşme somut türe göre yapılır ve miras zinciri izlenmez.</p>
+<p><strong>Nasıl fark edilir:</strong> Aynı stil standart düğmelerde çalışır, özel düğmelerde çalışmaz.</p>
+<p><strong>Nasıl düzeltilir:</strong> Miras zincirini de kapsamak istiyorsanız <code>:is()</code> kullanın:</p>
+<pre><code>&lt;!-- Yalnızca Button --&gt;
+&lt;Style Selector="Button"&gt;...&lt;/Style&gt;
+
+&lt;!-- Button ve ondan türeyen her şey --&gt;
+&lt;Style Selector=":is(Button)"&gt;...&lt;/Style&gt;</code></pre>
+<h4>Kodun açıklaması</h4>
+<p>İkinci biçim, hem <code>StyleKey</code>'i <code>Button</code> olan kontrolleri hem de <code>Button</code>'dan türeyenleri tutar. Kurumsal bir tasarım dilinde "tüm düğmeler" kuralı yazıyorsanız neredeyse her zaman istediğiniz biçim budur; ilk biçim ise yalnızca standart düğmeye özgü bir istisna yazarken doğru seçimdir.</p>
+
+<h3>3 · Yerel değerin stili ezmesi</h3>
+<p><strong>Hata:</strong> Stil doğru yazılmıştır, seçici eşleşmektedir, ama özellik değişmez.</p>
+<p><strong>Neden oluşur:</strong> Kontrolün üzerine doğrudan yazılan değerler (<code>&lt;Button Background="Red"/&gt;</code>) <strong>yerel değerdir</strong> ve Avalonia'nın özellik sisteminde stillerden daha yüksek önceliğe sahiptir. Stil, yerel değeri ezemez.</p>
+<p><strong>Nasıl fark edilir:</strong> <strong>F12</strong> araçlarında özelliğin değer kaynağı "yerel değer" olarak görünür; setter listede vardır ama etkisizdir.</p>
+<p><strong>Nasıl düzeltilir:</strong> Öznitelikle yazılmış değeri kaldırın ve kararı stile bırakın. Bir kontrolde istisna gerekiyorsa istisnayı da bir stil sınıfıyla ifade edin.</p>
+<pre><code>&lt;!-- Sorunlu: stil bu düğmede asla çalışmaz --&gt;
+&lt;Button Classes="primary" Background="Gray" Content="Kaydet"/&gt;
+
+&lt;!-- Doğru: istisna da bir sınıf olsun --&gt;
+&lt;Button Classes="primary muted" Content="Kaydet"/&gt;</code></pre>
+<h4>Kodun açıklaması</h4>
+<p>İlk satırda <code>Background</code> hem stil hem de öznitelik tarafından ayarlanır; yerel değer kazandığı için stilin arka plan setter'ı görünmez hâle gelir. İkinci satırda tüm görsel kararlar stil katmanında kalır, dolayısıyla değerlendirme kuralları öngörülebilir olur ve <code>muted</code> sınıfı başka düğmelerde de yeniden kullanılabilir.</p>
+
+<h3>4 · <code>Classes</code> değerlerini virgülle ayırmak</h3>
+<p><strong>Hata:</strong> <code>Classes="h1,blue"</code> yazılır, hiçbir stil uygulanmaz.</p>
+<p><strong>Neden oluşur:</strong> Sınıf listesi CSS'teki gibi <strong>boşlukla</strong> ayrılır. Virgüllü yazımda tek bir sınıf tanımlanmış olur ve o sınıfın adı <code>h1,blue</code>'dur.</p>
+<p><strong>Nasıl fark edilir:</strong> İki sınıfın ikisi de çalışmaz; adı virgüllü yazan bir seçici yazarsanız çalıştığını görürsünüz.</p>
+<p><strong>Nasıl düzeltilir:</strong> <code>Classes="h1 blue"</code>.</p>
+
+<h3>5 · İç içe stilde <code>^</code> unutmak</h3>
+<p><strong>Hata:</strong> İç içe yazılan stil, üst seçiciyle ilişkilenmez.</p>
+<p><strong>Neden oluşur:</strong> Kaynağın bilgi kutusunda belirtildiği gibi iç içe yerleştirme seçicisi zorunludur ve seçicinin başında olmalıdır.</p>
+<p><strong>Nasıl fark edilir:</strong> Üst stilin setter'ları çalışır, iç içe olanınki çalışmaz veya beklenmedik kontrollerde çalışır.</p>
+<p><strong>Nasıl düzeltilir:</strong> Çocuk seçiciyi her zaman <code>^</code> ile başlatın: <code>^:pointerover</code>, <code>^.large</code>, <code>^ /template/ ContentPresenter</code>.</p>
+
+<h3>6 · Bildirim sırasını gözden kaçırmak</h3>
+<p><strong>Hata:</strong> İki stil aynı özelliği ayarlar; hangisinin kazandığı tahmin edilemez görünür.</p>
+<p><strong>Neden oluşur:</strong> Avalonia'da CSS'teki gibi bir özgüllük hesabı yoktur. Aynı öncelik düzeyinde eşleşen iki stilden <strong>sonra bildirilen</strong> kazanır. Bu, daha genel bir seçicinin daha özgül olanı ezebileceği anlamına gelir.</p>
+<p><strong>Nasıl fark edilir:</strong> Stil dosyalarının dahil edilme sırasını değiştirdiğinizde sonuç değişiyorsa neden budur.</p>
+<p><strong>Nasıl düzeltilir:</strong> Stilleri <strong>genelden özele</strong> sırayla yazın: önce tür seçicileri, sonra sınıf seçicileri, en sonda durum (sözde sınıf) seçicileri. Ayrıntı <a class="internal-link" data-target="style-precedence">Stil Önceliği</a> dersindedir.</p>
+
+<h3>7 · Kendi stillerini temadan önce eklemek</h3>
+<p><strong>Hata:</strong> <code>App.axaml</code> içinde kendi stilleriniz yazılır, ama tema varsayılanları onları eziyormuş gibi görünür.</p>
+<p><strong>Neden oluşur:</strong> <code>Application.Styles</code> sıralı bir listedir ve tema (örneğin <code>FluentTheme</code>) da bu listenin bir üyesidir. Kendi stilleriniz temadan <strong>önce</strong> yazılırsa, sonra gelen tema aynı özellikleri yeniden ayarlayabilir.</p>
+<p><strong>Nasıl fark edilir:</strong> Stiller boş bir projede çalışır, tema eklendiğinde çalışmaz hâle gelir.</p>
+<p><strong>Nasıl düzeltilir:</strong> Tema her zaman listenin başında olsun:</p>
+<pre><code>&lt;Application.Styles&gt;
+    &lt;FluentTheme/&gt;
+    &lt;StyleInclude Source="avares://MyApp/Styles/Buttons.axaml"/&gt;
+&lt;/Application.Styles&gt;</code></pre>
+<h4>Kodun açıklaması</h4>
+<p>Tema önce, sizin stilleriniz sonra gelir; böylece kendi kurallarınız temanın varsayılanlarının üzerine yazar. Birden fazla kendi stil dosyanız varsa, bunların da kendi aralarındaki sırası aynı mantıkla önemlidir: en genel dosya önce, en özel dosya sonra.</p>
+
+<h3>8 · Var olmayan bir özelliği hedeflemek</h3>
+<p><strong>Hata:</strong> <code>&lt;Style Selector="TextBlock.h1"&gt;&lt;Setter Property="Padding" .../&gt;</code> yazılır, derleme hatası alınır.</p>
+<p><strong>Neden oluşur:</strong> Setter'ın <code>Property</code> değeri, seçicinin hedeflediği tür üzerinde çözümlenir. <code>TextBlock</code>'ta <code>Padding</code> bulunmadığı için ad çözümlenemez. CSS'ten farklı olarak bu, sessizce yok sayılan bir durum değil, bir hatadır.</p>
+<p><strong>Nasıl fark edilir:</strong> XAML derleme hatası açıkça özelliğin bulunamadığını söyler.</p>
+<p><strong>Nasıl düzeltilir:</strong> Ya doğru özelliği (<code>Margin</code>) kullanın, ya da seçiciyi o özelliğe sahip bir türe yöneltin. Bir özelliğin başka bir türe ait olduğu durumlarda ekli özellik söz dizimi de kullanılabilir: <code>Property="Grid.Row"</code>.</p>
+
+<h2>Karar rehberi: hangi ihtiyaca hangi araç?</h2>
+
+<div class="table-wrap"><table>
+<tr><th>İhtiyaç</th><th>Doğru araç</th><th>Neden</th></tr>
+<tr><td>Tüm başlıkların aynı görünmesi</td><td>Stil sınıfı + <code>Style</code></td><td>Anlamı (başlık olmak) görünümden ayırır; tek yerden değişir</td></tr>
+<tr><td>Bir düğmenin üzerine gelince renk değiştirmesi</td><td>Sözde sınıf seçicisi (<code>^:pointerover</code>)</td><td>Durum değişimi kod yazmadan XAML'de ifade edilir</td></tr>
+<tr><td>Kontrolün iç yapısının tamamen değişmesi</td><td><code>ControlTheme</code></td><td><code>Template</code> dahil bütün görünümü tanımlamak için tasarlanmıştır</td></tr>
+<tr><td>Dar ekranda kenar çubuğunun daralması</td><td><code>ContainerQuery</code></td><td>Stilleri boyut koşuluna bağlar</td></tr>
+<tr><td>Tek bir kontrolde tek seferlik istisna</td><td>Öznitelikle yerel değer</td><td>Bir kez kullanılacak bir kural için stil tanımlamak gereksiz yüktür</td></tr>
+<tr><td>İki-üç kontrolde tekrar eden istisna</td><td>Yeni bir stil sınıfı</td><td>Tekrar üçüncü kez göründüğünde yerel değer bakımı zorlaştırır</td></tr>
+<tr><td>Renklerin tema ile değişmesi</td><td>Kaynak + <code>DynamicResource</code></td><td>Değer kaynağa bağlı kalır, tema değişince otomatik güncellenir</td></tr>
+<tr><td>Türetilmiş kontrolün taban gibi görünmesi</td><td><code>StyleKeyOverride</code></td><td>Kaynağın önerdiği çözüm; taban türün teması ve stilleri devreye girer</td></tr>
+<tr><td>Stil sayısı yüzleri bulması</td><td>Ayrı dosyalar + <code>StyleInclude</code></td><td>Dosya bölme okunabilirliği korur; <a class="internal-link" data-target="sharing-styles">Stilleri Paylaşma</a></td></tr>
+</table></div>
+
+<h2>İyi uygulama önerileri</h2>
+
+<div class="table-wrap"><table>
+<tr><th>Öneri</th><th>Gerekçe</th></tr>
+<tr><td>Stil sınıfı adlarını görünüme değil <strong>anlama</strong> göre verin</td><td><code>Classes="kirmizi"</code> yerine <code>Classes="danger"</code>. Renk değişince ad yalan olmaz</td></tr>
+<tr><td>Sınıf adlarında tutarlı bir yazım kullanın</td><td>CSS geleneğine uyan kebab-case (<code>btn-primary</code>) yaygın ve okunaklıdır</td></tr>
+<tr><td>Stili etkilemesi gereken en dar kapsamda tanımlayın</td><td>Genel kapsam, ileride kaynağı bulunamayan görsel sürprizler üretir</td></tr>
+<tr><td>Bir kontrolün tüm durumlarını iç içe yazın</td><td>İlgili kurallar bir arada durur; yeniden adlandırma tek noktadan yapılır</td></tr>
+<tr><td>Aynı özelliği hem öznitelikle hem stille ayarlamayın</td><td>Yerel değer stili ezer; sonuç öngörülemez görünür</td></tr>
+<tr><td>Temayı <code>Application.Styles</code>'ın en başına koyun</td><td>Kendi kurallarınızın temanın üzerine yazabilmesi için gereklidir</td></tr>
+<tr><td>Renk ve ölçüleri kaynak olarak tanımlayın</td><td>Tasarım belirteçleri tek yerde toplanır; tema varyantı desteği kolaylaşır</td></tr>
+<tr><td>Seçicileri gereğinden geniş tutmayın</td><td>Her stil, eşleşme için değerlendirilir; çok geniş seçiciler hem performansı hem öngörülebilirliği düşürür</td></tr>
+<tr><td>Sorun çözerken önce <strong>F12</strong> araçlarına bakın</td><td>Seçim hatası mı değiştirme hatası mı olduğunu saniyeler içinde ayırt edersiniz</td></tr>
+</table></div>
+
+<h2>Özet</h2>
+
+<div class="table-wrap"><table>
+<tr><th>Konu</th><th>Kilit bilgi</th></tr>
+<tr><td>Stil sistemi</td><td>Özellik ayarlarını kontroller arasında paylaşır; CSS ile WPF/UWP stillendirmesinin karışımıdır</td></tr>
+<tr><td>Üç mekanizma</td><td><code>Style</code> (CSS benzeri), <code>ControlTheme</code> (WPF Style karşılığı), <code>ContainerQuery</code> (boyut koşullu)</td></tr>
+<tr><td>İki adım</td><td>Seçim (selector kimi tutuyor) ve değiştirme (setter'lar uygulanıyor)</td></tr>
+<tr><td>Basamaklama</td><td>Seçim, kontrolden başlayıp mantıksal ağaçta yukarı doğru arar</td></tr>
+<tr><td>Kapsam</td><td><code>Styles</code> koleksiyonunun konumu kapsamı belirler; <code>Application</code> genel, kontrol düzeyi yereldir</td></tr>
+<tr><td>Stilin yapısı</td><td>Bir <code>Selector</code> özniteliği + bir veya daha fazla <code>Setter</code> öğesi</td></tr>
+<tr><td>Setter</td><td>Özellik/değer çifti; eşleşme olduğunda stildeki <strong>tüm</strong> setter'lar uygulanır</td></tr>
+<tr><td>İç içe stiller</td><td>Çocuk seçici <code>^</code> ile başlar; <code>^</code> üst seçicinin yerine geçer</td></tr>
+<tr><td><code>StyleKey</code></td><td>Eşleşme somut türe değil <code>StyleKey</code>'e bakar; varsayılanı örneğin kendi türüdür</td></tr>
+<tr><td><code>StyleKeyOverride</code></td><td>Türetilmiş kontrolü taban tür gibi stillendirmek için; WPF'in <code>DefaultStyleKey</code> mantığının tersidir</td></tr>
+<tr><td>Kaynaklar</td><td><code>Resources</code> değerleri, <code>Styles</code> kuralları tutar; stil kaynağa adıyla başvurur</td></tr>
+<tr><td>CSS farkı</td><td>Özgüllük hesabı ve <code>!important</code> yoktur; bildirim sırası ve değer kaynağı belirleyicidir</td></tr>
+</table></div>
+
+<h2>Sırada ne var?</h2>
+<p>Bu ders, <strong>Stillendirme</strong> bölümünün giriş dersiydi: sistemin üç mekanizmasını, iki adımlı işleyişini, kapsam kurallarını ve stilin temel yazım biçimini gördünüz. Bundan sonraki derslerde her parça tek tek derinleşiyor. Seçim adımına en çok yardımcı olan araç olan <a class="internal-link" data-target="style-classes">Stil Sınıfları</a>, bu dersin doğal devamıdır; ardından <a class="internal-link" data-target="style-selector-syntax">Stil Seçici Söz Dizimi</a> ile seçicilerin tam listesi ve <a class="internal-link" data-target="control-themes">Kontrol Temaları</a> ile kontrollerin bütün görünümünü tanımlama konusu gelir.</p>
+`};
 
 
 
