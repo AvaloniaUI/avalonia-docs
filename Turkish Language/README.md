@@ -12,17 +12,17 @@
 ## C01. PROJE DURUMU VE KONU LİSTESİ
 
 > **Bu bölüm her ders tamamlandığında güncellenir.**
-> Son güncelleme: **36. ders (Kontrolleri Konumlandırma / Positioning controls)** tamamlandığında.
+> Son güncelleme: **38. ders (Kontrolleri Konumlandırma / Positioning controls)** tamamlandığında.
 
 ## C01.1. ÖZET
 
 | | |
 | - | - |
 | **Toplam konu** | 250 |
-| **Tamamlanan ders** | 36 |
-| **Kalan ders** | 214 |
-| **İlerleme** | 36/250 (%14.4) |
-| **Tamamlanan bölüm** | 5/23 |
+| **Tamamlanan ders** | 38 |
+| **Kalan ders** | 212 |
+| **İlerleme** | 38/250 (%15.2) |
+| **Tamamlanan bölüm** | 6/23 |
 
 
 ## C01.2. BÖLÜM BAZINDA DURUM
@@ -36,8 +36,8 @@
 | 3 | Başlangıç | 11/11 | ✅ Tamamlandı |
 | 4 | Temel Kavramlar | 13/13 | ✅ Tamamlandı |
 | 5 | XAML Referansı | 7/7 | ✅ Tamamlandı |
-| 6 | Yerleşim (Layout) | 3/4 | 🔄 Devam ediyor |
-| 7 | Stillendirme | 0/17 | ⬜ Başlanmadı |
+| 6 | Yerleşim (Layout) | 4/4 | ✅ Tamamlandı |
+| 7 | Stillendirme | 1/17 | 🔄 Devam ediyor |
 | 8 | Veri Bağlama | 0/25 | ⬜ Başlanmadı |
 | 9 | Veri Şablonları | 0/8 | ⬜ Başlanmadı |
 | 10 | Özellik Sistemi | 0/4 | ⬜ Başlanmadı |
@@ -121,14 +121,14 @@
 | - | ----- | ---- | -------- | ------ |
 | 34 | ✅ | Yerleşim (Layout) | `layout` | https://docs.avaloniaui.net/docs/layout/ |
 | 35 | ✅ | &nbsp;&nbsp;↳ Yerleşim Paneli Seçimi | `choosing-a-layout-panel` | https://docs.avaloniaui.net/docs/layout/choosing-a-layout-panel |
-| C01 | ✅ | &nbsp;&nbsp;↳ Kontrolleri Konumlandırma | `positioning-controls` | https://docs.avaloniaui.net/docs/layout/positioning-controls |
-| 37 | ⬜ | &nbsp;&nbsp;↳ Duyarlı (Responsive) Yerleşimler | `responsive-layouts` | https://docs.avaloniaui.net/docs/layout/responsive-layouts |
+| 36 | ✅ | &nbsp;&nbsp;↳ Kontrolleri Konumlandırma | `positioning-controls` | https://docs.avaloniaui.net/docs/layout/positioning-controls |
+| 37 | ✅ | &nbsp;&nbsp;↳ Duyarlı (Responsive) Yerleşimler | `responsive-layouts` | https://docs.avaloniaui.net/docs/layout/responsive-layouts |
 
 ### 7. Stillendirme — Styling  `(0/17)`
 
 | # | Durum | Ders | Topic ID | Kaynak |
 | - | ----- | ---- | -------- | ------ |
-| 38 | ⬜ | Stillendirme | `styling` | https://docs.avaloniaui.net/docs/styling/styles |
+| 38 | ✅ | Stillendirme | `styling` | https://docs.avaloniaui.net/docs/styling/styles |
 | 39 | ⬜ | &nbsp;&nbsp;↳ Stiller | `styles` | https://docs.avaloniaui.net/docs/styling/styles |
 | 40 | ⬜ | &nbsp;&nbsp;↳ Stil Sınıfları | `style-classes` | https://docs.avaloniaui.net/docs/styling/style-classes |
 | 41 | ⬜ | &nbsp;&nbsp;↳ Kontrol Temaları | `control-themes` | https://docs.avaloniaui.net/docs/styling/control-themes |
@@ -424,14 +424,14 @@
 
 ## C01.4. SIRADAKİ DERS
 
-**Duyarlı (Responsive) Yerleşimler** (Responsive layouts)
+**Stiller** (Styles)
 
 | | |
 | - | - |
-| **Topic ID** | `responsive-layouts` |
-| **Kaynak** | https://docs.avaloniaui.net/docs/layout/responsive-layouts |
-| **Bölüm** | Yerleşim (Layout) |
+| **Topic ID** | `styles` |
+| **Kaynak** | https://docs.avaloniaui.net/docs/styling/styles |
+| **Bölüm** | Stillendirme |
+| **Ders**  | Stiller | `styles` | https://docs.avaloniaui.net/docs/styling/styles
 
-Bu ders tamamlandığında **6. Bölüm (Yerleşim)** bitmiş olacak ve sıra
-**7. Bölüm — Stillendirme** başlığının ilk dersi olan `styling` konusuna gelecektir.
+
 
