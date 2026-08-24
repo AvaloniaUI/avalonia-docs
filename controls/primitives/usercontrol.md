@@ -40,39 +40,16 @@ The following example creates a simple confirmation view. `UserControl` is used 
 
 </XamlPreview>
 
-### Reusing the confirmation view
+## Adding code-behind
 
-To reuse the confirmation view in your app, set an `x:Class` in the opening tag of `<UserControl>`. You can then reference its namespace in a `Window` or any other container to bring up another instance of the same user control.
-
-<Tabs>
-
-<TabItem value="usercontrol" label="UserControl">
+In a real project, the confirmation view demonstrated above would typically live in a standalone XAML file named `ConfirmationView.axaml`. To give it additional functionality, such as event handling or [styled properties](/docs/custom-controls/defining-properties#styled-properties), you would pair the XAML with a matching code-behind file named `ConfirmationView.axaml.cs`. This requires setting an `x:Class` on the `UserControl` to associate the XAML file with a class in code.
 
 ```xml
 <UserControl xmlns="https://github.com/avaloniaui"
-             // highlight-next-line
              x:Class="UserControlExample.ConfirmationView">
     <!-- Same control composition as above -->
 </UserControl>
 ```
-
-</TabItem>
-
-<TabItem value="window" label="Window">
-
-```xml
-<Window xmlns:local="clr-namespace:UserControlExample">
-    <local:ConfirmationView />
-</Window>
-```
-
-</TabItem>
-
-</Tabs>
-
-## Adding code-behind
-
-In a real project, the confirmation view demonstrated above would typically live in a standalone XAML file named `ConfirmationView.axaml`. To give it additional functionality, such as event handling or [styled properties](/docs/custom-controls/defining-properties#styled-properties), you would pair the XAML with a matching code-behind file named `ConfirmationView.axaml.cs`.
 
 For more information on code-behind, see [Code-behind](/docs/fundamentals/code-behind).
 
@@ -202,6 +179,38 @@ public partial class ConfirmationView : UserControl
         set => SetValue(TitleProperty, value);
     }
 }
+```
+
+</TabItem>
+
+</Tabs>
+
+## Reusing a user control
+
+To reuse the same user control in another view, reference its namespace using `xmlns` in a `Window` or any other container. You can then bring up another instance of the user control [using the `x:Class` you set for it](#adding-code-behind).
+
+Here is how you might reuse the same `ConfirmationView` from the examples above:
+
+<Tabs>
+
+<TabItem value="usercontrol" label="UserControl">
+
+```xml
+<UserControl xmlns="https://github.com/avaloniaui"
+             // highlight-next-line
+             x:Class="UserControlExample.ConfirmationView">
+    <!-- Same control composition as above -->
+</UserControl>
+```
+
+</TabItem>
+
+<TabItem value="window" label="Window">
+
+```xml
+<Window xmlns:local="clr-namespace:UserControlExample">
+    <local:ConfirmationView />
+</Window>
 ```
 
 </TabItem>
