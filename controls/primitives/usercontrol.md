@@ -96,11 +96,13 @@ public partial class ConfirmationView : UserControl
 
 ### Adding a styled property
 
-This example creates a styled property named `Title`, which displays a title at the top of `ConfirmationView`. Using a styled property means the title is variable and can be set to something different per instance of the `ConfirmationView`.
+This example creates a styled property named `Title`, which displays a variable title at the top of `ConfirmationView` that allows binding.
 
 :::warning
-You must explicitly name the root element in the `<UserControl>` tag, and then call it wherever you wish the styled property to apply. Doing so ensures the template can reference the control's properties. `root` is highlighted in the sample below to demonstrate how this is done.
+The styled property is declared on the root `UserControl` element. To use it in a binding, you must reference that element. In the sample below, `root` is highlighted in `ConfirmationView.axaml` to demonstrate how this is done.
 :::
+
+For more information on binding to a data context, see [Data context](/docs/data-binding/data-context).
 
 <br />
 <Image light={UserControlStyledProperty} maxWidth={400} position="center" cornerRadius="true" alt="An app window displaying the title text 'Quit the application', which is shown next to the same text coded in a XAML file." />

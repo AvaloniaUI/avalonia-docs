@@ -247,7 +247,7 @@ const sidebars: SidebarsConfig = {
         {
           type: 'link',
           label: 'User controls',
-          href: '/controls/primitives/usercontrol',
+          href: 'https://docs.avaloniaui.net/controls/primitives/usercontrol',
         },
         'custom-controls/templated-controls',
         'custom-controls/custom-drawn-controls',
