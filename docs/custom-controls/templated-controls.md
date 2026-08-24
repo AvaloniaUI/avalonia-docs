@@ -39,7 +39,7 @@ Templated controls do not need a self-referencing `DataContext`. Use [`TemplateB
 
 ## Defining the control theme
 
-Every templated control must have a default `ControlTheme` that contains its `ControlTemplate`. This control theme is typically placed in your application resources in `App.axaml`.
+Every templated control must have a default `ControlTheme` that contains its `ControlTemplate`. This control theme is typically specified in a theme file, which can included in your application resources in `App.axaml` using `ResourceInclude`.
 
 ```xml title="App.axaml"
 <Application.Resources>
@@ -68,7 +68,7 @@ Sometimes, a templated control needs to interact with specific elements in its t
 
 ### Declaring parts
 
-Apply [`TemplatePart`](/api/avalonia/controls/metadata/templatepartattribute) to the control class. Create one `TemplatePart` for each element that should be recognized as an individual part.
+Apply the [`TemplatePart`](/api/avalonia/controls/metadata/templatepartattribute) attribute to the control class. Create one `TemplatePart` for each element that should be recognized as an individual part.
 
 ```csharp
 [TemplatePart("PART_Button", typeof(Button), IsRequired = true)]
