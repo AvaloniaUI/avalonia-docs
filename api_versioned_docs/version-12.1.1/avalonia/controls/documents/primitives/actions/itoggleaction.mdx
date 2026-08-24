@@ -1,0 +1,103 @@
+---
+title: 'IToggleAction'
+hide_title: true
+slug: '/avalonia/controls/documents/primitives/actions/itoggleaction'
+uid: 'Avalonia.Controls.Documents.Primitives.Actions.IToggleAction'
+commentId: 'T:Avalonia.Controls.Documents.Primitives.Actions.IToggleAction'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.RichTextEditor'
+assembly: 'Avalonia.Controls.RichTextEditor'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.Primitives.Actions'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IToggleAction Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.Primitives.Actions</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.RichTextEditor</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.RichTextEditor</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Represents an action that has an on/off state.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface IToggleAction
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="ieditoraction">IEditorAction</a>
+</div>
+</div>
+
+## Remarks
+
+Toggle actions are used for formatting commands like RichBold, RichItalic, and RichUnderline.
+The [Avalonia.Controls.Documents.Primitives.Actions.IToggleAction.IsChecked(Avalonia.Controls.Documents.Primitives.ITextEditorHost)](xref:Avalonia.Controls.Documents.Primitives.Actions.IToggleAction.IsChecked%28Avalonia.Controls.Documents.Primitives.ITextEditorHost%29) property reflects whether the formatting is currently
+applied to the selection.
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [IsChecked](#uid-a6857a4f0c) | Gets whether the action is currently "on" for the selection. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a6857a4f0c"></span>
+
+### IsChecked Method
+
+Gets whether the action is currently "on" for the selection.
+
+```csharp
+public bool IsChecked(Avalonia.Controls.Documents.Primitives.ITextEditorHost host)
+```
+
+#### Parameters
+
+`host` [Avalonia.Controls.Documents.Primitives.ITextEditorHost](xref:Avalonia.Controls.Documents.Primitives.ITextEditorHost)
+
+The editor host to query.
+
+
+#### Returns
+
+bool
+
+True if the toggle state is on; otherwise, false.
+
+
+#### Remarks
+
+For formatting actions, this returns true if all text in the selection
+has the formatting applied.
+
+</section>
+
+</ApiRefPage>
+

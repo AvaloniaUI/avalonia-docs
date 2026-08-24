@@ -1,0 +1,330 @@
+---
+title: 'XamlSerializer'
+hide_title: true
+slug: '/avalonia/controls/documents/serialization/xaml/xamlserializer'
+uid: 'Avalonia.Controls.Documents.Serialization.Xaml.XamlSerializer'
+commentId: 'T:Avalonia.Controls.Documents.Serialization.Xaml.XamlSerializer'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Documents.Serialization.Xaml'
+assembly: 'Avalonia.Controls.Documents.Serialization.Xaml'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.Serialization.Xaml'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">XamlSerializer Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.Serialization.Xaml</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Documents.Serialization.Xaml</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Documents.Serialization.Xaml</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Serializer for Avalonia XAML (.axaml) documents.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class XamlSerializer
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> XamlSerializer
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IDocumentSerializer
+</div>
+</div>
+
+## Remarks
+
+Produces lossless XAML that maps directly to the FlowDocument model.
+Supports all block and inline types with their full formatting properties.
+
+Uses [System.Xml.XmlReader](xref:System.Xml.XmlReader) and [System.Xml.XmlWriter](xref:System.Xml.XmlWriter)
+for parsing and generation, avoiding dependency on Avalonia's XAML runtime loader.
+
+This serializer is thread-safe for concurrent operations.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [XamlSerializer](#uid-853df4e3ff) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-853df4e3ff"></span>
+
+### XamlSerializer Constructor
+
+```csharp
+public XamlSerializer()
+```
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [CanDeserialize](#uid-1d6095dbf1) | No summary available. |
+| [Deserialize (2 overloads)](#uid-1ae1f33b1c) | No summary available. |
+| [DeserializeAsync](#uid-6817ed128e) | No summary available. |
+| [Serialize (2 overloads)](#uid-385644ad57) | Serializes a document snapshot to a XAML string. |
+| [SerializeAsync](#uid-521662fae0) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1d6095dbf1"></span>
+
+### CanDeserialize Method
+
+```csharp
+public bool CanDeserialize(System.IO.Stream stream)
+```
+
+#### Parameters
+
+`stream` System.IO.Stream
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<span id="uid-1ae1f33b1c"></span>
+
+### Deserialize overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d0fd77b29c"></span>
+
+#### Deserialize Method
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot Deserialize(System.IO.Stream stream, System.Threading.CancellationToken cancellationToken)
+```
+
+##### Parameters
+
+`stream` System.IO.Stream
+
+
+`cancellationToken` System.Threading.CancellationToken
+
+
+##### Returns
+
+Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6255addc71"></span>
+
+#### Deserialize Method
+
+Deserializes a document from a XAML string.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot Deserialize(string xaml)
+```
+
+##### Parameters
+
+`xaml` string
+
+The XAML content string.
+
+
+##### Returns
+
+Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot
+
+A new [Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot) containing the parsed content.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6817ed128e"></span>
+
+### DeserializeAsync Method
+
+```csharp
+public System.Threading.Tasks.Task<Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot> DeserializeAsync(System.IO.Stream stream, System.Threading.CancellationToken cancellationToken)
+```
+
+#### Parameters
+
+`stream` System.IO.Stream
+
+
+`cancellationToken` System.Threading.CancellationToken
+
+
+#### Returns
+
+System.Threading.Tasks.Task&lt;Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot&gt;
+
+
+</section>
+
+<span id="uid-385644ad57"></span>
+
+### Serialize overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1a8e2fba5b"></span>
+
+#### Serialize Method
+
+Serializes a document snapshot to a XAML string.
+
+```csharp
+public string Serialize(Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot snapshot)
+```
+
+##### Parameters
+
+`snapshot` Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot
+
+The document snapshot to serialize.
+
+
+##### Returns
+
+string
+
+The XAML content string.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-71eeaf7a36"></span>
+
+#### Serialize Method
+
+```csharp
+public void Serialize(Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot snapshot, System.IO.Stream stream, System.Threading.CancellationToken cancellationToken)
+```
+
+##### Parameters
+
+`snapshot` Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot
+
+
+`stream` System.IO.Stream
+
+
+`cancellationToken` System.Threading.CancellationToken
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-521662fae0"></span>
+
+### SerializeAsync Method
+
+```csharp
+public System.Threading.Tasks.Task SerializeAsync(Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot snapshot, System.IO.Stream stream, System.Threading.CancellationToken cancellationToken)
+```
+
+#### Parameters
+
+`snapshot` Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot
+
+
+`stream` System.IO.Stream
+
+
+`cancellationToken` System.Threading.CancellationToken
+
+
+#### Returns
+
+System.Threading.Tasks.Task
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [FileExtension](#uid-39573d1c46) | No summary available. |
+| [FormatName](#uid-ac1f5ae3cf) | No summary available. |
+| [MimeType](#uid-fd1c7ad82a) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-39573d1c46"></span>
+
+### FileExtension Property
+
+```csharp
+public string FileExtension { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ac1f5ae3cf"></span>
+
+### FormatName Property
+
+```csharp
+public string FormatName { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-fd1c7ad82a"></span>
+
+### MimeType Property
+
+```csharp
+public string MimeType { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

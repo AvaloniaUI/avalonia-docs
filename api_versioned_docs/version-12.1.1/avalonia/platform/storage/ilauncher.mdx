@@ -1,0 +1,115 @@
+---
+title: 'ILauncher'
+hide_title: true
+slug: '/avalonia/platform/storage/ilauncher'
+uid: 'Avalonia.Platform.Storage.ILauncher'
+commentId: 'T:Avalonia.Platform.Storage.ILauncher'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Platform.Storage'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ILauncher Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Platform.Storage</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Starts the default app associated with the specified file or URI.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface ILauncher
+```
+
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [LaunchFileAsync](#uid-903e2ae190) | Starts the default app associated with the specified storage file or folder. |
+| [LaunchUriAsync](#uid-76134789ef) | Starts the default app associated with the URI scheme name for the specified URI. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-903e2ae190"></span>
+
+### LaunchFileAsync Method
+
+Starts the default app associated with the specified storage file or folder.
+
+```csharp
+public System.Threading.Tasks.Task<bool> LaunchFileAsync(Avalonia.Platform.Storage.IStorageItem storageItem)
+```
+
+#### Parameters
+
+`storageItem` [Avalonia.Platform.Storage.IStorageItem](xref:Avalonia.Platform.Storage.IStorageItem)
+
+The file or folder.
+
+
+#### Returns
+
+System.Threading.Tasks.Task&lt;bool&gt;
+
+True, if launch operation was successful. False, if unsupported or failed.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-76134789ef"></span>
+
+### LaunchUriAsync Method
+
+Starts the default app associated with the URI scheme name for the specified URI.
+
+```csharp
+public System.Threading.Tasks.Task<bool> LaunchUriAsync(Uri uri)
+```
+
+#### Parameters
+
+`uri` Uri
+
+The URI.
+
+
+#### Returns
+
+System.Threading.Tasks.Task&lt;bool&gt;
+
+True, if launch operation was successful. False, if unsupported or failed.
+
+
+</section>
+
+</ApiRefPage>
+

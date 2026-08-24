@@ -7,10 +7,9 @@ doc-type: reference
 
 import ComboBoxDataTemplateScreenshot from '/img/controls/combobox/combobox-data-template.gif';
 import ComboBoxBindingToViewModel from '/img/controls/combobox/combobox-binding-to-viewmodel.png';
+import ComboBoxEditable from '/img/controls/combobox/combobox-editable.gif';
 
-`ComboBox` presents a selected item with a dropdown button that displays a list of options. The length and height of the combo box are determined by the selected item, unless you define them explicitly.
-
-You can compose, bind or template the items in the list. To review data templates, see [Introduction to data templates](/docs/data-templates/introduction-to-data-templates).
+`ComboBox` presents a selected item in a box, with a dropdown button that displays a list of options. This page provides general reference for the control. For practical guidance on using `ComboBox`, see [How to: Work with ComboBox](/docs/how-to/combobox-how-to).
 
 ## Useful properties
 
@@ -22,33 +21,40 @@ You will probably use these properties most often:
 | `SelectedIndex`            | `int`      | The index (zero-based) of the selected item.                                                                             |
 | `SelectedItem`             | `object?`  | The selected item itself.                                                                                                |
 | `SelectedValue`            | `object?`  | The value of the selected item, determined by `SelectedValueBinding`.                                                    |
-| `IsEditable`               | `bool`     | Enables text editing, allowing you to type into the combo box to filter or enter custom values.                           |
+| `IsEditable`               | `bool`     | Enables text editing, allowing you to type into the combo box.                           |
 | `Text`                     | `string?`  | Gets or sets the text value when `IsEditable` is `true`.                                                                 |
-| `PlaceholderText`          | `string?`  | Text shown when no item is selected.                                                                                     |
+| `PlaceholderText`          | `string?`  | Placeholder text shown when no item is selected.                                                                                     |
 | `AutoScrollToSelectedItem` | `bool`     | Indicates whether to automatically scroll to newly selected items.                                                       |
 | `IsDropDownOpen`           | `bool`     | Indicates whether the dropdown is currently open.                                                                        |
 | `MaxDropDownHeight`        | `double`   | The maximum height for the dropdown list. This is the actual height of the list part, not the number of items that show.  |
 | `ItemsPanel`               | `ITemplate<Panel>` | The container panel to place items in. By default, this is a `StackPanel`. See [Custom panel](/docs/how-to/itemscontrol-how-to#custom-panel) for how to customize the `ItemsPanel`. |
 
-## Practical notes
+<br />
 
-- Always set `SelectedIndex` or `SelectedItem` to an initial value when you want the control to display a selection on load. If neither is set and you have not specified `PlaceholderText`, the control appears blank.
-- When you bind `ItemsSource` to a collection of complex objects, provide an `ItemTemplate` so the control knows how to render each item. Without a template, the control calls `ToString()` on each object.
+:::note
+By default, the width and height of the combo box scale to fit the selected item. If you need a box with a fixed size, you can also set `Width` and `Height` explicitly.
+:::
+
+## Tips
+
+- Always set `SelectedIndex` or `SelectedItem` to an initial value if you want the control to display a selection on load. If neither is set, and you have not specified `PlaceholderText`, the control appears blank.
 - Use `PlaceholderText` to give your users a hint when nothing is selected yet. (e.g., "Select an option...")
+- When you bind `ItemsSource` to a collection of complex objects, provide an `ItemTemplate` so the control knows how to render each item. Without a template, the control calls `ToString()` on each object.
 - If you need to clear the selection programmatically, set `SelectedIndex` to `-1` or `SelectedItem` to `null`.
 - The `SelectionChanged` event fires whenever the selected item changes. Use this to run side-effect logic outside the view model.
+- You can compose, bind or template the items in the list. To review data templates, see [Introduction to data templates](/docs/data-templates/introduction-to-data-templates).
 
 ## Examples
 
 ### Basic example
 
-A basic list of text items. The dropdown list is fixed at a limited height.
+A basic list of text items. These are defined in XAML, meaning they cannot change at runtime. `SelectedIndex` pre-selects an item from the list as the default selection, using its list position. The dropdown menu is fixed at a limited height and becomes scrollable as a result.
 
 <XamlPreview>
 
 ```xml
 <StackPanel xmlns="https://github.com/avaloniaui"
-             Margin="20">
+            Margin="20">
   <ComboBox SelectedIndex="0" MaxDropDownHeight="100">
     <ComboBoxItem>Text Item 1</ComboBoxItem>
     <ComboBoxItem>Text Item 2</ComboBoxItem>
@@ -108,7 +114,7 @@ This example binds the items in the combo box using a data template. The C# code
 
 <Tabs>
 
-<TabItem value="xml" label="MainWindow.axaml">
+<TabItem value="xaml" label="MainWindow.axaml">
 
 ```xml
 <StackPanel Margin="20">
@@ -159,7 +165,7 @@ public partial class MainWindow : Window
 
 </TabItem>
 
-<TabItem value="image" label="Preview">
+<TabItem value="preview" label="Preview">
 
 <Image light={ComboBoxDataTemplateScreenshot} alt="ComboBox with data template showing font families." position="center" maxWidth={400} cornerRadius="true"/>
 
@@ -169,7 +175,7 @@ public partial class MainWindow : Window
 
 ### Binding to a view model
 
-Bind `ItemsSource`, `SelectedItem`, and use an `ItemTemplate`.
+You can also bind the combo box's list items in a view model. In this example, the items are placed in an `ObservableCollection` in the main window view model, which binds both `ItemsSource` and `SelectedItem`.
 
 <Tabs>
 
@@ -189,6 +195,8 @@ Bind `ItemsSource`, `SelectedItem`, and use an `ItemTemplate`.
 using System.Collections.ObjectModel;
 using CommunityToolkit.Mvvm.ComponentModel;
 
+namespace ComboBoxTest.ViewModels;
+
 public partial class MainWindowViewModel : ViewModelBase
 {
     public ObservableCollection<string> Categories { get; } = new()
@@ -203,7 +211,7 @@ public partial class MainWindowViewModel : ViewModelBase
 
 </TabItem>
 
-<TabItem value="image" label="Preview">
+<TabItem value="preview" label="Preview">
 
 <Image light={ComboBoxBindingToViewModel} alt="Open ComboBox showing a list of four items defined in the view model." position="center" maxWidth={400} cornerRadius="true"/>
 
@@ -213,19 +221,69 @@ public partial class MainWindowViewModel : ViewModelBase
 
 ## Editable combo box
 
-Set `IsEditable` to `true` to allow text to be typed in the combo box. As you type, the control searches the items for a match and updates `SelectedItem` accordingly. The `Text` property holds the current text value.
+`ComboBox` has the `IsEditable` property. If set to `true`, the box allows text input.
+ 
+Keyboard input in the box, if it matches a list item, sets the `SelectedItem`. Use this to give users the option to select an item without browsing the dropdown list.
+
+<Tabs>
+
+<TabItem value="xaml" label="MainWindow.axaml">
 
 ```xml
-<ComboBox IsEditable="True"
-          Text="{Binding SearchText}"
-          ItemsSource="{Binding Countries}"
-          SelectedItem="{Binding SelectedCountry}"
-          PlaceholderText="Type a country..." />
+<StackPanel>
+    <!-- You must bind SelectedItem in XAML to persist the selection.
+         Otherwise, the selection just shows in the box but does nothing. -->
+    <ComboBox ItemsSource="{Binding Countries}"
+              // highlight-next-line
+              SelectedItem="{Binding SelectedCountry}"
+              IsEditable="True"
+              PlaceholderText="Input a country..." />
+    
+    <TextBlock Text="{Binding SelectedCountry, StringFormat='You have selected {0}'}" />
+</StackPanel>
 ```
 
-### Searching for complex data objects
+</TabItem>
 
-When items are complex objects, use `TextSearch.TextBinding` to specify which property the editable text should match against.
+<TabItem value="csharp" label="MainWindowViewModel.cs">
+
+```csharp
+using System.Collections.ObjectModel;
+using CommunityToolkit.Mvvm.ComponentModel;
+
+namespace ComboBoxTest.ViewModels;
+
+public partial class MainWindowViewModel : ViewModelBase
+{
+    public ObservableCollection<string> Countries { get; } = new()
+    {
+        "Australia", "Canada", "Japan", "Singapore", "UK", "USA"
+    };
+    
+    [ObservableProperty]
+    private string? _selectedCountry;
+}
+```
+
+</TabItem>
+
+<TabItem value="preview" label="Preview">
+
+<Image light={ComboBoxEditable} alt="A short animation displaying items from the combo box being selected by text input or clicking the dropdown list." position="center" maxWidth={400} cornerRadius="true"/>
+
+</TabItem>
+
+</Tabs>
+
+:::caution
+`IsEditable="True"` does not make the `ComboBox` searchable, nor does it filter the dropdown list while the user types.
+
+For type-to-search functionality, use [`AutoCompleteBox`](/controls/input/text-input/autocompletebox) instead. You can try changing `ComboBox` in the example above to `AutoCompleteBox` to see the difference.
+:::
+
+### Complex data objects
+
+When items are complex objects with multiple components (e.g., a user profile consisting of name, job, email, etc.), use `TextSearch.TextBinding` to specify which property the editable text should match against.
 
 ```xml
 <ComboBox IsEditable="True"
@@ -242,6 +300,7 @@ When items are complex objects, use `TextSearch.TextBinding` to specify which pr
 
 ## See also
 
+- [How to: Work with ComboBox](/docs/how-to/combobox-how-to)
 - [ListBox](/controls/data-display/collections/listbox)
 - [AutoCompleteBox](/controls/input/text-input/autocompletebox)
 - [RadioButton](/controls/input/buttons/radiobutton)

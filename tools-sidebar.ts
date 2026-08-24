@@ -59,6 +59,7 @@ const sidebars: SidebarsConfig = {
       collapsed: true,
       items: [
         'parcel/setup',
+        'parcel/configuration-reference',
         'parcel/command-line-reference',
         'parcel/packaging-for-macos',
         'parcel/packaging-for-windows',

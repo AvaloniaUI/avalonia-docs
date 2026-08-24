@@ -196,16 +196,16 @@ new TextColumn<Person, string>(
 
 #### Is offscreen rendering supported? To avoid airspace issue?
 
-No, offscreen rendering is not currently supported. Offscreen rendering is being tracked as a potential future feature.
+Partly. On Linux, the WPE backend always renders offscreen and composites into the Avalonia visual tree, so there is no airspace issue there. On Windows and on the Linux WebKitGTK backend, offscreen rendering is available but experimental, via `ExperimentalOffscreen` on the [environment options](/controls/web/webview-environment). macOS is not yet supported.
 
 #### Is NativeWebView supported on Linux?
 
-Yes. `NativeWebView` on Linux uses [WPE WebKit](https://wpewebkit.org) and renders offscreen using SHM (software rendering), so it does not depend on native window embedding and works on both X11 and Wayland sessions. See the [Linux prerequisites](/docs/app-development/embedding-web-content#linux) for the runtime libraries you need to install (`libwpewebkit-2.0`, `libwpe-1.0`, `libWPEBackend-fdo-1.0`).
+Yes. `NativeWebView` picks its backend automatically:
 
-If WPE is not available on the target distribution, you have two fallbacks:
+- **WebKitGTK** is the baseline, and is used whenever WPE is not installed. This is the case on Ubuntu, which does not package WPE WebKit.
+- **[WPE WebKit](https://wpewebkit.org)** is preferred when its libraries are present. It renders offscreen using SHM (software rendering), so it does not depend on native window embedding and works on both X11 and Wayland sessions.
 
-- Set [`LinuxWpeWebViewEnvironmentRequestedEventArgs.PreferWebKitGtkInstead`](/controls/web/webview-environment#linux-wpe-webkit) to use the WebKitGTK adapter instead.
-- Use [`NativeWebDialog`](/controls/web/nativewebdialog), which renders WebKitGTK in a dedicated window.
+Either way, no configuration is required. See the [Linux prerequisites](/docs/app-development/embedding-web-content#linux) for the runtime libraries each backend needs, and use [`LinuxWpeWebViewEnvironmentRequestedEventArgs.PreferWebKitGtkInstead`](/controls/web/webview-environment#linux-wpe-webkit) only if you want WebKitGTK on a machine that does have WPE.
 
 #### Can I use WebAuthenticationBroker for Google Auth or Microsoft.Identity Auth?
 

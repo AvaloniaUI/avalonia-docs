@@ -1,0 +1,79 @@
+---
+title: 'IInvokeProvider'
+hide_title: true
+slug: '/avalonia/automation/provider/iinvokeprovider'
+uid: 'Avalonia.Automation.Provider.IInvokeProvider'
+commentId: 'T:Avalonia.Automation.Provider.IInvokeProvider'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Automation.Provider'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IInvokeProvider Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Automation.Provider</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Exposes methods and properties to support UI Automation client access to controls that
+initiate or perform a single, unambiguous action and do not maintain state when
+activated.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface IInvokeProvider
+```
+
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Invoke](#uid-5220d7df15) | Sends a request to activate a control and initiate its single, unambiguous action. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5220d7df15"></span>
+
+### Invoke Method
+
+Sends a request to activate a control and initiate its single, unambiguous action.
+
+```csharp
+public void Invoke()
+```
+
+#### Remarks
+
+- Windows`IInvokeProvider.Invoke`
+- macOS`NSAccessibilityProtocol.accessibilityPerformPress`
+
+</section>
+
+</ApiRefPage>
+

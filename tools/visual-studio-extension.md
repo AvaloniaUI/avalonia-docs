@@ -7,6 +7,7 @@ doc-type: reference
 ---
 
 import TestXamlPreviewer from '/img/guides/ui-development/xaml-preview-and-design-settings/test-xaml-previewer.png';
+import VSOptions from '/img/vs-extension/visual-studio-avalonia-options.png';
 
 ## Features
 
@@ -46,15 +47,20 @@ Multiple options are provided to allow you to configure the way the editor and p
 
 These can be accessed by selecting **Options** from the **Tools** menu inside Visual Studio.
 
-![Options dialog](/img/vs-extension/visual-studio-avalonia-options.png)
+<Image light={VSOptions} alt="A screenshot showing the options dialog." maxWidth={400} cornerRadius="true"/>
+<br />
 
 |  Setting              | Description | Options       |
 |-----------------------|-------------|---------------|
-| Default Document View | What is displayed when a document is opened | Split (Default) - Both the code and the previewer<br />Design - Just the previewer<br /> Source - Just the source code |
-| Split Orientation     | Whether to split the orientation horizontally or vertically | Horizontal (Default) - The editor and previewer are displayed side by side<br />Vertical - The editor and previewer are displayed one above the other |
-| Swapped               | Whether the default position of the editor and previewer should be inverted when opening a document in 'Split' mode | True if checked |
-| Default Zoom level    | How to size the content in the  | 100% (Default)<br />50%, 75%, 100%, 125%, 150%, 200%<br />Fit to Width - Allow the preview to take the full width of the available space<br />Fit All - Fill the entire previewer |
-| Minimum Log Verbosity | The minimum LogLevel for information output by the extension | Trace<br />Debug<br />Information (Default)<br />Warning<br />Error<br />Critical<br />None |
+| Color Scheme          | Controls how the AXAML file contents are colored. Requires a paid account to change. | <ul><li>**Roslyn (Default):** Colors are based on equivalent C# classifications.</li><li>**XML:** Colors are assigned as if a regular XML document.</li></ul> |
+| Default Document View | What is displayed when a document is opened. | <ul><li>**Split (Default):** Both the code and the previewer.</li><li>**Design:** Just the previewer</li><li>**Source:** Just the source code.</li></ul> |
+| Split Orientation     | Whether to split the orientation horizontally or vertically. | <ul><li>**Horizontal (Default):** Editor and previewer are displayed side by side.</li><li>**Vertical:** Editor and previewer are displayed one above the other.</li></ul> |
+| Swapped               | Switch the positions of the editor and previewer in Split mode. | **Checked:** Positions are swapped. |
+| Default Zoom Level    | How the window content is sized.  | <ul><li>50%, 75%, **100% (Default)**, 125%, 150%, 200%</li><li>**Fit to Width:** Scale the preview to the available width.</li><li>**Fit All:** Fill the entire previewer.</li></ul> |
+| Minimum Log Verbosity | Minimum `LogLevel` for the extension to produce log output. | Trace, Debug, **Information (Default)**, Warning, Error, Critical, None |
+| Telemetry Enabled     | If basic usage telemetry should be reported. Requires a paid account to change. | <ul><li>**Checked (Default):** Telemetry is reported.</li><li>**Unchecked:** Telemetry is not reported.</li></ul> |
+| Experimental Previewer | Use the new version of the previewer. Recommended for most users. | <ul><li>**Checked (Default):** New previewer version</li><li>**Unchecked:** Older previewer version</li></ul> |
+| Signed in status      | If signed in, shows the name of the account. | Link to sign in or out. |
 
 ## See also
 

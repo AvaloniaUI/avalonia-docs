@@ -3,7 +3,7 @@ id: nativewebdialog
 title: NativeWebDialog
 ---
 
-`NativeWebDialog` is a dialog window that hosts a native web browser. It is useful on platforms like Linux where an embedded `NativeWebView` control is not available, or when you want to show web content in a separate window without embedding it in your layout.
+`NativeWebDialog` is a dialog window that hosts a native web browser. Use it when you want to show web content in a separate window without embedding it in your layout, or on platforms where an embedded `NativeWebView` control is not available.
 
 ## Useful properties
 
@@ -14,6 +14,8 @@ title: NativeWebDialog
 | `Source` | `Uri` | The URI of the page displayed in the WebView. Setting this property is equivalent to calling `Navigate()`. Default: `about:blank`. |
 | `CanGoBack` | `bool` | Read-only. `true` when the WebView can navigate back in history. |
 | `CanGoForward` | `bool` | Read-only. `true` when the WebView can navigate forward in history. |
+| `DefaultBackground` | `Color?` | The background color of the dialog and of the web view hosted inside it. When `null`, the owner background is used, falling back to white. |
+| `ShowFocused` | `bool` | Whether the dialog moves keyboard focus to its web content when shown. Default: `true`. |
 
 ## Basic example
 
@@ -56,6 +58,16 @@ dialog.Show(mainWindow);
 ```
 
 Use `Close()` to dismiss it programmatically. The `Closing` event fires before the dialog closes, allowing you to perform cleanup.
+
+By default the dialog takes keyboard focus into its web content when shown. Set `ShowFocused` to `false` to leave focus where it was, and call `Focus()` to activate the dialog and move keyboard focus to the web content later:
+
+```csharp
+dialog.ShowFocused = false;
+dialog.Show(mainWindow);
+
+// Later, bring it forward and focus the page.
+dialog.Focus();
+```
 
 ## Navigation
 

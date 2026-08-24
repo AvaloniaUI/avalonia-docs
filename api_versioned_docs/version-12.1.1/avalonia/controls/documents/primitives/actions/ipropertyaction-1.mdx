@@ -1,0 +1,154 @@
+---
+title: 'IPropertyAction<T>'
+hide_title: true
+slug: '/avalonia/controls/documents/primitives/actions/ipropertyaction-1'
+uid: 'Avalonia.Controls.Documents.Primitives.Actions.IPropertyAction`1'
+commentId: 'T:Avalonia.Controls.Documents.Primitives.Actions.IPropertyAction`1'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.RichTextEditor'
+assembly: 'Avalonia.Controls.RichTextEditor'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.Primitives.Actions'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IPropertyAction&lt;T&gt; Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.Primitives.Actions</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.RichTextEditor</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.RichTextEditor</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Represents an action that gets or sets a property value.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface IPropertyAction<T>
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="ieditoraction">IEditorAction</a>, <a href="ipropertyaction">IPropertyAction</a>
+</div>
+</div>
+
+## Remarks
+
+Property actions are used for selection-based properties like font family,
+font size, and colors. They provide both the current value and available
+values for UI controls like combo boxes.
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [GetAvailableValues](#uid-4107a2812a) | Gets the available values for this property. |
+| [GetValue](#uid-73e80f2a6b) | Gets the current property value for the selection. |
+| [SetValue](#uid-cf9afc6e25) | Sets the property value for the selection. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4107a2812a"></span>
+
+### GetAvailableValues Method
+
+Gets the available values for this property.
+
+```csharp
+public System.Collections.Generic.IEnumerable<T> GetAvailableValues()
+```
+
+#### Returns
+
+System.Collections.Generic.IEnumerable&lt;T&gt;
+
+An enumerable of available values for combo box population,
+or null if the values should be determined by the UI.
+
+
+#### Remarks
+
+For font family, this returns system fonts.
+For font size, this returns common sizes (8, 9, 10, 11, 12, 14, 16, etc.).
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-73e80f2a6b"></span>
+
+### GetValue Method
+
+Gets the current property value for the selection.
+
+```csharp
+public T GetValue(Avalonia.Controls.Documents.Primitives.ITextEditorHost host)
+```
+
+#### Parameters
+
+`host` [Avalonia.Controls.Documents.Primitives.ITextEditorHost](xref:Avalonia.Controls.Documents.Primitives.ITextEditorHost)
+
+The editor host to query.
+
+
+#### Returns
+
+T
+
+The property value if consistent across the selection;
+otherwise, the default value or null for mixed values.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-cf9afc6e25"></span>
+
+### SetValue Method
+
+Sets the property value for the selection.
+
+```csharp
+public void SetValue(Avalonia.Controls.Documents.Primitives.ITextEditorHost host, T value)
+```
+
+#### Parameters
+
+`host` [Avalonia.Controls.Documents.Primitives.ITextEditorHost](xref:Avalonia.Controls.Documents.Primitives.ITextEditorHost)
+
+The editor host to modify.
+
+
+`value` T
+
+The value to apply.
+
+
+</section>
+
+</ApiRefPage>
+

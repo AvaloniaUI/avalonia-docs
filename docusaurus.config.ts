@@ -23,6 +23,7 @@ const config: Config = {
   onBrokenLinks: 'warn',
   onBrokenAnchors: 'warn',
   onBrokenMarkdownLinks: 'warn',
+  clientModules: ['./src/clientModules/analyticsClient.ts'],
   headTags: [
     {
       tagName: "link",
@@ -311,7 +312,7 @@ gtag('consent', 'default', {
         routeBasePath: "api",
         disableVersioning: true,
         sidebarPath: require.resolve("./api-sidebars.ts"),
-        remarkPlugins: [[require("./plugins/apiref-xref"), { indexPath: "./dist/xref/12.1.0.xrefmap.json" }]],
+        remarkPlugins: [[require("./plugins/apiref-xref"), { indexPath: "./dist/xref/12.1.1.xrefmap.json" }]],
       },
     ]
   ],
@@ -378,7 +379,7 @@ gtag('consent', 'default', {
             },
             {
               label: 'Enhanced Support',
-              href: 'https://avaloniaui.net/support?utm_source=docs&utm_medium=referral&utm_content=nav_link',
+              href: 'https://avaloniaui.net/support?av_source=docs&av_medium=nav_link&av_content=support',
               target: '_blank',
               rel: null
             },
@@ -439,7 +440,7 @@ gtag('consent', 'default', {
     },
     docsearch: {
       appId: 'V9UF6750GH',
-      apiKey: '028e3dad834905a2a2c2a7ad9da9e666',
+      apiKey: '53cdd2af7f6be2f44a2009a0e10a588f',
       indexName: 'avaloniaui_docs',
       contextualSearch: true,
       translations: {
@@ -453,15 +454,24 @@ gtag('consent', 'default', {
             noRecentSearchesText: 'No recent searches',
             saveRecentSearchButtonTitle: 'Save to recent',
             removeRecentSearchButtonTitle: 'Remove from recent',
-            favoriteSearchesTitle: 'Favourites',
-            removeFavoriteSearchButtonTitle: 'Remove from favourites',
+            favoriteSearchesTitle: 'Favorites',
+            removeFavoriteSearchButtonTitle: 'Remove from favorites',
           },
         },
       },
-      // askAi: {
-      //   assistantId: 'ILptDNvSVJ1v',
-      //   sidePanel: true,
-      // },
+      askAi: {
+        assistantId: '69bba5fa-0697-4b5c-a726-1352324370a3',
+        agentStudio: true,
+        sidePanel: true,
+        searchParameters: {
+          avaloniaui_docs: {
+            filters: 'type:content AND language:en',
+            attributesToRetrieve: ['title', 'content', 'url'],
+            restrictSearchableAttributes: ['title', 'content'],
+            distinct: 'url',
+          },
+        },
+      },
     },
   },
 };

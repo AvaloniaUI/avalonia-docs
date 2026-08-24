@@ -30,7 +30,7 @@ All gradient brushes share the `GradientStops` collection and `SpreadMethod` pro
 
 ### `StartPoint` and `EndPoint`
 
-These two properties control the direction of the gradient. You can specify values as percentages (for example, `"0%,50%"`) or as decimals relative to the bounding box (for example, `"0,0.5"`). Both forms are equivalent.
+These two properties control the direction of the gradient. You can specify values as percentages (for example, `"0%,50%"`) or as absolute points in the bounding box (for example, `"10,15"`).
 
 Common direction patterns:
 
@@ -235,9 +235,9 @@ The same pattern applies to `RadialGradientBrush` and `ConicGradientBrush`.
 <XamlPreview>
 
 ```xml
-<StackPanel Spacing="20" Margin="20" xmlns="https://github.com/avaloniaui">
+<StackPanel Spacing="16" Margin="16" xmlns="https://github.com/avaloniaui">
     <!-- Horizontal gradient -->
-    <Border Height="100" CornerRadius="8">
+    <Border Height="80" CornerRadius="8">
         <Border.Background>
             <LinearGradientBrush StartPoint="0%,50%" EndPoint="100%,50%">
                 <GradientStop Color="#FF6B6B" Offset="0.0"/>
@@ -253,7 +253,7 @@ The same pattern applies to `RadialGradientBrush` and `ConicGradientBrush`.
     </Border>
 
     <!-- Vertical gradient -->
-    <Border Height="100" CornerRadius="8">
+    <Border Height="80" CornerRadius="8">
         <Border.Background>
             <LinearGradientBrush StartPoint="50%,0%" EndPoint="50%,100%">
                 <GradientStop Color="#A8E6CF" Offset="0.0"/>
@@ -268,7 +268,7 @@ The same pattern applies to `RadialGradientBrush` and `ConicGradientBrush`.
     </Border>
 
     <!-- Radial gradient -->
-    <Border Height="100" CornerRadius="8">
+    <Border Height="80" CornerRadius="8">
         <Border.Background>
             <RadialGradientBrush GradientOrigin="30%,30%">
                 <GradientStop Color="White" Offset="0.0"/>
@@ -282,7 +282,7 @@ The same pattern applies to `RadialGradientBrush` and `ConicGradientBrush`.
     </Border>
 
     <!-- Conic gradient -->
-    <Border Height="100" CornerRadius="8">
+    <Border Height="80" CornerRadius="8">
         <Border.Background>
             <ConicGradientBrush Center="50%,50%">
                 <GradientStop Color="#FF6B6B" Offset="0.0"/>

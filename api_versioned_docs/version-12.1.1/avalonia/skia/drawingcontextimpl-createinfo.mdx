@@ -1,0 +1,181 @@
+---
+title: 'DrawingContextImpl.CreateInfo'
+hide_title: true
+slug: '/avalonia/skia/drawingcontextimpl-createinfo'
+uid: 'Avalonia.Skia.DrawingContextImpl.CreateInfo'
+commentId: 'T:Avalonia.Skia.DrawingContextImpl.CreateInfo'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Skia'
+assembly: 'Avalonia.Skia'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Skia'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">DrawingContextImpl.CreateInfo Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Skia</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Skia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Skia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Context create info.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct DrawingContextImpl.CreateInfo
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> DrawingContextImpl.CreateInfo
+</div>
+</div>
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [Canvas](#uid-c3eb0e23e1) | Canvas to draw to. |
+| [CurrentSession](#uid-19463fc5c1) | No summary available. |
+| [DisableSubpixelTextRendering](#uid-573556b642) | Render text without subpixel antialiasing. |
+| [Dpi](#uid-afb7579f67) | Dpi for intermediate surfaces |
+| [Gpu](#uid-c43d01f5a5) | Skia GPU provider context (optional) |
+| [GrContext](#uid-da93c7706f) | GPU-accelerated context (optional) |
+| [ScaleDrawingToDpi](#uid-58e7e61bb4) | Makes DPI to be applied as a hidden matrix transform |
+| [Surface](#uid-f162a5fdb6) | Surface to draw to. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c3eb0e23e1"></span>
+
+### Canvas Field
+
+Canvas to draw to.
+
+```csharp
+public SkiaSharp.SKCanvas Canvas
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-19463fc5c1"></span>
+
+### CurrentSession Field
+
+```csharp
+public Avalonia.Skia.ISkiaGpuRenderSession CurrentSession
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-573556b642"></span>
+
+### DisableSubpixelTextRendering Field
+
+Render text without subpixel antialiasing.
+
+```csharp
+public bool DisableSubpixelTextRendering
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-afb7579f67"></span>
+
+### Dpi Field
+
+Dpi for intermediate surfaces
+
+```csharp
+public Avalonia.Vector Dpi
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c43d01f5a5"></span>
+
+### Gpu Field
+
+Skia GPU provider context (optional)
+
+```csharp
+public Avalonia.Skia.ISkiaGpu Gpu
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-da93c7706f"></span>
+
+### GrContext Field
+
+GPU-accelerated context (optional)
+
+```csharp
+public SkiaSharp.GRContext GrContext
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-58e7e61bb4"></span>
+
+### ScaleDrawingToDpi Field
+
+Makes DPI to be applied as a hidden matrix transform
+
+```csharp
+public bool ScaleDrawingToDpi
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f162a5fdb6"></span>
+
+### Surface Field
+
+Surface to draw to.
+
+```csharp
+public SkiaSharp.SKSurface Surface
+```
+
+</section>
+
+</ApiRefPage>
+
