@@ -12,11 +12,11 @@ Avalonia uses compiled bindings by default (as of [version 12](/docs/avalonia12-
 
 ## Enabling and disabling compiled bindings
 
-Since version 12, Avalonia templates set `<AvaloniaUseCompiledBindingsByDefault>` to `true` by default. This means you only need to provide `x:DataType` for the objects you want to bind to, and do not need to set `x:CompileBindings="[True|False]"` on controls and windows.
+Since version 12, Avalonia enables compiled bindings by default. This means you only need to provide `x:DataType` for the objects you want to bind to, and do not need to set `x:CompileBindings="[True|False]"` on controls and windows.
 
-If you wish to disable compiled bindings, you can change the flag to `false` in the `.csproj` file of your project.
+If you wish to disable compiled bindings, you can go to the `.csproj` file of your project and add a `<AvaloniaUseCompiledBindingsByDefault>` flag, which you can set to `false`. Disabling compiled bindings is not recommended.
 
-Projects created with earlier versions of Avalonia may not have `<AvaloniaUseCompiledBindingsByDefault>` defined. The undefined flag defaulted to disabled in versions before v12.
+If `<AvaloniaUseCompiledBindingsByDefault>` is undefined in your project file, it defaults to `true` from v12, but is `false` in earlier versions of Avalonia.
 
 ## Setting the data type
 

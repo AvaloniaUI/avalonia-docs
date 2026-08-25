@@ -96,7 +96,11 @@ public static AppBuilder BuildAvaloniaApp()
 - Every overload takes two or more parameters, which method binding does not support.
 - The command parameter does not match the method parameter type, when using a compiled binding. (Compiled bindings do not convert `CommandParameter`.)
 
-**Fix:** Give the method a single `object` parameter, or remove the competing overloads. Make sure `CommandParameter` supplies the exact type. See [Binding directly to a method](/docs/data-binding/binding-to-commands#binding-directly-to-a-method) for the full rules.
+**Fix:**
+1. Remove competing overloads.
+2. Add a new overload taking a single `object` parameter (which is chosen with higher priority).
+
+See [Binding directly to a method](/docs/data-binding/binding-to-commands#binding-directly-to-a-method) for the full overload resolution rules.
 
 ### Converter returns `UnsetValue`
 
