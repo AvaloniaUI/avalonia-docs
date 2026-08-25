@@ -17,68 +17,163 @@ This guide covers using [`ItemsControl`](/api/avalonia/controls/itemscontrol) an
 
 Use `ItemsControl` when you need to display a collection without selection behavior. Use `ItemsRepeater` when you also need virtualization for large data sets.
 
-## ItemsControl Basics
+## ItemsControl basics
 
 `ItemsControl` renders each item using a data template, with no selection, hover, or focus styling:
 
+<XamlPreview>
+
 ```xml
-<ItemsControl ItemsSource="{Binding Tags}">
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:vm="using:BasicItemsControl">
+  <UserControl.DataContext>
+    <vm:MainViewModel/>
+  </UserControl.DataContext>
+  <ItemsControl ItemsSource="{Binding Tags}">
     <ItemsControl.ItemTemplate>
-        <DataTemplate>
-            <Border Background="#E0E0E0" CornerRadius="12" Padding="8,4" Margin="2">
-                <TextBlock Text="{Binding}" />
-            </Border>
-        </DataTemplate>
+      <DataTemplate>
+        <Border Background="gray" CornerRadius="12"
+                Padding="8,4" Margin="2"
+                HorizontalAlignment="Left">
+          <TextBlock Text="{Binding}" />
+        </Border>
+      </DataTemplate>
     </ItemsControl.ItemTemplate>
-</ItemsControl>
+  </ItemsControl>
+</UserControl>
 ```
+
+```csharp
+using System.Collections.ObjectModel;
+
+namespace BasicItemsControl;
+
+public class MainViewModel
+{
+    public ObservableCollection<string> Tags { get; set; } = new()
+    {
+        "avalonia",
+        "xaml",
+        "mvvm",
+        "cross-platform"
+    };
+}
+```
+
+</XamlPreview>
 
 ### Custom panel
 
-Change how items are arranged using `ItemsPanel`:
+`ItemsControl` displays content in an `ItemsPanel`, which is a `StackPanel` by default. To change how items are arranged, you can replace it with a different control. Use `ItemsPanelTemplate` to override the default, then add a layout control of your choice.
+
+<XamlPreview>
 
 ```xml
-<!-- Wrap items horizontally -->
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:vm="using:CustomItemsPanel">
+  <UserControl.DataContext>
+    <vm:MainViewModel/>
+  </UserControl.DataContext>
 <ItemsControl ItemsSource="{Binding Tags}">
     <ItemsControl.ItemsPanel>
+        <!-- Change to a WrapPanel to wrap items horizontally -->
         <ItemsPanelTemplate>
             <WrapPanel Orientation="Horizontal" />
         </ItemsPanelTemplate>
     </ItemsControl.ItemsPanel>
     <ItemsControl.ItemTemplate>
         <DataTemplate>
-            <Border Background="#E8E8E8" CornerRadius="16" Padding="12,6" Margin="4">
-                <TextBlock Text="{Binding Name}" />
+            <Border Background="gray" CornerRadius="16" Padding="12,6" Margin="4">
+                <TextBlock Text="{Binding}" />
             </Border>
         </DataTemplate>
     </ItemsControl.ItemTemplate>
 </ItemsControl>
+</UserControl>
 ```
+
+```csharp
+using System.Collections.ObjectModel;
+
+namespace CustomItemsPanel;
+
+public class MainViewModel
+{
+    public ObservableCollection<string> Tags { get; set; } = new()
+    {
+        "avalonia",
+        "xaml",
+        "mvvm",
+        "cross-platform"
+    };
+}
+```
+
+</XamlPreview>
 
 ### Horizontal layout
 
+`StackPanel` arranges items in a vertical stack by default. To display items horizontally, customize the `ItemsPanelTemplate` as shown in the previous example and set `Orientation="Horizontal"`.
+
+<XamlPreview>
+
 ```xml
-<ItemsControl ItemsSource="{Binding Steps}">
-    <ItemsControl.ItemsPanel>
-        <ItemsPanelTemplate>
-            <StackPanel Orientation="Horizontal" Spacing="16" />
-        </ItemsPanelTemplate>
-    </ItemsControl.ItemsPanel>
-    <ItemsControl.ItemTemplate>
-        <DataTemplate>
-            <StackPanel Width="120">
-                <Border Width="40" Height="40" CornerRadius="20"
-                        Background="#6366F1" HorizontalAlignment="Center">
-                    <TextBlock Text="{Binding Number}" Foreground="White"
-                               HorizontalAlignment="Center" VerticalAlignment="Center" />
-                </Border>
-                <TextBlock Text="{Binding Title}" HorizontalAlignment="Center"
-                           Margin="0,8,0,0" />
-            </StackPanel>
-        </DataTemplate>
-    </ItemsControl.ItemTemplate>
-</ItemsControl>
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:vm="using:HorizontalLayout">
+  <UserControl.DataContext>
+    <vm:MainViewModel/>
+  </UserControl.DataContext>
+    <ItemsControl ItemsSource="{Binding Steps}">
+        <ItemsControl.ItemsPanel>
+            <ItemsPanelTemplate>
+                <StackPanel Orientation="Horizontal" Spacing="16" />
+            </ItemsPanelTemplate>
+        </ItemsControl.ItemsPanel>
+        <ItemsControl.ItemTemplate>
+            <DataTemplate>
+                <StackPanel Width="120">
+                    <Border Width="40" Height="40" CornerRadius="20"
+                            Background="#6366F1" HorizontalAlignment="Center">
+                        <TextBlock Text="{Binding Number}" Foreground="White"
+                                   HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    </Border>
+                    <TextBlock Text="{Binding Title}" HorizontalAlignment="Center"
+                               Margin="0,8,0,0" />
+                </StackPanel>
+            </DataTemplate>
+        </ItemsControl.ItemTemplate>
+    </ItemsControl>
+</UserControl>
 ```
+
+```csharp
+using System.Collections.ObjectModel;
+
+namespace HorizontalLayout;
+
+public class Step
+{
+    public string Title { get; set; }
+    public int Number { get; set; }
+
+    public Step(string title, int number)
+    {
+        Title = title;
+        Number = number;
+    }
+}
+
+public class MainViewModel
+{
+    public ObservableCollection<Step> Steps { get; set; } = new()
+    {
+        new Step("Step 1", 1),
+        new Step("Step 2", 2)
+    };
+}
+```
+
+</XamlPreview>
 
 ## ItemsRepeater
 

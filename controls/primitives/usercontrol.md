@@ -5,46 +5,225 @@ description: A base class for creating reusable composite controls with a predef
 doc-type: reference
 ---
 
-The [`UserControl`](/api/avalonia/controls/usercontrol) control is a [ContentControl](/controls/data-display/contentcontrol) that represents a reusable collection of controls in a predefined layout.
+import UserControlStyledProperty from '/static/img/controls/usercontrol/user-control-styled-property.png';
 
-[`UserControl`](/api/avalonia/controls/usercontrol) actually provides very little functionality on top of `ContentControl`. The difference is that you will not usually create instances of the `UserControl` class directly; instead a new subclass of the `UserControl` class is usually created for each "view" to be shown by an application.
+[`UserControl`](/api/avalonia/controls/usercontrol) is a [ContentControl](/controls/data-display/contentcontrol) that composes a reusable collection of controls in a predefined layout. In general, it is the quickest way to create a [custom control](/docs/custom-controls/) for reuse within an app. The most common use case is a view or page that must appear repeatedly in an app, such as a settings panel or a user profile card.
 
-## Common properties
+## When to use `UserControl`
 
-| Property | Description |
-| :--- | :--- |
-| `Content` | The content to display in the control |
+`UserControl` is the standard approach for creating views in MVVM applications. Each view in your application is typically a `UserControl` subclass, paired with a corresponding view model.
+
+If you need a general-purpose control that can be re-styled for use across different apps, use a [templated control](/docs/custom-controls/templated-controls) instead. If you need a control with a unique appearance not provided by Avalonia's [built-in controls](/controls/), use a [custom-drawn control](/docs/custom-controls/custom-drawn-controls) instead.
 
 ## Basic example
 
-The following example defines a simple `UserControl` with a `StackPanel` layout containing a `TextBlock` and a `Button`:
+### Creating a confirmation view
 
-```xml title='MyCustomView.axaml'
-<UserControl xmlns="https://github.com/avaloniaui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             x:Class="MyApp.MyCustomView">
-    <StackPanel>
-        <TextBlock Text="Hello from a UserControl!" />
-        <Button Content="Click me" />
+The following example creates a simple confirmation view. `UserControl` is used as the container for a composition of [`StackPanel`](/controls/layout/panels/stackpanel), [`TextBlock`](/controls/data-display/text-display/textblock) and [`Button`](/controls/input/buttons/button) controls.
+
+<XamlPreview>
+
+```xml
+<UserControl xmlns="https://github.com/avaloniaui">
+    <StackPanel Margin="20" Spacing="12">
+        <TextBlock Text="Are you sure?"
+                   HorizontalAlignment="Center"/>
+        <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Center"
+                    Spacing="12">
+            <Button Content="Yes" />
+            <Button Content="No" />
+        </StackPanel>
     </StackPanel>
 </UserControl>
 ```
 
-You can then use your `UserControl` in a `Window` or any other container by referencing its namespace:
+</XamlPreview>
+
+## Adding code-behind
+
+In a real project, the confirmation view demonstrated above would typically live in a standalone XAML file named `ConfirmationView.axaml`. To give it additional functionality, such as event handling or [styled properties](/docs/custom-controls/defining-properties#styled-properties), you would pair the XAML with a matching code-behind file named `ConfirmationView.axaml.cs`. This requires setting an `x:Class` on the `UserControl` to associate the XAML file with a class in code.
 
 ```xml
-<Window xmlns:local="clr-namespace:MyApp">
-    <local:MyCustomView />
+<UserControl xmlns="https://github.com/avaloniaui"
+             x:Class="UserControlExample.ConfirmationView">
+    <!-- Same control composition as above -->
+</UserControl>
+```
+
+For more information on code-behind, see [Code-behind](/docs/fundamentals/code-behind).
+
+### Handling events
+
+This example adds event handling logic to allow the Yes/No buttons in the confirmation view to respond to clicks.
+
+<XamlPreview>
+
+```xml
+<UserControl xmlns="https://github.com/avaloniaui">
+    <StackPanel Margin="20" Spacing="12">
+        <TextBlock Text="Are you sure?"
+                   HorizontalAlignment="Center"/>
+        <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Center"
+                    Spacing="12">
+            <Button Content="Yes" Click="OnClick" />
+            <Button Content="No" Click="OnClick" />
+        </StackPanel>
+    </StackPanel>
+</UserControl>
+```
+
+```csharp
+using Avalonia.Controls;
+using Avalonia.Interactivity;
+
+public partial class ConfirmationView : UserControl
+{
+
+    private void OnClick(object? sender, RoutedEventArgs args)
+    {
+        if (sender is Button button)
+        {
+            button.Content = "Clicked!";
+        }
+    }
+}
+
+```
+
+</XamlPreview>
+
+### Adding a styled property
+
+This example creates a styled property named `Title`, which displays a variable title at the top of `ConfirmationView` that allows binding.
+
+:::warning
+The styled property is declared on the root `UserControl` element. To use it in a binding, you must reference that element. In the sample below, `root` is highlighted in `ConfirmationView.axaml` to demonstrate how this is done.
+:::
+
+For more information on binding to a data context, see [Data context](/docs/data-binding/data-context).
+
+<br />
+<Image light={UserControlStyledProperty} maxWidth={400} position="center" cornerRadius="true" alt="An app window displaying the title text 'Quit the application', which is shown next to the same text coded in a XAML file." />
+<br />
+
+<Tabs>
+
+<TabItem value="mainwindow" label="MainWindow.axaml">
+
+```xml
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:UserControlExample.ViewModels"
+        xmlns:local="clr-namespace:UserControlExample"
+        x:Class="UserControlExample.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Title="UserControlExample">
+
+    <local:ConfirmationView Title="Quit the application" />
+
 </Window>
 ```
 
-## When to use `UserControl`
+</TabItem>
 
-`UserControl` is the standard approach for creating views in MVVM applications. Each view in your application is typically a `UserControl` subclass paired with a corresponding view model. If you need a control that supports custom templates and theme styling, consider creating a [`TemplatedControl`](/docs/custom-controls/templated-controls) instead.
+<TabItem value="usercontrol-xaml" label="ConfirmationView.axaml">
+
+```xml
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="UserControlExample.ConfirmationView"
+             // highlight-next-line
+             x:Name="root">
+
+    <StackPanel Margin="20" Spacing="12">
+            // highlight-next-line
+            <TextBlock Text="{Binding #root.Title}"
+                       HorizontalAlignment="Center"
+                       FontWeight="Bold" />
+            <TextBlock Text="Are you sure?"
+                       HorizontalAlignment="Center"/>
+            <StackPanel Orientation="Horizontal"
+                        HorizontalAlignment="Center"
+                        Spacing="12">
+                <Button Content="Yes" />
+                <Button Content="No" />
+            </StackPanel>
+        </StackPanel>
+    
+</UserControl>
+```
+
+</TabItem>
+
+<TabItem value="usercontrol-codebehind" label="ConfirmationView.axaml.cs">
+
+```csharp
+using Avalonia;
+using Avalonia.Controls;
+
+namespace UserControlExample;
+
+public partial class ConfirmationView : UserControl
+{
+    public ConfirmationView()
+    {
+        InitializeComponent();
+    }
+    
+    public static readonly StyledProperty<string?> TitleProperty =
+        AvaloniaProperty.Register<ConfirmationView, string?>(nameof(Title));
+    
+    public string? Title
+    {
+        get => GetValue(TitleProperty);
+        set => SetValue(TitleProperty, value);
+    }
+}
+```
+
+</TabItem>
+
+</Tabs>
+
+## Reusing a user control
+
+To reuse the same user control in another view, reference its namespace using `xmlns` in a `Window` or any other container. You can then bring up another instance of the user control [using the `x:Class` you set for it](#adding-code-behind).
+
+Here is how you might reuse the same `ConfirmationView` from the examples above:
+
+<Tabs>
+
+<TabItem value="usercontrol" label="UserControl">
+
+```xml
+<UserControl xmlns="https://github.com/avaloniaui"
+             // highlight-next-line
+             x:Class="UserControlExample.ConfirmationView">
+    <!-- Same control composition as above -->
+</UserControl>
+```
+
+</TabItem>
+
+<TabItem value="window" label="Window">
+
+```xml
+<Window xmlns:local="clr-namespace:UserControlExample">
+    <local:ConfirmationView />
+</Window>
+```
+
+</TabItem>
+
+</Tabs>
 
 ## See also
 
 - [ContentControl](/controls/data-display/contentcontrol)
-- [Creating custom controls](/docs/custom-controls/defining-properties)
+- [Creating custom controls](/docs/custom-controls/)
+- [Templated controls](/docs/custom-controls/templated-controls)
+- [Custom-drawn controls](/docs/custom-controls/custom-drawn-controls)
 - [UserControl API reference](/api/avalonia/controls/usercontrol)
 - [`UserControl.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/UserControl.cs)

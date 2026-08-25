@@ -1,69 +1,123 @@
 ---
 id: custom-flyout
-title: How to create a custom flyout
-description: Create a custom flyout control by extending FlyoutBase in Avalonia.
+title: Custom Flyout
+description: How to create a custom flyout control by extending PopupFlyoutBase.
 doc-type: how-to
 ---
 
-Custom flyouts let you display rich, self-contained UI that appears on demand and is attached to a target control. By deriving from `FlyoutBase`, you can build flyouts that host any content, from simple images to fully interactive forms.
+import CustomFlyoutDemo from '/img/custom-controls/custom-flyout-demo.gif';
 
-## Creating a basic custom flyout
+This example demonstrates how to create a custom `Flyout` control deriving from `PopupFlyoutBase`. Custom flyouts display a versatile, self-contained UI that appears on demand and is attached to a target control of your choice. A custom flyout can host almost any content, from images to interactive forms.
 
-To create a custom flyout type, derive from FlyoutBase. You'll have to override the abstract method `CreatePresenter()` to specify the presenter the [`Flyout`](/api/avalonia/controls/flyout) should use to display its content. This can be any type of control, but note that this is the root content for the inner popup and should be styled with background, border, corner radius, and similar styling to match other popups. You can still use a normal `FlyoutPresenter` if you wish.
+<Image light={CustomFlyoutDemo} alt="A minimal app in which a button labeled 'Show image' is clicked and displays a simple bitmap image." position="center" maxWidth={400} cornerRadius="true"/>
 
-The following example creates a simple `Flyout` that hosts an image.
+## Creating a custom `Flyout` class
 
-```csharp
-public class MyImageFlyout : FlyoutBase
+1. Add a new C# class to your project deriving from [`PopupFlyoutBase`](/api/avalonia/controls/primitives/popupflyoutbase).
+2. Override the abstract method `CreatePresenter()`. This allows you to replace the default presenter with whatever control you wish to use to display the content of your custom `Flyout`. For this example, the standard `FlyoutPresenter` is used.
+3. Specify the content the presenter should host. In this case, `Image` is chosen.
+
+```csharp title="MyImageFlyout.cs"
+using Avalonia;
+using Avalonia.Controls;
+using Avalonia.Controls.Primitives;
+using Avalonia.Media;
+using Avalonia.Metadata;
+
+namespace CustomFlyoutDemo;
+
+public class MyImageFlyout : PopupFlyoutBase
 {
-    public static readonly StyledProperty<IImage> ImageProperty = AvaloniaProperty.Register<MyImageFlyout, IImage>(nameof(Image));
-
+    public static readonly StyledProperty<IImage> ImageProperty =
+        AvaloniaProperty.Register<MyImageFlyout, IImage>(nameof(Image));
+    
     [Content]
-    public IImage Image { get; set; }
+    public IImage Image
+    {
+        get => GetValue(ImageProperty);
+        set => SetValue(ImageProperty, value);
+    }
 
     protected override Control CreatePresenter()
     {
-        // In this example, we'll use the default FlyoutPresenter as the root content, and add an Image control to show our content
         return new FlyoutPresenter
         {
             Content = new Image
             {
-                // Use binding here so the image automatically updates when the property updates
-                [!Image.SourceProperty] = this[!ImageProperty]
+                Width = 240,
+                Height = 160,
+                [!Avalonia.Controls.Image.SourceProperty] = this[!ImageProperty]
             }
         };
     }
 }
 ```
 
-## Showing and closing
+:::caution
+`PopupFlyoutBase` is the base class that provides the popup behavior and the `CreatePresenter()` method. It is the same base used by Avalonia's built-in [`Flyout` control](/controls/layout/containers/flyout).
 
-You can show a flyout programmatically by calling `ShowAt` and passing the control it should be anchored to. To dismiss it, call `Hide`.
+**Do not** use `FlyoutBase`. This is an abstract class and will block compilation if you derive from it.
+:::
+
+## Showing and dismissing
+
+- To show the `Flyout`: Call `ShowAt` and pass the control to which it should be anchored.
+- To dismiss the `Flyout`: Call `Hide`.
 
 ```csharp
-// Show the flyout attached to a control
-var flyout = new MyImageFlyout { Image = myBitmap };
+// Show the flyout programmatically and have it anchored to a button
+var flyout = new MyImageFlyout { Image = MyPicture };
 flyout.ShowAt(targetButton);
 
-// Close programmatically
+// Dismiss the flyout programmatically
 flyout.Hide();
 ```
 
-## Handling flyout events
+## Handling events
 
-`FlyoutBase` exposes `Opened` and `Closed` events you can subscribe to for reacting to visibility changes.
+The base class, `PopupFlyoutBase`, exposes `Opened` and `Closed` events. You can subscribe to these events to react to visibility changes.
 
 ```csharp
 flyout.Opened += (s, e) => { /* flyout is now visible */ };
 flyout.Closed += (s, e) => { /* flyout was dismissed */ };
 ```
 
-## Custom flyout with interactive content
+For more information on routed events, see [Events overview](/docs/events).
 
-Flyouts are not limited to passive display. You can include buttons, text inputs, and other interactive controls inside the presenter. The following example creates a confirmation flyout that raises an event when the user clicks a button, then automatically closes itself.
+## Using in XAML
+
+1. Declare the XML namespace for your custom flyout class at the top of the file.
+2. Assign the custom flyout (`MyImageFlyout`) as an attached property on a control that supports it, such as `Button`.
+3. Specify the content of the custom flyout. In this example, `MyPicture` is a static resource defined in `Application.Resources`.
+
+The flyout thus created follows the default behavior of `PopupFlyoutBase`. Clicking the "Show image" button displays the image. Clicking again anywhere in the window except the image dismisses it.
+
+```xml title="MainWindow.axaml"
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="using:CustomFlyoutDemo"
+        x:Class="CustomFlyoutDemo.MainWindow">
+    <Button Content="Show image"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center">
+        <Button.Flyout>
+            <local:MyImageFlyout Image="{StaticResource MyPicture}" />
+        </Button.Flyout>
+    </Button>
+    
+</Window>
+```
+
+For more information on using resources, see [Resources overview](/docs/app-development/resources).
+
+## Displaying interactive content
+
+Flyouts are not limited to passive display. You can include buttons, text input, and other interactive controls inside the presenter.
+
+The following example is a more advanced custom `Flyout`. This is a confirmation flyout that displays a "Confirm" button and raises a `Confirmed` event when the user clicks the button.
 
 ```csharp
-public class ConfirmFlyout : FlyoutBase
+public class ConfirmFlyout : PopupFlyoutBase
 {
     public event EventHandler? Confirmed;
 
@@ -92,18 +146,9 @@ public class ConfirmFlyout : FlyoutBase
 }
 ```
 
-## Using in XAML
-
-You can assign custom flyouts directly in XAML using the `Flyout` attached property on controls that support it, such as `Button`. Make sure the XML namespace for your flyout class is declared at the top of the file.
-
-```xml
-<Button Content="Show Image">
-    <Button.Flyout>
-        <local:MyImageFlyout Image="{StaticResource MyImage}" />
-    </Button.Flyout>
-</Button>
-```
-
 ## See also
 
-- [Custom Controls](/docs/custom-controls)
+- [Flyout](/controls/layout/containers/flyout): Reference for the built-in flyout control.
+- [Defining properties](/docs/custom-controls/defining-properties): Add styled, direct, and attached properties to your flyout class.
+- [Defining events](/docs/custom-controls/defining-events): Add routed events to your flyout class.
+- [Creating custom controls](/docs/custom-controls): Overview of the custom control types.

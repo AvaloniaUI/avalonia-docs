@@ -5,7 +5,17 @@ description: Understand how routed events travel through the element tree in Ava
 doc-type: overview
 ---
 
-Avalonia uses a routed event system similar to WPF. Routed events can travel through the element tree, allowing parent elements to handle events raised by their children. This is fundamental to how input, interaction, and control behavior work in Avalonia.
+Avalonia uses a routed event system similar to WPF. Routed events travel (or "route") through the [control tree](/docs/fundamentals/visual-and-logical-trees), allowing parent elements to handle events raised by their children. This is fundamental to how input, interaction, and control behavior work in Avalonia. By using routed events, multiple controls can respond to the same event, or event handling logic can be centralized at a common shared level higher in the visual tree.
+
+## Key features
+
+- **Event routing:** Routed events can propagate up the tree (bubbling) or down the tree (tunneling), enabling controls at different levels to handle the same event. This allows for more flexible, centralized event handling.
+
+- **Event handlers:** Routed events use event handlers to respond to events. Event handlers can be associated with specific controls, or attached at higher levels of the visual tree to handle events from multiple controls.
+
+- **Handled state:** Routed events have a `Handled` property that can be used to mark an event as handled, preventing further propagation. This allows fine-grained control over event handling.
+
+- **Routing strategies:** Avalonia supports different routing strategies for routed events, such as bubbling, tunneling, or direct routing. These strategies determine the order in which controls receive and handle events.
 
 ## Event routing strategies
 
@@ -17,7 +27,12 @@ Every routed event has a routing strategy that determines how the event travels 
 | `Tunnel` | Parent to child | The event fires on the root element first, then travels down through the tree to the source element. Tunneling events are typically used for preview/interception scenarios. |
 | `Direct` | Source only | The event fires only on the source element. It does not travel through the tree. |
 
-Events can combine strategies. For example, many input events use both `Tunnel | Bubble`, which means the event first tunnels down from the root, then bubbles back up from the source.
+Events can combine strategies. For example, many input events use `Tunnel | Bubble`, which means the event first tunnels down from the root, then bubbles back up from the source.
+
+```csharp
+RoutedEvent.Register<MyControl, RoutedEventArgs>(
+    nameof(MyEvent), RoutingStrategies.Tunnel | RoutingStrategies.Bubble);
+```
 
 ### Bubble example
 
@@ -164,27 +179,9 @@ public class ValueChangedEventArgs : RoutedEventArgs
 
 ## Class handlers
 
-Class handlers let you respond to events for all instances of a type, typically registered in a static constructor. Class handlers run before instance handlers.
+Class handlers let you respond to events for all instances of a type, since they run before instance handlers. They are typically registered in a static constructor.
 
-```csharp
-public class MyControl : Control
-{
-    static MyControl()
-    {
-        PointerPressedEvent.AddClassHandler<MyControl>((control, args) =>
-        {
-            control.OnPointerPressedInternal(args);
-        });
-    }
-
-    private void OnPointerPressedInternal(PointerPressedEventArgs args)
-    {
-        // Handle for all instances of MyControl
-    }
-}
-```
-
-Class handlers are useful for control implementations that need to intercept input events before any instance-level handler can mark them as handled.
+Class handlers are commonly used to define default event responses for custom controls. For more information, see [Defining events for custom controls](/docs/custom-controls/defining-events).
 
 ## Next steps
 
