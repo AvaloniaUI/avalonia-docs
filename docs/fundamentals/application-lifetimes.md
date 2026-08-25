@@ -3,6 +3,9 @@ id: application-lifetimes
 title: Application lifetimes
 description: Choose and configure application lifetime models for desktop, mobile, and browser platforms.
 doc-type: explanation
+video:
+  src: https://youtu.be/1_LLm3-YEt8
+  title: Desktop, Mobile & Web All Start Your App Differently
 ---
 
 Not all platforms are created equal! For example, the lifetime management that you may be used to developing with in Windows Forms or WPF can operate only on desktop-style platforms. Avalonia is a cross-platform framework; so to make your application portable, it provides several different lifetime models for your application, and also allows you to control everything manually if the target platform permits.
