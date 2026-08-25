@@ -1,5 +1,6 @@
 import React from 'react';
 import clsx from 'clsx';
+import PlayGlyph from './PlayGlyph';
 import VideoLightbox from './VideoLightbox';
 import {useVideoLightbox} from './useVideoLightbox';
 import type {CompanionVideo} from './types';
@@ -9,12 +10,6 @@ interface VideoCardProps {
   video: CompanionVideo;
   className?: string;
 }
-
-const PlayGlyph = () => (
-  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-    <path d="M5.5 3.5L12.5 8L5.5 12.5V3.5Z" fill="currentColor" />
-  </svg>
-);
 
 /**
  * The companion-video thumbnail, shown only in the desktop TOC panel. Wherever
