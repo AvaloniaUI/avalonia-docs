@@ -428,7 +428,7 @@
 
 | | |
 | - | - |
-| **Topic ID** | `introduction-to-data-binding` |
+| **Topic ID** | `data-binding` |
 | **Kaynak** | https://docs.avaloniaui.net/docs/data-binding/introduction-to-data-binding |
 | **Bölüm** | 8 — Veri Bağlama |
 | **Ders**  | Veri Bağlama | `data-binding` | https://docs.avaloniaui.net/docs/data-binding/introduction-to-data-binding
