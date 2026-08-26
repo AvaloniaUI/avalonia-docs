@@ -12,17 +12,17 @@
 ## C01. PROJE DURUMU VE KONU LİSTESİ
 
 > **Bu bölüm her ders tamamlandığında güncellenir.**
-> Son güncelleme: **38. ders (Kontrolleri Konumlandırma / Positioning controls)** tamamlandığında.
+> Son güncelleme: **55 - Stillendirmede En İyi Uygulamalar** Tamamlandı
 
 ## C01.1. ÖZET
 
 | | |
 | - | - |
 | **Toplam konu** | 250 |
-| **Tamamlanan ders** | 38 |
-| **Kalan ders** | 212 |
-| **İlerleme** | 38/250 (%15.2) |
-| **Tamamlanan bölüm** | 6/23 |
+| **Tamamlanan ders** | 55 |
+| **Kalan ders** | 195 |
+| **İlerleme** | 55/250 (%22.0) |
+| **Tamamlanan bölüm** | 7/23 |
 
 
 ## C01.2. BÖLÜM BAZINDA DURUM
@@ -37,8 +37,8 @@
 | 4 | Temel Kavramlar | 13/13 | ✅ Tamamlandı |
 | 5 | XAML Referansı | 7/7 | ✅ Tamamlandı |
 | 6 | Yerleşim (Layout) | 4/4 | ✅ Tamamlandı |
-| 7 | Stillendirme | 1/17 | 🔄 Devam ediyor |
-| 8 | Veri Bağlama | 0/25 | ⬜ Başlanmadı |
+| 7 | Stillendirme | 17/17 | ✅ Tamamlandı |
+| 8 | Veri Bağlama | 1/25 | 🔄 Devam ediyor |
 | 9 | Veri Şablonları | 0/8 | ⬜ Başlanmadı |
 | 10 | Özellik Sistemi | 0/4 | ⬜ Başlanmadı |
 | 11 | Olaylar | 0/3 | ⬜ Başlanmadı |
@@ -115,7 +115,7 @@
 | 32 | ✅ | &nbsp;&nbsp;↳ XAML'de Genel (Generic) Türler | `generic-types-in-xaml` | https://docs.avaloniaui.net/docs/xaml/generics |
 | 33 | ✅ | &nbsp;&nbsp;↳ XAML Derlemesi | `xaml-compilation` | https://docs.avaloniaui.net/docs/xaml/compilation |
 
-### 6. Yerleşim (Layout) — Layout  `(3/4)`
+### 6. Yerleşim (Layout) — Layout  `(4/4)`
 
 | # | Durum | Ders | Topic ID | Kaynak |
 | - | ----- | ---- | -------- | ------ |
@@ -124,29 +124,29 @@
 | 36 | ✅ | &nbsp;&nbsp;↳ Kontrolleri Konumlandırma | `positioning-controls` | https://docs.avaloniaui.net/docs/layout/positioning-controls |
 | 37 | ✅ | &nbsp;&nbsp;↳ Duyarlı (Responsive) Yerleşimler | `responsive-layouts` | https://docs.avaloniaui.net/docs/layout/responsive-layouts |
 
-### 7. Stillendirme — Styling  `(0/17)`
+### 7. Stillendirme — Styling  `(17/17)`
 
 | # | Durum | Ders | Topic ID | Kaynak |
 | - | ----- | ---- | -------- | ------ |
 | 38 | ✅ | Stillendirme | `styling` | https://docs.avaloniaui.net/docs/styling/styles |
-| 39 | ⬜ | &nbsp;&nbsp;↳ Stiller | `styles` | https://docs.avaloniaui.net/docs/styling/styles |
-| 40 | ⬜ | &nbsp;&nbsp;↳ Stil Sınıfları | `style-classes` | https://docs.avaloniaui.net/docs/styling/style-classes |
-| 41 | ⬜ | &nbsp;&nbsp;↳ Kontrol Temaları | `control-themes` | https://docs.avaloniaui.net/docs/styling/control-themes |
-| 42 | ⬜ | &nbsp;&nbsp;↳ Temalar | `themes` | https://docs.avaloniaui.net/docs/styling/themes |
-| 43 | ⬜ | &nbsp;&nbsp;↳ Konteyner Sorguları | `container-queries` | https://docs.avaloniaui.net/docs/styling/container-queries |
-| 44 | ⬜ | &nbsp;&nbsp;↳ Özel Yazı Tipleri | `custom-fonts` | https://docs.avaloniaui.net/docs/styling/custom-fonts |
-| 45 | ⬜ | &nbsp;&nbsp;↳ Tipografi | `typography` | https://docs.avaloniaui.net/docs/styling/typography |
-| 46 | ⬜ | &nbsp;&nbsp;↳ Stilleri Paylaşma | `sharing-styles` | https://docs.avaloniaui.net/docs/styling/sharing-styles |
-| 47 | ⬜ | &nbsp;&nbsp;↳ Tema Varyantlarını Ayarlama | `setting-theme-variants` | https://docs.avaloniaui.net/docs/styling/theme-variants |
-| 48 | ⬜ | &nbsp;&nbsp;↳ Stil Seçicileri | `style-selectors` | https://docs.avaloniaui.net/docs/styling/style-selectors |
-| 49 | ⬜ | &nbsp;&nbsp;↳ Stil Seçici Söz Dizimi | `style-selector-syntax` | https://docs.avaloniaui.net/docs/styling/style-selector-syntax |
-| 50 | ⬜ | &nbsp;&nbsp;↳ Özellik Atayıcıları (Setters) | `property-setters` | https://docs.avaloniaui.net/docs/styling/property-setters |
-| 51 | ⬜ | &nbsp;&nbsp;↳ Sözde Sınıflar (Pseudoclasses) | `pseudoclasses` | https://docs.avaloniaui.net/docs/styling/pseudoclasses |
-| 52 | ⬜ | &nbsp;&nbsp;↳ Kontrol Şablonu Adım Adım Anlatım | `control-template-walkthrough` | https://docs.avaloniaui.net/docs/styling/control-template-walkthrough |
-| 53 | ⬜ | &nbsp;&nbsp;↳ Stil Önceliği | `style-precedence` | https://docs.avaloniaui.net/docs/styling/style-precedence |
-| 54 | ⬜ | &nbsp;&nbsp;↳ Stillendirmede En İyi Uygulamalar | `styling-best-practices` | https://docs.avaloniaui.net/docs/styling/style-best-practices |
+| 39 | ✅ | &nbsp;&nbsp;↳ Stiller | `styles` | https://docs.avaloniaui.net/docs/styling/styles |
+| 40 | ✅ | &nbsp;&nbsp;↳ Stil Sınıfları | `style-classes` | https://docs.avaloniaui.net/docs/styling/style-classes |
+| 41 | ✅ | &nbsp;&nbsp;↳ Kontrol Temaları | `control-themes` | https://docs.avaloniaui.net/docs/styling/control-themes |
+| 42 | ✅ | &nbsp;&nbsp;↳ Temalar | `themes` | https://docs.avaloniaui.net/docs/styling/themes |
+| 43 | ✅ | &nbsp;&nbsp;↳ Konteyner Sorguları | `container-queries` | https://docs.avaloniaui.net/docs/styling/container-queries |
+| 44 | ✅ | &nbsp;&nbsp;↳ Özel Yazı Tipleri | `custom-fonts` | https://docs.avaloniaui.net/docs/styling/custom-fonts |
+| 45 | ✅ | &nbsp;&nbsp;↳ Tipografi | `typography` | https://docs.avaloniaui.net/docs/styling/typography |
+| 46 | ✅ | &nbsp;&nbsp;↳ Stilleri Paylaşma | `sharing-styles` | https://docs.avaloniaui.net/docs/styling/sharing-styles |
+| 47 | ✅ | &nbsp;&nbsp;↳ Tema Varyantlarını Ayarlama | `setting-theme-variants` | https://docs.avaloniaui.net/docs/styling/theme-variants |
+| 48 | ✅ | &nbsp;&nbsp;↳ Stil Seçicileri | `style-selectors` | https://docs.avaloniaui.net/docs/styling/style-selectors |
+| 49 | ✅ | &nbsp;&nbsp;↳ Stil Seçici Söz Dizimi | `style-selector-syntax` | https://docs.avaloniaui.net/docs/styling/style-selector-syntax |
+| 50 | ✅ | &nbsp;&nbsp;↳ Özellik Atayıcıları (Setters) | `property-setters` | https://docs.avaloniaui.net/docs/styling/property-setters |
+| 51 | ✅ | &nbsp;&nbsp;↳ Sözde Sınıflar (Pseudoclasses) | `pseudoclasses` | https://docs.avaloniaui.net/docs/styling/pseudoclasses |
+| 52 | ✅ | &nbsp;&nbsp;↳ Kontrol Şablonu Adım Adım Anlatım | `control-template-walkthrough` | https://docs.avaloniaui.net/docs/styling/control-template-walkthrough |
+| 53 | ✅ | &nbsp;&nbsp;↳ Stil Önceliği | `style-precedence` | https://docs.avaloniaui.net/docs/styling/style-precedence |
+| 54 | ✅ | &nbsp;&nbsp;↳ Stillendirmede En İyi Uygulamalar | `styling-best-practices` | https://docs.avaloniaui.net/docs/styling/style-best-practices |
 
-### 8. Veri Bağlama — Data Binding  `(0/25)`
+### 8. Veri Bağlama — Data Binding  `(1/25)`
 
 | # | Durum | Ders | Topic ID | Kaynak |
 | - | ----- | ---- | -------- | ------ |
@@ -424,14 +424,14 @@
 
 ## C01.4. SIRADAKİ DERS
 
-**Stiller** (Styles)
+**Veri Bağlama** (data-binding)
 
 | | |
 | - | - |
-| **Topic ID** | `styles` |
-| **Kaynak** | https://docs.avaloniaui.net/docs/styling/styles |
-| **Bölüm** | Stillendirme |
-| **Ders**  | Stiller | `styles` | https://docs.avaloniaui.net/docs/styling/styles
+| **Topic ID** | `introduction-to-data-binding` |
+| **Kaynak** | https://docs.avaloniaui.net/docs/data-binding/introduction-to-data-binding |
+| **Bölüm** | 8 — Veri Bağlama |
+| **Ders**  | Veri Bağlama | `data-binding` | https://docs.avaloniaui.net/docs/data-binding/introduction-to-data-binding
 
 
 
