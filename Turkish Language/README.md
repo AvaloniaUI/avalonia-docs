@@ -12,7 +12,7 @@
 ## C01. PROJE DURUMU VE KONU LİSTESİ
 
 > **Bu bölüm her ders tamamlandığında güncellenir.**
-> Son güncelleme: **55 - Stillendirmede En İyi Uygulamalar** Tamamlandı
+> Son güncelleme: **56 - Stillendirmede En İyi Uygulamalar** Tamamlandı
 
 ## C01.1. ÖZET
 
