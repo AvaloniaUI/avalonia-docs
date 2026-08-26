@@ -5,7 +5,6 @@
   margin: 1.5rem 0;
 }
 
-/* Owns the width cap: fluid below it, fixed above it. */
 .figure {
   display: flex;
   flex-direction: column;
@@ -24,9 +23,8 @@
 }
 
 /*
- * Neutralises the global `iframe` rule in src/styles/custom.scss, which applies
- * an offset drop shadow to every iframe on the site. A class beats a bare
- * element selector on specificity, so no !important is needed.
+ * Overrides the global `iframe` rule in src/styles/custom.scss, which applies
+ * an offset drop shadow to every iframe on the site.
  */
 .embed {
   aspect-ratio: 16 / 9;
@@ -35,10 +33,7 @@
 }
 
 /*
- * `auto <ratio>` rather than a bare ratio: a <video> has no intrinsic ratio
- * until metadata loads (it defaults to 300x150), so this reserves the right
- * space up front and then switches to the file's real ratio, instead of
- * permanently letterboxing anything that isn't 16:9.
+ * `auto <ratio>` to avoid permanently letterboxing anything that isn't 16:9.
  */
 .video {
   aspect-ratio: auto 16 / 9;
@@ -59,7 +54,7 @@
   text-align: center;
 }
 
-/* Deliberately hard to miss: an unrecognised src should not ship unnoticed. */
+/* Deliberately hard to miss: an unrecognized src should not ship unnoticed. */
 .fallback {
   display: block;
   padding: 1rem;

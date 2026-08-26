@@ -14,14 +14,8 @@ interface VideoPillButtonProps {
 /**
  * The in-article companion video: a bordered thumbnail-and-label button that
  * opens the same lightbox as the TOC panel's thumbnail card. Rendered below the
- * page title by the DocItem/Content swizzle, and hidden at desktop widths on
- * pages whose TOC column already hosts the card — which makes this the only
- * place a portrait reader ever sees the thumbnail.
- *
- * Everything is one `<button>`: the thumbnail and the label are plain spans, so
- * a click anywhere in the border opens the dialog and the whole thing is a
- * single tab stop. It keeps the brand-fill hover of `.github-sample-link`, so
- * the two in-article calls to action still read as a set.
+ * page title by the DocItem/Content swizzle. Hidden at desktop widths on
+ * pages whose TOC column already hosts the card.
  */
 export default function VideoPillButton({
   video,

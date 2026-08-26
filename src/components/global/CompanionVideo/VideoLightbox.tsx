@@ -14,13 +14,7 @@ const FOCUSABLE = 'button, [href], iframe, video, [tabindex]:not([tabindex="-1"]
 
 /**
  * Locks page scroll without the horizontal jump that removing the scrollbar
- * would otherwise cause. The compensation has to reach the navbar too: it is
- * `position: fixed`, so padding on <body> does not move it. The width is
- * published as --scrollbar-gap and consumed in custom.scss under
- * `html.lightbox-open`.
- *
- * Note macOS overlay scrollbars report a width of 0, so none of this is
- * observable there — it only shows up on Windows/Linux.
+ * would otherwise cause.
  */
 function useScrollLock(active: boolean): void {
   useEffect(() => {
@@ -46,12 +40,7 @@ function useScrollLock(active: boolean): void {
 }
 
 /**
- * Makes the rest of the page unreachable while the dialog is open — tab order,
- * pointer events and the screen-reader virtual cursor all stop at the portal.
- * This works because the portal target is <body>, making the dialog a sibling
- * of #__docusaurus rather than a descendant.
- *
- * Set imperatively because React 18 has no `inert` prop.
+ * Makes the rest of the page unreachable while the dialog is open.
  */
 function useInertBackground(active: boolean): void {
   useEffect(() => {
@@ -81,8 +70,6 @@ export default function VideoLightbox({
   useScrollLock(isBrowser);
   useInertBackground(isBrowser);
 
-  // Focus the close button, never the iframe: focus inside a cross-origin
-  // document is invisible to us and we could not get it back.
   useEffect(() => {
     closeButtonRef.current?.focus({preventScroll: true});
   }, []);
@@ -95,9 +82,6 @@ export default function VideoLightbox({
         return;
       }
 
-      // Belt-and-braces wrap on top of `inert`. Once focus is inside the
-      // player's iframe this stops firing — cross-origin content swallows the
-      // keydown — which is exactly why Escape is handled first.
       if (event.key !== 'Tab' || !dialogRef.current) return;
 
       const focusable = Array.from(

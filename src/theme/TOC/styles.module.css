@@ -8,19 +8,12 @@
   min-height: 240px;
 }
 
-/* The parent column is `display: flex; justify-content: center` (see
-   src/styles/components/_doc-item.scss), which leaves this wrapper shrink-to-fit
-   and sized by its widest heading link. That is fine for text, but it makes the
-   video card's width depend on the heading list. Filling the column pins it, and
-   turns the parent's centering into a no-op. Scoped to pages that declare a
-   video so every other page keeps its current layout exactly. */
+/* Fill the column so the video card's width is independent of the heading list.
+   Scoped to pages that declare a video only. */
 .hasVideo {
   width: 100%;
 }
 
-/* The wrapper is a height-capped flex column, so every child above the heading
-   list opts out of shrinking: only .tableOfContents should absorb the squeeze
-   (same reasoning as the `flex-shrink: 0` on the video card). */
 .tocHeading {
   flex-shrink: 0;
   margin: 0 0 0.75rem;
@@ -31,7 +24,6 @@
   color: var(--color-muted);
 }
 
-/* Containing block for the absolutely positioned dropdown panel. */
 .tocDropdownRow {
   position: relative;
   flex-shrink: 0;
@@ -90,13 +82,6 @@
 }
 
 @media (max-width: 996px) {
-  /* The desktop TOC column is gated on useWindowSize(), which returns 'ssr'
-     for the static HTML and the first client render — so the column ships in
-     the markup at every width and is only removed once hydration re-renders.
-     Hiding the whole wrapper (not just the list, as this rule used to) keeps
-     that pre-hydration frame from showing a stray "On this page" header and,
-     with a companion video declared, a duplicate of the card that the article
-     already renders at this width. */
   .tableOfContentsWrapper {
     display: none;
   }

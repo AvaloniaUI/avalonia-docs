@@ -325,7 +325,7 @@ gtag('consent', 'default', {
     },
     zoom: {
       // `.no-zoom` is the opt-out for a decorative image that owns its own click
-      // behaviour, e.g. the companion-video thumbnail inside CompanionVideoButton.
+      // behavior, e.g., the companion video thumbnail.
       selector: '.markdown :not(em) > img:not(.Card-icon):not(.Card-image):not(.no-zoom)',
       background: {
         light: 'rgb(196, 196, 196)',

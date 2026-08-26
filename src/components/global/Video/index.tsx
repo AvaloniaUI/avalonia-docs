@@ -30,27 +30,27 @@ type NativeVideoProps = Omit<
 >;
 
 interface VideoProps extends NativeVideoProps {
-  /** A path under /static (e.g. `/video/foo.mp4`) or a YouTube/Vimeo URL. */
+  // A path under /static (e.g. `/video/foo.mp4`) or a YouTube/Vimeo URL.
   src: string;
-  /** Accessible name. Required: an iframe has none otherwise. */
+  // Accessible name. Required: an iframe has none otherwise.
   title: string;
   caption?: ReactNode;
   maxWidth?: string | number;
   position?: Position;
-  /** `'16 / 9'`, `'1492 / 958'`, or `'auto'` to opt out. */
+  // '16 / 9', '1492 / 958', or 'auto'.
   aspectRatio?: string;
   poster?: string;
-  /** A .vtt file, local sources only. */
+  // A .vtt file, local sources only.
   captions?: string;
   captionsLang?: string;
   controls?: boolean | string;
   autoPlay?: boolean | string;
-  /** Alias: React drops raw lowercase DOM props, so authors need this to work. */
+  // Alias: React drops raw lowercase DOM props.
   autoplay?: boolean | string;
   loop?: boolean | string;
   muted?: boolean | string;
   playsInline?: boolean | string;
-  /** Alias, as above. */
+  // Alias, as above.
   playsinline?: boolean | string;
   preload?: 'none' | 'metadata' | 'auto';
   cornerRadius?: boolean | string;
@@ -95,8 +95,6 @@ function Video({
   let media: ReactNode;
 
   if (parsed.kind === 'embed') {
-    // No `...rest` here: video-only props such as poster or preload are not
-    // valid iframe attributes and React would warn about every one of them.
     media = (
       <iframe
         className={clsx(mediaClassName, styles.embed)}
@@ -114,14 +112,12 @@ function Video({
       <video
         className={clsx(mediaClassName, styles.video)}
         style={{aspectRatio: isAuto ? 'auto' : `auto ${aspectRatio}`, ...style}}
-        // Not `title`: that renders a hover tooltip, which is just noise.
         aria-label={title}
         poster={poster ? withBaseUrl(poster) : undefined}
         controls={asBool(controls, true)}
         preload={preload ?? (poster ? 'none' : 'metadata')}
         autoPlay={shouldAutoPlay}
         loop={asBool(loop, false)}
-        // Browsers block autoplay unless the video is muted.
         muted={asBool(muted, shouldAutoPlay)}
         playsInline={asBool(playsInline ?? playsinline, true)}
         {...rest}
@@ -140,10 +136,10 @@ function Video({
       </video>
     );
   } else {
-    // Never throw: an exception during the static build aborts it entirely and
+    // An exception during the static build aborts it entirely and
     // fails CI with an opaque stack trace. Warn loudly and render something the
-    // author cannot miss in review instead.
-    console.warn(`[Video] Unrecognised src, rendering a fallback link: ${src}`);
+    // author cannot miss.
+    console.warn(`[Video] Unrecognized src, rendering a fallback link: ${src}`);
     media = (
       <a className={styles.fallback} href={src}>
         {title || src}

@@ -1,11 +1,4 @@
-/**
- * Normalises the `video:` front matter key into a CompanionVideo.
- *
- * Pure and module-scope safe: no `window`, no `document`. Nothing here may
- * throw — this runs under SSR for every page in the site, and an exception
- * during the static build aborts it entirely with an opaque stack trace (the
- * same reasoning as the fallback branch in ../Video/index.tsx).
- */
+// Associates the `video:` front matter key with a CompanionVideo.
 
 import {parseSource, youTubeThumbnail} from '../Video/utils';
 import type {CompanionVideo, CompanionVideoFrontMatter} from './types';

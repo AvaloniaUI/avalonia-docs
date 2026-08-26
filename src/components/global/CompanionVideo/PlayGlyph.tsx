@@ -3,9 +3,6 @@ import React from 'react';
 /**
  * The play triangle inside the circular badge on a video thumbnail, shared by
  * the TOC card and the in-article button.
- *
- * Deliberately propless: the 16px intrinsic size is what the TOC card wants, and
- * the smaller in-article badge overrides it from CSS.
  */
 export default function PlayGlyph(): React.JSX.Element {
   return (

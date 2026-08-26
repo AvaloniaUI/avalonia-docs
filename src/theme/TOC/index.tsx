@@ -110,11 +110,7 @@ export default function TOC({ className, ...props }: Props): ReactNode {
           "Open in" dropdown, then the scrolling heading list. */}
       <h3 className={clsx(styles.tocHeading, 'uppercase')}>On this page</h3>
 
-      {/* Companion video, when the page declares one. It stays earlier in the
-          DOM than the dropdown on purpose: the dropdown panel is absolutely
-          positioned with z-40 and the card carries no z-index, so document
-          order paints the open panel above both the card and the heading list
-          without any z-index juggling. */}
+      {/* Companion video, when the page declares one. */}
       {companionVideo && (
         <CompanionVideoCard video={companionVideo} />
       )}

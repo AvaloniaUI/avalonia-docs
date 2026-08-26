@@ -5,16 +5,13 @@ interface VideoLightboxState<T extends HTMLElement> {
   isOpen: boolean;
   open: () => void;
   close: () => void;
-  /** Attach to the element that opens the dialog, so focus can return to it. */
+  // Attach to the element that opens the dialog, so focus can return to it.
   triggerRef: RefObject<T>;
 }
 
 /**
  * Open/close state for a trigger that shows the companion-video lightbox,
  * shared by the TOC thumbnail card and the in-article pill button.
- *
- * This is a hook rather than duplicated state because of the focus dance
- * below, which is easy to get subtly wrong.
  */
 export function useVideoLightbox<
   T extends HTMLElement = HTMLButtonElement,

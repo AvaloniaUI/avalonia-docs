@@ -12,7 +12,7 @@ interface VideoCardProps {
 }
 
 /**
- * The companion-video thumbnail, shown only in the desktop TOC panel. Wherever
+ * The companion video thumbnail, shown only in the desktop TOC panel. Wherever
  * that column is absent — below 997px, or on a page with no TOC at all — the
  * article renders ./VideoPillButton instead.
  *

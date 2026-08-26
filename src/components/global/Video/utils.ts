@@ -1,10 +1,4 @@
-/**
- * Source parsing for the <Video> component.
- *
- * Everything here is pure and module-scope safe: no `window`, no `document`, and
- * `new URL()` is guarded so a malformed `src` can never throw during the static
- * site build.
- */
+// Source parsing for the <Video> component.
 
 export type EmbedProvider = 'youtube' | 'vimeo';
 
@@ -13,11 +7,7 @@ export type ParsedSource =
   | {
       kind: 'embed';
       src: string;
-      /**
-       * Provider metadata, all optional so existing callers that only read
-       * `kind`/`src`/`type` keep type-checking. <Video> ignores these; they
-       * exist so a poster URL can be derived without re-parsing `src`.
-       */
+      // Provider metadata, all optional.
       provider?: EmbedProvider;
       videoId?: string;
       playlistId?: string;
@@ -158,7 +148,7 @@ export function parseSource(rawSrc: string): ParsedSource {
   const extension = extensionOf(src);
   if (!extension) return {kind: 'unknown', src};
 
-  // An unrecognised extension still renders <video>, just without a type hint.
+  // An unrecognized extension still renders <video>, just without a type hint.
   return {kind: 'file', src, type: MIME_TYPES[extension]};
 }
 
@@ -182,8 +172,7 @@ export function youTubeThumbnail(videoId: string): string {
 
 /**
  * Adds query parameters to an embed URL. Needed because parseYouTube always
- * emits `?rel=0` while parseVimeo's no-hash branch emits no query string at
- * all, so a hand-rolled `src + '&autoplay=1'` breaks on Vimeo.
+ * emits `?rel=0` while parseVimeo's no-hash branch emits no query string.
  */
 export function withEmbedParams(
   src: string,
@@ -202,7 +191,6 @@ export function withEmbedParams(
   }
 }
 
-/** MDX hands over strings for quoted props, and `"false"` must not read as true. */
 export function asBool(value: unknown, fallback: boolean): boolean {
   if (value === undefined || value === null) return fallback;
   if (typeof value === 'string') {

@@ -6,7 +6,7 @@
  * @link https://github.com/facebook/docusaurus/blob/main/packages/docusaurus-theme-classic/src/theme/DocItem/Content/index.tsx
  *
  * Reason for overriding:
- * - Render a page's companion video, as a pill button directly below the page
+ * - Render a page's companion video as a pill button directly below the page
  *   title. It lives here rather than in DocItem/Layout because the <h1> is
  *   rendered here, and the button has to follow it.
  */
@@ -49,8 +49,7 @@ export default function DocItemContent({children}: Props): ReactNode {
   const companionVideo = useCompanionVideo();
   const {frontMatter, toc} = useDoc();
 
-  // Whether this page gets a TOC column at all — the same test DocItem/Layout
-  // applies, minus its useWindowSize() check. The width half is left to the
+  // Whether this page gets a TOC column at all. The width half is left to the
   // `hiddenOnDesktop` media query, which is what actually hides the button
   // where the TOC panel's thumbnail card takes over.
   const hasTOCColumn = !frontMatter.hide_table_of_contents && toc.length > 0;
@@ -64,9 +63,8 @@ export default function DocItemContent({children}: Props): ReactNode {
       )}
       {/* Placed after the synthetic title so it reads as part of the page
           header. A page that writes its own `# H1` in the body gets no
-          synthetic title — its heading is the first node inside MDXContent
-          instead — so the button would sit above it. No page in this repo does
-          that today; they all take their title from front matter. */}
+          synthetic title, so the button would sit above it. For that reason,
+          every page with a companion video should take its title from front matter. */}
       {companionVideo && (
         <CompanionVideoButton
           video={companionVideo}
