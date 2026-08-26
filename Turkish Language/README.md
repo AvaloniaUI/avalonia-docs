@@ -19,9 +19,9 @@
 | | |
 | - | - |
 | **Toplam konu** | 250 |
-| **Tamamlanan ders** | 55 |
-| **Kalan ders** | 195 |
-| **İlerleme** | 55/250 (%22.0) |
+| **Tamamlanan ders** | 54 |
+| **Kalan ders** | 196 |
+| **İlerleme** | 54/250 (%22.0) |
 | **Tamamlanan bölüm** | 7/23 |
 
 
