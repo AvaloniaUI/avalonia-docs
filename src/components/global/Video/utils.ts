@@ -17,7 +17,7 @@ export type ParsedSource =
 const MIME_TYPES: Record<string, string> = {
   mp4: 'video/mp4',
   m4v: 'video/mp4',
-  mov: 'video/mp4',
+  mov: 'video/quicktime',
   webm: 'video/webm',
   ogv: 'video/ogg',
   ogg: 'video/ogg',
