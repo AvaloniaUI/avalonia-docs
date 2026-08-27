@@ -3,6 +3,9 @@ id: ui-composition
 title: UI composition
 description: Compose layouts from windows, built-in controls, user controls, and custom controls.
 doc-type: explanation
+video:
+  src: https://youtu.be/meSx__KuuSc
+  title: Avalonia UI Composition Explained — Control Types, Trees & Layout Hierarchy
 ---
 
 import CompositionBasicLayoutDiagram from '/img/concepts/core-concepts/ui-composition/composition-basic-layout.png';

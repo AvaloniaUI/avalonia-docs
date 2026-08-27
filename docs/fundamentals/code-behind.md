@@ -3,6 +3,9 @@ id: code-behind
 title: Code-behind
 description: Use code-behind files to access controls, set properties, and handle events from XAML.
 doc-type: explanation
+video:
+  src: https://youtu.be/cTreAu0Amyk
+  title: Avalonia Code-Behind Explained — Partial Classes, x:Name & Event Wiring
 ---
 
 import VsSolutionExplorerScreenshot from '/img/concepts/core-concepts/code-behind/vs-solution-explorer.png';

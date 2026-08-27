@@ -10,6 +10,7 @@ import type { Props } from '@theme/TOC';
 
 import styles from './styles.module.css';
 import { anthropic, openai, t3 } from '../TOCItems/icons';
+import { CompanionVideoCard, useCompanionVideo } from '@site/src/components/global/CompanionVideo';
 
 // SVG Icons
 const MarkdownIcon = () => (
@@ -69,6 +70,8 @@ export default function TOC({ className, ...props }: Props): ReactNode {
 
   // Get doc metadata and current URL
   const { metadata } = useDoc();
+  // Optional companion video declared by the page's `video:` front matter.
+  const companionVideo = useCompanionVideo();
   const { siteConfig } = useDocusaurusContext();
   const location = useLocation();
 
@@ -102,15 +105,21 @@ export default function TOC({ className, ...props }: Props): ReactNode {
   };
 
   return (
-    <div className={styles.tableOfContentsWrapper}>
-      {/* Header with title and dropdown */}
-      <div className="flex items-center justify-between mb-4 max-[1359px]:flex-col max-[1359px]:items-start max-[1359px]:gap-3">
-        <h3 className="m-0 max-[1359px]:mr-0 mr-4 uppercase" style={{ fontSize: '13px', fontWeight: 600, letterSpacing: '0.08em', color: 'var(--color-muted)' }}>On this page</h3>
-        <div className="relative inline-block max-[1359px]:w-full">
-          <button
-            onClick={toggleDropdown}
-            className={`dropdown-toggle ${styles.tocDropdownButton}`}
-          >
+    <div className={clsx(styles.tableOfContentsWrapper, companionVideo && styles.hasVideo)}>
+      {/* The panel is a plain vertical stack: heading, companion video, the
+          "Open in" dropdown, then the scrolling heading list. */}
+      <h3 className={clsx(styles.tocHeading, 'uppercase')}>On this page</h3>
+
+      {/* Companion video, when the page declares one. */}
+      {companionVideo && (
+        <CompanionVideoCard video={companionVideo} />
+      )}
+
+      <div className={styles.tocDropdownRow}>
+        <button
+          onClick={toggleDropdown}
+          className={`dropdown-toggle ${styles.tocDropdownButton}`}
+        >
           {buttonText}
           <ChevronDownIcon isOpen={isOpen} />
         </button>
@@ -194,7 +203,6 @@ export default function TOC({ className, ...props }: Props): ReactNode {
             )}
           </ul>
         </Dropdown>
-        </div>
       </div>
 
       <div className={clsx(styles.tableOfContents, 'thin-scrollbar', className)}>
