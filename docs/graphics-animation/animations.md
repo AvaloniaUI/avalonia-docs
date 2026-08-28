@@ -91,20 +91,34 @@ See [Composition Animations](/docs/graphics-animation/composition-animations) fo
 Keyframe animations defined in XAML rely on style selectors for their triggering behavior:
 
 - **Unconditional selector** (e.g., `Style Selector="Border"`): The animation starts when the control enters the visual tree.
-- **Conditional selector** (e.g., `Style Selector="Border:pointerover"`): The animation runs when the selector matches (pointer is over the border) and stops when it no longer matches.
+- **Conditional selector** (e.g., `Style Selector="Border:pointerover"`): The animation runs when the selector condition matches (e.g., pointer is over the border) and stops when it no longer matches.
+
+<XamlPreview>
 
 ```xml
-<Style Selector="Border:pointerover">
-    <Style.Animations>
-        <Animation Duration="0:0:0.3">
+<UserControl xmlns="https://github.com/avaloniaui">
+  <UserControl.Styles>
+    <Style Selector="Border:pointerover">
+      <Style.Animations>
+        <Animation Duration="0:0:2">
             <KeyFrame Cue="100%">
-                <Setter Property="ScaleTransform.ScaleX" Value="1.1" />
-                <Setter Property="ScaleTransform.ScaleY" Value="1.1" />
+                <Setter Property="ScaleTransform.ScaleX" Value="1.5" />
+                <Setter Property="ScaleTransform.ScaleY" Value="1.5" />
             </KeyFrame>
         </Animation>
-    </Style.Animations>
-</Style>
+      </Style.Animations>
+    </Style>
+  </UserControl.Styles>
+
+  <Border Width="100" Height="100" Background="blue" />
+</UserControl>
 ```
+
+</XamlPreview>
+
+:::info
+By default, a style-applied keyframe animation pauses when its control is effectively invisible, and resumes when the control is visible again. See [Playback behavior](/docs/graphics-animation/keyframe-animations#playback-behavior).
+:::
 
 ## Animation settings
 
@@ -114,10 +128,11 @@ Keyframe animations support these configuration options:
 |---|---|---|
 | `Duration` | How long one cycle takes. | `0:0:1` (1 second) |
 | `Delay` | Time to wait before starting. | `0:0:0.5` |
-| `IterationCount` | Number of times to repeat. Use `INFINITE` for forever. | `3`, `INFINITE` |
-| `PlaybackDirection` | Direction of playback. | `Normal`, `Reverse`, `Alternate`, `AlternateReverse` |
-| `FillMode` | What happens when the animation ends. | `Forward`, `Backward`, `Both`, `None` |
 | `Easing` | The interpolation curve between keyframes. | `CubicEaseInOut` |
+| `FillMode` | What happens when the animation ends. | `Forward`, `Backward`, `Both`, `None` |
+| `IterationCount` | Number of times to repeat. Use `infinite` for forever. | `3`, `INFINITE` |
+| `PlaybackBehavior` | Whether to pause the animation when the control is hidden. | 
+| `PlaybackDirection` | Direction of playback. | `Normal`, `Reverse`, `Alternate`, `AlternateReverse` | `Auto`, `Always`, `OnlyIfVisible` |
 
 See [Animation Settings](/docs/graphics-animation/animation-settings) for details on each option and [Easing Functions](/docs/graphics-animation/easing-functions) for all available easing types.
 
