@@ -3,6 +3,9 @@ id: the-mvvm-pattern
 title: The MVVM pattern
 description: Separate UI from logic using the Model-View-ViewModel pattern with data binding.
 doc-type: explanation
+video:
+  src: https://youtu.be/nD4d51p6ryg
+  title: Avalonia MVVM Explained — Why Your UI Updates Automatically
 ---
 
 import MvvmPatternDiagram from '/img/concepts/architecture/mvvm/mvvm-architecture.png';

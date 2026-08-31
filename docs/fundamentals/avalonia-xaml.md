@@ -3,6 +3,9 @@ id: avalonia-xaml
 title: Avalonia XAML
 description: Learn the XAML markup language used to define Avalonia user interfaces.
 doc-type: explanation
+video:
+  src: https://youtu.be/kDYULQBg8rI
+  title: Avalonia XAML Explained — Namespaces, Bindings & Code Behind
 ---
 
 Avalonia uses XAML to define user interfaces. XAML is an XML-based markup language that is used by many UI frameworks.

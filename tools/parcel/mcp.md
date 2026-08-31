@@ -314,9 +314,7 @@ Describe what you want to accomplish in natural language. The AI assistant calls
 "Update my app's display name and icon, then rebuild the Windows installer."
 ```
 
-<video controls width="90%">
-  <source src="/video/parcel/parcel_mcp.mp4" />
-</video>
+<Video src="/video/parcel/parcel_mcp.mp4" title="Parcel MCP server in action" aspectRatio="1492 / 958" maxWidth="100%" />
 
 ## See also
 

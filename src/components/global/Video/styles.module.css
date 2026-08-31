@@ -1,0 +1,66 @@
+.root {
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+  margin: 1.5rem 0;
+}
+
+.figure {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+}
+
+.frame {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border: 0;
+}
+
+/*
+ * Overrides the global `iframe` rule in src/styles/custom.scss, which applies
+ * an offset drop shadow to every iframe on the site.
+ */
+.embed {
+  aspect-ratio: 16 / 9;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+/*
+ * `auto <ratio>` to avoid permanently letterboxing anything that isn't 16:9.
+ */
+.video {
+  aspect-ratio: auto 16 / 9;
+  background-color: #000;
+  object-fit: contain;
+}
+
+.cornerRadius {
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.caption {
+  margin: 0;
+  color: var(--ifm-color-emphasis-700);
+  font-size: 0.875rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* Deliberately hard to miss: an unrecognized src should not ship unnoticed. */
+.fallback {
+  display: block;
+  padding: 1rem;
+  border: 1px dashed var(--ifm-color-danger);
+  border-radius: 8px;
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 0.875rem;
+  word-break: break-all;
+}

@@ -3,6 +3,9 @@ id: top-level
 title: Top level
 description: Access windowing, clipboard, storage, and other services through the TopLevel base class.
 doc-type: reference
+video:
+  src: https://youtu.be/sgLcNJiYRj8
+  title: Avalonia TopLevel vs MainWindow — GetTopLevel, Clipboard & FocusManager
 ---
 
 The [`TopLevel`](/api/avalonia/controls/toplevel) acts as the visual root, and is the base class for all top level controls, for example [`Window`](/api/avalonia/controls/window). It handles scheduling layout, styling and rendering as well as keeping track of the client size. Most services are accessed through the `TopLevel`.
