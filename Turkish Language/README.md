@@ -19,10 +19,10 @@
 | | |
 | - | - |
 | **Toplam konu** | 250 |
-| **Tamamlanan ders** | 54 |
-| **Kalan ders** | 196 |
-| **İlerleme** | 54/250 (%22.0) |
-| **Tamamlanan bölüm** | 7/23 |
+| **Tamamlanan ders** | 68 |
+| **Kalan ders** | 182 |
+| **İlerleme** | 68/250 (%27.2) |
+| **Tamamlanan bölüm** | 7/23 (Bölüm 8 sürüyor: 14/25) |
 
 
 ## C01.2. BÖLÜM BAZINDA DURUM
@@ -38,7 +38,7 @@
 | 5 | XAML Referansı | 7/7 | ✅ Tamamlandı |
 | 6 | Yerleşim (Layout) | 4/4 | ✅ Tamamlandı |
 | 7 | Stillendirme | 17/17 | ✅ Tamamlandı |
-| 8 | Veri Bağlama | 1/25 | 🔄 Devam ediyor |
+| 8 | Veri Bağlama | 14/25 | 🔄 Devam ediyor |
 | 9 | Veri Şablonları | 0/8 | ⬜ Başlanmadı |
 | 10 | Özellik Sistemi | 0/4 | ⬜ Başlanmadı |
 | 11 | Olaylar | 0/3 | ⬜ Başlanmadı |
@@ -150,20 +150,20 @@
 
 | # | Durum | Ders | Topic ID | Kaynak |
 | - | ----- | ---- | -------- | ------ |
-| 55 | ⬜ | Veri Bağlama | `data-binding` | https://docs.avaloniaui.net/docs/data-binding/introduction-to-data-binding |
-| 56 | ⬜ | &nbsp;&nbsp;↳ Veri Bağlamaya Giriş | `introduction-to-data-binding` | https://docs.avaloniaui.net/docs/data-binding/introduction-to-data-binding |
-| 57 | ⬜ | &nbsp;&nbsp;↳ Veri Bağlama Söz Dizimi | `data-binding-syntax` | https://docs.avaloniaui.net/docs/data-binding/data-binding-syntax |
-| 58 | ⬜ | &nbsp;&nbsp;↳ Veri Bağlamı (DataContext) | `data-context` | https://docs.avaloniaui.net/docs/data-binding/data-context |
-| 59 | ⬜ | &nbsp;&nbsp;↳ Derlenmiş Bağlamalar | `compiled-bindings` | https://docs.avaloniaui.net/docs/data-binding/compiled-bindings |
-| 60 | ⬜ | &nbsp;&nbsp;↳ İşaretleme Uzantıları | `data-binding-markup-extensions` | https://docs.avaloniaui.net/docs/data-binding/markup-extensions |
-| 61 | ⬜ | &nbsp;&nbsp;↳ Koddan Bağlama Nasıl Yapılır | `bind-from-code` | https://docs.avaloniaui.net/docs/data-binding/binding-from-code |
-| 62 | ⬜ | &nbsp;&nbsp;↳ Bir Kontrole Bağlama Nasıl Yapılır | `bind-to-control` | https://docs.avaloniaui.net/docs/data-binding/binding-to-controls |
-| 63 | ⬜ | &nbsp;&nbsp;↳ Stil Sınıflarına Bağlama Nasıl Yapılır | `bind-style-classes` | https://docs.avaloniaui.net/docs/data-binding/binding-classes |
-| 64 | ⬜ | &nbsp;&nbsp;↳ INotifyPropertyChanged Nasıl Kullanılır | `inotifypropertychanged` | https://docs.avaloniaui.net/docs/data-binding/inotifypropertychanged |
-| 65 | ⬜ | &nbsp;&nbsp;↳ Bir Koleksiyona Bağlama Nasıl Yapılır | `bind-to-collection` | https://docs.avaloniaui.net/docs/data-binding/how-to-bind-to-a-collection |
-| 66 | ⬜ | &nbsp;&nbsp;↳ Birden Fazla Özelliğe Bağlama Nasıl Yapılır | `bind-multiple-properties` | https://docs.avaloniaui.net/docs/data-binding/how-to-bind-multiple-properties |
-| 67 | ⬜ | &nbsp;&nbsp;↳ Bir Task Sonucuna Bağlama Nasıl Yapılır | `bind-to-task-result` | https://docs.avaloniaui.net/docs/data-binding/how-to-bind-to-a-task-result |
-| 68 | ⬜ | &nbsp;&nbsp;↳ Bir Observable'a Bağlama Nasıl Yapılır | `bind-to-observable` | https://docs.avaloniaui.net/docs/data-binding/how-to-bind-to-an-observable |
+| 55 | ✅ | Veri Bağlama | `data-binding` | https://docs.avaloniaui.net/docs/data-binding/introduction-to-data-binding |
+| 56 | ✅ | &nbsp;&nbsp;↳ Veri Bağlamaya Giriş | `introduction-to-data-binding` | https://docs.avaloniaui.net/docs/data-binding/introduction-to-data-binding |
+| 57 | ✅ | &nbsp;&nbsp;↳ Veri Bağlama Söz Dizimi | `data-binding-syntax` | https://docs.avaloniaui.net/docs/data-binding/data-binding-syntax |
+| 58 | ✅ | &nbsp;&nbsp;↳ Veri Bağlamı (DataContext) | `data-context` | https://docs.avaloniaui.net/docs/data-binding/data-context |
+| 59 | ✅ | &nbsp;&nbsp;↳ Derlenmiş Bağlamalar | `compiled-bindings` | https://docs.avaloniaui.net/docs/data-binding/compiled-bindings |
+| 60 | ✅ | &nbsp;&nbsp;↳ İşaretleme Uzantıları | `data-binding-markup-extensions` | https://docs.avaloniaui.net/docs/data-binding/markup-extensions |
+| 61 | ✅ | &nbsp;&nbsp;↳ Koddan Bağlama Nasıl Yapılır | `bind-from-code` | https://docs.avaloniaui.net/docs/data-binding/binding-from-code |
+| 62 | ✅ | &nbsp;&nbsp;↳ Bir Kontrole Bağlama Nasıl Yapılır | `bind-to-control` | https://docs.avaloniaui.net/docs/data-binding/binding-to-controls |
+| 63 | ✅ | &nbsp;&nbsp;↳ Stil Sınıflarına Bağlama Nasıl Yapılır | `bind-style-classes` | https://docs.avaloniaui.net/docs/data-binding/binding-classes |
+| 64 | ✅ | &nbsp;&nbsp;↳ INotifyPropertyChanged Nasıl Kullanılır | `inotifypropertychanged` | https://docs.avaloniaui.net/docs/data-binding/inotifypropertychanged |
+| 65 | ✅ | &nbsp;&nbsp;↳ Bir Koleksiyona Bağlama Nasıl Yapılır | `bind-to-collection` | https://docs.avaloniaui.net/docs/data-binding/how-to-bind-to-a-collection |
+| 66 | ✅ | &nbsp;&nbsp;↳ Birden Fazla Özelliğe Bağlama Nasıl Yapılır | `bind-multiple-properties` | https://docs.avaloniaui.net/docs/data-binding/how-to-bind-multiple-properties |
+| 67 | ✅ | &nbsp;&nbsp;↳ Bir Task Sonucuna Bağlama Nasıl Yapılır | `bind-to-task-result` | https://docs.avaloniaui.net/docs/data-binding/how-to-bind-to-a-task-result |
+| 68 | ✅ | &nbsp;&nbsp;↳ Bir Observable'a Bağlama Nasıl Yapılır | `bind-to-observable` | https://docs.avaloniaui.net/docs/data-binding/how-to-bind-to-an-observable |
 | 69 | ⬜ | &nbsp;&nbsp;↳ Görsel Dosyalarına Bağlama Nasıl Yapılır | `bind-image-files` | https://docs.avaloniaui.net/docs/data-binding/how-to-bind-image-files |
 | 70 | ⬜ | &nbsp;&nbsp;↳ Sekmelere Bağlama Nasıl Yapılır | `bind-tabs` | https://docs.avaloniaui.net/docs/data-binding/how-to-bind-tabs |
 | 71 | ⬜ | &nbsp;&nbsp;↳ CanExecute Bağlaması Nasıl Yapılır | `bind-can-execute` | https://docs.avaloniaui.net/docs/data-binding/how-to-bind-can-execute |
@@ -424,14 +424,14 @@
 
 ## C01.4. SIRADAKİ DERS
 
-**Veri Bağlama** (data-binding)
+**Görsel Dosyalarına Bağlama Nasıl Yapılır** (How to bind image files)
 
 | | |
 | - | - |
-| **Topic ID** | `data-binding` |
-| **Kaynak** | https://docs.avaloniaui.net/docs/data-binding/introduction-to-data-binding |
+| **Topic ID** | `bind-image-files` |
+| **Kaynak** | https://docs.avaloniaui.net/docs/data-binding/how-to-bind-image-files |
 | **Bölüm** | 8 — Veri Bağlama |
-| **Ders**  | Veri Bağlama | `data-binding` | https://docs.avaloniaui.net/docs/data-binding/introduction-to-data-binding
+| **Liste sırası** | 69 |
 
 
 
