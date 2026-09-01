@@ -151,7 +151,7 @@ For a full list of `FillMode` options, see the [animation settings reference](/d
 
 By default, a keyframe animation pauses when its target control is not effectively visible. When the control becomes visible again, the animation resumes from where it paused.
 
-You can change this behavior by setting the playback behavior attribute.
+You can change this behavior by setting the `PlaybackBehavior` attribute.
 
 ```xml
 <Animation Duration="0:0:1" IterationCount="infinite" PlaybackBehavior="Always">
@@ -204,7 +204,7 @@ For a full list of easing functions, see the [animation settings reference](/doc
 
 For deeper control of the animation lifetime, you can define an animation as a `Resource`, so it can be used in the code-behind.
 
-When defining an animation as a resource, you must set an `x:Key` to allow the animation to be accessed, a well as an `x:SetterTargetType` to specify the target control.
+When defining an animation as a resource, you must set an `x:Key` to allow the animation to be accessed, as well as an `x:SetterTargetType` to specify the target control.
 
 ```xml
 <Window xmlns="https://github.com/avaloniaui">

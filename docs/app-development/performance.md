@@ -182,7 +182,7 @@ myControl2.Height = 200;
 
 Setting `IsVisible="False"` can reduce work for conditionally shown content by removing a control from both layout and rendering. The layout system skips the measure and arrange passes for that control and its entire subtree, and the renderer does not draw it.
 
-In addition, hiding a control also pauses any [keyframe animations]((/docs/graphics-animation/keyframe-animations#playback-behavior)) running on it or its subtree, which stops them from waking the CPU on an idle UI.
+In addition, hiding a control also pauses any [keyframe animations](/docs/graphics-animation/keyframe-animations#playback-behavior) running on it or its subtree by default, which stops them from waking the CPU on an idle UI.
 
 ```xml
 <Panel>

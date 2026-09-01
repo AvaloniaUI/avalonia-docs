@@ -92,7 +92,7 @@ This behavior is intended to avoid waking the CPU to run animations the user can
 
 | Value           | Description             |
 | ----------------| ----------------------- |
-| `Auto`          | (Default) Animation pauses when the control is not effectively visible. Does not apply if the animation started with `RunAsync`, or if any keyframes of the animation set `IsVisible="True"`. |
+| `Auto`          | (Default) Animation pauses when the control is not effectively visible. Animations started with `RunAsync`, or containing keyframes where `IsVisible="True"`, always play regardless of visibility. |
 | `Always`        | Animation always plays, regardless of visibility. |
 | `OnlyIfVisible` | Animation always pauses when the control is not effectively visible, even if started with `RunAsync`. |
 

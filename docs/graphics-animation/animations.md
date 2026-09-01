@@ -131,8 +131,8 @@ Keyframe animations support these configuration options:
 | `Easing` | The interpolation curve between keyframes. | `CubicEaseInOut` |
 | `FillMode` | What happens when the animation ends. | `Forward`, `Backward`, `Both`, `None` |
 | `IterationCount` | Number of times to repeat. Use `infinite` for forever. | `3`, `INFINITE` |
-| `PlaybackBehavior` | Whether to pause the animation when the control is hidden. | 
-| `PlaybackDirection` | Direction of playback. | `Normal`, `Reverse`, `Alternate`, `AlternateReverse` | `Auto`, `Always`, `OnlyIfVisible` |
+| `PlaybackBehavior` | Whether to pause the animation when the control is hidden. | `Normal`, `Reverse`, `Alternate`, `AlternateReverse` |
+| `PlaybackDirection` | Direction of playback. | `Auto`, `Always`, `OnlyIfVisible` |
 
 See [Animation Settings](/docs/graphics-animation/animation-settings) for details on each option and [Easing Functions](/docs/graphics-animation/easing-functions) for all available easing types.
 
