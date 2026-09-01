@@ -60,14 +60,14 @@ const XpfAdvert = () => {
           {/* Buttons */}
           <div className="flex items-center justify-center gap-4 flex-wrap">
             <a
-              href="https://avaloniaui.net/xpf?utm_source=docs&utm_medium=referral&utm_content=advert#get-started"
+              href="https://avaloniaui.net/xpf?av_source=docs&av_medium=advert&av_content=xpf-get-started#get-started"
               className="inline-flex items-center px-6 py-3 bg-white text-gray-900 rounded-full text-sm font-medium transition-all hover:bg-gray-100 hover:shadow-lg"
             >
               Try it now
               <ArrowIcon />
             </a>
             <a
-              href="https://avaloniaui.net/xpf?utm_source=docs&utm_medium=referral&utm_content=advert#pricing"
+              href="https://avaloniaui.net/xpf?av_source=docs&av_medium=advert&av_content=xpf-pricing#pricing"
               className="inline-flex items-center px-6 py-3 text-white text-sm font-medium transition-all hover:text-gray-300"
             >
               See plans

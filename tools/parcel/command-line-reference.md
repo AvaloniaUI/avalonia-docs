@@ -135,14 +135,14 @@ parcel step bundle-mac ./merged ./bundle.app -p project.parcel
 # signing, with parameters populated from .parcel config file
 parcel step sign-mac ./bundle.app ./signed.app -p project.parcel
 
-# notarization
-parcel step notary-mac ./signed.app ./notarized.app -p project.parcel
-
 # DMG package
-parcel step create-dmg ./notarized.app ./package.dmg -p project.parcel
+parcel step create-dmg ./signed.app ./package.dmg -p project.parcel
 
 # or ZIP archive
-parcel step create-zip ./notarized.app ./archive.zip -p project.parcel
+parcel step create-zip ./signed.app ./archive.zip -p project.parcel
+
+# notarization (can be applied on either ZIP, DMG or PKG input)
+parcel step notary-mac ./archive.zip ./notarized.app -p project.parcel
 ```
 
 :::note

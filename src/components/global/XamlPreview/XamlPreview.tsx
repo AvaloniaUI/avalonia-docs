@@ -130,6 +130,17 @@ export default function XamlPreview({
           
           // Set up event listeners
           element.addEventListener('viewcreated', () => {
+            // Avalonia's browser backend calls host.focus() on the view's container div
+            // whenever the top-level raises GotFocus. With more than one preview on a page
+            // the views trade focus back and forth, and focus()'s default scroll-into-view
+            // drags the page between them. Keep the focus, drop the scrolling.
+            const host = element.querySelector<HTMLElement>('.avalonia-container');
+            if (host) {
+              const nativeFocus = host.focus.bind(host);
+              host.focus = (options?: FocusOptions) =>
+                nativeFocus({ ...options, preventScroll: true });
+            }
+
             if (mounted) {
               setError(null);
               setIsLoading(false);

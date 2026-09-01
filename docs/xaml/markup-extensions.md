@@ -108,7 +108,9 @@ A lightweight binding used inside `ControlTemplate` definitions that binds to a 
 `TemplateBinding` is equivalent to `{Binding RelativeSource={RelativeSource TemplatedParent}}` but more efficient.
 
 :::info
-`TemplateBinding` only supports `OneWay` mode. If you need `TwoWay` binding inside a template, use `{Binding RelativeSource={RelativeSource TemplatedParent}}` instead.
+`TemplateBinding` supports `OneWay` and `TwoWay` modes. It defaults to `OneWay`, so request `TwoWay` explicitly when you need the value written back: `{TemplateBinding Value, Mode=TwoWay}`.
+
+`OneTime` and `OneWayToSource` are not supported.
 :::
 
 ## OnPlatform

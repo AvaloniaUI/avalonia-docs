@@ -23,6 +23,7 @@ const config: Config = {
   onBrokenLinks: 'warn',
   onBrokenAnchors: 'warn',
   onBrokenMarkdownLinks: 'warn',
+  clientModules: ['./src/clientModules/analyticsClient.ts'],
   headTags: [
     {
       tagName: "link",
@@ -323,7 +324,9 @@ gtag('consent', 'default', {
       respectPrefersColorScheme: true,
     },
     zoom: {
-      selector: '.markdown :not(em) > img:not(.Card-icon):not(.Card-image)',
+      // `.no-zoom` is the opt-out for a decorative image that owns its own click
+      // behavior, e.g., the companion video thumbnail.
+      selector: '.markdown :not(em) > img:not(.Card-icon):not(.Card-image):not(.no-zoom)',
       background: {
         light: 'rgb(196, 196, 196)',
         dark: 'rgb(17, 17, 19)'
@@ -378,7 +381,7 @@ gtag('consent', 'default', {
             },
             {
               label: 'Enhanced Support',
-              href: 'https://avaloniaui.net/support?utm_source=docs&utm_medium=referral&utm_content=nav_link',
+              href: 'https://avaloniaui.net/support?av_source=docs&av_medium=nav_link&av_content=support',
               target: '_blank',
               rel: null
             },

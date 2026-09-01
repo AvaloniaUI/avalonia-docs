@@ -3,6 +3,9 @@ id: top-level
 title: Top level
 description: Access windowing, clipboard, storage, and other services through the TopLevel base class.
 doc-type: reference
+video:
+  src: https://youtu.be/sgLcNJiYRj8
+  title: Avalonia TopLevel vs MainWindow — GetTopLevel, Clipboard & FocusManager
 ---
 
 The [`TopLevel`](/api/avalonia/controls/toplevel) acts as the visual root, and is the base class for all top level controls, for example [`Window`](/api/avalonia/controls/window). It handles scheduling layout, styling and rendering as well as keeping track of the client size. Most services are accessed through the `TopLevel`.
@@ -190,12 +193,9 @@ event EventHandler ScalingChanged;
 
 ### GetTopLevel
 
-Gets the `TopLevel` for which the given `Visual` is hosted in.
+Gets the `TopLevel` in which the given `Visual` is hosted.
 
-#### Parameters
-
-`control`
-The visual to query its TopLevel
+The `visual` parameter indicates the visual to be queried.
 
 ```csharp
 static TopLevel? GetTopLevel(Visual? visual)
@@ -205,14 +205,11 @@ static TopLevel? GetTopLevel(Visual? visual)
 
 Enqueues a callback to be called on the next animation tick. The callback runs on the UI thread, synchronized with Avalonia's rendering cycle. Each call schedules a single invocation. To create a continuous animation loop, call `RequestAnimationFrame` again from within the callback.
 
+The `action` parameter receives a `TimeSpan` representing the elapsed time since the animation system started. Use this value to calculate frame-independent animation progress.
+
 ```csharp
 void RequestAnimationFrame(Action<TimeSpan> action)
 ```
-
-#### Parameters
-
-`action`
-A callback that receives a `TimeSpan` representing the elapsed time since the animation system started. Use this value to calculate frame-independent animation progress.
 
 #### Example: continuous animation loop
 

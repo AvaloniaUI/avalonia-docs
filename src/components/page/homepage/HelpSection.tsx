@@ -6,19 +6,19 @@ const helpCards = [
   {
     title: 'Enhanced Support',
     description: 'Partner with the creators of Avalonia to ensure you have full support, every step of the way.',
-    link: 'https://avaloniaui.net/support?utm_source=docs&utm_medium=referral&utm_content=homepage_link',
+    link: 'https://avaloniaui.net/support?av_source=docs&av_medium=homepage_link&av_content=support',
     linkText: 'Explore Subscriptions',
   },
   {
     title: 'Development Services',
     description: "Whether it's app modernization, custom controls or additional features, we're here to help.",
-    link: 'https://avaloniaui.net/services?utm_source=docs&utm_medium=referral&utm_content=homepage_link',
+    link: 'https://avaloniaui.net/services?av_source=docs&av_medium=homepage_link&av_content=services',
     linkText: 'Learn More',
   },
   {
     title: 'FAQs',
     description: 'Browse our FAQs to find answers to commonly asked questions.',
-    link: 'https://avaloniaui.net/faq?utm_source=docs&utm_medium=referral&utm_content=homepage_link',
+    link: 'https://avaloniaui.net/faq?av_source=docs&av_medium=homepage_link&av_content=faq',
     linkText: 'View FAQs',
   },
 ];

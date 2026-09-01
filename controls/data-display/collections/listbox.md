@@ -62,7 +62,7 @@ You will probably use these properties most often:
     </tr>
     <tr>
       <td><code>ItemsPanel</code></td>
-      <td>The container panel to place items in. See [this page](/docs/custom-controls/custom-itemspanel) to customise the ItemsPanel.</td>
+      <td>The container panel to place items in. See [Custom panel](/docs/how-to/itemscontrol-how-to#custom-panel) for how to customize the `ItemsPanel`.</td>
     </tr>
     <tr>
       <td><code>Styles</code></td>
