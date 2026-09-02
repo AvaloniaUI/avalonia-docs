@@ -180,7 +180,9 @@ myControl2.Height = 200;
 
 ### Hiding unused controls with `IsVisible`
 
-Setting `IsVisible="False"` removes a control from both layout and rendering. The layout system skips the measure and arrange passes for that control and its entire subtree, and the renderer does not draw it. This makes `IsVisible` an effective way to reduce work for conditionally shown content:
+Setting `IsVisible="False"` can reduce work for conditionally shown content by removing a control from both layout and rendering. The layout system skips the measure and arrange passes for that control and its entire subtree, and the renderer does not draw it.
+
+In addition, hiding a control also pauses any [keyframe animations](/docs/graphics-animation/keyframe-animations#playback-behavior) running on it or its subtree by default, which stops them from waking the CPU on an idle UI.
 
 ```xml
 <Panel>
@@ -190,7 +192,7 @@ Setting `IsVisible="False"` removes a control from both layout and rendering. Th
 </Panel>
 ```
 
-If you need to hide a control visually while keeping its layout space reserved, use `Opacity="0"` instead. An element with `Opacity="0"` still participates in layout and can receive input.
+If you need to hide a control visually while keeping its layout space reserved, use `Opacity="0"` instead. An element with `Opacity="0"` still participates in layout, can receive input, and its keyframe animations continue playing.
 
 ### Using `ClipToBounds` judiciously
 
