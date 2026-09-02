@@ -53,6 +53,7 @@ const sidebars: SidebarsConfig = {
         },
       ],
     },
+    'hot-reload/index',
     {
       type: 'category',
       label: 'Parcel',
