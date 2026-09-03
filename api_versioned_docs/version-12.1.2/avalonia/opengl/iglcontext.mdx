@@ -1,0 +1,191 @@
+---
+title: 'IGlContext'
+hide_title: true
+slug: '/avalonia/opengl/iglcontext'
+uid: 'Avalonia.OpenGL.IGlContext'
+commentId: 'T:Avalonia.OpenGL.IGlContext'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.OpenGL'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.OpenGL'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IGlContext Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.OpenGL</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.OpenGL</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface IGlContext
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="../ioptionalfeatureprovider">IOptionalFeatureProvider</a>, <a href="../platform/iplatformgraphicscontext">IPlatformGraphicsContext</a>, IDisposable
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [CreateSharedContext](#uid-eee09a5ec2) | No summary available. |
+| [IsSharedWith](#uid-d6dd56a861) | No summary available. |
+| [MakeCurrent](#uid-11e495a1aa) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-eee09a5ec2"></span>
+
+### CreateSharedContext Method
+
+```csharp
+public Avalonia.OpenGL.IGlContext CreateSharedContext(System.Collections.Generic.IEnumerable<Avalonia.OpenGL.GlVersion> preferredVersions)
+```
+
+#### Parameters
+
+`preferredVersions` System.Collections.Generic.IEnumerable&lt;[Avalonia.OpenGL.GlVersion](xref:Avalonia.OpenGL.GlVersion)&gt;
+
+
+#### Returns
+
+[Avalonia.OpenGL.IGlContext](xref:Avalonia.OpenGL.IGlContext)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d6dd56a861"></span>
+
+### IsSharedWith Method
+
+```csharp
+public bool IsSharedWith(Avalonia.OpenGL.IGlContext context)
+```
+
+#### Parameters
+
+`context` [Avalonia.OpenGL.IGlContext](xref:Avalonia.OpenGL.IGlContext)
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-11e495a1aa"></span>
+
+### MakeCurrent Method
+
+```csharp
+public IDisposable MakeCurrent()
+```
+
+#### Returns
+
+IDisposable
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [CanCreateSharedContext](#uid-17c5f125b2) | No summary available. |
+| [GlInterface](#uid-c96ae577e5) | No summary available. |
+| [SampleCount](#uid-282a4d64b5) | No summary available. |
+| [StencilSize](#uid-a25554c545) | No summary available. |
+| [Version](#uid-c6ca0050a6) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-17c5f125b2"></span>
+
+### CanCreateSharedContext Property
+
+```csharp
+public bool CanCreateSharedContext { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c96ae577e5"></span>
+
+### GlInterface Property
+
+```csharp
+public Avalonia.OpenGL.GlInterface GlInterface { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-282a4d64b5"></span>
+
+### SampleCount Property
+
+```csharp
+public int SampleCount { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a25554c545"></span>
+
+### StencilSize Property
+
+```csharp
+public int StencilSize { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c6ca0050a6"></span>
+
+### Version Property
+
+```csharp
+public Avalonia.OpenGL.GlVersion Version { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

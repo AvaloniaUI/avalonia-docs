@@ -1,0 +1,165 @@
+---
+title: 'PaddingAction'
+hide_title: true
+slug: '/avalonia/controls/documents/primitives/actions/paddingaction'
+uid: 'Avalonia.Controls.Documents.Primitives.Actions.PaddingAction'
+commentId: 'T:Avalonia.Controls.Documents.Primitives.Actions.PaddingAction'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.RichTextEditor'
+assembly: 'Avalonia.Controls.RichTextEditor'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.Primitives.Actions'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">PaddingAction Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.Primitives.Actions</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.RichTextEditor</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.RichTextEditor</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Action for setting uniform padding on block elements (Paragraph, Section, etc.).
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class PaddingAction
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> BlockPropertyAction&lt;Thickness&gt; <span className="apiref-page__relation-separator">-&gt;</span> PaddingAction
+</div>
+</div>
+
+## Remarks
+
+Padding controls the spacing inside the block element's border,
+between the border and the content. This action sets uniform padding on all four sides.
+
+Common padding values:
+
+- 0 - No padding (content touches border)
+- 5 - Minimal internal spacing
+- 10 - Comfortable reading space
+- 15 - Generous internal spacing
+- 20 - Large padding for callout boxes
+
+Padding is particularly useful when combined with borders or backgrounds to create
+visually distinct blocks like quotes, code blocks, or callouts.
+
+When applied to a selection spanning multiple paragraphs, all affected paragraphs
+will have their padding set to the specified value.
+
+Note: This action sets uniform padding only. For non-uniform padding
+(different values for each side), use a dedicated padding editor panel.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [PaddingAction](#uid-f30b1252f0) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f30b1252f0"></span>
+
+### PaddingAction Constructor
+
+```csharp
+public PaddingAction()
+```
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [GetAvailableValues](#uid-62c8c9dcbc) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-62c8c9dcbc"></span>
+
+### GetAvailableValues Method
+
+```csharp
+public System.Collections.Generic.IEnumerable<Avalonia.Thickness> GetAvailableValues()
+```
+
+#### Returns
+
+System.Collections.Generic.IEnumerable&lt;[Avalonia.Thickness](xref:Avalonia.Thickness)&gt;
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [DisplayName](#uid-9ba9e02f4e) | No summary available. |
+| [Gesture](#uid-ce5c5368b7) | No summary available. |
+| [Id](#uid-a739eae379) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9ba9e02f4e"></span>
+
+### DisplayName Property
+
+```csharp
+public string DisplayName { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ce5c5368b7"></span>
+
+### Gesture Property
+
+```csharp
+public Avalonia.Input.KeyGesture Gesture { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a739eae379"></span>
+
+### Id Property
+
+```csharp
+public string Id { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

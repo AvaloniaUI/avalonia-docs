@@ -1,0 +1,140 @@
+---
+title: 'IActivatableLifetime'
+hide_title: true
+slug: '/avalonia/controls/applicationlifetimes/iactivatablelifetime'
+uid: 'Avalonia.Controls.ApplicationLifetimes.IActivatableLifetime'
+commentId: 'T:Avalonia.Controls.ApplicationLifetimes.IActivatableLifetime'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.ApplicationLifetimes'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IActivatableLifetime Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.ApplicationLifetimes</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+An interface for ApplicationLifetimes where the application can be Activated and Deactivated.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface IActivatableLifetime
+```
+
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [TryEnterBackground](#uid-b7246cb4e0) | Tells the application that it should attempt to enter its background state. For example on OSX this would be [NSApp hide] |
+| [TryLeaveBackground](#uid-521fff87f7) | Tells the application that it should attempt to leave its background state. For example on OSX this would be [NSApp unhide] |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b7246cb4e0"></span>
+
+### TryEnterBackground Method
+
+Tells the application that it should attempt to enter its background state.
+For example on OSX this would be [NSApp hide]
+
+```csharp
+public bool TryEnterBackground()
+```
+
+#### Returns
+
+bool
+
+true if it was possible and the platform supports this. false otherwise
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-521fff87f7"></span>
+
+### TryLeaveBackground Method
+
+Tells the application that it should attempt to leave its background state.
+For example on OSX this would be [NSApp unhide]
+
+```csharp
+public bool TryLeaveBackground()
+```
+
+#### Returns
+
+bool
+
+true if it was possible and the platform supports this. false otherwise
+
+
+</section>
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [Activated](#uid-46bdd3249a) | An event that is raised when the application is Activated for various reasons as described by the [Avalonia.Controls.ApplicationLifetimes.ActivationKind](xref:Avalonia.Controls.ApplicationLifetimes.ActivationKind) enumeration. |
+| [Deactivated](#uid-c0e1aca534) | An event that is raised when the application is Deactivated for various reasons as described by the [Avalonia.Controls.ApplicationLifetimes.ActivationKind](xref:Avalonia.Controls.ApplicationLifetimes.ActivationKind) enumeration. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-46bdd3249a"></span>
+
+### Activated Event
+
+An event that is raised when the application is Activated for various reasons
+as described by the [Avalonia.Controls.ApplicationLifetimes.ActivationKind](xref:Avalonia.Controls.ApplicationLifetimes.ActivationKind) enumeration.
+
+```csharp
+public event EventHandler<Avalonia.Controls.ApplicationLifetimes.ActivatedEventArgs> Activated
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c0e1aca534"></span>
+
+### Deactivated Event
+
+An event that is raised when the application is Deactivated for various reasons
+as described by the [Avalonia.Controls.ApplicationLifetimes.ActivationKind](xref:Avalonia.Controls.ApplicationLifetimes.ActivationKind) enumeration.
+
+```csharp
+public event EventHandler<Avalonia.Controls.ApplicationLifetimes.ActivatedEventArgs> Deactivated
+```
+
+</section>
+
+</ApiRefPage>
+

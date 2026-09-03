@@ -216,6 +216,7 @@ public void Clear()
 | [Transitions](../animation/animatable.mdx#uid-1b3138f517) | Gets or sets the property transitions for the control. Inherited from [Animatable](../animation/animatable.mdx). |
 | [UseLayoutRounding](../layout/layoutable.mdx#uid-5998a3d47c) | Gets or sets a value that determines whether the element should be snapped to pixel boundaries at layout time. Inherited from [Layoutable](../layout/layoutable.mdx). |
 | [VerticalAlignment](../layout/layoutable.mdx#uid-9652a1b295) | Gets or sets the element's preferred vertical alignment in its parent. Inherited from [Layoutable](../layout/layoutable.mdx). |
+| [VerticalContentAlignment](#uid-8f02bb4500) | Gets or sets the vertical alignment of the content within the control. |
 | [Width](../layout/layoutable.mdx#uid-491c41475f) | Gets or sets the width of the element. Inherited from [Layoutable](../layout/layoutable.mdx). |
 | [YearFormat](#uid-aa1dbaffee) | Gets or sets the year format |
 | [YearVisible](#uid-6057231fcf) | Gets or sets whether the year is visible |
@@ -313,6 +314,20 @@ Gets or sets the Selected Date for the picker, can be null
 
 ```csharp
 public Nullable<DateTimeOffset> SelectedDate { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8f02bb4500"></span>
+
+### VerticalContentAlignment Property
+
+Gets or sets the vertical alignment of the content within the control.
+
+```csharp
+public Avalonia.Layout.VerticalAlignment VerticalContentAlignment { get; set; }
 ```
 
 </section>
@@ -454,6 +469,7 @@ public bool YearVisible { get; set; }
 | [UnloadedEvent](control.mdx#uid-382a8f6733) | Defines the [Avalonia.Controls.Control.Unloaded](xref:Avalonia.Controls.Control.Unloaded) event. Inherited from [Control](control.mdx). |
 | [UseLayoutRoundingProperty](../layout/layoutable.mdx#uid-e6d86b68b5) | Defines the [Avalonia.Layout.Layoutable.UseLayoutRounding](xref:Avalonia.Layout.Layoutable.UseLayoutRounding) property. Inherited from [Layoutable](../layout/layoutable.mdx). |
 | [VerticalAlignmentProperty](../layout/layoutable.mdx#uid-b50722555e) | Defines the [Avalonia.Layout.Layoutable.VerticalAlignment](xref:Avalonia.Layout.Layoutable.VerticalAlignment) property. Inherited from [Layoutable](../layout/layoutable.mdx). |
+| [VerticalContentAlignmentProperty](#uid-3c59fcb5a2) | Defines the [Avalonia.Controls.DatePicker.VerticalContentAlignment](xref:Avalonia.Controls.DatePicker.VerticalContentAlignment) property. |
 | [VisualParentProperty](../visual.mdx#uid-12214f81b9) | Defines the [Avalonia.Visual.VisualParent](xref:Avalonia.Visual.VisualParent) property. Inherited from [Visual](../visual.mdx). |
 | [WidthProperty](../layout/layoutable.mdx#uid-6f3212affd) | Defines the [Avalonia.Layout.Layoutable.Width](xref:Avalonia.Layout.Layoutable.Width) property. Inherited from [Layoutable](../layout/layoutable.mdx). |
 | [YearFormatProperty](#uid-b173912fc0) | Defines the [Avalonia.Controls.DatePicker.YearFormat](xref:Avalonia.Controls.DatePicker.YearFormat) Property |
@@ -554,6 +570,20 @@ Defines the [Avalonia.Controls.DatePicker.SelectedDate](xref:Avalonia.Controls.D
 
 ```csharp
 public Avalonia.StyledProperty<Nullable<DateTimeOffset>> SelectedDateProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3c59fcb5a2"></span>
+
+### VerticalContentAlignmentProperty Field
+
+Defines the [Avalonia.Controls.DatePicker.VerticalContentAlignment](xref:Avalonia.Controls.DatePicker.VerticalContentAlignment) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Layout.VerticalAlignment> VerticalContentAlignmentProperty
 ```
 
 </section>
