@@ -1,0 +1,266 @@
+---
+title: 'DiagnosticLogger'
+hide_title: true
+slug: '/avaloniaui/diagnosticsprotocol/diagnosticlogger'
+uid: 'AvaloniaUI.DiagnosticsProtocol.DiagnosticLogger'
+commentId: 'T:AvaloniaUI.DiagnosticsProtocol.DiagnosticLogger'
+docset: 'avalonia-docs'
+packageId: 'AvaloniaUI.DiagnosticsSupport'
+assembly: 'AvaloniaUI.DiagnosticsSupport.Avalonia'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'AvaloniaUI.DiagnosticsProtocol'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">DiagnosticLogger Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">AvaloniaUI.DiagnosticsProtocol</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>AvaloniaUI.DiagnosticsSupport.Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>AvaloniaUI.DiagnosticsSupport</code>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class DiagnosticLogger
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> DiagnosticLogger
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Combine](#uid-d88631ed46) | No summary available. |
+| [CreateConsole](#uid-741bb61438) | No summary available. |
+| [CreateDebug](#uid-9c349f0021) | No summary available. |
+| [CreateTextWriter](#uid-24aa7a30a1) | No summary available. |
+| [Debug](#uid-12ae1acbbc) | No summary available. |
+| [Error (2 overloads)](#uid-9546fe8371) | No summary available. |
+| [Info](#uid-f79b6581fc) | No summary available. |
+| [Verbose](#uid-050b81eec7) | No summary available. |
+| [Warning](#uid-e4a4f84232) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d88631ed46"></span>
+
+### Combine Method
+
+```csharp
+public AvaloniaUI.DiagnosticsProtocol.DiagnosticLogger Combine(AvaloniaUI.DiagnosticsProtocol.DiagnosticLogger[] loggers)
+```
+
+#### Parameters
+
+`loggers` [AvaloniaUI.DiagnosticsProtocol.DiagnosticLogger](xref:AvaloniaUI.DiagnosticsProtocol.DiagnosticLogger)[]
+
+
+#### Returns
+
+[AvaloniaUI.DiagnosticsProtocol.DiagnosticLogger](xref:AvaloniaUI.DiagnosticsProtocol.DiagnosticLogger)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-741bb61438"></span>
+
+### CreateConsole Method
+
+```csharp
+public AvaloniaUI.DiagnosticsProtocol.DiagnosticLogger CreateConsole(AvaloniaUI.DiagnosticsProtocol.Application.LogEntryVerbosity minVerbosity)
+```
+
+#### Parameters
+
+`minVerbosity` [AvaloniaUI.DiagnosticsProtocol.Application.LogEntryVerbosity](xref:AvaloniaUI.DiagnosticsProtocol.Application.LogEntryVerbosity)
+
+
+#### Returns
+
+[AvaloniaUI.DiagnosticsProtocol.DiagnosticLogger](xref:AvaloniaUI.DiagnosticsProtocol.DiagnosticLogger)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9c349f0021"></span>
+
+### CreateDebug Method
+
+```csharp
+public AvaloniaUI.DiagnosticsProtocol.DiagnosticLogger CreateDebug(AvaloniaUI.DiagnosticsProtocol.Application.LogEntryVerbosity minVerbosity)
+```
+
+#### Parameters
+
+`minVerbosity` [AvaloniaUI.DiagnosticsProtocol.Application.LogEntryVerbosity](xref:AvaloniaUI.DiagnosticsProtocol.Application.LogEntryVerbosity)
+
+
+#### Returns
+
+[AvaloniaUI.DiagnosticsProtocol.DiagnosticLogger](xref:AvaloniaUI.DiagnosticsProtocol.DiagnosticLogger)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-24aa7a30a1"></span>
+
+### CreateTextWriter Method
+
+```csharp
+public AvaloniaUI.DiagnosticsProtocol.DiagnosticLogger CreateTextWriter(System.IO.TextWriter writer, AvaloniaUI.DiagnosticsProtocol.Application.LogEntryVerbosity minVerbosity)
+```
+
+#### Parameters
+
+`writer` System.IO.TextWriter
+
+
+`minVerbosity` [AvaloniaUI.DiagnosticsProtocol.Application.LogEntryVerbosity](xref:AvaloniaUI.DiagnosticsProtocol.Application.LogEntryVerbosity)
+
+
+#### Returns
+
+[AvaloniaUI.DiagnosticsProtocol.DiagnosticLogger](xref:AvaloniaUI.DiagnosticsProtocol.DiagnosticLogger)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-12ae1acbbc"></span>
+
+### Debug Method
+
+```csharp
+public void Debug(FormattableString message)
+```
+
+#### Parameters
+
+`message` FormattableString
+
+
+</section>
+
+<span id="uid-9546fe8371"></span>
+
+### Error overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-98e5e4ff54"></span>
+
+#### Error Method
+
+```csharp
+public void Error(Exception exception, FormattableString message)
+```
+
+##### Parameters
+
+`exception` Exception
+
+
+`message` FormattableString
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-95638729ba"></span>
+
+#### Error Method
+
+```csharp
+public void Error(FormattableString message)
+```
+
+##### Parameters
+
+`message` FormattableString
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f79b6581fc"></span>
+
+### Info Method
+
+```csharp
+public void Info(FormattableString message)
+```
+
+#### Parameters
+
+`message` FormattableString
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-050b81eec7"></span>
+
+### Verbose Method
+
+```csharp
+public void Verbose(FormattableString message)
+```
+
+#### Parameters
+
+`message` FormattableString
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e4a4f84232"></span>
+
+### Warning Method
+
+```csharp
+public void Warning(FormattableString message)
+```
+
+#### Parameters
+
+`message` FormattableString
+
+
+</section>
+
+</ApiRefPage>
+

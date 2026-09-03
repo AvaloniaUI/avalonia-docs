@@ -67,7 +67,7 @@ public interface IGeometryContext
 | [CubicBezierTo](#uid-50f83ecbba) | Draws a Bezier curve to the specified point. |
 | [EndFigure](#uid-b37d0fd9b8) | Ends the figure started by [Avalonia.Platform.IGeometryContext.BeginFigure(Avalonia.Point,bool)](xref:Avalonia.Platform.IGeometryContext.BeginFigure%28Avalonia.Point%2CSystem.Boolean%29). |
 | [LineTo](#uid-9a46d29fe4) | Draws a line to the specified point. |
-| [QuadraticBezierTo](#uid-1eff7e8afa) | Draws a quadratic Bezier curve to the specified point |
+| [QuadraticBezierTo](#uid-1eff7e8afa) | Draws a quadratic Bezier curve to the specified point. |
 | [SetFillRule](#uid-f5a505acea) | Sets path's winding rule (default is EvenOdd). You should call this method before any calls to BeginFigure. |
 
 <section className="apiref-page__member-entry">
@@ -86,22 +86,24 @@ public void ArcTo(Avalonia.Point point, Avalonia.Size size, double rotationAngle
 
 `point` [Avalonia.Point](xref:Avalonia.Point)
 
-The destination point.
+The destination point where the arc ends.
 
 
 `size` [Avalonia.Size](xref:Avalonia.Size)
 
-The radii of an oval whose perimeter is used to draw the angle.
+The radii of an ellipse whose path is used to draw the arc.
 
 
 `rotationAngle` double
 
-The rotation angle (in radians) of the oval that specifies the curve.
+The rotation angle (in degrees) of the ellipse that specifies the path of the arc; positive values are clockwise.
+This will rotate the entire arc relative to the X-axis and is not commonly used.
 
 
 `isLargeArc` bool
 
-true to draw the arc greater than 180 degrees; otherwise, false.
+Specifies whether the arc should follow the longer path around an ellipse rather than the shorter one.
+`true` to draw the arc greater than 180 degrees; otherwise, `false`.
 
 
 `sweepDirection` [Avalonia.Media.SweepDirection](xref:Avalonia.Media.SweepDirection)
@@ -111,7 +113,7 @@ A value that indicates whether the arc is drawn in the Clockwise or Counterclock
 
 `isStroked` bool
 
-Whether the segment is stroked
+Whether the segment is stroked.
 
 
 </section>
@@ -173,7 +175,7 @@ The destination point for the end of the curve.
 
 `isStroked` bool
 
-Whether the segment is stroked
+Whether the segment is stroked.
 
 
 </section>
@@ -220,7 +222,7 @@ The destination point.
 
 `isStroked` bool
 
-Whether the segment is stroked
+Whether the segment is stroked.
 
 
 </section>
@@ -231,7 +233,7 @@ Whether the segment is stroked
 
 ### QuadraticBezierTo Method
 
-Draws a quadratic Bezier curve to the specified point
+Draws a quadratic Bezier curve to the specified point.
 
 ```csharp
 public void QuadraticBezierTo(Avalonia.Point controlPoint, Avalonia.Point endPoint, bool isStroked)
@@ -251,7 +253,7 @@ The destination point for the end of the curve.
 
 `isStroked` bool
 
-Whether the segment is stroked
+Whether the segment is stroked.
 
 
 </section>

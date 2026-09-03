@@ -214,6 +214,7 @@ public void Clear()
 | [UseLayoutRounding](../layout/layoutable.mdx#uid-5998a3d47c) | Gets or sets a value that determines whether the element should be snapped to pixel boundaries at layout time. Inherited from [Layoutable](../layout/layoutable.mdx). |
 | [UseSeconds](#uid-1ecf776af5) | Gets or sets the use seconds switch, either true or false |
 | [VerticalAlignment](../layout/layoutable.mdx#uid-9652a1b295) | Gets or sets the element's preferred vertical alignment in its parent. Inherited from [Layoutable](../layout/layoutable.mdx). |
+| [VerticalContentAlignment](#uid-22d6a8e9da) | Gets or sets the vertical alignment of the content within the control. |
 | [Width](../layout/layoutable.mdx#uid-491c41475f) | Gets or sets the width of the element. Inherited from [Layoutable](../layout/layoutable.mdx). |
 | [ZIndex](../visual.mdx#uid-a3275ade9d) | Gets or sets the Z index of the control. Inherited from [Visual](../visual.mdx). |
 
@@ -283,6 +284,20 @@ Gets or sets the use seconds switch, either true or false
 
 ```csharp
 public bool UseSeconds { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-22d6a8e9da"></span>
+
+### VerticalContentAlignment Property
+
+Gets or sets the vertical alignment of the content within the control.
+
+```csharp
+public Avalonia.Layout.VerticalAlignment VerticalContentAlignment { get; set; }
 ```
 
 </section>
@@ -394,6 +409,7 @@ public bool UseSeconds { get; set; }
 | [UseLayoutRoundingProperty](../layout/layoutable.mdx#uid-e6d86b68b5) | Defines the [Avalonia.Layout.Layoutable.UseLayoutRounding](xref:Avalonia.Layout.Layoutable.UseLayoutRounding) property. Inherited from [Layoutable](../layout/layoutable.mdx). |
 | [UseSecondsProperty](#uid-03656bb0d2) | Defines the [Avalonia.Controls.TimePicker.UseSeconds](xref:Avalonia.Controls.TimePicker.UseSeconds) property |
 | [VerticalAlignmentProperty](../layout/layoutable.mdx#uid-b50722555e) | Defines the [Avalonia.Layout.Layoutable.VerticalAlignment](xref:Avalonia.Layout.Layoutable.VerticalAlignment) property. Inherited from [Layoutable](../layout/layoutable.mdx). |
+| [VerticalContentAlignmentProperty](#uid-91ec9f9c7a) | Defines the [Avalonia.Controls.TimePicker.VerticalContentAlignment](xref:Avalonia.Controls.TimePicker.VerticalContentAlignment) property. |
 | [VisualParentProperty](../visual.mdx#uid-12214f81b9) | Defines the [Avalonia.Visual.VisualParent](xref:Avalonia.Visual.VisualParent) property. Inherited from [Visual](../visual.mdx). |
 | [WidthProperty](../layout/layoutable.mdx#uid-6f3212affd) | Defines the [Avalonia.Layout.Layoutable.Width](xref:Avalonia.Layout.Layoutable.Width) property. Inherited from [Layoutable](../layout/layoutable.mdx). |
 | [ZIndexProperty](../visual.mdx#uid-1dc9376c1e) | Defines the [Avalonia.Visual.ZIndex](xref:Avalonia.Visual.ZIndex) property. Inherited from [Visual](../visual.mdx). |
@@ -464,6 +480,20 @@ Defines the [Avalonia.Controls.TimePicker.UseSeconds](xref:Avalonia.Controls.Tim
 
 ```csharp
 public Avalonia.StyledProperty<bool> UseSecondsProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-91ec9f9c7a"></span>
+
+### VerticalContentAlignmentProperty Field
+
+Defines the [Avalonia.Controls.TimePicker.VerticalContentAlignment](xref:Avalonia.Controls.TimePicker.VerticalContentAlignment) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Layout.VerticalAlignment> VerticalContentAlignmentProperty
 ```
 
 </section>

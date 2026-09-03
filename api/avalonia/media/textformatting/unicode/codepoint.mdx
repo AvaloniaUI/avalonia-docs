@@ -301,8 +301,11 @@ bool
 | [EastAsianWidthClass](#uid-357be760f5) | Gets the [Avalonia.Media.TextFormatting.Unicode.Codepoint.EastAsianWidthClass](xref:Avalonia.Media.TextFormatting.Unicode.Codepoint.EastAsianWidthClass). |
 | [GeneralCategory](#uid-7d954df176) | Gets the [Avalonia.Media.TextFormatting.Unicode.GeneralCategory](xref:Avalonia.Media.TextFormatting.Unicode.GeneralCategory). |
 | [GraphemeBreakClass](#uid-daa1c3c948) | Gets the [Avalonia.Media.TextFormatting.Unicode.Codepoint.GraphemeBreakClass](xref:Avalonia.Media.TextFormatting.Unicode.Codepoint.GraphemeBreakClass). |
+| [HasEmojiPresentation](#uid-480ad90d86) | Determines whether this [Avalonia.Media.TextFormatting.Unicode.Codepoint](xref:Avalonia.Media.TextFormatting.Unicode.Codepoint) has the Unicode `Emoji_Presentation` property, i.e. whether it defaults to an emoji presentation when no variation selector follows it. |
 | [IsBreakChar](#uid-8af230e886) | Determines whether this [Avalonia.Media.TextFormatting.Unicode.Codepoint](xref:Avalonia.Media.TextFormatting.Unicode.Codepoint) is a break char. |
+| [IsDefaultIgnorable](#uid-baa8aeea4c) | Determines whether this [Avalonia.Media.TextFormatting.Unicode.Codepoint](xref:Avalonia.Media.TextFormatting.Unicode.Codepoint) has the Unicode `Default_Ignorable_Code_Point` property. |
 | [IsEastAsian](#uid-f274a5aa9c) | Determines whether this [Avalonia.Media.TextFormatting.Unicode.Codepoint](xref:Avalonia.Media.TextFormatting.Unicode.Codepoint) is an east asian char. |
+| [IsEmoji](#uid-e0576b3617) | Determines whether this [Avalonia.Media.TextFormatting.Unicode.Codepoint](xref:Avalonia.Media.TextFormatting.Unicode.Codepoint) has the Unicode `Emoji` property. |
 | [IsWhiteSpace](#uid-d9bcca02c4) | Determines whether this [Avalonia.Media.TextFormatting.Unicode.Codepoint](xref:Avalonia.Media.TextFormatting.Unicode.Codepoint) is white space. |
 | [LineBreakClass](#uid-76ddb5784b) | Gets the [Avalonia.Media.TextFormatting.Unicode.LineBreakClass](xref:Avalonia.Media.TextFormatting.Unicode.LineBreakClass). |
 | [PairedBracketType](#uid-92a6225357) | Gets the [Avalonia.Media.TextFormatting.Unicode.BidiPairedBracketType](xref:Avalonia.Media.TextFormatting.Unicode.BidiPairedBracketType). |
@@ -369,6 +372,22 @@ public Avalonia.Media.TextFormatting.Unicode.GraphemeBreakClass GraphemeBreakCla
 
 <section className="apiref-page__member-entry">
 
+<span id="uid-480ad90d86"></span>
+
+### HasEmojiPresentation Property
+
+Determines whether this [Avalonia.Media.TextFormatting.Unicode.Codepoint](xref:Avalonia.Media.TextFormatting.Unicode.Codepoint) has the Unicode `Emoji_Presentation`
+property, i.e. whether it defaults to an emoji presentation when no variation selector
+follows it.
+
+```csharp
+public bool HasEmojiPresentation { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-8af230e886"></span>
 
 ### IsBreakChar Property
@@ -388,6 +407,27 @@ public bool IsBreakChar { get; set; }
 
 <section className="apiref-page__member-entry">
 
+<span id="uid-baa8aeea4c"></span>
+
+### IsDefaultIgnorable Property
+
+Determines whether this [Avalonia.Media.TextFormatting.Unicode.Codepoint](xref:Avalonia.Media.TextFormatting.Unicode.Codepoint) has the Unicode
+`Default_Ignorable_Code_Point` property.
+
+```csharp
+public bool IsDefaultIgnorable { get; set; }
+```
+
+#### Remarks
+
+Default ignorable codepoints (variation selectors, joiners, the byte order mark, ...) are
+meant to have no visible rendering of their own, so a font is not expected to provide a
+glyph for them.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-f274a5aa9c"></span>
 
 ### IsEastAsian Property
@@ -402,6 +442,25 @@ public bool IsEastAsian { get; set; }
 
 `true` if [is an east asian character]; otherwise, `false`.
 
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e0576b3617"></span>
+
+### IsEmoji Property
+
+Determines whether this [Avalonia.Media.TextFormatting.Unicode.Codepoint](xref:Avalonia.Media.TextFormatting.Unicode.Codepoint) has the Unicode `Emoji` property.
+
+```csharp
+public bool IsEmoji { get; set; }
+```
+
+#### Remarks
+
+The property marks a codepoint that can be presented as emoji; it says nothing about which
+presentation is the default. Use [Avalonia.Media.TextFormatting.Unicode.Codepoint.HasEmojiPresentation](xref:Avalonia.Media.TextFormatting.Unicode.Codepoint.HasEmojiPresentation) for that.
 
 </section>
 

@@ -1,0 +1,204 @@
+---
+title: 'CellRenderer'
+hide_title: true
+slug: '/avalonia/controls/cellrenderer'
+uid: 'Avalonia.Controls.CellRenderer'
+commentId: 'T:Avalonia.Controls.CellRenderer'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.TreeDataGrid'
+assembly: 'Avalonia.Controls.TreeDataGrid'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net8.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">CellRenderer Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Base class for cell renderers that draw cell content directly without creating per-cell controls.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class CellRenderer
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> CellRenderer
+</div>
+</div>
+
+## Remarks
+
+When a column has a [Avalonia.Controls.CellRenderer](xref:Avalonia.Controls.CellRenderer), the [Avalonia.Controls.Primitives.TreeDataGridCellsPresenter](xref:Avalonia.Controls.Primitives.TreeDataGridCellsPresenter)
+renders cells directly rather than creating individual control elements for each cell. This can
+significantly improve performance for columns that display simple content such as text.
+
+This is an abstract class rather than an interface so that methods with defaults can be added
+in the future without breaking existing implementations.
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [CommitEdit](#uid-aa3ce3aff6) | Commits changes made to the edit control back to the model. |
+| [CreateEditControl](#uid-f8b0912fc8) | Creates an edit control when a drawn cell enters edit mode. |
+| [MeasureContent](#uid-37051df5e0) | Measures the content of a drawn cell. |
+| [RenderContent](#uid-393b301642) | Renders the content of a drawn cell. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-aa3ce3aff6"></span>
+
+### CommitEdit Method
+
+Commits changes made to the edit control back to the model.
+
+```csharp
+public void CommitEdit(Avalonia.Controls.Control editControl)
+```
+
+#### Parameters
+
+`editControl` [Avalonia.Controls.Control](xref:Avalonia.Controls.Control)
+
+The edit control.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f8b0912fc8"></span>
+
+### CreateEditControl Method
+
+Creates an edit control when a drawn cell enters edit mode.
+
+```csharp
+public Avalonia.Controls.Control CreateEditControl(object dataContext)
+```
+
+#### Parameters
+
+`dataContext` object
+
+The row's data model.
+
+
+#### Returns
+
+[Avalonia.Controls.Control](xref:Avalonia.Controls.Control)
+
+The edit control, or null if not editable.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-37051df5e0"></span>
+
+### MeasureContent Method
+
+Measures the content of a drawn cell.
+
+```csharp
+public Avalonia.Size MeasureContent(Avalonia.Controls.Control owner, object dataContext, Avalonia.Size availableSize)
+```
+
+#### Parameters
+
+`owner` [Avalonia.Controls.Control](xref:Avalonia.Controls.Control)
+
+The presenter control (for reading inherited font properties).
+
+
+`dataContext` object
+
+The row's data model.
+
+
+`availableSize` [Avalonia.Size](xref:Avalonia.Size)
+
+Available size constraint.
+
+
+#### Returns
+
+[Avalonia.Size](xref:Avalonia.Size)
+
+The desired size of the cell content.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-393b301642"></span>
+
+### RenderContent Method
+
+Renders the content of a drawn cell.
+
+```csharp
+public void RenderContent(Avalonia.Controls.Control owner, Avalonia.Media.DrawingContext context, object dataContext, Avalonia.Rect bounds, bool isSelected)
+```
+
+#### Parameters
+
+`owner` [Avalonia.Controls.Control](xref:Avalonia.Controls.Control)
+
+The presenter control.
+
+
+`context` [Avalonia.Media.DrawingContext](xref:Avalonia.Media.DrawingContext)
+
+The drawing context.
+
+
+`dataContext` object
+
+The row's data model.
+
+
+`bounds` [Avalonia.Rect](xref:Avalonia.Rect)
+
+The cell bounds to render within.
+
+
+`isSelected` bool
+
+Whether the cell/row is selected.
+
+
+</section>
+
+</ApiRefPage>
+

@@ -1,0 +1,56 @@
+---
+title: 'Avalonia.OpenGL.Egl'
+hide_title: true
+slug: '/avalonia/opengl/egl'
+uid: 'Avalonia.OpenGL.Egl'
+commentId: 'N:Avalonia.OpenGL.Egl'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.OpenGL'
+apiKind: 'Namespace'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.OpenGL.Egl'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">Egl Namespace</h1>
+
+<div className="apiref-page__lead">
+
+Namespace `Avalonia.OpenGL.Egl`
+
+</div>
+
+## Types
+
+- [EglConfigProbeCallback](eglconfigprobecallback.mdx) - Given every EGL config matched by eglChooseConfig, returns the one that should be used, or null if none
+are usable. This lets platforms filter out broken configs that can't be distinguished by their attributes
+(e.g. nvidia exposes duplicate, partially broken configs) and impose their own preference order between
+usable ones (e.g. preferring a transparent/32-bit X11 visual, which mesa lists after the opaque ones).
+- [EglConsts](eglconsts.mdx)
+- [EglContext](eglcontext.mdx)
+- [EglContextOptions](eglcontextoptions.mdx)
+- [EglDisplay](egldisplay.mdx)
+- [EglDisplayCreationOptions](egldisplaycreationoptions.mdx)
+- [EglDisplayOptions](egldisplayoptions.mdx)
+- [EglErrors](eglerrors.mdx)
+- [EglGlPlatformImageSurfaceBase](eglglplatformimagesurfacebase.mdx) - Base class for EGL-backed [Avalonia.OpenGL.Surfaces.IGlPlatformSurface](xref:Avalonia.OpenGL.Surfaces.IGlPlatformSurface) implementations that render into
+an EGLImage. Derived types create a concrete render target bound to a given GL context.
+- [EglGlPlatformSurface](eglglplatformsurface.mdx)
+- [EglGlPlatformSurface.IEglWindowGlPlatformSurfaceInfo](eglglplatformsurface-ieglwindowglplatformsurfaceinfo.mdx)
+- [EglGlPlatformSurface.IEglWindowGlPlatformSurfaceInfoWithWaitPolicy](eglglplatformsurface-ieglwindowglplatformsurfaceinfowithwaitpolicy.mdx)
+- [EglGlPlatformSurfaceBase](eglglplatformsurfacebase.mdx)
+- [EglImage](eglimage.mdx) - Wraps a native `EGLImageKHR` handle and destroys it via `eglDestroyImageKHR` on disposal.
+- [EglInterface](eglinterface.mdx)
+- [EglPlatformGraphics](eglplatformgraphics.mdx)
+- [EglPlatformImageSurfaceRenderTargetBase](eglplatformimagesurfacerendertargetbase.mdx) - Base class for EGLImage render targets. Manages a reusable framebuffer/texture pair and
+binds an EGLImage as the color attachment for each draw.
+- [EglPlatformSurfaceRenderTargetBase](eglplatformsurfacerendertargetbase.mdx)
+- [EglSurface](eglsurface.mdx)
+</ApiRefPage>
+

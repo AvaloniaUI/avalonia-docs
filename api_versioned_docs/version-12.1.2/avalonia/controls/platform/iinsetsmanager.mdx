@@ -1,0 +1,146 @@
+---
+title: 'IInsetsManager'
+hide_title: true
+slug: '/avalonia/controls/platform/iinsetsmanager'
+uid: 'Avalonia.Controls.Platform.IInsetsManager'
+commentId: 'T:Avalonia.Controls.Platform.IInsetsManager'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Platform'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IInsetsManager Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Platform</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface IInsetsManager
+```
+
+</div>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [DisplayEdgeToEdgePreference](#uid-494be8d52b) | Gets or sets whether the window draws edge to edge. behind any visible system bars. |
+| [DisplaysEdgeToEdge](#uid-814b86cb58) | Gets whether the window is currently displaying edge to edge. |
+| [IsSystemBarVisible](#uid-22c6a0cba3) | Gets or sets whether the system bars are visible. |
+| [SafeAreaPadding](#uid-52365cf938) | Gets the current safe area padding. |
+| [SystemBarColor](#uid-7b764b53c2) | Gets or sets the color of the platform's system bars |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-494be8d52b"></span>
+
+### DisplayEdgeToEdgePreference Property
+
+Gets or sets whether the window draws edge to edge. behind any visible system bars.
+
+```csharp
+public bool DisplayEdgeToEdgePreference { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-814b86cb58"></span>
+
+### DisplaysEdgeToEdge Property
+
+Gets whether the window is currently displaying edge to edge.
+
+```csharp
+public bool DisplaysEdgeToEdge { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-22c6a0cba3"></span>
+
+### IsSystemBarVisible Property
+
+Gets or sets whether the system bars are visible.
+
+```csharp
+public Nullable<bool> IsSystemBarVisible { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-52365cf938"></span>
+
+### SafeAreaPadding Property
+
+Gets the current safe area padding.
+
+```csharp
+public Avalonia.Thickness SafeAreaPadding { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7b764b53c2"></span>
+
+### SystemBarColor Property
+
+Gets or sets the color of the platform's system bars
+
+```csharp
+public Nullable<Avalonia.Media.Color> SystemBarColor { get; set; }
+```
+
+</section>
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [SafeAreaChanged](#uid-5a8d663a00) | Occurs when safe area for the current window changes. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5a8d663a00"></span>
+
+### SafeAreaChanged Event
+
+Occurs when safe area for the current window changes.
+
+```csharp
+public event EventHandler<Avalonia.Controls.Platform.SafeAreaChangedArgs> SafeAreaChanged
+```
+
+</section>
+
+</ApiRefPage>
+

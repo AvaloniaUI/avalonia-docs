@@ -1,0 +1,171 @@
+---
+title: 'IVulkanDevice'
+hide_title: true
+slug: '/avalonia/vulkan/ivulkandevice'
+uid: 'Avalonia.Vulkan.IVulkanDevice'
+commentId: 'T:Avalonia.Vulkan.IVulkanDevice'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Vulkan'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Vulkan'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IVulkanDevice Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Vulkan</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Vulkan</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface IVulkanDevice
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="../ioptionalfeatureprovider">IOptionalFeatureProvider</a>, IDisposable
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Lock](#uid-54f8c54969) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-54f8c54969"></span>
+
+### Lock Method
+
+```csharp
+public IDisposable Lock()
+```
+
+#### Returns
+
+IDisposable
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [EnabledExtensions](#uid-13c97e896e) | No summary available. |
+| [GraphicsQueueFamilyIndex](#uid-1836b1cef7) | No summary available. |
+| [Handle](#uid-823e629d6f) | No summary available. |
+| [Instance](#uid-6b82c95bb6) | No summary available. |
+| [IsLost](#uid-ed8f751b30) | No summary available. |
+| [MainQueueHandle](#uid-5b953380f8) | No summary available. |
+| [PhysicalDeviceHandle](#uid-1273145cdf) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-13c97e896e"></span>
+
+### EnabledExtensions Property
+
+```csharp
+public System.Collections.Generic.IEnumerable<string> EnabledExtensions { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1836b1cef7"></span>
+
+### GraphicsQueueFamilyIndex Property
+
+```csharp
+public uint GraphicsQueueFamilyIndex { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-823e629d6f"></span>
+
+### Handle Property
+
+```csharp
+public IntPtr Handle { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6b82c95bb6"></span>
+
+### Instance Property
+
+```csharp
+public Avalonia.Vulkan.IVulkanInstance Instance { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ed8f751b30"></span>
+
+### IsLost Property
+
+```csharp
+public bool IsLost { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5b953380f8"></span>
+
+### MainQueueHandle Property
+
+```csharp
+public IntPtr MainQueueHandle { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1273145cdf"></span>
+
+### PhysicalDeviceHandle Property
+
+```csharp
+public IntPtr PhysicalDeviceHandle { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+
