@@ -19,7 +19,50 @@ Before localizing, you need to include ResX files for each language you want to 
 * `Resources.ja-JP.resx` (Japanese)
 * `Resources.resx` (English, default language)
 
-Each ResX file contains translated text that corresponds to the keys used in the application.
+Each ResX file contains translated text that corresponds to the keys used in the application. The set of three ResX files used in this example might look something like this:
+
+<Tabs>
+
+<TabItem value="english" label="English (default)">
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <data name="GreetingText">
+        <value>Hello!</value>
+    </data>
+</root>
+```
+
+</TabItem>
+
+<TabItem value="filipino" label="Filipino">
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <data name="GreetingText">
+        <value>Kumusta!</value>
+    </data>
+</root>
+```
+
+</TabItem>
+
+<TabItem value="japanese" label="Japanese">
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <data name="GreetingText">
+        <value>こんにちは！</value>
+    </data>
+</root>
+```
+
+</TabItem>
+
+</Tabs>
 
 :::caution
 If you add ResX files to the `Assets` folder, make sure to switch your "Build action" to "Embedded resource", or the code generation may fail.
@@ -27,9 +70,16 @@ If you add ResX files to the `Assets` folder, make sure to switch your "Build ac
 
 ## Set the culture
 
-To use a specific language in the application, you need to set the current culture. This can be done in the `App.axaml.cs` file. The following example sets the culture to Filipino (`fil-PH`):
+To use a specific language in the application, you need to set the current culture. This is done in the `App.axaml.cs` file, by adding `CultureInfo` along with a `using` statement for `System.Globalization`.
+
+The following example sets the culture to Filipino (`fil-PH`):
 
 ```cs title="App.axaml.cs"
+// highlight-next-line
+using System.Globalization;
+
+namespace MyApp;
+
 public partial class App : Application
 {
     public override void Initialize()
@@ -59,15 +109,17 @@ Replace "fil-PH" with another culture code as required.
 
 ## Use localized text in the view
 
-To use the localized text in a view, you can statically refer to the resources in XAML:
+To use the localized text in a view, declare the namespace of the localization resources, then refer to them statically in XAML.
 
 ```xml
+<Window xmlns:lang="using:MyApp.Lang">
+
 <TextBlock Text="{x:Static lang:Resources.GreetingText}"/>
 ```
 
-In the above sample, `GreetingText` is the key for a string in a ResX file. The `{x:Static}` markup extension is used to reference a static property that has been defined in a .NET class, which, in this case, is the resources file (`lang:Resources.GreetingText`).
+In the above sample, `GreetingText` is the key for a string in the [ResX files shown previously](#add-resx-files-to-the-project). The `{x:Static}` markup extension is used to reference a static property that has been defined in a .NET class, which, in this case, is the resources file (`lang:Resources.GreetingText`).
 
-By setting the culture to a different locale, you can display the user interface in the selected language, thereby creating an application that supports multiple languages for a global audience.
+So long as the corresponding keys are available, setting the culture to a different locale displays the entire user interface in the selected language.
 
 ### Generating a public `Resources` class
 
