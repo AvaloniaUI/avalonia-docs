@@ -1,0 +1,173 @@
+---
+title: 'IBlockPropertyAction<T>'
+hide_title: true
+slug: '/avalonia/controls/documents/primitives/actions/iblockpropertyaction-1'
+uid: 'Avalonia.Controls.Documents.Primitives.Actions.IBlockPropertyAction`1'
+commentId: 'T:Avalonia.Controls.Documents.Primitives.Actions.IBlockPropertyAction`1'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.RichTextEditor'
+assembly: 'Avalonia.Controls.RichTextEditor'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.Primitives.Actions'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IBlockPropertyAction&lt;T&gt; Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.Primitives.Actions</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.RichTextEditor</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.RichTextEditor</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Action that operates on block-level properties (Paragraph, Section, etc.).
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface IBlockPropertyAction<T>
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="iblockpropertyaction">IBlockPropertyAction</a>, <a href="ieditoraction">IEditorAction</a>, <a href="ipropertyaction">IPropertyAction</a>
+</div>
+</div>
+
+## Remarks
+
+Block-level actions differ from inline actions in several ways:
+
+- They operate on container elements (Block) rather than text runs (RichInline)
+- They can affect multiple blocks in a selection
+- They need to handle mixed values when multiple blocks have different property values
+
+Common block properties include:
+[TextAlignment](xref:Avalonia.Media.TextAlignment), LineHeight, Margin, Padding, Background, BorderThickness, BorderBrush
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [GetAvailableValues](#uid-be0ffd346d) | Gets available values for the property (e.g., [TextAlignment](xref:Avalonia.Media.TextAlignment) values). |
+| [GetValue](#uid-7b00127186) | Gets the property value from the current block(s). |
+| [SetValue](#uid-40f8f278a8) | Sets the property value on all affected blocks. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-be0ffd346d"></span>
+
+### GetAvailableValues Method
+
+Gets available values for the property (e.g., [TextAlignment](xref:Avalonia.Media.TextAlignment) values).
+
+```csharp
+public System.Collections.Generic.IEnumerable<T> GetAvailableValues()
+```
+
+#### Returns
+
+System.Collections.Generic.IEnumerable&lt;T&gt;
+
+A collection of possible values, or null if the property doesn't have
+a fixed set of choices (e.g., for numeric properties like Margin).
+
+
+#### Remarks
+
+Used by UI controls ([ComboBox](xref:Avalonia.Controls.ComboBox)) to populate the list of options.
+For example, [TextAlignment](xref:Avalonia.Media.TextAlignment) returns [Left, Center, Right, Justify].
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7b00127186"></span>
+
+### GetValue Method
+
+Gets the property value from the current block(s).
+
+```csharp
+public T GetValue(Avalonia.Controls.Documents.Primitives.ITextEditorHost host)
+```
+
+#### Parameters
+
+`host` [Avalonia.Controls.Documents.Primitives.ITextEditorHost](xref:Avalonia.Controls.Documents.Primitives.ITextEditorHost)
+
+The editor host.
+
+
+#### Returns
+
+T
+
+The property value if all affected blocks have the same value.
+Returns null (or default) if blocks have mixed values.
+
+
+#### Remarks
+
+For collapsed selections (caret), returns the value from the containing block.
+For range selections, returns the consistent value or null if blocks have different values.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-40f8f278a8"></span>
+
+### SetValue Method
+
+Sets the property value on all affected blocks.
+
+```csharp
+public void SetValue(Avalonia.Controls.Documents.Primitives.ITextEditorHost host, T value)
+```
+
+#### Parameters
+
+`host` [Avalonia.Controls.Documents.Primitives.ITextEditorHost](xref:Avalonia.Controls.Documents.Primitives.ITextEditorHost)
+
+The editor host.
+
+
+`value` T
+
+The value to set.
+
+
+#### Remarks
+
+This method applies the property to all blocks in the current selection.
+For collapsed selections, affects only the containing block.
+For range selections, affects all blocks from Start to End.
+
+The operation should be wrapped in an undo unit to allow undoing
+the entire multi-block change as a single operation.
+
+</section>
+
+</ApiRefPage>
+

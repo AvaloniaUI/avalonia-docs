@@ -62,7 +62,7 @@ public enum IsOffscreenBehavior
 
 | Name | Description |
 | --- | --- |
-| [Default](#uid-089321d4d4) | The [AutomationProperty](xref:Avalonia.Automation.AutomationProperty) IsOffscreen is calculated based on IsVisible. |
+| [Default](#uid-089321d4d4) | The [AutomationProperty](xref:Avalonia.Automation.AutomationProperty) IsOffscreen is calculated based on IsEffectivelyVisible. |
 | [FromClip](#uid-f3d3ab6557) | The [AutomationProperty](xref:Avalonia.Automation.AutomationProperty) IsOffscreen is calculated based on clip regions. |
 | [Offscreen](#uid-74636926fa) | The [AutomationProperty](xref:Avalonia.Automation.AutomationProperty) IsOffscreen if true. |
 | [Onscreen](#uid-9695812e6f) | The [AutomationProperty](xref:Avalonia.Automation.AutomationProperty) IsOffscreen is false. |
@@ -73,7 +73,7 @@ public enum IsOffscreenBehavior
 
 ### Default Field
 
-The [AutomationProperty](xref:Avalonia.Automation.AutomationProperty) IsOffscreen is calculated based on IsVisible.
+The [AutomationProperty](xref:Avalonia.Automation.AutomationProperty) IsOffscreen is calculated based on IsEffectivelyVisible.
 
 ```csharp
 public Avalonia.Automation.IsOffscreenBehavior Default

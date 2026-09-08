@@ -1,0 +1,123 @@
+---
+title: 'IDataTransferItem'
+hide_title: true
+slug: '/avalonia/input/idatatransferitem'
+uid: 'Avalonia.Input.IDataTransferItem'
+commentId: 'T:Avalonia.Input.IDataTransferItem'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Input'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IDataTransferItem Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Input</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Represent an item inside a [Avalonia.Input.IDataTransfer](xref:Avalonia.Input.IDataTransfer).
+An item may support several formats and can return the value of a given format on demand.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface IDataTransferItem
+```
+
+</div>
+
+## See also
+
+- [Avalonia.Input.DataTransferItem](xref:Avalonia.Input.DataTransferItem)
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [TryGetRaw](#uid-1cb05aa6a7) | Tries to get a value for a given format. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1cb05aa6a7"></span>
+
+### TryGetRaw Method
+
+Tries to get a value for a given format.
+
+```csharp
+public object TryGetRaw(Avalonia.Input.DataFormat format)
+```
+
+#### Parameters
+
+`format` [Avalonia.Input.DataFormat](xref:Avalonia.Input.DataFormat)
+
+The format to retrieve.
+
+
+#### Returns
+
+object
+
+A value for `format`, or null if the format is not supported.
+
+
+#### Remarks
+
+Implementations of this method are expected to return a value matching the exact type
+of the generic argument of the underlying [Avalonia.Input.DataFormat&lt;T&gt;](xref:Avalonia.Input.DataFormat%601).
+
+To retrieve a typed value, use [Avalonia.Input.DataTransferItemExtensions.TryGetValue&lt;T&gt;(Avalonia.Input.IDataTransferItem,Avalonia.Input.DataFormat&#123;&lt;&gt;&#125;)](xref:Avalonia.Input.DataTransferItemExtensions.TryGetValue%60%601%28Avalonia.Input.IDataTransferItem%2CAvalonia.Input.DataFormat%7B%60%600%7D%29).
+
+#### See also
+
+- [Avalonia.Input.DataTransferItemExtensions.TryGetValue&lt;T&gt;(Avalonia.Input.IDataTransferItem,Avalonia.Input.DataFormat&#123;&lt;&gt;&#125;)](xref:Avalonia.Input.DataTransferItemExtensions.TryGetValue%60%601%28Avalonia.Input.IDataTransferItem%2CAvalonia.Input.DataFormat%7B%60%600%7D%29)
+- [Avalonia.Input.DataTransferExtensions.TryGetValue&lt;T&gt;(Avalonia.Input.IDataTransfer,Avalonia.Input.DataFormat&#123;&lt;&gt;&#125;)](xref:Avalonia.Input.DataTransferExtensions.TryGetValue%60%601%28Avalonia.Input.IDataTransfer%2CAvalonia.Input.DataFormat%7B%60%600%7D%29)
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Formats](#uid-34684d2ddf) | Gets the formats supported by this item. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-34684d2ddf"></span>
+
+### Formats Property
+
+Gets the formats supported by this item.
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<Avalonia.Input.DataFormat> Formats { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

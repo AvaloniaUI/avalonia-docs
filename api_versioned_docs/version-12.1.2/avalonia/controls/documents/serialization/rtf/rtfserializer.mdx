@@ -1,0 +1,338 @@
+---
+title: 'RtfSerializer'
+hide_title: true
+slug: '/avalonia/controls/documents/serialization/rtf/rtfserializer'
+uid: 'Avalonia.Controls.Documents.Serialization.Rtf.RtfSerializer'
+commentId: 'T:Avalonia.Controls.Documents.Serialization.Rtf.RtfSerializer'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Documents.Serialization.Rtf'
+assembly: 'Avalonia.Controls.Documents.Serialization.Rtf'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.Serialization.Rtf'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">RtfSerializer Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.Serialization.Rtf</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Documents.Serialization.Rtf</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Documents.Serialization.Rtf</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Serializer for Rich Text Format (RTF) documents.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class RtfSerializer
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> RtfSerializer
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IDocumentSerializer
+</div>
+</div>
+
+## Remarks
+
+Supports reading and writing RTF documents with:
+- Character formatting: bold, italic, underline, strikethrough, font, size, colors
+- Paragraph formatting: alignment, indentation
+- Unicode text
+
+This serializer is thread-safe for concurrent operations.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [RtfSerializer](#uid-72fca32a9e) | Initializes a new instance of [Avalonia.Controls.Documents.Serialization.Rtf.RtfSerializer](xref:Avalonia.Controls.Documents.Serialization.Rtf.RtfSerializer) with optional serialization options. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-72fca32a9e"></span>
+
+### RtfSerializer Constructor
+
+Initializes a new instance of [Avalonia.Controls.Documents.Serialization.Rtf.RtfSerializer](xref:Avalonia.Controls.Documents.Serialization.Rtf.RtfSerializer) with optional serialization options.
+
+```csharp
+public RtfSerializer(Avalonia.Controls.Documents.Serialization.DocumentSerializerOptions options)
+```
+
+#### Parameters
+
+`options` Avalonia.Controls.Documents.Serialization.DocumentSerializerOptions
+
+Serialization options; defaults are used when .
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [CanDeserialize](#uid-ad95b78f71) | No summary available. |
+| [Deserialize (2 overloads)](#uid-504444cde9) | No summary available. |
+| [DeserializeAsync](#uid-fbbc313289) | No summary available. |
+| [Serialize (2 overloads)](#uid-97b9f367f1) | Serializes a document snapshot to an RTF string. |
+| [SerializeAsync](#uid-2ef73fc9ef) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ad95b78f71"></span>
+
+### CanDeserialize Method
+
+```csharp
+public bool CanDeserialize(System.IO.Stream stream)
+```
+
+#### Parameters
+
+`stream` System.IO.Stream
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<span id="uid-504444cde9"></span>
+
+### Deserialize overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-bc8231623c"></span>
+
+#### Deserialize Method
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot Deserialize(System.IO.Stream stream, System.Threading.CancellationToken cancellationToken)
+```
+
+##### Parameters
+
+`stream` System.IO.Stream
+
+
+`cancellationToken` System.Threading.CancellationToken
+
+
+##### Returns
+
+Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ae60a62e05"></span>
+
+#### Deserialize Method
+
+Deserializes a document from an RTF string.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot Deserialize(string rtf)
+```
+
+##### Parameters
+
+`rtf` string
+
+The RTF content string.
+
+
+##### Returns
+
+Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot
+
+A new [Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot) containing the parsed content.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-fbbc313289"></span>
+
+### DeserializeAsync Method
+
+```csharp
+public System.Threading.Tasks.Task<Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot> DeserializeAsync(System.IO.Stream stream, System.Threading.CancellationToken cancellationToken)
+```
+
+#### Parameters
+
+`stream` System.IO.Stream
+
+
+`cancellationToken` System.Threading.CancellationToken
+
+
+#### Returns
+
+System.Threading.Tasks.Task&lt;Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot&gt;
+
+
+</section>
+
+<span id="uid-97b9f367f1"></span>
+
+### Serialize overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-df1efd13c8"></span>
+
+#### Serialize Method
+
+Serializes a document snapshot to an RTF string.
+
+```csharp
+public string Serialize(Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot snapshot)
+```
+
+##### Parameters
+
+`snapshot` Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot
+
+The document snapshot to serialize.
+
+
+##### Returns
+
+string
+
+The RTF content string.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-741a18082b"></span>
+
+#### Serialize Method
+
+```csharp
+public void Serialize(Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot snapshot, System.IO.Stream stream, System.Threading.CancellationToken cancellationToken)
+```
+
+##### Parameters
+
+`snapshot` Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot
+
+
+`stream` System.IO.Stream
+
+
+`cancellationToken` System.Threading.CancellationToken
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2ef73fc9ef"></span>
+
+### SerializeAsync Method
+
+```csharp
+public System.Threading.Tasks.Task SerializeAsync(Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot snapshot, System.IO.Stream stream, System.Threading.CancellationToken cancellationToken)
+```
+
+#### Parameters
+
+`snapshot` Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot
+
+
+`stream` System.IO.Stream
+
+
+`cancellationToken` System.Threading.CancellationToken
+
+
+#### Returns
+
+System.Threading.Tasks.Task
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [FileExtension](#uid-18b3d14ee2) | No summary available. |
+| [FormatName](#uid-3a292e9793) | No summary available. |
+| [MimeType](#uid-bb981f39e5) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-18b3d14ee2"></span>
+
+### FileExtension Property
+
+```csharp
+public string FileExtension { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3a292e9793"></span>
+
+### FormatName Property
+
+```csharp
+public string FormatName { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-bb981f39e5"></span>
+
+### MimeType Property
+
+```csharp
+public string MimeType { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

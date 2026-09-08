@@ -1,0 +1,208 @@
+---
+title: 'TreeDataGridIndexesChangedEventArgs'
+hide_title: true
+slug: '/avalonia/controls/selection/treedatagridindexeschangedeventargs'
+uid: 'Avalonia.Controls.Selection.TreeDataGridIndexesChangedEventArgs'
+commentId: 'T:Avalonia.Controls.Selection.TreeDataGridIndexesChangedEventArgs'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.TreeDataGrid'
+assembly: 'Avalonia.Controls.TreeDataGrid'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Selection'
+tfms:
+  - 'net8.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">TreeDataGridIndexesChangedEventArgs Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Selection</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Holds data for the [Avalonia.Controls.Selection.TreeDataGridSelectionModel.IndexesChanged](xref:Avalonia.Controls.Selection.TreeDataGridSelectionModel.IndexesChanged) event.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class TreeDataGridIndexesChangedEventArgs
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> EventArgs <span className="apiref-page__relation-separator">-&gt;</span> TreeDataGridIndexesChangedEventArgs
+</div>
+</div>
+
+## Remarks
+
+This event is raised when indexes in the selection model change due to insertions,
+removals, or reordering in the underlying data source. It provides information
+about which range of indexes was affected and how they were shifted.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [TreeDataGridIndexesChangedEventArgs](#uid-98b247bda2) | Initializes a new instance of the [Avalonia.Controls.Selection.TreeDataGridIndexesChangedEventArgs](xref:Avalonia.Controls.Selection.TreeDataGridIndexesChangedEventArgs) class. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-98b247bda2"></span>
+
+### TreeDataGridIndexesChangedEventArgs Constructor
+
+Initializes a new instance of the
+[Avalonia.Controls.Selection.TreeDataGridIndexesChangedEventArgs](xref:Avalonia.Controls.Selection.TreeDataGridIndexesChangedEventArgs) class.
+
+```csharp
+public TreeDataGridIndexesChangedEventArgs(Avalonia.Controls.IndexPath parentIndex, int startIndex, int endIndex, int delta)
+```
+
+#### Parameters
+
+`parentIndex` [Avalonia.Controls.IndexPath](xref:Avalonia.Controls.IndexPath)
+
+The index path of the parent item whose children were affected.
+
+
+`startIndex` int
+
+The index at which the change started.
+
+
+`endIndex` int
+
+The index at which the change ended.
+
+
+`delta` int
+
+The number of items added or removed.
+
+
+#### Remarks
+
+The `delta` parameter will be positive when items are added and
+negative when items are removed.
+
+The affected range is from `startIndex` (inclusive) to
+`endIndex` (exclusive).
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Delta](#uid-83787d966b) | Gets the delta of the change; i.e. the number of indexes added or removed. |
+| [EndIndex](#uid-70b6b239ae) | Gets the exclusive end index of the range of indexes that changed. |
+| [ParentIndex](#uid-5c8d4539ab) | Gets the index of the parent item. |
+| [StartIndex](#uid-a59d20a025) | Gets the inclusive start index of the range of indexes that changed. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-83787d966b"></span>
+
+### Delta Property
+
+Gets the delta of the change; i.e. the number of indexes added or removed.
+
+```csharp
+public int Delta { get; set; }
+```
+
+#### Value
+
+A positive value indicates items were added; a negative value indicates items were
+removed.
+
+
+#### Remarks
+
+When items are added, [Avalonia.Controls.Selection.TreeDataGridIndexesChangedEventArgs.Delta](xref:Avalonia.Controls.Selection.TreeDataGridIndexesChangedEventArgs.Delta) represents the number of items inserted.
+
+When items are removed, [Avalonia.Controls.Selection.TreeDataGridIndexesChangedEventArgs.Delta](xref:Avalonia.Controls.Selection.TreeDataGridIndexesChangedEventArgs.Delta) is negative and its absolute value
+represents the number of items removed. This value is used to adjust index paths that
+point to items after the change.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-70b6b239ae"></span>
+
+### EndIndex Property
+
+Gets the exclusive end index of the range of indexes that changed.
+
+```csharp
+public int EndIndex { get; set; }
+```
+
+#### Remarks
+
+This is one past the last index affected by the change. The range of affected
+indexes is from [Avalonia.Controls.Selection.TreeDataGridIndexesChangedEventArgs.StartIndex](xref:Avalonia.Controls.Selection.TreeDataGridIndexesChangedEventArgs.StartIndex) (inclusive) to [Avalonia.Controls.Selection.TreeDataGridIndexesChangedEventArgs.EndIndex](xref:Avalonia.Controls.Selection.TreeDataGridIndexesChangedEventArgs.EndIndex)
+(exclusive).
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5c8d4539ab"></span>
+
+### ParentIndex Property
+
+Gets the index of the parent item.
+
+```csharp
+public Avalonia.Controls.IndexPath ParentIndex { get; set; }
+```
+
+#### Remarks
+
+For changes at the root level, this will be an empty index path.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a59d20a025"></span>
+
+### StartIndex Property
+
+Gets the inclusive start index of the range of indexes that changed.
+
+```csharp
+public int StartIndex { get; set; }
+```
+
+#### Remarks
+
+This is the first index affected by the change.
+
+</section>
+
+</ApiRefPage>
+

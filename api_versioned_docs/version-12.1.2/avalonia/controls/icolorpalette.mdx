@@ -1,0 +1,138 @@
+---
+title: 'IColorPalette'
+hide_title: true
+slug: '/avalonia/controls/icolorpalette'
+uid: 'Avalonia.Controls.IColorPalette'
+commentId: 'T:Avalonia.Controls.IColorPalette'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.ColorPicker'
+assembly: 'Avalonia.Controls.ColorPicker'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IColorPalette Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.ColorPicker</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.ColorPicker</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Interface to define a color palette.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface IColorPalette
+```
+
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [GetColor](#uid-c2a1d141cf) | Gets a color in the palette by index. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c2a1d141cf"></span>
+
+### GetColor Method
+
+Gets a color in the palette by index.
+
+```csharp
+public Avalonia.Media.Color GetColor(int colorIndex, int shadeIndex)
+```
+
+#### Parameters
+
+`colorIndex` int
+
+The index of the color in the palette.
+The index must be between zero and [Avalonia.Controls.IColorPalette.ColorCount](xref:Avalonia.Controls.IColorPalette.ColorCount).
+
+
+`shadeIndex` int
+
+The index of the color shade in the palette.
+The index must be between zero and [Avalonia.Controls.IColorPalette.ShadeCount](xref:Avalonia.Controls.IColorPalette.ShadeCount).
+
+
+#### Returns
+
+[Avalonia.Media.Color](xref:Avalonia.Media.Color)
+
+The color at the specified index or an exception.
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [ColorCount](#uid-bc47f2005b) | Gets the total number of colors in this palette. A color is not necessarily a single value and may be composed of several shades. |
+| [ShadeCount](#uid-2fee1b1bdb) | Gets the total number of shades for each color in this palette. Shades are usually a variation of the color lightening or darkening it. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-bc47f2005b"></span>
+
+### ColorCount Property
+
+Gets the total number of colors in this palette.
+A color is not necessarily a single value and may be composed of several shades.
+
+```csharp
+public int ColorCount { get; set; }
+```
+
+#### Remarks
+
+Represents total columns in a table.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2fee1b1bdb"></span>
+
+### ShadeCount Property
+
+Gets the total number of shades for each color in this palette.
+Shades are usually a variation of the color lightening or darkening it.
+
+```csharp
+public int ShadeCount { get; set; }
+```
+
+#### Remarks
+
+Represents total rows in a table.
+
+</section>
+
+</ApiRefPage>
+

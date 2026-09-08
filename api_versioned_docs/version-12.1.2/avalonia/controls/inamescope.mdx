@@ -1,0 +1,178 @@
+---
+title: 'INameScope'
+hide_title: true
+slug: '/avalonia/controls/inamescope'
+uid: 'Avalonia.Controls.INameScope'
+commentId: 'T:Avalonia.Controls.INameScope'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">INameScope Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Defines a name scope.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface INameScope
+```
+
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Complete](#uid-dbae865813) | Marks the name scope as completed, no further registrations will be allowed |
+| [Find](#uid-6d3e11c791) | Finds a named element in the name scope, returns immediately, doesn't traverse the name scope stack |
+| [FindAsync](#uid-0b5bb4d230) | Finds a named element in the name scope, waits for the scope to be completely populated before returning null Returned task is configured to run any continuations synchronously. |
+| [Register](#uid-0a39fc228f) | Registers an element in the name scope. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-dbae865813"></span>
+
+### Complete Method
+
+Marks the name scope as completed, no further registrations will be allowed
+
+```csharp
+public void Complete()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6d3e11c791"></span>
+
+### Find Method
+
+Finds a named element in the name scope, returns immediately, doesn't traverse the name scope stack
+
+```csharp
+public object Find(string name)
+```
+
+#### Parameters
+
+`name` string
+
+The name.
+
+
+#### Returns
+
+object
+
+The element, or null if the name was not found.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0b5bb4d230"></span>
+
+### FindAsync Method
+
+Finds a named element in the name scope, waits for the scope to be completely populated before returning null
+Returned task is configured to run any continuations synchronously.
+
+```csharp
+public Avalonia.Utilities.SynchronousCompletionAsyncResult<T><object> FindAsync(string name)
+```
+
+#### Parameters
+
+`name` string
+
+The name.
+
+
+#### Returns
+
+Avalonia.Utilities.SynchronousCompletionAsyncResult&lt;T&gt;&lt;object&gt;
+
+The element, or null if the name was not found.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0a39fc228f"></span>
+
+### Register Method
+
+Registers an element in the name scope.
+
+```csharp
+public void Register(string name, object element)
+```
+
+#### Parameters
+
+`name` string
+
+The element name.
+
+
+`element` object
+
+The element.
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [IsCompleted](#uid-daaf8e4df0) | Returns whether further registrations are allowed on the scope |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-daaf8e4df0"></span>
+
+### IsCompleted Property
+
+Returns whether further registrations are allowed on the scope
+
+```csharp
+public bool IsCompleted { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

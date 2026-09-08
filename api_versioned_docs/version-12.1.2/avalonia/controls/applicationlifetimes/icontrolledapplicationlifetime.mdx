@@ -1,0 +1,114 @@
+---
+title: 'IControlledApplicationLifetime'
+hide_title: true
+slug: '/avalonia/controls/applicationlifetimes/icontrolledapplicationlifetime'
+uid: 'Avalonia.Controls.ApplicationLifetimes.IControlledApplicationLifetime'
+commentId: 'T:Avalonia.Controls.ApplicationLifetimes.IControlledApplicationLifetime'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.ApplicationLifetimes'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IControlledApplicationLifetime Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.ApplicationLifetimes</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface IControlledApplicationLifetime
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="iapplicationlifetime">IApplicationLifetime</a>
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Shutdown](#uid-4097cb3b0a) | Shuts down the application and sets the exit code that is returned to the operating system when the application exits. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4097cb3b0a"></span>
+
+### Shutdown Method
+
+Shuts down the application and sets the exit code that is returned to the operating system when the application exits.
+
+```csharp
+public void Shutdown(int exitCode)
+```
+
+#### Parameters
+
+`exitCode` int
+
+An integer exit code for an application. The default exit code is 0.
+
+
+</section>
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [Exit](#uid-24be6dcaff) | Sent when the application is exiting. |
+| [Startup](#uid-2481c92d33) | Sent when the application is starting up. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-24be6dcaff"></span>
+
+### Exit Event
+
+Sent when the application is exiting.
+
+```csharp
+public event EventHandler<Avalonia.Controls.ApplicationLifetimes.ControlledApplicationLifetimeExitEventArgs> Exit
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2481c92d33"></span>
+
+### Startup Event
+
+Sent when the application is starting up.
+
+```csharp
+public event EventHandler<Avalonia.Controls.ApplicationLifetimes.ControlledApplicationLifetimeStartupEventArgs> Startup
+```
+
+</section>
+
+</ApiRefPage>
+

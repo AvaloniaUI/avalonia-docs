@@ -1,0 +1,223 @@
+---
+title: 'WaylandPlatformOptions'
+hide_title: true
+slug: '/avalonia/waylandplatformoptions'
+uid: 'Avalonia.WaylandPlatformOptions'
+commentId: 'T:Avalonia.WaylandPlatformOptions'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Wayland'
+assembly: 'Avalonia.Wayland'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">WaylandPlatformOptions Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Wayland</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Wayland</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Platform-specific options for the Wayland windowing backend, supplied via
+[Avalonia.AvaloniaWaylandPlatformExtensions.UseWayland(Avalonia.AppBuilder)](xref:Avalonia.AvaloniaWaylandPlatformExtensions.UseWayland%28Avalonia.AppBuilder%29).
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class WaylandPlatformOptions
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> WaylandPlatformOptions
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [WaylandPlatformOptions](#uid-b745d8e195) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b745d8e195"></span>
+
+### WaylandPlatformOptions Constructor
+
+```csharp
+public WaylandPlatformOptions()
+```
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [DisplayFd](#uid-e5cd25d967) | An already-opened file descriptor for the Wayland display socket. When set, [Avalonia.WaylandPlatformOptions.WlDisplayName](xref:Avalonia.WaylandPlatformOptions.WlDisplayName) is ignored and `wl_display_connect_to_fd` is used instead of `wl_display_connect`. Reconnects are automatically disabled in this mode because the fd is consumed by `libwayland` and cannot be reused. |
+| [EnableReconnects](#uid-4c35df15ca) | Whether to automatically attempt to reconnect to the compositor if the connection is lost. Defaults to enabled. Reconnects are always disabled when [Avalonia.WaylandPlatformOptions.DisplayFd](xref:Avalonia.WaylandPlatformOptions.DisplayFd) is set, because the file descriptor is consumed by `libwayland` and cannot be reused. |
+| [ExternalGLibMainLoopExceptionLogger](#uid-36c6041010) | If Avalonia is in control of a run loop, we propagate exceptions by stopping the run loop frame and rethrowing an exception. However, if there is no Avalonia-controlled run loop frame, there is no way to report such exceptions, since allowing those to escape native-&gt;managed call boundary will likely brick GLib machinery since it's not aware of managed Exceptions. This property allows to inspect such exceptions before they will be ignored. Only used when [Avalonia.WaylandPlatformOptions.UseGLibMainLoop](xref:Avalonia.WaylandPlatformOptions.UseGLibMainLoop) is enabled. |
+| [ForceDrawnDecorations](#uid-15953f838b) | Suppresses server-side decoration negotiation (`zxdg_decoration_manager_v1`): toplevels behave as if the compositor never advertised SSD support. Used primarily for testing the CSD path on compositors that would otherwise enforce server-side decorations (KWin, etc.). Equivalent in intent to `X11PlatformOptions.ForceDrawnDecorations`. |
+| [GlProfiles](#uid-dde6b949af) | The OpenGL/OpenGL ES versions to try, in priority order, when creating the GL context. The first profile the driver supports is used. |
+| [UseDmabufSwapchain](#uid-c70e8ca05e) | Whether to use a dmabuf-based swapchain for GPU rendering. When `null`, the backend decides based on compositor and driver capabilities. |
+| [UseGLibMainLoop](#uid-447ba32923) | If this option is set to true, a GMainLoop and GSource based dispatcher implementation will be used for the UI thread instead of the default managed one. Use this if you need to use GLib-based libraries on the main thread. |
+| [WlDisplayName](#uid-cb99a773b5) | The name of the Wayland display to connect to (e.g. `wayland-0`). When `null`, the `WAYLAND_DISPLAY` environment variable is used. Ignored when [Avalonia.WaylandPlatformOptions.DisplayFd](xref:Avalonia.WaylandPlatformOptions.DisplayFd) is set. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e5cd25d967"></span>
+
+### DisplayFd Property
+
+An already-opened file descriptor for the Wayland display socket.
+When set, [Avalonia.WaylandPlatformOptions.WlDisplayName](xref:Avalonia.WaylandPlatformOptions.WlDisplayName) is ignored and
+`wl_display_connect_to_fd` is used instead of `wl_display_connect`.
+Reconnects are automatically disabled in this mode because the fd
+is consumed by `libwayland` and cannot be reused.
+
+```csharp
+public Nullable<int> DisplayFd { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4c35df15ca"></span>
+
+### EnableReconnects Property
+
+Whether to automatically attempt to reconnect to the compositor if the connection is lost.
+Defaults to enabled. Reconnects are always disabled when [Avalonia.WaylandPlatformOptions.DisplayFd](xref:Avalonia.WaylandPlatformOptions.DisplayFd) is set, because
+the file descriptor is consumed by `libwayland` and cannot be reused.
+
+```csharp
+public Nullable<bool> EnableReconnects { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-36c6041010"></span>
+
+### ExternalGLibMainLoopExceptionLogger Property
+
+If Avalonia is in control of a run loop, we propagate exceptions by stopping the run loop frame
+and rethrowing an exception. However, if there is no Avalonia-controlled run loop frame,
+there is no way to report such exceptions, since allowing those to escape native-&gt;managed call boundary
+will likely brick GLib machinery since it's not aware of managed Exceptions.
+This property allows to inspect such exceptions before they will be ignored.
+Only used when [Avalonia.WaylandPlatformOptions.UseGLibMainLoop](xref:Avalonia.WaylandPlatformOptions.UseGLibMainLoop) is enabled.
+
+```csharp
+public Action<Exception> ExternalGLibMainLoopExceptionLogger { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-15953f838b"></span>
+
+### ForceDrawnDecorations Property
+
+Suppresses server-side decoration negotiation
+(`zxdg_decoration_manager_v1`): toplevels behave as if the
+compositor never advertised SSD support. Used primarily for
+testing the CSD path on compositors that would otherwise enforce
+server-side decorations (KWin, etc.). Equivalent in intent to
+`X11PlatformOptions.ForceDrawnDecorations`.
+
+```csharp
+public bool ForceDrawnDecorations { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-dde6b949af"></span>
+
+### GlProfiles Property
+
+The OpenGL/OpenGL ES versions to try, in priority order, when creating the GL context.
+The first profile the driver supports is used.
+
+```csharp
+public System.Collections.Generic.IList<Avalonia.OpenGL.GlVersion> GlProfiles { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c70e8ca05e"></span>
+
+### UseDmabufSwapchain Property
+
+Whether to use a dmabuf-based swapchain for GPU rendering. When `null`, the backend
+decides based on compositor and driver capabilities.
+
+```csharp
+public Nullable<bool> UseDmabufSwapchain { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-447ba32923"></span>
+
+### UseGLibMainLoop Property
+
+If this option is set to true, a GMainLoop and GSource based dispatcher implementation will be used for the
+UI thread instead of the default managed one.
+Use this if you need to use GLib-based libraries on the main thread.
+
+```csharp
+public bool UseGLibMainLoop { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-cb99a773b5"></span>
+
+### WlDisplayName Property
+
+The name of the Wayland display to connect to (e.g. `wayland-0`). When `null`,
+the `WAYLAND_DISPLAY` environment variable is used. Ignored when [Avalonia.WaylandPlatformOptions.DisplayFd](xref:Avalonia.WaylandPlatformOptions.DisplayFd) is set.
+
+```csharp
+public string WlDisplayName { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

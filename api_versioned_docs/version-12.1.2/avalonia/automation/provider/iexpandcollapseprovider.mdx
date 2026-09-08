@@ -1,0 +1,147 @@
+---
+title: 'IExpandCollapseProvider'
+hide_title: true
+slug: '/avalonia/automation/provider/iexpandcollapseprovider'
+uid: 'Avalonia.Automation.Provider.IExpandCollapseProvider'
+commentId: 'T:Avalonia.Automation.Provider.IExpandCollapseProvider'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Automation.Provider'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IExpandCollapseProvider Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Automation.Provider</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Exposes methods and properties to support UI Automation client access to controls that
+visually expand to display content and collapse to hide content.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface IExpandCollapseProvider
+```
+
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Collapse](#uid-d18a9aedda) | Hides all nodes, controls, or content that are descendants of the control. |
+| [Expand](#uid-b9a46f2085) | Displays all child nodes, controls, or content of the control. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d18a9aedda"></span>
+
+### Collapse Method
+
+Hides all nodes, controls, or content that are descendants of the control.
+
+```csharp
+public void Collapse()
+```
+
+#### Remarks
+
+- Windows`IExpandCollapseProvider.Collapse`
+- macOS Called by setting `NSAccessibilityProtocol.setAccessibilityExpanded` to false.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b9a46f2085"></span>
+
+### Expand Method
+
+Displays all child nodes, controls, or content of the control.
+
+```csharp
+public void Expand()
+```
+
+#### Remarks
+
+- Windows`IExpandCollapseProvider.Expand`
+- macOS Called by setting `NSAccessibilityProtocol.setAccessibilityExpanded` to true, by calling `NSAccessibilityProtocol.accessibilityPerformPress`, or by calling `NSAccessibilityProtocol.accessibilityPerformShowMenu` when [Avalonia.Automation.Provider.IExpandCollapseProvider.ShowsMenu](xref:Avalonia.Automation.Provider.IExpandCollapseProvider.ShowsMenu) is true.
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [ExpandCollapseState](#uid-6a627a6024) | Gets the state, expanded or collapsed, of the control. |
+| [ShowsMenu](#uid-536dc46dde) | Gets a value indicating whether expanding the element shows a menu of items to the user, such as drop-down list. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6a627a6024"></span>
+
+### ExpandCollapseState Property
+
+Gets the state, expanded or collapsed, of the control.
+
+```csharp
+public Avalonia.Automation.ExpandCollapseState ExpandCollapseState { get; set; }
+```
+
+#### Remarks
+
+- Windows`IExpandCollapseProvider.ExpandCollapseState`
+- macOS`NSAccessibilityProtocol.isAccessibilityExpanded`
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-536dc46dde"></span>
+
+### ShowsMenu Property
+
+Gets a value indicating whether expanding the element shows a menu of items to the user,
+such as drop-down list.
+
+```csharp
+public bool ShowsMenu { get; set; }
+```
+
+#### Remarks
+
+Used in OSX to allow `accessibilityPerformShowMenu` to open expandable controls such as a
+[Avalonia.Controls.ComboBox](xref:Avalonia.Controls.ComboBox); in macOS, a combo box drop-down is considered a menu.
+
+- WindowsNo mapping.
+- macOS When true, `NSAccessibilityProtocol.accessibilityPerformShowMenu` will cause the [Avalonia.Automation.Provider.IExpandCollapseProvider.Expand](xref:Avalonia.Automation.Provider.IExpandCollapseProvider.Expand) method to be triggered.
+
+</section>
+
+</ApiRefPage>
+

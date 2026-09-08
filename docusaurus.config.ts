@@ -312,7 +312,7 @@ gtag('consent', 'default', {
         routeBasePath: "api",
         disableVersioning: true,
         sidebarPath: require.resolve("./api-sidebars.ts"),
-        remarkPlugins: [[require("./plugins/apiref-xref"), { indexPath: "./dist/xref/12.1.1.xrefmap.json" }]],
+        remarkPlugins: [[require("./plugins/apiref-xref"), { indexPath: "./dist/xref/12.1.2.xrefmap.json" }]],
       },
     ]
   ],

@@ -1,0 +1,258 @@
+---
+title: 'IEditorAction'
+hide_title: true
+slug: '/avalonia/controls/documents/primitives/actions/ieditoraction'
+uid: 'Avalonia.Controls.Documents.Primitives.Actions.IEditorAction'
+commentId: 'T:Avalonia.Controls.Documents.Primitives.Actions.IEditorAction'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.RichTextEditor'
+assembly: 'Avalonia.Controls.RichTextEditor'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.Primitives.Actions'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IEditorAction Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.Primitives.Actions</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.RichTextEditor</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.RichTextEditor</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Represents an action that can be executed on a [RichTextEditor](xref:Avalonia.Controls.RichTextEditor).
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface IEditorAction
+```
+
+</div>
+
+## Remarks
+
+Editor actions provide a unified abstraction for operations like formatting,
+clipboard operations, and undo/redo. They can be used across multiple UI surfaces:
+toolbar buttons, context menus, and keyboard shortcuts.
+
+Actions are typically singletons accessed via the [Avalonia.Controls.Documents.Primitives.Actions.EditorActions](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions) class.
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [CanExecute](#uid-7c2846e8e1) | Gets whether the action can currently execute. |
+| [Execute](#uid-069802ca26) | Executes the action synchronously. |
+| [ExecuteAsync](#uid-3eb6289632) | Executes the action asynchronously. |
+| [GetState](#uid-096b254a52) | Gets the current state of the action. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7c2846e8e1"></span>
+
+### CanExecute Method
+
+Gets whether the action can currently execute.
+
+```csharp
+public bool CanExecute(Avalonia.Controls.Documents.Primitives.ITextEditorHost host)
+```
+
+#### Parameters
+
+`host` [Avalonia.Controls.Documents.Primitives.ITextEditorHost](xref:Avalonia.Controls.Documents.Primitives.ITextEditorHost)
+
+The editor host to check against.
+
+
+#### Returns
+
+bool
+
+True if the action can execute; otherwise, false.
+
+
+#### Remarks
+
+This is called frequently to update UI state (button enabled/disabled).
+Implementations should be fast and avoid heavy computation.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-069802ca26"></span>
+
+### Execute Method
+
+Executes the action synchronously.
+
+```csharp
+public void Execute(Avalonia.Controls.Documents.Primitives.ITextEditorHost host)
+```
+
+#### Parameters
+
+`host` [Avalonia.Controls.Documents.Primitives.ITextEditorHost](xref:Avalonia.Controls.Documents.Primitives.ITextEditorHost)
+
+The editor host to execute on.
+
+
+#### Remarks
+
+For actions that require async operations (like file dialogs),
+use [Avalonia.Controls.Documents.Primitives.Actions.IEditorAction.ExecuteAsync(Avalonia.Controls.Documents.Primitives.ITextEditorHost)](xref:Avalonia.Controls.Documents.Primitives.Actions.IEditorAction.ExecuteAsync%28Avalonia.Controls.Documents.Primitives.ITextEditorHost%29) instead.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3eb6289632"></span>
+
+### ExecuteAsync Method
+
+Executes the action asynchronously.
+
+```csharp
+public System.Threading.Tasks.Task ExecuteAsync(Avalonia.Controls.Documents.Primitives.ITextEditorHost host)
+```
+
+#### Parameters
+
+`host` [Avalonia.Controls.Documents.Primitives.ITextEditorHost](xref:Avalonia.Controls.Documents.Primitives.ITextEditorHost)
+
+The editor host to execute on.
+
+
+#### Returns
+
+System.Threading.Tasks.Task
+
+A task representing the asynchronous operation.
+
+
+#### Remarks
+
+The default implementation calls [Avalonia.Controls.Documents.Primitives.Actions.IEditorAction.Execute(Avalonia.Controls.Documents.Primitives.ITextEditorHost)](xref:Avalonia.Controls.Documents.Primitives.Actions.IEditorAction.Execute%28Avalonia.Controls.Documents.Primitives.ITextEditorHost%29) synchronously.
+Override this for actions that need async operations like file dialogs.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-096b254a52"></span>
+
+### GetState Method
+
+Gets the current state of the action.
+
+```csharp
+public object GetState(Avalonia.Controls.Documents.Primitives.ITextEditorHost host)
+```
+
+#### Parameters
+
+`host` [Avalonia.Controls.Documents.Primitives.ITextEditorHost](xref:Avalonia.Controls.Documents.Primitives.ITextEditorHost)
+
+The editor host to query.
+
+
+#### Returns
+
+object
+
+The current state, or null if the action has no state.
+For toggle actions, this returns a boolean.
+For property actions, this returns the current property value.
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [DisplayName](#uid-4a5c76cfd3) | Gets the display name for UI purposes. |
+| [Gesture](#uid-e449a9221a) | Gets the optional keyboard gesture for this action. |
+| [Id](#uid-e77188f3c3) | Gets the unique identifier for this action. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4a5c76cfd3"></span>
+
+### DisplayName Property
+
+Gets the display name for UI purposes.
+
+```csharp
+public string DisplayName { get; set; }
+```
+
+#### Remarks
+
+This is used for tooltips, menu items, and accessibility.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e449a9221a"></span>
+
+### Gesture Property
+
+Gets the optional keyboard gesture for this action.
+
+```csharp
+public Avalonia.Input.KeyGesture Gesture { get; set; }
+```
+
+#### Remarks
+
+When set, this gesture is displayed in tooltips and can be
+automatically registered as a keyboard shortcut.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e77188f3c3"></span>
+
+### Id Property
+
+Gets the unique identifier for this action.
+
+```csharp
+public string Id { get; set; }
+```
+
+#### Remarks
+
+IDs follow a hierarchical naming convention:
+
+- Edit.Undo, Edit.Redo, Edit.Cut, etc.
+- Format.RichBold, Format.RichItalic, etc.
+- Paragraph.AlignLeft, Paragraph.BulletList, etc.
+
+</section>
+
+</ApiRefPage>
+

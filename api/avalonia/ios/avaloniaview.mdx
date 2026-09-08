@@ -56,7 +56,7 @@ public class AvaloniaView
 <span className="apiref-page__meta-label">Inheritance:</span> UIView <span className="apiref-page__relation-separator">-&gt;</span> AvaloniaView
 </div>
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Implements:</span> <a href="../input/textinput/itextinputmethodimpl">ITextInputMethodImpl</a>
+<span className="apiref-page__meta-label">Implements:</span> <a href="../input/textinput/itextinputmethodimpl">ITextInputMethodImpl</a>, INativeObject, IDisposable, IUIAccessibilityContainer
 </div>
 </div>
 
@@ -82,7 +82,10 @@ public AvaloniaView()
 
 | Name | Description |
 | --- | --- |
+| [AccessibilityElementCount](#uid-bf8258776b) | No summary available. |
 | [BecomeFirstResponder](#uid-a7a180a483) | No summary available. |
+| [GetAccessibilityElementAt](#uid-c33fbc2973) | No summary available. |
+| [GetIndexOfAccessibilityElement](#uid-30c3b1f13f) | No summary available. |
 | [InitWithController](#uid-87954b4c1f) | No summary available. |
 | [LayerClass](#uid-ba18894f18) | No summary available. |
 | [LayoutSubviews](#uid-335734b34b) | No summary available. |
@@ -100,6 +103,23 @@ public AvaloniaView()
 
 <section className="apiref-page__member-entry">
 
+<span id="uid-bf8258776b"></span>
+
+### AccessibilityElementCount Method
+
+```csharp
+public IntPtr AccessibilityElementCount()
+```
+
+#### Returns
+
+IntPtr
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-a7a180a483"></span>
 
 ### BecomeFirstResponder Method
@@ -111,6 +131,50 @@ public bool BecomeFirstResponder()
 #### Returns
 
 bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c33fbc2973"></span>
+
+### GetAccessibilityElementAt Method
+
+```csharp
+public Foundation.NSObject GetAccessibilityElementAt(IntPtr index)
+```
+
+#### Parameters
+
+`index` IntPtr
+
+
+#### Returns
+
+Foundation.NSObject
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-30c3b1f13f"></span>
+
+### GetIndexOfAccessibilityElement Method
+
+```csharp
+public IntPtr GetIndexOfAccessibilityElement(Foundation.NSObject element)
+```
+
+#### Parameters
+
+`element` Foundation.NSObject
+
+
+#### Returns
+
+IntPtr
 
 
 </section>
@@ -376,9 +440,22 @@ public void TraitCollectionDidChange(UIKit.UITraitCollection previousTraitCollec
 
 | Name | Description |
 | --- | --- |
+| [AccessibilityContainerType](#uid-e28ebf4821) | No summary available. |
 | [CanBecomeFirstResponder](#uid-accb5f5d37) | No summary available. |
 | [CanResignFirstResponder](#uid-2092635d1b) | No summary available. |
 | [Content](#uid-ca6a0fcf6b) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e28ebf4821"></span>
+
+### AccessibilityContainerType Property
+
+```csharp
+public UIKit.UIAccessibilityContainerType AccessibilityContainerType { get; set; }
+```
+
+</section>
 
 <section className="apiref-page__member-entry">
 

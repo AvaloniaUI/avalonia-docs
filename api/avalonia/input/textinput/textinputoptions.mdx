@@ -78,6 +78,7 @@ public TextInputOptions()
 | [GetAutoCapitalization](#uid-cdf3f2b490) | Gets the value of the attached [Avalonia.Input.TextInput.TextInputOptions.AutoCapitalizationProperty](xref:Avalonia.Input.TextInput.TextInputOptions.AutoCapitalizationProperty). |
 | [GetContentType](#uid-b43268833d) | Gets the value of the attached [Avalonia.Input.TextInput.TextInputOptions.ContentTypeProperty](xref:Avalonia.Input.TextInput.TextInputOptions.ContentTypeProperty). |
 | [GetIsSensitive](#uid-27db08f530) | Gets the value of the attached [Avalonia.Input.TextInput.TextInputOptions.IsSensitiveProperty](xref:Avalonia.Input.TextInput.TextInputOptions.IsSensitiveProperty). |
+| [GetLocaleHints](#uid-7c6ed71c52) | Gets the value of the attached [Avalonia.Input.TextInput.TextInputOptions.LocaleHintsProperty](xref:Avalonia.Input.TextInput.TextInputOptions.LocaleHintsProperty). |
 | [GetLowercase](#uid-1313e418df) | Gets the value of the attached [Avalonia.Input.TextInput.TextInputOptions.LowercaseProperty](xref:Avalonia.Input.TextInput.TextInputOptions.LowercaseProperty). |
 | [GetMultiline](#uid-25c7b5ce46) | Gets the value of the attached [Avalonia.Input.TextInput.TextInputOptions.MultilineProperty](xref:Avalonia.Input.TextInput.TextInputOptions.MultilineProperty). |
 | [GetReturnKeyType](#uid-3916425cd2) | Gets the value of the attached [Avalonia.Input.TextInput.TextInputOptions.ReturnKeyTypeProperty](xref:Avalonia.Input.TextInput.TextInputOptions.ReturnKeyTypeProperty). |
@@ -86,6 +87,7 @@ public TextInputOptions()
 | [SetAutoCapitalization](#uid-3059291c6b) | Sets the value of the attached [Avalonia.Input.TextInput.TextInputOptions.AutoCapitalizationProperty](xref:Avalonia.Input.TextInput.TextInputOptions.AutoCapitalizationProperty) on a control. |
 | [SetContentType](#uid-12d030e7c0) | Sets the value of the attached [Avalonia.Input.TextInput.TextInputOptions.ContentTypeProperty](xref:Avalonia.Input.TextInput.TextInputOptions.ContentTypeProperty) on a control. |
 | [SetIsSensitive](#uid-fbcf93aa90) | Sets the value of the attached [Avalonia.Input.TextInput.TextInputOptions.IsSensitiveProperty](xref:Avalonia.Input.TextInput.TextInputOptions.IsSensitiveProperty) on a control. |
+| [SetLocaleHints](#uid-687022e5bd) | No summary available. |
 | [SetLowercase](#uid-42a2046c2a) | Sets the value of the attached [Avalonia.Input.TextInput.TextInputOptions.LowercaseProperty](xref:Avalonia.Input.TextInput.TextInputOptions.LowercaseProperty) on a control. |
 | [SetMultiline](#uid-f03a3b604e) | Sets the value of the attached [Avalonia.Input.TextInput.TextInputOptions.MultilineProperty](xref:Avalonia.Input.TextInput.TextInputOptions.MultilineProperty) on a control. |
 | [SetReturnKeyType](#uid-882a011968) | Sets the value of the attached [Avalonia.Input.TextInput.TextInputOptions.ReturnKeyTypeProperty](xref:Avalonia.Input.TextInput.TextInputOptions.ReturnKeyTypeProperty) on a control. |
@@ -194,6 +196,34 @@ The target.
 bool
 
 true if IsSensitive
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7c6ed71c52"></span>
+
+### GetLocaleHints Method
+
+Gets the value of the attached [Avalonia.Input.TextInput.TextInputOptions.LocaleHintsProperty](xref:Avalonia.Input.TextInput.TextInputOptions.LocaleHintsProperty).
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<string> GetLocaleHints(Avalonia.StyledElement avaloniaObject)
+```
+
+#### Parameters
+
+`avaloniaObject` [Avalonia.StyledElement](xref:Avalonia.StyledElement)
+
+The target.
+
+
+#### Returns
+
+System.Collections.Generic.IReadOnlyList&lt;string&gt;
+
+BCP47 locale values
 
 
 </section>
@@ -418,6 +448,26 @@ The property value to set.
 
 <section className="apiref-page__member-entry">
 
+<span id="uid-687022e5bd"></span>
+
+### SetLocaleHints Method
+
+```csharp
+public void SetLocaleHints(Avalonia.StyledElement avaloniaObject, System.Collections.Generic.IReadOnlyList<string> value)
+```
+
+#### Parameters
+
+`avaloniaObject` [Avalonia.StyledElement](xref:Avalonia.StyledElement)
+
+
+`value` System.Collections.Generic.IReadOnlyList&lt;string&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-42a2046c2a"></span>
 
 ### SetLowercase Method
@@ -547,6 +597,7 @@ The property value to set.
 | [AutoCapitalization](#uid-81e47b6145) | Automatically capitalize letters at the start of the sentence |
 | [ContentType](#uid-de7fac5c5c) | The content type (mostly for determining the shape of the virtual keyboard) |
 | [IsSensitive](#uid-1ec1003c2f) | Text contains sensitive data like card numbers and should not be stored |
+| [LocaleHints](#uid-29119ac437) | Gets or sets the locale hints, using BCP47 values. |
 | [Lowercase](#uid-c8910b8552) | Text is in lower case |
 | [Multiline](#uid-dbc690ede0) | Text is multiline |
 | [ReturnKeyType](#uid-794ac4f7e5) | Determines what the Return key says and how it behaves. |
@@ -591,6 +642,20 @@ Text contains sensitive data like card numbers and should not be stored
 
 ```csharp
 public bool IsSensitive { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-29119ac437"></span>
+
+### LocaleHints Property
+
+Gets or sets the locale hints, using BCP47 values.
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<string> LocaleHints { get; set; }
 ```
 
 </section>
@@ -673,6 +738,7 @@ public bool Uppercase { get; set; }
 | [ContentTypeProperty](#uid-5cd75ff6e5) | Defines the [Avalonia.Input.TextInput.TextInputOptions.ContentType](xref:Avalonia.Input.TextInput.TextInputOptions.ContentType) property. |
 | [Default](#uid-441250e7ac) | No summary available. |
 | [IsSensitiveProperty](#uid-3a39e71c6c) | Defines the [Avalonia.Input.TextInput.TextInputOptions.IsSensitive](xref:Avalonia.Input.TextInput.TextInputOptions.IsSensitive) property. |
+| [LocaleHintsProperty](#uid-6fe3289236) | Defines the [Avalonia.Input.TextInput.TextInputOptions.LocaleHints](xref:Avalonia.Input.TextInput.TextInputOptions.LocaleHints) property. |
 | [LowercaseProperty](#uid-a05955c1df) | Defines the [Avalonia.Input.TextInput.TextInputOptions.Lowercase](xref:Avalonia.Input.TextInput.TextInputOptions.Lowercase) property. |
 | [MultilineProperty](#uid-0458d10236) | Defines the [Avalonia.Input.TextInput.TextInputOptions.Multiline](xref:Avalonia.Input.TextInput.TextInputOptions.Multiline) property. |
 | [ReturnKeyTypeProperty](#uid-fc4102ab34) | Defines the [Avalonia.Input.TextInput.TextInputOptions.ReturnKeyType](xref:Avalonia.Input.TextInput.TextInputOptions.ReturnKeyType) property. |
@@ -729,6 +795,20 @@ Defines the [Avalonia.Input.TextInput.TextInputOptions.IsSensitive](xref:Avaloni
 
 ```csharp
 public Avalonia.AttachedProperty<TValue><bool> IsSensitiveProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6fe3289236"></span>
+
+### LocaleHintsProperty Field
+
+Defines the [Avalonia.Input.TextInput.TextInputOptions.LocaleHints](xref:Avalonia.Input.TextInput.TextInputOptions.LocaleHints) property.
+
+```csharp
+public Avalonia.AttachedProperty<TValue><System.Collections.Generic.IReadOnlyList<string>> LocaleHintsProperty
 ```
 
 </section>

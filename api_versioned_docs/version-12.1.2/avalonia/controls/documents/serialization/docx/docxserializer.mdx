@@ -1,0 +1,276 @@
+---
+title: 'DocxSerializer'
+hide_title: true
+slug: '/avalonia/controls/documents/serialization/docx/docxserializer'
+uid: 'Avalonia.Controls.Documents.Serialization.Docx.DocxSerializer'
+commentId: 'T:Avalonia.Controls.Documents.Serialization.Docx.DocxSerializer'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Documents.Serialization.Docx'
+assembly: 'Avalonia.Controls.Documents.Serialization.Docx'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.Serialization.Docx'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">DocxSerializer Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.Serialization.Docx</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Documents.Serialization.Docx</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Documents.Serialization.Docx</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Serializer for Office Open XML (.docx) documents.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class DocxSerializer
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> DocxSerializer
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IDocumentSerializer
+</div>
+</div>
+
+## Remarks
+
+Supports reading and writing DOCX documents with:
+- Character formatting: bold, italic, underline, strikethrough, font, size, colors, super/subscript
+- Paragraph formatting: alignment, indentation, spacing, borders, background, tab stops
+- Lists: bullet and numbered with multi-level support
+- Tables: column widths, cell formatting
+- Hyperlinks
+
+This serializer is thread-safe for concurrent operations.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [DocxSerializer](#uid-46e884f108) | Initializes a new instance of [Avalonia.Controls.Documents.Serialization.Docx.DocxSerializer](xref:Avalonia.Controls.Documents.Serialization.Docx.DocxSerializer) with optional serialization options. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-46e884f108"></span>
+
+### DocxSerializer Constructor
+
+Initializes a new instance of [Avalonia.Controls.Documents.Serialization.Docx.DocxSerializer](xref:Avalonia.Controls.Documents.Serialization.Docx.DocxSerializer) with optional serialization options.
+
+```csharp
+public DocxSerializer(Avalonia.Controls.Documents.Serialization.DocumentSerializerOptions options)
+```
+
+#### Parameters
+
+`options` Avalonia.Controls.Documents.Serialization.DocumentSerializerOptions
+
+Serialization options; defaults are used when .
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [CanDeserialize](#uid-718e8636cf) | No summary available. |
+| [Deserialize](#uid-1b1d130102) | No summary available. |
+| [DeserializeAsync](#uid-0e3a4abdbd) | No summary available. |
+| [Serialize](#uid-818b827e8b) | No summary available. |
+| [SerializeAsync](#uid-b99619ec78) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-718e8636cf"></span>
+
+### CanDeserialize Method
+
+```csharp
+public bool CanDeserialize(System.IO.Stream stream)
+```
+
+#### Parameters
+
+`stream` System.IO.Stream
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1b1d130102"></span>
+
+### Deserialize Method
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot Deserialize(System.IO.Stream stream, System.Threading.CancellationToken cancellationToken)
+```
+
+#### Parameters
+
+`stream` System.IO.Stream
+
+
+`cancellationToken` System.Threading.CancellationToken
+
+
+#### Returns
+
+Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0e3a4abdbd"></span>
+
+### DeserializeAsync Method
+
+```csharp
+public System.Threading.Tasks.Task<Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot> DeserializeAsync(System.IO.Stream stream, System.Threading.CancellationToken cancellationToken)
+```
+
+#### Parameters
+
+`stream` System.IO.Stream
+
+
+`cancellationToken` System.Threading.CancellationToken
+
+
+#### Returns
+
+System.Threading.Tasks.Task&lt;Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-818b827e8b"></span>
+
+### Serialize Method
+
+```csharp
+public void Serialize(Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot snapshot, System.IO.Stream stream, System.Threading.CancellationToken cancellationToken)
+```
+
+#### Parameters
+
+`snapshot` Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot
+
+
+`stream` System.IO.Stream
+
+
+`cancellationToken` System.Threading.CancellationToken
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b99619ec78"></span>
+
+### SerializeAsync Method
+
+```csharp
+public System.Threading.Tasks.Task SerializeAsync(Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot snapshot, System.IO.Stream stream, System.Threading.CancellationToken cancellationToken)
+```
+
+#### Parameters
+
+`snapshot` Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot
+
+
+`stream` System.IO.Stream
+
+
+`cancellationToken` System.Threading.CancellationToken
+
+
+#### Returns
+
+System.Threading.Tasks.Task
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [FileExtension](#uid-6daa1036d1) | No summary available. |
+| [FormatName](#uid-06435e8d48) | No summary available. |
+| [MimeType](#uid-aea3ac6637) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6daa1036d1"></span>
+
+### FileExtension Property
+
+```csharp
+public string FileExtension { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-06435e8d48"></span>
+
+### FormatName Property
+
+```csharp
+public string FormatName { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-aea3ac6637"></span>
+
+### MimeType Property
+
+```csharp
+public string MimeType { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

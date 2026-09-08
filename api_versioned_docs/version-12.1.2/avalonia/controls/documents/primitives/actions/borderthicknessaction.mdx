@@ -1,0 +1,167 @@
+---
+title: 'BorderThicknessAction'
+hide_title: true
+slug: '/avalonia/controls/documents/primitives/actions/borderthicknessaction'
+uid: 'Avalonia.Controls.Documents.Primitives.Actions.BorderThicknessAction'
+commentId: 'T:Avalonia.Controls.Documents.Primitives.Actions.BorderThicknessAction'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.RichTextEditor'
+assembly: 'Avalonia.Controls.RichTextEditor'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.Primitives.Actions'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">BorderThicknessAction Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.Primitives.Actions</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.RichTextEditor</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.RichTextEditor</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Action for setting border thickness on block elements (Paragraph, Section, etc.).
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class BorderThicknessAction
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> BlockPropertyAction&lt;Thickness&gt; <span className="apiref-page__relation-separator">-&gt;</span> BorderThicknessAction
+</div>
+</div>
+
+## Remarks
+
+Border thickness controls the width of the border drawn around a block element.
+Borders are drawn between the margin (outside) and padding (inside) of a block.
+
+Common border thickness values:
+
+- 0 - No border (default)
+- 1 - Thin border (standard)
+- 2 - Medium border (emphasis)
+- 3 - Thick border (strong emphasis)
+
+Note: Border thickness alone won't make the border visible.
+You must also set [Avalonia.Controls.Documents.Primitives.Actions.BorderBrushAction](xref:Avalonia.Controls.Documents.Primitives.Actions.BorderBrushAction) to define the border color.
+
+This action sets uniform border thickness (all sides equal).
+For non-uniform borders (different thickness on each side), use a dedicated border editor panel.
+
+When applied to a selection spanning multiple paragraphs, all affected paragraphs
+will have their border thickness set to the specified value.
+
+Tip: Combine with [Avalonia.Controls.Documents.Primitives.Actions.BlockBackgroundAction](xref:Avalonia.Controls.Documents.Primitives.Actions.BlockBackgroundAction) and [Avalonia.Controls.Documents.Primitives.Actions.PaddingAction](xref:Avalonia.Controls.Documents.Primitives.Actions.PaddingAction)
+to create visually distinct callout boxes, quotes, or code blocks.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [BorderThicknessAction](#uid-c1b24ae76f) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c1b24ae76f"></span>
+
+### BorderThicknessAction Constructor
+
+```csharp
+public BorderThicknessAction()
+```
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [GetAvailableValues](#uid-1b71a26982) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1b71a26982"></span>
+
+### GetAvailableValues Method
+
+```csharp
+public System.Collections.Generic.IEnumerable<Avalonia.Thickness> GetAvailableValues()
+```
+
+#### Returns
+
+System.Collections.Generic.IEnumerable&lt;[Avalonia.Thickness](xref:Avalonia.Thickness)&gt;
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [DisplayName](#uid-fb02909d42) | No summary available. |
+| [Gesture](#uid-5b5909a5e3) | No summary available. |
+| [Id](#uid-12ac1c7b00) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-fb02909d42"></span>
+
+### DisplayName Property
+
+```csharp
+public string DisplayName { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5b5909a5e3"></span>
+
+### Gesture Property
+
+```csharp
+public Avalonia.Input.KeyGesture Gesture { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-12ac1c7b00"></span>
+
+### Id Property
+
+```csharp
+public string Id { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

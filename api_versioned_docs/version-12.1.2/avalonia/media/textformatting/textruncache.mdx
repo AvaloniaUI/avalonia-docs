@@ -1,0 +1,140 @@
+---
+title: 'TextRunCache'
+hide_title: true
+slug: '/avalonia/media/textformatting/textruncache'
+uid: 'Avalonia.Media.TextFormatting.TextRunCache'
+commentId: 'T:Avalonia.Media.TextFormatting.TextRunCache'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Media.TextFormatting'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">TextRunCache Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Media.TextFormatting</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Caches shaped text runs and bidi processing results to avoid redundant shaping
+when only the paragraph width constraint changes (e.g., between Measure and Arrange).
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class TextRunCache
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> TextRunCache
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IDisposable
+</div>
+</div>
+
+## Remarks
+
+Uses an inline single-entry store for the common case of a single paragraph,
+and only promotes to a dictionary when multiple entries are added.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [TextRunCache](#uid-5e224e96fa) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5e224e96fa"></span>
+
+### TextRunCache Constructor
+
+```csharp
+public TextRunCache()
+```
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Dispose](#uid-280a754ff0) | No summary available. |
+| [Invalidate](#uid-b0cc2172dc) | Invalidates all cached entries and disposes their shaped buffers. |
+| [InvalidateFrom](#uid-17aae5a847) | Invalidates all cached entries at or after the specified text source index. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-280a754ff0"></span>
+
+### Dispose Method
+
+```csharp
+public void Dispose()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b0cc2172dc"></span>
+
+### Invalidate Method
+
+Invalidates all cached entries and disposes their shaped buffers.
+
+```csharp
+public void Invalidate()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-17aae5a847"></span>
+
+### InvalidateFrom Method
+
+Invalidates all cached entries at or after the specified text source index.
+
+```csharp
+public void InvalidateFrom(int textSourceIndex)
+```
+
+#### Parameters
+
+`textSourceIndex` int
+
+The text source index from which to invalidate.
+
+
+</section>
+
+</ApiRefPage>
+

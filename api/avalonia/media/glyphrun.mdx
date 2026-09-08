@@ -408,7 +408,7 @@ public Avalonia.Media.IImmutableGlyphRunReference TryCreateImmutableGlyphRunRefe
 | [FontRenderingEmSize](#uid-ac261e95fc) | Gets or sets the em size used for rendering the [Avalonia.Media.GlyphRun](xref:Avalonia.Media.GlyphRun). |
 | [GlyphInfos](#uid-a5fe313c08) | Gets or sets the list of glyphs to use to render this run. |
 | [GlyphTypeface](#uid-daa6bc349c) | Gets the [Avalonia.Media.GlyphRun.GlyphTypeface](xref:Avalonia.Media.GlyphRun.GlyphTypeface) for the [Avalonia.Media.GlyphRun](xref:Avalonia.Media.GlyphRun). |
-| [InkBounds](#uid-cdd7824107) | No summary available. |
+| [InkBounds](#uid-cdd7824107) | Gets the conservative bounding box of the inked area of the [Avalonia.Media.GlyphRun](xref:Avalonia.Media.GlyphRun). |
 | [IsLeftToRight](#uid-964a430ddd) | Returns `true` if the text direction is left-to-right. Otherwise, returns `false`. |
 | [Metrics](#uid-e9df7b4b7a) | No summary available. |
 
@@ -515,6 +515,8 @@ public Avalonia.Media.GlyphTypeface GlyphTypeface { get; set; }
 <span id="uid-cdd7824107"></span>
 
 ### InkBounds Property
+
+Gets the conservative bounding box of the inked area of the [Avalonia.Media.GlyphRun](xref:Avalonia.Media.GlyphRun).
 
 ```csharp
 public Avalonia.Rect InkBounds { get; set; }

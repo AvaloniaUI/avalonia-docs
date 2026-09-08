@@ -1,0 +1,244 @@
+---
+title: 'AuthorizationCodePkceSession'
+hide_title: true
+slug: '/avalonia/controls/oauth2/authorizationcodepkcesession'
+uid: 'Avalonia.Controls.OAuth2.AuthorizationCodePkceSession'
+commentId: 'T:Avalonia.Controls.OAuth2.AuthorizationCodePkceSession'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.WebView'
+assembly: 'Avalonia.Controls.WebView'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.OAuth2'
+tfms:
+  - 'net10.0-browser1.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">AuthorizationCodePkceSession Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.OAuth2</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.WebView</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.WebView</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia.Controls.WebView/blob/main/src/Avalonia.Controls.WebView.Core/OAuth2/AuthorizationCodePkceSession.cs">AuthorizationCodePkceSession.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class AuthorizationCodePkceSession
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> AuthorizationCodePkceSession
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Create](#uid-0f667271d5) | No summary available. |
+| [CreateAsync](#uid-5ec70310fe) | No summary available. |
+| [ExchangeCodeAsync](#uid-88e7dffcd1) | No summary available. |
+| [IsCallbackFor](#uid-caeac3d949) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0f667271d5"></span>
+
+### Create Method
+
+```csharp
+public Avalonia.Controls.OAuth2.AuthorizationCodePkceSession Create(Uri authorizationEndpoint, Uri tokenEndpoint, string clientId, string redirectUri, string scope, string nonce, string resource)
+```
+
+#### Parameters
+
+`authorizationEndpoint` Uri
+
+
+`tokenEndpoint` Uri
+
+
+`clientId` string
+
+
+`redirectUri` string
+
+
+`scope` string
+
+
+`nonce` string
+
+
+`resource` string
+
+
+#### Returns
+
+[Avalonia.Controls.OAuth2.AuthorizationCodePkceSession](xref:Avalonia.Controls.OAuth2.AuthorizationCodePkceSession)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5ec70310fe"></span>
+
+### CreateAsync Method
+
+```csharp
+public System.Threading.Tasks.Task<Avalonia.Controls.OAuth2.AuthorizationCodePkceSession> CreateAsync(string issuer, string clientId, string redirectUri, string scope, string nonce, string resource, System.Net.Http.HttpClient httpClient, System.Threading.CancellationToken cancellationToken)
+```
+
+#### Parameters
+
+`issuer` string
+
+
+`clientId` string
+
+
+`redirectUri` string
+
+
+`scope` string
+
+
+`nonce` string
+
+
+`resource` string
+
+
+`httpClient` System.Net.Http.HttpClient
+
+
+`cancellationToken` System.Threading.CancellationToken
+
+
+#### Returns
+
+System.Threading.Tasks.Task&lt;[Avalonia.Controls.OAuth2.AuthorizationCodePkceSession](xref:Avalonia.Controls.OAuth2.AuthorizationCodePkceSession)&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-88e7dffcd1"></span>
+
+### ExchangeCodeAsync Method
+
+```csharp
+public System.Threading.Tasks.Task<Avalonia.Controls.OAuth2.MetadataClient.OAuth2TokenResponse> ExchangeCodeAsync(Avalonia.Controls.WebAuthenticationResult result, string clientSecret, System.Net.Http.HttpClient httpClient, System.Threading.CancellationToken cancellationToken)
+```
+
+#### Parameters
+
+`result` [Avalonia.Controls.WebAuthenticationResult](xref:Avalonia.Controls.WebAuthenticationResult)
+
+
+`clientSecret` string
+
+
+`httpClient` System.Net.Http.HttpClient
+
+
+`cancellationToken` System.Threading.CancellationToken
+
+
+#### Returns
+
+System.Threading.Tasks.Task&lt;[Avalonia.Controls.OAuth2.MetadataClient.OAuth2TokenResponse](xref:Avalonia.Controls.OAuth2.MetadataClient.OAuth2TokenResponse)&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-caeac3d949"></span>
+
+### IsCallbackFor Method
+
+```csharp
+public bool IsCallbackFor(Avalonia.Controls.WebAuthenticationResult result)
+```
+
+#### Parameters
+
+`result` [Avalonia.Controls.WebAuthenticationResult](xref:Avalonia.Controls.WebAuthenticationResult)
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [AuthorizationUri](#uid-a318b1a23f) | No summary available. |
+| [RedirectUri](#uid-8a6fe4cb58) | No summary available. |
+| [State](#uid-565c1fbba4) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a318b1a23f"></span>
+
+### AuthorizationUri Property
+
+```csharp
+public Uri AuthorizationUri { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8a6fe4cb58"></span>
+
+### RedirectUri Property
+
+```csharp
+public Uri RedirectUri { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-565c1fbba4"></span>
+
+### State Property
+
+```csharp
+public string State { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

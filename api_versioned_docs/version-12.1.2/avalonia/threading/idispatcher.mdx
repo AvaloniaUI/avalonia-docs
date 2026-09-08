@@ -1,0 +1,121 @@
+---
+title: 'IDispatcher'
+hide_title: true
+slug: '/avalonia/threading/idispatcher'
+uid: 'Avalonia.Threading.IDispatcher'
+commentId: 'T:Avalonia.Threading.IDispatcher'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Threading'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IDispatcher Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Threading</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Dispatches jobs to a thread.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface IDispatcher
+```
+
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [CheckAccess](#uid-80daf8478f) | Determines whether the calling thread is the thread associated with this [Avalonia.Threading.IDispatcher](xref:Avalonia.Threading.IDispatcher). |
+| [Post](#uid-edfbf6b423) | Posts an action that will be invoked on the dispatcher thread. |
+| [VerifyAccess](#uid-f70cfaa9e1) | Throws an exception if the calling thread is not the thread associated with this [Avalonia.Threading.IDispatcher](xref:Avalonia.Threading.IDispatcher). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-80daf8478f"></span>
+
+### CheckAccess Method
+
+Determines whether the calling thread is the thread associated with this [Avalonia.Threading.IDispatcher](xref:Avalonia.Threading.IDispatcher).
+
+```csharp
+public bool CheckAccess()
+```
+
+#### Returns
+
+bool
+
+True if he calling thread is the thread associated with the dispatched, otherwise false.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-edfbf6b423"></span>
+
+### Post Method
+
+Posts an action that will be invoked on the dispatcher thread.
+
+```csharp
+public void Post(Action action, Avalonia.Threading.DispatcherPriority priority)
+```
+
+#### Parameters
+
+`action` Action
+
+The method.
+
+
+`priority` [Avalonia.Threading.DispatcherPriority](xref:Avalonia.Threading.DispatcherPriority)
+
+The priority with which to invoke the method.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f70cfaa9e1"></span>
+
+### VerifyAccess Method
+
+Throws an exception if the calling thread is not the thread associated with this [Avalonia.Threading.IDispatcher](xref:Avalonia.Threading.IDispatcher).
+
+```csharp
+public void VerifyAccess()
+```
+
+</section>
+
+</ApiRefPage>
+

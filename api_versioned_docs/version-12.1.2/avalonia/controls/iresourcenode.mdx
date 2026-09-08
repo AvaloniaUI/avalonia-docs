@@ -1,0 +1,112 @@
+---
+title: 'IResourceNode'
+hide_title: true
+slug: '/avalonia/controls/iresourcenode'
+uid: 'Avalonia.Controls.IResourceNode'
+commentId: 'T:Avalonia.Controls.IResourceNode'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IResourceNode Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Represents an object that can be queried for resources.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface IResourceNode
+```
+
+</div>
+
+## Remarks
+
+The interface represents a common interface for both controls that host resources
+([Avalonia.Controls.IResourceHost](xref:Avalonia.Controls.IResourceHost)) and resource providers such as [Avalonia.Controls.ResourceDictionary](xref:Avalonia.Controls.ResourceDictionary)
+(see [Avalonia.Controls.IResourceProvider](xref:Avalonia.Controls.IResourceProvider)).
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [TryGetResource](#uid-c9b2d98db4) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c9b2d98db4"></span>
+
+### TryGetResource Method
+
+```csharp
+public bool TryGetResource(object key, Avalonia.Styling.ThemeVariant theme, object& value)
+```
+
+#### Parameters
+
+`key` object
+
+
+`theme` [Avalonia.Styling.ThemeVariant](xref:Avalonia.Styling.ThemeVariant)
+
+
+`value` object&amp;
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [HasResources](#uid-a143d159fe) | Gets a value indicating whether the object has resources. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a143d159fe"></span>
+
+### HasResources Property
+
+Gets a value indicating whether the object has resources.
+
+```csharp
+public bool HasResources { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

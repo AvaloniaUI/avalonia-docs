@@ -1,0 +1,235 @@
+---
+title: 'IdbusmenuHandler.GetPropertyContext'
+hide_title: true
+slug: '/avalonia/freedesktop/dbus/idbusmenuhandler-getpropertycontext'
+uid: 'Avalonia.FreeDesktop.DBus.IdbusmenuHandler.GetPropertyContext'
+commentId: 'T:Avalonia.FreeDesktop.DBus.IdbusmenuHandler.GetPropertyContext'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.FreeDesktop'
+assembly: 'Avalonia.FreeDesktop'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.FreeDesktop.DBus'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IdbusmenuHandler.GetPropertyContext Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.FreeDesktop.DBus</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.FreeDesktop</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.FreeDesktop</code>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct IdbusmenuHandler.GetPropertyContext
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> IdbusmenuHandler.GetPropertyContext
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IDisposable
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [IdbusmenuHandler.GetPropertyContext](#uid-c54295f130) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c54295f130"></span>
+
+### IdbusmenuHandler.GetPropertyContext Constructor
+
+```csharp
+public IdbusmenuHandler.GetPropertyContext(Tmds.DBus.Protocol.MethodContext methodContext)
+```
+
+#### Parameters
+
+`methodContext` Tmds.DBus.Protocol.MethodContext
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Dispose](#uid-0ed03d8d84) | No summary available. |
+| [Handle](#uid-337442edf9) | No summary available. |
+| [ReplyErrorUnknownProperty](#uid-900f4fb4e4) | No summary available. |
+| [ReplyIconThemePath](#uid-00ac177f69) | No summary available. |
+| [ReplyStatus](#uid-81eab1fd36) | No summary available. |
+| [ReplyTextDirection](#uid-036a4aa7a7) | No summary available. |
+| [ReplyVersion](#uid-e559886270) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0ed03d8d84"></span>
+
+### Dispose Method
+
+```csharp
+public void Dispose()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-337442edf9"></span>
+
+### Handle Method
+
+```csharp
+public System.Threading.Tasks.ValueTask Handle(Avalonia.FreeDesktop.DBus.IdbusmenuProperties properties)
+```
+
+#### Parameters
+
+`properties` Avalonia.FreeDesktop.DBus.IdbusmenuProperties
+
+
+#### Returns
+
+System.Threading.Tasks.ValueTask
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-900f4fb4e4"></span>
+
+### ReplyErrorUnknownProperty Method
+
+```csharp
+public void ReplyErrorUnknownProperty()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-00ac177f69"></span>
+
+### ReplyIconThemePath Method
+
+```csharp
+public void ReplyIconThemePath(string[] value)
+```
+
+#### Parameters
+
+`value` string[]
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-81eab1fd36"></span>
+
+### ReplyStatus Method
+
+```csharp
+public void ReplyStatus(string value)
+```
+
+#### Parameters
+
+`value` string
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-036a4aa7a7"></span>
+
+### ReplyTextDirection Method
+
+```csharp
+public void ReplyTextDirection(string value)
+```
+
+#### Parameters
+
+`value` string
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e559886270"></span>
+
+### ReplyVersion Method
+
+```csharp
+public void ReplyVersion(uint value)
+```
+
+#### Parameters
+
+`value` uint
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [MethodContext](#uid-19915266f2) | No summary available. |
+| [Property](#uid-e67b13e1d4) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-19915266f2"></span>
+
+### MethodContext Property
+
+```csharp
+public Tmds.DBus.Protocol.MethodContext MethodContext { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e67b13e1d4"></span>
+
+### Property Property
+
+```csharp
+public Avalonia.FreeDesktop.DBus.dbusmenuProperty Property { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

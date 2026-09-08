@@ -40,7 +40,7 @@ Before you begin, make sure you have:
 
 1. **Avalonia 12.0 or newer.**
 2. **A valid Avalonia license key** that includes access to `AvaloniaUI.DiagnosticsSupport.HotReload`. You can get a key from the [Avalonia customer portal](https://portal.avaloniaui.net/). The same key may cover other licensed Avalonia packages, such as `Charts` or `TreeDataGrid`.
-3. **A hot reload driver.** Either the `dotnet watch` command or an IDE that supports .NET Hot Reload (such as Visual Studio). See [Step 3](#step-3-run-with-hot-reload).
+3. **A hot reload driver.** Either the `dotnet watch` command or an IDE that supports .NET Hot Reload (such as Visual Studio). See [Running with hot reload](#running-with-hot-reload).
 
 ## Getting started
 

@@ -1,0 +1,376 @@
+---
+title: 'ISelectionModel'
+hide_title: true
+slug: '/avalonia/controls/selection/iselectionmodel'
+uid: 'Avalonia.Controls.Selection.ISelectionModel'
+commentId: 'T:Avalonia.Controls.Selection.ISelectionModel'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Selection'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ISelectionModel Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Selection</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface ISelectionModel
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> INotifyPropertyChanged
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [BeginBatchUpdate](#uid-45193f97c7) | No summary available. |
+| [Clear](#uid-5cd2a7770f) | No summary available. |
+| [Deselect](#uid-56862e8f36) | No summary available. |
+| [DeselectRange](#uid-85801ed530) | No summary available. |
+| [EndBatchUpdate](#uid-71a3845693) | No summary available. |
+| [IsSelected](#uid-9b7cd12904) | No summary available. |
+| [Select](#uid-ac832fbc5c) | No summary available. |
+| [SelectAll](#uid-7966ff20f4) | No summary available. |
+| [SelectRange](#uid-0ead09ec4e) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-45193f97c7"></span>
+
+### BeginBatchUpdate Method
+
+```csharp
+public void BeginBatchUpdate()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5cd2a7770f"></span>
+
+### Clear Method
+
+```csharp
+public void Clear()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-56862e8f36"></span>
+
+### Deselect Method
+
+```csharp
+public void Deselect(int index)
+```
+
+#### Parameters
+
+`index` int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-85801ed530"></span>
+
+### DeselectRange Method
+
+```csharp
+public void DeselectRange(int start, int end)
+```
+
+#### Parameters
+
+`start` int
+
+
+`end` int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-71a3845693"></span>
+
+### EndBatchUpdate Method
+
+```csharp
+public void EndBatchUpdate()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9b7cd12904"></span>
+
+### IsSelected Method
+
+```csharp
+public bool IsSelected(int index)
+```
+
+#### Parameters
+
+`index` int
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ac832fbc5c"></span>
+
+### Select Method
+
+```csharp
+public void Select(int index)
+```
+
+#### Parameters
+
+`index` int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7966ff20f4"></span>
+
+### SelectAll Method
+
+```csharp
+public void SelectAll()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0ead09ec4e"></span>
+
+### SelectRange Method
+
+```csharp
+public void SelectRange(int start, int end)
+```
+
+#### Parameters
+
+`start` int
+
+
+`end` int
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [AnchorIndex](#uid-8ff8de8454) | No summary available. |
+| [Count](#uid-7a3dd7c3f6) | No summary available. |
+| [SelectedIndex](#uid-df5390923d) | No summary available. |
+| [SelectedIndexes](#uid-820b26c1c2) | No summary available. |
+| [SelectedItem](#uid-4eba651bcf) | No summary available. |
+| [SelectedItems](#uid-4dda2e92e7) | No summary available. |
+| [SingleSelect](#uid-d583816d65) | No summary available. |
+| [Source](#uid-6cfaaa5ce3) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8ff8de8454"></span>
+
+### AnchorIndex Property
+
+```csharp
+public int AnchorIndex { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7a3dd7c3f6"></span>
+
+### Count Property
+
+```csharp
+public int Count { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-df5390923d"></span>
+
+### SelectedIndex Property
+
+```csharp
+public int SelectedIndex { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-820b26c1c2"></span>
+
+### SelectedIndexes Property
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<int> SelectedIndexes { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4eba651bcf"></span>
+
+### SelectedItem Property
+
+```csharp
+public object SelectedItem { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4dda2e92e7"></span>
+
+### SelectedItems Property
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<object> SelectedItems { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d583816d65"></span>
+
+### SingleSelect Property
+
+```csharp
+public bool SingleSelect { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6cfaaa5ce3"></span>
+
+### Source Property
+
+```csharp
+public System.Collections.IEnumerable Source { get; set; }
+```
+
+</section>
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [IndexesChanged](#uid-565d8e0070) | No summary available. |
+| [LostSelection](#uid-cd037151c3) | No summary available. |
+| [SelectionChanged](#uid-006e2aeebf) | No summary available. |
+| [SourceReset](#uid-9717935e88) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-565d8e0070"></span>
+
+### IndexesChanged Event
+
+```csharp
+public event EventHandler<Avalonia.Controls.Selection.SelectionModelIndexesChangedEventArgs> IndexesChanged
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-cd037151c3"></span>
+
+### LostSelection Event
+
+```csharp
+public event EventHandler LostSelection
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-006e2aeebf"></span>
+
+### SelectionChanged Event
+
+```csharp
+public event EventHandler<Avalonia.Controls.Selection.SelectionModelSelectionChangedEventArgs> SelectionChanged
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9717935e88"></span>
+
+### SourceReset Event
+
+```csharp
+public event EventHandler SourceReset
+```
+
+</section>
+
+</ApiRefPage>
+

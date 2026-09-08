@@ -154,6 +154,7 @@ string
 | [MemoryOffset](#uid-d9ee025b63) | No summary available. |
 | [MemorySize](#uid-81462657cd) | No summary available. |
 | [TopLeftOrigin](#uid-433a848a31) | No summary available. |
+| [VulkanProperties](#uid-2a13c1cd5e) | Vulkan-specific properties of the imported image, ignored by other backends. |
 | [Width](#uid-341a30ad65) | No summary available. |
 
 <section className="apiref-page__member-entry">
@@ -212,6 +213,20 @@ public ulong MemorySize { get; set; }
 
 ```csharp
 public bool TopLeftOrigin { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2a13c1cd5e"></span>
+
+### VulkanProperties Property
+
+Vulkan-specific properties of the imported image, ignored by other backends.
+
+```csharp
+public Nullable<Avalonia.Platform.PlatformGraphicsExternalImageVulkanProperties> VulkanProperties { get; set; }
 ```
 
 </section>

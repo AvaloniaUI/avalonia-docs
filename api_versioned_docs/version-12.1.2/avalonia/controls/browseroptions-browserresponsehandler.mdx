@@ -1,0 +1,164 @@
+---
+title: 'BrowserOptions.BrowserResponseHandler'
+hide_title: true
+slug: '/avalonia/controls/browseroptions-browserresponsehandler'
+uid: 'Avalonia.Controls.BrowserOptions.BrowserResponseHandler'
+commentId: 'T:Avalonia.Controls.BrowserOptions.BrowserResponseHandler'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.WebView'
+assembly: 'Avalonia.Controls.WebView'
+apiKind: 'Delegate'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0-browser1.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">BrowserOptions.BrowserResponseHandler Delegate</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.WebView</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.WebView</code>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public delegate BrowserOptions.BrowserResponseHandler
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> MulticastDelegate <span className="apiref-page__relation-separator">-&gt;</span> BrowserOptions.BrowserResponseHandler
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [BrowserOptions.BrowserResponseHandler](#uid-e7ae7ad560) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e7ae7ad560"></span>
+
+### BrowserOptions.BrowserResponseHandler Constructor
+
+```csharp
+public BrowserOptions.BrowserResponseHandler(object object, IntPtr method)
+```
+
+#### Parameters
+
+`object` object
+
+
+`method` IntPtr
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [BeginInvoke](#uid-d31b6a7e35) | No summary available. |
+| [EndInvoke](#uid-4c1a1b2a21) | No summary available. |
+| [Invoke](#uid-ad9377bf49) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d31b6a7e35"></span>
+
+### BeginInvoke Method
+
+```csharp
+public IAsyncResult BeginInvoke(Avalonia.Controls.WebAuthenticationResult result, Avalonia.Controls.BrowserResponse response, AsyncCallback callback, object object)
+```
+
+#### Parameters
+
+`result` [Avalonia.Controls.WebAuthenticationResult](xref:Avalonia.Controls.WebAuthenticationResult)
+
+
+`response` [Avalonia.Controls.BrowserResponse](xref:Avalonia.Controls.BrowserResponse)
+
+
+`callback` AsyncCallback
+
+
+`object` object
+
+
+#### Returns
+
+IAsyncResult
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4c1a1b2a21"></span>
+
+### EndInvoke Method
+
+```csharp
+public System.Threading.Tasks.Task EndInvoke(IAsyncResult result)
+```
+
+#### Parameters
+
+`result` IAsyncResult
+
+
+#### Returns
+
+System.Threading.Tasks.Task
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ad9377bf49"></span>
+
+### Invoke Method
+
+```csharp
+public System.Threading.Tasks.Task Invoke(Avalonia.Controls.WebAuthenticationResult result, Avalonia.Controls.BrowserResponse response)
+```
+
+#### Parameters
+
+`result` [Avalonia.Controls.WebAuthenticationResult](xref:Avalonia.Controls.WebAuthenticationResult)
+
+
+`response` [Avalonia.Controls.BrowserResponse](xref:Avalonia.Controls.BrowserResponse)
+
+
+#### Returns
+
+System.Threading.Tasks.Task
+
+
+</section>
+
+</ApiRefPage>
+

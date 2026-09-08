@@ -414,6 +414,10 @@ const sidebars = {
         "avalonia/controls/barlayoutbehavior",
         "avalonia/controls/begineditgestures",
         "avalonia/controls/border",
+        "avalonia/controls/browseroptions",
+        "avalonia/controls/browseroptions-browsercallbackfilter",
+        "avalonia/controls/browseroptions-browserresponsehandler",
+        "avalonia/controls/browserresponse",
         "avalonia/controls/button",
         "avalonia/controls/buttonspinner",
         "avalonia/controls/calendar",
@@ -709,6 +713,7 @@ const sidebars = {
         "avalonia/controls/virtualkeyboardscope",
         "avalonia/controls/webauthenticationbroker",
         "avalonia/controls/webauthenticationresult",
+        "avalonia/controls/webauthenticatormode",
         "avalonia/controls/webauthenticatoroptions",
         "avalonia/controls/webmessagereceivedeventargs",
         "avalonia/controls/webresourcerequestedeventargs",
@@ -792,6 +797,14 @@ const sidebars = {
         "avalonia/controls/automation/peers/radiobuttonautomationpeer",
         "avalonia/controls/automation/peers/sliderautomationpeer",
         "avalonia/controls/automation/peers/thumbautomationpeer",
+        "avalonia/controls/automation/peers/treedatagridautomationpeer",
+        "avalonia/controls/automation/peers/treedatagridcellautomationpeer",
+        "avalonia/controls/automation/peers/treedatagridcheckboxcellautomationpeer",
+        "avalonia/controls/automation/peers/treedatagridcolumnheaderautomationpeer",
+        "avalonia/controls/automation/peers/treedatagridcolumnheaderspresenterautomationpeer",
+        "avalonia/controls/automation/peers/treedatagridrowautomationpeer",
+        "avalonia/controls/automation/peers/treedatagridrowheadercellautomationpeer",
+        "avalonia/controls/automation/peers/treedatagridtextcellautomationpeer",
         "avalonia/controls/automation/peers/usercontrolautomationpeer"
       ],
       "link": {
@@ -1466,6 +1479,17 @@ const sidebars = {
     },
     {
       "type": "category",
+      "label": "Avalonia.Controls.Models.TreeDataGrid",
+      "items": [
+        "avalonia/controls/models/treedatagrid/iexpander"
+      ],
+      "link": {
+        "type": "doc",
+        "id": "avalonia/controls/models/treedatagrid/index"
+      }
+    },
+    {
+      "type": "category",
       "label": "Avalonia.Controls.Notifications",
       "items": [
         "avalonia/controls/notifications/imanagednotificationmanager",
@@ -1480,6 +1504,28 @@ const sidebars = {
       "link": {
         "type": "doc",
         "id": "avalonia/controls/notifications/index"
+      }
+    },
+    {
+      "type": "category",
+      "label": "Avalonia.Controls.OAuth2",
+      "items": [
+        "avalonia/controls/oauth2/authorizationcodepkcesession"
+      ],
+      "link": {
+        "type": "doc",
+        "id": "avalonia/controls/oauth2/index"
+      }
+    },
+    {
+      "type": "category",
+      "label": "Avalonia.Controls.OAuth2.MetadataClient",
+      "items": [
+        "avalonia/controls/oauth2/metadataclient/oauth2tokenresponse"
+      ],
+      "link": {
+        "type": "doc",
+        "id": "avalonia/controls/oauth2/metadataclient/index"
       }
     },
     {
@@ -1673,6 +1719,9 @@ const sidebars = {
       "label": "Avalonia.Controls.Selection",
       "items": [
         "avalonia/controls/selection/iselectionmodel",
+        "avalonia/controls/selection/itreedatagridcellselection",
+        "avalonia/controls/selection/itreedatagridrowselection",
+        "avalonia/controls/selection/itreedatagridselectioninteraction",
         "avalonia/controls/selection/selecteditems-1-untyped",
         "avalonia/controls/selection/selectionmodel-1",
         "avalonia/controls/selection/selectionmodel-1-batchupdateoperation",
@@ -2613,6 +2662,12 @@ const sidebars = {
         "avalonia/media/colors",
         "avalonia/media/combinedgeometry",
         "avalonia/media/conicgradientbrush",
+        "avalonia/media/custommediabackendframebuffer",
+        "avalonia/media/custommediabackendframebuffer-presentationresult",
+        "avalonia/media/custommediabackendframebufferchain",
+        "avalonia/media/custommediabackendframesinkfactory",
+        "avalonia/media/custommediabackendplaybackstate",
+        "avalonia/media/custommediabackendstate",
         "avalonia/media/dashstyle",
         "avalonia/media/drawing",
         "avalonia/media/drawingbrush",
@@ -2665,6 +2720,7 @@ const sidebars = {
         "avalonia/media/iblureffect",
         "avalonia/media/ibrush",
         "avalonia/media/iconicgradientbrush",
+        "avalonia/media/icustommediabackendsession",
         "avalonia/media/idashstyle",
         "avalonia/media/idropshadoweffect",
         "avalonia/media/ieffect",
@@ -3228,6 +3284,7 @@ const sidebars = {
         "avalonia/platform/platformgraphicsdeviceadapterdescription",
         "avalonia/platform/platformgraphicsexternalimageformat",
         "avalonia/platform/platformgraphicsexternalimageproperties",
+        "avalonia/platform/platformgraphicsexternalimagevulkanproperties",
         "avalonia/platform/platformhandle",
         "avalonia/platform/platformrendertargetstate",
         "avalonia/platform/platformscreen",

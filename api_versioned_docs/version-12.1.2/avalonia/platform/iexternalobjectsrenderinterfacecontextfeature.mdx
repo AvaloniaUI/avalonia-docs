@@ -1,0 +1,210 @@
+---
+title: 'IExternalObjectsRenderInterfaceContextFeature'
+hide_title: true
+slug: '/avalonia/platform/iexternalobjectsrenderinterfacecontextfeature'
+uid: 'Avalonia.Platform.IExternalObjectsRenderInterfaceContextFeature'
+commentId: 'T:Avalonia.Platform.IExternalObjectsRenderInterfaceContextFeature'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Platform'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IExternalObjectsRenderInterfaceContextFeature Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Platform</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface IExternalObjectsRenderInterfaceContextFeature
+```
+
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [GetSynchronizationCapabilities](#uid-5908ee5edf) | No summary available. |
+| [ImportImage (2 overloads)](#uid-976cc7a123) | No summary available. |
+| [ImportSemaphore](#uid-5a4b21ac29) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5908ee5edf"></span>
+
+### GetSynchronizationCapabilities Method
+
+```csharp
+public Avalonia.Rendering.Composition.CompositionGpuImportedImageSynchronizationCapabilities GetSynchronizationCapabilities(string imageHandleType)
+```
+
+#### Parameters
+
+`imageHandleType` string
+
+
+#### Returns
+
+[Avalonia.Rendering.Composition.CompositionGpuImportedImageSynchronizationCapabilities](xref:Avalonia.Rendering.Composition.CompositionGpuImportedImageSynchronizationCapabilities)
+
+
+</section>
+
+<span id="uid-976cc7a123"></span>
+
+### ImportImage overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4f2214ea39"></span>
+
+#### ImportImage Method
+
+```csharp
+public Avalonia.Platform.IPlatformRenderInterfaceImportedImage ImportImage(Avalonia.Platform.IPlatformHandle handle, Avalonia.Platform.PlatformGraphicsExternalImageProperties properties)
+```
+
+##### Parameters
+
+`handle` [Avalonia.Platform.IPlatformHandle](xref:Avalonia.Platform.IPlatformHandle)
+
+
+`properties` [Avalonia.Platform.PlatformGraphicsExternalImageProperties](xref:Avalonia.Platform.PlatformGraphicsExternalImageProperties)
+
+
+##### Returns
+
+[Avalonia.Platform.IPlatformRenderInterfaceImportedImage](xref:Avalonia.Platform.IPlatformRenderInterfaceImportedImage)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b4826e0815"></span>
+
+#### ImportImage Method
+
+```csharp
+public Avalonia.Platform.IPlatformRenderInterfaceImportedImage ImportImage(Avalonia.Rendering.Composition.ICompositionImportableSharedGpuContextImage image)
+```
+
+##### Parameters
+
+`image` [Avalonia.Rendering.Composition.ICompositionImportableSharedGpuContextImage](xref:Avalonia.Rendering.Composition.ICompositionImportableSharedGpuContextImage)
+
+
+##### Returns
+
+[Avalonia.Platform.IPlatformRenderInterfaceImportedImage](xref:Avalonia.Platform.IPlatformRenderInterfaceImportedImage)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5a4b21ac29"></span>
+
+### ImportSemaphore Method
+
+```csharp
+public Avalonia.Platform.IPlatformRenderInterfaceImportedSemaphore ImportSemaphore(Avalonia.Platform.IPlatformHandle handle)
+```
+
+#### Parameters
+
+`handle` [Avalonia.Platform.IPlatformHandle](xref:Avalonia.Platform.IPlatformHandle)
+
+
+#### Returns
+
+[Avalonia.Platform.IPlatformRenderInterfaceImportedSemaphore](xref:Avalonia.Platform.IPlatformRenderInterfaceImportedSemaphore)
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [DeviceLuid](#uid-50b8b6c55d) | No summary available. |
+| [DeviceUuid](#uid-eaceb219d1) | No summary available. |
+| [SupportedImageHandleTypes](#uid-7d19d9997b) | Returns the list of image handle types supported by the current GPU backend, see [Avalonia.Platform.KnownPlatformGraphicsExternalImageHandleTypes](xref:Avalonia.Platform.KnownPlatformGraphicsExternalImageHandleTypes) |
+| [SupportedSemaphoreTypes](#uid-cd6e7bd9dc) | Returns the list of semaphore types supported by the current GPU backend, see [Avalonia.Platform.KnownPlatformGraphicsExternalSemaphoreHandleTypes](xref:Avalonia.Platform.KnownPlatformGraphicsExternalSemaphoreHandleTypes) |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-50b8b6c55d"></span>
+
+### DeviceLuid Property
+
+```csharp
+public byte[] DeviceLuid { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-eaceb219d1"></span>
+
+### DeviceUuid Property
+
+```csharp
+public byte[] DeviceUuid { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7d19d9997b"></span>
+
+### SupportedImageHandleTypes Property
+
+Returns the list of image handle types supported by the current GPU backend, see [Avalonia.Platform.KnownPlatformGraphicsExternalImageHandleTypes](xref:Avalonia.Platform.KnownPlatformGraphicsExternalImageHandleTypes)
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<string> SupportedImageHandleTypes { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-cd6e7bd9dc"></span>
+
+### SupportedSemaphoreTypes Property
+
+Returns the list of semaphore types supported by the current GPU backend, see [Avalonia.Platform.KnownPlatformGraphicsExternalSemaphoreHandleTypes](xref:Avalonia.Platform.KnownPlatformGraphicsExternalSemaphoreHandleTypes)
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<string> SupportedSemaphoreTypes { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

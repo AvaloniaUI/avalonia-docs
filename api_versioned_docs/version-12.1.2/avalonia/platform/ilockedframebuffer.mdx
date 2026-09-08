@@ -1,0 +1,147 @@
+---
+title: 'ILockedFramebuffer'
+hide_title: true
+slug: '/avalonia/platform/ilockedframebuffer'
+uid: 'Avalonia.Platform.ILockedFramebuffer'
+commentId: 'T:Avalonia.Platform.ILockedFramebuffer'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Platform'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ILockedFramebuffer Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Platform</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface ILockedFramebuffer
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IDisposable
+</div>
+</div>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Address](#uid-5086190648) | Address of the first pixel |
+| [AlphaFormat](#uid-a1809d4197) | Gets the alpha format. |
+| [Dpi](#uid-eb5ccbf69c) | DPI of underling screen |
+| [Format](#uid-014702d698) | Pixel format |
+| [RowBytes](#uid-35f667e4ca) | Number of bytes per row |
+| [Size](#uid-b94340b6f4) | Gets the framebuffer size in device pixels. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5086190648"></span>
+
+### Address Property
+
+Address of the first pixel
+
+```csharp
+public IntPtr Address { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a1809d4197"></span>
+
+### AlphaFormat Property
+
+Gets the alpha format.
+
+```csharp
+public Avalonia.Platform.AlphaFormat AlphaFormat { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-eb5ccbf69c"></span>
+
+### Dpi Property
+
+DPI of underling screen
+
+```csharp
+public Avalonia.Vector Dpi { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-014702d698"></span>
+
+### Format Property
+
+Pixel format
+
+```csharp
+public Avalonia.Platform.PixelFormat Format { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-35f667e4ca"></span>
+
+### RowBytes Property
+
+Number of bytes per row
+
+```csharp
+public int RowBytes { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b94340b6f4"></span>
+
+### Size Property
+
+Gets the framebuffer size in device pixels.
+
+```csharp
+public Avalonia.PixelSize Size { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

@@ -1,0 +1,239 @@
+---
+title: 'IAvaloniaList<T>'
+hide_title: true
+slug: '/avalonia/collections/iavalonialist-1'
+uid: 'Avalonia.Collections.IAvaloniaList`1'
+commentId: 'T:Avalonia.Collections.IAvaloniaList`1'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Collections'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IAvaloniaList&lt;T&gt; Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Collections</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A notifying list.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface IAvaloniaList<T>
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IAvaloniaReadOnlyList&lt;&gt;, ICollection&lt;&gt;, IEnumerable&lt;&gt;, IList&lt;&gt;, IReadOnlyCollection&lt;&gt;, IReadOnlyList&lt;&gt;, IEnumerable, INotifyCollectionChanged, INotifyPropertyChanged
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [AddRange](#uid-5f42616823) | No summary available. |
+| [InsertRange](#uid-465519fba2) | No summary available. |
+| [Move](#uid-62a0acd40c) | Moves an item to a new index. |
+| [MoveRange](#uid-0304d42c8f) | Moves multiple items to a new index. |
+| [RemoveAll](#uid-a3473fc21f) | No summary available. |
+| [RemoveRange](#uid-639f028025) | Removes a range of elements from the collection. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5f42616823"></span>
+
+### AddRange Method
+
+```csharp
+public void AddRange(System.Collections.Generic.IEnumerable<T> items)
+```
+
+#### Parameters
+
+`items` System.Collections.Generic.IEnumerable&lt;T&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-465519fba2"></span>
+
+### InsertRange Method
+
+```csharp
+public void InsertRange(int index, System.Collections.Generic.IEnumerable<T> items)
+```
+
+#### Parameters
+
+`index` int
+
+
+`items` System.Collections.Generic.IEnumerable&lt;T&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-62a0acd40c"></span>
+
+### Move Method
+
+Moves an item to a new index.
+
+```csharp
+public void Move(int oldIndex, int newIndex)
+```
+
+#### Parameters
+
+`oldIndex` int
+
+The index of the item to move.
+
+
+`newIndex` int
+
+The index to move the item to.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0304d42c8f"></span>
+
+### MoveRange Method
+
+Moves multiple items to a new index.
+
+```csharp
+public void MoveRange(int oldIndex, int count, int newIndex)
+```
+
+#### Parameters
+
+`oldIndex` int
+
+The first index of the items to move.
+
+
+`count` int
+
+The number of items to move.
+
+
+`newIndex` int
+
+The index to move the items to.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a3473fc21f"></span>
+
+### RemoveAll Method
+
+```csharp
+public void RemoveAll(System.Collections.Generic.IEnumerable<T> items)
+```
+
+#### Parameters
+
+`items` System.Collections.Generic.IEnumerable&lt;T&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-639f028025"></span>
+
+### RemoveRange Method
+
+Removes a range of elements from the collection.
+
+```csharp
+public void RemoveRange(int index, int count)
+```
+
+#### Parameters
+
+`index` int
+
+The first index to remove.
+
+
+`count` int
+
+The number of items to remove.
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Count](#uid-6c7153fe3d) | Gets the number of items in the list. |
+| [Item](#uid-3043493a92) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6c7153fe3d"></span>
+
+### Count Property
+
+Gets the number of items in the list.
+
+```csharp
+public int Count { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3043493a92"></span>
+
+### Item Property
+
+```csharp
+public T Item { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+
