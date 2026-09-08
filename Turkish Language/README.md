@@ -12,17 +12,17 @@
 ## C01. PROJE DURUMU VE KONU LİSTESİ
 
 > **Bu bölüm her ders tamamlandığında güncellenir.**
-> Son güncelleme: **56 - Stillendirmede En İyi Uygulamalar** Tamamlandı
+> Son güncelleme: **83 - İçerik Şablonları** Tamamlandı
 
 ## C01.1. ÖZET
 
 | | |
 | - | - |
 | **Toplam konu** | 250 |
-| **Tamamlanan ders** | 68 |
-| **Kalan ders** | 182 |
-| **İlerleme** | 68/250 (%27.2) |
-| **Tamamlanan bölüm** | 7/23 (Bölüm 8 sürüyor: 14/25) |
+| **Tamamlanan ders** | 83 |
+| **Kalan ders** | 167 |
+| **İlerleme** | 83/250 (%33.2) |
+| **Tamamlanan bölüm** | 8/23 (Bölüm 9 sürüyor: 4/8) |
 
 
 ## C01.2. BÖLÜM BAZINDA DURUM
@@ -38,8 +38,8 @@
 | 5 | XAML Referansı | 7/7 | ✅ Tamamlandı |
 | 6 | Yerleşim (Layout) | 4/4 | ✅ Tamamlandı |
 | 7 | Stillendirme | 17/17 | ✅ Tamamlandı |
-| 8 | Veri Bağlama | 14/25 | 🔄 Devam ediyor |
-| 9 | Veri Şablonları | 0/8 | ⬜ Başlanmadı |
+| 8 | Veri Bağlama | 25/25 | ✅ Tamamlandı |
+| 9 | Veri Şablonları | 4/8 | 🔄 Devam ediyor |
 | 10 | Özellik Sistemi | 0/4 | ⬜ Başlanmadı |
 | 11 | Olaylar | 0/3 | ⬜ Başlanmadı |
 | 12 | Girdi ve Etkileşim | 0/15 | ⬜ Başlanmadı |
@@ -164,26 +164,26 @@
 | 66 | ✅ | &nbsp;&nbsp;↳ Birden Fazla Özelliğe Bağlama Nasıl Yapılır | `bind-multiple-properties` | https://docs.avaloniaui.net/docs/data-binding/how-to-bind-multiple-properties |
 | 67 | ✅ | &nbsp;&nbsp;↳ Bir Task Sonucuna Bağlama Nasıl Yapılır | `bind-to-task-result` | https://docs.avaloniaui.net/docs/data-binding/how-to-bind-to-a-task-result |
 | 68 | ✅ | &nbsp;&nbsp;↳ Bir Observable'a Bağlama Nasıl Yapılır | `bind-to-observable` | https://docs.avaloniaui.net/docs/data-binding/how-to-bind-to-an-observable |
-| 69 | ⬜ | &nbsp;&nbsp;↳ Görsel Dosyalarına Bağlama Nasıl Yapılır | `bind-image-files` | https://docs.avaloniaui.net/docs/data-binding/how-to-bind-image-files |
-| 70 | ⬜ | &nbsp;&nbsp;↳ Sekmelere Bağlama Nasıl Yapılır | `bind-tabs` | https://docs.avaloniaui.net/docs/data-binding/how-to-bind-tabs |
-| 71 | ⬜ | &nbsp;&nbsp;↳ CanExecute Bağlaması Nasıl Yapılır | `bind-can-execute` | https://docs.avaloniaui.net/docs/data-binding/how-to-bind-can-execute |
-| 72 | ⬜ | &nbsp;&nbsp;↳ Çoklu Bağlama (MultiBinding) | `multi-binding` | https://docs.avaloniaui.net/docs/data-binding/multi-binding |
-| 73 | ⬜ | &nbsp;&nbsp;↳ Bağlama Hata Ayıklama | `binding-debugging` | https://docs.avaloniaui.net/docs/data-binding/binding-debugging |
-| 74 | ⬜ | &nbsp;&nbsp;↳ Koleksiyonları Sıralama, Filtreleme ve Gruplama | `collection-views` | https://docs.avaloniaui.net/docs/data-binding/collection-views |
-| 75 | ⬜ | &nbsp;&nbsp;↳ Ana-Detay Bağlama | `master-detail` | https://docs.avaloniaui.net/docs/data-binding/master-detail |
-| 76 | ⬜ | &nbsp;&nbsp;↳ Komutlara Bağlama | `binding-to-commands` | https://docs.avaloniaui.net/docs/data-binding/binding-to-commands |
-| 77 | ⬜ | &nbsp;&nbsp;↳ Veri Bağlamada Doğrulama | `binding-validation` | https://docs.avaloniaui.net/docs/data-binding/binding-validation |
-| 78 | ⬜ | &nbsp;&nbsp;↳ Özel Veri Bağlama Dönüştürücüsü Nasıl Oluşturulur | `custom-data-binding-converter` | https://docs.avaloniaui.net/docs/data-binding/how-to-create-a-custom-data-binding-converter |
-| 79 | ⬜ | &nbsp;&nbsp;↳ Yerleşik Veri Bağlama Dönüştürücüleri | `built-in-data-binding-converters` | https://docs.avaloniaui.net/docs/data-binding/built-in-data-binding-converters |
+| 69 | ✅ | &nbsp;&nbsp;↳ Görsel Dosyalarına Bağlama Nasıl Yapılır | `bind-image-files` | https://docs.avaloniaui.net/docs/data-binding/how-to-bind-image-files |
+| 70 | ✅ | &nbsp;&nbsp;↳ Sekmelere Bağlama Nasıl Yapılır | `bind-tabs` | https://docs.avaloniaui.net/docs/data-binding/how-to-bind-tabs |
+| 71 | ✅ | &nbsp;&nbsp;↳ CanExecute Bağlaması Nasıl Yapılır | `bind-can-execute` | https://docs.avaloniaui.net/docs/data-binding/how-to-bind-can-execute |
+| 72 | ✅ | &nbsp;&nbsp;↳ Çoklu Bağlama (MultiBinding) | `multi-binding` | https://docs.avaloniaui.net/docs/data-binding/multi-binding |
+| 73 | ✅ | &nbsp;&nbsp;↳ Bağlama Hata Ayıklama | `binding-debugging` | https://docs.avaloniaui.net/docs/data-binding/binding-debugging |
+| 74 | ✅ | &nbsp;&nbsp;↳ Koleksiyonları Sıralama, Filtreleme ve Gruplama | `collection-views` | https://docs.avaloniaui.net/docs/data-binding/collection-views |
+| 75 | ✅ | &nbsp;&nbsp;↳ Ana-Detay Bağlama | `master-detail` | https://docs.avaloniaui.net/docs/data-binding/master-detail |
+| 76 | ✅ | &nbsp;&nbsp;↳ Komutlara Bağlama | `binding-to-commands` | https://docs.avaloniaui.net/docs/data-binding/binding-to-commands |
+| 77 | ✅ | &nbsp;&nbsp;↳ Veri Bağlamada Doğrulama | `binding-validation` | https://docs.avaloniaui.net/docs/data-binding/binding-validation |
+| 78 | ✅ | &nbsp;&nbsp;↳ Özel Veri Bağlama Dönüştürücüsü Nasıl Oluşturulur | `custom-data-binding-converter` | https://docs.avaloniaui.net/docs/data-binding/how-to-create-a-custom-data-binding-converter |
+| 79 | ✅ | &nbsp;&nbsp;↳ Yerleşik Veri Bağlama Dönüştürücüleri | `built-in-data-binding-converters` | https://docs.avaloniaui.net/docs/data-binding/built-in-data-binding-converters |
 
 ### 9. Veri Şablonları — Data Templates  `(0/8)`
 
 | # | Durum | Ders | Topic ID | Kaynak |
 | - | ----- | ---- | -------- | ------ |
-| 80 | ⬜ | Veri Şablonları | `data-templates` | https://docs.avaloniaui.net/docs/data-templates/introduction-to-data-templates |
-| 81 | ⬜ | &nbsp;&nbsp;↳ Veri Şablonlarına Giriş | `introduction-to-data-templates` | https://docs.avaloniaui.net/docs/data-templates/introduction-to-data-templates |
-| 82 | ⬜ | &nbsp;&nbsp;↳ Kontrol İçeriği | `control-content` | https://docs.avaloniaui.net/docs/data-templates/control-content |
-| 83 | ⬜ | &nbsp;&nbsp;↳ İçerik Şablonları | `content-templates` | https://docs.avaloniaui.net/docs/data-templates/content-templates |
+| 80 | ✅ | Veri Şablonları | `data-templates` | https://docs.avaloniaui.net/docs/data-templates/introduction-to-data-templates |
+| 81 | ✅ | &nbsp;&nbsp;↳ Veri Şablonlarına Giriş | `introduction-to-data-templates` | https://docs.avaloniaui.net/docs/data-templates/introduction-to-data-templates |
+| 82 | ✅ | &nbsp;&nbsp;↳ Kontrol İçeriği | `control-content` | https://docs.avaloniaui.net/docs/data-templates/control-content |
+| 83 | ✅ | &nbsp;&nbsp;↳ İçerik Şablonları | `content-templates` | https://docs.avaloniaui.net/docs/data-templates/content-templates |
 | 84 | ⬜ | &nbsp;&nbsp;↳ Veri Şablonu Koleksiyonu | `data-template-collection` | https://docs.avaloniaui.net/docs/data-templates/data-template-collection |
 | 85 | ⬜ | &nbsp;&nbsp;↳ Kodda Veri Şablonu Oluşturma | `creating-data-templates-in-code` | https://docs.avaloniaui.net/docs/data-templates/creating-data-templates-in-code |
 | 86 | ⬜ | &nbsp;&nbsp;↳ Veri Şablonlarını Yeniden Kullanma | `reusing-data-templates` | https://docs.avaloniaui.net/docs/data-templates/reusing-data-templates |
@@ -424,14 +424,14 @@
 
 ## C01.4. SIRADAKİ DERS
 
-**Görsel Dosyalarına Bağlama Nasıl Yapılır** (How to bind image files)
+**Veri Şablonu Koleksiyonu** (Data Template Collection)
 
 | | |
 | - | - |
-| **Topic ID** | `bind-image-files` |
-| **Kaynak** | https://docs.avaloniaui.net/docs/data-binding/how-to-bind-image-files |
-| **Bölüm** | 8 — Veri Bağlama |
-| **Liste sırası** | 69 |
+| **Topic ID** | `data-template-collection` |
+| **Kaynak** | https://docs.avaloniaui.net/docs/data-templates/data-template-collection |
+| **Bölüm** | 9 — Veri Şablonları (8 ders) |
+| **Liste sırası** | 84 |
 
 
 
