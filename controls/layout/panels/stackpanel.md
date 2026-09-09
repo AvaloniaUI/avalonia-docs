@@ -123,7 +123,7 @@ You can create a horizontal button bar by setting `Orientation` to `Horizontal` 
 ## Practical notes
 
 - **Sizing behavior**: A `StackPanel` does not constrain children in the stacking direction, so each child receives as much space as it requests. If you need children to share space proportionally, consider using a `Grid` instead.
-- **Performance**: For lists with many items, prefer `ItemsRepeater` or `ListBox` with virtualization over placing large numbers of controls in a `StackPanel`.
+- **Performance**: For lists with many items, use `VirtualizingStackPanel` or `ListBox` instead of placing many controls in a `StackPanel`.
 - **Scrolling**: Because `StackPanel` grows to fit all children, it will never clip its content on its own. Wrap it in a `ScrollViewer` when overflow is possible.
 - **Reverse order**: `StackPanel` does not support reverse stacking. To reverse the visual order, reverse the order of your child elements or use a custom panel.
 
