@@ -18,16 +18,21 @@ This control is available as part of [Avalonia Pro](https://avaloniaui.net/prici
 
 ## When to use FlowDocumentScrollViewer
 
-Two controls can host a `FlowDocument`:
+Three controls can host a `FlowDocument`:
 
 | Control | Purpose | Selection / Copy | Caret | Undo | Overhead |
 |---|---|---|---|---|---|
-| `FlowDocumentScrollViewer` | Read-only display with text selection / copy | Yes | No | No | Low |
+| `FlowDocumentScrollViewer` | Read-only display in one continuous column | Yes | No | No | Low |
+| `FlowDocumentPageViewer` | Read-only display as discrete page sheets, the way a word processor's print layout does | Yes | No | No | Low |
 | `RichTextEditor` | Interactive editing | Yes | Yes | Yes | Higher |
 
 Use `FlowDocumentScrollViewer` for help panes, report previews, file browsers, and read-only summaries. It supports text selection and clipboard copy out of the box (powered by the same `TextViewMouse` / `TextViewKeyboard` components used by the editor) but exposes no insertion caret, no editing actions, and no undo manager.
 
+Use `FlowDocumentPageViewer` when the reader should see real pages: print preview, page-faithful review, page navigation and zoom. It derives from `FlowDocumentScrollViewer`, so everything on this page applies to it as well, and it paginates through the same shared break policy that print and PDF export use, so the three agree by construction.
+
 Use `RichTextEditor` with `IsReadOnly="True"` only when you need an insertion caret on otherwise-read-only content (e.g. for placing a cursor without allowing edits). This pulls in the full editing infrastructure (caret element, undo manager, editing components).
+
+Both viewers select inside page bands and footnotes: a press into a header, footer or note region moves the selection into that nested document.
 
 ## Installation
 
@@ -39,6 +44,8 @@ dotnet add package Avalonia.Controls.RichTextEditor
 dotnet add package Avalonia.Controls.Documents.Serialization.Rtf     # RTF
 dotnet add package Avalonia.Controls.Documents.Serialization.Docx    # DOCX (Open XML)
 dotnet add package Avalonia.Controls.Documents.Serialization.Xaml    # XAML round-trip
+dotnet add package Avalonia.Controls.Documents.Serialization.Html    # HTML import (read only)
+dotnet add package Avalonia.Controls.Documents.Serialization.Pdf     # PDF export (write only)
 ```
 
 All document types (`FlowDocument`, `Paragraph`, `RichRun`, etc.) and `FlowDocumentScrollViewer` are mapped to the default Avalonia XML namespace (`https://github.com/avaloniaui`). No extra `xmlns` declarations are needed.
@@ -80,7 +87,11 @@ var document = await FlowDocument.LoadAsync(stream, new RtfSerializer());
 viewer.Document = document;
 ```
 
-`LoadAsync` performs deserialization off the UI thread. The returned `FlowDocument` is ready to display immediately.
+`LoadAsync` parses on the thread pool, then builds the element tree on the UI thread through an explicit dispatcher call. The returned `FlowDocument` is ready to display immediately.
+
+:::info
+`IDocumentSerializer` is synchronous. `LoadAsync` and `SaveAsync` are thread-offload conveniences, not asynchronous I/O: no format here performs any. The element tree has to be built on the UI thread because a `FlowDocument` and its elements belong to the dispatcher of the thread that constructed them. To stay off the UI thread entirely, read a `DocumentSnapshot` with the serializer and materialize it with `TextDocument.FromSnapshot`, which has no thread affinity.
+:::
 
 ### Synchronous loading
 
@@ -89,18 +100,23 @@ using var stream = File.OpenRead("report.rtf");
 viewer.Document = FlowDocument.Load(stream, new RtfSerializer());
 ```
 
-Prefer async loading for large files to avoid blocking the UI thread.
+`Load` parses and builds on the calling thread, so a UI-thread caller pays the whole cost there. Prefer async loading for large files. Both overloads take an optional `CancellationToken`.
 
 ### Choosing a serializer
 
 Pick a serializer based on the file format:
 
-| Extension | Serializer | Package |
-|---|---|---|
-| `.rtf` | `RtfSerializer` | `Avalonia.Controls.Documents.Serialization.Rtf` |
-| `.docx` | `DocxSerializer` | `Avalonia.Controls.Documents.Serialization.Docx` |
-| `.xaml` / `.axaml` | `XamlSerializer` | `Avalonia.Controls.Documents.Serialization.Xaml` |
-| `.txt` | `PlainTextSerializer` | Core (included) |
+| Extension | Serializer | Package | Direction |
+|---|---|---|---|
+| `.rtf` | `RtfSerializer` | `Avalonia.Controls.Documents.Serialization.Rtf` | Read and write |
+| `.docx` | `DocxSerializer` | `Avalonia.Controls.Documents.Serialization.Docx` | Read and write |
+| `.xaml` / `.axaml` | `XamlSerializer` | `Avalonia.Controls.Documents.Serialization.Xaml` | Read and write |
+| `.md` | `MarkdownSerializer` | `Avalonia.Controls.Markdown` | Read and write |
+| `.html` | `HtmlSerializer` | `Avalonia.Controls.Documents.Serialization.Html` | Read only |
+| `.pdf` | `PdfSerializer` | `Avalonia.Controls.Documents.Serialization.Pdf` | Write only |
+| `.txt` | `PlainTextSerializer` | Core (included) | Read and write |
+
+Every serializer reports its direction through `CanRead` and `CanWrite`, so a picker can filter the list rather than catch an exception. There is no built-in format registry: each serializer package depends on the core one, so discovery is the application's job. `MarkdownSerializer` accepts any readable stream, so a sniffing loop has to try it last, next to `PlainTextSerializer`.
 
 A helper method that maps extensions to serializers:
 
@@ -173,7 +189,8 @@ viewer.Document = document;
 `FlowDocumentBuilder` provides a concise fluent interface for building documents:
 
 ```csharp
-using Avalonia.Controls.Documents.TextModel;
+using Avalonia.Controls.Documents;                             // FlowDocumentBuilder, InlineFactory
+using Avalonia.Controls.Documents.Primitives.DocumentNodes;    // TextMarkerStyle
 
 var document = FlowDocumentBuilder.Create()
     .AddParagraph("Report Title")
@@ -377,6 +394,16 @@ Enable `ShowPageBounds` to render visual indicators at the page boundary. This i
 </FlowDocumentScrollViewer>
 ```
 
+### Viewer properties
+
+| Property | Type | Description | Default |
+|---|---|---|---|
+| `IsSelectionEnabled` | `bool` | Set to `False` to make the viewer a pure display control. The inner view stops being focusable, which matters for a viewer inside an items control. | `true` |
+| `IsCaretVisible` | `bool` | Shows an insertion caret without enabling editing. | `false` |
+| `ShowPageBounds` | `bool` | Draws indicators at the page boundary. | `false` |
+| `ShowPageBreakMarkers` | `bool` | Draws a dashed rule across the top edge of a block carrying `BreakPageBefore`, the way a word processor's draft view does. `PageBreakMarkerBrush` colors it, and is paint only. The paged viewer defaults it off, since it shows the break as a real page boundary. | `true` |
+| `ShowPageBandsInContinuousLayout` | `bool` | Shows the document's running header above the first block and its running footer below the last. It has no effect in the paged viewer, where the bands render on every sheet. | `false` |
+
 ## Embedding controls
 
 ### BlockUIContainer
@@ -451,18 +478,23 @@ async Task LoadDocumentAsync(string path)
 
 For conversion pipelines (load, display, re-export), call `CreateSnapshot()` once and share the result across operations. Snapshots are immutable and safe to use from any thread:
 
+`FlowDocumentScrollViewer.Document` is typed `FlowDocument?`, so check it before dereferencing:
+
 ```csharp
 // UI thread: take a snapshot
+if (viewer.Document is null) return;
 var snapshot = viewer.Document.CreateSnapshot();
 
-// Background thread: serialize to multiple formats from one snapshot
-await Task.Run(async () =>
+// Background thread: serialize to multiple formats from one snapshot.
+// IDocumentSerializer is synchronous, so Task.Run is what moves the work
+// off the UI thread.
+await Task.Run(() =>
 {
-    await using var rtfStream = File.Create("output.rtf");
-    await new RtfSerializer().SerializeAsync(snapshot, rtfStream);
+    using var rtfStream = File.Create("output.rtf");
+    new RtfSerializer().Serialize(snapshot, rtfStream);
 
-    await using var docxStream = File.Create("output.docx");
-    await new DocxSerializer().SerializeAsync(snapshot, docxStream);
+    using var docxStream = File.Create("output.docx");
+    new DocxSerializer().Serialize(snapshot, docxStream);
 });
 ```
 
@@ -561,15 +593,17 @@ public partial class HelpWindow : Window
 
 ### Print preview
 
-Combine `ShowPageBounds`, a fixed `PageWidth`, and `PageHeight` to simulate a printed page:
+For a true print preview use `FlowDocumentPageViewer`, which lays the document out as real page sheets with the same pagination that PDF export produces. Within the continuous viewer, `ShowPageBounds` plus a fixed `PageWidth` and `PageHeight` visualizes the page boundaries in the flowing column:
 
 ```xml
 <FlowDocumentScrollViewer ShowPageBounds="True"
                           Background="#F0F0F0"
                           Padding="40">
-    <FlowDocument PageWidth="612" PageHeight="792" PagePadding="72">
-        <!-- US Letter: 612 × 792 DIPs at 96 DPI = 8.5 × 11 inches -->
-        <!-- 72 DIP padding = 0.75 inch margins -->
+    <FlowDocument PageWidth="816" PageHeight="1056" PagePadding="72">
+        <!-- US Letter: 8.5 x 11 inches = 816 x 1056 device-independent pixels
+             (96 per inch); 72 DIP padding = 0.75 inch margins. Watch the unit
+             trap: 612 x 792 is Letter in POINTS (1/72 inch), not DIPs.
+             PageSizes.Letter carries the right values in code. -->
         <Paragraph FontSize="20" FontWeight="Bold">
             <RichRun Text="Quarterly Report" />
         </Paragraph>
@@ -626,7 +660,8 @@ Current limitations of `FlowDocumentScrollViewer`:
 
 | Limitation | Workaround |
 |---|---|
+| No insertion caret and no editing | Use `RichTextEditor` for editing |
 | No built-in search/find | Implement search against document text and scroll programmatically |
-| No page-break rendering | Continuous scroll only; `ShowPageBounds` shows boundaries visually |
+| Continuous scroll only | Use `FlowDocumentPageViewer` for discrete page sheets; `ShowPageBounds` shows boundaries in the flowing column |
 | Embedded controls not serialized | `BlockUIContainer` / `RichInlineUIContainer` children are excluded from snapshots |
-| `ITextView` not publicly exposed | The `TextView` property on `FlowDocumentScrollViewer` is internal |
+| `ITextView` not publicly exposed | The `TextView` property on `FlowDocumentScrollViewer` is internal; the host's `ITextViewHost.TextView` explicit interface implementation is the only public access |
