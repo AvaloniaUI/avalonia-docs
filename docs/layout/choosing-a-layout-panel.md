@@ -288,7 +288,7 @@ For complex layouts, you can combine multiple panels. Nest panels within one ano
 
 - Prefer simpler panels when possible. [`StackPanel`](#stackpanel) and [`Panel`](#panel) are lighter than [`Grid`](#grid).
 - Avoid deeply nested panels. If you find yourself nesting more than three levels deep, consider whether a single [`Grid`](#grid) with the right row and column definitions could replace the entire tree.
-- For large scrollable lists, use [`ItemsRepeater`](/controls/data-display/collections/itemsrepeater) or [`ListBox`](/controls/data-display/collections/listbox) with virtualization instead of putting hundreds of controls in a `StackPanel` inside a `ScrollViewer`.
+- For lists with many items, use `VirtualizingStackPanel` or `ListBox` instead of placing many controls in a `StackPanel`.
 
 ## See also
 
