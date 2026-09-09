@@ -1,6 +1,6 @@
 ---
 id: itemscontrol-how-to
-title: "How to: Work with ItemsControl and ItemsRepeater"
+title: "How to: Work with ItemsControl"
 description: Custom collection layouts with ItemsControl and ItemsRepeater beyond what ListBox offers.
 doc-type: how-to
 ---
