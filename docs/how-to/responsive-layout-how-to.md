@@ -144,29 +144,29 @@ You can bind `IsPaneOpen` to your breakpoint properties so the sidebar opens aut
 
 ## Responsive card grid
 
-Use `ItemsRepeater` with a `UniformGridLayout` to create a card grid that reflows as the available width changes. Set `MinItemWidth` and `MinItemHeight` to define the smallest card size, and `UniformGridLayout` calculates the column count for you:
+Use `ItemsControl` with a `WrapPanel` as the display panel to create a card grid that reflows as the available width changes. See [Custom panel](/docs/how-to/itemscontrol-how-to#custom-panel) for guidance on how to customize the `ItemsPanel` in an `ItemsControl`.
 
 ```xml
-<ScrollViewer>
-    <ItemsRepeater ItemsSource="{Binding Cards}">
-        <ItemsRepeater.Layout>
-            <UniformGridLayout MinItemWidth="280" MinItemHeight="200"
-                               MinColumnSpacing="12" MinRowSpacing="12" />
-        </ItemsRepeater.Layout>
-        <ItemsRepeater.ItemTemplate>
-            <DataTemplate>
+<ItemsControl ItemsSource="{Binding Cards}">
+  <ItemsControl.ItemsPanel>
+    <ItemsPanelTemplate>
+      <WrapPanel />
+    </ItemsPanelTemplate>
+  </ItemsControl.ItemsPanel>
+        <ItemsControl.ItemTemplate>
+            <DataTemplate x:DataType="models:CardItem">
                 <Border Background="White" CornerRadius="8" Padding="16"
                         BorderBrush="#E5E7EB" BorderThickness="1">
                     <StackPanel Spacing="8">
-                        <TextBlock Text="{Binding Title}" FontWeight="Bold" />
+                        <TextBlock Text="{Binding Title}" FontWeight="Bold"
+                                   Foreground="Black" />
                         <TextBlock Text="{Binding Description}"
                                    TextWrapping="Wrap" Foreground="Gray" />
                     </StackPanel>
                 </Border>
             </DataTemplate>
-        </ItemsRepeater.ItemTemplate>
-    </ItemsRepeater>
-</ScrollViewer>
+        </ItemsControl.ItemTemplate>
+</ItemsControl>
 ```
 
 If you need a simpler reflowing container without virtualization, you can use `WrapPanel` instead.
