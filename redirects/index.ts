@@ -40,6 +40,9 @@ const config: RedirectConfig = {
     { from: '/docs/custom-controls/choosing-a-custom-control-type', to: '/docs/custom-controls/'},
     { from: ['/docs/custom-controls/custom-control-class', '/docs/custom-controls/drawing-custom-controls'], to: '/docs/custom-controls/custom-drawn-controls'},
     { from: '/docs/custom-controls/attached-properties', to: '/docs/custom-controls/defining-properties' },
+
+    // Redirect retired ItemsRepeater pages
+    { from: '/controls/data-display/collections/itemsrepeater', to: '/controls/data-display/collections/itemscontrol' },
   ],
   createRedirects(existingPath: string): string[] | undefined {
     const redirects = [

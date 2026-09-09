@@ -247,7 +247,6 @@ const sidebars: SidebarsConfig = {
           items:[
               'data-display/collections/carousel',
               'data-display/collections/itemscontrol',
-              'data-display/collections/itemsrepeater',
               'data-display/collections/listbox',
           ],
         },
