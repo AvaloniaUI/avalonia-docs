@@ -42,7 +42,7 @@ const config: RedirectConfig = {
     { from: '/docs/custom-controls/attached-properties', to: '/docs/custom-controls/defining-properties' },
 
     // Redirect retired ItemsRepeater pages
-    { from: '/controls/data-display/collections/itemsrepeater', to: '/controls/data-display/collections/itemscontrol' },
+    { from: ['/controls/data-display/collections/itemsrepeater', '/docs/reference/controls/itemsrepeater'], to: '/controls/data-display/collections/itemscontrol' },
   ],
   createRedirects(existingPath: string): string[] | undefined {
     const redirects = [

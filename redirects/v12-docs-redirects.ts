@@ -582,10 +582,6 @@ const redirects: Redirect[] = [
         "to": "/controls/data-display/collections/itemscontrol"
     },
     {
-        "from": "/docs/reference/controls/itemsrepeater",
-        "to": "/controls/data-display/collections/itemsrepeater"
-    },
-    {
         "from": [
             "/docs/reference/controls/detailed-reference/label",
             "/docs/reference/controls/label",
