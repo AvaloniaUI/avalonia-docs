@@ -121,7 +121,7 @@ MAUI and Avalonia both use panels for layout, but the names and behaviour differ
 | `TimePicker` | `TimePicker` | Same |
 | `ActivityIndicator` | `ProgressBar IsIndeterminate="True"` | |
 | `ProgressBar` | `ProgressBar` | Same |
-| `ListView` / `CollectionView` | `ListBox` or `ItemsRepeater` | `ItemsRepeater` for virtualised custom layouts |
+| `ListView` / `CollectionView` | `ListBox` or `ItemsControl` | |
 | `CarouselView` | `Carousel` | |
 | `TableView` | No direct equivalent | Use `DataGrid` or compose with panels |
 | `WebView` | No built-in equivalent | Use a third-party control |
