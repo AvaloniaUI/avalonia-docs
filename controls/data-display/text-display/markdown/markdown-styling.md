@@ -43,8 +43,12 @@ The following table lists the style selectors used by the default theme. You can
 | `Section.alertBlock.important` | Important alert block border. |
 | `Section.alertBlock.warning` | Warning alert block border. |
 | `Section.alertBlock.caution` | Caution alert block border. |
+
+:::note
+An alert's kind header ("Note", "Warning") is drawn by the alert block itself rather than being a paragraph in the document, so there is no element to select. Style it through `Section.alertBlock`, whose inherited `FontFamily`, `FontSize` and `Foreground` reach the header and the body together.
+:::
+
 | `BlockUIContainer.thematicBreak` | Horizontal rule (thematic break). |
-| `BlockUIContainer.alertBlockHeader` | Alert block header container (icon + label). |
 | `Table` | Table element. Border, cell spacing. |
 | `TableCell` | Table cell element. Border. |
 | `TableRow.tableHeader` | Header row. Bold font weight. |
