@@ -5,6 +5,8 @@ description: Create Avalonia layouts that adapt to different window sizes and fo
 doc-type: how-to
 ---
 
+import ResponsiveCardGrid from '/img/how-to/responsive-card-grid.gif';
+
 This guide covers techniques for creating layouts that adapt to different window sizes and form factors. You will learn how to use form-factor markup extensions, container queries, breakpoint-driven view models, and reflowing item layouts to build UIs that work across desktop and mobile.
 
 ## Adaptive grid columns
@@ -146,6 +148,10 @@ You can bind `IsPaneOpen` to your breakpoint properties so the sidebar opens aut
 
 Use `ItemsControl` with a `WrapPanel` as the display panel to create a card grid that reflows as the available width changes. See [Custom panel](/docs/how-to/itemscontrol-how-to#custom-panel) for guidance on how to customize the `ItemsPanel` in an `ItemsControl`.
 
+<Tabs>
+
+<TabItem value="xaml" label="XAML">
+
 ```xml
 <ItemsControl ItemsSource="{Binding Cards}">
   <ItemsControl.ItemsPanel>
@@ -153,23 +159,37 @@ Use `ItemsControl` with a `WrapPanel` as the display panel to create a card grid
       <WrapPanel />
     </ItemsPanelTemplate>
   </ItemsControl.ItemsPanel>
-        <ItemsControl.ItemTemplate>
-            <DataTemplate x:DataType="models:CardItem">
-                <Border Background="White" CornerRadius="8" Padding="16"
-                        BorderBrush="#E5E7EB" BorderThickness="1">
-                    <StackPanel Spacing="8">
-                        <TextBlock Text="{Binding Title}" FontWeight="Bold"
-                                   Foreground="Black" />
-                        <TextBlock Text="{Binding Description}"
-                                   TextWrapping="Wrap" Foreground="Gray" />
-                    </StackPanel>
-                </Border>
-            </DataTemplate>
-        </ItemsControl.ItemTemplate>
+  <ItemsControl.ItemTemplate>
+    <DataTemplate x:DataType="models:CardItem">
+      <Border Background="White"
+              CornerRadius="8"
+              Padding="16"
+              BorderBrush="#E5E7EB"
+              BorderThickness="1">
+        <StackPanel Spacing="8">
+          <TextBlock Text="{Binding Title}"
+                     FontWeight="Bold"
+                     Foreground="Black" />
+          <TextBlock Text="{Binding Description}"
+                     TextWrapping="Wrap"
+                     Foreground="Gray" />
+        </StackPanel>
+      </Border>
+    </DataTemplate>
+  </ItemsControl.ItemTemplate>
 </ItemsControl>
 ```
 
-If you need a simpler reflowing container without virtualization, you can use `WrapPanel` instead.
+</TabItem>
+
+<TabItem value="preview" label="Preview">
+
+<Image light={ResponsiveCardGrid} maxWidth={400} cornerRadius="true" position="center" alt="Screen recording showing a window changing size. The card arrangement in the window adjusts according to the window's width." />
+<br />
+
+</TabItem>
+
+</Tabs>
 
 ## Platform-specific spacing
 
