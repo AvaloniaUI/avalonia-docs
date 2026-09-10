@@ -15,10 +15,6 @@ The continuous flow ignores every one of them except the page-break marker it dr
 This control is available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
 
-:::warning
-`Paragraph.WidowControl` defaults to `true`, which moves where existing documents break compared with earlier releases. See [widow control defaults on](#widow-control-defaults-on) below, and [Upgrading to 13.0](/controls/input/text-input/richtexteditor/upgrading-to-13).
-:::
-
 ## One policy, identical output
 
 Both pagination engines, the paged view's fill walk and the PDF paginator, ask the same cut-decision policy where a page may end, with the same inputs. They keep their own mechanics but not their own rules, so the same document breaks on the same lines on screen and in the exported file. The paged view is a live preview of the exported pages, not an approximation of one.
@@ -79,11 +75,11 @@ paragraph.WidowControl = false;   // let this one strand a single line
 
 `KeepWithNext` chains. Consecutive flagged blocks, a heading, a subheading and the first paragraph, move as one unit. A chain that grows past a page gives up and paginates normally, which is deliberate: the alternative is a chain that can never be placed and a page left blank in front of it.
 
-### Widow control defaults on
+### Widow control
 
 `Paragraph.WidowControl` is `true` by default, matching Word. At least two lines stay on the page and at least two move, so a three-line paragraph never splits at all.
 
-This changes where existing documents break: paged and PDF output can move a page break by a line compared with releases before it defaulted on. To get the old cuts back, turn it off per paragraph:
+To let a paragraph strand a single line, turn it off:
 
 ```csharp
 foreach (var block in document.Blocks)

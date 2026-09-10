@@ -23,20 +23,6 @@ Names introduced and withdrawn between 12.2.3 and 13.0 are not listed here: they
 
 These change what the library does without changing a signature. A build that succeeds tells you nothing about them.
 
-### `Paragraph.WidowControl` defaults on
-
-Paged layout, printing and PDF export now keep at least two lines of a paragraph on each side of a page break, which is Word's default. Existing documents repaginate: a page break can move by a line, so page counts and per-page content differ from earlier releases. Screen layout in the continuous flow is unaffected, because it does not paginate.
-
-To restore the old cuts, turn it off per paragraph, or in the file the document comes from:
-
-| Where | How |
-|---|---|
-| Model | `paragraph.WidowControl = false` |
-| RTF | `\nowidctlpar` |
-| DOCX | `<w:widowControl w:val="false"/>` |
-
-The keep rules and the rest of the break policy are covered in [Pagination](/controls/input/text-input/richtexteditor/pagination).
-
 ### The markdown alert header and footnotes are no longer document content
 
 Two generated visuals moved from the document into the render layer.
