@@ -1,15 +1,14 @@
 ---
 id: imageloader
 title: ImageLoader
-description: Customize how the Markdown control loads and resolves images by implementing a custom MarkdownImageLoader and assigning it via a style on MarkdownImage.
+description: Customize how the Markdown control loads and resolves images by setting Markdown.ImageLoader to a MarkdownImageLoader.
 doc-type: reference
 tags:
   - avalonia pro
   - avalonia enterprise
 ---
 
-The `Markdown` control supports custom image loading via the `ImageLoader` property on `MarkdownImage`. Because the Markdown control is built on the shared document model, each image is a `MarkdownImage` element (a `StyledElement`), and you assign a loader using a standard Avalonia style selector.
-
+The `Markdown` control resolves image URLs through a `MarkdownImageLoader`. Set `Markdown.ImageLoader` on the control and every image in its document uses it.
 
 :::info
 This control is available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
@@ -17,7 +16,17 @@ This control is available as part of [Avalonia Pro](https://avaloniaui.net/prici
 
 ## Default behavior
 
-When you do not set a custom `ImageLoader`, images are not loaded automatically. To enable image loading, create a `MarkdownImageLoader` subclass and assign it via a style targeting `MarkdownImage`. The default `MarkdownImageLoader` base class supports `http://`, `https://`, and `file://` schemes, returning a `Bitmap` on success or `null` on failure.
+No loader is set by default, so images are not loaded until you supply one. The `MarkdownImageLoader` base class already resolves the `http://`, `https://` and `file://` schemes and returns an `IImage` on success or `null` on failure, so for the common case you assign it directly and write no code:
+
+```xml
+<Markdown Text="![Logo](https://example.com/logo.png)">
+  <Markdown.ImageLoader>
+    <MarkdownImageLoader />
+  </Markdown.ImageLoader>
+</Markdown>
+```
+
+Subclass it when you need a scheme, image format, authentication or caching strategy the base class does not cover.
 
 ## Example: loading SVG images
 
@@ -125,42 +134,55 @@ public class CustomImageLoader : MarkdownImageLoader
 
 ## Usage
 
-Assign your custom loader to `MarkdownImage` elements via a style. This is the recommended approach because image elements are created dynamically by the document model:
+`Markdown.ImageLoader` is an attached property, so you set it on the control itself.
 
 ### XAML
 
 ```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:local="using:MarkdownSample">
-  <Window.Resources>
-    <local:CustomImageLoader x:Key="CustomImageLoader" />
-  </Window.Resources>
-
-  <Window.Styles>
-    <Style Selector="MarkdownImage">
-      <Setter Property="ImageLoader" Value="{StaticResource CustomImageLoader}" />
-    </Style>
-  </Window.Styles>
-
-  <Markdown Text="![SVG Image](https://example.com/image.svg)" />
+  <Markdown Text="![SVG Image](https://example.com/image.svg)">
+    <Markdown.ImageLoader>
+      <local:CustomImageLoader />
+    </Markdown.ImageLoader>
+  </Markdown>
 </Window>
 ```
 
-### Code-behind
+To share one loader across several controls, declare it as a resource and point each control at it:
+
+```xml
+<Window.Resources>
+  <local:CustomImageLoader x:Key="ImageLoader" />
+</Window.Resources>
+
+<StackPanel>
+  <Markdown Markdown.ImageLoader="{StaticResource ImageLoader}" Text="{Binding First}" />
+  <Markdown Markdown.ImageLoader="{StaticResource ImageLoader}" Text="{Binding Second}" />
+</StackPanel>
+```
+
+### Code
 
 ```csharp
 var loader = new CustomImageLoader();
 
-var style = new Style(x => x.OfType<MarkdownImage>());
-style.Setters.Add(new Setter(MarkdownImage.ImageLoaderProperty, loader));
-myMarkdownControl.Styles.Add(style);
+// Every image in this control's document uses it
+markdown.ImageLoader = loader;
+
+// Or through the static accessor, which takes any StyledElement
+Markdown.SetImageLoader(markdown, loader);
 ```
 
-Image loading is deferred until both `ImageSource` (set automatically from the Markdown source) and `ImageLoader` (set via the style) are available. This decouples the document model from image resolution.
+To resolve one image differently from the rest, set `MarkdownImage.ImageLoader` on that element. A value set there wins over the one the control supplies.
+
+Image loading is deferred until both the URL (set automatically from the Markdown source) and a loader are available, and assigning a loader later re-resolves images already in the document. This decouples the document model from image resolution.
 
 ## When to use
 
 You should implement a custom `MarkdownImageLoader` whenever the default image resolution does not meet your needs. For example, you might need to render SVG images, load images from a remote server that requires authentication, or apply a caching strategy to avoid repeated downloads. A custom loader gives you full control over how image URIs are resolved and what image types your `Markdown` control can display.
 
 ## See also
+
 - [Markdown control](/controls/data-display/text-display/markdown)
+- [CodeHighlighter](/controls/data-display/text-display/markdown/codehighlighter)
