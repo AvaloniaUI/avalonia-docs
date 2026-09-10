@@ -664,7 +664,7 @@ What is left is the part that was always real: one sealed `UndoManager`, `IUndoU
 
 ## See also
 
-- [Pagination](/controls/input/text-input/richtexteditor/pagination) - where widow control changes existing page breaks
+- [Pagination](/controls/input/text-input/richtexteditor/pagination) - the paginated viewer and the keep rules, both new in 13.0
 - [Footnotes](/controls/input/text-input/richtexteditor/footnotes) - the model markdown footnotes now load onto
 - [Markdown serialization](/controls/input/text-input/richtexteditor/markdown-serialization) - the constructor-configured serializer, and markdown writing
 - [PDF export](/controls/input/text-input/richtexteditor/pdf-export) - the package that is new in 13.0
