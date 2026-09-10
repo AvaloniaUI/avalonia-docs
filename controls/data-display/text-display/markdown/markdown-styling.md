@@ -232,23 +232,10 @@ Each header exposes `FontSize`, `BorderThickness`, `Padding`, `Margin`.
 | Key | Type | Default (Light) | Default (Dark) | Notes |
 |---|---|---|---|---|
 | `MarkdownAlertBlockNoteBorderBrush` | Brush | `#0969da` | `#58a6ff` | Note alert border brush |
-| `MarkdownAlertBlockNoteParagraphForeground` | Brush | `#0969da` | `#58a6ff` | Note alert paragraph foreground |
 | `MarkdownAlertBlockTipBorderBrush` | Brush | `#1a7f37` | `#3fb950` | Tip alert border brush |
-| `MarkdownAlertBlockTipParagraphForeground` | Brush | `#1a7f37` | `#3fb950` | Tip alert paragraph foreground |
 | `MarkdownAlertBlockImportantBorderBrush` | Brush | `#8250df` | `#bc8cff` | Important alert border brush |
-| `MarkdownAlertBlockImportantParagraphForeground` | Brush | `#8250df` | `#bc8cff` | Important alert paragraph foreground |
 | `MarkdownAlertBlockWarningBorderBrush` | Brush | `#9a6700` | `#d29922` | Warning alert border brush |
-| `MarkdownAlertBlockWarningParagraphForeground` | Brush | `#9a6700` | `#d29922` | Warning alert paragraph foreground |
 | `MarkdownAlertBlockCautionBorderBrush` | Brush | `#d1242f` | `#f85149` | Caution alert border brush |
-| `MarkdownAlertBlockCautionParagraphForeground` | Brush | `#d1242f` | `#f85149` | Caution alert paragraph foreground |
-| `MarkdownAlertBlockHeaderMargin` | Thickness | `0 0 0 8` | — | Alert header margin |
-
-### Alert header content templates
-- `MarkdownAlertBlockHeaderNoteContentTemplate` — content template for Note alert header
-- `MarkdownAlertBlockHeaderTipContentTemplate` — content template for Tip alert header
-- `MarkdownAlertBlockHeaderImportantContentTemplate` — content template for Important alert header
-- `MarkdownAlertBlockHeaderWarningContentTemplate` — content template for Warning alert header
-- `MarkdownAlertBlockHeaderCautionContentTemplate` — content template for Caution alert header
 
 ### Copy button
 | Key | Type | Default (Light) | Default (Dark) | Notes |
