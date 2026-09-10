@@ -32,10 +32,10 @@ These operations must run on the UI thread:
 
 These operations can run on background threads:
 - **Serialization via `DocumentSnapshot`** (immutable)
-- **`IDocumentSerializer.Serialize` / `Deserialize`** — synchronous and thread-agnostic, so they run on whichever thread calls them. Wrap in `Task.Run` to keep the work off the UI thread
+- **`IDocumentSerializer.Serialize` / `Deserialize`**: synchronous and thread-agnostic, so they run on whichever thread calls them. Wrap in `Task.Run` to keep the work off the UI thread
 - **RTF tokenization** (streaming)
 - **`DocumentSnapshot` consumption** — `TextDocument.CreateSnapshot()` must be called on the UI thread, but the returned object is safe to read from any thread
-- **`TextDocument.FromSnapshot`** — `TextDocument` carries the whole document and has no thread affinity, so a document can be materialized with no UI thread involved at all
+- **`TextDocument.FromSnapshot`**: `TextDocument` carries the whole document and has no thread affinity, so a document can be materialized with no UI thread involved at all
 
 ### Not thread-safe
 
@@ -384,7 +384,7 @@ if (firstBlock != null)
 2. **Don't modify document from background threads**
 3. **Don't access UI elements from background threads**
 4. **Don't assume snapshots auto-update** — they're immutable
-5. **Don't hold long-lived references to elements** — resolve them from a pointer when you need them; the model holds them weakly and an unrealized element may not exist yet
+5. **Don't hold long-lived references to elements**: resolve them from a pointer when you need them; the model holds them weakly and an unrealized element may not exist yet
 
 ## Performance considerations
 

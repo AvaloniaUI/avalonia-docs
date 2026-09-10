@@ -57,7 +57,7 @@ for (int i = 0; i < 100; i++)
     pointer.InsertText("Line " + i + "\n");
 }
 
-// Good — 1 Changed event, 1 layout pass
+// Good, 1 Changed event, 1 layout pass
 using (document.BeginChange())
 {
     for (int i = 0; i < 100; i++)

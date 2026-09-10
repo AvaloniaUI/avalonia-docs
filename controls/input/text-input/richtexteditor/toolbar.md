@@ -101,10 +101,10 @@ The built-in `EditorToolbar`, populated via `RichTextEditor.Toolbar` in the edit
 3. **Font** — Font family, Font size, Foreground color, Background color
 4. **Inline formatting** — Bold, Italic, Underline, Strikethrough, Superscript, Subscript, Link
 5. **Lists** — Bullet list, Numbered list
-6. **Insert** — Insert table, Insert image, Header and footer
+6. **Insert**: Insert table, Insert image, Header and footer
 7. **Block layout** — Text alignment, Block border
-8. **Image** — Image size, shown only while the caret is on an image
-9. **Overflow** — "..." button that presents collapsed tools when clicked
+8. **Image**: Image size, shown only while the caret is on an image
+9. **Overflow**: "..." button that presents collapsed tools when clicked
 
 A second `EditorToolbar`, built from the same tool infrastructure, is hosted by the table overlay's actions flyout: the "..." button on a hovered cell and on row and column strip selections. It carries the table structure actions only, in row, column and cell-merge groups.
 
@@ -346,7 +346,7 @@ In both cases:
 <Image light={WordCountTool} position="center" cornerRadius="true" alt="A custom word count tool docked at the end of the toolbar, displaying the current word count."/>
 <br />
 
-The word count display is a passive widget — it doesn't execute an action — so it derives from `EditorTool` directly. `UpdateState` lives on `ActionTool`, so a passive tool refreshes itself by subscribing to the host's own events in `OnEditorHostAttached` and unsubscribing in `OnEditorHostDetached`.
+The word count display is a passive widget, it doesn't execute an action, so it derives from `EditorTool` directly. `UpdateState` lives on `ActionTool`, so a passive tool refreshes itself by subscribing to the host's own events in `OnEditorHostAttached` and unsubscribing in `OnEditorHostDetached`.
 
 The implementation counts words by walking the document's `DocumentSnapshot`. Enumerating `Run` nodes and treating block boundaries and line breaks as word separators avoids allocating a full plain-text string and avoids merging the last word of one paragraph with the first word of the next.
 
