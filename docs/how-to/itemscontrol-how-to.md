@@ -320,7 +320,7 @@ myItemsControl.PreparingContainer += (sender, e) =>
 };
 ```
 
-The companion `ContainerClearing` event fires when a container is removed. Use this event to clean up customizations, if required.
+The companion `ContainerClearing` event fires each time a container is cleared, either for reuse or removal. Use this event to clean up customizations, if required.
 
 ## Performance tips
 
