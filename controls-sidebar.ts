@@ -380,7 +380,6 @@ const sidebars: SidebarsConfig = {
                 collapsed: true,
                 items: [
                   'input/text-input/richtexteditor/index',
-                  'input/text-input/richtexteditor/upgrading-to-13',
                   'input/text-input/richtexteditor/document-viewer',
                   'input/text-input/richtexteditor/toolbar',
                   'input/text-input/richtexteditor/pagination',

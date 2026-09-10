@@ -13,7 +13,7 @@ tags:
 This control is available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
 
-For reference information on this control, see the [RichTextEditor](/controls/input/text-input/richtexteditor) page. If you are moving a project from 12.x, see [Upgrading to 13.0](/controls/input/text-input/richtexteditor/upgrading-to-13).
+For reference information on this control, see the [RichTextEditor](/controls/input/text-input/richtexteditor) page.
 
 ## A viewer shows nothing
 
@@ -55,20 +55,6 @@ using (document.TextDocument.BeginChange())
 }
 ```
 
-## SerializeAsync and DeserializeAsync are gone
-
-`IDocumentSerializer` is synchronous in 13.0. The work is processor-bound and no format performs asynchronous I/O, so the asynchronous pair only moved work to a thread pool thread, which a caller can do better themselves.
-
-```csharp
-// Synchronous, on the calling thread
-serializer.Serialize(document.CreateSnapshot(), stream);
-
-// Off the calling thread, with the scheduler of your choosing
-await Task.Run(() => serializer.Serialize(snapshot, stream, cancellationToken), cancellationToken);
-```
-
-`FlowDocument.Save` and `FlowDocument.Load` are back and take a `CancellationToken`. `SaveAsync` and `LoadAsync` remain as thread-offload conveniences.
-
 ## A document loaded on a background thread throws on first use
 
 A `FlowDocument` and its elements bind to the dispatcher of the thread that constructs them, so a document assembled on a pool thread throws `InvalidOperationException` the first time the UI thread reads a property from it.
@@ -81,26 +67,6 @@ To stay off the UI thread entirely, work with the model rather than the facade. 
 var snapshot = serializer.Deserialize(stream);
 var document = TextDocument.FromSnapshot(snapshot);
 ```
-
-## IUndoManager or NullUndoManager does not resolve
-
-Both are removed, along with `IUndoManagerInternal` and `IUndoHistory`. `UndoManager` is the single implementation, and `TextDocument.UndoManager` and `RichTextEditor.UndoManager` are typed `UndoManager?`.
-
-Where you used `NullUndoManager.Instance` to mean "no undo", use `null` or a manager whose `IsEnabled` is false. Both record nothing.
-
-## A built-in action type does not resolve
-
-The concrete action classes are internal in 13.0. Reference a built-in action through the `EditorActions` singletons, which is what the shipped toolbar does:
-
-```xml
-<toolbar:ButtonTool Action="{x:Static actions:EditorActions.Bold}" />
-```
-
-```csharp
-await EditorActions.Bold.ExecuteAsync(host);
-```
-
-Constructing one directly was never supported: a second instance carries a duplicate `Id` that `EditorActions.GetById` will not return. Your own actions are unaffected, since `IEditorAction`, `EditorAction`, `FormattingToggleAction<T>`, `PropertyAction<T>` and `BlockPropertyAction<T>` all stay public.
 
 ## Text in an exported PDF is unreadable
 
@@ -137,5 +103,4 @@ Dispatcher.UIThread.VerifyAccess();
 ## See also
 
 - [RichTextEditor control](/controls/input/text-input/richtexteditor)
-- [Upgrading to 13.0](/controls/input/text-input/richtexteditor/upgrading-to-13)
 - [Thread safety](/controls/input/text-input/richtexteditor/thread-safety)

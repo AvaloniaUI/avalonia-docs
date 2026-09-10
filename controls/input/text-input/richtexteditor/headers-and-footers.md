@@ -146,7 +146,7 @@ In `DocumentViewMode.PageLayout` the editor shows every sheet's resolved header 
 | `ActiveDocumentChanged` | Raised as the caret enters or leaves a band |
 | `ActivateDocument(document, position)` | Enters a band, or returns to the body with `null` |
 
-While the caret is in a band the `:band-editing` pseudo-class is set, a frame in `PageBandFocusBrush` marks the band's placement, `Selection` is the band's, and `DocumentTargetAreas.PageBand` lets a toolbar tool target bands alone. Escape returns to the body, which finds its selection where it was left.
+While the caret is in a band the `:band-editing` pseudo-class is set, a frame in `PageBandFocusBrush` marks the band's placement, `Selection` is the band's, and `ToolbarTargetAreas.PageBand` lets a toolbar tool target bands alone. Escape returns to the body, which finds its selection where it was left.
 
 The band commands are on `EditorActions`, each one undo unit:
 
@@ -202,4 +202,3 @@ Bands travel as nested snapshots on `DocumentSnapshot.PageBands`, with role, rul
 - [Pagination](/controls/input/text-input/richtexteditor/pagination) - page breaks, keep rules and per-section page setup
 - [PDF export](/controls/input/text-input/richtexteditor/pdf-export) - the bands each exported page resolves
 - [Footnotes](/controls/input/text-input/richtexteditor/footnotes) - the other nested document a page carries
-- [Upgrading to 13.0](/controls/input/text-input/richtexteditor/upgrading-to-13) - page geometry moved onto `PageSetup`, and `ToolbarTargetAreas` became `DocumentTargetAreas`

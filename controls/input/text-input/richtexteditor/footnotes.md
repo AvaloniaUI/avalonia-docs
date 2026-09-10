@@ -218,4 +218,3 @@ note.Label = "constant-currency";
 - [Pagination](/controls/input/text-input/richtexteditor/pagination) - how notes take part in filling a page
 - [Headers and footers](/controls/input/text-input/richtexteditor/headers-and-footers) - the other nested document a page carries
 - [Markdown serialization](/controls/input/text-input/richtexteditor/markdown-serialization) - how markdown citations and definitions map onto notes
-- [Upgrading to 13.0](/controls/input/text-input/richtexteditor/upgrading-to-13) - markdown footnotes are notes now rather than body content

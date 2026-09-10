@@ -40,10 +40,6 @@ await Task.Run(() => new PdfSerializer(options).Serialize(snapshot, stream, canc
 
 One snapshot can feed several serializers, which is worth doing when a "save all formats" command writes PDF alongside DOCX.
 
-:::info
-The synchronous `IDocumentSerializer` contract is a 13.0 change. See [Upgrading to 13.0](/controls/input/text-input/richtexteditor/upgrading-to-13#serializing-off-the-calling-thread) for the pattern that replaces an awaited `SerializeAsync`.
-:::
-
 ## Running off the UI thread
 
 The export pipeline is UI-free: it consumes the `DocumentSnapshot` directly, creates no controls and needs no dispatcher, so it runs on any thread. Live layout is never a dependency; the layout it does is its own.
@@ -169,4 +165,3 @@ foreach (var loss in losses)
 - [Headers and footers](/controls/input/text-input/richtexteditor/headers-and-footers) - the bands each page resolves
 - [Footnotes](/controls/input/text-input/richtexteditor/footnotes) - notes at the bottom of their anchor's page
 - [Thread safety](/controls/input/text-input/richtexteditor/thread-safety) - snapshots and background work
-- [Upgrading to 13.0](/controls/input/text-input/richtexteditor/upgrading-to-13) - the synchronous serializer contract

@@ -13,8 +13,8 @@ The RichTextEditor architecture uses immutable snapshots for background-safe ser
 This control is available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
 
-:::warning
-`IDocumentSerializer` is synchronous. `SerializeAsync` and `DeserializeAsync` were removed in 13.0; `Serialize` and `Deserialize` are the whole contract, and they run on whichever thread calls them. Nothing in this library performs asynchronous I/O: every format tokenizes, builds a tree or lays out text against an in-memory buffer. `Task.Run` at the call site is what moves that work off the UI thread, and the shipped `SaveAsync` and `LoadAsync` do exactly that for the common case.
+:::info
+Nothing in this library performs asynchronous I/O: every format tokenizes, builds a tree or lays out text against an in-memory buffer. `IDocumentSerializer.SerializeAsync` and `DeserializeAsync` are thread-offload conveniences that run the synchronous body on the thread pool, not asynchronous I/O, and `Serialize` and `Deserialize` run on whichever thread calls them. Either the shipped asynchronous pair or `Task.Run` at the call site moves the work off the UI thread.
 :::
 
 ## Threading model

@@ -57,8 +57,8 @@ The token is observed per block on both sides. The Markdig parse that precedes r
 
 `CanDeserialize` returns true for any readable stream: markdown is plain text with no magic bytes. A format-sniffing loop has to try it last.
 
-:::warning
-On 12.x the serializer was configured through settable properties, `Serialize` threw, and `CanDeserialize` returned true unconditionally. See [Upgrading to 13.0](/controls/input/text-input/richtexteditor/upgrading-to-13) for what moved.
+:::info
+The constructor is the way to configure the serializer. `Options` and `CodeHighlighter` are still settable, but a serializer handed to a background read and reconfigured through a setter changes format mid-read.
 :::
 
 ### Output spellings
@@ -155,4 +155,3 @@ The pipeline is Markdig with `UseSupportedExtensions()`: auto links, alert block
 - [Markdown control](/controls/data-display/text-display/markdown) - rendering markdown without an editor
 - [Code highlighter](/controls/data-display/text-display/markdown/codehighlighter) - the `CodeHighlighter` the serializer takes
 - [Footnotes](/controls/input/text-input/richtexteditor/footnotes) - the model markdown notes load onto
-- [Upgrading to 13.0](/controls/input/text-input/richtexteditor/upgrading-to-13) - markdown writing, the constructor-configured serializer, and the task-list style key

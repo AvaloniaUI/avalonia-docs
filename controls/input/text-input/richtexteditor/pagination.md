@@ -151,4 +151,3 @@ Footnotes take part in the fill too: a line carrying anchors reserves its notes'
 - [PDF export](/controls/input/text-input/richtexteditor/pdf-export) - the same policy, written to a file
 - [Headers and footers](/controls/input/text-input/richtexteditor/headers-and-footers) - page bands and the distance that shortens a page
 - [Footnotes](/controls/input/text-input/richtexteditor/footnotes) - notes reserve room at the bottom of their page
-- [Upgrading to 13.0](/controls/input/text-input/richtexteditor/upgrading-to-13) - the move of page geometry onto `PageSetup`

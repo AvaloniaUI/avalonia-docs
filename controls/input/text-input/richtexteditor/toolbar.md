@@ -55,7 +55,8 @@ RichTextEditor
 ```csharp
 using Avalonia.Controls.Documents.Primitives.Toolbar; // EditorToolbar, tools, groups
 using Avalonia.Controls.Documents.Primitives.Actions; // EditorActions, IEditorAction
-using Avalonia.Controls.Documents.Primitives; // DocumentTargetAreas, EditorSelectionFlyout, EditorContextMenu
+using Avalonia.Controls.Documents.Primitives; // EditorSelectionFlyout, EditorContextMenu
+using Avalonia.Controls.Documents.Primitives.Adorners; // ToolbarTargetAreas
 ```
 
 All of these types are available in XAML under the default Avalonia namespace (`https://github.com/avaloniaui`).
@@ -73,21 +74,17 @@ If you have existing code that uses the legacy `ItemsControl`-based surface, upd
 
 Implicit XAML child syntax (`<EditorToolbar><ToolbarGroup>…</ToolbarGroup></EditorToolbar>`) is unchanged — children are added to `Tools` via the `[Content]` attribute. Only explicit `<EditorToolbar.Items>` / `<EditorToolbar.ItemsPanel>` element-form usages need renaming. In code, replace `toolbar.Items.Add(...)` with `toolbar.Tools.Add(...)`.
 
-### Changes in 13.0
+### Changes in 12.3
 
-| Before | After |
+Nothing here is a compile break: the toolbar API of 12.2.3 is unchanged.
+
+| Change | What it means |
 |---|---|
-| `ToolbarTargetAreas` in `...Primitives.Adorners` | `DocumentTargetAreas` in `Avalonia.Controls.Documents.Primitives`. The flags keep their names and values; `All` becomes `CaretAreas`, which is what it always was. |
-| `EditorToolbar.ActiveTargetAreas` / `EditorTool.ActiveTargetAreas` as settable properties | Read-only. The value is derived from the selection on every selection and document change and pushed onto the tools. Say which areas a tool serves with `EditorTool.TargetAreas`. |
-| `EditorToolbar.Editor` typed `RichTextEditor?` | Typed `ITextEditorHost?`. An assignment still compiles; a read typed as `RichTextEditor` needs a cast. |
-| Concrete action classes such as `BoldAction` | Internal. Reference a built-in action through its `EditorActions` singleton. `InsertImageAction` and `InsertTableAction` stay public, because each carries a parameterised entry point beyond the interfaces. |
-| `IEditorAction.GetState(host)` | `IToggleAction.IsChecked(host)` for a toggle, `IPropertyAction<T>.GetValue(host)` for a property action. A plain command returned `null` and has no replacement. |
-| `EditorActions.TextAlignmentAction` | `EditorActions.TextAlignment` |
-| `InsertTableRowAction.Before` / `.After`, `InsertTableColumnAction.Before` / `.After` | `EditorActions.InsertRowBefore`, `InsertRowAfter`, `InsertColumnBefore`, `InsertColumnAfter`, the same instances. |
-| `InsertTableAction.ExecuteWithSize(host, rows, columns)` | `InsertTableAction.ExecuteWith(host, rowCount, columnCount)`, matching `InsertImageAction.ExecuteWith`. |
-| `ColorTool.SelectedColor` typed `Color`, with a protected `IsUnset` | Typed `Color?`, where `null` is "no color". `IsUnset` is gone; test `SelectedColor is null`. |
-| Setters on template-binding state such as `AlignmentFlyoutTool.IsAlignLeft` or `TablePickerTool.SelectedRows` | Read-only `DirectProperty`s. Bind one way; there was never anything lasting to set. |
-| `ToolbarGroup` throwing when nested | Nesting is supported. |
+| `ToolbarGroup` nests | Adding a group to another group's `Tools` used to throw from a collection-changed handler, which surfaced as an `XamlLoadException` at parse time. Overflow descends the tree. |
+| `EditorToolbar.EditorHost` | Binds the toolbar to an editing host that is not a `RichTextEditor`. `Editor` keeps its `RichTextEditor?` type, and the toolbar drives whichever of the two carries a value. |
+| The toolbar pushes `ActiveTargetAreas` | The value is derived from the selection on every selection and document change and pushed onto the tools, so the per-tool theme setters that used to propagate it are gone. A tool that follows the caret binds `IsVisible` to `IsVisibleForTargetArea`. Both properties are still settable, and a value set from outside lasts until the caret moves. |
+| `ToolbarTargetAreas.CaretAreas` | Names the areas an ordinary caret reaches, and is the default for `EditorTool.TargetAreas`. `All` is unchanged beside it. |
+| Clicking a tool bound to a block property action | Does nothing. It used to throw `NotSupportedException` from an unobserved task, which took the process down. |
 
 ## Default toolbar
 
@@ -108,7 +105,7 @@ The built-in `EditorToolbar`, populated via `RichTextEditor.Toolbar` in the edit
 
 A second `EditorToolbar`, built from the same tool infrastructure, is hosted by the table overlay's actions flyout: the "..." button on a hovered cell and on row and column strip selections. It carries the table structure actions only, in row, column and cell-merge groups.
 
-Most tools are context-sensitive, meaning they disappear automatically when out of context, e.g., list tools are hidden outside lists, table tools are hidden outside tables. This is done by declaring the [`DocumentTargetAreas`](#documenttargetareas) of each tool or group.
+Most tools are context-sensitive, meaning they disappear automatically when out of context, e.g., list tools are hidden outside lists, table tools are hidden outside tables. This is done by declaring the [`ToolbarTargetAreas`](#documenttargetareas) of each tool or group.
 
 ## Replacing the default toolbar
 
@@ -276,8 +273,8 @@ List marker styles are reached through `ListToggleTool`, which the default selec
 
 | Property | Type | Description |
 |---|---|---|
-| `TargetAreas` | `DocumentTargetAreas` | Contexts in which this tool should appear. Defaults to `CaretAreas`. See [DocumentTargetAreas](#documenttargetareas). |
-| `ActiveTargetAreas` | `DocumentTargetAreas` | Read-only. The areas the caret is currently in, pushed here by the host toolbar as the selection moves. |
+| `TargetAreas` | `ToolbarTargetAreas` | Contexts in which this tool should appear. Defaults to `CaretAreas`. See [ToolbarTargetAreas](#documenttargetareas). |
+| `ActiveTargetAreas` | `ToolbarTargetAreas` | Read-only. The areas the caret is currently in, pushed here by the host toolbar as the selection moves. |
 | `IsVisibleForTargetArea` | `bool` | Read-only. Whether `TargetAreas` matches `ActiveTargetAreas`. |
 | `OverflowMenuItem` | `MenuItem?` | Menu item shown when this tool is collapsed into the overflow menu. `null` means the tool cannot be collapsed. |
 | `CanCollapseOverride` | `bool?` | Explicit override for overflow collapse. |
@@ -296,7 +293,7 @@ List marker styles are reached through `ListToggleTool`, which the default selec
 |---|---|---|
 | `Editor` | `ITextEditorHost?` | The host this toolbar drives. Reassign it to retarget the toolbar at runtime. |
 | `Tools` | `AvaloniaList<EditorTool>` | The `[Content]` collection of toolbar items. |
-| `ActiveTargetAreas` | `DocumentTargetAreas` | Read-only. Derived from the selection and pushed onto every tool. |
+| `ActiveTargetAreas` | `ToolbarTargetAreas` | Read-only. Derived from the selection and pushed onto every tool. |
 | `ShowShortcuts` | `bool` | Whether tooltips display the action's keyboard gesture. |
 | `ToolSpacing` | `double` | Uniform spacing between items in the toolbar panel. `ToolbarGroup` has one of its own for its children. |
 
@@ -512,9 +509,9 @@ The `EditorActions` singletons are the supported way to reference a built-in act
 
 ### Reading action state
 
-Each singleton is declared as the narrowest interface its instance implements, so checked state and property values read without a downcast. The untyped `GetState` is gone.
+Every singleton is declared as `IEditorAction`. Cast to the interface that carries the state you want.
 
-| Actions | Type | State accessor |
+| Actions | Interface | State accessor |
 |---|---|---|
 | `Bold`, `Italic`, `Underline`, `Strikethrough`, `Superscript`, `Subscript`, `BlockBorder`, `AlignLeft`, `AlignCenter`, `AlignRight`, `AlignJustify`, `ToggleBulletList`, `ToggleNumberedList`, `DifferentFirstPage`, `DifferentOddAndEvenPages`, `LinkToPrevious` | `IToggleAction` | `IsChecked(host)` |
 | `FontFamily` | `IPropertyAction<FontFamily>` | `GetValue(host)`, `SetValue(host, value)`, `ClearValue(host)` |
@@ -524,11 +521,11 @@ Each singleton is declared as the narrowest interface its instance implements, s
 | `Margin`, `Padding`, `BorderThickness` | `IBlockPropertyAction<Thickness>` | same |
 | `BlockBackground`, `BorderBrush` | `IBlockPropertyAction<IBrush?>` | same |
 | `BulletMarkerStyle`, `NumberedMarkerStyle` | `IBlockPropertyAction<TextMarkerStyle>` | same |
-| `TextAlignment` | `IBlockPropertyAction<TextAlignment>` | same |
+| `TextAlignmentAction` | `IBlockPropertyAction<TextAlignment>` | same |
 | `InsertImage` | `InsertImageAction` | `ExecuteWith(host, ...)` |
-| `InsertTable` | `InsertTableAction` | `ExecuteWith(host, rowCount, columnCount)` |
+| `InsertTable` | `InsertTableAction` | `ExecuteWithSize(host, rowCount, columnCount)` |
 
-`IBlockPropertyAction<T>` derives from `IPropertyAction<T>`, so its value members are inherited rather than redeclared. Invoking a block property action with no value does nothing; `SetValue` is how a block property is applied.
+`IBlockPropertyAction<T>` derives from `IPropertyAction<T>`, so its value members are inherited rather than redeclared. `IEditorAction.GetState(host)` returns the same value untyped; it is kept for compatibility and says nothing about which family the value came from. Invoking a block property action with no value does nothing; `SetValue` is how a block property is applied.
 
 The following actions are built in.
 
@@ -568,7 +565,7 @@ The following actions are built in.
 
 | Action | Description |
 |---|---|
-| `TextAlignment` | Get or set block alignment as a value. |
+| `TextAlignmentAction` | Get or set block alignment as a value. |
 | `AlignLeft` | Left-align the blocks. |
 | `AlignCenter` | Center-align the blocks. |
 | `AlignRight` | Right-align the blocks. |
@@ -712,9 +709,9 @@ Overflow descends the whole tree, and a nested group contributes its own childre
 </ToolbarGroup>
 ```
 
-## DocumentTargetAreas
+## ToolbarTargetAreas
 
-`DocumentTargetAreas` is a `[Flags]` enum in `Avalonia.Controls.Documents.Primitives` describing the contexts in which a tool, a menu entry or a block adorner applies. `EditorToolbar` derives the active areas from the selection on every selection and document change and pushes them onto every tool.
+`ToolbarTargetAreas` is a `[Flags]` enum in `Avalonia.Controls.Documents.Primitives` describing the contexts in which a tool, a menu entry or a block adorner applies. `EditorToolbar` derives the active areas from the selection on every selection and document change and pushes them onto every tool.
 
 | Flag | Caret context |
 |---|---|
@@ -731,11 +728,11 @@ Overflow descends the whole tree, and a nested group contributes its own childre
 
 `CaretAreas` is deliberately not every flag. `TableCells`, `PageBand` and `Footnote` are opted into by name, so a tool that lists one of them alone appears only in that context.
 
-:::warning
-This enum was `ToolbarTargetAreas` in the `...Primitives.Adorners` namespace before 13.0, and its `All` member is now `CaretAreas` with the same value. The remaining flags keep their names and values, so existing XAML such as `TargetAreas="Text,List"` still binds.
+:::info
+`CaretAreas` is new beside `All`, which is unchanged. Both are combinations of the flags below, so existing XAML such as `TargetAreas="Text,List"` or `TargetAreas="All"` still binds.
 :::
 
-If required, you can combine `DocumentTargetAreas` to make a tool visible in multiple contexts.
+If required, you can combine `ToolbarTargetAreas` to make a tool visible in multiple contexts.
 
 ```xml
 <ToolbarGroup Classes="AreaAware" TargetAreas="Text,List">

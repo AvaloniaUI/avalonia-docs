@@ -473,7 +473,7 @@ public class SpellCheckHighlightLayer : HighlightLayerBase
 ### Writing your own HTML serializer
 
 :::info
-The bundled `HtmlSerializer` in `Avalonia.Controls.Documents.Serialization.Html` is public in 13.0, but it reads only: `CanWrite` is `false` and `Serialize` throws. The example below writes its own HTML writer, so pick a different class name if you ship it in your own assembly. For output on paper, `PdfSerializer` is the supported route.
+The bundled `HtmlSerializer` in `Avalonia.Controls.Documents.Serialization.Html` is public, but it reads only: `CanWrite` is `false` and `Serialize` throws. The example below writes its own HTML writer, so pick a different class name if you ship it in your own assembly. For output on paper, `PdfSerializer` is the supported route.
 :::
 
 ```csharp
@@ -481,6 +481,8 @@ using Avalonia.Controls.Documents;
 using Avalonia.Controls.Documents.Serialization;
 using Avalonia.Controls.Documents.Serialization.Snapshot;
 using Avalonia.Controls.Documents.TextModel;
+using System.Threading;
+using System.Threading.Tasks;
 
 public class MyHtmlSerializer : IDocumentSerializer
 {
@@ -520,6 +522,18 @@ public class MyHtmlSerializer : IDocumentSerializer
 
         writer.WriteLine("</body></html>");
     }
+
+    // The asynchronous pair is what the interface requires; the synchronous one has
+    // default implementations that block on it. Nothing here performs asynchronous I/O,
+    // so both wrappers just move the work to the thread pool.
+    public Task<DocumentSnapshot> DeserializeAsync(
+        Stream stream, CancellationToken cancellationToken = default)
+        => Task.Run(() => Deserialize(stream, cancellationToken), cancellationToken);
+
+    public Task SerializeAsync(
+        DocumentSnapshot snapshot, Stream stream,
+        CancellationToken cancellationToken = default)
+        => Task.Run(() => Serialize(snapshot, stream, cancellationToken), cancellationToken);
 
     private void WriteBlock(BlockSnapshotNode block,
                             DocumentSnapshot snapshot, StreamWriter writer)
