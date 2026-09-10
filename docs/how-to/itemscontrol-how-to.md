@@ -5,7 +5,7 @@ description: Customize collection layouts using ItemsControl
 doc-type: how-to
 ---
 
-This guide covers using [`ItemsControl`](/controls/data-display/collections/itemscontrol.md) to create custom collection layouts.
+This guide covers using [`ItemsControl`](/controls/data-display/collections/itemscontrol) to create custom collection layouts.
 
 ## `ItemsControl` vs. `ListBox`
 
@@ -14,7 +14,7 @@ Use `ItemsControl` when you need to display a small-to-medium collection without
 | Control | Selection | Virtualization | Best For |
 |---|---|---|---|
 | `ListBox` | Built-in | Yes | Selectable lists |
-| `ItemsControl` | None | No | Custom layouts |
+| `ItemsControl` | None | No (by default) | Custom layouts |
 
 ## `ItemsControl` basic usage
 
@@ -31,8 +31,10 @@ Use `ItemsControl` when you need to display a small-to-medium collection without
   <ItemsControl ItemsSource="{Binding Tags}">
     <ItemsControl.ItemTemplate>
       <DataTemplate>
-        <Border Background="gray" CornerRadius="12"
-                Padding="8,4" Margin="2"
+        <Border Background="gray"
+                CornerRadius="12"
+                Padding="8,4"
+                Margin="2"
                 HorizontalAlignment="Left">
           <TextBlock Text="{Binding}" />
         </Border>
@@ -63,7 +65,7 @@ public class MainViewModel
 
 ### Custom panel
 
-`ItemsControl` displays its content in an `ItemsPanel`, which is a [layout control](/controls/) that defaults to `StackPanel`.
+`ItemsControl` displays its content in an `ItemsPanel`, which is a layout control that defaults to `StackPanel`.
 
 To change how items are arranged, you can replace the `StackPanel` with a different control. Use `ItemsPanelTemplate` to override the default, then add a layout control of your choice.
 
@@ -86,7 +88,10 @@ To change how items are arranged, you can replace the `StackPanel` with a differ
     </ItemsControl.ItemsPanel>
     <ItemsControl.ItemTemplate>
         <DataTemplate>
-            <Border Background="gray" CornerRadius="16" Padding="12,6" Margin="4">
+            <Border Background="gray"
+                    CornerRadius="16" 
+                    Padding="12,6"
+                    Margin="4">
                 <TextBlock Text="{Binding}" />
             </Border>
         </DataTemplate>
@@ -137,8 +142,10 @@ public class MainViewModel
     <ItemsControl.ItemTemplate>
       <DataTemplate>
         <StackPanel Width="120">
-          <Border Width="40" Height="40" CornerRadius="20"
-                  Background="#6366F1" HorizontalAlignment="Center">
+          <Border Width="40" Height="40"
+                  CornerRadius="20"
+                  Background="#6366F1"
+                  HorizontalAlignment="Center">
           <TextBlock Text="{Binding Number}"
                      Foreground="White"
                      HorizontalAlignment="Center"
@@ -183,65 +190,6 @@ public class MainViewModel
 
 </XamlPreview>
 
-### Scrolling
-
-`ItemsControl` does not include scrolling by default. If you wish to display items in a scrollable but non-selectable field, wrap an `ItemsControl` inside a `ScrollViewer`.
-
-<XamlPreview>
-
-```xml
-<UserControl xmlns="https://github.com/avaloniaui"
-             xmlns:vm="using:ScrollingItems">
-  <UserControl.DataContext>
-    <vm:MainViewModel/>
-  </UserControl.DataContext>
-  
-  <ScrollViewer>
-    <ItemsControl ItemsSource="{Binding Tags}">
-      <ItemsControl.ItemTemplate>
-        <DataTemplate>
-          <Border Background="gray" CornerRadius="16"
-                  Padding="12,6" Margin="4"
-                  HorizontalAlignment="Left">
-            <TextBlock Text="{Binding}" />
-          </Border>
-        </DataTemplate>
-      </ItemsControl.ItemTemplate>
-    </ItemsControl>
-  </ScrollViewer>
-</UserControl>
-```
-
-```csharp
-using System.Collections.ObjectModel;
-
-namespace ScrollingItems;
-
-public class MainViewModel
-{
-    public ObservableCollection<string> Tags { get; set; } = new()
-    {
-        "this",
-        "is",
-        "a",
-        "very",
-        "tall",
-        "stack",
-        "of",
-        "tags",
-        "intended",
-        "to",
-        "demonstrate",
-        "scrolling",
-        "with",
-        "a",
-        "scrollviewer"
-    };
-}
-```
-
-</XamlPreview>
-
 ### Empty state
 
 To show an empty state indicator when the collection is empty, wrap `ItemsControl` in a `Panel` and set a second control that becomes visible when there are no items in the collection.
@@ -258,11 +206,14 @@ In this example, a `TextBlock` is used to display a simple text message. Its `Is
 <Panel>
 
   <!-- Give the ItemsControl a name, so the TextBlock can refer to it. -->
-  <ItemsControl x:Name="TagsList" ItemsSource="{Binding Tags}">
+  <ItemsControl x:Name="TagsList"
+                ItemsSource="{Binding Tags}">
     <ItemsControl.ItemTemplate>
       <DataTemplate>
-        <Border Background="gray" CornerRadius="12"
-                Padding="8,4" Margin="2"
+        <Border Background="gray"
+                CornerRadius="12"
+                Padding="8,4"
+                Margin="2"
                 HorizontalAlignment="Left">
           <TextBlock Text="{Binding}" />
         </Border>
@@ -272,13 +223,88 @@ In this example, a `TextBlock` is used to display a simple text message. Its `Is
 
   <!-- Use IsVisible to display the TextBlock when the TagsList ItemsControl has no items, as counted by the ItemCount property. -->
   <TextBlock Text="No tags"
-             Margin="2" Opacity="0.6"
-             HorizontalAlignment="Left" VerticalAlignment="Top"
+             Margin="2"
+             Opacity="0.6"
+             HorizontalAlignment="Left"
+             VerticalAlignment="Top"
              IsVisible="{Binding #TagsList.ItemCount,
                          Converter={x:Static ObjectConverters.Equal},
                          ConverterParameter={StaticResource Zero}}" />
 </Panel>
 ```
+
+### Virtualized scrollable items
+
+To turn `ItemsControl` into a virtualized, scrollable display, you can wrap it in a [ScrollViewer](/controls/layout/containers/scrollviewer) and [customize the `ItemsPanel`](#custom-panel) into a [`VirtualizingStackPanel`](/api/avalonia/controls/virtualizingstackpanel).
+
+The resulting control is equivalent to a [`ListBox`](/controls/data-display/collections/listbox) without selection behavior.
+
+<XamlPreview>
+
+```xml
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:vm="using:VirtualizingScrollingItems">
+  <UserControl.DataContext>
+    <vm:MainViewModel/>
+  </UserControl.DataContext>
+
+  <ScrollViewer>
+    <ItemsControl ItemsSource="{Binding Tags}">
+      <ItemsControl.ItemsPanel>
+        <ItemsPanelTemplate>
+          <VirtualizingStackPanel />
+        </ItemsPanelTemplate>
+      </ItemsControl.ItemsPanel>
+      <ItemsControl.ItemTemplate>
+        <DataTemplate>
+          <Border Background="gray"
+                  CornerRadius="12"
+                  Padding="8,4"
+                  Margin="2"
+                  HorizontalAlignment="Left">
+            <TextBlock Text="{Binding}" />
+          </Border>
+        </DataTemplate>
+      </ItemsControl.ItemTemplate>
+    </ItemsControl>
+  </ScrollViewer>
+</UserControl>
+```
+
+```csharp
+using System.Collections.ObjectModel;
+
+namespace VirtualizingScrollingItems;
+
+public class MainViewModel
+{
+    public ObservableCollection<string> Tags { get; set; } = new()
+    {
+        "apples",
+        "oranges",
+        "bananas",
+        "pears",
+        "mangoes",
+        "guavas",
+        "grapes",
+        "dragonfruits",
+        "lemons",
+        "limes",
+        "kiwis",
+        "watermelons",
+        "strawberries",
+        "blueberries",
+        "cherries",
+        "passionfruits",
+        "peaches",
+        "plums",
+        "figs",
+        "kumquats",
+    };
+}
+```
+
+</XamlPreview>
 
 ## Customizing containers with `PreparingContainer`
 

@@ -24,7 +24,8 @@ You will probably use these properties most often:
 ## Practical notes
 
 - **Use `ObservableCollection<T>`** for your `ItemsSource` if you need the UI to update automatically when you add or remove items at runtime. A plain `List<T>` will not update the control when changed.
-- **`ItemsControl` does not virtualize** its children. If you are working with a large number of items, consider consider wrapping your `ItemsControl` in a [`ScrollViewer`](/controls/layout/containers/scrollviewer) so that it scrolls. Or use a [`ListBox`](/controls/data-display/collections/listbox), which virtualizes by default.
+- `ItemsControl` **does not virtualize** its children. If you are working with a large number of items, use a [`ListBox`](/controls/data-display/collections/listbox), which virtualizes by default.
+- `ItemsControl` **does not have a scrollbar**. Content that overflows the available height is clipped. Wrap your `ItemsControl` in a [`ScrollViewer`](/controls/layout/containers/scrollviewer) if you need scrolling.
 - To **arrange items horizontally** instead of vertically, [replace the default `ItemsPanel`](/docs/how-to/itemscontrol-how-to#horizontal-layout).
 - **`ItemsRepeater` is no longer supported** as of Avalonia v12. If you use that control in your app, upgrading to `ItemsControl` or one of its derivatives is recommended.
 
