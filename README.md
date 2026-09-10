@@ -1,9 +1,9 @@
 <p align="center">
   <img alt="Avalonia UI logo" src="static/img/purple-border-gradient-icon.png" width="75px" />
-  <h1 align="center">Avalonia UI Documentation</h1>
+  <h1 align="center">Avalonia Documentation</h1>
 </p>
 
-The repository holds the code and markdown source files for the Avalonia UI documentation website, which is accessible at [docs.avaloniaui.net](https://docs.avaloniaui.net)
+The repository holds the code and markdown source files for the Avalonia documentation website, which is accessible at [docs.avaloniaui.net](https://docs.avaloniaui.net)
 
 ## Index
 - [Index](#index)
@@ -25,7 +25,7 @@ We welcome your valuable feedback on the documentation! Please feel free to join
 If you come across any issues with the documentation or have a feature request related explicitly to it, we encourage you to create a new [GitHub issue](https://github.com/AvaloniaUI/avalonia-docs/issues/new). Before creating a new issue, we kindly request that you check for existing issues to avoid duplication. 
 
 ## Contributing
-To contribute to Avalonia UI documentation, you need to fork this repository and submit a pull request for the Markdown and/or image changes that you're proposing.
+To contribute to the Avalonia documentation, you need to fork this repository and submit a pull request for the Markdown and/or image changes that you're proposing.
 
 ### Workflow
 The two suggested workflows are:
@@ -35,30 +35,30 @@ The two suggested workflows are:
 
 ### Conventions
 
-- The front matter for every markdown file should include the `id` and a `title`. `id` will be used to reference the file in `sidebar.js` or `version-x.x.x-sidebars.json` for a specific version.
+- The front matter for every markdown file should include an `id`, `title`, `description` and `doc-type`.
   ```yaml
   ---
-  id: platform-support
-  title: Supported Platforms
+  id: main-window
+  title: Main window
+  description: Set and access the main window or main view for desktop, mobile, and browser platforms.
+  doc-type: explanation
   ---
   ```
 
 - Use `kebab-case` for file and folder names.
   For example:
-  - `/docs/getting-started/ide-extensions.md`
-  - `/docs/how-to/use-google-fonts.md`
+  - `/docs/get-started/create-your-first-project.md`
+  - `/controls/input/buttons/togglebutton.md`
 
-- Images are important to bring the product to life and clarify the written content. For images you're adding to the repo, store them in the `img` subfolder inside `static` folder. For every topic there needs to be a folder inside `\static\img\` section, for example: `static\img\how-to\use-google-fonts\download-font.png`.
+- When adding an image to the repo, store them in the `img` subfolder inside `static`. Create or identify a folder matching the relevant topic, for example: `static\img\custom-controls\custom-flyout-demo.gif`.
   
-  When you link to an image, the path and filename are case-sensitive. The convention is `kebab-case`. `import` should be used to help detect broken images and placed near the top of the document for easier maintenance.
+  When you link to an image, the path and filename are case-sensitive. The convention is `kebab-case`. `import` should be used to help detect broken images and placed near the top of the document for easier maintenance. Use the `<Image>` component to insert the image inline.
 
   > Example code for adding an image in markdown file:
   ```markdown
-  import ButtonGroup from '/img/button-group.png';
-  <img className="screenshot-full" src={ButtonGroup} alt="Button group" />
+  import LayoutZonesDiagram from '/img/concepts/ui-concepts/layout/layout-zones.png';
+  <Image light={LayoutZonesDiagram} maxWidth="400" alignment="center" alt="A diagram with four overlapping rectangles, representing the layout zones of a UI window." />
   ```
-  
-  Do not include quotes around the `src`'s attribute value.  
 
 ## Local setup
 
@@ -76,8 +76,6 @@ npm install
 
 ```bash
 npx docusaurus start
-npx docusaurus start --locale zh-Hans
-npx docusaurus start --locale ru
 ```
 
 ### API Reference Generation
