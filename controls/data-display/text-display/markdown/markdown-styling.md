@@ -219,7 +219,6 @@ Each header exposes `FontSize`, `BorderThickness`, `Padding`, `Margin`.
 | `MarkdownTableCellBorderBrush` | Brush | `Black` | `#30363d` | Table cell border brush |
 | `MarkdownTableBorderBrush` | Brush | `Black` | `#30363d` | Table border brush |
 | `MarkdownTableBorderThickness` | Thickness | `0,0,1,1` | `0,0,1,1` | Table outer border thickness |
-| `MarkdownTableCellSpacing` | Double | `0` | — | Cell spacing |
 | `MarkdownTableCellBorderThickness` | Thickness | `1,1,0,0` | `1,1,0,0` | Cell border thickness |
 | `MarkdownTableCellParagraphPadding` | Thickness | `12,5` | `12,5` | Cell paragraph padding |
 
