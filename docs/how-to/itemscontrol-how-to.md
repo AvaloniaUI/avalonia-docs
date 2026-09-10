@@ -237,7 +237,7 @@ In this example, a `TextBlock` is used to display a simple text message. Its `Is
 
 To turn `ItemsControl` into a virtualized, scrollable display, you can wrap it in a [ScrollViewer](/controls/layout/containers/scrollviewer) and [customize the `ItemsPanel`](#custom-panel) into a [`VirtualizingStackPanel`](/api/avalonia/controls/virtualizingstackpanel).
 
-The resulting control is equivalent to a [`ListBox`](/controls/data-display/collections/listbox) without selection behavior.
+The resulting control displays items similarly as a [`ListBox`](/controls/data-display/collections/listbox), but without selection behavior.
 
 <XamlPreview>
 

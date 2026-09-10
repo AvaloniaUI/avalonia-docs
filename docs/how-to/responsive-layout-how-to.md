@@ -150,42 +150,93 @@ Use `ItemsControl` with a `WrapPanel` as the display panel to create a card grid
 
 <Tabs>
 
-<TabItem value="xaml" label="XAML">
-
-```xml
-<ItemsControl ItemsSource="{Binding Cards}">
-  <ItemsControl.ItemsPanel>
-    <ItemsPanelTemplate>
-      <WrapPanel />
-    </ItemsPanelTemplate>
-  </ItemsControl.ItemsPanel>
-  <ItemsControl.ItemTemplate>
-    <DataTemplate x:DataType="models:CardItem">
-      <Border Background="White"
-              CornerRadius="8"
-              Padding="16"
-              BorderBrush="#E5E7EB"
-              BorderThickness="1">
-        <StackPanel Spacing="8">
-          <TextBlock Text="{Binding Title}"
-                     FontWeight="Bold"
-                     Foreground="Black" />
-          <TextBlock Text="{Binding Description}"
-                     TextWrapping="Wrap"
-                     Foreground="Gray" />
-        </StackPanel>
-      </Border>
-    </DataTemplate>
-  </ItemsControl.ItemTemplate>
-</ItemsControl>
-```
-
-</TabItem>
-
 <TabItem value="preview" label="Preview">
 
 <Image light={ResponsiveCardGrid} maxWidth={400} cornerRadius="true" position="center" alt="Screen recording showing a window changing size. The card arrangement in the window adjusts according to the window's width." />
 <br />
+
+</TabItem>
+
+<TabItem value="main-window" label="MainWindow.axaml">
+
+```xml
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:ResponsiveCardGrid.ViewModels"
+        xmlns:models="using:ResponsiveCardGrid.Models"
+        x:Class="ResponsiveCardGrid.Views.MainWindow"
+        x:DataType="vm:MainViewModel">
+
+  <ItemsControl ItemsSource="{Binding Cards}">
+    <ItemsControl.ItemsPanel>
+      <ItemsPanelTemplate>
+        <WrapPanel />
+      </ItemsPanelTemplate>
+    </ItemsControl.ItemsPanel>
+    <ItemsControl.ItemTemplate>
+      <DataTemplate x:DataType="models:CardItem">
+        <Border Background="White"
+                CornerRadius="8"
+                Padding="16"
+                BorderBrush="#E5E7EB"
+                BorderThickness="1">
+          <StackPanel Spacing="8">
+            <TextBlock Text="{Binding Title}"
+                       FontWeight="Bold"
+                       Foreground="Black" />
+            <TextBlock Text="{Binding Description}"
+                       TextWrapping="Wrap"
+                       Foreground="Gray" />
+          </StackPanel>
+        </Border>
+      </DataTemplate>
+    </ItemsControl.ItemTemplate>
+  </ItemsControl>
+</Window>
+```
+
+</TabItem>
+
+<TabItem value="main-view-model" label="MainViewModel.cs">
+
+```csharp
+using System.Collections.ObjectModel;
+using ResponsiveCardGrid.Models;
+
+namespace ResponsiveCardGrid.ViewModels;
+
+public partial class MainWindowViewModel : ViewModelBase
+{
+    public ObservableCollection<CardItem> Cards { get; } =
+    [
+        new() { Title = "Inbox", Description = "Messages waiting for a reply from the team." },
+        new() { Title = "Drafts", Description = "Unfinished notes you started but never sent." },
+        new() { Title = "Scheduled", Description = "Items queued to go out later this week." },
+        new() { Title = "Archive", Description = "Everything you have filed away for later reference." },
+        new() { Title = "Starred", Description = "Cards you flagged as worth a second look." },
+        new() { Title = "Trash", Description = "Deleted items, kept for thirty days before removal." }
+    ];
+}
+```
+
+</TabItem>
+
+<TabItem value="card-item-model" label="Models/CardItem.cs">
+
+```csharp
+using CommunityToolkit.Mvvm.ComponentModel;
+
+namespace ResponsiveCardGrid.Models;
+
+public partial class CardItem : ObservableObject
+{
+    [ObservableProperty]
+    public partial string Title { get; set; } = string.Empty;
+
+    [ObservableProperty]
+    public partial string Description { get; set; } = string.Empty;
+}
+```
 
 </TabItem>
 
