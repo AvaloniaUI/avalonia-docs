@@ -13,11 +13,13 @@ Values are resolved from highest priority (top) to lowest priority (bottom):
 |---|---|---|
 | **1 (Highest)** | `Animation` | Values applied by active animations. |
 | **2** | `LocalValue` | Values set directly on the object via `SetValue`, XAML attribute, or code. |
-| **3** | `StyleTrigger` | Values applied by style selectors that match a transient condition, such as a pseudo-class (`:pointerover`, `:pressed`, `:focus`). |
+| **3** | `StyleTrigger` | Values applied by style selectors that can start or stop matching at runtime: pseudo-classes (`:pointerover`), style classes (`.primary`), and property checks (`[IsChecked=True]`). |
 | **4** | `Template` | Values set within a control template. |
-| **5** | `Style` | Values applied by style selectors that match the control's type or class. |
+| **5** | `Style` | Values applied by style selectors that always match the control, such as a type selector (`Button`) or a name selector (`#saveButton`). |
 | **6** | `Inherited` | Values inherited from an ancestor element in the visual tree. |
 | **7 (Lowest)** | `Unset` | No value has been set. The property's registered default value is used. |
+
+Avalonia chooses between `Style` and `StyleTrigger` from the selector, not from the setter. A selector that can start or stop matching while the control is alive applies its setters at `StyleTrigger`; a selector whose result is fixed for that control applies them at `Style`. A style class therefore outranks a type selector, in the same way a pseudo-class does. See [Style precedence](/docs/styling/style-precedence) for worked examples.
 
 ## How precedence works
 
