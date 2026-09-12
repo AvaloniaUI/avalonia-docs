@@ -23,12 +23,13 @@ Three controls can host a `FlowDocument`:
 | Control | Purpose | Selection / Copy | Caret | Undo | Overhead |
 |---|---|---|---|---|---|
 | `FlowDocumentScrollViewer` | Read-only display in one continuous column | Yes | No | No | Low |
-| `FlowDocumentPageViewer` | Read-only display as discrete page sheets, the way a word processor's print layout does | Yes | No | No | Low |
+| `FlowDocumentPageViewer` | Read-only display as discrete page sheets | Yes | No | No | Low |
 | `RichTextEditor` | Interactive editing | Yes | Yes | Yes | Higher |
+<br />
 
 Use `FlowDocumentScrollViewer` for help panes, report previews, file browsers, and read-only summaries. It supports text selection and clipboard copy out of the box (powered by the same `TextViewMouse` / `TextViewKeyboard` components used by the editor) but exposes no insertion caret, no editing actions, and no undo manager.
 
-Use `FlowDocumentPageViewer` when the reader should see real pages: print preview, page-faithful review, page navigation and zoom. It derives from `FlowDocumentScrollViewer`, so everything on this page applies to it as well, and it paginates through the same shared break policy that print and PDF export use, so the three agree by construction.
+Use `FlowDocumentPageViewer` when the reader should see real pages: print preview, page-faithful review, page navigation and zoom. It derives from `FlowDocumentScrollViewer`, and it paginates through the same shared break policy that print and PDF export use, so the three agree by construction.
 
 Use `RichTextEditor` with `IsReadOnly="True"` only when you need an insertion caret on otherwise-read-only content (e.g. for placing a cursor without allowing edits). This pulls in the full editing infrastructure (caret element, undo manager, editing components).
 
@@ -90,7 +91,9 @@ viewer.Document = document;
 `LoadAsync` parses on the thread pool, then builds the element tree on the UI thread through an explicit dispatcher call. The returned `FlowDocument` is ready to display immediately.
 
 :::info
-`IDocumentSerializer` is synchronous. `LoadAsync` and `SaveAsync` are thread-offload conveniences, not asynchronous I/O: no format here performs any. The element tree has to be built on the UI thread because a `FlowDocument` and its elements belong to the dispatcher of the thread that constructed them. To stay off the UI thread entirely, read a `DocumentSnapshot` with the serializer and materialize it with `TextDocument.FromSnapshot`, which has no thread affinity.
+`IDocumentSerializer` is synchronous. `LoadAsync` and `SaveAsync` are thread-offload conveniences, but the element tree must still be built on the UI thread because a `FlowDocument` and its elements belong to the dispatcher of the thread that constructed them.
+
+If you need to stay off the UI thread entirely, read a `DocumentSnapshot` with the serializer and materialize it with `TextDocument.FromSnapshot`.
 :::
 
 ### Synchronous loading
@@ -100,7 +103,7 @@ using var stream = File.OpenRead("report.rtf");
 viewer.Document = FlowDocument.Load(stream, new RtfSerializer());
 ```
 
-`Load` parses and builds on the calling thread, so a UI-thread caller pays the whole cost there. Prefer async loading for large files. Both overloads take an optional `CancellationToken`.
+`Load` parses and builds on the calling thread, so async loading is preferred for large files. Both overloads take an optional `CancellationToken`.
 
 ### Choosing a serializer
 
@@ -114,9 +117,10 @@ Pick a serializer based on the file format:
 | `.md` | `MarkdownSerializer` | `Avalonia.Controls.Markdown` | Read and write |
 | `.html` | `HtmlSerializer` | `Avalonia.Controls.Documents.Serialization.Html` | Read only |
 | `.pdf` | `PdfSerializer` | `Avalonia.Controls.Documents.Serialization.Pdf` | Write only |
-| `.txt` | `PlainTextSerializer` | Core (included) | Read and write |
+| `.txt` | `PlainTextSerializer` | Included in `Avalonia.Controls.Documents` (core) | Read and write |
+<br />
 
-Every serializer reports its direction through `CanRead` and `CanWrite`, so a picker can filter the list rather than catch an exception. There is no built-in format registry: each serializer package depends on the core one, so discovery is the application's job. `MarkdownSerializer` accepts any readable stream, so a sniffing loop has to try it last, next to `PlainTextSerializer`.
+Every serializer reports its direction through `CanRead` and `CanWrite`, allowing a format picker to filter the list. There is no built-in format registry, so discovery depends on the application. `MarkdownSerializer` accepts any readable stream, so it is tried last.
 
 A helper method that maps extensions to serializers:
 
@@ -401,8 +405,8 @@ Enable `ShowPageBounds` to render visual indicators at the page boundary. This i
 | `IsSelectionEnabled` | `bool` | Set to `False` to make the viewer a pure display control. The inner view stops being focusable, which matters for a viewer inside an items control. | `true` |
 | `IsCaretVisible` | `bool` | Shows an insertion caret without enabling editing. | `false` |
 | `ShowPageBounds` | `bool` | Draws indicators at the page boundary. | `false` |
-| `ShowPageBreakMarkers` | `bool` | Draws a dashed rule across the top edge of a block carrying `BreakPageBefore`, the way a word processor's draft view does. `PageBreakMarkerBrush` colors it, and is paint only. The paged viewer defaults it off, since it shows the break as a real page boundary. | `true` |
-| `ShowPageBandsInContinuousLayout` | `bool` | Shows the document's running header above the first block and its running footer below the last. It has no effect in the paged viewer, where the bands render on every sheet. | `false` |
+| `ShowPageBreakMarkers` | `bool` | Draws a dashed rule across the top edge of a block carrying `BreakPageBefore`. Can be colored by `PageBreakMarkerBrush`. Defaults `false` in the page viewer. | `true` |
+| `ShowPageBandsInContinuousLayout` | `bool` | Shows the document's running header above the first block and its running footer below the last. No effect in the page viewer. | `false` |
 
 ## Embedding controls
 
@@ -601,9 +605,7 @@ For a true print preview use `FlowDocumentPageViewer`, which lays the document o
                           Padding="40">
     <FlowDocument PageWidth="816" PageHeight="1056" PagePadding="72">
         <!-- US Letter: 8.5 x 11 inches = 816 x 1056 device-independent pixels
-             (96 per inch); 72 DIP padding = 0.75 inch margins. Watch the unit
-             trap: 612 x 792 is Letter in POINTS (1/72 inch), not DIPs.
-             PageSizes.Letter carries the right values in code. -->
+             (96 per inch); 72 DIP padding = 0.75 inch margins. -->
         <Paragraph FontSize="20" FontWeight="Bold">
             <RichRun Text="Quarterly Report" />
         </Paragraph>
@@ -658,7 +660,7 @@ viewer.Document = BuildReport(salesData);
 
 Current limitations of `FlowDocumentScrollViewer`:
 
-| Limitation | Workaround |
+| Limitation | Workaround / Details |
 |---|---|
 | No insertion caret and no editing | Use `RichTextEditor` for editing |
 | No built-in search/find | Implement search against document text and scroll programmatically |
