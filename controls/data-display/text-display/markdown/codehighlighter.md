@@ -43,7 +43,7 @@ If you only need to highlight a handful of popular languages and want to keep de
 
 ## Using `TextMateHighlighter` in XAML
 
-`Markdown.CodeHighlighter` is an attached property, so you set it on the control itself:
+`Markdown.CodeHighlighter` is an attached property. Set it on the control itself:
 
 ```xml
 <Window xmlns="https://github.com/avaloniaui"
@@ -56,7 +56,7 @@ If you only need to highlight a handful of popular languages and want to keep de
 </Window>
 ```
 
-You can switch the theme at runtime by changing the `Theme` property on the highlighter. Every code block using it re-highlights itself.
+You can switch the theme at runtime by changing the `Theme` property on the highlighter. Every code block that uses it re-highlights.
 
 ## Using `ColorCodeHighlighter` in XAML
 
@@ -103,7 +103,7 @@ markdown.CodeHighlighter = highlighter;
 Markdown.SetCodeHighlighter(markdown, highlighter);
 ```
 
-To highlight one block differently from the rest, set `MarkdownCodeBlock.Highlighter` on that element. A value set there wins over the one the control supplies.
+To highlight one block differently from the rest, set `MarkdownCodeBlock.Highlighter` on that element. A value set on one block wins over the value supplied by the control.
 
 ## Specifying languages in code blocks
 
@@ -121,7 +121,7 @@ If you omit the language identifier, the highlighter will render the block as pl
 
 - Code blocks re-render on their own when you change a property of the highlighter they are using, such as `Theme`. A custom highlighter signals this by calling `OnInvalidated`.
 - `Markdown.CodeHighlighter` is an inheriting attached property, so a single instance covers every code block in the control's document without a style. `MarkdownCodeBlock.Highlighter` set on one block overrides it.
-- `MarkdownCodeBlock` extends `Paragraph` and is a full `StyledElement`, so a style selector still reaches it for visual customization such as background, padding and font family.
+- `MarkdownCodeBlock` extends `Paragraph` and is a full `StyledElement`, so a style selector still reaches it for visual customization, such as background, padding and font family.
 
 ## See also
 
