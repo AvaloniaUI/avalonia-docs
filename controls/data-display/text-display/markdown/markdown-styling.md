@@ -36,24 +36,21 @@ The following table lists the style selectors used by the default theme. You can
 | `Paragraph.h4` | Level 4 heading. |
 | `Paragraph.h5` | Level 5 heading. |
 | `Paragraph.h6` | Level 6 heading. |
-| `Section.quoteBlock` | Block quotes. Left border, padding, muted foreground. |
-| `Section.alertBlock` | All alert blocks (NOTE, TIP, IMPORTANT, WARNING, CAUTION). |
-| `Section.alertBlock.note` | Note alert block border. |
-| `Section.alertBlock.tip` | Tip alert block border. |
-| `Section.alertBlock.important` | Important alert block border. |
-| `Section.alertBlock.warning` | Warning alert block border. |
-| `Section.alertBlock.caution` | Caution alert block border. |
-
-:::note
-An alert's kind header ("Note", "Warning") is drawn by the alert block itself rather than being a paragraph in the document, so there is no element to select. Style it through `Section.alertBlock`, whose inherited `FontFamily`, `FontSize` and `Foreground` reach the header and the body together.
-:::
-
+| `Section.quoteBlock` * | Block quotes. Left border, padding, muted foreground. |
+| `Section.alertBlock` * | All alert blocks (NOTE, TIP, IMPORTANT, WARNING, CAUTION). |
+| `Section.alertBlock.note` * | Note alert block border. |
+| `Section.alertBlock.tip` * | Tip alert block border. |
+| `Section.alertBlock.important` * | Important alert block border. |
+| `Section.alertBlock.warning` * | Warning alert block border. |
+| `Section.alertBlock.caution` * | Caution alert block border. |
 | `BlockUIContainer.thematicBreak` | Horizontal rule (thematic break). |
 | `Table` | Table element. Border, cell spacing. |
 | `TableCell` | Table cell element. Border. |
 | `TableRow.tableHeader` | Header row. Bold font weight. |
 | `List` | List element. Left padding, line height. |
 | `ListItem` | List item element. Line height. |
+
+\* Alert block headers (e.g., "Note", "Warning") are drawn by the alert block itself. They are not considered a paragraph in the document, so they cannot be directly selected for styling. Instead, style them through `Section.alertBlock`, whose inherited `FontFamily`, `FontSize` and `Foreground` reach the header and the body together.
 
 #### Inline selectors
 
