@@ -16,7 +16,7 @@ This control is available as part of [Avalonia Pro](https://avaloniaui.net/prici
 
 ## Default behavior
 
-No loader is set by default, so images are not loaded until you supply one. The `MarkdownImageLoader` base class already resolves the `http://`, `https://` and `file://` schemes and returns an `IImage` on success or `null` on failure, so for the common case you assign it directly and write no code:
+No loader is set by default, so images are not loaded until you supply one. The `MarkdownImageLoader` base class resolves the `http://`, `https://` and `file://` schemes, and returns an `IImage` on success or `null` on failure. For most common uses, you assign the loader directly and write no code:
 
 ```xml
 <Markdown Text="![Logo](https://example.com/logo.png)">
@@ -26,7 +26,7 @@ No loader is set by default, so images are not loaded until you supply one. The 
 </Markdown>
 ```
 
-Subclass it when you need a scheme, image format, authentication or caching strategy the base class does not cover.
+Subclass the loader if you need a scheme, image format, authentication or caching strategy the base class does not cover.
 
 ## Example: loading SVG images
 
@@ -134,7 +134,7 @@ public class CustomImageLoader : MarkdownImageLoader
 
 ## Usage
 
-`Markdown.ImageLoader` is an attached property, so you set it on the control itself.
+`Markdown.ImageLoader` is an attached property. Set it on the control itself.
 
 ### XAML
 
@@ -174,7 +174,7 @@ markdown.ImageLoader = loader;
 Markdown.SetImageLoader(markdown, loader);
 ```
 
-To resolve one image differently from the rest, set `MarkdownImage.ImageLoader` on that element. A value set there wins over the one the control supplies.
+To resolve one image differently from the rest, set `MarkdownImage.ImageLoader` on that element. A value set n one image wins over the value supplied by the control.
 
 Image loading is deferred until both the URL (set automatically from the Markdown source) and a loader are available, and assigning a loader later re-resolves images already in the document. This decouples the document model from image resolution.
 
