@@ -20,12 +20,12 @@ This control is available as part of [Avalonia Pro](https://avaloniaui.net/prici
 
 1. **Custom document elements** — new block/inline types
 2. **Custom highlight layers** — find, spell check, annotations
-3. **Custom serialization formats**: your own file format
+3. **Custom serialization formats** — your own file format
 4. **Custom editor components** — new input handlers
-5. **Grouped undo operations**: via `UndoManager.BeginUndoUnit` (custom `IUndoUnit` subclasses are not a public extension point)
+5. **Grouped undo operations** — via `UndoManager.BeginUndoUnit` (custom `IUndoUnit` subclasses are not a public extension point)
 
 :::info
-Subclassing a view is not one of them. `TextViewBase` is abstract and `PagedTextView` is sealed, `TextViewKeyboard` has an internal constructor, and `TextEditorTyping` and `TextEditorSelectionFlyout` are internal. Extend a view with an `ITextViewComponent` or an `IHighlightLayer` instead; where a concrete view is genuinely needed, use `InteractiveTextView`.
+Subclassing a view is not possible, due to sealed or internal elements. Instead, you can extend a view with `ITextViewComponent` or `IHighlightLayer`, or consider using  `InteractiveTextView`.
 :::
 
 ## Custom document elements
@@ -370,7 +370,7 @@ doc.Blocks.Add(callout);
 
 ### Find/replace highlight layer
 
-`HighlightLayerBase` takes only `(string name, int zIndex)`. `AddRegion`, `RemoveRegion`, `ClearRegions` and `OnRegionsChanged` are `protected`, so a subclass exposes them through public wrappers. Each of the first three raises `RegionsChanged` on its own, so a wrapper does not need to call `OnRegionsChanged` afterwards.
+`HighlightLayerBase` takes only `(string name, int zIndex)`. `AddRegion`, `RemoveRegion` are `protected`, so a subclass exposes them through public wrappers. They raise `RegionsChanged` automatically, meaning a wrapper does not need to call `OnRegionsChanged` afterwards.
 
 ```csharp
 using Avalonia.Controls.Documents.Primitives.Highlighting; // HighlightLayerBase, HighlightRegion, HighlightStyle
@@ -410,7 +410,10 @@ public class FindHighlightLayer : HighlightLayerBase
 ```
 
 :::warning
-`HighlightLayerCollection` is sealed, and `Add` throws when a layer's `Name` is already in the collection: that name is the key `GetLayer` looks up, and two layers under one name made the lookup arbitrary. The collection is an `IReadOnlyList<IHighlightLayer>` in Z order, so enumerate it directly; `GetLayers()` is gone. `HighlightLayerBase.RenderRegion` throws for a highlight style it has no renderer for, rather than drawing nothing. `HighlightStyle.Custom` has been removed: it named a callback that never existed. Override `RenderRegion` to draw what the built-in styles cannot express.
+- `HighlightLayerCollection` is sealed.
+- `Add` throws when a layer's `Name` is already in the collection, to ensure the `GetLayer` lookup works.
+- `HighlightLayerBase.RenderRegion` throws for a highlight style it has no renderer for, rather than drawing nothing.
+- `HighlightStyle.Custom` is no longer used. Override `RenderRegion` to draw custom highlights not provided by the built-in styles.
 :::
 
 **Integration:**
@@ -468,12 +471,21 @@ public class SpellCheckHighlightLayer : HighlightLayerBase
 
 ## Custom serialization formats
 
-`IDocumentSerializer` is synchronous. Every implementation provides `Deserialize`, `Serialize`, `CanDeserialize`, and the `FormatName`, `FileExtension`, `MimeType`, `CanRead` and `CanWrite` properties. There is no asynchronous pair: format work is processor-bound and assembles its output in memory, so a `Task`-returning wrapper would occupy a pool thread for the duration of synchronous work while its signature claimed to release one. A caller that wants the cost off its own thread wraps the call in `Task.Run`. `CanRead` and `CanWrite` have no default bodies, so declare both.
+`IDocumentSerializer` is synchronous. Every implementation provides `Deserialize`, `Serialize`, `CanDeserialize`, and the following properties:
+- `FormatName`
+- `FileExtension`
+- `MimeType`
+- `CanRead`
+- `CanWrite`
+
+There is no asynchronous pair: format work is processor-bound and assembles its output in memory. Wrapping a call in `Task.Run` moves the work off the caller's own thread.
+
+`CanRead` and `CanWrite` have no defaults. You must declare both.
 
 ### Writing your own HTML serializer
 
 :::info
-The bundled `HtmlSerializer` in `Avalonia.Controls.Documents.Serialization.Html` is public, but it reads only: `CanWrite` is `false` and `Serialize` throws. The example below writes its own HTML writer, so pick a different class name if you ship it in your own assembly. For output on paper, `PdfSerializer` is the supported route.
+The `HtmlSerializer` in `Avalonia.Controls.Documents.Serialization.Html` reads only. The example below creates a custom HTML serializer that reads and writes.
 :::
 
 ```csharp
@@ -523,9 +535,6 @@ public class MyHtmlSerializer : IDocumentSerializer
         writer.WriteLine("</body></html>");
     }
 
-    // The asynchronous pair is what the interface requires; the synchronous one has
-    // default implementations that block on it. Nothing here performs asynchronous I/O,
-    // so both wrappers just move the work to the thread pool.
     public Task<DocumentSnapshot> DeserializeAsync(
         Stream stream, CancellationToken cancellationToken = default)
         => Task.Run(() => Deserialize(stream, cancellationToken), cancellationToken);
@@ -582,7 +591,7 @@ await using var stream = File.Create("output.html");
 await editor.SaveAsync(stream, serializer);
 ```
 
-There is no format registry to register a serializer with: every serializer package depends on the core one, so a registry there could not reference them back. Discovery is the application's job, and `CanRead` / `CanWrite` / `CanDeserialize` are what a hand-written picker needs.
+There is no format registry to register a serializer with: every serializer package depends on the core, so a registry there could not reference them back. Specify `CanRead` / `CanWrite` / `CanDeserialize` to allow a format picker to discover the serializer.
 
 ## Custom editor components
 
@@ -590,7 +599,7 @@ There is no format registry to register a serializer with: every serializer pack
 
 The `ITextViewComponent` interface allows creating input handler components that integrate with the editor's host infrastructure.
 
-`ITextViewComponent.OnAttach` takes an `IInteractiveTextHost`, the host interface the read-only viewers implement too, not the editor-only `ITextEditorHost`. Cast when you need the editor's own surface.
+`ITextViewComponent.OnAttach` takes an `IInteractiveTextHost`. This is the host interface the read-only viewers implement, not the editor-only `ITextEditorHost`. Cast if you need the editor's own surface.
 
 ```csharp
 using Avalonia.Controls.Documents.Primitives.Components; // ITextViewComponent, TextViewComponentBase
@@ -716,11 +725,17 @@ if (undoManager != null)
 }
 ```
 
-`IUndoUnit` is deliberately minimal: it exposes only `Description`. The `Undo` / `Redo` / merge mechanics live on an internal interface, so user code cannot author a functional undo unit by subclassing. Use `BeginUndoUnit`, or `TextDocument.BeginChange()` when there is no manager in play.
+#### `IUndoUnit`
+
+`IUndoUnit` exposes only the `Description` property, and its undo / redo / merge mechanics are internal. You cannot create a custom undo unit. Use `BeginUndoUnit`, or `TextDocument.BeginChange()` if not using an undo manager.
+
+#### How to turn off recording
 
 To turn recording off, set `TextDocument.UndoManager` to `null`, or keep the instance and its subscribers with `new UndoManager { IsEnabled = false }`. `UndoManager.CanUndo`, `CanRedo` and `StateChanged` are what a UI binds to. The unit stacks themselves are internal.
 
-`SelectionSnapshot.Capture(selection)` builds the snapshot that `BeginUndoUnit` and `IUndoScope.SetSelectionAfter` accept, so a grouped edit can restore the caret it started from.
+#### Restoring the caret
+
+`SelectionSnapshot.Capture(selection)` builds a snapshot that `BeginUndoUnit` and `IUndoScope.SetSelectionAfter` accept, so a grouped edit can restore the caret it started from.
 
 ## Best practices
 
@@ -728,7 +743,7 @@ To turn recording off, set `TextDocument.UndoManager` to `null`, or keep the ins
 
 1. **Implement `ITextViewComponent`** — use the attach/detach lifecycle for proper cleanup and initial-scan support
 2. **Subscribe to input events on `host.UIScope`** — the host itself does not receive input events; only the UIScope does
-3. **Use `RoutingStrategies.Tunnel` for pointer interception**: built-in components like `TextViewMouse` mark events as handled on Bubble; use Tunnel to inspect events first
+3. **Use `RoutingStrategies.Tunnel` for pointer interception** — built-in components like `TextViewMouse` mark events as handled on Bubble; use Tunnel to inspect events first
 4. **Use `ITextView.GetTextPositionFromPoint` for hit-testing** — selection state may be stale (especially during Tunnel); hit-test the click point directly
 5. **Inherit from base classes**: use `HighlightLayerBase`, not raw `IHighlightLayer`; use `TextViewComponentBase` rather than implementing `ITextViewComponent` from scratch
 6. **Handle nulls gracefully** — hosts, UIScope, and TextView can be null during transitions
