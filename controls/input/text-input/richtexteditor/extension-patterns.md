@@ -764,7 +764,7 @@ To turn recording off, set `TextDocument.UndoManager` to `null`, or keep the ins
 
 ## Complete example: Smart link detection
 
-This component detects URLs in the document, highlights them with a blue underline, and supports Ctrl+Click to open links. Key patterns demonstrated:
+This component detects URLs in the document, highlights them with a blue underline, and supports <kbd>Ctrl</kbd>+Click to open links. Key patterns demonstrated:
 
 - **`ITextViewComponent` lifecycle** — scans on attach (existing content) and on every subsequent text or document change
 - **`host.UIScope`** — subscribes to pointer events on the UIScope, not the host itself, because only the UIScope receives input events
