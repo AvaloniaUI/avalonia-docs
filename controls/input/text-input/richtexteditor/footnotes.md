@@ -7,9 +7,9 @@ tags:
  - avalonia enterprise
 ---
 
-A footnote is two things that always travel together: a `RichFootnoteReference` anchor sitting in the text, and a `Footnote` body holding the note. The anchor shows a number, the body shows the same number beside its content, and the two are paired by `NoteId`. Neither stores the number: it is the note's 1-based position among the document's notes, so every edit that moves, adds or deletes an anchor renumbers everything without touching a character of text.
+A footnote is two things that always travel together: a `RichFootnoteReference` anchor sitting in the text, and a `Footnote` body holding the note. The anchor shows a number, the body shows the same number beside its content, and the two are paired by `NoteId`. Neither stores the number, which is instead determined by the note's 1-based position among all of the document's notes. Every edit that moves, adds or deletes an anchor renumbers everything without touching a character of text.
 
-This guide covers inserting notes, editing them, numbering, the anchor-owns-its-note lifecycle, citing one note more than once, how notes render in the continuous and paged views, and what survives a file round trip.
+This guide covers inserting notes, editing them, numbering, the anchor-owns-its-note lifecycle, citing a note more than once, how notes render in the continuous and page views, and what survives a file round trip.
 
 :::info
 This control is available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
@@ -17,7 +17,7 @@ This control is available as part of [Avalonia Pro](https://avaloniaui.net/prici
 
 ## Inserting a footnote
 
-In the editor, `EditorActions.InsertFootnote` is the whole gesture: the anchor replaces the selection the way typing does, an empty note body is created, the anchors renumber, and the caret moves into the new note ready for typing. All of it is one undo unit.
+In the editor, `EditorActions.InsertFootnote` is the whole gesture. The anchor replaces the selection, an empty note body is created, the anchors renumber, and the caret moves into the new note ready for typing. The entire sequence is one undo unit.
 
 ```csharp
 using Avalonia.Controls.Documents.Primitives.Actions;
@@ -27,7 +27,7 @@ if (EditorActions.InsertFootnote.CanExecute(editor))
     EditorActions.InsertFootnote.Execute(editor);
 ```
 
-There is no default key gesture and no built-in toolbar tool for it, so bind the action to a menu item, a `ButtonTool`, or a key of your choosing. `CanExecute` is false while the caret is inside a page band or another note, which is where Word refuses a footnote too.
+There is no default key gesture and no built-in toolbar tool. To allow user access, bind the action to a menu item, a `ButtonTool`, or a key of your choosing. `CanExecute` is `false` while the caret is inside a page band or another note.
 
 In code, the verb is `TextRange.InsertFootnote`. It returns the created note, whose body is a single empty paragraph:
 
@@ -66,13 +66,13 @@ var note = editor.Selection?.InsertFootnote(anchor);
 Footnote? note = document.FindFootnote(anchor);
 ```
 
-It returns `null` for an anchor that belongs to another document or has no note yet. The whole set lives in `FlowDocument.Footnotes` (a `FootnoteCollection`), kept in anchor order, with `Find(int noteId)` for a lookup by id. The text model owns them: `TextDocument.Footnotes` holds the `TextFootnote`s, and a document snapshotted, cloned, serialized or paginated with no element realized carries every note.
+It returns `null` for an anchor that belongs to another document or has no note yet. The whole set lives in `FlowDocument.Footnotes` (a `FootnoteCollection`), kept in anchor order, with `Find(int noteId)` for a lookup by ID. The text model owns its footnotes, holding all instances of `TextFootnote` in `TextDocument.Footnotes`. As a result, a document snapshotted, cloned, serialized or paginated with no element realized carries every note.
 
-`FlowDocument.FootnotesChanged` fires when the set of notes changes, when a note's id or label changes, and when the numbering format changes. It is what a view re-renders on, and what a "document modified" flag can hang off.
+`FlowDocument.FootnotesChanged` fires when the set of notes changes, when a note's ID or label changes, and when the numbering format changes. This event triggers a re-rendering of a view. You can use it as part of a "document modified" flag.
 
 ## Authoring in XAML
 
-`FlowDocument.Footnotes` is a collection property, so notes are declared alongside the body and paired by id:
+`FlowDocument.Footnotes` is a collection property, so notes are declared alongside the body and paired by ID:
 
 ```xml
 <FlowDocument>
@@ -90,7 +90,7 @@ It returns `null` for an anchor that belongs to another document or has no note 
 </FlowDocument>
 ```
 
-The `NoteId` values pair the two; they are never displayed. The numbers the reader sees come from anchor order, so reordering the paragraphs renumbers the notes and reordering the `Footnote` elements does not.
+`NoteId` pairs `RichFootnoteReference` with `Footnote`. The `NoteId` value itself is never displayed. The numbers the reader sees come from anchor order, so reordering paragraphs renumbers the notes, but reordering the `Footnote` elements does not.
 
 ## Editing a note
 
@@ -101,9 +101,11 @@ A note is a document of its own, presented in the view where it renders:
 - `EditorActions.GoToFootnoteReference` goes the other way, leaving the note for the position just after its anchor in the body.
 - Escape returns to the body, which finds its selection where it was left. `EditorActions.ReturnToBody` is the command form for a button.
 
-While the caret is in a note, `RichTextEditor.ActiveDocument` is that note, the `:footnote-editing` pseudo-class is set, a frame in `PageBandFocusBrush` marks the note's container, and `Selection`, the toolbar and the formatting actions all apply to the note. Undo is still one stack shared with the body, and it restores the caret into the document the edit was made in.
+While the caret is in a note, `RichTextEditor.ActiveDocument` is that note. The following conditions apply: (1) the `:footnote-editing` pseudo-class is set, (2) a frame in `PageBandFocusBrush` marks the note's container, and (3) `Selection`, the toolbar and formatting actions apply to the note. 
 
-Because a note is a separate document, a body selection never reaches into it, Ctrl+A in the body selects the body alone, and a character delete never crosses a note's edge.
+Undo is still one stack shared with the body. Executing undo restores the caret into the document in which the edit was made.
+
+Because a note is a separate document, a body selection never reaches into it, <kbd>Ctrl</kbd>+<kbd>A</kbd> in the body selects the body alone, and a character delete never crosses a note's edge.
 
 ## Numbering
 
@@ -116,15 +118,15 @@ Because a note is a separate document, a body selection never reaches into it, C
 | `UpperRoman` | I, II, III |
 | `LowerLatin` | a, b, c, then aa, ab |
 | `UpperLatin` | A, B, C, then AA, AB |
-| `Symbols` | asterisk, dagger, double dagger, section sign, double vertical line, pilcrow; the seventh note starts over with each symbol doubled, the thirteenth tripled |
+| `Symbols` | Asterisk, dagger, double dagger, section sign, double vertical line, pilcrow. The seventh note starts over with each symbol doubled, the thirteenth tripled, etc. |
 
 ```csharp
 document.FootnoteNumberFormat = FootnoteNumberFormat.Symbols;
 ```
 
-Setting it is one undo unit that re-renders every anchor and every note number; because nothing numeric is stored, no text changes. A value set before the document's `TextDocument` exists applies when it is created, and a nested document (a band, a note) ignores its own value and follows the owner's.
+Setting it is one undo unit that re-renders every anchor and every note number; because nothing numeric is stored, no text changes. A value set before the document's `TextDocument` exists applies when it is created, and a nested document (e.g., a band, a note) ignores its own value and follows the owner's.
 
-The anchor's number draws at the superscript scale on the superscript baseline. The note's number follows the numbered-list rule instead: it takes family, size and colour from the note's first run and sits in a strip at the note's left edge that every note of the document shares, wide enough for the document's last ordinal. A theme setter on `Footnote` therefore restyles a note's text and its number together:
+The anchor's number draws at the superscript scale on the superscript baseline. The note's number follows the numbered-list rule instead: it takes family, size and color from the note's first run and sits in a strip at the note's left edge that every note of the document shares, wide enough for the document's last ordinal. A theme setter on `Footnote` therefore restyles a note's text and its number together:
 
 ```xml
 <Style Selector="Footnote">
@@ -133,9 +135,7 @@ The anchor's number draws at the superscript scale on the superscript baseline. 
 </Style>
 ```
 
-## The anchor owns its note
-
-The pairing is a lifecycle, not a convention. Through the element channel:
+## Anchor owns its note
 
 ```csharp
 paragraph.Inlines.Add(anchor);      // creates the paired empty note
@@ -143,12 +143,13 @@ paragraph.Inlines.Remove(anchor);   // the note leaves with the anchor
 otherParagraph.Inlines.Add(anchor); // and comes back, content intact
 ```
 
-A removed anchor parks its note on itself, the same content-preserving contract a detached `RichRun` has for its text, and re-attaching restores the pair, in the same document or in another one, so moving an anchor moves its note. Through text editing the rule is the same: deleting an anchor deletes its note and renumbers the survivors in one undo transaction, and undo brings the same note back with its content. An emptied note survives until its anchor goes.
+If removed, an anchor preserves the content of its note, the same way a detached `RichRun` preserves its text. Reattaching the anchor restores the pair in the same document or another, meaning you can move the whole note by moving the anchor.
 
-Two consequences worth knowing:
+Similarly, deleting an anchor deletes the note along with it. Remaining footnotes are renumbered as part of the same action. Undo brings the same note back along with its content. A note emptied of content survives in the footnote collection unless its anchor is also deleted.
 
-- Copy a range that contains an anchor and the note travels with it. Pasting creates the note under a fresh id when the target document already uses that one.
-- Copy a range without the anchor and there is no note to carry, so an anchor pasted alone is dropped rather than left as a numbered ghost. The same happens to an anchor pasted into a page band or a note body, which never host anchors.
+Copying a range that contains an anchor includes the note in the copy action. Pasting the copied content creates a clone of the note with a fresh ID.
+
+An anchor pasted alone is dropped. It is also dropped if you attempt to paste an anchor into a page band or note body, which cannot host anchors.
 
 ## Citing one note twice
 
@@ -160,29 +161,29 @@ paragraph.Inlines.Add(new RichFootnoteCitation { NoteId = anchor.NoteId });
 
 It renders exactly like the anchor, the same number, resolved from the note's position and stored nowhere, so adding or deleting a note renumbers every citation of it. What differs is ownership:
 
-| | `RichFootnoteReference` | `RichFootnoteCitation` |
+| &nbsp; | `RichFootnoteReference` | `RichFootnoteCitation` |
 |---|---|---|
 | Creates a note when inserted | Yes | No |
 | Deleting it deletes the note | Yes | No |
 | Legal inside a note body | No | Yes |
 | Pasted without its note | Dropped | Dropped |
 
-Citing from inside another note is what the "legal inside a note body" row is for: the citation numbers against the document that owns the notes, not against the note it sits in.
+As indicated by the table above, citing an existing note from inside another note is allowed. If this occurs, the citation numbers against the document that owns the note.
 
 ## How notes render
 
 The note bodies are never blocks of the document, so no block-level style selector reaches them and they never flow with the body text.
 
-**Continuous views** (`FlowDocumentScrollViewer`, and `RichTextEditor` in `DocumentViewMode.Continuous`) show every note of the document as a region below the last block, under a separator rule, one container per note in anchor order. The region appears whenever the document has notes; its height rides in the layout padding, so the scroll extent and scroll anchoring account for it.
+**Continuous layouts** (`FlowDocumentScrollViewer`, and `RichTextEditor` in `DocumentViewMode.Continuous`) show every note of the document as a region below the last block, under a separator rule, one container per note in anchor order. The region appears whenever the document has notes; its height rides in the layout padding, so the scroll extent and scroll anchoring account for it.
 
-**Paged layout** (`FlowDocumentPageViewer`, `RichTextEditor` in `DocumentViewMode.PageLayout`) places each note at the bottom of the page its anchor lands on, Word-style:
+**Paged layouts** (`FlowDocumentPageViewer`, `RichTextEditor` in `DocumentViewMode.PageLayout`) places each note at the bottom of the page its anchor lands on, MS Word-style:
 
-- A line carrying anchors reserves its notes' heights above the page bottom, plus one separator rule per page that books notes.
+- A line carrying anchors reserves its notes' heights above the page bottom, plus one separator rule per page that has notes.
 - A line that no longer fits the reduced height moves to the next page together with its notes, so an anchor and its note always share a page.
-- Editing a note reflows the pages that booked it.
-- A note taller than the page it books places by the empty-page rules and still books.
+- Editing a note reflows the page where it is located.
+- A note taller than the page where it appears is placed by the empty-page rules.
 
-Both are live content: clicking into a note places the caret in the note's document, hit-testing and caret geometry work inside the containers, and `EnsurePositionVisible` reaches a note on an off-screen page or at the end of the flow.
+Clicking into a note places the caret in the note's document. Hit-testing and caret geometry work inside the containers. `EnsurePositionVisible` can reach a note on an offscreen page or at the end of the flow.
 
 ## Round trip
 
@@ -190,28 +191,18 @@ Notes travel as nested snapshots on `DocumentSnapshot.Footnotes`, so `FlowDocume
 
 | Format | Notes |
 |---|---|
-| XAML | Full: bodies, ids, labels and the numbering format |
-| DOCX | Full, as Word footnotes |
-| RTF | Full, as RTF footnote groups |
+| XAML | Full: bodies, IDs, labels and the numbering format |
+| DOCX | Full: as Word footnotes |
+| RTF | Full: as RTF footnote groups |
 | Markdown | Read and write, addressed by name: `[^label]` citations and `[^label]: ...` definitions. See [Markdown serialization](/controls/input/text-input/richtexteditor/markdown-serialization) |
 | PDF | Write only, laid out at the bottom of the anchor's page exactly as the paged view does |
 | Plain text | The anchor writes as nothing, as every embedded object does |
 
-`Footnote.Label` is the note's name in the formats that address notes by name. It is never displayed, and a note created in the editor has none, so the markdown writer then names it by its position. Set it when you want a stable, readable name in the file:
+`note.Label` is the note's name in formats that require one. It is never displayed. A note created in the `RichTextEditor` control does not have have a `Label` by default, and is named by its position when writing the document to another format. If you need a stable, readable name in the output file, you can set the `Label` explicitly:
 
 ```csharp
 note.Label = "constant-currency";
 ```
-
-## Constraints
-
-| Rule | Why |
-|---|---|
-| A page band and a note body never host an anchor | Word's rule; `InsertFootnote` returns null there and a pasted anchor is dropped |
-| A note owns no notes and no page bands of its own | Nesting stops at one level |
-| A note's `Blocks`, `ContentEnd` and every range cover the note body alone | A note is a document, not a region of the body |
-| One anchor per note | Further references are `RichFootnoteCitation`s |
-| `NoteId` is not the displayed number | Ordinals follow anchor order; ids only pair the two halves |
 
 ## See also
 
