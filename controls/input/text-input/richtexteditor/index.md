@@ -32,6 +32,9 @@ dotnet add package Avalonia.Controls.RichTextEditor
 dotnet add package Avalonia.Controls.Documents.Serialization.Rtf     # RTF support
 dotnet add package Avalonia.Controls.Documents.Serialization.Docx    # DOCX (Open XML) support
 dotnet add package Avalonia.Controls.Documents.Serialization.Xaml    # XAML serialization
+dotnet add package Avalonia.Controls.Documents.Serialization.Html    # HTML import (read only)
+dotnet add package Avalonia.Controls.Documents.Serialization.Pdf     # PDF export (write only)
+dotnet add package Avalonia.Controls.Markdown                        # Markdown viewer and serializer
 ```
 
 2. Include your Avalonia license key in the executable project file (`.csproj`). Your license key is available from the [Avalonia portal](https://portal.avaloniaui.net).
@@ -103,9 +106,10 @@ Use this setup to get started with a basic implementation of the rich text edito
           
           var editor = this.FindControl<RichTextEditor>("Editor");
 
-          // Undo/redo is ready to use — the editor creates an UndoManager
-          // automatically when a Document is attached.
-          // To change the limit:
+          // Undo/redo is ready to use: the editor creates an UndoManager
+          // automatically when a Document is attached. UndoManager is the
+          // single sealed implementation, and editor.UndoManager is typed
+          // UndoManager?. To change the limit:
           // editor.UndoLimit = 50;
       }
   }
@@ -137,15 +141,15 @@ If preferred, you can create and edit documents from the code-behind instead of 
 <TabItem value="insert" label="Insert text">
 
   ```csharp
-  var doc = editor.Document?.TextDocument;
-  if (doc != null)
-  { 
-      // Insert at start
-      doc.ContentStart.InsertText("Header: ");
-    
-      // Insert at end
-      doc.ContentEnd.InsertText("\n\nFooter");
-  }
+  // FlowDocument.TextDocument creates the backing store on first read,
+  // so it is never null.
+  var doc = editor.Document.TextDocument;
+
+  // Insert at start
+  doc.ContentStart.InsertText("Header: ");
+
+  // Insert at end
+  doc.ContentEnd.InsertText("\n\nFooter");
   ```
 
 </TabItem>
@@ -153,14 +157,11 @@ If preferred, you can create and edit documents from the code-behind instead of 
 <TabItem value="formatting" label="Format selected text">
 
   ```csharp
-  var doc = editor.Document?.TextDocument;
-  if (doc != null)
-  {
-      var range = new TextRange(doc.ContentStart, doc.ContentStart.GetPositionAtOffset(10));
-      
-      range.ApplyPropertyValue(RichTextElement.ForegroundProperty, Brushes.Red);
-      range.ApplyPropertyValue(RichTextElement.FontSizeProperty, 20.0);
-  }
+  var doc = editor.Document.TextDocument;
+  var range = new TextRange(doc.ContentStart, doc.ContentStart.GetPositionAtOffset(10));
+
+  range.ApplyPropertyValue(RichTextElement.ForegroundProperty, Brushes.Red);
+  range.ApplyPropertyValue(RichTextElement.FontSizeProperty, 20.0);
   ```
 
 </TabItem>
@@ -173,43 +174,54 @@ Load and Save accept an `IDocumentSerializer` instance. Each format lives in its
 ```csharp
 using Avalonia.Controls.Documents.Serialization.Rtf;
 
-// Load RTF (async, preferred)
+// Load RTF, keeping the parse off the UI thread
 await using (var stream = File.OpenRead("document.rtf"))
 {
     await editor.LoadAsync(stream, new RtfSerializer());
 }
 
-// Save RTF (async, preferred)
+// Save RTF, keeping the write off the UI thread
 await using (var stream = File.Create("output.rtf"))
 {
     await editor.SaveAsync(stream, new RtfSerializer());
 }
 ```
 
-Synchronous overloads are also available:
+Synchronous overloads are also available, and run the whole cost on the calling thread:
 
 ```csharp
 editor.Load(stream, new RtfSerializer());
 editor.Save(stream, new RtfSerializer());
 ```
 
+:::info
+`IDocumentSerializer` is synchronous: `Serialize` and `Deserialize` are the whole contract. No format here performs asynchronous I/O, so `LoadAsync` and `SaveAsync` are thread-offload conveniences that wrap the synchronous call in `Task.Run` rather than asynchronous I/O. `LoadAsync` parses on the thread pool and then builds the element tree on the UI thread, because a `FlowDocument` and its elements belong to the dispatcher of the thread that constructed them.
+:::
+
 Available serializers:
 
-| Serializer | Package | Extension |
-|---|---|---|
-| `RtfSerializer` | `Avalonia.Controls.Documents.Serialization.Rtf` | `.rtf` |
-| `DocxSerializer` | `Avalonia.Controls.Documents.Serialization.Docx` | `.docx` |
-| `XamlSerializer` | `Avalonia.Controls.Documents.Serialization.Xaml` | `.xaml` |
-| `PlainTextSerializer` | `Avalonia.Controls.Documents` (core) | `.txt` |
+| Serializer | Package | Extension | Direction |
+|---|---|---|---|
+| `RtfSerializer` | `Avalonia.Controls.Documents.Serialization.Rtf` | `.rtf` | Read and write |
+| `DocxSerializer` | `Avalonia.Controls.Documents.Serialization.Docx` | `.docx` | Read and write |
+| `XamlSerializer` | `Avalonia.Controls.Documents.Serialization.Xaml` | `.xaml` | Read and write |
+| `MarkdownSerializer` | `Avalonia.Controls.Markdown` | `.md` | Read and write |
+| `HtmlSerializer` | `Avalonia.Controls.Documents.Serialization.Html` | `.html` | Read only (`CanWrite` is `false`) |
+| `PdfSerializer` | `Avalonia.Controls.Documents.Serialization.Pdf` | `.pdf` | Write only (`CanRead` is `false`) |
+| `PlainTextSerializer` | `Avalonia.Controls.Documents` (core) | `.txt` | Read and write |
+
+`CanRead` and `CanWrite` report the direction on every serializer, so a format picker can filter the list instead of catching an exception. `PdfSerializer` is the supported route to paper.
 
 ### Loading a document without an editor
 
-`FlowDocument.LoadAsync` creates a document directly from a stream, useful for preview or conversion scenarios:
+`FlowDocument.Load` and `FlowDocument.LoadAsync` create a document directly from a stream, useful for preview or conversion scenarios. Both take an optional `CancellationToken`:
 
 ```csharp
 await using var stream = File.OpenRead("document.rtf");
-var document = await FlowDocument.LoadAsync(stream, new RtfSerializer());
+var document = await FlowDocument.LoadAsync(stream, new RtfSerializer(), cancellationToken);
 ```
+
+To load with no UI thread involved at all, skip the element facade: read a `DocumentSnapshot` with the serializer and materialize it with `TextDocument.FromSnapshot`, which carries the whole document and has no thread affinity.
 
 ## Adding a word counter
 
@@ -224,7 +236,7 @@ editor.ContentChanged += (sender, args) =>
 
 void UpdateWordCount()
 {
-    string? text = editor.Document?.ContentRange?.Text;
+    string? text = editor.Document.ContentRange?.GetText();
     if (text != null)
     {
         int wordCount = text.Split(new[] { ' ', '\n', '\r' }, 
@@ -244,11 +256,14 @@ The highlight color of text selections can be customized by specifying an ARGB v
 
 ## Components
 
-The Avalonia rich text editor consists of three components:
+The Avalonia rich text editor consists of four components:
 
 1. `RichTextEditor`: Interactive editing control that renders a document and allows users to type, select, format, undo/redo, etc.
-2. `FlowDocumentScrollViewer`: Read-only viewer that displays a document without editing capabilities.
-3. `FlowDocument`: Document model that organizes rich text content into [blocks](#block-elements).
+2. `FlowDocumentScrollViewer`: Read-only viewer that displays a document as one continuous column, without editing capabilities.
+3. `FlowDocumentPageViewer`: Read-only viewer that displays a document as discrete page sheets, the way a word processor's print layout does. It derives from `FlowDocumentScrollViewer`.
+4. `FlowDocument`: Document model that organizes rich text content into [blocks](#block-elements).
+
+A document also owns two kinds of nested document, each a `FlowDocument` in its own right: page bands (running headers and footers, in `FlowDocument.PageBands`) and footnotes (in `FlowDocument.Footnotes`). One editor retargets to whichever of them the caret is in; there is no nested `RichTextEditor`.
 
 ### RichTextEditor properties
 
@@ -258,17 +273,23 @@ These properties are used by the `RichTextEditor` component.
 | --- | --- | --- | --- |
 | `AcceptsReturn` | `bool`| Determines whether the editor accepts return key input. | `true` |
 | `AcceptsTab` | `bool` | Determines whether the editor accepts tab key input. | `true` |
-| `CaretBrush` | `IBrush` | Color of the caret (text cursor).| None |
-| `Document` | `FlowDocument` | Selects the document to display and edit. | None |
+| `CaretBrush` | `IBrush?` | Color of the caret (text cursor).| None |
+| `Document` | `FlowDocument` | Selects the document to display and edit. | A new empty `FlowDocument` |
 | `IsReadOnly` | `bool` | Determines whether the editor is read-only. | `false` |
-| `SelectionBrush` | `IBrush` | Color of text selections. | None |
-| `SelectionFlyout` | `EditorSelectionFlyout?` | Mini toolbar shown above a selection. Set to `null` to remove it. | `null` |
-| `ShowSelectionFlyout` | `bool` | Show or hide the selection flyout without replacing it. | `true` |
-| `Toolbar` | `EditorToolbar` | Customizes toolbar design and layout. | `Null` |
+| `PageBandDistance` | `double` | Distance from the sheet edge to a running header or footer. Writes through to the document, which owns the value. | 12.5 mm |
+| `PageGap` | `double` | Gap between page sheets in page layout. | 24 |
+| `PageMargins` | `Thickness?` | Page margins used in page layout. Falls back to the document's `PagePadding`. | `null` |
+| `PageSize` | `Size?` | Page size used in page layout. Falls back to the document's page dimensions, then A4. | `null` |
+| `SelectionBrush` | `IBrush?` | Color of text selections. | None |
+| `SelectionFlyout` | `EditorSelectionFlyout?` | Mini toolbar shown above a selection. Set to `null` to remove it. | `null`; the default theme supplies one |
 | `ShowBlockAdorners` | `bool` | Determines whether block adorner decorations are displayed. | `true` |
+| `ShowPageBandsInContinuousLayout` | `bool` | Shows the running header above the first block and the running footer below the last, in continuous layout. It has no effect in page layout, where the bands render on every sheet. | `false` |
 | `ShowPageBounds` | `bool` | Determines whether page boundary indicators are displayed. | `false` |
+| `ShowSelectionFlyout` | `bool` | Show or hide the selection flyout without replacing it. | `true` |
 | `ShowToolbar` | `bool` | Determines whether the toolbar is visible. | `true` |
+| `Toolbar` | `EditorToolbar?` | Customizes toolbar design and layout. | `null`; the default theme supplies one |
 | `UndoLimit` | `int` | Maximum number of operations to retain for undo actions. | 100 |
+| `ViewMode` | `DocumentViewMode` | `Continuous` for one flowing column, `PageLayout` for discrete page sheets. | `Continuous` |
 
 ### FlowDocument properties
 
@@ -282,11 +303,15 @@ These properties are used by the `FlowDocument` component.
 | `FontStretch` | `FontStretch` | Font stretch for text in the document, e.g., `Normal`, `Condensed`, `Expanded`. | `Normal` |
 | `FontStyle` | `FontStyle` | Font style for text in the document, e.g., `Normal`, `Italic`, `Oblique`. | `Null` |
 | `FontWeight` | `FontWeight` | Font weight for text in the document, e.g., `Normal`, `Bold`. | `Normal` |
+| `FootnoteNumberFormat` | `FootnoteNumberFormat` | Numbering used for footnote anchors, e.g., `Decimal`, `LowerRoman`, `Symbols`. | `Decimal` |
 | `Foreground` | `IBrush` | Color of the document's foreground, as an ARGB value. | `Null` |
+| `PageBandDistance` | `double` | Distance from the sheet edge to a running header or footer. `NaN` means the document declares none and the default applies. | `double.NaN` |
 | `PageHeight` | `double` | Height of the page. | `double.NaN` |
 | `PagePadding` | `Thickness` | Inner spacing between the block's borders and its content. | `Null` |
 | `PageWidth` | `double` | Width of the page. | `double.NaN` |
 | `TextAlignment` | `TextAlignment` | Alignment of text in the document, i.e., `Left`, `Center`, `Right`, `Justify`. | `Null` |
+
+`FlowDocument` also owns two collections of nested documents: `PageBands` (running headers and footers) and `Footnotes`. Both survive a snapshot round trip and join their undo to the owning document's, so they are present whether or not any element is realized.
 
 ## Block elements
 
@@ -299,7 +324,7 @@ Block elements are used by `FlowDocument` to build the document model and organi
 | `List` | Displays a bulleted or numbered list. |
 | `ListItem` | Individual item in a `List`. |
 | `Paragraph` | Basic block element that contains rich text content. |
-| `Section` | Block element that groups other block elements. |
+| `Section` | Block element that groups other block elements. Carries its own `PageWidth`, `PageHeight` and `PagePadding`, so page setup can vary per section. |
 | `Table` | Displays a table. |
 | `TableCell` | Individual cell in a `Table`. |
 | `TableColumn` | A column of cells in a `Table`. |
@@ -313,7 +338,7 @@ Block elements are used by `FlowDocument` to build the document model and organi
 | `Background` | `IBrush` | Color of the block's background, as an ARGB value. | `Null` |
 | `BorderBrush`| `IBrush` | Color of the block's borders, as an ARGB value. | `Null` |
 | `BorderThickness` | `Thickness` | Thickness of the block's borders. | `Null` |
-| `CellSpacing` | `double` | Used by `Table`. The spacing between table cells. | 0 |
+| `BreakPageBefore` | `bool` | Starts the block on a new page in paged layout, print and PDF export. Ctrl+Enter sets it. | `false` |
 | `Child` | `Control` | Used by `BlockUIContainer`. Defines the control to be placed in the block. | `Null` |
 | `ColumnSpan` | `int` | Used by `TableCell`. The number of columns the cell spans. | 1 |
 | `CornerRadius ` | `CornerRadius` | The radius applied to the block's corners. | `Null` |
@@ -325,18 +350,26 @@ Block elements are used by `FlowDocument` to build the document model and organi
 | `FontStyle` | `FontStyle` | Font style for text in the block, e.g., `Normal`, `Italic`, `Oblique`. | `Null` |
 | `FontWeight` | `FontWeight` | Font weight for text in the block, e.g., `Normal`, `Bold`. | `Normal` |
 | `Foreground` | `IBrush` | Color of the block's foreground, as an ARGB value. | `Null` |
+| `Height` | `double` | Used by `TableRow`. Minimum row height. Zero sizes the row to its content. | 0 |
+| `InsideBorderBrush` | `IBrush?` | Used by `Table`. Color of the interior gridlines between cells. | `Null` |
+| `InsideBorderThickness` | `double` | Used by `Table`. Thickness of the interior gridlines between cells. | 0 |
+| `KeepTogether` | `bool` | Keeps the whole block on one page rather than splitting it across a page break. | `false` |
+| `KeepWithNext` | `bool` | Keeps the block on the same page as the block that follows it. | `false` |
 | `LetterSpacing` | `double` | Additional horizontal spacing between characters. The default of 0 indicates normal spacing. | 0 |
 | `LineHeight` | `double` | Height of each line of text in the block. | `double.NaN` |
 | `Margin` | `Thickness` | Outer spacing around the block element. | `Null` |
+| `MarkerAlignment` | `TextAlignment` | Used by `List`. Aligns the marker within its column, `Left` or `Right`. | `Left` |
 | `MarkerOffset` | `double` | Used by `List`. Determines the spacing after a list marker. | `double.NaN` |
 | `MarkerStyle` | `TextMarkerStyle` | Used by `List`. Selects the style of the list marker, e.g., `Disc`, `Decimal`, `LowerLatin`. | `Null` |
 | `Padding` | `Thickness` | Inner spacing between the block's borders and its content. | `Null` |
 | `RowSpan` | `int` | Used by `TableCell`. The number of rows the cell spans. | 1 |
 | `StartIndex` | `int` | Used by `List`. Specifies the starting index for numbered lists. | 1 |
-| `TabStopPositions` | `double` | Positions of tab stops for text in the block. | `double.NaN` |
+| `TabStopPositions` | `IReadOnlyList<double>?` | Positions of tab stops for text in the block. | `Null` |
 | `TextAlignment` | `TextAlignment` | Alignment of text in the block, i.e., `Left`, `Center`, `Right`, `Justify`. | `Null` |
 | `TextDecorations` | `TextDecorations` | Decorative elements applied to text in the block, e.g., `Underline`, `Overline`, `Strikethrough`. |
 | `TextIndent` | `double` | Width of indentation before the first line of text. Negative value can be set to create a handing indent. | `double.NaN` |
+| `VerticalAlignment` | `VerticalAlignment` | Used by `TableCell`. Aligns the cell's content within the row height, `Top`, `Center` or `Bottom`. | `Top` |
+| `WidowControl` | `bool` | Used by `Paragraph`. Keeps at least two lines of the paragraph on each side of a page break. | `true` |
 
 ## Inline elements
 
@@ -345,11 +378,15 @@ Inline elements are used to specify content styles within a block.
 | Element | Description |
 | --- | --- |
 | `RichBold` | Indicates bolded text. Overrides global `FontWeight` property. |
+| `RichFootnoteCitation` | A further citation of a note whose anchor is elsewhere. Paired with a `Footnote` by `NoteId`. |
+| `RichFootnoteReference` | Atomic anchor for a footnote, paired with a `Footnote` in `FlowDocument.Footnotes` by `NoteId`. |
 | `RichHyperlink` | Marks an inline hyperlink. |
+| `RichImage` | Inline image. Content comes from a `RichImageSource`; occupies a single object replacement character. |
 | `RichInline` | Abstract base class for inline elements. |
 | `RichInlineUIContainer` | Wrapper to embed UI elements within text flow. |
 | `RichItalic` | Indicates italicized text. Overrides global `FontStyle` property. |
 | `RichLineBreak` | Forces a line break. |
+| `RichPageNumberField` | Page number field, `CurrentPage` or `PageCount`. Stores no number: the value comes from pagination, so one header band renders a different one per page. |
 | `RichRun`| Basic text run. Allows character-level formatting. Text content is defined by the [`Text` property](#properties-1). |
 | `RichSpan` | Inline element that groups other inline elements. |
 | `RichSubscript` | Indicates subscript text. Sets `BaselineAlignment` property to `Subscript`.  |
@@ -360,11 +397,18 @@ Inline elements are used to specify content styles within a block.
 
 | Property | Type | Used by | Description |
 | --- | --- | --- | --- |
+| `AltText` | `string?` | `RichImage` | Alternative text for the image. |
 | `Child` | `Control` | `RichInlineUIContainer` | Defines the control to be placed in the inline container. |
+| `Height` | `double` | `RichImage` | Display height in device-independent pixels. Unset uses the image's intrinsic height. |
 | `IsVisited` | `bool` | `RichHyperlink` | Whether the hyperlink has been visited. |
-| `NavigateURI` | `Uri` | `RichHyperlink` | The URI to navigate to when hyperlink is clicked. |
+| `Kind` | `PageNumberFieldKind` | `RichPageNumberField` | `CurrentPage` or `PageCount`. |
+| `NavigateUri` | `Uri?` | `RichHyperlink` | The URI to navigate to when hyperlink is clicked. |
+| `NoteId` | `int` | `RichFootnoteReference`, `RichFootnoteCitation` | Pairs the anchor with its `Footnote`. |
+| `Source` | `RichImageSource?` | `RichImage` | The image content. `EmbeddedImageSource`, `DeferredImageSource` or `PixelImageSource`. |
 | `Text` | `string` | `RichRun` | Gets or sets the text content. Reads/writes to the attached `TextDocument`. If unattached, uses local storage. |
-| `Tooltip` | `object` | `RichHyperlink` | Tooltip associated with the hyperlink. |
+| `ToolTip` | `object?` | `RichHyperlink` | Tooltip associated with the hyperlink. |
+| `UnderlineStyle` | `UnderlineStyle?` | All inlines | The underline variant, e.g., `Single`, `Double`, `Dotted`, `Wave`. Inherited. |
+| `Width` | `double` | `RichImage` | Display width in device-independent pixels. Unset uses the image's intrinsic width. |
 
 ### RichHyperlink pseudoclasses
 
@@ -380,14 +424,14 @@ The Avalonia rich text editor separates functions into an eight-layer architectu
 
 | Layer | Name | Description | Key components |
 | --- | --- | --- | --- |
-| 1 | Document model | Core data storage of text context and document hierarchy. Uses a rope data structure for efficient storage and operations. | `TextDocument`, `TextDocumentNode`, `RopeTextStore`, `RopeSnapshot` |
-| 2 | Text pointer API | Position tracking and navigation within documents. | `TextPointer`, `TextRange`, `LogicalDirection` |
-| 3 | Rendering | Visual representation, coordinate mapping, hit testing, line queries. | `ITextView`, `TextViewBase`, `InteractiveTextView`, `ITextLine`, `DocumentNodes` |
-| 4 | Editing | Handles user input from keyboard, mouse, or other devices. | `TextSelection`, `TextEditorTyping`, `TextEditorKeyboard`, `TextEditorMouse`, `CaretElement` |
-| 5 | Highlighting | Visual effects for highlighting, used in selections, annotations, find/replace, etc. | `IHighlightLayer`, `HighlightLayerBase`, `SelectionHighlightLayer` |
-| 6 | Undo/Redo | Stores operation history to allow reversals. | `IUndoManager`, `UndoManager` |
-| 7 | Serialization | Import and export documents in multiple formats (RTF, DOCX, XAML, plain text). | `IDocumentSerializer`, `DocumentSnapshot`, `FlowDocumentBuilder` |
-| 8 | User-facing control | Integration of all layers into a templated Avalonia control. | `RichTextEditor`, `FlowDocument`, `Block` elements, `Inline` elements |
+| 1 | Document model | Core data storage of text context and document hierarchy. Uses a rope data structure for efficient storage and operations. | `TextDocument`, `FlowDocument` |
+| 2 | Text pointer API | Position tracking and navigation within documents. `TextRange` owns positional mutation. | `TextPointer`, `TextRange`, `LogicalDirection` |
+| 3 | Rendering | Visual representation, coordinate mapping, hit testing, line queries. `TextViewBase` is abstract and `PagedTextView` is sealed; extend a view with a component or a highlight layer rather than by subclassing it. | `ITextView`, `TextViewBase`, `InteractiveTextView`, `PagedTextView`, `ITextLine`, `DocumentNode` |
+| 4 | Editing | Handles user input from keyboard, mouse, or other devices. | `TextSelection`, `TextViewKeyboard`, `TextViewMouse`, `TextEditorKeyboard`, `CaretElement` |
+| 5 | Highlighting | Visual effects for highlighting, used in selections, annotations, find/replace, etc. | `IHighlightLayer`, `HighlightLayerBase`, `HighlightLayerCollection`, `SelectionHighlightLayer` |
+| 6 | Undo/Redo | Stores operation history to allow reversals. `UndoManager` is the single sealed implementation; there is no undo interface to substitute. | `UndoManager`, `IUndoUnit`, `IUndoScope`, `SelectionSnapshot` |
+| 7 | Serialization | Import and export documents in multiple formats (RTF, DOCX, XAML, HTML, Markdown, PDF, plain text). Serializers are synchronous and UI-free. | `IDocumentSerializer`, `DocumentSnapshot`, `DocumentSnapshotBuilder` |
+| 8 | User-facing control | Integration of all layers into a templated Avalonia control. | `RichTextEditor`, `FlowDocumentScrollViewer`, `FlowDocumentPageViewer`, `FlowDocument`, block and inline elements |
 
 ## See also
 
@@ -395,4 +439,5 @@ The Avalonia rich text editor separates functions into an eight-layer architectu
 - [Toolbar and Selection Flyouts](/controls/input/text-input/richtexteditor/toolbar) — customizing the toolbar, mini-bar, and context menu
 - [Extension Patterns](/controls/input/text-input/richtexteditor/extension-patterns) — custom nodes, highlight layers, serializers, components
 - [Performance Tuning](/controls/input/text-input/richtexteditor/performance-tuning)
+- [Thread Safety](/controls/input/text-input/richtexteditor/thread-safety)
 - [Troubleshooting](/troubleshooting/controls/richtexteditor)

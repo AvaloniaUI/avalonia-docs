@@ -33,20 +33,21 @@ The toolbar system separates UI presentation from behavioral logic. `EditorToolb
 
 - **`EditorTool`**: the abstract base for any item hosted inside an `EditorToolbar` or `ToolbarGroup`. It carries target-area visibility, overflow metadata, and editor-host discovery.
 - **`ActionTool`**: the abstract base for tools that bind to an `IEditorAction`. Adds `Action`, `Icon`, and `ToolTipText`, and synchronizes `IsEnabled` with `Action.CanExecute(host)`. Most concrete tools (button, toggle, combobox, flyout) derive from this.
-- **`ToolbarGroup`**: itself an `EditorTool`. Hosts its own strongly-typed `Tools` collection of child tools. Groups share visibility status, i.e., they collapse together into the overflow menu if there is insufficient space. Nested `ToolbarGroup` instances are not supported.
-- **`EditorToolbar`**: a `TemplatedControl` that exposes a strongly-typed `Tools` collection (`AvaloniaList<EditorTool>`) marked as the `[Content]` property. Wires items to the editor, propagates `ActiveTargetAreas`, and runs the overflow-collapse layout pass. Items are inserted into a `Panel` named `PART_ItemsHost` in the control template.
+- **`ToolbarGroup`**: itself an `EditorTool`. Hosts its own strongly-typed `Tools` collection of child tools. Groups share visibility status, i.e., they collapse together into the overflow menu if there is insufficient space. Groups can nest, and a nested group contributes its own children to the enclosing top-level group's overflow section rather than collapsing as a unit, because a group carries no overflow menu item to stand in for its children.
+- **`EditorToolbar`**: a `TemplatedControl` that exposes a strongly-typed `Tools` collection (`AvaloniaList<EditorTool>`) marked as the `[Content]` property. Wires items to the editor, pushes the active target areas onto every tool, and runs the overflow-collapse layout pass. Items are inserted into a `Panel` named `PART_ItemsHost` in the control template, published as the constant `EditorToolbar.PartItemsHost`.
 
-Both `EditorToolbar` and `ToolbarGroup` use a `Panel` template part named `PART_ItemsHost`. The default theme uses a `WrapPanel`; the toolbar embedded inside `RichTextEditor` uses a horizontal `StackPanel`. Re-template either control with any panel type to change the layout.
+Both `EditorToolbar` and `ToolbarGroup` use a `Panel` template part named `PART_ItemsHost`. The default theme uses a `WrapPanel`; the toolbar embedded inside `RichTextEditor` uses a horizontal `StackPanel`. Re-template either control with any panel type to change the layout. Every templated toolbar control declares its parts with `[TemplatePart]` and publishes the names as `public const string Part*` members.
 
 ```
 RichTextEditor
   └─ EditorToolbar            (TemplatedControl with [Content] Tools : AvaloniaList<EditorTool>)
-       ├─ ToolbarGroup        (EditorTool with [Content] Tools — collective visibility)
+       ├─ ToolbarGroup        (EditorTool with [Content] Tools, collective visibility)
        │    ├─ ButtonTool     (ActionTool)
        │    ├─ ToggleTool     (ActionTool)
+       │    ├─ ToolbarGroup   (groups may nest)
        │    └─ ...
        ├─ SeparatorTool       (EditorTool, no action surface)
-       └─ OverflowTool        (ActionTool — "..." button, hosts collapsed tools)
+       └─ OverflowTool        (ActionTool, the "..." button that hosts collapsed tools)
 ```
 
 ### Namespaces
@@ -54,8 +55,8 @@ RichTextEditor
 ```csharp
 using Avalonia.Controls.Documents.Primitives.Toolbar; // EditorToolbar, tools, groups
 using Avalonia.Controls.Documents.Primitives.Actions; // EditorActions, IEditorAction
-using Avalonia.Controls.Documents.Primitives.Adorners; // ToolbarTargetAreas
 using Avalonia.Controls.Documents.Primitives; // EditorSelectionFlyout, EditorContextMenu
+using Avalonia.Controls.Documents.Primitives.Adorners; // ToolbarTargetAreas
 ```
 
 All of these types are available in XAML under the default Avalonia namespace (`https://github.com/avaloniaui`).
@@ -73,6 +74,18 @@ If you have existing code that uses the legacy `ItemsControl`-based surface, upd
 
 Implicit XAML child syntax (`<EditorToolbar><ToolbarGroup>…</ToolbarGroup></EditorToolbar>`) is unchanged — children are added to `Tools` via the `[Content]` attribute. Only explicit `<EditorToolbar.Items>` / `<EditorToolbar.ItemsPanel>` element-form usages need renaming. In code, replace `toolbar.Items.Add(...)` with `toolbar.Tools.Add(...)`.
 
+### Changes in 12.3
+
+Nothing here is a compile break: the toolbar API of 12.2.3 is unchanged.
+
+| Change | What it means |
+|---|---|
+| `ToolbarGroup` nests | Adding a group to another group's `Tools` used to throw from a collection-changed handler, which surfaced as an `XamlLoadException` at parse time. Overflow descends the tree. |
+| `EditorToolbar.EditorHost` | Binds the toolbar to an editing host that is not a `RichTextEditor`. `Editor` keeps its `RichTextEditor?` type, and the toolbar drives whichever of the two carries a value. |
+| The toolbar pushes `ActiveTargetAreas` | The value is derived from the selection on every selection and document change and pushed onto the tools, so the per-tool theme setters that used to propagate it are gone. A tool that follows the caret binds `IsVisible` to `IsVisibleForTargetArea`. Both properties are still settable, and a value set from outside lasts until the caret moves. |
+| `ToolbarTargetAreas.CaretAreas` | Names the areas an ordinary caret reaches, and is the default for `EditorTool.TargetAreas`. `All` is unchanged beside it. |
+| Clicking a tool bound to a block property action | Does nothing. It used to throw `NotSupportedException` from an unobserved task, which took the process down. |
+
 ## Default toolbar
 
 The built-in `EditorToolbar`, populated via `RichTextEditor.Toolbar` in the editor's default control theme, contains the following tools, appearing in this order and sorted into these groups.
@@ -85,11 +98,14 @@ The built-in `EditorToolbar`, populated via `RichTextEditor.Toolbar` in the edit
 3. **Font** — Font family, Font size, Foreground color, Background color
 4. **Inline formatting** — Bold, Italic, Underline, Strikethrough, Superscript, Subscript, Link
 5. **Lists** — Bullet list, Numbered list
-6. **Tables** — Insert table
+6. **Insert**: Insert table, Insert image, Header and footer
 7. **Block layout** — Text alignment, Block border
-8. **Overflow** — "..." button that presents collapsed tools when clicked
+8. **Image**: Image size, shown only while the caret is on an image
+9. **Overflow**: "..." button that presents collapsed tools when clicked
 
-Most tools are context-sensitive, meaning they disappear automatically when out of context, e.g., list tools are hidden outside lists, table tools are hidden outside tables. This is done by declaring the [`ToolbarTargetAreas`](#toolbartargetareas) of each tool or group.
+A second `EditorToolbar`, built from the same tool infrastructure, is hosted by the table overlay's actions flyout: the "..." button on a hovered cell and on row and column strip selections. It carries the table structure actions only, in row, column and cell-merge groups.
+
+Most tools are context-sensitive, meaning they disappear automatically when out of context, e.g., list tools are hidden outside lists, table tools are hidden outside tables. This is done by declaring the [`ToolbarTargetAreas`](#documenttargetareas) of each tool or group.
 
 ## Replacing the default toolbar
 
@@ -236,16 +252,20 @@ In practice, you'll rarely need to use either base class directly. The built-in 
 | `ToggleTool` | `ActionTool` | Toggle button | Formatting, e.g., Bold, Italic. |
 | `ListToggleTool` | `ToggleTool` | Split toggle button | List toggles (bullet/numbered) that also reflect the active marker style. |
 | `ComboBoxTool` | `ActionTool` | Combobox | Selection from a list, e.g., font family, font size. |
+| `ColorTool` | `ActionTool` | Abstract base | Shared base for the two color pickers. Its `SelectedColor` is `Color?`, where `null` means no color. |
 | `ColorPickerTool` | `ColorTool` | Split button + Avalonia `ColorPicker` flyout | Pick an arbitrary color, e.g., foreground color, background color. |
 | `ColorSwatchTool` | `ColorTool` | Split button + swatch palette flyout | Pick from a fixed palette. |
-| `AlignmentFlyoutTool` | `ActionTool` | Button with flyout | Text alignment—Left, Right, Center, Justify. |
+| `AlignmentFlyoutTool` | `ActionTool` | Button with flyout | Text alignment: Left, Right, Center, Justify. |
 | `HyperlinkFlyoutTool` | `ActionTool` | Button with flyout | Insert/edit hyperlinks. |
+| `ImageFlyoutTool` | `ActionTool` | Button with flyout | Insert and resize an inline image. |
+| `ImageLinkFlyoutTool` | `ActionTool` | Button with flyout | Attach or clear a hyperlink on the selected image. |
+| `PageBandFlyoutTool` | `ActionTool` | Button with flyout | Header and footer tools in one flyout: enter or remove either band, the first-page and odd-and-even switches, link-to-previous, the page-number and page-count fields, the band distance, and the way back to the body. |
 | `TablePickerTool` | `ActionTool` | Grid picker | Insert a table by sizing a grid. |
 | `BorderFlyoutTool` | `ActionTool` | Button with flyout | Block border configuration, e.g., sides, thickness, color. |
 | `OverflowTool` | `ActionTool` | "..." button with flyout | Menu flyout that presents collapsed tools. |
 | `SeparatorTool` | `EditorTool` | Vertical rule | Visual divider. |
 
-Bullet- and numbered-list marker styles are exposed in the default theme via `ButtonTool` instances paired with a `PropertyMenuItem` overflow representation that drives `EditorActions.BulletMarkerStyle` / `EditorActions.NumberedMarkerStyle` — there is no dedicated `BulletMarkerFlyoutTool` / `NumberedMarkerFlyoutTool`.
+List marker styles are reached through `ListToggleTool`, which the default selection mini-bar uses. Outside a list it behaves as a plain toggle; inside a matching list it becomes a split button whose secondary half opens the marker options for that list type, driving `EditorActions.BulletMarkerStyle` and `EditorActions.NumberedMarkerStyle`. The main toolbar uses plain `ToggleTool`s for the two list toggles, so marker style is not exposed there by default.
 
 ### Core properties
 
@@ -253,7 +273,9 @@ Bullet- and numbered-list marker styles are exposed in the default theme via `Bu
 
 | Property | Type | Description |
 |---|---|---|
-| `TargetAreas` | `ToolbarTargetAreas` | Contexts in which this tool should appear. See [ToolbarTargetAreas](#toolbartargetareas). |
+| `TargetAreas` | `ToolbarTargetAreas` | Contexts in which this tool should appear. Defaults to `CaretAreas`. See [ToolbarTargetAreas](#documenttargetareas). |
+| `ActiveTargetAreas` | `ToolbarTargetAreas` | Read-only. The areas the caret is currently in, pushed here by the host toolbar as the selection moves. |
+| `IsVisibleForTargetArea` | `bool` | Read-only. Whether `TargetAreas` matches `ActiveTargetAreas`. |
 | `OverflowMenuItem` | `MenuItem?` | Menu item shown when this tool is collapsed into the overflow menu. `null` means the tool cannot be collapsed. |
 | `CanCollapseOverride` | `bool?` | Explicit override for overflow collapse. |
 
@@ -264,6 +286,16 @@ Bullet- and numbered-list marker styles are exposed in the default theme via `Bu
 | `Action` | `IEditorAction?` | The action this tool executes. |
 | `Icon` | `object?` | Display icon for the tool. |
 | `ToolTipText` | `string?` | Text displayed as tooltip on hover. Defaults to `Action.DisplayName` if unset. |
+
+`EditorToolbar` itself carries:
+
+| Property | Type | Description |
+|---|---|---|
+| `Editor` | `ITextEditorHost?` | The host this toolbar drives. Reassign it to retarget the toolbar at runtime. |
+| `Tools` | `AvaloniaList<EditorTool>` | The `[Content]` collection of toolbar items. |
+| `ActiveTargetAreas` | `ToolbarTargetAreas` | Read-only. Derived from the selection and pushed onto every tool. |
+| `ShowShortcuts` | `bool` | Whether tooltips display the action's keyboard gesture. |
+| `ToolSpacing` | `double` | Uniform spacing between items in the toolbar panel. `ToolbarGroup` has one of its own for its children. |
 
 ### XAML usage
 
@@ -311,7 +343,7 @@ In both cases:
 <Image light={WordCountTool} position="center" cornerRadius="true" alt="A custom word count tool docked at the end of the toolbar, displaying the current word count."/>
 <br />
 
-The word count display is a passive widget — it doesn't execute an action — so it derives from `EditorTool` directly.
+The word count display is a passive widget, it doesn't execute an action, so it derives from `EditorTool` directly. `UpdateState` lives on `ActionTool`, so a passive tool refreshes itself by subscribing to the host's own events in `OnEditorHostAttached` and unsubscribing in `OnEditorHostDetached`.
 
 The implementation counts words by walking the document's `DocumentSnapshot`. Enumerating `Run` nodes and treating block boundaries and line breaks as word separators avoids allocating a full plain-text string and avoids merging the last word of one paragraph with the first word of the next.
 
@@ -338,14 +370,28 @@ public class WordCountTool : EditorTool
     protected override void OnEditorHostAttached()
     {
         base.OnEditorHostAttached();
+
+        if (EditorHost is { } host)
+        {
+            host.ContentChanged += OnHostChanged;
+            host.DocumentChanged += OnHostChanged;
+        }
+
         Refresh();
     }
 
-    protected override void UpdateState()
+    protected override void OnEditorHostDetached()
     {
-        base.UpdateState();
-        Refresh();
+        if (EditorHost is { } host)
+        {
+            host.ContentChanged -= OnHostChanged;
+            host.DocumentChanged -= OnHostChanged;
+        }
+
+        base.OnEditorHostDetached();
     }
+
+    private void OnHostChanged(object? sender, EventArgs e) => Refresh();
 
     private void Refresh()
     {
@@ -452,7 +498,34 @@ await EditorActions.Paste.ExecuteAsync(editorHost);
 // Property actions get and set typed values
 EditorActions.FontSize.SetValue(editorHost, 16.0);
 var current = EditorActions.FontSize.GetValue(editorHost);
+
+// Toggles report their checked state
+bool isBold = EditorActions.Bold.IsChecked(editorHost);
 ```
+
+:::info
+The `EditorActions` singletons are the supported way to reference a built-in action. The concrete action classes behind them (`BoldAction` and the rest) are internal: none declared a member the interfaces do not, and constructing a second instance produced a duplicate `Id` that `GetById` would never return. `InsertImageAction` and `InsertTableAction` remain public, because each carries a parameterised entry point (`ExecuteWith`) beyond the interfaces. Writing an action of your own is unaffected: `IEditorAction`, `IToggleAction`, `IPropertyAction`, `IPropertyAction<T>`, `IBlockPropertyAction`, `IBlockPropertyAction<T>`, `EditorAction`, `FormattingToggleAction<T>`, `PropertyAction<T>` and `BlockPropertyAction<T>` are all public.
+:::
+
+### Reading action state
+
+Every singleton is declared as `IEditorAction`. Cast to the interface that carries the state you want.
+
+| Actions | Interface | State accessor |
+|---|---|---|
+| `Bold`, `Italic`, `Underline`, `Strikethrough`, `Superscript`, `Subscript`, `BlockBorder`, `AlignLeft`, `AlignCenter`, `AlignRight`, `AlignJustify`, `ToggleBulletList`, `ToggleNumberedList`, `DifferentFirstPage`, `DifferentOddAndEvenPages`, `LinkToPrevious` | `IToggleAction` | `IsChecked(host)` |
+| `FontFamily` | `IPropertyAction<FontFamily>` | `GetValue(host)`, `SetValue(host, value)`, `ClearValue(host)` |
+| `FontSize` | `IPropertyAction<double>` | same |
+| `ForegroundColor`, `BackgroundColor` | `IPropertyAction<IBrush?>` | same |
+| `LineHeight` | `IBlockPropertyAction<double>` | same, plus `HasConsistentValue(host)` |
+| `Margin`, `Padding`, `BorderThickness` | `IBlockPropertyAction<Thickness>` | same |
+| `BlockBackground`, `BorderBrush` | `IBlockPropertyAction<IBrush?>` | same |
+| `BulletMarkerStyle`, `NumberedMarkerStyle` | `IBlockPropertyAction<TextMarkerStyle>` | same |
+| `TextAlignmentAction` | `IBlockPropertyAction<TextAlignment>` | same |
+| `InsertImage` | `InsertImageAction` | `ExecuteWith(host, ...)` |
+| `InsertTable` | `InsertTableAction` | `ExecuteWithSize(host, rowCount, columnCount)` |
+
+`IBlockPropertyAction<T>` derives from `IPropertyAction<T>`, so its value members are inherited rather than redeclared. `IEditorAction.GetState(host)` returns the same value untyped; it is kept for compatibility and says nothing about which family the value came from. Invoking a block property action with no value does nothing; `SetValue` is how a block property is applied.
 
 The following actions are built in.
 
@@ -465,6 +538,7 @@ The following actions are built in.
 | `Cut` | Ctrl+X | Cut the current selection to the clipboard. |
 | `Copy` | Ctrl+C | Copy the current selection to the clipboard. |
 | `Paste` | Ctrl+V | Paste clipboard contents at the caret. |
+| `PasteUnformatted` | N/A | Paste clipboard contents as plain text. |
 | `SelectAll` | Ctrl+A | Select all content. |
 
 ### Text formatting
@@ -491,6 +565,7 @@ The following actions are built in.
 
 | Action | Description |
 |---|---|
+| `TextAlignmentAction` | Get or set block alignment as a value. |
 | `AlignLeft` | Left-align the blocks. |
 | `AlignCenter` | Center-align the blocks. |
 | `AlignRight` | Right-align the blocks. |
@@ -528,20 +603,56 @@ The following actions are built in.
 | `InsertColumnBefore` | Insert a column to the left of the current column. |
 | `InsertColumnAfter` | Insert a column to the right of the current column. |
 | `DeleteColumn` | Delete the current column. |
+| `MergeCells` | Merge the selected cells into one. |
+| `SplitCell` | Split the current merged cell. |
 | `DeleteTable` | Delete the entire table. |
+
+### Images
+
+| Action | Description |
+|---|---|
+| `InsertImage` | Insert an inline image at the caret. `ExecuteWith` takes the image data directly. |
+| `ReplaceImage` | Replace the selected image. |
+| `DeleteImage` | Delete the selected image. |
+
+### Headers and footers
+
+| Action | Description |
+|---|---|
+| `GoToHeader` | Enter the header of the caret's page, creating the running header when the page shows none. |
+| `GoToFooter` | Enter the footer of the caret's page, creating the running footer when the page shows none. |
+| `RemoveHeader` | Remove the header the caret is in, or the one the caret's page shows. |
+| `RemoveFooter` | Remove the corresponding footer. |
+| `DifferentFirstPage` | Toggle a separate header and footer on the first page. |
+| `DifferentOddAndEvenPages` | Toggle separate odd-page and even-page bands. |
+| `LinkToPrevious` | Toggle whether the caret's section inherits the previous section's bands. |
+| `InsertPageNumber` | Insert a current-page field. |
+| `InsertPageCount` | Insert a page-count field. |
+| `ReturnToBody` | Leave the band and return the caret to the body. |
+
+### Footnotes
+
+| Action | Description |
+|---|---|
+| `InsertFootnote` | Insert a footnote anchor at the caret and open the note. |
+| `GoToFootnote` | Move the caret from an anchor into its note. |
+| `GoToFootnoteReference` | Move the caret from a note back to its anchor. |
 
 ### Lookup by ID
 
-Action IDs follow the pattern `"Category.Name"` (e.g., `"Format.Bold"`, `"Table.InsertRowAfter"`). Use `GetById` to resolve an action at runtime.
+Action IDs follow the pattern `"Category.Name"` (e.g., `"Format.Bold"`, `"Table.InsertRowAfter"`). `EditorActionIds` names the ID of every built-in action as a `public const string`, so a lookup is written against a constant rather than a literal.
 
 ```csharp
-var action = EditorActions.GetById("Format.Bold");
+var action = EditorActions.GetById(EditorActionIds.Bold);
 action?.Execute(editorHost);
 
-// Enumerate every built-in action
+// Enumerate every built-in action. All is an IReadOnlyList in a stable
+// order: declaration order, grouped by category.
 foreach (var a in EditorActions.All)
-    Console.WriteLine($"{a.Id} — {a.DisplayName}");
+    Console.WriteLine($"{a.Id}: {a.DisplayName}");
 ```
+
+An action's `Gesture` is what tooltips and menu items display. It registers nothing: the shortcut that actually fires is handled by the editor's keyboard component, so an action whose gesture differs from the one the editor handles advertises a shortcut that does nothing.
 
 ### Springload behavior
 
@@ -549,11 +660,30 @@ When the selection is empty, toggle and property actions set a _springload_, mea
 
 ## ToolbarGroup
 
-`ToolbarGroup` groups a set of related tools to share collective visibility. If the group's `TargetAreas` don't match the current caret context, the entire group is hidden. Additionally, the entire group [overflows](#managing-the-overflow-menu) together if the layout changes.
+`ToolbarGroup` groups a set of related tools to share collective visibility. If the group's `TargetAreas` don't match the current caret context, the entire group is hidden.
+
+### Nesting groups
+
+Groups can nest: a `ToolbarGroup` is an `EditorTool`, so it can sit in another group's `Tools`. Nesting is how a sub-group gets its own `TargetAreas` or `ToolSpacing` inside a wider group.
+
+Overflow descends the whole tree, and a nested group contributes its own children to the enclosing top-level group's menu section rather than collapsing as a unit. A group carries no `OverflowMenuItem`, so collapsing one would take its tools off the bar with nothing to stand in for them. Setting `CanCollapseOverride="False"` on a nested group pins its children in place.
+
+```xml
+<ToolbarGroup Classes="AreaAware" TargetAreas="Text">
+  <ToggleTool Action="{x:Static EditorActions.Bold}" />
+  <ToggleTool Action="{x:Static EditorActions.Italic}" />
+
+  <!-- Only while the caret is on an image -->
+  <ToolbarGroup Classes="AreaAware" TargetAreas="Image">
+    <ImageFlyoutTool />
+    <ImageLinkFlyoutTool />
+  </ToolbarGroup>
+</ToolbarGroup>
+```
 
 ### Applying the `AreaAware` class
 
-`ToolbarGroup` does not react to the editor's active context by default. To enable contextual awareness, add the `AreaAware` class. If unset, `AreaAware` defaults to `All`, and the group is always visible.
+`ToolbarGroup` does not react to the editor's active context by default. To enable contextual awareness, add the `AreaAware` class. `TargetAreas` defaults to `CaretAreas`, so an `AreaAware` group with no `TargetAreas` of its own is visible wherever the caret can go.
 
 <Image light={AreaAware} position="center" maxWidth={250} cornerRadius="true" alt="Animation showing toolbar groups appearing and disappearing as the caret moves between body text, a list, and a table."/>
 <br />
@@ -581,15 +711,26 @@ When the selection is empty, toggle and property actions set a _springload_, mea
 
 ## ToolbarTargetAreas
 
-`ToolbarTargetAreas` is a `[Flags]` enum describing the editing contexts in which a tool or group should be visible. `EditorToolbar` detects the active context on every selection change and propagates them to `AreaAware` children.
+`ToolbarTargetAreas` is a `[Flags]` enum in `Avalonia.Controls.Documents.Primitives` describing the contexts in which a tool, a menu entry or a block adorner applies. `EditorToolbar` derives the active areas from the selection on every selection and document change and pushes them onto every tool.
 
 | Flag | Caret context |
 |---|---|
+| `None` | No target area. |
 | `Text` | The caret is in any text-editable position. |
 | `Block` | The caret is in a block-level context. |
 | `Table` | The caret is in a table. |
 | `List` | The caret is in a list. |
-| `All` | Always visible. (Default) |
+| `Image` | The caret is on an inline image. |
+| `TableCells` | The selection is a set of whole table cells. Driven by the selection shape rather than the caret's ancestry. |
+| `PageBand` | The caret is in a header or footer. A band is text too, so tools targeting the text areas stay available there. |
+| `Footnote` | The caret is in a footnote's document. |
+| `CaretAreas` | The caret-derived areas: `Text`, `Block`, `Table`, `List` and `Image`. The default for `EditorTool.TargetAreas`. |
+
+`CaretAreas` is deliberately not every flag. `TableCells`, `PageBand` and `Footnote` are opted into by name, so a tool that lists one of them alone appears only in that context.
+
+:::info
+`CaretAreas` is new beside `All`, which is unchanged. Both are combinations of the flags below, so existing XAML such as `TargetAreas="Text,List"` or `TargetAreas="All"` still binds.
+:::
 
 If required, you can combine `ToolbarTargetAreas` to make a tool visible in multiple contexts.
 
@@ -600,6 +741,8 @@ If required, you can combine `ToolbarTargetAreas` to make a tool visible in mult
 ## Managing the overflow menu
 
 The overflow menu is the "..." button at the end of the toolbar. When the toolbar runs out of horizontal space, `EditorToolbar` collapses tools into this menu, starting from right to left by default.
+
+Collection descends the whole tool tree. A nested `ToolbarGroup` contributes its own children rather than itself, and the menu reads in the same sequence the tools appear on the bar. A tool that is hidden by its target areas is skipped.
 
 ### Rules for what collapses
 
@@ -692,11 +835,13 @@ When the user selects text, a compact floating toolbar appears near the selectio
 
 The default mini-bar includes:
 
-- **Inline formatting**: Bold, Italic, Underline, Strikethrough, Link
-- **List toggles**: Bullet, Numbered
-- **Block configuration**: Background color, Borders, Text alignment
+- **Inline formatting** (`Text`): Bold, Italic, Underline, Strikethrough, Text color, Highlight color
+- **List toggles** (`Text`, `List`): Bullet, Numbered, each a `ListToggleTool` whose split half offers marker styles
+- **Block configuration**: Block background, Borders, Text alignment
+- **Table cell operations** (`TableCells`): Merge cells, Split cell, Delete row, Delete column
+- **Image actions** (`Image`): Align left/center/right, Image size, Replace image, Add or edit link, Delete image
 
-The mini-bar anchors to the block containing the selection, rather than the pointer.
+The mini-bar anchors to the block containing the selection, rather than the pointer. Each group declares its own `TargetAreas`, so the cell and image groups appear only for those selections.
 
 ## Replacing the default mini-bar
 
@@ -766,9 +911,11 @@ The default context menu contains:
 
 - Cut, Copy, Paste
 - Select All
-- Table operations (Insert/Delete row, Insert/Delete column, Delete table) — visible only when the caret is inside a table.
+- Table operations (Insert/Delete row, Insert/Delete column, Merge cells, Split cell, Delete table), visible only when the caret is inside a table
+- Image operations (Replace image, Delete image), visible only on an image
+- Page band operations (Insert page number, Insert page count, Return to body), visible only inside a header or footer
 
-`EditorContextMenu` can read `TargetAreas` on each `EditorMenuItem` in order to hide items that don't apply to the current context. Unused separator lines left by hidden groups are also hidden automatically.
+`EditorContextMenu` reads `TargetAreas` on each `EditorMenuItem` in order to hide items that don't apply to the current context. Unused separator lines left by hidden groups are also hidden automatically. Right-clicking moves the caret to the pressed position first (a press inside the current selection keeps the selection), so the menu opens with the context under the pointer rather than a stale one.
 
 ## Replacing the context menu
 

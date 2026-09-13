@@ -15,39 +15,68 @@ This control is available as part of [Avalonia Pro](https://avaloniaui.net/prici
 
 For reference information on this control, see the [RichTextEditor](/controls/input/text-input/richtexteditor) page.
 
-## Document is null
+## A viewer shows nothing
 
-Ensure you have set the `FlowDocument` to be accessed by the editor.
+`FlowDocumentScrollViewer.Document` and `FlowDocumentPageViewer.Document` start out null, so a viewer with no document assigned renders an empty surface rather than reporting a problem.
 
 ```csharp
-if (editor.Document == null)
+viewer.Document = new FlowDocument
 {
-    editor.Document = new FlowDocument();
-}
+    Blocks = { new Paragraph { Inlines = { new RichRun("Hello") } } }
+};
 ```
 
-## Undo does not work
+`RichTextEditor.Document` behaves differently: the editor creates an empty `FlowDocument` for itself, so it is never null unless you assign null over it.
 
-Ensure you have created an `UndoManager` in your code-behind.
+## Undo does nothing
+
+The editor creates an `UndoManager` for you when a document is attached, so there is nothing to install. `RichTextEditor.UndoManager` is read-only and reports the one in use.
+
+Two things do switch undo off:
 
 ```csharp
-editor.Document.TextDocument.UndoManager = new UndoManager();
+// Recording is disabled
+editor.UndoManager!.IsEnabled = false;
+
+// Or the history is too short to hold the edit
+editor.UndoLimit = 0;
 ```
 
-## Edits do not appear in the editor
+A document you built yourself and assigned to `TextDocument.UndoManager` is used as-is; the editor adopts an existing manager rather than replacing it.
 
-Try wrapping multiple operations as a batch edit.
+## Edits do not appear
+
+Group several operations into one change so the view updates once and undo treats them as a single step. `BeginChange` returns an `IDisposable`, so the scope ends with the `using` block.
 
 ```csharp
-doc.BeginChange();
-try
+using (document.TextDocument.BeginChange())
 {
     // Your edits
 }
-finally
+```
+
+## A document loaded on a background thread throws on first use
+
+A `FlowDocument` and its elements bind to the dispatcher of the thread that constructs them, so a document assembled on a pool thread throws `InvalidOperationException` the first time the UI thread reads a property from it.
+
+`FlowDocument.LoadAsync` handles this: it parses off the calling thread and then builds the element tree through the UI thread dispatcher.
+
+To stay off the UI thread entirely, work with the model rather than the facade. `TextDocument` is not thread-bound:
+
+```csharp
+var snapshot = serializer.Deserialize(stream);
+var document = TextDocument.FromSnapshot(snapshot);
+```
+
+## Text in an exported PDF is unreadable
+
+A font whose OS/2 `fsType` forbids embedding cannot be embedded, so the export substitutes one. Ask the exporter what it did rather than guessing:
+
+```csharp
+var options = new PdfSerializerOptions
 {
-    doc.EndChange();
-}
+    Diagnostics = d => Console.WriteLine($"{d.Kind}: {d.Message}")
+};
 ```
 
 ## Debugging threading issues
@@ -64,15 +93,14 @@ Dispatcher.UIThread.VerifyAccess();
 ### Common exceptions
 
 **InvalidOperationException**: "The calling thread cannot access this object because a different thread owns it."
-- **Cause**: Accessing UI thread object from background thread
-- **Fix**: Use `Dispatcher.UIThread.InvokeAsync()`
+- **Cause**: a `FlowDocument` or an element was constructed on one thread and read from another
+- **Fix**: build the facade on the UI thread, or work with `TextDocument` and `DocumentSnapshot`, which are not thread-bound
 
-**NullReferenceException** when accessing `Element`
-- **Cause**: Weak reference collected or background thread access
-- **Fix**: Check null and ensure UI thread
-
-## I need help with something else
+**InvalidOperationException** from a serializer during editing
+- **Cause**: serializing a live document while it is being edited
+- **Fix**: capture a `DocumentSnapshot` on the UI thread first, then serialize the snapshot from wherever you like
 
 ## See also
 
 - [RichTextEditor control](/controls/input/text-input/richtexteditor)
+- [Thread safety](/controls/input/text-input/richtexteditor/thread-safety)
