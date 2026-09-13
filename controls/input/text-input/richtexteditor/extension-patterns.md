@@ -745,7 +745,7 @@ To turn recording off, set `TextDocument.UndoManager` to `null`, or keep the ins
 2. **Subscribe to input events on `host.UIScope`** — the host itself does not receive input events; only the UIScope does
 3. **Use `RoutingStrategies.Tunnel` for pointer interception** — built-in components like `TextViewMouse` mark events as handled on Bubble; use Tunnel to inspect events first
 4. **Use `ITextView.GetTextPositionFromPoint` for hit-testing** — selection state may be stale (especially during Tunnel); hit-test the click point directly
-5. **Inherit from base classes**: use `HighlightLayerBase`, not raw `IHighlightLayer`; use `TextViewComponentBase` rather than implementing `ITextViewComponent` from scratch
+5. **Inherit from base classes** — use `HighlightLayerBase`, not raw `IHighlightLayer`; use `TextViewComponentBase` rather than implementing `ITextViewComponent` from scratch
 6. **Handle nulls gracefully** — hosts, UIScope, and TextView can be null during transitions
 7. **Write unit tests** — test extensions thoroughly
 8. **Use async for long operations** — don't block the UI thread
@@ -754,13 +754,13 @@ To turn recording off, set `TextDocument.UndoManager` to `null`, or keep the ins
 
 1. **Don't subscribe to events on the host/editor directly** — use `host.UIScope` via `AddHandler`/`RemoveHandler`
 2. **Don't rely on selection state in pointer handlers** — hit-test the point instead; selection hasn't been updated yet during the Tunnel phase
-3. **Don't subclass a view**: `TextViewBase` is abstract, `PagedTextView` is sealed, and `TextViewKeyboard`'s constructor is internal. Intercept input with an `ITextViewComponent`
-4. **Don't access internals**: use public APIs only
-5. **Don't hold strong document references**: causes memory leaks
-6. **Don't block UI thread**: use async for CPU/IO work
-7. **Don't assume document structure**: validate before accessing
-8. **Don't bypass undo system**: always record undoable operations
-9. **Don't forget to detach**: clean up event handlers
+3. **Don't subclass a view** — `TextViewBase` is abstract, `PagedTextView` is sealed, and the constructor of `TextViewKeyboard` is internal.
+4. **Don't access internals** — use public APIs only
+5. **Don't hold strong document references** — these cause memory leaks
+6. **Don't block the UI thread** — use async for CPU/IO work
+7. **Don't assume document structure** — validate before accessing
+8. **Don't bypass undo system** — always record undoable operations
+9. **Don't forget to detach** — clean up event handlers
 
 ## Complete example: Smart link detection
 
@@ -768,7 +768,7 @@ This component detects URLs in the document, highlights them with a blue underli
 
 - **`ITextViewComponent` lifecycle** — scans on attach (existing content) and on every subsequent text or document change
 - **`host.UIScope`** — subscribes to pointer events on the UIScope, not the host itself, because only the UIScope receives input events
-- **`RoutingStrategies.Tunnel`**: subscribes in the Tunnel phase so the handler fires before `TextViewMouse` marks the event as handled in the Bubble phase
+- **`RoutingStrategies.Tunnel`** — subscribes in the Tunnel phase so the handler fires before `TextViewMouse` marks the event as handled in the Bubble phase
 - **`ITextView` hit-testing** — uses `GetTextPositionFromPoint` to resolve the click position to a `TextPointer`; selection state is stale during the Tunnel phase
 
 The layer it paints through, wrapping the protected members of `HighlightLayerBase`:
