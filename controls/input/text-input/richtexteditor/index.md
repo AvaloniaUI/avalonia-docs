@@ -195,7 +195,7 @@ editor.Save(stream, new RtfSerializer());
 ```
 
 :::info
-`IDocumentSerializer` is synchronous: `Serialize` and `Deserialize` are the whole contract. No format here performs asynchronous I/O, so `LoadAsync` and `SaveAsync` are thread-offload conveniences that wrap the synchronous call in `Task.Run` rather than asynchronous I/O. `LoadAsync` parses on the thread pool and then builds the element tree on the UI thread, because a `FlowDocument` and its elements belong to the dispatcher of the thread that constructed them.
+`IDocumentSerializer` is synchronous only. No format performs asynchronous I/O, even with `LoadAsync` and `SaveAsync`, which are designed to offload work from the thread by wrapping the call in `Task.Run`. `LoadAsync` parses on the thread pool and then builds the element tree on the UI thread, because a `FlowDocument` and its elements belong to the dispatcher of the thread that constructed them.
 :::
 
 Available serializers:
@@ -208,9 +208,12 @@ Available serializers:
 | `MarkdownSerializer` | `Avalonia.Controls.Markdown` | `.md` | Read and write |
 | `HtmlSerializer` | `Avalonia.Controls.Documents.Serialization.Html` | `.html` | Read only (`CanWrite` is `false`) |
 | `PdfSerializer` | `Avalonia.Controls.Documents.Serialization.Pdf` | `.pdf` | Write only (`CanRead` is `false`) |
-| `PlainTextSerializer` | `Avalonia.Controls.Documents` (core) | `.txt` | Read and write |
+| `PlainTextSerializer` | Included in `Avalonia.Controls.Documents` (core) | `.txt` | Read and write |
+<br />
 
-`CanRead` and `CanWrite` report the direction on every serializer, so a format picker can filter the list instead of catching an exception. `PdfSerializer` is the supported route to paper.
+Each serializer reports its direction through `CanRead` and `CanWrite`, so a format picker can filter the list.
+
+`PdfSerializer` is the supported route to paper.
 
 ### Loading a document without an editor
 
@@ -221,7 +224,7 @@ await using var stream = File.OpenRead("document.rtf");
 var document = await FlowDocument.LoadAsync(stream, new RtfSerializer(), cancellationToken);
 ```
 
-To load with no UI thread involved at all, skip the element facade: read a `DocumentSnapshot` with the serializer and materialize it with `TextDocument.FromSnapshot`, which carries the whole document and has no thread affinity.
+To load with no UI thread involved at all, you can read a `DocumentSnapshot` with the serializer and materialize it with `TextDocument.FromSnapshot`, which carries the whole document.
 
 ## Adding a word counter
 
@@ -263,7 +266,7 @@ The Avalonia rich text editor consists of four components:
 3. `FlowDocumentPageViewer`: Read-only viewer that displays a document as discrete page sheets, the way a word processor's print layout does. It derives from `FlowDocumentScrollViewer`.
 4. `FlowDocument`: Document model that organizes rich text content into [blocks](#block-elements).
 
-A document also owns two kinds of nested document, each a `FlowDocument` in its own right: page bands (running headers and footers, in `FlowDocument.PageBands`) and footnotes (in `FlowDocument.Footnotes`). One editor retargets to whichever of them the caret is in; there is no nested `RichTextEditor`.
+A document also owns two kinds of nested document, each a `FlowDocument` in its own right: page bands (running [headers and footers](/controls/input/text-input/richtexteditor/headers-and-footers), in `FlowDocument.PageBands`) and [footnotes](/controls/input/text-input/richtexteditor/footnotes) (in `FlowDocument.Footnotes`). One editor retargets to whichever of them the caret is in; there is no nested `RichTextEditor`.
 
 ### RichTextEditor properties
 
@@ -281,13 +284,13 @@ These properties are used by the `RichTextEditor` component.
 | `PageMargins` | `Thickness?` | Page margins used in page layout. Falls back to the document's `PagePadding`. | `null` |
 | `PageSize` | `Size?` | Page size used in page layout. Falls back to the document's page dimensions, then A4. | `null` |
 | `SelectionBrush` | `IBrush?` | Color of text selections. | None |
-| `SelectionFlyout` | `EditorSelectionFlyout?` | Mini toolbar shown above a selection. Set to `null` to remove it. | `null`; the default theme supplies one |
+| `SelectionFlyout` | `EditorSelectionFlyout?` | Mini toolbar shown above a selection. Set to `null` to remove it. | `null` (the default theme supplies one) |
 | `ShowBlockAdorners` | `bool` | Determines whether block adorner decorations are displayed. | `true` |
-| `ShowPageBandsInContinuousLayout` | `bool` | Shows the running header above the first block and the running footer below the last, in continuous layout. It has no effect in page layout, where the bands render on every sheet. | `false` |
+| `ShowPageBandsInContinuousLayout` | `bool` | In continuous layout, shows the running header above the first block and the running footer below the last. No effect in page layout. | `false` |
 | `ShowPageBounds` | `bool` | Determines whether page boundary indicators are displayed. | `false` |
 | `ShowSelectionFlyout` | `bool` | Show or hide the selection flyout without replacing it. | `true` |
 | `ShowToolbar` | `bool` | Determines whether the toolbar is visible. | `true` |
-| `Toolbar` | `EditorToolbar?` | Customizes toolbar design and layout. | `null`; the default theme supplies one |
+| `Toolbar` | `EditorToolbar?` | Customizes toolbar design and layout. | `null` (the default theme supplies one) |
 | `UndoLimit` | `int` | Maximum number of operations to retain for undo actions. | 100 |
 | `ViewMode` | `DocumentViewMode` | `Continuous` for one flowing column, `PageLayout` for discrete page sheets. | `Continuous` |
 
@@ -310,8 +313,9 @@ These properties are used by the `FlowDocument` component.
 | `PagePadding` | `Thickness` | Inner spacing between the block's borders and its content. | `Null` |
 | `PageWidth` | `double` | Width of the page. | `double.NaN` |
 | `TextAlignment` | `TextAlignment` | Alignment of text in the document, i.e., `Left`, `Center`, `Right`, `Justify`. | `Null` |
+<br />
 
-`FlowDocument` also owns two collections of nested documents: `PageBands` (running headers and footers) and `Footnotes`. Both survive a snapshot round trip and join their undo to the owning document's, so they are present whether or not any element is realized.
+`FlowDocument` also owns two collections of nested documents: [`PageBands`](/controls/input/text-input/richtexteditor/headers-and-footers) (running headers and footers) and [footnotes](/controls/input/text-input/richtexteditor/footnotes). Both survive a snapshot round trip and join their undo to the owning document's, so they are present whether or not any element is realized.
 
 ## Block elements
 
@@ -381,7 +385,7 @@ Inline elements are used to specify content styles within a block.
 | `RichFootnoteCitation` | A further citation of a note whose anchor is elsewhere. Paired with a `Footnote` by `NoteId`. |
 | `RichFootnoteReference` | Atomic anchor for a footnote, paired with a `Footnote` in `FlowDocument.Footnotes` by `NoteId`. |
 | `RichHyperlink` | Marks an inline hyperlink. |
-| `RichImage` | Inline image. Content comes from a `RichImageSource`; occupies a single object replacement character. |
+| `RichImage` | Inline image. Content comes from a `RichImageSource`. Occupies a single object replacement character. |
 | `RichInline` | Abstract base class for inline elements. |
 | `RichInlineUIContainer` | Wrapper to embed UI elements within text flow. |
 | `RichItalic` | Indicates italicized text. Overrides global `FontStyle` property. |
@@ -426,7 +430,7 @@ The Avalonia rich text editor separates functions into an eight-layer architectu
 | --- | --- | --- | --- |
 | 1 | Document model | Core data storage of text context and document hierarchy. Uses a rope data structure for efficient storage and operations. | `TextDocument`, `FlowDocument` |
 | 2 | Text pointer API | Position tracking and navigation within documents. `TextRange` owns positional mutation. | `TextPointer`, `TextRange`, `LogicalDirection` |
-| 3 | Rendering | Visual representation, coordinate mapping, hit testing, line queries. `TextViewBase` is abstract and `PagedTextView` is sealed; extend a view with a component or a highlight layer rather than by subclassing it. | `ITextView`, `TextViewBase`, `InteractiveTextView`, `PagedTextView`, `ITextLine`, `DocumentNode` |
+| 3 | Rendering | Visual representation, coordinate mapping, hit testing, line queries. Views can be extended with a component or a highlight layer, but not by subclassing. | `ITextView`, `TextViewBase`, `InteractiveTextView`, `PagedTextView`, `ITextLine`, `DocumentNode` |
 | 4 | Editing | Handles user input from keyboard, mouse, or other devices. | `TextSelection`, `TextViewKeyboard`, `TextViewMouse`, `TextEditorKeyboard`, `CaretElement` |
 | 5 | Highlighting | Visual effects for highlighting, used in selections, annotations, find/replace, etc. | `IHighlightLayer`, `HighlightLayerBase`, `HighlightLayerCollection`, `SelectionHighlightLayer` |
 | 6 | Undo/Redo | Stores operation history to allow reversals. `UndoManager` is the single sealed implementation; there is no undo interface to substitute. | `UndoManager`, `IUndoUnit`, `IUndoScope`, `SelectionSnapshot` |
