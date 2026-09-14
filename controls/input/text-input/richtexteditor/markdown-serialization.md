@@ -7,9 +7,9 @@ tags:
  - avalonia enterprise
 ---
 
-`MarkdownSerializer` (package `Avalonia.Controls.Markdown`, namespace `Avalonia.Controls.Documents.Serialization.Markdown`) reads markdown into a document and writes a document back out as markdown. It is the serializer behind opening a `.md` file in the editor and saving it again, and it is what the [Markdown control](/controls/data-display/text-display/markdown) parses with.
+`MarkdownSerializer` reads Markdown into a document and writes a document back out as Markdown, i.e., reports both `CanRead` and `CanWrite` as `true` and appears in a save-format list like any other serializer. It is found in the package `Avalonia.Controls.Markdown`, and uses the namespace `Avalonia.Controls.Documents.Serialization.Markdown`.
 
-Both directions are supported, so it reports `CanRead` and `CanWrite` as true and appears in a save-format list like any other serializer.
+It is the serializer behind opening and saving `.md` files in the editor. It is also used by the [Markdown control](/controls/data-display/text-display/markdown).
 
 :::info
 This control is available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
@@ -46,7 +46,7 @@ var serializer = new MarkdownSerializer(
     codeHighlighter);
 ```
 
-The contract is synchronous. Parsing and writing markdown are processor-bound and assemble their output in memory, so there is no asynchronous I/O to await; wrap the call to move it off a UI thread.
+The contract is synchronous. Parsing and writing Markdown are processor-bound and assemble their output in memory. There is no asynchronous I/O to await. Wrap the call to move it off a UI thread.
 
 ```csharp
 var snapshot = document.CreateSnapshot();
@@ -55,10 +55,10 @@ await Task.Run(() => serializer.Serialize(snapshot, stream, cancellationToken), 
 
 The token is observed per block on both sides. The Markdig parse that precedes rendering runs to completion once entered, so a token cancelled during it takes effect at the next block.
 
-`CanDeserialize` returns true for any readable stream: markdown is plain text with no magic bytes. A format-sniffing loop has to try it last.
+`CanDeserialize` returns `true` for any readable stream. Markdown is always tried last by a format picker.
 
 :::info
-The constructor is the way to configure the serializer. `Options` and `CodeHighlighter` are still settable, but a serializer handed to a background read and reconfigured through a setter changes format mid-read.
+Use the constructor to configure the serializer. `Options` and `CodeHighlighter` are still settable, but a serializer handed to a background read and reconfigured through a setter changes format mid-read.
 :::
 
 ### Output spellings
@@ -75,9 +75,9 @@ The constructor is the way to configure the serializer. `Options` and `CodeHighl
 
 `MarkdownSerializerOptions.Default` is the default set.
 
-## The typed markdown elements
+## Typed Markdown elements
 
-Markdown constructs the core model has no property for get their own element types, in the `Avalonia.Controls.Documents` namespace, so the data that reproduces the source survives realization and editing, and so the same constructs can be authored through the FlowDocument API.
+Constructs in Markdown get their own element types in the `Avalonia.Controls.Documents` namespace. Data that reproduces the source survives realization and editing, and so the same constructs can be authored through the FlowDocument API.
 
 | Element | Base | Carries |
 |---|---|---|
@@ -88,6 +88,8 @@ Markdown constructs the core model has no property for get their own element typ
 | `MarkdownHtmlInline` | `RichSpan` | `RawHtml` |
 | `MarkdownImage` | `RichImage` | `ImageSource`, `ImageTitle`, `ImageLoader`, and the base `AltText` |
 | `MarkdownTaskListItem` | `ListItem` | `IsChecked` |
+
+### Example
 
 ```csharp
 document.Blocks.Add(new MarkdownHeading { Level = 2, Inlines = { new RichRun("Design notes") } });
@@ -103,37 +105,54 @@ These types keep their base type's style key, so theme and application selectors
 
 ## Footnotes
 
-Markdown footnotes load onto the document's own footnote model rather than a markdown-only lowering:
+Markdown footnotes load onto the document's own footnote model:
 
 - The first citation of a label becomes a `RichFootnoteReference` anchor, numbered in citation order.
 - The definition becomes a `Footnote` in `FlowDocument.Footnotes`, carrying its label as `Footnote.Label`.
 - Later citations of the same label, and citations inside a note, become `RichFootnoteCitation` elements pointing at the same note.
 
-So notes read from markdown render, paginate and export like any other document's notes, and the editor's footnote commands work on them. Clicking a citation scrolls to its note, as clicking the anchor does. See [Footnotes](/controls/input/text-input/richtexteditor/footnotes).
+The effect of the above is that notes read from Markdown render. They paginate and export like any other document's notes, and the editor's footnote commands work on them. Clicking an anchor or citation scrolls to its note. See [Footnotes](/controls/input/text-input/richtexteditor/footnotes).
 
-On write, each note becomes a `[^label]: ...` definition after the body, in note order. A note keeps the label it carries, spelled as authored; a note without one, one created in the editor, is named by its position, and no two notes are given the same name, because duplicate definitions would merge on re-parse. Labels containing `]`, `[` or `\` are escaped. A definition nothing cites is kept rather than dropped.
+On write, each note becomes a `[^label]: ...` definition after the body, in note order. A note keeps the label it carries, spelled as authored. A note without one is named by its position. No two notes can have the same name, because duplicate definitions would merge on re-parse. Labels containing `]`, `[` or `\` are escaped. A definition nothing cites is kept.
 
-A fragment that names no note (`[Back to top](#top)`, a heading anchor) is left unhandled and keeps bubbling, so an application with its own anchor handling still receives it.
+A fragment that names no note (e.g., `[Back to top](#top)`, a heading anchor) is left unhandled and keeps bubbling, so an application with its own anchor handling still receives it.
 
 ## HTML write-back
 
-An HTML block is converted into rich elements for display, and `MarkdownHtmlBlock.RawHtml` keeps the original source. On write, the block is emitted verbatim while it is unedited: the writer re-converts the raw HTML and compares the resulting text with the block's current text, and any text edit falls back to serializing the converted children as canonical markdown.
+An HTML block is converted into rich elements for display, and `MarkdownHtmlBlock.RawHtml` keeps the original source. On write, the block is emitted verbatim while it is unedited. The writer re-converts the raw HTML and compares the resulting text with the block's current text, and any text edit falls back to serializing the converted children as canonical Markdown.
 
 Inline HTML the converter does not recognize is preserved as `MarkdownHtmlInline` rather than dropped, so a stray tag survives a round trip instead of vanishing from the file.
 
 ## Round-trip fidelity
 
-Byte-exact reproduction of arbitrary markdown is not the goal and is not possible without storing source trivia, which the snapshot does not. What is promised comes in three tiers.
+Byte-exact reproduction of arbitrary Markdown is not the goal and is not possible without storing source trivia, which the snapshot does not. Instead, the Markdown serializer focuses on the following:
 
-**Semantic equivalence.** For markdown in the supported construct set, parsing what the writer produced yields a document equivalent to parsing the original. This holds across an editing session: load, realize elements, edit, save, re-parse.
+**Semantic equivalence.** For Markdown in the supported construct set, parsing what the writer produced yields a document equivalent to parsing the original.
 
-**Preserved exactly**, the authoring choices a reader would notice in a diff, because the model stores them:
+**Preserved exactly.** The authoring choices a reader would notice in a diff, because the model stores them. These include:
 
-heading level; code language, info-string arguments and body; task-list checked state; alert kind; list type and start index; table column alignment and the header row; link and image URLs, titles and alt text; footnote labels; the raw source of an unedited HTML block or an unrecognized inline tag.
+- heading level
+- code language, info-string arguments and body
+- task-list checked state
+- alert kind
+- list type and start index
+- table column alignment and the header row
+- link and image URLs, titles and alt text
+- footnote labels
+- the raw source of an unedited HTML block or an unrecognized inline tag
 
-**Canonicalized**, normalized to the spelling `MarkdownSerializerOptions` selects:
+**Canonicalized.** Normalized to the spelling `MarkdownSerializerOptions` selects:
 
-emphasis delimiters and their counts; bullet characters; ordered-list delimiters; code-fence character and length (an indented code block is written fenced); thematic-break style; hard-break spelling; blockquote markers; indentation; entity and backslash-escape spellings; emoji and symbol shortcodes, whose characters round-trip but whose shortcodes are not restored; soft-break wrap positions, which are not restored.
+- emphasis delimiters and their counts
+- bullet characters; ordered-list delimiters
+- code-fence character and length (an indented code block is written fenced)
+- thematic-break style
+- hard-break spelling
+- blockquote markers
+- indentation
+- entity and backslash-escape spellings
+- emoji and symbol shortcodes, whose characters round-trip but whose shortcodes are not restored
+- soft-break wrap positions, which are not restored
 
 **Not covered:**
 
@@ -143,15 +162,26 @@ emphasis delimiters and their counts; bullet characters; ordered-list delimiters
 | Table column and row spans | Not expressible in pipe form |
 | YAML front matter | Not recognized; a leading `---` block parses as a thematic break plus paragraph text |
 | Clipboard integration | Markdown is not among the editor's clipboard formats |
+<br />
 
-A document that did not come from markdown, one loaded from RTF or an arbitrary `FlowDocument`, never fails to serialize. It is written as canonical markdown of whatever structure maps, and formatting markdown cannot express (colours, fonts, spacing) is dropped. No fidelity guarantee is made there.
+A document that did not come from Markdown, or loaded from RTF or an arbitrary `FlowDocument`, never fails to serialize. It is written as canonical Markdown of whatever structure maps. Any formatting that Markdown cannot express (colors, fonts, spacing, etc.) is dropped.
 
-### The supported construct set
+### Supported construct set
 
-The pipeline is Markdig with `UseSupportedExtensions()`: auto links, alert blocks, emoji and smileys, footnotes, grid tables, pipe tables, extra emphasis (strikethrough, subscript, superscript, inserted, marked), task lists, and the library's own symbol extension.
+The pipeline is Markdig with `UseSupportedExtensions()`. Supported constructs are:
+
+- auto links
+- alert blocks
+- emoji and smileys
+- footnotes
+- grid tables
+- pipe tables
+- extra emphasis (strikethrough, subscript, superscript, inserted, marked)
+- task lists
+- the Markdig library's own symbol extension
 
 ## See also
 
-- [Markdown control](/controls/data-display/text-display/markdown) - rendering markdown without an editor
+- [Markdown control](/controls/data-display/text-display/markdown) - rendering Markdown without an editor
 - [Code highlighter](/controls/data-display/text-display/markdown/codehighlighter) - the `CodeHighlighter` the serializer takes
-- [Footnotes](/controls/input/text-input/richtexteditor/footnotes) - the model markdown notes load onto
+- [Footnotes](/controls/input/text-input/richtexteditor/footnotes) - the model Markdown notes load onto
