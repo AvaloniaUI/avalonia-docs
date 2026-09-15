@@ -36,7 +36,7 @@ This control is available as part of [Avalonia Pro](https://avaloniaui.net/prici
 ## Performance checklist
 
 - Batch all multi-edit operations
-- Use `TextDocument.Changed` (raised once per commit) instead of `TextDocument.TextChanged` (per edit) for expensive operations
+- Use `TextDocument.Changed` (once per commit) instead of `TextDocument.TextChanged` (once per edit) for expensive operations
 - Debounce user-triggered updates
 - Set appropriate `UndoLimit` on the editor
 - Disable undo during bulk loads
@@ -51,13 +51,13 @@ This control is available as part of [Avalonia Pro](https://avaloniaui.net/prici
 Single change notification instead of one per edit:
 
 ```csharp
-// Bad — 100 Changed events, 100 layout passes
+// Bad: 100 Changed events, 100 layout passes
 for (int i = 0; i < 100; i++)
 {
     pointer.InsertText("Line " + i + "\n");
 }
 
-// Good, 1 Changed event, 1 layout pass
+// Good: 1 Changed event, 1 layout pass
 using (document.BeginChange())
 {
     for (int i = 0; i < 100; i++)
@@ -91,7 +91,7 @@ textDoc.Changed += (s, e) =>
 };
 ```
 
-`TextDocument` raises two change events. `TextChanged` fires per text edit with a `TextChangeEventArgs`; `Changed` fires once when a change scope commits, with a `DocumentChangedEventArgs` carrying `HasChanges`. Expensive work belongs on `Changed`.
+`TextDocument` raises two change events. (1) `TextChanged` fires per text edit with a `TextChangeEventArgs`; (2) `Changed` fires once when a change scope commits, with a `DocumentChangedEventArgs` carrying `HasChanges`. Expensive work is ideally handled by `Changed`.
 
 ### Debounce user-triggered updates
 
@@ -170,7 +170,7 @@ editor.UndoLimit = 200; // Increase for power users
 
 ### Disable undo for bulk loads
 
-`RichTextEditor.UndoManager` and `TextDocument.UndoManager` are both typed `UndoManager?`. To record nothing, either turn the instance off with `IsEnabled` or set the document's manager to `null`; there is no null-object manager to substitute.
+`RichTextEditor.UndoManager` and `TextDocument.UndoManager` are both typed `UndoManager?`. To record nothing, either turn the instance off with `IsEnabled`, or set the document's manager to `null`. There is no null-object manager to substitute.
 
 ```csharp
 void LoadLargeDocument(string rtfPath)
@@ -205,7 +205,7 @@ editor.ClearUndoHistory();
 
 ### Use background threads
 
-`IDocumentSerializer` is synchronous: `Serialize` and `Deserialize` run wherever you call them. `SaveAsync` and `LoadAsync` are the shipped wrappers that move the work to the thread pool, so the decision about which thread pays is yours.
+`IDocumentSerializer` is synchronous: `Serialize` and `Deserialize` run wherever you call them. `SaveAsync` and `LoadAsync` are the shipped wrappers that move the work to the thread pool, which allows you to decide which thread to use for the serialization work.
 
 ```csharp
 async Task SaveDocumentAsync(string path)
@@ -264,16 +264,16 @@ using (document.BeginChange())
 
 ### Vertical caret navigation
 
-Up and Down walk the document tree structurally rather than scanning visual lines for a Y-coordinate change. Two properties follow:
+<kbd>↑</kbd> and <kbd>↓</kbd> walk the document tree structurally rather than scanning visual lines for a Y-coordinate change. Because of this:
 
 - Cost is bounded by tree depth, not by the number of visible lines. One keystroke in a 50-row by 50-column table costs on the order of rows plus descent depth.
 - The intended column is captured once on the first vertical keystroke and reused until the selection changes by something other than vertical movement. That reuse is what keeps the caret in the same visual column across short lines, empty paragraphs and table cells.
 
-The column intent is discarded by any non-vertical selection change: a click, typing, a programmatic `Select`, or a horizontal arrow, Home, End or word-jump keystroke. Avoid clearing or reassigning `Selection.CaretPosition` between consecutive Up/Down presses if you want the column preserved.
+The column intent is discarded by any non-vertical selection change, such as a click, programmatic `Select`, horizontal arrows, <kbd>Home</kbd>, <kbd>End</kbd>, or word-jump. Avoid clearing or reassigning `Selection.CaretPosition` between consecutive <kbd>↑</kbd> / <kbd>↓</kbd> presses if you want the column preserved.
 
-### Paged layout
+### Page layout
 
-Page layout keeps its sheets on screen while an edit repaginates, rather than tearing down the break table and rebuilding it in an idle slice. Screen, print and PDF export share one page-break policy, so they break identically and pagination cost is paid once per model.
+Page layout keeps its sheets on screen while an edit repaginates, rather than tearing down the break table and rebuilding it in an idle slice. Screen, print and PDF export share the same page-break policy, so they break identically. However, the pagination cost is paid once per model.
 
 ## Large document strategies
 
