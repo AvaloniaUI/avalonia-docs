@@ -7,14 +7,16 @@ tags:
  - avalonia enterprise
 ---
 
-The RichTextEditor architecture uses immutable snapshots for background-safe serialization while requiring UI thread access for live document operations. This guide explains the threading model and safe patterns.
+The `RichTextEditor` architecture uses immutable snapshots for background-safe serialization while requiring UI thread access for live document operations. This guide explains the threading model and safe patterns.
 
 :::info
 This control is available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
 
-:::info
-Nothing in this library performs asynchronous I/O: every format tokenizes, builds a tree or lays out text against an in-memory buffer. `IDocumentSerializer.SerializeAsync` and `DeserializeAsync` are thread-offload conveniences that run the synchronous body on the thread pool, not asynchronous I/O, and `Serialize` and `Deserialize` run on whichever thread calls them. Either the shipped asynchronous pair or `Task.Run` at the call site moves the work off the UI thread.
+:::caution
+Nothing in this library performs asynchronous I/O: every format tokenizes, builds a tree or lays out text against an in-memory buffer. `IDocumentSerializer.SerializeAsync` and `DeserializeAsync` are thread-offload conveniences that run the synchronous body on the thread pool. `Serialize` and `Deserialize` run on whichever thread calls them.
+
+If you need to move work off the UI thread, use either the shipped asynchronous pair or `Task.Run` at the call site.
 :::
 
 ## Threading model
@@ -31,11 +33,12 @@ These operations must run on the UI thread:
 ### Background thread safe
 
 These operations can run on background threads:
-- **Serialization via `DocumentSnapshot`** (immutable)
-- **`IDocumentSerializer.Serialize` / `Deserialize`**: synchronous and thread-agnostic, so they run on whichever thread calls them. Wrap in `Task.Run` to keep the work off the UI thread
-- **RTF tokenization** (streaming)
-- **`DocumentSnapshot` consumption** — `TextDocument.CreateSnapshot()` must be called on the UI thread, but the returned object is safe to read from any thread
-- **`TextDocument.FromSnapshot`**: `TextDocument` carries the whole document and has no thread affinity, so a document can be materialized with no UI thread involved at all
+
+- **Serialization via `DocumentSnapshot`** — immutable
+- **`IDocumentSerializer.Serialize` / `Deserialize`** — synchronous and thread-agnostic, so they run on whichever thread calls them. Wrap in `Task.Run` to keep the work off the UI thread.
+- **RTF tokenization** — streaming
+- **`DocumentSnapshot` consumption** — `TextDocument.CreateSnapshot()` must be called on the UI thread, but the returned object is safe to read from any thread.
+- **`TextDocument.FromSnapshot`** — `TextDocument` carries the whole document and has no thread affinity, so a document can be materialized with no UI thread involvement.
 
 ### Not thread-safe
 
@@ -52,7 +55,7 @@ These operations can run on background threads:
 async Task SaveAsync(string path)
 {
     // SaveAsync captures the snapshot on the calling thread, because reading
-    // the document requires the thread that owns it, then writes on the pool.
+    // the document requires the thread that owns it. Then it writes on the pool.
     await using var stream = File.Create(path);
     await editor.SaveAsync(stream, new RtfSerializer());
 }
@@ -94,17 +97,15 @@ async Task LoadStandaloneAsync(string path)
 }
 ```
 
-:::info
-`FlowDocument.LoadAsync` parses on the thread pool and then builds the element tree through an explicit `Dispatcher.UIThread.InvokeAsync`. A `FlowDocument` and its `RichTextElement`s are `AvaloniaObject`s and bind to the dispatcher of the thread that constructed them, so a document assembled on a pool thread throws on the first property read from the UI thread. The dispatch is explicit rather than left to an ambient `SynchronizationContext`, which a console host or a caller already off the UI thread does not have.
+`FlowDocument.LoadAsync` parses on the thread pool and then builds the element tree through an explicit `Dispatcher.UIThread.InvokeAsync`. The dispatch is explicit rather than left to an ambient `SynchronizationContext`, which a console host or a caller already off the UI thread does not have.
 
-To stay off the UI thread entirely, skip the element facade: read a `DocumentSnapshot` with the serializer and materialize it with `TextDocument.FromSnapshot`.
+To stay off the UI thread entirely, read a `DocumentSnapshot` with the serializer and materialize it with `TextDocument.FromSnapshot`.
 
 ```csharp
 // Any thread, no dispatcher involved
 var snapshot = new RtfSerializer().Deserialize(stream, cancellationToken);
 var textDocument = TextDocument.FromSnapshot(snapshot);
 ```
-:::
 
 ### Background document processing
 
@@ -180,11 +181,13 @@ DocumentSnapshot (thread-safe)
    └─ InlineSnapshotNode
 ```
 
-`SnapshotNode` is the base of the tree, with `BlockSnapshotNode` and `InlineSnapshotNode` for the two kinds of content. The tree is built once at capture and not mutated afterwards, and the text it references is an immutable rope snapshot, so reading it from any thread is safe. Read text with `DocumentSnapshot.GetText`, `GetTextMemory` or `WriteTextTo`, and walk it with `EnumerateNodes`.
+`SnapshotNode` is the base of the tree. `BlockSnapshotNode` and `InlineSnapshotNode` create the two kinds of content. The tree is built once at capture and not mutated afterwards, and the text it references is an immutable rope snapshot. Reading the snapshot from any thread is safe.
+
+Read text with `DocumentSnapshot.GetText`, `GetTextMemory` or `WriteTextTo`. Walk with `EnumerateNodes`.
 
 ### Creating snapshots
 
-`SaveAsync` and `LoadAsync` create and consume snapshots internally, so a typical save or load never touches a `DocumentSnapshot` directly:
+`SaveAsync` and `LoadAsync` create and consume snapshots internally, so a typical save or load never touch a `DocumentSnapshot`:
 
 ```csharp
 // Save using the async API (handles snapshot internally)
@@ -192,7 +195,7 @@ await using var stream = File.Create("output.rtf");
 await editor.SaveAsync(stream, new RtfSerializer());
 ```
 
-To share one snapshot across several consumers, for example exporting to more than one format from the same document state, capture it explicitly with `FlowDocument.CreateSnapshot()` or `TextDocument.CreateSnapshot()` on the UI thread and pass the result to background work:
+To share one snapshot across several consumers, for example exporting to more than one format, capture a snapshot explicitly with `FlowDocument.CreateSnapshot()` or `TextDocument.CreateSnapshot()` on the UI thread. Then, pass the result to background work:
 
 ```csharp
 // UI thread
@@ -319,7 +322,7 @@ async Task<int> CountWordsAsync()
 
 ### Export to PDF on background thread
 
-`PdfSerializer` is a normal `IDocumentSerializer` and, like every other one, is synchronous and write-only. It takes a snapshot, so the layout runs with no UI involved:
+`PdfSerializer` is a normal `IDocumentSerializer`. Like every other serializer, it is synchronous and write-only. It takes a snapshot, so the layout runs with no UI involved:
 
 ```csharp
 async Task ExportPdfAsync(string path)
@@ -338,7 +341,9 @@ async Task ExportPdfAsync(string path)
 
 ## Element lifetime and thread safety
 
-The internal node tree holds weak references to the `RichTextElement` instances it presents, so the model does not pin UI elements in memory. Two consequences reach the public API: an element obtained through `TextPointer.GetContainingElement()` may be `null` until the document materializes it on demand, and every element access is UI-thread only.
+The internal node tree holds weak references to the `RichTextElement` instances it presents, so the model does not pin UI elements in memory. 
+
+This means an element obtained through `TextPointer.GetContainingElement()` may be `null` until the document materializes it. Every element access is UI-thread only.
 
 ```csharp
 void SafeAccessElement(TextPointer pointer)
@@ -384,7 +389,7 @@ if (firstBlock != null)
 2. **Don't modify document from background threads**
 3. **Don't access UI elements from background threads**
 4. **Don't assume snapshots auto-update** — they're immutable
-5. **Don't hold long-lived references to elements**: resolve them from a pointer when you need them; the model holds them weakly and an unrealized element may not exist yet
+5. **Don't hold long-lived references to elements** — resolve them from a pointer when you need them
 
 ## Performance considerations
 
