@@ -20,9 +20,13 @@ This control is available as part of [Avalonia Pro](https://avaloniaui.net/prici
 
 1. **Custom document elements** — new block/inline types
 2. **Custom highlight layers** — find, spell check, annotations
-3. **Custom serialization formats** — HTML, Markdown, etc.
+3. **Custom serialization formats** — your own file format
 4. **Custom editor components** — new input handlers
-5. **Grouped undo operations** — via `IUndoManager.BeginUndoUnit` (custom `IUndoUnit` subclasses are not a public extension point)
+5. **Grouped undo operations** — via `UndoManager.BeginUndoUnit` (custom `IUndoUnit` subclasses are not a public extension point)
+
+:::info
+Subclassing a view is not possible, due to sealed or internal elements. Instead, you can extend a view with `ITextViewComponent` or `IHighlightLayer`, or consider using  `InteractiveTextView`.
+:::
 
 ## Custom document elements
 
@@ -44,16 +48,14 @@ public static class CustomNodeRegistration
 
     public static void Register()
     {
-        CalloutBlockKind = TextDocumentNodeKind.Register(
+        CalloutBlockKind = TextDocumentNodeKind.Register<CalloutBlock>(
             "CalloutBlock",
             NodeKindFlags.Block | NodeKindFlags.BlockContainer,
-            typeof(CalloutBlock),
             new CalloutBlockHandler());
 
-        MentionInlineKind = TextDocumentNodeKind.Register(
+        MentionInlineKind = TextDocumentNodeKind.Register<MentionInline>(
             "MentionInline",
             NodeKindFlags.Inline,
-            typeof(MentionInline),
             new MentionHandler());
     }
 }
@@ -368,6 +370,8 @@ doc.Blocks.Add(callout);
 
 ### Find/replace highlight layer
 
+`HighlightLayerBase` takes only `(string name, int zIndex)`. `AddRegion`, `RemoveRegion` are `protected`, so a subclass exposes them through public wrappers. They raise `RegionsChanged` automatically, meaning a wrapper does not need to call `OnRegionsChanged` afterwards.
+
 ```csharp
 using Avalonia.Controls.Documents.Primitives.Highlighting; // HighlightLayerBase, HighlightRegion, HighlightStyle
 
@@ -391,8 +395,6 @@ public class FindHighlightLayer : HighlightLayerBase
                 opacity: 0.4);
             AddRegion(region);
         }
-
-        OnRegionsChanged();
     }
 
     public void HighlightCurrent(TextRange current)
@@ -403,10 +405,16 @@ public class FindHighlightLayer : HighlightLayerBase
             brush: Brushes.Orange,
             opacity: 0.5);
         AddRegion(region);
-        OnRegionsChanged();
     }
 }
 ```
+
+:::warning
+- `HighlightLayerCollection` is sealed.
+- `Add` throws when a layer's `Name` is already in the collection, to ensure the `GetLayer` lookup works.
+- `HighlightLayerBase.RenderRegion` throws for a highlight style it has no renderer for, rather than drawing nothing.
+- `HighlightStyle.Custom` is no longer used. Override `RenderRegion` to draw custom highlights not provided by the built-in styles.
+:::
 
 **Integration:**
 
@@ -433,7 +441,7 @@ public class SpellCheckHighlightLayer : HighlightLayerBase
     {
         var errors = await RunSpellCheckAsync(document);
 
-        // Update highlights on UI thread
+        // Update highlights on the UI thread; TextPointer is UI-thread only.
         await Dispatcher.UIThread.InvokeAsync(() =>
         {
             ClearRegions();
@@ -441,14 +449,12 @@ public class SpellCheckHighlightLayer : HighlightLayerBase
             foreach (var error in errors)
             {
                 var region = new HighlightRegion(
-                    document.CreatePointer(error.Offset),
-                    document.CreatePointer(error.Offset + error.Length),
+                    document.ContentStart.CreatePointer(error.Offset),
+                    document.ContentStart.CreatePointer(error.Offset + error.Length),
                     brush: Brushes.Red,
                     style: HighlightStyle.WavyUnderline);
                 AddRegion(region);
             }
-
-            OnRegionsChanged();
         });
     }
 
@@ -465,35 +471,55 @@ public class SpellCheckHighlightLayer : HighlightLayerBase
 
 ## Custom serialization formats
 
-### HTML serializer
+`IDocumentSerializer` is synchronous. Every implementation provides `Deserialize`, `Serialize`, `CanDeserialize`, and the following properties:
+- `FormatName`
+- `FileExtension`
+- `MimeType`
+- `CanRead`
+- `CanWrite`
+
+There is no asynchronous pair: format work is processor-bound and assembles its output in memory. Wrapping a call in `Task.Run` moves the work off the caller's own thread.
+
+`CanRead` and `CanWrite` have no defaults. You must declare both.
+
+### Writing your own HTML serializer
+
+:::info
+The `HtmlSerializer` in `Avalonia.Controls.Documents.Serialization.Html` reads only. The example below creates a custom HTML serializer that reads and writes.
+:::
 
 ```csharp
 using Avalonia.Controls.Documents;
+using Avalonia.Controls.Documents.Serialization;
+using Avalonia.Controls.Documents.Serialization.Snapshot;
 using Avalonia.Controls.Documents.TextModel;
-using Avalonia.Controls.Documents.TextModel.Snapshot;
+using System.Threading;
+using System.Threading.Tasks;
 
-public class HtmlSerializer : IDocumentSerializer
+public class MyHtmlSerializer : IDocumentSerializer
 {
     public string FormatName => "Html";
     public string FileExtension => ".html";
     public string MimeType => "text/html";
 
+    public bool CanRead => true;
+    public bool CanWrite => true;
+
     public bool CanDeserialize(Stream stream) => true;
 
-    public async Task<DocumentSnapshot> DeserializeAsync(
+    public DocumentSnapshot Deserialize(
         Stream stream, CancellationToken cancellationToken = default)
     {
         using var reader = new StreamReader(stream);
-        string html = await reader.ReadToEndAsync(cancellationToken);
+        string html = reader.ReadToEnd();
 
         var builder = FlowDocumentBuilder.Create();
         ParseHtml(html, builder);
         var doc = builder.Build();
-        var textDoc = doc.EnsureTextDocument();
-        return textDoc.CreateSnapshot();
+        return doc.TextDocument.CreateSnapshot();
     }
 
-    public Task SerializeAsync(
+    public void Serialize(
         DocumentSnapshot snapshot, Stream stream,
         CancellationToken cancellationToken = default)
     {
@@ -507,8 +533,16 @@ public class HtmlSerializer : IDocumentSerializer
         }
 
         writer.WriteLine("</body></html>");
-        return Task.CompletedTask;
     }
+
+    public Task<DocumentSnapshot> DeserializeAsync(
+        Stream stream, CancellationToken cancellationToken = default)
+        => Task.Run(() => Deserialize(stream, cancellationToken), cancellationToken);
+
+    public Task SerializeAsync(
+        DocumentSnapshot snapshot, Stream stream,
+        CancellationToken cancellationToken = default)
+        => Task.Run(() => Serialize(snapshot, stream, cancellationToken), cancellationToken);
 
     private void WriteBlock(BlockSnapshotNode block,
                             DocumentSnapshot snapshot, StreamWriter writer)
@@ -552,10 +586,12 @@ public class HtmlSerializer : IDocumentSerializer
 **Usage:**
 
 ```csharp
-var serializer = new HtmlSerializer();
+var serializer = new MyHtmlSerializer();
 await using var stream = File.Create("output.html");
 await editor.SaveAsync(stream, serializer);
 ```
+
+There is no format registry to register a serializer with: every serializer package depends on the core, so a registry there could not reference them back. Specify `CanRead` / `CanWrite` / `CanDeserialize` to allow a format picker to discover the serializer.
 
 ## Custom editor components
 
@@ -563,20 +599,22 @@ await editor.SaveAsync(stream, serializer);
 
 The `ITextViewComponent` interface allows creating input handler components that integrate with the editor's host infrastructure.
 
+`ITextViewComponent.OnAttach` takes an `IInteractiveTextHost`. This is the host interface the read-only viewers implement, not the editor-only `ITextEditorHost`. Cast if you need the editor's own surface.
+
 ```csharp
 using Avalonia.Controls.Documents.Primitives.Components; // ITextViewComponent, TextViewComponentBase
-using Avalonia.Controls.Documents.Primitives; // ITextEditorHost
+using Avalonia.Controls.Documents.Primitives; // IInteractiveTextHost
 using Avalonia.Controls.Documents.TextModel;
 
 public class AutoCompleteComponent : ITextViewComponent
 {
-    private ITextEditorHost? _host;
+    private IInteractiveTextHost? _host;
     private Popup? _completionPopup;
     private ListBox? _completionList;
 
     public bool IsAttached => _host is not null;
 
-    public void OnAttach(ITextEditorHost host)
+    public void OnAttach(IInteractiveTextHost host)
     {
         if (_host is not null)
             OnDetach();
@@ -619,9 +657,9 @@ public class AutoCompleteComponent : ITextViewComponent
         int readStart = Math.Max(0, offset - 64);
         if (readStart >= offset) return string.Empty;
 
-        var start = doc.CreatePointer(readStart);
+        var start = doc.ContentStart.CreatePointer(readStart);
         var range = new TextRange(start, caret);
-        string text = range.Text;
+        string text = range.GetText();
 
         int i = text.Length - 1;
         while (i >= 0 && char.IsLetterOrDigit(text[i]))
@@ -639,11 +677,11 @@ public class AutoCompleteComponent : ITextViewComponent
             if (caret == null) return;
 
             string prefix = GetWordBeforeCaret(caret);
-            var start = caret.CreatePointer(-prefix.Length);
+            var start = caret.GetPositionAtOffset(-prefix.Length);
             if (start != null)
             {
                 var range = new TextRange(start, caret);
-                range.Text = completion;
+                range.ReplaceText(completion);
             }
 
             HideCompletions();
@@ -671,7 +709,9 @@ Use `UndoManager.BeginUndoUnit` to record everything inside the scope as one und
 ```csharp
 using Avalonia.Controls.Documents.Undo;
 
-var undoManager = editor.UndoManager;
+// RichTextEditor.UndoManager and TextDocument.UndoManager are both
+// typed UndoManager?; there is no undo interface to substitute.
+UndoManager? undoManager = editor.UndoManager;
 if (undoManager != null)
 {
     using (undoManager.BeginUndoUnit("Find and Replace All"))
@@ -679,13 +719,23 @@ if (undoManager != null)
         // All edits inside this scope are a single undo step
         foreach (var match in matches)
         {
-            match.Text = replacement;
+            match.ReplaceText(replacement);
         }
     }
 }
 ```
 
-`IUndoUnit` is the public interface for inspecting recorded undo entries (read-only `Description` property). The internal undo/redo mechanics are handled by the framework. Use `BeginUndoUnit` rather than creating custom undo unit types.
+#### `IUndoUnit`
+
+`IUndoUnit` exposes only the `Description` property, and its undo / redo / merge mechanics are internal. You cannot create a custom undo unit. Use `BeginUndoUnit`, or `TextDocument.BeginChange()` if not using an undo manager.
+
+#### How to turn off recording
+
+To turn recording off, set `TextDocument.UndoManager` to `null`, or keep the instance and its subscribers with `new UndoManager { IsEnabled = false }`. `UndoManager.CanUndo`, `CanRedo` and `StateChanged` are what a UI binds to. The unit stacks themselves are internal.
+
+#### Restoring the caret
+
+`SelectionSnapshot.Capture(selection)` builds a snapshot that `BeginUndoUnit` and `IUndoScope.SetSelectionAfter` accept, so a grouped edit can restore the caret it started from.
 
 ## Best practices
 
@@ -693,9 +743,9 @@ if (undoManager != null)
 
 1. **Implement `ITextViewComponent`** — use the attach/detach lifecycle for proper cleanup and initial-scan support
 2. **Subscribe to input events on `host.UIScope`** — the host itself does not receive input events; only the UIScope does
-3. **Use `RoutingStrategies.Tunnel` for pointer interception** — built-in components like `TextEditorMouse` mark events as handled on Bubble; use Tunnel to inspect events first
+3. **Use `RoutingStrategies.Tunnel` for pointer interception** — built-in components like `TextViewMouse` mark events as handled on Bubble; use Tunnel to inspect events first
 4. **Use `ITextView.GetTextPositionFromPoint` for hit-testing** — selection state may be stale (especially during Tunnel); hit-test the click point directly
-5. **Inherit from base classes** — use `HighlightLayerBase`, not raw `IHighlightLayer`
+5. **Inherit from base classes** — use `HighlightLayerBase`, not raw `IHighlightLayer`; use `TextViewComponentBase` rather than implementing `ITextViewComponent` from scratch
 6. **Handle nulls gracefully** — hosts, UIScope, and TextView can be null during transitions
 7. **Write unit tests** — test extensions thoroughly
 8. **Use async for long operations** — don't block the UI thread
@@ -704,21 +754,40 @@ if (undoManager != null)
 
 1. **Don't subscribe to events on the host/editor directly** — use `host.UIScope` via `AddHandler`/`RemoveHandler`
 2. **Don't rely on selection state in pointer handlers** — hit-test the point instead; selection hasn't been updated yet during the Tunnel phase
-3. **Don't access internals** — use public APIs only
-4. **Don't hold strong document references** — causes memory leaks
-5. **Don't block UI thread** — use async for CPU/IO work
-6. **Don't assume document structure** — validate before accessing
-7. **Don't bypass undo system** — always record undoable operations
-8. **Don't forget to detach** — clean up event handlers
+3. **Don't subclass a view** — `TextViewBase` is abstract, `PagedTextView` is sealed, and the constructor of `TextViewKeyboard` is internal.
+4. **Don't access internals** — use public APIs only
+5. **Don't hold strong document references** — these cause memory leaks
+6. **Don't block the UI thread** — use async for CPU/IO work
+7. **Don't assume document structure** — validate before accessing
+8. **Don't bypass undo system** — always record undoable operations
+9. **Don't forget to detach** — clean up event handlers
 
 ## Complete example: Smart link detection
 
-This component detects URLs in the document, highlights them with a blue underline, and supports Ctrl+Click to open links. Key patterns demonstrated:
+This component detects URLs in the document, highlights them with a blue underline, and supports <kbd>Ctrl</kbd>+Click to open links. Key patterns demonstrated:
 
 - **`ITextViewComponent` lifecycle** — scans on attach (existing content) and on every subsequent text or document change
 - **`host.UIScope`** — subscribes to pointer events on the UIScope, not the host itself, because only the UIScope receives input events
-- **`RoutingStrategies.Tunnel`** — subscribes in the Tunnel phase so the handler fires before `TextEditorMouse` marks the event as handled in the Bubble phase
+- **`RoutingStrategies.Tunnel`** — subscribes in the Tunnel phase so the handler fires before `TextViewMouse` marks the event as handled in the Bubble phase
 - **`ITextView` hit-testing** — uses `GetTextPositionFromPoint` to resolve the click position to a `TextPointer`; selection state is stale during the Tunnel phase
+
+The layer it paints through, wrapping the protected members of `HighlightLayerBase`:
+
+```csharp
+public class LinkHighlightLayer : HighlightLayerBase
+{
+    public LinkHighlightLayer() : base("Links", zIndex: 40) { }
+
+    public void AddLink(TextPointer start, TextPointer end)
+        => AddRegion(new HighlightRegion(start, end, Brushes.Blue, 0.3, HighlightStyle.Underline));
+
+    public void ClearHighlights() => ClearRegions();
+
+    public void RaiseChanged() => OnRegionsChanged();
+}
+```
+
+The component itself:
 
 ```csharp
 // Register via editor.RegisterComponent(new SmartLinkExtension()).
@@ -726,7 +795,7 @@ This component detects URLs in the document, highlights them with a blue underli
 
 public class SmartLinkExtension : ITextViewComponent
 {
-    private ITextEditorHost? _host;
+    private IInteractiveTextHost? _host;
     private readonly LinkHighlightLayer _linkLayer = new();
     private readonly List<DetectedLink> _links = new();
 
@@ -734,7 +803,7 @@ public class SmartLinkExtension : ITextViewComponent
 
     public event Action<Uri>? LinkActivated;
 
-    public void OnAttach(ITextEditorHost host)
+    public void OnAttach(IInteractiveTextHost host)
     {
         if (_host is not null)
             OnDetach();
@@ -748,7 +817,7 @@ public class SmartLinkExtension : ITextViewComponent
         _host.DocumentChanged += OnDocumentChanged;
 
         // Subscribe on UIScope (the element that receives input events)
-        // using Tunnel so we fire before TextEditorMouse's Bubble handler.
+        // using Tunnel so we fire before TextViewMouse's Bubble handler.
         _host.UIScope?.AddHandler(
             InputElement.PointerPressedEvent,
             OnPointerPressed,
@@ -789,9 +858,9 @@ public class SmartLinkExtension : ITextViewComponent
         var doc = _host?.TextDocument;
         if (doc is null) return;
 
-        var start = doc.CreatePointer(0);
-        var end = doc.CreatePointer(doc.Length);
-        string text = new TextRange(start, end).Text;
+        var start = doc.ContentStart.CreatePointer(0);
+        var end = doc.ContentStart.CreatePointer(doc.Length);
+        string text = new TextRange(start, end).GetText();
 
         var found = await Task.Run(() => FindUrls(text));
 
@@ -810,8 +879,8 @@ public class SmartLinkExtension : ITextViewComponent
                 _links.Add(new DetectedLink(
                     offset, offset + length, uri));
                 _linkLayer.AddLink(
-                    currentDoc.CreatePointer(offset),
-                    currentDoc.CreatePointer(offset + length));
+                    currentDoc.ContentStart.CreatePointer(offset),
+                    currentDoc.ContentStart.CreatePointer(offset + length));
             }
 
             _linkLayer.RaiseChanged();
@@ -847,22 +916,29 @@ public class SmartLinkExtension : ITextViewComponent
         }
     }
 
+    // Scanning is the extension's own work; swap in whatever URL detector you use.
+    private static IReadOnlyList<(int offset, int length, Uri uri)> FindUrls(string text)
+        => Array.Empty<(int, int, Uri)>();
+
     private record DetectedLink(int Start, int End, Uri Uri);
 }
 ```
 
 ## Testing extensions
 
+`DocumentSnapshot.EnumerateNodes` is the public surface for inspecting a snapshot. To exercise the rebuild path as well, serialize the snapshot through your own format (or any bundled serializer) and load it back with `FlowDocument.Load`.
+
+Any test touching an `AvaloniaObject` needs `[AvaloniaFact]` rather than a plain `[Fact]`: thread affinity makes plain facts flaky.
+
 ```csharp
 public class MentionInlineTests
 {
-    [Fact]
+    [AvaloniaFact]
     public void MentionInline_PreservesUserIdThroughSnapshot()
     {
         // Arrange — register the custom kind
-        var kind = TextDocumentNodeKind.Register(
-            "TestMention", NodeKindFlags.Inline,
-            typeof(MentionInline), new MentionHandler());
+        var kind = TextDocumentNodeKind.Register<MentionInline>(
+            "TestMention", NodeKindFlags.Inline, new MentionHandler());
 
         var doc = new FlowDocument();
         var para = new Paragraph();
@@ -872,21 +948,17 @@ public class MentionInlineTests
         para.Inlines.Add(mention);
         doc.Blocks.Add(para);
 
-        var textDoc = doc.EnsureTextDocument();
+        // Act, capture and inspect a snapshot
+        var snapshot = doc.CreateSnapshot();
+        var snapshotMention = snapshot
+            .EnumerateNodes(n => n.Kind == kind)
+            .OfType<MentionSnapshotNode>()
+            .FirstOrDefault();
 
-        // Act — snapshot round-trip
-        var snapshot = textDoc.CreateSnapshot();
-        var restored = snapshot.ToFlowDocument();
-        var restoredDoc = restored.EnsureTextDocument();
-
-        // Assert
-        var restoredMention = restoredDoc.Root
-            .DescendantsOfKind(kind)
-            .First().Element as MentionInline;
-
-        Assert.NotNull(restoredMention);
-        Assert.Equal("alice", restoredMention.UserId);
-        Assert.Equal("Alice", restoredMention.DisplayName);
+        // Assert, the handler captured the custom payload
+        Assert.NotNull(snapshotMention);
+        Assert.Equal("alice", snapshotMention!.UserId);
+        Assert.Equal("Alice", snapshotMention.DisplayName);
     }
 }
 ```
