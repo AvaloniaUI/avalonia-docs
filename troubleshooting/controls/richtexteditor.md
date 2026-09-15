@@ -46,7 +46,7 @@ A document you built yourself and assigned to `TextDocument.UndoManager` is used
 
 ## Edits do not appear
 
-Group several operations into one change so the view updates once and undo treats them as a single step. `BeginChange` returns an `IDisposable`, so the scope ends with the `using` block.
+Group several operations into one change so the view updates once. Undo treats the group as a single step. `BeginChange` returns an `IDisposable`, so the scope ends with the `using` block.
 
 ```csharp
 using (document.TextDocument.BeginChange())
@@ -70,7 +70,7 @@ var document = TextDocument.FromSnapshot(snapshot);
 
 ## Text in an exported PDF is unreadable
 
-A font whose OS/2 `fsType` forbids embedding cannot be embedded, so the export substitutes one. Ask the exporter what it did rather than guessing:
+A font whose OS/2 `fsType` forbids embedding cannot be embedded. The export substitutes one. Ask the exporter what it did rather than guessing:
 
 ```csharp
 var options = new PdfSerializerOptions
@@ -93,12 +93,12 @@ Dispatcher.UIThread.VerifyAccess();
 ### Common exceptions
 
 **InvalidOperationException**: "The calling thread cannot access this object because a different thread owns it."
-- **Cause**: a `FlowDocument` or an element was constructed on one thread and read from another
-- **Fix**: build the facade on the UI thread, or work with `TextDocument` and `DocumentSnapshot`, which are not thread-bound
+- **Cause**: A `FlowDocument` or an element was constructed on one thread and read from another.
+- **Fix**: Build the facade on the UI thread, or use `TextDocument` and `DocumentSnapshot`, which are not thread-bound.
 
-**InvalidOperationException** from a serializer during editing
-- **Cause**: serializing a live document while it is being edited
-- **Fix**: capture a `DocumentSnapshot` on the UI thread first, then serialize the snapshot from wherever you like
+**InvalidOperationException** from a serializer during editing.
+- **Cause**: serializing a live document while it is being edited.
+- **Fix**: Capture a `DocumentSnapshot` on the UI thread first, then serialize the snapshot from wherever you like.
 
 ## See also
 
