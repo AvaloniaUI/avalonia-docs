@@ -29,6 +29,9 @@ const config: RedirectConfig = {
     // Redirect release notes to Releases page on GitHub
     { from: '/docs/stay-up-to-date/release-notes', to: 'https://github.com/AvaloniaUI/Avalonia/releases' },
 
+    // PdfViewer package README links to pdf-viewer
+    { from: '/controls/data-display/pdf-viewer', to: '/controls/data-display/pdfviewer' },
+
     // richtexteditor-guides folder renamed to richtexteditor
     { from: '/controls/input/text-input/richtexteditor-guides/document-viewer', to: '/controls/input/text-input/richtexteditor/document-viewer' },
     { from: '/controls/input/text-input/richtexteditor-guides/extension-patterns', to: '/controls/input/text-input/richtexteditor/extension-patterns' },

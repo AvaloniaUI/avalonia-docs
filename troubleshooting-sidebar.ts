@@ -14,6 +14,7 @@ const sidebars: SidebarsConfig = {
         'controls/mediaplayer',
         'controls/messagebox',
         'controls/numericupdown',
+        'controls/pdfviewer',
         'controls/richtexteditor',
       ],
     },
