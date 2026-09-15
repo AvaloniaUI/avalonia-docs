@@ -11,7 +11,7 @@ tags:
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-`PdfViewer` displays PDF documents. It comes with a toolbar and sidebar, page navigation, zoom, text selection, search, annotation tools, form filling, bookmarks, printing and sharing. Rendering is done by PDFium, which ships in the package.
+`PdfViewer` displays PDF documents in your Avalonia application. It is a complete reader out of the box: set a source and you have a toolbar and sidebar, page thumbnails and a document outline, page navigation, zoom and view modes, text selection and search, a full annotation toolset with undo and redo, form filling, bookmarks, and native printing and sharing. Each of these can be hidden or disabled, and everything is available from code as well as through the built-in UI. The same control and package run on Windows, macOS, Linux, iOS, Android and WebAssembly.
 
 :::info
 This control is available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
@@ -30,9 +30,22 @@ To render a page as an image outside the viewer, for example for a thumbnail in 
 - An Avalonia Pro or Enterprise license that covers the PDF Viewer.
 - Windows, macOS, Linux (x64 and arm64), iOS 15 or later, Android API 23 or later, or WebAssembly.
 
+## Dependencies
+
+The package renders with [PDFium](https://pdfium.googlesource.com/pdfium/), which is bundled as a native library through the `bblanchon.PDFium.*` NuGet packages. Each target framework depends only on the packages for its own platforms, so an app head restores nothing it does not need.
+
+| Target | Packages |
+|---|---|
+| `net10.0` (Windows, macOS, Linux) | `Avalonia`, `AvaloniaUI.Licensing`, `bblanchon.PDFium.Win32`, `bblanchon.PDFium.macOS`, `bblanchon.PDFium.Linux` |
+| `net10.0-ios` | `Avalonia`, `AvaloniaUI.Licensing`, `bblanchon.PDFium.iOS` |
+| `net10.0-android` | `Avalonia`, `Avalonia.Android`, `AvaloniaUI.Licensing`, `bblanchon.PDFium.Android` |
+| `net10.0-browser` | `Avalonia`, `AvaloniaUI.Licensing`, `bblanchon.PDFium.WebAssembly` |
+
+PDFium is licensed under the [BSD 3-Clause License](https://pdfium.googlesource.com/pdfium/+/refs/heads/main/LICENSE). Include its notice in your application's third-party attributions.
+
 ## Getting started
 
-1. Install the `Avalonia.Controls.PdfViewer` NuGet package by running `dotnet add package`. Add it to the project that contains your views and to each application head (desktop, iOS, Android, browser), so each head restores the PDFium binaries for its own platform.
+1. Install the `Avalonia.Controls.PdfViewer` NuGet package by running `dotnet add package`. Add it to the project that contains your views and to each application head (desktop, iOS, Android, browser), so each head restores the required PDFium binaries for its own platform.
 
 ```bash
 dotnet add package Avalonia.Controls.PdfViewer
