@@ -7,10 +7,10 @@ title: Release notes
 
 * Avalonia version updated from 11.3.20 to 11.3.22
 * Fixed tooltips not disappearing when cursor moves out of the window (Linux)
-* Fixed ShutdownRequested cancelation not respected (macOS)
-* Fixed MessageBox being hidden behind top most windows
+* Fixed ShutdownRequested cancellation not respected (macOS)
+* Fixed MessageBox being hidden behind topmost windows
 * Fixed popup not closing when another process activated
-* Fixed transparent Windows being black when using Nvidia EGL drivers
+* Fixed transparent windows being black when using Nvidia EGL drivers
 * Implemented heap and global memory API shims, GetShortPathName, QueryPerformanceCounter/Frequency, UnregisterClass
 
 ## XPF 1.6.6 (2026-08-11)
