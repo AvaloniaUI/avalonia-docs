@@ -90,6 +90,11 @@ Avalonia apps are made of high-level building blocks called controls, which allo
   <Pill>Avalonia Pro</Pill>
 </DocsCard>
 
+<DocsCard header="PdfViewer" href="/controls/data-display/pdfviewer" icon="/icons/pdfviewer-icon@2x.png">
+  <p>View, search, annotate, fill and print PDF documents on desktop, mobile and the browser.</p>
+  <Pill>Avalonia Pro</Pill>
+</DocsCard>
+
 <DocsCard header="Panel" href="/controls/layout/panels/panel" icon="/icons/panel-icon@2x.png">
   <p>The base class for all panel elements used to position and arrange child controls.</p>
 </DocsCard>
