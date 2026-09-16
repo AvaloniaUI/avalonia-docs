@@ -78,3 +78,17 @@ Linear gauge charts visualize a value along a horizontal or vertical bar. They a
 | `ShowMinorTicks` | Whether to display minor ticks. | `false` |
 | `MajorTickInterval` | Interval between major ticks. | `20.0` |
 | `MinorTickCount` | Number of minor ticks between two major ticks. | `4` |
+| `TickPosition` | Where tick marks are drawn relative to the track. | `Above` |
+| `LabelPosition` | Where scale labels are drawn relative to the track. | `Below` |
+
+## Tick position
+
+`TickPosition` places the tick marks around the track. Major ticks are 10 px long and minor ticks 5 px.
+
+| Value | Description |
+| :--- | :--- |
+| `Above` | Above a horizontal track or to the left of a vertical track. Default. |
+| `Below` | Below a horizontal track or to the right of a vertical track. |
+| `Cross` | Centered on the track. |
+
+In compact layouts the gauge gives up tick space first, then indicator space, and only then drops scale labels, thinning the track as it goes.
