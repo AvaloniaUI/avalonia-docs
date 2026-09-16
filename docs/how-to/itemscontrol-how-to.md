@@ -1,25 +1,24 @@
 ---
 id: itemscontrol-how-to
-title: "How to: Work with ItemsControl and ItemsRepeater"
-description: Custom collection layouts with ItemsControl and ItemsRepeater beyond what ListBox offers.
+title: "How to: Work with ItemsControl"
+description: Customize collection layouts using ItemsControl
 doc-type: how-to
 ---
 
-This guide covers using [`ItemsControl`](/api/avalonia/controls/itemscontrol) and `ItemsRepeater` for custom collection layouts that go beyond what [`ListBox`](/api/avalonia/controls/listbox) offers.
+This guide covers using [`ItemsControl`](/controls/data-display/collections/itemscontrol) to create custom collection layouts.
 
-## When to Use Each Control
+## `ItemsControl` vs. `ListBox`
+
+Use `ItemsControl` when you need to display a small-to-medium collection without selection behavior. Use `ListBox` when you need a virtualized, selectable collection.
 
 | Control | Selection | Virtualization | Best For |
 |---|---|---|---|
 | `ListBox` | Built-in | Yes | Selectable lists |
-| `ItemsControl` | None | No (by default) | Small collections, custom layouts |
-| `ItemsRepeater` | None | Yes | Large collections, custom layouts, performance |
+| `ItemsControl` | None | No (by default) | Custom layouts |
 
-Use `ItemsControl` when you need to display a collection without selection behavior. Use `ItemsRepeater` when you also need virtualization for large data sets.
+## `ItemsControl` basic usage
 
-## ItemsControl basics
-
-`ItemsControl` renders each item using a data template, with no selection, hover, or focus styling:
+`ItemsControl` renders each item identically according to a data template. It does not provide selection, hover, or focus styling.
 
 <XamlPreview>
 
@@ -32,8 +31,10 @@ Use `ItemsControl` when you need to display a collection without selection behav
   <ItemsControl ItemsSource="{Binding Tags}">
     <ItemsControl.ItemTemplate>
       <DataTemplate>
-        <Border Background="gray" CornerRadius="12"
-                Padding="8,4" Margin="2"
+        <Border Background="gray"
+                CornerRadius="12"
+                Padding="8,4"
+                Margin="2"
                 HorizontalAlignment="Left">
           <TextBlock Text="{Binding}" />
         </Border>
@@ -64,17 +65,21 @@ public class MainViewModel
 
 ### Custom panel
 
-`ItemsControl` displays content in an `ItemsPanel`, which is a `StackPanel` by default. To change how items are arranged, you can replace it with a different control. Use `ItemsPanelTemplate` to override the default, then add a layout control of your choice.
+`ItemsControl` displays its content in an `ItemsPanel`, which is a layout control that defaults to `StackPanel`.
+
+To change how items are arranged, you can replace the `StackPanel` with a different control. Use `ItemsPanelTemplate` to override the default, then add a layout control of your choice.
 
 <XamlPreview>
 
 ```xml
 <UserControl xmlns="https://github.com/avaloniaui"
              xmlns:vm="using:CustomItemsPanel">
+
   <UserControl.DataContext>
     <vm:MainViewModel/>
   </UserControl.DataContext>
-<ItemsControl ItemsSource="{Binding Tags}">
+
+  <ItemsControl ItemsSource="{Binding Tags}">
     <ItemsControl.ItemsPanel>
         <!-- Change to a WrapPanel to wrap items horizontally -->
         <ItemsPanelTemplate>
@@ -83,12 +88,16 @@ public class MainViewModel
     </ItemsControl.ItemsPanel>
     <ItemsControl.ItemTemplate>
         <DataTemplate>
-            <Border Background="gray" CornerRadius="16" Padding="12,6" Margin="4">
+            <Border Background="gray"
+                    CornerRadius="16" 
+                    Padding="12,6"
+                    Margin="4">
                 <TextBlock Text="{Binding}" />
             </Border>
         </DataTemplate>
     </ItemsControl.ItemTemplate>
-</ItemsControl>
+  </ItemsControl>
+
 </UserControl>
 ```
 
@@ -123,26 +132,32 @@ public class MainViewModel
   <UserControl.DataContext>
     <vm:MainViewModel/>
   </UserControl.DataContext>
-    <ItemsControl ItemsSource="{Binding Steps}">
-        <ItemsControl.ItemsPanel>
-            <ItemsPanelTemplate>
-                <StackPanel Orientation="Horizontal" Spacing="16" />
-            </ItemsPanelTemplate>
-        </ItemsControl.ItemsPanel>
-        <ItemsControl.ItemTemplate>
-            <DataTemplate>
-                <StackPanel Width="120">
-                    <Border Width="40" Height="40" CornerRadius="20"
-                            Background="#6366F1" HorizontalAlignment="Center">
-                        <TextBlock Text="{Binding Number}" Foreground="White"
-                                   HorizontalAlignment="Center" VerticalAlignment="Center" />
-                    </Border>
-                    <TextBlock Text="{Binding Title}" HorizontalAlignment="Center"
-                               Margin="0,8,0,0" />
-                </StackPanel>
-            </DataTemplate>
-        </ItemsControl.ItemTemplate>
-    </ItemsControl>
+
+  <ItemsControl ItemsSource="{Binding Steps}">
+    <ItemsControl.ItemsPanel>
+      <ItemsPanelTemplate>
+        <StackPanel Orientation="Horizontal" Spacing="16" />
+      </ItemsPanelTemplate>
+    </ItemsControl.ItemsPanel>
+    <ItemsControl.ItemTemplate>
+      <DataTemplate>
+        <StackPanel Width="120">
+          <Border Width="40" Height="40"
+                  CornerRadius="20"
+                  Background="#6366F1"
+                  HorizontalAlignment="Center">
+          <TextBlock Text="{Binding Number}"
+                     Foreground="White"
+                     HorizontalAlignment="Center"
+                     VerticalAlignment="Center" />
+          </Border>
+          <TextBlock Text="{Binding Title}"
+                     HorizontalAlignment="Center"
+                     Margin="0,8,0,0" />
+        </StackPanel>
+      </DataTemplate>
+    </ItemsControl.ItemTemplate>
+  </ItemsControl>
 </UserControl>
 ```
 
@@ -175,140 +190,125 @@ public class MainViewModel
 
 </XamlPreview>
 
-## ItemsRepeater
+### Empty state
 
-`ItemsRepeater` is a lower-level control designed for performance. It supports virtualization and custom layout algorithms.
+To show an empty state indicator when the collection is empty, wrap `ItemsControl` in a `Panel` and set a second control that becomes visible when there are no items in the collection.
 
-### Basic usage
-
-`ItemsRepeater` must be placed inside a `ScrollViewer` for scrolling support:
+In this example, a `TextBlock` is used to display a simple text message. Its `IsVisible` property is bound to the `ItemsControl.ItemCount` property, so the message only appears when `ItemCount` is zero.
 
 ```xml
-<ScrollViewer>
-    <ItemsRepeater ItemsSource="{Binding Items}">
-        <ItemsRepeater.ItemTemplate>
-            <DataTemplate>
-                <Border Padding="8" Margin="0,0,0,4"
-                        BorderBrush="#E0E0E0" BorderThickness="0,0,0,1">
-                    <TextBlock Text="{Binding Title}" />
-                </Border>
-            </DataTemplate>
-        </ItemsRepeater.ItemTemplate>
-    </ItemsRepeater>
-</ScrollViewer>
-```
+<!-- Set a resource that converts string to int, so that ItemCount can compare correctly. -->
+<Window.Resources>
+  <x:Int32 x:Key="Zero">0</x:Int32>
+</Window.Resources>
 
-### Stack layout
-
-The default layout stacks items vertically. Configure spacing:
-
-```xml
-<ItemsRepeater ItemsSource="{Binding Items}">
-    <ItemsRepeater.Layout>
-        <StackLayout Spacing="8" Orientation="Vertical" />
-    </ItemsRepeater.Layout>
-    <ItemsRepeater.ItemTemplate>
-        <DataTemplate>
-            <Border Background="#F5F5F5" CornerRadius="4" Padding="12">
-                <TextBlock Text="{Binding}" />
-            </Border>
-        </DataTemplate>
-    </ItemsRepeater.ItemTemplate>
-</ItemsRepeater>
-```
-
-### Horizontal stack
-
-```xml
-<ScrollViewer HorizontalScrollBarVisibility="Auto"
-              VerticalScrollBarVisibility="Disabled">
-    <ItemsRepeater ItemsSource="{Binding Cards}">
-        <ItemsRepeater.Layout>
-            <StackLayout Spacing="12" Orientation="Horizontal" />
-        </ItemsRepeater.Layout>
-        <ItemsRepeater.ItemTemplate>
-            <DataTemplate>
-                <Border Width="200" Height="150" Background="#6366F1"
-                        CornerRadius="8" Padding="16">
-                    <TextBlock Text="{Binding Title}" Foreground="White" />
-                </Border>
-            </DataTemplate>
-        </ItemsRepeater.ItemTemplate>
-    </ItemsRepeater>
-</ScrollViewer>
-```
-
-### Wrap layout (UniformGridLayout)
-
-Display items in a responsive grid that wraps:
-
-```xml
-<ScrollViewer>
-    <ItemsRepeater ItemsSource="{Binding Photos}">
-        <ItemsRepeater.Layout>
-            <UniformGridLayout MinItemWidth="150" MinItemHeight="150"
-                               MinRowSpacing="8" MinColumnSpacing="8" />
-        </ItemsRepeater.Layout>
-        <ItemsRepeater.ItemTemplate>
-            <DataTemplate>
-                <Border CornerRadius="4" ClipToBounds="True">
-                    <Image Source="{Binding Thumbnail}" Stretch="UniformToFill" />
-                </Border>
-            </DataTemplate>
-        </ItemsRepeater.ItemTemplate>
-    </ItemsRepeater>
-</ScrollViewer>
-```
-
-`UniformGridLayout` automatically calculates the number of columns based on the available width and `MinItemWidth`.
-
-## Adding Click Handling to ItemsRepeater
-
-Since `ItemsRepeater` has no built-in selection, add click handling with a Button or Tapped event:
-
-```xml
-<ItemsRepeater ItemsSource="{Binding Items}">
-    <ItemsRepeater.ItemTemplate>
-        <DataTemplate>
-            <Button Command="{Binding $parent[ItemsRepeater].((vm:MainViewModel)DataContext).SelectCommand}"
-                    CommandParameter="{Binding}"
-                    HorizontalAlignment="Stretch"
-                    HorizontalContentAlignment="Stretch"
-                    Background="Transparent" BorderThickness="0" Padding="0">
-                <Border Padding="12" Background="#F8F8F8" CornerRadius="4">
-                    <TextBlock Text="{Binding Name}" />
-                </Border>
-            </Button>
-        </DataTemplate>
-    </ItemsRepeater.ItemTemplate>
-</ItemsRepeater>
-```
-
-## Empty State
-
-Show a placeholder when the collection is empty:
-
-```xml
+<!-- Only one of ItemsControl or TextBlock is ever displayed, so wrap everything in a Panel. -->
 <Panel>
-    <ScrollViewer>
-        <ItemsRepeater ItemsSource="{Binding Items}"
-                       IsVisible="{Binding Items.Count}">
-            <!-- item template -->
-        </ItemsRepeater>
-    </ScrollViewer>
 
-    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center"
-                IsVisible="{Binding !Items.Count}" Spacing="8">
-        <PathIcon Data="{StaticResource EmptyIcon}" Width="48" Height="48"
-                  Foreground="Gray" />
-        <TextBlock Text="No items yet" Foreground="Gray" />
-    </StackPanel>
+  <!-- Give the ItemsControl a name, so the TextBlock can refer to it. -->
+  <ItemsControl x:Name="TagsList"
+                ItemsSource="{Binding Tags}">
+    <ItemsControl.ItemTemplate>
+      <DataTemplate>
+        <Border Background="gray"
+                CornerRadius="12"
+                Padding="8,4"
+                Margin="2"
+                HorizontalAlignment="Left">
+          <TextBlock Text="{Binding}" />
+        </Border>
+      </DataTemplate>
+    </ItemsControl.ItemTemplate>
+  </ItemsControl>
+
+  <!-- Use IsVisible to display the TextBlock when the TagsList ItemsControl has no items, as counted by the ItemCount property. -->
+  <TextBlock Text="No tags"
+             Margin="2"
+             Opacity="0.6"
+             HorizontalAlignment="Left"
+             VerticalAlignment="Top"
+             IsVisible="{Binding #TagsList.ItemCount,
+                         Converter={x:Static ObjectConverters.Equal},
+                         ConverterParameter={StaticResource Zero}}" />
 </Panel>
 ```
 
-## Customizing Containers with PreparingContainer
+### Virtualized scrollable items
 
-The `PreparingContainer` event fires each time an `ItemsControl` creates or recycles a container for a data item. Use it to apply per-item customizations that cannot be expressed through a `DataTemplate` alone, such as conditional styling based on item data:
+To turn `ItemsControl` into a virtualized, scrollable display, you can wrap it in a [ScrollViewer](/controls/layout/containers/scrollviewer) and [customize the `ItemsPanel`](#custom-panel) into a [`VirtualizingStackPanel`](/api/avalonia/controls/virtualizingstackpanel).
+
+The resulting control displays items similarly as a [`ListBox`](/controls/data-display/collections/listbox), but without selection behavior.
+
+<XamlPreview>
+
+```xml
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:vm="using:VirtualizingScrollingItems">
+  <UserControl.DataContext>
+    <vm:MainViewModel/>
+  </UserControl.DataContext>
+
+  <ScrollViewer>
+    <ItemsControl ItemsSource="{Binding Tags}">
+      <ItemsControl.ItemsPanel>
+        <ItemsPanelTemplate>
+          <VirtualizingStackPanel />
+        </ItemsPanelTemplate>
+      </ItemsControl.ItemsPanel>
+      <ItemsControl.ItemTemplate>
+        <DataTemplate>
+          <Border Background="gray"
+                  CornerRadius="12"
+                  Padding="8,4"
+                  Margin="2"
+                  HorizontalAlignment="Left">
+            <TextBlock Text="{Binding}" />
+          </Border>
+        </DataTemplate>
+      </ItemsControl.ItemTemplate>
+    </ItemsControl>
+  </ScrollViewer>
+</UserControl>
+```
+
+```csharp
+using System.Collections.ObjectModel;
+
+namespace VirtualizingScrollingItems;
+
+public class MainViewModel
+{
+    public ObservableCollection<string> Tags { get; set; } = new()
+    {
+        "apples",
+        "oranges",
+        "bananas",
+        "pears",
+        "mangoes",
+        "guavas",
+        "grapes",
+        "dragonfruits",
+        "lemons",
+        "limes",
+        "kiwis",
+        "watermelons",
+        "strawberries",
+        "blueberries",
+        "cherries",
+        "passionfruits",
+        "peaches",
+        "plums",
+        "figs",
+        "kumquats",
+    };
+}
+```
+
+</XamlPreview>
+
+## Customizing containers with `PreparingContainer`
+
+The `PreparingContainer` event fires each time `ItemsControl` creates or recycles a container for a data item. Use it to apply per-item customizations, such as conditional styling based on item data:
 
 ```csharp
 myItemsControl.PreparingContainer += (sender, e) =>
@@ -320,17 +320,18 @@ myItemsControl.PreparingContainer += (sender, e) =>
 };
 ```
 
-The companion `ClearingContainer` event fires when a container is being recycled or removed, allowing you to clean up any customizations.
+The companion `ContainerClearing` event fires each time a container is cleared, either for reuse or removal. Use this event to clean up customizations, if required.
 
-## Performance Tips
+## Performance tips
 
-- Use `ItemsRepeater` with `StackLayout` or `UniformGridLayout` for automatic virtualization.
-- Avoid `WrapPanel` in `ItemsControl.ItemsPanel` for large collections as it does not virtualize.
+- Avoid using `WrapPanel` as the `ItemsPanel` for large collections, as it does not virtualize.
 - Keep item templates lightweight. Complex templates slow down scrolling.
-- For very large collections (10,000+ items), prefer `ItemsRepeater` over `ListBox`.
 
-## See Also
+For more general tips on optimizing performance, see [Performance](/docs/app-development/performance).
 
-- [Performance](/docs/app-development/performance): Virtualization and collection performance.
+## See also
+
+- [ItemsControl](/controls/data-display/collections/itemscontrol)
+- [ItemsControl API reference](/api/avalonia/controls/itemscontrol)
 - [Data Templates](/docs/data-templates/introduction-to-data-templates): How templates work.
 - [ListBox How-To](/docs/how-to/listbox-how-to): When selection behavior is needed.

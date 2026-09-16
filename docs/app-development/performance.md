@@ -9,7 +9,7 @@ This guide covers common performance considerations for Avalonia applications an
 
 ## UI virtualization
 
-When displaying large collections, virtualization ensures only visible items are created and rendered. Some controls support virtualization by default, such as [`ListBox`](/controls/data-display/collections/listbox) or [`ItemsRepeater`](/controls/data-display/collections/itemsrepeater).
+When displaying large collections, virtualization ensures only visible items are created and rendered. Some controls support virtualization by default, such as [`ListBox`](/controls/data-display/collections/listbox).
 
 ### How virtualization works
 
@@ -35,25 +35,6 @@ Virtualization requires a constrained height. If the item is inside a control th
     <TextBlock DockPanel.Dock="Top" Text="Items" />
     <ListBox ItemsSource="{Binding LargeCollection}" />
 </DockPanel>
-```
-
-### `ItemsRepeater` for custom layouts
-
-`ItemsRepeater` provides a lower-level virtualizing control for custom layouts:
-
-```xml
-<ScrollViewer>
-    <ItemsRepeater ItemsSource="{Binding Items}">
-        <ItemsRepeater.Layout>
-            <StackLayout Spacing="4" />
-        </ItemsRepeater.Layout>
-        <ItemsRepeater.ItemTemplate>
-            <DataTemplate>
-                <TextBlock Text="{Binding Name}" />
-            </DataTemplate>
-        </ItemsRepeater.ItemTemplate>
-    </ItemsRepeater>
-</ScrollViewer>
 ```
 
 ### Buffer factor for smooth scrolling

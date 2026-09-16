@@ -1,0 +1,214 @@
+---
+title: 'IndentConverter'
+hide_title: true
+slug: '/avalonia/controls/converters/indentconverter'
+uid: 'Avalonia.Controls.Converters.IndentConverter'
+commentId: 'T:Avalonia.Controls.Converters.IndentConverter'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.TreeDataGrid'
+assembly: 'Avalonia.Controls.TreeDataGrid'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Converters'
+tfms:
+  - 'net8.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IndentConverter Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Converters</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Converts an integer indentation level to a [Avalonia.Thickness](xref:Avalonia.Thickness) value for use in
+hierarchical data displays.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class IndentConverter
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> IndentConverter
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="../../data/converters/ivalueconverter">IValueConverter</a>
+</div>
+</div>
+
+## Remarks
+
+[IndentConverter](xref:Avalonia.Controls.Converters.IndentConverter) is primarily used in the [TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid) control to create appropriate left
+margin indentation for hierarchical data. It multiplies the input indent level by 20
+device-independent pixels to create a left margin, resulting in a visual tree structure.
+
+This converter is typically used in templates for [Avalonia.Controls.Primitives.TreeDataGridExpanderCell](xref:Avalonia.Controls.Primitives.TreeDataGridExpanderCell) or
+other controls that display hierarchical data where rows need different levels of
+indentation based on their depth in the hierarchy.
+
+Example usage in XAML:
+
+```csharp
+<Border Margin="{Binding Indent, Converter={x:Static converters:IndentConverter.Instance}}"/>
+```
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [IndentConverter](#uid-a6f1eb7935) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a6f1eb7935"></span>
+
+### IndentConverter Constructor
+
+```csharp
+public IndentConverter()
+```
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Convert](#uid-d9511519b4) | Converts an integer indent value to a [Avalonia.Thickness](xref:Avalonia.Thickness) with the appropriate left margin. |
+| [ConvertBack](#uid-471de4841c) | Converts a thickness back to an integer indent value. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d9511519b4"></span>
+
+### Convert Method
+
+Converts an integer indent value to a [Avalonia.Thickness](xref:Avalonia.Thickness) with the appropriate left margin.
+
+```csharp
+public object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
+```
+
+#### Parameters
+
+`value` object
+
+An integer representing the indentation level.
+
+
+`targetType` Type
+
+The type of the binding target property.
+
+
+`parameter` object
+
+Optional parameter (not used).
+
+
+`culture` System.Globalization.CultureInfo
+
+Culture information (not used).
+
+
+#### Returns
+
+object
+
+A [Avalonia.Thickness](xref:Avalonia.Thickness) where the left value is set to 20 * indent and other values are 0.
+Returns an empty [Avalonia.Thickness](xref:Avalonia.Thickness) if value is not an integer.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-471de4841c"></span>
+
+### ConvertBack Method
+
+Converts a thickness back to an integer indent value.
+
+```csharp
+public object ConvertBack(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
+```
+
+#### Parameters
+
+`value` object
+
+The thickness to convert back.
+
+
+`targetType` Type
+
+The type of the binding target property.
+
+
+`parameter` object
+
+Optional parameter (not used).
+
+
+`culture` System.Globalization.CultureInfo
+
+Culture information (not used).
+
+
+#### Returns
+
+object
+
+This operation is not supported and will throw [NotImplementedException](xref:System.NotImplementedException).
+
+
+#### Exceptions
+
+- [This method is not implemented.](xref:System.NotImplementedException)
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Instance](#uid-82c6eb7369) | Gets a shared instance of the [Avalonia.Controls.Converters.IndentConverter](xref:Avalonia.Controls.Converters.IndentConverter). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-82c6eb7369"></span>
+
+### Instance Property
+
+Gets a shared instance of the [Avalonia.Controls.Converters.IndentConverter](xref:Avalonia.Controls.Converters.IndentConverter).
+
+```csharp
+public Avalonia.Controls.Converters.IndentConverter Instance { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

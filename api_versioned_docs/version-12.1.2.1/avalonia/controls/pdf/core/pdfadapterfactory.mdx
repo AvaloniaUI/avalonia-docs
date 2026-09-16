@@ -1,0 +1,143 @@
+---
+title: 'PdfAdapterFactory'
+hide_title: true
+slug: '/avalonia/controls/pdf/core/pdfadapterfactory'
+uid: 'Avalonia.Controls.Pdf.Core.PdfAdapterFactory'
+commentId: 'T:Avalonia.Controls.Pdf.Core.PdfAdapterFactory'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.PdfViewer'
+assembly: 'Avalonia.Controls.PdfViewer'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Pdf.Core'
+tfms:
+  - 'net10.0-ios26.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">PdfAdapterFactory Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Pdf.Core</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.PdfViewer</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.PdfViewer</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Manages PDF adapter creation with platform detection.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class PdfAdapterFactory
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> PdfAdapterFactory
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [CreateAdapter](#uid-1b17543fd7) | Creates an adapter for the current platform. |
+| [GetFactory](#uid-1a27a3bc53) | Gets the best available factory for the current platform. |
+| [RegisterFactory](#uid-c1807a5ec3) | Registers a platform-specific factory. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1b17543fd7"></span>
+
+### CreateAdapter Method
+
+Creates an adapter for the current platform.
+
+```csharp
+public Avalonia.Controls.Pdf.Core.IPdfAdapter CreateAdapter()
+```
+
+#### Returns
+
+[Avalonia.Controls.Pdf.Core.IPdfAdapter](xref:Avalonia.Controls.Pdf.Core.IPdfAdapter)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1a27a3bc53"></span>
+
+### GetFactory Method
+
+Gets the best available factory for the current platform.
+
+```csharp
+public Avalonia.Controls.Pdf.Core.IPdfAdapterFactory GetFactory()
+```
+
+#### Returns
+
+[Avalonia.Controls.Pdf.Core.IPdfAdapterFactory](xref:Avalonia.Controls.Pdf.Core.IPdfAdapterFactory)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c1807a5ec3"></span>
+
+### RegisterFactory Method
+
+Registers a platform-specific factory.
+
+```csharp
+public void RegisterFactory(Avalonia.Controls.Pdf.Core.IPdfAdapterFactory factory)
+```
+
+#### Parameters
+
+`factory` [Avalonia.Controls.Pdf.Core.IPdfAdapterFactory](xref:Avalonia.Controls.Pdf.Core.IPdfAdapterFactory)
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [IsSupported](#uid-5578cbdae0) | Checks if PDF viewing is supported on the current platform. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5578cbdae0"></span>
+
+### IsSupported Property
+
+Checks if PDF viewing is supported on the current platform.
+
+```csharp
+public bool IsSupported { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

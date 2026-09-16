@@ -247,11 +247,24 @@ const sidebars: SidebarsConfig = {
           items:[
               'data-display/collections/carousel',
               'data-display/collections/itemscontrol',
-              'data-display/collections/itemsrepeater',
               'data-display/collections/listbox',
           ],
         },
         'data-display/contentcontrol',
+        {
+          type: 'category',
+          label: 'PdfViewer',
+          collapsed: true,
+          items: [
+            'data-display/pdfviewer/index',
+            'data-display/pdfviewer/loading-and-saving',
+            'data-display/pdfviewer/navigation-and-search',
+            'data-display/pdfviewer/annotations',
+            'data-display/pdfviewer/printing-and-sharing',
+            'data-display/pdfviewer/theming-and-localization',
+            'data-display/pdfviewer/platforms-and-performance',
+          ],
+        },
         {
           type: 'category',
           label: 'Structured data',

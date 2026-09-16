@@ -1,0 +1,231 @@
+---
+title: 'IStorageItem'
+hide_title: true
+slug: '/avalonia/platform/storage/istorageitem'
+uid: 'Avalonia.Platform.Storage.IStorageItem'
+commentId: 'T:Avalonia.Platform.Storage.IStorageItem'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Platform.Storage'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IStorageItem Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Platform.Storage</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Manipulates storage items (files and folders) and their contents, and provides information about them
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface IStorageItem
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IDisposable
+</div>
+</div>
+
+## Remarks
+
+This interface inherits [IDisposable](xref:System.IDisposable) . It's recommended to dispose [Avalonia.Platform.Storage.IStorageItem](xref:Avalonia.Platform.Storage.IStorageItem) when it's not used anymore.
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [DeleteAsync](#uid-8e9a7cfd51) | Deletes the current storage item and it's contents |
+| [GetBasicPropertiesAsync](#uid-d598a65224) | Gets the basic properties of the current item. |
+| [GetParentAsync](#uid-b325b01e5f) | Gets the parent folder of the current storage item. |
+| [MoveAsync](#uid-d7f8f4e352) | Moves the current storage item and it's contents to a [Avalonia.Platform.Storage.IStorageFolder](xref:Avalonia.Platform.Storage.IStorageFolder) |
+| [SaveBookmarkAsync](#uid-adc0859ffa) | Saves items to a bookmark. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8e9a7cfd51"></span>
+
+### DeleteAsync Method
+
+Deletes the current storage item and it's contents
+
+```csharp
+public System.Threading.Tasks.Task DeleteAsync()
+```
+
+#### Returns
+
+System.Threading.Tasks.Task
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d598a65224"></span>
+
+### GetBasicPropertiesAsync Method
+
+Gets the basic properties of the current item.
+
+```csharp
+public System.Threading.Tasks.Task<Avalonia.Platform.Storage.StorageItemProperties> GetBasicPropertiesAsync()
+```
+
+#### Returns
+
+System.Threading.Tasks.Task&lt;[Avalonia.Platform.Storage.StorageItemProperties](xref:Avalonia.Platform.Storage.StorageItemProperties)&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b325b01e5f"></span>
+
+### GetParentAsync Method
+
+Gets the parent folder of the current storage item.
+
+```csharp
+public System.Threading.Tasks.Task<Avalonia.Platform.Storage.IStorageFolder> GetParentAsync()
+```
+
+#### Returns
+
+System.Threading.Tasks.Task&lt;[Avalonia.Platform.Storage.IStorageFolder](xref:Avalonia.Platform.Storage.IStorageFolder)&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d7f8f4e352"></span>
+
+### MoveAsync Method
+
+Moves the current storage item and it's contents to a [Avalonia.Platform.Storage.IStorageFolder](xref:Avalonia.Platform.Storage.IStorageFolder)
+
+```csharp
+public System.Threading.Tasks.Task<Avalonia.Platform.Storage.IStorageItem> MoveAsync(Avalonia.Platform.Storage.IStorageFolder destination)
+```
+
+#### Parameters
+
+`destination` [Avalonia.Platform.Storage.IStorageFolder](xref:Avalonia.Platform.Storage.IStorageFolder)
+
+The [Avalonia.Platform.Storage.IStorageFolder](xref:Avalonia.Platform.Storage.IStorageFolder) to move the item into
+
+
+#### Returns
+
+System.Threading.Tasks.Task&lt;[Avalonia.Platform.Storage.IStorageItem](xref:Avalonia.Platform.Storage.IStorageItem)&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-adc0859ffa"></span>
+
+### SaveBookmarkAsync Method
+
+Saves items to a bookmark.
+
+```csharp
+public System.Threading.Tasks.Task<string> SaveBookmarkAsync()
+```
+
+#### Returns
+
+System.Threading.Tasks.Task&lt;string&gt;
+
+Returns identifier of a bookmark. Can be null if OS denied request.
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [CanBookmark](#uid-5ad9b0509e) | Returns true is item can be bookmarked and reused later. |
+| [Name](#uid-aaac65aef5) | Gets the name of the item including the file name extension if there is one. |
+| [Path](#uid-74ea660276) | Gets the file-system path of the item. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5ad9b0509e"></span>
+
+### CanBookmark Property
+
+Returns true is item can be bookmarked and reused later.
+
+```csharp
+public bool CanBookmark { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-aaac65aef5"></span>
+
+### Name Property
+
+Gets the name of the item including the file name extension if there is one.
+
+```csharp
+public string Name { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-74ea660276"></span>
+
+### Path Property
+
+Gets the file-system path of the item.
+
+```csharp
+public Uri Path { get; set; }
+```
+
+#### Remarks
+
+Android backend might return file path with "content:" scheme.
+Browser and iOS backends might return relative uris.
+
+</section>
+
+</ApiRefPage>
+

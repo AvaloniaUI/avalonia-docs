@@ -1,0 +1,139 @@
+---
+title: 'PdfShareRequestedEventArgs'
+hide_title: true
+slug: '/avalonia/controls/pdfsharerequestedeventargs'
+uid: 'Avalonia.Controls.PdfShareRequestedEventArgs'
+commentId: 'T:Avalonia.Controls.PdfShareRequestedEventArgs'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.PdfViewer'
+assembly: 'Avalonia.Controls.PdfViewer'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0-ios26.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">PdfShareRequestedEventArgs Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.PdfViewer</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.PdfViewer</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Raised before the viewer shares. Set [Avalonia.Controls.PdfShareRequestedEventArgs.Handled](xref:Avalonia.Controls.PdfShareRequestedEventArgs.Handled) to take over sharing in the
+application; the built-in platform share service is then skipped.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class PdfShareRequestedEventArgs
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> EventArgs <span className="apiref-page__relation-separator">-&gt;</span> PdfShareRequestedEventArgs
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [GetDocumentBytesAsync](#uid-0da655b11e) | Exports the document, including unsaved annotation edits, as PDF bytes. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0da655b11e"></span>
+
+### GetDocumentBytesAsync Method
+
+Exports the document, including unsaved annotation edits, as PDF bytes.
+
+```csharp
+public System.Threading.Tasks.Task<byte[]> GetDocumentBytesAsync(System.Threading.CancellationToken cancellationToken)
+```
+
+#### Parameters
+
+`cancellationToken` System.Threading.CancellationToken
+
+
+#### Returns
+
+System.Threading.Tasks.Task&lt;byte[]&gt;
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Document](#uid-6462af8b7a) | The loaded document. |
+| [Handled](#uid-8d5095ed10) | Set to `true` when the application has handled the request itself. |
+| [Options](#uid-d132616a1a) | Share options; the viewer pre-fills [Avalonia.Controls.Pdf.Services.ShareOptions.Title](xref:Avalonia.Controls.Pdf.Services.ShareOptions.Title), [Avalonia.Controls.Pdf.Services.ShareOptions.Owner](xref:Avalonia.Controls.Pdf.Services.ShareOptions.Owner) and [Avalonia.Controls.Pdf.Services.ShareOptions.Anchor](xref:Avalonia.Controls.Pdf.Services.ShareOptions.Anchor). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6462af8b7a"></span>
+
+### Document Property
+
+The loaded document.
+
+```csharp
+public Avalonia.Controls.Pdf.Core.IPdfDocument Document { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8d5095ed10"></span>
+
+### Handled Property
+
+Set to `true` when the application has handled the request itself.
+
+```csharp
+public bool Handled { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d132616a1a"></span>
+
+### Options Property
+
+Share options; the viewer pre-fills [Avalonia.Controls.Pdf.Services.ShareOptions.Title](xref:Avalonia.Controls.Pdf.Services.ShareOptions.Title), [Avalonia.Controls.Pdf.Services.ShareOptions.Owner](xref:Avalonia.Controls.Pdf.Services.ShareOptions.Owner) and [Avalonia.Controls.Pdf.Services.ShareOptions.Anchor](xref:Avalonia.Controls.Pdf.Services.ShareOptions.Anchor).
+
+```csharp
+public Avalonia.Controls.Pdf.Services.ShareOptions Options { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+
