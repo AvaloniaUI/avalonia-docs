@@ -1,0 +1,78 @@
+---
+title: 'IHighlightableChart'
+hide_title: true
+slug: '/avalonia/controls/charts/ihighlightablechart'
+uid: 'Avalonia.Controls.Charts.IHighlightableChart'
+commentId: 'T:Avalonia.Controls.Charts.IHighlightableChart'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Charts'
+assembly: 'Avalonia.Controls.Charts'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Charts'
+tfms:
+  - 'net9.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IHighlightableChart Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Charts</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Charts</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Charts</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Exposes chart-level hover highlighting for chart types that support dimming or emphasizing
+data points while the pointer is over a data point.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface IHighlightableChart
+```
+
+</div>
+
+## Remarks
+
+Implement this contract only when the chart has real hover-highlight rendering behavior.
+This keeps [Avalonia.Controls.Charts.IHighlightableChart.IsHighlightEnabled](xref:Avalonia.Controls.Charts.IHighlightableChart.IsHighlightEnabled) off chart types where it would be a no-op.
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [IsHighlightEnabled](#uid-8f484ab0c6) | Gets or sets whether pointer hover highlighting is enabled. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8f484ab0c6"></span>
+
+### IsHighlightEnabled Property
+
+Gets or sets whether pointer hover highlighting is enabled.
+
+```csharp
+public bool IsHighlightEnabled { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

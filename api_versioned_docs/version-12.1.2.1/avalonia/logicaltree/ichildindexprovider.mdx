@@ -1,0 +1,133 @@
+---
+title: 'IChildIndexProvider'
+hide_title: true
+slug: '/avalonia/logicaltree/ichildindexprovider'
+uid: 'Avalonia.LogicalTree.IChildIndexProvider'
+commentId: 'T:Avalonia.LogicalTree.IChildIndexProvider'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.LogicalTree'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IChildIndexProvider Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.LogicalTree</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Child's index and total count information provider used by list-controls ([ListBox](xref:Avalonia.Controls.ListBox), [StackPanel](xref:Avalonia.Controls.StackPanel), etc.)
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface IChildIndexProvider
+```
+
+</div>
+
+## Remarks
+
+Used by nth-child and nth-last-child selectors.
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [GetChildIndex](#uid-147b451016) | Gets child's actual index in order of the original source. |
+| [TryGetTotalCount](#uid-478d7ebd91) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-147b451016"></span>
+
+### GetChildIndex Method
+
+Gets child's actual index in order of the original source.
+
+```csharp
+public int GetChildIndex(Avalonia.LogicalTree.ILogical child)
+```
+
+#### Parameters
+
+`child` [Avalonia.LogicalTree.ILogical](xref:Avalonia.LogicalTree.ILogical)
+
+Logical child.
+
+
+#### Returns
+
+int
+
+Index or -1 if child was not found.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-478d7ebd91"></span>
+
+### TryGetTotalCount Method
+
+```csharp
+public bool TryGetTotalCount(int& count)
+```
+
+#### Parameters
+
+`count` int&amp;
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [ChildIndexChanged](#uid-41b7f16f4a) | Notifies subscriber when a child's index was changed. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-41b7f16f4a"></span>
+
+### ChildIndexChanged Event
+
+Notifies subscriber when a child's index was changed.
+
+```csharp
+public event EventHandler<Avalonia.LogicalTree.ChildIndexChangedEventArgs> ChildIndexChanged
+```
+
+</section>
+
+</ApiRefPage>
+

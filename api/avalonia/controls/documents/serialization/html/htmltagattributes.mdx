@@ -1,0 +1,178 @@
+---
+title: 'HtmlTagAttributes'
+hide_title: true
+slug: '/avalonia/controls/documents/serialization/html/htmltagattributes'
+uid: 'Avalonia.Controls.Documents.Serialization.Html.HtmlTagAttributes'
+commentId: 'T:Avalonia.Controls.Documents.Serialization.Html.HtmlTagAttributes'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Documents.Serialization.Html'
+assembly: 'Avalonia.Controls.Documents.Serialization.Html'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.Serialization.Html'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">HtmlTagAttributes Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.Serialization.Html</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Documents.Serialization.Html</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Documents.Serialization.Html</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+The attributes of a single HTML tag, handed to an [Avalonia.Controls.Documents.Serialization.Html.IHtmlTagHandler](xref:Avalonia.Controls.Documents.Serialization.Html.IHtmlTagHandler).
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct HtmlTagAttributes
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> HtmlTagAttributes
+</div>
+</div>
+
+## Remarks
+
+Names and values are spans into the tag text the tokenizer is currently holding, so reading
+them allocates nothing. The spans are only valid for the duration of the handler callback;
+call [ReadOnlySpan&lt;T&gt;.ToString](xref:System.ReadOnlySpan%601.ToString) on anything that has to outlive it.
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [GetName](#uid-dfda5922f6) | Gets the name of the attribute at `index`, in the casing the document used. |
+| [GetValue](#uid-eb7654de0c) | Gets the value of the attribute at `index` with the surrounding quotes stripped. Empty for a boolean attribute such as `disabled`. |
+| [TryGetValue](#uid-94d0fd9323) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-dfda5922f6"></span>
+
+### GetName Method
+
+Gets the name of the attribute at `index`, in the casing the document used.
+
+```csharp
+public ReadOnlySpan<char> GetName(int index)
+```
+
+#### Parameters
+
+`index` int
+
+The zero-based attribute index.
+
+
+#### Returns
+
+ReadOnlySpan&lt;char&gt;
+
+
+#### Exceptions
+
+- [\`index\` is outside \[Avalonia.Controls.Documents.Serialization.Html.HtmlTagAttributes.Count\](xref:Avalonia.Controls.Documents.Serialization.Html.HtmlTagAttributes.Count).](xref:System.ArgumentOutOfRangeException)
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-eb7654de0c"></span>
+
+### GetValue Method
+
+Gets the value of the attribute at `index` with the surrounding quotes
+stripped. Empty for a boolean attribute such as `disabled`.
+
+```csharp
+public ReadOnlySpan<char> GetValue(int index)
+```
+
+#### Parameters
+
+`index` int
+
+The zero-based attribute index.
+
+
+#### Returns
+
+ReadOnlySpan&lt;char&gt;
+
+
+#### Exceptions
+
+- [\`index\` is outside \[Avalonia.Controls.Documents.Serialization.Html.HtmlTagAttributes.Count\](xref:Avalonia.Controls.Documents.Serialization.Html.HtmlTagAttributes.Count).](xref:System.ArgumentOutOfRangeException)
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-94d0fd9323"></span>
+
+### TryGetValue Method
+
+```csharp
+public bool TryGetValue(ReadOnlySpan<char> name, ReadOnlySpan<char>& value)
+```
+
+#### Parameters
+
+`name` ReadOnlySpan&lt;char&gt;
+
+
+`value` ReadOnlySpan&lt;char&gt;&amp;
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Count](#uid-489218bd6c) | Gets the number of attributes on the tag. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-489218bd6c"></span>
+
+### Count Property
+
+Gets the number of attributes on the tag.
+
+```csharp
+public int Count { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+
