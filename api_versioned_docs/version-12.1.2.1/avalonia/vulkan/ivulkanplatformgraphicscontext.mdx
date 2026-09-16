@@ -1,0 +1,111 @@
+---
+title: 'IVulkanPlatformGraphicsContext'
+hide_title: true
+slug: '/avalonia/vulkan/ivulkanplatformgraphicscontext'
+uid: 'Avalonia.Vulkan.IVulkanPlatformGraphicsContext'
+commentId: 'T:Avalonia.Vulkan.IVulkanPlatformGraphicsContext'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Vulkan'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Vulkan'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IVulkanPlatformGraphicsContext Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Vulkan</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Vulkan</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface IVulkanPlatformGraphicsContext
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="../ioptionalfeatureprovider">IOptionalFeatureProvider</a>, <a href="../platform/iplatformgraphicscontext">IPlatformGraphicsContext</a>, IDisposable
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [CreateRenderTarget](#uid-f737ef101d) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f737ef101d"></span>
+
+### CreateRenderTarget Method
+
+```csharp
+public Avalonia.Vulkan.IVulkanRenderTarget CreateRenderTarget(System.Collections.Generic.IEnumerable<Avalonia.Platform.Surfaces.IPlatformRenderSurface> surfaces)
+```
+
+#### Parameters
+
+`surfaces` System.Collections.Generic.IEnumerable&lt;[Avalonia.Platform.Surfaces.IPlatformRenderSurface](xref:Avalonia.Platform.Surfaces.IPlatformRenderSurface)&gt;
+
+
+#### Returns
+
+[Avalonia.Vulkan.IVulkanRenderTarget](xref:Avalonia.Vulkan.IVulkanRenderTarget)
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Device](#uid-5a533f47a5) | No summary available. |
+| [Instance](#uid-1a81e3526e) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5a533f47a5"></span>
+
+### Device Property
+
+```csharp
+public Avalonia.Vulkan.IVulkanDevice Device { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1a81e3526e"></span>
+
+### Instance Property
+
+```csharp
+public Avalonia.Vulkan.IVulkanInstance Instance { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

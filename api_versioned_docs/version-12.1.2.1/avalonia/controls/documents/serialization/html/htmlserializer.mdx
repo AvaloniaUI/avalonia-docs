@@ -1,0 +1,360 @@
+---
+title: 'HtmlSerializer'
+hide_title: true
+slug: '/avalonia/controls/documents/serialization/html/htmlserializer'
+uid: 'Avalonia.Controls.Documents.Serialization.Html.HtmlSerializer'
+commentId: 'T:Avalonia.Controls.Documents.Serialization.Html.HtmlSerializer'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Documents.Serialization.Html'
+assembly: 'Avalonia.Controls.Documents.Serialization.Html'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.Serialization.Html'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">HtmlSerializer Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.Serialization.Html</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Documents.Serialization.Html</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Documents.Serialization.Html</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Read-only HTML deserializer implementing [Avalonia.Controls.Documents.Serialization.IDocumentSerializer](xref:Avalonia.Controls.Documents.Serialization.IDocumentSerializer).
+Supports a curated set of HTML tags commonly embedded in markdown.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class HtmlSerializer
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> HtmlSerializer
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IDocumentSerializer
+</div>
+</div>
+
+## Remarks
+
+Serialization (write) is not supported. [Avalonia.Controls.Documents.Serialization.Html.HtmlSerializer.Serialize(Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot,System.IO.Stream,System.Threading.CancellationToken)](xref:Avalonia.Controls.Documents.Serialization.Html.HtmlSerializer.Serialize%28Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot%2CSystem.IO.Stream%2CSystem.Threading.CancellationToken%29) throws
+[NotSupportedException](xref:System.NotSupportedException). Use RTF or DOCX serializers for export.
+
+Custom tag handling is available via [Avalonia.Controls.Documents.Serialization.Html.HtmlSerializerOptions.TagHandlers](xref:Avalonia.Controls.Documents.Serialization.Html.HtmlSerializerOptions.TagHandlers).
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [HtmlSerializer](#uid-0464fbe9ab) | Initializes a new instance of [Avalonia.Controls.Documents.Serialization.Html.HtmlSerializer](xref:Avalonia.Controls.Documents.Serialization.Html.HtmlSerializer) with optional HTML options. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0464fbe9ab"></span>
+
+### HtmlSerializer Constructor
+
+Initializes a new instance of [Avalonia.Controls.Documents.Serialization.Html.HtmlSerializer](xref:Avalonia.Controls.Documents.Serialization.Html.HtmlSerializer) with optional HTML options.
+
+```csharp
+public HtmlSerializer(Avalonia.Controls.Documents.Serialization.Html.HtmlSerializerOptions options)
+```
+
+#### Parameters
+
+`options` [Avalonia.Controls.Documents.Serialization.Html.HtmlSerializerOptions](xref:Avalonia.Controls.Documents.Serialization.Html.HtmlSerializerOptions)
+
+HTML reader options; [Avalonia.Controls.Documents.Serialization.Html.HtmlSerializerOptions.Default](xref:Avalonia.Controls.Documents.Serialization.Html.HtmlSerializerOptions.Default) is used when .
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [CanDeserialize](#uid-6388f7e520) | No summary available. |
+| [Deserialize (2 overloads)](#uid-c454230d11) | Deserializes a document from an HTML stream. |
+| [DeserializeAsync](#uid-393ede2118) | Runs [Avalonia.Controls.Documents.Serialization.Html.HtmlSerializer.Deserialize(System.IO.Stream,System.Threading.CancellationToken)](xref:Avalonia.Controls.Documents.Serialization.Html.HtmlSerializer.Deserialize%28System.IO.Stream%2CSystem.Threading.CancellationToken%29) on a pool thread. |
+| [Serialize](#uid-d18efe0210) | No summary available. |
+| [SerializeAsync](#uid-b2d1ef43eb) | Runs [Avalonia.Controls.Documents.Serialization.Html.HtmlSerializer.Serialize(Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot,System.IO.Stream,System.Threading.CancellationToken)](xref:Avalonia.Controls.Documents.Serialization.Html.HtmlSerializer.Serialize%28Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot%2CSystem.IO.Stream%2CSystem.Threading.CancellationToken%29) on a pool thread. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6388f7e520"></span>
+
+### CanDeserialize Method
+
+```csharp
+public bool CanDeserialize(System.IO.Stream stream)
+```
+
+#### Parameters
+
+`stream` System.IO.Stream
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<span id="uid-c454230d11"></span>
+
+### Deserialize overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-41acfaac30"></span>
+
+#### Deserialize Method
+
+Deserializes a document from an HTML stream.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot Deserialize(System.IO.Stream stream, System.Threading.CancellationToken cancellationToken)
+```
+
+##### Parameters
+
+`stream` System.IO.Stream
+
+
+`cancellationToken` System.Threading.CancellationToken
+
+
+##### Returns
+
+Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f0c2171d11"></span>
+
+#### Deserialize Method
+
+Deserializes a document from an HTML string.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot Deserialize(string html)
+```
+
+##### Parameters
+
+`html` string
+
+
+##### Returns
+
+Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-393ede2118"></span>
+
+### DeserializeAsync Method
+
+Runs [Avalonia.Controls.Documents.Serialization.Html.HtmlSerializer.Deserialize(System.IO.Stream,System.Threading.CancellationToken)](xref:Avalonia.Controls.Documents.Serialization.Html.HtmlSerializer.Deserialize%28System.IO.Stream%2CSystem.Threading.CancellationToken%29) on a pool thread.
+
+```csharp
+public System.Threading.Tasks.Task<Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot> DeserializeAsync(System.IO.Stream stream, System.Threading.CancellationToken cancellationToken)
+```
+
+#### Parameters
+
+`stream` System.IO.Stream
+
+The stream to read from.
+
+
+`cancellationToken` System.Threading.CancellationToken
+
+Cancellation token.
+
+
+#### Returns
+
+System.Threading.Tasks.Task&lt;Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot&gt;
+
+The deserialized snapshot.
+
+
+#### Remarks
+
+A thread-offload convenience, not asynchronous I/O: no format here reads asynchronously.
+Where you are already off the UI thread, call [Avalonia.Controls.Documents.Serialization.Html.HtmlSerializer.Deserialize(System.IO.Stream,System.Threading.CancellationToken)](xref:Avalonia.Controls.Documents.Serialization.Html.HtmlSerializer.Deserialize%28System.IO.Stream%2CSystem.Threading.CancellationToken%29) and keep the
+thread you are on.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d18efe0210"></span>
+
+### Serialize Method
+
+```csharp
+public void Serialize(Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot snapshot, System.IO.Stream stream, System.Threading.CancellationToken cancellationToken)
+```
+
+#### Parameters
+
+`snapshot` Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot
+
+
+`stream` System.IO.Stream
+
+
+`cancellationToken` System.Threading.CancellationToken
+
+
+#### Exceptions
+
+- [Always thrown. HTML serialization is not supported.](xref:System.NotSupportedException)
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b2d1ef43eb"></span>
+
+### SerializeAsync Method
+
+Runs [Avalonia.Controls.Documents.Serialization.Html.HtmlSerializer.Serialize(Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot,System.IO.Stream,System.Threading.CancellationToken)](xref:Avalonia.Controls.Documents.Serialization.Html.HtmlSerializer.Serialize%28Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot%2CSystem.IO.Stream%2CSystem.Threading.CancellationToken%29) on a pool thread.
+
+```csharp
+public System.Threading.Tasks.Task SerializeAsync(Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot snapshot, System.IO.Stream stream, System.Threading.CancellationToken cancellationToken)
+```
+
+#### Parameters
+
+`snapshot` Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot
+
+The snapshot to serialize.
+
+
+`stream` System.IO.Stream
+
+The stream to write to.
+
+
+`cancellationToken` System.Threading.CancellationToken
+
+Cancellation token.
+
+
+#### Returns
+
+System.Threading.Tasks.Task
+
+
+#### Remarks
+
+A thread-offload convenience, not asynchronous I/O. The snapshot is already detached from
+the document, so the work needs no UI thread either way.
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [CanRead](#uid-33c53a3c23) | No summary available. |
+| [CanWrite](#uid-e5a7c70a22) | No summary available. |
+| [FileExtension](#uid-b97155f220) | No summary available. |
+| [FormatName](#uid-b4c47085d0) | No summary available. |
+| [MimeType](#uid-6e6eb9ac47) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-33c53a3c23"></span>
+
+### CanRead Property
+
+```csharp
+public bool CanRead { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e5a7c70a22"></span>
+
+### CanWrite Property
+
+```csharp
+public bool CanWrite { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b97155f220"></span>
+
+### FileExtension Property
+
+```csharp
+public string FileExtension { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b4c47085d0"></span>
+
+### FormatName Property
+
+```csharp
+public string FormatName { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6e6eb9ac47"></span>
+
+### MimeType Property
+
+```csharp
+public string MimeType { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

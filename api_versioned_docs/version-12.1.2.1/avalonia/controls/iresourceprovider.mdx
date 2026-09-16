@@ -1,0 +1,156 @@
+---
+title: 'IResourceProvider'
+hide_title: true
+slug: '/avalonia/controls/iresourceprovider'
+uid: 'Avalonia.Controls.IResourceProvider'
+commentId: 'T:Avalonia.Controls.IResourceProvider'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IResourceProvider Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Represents an object that can be queried for resources but does not appear in the logical tree.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface IResourceProvider
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="iresourcenode">IResourceNode</a>
+</div>
+</div>
+
+## Remarks
+
+This interface is implemented by [Avalonia.Controls.ResourceDictionary](xref:Avalonia.Controls.ResourceDictionary), [Avalonia.Styling.Style](xref:Avalonia.Styling.Style) and
+[Avalonia.Styling.Styles](xref:Avalonia.Styling.Styles)
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [AddOwner](#uid-881ae8c626) | Adds an owner to the resource provider. |
+| [RemoveOwner](#uid-22f466e22f) | Removes a resource provider owner. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-881ae8c626"></span>
+
+### AddOwner Method
+
+Adds an owner to the resource provider.
+
+```csharp
+public void AddOwner(Avalonia.Controls.IResourceHost owner)
+```
+
+#### Parameters
+
+`owner` [Avalonia.Controls.IResourceHost](xref:Avalonia.Controls.IResourceHost)
+
+The owner.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-22f466e22f"></span>
+
+### RemoveOwner Method
+
+Removes a resource provider owner.
+
+```csharp
+public void RemoveOwner(Avalonia.Controls.IResourceHost owner)
+```
+
+#### Parameters
+
+`owner` [Avalonia.Controls.IResourceHost](xref:Avalonia.Controls.IResourceHost)
+
+The owner.
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Owner](#uid-96b327c927) | Gets the owner of the resource provider. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-96b327c927"></span>
+
+### Owner Property
+
+Gets the owner of the resource provider.
+
+```csharp
+public Avalonia.Controls.IResourceHost Owner { get; set; }
+```
+
+#### Remarks
+
+If multiple owners are added, returns the first.
+
+</section>
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [OwnerChanged](#uid-2492577133) | Raised when the [Avalonia.Controls.IResourceProvider.Owner](xref:Avalonia.Controls.IResourceProvider.Owner) of the resource provider changes. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2492577133"></span>
+
+### OwnerChanged Event
+
+Raised when the [Avalonia.Controls.IResourceProvider.Owner](xref:Avalonia.Controls.IResourceProvider.Owner) of the resource provider changes.
+
+```csharp
+public event EventHandler OwnerChanged
+```
+
+</section>
+
+</ApiRefPage>
+

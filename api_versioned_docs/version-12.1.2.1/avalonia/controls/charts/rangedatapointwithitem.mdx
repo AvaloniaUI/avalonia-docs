@@ -1,0 +1,285 @@
+---
+title: 'RangeDataPointWithItem'
+hide_title: true
+slug: '/avalonia/controls/charts/rangedatapointwithitem'
+uid: 'Avalonia.Controls.Charts.RangeDataPointWithItem'
+commentId: 'T:Avalonia.Controls.Charts.RangeDataPointWithItem'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Charts'
+assembly: 'Avalonia.Controls.Charts'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Charts'
+tfms:
+  - 'net9.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">RangeDataPointWithItem Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Charts</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Charts</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Charts</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Represents a range data point together with the original source item.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct RangeDataPointWithItem
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> RangeDataPointWithItem
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;RangeDataPointWithItem&gt;
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [RangeDataPointWithItem](#uid-593e02aa41) | Represents a range data point together with the original source item. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-593e02aa41"></span>
+
+### RangeDataPointWithItem Constructor
+
+Represents a range data point together with the original source item.
+
+```csharp
+public RangeDataPointWithItem(object Category, double Low, double High, object DataItem)
+```
+
+#### Parameters
+
+`Category` object
+
+The category or horizontal value for the point.
+
+
+`Low` double
+
+The lower value for the range.
+
+
+`High` double
+
+The upper value for the range.
+
+
+`DataItem` object
+
+The original item from the series data source.
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Deconstruct](#uid-6d70b1e14f) | No summary available. |
+| [Equals (2 overloads)](#uid-9125fa6361) | No summary available. |
+| [GetHashCode](#uid-5ac7c28517) | No summary available. |
+| [ToString](#uid-c4fa4a9114) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6d70b1e14f"></span>
+
+### Deconstruct Method
+
+```csharp
+public void Deconstruct(object& Category, double& Low, double& High, object& DataItem)
+```
+
+#### Parameters
+
+`Category` object&amp;
+
+
+`Low` double&amp;
+
+
+`High` double&amp;
+
+
+`DataItem` object&amp;
+
+
+</section>
+
+<span id="uid-9125fa6361"></span>
+
+### Equals overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8ee9176c0a"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(Avalonia.Controls.Charts.RangeDataPointWithItem other)
+```
+
+##### Parameters
+
+`other` [Avalonia.Controls.Charts.RangeDataPointWithItem](xref:Avalonia.Controls.Charts.RangeDataPointWithItem)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-45d8634e99"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(object obj)
+```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5ac7c28517"></span>
+
+### GetHashCode Method
+
+```csharp
+public int GetHashCode()
+```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c4fa4a9114"></span>
+
+### ToString Method
+
+```csharp
+public string ToString()
+```
+
+#### Returns
+
+string
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Category](#uid-0e45df75a8) | The category or horizontal value for the point. |
+| [DataItem](#uid-3ade1cdbf3) | The original item from the series data source. |
+| [High](#uid-d71da76006) | The upper value for the range. |
+| [Low](#uid-6f44a964ce) | The lower value for the range. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0e45df75a8"></span>
+
+### Category Property
+
+The category or horizontal value for the point.
+
+```csharp
+public object Category { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3ade1cdbf3"></span>
+
+### DataItem Property
+
+The original item from the series data source.
+
+```csharp
+public object DataItem { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d71da76006"></span>
+
+### High Property
+
+The upper value for the range.
+
+```csharp
+public double High { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6f44a964ce"></span>
+
+### Low Property
+
+The lower value for the range.
+
+```csharp
+public double Low { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

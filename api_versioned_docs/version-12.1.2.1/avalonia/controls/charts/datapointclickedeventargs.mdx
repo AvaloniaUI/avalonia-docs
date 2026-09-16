@@ -1,0 +1,175 @@
+---
+title: 'DataPointClickedEventArgs'
+hide_title: true
+slug: '/avalonia/controls/charts/datapointclickedeventargs'
+uid: 'Avalonia.Controls.Charts.DataPointClickedEventArgs'
+commentId: 'T:Avalonia.Controls.Charts.DataPointClickedEventArgs'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Charts'
+assembly: 'Avalonia.Controls.Charts'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Charts'
+tfms:
+  - 'net9.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">DataPointClickedEventArgs Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Charts</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Charts</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Charts</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Provides data for the DataPointClicked event.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class DataPointClickedEventArgs
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> EventArgs <span className="apiref-page__relation-separator">-&gt;</span> DataPointClickedEventArgs
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [DataPointClickedEventArgs](#uid-a45253124b) | Creates a new instance of [DataPointClickedEventArgs](xref:Avalonia.Controls.Charts.DataPointClickedEventArgs). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a45253124b"></span>
+
+### DataPointClickedEventArgs Constructor
+
+Creates a new instance of [DataPointClickedEventArgs](xref:Avalonia.Controls.Charts.DataPointClickedEventArgs).
+
+```csharp
+public DataPointClickedEventArgs(Avalonia.Controls.Charts.ChartSeries series, int dataPointIndex, object category, double value, object dataItem)
+```
+
+#### Parameters
+
+`series` [Avalonia.Controls.Charts.ChartSeries](xref:Avalonia.Controls.Charts.ChartSeries)
+
+
+`dataPointIndex` int
+
+
+`category` object
+
+
+`value` double
+
+
+`dataItem` object
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Category](#uid-6370550037) | Gets the category (X-axis value) of the clicked data point. |
+| [DataItem](#uid-120da46b70) | Gets the original data item if available. |
+| [DataPointIndex](#uid-d46b0801da) | Gets the index of the data point within the series. |
+| [Series](#uid-e4309895ca) | Gets the series that contains the clicked data point. |
+| [Value](#uid-d3583ad800) | Gets the value (Y-axis value) of the clicked data point. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6370550037"></span>
+
+### Category Property
+
+Gets the category (X-axis value) of the clicked data point.
+
+```csharp
+public object Category { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-120da46b70"></span>
+
+### DataItem Property
+
+Gets the original data item if available.
+
+```csharp
+public object DataItem { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d46b0801da"></span>
+
+### DataPointIndex Property
+
+Gets the index of the data point within the series.
+
+```csharp
+public int DataPointIndex { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e4309895ca"></span>
+
+### Series Property
+
+Gets the series that contains the clicked data point.
+
+```csharp
+public Avalonia.Controls.Charts.ChartSeries Series { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d3583ad800"></span>
+
+### Value Property
+
+Gets the value (Y-axis value) of the clicked data point.
+
+```csharp
+public double Value { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+
