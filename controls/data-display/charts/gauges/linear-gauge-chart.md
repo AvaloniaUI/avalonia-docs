@@ -83,7 +83,7 @@ Linear gauge charts visualize a value along a horizontal or vertical bar. They a
 
 ## Tick position
 
-`TickPosition` places the tick marks around the track. Major ticks are 10 px long and minor ticks 5 px.
+`TickPosition` places tick marks around the track. Major ticks are 10 px long. Minor ticks are 5 px long.
 
 | Value | Description |
 | :--- | :--- |
@@ -91,4 +91,4 @@ Linear gauge charts visualize a value along a horizontal or vertical bar. They a
 | `Below` | Below a horizontal track or to the right of a vertical track. |
 | `Cross` | Centered on the track. |
 
-In compact layouts the gauge gives up tick space first, then indicator space, and only then drops scale labels, thinning the track as it goes.
+In compact layouts, the gauge gives up tick space first, then indicator space, and only then drops scale labels, thinning the track as it goes.
