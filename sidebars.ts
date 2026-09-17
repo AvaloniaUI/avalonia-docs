@@ -103,7 +103,11 @@ const sidebars: SidebarsConfig = {
         'styling/property-setters',
         'styling/pseudoclasses',
         'styling/control-template-walkthrough',
-        'styling/style-precedence',
+        {
+          type: 'link',
+          label: 'Property value precedence',
+          href: '/docs/properties/value-precedence',
+        },
         'styling/style-best-practices',
       ],
     },

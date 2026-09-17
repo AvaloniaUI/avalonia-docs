@@ -348,5 +348,5 @@ on priority alone is insufficient to effectively style an application.
 ## See also
 
 - [Styles](/docs/styling/styles)
-- [Style precedence](/docs/styling/style-precedence)
+- [Property value precedence](/docs/properties/value-precedence)
 - [Control themes](/docs/styling/control-themes)

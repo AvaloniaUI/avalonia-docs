@@ -3,27 +3,29 @@ id: value-precedence
 title: Property value precedence
 ---
 
-When multiple sources provide a value for the same Avalonia property (a local value, a style setter, an animation, an inherited value), Avalonia must decide which value wins. The property system resolves this using a fixed priority order defined by the `BindingPriority` enum.
+When multiple sources provide a value for the same property, Avalonia must decide which value wins. For example, a property like `Foreground` may receive competing values from a local value, a style setter, an animation and an inherited value. The property system resolves this using a fixed priority order defined by the `BindingPriority` enum.
 
 ## Priority order
 
-Values are resolved from highest priority (top) to lowest priority (bottom):
+Higher priority values are resolved over lower priority values, where 1 is the highest priority.
 
-| Priority | `BindingPriority` Value | Description |
+| Priority | `BindingPriority` value | Description |
 |---|---|---|
-| **1 (Highest)** | `Animation` | Values applied by active animations. |
-| **2** | `LocalValue` | Values set directly on the object via `SetValue`, XAML attribute, or code. |
-| **3** | `StyleTrigger` | Values applied by style selectors that can start or stop matching at runtime: pseudo-classes (`:pointerover`), style classes (`.primary`), and property checks (`[IsChecked=True]`). |
-| **4** | `Template` | Values set within a control template. |
-| **5** | `Style` | Values applied by style selectors that always match the control, such as a type selector (`Button`) or a name selector (`#saveButton`). |
-| **6** | `Inherited` | Values inherited from an ancestor element in the visual tree. |
-| **7 (Lowest)** | `Unset` | No value has been set. The property's registered default value is used. |
-
-Avalonia chooses between `Style` and `StyleTrigger` from the selector, not from the setter. A selector that can start or stop matching while the control is alive applies its setters at `StyleTrigger`; a selector whose result is fixed for that control applies them at `Style`. A style class therefore outranks a type selector, in the same way a pseudo-class does. See [Style precedence](/docs/styling/style-precedence) for worked examples.
+| 1 | `Animation` | Values applied by active animations. |
+| 2 | `LocalValue` | Values set directly on the object via `SetValue`, XAML attribute, or code. |
+| 3 | `StyleTrigger` | Values applied by style selectors that match a transient condition, such as pseudoclasses (`:pointerover`), style classes (`.primary`), or property checks (`[IsChecked=True]`). |
+| 4 | `Template` | Values set within a control template. |
+| 5 | `Style` | Values applied by style selectors that always match the control, such as a type selector (`Button`) or name selector (`#saveButton`). |
+| 6 | `Inherited` | Values inherited from an ancestor element in the visual tree. |
+| 7 | `Unset` | No value set. The property's default value is used. |
 
 ## How precedence works
 
 When you request a property value (via `GetValue` or a binding), the property system checks each priority level in order and returns the first value it finds.
+
+### `StyleTrigger` vs. `Style`
+
+`StyleTrigger` (priority 3) and `Style` (priority 5) both hold values that come from styles. Avalonia decides between them by looking at the **selector**. A selector that can start or stop matching during runtime beats a selector that gives a fixed value. In effect, this means pseudoclasses, style classes and property checks are prioritized over name or type selectors.
 
 ### Example
 
@@ -47,16 +49,54 @@ Consider a `Button` with a `Foreground` property:
 ```
 
 In this scenario:
-- The button's `Foreground` is **Red** because `LocalValue` has higher priority than both `Style` and `StyleTrigger`.
+- The button's `Foreground` is **Red** because `LocalValue` has higher priority than `Style` and `StyleTrigger`.
 - Even when the pointer hovers over the button, the `Foreground` remains **Red** because `LocalValue` (priority 2) outranks `StyleTrigger` (priority 3).
 
 If you remove the local `Foreground="Red"` attribute:
 - The button's `Foreground` is **Black** (from the `Style` setter) by default.
 - When the pointer hovers over the button, it changes to **Blue** (from the `StyleTrigger` for `:pointerover`).
 
+## Style declaration order
+
+When two styles at the **same priority level** target the same property, the style declared later wins:
+
+```xml
+<Window.Styles>
+    <Style Selector="Button">
+        <Setter Property="Background" Value="Blue" />
+    </Style>
+
+    <!-- This wins because it is declared later -->
+    <Style Selector="Button">
+        <Setter Property="Background" Value="Red" />
+    </Style>
+</Window.Styles>
+```
+
+Styles from different sources are evaluated in the order they appear in the logical tree, from the control upward to the application. A style declared on a `UserControl` overrides a matching style from `App.axaml` because the closer scope is evaluated later.
+
+Declaration order only breaks ties **within** a level. A class or property selector sits at the style trigger level, so it beats a plain type selector regardless of order.
+
+```xml
+<Window.Styles>
+    <!-- Style trigger level: this wins, even though it is declared first -->
+    <Style Selector="Button.primary">
+        <Setter Property="Background" Value="Red" />
+    </Style>
+
+    <!-- Style level -->
+    <Style Selector="Button">
+        <Setter Property="Background" Value="Blue" />
+    </Style>
+</Window.Styles>
+
+<!-- Red, not Blue -->
+<Button Classes="primary" Content="Primary" />
+```
+
 ## Animations override everything
 
-Animations have the highest priority. While an animation is active, its value overrides local values, style values, and all other sources. This ensures smooth visual transitions are never interrupted by style changes.
+Animations have the highest priority. While an animation is active, its value overrides all other sources. This ensures visual transitions are never interrupted by style changes.
 
 ```xml
 <Style Selector="Button:pointerover">
@@ -72,10 +112,10 @@ Animations have the highest priority. While an animation is active, its value ov
 
 ## Clearing values
 
-When you call `ClearValue`, you remove the value at the `LocalValue` priority level. The property system then falls through to the next available source:
+When you call `ClearValue`, you remove the value at the `LocalValue` priority level. The property system then continues to the next available source.
 
 ```csharp
-// Set a local value (overrides styles)
+// Set a local value (red foreground overrides other styles)
 myButton.SetValue(Button.ForegroundProperty, Brushes.Red);
 
 // Clear the local value (styles take effect again)
@@ -94,7 +134,7 @@ This is primarily used by the styling system internally. In most application cod
 
 ## `SetCurrentValue`
 
-The `SetCurrentValue` method sets a value at the current highest-priority level rather than at `LocalValue`. This is useful in control implementations where you want to update a property without overriding styles:
+The `SetCurrentValue` method sets a value at the current highest-priority level rather than at `LocalValue`. This can be used where you want to update a property without overriding styles:
 
 ```csharp
 // Sets the value without creating a LocalValue entry
@@ -110,11 +150,9 @@ Bindings are applied at the priority level of their source. A binding created th
 <Button Foreground="{Binding ButtonColor}" />
 ```
 
-Because `LocalValue` bindings outrank style values, a bound property value from XAML will override any style-set values, even pseudo-class triggered styles.
+Because `LocalValue` bindings outrank style values (both `Style` and `StyleTrigger`), a bound property value from XAML will override any style-set values.
 
-:::tip
-If you want styles to be able to override a property, avoid setting it directly in XAML. Instead, use a style at the appropriate level.
-:::
+If you want styles to be able to override a property, avoid setting a value for that property in XAML. Instead, use a style at the appropriate level.
 
 ## See also
 
