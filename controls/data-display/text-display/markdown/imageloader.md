@@ -174,7 +174,7 @@ markdown.ImageLoader = loader;
 Markdown.SetImageLoader(markdown, loader);
 ```
 
-To resolve one image differently from the rest, set `MarkdownImage.ImageLoader` on that element. A value set n one image wins over the value supplied by the control.
+To resolve one image differently from the rest, set `MarkdownImage.ImageLoader` on that element. A value set on one image wins over the value supplied by the control.
 
 Image loading is deferred until both the URL (set automatically from the Markdown source) and a loader are available, and assigning a loader later re-resolves images already in the document. This decouples the document model from image resolution.
 

@@ -290,7 +290,8 @@ List marker styles are reached through `ListToggleTool`, which the default selec
 
 | Property | Type | Description |
 |---|---|---|
-| `Editor` | `ITextEditorHost?` | The host this toolbar drives. Reassign it to retarget the toolbar at runtime. |
+| `Editor` | `RichTextEditor?` | The host this toolbar drives. Reassign it to retarget the toolbar at runtime. |
+| `EditorHost` | `ITextEditorHost?` | The host this toolbar drives that is not a `RichTextEditor`. |
 | `Tools` | `AvaloniaList<EditorTool>` | The `[Content]` collection of toolbar items. |
 | `ActiveTargetAreas` | `ToolbarTargetAreas` | Read-only. Derived from the selection and pushed onto every tool. |
 | `ShowShortcuts` | `bool` | Whether tooltips display the action's keyboard gesture. |
@@ -715,7 +716,7 @@ Overflow descends the whole tree, and a nested group contributes its own childre
 
 ## Toolbar target areas
 
-`ToolbarTargetAreas` is a `[Flags]` enum in `Avalonia.Controls.Documents.Primitives` describing the contexts in which a tool, a menu entry or a block adorner applies. `EditorToolbar` derives the active areas from the selection on every selection and document change and pushes them onto every tool.
+`ToolbarTargetAreas` is a `[Flags]` enum in `Avalonia.Controls.Documents.Primitives.Adorners` describing the contexts in which a tool, a menu entry or a block adorner applies. `EditorToolbar` derives the active areas from the selection on every selection and document change and pushes them onto every tool.
 
 | Flag | Caret context |
 |---|---|

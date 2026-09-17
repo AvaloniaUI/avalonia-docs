@@ -30,7 +30,7 @@ document.Save(stream, new PdfSerializer());
 await document.SaveAsync(stream, new PdfSerializer(options));
 ```
 
-The serializer's own contract is synchronous, so there is no async pair to await. To keep the UI thread free, you can capture a snapshot and then offload:
+The serializer's contract is synchronous, so there is no async pair to await. To keep the UI thread free, you can capture a snapshot and then offload:
 
 ```csharp
 var snapshot = document.CreateSnapshot();   // on the UI thread
@@ -68,7 +68,7 @@ Despite the above, PDF export does need an initialized Avalonia platform for the
 Page properties are device-independent pixels (1/96 inch), never points. For example, US Letter is 816 x 1056 device-independent pixels. Use `PageSizes` and its conversion helpers rather than literals.
 :::
 
-A `PageSize` that is infinite and positive on both axes is rejected before a byte reaches the stream, rather than producing a file no viewer opens. An infinite or negative `Margins` falls back to the 2 cm default.
+A `PageSize` must be finite and positive on both axes, or it is rejected rather than producing a file no viewer opens. An infinite or negative `Margins` falls back to the 2 cm default.
 
 An explicit `PageSize` or `Margins` acts as the uniform-paper override. A [section with unique page geometry](/controls/input/text-input/richtexteditor/pagination#per-section-page-setup) still starts its own page, but follows the uniform size instead of getting its requested page setup.
 

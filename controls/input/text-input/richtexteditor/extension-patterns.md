@@ -478,7 +478,7 @@ public class SpellCheckHighlightLayer : HighlightLayerBase
 - `CanRead`
 - `CanWrite`
 
-There is no asynchronous pair: format work is processor-bound and assembles its output in memory. Wrapping a call in `Task.Run` moves the work off the caller's own thread.
+No serializer performs asynchronous I/O. Format work is processor-bound and assembles its output in memory. Wrapping a call in `Task.Run` moves the work off the caller's own thread.
 
 `CanRead` and `CanWrite` have no defaults. You must declare both.
 
