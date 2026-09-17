@@ -41,7 +41,7 @@ This section describes how `Animation` playback can be customized.
 
 ## Easing functions
 
-`Easing` functions describe how quickly an animated property changes from its starting value into its ending value across the animation time. `Avalonia.Animation.Easings` contains the following easings:
+Easing functions describe how quickly an animated property changes from its starting value into its ending value across the animation time. `Avalonia.Animation.Easings` contains the following easings:
 
 | Default                                                       |
 |---------------------------------------------------------------|
@@ -62,38 +62,48 @@ This section describes how `Animation` playback can be customized.
 
 Additionally, you can provide your own easing by deriving from `Easing` or by providing parameters to `SplineEasing` or `SpringEasing`.
 
-## FillModes
+## Fill mode
 
-The `FillMode` attribute of an `Animation` defines how the animated property persists after an animation completes and during delays in-between runs.
-
-The following table describes the supported behaviors:
+The `FillMode` attribute of an `Animation` defines how the animated property persists after an animation completes and during delays in between runs.
 
 | Value      | Description                                                                                               |
 |------------|-----------------------------------------------------------------------------------------------------------|
-| `None`     | Value will not persist after animation nor the first value will be applied when the animation is delayed. |
-| `Forward`  | The last interpolated value will be persisted to the target property.                                     |
-| `Backward` | The first interpolated value will be displayed on animation delay.                                        |
-| `Both`     | Both `Forward` and `Backward` behaviors will be applied.                                                  |
+| `None`     | Last value does not persist after animation. First value is not applied if the animation is delayed. |
+| `Forward`  | The last interpolated value is persisted after the animation ends.                                     |
+| `Backward` | The first interpolated value is displayed if the animation is delayed.                                        |
+| `Both`     | Both `Forward` and `Backward` behaviors are applied.                                                  |
 
-## PlaybackDirection
+## Playback direction
 
-`PlaybackDirection` defines how the `Animation` will be played. The following table describes the possible settings:
+`PlaybackDirection` defines how the `Animation` is played. By default, an animation plays forward, following the profile of the easing function from left to right.
 
 | Value              | Description                                             |
 |--------------------|---------------------------------------------------------|
-| `Normal`           | The animation is played normally.                       |
-| `Reverse`          | The animation is played in reverse direction.           |
-| `Alternate`        | The animation is played forwards first, then backwards. |
-| `AlternateReverse` | The animation is played backwards first, then forwards. |
+| `Normal`           | (Default) Played forward.                       |
+| `Reverse`          | Played backward.           |
+| `Alternate`        | Played forward first, then backward. |
+| `AlternateReverse` | Played backward first, then forward. |
 
-## IterationCount
+## Playback behavior
+
+By default, a keyframe animation pauses when its target control is not effectively visible. When the control becomes visible again, the animation resumes from where it paused.
+
+This behavior is intended to avoid waking the CPU to run animations the user cannot see. A control becomes effectively invisible when `IsVisible` is `false` on the control itself, or when an ancestor is hidden.
+
+| Value           | Description             |
+| ----------------| ----------------------- |
+| `Auto`          | (Default) Animation pauses when the control is not effectively visible. Animations started with `RunAsync`, or containing keyframes where `IsVisible="True"`, always play regardless of visibility. |
+| `Always`        | Animation always plays, regardless of visibility. |
+| `OnlyIfVisible` | Animation always pauses when the control is not effectively visible, even if started with `RunAsync`. |
+
+## Iteration count
 
 The `IterationCount` on an `Animation` element sets how many times it is to be replayed. There are two formats for this setting:
 
 | Value      | Description                                      |
 |------------|--------------------------------------------------|
-| `N`        | (N is an integer) - play N times. N can be zero. |
-| `Infinite` | Repeats forever                                  |
+| `N`        | Where N is an integer. Play N times. N can be zero. |
+| `infinite` | Repeats forever.                                  |
 
 ## See also
 
