@@ -1,7 +1,7 @@
 ---
 id: thread-safety
 title: Thread Safety
-doc-type: guide
+doc-type: explanation
 tags:
  - avalonia pro
  - avalonia enterprise

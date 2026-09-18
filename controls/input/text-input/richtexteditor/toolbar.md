@@ -1,7 +1,7 @@
 ---
 id: toolbar
 title: Toolbar and Selection Flyouts
-doc-type: guide
+doc-type: reference
 tags:
  - avalonia pro
  - avalonia enterprise

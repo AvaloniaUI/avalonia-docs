@@ -2,7 +2,7 @@
 id: versioning
 title: XPF versioning
 description: Learn how to select and configure XPF package versions, including stable releases and nightly builds.
-doc-type: guide
+doc-type: how-to
 ---
 
 ## Choosing a version

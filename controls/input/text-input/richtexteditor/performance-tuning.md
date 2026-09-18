@@ -1,7 +1,7 @@
 ---
 id: performance-tuning
 title: Performance Tuning
-doc-type: guide
+doc-type: how-to
 tags:
  - avalonia pro
  - avalonia enterprise
