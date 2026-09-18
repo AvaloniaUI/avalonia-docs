@@ -2,7 +2,7 @@
 id: using-xpf-in-avalonia
 title: Using XPF in Avalonia
 description: Host WPF-compatible XPF controls inside an existing Avalonia application using XpfContainer.
-doc-type: guide
+doc-type: how-to
 ---
 
 This guide walks you through embedding XPF (WPF-compatible) controls in an existing Avalonia application. By the end, you will have an XPF `UserControl` rendering inside an Avalonia window via the `XpfContainer` wrapper.

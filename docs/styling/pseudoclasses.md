@@ -2,7 +2,7 @@
 id: pseudoclasses
 title: Pseudoclasses
 description: Learn how to use pseudoclasses in Avalonia to apply styles based on control state such as focus, hover, or pressed.
-doc-type: concept
+doc-type: explanation
 ---
 
 import CustomPseudoclassScreenshot from '/img/reference/styles/custom-pseudoclass.gif';

@@ -2,7 +2,7 @@
 id: clipboard
 title: Clipboard
 description: Learn how the WPF Clipboard API works in XPF across Windows, macOS, and Linux, including text, bitmap, and custom data format support.
-doc-type: guide
+doc-type: reference
 ---
 
 ## Overview
