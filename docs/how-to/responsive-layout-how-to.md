@@ -5,6 +5,8 @@ description: Create Avalonia layouts that adapt to different window sizes and fo
 doc-type: how-to
 ---
 
+import ResponsiveCardGrid from '/img/how-to/responsive-card-grid.gif';
+
 This guide covers techniques for creating layouts that adapt to different window sizes and form factors. You will learn how to use form-factor markup extensions, container queries, breakpoint-driven view models, and reflowing item layouts to build UIs that work across desktop and mobile.
 
 ## Adaptive grid columns
@@ -144,32 +146,101 @@ You can bind `IsPaneOpen` to your breakpoint properties so the sidebar opens aut
 
 ## Responsive card grid
 
-Use `ItemsRepeater` with a `UniformGridLayout` to create a card grid that reflows as the available width changes. Set `MinItemWidth` and `MinItemHeight` to define the smallest card size, and `UniformGridLayout` calculates the column count for you:
+Use `ItemsControl` with a `WrapPanel` as the display panel to create a card grid that reflows as the available width changes. See [Custom panel](/docs/how-to/itemscontrol-how-to#custom-panel) for guidance on how to customize the `ItemsPanel` in an `ItemsControl`.
+
+<Tabs>
+
+<TabItem value="preview" label="Preview">
+
+<Image light={ResponsiveCardGrid} maxWidth={400} cornerRadius="true" position="center" alt="Screen recording showing a window changing size. The card arrangement in the window adjusts according to the window's width." />
+<br />
+
+</TabItem>
+
+<TabItem value="main-window" label="MainWindow.axaml">
 
 ```xml
-<ScrollViewer>
-    <ItemsRepeater ItemsSource="{Binding Cards}">
-        <ItemsRepeater.Layout>
-            <UniformGridLayout MinItemWidth="280" MinItemHeight="200"
-                               MinColumnSpacing="12" MinRowSpacing="12" />
-        </ItemsRepeater.Layout>
-        <ItemsRepeater.ItemTemplate>
-            <DataTemplate>
-                <Border Background="White" CornerRadius="8" Padding="16"
-                        BorderBrush="#E5E7EB" BorderThickness="1">
-                    <StackPanel Spacing="8">
-                        <TextBlock Text="{Binding Title}" FontWeight="Bold" />
-                        <TextBlock Text="{Binding Description}"
-                                   TextWrapping="Wrap" Foreground="Gray" />
-                    </StackPanel>
-                </Border>
-            </DataTemplate>
-        </ItemsRepeater.ItemTemplate>
-    </ItemsRepeater>
-</ScrollViewer>
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:ResponsiveCardGrid.ViewModels"
+        xmlns:models="using:ResponsiveCardGrid.Models"
+        x:Class="ResponsiveCardGrid.Views.MainWindow"
+        x:DataType="vm:MainViewModel">
+
+  <ItemsControl ItemsSource="{Binding Cards}">
+    <ItemsControl.ItemsPanel>
+      <ItemsPanelTemplate>
+        <WrapPanel />
+      </ItemsPanelTemplate>
+    </ItemsControl.ItemsPanel>
+    <ItemsControl.ItemTemplate>
+      <DataTemplate x:DataType="models:CardItem">
+        <Border Background="White"
+                CornerRadius="8"
+                Padding="16"
+                BorderBrush="#E5E7EB"
+                BorderThickness="1">
+          <StackPanel Spacing="8">
+            <TextBlock Text="{Binding Title}"
+                       FontWeight="Bold"
+                       Foreground="Black" />
+            <TextBlock Text="{Binding Description}"
+                       TextWrapping="Wrap"
+                       Foreground="Gray" />
+          </StackPanel>
+        </Border>
+      </DataTemplate>
+    </ItemsControl.ItemTemplate>
+  </ItemsControl>
+</Window>
 ```
 
-If you need a simpler reflowing container without virtualization, you can use `WrapPanel` instead.
+</TabItem>
+
+<TabItem value="main-view-model" label="MainViewModel.cs">
+
+```csharp
+using System.Collections.ObjectModel;
+using ResponsiveCardGrid.Models;
+
+namespace ResponsiveCardGrid.ViewModels;
+
+public partial class MainWindowViewModel : ViewModelBase
+{
+    public ObservableCollection<CardItem> Cards { get; } =
+    [
+        new() { Title = "Inbox", Description = "Messages waiting for a reply from the team." },
+        new() { Title = "Drafts", Description = "Unfinished notes you started but never sent." },
+        new() { Title = "Scheduled", Description = "Items queued to go out later this week." },
+        new() { Title = "Archive", Description = "Everything you have filed away for later reference." },
+        new() { Title = "Starred", Description = "Cards you flagged as worth a second look." },
+        new() { Title = "Trash", Description = "Deleted items, kept for thirty days before removal." }
+    ];
+}
+```
+
+</TabItem>
+
+<TabItem value="card-item-model" label="Models/CardItem.cs">
+
+```csharp
+using CommunityToolkit.Mvvm.ComponentModel;
+
+namespace ResponsiveCardGrid.Models;
+
+public partial class CardItem : ObservableObject
+{
+    [ObservableProperty]
+    public partial string Title { get; set; } = string.Empty;
+
+    [ObservableProperty]
+    public partial string Description { get; set; } = string.Empty;
+}
+```
+
+</TabItem>
+
+</Tabs>
 
 ## Platform-specific spacing
 

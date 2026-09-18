@@ -1,0 +1,141 @@
+---
+title: 'WindowResizeReason'
+hide_title: true
+slug: '/avalonia/controls/windowresizereason'
+uid: 'Avalonia.Controls.WindowResizeReason'
+commentId: 'T:Avalonia.Controls.WindowResizeReason'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Enum'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">WindowResizeReason Enum</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Describes the reason for a [Avalonia.Controls.WindowBase.Resized](xref:Avalonia.Controls.WindowBase.Resized) event.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public enum WindowResizeReason
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Enum <span className="apiref-page__relation-separator">-&gt;</span> WindowResizeReason
+</div>
+</div>
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [Application](#uid-c3cc4c35c0) | The resize was initiated by the application, for example by setting one of the sizing- related properties on [Avalonia.Controls.Window](xref:Avalonia.Controls.Window) such as [Avalonia.Layout.Layoutable.Width](xref:Avalonia.Layout.Layoutable.Width) or [Avalonia.Layout.Layoutable.Height](xref:Avalonia.Layout.Layoutable.Height). |
+| [DpiChange](#uid-443828ee31) | The resize was due to a change in DPI. |
+| [Layout](#uid-3e5e7ef93f) | The resize was initiated by the layout system. |
+| [Unspecified](#uid-976ca6e4d5) | The resize reason is unknown or unspecified. |
+| [User](#uid-3dffad441c) | The resize was due to the user resizing the window, for example by dragging the window frame. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c3cc4c35c0"></span>
+
+### Application Field
+
+The resize was initiated by the application, for example by setting one of the sizing-
+related properties on [Avalonia.Controls.Window](xref:Avalonia.Controls.Window) such as [Avalonia.Layout.Layoutable.Width](xref:Avalonia.Layout.Layoutable.Width) or
+[Avalonia.Layout.Layoutable.Height](xref:Avalonia.Layout.Layoutable.Height).
+
+```csharp
+public Avalonia.Controls.WindowResizeReason Application
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-443828ee31"></span>
+
+### DpiChange Field
+
+The resize was due to a change in DPI.
+
+```csharp
+public Avalonia.Controls.WindowResizeReason DpiChange
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3e5e7ef93f"></span>
+
+### Layout Field
+
+The resize was initiated by the layout system.
+
+```csharp
+public Avalonia.Controls.WindowResizeReason Layout
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-976ca6e4d5"></span>
+
+### Unspecified Field
+
+The resize reason is unknown or unspecified.
+
+```csharp
+public Avalonia.Controls.WindowResizeReason Unspecified
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3dffad441c"></span>
+
+### User Field
+
+The resize was due to the user resizing the window, for example by dragging the
+window frame.
+
+```csharp
+public Avalonia.Controls.WindowResizeReason User
+```
+
+</section>
+
+</ApiRefPage>
+

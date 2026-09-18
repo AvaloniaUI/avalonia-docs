@@ -1,0 +1,139 @@
+---
+title: 'PdfZoomChangedEventArgs'
+hide_title: true
+slug: '/avalonia/controls/pdfzoomchangedeventargs'
+uid: 'Avalonia.Controls.PdfZoomChangedEventArgs'
+commentId: 'T:Avalonia.Controls.PdfZoomChangedEventArgs'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.PdfViewer'
+assembly: 'Avalonia.Controls.PdfViewer'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0-ios26.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">PdfZoomChangedEventArgs Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.PdfViewer</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.PdfViewer</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Provides data for the [Avalonia.Controls.PdfViewer.ZoomChanged](xref:Avalonia.Controls.PdfViewer.ZoomChanged) event.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class PdfZoomChangedEventArgs
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> EventArgs <span className="apiref-page__relation-separator">-&gt;</span> PdfZoomChangedEventArgs
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [PdfZoomChangedEventArgs](#uid-328d2802bf) | Initializes a new instance of the [Avalonia.Controls.PdfZoomChangedEventArgs](xref:Avalonia.Controls.PdfZoomChangedEventArgs) class. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-328d2802bf"></span>
+
+### PdfZoomChangedEventArgs Constructor
+
+Initializes a new instance of the [Avalonia.Controls.PdfZoomChangedEventArgs](xref:Avalonia.Controls.PdfZoomChangedEventArgs) class.
+
+```csharp
+public PdfZoomChangedEventArgs(double oldZoom, double newZoom, Avalonia.Controls.PdfZoomMode mode)
+```
+
+#### Parameters
+
+`oldZoom` double
+
+
+`newZoom` double
+
+
+`mode` [Avalonia.Controls.PdfZoomMode](xref:Avalonia.Controls.PdfZoomMode)
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Mode](#uid-6d1106f735) | Gets the effective zoom mode after the change. |
+| [NewZoom](#uid-966a0a972b) | Gets the new zoom level (1.0 == 100%). |
+| [OldZoom](#uid-1af164041f) | Gets the previous zoom level (1.0 == 100%). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6d1106f735"></span>
+
+### Mode Property
+
+Gets the effective zoom mode after the change.
+
+```csharp
+public Avalonia.Controls.PdfZoomMode Mode { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-966a0a972b"></span>
+
+### NewZoom Property
+
+Gets the new zoom level (1.0 == 100%).
+
+```csharp
+public double NewZoom { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1af164041f"></span>
+
+### OldZoom Property
+
+Gets the previous zoom level (1.0 == 100%).
+
+```csharp
+public double OldZoom { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

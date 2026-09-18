@@ -210,14 +210,17 @@ if (Application.Current is { } app)
 You can define your own named theme variants beyond `Light` and `Dark`. Create a new `ThemeVariant` and specify a fallback variant that Avalonia uses for any resources you have not explicitly defined:
 
 ```csharp
-public static readonly ThemeVariant HighContrast = new("HighContrast", ThemeVariant.Light);
+public static class MyThemeVariants
+{
+    public static readonly ThemeVariant HighContrast = new("HighContrast", ThemeVariant.Light);
+}
 ```
 
-Then add a matching `ThemeDictionary` entry keyed to your custom variant name:
+Then add a matching `ThemeDictionary` entry keyed to your custom variant using the x:Static directive:
 
 ```xml
 <ResourceDictionary.ThemeDictionaries>
-    <ResourceDictionary x:Key="HighContrast">
+    <ResourceDictionary x:Key="{x:Static my:MyThemeVariants.HighContrast}">
         <SolidColorBrush x:Key="CardBackground" Color="Black" />
         <SolidColorBrush x:Key="TextPrimary" Color="Yellow" />
     </ResourceDictionary>

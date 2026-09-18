@@ -1,0 +1,107 @@
+---
+title: 'IInputPane'
+hide_title: true
+slug: '/avalonia/controls/platform/iinputpane'
+uid: 'Avalonia.Controls.Platform.IInputPane'
+commentId: 'T:Avalonia.Controls.Platform.IInputPane'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Platform'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IInputPane Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Platform</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Listener for the platform's input pane(eg, software keyboard). Provides access to the input pane height and state.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface IInputPane
+```
+
+</div>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [OccludedRect](#uid-5a82a21e69) | The current input pane bounds. |
+| [State](#uid-8876d081cc) | The current input pane state. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5a82a21e69"></span>
+
+### OccludedRect Property
+
+The current input pane bounds.
+
+```csharp
+public Avalonia.Rect OccludedRect { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8876d081cc"></span>
+
+### State Property
+
+The current input pane state.
+
+```csharp
+public Avalonia.Controls.Platform.InputPaneState State { get; set; }
+```
+
+</section>
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [StateChanged](#uid-747fa9d58f) | Occurs when the input pane's state has changed. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-747fa9d58f"></span>
+
+### StateChanged Event
+
+Occurs when the input pane's state has changed.
+
+```csharp
+public event EventHandler<Avalonia.Controls.Platform.InputPaneStateEventArgs> StateChanged
+```
+
+</section>
+
+</ApiRefPage>
+

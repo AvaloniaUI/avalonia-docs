@@ -45,7 +45,7 @@ Avalonia Plus is a suite of professional tools built specifically for Avalonia d
 
 ## Avalonia Pro
 
-Avalonia Pro includes all professional tools in Avalonia Plus, and additionally includes premium UI controls such as [TreeDataGrid](/controls/data-display/structured-data/treedatagrid/), [NativeWebView](/controls/web/nativewebview), [VirtualKeyboard](/controls/input/text-input/virtualkeyboard), and more. These components cover use cases from displaying hierarchical data to embedding native web content without bundling Chromium.
+Avalonia Pro includes all professional tools in Avalonia Plus, and additionally includes premium UI controls such as [Charts](/controls/data-display/charts/), [TreeDataGrid](/controls/data-display/structured-data/treedatagrid/), [RichTextEditor](/controls/input/text-input/richtexteditor/), [PdfViewer](/controls/data-display/pdfviewer/), [VirtualKeyboard](/controls/input/text-input/virtualkeyboard), and more. These components cover use cases from displaying hierarchical data to embedding native web content without bundling Chromium.
 
 ## Who gets access
 

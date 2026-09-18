@@ -407,6 +407,7 @@ const sidebars = {
       "items": [
         "avalonia/controls/acrylicplatformcompensationlevels",
         "avalonia/controls/alphacomponentposition",
+        "avalonia/controls/annotationmode",
         "avalonia/controls/autocompletebox",
         "avalonia/controls/autocompletefiltermode",
         "avalonia/controls/autocompletefilterpredicate-1",
@@ -498,6 +499,7 @@ const sidebars = {
         "avalonia/controls/flyout",
         "avalonia/controls/flyoutpresenter",
         "avalonia/controls/flyoutshowmode",
+        "avalonia/controls/fontattributes",
         "avalonia/controls/grid",
         "avalonia/controls/gridlength",
         "avalonia/controls/gridresizebehavior",
@@ -594,6 +596,28 @@ const sidebars = {
         "avalonia/controls/pageselectionchangedeventargs",
         "avalonia/controls/panel",
         "avalonia/controls/pathicon",
+        "avalonia/controls/pdfannotationerroreventargs",
+        "avalonia/controls/pdfannotationoperation",
+        "avalonia/controls/pdfdocumentloadedeventargs",
+        "avalonia/controls/pdflinkclickedeventargs",
+        "avalonia/controls/pdfloaderroreventargs",
+        "avalonia/controls/pdfopenrequestedeventargs",
+        "avalonia/controls/pdfpagechangedeventargs",
+        "avalonia/controls/pdfpagerenderedeventargs",
+        "avalonia/controls/pdfpermissions",
+        "avalonia/controls/pdfprintrequestedeventargs",
+        "avalonia/controls/pdfsaveasrequestedeventargs",
+        "avalonia/controls/pdfsearchcompletedeventargs",
+        "avalonia/controls/pdfshapesubtypemode",
+        "avalonia/controls/pdfsharerequestedeventargs",
+        "avalonia/controls/pdfstampstyle",
+        "avalonia/controls/pdftoolbarlayoutmode",
+        "avalonia/controls/pdfviewer",
+        "avalonia/controls/pdfviewerstrings",
+        "avalonia/controls/pdfviewertool",
+        "avalonia/controls/pdfviewmode",
+        "avalonia/controls/pdfzoomchangedeventargs",
+        "avalonia/controls/pdfzoommode",
         "avalonia/controls/pipspager",
         "avalonia/controls/pipspagerselectedindexchangedeventargs",
         "avalonia/controls/pixelpointeventargs",
@@ -634,7 +658,10 @@ const sidebars = {
         "avalonia/controls/selectionchangedeventargs",
         "avalonia/controls/selectionmode",
         "avalonia/controls/separator",
+        "avalonia/controls/shapetype",
         "avalonia/controls/shutdownmode",
+        "avalonia/controls/sidebarmode",
+        "avalonia/controls/sidebarplacement",
         "avalonia/controls/sixteencolorpalette",
         "avalonia/controls/sizechangedeventargs",
         "avalonia/controls/sizetocontent",
@@ -657,6 +684,7 @@ const sidebars = {
         "avalonia/controls/tableviewrow",
         "avalonia/controls/tabplacement",
         "avalonia/controls/templatecolumncreateoptions",
+        "avalonia/controls/textannotationalignment",
         "avalonia/controls/textblock",
         "avalonia/controls/textbox",
         "avalonia/controls/textchangedeventargs",
@@ -682,6 +710,8 @@ const sidebars = {
         "avalonia/controls/treedatagridcelleventargs",
         "avalonia/controls/treedatagridcheckboxcolumn",
         "avalonia/controls/treedatagridcolumn",
+        "avalonia/controls/treedatagridcolumnreorderedeventargs",
+        "avalonia/controls/treedatagridcolumnreorderingeventargs",
         "avalonia/controls/treedatagridcolumns",
         "avalonia/controls/treedatagridgridlinesvisibility",
         "avalonia/controls/treedatagridhierarchicalexpandercolumn",
@@ -1159,7 +1189,11 @@ const sidebars = {
         "avalonia/controls/documents/inlineuicontainer",
         "avalonia/controls/documents/italic",
         "avalonia/controls/documents/linebreak",
+        "avalonia/controls/documents/markdownalertblock",
         "avalonia/controls/documents/markdowncodeblock",
+        "avalonia/controls/documents/markdownheading",
+        "avalonia/controls/documents/markdownhtmlblock",
+        "avalonia/controls/documents/markdownhtmlinline",
         "avalonia/controls/documents/markdownimage",
         "avalonia/controls/documents/markdowntasklistitem",
         "avalonia/controls/documents/run",
@@ -1204,6 +1238,7 @@ const sidebars = {
         "avalonia/controls/documents/primitives/actions/deletetablecolumnaction",
         "avalonia/controls/documents/primitives/actions/deletetablerowaction",
         "avalonia/controls/documents/primitives/actions/editoraction",
+        "avalonia/controls/documents/primitives/actions/editoractionids",
         "avalonia/controls/documents/primitives/actions/editoractions",
         "avalonia/controls/documents/primitives/actions/fontfamilyaction",
         "avalonia/controls/documents/primitives/actions/fontsizeaction",
@@ -1285,6 +1320,7 @@ const sidebars = {
         "avalonia/controls/documents/primitives/toolbar/imagelinkflyouttool",
         "avalonia/controls/documents/primitives/toolbar/listtoggletool",
         "avalonia/controls/documents/primitives/toolbar/overflowtool",
+        "avalonia/controls/documents/primitives/toolbar/pagebandflyouttool",
         "avalonia/controls/documents/primitives/toolbar/propertymenuitem",
         "avalonia/controls/documents/primitives/toolbar/separatortool",
         "avalonia/controls/documents/primitives/toolbar/tablepickertool",
@@ -1313,13 +1349,45 @@ const sidebars = {
     },
     {
       "type": "category",
+      "label": "Avalonia.Controls.Documents.Serialization.Html",
+      "items": [
+        "avalonia/controls/documents/serialization/html/htmlreadercontext",
+        "avalonia/controls/documents/serialization/html/htmlserializer",
+        "avalonia/controls/documents/serialization/html/htmlserializeroptions",
+        "avalonia/controls/documents/serialization/html/htmltagattributes",
+        "avalonia/controls/documents/serialization/html/ihtmltaghandler"
+      ],
+      "link": {
+        "type": "doc",
+        "id": "avalonia/controls/documents/serialization/html/index"
+      }
+    },
+    {
+      "type": "category",
       "label": "Avalonia.Controls.Documents.Serialization.Markdown",
       "items": [
-        "avalonia/controls/documents/serialization/markdown/markdownserializer"
+        "avalonia/controls/documents/serialization/markdown/markdownhardbreak",
+        "avalonia/controls/documents/serialization/markdown/markdownserializer",
+        "avalonia/controls/documents/serialization/markdown/markdownserializeroptions"
       ],
       "link": {
         "type": "doc",
         "id": "avalonia/controls/documents/serialization/markdown/index"
+      }
+    },
+    {
+      "type": "category",
+      "label": "Avalonia.Controls.Documents.Serialization.Pdf",
+      "items": [
+        "avalonia/controls/documents/serialization/pdf/pdfdiagnostic",
+        "avalonia/controls/documents/serialization/pdf/pdfdiagnostickind",
+        "avalonia/controls/documents/serialization/pdf/pdffontembedding",
+        "avalonia/controls/documents/serialization/pdf/pdfserializer",
+        "avalonia/controls/documents/serialization/pdf/pdfserializeroptions"
+      ],
+      "link": {
+        "type": "doc",
+        "id": "avalonia/controls/documents/serialization/pdf/index"
       }
     },
     {
@@ -1526,6 +1594,101 @@ const sidebars = {
       "link": {
         "type": "doc",
         "id": "avalonia/controls/oauth2/metadataclient/index"
+      }
+    },
+    {
+      "type": "category",
+      "label": "Avalonia.Controls.Pdf.Controls",
+      "items": [
+        "avalonia/controls/pdf/controls/overflowtoolbarpanel"
+      ],
+      "link": {
+        "type": "doc",
+        "id": "avalonia/controls/pdf/controls/index"
+      }
+    },
+    {
+      "type": "category",
+      "label": "Avalonia.Controls.Pdf.Converters",
+      "items": [
+        "avalonia/controls/pdf/converters/inversebooleanconverter",
+        "avalonia/controls/pdf/converters/sidebarmodeconverter",
+        "avalonia/controls/pdf/converters/sidebarmodeisnotnoneconverter",
+        "avalonia/controls/pdf/converters/stringformatconverter",
+        "avalonia/controls/pdf/converters/viewmodeiscontinuousconverter",
+        "avalonia/controls/pdf/converters/zoomleveltopercentconverter"
+      ],
+      "link": {
+        "type": "doc",
+        "id": "avalonia/controls/pdf/converters/index"
+      }
+    },
+    {
+      "type": "category",
+      "label": "Avalonia.Controls.Pdf.Core",
+      "items": [
+        "avalonia/controls/pdf/core/ipdfadapter",
+        "avalonia/controls/pdf/core/ipdfadapterfactory",
+        "avalonia/controls/pdf/core/ipdfadapterwithbitmaprendering",
+        "avalonia/controls/pdf/core/ipdfadapterwithtextextraction",
+        "avalonia/controls/pdf/core/ipdfdocument",
+        "avalonia/controls/pdf/core/ipdfpage",
+        "avalonia/controls/pdf/core/pdfadapterfactory",
+        "avalonia/controls/pdf/core/pdfannotationcolor",
+        "avalonia/controls/pdf/core/pdfannotationeventargs",
+        "avalonia/controls/pdf/core/pdfannotationinfo",
+        "avalonia/controls/pdf/core/pdfannotationtype",
+        "avalonia/controls/pdf/core/pdfbookmark",
+        "avalonia/controls/pdf/core/pdferroreventargs",
+        "avalonia/controls/pdf/core/pdflink",
+        "avalonia/controls/pdf/core/pdflinkdestination",
+        "avalonia/controls/pdf/core/pdflinkdestination-filedestination",
+        "avalonia/controls/pdf/core/pdflinkdestination-pagedestination",
+        "avalonia/controls/pdf/core/pdflinkdestination-unsupporteddestination",
+        "avalonia/controls/pdf/core/pdflinkdestination-uridestination",
+        "avalonia/controls/pdf/core/pdfmetadata",
+        "avalonia/controls/pdf/core/pdfpoint",
+        "avalonia/controls/pdf/core/pdfrect",
+        "avalonia/controls/pdf/core/pdfsearchresult",
+        "avalonia/controls/pdf/core/pdfuserbookmark",
+        "avalonia/controls/pdf/core/searchoptions"
+      ],
+      "link": {
+        "type": "doc",
+        "id": "avalonia/controls/pdf/core/index"
+      }
+    },
+    {
+      "type": "category",
+      "label": "Avalonia.Controls.Pdf.Native",
+      "items": [
+        "avalonia/controls/pdf/native/pdfexception",
+        "avalonia/controls/pdf/native/pdfformatexception",
+        "avalonia/controls/pdf/native/pdfpageexception",
+        "avalonia/controls/pdf/native/pdfpasswordexception",
+        "avalonia/controls/pdf/native/pdfsecurityexception"
+      ],
+      "link": {
+        "type": "doc",
+        "id": "avalonia/controls/pdf/native/index"
+      }
+    },
+    {
+      "type": "category",
+      "label": "Avalonia.Controls.Pdf.Services",
+      "items": [
+        "avalonia/controls/pdf/services/duplexmode",
+        "avalonia/controls/pdf/services/iprintservice",
+        "avalonia/controls/pdf/services/ishareservice",
+        "avalonia/controls/pdf/services/pageorientation",
+        "avalonia/controls/pdf/services/pagerange",
+        "avalonia/controls/pdf/services/pagescaling",
+        "avalonia/controls/pdf/services/printoptions",
+        "avalonia/controls/pdf/services/shareoptions"
+      ],
+      "link": {
+        "type": "doc",
+        "id": "avalonia/controls/pdf/services/index"
       }
     },
     {
@@ -4000,7 +4163,22 @@ const sidebars = {
       "type": "category",
       "label": "global",
       "items": [
+        "global/ab-a",
+        "global/af-a",
+        "global/ag-a",
+        "global/ag-b",
+        "global/ag-c",
+        "global/ag-d",
+        "global/ag-e",
+        "global/ag-f",
+        "global/ai-a",
+        "global/ai-b",
         "global/aq-a",
+        "global/dl-a",
+        "global/dm-a",
+        "global/dm-b",
+        "global/dm-c",
+        "global/dm-d",
         "global/linuxframebufferplatformextensions",
         "global/n-a",
         "global/n-b",
@@ -4016,8 +4194,7 @@ const sidebars = {
         "global/n-l",
         "global/p-a",
         "global/r-2-b",
-        "global/r-2-c",
-        "global/x-a"
+        "global/r-2-c"
       ],
       "link": {
         "type": "doc",
@@ -4095,11 +4272,13 @@ const sidebars = {
         "packages/avalonia-controls-colorpicker",
         "packages/avalonia-controls-documents-serialization-docx",
         "packages/avalonia-controls-documents-serialization-html",
+        "packages/avalonia-controls-documents-serialization-pdf",
         "packages/avalonia-controls-documents-serialization-rtf",
         "packages/avalonia-controls-documents-serialization-xaml",
         "packages/avalonia-controls-markdown",
         "packages/avalonia-controls-mediaplayer",
         "packages/avalonia-controls-mediaplayer-abstractions",
+        "packages/avalonia-controls-pdfviewer",
         "packages/avalonia-controls-richtexteditor",
         "packages/avalonia-controls-treedatagrid",
         "packages/avalonia-controls-virtualkeyboard",
