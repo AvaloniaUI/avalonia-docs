@@ -1,113 +1,101 @@
 ---
 id: styles
 title: Styles
+description: Troubleshooting common issues with Avalonia styles.
+doc-type: troubleshooting
 ---
 
 ## Selector has no targets
 
-An _Avalonia UI_ selector, like a CSS selector, does not raise an error or warning when there are no controls which can be matched. The style will silently fail to show.
+An Avalonia selector, like a CSS selector, does not raise an error or warning when there are no controls it can match. The style will silently fail to show.
 
-:::info
 Check whether you have used a name or class that does not exist.
-:::
 
-:::info
 Check whether you have used a child selector where there are no children to match.
-:::
 
-## Include file sequence
+## Wrong style is applied
 
-Styles are applied in order of declaration. If there are multiple style files included that target the same control property, the last style included will override the previous ones. For example:
+Styles are applied in order of declaration. If you are using multiple style files that target the same control property, the last style included will override the previous ones.
 
-```xml title="Style1.axaml"
+For example, in the files below, styles from `Styles2.axaml` take priority over styles from `Styles1.axaml`. The resulting `TextBlock` will have `FontSize="16"` and `Foreground="Blue"`. The same order prioritization happens within the same style file as well.
+
+<Tabs>
+
+<TabItem value="app-styles" label="App.axaml">
+
+```xml
+<Application.Styles>
+    <StyleInclude Source="Style1.axaml" />
+    <!-- Later style has priority -->
+    // highlight-next-line
+    <StyleInclude Source="Style2.axaml" />
+</Application.Styles>
+```
+
+</TabItem>
+
+<TabItem value="style1" label="Style1.axaml">
+
+```xml
 <Style Selector="TextBlock.header">
     <Setter Property="Foreground" Value="Green" />
 </Style>
 ```
 
-```xml title="Style2.axaml"
+</TabItem>
+
+<TabItem value="style2" label="Style2.axaml">
+
+```xml
 <Style Selector="TextBlock.header">
     <Setter Property="Foreground" Value="Blue" />
     <Setter Property="FontSize" Value="16" />
 </Style>
 ```
 
-```xml
-<StyleInclude Source="Style1.axaml" />
-<StyleInclude Source="Style2.axaml" />
-```
+</TabItem>
 
-Here styles from file **Styles1.axaml** were applied first, so setters in styles of file **Styles2.axaml** take priority. The resulting TextBlock will have FontSize="16" and Foreground="Blue". The same order prioritization happens within style files also.
+</Tabs>
 
-## Locally set properties have priority
+## Style cannot override a local property
 
-A local value defined directly on a control often has higher priority than any style value. So in this example the text block will have a red foreground:
+A local property value defined directly on a control has higher priority than any style value. For example, this text block will have a red foreground:
 
 ```xml
 <Style Selector="TextBlock.header">
     <Setter Property="Foreground" Value="Green" />
 </Style>
-...
+
 <TextBlock Classes="header" Foreground="Red" />
 ```
 
-You can see the full list of value priorities in the `BindingPriority` enum, where lower enum values have the higher priority.
+To set a mutable property value that can be changed at runtime, it is preferable to use a style through a name or type selector (like `Selector="TextBlock.header"` in the example above).
 
-| BindingPriority | Value      | Comment                                              |
-|-----------------|------------|------------------------------------------------------|
-| `Animation`     | -1         | The highest priority - even overrides a local value  |
-| `LocalValue`    | 0          | A local value is set on the property of the control. |
-| `StyleTrigger`  | 1          | This is triggered when a style becomes active.       |
-| `Template`      | 2          |                                                      |
-| `Style`         | 3          |                                                      |
-| `Inherited`     | 4          | Value inherited from a parent control.               |
-| `Unset`         | 2147483647 |                                                      |
+## Pseudoclass style is not applied
 
-:::caution
-The exception is that `Animation` values have the highest priority and can even override local values.
-:::
+Some pseudoclasses may not work as you might expect because of how the control template is structured. In the below example, the `Button` turns gray when hovered, although you would think it should turn blue, as specified by the `:pointerover` pseudoclass.
 
-:::info
-Some default _Avalonia UI_ styles use local values in their templates instead of template bindings or style setters. This makes it impossible to update the template property without replacing the whole template.
-:::
-
-### Missing style pseudo class (trigger) selector
-
-Let's imagine a situation in which you might expect a second style to override previous one, but it doesn't:
+<XamlPreview>
 
 ```xml
-<Style Selector="Border:pointerover">
-    <Setter Property="Background" Value="Blue" />
-</Style>
-<Style Selector="Border">
-    <Setter Property="Background" Value="Red" />
-</Style>
-...
-<Border Width="100" Height="100" Margin="100" />
+<UserControl xmlns="https://github.com/avaloniaui">
+  <UserControl.Styles>
+    <Style Selector="Button">
+      <Setter Property="Background" Value="Red" />
+    </Style>
+    <Style Selector="Button:pointerover">
+      <Setter Property="Background" Value="Blue" />
+    </Style>
+  </UserControl.Styles>
+
+  <Button HorizontalAlignment="Center" 
+          Content="lolwut?" />
+</UserControl>
 ```
 
-With this code example the `Border` has a Red background normally and Blue when the pointer is over it. This is because as with CSS more specific selectors have precedence. It is an issue, when you want to override default styles of any state (pointerover, pressed or others) with a single style. To achieve it you will need to have new styles for these states as well.
+</XamlPreview>
 
-:::info
-Visit the Avalonia source code to find the [original templates](https://github.com/AvaloniaUI/Avalonia/tree/master/src/Avalonia.Themes.Fluent/Controls) when this happens and copy and paste the styles with pseudoclasses into your code.
-:::
-
-### Selector with a pseudoclass doesn't override the default
-
-The following code example of styles that can be expected to work on top of default styles:
-
-```xml
-<Style Selector="Button">
-    <Setter Property="Background" Value="Red" />
-</Style>
-<Style Selector="Button:pointerover">
-    <Setter Property="Background" Value="Blue" />
-</Style>
-```
-
-You might expect the `Button` to be red by default and blue when pointer is over it. In fact, only setter of first style will be applied, and second one will be ignored.
-
-The reason is hidden in the Button's template. You can find the default templates in the Avalonia source code ([Simple](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Themes.Simple/Controls/Button.xaml) theme and [Fluent](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Themes.Fluent/Controls/Button.xaml) theme), but for convenience here we have simplified one from the Fluent theme:
+The reason is in the [Fluent theme button template](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Themes.Fluent/Controls/Button.xaml), which is used by default in new Avalonia projects. In the template, the button's background is rendered by a `ContentPresenter` bound to the button's `Background` property. When in the pointer-over state, the selector applies a different background directly to the `ContentPresenter` template part, bypassing any other property setters for `Background`. Because of this mechanism, the unstyled `:pointerover` appearance would similarly override any other background, including one set by an animation.
 
 ```xml
 <Style Selector="Button">
@@ -125,27 +113,45 @@ The reason is hidden in the Button's template. You can find the default template
 </Style>
 ```
 
-The actual background is rendered by a `ContentPresenter`, which in the default is bound to the Buttons `Background` property. However in the pointer-over state the selector is directly applying the background to the `ContentPresenter (Button:pointerover /template/ ContentPresenter#PART_ContentPresenter`) That's why when our setter was ignored in the previous code example. The corrected code should target content presenter directly as well:
+To ensure your pseudoclass style is applied properly, you must target the relevant template part with the style selector. In this case, the blue background setter can be amended to select `PART_ContentPresenter`.
+
+<XamlPreview>
 
 ```xml
-<!-- Here #PART_ContentPresenter name selector is not necessary, but was added to have more specific style -->
-<Style Selector="Button:pointerover /template/ ContentPresenter#PART_ContentPresenter">
-    <Setter Property="Background" Value="Blue" />
-</Style>
+<UserControl xmlns="https://github.com/avaloniaui">
+  <UserControl.Styles>
+    <Style Selector="Button">
+        <Setter Property="Background" Value="Red" />
+    </Style>
+    <Style Selector="Button /template/ ContentPresenter#PART_ContentPresenter:pointerover">
+        <Setter Property="Background" Value="Blue" />
+    </Style>
+  </UserControl.Styles>
+
+  <Button HorizontalAlignment="Center" 
+          Content="woo!" />
+</UserControl>
 ```
 
-:::info
-You can see this behavior for all controls in the default themes (both Simple and Fluent), not just Button. And not just for Background, but also other state-dependent properties.
-:::
+</XamlPreview>
 
-:::info
-Why default styles change the ContentPresenter `Background` property directly instead of changing the `Button.Background` property?
+## Previous property value is not restored when style is no longer applied
 
-This is because if the user were to set a local value on the button, it would override all styles, and make button always the same color. For more details see this [reverted PR](https://github.com/AvaloniaUI/Avalonia/pull/2662#issuecomment-515764732).
-:::
+Avalonia has multiple types of properties, which you can learn more about in [Defining properties](/docs/custom-controls/defining-properties).
 
-### Previous value of specific properties is not restored when style is not applied anymore
+**Direct properties** do not support styling. Instead of storing multiple values depending on priority, they only use the latest applied value and thus cannot restore to an earlier value. They are intended to offer lower overhead and higher performance in situations where only simple mechanics are required.
 
-In Avalonia we have multiple types of properties, and one of them, Direct Property, doesn't support styling at all. These properties work in simplified way to achieve lower overhead and higher performance, and do not store multiple values depending on priority. Instead only latest value is saved and cannot be restored. You can find more details in the [defining properties](/docs/custom-controls/defining-properties) guide.
+If you are unable to restore an earlier property value, it is likely you are using a direct property. Consider changing to a different property, or [customizing a property](/docs/custom-controls/defining-properties).
 
-Typical example is [CommandProperty](https://api-docs.avaloniaui.net/docs/P_Avalonia_Controls_Button_Command). It is defined as a DirectProperty, and it will never work properly. In the future attempt to style direct property will be resulted in compile time error, see [#6837](https://github.com/AvaloniaUI/Avalonia/issues/6837).
+## See also
+
+- [Styles](/docs/styling/styles)
+- [Style selectors](/docs/styling/style-selectors)
+- [Style selector syntax](/docs/styling/style-selector-syntax)
+- [Pseudoclasses](/docs/styling/pseudoclasses)
+- [Property setters](/docs/styling/property-setters)
+- [Property value precedence](/docs/properties/value-precedence)
+- [Sharing styles](/docs/styling/sharing-styles)
+- [Control template walkthrough](/docs/styling/control-template-walkthrough)
+- [Defining properties](/docs/custom-controls/defining-properties)
+- [Troubleshooting themes](/troubleshooting/ui-development/themes)
