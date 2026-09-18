@@ -18,7 +18,7 @@ Higher priority values are resolved over lower priority values, where 1 is the h
 | 3 | `StyleTrigger` | Values applied by style selectors with conditional activation, such as pseudoclasses (`:pointerover`), style classes (`.primary`), or property checks (`[IsChecked=True]`). |
 | 4 | `Template` | Values set within a control template. |
 | 5 | `Style` | Values applied by style selectors that always match, such as a type selector (`Button`) or name selector (`#saveButton`). |
-| 6 | `Inherited` | Values inherited from an ancestor element in the visual tree. See [Property value inheritance](/docs/properties/property-value-inheritance). |
+| 6 | `Inherited` | Values inherited from an ancestor element in the logical tree. See [Property value inheritance](/docs/properties/property-value-inheritance). |
 | 7 | `Unset` | No value set. The property's default value is used. |
 
 ## How precedence works
@@ -116,7 +116,7 @@ Animations have the highest priority. While an animation is active, its value ov
 
 ## Template priority
 
-`Template` (priority 4) applies to all properties set by a `ControlTemplate`. In the example below, `BorderThickness`, `Background`, and `Padding`have `Template` priority.
+`Template` (priority 4) applies to all properties set by a `ControlTemplate`. In the example below, `BorderThickness`, `Background`, and `Padding` have `Template` priority.
 
 `Template` is a higher priority than `Style` (priority 5), meaning these values would override any set by a name or type selector.
 

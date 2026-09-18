@@ -105,7 +105,7 @@ Avalonia `Setters` are applied in order of [`BindingPriority`](/api/avalonia/dat
 ## Visual tree locality
 
 Setters with equal `BindingPriority` are then selected by their location in the visual tree relative to the `Control`. The 
-setter with the fewest nodes required to traverse upwards to locate will take precedence. Inline style setter have 
+setter with the fewest nodes required to traverse upwards to locate will take precedence. Inline style setters have 
 the highest precedence for this step.
 
 ```xml

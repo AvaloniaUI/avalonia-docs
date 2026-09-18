@@ -15,9 +15,9 @@ Check whether you have used a child selector where there are no children to matc
 
 ## Wrong style is applied
 
-Styles are applied in order of declaration. If you are using multiple style files that target the same control property, the last style included will override the previous ones.
+Given the same `BindingPriority`, styles are applied in order of declaration. If you are using multiple style files that target the same control property, the last matching style wins.
 
-For example, in the files below, styles from `Styles2.axaml` take priority over styles from `Styles1.axaml`. The resulting `TextBlock` will have `FontSize="16"` and `Foreground="Blue"`. The same order prioritization happens within the same style file as well.
+For example, in the files below, styles from `Style2.axaml` take priority over styles from `Style1.axaml`. The resulting `TextBlock` will have `FontSize="16"` and `Foreground="Blue"`. The same order prioritization happens within the same style file as well.
 
 <Tabs>
 
@@ -69,7 +69,7 @@ A local property value defined directly on a control has higher priority than an
 <TextBlock Classes="header" Foreground="Red" />
 ```
 
-To set a mutable property value that can be changed at runtime, it is preferable to use a style through a name or type selector (like `Selector="TextBlock.header"` in the example above).
+To allow styles to change the property at runtime, avoid setting it locally and set it through a style instead.
 
 ## Pseudoclass style is not applied
 
@@ -95,7 +95,7 @@ Some pseudoclasses may not work as you might expect because of how the control t
 
 </XamlPreview>
 
-The reason is in the [Fluent theme button template](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Themes.Fluent/Controls/Button.xaml), which is used by default in new Avalonia projects. In the template, the button's background is rendered by a `ContentPresenter` bound to the button's `Background` property. When in the pointer-over state, the selector applies a different background directly to the `ContentPresenter` template part, bypassing any other property setters for `Background`. Because of this mechanism, the unstyled `:pointerover` appearance would similarly override any other background, including one set by an animation.
+The reason is in the [Fluent theme button template](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Themes.Fluent/Controls/Button.xaml), which is used by default in new Avalonia projects. In the template, the button's background is rendered by a `ContentPresenter` bound to the button's `Background` property. When in the pointer-over state, the selector applies a different background directly to the `ContentPresenter` template part, bypassing any other property setters for `Background`. Because of this mechanism, any change to the button's `Background` does nothing, even if applied by an animation.
 
 ```xml
 <Style Selector="Button">
@@ -123,7 +123,7 @@ To ensure your pseudoclass style is applied properly, you must target the releva
     <Style Selector="Button">
         <Setter Property="Background" Value="Red" />
     </Style>
-    <Style Selector="Button /template/ ContentPresenter#PART_ContentPresenter:pointerover">
+    <Style Selector="Button:pointerover /template/ ContentPresenter#PART_ContentPresenter">
         <Setter Property="Background" Value="Blue" />
     </Style>
   </UserControl.Styles>
