@@ -1,0 +1,87 @@
+---
+title: 'IPlatformHandle'
+hide_title: true
+slug: '/avalonia/platform/iplatformhandle'
+uid: 'Avalonia.Platform.IPlatformHandle'
+commentId: 'T:Avalonia.Platform.IPlatformHandle'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Platform'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IPlatformHandle Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Platform</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Represents a platform-specific handle.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface IPlatformHandle
+```
+
+</div>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Handle](#uid-5fca1c74be) | Gets the handle. |
+| [HandleDescriptor](#uid-de47b8291c) | Gets an optional string that describes what [Avalonia.Platform.IPlatformHandle.Handle](xref:Avalonia.Platform.IPlatformHandle.Handle) represents. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5fca1c74be"></span>
+
+### Handle Property
+
+Gets the handle.
+
+```csharp
+public IntPtr Handle { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-de47b8291c"></span>
+
+### HandleDescriptor Property
+
+Gets an optional string that describes what [Avalonia.Platform.IPlatformHandle.Handle](xref:Avalonia.Platform.IPlatformHandle.Handle) represents.
+
+```csharp
+public string HandleDescriptor { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

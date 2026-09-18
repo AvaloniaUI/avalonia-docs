@@ -1,0 +1,165 @@
+---
+title: 'IPlatformTypeface'
+hide_title: true
+slug: '/avalonia/media/iplatformtypeface'
+uid: 'Avalonia.Media.IPlatformTypeface'
+commentId: 'T:Avalonia.Media.IPlatformTypeface'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Media'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IPlatformTypeface Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Media</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface IPlatformTypeface
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="ifontmemory">IFontMemory</a>, IDisposable
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [TryGetStream](#uid-d261e153d1) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d261e153d1"></span>
+
+### TryGetStream Method
+
+```csharp
+public bool TryGetStream(System.IO.Stream& stream)
+```
+
+#### Parameters
+
+`stream` System.IO.Stream&amp;
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [FamilyName](#uid-d1d81cd6de) | Gets the font family name. |
+| [FontSimulations](#uid-c66249e0ed) | Gets the algorithmic style simulations applied to [Avalonia.Media.IPlatformTypeface](xref:Avalonia.Media.IPlatformTypeface) object. |
+| [Stretch](#uid-d20261634a) | Gets the [Avalonia.Media.FontStretch](xref:Avalonia.Media.FontStretch) value for the [Avalonia.Media.IPlatformTypeface](xref:Avalonia.Media.IPlatformTypeface) object. |
+| [Style](#uid-34b893cce8) | Gets the style for the [Avalonia.Media.IPlatformTypeface](xref:Avalonia.Media.IPlatformTypeface) object. |
+| [Weight](#uid-4e3e3c898b) | Gets the designed weight of the font represented by the [Avalonia.Media.IPlatformTypeface](xref:Avalonia.Media.IPlatformTypeface) object. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d1d81cd6de"></span>
+
+### FamilyName Property
+
+Gets the font family name.
+
+```csharp
+public string FamilyName { get; set; }
+```
+
+#### Remarks
+
+The family name should be the same as the one used to create the typeface via the platform font manager.
+It can be different from the actaual family name because an alias or a fallback name could have been used.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c66249e0ed"></span>
+
+### FontSimulations Property
+
+Gets the algorithmic style simulations applied to [Avalonia.Media.IPlatformTypeface](xref:Avalonia.Media.IPlatformTypeface) object.
+
+```csharp
+public Avalonia.Media.FontSimulations FontSimulations { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d20261634a"></span>
+
+### Stretch Property
+
+Gets the [Avalonia.Media.FontStretch](xref:Avalonia.Media.FontStretch) value for the [Avalonia.Media.IPlatformTypeface](xref:Avalonia.Media.IPlatformTypeface) object.
+
+```csharp
+public Avalonia.Media.FontStretch Stretch { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-34b893cce8"></span>
+
+### Style Property
+
+Gets the style for the [Avalonia.Media.IPlatformTypeface](xref:Avalonia.Media.IPlatformTypeface) object.
+
+```csharp
+public Avalonia.Media.FontStyle Style { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4e3e3c898b"></span>
+
+### Weight Property
+
+Gets the designed weight of the font represented by the [Avalonia.Media.IPlatformTypeface](xref:Avalonia.Media.IPlatformTypeface) object.
+
+```csharp
+public Avalonia.Media.FontWeight Weight { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

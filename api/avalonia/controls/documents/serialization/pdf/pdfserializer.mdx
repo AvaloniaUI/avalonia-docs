@@ -1,0 +1,342 @@
+---
+title: 'PdfSerializer'
+hide_title: true
+slug: '/avalonia/controls/documents/serialization/pdf/pdfserializer'
+uid: 'Avalonia.Controls.Documents.Serialization.Pdf.PdfSerializer'
+commentId: 'T:Avalonia.Controls.Documents.Serialization.Pdf.PdfSerializer'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Documents.Serialization.Pdf'
+assembly: 'Avalonia.Controls.Documents.Serialization.Pdf'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.Serialization.Pdf'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">PdfSerializer Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.Serialization.Pdf</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Documents.Serialization.Pdf</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Documents.Serialization.Pdf</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Write-only serializer that exports documents as PDF.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class PdfSerializer
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> PdfSerializer
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IDocumentSerializer
+</div>
+</div>
+
+## Remarks
+
+PDF is an export-only format for this library: [Avalonia.Controls.Documents.Serialization.Pdf.PdfSerializer.Deserialize(System.IO.Stream,System.Threading.CancellationToken)](xref:Avalonia.Controls.Documents.Serialization.Pdf.PdfSerializer.Deserialize%28System.IO.Stream%2CSystem.Threading.CancellationToken%29) always throws
+[NotSupportedException](xref:System.NotSupportedException) and [Avalonia.Controls.Documents.Serialization.Pdf.PdfSerializer.CanDeserialize(System.IO.Stream)](xref:Avalonia.Controls.Documents.Serialization.Pdf.PdfSerializer.CanDeserialize%28System.IO.Stream%29) always returns
+.
+
+The exporter is UI-free. It consumes the [Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot) directly and never
+creates controls or requires a dispatcher, so serialization can run on any thread. It does
+require an initialized Avalonia platform (font manager and text shaper) once content layout
+is involved; a bare console process without Avalonia cannot export.
+
+This serializer is thread-safe for concurrent operations.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [PdfSerializer](#uid-84103d464b) | Initializes a new instance of [Avalonia.Controls.Documents.Serialization.Pdf.PdfSerializer](xref:Avalonia.Controls.Documents.Serialization.Pdf.PdfSerializer). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-84103d464b"></span>
+
+### PdfSerializer Constructor
+
+Initializes a new instance of [Avalonia.Controls.Documents.Serialization.Pdf.PdfSerializer](xref:Avalonia.Controls.Documents.Serialization.Pdf.PdfSerializer).
+
+```csharp
+public PdfSerializer(Avalonia.Controls.Documents.Serialization.Pdf.PdfSerializerOptions options)
+```
+
+#### Parameters
+
+`options` [Avalonia.Controls.Documents.Serialization.Pdf.PdfSerializerOptions](xref:Avalonia.Controls.Documents.Serialization.Pdf.PdfSerializerOptions)
+
+PDF serialization options; defaults are used when .
+
+
+#### Remarks
+
+Shared serializer options travel on [Avalonia.Controls.Documents.Serialization.Pdf.PdfSerializerOptions.Document](xref:Avalonia.Controls.Documents.Serialization.Pdf.PdfSerializerOptions.Document):
+`new PdfSerializer(new PdfSerializerOptions { Document = shared })`.
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [CanDeserialize](#uid-07c4f1d1c7) | No summary available. |
+| [Deserialize](#uid-76ebf6932e) | No summary available. |
+| [DeserializeAsync](#uid-3779b4d715) | Runs [Avalonia.Controls.Documents.Serialization.Pdf.PdfSerializer.Deserialize(System.IO.Stream,System.Threading.CancellationToken)](xref:Avalonia.Controls.Documents.Serialization.Pdf.PdfSerializer.Deserialize%28System.IO.Stream%2CSystem.Threading.CancellationToken%29) on a pool thread. |
+| [Serialize](#uid-04a51a2dcb) | No summary available. |
+| [SerializeAsync](#uid-078d05ce99) | Runs [Avalonia.Controls.Documents.Serialization.Pdf.PdfSerializer.Serialize(Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot,System.IO.Stream,System.Threading.CancellationToken)](xref:Avalonia.Controls.Documents.Serialization.Pdf.PdfSerializer.Serialize%28Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot%2CSystem.IO.Stream%2CSystem.Threading.CancellationToken%29) on a pool thread. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-07c4f1d1c7"></span>
+
+### CanDeserialize Method
+
+```csharp
+public bool CanDeserialize(System.IO.Stream stream)
+```
+
+#### Parameters
+
+`stream` System.IO.Stream
+
+
+#### Returns
+
+bool
+
+Always ; PDF reading is not supported.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-76ebf6932e"></span>
+
+### Deserialize Method
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot Deserialize(System.IO.Stream stream, System.Threading.CancellationToken cancellationToken)
+```
+
+#### Parameters
+
+`stream` System.IO.Stream
+
+
+`cancellationToken` System.Threading.CancellationToken
+
+
+#### Returns
+
+Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot
+
+
+#### Exceptions
+
+- [Always thrown; PDF reading is not supported.](xref:System.NotSupportedException)
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3779b4d715"></span>
+
+### DeserializeAsync Method
+
+Runs [Avalonia.Controls.Documents.Serialization.Pdf.PdfSerializer.Deserialize(System.IO.Stream,System.Threading.CancellationToken)](xref:Avalonia.Controls.Documents.Serialization.Pdf.PdfSerializer.Deserialize%28System.IO.Stream%2CSystem.Threading.CancellationToken%29) on a pool thread.
+
+```csharp
+public System.Threading.Tasks.Task<Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot> DeserializeAsync(System.IO.Stream stream, System.Threading.CancellationToken cancellationToken)
+```
+
+#### Parameters
+
+`stream` System.IO.Stream
+
+The stream to read from.
+
+
+`cancellationToken` System.Threading.CancellationToken
+
+Cancellation token.
+
+
+#### Returns
+
+System.Threading.Tasks.Task&lt;Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot&gt;
+
+The deserialized snapshot.
+
+
+#### Remarks
+
+A thread-offload convenience, not asynchronous I/O: no format here reads asynchronously.
+Where you are already off the UI thread, call [Avalonia.Controls.Documents.Serialization.Pdf.PdfSerializer.Deserialize(System.IO.Stream,System.Threading.CancellationToken)](xref:Avalonia.Controls.Documents.Serialization.Pdf.PdfSerializer.Deserialize%28System.IO.Stream%2CSystem.Threading.CancellationToken%29) and keep the
+thread you are on.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-04a51a2dcb"></span>
+
+### Serialize Method
+
+```csharp
+public void Serialize(Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot snapshot, System.IO.Stream stream, System.Threading.CancellationToken cancellationToken)
+```
+
+#### Parameters
+
+`snapshot` Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot
+
+
+`stream` System.IO.Stream
+
+
+`cancellationToken` System.Threading.CancellationToken
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-078d05ce99"></span>
+
+### SerializeAsync Method
+
+Runs [Avalonia.Controls.Documents.Serialization.Pdf.PdfSerializer.Serialize(Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot,System.IO.Stream,System.Threading.CancellationToken)](xref:Avalonia.Controls.Documents.Serialization.Pdf.PdfSerializer.Serialize%28Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot%2CSystem.IO.Stream%2CSystem.Threading.CancellationToken%29) on a pool thread.
+
+```csharp
+public System.Threading.Tasks.Task SerializeAsync(Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot snapshot, System.IO.Stream stream, System.Threading.CancellationToken cancellationToken)
+```
+
+#### Parameters
+
+`snapshot` Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot
+
+The snapshot to serialize.
+
+
+`stream` System.IO.Stream
+
+The stream to write to.
+
+
+`cancellationToken` System.Threading.CancellationToken
+
+Cancellation token.
+
+
+#### Returns
+
+System.Threading.Tasks.Task
+
+
+#### Remarks
+
+A thread-offload convenience, not asynchronous I/O. The snapshot is already detached from
+the document, so the work needs no UI thread either way.
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [CanRead](#uid-5f7c8cec93) | No summary available. |
+| [CanWrite](#uid-0b2f26fa66) | No summary available. |
+| [FileExtension](#uid-afac0b4c5d) | No summary available. |
+| [FormatName](#uid-b754e14f26) | No summary available. |
+| [MimeType](#uid-0e0bbcc433) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5f7c8cec93"></span>
+
+### CanRead Property
+
+```csharp
+public bool CanRead { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0b2f26fa66"></span>
+
+### CanWrite Property
+
+```csharp
+public bool CanWrite { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-afac0b4c5d"></span>
+
+### FileExtension Property
+
+```csharp
+public string FileExtension { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b754e14f26"></span>
+
+### FormatName Property
+
+```csharp
+public string FormatName { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0e0bbcc433"></span>
+
+### MimeType Property
+
+```csharp
+public string MimeType { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

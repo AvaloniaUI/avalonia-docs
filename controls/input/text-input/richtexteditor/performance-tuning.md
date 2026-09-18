@@ -36,7 +36,7 @@ This control is available as part of [Avalonia Pro](https://avaloniaui.net/prici
 ## Performance checklist
 
 - Batch all multi-edit operations
-- Use `UpdateFinished` instead of `Changed` for expensive operations
+- Use `TextDocument.Changed` (once per commit) instead of `TextDocument.TextChanged` (once per edit) for expensive operations
 - Debounce user-triggered updates
 - Set appropriate `UndoLimit` on the editor
 - Disable undo during bulk loads
@@ -51,13 +51,13 @@ This control is available as part of [Avalonia Pro](https://avaloniaui.net/prici
 Single change notification instead of one per edit:
 
 ```csharp
-// Bad — 100 Changed events, 100 layout passes
+// Bad: 100 Changed events, 100 layout passes
 for (int i = 0; i < 100; i++)
 {
     pointer.InsertText("Line " + i + "\n");
 }
 
-// Good — 1 UpdateFinished event, 1 layout pass
+// Good: 1 Changed event, 1 layout pass
 using (document.BeginChange())
 {
     for (int i = 0; i < 100; i++)
@@ -73,7 +73,7 @@ using (document.BeginChange())
 
 ### Defer expensive operations
 
-Use `UpdateFinished` instead of reacting to every edit:
+Handle `TextDocument.Changed`, which is raised once per committed change scope, instead of reacting to every edit:
 
 ```csharp
 // Bad — called for every keystroke
@@ -83,12 +83,15 @@ editor.ContentChanged += (s, e) =>
 };
 
 // Good — called once per batch
-var textDoc = editor.Document?.TextDocument;
-textDoc.UpdateFinished += (s, e) =>
+var textDoc = editor.Document.TextDocument;
+textDoc.Changed += (s, e) =>
 {
+    // Changed is suppressed on no-op scopes, so e.HasChanges is true here.
     RebuildUI();
 };
 ```
+
+`TextDocument` raises two change events. (1) `TextChanged` fires per text edit with a `TextChangeEventArgs`; (2) `Changed` fires once when a change scope commits, with a `DocumentChangedEventArgs` carrying `HasChanges`. Expensive work is ideally handled by `Changed`.
 
 ### Debounce user-triggered updates
 
@@ -128,7 +131,7 @@ void OnDelayedUpdate(object? sender, EventArgs e)
 // Bad — creating a pointer per character index
 for (int i = 0; i < 1000; i++)
 {
-    var p = document.ContentStart.GetPositionAtOffset(i); // O(log n) per call
+    var p = document.ContentStart.CreatePointer(i); // allocates, O(log n) per call
 }
 
 // Good — snapshot once and read text in bulk
@@ -140,10 +143,12 @@ for (int i = 0; i < slice.Length; i++)
 }
 ```
 
+`DocumentSnapshot.GetText`, `GetTextMemory` and `WriteTextTo` all pull a substring without allocating per-character pointers.
+
 ### Reuse pointers when possible
 
 ```csharp
-var pointer = document.ContentStart;
+var pointer = document.ContentStart.CreatePointer(0);
 for (int i = 0; i < 100; i++)
 {
     pointer.InsertText("Line\n");
@@ -165,10 +170,12 @@ editor.UndoLimit = 200; // Increase for power users
 
 ### Disable undo for bulk loads
 
+`RichTextEditor.UndoManager` and `TextDocument.UndoManager` are both typed `UndoManager?`. To record nothing, either turn the instance off with `IsEnabled`, or set the document's manager to `null`. There is no null-object manager to substitute.
+
 ```csharp
 void LoadLargeDocument(string rtfPath)
 {
-    var undoManager = editor.UndoManager;
+    UndoManager? undoManager = editor.UndoManager;
     if (undoManager != null)
         undoManager.IsEnabled = false;
 
@@ -198,16 +205,28 @@ editor.ClearUndoHistory();
 
 ### Use background threads
 
+`IDocumentSerializer` is synchronous: `Serialize` and `Deserialize` run wherever you call them. `SaveAsync` and `LoadAsync` are the shipped wrappers that move the work to the thread pool, which allows you to decide which thread to use for the serialization work.
+
 ```csharp
 async Task SaveDocumentAsync(string path)
 {
-    // SaveAsync handles snapshot creation internally
+    // SaveAsync captures the snapshot on the calling thread, then writes
+    // on the thread pool.
     await using var stream = File.Create(path);
     await editor.SaveAsync(stream, new RtfSerializer());
 }
 ```
 
 **Impact**: No UI blocking during save.
+
+When you drive a serializer yourself, wrap the call:
+
+```csharp
+var snapshot = editor.Document.CreateSnapshot();   // UI thread, cheap
+await Task.Run(() => serializer.Serialize(snapshot, stream, cancellationToken), cancellationToken);
+```
+
+One snapshot can feed several serializers, which avoids a redundant tree walk per format.
 
 ### Stream large files
 
@@ -242,6 +261,19 @@ using (document.BeginChange())
 - Limit nesting depth (< 10 levels)
 - Merge adjacent runs with same formatting
 - Use metadata normalization
+
+### Vertical caret navigation
+
+<kbd>↑</kbd> and <kbd>↓</kbd> walk the document tree structurally rather than scanning visual lines for a Y-coordinate change. Because of this:
+
+- Cost is bounded by tree depth, not by the number of visible lines. One keystroke in a 50-row by 50-column table costs on the order of rows plus descent depth.
+- The intended column is captured once on the first vertical keystroke and reused until the selection changes by something other than vertical movement. That reuse is what keeps the caret in the same visual column across short lines, empty paragraphs and table cells.
+
+The column intent is discarded by any non-vertical selection change, such as a click, programmatic `Select`, horizontal arrows, <kbd>Home</kbd>, <kbd>End</kbd>, or word-jump. Avoid clearing or reassigning `Selection.CaretPosition` between consecutive <kbd>↑</kbd> / <kbd>↓</kbd> presses if you want the column preserved.
+
+### Page layout
+
+Page layout keeps its sheets on screen while an edit repaginates, rather than tearing down the break table and rebuilding it in an idle slice. Screen, print and PDF export share the same page-break policy, so they break identically. However, the pagination cost is paid once per model.
 
 ## Large document strategies
 
@@ -294,16 +326,23 @@ public class CustomBenchmark
     [Benchmark]
     public void BulkInsert()
     {
-        var pointer = _document.ContentStart;
-        _document.BeginChange();
-        for (int i = 0; i < 1000; i++)
+        var pointer = _document.ContentStart.CreatePointer(0);
+
+        // BeginChange returns an IDisposable; there is no public EndChange.
+        using (_document.BeginChange())
         {
-            pointer.InsertText("X");
+            for (int i = 0; i < 1000; i++)
+            {
+                pointer.InsertText("X");
+            }
         }
-        _document.EndChange();
     }
 }
+```
 
+Run it with:
+
+```csharp
 BenchmarkRunner.Run<CustomBenchmark>();
 ```
 
@@ -317,9 +356,8 @@ var timer = new DispatcherTimer { Interval = TimeSpan.FromMilliseconds(100) };
 timer.Tick += (s, e) => CheckDocumentState();
 
 // Good: Event-driven
-var textDoc = editor.Document?.TextDocument;
-if (textDoc != null)
-    textDoc.UpdateFinished += (s, e) => UpdateState();
+var textDoc = editor.Document.TextDocument;
+textDoc.Changed += (s, e) => UpdateState();
 ```
 
 ### Don't rebuild UI on every keystroke
@@ -329,22 +367,19 @@ if (textDoc != null)
 editor.ContentChanged += (s, e) => RebuildEntireUI();
 
 // Good
-var textDoc = editor.Document?.TextDocument;
-if (textDoc != null)
+var textDoc = editor.Document.TextDocument;
+textDoc.Changed += (s, e) =>
 {
-    textDoc.UpdateFinished += (s, e) =>
-    {
-        if (e.HasChanges)
-            RefreshAffectedRegions();
-    };
-}
+    if (e.HasChanges)
+        RefreshAffectedRegions();
+};
 ```
 
 ### Don't store full text copies for undo
 
 ```csharp
 // Bad: Undo via full text
-undoStack.Push(editor.Document?.ContentRange?.Text ?? "");
+undoStack.Push(editor.Document.ContentRange?.GetText() ?? "");
 
 // Good: Built-in UndoManager (auto-created by the editor)
 editor.UndoLimit = 100;
@@ -359,10 +394,10 @@ editor.UndoLimit = 100;
 
 ### Hot paths to monitor
 
-1. `TextDocument.InsertText/DeleteText`
-2. `RopeTextStore` operations
-3. Layout in `FlowDocumentView`
-4. Event handlers (`Changed`, `UpdateFinished`)
+1. `TextRange.DeleteText` / `ReplaceText` and `TextPointer.InsertText`
+2. Rope operations, which are internal and show up as time spent inside the above
+3. Layout in `TextViewBase` / `InteractiveTextView`, and in `PagedTextView` for page layout
+4. Event handlers on `TextDocument.TextChanged` and `TextDocument.Changed`
 
 ### Red flags
 

@@ -1,0 +1,188 @@
+---
+title: 'ReplaceImageAction'
+hide_title: true
+slug: '/avalonia/controls/documents/primitives/actions/replaceimageaction'
+uid: 'Avalonia.Controls.Documents.Primitives.Actions.ReplaceImageAction'
+commentId: 'T:Avalonia.Controls.Documents.Primitives.Actions.ReplaceImageAction'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.RichTextEditor'
+assembly: 'Avalonia.Controls.RichTextEditor'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.Primitives.Actions'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ReplaceImageAction Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.Primitives.Actions</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.RichTextEditor</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.RichTextEditor</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Replaces the inline [Avalonia.Controls.Documents.RichImage](xref:Avalonia.Controls.Documents.RichImage) at the current selection with a new
+image chosen from a file picker, preserving the existing display size and alt
+text.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class ReplaceImageAction
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="editoraction">EditorAction</a> <span className="apiref-page__relation-separator">-&gt;</span> ReplaceImageAction
+</div>
+</div>
+
+## Remarks
+
+The replacement removes the old image node via
+[Avalonia.Controls.Documents.TextModel.TextDocument.DeleteNode(Avalonia.Controls.Documents.TextModel.TextDocumentNode)](xref:Avalonia.Controls.Documents.TextModel.TextDocument.DeleteNode%28Avalonia.Controls.Documents.TextModel.TextDocumentNode%29) and inserts a fresh one at the same
+position, so undo restores the original from immutable snapshot bytes rather
+than a disposed [Avalonia.Controls.Documents.RichImage.Source](xref:Avalonia.Controls.Documents.RichImage.Source). A character-range delete of the
+old image would leave a zero-length orphan node, so node deletion is used.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [ReplaceImageAction](#uid-6728b46f3e) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6728b46f3e"></span>
+
+### ReplaceImageAction Constructor
+
+```csharp
+public ReplaceImageAction()
+```
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [CanExecute](#uid-20da856d5b) | No summary available. |
+| [Execute](#uid-d67751640d) | No summary available. |
+| [ExecuteAsync](#uid-f1511fcf4e) | No summary available. |
+| [GetState](editoraction.mdx#uid-e9737aed90) | Gets the current state of the action. Inherited from [EditorAction](editoraction.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-20da856d5b"></span>
+
+### CanExecute Method
+
+```csharp
+public bool CanExecute(Avalonia.Controls.Documents.Primitives.ITextEditorHost host)
+```
+
+#### Parameters
+
+`host` [Avalonia.Controls.Documents.Primitives.ITextEditorHost](xref:Avalonia.Controls.Documents.Primitives.ITextEditorHost)
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d67751640d"></span>
+
+### Execute Method
+
+```csharp
+public void Execute(Avalonia.Controls.Documents.Primitives.ITextEditorHost host)
+```
+
+#### Parameters
+
+`host` [Avalonia.Controls.Documents.Primitives.ITextEditorHost](xref:Avalonia.Controls.Documents.Primitives.ITextEditorHost)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f1511fcf4e"></span>
+
+### ExecuteAsync Method
+
+```csharp
+public System.Threading.Tasks.Task ExecuteAsync(Avalonia.Controls.Documents.Primitives.ITextEditorHost host)
+```
+
+#### Parameters
+
+`host` [Avalonia.Controls.Documents.Primitives.ITextEditorHost](xref:Avalonia.Controls.Documents.Primitives.ITextEditorHost)
+
+
+#### Returns
+
+System.Threading.Tasks.Task
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [DisplayName](#uid-875f31f354) | No summary available. |
+| [Gesture](editoraction.mdx#uid-557e9af400) | Gets the optional keyboard gesture for this action. Inherited from [EditorAction](editoraction.mdx). |
+| [Id](#uid-7e6f46ba43) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-875f31f354"></span>
+
+### DisplayName Property
+
+```csharp
+public string DisplayName { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7e6f46ba43"></span>
+
+### Id Property
+
+```csharp
+public string Id { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+
