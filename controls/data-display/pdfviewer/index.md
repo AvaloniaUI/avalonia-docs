@@ -1,7 +1,7 @@
 ---
 id: index
 title: PdfViewer control
-description: Display, search, annotate, fill and print PDF documents in Avalonia with the PdfViewer control from the Avalonia.Controls.PdfViewer package.
+description: Display, search, annotate, fill and print PDF documents in Avalonia with the PdfViewer control.
 doc-type: reference
 tags:
   - avalonia pro
@@ -11,7 +11,7 @@ tags:
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-`PdfViewer` displays PDF documents in your Avalonia application. It is a complete reader out of the box: set a source and you have a toolbar and sidebar, page thumbnails and a document outline, page navigation, zoom and view modes, text selection and search, a full annotation toolset with undo and redo, form filling, bookmarks, and native printing and sharing. Each of these can be hidden or disabled, and everything is available from code as well as through the built-in UI. The same control and package run on Windows, macOS, Linux, iOS, Android and WebAssembly.
+`PdfViewer` displays PDF documents in your Avalonia application. It is a complete reader out of the box, requiring only a document source to be set. The viewer includes many common PDF tools and functions, such as page thumbnails, zoom and view modes, text selection and search, form filling, bookmarks, native printing, and more.
 
 :::info
 This control is available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
@@ -19,9 +19,7 @@ This control is available as part of [Avalonia Pro](https://avaloniaui.net/prici
 
 ## When to use
 
-Use `PdfViewer` to show PDF documents inside your app. Every tool and menu entry can be hidden or disabled, so it works as a plain read-only viewer or as a full annotation editor.
-
-To render a page as an image outside the viewer, for example for a thumbnail in a file list, use [`RenderPageToImageAsync`](navigation-and-search.md#text-extraction-and-page-images).
+Use `PdfViewer` to show PDF documents inside your app. You can choose to enable or disable each tool and menu item, meaning it can work as a read-only viewer or an interactive editor.
 
 ## Requirements
 
@@ -32,7 +30,7 @@ To render a page as an image outside the viewer, for example for a thumbnail in 
 
 ## Dependencies
 
-The package renders with [PDFium](https://pdfium.googlesource.com/pdfium/), which is bundled as a native library through the `bblanchon.PDFium.*` NuGet packages. Each target framework depends only on the packages for its own platforms, so an app head restores nothing it does not need.
+The package renders with [PDFium](https://pdfium.googlesource.com/pdfium/), which is bundled as a native library through the `bblanchon.PDFium.*` NuGet packages. Each target framework depends only on the packages for its own platforms.
 
 | Target | Packages |
 |---|---|
@@ -41,17 +39,17 @@ The package renders with [PDFium](https://pdfium.googlesource.com/pdfium/), whic
 | `net10.0-android` | `Avalonia`, `Avalonia.Android`, `AvaloniaUI.Licensing`, `bblanchon.PDFium.Android` |
 | `net10.0-browser` | `Avalonia`, `AvaloniaUI.Licensing`, `bblanchon.PDFium.WebAssembly` |
 
-PDFium is licensed under the [BSD 3-Clause License](https://pdfium.googlesource.com/pdfium/+/refs/heads/main/LICENSE). Include its notice in your application's third-party attributions.
+PDFium is licensed under the [BSD 3-Clause License](https://pdfium.googlesource.com/pdfium/+/refs/heads/main/LICENSE).You must include its notice in your application's third-party attributions.
 
 ## Getting started
 
-1. Install the `Avalonia.Controls.PdfViewer` NuGet package by running `dotnet add package`. Add it to the project that contains your views and to each application head (desktop, iOS, Android, browser), so each head restores the required PDFium binaries for its own platform.
+1. Install the `Avalonia.Controls.PdfViewer` NuGet package by running `dotnet add package`. Add it to the project that contains your views and to each application head (desktop, iOS, Android, browser). This ensurea each head restores the required PDFium binaries for its own platform.
 
 ```bash
 dotnet add package Avalonia.Controls.PdfViewer
 ```
 
-2. Reference the `AvaloniaUI.Licensing` package in each application head and include your Avalonia license key in the executable project file (`.csproj`). Your license key is available from the [Avalonia portal](https://portal.avaloniaui.net). The control throws `AvaloniaLicensingException` on first use if the key is missing or does not cover the PDF Viewer.
+2. Reference the `AvaloniaUI.Licensing` package in each application head. Include your Avalonia license key in the executable project file (`.csproj`). Your license key is available from the [Avalonia portal](https://portal.avaloniaui.net).
 
 ```xml
 <ItemGroup>
@@ -66,11 +64,14 @@ dotnet add package Avalonia.Controls.PdfViewer
 For multi-project solutions, you can store your licence key in an [environment variable](https://learn.microsoft.com/en-us/visualstudio/msbuild/how-to-use-environment-variables-in-a-build) or a [shared props file](https://learn.microsoft.com/en-us/visualstudio/msbuild/customize-by-directory?view=vs-2022#directorybuildprops-example) to avoid duplication.
 :::
 
-3. Reference one of the two themes via a `StyleInclude` in your `App.axaml` file. Without a theme the control renders nothing. `Default.axaml` has its own palette and works under any host theme. `Fluent.axaml` follows the host's `FluentTheme` accent and theme variant.
+Reference the TreeDataGrid fluent theme via a StyleInclude in your App.axaml file. This adds the resources needed to render the control.
+
+3. Reference one of the two available `PdfViewer` themes via a `StyleInclude` in your `App.axaml` file. Without a theme, the control cannot render. `Default.axaml` has its own palette. `Fluent.axaml` follows the host's `FluentTheme`.
 
 ```xml
 <Application.Styles>
     <FluentTheme />
+    // highlight-next-line
     <StyleInclude Source="avares://Avalonia.Controls.PdfViewer/Themes/Default.axaml" />
 </Application.Styles>
 ```
@@ -79,7 +80,7 @@ For more information on installing Avalonia Pro controls, see [Installing Avalon
 
 ## Basic usage
 
-The control lives in the `Avalonia.Controls` namespace. `Avalonia.Controls.PdfViewer` is the package and assembly name, so map the namespace with an `xmlns` prefix in XAML.
+`PdfViewer` lives in the `Avalonia.Controls` namespace. Its package name is `Avalonia.Controls.PdfViewer`.
 
 <Tabs>
 <TabItem value="xaml" label="XAML">
@@ -103,7 +104,7 @@ The control lives in the `Avalonia.Controls` namespace. `Avalonia.Controls.PdfVi
 <TabItem value="csharp" label="Code-behind">
 
 ```csharp
-using Avalonia.Controls;          // PdfViewer, its enums and event args
+using Avalonia.Controls;          // PdfViewer
 using Avalonia.Controls.Pdf.Core; // PdfAnnotationColor, PdfBookmark, PdfSearchResult, SearchOptions
 
 // Load from a file path, a stream, or a password-protected file
@@ -150,17 +151,17 @@ Setting `Source` loads the document. It can be set before the viewer is attached
 | Property | Type | Default | Description |
 |---|---|---|---|
 | `Source` | `string?` | `null` | Path to the PDF file. Setting it loads the document. |
-| `DocumentSource` | `object?` | `null` | Flexible source: a file path `string`, a `Stream`, or a `byte[]`. |
+| `DocumentSource` | `object?` | `null` | Flexible source. Can be a file path `string`, a `Stream`, or a `byte[]`. |
 | `Password` | `string?` | `null` | Password for encrypted PDFs. |
-| `CurrentPage` | `int` | `0` | Current page number. 1-based once a document is open, `0` while none is. Coerced to the range 1 to `PageCount`. |
-| `ZoomLevel` | `double` | `1.0` | Zoom level, from `MinZoom` to `MaxZoom`. `1.0` is 100%. |
+| `CurrentPage` | `int` | `0` | Current page number. 1-based when a document is open, `0` when not. Coerced to a range of 1 to `PageCount`. |
+| `ZoomLevel` | `double` | `1.0` | Zoom level. `1.0` is 100%. |
 | `ZoomMode` | `PdfZoomMode` | `FitPage` | `Manual`, `FitWidth`, `FitPage`, `FitHeight` or `ActualSize`. |
 | `MinZoom` | `double` | `0.05` | Lower zoom bound. |
 | `MaxZoom` | `double` | `5.0` | Upper zoom bound. |
 | `ZoomStep` | `double` | `0.0` | Increment applied by `ZoomIn` and `ZoomOut`. `0` uses the built-in adaptive step. |
 | `ViewMode` | `PdfViewMode` | `Continuous` | `SinglePage`, `Continuous`, `TwoPages` or `TwoPagesContinuous`. |
-| `PageRenderBuffer` | `int` | `2` | Pages decoded on each side of the viewport in continuous mode. Clamped to 0 to 10. |
-| `PageRetentionBuffer` | `int` | `4` | Pages kept decoded on each side before eviction. Clamped to 0 to 20. |
+| `PageRenderBuffer` | `int` | `2` | Pages decoded on each side of the viewport in continuous mode. Only accepts values from 0 to 10. |
+| `PageRetentionBuffer` | `int` | `4` | Pages kept decoded on each side before eviction. Only accepts values from 0 to 20. |
 | `MaxRenderScale` | `double` | `2.0` | Upper bound on device pixels per DIP used when decoding a page. Coerced to 1 to 4. |
 | `VerticalScrollOffset` | `double` | | Current vertical scroll offset. |
 
@@ -170,86 +171,93 @@ Setting `Source` loads the document. It can be set before the viewer is attached
 |---|---|---|---|
 | `SidebarMode` | `SidebarMode` | `Thumbnails` | `None`, `Thumbnails`, `TableOfContents` or `Bookmarks`. |
 | `IsSidebarVisible` | `bool` | `true` | Shows or hides the sidebar. |
-| `SidebarWidth` | `double` | `210` | Sidebar width in DIPs. |
-| `SidebarPlacement` | `SidebarPlacement` | `Auto` | `Auto` (overlay in the mobile layout, offset on desktop), `Overlay` or `Offset`. |
+| `SidebarWidth` | `double` | `210` | Sidebar width in device-independent pixels. |
+| `SidebarPlacement` | `SidebarPlacement` | `Auto` | `Auto`, `Overlay` or `Offset`. `Auto` displays as overlay in mobile layout, and offset in desktop layout. |
 | `SidebarSelectionBrush` | `IBrush?` | `null` | Brush of the selected thumbnail and outline entry. `null` uses the theme's `PdfThumbnailSelectedBorder` resource. |
-| `IsTableOfContentsEnabled` | `bool` | `true` | Offers the outline tab in the sidebar. |
-| `IsBookmarksEnabled` | `bool` | `true` | Offers the bookmarks tab in the sidebar. |
+| `IsTableOfContentsEnabled` | `bool` | `true` | Enables the outline tab in the sidebar. |
+| `IsBookmarksEnabled` | `bool` | `true` | Enables the bookmarks tab in the sidebar. |
 | `ShowBookmarkIndicators` | `bool` | `true` | Draws a ribbon on bookmarked pages and thumbnails. |
 | `IsToolbarVisible` | `bool` | `true` | Shows or hides the toolbar. |
-| `IsMoreOptionsVisible` | `bool` | `true` | Shows or hides the toolbar's **More Options** menu (print, share, view modes). |
-| `IsPrintVisible` | `bool` | `true` | Offers **Print** in the **More Options** menu. Hidden anyway when nothing can print. |
-| `IsShareVisible` | `bool` | `true` | Offers **Share** in the **More Options** menu. Hidden anyway when nothing can share. |
-| `IsOpenVisible` | `bool` | `false` | Offers **Open** at the top of the **More Options** menu. |
-| `IsSaveVisible` | `bool` | `false` | Offers **Save** in the **More Options** menu. Hidden while `AllowDocumentSaving` is `false`. |
-| `IsSaveAsVisible` | `bool` | `false` | Offers **Save As** in the **More Options** menu. |
-| `PrintService` | `IPrintService?` | platform | Print implementation. Unset uses the built-in platform service, `null` disables it. |
-| `ShareService` | `IShareService?` | platform | Share implementation, with the same semantics as `PrintService`. |
+| `IsMoreOptionsVisible` | `bool` | `true` | Shows or hides the toolbar's **More Options** menu, which contains print, share, and view modes. |
+| `IsPrintVisible` | `bool` | `true` | Enables **Print** in the **More Options** menu. Always hidden when nothing can print. |
+| `IsShareVisible` | `bool` | `true` | Enables **Share** in the **More Options** menu. Always hidden when nothing can share. |
+| `IsOpenVisible` | `bool` | `false` | Enables **Open** in the **More Options** menu. |
+| `IsSaveVisible` | `bool` | `false` | Enables **Save** in the **More Options** menu. Always hidden while `AllowDocumentSaving` is `false`. |
+| `IsSaveAsVisible` | `bool` | `false` | Enables **Save As** in the **More Options** menu. |
+| `PrintService` | `IPrintService?` | unset | Print implementation. Unset uses the built-in platform service. `null` disables it. |
+| `ShareService` | `IShareService?` | unset | Share implementation. Unset uses the built-in platform service. `null` disables it. |
 | `ToolbarLayoutMode` | `PdfToolbarLayoutMode` | `Auto` | `Auto` picks the layout from the platform and width. `Mobile` and `Desktop` force one. |
-| `IsMobileLayout` | `bool` | | Whether the compact mobile layout is active. Set by the control: `true` on iOS and Android, and on any platform when the control is narrower than 500 DIPs. Use `ToolbarLayoutMode` to force a layout. |
+| `IsMobileLayout` | `bool` | | Whether the compact mobile layout is active. Set by the control: `true` on iOS and Android, and on any platform when the control is narrower than 500 device-independent pixels. |
+<br />
 
-The visibility of each annotation tool is controlled by its own property. See [Annotations](annotations.md#tool-visibility).
+For vibility of annotation tools, see [Annotations](/controls/data-display/pdfviewer/annotations#tool-visibility).
 
 ### Capabilities and permissions
 
 | Property | Type | Default | Description |
 |---|---|---|---|
-| `IsReadOnly` | `bool` | `false` | Disables annotation and form editing in one switch. Saving is gated separately by `AllowDocumentSaving`. |
+| `IsReadOnly` | `bool` | `false` | Disables annotations and form editing when `true`. Does not affect saving, which is controlled by `AllowDocumentSaving` (see below). |
 | `AllowTextSelection` | `bool` | `true` | Enables text selection and copy. |
 | `AllowAnnotationEditing` | `bool` | `true` | Enables creating and editing annotations. |
 | `AllowFormEditing` | `bool` | `true` | Enables interactive form field editing. |
 | `AllowDocumentSaving` | `bool` | `true` | Enables saving. Gates `SaveCommand` and `SaveAsync`. |
-| `RespectDocumentPermissions` | `bool` | `true` | Honours the document's own permission flags. Annotation editing, form filling, text selection and printing are each withheld when the document forbids them. A document opened with its owner password is unrestricted. |
-| `AutoSave` | `bool` | `false` | Saves back to `Source` after each edit. Requires `AllowDocumentSaving`. |
-| `EnableKeyboardShortcuts` | `bool` | `true` | Handles the viewer's built-in [keyboard shortcuts](navigation-and-search.md#keyboard-shortcuts). Set `false` so those keystrokes reach the host's own commands. |
-| `IsArrowKeyNudgeEnabled` | `bool` | `true` | With an annotation selected, the arrow keys move it instead of navigating. |
+| `RespectDocumentPermissions` | `bool` | `true` | Honors the document's permission flags for annotation editing, form filling, text selection and printing. A document opened with its owner password is always unrestricted. |
+| `AutoSave` | `bool` | `false` | Saves back to `Source` after each edit. Requires `AllowDocumentSaving` to be `true`. |
+| `EnableKeyboardShortcuts` | `bool` | `true` | Handles the viewer's built-in [keyboard shortcuts](/controls/data-display/pdfviewer/navigation-and-search#keyboard-shortcuts). Set `false` to allow keystrokes to reach the host's own commands. |
+| `IsArrowKeyNudgeEnabled` | `bool` | `true` | If enabled, annotations can be moved with the arrow keys when selected. |
 | `SearchQuery` | `string?` | `null` | Text in the toolbar search box. |
-| `SearchMatchCase` | `bool` | `false` | Case-sensitive option of the toolbar search box. |
-| `SearchMatchWholeWord` | `bool` | `false` | Whole-word option of the toolbar search box. |
-| `Strings` | `PdfViewerStrings` | `PdfViewerStrings.Default` | Every user-facing text. See [Localization](theming-and-localization.md#localization). |
+| `SearchMatchCase` | `bool` | `false` | Whether the toolbar search box should match character case. |
+| `SearchMatchWholeWord` | `bool` | `false` | Whether the toolbar search box should match whole words. |
+| `Strings` | `PdfViewerStrings` | `PdfViewerStrings.Default` | User-facing text. See [Localization](/controls/data-display/pdfviewer/theming-and-localization#localization). |
 
 ### State
 
-These properties are read-only and bindable.
+These properties are read-only but [can be bound](/docs/data-binding/introduction-to-data-binding).
 
 | Property | Type | Description |
 |---|---|---|
 | `PageCount` | `int` | Number of pages in the loaded document. |
 | `HasDocument` | `bool` | Whether a document is open. |
 | `IsLoading` | `bool` | `true` while a document is loading. |
-| `IsDirty` | `bool` | The document has edits not yet written. Cleared by a successful save and by loading another document. |
+| `IsDirty` | `bool` | `true` while the document has unsaved edits. Cleared by a successful save or by loading another document. |
 | `IsSidebarOpen` | `bool` | `true` when the sidebar is expanded. |
-| `HasOutline` | `bool` | The document has a table of contents. |
-| `HasBookmarks` | `bool` | The document has user bookmarks. |
-| `HasSelection` | `bool` | Text is currently selected. |
+| `HasOutline` | `bool` | `true` when the document has a table of contents. |
+| `HasBookmarks` | `bool` | `true` when the document has bookmarks. |
+| `HasSelection` | `bool` | `true` when text is selected. |
 | `SelectedText` | `string?` | The current text selection. |
-| `SearchResults` | `IReadOnlyList<PdfSearchResult>?` | Results of the last search. |
+| `SearchResults` | `IReadOnlyList<PdfSearchResult>?` | Results of search. |
 | `SearchResultCount` | `int` | Number of search matches. |
-| `CurrentSearchResultIndex` | `int` | Index of the highlighted match. |
-| `ErrorMessage` | `string?` | Last error message. Shown as a dismissible banner over an open document, or as the canvas state after a failed load. Clear it with `ClearError()`. |
-| `Metadata` | `PdfMetadata?` | Document metadata such as title and author. |
+| `CurrentSearchResultIndex` | `int` | Index of the highlighted search match. |
+| `ErrorMessage` | `string?` | Last error message. Shown as a dismissible banner over an open document, or as the canvas state after a failed load. Can be cleared with `ClearError()`. |
+| `Metadata` | `PdfMetadata?` | Document metadata, such as title and author. |
 | `Permissions` | `PdfPermissions?` | Document permission flags. |
-| `CanEditAnnotations` | `bool` | Annotations can be created and edited right now. |
-| `CanPrint` | `bool` | A document is open and a print service or handler exists. |
-| `CanShare` | `bool` | A document is open and a share service or handler exists. |
-| `CanUndo` | `bool` | The undo history has an entry to apply. |
-| `CanRedo` | `bool` | The redo history has an entry to apply. |
+| `CanEditAnnotations` | `bool` | `true` when annotations can be created or edited. |
+| `CanPrint` | `bool` | `true` when a document is open and a print service or handler exists. |
+| `CanShare` | `bool` | `true` when a document is open and a share service or handler exists. |
+| `CanUndo` | `bool` | Undo history has an entry that can be applied. |
+| `CanRedo` | `bool` | Redo history has an entry that can be applied. |
 
 ## Commands
 
-All commands are `ICommand` and update `CanExecute` as document and selection state changes. Bind them from your own buttons if you hide the built-in toolbar.
+All commands are `ICommand` and update `CanExecute` as document and selection states change.
 
 | Command | Description |
 |---|---|
 | `ZoomInCommand`, `ZoomOutCommand`, `ResetZoomCommand` | Adjust the zoom. |
 | `FitWidthCommand`, `FitPageCommand` | Apply a fit mode. |
 | `NextPageCommand`, `PreviousPageCommand`, `GoToPageCommand` | Navigate between pages. |
-| `SelectAllCommand`, `CopyCommand` | Select all text on the current page, copy the selection. |
-| `OpenCommand`, `SaveCommand`, `SaveAsCommand` | File operations. See [Loading and saving](loading-and-saving.md). |
-| `PrintCommand`, `ShareCommand` | See [Printing and sharing](printing-and-sharing.md). |
+| `SelectAllCommand` | Select all text on the current page. |
+| `CopyCommand` | Copy the selection. |
+| `OpenCommand`, `SaveCommand`, `SaveAsCommand` | File operations. See [Loading and saving](/controls/data-display/pdfviewer/loading-and-saving). |
+| `PrintCommand` | Print the document, See [Printing and sharing](/controls/data-display/pdfviewer/printing-and-sharing). |
+| `ShareCommand` | Share the document, See [Printing and sharing](/controls/data-display/pdfviewer/printing-and-sharing). |
 | `SetToolCommand` | Arms an annotation tool. The parameter is a `PdfViewerTool` value or its name. |
 | `ToggleBookmarkCommand`, `AddBookmarkCommand`, `RemoveBookmarkCommand` | Change the bookmark on a page. The parameter is a 1-based page number, else the current page. |
 | `DismissErrorCommand` | Clears `ErrorMessage`. |
+
+### Binding commands to controls
+
+You can bind commands to your own controls (e.g., a button) if you wish to customize the UI beyond the built-in toolbar. For example:
 
 ```xml
 <Button Content="Fit width" Command="{Binding #Viewer.FitWidthCommand}" />
@@ -260,34 +268,36 @@ All commands are `ICommand` and update `CanExecute` as document and selection st
 
 | Event | Args | Description |
 |---|---|---|
-| `DocumentLoaded` | `PdfDocumentLoadedEventArgs` | A document finished loading. Args include `PageCount` and `Metadata`. |
-| `DocumentClosed` | `EventArgs` | The document was closed. |
+| `DocumentLoaded` | `PdfDocumentLoadedEventArgs` | Document finished loading. Args include `PageCount` and `Metadata`. |
+| `DocumentClosed` | `EventArgs` | Document was closed. |
 | `LoadError` | `PdfLoadErrorEventArgs` | Document loading failed. |
-| `AnnotationError` | `PdfAnnotationErrorEventArgs` | An annotation operation failed. Args include `Operation` and the underlying `Exception`. |
-| `AnnotationAdded` | `PdfAnnotationEventArgs` | An annotation was added. |
-| `PageChanged` | `PdfPageChangedEventArgs` | The current page changed. Args include `OldPage` and `NewPage`, 1-based. |
-| `ZoomChanged` | `PdfZoomChangedEventArgs` | The zoom level changed. |
-| `PageRendered` | `PdfPageRenderedEventArgs` | A page finished rendering. |
-| `SearchCompleted` | `PdfSearchCompletedEventArgs` | A search finished. |
-| `LinkClicked` | `PdfLinkClickedEventArgs` | A link was clicked. See [Links](navigation-and-search.md#links). |
-| `BookmarksChanged` | `EventArgs` | A user bookmark was added or removed. |
-| `UndoRedoStateChanged` | `EventArgs` | `CanUndo` or `CanRedo` changed. |
+| `AnnotationError` | `PdfAnnotationErrorEventArgs` | Annotation operation failed. Args include `Operation` and `Exception`. |
+| `AnnotationAdded` | `PdfAnnotationEventArgs` | Annotation was added. |
+| `PageChanged` | `PdfPageChangedEventArgs` | Current page changed. Args include `OldPage` and `NewPage`, 1-based. |
+| `ZoomChanged` | `PdfZoomChangedEventArgs` | Zoom level changed. |
+| `PageRendered` | `PdfPageRenderedEventArgs` | Page finished rendering. |
+| `SearchCompleted` | `PdfSearchCompletedEventArgs` | Search finished. |
+| `LinkClicked` | `PdfLinkClickedEventArgs` | Link was clicked. See [Links](/controls/data-display/pdfviewer/navigation-and-search#links). |
+| `BookmarksChanged` | `EventArgs` | Bookmark was added or removed. |
+| `UndoRedoStateChanged` | `EventArgs` | Value(s) of `CanUndo` or `CanRedo` changed. |
 | `PrintRequested` | `PdfPrintRequestedEventArgs` | Raised before printing. Set `Handled` to print in the app instead of the platform service. |
 | `ShareRequested` | `PdfShareRequestedEventArgs` | Raised before sharing. Set `Handled` to share in the app instead of the platform service. |
-| `OpenRequested` | `PdfOpenRequestedEventArgs` | Raised before the built-in file picker. Set `Handled` to open in the app. |
-| `SaveAsRequested` | `PdfSaveAsRequestedEventArgs` | Raised before the built-in save picker. Set `Handled` to write the PDF in the app. |
+| `OpenRequested` | `PdfOpenRequestedEventArgs` | Raised before going to the built-in file dialog. Set `Handled` to open in the app. |
+| `SaveAsRequested` | `PdfSaveAsRequestedEventArgs` | Raised before going to the built-in save dialog. Set `Handled` to write the PDF in the app. |
 
 ## Threading
 
-Every public member of `PdfViewer` must be called on the UI thread. The `*Async` members throw if called from another thread. They do not block the UI while a page is decoding. PDFium itself is single-threaded, so several viewers in one process share one decode pipeline.
+Every public member of `PdfViewer` must be called on the UI thread. The `*Async` members throw if called from another thread. They do not block the UI while a page is decoding.
+
+PDFium itself is single-threaded, so several viewers in one process share one pipeline.
 
 ## See also
 
-- [Loading and saving](loading-and-saving.md)
-- [Navigation and search](navigation-and-search.md)
-- [Annotations](annotations.md)
-- [Printing and sharing](printing-and-sharing.md)
-- [Theming and localization](theming-and-localization.md)
-- [Platforms and performance](platforms-and-performance.md)
+- [Loading and saving](/controls/data-display/pdfviewer/loading-and-saving)
+- [Navigation and search](/controls/data-display/pdfviewer/navigation-and-search)
+- [Annotations](/controls/data-display/pdfviewer/annotations)
+- [Printing and sharing](/controls/data-display/pdfviewer/printing-and-sharing)
+- [Theming and localization](/controls/data-display/pdfviewer/theming-and-localization)
+- [Platforms and performance](/controls/data-display/pdfviewer/platforms-and-performance)
 - [Installing Avalonia Pro](/tools/installing-avalonia-pro)
 - [Troubleshooting](/troubleshooting/controls/pdfviewer)
