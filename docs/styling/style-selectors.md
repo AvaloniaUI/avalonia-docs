@@ -2,7 +2,7 @@
 id: style-selectors
 title: Style selectors
 description: Learn how Avalonia style selectors match controls by type, class, name, and state using a CSS-like syntax.
-doc-type: concept
+doc-type: explanation
 ---
 
 Avalonia uses style selectors to match controls using a custom XAML syntax that is similar to CSS (Cascading Style Sheets). Selectors determine which controls a style applies to.

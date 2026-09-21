@@ -2,7 +2,7 @@
 id: windows
 title: Windows Deployment
 description: Learn how to publish, package, and deploy your Avalonia XPF application on Windows, including self-contained builds, single-file publishing, and installer options.
-doc-type: guide
+doc-type: how-to
 ---
 
 ## Publishing

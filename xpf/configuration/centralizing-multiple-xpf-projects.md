@@ -2,7 +2,7 @@
 id: centralizing-multiple-xpf-projects
 title: Centralizing multiple XPF projects
 description: Learn how to centralize XPF SDK version management and license key configuration across multiple projects in a single repository.
-doc-type: guide
+doc-type: how-to
 ---
 
 When you manage multiple XPF projects in a single repository, keeping SDK versions and license keys synchronized across every `.csproj` file can become tedious and error-prone. By centralizing these settings, you ensure consistency and simplify future upgrades.

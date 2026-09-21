@@ -2,7 +2,7 @@
 id: index
 title: Samples and tutorials
 description: Explore Avalonia tutorials, sample apps, and quick guides to accelerate your learning.
-doc-type: landing
+doc-type: overview
 hide_table_of_contents: true
 ---
 

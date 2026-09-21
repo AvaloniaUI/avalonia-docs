@@ -1,7 +1,7 @@
 ---
 id: document-viewer
 title: Document Viewer
-doc-type: guide
+doc-type: how-to
 tags:
  - avalonia pro
  - avalonia enterprise

@@ -2,7 +2,7 @@
 id: embed-native-views
 title: Embedding Android native views
 description: Learn how to embed native Android views such as WebView and Button controls inside your Avalonia application using NativeControlHost and AndroidViewControlHandle.
-doc-type: guide
+doc-type: how-to
 ---
 
 Avalonia lets you embed native Android views inside the Avalonia visual tree by subclassing [`NativeControlHost`](/api/avalonia/controls/nativecontrolhost). You wrap each Android `View` in an [`AndroidViewControlHandle`](/api/avalonia/android/androidviewcontrolhandle) and return it from `CreateNativeControlCore`. This is useful when you need platform-specific controls (such as `WebView`, `MapView`, or media players) that have no Avalonia equivalent.
