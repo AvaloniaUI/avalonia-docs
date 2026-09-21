@@ -29,6 +29,9 @@ const config: RedirectConfig = {
     // Redirect release notes to Releases page on GitHub
     { from: '/docs/stay-up-to-date/release-notes', to: 'https://github.com/AvaloniaUI/Avalonia/releases' },
 
+    // PdfViewer package README links to pdf-viewer
+    { from: '/controls/data-display/pdf-viewer', to: '/controls/data-display/pdfviewer' },
+
     // richtexteditor-guides folder renamed to richtexteditor
     { from: '/controls/input/text-input/richtexteditor-guides/document-viewer', to: '/controls/input/text-input/richtexteditor/document-viewer' },
     { from: '/controls/input/text-input/richtexteditor-guides/extension-patterns', to: '/controls/input/text-input/richtexteditor/extension-patterns' },
@@ -40,6 +43,9 @@ const config: RedirectConfig = {
     { from: '/docs/custom-controls/choosing-a-custom-control-type', to: '/docs/custom-controls/'},
     { from: ['/docs/custom-controls/custom-control-class', '/docs/custom-controls/drawing-custom-controls'], to: '/docs/custom-controls/custom-drawn-controls'},
     { from: '/docs/custom-controls/attached-properties', to: '/docs/custom-controls/defining-properties' },
+
+    // Redirect retired ItemsRepeater pages
+    { from: ['/controls/data-display/collections/itemsrepeater', '/docs/reference/controls/itemsrepeater'], to: '/controls/data-display/collections/itemscontrol' },
   ],
   createRedirects(existingPath: string): string[] | undefined {
     const redirects = [

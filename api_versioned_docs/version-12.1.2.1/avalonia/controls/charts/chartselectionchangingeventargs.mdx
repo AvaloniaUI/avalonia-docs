@@ -1,0 +1,156 @@
+---
+title: 'ChartSelectionChangingEventArgs'
+hide_title: true
+slug: '/avalonia/controls/charts/chartselectionchangingeventargs'
+uid: 'Avalonia.Controls.Charts.ChartSelectionChangingEventArgs'
+commentId: 'T:Avalonia.Controls.Charts.ChartSelectionChangingEventArgs'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Charts'
+assembly: 'Avalonia.Controls.Charts'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Charts'
+tfms:
+  - 'net9.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ChartSelectionChangingEventArgs Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Charts</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Charts</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Charts</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Provides data for the SelectionChanging event. Handlers may cancel the change
+or edit [Avalonia.Controls.Charts.ChartSelectionChangingEventArgs.NewSelection](xref:Avalonia.Controls.Charts.ChartSelectionChangingEventArgs.NewSelection) before the owning chart commits it.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class ChartSelectionChangingEventArgs
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> CancelEventArgs <span className="apiref-page__relation-separator">-&gt;</span> ChartSelectionChangingEventArgs
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [ChartSelectionChangingEventArgs](#uid-69c5dbb182) | Creates a new instance of [ChartSelectionChangingEventArgs](xref:Avalonia.Controls.Charts.ChartSelectionChangingEventArgs). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-69c5dbb182"></span>
+
+### ChartSelectionChangingEventArgs Constructor
+
+Creates a new instance of [ChartSelectionChangingEventArgs](xref:Avalonia.Controls.Charts.ChartSelectionChangingEventArgs).
+
+```csharp
+public ChartSelectionChangingEventArgs(System.Collections.IList newSelection, System.Collections.IList oldSelection)
+```
+
+#### Parameters
+
+`newSelection` System.Collections.IList
+
+
+`oldSelection` System.Collections.IList
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [NewIndexes](#uid-26f83726b6) | Gets the editable requested indexes for index-based selection surfaces. This aliases [Avalonia.Controls.Charts.ChartSelectionChangingEventArgs.NewSelection](xref:Avalonia.Controls.Charts.ChartSelectionChangingEventArgs.NewSelection) and is meaningful only when the sender selects data points by index. |
+| [NewSelection](#uid-51748ce50d) | Gets the editable snapshot that represents the requested new selection. |
+| [OldIndexes](#uid-1908aaf00f) | Gets a snapshot of the previous indexes for index-based selection surfaces. This aliases [Avalonia.Controls.Charts.ChartSelectionChangingEventArgs.OldSelection](xref:Avalonia.Controls.Charts.ChartSelectionChangingEventArgs.OldSelection) and is meaningful only when the sender selects data points by index. |
+| [OldSelection](#uid-aab084a31c) | Gets a snapshot of the previous selection. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-26f83726b6"></span>
+
+### NewIndexes Property
+
+Gets the editable requested indexes for index-based selection surfaces.
+This aliases [Avalonia.Controls.Charts.ChartSelectionChangingEventArgs.NewSelection](xref:Avalonia.Controls.Charts.ChartSelectionChangingEventArgs.NewSelection) and is meaningful only when the
+sender selects data points by index.
+
+```csharp
+public System.Collections.IList NewIndexes { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-51748ce50d"></span>
+
+### NewSelection Property
+
+Gets the editable snapshot that represents the requested new selection.
+
+```csharp
+public System.Collections.IList NewSelection { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1908aaf00f"></span>
+
+### OldIndexes Property
+
+Gets a snapshot of the previous indexes for index-based selection surfaces.
+This aliases [Avalonia.Controls.Charts.ChartSelectionChangingEventArgs.OldSelection](xref:Avalonia.Controls.Charts.ChartSelectionChangingEventArgs.OldSelection) and is meaningful only when the
+sender selects data points by index.
+
+```csharp
+public System.Collections.IList OldIndexes { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-aab084a31c"></span>
+
+### OldSelection Property
+
+Gets a snapshot of the previous selection.
+
+```csharp
+public System.Collections.IList OldSelection { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

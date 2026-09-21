@@ -1,0 +1,955 @@
+---
+title: 'EditorActionIds'
+hide_title: true
+slug: '/avalonia/controls/documents/primitives/actions/editoractionids'
+uid: 'Avalonia.Controls.Documents.Primitives.Actions.EditorActionIds'
+commentId: 'T:Avalonia.Controls.Documents.Primitives.Actions.EditorActionIds'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.RichTextEditor'
+assembly: 'Avalonia.Controls.RichTextEditor'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.Primitives.Actions'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">EditorActionIds Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.Primitives.Actions</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.RichTextEditor</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.RichTextEditor</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+The identifiers of the built-in editor actions.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class EditorActionIds
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> EditorActionIds
+</div>
+</div>
+
+## Remarks
+
+[Avalonia.Controls.Documents.Primitives.Actions.EditorActions.GetById(string)](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.GetById%28System.String%29) takes a bare string, so without these constants
+a caller has no way to check a lookup against the shipped set until it returns null
+at runtime. Each value is the [Avalonia.Controls.Documents.Primitives.Actions.IEditorAction.Id](xref:Avalonia.Controls.Documents.Primitives.Actions.IEditorAction.Id) of the matching
+[Avalonia.Controls.Documents.Primitives.Actions.EditorActions](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions) singleton.
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [AlignCenter](#uid-2142e88d4a) | The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.AlignCenter](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.AlignCenter). |
+| [AlignJustify](#uid-5bc36ff9fc) | The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.AlignJustify](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.AlignJustify). |
+| [AlignLeft](#uid-12e89abaef) | The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.AlignLeft](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.AlignLeft). |
+| [AlignRight](#uid-937e7915b7) | The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.AlignRight](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.AlignRight). |
+| [BackgroundColor](#uid-036bf1626f) | The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.BackgroundColor](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.BackgroundColor). |
+| [BlockBackground](#uid-efd5321206) | The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.BlockBackground](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.BlockBackground). |
+| [BlockBorder](#uid-296b8aed09) | The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.BlockBorder](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.BlockBorder). |
+| [Bold](#uid-8d33353c2c) | The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.Bold](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.Bold). |
+| [BorderBrush](#uid-8f54dcf51b) | The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.BorderBrush](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.BorderBrush). |
+| [BorderThickness](#uid-ee27c66267) | The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.BorderThickness](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.BorderThickness). |
+| [BulletMarkerStyle](#uid-e1d20c5f05) | The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.BulletMarkerStyle](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.BulletMarkerStyle). |
+| [Copy](#uid-8e4966ecb1) | The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.Copy](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.Copy). |
+| [Cut](#uid-c0325457fd) | The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.Cut](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.Cut). |
+| [DeleteColumn](#uid-f03e688337) | The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.DeleteColumn](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.DeleteColumn). |
+| [DeleteImage](#uid-ceb338f845) | The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.DeleteImage](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.DeleteImage). |
+| [DeleteRow](#uid-7eeed25657) | The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.DeleteRow](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.DeleteRow). |
+| [DeleteTable](#uid-13febcdcbb) | The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.DeleteTable](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.DeleteTable). |
+| [DifferentFirstPage](#uid-a20938bc6c) | The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.DifferentFirstPage](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.DifferentFirstPage). |
+| [DifferentOddAndEvenPages](#uid-bb0d168493) | The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.DifferentOddAndEvenPages](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.DifferentOddAndEvenPages). |
+| [FontFamily](#uid-7b43319816) | The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.FontFamily](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.FontFamily). |
+| [FontSize](#uid-3164e25219) | The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.FontSize](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.FontSize). |
+| [ForegroundColor](#uid-811acd6811) | The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.ForegroundColor](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.ForegroundColor). |
+| [GoToFooter](#uid-4e8d53ff7d) | The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.GoToFooter](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.GoToFooter). |
+| [GoToFootnote](#uid-686100e13c) | The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.GoToFootnote](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.GoToFootnote). |
+| [GoToFootnoteReference](#uid-941398b68f) | The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.GoToFootnoteReference](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.GoToFootnoteReference). |
+| [GoToHeader](#uid-775fc29b32) | The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.GoToHeader](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.GoToHeader). |
+| [InsertColumnAfter](#uid-8e957f73a4) | The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.InsertColumnAfter](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.InsertColumnAfter). |
+| [InsertColumnBefore](#uid-30376edd2f) | The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.InsertColumnBefore](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.InsertColumnBefore). |
+| [InsertFootnote](#uid-7b679fdb26) | The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.InsertFootnote](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.InsertFootnote). |
+| [InsertImage](#uid-3b35ef7b24) | The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.InsertImage](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.InsertImage). |
+| [InsertPageCount](#uid-a139521911) | The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.InsertPageCount](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.InsertPageCount). |
+| [InsertPageNumber](#uid-249d8d2204) | The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.InsertPageNumber](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.InsertPageNumber). |
+| [InsertRowAfter](#uid-5a025d4d75) | The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.InsertRowAfter](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.InsertRowAfter). |
+| [InsertRowBefore](#uid-27abc3b077) | The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.InsertRowBefore](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.InsertRowBefore). |
+| [InsertTable](#uid-e7a104645f) | The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.InsertTable](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.InsertTable). |
+| [Italic](#uid-65eeb590fd) | The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.Italic](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.Italic). |
+| [LineHeight](#uid-23f879ff6c) | The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.LineHeight](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.LineHeight). |
+| [LinkToPrevious](#uid-25fd3afb7e) | The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.LinkToPrevious](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.LinkToPrevious). |
+| [Margin](#uid-8d4a638a77) | The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.Margin](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.Margin). |
+| [MergeCells](#uid-433f41ab6e) | The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.MergeCells](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.MergeCells). |
+| [NumberedMarkerStyle](#uid-b316a8c25f) | The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.NumberedMarkerStyle](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.NumberedMarkerStyle). |
+| [Padding](#uid-e94a5b9530) | The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.Padding](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.Padding). |
+| [Paste](#uid-a83bd678b5) | The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.Paste](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.Paste). |
+| [PasteUnformatted](#uid-bee98faabb) | The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.PasteUnformatted](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.PasteUnformatted). |
+| [Redo](#uid-bb91f20e1e) | The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.Redo](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.Redo). |
+| [RemoveFooter](#uid-32bb0483f6) | The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.RemoveFooter](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.RemoveFooter). |
+| [RemoveHeader](#uid-af45507b96) | The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.RemoveHeader](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.RemoveHeader). |
+| [ReplaceImage](#uid-cfceba8795) | The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.ReplaceImage](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.ReplaceImage). |
+| [ReturnToBody](#uid-33ddb540c6) | The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.ReturnToBody](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.ReturnToBody). |
+| [SelectAll](#uid-687419bae4) | The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.SelectAll](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.SelectAll). |
+| [SplitCell](#uid-32aa329b9f) | The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.SplitCell](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.SplitCell). |
+| [Strikethrough](#uid-953f972195) | The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.Strikethrough](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.Strikethrough). |
+| [Subscript](#uid-13268bce5c) | The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.Subscript](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.Subscript). |
+| [Superscript](#uid-a7bd5ca197) | The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.Superscript](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.Superscript). |
+| [TextAlignment](#uid-0875b53e4c) | The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.TextAlignmentAction](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.TextAlignmentAction). |
+| [ToggleBulletList](#uid-6b16eecc98) | The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.ToggleBulletList](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.ToggleBulletList). |
+| [ToggleNumberedList](#uid-d680fad4ff) | The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.ToggleNumberedList](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.ToggleNumberedList). |
+| [Underline](#uid-6920087667) | The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.Underline](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.Underline). |
+| [Undo](#uid-918de374fb) | The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.Undo](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.Undo). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2142e88d4a"></span>
+
+### AlignCenter Field
+
+The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.AlignCenter](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.AlignCenter).
+
+```csharp
+public string AlignCenter
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5bc36ff9fc"></span>
+
+### AlignJustify Field
+
+The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.AlignJustify](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.AlignJustify).
+
+```csharp
+public string AlignJustify
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-12e89abaef"></span>
+
+### AlignLeft Field
+
+The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.AlignLeft](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.AlignLeft).
+
+```csharp
+public string AlignLeft
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-937e7915b7"></span>
+
+### AlignRight Field
+
+The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.AlignRight](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.AlignRight).
+
+```csharp
+public string AlignRight
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-036bf1626f"></span>
+
+### BackgroundColor Field
+
+The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.BackgroundColor](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.BackgroundColor).
+
+```csharp
+public string BackgroundColor
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-efd5321206"></span>
+
+### BlockBackground Field
+
+The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.BlockBackground](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.BlockBackground).
+
+```csharp
+public string BlockBackground
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-296b8aed09"></span>
+
+### BlockBorder Field
+
+The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.BlockBorder](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.BlockBorder).
+
+```csharp
+public string BlockBorder
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8d33353c2c"></span>
+
+### Bold Field
+
+The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.Bold](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.Bold).
+
+```csharp
+public string Bold
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8f54dcf51b"></span>
+
+### BorderBrush Field
+
+The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.BorderBrush](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.BorderBrush).
+
+```csharp
+public string BorderBrush
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ee27c66267"></span>
+
+### BorderThickness Field
+
+The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.BorderThickness](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.BorderThickness).
+
+```csharp
+public string BorderThickness
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e1d20c5f05"></span>
+
+### BulletMarkerStyle Field
+
+The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.BulletMarkerStyle](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.BulletMarkerStyle).
+
+```csharp
+public string BulletMarkerStyle
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8e4966ecb1"></span>
+
+### Copy Field
+
+The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.Copy](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.Copy).
+
+```csharp
+public string Copy
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c0325457fd"></span>
+
+### Cut Field
+
+The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.Cut](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.Cut).
+
+```csharp
+public string Cut
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f03e688337"></span>
+
+### DeleteColumn Field
+
+The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.DeleteColumn](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.DeleteColumn).
+
+```csharp
+public string DeleteColumn
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ceb338f845"></span>
+
+### DeleteImage Field
+
+The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.DeleteImage](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.DeleteImage).
+
+```csharp
+public string DeleteImage
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7eeed25657"></span>
+
+### DeleteRow Field
+
+The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.DeleteRow](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.DeleteRow).
+
+```csharp
+public string DeleteRow
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-13febcdcbb"></span>
+
+### DeleteTable Field
+
+The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.DeleteTable](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.DeleteTable).
+
+```csharp
+public string DeleteTable
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a20938bc6c"></span>
+
+### DifferentFirstPage Field
+
+The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.DifferentFirstPage](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.DifferentFirstPage).
+
+```csharp
+public string DifferentFirstPage
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-bb0d168493"></span>
+
+### DifferentOddAndEvenPages Field
+
+The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.DifferentOddAndEvenPages](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.DifferentOddAndEvenPages).
+
+```csharp
+public string DifferentOddAndEvenPages
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7b43319816"></span>
+
+### FontFamily Field
+
+The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.FontFamily](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.FontFamily).
+
+```csharp
+public string FontFamily
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3164e25219"></span>
+
+### FontSize Field
+
+The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.FontSize](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.FontSize).
+
+```csharp
+public string FontSize
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-811acd6811"></span>
+
+### ForegroundColor Field
+
+The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.ForegroundColor](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.ForegroundColor).
+
+```csharp
+public string ForegroundColor
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4e8d53ff7d"></span>
+
+### GoToFooter Field
+
+The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.GoToFooter](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.GoToFooter).
+
+```csharp
+public string GoToFooter
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-686100e13c"></span>
+
+### GoToFootnote Field
+
+The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.GoToFootnote](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.GoToFootnote).
+
+```csharp
+public string GoToFootnote
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-941398b68f"></span>
+
+### GoToFootnoteReference Field
+
+The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.GoToFootnoteReference](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.GoToFootnoteReference).
+
+```csharp
+public string GoToFootnoteReference
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-775fc29b32"></span>
+
+### GoToHeader Field
+
+The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.GoToHeader](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.GoToHeader).
+
+```csharp
+public string GoToHeader
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8e957f73a4"></span>
+
+### InsertColumnAfter Field
+
+The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.InsertColumnAfter](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.InsertColumnAfter).
+
+```csharp
+public string InsertColumnAfter
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-30376edd2f"></span>
+
+### InsertColumnBefore Field
+
+The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.InsertColumnBefore](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.InsertColumnBefore).
+
+```csharp
+public string InsertColumnBefore
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7b679fdb26"></span>
+
+### InsertFootnote Field
+
+The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.InsertFootnote](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.InsertFootnote).
+
+```csharp
+public string InsertFootnote
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3b35ef7b24"></span>
+
+### InsertImage Field
+
+The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.InsertImage](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.InsertImage).
+
+```csharp
+public string InsertImage
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a139521911"></span>
+
+### InsertPageCount Field
+
+The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.InsertPageCount](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.InsertPageCount).
+
+```csharp
+public string InsertPageCount
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-249d8d2204"></span>
+
+### InsertPageNumber Field
+
+The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.InsertPageNumber](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.InsertPageNumber).
+
+```csharp
+public string InsertPageNumber
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5a025d4d75"></span>
+
+### InsertRowAfter Field
+
+The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.InsertRowAfter](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.InsertRowAfter).
+
+```csharp
+public string InsertRowAfter
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-27abc3b077"></span>
+
+### InsertRowBefore Field
+
+The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.InsertRowBefore](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.InsertRowBefore).
+
+```csharp
+public string InsertRowBefore
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e7a104645f"></span>
+
+### InsertTable Field
+
+The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.InsertTable](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.InsertTable).
+
+```csharp
+public string InsertTable
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-65eeb590fd"></span>
+
+### Italic Field
+
+The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.Italic](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.Italic).
+
+```csharp
+public string Italic
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-23f879ff6c"></span>
+
+### LineHeight Field
+
+The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.LineHeight](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.LineHeight).
+
+```csharp
+public string LineHeight
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-25fd3afb7e"></span>
+
+### LinkToPrevious Field
+
+The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.LinkToPrevious](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.LinkToPrevious).
+
+```csharp
+public string LinkToPrevious
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8d4a638a77"></span>
+
+### Margin Field
+
+The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.Margin](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.Margin).
+
+```csharp
+public string Margin
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-433f41ab6e"></span>
+
+### MergeCells Field
+
+The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.MergeCells](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.MergeCells).
+
+```csharp
+public string MergeCells
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b316a8c25f"></span>
+
+### NumberedMarkerStyle Field
+
+The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.NumberedMarkerStyle](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.NumberedMarkerStyle).
+
+```csharp
+public string NumberedMarkerStyle
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e94a5b9530"></span>
+
+### Padding Field
+
+The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.Padding](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.Padding).
+
+```csharp
+public string Padding
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a83bd678b5"></span>
+
+### Paste Field
+
+The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.Paste](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.Paste).
+
+```csharp
+public string Paste
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-bee98faabb"></span>
+
+### PasteUnformatted Field
+
+The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.PasteUnformatted](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.PasteUnformatted).
+
+```csharp
+public string PasteUnformatted
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-bb91f20e1e"></span>
+
+### Redo Field
+
+The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.Redo](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.Redo).
+
+```csharp
+public string Redo
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-32bb0483f6"></span>
+
+### RemoveFooter Field
+
+The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.RemoveFooter](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.RemoveFooter).
+
+```csharp
+public string RemoveFooter
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-af45507b96"></span>
+
+### RemoveHeader Field
+
+The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.RemoveHeader](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.RemoveHeader).
+
+```csharp
+public string RemoveHeader
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-cfceba8795"></span>
+
+### ReplaceImage Field
+
+The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.ReplaceImage](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.ReplaceImage).
+
+```csharp
+public string ReplaceImage
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-33ddb540c6"></span>
+
+### ReturnToBody Field
+
+The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.ReturnToBody](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.ReturnToBody).
+
+```csharp
+public string ReturnToBody
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-687419bae4"></span>
+
+### SelectAll Field
+
+The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.SelectAll](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.SelectAll).
+
+```csharp
+public string SelectAll
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-32aa329b9f"></span>
+
+### SplitCell Field
+
+The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.SplitCell](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.SplitCell).
+
+```csharp
+public string SplitCell
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-953f972195"></span>
+
+### Strikethrough Field
+
+The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.Strikethrough](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.Strikethrough).
+
+```csharp
+public string Strikethrough
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-13268bce5c"></span>
+
+### Subscript Field
+
+The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.Subscript](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.Subscript).
+
+```csharp
+public string Subscript
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a7bd5ca197"></span>
+
+### Superscript Field
+
+The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.Superscript](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.Superscript).
+
+```csharp
+public string Superscript
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0875b53e4c"></span>
+
+### TextAlignment Field
+
+The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.TextAlignmentAction](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.TextAlignmentAction).
+
+```csharp
+public string TextAlignment
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6b16eecc98"></span>
+
+### ToggleBulletList Field
+
+The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.ToggleBulletList](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.ToggleBulletList).
+
+```csharp
+public string ToggleBulletList
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d680fad4ff"></span>
+
+### ToggleNumberedList Field
+
+The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.ToggleNumberedList](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.ToggleNumberedList).
+
+```csharp
+public string ToggleNumberedList
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6920087667"></span>
+
+### Underline Field
+
+The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.Underline](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.Underline).
+
+```csharp
+public string Underline
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-918de374fb"></span>
+
+### Undo Field
+
+The identifier of [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.Undo](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.Undo).
+
+```csharp
+public string Undo
+```
+
+</section>
+
+</ApiRefPage>
+

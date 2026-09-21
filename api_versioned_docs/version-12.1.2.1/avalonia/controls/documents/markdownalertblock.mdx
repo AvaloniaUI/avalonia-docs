@@ -1,0 +1,121 @@
+---
+title: 'MarkdownAlertBlock'
+hide_title: true
+slug: '/avalonia/controls/documents/markdownalertblock'
+uid: 'Avalonia.Controls.Documents.MarkdownAlertBlock'
+commentId: 'T:Avalonia.Controls.Documents.MarkdownAlertBlock'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Markdown'
+assembly: 'Avalonia.Controls.Markdown'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">MarkdownAlertBlock Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Markdown</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Markdown</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A [Avalonia.Controls.Documents.Section](xref:Avalonia.Controls.Documents.Section) that represents a GitHub-style alert block
+(`> [!NOTE]`). Carries the alert kind ("Note", "Warning", ...) as
+a typed property so it survives element realization and is authorable
+through the FlowDocument API; the "alertBlock" + lowercased kind CSS
+classes remain the styling surface.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class MarkdownAlertBlock
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Section <span className="apiref-page__relation-separator">-&gt;</span> MarkdownAlertBlock
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [MarkdownAlertBlock](#uid-8170384a37) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8170384a37"></span>
+
+### MarkdownAlertBlock Constructor
+
+```csharp
+public MarkdownAlertBlock()
+```
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [AlertKind](#uid-0b96811743) | Gets or sets the alert kind in title case ("Note", "Warning", "Tip", "Important", "Caution"). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0b96811743"></span>
+
+### AlertKind Property
+
+Gets or sets the alert kind in title case ("Note", "Warning", "Tip",
+"Important", "Caution").
+
+```csharp
+public string AlertKind { get; set; }
+```
+
+</section>
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [AlertKindProperty](#uid-22dd03e37c) | Defines the [Avalonia.Controls.Documents.MarkdownAlertBlock.AlertKind](xref:Avalonia.Controls.Documents.MarkdownAlertBlock.AlertKind) property. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-22dd03e37c"></span>
+
+### AlertKindProperty Field
+
+Defines the [Avalonia.Controls.Documents.MarkdownAlertBlock.AlertKind](xref:Avalonia.Controls.Documents.MarkdownAlertBlock.AlertKind) property.
+
+```csharp
+public Avalonia.StyledProperty<string> AlertKindProperty
+```
+
+</section>
+
+</ApiRefPage>
+

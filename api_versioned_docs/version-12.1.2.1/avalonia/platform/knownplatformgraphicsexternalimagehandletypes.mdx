@@ -1,0 +1,153 @@
+---
+title: 'KnownPlatformGraphicsExternalImageHandleTypes'
+hide_title: true
+slug: '/avalonia/platform/knownplatformgraphicsexternalimagehandletypes'
+uid: 'Avalonia.Platform.KnownPlatformGraphicsExternalImageHandleTypes'
+commentId: 'T:Avalonia.Platform.KnownPlatformGraphicsExternalImageHandleTypes'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Platform'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">KnownPlatformGraphicsExternalImageHandleTypes Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Platform</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Describes various GPU memory handle types that are currently supported by Avalonia graphics backends
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class KnownPlatformGraphicsExternalImageHandleTypes
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> KnownPlatformGraphicsExternalImageHandleTypes
+</div>
+</div>
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [D3D11TextureGlobalSharedHandle](#uid-9aa6429454) | An DXGI global shared handle returned by IDXGIResource::GetSharedHandle D3D11_RESOURCE_MISC_SHARED or D3D11_RESOURCE_MISC_SHARED_KEYEDMUTEX flag. The handle does not own the reference to the underlying video memory, so the provider should make sure that the resource is valid until the handle has been successfully imported |
+| [D3D11TextureNtHandle](#uid-fc61ffec8d) | A DXGI NT handle returned by IDXGIResource1::CreateSharedHandle for a texture created with D3D11_RESOURCE_MISC_SHARED_NTHANDLE or flag |
+| [IOSurfaceRef](#uid-d4baea1640) | A reference to IOSurface |
+| [VulkanOpaqueKmtHandle](#uid-7a8001c1da) | No summary available. |
+| [VulkanOpaqueNtHandle](#uid-07b459d6f7) | A NT handle that's been exported by Vulkan using VK_EXTERNAL_MEMORY_HANDLE_TYPE_OPAQUE_WIN32_BIT or in a compatible way |
+| [VulkanOpaquePosixFileDescriptor](#uid-5071f56811) | A POSIX file descriptor that's exported by Vulkan using VK_EXTERNAL_MEMORY_HANDLE_TYPE_OPAQUE_FD_BIT or in a compatible way |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9aa6429454"></span>
+
+### D3D11TextureGlobalSharedHandle Field
+
+An DXGI global shared handle returned by IDXGIResource::GetSharedHandle D3D11_RESOURCE_MISC_SHARED or D3D11_RESOURCE_MISC_SHARED_KEYEDMUTEX flag.
+The handle does not own the reference to the underlying video memory, so the provider should make sure that the resource is valid until
+the handle has been successfully imported
+
+```csharp
+public string D3D11TextureGlobalSharedHandle
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-fc61ffec8d"></span>
+
+### D3D11TextureNtHandle Field
+
+A DXGI NT handle returned by IDXGIResource1::CreateSharedHandle for a texture created with D3D11_RESOURCE_MISC_SHARED_NTHANDLE or flag
+
+```csharp
+public string D3D11TextureNtHandle
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d4baea1640"></span>
+
+### IOSurfaceRef Field
+
+A reference to IOSurface
+
+```csharp
+public string IOSurfaceRef
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7a8001c1da"></span>
+
+### VulkanOpaqueKmtHandle Field
+
+```csharp
+public string VulkanOpaqueKmtHandle
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-07b459d6f7"></span>
+
+### VulkanOpaqueNtHandle Field
+
+A NT handle that's been exported by Vulkan using VK_EXTERNAL_MEMORY_HANDLE_TYPE_OPAQUE_WIN32_BIT or in a compatible way
+
+```csharp
+public string VulkanOpaqueNtHandle
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5071f56811"></span>
+
+### VulkanOpaquePosixFileDescriptor Field
+
+A POSIX file descriptor that's exported by Vulkan using VK_EXTERNAL_MEMORY_HANDLE_TYPE_OPAQUE_FD_BIT or in a compatible way
+
+```csharp
+public string VulkanOpaquePosixFileDescriptor
+```
+
+</section>
+
+</ApiRefPage>
+

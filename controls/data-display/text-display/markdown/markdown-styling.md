@@ -36,20 +36,21 @@ The following table lists the style selectors used by the default theme. You can
 | `Paragraph.h4` | Level 4 heading. |
 | `Paragraph.h5` | Level 5 heading. |
 | `Paragraph.h6` | Level 6 heading. |
-| `Section.quoteBlock` | Block quotes. Left border, padding, muted foreground. |
-| `Section.alertBlock` | All alert blocks (NOTE, TIP, IMPORTANT, WARNING, CAUTION). |
-| `Section.alertBlock.note` | Note alert block border. |
-| `Section.alertBlock.tip` | Tip alert block border. |
-| `Section.alertBlock.important` | Important alert block border. |
-| `Section.alertBlock.warning` | Warning alert block border. |
-| `Section.alertBlock.caution` | Caution alert block border. |
+| `Section.quoteBlock` * | Block quotes. Left border, padding, muted foreground. |
+| `Section.alertBlock` * | All alert blocks (NOTE, TIP, IMPORTANT, WARNING, CAUTION). |
+| `Section.alertBlock.note` * | Note alert block border. |
+| `Section.alertBlock.tip` * | Tip alert block border. |
+| `Section.alertBlock.important` * | Important alert block border. |
+| `Section.alertBlock.warning` * | Warning alert block border. |
+| `Section.alertBlock.caution` * | Caution alert block border. |
 | `BlockUIContainer.thematicBreak` | Horizontal rule (thematic break). |
-| `BlockUIContainer.alertBlockHeader` | Alert block header container (icon + label). |
 | `Table` | Table element. Border, cell spacing. |
 | `TableCell` | Table cell element. Border. |
 | `TableRow.tableHeader` | Header row. Bold font weight. |
 | `List` | List element. Left padding, line height. |
 | `ListItem` | List item element. Line height. |
+
+\* Alert block headers (e.g., "Note", "Warning") are drawn by the alert block itself. They are not considered a paragraph in the document, so they cannot be directly selected for styling. Instead, style them through `Section.alertBlock`, whose inherited `FontFamily`, `FontSize` and `Foreground` reach the header and the body together.
 
 #### Inline selectors
 
@@ -215,7 +216,6 @@ Each header exposes `FontSize`, `BorderThickness`, `Padding`, `Margin`.
 | `MarkdownTableCellBorderBrush` | Brush | `Black` | `#30363d` | Table cell border brush |
 | `MarkdownTableBorderBrush` | Brush | `Black` | `#30363d` | Table border brush |
 | `MarkdownTableBorderThickness` | Thickness | `0,0,1,1` | `0,0,1,1` | Table outer border thickness |
-| `MarkdownTableCellSpacing` | Double | `0` | — | Cell spacing |
 | `MarkdownTableCellBorderThickness` | Thickness | `1,1,0,0` | `1,1,0,0` | Cell border thickness |
 | `MarkdownTableCellParagraphPadding` | Thickness | `12,5` | `12,5` | Cell paragraph padding |
 
@@ -228,23 +228,10 @@ Each header exposes `FontSize`, `BorderThickness`, `Padding`, `Margin`.
 | Key | Type | Default (Light) | Default (Dark) | Notes |
 |---|---|---|---|---|
 | `MarkdownAlertBlockNoteBorderBrush` | Brush | `#0969da` | `#58a6ff` | Note alert border brush |
-| `MarkdownAlertBlockNoteParagraphForeground` | Brush | `#0969da` | `#58a6ff` | Note alert paragraph foreground |
 | `MarkdownAlertBlockTipBorderBrush` | Brush | `#1a7f37` | `#3fb950` | Tip alert border brush |
-| `MarkdownAlertBlockTipParagraphForeground` | Brush | `#1a7f37` | `#3fb950` | Tip alert paragraph foreground |
 | `MarkdownAlertBlockImportantBorderBrush` | Brush | `#8250df` | `#bc8cff` | Important alert border brush |
-| `MarkdownAlertBlockImportantParagraphForeground` | Brush | `#8250df` | `#bc8cff` | Important alert paragraph foreground |
 | `MarkdownAlertBlockWarningBorderBrush` | Brush | `#9a6700` | `#d29922` | Warning alert border brush |
-| `MarkdownAlertBlockWarningParagraphForeground` | Brush | `#9a6700` | `#d29922` | Warning alert paragraph foreground |
 | `MarkdownAlertBlockCautionBorderBrush` | Brush | `#d1242f` | `#f85149` | Caution alert border brush |
-| `MarkdownAlertBlockCautionParagraphForeground` | Brush | `#d1242f` | `#f85149` | Caution alert paragraph foreground |
-| `MarkdownAlertBlockHeaderMargin` | Thickness | `0 0 0 8` | — | Alert header margin |
-
-### Alert header content templates
-- `MarkdownAlertBlockHeaderNoteContentTemplate` — content template for Note alert header
-- `MarkdownAlertBlockHeaderTipContentTemplate` — content template for Tip alert header
-- `MarkdownAlertBlockHeaderImportantContentTemplate` — content template for Important alert header
-- `MarkdownAlertBlockHeaderWarningContentTemplate` — content template for Warning alert header
-- `MarkdownAlertBlockHeaderCautionContentTemplate` — content template for Caution alert header
 
 ### Copy button
 | Key | Type | Default (Light) | Default (Dark) | Notes |

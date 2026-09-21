@@ -5,11 +5,9 @@ description: A reference for the ItemsControl in Avalonia, a base control for di
 doc-type: reference
 ---
 
-The [`ItemsControl`](/api/avalonia/controls/itemscontrol) is the base class for controls that display repeating data (for example, [`ListBox`](/api/avalonia/controls/listbox) and `ComboBox`). It has no built-in formatting, selection, or scroll behavior. You can use it with data binding, styling, and data templates to create a completely custom repeating data control.
+`ItemsControl` is the base class for controls that display repeating data, like [`ListBox`](/controls/data-display/collections/listbox) or [`ComboBox`](/controls/input/selectors/combobox). It has no built-in formatting, selection, or scroll behavior.
 
-:::tip
-If you need built-in selection support, use [`ListBox`](/controls/data-display/collections/listbox) instead. If you need scrolling, wrap your `ItemsControl` in a `ScrollViewer`, or consider `ListBox` which includes one by default.
-:::
+You can use it with data binding, styling and data templates to create a completely custom repeating data control.
 
 ## Useful properties
 
@@ -18,36 +16,22 @@ You will probably use these properties most often:
 | Property | Description |
 |---|---|
 | `ItemsSource` | The bound collection that is used as the data source for the control. |
-| `ItemTemplate` | A `DataTemplate` applied to each item. Use this to control how individual items look. |
-| `ItemsPanel` | The panel that hosts generated items. Defaults to a `StackPanel`. See [Custom panel](/docs/how-to/itemscontrol-how-to#custom-panel) for details on replacing it. |
+| `ItemTemplate` | A `DataTemplate` that controls how each individual item looks. |
+| `ItemsPanel` | The panel that hosts generated items. Defaults to `StackPanel`. See [Custom panel](/docs/how-to/itemscontrol-how-to#custom-panel) for how to change to another panel. |
 | `Styles` | Styles applied to child elements of the `ItemsControl`. |
 | `DisplayMemberBinding` | A binding that selects the property to display when you do not supply an `ItemTemplate`. |
 
 ## Practical notes
 
-- **Use `ObservableCollection<T>`** for your `ItemsSource` so the UI updates automatically when you add or remove items at runtime. A plain `List<T>` will not notify the control of changes.
-- **`ItemsControl` does not virtualize** its children. If you are working with a large number of items, consider using [`ItemsRepeater`](/controls/data-display/collections/itemsrepeater) with a virtualizing layout, or a `ListBox` which virtualizes by default.
-- To arrange items horizontally instead of vertically, replace the default `ItemsPanel`:
-
-```xml
-<ItemsControl.ItemsPanel>
-  <ItemsPanelTemplate>
-    <WrapPanel Orientation="Horizontal" />
-  </ItemsPanelTemplate>
-</ItemsControl.ItemsPanel>
-```
-
-- Because `ItemsControl` has no built-in scrollbar, content that overflows the available height is clipped. Wrap the control in a `ScrollViewer` if you need scrolling:
-
-```xml
-<ScrollViewer>
-  <ItemsControl ItemsSource="{Binding MyItems}" />
-</ScrollViewer>
-```
+- **Use `ObservableCollection<T>`** for your `ItemsSource` if you need the UI to update automatically when you add or remove items at runtime. A plain `List<T>` will not update the control when changed.
+- `ItemsControl` **does not virtualize** by default. If you are working with a large number of items, use a [`ListBox`](/controls/data-display/collections/listbox), which virtualizes by default, or [customize the `ItemsPanel` into a virtualizing control](/docs/how-to/itemscontrol-how-to#virtualized-scrollable-items).
+- `ItemsControl` **does not have a scrollbar**. Content that overflows the available height is clipped. Wrap your `ItemsControl` in a [`ScrollViewer`](/controls/layout/containers/scrollviewer) if you need scrolling.
+- To **arrange items horizontally** instead of vertically, [replace the default `ItemsPanel`](/docs/how-to/itemscontrol-how-to#horizontal-layout).
+- **`ItemsRepeater` is no longer supported** as of Avalonia v12. If you use that control in your app, upgrading to `ItemsControl` or one of its derivatives is recommended.
 
 ## Example
 
-This example binds an observable collection of crockery items to an `ItemsControl`. A `DataTemplate` provides custom layout and formatting for each item.
+This example binds an observable collection of crockery items to an `ItemsControl`. Layout and formatting of each item is specified by the `DataTemplate` nested under `ItemsControl.ItemTemplate`.
 
 <XamlPreview>
 
@@ -115,9 +99,8 @@ public class MainViewModel
 
 ## See also
 
-- [How to: Work with ItemsControl and ItemsRepeater](/docs/how-to/itemscontrol-how-to)
+- [How to: Work with ItemsControl](/docs/how-to/itemscontrol-how-to)
 - [ListBox](/controls/data-display/collections/listbox)
-- [ItemsRepeater](/controls/data-display/collections/itemsrepeater)
 - [Carousel](/controls/data-display/collections/carousel)
 - [DataGrid](/controls/data-display/structured-data/datagrid)
 - [Data templates](/docs/data-templates/introduction-to-data-templates)
