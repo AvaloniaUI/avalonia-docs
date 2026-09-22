@@ -206,8 +206,8 @@ For vibility of annotation tools, see [Annotations](/controls/data-display/pdfvi
 | `EnableKeyboardShortcuts` | `bool` | `true` | Handles the viewer's built-in [keyboard shortcuts](/controls/data-display/pdfviewer/navigation-and-search#keyboard-shortcuts). Set `false` to allow keystrokes to reach the host's own commands. |
 | `IsArrowKeyNudgeEnabled` | `bool` | `true` | If enabled, annotations can be moved with the arrow keys when selected. |
 | `SearchQuery` | `string?` | `null` | Text in the toolbar search box. |
-| `SearchMatchCase` | `bool` | `false` | Whether the toolbar search box should match character case. |
-| `SearchMatchWholeWord` | `bool` | `false` | Whether the toolbar search box should match whole words. |
+| `SearchMatchCase` | `bool` | `false` | Whether search should match uppercase/lowercase. |
+| `SearchMatchWholeWord` | `bool` | `false` | Whether search should match whole words. |
 | `Strings` | `PdfViewerStrings` | `PdfViewerStrings.Default` | User-facing text. See [Localization](/controls/data-display/pdfviewer/theming-and-localization#localization). |
 
 ### State
