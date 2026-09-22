@@ -201,7 +201,7 @@ For vibility of annotation tools, see [Annotations](/controls/data-display/pdfvi
 | `AllowAnnotationEditing` | `bool` | `true` | Enables creating and editing annotations. |
 | `AllowFormEditing` | `bool` | `true` | Enables interactive form field editing. |
 | `AllowDocumentSaving` | `bool` | `true` | Enables saving. Gates `SaveCommand` and `SaveAsync`. |
-| `RespectDocumentPermissions` | `bool` | `true` | Honors the document's permission flags for annotation editing, form filling, text selection and printing. A document opened with its owner password is always unrestricted. |
+| `RespectDocumentPermissions` | `bool` | `true` | Honors the document's permission flags for annotation, form filling, copying and printing. A document opened with its owner password is always unrestricted. |
 | `AutoSave` | `bool` | `false` | Saves back to `Source` after each edit. Requires `AllowDocumentSaving` to be `true`. |
 | `EnableKeyboardShortcuts` | `bool` | `true` | Handles the viewer's built-in [keyboard shortcuts](/controls/data-display/pdfviewer/navigation-and-search#keyboard-shortcuts). Set `false` to allow keystrokes to reach the host's own commands. |
 | `IsArrowKeyNudgeEnabled` | `bool` | `true` | If enabled, annotations can be moved with the arrow keys when selected. |
