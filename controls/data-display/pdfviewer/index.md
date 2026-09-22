@@ -190,7 +190,7 @@ Setting `Source` loads the document. It can be set before the viewer is attached
 | `IsMobileLayout` | `bool` | | Whether the compact mobile layout is active. Set by the control: `true` on iOS and Android, and on any platform when the control is narrower than 500 device-independent pixels. |
 <br />
 
-For vibility of annotation tools, see [Annotations](/controls/data-display/pdfviewer/annotations#tool-visibility).
+Each tool has its own visibility property, allowing you to decide exactly which tools the toolbar offers. See [Toolbar visibility](/controls/data-display/pdfviewer/annotations#tool-visibility) for the full list of properties.
 
 ### Capabilities and permissions
 
