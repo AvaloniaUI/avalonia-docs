@@ -74,7 +74,7 @@ Every transition has a `Property`, `Delay`, `Duration` and an optional `Easing` 
 
 `Duration` refers to the amount of time that the transition plays.
 
-The easing functions are the same as those described in [Keyframe Animations](/docs/graphics-animation/keyframe-animations#easing-function).
+For a full list of easing functions, see the [Easing functions page](/docs/graphics-animation/easing-functions).
 
 The correct transition type must be used for the type of the property being animated:
 

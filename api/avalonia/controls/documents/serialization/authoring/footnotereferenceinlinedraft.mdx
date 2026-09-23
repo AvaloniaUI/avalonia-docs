@@ -1,0 +1,120 @@
+---
+title: 'FootnoteReferenceInlineDraft'
+hide_title: true
+slug: '/avalonia/controls/documents/serialization/authoring/footnotereferenceinlinedraft'
+uid: 'Avalonia.Controls.Documents.Serialization.Authoring.FootnoteReferenceInlineDraft'
+commentId: 'T:Avalonia.Controls.Documents.Serialization.Authoring.FootnoteReferenceInlineDraft'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Documents'
+assembly: 'Avalonia.Controls.Documents'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.Serialization.Authoring'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">FootnoteReferenceInlineDraft Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.Serialization.Authoring</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Inline draft for a footnote anchor. The builder inserts a single object
+replacement character for it: the number the anchor shows is its note's
+position among the document's notes, resolved at render time rather than stored.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class FootnoteReferenceInlineDraft
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="inlinedraft">InlineDraft</a> <span className="apiref-page__relation-separator">-&gt;</span> FootnoteReferenceInlineDraft
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [FootnoteReferenceInlineDraft](#uid-1ab1e5a700) | Initializes a new instance of [Avalonia.Controls.Documents.Serialization.Authoring.FootnoteReferenceInlineDraft](xref:Avalonia.Controls.Documents.Serialization.Authoring.FootnoteReferenceInlineDraft). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1ab1e5a700"></span>
+
+### FootnoteReferenceInlineDraft Constructor
+
+Initializes a new instance of [Avalonia.Controls.Documents.Serialization.Authoring.FootnoteReferenceInlineDraft](xref:Avalonia.Controls.Documents.Serialization.Authoring.FootnoteReferenceInlineDraft).
+
+```csharp
+public FootnoteReferenceInlineDraft(int noteId)
+```
+
+#### Parameters
+
+`noteId` int
+
+The identity pairing the anchor with its note body.
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [GetFormatMetadata](inlinedraft.mdx#uid-4509e823fd) | Inherited from [InlineDraft](inlinedraft.mdx). |
+| [SetFormatMetadata](inlinedraft.mdx#uid-61215c6735) | Inherited from [InlineDraft](inlinedraft.mdx). |
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [CustomData](inlinedraft.mdx#uid-df8d35d8af) | Extension-specific custom data. Transferred to the resulting [Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode.CustomData](xref:Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode.CustomData) during document building. Inherited from [InlineDraft](inlinedraft.mdx). |
+| [ElementFormatting](inlinedraft.mdx#uid-e72d04f6a2) | Base-level element formatting (font, foreground, background, letter spacing). Inherited from [InlineDraft](inlinedraft.mdx). |
+| [FormatMetadata](inlinedraft.mdx#uid-44323a64b0) | Format-specific metadata for round-trip preservation (e.g. RTF underline variant). Transferred to the resulting [Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode](xref:Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode) during document building. Inherited from [InlineDraft](inlinedraft.mdx). |
+| [Formatting](inlinedraft.mdx#uid-5bc8ad789d) | Inline-specific formatting (text decorations, baseline alignment). Inherited from [InlineDraft](inlinedraft.mdx). |
+| [Inlines](inlinedraft.mdx#uid-1eaa3c4f70) | Gets the mutable list of child inline drafts. Inherited from [InlineDraft](inlinedraft.mdx). |
+| [Kind](inlinedraft.mdx#uid-e8bc97d972) | Gets the [Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind](xref:Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind) that identifies this draft's inline type. Inherited from [InlineDraft](inlinedraft.mdx). |
+| [NoteId](#uid-78a44421ab) | Gets the identity pairing the anchor with its note body. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-78a44421ab"></span>
+
+### NoteId Property
+
+Gets the identity pairing the anchor with its note body.
+
+```csharp
+public int NoteId { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

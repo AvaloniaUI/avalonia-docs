@@ -176,6 +176,7 @@ string
 | [Anchor](#uid-88afa1c433) | No summary available. |
 | [AnchorRectangle](#uid-d36fed8a6d) | No summary available. |
 | [ConstraintAdjustment](#uid-6becb1f5c7) | No summary available. |
+| [Deflate](#uid-6764c20bc0) | Gets or sets how far to deflate [Avalonia.Controls.Primitives.PopupPositioning.CustomPopupPlacement.PopupSize](xref:Avalonia.Controls.Primitives.PopupPositioning.CustomPopupPlacement.PopupSize) when positioning the popup. |
 | [Gravity](#uid-e1e90d2157) | No summary available. |
 | [Offset](#uid-a560f25d92) | No summary available. |
 | [PopupSize](#uid-7fb1531572) | The [Avalonia.Size](xref:Avalonia.Size) of the [Avalonia.Controls.Primitives.Popup](xref:Avalonia.Controls.Primitives.Popup) control. |
@@ -214,6 +215,25 @@ public Avalonia.Rect AnchorRectangle { get; set; }
 ```csharp
 public Avalonia.Controls.Primitives.PopupPositioning.PopupPositionerConstraintAdjustment ConstraintAdjustment { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6764c20bc0"></span>
+
+### Deflate Property
+
+Gets or sets how far to deflate [Avalonia.Controls.Primitives.PopupPositioning.CustomPopupPlacement.PopupSize](xref:Avalonia.Controls.Primitives.PopupPositioning.CustomPopupPlacement.PopupSize) when positioning the popup.
+
+```csharp
+public Avalonia.Thickness Deflate { get; set; }
+```
+
+#### Remarks
+
+This is normally set to the margin of the popup's child. This allows out-of-bounds effects
+like drop shadows to be drawn without affecting the final position of the child.
 
 </section>
 

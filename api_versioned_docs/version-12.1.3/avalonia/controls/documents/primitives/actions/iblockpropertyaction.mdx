@@ -1,0 +1,105 @@
+---
+title: 'IBlockPropertyAction'
+hide_title: true
+slug: '/avalonia/controls/documents/primitives/actions/iblockpropertyaction'
+uid: 'Avalonia.Controls.Documents.Primitives.Actions.IBlockPropertyAction'
+commentId: 'T:Avalonia.Controls.Documents.Primitives.Actions.IBlockPropertyAction'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.RichTextEditor'
+assembly: 'Avalonia.Controls.RichTextEditor'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.Primitives.Actions'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IBlockPropertyAction Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.Primitives.Actions</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.RichTextEditor</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.RichTextEditor</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Non-generic base interface for block property actions.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface IBlockPropertyAction
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="ieditoraction">IEditorAction</a>, <a href="ipropertyaction">IPropertyAction</a>
+</div>
+</div>
+
+## Remarks
+
+This interface provides object-based access to block property values,
+allowing UI controls to work with block actions without knowing the specific type.
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [HasConsistentValue](#uid-3fdc44a1ef) | Gets whether all affected blocks have the same value for this property. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3fdc44a1ef"></span>
+
+### HasConsistentValue Method
+
+Gets whether all affected blocks have the same value for this property.
+
+```csharp
+public bool HasConsistentValue(Avalonia.Controls.Documents.Primitives.ITextEditorHost host)
+```
+
+#### Parameters
+
+`host` [Avalonia.Controls.Documents.Primitives.ITextEditorHost](xref:Avalonia.Controls.Documents.Primitives.ITextEditorHost)
+
+The editor host.
+
+
+#### Returns
+
+bool
+
+True if all affected blocks have the same property value.
+False if blocks have different values (mixed state).
+
+
+#### Remarks
+
+UI controls should show a mixed/indeterminate state when this returns false.
+For example, a [ComboBox](xref:Avalonia.Controls.ComboBox) might show "Mixed" placeholder text.
+
+For collapsed selections, this always returns true (single block).
+
+</section>
+
+</ApiRefPage>
+

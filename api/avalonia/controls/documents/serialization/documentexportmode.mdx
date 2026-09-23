@@ -1,0 +1,121 @@
+---
+title: 'DocumentExportMode'
+hide_title: true
+slug: '/avalonia/controls/documents/serialization/documentexportmode'
+uid: 'Avalonia.Controls.Documents.Serialization.DocumentExportMode'
+commentId: 'T:Avalonia.Controls.Documents.Serialization.DocumentExportMode'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Documents'
+assembly: 'Avalonia.Controls.Documents'
+apiKind: 'Enum'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.Serialization'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">DocumentExportMode Enum</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.Serialization</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Controls how documents are exported by serializers.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public enum DocumentExportMode
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Enum <span className="apiref-page__relation-separator">-&gt;</span> DocumentExportMode
+</div>
+</div>
+
+## Remarks
+
+This enum replaces the former per-format `SpacingExportMode` and
+`Preserve*` boolean options with a single axis that determines both the
+control-word strategy and custom-marker behavior.
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [InteropSafe](#uid-8f846af08b) | Native, broadly interoperable controls understood by external editors. Custom ignorable markers are still emitted for properties that have no native representation, preserving round-trip fidelity for internal re-import. |
+| [Portable](#uid-9bdc3e00bf) | Maximum portability. Uses only native controls and omits all custom serializer markers. Suitable for export to external consumers that will never be re-imported. Some formatting may be lost. |
+| [RoundTripStrict](#uid-64aeaa688d) | Maximum internal round-trip fidelity. Emits synthetic controls (e.g., zero-width borders with `\brsp` spacing) and all custom ignorable markers (`{\*\acdpad}`, `acd:*` attributes). External editors may strip or misinterpret these controls. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8f846af08b"></span>
+
+### InteropSafe Field
+
+Native, broadly interoperable controls understood by external editors.
+Custom ignorable markers are still emitted for properties that have no native
+representation, preserving round-trip fidelity for internal re-import.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.DocumentExportMode InteropSafe
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9bdc3e00bf"></span>
+
+### Portable Field
+
+Maximum portability. Uses only native controls and omits all custom
+serializer markers. Suitable for export to external consumers that
+will never be re-imported. Some formatting may be lost.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.DocumentExportMode Portable
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-64aeaa688d"></span>
+
+### RoundTripStrict Field
+
+Maximum internal round-trip fidelity.
+Emits synthetic controls (e.g., zero-width borders with `\brsp` spacing)
+and all custom ignorable markers (`{\*\acdpad}`, `acd:*` attributes).
+External editors may strip or misinterpret these controls.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.DocumentExportMode RoundTripStrict
+```
+
+</section>
+
+</ApiRefPage>
+

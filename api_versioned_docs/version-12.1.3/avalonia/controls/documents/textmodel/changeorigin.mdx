@@ -1,0 +1,119 @@
+---
+title: 'ChangeOrigin'
+hide_title: true
+slug: '/avalonia/controls/documents/textmodel/changeorigin'
+uid: 'Avalonia.Controls.Documents.TextModel.ChangeOrigin'
+commentId: 'T:Avalonia.Controls.Documents.TextModel.ChangeOrigin'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Documents'
+assembly: 'Avalonia.Controls.Documents'
+apiKind: 'Enum'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.TextModel'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ChangeOrigin Enum</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.TextModel</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Indicates whether a document change was produced by a normal edit, an
+undo replay, or a redo replay.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public enum ChangeOrigin
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Enum <span className="apiref-page__relation-separator">-&gt;</span> ChangeOrigin
+</div>
+</div>
+
+## Remarks
+
+Surfaced on the document `Changed` event payload so
+consumers can distinguish edits that should be replicated, persisted,
+or auto-saved from those that are pure replays of an already-recorded
+operation.
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [Edit](#uid-6636bdc787) | A normal edit. The commit may or may not have an associated undo unit depending on whether [Avalonia.Controls.Documents.Undo.UndoManager](xref:Avalonia.Controls.Documents.Undo.UndoManager) is enabled. |
+| [Redo](#uid-26a0a9ca92) | The commit is the result of replaying a previously-undone unit via [Avalonia.Controls.Documents.Undo.UndoManager.Redo](xref:Avalonia.Controls.Documents.Undo.UndoManager.Redo). |
+| [Undo](#uid-0b3ed95ed5) | The commit is the result of replaying a previously-recorded undo unit via [Avalonia.Controls.Documents.Undo.UndoManager.Undo](xref:Avalonia.Controls.Documents.Undo.UndoManager.Undo). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6636bdc787"></span>
+
+### Edit Field
+
+A normal edit. The commit may or may not have an associated undo
+unit depending on whether [Avalonia.Controls.Documents.Undo.UndoManager](xref:Avalonia.Controls.Documents.Undo.UndoManager) is enabled.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.ChangeOrigin Edit
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-26a0a9ca92"></span>
+
+### Redo Field
+
+The commit is the result of replaying a previously-undone unit
+via [Avalonia.Controls.Documents.Undo.UndoManager.Redo](xref:Avalonia.Controls.Documents.Undo.UndoManager.Redo).
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.ChangeOrigin Redo
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0b3ed95ed5"></span>
+
+### Undo Field
+
+The commit is the result of replaying a previously-recorded undo unit
+via [Avalonia.Controls.Documents.Undo.UndoManager.Undo](xref:Avalonia.Controls.Documents.Undo.UndoManager.Undo).
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.ChangeOrigin Undo
+```
+
+</section>
+
+</ApiRefPage>
+

@@ -1,0 +1,141 @@
+---
+title: 'FootnoteSnapshot'
+hide_title: true
+slug: '/avalonia/controls/documents/serialization/snapshot/footnotesnapshot'
+uid: 'Avalonia.Controls.Documents.Serialization.Snapshot.FootnoteSnapshot'
+commentId: 'T:Avalonia.Controls.Documents.Serialization.Snapshot.FootnoteSnapshot'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Documents'
+assembly: 'Avalonia.Controls.Documents'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.Serialization.Snapshot'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">FootnoteSnapshot Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.Serialization.Snapshot</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A footnote in a document snapshot: the note's body as a nested document snapshot,
+the id pairing it with the [Avalonia.Controls.Documents.Serialization.Snapshot.FootnoteReferenceSnapshotNode](xref:Avalonia.Controls.Documents.Serialization.Snapshot.FootnoteReferenceSnapshotNode) anchor of
+the same id, and an optional name for formats that address notes by name.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class FootnoteSnapshot
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> FootnoteSnapshot
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [FootnoteSnapshot](#uid-d09a0adc54) | Initializes a note snapshot. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d09a0adc54"></span>
+
+### FootnoteSnapshot Constructor
+
+Initializes a note snapshot.
+
+```csharp
+public FootnoteSnapshot(int noteId, Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot content, string label)
+```
+
+#### Parameters
+
+`noteId` int
+
+
+`content` [Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot)
+
+
+`label` string
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Content](#uid-f3e60efb2b) | The note's body. |
+| [Label](#uid-12a7405a0c) | The note's name, when the source format named it; null otherwise. |
+| [NoteId](#uid-3281d8c6fc) | The id pairing the note with its anchor. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f3e60efb2b"></span>
+
+### Content Property
+
+The note's body.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot Content { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-12a7405a0c"></span>
+
+### Label Property
+
+The note's name, when the source format named it; null otherwise.
+
+```csharp
+public string Label { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3281d8c6fc"></span>
+
+### NoteId Property
+
+The id pairing the note with its anchor.
+
+```csharp
+public int NoteId { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

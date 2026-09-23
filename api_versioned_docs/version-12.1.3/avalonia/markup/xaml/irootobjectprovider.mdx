@@ -1,0 +1,82 @@
+---
+title: 'IRootObjectProvider'
+hide_title: true
+slug: '/avalonia/markup/xaml/irootobjectprovider'
+uid: 'Avalonia.Markup.Xaml.IRootObjectProvider'
+commentId: 'T:Avalonia.Markup.Xaml.IRootObjectProvider'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Markup.Xaml'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Markup.Xaml'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IRootObjectProvider Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Markup.Xaml</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Markup.Xaml</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface IRootObjectProvider
+```
+
+</div>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [IntermediateRootObject](#uid-c99a93d8ec) | The "current" root object, contains either the root of the xaml file or the root object of the control/data template |
+| [RootObject](#uid-ffd3d47ebb) | The root object of the xaml file |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c99a93d8ec"></span>
+
+### IntermediateRootObject Property
+
+The "current" root object, contains either the root of the xaml file
+or the root object of the control/data template
+
+```csharp
+public object IntermediateRootObject { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ffd3d47ebb"></span>
+
+### RootObject Property
+
+The root object of the xaml file
+
+```csharp
+public object RootObject { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

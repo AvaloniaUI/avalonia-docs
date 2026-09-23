@@ -1,0 +1,527 @@
+---
+title: 'BlockFormatting'
+hide_title: true
+slug: '/avalonia/controls/documents/textmodel/formatting/blockformatting'
+uid: 'Avalonia.Controls.Documents.TextModel.Formatting.BlockFormatting'
+commentId: 'T:Avalonia.Controls.Documents.TextModel.Formatting.BlockFormatting'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Documents'
+assembly: 'Avalonia.Controls.Documents'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.TextModel.Formatting'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">BlockFormatting Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.TextModel.Formatting</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Block-level layout formatting snapshot. Value type for zero-reference safety.
+All data is stored as primitive types to ensure thread-safety.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct BlockFormatting
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> BlockFormatting
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;BlockFormatting&gt;
+</div>
+</div>
+
+## Remarks
+
+Contains only block-specific layout properties (alignment, spacing, indentation,
+margins, borders, tabs). Shared element-level properties (font, color, background)
+are stored in [Avalonia.Controls.Documents.TextModel.Formatting.TextElementFormatting](xref:Avalonia.Controls.Documents.TextModel.Formatting.TextElementFormatting) on the [Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode](xref:Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode) base class.
+
+Only relevant for block-level nodes (Paragraph, Section, List, etc.).
+For inline nodes, this will be default/zeroed.
+
+Properties use device-independent pixels and semantic enums to match Avalonia
+property system conventions.
+
+Format-agnostic: Contains only primitive values. Format-specific details (RTF border styles,
+shading patterns, etc.) are stored in format-specific metadata (e.g., RtfMetadata).
+
+Adding a field? It does not flow anywhere by itself. Several consumers rebuild
+or filter this struct field by field, and each of them silently drops a field it does
+not know about (record equality keeps compiling, no test fails until the specific
+feature is exercised). A new field must be threaded through every one of these:
+
+- Capture: `DocumentSnapshot.CaptureBlockFormatting` (and `CaptureListItemFormatting` / `CaptureTableCellFormatting` / `CaptureTableRowFormatting` when the field applies to them) - reads the live element, IsSet-gated. A field the element cannot hold is lost the moment the node realizes, so it needs a property on `Block` (and `ListItem`) as well.
+- Apply: `ElementFormattingApplier.ApplyBlockFormatting` (and variants) - applies or clears the live element property.
+- DOCX: `DocxMappings.FromParagraphProperties` (direct read), `DocxStyleResolver.ResolvedParaProps` + `ExtractParaProps` + `Merge` (style chain), `DocxMappings.FromResolvedParaProps` (style-to-formatting), `DocxMappings.MergeBlockFormatting` (direct-over-style, rebuilds the struct), the has-any-formatting gates in `DocxReader` and `DocxReader.Lists`, `DocxWriter.Lists.MergeListParagraphBlockFormatting` (list-paragraph write, rebuilds the struct), and `DocxMappings.ToParagraphProperties` (write).
+- RTF: `RtfReader.CreateParagraphFormatting` (read) and both writer paths in `RtfWriter` (metadata-based and semantic-model).
+- Any exporter consuming the field (the PDF layout composer).
+
+`PageBreakBefore` is the precedent: it was dropped by the DOCX merge and gate
+until both were taught about it. When adding a field, grep for a neighboring field
+(e.g. `TabStopPositions`) and mirror every hit.
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Equals (2 overloads)](#uid-6c8ca8b75d) | No summary available. |
+| [GetHashCode](#uid-d4b5b850ec) | No summary available. |
+| [ToString](#uid-a19e34b0ed) | No summary available. |
+
+<span id="uid-6c8ca8b75d"></span>
+
+### Equals overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-45ae76eb81"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(Avalonia.Controls.Documents.TextModel.Formatting.BlockFormatting other)
+```
+
+##### Parameters
+
+`other` [Avalonia.Controls.Documents.TextModel.Formatting.BlockFormatting](xref:Avalonia.Controls.Documents.TextModel.Formatting.BlockFormatting)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-31d58bcdbd"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(object obj)
+```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d4b5b850ec"></span>
+
+### GetHashCode Method
+
+```csharp
+public int GetHashCode()
+```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a19e34b0ed"></span>
+
+### ToString Method
+
+```csharp
+public string ToString()
+```
+
+#### Returns
+
+string
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [BorderBrushArgb](#uid-fb66e3ae63) | Packed ARGB value for border brush. Null means not explicitly set or no border. |
+| [BorderThickness](#uid-c20f0c238d) | Border thickness in device-independent pixels. Null means not explicitly set or no border. |
+| [ColumnSpan](#uid-1f36b451f9) | Number of grid columns the cell spans (maps to [Avalonia.Controls.Documents.TableCell.ColumnSpan](xref:Avalonia.Controls.Documents.TableCell.ColumnSpan) and Word's `w:gridSpan`). Only meaningful for table cells; null (treated as a span of 1) for other blocks and un-merged cells. |
+| [CornerRadius](#uid-8282d61631) | Corner radius of the block border in device-independent pixels. Null means not explicitly set (square corners). |
+| [Default](#uid-e207ec4d49) | Default formatting with no explicit values set. |
+| [FlowDirection](#uid-cfa7960fb8) | Flow direction (LeftToRight or RightToLeft). Null means not explicitly set. |
+| [KeepTogether](#uid-a37de03298) | Avoids splitting the block across pages in paginated output; a block taller than one page still splits. Maps to RTF `\keep` and Word's `w:keepLines`; null means not explicitly set (off). The continuous on-screen flow ignores it. |
+| [KeepWithNext](#uid-950063c6e1) | Keeps the block's end on the same page as the start of the following block in paginated output. Maps to RTF `\keepn` and Word's `w:keepNext`; null means not explicitly set (off). The continuous on-screen flow ignores it. |
+| [LineHeight](#uid-5f13fc93f0) | Line height in device-independent pixels. Null means not explicitly set. |
+| [Margin](#uid-a40c625b9d) | Margin in device-independent pixels. Null means not explicitly set. |
+| [MinHeight](#uid-c4d533fa22) | Minimum height in device-independent pixels. Only meaningful for table rows (maps to [Avalonia.Controls.Documents.TableRow.Height](xref:Avalonia.Controls.Documents.TableRow.Height) and Word's `w:trHeight`); null for other blocks. |
+| [Padding](#uid-16eb7366bf) | Padding in device-independent pixels. Null means not explicitly set. |
+| [PageBreakBefore](#uid-a7fda7753b) | Starts a new page before this block in paginated output (print/PDF). Maps to RTF `\pagebb` and Word's `w:pageBreakBefore`; null means no explicit break. The continuous on-screen flow ignores it. |
+| [RowSpan](#uid-933ddaf194) | Number of grid rows the cell spans (maps to [Avalonia.Controls.Documents.TableCell.RowSpan](xref:Avalonia.Controls.Documents.TableCell.RowSpan) and Word's `w:vMerge`). Only meaningful for table cells; null (treated as a span of 1) for other blocks and un-merged cells. |
+| [TabStopPositions](#uid-81ac77d558) | Tab stop positions in device-independent pixels. Default or empty means no custom tab stops defined. |
+| [TextAlignment](#uid-b553b003ab) | Text alignment (Left, Right, Center, Justify). |
+| [TextIndent](#uid-0d3f447a72) | First-line text indent in device-independent pixels. Negative values create hanging indents. Null means not explicitly set. |
+| [VerticalAlignment](#uid-851753032a) | Vertical alignment of content within the block's height. Only meaningful for table cells (maps to [Avalonia.Controls.Documents.TableCell.VerticalAlignment](xref:Avalonia.Controls.Documents.TableCell.VerticalAlignment) and Word's `w:vAlign`); null for other blocks. |
+| [WidowControl](#uid-11c5c03641) | Widow/orphan control for paginated output: at least two lines of the paragraph stay and at least two lines move at a page break. Maps to RTF `\widctlpar`/`\nowidctlpar` and Word's `w:widowControl`; null means not explicitly set and resolves to ON (Word's default). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-fb66e3ae63"></span>
+
+### BorderBrushArgb Property
+
+Packed ARGB value for border brush.
+Null means not explicitly set or no border.
+
+```csharp
+public Nullable<uint> BorderBrushArgb { get; set; }
+```
+
+#### Remarks
+
+When all border sides have the same color, stored here.
+Per-side colors require [Avalonia.Controls.Documents.BlockDecorationInfo](xref:Avalonia.Controls.Documents.BlockDecorationInfo) via
+[Avalonia.Controls.Documents.Block.BlockDecorationInfoProperty](xref:Avalonia.Controls.Documents.Block.BlockDecorationInfoProperty).
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c20f0c238d"></span>
+
+### BorderThickness Property
+
+Border thickness in device-independent pixels.
+Null means not explicitly set or no border.
+
+```csharp
+public Nullable<Avalonia.Thickness> BorderThickness { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1f36b451f9"></span>
+
+### ColumnSpan Property
+
+Number of grid columns the cell spans (maps to
+[Avalonia.Controls.Documents.TableCell.ColumnSpan](xref:Avalonia.Controls.Documents.TableCell.ColumnSpan) and Word's
+`w:gridSpan`). Only meaningful for table cells; null (treated as a span of 1)
+for other blocks and un-merged cells.
+
+```csharp
+public Nullable<int> ColumnSpan { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8282d61631"></span>
+
+### CornerRadius Property
+
+Corner radius of the block border in device-independent pixels.
+Null means not explicitly set (square corners).
+
+```csharp
+public Nullable<Avalonia.CornerRadius> CornerRadius { get; set; }
+```
+
+#### Remarks
+
+No file format carries it: it is an authoring and rendering property, and it is
+here so a clone, an undo of a structural edit, and a snapshot round trip keep it.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e207ec4d49"></span>
+
+### Default Property
+
+Default formatting with no explicit values set.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.Formatting.BlockFormatting Default { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-cfa7960fb8"></span>
+
+### FlowDirection Property
+
+Flow direction (LeftToRight or RightToLeft).
+Null means not explicitly set.
+
+```csharp
+public Nullable<Avalonia.Media.FlowDirection> FlowDirection { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a37de03298"></span>
+
+### KeepTogether Property
+
+Avoids splitting the block across pages in paginated output; a block taller than
+one page still splits. Maps to RTF `\keep` and Word's `w:keepLines`;
+null means not explicitly set (off). The continuous on-screen flow ignores it.
+
+```csharp
+public Nullable<bool> KeepTogether { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-950063c6e1"></span>
+
+### KeepWithNext Property
+
+Keeps the block's end on the same page as the start of the following block in
+paginated output. Maps to RTF `\keepn` and Word's `w:keepNext`;
+null means not explicitly set (off). The continuous on-screen flow ignores it.
+
+```csharp
+public Nullable<bool> KeepWithNext { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5f13fc93f0"></span>
+
+### LineHeight Property
+
+Line height in device-independent pixels.
+Null means not explicitly set.
+
+```csharp
+public Nullable<double> LineHeight { get; set; }
+```
+
+#### Remarks
+
+Interpretation depends on format-specific metadata. Without metadata, treated as Auto.
+For RTF round-trip, see RtfMetadata.LineSpacingTwips and LineSpacingRule.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a40c625b9d"></span>
+
+### Margin Property
+
+Margin in device-independent pixels.
+Null means not explicitly set.
+
+```csharp
+public Nullable<Avalonia.Thickness> Margin { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c4d533fa22"></span>
+
+### MinHeight Property
+
+Minimum height in device-independent pixels. Only meaningful for table
+rows (maps to [Avalonia.Controls.Documents.TableRow.Height](xref:Avalonia.Controls.Documents.TableRow.Height)
+and Word's `w:trHeight`); null for other blocks.
+
+```csharp
+public Nullable<double> MinHeight { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-16eb7366bf"></span>
+
+### Padding Property
+
+Padding in device-independent pixels.
+Null means not explicitly set.
+
+```csharp
+public Nullable<Avalonia.Thickness> Padding { get; set; }
+```
+
+#### Remarks
+
+Populated from RTF border spacing (\brsp).
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a7fda7753b"></span>
+
+### PageBreakBefore Property
+
+Starts a new page before this block in paginated output (print/PDF). Maps to RTF
+`\pagebb` and Word's `w:pageBreakBefore`; null means no explicit break.
+The continuous on-screen flow ignores it.
+
+```csharp
+public Nullable<bool> PageBreakBefore { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-933ddaf194"></span>
+
+### RowSpan Property
+
+Number of grid rows the cell spans (maps to
+[Avalonia.Controls.Documents.TableCell.RowSpan](xref:Avalonia.Controls.Documents.TableCell.RowSpan) and Word's
+`w:vMerge`). Only meaningful for table cells; null (treated as a span of 1)
+for other blocks and un-merged cells.
+
+```csharp
+public Nullable<int> RowSpan { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-81ac77d558"></span>
+
+### TabStopPositions Property
+
+Tab stop positions in device-independent pixels.
+Default or empty means no custom tab stops defined.
+
+```csharp
+public double[] TabStopPositions { get; set; }
+```
+
+#### Remarks
+
+Format-agnostic: contains only positions. Format-specific details
+(alignment, leader styles) are stored in format metadata. The array is
+immutable, so the value a background serializer reads cannot move under it.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b553b003ab"></span>
+
+### TextAlignment Property
+
+Text alignment (Left, Right, Center, Justify).
+
+```csharp
+public Nullable<Avalonia.Media.TextAlignment> TextAlignment { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0d3f447a72"></span>
+
+### TextIndent Property
+
+First-line text indent in device-independent pixels.
+Negative values create hanging indents.
+Null means not explicitly set.
+
+```csharp
+public Nullable<double> TextIndent { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-851753032a"></span>
+
+### VerticalAlignment Property
+
+Vertical alignment of content within the block's height. Only meaningful
+for table cells (maps to [Avalonia.Controls.Documents.TableCell.VerticalAlignment](xref:Avalonia.Controls.Documents.TableCell.VerticalAlignment)
+and Word's `w:vAlign`); null for other blocks.
+
+```csharp
+public Nullable<Avalonia.Layout.VerticalAlignment> VerticalAlignment { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-11c5c03641"></span>
+
+### WidowControl Property
+
+Widow/orphan control for paginated output: at least two lines of the paragraph
+stay and at least two lines move at a page break. Maps to RTF
+`\widctlpar`/`\nowidctlpar` and Word's `w:widowControl`;
+null means not explicitly set and resolves to ON (Word's default).
+
+```csharp
+public Nullable<bool> WidowControl { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

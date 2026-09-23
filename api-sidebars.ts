@@ -480,6 +480,7 @@ const sidebars = {
         "avalonia/controls/desktopapplicationextensions",
         "avalonia/controls/dock",
         "avalonia/controls/dockpanel",
+        "avalonia/controls/documentviewmode",
         "avalonia/controls/drawerbehavior",
         "avalonia/controls/drawerclosingeventargs",
         "avalonia/controls/drawerlayoutbehavior",
@@ -495,6 +496,8 @@ const sidebars = {
         "avalonia/controls/flatcolorpalette-flatcolor",
         "avalonia/controls/flathalfcolorpalette",
         "avalonia/controls/flattreedatagridsource-1",
+        "avalonia/controls/flowdocumentpageviewer",
+        "avalonia/controls/flowdocumentscrollviewer",
         "avalonia/controls/fluentcolorpalette",
         "avalonia/controls/flyout",
         "avalonia/controls/flyoutpresenter",
@@ -594,6 +597,7 @@ const sidebars = {
         "avalonia/controls/pagenavigationhost",
         "avalonia/controls/pageremovedeventargs",
         "avalonia/controls/pageselectionchangedeventargs",
+        "avalonia/controls/pagezoommode",
         "avalonia/controls/panel",
         "avalonia/controls/pathicon",
         "avalonia/controls/pdfannotationerroreventargs",
@@ -690,6 +694,7 @@ const sidebars = {
         "avalonia/controls/textchangedeventargs",
         "avalonia/controls/textchangingeventargs",
         "avalonia/controls/textcolumncreateoptions",
+        "avalonia/controls/textselection",
         "avalonia/controls/themevariantscope",
         "avalonia/controls/tickbar",
         "avalonia/controls/tickbarplacement",
@@ -905,6 +910,8 @@ const sidebars = {
         "avalonia/controls/charts/choroplethmap",
         "avalonia/controls/charts/circlepackingchart",
         "avalonia/controls/charts/circulargaugechart",
+        "avalonia/controls/charts/circulargaugelabelposition",
+        "avalonia/controls/charts/circulargaugetickposition",
         "avalonia/controls/charts/colormapping",
         "avalonia/controls/charts/combochart",
         "avalonia/controls/charts/contourplot",
@@ -989,7 +996,9 @@ const sidebars = {
         "avalonia/controls/charts/legendposition",
         "avalonia/controls/charts/lineannotation",
         "avalonia/controls/charts/lineargaugechart",
+        "avalonia/controls/charts/lineargaugelabelposition",
         "avalonia/controls/charts/lineargaugerange",
+        "avalonia/controls/charts/lineargaugetickposition",
         "avalonia/controls/charts/linelayer",
         "avalonia/controls/charts/lineseries",
         "avalonia/controls/charts/liquidfillgauge",
@@ -1183,12 +1192,25 @@ const sidebars = {
       "type": "category",
       "label": "Avalonia.Controls.Documents",
       "items": [
+        "avalonia/controls/documents/block",
+        "avalonia/controls/documents/blockcollection",
+        "avalonia/controls/documents/blockuicontainer",
         "avalonia/controls/documents/bold",
+        "avalonia/controls/documents/deferredimagesource",
+        "avalonia/controls/documents/embeddedimagesource",
+        "avalonia/controls/documents/flowdocument",
+        "avalonia/controls/documents/flowdocumentbuilder",
+        "avalonia/controls/documents/footnote",
+        "avalonia/controls/documents/footnotecollection",
+        "avalonia/controls/documents/footnotenumberformat",
         "avalonia/controls/documents/inline",
         "avalonia/controls/documents/inlinecollection",
+        "avalonia/controls/documents/inlinefactory",
         "avalonia/controls/documents/inlineuicontainer",
         "avalonia/controls/documents/italic",
         "avalonia/controls/documents/linebreak",
+        "avalonia/controls/documents/list",
+        "avalonia/controls/documents/listitem",
         "avalonia/controls/documents/markdownalertblock",
         "avalonia/controls/documents/markdowncodeblock",
         "avalonia/controls/documents/markdownheading",
@@ -1196,8 +1218,46 @@ const sidebars = {
         "avalonia/controls/documents/markdownhtmlinline",
         "avalonia/controls/documents/markdownimage",
         "avalonia/controls/documents/markdowntasklistitem",
+        "avalonia/controls/documents/pageband",
+        "avalonia/controls/documents/pagebandcollection",
+        "avalonia/controls/documents/pagebandpolicy",
+        "avalonia/controls/documents/pagebandrole",
+        "avalonia/controls/documents/pagebandrule",
+        "avalonia/controls/documents/pagenumberfieldkind",
+        "avalonia/controls/documents/pagesizes",
+        "avalonia/controls/documents/paragraph",
+        "avalonia/controls/documents/pixelimagesource",
+        "avalonia/controls/documents/requestnavigateeventargs",
+        "avalonia/controls/documents/richbold",
+        "avalonia/controls/documents/richfootnotecitation",
+        "avalonia/controls/documents/richfootnotereference",
+        "avalonia/controls/documents/richhyperlink",
+        "avalonia/controls/documents/richimage",
+        "avalonia/controls/documents/richimagesource",
+        "avalonia/controls/documents/richimagesourceconverter",
+        "avalonia/controls/documents/richinline",
+        "avalonia/controls/documents/richinlinecollection",
+        "avalonia/controls/documents/richinlineuicontainer",
+        "avalonia/controls/documents/richitalic",
+        "avalonia/controls/documents/richlinebreak",
+        "avalonia/controls/documents/richpagenumberfield",
+        "avalonia/controls/documents/richrun",
+        "avalonia/controls/documents/richspan",
+        "avalonia/controls/documents/richsubscript",
+        "avalonia/controls/documents/richsuperscript",
+        "avalonia/controls/documents/richtextelement",
+        "avalonia/controls/documents/richtextelementcollection-1",
+        "avalonia/controls/documents/richunderline",
         "avalonia/controls/documents/run",
+        "avalonia/controls/documents/section",
+        "avalonia/controls/documents/sectionbuilder",
         "avalonia/controls/documents/span",
+        "avalonia/controls/documents/table",
+        "avalonia/controls/documents/tablecell",
+        "avalonia/controls/documents/tablecolumn",
+        "avalonia/controls/documents/tablecolumncollection",
+        "avalonia/controls/documents/tablerow",
+        "avalonia/controls/documents/tablerowgroup",
         "avalonia/controls/documents/textelement",
         "avalonia/controls/documents/underline"
       ],
@@ -1208,11 +1268,33 @@ const sidebars = {
     },
     {
       "type": "category",
+      "label": "Avalonia.Controls.Documents.Imaging",
+      "items": [
+        "avalonia/controls/documents/imaging/pixelholder"
+      ],
+      "link": {
+        "type": "doc",
+        "id": "avalonia/controls/documents/imaging/index"
+      }
+    },
+    {
+      "type": "category",
       "label": "Avalonia.Controls.Documents.Primitives",
       "items": [
+        "avalonia/controls/documents/primitives/caretelement",
         "avalonia/controls/documents/primitives/editorcontextmenu",
         "avalonia/controls/documents/primitives/editorselectionflyout",
-        "avalonia/controls/documents/primitives/itexteditorhost"
+        "avalonia/controls/documents/primitives/iinteractivetexthost",
+        "avalonia/controls/documents/primitives/interactivetextview",
+        "avalonia/controls/documents/primitives/itexteditorhost",
+        "avalonia/controls/documents/primitives/itextline",
+        "avalonia/controls/documents/primitives/itextview",
+        "avalonia/controls/documents/primitives/itextviewhost",
+        "avalonia/controls/documents/primitives/pagecontext",
+        "avalonia/controls/documents/primitives/pagedtextview",
+        "avalonia/controls/documents/primitives/textlineinfo",
+        "avalonia/controls/documents/primitives/textviewbase",
+        "avalonia/controls/documents/primitives/virtualizingcontenthost"
       ],
       "link": {
         "type": "doc",
@@ -1283,15 +1365,69 @@ const sidebars = {
     },
     {
       "type": "category",
+      "label": "Avalonia.Controls.Documents.Primitives.Adorners",
+      "items": [
+        "avalonia/controls/documents/primitives/adorners/blockadorner",
+        "avalonia/controls/documents/primitives/adorners/blockadornercollection",
+        "avalonia/controls/documents/primitives/adorners/blockadornerlayer",
+        "avalonia/controls/documents/primitives/adorners/blockadornervisibility",
+        "avalonia/controls/documents/primitives/adorners/toolbartargetareas"
+      ],
+      "link": {
+        "type": "doc",
+        "id": "avalonia/controls/documents/primitives/adorners/index"
+      }
+    },
+    {
+      "type": "category",
       "label": "Avalonia.Controls.Documents.Primitives.Components",
       "items": [
+        "avalonia/controls/documents/primitives/components/clipboardformats",
+        "avalonia/controls/documents/primitives/components/clipboardoperations",
+        "avalonia/controls/documents/primitives/components/itextviewcomponent",
         "avalonia/controls/documents/primitives/components/texteditorkeyboard",
         "avalonia/controls/documents/primitives/components/texteditorselectionflyout",
-        "avalonia/controls/documents/primitives/components/texteditortyping"
+        "avalonia/controls/documents/primitives/components/texteditortyping",
+        "avalonia/controls/documents/primitives/components/textviewcomponentbase",
+        "avalonia/controls/documents/primitives/components/textviewcontextmenu",
+        "avalonia/controls/documents/primitives/components/textviewkeyboard",
+        "avalonia/controls/documents/primitives/components/textviewmouse"
       ],
       "link": {
         "type": "doc",
         "id": "avalonia/controls/documents/primitives/components/index"
+      }
+    },
+    {
+      "type": "category",
+      "label": "Avalonia.Controls.Documents.Primitives.DocumentNodes",
+      "items": [
+        "avalonia/controls/documents/primitives/documentnodes/containernode",
+        "avalonia/controls/documents/primitives/documentnodes/documentnode",
+        "avalonia/controls/documents/primitives/documentnodes/nesteddocumentnode",
+        "avalonia/controls/documents/primitives/documentnodes/paragraphnode",
+        "avalonia/controls/documents/primitives/documentnodes/stacklayoutnode",
+        "avalonia/controls/documents/primitives/documentnodes/textmarkerstyle"
+      ],
+      "link": {
+        "type": "doc",
+        "id": "avalonia/controls/documents/primitives/documentnodes/index"
+      }
+    },
+    {
+      "type": "category",
+      "label": "Avalonia.Controls.Documents.Primitives.Highlighting",
+      "items": [
+        "avalonia/controls/documents/primitives/highlighting/highlightlayerbase",
+        "avalonia/controls/documents/primitives/highlighting/highlightlayercollection",
+        "avalonia/controls/documents/primitives/highlighting/highlightregion",
+        "avalonia/controls/documents/primitives/highlighting/highlightstyle",
+        "avalonia/controls/documents/primitives/highlighting/ihighlightlayer",
+        "avalonia/controls/documents/primitives/highlighting/selectionhighlightlayer"
+      ],
+      "link": {
+        "type": "doc",
+        "id": "avalonia/controls/documents/primitives/highlighting/index"
       }
     },
     {
@@ -1331,6 +1467,47 @@ const sidebars = {
       "link": {
         "type": "doc",
         "id": "avalonia/controls/documents/primitives/toolbar/index"
+      }
+    },
+    {
+      "type": "category",
+      "label": "Avalonia.Controls.Documents.Serialization",
+      "items": [
+        "avalonia/controls/documents/serialization/documentexportmode",
+        "avalonia/controls/documents/serialization/documentserializeroptions",
+        "avalonia/controls/documents/serialization/idocumentserializer",
+        "avalonia/controls/documents/serialization/imageencodingpolicy",
+        "avalonia/controls/documents/serialization/serializationexception"
+      ],
+      "link": {
+        "type": "doc",
+        "id": "avalonia/controls/documents/serialization/index"
+      }
+    },
+    {
+      "type": "category",
+      "label": "Avalonia.Controls.Documents.Serialization.Authoring",
+      "items": [
+        "avalonia/controls/documents/serialization/authoring/boldinlinedraft",
+        "avalonia/controls/documents/serialization/authoring/custominlinedraft",
+        "avalonia/controls/documents/serialization/authoring/footnotecitationinlinedraft",
+        "avalonia/controls/documents/serialization/authoring/footnotereferenceinlinedraft",
+        "avalonia/controls/documents/serialization/authoring/hyperlinkinlinedraft",
+        "avalonia/controls/documents/serialization/authoring/imageinlinedraft",
+        "avalonia/controls/documents/serialization/authoring/inlinedraft",
+        "avalonia/controls/documents/serialization/authoring/inlinewrapper",
+        "avalonia/controls/documents/serialization/authoring/italicinlinedraft",
+        "avalonia/controls/documents/serialization/authoring/linebreakinlinedraft",
+        "avalonia/controls/documents/serialization/authoring/pagenumberfieldinlinedraft",
+        "avalonia/controls/documents/serialization/authoring/runinlinedraft",
+        "avalonia/controls/documents/serialization/authoring/spaninlinedraft",
+        "avalonia/controls/documents/serialization/authoring/subscriptinlinedraft",
+        "avalonia/controls/documents/serialization/authoring/superscriptinlinedraft",
+        "avalonia/controls/documents/serialization/authoring/underlineinlinedraft"
+      ],
+      "link": {
+        "type": "doc",
+        "id": "avalonia/controls/documents/serialization/authoring/index"
       }
     },
     {
@@ -1392,6 +1569,17 @@ const sidebars = {
     },
     {
       "type": "category",
+      "label": "Avalonia.Controls.Documents.Serialization.PlainText",
+      "items": [
+        "avalonia/controls/documents/serialization/plaintext/plaintextserializer"
+      ],
+      "link": {
+        "type": "doc",
+        "id": "avalonia/controls/documents/serialization/plaintext/index"
+      }
+    },
+    {
+      "type": "category",
       "label": "Avalonia.Controls.Documents.Serialization.Rtf",
       "items": [
         "avalonia/controls/documents/serialization/rtf/rtfbordermetadata",
@@ -1401,6 +1589,34 @@ const sidebars = {
       "link": {
         "type": "doc",
         "id": "avalonia/controls/documents/serialization/rtf/index"
+      }
+    },
+    {
+      "type": "category",
+      "label": "Avalonia.Controls.Documents.Serialization.Snapshot",
+      "items": [
+        "avalonia/controls/documents/serialization/snapshot/blocksnapshotnode",
+        "avalonia/controls/documents/serialization/snapshot/documentsnapshot",
+        "avalonia/controls/documents/serialization/snapshot/documentsnapshotbuilder",
+        "avalonia/controls/documents/serialization/snapshot/footnotereferencesnapshotnode",
+        "avalonia/controls/documents/serialization/snapshot/footnotesnapshot",
+        "avalonia/controls/documents/serialization/snapshot/hyperlinksnapshotnode",
+        "avalonia/controls/documents/serialization/snapshot/imagesnapshotnode",
+        "avalonia/controls/documents/serialization/snapshot/inlinesnapshotnode",
+        "avalonia/controls/documents/serialization/snapshot/listsnapshotnode",
+        "avalonia/controls/documents/serialization/snapshot/pagebandreferences",
+        "avalonia/controls/documents/serialization/snapshot/pagebandsnapshot",
+        "avalonia/controls/documents/serialization/snapshot/pagenumberfieldsnapshotnode",
+        "avalonia/controls/documents/serialization/snapshot/runsnapshotnode",
+        "avalonia/controls/documents/serialization/snapshot/sectionsnapshotnode",
+        "avalonia/controls/documents/serialization/snapshot/snapshotnode",
+        "avalonia/controls/documents/serialization/snapshot/snapshotnodechildren",
+        "avalonia/controls/documents/serialization/snapshot/snapshotnodechildren-enumerator",
+        "avalonia/controls/documents/serialization/snapshot/tablesnapshotnode"
+      ],
+      "link": {
+        "type": "doc",
+        "id": "avalonia/controls/documents/serialization/snapshot/index"
       }
     },
     {
@@ -1418,11 +1634,80 @@ const sidebars = {
       "type": "category",
       "label": "Avalonia.Controls.Documents.TextModel",
       "items": [
-        "avalonia/controls/documents/textmodel/markdownnodekinds"
+        "avalonia/controls/documents/textmodel/changeorigin",
+        "avalonia/controls/documents/textmodel/documentchangedeventargs",
+        "avalonia/controls/documents/textmodel/documentchangekind",
+        "avalonia/controls/documents/textmodel/inodekindhandler",
+        "avalonia/controls/documents/textmodel/logicaldirection",
+        "avalonia/controls/documents/textmodel/markdownnodekinds",
+        "avalonia/controls/documents/textmodel/nodekindflags",
+        "avalonia/controls/documents/textmodel/statictextpointer",
+        "avalonia/controls/documents/textmodel/textchangeeventargs",
+        "avalonia/controls/documents/textmodel/textdocument",
+        "avalonia/controls/documents/textmodel/textdocument-c-a",
+        "avalonia/controls/documents/textmodel/textdocument-d-a",
+        "avalonia/controls/documents/textmodel/textdocument-e-a",
+        "avalonia/controls/documents/textmodel/textdocumentnodekind",
+        "avalonia/controls/documents/textmodel/textfootnote",
+        "avalonia/controls/documents/textmodel/textfootnotecollection",
+        "avalonia/controls/documents/textmodel/textpageband",
+        "avalonia/controls/documents/textmodel/textpagebandcollection",
+        "avalonia/controls/documents/textmodel/textpointer",
+        "avalonia/controls/documents/textmodel/textrange"
       ],
       "link": {
         "type": "doc",
         "id": "avalonia/controls/documents/textmodel/index"
+      }
+    },
+    {
+      "type": "category",
+      "label": "Avalonia.Controls.Documents.TextModel.Formatting",
+      "items": [
+        "avalonia/controls/documents/textmodel/formatting/blockformatting",
+        "avalonia/controls/documents/textmodel/formatting/documentformatting",
+        "avalonia/controls/documents/textmodel/formatting/inlineformatting",
+        "avalonia/controls/documents/textmodel/formatting/listformatting",
+        "avalonia/controls/documents/textmodel/formatting/sectionpagesetup",
+        "avalonia/controls/documents/textmodel/formatting/tablecolumnwidth",
+        "avalonia/controls/documents/textmodel/formatting/tableformatting",
+        "avalonia/controls/documents/textmodel/formatting/textdecorationflags",
+        "avalonia/controls/documents/textmodel/formatting/textelementformatting",
+        "avalonia/controls/documents/textmodel/formatting/underlinestyle"
+      ],
+      "link": {
+        "type": "doc",
+        "id": "avalonia/controls/documents/textmodel/formatting/index"
+      }
+    },
+    {
+      "type": "category",
+      "label": "Avalonia.Controls.Documents.TextModel.Handlers",
+      "items": [
+        "avalonia/controls/documents/textmodel/handlers/blocknodekindhandler",
+        "avalonia/controls/documents/textmodel/handlers/inlinenodekindhandler"
+      ],
+      "link": {
+        "type": "doc",
+        "id": "avalonia/controls/documents/textmodel/handlers/index"
+      }
+    },
+    {
+      "type": "category",
+      "label": "Avalonia.Controls.Documents.Undo",
+      "items": [
+        "avalonia/controls/documents/undo/emptyundounit",
+        "avalonia/controls/documents/undo/iundohistory",
+        "avalonia/controls/documents/undo/iundomanager",
+        "avalonia/controls/documents/undo/iundoscope",
+        "avalonia/controls/documents/undo/iundounit",
+        "avalonia/controls/documents/undo/nullundomanager",
+        "avalonia/controls/documents/undo/selectionsnapshot",
+        "avalonia/controls/documents/undo/undomanager"
+      ],
+      "link": {
+        "type": "doc",
+        "id": "avalonia/controls/documents/undo/index"
       }
     },
     {
@@ -4173,6 +4458,7 @@ const sidebars = {
         "global/ag-f",
         "global/ai-a",
         "global/ai-b",
+        "global/am-a",
         "global/aq-a",
         "global/dl-a",
         "global/dm-a",
@@ -4270,6 +4556,7 @@ const sidebars = {
         "packages/avalonia-browser",
         "packages/avalonia-controls-charts",
         "packages/avalonia-controls-colorpicker",
+        "packages/avalonia-controls-documents",
         "packages/avalonia-controls-documents-serialization-docx",
         "packages/avalonia-controls-documents-serialization-html",
         "packages/avalonia-controls-documents-serialization-pdf",

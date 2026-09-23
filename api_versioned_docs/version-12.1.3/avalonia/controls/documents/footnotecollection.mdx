@@ -1,0 +1,322 @@
+---
+title: 'FootnoteCollection'
+hide_title: true
+slug: '/avalonia/controls/documents/footnotecollection'
+uid: 'Avalonia.Controls.Documents.FootnoteCollection'
+commentId: 'T:Avalonia.Controls.Documents.FootnoteCollection'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Documents'
+assembly: 'Avalonia.Controls.Documents'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">FootnoteCollection Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+The footnotes a document owns, as elements, in anchor order: a view over the text
+document's [Avalonia.Controls.Documents.TextModel.TextDocument.Footnotes](xref:Avalonia.Controls.Documents.TextModel.TextDocument.Footnotes), which owns the notes, materializing
+a [Avalonia.Controls.Documents.Footnote](xref:Avalonia.Controls.Documents.Footnote) element per note on demand. It follows the contract of the
+block collection: the document becomes a note's logical parent the moment it is
+added; while the document has no text document the note waits pending, and it
+joins the text document when that is initialized, before the pending blocks
+materialize; once the text document exists a note joins it at once. Under the
+anchor-owns-its-note lifecycle the notes come and go with their anchors; a note
+added here pairs with the anchor carrying its id, or waits for one. Ownership is
+exclusive, and a nested document (a page band, a note) owns no notes.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class FootnoteCollection
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> FootnoteCollection
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> ICollection&lt;Footnote&gt;, IEnumerable&lt;Footnote&gt;, IList&lt;Footnote&gt;, IReadOnlyCollection&lt;Footnote&gt;, IReadOnlyList&lt;Footnote&gt;, IEnumerable
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Add](#uid-daaba07856) | No summary available. |
+| [Clear](#uid-2d5db2106e) | No summary available. |
+| [Contains](#uid-a8de7ec647) | No summary available. |
+| [CopyTo](#uid-48fc3501ac) | No summary available. |
+| [Find](#uid-0ba53b903a) | The note with `noteId`, or null. |
+| [GetEnumerator](#uid-a522ef9b33) | No summary available. |
+| [IndexOf](#uid-9453ceaa3b) | No summary available. |
+| [Insert](#uid-228f4c2094) | No summary available. |
+| [Remove](#uid-36515555c5) | No summary available. |
+| [RemoveAt](#uid-c59f514e89) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-daaba07856"></span>
+
+### Add Method
+
+```csharp
+public void Add(Avalonia.Controls.Documents.Footnote item)
+```
+
+#### Parameters
+
+`item` [Avalonia.Controls.Documents.Footnote](xref:Avalonia.Controls.Documents.Footnote)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2d5db2106e"></span>
+
+### Clear Method
+
+```csharp
+public void Clear()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a8de7ec647"></span>
+
+### Contains Method
+
+```csharp
+public bool Contains(Avalonia.Controls.Documents.Footnote item)
+```
+
+#### Parameters
+
+`item` [Avalonia.Controls.Documents.Footnote](xref:Avalonia.Controls.Documents.Footnote)
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-48fc3501ac"></span>
+
+### CopyTo Method
+
+```csharp
+public void CopyTo(Avalonia.Controls.Documents.Footnote[] array, int arrayIndex)
+```
+
+#### Parameters
+
+`array` [Avalonia.Controls.Documents.Footnote](xref:Avalonia.Controls.Documents.Footnote)[]
+
+
+`arrayIndex` int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0ba53b903a"></span>
+
+### Find Method
+
+The note with `noteId`, or null.
+
+```csharp
+public Avalonia.Controls.Documents.Footnote Find(int noteId)
+```
+
+#### Parameters
+
+`noteId` int
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.Footnote](xref:Avalonia.Controls.Documents.Footnote)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a522ef9b33"></span>
+
+### GetEnumerator Method
+
+```csharp
+public System.Collections.Generic.IEnumerator<Avalonia.Controls.Documents.Footnote> GetEnumerator()
+```
+
+#### Returns
+
+System.Collections.Generic.IEnumerator&lt;[Avalonia.Controls.Documents.Footnote](xref:Avalonia.Controls.Documents.Footnote)&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9453ceaa3b"></span>
+
+### IndexOf Method
+
+```csharp
+public int IndexOf(Avalonia.Controls.Documents.Footnote item)
+```
+
+#### Parameters
+
+`item` [Avalonia.Controls.Documents.Footnote](xref:Avalonia.Controls.Documents.Footnote)
+
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-228f4c2094"></span>
+
+### Insert Method
+
+```csharp
+public void Insert(int index, Avalonia.Controls.Documents.Footnote item)
+```
+
+#### Parameters
+
+`index` int
+
+
+`item` [Avalonia.Controls.Documents.Footnote](xref:Avalonia.Controls.Documents.Footnote)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-36515555c5"></span>
+
+### Remove Method
+
+```csharp
+public bool Remove(Avalonia.Controls.Documents.Footnote item)
+```
+
+#### Parameters
+
+`item` [Avalonia.Controls.Documents.Footnote](xref:Avalonia.Controls.Documents.Footnote)
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c59f514e89"></span>
+
+### RemoveAt Method
+
+```csharp
+public void RemoveAt(int index)
+```
+
+#### Parameters
+
+`index` int
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Count](#uid-e0da358f61) | No summary available. |
+| [IsReadOnly](#uid-eb6dedf6b8) | No summary available. |
+| [Item](#uid-42a32ffe7a) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e0da358f61"></span>
+
+### Count Property
+
+```csharp
+public int Count { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-eb6dedf6b8"></span>
+
+### IsReadOnly Property
+
+```csharp
+public bool IsReadOnly { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-42a32ffe7a"></span>
+
+### Item Property
+
+```csharp
+public Avalonia.Controls.Documents.Footnote Item { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

@@ -1,0 +1,268 @@
+---
+title: 'SelectionSnapshot'
+hide_title: true
+slug: '/avalonia/controls/documents/undo/selectionsnapshot'
+uid: 'Avalonia.Controls.Documents.Undo.SelectionSnapshot'
+commentId: 'T:Avalonia.Controls.Documents.Undo.SelectionSnapshot'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Documents'
+assembly: 'Avalonia.Controls.Documents'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.Undo'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">SelectionSnapshot Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.Undo</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Value-type snapshot of a [Avalonia.Controls.TextSelection](xref:Avalonia.Controls.TextSelection) captured at a
+point in time. Stores a frozen [Avalonia.Controls.Documents.TextModel.TextPointer](xref:Avalonia.Controls.Documents.TextModel.TextPointer) per endpoint
+together with the offset inside that endpoint's cached leaf and the
+child-index path from the document root down to that leaf.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct SelectionSnapshot
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> SelectionSnapshot
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;SelectionSnapshot&gt;
+</div>
+</div>
+
+## Remarks
+
+Restoration uses a three-tier strategy:
+
+1. Fast path: if the captured leaf is still attached to the live tree (true for every non-structural edit and for the pre-edit side of a just-replayed structural edit), re-derive the global offset as `Node.GlobalStartOffset + leafOffset`.
+2. Path walk: when the captured leaf has been detached (structural Undo/Redo replaces node instances), walk the child-index path from the document root. `MaterializeFromSnapshot` preserves child ordering deterministically, so the path resolves to the correct rematerialized leaf.
+3. Last-resort fallback: offset-based pointer creation.
+
+The leaf offset is frozen at capture time because the leaf's
+`GlobalStartOffset` may shift between capture and restore when
+earlier content changes. At restore time the global offset is
+re-derived from the (possibly replaced) leaf's current
+`GlobalStartOffset` plus this captured `leafOffset`.
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Capture](#uid-9a32ebb5aa) | Captures `selection`'s two endpoints. Pass the result to [Avalonia.Controls.Documents.Undo.UndoManager.BeginUndoUnit(string,Nullable&#123;Avalonia.Controls.Documents.Undo.SelectionSnapshot&#125;)](xref:Avalonia.Controls.Documents.Undo.UndoManager.BeginUndoUnit%28System.String%2CSystem.Nullable%7BAvalonia.Controls.Documents.Undo.SelectionSnapshot%7D%29) as the pre-edit state, or to [Avalonia.Controls.Documents.Undo.IUndoScope.SetSelectionAfter(Nullable&#123;Avalonia.Controls.Documents.Undo.SelectionSnapshot&#125;)](xref:Avalonia.Controls.Documents.Undo.IUndoScope.SetSelectionAfter%28System.Nullable%7BAvalonia.Controls.Documents.Undo.SelectionSnapshot%7D%29) as the post-edit state, to have the caret restored with the unit. |
+| [Equals (2 overloads)](#uid-a63d5241b6) | Returns if this snapshot equals `other` by reference equality on all components. |
+| [GetHashCode](#uid-a6ac9ee55f) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9a32ebb5aa"></span>
+
+### Capture Method
+
+Captures `selection`'s two endpoints. Pass the
+result to [Avalonia.Controls.Documents.Undo.UndoManager.BeginUndoUnit(string,Nullable&#123;Avalonia.Controls.Documents.Undo.SelectionSnapshot&#125;)](xref:Avalonia.Controls.Documents.Undo.UndoManager.BeginUndoUnit%28System.String%2CSystem.Nullable%7BAvalonia.Controls.Documents.Undo.SelectionSnapshot%7D%29) as the pre-edit
+state, or to [Avalonia.Controls.Documents.Undo.IUndoScope.SetSelectionAfter(Nullable&#123;Avalonia.Controls.Documents.Undo.SelectionSnapshot&#125;)](xref:Avalonia.Controls.Documents.Undo.IUndoScope.SetSelectionAfter%28System.Nullable%7BAvalonia.Controls.Documents.Undo.SelectionSnapshot%7D%29) as the
+post-edit state, to have the caret restored with the unit.
+
+```csharp
+public Avalonia.Controls.Documents.Undo.SelectionSnapshot Capture(Avalonia.Controls.TextSelection selection)
+```
+
+#### Parameters
+
+`selection` [Avalonia.Controls.TextSelection](xref:Avalonia.Controls.TextSelection)
+
+The live selection to freeze.
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.Undo.SelectionSnapshot](xref:Avalonia.Controls.Documents.Undo.SelectionSnapshot)
+
+A snapshot of the selection's anchor and caret.
+
+
+#### Exceptions
+
+- [\`selection\` is .](xref:System.ArgumentNullException)
+
+</section>
+
+<span id="uid-a63d5241b6"></span>
+
+### Equals overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-272978afdb"></span>
+
+#### Equals Method
+
+Returns if this snapshot equals `other` by reference equality on all components.
+
+```csharp
+public bool Equals(Avalonia.Controls.Documents.Undo.SelectionSnapshot other)
+```
+
+##### Parameters
+
+`other` [Avalonia.Controls.Documents.Undo.SelectionSnapshot](xref:Avalonia.Controls.Documents.Undo.SelectionSnapshot)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9d16551d5a"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(object obj)
+```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a6ac9ee55f"></span>
+
+### GetHashCode Method
+
+```csharp
+public int GetHashCode()
+```
+
+#### Returns
+
+int
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Anchor](#uid-f780461280) | Frozen anchor pointer. Shares its cached leaf with the source selection. |
+| [AnchorLeafOffset](#uid-a30e19d6b9) | Offset inside [Avalonia.Controls.Documents.Undo.SelectionSnapshot.Anchor](xref:Avalonia.Controls.Documents.Undo.SelectionSnapshot.Anchor)'s leaf at capture time. |
+| [IsEmpty](#uid-0882690688) | True when the anchor and moving pointers coincide. |
+| [Moving](#uid-dec8c38557) | Frozen caret / moving pointer. |
+| [MovingLeafOffset](#uid-aae6a7125c) | Offset inside [Avalonia.Controls.Documents.Undo.SelectionSnapshot.Moving](xref:Avalonia.Controls.Documents.Undo.SelectionSnapshot.Moving)'s leaf at capture time. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f780461280"></span>
+
+### Anchor Property
+
+Frozen anchor pointer. Shares its cached leaf with the source selection.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.TextPointer Anchor { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a30e19d6b9"></span>
+
+### AnchorLeafOffset Property
+
+Offset inside [Avalonia.Controls.Documents.Undo.SelectionSnapshot.Anchor](xref:Avalonia.Controls.Documents.Undo.SelectionSnapshot.Anchor)'s leaf at capture time.
+
+```csharp
+public int AnchorLeafOffset { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0882690688"></span>
+
+### IsEmpty Property
+
+True when the anchor and moving pointers coincide.
+
+```csharp
+public bool IsEmpty { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-dec8c38557"></span>
+
+### Moving Property
+
+Frozen caret / moving pointer.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.TextPointer Moving { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-aae6a7125c"></span>
+
+### MovingLeafOffset Property
+
+Offset inside [Avalonia.Controls.Documents.Undo.SelectionSnapshot.Moving](xref:Avalonia.Controls.Documents.Undo.SelectionSnapshot.Moving)'s leaf at capture time.
+
+```csharp
+public int MovingLeafOffset { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

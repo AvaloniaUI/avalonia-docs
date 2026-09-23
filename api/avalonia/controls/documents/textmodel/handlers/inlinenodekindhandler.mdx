@@ -1,0 +1,182 @@
+---
+title: 'InlineNodeKindHandler'
+hide_title: true
+slug: '/avalonia/controls/documents/textmodel/handlers/inlinenodekindhandler'
+uid: 'Avalonia.Controls.Documents.TextModel.Handlers.InlineNodeKindHandler'
+commentId: 'T:Avalonia.Controls.Documents.TextModel.Handlers.InlineNodeKindHandler'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Documents'
+assembly: 'Avalonia.Controls.Documents'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.TextModel.Handlers'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">InlineNodeKindHandler Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.TextModel.Handlers</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Base handler for inline-level node kinds. Provides shared capture/apply logic
+for [Avalonia.Controls.Documents.TextModel.Formatting.TextElementFormatting](xref:Avalonia.Controls.Documents.TextModel.Formatting.TextElementFormatting) and [Avalonia.Controls.Documents.TextModel.Formatting.InlineFormatting](xref:Avalonia.Controls.Documents.TextModel.Formatting.InlineFormatting).
+Inherit from this class when implementing [Avalonia.Controls.Documents.TextModel.INodeKindHandler](xref:Avalonia.Controls.Documents.TextModel.INodeKindHandler) for
+custom inline-level [Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind](xref:Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind) registrations.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class InlineNodeKindHandler
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> InlineNodeKindHandler
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="../inodekindhandler">INodeKindHandler</a>
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [ApplyFormatting](#uid-bc8ff5eab5) | Applies formatting from a [Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode](xref:Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode) back to the element. |
+| [CaptureSnapshot](#uid-657f422fda) | Captures an immutable [Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode](xref:Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode) for the given element state. |
+| [CreateDocumentNode](#uid-86331be98e) | Creates the [Avalonia.Controls.Documents.Primitives.DocumentNodes.DocumentNode](xref:Avalonia.Controls.Documents.Primitives.DocumentNodes.DocumentNode) for the given element, or to use the default. |
+| [CreateElement](#uid-e40c4d0484) | Creates the [Avalonia.Controls.Documents.RichTextElement](xref:Avalonia.Controls.Documents.RichTextElement) for the given node kind. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-bc8ff5eab5"></span>
+
+### ApplyFormatting Method
+
+Applies formatting from a [Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode](xref:Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode) back to the element.
+
+```csharp
+public void ApplyFormatting(Avalonia.Controls.Documents.RichTextElement element, Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode snapshotNode)
+```
+
+#### Parameters
+
+`element` [Avalonia.Controls.Documents.RichTextElement](xref:Avalonia.Controls.Documents.RichTextElement)
+
+
+`snapshotNode` [Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode](xref:Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-657f422fda"></span>
+
+### CaptureSnapshot Method
+
+Captures an immutable [Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode](xref:Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode) for the given element state.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode CaptureSnapshot(Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind kind, int startOffset, int length, Avalonia.Controls.Documents.RichTextElement element, Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode deferredSnapshot, Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNodeChildren children)
+```
+
+#### Parameters
+
+`kind` [Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind](xref:Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind)
+
+
+`startOffset` int
+
+
+`length` int
+
+
+`element` [Avalonia.Controls.Documents.RichTextElement](xref:Avalonia.Controls.Documents.RichTextElement)
+
+
+`deferredSnapshot` [Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode](xref:Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode)
+
+
+`children` [Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNodeChildren](xref:Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNodeChildren)
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode](xref:Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-86331be98e"></span>
+
+### CreateDocumentNode Method
+
+Creates the [Avalonia.Controls.Documents.Primitives.DocumentNodes.DocumentNode](xref:Avalonia.Controls.Documents.Primitives.DocumentNodes.DocumentNode) for the given element, or to use the default.
+
+```csharp
+public Avalonia.Controls.Documents.Primitives.DocumentNodes.DocumentNode CreateDocumentNode(Avalonia.Controls.Documents.RichTextElement element)
+```
+
+#### Parameters
+
+`element` [Avalonia.Controls.Documents.RichTextElement](xref:Avalonia.Controls.Documents.RichTextElement)
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.Primitives.DocumentNodes.DocumentNode](xref:Avalonia.Controls.Documents.Primitives.DocumentNodes.DocumentNode)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e40c4d0484"></span>
+
+### CreateElement Method
+
+Creates the [Avalonia.Controls.Documents.RichTextElement](xref:Avalonia.Controls.Documents.RichTextElement) for the given node kind.
+
+```csharp
+public Avalonia.Controls.Documents.RichTextElement CreateElement(Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind kind)
+```
+
+#### Parameters
+
+`kind` [Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind](xref:Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind)
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.RichTextElement](xref:Avalonia.Controls.Documents.RichTextElement)
+
+
+</section>
+
+</ApiRefPage>
+

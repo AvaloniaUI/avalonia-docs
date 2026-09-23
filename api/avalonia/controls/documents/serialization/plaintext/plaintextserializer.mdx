@@ -1,0 +1,500 @@
+---
+title: 'PlainTextSerializer'
+hide_title: true
+slug: '/avalonia/controls/documents/serialization/plaintext/plaintextserializer'
+uid: 'Avalonia.Controls.Documents.Serialization.PlainText.PlainTextSerializer'
+commentId: 'T:Avalonia.Controls.Documents.Serialization.PlainText.PlainTextSerializer'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Documents'
+assembly: 'Avalonia.Controls.Documents'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.Serialization.PlainText'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">PlainTextSerializer Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.Serialization.PlainText</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Serializer for plain text format.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class PlainTextSerializer
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> PlainTextSerializer
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="../idocumentserializer">IDocumentSerializer</a>
+</div>
+</div>
+
+## Remarks
+
+Plain text serialization discards all formatting information.
+Paragraphs are separated by newlines.
+
+This serializer is thread-safe for concurrent operations.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [PlainTextSerializer (2 overloads)](#uid-50dd17e309) | Initializes a new instance using UTF-8 encoding. |
+
+<span id="uid-50dd17e309"></span>
+
+### PlainTextSerializer overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0e33dda6e6"></span>
+
+#### PlainTextSerializer Constructor
+
+Initializes a new instance using UTF-8 encoding.
+
+```csharp
+public PlainTextSerializer()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-965d41d75e"></span>
+
+#### PlainTextSerializer Constructor
+
+Initializes a new instance with the specified encoding.
+
+```csharp
+public PlainTextSerializer(System.Text.Encoding encoding)
+```
+
+##### Parameters
+
+`encoding` System.Text.Encoding
+
+The text encoding to use.
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [CanDeserialize](#uid-2d5d13dfaf) | Checks if a stream appears to contain this format. |
+| [Deserialize (2 overloads)](#uid-d7ffbe2477) | Deserializes a document from a stream on the calling thread. |
+| [DeserializeAsync](#uid-29e4f644d0) | Runs [Avalonia.Controls.Documents.Serialization.PlainText.PlainTextSerializer.Deserialize(System.IO.Stream,System.Threading.CancellationToken)](xref:Avalonia.Controls.Documents.Serialization.PlainText.PlainTextSerializer.Deserialize%28System.IO.Stream%2CSystem.Threading.CancellationToken%29) on a pool thread. |
+| [Serialize (2 overloads)](#uid-d126fedd9e) | Serializes a document snapshot to a string. |
+| [SerializeAsync](#uid-ce952d9071) | Runs [Avalonia.Controls.Documents.Serialization.PlainText.PlainTextSerializer.Serialize(Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot,System.IO.Stream,System.Threading.CancellationToken)](xref:Avalonia.Controls.Documents.Serialization.PlainText.PlainTextSerializer.Serialize%28Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot%2CSystem.IO.Stream%2CSystem.Threading.CancellationToken%29) on a pool thread. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2d5d13dfaf"></span>
+
+### CanDeserialize Method
+
+Checks if a stream appears to contain this format.
+
+```csharp
+public bool CanDeserialize(System.IO.Stream stream)
+```
+
+#### Parameters
+
+`stream` System.IO.Stream
+
+The stream to check. Must be readable and seekable.
+
+
+#### Returns
+
+bool
+
+True if the stream likely contains this format; otherwise, false.
+
+
+#### Remarks
+
+This method does not consume the stream; it restores the original position after checking.
+
+</section>
+
+<span id="uid-d7ffbe2477"></span>
+
+### Deserialize overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c79549bc9d"></span>
+
+#### Deserialize Method
+
+Deserializes a document from a stream on the calling thread.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot Deserialize(System.IO.Stream stream, System.Threading.CancellationToken cancellationToken)
+```
+
+##### Parameters
+
+`stream` System.IO.Stream
+
+The stream to read from. Must be readable.
+
+
+`cancellationToken` System.Threading.CancellationToken
+
+Cancellation token.
+
+
+##### Returns
+
+[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot)
+
+The deserialized [Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot).
+
+
+##### Remarks
+
+Defaults to blocking on [Avalonia.Controls.Documents.Serialization.IDocumentSerializer.DeserializeAsync(System.IO.Stream,System.Threading.CancellationToken)](xref:Avalonia.Controls.Documents.Serialization.IDocumentSerializer.DeserializeAsync%28System.IO.Stream%2CSystem.Threading.CancellationToken%29), so a serializer written against
+the released interface keeps working. Implement this member instead: no format here
+performs asynchronous I/O, so the asynchronous pair only moves processor-bound work onto
+a pool thread.
+
+##### Exceptions
+
+- [\`stream\` is null.](xref:System.ArgumentNullException)
+- [\`stream\` is not readable.](xref:System.ArgumentException)
+- [This serializer cannot read; see \[Avalonia.Controls.Documents.Serialization.IDocumentSerializer.CanRead\](xref:Avalonia.Controls.Documents.Serialization.IDocumentSerializer.CanRead).](xref:System.NotSupportedException)
+- [The stream content is invalid for this format.](xref:Avalonia.Controls.Documents.Serialization.SerializationException)
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-41a20f3ca1"></span>
+
+#### Deserialize Method
+
+Deserializes a document from a string.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot Deserialize(string text)
+```
+
+##### Parameters
+
+`text` string
+
+The plain text content.
+
+
+##### Returns
+
+[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot)
+
+A new [Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot) containing the text.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-29e4f644d0"></span>
+
+### DeserializeAsync Method
+
+Runs [Avalonia.Controls.Documents.Serialization.PlainText.PlainTextSerializer.Deserialize(System.IO.Stream,System.Threading.CancellationToken)](xref:Avalonia.Controls.Documents.Serialization.PlainText.PlainTextSerializer.Deserialize%28System.IO.Stream%2CSystem.Threading.CancellationToken%29) on a pool thread.
+
+```csharp
+public System.Threading.Tasks.Task<Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot> DeserializeAsync(System.IO.Stream stream, System.Threading.CancellationToken cancellationToken)
+```
+
+#### Parameters
+
+`stream` System.IO.Stream
+
+The stream to read from.
+
+
+`cancellationToken` System.Threading.CancellationToken
+
+Cancellation token.
+
+
+#### Returns
+
+System.Threading.Tasks.Task&lt;[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot)&gt;
+
+The deserialized snapshot.
+
+
+#### Remarks
+
+A thread-offload convenience, not asynchronous I/O: no format here reads asynchronously.
+Where you are already off the UI thread, call [Avalonia.Controls.Documents.Serialization.PlainText.PlainTextSerializer.Deserialize(System.IO.Stream,System.Threading.CancellationToken)](xref:Avalonia.Controls.Documents.Serialization.PlainText.PlainTextSerializer.Deserialize%28System.IO.Stream%2CSystem.Threading.CancellationToken%29) and keep the
+thread you are on.
+
+</section>
+
+<span id="uid-d126fedd9e"></span>
+
+### Serialize overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7cd3fb3c13"></span>
+
+#### Serialize Method
+
+Serializes a document snapshot to a string.
+
+```csharp
+public string Serialize(Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot snapshot)
+```
+
+##### Parameters
+
+`snapshot` [Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot)
+
+The document snapshot to serialize.
+
+
+##### Returns
+
+string
+
+The plain text content.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-12242de11d"></span>
+
+#### Serialize Method
+
+Serializes a document snapshot to a stream on the calling thread.
+
+```csharp
+public void Serialize(Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot snapshot, System.IO.Stream stream, System.Threading.CancellationToken cancellationToken)
+```
+
+##### Parameters
+
+`snapshot` [Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot)
+
+The document snapshot to serialize.
+
+
+`stream` System.IO.Stream
+
+The stream to write to. Must be writable.
+
+
+`cancellationToken` System.Threading.CancellationToken
+
+Cancellation token.
+
+
+##### Remarks
+
+Defaults to blocking on [Avalonia.Controls.Documents.Serialization.IDocumentSerializer.SerializeAsync(Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot,System.IO.Stream,System.Threading.CancellationToken)](xref:Avalonia.Controls.Documents.Serialization.IDocumentSerializer.SerializeAsync%28Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot%2CSystem.IO.Stream%2CSystem.Threading.CancellationToken%29), so a serializer written against the
+released interface keeps working. Implement this member instead.
+
+##### Exceptions
+
+- [\`snapshot\` or \`stream\` is null.](xref:System.ArgumentNullException)
+- [\`stream\` is not writable.](xref:System.ArgumentException)
+- [This serializer cannot write; see \[Avalonia.Controls.Documents.Serialization.IDocumentSerializer.CanWrite\](xref:Avalonia.Controls.Documents.Serialization.IDocumentSerializer.CanWrite).](xref:System.NotSupportedException)
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ce952d9071"></span>
+
+### SerializeAsync Method
+
+Runs [Avalonia.Controls.Documents.Serialization.PlainText.PlainTextSerializer.Serialize(Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot,System.IO.Stream,System.Threading.CancellationToken)](xref:Avalonia.Controls.Documents.Serialization.PlainText.PlainTextSerializer.Serialize%28Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot%2CSystem.IO.Stream%2CSystem.Threading.CancellationToken%29) on a pool thread.
+
+```csharp
+public System.Threading.Tasks.Task SerializeAsync(Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot snapshot, System.IO.Stream stream, System.Threading.CancellationToken cancellationToken)
+```
+
+#### Parameters
+
+`snapshot` [Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot)
+
+The snapshot to serialize.
+
+
+`stream` System.IO.Stream
+
+The stream to write to.
+
+
+`cancellationToken` System.Threading.CancellationToken
+
+Cancellation token.
+
+
+#### Returns
+
+System.Threading.Tasks.Task
+
+
+#### Remarks
+
+A thread-offload convenience, not asynchronous I/O. The snapshot is already detached from
+the document, so the work needs no UI thread either way.
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [CanRead](#uid-3a041eca9f) | Whether this serializer supports reading. Read-only UIs can filter serializer lists on this instead of catching [NotSupportedException](xref:System.NotSupportedException) from [Avalonia.Controls.Documents.Serialization.IDocumentSerializer.Deserialize(System.IO.Stream,System.Threading.CancellationToken)](xref:Avalonia.Controls.Documents.Serialization.IDocumentSerializer.Deserialize%28System.IO.Stream%2CSystem.Threading.CancellationToken%29). |
+| [CanWrite](#uid-14e029bbd5) | Whether this serializer supports writing documents. |
+| [FileExtension](#uid-708265ad87) | Gets the file extension including the dot (e.g., ".rtf"). |
+| [FormatName](#uid-bd9dca841e) | Gets the format name this serializer handles (e.g., "Rtf", "Docx", "PlainText"). |
+| [MimeType](#uid-e6e7f14ca2) | Gets the MIME type for the format (e.g., "application/rtf"). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3a041eca9f"></span>
+
+### CanRead Property
+
+Whether this serializer supports reading. Read-only UIs can filter serializer lists on
+this instead of catching [NotSupportedException](xref:System.NotSupportedException) from
+[Avalonia.Controls.Documents.Serialization.IDocumentSerializer.Deserialize(System.IO.Stream,System.Threading.CancellationToken)](xref:Avalonia.Controls.Documents.Serialization.IDocumentSerializer.Deserialize%28System.IO.Stream%2CSystem.Threading.CancellationToken%29).
+
+```csharp
+public bool CanRead { get; set; }
+```
+
+#### Remarks
+
+Defaults to so a serializer written before this member existed
+still compiles. A serializer that cannot read says so.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-14e029bbd5"></span>
+
+### CanWrite Property
+
+Whether this serializer supports writing documents.
+
+```csharp
+public bool CanWrite { get; set; }
+```
+
+#### Remarks
+
+Defaults to so a serializer written before this member existed
+still compiles. A serializer that cannot write says so.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-708265ad87"></span>
+
+### FileExtension Property
+
+Gets the file extension including the dot (e.g., ".rtf").
+
+```csharp
+public string FileExtension { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-bd9dca841e"></span>
+
+### FormatName Property
+
+Gets the format name this serializer handles (e.g., "Rtf", "Docx", "PlainText").
+
+```csharp
+public string FormatName { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e6e7f14ca2"></span>
+
+### MimeType Property
+
+Gets the MIME type for the format (e.g., "application/rtf").
+
+```csharp
+public string MimeType { get; set; }
+```
+
+</section>
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [DefaultEncoding](#uid-00654d5762) | Default encoding for plain text files (UTF-8 without BOM). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-00654d5762"></span>
+
+### DefaultEncoding Field
+
+Default encoding for plain text files (UTF-8 without BOM).
+
+```csharp
+public System.Text.Encoding DefaultEncoding
+```
+
+</section>
+
+</ApiRefPage>
+

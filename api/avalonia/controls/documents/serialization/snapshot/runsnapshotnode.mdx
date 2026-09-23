@@ -1,0 +1,85 @@
+---
+title: 'RunSnapshotNode'
+hide_title: true
+slug: '/avalonia/controls/documents/serialization/snapshot/runsnapshotnode'
+uid: 'Avalonia.Controls.Documents.Serialization.Snapshot.RunSnapshotNode'
+commentId: 'T:Avalonia.Controls.Documents.Serialization.Snapshot.RunSnapshotNode'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Documents'
+assembly: 'Avalonia.Controls.Documents'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.Serialization.Snapshot'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">RunSnapshotNode Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.Serialization.Snapshot</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Snapshot node for text runs.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class RunSnapshotNode
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="snapshotnode">SnapshotNode</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="inlinesnapshotnode">InlineSnapshotNode</a> <span className="apiref-page__relation-separator">-&gt;</span> RunSnapshotNode
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [ChildrenOfKind](snapshotnode.mdx#uid-b98ce7edb2) | Enumerates child nodes matching a specific kind. Inherited from [SnapshotNode](snapshotnode.mdx). |
+| [EnumerateDescendants](snapshotnode.mdx#uid-614ca453c7) | Enumerates this node and all descendants in pre-order (depth-first). Inherited from [SnapshotNode](snapshotnode.mdx). |
+| [GetFormatMetadata](snapshotnode.mdx#uid-1ff906f363) | Inherited from [SnapshotNode](snapshotnode.mdx). |
+| [SetFormatMetadata](snapshotnode.mdx#uid-aa8fc8c6ff) | Inherited from [SnapshotNode](snapshotnode.mdx). |
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Children](snapshotnode.mdx#uid-b1710f532c) | Child nodes. Empty array for leaf nodes. Inherited from [SnapshotNode](snapshotnode.mdx). |
+| [CustomData](snapshotnode.mdx#uid-36dcca3067) | Extension-specific custom data for custom node kinds. Used by the builder path ([Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder)) to propagate custom data from serializer importers to snapshot nodes. Must be immutable or thread-safe for background serialization. Inherited from [SnapshotNode](snapshotnode.mdx). |
+| [EndOffset](snapshotnode.mdx#uid-9d03a730e3) | Gets the absolute end offset (exclusive). Inherited from [SnapshotNode](snapshotnode.mdx). |
+| [FormatMetadata](snapshotnode.mdx#uid-a481dfd525) | Format-specific metadata for round-trip fidelity. Serializers (RtfWriter, DocxWriter, etc.) can attach format-specific state here to preserve information that doesn't map cleanly to the semantic snapshot model. Not thread-safe; single-threaded access only. Inherited from [SnapshotNode](snapshotnode.mdx). |
+| [InlineFormatting](inlinesnapshotnode.mdx#uid-180f4abcea) | Inline-specific formatting (text decorations, baseline alignment). Inherited from [InlineSnapshotNode](inlinesnapshotnode.mdx). |
+| [IsBlock](snapshotnode.mdx#uid-e26b8c2e53) | Gets whether this is a block-level node. Inherited from [SnapshotNode](snapshotnode.mdx). |
+| [IsInline](snapshotnode.mdx#uid-719f57e3e5) | Gets whether this is an inline-level node. Inherited from [SnapshotNode](snapshotnode.mdx). |
+| [IsLeaf](snapshotnode.mdx#uid-f246822b7f) | Gets whether this is a leaf node (no children). Inherited from [SnapshotNode](snapshotnode.mdx). |
+| [IsTextRun](snapshotnode.mdx#uid-9cd758e947) | Gets whether this node represents a text run with actual content. Inherited from [SnapshotNode](snapshotnode.mdx). |
+| [Kind](snapshotnode.mdx#uid-db297bdaf4) | The kind of document element this node represents. Inherited from [SnapshotNode](snapshotnode.mdx). |
+| [Length](snapshotnode.mdx#uid-a57ff5b8bf) | Length of this node's content in characters. Inherited from [SnapshotNode](snapshotnode.mdx). |
+| [StartOffset](snapshotnode.mdx#uid-d01a240b2e) | Absolute offset in the document text where this node starts. Inherited from [SnapshotNode](snapshotnode.mdx). |
+| [TextElementFormatting](snapshotnode.mdx#uid-d3de6c54dc) | Base-level formatting from [Avalonia.Controls.Documents.RichTextElement](xref:Avalonia.Controls.Documents.RichTextElement). Carries font, foreground, background, and letter-spacing for every node type. Inherited from [SnapshotNode](snapshotnode.mdx). |
+
+</ApiRefPage>
+

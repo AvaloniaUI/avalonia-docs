@@ -1,0 +1,63 @@
+---
+title: 'Avalonia.Controls.Documents.Serialization.Authoring'
+hide_title: true
+slug: '/avalonia/controls/documents/serialization/authoring'
+uid: 'Avalonia.Controls.Documents.Serialization.Authoring'
+commentId: 'N:Avalonia.Controls.Documents.Serialization.Authoring'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Documents'
+assembly: 'Avalonia.Controls.Documents'
+apiKind: 'Namespace'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.Serialization.Authoring'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">Authoring Namespace</h1>
+
+<div className="apiref-page__lead">
+
+Namespace `Avalonia.Controls.Documents.Serialization.Authoring`
+
+</div>
+
+## Types
+
+- [BoldInlineDraft](boldinlinedraft.mdx) - Inline draft for bold formatting.
+- [CustomInlineDraft](custominlinedraft.mdx) - Inline draft for custom (non-built-in) node kinds.
+Accepts an arbitrary [Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind](xref:Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind) registered via
+[Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind.Register(string,Avalonia.Controls.Documents.TextModel.NodeKindFlags)](xref:Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind.Register%28System.String%2CAvalonia.Controls.Documents.TextModel.NodeKindFlags%29).
+- [FootnoteCitationInlineDraft](footnotecitationinlinedraft.mdx) - Inline draft for a further citation of a note that already has its anchor. The
+builder inserts a single object replacement character for it, as it does for the
+anchor: the number both show is the note's position among the document's notes,
+resolved at render time rather than stored.
+- [FootnoteReferenceInlineDraft](footnotereferenceinlinedraft.mdx) - Inline draft for a footnote anchor. The builder inserts a single object
+replacement character for it: the number the anchor shows is its note's
+position among the document's notes, resolved at render time rather than stored.
+- [HyperlinkInlineDraft](hyperlinkinlinedraft.mdx) - Inline draft for hyperlinks.
+- [ImageInlineDraft](imageinlinedraft.mdx) - Inline draft for embedded images. The builder inserts an object replacement
+character (U+FFFC) for the image, giving the resulting
+[Avalonia.Controls.Documents.Serialization.Snapshot.ImageSnapshotNode](xref:Avalonia.Controls.Documents.Serialization.Snapshot.ImageSnapshotNode) a length of one.
+- [InlineDraft](inlinedraft.mdx) - Base class for mutable inline draft elements consumed by
+[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder). Drafts are pre-offset authoring DTOs
+that the builder converts into immutable [Avalonia.Controls.Documents.Serialization.Snapshot.InlineSnapshotNode](xref:Avalonia.Controls.Documents.Serialization.Snapshot.InlineSnapshotNode) instances.
+- [InlineWrapper](inlinewrapper.mdx) - One level of an inline wrapper chain: the kind of the wrapping element and the
+formatting it carries. The value-type counterpart of a wrapper [Avalonia.Controls.Documents.Serialization.Authoring.InlineDraft](xref:Avalonia.Controls.Documents.Serialization.Authoring.InlineDraft),
+for [Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder.AddRun(ReadOnlyMemory&#123;char&#125;,Avalonia.Controls.Documents.TextModel.Formatting.InlineFormatting,Avalonia.Controls.Documents.TextModel.Formatting.TextElementFormatting,ReadOnlySpan&#123;Avalonia.Controls.Documents.Serialization.Authoring.InlineWrapper&#125;,object)](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder.AddRun%28System.ReadOnlyMemory%7BSystem.Char%7D%2CAvalonia.Controls.Documents.TextModel.Formatting.InlineFormatting%2CAvalonia.Controls.Documents.TextModel.Formatting.TextElementFormatting%2CSystem.ReadOnlySpan%7BAvalonia.Controls.Documents.Serialization.Authoring.InlineWrapper%7D%2CSystem.Object%29).
+- [ItalicInlineDraft](italicinlinedraft.mdx) - Inline draft for italic formatting.
+- [LineBreakInlineDraft](linebreakinlinedraft.mdx) - Inline draft for line breaks.
+- [PageNumberFieldInlineDraft](pagenumberfieldinlinedraft.mdx) - Inline draft for a page-number field. The builder inserts a single object
+replacement character for it: the number the field shows depends on the page it
+lands on, so it is resolved at render time rather than stored.
+- [RunInlineDraft](runinlinedraft.mdx) - Inline draft for text runs.
+- [SpanInlineDraft](spaninlinedraft.mdx) - Inline draft for spans.
+- [SubscriptInlineDraft](subscriptinlinedraft.mdx) - Inline draft for subscript formatting.
+- [SuperscriptInlineDraft](superscriptinlinedraft.mdx) - Inline draft for superscript formatting.
+- [UnderlineInlineDraft](underlineinlinedraft.mdx) - Inline draft for underline formatting.
+</ApiRefPage>
+

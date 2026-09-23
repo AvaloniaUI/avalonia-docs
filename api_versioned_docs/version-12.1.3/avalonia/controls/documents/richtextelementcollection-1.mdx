@@ -1,0 +1,454 @@
+---
+title: 'RichTextElementCollection<T>'
+hide_title: true
+slug: '/avalonia/controls/documents/richtextelementcollection-1'
+uid: 'Avalonia.Controls.Documents.RichTextElementCollection`1'
+commentId: 'T:Avalonia.Controls.Documents.RichTextElementCollection`1'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Documents'
+assembly: 'Avalonia.Controls.Documents'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">RichTextElementCollection&lt;T&gt; Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A collection of child TextElements.
+Works both before and after document attachment.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class RichTextElementCollection<T>
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> RichTextElementCollection&lt;T&gt;
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> ICollection&lt;&gt;, IEnumerable&lt;&gt;, IList&lt;&gt;, IReadOnlyCollection&lt;&gt;, IReadOnlyList&lt;&gt;, IEnumerable, o
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [RichTextElementCollection&lt;T&gt;](#uid-caa87506e6) | Creates a new collection for the specified owner. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-caa87506e6"></span>
+
+### RichTextElementCollection&lt;T&gt; Constructor
+
+Creates a new collection for the specified owner.
+
+```csharp
+public RichTextElementCollection<T>(Avalonia.AvaloniaObject owner)
+```
+
+#### Parameters
+
+`owner` [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject)
+
+
+#### Remarks
+
+Reach the collection through its owner rather than building one: an owner caches
+exactly one instance, and a second over the same owner splits pending content
+between them.
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Add](#uid-89f81da8f9) | Adds an element to the collection. |
+| [AddRange](#uid-4099a73050) | No summary available. |
+| [Clear](#uid-a5323ac9ee) | Clears all elements. |
+| [Contains](#uid-7359627bd7) | Returns whether the specified element is present in the collection. |
+| [CopyTo](#uid-0b8894faac) | Copies all elements to the specified array starting at `arrayIndex`. |
+| [FirstOrDefault](#uid-f874a6f42a) | The first element, or the type's default when the collection is empty. |
+| [FirstOrNull](#uid-9e7e262151) | Gets the first element, or `null` when the collection is empty. |
+| [GetEnumerator](#uid-3f16e1dfed) | Returns an enumerator that iterates over the elements in this collection. |
+| [IndexOf](#uid-c39598a447) | Returns the zero-based index of the specified element, or -1 if not found. |
+| [Insert](#uid-6952495c47) | Inserts an element at the specified index. |
+| [LastOrDefault](#uid-b20f4e8763) | The last element, or the type's default when the collection is empty. |
+| [LastOrNull](#uid-4286fa6244) | Gets the last element, or `null` when the collection is empty. |
+| [Remove](#uid-4f93d6bc5a) | Removes an element from the collection. |
+| [RemoveAt](#uid-71a732f194) | Removes the element at the specified index. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-89f81da8f9"></span>
+
+### Add Method
+
+Adds an element to the collection.
+
+```csharp
+public void Add(T item)
+```
+
+#### Parameters
+
+`item` T
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4099a73050"></span>
+
+### AddRange Method
+
+```csharp
+public void AddRange(System.Collections.Generic.IEnumerable<T> items)
+```
+
+#### Parameters
+
+`items` System.Collections.Generic.IEnumerable&lt;T&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a5323ac9ee"></span>
+
+### Clear Method
+
+Clears all elements.
+
+```csharp
+public void Clear()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7359627bd7"></span>
+
+### Contains Method
+
+Returns whether the specified element is present in the collection.
+
+```csharp
+public bool Contains(T item)
+```
+
+#### Parameters
+
+`item` T
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0b8894faac"></span>
+
+### CopyTo Method
+
+Copies all elements to the specified array starting at `arrayIndex`.
+
+```csharp
+public void CopyTo(T[] array, int arrayIndex)
+```
+
+#### Parameters
+
+`array` T[]
+
+
+`arrayIndex` int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f874a6f42a"></span>
+
+### FirstOrDefault Method
+
+The first element, or the type's default when the collection is empty.
+
+```csharp
+public T FirstOrDefault()
+```
+
+#### Returns
+
+T
+
+The first element, or .
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9e7e262151"></span>
+
+### FirstOrNull Method
+
+Gets the first element, or `null` when the collection is empty.
+
+```csharp
+public T FirstOrNull()
+```
+
+#### Returns
+
+T
+
+
+#### Remarks
+
+Named apart from the LINQ extension the collection also carries, so a reader
+can tell at the call site which one runs.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3f16e1dfed"></span>
+
+### GetEnumerator Method
+
+Returns an enumerator that iterates over the elements in this collection.
+
+```csharp
+public System.Collections.Generic.IEnumerator<T> GetEnumerator()
+```
+
+#### Returns
+
+System.Collections.Generic.IEnumerator&lt;T&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c39598a447"></span>
+
+### IndexOf Method
+
+Returns the zero-based index of the specified element, or -1 if not found.
+
+```csharp
+public int IndexOf(T item)
+```
+
+#### Parameters
+
+`item` T
+
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6952495c47"></span>
+
+### Insert Method
+
+Inserts an element at the specified index.
+
+```csharp
+public void Insert(int index, T item)
+```
+
+#### Parameters
+
+`index` int
+
+
+`item` T
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b20f4e8763"></span>
+
+### LastOrDefault Method
+
+The last element, or the type's default when the collection is empty.
+
+```csharp
+public T LastOrDefault()
+```
+
+#### Returns
+
+T
+
+The last element, or .
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4286fa6244"></span>
+
+### LastOrNull Method
+
+Gets the last element, or `null` when the collection is empty.
+
+```csharp
+public T LastOrNull()
+```
+
+#### Returns
+
+T
+
+
+#### Remarks
+
+Named apart from the LINQ extension the collection also carries; see
+[Avalonia.Controls.Documents.RichTextElementCollection&lt;T&gt;.FirstOrNull](xref:Avalonia.Controls.Documents.RichTextElementCollection%601.FirstOrNull).
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4f93d6bc5a"></span>
+
+### Remove Method
+
+Removes an element from the collection.
+
+```csharp
+public bool Remove(T item)
+```
+
+#### Parameters
+
+`item` T
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-71a732f194"></span>
+
+### RemoveAt Method
+
+Removes the element at the specified index.
+
+```csharp
+public void RemoveAt(int index)
+```
+
+#### Parameters
+
+`index` int
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Count](#uid-5a020972bd) | Gets the number of elements in the collection. |
+| [IsReadOnly](#uid-b4b74cd466) | Gets a value indicating whether this collection is read-only. |
+| [Item](#uid-122d8e8f32) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5a020972bd"></span>
+
+### Count Property
+
+Gets the number of elements in the collection.
+
+```csharp
+public int Count { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b4b74cd466"></span>
+
+### IsReadOnly Property
+
+Gets a value indicating whether this collection is read-only.
+
+```csharp
+public bool IsReadOnly { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-122d8e8f32"></span>
+
+### Item Property
+
+```csharp
+public T Item { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+
