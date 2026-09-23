@@ -22,11 +22,14 @@ Use `RichTextEditor` to create an area where users can edit text content and per
 
 ## Getting started
 
-1. Install the `Avalonia.Controls.RichTextEditor` NuGet package by running `dotnet add package`. Optionally, install serializers for specific file formats you need.
+1. Install the `Avalonia.Controls.RichTextEditor` and `Avalonia.Controls.Documents` NuGet packages by running `dotnet add package`. Optionally, install serializers for specific file formats you need.
 
 ```bash
-# Core editor control and document model
+# Editor control
 dotnet add package Avalonia.Controls.RichTextEditor
+
+# Core document model, includes plain text serializer
+dotnet add package Avalonia.Controls.Documents
 
 # Serializers (add only what you need)
 dotnet add package Avalonia.Controls.Documents.Serialization.Rtf     # RTF support
