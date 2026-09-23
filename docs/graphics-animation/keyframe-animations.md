@@ -198,7 +198,7 @@ You can also create a custom easing function class and apply it like so:
 </Animation>
 ```
 
-For a full list of easing functions, see the [animation settings reference](/docs/graphics-animation/animation-settings#easing-functions).
+For a full list of easing functions, see the [Easing functions page](/docs/graphics-animation/easing-functions).
 
 ## Running animations from code-behind
 
