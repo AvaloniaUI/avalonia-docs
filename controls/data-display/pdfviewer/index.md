@@ -30,7 +30,7 @@ Use `PdfViewer` to show PDF documents inside your app. You can choose to enable 
 
 ## Dependencies
 
-The package renders with [PDFium](https://pdfium.googlesource.com/pdfium/), which is bundled as a native library through the `bblanchon.PDFium.*` NuGet packages. Each target framework depends only on the packages for its own platforms.
+`PdfViewer` renders with [PDFium](https://pdfium.googlesource.com/pdfium/), which is bundled as a native library through the `bblanchon.PDFium.*` NuGet packages. Each target framework depends only on the packages for its own platforms.
 
 | Target | Packages |
 |---|---|
