@@ -1,0 +1,375 @@
+---
+title: 'IDocumentSerializer'
+hide_title: true
+slug: '/avalonia/controls/documents/serialization/idocumentserializer'
+uid: 'Avalonia.Controls.Documents.Serialization.IDocumentSerializer'
+commentId: 'T:Avalonia.Controls.Documents.Serialization.IDocumentSerializer'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Documents'
+assembly: 'Avalonia.Controls.Documents'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.Serialization'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IDocumentSerializer Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.Serialization</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Interface for document format serializers.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface IDocumentSerializer
+```
+
+</div>
+
+## Remarks
+
+Implementations should be thread-safe for concurrent serialization operations.
+Serialization uses [Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot) so it can run away from the UI thread.
+
+The contract is synchronous. Every format here is processor-bound - tokenizing, tree
+building, text layout - and assembles its output in memory rather than streaming it, so
+none of them performs asynchronous I/O. An asynchronous pair would only occupy a pool
+thread for the duration of synchronous work while looking like it released one. A caller
+that wants the cost off its own thread wraps the call:
+
+```csharp
+// Capture on the UI thread, write off it
+var snapshot = document.CreateSnapshot();
+await Task.Run(() => serializer.Serialize(snapshot, stream));
+```
+
+A format that supports only one direction throws [NotSupportedException](xref:System.NotSupportedException) from
+the other one and reports it through [Avalonia.Controls.Documents.Serialization.IDocumentSerializer.CanRead](xref:Avalonia.Controls.Documents.Serialization.IDocumentSerializer.CanRead) / [Avalonia.Controls.Documents.Serialization.IDocumentSerializer.CanWrite](xref:Avalonia.Controls.Documents.Serialization.IDocumentSerializer.CanWrite).
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [CanDeserialize](#uid-bd6b1e1cab) | Checks if a stream appears to contain this format. |
+| [Deserialize](#uid-80e7d99c21) | Deserializes a document from a stream on the calling thread. |
+| [DeserializeAsync](#uid-4cd29c27c6) | Deserializes a document from a stream off the calling thread. |
+| [Serialize](#uid-c08f506ce4) | Serializes a document snapshot to a stream on the calling thread. |
+| [SerializeAsync](#uid-dce45dee29) | Serializes a document snapshot to a stream off the calling thread. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-bd6b1e1cab"></span>
+
+### CanDeserialize Method
+
+Checks if a stream appears to contain this format.
+
+```csharp
+public bool CanDeserialize(System.IO.Stream stream)
+```
+
+#### Parameters
+
+`stream` System.IO.Stream
+
+The stream to check. Must be readable and seekable.
+
+
+#### Returns
+
+bool
+
+True if the stream likely contains this format; otherwise, false.
+
+
+#### Remarks
+
+This method does not consume the stream; it restores the original position after checking.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-80e7d99c21"></span>
+
+### Deserialize Method
+
+Deserializes a document from a stream on the calling thread.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot Deserialize(System.IO.Stream stream, System.Threading.CancellationToken cancellationToken)
+```
+
+#### Parameters
+
+`stream` System.IO.Stream
+
+The stream to read from. Must be readable.
+
+
+`cancellationToken` System.Threading.CancellationToken
+
+Cancellation token.
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot)
+
+The deserialized [Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot).
+
+
+#### Remarks
+
+Defaults to blocking on [Avalonia.Controls.Documents.Serialization.IDocumentSerializer.DeserializeAsync(System.IO.Stream,System.Threading.CancellationToken)](xref:Avalonia.Controls.Documents.Serialization.IDocumentSerializer.DeserializeAsync%28System.IO.Stream%2CSystem.Threading.CancellationToken%29), so a serializer written against
+the released interface keeps working. Implement this member instead: no format here
+performs asynchronous I/O, so the asynchronous pair only moves processor-bound work onto
+a pool thread.
+
+#### Exceptions
+
+- [\`stream\` is null.](xref:System.ArgumentNullException)
+- [\`stream\` is not readable.](xref:System.ArgumentException)
+- [This serializer cannot read; see \[Avalonia.Controls.Documents.Serialization.IDocumentSerializer.CanRead\](xref:Avalonia.Controls.Documents.Serialization.IDocumentSerializer.CanRead).](xref:System.NotSupportedException)
+- [The stream content is invalid for this format.](xref:Avalonia.Controls.Documents.Serialization.SerializationException)
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4cd29c27c6"></span>
+
+### DeserializeAsync Method
+
+Deserializes a document from a stream off the calling thread.
+
+```csharp
+public System.Threading.Tasks.Task<Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot> DeserializeAsync(System.IO.Stream stream, System.Threading.CancellationToken cancellationToken)
+```
+
+#### Parameters
+
+`stream` System.IO.Stream
+
+The stream to read from. Must be readable.
+
+
+`cancellationToken` System.Threading.CancellationToken
+
+Cancellation token.
+
+
+#### Returns
+
+System.Threading.Tasks.Task&lt;[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot)&gt;
+
+The deserialized [Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot).
+
+
+#### Remarks
+
+A thread-offload convenience rather than asynchronous I/O: no format here reads
+asynchronously, so this wraps the synchronous work. Call [Avalonia.Controls.Documents.Serialization.IDocumentSerializer.Deserialize(System.IO.Stream,System.Threading.CancellationToken)](xref:Avalonia.Controls.Documents.Serialization.IDocumentSerializer.Deserialize%28System.IO.Stream%2CSystem.Threading.CancellationToken%29)
+directly when you are already off the UI thread.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c08f506ce4"></span>
+
+### Serialize Method
+
+Serializes a document snapshot to a stream on the calling thread.
+
+```csharp
+public void Serialize(Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot snapshot, System.IO.Stream stream, System.Threading.CancellationToken cancellationToken)
+```
+
+#### Parameters
+
+`snapshot` [Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot)
+
+The document snapshot to serialize.
+
+
+`stream` System.IO.Stream
+
+The stream to write to. Must be writable.
+
+
+`cancellationToken` System.Threading.CancellationToken
+
+Cancellation token.
+
+
+#### Remarks
+
+Defaults to blocking on [Avalonia.Controls.Documents.Serialization.IDocumentSerializer.SerializeAsync(Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot,System.IO.Stream,System.Threading.CancellationToken)](xref:Avalonia.Controls.Documents.Serialization.IDocumentSerializer.SerializeAsync%28Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot%2CSystem.IO.Stream%2CSystem.Threading.CancellationToken%29), so a serializer written against the
+released interface keeps working. Implement this member instead.
+
+#### Exceptions
+
+- [\`snapshot\` or \`stream\` is null.](xref:System.ArgumentNullException)
+- [\`stream\` is not writable.](xref:System.ArgumentException)
+- [This serializer cannot write; see \[Avalonia.Controls.Documents.Serialization.IDocumentSerializer.CanWrite\](xref:Avalonia.Controls.Documents.Serialization.IDocumentSerializer.CanWrite).](xref:System.NotSupportedException)
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-dce45dee29"></span>
+
+### SerializeAsync Method
+
+Serializes a document snapshot to a stream off the calling thread.
+
+```csharp
+public System.Threading.Tasks.Task SerializeAsync(Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot snapshot, System.IO.Stream stream, System.Threading.CancellationToken cancellationToken)
+```
+
+#### Parameters
+
+`snapshot` [Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot)
+
+The document snapshot to serialize.
+
+
+`stream` System.IO.Stream
+
+The stream to write to. Must be writable.
+
+
+`cancellationToken` System.Threading.CancellationToken
+
+Cancellation token.
+
+
+#### Returns
+
+System.Threading.Tasks.Task
+
+
+#### Remarks
+
+A thread-offload convenience rather than asynchronous I/O. Call [Avalonia.Controls.Documents.Serialization.IDocumentSerializer.Serialize(Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot,System.IO.Stream,System.Threading.CancellationToken)](xref:Avalonia.Controls.Documents.Serialization.IDocumentSerializer.Serialize%28Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot%2CSystem.IO.Stream%2CSystem.Threading.CancellationToken%29)
+directly when you are already off the UI thread.
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [CanRead](#uid-0b43129e0f) | Whether this serializer supports reading. Read-only UIs can filter serializer lists on this instead of catching [NotSupportedException](xref:System.NotSupportedException) from [Avalonia.Controls.Documents.Serialization.IDocumentSerializer.Deserialize(System.IO.Stream,System.Threading.CancellationToken)](xref:Avalonia.Controls.Documents.Serialization.IDocumentSerializer.Deserialize%28System.IO.Stream%2CSystem.Threading.CancellationToken%29). |
+| [CanWrite](#uid-af657b372b) | Whether this serializer supports writing documents. |
+| [FileExtension](#uid-0350a75cda) | Gets the file extension including the dot (e.g., ".rtf"). |
+| [FormatName](#uid-49df3101d2) | Gets the format name this serializer handles (e.g., "Rtf", "Docx", "PlainText"). |
+| [MimeType](#uid-410e3f5c67) | Gets the MIME type for the format (e.g., "application/rtf"). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0b43129e0f"></span>
+
+### CanRead Property
+
+Whether this serializer supports reading. Read-only UIs can filter serializer lists on
+this instead of catching [NotSupportedException](xref:System.NotSupportedException) from
+[Avalonia.Controls.Documents.Serialization.IDocumentSerializer.Deserialize(System.IO.Stream,System.Threading.CancellationToken)](xref:Avalonia.Controls.Documents.Serialization.IDocumentSerializer.Deserialize%28System.IO.Stream%2CSystem.Threading.CancellationToken%29).
+
+```csharp
+public bool CanRead { get; set; }
+```
+
+#### Remarks
+
+Defaults to so a serializer written before this member existed
+still compiles. A serializer that cannot read says so.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-af657b372b"></span>
+
+### CanWrite Property
+
+Whether this serializer supports writing documents.
+
+```csharp
+public bool CanWrite { get; set; }
+```
+
+#### Remarks
+
+Defaults to so a serializer written before this member existed
+still compiles. A serializer that cannot write says so.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0350a75cda"></span>
+
+### FileExtension Property
+
+Gets the file extension including the dot (e.g., ".rtf").
+
+```csharp
+public string FileExtension { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-49df3101d2"></span>
+
+### FormatName Property
+
+Gets the format name this serializer handles (e.g., "Rtf", "Docx", "PlainText").
+
+```csharp
+public string FormatName { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-410e3f5c67"></span>
+
+### MimeType Property
+
+Gets the MIME type for the format (e.g., "application/rtf").
+
+```csharp
+public string MimeType { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

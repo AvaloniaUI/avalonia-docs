@@ -1,0 +1,2233 @@
+---
+title: 'DocumentSnapshotBuilder'
+hide_title: true
+slug: '/avalonia/controls/documents/serialization/snapshot/documentsnapshotbuilder'
+uid: 'Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder'
+commentId: 'T:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Documents'
+assembly: 'Avalonia.Controls.Documents'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.Serialization.Snapshot'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">DocumentSnapshotBuilder Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.Serialization.Snapshot</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Builder for creating [DocumentSnapshot](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot) instances without [FlowDocument](xref:Avalonia.Controls.Documents.FlowDocument) dependencies.
+Provides a fluent API for constructing snapshot content.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class DocumentSnapshotBuilder
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> DocumentSnapshotBuilder
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [AddBold](#uid-324d03666b) | Adds bold text to the current paragraph. |
+| [AddFootnote](#uid-29886bc9c4) | Adds a footnote - a nested document snapshot, built with its own builder - paired with the [Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder.AddFootnoteReference(int)](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder.AddFootnoteReference%28System.Int32%29) anchor of the same `noteId`. `label` is the note's name in a format that addresses notes by name (markdown), or null. Notes are kept in the order added, which readers make the anchor order. |
+| [AddFootnoteCitation](#uid-f3971d6d1b) | Adds a further citation of the note `noteId` already anchored elsewhere: one object replacement character showing that note's number, owning no note of its own. Legal inside a note body, where an anchor is not. |
+| [AddFootnoteReference](#uid-27354e6d4d) | Adds a footnote anchor to the current paragraph: one object replacement character, showing the position of its note among the notes when rendered. `noteId` pairs it with the [Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder.AddFootnote(int,Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot,string)](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder.AddFootnote%28System.Int32%2CAvalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot%2CSystem.String%29) body of the same id. |
+| [AddHyperlink](#uid-30331edb81) | Adds a hyperlink to the current paragraph. |
+| [AddImage](#uid-a2827cc1f0) | No summary available. |
+| [AddImageReference](#uid-d32610b919) | Adds an inline image that references an external source (e.g. a URL) instead of embedding pixel bytes. The pixels are resolved at render time by a loader; the document stores only the reference. |
+| [AddInline](#uid-1e70216cc9) | Adds an inline element to the current paragraph. |
+| [AddItalic](#uid-bdd6ff3b9f) | Adds italic text to the current paragraph. |
+| [AddListItem (3 overloads)](#uid-5df907eea8) | Adds a new empty list item to the current list. |
+| [AddPageBand](#uid-91f574c98e) | No summary available. |
+| [AddPageBreak](#uid-0f618f2100) | Applies an explicit page break at the current position. The break is a split instruction, not content: a paragraph with content ends here and continues in a clone of itself, and the next committed block receives [Avalonia.Controls.Documents.TextModel.Formatting.BlockFormatting.PageBreakBefore](xref:Avalonia.Controls.Documents.TextModel.Formatting.BlockFormatting.PageBreakBefore). A block that would commit empty while the break is pending is the break's own remainder (or a break-only carrier paragraph) and is dropped - the break carries forward; at a container boundary or the document end the pending break materializes as an empty flagged landing paragraph. |
+| [AddPageNumberField](#uid-5b3195e88a) | Adds a page-number field to the current paragraph. The field's cached result becomes its text content, so plain rendering and export show it until paginated rendering resolves the field per page. |
+| [AddParagraph (5 overloads)](#uid-6b0203da31) | Adds a new empty paragraph. |
+| [AddParagraphRange](#uid-bbe99d3a64) | Registers a paragraph that references a range within previously set bulk text. The text at [`offset`, `offset` + `length`) must already exist in the rope via a prior [Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder.SetBulkText(ReadOnlyMemory&#123;char&#125;)](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder.SetBulkText%28System.ReadOnlyMemory%7BSystem.Char%7D%29) call. No rope insert is performed; only the snapshot node tree is updated. |
+| [AddRun](#uid-6b489b6651) | No summary available. |
+| [AddText (2 overloads)](#uid-58cfe76beb) | No summary available. |
+| [AddUnderline](#uid-c2775c4852) | Adds underlined text to the current paragraph. |
+| [BeginDeferredTableCells](#uid-bfd93dc27e) | Switches the current table to deferred finalization: its rows and cells stay editable until [Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder.EndTable](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder.EndTable), so a serializer can set each cell's span (and drop merge continuations) once the whole table and its column grid are known. Applies only to the current table; other tables keep the eager path. |
+| [Build](#uid-932d90d3b1) | Builds the [DocumentSnapshot](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot). |
+| [Create (2 overloads)](#uid-ccd7b83233) | Creates a new [DocumentSnapshotBuilder](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder). |
+| [DropDeferredTableCell](#uid-7c04072918) | Marks a deferred cell (a vertical-merge continuation folded into the cell above) so it is not emitted when the table finalizes. |
+| [EndContainer](#uid-d1a5b716a5) | Ends the most recent [Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder.StartContainer(Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind,Avalonia.Controls.Documents.TextModel.Formatting.BlockFormatting,Avalonia.Controls.Documents.TextModel.Formatting.TextElementFormatting)](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder.StartContainer%28Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind%2CAvalonia.Controls.Documents.TextModel.Formatting.BlockFormatting%2CAvalonia.Controls.Documents.TextModel.Formatting.TextElementFormatting%29) and restores the prior container. |
+| [EndList](#uid-549b89ed1e) | Ends the current list and restores the parent list if nested. |
+| [EndSection](#uid-9ced19ffd0) | Ends the current section and adds it as a block to the parent container. |
+| [EndTable](#uid-149074c46b) | Ends the current table. |
+| [EndTableCell](#uid-8c8906255e) | Ends the current table cell. |
+| [EndTableRow](#uid-d875e64365) | Ends the current table row. |
+| [GetDeferredTableRowCellCount](#uid-dedaa7a911) | Number of cells emitted so far in a deferred row, or -1 if that row does not exist. A serializer compares this against its own cell count to confirm it can address the cells before applying spans. |
+| [SetBulkText](#uid-beefee8698) | No summary available. |
+| [SetContainerCustomData](#uid-390df2acff) | Sets [Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode.CustomData](xref:Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode.CustomData) on the active block container. Works with sections, generic containers, list items, and table cells. |
+| [SetDeferredTableCellSpan](#uid-3b5eee2bec) | Sets a deferred cell's column and row span by its row index and its cell index within that row (both in emit order). No-op unless deferral is active. |
+| [SetDocumentFormatMetadata](#uid-617fd86c1b) | Sets format-specific metadata for the document root node. Serializers use this to attach round-trip metadata (e.g., DOCX header/footer margins). |
+| [SetDocumentFormatting](#uid-d33c3d9928) | Sets document-level formatting (page margins, etc.). Call before or after adding any content; takes effect at [Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder.Build](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder.Build) time. |
+| [SetDocumentTextElementFormatting](#uid-7d2ba1a115) | Sets the document's default text formatting - the font, size, foreground and background every block and inline inherits unless it declares its own. It travels as the root node's [Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode.TextElementFormatting](xref:Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode.TextElementFormatting). |
+| [SetFootnoteNumberFormat](#uid-029cf4f353) | Sets the footnote numbering format alone, keeping the other document-level formatting; a reader learns the numbering and the page geometry from different places. The anchors added with [Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder.AddFootnoteReference(int)](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder.AddFootnoteReference%28System.Int32%29) render their numbers in that format. |
+| [SetListBlockFormatting](#uid-8d04bc7563) | Sets block formatting (e.g. explicit Padding) for the current list container. Only explicitly set properties are stored; auto-computed values (such as the marker column `ListNode` sizes from the item font) are intentionally omitted and recomputed at render time. |
+| [SetListFormatMetadata](#uid-52a9912805) | Sets format-specific metadata for the current list. Serializers use this to attach round-trip metadata. |
+| [SetListItemFormatMetadata](#uid-e9305164b2) | Sets format-specific metadata for the current list item. Serializers use this to attach round-trip metadata. |
+| [SetListItemFormatting](#uid-9f0e6854f9) | Sets formatting for the current list item. |
+| [SetListItemTextElementFormatting](#uid-668dd30319) | Sets base-level element formatting for the current list item. |
+| [SetListMarkerAlignment](#uid-ad90dc72e2) | Sets how the current list's marker is aligned within its column (Word's `w:lvlJc`): left starts every marker at the same x, right ends them at the same x with a consistent gap to the content. Shared by every item in the list. |
+| [SetListMarkerOffset](#uid-e61ed41e12) | Sets the current list's marker offset (its hanging indent — how far the marker sits back from the item content). Shared by every item in the list. |
+| [SetParagraphCustomData](#uid-693084e4d6) | Sets [Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode.CustomData](xref:Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode.CustomData) on the current paragraph. |
+| [SetParagraphFormatMetadata](#uid-40be1825fd) | Sets format-specific metadata for the current paragraph. Serializers use this to attach round-trip metadata (e.g., RTF twips, DOCX style IDs). |
+| [SetParagraphFormatting](#uid-09a39b99c3) | Sets formatting for the current paragraph, or queues it for the next paragraph. |
+| [SetParagraphTextElementFormatting](#uid-cf543077c7) | Sets base-level element formatting for the current paragraph. If no paragraph is active, queues it for the next paragraph. |
+| [SetPendingParagraphFormatting](#uid-26fbd4ca45) | Queues paragraph formatting for the next paragraph without affecting the current one. |
+| [SetPendingParagraphTextElementFormatting](#uid-8e1d2561d5) | Queues base-level element formatting for the next paragraph without affecting the current one. |
+| [SetRootCapacity](#uid-ed3d52b7e6) | Pre-allocates capacity for the root container based on estimated paragraph count. Reduces array resizes during document construction. Call after SetBulkText when paragraph count can be estimated. |
+| [SetRowCustomData](#uid-8c8ca3bb25) | Sets extension-specific custom data for the current table row (e.g. the markdown header-row flag). |
+| [SetRowFormatMetadata](#uid-82ab3736a9) | Sets format-specific metadata for the current table row. Serializers use this to attach round-trip metadata (e.g., row borders). |
+| [SetSectionFormatMetadata](#uid-f8abf254a4) | Sets format-specific round-trip metadata on the section currently open via [Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder.StartSection(Avalonia.Controls.Documents.TextModel.Formatting.BlockFormatting,Avalonia.Controls.Documents.TextModel.Formatting.TextElementFormatting,Avalonia.Controls.Documents.TextModel.Formatting.SectionPageSetup)](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder.StartSection%28Avalonia.Controls.Documents.TextModel.Formatting.BlockFormatting%2CAvalonia.Controls.Documents.TextModel.Formatting.TextElementFormatting%2CAvalonia.Controls.Documents.TextModel.Formatting.SectionPageSetup%29). No effect when the active container is not a section. |
+| [SetSectionPageBandReferences](#uid-a548ee6ea0) | Sets the current section's page-band references (indices from [Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder.AddPageBand(Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot,Avalonia.Controls.Documents.PageBandRole,Avalonia.Controls.Documents.PageBandRule,Guid@,string)](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder.AddPageBand%28Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot%2CAvalonia.Controls.Documents.PageBandRole%2CAvalonia.Controls.Documents.PageBandRule%2CSystem.Guid%40%2CSystem.String%29)). |
+| [SetSectionPageSetup](#uid-0d381c5a56) | Sets the page setup of the section currently open via [Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder.StartSection(Avalonia.Controls.Documents.TextModel.Formatting.BlockFormatting,Avalonia.Controls.Documents.TextModel.Formatting.TextElementFormatting,Avalonia.Controls.Documents.TextModel.Formatting.SectionPageSetup)](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder.StartSection%28Avalonia.Controls.Documents.TextModel.Formatting.BlockFormatting%2CAvalonia.Controls.Documents.TextModel.Formatting.TextElementFormatting%2CAvalonia.Controls.Documents.TextModel.Formatting.SectionPageSetup%29), replacing any value passed there. For readers whose format declares the setup after the section has started (RTF section control words follow `\sect`; a DOCX section's `sectPr` sits on its LAST paragraph). No effect when the active container is not a section. |
+| [SetTableBlockFormatting](#uid-239ac98cbe) | Sets block formatting for the current table. |
+| [SetTableCellBackground](#uid-5da468b1ea) | Sets the background color of the current table cell. |
+| [SetTableCellBorders](#uid-a185a4ecb5) | No summary available. |
+| [SetTableCellSpan](#uid-32033bc0b6) | Sets how many grid columns and rows the current table cell spans (Word's `w:gridSpan` and `w:vMerge`). Each value is clamped to at least 1; a span of 1 carries nothing, so an un-merged cell stays at the default. |
+| [SetTableCellTextElementFormatting](#uid-010fe20355) | Sets base-level element formatting for the current table cell. |
+| [SetTableCellVerticalAlignment](#uid-52d4fbfee9) | Sets the vertical alignment of the current table cell's content (Word's `w:vAlign`). Top is the default. |
+| [SetTableColumns](#uid-dfb17a0471) | No summary available. |
+| [SetTableFormatMetadata](#uid-53530ff6b7) | Sets format-specific metadata for the current table. Serializers use this to attach round-trip metadata (e.g., original column widths). |
+| [SetTableInteriorBorders](#uid-99e9da545f) | No summary available. |
+| [SetTableRowHeight](#uid-a3b6449855) | Sets the current table row's minimum height in device-independent pixels (Word's `w:trHeight`). |
+| [SetTableRowTextElementFormatting](#uid-66e6768a42) | Sets base-level element formatting for the current table row. |
+| [StartContainer](#uid-9248d08dbd) | Starts a generic block container with an arbitrary [Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind](xref:Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind). Containers nest: calling [Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder.StartContainer(Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind,Avalonia.Controls.Documents.TextModel.Formatting.BlockFormatting,Avalonia.Controls.Documents.TextModel.Formatting.TextElementFormatting)](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder.StartContainer%28Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind%2CAvalonia.Controls.Documents.TextModel.Formatting.BlockFormatting%2CAvalonia.Controls.Documents.TextModel.Formatting.TextElementFormatting%29) while another is active pushes the outer container onto a stack. [Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder.EndContainer](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder.EndContainer) pops it. A container opened while a list item or a table cell is open nests inside it - the blocks added to the container are the container's, and the finished container is added back to the item or cell that enclosed it. |
+| [StartList](#uid-9ce411976f) | Starts a new list with the specified marker style. When called inside an active list item, automatically nests the new list inside the current item instead of finalizing it. |
+| [StartNestedList](#uid-637a5fbdac) | Starts a nested list inside the current list item. |
+| [StartSection (2 overloads)](#uid-77ca3ab3da) | Starts a new section container. Blocks added after this call are placed inside the section until [Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder.EndSection](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder.EndSection) is called. |
+| [StartTable](#uid-e1fe530904) | Starts a new table. |
+| [StartTableCell](#uid-a28f1085c9) | Starts a new table cell. |
+| [StartTableRow](#uid-297fdbbb7e) | Starts a new table row. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-324d03666b"></span>
+
+### AddBold Method
+
+Adds bold text to the current paragraph.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder AddBold(string text)
+```
+
+#### Parameters
+
+`text` string
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-29886bc9c4"></span>
+
+### AddFootnote Method
+
+Adds a footnote - a nested document snapshot, built with its own builder - paired
+with the [Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder.AddFootnoteReference(int)](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder.AddFootnoteReference%28System.Int32%29) anchor of the same `noteId`.
+`label` is the note's name in a format that addresses notes by
+name (markdown), or null. Notes are kept in the order added, which readers make
+the anchor order.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder AddFootnote(int noteId, Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot content, string label)
+```
+
+#### Parameters
+
+`noteId` int
+
+
+`content` [Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot)
+
+
+`label` string
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f3971d6d1b"></span>
+
+### AddFootnoteCitation Method
+
+Adds a further citation of the note `noteId` already anchored
+elsewhere: one object replacement character showing that note's number, owning
+no note of its own. Legal inside a note body, where an anchor is not.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder AddFootnoteCitation(int noteId)
+```
+
+#### Parameters
+
+`noteId` int
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-27354e6d4d"></span>
+
+### AddFootnoteReference Method
+
+Adds a footnote anchor to the current paragraph: one object replacement
+character, showing the position of its note among the notes when rendered.
+`noteId` pairs it with the [Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder.AddFootnote(int,Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot,string)](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder.AddFootnote%28System.Int32%2CAvalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot%2CSystem.String%29) body of
+the same id.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder AddFootnoteReference(int noteId)
+```
+
+#### Parameters
+
+`noteId` int
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-30331edb81"></span>
+
+### AddHyperlink Method
+
+Adds a hyperlink to the current paragraph.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder AddHyperlink(string text, string navigateUri)
+```
+
+#### Parameters
+
+`text` string
+
+
+`navigateUri` string
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a2827cc1f0"></span>
+
+### AddImage Method
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder AddImage(ReadOnlyMemory<byte> imageData, string mimeType, double width, double height, string altText)
+```
+
+#### Parameters
+
+`imageData` ReadOnlyMemory&lt;byte&gt;
+
+
+`mimeType` string
+
+
+`width` double
+
+
+`height` double
+
+
+`altText` string
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d32610b919"></span>
+
+### AddImageReference Method
+
+Adds an inline image that references an external source (e.g. a URL)
+instead of embedding pixel bytes. The pixels are resolved at render
+time by a loader; the document stores only the reference.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder AddImageReference(string sourceUri, string mimeType, double width, double height, string altText)
+```
+
+#### Parameters
+
+`sourceUri` string
+
+The image reference URI.
+
+
+`mimeType` string
+
+The MIME type, when known; defaults to `application/octet-stream`.
+
+
+`width` double
+
+Display width in device-independent pixels; [double.NaN](xref:System.Double.NaN) uses the intrinsic pixel size.
+
+
+`height` double
+
+Display height in device-independent pixels; [double.NaN](xref:System.Double.NaN) uses the intrinsic pixel size.
+
+
+`altText` string
+
+Optional alternative text describing the image.
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1e70216cc9"></span>
+
+### AddInline Method
+
+Adds an inline element to the current paragraph.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder AddInline(Avalonia.Controls.Documents.Serialization.Authoring.InlineDraft inline)
+```
+
+#### Parameters
+
+`inline` [Avalonia.Controls.Documents.Serialization.Authoring.InlineDraft](xref:Avalonia.Controls.Documents.Serialization.Authoring.InlineDraft)
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-bdd6ff3b9f"></span>
+
+### AddItalic Method
+
+Adds italic text to the current paragraph.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder AddItalic(string text)
+```
+
+#### Parameters
+
+`text` string
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder)
+
+
+</section>
+
+<span id="uid-5df907eea8"></span>
+
+### AddListItem overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-72961b8acd"></span>
+
+#### AddListItem Method
+
+Adds a new empty list item to the current list.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder AddListItem()
+```
+
+##### Returns
+
+[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-cf5f3e3255"></span>
+
+#### AddListItem Method
+
+Adds a new list item with a custom [Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind](xref:Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind) to the current list.
+The kind must have [Avalonia.Controls.Documents.TextModel.NodeKindFlags.Block](xref:Avalonia.Controls.Documents.TextModel.NodeKindFlags.Block) and [Avalonia.Controls.Documents.TextModel.NodeKindFlags.BlockContainer](xref:Avalonia.Controls.Documents.TextModel.NodeKindFlags.BlockContainer) flags.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder AddListItem(Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind kind)
+```
+
+##### Parameters
+
+`kind` [Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind](xref:Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind)
+
+
+##### Returns
+
+[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9f3229d4cf"></span>
+
+#### AddListItem Method
+
+Adds a new list item to the current list.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder AddListItem(string text)
+```
+
+##### Parameters
+
+`text` string
+
+
+##### Returns
+
+[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-91f574c98e"></span>
+
+### AddPageBand Method
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder AddPageBand(Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot content, Avalonia.Controls.Documents.PageBandRole role, Avalonia.Controls.Documents.PageBandRule rule, Guid& id, string name)
+```
+
+#### Parameters
+
+`content` [Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot)
+
+
+`role` [Avalonia.Controls.Documents.PageBandRole](xref:Avalonia.Controls.Documents.PageBandRole)
+
+
+`rule` [Avalonia.Controls.Documents.PageBandRule](xref:Avalonia.Controls.Documents.PageBandRule)
+
+
+`id` Guid&amp;
+
+
+`name` string
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0f618f2100"></span>
+
+### AddPageBreak Method
+
+Applies an explicit page break at the current position. The break is a split
+instruction, not content: a paragraph with content ends here and continues in
+a clone of itself, and the next committed block receives
+[Avalonia.Controls.Documents.TextModel.Formatting.BlockFormatting.PageBreakBefore](xref:Avalonia.Controls.Documents.TextModel.Formatting.BlockFormatting.PageBreakBefore).
+A block that would commit empty while the break is pending is the break's own
+remainder (or a break-only carrier paragraph) and is dropped - the break
+carries forward; at a container boundary or the document end the pending
+break materializes as an empty flagged landing paragraph.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder AddPageBreak()
+```
+
+#### Returns
+
+[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5b3195e88a"></span>
+
+### AddPageNumberField Method
+
+Adds a page-number field to the current paragraph. The field's cached result
+becomes its text content, so plain rendering and export show it until
+paginated rendering resolves the field per page.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder AddPageNumberField(Avalonia.Controls.Documents.PageNumberFieldKind fieldKind)
+```
+
+#### Parameters
+
+`fieldKind` [Avalonia.Controls.Documents.PageNumberFieldKind](xref:Avalonia.Controls.Documents.PageNumberFieldKind)
+
+What the field resolves to.
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder)
+
+
+</section>
+
+<span id="uid-6b0203da31"></span>
+
+### AddParagraph overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3d394704af"></span>
+
+#### AddParagraph Method
+
+Adds a new empty paragraph.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder AddParagraph()
+```
+
+##### Returns
+
+[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-afb6936021"></span>
+
+#### AddParagraph Method
+
+Adds a paragraph with the specified inline elements.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder AddParagraph(Avalonia.Controls.Documents.Serialization.Authoring.InlineDraft[] inlines)
+```
+
+##### Parameters
+
+`inlines` [Avalonia.Controls.Documents.Serialization.Authoring.InlineDraft](xref:Avalonia.Controls.Documents.Serialization.Authoring.InlineDraft)[]
+
+
+##### Returns
+
+[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8126bd6d18"></span>
+
+#### AddParagraph Method
+
+Adds a new empty paragraph with a custom [Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind](xref:Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind).
+The kind must have the [Avalonia.Controls.Documents.TextModel.NodeKindFlags.InlineContainer](xref:Avalonia.Controls.Documents.TextModel.NodeKindFlags.InlineContainer) flag.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder AddParagraph(Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind kind)
+```
+
+##### Parameters
+
+`kind` [Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind](xref:Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind)
+
+
+##### Returns
+
+[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-95f4698753"></span>
+
+#### AddParagraph Method
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder AddParagraph(ReadOnlyMemory<char> text)
+```
+
+##### Parameters
+
+`text` ReadOnlyMemory&lt;char&gt;
+
+
+##### Returns
+
+[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6b4aa7d18a"></span>
+
+#### AddParagraph Method
+
+Adds a new paragraph with the specified text.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder AddParagraph(string text)
+```
+
+##### Parameters
+
+`text` string
+
+
+##### Returns
+
+[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-bbe99d3a64"></span>
+
+### AddParagraphRange Method
+
+Registers a paragraph that references a range within previously set bulk text.
+The text at [`offset`, `offset` + `length`)
+must already exist in the rope via a prior [Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder.SetBulkText(ReadOnlyMemory&#123;char&#125;)](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder.SetBulkText%28System.ReadOnlyMemory%7BSystem.Char%7D%29) call.
+No rope insert is performed; only the snapshot node tree is updated.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder AddParagraphRange(int offset, int length)
+```
+
+#### Parameters
+
+`offset` int
+
+
+`length` int
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder)
+
+
+#### Remarks
+
+Paragraph ranges must be contiguous: each call must start exactly
+where the previous paragraph ended. Gaps are rejected because
+they would leave rope content unowned by any node, producing a
+document whose [Avalonia.Controls.Documents.TextModel.TextDocument.Length](xref:Avalonia.Controls.Documents.TextModel.TextDocument.Length) exceeds the sum
+of its blocks. Line-break sequences are part of the paragraph that
+precedes them — see `PlainTextSerializer.CreateSnapshotFromText`
+for the canonical encoding.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6b489b6651"></span>
+
+### AddRun Method
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder AddRun(ReadOnlyMemory<char> text, Avalonia.Controls.Documents.TextModel.Formatting.InlineFormatting formatting, Avalonia.Controls.Documents.TextModel.Formatting.TextElementFormatting elementFormatting, ReadOnlySpan<Avalonia.Controls.Documents.Serialization.Authoring.InlineWrapper> wrappers, object formatMetadata)
+```
+
+#### Parameters
+
+`text` ReadOnlyMemory&lt;char&gt;
+
+
+`formatting` [Avalonia.Controls.Documents.TextModel.Formatting.InlineFormatting](xref:Avalonia.Controls.Documents.TextModel.Formatting.InlineFormatting)
+
+
+`elementFormatting` [Avalonia.Controls.Documents.TextModel.Formatting.TextElementFormatting](xref:Avalonia.Controls.Documents.TextModel.Formatting.TextElementFormatting)
+
+
+`wrappers` ReadOnlySpan&lt;[Avalonia.Controls.Documents.Serialization.Authoring.InlineWrapper](xref:Avalonia.Controls.Documents.Serialization.Authoring.InlineWrapper)&gt;
+
+
+`formatMetadata` object
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder)
+
+
+</section>
+
+<span id="uid-58cfe76beb"></span>
+
+### AddText overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-755836d5e1"></span>
+
+#### AddText Method
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder AddText(ReadOnlyMemory<char> text)
+```
+
+##### Parameters
+
+`text` ReadOnlyMemory&lt;char&gt;
+
+
+##### Returns
+
+[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b3cb64f7ab"></span>
+
+#### AddText Method
+
+Adds text to the current paragraph.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder AddText(string text)
+```
+
+##### Parameters
+
+`text` string
+
+
+##### Returns
+
+[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c2775c4852"></span>
+
+### AddUnderline Method
+
+Adds underlined text to the current paragraph.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder AddUnderline(string text)
+```
+
+#### Parameters
+
+`text` string
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-bfd93dc27e"></span>
+
+### BeginDeferredTableCells Method
+
+Switches the current table to deferred finalization: its rows and cells stay
+editable until [Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder.EndTable](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder.EndTable), so a serializer can set each cell's span
+(and drop merge continuations) once the whole table and its column grid are known.
+Applies only to the current table; other tables keep the eager path.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder BeginDeferredTableCells()
+```
+
+#### Returns
+
+[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-932d90d3b1"></span>
+
+### Build Method
+
+Builds the [DocumentSnapshot](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot).
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot Build()
+```
+
+#### Returns
+
+[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot)
+
+
+</section>
+
+<span id="uid-ccd7b83233"></span>
+
+### Create overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-93514adb44"></span>
+
+#### Create Method
+
+Creates a new [DocumentSnapshotBuilder](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder).
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder Create()
+```
+
+##### Returns
+
+[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-69f9cf49ec"></span>
+
+#### Create Method
+
+Creates a builder whose root has `rootKind`, a root kind such as [Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind.PageBand](xref:Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind.PageBand) for band content.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder Create(Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind rootKind)
+```
+
+##### Parameters
+
+`rootKind` [Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind](xref:Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind)
+
+
+##### Returns
+
+[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7c04072918"></span>
+
+### DropDeferredTableCell Method
+
+Marks a deferred cell (a vertical-merge continuation folded into the cell above)
+so it is not emitted when the table finalizes.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder DropDeferredTableCell(int rowIndex, int cellIndex)
+```
+
+#### Parameters
+
+`rowIndex` int
+
+
+`cellIndex` int
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d1a5b716a5"></span>
+
+### EndContainer Method
+
+Ends the most recent [Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder.StartContainer(Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind,Avalonia.Controls.Documents.TextModel.Formatting.BlockFormatting,Avalonia.Controls.Documents.TextModel.Formatting.TextElementFormatting)](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder.StartContainer%28Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind%2CAvalonia.Controls.Documents.TextModel.Formatting.BlockFormatting%2CAvalonia.Controls.Documents.TextModel.Formatting.TextElementFormatting%29) and restores the prior container.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder EndContainer()
+```
+
+#### Returns
+
+[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-549b89ed1e"></span>
+
+### EndList Method
+
+Ends the current list and restores the parent list if nested.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder EndList()
+```
+
+#### Returns
+
+[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9ced19ffd0"></span>
+
+### EndSection Method
+
+Ends the current section and adds it as a block to the parent container.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder EndSection()
+```
+
+#### Returns
+
+[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-149074c46b"></span>
+
+### EndTable Method
+
+Ends the current table.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder EndTable()
+```
+
+#### Returns
+
+[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8c8906255e"></span>
+
+### EndTableCell Method
+
+Ends the current table cell.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder EndTableCell()
+```
+
+#### Returns
+
+[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d875e64365"></span>
+
+### EndTableRow Method
+
+Ends the current table row.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder EndTableRow()
+```
+
+#### Returns
+
+[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-dedaa7a911"></span>
+
+### GetDeferredTableRowCellCount Method
+
+Number of cells emitted so far in a deferred row, or -1 if that row does not exist.
+A serializer compares this against its own cell count to confirm it can address the
+cells before applying spans.
+
+```csharp
+public int GetDeferredTableRowCellCount(int rowIndex)
+```
+
+#### Parameters
+
+`rowIndex` int
+
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-beefee8698"></span>
+
+### SetBulkText Method
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder SetBulkText(ReadOnlyMemory<char> text)
+```
+
+#### Parameters
+
+`text` ReadOnlyMemory&lt;char&gt;
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-390df2acff"></span>
+
+### SetContainerCustomData Method
+
+Sets [Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode.CustomData](xref:Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode.CustomData) on the active block container.
+Works with sections, generic containers, list items, and table cells.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder SetContainerCustomData(object data)
+```
+
+#### Parameters
+
+`data` object
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3b5eee2bec"></span>
+
+### SetDeferredTableCellSpan Method
+
+Sets a deferred cell's column and row span by its row index and its cell index
+within that row (both in emit order). No-op unless deferral is active.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder SetDeferredTableCellSpan(int rowIndex, int cellIndex, int columnSpan, int rowSpan)
+```
+
+#### Parameters
+
+`rowIndex` int
+
+
+`cellIndex` int
+
+
+`columnSpan` int
+
+
+`rowSpan` int
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-617fd86c1b"></span>
+
+### SetDocumentFormatMetadata Method
+
+Sets format-specific metadata for the document root node.
+Serializers use this to attach round-trip metadata (e.g., DOCX header/footer margins).
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder SetDocumentFormatMetadata(object metadata)
+```
+
+#### Parameters
+
+`metadata` object
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d33c3d9928"></span>
+
+### SetDocumentFormatting Method
+
+Sets document-level formatting (page margins, etc.).
+Call before or after adding any content; takes effect at [Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder.Build](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder.Build) time.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder SetDocumentFormatting(Avalonia.Controls.Documents.TextModel.Formatting.DocumentFormatting formatting)
+```
+
+#### Parameters
+
+`formatting` [Avalonia.Controls.Documents.TextModel.Formatting.DocumentFormatting](xref:Avalonia.Controls.Documents.TextModel.Formatting.DocumentFormatting)
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7d2ba1a115"></span>
+
+### SetDocumentTextElementFormatting Method
+
+Sets the document's default text formatting - the font, size, foreground and
+background every block and inline inherits unless it declares its own. It
+travels as the root node's [Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode.TextElementFormatting](xref:Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode.TextElementFormatting).
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder SetDocumentTextElementFormatting(Avalonia.Controls.Documents.TextModel.Formatting.TextElementFormatting formatting)
+```
+
+#### Parameters
+
+`formatting` [Avalonia.Controls.Documents.TextModel.Formatting.TextElementFormatting](xref:Avalonia.Controls.Documents.TextModel.Formatting.TextElementFormatting)
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-029cf4f353"></span>
+
+### SetFootnoteNumberFormat Method
+
+Sets the footnote numbering format alone, keeping the other document-level
+formatting; a reader learns the numbering and the page geometry from
+different places. The anchors added with [Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder.AddFootnoteReference(int)](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder.AddFootnoteReference%28System.Int32%29)
+render their numbers in that format.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder SetFootnoteNumberFormat(Avalonia.Controls.Documents.FootnoteNumberFormat format)
+```
+
+#### Parameters
+
+`format` [Avalonia.Controls.Documents.FootnoteNumberFormat](xref:Avalonia.Controls.Documents.FootnoteNumberFormat)
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8d04bc7563"></span>
+
+### SetListBlockFormatting Method
+
+Sets block formatting (e.g. explicit Padding) for the current list container.
+Only explicitly set properties are stored; auto-computed values (such as
+the marker column `ListNode` sizes from the item font) are
+intentionally omitted and recomputed at render time.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder SetListBlockFormatting(Avalonia.Controls.Documents.TextModel.Formatting.BlockFormatting formatting)
+```
+
+#### Parameters
+
+`formatting` [Avalonia.Controls.Documents.TextModel.Formatting.BlockFormatting](xref:Avalonia.Controls.Documents.TextModel.Formatting.BlockFormatting)
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-52a9912805"></span>
+
+### SetListFormatMetadata Method
+
+Sets format-specific metadata for the current list.
+Serializers use this to attach round-trip metadata.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder SetListFormatMetadata(object metadata)
+```
+
+#### Parameters
+
+`metadata` object
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e9305164b2"></span>
+
+### SetListItemFormatMetadata Method
+
+Sets format-specific metadata for the current list item.
+Serializers use this to attach round-trip metadata.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder SetListItemFormatMetadata(object metadata)
+```
+
+#### Parameters
+
+`metadata` object
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9f0e6854f9"></span>
+
+### SetListItemFormatting Method
+
+Sets formatting for the current list item.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder SetListItemFormatting(Avalonia.Controls.Documents.TextModel.Formatting.BlockFormatting formatting)
+```
+
+#### Parameters
+
+`formatting` [Avalonia.Controls.Documents.TextModel.Formatting.BlockFormatting](xref:Avalonia.Controls.Documents.TextModel.Formatting.BlockFormatting)
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-668dd30319"></span>
+
+### SetListItemTextElementFormatting Method
+
+Sets base-level element formatting for the current list item.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder SetListItemTextElementFormatting(Avalonia.Controls.Documents.TextModel.Formatting.TextElementFormatting formatting)
+```
+
+#### Parameters
+
+`formatting` [Avalonia.Controls.Documents.TextModel.Formatting.TextElementFormatting](xref:Avalonia.Controls.Documents.TextModel.Formatting.TextElementFormatting)
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ad90dc72e2"></span>
+
+### SetListMarkerAlignment Method
+
+Sets how the current list's marker is aligned within its column (Word's
+`w:lvlJc`): left starts every marker at the same x, right ends them at the
+same x with a consistent gap to the content. Shared by every item in the list.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder SetListMarkerAlignment(Avalonia.Media.TextAlignment markerAlignment)
+```
+
+#### Parameters
+
+`markerAlignment` [Avalonia.Media.TextAlignment](xref:Avalonia.Media.TextAlignment)
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e61ed41e12"></span>
+
+### SetListMarkerOffset Method
+
+Sets the current list's marker offset (its hanging indent — how far the
+marker sits back from the item content). Shared by every item in the list.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder SetListMarkerOffset(double markerOffset)
+```
+
+#### Parameters
+
+`markerOffset` double
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-693084e4d6"></span>
+
+### SetParagraphCustomData Method
+
+Sets [Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode.CustomData](xref:Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode.CustomData) on the current paragraph.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder SetParagraphCustomData(object data)
+```
+
+#### Parameters
+
+`data` object
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-40be1825fd"></span>
+
+### SetParagraphFormatMetadata Method
+
+Sets format-specific metadata for the current paragraph.
+Serializers use this to attach round-trip metadata (e.g., RTF twips, DOCX style IDs).
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder SetParagraphFormatMetadata(object metadata)
+```
+
+#### Parameters
+
+`metadata` object
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-09a39b99c3"></span>
+
+### SetParagraphFormatting Method
+
+Sets formatting for the current paragraph, or queues it for the next paragraph.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder SetParagraphFormatting(Avalonia.Controls.Documents.TextModel.Formatting.BlockFormatting formatting)
+```
+
+#### Parameters
+
+`formatting` [Avalonia.Controls.Documents.TextModel.Formatting.BlockFormatting](xref:Avalonia.Controls.Documents.TextModel.Formatting.BlockFormatting)
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-cf543077c7"></span>
+
+### SetParagraphTextElementFormatting Method
+
+Sets base-level element formatting for the current paragraph.
+If no paragraph is active, queues it for the next paragraph.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder SetParagraphTextElementFormatting(Avalonia.Controls.Documents.TextModel.Formatting.TextElementFormatting formatting)
+```
+
+#### Parameters
+
+`formatting` [Avalonia.Controls.Documents.TextModel.Formatting.TextElementFormatting](xref:Avalonia.Controls.Documents.TextModel.Formatting.TextElementFormatting)
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-26fbd4ca45"></span>
+
+### SetPendingParagraphFormatting Method
+
+Queues paragraph formatting for the next paragraph without affecting the current one.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder SetPendingParagraphFormatting(Avalonia.Controls.Documents.TextModel.Formatting.BlockFormatting formatting)
+```
+
+#### Parameters
+
+`formatting` [Avalonia.Controls.Documents.TextModel.Formatting.BlockFormatting](xref:Avalonia.Controls.Documents.TextModel.Formatting.BlockFormatting)
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8e1d2561d5"></span>
+
+### SetPendingParagraphTextElementFormatting Method
+
+Queues base-level element formatting for the next paragraph without affecting the current one.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder SetPendingParagraphTextElementFormatting(Avalonia.Controls.Documents.TextModel.Formatting.TextElementFormatting formatting)
+```
+
+#### Parameters
+
+`formatting` [Avalonia.Controls.Documents.TextModel.Formatting.TextElementFormatting](xref:Avalonia.Controls.Documents.TextModel.Formatting.TextElementFormatting)
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ed3d52b7e6"></span>
+
+### SetRootCapacity Method
+
+Pre-allocates capacity for the root container based on estimated paragraph count.
+Reduces array resizes during document construction.
+Call after SetBulkText when paragraph count can be estimated.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder SetRootCapacity(int estimatedCapacity)
+```
+
+#### Parameters
+
+`estimatedCapacity` int
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8c8ca3bb25"></span>
+
+### SetRowCustomData Method
+
+Sets extension-specific custom data for the current table row
+(e.g. the markdown header-row flag).
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder SetRowCustomData(object data)
+```
+
+#### Parameters
+
+`data` object
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-82ab3736a9"></span>
+
+### SetRowFormatMetadata Method
+
+Sets format-specific metadata for the current table row.
+Serializers use this to attach round-trip metadata (e.g., row borders).
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder SetRowFormatMetadata(object metadata)
+```
+
+#### Parameters
+
+`metadata` object
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f8abf254a4"></span>
+
+### SetSectionFormatMetadata Method
+
+Sets format-specific round-trip metadata on the section currently open via
+[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder.StartSection(Avalonia.Controls.Documents.TextModel.Formatting.BlockFormatting,Avalonia.Controls.Documents.TextModel.Formatting.TextElementFormatting,Avalonia.Controls.Documents.TextModel.Formatting.SectionPageSetup)](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder.StartSection%28Avalonia.Controls.Documents.TextModel.Formatting.BlockFormatting%2CAvalonia.Controls.Documents.TextModel.Formatting.TextElementFormatting%2CAvalonia.Controls.Documents.TextModel.Formatting.SectionPageSetup%29). No effect when the active container is not a section.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder SetSectionFormatMetadata(object metadata)
+```
+
+#### Parameters
+
+`metadata` object
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a548ee6ea0"></span>
+
+### SetSectionPageBandReferences Method
+
+Sets the current section's page-band references (indices from
+[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder.AddPageBand(Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot,Avalonia.Controls.Documents.PageBandRole,Avalonia.Controls.Documents.PageBandRule,Guid@,string)](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder.AddPageBand%28Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot%2CAvalonia.Controls.Documents.PageBandRole%2CAvalonia.Controls.Documents.PageBandRule%2CSystem.Guid%40%2CSystem.String%29)).
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder SetSectionPageBandReferences(Avalonia.Controls.Documents.Serialization.Snapshot.PageBandReferences references)
+```
+
+#### Parameters
+
+`references` [Avalonia.Controls.Documents.Serialization.Snapshot.PageBandReferences](xref:Avalonia.Controls.Documents.Serialization.Snapshot.PageBandReferences)
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0d381c5a56"></span>
+
+### SetSectionPageSetup Method
+
+Sets the page setup of the section currently open via [Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder.StartSection(Avalonia.Controls.Documents.TextModel.Formatting.BlockFormatting,Avalonia.Controls.Documents.TextModel.Formatting.TextElementFormatting,Avalonia.Controls.Documents.TextModel.Formatting.SectionPageSetup)](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder.StartSection%28Avalonia.Controls.Documents.TextModel.Formatting.BlockFormatting%2CAvalonia.Controls.Documents.TextModel.Formatting.TextElementFormatting%2CAvalonia.Controls.Documents.TextModel.Formatting.SectionPageSetup%29),
+replacing any value passed there. For readers whose format declares the setup
+after the section has started (RTF section control words follow `\sect`;
+a DOCX section's `sectPr` sits on its LAST paragraph).
+No effect when the active container is not a section.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder SetSectionPageSetup(Avalonia.Controls.Documents.TextModel.Formatting.SectionPageSetup pageSetup)
+```
+
+#### Parameters
+
+`pageSetup` [Avalonia.Controls.Documents.TextModel.Formatting.SectionPageSetup](xref:Avalonia.Controls.Documents.TextModel.Formatting.SectionPageSetup)
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-239ac98cbe"></span>
+
+### SetTableBlockFormatting Method
+
+Sets block formatting for the current table.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder SetTableBlockFormatting(Avalonia.Controls.Documents.TextModel.Formatting.BlockFormatting formatting)
+```
+
+#### Parameters
+
+`formatting` [Avalonia.Controls.Documents.TextModel.Formatting.BlockFormatting](xref:Avalonia.Controls.Documents.TextModel.Formatting.BlockFormatting)
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5da468b1ea"></span>
+
+### SetTableCellBackground Method
+
+Sets the background color of the current table cell.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder SetTableCellBackground(uint argb)
+```
+
+#### Parameters
+
+`argb` uint
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a185a4ecb5"></span>
+
+### SetTableCellBorders Method
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder SetTableCellBorders(Nullable<Avalonia.Thickness> borderThickness, Nullable<uint> borderBrushArgb, Nullable<Avalonia.Thickness> padding)
+```
+
+#### Parameters
+
+`borderThickness` Nullable&lt;[Avalonia.Thickness](xref:Avalonia.Thickness)&gt;
+
+
+`borderBrushArgb` Nullable&lt;uint&gt;
+
+
+`padding` Nullable&lt;[Avalonia.Thickness](xref:Avalonia.Thickness)&gt;
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-32033bc0b6"></span>
+
+### SetTableCellSpan Method
+
+Sets how many grid columns and rows the current table cell spans (Word's
+`w:gridSpan` and `w:vMerge`). Each value is clamped to at least 1; a span
+of 1 carries nothing, so an un-merged cell stays at the default.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder SetTableCellSpan(int columnSpan, int rowSpan)
+```
+
+#### Parameters
+
+`columnSpan` int
+
+
+`rowSpan` int
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-010fe20355"></span>
+
+### SetTableCellTextElementFormatting Method
+
+Sets base-level element formatting for the current table cell.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder SetTableCellTextElementFormatting(Avalonia.Controls.Documents.TextModel.Formatting.TextElementFormatting formatting)
+```
+
+#### Parameters
+
+`formatting` [Avalonia.Controls.Documents.TextModel.Formatting.TextElementFormatting](xref:Avalonia.Controls.Documents.TextModel.Formatting.TextElementFormatting)
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-52d4fbfee9"></span>
+
+### SetTableCellVerticalAlignment Method
+
+Sets the vertical alignment of the current table cell's content
+(Word's `w:vAlign`). Top is the default.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder SetTableCellVerticalAlignment(Avalonia.Layout.VerticalAlignment verticalAlignment)
+```
+
+#### Parameters
+
+`verticalAlignment` [Avalonia.Layout.VerticalAlignment](xref:Avalonia.Layout.VerticalAlignment)
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-dfb17a0471"></span>
+
+### SetTableColumns Method
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder SetTableColumns(System.Collections.Generic.IReadOnlyList<double> widths)
+```
+
+#### Parameters
+
+`widths` System.Collections.Generic.IReadOnlyList&lt;double&gt;
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-53530ff6b7"></span>
+
+### SetTableFormatMetadata Method
+
+Sets format-specific metadata for the current table.
+Serializers use this to attach round-trip metadata (e.g., original column widths).
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder SetTableFormatMetadata(object metadata)
+```
+
+#### Parameters
+
+`metadata` object
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-99e9da545f"></span>
+
+### SetTableInteriorBorders Method
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder SetTableInteriorBorders(double width, Nullable<uint> colorArgb)
+```
+
+#### Parameters
+
+`width` double
+
+
+`colorArgb` Nullable&lt;uint&gt;
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a3b6449855"></span>
+
+### SetTableRowHeight Method
+
+Sets the current table row's minimum height in device-independent pixels
+(Word's `w:trHeight`).
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder SetTableRowHeight(double height)
+```
+
+#### Parameters
+
+`height` double
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-66e6768a42"></span>
+
+### SetTableRowTextElementFormatting Method
+
+Sets base-level element formatting for the current table row.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder SetTableRowTextElementFormatting(Avalonia.Controls.Documents.TextModel.Formatting.TextElementFormatting formatting)
+```
+
+#### Parameters
+
+`formatting` [Avalonia.Controls.Documents.TextModel.Formatting.TextElementFormatting](xref:Avalonia.Controls.Documents.TextModel.Formatting.TextElementFormatting)
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9248d08dbd"></span>
+
+### StartContainer Method
+
+Starts a generic block container with an arbitrary [Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind](xref:Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind).
+Containers nest: calling [Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder.StartContainer(Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind,Avalonia.Controls.Documents.TextModel.Formatting.BlockFormatting,Avalonia.Controls.Documents.TextModel.Formatting.TextElementFormatting)](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder.StartContainer%28Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind%2CAvalonia.Controls.Documents.TextModel.Formatting.BlockFormatting%2CAvalonia.Controls.Documents.TextModel.Formatting.TextElementFormatting%29) while another is active
+pushes the outer container onto a stack. [Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder.EndContainer](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder.EndContainer) pops it.
+A container opened while a list item or a table cell is open nests inside it -
+the blocks added to the container are the container's, and the finished
+container is added back to the item or cell that enclosed it.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder StartContainer(Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind kind, Avalonia.Controls.Documents.TextModel.Formatting.BlockFormatting formatting, Avalonia.Controls.Documents.TextModel.Formatting.TextElementFormatting textElementFormatting)
+```
+
+#### Parameters
+
+`kind` [Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind](xref:Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind)
+
+
+`formatting` [Avalonia.Controls.Documents.TextModel.Formatting.BlockFormatting](xref:Avalonia.Controls.Documents.TextModel.Formatting.BlockFormatting)
+
+
+`textElementFormatting` [Avalonia.Controls.Documents.TextModel.Formatting.TextElementFormatting](xref:Avalonia.Controls.Documents.TextModel.Formatting.TextElementFormatting)
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9ce411976f"></span>
+
+### StartList Method
+
+Starts a new list with the specified marker style.
+When called inside an active list item, automatically nests
+the new list inside the current item instead of finalizing it.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder StartList(Avalonia.Controls.Documents.Primitives.DocumentNodes.TextMarkerStyle markerStyle, int startIndex)
+```
+
+#### Parameters
+
+`markerStyle` [Avalonia.Controls.Documents.Primitives.DocumentNodes.TextMarkerStyle](xref:Avalonia.Controls.Documents.Primitives.DocumentNodes.TextMarkerStyle)
+
+
+`startIndex` int
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-637a5fbdac"></span>
+
+### StartNestedList Method
+
+Starts a nested list inside the current list item.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder StartNestedList(Avalonia.Controls.Documents.Primitives.DocumentNodes.TextMarkerStyle markerStyle, int startIndex)
+```
+
+#### Parameters
+
+`markerStyle` [Avalonia.Controls.Documents.Primitives.DocumentNodes.TextMarkerStyle](xref:Avalonia.Controls.Documents.Primitives.DocumentNodes.TextMarkerStyle)
+
+
+`startIndex` int
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder)
+
+
+</section>
+
+<span id="uid-77ca3ab3da"></span>
+
+### StartSection overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f13ca004de"></span>
+
+#### StartSection Method
+
+Starts a new section container. Blocks added after this call
+are placed inside the section until [Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder.EndSection](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder.EndSection) is called.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder StartSection(Avalonia.Controls.Documents.TextModel.Formatting.BlockFormatting formatting, Avalonia.Controls.Documents.TextModel.Formatting.TextElementFormatting textElementFormatting)
+```
+
+##### Parameters
+
+`formatting` [Avalonia.Controls.Documents.TextModel.Formatting.BlockFormatting](xref:Avalonia.Controls.Documents.TextModel.Formatting.BlockFormatting)
+
+
+`textElementFormatting` [Avalonia.Controls.Documents.TextModel.Formatting.TextElementFormatting](xref:Avalonia.Controls.Documents.TextModel.Formatting.TextElementFormatting)
+
+
+##### Returns
+
+[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-73b773c4f2"></span>
+
+#### StartSection Method
+
+Starts a new section container. Blocks added after this call
+are placed inside the section until [Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder.EndSection](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder.EndSection) is called.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder StartSection(Avalonia.Controls.Documents.TextModel.Formatting.BlockFormatting formatting, Avalonia.Controls.Documents.TextModel.Formatting.TextElementFormatting textElementFormatting, Avalonia.Controls.Documents.TextModel.Formatting.SectionPageSetup pageSetup)
+```
+
+##### Parameters
+
+`formatting` [Avalonia.Controls.Documents.TextModel.Formatting.BlockFormatting](xref:Avalonia.Controls.Documents.TextModel.Formatting.BlockFormatting)
+
+
+`textElementFormatting` [Avalonia.Controls.Documents.TextModel.Formatting.TextElementFormatting](xref:Avalonia.Controls.Documents.TextModel.Formatting.TextElementFormatting)
+
+
+`pageSetup` [Avalonia.Controls.Documents.TextModel.Formatting.SectionPageSetup](xref:Avalonia.Controls.Documents.TextModel.Formatting.SectionPageSetup)
+
+
+##### Returns
+
+[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e1fe530904"></span>
+
+### StartTable Method
+
+Starts a new table.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder StartTable()
+```
+
+#### Returns
+
+[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a28f1085c9"></span>
+
+### StartTableCell Method
+
+Starts a new table cell.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder StartTableCell()
+```
+
+#### Returns
+
+[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-297fdbbb7e"></span>
+
+### StartTableRow Method
+
+Starts a new table row.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder StartTableRow()
+```
+
+#### Returns
+
+[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder)
+
+
+</section>
+
+</ApiRefPage>
+

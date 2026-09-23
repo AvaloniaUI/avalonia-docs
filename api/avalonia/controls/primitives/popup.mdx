@@ -285,6 +285,7 @@ The value of the TakesFocusFromNativeControl property.
 | [Name](../../styledelement.mdx#uid-245f4ccff5) | Gets or sets the name of the styled element. Inherited from [StyledElement](../../styledelement.mdx). |
 | [Opacity](../../visual.mdx#uid-9eaf1e3d57) | Gets or sets the opacity of the control. Inherited from [Visual](../../visual.mdx). |
 | [OpacityMask](../../visual.mdx#uid-b6579b9244) | Gets or sets the opacity mask of the control. Inherited from [Visual](../../visual.mdx). |
+| [OpenedPopups](#uid-f05e9e0213) | Gets the popups that are currently open directly inside this popup, in the order they were opened. |
 | [OverlayDismissEventPassThrough](#uid-b518423c37) | Gets or sets a value indicating whether the event that closes the popup is passed through to the parent window. |
 | [OverlayInputPassThroughElement](#uid-9ee6aef18c) | Gets or sets an element that should receive pointer input events even when underneath the popup's overlay. |
 | [Parent](../../styledelement.mdx#uid-aad2c5c78d) | Gets the styled element's logical parent. Inherited from [StyledElement](../../styledelement.mdx). |
@@ -444,6 +445,20 @@ Gets a value that indicates whether the popup is shown in the overlay layer of t
 
 ```csharp
 public bool IsUsingOverlayLayer { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f05e9e0213"></span>
+
+### OpenedPopups Property
+
+Gets the popups that are currently open directly inside this popup, in the order they were opened.
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<Avalonia.Controls.Primitives.Popup> OpenedPopups { get; set; }
 ```
 
 </section>

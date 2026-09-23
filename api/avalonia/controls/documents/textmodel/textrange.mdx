@@ -1,0 +1,1107 @@
+---
+title: 'TextRange'
+hide_title: true
+slug: '/avalonia/controls/documents/textmodel/textrange'
+uid: 'Avalonia.Controls.Documents.TextModel.TextRange'
+commentId: 'T:Avalonia.Controls.Documents.TextModel.TextRange'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Documents'
+assembly: 'Avalonia.Controls.Documents'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.TextModel'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">TextRange Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.TextModel</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Represents a range of text between two pointers.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class TextRange
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> TextRange
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Derived types:</span> <a href="../../textselection">TextSelection</a>
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [TextRange](#uid-be4cb64959) | Initializes a new instance of the [Avalonia.Controls.Documents.TextModel.TextRange](xref:Avalonia.Controls.Documents.TextModel.TextRange) class. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-be4cb64959"></span>
+
+### TextRange Constructor
+
+Initializes a new instance of the [Avalonia.Controls.Documents.TextModel.TextRange](xref:Avalonia.Controls.Documents.TextModel.TextRange) class.
+
+```csharp
+public TextRange(Avalonia.Controls.Documents.TextModel.TextPointer start, Avalonia.Controls.Documents.TextModel.TextPointer end)
+```
+
+#### Parameters
+
+`start` [Avalonia.Controls.Documents.TextModel.TextPointer](xref:Avalonia.Controls.Documents.TextModel.TextPointer)
+
+The start position.
+
+
+`end` [Avalonia.Controls.Documents.TextModel.TextPointer](xref:Avalonia.Controls.Documents.TextModel.TextPointer)
+
+The end position.
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [ApplyPropertyValue](#uid-303888c951) | No summary available. |
+| [ClearAllProperties](#uid-1d087e30fc) | Clears all inline formatting properties from the range. Content is preserved; only formatting is removed. Produces a single [Avalonia.Controls.Documents.Undo.BlockSnapshotUndoUnit](xref:Avalonia.Controls.Documents.Undo.BlockSnapshotUndoUnit) for atomic undo/redo. |
+| [ClearPropertyValue](#uid-ecf1a6ea8a) | No summary available. |
+| [Contains (2 overloads)](#uid-f71713cd49) | Checks if the range contains the specified pointer. |
+| [CreateSnapshot](#uid-462c656203) | Creates an immutable, thread-safe snapshot of this range's document structure. The caller chooses a serializer to convert the snapshot to a specific format. |
+| [Delete](#uid-4cc238f628) | Deletes the content of the range. |
+| [DeleteCurrentBlock (2 overloads)](#uid-a2fe640aaf) | Deletes the block this range starts in, and collapses the range onto the deletion point. |
+| [DeleteText](#uid-4266eab3ed) | Deletes the content of this range. Removes whatever the range covers — characters, inline runs, paragraphs, list items, tables, sections — depending on which nodes the range fully encloses. When the deletion crosses block boundaries and both surviving boundary blocks are paragraphs, `mergeBlocks` controls whether the surviving fragments fuse into one paragraph. Manages transaction automatically. |
+| [DeleteTextAt](#uid-9beff62495) | Deletes text at the specified range relative to this range. Manages transaction automatically. |
+| [GetPropertyValue](#uid-71aaf13562) | No summary available. |
+| [GetText](#uid-c626a57a24) | Returns the text content covered by this range. |
+| [InsertFootnote](#uid-17dcc48a9d) | Replaces the range content with a footnote: the anchor (its number as ordinary text) lands at the range position, splitting a run when it sits mid-run, and the note body is created in the document's trailing footnote container with a fresh id - selection delete, anchor, body, and the anchor renumbering are one undo unit. Manages transaction automatically. |
+| [InsertImage](#uid-582fca47b6) | No summary available. |
+| [InsertPageNumberField](#uid-e42dca56bf) | Replaces the range content with a page-number field of `kind`: the field lands at the range position, splitting a run when it sits mid-run, and shows its cached result until a page layout resolves it (a band on a sheet renders the sheet's number) - selection delete and insertion are one undo unit. Manages transaction automatically. |
+| [InsertSnapshot](#uid-4e69cf269e) | Replaces the range content with the document tree captured by `snapshot`. Block, inline, and formatting structure from the snapshot is preserved — the snapshot's rope tree is spliced directly into the live document with no plain-text lowering. |
+| [InsertTextAt](#uid-6571a17b59) | Inserts text at the specified offset relative to the range start. Manages transaction automatically. |
+| [Load](#uid-1caf2c195a) | Replaces this range with the content of a stream. |
+| [Overlaps](#uid-97e89eec06) | Checks if this range overlaps with another range. |
+| [ReplaceText (2 overloads)](#uid-860443a3a7) | No summary available. |
+| [ReplaceTextAt](#uid-a1020d16a5) | Replaces text at the specified range relative to this range. Manages transaction automatically. |
+| [Save](#uid-0ebfb1caa1) | Writes this range to a stream. |
+| [SetImageAltText](#uid-2113b9397b) | Sets the alternative text of an existing [Avalonia.Controls.Documents.RichImage](xref:Avalonia.Controls.Documents.RichImage) in a single undoable change. |
+| [SetImageSize](#uid-15eda4245a) | Sets the display size of an existing [Avalonia.Controls.Documents.RichImage](xref:Avalonia.Controls.Documents.RichImage) in a single undoable change. Pass [double.NaN](xref:System.Double.NaN) for a dimension to use the image's intrinsic pixel size. |
+| [ToString](#uid-2b81309a1f) | No summary available. |
+| [TryGetPropertyValue](#uid-8a1f50a579) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-303888c951"></span>
+
+### ApplyPropertyValue Method
+
+```csharp
+public void ApplyPropertyValue<T>(Avalonia.StyledProperty<T> property, T value)
+```
+
+#### Parameters
+
+`property` Avalonia.StyledProperty&lt;T&gt;
+
+
+`value` T
+
+
+#### Type Parameters
+
+`T`
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1d087e30fc"></span>
+
+### ClearAllProperties Method
+
+Clears all inline formatting properties from the range.
+Content is preserved; only formatting is removed.
+Produces a single [Avalonia.Controls.Documents.Undo.BlockSnapshotUndoUnit](xref:Avalonia.Controls.Documents.Undo.BlockSnapshotUndoUnit) for atomic undo/redo.
+
+```csharp
+public void ClearAllProperties()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ecf1a6ea8a"></span>
+
+### ClearPropertyValue Method
+
+```csharp
+public void ClearPropertyValue<T>(Avalonia.StyledProperty<T> property)
+```
+
+#### Parameters
+
+`property` Avalonia.StyledProperty&lt;T&gt;
+
+
+#### Type Parameters
+
+`T`
+
+
+</section>
+
+<span id="uid-f71713cd49"></span>
+
+### Contains overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1b4a86e009"></span>
+
+#### Contains Method
+
+Checks if the range contains the specified pointer.
+
+```csharp
+public bool Contains(Avalonia.Controls.Documents.TextModel.TextPointer pointer)
+```
+
+##### Parameters
+
+`pointer` [Avalonia.Controls.Documents.TextModel.TextPointer](xref:Avalonia.Controls.Documents.TextModel.TextPointer)
+
+The pointer to check.
+
+
+##### Returns
+
+bool
+
+True if the pointer is within the range.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e2f9dcd0c5"></span>
+
+#### Contains Method
+
+Checks if the range contains the specified offset.
+
+```csharp
+public bool Contains(int offset)
+```
+
+##### Parameters
+
+`offset` int
+
+The offset to check.
+
+
+##### Returns
+
+bool
+
+True if the offset is within the range.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-462c656203"></span>
+
+### CreateSnapshot Method
+
+Creates an immutable, thread-safe snapshot of this range's document structure.
+The caller chooses a serializer to convert the snapshot to a specific format.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot CreateSnapshot()
+```
+
+#### Returns
+
+[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot)
+
+A [Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot) covering this range, or `null` if the range is empty or detached.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4cc238f628"></span>
+
+### Delete Method
+
+Deletes the content of the range.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.TextPointer Delete()
+```
+
+#### Returns
+
+[Avalonia.Controls.Documents.TextModel.TextPointer](xref:Avalonia.Controls.Documents.TextModel.TextPointer)
+
+A pointer to the position after deletion.
+
+
+</section>
+
+<span id="uid-a2fe640aaf"></span>
+
+### DeleteCurrentBlock overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ec31a90ae4"></span>
+
+#### DeleteCurrentBlock Method
+
+Deletes the block this range starts in, and collapses the range onto the
+deletion point.
+
+```csharp
+public bool DeleteCurrentBlock()
+```
+
+##### Returns
+
+bool
+
+True if a block was deleted; false otherwise.
+
+
+##### Remarks
+
+To delete the block at some other position, build the range there:
+`new TextRange(position, position).DeleteCurrentBlock()`. That range gives
+up its own endpoints for the deletion, which is what makes the operation
+positional rather than a verb on an unrelated range.
+
+##### Exceptions
+
+- [Range is not attached to a document.](xref:System.InvalidOperationException)
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6411353402"></span>
+
+#### DeleteCurrentBlock Method
+
+Deletes the block at `position`.
+
+```csharp
+public bool DeleteCurrentBlock(Avalonia.Controls.Documents.TextModel.TextPointer position)
+```
+
+##### Parameters
+
+`position` [Avalonia.Controls.Documents.TextModel.TextPointer](xref:Avalonia.Controls.Documents.TextModel.TextPointer)
+
+Where to look. When null, the range's own start is used.
+
+
+##### Returns
+
+bool
+
+Whether a block was deleted.
+
+
+##### Remarks
+
+Build a range at the position instead: `new TextRange(position, position)` reads as
+what it does and cannot quietly take a pointer into another document.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4266eab3ed"></span>
+
+### DeleteText Method
+
+Deletes the content of this range. Removes whatever the range covers —
+characters, inline runs, paragraphs, list items, tables, sections —
+depending on which nodes the range fully encloses. When the deletion
+crosses block boundaries and both surviving boundary blocks are
+paragraphs, `mergeBlocks` controls whether the
+surviving fragments fuse into one paragraph.
+Manages transaction automatically.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.TextPointer DeleteText(bool mergeBlocks)
+```
+
+#### Parameters
+
+`mergeBlocks` bool
+
+When `true`, surviving start/end paragraph fragments are merged
+into a single paragraph (replace-selection semantics — typing-over-
+selection, paste-over-selection). When `false` (the default),
+the surviving fragments are left as separate paragraphs (delete-
+selection semantics — Backspace, Delete, Cut). Silently a no-op when
+the deletion does not cross block boundaries, fully consumes one
+boundary block, or the surviving blocks are non-paragraph (Table,
+Section, List, etc.). Structural detach of fully-enclosed blocks is
+not gated by this flag.
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.TextModel.TextPointer](xref:Avalonia.Controls.Documents.TextModel.TextPointer)
+
+A [TextPointer](xref:Avalonia.Controls.Documents.TextModel.TextPointer) at the deletion position.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9beff62495"></span>
+
+### DeleteTextAt Method
+
+Deletes text at the specified range relative to this range.
+Manages transaction automatically.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.TextPointer DeleteTextAt(int relativeOffset, int length)
+```
+
+#### Parameters
+
+`relativeOffset` int
+
+The starting offset relative to range start.
+
+
+`length` int
+
+The number of characters to delete.
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.TextModel.TextPointer](xref:Avalonia.Controls.Documents.TextModel.TextPointer)
+
+A [TextPointer](xref:Avalonia.Controls.Documents.TextModel.TextPointer) at the deletion position.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-71aaf13562"></span>
+
+### GetPropertyValue Method
+
+```csharp
+public T GetPropertyValue<T>(Avalonia.StyledProperty<T> property)
+```
+
+#### Parameters
+
+`property` Avalonia.StyledProperty&lt;T&gt;
+
+
+#### Type Parameters
+
+`T`
+
+
+#### Returns
+
+T
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c626a57a24"></span>
+
+### GetText Method
+
+Returns the text content covered by this range.
+
+```csharp
+public string GetText()
+```
+
+#### Returns
+
+string
+
+
+#### Remarks
+
+Each call performs a rope slice and allocates a fresh string. Cache
+the result in a local for hot paths. To replace the text content,
+call [Avalonia.Controls.Documents.TextModel.TextRange.ReplaceText(string)](xref:Avalonia.Controls.Documents.TextModel.TextRange.ReplaceText%28System.String%29).
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-17dcc48a9d"></span>
+
+### InsertFootnote Method
+
+Replaces the range content with a footnote: the anchor (its number as
+ordinary text) lands at the range position, splitting a run when it sits
+mid-run, and the note body is created in the document's trailing footnote
+container with a fresh id - selection delete, anchor, body, and the anchor
+renumbering are one undo unit.
+Manages transaction automatically.
+
+```csharp
+public Avalonia.Controls.Documents.Footnote InsertFootnote(Avalonia.Controls.Documents.RichFootnoteReference anchor)
+```
+
+#### Parameters
+
+`anchor` [Avalonia.Controls.Documents.RichFootnoteReference](xref:Avalonia.Controls.Documents.RichFootnoteReference)
+
+The anchor element to insert - create it to pre-configure formatting or to
+keep the reference; (the default) creates one. Must
+not currently belong to a document (move an attached anchor through the
+element collections instead - its note travels with it); a detached anchor
+that carries a note from an earlier removal is re-paired with it. The
+[Avalonia.Controls.Documents.RichFootnoteReference.NoteId](xref:Avalonia.Controls.Documents.RichFootnoteReference.NoteId) is assigned by the pairing.
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.Footnote](xref:Avalonia.Controls.Documents.Footnote)
+
+The created [Avalonia.Controls.Documents.Footnote](xref:Avalonia.Controls.Documents.Footnote) (one empty paragraph, ready to receive the
+caret), or when the range start cannot host an anchor:
+inside a page band or another note (Word forbids both), or in a document
+without a [Avalonia.Controls.Documents.FlowDocument](xref:Avalonia.Controls.Documents.FlowDocument) root.
+
+
+#### Exceptions
+
+- [anchor already belongs to a document.](xref:System.ArgumentException)
+- [Range is not attached to a document.](xref:System.InvalidOperationException)
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-582fca47b6"></span>
+
+### InsertImage Method
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.TextPointer InsertImage(ReadOnlyMemory<byte> data, string mimeType, double width, double height, string altText)
+```
+
+#### Parameters
+
+`data` ReadOnlyMemory&lt;byte&gt;
+
+
+`mimeType` string
+
+
+`width` double
+
+
+`height` double
+
+
+`altText` string
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.TextModel.TextPointer](xref:Avalonia.Controls.Documents.TextModel.TextPointer)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e42dca56bf"></span>
+
+### InsertPageNumberField Method
+
+Replaces the range content with a page-number field of `kind`:
+the field lands at the range position, splitting a run when it sits mid-run,
+and shows its cached result until a page layout resolves it (a band on a sheet
+renders the sheet's number) - selection delete and insertion are one undo unit.
+Manages transaction automatically.
+
+```csharp
+public Avalonia.Controls.Documents.RichPageNumberField InsertPageNumberField(Avalonia.Controls.Documents.PageNumberFieldKind kind)
+```
+
+#### Parameters
+
+`kind` [Avalonia.Controls.Documents.PageNumberFieldKind](xref:Avalonia.Controls.Documents.PageNumberFieldKind)
+
+The page number or the page count.
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.RichPageNumberField](xref:Avalonia.Controls.Documents.RichPageNumberField)
+
+The inserted field, or when the range start cannot host
+one: inside a footnote body, which has no page of its own.
+
+
+#### Exceptions
+
+- [Range is not attached to a document.](xref:System.InvalidOperationException)
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4e69cf269e"></span>
+
+### InsertSnapshot Method
+
+Replaces the range content with the document tree captured by
+`snapshot`. Block, inline, and formatting structure
+from the snapshot is preserved — the snapshot's rope tree is spliced
+directly into the live document with no plain-text lowering.
+
+```csharp
+public void InsertSnapshot(Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot snapshot)
+```
+
+#### Parameters
+
+`snapshot` [Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot)
+
+The snapshot whose tree is grafted into this range.
+
+
+#### Remarks
+
+Used by paste pipelines that already hold a [Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot)
+(e.g. RTF clipboard payload) — avoids the stream + deserializer round-trip
+that [Avalonia.Controls.Documents.TextModel.TextRange.CreateSnapshot](xref:Avalonia.Controls.Documents.TextModel.TextRange.CreateSnapshot) plus a deserializer round-trip performs.
+
+Insertion goes through [Avalonia.Controls.Documents.TextModel.TextDocument.InsertSnapshotStructural(Avalonia.Controls.Documents.TextModel.TextPointer,Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot)](xref:Avalonia.Controls.Documents.TextModel.TextDocument.InsertSnapshotStructural%28Avalonia.Controls.Documents.TextModel.TextPointer%2CAvalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot%29),
+which splices the snapshot's rope zero-copy and grafts its block
+structure into the live tree under a structural change scope. Together
+with the preceding [Avalonia.Controls.Documents.TextModel.TextDocument.DeleteText(int,int)](xref:Avalonia.Controls.Documents.TextModel.TextDocument.DeleteText%28System.Int32%2CSystem.Int32%29) for the
+existing range content, everything nests in the outer
+[Avalonia.Controls.Documents.TextModel.TextDocument.BeginChange](xref:Avalonia.Controls.Documents.TextModel.TextDocument.BeginChange) scope and collapses into one
+undo entry.
+
+#### Exceptions
+
+- [snapshot is null.](xref:System.ArgumentNullException)
+- [Range is not attached to a document.](xref:System.InvalidOperationException)
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6571a17b59"></span>
+
+### InsertTextAt Method
+
+Inserts text at the specified offset relative to the range start.
+Manages transaction automatically.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.TextPointer InsertTextAt(int relativeOffset, string text)
+```
+
+#### Parameters
+
+`relativeOffset` int
+
+The offset relative to range start (0 = at start, Length = at end).
+
+
+`text` string
+
+The text to insert.
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.TextModel.TextPointer](xref:Avalonia.Controls.Documents.TextModel.TextPointer)
+
+A [TextPointer](xref:Avalonia.Controls.Documents.TextModel.TextPointer) at the insertion position.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1caf2c195a"></span>
+
+### Load Method
+
+Replaces this range with the content of a stream.
+
+```csharp
+public void Load(System.IO.Stream stream, Avalonia.Controls.Documents.Serialization.IDocumentSerializer serializer)
+```
+
+#### Parameters
+
+`stream` System.IO.Stream
+
+The stream to read from.
+
+
+`serializer` [Avalonia.Controls.Documents.Serialization.IDocumentSerializer](xref:Avalonia.Controls.Documents.Serialization.IDocumentSerializer)
+
+The serializer for the format.
+
+
+#### Remarks
+
+The decomposition is public and takes a cancellation token, which this does not:
+`range.InsertSnapshot(serializer.Deserialize(stream, cancellationToken))`.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-97e89eec06"></span>
+
+### Overlaps Method
+
+Checks if this range overlaps with another range.
+
+```csharp
+public bool Overlaps(Avalonia.Controls.Documents.TextModel.TextRange other)
+```
+
+#### Parameters
+
+`other` [Avalonia.Controls.Documents.TextModel.TextRange](xref:Avalonia.Controls.Documents.TextModel.TextRange)
+
+The other range.
+
+
+#### Returns
+
+bool
+
+True if the ranges overlap.
+
+
+</section>
+
+<span id="uid-860443a3a7"></span>
+
+### ReplaceText overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c0218b2cce"></span>
+
+#### ReplaceText Method
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.TextPointer ReplaceText(ReadOnlyMemory<char> newText)
+```
+
+##### Parameters
+
+`newText` ReadOnlyMemory&lt;char&gt;
+
+
+##### Returns
+
+[Avalonia.Controls.Documents.TextModel.TextPointer](xref:Avalonia.Controls.Documents.TextModel.TextPointer)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3e0842b68d"></span>
+
+#### ReplaceText Method
+
+Replaces the content of this range with new text.
+Manages transaction automatically.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.TextPointer ReplaceText(string newText)
+```
+
+##### Parameters
+
+`newText` string
+
+The replacement text.
+
+
+##### Returns
+
+[Avalonia.Controls.Documents.TextModel.TextPointer](xref:Avalonia.Controls.Documents.TextModel.TextPointer)
+
+A [TextPointer](xref:Avalonia.Controls.Documents.TextModel.TextPointer) after the replaced text.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a1020d16a5"></span>
+
+### ReplaceTextAt Method
+
+Replaces text at the specified range relative to this range.
+Manages transaction automatically.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.TextPointer ReplaceTextAt(int relativeOffset, int length, string newText)
+```
+
+#### Parameters
+
+`relativeOffset` int
+
+The starting offset relative to range start.
+
+
+`length` int
+
+The number of characters to replace.
+
+
+`newText` string
+
+The replacement text.
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.TextModel.TextPointer](xref:Avalonia.Controls.Documents.TextModel.TextPointer)
+
+A [TextPointer](xref:Avalonia.Controls.Documents.TextModel.TextPointer) after the replaced text.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0ebfb1caa1"></span>
+
+### Save Method
+
+Writes this range to a stream.
+
+```csharp
+public void Save(System.IO.Stream stream, Avalonia.Controls.Documents.Serialization.IDocumentSerializer serializer)
+```
+
+#### Parameters
+
+`stream` System.IO.Stream
+
+The stream to write to.
+
+
+`serializer` [Avalonia.Controls.Documents.Serialization.IDocumentSerializer](xref:Avalonia.Controls.Documents.Serialization.IDocumentSerializer)
+
+The serializer for the format.
+
+
+#### Remarks
+
+The decomposition is public and takes a cancellation token, which this does not:
+`serializer.Serialize(range.CreateSnapshot()!, stream, cancellationToken)`. Going
+through the snapshot also lets one capture serve several formats.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2113b9397b"></span>
+
+### SetImageAltText Method
+
+Sets the alternative text of an existing [Avalonia.Controls.Documents.RichImage](xref:Avalonia.Controls.Documents.RichImage) in a single
+undoable change.
+
+```csharp
+public void SetImageAltText(Avalonia.Controls.Documents.RichImage image, string altText)
+```
+
+#### Parameters
+
+`image` [Avalonia.Controls.Documents.RichImage](xref:Avalonia.Controls.Documents.RichImage)
+
+The image whose alt text to set. Must be attached to this range's document.
+
+
+`altText` string
+
+The alternative text, or null to clear it.
+
+
+`height`
+
+Display height in device-independent pixels, or [double.NaN](xref:System.Double.NaN) for intrinsic.
+
+
+`width`
+
+Display width in device-independent pixels, or [double.NaN](xref:System.Double.NaN) for intrinsic.
+
+
+#### Remarks
+
+Write the image's own properties inside [Avalonia.Controls.Documents.TextModel.TextDocument.BeginChange](xref:Avalonia.Controls.Documents.TextModel.TextDocument.BeginChange), which
+is what this does and takes any set of properties rather than these two.
+
+#### Exceptions
+
+- [\`image\` is null.](xref:System.ArgumentNullException)
+- [Range is not attached to a document.](xref:System.InvalidOperationException)
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-15eda4245a"></span>
+
+### SetImageSize Method
+
+Sets the display size of an existing [Avalonia.Controls.Documents.RichImage](xref:Avalonia.Controls.Documents.RichImage) in a single undoable
+change. Pass [double.NaN](xref:System.Double.NaN) for a dimension to use the image's intrinsic
+pixel size.
+
+```csharp
+public void SetImageSize(Avalonia.Controls.Documents.RichImage image, double width, double height)
+```
+
+#### Parameters
+
+`image` [Avalonia.Controls.Documents.RichImage](xref:Avalonia.Controls.Documents.RichImage)
+
+The image whose size to set. Must be attached to this range's document.
+
+
+`width` double
+
+Display width in device-independent pixels, or [double.NaN](xref:System.Double.NaN) for intrinsic.
+
+
+`height` double
+
+Display height in device-independent pixels, or [double.NaN](xref:System.Double.NaN) for intrinsic.
+
+
+#### Remarks
+
+Write the image's own properties inside [Avalonia.Controls.Documents.TextModel.TextDocument.BeginChange](xref:Avalonia.Controls.Documents.TextModel.TextDocument.BeginChange), which
+is what this does and takes any set of properties rather than these two.
+
+#### Exceptions
+
+- [\`image\` is null.](xref:System.ArgumentNullException)
+- [Range is not attached to a document.](xref:System.InvalidOperationException)
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2b81309a1f"></span>
+
+### ToString Method
+
+```csharp
+public string ToString()
+```
+
+#### Returns
+
+string
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8a1f50a579"></span>
+
+### TryGetPropertyValue Method
+
+```csharp
+public bool TryGetPropertyValue<T>(Avalonia.StyledProperty<T> property, T& value)
+```
+
+#### Parameters
+
+`property` Avalonia.StyledProperty&lt;T&gt;
+
+
+`value` T&amp;
+
+
+#### Type Parameters
+
+`T`
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [End](#uid-37c972b3f9) | Gets the end position of the range. |
+| [IsEmpty](#uid-313c05b9fc) | Gets a value indicating whether the range is empty. A range is empty only when [Avalonia.Controls.Documents.TextModel.TextRange.Start](xref:Avalonia.Controls.Documents.TextModel.TextRange.Start) and [Avalonia.Controls.Documents.TextModel.TextRange.End](xref:Avalonia.Controls.Documents.TextModel.TextRange.End) refer to the exact same document position (node-aware). Two distinct positions that happen to share the same integer offset — for example pointers into consecutive empty paragraphs — are not considered empty. |
+| [Length](#uid-27d48f7738) | Gets the length of the range in characters. |
+| [Start](#uid-fe0f8d7b6a) | Gets the start position of the range. |
+| [TextDocument](#uid-fce62d199c) | Gets the document containing this range. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-37c972b3f9"></span>
+
+### End Property
+
+Gets the end position of the range.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.TextPointer End { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-313c05b9fc"></span>
+
+### IsEmpty Property
+
+Gets a value indicating whether the range is empty. A range is empty
+only when [Avalonia.Controls.Documents.TextModel.TextRange.Start](xref:Avalonia.Controls.Documents.TextModel.TextRange.Start) and [Avalonia.Controls.Documents.TextModel.TextRange.End](xref:Avalonia.Controls.Documents.TextModel.TextRange.End) refer to the exact
+same document position (node-aware). Two distinct positions that
+happen to share the same integer offset — for example pointers into
+consecutive empty paragraphs — are not considered empty.
+
+```csharp
+public bool IsEmpty { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-27d48f7738"></span>
+
+### Length Property
+
+Gets the length of the range in characters.
+
+```csharp
+public int Length { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-fe0f8d7b6a"></span>
+
+### Start Property
+
+Gets the start position of the range.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.TextPointer Start { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-fce62d199c"></span>
+
+### TextDocument Property
+
+Gets the document containing this range.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.TextDocument TextDocument { get; set; }
+```
+
+</section>
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [Changed](#uid-ea82965a4b) | Occurs when the range changes. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ea82965a4b"></span>
+
+### Changed Event
+
+Occurs when the range changes.
+
+```csharp
+public event EventHandler Changed
+```
+
+</section>
+
+</ApiRefPage>
+

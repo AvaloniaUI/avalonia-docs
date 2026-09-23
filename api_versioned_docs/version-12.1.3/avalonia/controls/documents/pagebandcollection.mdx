@@ -1,0 +1,353 @@
+---
+title: 'PageBandCollection'
+hide_title: true
+slug: '/avalonia/controls/documents/pagebandcollection'
+uid: 'Avalonia.Controls.Documents.PageBandCollection'
+commentId: 'T:Avalonia.Controls.Documents.PageBandCollection'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Documents'
+assembly: 'Avalonia.Controls.Documents'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">PageBandCollection Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+The page bands a document owns, as elements: a view over the text document's
+[Avalonia.Controls.Documents.TextModel.TextDocument.PageBands](xref:Avalonia.Controls.Documents.TextModel.TextDocument.PageBands), which owns the bands, materializing a
+[Avalonia.Controls.Documents.PageBand](xref:Avalonia.Controls.Documents.PageBand) element per band on demand. It follows the contract of the
+block collection: the document becomes a band's logical parent the moment it is
+added; while the document has no text document the band waits pending, and it
+joins the text document when that is initialized, before the pending blocks
+materialize; once the text document exists a band joins it at once. Removing a band
+releases owner, logical parent and undo and clears every section reference to it.
+Ownership is exclusive: a band owned by another document is refused until it is
+removed there. The first band with a given role and rule is the one the rule places.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class PageBandCollection
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> PageBandCollection
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> ICollection&lt;PageBand&gt;, IEnumerable&lt;PageBand&gt;, IList&lt;PageBand&gt;, IReadOnlyCollection&lt;PageBand&gt;, IReadOnlyList&lt;PageBand&gt;, IEnumerable
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Add](#uid-94d4f694a5) | No summary available. |
+| [Clear](#uid-80037a33da) | No summary available. |
+| [Contains](#uid-6061004f4f) | No summary available. |
+| [CopyTo](#uid-84ee892d17) | No summary available. |
+| [Find (2 overloads)](#uid-5a805a4661) | The first band with `role` and `rule`: the one the rule places. |
+| [GetEnumerator](#uid-b4cbe8ccca) | No summary available. |
+| [IndexOf](#uid-bdc9d3491b) | No summary available. |
+| [Insert](#uid-1955f370a9) | No summary available. |
+| [Remove](#uid-a91bb82504) | No summary available. |
+| [RemoveAt](#uid-a13fbf93dc) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-94d4f694a5"></span>
+
+### Add Method
+
+```csharp
+public void Add(Avalonia.Controls.Documents.PageBand item)
+```
+
+#### Parameters
+
+`item` [Avalonia.Controls.Documents.PageBand](xref:Avalonia.Controls.Documents.PageBand)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-80037a33da"></span>
+
+### Clear Method
+
+```csharp
+public void Clear()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6061004f4f"></span>
+
+### Contains Method
+
+```csharp
+public bool Contains(Avalonia.Controls.Documents.PageBand item)
+```
+
+#### Parameters
+
+`item` [Avalonia.Controls.Documents.PageBand](xref:Avalonia.Controls.Documents.PageBand)
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-84ee892d17"></span>
+
+### CopyTo Method
+
+```csharp
+public void CopyTo(Avalonia.Controls.Documents.PageBand[] array, int arrayIndex)
+```
+
+#### Parameters
+
+`array` [Avalonia.Controls.Documents.PageBand](xref:Avalonia.Controls.Documents.PageBand)[]
+
+
+`arrayIndex` int
+
+
+</section>
+
+<span id="uid-5a805a4661"></span>
+
+### Find overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1bc74b620a"></span>
+
+#### Find Method
+
+The first band with `role` and `rule`: the one the rule places.
+
+```csharp
+public Avalonia.Controls.Documents.PageBand Find(Avalonia.Controls.Documents.PageBandRole role, Avalonia.Controls.Documents.PageBandRule rule)
+```
+
+##### Parameters
+
+`role` [Avalonia.Controls.Documents.PageBandRole](xref:Avalonia.Controls.Documents.PageBandRole)
+
+
+`rule` [Avalonia.Controls.Documents.PageBandRule](xref:Avalonia.Controls.Documents.PageBandRule)
+
+
+##### Returns
+
+[Avalonia.Controls.Documents.PageBand](xref:Avalonia.Controls.Documents.PageBand)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c0aa826c91"></span>
+
+#### Find Method
+
+The band with `id`, or null: what a section's reference names.
+
+```csharp
+public Avalonia.Controls.Documents.PageBand Find(Guid id)
+```
+
+##### Parameters
+
+`id` Guid
+
+
+##### Returns
+
+[Avalonia.Controls.Documents.PageBand](xref:Avalonia.Controls.Documents.PageBand)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b4cbe8ccca"></span>
+
+### GetEnumerator Method
+
+```csharp
+public System.Collections.Generic.IEnumerator<Avalonia.Controls.Documents.PageBand> GetEnumerator()
+```
+
+#### Returns
+
+System.Collections.Generic.IEnumerator&lt;[Avalonia.Controls.Documents.PageBand](xref:Avalonia.Controls.Documents.PageBand)&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-bdc9d3491b"></span>
+
+### IndexOf Method
+
+```csharp
+public int IndexOf(Avalonia.Controls.Documents.PageBand item)
+```
+
+#### Parameters
+
+`item` [Avalonia.Controls.Documents.PageBand](xref:Avalonia.Controls.Documents.PageBand)
+
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1955f370a9"></span>
+
+### Insert Method
+
+```csharp
+public void Insert(int index, Avalonia.Controls.Documents.PageBand item)
+```
+
+#### Parameters
+
+`index` int
+
+
+`item` [Avalonia.Controls.Documents.PageBand](xref:Avalonia.Controls.Documents.PageBand)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a91bb82504"></span>
+
+### Remove Method
+
+```csharp
+public bool Remove(Avalonia.Controls.Documents.PageBand item)
+```
+
+#### Parameters
+
+`item` [Avalonia.Controls.Documents.PageBand](xref:Avalonia.Controls.Documents.PageBand)
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a13fbf93dc"></span>
+
+### RemoveAt Method
+
+```csharp
+public void RemoveAt(int index)
+```
+
+#### Parameters
+
+`index` int
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Count](#uid-f286d9ebd5) | No summary available. |
+| [IsReadOnly](#uid-c661580c3b) | No summary available. |
+| [Item](#uid-bbc0bfa6f5) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f286d9ebd5"></span>
+
+### Count Property
+
+```csharp
+public int Count { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c661580c3b"></span>
+
+### IsReadOnly Property
+
+```csharp
+public bool IsReadOnly { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-bbc0bfa6f5"></span>
+
+### Item Property
+
+```csharp
+public Avalonia.Controls.Documents.PageBand Item { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

@@ -1,0 +1,592 @@
+---
+title: 'RichTextElement'
+hide_title: true
+slug: '/avalonia/controls/documents/richtextelement'
+uid: 'Avalonia.Controls.Documents.RichTextElement'
+commentId: 'T:Avalonia.Controls.Documents.RichTextElement'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Documents'
+assembly: 'Avalonia.Controls.Documents'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">RichTextElement Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Base class for rich text elements that participate in a [TextDocument](xref:Avalonia.Controls.Documents.TextModel.TextDocument).
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class RichTextElement
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../animation/animatable">Animatable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../styledelement">StyledElement</a> <span className="apiref-page__relation-separator">-&gt;</span> RichTextElement
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Derived types:</span> <a href="block">Block</a>, <a href="listitem">ListItem</a>, <a href="richinline">RichInline</a>, <a href="tablecell">TableCell</a>, <a href="tablerow">TableRow</a>, <a href="tablerowgroup">TableRowGroup</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> ck, cn
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [ApplyStyling](../../styledelement.mdx#uid-b0f81a6f8f) | Applies styling to the control if the control is initialized and styling is not already applied. Inherited from [StyledElement](../../styledelement.mdx). |
+| [BeginInit](../../styledelement.mdx#uid-91c6ccadce) | Inherited from [StyledElement](../../styledelement.mdx). |
+| [Bind (8 overloads)](../../avaloniaobject.mdx#uid-1c60c7bda3) | Binds a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) to an [Avalonia.Data.BindingBase](xref:Avalonia.Data.BindingBase). Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [CheckAccess](../../avaloniaobject.mdx#uid-260ff7a68d) | Returns a value indicating whether the current thread is the UI thread. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [ClearValue (4 overloads)](../../avaloniaobject.mdx#uid-41de208fbe) | Clears a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty)'s local value. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [CoerceValue](../../avaloniaobject.mdx#uid-3bec32f39e) | Coerces the specified [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty). Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [EndInit](../../styledelement.mdx#uid-17b450469d) | Inherited from [StyledElement](../../styledelement.mdx). |
+| [Equals](../../avaloniaobject.mdx#uid-a8a8e94305) | Compares two objects using reference equality. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [GetBaseValue](../../avaloniaobject.mdx#uid-9c615efbba) | Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [GetHashCode](../../avaloniaobject.mdx#uid-7f7db1e7a2) | Gets the hash code for the object. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [GetValue (3 overloads)](../../avaloniaobject.mdx#uid-5142cd4792) | Gets a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [IsAnimating](../../avaloniaobject.mdx#uid-8cbfc7521a) | Checks whether a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) is animating. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [IsSet](../../avaloniaobject.mdx#uid-f8bf0bbdcc) | Checks whether a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) is set on this object. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [SetCurrentValue (2 overloads)](../../avaloniaobject.mdx#uid-38759fd088) | Sets the value of a dependency property without changing its value source. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [SetValue (3 overloads)](../../avaloniaobject.mdx#uid-47d14e19d7) | Sets a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [TryGetResource](../../styledelement.mdx#uid-2046a6b284) | Inherited from [StyledElement](../../styledelement.mdx). |
+| [VerifyAccess](../../avaloniaobject.mdx#uid-3b9d3c9793) | Checks that the current thread is the UI thread and throws if not. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [ActualThemeVariant](../../styledelement.mdx#uid-776bcbe4bf) | Gets the UI theme that is currently used by the element, which might be different than the RequestedThemeVariantProperty. Inherited from [StyledElement](../../styledelement.mdx). |
+| [Background](#uid-2c999b14d1) | Gets or sets the brush used to fill the background of the control. |
+| [Classes](../../styledelement.mdx#uid-b7b7edea05) | Gets or sets the styled element's classes. Inherited from [StyledElement](../../styledelement.mdx). |
+| [ContentEnd](#uid-dc015a3770) | Gets a text pointer to the end of the content in the document. |
+| [ContentLength](#uid-80c368b77e) | Gets the length, in characters, that is covered by this element. |
+| [ContentRange](#uid-65e0d953a5) | Gets the range of text that represents the entire content, or null if the content is empty or unavailable. |
+| [ContentStart](#uid-808eaf38d3) | Gets a text pointer to the start of the content in the document. |
+| [DataContext](../../styledelement.mdx#uid-647f924a56) | Gets or sets the control's data context. Inherited from [StyledElement](../../styledelement.mdx). |
+| [Dispatcher](../../avaloniaobject.mdx#uid-b25fa51632) | Returns the [Avalonia.AvaloniaObject.Dispatcher](xref:Avalonia.AvaloniaObject.Dispatcher) that this [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject) is associated with. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [FirstChildElement](#uid-e1dc680020) | Gets the first direct child element in the document tree, or if none exists. |
+| [FontFamily](#uid-128b85f7b7) | Gets or sets the font family used to display text. |
+| [FontFeatures](#uid-ec960058b3) | Gets or sets the collection of font features to apply to the text. |
+| [FontSize](#uid-2052c58cf4) | Gets or sets the size of the font used to display text. |
+| [FontStretch](#uid-ec4b0245c4) | Gets or sets the degree to which the font is stretched horizontally. |
+| [FontStyle](#uid-e10f1b7020) | Gets or sets the font style used to display the text. |
+| [FontWeight](#uid-6c23d05b42) | Gets or sets the weight or thickness of the font used to display text. |
+| [Foreground](#uid-0c97ada7e3) | Gets or sets the brush used to paint the foreground of the control. |
+| [IsAttachedToDocument](#uid-9e20282634) | Gets a value indicating whether this element is currently attached to a [Avalonia.Controls.Documents.TextModel.TextDocument](xref:Avalonia.Controls.Documents.TextModel.TextDocument). |
+| [IsInitialized](../../styledelement.mdx#uid-59a7cddacb) | Gets a value that indicates whether the element has finished initialization. Inherited from [StyledElement](../../styledelement.mdx). |
+| [Item](../../avaloniaobject.mdx#uid-c1d1f1bc0f) | Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [LastChildElement](#uid-ea00d129b3) | Gets the last direct child element in the document tree, or if none exists. |
+| [LetterSpacing](#uid-a0f0542ed1) | Gets or sets the letter spacing. |
+| [Name](../../styledelement.mdx#uid-245f4ccff5) | Gets or sets the name of the styled element. Inherited from [StyledElement](../../styledelement.mdx). |
+| [NextElement](#uid-ea4a606df4) | Gets the next sibling element in the document tree, or if none exists. |
+| [Parent](../../styledelement.mdx#uid-aad2c5c78d) | Gets the styled element's logical parent. Inherited from [StyledElement](../../styledelement.mdx). |
+| [PreviousElement](#uid-a864691ebc) | Gets the previous sibling element in the document tree, or if none exists. |
+| [Resources](../../styledelement.mdx#uid-f6488ca4b7) | Gets or sets the styled element's resource dictionary. Inherited from [StyledElement](../../styledelement.mdx). |
+| [StyleKey](../../styledelement.mdx#uid-081584075e) | Gets the type by which the element is styled. Inherited from [StyledElement](../../styledelement.mdx). |
+| [Styles](../../styledelement.mdx#uid-ae663139cc) | Gets the styles for the styled element. Inherited from [StyledElement](../../styledelement.mdx). |
+| [TemplatedParent](../../styledelement.mdx#uid-dbf6ddacc3) | Gets the styled element whose lookless template this styled element is part of. Inherited from [StyledElement](../../styledelement.mdx). |
+| [TextDocument](#uid-3a74fef907) | Gets the [Avalonia.Controls.Documents.TextModel.TextDocument](xref:Avalonia.Controls.Documents.TextModel.TextDocument) this element is attached to, or if not attached. |
+| [Theme](../../styledelement.mdx#uid-1aebed283d) | Gets or sets the theme to be applied to the element. Inherited from [StyledElement](../../styledelement.mdx). |
+| [Transitions](../../animation/animatable.mdx#uid-1b3138f517) | Gets or sets the property transitions for the control. Inherited from [Animatable](../../animation/animatable.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2c999b14d1"></span>
+
+### Background Property
+
+Gets or sets the brush used to fill the background of the control.
+
+```csharp
+public Avalonia.Media.IBrush Background { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-dc015a3770"></span>
+
+### ContentEnd Property
+
+Gets a text pointer to the end of the content in the document.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.TextPointer ContentEnd { get; set; }
+```
+
+#### Remarks
+
+The returned pointer refers to the position immediately following
+the last symbol in the element's content. Returns null if the
+element is not attached.
+
+Returns the element's cached pointer instance. See
+[Avalonia.Controls.Documents.RichTextElement.ContentStart](xref:Avalonia.Controls.Documents.RichTextElement.ContentStart) for the cloning requirement.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-80c368b77e"></span>
+
+### ContentLength Property
+
+Gets the length, in characters, that is covered by this element.
+
+```csharp
+public int ContentLength { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-65e0d953a5"></span>
+
+### ContentRange Property
+
+Gets the range of text that represents the entire content, or null if the content is empty or unavailable.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.TextRange ContentRange { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-808eaf38d3"></span>
+
+### ContentStart Property
+
+Gets a text pointer to the start of the content in the document.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.TextPointer ContentStart { get; set; }
+```
+
+#### Remarks
+
+If the element is not attached to a document, returns null.
+
+Returns the element's cached pointer instance, not a fresh
+allocation. Callers that store the result in a mutable container
+(e.g. [Avalonia.Controls.Documents.TextModel.TextRange](xref:Avalonia.Controls.Documents.TextModel.TextRange) endpoints, undo records) must
+call [Avalonia.Controls.Documents.TextModel.TextPointer.Clone](xref:Avalonia.Controls.Documents.TextModel.TextPointer.Clone) first; otherwise a later
+`UpdateInPlace`/`Refresh` through that container will
+shift the element's cached origin pointer and corrupt every
+future [Avalonia.Controls.Documents.RichTextElement.ContentStart](xref:Avalonia.Controls.Documents.RichTextElement.ContentStart)/[Avalonia.Controls.Documents.RichTextElement.ContentRange](xref:Avalonia.Controls.Documents.RichTextElement.ContentRange)
+read at the current generation. [Avalonia.Controls.Documents.TextModel.TextRange](xref:Avalonia.Controls.Documents.TextModel.TextRange)'s
+constructors and `SetPositions` already perform this clone
+automatically.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e1dc680020"></span>
+
+### FirstChildElement Property
+
+Gets the first direct child element in the document tree, or if none exists.
+
+```csharp
+public Avalonia.Controls.Documents.RichTextElement FirstChildElement { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-128b85f7b7"></span>
+
+### FontFamily Property
+
+Gets or sets the font family used to display text.
+
+```csharp
+public Avalonia.Media.FontFamily FontFamily { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ec960058b3"></span>
+
+### FontFeatures Property
+
+Gets or sets the collection of font features to apply to the text.
+
+```csharp
+public Avalonia.Media.FontFeatureCollection FontFeatures { get; set; }
+```
+
+#### Remarks
+
+Font features allow customization of typographic presentation, such as enabling
+ligatures, alternate glyphs, or stylistic sets. If the value is null, the default font features are
+used.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2052c58cf4"></span>
+
+### FontSize Property
+
+Gets or sets the size of the font used to display text.
+
+```csharp
+public double FontSize { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ec4b0245c4"></span>
+
+### FontStretch Property
+
+Gets or sets the degree to which the font is stretched horizontally.
+
+```csharp
+public Avalonia.Media.FontStretch FontStretch { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e10f1b7020"></span>
+
+### FontStyle Property
+
+Gets or sets the font style used to display the text.
+
+```csharp
+public Avalonia.Media.FontStyle FontStyle { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6c23d05b42"></span>
+
+### FontWeight Property
+
+Gets or sets the weight or thickness of the font used to display text.
+
+```csharp
+public Avalonia.Media.FontWeight FontWeight { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0c97ada7e3"></span>
+
+### Foreground Property
+
+Gets or sets the brush used to paint the foreground of the control.
+
+```csharp
+public Avalonia.Media.IBrush Foreground { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9e20282634"></span>
+
+### IsAttachedToDocument Property
+
+Gets a value indicating whether this element is currently attached to a [Avalonia.Controls.Documents.TextModel.TextDocument](xref:Avalonia.Controls.Documents.TextModel.TextDocument).
+
+```csharp
+public bool IsAttachedToDocument { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ea00d129b3"></span>
+
+### LastChildElement Property
+
+Gets the last direct child element in the document tree, or if none exists.
+
+```csharp
+public Avalonia.Controls.Documents.RichTextElement LastChildElement { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a0f0542ed1"></span>
+
+### LetterSpacing Property
+
+Gets or sets the letter spacing.
+
+```csharp
+public double LetterSpacing { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ea4a606df4"></span>
+
+### NextElement Property
+
+Gets the next sibling element in the document tree, or if none exists.
+
+```csharp
+public Avalonia.Controls.Documents.RichTextElement NextElement { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a864691ebc"></span>
+
+### PreviousElement Property
+
+Gets the previous sibling element in the document tree, or if none exists.
+
+```csharp
+public Avalonia.Controls.Documents.RichTextElement PreviousElement { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3a74fef907"></span>
+
+### TextDocument Property
+
+Gets the [Avalonia.Controls.Documents.TextModel.TextDocument](xref:Avalonia.Controls.Documents.TextModel.TextDocument) this element is attached to, or if not attached.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.TextDocument TextDocument { get; set; }
+```
+
+</section>
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [BackgroundProperty](#uid-c4211a6d03) | Defines the [Avalonia.Controls.Documents.RichTextElement.Background](xref:Avalonia.Controls.Documents.RichTextElement.Background) property. |
+| [DataContextProperty](../../styledelement.mdx#uid-7eefabb929) | Defines the [Avalonia.StyledElement.DataContext](xref:Avalonia.StyledElement.DataContext) property. Inherited from [StyledElement](../../styledelement.mdx). |
+| [FontFamilyProperty](#uid-61ff640cdf) | Defines the [Avalonia.Controls.Documents.RichTextElement.FontFamily](xref:Avalonia.Controls.Documents.RichTextElement.FontFamily) property. |
+| [FontFeaturesProperty](#uid-f72d8f96e2) | Defines the [Avalonia.Controls.Documents.RichTextElement.FontFeatures](xref:Avalonia.Controls.Documents.RichTextElement.FontFeatures) property. |
+| [FontSizeProperty](#uid-ec2dbef21a) | Defines the [Avalonia.Controls.Documents.RichTextElement.FontSize](xref:Avalonia.Controls.Documents.RichTextElement.FontSize) property. |
+| [FontStretchProperty](#uid-972a45cbc0) | Defines the [Avalonia.Controls.Documents.RichTextElement.FontStretch](xref:Avalonia.Controls.Documents.RichTextElement.FontStretch) property. |
+| [FontStyleProperty](#uid-32f20b0829) | Defines the [Avalonia.Controls.Documents.RichTextElement.FontStyle](xref:Avalonia.Controls.Documents.RichTextElement.FontStyle) property. |
+| [FontWeightProperty](#uid-837218717b) | Defines the [Avalonia.Controls.Documents.RichTextElement.FontWeight](xref:Avalonia.Controls.Documents.RichTextElement.FontWeight) property. |
+| [ForegroundProperty](#uid-b2d4886b1f) | Defines the [Avalonia.Controls.Documents.RichTextElement.Foreground](xref:Avalonia.Controls.Documents.RichTextElement.Foreground) property. |
+| [LetterSpacingProperty](#uid-2f77955584) | Defines the [Avalonia.Controls.Documents.RichTextElement.LetterSpacing](xref:Avalonia.Controls.Documents.RichTextElement.LetterSpacing) property. |
+| [NameProperty](../../styledelement.mdx#uid-bcdbb9de56) | Defines the [Avalonia.StyledElement.Name](xref:Avalonia.StyledElement.Name) property. Inherited from [StyledElement](../../styledelement.mdx). |
+| [ParentProperty](../../styledelement.mdx#uid-dc6481a488) | Defines the [Avalonia.StyledElement.Parent](xref:Avalonia.StyledElement.Parent) property. Inherited from [StyledElement](../../styledelement.mdx). |
+| [TemplatedParentProperty](../../styledelement.mdx#uid-a2c7149a6b) | Defines the [Avalonia.StyledElement.TemplatedParent](xref:Avalonia.StyledElement.TemplatedParent) property. Inherited from [StyledElement](../../styledelement.mdx). |
+| [ThemeProperty](../../styledelement.mdx#uid-05852d7b9a) | Defines the [Avalonia.StyledElement.Theme](xref:Avalonia.StyledElement.Theme) property. Inherited from [StyledElement](../../styledelement.mdx). |
+| [TransitionsProperty](../../animation/animatable.mdx#uid-c79f18fac2) | Defines the [Avalonia.Animation.Animatable.Transitions](xref:Avalonia.Animation.Animatable.Transitions) property. Inherited from [Animatable](../../animation/animatable.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c4211a6d03"></span>
+
+### BackgroundProperty Field
+
+Defines the [Avalonia.Controls.Documents.RichTextElement.Background](xref:Avalonia.Controls.Documents.RichTextElement.Background) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Media.IBrush> BackgroundProperty
+```
+
+#### Remarks
+
+Not inherited via the Avalonia property system. Background inheritance
+for inline elements is resolved manually during rendering so that
+a background set on a [Avalonia.Controls.Documents.RichSpan](xref:Avalonia.Controls.Documents.RichSpan) propagates to its child
+inlines without leaking across block boundaries.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-61ff640cdf"></span>
+
+### FontFamilyProperty Field
+
+Defines the [Avalonia.Controls.Documents.RichTextElement.FontFamily](xref:Avalonia.Controls.Documents.RichTextElement.FontFamily) property.
+
+```csharp
+public Avalonia.AttachedProperty<Avalonia.Media.FontFamily> FontFamilyProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f72d8f96e2"></span>
+
+### FontFeaturesProperty Field
+
+Defines the [Avalonia.Controls.Documents.RichTextElement.FontFeatures](xref:Avalonia.Controls.Documents.RichTextElement.FontFeatures) property.
+
+```csharp
+public Avalonia.AttachedProperty<Avalonia.Media.FontFeatureCollection> FontFeaturesProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ec2dbef21a"></span>
+
+### FontSizeProperty Field
+
+Defines the [Avalonia.Controls.Documents.RichTextElement.FontSize](xref:Avalonia.Controls.Documents.RichTextElement.FontSize) property.
+
+```csharp
+public Avalonia.AttachedProperty<double> FontSizeProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-972a45cbc0"></span>
+
+### FontStretchProperty Field
+
+Defines the [Avalonia.Controls.Documents.RichTextElement.FontStretch](xref:Avalonia.Controls.Documents.RichTextElement.FontStretch) property.
+
+```csharp
+public Avalonia.AttachedProperty<Avalonia.Media.FontStretch> FontStretchProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-32f20b0829"></span>
+
+### FontStyleProperty Field
+
+Defines the [Avalonia.Controls.Documents.RichTextElement.FontStyle](xref:Avalonia.Controls.Documents.RichTextElement.FontStyle) property.
+
+```csharp
+public Avalonia.AttachedProperty<Avalonia.Media.FontStyle> FontStyleProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-837218717b"></span>
+
+### FontWeightProperty Field
+
+Defines the [Avalonia.Controls.Documents.RichTextElement.FontWeight](xref:Avalonia.Controls.Documents.RichTextElement.FontWeight) property.
+
+```csharp
+public Avalonia.AttachedProperty<Avalonia.Media.FontWeight> FontWeightProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b2d4886b1f"></span>
+
+### ForegroundProperty Field
+
+Defines the [Avalonia.Controls.Documents.RichTextElement.Foreground](xref:Avalonia.Controls.Documents.RichTextElement.Foreground) property.
+
+```csharp
+public Avalonia.AttachedProperty<Avalonia.Media.IBrush> ForegroundProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2f77955584"></span>
+
+### LetterSpacingProperty Field
+
+Defines the [Avalonia.Controls.Documents.RichTextElement.LetterSpacing](xref:Avalonia.Controls.Documents.RichTextElement.LetterSpacing) property.
+
+```csharp
+public Avalonia.AttachedProperty<double> LetterSpacingProperty
+```
+
+#### Remarks
+
+This is an inherited attached property that defines letter spacing for text.
+Letter spacing is specified in pixels. Default value is 0 (normal spacing).
+Positive values increase spacing between characters.
+Negative values decrease spacing between characters.
+
+</section>
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [ActualThemeVariantChanged](../../styledelement.mdx#uid-e69ef27e71) | Raised when the theme variant is changed on the element or an ancestor of the element. Inherited from [StyledElement](../../styledelement.mdx). |
+| [AttachedToLogicalTree](../../styledelement.mdx#uid-717aa68e85) | Raised when the styled element is attached to a rooted logical tree. Inherited from [StyledElement](../../styledelement.mdx). |
+| [DataContextChanged](../../styledelement.mdx#uid-4b1cc873f8) | Occurs when the [Avalonia.StyledElement.DataContext](xref:Avalonia.StyledElement.DataContext) property changes. Inherited from [StyledElement](../../styledelement.mdx). |
+| [DetachedFromLogicalTree](../../styledelement.mdx#uid-d9f5afa535) | Raised when the styled element is detached from a rooted logical tree. Inherited from [StyledElement](../../styledelement.mdx). |
+| [Initialized](../../styledelement.mdx#uid-bd6a5e5c0e) | Occurs when the styled element has finished initialization. Inherited from [StyledElement](../../styledelement.mdx). |
+| [PropertyChanged](../../avaloniaobject.mdx#uid-d758e26fae) | Raised when a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value changes on this object. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [ResourcesChanged](../../styledelement.mdx#uid-99a7f47c56) | Occurs when a resource in this styled element or a parent styled element has changed. Inherited from [StyledElement](../../styledelement.mdx). |
+
+</ApiRefPage>
+

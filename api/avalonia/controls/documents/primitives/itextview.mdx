@@ -1,0 +1,428 @@
+---
+title: 'ITextView'
+hide_title: true
+slug: '/avalonia/controls/documents/primitives/itextview'
+uid: 'Avalonia.Controls.Documents.Primitives.ITextView'
+commentId: 'T:Avalonia.Controls.Documents.Primitives.ITextView'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Documents'
+assembly: 'Avalonia.Controls.Documents'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.Primitives'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ITextView Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.Primitives</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Provides coordinate mapping and hit testing for document content.
+Bridges between the document model ([TextPointer](xref:Avalonia.Controls.Documents.TextModel.TextPointer)) and visual representation (coordinates).
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface ITextView
+```
+
+</div>
+
+## Remarks
+
+Rather than forcing synchronous layout, callers can subscribe to [Avalonia.Controls.Documents.Primitives.ITextView.LayoutUpdated](xref:Avalonia.Controls.Documents.Primitives.ITextView.LayoutUpdated)
+to be notified when layout becomes valid.
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [GetLineFromPosition](#uid-81f5cfa503) | Gets the line containing the specified position. |
+| [GetNextLine](#uid-03ba01e289) | Gets the next line after the specified line. |
+| [GetPositionAtLineEnd](#uid-a72ac011b6) | Gets the position at the end of the line containing the specified position. |
+| [GetPositionAtLineStart](#uid-1e40500af3) | Gets the position at the start of the line containing the specified position. |
+| [GetPositionAtLineX](#uid-c12d84f8fc) | Returns the text position on `line` closest to the specified X coordinate. The result is guaranteed to stay on `line`; it never crosses into a neighbouring line or block, regardless of how far `x` lies outside the line's horizontal bounds. |
+| [GetPreviousLine](#uid-dfe7d979c9) | Gets the previous line before the specified line. |
+| [GetRectangleFromTextPosition](#uid-a6a7f0d189) | Gets the bounding rectangle for a character at the specified position. |
+| [GetTextPositionFromPoint](#uid-f29386de95) | Gets the text position from a screen point. |
+| [GetVisibleLineAtOrAfter](#uid-e6882b9acd) | Gets the first visible line at or after the specified position. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-81f5cfa503"></span>
+
+### GetLineFromPosition Method
+
+Gets the line containing the specified position.
+
+```csharp
+public Avalonia.Controls.Documents.Primitives.ITextLine GetLineFromPosition(Avalonia.Controls.Documents.TextModel.TextPointer position)
+```
+
+#### Parameters
+
+`position` [Avalonia.Controls.Documents.TextModel.TextPointer](xref:Avalonia.Controls.Documents.TextModel.TextPointer)
+
+The text position.
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.Primitives.ITextLine](xref:Avalonia.Controls.Documents.Primitives.ITextLine)
+
+The line containing the position, or null if the position is not visible.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-03ba01e289"></span>
+
+### GetNextLine Method
+
+Gets the next line after the specified line.
+
+```csharp
+public Avalonia.Controls.Documents.Primitives.ITextLine GetNextLine(Avalonia.Controls.Documents.Primitives.ITextLine currentLine)
+```
+
+#### Parameters
+
+`currentLine` [Avalonia.Controls.Documents.Primitives.ITextLine](xref:Avalonia.Controls.Documents.Primitives.ITextLine)
+
+The current line.
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.Primitives.ITextLine](xref:Avalonia.Controls.Documents.Primitives.ITextLine)
+
+The next line, or null if at the last line.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a72ac011b6"></span>
+
+### GetPositionAtLineEnd Method
+
+Gets the position at the end of the line containing the specified position.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.TextPointer GetPositionAtLineEnd(Avalonia.Controls.Documents.TextModel.TextPointer position)
+```
+
+#### Parameters
+
+`position` [Avalonia.Controls.Documents.TextModel.TextPointer](xref:Avalonia.Controls.Documents.TextModel.TextPointer)
+
+The text position.
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.TextModel.TextPointer](xref:Avalonia.Controls.Documents.TextModel.TextPointer)
+
+The position at line end, or null if the position is not visible.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1e40500af3"></span>
+
+### GetPositionAtLineStart Method
+
+Gets the position at the start of the line containing the specified position.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.TextPointer GetPositionAtLineStart(Avalonia.Controls.Documents.TextModel.TextPointer position)
+```
+
+#### Parameters
+
+`position` [Avalonia.Controls.Documents.TextModel.TextPointer](xref:Avalonia.Controls.Documents.TextModel.TextPointer)
+
+The text position.
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.TextModel.TextPointer](xref:Avalonia.Controls.Documents.TextModel.TextPointer)
+
+The position at line start, or null if the position is not visible.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c12d84f8fc"></span>
+
+### GetPositionAtLineX Method
+
+Returns the text position on `line` closest to the
+specified X coordinate. The result is guaranteed to stay on
+`line`; it never crosses into a neighbouring line
+or block, regardless of how far `x` lies outside
+the line's horizontal bounds.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.TextPointer GetPositionAtLineX(Avalonia.Controls.Documents.Primitives.ITextLine line, double x)
+```
+
+#### Parameters
+
+`line` [Avalonia.Controls.Documents.Primitives.ITextLine](xref:Avalonia.Controls.Documents.Primitives.ITextLine)
+
+The target line.
+
+
+`x` double
+
+The desired X coordinate in view space.
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.TextModel.TextPointer](xref:Avalonia.Controls.Documents.TextModel.TextPointer)
+
+A node-aware pointer on `line`, or `null`
+when the line or its containing element cannot be resolved.
+
+
+#### Remarks
+
+This is the structure-first primitive used by vertical caret
+navigation. It avoids the offset collisions that affect empty
+paragraphs and prevents the hit test from leaking into adjacent
+blocks when `x` is near a block boundary.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-dfe7d979c9"></span>
+
+### GetPreviousLine Method
+
+Gets the previous line before the specified line.
+
+```csharp
+public Avalonia.Controls.Documents.Primitives.ITextLine GetPreviousLine(Avalonia.Controls.Documents.Primitives.ITextLine currentLine)
+```
+
+#### Parameters
+
+`currentLine` [Avalonia.Controls.Documents.Primitives.ITextLine](xref:Avalonia.Controls.Documents.Primitives.ITextLine)
+
+The current line.
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.Primitives.ITextLine](xref:Avalonia.Controls.Documents.Primitives.ITextLine)
+
+The previous line, or null if at the first line.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a6a7f0d189"></span>
+
+### GetRectangleFromTextPosition Method
+
+Gets the bounding rectangle for a character at the specified position.
+
+```csharp
+public Avalonia.Rect GetRectangleFromTextPosition(Avalonia.Controls.Documents.TextModel.TextPointer position, Avalonia.Controls.Documents.TextModel.LogicalDirection direction)
+```
+
+#### Parameters
+
+`position` [Avalonia.Controls.Documents.TextModel.TextPointer](xref:Avalonia.Controls.Documents.TextModel.TextPointer)
+
+The text position.
+
+
+`direction` [Avalonia.Controls.Documents.TextModel.LogicalDirection](xref:Avalonia.Controls.Documents.TextModel.LogicalDirection)
+
+The logical direction for caret placement at element boundaries.
+
+
+#### Returns
+
+[Avalonia.Rect](xref:Avalonia.Rect)
+
+The bounding rectangle, or a default rect if the position is not visible or layout is invalid.
+
+
+#### Remarks
+
+Check [Avalonia.Controls.Documents.Primitives.ITextView.IsLayoutValid](xref:Avalonia.Controls.Documents.Primitives.ITextView.IsLayoutValid) before calling this method for accurate results.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f29386de95"></span>
+
+### GetTextPositionFromPoint Method
+
+Gets the text position from a screen point.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.TextPointer GetTextPositionFromPoint(Avalonia.Point point, bool snapToText)
+```
+
+#### Parameters
+
+`point` [Avalonia.Point](xref:Avalonia.Point)
+
+The point in view coordinates.
+
+
+`snapToText` bool
+
+If true, snaps to the nearest text position even if the point is outside text bounds.
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.TextModel.TextPointer](xref:Avalonia.Controls.Documents.TextModel.TextPointer)
+
+The text position, or null if no position could be determined.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e6882b9acd"></span>
+
+### GetVisibleLineAtOrAfter Method
+
+Gets the first visible line at or after the specified position.
+
+```csharp
+public Avalonia.Controls.Documents.Primitives.ITextLine GetVisibleLineAtOrAfter(Avalonia.Controls.Documents.TextModel.TextPointer position)
+```
+
+#### Parameters
+
+`position` [Avalonia.Controls.Documents.TextModel.TextPointer](xref:Avalonia.Controls.Documents.TextModel.TextPointer)
+
+The text position to search from.
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.Primitives.ITextLine](xref:Avalonia.Controls.Documents.Primitives.ITextLine)
+
+The first visible line at or after the position, or `null` if no
+visible line exists at or beyond `position`.
+
+
+#### Remarks
+
+In a virtualizing view, [Avalonia.Controls.Documents.Primitives.ITextView.GetLineFromPosition(Avalonia.Controls.Documents.TextModel.TextPointer)](xref:Avalonia.Controls.Documents.Primitives.ITextView.GetLineFromPosition%28Avalonia.Controls.Documents.TextModel.TextPointer%29) returns `null`
+when the target block is not realized. This method skips over unrealized
+blocks and returns the first line that the view can resolve. Non-virtualizing
+implementations may simply delegate to [Avalonia.Controls.Documents.Primitives.ITextView.GetLineFromPosition(Avalonia.Controls.Documents.TextModel.TextPointer)](xref:Avalonia.Controls.Documents.Primitives.ITextView.GetLineFromPosition%28Avalonia.Controls.Documents.TextModel.TextPointer%29).
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [IsLayoutValid](#uid-3466b95141) | Gets whether the view layout is valid and coordinate queries will return accurate results. |
+| [TextDocument](#uid-da7596a94b) | Gets the [TextDocument](xref:Avalonia.Controls.Documents.TextModel.TextDocument) being rendered. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3466b95141"></span>
+
+### IsLayoutValid Property
+
+Gets whether the view layout is valid and coordinate queries will return accurate results.
+
+```csharp
+public bool IsLayoutValid { get; set; }
+```
+
+#### Remarks
+
+This typically returns true when both measure and arrange have completed.
+Coordinate mapping methods may return stale or default values when this is false.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-da7596a94b"></span>
+
+### TextDocument Property
+
+Gets the [TextDocument](xref:Avalonia.Controls.Documents.TextModel.TextDocument) being rendered.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.TextDocument TextDocument { get; set; }
+```
+
+</section>
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [LayoutUpdated](#uid-3917a64a1e) | Event raised when the view layout has been updated and is now valid. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3917a64a1e"></span>
+
+### LayoutUpdated Event
+
+Event raised when the view layout has been updated and is now valid.
+
+```csharp
+public event EventHandler LayoutUpdated
+```
+
+#### Remarks
+
+Subscribe to this event to be notified when layout completes, rather than
+forcing synchronous layout. This integrates with Avalonia's deferred layout system.
+
+</section>
+
+</ApiRefPage>
+

@@ -1,0 +1,397 @@
+---
+title: 'BlockAdorner'
+hide_title: true
+slug: '/avalonia/controls/documents/primitives/adorners/blockadorner'
+uid: 'Avalonia.Controls.Documents.Primitives.Adorners.BlockAdorner'
+commentId: 'T:Avalonia.Controls.Documents.Primitives.Adorners.BlockAdorner'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Documents'
+assembly: 'Avalonia.Controls.Documents'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.Primitives.Adorners'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">BlockAdorner Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.Primitives.Adorners</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Base class for editor-driven block decorations that participate in the
+Avalonia property system and logical tree.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class BlockAdorner
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../../../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../../../animation/animatable">Animatable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../../../styledelement">StyledElement</a> <span className="apiref-page__relation-separator">-&gt;</span> BlockAdorner
+</div>
+</div>
+
+## Remarks
+
+Subclasses decorate realized [Avalonia.Controls.Documents.Primitives.DocumentNodes.DocumentNode](xref:Avalonia.Controls.Documents.Primitives.DocumentNodes.DocumentNode) instances
+without modifying the block data model. A single adorner can provide
+immediate-mode rendering via [Avalonia.Controls.Documents.Primitives.Adorners.BlockAdorner.Render(Avalonia.Media.DrawingContext,Avalonia.Controls.Documents.Primitives.DocumentNodes.DocumentNode,Avalonia.Rect)](xref:Avalonia.Controls.Documents.Primitives.Adorners.BlockAdorner.Render%28Avalonia.Media.DrawingContext%2CAvalonia.Controls.Documents.Primitives.DocumentNodes.DocumentNode%2CAvalonia.Rect%29), interactive controls
+via [Avalonia.Controls.Documents.Primitives.Adorners.BlockAdorner.CreateControl(Avalonia.Controls.Documents.Primitives.DocumentNodes.DocumentNode)](xref:Avalonia.Controls.Documents.Primitives.Adorners.BlockAdorner.CreateControl%28Avalonia.Controls.Documents.Primitives.DocumentNodes.DocumentNode%29)/[Avalonia.Controls.Documents.Primitives.Adorners.BlockAdorner.UpdateControl(Avalonia.Controls.Control,Avalonia.Controls.Documents.Primitives.DocumentNodes.DocumentNode,Avalonia.Rect)](xref:Avalonia.Controls.Documents.Primitives.Adorners.BlockAdorner.UpdateControl%28Avalonia.Controls.Control%2CAvalonia.Controls.Documents.Primitives.DocumentNodes.DocumentNode%2CAvalonia.Rect%29), or both.
+
+Each adorner declares which block categories it targets via
+[Avalonia.Controls.Documents.Primitives.Adorners.BlockAdorner.TargetAreas](xref:Avalonia.Controls.Documents.Primitives.Adorners.BlockAdorner.TargetAreas) and whether it renders on all matching blocks
+or only the current context block via [Avalonia.Controls.Documents.Primitives.Adorners.BlockAdorner.Visibility](xref:Avalonia.Controls.Documents.Primitives.Adorners.BlockAdorner.Visibility).
+
+Because [Avalonia.Controls.Documents.Primitives.Adorners.BlockAdorner](xref:Avalonia.Controls.Documents.Primitives.Adorners.BlockAdorner) extends [Avalonia.StyledElement](xref:Avalonia.StyledElement),
+adorners added to a [Avalonia.Controls.Documents.Primitives.Adorners.BlockAdornerLayer](xref:Avalonia.Controls.Documents.Primitives.Adorners.BlockAdornerLayer) join its logical
+tree and can receive styles and dynamic resources from ancestor
+resource dictionaries.
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [ApplyStyling](../../../../styledelement.mdx#uid-b0f81a6f8f) | Applies styling to the control if the control is initialized and styling is not already applied. Inherited from [StyledElement](../../../../styledelement.mdx). |
+| [BeginInit](../../../../styledelement.mdx#uid-91c6ccadce) | Inherited from [StyledElement](../../../../styledelement.mdx). |
+| [Bind (8 overloads)](../../../../avaloniaobject.mdx#uid-1c60c7bda3) | Binds a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) to an [Avalonia.Data.BindingBase](xref:Avalonia.Data.BindingBase). Inherited from [AvaloniaObject](../../../../avaloniaobject.mdx). |
+| [CheckAccess](../../../../avaloniaobject.mdx#uid-260ff7a68d) | Returns a value indicating whether the current thread is the UI thread. Inherited from [AvaloniaObject](../../../../avaloniaobject.mdx). |
+| [ClearValue (4 overloads)](../../../../avaloniaobject.mdx#uid-41de208fbe) | Clears a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty)'s local value. Inherited from [AvaloniaObject](../../../../avaloniaobject.mdx). |
+| [CoerceValue](../../../../avaloniaobject.mdx#uid-3bec32f39e) | Coerces the specified [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty). Inherited from [AvaloniaObject](../../../../avaloniaobject.mdx). |
+| [CreateControl](#uid-0b918309b9) | Creates an interactive control overlaid on a document node, or returns `null` if this adorner has no interactive component. Called once per (adorner, node) pair when the node first becomes realized and passes all filters. |
+| [EndInit](../../../../styledelement.mdx#uid-17b450469d) | Inherited from [StyledElement](../../../../styledelement.mdx). |
+| [Equals](../../../../avaloniaobject.mdx#uid-a8a8e94305) | Compares two objects using reference equality. Inherited from [AvaloniaObject](../../../../avaloniaobject.mdx). |
+| [GetBaseValue](../../../../avaloniaobject.mdx#uid-9c615efbba) | Inherited from [AvaloniaObject](../../../../avaloniaobject.mdx). |
+| [GetHashCode](../../../../avaloniaobject.mdx#uid-7f7db1e7a2) | Gets the hash code for the object. Inherited from [AvaloniaObject](../../../../avaloniaobject.mdx). |
+| [GetValue (3 overloads)](../../../../avaloniaobject.mdx#uid-5142cd4792) | Gets a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value. Inherited from [AvaloniaObject](../../../../avaloniaobject.mdx). |
+| [IsAnimating](../../../../avaloniaobject.mdx#uid-8cbfc7521a) | Checks whether a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) is animating. Inherited from [AvaloniaObject](../../../../avaloniaobject.mdx). |
+| [IsSet](../../../../avaloniaobject.mdx#uid-f8bf0bbdcc) | Checks whether a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) is set on this object. Inherited from [AvaloniaObject](../../../../avaloniaobject.mdx). |
+| [Render](#uid-fae338da2a) | Draws the immediate-mode decoration for a single block. Adorners that only provide interactive controls can leave this as a no-op. |
+| [SetCurrentValue (2 overloads)](../../../../avaloniaobject.mdx#uid-38759fd088) | Sets the value of a dependency property without changing its value source. Inherited from [AvaloniaObject](../../../../avaloniaobject.mdx). |
+| [SetValue (3 overloads)](../../../../avaloniaobject.mdx#uid-47d14e19d7) | Sets a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value. Inherited from [AvaloniaObject](../../../../avaloniaobject.mdx). |
+| [ShouldRender](#uid-a01cd8e717) | Performs a final per-node check after target-area and visibility filtering has passed. Use this for fine-grained logic such as skipping blocks that already have visible borders. |
+| [TryGetResource](../../../../styledelement.mdx#uid-2046a6b284) | Inherited from [StyledElement](../../../../styledelement.mdx). |
+| [UpdateControl](#uid-32305af8b8) | Updates an interactive control's state after a layout pass. Only called when [Avalonia.Controls.Documents.Primitives.Adorners.BlockAdorner.CreateControl(Avalonia.Controls.Documents.Primitives.DocumentNodes.DocumentNode)](xref:Avalonia.Controls.Documents.Primitives.Adorners.BlockAdorner.CreateControl%28Avalonia.Controls.Documents.Primitives.DocumentNodes.DocumentNode%29) previously returned a non-null value for this node. |
+| [VerifyAccess](../../../../avaloniaobject.mdx#uid-3b9d3c9793) | Checks that the current thread is the UI thread and throws if not. Inherited from [AvaloniaObject](../../../../avaloniaobject.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0b918309b9"></span>
+
+### CreateControl Method
+
+Creates an interactive control overlaid on a document node, or
+returns `null` if this adorner has no interactive component.
+Called once per (adorner, node) pair when the node first becomes
+realized and passes all filters.
+
+```csharp
+public Avalonia.Controls.Control CreateControl(Avalonia.Controls.Documents.Primitives.DocumentNodes.DocumentNode node)
+```
+
+#### Parameters
+
+`node` [Avalonia.Controls.Documents.Primitives.DocumentNodes.DocumentNode](xref:Avalonia.Controls.Documents.Primitives.DocumentNodes.DocumentNode)
+
+The realized document node to adorn.
+
+
+#### Returns
+
+[Avalonia.Controls.Control](xref:Avalonia.Controls.Control)
+
+A new control, or `null` for non-interactive adorners.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-fae338da2a"></span>
+
+### Render Method
+
+Draws the immediate-mode decoration for a single block.
+Adorners that only provide interactive controls can leave this as
+a no-op.
+
+```csharp
+public void Render(Avalonia.Media.DrawingContext context, Avalonia.Controls.Documents.Primitives.DocumentNodes.DocumentNode node, Avalonia.Rect blockBounds)
+```
+
+#### Parameters
+
+`context` [Avalonia.Media.DrawingContext](xref:Avalonia.Media.DrawingContext)
+
+The drawing context, already transformed into
+text-view coordinates.
+
+
+`node` [Avalonia.Controls.Documents.Primitives.DocumentNodes.DocumentNode](xref:Avalonia.Controls.Documents.Primitives.DocumentNodes.DocumentNode)
+
+The realized document node being decorated.
+
+
+`blockBounds` [Avalonia.Rect](xref:Avalonia.Rect)
+
+The node bounds in text-view coordinates.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a01cd8e717"></span>
+
+### ShouldRender Method
+
+Performs a final per-node check after target-area and visibility
+filtering has passed. Use this for fine-grained logic such as
+skipping blocks that already have visible borders.
+
+```csharp
+public bool ShouldRender(Avalonia.Controls.Documents.Primitives.DocumentNodes.DocumentNode node)
+```
+
+#### Parameters
+
+`node` [Avalonia.Controls.Documents.Primitives.DocumentNodes.DocumentNode](xref:Avalonia.Controls.Documents.Primitives.DocumentNodes.DocumentNode)
+
+The realized document node to test.
+
+
+#### Returns
+
+bool
+
+`true` if the adorner should render for this node.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-32305af8b8"></span>
+
+### UpdateControl Method
+
+Updates an interactive control's state after a layout pass.
+Only called when [Avalonia.Controls.Documents.Primitives.Adorners.BlockAdorner.CreateControl(Avalonia.Controls.Documents.Primitives.DocumentNodes.DocumentNode)](xref:Avalonia.Controls.Documents.Primitives.Adorners.BlockAdorner.CreateControl%28Avalonia.Controls.Documents.Primitives.DocumentNodes.DocumentNode%29) previously returned a
+non-null value for this node.
+
+```csharp
+public void UpdateControl(Avalonia.Controls.Control control, Avalonia.Controls.Documents.Primitives.DocumentNodes.DocumentNode node, Avalonia.Rect blockBounds)
+```
+
+#### Parameters
+
+`control` [Avalonia.Controls.Control](xref:Avalonia.Controls.Control)
+
+The control previously returned by [Avalonia.Controls.Documents.Primitives.Adorners.BlockAdorner.CreateControl(Avalonia.Controls.Documents.Primitives.DocumentNodes.DocumentNode)](xref:Avalonia.Controls.Documents.Primitives.Adorners.BlockAdorner.CreateControl%28Avalonia.Controls.Documents.Primitives.DocumentNodes.DocumentNode%29).
+
+
+`node` [Avalonia.Controls.Documents.Primitives.DocumentNodes.DocumentNode](xref:Avalonia.Controls.Documents.Primitives.DocumentNodes.DocumentNode)
+
+The realized document node.
+
+
+`blockBounds` [Avalonia.Rect](xref:Avalonia.Rect)
+
+The node bounds in text-view coordinates.
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [ActualThemeVariant](../../../../styledelement.mdx#uid-776bcbe4bf) | Gets the UI theme that is currently used by the element, which might be different than the RequestedThemeVariantProperty. Inherited from [StyledElement](../../../../styledelement.mdx). |
+| [Classes](../../../../styledelement.mdx#uid-b7b7edea05) | Gets or sets the styled element's classes. Inherited from [StyledElement](../../../../styledelement.mdx). |
+| [DataContext](../../../../styledelement.mdx#uid-647f924a56) | Gets or sets the control's data context. Inherited from [StyledElement](../../../../styledelement.mdx). |
+| [Dispatcher](../../../../avaloniaobject.mdx#uid-b25fa51632) | Returns the [Avalonia.AvaloniaObject.Dispatcher](xref:Avalonia.AvaloniaObject.Dispatcher) that this [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject) is associated with. Inherited from [AvaloniaObject](../../../../avaloniaobject.mdx). |
+| [IsEnabled](#uid-2eff321108) | Gets or sets whether this adorner takes part in rendering. When `false`, the layer skips it entirely. |
+| [IsInitialized](../../../../styledelement.mdx#uid-59a7cddacb) | Gets a value that indicates whether the element has finished initialization. Inherited from [StyledElement](../../../../styledelement.mdx). |
+| [Item](../../../../avaloniaobject.mdx#uid-c1d1f1bc0f) | Inherited from [AvaloniaObject](../../../../avaloniaobject.mdx). |
+| [Name](../../../../styledelement.mdx#uid-245f4ccff5) | Gets or sets the name of the styled element. Inherited from [StyledElement](../../../../styledelement.mdx). |
+| [Parent](../../../../styledelement.mdx#uid-aad2c5c78d) | Gets the styled element's logical parent. Inherited from [StyledElement](../../../../styledelement.mdx). |
+| [Resources](../../../../styledelement.mdx#uid-f6488ca4b7) | Gets or sets the styled element's resource dictionary. Inherited from [StyledElement](../../../../styledelement.mdx). |
+| [StyleKey](../../../../styledelement.mdx#uid-081584075e) | Gets the type by which the element is styled. Inherited from [StyledElement](../../../../styledelement.mdx). |
+| [Styles](../../../../styledelement.mdx#uid-ae663139cc) | Gets the styles for the styled element. Inherited from [StyledElement](../../../../styledelement.mdx). |
+| [TargetAreas](#uid-e0d87383b4) | Gets which block categories this adorner targets. The layer skips blocks whose resolved category does not intersect with this value. |
+| [TemplatedParent](../../../../styledelement.mdx#uid-dbf6ddacc3) | Gets the styled element whose lookless template this styled element is part of. Inherited from [StyledElement](../../../../styledelement.mdx). |
+| [Theme](../../../../styledelement.mdx#uid-1aebed283d) | Gets or sets the theme to be applied to the element. Inherited from [StyledElement](../../../../styledelement.mdx). |
+| [Transitions](../../../../animation/animatable.mdx#uid-1b3138f517) | Gets or sets the property transitions for the control. Inherited from [Animatable](../../../../animation/animatable.mdx). |
+| [Visibility](#uid-2d744a03b1) | Gets or sets whether this adorner renders on every matching block or only on the current context block. |
+| [ZIndex](#uid-e51bedbe4d) | Gets or sets the Z-index for render ordering among adorners. Higher values render on top. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2eff321108"></span>
+
+### IsEnabled Property
+
+Gets or sets whether this adorner takes part in rendering.
+When `false`, the layer skips it entirely.
+
+```csharp
+public bool IsEnabled { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e0d87383b4"></span>
+
+### TargetAreas Property
+
+Gets which block categories this adorner targets.
+The layer skips blocks whose resolved category does not
+intersect with this value.
+
+```csharp
+public Avalonia.Controls.Documents.Primitives.Adorners.ToolbarTargetAreas TargetAreas { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2d744a03b1"></span>
+
+### Visibility Property
+
+Gets or sets whether this adorner renders on every matching block
+or only on the current context block.
+
+```csharp
+public Avalonia.Controls.Documents.Primitives.Adorners.BlockAdornerVisibility Visibility { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e51bedbe4d"></span>
+
+### ZIndex Property
+
+Gets or sets the Z-index for render ordering among adorners.
+Higher values render on top.
+
+```csharp
+public int ZIndex { get; set; }
+```
+
+</section>
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [DataContextProperty](../../../../styledelement.mdx#uid-7eefabb929) | Defines the [Avalonia.StyledElement.DataContext](xref:Avalonia.StyledElement.DataContext) property. Inherited from [StyledElement](../../../../styledelement.mdx). |
+| [IsEnabledProperty](#uid-ac96347334) | Defines the [Avalonia.Controls.Documents.Primitives.Adorners.BlockAdorner.IsEnabled](xref:Avalonia.Controls.Documents.Primitives.Adorners.BlockAdorner.IsEnabled) property. |
+| [NameProperty](../../../../styledelement.mdx#uid-bcdbb9de56) | Defines the [Avalonia.StyledElement.Name](xref:Avalonia.StyledElement.Name) property. Inherited from [StyledElement](../../../../styledelement.mdx). |
+| [ParentProperty](../../../../styledelement.mdx#uid-dc6481a488) | Defines the [Avalonia.StyledElement.Parent](xref:Avalonia.StyledElement.Parent) property. Inherited from [StyledElement](../../../../styledelement.mdx). |
+| [TemplatedParentProperty](../../../../styledelement.mdx#uid-a2c7149a6b) | Defines the [Avalonia.StyledElement.TemplatedParent](xref:Avalonia.StyledElement.TemplatedParent) property. Inherited from [StyledElement](../../../../styledelement.mdx). |
+| [ThemeProperty](../../../../styledelement.mdx#uid-05852d7b9a) | Defines the [Avalonia.StyledElement.Theme](xref:Avalonia.StyledElement.Theme) property. Inherited from [StyledElement](../../../../styledelement.mdx). |
+| [TransitionsProperty](../../../../animation/animatable.mdx#uid-c79f18fac2) | Defines the [Avalonia.Animation.Animatable.Transitions](xref:Avalonia.Animation.Animatable.Transitions) property. Inherited from [Animatable](../../../../animation/animatable.mdx). |
+| [VisibilityProperty](#uid-0a6fd4b6a0) | Defines the [Avalonia.Controls.Documents.Primitives.Adorners.BlockAdorner.Visibility](xref:Avalonia.Controls.Documents.Primitives.Adorners.BlockAdorner.Visibility) property. |
+| [ZIndexProperty](#uid-5a08412f82) | Defines the [Avalonia.Controls.Documents.Primitives.Adorners.BlockAdorner.ZIndex](xref:Avalonia.Controls.Documents.Primitives.Adorners.BlockAdorner.ZIndex) property. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ac96347334"></span>
+
+### IsEnabledProperty Field
+
+Defines the [Avalonia.Controls.Documents.Primitives.Adorners.BlockAdorner.IsEnabled](xref:Avalonia.Controls.Documents.Primitives.Adorners.BlockAdorner.IsEnabled) property.
+
+```csharp
+public Avalonia.StyledProperty<bool> IsEnabledProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0a6fd4b6a0"></span>
+
+### VisibilityProperty Field
+
+Defines the [Avalonia.Controls.Documents.Primitives.Adorners.BlockAdorner.Visibility](xref:Avalonia.Controls.Documents.Primitives.Adorners.BlockAdorner.Visibility) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.Documents.Primitives.Adorners.BlockAdornerVisibility> VisibilityProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5a08412f82"></span>
+
+### ZIndexProperty Field
+
+Defines the [Avalonia.Controls.Documents.Primitives.Adorners.BlockAdorner.ZIndex](xref:Avalonia.Controls.Documents.Primitives.Adorners.BlockAdorner.ZIndex) property.
+
+```csharp
+public Avalonia.StyledProperty<int> ZIndexProperty
+```
+
+</section>
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [ActualThemeVariantChanged](../../../../styledelement.mdx#uid-e69ef27e71) | Raised when the theme variant is changed on the element or an ancestor of the element. Inherited from [StyledElement](../../../../styledelement.mdx). |
+| [AttachedToLogicalTree](../../../../styledelement.mdx#uid-717aa68e85) | Raised when the styled element is attached to a rooted logical tree. Inherited from [StyledElement](../../../../styledelement.mdx). |
+| [Changed](#uid-cc157cef77) | Raised when the adorner's visual state changes and the layer should repaint. |
+| [DataContextChanged](../../../../styledelement.mdx#uid-4b1cc873f8) | Occurs when the [Avalonia.StyledElement.DataContext](xref:Avalonia.StyledElement.DataContext) property changes. Inherited from [StyledElement](../../../../styledelement.mdx). |
+| [DetachedFromLogicalTree](../../../../styledelement.mdx#uid-d9f5afa535) | Raised when the styled element is detached from a rooted logical tree. Inherited from [StyledElement](../../../../styledelement.mdx). |
+| [Initialized](../../../../styledelement.mdx#uid-bd6a5e5c0e) | Occurs when the styled element has finished initialization. Inherited from [StyledElement](../../../../styledelement.mdx). |
+| [PropertyChanged](../../../../avaloniaobject.mdx#uid-d758e26fae) | Raised when a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value changes on this object. Inherited from [AvaloniaObject](../../../../avaloniaobject.mdx). |
+| [ResourcesChanged](../../../../styledelement.mdx#uid-99a7f47c56) | Occurs when a resource in this styled element or a parent styled element has changed. Inherited from [StyledElement](../../../../styledelement.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-cc157cef77"></span>
+
+### Changed Event
+
+Raised when the adorner's visual state changes and the layer
+should repaint.
+
+```csharp
+public event EventHandler Changed
+```
+
+</section>
+
+</ApiRefPage>
+

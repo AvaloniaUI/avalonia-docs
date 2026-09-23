@@ -1,0 +1,328 @@
+---
+title: 'Footnote'
+hide_title: true
+slug: '/avalonia/controls/documents/footnote'
+uid: 'Avalonia.Controls.Documents.Footnote'
+commentId: 'T:Avalonia.Controls.Documents.Footnote'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Documents'
+assembly: 'Avalonia.Controls.Documents'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">Footnote Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A footnote as an element: the facade over a [Avalonia.Controls.Documents.TextModel.TextFootnote](xref:Avalonia.Controls.Documents.TextModel.TextFootnote) the way
+[Avalonia.Controls.Documents.FlowDocument](xref:Avalonia.Controls.Documents.FlowDocument) is the facade over a [Avalonia.Controls.Documents.TextModel.TextDocument](xref:Avalonia.Controls.Documents.TextModel.TextDocument). The
+text model owns the note ([Avalonia.Controls.Documents.TextModel.TextDocument.Footnotes](xref:Avalonia.Controls.Documents.TextModel.TextDocument.Footnotes)); the owning
+document's [Avalonia.Controls.Documents.FlowDocument.Footnotes](xref:Avalonia.Controls.Documents.FlowDocument.Footnotes) materializes this element over it
+on demand. Like any element, a note built from markup or code stays lazy: its
+text document comes into being when the owner's document initializes or when the
+note's content is first needed, and the model note when it joins the owner; until
+then the owning document is its logical parent, as for a pending block.
+[Avalonia.Controls.Documents.Footnote.NoteId](xref:Avalonia.Controls.Documents.Footnote.NoteId) pairs the note with the [Avalonia.Controls.Documents.RichFootnoteReference](xref:Avalonia.Controls.Documents.RichFootnoteReference)
+anchor that carries the number; the rendered number is the note's position among
+the document's notes, never stored here. Deleting the anchor removes the note in
+the same undo unit; an emptied note survives until its anchor goes. It has its
+own buffer, selection and caret; its undo joins the owner's stack; it never hosts
+anchors, notes or bands of its own.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class Footnote
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../animation/animatable">Animatable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../styledelement">StyledElement</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="flowdocument">FlowDocument</a> <span className="apiref-page__relation-separator">-&gt;</span> Footnote
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [Footnote (2 overloads)](#uid-91f738a0f4) | Initializes an empty note; its text document is created when first needed. |
+
+<span id="uid-91f738a0f4"></span>
+
+### Footnote overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5850251d52"></span>
+
+#### Footnote Constructor
+
+Initializes an empty note; its text document is created when first needed.
+
+```csharp
+public Footnote()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-69833d7daf"></span>
+
+#### Footnote Constructor
+
+Initializes a note over an existing note-rooted text document ([Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind.Footnote](xref:Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind.Footnote)).
+
+```csharp
+public Footnote(Avalonia.Controls.Documents.TextModel.TextDocument textDocument)
+```
+
+##### Parameters
+
+`textDocument` [Avalonia.Controls.Documents.TextModel.TextDocument](xref:Avalonia.Controls.Documents.TextModel.TextDocument)
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [ApplyBlockFormatting](flowdocument.mdx#uid-e6d7623c1c) | Applies captured formatting to an element. Inherited from [FlowDocument](flowdocument.mdx). |
+| [ApplyInlineFormatting](flowdocument.mdx#uid-0531842318) | Applies captured formatting to an element. Inherited from [FlowDocument](flowdocument.mdx). |
+| [ApplyListItemFormatting](flowdocument.mdx#uid-750f1a81c5) | Applies captured formatting to an element. Inherited from [FlowDocument](flowdocument.mdx). |
+| [ApplyStyling](../../styledelement.mdx#uid-b0f81a6f8f) | Applies styling to the control if the control is initialized and styling is not already applied. Inherited from [StyledElement](../../styledelement.mdx). |
+| [ApplyTableCellFormatting](flowdocument.mdx#uid-c630c53ae6) | Applies captured formatting to an element. Inherited from [FlowDocument](flowdocument.mdx). |
+| [ApplyTableRowFormatting](flowdocument.mdx#uid-1b714b165e) | Applies captured formatting to an element. Inherited from [FlowDocument](flowdocument.mdx). |
+| [ApplyTextElementFormatting](flowdocument.mdx#uid-cbbb04c22b) | Applies captured formatting to an element. Inherited from [FlowDocument](flowdocument.mdx). |
+| [BeginInit](../../styledelement.mdx#uid-91c6ccadce) | Inherited from [StyledElement](../../styledelement.mdx). |
+| [Bind (8 overloads)](../../avaloniaobject.mdx#uid-1c60c7bda3) | Binds a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) to an [Avalonia.Data.BindingBase](xref:Avalonia.Data.BindingBase). Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [CheckAccess](../../avaloniaobject.mdx#uid-260ff7a68d) | Returns a value indicating whether the current thread is the UI thread. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [ClearValue (4 overloads)](../../avaloniaobject.mdx#uid-41de208fbe) | Clears a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty)'s local value. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [Clone](flowdocument.mdx#uid-655217def6) | Creates a deep, independent copy of this document — content, block/inline structure, formatting and page settings. The source document is left untouched. This is the way to show the same content in several places at once; adding this document's blocks to another document moves them instead, because an element belongs to exactly one document at a time. Inherited from [FlowDocument](flowdocument.mdx). |
+| [CoerceValue](../../avaloniaobject.mdx#uid-3bec32f39e) | Coerces the specified [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty). Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [CreateSnapshot](flowdocument.mdx#uid-d9a10c1bbc) | Creates an immutable, thread-safe snapshot of the current document state. Inherited from [FlowDocument](flowdocument.mdx). |
+| [EndInit](../../styledelement.mdx#uid-17b450469d) | Inherited from [StyledElement](../../styledelement.mdx). |
+| [EnsureTextDocument](flowdocument.mdx#uid-b379cd22d4) | Creates the backing store if it does not exist yet, and returns it. Inherited from [FlowDocument](flowdocument.mdx). |
+| [Equals](../../avaloniaobject.mdx#uid-a8a8e94305) | Compares two objects using reference equality. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [FindFootnote](flowdocument.mdx#uid-01298728ef) | The note paired with `anchor`, or null while the anchor has none (a dangling anchor, or one not in this document). Under the anchor-owns-its-note lifecycle a note exists for every anchor added through the element channel - this is how callers reach it. Inherited from [FlowDocument](flowdocument.mdx). |
+| [FromSnapshot](flowdocument.mdx#uid-58357881c2) | Inherited from [FlowDocument](flowdocument.mdx). |
+| [GetBaseValue](../../avaloniaobject.mdx#uid-9c615efbba) | Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [GetHashCode](../../avaloniaobject.mdx#uid-7f7db1e7a2) | Gets the hash code for the object. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [GetValue (3 overloads)](../../avaloniaobject.mdx#uid-5142cd4792) | Gets a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [InitializeTextDocument](flowdocument.mdx#uid-9705bb2c7b) | Creates the backing store if it does not exist yet, and returns it. Inherited from [FlowDocument](flowdocument.mdx). |
+| [IsAnimating](../../avaloniaobject.mdx#uid-8cbfc7521a) | Checks whether a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) is animating. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [IsSet](../../avaloniaobject.mdx#uid-f8bf0bbdcc) | Checks whether a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) is set on this object. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [Load (2 overloads)](flowdocument.mdx#uid-bbf188f438) | Reads a document from a stream. Inherited from [FlowDocument](flowdocument.mdx). |
+| [LoadAsync](flowdocument.mdx#uid-e1a5a76bbb) | Loads a document from a stream, parsing off the calling thread. Inherited from [FlowDocument](flowdocument.mdx). |
+| [Save (2 overloads)](flowdocument.mdx#uid-58c41f4af7) | Writes this document to a stream. Inherited from [FlowDocument](flowdocument.mdx). |
+| [SaveAsync](flowdocument.mdx#uid-6000bb6211) | Saves the document to a stream, writing off the calling thread. Inherited from [FlowDocument](flowdocument.mdx). |
+| [SetCurrentValue (2 overloads)](../../avaloniaobject.mdx#uid-38759fd088) | Sets the value of a dependency property without changing its value source. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [SetValue (3 overloads)](../../avaloniaobject.mdx#uid-47d14e19d7) | Sets a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [TryGetResource](../../styledelement.mdx#uid-2046a6b284) | Inherited from [StyledElement](../../styledelement.mdx). |
+| [VerifyAccess](../../avaloniaobject.mdx#uid-3b9d3c9793) | Checks that the current thread is the UI thread and throws if not. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [ActualThemeVariant](../../styledelement.mdx#uid-776bcbe4bf) | Gets the UI theme that is currently used by the element, which might be different than the RequestedThemeVariantProperty. Inherited from [StyledElement](../../styledelement.mdx). |
+| [Background](flowdocument.mdx#uid-88b1085a41) | Gets or sets the document-level background brush. Inherited from [FlowDocument](flowdocument.mdx). |
+| [Blocks](flowdocument.mdx#uid-256bf19392) | Gets the top-level blocks that make up this document's content. Inherited from [FlowDocument](flowdocument.mdx). |
+| [Classes](../../styledelement.mdx#uid-b7b7edea05) | Gets or sets the styled element's classes. Inherited from [StyledElement](../../styledelement.mdx). |
+| [ContentEnd](flowdocument.mdx#uid-f5863acf5f) | Gets a pointer at the end of the document content, or `null` while no backing store exists. Inherited from [FlowDocument](flowdocument.mdx). |
+| [ContentRange](flowdocument.mdx#uid-6ae5e36837) | Gets a range covering the whole document, or `null` while no backing store exists. Inherited from [FlowDocument](flowdocument.mdx). |
+| [ContentStart](flowdocument.mdx#uid-95bbe9144f) | Gets a pointer at the start of the document content, or `null` while no backing store exists. Inherited from [FlowDocument](flowdocument.mdx). |
+| [DataContext](../../styledelement.mdx#uid-647f924a56) | Gets or sets the control's data context. Inherited from [StyledElement](../../styledelement.mdx). |
+| [Dispatcher](../../avaloniaobject.mdx#uid-b25fa51632) | Returns the [Avalonia.AvaloniaObject.Dispatcher](xref:Avalonia.AvaloniaObject.Dispatcher) that this [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject) is associated with. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [FontFamily](flowdocument.mdx#uid-a6980f6e90) | Gets or sets the document-level font family. Inherited from [FlowDocument](flowdocument.mdx). |
+| [FontSize](flowdocument.mdx#uid-da30f27b23) | Gets or sets the document-level font size in device-independent pixels. Inherited from [FlowDocument](flowdocument.mdx). |
+| [FontStretch](flowdocument.mdx#uid-88f20fc1f7) | Gets or sets the document-level font stretch. Inherited from [FlowDocument](flowdocument.mdx). |
+| [FontStyle](flowdocument.mdx#uid-37ce681c00) | Gets or sets the document-level font style. Inherited from [FlowDocument](flowdocument.mdx). |
+| [FontWeight](flowdocument.mdx#uid-7bcec7997d) | Gets or sets the document-level font weight. Inherited from [FlowDocument](flowdocument.mdx). |
+| [FootnoteNumberFormat](flowdocument.mdx#uid-317b96e6f6) | Gets or sets how the document numbers its footnotes: the format of the ordinal each [Avalonia.Controls.Documents.RichFootnoteReference](xref:Avalonia.Controls.Documents.RichFootnoteReference) renders and its note shows in its number strip. The text document owns the numbering ([Avalonia.Controls.Documents.TextModel.TextDocument.FootnoteNumberFormat](xref:Avalonia.Controls.Documents.TextModel.TextDocument.FootnoteNumberFormat)): a change is one undo unit that re-renders every anchor and note, and a value set before the text document exists applies when it is created. A nested document (a band, a note) ignores it. Inherited from [FlowDocument](flowdocument.mdx). |
+| [Footnotes](flowdocument.mdx#uid-fd1a9be222) | Gets the footnotes this document owns, in anchor order: nested documents like [Avalonia.Controls.Documents.FlowDocument.PageBands](xref:Avalonia.Controls.Documents.FlowDocument.PageBands), each paired by id with the anchor in the body that carries its number. The text document owns them ([Avalonia.Controls.Documents.TextModel.TextDocument.Footnotes](xref:Avalonia.Controls.Documents.TextModel.TextDocument.Footnotes)); they resolve resources and inherited formatting through this element and record undo into the shared undo manager. Notes come and go with their anchors ([Avalonia.Controls.Documents.FlowDocument.FindFootnote(Avalonia.Controls.Documents.RichFootnoteReference)](xref:Avalonia.Controls.Documents.FlowDocument.FindFootnote%28Avalonia.Controls.Documents.RichFootnoteReference%29)); a nested document has none. Inherited from [FlowDocument](flowdocument.mdx). |
+| [Foreground](flowdocument.mdx#uid-173087cfe3) | Gets or sets the document-level foreground brush. Inherited from [FlowDocument](flowdocument.mdx). |
+| [IsDocumentInitialized](flowdocument.mdx#uid-98613fbb26) | Whether the backing store has been created. Inherited from [FlowDocument](flowdocument.mdx). |
+| [IsInitialized](../../styledelement.mdx#uid-59a7cddacb) | Gets a value that indicates whether the element has finished initialization. Inherited from [StyledElement](../../styledelement.mdx). |
+| [Item](../../avaloniaobject.mdx#uid-c1d1f1bc0f) | Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [Label](#uid-b2e6edbf84) | Gets or sets the note's name in formats that address notes by name (markdown's `[^label]`). Never displayed and null for a note created in the editor; a writer that needs a name derives one from the note's position. |
+| [Name](../../styledelement.mdx#uid-245f4ccff5) | Gets or sets the name of the styled element. Inherited from [StyledElement](../../styledelement.mdx). |
+| [Note](#uid-d0a13d0d75) | The text-model note this element is the facade over, null until the note joins a document or was created over an existing text document. |
+| [NoteId](#uid-51bac949b8) | Gets or sets the identity pairing this note with its anchor. Document-unique; assigned by the pairing ([Avalonia.Controls.Documents.TextModel.TextRange.InsertFootnote(Avalonia.Controls.Documents.RichFootnoteReference)](xref:Avalonia.Controls.Documents.TextModel.TextRange.InsertFootnote%28Avalonia.Controls.Documents.RichFootnoteReference%29)), 0 while unpaired. The displayed number is not the id: ordinals follow anchor order. |
+| [Owner](#uid-629ac69f5d) | The document element that owns the note: its logical parent while it waits for the owner's text document, the owner's facade once the text model holds it; null while unowned or when the owner has no element facade. |
+| [PageBandDistance](flowdocument.mdx#uid-0850f66015) | Gets or sets the distance from the sheet edge to a page band in DIPs: the header's top sits this far below the sheet top, the footer's bottom this far above the sheet bottom. NaN (the default) leaves it to [Avalonia.Controls.Documents.PageBandPolicy.DefaultDistance](xref:Avalonia.Controls.Documents.PageBandPolicy.DefaultDistance). Inherited from [FlowDocument](flowdocument.mdx). |
+| [PageBands](flowdocument.mdx#uid-ba36b209bd) | Gets the page bands this document owns: the nested documents its root and top-level sections reference as headers and footers. A band added here - or adopted when an unowned band is set on a reference - belongs to this document: the text document owns it ([Avalonia.Controls.Documents.TextModel.TextDocument.PageBands](xref:Avalonia.Controls.Documents.TextModel.TextDocument.PageBands)), it resolves resources and inherited formatting through this element and records undo into the shared undo manager. Removing a band clears every reference to it. Inherited from [FlowDocument](flowdocument.mdx). |
+| [PageHeight](flowdocument.mdx#uid-25c274f87c) | Gets or sets the document page height in DIPs. Set NaN for automatic height from the attached view. Inherited from [FlowDocument](flowdocument.mdx). |
+| [PagePadding](flowdocument.mdx#uid-86bd8917bb) | Gets or sets the document-level page padding (page margins in document formats). Sections inherit it, like [Avalonia.Controls.Documents.FlowDocument.PageWidth](xref:Avalonia.Controls.Documents.FlowDocument.PageWidth) and [Avalonia.Controls.Documents.FlowDocument.PageHeight](xref:Avalonia.Controls.Documents.FlowDocument.PageHeight), unless they declare their own. Inherited from [FlowDocument](flowdocument.mdx). |
+| [PageWidth](flowdocument.mdx#uid-385c5486fe) | Gets or sets the document page width in DIPs. Set NaN for automatic width from the attached view. Inherited from [FlowDocument](flowdocument.mdx). |
+| [Parent](../../styledelement.mdx#uid-aad2c5c78d) | Gets the styled element's logical parent. Inherited from [StyledElement](../../styledelement.mdx). |
+| [Resources](../../styledelement.mdx#uid-f6488ca4b7) | Gets or sets the styled element's resource dictionary. Inherited from [StyledElement](../../styledelement.mdx). |
+| [RootKind](flowdocument.mdx#uid-1820f3151c) | The kind of the text document's root node: what kind of document this is. Inherited from [FlowDocument](flowdocument.mdx). |
+| [StyleKey](../../styledelement.mdx#uid-081584075e) | Gets the type by which the element is styled. Inherited from [StyledElement](../../styledelement.mdx). |
+| [Styles](../../styledelement.mdx#uid-ae663139cc) | Gets the styles for the styled element. Inherited from [StyledElement](../../styledelement.mdx). |
+| [TemplatedParent](../../styledelement.mdx#uid-dbf6ddacc3) | Gets the styled element whose lookless template this styled element is part of. Inherited from [StyledElement](../../styledelement.mdx). |
+| [TextAlignment](flowdocument.mdx#uid-36d9623cee) | Gets or sets the default text alignment for blocks in the document. Inherited from [FlowDocument](flowdocument.mdx). |
+| [TextDocument](flowdocument.mdx#uid-f63e9330f5) | Gets the [Avalonia.Controls.Documents.TextModel.TextDocument](xref:Avalonia.Controls.Documents.TextModel.TextDocument) backing store, creating it on first read. Inherited from [FlowDocument](flowdocument.mdx). |
+| [Theme](../../styledelement.mdx#uid-1aebed283d) | Gets or sets the theme to be applied to the element. Inherited from [StyledElement](../../styledelement.mdx). |
+| [Transitions](../../animation/animatable.mdx#uid-1b3138f517) | Gets or sets the property transitions for the control. Inherited from [Animatable](../../animation/animatable.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b2e6edbf84"></span>
+
+### Label Property
+
+Gets or sets the note's name in formats that address notes by name
+(markdown's `[^label]`). Never displayed and null for a note created in
+the editor; a writer that needs a name derives one from the note's position.
+
+```csharp
+public string Label { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d0a13d0d75"></span>
+
+### Note Property
+
+The text-model note this element is the facade over, null until the note joins a document or was created over an existing text document.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.TextFootnote Note { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-51bac949b8"></span>
+
+### NoteId Property
+
+Gets or sets the identity pairing this note with its anchor. Document-unique;
+assigned by the pairing ([Avalonia.Controls.Documents.TextModel.TextRange.InsertFootnote(Avalonia.Controls.Documents.RichFootnoteReference)](xref:Avalonia.Controls.Documents.TextModel.TextRange.InsertFootnote%28Avalonia.Controls.Documents.RichFootnoteReference%29)), 0 while
+unpaired. The displayed number is not the id: ordinals follow anchor order.
+
+```csharp
+public int NoteId { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-629ac69f5d"></span>
+
+### Owner Property
+
+The document element that owns the note: its logical parent while it waits
+for the owner's text document, the owner's facade once the text model holds
+it; null while unowned or when the owner has no element facade.
+
+```csharp
+public Avalonia.Controls.Documents.FlowDocument Owner { get; set; }
+```
+
+</section>
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [BackgroundProperty](flowdocument.mdx#uid-f2272a50a5) | Defines the [Avalonia.Controls.Documents.FlowDocument.Background](xref:Avalonia.Controls.Documents.FlowDocument.Background) property. Inherited from [FlowDocument](flowdocument.mdx). |
+| [DataContextProperty](../../styledelement.mdx#uid-7eefabb929) | Defines the [Avalonia.StyledElement.DataContext](xref:Avalonia.StyledElement.DataContext) property. Inherited from [StyledElement](../../styledelement.mdx). |
+| [FontFamilyProperty](flowdocument.mdx#uid-63277bd365) | Defines the [Avalonia.Controls.Documents.FlowDocument.FontFamily](xref:Avalonia.Controls.Documents.FlowDocument.FontFamily) property. Inherited from [FlowDocument](flowdocument.mdx). |
+| [FontSizeProperty](flowdocument.mdx#uid-102ac51748) | Defines the [Avalonia.Controls.Documents.FlowDocument.FontSize](xref:Avalonia.Controls.Documents.FlowDocument.FontSize) property. Inherited from [FlowDocument](flowdocument.mdx). |
+| [FontStretchProperty](flowdocument.mdx#uid-5ff1720682) | Defines the [Avalonia.Controls.Documents.FlowDocument.FontStretch](xref:Avalonia.Controls.Documents.FlowDocument.FontStretch) property. Inherited from [FlowDocument](flowdocument.mdx). |
+| [FontStyleProperty](flowdocument.mdx#uid-8121126ae8) | Defines the [Avalonia.Controls.Documents.FlowDocument.FontStyle](xref:Avalonia.Controls.Documents.FlowDocument.FontStyle) property. Inherited from [FlowDocument](flowdocument.mdx). |
+| [FontWeightProperty](flowdocument.mdx#uid-dea55f4025) | Defines the [Avalonia.Controls.Documents.FlowDocument.FontWeight](xref:Avalonia.Controls.Documents.FlowDocument.FontWeight) property. Inherited from [FlowDocument](flowdocument.mdx). |
+| [FootnoteNumberFormatProperty](flowdocument.mdx#uid-6bfe997de0) | Defines the [Avalonia.Controls.Documents.FlowDocument.FootnoteNumberFormat](xref:Avalonia.Controls.Documents.FlowDocument.FootnoteNumberFormat) property. Inherited from [FlowDocument](flowdocument.mdx). |
+| [ForegroundProperty](flowdocument.mdx#uid-d39d85e504) | Defines the [Avalonia.Controls.Documents.FlowDocument.Foreground](xref:Avalonia.Controls.Documents.FlowDocument.Foreground) property. Inherited from [FlowDocument](flowdocument.mdx). |
+| [LabelProperty](#uid-6b727258e1) | Defines the [Avalonia.Controls.Documents.Footnote.Label](xref:Avalonia.Controls.Documents.Footnote.Label) property. |
+| [NameProperty](../../styledelement.mdx#uid-bcdbb9de56) | Defines the [Avalonia.StyledElement.Name](xref:Avalonia.StyledElement.Name) property. Inherited from [StyledElement](../../styledelement.mdx). |
+| [NoteIdProperty](#uid-ed856cd903) | Defines the [Avalonia.Controls.Documents.Footnote.NoteId](xref:Avalonia.Controls.Documents.Footnote.NoteId) property. |
+| [PageBandDistanceProperty](flowdocument.mdx#uid-cf8e5dada0) | Defines the [Avalonia.Controls.Documents.FlowDocument.PageBandDistance](xref:Avalonia.Controls.Documents.FlowDocument.PageBandDistance) property. NaN means the document declares none and the default distance applies. Inherited from [FlowDocument](flowdocument.mdx). |
+| [PageHeightProperty](flowdocument.mdx#uid-9b39d6bda5) | Defines the [Avalonia.Controls.Documents.FlowDocument.PageHeight](xref:Avalonia.Controls.Documents.FlowDocument.PageHeight) property. NaN means automatic height from the attached view. Inherited from [FlowDocument](flowdocument.mdx). |
+| [PagePaddingProperty](flowdocument.mdx#uid-747f0f07cf) | Defines the [Avalonia.Controls.Documents.FlowDocument.PagePadding](xref:Avalonia.Controls.Documents.FlowDocument.PagePadding) property. Inherited from [FlowDocument](flowdocument.mdx). |
+| [PageWidthProperty](flowdocument.mdx#uid-39f2196301) | Defines the [Avalonia.Controls.Documents.FlowDocument.PageWidth](xref:Avalonia.Controls.Documents.FlowDocument.PageWidth) property. NaN means automatic width from the attached view. Inherited from [FlowDocument](flowdocument.mdx). |
+| [ParentProperty](../../styledelement.mdx#uid-dc6481a488) | Defines the [Avalonia.StyledElement.Parent](xref:Avalonia.StyledElement.Parent) property. Inherited from [StyledElement](../../styledelement.mdx). |
+| [TemplatedParentProperty](../../styledelement.mdx#uid-a2c7149a6b) | Defines the [Avalonia.StyledElement.TemplatedParent](xref:Avalonia.StyledElement.TemplatedParent) property. Inherited from [StyledElement](../../styledelement.mdx). |
+| [TextAlignmentProperty](flowdocument.mdx#uid-e55d1c01c9) | Defines the [Avalonia.Controls.Documents.FlowDocument.TextAlignment](xref:Avalonia.Controls.Documents.FlowDocument.TextAlignment) property. Inherited from [FlowDocument](flowdocument.mdx). |
+| [ThemeProperty](../../styledelement.mdx#uid-05852d7b9a) | Defines the [Avalonia.StyledElement.Theme](xref:Avalonia.StyledElement.Theme) property. Inherited from [StyledElement](../../styledelement.mdx). |
+| [TransitionsProperty](../../animation/animatable.mdx#uid-c79f18fac2) | Defines the [Avalonia.Animation.Animatable.Transitions](xref:Avalonia.Animation.Animatable.Transitions) property. Inherited from [Animatable](../../animation/animatable.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6b727258e1"></span>
+
+### LabelProperty Field
+
+Defines the [Avalonia.Controls.Documents.Footnote.Label](xref:Avalonia.Controls.Documents.Footnote.Label) property.
+
+```csharp
+public Avalonia.StyledProperty<string> LabelProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ed856cd903"></span>
+
+### NoteIdProperty Field
+
+Defines the [Avalonia.Controls.Documents.Footnote.NoteId](xref:Avalonia.Controls.Documents.Footnote.NoteId) property.
+
+```csharp
+public Avalonia.StyledProperty<int> NoteIdProperty
+```
+
+</section>
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [ActualThemeVariantChanged](../../styledelement.mdx#uid-e69ef27e71) | Raised when the theme variant is changed on the element or an ancestor of the element. Inherited from [StyledElement](../../styledelement.mdx). |
+| [AttachedToLogicalTree](../../styledelement.mdx#uid-717aa68e85) | Raised when the styled element is attached to a rooted logical tree. Inherited from [StyledElement](../../styledelement.mdx). |
+| [ChildIndexChanged](flowdocument.mdx#uid-e9c74fd816) | Occurs when the child index of a logical child changes. Inherited from [FlowDocument](flowdocument.mdx). |
+| [DataContextChanged](../../styledelement.mdx#uid-4b1cc873f8) | Occurs when the [Avalonia.StyledElement.DataContext](xref:Avalonia.StyledElement.DataContext) property changes. Inherited from [StyledElement](../../styledelement.mdx). |
+| [DetachedFromLogicalTree](../../styledelement.mdx#uid-d9f5afa535) | Raised when the styled element is detached from a rooted logical tree. Inherited from [StyledElement](../../styledelement.mdx). |
+| [FootnotesChanged](flowdocument.mdx#uid-d0e801538f) | Raised when the set of notes changes, a note's id or label changes, or the numbering format changes: the notes a page shows and the numbers they show follow from these, so views re-place them. Inherited from [FlowDocument](flowdocument.mdx). |
+| [Initialized](../../styledelement.mdx#uid-bd6a5e5c0e) | Occurs when the styled element has finished initialization. Inherited from [StyledElement](../../styledelement.mdx). |
+| [PageBandsChanged](flowdocument.mdx#uid-a6e7e3bd38) | Raised when the set of bands changes or a band's role or rule changes: the pages a band claims by rule follow from these, so views re-resolve their sheets. Inherited from [FlowDocument](flowdocument.mdx). |
+| [PropertyChanged](../../avaloniaobject.mdx#uid-d758e26fae) | Raised when a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value changes on this object. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [ResourcesChanged](../../styledelement.mdx#uid-99a7f47c56) | Occurs when a resource in this styled element or a parent styled element has changed. Inherited from [StyledElement](../../styledelement.mdx). |
+
+</ApiRefPage>
+

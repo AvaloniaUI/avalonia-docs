@@ -1,0 +1,175 @@
+---
+title: 'SliceClickedEventArgs'
+hide_title: true
+slug: '/avalonia/controls/charts/sliceclickedeventargs'
+uid: 'Avalonia.Controls.Charts.SliceClickedEventArgs'
+commentId: 'T:Avalonia.Controls.Charts.SliceClickedEventArgs'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Charts'
+assembly: 'Avalonia.Controls.Charts'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Charts'
+tfms:
+  - 'net9.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">SliceClickedEventArgs Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Charts</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Charts</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Charts</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Provides data for pie/donut slice click events.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class SliceClickedEventArgs
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> EventArgs <span className="apiref-page__relation-separator">-&gt;</span> SliceClickedEventArgs
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [SliceClickedEventArgs](#uid-7a20f8ef7e) | Creates a new instance of [SliceClickedEventArgs](xref:Avalonia.Controls.Charts.SliceClickedEventArgs). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7a20f8ef7e"></span>
+
+### SliceClickedEventArgs Constructor
+
+Creates a new instance of [SliceClickedEventArgs](xref:Avalonia.Controls.Charts.SliceClickedEventArgs).
+
+```csharp
+public SliceClickedEventArgs(int sliceIndex, string label, double value, double percentage, object dataItem)
+```
+
+#### Parameters
+
+`sliceIndex` int
+
+
+`label` string
+
+
+`value` double
+
+
+`percentage` double
+
+
+`dataItem` object
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [DataItem](#uid-34ff884ab9) | Gets the original data item if available. |
+| [Label](#uid-04042cdbdd) | Gets the label of the clicked slice. |
+| [Percentage](#uid-f3252e3204) | Gets the percentage of the total that this slice represents. |
+| [SliceIndex](#uid-fe184acfb8) | Gets the index of the clicked slice. |
+| [Value](#uid-72bd523919) | Gets the value of the clicked slice. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-34ff884ab9"></span>
+
+### DataItem Property
+
+Gets the original data item if available.
+
+```csharp
+public object DataItem { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-04042cdbdd"></span>
+
+### Label Property
+
+Gets the label of the clicked slice.
+
+```csharp
+public string Label { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f3252e3204"></span>
+
+### Percentage Property
+
+Gets the percentage of the total that this slice represents.
+
+```csharp
+public double Percentage { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-fe184acfb8"></span>
+
+### SliceIndex Property
+
+Gets the index of the clicked slice.
+
+```csharp
+public int SliceIndex { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-72bd523919"></span>
+
+### Value Property
+
+Gets the value of the clicked slice.
+
+```csharp
+public double Value { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+
