@@ -107,7 +107,7 @@ private async void OnPointerPressed(object? sender, PointerPressedEventArgs e)
 ```
 
 :::warning
-`DoDragDropAsync` captures the pointer. Avoid starting a drag on every `PointerPressed` event. Instead, add a minimum distance threshold or wait for `PointerMoved` to confirm the user intends to drag rather than click.
+Avoid starting a drag on every `PointerPressed` event. Instead, add a minimum distance threshold or wait for `PointerMoved` to confirm the user intends to drag rather than click.
 :::
 
 :::note
