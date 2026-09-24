@@ -27,7 +27,7 @@ Prior to October 13 2025, installing Avalonia Pro components required setting up
 
 ## Add the NuGet package
 
-Install the Avalonia Pro package you need by running the `dotnet add package` command. For example, to add the media player control:
+Install the Avalonia Pro package(s) you need by running the `dotnet add package` command. For example, to add the media player control:
 
 ```bash
 dotnet add package Avalonia.Controls.MediaPlayer
@@ -42,6 +42,7 @@ Replace the package name with the one you need. The following Avalonia Pro packa
 | [`Avalonia.Controls.MediaPlayer`](/controls/media/mediaplayer/#getting-started) | Audio and video playback control |
 | [`Avalonia.Controls.PdfViewer`](/controls/data-display/pdfviewer/#getting-started) | PDF viewing, search, annotation and printing |
 | [`Avalonia.Controls.RichTextEditor`](/controls/input/text-input/richtexteditor/#getting-started) | Document editing and processing |
+| [`Avalonia.Controls.Documents`](/controls/input/text-input/richtexteditor/#getting-started) | Document model used by `RichTextEditor` |
 | [`Avalonia.Controls.TreeDataGrid`](/controls/data-display/structured-data/treedatagrid/#getting-started) | Hierarchical and flat data grids |
 | [`Avalonia.Controls.VirtualKeyboard`](/controls/input/text-input/virtualkeyboard/#getting-started) | On-screen keyboard |
 
