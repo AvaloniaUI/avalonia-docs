@@ -95,9 +95,9 @@ Only the pages near the viewport are decoded. Scrolling faster than pages can de
 
 **Fix:** Raise `PageRenderBuffer` so more pages are decoded ahead of the viewport. Keep `PageRetentionBuffer` the same or above the render buffer. See [Optimizing memory for large documents](/controls/data-display/pdfviewer/platforms-and-performance#optimizing-memory-for-large-documents).
 
-## Edits made in the viewer look different in another reader
+## Edits made in the PDF viewer look different in another app
 
-Shapes that carry text are saved as `/Stamp` annotations by default, so other readers can move but not edit them, and the text is preserved.
+Shapes that carry text are saved as `/Stamp` annotations by default. Other PDF readers can move them, although the text is preserved.
 
 **Fix:** Set `ShapeSubtypeMode` to `Standard` to write every shape with its standard subtype, or `Strict` to prevent text on shapes. See [Shapes and text](/controls/data-display/pdfviewer/annotations#shapes-and-text).
 
