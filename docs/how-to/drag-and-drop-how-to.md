@@ -39,14 +39,14 @@ public MainWindow()
 private void OnDragOver(object? sender, DragEventArgs e)
 {
     // Accept file drops only; reject everything else
-    e.DragEffects = e.DataTransfer.Formats.Contains(DataFormat.File)
+    e.DragEffects = e.DataTransfer.Contains(DataFormat.File)
         ? DragDropEffects.Copy
         : DragDropEffects.None;
 }
 
 private void OnDrop(object? sender, DragEventArgs e)
 {
-    if (e.DataTransfer.GetFiles() is { } files)
+    if (e.DataTransfer.TryGetFiles() is { } files)
     {
         foreach (var file in files)
         {
@@ -56,6 +56,15 @@ private void OnDrop(object? sender, DragEventArgs e)
     }
 }
 ```
+
+The value you set in `e.DragEffects` also controls the cursor, which tells your users what the drop will do:
+
+| DragDropEffects | Cursor | Meaning |
+|---|---|---|
+| `None` | No-drop cursor | Drop is not allowed. |
+| `Copy` | Copy cursor (+) | The item will be copied. |
+| `Move` | Move cursor | The item will be moved. |
+| `Link` | Link cursor | A link or shortcut will be created. |
 
 :::tip
 Always set `e.DragEffects` in your `DragOver` handler. If you do not, the platform may show a "not allowed" cursor even when your control can accept the drop.
@@ -86,7 +95,7 @@ private async void OnPointerPressed(object? sender, PointerPressedEventArgs e)
     if (sender is not Control control) return;
 
     var dragData = new DataTransfer();
-    dragData.Set(DataFormat.Text, "Dragged item text");
+    dragData.Add(DataTransferItem.CreateText("Dragged item text"));
 
     var result = await DragDrop.DoDragDropAsync(e, dragData, DragDropEffects.Copy | DragDropEffects.Move);
 
@@ -101,9 +110,20 @@ private async void OnPointerPressed(object? sender, PointerPressedEventArgs e)
 `DoDragDropAsync` captures the pointer. Avoid starting a drag on every `PointerPressed` event. Instead, add a minimum distance threshold or wait for `PointerMoved` to confirm the user intends to drag rather than click.
 :::
 
+:::note
+Do not dispose the `DataTransfer` you pass to `DoDragDropAsync`, and do not create it in a `using` statement. Avalonia disposes it automatically when the drag operation completes.
+:::
+
 ## Drag between lists
 
 A common pattern is dragging items between two list controls. You set up one handler to initiate the drag from the source and another to accept the drop on the target.
+
+Both handlers share a custom data format. Because the item is a view model that never leaves your application, you can make it an in-process format:
+
+```csharp
+private static readonly DataFormat<ItemViewModel> ItemFormat =
+    DataFormat.CreateInProcessFormat<ItemViewModel>("my-app-item");
+```
 
 ### Source list
 
@@ -113,7 +133,7 @@ private async void SourceList_PointerPressed(object? sender, PointerPressedEvent
     if (sender is ListBox listBox && listBox.SelectedItem is ItemViewModel item)
     {
         var data = new DataTransfer();
-        data.Set("application/x-my-item", item);
+        data.Add(DataTransferItem.Create(ItemFormat, item));
 
         var result = await DragDrop.DoDragDropAsync(e, data, DragDropEffects.Move);
 
@@ -130,7 +150,7 @@ In the drop handler, retrieve your custom object and add it to the target collec
 ```csharp
 private void TargetList_Drop(object? sender, DragEventArgs e)
 {
-    if (e.DataTransfer.Get("application/x-my-item") is ItemViewModel item)
+    if (e.DataTransfer.TryGetValue(ItemFormat) is { } item)
     {
         ViewModel.TargetItems.Add(item);
         e.DragEffects = DragDropEffects.Move;
@@ -140,96 +160,82 @@ private void TargetList_Drop(object? sender, DragEventArgs e)
 
 ## Visual feedback during drag
 
-Providing visual feedback helps your users understand where they can drop. Change the drop target's appearance when the user drags over it:
+Providing visual feedback helps your users understand where they can drop. This example changes the drop target's appearance when the user drags over, assuming the target is a `Border` declared in XAML with `x:Name="DropZone"` and `DragDrop.AllowDrop="True"`:
 
 ```csharp
 public MainWindow()
 {
     InitializeComponent();
 
-    var dropZone = this.FindControl<Border>("DropZone");
-
-    DragDrop.AddDragEnterHandler(this, (s, e) =>
+    DragDrop.AddDragEnterHandler(DropZone, (s, e) =>
     {
-        dropZone.BorderBrush = Brushes.Blue;
-        dropZone.BorderThickness = new Thickness(2);
+        DropZone.BorderBrush = Brushes.Blue;
+        DropZone.BorderThickness = new Thickness(2);
     });
 
-    DragDrop.AddDragLeaveHandler(this, (s, e) =>
+    DragDrop.AddDragLeaveHandler(DropZone, (s, e) =>
     {
-        dropZone.BorderBrush = Brushes.Transparent;
-        dropZone.BorderThickness = new Thickness(0);
+        DropZone.BorderBrush = Brushes.Transparent;
+        DropZone.BorderThickness = new Thickness(0);
     });
 
-    DragDrop.AddDropHandler(this, (s, e) =>
+    DragDrop.AddDropHandler(DropZone, (s, e) =>
     {
-        dropZone.BorderBrush = Brushes.Transparent;
-        dropZone.BorderThickness = new Thickness(0);
+        DropZone.BorderBrush = Brushes.Transparent;
+        DropZone.BorderThickness = new Thickness(0);
         // Handle drop...
     });
 }
 ```
 
+Attach the handlers to the drop zone itself rather than to the window. Otherwise, the highlight appears whenever the user drags anywhere over the window.
+
 :::tip
 Reset the visual state in both the `DragLeave` and `Drop` handlers. If you only reset on `DragLeave`, the highlight will remain when the user completes a drop.
 :::
 
-## Setting the drag cursor
-
-You can control the cursor shown during a drag to communicate the allowed operation. Set `e.DragEffects` in your `DragOver` handler:
-
-```csharp
-private void OnDragOver(object? sender, DragEventArgs e)
-{
-    if (e.DataTransfer.Formats.Contains(DataFormat.File))
-    {
-        e.DragEffects = DragDropEffects.Copy;
-    }
-    else
-    {
-        e.DragEffects = DragDropEffects.None;
-    }
-}
-```
-
-| DragDropEffects | Cursor | Meaning |
-|---|---|---|
-| `None` | No-drop cursor | Drop is not allowed here. |
-| `Copy` | Copy cursor (+) | The item will be copied. |
-| `Move` | Move cursor | The item will be moved. |
-| `Link` | Link cursor | A link or shortcut will be created. |
-
 ## Custom data formats
 
-You can transfer custom objects using a string key. Use a MIME-style identifier to avoid collisions with other applications:
+To transfer your own data, create a typed `DataFormat<T>` once and reuse it on both the drag source and the drop target:
 
 ```csharp
 // Set
 var data = new DataTransfer();
-data.Set("application/x-my-custom-type", myObject);
+data.Add(DataTransferItem.Create(MyTypeFormat, myObject));
 
 // Get
-if (e.DataTransfer.Get("application/x-my-custom-type") is MyType obj)
+if (e.DataTransfer.TryGetValue(MyTypeFormat) is { } obj)
 {
     // Use obj
 }
 ```
 
+`MyTypeFormat` is a static field created with one of the factory methods in the [data formats reference](#data-formats-reference), for example `DataFormat.CreateInProcessFormat<MyType>("my-app-type")`.
+
+:::caution
+Identifiers passed to `CreateStringApplicationFormat` and `CreateBytesApplicationFormat` can contain only ASCII letters, digits, dots (`.`) and hyphens (`-`). MIME-style identifiers such as `application/x-my-type` are not accepted.
+:::
+
 ## Data formats reference
 
-| Format | Constant | Description |
+| Format | Data type | Description |
 |---|---|---|
-| Text | `DataFormat.Text` | Plain text string. |
-| Bitmap | `DataFormat.Bitmap` | Bitmap image data. |
-| File | `DataFormat.File` | File system items (returns `IStorageItem` instances). |
-| Custom | Any string key | Application-defined data of any type. |
+| `DataFormat.Text` | `string` | Plain text. |
+| `DataFormat.Bitmap` | `Bitmap` | Bitmap image data. |
+| `DataFormat.File` | `IStorageItem` | File system items. |
+| `DataFormat.CreateInProcessFormat<T>(id)` | Any `T` | Custom data that stays within your application's process. Use this for view models and other live objects. |
+| `DataFormat.CreateStringApplicationFormat(id)` | `string` | Custom data specific to your application. Other applications that use the same identifier can read it. |
+| `DataFormat.CreateBytesApplicationFormat(id)` | `byte[]` | As above, for binary data. |
+| `DataFormat.CreateStringPlatformFormat(id)` | `string` | A native format for the current platform (for example, `text/html`). Any application using the same identifier can read it. |
+| `DataFormat.CreateBytesPlatformFormat(id)` | `byte[]` | As above, for binary data. |
 
 ## Edge cases and troubleshooting
 
 - **Drop handler not firing:** Verify that `DragDrop.AllowDrop` is set to `True` on the target element and that your `DragOver` handler sets `e.DragEffects` to a value other than `None`.
 - **Drag starts on single click:** Add a distance threshold before calling `DoDragDropAsync`. Without one, a simple click triggers a drag, which can confuse your users.
-- **Custom data lost across processes:** Custom object types set with `DataTransfer.Set` are only available within the same application. Cross-process drag-and-drop is limited to standard formats such as `DataFormat.Text` and `DataFormat.File`.
-- **Multiple data formats:** You can call `DataTransfer.Set` multiple times with different format keys on the same `DataTransfer` instance. This lets drop targets choose the richest format they support.
+- **Custom data lost across processes:** Data in a format created with `CreateInProcessFormat` never leaves your application. To drag custom data to another process, serialize it to a `string` or `byte[]` and use an application or platform format instead.
+- **Multiple data formats:** Call `Set` several times on the same `DataTransferItem`, once per format, then add the item to the `DataTransfer`. This lets drop targets choose the richest format they support.
+- **Disposed data during a drag:** Do not dispose the `DataTransfer` you pass to `DoDragDropAsync`. Avalonia disposes it when the drag completes.
 
 ## Platform notes
 
