@@ -160,7 +160,7 @@ private void TargetList_Drop(object? sender, DragEventArgs e)
 
 ## Visual feedback during drag
 
-Providing visual feedback helps your users understand where they can drop. This example changes the drop target's appearance when the user drags over, assuming the target is a `Border` declared in XAML with `x:Name="DropZone"` and `DragDrop.AllowDrop="True"`:
+Providing visual feedback helps your users understand where they can drop. This example changes the drop target's appearance when the user drags something over it, assuming the target is a `Border` declared in XAML with `x:Name="DropZone"` and `DragDrop.AllowDrop="True"`:
 
 ```csharp
 public MainWindow()
@@ -210,30 +210,17 @@ if (e.DataTransfer.TryGetValue(MyTypeFormat) is { } obj)
 }
 ```
 
-`MyTypeFormat` is a static field created with one of the factory methods in the [data formats reference](#data-formats-reference), for example `DataFormat.CreateInProcessFormat<MyType>("my-app-type")`.
+`MyTypeFormat` is a static field created with a `DataFormat` method, for example `DataFormat.CreateInProcessFormat<MyType>("my-app-type")`. See [the `DataFormat<T>` API reference](/api/avalonia/input/dataformat-1) for a full list of available methods and supported data types.
 
 :::caution
 Identifiers passed to `CreateStringApplicationFormat` and `CreateBytesApplicationFormat` can contain only ASCII letters, digits, dots (`.`) and hyphens (`-`). MIME-style identifiers such as `application/x-my-type` are not accepted.
 :::
 
-## Data formats reference
-
-| Format | Data type | Description |
-|---|---|---|
-| `DataFormat.Text` | `string` | Plain text. |
-| `DataFormat.Bitmap` | `Bitmap` | Bitmap image data. |
-| `DataFormat.File` | `IStorageItem` | File system items. |
-| `DataFormat.CreateInProcessFormat<T>(id)` | Any `T` | Custom data that stays within your application's process. Use this for view models and other live objects. |
-| `DataFormat.CreateStringApplicationFormat(id)` | `string` | Custom data specific to your application. Other applications that use the same identifier can read it. |
-| `DataFormat.CreateBytesApplicationFormat(id)` | `byte[]` | As above, for binary data. |
-| `DataFormat.CreateStringPlatformFormat(id)` | `string` | A native format for the current platform (for example, `text/html`). Any application using the same identifier can read it. |
-| `DataFormat.CreateBytesPlatformFormat(id)` | `byte[]` | As above, for binary data. |
-
 ## Edge cases and troubleshooting
 
 - **Drop handler not firing:** Verify that `DragDrop.AllowDrop` is set to `True` on the target element and that your `DragOver` handler sets `e.DragEffects` to a value other than `None`.
 - **Drag starts on single click:** Add a distance threshold before calling `DoDragDropAsync`. Without one, a simple click triggers a drag, which can confuse your users.
-- **Custom data lost across processes:** Data in a format created with `CreateInProcessFormat` never leaves your application. To drag custom data to another process, serialize it to a `string` or `byte[]` and use an application or platform format instead.
+- **Custom data lost across processes:** Data in a format created with `CreateInProcessFormat` never leaves the current process. To drag custom data to another process, serialize it to a `string` or `byte[]` and use an application or platform format instead.
 - **Multiple data formats:** Call `Set` several times on the same `DataTransferItem`, once per format, then add the item to the `DataTransfer`. This lets drop targets choose the richest format they support.
 - **Disposed data during a drag:** Do not dispose the `DataTransfer` you pass to `DoDragDropAsync`. Avalonia disposes it when the drag completes.
 
