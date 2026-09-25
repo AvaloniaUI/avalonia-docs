@@ -1,11 +1,11 @@
 ---
 id: menu-how-to
-title: "How to: Work with Menus"
-description: Learn how to use Menu, ContextMenu, and NativeMenu controls in Avalonia, including commands, keyboard shortcuts, dynamic items, checked items, submenus, and right-click context menus.
+title: "How to: Work with menus"
+description: Learn how to use the Menu, ContextMenu, and NativeMenu controls in Avalonia, including commands, keyboard shortcuts, dynamic items, checked items, submenus, and right-click context menus.
 doc-type: how-to
 ---
 
-This guide covers [`Menu`](/api/avalonia/controls/menu) and [`ContextMenu`](/api/avalonia/controls/contextmenu) patterns in Avalonia, including commands, keyboard shortcuts, dynamic menus, checked items, submenus, and right-click context menus.
+This guide covers [`Menu`](/controls/menus/menu) and [`ContextMenu`](/controls/menus/contextmenu) patterns in Avalonia, such as commands, keyboard shortcuts, dynamic menus, checked items, submenus, and right-click context menus.
 
 ## Basic menu bar
 
