@@ -9,6 +9,9 @@ import type { PluginOptions as LlmsTxtPluginOptions } from "@signalwire/docusaur
 
 const resourcesHTML = fs.readFileSync('./src/snippets/resources.html', 'utf-8');
 
+// `npm run start:light` sets this to leave the generated API reference out of local previews, so they compile much faster.
+const skipApi = process.env.DOCS_SKIP_API === '1';
+
 const config: Config = {
   title: 'Avalonia Docs',
   tagline: 'Developer Documentation Portal',
@@ -303,8 +306,8 @@ gtag('consent', 'default', {
         },
       } satisfies LlmsTxtPluginOptions,
     ],
-  
-    [
+
+    !skipApi && [
       "@docusaurus/plugin-content-docs",
       {
         id: "api",
