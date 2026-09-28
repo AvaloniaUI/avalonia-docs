@@ -97,7 +97,7 @@ public class RelayCommand : ICommand
 
 Use `InputGesture` to display a shortcut hint next to a menu item.
 
-Note that `InputGesture` only displays the text. For the shortcut to function, you must separately register the actual key binding through a [`RelayCommand`](/docs/input-interaction/commanding).
+Note that `InputGesture` only displays the text. For the shortcut to function, you must separately register the actual key binding that invokes the command.
 
 <XamlPreview>
 
@@ -349,7 +349,7 @@ public class RelayCommand : ICommand
 
 Bind `ItemsSource` to generate menu items from a data collection. This can be used for recent files, window lists, plugin actions or similar dynamic functions.
 
-Below is an example that generates a list of recent files. An independent `Models/RecentFile.cs` class is used with an `ObservableCollection` in the main view model to create the collection, which can then by bound using `ItemContainerTheme` to map properties.
+Below is an example that generates a list of recent files. An independent `Models/RecentFile.cs` class is used with an `ObservableCollection` in the main view model to create the collection, which can then be bound using `ItemContainerTheme` to map properties.
 
 Note that the `ControlTheme` inside `ItemContainerTheme` must have its data type set to the `RecentFile` model.
 
