@@ -91,7 +91,7 @@ Avalonia apps are made of high-level building blocks called controls, which allo
 </DocsCard>
 
 <DocsCard header="PdfViewer" href="/controls/data-display/pdfviewer" icon="/icons/pdfviewer-icon@2x.png" darkIcon="/icons/pdfviewer-icon-dark@2x.png">
-  <p>View, search, annotate, fill and print PDF documents on desktop, mobile and the browser.</p>
+  <p>View, search, annotate, fill and print PDF documents.</p>
   <Pill>Avalonia Pro</Pill>
 </DocsCard>
 

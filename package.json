@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
-    "start": "docusaurus start",
+    "start": "NODE_OPTIONS='--max-old-space-size=16384' docusaurus start",
     "build": "NODE_OPTIONS='--max-old-space-size=16384' docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
