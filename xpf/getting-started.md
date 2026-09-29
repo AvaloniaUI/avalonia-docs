@@ -10,34 +10,30 @@ If you use an AI coding assistant that supports MCP (VS Code, Cursor, Rider, Cla
 ## Step 1: Prepare your WPF project
 
 :::note
-This document uses .NET 7.0 as an example, but .NET 6.0 and above are supported by XPF. 
-
-.NET 8 (current LTS) or .NET 9 is recommended.
+.NET 10 or above is recommended.
 :::
 
-Make sure that your project has been updated/ported to at least `net6.0-windows` and uses the SDK-style `.csproj` format. SDK-style projects start with `<Project Sdk="Microsoft.NET.Sdk">` rather than the older verbose format with `<Import>` elements.
+Make sure that your project has been updated or ported to at least `net10.0-windows` and uses the SDK-style `.csproj` format. SDK-style projects start with `<Project Sdk="Microsoft.NET.Sdk">` rather than the older verbose format with `<Import>` elements.
 
-If your project still uses the legacy `.csproj` format, use the .NET Upgrade Assistant or manually convert it. The key changes are:
+If your project still uses the legacy `.csproj` format, use the [GitHub Copilot upgrade agent](https://learn.microsoft.com/en-us/dotnet/core/porting/github-copilot-upgrade/overview) or manually convert it. The key changes are:
 - Replace the verbose XML with an SDK-style `<Project Sdk="Microsoft.NET.Sdk">` root element
-- Set `<TargetFramework>net8.0-windows</TargetFramework>`
+- Set `<TargetFramework>net10.0-windows</TargetFramework>`
 - Add `<UseWpf>true</UseWpf>`
-- Remove explicit file includes (SDK-style projects include files automatically)
+- Remove explicit file includes. SDK-style projects include files automatically.
 
-Confirm that your project builds and runs correctly on .NET 8 (or later) with WPF before proceeding.
-
-:::danger
-This step is **vital**. XPF will not work with the old/legacy `.csproj` format or versions of .NET less than 6.0. You must first convert your project, and ensure that WPF works with modern .NET version before attempting to use XPF.
-:::
+Confirm that your project builds and runs correctly on .NET 10 (or later) with WPF before proceeding.
 
 :::danger
-If you are running on Linux, see the [linux](/xpf/platforms/linux) guide **before** you install .NET.
+XPF will **not work** with the legacy `.csproj` format or versions of .NET less than 6.0. You must first convert your project and ensure it works with a newer .NET version before attempting to use XPF.
+
+If you are running on Linux, see the [Linux](/xpf/platforms/linux) guide **before** you install .NET.
 :::
 
 ## Step 2: Add a `NuGet.config`
 
 Create a `NuGet.config` file at the root of your solution, or modify an existing one to contain the following:
 
-```xml
+```xml title="NuGet.config"
 <?xml version="1.0" encoding="utf-8"?>
 <configuration>
   <packageSources>
@@ -57,57 +53,75 @@ Create a `NuGet.config` file at the root of your solution, or modify an existing
 
 ## Step 3: Use the XPF SDK
 
-In the executable WPF project, change the SDK to use the XPF SDK in the `.csproj`. The first line:
+In the executable WPF project, change the SDK to use the XPF SDK in the `.csproj`. This is the first line of the file.
 
-```xml
+```xml title="YourProject.csproj"
+<!-- Don't use this -->
 <Project Sdk="Microsoft.NET.Sdk">
-``` 
 
-should be changed to:
-
-```xml
-<Project Sdk="Xpf.Sdk/1.6.0">
+<!-- Change to this -->
+<Project Sdk="Xpf.Sdk/1.6.7">
 ```
+
+If you have multiple projects which need to use the same XPF SDK version, you can [specify this version in `global.json`](/xpf/configuration/centralizing-multiple-xpf-projects)
 
 :::note
-XPF is in active development and the CI build version changes frequently. The version given here was the latest version at the time of writing, but it is likely that newer versions are available. You can find the latest CI build version at https://xpf-nuget-feed.avaloniaui.net/packages/xpf.sdk. See [nightly builds](/xpf/version-info/versioning) for more information.
+XPF is in active development. The CI build version changes frequently. You can find the latest CI build version at https://xpf-nuget-feed.avaloniaui.net/packages/xpf.sdk. See [nightly builds](/xpf/version-info/versioning) for more information.
 :::
 
-:::tip
-If you have multiple projects which will need to use the same XPF SDK vesion, you can [specify this version in `global.json`](/xpf/configuration/centralizing-multiple-xpf-projects)
-:::
+## Step 4: Add your license key
 
-## Step 4: Add your Licence Key
+Add your license key to your executable project's `.csproj` file.
 
-In your executable's `.csproj`, add:
+Note that the licensing system differs between XPF versions 1 and 2.
+
+<Tabs>
+
+<TabItem value="xpf2" label="XPF 2.x">
+
+You can get your license key from the [Avalonia portal](https://portal.avaloniaui.net/).
 
 ```xml
-  <ItemGroup>
-    <RuntimeHostConfigurationOption Include="AvaloniaUI.Xpf.LicenseKey" Value="<YOUR_LICENSE_KEY>" />
-  </ItemGroup>  
+<ItemGroup>
+  <AvaloniaUILicenseKey Include="YOUR_LICENSE_KEY" />
+</ItemGroup>
 ```
 
-Note, that if you have a production license, the AssemblyName of the project has to match your license key
+</TabItem>
+
+<TabItem value="xpf1" label="XPF 1.x">
+
+If you have a production license, the `AssemblyName` of the project must match your license key.
+
+```xml
+<ItemGroup>
+  <RuntimeHostConfigurationOption Include="AvaloniaUI.Xpf.LicenseKey" Value="<YOUR_LICENSE_KEY>" />
+</ItemGroup>  
+```
+
+</TabItem>
+
+</Tabs>
 
 ## Step 5: Clean your solution
 
-Changing the project SDK requires a clean of existing build artifacts:
+Changing the project SDK requires a clean of existing build artifacts. You can either:
 
-- Run `dotnet clean` from the command line; or
-- Use `Build -> Clean Solution` from your IDE; or
-- Delete your `obj`/`bin` directories manually
+- Run `dotnet clean` from the command line, or
+- Use **Build → Clean Solution** from your IDE, or
+- Delete your `obj` or `bin` directories manually.
 
 ## Step 6: Run the project
 
-You should be able to run your project from your preferred IDE with Avalonia XPF or use `dotnet run`.
+You can now run your project using your preferred IDE or `dotnet run`.
 
 :::tip
-If running on Linux see the [Linux](/xpf/platforms/linux) page for information on how to install .NET and required dependencies.
+If running on Linux, see the [Linux page](/xpf/platforms/linux) for how to install .NET and required dependencies.
 :::
 
 ## Additional projects
 
-If you have non-executable projects that are using WPF APIs and need to build those on Linux or macOS, you can either change the SDK as described above, or if you're targeting `net7.0-windows` add:
+If you have non-executable projects that are using WPF APIs and need to be built on Linux or macOS, you can either change the SDK [as described above](#step-3-use-the-xpf-sdk), or add the following to the `.csproj` file:
 
 ```xml
 <PropertyGroup>
@@ -115,9 +129,7 @@ If you have non-executable projects that are using WPF APIs and need to build th
 </PropertyGroup>
 ```
 
-to the corresponding project file.
-
-Alternatively create a `Directory.Build.props` file at the root of your solution with the following contents:
+As an alternative, you can share the configuration between all projects in the same solution by creating a `Directory.Build.props` file at the root of the solution. Add the following to the file:
 
 ```xml
 <Project>
@@ -129,10 +141,10 @@ Alternatively create a `Directory.Build.props` file at the root of your solution
 
 ## Target framework
 
-Ideally all projects which reference XPF should be using the `net6.0-windows` or `net7.0-windows` TFM. You can use the `net6.0` or `net7.0` TFM but in this case you cannot use `<EnableWindowsTargeting>` and instead must use the XPF SDK.
+All projects that reference XPF should use the `net10.0-windows` TFM. You can use a TFM without `-windows`, but `<EnableWindowsTargeting>` will not work and you must [add the XPF SDK](#step-3-use-the-xpf-sdk) to each project.
 
 :::tip
-The `-windows` target framework (e.g., `net8.0-windows`) works on all platforms when using the XPF SDK. You do not need to change the target framework to build or run on Linux or macOS. Some third-party libraries require the Windows-specific TFM, so keeping `net8.0-windows` is often the simplest approach.
+The `-windows` target framework (e.g., `net10.0-windows`) works on all platforms when using the XPF SDK. You do not need to change the target framework to build or run on other platforms. Some third-party libraries require the Windows-specific TFM, so keeping `net10.0-windows` is often the simplest approach.
 :::
 
 ## WinForms hosting (Windows only)
@@ -145,36 +157,40 @@ If your application needs to host WinForms controls inside XPF, add the followin
 </PropertyGroup>
 ```
 
-This disables the WinForms shim layer and enables native WinForms integration. Note that WinForms hosting is only available on Windows and will cause build failures on other platforms if not conditioned appropriately.
+This setting disables the WinForms shim layer and enables native WinForms integration.
+
+:::danger
+WinForms hosting is only available on Windows and will cause build failures on other platforms if not conditioned appropriately.
+:::
 
 ## Porting tips
 
 ### Project files
 
-1. Convert all projects to .NET 8.0 and above. The old project file format (non-SDK-style `.csproj`) will not work outside of Windows.
-2. It is highly recommended to do (1) on Windows first to avoid having to wrangle with hard-to-debug Windows-specific dependency issues on other platforms. Replace or remove deprecated features from .NET 7.0 such as AppDomain, CodeDOM, WCF, `System.Web`, XmlSerializer, and hard Windows-only APIs like `System.Management.Instrumentation` and `System.Drawing.Common` on your app with cross-platform friendly alternatives.
-3. While doing (1), watch out for any custom MSBuild Tasks that your app may have. Make sure any said Tasks still work on .NET 7.0 by running `dotnet build`. Don’t test inside Visual Studio so that you can confirm it works outside.
-4. Convert all PCL (Portable Class Libraries) into `netstandard` libraries.
+1. Convert all projects to .NET 10.0 and above. The old project file format (non-SDK-style `.csproj`) will not work outside of Windows.
+2. It is highly recommended to first upgrade .NET on Windows to avoid encountering dependency issues on other platforms. Remove deprecated features from older .NET versions and replace them with cross-platform alternatives.
+3. Watch out for any custom MSBuild tasks your app may have. Make sure any such tasks still work by running `dotnet build`. Do not test inside Visual Studio so that you can confirm it works outside.
+4. Convert all PCLs (Portable Class Libraries) into `netstandard` libraries.
 5. Remove any `ApplicationDefinition` entries from the `.csproj`.
-6. Remove verbose `PropertyGroup` elements that define `Configuration`, `Platform`, `ProjectGuid`, `OutputType`, `RootNamespace`, and similar properties individually. SDK-style projects provide sensible defaults for all of these.
+6. Remove verbose `PropertyGroup` elements that define `Configuration`, `Platform`, `ProjectGuid`, `OutputType`, `RootNamespace`, and similar properties. SDK-style projects provide sensible defaults for all of them.
 
 ### Dependencies
 
-7. If you had a .NET Framework-based nuget package, please try to find a newer version (`netstandard2.0`, `netcoreapp2.0`+, `net5.0`+) of said package. Most of the time even those .NET Framework packages work cross platform too but it’s not a guarantee. 
-8. If there are `Reference` items that are linked to a standalone `dll` on your app's project file, try to find an alternative for it on NuGet as described on (4). If it’s a managed assembly then often times it will work but again, no guarantee.
-9. If you have any native binaries, try to find a managed equivalent or recompile them for your target platforms. Use `System.Runtime.InteropServices.NativeLibrary` and `DllImport` for native interop on .NET 8+.
-10. Update your dependencies to the latest version, especially third-party components such as Actipro, DevExpress, Syncfusion, and Telerik.
+7. If you had a .NET Framework-based NuGet package, try to find a newer version of that package.
+8. If there are `Reference` items that are linked to a standalone `dll` in your app's project file, try to find an alternative.
+9. If you have any native binaries, try to find a managed equivalent or recompile them for your target platforms. Use `System.Runtime.InteropServices.NativeLibrary` and `DllImport` for native interop.
+10. Update your dependencies to the latest versions, especially third-party components.
 
 ### Windows
 
-11. Avoid custom chrome window controls (e.g. WPF’s WindowChrome, MahApps’s MetroWindow, DevExpress’s DXWindow) and anything that customizes window borders or behaviors because it is not guaranteed to fit into the target platform’s UI design (e.g., a custom MetroWindow on macOS). The best design for XPF target platforms is a single-view app (e.g., like a website or a mobile application).
+11. Avoid custom chrome window controls (e.g. WPF’s WindowChrome, MahApps’s MetroWindow, DevExpress’s DXWindow) and anything that customizes window borders or behaviors. These are not guaranteed to fit into the target platform’s UI.
 
 ### Resources and settings
 
-12. Resource Files (`.resx`) don't get regenerated outside of Visual Studio. Consider alternatives to localization like JSON files or other solutions that work independently of Visual Studio.
-13. Visual Studio Text Templates (T4, *.template files) are also deprecated on .NET 7.0. Please use source generators as an alternative.
-14. Images or Bitmaps in Resource Files (`.resx`) are not compatible with the .NET 7.0: consider using WPF's resources scheme instead.
-15. Avoid using `App.Config` / `System.Configuration.ConfigurationManager` due to it not persisting correctly on platforms that don’t allow writes on the same location as the executing assembly (macOS, mobile, WASM, and similar) and use a 3rd party/in-house solution to write persistent configuration data for your apps.
+12. Resource files (`.resx`) do not regenerate outside of Visual Studio. See [Localizing](/docs/app-development/localizing) for guidance on how to manage resource files outside of Visual Studio, or consider alternative approaches to localization, like JSON files.
+13. Visual Studio Text Templates (T4, *.template files) are deprecated. Use source generators as an alternative.
+14. Images or Bitmaps in Resource files (`.resx`) are Windows-only. Use WPF's resources scheme instead.
+15. Avoid using `App.Config` or `System.Configuration.ConfigurationManager`. Persistence is problematic on platforms that do not allow writes on the same location as the executing assembly. Instead, use a 3rd party or in-house solution to write persistent configuration data for your apps.
 
 ### Filesystem access
 
@@ -182,13 +198,13 @@ This disables the WinForms shim layer and enables native WinForms integration. N
 
 ### Fonts
 
-17. Custom fonts must be included as `<Resource>` items in your `.csproj`. If fonts are not embedded as resources, the application may crash or fall back to a default font on non-Windows platforms:
+17. Custom fonts must be included as `<Resource>` items in your `.csproj`. If your fonts are not embedded as resources, the application may crash or fall back to a default font on non-Windows platforms:
     ```xml
     <ItemGroup>
         <Resource Include="Fonts\*.ttf" />
     </ItemGroup>
     ```
-18. Font matching works differently between WPF and XPF. Fonts with non-standard style names (e.g., "Condense" instead of "Condensed") may not match correctly. If a font is not rendering as expected, verify that the font family name in your XAML matches the internal name in the font file.
+18. Font matching works differently between in XPF. Fonts with non-standard style names (e.g., "Condense" instead of "Condensed") may not match correctly. If a font is not rendering as expected, verify that the font family name in your XAML matches the internal name in the font file.
 19. To customize font fallback behavior (for example, to specify which fonts are used for missing characters), configure `FontManagerOptions` in your [custom initialization](/xpf/configuration/customizing-initialization):
     ```csharp
     .With(new FontManagerOptions
@@ -202,5 +218,5 @@ This disables the WinForms shim layer and enables native WinForms integration. N
 
 ### Unsupported controls
 
-20. Avoid using WPF's Spell checking and XPS features since those are not supported by XPF.
-21. If you have any advanced and specialized WPF features that you want to work on your app like Shaders, 3D, and Media, contact the Avalonia team for guidance on the best way forward.
+20. Avoid using WPF's spell checking and XPS features. These are not supported by XPF.
+21. If you have any advanced and specialized WPF features that you want to work on your app, contact us for guidance on the best way forward.
