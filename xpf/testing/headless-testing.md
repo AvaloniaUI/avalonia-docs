@@ -33,11 +33,11 @@ It's necessary to include integration nuget package in the testing project:
 
 `$(XpfAvaloniaVersion)` is pre-defined const in the `Xpf.Sdk`, which also needs to be set in testing project. It can be skipped, if you specify latest `PackageReference` version manually.
 
-`AvaloniaUI.Xpf.LicenseKey` is also required for testing project to pass runtime validation. See [Getting started](/xpf/getting-started) page if you need more information where to get this key.
+A valid license key for XPF is required for the testing project to pass runtime validation. See the [Getting started guide](/xpf/getting-started#step-4-add-your-license-key) for more information on setting up your license key.
 
 ```xml
 <ItemGroup>
-    <RuntimeHostConfigurationOption Include="AvaloniaUI.Xpf.LicenseKey" Value="--Insert your key here--"/>
+  <AvaloniaUILicenseKey Include="YOUR_LICENSE_KEY" />
 </ItemGroup>
 ```
 

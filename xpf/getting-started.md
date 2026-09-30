@@ -31,7 +31,9 @@ If you are running on Linux, see the [Linux](/xpf/platforms/linux) guide **befor
 
 ## Step 2: Add a `NuGet.config`
 
-Create a `NuGet.config` file at the root of your solution, or modify an existing one to contain the following:
+Create a `NuGet.config` file at the root of your solution, or modify an existing one to contain the following.
+
+You can get your license key from the [Avalonia portal](https://portal.avaloniaui.net/).
 
 ```xml title="NuGet.config"
 <?xml version="1.0" encoding="utf-8"?>
@@ -81,11 +83,13 @@ Note that the licensing system differs between XPF versions 1 and 2.
 
 You can get your license key from the [Avalonia portal](https://portal.avaloniaui.net/).
 
-```xml
+```xml title="YourProject.csproj"
 <ItemGroup>
   <AvaloniaUILicenseKey Include="YOUR_LICENSE_KEY" />
 </ItemGroup>
 ```
+
+If you were previously using the XPF 1.x licensing format (`<RuntimeHostConfigurationOption>`), you can now remove it from your `.csproj`.
 
 </TabItem>
 
@@ -93,7 +97,7 @@ You can get your license key from the [Avalonia portal](https://portal.avaloniau
 
 If you have a production license, the `AssemblyName` of the project must match your license key.
 
-```xml
+```xml title="YourProject.csproj"
 <ItemGroup>
   <RuntimeHostConfigurationOption Include="AvaloniaUI.Xpf.LicenseKey" Value="<YOUR_LICENSE_KEY>" />
 </ItemGroup>  
