@@ -13,7 +13,7 @@ If you use an AI coding assistant that supports MCP (VS Code, Cursor, Rider, Cla
 .NET 10 or above is recommended.
 :::
 
-Make sure that your project has been updated or ported to at least `net10.0-windows` and uses the SDK-style `.csproj` format. SDK-style projects start with `<Project Sdk="Microsoft.NET.Sdk">` rather than the older verbose format with `<Import>` elements.
+Make sure that your project has been updated or ported to a supported .NET framework, such as `net10.0-windows`, and uses the SDK-style `.csproj` format. SDK-style projects start with `<Project Sdk="Microsoft.NET.Sdk">` rather than the older verbose format with `<Import>` elements.
 
 If your project still uses the legacy `.csproj` format, use the [GitHub Copilot upgrade agent](https://learn.microsoft.com/en-us/dotnet/core/porting/github-copilot-upgrade/overview) or manually convert it. The key changes are:
 - Replace the verbose XML with an SDK-style `<Project Sdk="Microsoft.NET.Sdk">` root element
@@ -171,7 +171,7 @@ WinForms hosting is only available on Windows and will cause build failures on o
 
 ### Project files
 
-1. Convert all projects to .NET 10.0 and above. The old project file format (non-SDK-style `.csproj`) will not work outside of Windows.
+1. Convert all projects to a supported framework like .NET 10.0. The old project file format (non-SDK-style `.csproj`) will not work outside of Windows.
 2. It is highly recommended to first upgrade .NET on Windows to avoid encountering dependency issues on other platforms. Remove deprecated features from older .NET versions and replace them with cross-platform alternatives.
 3. Watch out for any custom MSBuild tasks your app may have. Make sure any such tasks still work by running `dotnet build`. Do not test inside Visual Studio so that you can confirm it works outside.
 4. Convert all PCLs (Portable Class Libraries) into `netstandard` libraries.
@@ -208,7 +208,7 @@ WinForms hosting is only available on Windows and will cause build failures on o
         <Resource Include="Fonts\*.ttf" />
     </ItemGroup>
     ```
-18. Font matching works differently between in XPF. Fonts with non-standard style names (e.g., "Condense" instead of "Condensed") may not match correctly. If a font is not rendering as expected, verify that the font family name in your XAML matches the internal name in the font file.
+18. Font matching works differently in XPF compared with WPF. Fonts with non-standard style names (e.g., "Condense" instead of "Condensed") may not match correctly. If a font is not rendering as expected, verify that the font family name in your XAML matches the internal name in the font file.
 19. To customize font fallback behavior (for example, to specify which fonts are used for missing characters), configure `FontManagerOptions` in your [custom initialization](/xpf/configuration/customizing-initialization):
     ```csharp
     .With(new FontManagerOptions

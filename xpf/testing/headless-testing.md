@@ -35,12 +35,6 @@ It's necessary to include integration nuget package in the testing project:
 
 A valid license key for XPF is required for the testing project to pass runtime validation. See the [Getting started guide](/xpf/getting-started#step-4-add-your-license-key) for more information on setting up your license key.
 
-```xml
-<ItemGroup>
-  <AvaloniaUILicenseKey Include="YOUR_LICENSE_KEY" />
-</ItemGroup>
-```
-
 ## (Optional) Configuring the testing application
 
 Similarly to Avalonia headless, you can configure cross-platform `AppBuilder` to be used in the project.
