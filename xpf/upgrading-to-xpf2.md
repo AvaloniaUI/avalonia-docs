@@ -22,9 +22,9 @@ To upgrade your app from XPF version 1 to version 2, you must do the following:
 
 1. Update your project to .NET version 10.
 1. Update the XPF SDK version.
-1. Update your project to Avalonia version 12.
+1. Update your project to Avalonia version 12, if currently using assemblies from an earlier version.
 1. Change your license key.
-1. Add any missing packages.
+1. (Beta) Add any missing packages.
 
 ### Step 1: Update your project to .NET version 10
 
@@ -33,7 +33,7 @@ If your project uses a .NET version lower than 10, you must update it to at leas
 Confirm that your project builds and runs correctly on .NET 10 (or later) with WPF before proceeding.
 
 :::danger
-XPF 2.x **does not work** on any project targeting a version of .NET below 10.
+XPF 2.x is **not compatible with** any project targeting a version of .NET below 10.
 :::
 
 ### Step 2: Update the XPF SDK version
@@ -45,12 +45,12 @@ In the `.csproj` file of the executable WPF project, update the XPF SDK to a 2.x
 ```
 
 :::note
-The CI build version changes frequently. Check the latest CI build version at https://xpf-nuget-feed.avaloniaui.net/packages/xpf.sdk. See [nightly builds](/xpf/version-info/versioning) for more information.
+You can check the latest SDK version at https://xpf-nuget-feed.avaloniaui.net/packages/xpf.sdk. See [Versioning](/xpf/version-info/versioning) for more information.
 :::
 
 ### Step 3: Update your project to Avalonia version 12
 
-If your project uses any Avalonia version 11 code alongside WPF, it should be updated to version 12 to ensure compatibility with XPF version 2.
+If your project directly references any Avalonia assemblies from version 11 (or earlier), they should be updated to version 12 to ensure compatibility with XPF version 2.
 
 See [Breaking changes in Avalonia 12](/docs/avalonia12-breaking-changes) for guidance on major changes in this Avalonia version.
 
@@ -74,9 +74,9 @@ Copy your license key into your executable's `.csproj` file using the `<Avalonia
 This is the same licensing process as used by [Avalonia Pro](/tools/installing-avalonia-pro#add-your-license-key).
 :::
 
-### Step 5: Add any missing packages
+### Step 5: (Beta) Add any missing packages
 
-Some packages are not included in the SDK. If you find that any packages are missing, you must explicitly reference them with a `<PackageReference>` in your `.csproj` file, for example:
+Some packages are not included in the beta release of XPF version 2. If you find that any packages are missing, you must explicitly reference them with a `<PackageReference>` in your `.csproj` file, for example:
 
 ```xml
 <ItemGroup>
@@ -98,7 +98,7 @@ If you wish to use Wayland with your XPF app on Linux, opt in by adding the foll
 </PropertyGroup>
 ```
 
-For more information on Avalonia's native Wayland backend, see [Wayland](/docs/platform-specific-guides/linux#wayland).
+Avalonia's native Wayland backend is at an early stage of development and does not yet provide the same features as other backends. For more information, see [Wayland](/docs/platform-specific-guides/linux#wayland).
 
 ## See also
 
