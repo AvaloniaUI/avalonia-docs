@@ -1,8 +1,8 @@
 ---
 id: upgrading-to-xpf2
 title: Upgrading to XPF 2
-description: How to upgrade to your XPF version from version 1 to version 2.
-doc-type: how-to
+description: How to upgrade your XPF app from version 1 to version 2.
+doc-type: migration
 ---
 
 This guide covers how to upgrade your XPF app to XPF version 2. It is intended for existing apps that are currently using XPF version 1.
@@ -38,7 +38,7 @@ XPF 2.x **does not work** on any project targeting a version of .NET below 10.
 
 ### Step 2: Update the XPF SDK version
 
-In the `,csproj` file of the executable WPF project, update the XPF SDK to a 2.x version number.
+In the `.csproj` file of the executable WPF project, update the XPF SDK to a 2.x version number.
 
 ```xml
 <Project Sdk="Xpf.Sdk/2.0.0-beta1">
@@ -56,9 +56,9 @@ See [Breaking changes in Avalonia 12](/docs/avalonia12-breaking-changes) for gui
 
 ### Step 4: Change your license key
 
-XPF version 2 requires a different license key from version 1. Your new license key is available from the [Avalonia portal](https://portal.avaloniaui.net/). Look for "XPF v2 License Key".
+XPF version 2 requires a different license key from version 1. Your new license key is available from the [Avalonia portal](https://portal.avaloniaui.net/). Look for **XPF v2 License Key**.
 
-Copy your license key into your executable's `.csproj` file using the `<AvaloniaUILicenseKey>` tag. Remove the old license key along with its `RuntimeHostConfigurationOption` tag—this is no longer recognized in XPF version 2.
+Copy your license key into your executable's `.csproj` file using the `<AvaloniaUILicenseKey>` tag. Remove the old license key along with its `RuntimeHostConfigurationOption` tag, which is no longer recognized in XPF version 2.
 
 ```xml
 <ItemGroup>
@@ -66,7 +66,7 @@ Copy your license key into your executable's `.csproj` file using the `<Avalonia
   <AvaloniaUILicenseKey Include="YOUR_LICENSE_KEY" />
 
   <!-- Remove this line -->
-  <RuntimeHostConfigurationOption Include="AvaloniaUI.Xpf.LicenseKey" Value="<OLD_LICENSE_KEY>" />
+  <RuntimeHostConfigurationOption Include="AvaloniaUI.Xpf.LicenseKey" Value="OLD_LICENSE_KEY" />
 </ItemGroup>
 ```
 
@@ -84,9 +84,13 @@ Some packages are not included in the SDK. If you find that any packages are mis
 </ItemGroup>
 ```
 
+### Step 6: Run the project
+
+Confirm the upgraded project runs using your preferred IDE or `dotnet run`.
+
 ## Opt into Wayland
 
-If you wish to use Wayland with your XPF on Linus, opt into Wayland support by adding the following to your `.csproj` file.
+If you wish to use Wayland with your XPF app on Linux, opt in by adding the following to your `.csproj` file.
 
 ```xml
 <PropertyGroup>
@@ -102,4 +106,4 @@ For more information on Avalonia's native Wayland backend, see [Wayland](/docs/p
 - [Versioning](/xpf/version-info/versioning): How XPF versioning works.
 - [Breaking changes in Avalonia 12](/docs/avalonia12-breaking-changes): Changes to the core Avalonia framework introduced in version 12.
 - [Wayland](/docs/platform-specific-guides/linux#wayland): More information on the Avalonia native Wayland backend.
-- [`MediaPlayer` control](/controls/media/mediaplayer/): Reference page for the `MediaPlayer` control.
+- [`MediaPlayerControl`](/controls/media/mediaplayer/): Control reference page for `MediaPlayerControl`.

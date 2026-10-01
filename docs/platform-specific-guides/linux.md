@@ -1,7 +1,7 @@
 ---
 id: linux
 title: Desktop Linux
-description: How Avalonia runs on desktop Linux, including the experimental Wayland backend, WSL 2 setup, and accessibility support with AT-SPI2.
+description: How Avalonia runs on desktop Linux, including the Wayland backend, WSL 2 setup, and accessibility support with AT-SPI2.
 doc-type: overview
 ---
 
