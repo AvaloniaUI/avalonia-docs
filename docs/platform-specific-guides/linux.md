@@ -18,7 +18,7 @@ The [`Avalonia.Wayland`](https://www.nuget.org/packages/Avalonia.Wayland) packag
 The backend supports mouse, touch, and keyboard input. It also supports clipboard and drag-and-drop. Rendering uses OpenGL or OpenGL ES through EGL, with an optional [dma-buf swapchain](https://docs.kernel.org/userspace-api/dma-buf-alloc-exchange.html) path.
 
 :::caution
-The Wayland backend is experimental. `UsePlatformDetect()` does not select it automatically; you must enable it explicitly.
+`UsePlatformDetect()` does not select the Wayland backend automatically; you must enable it explicitly.
 :::
 
 ### Enabling the Wayland backend
