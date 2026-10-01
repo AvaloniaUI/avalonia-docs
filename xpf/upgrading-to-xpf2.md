@@ -98,7 +98,7 @@ If you wish to use Wayland with your XPF app on Linux, opt in by adding the foll
 </PropertyGroup>
 ```
 
-Avalonia's native Wayland backend is at an early stage of development and does not yet provide the same features as other backends. For more information, see [Wayland](/docs/platform-specific-guides/linux#wayland).
+Avalonia's Wayland backend is at an early stage of development and does not yet provide the same features as other backends. For more information, see [Wayland](/docs/platform-specific-guides/linux#wayland).
 
 ## See also
 
