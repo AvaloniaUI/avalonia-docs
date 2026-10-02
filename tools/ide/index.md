@@ -1,6 +1,6 @@
 ---
 id: index
-title: IDE Support
+title: IDE support
 doc-type: overview
 ---
 
@@ -8,19 +8,17 @@ Avalonia works with the .NET IDEs you already use. Whether you prefer Visual Stu
 
 ## Visual Studio
 
-The [Avalonia for Visual Studio](/tools/visual-studio-extension) extension is part of Avalonia Plus and provides a full-featured XAML editing experience. It includes a live previewer, intelligent code completion with automatic namespace imports, error highlighting with fix suggestions, a drag-and-drop designer, and full XAML colorization.
-
-If you're working on Windows, this extension offers the fullest XAML editing and previewing support.
+The [Avalonia for Visual Studio](/tools/visual-studio-extension) extension is part of Avalonia Plus and provides a full-featured XAML editing experience. It includes a live previewer, code completion with automatic namespace imports, error highlighting with fix suggestions, a drag-and-drop designer, and full XAML colorization.
 
 ## Visual Studio Code
 
-The Avalonia for Visual Studio Code extension is built on the same XAML parser that powers the Visual Studio extension, which means both IDEs share the same underlying engine. Every code editing enhancement available in Visual Studio flows directly into VS Code.
+The Avalonia for Visual Studio Code extension is built on the same XAML parser that powers the Visual Studio extension, which means both IDEs share the same underlying engine.
 
-The extension provides rich IntelliSense with contextual completions, full `x:DataType` Quick Info for inspecting data context through your bindings, Go to Definition for XAML, automatic namespace imports, event handler generation, and clear, actionable diagnostics. It also includes a reliable XAML previewer with proper DPI handling and Zoom to Fit support.
+The extension provides IntelliSense with contextual completions, full `x:DataType` Quick Info for inspecting data context through your bindings, Go to Definition for XAML, automatic namespace imports, event handler generation, and diagnostics. It also includes a XAML previewer with DPI handling and Zoom to Fit support.
 
 ## JetBrains Rider
 
-Rider provides excellent .NET support for Avalonia development, including project management, debugging, and code navigation. Rider does not ship with a built-in Avalonia XAML previewer, but the community-maintained [AvalonRider](https://plugins.jetbrains.com/plugin/14839-avalonrider) plugin adds previewer support directly within the IDE.
+Rider provides .NET support for Avalonia development, including project management, debugging, and code navigation. Rider does not ship with a built-in Avalonia XAML previewer, but the community-maintained [AvaloniaRider](https://plugins.jetbrains.com/plugin/14839-avalonrider) plugin adds previewer support directly within the IDE.
 
 ## See also
 
