@@ -9,7 +9,7 @@ The Resources tool provides a view of your application's resource hierarchy, all
 
 During a resource lookup, Avalonia searches through this hierarchy until it finds a matching key. The Resources tool visualizes the application-level hierarchy so you can see which resources are available globally.
 
-For more information about Avalonia resources, see [How to use resources](https://docs.avaloniaui.net/docs/guides/styles-and-resources/resources).
+For more information about Avalonia resources, see [How to use resources](/docs/guides/styles-and-resources/resources).
 
 :::note
 

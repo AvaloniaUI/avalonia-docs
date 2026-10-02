@@ -6,7 +6,7 @@ doc-type: reference
 
 The Events Tool provides real-time monitoring and debugging capabilities for Avalonia's routed event system. Routed events in Avalonia follow a sophisticated event handling mechanism where events can traverse up or down the visual tree. This tool helps developers track event propagation, identify event handlers, and debug event-related issues in their applications.
 
-Visit [Routed Events](https://docs.avaloniaui.net/docs/concepts/input/routed-events) Avalonia documentation for more fundamental information.
+Visit [Routed Events](docs/concepts/input/routed-events) for more information.
 
 ![List of Raised Events](/img/tools/dev-tools/events-raised-events-list.png)
 
