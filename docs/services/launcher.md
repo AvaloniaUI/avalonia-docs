@@ -2,7 +2,7 @@
 id: launcher
 title: Launcher
 description: Learn how to use the Avalonia Launcher service to open files, folders, and URIs in the user's default application.
-doc-type: concept
+doc-type: explanation
 ---
 
 The `Launcher` service allows you to open a file, folder, or URI in the default application associated with that item. For example, you can use it to open a URL in the user's default browser, or open a document in the application registered to handle its file type.

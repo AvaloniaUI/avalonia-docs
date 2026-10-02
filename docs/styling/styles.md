@@ -2,7 +2,7 @@
 id: styles
 title: Styles
 description: Learn how to use Avalonia styles, selectors, and setters to share property settings between controls.
-doc-type: concept
+doc-type: explanation
 ---
 
 The Avalonia style system is a mechanism that shares property settings between controls.

@@ -44,6 +44,8 @@ const config: RedirectConfig = {
     { from: ['/docs/custom-controls/custom-control-class', '/docs/custom-controls/drawing-custom-controls'], to: '/docs/custom-controls/custom-drawn-controls'},
     { from: '/docs/custom-controls/attached-properties', to: '/docs/custom-controls/defining-properties' },
 
+    // Redirect combined pages on precedence
+    { from: '/docs/styling/style-precedence', to: '/docs/properties/value-precedence' },
     // Redirect retired ItemsRepeater pages
     { from: ['/controls/data-display/collections/itemsrepeater', '/docs/reference/controls/itemsrepeater'], to: '/controls/data-display/collections/itemscontrol' },
   ],

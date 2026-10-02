@@ -82,6 +82,6 @@ If the issue persists with a third-party theme, contact the theme's maintainers 
 
 - [Themes overview](/docs/styling/themes)
 - [Styles](/docs/styling/styles)
-- [Troubleshooting styles](/docs/styling/styles)
+- [Troubleshooting styles](/troubleshooting/ui-development/styles)
 - [How to use control themes](/docs/styling/control-themes)
 - [Developer tools](/tools/developer-tools/installation)

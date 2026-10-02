@@ -100,4 +100,4 @@ You have two options to resolve this:
 ## See also
 
 - [Styles](/docs/styling/styles)
-- [Style precedence](/docs/styling/style-precedence)
+- [Property value precedence](/docs/properties/value-precedence)

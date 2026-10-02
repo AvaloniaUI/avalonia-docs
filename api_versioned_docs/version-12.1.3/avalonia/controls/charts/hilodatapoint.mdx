@@ -1,0 +1,285 @@
+---
+title: 'HiloDataPoint'
+hide_title: true
+slug: '/avalonia/controls/charts/hilodatapoint'
+uid: 'Avalonia.Controls.Charts.HiloDataPoint'
+commentId: 'T:Avalonia.Controls.Charts.HiloDataPoint'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Charts'
+assembly: 'Avalonia.Controls.Charts'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Charts'
+tfms:
+  - 'net9.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">HiloDataPoint Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Charts</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Charts</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Charts</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Represents a high-low data point together with the original source item.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct HiloDataPoint
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> HiloDataPoint
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;HiloDataPoint&gt;
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [HiloDataPoint](#uid-ec2a51a471) | Represents a high-low data point together with the original source item. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ec2a51a471"></span>
+
+### HiloDataPoint Constructor
+
+Represents a high-low data point together with the original source item.
+
+```csharp
+public HiloDataPoint(object Category, double High, double Low, object DataItem)
+```
+
+#### Parameters
+
+`Category` object
+
+The category or horizontal value for the point.
+
+
+`High` double
+
+The high value for the range.
+
+
+`Low` double
+
+The low value for the range.
+
+
+`DataItem` object
+
+The original item from the series data source.
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Deconstruct](#uid-905af30b58) | No summary available. |
+| [Equals (2 overloads)](#uid-f3c710b2b3) | No summary available. |
+| [GetHashCode](#uid-6266c9b4f5) | No summary available. |
+| [ToString](#uid-676af5d3df) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-905af30b58"></span>
+
+### Deconstruct Method
+
+```csharp
+public void Deconstruct(object& Category, double& High, double& Low, object& DataItem)
+```
+
+#### Parameters
+
+`Category` object&amp;
+
+
+`High` double&amp;
+
+
+`Low` double&amp;
+
+
+`DataItem` object&amp;
+
+
+</section>
+
+<span id="uid-f3c710b2b3"></span>
+
+### Equals overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-13308d1938"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(Avalonia.Controls.Charts.HiloDataPoint other)
+```
+
+##### Parameters
+
+`other` [Avalonia.Controls.Charts.HiloDataPoint](xref:Avalonia.Controls.Charts.HiloDataPoint)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d8b40b3bb4"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(object obj)
+```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6266c9b4f5"></span>
+
+### GetHashCode Method
+
+```csharp
+public int GetHashCode()
+```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-676af5d3df"></span>
+
+### ToString Method
+
+```csharp
+public string ToString()
+```
+
+#### Returns
+
+string
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Category](#uid-a254774f4d) | The category or horizontal value for the point. |
+| [DataItem](#uid-ccc23b0c1b) | The original item from the series data source. |
+| [High](#uid-c5984cdfd8) | The high value for the range. |
+| [Low](#uid-b0e65e5305) | The low value for the range. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a254774f4d"></span>
+
+### Category Property
+
+The category or horizontal value for the point.
+
+```csharp
+public object Category { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ccc23b0c1b"></span>
+
+### DataItem Property
+
+The original item from the series data source.
+
+```csharp
+public object DataItem { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c5984cdfd8"></span>
+
+### High Property
+
+The high value for the range.
+
+```csharp
+public double High { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b0e65e5305"></span>
+
+### Low Property
+
+The low value for the range.
+
+```csharp
+public double Low { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

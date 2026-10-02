@@ -1,0 +1,51 @@
+---
+title: 'Avalonia.Controls.Documents.TextModel.Formatting'
+hide_title: true
+slug: '/avalonia/controls/documents/textmodel/formatting'
+uid: 'Avalonia.Controls.Documents.TextModel.Formatting'
+commentId: 'N:Avalonia.Controls.Documents.TextModel.Formatting'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Documents'
+assembly: 'Avalonia.Controls.Documents'
+apiKind: 'Namespace'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.TextModel.Formatting'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">Formatting Namespace</h1>
+
+<div className="apiref-page__lead">
+
+Namespace `Avalonia.Controls.Documents.TextModel.Formatting`
+
+</div>
+
+## Types
+
+- [BlockFormatting](blockformatting.mdx) - Block-level layout formatting snapshot. Value type for zero-reference safety.
+All data is stored as primitive types to ensure thread-safety.
+- [DocumentFormatting](documentformatting.mdx) - Document-level formatting snapshot. Value type for zero-reference safety.
+- [InlineFormatting](inlineformatting.mdx) - Inline-specific formatting snapshot. Value type for zero-reference safety.
+Contains only properties specific to [Avalonia.Controls.Documents.RichInline](xref:Avalonia.Controls.Documents.RichInline) elements.
+- [ListFormatting](listformatting.mdx) - List formatting snapshot. Value type for zero-reference safety.
+All data is stored as primitive types to ensure thread-safety.
+- [SectionPageSetup](sectionpagesetup.mdx) - Page geometry declared by a [Avalonia.Controls.Documents.Section](xref:Avalonia.Controls.Documents.Section). Value type for zero-reference
+safety; carried on the section's snapshot node, not in [Avalonia.Controls.Documents.TextModel.Formatting.BlockFormatting](xref:Avalonia.Controls.Documents.TextModel.Formatting.BlockFormatting).
+- [TableColumnWidth](tablecolumnwidth.mdx) - Describes a single table column's width and unit type.
+- [TableFormatting](tableformatting.mdx) - Table formatting snapshot. Value type for zero-reference safety.
+All data is stored as primitive types to ensure thread-safety.
+- [TextDecorationFlags](textdecorationflags.mdx) - Flags for text decorations in a snapshot.
+Uses a byte backing for minimal memory footprint.
+- [TextElementFormatting](textelementformatting.mdx) - Formatting snapshot for properties defined on [Avalonia.Controls.Documents.RichTextElement](xref:Avalonia.Controls.Documents.RichTextElement).
+Shared across all node types (inline, block, table row, etc.).
+- [UnderlineStyle](underlinestyle.mdx) - The line style of an underline. Qualifies an underline that
+[Avalonia.Controls.Documents.TextModel.Formatting.TextDecorationFlags.Underline](xref:Avalonia.Controls.Documents.TextModel.Formatting.TextDecorationFlags.Underline) has already switched on; it never switches one on
+by itself, so a value here with no [Avalonia.Controls.Documents.TextModel.Formatting.TextDecorationFlags.Underline](xref:Avalonia.Controls.Documents.TextModel.Formatting.TextDecorationFlags.Underline) flag draws nothing.
+</ApiRefPage>
+

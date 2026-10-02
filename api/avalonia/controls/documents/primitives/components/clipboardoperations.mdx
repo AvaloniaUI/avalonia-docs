@@ -1,0 +1,275 @@
+---
+title: 'ClipboardOperations'
+hide_title: true
+slug: '/avalonia/controls/documents/primitives/components/clipboardoperations'
+uid: 'Avalonia.Controls.Documents.Primitives.Components.ClipboardOperations'
+commentId: 'T:Avalonia.Controls.Documents.Primitives.Components.ClipboardOperations'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Documents'
+assembly: 'Avalonia.Controls.Documents'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.Primitives.Components'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ClipboardOperations Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.Primitives.Components</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Shared clipboard helpers used by both keyboard components and editor actions.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class ClipboardOperations
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> ClipboardOperations
+</div>
+</div>
+
+## Remarks
+
+Copy / cut publish the current selection as a single [Avalonia.Input.DataTransfer](xref:Avalonia.Input.DataTransfer) item
+carrying both [Avalonia.Input.DataFormat.Text](xref:Avalonia.Input.DataFormat.Text) (eager, via
+[Avalonia.Controls.Documents.Serialization.PlainText.PlainTextSerializer](xref:Avalonia.Controls.Documents.Serialization.PlainText.PlainTextSerializer)) and any rich format produced by the supplied
+[Avalonia.Controls.Documents.Serialization.IDocumentSerializer](xref:Avalonia.Controls.Documents.Serialization.IDocumentSerializer)s. Rich payloads use the deferred
+`DataTransferItem.Set` overload that takes a callback so they only run when a
+consumer actually requests the format.
+
+Paste probes the clipboard via
+[Avalonia.Controls.Documents.Primitives.Components.ClipboardOperations.TryGetSnapshotAsync(Avalonia.Input.Platform.IClipboard,System.Collections.Generic.IReadOnlyList&#123;Avalonia.Controls.Documents.Serialization.IDocumentSerializer&#125;,System.Threading.CancellationToken)](xref:Avalonia.Controls.Documents.Primitives.Components.ClipboardOperations.TryGetSnapshotAsync%28Avalonia.Input.Platform.IClipboard%2CSystem.Collections.Generic.IReadOnlyList%7BAvalonia.Controls.Documents.Serialization.IDocumentSerializer%7D%2CSystem.Threading.CancellationToken%29)
+for the richest format the editor can deserialize; plain text is the fallback.
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [CopyAsync (2 overloads)](#uid-cb89512340) | No summary available. |
+| [CutAsync (2 overloads)](#uid-8a2ac41fc1) | No summary available. |
+| [TryGetPlainTextSnapshotAsync](#uid-42f3e33a60) | Probes the clipboard and returns a [Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot) that carries plain text only — no formatting, no metadata, no inline wrappers, no lists, no tables. Intended for the "Paste Without Formatting" (Ctrl+Shift+V) path. |
+| [TryGetSnapshotAsync](#uid-dc89228de4) | No summary available. |
+
+<span id="uid-cb89512340"></span>
+
+### CopyAsync overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e312beb5f1"></span>
+
+#### CopyAsync Method
+
+```csharp
+public System.Threading.Tasks.Task CopyAsync(Avalonia.Controls.TextSelection selection, Avalonia.Visual visual, System.Collections.Generic.IReadOnlyList<Avalonia.Controls.Documents.Serialization.IDocumentSerializer> richSerializers)
+```
+
+##### Parameters
+
+`selection` [Avalonia.Controls.TextSelection](xref:Avalonia.Controls.TextSelection)
+
+
+`visual` [Avalonia.Visual](xref:Avalonia.Visual)
+
+
+`richSerializers` System.Collections.Generic.IReadOnlyList&lt;[Avalonia.Controls.Documents.Serialization.IDocumentSerializer](xref:Avalonia.Controls.Documents.Serialization.IDocumentSerializer)&gt;
+
+
+##### Returns
+
+System.Threading.Tasks.Task
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ec462e4520"></span>
+
+#### CopyAsync Method
+
+```csharp
+public System.Threading.Tasks.Task CopyAsync(Avalonia.Controls.TextSelection selection, Avalonia.Visual visual, System.Collections.Generic.IReadOnlyList<Avalonia.Controls.Documents.Serialization.IDocumentSerializer> richSerializers, System.Threading.CancellationToken cancellationToken)
+```
+
+##### Parameters
+
+`selection` [Avalonia.Controls.TextSelection](xref:Avalonia.Controls.TextSelection)
+
+
+`visual` [Avalonia.Visual](xref:Avalonia.Visual)
+
+
+`richSerializers` System.Collections.Generic.IReadOnlyList&lt;[Avalonia.Controls.Documents.Serialization.IDocumentSerializer](xref:Avalonia.Controls.Documents.Serialization.IDocumentSerializer)&gt;
+
+
+`cancellationToken` System.Threading.CancellationToken
+
+
+##### Returns
+
+System.Threading.Tasks.Task
+
+
+</section>
+
+<span id="uid-8a2ac41fc1"></span>
+
+### CutAsync overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0bc5c00871"></span>
+
+#### CutAsync Method
+
+```csharp
+public System.Threading.Tasks.Task CutAsync(Avalonia.Controls.TextSelection selection, Avalonia.Visual visual, System.Collections.Generic.IReadOnlyList<Avalonia.Controls.Documents.Serialization.IDocumentSerializer> richSerializers)
+```
+
+##### Parameters
+
+`selection` [Avalonia.Controls.TextSelection](xref:Avalonia.Controls.TextSelection)
+
+
+`visual` [Avalonia.Visual](xref:Avalonia.Visual)
+
+
+`richSerializers` System.Collections.Generic.IReadOnlyList&lt;[Avalonia.Controls.Documents.Serialization.IDocumentSerializer](xref:Avalonia.Controls.Documents.Serialization.IDocumentSerializer)&gt;
+
+
+##### Returns
+
+System.Threading.Tasks.Task
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5bd77834bd"></span>
+
+#### CutAsync Method
+
+```csharp
+public System.Threading.Tasks.Task CutAsync(Avalonia.Controls.TextSelection selection, Avalonia.Visual visual, System.Collections.Generic.IReadOnlyList<Avalonia.Controls.Documents.Serialization.IDocumentSerializer> richSerializers, System.Threading.CancellationToken cancellationToken)
+```
+
+##### Parameters
+
+`selection` [Avalonia.Controls.TextSelection](xref:Avalonia.Controls.TextSelection)
+
+
+`visual` [Avalonia.Visual](xref:Avalonia.Visual)
+
+
+`richSerializers` System.Collections.Generic.IReadOnlyList&lt;[Avalonia.Controls.Documents.Serialization.IDocumentSerializer](xref:Avalonia.Controls.Documents.Serialization.IDocumentSerializer)&gt;
+
+
+`cancellationToken` System.Threading.CancellationToken
+
+
+##### Returns
+
+System.Threading.Tasks.Task
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-42f3e33a60"></span>
+
+### TryGetPlainTextSnapshotAsync Method
+
+Probes the clipboard and returns a [Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot) that
+carries plain text only — no formatting, no metadata, no inline
+wrappers, no lists, no tables. Intended for the "Paste Without
+Formatting" (Ctrl+Shift+V) path.
+
+```csharp
+public System.Threading.Tasks.Task<Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot> TryGetPlainTextSnapshotAsync(Avalonia.Input.Platform.IClipboard clipboard, System.Threading.CancellationToken cancellationToken)
+```
+
+#### Parameters
+
+`clipboard` [Avalonia.Input.Platform.IClipboard](xref:Avalonia.Input.Platform.IClipboard)
+
+
+`cancellationToken` System.Threading.CancellationToken
+
+
+#### Returns
+
+System.Threading.Tasks.Task&lt;[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot)&gt;
+
+
+#### Remarks
+
+Probe order:
+
+1. [Avalonia.Input.Platform.IClipboard.TryGetInProcessDataAsync](xref:Avalonia.Input.Platform.IClipboard.TryGetInProcessDataAsync) → [Avalonia.Controls.Documents.Primitives.Components.ClipboardFormats.InProcessSnapshot](xref:Avalonia.Controls.Documents.Primitives.Components.ClipboardFormats.InProcessSnapshot): when copy/paste happen within the same process, the rich snapshot is lowered through [Avalonia.Controls.Documents.Serialization.PlainText.PlainTextSerializer](xref:Avalonia.Controls.Documents.Serialization.PlainText.PlainTextSerializer) (Serialize→Deserialize) so the returned snapshot keeps the source text exactly as our serializer emits it but drops every formatting, list, and table structure.
+2. Platform [Avalonia.Input.DataFormat.Text](xref:Avalonia.Input.DataFormat.Text) via [Avalonia.Input.Platform.IClipboard.TryGetDataAsync](xref:Avalonia.Input.Platform.IClipboard.TryGetDataAsync), fed to [Avalonia.Controls.Documents.Serialization.PlainText.PlainTextSerializer.Deserialize(string)](xref:Avalonia.Controls.Documents.Serialization.PlainText.PlainTextSerializer.Deserialize%28System.String%29).
+
+Rich formats (RTF, etc.) are intentionally not probed — by convention,
+every producer that publishes RTF also publishes `DataFormat.Text`
+next to it.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-dc89228de4"></span>
+
+### TryGetSnapshotAsync Method
+
+```csharp
+public System.Threading.Tasks.Task<Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot> TryGetSnapshotAsync(Avalonia.Input.Platform.IClipboard clipboard, System.Collections.Generic.IReadOnlyList<Avalonia.Controls.Documents.Serialization.IDocumentSerializer> richSerializers, System.Threading.CancellationToken cancellationToken)
+```
+
+#### Parameters
+
+`clipboard` [Avalonia.Input.Platform.IClipboard](xref:Avalonia.Input.Platform.IClipboard)
+
+
+`richSerializers` System.Collections.Generic.IReadOnlyList&lt;[Avalonia.Controls.Documents.Serialization.IDocumentSerializer](xref:Avalonia.Controls.Documents.Serialization.IDocumentSerializer)&gt;
+
+
+`cancellationToken` System.Threading.CancellationToken
+
+
+#### Returns
+
+System.Threading.Tasks.Task&lt;[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot)&gt;
+
+
+</section>
+
+</ApiRefPage>
+

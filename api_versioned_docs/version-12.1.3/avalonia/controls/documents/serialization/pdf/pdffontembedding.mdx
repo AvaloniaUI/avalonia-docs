@@ -1,0 +1,111 @@
+---
+title: 'PdfFontEmbedding'
+hide_title: true
+slug: '/avalonia/controls/documents/serialization/pdf/pdffontembedding'
+uid: 'Avalonia.Controls.Documents.Serialization.Pdf.PdfFontEmbedding'
+commentId: 'T:Avalonia.Controls.Documents.Serialization.Pdf.PdfFontEmbedding'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Documents.Serialization.Pdf'
+assembly: 'Avalonia.Controls.Documents.Serialization.Pdf'
+apiKind: 'Enum'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.Serialization.Pdf'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">PdfFontEmbedding Enum</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.Serialization.Pdf</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Documents.Serialization.Pdf</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Documents.Serialization.Pdf</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Controls how fonts are embedded into an exported PDF.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public enum PdfFontEmbedding
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Enum <span className="apiref-page__relation-separator">-&gt;</span> PdfFontEmbedding
+</div>
+</div>
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [Full](#uid-da9380452d) | Embed the complete font file for every font used by the document. Largest output, maximum fidelity on every viewer. |
+| [None](#uid-a6591e27ca) | Do not embed font programs. Viewers substitute locally available fonts; text metrics are still written so layout is preserved approximately. |
+| [Subset](#uid-b36e0018eb) | Embed a subset containing only the glyphs the document uses. Not implemented yet; currently behaves like [Avalonia.Controls.Documents.Serialization.Pdf.PdfFontEmbedding.Full](xref:Avalonia.Controls.Documents.Serialization.Pdf.PdfFontEmbedding.Full). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-da9380452d"></span>
+
+### Full Field
+
+Embed the complete font file for every font used by the document. Largest output,
+maximum fidelity on every viewer.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Pdf.PdfFontEmbedding Full
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a6591e27ca"></span>
+
+### None Field
+
+Do not embed font programs. Viewers substitute locally available fonts; text metrics
+are still written so layout is preserved approximately.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Pdf.PdfFontEmbedding None
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b36e0018eb"></span>
+
+### Subset Field
+
+Embed a subset containing only the glyphs the document uses. Not implemented yet;
+currently behaves like [Avalonia.Controls.Documents.Serialization.Pdf.PdfFontEmbedding.Full](xref:Avalonia.Controls.Documents.Serialization.Pdf.PdfFontEmbedding.Full).
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Pdf.PdfFontEmbedding Subset
+```
+
+</section>
+
+</ApiRefPage>
+

@@ -1,0 +1,345 @@
+---
+title: 'InlineWrapper'
+hide_title: true
+slug: '/avalonia/controls/documents/serialization/authoring/inlinewrapper'
+uid: 'Avalonia.Controls.Documents.Serialization.Authoring.InlineWrapper'
+commentId: 'T:Avalonia.Controls.Documents.Serialization.Authoring.InlineWrapper'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Documents'
+assembly: 'Avalonia.Controls.Documents'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.Serialization.Authoring'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">InlineWrapper Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.Serialization.Authoring</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+One level of an inline wrapper chain: the kind of the wrapping element and the
+formatting it carries. The value-type counterpart of a wrapper [Avalonia.Controls.Documents.Serialization.Authoring.InlineDraft](xref:Avalonia.Controls.Documents.Serialization.Authoring.InlineDraft),
+for [Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder.AddRun(ReadOnlyMemory&#123;char&#125;,Avalonia.Controls.Documents.TextModel.Formatting.InlineFormatting,Avalonia.Controls.Documents.TextModel.Formatting.TextElementFormatting,ReadOnlySpan&#123;Avalonia.Controls.Documents.Serialization.Authoring.InlineWrapper&#125;,object)](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder.AddRun%28System.ReadOnlyMemory%7BSystem.Char%7D%2CAvalonia.Controls.Documents.TextModel.Formatting.InlineFormatting%2CAvalonia.Controls.Documents.TextModel.Formatting.TextElementFormatting%2CSystem.ReadOnlySpan%7BAvalonia.Controls.Documents.Serialization.Authoring.InlineWrapper%7D%2CSystem.Object%29).
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct InlineWrapper
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> InlineWrapper
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;InlineWrapper&gt;
+</div>
+</div>
+
+## Remarks
+
+A reader that knows a run's whole chain up front - an innermost run inside bold inside
+underline, say - describes it as a span of these and pays nothing to describe it: the
+builder reads the span and constructs the snapshot nodes directly, where the draft path
+allocates a draft object, a child list, and that list's backing array per level.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [InlineWrapper](#uid-58265dc91d) | Initializes a wrapper of `kind` carrying the given formatting. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-58265dc91d"></span>
+
+### InlineWrapper Constructor
+
+Initializes a wrapper of `kind` carrying the given formatting.
+
+```csharp
+public InlineWrapper(Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind kind, Avalonia.Controls.Documents.TextModel.Formatting.InlineFormatting formatting, Avalonia.Controls.Documents.TextModel.Formatting.TextElementFormatting elementFormatting)
+```
+
+#### Parameters
+
+`kind` [Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind](xref:Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind)
+
+
+`formatting` [Avalonia.Controls.Documents.TextModel.Formatting.InlineFormatting](xref:Avalonia.Controls.Documents.TextModel.Formatting.InlineFormatting)
+
+
+`elementFormatting` [Avalonia.Controls.Documents.TextModel.Formatting.TextElementFormatting](xref:Avalonia.Controls.Documents.TextModel.Formatting.TextElementFormatting)
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Equals (2 overloads)](#uid-c30e2eae51) | No summary available. |
+| [GetHashCode](#uid-eddd899fe2) | No summary available. |
+| [Span](#uid-9725b76cb4) | A span wrapper carrying arbitrary formatting, matching [Avalonia.Controls.Documents.Serialization.Authoring.SpanInlineDraft](xref:Avalonia.Controls.Documents.Serialization.Authoring.SpanInlineDraft). This is where formatting that no named wrapper represents belongs. |
+| [ToString](#uid-72b061fb35) | No summary available. |
+
+<span id="uid-c30e2eae51"></span>
+
+### Equals overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-cae639ec72"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(Avalonia.Controls.Documents.Serialization.Authoring.InlineWrapper other)
+```
+
+##### Parameters
+
+`other` [Avalonia.Controls.Documents.Serialization.Authoring.InlineWrapper](xref:Avalonia.Controls.Documents.Serialization.Authoring.InlineWrapper)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1d181434bb"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(object obj)
+```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-eddd899fe2"></span>
+
+### GetHashCode Method
+
+```csharp
+public int GetHashCode()
+```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9725b76cb4"></span>
+
+### Span Method
+
+A span wrapper carrying arbitrary formatting, matching [Avalonia.Controls.Documents.Serialization.Authoring.SpanInlineDraft](xref:Avalonia.Controls.Documents.Serialization.Authoring.SpanInlineDraft).
+This is where formatting that no named wrapper represents belongs.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Authoring.InlineWrapper Span(Avalonia.Controls.Documents.TextModel.Formatting.InlineFormatting formatting, Avalonia.Controls.Documents.TextModel.Formatting.TextElementFormatting elementFormatting)
+```
+
+#### Parameters
+
+`formatting` [Avalonia.Controls.Documents.TextModel.Formatting.InlineFormatting](xref:Avalonia.Controls.Documents.TextModel.Formatting.InlineFormatting)
+
+
+`elementFormatting` [Avalonia.Controls.Documents.TextModel.Formatting.TextElementFormatting](xref:Avalonia.Controls.Documents.TextModel.Formatting.TextElementFormatting)
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.Serialization.Authoring.InlineWrapper](xref:Avalonia.Controls.Documents.Serialization.Authoring.InlineWrapper)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-72b061fb35"></span>
+
+### ToString Method
+
+```csharp
+public string ToString()
+```
+
+#### Returns
+
+string
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Bold](#uid-3e3f0fb980) | A bold wrapper, matching [Avalonia.Controls.Documents.Serialization.Authoring.BoldInlineDraft](xref:Avalonia.Controls.Documents.Serialization.Authoring.BoldInlineDraft). |
+| [ElementFormatting](#uid-4bba4622d8) | Gets the element formatting the wrapper carries (font, foreground, background). |
+| [Formatting](#uid-77ccbad402) | Gets the inline formatting the wrapper carries (text decorations, baseline alignment). |
+| [Italic](#uid-2d2685dc21) | An italic wrapper, matching [Avalonia.Controls.Documents.Serialization.Authoring.ItalicInlineDraft](xref:Avalonia.Controls.Documents.Serialization.Authoring.ItalicInlineDraft). |
+| [Kind](#uid-3dabe91c4d) | Gets the [Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind](xref:Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind) of the wrapping element. |
+| [Subscript](#uid-46bda0eabb) | A subscript wrapper, matching [Avalonia.Controls.Documents.Serialization.Authoring.SubscriptInlineDraft](xref:Avalonia.Controls.Documents.Serialization.Authoring.SubscriptInlineDraft). |
+| [Superscript](#uid-cfeb803709) | A superscript wrapper, matching [Avalonia.Controls.Documents.Serialization.Authoring.SuperscriptInlineDraft](xref:Avalonia.Controls.Documents.Serialization.Authoring.SuperscriptInlineDraft). |
+| [Underline](#uid-f2174622b2) | An underline wrapper, matching [Avalonia.Controls.Documents.Serialization.Authoring.UnderlineInlineDraft](xref:Avalonia.Controls.Documents.Serialization.Authoring.UnderlineInlineDraft). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3e3f0fb980"></span>
+
+### Bold Property
+
+A bold wrapper, matching [Avalonia.Controls.Documents.Serialization.Authoring.BoldInlineDraft](xref:Avalonia.Controls.Documents.Serialization.Authoring.BoldInlineDraft).
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Authoring.InlineWrapper Bold { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4bba4622d8"></span>
+
+### ElementFormatting Property
+
+Gets the element formatting the wrapper carries (font, foreground, background).
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.Formatting.TextElementFormatting ElementFormatting { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-77ccbad402"></span>
+
+### Formatting Property
+
+Gets the inline formatting the wrapper carries (text decorations, baseline alignment).
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.Formatting.InlineFormatting Formatting { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2d2685dc21"></span>
+
+### Italic Property
+
+An italic wrapper, matching [Avalonia.Controls.Documents.Serialization.Authoring.ItalicInlineDraft](xref:Avalonia.Controls.Documents.Serialization.Authoring.ItalicInlineDraft).
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Authoring.InlineWrapper Italic { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3dabe91c4d"></span>
+
+### Kind Property
+
+Gets the [Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind](xref:Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind) of the wrapping element.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind Kind { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-46bda0eabb"></span>
+
+### Subscript Property
+
+A subscript wrapper, matching [Avalonia.Controls.Documents.Serialization.Authoring.SubscriptInlineDraft](xref:Avalonia.Controls.Documents.Serialization.Authoring.SubscriptInlineDraft).
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Authoring.InlineWrapper Subscript { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-cfeb803709"></span>
+
+### Superscript Property
+
+A superscript wrapper, matching [Avalonia.Controls.Documents.Serialization.Authoring.SuperscriptInlineDraft](xref:Avalonia.Controls.Documents.Serialization.Authoring.SuperscriptInlineDraft).
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Authoring.InlineWrapper Superscript { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f2174622b2"></span>
+
+### Underline Property
+
+An underline wrapper, matching [Avalonia.Controls.Documents.Serialization.Authoring.UnderlineInlineDraft](xref:Avalonia.Controls.Documents.Serialization.Authoring.UnderlineInlineDraft).
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Authoring.InlineWrapper Underline { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

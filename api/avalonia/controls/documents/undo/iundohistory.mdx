@@ -1,0 +1,92 @@
+---
+title: 'IUndoHistory'
+hide_title: true
+slug: '/avalonia/controls/documents/undo/iundohistory'
+uid: 'Avalonia.Controls.Documents.Undo.IUndoHistory'
+commentId: 'T:Avalonia.Controls.Documents.Undo.IUndoHistory'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Documents'
+assembly: 'Avalonia.Controls.Documents'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.Undo'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IUndoHistory Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.Undo</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Reads the undo and redo stacks.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface IUndoHistory
+```
+
+</div>
+
+## Remarks
+
+Implemented by [Avalonia.Controls.Documents.Undo.UndoManager](xref:Avalonia.Controls.Documents.Undo.UndoManager). The stacks are exposed for inspection, a
+history window or a test; the units themselves are not replayable from outside.
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [RedoUnits](#uid-727f2cfc25) | The units that can be redone, most recent last. |
+| [UndoUnits](#uid-010cb9ba6e) | The units that can be undone, most recent last. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-727f2cfc25"></span>
+
+### RedoUnits Property
+
+The units that can be redone, most recent last.
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<Avalonia.Controls.Documents.Undo.IUndoUnit> RedoUnits { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-010cb9ba6e"></span>
+
+### UndoUnits Property
+
+The units that can be undone, most recent last.
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<Avalonia.Controls.Documents.Undo.IUndoUnit> UndoUnits { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

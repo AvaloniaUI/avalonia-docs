@@ -2,7 +2,7 @@
 id: focus
 title: Focus
 description: Learn how to manage keyboard focus in Avalonia, including tab navigation, directional (XYFocus) navigation, focus events, pseudoclasses, and the FocusManager.
-doc-type: concept
+doc-type: explanation
 ---
 
 import DirectionalNavigationScreenshot from '/img/concepts/ui-concepts/user-input/directional-navigation.gif';

@@ -1,7 +1,7 @@
 ---
 id: extension-patterns
 title: Extension Patterns
-doc-type: guide
+doc-type: how-to
 tags:
  - avalonia pro
  - avalonia enterprise

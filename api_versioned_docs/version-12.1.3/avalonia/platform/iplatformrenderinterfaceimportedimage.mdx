@@ -1,0 +1,159 @@
+---
+title: 'IPlatformRenderInterfaceImportedImage'
+hide_title: true
+slug: '/avalonia/platform/iplatformrenderinterfaceimportedimage'
+uid: 'Avalonia.Platform.IPlatformRenderInterfaceImportedImage'
+commentId: 'T:Avalonia.Platform.IPlatformRenderInterfaceImportedImage'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Platform'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IPlatformRenderInterfaceImportedImage Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Platform</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface IPlatformRenderInterfaceImportedImage
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="iplatformrenderinterfaceimportedobject">IPlatformRenderInterfaceImportedObject</a>, IDisposable
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [SnapshotWithAutomaticSync](#uid-44a67a09f1) | No summary available. |
+| [SnapshotWithKeyedMutex](#uid-6bc09dfc8c) | No summary available. |
+| [SnapshotWithSemaphores](#uid-8568fc9453) | No summary available. |
+| [SnapshotWithTimelineSemaphores](#uid-63542c19d0) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-44a67a09f1"></span>
+
+### SnapshotWithAutomaticSync Method
+
+```csharp
+public Avalonia.Platform.IBitmapImpl SnapshotWithAutomaticSync()
+```
+
+#### Returns
+
+[Avalonia.Platform.IBitmapImpl](xref:Avalonia.Platform.IBitmapImpl)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6bc09dfc8c"></span>
+
+### SnapshotWithKeyedMutex Method
+
+```csharp
+public Avalonia.Platform.IBitmapImpl SnapshotWithKeyedMutex(uint acquireIndex, uint releaseIndex)
+```
+
+#### Parameters
+
+`acquireIndex` uint
+
+
+`releaseIndex` uint
+
+
+#### Returns
+
+[Avalonia.Platform.IBitmapImpl](xref:Avalonia.Platform.IBitmapImpl)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8568fc9453"></span>
+
+### SnapshotWithSemaphores Method
+
+```csharp
+public Avalonia.Platform.IBitmapImpl SnapshotWithSemaphores(Avalonia.Platform.IPlatformRenderInterfaceImportedSemaphore waitForSemaphore, Avalonia.Platform.IPlatformRenderInterfaceImportedSemaphore signalSemaphore)
+```
+
+#### Parameters
+
+`waitForSemaphore` [Avalonia.Platform.IPlatformRenderInterfaceImportedSemaphore](xref:Avalonia.Platform.IPlatformRenderInterfaceImportedSemaphore)
+
+
+`signalSemaphore` [Avalonia.Platform.IPlatformRenderInterfaceImportedSemaphore](xref:Avalonia.Platform.IPlatformRenderInterfaceImportedSemaphore)
+
+
+#### Returns
+
+[Avalonia.Platform.IBitmapImpl](xref:Avalonia.Platform.IBitmapImpl)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-63542c19d0"></span>
+
+### SnapshotWithTimelineSemaphores Method
+
+```csharp
+public Avalonia.Platform.IBitmapImpl SnapshotWithTimelineSemaphores(Avalonia.Platform.IPlatformRenderInterfaceImportedSemaphore waitForSemaphore, ulong waitForValue, Avalonia.Platform.IPlatformRenderInterfaceImportedSemaphore signalSemaphore, ulong signalValue)
+```
+
+#### Parameters
+
+`waitForSemaphore` [Avalonia.Platform.IPlatformRenderInterfaceImportedSemaphore](xref:Avalonia.Platform.IPlatformRenderInterfaceImportedSemaphore)
+
+
+`waitForValue` ulong
+
+
+`signalSemaphore` [Avalonia.Platform.IPlatformRenderInterfaceImportedSemaphore](xref:Avalonia.Platform.IPlatformRenderInterfaceImportedSemaphore)
+
+
+`signalValue` ulong
+
+
+#### Returns
+
+[Avalonia.Platform.IBitmapImpl](xref:Avalonia.Platform.IBitmapImpl)
+
+
+</section>
+
+</ApiRefPage>
+
