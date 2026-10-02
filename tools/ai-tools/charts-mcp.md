@@ -50,21 +50,22 @@ Before setting up the MCP server, ensure you have:
 1. Configure a NuGet package source that contains `Avalonia.Controls.Charts.Mcp` and its matching runtime packages.
 2. Install the Charts MCP server as a global .NET tool by running `dotnet tool install`.
 
-```bash
-dotnet tool install --global Avalonia.Controls.Charts.Mcp
-```
+    ```bash
+    dotnet tool install --global Avalonia.Controls.Charts.Mcp
+    ```
 
 3. If `dotnet` reports that the package cannot be found, confirm that the required package source is configured and enabled. Check your NuGet sources by running this command.
 
-```bash
-dotnet nuget list source
-```
+    ```bash
+    dotnet nuget list source
+    ```
 
 4. The Charts MCP server is accessed by running the following command. Most editors do this automatically once configured.
 
-```bash
-mcp-server-charts
-```
+    ```bash
+    mcp-server-charts
+    ```
+<br />
 
 :::tip
 If the command line cannot find `mcp-server-charts` after installation, check that the .NET global tools directory is on your `PATH`. On macOS and Linux, it is usually `~/.dotnet/tools`. On Windows, it is usually `%USERPROFILE%\.dotnet\tools`.
@@ -486,7 +487,7 @@ The server also exposes MCP resources that your assistant can read before callin
 
 ## Inputs and outputs
 
-Most chart tools accept a title, a JSON `data` string, optional width and height values, and an optional theme. Some tools expose chart-specific arguments, such as `geoJson`, `nodes` or `innerRadius`.
+Most chart tools accept a title, a JSON `data` string, optional width and height values, and an optional theme. Some tools expose chart-specific arguments, such as `geoJson`, `nodes`, or `innerRadius`.
 
 JSON property names are case-insensitive. For example, `Label`, `label`, and `LABEL` map to the same property.
 
