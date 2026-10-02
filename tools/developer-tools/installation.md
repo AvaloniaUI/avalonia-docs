@@ -107,7 +107,7 @@ dotnet tool update --global AvaloniaUI.DeveloperTools.Linux
 </TabItem>
 </Tabs>
 
-:::warning
+:::caution
 On macOS or Linux, the installation location may not be automatically added to the PATH environment variable. This surfaces as a "command not found" error when trying to run `avdt`.
 
 To resolve this issue, you must append the tool location to the PATH environment variable. The default location is usually `$HOME/.dotnet/tools`.

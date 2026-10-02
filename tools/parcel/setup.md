@@ -99,7 +99,7 @@ dotnet tool update --global AvaloniaUI.Parcel.Linux
 </TabItem>
 </Tabs>
 
-:::warning
+:::caution
 On macOS or Linux, the installer might not add the installation directory to the `PATH` environment variable. In this case, the shell reports a "command not found" error when you run `parcel`.
 
 Add the tool directory to `PATH`. The default directory is usually `$HOME/.dotnet/tools`.
