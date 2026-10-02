@@ -21,7 +21,7 @@ In this tutorial, you install the Avalonia Plus Developer Tools, add the diagnos
 | .NET Runtime | 6.0 or newer |
 | Windows | 10 or newer |
 | macOS | 13 or newer |
-| Linux | X11 and glibc 2.27 or musl 1.22.2 compatible distros |
+| Linux | X11 and glibc 2.27 or musl 1.2.2 compatible distros |
 
 No admin/sudo permissions are required to run the tool. A firewall exception might need to be configured, if you plan to use Developer Tools remotely.
 
@@ -43,7 +43,7 @@ This guide demonstrates global installation of the tool. But local installation 
 dotnet tool install --global AvaloniaUI.DeveloperTools
 ```
 
-If you are upgrading app from .NET 8/9 installation, you should first uninstall it with `dotnet tool uninstall --global AvaloniaUI.DeveloperTools.Windows`  or `avdt uninstall`.
+If you are upgrading app from .NET 8/9 installation, you should first uninstall it with `dotnet tool uninstall --global AvaloniaUI.DeveloperTools`  or `avdt uninstall`.
 
 Developer Tools can be then updated by running `dotnet tool update` command.
 

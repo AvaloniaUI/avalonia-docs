@@ -20,7 +20,7 @@ Avalonia Parcel is a packaging tool for Avalonia applications. It provides a gra
 | .NET Runtime | 6.0 or newer |
 | Windows | 10 or newer |
 | macOS | 13 or newer |
-| Linux | X11 and glibc 2.27 or musl 1.22.2 compatible distros |
+| Linux | X11 and glibc 2.27 or musl 1.2.2 compatible distros |
 
 ## Step 1: Install Avalonia Parcel
 
@@ -35,7 +35,7 @@ This guide shows how to install Parcel globally. You can install it locally, but
 dotnet tool install --global AvaloniaUI.Parcel
 ```
 
-If you installed Parcel for .NET 8 or .NET 9, first run `dotnet tool uninstall --global AvaloniaUI.Parcel.Windows` or `parcel uninstall`.
+If you installed Parcel for .NET 8 or .NET 9, first run `dotnet tool uninstall --global AvaloniaUI.Parcel` or `parcel uninstall`.
 
 Use the following command to update Parcel:
 
