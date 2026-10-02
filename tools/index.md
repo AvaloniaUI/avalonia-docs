@@ -9,19 +9,6 @@ doc-type: overview
 import DocsCard from '@site/src/components/global/DocsCard';
 import DocsCards from '@site/src/components/global/DocsCards';
 
-<head>
-  <title>Avalonia Tools</title>
-  <meta
-    name="description"
-    content="Professional developer tools for Avalonia. Debug visually, package effortlessly, and build faster."
-  />
-  <style>{`
-    :root {
-      --doc-item-container-width: 60rem;
-    }
-  `}</style>
-</head>
-
 Avalonia's development tooling supplements the free, open-source core framework, by facilitating tasks around the framework itself: diagnosing layout issues, packaging your app for multiple operating systems, and previewing XAML as you write it.
 
 ## Avalonia Plus
