@@ -2,6 +2,7 @@
 id: index
 title: Avalonia Tools
 sidebar_label: Avalonia Tools
+description: Developer tools for Avalonia. Visual debugging, cross-platform packaging, and XAML editing in Visual Studio.
 doc-type: overview
 ---
 
@@ -21,9 +22,7 @@ import DocsCards from '@site/src/components/global/DocsCards';
   `}</style>
 </head>
 
-Avalonia is a free, open-source UI framework. You can build and ship cross-platform .NET applications at no cost. The framework is MIT licensed and maintained by a growing team.
-
-Development tooling covers the tasks around the framework itself: diagnosing layout issues, packaging your app for multiple operating systems, and previewing XAML as you write it.
+Avalonia's development tooling supplements the free, open-source core framework, by facilitating tasks around the framework itself: diagnosing layout issues, packaging your app for multiple operating systems, and previewing XAML as you write it.
 
 ## Avalonia Plus
 
@@ -31,11 +30,11 @@ Avalonia Plus is a suite of professional tools built specifically for Avalonia d
 
 <DocsCards>
 <DocsCard header="Dev Tools" href="/tools/developer-tools/installation" img="/icons/feature-devtools-icon.png">
-  <p>Inspect and diagnose your Avalonia apps visually. Edit properties in real time, profile performance, and debug layouts without guesswork.</p>
+  <p>Inspect and diagnose your Avalonia apps visually. Edit properties in real time, profile performance, and debug layouts.</p>
 </DocsCard>
 
 <DocsCard header="Parcel" href="/tools/parcel/setup" img="/icons/feature-parcel-icon.png">
-  <p>Package your apps for Windows, macOS, and Linux in a single tool. Code signing, notarization, and installers handled for you.</p>
+  <p>Package your apps for Windows, macOS, and Linux in a single tool. Handle code signing, notarization, and installers.</p>
 </DocsCard>
 
 <DocsCard header="Avalonia for Visual Studio" href="/tools/visual-studio-extension" img="/icons/feature-vs-ext-icon.png">
@@ -45,13 +44,13 @@ Avalonia Plus is a suite of professional tools built specifically for Avalonia d
 
 ## Avalonia Pro
 
-Avalonia Pro includes all professional tools in Avalonia Plus, and additionally includes premium UI controls such as [Charts](/controls/data-display/charts/), [TreeDataGrid](/controls/data-display/structured-data/treedatagrid/), [RichTextEditor](/controls/input/text-input/richtexteditor/), [PdfViewer](/controls/data-display/pdfviewer/), [VirtualKeyboard](/controls/input/text-input/virtualkeyboard), and more.
+Avalonia Pro includes all professional tools in Avalonia Plus, and additionally includes premium UI controls such as [Charts](/controls/data-display/charts/), [TreeDataGrid](/controls/data-display/structured-data/treedatagrid/), [RichTextEditor](/controls/input/text-input/richtexteditor/), [PdfViewer](/controls/data-display/pdfviewer/), and [VirtualKeyboard](/controls/input/text-input/virtualkeyboard).
 
 ## Who gets access
 
 For non-commercial use, the [Community license](https://avaloniaui.net/pricing) gives you free access to Avalonia Plus tools and components.
 
-For larger teams and organizations, paid subscriptions are available. See our [pricing page](https://avaloniaui.net/pricing) for details.
+For larger teams and organizations, paid subscriptions are available. See the [pricing page](https://avaloniaui.net/pricing) for details.
 
 Subscriptions fund continued development of the open-source framework.
 
