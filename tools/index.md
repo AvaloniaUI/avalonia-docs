@@ -39,17 +39,17 @@ Avalonia Plus is a suite of professional tools built specifically for Avalonia d
 </DocsCard>
 
 <DocsCard header="Avalonia for Visual Studio" href="/tools/visual-studio-extension" img="/icons/feature-vs-ext-icon.png">
-  <p>A purpose-built Visual Studio extension with XAML previewing, code completion, and a drag-and-drop designer.</p>
+  <p>Purpose-built Visual Studio extension with XAML previewing, code completion, and a drag-and-drop designer.</p>
 </DocsCard>
 </DocsCards>
 
 ## Avalonia Pro
 
-Avalonia Pro includes all professional tools in Avalonia Plus, and additionally includes premium UI controls such as [Charts](/controls/data-display/charts/), [TreeDataGrid](/controls/data-display/structured-data/treedatagrid/), [RichTextEditor](/controls/input/text-input/richtexteditor/), [PdfViewer](/controls/data-display/pdfviewer/), [VirtualKeyboard](/controls/input/text-input/virtualkeyboard), and more. These components cover use cases from displaying hierarchical data to embedding native web content without bundling Chromium.
+Avalonia Pro includes all professional tools in Avalonia Plus, and additionally includes premium UI controls such as [Charts](/controls/data-display/charts/), [TreeDataGrid](/controls/data-display/structured-data/treedatagrid/), [RichTextEditor](/controls/input/text-input/richtexteditor/), [PdfViewer](/controls/data-display/pdfviewer/), [VirtualKeyboard](/controls/input/text-input/virtualkeyboard), and more.
 
 ## Who gets access
 
-For non-commercial use, the [Community license](https://avaloniaui.net/pricing) gives you free access to Avalonia Plus tools and components. No trial period, no feature gates.
+For non-commercial use, the [Community license](https://avaloniaui.net/pricing) gives you free access to Avalonia Plus tools and components.
 
 For larger teams and organizations, paid subscriptions are available. See our [pricing page](https://avaloniaui.net/pricing) for details.
 
