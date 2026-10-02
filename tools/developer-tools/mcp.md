@@ -169,7 +169,7 @@ Choose your editor below:
 
 **Option B: Command palette**
 
-1. Open the command palette (`Ctrl+Shift+P` / `Cmd+Shift+P`).
+1. Open the command palette (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>, or  <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>).
 2. Run **MCP: Add Server**.
 3. Select **stdio** as the server type.
 4. Enter `avdt mcp` as the command.
@@ -222,7 +222,7 @@ JetBrains Rider supports MCP servers through the AI Assistant plugin and the Git
 
 **Option A: Settings UI**
 
-1. Open **Settings** > **Tools** > **AI Assistant** > **MCP Servers**.
+1. Open **Settings** → **Tools** → **AI Assistant** → **Model Context Protocol (MCP)**.
 2. Click **Add** and select **stdio** as the transport type.
 3. Set the command to `avdt` with argument `mcp`.
 4. Set the server name to `avalonia_devtools`.
@@ -283,7 +283,7 @@ claude mcp list
 </TabItem>
 <TabItem value="claude-desktop" label="Claude Desktop">
 
-1. Open **Settings** > **Developer** and click **Edit Config**.
+1. Open **Settings → Developer** and click **Edit Config**.
 2. Add the DevTools MCP server to `claude_desktop_config.json`:
 
 ```json

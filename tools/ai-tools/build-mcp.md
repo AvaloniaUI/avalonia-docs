@@ -82,7 +82,7 @@ Choose your editor or CLI tool below:
 
 **Option A: Command palette**
 
-1. Open the command palette (`Ctrl+Shift+P` / `Cmd+Shift+P`).
+1. Open the command palette (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>, or  <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>).
 2. Run **MCP: Add Server**.
 3. Select **HTTP** as the server type.
 4. Enter `https://docs-mcp.avaloniaui.net/mcp` as the URL.
@@ -133,7 +133,7 @@ JetBrains Rider supports MCP servers through the AI Assistant plugin and the Git
 
 **Option A: Settings UI**
 
-1. Open **Settings** > **Tools** > **AI Assistant** > **MCP Servers**.
+1. Open **Settings** → **Tools** → **AI Assistant** → **Model Context Protocol (MCP)**.
 2. Click **Add** and select **Streamable HTTP** as the transport type.
 3. Enter `https://docs-mcp.avaloniaui.net/mcp` as the URL.
 4. Set the server name to `avalonia-docs`.

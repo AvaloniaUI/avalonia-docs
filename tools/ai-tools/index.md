@@ -12,8 +12,6 @@ Model Context Protocol (MCP) is an open standard that allows AI models to use ex
 
 ## Supported AI assistants
 
-Each MCP setup page includes step-by-step configuration instructions for the following editors and CLI tools:
-
 - VS Code with GitHub Copilot
 - Visual Studio with Copilot
 - JetBrains Rider (AI Assistant and Copilot plugins)

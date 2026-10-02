@@ -110,7 +110,7 @@ The examples below use the global .NET tool command. If you are [running from so
 
 #### Option A: Command palette
 
-1. Open the command palette (`Ctrl+Shift+P` / `Cmd+Shift+P`).
+1. Open the command palette (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>, or  <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>).
 2. Run **MCP: Add Server**.
 3. Select **stdio** as the server type.
 4. Enter `mcp-server-charts` as the command.
