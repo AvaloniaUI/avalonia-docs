@@ -31,7 +31,7 @@ Seat assignment works identically for both [Avalonia](https://avaloniaui.net/pri
       <td rowspan="2"><Image light={PortalLogin}/></td>
     </tr>
     <tr>
-      <td>2. Login with your credentials.</td>
+      <td>2. Sign in with your credentials.</td>
     </tr>
   </tbody>
 </table>
@@ -56,14 +56,14 @@ Seat assignment works identically for both [Avalonia](https://avaloniaui.net/pri
 <table>
   <tbody>
     <tr>
-      <td>5. Scroll down the subscription management page until you find the section titled "Assigned Seats".</td>
+      <td>5. Scroll down the subscription management page until you find the **Assigned Seats** section.</td>
       <td rowspan="2"><Image light={ClickAssignSeats}/></td>
     </tr>
     <tr>
       <td>6. Click **Assign Seats**.</td>
     </tr>
     <tr>
-      <td>7. In the selection modal, tick the user(s) you wish to assign a seat to.</td>
+      <td>7. In the selection modal, tick the user(s) to whom you wish to assign a seat.</td>
       <td rowspan="2"><Image light={AssignModal}/></td>
     </tr>
     <tr>
@@ -75,9 +75,10 @@ Seat assignment works identically for both [Avalonia](https://avaloniaui.net/pri
 :::danger
 Once assigned, a seat cannot be unassigned or reassigned.
 
-If you believe you have assigned a seat to the wrong user by mistake, please open a ticket in the [portal](https://portal.avaloniaui.net/).
+If you believe you have assigned a seat to the wrong user by mistake, open a ticket in the [portal](https://portal.avaloniaui.net/).
 :::
 
 ## See also
+
 - [Troubleshooting login issues](/troubleshooting/login-issues)
 - [Avalonia XPF](/xpf)
