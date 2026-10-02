@@ -49,9 +49,9 @@ This is particularly useful for debugging layout issues. Instead of describing a
 
 ## Parcel MCP
 
-The Parcel MCP server lets your AI assistant handle application packaging. It can create Parcel configurations from your .NET projects, set up code signing and notarisation, and build installers for Windows, macOS, and Linux.
+The Parcel MCP server lets your AI assistant handle application packaging. It can create Parcel configurations from your .NET projects, set up code signing and notarization, and build installers for Windows, macOS, and Linux.
 
-With the Parcel MCP server, you describe what you want in plain English and the AI assistant handles the configuration and execution, including macOS signing and notarisation.
+With the Parcel MCP server, you describe what you want in plain English and the AI assistant handles the configuration and execution, including macOS signing and notarization.
 
 [Set up Parcel MCP](/tools/parcel/mcp)
 

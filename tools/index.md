@@ -35,7 +35,7 @@ Avalonia Plus is a suite of professional tools built specifically for Avalonia d
 </DocsCard>
 
 <DocsCard header="Parcel" href="/tools/parcel/setup" img="/icons/feature-parcel-icon.png">
-  <p>Package your apps for Windows, macOS, and Linux in a single tool. Code signing, notarisation, and installers handled for you.</p>
+  <p>Package your apps for Windows, macOS, and Linux in a single tool. Code signing, notarization, and installers handled for you.</p>
 </DocsCard>
 
 <DocsCard header="Avalonia for Visual Studio" href="/tools/visual-studio-extension" img="/icons/feature-vs-ext-icon.png">
