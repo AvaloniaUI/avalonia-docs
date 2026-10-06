@@ -22,12 +22,11 @@ By default: `true` on iOS and Android, `false` everywhere else.
 
 ## DeveloperToolsOptions.AutoConnectFromDesignMode
 
-Defines if design mode app should be connected to dev tools.
-Default is 'false'.
+Defines if design mode app should be connected to dev tools. Default is `false`.
 
 ## DeveloperToolsOptions.Runner
 
-By default, `DiagnosticsSupport` package attempts to run global `avdt` .NET tool when requested, if `DevTools` instance is not already running.
+By default, `DiagnosticsSupport` package attempts to run global `avdt` .NET tool when requested, if the Developer Tools instance is not already running.
 
 But it is possible to redefine this behavior by changing `DeveloperToolsOptions.Runner` value:
 
@@ -40,11 +39,11 @@ this.AttachDeveloperTools(o =>
 
 Possible options are:
 
-1. `DeveloperToolsRunner.DotNetTool` - global .NET tool.
-2. `DeveloperToolsOptions.AppleBundle` - runs macOS bundle by its ID. To make it work, you need to run `Developer Tools` process directly at least once.
-3. `DeveloperToolsOptions.NoOp` - do nothing. This option assumes the `Developer Tools` application was started by the user manually. 
-4. `DeveloperToolsRunner.CreateFromExecutable(string)` - run executable by full path. This option is not recommended, unless you prefer a custom installation of the tool.
-5. Default: `DeveloperToolsRunner.GetDefaultForPlatform()` - returns `DotNetTool` on desktop or `NoOp` on mobile/browser.
+- `DeveloperToolsRunner.DotNetTool` - global .NET tool.
+- `DeveloperToolsRunner.AppleBundle` - runs macOS bundle by its ID. To make it work, you need to run `Developer Tools` process directly at least once.
+- `DeveloperToolsRunner.NoOp` - do nothing. This option assumes the `Developer Tools` application was started by the user manually. 
+- `DeveloperToolsRunner.CreateFromExecutable(string)` - run executable by full path. This option is not recommended, unless you prefer a custom installation of the tool.
+- Default: `DeveloperToolsRunner.GetDefaultForPlatform()` - returns `DotNetTool` on desktop or `NoOp` on mobile/browser.
 
 ## DeveloperToolsOptions.Protocol
 
@@ -59,39 +58,38 @@ this.AttachDeveloperTools(o =>
 
 Possible options are:
 
-1. `DeveloperToolsProtocol.DefaultHttp` - default HTTP connection on `29414` port and 5 seconds connection timeout.
-2. `DeveloperToolsProtocol.CreateHttp(Uri, TimeSpan)` - creates HTTP connection with provided parameters. Note: you need to reconfigure `Developer Tools` listener port independently by following [Settings page](/tools/developer-tools/settings).
-3. `DeveloperToolsProtocol.CreateHttp(IpAddress, int? port, TimeSpan)` - creates HTTP connection with provided parameters. When port is unset, default `29414` is used. 
-4. `DeveloperToolsProtocol.CreateNamedPipe(string)` - creates Named Pipe connection. This option is only compatible with Desktop platforms and might be preferred if there are connectivity issues on the local machine. Named Pipe name will be automatically passed to the `Developer Tools` instance.
-5. Default: `DeveloperToolsProtocol.GetDefaultForPlatform()` - currently returns `DefaultHttp` on all platforms.
+- `DeveloperToolsProtocol.DefaultHttp` - default HTTP connection on `29414` port and 5 seconds connection timeout.
+- `DeveloperToolsProtocol.CreateHttp(Uri, TimeSpan)` - creates HTTP connection with provided parameters. Note: you need to reconfigure `Developer Tools` listener port independently by following [Settings page](/tools/developer-tools/settings).
+- `DeveloperToolsProtocol.CreateHttp(IPAddress, int? port, TimeSpan?)` - creates HTTP connection with provided parameters. When port is unset, default `29414` is used. 
+- `DeveloperToolsProtocol.CreateNamedPipe(string)` - creates Named Pipe connection. This option is only compatible with Desktop platforms and might be preferred if there are connectivity issues on the local machine. Named Pipe name will be automatically passed to the `Developer Tools` instance.
+- Default: `DeveloperToolsProtocol.GetDefaultForPlatform()` - currently returns `DefaultHttp` on all platforms.
 
 ## DeveloperToolsOptions.DiagnosticLogger
 
-Defines sink to which all `AvaloniaUI.DiagnosticsSupport` logs are written to.
-By default, this option is set to `AvaloniaDiagnosticLogger`, redirecting logs to `Avalonia.Logger.TryGet`.
+Defines sink to which all `AvaloniaUI.DiagnosticsSupport` logs are written. By default, this option is set to `AvaloniaDiagnosticLogger`, redirecting logs to `Avalonia.Logging.Logger.TryGet`.
 
 Possible options are:
 
-1. `DiagnosticLogger.CreateConsole(LogEntryVerbosity)`.
-2. `DiagnosticLogger.CreateDebug(LogEntryVerbosity)`.
-3. Any user implementation of `DiagnosticLogger` abstract interface.
+- `DiagnosticLogger.CreateConsole(LogEntryVerbosity)`.
+- `DiagnosticLogger.CreateDebug(LogEntryVerbosity)`.
+- Any user implementation of `DiagnosticLogger`.
 
 :::note
-To learn more about `Developer Tools` logging, please read [Reporting Issues](/troubleshooting/tools/developer-tools).
+To learn more about `Developer Tools` logging, see [Reporting issues](/troubleshooting/tools/developer-tools).
 :::
 
 ## DeveloperToolsOptions.LoggerCollector
 
 Defines a collector which listens for logs to be displayed in `Developer Tools`.
 
-By default, `Developer Tools` will listen only to Avalonia logs and display them in the [Logger tools](/tools/developer-tools/logs-tool).
+By default, `Developer Tools` will listen only to Avalonia logs and display them in the [Logs tool](/tools/developer-tools/logs-tool).
 
 This behavior can be redefined with options:
 
-1. `DeveloperToolsOptions.AddAvaloniaLoggerObservable()` - enabled by default.
-2. `DeveloperToolsOptions.AddMicrosoftLoggerObservable(ILoggerFactory, LogLevel)` - allows to connect devtools as a logger provider to Microsoft `ILoggerFactory`.
-3. `DeveloperToolsOptions.AddLoggerObservable(ILoggerObservable)` - custom `ILoggerObservable` interface implementation. Use this option, if you want DevTools to display your third party logs provider like Serilog.
-4. `DeveloperToolsOptions.ClearLoggerObservables()` - clear all observables.
+- `DeveloperToolsOptions.AddAvaloniaLoggerObservable()` - enabled by default.
+- `DeveloperToolsOptions.AddMicrosoftLoggerObservable(ILoggerFactory, LogLevel)` - allows to connect the Developer Tools as a logger provider to Microsoft `ILoggerFactory`.
+- `DeveloperToolsOptions.AddLoggerObservable(ILoggerObservable)` - custom `ILoggerObservable` interface implementation. Use this option, if you want the Developer Tools to display your third party logs provider like Serilog.
+- `DeveloperToolsOptions.ClearLoggerObservables()` - clear all observables.
 
 ## See also
 
