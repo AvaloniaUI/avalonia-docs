@@ -18,13 +18,13 @@ Before you use Parcel, make sure that you have these items:
 Parcel CLI is only available with an [Avalonia Plus](https://avaloniaui.net/pricing) license.
 :::
 
-## Overview
+## Syntax
 
 ```bash
 parcel [command] [options]
 ```
 
-## Global Options
+## Global options
 
 | Option | Description |
 |--------|-------------|
@@ -82,14 +82,14 @@ parcel step [command] <input> <output> [options]
 | `merge-mac` | Merges architecture builds into a universal macOS application bundle | Directory with architecture-specific subdirectories (`osx-x64`, `osx-arm64`) | Universal application directory |
 | `bundle-mac` | Packages a macOS application and its dependencies into one bundle | Application directory | Application bundle (`.app`) |
 | `sign-mac` | Signs a macOS application bundle and its components with the credentials in the project settings | Application bundle or flat directory | Signed application bundle or directory |
-| `notary-mac` | Submits an application for Apple notarization and staples the ticket if Apple accepts it | Zipped application bundle or DMG file | Notarized file |
+| `notary-mac` | Submits an application for Apple notarization and staples the ticket if Apple accepts it | DMG or PKG file | Notarized file |
 | `sign-win` | Signs a Windows application executable with the provider in the project settings | Application directory with an executable that matches `AssemblyName` | Signed executable |
 | `create-zip` | Creates a ZIP archive and preserves file permissions and symbolic links | Directory or file that contains application files | ZIP archive (`.zip`) |
-| `create-dmg` | Creates DMG disk image for macOS | App bundle (.app) | Unsigned DMG image file |
+| `create-dmg` | Creates a DMG disk image for macOS | App bundle (`.app`) | Unsigned DMG image file |
 | `create-pkg` | Creates a macOS installer package with the settings in the Parcel project | Application bundle (`.app`) | PKG installer (`.pkg`) |
-| `create-deb` | Creates Debian package for Linux | Application directory | Debian package (.deb) |
+| `create-deb` | Creates Debian package for Linux | Application directory | Debian package (`.deb`) |
 | `create-rpm` | Creates an RPM package for Linux | Application directory | RPM package (`.rpm`) |
-| `create-nsis` | Creates Windows NSIS installer | Application directory | Unsigned NSIS installer (.exe) |
+| `create-nsis` | Creates Windows NSIS installer | Application directory | Unsigned NSIS installer (`.exe`) |
 | `create-msix` | Creates a Windows MSIX package. Parcel generates the manifest or patches a project template. | Application directory | MSIX package (`.msix`) |
 
 **Example:**
@@ -97,7 +97,6 @@ parcel step [command] <input> <output> [options]
 The step commands are independent and do not have a required order. The following examples show a typical order for each platform.
 
 You can replace a step with your own script to customize the workflow.
-
 
 <Tabs>
 <TabItem value="win" label="Windows" default>
@@ -156,7 +155,6 @@ If you do not need a universal package, omit the `merge-mac` step.
 </TabItem>
 <TabItem value="lin" label="Linux">
 
-
 ```bash
 # `parcel step publish ./ ./publish -r linux-x64 -p project.parcel` can be used instead
 dotnet publish -r linux-x64 -o ./publish 
@@ -211,7 +209,7 @@ parcel mcp
 
 For setup and usage information, see [Parcel MCP](/tools/parcel/mcp).
 
-## Environment Variables
+## Environment variables
 
 ### Parcel and console behavior
 
