@@ -4,7 +4,7 @@ title: Setting up Avalonia Parcel
 description: Install, configure, and activate Avalonia Parcel, the packaging tool for building, signing, and packaging Avalonia applications on Windows, macOS, and Linux.
 sidebar_label: Setup
 sidebar_position: 1
-doc-type: tutorial
+doc-type: how-to
 tags:
   - avalonia plus
   - avalonia pro
@@ -125,17 +125,13 @@ parcel pack ./SampleApp.parcel -r osx-x64 -p dmg -o ./artifacts
 
 This command uses the Parcel project to bundle and sign the application. It then creates a DMG file.
 
-:::note
-CLI is not available in the free community license.
-:::
-
 ## Step 3: Activate the tool
 
-When Parcel opens, sign in with the Avalonia Portal account that has the tool license.
+When Parcel opens, sign in with your Avalonia account that has the tool license.
 
 For the CLI, use the `--license-key` option. Alternatively, set the `AVALONIA_TOOLS_LICENSE_KEY` environment variable, or sign in through the Parcel GUI and reuse that session.
 
-## Further Reading
+## See also
 
 - [Parcel command line reference](/tools/parcel/command-line-reference)
 - [Parcel configuration reference](/tools/parcel/configuration-reference)
