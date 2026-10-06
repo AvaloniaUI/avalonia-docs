@@ -8,6 +8,10 @@ doc-type: how-to
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
+:::note
+Parcel MCP is only available with [Avalonia Plus](https://avaloniaui.net/pricing) or higher.
+:::
+
 ## What is Parcel MCP?
 
 The Parcel MCP server lets AI assistants use Parcel packaging tools. Your assistant can create packaging configurations from .NET projects. It can also configure code signing and notarization, and build packages for Windows, macOS, and Linux.
@@ -19,11 +23,11 @@ For a general introduction to MCP, see [AI Tools](/tools/ai-tools/).
 Before you configure the MCP server, make sure that you have these items:
 
 1. **Parcel .NET tool installed.** Follow the [Setup guide](/tools/parcel/setup).
-2. **Valid Avalonia Plus license key.** You can get one from the [Avalonia portal](https://portal.avaloniaui.net/).
+2. **Valid Avalonia Plus license key.** You can get yours from the [Avalonia portal](https://portal.avaloniaui.net/).
 
 ### Setting your license key
 
-The MCP server reads the license from the `AVALONIA_TOOLS_LICENSE_KEY` environment variable. Get your license key from the [Avalonia Portal](https://portal.avaloniaui.net/). Parcel MCP is a paid feature and is not included with the Community edition.
+The MCP server reads the license from the `AVALONIA_TOOLS_LICENSE_KEY` environment variable.
 
 Set the key in your shell profile so it persists across sessions:
 
@@ -77,10 +81,6 @@ If you start your editor from a desktop shortcut or application menu, it might n
 ```
 
 See the editor-specific setup instructions below for where to place this block.
-:::
-
-:::note
-Parcel MCP is only available with a full [Avalonia Plus](https://avaloniaui.net/pricing) license.
 :::
 
 ## Setting up the MCP server
@@ -282,9 +282,9 @@ Once the MCP server is configured, your AI assistant can help with:
 
 ### Code signing setup
 
-- **Windows Azure Artifact Signing** - Configure certificates and signing parameters
-- **macOS Code Signing** - Set up P12 certificates and provisioning profiles
-- **macOS Notarization** - Configure Apple ID and app-specific passwords
+- **Windows Azure artifact signing** - Configure certificates and signing parameters
+- **macOS code signing** - Set up P12 certificates and provisioning profiles
+- **macOS notarization** - Configure Apple ID and app-specific passwords
 
 ### Building and packaging
 
