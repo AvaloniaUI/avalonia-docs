@@ -1,6 +1,7 @@
 ---
 id: faq
 title: FAQ
+description: Answers to common questions about Avalonia licensing, Developer Tools, TreeDataGrid updates and editing, and NativeWebView support.
 doc-type: troubleshooting
 ---
 

@@ -1,6 +1,7 @@
 ---
 id: options
 title: Developer tools options
+description: Reference for DeveloperToolsOptions settings, including the open gesture, startup connection, runner, transport protocol, and logging.
 sidebar_label: Options
 doc-type: reference
 ---

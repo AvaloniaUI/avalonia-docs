@@ -1,6 +1,7 @@
 ---
 id: mcp
 title: Parcel MCP
+description: Set up the Parcel MCP server so AI assistants can create Parcel configurations, set up code signing, and package your Avalonia app.
 sidebar_label: Parcel MCP
 doc-type: how-to
 ---

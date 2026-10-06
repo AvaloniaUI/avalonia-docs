@@ -1,6 +1,7 @@
 ---
 id: packaging-for-windows
 title: Packaging apps for Windows
+description: Package Avalonia applications for Windows using Parcel, with NSIS, MSIX, and ZIP formats and code signing through local or cloud providers.
 sidebar_label: Windows
 doc-type: reference
 tags:

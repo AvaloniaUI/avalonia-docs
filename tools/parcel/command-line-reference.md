@@ -1,6 +1,7 @@
 ---
 id: command-line-reference
 title: Parcel command line reference
+description: Reference for the Parcel command-line tool, including the pack, step, install-tools, and mcp commands, global options, and environment variables.
 sidebar_label: Command line reference
 doc-type: reference
 ---

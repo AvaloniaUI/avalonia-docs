@@ -1,6 +1,7 @@
 ---
 id: profiler-tool
 title: Application profiler tool
+description: Record a profile in Avalonia Developer Tools to measure style matching, style activator re-evaluations, and resource lookups in your app.
 sidebar_label: Profiler tool
 doc-type: reference
 ---

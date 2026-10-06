@@ -1,6 +1,7 @@
 ---
 id: settings
 title: Developer tools settings
+description: Reference for Avalonia Developer Tools settings, covering appearance, the elements tree, overlays, events, metrics, and the HTTP port.
 sidebar_label: Settings
 doc-type: reference
 ---

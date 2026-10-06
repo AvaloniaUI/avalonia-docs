@@ -1,6 +1,7 @@
 ---
 id: elements-tool
 title: Elements tool
+description: Inspect the visual and logical tree, element properties, styles, and bindings in Avalonia Developer Tools, with a 3D viewer and in-app overlays.
 doc-type: reference
 ---
 

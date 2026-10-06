@@ -1,6 +1,7 @@
 ---
 id: index
 title: IDE support
+description: Compare Avalonia support in Visual Studio, VS Code, and JetBrains Rider, including XAML previewing, code completion, and designer tools.
 doc-type: overview
 ---
 

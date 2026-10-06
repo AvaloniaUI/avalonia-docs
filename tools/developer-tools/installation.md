@@ -1,6 +1,7 @@
 ---
 id: installation
 title: Installing the Avalonia Plus developer tools
+description: Install Avalonia Developer Tools, add the AvaloniaUI.DiagnosticsSupport package to your project, and connect your app to the tool.
 sidebar_label: Installation
 sidebar_position: 1
 doc-type: how-to

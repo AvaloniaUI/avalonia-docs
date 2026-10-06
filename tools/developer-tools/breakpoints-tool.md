@@ -1,6 +1,7 @@
 ---
 id: breakpoints-tool
 title: Breakpoints tool
+description: Set property and event breakpoints in Avalonia Developer Tools to count hits, log messages, or pause execution without changing your code.
 doc-type: reference
 ---
 

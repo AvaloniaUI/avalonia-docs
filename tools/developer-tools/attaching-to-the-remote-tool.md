@@ -1,6 +1,7 @@
 ---
 id: attaching-to-the-remote-tool
 title: Attaching DevTools to the remote tool
+description: Connect Avalonia Developer Tools to an app on another machine over a local network or a VPN such as Tailscale, and change the default port.
 sidebar_label: Attaching to the remote tool
 doc-type: how-to
 tags:

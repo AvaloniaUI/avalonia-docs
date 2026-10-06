@@ -1,6 +1,7 @@
 ---
 id: legacy-developer-tools
 title: Using the legacy developer tools
+description: Use the legacy Developer Tools for Avalonia 11 to inspect logical and visual trees, properties, layout, styles, and routed events.
 doc-type: reference
 ---
 

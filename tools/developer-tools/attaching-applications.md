@@ -1,6 +1,7 @@
 ---
 id: attaching-applications
 title: Attaching applications
+description: Connect Avalonia Developer Tools to browser, iOS, Android, and WSL2 applications running on the same machine or local network.
 doc-type: how-to
 tags:
   - avalonia plus
@@ -11,7 +12,7 @@ tags:
 This page covers how to attach browser or mobile applications. It is assumed your apps are deployed on the same local network or same machine. For remote connections, see [Attaching to the remote tools](/tools/developer-tools/attaching-to-the-remote-tool).
 
 :::note
-For all platforms, `AvaloniaUI.DiagnosticsSupport` package can be installed in the shared project. As well as `this.AttachDeveloperTools()` code can be kept in the shared `Application` class. If any custom configuration is needed per platform, use `OperatingSystem.IsAndroid()`, `OperatingSystem.IsIOS()` and similar methods"
+For all platforms, `AvaloniaUI.DiagnosticsSupport` package can be installed in the shared project. As well as `this.AttachDeveloperTools()` code can be kept in the shared `Application` class. If any custom configuration is needed per platform, use `OperatingSystem.IsAndroid()`, `OperatingSystem.IsIOS()` and similar methods.
 :::
 
 ## Attaching browser application

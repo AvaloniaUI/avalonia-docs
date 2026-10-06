@@ -1,6 +1,7 @@
 ---
 id: index
 title: AI tools
+description: Overview of the Avalonia MCP servers that connect AI coding assistants to the docs, running apps, chart generation, and Parcel packaging.
 doc-type: overview
 ---
 

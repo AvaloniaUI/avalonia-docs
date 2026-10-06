@@ -1,6 +1,7 @@
 ---
 id: packaging-for-macos
 title: Packaging apps for macOS
+description: Package Avalonia applications for macOS using Parcel, with DMG, PKG, and ZIP formats, code signing, notarization, and App Store Connect.
 sidebar_label: macOS
 doc-type: how-to
 tags:
