@@ -2,7 +2,7 @@
 id: packaging-for-macos
 title: Packaging apps for macOS
 sidebar_label: macOS
-doc-type: reference
+doc-type: how-to
 tags:
   - avalonia plus
   - avalonia pro
@@ -24,23 +24,19 @@ Parcel creates macOS application bundles (`.app`) and packages. Packaging via Pa
 
 For a complete list of setting names, types, defaults, and environment variables, see the [Parcel configuration reference](/tools/parcel/configuration-reference#macos-settings).
 
-### Bundle Configuration
+### Bundle configuration
 
-#### Common Properties
+#### Common properties
 
 **Application Name**:
 
 Display name used for the app display name, as `CFBundleDisplayName`.
 
-:::note
-Currently cannot be localized.
-:::
-
 **Package Name**:
 
-Package name used as a bundle and output dmg file names.
+Package name used as a bundle and output DMG file names.
 
-### Bundle Properties
+### Bundle properties
 
 Essential bundle metadata that defines how an application appears and behaves on macOS.
 
@@ -50,7 +46,7 @@ A unique reverse-DNS identifier for the application (e.g., `com.Company.AppName`
 
 **Team ID**:
 
-A unique identifier for your Apple Developer account. Using during signing and notarization process, optional otherwise.
+A unique identifier for your Apple Developer account. Used during signing and notarization process, optional otherwise.
 
 **App Category**:
 
@@ -82,7 +78,7 @@ To handle URL schemes in Avalonia applications, see [Activatable lifetime](/docs
 
 Configure associations under **Basics**. Parcel writes them to the application bundle's `Info.plist` file. Parcel ignores associations when **Create Bundle** is disabled. See [File associations and URL schemes](/tools/parcel/configuration-reference#file-associations).
 
-#### Custom Info.plist Configuration
+#### Custom Info.plist configuration
 
 Parcel supports custom Info.plist files for advanced bundle configuration.
 
@@ -92,7 +88,7 @@ Parcel supports custom Info.plist files for advanced bundle configuration.
 4. Existing properties in the custom file take precedence
 5. Missing properties are automatically added based on project configuration
 
-### DMG Creation
+### DMG creation
 
 Parcel creates DMG installers with a drag-and-drop interface, custom backgrounds, and symbolic links.
 
@@ -106,10 +102,10 @@ The background image for the DMG installer in TIFF format.
 
 Parcel includes a visual DMG layout editor. The default layout uses a **660 x 422** pixel window with these values:
 
-- **App Bundle icon**: positioned at coordinates (173, 231)
-- **Applications folder**: positioned at coordinates (485, 231)
-- **Icon size**: 128px
-- **Text size**: 12px
+- **App Bundle icon:** positioned at coordinates (173, 231)
+- **Applications folder:** positioned at coordinates (485, 231)
+- **Icon size:** 128 px
+- **Text size:** 12 px
 
 Icons are positioned from the top left corner to the icon center.
 
@@ -119,7 +115,7 @@ Use the editor to change the window position, window size, icon size, label size
 Parcel puts the optional **DMG License File** at the root of the image. Enable **Sign DMG** to sign the completed image with the application-signing credentials.
 :::
 
-### ZIP Creation
+### ZIP creation
 
 Parcel maintains executable permissions during ZIP creation. The bundle structure remains intact when extracted on macOS, and applications remain executable without additional steps.
 
@@ -134,11 +130,7 @@ You must use different certificates for the application and its installer packag
 
 See also Apple's [Mac software packaging guidance](https://developer.apple.com/documentation/xcode/packaging-mac-software-for-distribution) and [Developer ID overview](https://developer.apple.com/support/developer-id/).
 
-### Troubleshooting
-
-See the [macOS troubleshooting page](/troubleshooting/platform-specific-issues/macos#packaging).
-
-## Code Signing
+## Code signing
 
 Parcel signs macOS bundles using Apple Developer certificates. Cross-platform signing is supported on Windows, Linux, and macOS platforms.
 
@@ -146,27 +138,27 @@ Parcel signs macOS bundles using Apple Developer certificates. Cross-platform si
 
 Before you sign a macOS application, make sure that you have these items:
 
-- **Apple Developer Account**: Active [Apple Developer Program](https://developer.apple.com/programs/) membership ($99/year)
+- **Apple Developer Account**: Active [Apple Developer Program](https://developer.apple.com/programs/) membership
 - **Xcode Command Line Tools** (macOS only): Available on [Apple Developer Resources](https://developer.apple.com/xcode/resources/)
 
-### Signing Methods
+### Signing methods
 
 Parcel supports multiple certificate formats depending on development environment and workflow.
 
-#### KeyChain Identity (macOS Only)
+#### Keychain identity (macOS only)
 
 Uses certificates from the macOS Keychain that are installed via a certificate request.
 
-Requires a "Developer ID Application" certificate linked to your team ID for distribution outside the Mac App Store.
+Requires a Developer ID Application certificate linked to your team ID for distribution outside the Mac App Store.
 
-#### P12 Certificate (Cross-Platform)
+#### P12 certificate (Cross-platform)
 
 Portable certificate format containing both the certificate and private key.
 Apple doesn't provide P12 certificates directly, but they can be exported from the Keychain or generated with OpenSSL.
 
 Parcel uses [rcodesign](https://github.com/indygreg/apple-platform-rs/tree/main/apple-codesign) to sign binaries and bundles on Windows and Linux machines.
 
-#### PEM Certificate (Cross-platform)
+#### PEM certificate (Cross-platform)
 
 Use a PEM certificate for cross-platform signing. For a PKG package, you must configure separate PEM certificate fields for the application and installer.
 
@@ -174,26 +166,26 @@ Use a PEM certificate for cross-platform signing. For a PKG package, you must co
 
 Configure PKG signing in the **Installer Signing** group. Select a Keychain identity, P12 certificate, or PEM certificate that can sign installer packages. An application certificate cannot sign a PKG installer. An installer certificate cannot sign the application bundle.
 
-### Create Developer Certificate
+### Create developer certificate
 
 <Tabs>
-<TabItem value="keychain" label="Keychain (macOS Only)" default>
+<TabItem value="keychain" label="Keychain (macOS only)" default>
 
 Requires a macOS machine for initial setup.
 
 **To create a certificate with Keychain:**
 
-1. Open **Keychain Access** on macOS
-2. **Keychain Access** > **Certificate Assistant** > **Request a Certificate From a Certificate Authority**
-3. Enter a name in the Common Name field, leave CA Email Address empty
-4. Choose **Saved to disk**, then click **Continue** to generate `certificate.csr`
-5. Go to [Apple Developer Account](https://developer.apple.com/account/) > **Certificates, Identifiers & Profiles**
-6. Navigate to **Certificates** > **All Certificates**
-7. Click ➕ to create a new certificate
-8. Choose **Developer ID Application** for apps distributed outside the App Store
-9. Upload `certificate.csr` when prompted
-10. Download the resulting `.cer` file
-11. Import the certificate into Keychain
+1. Open **Keychain Access** on macOS.
+2. **Keychain Access → Certificate Assistant → Request a Certificate From a Certificate Authority**
+3. Enter a name in the Common Name field. Leave CA Email Address empty.
+4. Choose **Saved to disk**, then click **Continue** to generate `certificate.csr`.
+5. Go to [Apple Developer Account](https://developer.apple.com/account/) → **Certificates, Identifiers & Profiles**.
+6. Navigate to **Certificates** → **All Certificates**.
+7. Click **+** to create a new certificate.
+8. Choose **Developer ID Application** for apps distributed outside the App Store.
+9. Upload `certificate.csr` when prompted.
+10. Download the resulting `.cer` file.
+11. Import the certificate into Keychain.
 
 :::tip
 Export the certificate as P12 to enable cross-platform signing without requiring macOS after this step.
@@ -225,7 +217,7 @@ Generate certificates on any platform using OpenSSL.
 
 3. Upload the CSR to [Apple Developer Portal](https://developer.apple.com/account/)
     - Go to **Certificates, Identifiers & Profiles** > **Certificates**
-    - Click ➕, choose **Developer ID Application**
+    - Click **+**, choose **Developer ID Application**
     - Upload `certificate.csr`, then download the `.cer` file
 
 4. Convert the certificate to PEM format:
@@ -260,7 +252,7 @@ Submit a signed PKG to distribute an application through the Mac App Store. Do n
 2. Configure application signing with an **Apple Distribution** certificate. Configure PKG signing separately with a **Mac Installer Distribution** certificate. Do not use Developer ID certificates for an App Store submission, or it will be rejected by Apple.
 3. Create and download a **Mac App Store Connect** provisioning profile for the same explicit App ID and application-signing certificate.
 4. Copy the provisioning profile to the directory that contains the Parcel project file. Rename the profile to match the configured .NET project. For example, use `MyApp.provisionprofile` if **.NET Project Path** points to `MyApp.csproj`. Parcel requires the file name to match exactly.
-5. Make sure that **Create Bundle** and **Enable Sandbox** are enabled in MacOS settings. Notarization must be disabled for App Store Connect. It is only useful for sideloading.
+5. Make sure that **Create Bundle** and **Enable Sandbox** are enabled in macOS settings. Notarization must be disabled for App Store Connect. It is only useful for sideloading.
 6. Optionally, configure a custom `Entitlements.plist` file in the project directory if the app requires custom permissions. Before submission, test file access, network access, child processes, and bundled helper tools in the sandbox.
 7. Upload the PKG with Apple's Transporter application, Xcode tools, or another method that App Store Connect supports. Wait for processing to finish. Resolve all delivery warnings. Select the processed build for the macOS version, and submit it for review.
 
@@ -286,11 +278,11 @@ Before you notarize an application, make sure that you have these items:
 - **Valid Developer ID Certificate**: For code signing applications distributed outside the Mac App Store
 - (macOS only) **Xcode Command Line Tools**: Available on [Apple Developer Resources](https://developer.apple.com/xcode/resources/)
 
-### Apple Account Authentication
+### Apple account authentication
 
 Parcel requires authentication with Apple's notary service. Two methods are available for providing credentials.
 
-#### App-Specific Password (Recommended)
+#### App-specific password (Recommended)
 
 Apple requires app-specific passwords instead of user passwords for the Notary API. Follow Apple's guide: [How to generate an app-specific password](https://support.apple.com/en-us/102654).
 
@@ -305,7 +297,7 @@ Apple requires app-specific passwords instead of user passwords for the Notary A
 Use environment variables to store credentials instead of hardcoding them in configuration files.
 :::
 
-#### Keychain Profile (macOS Only)
+#### Keychain profile (macOS only)
 
 Store Apple Account credentials in macOS Keychain and reference them by profile name. Credentials are encrypted and stored locally.
 
@@ -335,25 +327,20 @@ Store Apple Account credentials in macOS Keychain and reference them by profile 
 Apple Keychain is only available on macOS. Use the App-Specific Password method on Windows or Linux.
 :::
 
-### Running Non-Notarized Apps (Testing & Personal Use)
+### Running non-notarized apps (Testing and personal use)
 
 For testing, development, or personal use without an Apple Developer Account, non-notarized apps can run with user intervention.
 
 When macOS blocks a non-notarized app, users can bypass the warning:
 
-1. Go to **System Preferences** → **Security & Privacy** → **General** tab
-2. Try to run the application. macOS blocks it.
-3. Within a few minutes, a message appears in Security & Privacy about the blocked app
-4. Click **"Open Anyway"** next to the blocked app message
-5. Confirm by clicking **"Open"** in the dialog
+1. Try to run the application. macOS blocks it.
+1. Go to the **System Settings → Privacy & Security** tab. Look for a message about the blocked app.
+1. Click **Open Anyway** next to the blocked app message.
+1. Confirm by clicking **Open** in the dialog.
 
 :::note
 Code-sign applications with a Developer ID certificate when available, even without notarization.
 :::
-
-### Troubleshooting notarization issues
-
-See the [macOS troubleshooting page](/troubleshooting/platform-specific-issues/macos#notarization).
 
 ## Troubleshooting
 

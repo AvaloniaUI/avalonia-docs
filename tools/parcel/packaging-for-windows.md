@@ -21,23 +21,19 @@ Parcel creates Windows installers and archives. Packaging via Parcel can be run 
 
 For a complete list of setting names, types, defaults, and environment variables, see the [Parcel configuration reference](/tools/parcel/configuration-reference#windows-settings).
 
-### Package Configuration
+### Package configuration
 
-#### Common Properties
+#### Common properties
 
 **Application Name**:
 
 Display name used for the application install directory, Start Menu entry, and shortcut file name.
 
-:::note
-Currently cannot be localized.
-:::
-
 **Package Name**:
 
 The output installer file name (without extension).
 
-### NSIS Installer Properties
+### NSIS installer properties
 
 Parcel uses NSIS (Nullsoft Scriptable Install System) that creates lightweight, self-extracting installers with flexible installation options.
 
@@ -53,16 +49,16 @@ When enabled, Parcel installs the application in a company-specific subdirectory
 
 This also affects the Start Menu shortcut location, organizing shortcuts under `Start Menu\Programs\[Company]\[Application Name]`.
 
-Default: false.
+Default: `false`
 
 **Installer Icon**:
 
-The installer icon in **ICO** or **SVG** format. ICO files should include multiple resolutions from 16x16 to 256x256 pixels. This icon appears in Windows Explorer for the installer executable, during installation, and in the Windows uninstaller list.
+The installer icon in **ICO** or **SVG** format. ICO files should include multiple resolutions from 16 x 16 to 256 x 256 pixels. This icon appears in Windows Explorer for the installer executable, during installation, and in the Windows uninstaller list.
 
 :::note
 This is separate from the application icon. 
 
-Application icon is defined by the standard .NET `<ApplicationIcon>file.ico</ApplicationIcon>` property in the .csproj file.
+Application icon is defined by the standard .NET `<ApplicationIcon>file.ico</ApplicationIcon>` property in the `.csproj` file.
 :::
 
 **Requires Admin**:
@@ -71,19 +67,19 @@ Controls whether the installer requires administrator privileges for installatio
 
 When enabled (default), the application is installed to `Program Files` and requires User Account Control (UAC) elevation. When disabled, the application is installed to the current user's `%LocalAppData%` directory without requiring elevation.
 
-Default: true.
+Default: `true`
 
 **Include uninstaller with the app**:
 
 When enabled, Parcel includes an uninstaller executable with the application and creates an entry in Windows Settings > Apps & Features (or Control Panel > Programs and Features on older Windows versions).
 
-Default: true.
+Default `true`
 
 **License File**:
 
 Optional license file to be displayed during installation. Supported formats:
-- Plain text (.txt)
-- Rich Text Format (.rtf)
+- Plain text (`.txt`)
+- Rich Text Format (`.rtf`)
 
 The license is displayed on a dedicated page during installation, and users must accept it to proceed.
 
@@ -111,12 +107,12 @@ To handle URL schemes in Avalonia applications, see [Activatable lifetime](/docs
 
 Configure associations under **Basics**. Parcel applies them to NSIS and MSIX packages. See [File associations and URL schemes](/tools/parcel/configuration-reference#file-associations).
 
-## Code Signing
+## Code signing
 
 Parcel signs Windows executables and installers using Authenticode certificates. Cross-platform signing is supported on Windows, Linux, and macOS platforms.
 
 :::note
-This document explains how to integrate various signing methods with Parcel. It does not include detailed setup steps for obtaining certificates or configuring cloud signing services. Please refer to the linked documentation for each method for complete setup instructions.
+This document explains how to integrate various signing methods with Parcel. It does not include detailed setup steps for obtaining certificates or configuring cloud signing services.
 :::
 
 ### Prerequisites
@@ -127,11 +123,11 @@ Before you sign a Windows application, make sure that you have these items:
 - **Windows SDK** (Windows only): Can be installed with Visual Studio Build Tools (on CI) or Visual Studio (on Desktop) from [Visual Studio Downloads](https://visualstudio.microsoft.com/downloads/)
 - **Java Runtime**: Required for cross-platform signing operations.
 
-### Signing Methods
+### Signing methods
 
 Parcel supports multiple certificate formats depending on your development environment and workflow.
 
-#### Local Certificate
+#### Local certificate
 
 Use a local certificate file (PFX/P12 format) for signing. This method is not recommended for production applications, and is typically untrusted by Windows.
 
@@ -147,7 +143,7 @@ Use a local certificate file (PFX/P12 format) for signing. This method is not re
 **Documentation:**
 - [New-SelfSignedCertificate](https://learn.microsoft.com/en-us/powershell/module/pki/new-selfsignedcertificate?view=windowsserver2025-ps)
 
-#### Windows Certificate Store
+#### Windows certificate store
 
 Use certificates installed in the Windows Certificate Store, including hardware security modules (HSMs) and USB tokens.
 
@@ -183,10 +179,6 @@ Azure CLI authentication or environment variables:
 - **Windows**: Uses native SignTool when available, JSign otherwise
 - **Linux/macOS**: Uses [JSign](https://github.com/ebourg/jsign) (requires Java Runtime)
 
-:::tip
-Azure Artifact Signing is the recommended solution for enterprises requiring immediate trust without building reputation over time.
-:::
-
 **Documentation:**
 - [Azure Artifact Signing documentation](https://learn.microsoft.com/en-us/azure/artifact-signing/)
 - [Artifact Signing quickstart](https://learn.microsoft.com/en-us/azure/artifact-signing/quickstart)
@@ -213,10 +205,6 @@ Azure CLI authentication or environment variables:
 **Documentation:**
 - [Azure Key Vault Overview](https://learn.microsoft.com/en-us/azure/key-vault/general/overview)
 
-:::note
-Powered by [JSign](https://github.com/ebourg/jsign), and requires Java Runtime.
-:::
-
 #### AWS KMS
 
 Use AWS Key Management Service for secure private key storage with certificates managed separately.
@@ -240,10 +228,6 @@ AWS credentials from one of the following sources:
 **Documentation:**
 - [AWS KMS Overview](https://docs.aws.amazon.com/kms/latest/developerguide/overview.html)
 
-:::note
-Powered by [JSign](https://github.com/ebourg/jsign), and requires Java Runtime.
-:::
-
 #### DigiCert
 
 Use certificates and keys stored in DigiCert ONE Secure Software Manager (formerly DigiCert KeyLocker) without installing DigiCert client tools.
@@ -257,10 +241,6 @@ Use certificates and keys stored in DigiCert ONE Secure Software Manager (former
 
 **Documentation:**
 - [DigiCert Software Trust Manager](https://docs.digicert.com/en/software-trust-manager.html)
-
-:::note
-Powered by [JSign](https://github.com/ebourg/jsign), and requires Java Runtime.
-:::
 
 #### Google Cloud KMS
 
@@ -280,10 +260,6 @@ Use Google Cloud Key Management Service for secure private key storage. The cert
 **Documentation:**
 - [Google Cloud KMS Overview](https://cloud.google.com/kms/docs)
 
-:::note
-Powered by [JSign](https://github.com/ebourg/jsign), and requires Java Runtime.
-:::
-
 #### SSL.com eSigner
 
 Cloud-based signing service from SSL.com with hardware security module (HSM) backed certificates and optional sandbox environment for testing.
@@ -297,10 +273,6 @@ Cloud-based signing service from SSL.com with hardware security module (HSM) bac
 
 **Documentation:**
 - [SSL.com eSigner](https://www.ssl.com/esigner/)
-
-:::note
-Powered by [JSign](https://github.com/ebourg/jsign), and requires Java Runtime.
-:::
 
 ## See also
 
