@@ -35,14 +35,14 @@ For a general introduction to MCP, see [AI Tools](/tools/ai-tools/).
 Before setting up the MCP server, ensure you have:
 
 1. **DevTools .NET tool** installed. Follow the [Getting Started](/tools/developer-tools/installation) guide.
-2. **Valid Avalonia Plus license key.** You can get one from the [Avalonia portal](https://portal.avaloniaui.net/).
+2. **Valid Avalonia Plus license key.** You can get your license key from the [Avalonia portal](https://portal.avaloniaui.net/).
 
 ### Setting your license key
 
-The MCP server reads your license from the `AVALONIA_TOOLS_LICENSE_KEY` environment variable. You can find your license key in the [Avalonia customer portal](https://portal.avaloniaui.net/). MCP is a paid feature and is not included with the Community license.
+The MCP server reads your license from the `AVALONIA_TOOLS_LICENSE_KEY` environment variable. MCP is a paid feature and is not included with the Free or Community licenses.
 
 :::note
-The `AVALONIA_TOOLS_LICENSE_KEY` variable is used from Avalonia 12.0.0. If you are on Avalonia 11.x.x or earlier versions, please use `ACCELERATE_LICENSE_KEY` instead.
+The `AVALONIA_TOOLS_LICENSE_KEY` variable is used from Avalonia 12.0.0. If you are on Avalonia 11.x.x or earlier versions, use `ACCELERATE_LICENSE_KEY` instead.
 :::
 
 Set the key in your shell profile so it persists across sessions:
@@ -99,10 +99,6 @@ If you launch your editor from a desktop shortcut or application menu (rather th
 See the editor-specific setup instructions below for where to place this block.
 :::
 
-:::note
-DevTools MCP is only available with an Avalonia Plus license or higher.
-:::
-
 ## Prepare your application
 
 The MCP server communicates with your Avalonia application through the `AvaloniaUI.DiagnosticsSupport` package. Without this package and the required startup call, the MCP server cannot discover or attach to your running app.
@@ -153,10 +149,6 @@ For the full installation walkthrough, including platform-specific requirements 
 ## Setting up the MCP server
 
 DevTools provides an MCP server that runs as a local process. The underlying command is `avdt mcp`, but you do not need to run it manually. Your editor starts it automatically once configured.
-
-:::note
-The `AVALONIA_TOOLS_LICENSE_KEY` variable is used from Avalonia 12.0.0. If you are on Avalonia 11.x.x or earlier versions, please use `ACCELERATE_LICENSE_KEY` instead.
-:::
 
 Choose your editor below:
 
@@ -327,7 +319,7 @@ If the assistant returns the tree structure, setup is complete.
 
 ### "avdt" command not found
 
-The `avdt` command must be on your system PATH. If you installed it as a global .NET tool, check if `$HOME/.dotnet/tools` (macOS/Linux) or `%USERPROFILE%\.dotnet\tools` (Windows) is in your PATH. If not, add the directory to your PATH.
+The `avdt` command must be on your system `PATH`. If you installed it as a global .NET tool, check if `$HOME/.dotnet/tools` (macOS/Linux) or `%USERPROFILE%\.dotnet\tools` (Windows) is in your `PATH`. If not, add the directory to your `PATH`.
 
 For more information, see [Troubleshooting .NET tool usage issues](https://learn.microsoft.com/en-us/dotnet/core/tools/troubleshoot-usage-issues#executable-file-not-found).
 
@@ -353,7 +345,7 @@ If the MCP server starts but reports a missing or invalid license key:
 
 ### Cannot attach to a running application
 
-This is the most common issue when first setting up the MCP server. The `attach-to-app` tool requires all of the following:
+The `attach-to-app` tool requires all of the following:
 
 1. The `AvaloniaUI.DiagnosticsSupport` package is installed in your project.
 2. `.WithDeveloperTools()` or `.AttachDeveloperTools()` is called at app startup.
