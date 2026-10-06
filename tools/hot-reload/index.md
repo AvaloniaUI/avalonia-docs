@@ -26,12 +26,13 @@ With the hot reload package, these edits are applied live to your running applic
 | Resource dictionaries | Merged dictionaries are reloaded and dependents are refreshed. |
 | Data templates | Templates are regenerated and controls bound to them are refreshed. |
 | `{StaticResource}` references | Rewritten to `{DynamicResource}` during hot reload, so resource edits propagate without a restart. |
+
 Some common uses of hot reload are:
 
 - **Resource brushes and values.** Change a color, brush, or font size in a resource dictionary and every control that references it updates. Both `{DynamicResource}` and `{StaticResource}` references pick up the change, because static references are rewritten during hot reload.
 - **Data templates.** Change the icon, colors, spacing, or layout of a [data template](/docs/data-templates/introduction-to-data-templates), and every control that uses it, including list items and content presenters, rebuilds with the new template.
 - **Control markup.** Adjust the layout, add or remove elements, or edit text in a view (a file with `x:Class`). The live instance is rebuilt in place.
-- **Styles.** Edit a selector or setter in an application-level or control-level style, and the new styling is re-applied at once.
+- **Styles.** Edit a selector or setter in an application-level or control-level style, and the new styling is reapplied at once.
 - **Code-behind.** Change an event handler or method body in an `.axaml.cs` file. C# edits apply under the standard .NET Hot Reload rules.
 
 ## Prerequisites
@@ -39,19 +40,32 @@ Some common uses of hot reload are:
 Before you begin, make sure you have:
 
 1. **Avalonia 12.0 or newer.**
-2. **A valid Avalonia license key** that includes access to `AvaloniaUI.DiagnosticsSupport.HotReload`. You can get a key from the [Avalonia customer portal](https://portal.avaloniaui.net/). The same key may cover other licensed Avalonia packages, such as `Charts` or `TreeDataGrid`.
+2. **A valid Avalonia license key** that includes access to `AvaloniaUI.DiagnosticsSupport.HotReload`. You can get a key from the [Avalonia portal](https://portal.avaloniaui.net/). The same key may cover other licensed Avalonia packages, such as `Charts` or `TreeDataGrid`.
 3. **A hot reload driver.** Either the `dotnet watch` command or an IDE that supports .NET Hot Reload (such as Visual Studio). See [Running with hot reload](#running-with-hot-reload).
 
 ## Getting started
 
 1. Install the `AvaloniaUI.DiagnosticsSupport.HotReload` NuGet package by running `dotnet add package`.
 
+    ```bash
+    dotnet add package AvaloniaUI.DiagnosticsSupport.HotReload
+    ```
 
 2. To keep hot reload out of release builds, go to your `.csproj` file and wrap the `<PackageReference>` for the hot reload package in a `Debug` condition. This ensures it never ships.
 
+    ```xml
+    <ItemGroup Condition="'$(Configuration)' == 'Debug'">
+      <PackageReference Include="AvaloniaUI.DiagnosticsSupport.HotReload" Version="VERSION_NUMBER" />
+    </ItemGroup>
+    ```
 
-3. Include your Avalonia license key in the executable project file (`.csproj`). Your license key is available from the [Avalonia portal](https://portal.avaloniaui.net).
+3. Include your Avalonia license key in the executable project file (`.csproj`). Your license key is available from the [Avalonia portal](https://portal.avaloniaui.net). See [Installing Avalonia Pro](/tools/installing-avalonia-pro) for more information.
 
+    ```xml
+    <ItemGroup>
+      <AvaloniaUILicenseKey Include="YOUR_LICENSE_KEY" />
+    </ItemGroup>
+    ```
 
 ## Running with hot reload
 
@@ -66,7 +80,7 @@ Run `dotnet watch` on the platform head project. It rebuilds and applies changes
 dotnet watch --project YourApp.Desktop
 ```
 
-This is the most reliable driver and works the same across every editor and platform.
+This is the recommended driver, as it works the same across every editor and platform.
 
 :::note
 On mobile platforms, `dotnet watch` requires .NET 11 or newer.
@@ -128,7 +142,6 @@ With the app running:
 C# changes follow the standard .NET Hot Reload rules.
 :::
 
-
 ## Initializing manually
 
 The auto-setup method described above covers most usages of hot reload. If you need a custom lifecycle, multiple `Application` instances, or deferred startup, you can instead call the initializer manually:
@@ -147,7 +160,7 @@ The engine initializes once per process, so later calls have no effect. To surfa
 ## Limitations
 
 - WebAssembly is not supported. Hot reload works on desktop and mobile platforms only.
-- C# edits follow the normal [.NET Hot Reload rules](https://learn.microsoft.com/en-us/visualstudio/debugger/hot-reload). Adding fields or changing method signatures counts as a rude edit and needs a restart.
+- C# edits follow the normal [.NET Hot Reload rules](https://learn.microsoft.com/en-us/visualstudio/debugger/hot-reload). Adding fields or changing method signatures cannot be applied by hot reload and needs a restart.
 - Controls are rebuilt rather than mutated, so non-XAML states are reset when a control reloads.
 
 ## See also

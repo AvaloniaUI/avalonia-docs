@@ -12,7 +12,7 @@ tags:
 
 Parcel creates packages for different Linux package managers and distribution methods.
 
-## Supported Package Formats
+## Supported package formats
 
 | Format | CLI code | Best suited for |
 |---|---|---|
@@ -48,11 +48,11 @@ Parcel declares the following runtime dependencies in the package metadata. Use 
 - `openssl-libs`
 - `libicu`
 
-## Bundle Configuration
+## Bundle configuration
 
 Use the Linux settings to configure desktop integration and branding.
 
-### Common Properties
+### Common properties
 
 **Application Name**:
 
@@ -66,7 +66,7 @@ The package identifier used in package metadata and output filenames. Parcel nor
 
 Name of the application directory under `/usr/share`. The default is `app-{package-name}`. Use only lowercase letters, numbers, dashes, underscores, or periods. The name must start and end with a letter or number.
 
-### DEB/RPM Specific Properties
+### DEB/RPM specific properties
 
 Additional configuration properties for Debian and RPM packages.
 
@@ -107,9 +107,9 @@ Add dependencies that are not in the Parcel defaults. Configure DEB and RPM depe
 
 Configure file associations and URL schemes under **Basics**. Parcel adds the related MIME metadata and launch information to DEB and RPM packages. To handle activation in an Avalonia application, see [File associations and URL schemes](/tools/parcel/configuration-reference#file-associations) and [Activatable lifetime](/docs/services/activatable-lifetime#handling-uri-activation).
 
-## Installation & Removal
+## Installation and removal
 
-### DEB Packages (Debian/Ubuntu)
+### DEB packages (Debian/Ubuntu)
 
 **Install**:
 ```bash
@@ -121,7 +121,7 @@ sudo apt install ./my-app.deb
 sudo apt remove my-app
 ```
 
-### RPM Packages (Fedora/RHEL)
+### RPM packages (Fedora/RHEL)
 
 **Install**:
 ```bash
@@ -137,13 +137,13 @@ sudo dnf remove my-app
 sudo rpm -e my-app
 ```
 
-### ZIP Archives
+### ZIP archives
 
 **Extract and Run**:
 ```bash
 unzip my-app.zip
 cd my-app
-./my-awesome-app
+./my-app
 ```
 
 ## See also
