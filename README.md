@@ -75,7 +75,15 @@ npm install
 ### Starting
 
 ```bash
-npx docusaurus start
+npm start
+
+# Previews the whole site. Only do this if you need to preview the API reference pages, because it needs a lot of memory.
+```
+
+```bash
+npm run start:light
+
+# Deliberately omits the /api pages, so the site previews faster and without triggering "out of memory" crashes.
 ```
 
 ### API Reference Generation

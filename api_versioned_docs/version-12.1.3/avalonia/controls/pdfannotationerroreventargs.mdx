@@ -1,0 +1,151 @@
+---
+title: 'PdfAnnotationErrorEventArgs'
+hide_title: true
+slug: '/avalonia/controls/pdfannotationerroreventargs'
+uid: 'Avalonia.Controls.PdfAnnotationErrorEventArgs'
+commentId: 'T:Avalonia.Controls.PdfAnnotationErrorEventArgs'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.PdfViewer'
+assembly: 'Avalonia.Controls.PdfViewer'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0-ios26.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">PdfAnnotationErrorEventArgs Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.PdfViewer</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.PdfViewer</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Event arguments describing an annotation operation that failed.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class PdfAnnotationErrorEventArgs
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> EventArgs <span className="apiref-page__relation-separator">-&gt;</span> PdfAnnotationErrorEventArgs
+</div>
+</div>
+
+## Remarks
+
+These failures are user-visible in effect — a shape the user drew does not appear, a delete
+does nothing — so they are reported rather than logged and forgotten. Handle
+[Avalonia.Controls.PdfViewer.AnnotationError](xref:Avalonia.Controls.PdfViewer.AnnotationError) to surface them in the host's own error UI.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [PdfAnnotationErrorEventArgs](#uid-9ebf5d9261) | Initializes a new instance of the [Avalonia.Controls.PdfAnnotationErrorEventArgs](xref:Avalonia.Controls.PdfAnnotationErrorEventArgs) class. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9ebf5d9261"></span>
+
+### PdfAnnotationErrorEventArgs Constructor
+
+Initializes a new instance of the [Avalonia.Controls.PdfAnnotationErrorEventArgs](xref:Avalonia.Controls.PdfAnnotationErrorEventArgs) class.
+
+```csharp
+public PdfAnnotationErrorEventArgs(Avalonia.Controls.PdfAnnotationOperation operation, string message, Exception exception)
+```
+
+#### Parameters
+
+`operation` [Avalonia.Controls.PdfAnnotationOperation](xref:Avalonia.Controls.PdfAnnotationOperation)
+
+The operation that failed.
+
+
+`message` string
+
+A human-readable description of the failure.
+
+
+`exception` Exception
+
+The underlying exception, if any.
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Exception](#uid-ef30ac9b29) | Gets the underlying exception that caused the failure, or . |
+| [Message](#uid-c8c70e3626) | Gets a human-readable description of the failure. |
+| [Operation](#uid-80bb133f9a) | Gets the annotation operation that failed. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ef30ac9b29"></span>
+
+### Exception Property
+
+Gets the underlying exception that caused the failure, or .
+
+```csharp
+public Exception Exception { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c8c70e3626"></span>
+
+### Message Property
+
+Gets a human-readable description of the failure.
+
+```csharp
+public string Message { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-80bb133f9a"></span>
+
+### Operation Property
+
+Gets the annotation operation that failed.
+
+```csharp
+public Avalonia.Controls.PdfAnnotationOperation Operation { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

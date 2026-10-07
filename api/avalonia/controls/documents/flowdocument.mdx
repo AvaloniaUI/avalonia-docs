@@ -1,0 +1,1496 @@
+---
+title: 'FlowDocument'
+hide_title: true
+slug: '/avalonia/controls/documents/flowdocument'
+uid: 'Avalonia.Controls.Documents.FlowDocument'
+commentId: 'T:Avalonia.Controls.Documents.FlowDocument'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Documents'
+assembly: 'Avalonia.Controls.Documents'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">FlowDocument Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Represents a flow document that contains rich text content organized into blocks.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class FlowDocument
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../animation/animatable">Animatable</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../styledelement">StyledElement</a> <span className="apiref-page__relation-separator">-&gt;</span> FlowDocument
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Derived types:</span> <a href="footnote">Footnote</a>, <a href="pageband">PageBand</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="../../logicaltree/ichildindexprovider">IChildIndexProvider</a>, IAddChild&lt;Control&gt;, IAddChild&lt;Block&gt;, IAddChild&lt;RichInline&gt;, ck, cn
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [FlowDocument (2 overloads)](#uid-2a63ecfb7e) | Initializes a new instance of the [Avalonia.Controls.Documents.FlowDocument](xref:Avalonia.Controls.Documents.FlowDocument) class. |
+
+<span id="uid-2a63ecfb7e"></span>
+
+### FlowDocument overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-29ca5c5346"></span>
+
+#### FlowDocument Constructor
+
+Initializes a new instance of the [Avalonia.Controls.Documents.FlowDocument](xref:Avalonia.Controls.Documents.FlowDocument) class.
+
+```csharp
+public FlowDocument()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f6a7f94b99"></span>
+
+#### FlowDocument Constructor
+
+Initializes a new instance of the [Avalonia.Controls.Documents.FlowDocument](xref:Avalonia.Controls.Documents.FlowDocument) class with an existing [TextDocument](xref:Avalonia.Controls.Documents.TextModel.TextDocument).
+
+```csharp
+public FlowDocument(Avalonia.Controls.Documents.TextModel.TextDocument textDocument)
+```
+
+##### Parameters
+
+`textDocument` [Avalonia.Controls.Documents.TextModel.TextDocument](xref:Avalonia.Controls.Documents.TextModel.TextDocument)
+
+The [TextDocument](xref:Avalonia.Controls.Documents.TextModel.TextDocument) to attach to this [FlowDocument](xref:Avalonia.Controls.Documents.FlowDocument).
+
+
+##### Exceptions
+
+- [\`textDocument\` is null.](xref:System.ArgumentNullException)
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [ApplyBlockFormatting](#uid-e6d7623c1c) | Applies captured formatting to an element. |
+| [ApplyInlineFormatting](#uid-0531842318) | Applies captured formatting to an element. |
+| [ApplyListItemFormatting](#uid-750f1a81c5) | Applies captured formatting to an element. |
+| [ApplyStyling](../../styledelement.mdx#uid-b0f81a6f8f) | Applies styling to the control if the control is initialized and styling is not already applied. Inherited from [StyledElement](../../styledelement.mdx). |
+| [ApplyTableCellFormatting](#uid-c630c53ae6) | Applies captured formatting to an element. |
+| [ApplyTableRowFormatting](#uid-1b714b165e) | Applies captured formatting to an element. |
+| [ApplyTextElementFormatting](#uid-cbbb04c22b) | Applies captured formatting to an element. |
+| [BeginInit](../../styledelement.mdx#uid-91c6ccadce) | Inherited from [StyledElement](../../styledelement.mdx). |
+| [Bind (8 overloads)](../../avaloniaobject.mdx#uid-1c60c7bda3) | Binds a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) to an [Avalonia.Data.BindingBase](xref:Avalonia.Data.BindingBase). Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [CheckAccess](../../avaloniaobject.mdx#uid-260ff7a68d) | Returns a value indicating whether the current thread is the UI thread. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [ClearValue (4 overloads)](../../avaloniaobject.mdx#uid-41de208fbe) | Clears a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty)'s local value. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [Clone](#uid-655217def6) | Creates a deep, independent copy of this document — content, block/inline structure, formatting and page settings. The source document is left untouched. This is the way to show the same content in several places at once; adding this document's blocks to another document moves them instead, because an element belongs to exactly one document at a time. |
+| [CoerceValue](../../avaloniaobject.mdx#uid-3bec32f39e) | Coerces the specified [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty). Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [CreateSnapshot](#uid-d9a10c1bbc) | Creates an immutable, thread-safe snapshot of the current document state. |
+| [EndInit](../../styledelement.mdx#uid-17b450469d) | Inherited from [StyledElement](../../styledelement.mdx). |
+| [EnsureTextDocument](#uid-b379cd22d4) | Creates the backing store if it does not exist yet, and returns it. |
+| [Equals](../../avaloniaobject.mdx#uid-a8a8e94305) | Compares two objects using reference equality. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [FindFootnote](#uid-01298728ef) | The note paired with `anchor`, or null while the anchor has none (a dangling anchor, or one not in this document). Under the anchor-owns-its-note lifecycle a note exists for every anchor added through the element channel - this is how callers reach it. |
+| [FromSnapshot](#uid-58357881c2) | No summary available. |
+| [GetBaseValue](../../avaloniaobject.mdx#uid-9c615efbba) | Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [GetHashCode](../../avaloniaobject.mdx#uid-7f7db1e7a2) | Gets the hash code for the object. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [GetValue (3 overloads)](../../avaloniaobject.mdx#uid-5142cd4792) | Gets a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [InitializeTextDocument](#uid-9705bb2c7b) | Creates the backing store if it does not exist yet, and returns it. |
+| [IsAnimating](../../avaloniaobject.mdx#uid-8cbfc7521a) | Checks whether a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) is animating. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [IsSet](../../avaloniaobject.mdx#uid-f8bf0bbdcc) | Checks whether a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) is set on this object. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [Load (2 overloads)](#uid-bbf188f438) | Reads a document from a stream. |
+| [LoadAsync](#uid-e1a5a76bbb) | Loads a document from a stream, parsing off the calling thread. |
+| [Save (2 overloads)](#uid-58c41f4af7) | Writes this document to a stream. |
+| [SaveAsync](#uid-6000bb6211) | Saves the document to a stream, writing off the calling thread. |
+| [SetCurrentValue (2 overloads)](../../avaloniaobject.mdx#uid-38759fd088) | Sets the value of a dependency property without changing its value source. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [SetValue (3 overloads)](../../avaloniaobject.mdx#uid-47d14e19d7) | Sets a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [TryGetResource](../../styledelement.mdx#uid-2046a6b284) | Inherited from [StyledElement](../../styledelement.mdx). |
+| [VerifyAccess](../../avaloniaobject.mdx#uid-3b9d3c9793) | Checks that the current thread is the UI thread and throws if not. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e6d7623c1c"></span>
+
+### ApplyBlockFormatting Method
+
+Applies captured formatting to an element.
+
+```csharp
+public void ApplyBlockFormatting(Avalonia.Controls.Documents.Block block, Avalonia.Controls.Documents.TextModel.Formatting.BlockFormatting formatting)
+```
+
+#### Parameters
+
+`block` [Avalonia.Controls.Documents.Block](xref:Avalonia.Controls.Documents.Block)
+
+The block to write onto.
+
+
+`formatting` [Avalonia.Controls.Documents.TextModel.Formatting.BlockFormatting](xref:Avalonia.Controls.Documents.TextModel.Formatting.BlockFormatting)
+
+The formatting to apply.
+
+
+`element`
+
+The element to write onto.
+
+
+#### Remarks
+
+Resets every property the snapshot tracks, clearing whatever it does not carry.
+It exists to serve element materialization; to format a live document use
+[Avalonia.Controls.Documents.TextModel.TextRange.ApplyPropertyValue&lt;T&gt;(Avalonia.StyledProperty&#123;&lt;&gt;&#125;,&lt;&gt;)](xref:Avalonia.Controls.Documents.TextModel.TextRange.ApplyPropertyValue%60%601%28Avalonia.StyledProperty%7B%60%600%7D%2C%60%600%29).
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0531842318"></span>
+
+### ApplyInlineFormatting Method
+
+Applies captured formatting to an element.
+
+```csharp
+public void ApplyInlineFormatting(Avalonia.Controls.Documents.RichInline inline, Avalonia.Controls.Documents.TextModel.Formatting.InlineFormatting formatting)
+```
+
+#### Parameters
+
+`inline` [Avalonia.Controls.Documents.RichInline](xref:Avalonia.Controls.Documents.RichInline)
+
+The inline to write onto.
+
+
+`formatting` [Avalonia.Controls.Documents.TextModel.Formatting.InlineFormatting](xref:Avalonia.Controls.Documents.TextModel.Formatting.InlineFormatting)
+
+The formatting to apply.
+
+
+`element`
+
+The element to write onto.
+
+
+#### Remarks
+
+Resets every property the snapshot tracks, clearing whatever it does not carry.
+It exists to serve element materialization; to format a live document use
+[Avalonia.Controls.Documents.TextModel.TextRange.ApplyPropertyValue&lt;T&gt;(Avalonia.StyledProperty&#123;&lt;&gt;&#125;,&lt;&gt;)](xref:Avalonia.Controls.Documents.TextModel.TextRange.ApplyPropertyValue%60%601%28Avalonia.StyledProperty%7B%60%600%7D%2C%60%600%29).
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-750f1a81c5"></span>
+
+### ApplyListItemFormatting Method
+
+Applies captured formatting to an element.
+
+```csharp
+public void ApplyListItemFormatting(Avalonia.Controls.Documents.ListItem item, Avalonia.Controls.Documents.TextModel.Formatting.BlockFormatting formatting)
+```
+
+#### Parameters
+
+`item` [Avalonia.Controls.Documents.ListItem](xref:Avalonia.Controls.Documents.ListItem)
+
+The list item to write onto.
+
+
+`formatting` [Avalonia.Controls.Documents.TextModel.Formatting.BlockFormatting](xref:Avalonia.Controls.Documents.TextModel.Formatting.BlockFormatting)
+
+The formatting to apply.
+
+
+`element`
+
+The element to write onto.
+
+
+#### Remarks
+
+Resets every property the snapshot tracks, clearing whatever it does not carry.
+It exists to serve element materialization; to format a live document use
+[Avalonia.Controls.Documents.TextModel.TextRange.ApplyPropertyValue&lt;T&gt;(Avalonia.StyledProperty&#123;&lt;&gt;&#125;,&lt;&gt;)](xref:Avalonia.Controls.Documents.TextModel.TextRange.ApplyPropertyValue%60%601%28Avalonia.StyledProperty%7B%60%600%7D%2C%60%600%29).
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c630c53ae6"></span>
+
+### ApplyTableCellFormatting Method
+
+Applies captured formatting to an element.
+
+```csharp
+public void ApplyTableCellFormatting(Avalonia.Controls.Documents.TableCell cell, Avalonia.Controls.Documents.TextModel.Formatting.BlockFormatting formatting)
+```
+
+#### Parameters
+
+`cell` [Avalonia.Controls.Documents.TableCell](xref:Avalonia.Controls.Documents.TableCell)
+
+The cell to write onto.
+
+
+`formatting` [Avalonia.Controls.Documents.TextModel.Formatting.BlockFormatting](xref:Avalonia.Controls.Documents.TextModel.Formatting.BlockFormatting)
+
+The formatting to apply.
+
+
+`element`
+
+The element to write onto.
+
+
+#### Remarks
+
+Resets every property the snapshot tracks, clearing whatever it does not carry.
+It exists to serve element materialization; to format a live document use
+[Avalonia.Controls.Documents.TextModel.TextRange.ApplyPropertyValue&lt;T&gt;(Avalonia.StyledProperty&#123;&lt;&gt;&#125;,&lt;&gt;)](xref:Avalonia.Controls.Documents.TextModel.TextRange.ApplyPropertyValue%60%601%28Avalonia.StyledProperty%7B%60%600%7D%2C%60%600%29).
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1b714b165e"></span>
+
+### ApplyTableRowFormatting Method
+
+Applies captured formatting to an element.
+
+```csharp
+public void ApplyTableRowFormatting(Avalonia.Controls.Documents.TableRow row, Avalonia.Controls.Documents.TextModel.Formatting.BlockFormatting formatting)
+```
+
+#### Parameters
+
+`row` [Avalonia.Controls.Documents.TableRow](xref:Avalonia.Controls.Documents.TableRow)
+
+The row to write onto.
+
+
+`formatting` [Avalonia.Controls.Documents.TextModel.Formatting.BlockFormatting](xref:Avalonia.Controls.Documents.TextModel.Formatting.BlockFormatting)
+
+The formatting to apply.
+
+
+`element`
+
+The element to write onto.
+
+
+#### Remarks
+
+Resets every property the snapshot tracks, clearing whatever it does not carry.
+It exists to serve element materialization; to format a live document use
+[Avalonia.Controls.Documents.TextModel.TextRange.ApplyPropertyValue&lt;T&gt;(Avalonia.StyledProperty&#123;&lt;&gt;&#125;,&lt;&gt;)](xref:Avalonia.Controls.Documents.TextModel.TextRange.ApplyPropertyValue%60%601%28Avalonia.StyledProperty%7B%60%600%7D%2C%60%600%29).
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-cbbb04c22b"></span>
+
+### ApplyTextElementFormatting Method
+
+Applies captured formatting to an element.
+
+```csharp
+public void ApplyTextElementFormatting(Avalonia.Controls.Documents.RichTextElement element, Avalonia.Controls.Documents.TextModel.Formatting.TextElementFormatting formatting)
+```
+
+#### Parameters
+
+`element` [Avalonia.Controls.Documents.RichTextElement](xref:Avalonia.Controls.Documents.RichTextElement)
+
+The element to write onto.
+
+
+`formatting` [Avalonia.Controls.Documents.TextModel.Formatting.TextElementFormatting](xref:Avalonia.Controls.Documents.TextModel.Formatting.TextElementFormatting)
+
+The formatting to apply.
+
+
+#### Remarks
+
+Resets every property the snapshot tracks, clearing whatever it does not carry.
+It exists to serve element materialization; to format a live document use
+[Avalonia.Controls.Documents.TextModel.TextRange.ApplyPropertyValue&lt;T&gt;(Avalonia.StyledProperty&#123;&lt;&gt;&#125;,&lt;&gt;)](xref:Avalonia.Controls.Documents.TextModel.TextRange.ApplyPropertyValue%60%601%28Avalonia.StyledProperty%7B%60%600%7D%2C%60%600%29).
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-655217def6"></span>
+
+### Clone Method
+
+Creates a deep, independent copy of this document — content,
+block/inline structure, formatting and page settings. The source
+document is left untouched. This is the way to show the same
+content in several places at once; adding this document's blocks to
+another document moves them instead, because an element belongs to
+exactly one document at a time.
+
+```csharp
+public Avalonia.Controls.Documents.FlowDocument Clone()
+```
+
+#### Returns
+
+[Avalonia.Controls.Documents.FlowDocument](xref:Avalonia.Controls.Documents.FlowDocument)
+
+A new [Avalonia.Controls.Documents.FlowDocument](xref:Avalonia.Controls.Documents.FlowDocument) with equivalent content.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d9a10c1bbc"></span>
+
+### CreateSnapshot Method
+
+Creates an immutable, thread-safe snapshot of the current document state.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot CreateSnapshot()
+```
+
+#### Returns
+
+[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot)
+
+A [Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot) that can be serialized from any thread.
+
+
+#### Remarks
+
+The snapshot captures text content (O(1) — references immutable rope nodes),
+tree structure (O(n) — copies node tree), and formatting (O(n) — value types).
+
+Create a single snapshot and pass it to multiple serializers to avoid
+redundant tree traversals:
+
+```csharp
+var snapshot = document.CreateSnapshot();
+new RtfSerializer().Serialize(snapshot, rtfStream);
+new DocxSerializer().Serialize(snapshot, docxStream);
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b379cd22d4"></span>
+
+### EnsureTextDocument Method
+
+Creates the backing store if it does not exist yet, and returns it.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.TextDocument EnsureTextDocument()
+```
+
+#### Returns
+
+[Avalonia.Controls.Documents.TextModel.TextDocument](xref:Avalonia.Controls.Documents.TextModel.TextDocument)
+
+The document's [Avalonia.Controls.Documents.TextModel.TextDocument](xref:Avalonia.Controls.Documents.TextModel.TextDocument).
+
+
+#### Remarks
+
+Read [Avalonia.Controls.Documents.FlowDocument.TextDocument](xref:Avalonia.Controls.Documents.FlowDocument.TextDocument) instead; it creates the store on first read.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-01298728ef"></span>
+
+### FindFootnote Method
+
+The note paired with `anchor`, or null while the anchor has
+none (a dangling anchor, or one not in this document). Under the
+anchor-owns-its-note lifecycle a note exists for every anchor added through
+the element channel - this is how callers reach it.
+
+```csharp
+public Avalonia.Controls.Documents.Footnote FindFootnote(Avalonia.Controls.Documents.RichFootnoteReference anchor)
+```
+
+#### Parameters
+
+`anchor` [Avalonia.Controls.Documents.RichFootnoteReference](xref:Avalonia.Controls.Documents.RichFootnoteReference)
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.Footnote](xref:Avalonia.Controls.Documents.Footnote)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-58357881c2"></span>
+
+### FromSnapshot Method
+
+```csharp
+public Avalonia.Controls.Documents.FlowDocument FromSnapshot(Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot snapshot, Action<Avalonia.Controls.Documents.RichTextElement, Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode> formatCallback)
+```
+
+#### Parameters
+
+`snapshot` [Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot)
+
+
+`formatCallback` Action&lt;[Avalonia.Controls.Documents.RichTextElement](xref:Avalonia.Controls.Documents.RichTextElement), [Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode](xref:Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode)&gt;
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.FlowDocument](xref:Avalonia.Controls.Documents.FlowDocument)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9705bb2c7b"></span>
+
+### InitializeTextDocument Method
+
+Creates the backing store if it does not exist yet, and returns it.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.TextDocument InitializeTextDocument()
+```
+
+#### Returns
+
+[Avalonia.Controls.Documents.TextModel.TextDocument](xref:Avalonia.Controls.Documents.TextModel.TextDocument)
+
+The document's [Avalonia.Controls.Documents.TextModel.TextDocument](xref:Avalonia.Controls.Documents.TextModel.TextDocument).
+
+
+#### Remarks
+
+Read [Avalonia.Controls.Documents.FlowDocument.TextDocument](xref:Avalonia.Controls.Documents.FlowDocument.TextDocument) instead; it creates the store on first read.
+
+</section>
+
+<span id="uid-bbf188f438"></span>
+
+### Load overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-75be1f9d8f"></span>
+
+#### Load Method
+
+Reads a document from a stream.
+
+```csharp
+public Avalonia.Controls.Documents.FlowDocument Load(System.IO.Stream stream, Avalonia.Controls.Documents.Serialization.IDocumentSerializer serializer)
+```
+
+##### Parameters
+
+`stream` System.IO.Stream
+
+The stream to read from.
+
+
+`serializer` [Avalonia.Controls.Documents.Serialization.IDocumentSerializer](xref:Avalonia.Controls.Documents.Serialization.IDocumentSerializer)
+
+The serializer for the format.
+
+
+##### Returns
+
+[Avalonia.Controls.Documents.FlowDocument](xref:Avalonia.Controls.Documents.FlowDocument)
+
+The document.
+
+
+##### Remarks
+
+The overload taking a [System.Threading.CancellationToken](xref:System.Threading.CancellationToken) is the one to reach for: a
+large document cannot be abandoned through this one.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7aa70c4b05"></span>
+
+#### Load Method
+
+Loads a document from a stream on the calling thread.
+
+```csharp
+public Avalonia.Controls.Documents.FlowDocument Load(System.IO.Stream stream, Avalonia.Controls.Documents.Serialization.IDocumentSerializer serializer, System.Threading.CancellationToken cancellationToken)
+```
+
+##### Parameters
+
+`stream` System.IO.Stream
+
+The stream to read from.
+
+
+`serializer` [Avalonia.Controls.Documents.Serialization.IDocumentSerializer](xref:Avalonia.Controls.Documents.Serialization.IDocumentSerializer)
+
+The serializer to use.
+
+
+`cancellationToken` System.Threading.CancellationToken
+
+Token to cancel the operation.
+
+
+##### Returns
+
+[Avalonia.Controls.Documents.FlowDocument](xref:Avalonia.Controls.Documents.FlowDocument)
+
+A new [Avalonia.Controls.Documents.FlowDocument](xref:Avalonia.Controls.Documents.FlowDocument) containing the loaded content.
+
+
+##### Remarks
+
+Parsing and element construction both happen on the calling thread, so a UI-thread
+caller pays the whole cost on the UI thread. For a large document use
+[Avalonia.Controls.Documents.FlowDocument.LoadAsync(System.IO.Stream,Avalonia.Controls.Documents.Serialization.IDocumentSerializer,System.Threading.CancellationToken)](xref:Avalonia.Controls.Documents.FlowDocument.LoadAsync%28System.IO.Stream%2CAvalonia.Controls.Documents.Serialization.IDocumentSerializer%2CSystem.Threading.CancellationToken%29), or call this from a background thread and hand the result
+to the UI - see [Avalonia.Controls.Documents.FlowDocument.LoadAsync(System.IO.Stream,Avalonia.Controls.Documents.Serialization.IDocumentSerializer,System.Threading.CancellationToken)](xref:Avalonia.Controls.Documents.FlowDocument.LoadAsync%28System.IO.Stream%2CAvalonia.Controls.Documents.Serialization.IDocumentSerializer%2CSystem.Threading.CancellationToken%29) for what a background thread may and may
+not construct.
+
+##### Exceptions
+
+- [\`stream\` or \`serializer\` is null.](xref:System.ArgumentNullException)
+- [The load was cancelled.](xref:System.OperationCanceledException)
+- [The stream content is invalid for the format.](xref:Avalonia.Controls.Documents.Serialization.SerializationException)
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e1a5a76bbb"></span>
+
+### LoadAsync Method
+
+Loads a document from a stream, parsing off the calling thread.
+
+```csharp
+public System.Threading.Tasks.Task<Avalonia.Controls.Documents.FlowDocument> LoadAsync(System.IO.Stream stream, Avalonia.Controls.Documents.Serialization.IDocumentSerializer serializer, System.Threading.CancellationToken cancellationToken)
+```
+
+#### Parameters
+
+`stream` System.IO.Stream
+
+The stream to read from.
+
+
+`serializer` [Avalonia.Controls.Documents.Serialization.IDocumentSerializer](xref:Avalonia.Controls.Documents.Serialization.IDocumentSerializer)
+
+The serializer to use.
+
+
+`cancellationToken` System.Threading.CancellationToken
+
+Token to cancel the operation.
+
+
+#### Returns
+
+System.Threading.Tasks.Task&lt;[Avalonia.Controls.Documents.FlowDocument](xref:Avalonia.Controls.Documents.FlowDocument)&gt;
+
+A new [Avalonia.Controls.Documents.FlowDocument](xref:Avalonia.Controls.Documents.FlowDocument) with the loaded content.
+
+
+#### Remarks
+
+The parse runs on the thread pool; the element tree is then built on the UI thread.
+A [Avalonia.Controls.Documents.FlowDocument](xref:Avalonia.Controls.Documents.FlowDocument) and its [Avalonia.Controls.Documents.RichTextElement](xref:Avalonia.Controls.Documents.RichTextElement)s are
+[Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject)s and bind to the dispatcher of the thread that
+constructs them, so a document assembled on a pool thread throws on the first
+property read from the UI thread. The dispatch is explicit rather than left to an
+ambient [System.Threading.SynchronizationContext](xref:System.Threading.SynchronizationContext), which a console host
+or a caller already off the UI thread does not have.
+
+Await it. Blocking on the returned task from the UI thread deadlocks: the wait
+occupies the thread the element tree has to be built on. A caller that cannot await
+uses [Avalonia.Controls.Documents.FlowDocument.Load(System.IO.Stream,Avalonia.Controls.Documents.Serialization.IDocumentSerializer,System.Threading.CancellationToken)](xref:Avalonia.Controls.Documents.FlowDocument.Load%28System.IO.Stream%2CAvalonia.Controls.Documents.Serialization.IDocumentSerializer%2CSystem.Threading.CancellationToken%29), which
+parses on the calling thread.
+
+To stay off the UI thread entirely, skip the element facade: read a
+[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot) with the serializer and materialize it with
+[Avalonia.Controls.Documents.TextModel.TextDocument.FromSnapshot(Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot,Action&#123;Avalonia.Controls.Documents.RichTextElement,Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode&#125;)](xref:Avalonia.Controls.Documents.TextModel.TextDocument.FromSnapshot%28Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot%2CSystem.Action%7BAvalonia.Controls.Documents.RichTextElement%2CAvalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode%7D%29). [Avalonia.Controls.Documents.FlowDocument.TextDocument](xref:Avalonia.Controls.Documents.FlowDocument.TextDocument) carries the
+whole document and has no thread affinity; [Avalonia.Controls.Documents.FlowDocument](xref:Avalonia.Controls.Documents.FlowDocument) presents it
+and is inherently UI-bound.
+
+#### Exceptions
+
+- [\`stream\` or \`serializer\` is null.](xref:System.ArgumentNullException)
+- [The load was cancelled.](xref:System.OperationCanceledException)
+
+</section>
+
+<span id="uid-58c41f4af7"></span>
+
+### Save overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6be9a49f6c"></span>
+
+#### Save Method
+
+Writes this document to a stream.
+
+```csharp
+public void Save(System.IO.Stream stream, Avalonia.Controls.Documents.Serialization.IDocumentSerializer serializer)
+```
+
+##### Parameters
+
+`stream` System.IO.Stream
+
+The stream to write to.
+
+
+`serializer` [Avalonia.Controls.Documents.Serialization.IDocumentSerializer](xref:Avalonia.Controls.Documents.Serialization.IDocumentSerializer)
+
+The serializer for the format.
+
+
+##### Remarks
+
+The overload taking a [System.Threading.CancellationToken](xref:System.Threading.CancellationToken) is the one to reach for: a
+large document cannot be abandoned through this one.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e41d6da5e0"></span>
+
+#### Save Method
+
+Saves the document to a stream on the calling thread.
+
+```csharp
+public void Save(System.IO.Stream stream, Avalonia.Controls.Documents.Serialization.IDocumentSerializer serializer, System.Threading.CancellationToken cancellationToken)
+```
+
+##### Parameters
+
+`stream` System.IO.Stream
+
+The stream to write to.
+
+
+`serializer` [Avalonia.Controls.Documents.Serialization.IDocumentSerializer](xref:Avalonia.Controls.Documents.Serialization.IDocumentSerializer)
+
+The serializer to use.
+
+
+`cancellationToken` System.Threading.CancellationToken
+
+Cancellation token.
+
+
+##### Remarks
+
+Both the snapshot and the write happen on the calling thread, so a UI-thread caller
+pays the whole cost on the UI thread. For a large document use
+[Avalonia.Controls.Documents.FlowDocument.SaveAsync(System.IO.Stream,Avalonia.Controls.Documents.Serialization.IDocumentSerializer,System.Threading.CancellationToken)](xref:Avalonia.Controls.Documents.FlowDocument.SaveAsync%28System.IO.Stream%2CAvalonia.Controls.Documents.Serialization.IDocumentSerializer%2CSystem.Threading.CancellationToken%29), which keeps only the snapshot here.
+
+##### Exceptions
+
+- [\`stream\` or \`serializer\` is null.](xref:System.ArgumentNullException)
+- [The save was cancelled.](xref:System.OperationCanceledException)
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6000bb6211"></span>
+
+### SaveAsync Method
+
+Saves the document to a stream, writing off the calling thread.
+
+```csharp
+public System.Threading.Tasks.Task SaveAsync(System.IO.Stream stream, Avalonia.Controls.Documents.Serialization.IDocumentSerializer serializer, System.Threading.CancellationToken cancellationToken)
+```
+
+#### Parameters
+
+`stream` System.IO.Stream
+
+The stream to write to.
+
+
+`serializer` [Avalonia.Controls.Documents.Serialization.IDocumentSerializer](xref:Avalonia.Controls.Documents.Serialization.IDocumentSerializer)
+
+The serializer to use.
+
+
+`cancellationToken` System.Threading.CancellationToken
+
+Cancellation token.
+
+
+#### Returns
+
+System.Threading.Tasks.Task
+
+A task that completes when the save is finished.
+
+
+#### Remarks
+
+This is a thread-offload convenience, not asynchronous I/O: no serializer here
+performs any, so the write occupies a pool thread for its duration. The snapshot is
+still captured on the calling thread, because reading the document requires the
+thread that owns it.
+
+#### Exceptions
+
+- [\`stream\` or \`serializer\` is null.](xref:System.ArgumentNullException)
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [ActualThemeVariant](../../styledelement.mdx#uid-776bcbe4bf) | Gets the UI theme that is currently used by the element, which might be different than the RequestedThemeVariantProperty. Inherited from [StyledElement](../../styledelement.mdx). |
+| [Background](#uid-88b1085a41) | Gets or sets the document-level background brush. |
+| [Blocks](#uid-256bf19392) | Gets the top-level blocks that make up this document's content. |
+| [Classes](../../styledelement.mdx#uid-b7b7edea05) | Gets or sets the styled element's classes. Inherited from [StyledElement](../../styledelement.mdx). |
+| [ContentEnd](#uid-f5863acf5f) | Gets a pointer at the end of the document content, or `null` while no backing store exists. |
+| [ContentRange](#uid-6ae5e36837) | Gets a range covering the whole document, or `null` while no backing store exists. |
+| [ContentStart](#uid-95bbe9144f) | Gets a pointer at the start of the document content, or `null` while no backing store exists. |
+| [DataContext](../../styledelement.mdx#uid-647f924a56) | Gets or sets the control's data context. Inherited from [StyledElement](../../styledelement.mdx). |
+| [Dispatcher](../../avaloniaobject.mdx#uid-b25fa51632) | Returns the [Avalonia.AvaloniaObject.Dispatcher](xref:Avalonia.AvaloniaObject.Dispatcher) that this [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject) is associated with. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [FontFamily](#uid-a6980f6e90) | Gets or sets the document-level font family. |
+| [FontSize](#uid-da30f27b23) | Gets or sets the document-level font size in device-independent pixels. |
+| [FontStretch](#uid-88f20fc1f7) | Gets or sets the document-level font stretch. |
+| [FontStyle](#uid-37ce681c00) | Gets or sets the document-level font style. |
+| [FontWeight](#uid-7bcec7997d) | Gets or sets the document-level font weight. |
+| [FootnoteNumberFormat](#uid-317b96e6f6) | Gets or sets how the document numbers its footnotes: the format of the ordinal each [Avalonia.Controls.Documents.RichFootnoteReference](xref:Avalonia.Controls.Documents.RichFootnoteReference) renders and its note shows in its number strip. The text document owns the numbering ([Avalonia.Controls.Documents.TextModel.TextDocument.FootnoteNumberFormat](xref:Avalonia.Controls.Documents.TextModel.TextDocument.FootnoteNumberFormat)): a change is one undo unit that re-renders every anchor and note, and a value set before the text document exists applies when it is created. A nested document (a band, a note) ignores it. |
+| [Footnotes](#uid-fd1a9be222) | Gets the footnotes this document owns, in anchor order: nested documents like [Avalonia.Controls.Documents.FlowDocument.PageBands](xref:Avalonia.Controls.Documents.FlowDocument.PageBands), each paired by id with the anchor in the body that carries its number. The text document owns them ([Avalonia.Controls.Documents.TextModel.TextDocument.Footnotes](xref:Avalonia.Controls.Documents.TextModel.TextDocument.Footnotes)); they resolve resources and inherited formatting through this element and record undo into the shared undo manager. Notes come and go with their anchors ([Avalonia.Controls.Documents.FlowDocument.FindFootnote(Avalonia.Controls.Documents.RichFootnoteReference)](xref:Avalonia.Controls.Documents.FlowDocument.FindFootnote%28Avalonia.Controls.Documents.RichFootnoteReference%29)); a nested document has none. |
+| [Foreground](#uid-173087cfe3) | Gets or sets the document-level foreground brush. |
+| [IsDocumentInitialized](#uid-98613fbb26) | Whether the backing store has been created. |
+| [IsInitialized](../../styledelement.mdx#uid-59a7cddacb) | Gets a value that indicates whether the element has finished initialization. Inherited from [StyledElement](../../styledelement.mdx). |
+| [Item](../../avaloniaobject.mdx#uid-c1d1f1bc0f) | Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [Name](../../styledelement.mdx#uid-245f4ccff5) | Gets or sets the name of the styled element. Inherited from [StyledElement](../../styledelement.mdx). |
+| [PageBandDistance](#uid-0850f66015) | Gets or sets the distance from the sheet edge to a page band in DIPs: the header's top sits this far below the sheet top, the footer's bottom this far above the sheet bottom. NaN (the default) leaves it to [Avalonia.Controls.Documents.PageBandPolicy.DefaultDistance](xref:Avalonia.Controls.Documents.PageBandPolicy.DefaultDistance). |
+| [PageBands](#uid-ba36b209bd) | Gets the page bands this document owns: the nested documents its root and top-level sections reference as headers and footers. A band added here - or adopted when an unowned band is set on a reference - belongs to this document: the text document owns it ([Avalonia.Controls.Documents.TextModel.TextDocument.PageBands](xref:Avalonia.Controls.Documents.TextModel.TextDocument.PageBands)), it resolves resources and inherited formatting through this element and records undo into the shared undo manager. Removing a band clears every reference to it. |
+| [PageHeight](#uid-25c274f87c) | Gets or sets the document page height in DIPs. Set NaN for automatic height from the attached view. |
+| [PagePadding](#uid-86bd8917bb) | Gets or sets the document-level page padding (page margins in document formats). Sections inherit it, like [Avalonia.Controls.Documents.FlowDocument.PageWidth](xref:Avalonia.Controls.Documents.FlowDocument.PageWidth) and [Avalonia.Controls.Documents.FlowDocument.PageHeight](xref:Avalonia.Controls.Documents.FlowDocument.PageHeight), unless they declare their own. |
+| [PageWidth](#uid-385c5486fe) | Gets or sets the document page width in DIPs. Set NaN for automatic width from the attached view. |
+| [Parent](../../styledelement.mdx#uid-aad2c5c78d) | Gets the styled element's logical parent. Inherited from [StyledElement](../../styledelement.mdx). |
+| [Resources](../../styledelement.mdx#uid-f6488ca4b7) | Gets or sets the styled element's resource dictionary. Inherited from [StyledElement](../../styledelement.mdx). |
+| [RootKind](#uid-1820f3151c) | The kind of the text document's root node: what kind of document this is. |
+| [StyleKey](../../styledelement.mdx#uid-081584075e) | Gets the type by which the element is styled. Inherited from [StyledElement](../../styledelement.mdx). |
+| [Styles](../../styledelement.mdx#uid-ae663139cc) | Gets the styles for the styled element. Inherited from [StyledElement](../../styledelement.mdx). |
+| [TemplatedParent](../../styledelement.mdx#uid-dbf6ddacc3) | Gets the styled element whose lookless template this styled element is part of. Inherited from [StyledElement](../../styledelement.mdx). |
+| [TextAlignment](#uid-36d9623cee) | Gets or sets the default text alignment for blocks in the document. |
+| [TextDocument](#uid-f63e9330f5) | Gets the [Avalonia.Controls.Documents.TextModel.TextDocument](xref:Avalonia.Controls.Documents.TextModel.TextDocument) backing store, creating it on first read. |
+| [Theme](../../styledelement.mdx#uid-1aebed283d) | Gets or sets the theme to be applied to the element. Inherited from [StyledElement](../../styledelement.mdx). |
+| [Transitions](../../animation/animatable.mdx#uid-1b3138f517) | Gets or sets the property transitions for the control. Inherited from [Animatable](../../animation/animatable.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-88b1085a41"></span>
+
+### Background Property
+
+Gets or sets the document-level background brush.
+
+```csharp
+public Avalonia.Media.IBrush Background { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-256bf19392"></span>
+
+### Blocks Property
+
+Gets the top-level blocks that make up this document's content.
+
+```csharp
+public Avalonia.Controls.Documents.BlockCollection Blocks { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f5863acf5f"></span>
+
+### ContentEnd Property
+
+Gets a pointer at the end of the document content, or `null` while no
+backing store exists.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.TextPointer ContentEnd { get; set; }
+```
+
+#### Remarks
+
+Returns the backing store's cached pointer instance; see
+[Avalonia.Controls.Documents.FlowDocument.ContentStart](xref:Avalonia.Controls.Documents.FlowDocument.ContentStart) for the cloning requirement.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6ae5e36837"></span>
+
+### ContentRange Property
+
+Gets a range covering the whole document, or `null` while no backing
+store exists.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.TextRange ContentRange { get; set; }
+```
+
+#### Remarks
+
+Each read allocates a new range, so a mutation through one read does not
+re-target the range another read returned.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-95bbe9144f"></span>
+
+### ContentStart Property
+
+Gets a pointer at the start of the document content, or `null` while no
+backing store exists.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.TextPointer ContentStart { get; set; }
+```
+
+#### Remarks
+
+Returns the backing store's cached pointer instance. A caller storing
+it in a container that later refreshes it calls [Avalonia.Controls.Documents.TextModel.TextPointer.Clone](xref:Avalonia.Controls.Documents.TextModel.TextPointer.Clone)
+first; see [Avalonia.Controls.Documents.TextModel.TextDocument.ContentStart](xref:Avalonia.Controls.Documents.TextModel.TextDocument.ContentStart).
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a6980f6e90"></span>
+
+### FontFamily Property
+
+Gets or sets the document-level font family.
+
+```csharp
+public Avalonia.Media.FontFamily FontFamily { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-da30f27b23"></span>
+
+### FontSize Property
+
+Gets or sets the document-level font size in device-independent pixels.
+
+```csharp
+public double FontSize { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-88f20fc1f7"></span>
+
+### FontStretch Property
+
+Gets or sets the document-level font stretch.
+
+```csharp
+public Avalonia.Media.FontStretch FontStretch { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-37ce681c00"></span>
+
+### FontStyle Property
+
+Gets or sets the document-level font style.
+
+```csharp
+public Avalonia.Media.FontStyle FontStyle { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7bcec7997d"></span>
+
+### FontWeight Property
+
+Gets or sets the document-level font weight.
+
+```csharp
+public Avalonia.Media.FontWeight FontWeight { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-317b96e6f6"></span>
+
+### FootnoteNumberFormat Property
+
+Gets or sets how the document numbers its footnotes: the format of the ordinal
+each [Avalonia.Controls.Documents.RichFootnoteReference](xref:Avalonia.Controls.Documents.RichFootnoteReference) renders and its note shows in its
+number strip. The text document owns the numbering
+([Avalonia.Controls.Documents.TextModel.TextDocument.FootnoteNumberFormat](xref:Avalonia.Controls.Documents.TextModel.TextDocument.FootnoteNumberFormat)): a change is one undo unit
+that re-renders every anchor and note, and a value set before the text document
+exists applies when it is created. A nested document (a band, a note) ignores it.
+
+```csharp
+public Avalonia.Controls.Documents.FootnoteNumberFormat FootnoteNumberFormat { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-fd1a9be222"></span>
+
+### Footnotes Property
+
+Gets the footnotes this document owns, in anchor order: nested documents like
+[Avalonia.Controls.Documents.FlowDocument.PageBands](xref:Avalonia.Controls.Documents.FlowDocument.PageBands), each paired by id with the anchor in the body that
+carries its number. The text document owns them ([Avalonia.Controls.Documents.TextModel.TextDocument.Footnotes](xref:Avalonia.Controls.Documents.TextModel.TextDocument.Footnotes));
+they resolve resources and inherited formatting through this element and record
+undo into the shared undo manager. Notes come and go with their anchors
+([Avalonia.Controls.Documents.FlowDocument.FindFootnote(Avalonia.Controls.Documents.RichFootnoteReference)](xref:Avalonia.Controls.Documents.FlowDocument.FindFootnote%28Avalonia.Controls.Documents.RichFootnoteReference%29)); a nested document has none.
+
+```csharp
+public Avalonia.Controls.Documents.FootnoteCollection Footnotes { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-173087cfe3"></span>
+
+### Foreground Property
+
+Gets or sets the document-level foreground brush.
+
+```csharp
+public Avalonia.Media.IBrush Foreground { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-98613fbb26"></span>
+
+### IsDocumentInitialized Property
+
+Whether the backing store has been created.
+
+```csharp
+public bool IsDocumentInitialized { get; set; }
+```
+
+#### Remarks
+
+An internal lazy-initialization detail. Reading [Avalonia.Controls.Documents.FlowDocument.TextDocument](xref:Avalonia.Controls.Documents.FlowDocument.TextDocument) creates the
+store, so this reports true from the first read onwards and there is nothing a caller
+can usefully do with it.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0850f66015"></span>
+
+### PageBandDistance Property
+
+Gets or sets the distance from the sheet edge to a page band in DIPs: the header's
+top sits this far below the sheet top, the footer's bottom this far above the
+sheet bottom. NaN (the default) leaves it to
+[Avalonia.Controls.Documents.PageBandPolicy.DefaultDistance](xref:Avalonia.Controls.Documents.PageBandPolicy.DefaultDistance).
+
+```csharp
+public double PageBandDistance { get; set; }
+```
+
+#### Remarks
+
+The value belongs to the document, not to a view of it: a band taller than the
+space it leaves pushes the body down, so screen, print and PDF must all break the
+document on the same lines. It travels in
+[Avalonia.Controls.Documents.TextModel.Formatting.DocumentFormatting.PageBandDistance](xref:Avalonia.Controls.Documents.TextModel.Formatting.DocumentFormatting.PageBandDistance).
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ba36b209bd"></span>
+
+### PageBands Property
+
+Gets the page bands this document owns: the nested documents its root and
+top-level sections reference as headers and footers. A band added here - or
+adopted when an unowned band is set on a reference - belongs to this document:
+the text document owns it ([Avalonia.Controls.Documents.TextModel.TextDocument.PageBands](xref:Avalonia.Controls.Documents.TextModel.TextDocument.PageBands)), it resolves
+resources and inherited formatting through this element and records undo into
+the shared undo manager. Removing a band clears every reference to it.
+
+```csharp
+public Avalonia.Controls.Documents.PageBandCollection PageBands { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-25c274f87c"></span>
+
+### PageHeight Property
+
+Gets or sets the document page height in DIPs.
+Set NaN for automatic height from the attached view.
+
+```csharp
+public double PageHeight { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-86bd8917bb"></span>
+
+### PagePadding Property
+
+Gets or sets the document-level page padding (page margins in document formats).
+Sections inherit it, like [Avalonia.Controls.Documents.FlowDocument.PageWidth](xref:Avalonia.Controls.Documents.FlowDocument.PageWidth) and [Avalonia.Controls.Documents.FlowDocument.PageHeight](xref:Avalonia.Controls.Documents.FlowDocument.PageHeight),
+unless they declare their own.
+
+```csharp
+public Avalonia.Thickness PagePadding { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-385c5486fe"></span>
+
+### PageWidth Property
+
+Gets or sets the document page width in DIPs.
+Set NaN for automatic width from the attached view.
+
+```csharp
+public double PageWidth { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1820f3151c"></span>
+
+### RootKind Property
+
+The kind of the text document's root node: what kind of document this is.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind RootKind { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-36d9623cee"></span>
+
+### TextAlignment Property
+
+Gets or sets the default text alignment for blocks in the document.
+
+```csharp
+public Avalonia.Media.TextAlignment TextAlignment { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f63e9330f5"></span>
+
+### TextDocument Property
+
+Gets the [Avalonia.Controls.Documents.TextModel.TextDocument](xref:Avalonia.Controls.Documents.TextModel.TextDocument) backing store, creating it on
+first read.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.TextDocument TextDocument { get; set; }
+```
+
+#### Remarks
+
+Creation is where the document becomes live: blocks, bands and notes added
+while no store existed materialize into it, and the change notifications are
+wired. Reading the property is idempotent but not free the first time, so a
+caller that only wants to know whether content is already realized reads the
+element tree instead.
+
+</section>
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [BackgroundProperty](#uid-f2272a50a5) | Defines the [Avalonia.Controls.Documents.FlowDocument.Background](xref:Avalonia.Controls.Documents.FlowDocument.Background) property. |
+| [DataContextProperty](../../styledelement.mdx#uid-7eefabb929) | Defines the [Avalonia.StyledElement.DataContext](xref:Avalonia.StyledElement.DataContext) property. Inherited from [StyledElement](../../styledelement.mdx). |
+| [FontFamilyProperty](#uid-63277bd365) | Defines the [Avalonia.Controls.Documents.FlowDocument.FontFamily](xref:Avalonia.Controls.Documents.FlowDocument.FontFamily) property. |
+| [FontSizeProperty](#uid-102ac51748) | Defines the [Avalonia.Controls.Documents.FlowDocument.FontSize](xref:Avalonia.Controls.Documents.FlowDocument.FontSize) property. |
+| [FontStretchProperty](#uid-5ff1720682) | Defines the [Avalonia.Controls.Documents.FlowDocument.FontStretch](xref:Avalonia.Controls.Documents.FlowDocument.FontStretch) property. |
+| [FontStyleProperty](#uid-8121126ae8) | Defines the [Avalonia.Controls.Documents.FlowDocument.FontStyle](xref:Avalonia.Controls.Documents.FlowDocument.FontStyle) property. |
+| [FontWeightProperty](#uid-dea55f4025) | Defines the [Avalonia.Controls.Documents.FlowDocument.FontWeight](xref:Avalonia.Controls.Documents.FlowDocument.FontWeight) property. |
+| [FootnoteNumberFormatProperty](#uid-6bfe997de0) | Defines the [Avalonia.Controls.Documents.FlowDocument.FootnoteNumberFormat](xref:Avalonia.Controls.Documents.FlowDocument.FootnoteNumberFormat) property. |
+| [ForegroundProperty](#uid-d39d85e504) | Defines the [Avalonia.Controls.Documents.FlowDocument.Foreground](xref:Avalonia.Controls.Documents.FlowDocument.Foreground) property. |
+| [NameProperty](../../styledelement.mdx#uid-bcdbb9de56) | Defines the [Avalonia.StyledElement.Name](xref:Avalonia.StyledElement.Name) property. Inherited from [StyledElement](../../styledelement.mdx). |
+| [PageBandDistanceProperty](#uid-cf8e5dada0) | Defines the [Avalonia.Controls.Documents.FlowDocument.PageBandDistance](xref:Avalonia.Controls.Documents.FlowDocument.PageBandDistance) property. NaN means the document declares none and the default distance applies. |
+| [PageHeightProperty](#uid-9b39d6bda5) | Defines the [Avalonia.Controls.Documents.FlowDocument.PageHeight](xref:Avalonia.Controls.Documents.FlowDocument.PageHeight) property. NaN means automatic height from the attached view. |
+| [PagePaddingProperty](#uid-747f0f07cf) | Defines the [Avalonia.Controls.Documents.FlowDocument.PagePadding](xref:Avalonia.Controls.Documents.FlowDocument.PagePadding) property. |
+| [PageWidthProperty](#uid-39f2196301) | Defines the [Avalonia.Controls.Documents.FlowDocument.PageWidth](xref:Avalonia.Controls.Documents.FlowDocument.PageWidth) property. NaN means automatic width from the attached view. |
+| [ParentProperty](../../styledelement.mdx#uid-dc6481a488) | Defines the [Avalonia.StyledElement.Parent](xref:Avalonia.StyledElement.Parent) property. Inherited from [StyledElement](../../styledelement.mdx). |
+| [TemplatedParentProperty](../../styledelement.mdx#uid-a2c7149a6b) | Defines the [Avalonia.StyledElement.TemplatedParent](xref:Avalonia.StyledElement.TemplatedParent) property. Inherited from [StyledElement](../../styledelement.mdx). |
+| [TextAlignmentProperty](#uid-e55d1c01c9) | Defines the [Avalonia.Controls.Documents.FlowDocument.TextAlignment](xref:Avalonia.Controls.Documents.FlowDocument.TextAlignment) property. |
+| [ThemeProperty](../../styledelement.mdx#uid-05852d7b9a) | Defines the [Avalonia.StyledElement.Theme](xref:Avalonia.StyledElement.Theme) property. Inherited from [StyledElement](../../styledelement.mdx). |
+| [TransitionsProperty](../../animation/animatable.mdx#uid-c79f18fac2) | Defines the [Avalonia.Animation.Animatable.Transitions](xref:Avalonia.Animation.Animatable.Transitions) property. Inherited from [Animatable](../../animation/animatable.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f2272a50a5"></span>
+
+### BackgroundProperty Field
+
+Defines the [Avalonia.Controls.Documents.FlowDocument.Background](xref:Avalonia.Controls.Documents.FlowDocument.Background) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Media.IBrush> BackgroundProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-63277bd365"></span>
+
+### FontFamilyProperty Field
+
+Defines the [Avalonia.Controls.Documents.FlowDocument.FontFamily](xref:Avalonia.Controls.Documents.FlowDocument.FontFamily) property.
+
+```csharp
+public Avalonia.AttachedProperty<Avalonia.Media.FontFamily> FontFamilyProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-102ac51748"></span>
+
+### FontSizeProperty Field
+
+Defines the [Avalonia.Controls.Documents.FlowDocument.FontSize](xref:Avalonia.Controls.Documents.FlowDocument.FontSize) property.
+
+```csharp
+public Avalonia.AttachedProperty<double> FontSizeProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5ff1720682"></span>
+
+### FontStretchProperty Field
+
+Defines the [Avalonia.Controls.Documents.FlowDocument.FontStretch](xref:Avalonia.Controls.Documents.FlowDocument.FontStretch) property.
+
+```csharp
+public Avalonia.AttachedProperty<Avalonia.Media.FontStretch> FontStretchProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8121126ae8"></span>
+
+### FontStyleProperty Field
+
+Defines the [Avalonia.Controls.Documents.FlowDocument.FontStyle](xref:Avalonia.Controls.Documents.FlowDocument.FontStyle) property.
+
+```csharp
+public Avalonia.AttachedProperty<Avalonia.Media.FontStyle> FontStyleProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-dea55f4025"></span>
+
+### FontWeightProperty Field
+
+Defines the [Avalonia.Controls.Documents.FlowDocument.FontWeight](xref:Avalonia.Controls.Documents.FlowDocument.FontWeight) property.
+
+```csharp
+public Avalonia.AttachedProperty<Avalonia.Media.FontWeight> FontWeightProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6bfe997de0"></span>
+
+### FootnoteNumberFormatProperty Field
+
+Defines the [Avalonia.Controls.Documents.FlowDocument.FootnoteNumberFormat](xref:Avalonia.Controls.Documents.FlowDocument.FootnoteNumberFormat) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.Documents.FootnoteNumberFormat> FootnoteNumberFormatProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d39d85e504"></span>
+
+### ForegroundProperty Field
+
+Defines the [Avalonia.Controls.Documents.FlowDocument.Foreground](xref:Avalonia.Controls.Documents.FlowDocument.Foreground) property.
+
+```csharp
+public Avalonia.AttachedProperty<Avalonia.Media.IBrush> ForegroundProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-cf8e5dada0"></span>
+
+### PageBandDistanceProperty Field
+
+Defines the [Avalonia.Controls.Documents.FlowDocument.PageBandDistance](xref:Avalonia.Controls.Documents.FlowDocument.PageBandDistance) property.
+NaN means the document declares none and the default distance applies.
+
+```csharp
+public Avalonia.StyledProperty<double> PageBandDistanceProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9b39d6bda5"></span>
+
+### PageHeightProperty Field
+
+Defines the [Avalonia.Controls.Documents.FlowDocument.PageHeight](xref:Avalonia.Controls.Documents.FlowDocument.PageHeight) property.
+NaN means automatic height from the attached view.
+
+```csharp
+public Avalonia.StyledProperty<double> PageHeightProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-747f0f07cf"></span>
+
+### PagePaddingProperty Field
+
+Defines the [Avalonia.Controls.Documents.FlowDocument.PagePadding](xref:Avalonia.Controls.Documents.FlowDocument.PagePadding) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Thickness> PagePaddingProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-39f2196301"></span>
+
+### PageWidthProperty Field
+
+Defines the [Avalonia.Controls.Documents.FlowDocument.PageWidth](xref:Avalonia.Controls.Documents.FlowDocument.PageWidth) property.
+NaN means automatic width from the attached view.
+
+```csharp
+public Avalonia.StyledProperty<double> PageWidthProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e55d1c01c9"></span>
+
+### TextAlignmentProperty Field
+
+Defines the [Avalonia.Controls.Documents.FlowDocument.TextAlignment](xref:Avalonia.Controls.Documents.FlowDocument.TextAlignment) property.
+
+```csharp
+public Avalonia.AttachedProperty<Avalonia.Media.TextAlignment> TextAlignmentProperty
+```
+
+</section>
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [ActualThemeVariantChanged](../../styledelement.mdx#uid-e69ef27e71) | Raised when the theme variant is changed on the element or an ancestor of the element. Inherited from [StyledElement](../../styledelement.mdx). |
+| [AttachedToLogicalTree](../../styledelement.mdx#uid-717aa68e85) | Raised when the styled element is attached to a rooted logical tree. Inherited from [StyledElement](../../styledelement.mdx). |
+| [ChildIndexChanged](#uid-e9c74fd816) | Occurs when the child index of a logical child changes. |
+| [DataContextChanged](../../styledelement.mdx#uid-4b1cc873f8) | Occurs when the [Avalonia.StyledElement.DataContext](xref:Avalonia.StyledElement.DataContext) property changes. Inherited from [StyledElement](../../styledelement.mdx). |
+| [DetachedFromLogicalTree](../../styledelement.mdx#uid-d9f5afa535) | Raised when the styled element is detached from a rooted logical tree. Inherited from [StyledElement](../../styledelement.mdx). |
+| [FootnotesChanged](#uid-d0e801538f) | Raised when the set of notes changes, a note's id or label changes, or the numbering format changes: the notes a page shows and the numbers they show follow from these, so views re-place them. |
+| [Initialized](../../styledelement.mdx#uid-bd6a5e5c0e) | Occurs when the styled element has finished initialization. Inherited from [StyledElement](../../styledelement.mdx). |
+| [PageBandsChanged](#uid-a6e7e3bd38) | Raised when the set of bands changes or a band's role or rule changes: the pages a band claims by rule follow from these, so views re-resolve their sheets. |
+| [PropertyChanged](../../avaloniaobject.mdx#uid-d758e26fae) | Raised when a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value changes on this object. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [ResourcesChanged](../../styledelement.mdx#uid-99a7f47c56) | Occurs when a resource in this styled element or a parent styled element has changed. Inherited from [StyledElement](../../styledelement.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e9c74fd816"></span>
+
+### ChildIndexChanged Event
+
+Occurs when the child index of a logical child changes.
+
+```csharp
+public event EventHandler<Avalonia.LogicalTree.ChildIndexChangedEventArgs> ChildIndexChanged
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d0e801538f"></span>
+
+### FootnotesChanged Event
+
+Raised when the set of notes changes, a note's id or label changes, or the
+numbering format changes: the notes a page shows and the numbers they show
+follow from these, so views re-place them.
+
+```csharp
+public event EventHandler FootnotesChanged
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a6e7e3bd38"></span>
+
+### PageBandsChanged Event
+
+Raised when the set of bands changes or a band's role or rule changes: the pages a
+band claims by rule follow from these, so views re-resolve their sheets.
+
+```csharp
+public event EventHandler PageBandsChanged
+```
+
+</section>
+
+</ApiRefPage>
+

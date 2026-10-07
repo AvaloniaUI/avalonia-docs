@@ -1,0 +1,239 @@
+---
+title: 'PdfDiagnostic'
+hide_title: true
+slug: '/avalonia/controls/documents/serialization/pdf/pdfdiagnostic'
+uid: 'Avalonia.Controls.Documents.Serialization.Pdf.PdfDiagnostic'
+commentId: 'T:Avalonia.Controls.Documents.Serialization.Pdf.PdfDiagnostic'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Documents.Serialization.Pdf'
+assembly: 'Avalonia.Controls.Documents.Serialization.Pdf'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.Serialization.Pdf'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">PdfDiagnostic Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.Serialization.Pdf</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Documents.Serialization.Pdf</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Documents.Serialization.Pdf</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+One note about fidelity lost during PDF export.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct PdfDiagnostic
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> PdfDiagnostic
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;PdfDiagnostic&gt;
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [PdfDiagnostic](#uid-22ad3643e3) | One note about fidelity lost during PDF export. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-22ad3643e3"></span>
+
+### PdfDiagnostic Constructor
+
+One note about fidelity lost during PDF export.
+
+```csharp
+public PdfDiagnostic(Avalonia.Controls.Documents.Serialization.Pdf.PdfDiagnosticKind Kind, string Message)
+```
+
+#### Parameters
+
+`Kind` [Avalonia.Controls.Documents.Serialization.Pdf.PdfDiagnosticKind](xref:Avalonia.Controls.Documents.Serialization.Pdf.PdfDiagnosticKind)
+
+What class of loss this entry describes.
+
+
+`Message` string
+
+A caller-facing description naming the font or content involved.
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Deconstruct](#uid-fd4e7bc62c) | No summary available. |
+| [Equals (2 overloads)](#uid-8720e15412) | No summary available. |
+| [GetHashCode](#uid-0c314bed56) | No summary available. |
+| [ToString](#uid-facebd3bda) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-fd4e7bc62c"></span>
+
+### Deconstruct Method
+
+```csharp
+public void Deconstruct(Avalonia.Controls.Documents.Serialization.Pdf.PdfDiagnosticKind& Kind, string& Message)
+```
+
+#### Parameters
+
+`Kind` [Avalonia.Controls.Documents.Serialization.Pdf.PdfDiagnosticKind](xref:Avalonia.Controls.Documents.Serialization.Pdf.PdfDiagnosticKind)&amp;
+
+
+`Message` string&amp;
+
+
+</section>
+
+<span id="uid-8720e15412"></span>
+
+### Equals overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b439333025"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(Avalonia.Controls.Documents.Serialization.Pdf.PdfDiagnostic other)
+```
+
+##### Parameters
+
+`other` [Avalonia.Controls.Documents.Serialization.Pdf.PdfDiagnostic](xref:Avalonia.Controls.Documents.Serialization.Pdf.PdfDiagnostic)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0cd25febd6"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(object obj)
+```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0c314bed56"></span>
+
+### GetHashCode Method
+
+```csharp
+public int GetHashCode()
+```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-facebd3bda"></span>
+
+### ToString Method
+
+```csharp
+public string ToString()
+```
+
+#### Returns
+
+string
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Kind](#uid-cc8efca14e) | What class of loss this entry describes. |
+| [Message](#uid-08a0982b26) | A caller-facing description naming the font or content involved. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-cc8efca14e"></span>
+
+### Kind Property
+
+What class of loss this entry describes.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Pdf.PdfDiagnosticKind Kind { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-08a0982b26"></span>
+
+### Message Property
+
+A caller-facing description naming the font or content involved.
+
+```csharp
+public string Message { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

@@ -119,6 +119,7 @@ public TableViewColumn()
 | [HeaderTheme](#uid-422f98a345) | Gets or sets the theme to apply to the header. It must target [Avalonia.Controls.TableViewColumnHeader](xref:Avalonia.Controls.TableViewColumnHeader). |
 | [HorizontalContentAlignment](#uid-f6558a5550) | Gets or sets the horizontal alignment of the content within a cell. |
 | [IsInitialized](../styledelement.mdx#uid-59a7cddacb) | Gets a value that indicates whether the element has finished initialization. Inherited from [StyledElement](../styledelement.mdx). |
+| [IsVisible](#uid-de436f58a6) | Gets or sets whether the column is visible. The default is true. |
 | [Item](../avaloniaobject.mdx#uid-c1d1f1bc0f) | Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
 | [Name](../styledelement.mdx#uid-245f4ccff5) | Gets or sets the name of the styled element. Inherited from [StyledElement](../styledelement.mdx). |
 | [Parent](../styledelement.mdx#uid-aad2c5c78d) | Gets the styled element's logical parent. Inherited from [StyledElement](../styledelement.mdx). |
@@ -286,6 +287,20 @@ public Avalonia.Layout.HorizontalAlignment HorizontalContentAlignment { get; set
 
 <section className="apiref-page__member-entry">
 
+<span id="uid-de436f58a6"></span>
+
+### IsVisible Property
+
+Gets or sets whether the column is visible. The default is true.
+
+```csharp
+public bool IsVisible { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-0410018295"></span>
 
 ### TableView Property
@@ -327,6 +342,7 @@ public Avalonia.Controls.GridLength Width { get; set; }
 | [HeaderTemplateProperty](#uid-6b5b85e41e) | Defines the [Avalonia.Controls.TableViewColumn.HeaderTemplate](xref:Avalonia.Controls.TableViewColumn.HeaderTemplate) property. |
 | [HeaderThemeProperty](#uid-c7ced6f71d) | Defines the [Avalonia.Controls.TableViewColumn.HeaderTheme](xref:Avalonia.Controls.TableViewColumn.HeaderTheme) property. |
 | [HorizontalContentAlignmentProperty](#uid-2a55df5d3c) | Defines the [Avalonia.Controls.TableViewColumn.HorizontalContentAlignment](xref:Avalonia.Controls.TableViewColumn.HorizontalContentAlignment) property. |
+| [IsVisibleProperty](#uid-25d0f1bb4e) | Defines the [Avalonia.Controls.TableViewColumn.IsVisible](xref:Avalonia.Controls.TableViewColumn.IsVisible) property. |
 | [NameProperty](../styledelement.mdx#uid-bcdbb9de56) | Defines the [Avalonia.StyledElement.Name](xref:Avalonia.StyledElement.Name) property. Inherited from [StyledElement](../styledelement.mdx). |
 | [ParentProperty](../styledelement.mdx#uid-dc6481a488) | Defines the [Avalonia.StyledElement.Parent](xref:Avalonia.StyledElement.Parent) property. Inherited from [StyledElement](../styledelement.mdx). |
 | [TableViewProperty](#uid-d2f9716072) | Defines the [Avalonia.Controls.TableViewColumn.TableView](xref:Avalonia.Controls.TableViewColumn.TableView) property. |
@@ -471,6 +487,20 @@ Defines the [Avalonia.Controls.TableViewColumn.HorizontalContentAlignment](xref:
 
 ```csharp
 public Avalonia.StyledProperty<Avalonia.Layout.HorizontalAlignment> HorizontalContentAlignmentProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-25d0f1bb4e"></span>
+
+### IsVisibleProperty Field
+
+Defines the [Avalonia.Controls.TableViewColumn.IsVisible](xref:Avalonia.Controls.TableViewColumn.IsVisible) property.
+
+```csharp
+public Avalonia.StyledProperty<bool> IsVisibleProperty
 ```
 
 </section>

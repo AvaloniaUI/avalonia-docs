@@ -1,0 +1,114 @@
+---
+title: 'PdfDiagnosticKind'
+hide_title: true
+slug: '/avalonia/controls/documents/serialization/pdf/pdfdiagnostickind'
+uid: 'Avalonia.Controls.Documents.Serialization.Pdf.PdfDiagnosticKind'
+commentId: 'T:Avalonia.Controls.Documents.Serialization.Pdf.PdfDiagnosticKind'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Documents.Serialization.Pdf'
+assembly: 'Avalonia.Controls.Documents.Serialization.Pdf'
+apiKind: 'Enum'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.Serialization.Pdf'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">PdfDiagnosticKind Enum</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.Serialization.Pdf</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Documents.Serialization.Pdf</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Documents.Serialization.Pdf</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+What an exported PDF loses relative to the document it was produced from. Every entry
+describes output the exporter chose to degrade rather than fail on, so a caller that
+wants to know about it has to ask.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public enum PdfDiagnosticKind
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Enum <span className="apiref-page__relation-separator">-&gt;</span> PdfDiagnosticKind
+</div>
+</div>
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [EncodingExhausted](#uid-24d8720574) | A non-embedded font's document text needs more than the 255 character codes a simple font encoding provides; the characters past that limit are dropped from the page. |
+| [FontFidelity](#uid-40700feabf) | A font is embedded but cannot render identically in a PDF viewer - color glyph data is ignored, or a variable font renders as its default instance. |
+| [FontNotEmbedded](#uid-54eded2e49) | A font program is missing from the file, so viewers substitute a locally available face. Text stays selectable and its metrics are preserved, but the letterforms are not the document's. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-24d8720574"></span>
+
+### EncodingExhausted Field
+
+A non-embedded font's document text needs more than the 255 character codes a simple
+font encoding provides; the characters past that limit are dropped from the page.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Pdf.PdfDiagnosticKind EncodingExhausted
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-40700feabf"></span>
+
+### FontFidelity Field
+
+A font is embedded but cannot render identically in a PDF viewer - color glyph data
+is ignored, or a variable font renders as its default instance.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Pdf.PdfDiagnosticKind FontFidelity
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-54eded2e49"></span>
+
+### FontNotEmbedded Field
+
+A font program is missing from the file, so viewers substitute a locally available
+face. Text stays selectable and its metrics are preserved, but the letterforms are
+not the document's.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Pdf.PdfDiagnosticKind FontNotEmbedded
+```
+
+</section>
+
+</ApiRefPage>
+

@@ -1,0 +1,338 @@
+---
+title: 'PixelHolder'
+hide_title: true
+slug: '/avalonia/controls/documents/imaging/pixelholder'
+uid: 'Avalonia.Controls.Documents.Imaging.PixelHolder'
+commentId: 'T:Avalonia.Controls.Documents.Imaging.PixelHolder'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Documents'
+assembly: 'Avalonia.Controls.Documents'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.Imaging'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">PixelHolder Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.Imaging</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+An owned, immutable decoded-pixel buffer together with the descriptor needed
+to interpret it. Mirrors the shape of [Avalonia.Platform.ILockedFramebuffer](xref:Avalonia.Platform.ILockedFramebuffer)
+([Avalonia.Controls.Documents.Imaging.PixelHolder.Size](xref:Avalonia.Controls.Documents.Imaging.PixelHolder.Size), [Avalonia.Controls.Documents.Imaging.PixelHolder.Stride](xref:Avalonia.Controls.Documents.Imaging.PixelHolder.Stride), [Avalonia.Controls.Documents.Imaging.PixelHolder.Dpi](xref:Avalonia.Controls.Documents.Imaging.PixelHolder.Dpi),
+[Avalonia.Controls.Documents.Imaging.PixelHolder.Format](xref:Avalonia.Controls.Documents.Imaging.PixelHolder.Format)) and additionally records the [Avalonia.Controls.Documents.Imaging.PixelHolder.AlphaFormat](xref:Avalonia.Controls.Documents.Imaging.PixelHolder.AlphaFormat),
+which the framebuffer interface omits.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct PixelHolder
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> PixelHolder
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;PixelHolder&gt;
+</div>
+</div>
+
+## Remarks
+
+The pixels are plain managed memory: immutable (never mutated after
+construction), garbage-collected, and free of platform or UI affinity — so a
+[Avalonia.Controls.Documents.Imaging.PixelHolder](xref:Avalonia.Controls.Documents.Imaging.PixelHolder) is safe to carry into a document snapshot and read
+from a background serializer. Call [Avalonia.Controls.Documents.Imaging.PixelHolder.Lock](xref:Avalonia.Controls.Documents.Imaging.PixelHolder.Lock) for a transient
+[Avalonia.Platform.ILockedFramebuffer](xref:Avalonia.Platform.ILockedFramebuffer) view when handing the pixels to an Avalonia
+bitmap or an image codec; the holder keeps owning the buffer.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [PixelHolder](#uid-94ca1a1268) | Initializes a new [Avalonia.Controls.Documents.Imaging.PixelHolder](xref:Avalonia.Controls.Documents.Imaging.PixelHolder) that takes ownership of `pixels`. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-94ca1a1268"></span>
+
+### PixelHolder Constructor
+
+Initializes a new [Avalonia.Controls.Documents.Imaging.PixelHolder](xref:Avalonia.Controls.Documents.Imaging.PixelHolder) that takes ownership of
+`pixels`.
+
+```csharp
+public PixelHolder(byte[] pixels, Avalonia.PixelSize size, int stride, Avalonia.Platform.PixelFormat format, Avalonia.Platform.AlphaFormat alphaFormat, Avalonia.Vector dpi)
+```
+
+#### Parameters
+
+`pixels` byte[]
+
+The decoded pixel bytes, row-major. Must not be mutated after this call.
+
+
+`size` [Avalonia.PixelSize](xref:Avalonia.PixelSize)
+
+The pixel dimensions.
+
+
+`stride` int
+
+The number of bytes per pixel row.
+
+
+`format` [Avalonia.Platform.PixelFormat](xref:Avalonia.Platform.PixelFormat)
+
+The pixel format describing the byte layout.
+
+
+`alphaFormat` [Avalonia.Platform.AlphaFormat](xref:Avalonia.Platform.AlphaFormat)
+
+Whether the alpha channel is premultiplied, straight, or absent.
+
+
+`dpi` [Avalonia.Vector](xref:Avalonia.Vector)
+
+The intended resolution, in dots per inch.
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Equals (2 overloads)](#uid-d52455c755) | Determines whether this holder and `other` wrap the same pixel buffer with the same descriptor. Buffer identity is by reference. |
+| [GetHashCode](#uid-fc979317ab) | No summary available. |
+| [Lock](#uid-e7d616c5ba) | Pins the pixel buffer and returns a transient [Avalonia.Platform.ILockedFramebuffer](xref:Avalonia.Platform.ILockedFramebuffer) view over it for interop with Avalonia bitmaps or an image codec. Dispose the returned framebuffer to unpin; the pixels remain owned by this holder. |
+
+<span id="uid-d52455c755"></span>
+
+### Equals overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ea45432898"></span>
+
+#### Equals Method
+
+Determines whether this holder and `other` wrap the same
+pixel buffer with the same descriptor. Buffer identity is by reference.
+
+```csharp
+public bool Equals(Avalonia.Controls.Documents.Imaging.PixelHolder other)
+```
+
+##### Parameters
+
+`other` [Avalonia.Controls.Documents.Imaging.PixelHolder](xref:Avalonia.Controls.Documents.Imaging.PixelHolder)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-169e877665"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(object obj)
+```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-fc979317ab"></span>
+
+### GetHashCode Method
+
+```csharp
+public int GetHashCode()
+```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e7d616c5ba"></span>
+
+### Lock Method
+
+Pins the pixel buffer and returns a transient [Avalonia.Platform.ILockedFramebuffer](xref:Avalonia.Platform.ILockedFramebuffer)
+view over it for interop with Avalonia bitmaps or an image codec. Dispose the
+returned framebuffer to unpin; the pixels remain owned by this holder.
+
+```csharp
+public Avalonia.Platform.ILockedFramebuffer Lock()
+```
+
+#### Returns
+
+[Avalonia.Platform.ILockedFramebuffer](xref:Avalonia.Platform.ILockedFramebuffer)
+
+
+#### Exceptions
+
+- [The holder is empty.](xref:System.InvalidOperationException)
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [AlphaFormat](#uid-b4779a88b7) | Whether the alpha channel is premultiplied, straight, or absent. |
+| [Dpi](#uid-38677e6352) | The intended resolution, in dots per inch. |
+| [Format](#uid-68f3193c7a) | The pixel format describing the byte layout. |
+| [IsEmpty](#uid-3168db3ed1) | when this holder carries no pixels. |
+| [Pixels](#uid-67d1c08038) | The decoded pixel bytes, row-major with [Avalonia.Controls.Documents.Imaging.PixelHolder.Stride](xref:Avalonia.Controls.Documents.Imaging.PixelHolder.Stride) bytes per row. |
+| [Size](#uid-b49c447a64) | The pixel dimensions. |
+| [Stride](#uid-ad9518700a) | The number of bytes per pixel row. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b4779a88b7"></span>
+
+### AlphaFormat Property
+
+Whether the alpha channel is premultiplied, straight, or absent.
+
+```csharp
+public Avalonia.Platform.AlphaFormat AlphaFormat { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-38677e6352"></span>
+
+### Dpi Property
+
+The intended resolution, in dots per inch.
+
+```csharp
+public Avalonia.Vector Dpi { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-68f3193c7a"></span>
+
+### Format Property
+
+The pixel format describing the byte layout.
+
+```csharp
+public Avalonia.Platform.PixelFormat Format { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3168db3ed1"></span>
+
+### IsEmpty Property
+
+when this holder carries no pixels.
+
+```csharp
+public bool IsEmpty { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-67d1c08038"></span>
+
+### Pixels Property
+
+The decoded pixel bytes, row-major with [Avalonia.Controls.Documents.Imaging.PixelHolder.Stride](xref:Avalonia.Controls.Documents.Imaging.PixelHolder.Stride) bytes per row.
+
+```csharp
+public ReadOnlyMemory<byte> Pixels { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b49c447a64"></span>
+
+### Size Property
+
+The pixel dimensions.
+
+```csharp
+public Avalonia.PixelSize Size { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ad9518700a"></span>
+
+### Stride Property
+
+The number of bytes per pixel row.
+
+```csharp
+public int Stride { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

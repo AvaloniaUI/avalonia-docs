@@ -1,0 +1,259 @@
+---
+title: 'IUndoManager'
+hide_title: true
+slug: '/avalonia/controls/documents/undo/iundomanager'
+uid: 'Avalonia.Controls.Documents.Undo.IUndoManager'
+commentId: 'T:Avalonia.Controls.Documents.Undo.IUndoManager'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Documents'
+assembly: 'Avalonia.Controls.Documents'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.Undo'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IUndoManager Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.Undo</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Records and replays document edits.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface IUndoManager
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IDisposable
+</div>
+</div>
+
+## Remarks
+
+[Avalonia.Controls.Documents.Undo.UndoManager](xref:Avalonia.Controls.Documents.Undo.UndoManager) is the only implementation, and the one a document creates for
+itself. Prefer that type where you can name it: an abstraction with a single
+implementation buys nothing, and [Avalonia.Controls.Documents.Undo.IUndoManager.Record(Avalonia.Controls.Documents.Undo.IUndoUnit)](xref:Avalonia.Controls.Documents.Undo.IUndoManager.Record%28Avalonia.Controls.Documents.Undo.IUndoUnit%29) in particular cannot be satisfied
+from outside this assembly.
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [BeginUndoUnit](#uid-e263f4ebab) | No summary available. |
+| [Clear](#uid-d34df8c5ce) | Discards the whole history. |
+| [Record](#uid-63154d596b) | Records a unit directly onto the undo stack. |
+| [Redo](#uid-48ee1222d4) | Redoes the most recently undone unit and returns it. |
+| [Undo](#uid-6871da987f) | Undoes the most recent unit and returns it. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e263f4ebab"></span>
+
+### BeginUndoUnit Method
+
+```csharp
+public Avalonia.Controls.Documents.Undo.IUndoScope BeginUndoUnit(string description, Nullable<Avalonia.Controls.Documents.Undo.SelectionSnapshot> selectionBefore)
+```
+
+#### Parameters
+
+`description` string
+
+
+`selectionBefore` Nullable&lt;[Avalonia.Controls.Documents.Undo.SelectionSnapshot](xref:Avalonia.Controls.Documents.Undo.SelectionSnapshot)&gt;
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.Undo.IUndoScope](xref:Avalonia.Controls.Documents.Undo.IUndoScope)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d34df8c5ce"></span>
+
+### Clear Method
+
+Discards the whole history.
+
+```csharp
+public void Clear()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-63154d596b"></span>
+
+### Record Method
+
+Records a unit directly onto the undo stack.
+
+```csharp
+public void Record(Avalonia.Controls.Documents.Undo.IUndoUnit unit)
+```
+
+#### Parameters
+
+`unit` [Avalonia.Controls.Documents.Undo.IUndoUnit](xref:Avalonia.Controls.Documents.Undo.IUndoUnit)
+
+The unit to record. It has to satisfy an internal contract, so a unit built outside
+this assembly is rejected. Group edits with [Avalonia.Controls.Documents.Undo.IUndoManager.BeginUndoUnit(string,Nullable&#123;Avalonia.Controls.Documents.Undo.SelectionSnapshot&#125;)](xref:Avalonia.Controls.Documents.Undo.IUndoManager.BeginUndoUnit%28System.String%2CSystem.Nullable%7BAvalonia.Controls.Documents.Undo.SelectionSnapshot%7D%29) instead.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-48ee1222d4"></span>
+
+### Redo Method
+
+Redoes the most recently undone unit and returns it.
+
+```csharp
+public Avalonia.Controls.Documents.Undo.IUndoUnit Redo()
+```
+
+#### Returns
+
+[Avalonia.Controls.Documents.Undo.IUndoUnit](xref:Avalonia.Controls.Documents.Undo.IUndoUnit)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6871da987f"></span>
+
+### Undo Method
+
+Undoes the most recent unit and returns it.
+
+```csharp
+public Avalonia.Controls.Documents.Undo.IUndoUnit Undo()
+```
+
+#### Returns
+
+[Avalonia.Controls.Documents.Undo.IUndoUnit](xref:Avalonia.Controls.Documents.Undo.IUndoUnit)
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [CanRedo](#uid-6a241b58f9) | Gets whether there is anything to redo. |
+| [CanUndo](#uid-959ad6a95e) | Gets whether there is anything to undo. |
+| [IsEnabled](#uid-56693517b4) | Gets or sets whether edits are recorded. |
+| [UndoLimit](#uid-eceda7c30d) | Gets or sets how many units the history keeps. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6a241b58f9"></span>
+
+### CanRedo Property
+
+Gets whether there is anything to redo.
+
+```csharp
+public bool CanRedo { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-959ad6a95e"></span>
+
+### CanUndo Property
+
+Gets whether there is anything to undo.
+
+```csharp
+public bool CanUndo { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-56693517b4"></span>
+
+### IsEnabled Property
+
+Gets or sets whether edits are recorded.
+
+```csharp
+public bool IsEnabled { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-eceda7c30d"></span>
+
+### UndoLimit Property
+
+Gets or sets how many units the history keeps.
+
+```csharp
+public int UndoLimit { get; set; }
+```
+
+</section>
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [StateChanged](#uid-7633b26352) | Raised when the ability to undo or redo changes. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7633b26352"></span>
+
+### StateChanged Event
+
+Raised when the ability to undo or redo changes.
+
+```csharp
+public event EventHandler StateChanged
+```
+
+</section>
+
+</ApiRefPage>
+

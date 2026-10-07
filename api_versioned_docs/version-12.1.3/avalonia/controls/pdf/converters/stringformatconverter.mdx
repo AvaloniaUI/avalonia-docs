@@ -1,0 +1,139 @@
+---
+title: 'StringFormatConverter'
+hide_title: true
+slug: '/avalonia/controls/pdf/converters/stringformatconverter'
+uid: 'Avalonia.Controls.Pdf.Converters.StringFormatConverter'
+commentId: 'T:Avalonia.Controls.Pdf.Converters.StringFormatConverter'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.PdfViewer'
+assembly: 'Avalonia.Controls.PdfViewer'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Pdf.Converters'
+tfms:
+  - 'net10.0-ios26.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">StringFormatConverter Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Pdf.Converters</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.PdfViewer</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.PdfViewer</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Formats the first value (a [string.Format(IFormatProvider,string,object\[\])](xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29)
+pattern from [Avalonia.Controls.PdfViewerStrings](xref:Avalonia.Controls.PdfViewerStrings)) with the remaining values, in the binding's
+culture. Lets the template compose "of 5" from a translatable pattern rather than from
+fragments whose word order is fixed.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class StringFormatConverter
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> StringFormatConverter
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="../../../data/converters/imultivalueconverter">IMultiValueConverter</a>
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [StringFormatConverter](#uid-b09401a9e1) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b09401a9e1"></span>
+
+### StringFormatConverter Constructor
+
+```csharp
+public StringFormatConverter()
+```
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Convert](#uid-254f05b3a7) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-254f05b3a7"></span>
+
+### Convert Method
+
+```csharp
+public object Convert(System.Collections.Generic.IList<object> values, Type targetType, object parameter, System.Globalization.CultureInfo culture)
+```
+
+#### Parameters
+
+`values` System.Collections.Generic.IList&lt;object&gt;
+
+
+`targetType` Type
+
+
+`parameter` object
+
+
+`culture` System.Globalization.CultureInfo
+
+
+#### Returns
+
+object
+
+
+</section>
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [Instance](#uid-d74960169a) | The shared instance. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d74960169a"></span>
+
+### Instance Field
+
+The shared instance.
+
+```csharp
+public Avalonia.Controls.Pdf.Converters.StringFormatConverter Instance
+```
+
+</section>
+
+</ApiRefPage>
+

@@ -1,0 +1,164 @@
+---
+title: 'PageRange'
+hide_title: true
+slug: '/avalonia/controls/pdf/services/pagerange'
+uid: 'Avalonia.Controls.Pdf.Services.PageRange'
+commentId: 'T:Avalonia.Controls.Pdf.Services.PageRange'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.PdfViewer'
+assembly: 'Avalonia.Controls.PdfViewer'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Pdf.Services'
+tfms:
+  - 'net10.0-ios26.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">PageRange Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Pdf.Services</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.PdfViewer</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.PdfViewer</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Represents a range of pages.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class PageRange
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> PageRange
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [PageRange](#uid-512b10aa48) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-512b10aa48"></span>
+
+### PageRange Constructor
+
+```csharp
+public PageRange(int startPage, int endPage)
+```
+
+#### Parameters
+
+`startPage` int
+
+
+`endPage` int
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Single](#uid-d01d547456) | Creates a range for a single page. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d01d547456"></span>
+
+### Single Method
+
+Creates a range for a single page.
+
+```csharp
+public Avalonia.Controls.Pdf.Services.PageRange Single(int page)
+```
+
+#### Parameters
+
+`page` int
+
+
+#### Returns
+
+[Avalonia.Controls.Pdf.Services.PageRange](xref:Avalonia.Controls.Pdf.Services.PageRange)
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [All](#uid-4188998895) | Creates a range for all pages. |
+| [EndPage](#uid-ee2d7eeac9) | Ending page (1-based, inclusive). |
+| [StartPage](#uid-cb358d21c8) | Starting page (1-based). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4188998895"></span>
+
+### All Property
+
+Creates a range for all pages.
+
+```csharp
+public Avalonia.Controls.Pdf.Services.PageRange All { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ee2d7eeac9"></span>
+
+### EndPage Property
+
+Ending page (1-based, inclusive).
+
+```csharp
+public int EndPage { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-cb358d21c8"></span>
+
+### StartPage Property
+
+Starting page (1-based).
+
+```csharp
+public int StartPage { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

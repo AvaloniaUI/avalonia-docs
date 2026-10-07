@@ -103,7 +103,7 @@ AppBuilder.Configure<App>()
     .StartWithClassicDesktopLifetime(args);
 ```
 
-`UsePlatformDetect()` chooses the correct backend automatically. You can also select a specific backend for testing or embedded scenarios, or to opt into the experimental [Wayland backend](/docs/platform-specific-guides/linux#wayland) on Linux.
+`UsePlatformDetect()` chooses the correct backend automatically. You can also select a specific backend for testing or embedded scenarios, or opt into the early-version [Wayland backend](/docs/platform-specific-guides/linux#wayland) on Linux.
 
 ## The property system
 

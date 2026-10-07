@@ -1,12 +1,17 @@
 ---
 id: mcp
 title: Parcel MCP
+description: Set up the Parcel MCP server so AI assistants can create Parcel configurations, set up code signing, and package your Avalonia app.
 sidebar_label: Parcel MCP
 doc-type: how-to
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+
+:::note
+Parcel MCP is only available with [Avalonia Plus](https://avaloniaui.net/pricing) or higher.
+:::
 
 ## What is Parcel MCP?
 
@@ -19,11 +24,11 @@ For a general introduction to MCP, see [AI Tools](/tools/ai-tools/).
 Before you configure the MCP server, make sure that you have these items:
 
 1. **Parcel .NET tool installed.** Follow the [Setup guide](/tools/parcel/setup).
-2. **Valid Avalonia Plus license key.** You can get one from the [Avalonia portal](https://portal.avaloniaui.net/).
+2. **Valid Avalonia Plus license key.** You can get yours from the [Avalonia portal](https://portal.avaloniaui.net/).
 
 ### Setting your license key
 
-The MCP server reads the license from the `AVALONIA_TOOLS_LICENSE_KEY` environment variable. Get your license key from the [Avalonia Portal](https://portal.avaloniaui.net/). Parcel MCP is a paid feature and is not included with the Community edition.
+The MCP server reads the license from the `AVALONIA_TOOLS_LICENSE_KEY` environment variable.
 
 Set the key in your shell profile so it persists across sessions:
 
@@ -79,10 +84,6 @@ If you start your editor from a desktop shortcut or application menu, it might n
 See the editor-specific setup instructions below for where to place this block.
 :::
 
-:::note
-Parcel MCP is only available with a full [Avalonia Plus](https://avaloniaui.net/pricing) license.
-:::
-
 ## Setting up the MCP server
 
 The Parcel MCP server runs as a local process. Its command is `parcel mcp`. You do not need to run this command manually. After configuration, your editor starts the server automatically.
@@ -94,7 +95,7 @@ Choose your editor below:
 
 **Option A: Command palette**
 
-1. Open the command palette (`Ctrl+Shift+P` / `Cmd+Shift+P`).
+1. Open the command palette (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>, or  <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>).
 2. Run **MCP: Add Server**.
 3. Select **stdio** as the server type.
 4. Enter `parcel mcp` as the command.
@@ -147,7 +148,7 @@ JetBrains Rider supports MCP servers through the AI Assistant plugin and the Git
 
 **Option A: Settings UI**
 
-1. Open **Settings** > **Tools** > **AI Assistant** > **MCP Servers**.
+1. Open **Settings** → **Tools** → **AI Assistant** → **Model Context Protocol (MCP)**.
 2. Click **Add** and select **stdio** as the transport type.
 3. Set the command to `parcel` with argument `mcp`.
 4. Set the server name to `parcel`.
@@ -202,7 +203,7 @@ claude mcp list
 </TabItem>
 <TabItem value="claude-desktop" label="Claude Desktop">
 
-1. Open **Settings** > **Developer** and click **Edit Config**.
+1. Open **Settings → Developer** and click **Edit Config**.
 2. Add the Parcel MCP server to `claude_desktop_config.json`:
 
 ```json
@@ -282,9 +283,9 @@ Once the MCP server is configured, your AI assistant can help with:
 
 ### Code signing setup
 
-- **Windows Azure Artifact Signing** - Configure certificates and signing parameters
-- **macOS Code Signing** - Set up P12 certificates and provisioning profiles
-- **macOS Notarization** - Configure Apple ID and app-specific passwords
+- **Windows Azure artifact signing** - Configure certificates and signing parameters
+- **macOS code signing** - Set up P12 certificates and provisioning profiles
+- **macOS notarization** - Configure Apple ID and app-specific passwords
 
 ### Building and packaging
 

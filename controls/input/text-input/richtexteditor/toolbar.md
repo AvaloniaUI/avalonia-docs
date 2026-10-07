@@ -104,7 +104,7 @@ The built-in `EditorToolbar`, populated via `RichTextEditor.Toolbar` in the edit
 
 A second `EditorToolbar`, built from the same tool infrastructure, is hosted by the table overlay's actions flyout, appearing as the "..." button on a hovered cell and on row and column strip selections. It carries table structure actions only.
 
-Most tools are context-sensitive, meaning they disappear automatically when out of context, e.g., list tools are hidden outside lists, table tools are hidden outside tables. This is done by declaring the [`ToolbarTargetAreas`](#documenttargetareas) of each tool or group.
+Most tools are context-sensitive, meaning they disappear automatically when out of context, e.g., list tools are hidden outside lists, table tools are hidden outside tables. This is done by declaring the [`ToolbarTargetAreas`](#toolbar-target-areas) of each tool or group.
 
 ## Replacing the default toolbar
 
@@ -272,7 +272,7 @@ List marker styles are reached through `ListToggleTool`, which the default selec
 
 | Property | Type | Description |
 |---|---|---|
-| `TargetAreas` | `ToolbarTargetAreas` | Contexts in which this tool should appear. Defaults to `CaretAreas`. See [ToolbarTargetAreas](#documenttargetareas). |
+| `TargetAreas` | `ToolbarTargetAreas` | Contexts in which this tool should appear. Defaults to `CaretAreas`. See [ToolbarTargetAreas](#toolbar-target-areas). |
 | `ActiveTargetAreas` | `ToolbarTargetAreas` | Read-only. The areas the caret is currently in, pushed here by the host toolbar as the selection moves. |
 | `IsVisibleForTargetArea` | `bool` | Read-only. Whether `TargetAreas` matches `ActiveTargetAreas`. |
 | `OverflowMenuItem` | `MenuItem?` | Menu item shown when this tool is collapsed into the overflow menu. `null` means the tool cannot be collapsed. |

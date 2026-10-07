@@ -42,7 +42,7 @@ To preview an asset, double-click it or select **Preview** from the context menu
 For image assets, the preview also shows the bitmap format and decoded pixel size.
 
 :::note
-Any asset larger than 100mb cannot be previewed, and currently it's not configurable.
+Any asset larger than 100 MB cannot be previewed.
 :::
 
 ![Image Asset preview example](/img/tools/dev-tools/assets-image.png)

@@ -1,0 +1,524 @@
+---
+title: 'TextSelection'
+hide_title: true
+slug: '/avalonia/controls/textselection'
+uid: 'Avalonia.Controls.TextSelection'
+commentId: 'T:Avalonia.Controls.TextSelection'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Documents'
+assembly: 'Avalonia.Controls.Documents'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">TextSelection Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Represents a text selection within a document.
+Manages selection state with anchor and moving positions for intuitive selection extension.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class TextSelection
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="documents/textmodel/textrange">TextRange</a> <span className="apiref-page__relation-separator">-&gt;</span> TextSelection
+</div>
+</div>
+
+## Remarks
+
+Inherits from [Avalonia.Controls.Documents.TextModel.TextRange](xref:Avalonia.Controls.Documents.TextModel.TextRange) to share formatting and content operations.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [TextSelection](#uid-48922076a0) | Initializes a new instance of the [Avalonia.Controls.TextSelection](xref:Avalonia.Controls.TextSelection) class. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-48922076a0"></span>
+
+### TextSelection Constructor
+
+Initializes a new instance of the [Avalonia.Controls.TextSelection](xref:Avalonia.Controls.TextSelection) class.
+
+```csharp
+public TextSelection(Avalonia.Controls.Documents.TextModel.TextDocument document)
+```
+
+#### Parameters
+
+`document` [Avalonia.Controls.Documents.TextModel.TextDocument](xref:Avalonia.Controls.Documents.TextModel.TextDocument)
+
+The text document containing the selection.
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [ApplyPropertyValue](#uid-17ce04d15c) | No summary available. |
+| [ClearAllProperties](documents/textmodel/textrange.mdx#uid-1d087e30fc) | Clears all inline formatting properties from the range. Content is preserved; only formatting is removed. Produces a single [Avalonia.Controls.Documents.Undo.BlockSnapshotUndoUnit](xref:Avalonia.Controls.Documents.Undo.BlockSnapshotUndoUnit) for atomic undo/redo. Inherited from [TextRange](documents/textmodel/textrange.mdx). |
+| [ClearPropertyValue](documents/textmodel/textrange.mdx#uid-ecf1a6ea8a) | Inherited from [TextRange](documents/textmodel/textrange.mdx). |
+| [ClearSelection](#uid-761fa71ea2) | Clears the selection, placing the caret at the current caret position. |
+| [ClearSpringloadProperties](#uid-f769cc1d42) | Clears all springloaded properties. |
+| [ClearSpringloadProperty](#uid-c84ee1d189) | Clears a springloaded property. |
+| [Contains (2 overloads)](documents/textmodel/textrange.mdx#uid-f71713cd49) | Checks if the range contains the specified pointer. Inherited from [TextRange](documents/textmodel/textrange.mdx). |
+| [CreateSnapshot](documents/textmodel/textrange.mdx#uid-462c656203) | Creates an immutable, thread-safe snapshot of this range's document structure. The caller chooses a serializer to convert the snapshot to a specific format. Inherited from [TextRange](documents/textmodel/textrange.mdx). |
+| [Delete](#uid-f17bc53d58) | Deletes the selected content, then collapses the selection to the deletion point and resets direction. |
+| [DeleteCurrentBlock (2 overloads)](documents/textmodel/textrange.mdx#uid-a2fe640aaf) | Deletes the block this range starts in, and collapses the range onto the deletion point. Inherited from [TextRange](documents/textmodel/textrange.mdx). |
+| [DeleteText](documents/textmodel/textrange.mdx#uid-4266eab3ed) | Deletes the content of this range. Removes whatever the range covers — characters, inline runs, paragraphs, list items, tables, sections — depending on which nodes the range fully encloses. When the deletion crosses block boundaries and both surviving boundary blocks are paragraphs, `mergeBlocks` controls whether the surviving fragments fuse into one paragraph. Manages transaction automatically. Inherited from [TextRange](documents/textmodel/textrange.mdx). |
+| [DeleteTextAt](documents/textmodel/textrange.mdx#uid-9beff62495) | Deletes text at the specified range relative to this range. Manages transaction automatically. Inherited from [TextRange](documents/textmodel/textrange.mdx). |
+| [ExtendTo](#uid-189ba2e59b) | Extends the selection to a new position while keeping the anchor fixed. |
+| [GetContainingBlock](#uid-e1f67b2c4d) | No summary available. |
+| [GetPropertyValue](documents/textmodel/textrange.mdx#uid-71aaf13562) | Inherited from [TextRange](documents/textmodel/textrange.mdx). |
+| [GetSpringloadProperties](#uid-b3c7991220) | Gets all springloaded properties. |
+| [GetText](documents/textmodel/textrange.mdx#uid-c626a57a24) | Returns the text content covered by this range. Inherited from [TextRange](documents/textmodel/textrange.mdx). |
+| [InsertFootnote](documents/textmodel/textrange.mdx#uid-17dcc48a9d) | Replaces the range content with a footnote: the anchor (its number as ordinary text) lands at the range position, splitting a run when it sits mid-run, and the note body is created in the document's trailing footnote container with a fresh id - selection delete, anchor, body, and the anchor renumbering are one undo unit. Manages transaction automatically. Inherited from [TextRange](documents/textmodel/textrange.mdx). |
+| [InsertImage](documents/textmodel/textrange.mdx#uid-582fca47b6) | Inherited from [TextRange](documents/textmodel/textrange.mdx). |
+| [InsertPageNumberField](documents/textmodel/textrange.mdx#uid-e42dca56bf) | Replaces the range content with a page-number field of `kind`: the field lands at the range position, splitting a run when it sits mid-run, and shows its cached result until a page layout resolves it (a band on a sheet renders the sheet's number) - selection delete and insertion are one undo unit. Manages transaction automatically. Inherited from [TextRange](documents/textmodel/textrange.mdx). |
+| [InsertSnapshot](#uid-92247c4d26) | Inserts a document snapshot over the selection, then collapses the selection to the end of the inserted content and resets direction. |
+| [InsertTextAt](documents/textmodel/textrange.mdx#uid-6571a17b59) | Inserts text at the specified offset relative to the range start. Manages transaction automatically. Inherited from [TextRange](documents/textmodel/textrange.mdx). |
+| [Load](documents/textmodel/textrange.mdx#uid-1caf2c195a) | Replaces this range with the content of a stream. Inherited from [TextRange](documents/textmodel/textrange.mdx). |
+| [MoveTo](#uid-0c8ed74160) | Moves the caret to the specified position. |
+| [Overlaps](documents/textmodel/textrange.mdx#uid-97e89eec06) | Checks if this range overlaps with another range. Inherited from [TextRange](documents/textmodel/textrange.mdx). |
+| [ReplaceText (2 overloads)](documents/textmodel/textrange.mdx#uid-860443a3a7) | Inherited from [TextRange](documents/textmodel/textrange.mdx). |
+| [ReplaceTextAt](documents/textmodel/textrange.mdx#uid-a1020d16a5) | Replaces text at the specified range relative to this range. Manages transaction automatically. Inherited from [TextRange](documents/textmodel/textrange.mdx). |
+| [Save](documents/textmodel/textrange.mdx#uid-0ebfb1caa1) | Writes this range to a stream. Inherited from [TextRange](documents/textmodel/textrange.mdx). |
+| [Select](#uid-6e90cbfdbc) | Selects a range of text between two positions. |
+| [SelectAll](#uid-c1f7513a3b) | Selects all content in the document, from [Avalonia.Controls.Documents.TextModel.TextDocument.ContentStart](xref:Avalonia.Controls.Documents.TextModel.TextDocument.ContentStart) to [Avalonia.Controls.Documents.TextModel.TextDocument.ContentEnd](xref:Avalonia.Controls.Documents.TextModel.TextDocument.ContentEnd). `ContentEnd` anchors to the document's final block, so a trailing empty paragraph is part of the selection (and survives copy). |
+| [SetImageAltText](documents/textmodel/textrange.mdx#uid-2113b9397b) | Sets the alternative text of an existing [Avalonia.Controls.Documents.RichImage](xref:Avalonia.Controls.Documents.RichImage) in a single undoable change. Inherited from [TextRange](documents/textmodel/textrange.mdx). |
+| [SetImageSize](documents/textmodel/textrange.mdx#uid-15eda4245a) | Sets the display size of an existing [Avalonia.Controls.Documents.RichImage](xref:Avalonia.Controls.Documents.RichImage) in a single undoable change. Pass [double.NaN](xref:System.Double.NaN) for a dimension to use the image's intrinsic pixel size. Inherited from [TextRange](documents/textmodel/textrange.mdx). |
+| [SetSpringloadProperty](#uid-a6bfd06000) | No summary available. |
+| [TogglePropertyValue](#uid-98b69ad8cc) | No summary available. |
+| [ToString](documents/textmodel/textrange.mdx#uid-2b81309a1f) | Inherited from [TextRange](documents/textmodel/textrange.mdx). |
+| [TryGetPropertyValue](documents/textmodel/textrange.mdx#uid-8a1f50a579) | Inherited from [TextRange](documents/textmodel/textrange.mdx). |
+| [TryGetSpringloadProperty](#uid-892eea8f22) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-17ce04d15c"></span>
+
+### ApplyPropertyValue Method
+
+```csharp
+public void ApplyPropertyValue<T>(Avalonia.StyledProperty<T> property, T value)
+```
+
+#### Parameters
+
+`property` Avalonia.StyledProperty&lt;T&gt;
+
+
+`value` T
+
+
+#### Type Parameters
+
+`T`
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-761fa71ea2"></span>
+
+### ClearSelection Method
+
+Clears the selection, placing the caret at the current caret position.
+
+```csharp
+public void ClearSelection()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f769cc1d42"></span>
+
+### ClearSpringloadProperties Method
+
+Clears all springloaded properties.
+
+```csharp
+public void ClearSpringloadProperties()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c84ee1d189"></span>
+
+### ClearSpringloadProperty Method
+
+Clears a springloaded property.
+
+```csharp
+public void ClearSpringloadProperty(Avalonia.AvaloniaProperty property)
+```
+
+#### Parameters
+
+`property` [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty)
+
+The property to clear.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f17bc53d58"></span>
+
+### Delete Method
+
+Deletes the selected content, then collapses the selection to the
+deletion point and resets direction.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.TextPointer Delete()
+```
+
+#### Returns
+
+[Avalonia.Controls.Documents.TextModel.TextPointer](xref:Avalonia.Controls.Documents.TextModel.TextPointer)
+
+The deletion-point pointer returned by the base operation.
+
+
+#### Remarks
+
+The base [Avalonia.Controls.Documents.TextModel.TextRange.Delete](xref:Avalonia.Controls.Documents.TextModel.TextRange.Delete) returns the deletion point but
+does not reset `_isForwardSelection` or re-anchor the selection, so
+cut used to resolve the caret to the wrong endpoint. Re-selecting the
+returned pointer fixes every delete/cut entry point.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-189ba2e59b"></span>
+
+### ExtendTo Method
+
+Extends the selection to a new position while keeping the anchor fixed.
+
+```csharp
+public void ExtendTo(Avalonia.Controls.Documents.TextModel.TextPointer position)
+```
+
+#### Parameters
+
+`position` [Avalonia.Controls.Documents.TextModel.TextPointer](xref:Avalonia.Controls.Documents.TextModel.TextPointer)
+
+The new moving position.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e1f67b2c4d"></span>
+
+### GetContainingBlock Method
+
+```csharp
+public Avalonia.Controls.Documents.Block GetContainingBlock()
+```
+
+#### Returns
+
+[Avalonia.Controls.Documents.Block](xref:Avalonia.Controls.Documents.Block)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b3c7991220"></span>
+
+### GetSpringloadProperties Method
+
+Gets all springloaded properties.
+
+```csharp
+public System.Collections.Generic.IReadOnlyDictionary<Avalonia.AvaloniaProperty, object> GetSpringloadProperties()
+```
+
+#### Returns
+
+System.Collections.Generic.IReadOnlyDictionary&lt;[Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty), object&gt;
+
+A read-only view of springloaded properties.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-92247c4d26"></span>
+
+### InsertSnapshot Method
+
+Inserts a document snapshot over the selection, then collapses the
+selection to the end of the inserted content and resets direction.
+
+```csharp
+public void InsertSnapshot(Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot snapshot)
+```
+
+#### Parameters
+
+`snapshot` [Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot)
+
+The snapshot whose tree is grafted into the selection.
+
+
+#### Remarks
+
+The base [Avalonia.Controls.Documents.TextModel.TextRange.InsertSnapshot(Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot)](xref:Avalonia.Controls.Documents.TextModel.TextRange.InsertSnapshot%28Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot%29) leaves the range spanning
+the grafted content and never touches selection direction, so paste used
+to leave a non-collapsed selection whose caret sat one line past the
+content. Collapsing here re-anchors the caret the same way keyboard edits
+do via [Avalonia.Controls.TextSelection.MoveTo(Avalonia.Controls.Documents.TextModel.TextPointer,bool)](xref:Avalonia.Controls.TextSelection.MoveTo%28Avalonia.Controls.Documents.TextModel.TextPointer%2CSystem.Boolean%29), fixing every paste entry point (toolbar
+actions and keyboard).
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0c8ed74160"></span>
+
+### MoveTo Method
+
+Moves the caret to the specified position.
+
+```csharp
+public void MoveTo(Avalonia.Controls.Documents.TextModel.TextPointer position, bool extendSelection)
+```
+
+#### Parameters
+
+`position` [Avalonia.Controls.Documents.TextModel.TextPointer](xref:Avalonia.Controls.Documents.TextModel.TextPointer)
+
+The new caret position.
+
+
+`extendSelection` bool
+
+If true, extends selection from anchor to the new position.
+If false, clears selection and moves both anchor and caret.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6e90cbfdbc"></span>
+
+### Select Method
+
+Selects a range of text between two positions.
+
+```csharp
+public void Select(Avalonia.Controls.Documents.TextModel.TextPointer anchor, Avalonia.Controls.Documents.TextModel.TextPointer moving)
+```
+
+#### Parameters
+
+`anchor` [Avalonia.Controls.Documents.TextModel.TextPointer](xref:Avalonia.Controls.Documents.TextModel.TextPointer)
+
+The anchor position where the selection starts.
+
+
+`moving` [Avalonia.Controls.Documents.TextModel.TextPointer](xref:Avalonia.Controls.Documents.TextModel.TextPointer)
+
+The moving end position that follows user input.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c1f7513a3b"></span>
+
+### SelectAll Method
+
+Selects all content in the document, from [Avalonia.Controls.Documents.TextModel.TextDocument.ContentStart](xref:Avalonia.Controls.Documents.TextModel.TextDocument.ContentStart)
+to [Avalonia.Controls.Documents.TextModel.TextDocument.ContentEnd](xref:Avalonia.Controls.Documents.TextModel.TextDocument.ContentEnd). `ContentEnd` anchors to the
+document's final block, so a trailing empty paragraph is part of the
+selection (and survives copy).
+
+```csharp
+public void SelectAll()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a6bfd06000"></span>
+
+### SetSpringloadProperty Method
+
+```csharp
+public void SetSpringloadProperty<T>(Avalonia.StyledProperty<T> property, T value)
+```
+
+#### Parameters
+
+`property` Avalonia.StyledProperty&lt;T&gt;
+
+
+`value` T
+
+
+#### Type Parameters
+
+`T`
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-98b69ad8cc"></span>
+
+### TogglePropertyValue Method
+
+```csharp
+public void TogglePropertyValue<T>(Avalonia.StyledProperty<T> property, T onValue, T offValue)
+```
+
+#### Parameters
+
+`property` Avalonia.StyledProperty&lt;T&gt;
+
+
+`onValue` T
+
+
+`offValue` T
+
+
+#### Type Parameters
+
+`T`
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-892eea8f22"></span>
+
+### TryGetSpringloadProperty Method
+
+```csharp
+public bool TryGetSpringloadProperty<T>(Avalonia.StyledProperty<T> property, T& value)
+```
+
+#### Parameters
+
+`property` Avalonia.StyledProperty&lt;T&gt;
+
+
+`value` T&amp;
+
+
+#### Type Parameters
+
+`T`
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [AnchorPosition](#uid-59d0320884) | Gets the anchor position where the selection started. |
+| [CaretPosition](#uid-48076b5e88) | Gets the caret position (the moving end that follows user input during selection). |
+| [End](documents/textmodel/textrange.mdx#uid-37c972b3f9) | Gets the end position of the range. Inherited from [TextRange](documents/textmodel/textrange.mdx). |
+| [IsEmpty](documents/textmodel/textrange.mdx#uid-313c05b9fc) | Gets a value indicating whether the range is empty. A range is empty only when [Avalonia.Controls.Documents.TextModel.TextRange.Start](xref:Avalonia.Controls.Documents.TextModel.TextRange.Start) and [Avalonia.Controls.Documents.TextModel.TextRange.End](xref:Avalonia.Controls.Documents.TextModel.TextRange.End) refer to the exact same document position (node-aware). Two distinct positions that happen to share the same integer offset — for example pointers into consecutive empty paragraphs — are not considered empty. Inherited from [TextRange](documents/textmodel/textrange.mdx). |
+| [Length](documents/textmodel/textrange.mdx#uid-27d48f7738) | Gets the length of the range in characters. Inherited from [TextRange](documents/textmodel/textrange.mdx). |
+| [Start](documents/textmodel/textrange.mdx#uid-fe0f8d7b6a) | Gets the start position of the range. Inherited from [TextRange](documents/textmodel/textrange.mdx). |
+| [TextDocument](documents/textmodel/textrange.mdx#uid-fce62d199c) | Gets the document containing this range. Inherited from [TextRange](documents/textmodel/textrange.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-59d0320884"></span>
+
+### AnchorPosition Property
+
+Gets the anchor position where the selection started.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.TextPointer AnchorPosition { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-48076b5e88"></span>
+
+### CaretPosition Property
+
+Gets the caret position (the moving end that follows user input during selection).
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.TextPointer CaretPosition { get; set; }
+```
+
+</section>
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [Changed](documents/textmodel/textrange.mdx#uid-ea82965a4b) | Occurs when the range changes. Inherited from [TextRange](documents/textmodel/textrange.mdx). |
+
+</ApiRefPage>
+
