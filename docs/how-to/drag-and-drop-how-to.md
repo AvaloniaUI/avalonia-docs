@@ -1,6 +1,6 @@
 ---
 id: drag-and-drop-how-to
-title: "How to: Implement Drag and Drop"
+title: "How to: Implement drag-and-drop"
 description: Initiate drags, handle drops, provide visual feedback, and accept file drops in Avalonia.
 doc-type: how-to
 ---
@@ -9,17 +9,19 @@ This guide covers common drag-and-drop scenarios: initiating drags, handling dro
 
 ## Accepting dropped files
 
-The most common drag-and-drop scenario is accepting files that your users drag from the OS file manager.
+Here is how to make your app accept files dragged from the OS file manager.
 
 ### XAML setup
 
-Enable dropping by setting `DragDrop.AllowDrop` to `True` on the target element:
+Enable dropping by setting `DragDrop.AllowDrop` to `True` on the target element.
 
 ```xml
-<Border Background="#F3F4F6" Padding="40"
+<Border Background="#F3F4F6"
+        Padding="40"
         DragDrop.AllowDrop="True">
     <TextBlock Text="Drop files here"
-               HorizontalAlignment="Center" VerticalAlignment="Center" />
+               HorizontalAlignment="Center"
+               VerticalAlignment="Center" />
 </Border>
 ```
 
