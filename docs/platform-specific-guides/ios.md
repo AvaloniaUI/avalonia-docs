@@ -132,6 +132,33 @@ Mac Catalyst is a narrower option for specific scenarios: apps that are deeply t
 | MAUI hybrid embedding | No | Yes |
 | Recommended for new Avalonia apps | Yes | No |
 
+## High refresh rate displays
+
+Starting with Avalonia 12.2, the iOS backend asks for the display's refresh rate, up to 120 Hz on ProMotion devices. iOS can still lower the rate, for example in Low Power Mode.
+
+On iPhone, iOS keeps your app at 60 Hz unless your `Info.plist` contains the `CADisableMinimumFrameDurationOnPhone` key:
+
+```xml
+<key>CADisableMinimumFrameDurationOnPhone</key>
+<true/>
+```
+
+iPad does not need this key. If the key is missing on a ProMotion iPhone, Avalonia logs a warning at startup and rendering stays at 60 Hz.
+
+If your app cannot sustain high frame rates, you can keep the system's default rate by turning off `EnableHighRefreshRate` in `iOSPlatformOptions`:
+
+```csharp
+[Register("AppDelegate")]
+public partial class AppDelegate : AvaloniaAppDelegate<App>
+{
+    protected override AppBuilder CustomizeAppBuilder(AppBuilder builder)
+    {
+        return base.CustomizeAppBuilder(builder)
+            .With(new iOSPlatformOptions { EnableHighRefreshRate = false });
+    }
+}
+```
+
 ## Deep linking and universal links
 
 iOS supports two mechanisms for opening your app from a URL:
