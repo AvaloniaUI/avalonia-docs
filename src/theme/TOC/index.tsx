@@ -66,7 +66,7 @@ const getMarkdown = async (link: string) => {
 
 export default function TOC({ className, ...props }: Props): ReactNode {
   const [isOpen, setIsOpen] = useState(false);
-  const [buttonText, setButtonText] = useState("Open in");
+  const [buttonText, setButtonText] = useState("Open in LLM");
 
   // Get doc metadata and current URL
   const { metadata } = useDoc();
@@ -94,7 +94,7 @@ export default function TOC({ className, ...props }: Props): ReactNode {
     getMarkdown(markdown);
     setButtonText("Copied!");
     setTimeout(() => {
-      setButtonText("Open in");
+      setButtonText("Open in LLM");
     }, 1200);
     closeDropdown();
   };
@@ -107,7 +107,7 @@ export default function TOC({ className, ...props }: Props): ReactNode {
   return (
     <div className={clsx(styles.tableOfContentsWrapper, companionVideo && styles.hasVideo)}>
       {/* The panel is a plain vertical stack: heading, companion video, the
-          "Open in" dropdown, then the scrolling heading list. */}
+          "Open in LLM" dropdown, then the scrolling heading list. */}
       <h3 className={clsx(styles.tocHeading, 'uppercase')}>On this page</h3>
 
       {/* Companion video, when the page declares one. */}
@@ -181,26 +181,6 @@ export default function TOC({ className, ...props }: Props): ReactNode {
                 <ExternalLinkIcon />
               </DropdownItem>
             </li>
-            {/* Divider + Edit on GitHub */}
-            {editUrl && (
-              <>
-                <li>
-                  <span className="my-1.5 block h-px w-full bg-gray-200 dark:bg-white/[0.08]"></span>
-                </li>
-                <li>
-                  <DropdownItem
-                    tag="a"
-                    href={editUrl}
-                    onClick={closeDropdown}
-                    {...externalProps}
-                  >
-                    <GitHubIcon />
-                    Edit on GitHub
-                    <ExternalLinkIcon />
-                  </DropdownItem>
-                </li>
-              </>
-            )}
           </ul>
         </Dropdown>
       </div>
